@@ -3,6 +3,8 @@ PHPCoord
 
 Conversion/modernisation of phpcoord for PHP5.3/PSR-0. Conversion was based on v2.3
 
+[![Build Status](https://travis-ci.org/Pre-schoolLearningAlliance/PHPCoord.png)](https://travis-ci.org/Pre-schoolLearningAlliance/PHPCoord)
+
 The original code by Jonathan Stott can be found at http://www.jstott.me.uk/phpcoord/
 
 PHPCoord is a set of PHP functions for handling various
