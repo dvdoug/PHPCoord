@@ -1,47 +1,66 @@
 <?php
+/**
+ * PHPCoord
+ * @package PHPCoord
+ * @author Jonathan Stott
+ * @author Doug Wright
+ */
+  namespace PHPCoord;
 
+  /**
+   * Latitude/Longtitude reference
+   * @author Jonathan Stott
+   * @author Doug Wright
+   * @package PHPCoord
+   */
   class LatLng {
 
-    var $lat;
-    var $lng;
-
+    /**
+     * Latitude
+     * @api
+     * @var float
+     */
+    public $lat;
+    
+    /**
+     * Longitude
+     * @api
+     * @var float
+     */
+    public $lng;
 
     /**
      * Create a new LatLng object from the given latitude and longitude
-     *
-     * @param lat latitude
-     * @param lng longitude
+     * @param int $aLat
+     * @param int $aLng
      */
-    function LatLng($lat, $lng) {
-      $this->lat = $lat;
-      $this->lng = $lng;
+    public function __construct($aLat, $aLng) {
+      $this->lat = $aLat;
+      $this->lng = $aLng;
     }
-
 
     /**
      * Return a string representation of this LatLng object
-     *
-     * @return a string representation of this LatLng object
+     * @return string
      */
-    function toString() {
-      return "(" . $this->lat . ", " . $this->lng . ")";
+    public function __toString() {
+      return "({$this->lat}, {$this->lng})";
     }
-
 
     /**
      * Calculate the surface distance between this LatLng object and the one
      * passed in as a parameter.
      *
-     * @param to a LatLng object to measure the surface distance to
-     * @return the surface distance
+     * @param $aTo a LatLng object to measure the surface distance to
+     * @return float
      */
-    function distance($to) {
+    public function distance(LatLng $aTo) {
       $er = 6366.707;
 
       $latFrom = deg2rad($this->lat);
-      $latTo   = deg2rad($to->lat);
+      $latTo   = deg2rad($aTo->lat);
       $lngFrom = deg2rad($this->lng);
-      $lngTo   = deg2rad($to->lng);
+      $lngTo   = deg2rad($aTo->lng);
 
       $x1 = $er * cos($lngFrom) * sin($latFrom);
       $y1 = $er * sin($lngFrom) * sin($latFrom);
@@ -60,14 +79,14 @@
     /**
      * Convert this LatLng object from OSGB36 datum to WGS84 datum.
      */
-    function OSGB36ToWGS84() {
+    public function OSGB36ToWGS84() {
       $airy1830 = new RefEll(6377563.396, 6356256.909);
       $a        = $airy1830->maj;
       $b        = $airy1830->min;
       $eSquared = $airy1830->ecc;
       $phi = deg2rad($this->lat);
       $lambda = deg2rad($this->lng);
-      $v = $a / (sqrt(1 - $eSquared * sinSquared($phi)));
+      $v = $a / (sqrt(1 - $eSquared * pow(sin($phi), 2)));
       $H = 0; // height
       $x = ($v + $H) * cos($phi) * cos($lambda);
       $y = ($v + $H) * cos($phi) * sin($lambda);
@@ -94,7 +113,7 @@
       $p = sqrt(($xB * $xB) + ($yB * $yB));
       $phiN = atan($zB / ($p * (1 - $eSquared)));
       for ($i = 1; $i < 10; $i++) {
-        $v = $a / (sqrt(1 - $eSquared * sinSquared($phiN)));
+        $v = $a / (sqrt(1 - $eSquared * pow(sin($phiN), 2)));
         $phiN1 = atan(($zB + ($eSquared * $v * sin($phiN))) / $p);
         $phiN = $phiN1;
       }
@@ -109,14 +128,14 @@
     /**
      * Convert this LatLng object from WGS84 datum to OSGB36 datum.
      */
-    function WGS84ToOSGB36() {
+    public function WGS84ToOSGB36() {
       $wgs84 = new RefEll(6378137.000, 6356752.3141);
       $a        = $wgs84->maj;
       $b        = $wgs84->min;
       $eSquared = $wgs84->ecc;
       $phi = deg2rad($this->lat);
       $lambda = deg2rad($this->lng);
-      $v = $a / (sqrt(1 - $eSquared * sinSquared($phi)));
+      $v = $a / (sqrt(1 - $eSquared * pow(sin($phi), 2)));
       $H = 0; // height
       $x = ($v + $H) * cos($phi) * cos($lambda);
       $y = ($v + $H) * cos($phi) * sin($lambda);
@@ -143,7 +162,7 @@
       $p = sqrt(($xB * $xB) + ($yB * $yB));
       $phiN = atan($zB / ($p * (1 - $eSquared)));
       for ($i = 1; $i < 10; $i++) {
-        $v = $a / (sqrt(1 - $eSquared * sinSquared($phiN)));
+        $v = $a / (sqrt(1 - $eSquared * pow(sin($phiN), 2)));
         $phiN1 = atan(($zB + ($eSquared * $v * sin($phiN))) / $p);
         $phiN = $phiN1;
       }
@@ -161,9 +180,9 @@
      * beyond the bounds of the OSGB grid, the resulting OSRef object has no
      * meaning
      *
-     * @return the converted OSGB grid reference
+     * @return OSRef
      */
-    function toOSRef() {
+    public function toOSRef() {
       $airy1830 = new RefEll(6377563.396, 6356256.909);
       $OSGB_F0  = 0.9996012717;
       $N0       = -100000.0;
@@ -178,9 +197,9 @@
       $E = 0.0;
       $N = 0.0;
       $n = ($a - $b) / ($a + $b);
-      $v = $a * $OSGB_F0 * pow(1.0 - $eSquared * sinSquared($phi), -0.5);
+      $v = $a * $OSGB_F0 * pow(1.0 - $eSquared * pow(sin($phi), 2), -0.5);
       $rho =
-        $a * $OSGB_F0 * (1.0 - $eSquared) * pow(1.0 - $eSquared * sinSquared($phi), -1.5);
+        $a * $OSGB_F0 * (1.0 - $eSquared) * pow(1.0 - $eSquared * pow(sin($phi), 2), -1.5);
       $etaSquared = ($v / $rho) - 1.0;
       $M =
         ($b * $OSGB_F0)
@@ -201,22 +220,22 @@
         ($v / 24.0)
           * sin($phi)
           * pow(cos($phi), 3.0)
-          * (5.0 - tanSquared($phi) + (9.0 * $etaSquared));
+          * (5.0 - pow(tan($phi), 2) + (9.0 * $etaSquared));
       $IIIA =
         ($v / 720.0)
           * sin($phi)
           * pow(cos($phi), 5.0)
-          * (61.0 - (58.0 * tanSquared($phi)) + pow(tan($phi), 4.0));
+          * (61.0 - (58.0 * pow(tan($phi), 2)) + pow(tan($phi), 4.0));
       $IV = $v * cos($phi);
-      $V = ($v / 6.0) * pow(cos($phi), 3.0) * (($v / $rho) - tanSquared($phi));
+      $V = ($v / 6.0) * pow(cos($phi), 3.0) * (($v / $rho) - pow(tan($phi), 2));
       $VI =
         ($v / 120.0)
           * pow(cos($phi), 5.0)
           * (5.0
-            - (18.0 * tanSquared($phi))
+            - (18.0 * pow(tan($phi), 2))
             + (pow(tan($phi), 4.0))
             + (14 * $etaSquared)
-            - (58 * tanSquared($phi) * $etaSquared));
+            - (58 * pow(tan($phi), 2) * $etaSquared));
 
       $N =
         $I
@@ -235,10 +254,9 @@
 
     /**
      * Convert a latitude and longitude to an UTM reference
-     *
-     * @return the converted UTM reference
+     * @return UTMRef
      */
-    function toUTMRef() {
+    public function toUTMRef() {
       $wgs84 = new RefEll(6378137, 6356752.314);
       $UTM_F0   = 0.9996;
       $a = $wgs84->maj;
@@ -273,7 +291,7 @@
       $longitudeOrigin = ($longitudeZone - 1) * 6 - 180 + 3;
       $longitudeOriginRad = $longitudeOrigin * (pi() / 180.0);
 
-      $UTMZone = getUTMLatitudeZoneLetter($latitude);
+      $UTMZone = $this->getUTMLatitudeZoneLetter($latitude);
 
       $ePrimeSquared = ($eSquared) / (1 - $eSquared);
 
@@ -326,89 +344,33 @@
 
       return new UTMRef($UTMEasting, $UTMNorthing, $UTMZone, $longitudeZone);
     }
-  }
-
-  // ================================================== Mathematical Functions
-
-  function sinSquared($x) {
-    return sin($x) * sin($x);
-  }
-
-  function cosSquared($x) {
-    return cos($x) * cos($x);
-  }
-
-  function tanSquared($x) {
-    return tan($x) * tan($x);
-  }
-
-  function sec($x) {
-    return 1.0 / cos($x);
-  }
-
-
-  /**
-   * Take a string formatted as a six-figure OS grid reference (e.g.
-   * "TG514131") and return a reference to an OSRef object that represents
-   * that grid reference. The first character must be H, N, S, O or T.
-   * The second character can be any uppercase character from A through Z
-   * excluding I.
-   *
-   * @param ref
-   * @return
-   * @since 2.1
-   */
-  function getOSRefFromSixFigureReference($ref) {
-    $char1 = substr($ref, 0, 1);
-    $char2 = substr($ref, 1, 1);
-    $east  = substr($ref, 2, 3) * 100;
-    $north = substr($ref, 5, 3) * 100;
-    if ($char1 == 'H') {
-      $north += 1000000;
-    } else if ($char1 == 'N') {
-      $north += 500000;
-    } else if ($char1 == 'O') {
-      $north += 500000;
-      $east  += 500000;
-    } else if ($char1 == 'T') {
-      $east += 500000;
+    
+    /**
+     * Work out the UTM latitude zone from the latitude
+     * @param float $aLatitude
+     * @return string
+     */
+    private function getUTMLatitudeZoneLetter($aLatitude) {
+      if ((84 >= $aLatitude) && ($aLatitude >= 72)) return "X";
+      else if (( 72 > $aLatitude) && ($aLatitude >=  64)) return "W";
+      else if (( 64 > $aLatitude) && ($aLatitude >=  56)) return "V";
+      else if (( 56 > $aLatitude) && ($aLatitude >=  48)) return "U";
+      else if (( 48 > $aLatitude) && ($aLatitude >=  40)) return "T";
+      else if (( 40 > $aLatitude) && ($aLatitude >=  32)) return "S";
+      else if (( 32 > $aLatitude) && ($aLatitude >=  24)) return "R";
+      else if (( 24 > $aLatitude) && ($aLatitude >=  16)) return "Q";
+      else if (( 16 > $aLatitude) && ($aLatitude >=   8)) return "P";
+      else if ((  8 > $aLatitude) && ($aLatitude >=   0)) return "N";
+      else if ((  0 > $aLatitude) && ($aLatitude >=  -8)) return "M";
+      else if (( -8 > $aLatitude) && ($aLatitude >= -16)) return "L";
+      else if ((-16 > $aLatitude) && ($aLatitude >= -24)) return "K";
+      else if ((-24 > $aLatitude) && ($aLatitude >= -32)) return "J";
+      else if ((-32 > $aLatitude) && ($aLatitude >= -40)) return "H";
+      else if ((-40 > $aLatitude) && ($aLatitude >= -48)) return "G";
+      else if ((-48 > $aLatitude) && ($aLatitude >= -56)) return "F";
+      else if ((-56 > $aLatitude) && ($aLatitude >= -64)) return "E";
+      else if ((-64 > $aLatitude) && ($aLatitude >= -72)) return "D";
+      else if ((-72 > $aLatitude) && ($aLatitude >= -80)) return "C";
+      else return 'Z';
     }
-    $char2ord = ord($char2);
-    if ($char2ord > 73) $char2ord--; // Adjust for no I
-    $nx = (($char2ord - 65) % 5) * 100000;
-    $ny = (4 - floor(($char2ord - 65) / 5)) * 100000;
-    return new OSRef($east + $nx, $north + $ny);
   }
-
-
-  /**
-   *  Work out the UTM latitude zone from the latitude
-   *
-   * @param latitude
-   * @return
-   */
-  function getUTMLatitudeZoneLetter($latitude) {
-    if ((84 >= $latitude) && ($latitude >= 72)) return "X";
-    else if (( 72 > $latitude) && ($latitude >=  64)) return "W";
-    else if (( 64 > $latitude) && ($latitude >=  56)) return "V";
-    else if (( 56 > $latitude) && ($latitude >=  48)) return "U";
-    else if (( 48 > $latitude) && ($latitude >=  40)) return "T";
-    else if (( 40 > $latitude) && ($latitude >=  32)) return "S";
-    else if (( 32 > $latitude) && ($latitude >=  24)) return "R";
-    else if (( 24 > $latitude) && ($latitude >=  16)) return "Q";
-    else if (( 16 > $latitude) && ($latitude >=   8)) return "P";
-    else if ((  8 > $latitude) && ($latitude >=   0)) return "N";
-    else if ((  0 > $latitude) && ($latitude >=  -8)) return "M";
-    else if (( -8 > $latitude) && ($latitude >= -16)) return "L";
-    else if ((-16 > $latitude) && ($latitude >= -24)) return "K";
-    else if ((-24 > $latitude) && ($latitude >= -32)) return "J";
-    else if ((-32 > $latitude) && ($latitude >= -40)) return "H";
-    else if ((-40 > $latitude) && ($latitude >= -48)) return "G";
-    else if ((-48 > $latitude) && ($latitude >= -56)) return "F";
-    else if ((-56 > $latitude) && ($latitude >= -64)) return "E";
-    else if ((-64 > $latitude) && ($latitude >= -72)) return "D";
-    else if ((-72 > $latitude) && ($latitude >= -80)) return "C";
-    else return 'Z';
-  }
-
-?>
