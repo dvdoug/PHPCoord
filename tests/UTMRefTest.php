@@ -22,9 +22,11 @@
       $UTMRef = new UTMRef(699489, 5713918, 'U', 30);
       $LatLng = $UTMRef->toLatLng();
     
-      $expected = "(51.5410534766, -0.123188320451)";
+      $expectedLat = 51.5410534766;
+      $expectedLng = -0.123188320451;
        
-      self::assertEquals($expected, $LatLng->__toString());
+      self::assertTrue(abs($expectedLat - $LatLng->lat) < 0.0000000001, 'Latitude not within tolerance');
+      self::assertTrue(abs($expectedLng - $LatLng->lng) < 0.0000000001, 'Longitude not within tolerance');
     }
     
   }
