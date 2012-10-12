@@ -49,7 +49,7 @@
      * @param int $aEasting
      * @param int $aNorthing
      * @param string $aLatZone
-     * @param string $aLngZone
+     * @param int $aLngZone
      */
     public function __construct($aEasting, $aNorthing, $aLatZone, $aLngZone) {
       $this->easting  = $aEasting;
