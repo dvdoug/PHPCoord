@@ -2,11 +2,11 @@
 
   namespace PHPCoord;
 
-  require_once('../OSRef.php');
-  require_once('../LatLng.php');
-  require_once('../RefEll.php');
+  require_once(__DIR__.'/../OSRef.php');
+  require_once(__DIR__.'/../LatLng.php');
+  require_once(__DIR__.'/../RefEll.php');
 
-  class TestOSRef extends \PHPUnit_Framework_TestCase {
+  class OSRefTest extends \PHPUnit_Framework_TestCase {
     
     public function testToString() {
       
