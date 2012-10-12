@@ -24,6 +24,7 @@ Usage
 ```php
 $OSRef = new OSRef(500000, 200000); //Easting, Northing
 $LatLng = $OSRef->toLatLng();
+$LatLng->OSGB36ToWGS84(); //optional, see note above
 
 $lat =  $LatLng->lat;
 $long = $LatLng->long;
