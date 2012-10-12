@@ -56,7 +56,7 @@
      * of the easting and northing.
      * @return string
      */
-    public function toString() {
+    public function __toString() {
       return "({$this->easting}, {$this->northing})";
     }
 
