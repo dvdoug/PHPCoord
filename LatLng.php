@@ -248,7 +248,7 @@
           + ($V * pow($lambda - $lambda0, 3.0))
           + ($VI * pow($lambda - $lambda0, 5.0));
 
-      return new OSRef($E, $N);
+      return new OSRef(round($E), round($N));
     }
 
 
@@ -342,7 +342,7 @@
         $UTMNorthing += 10000000.0;
       }
 
-      return new UTMRef($UTMEasting, $UTMNorthing, $UTMZone, $longitudeZone);
+      return new UTMRef(round($UTMEasting), round($UTMNorthing), $UTMZone, $longitudeZone);
     }
     
     /**
