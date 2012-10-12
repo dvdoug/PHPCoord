@@ -93,7 +93,7 @@
       $z = ((1 - $eSquared) * $v + $H) * sin($phi);
 
       $tx =        446.448;
-      $ty =       -124.157;
+      $ty =       -125.157; //XXX original project used -124.157. -125.157 is correct per OS.
       $tz =        542.060;
       $s  =         -0.0000204894;
       $rx = deg2rad( 0.00004172222);
@@ -142,7 +142,7 @@
       $z = ((1 - $eSquared) * $v + $H) * sin($phi);
 
       $tx =       -446.448;
-      $ty =        124.157;
+      $ty =        125.157; //XXX original project used 124.157. 125.157 is correct per OS.
       $tz =       -542.060;
       $s  =          0.0000204894;
       $rx = deg2rad(-0.00004172222);
