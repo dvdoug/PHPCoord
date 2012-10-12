@@ -81,7 +81,8 @@
       else if ($hundredkmN < 10) {
         if ($hundredkmE < 5) {
           $firstLetter = "N";
-        } else {
+        }
+        else {
           $firstLetter = "O";
         }
       }
@@ -111,84 +112,84 @@
     public function toLatLng() {
       $airy1830 = new RefEll(6377563.396, 6356256.909);
       $OSGB_F0  = 0.9996012717;
-      $N0       = -100000.0;
-      $E0       = 400000.0;
-      $phi0     = deg2rad(49.0);
-      $lambda0  = deg2rad(-2.0);
+      $N0       = -100000;
+      $E0       = 400000;
+      $phi0     = deg2rad(49);
+      $lambda0  = deg2rad(-2);
       $a        = $airy1830->maj;
       $b        = $airy1830->min;
       $eSquared = $airy1830->ecc;
-      $phi      = 0.0;
-      $lambda   = 0.0;
+      $phi      = 0;
+      $lambda   = 0;
       $E        = $this->easting;
       $N        = $this->northing;
       $n        = ($a - $b) / ($a + $b);
-      $M        = 0.0;
+      $M        = 0;
       $phiPrime = (($N - $N0) / ($a * $OSGB_F0)) + $phi0;
       do {
         $M =
           ($b * $OSGB_F0)
-            * (((1 + $n + ((5.0 / 4.0) * $n * $n) + ((5.0 / 4.0) * $n * $n * $n))
+            * (((1 + $n + ((5 / 4) * $n * $n) + ((5 / 4) * $n * $n * $n))
               * ($phiPrime - $phi0))
-              - (((3 * $n) + (3 * $n * $n) + ((21.0 / 8.0) * $n * $n * $n))
+              - (((3 * $n) + (3 * $n * $n) + ((21 / 8) * $n * $n * $n))
                 * sin($phiPrime - $phi0)
                 * cos($phiPrime + $phi0))
-              + ((((15.0 / 8.0) * $n * $n) + ((15.0 / 8.0) * $n * $n * $n))
-                * sin(2.0 * ($phiPrime - $phi0))
-                * cos(2.0 * ($phiPrime + $phi0)))
-              - (((35.0 / 24.0) * $n * $n * $n)
-                * sin(3.0 * ($phiPrime - $phi0))
-                * cos(3.0 * ($phiPrime + $phi0))));
+              + ((((15 / 8) * $n * $n) + ((15 / 8) * $n * $n * $n))
+                * sin(2 * ($phiPrime - $phi0))
+                * cos(2 * ($phiPrime + $phi0)))
+              - (((35 / 24) * $n * $n * $n)
+                * sin(3 * ($phiPrime - $phi0))
+                * cos(3 * ($phiPrime + $phi0))));
         $phiPrime += ($N - $N0 - $M) / ($a * $OSGB_F0);
       } while (($N - $N0 - $M) >= 0.001);
-      $v = $a * $OSGB_F0 * pow(1.0 - $eSquared * pow(sin($phiPrime), 2), -0.5);
+      $v = $a * $OSGB_F0 * pow(1 - $eSquared * pow(sin($phiPrime), 2), -0.5);
       $rho =
         $a
           * $OSGB_F0
-          * (1.0 - $eSquared)
-          * pow(1.0 - $eSquared * pow(sin($phiPrime), 2), -1.5);
-      $etaSquared = ($v / $rho) - 1.0;
+          * (1 - $eSquared)
+          * pow(1 - $eSquared * pow(sin($phiPrime), 2), -1.5);
+      $etaSquared = ($v / $rho) - 1;
       $VII = tan($phiPrime) / (2 * $rho * $v);
       $VIII =
-        (tan($phiPrime) / (24.0 * $rho * pow($v, 3.0)))
-          * (5.0
-            + (3.0 * pow(tan($phiPrime), 2))
+        (tan($phiPrime) / (24 * $rho * pow($v, 3)))
+          * (5
+            + (3 * pow(tan($phiPrime), 2))
             + $etaSquared
-            - (9.0 * pow(tan($phiPrime), 2) * $etaSquared));
+            - (9 * pow(tan($phiPrime), 2) * $etaSquared));
       $IX =
-        (tan($phiPrime) / (720.0 * $rho * pow($v, 5.0)))
-          * (61.0
-            + (90.0 * pow(tan($phiPrime), 2))
-            + (45.0 * pow(tan($phiPrime), 2) * pow(tan($phiPrime), 2)));
+        (tan($phiPrime) / (720 * $rho * pow($v, 5)))
+          * (61
+            + (90 * pow(tan($phiPrime), 2))
+            + (45 * pow(tan($phiPrime), 2) * pow(tan($phiPrime), 2)));
       $X = (1/cos($phiPrime)) / $v;
       $XI =
-        ((1/cos($phiPrime)) / (6.0 * $v * $v * $v))
+        ((1/cos($phiPrime)) / (6 * $v * $v * $v))
           * (($v / $rho) + (2 * pow(tan($phiPrime), 2)));
       $XII =
-        ((1/cos($phiPrime)) / (120.0 * pow($v, 5.0)))
-          * (5.0
-            + (28.0 * pow(tan($phiPrime), 2))
-            + (24.0 * pow(tan($phiPrime), 2) * pow(tan($phiPrime), 2)));
+        ((1/cos($phiPrime)) / (120 * pow($v, 5)))
+          * (5
+            + (28 * pow(tan($phiPrime), 2))
+            + (24 * pow(tan($phiPrime), 2) * pow(tan($phiPrime), 2)));
       $XIIA =
-        ((1/cos($phiPrime)) / (5040.0 * pow($v, 7.0)))
-          * (61.0
-            + (662.0 * pow(tan($phiPrime), 2))
-            + (1320.0 * pow(tan($phiPrime), 2) * pow(tan($phiPrime), 2))
-            + (720.0
+        ((1/cos($phiPrime)) / (5040 * pow($v, 7)))
+          * (61
+            + (662 * pow(tan($phiPrime), 2))
+            + (1320 * pow(tan($phiPrime), 2) * pow(tan($phiPrime), 2))
+            + (720
               * pow(tan($phiPrime), 2)
               * pow(tan($phiPrime), 2)
               * pow(tan($phiPrime), 2)));
       $phi =
         $phiPrime
-          - ($VII * pow($E - $E0, 2.0))
-          + ($VIII * pow($E - $E0, 4.0))
-          - ($IX * pow($E - $E0, 6.0));
+          - ($VII * pow($E - $E0, 2))
+          + ($VIII * pow($E - $E0, 4))
+          - ($IX * pow($E - $E0, 6));
       $lambda =
         $lambda0
           + ($X * ($E - $E0))
-          - ($XI * pow($E - $E0, 3.0))
-          + ($XII * pow($E - $E0, 5.0))
-          - ($XIIA * pow($E - $E0, 7.0));
+          - ($XI * pow($E - $E0, 3))
+          + ($XII * pow($E - $E0, 5))
+          - ($XIIA * pow($E - $E0, 7));
 
       return new LatLng(rad2deg($phi), rad2deg($lambda));
     }

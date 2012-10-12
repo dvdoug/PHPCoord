@@ -104,7 +104,7 @@
       $yB = $ty + ($rz * $x)      + ($y * (1 + $s)) + (-$rx * $z);
       $zB = $tz + (-$ry * $x)     + ($rx * $y)      + ($z * (1 + $s));
 
-      $wgs84 = new RefEll(6378137.000, 6356752.3141);
+      $wgs84 = new RefEll(6378137, 6356752.3141);
       $a        = $wgs84->maj;
       $b        = $wgs84->min;
       $eSquared = $wgs84->ecc;
@@ -129,7 +129,7 @@
      * Convert this LatLng object from WGS84 datum to OSGB36 datum.
      */
     public function WGS84ToOSGB36() {
-      $wgs84 = new RefEll(6378137.000, 6356752.3141);
+      $wgs84 = new RefEll(6378137, 6356752.3141);
       $a        = $wgs84->maj;
       $b        = $wgs84->min;
       $eSquared = $wgs84->ecc;
@@ -185,68 +185,68 @@
     public function toOSRef() {
       $airy1830 = new RefEll(6377563.396, 6356256.909);
       $OSGB_F0  = 0.9996012717;
-      $N0       = -100000.0;
-      $E0       = 400000.0;
-      $phi0     = deg2rad(49.0);
-      $lambda0  = deg2rad(-2.0);
+      $N0       = -100000;
+      $E0       = 400000;
+      $phi0     = deg2rad(49);
+      $lambda0  = deg2rad(-2);
       $a        = $airy1830->maj;
       $b        = $airy1830->min;
       $eSquared = $airy1830->ecc;
       $phi = deg2rad($this->lat);
       $lambda = deg2rad($this->lng);
-      $E = 0.0;
-      $N = 0.0;
+      $E = 0;
+      $N = 0;
       $n = ($a - $b) / ($a + $b);
-      $v = $a * $OSGB_F0 * pow(1.0 - $eSquared * pow(sin($phi), 2), -0.5);
+      $v = $a * $OSGB_F0 * pow(1 - $eSquared * pow(sin($phi), 2), -0.5);
       $rho =
-        $a * $OSGB_F0 * (1.0 - $eSquared) * pow(1.0 - $eSquared * pow(sin($phi), 2), -1.5);
-      $etaSquared = ($v / $rho) - 1.0;
+        $a * $OSGB_F0 * (1 - $eSquared) * pow(1 - $eSquared * pow(sin($phi), 2), -1.5);
+      $etaSquared = ($v / $rho) - 1;
       $M =
         ($b * $OSGB_F0)
-          * (((1 + $n + ((5.0 / 4.0) * $n * $n) + ((5.0 / 4.0) * $n * $n * $n))
+          * (((1 + $n + ((5 / 4) * $n * $n) + ((5 / 4) * $n * $n * $n))
             * ($phi - $phi0))
-            - (((3 * $n) + (3 * $n * $n) + ((21.0 / 8.0) * $n * $n * $n))
+            - (((3 * $n) + (3 * $n * $n) + ((21 / 8) * $n * $n * $n))
               * sin($phi - $phi0)
               * cos($phi + $phi0))
-            + ((((15.0 / 8.0) * $n * $n) + ((15.0 / 8.0) * $n * $n * $n))
-              * sin(2.0 * ($phi - $phi0))
-              * cos(2.0 * ($phi + $phi0)))
-            - (((35.0 / 24.0) * $n * $n * $n)
-              * sin(3.0 * ($phi - $phi0))
-              * cos(3.0 * ($phi + $phi0))));
+            + ((((15 / 8) * $n * $n) + ((15 / 8) * $n * $n * $n))
+              * sin(2 * ($phi - $phi0))
+              * cos(2 * ($phi + $phi0)))
+            - (((35 / 24) * $n * $n * $n)
+              * sin(3 * ($phi - $phi0))
+              * cos(3 * ($phi + $phi0))));
       $I = $M + $N0;
-      $II = ($v / 2.0) * sin($phi) * cos($phi);
+      $II = ($v / 2) * sin($phi) * cos($phi);
       $III =
-        ($v / 24.0)
+        ($v / 24)
           * sin($phi)
-          * pow(cos($phi), 3.0)
-          * (5.0 - pow(tan($phi), 2) + (9.0 * $etaSquared));
+          * pow(cos($phi), 3)
+          * (5 - pow(tan($phi), 2) + (9 * $etaSquared));
       $IIIA =
-        ($v / 720.0)
+        ($v / 720)
           * sin($phi)
-          * pow(cos($phi), 5.0)
-          * (61.0 - (58.0 * pow(tan($phi), 2)) + pow(tan($phi), 4.0));
+          * pow(cos($phi), 5)
+          * (61 - (58 * pow(tan($phi), 2)) + pow(tan($phi), 4));
       $IV = $v * cos($phi);
-      $V = ($v / 6.0) * pow(cos($phi), 3.0) * (($v / $rho) - pow(tan($phi), 2));
+      $V = ($v / 6) * pow(cos($phi), 3) * (($v / $rho) - pow(tan($phi), 2));
       $VI =
-        ($v / 120.0)
-          * pow(cos($phi), 5.0)
-          * (5.0
-            - (18.0 * pow(tan($phi), 2))
-            + (pow(tan($phi), 4.0))
+        ($v / 120)
+          * pow(cos($phi), 5)
+          * (5
+            - (18 * pow(tan($phi), 2))
+            + (pow(tan($phi), 4))
             + (14 * $etaSquared)
             - (58 * pow(tan($phi), 2) * $etaSquared));
 
       $N =
         $I
-          + ($II * pow($lambda - $lambda0, 2.0))
-          + ($III * pow($lambda - $lambda0, 4.0))
-          + ($IIIA * pow($lambda - $lambda0, 6.0));
+          + ($II * pow($lambda - $lambda0, 2))
+          + ($III * pow($lambda - $lambda0, 4))
+          + ($IIIA * pow($lambda - $lambda0, 6));
       $E =
         $E0
           + ($IV * ($lambda - $lambda0))
-          + ($V * pow($lambda - $lambda0, 3.0))
-          + ($VI * pow($lambda - $lambda0, 5.0));
+          + ($V * pow($lambda - $lambda0, 3))
+          + ($VI * pow($lambda - $lambda0, 5));
 
       return new OSRef(round($E), round($N));
     }
@@ -264,32 +264,32 @@
       $longitude = $this->lng;
       $latitude = $this->lat;
 
-      $latitudeRad = $latitude * (pi() / 180.0);
-      $longitudeRad = $longitude * (pi() / 180.0);
-      $longitudeZone = (int) (($longitude + 180.0) / 6.0) + 1;
+      $latitudeRad = $latitude * (pi() / 180);
+      $longitudeRad = $longitude * (pi() / 180);
+      $longitudeZone = (int) (($longitude + 180) / 6) + 1;
 
       // Special zone for Norway
-      if ($latitude >= 56.0
-        && $latitude < 64.0
-        && $longitude >= 3.0
-        && $longitude < 12.0) {
+      if ($latitude >= 56
+        && $latitude < 64
+        && $longitude >= 3
+        && $longitude < 12) {
         $longitudeZone = 32;
       }
 
-      // Special zones for Svalbard      if ($latitude >= 72.0 && $latitude < 84.0) {
-        if ($longitude >= 0.0 && $longitude < 9.0) {
+      // Special zones for Svalbard      if ($latitude >= 72 && $latitude < 84) {
+        if ($longitude >= 0 && $longitude < 9) {
           $longitudeZone = 31;
-        } else if ($longitude >= 9.0 && $longitude < 21.0) {
+        } else if ($longitude >= 9 && $longitude < 21) {
           $longitudeZone = 33;
-        } else if ($longitude >= 21.0 && $longitude < 33.0) {
+        } else if ($longitude >= 21 && $longitude < 33) {
           $longitudeZone = 35;
-        } else if ($longitude >= 33.0 && $longitude < 42.0) {
+        } else if ($longitude >= 33 && $longitude < 42) {
           $longitudeZone = 37;
         }
       }
 
       $longitudeOrigin = ($longitudeZone - 1) * 6 - 180 + 3;
-      $longitudeOriginRad = $longitudeOrigin * (pi() / 180.0);
+      $longitudeOriginRad = $longitudeOrigin * (pi() / 180);
 
       $UTMZone = $this->getUTMLatitudeZoneLetter($latitude);
 
@@ -321,11 +321,11 @@
         (double) ($UTM_F0
           * $n
           * ($A
-            + (1 - $t + $c) * pow($A, 3.0) / 6
+            + (1 - $t + $c) * pow($A, 3) / 6
             + (5 - 18 * $t + $t * $t + 72 * $c - 58 * $ePrimeSquared)
-              * pow($A, 5.0)
+              * pow($A, 5)
               / 120)
-          + 500000.0);
+          + 500000);
 
       $UTMNorthing =
         (double) ($UTM_F0
@@ -333,13 +333,13 @@
             + $n
               * tan($latitudeRad)
               * ($A * $A / 2
-                + (5 - $t + (9 * $c) + (4 * $c * $c)) * pow($A, 4.0) / 24
+                + (5 - $t + (9 * $c) + (4 * $c * $c)) * pow($A, 4) / 24
                 + (61 - (58 * $t) + ($t * $t) + (600 * $c) - (330 * $ePrimeSquared))
-                  * pow($A, 6.0)
+                  * pow($A, 6)
                   / 720)));
 
       // Adjust for the southern hemisphere      if ($latitude < 0) {
-        $UTMNorthing += 10000000.0;
+        $UTMNorthing += 10000000;
       }
 
       return new UTMRef(round($UTMEasting), round($UTMNorthing), $UTMZone, $longitudeZone);
