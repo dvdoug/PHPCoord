@@ -19,6 +19,24 @@ WGS84 datum rather than the OSGB36 datum. Conversions should be accurate to
 within 5m or so. If accuracy is not important (i.e. to within 200m or so),
 then it isn't necessary to perform the conversions.
 
+Usage
+-----
+```php
+$OSRef = new OSRef(500000, 200000); //Easting, Northing
+$LatLng = $OSRef->toLatLng();
+
+$lat =  $LatLng->lat;
+$long = $LatLng->long;
+
+
+$LatLng = new LatLng(50.12345, 1.23456); //Latitude, Long
+$OSRef = $LatLng->toOSRef(); 
+
+$easting = $OSRef->easting;
+$northing = $OSRef->northing;
+
+```
+
 Requirements
 ------------
 * PHP 5.3 or higher
