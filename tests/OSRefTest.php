@@ -22,11 +22,9 @@
       $OSRef = new OSRef(530140, 184184);
       $LatLng = $OSRef->toLatLng();
       
-      $expectedLat = 51.5410521304;
-      $expectedLng = -0.123185788025;
+      $expected = "(51.54105, -0.12319)";
        
-      self::assertTrue(abs($expectedLat - $LatLng->lat) < 0.0000000001, 'Latitude not within tolerance');
-      self::assertTrue(abs($expectedLng - $LatLng->lng) < 0.0000000001, 'Longitude not within tolerance');
+      self::assertEquals($expected, $LatLng->__toString());
       
     }
     

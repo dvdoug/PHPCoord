@@ -11,15 +11,15 @@
     
     public function testToString() {
       
-      $LatLng = new LatLng(51.5410521304, -0.123185788025);
-      $expected = "(51.5410521304, -0.123185788025)";
+      $LatLng = new LatLng(51.54105, -0.12319);
+      $expected = "(51.54105, -0.12319)";
       
       self::assertEquals($expected, $LatLng->__toString());
     }
     
     public function testOSRef() {
     
-      $LatLng = new LatLng(51.5410521304, -0.123185788025);
+      $LatLng = new LatLng(51.54105, -0.12319);
       $OSRef = $LatLng->toOSRef();
       
       $expected = "(530140, 184184)";
@@ -29,10 +29,11 @@
     
     public function testUTMRef() {
     
-      $LatLng = new LatLng(51.5410521304, -0.123185788025);
+      $LatLng = new LatLng(51.54105, -0.12319);
+      $LatLng->OSGB36ToWGS84();
       $UTMRef = $LatLng->toUTMRef();
     
-      $expected = "30U 699489 5713918";
+      $expected = "30U 699375 5713970";
     
       self::assertEquals($expected, $UTMRef->__toString());
     }

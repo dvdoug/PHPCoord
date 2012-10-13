@@ -11,22 +11,21 @@
     
     public function testToString() {
       
-      $UTMRef = new UTMRef(699489, 5713918, 'U', 30);
-      $expected = "30U 699489 5713918";
+      $UTMRef = new UTMRef(699375, 5713970, 'U', 30);
+      $expected = "30U 699375 5713970";
       
       self::assertEquals($expected, $UTMRef->__toString());
     }
     
     public function testLatLng() {
     
-      $UTMRef = new UTMRef(699489, 5713918, 'U', 30);
+      $UTMRef = new UTMRef(699375, 5713970, 'U', 30);
       $LatLng = $UTMRef->toLatLng();
+      $LatLng->WGS84ToOSGB36();
     
-      $expectedLat = 51.5410534766;
-      $expectedLng = -0.123188320451;
+      $expected = "(51.54105, -0.12319)";
        
-      self::assertTrue(abs($expectedLat - $LatLng->lat) < 0.0000000001, 'Latitude not within tolerance');
-      self::assertTrue(abs($expectedLng - $LatLng->lng) < 0.0000000001, 'Longitude not within tolerance');
+      self::assertEquals($expected, $LatLng->__toString());
     }
     
   }
