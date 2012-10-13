@@ -11,13 +11,16 @@ Backwards compatibility has been maintained with class/function/member naming.
 PHPCoord is a set of PHP functions for handling various co-ordinate systems and converting
 between them. Currently, OSGB (Ordnance Survey of Great Britain) grid references,
 UTM (Universal Transverse Mercator) references and latitude/longitude are supported.
+
+Conversions between latitudes/longitudes in WGS84 (GPS), OSGB36 and ED50 datums are built-in,
+and helper functions exist to ease conversion between other datums. 
+
 A function is also provided to find the surface distance between two points of latitude
 and longitude.
 
-When using the OSGB conversions, the majority of applications use the
-WGS84 datum rather than the OSGB36 datum. Conversions should be accurate to
-within 5m or so. If accuracy is not important (i.e. to within 200m or so),
-then it isn't necessary to perform the conversions.
+Please note that the OS conversion functions use the British datum (OSGB36), which is not
+the same as used by e.g. GPS (WGS84). Conversion functions are provided and should be
+used if <200m accuracy is important.  
 
 Output of calculations have been changed from the original code in the following two ways:
  * When converting Latitude and Longitude between WGS84 and OSGB36 or vice-versa,
