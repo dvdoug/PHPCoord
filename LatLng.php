@@ -51,7 +51,7 @@
      * Calculate the surface distance between this LatLng object and the one
      * passed in as a parameter.
      *
-     * @param $aTo a LatLng object to measure the surface distance to
+     * @param LatLng $aTo a LatLng object to measure the surface distance to
      * @return float
      */
     public function distance(LatLng $aTo) {
