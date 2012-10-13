@@ -78,20 +78,12 @@
 
     /**
      * Convert this LatLng object from OSGB36 datum to WGS84 datum.
+     * @return void
      */
     public function OSGB36ToWGS84() {
       $airy1830 = new RefEll(6377563.396, 6356256.909);
-      $a        = $airy1830->maj;
-      $b        = $airy1830->min;
-      $eSquared = $airy1830->ecc;
-      $phi = deg2rad($this->lat);
-      $lambda = deg2rad($this->lng);
-      $v = $a / (sqrt(1 - $eSquared * pow(sin($phi), 2)));
-      $H = 0; // height
-      $x = ($v + $H) * cos($phi) * cos($lambda);
-      $y = ($v + $H) * cos($phi) * sin($lambda);
-      $z = ((1 - $eSquared) * $v + $H) * sin($phi);
-
+      $wgs84 = new RefEll(6378137, 6356752.3141);
+      
       $tx =        446.448;
       $ty =       -125.157; //XXX original project used -124.157. -125.157 is correct per OS.
       $tz =        542.060;
@@ -99,47 +91,18 @@
       $rx = deg2rad( 0.00004172222);
       $ry = deg2rad( 0.00006861111);
       $rz = deg2rad( 0.00023391666);
-
-      $xB = $tx + ($x * (1 + $s)) + (-$rx * $y)     + ($ry * $z);
-      $yB = $ty + ($rz * $x)      + ($y * (1 + $s)) + (-$rx * $z);
-      $zB = $tz + (-$ry * $x)     + ($rx * $y)      + ($z * (1 + $s));
-
-      $wgs84 = new RefEll(6378137, 6356752.3141);
-      $a        = $wgs84->maj;
-      $b        = $wgs84->min;
-      $eSquared = $wgs84->ecc;
-
-      $lambdaB = rad2deg(atan($yB / $xB));
-      $p = sqrt(($xB * $xB) + ($yB * $yB));
-      $phiN = atan($zB / ($p * (1 - $eSquared)));
-      for ($i = 1; $i < 10; $i++) {
-        $v = $a / (sqrt(1 - $eSquared * pow(sin($phiN), 2)));
-        $phiN1 = atan(($zB + ($eSquared * $v * sin($phiN))) / $p);
-        $phiN = $phiN1;
-      }
-
-      $phiB = rad2deg($phiN);
-
-      $this->lat = round($phiB, 5);
-      $this->lng = round($lambdaB, 5);
+      
+      $this->transformDatum($airy1830, $wgs84, $tx, $ty, $tz, $s, $rx, $ry, $rz);
     }
 
 
     /**
      * Convert this LatLng object from WGS84 datum to OSGB36 datum.
+     * @return void
      */
     public function WGS84ToOSGB36() {
       $wgs84 = new RefEll(6378137, 6356752.3141);
-      $a        = $wgs84->maj;
-      $b        = $wgs84->min;
-      $eSquared = $wgs84->ecc;
-      $phi = deg2rad($this->lat);
-      $lambda = deg2rad($this->lng);
-      $v = $a / (sqrt(1 - $eSquared * pow(sin($phi), 2)));
-      $H = 0; // height
-      $x = ($v + $H) * cos($phi) * cos($lambda);
-      $y = ($v + $H) * cos($phi) * sin($lambda);
-      $z = ((1 - $eSquared) * $v + $H) * sin($phi);
+      $airy1830 = new RefEll(6377563.396, 6356256.909);
 
       $tx =       -446.448;
       $ty =        125.157; //XXX original project used 124.157. 125.157 is correct per OS.
@@ -148,16 +111,42 @@
       $rx = deg2rad(-0.00004172222);
       $ry = deg2rad(-0.00006861111);
       $rz = deg2rad(-0.00023391666);
-
-      $xB = $tx + ($x * (1 + $s)) + (-$rx * $y)     + ($ry * $z);
-      $yB = $ty + ($rz * $x)      + ($y * (1 + $s)) + (-$rx * $z);
-      $zB = $tz + (-$ry * $x)     + ($rx * $y)      + ($z * (1 + $s));
-
-      $airy1830 = new RefEll(6377563.396, 6356256.909);
-      $a        = $airy1830->maj;
-      $b        = $airy1830->min;
-      $eSquared = $airy1830->ecc;
-
+      
+      $this->transformDatum($wgs84, $airy1830, $tx, $ty, $tz, $s, $rx, $ry, $rz);
+    }
+    
+    /**
+     * Transform co-ordinates from one datum to another using a Helmert transformation
+     * @param RefEll $aFromEllipsoid
+     * @param RefEll $aToEllipsoid
+     * @param float $aTranslationX translation vector x coordinate
+     * @param float $aTranslationY translation vector y coordinate
+     * @param float $aTranslationZ translation vector z coordinate
+     * @param float $aScale  scale factor
+     * @param float $aRotationX rotation x radians
+     * @param float $aRotationY rotation y radians
+     * @param float $aRotationZ rotation z radians
+     */
+    public function transformDatum(RefEll $aFromEllipsoid, RefEll $aToEllipsoid, $aTranslationX, $aTranslationY, $aTranslationZ, $aScale, $aRotationX, $aRotationY, $aRotationZ) {
+      $a        = $aFromEllipsoid->maj;
+      $b        = $aFromEllipsoid->min;
+      $eSquared = $aFromEllipsoid->ecc;
+      $phi = deg2rad($this->lat);
+      $lambda = deg2rad($this->lng);
+      $v = $a / (sqrt(1 - $eSquared * pow(sin($phi), 2)));
+      $H = 0; // height
+      $x = ($v + $H) * cos($phi) * cos($lambda);
+      $y = ($v + $H) * cos($phi) * sin($lambda);
+      $z = ((1 - $eSquared) * $v + $H) * sin($phi);
+    
+      $xB = $aTranslationX + ($x * (1 + $aScale)) + (-$aRotationX * $y)     + ($aRotationY * $z);
+      $yB = $aTranslationY + ($aRotationZ * $x)      + ($y * (1 + $aScale)) + (-$aRotationX * $z);
+      $zB = $aTranslationZ + (-$aRotationY * $x)     + ($aRotationX * $y)      + ($z * (1 + $aScale));
+    
+      $a        = $aToEllipsoid->maj;
+      $b        = $aToEllipsoid->min;
+      $eSquared = $aToEllipsoid->ecc;
+    
       $lambdaB = rad2deg(atan($yB / $xB));
       $p = sqrt(($xB * $xB) + ($yB * $yB));
       $phiN = atan($zB / ($p * (1 - $eSquared)));
@@ -166,9 +155,9 @@
         $phiN1 = atan(($zB + ($eSquared * $v * sin($phiN))) / $p);
         $phiN = $phiN1;
       }
-
+    
       $phiB = rad2deg($phiN);
-
+    
       $this->lat = round($phiB, 5);
       $this->lng = round($lambdaB, 5);
     }
