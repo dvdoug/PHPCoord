@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project version="2.0.0a10" title="">
-  <file path="LatLng.php" hash="72d497b9542e8a4405ca58b2f07fb8fa" package="PHPCoord">
+  <file path="LatLng.php" hash="200837baf27b7f1cd446b932a3ad1f4b" package="PHPCoord">
     <docblock line="2">
       <description><![CDATA[PHPCoord]]></description>
       <long-description><![CDATA[]]></long-description>
@@ -137,7 +137,7 @@ passed in as a parameter.]]></description>
         <name>ED50ToWGS84</name>
         <full_name>ED50ToWGS84</full_name>
         <docblock line="142">
-          <description><![CDATA[Convert this LatLng object from Bessel1841 datum to WGS84 datum.]]></description>
+          <description><![CDATA[Convert this LatLng object from ED50 datum to WGS84 datum.]]></description>
           <long-description><![CDATA[<p>Reference values for transformation are taken from http://www.globalmapper.com/helpv9/datum_list.htm</p>]]></long-description>
           <tag line="142" name="return" description="" type="void">
             <type by_reference="false">void</type>

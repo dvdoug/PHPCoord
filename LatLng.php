@@ -140,7 +140,7 @@
     }
     
     /**
-     * Convert this LatLng object from Bessel1841 datum to WGS84 datum.
+     * Convert this LatLng object from ED50 datum to WGS84 datum.
      * Reference values for transformation are taken from http://www.globalmapper.com/helpv9/datum_list.htm
      * @return void
      */
