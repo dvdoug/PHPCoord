@@ -1,23 +1,29 @@
 PHPCoord
 ========
 
-Conversion/modernisation of phpcoord for PHP5.3/PSR-0. Conversion was based on v2.3
+Conversion/modernisation/enhancement of phpcoord for PHP5.3/PSR-0. Based on v2.3 of original project.
 
 [![Build Status](https://travis-ci.org/Pre-schoolLearningAlliance/PHPCoord.png)](https://travis-ci.org/Pre-schoolLearningAlliance/PHPCoord)
 
 The original code by Jonathan Stott can be found at http://www.jstott.me.uk/phpcoord/
+Backwards compatibility has been maintained with class/function/member naming.
 
-PHPCoord is a set of PHP functions for handling various
-co-ordinate systems and converting between them. Currently, OSGB (Ordnance
-Survey of Great Britain) grid references, UTM (Universal Transverse
-Mercator) references and latitude/longitude are supported. A function is 
-also provided to find the surface distance between two points of latitude
+PHPCoord is a set of PHP functions for handling various co-ordinate systems and converting
+between them. Currently, OSGB (Ordnance Survey of Great Britain) grid references,
+UTM (Universal Transverse Mercator) references and latitude/longitude are supported.
+A function is also provided to find the surface distance between two points of latitude
 and longitude.
 
 When using the OSGB conversions, the majority of applications use the
 WGS84 datum rather than the OSGB36 datum. Conversions should be accurate to
 within 5m or so. If accuracy is not important (i.e. to within 200m or so),
 then it isn't necessary to perform the conversions.
+
+Output of calculations have been changed from the original code in the following two ways:
+ * When converting Latitude and Longitude between WGS84 and OSGB36 or vice-versa,
+   a wrong constant for the y translation has been corrected (was off by 1 metre)
+ * Eastings and northings are rounded to 1m, and lat/long to 5dp (approx 1m) to avoid any misconceptions 
+   that precision is the same thing as accuracy. 
 
 Usage
 -----
