@@ -110,7 +110,7 @@
      * @return LatLng
      */
     public function toLatLng() {
-      $airy1830 = new RefEll(6377563.396, 6356256.909);
+      $airy1830 = RefEll::Airy1830();
       $OSGB_F0  = 0.9996012717;
       $N0       = -100000;
       $E0       = 400000;

@@ -73,7 +73,7 @@
      * @return LatLng
      */
     public function toLatLng() {
-      $wgs84 = new RefEll(6378137, 6356752.314);
+      $wgs84 = RefEll::WGS84();
       $UTM_F0   = 0.9996;
       $a = $wgs84->maj;
       $eSquared = $wgs84->ecc;

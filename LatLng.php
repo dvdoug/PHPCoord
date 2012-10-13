@@ -83,8 +83,8 @@
      * @return void
      */
     public function OSGB36ToWGS84() {
-      $airy1830 = new RefEll(6377563.396, 6356256.909);
-      $wgs84 = new RefEll(6378137, 6356752.3141);
+      $airy1830 = RefEll::Airy1830();
+      $wgs84 = RefEll::WGS84();
       
       $tx =        446.448;
       $ty =       -125.157;
@@ -105,8 +105,8 @@
      * @return void
      */
     public function WGS84ToOSGB36() {
-      $wgs84 = new RefEll(6378137, 6356752.3141);
-      $airy1830 = new RefEll(6377563.396, 6356256.909);
+      $wgs84 = RefEll::WGS84();
+      $airy1830 = RefEll::Airy1830();
 
       $tx =       -446.448;
       $ty =        125.157;
@@ -176,7 +176,7 @@
      * @return OSRef
      */
     public function toOSRef() {
-      $airy1830 = new RefEll(6377563.396, 6356256.909);
+      $airy1830 = RefEll::Airy1830();
       $OSGB_F0  = 0.9996012717;
       $N0       = -100000;
       $E0       = 400000;
@@ -250,7 +250,7 @@
      * @return UTMRef
      */
     public function toUTMRef() {
-      $wgs84 = new RefEll(6378137, 6356752.314);
+      $wgs84 = RefEll::WGS84();
       $UTM_F0   = 0.9996;
       $a = $wgs84->maj;
       $eSquared = $wgs84->ecc;
