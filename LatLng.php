@@ -8,7 +8,7 @@
   namespace PHPCoord;
 
   /**
-   * Latitude/Longtitude reference
+   * Latitude/Longitude reference
    * @author Jonathan Stott
    * @author Doug Wright
    * @package PHPCoord
@@ -35,8 +35,8 @@
      * @param int $aLng
      */
     public function __construct($aLat, $aLng) {
-      $this->lat = $aLat;
-      $this->lng = $aLng;
+      $this->lat = round($aLat, 5);
+      $this->lng = round($aLng, 5);
     }
 
     /**
@@ -120,8 +120,8 @@
 
       $phiB = rad2deg($phiN);
 
-      $this->lat = $phiB;
-      $this->lng = $lambdaB;
+      $this->lat = round($phiB, 5);
+      $this->lng = round($lambdaB, 5);
     }
 
 
@@ -169,8 +169,8 @@
 
       $phiB = rad2deg($phiN);
 
-      $this->lat = $phiB;
-      $this->lng = $lambdaB;
+      $this->lat = round($phiB, 5);
+      $this->lng = round($lambdaB, 5);
     }
 
 
@@ -248,12 +248,12 @@
           + ($V * pow($lambda - $lambda0, 3))
           + ($VI * pow($lambda - $lambda0, 5));
 
-      return new OSRef(round($E), round($N));
+      return new OSRef($E, $N);
     }
 
 
     /**
-     * Convert a latitude and longitude to an UTM reference
+     * Convert a WGS84 latitude and longitude to an UTM reference
      * @return UTMRef
      */
     public function toUTMRef() {
@@ -342,7 +342,7 @@
         $UTMNorthing += 10000000;
       }
 
-      return new UTMRef(round($UTMEasting), round($UTMNorthing), $UTMZone, $longitudeZone);
+      return new UTMRef($UTMEasting, $UTMNorthing, $UTMZone, $longitudeZone);
     }
     
     /**

@@ -47,8 +47,8 @@
      * @param int $aNorthing the northing of the reference (with 1m accuracy)
      */
     public function __construct($aEasting, $aNorthing) {
-      $this->easting  = $aEasting;
-      $this->northing = $aNorthing;
+      $this->easting  = round($aEasting);
+      $this->northing = round($aNorthing);
     }
 
     /**

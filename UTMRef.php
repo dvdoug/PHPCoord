@@ -52,8 +52,8 @@
      * @param int $aLngZone
      */
     public function __construct($aEasting, $aNorthing, $aLatZone, $aLngZone) {
-      $this->easting  = $aEasting;
-      $this->northing = $aNorthing;
+      $this->easting  = round($aEasting);
+      $this->northing = round($aNorthing);
       $this->latZone  = $aLatZone;
       $this->lngZone  = $aLngZone;
     }
@@ -69,7 +69,7 @@
 
 
     /**
-     * Convert this UTM reference to a latitude and longitude
+     * Convert this UTM reference to a WGS84 latitude and longitude
      * @return LatLng
      */
     public function toLatLng() {
@@ -79,7 +79,7 @@
       $eSquared = $wgs84->ecc;
       $ePrimeSquared = $eSquared / (1 - $eSquared);
       $e1 = (1 - sqrt(1 - $eSquared)) / (1 + sqrt(1 - $eSquared));
-      $x = $this->easting - 500000;;
+      $x = $this->easting - 500000;
       $y = $this->northing;
       $zoneNumber = $this->lngZone;
       $zoneLetter = $this->latZone;
