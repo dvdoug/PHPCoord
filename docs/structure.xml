@@ -1,0 +1,728 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project version="2.0.0a10" title="">
+  <file path="LatLng.php" hash="72d497b9542e8a4405ca58b2f07fb8fa" package="PHPCoord">
+    <docblock line="2">
+      <description><![CDATA[PHPCoord]]></description>
+      <long-description><![CDATA[]]></long-description>
+      <tag line="2" name="package" description="PHPCoord"/>
+      <tag line="2" name="author" description="Jonathan Stott"/>
+      <tag line="2" name="author" description="Doug Wright"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="PHPCoord" line="16" package="PHPCoord">
+      <extends/>
+      <name>LatLng</name>
+      <full_name>\PHPCoord\LatLng</full_name>
+      <docblock line="10">
+        <description><![CDATA[Latitude/Longitude reference]]></description>
+        <long-description><![CDATA[]]></long-description>
+        <tag line="10" name="author" description="Jonathan Stott"/>
+        <tag line="10" name="author" description="Doug Wright"/>
+        <tag line="10" name="package" description="PHPCoord"/>
+      </docblock>
+      <property final="false" static="false" visibility="public" line="23" namespace="PHPCoord" package="Default">
+        <name>$lat</name>
+        <default><![CDATA[]]></default>
+        <docblock line="18">
+          <description><![CDATA[Latitude]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="18" name="api" description=""/>
+          <tag line="18" name="var" description="" type="float">
+            <type by_reference="false">float</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="30" namespace="PHPCoord" package="Default">
+        <name>$lng</name>
+        <default><![CDATA[]]></default>
+        <docblock line="25">
+          <description><![CDATA[Longitude]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="25" name="api" description=""/>
+          <tag line="25" name="var" description="" type="float">
+            <type by_reference="false">float</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="PHPCoord" line="37" package="PHPCoord">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="32">
+          <description><![CDATA[Create a new LatLng object from the given latitude and longitude]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="32" name="param" description="" type="int" variable="$aLat">
+            <type by_reference="false">int</type>
+          </tag>
+          <tag line="32" name="param" description="" type="int" variable="$aLng">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+        <argument line="37">
+          <name>$aLat</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="37">
+          <name>$aLng</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="PHPCoord" line="46" package="PHPCoord">
+        <name>__toString</name>
+        <full_name>__toString</full_name>
+        <docblock line="42">
+          <description><![CDATA[Return a string representation of this LatLng object]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="42" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="PHPCoord" line="57" package="PHPCoord">
+        <name>distance</name>
+        <full_name>distance</full_name>
+        <docblock line="50">
+          <description><![CDATA[Calculate the surface distance between this LatLng object and the one
+passed in as a parameter.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="50" name="param" description="a LatLng object to measure the surface distance to" type="\PHPCoord\LatLng" variable="$aTo">
+            <type by_reference="false">\PHPCoord\LatLng</type>
+          </tag>
+          <tag line="50" name="return" description="" type="float">
+            <type by_reference="false">float</type>
+          </tag>
+        </docblock>
+        <argument line="57">
+          <name>$aTo</name>
+          <default><![CDATA[]]></default>
+          <type>\PHPCoord\LatLng</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="PHPCoord" line="85" package="PHPCoord">
+        <name>OSGB36ToWGS84</name>
+        <full_name>OSGB36ToWGS84</full_name>
+        <docblock line="79">
+          <description><![CDATA[Convert this LatLng object from OSGB36 datum to WGS84 datum.]]></description>
+          <long-description><![CDATA[<p>Reference values for transformation are taken from OS document
+"A Guide to Coordinate Systems in Great Britain"</p>]]></long-description>
+          <tag line="79" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="PHPCoord" line="107" package="PHPCoord">
+        <name>WGS84ToOSGB36</name>
+        <full_name>WGS84ToOSGB36</full_name>
+        <docblock line="101">
+          <description><![CDATA[Convert this LatLng object from WGS84 datum to OSGB36 datum.]]></description>
+          <long-description><![CDATA[<p>Reference values for transformation are taken from OS document
+"A Guide to Coordinate Systems in Great Britain"</p>]]></long-description>
+          <tag line="101" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="PHPCoord" line="127" package="PHPCoord">
+        <name>WGS84ToED50</name>
+        <full_name>WGS84ToED50</full_name>
+        <docblock line="122">
+          <description><![CDATA[Convert this LatLng object from WGS84 datum to ED50 datum.]]></description>
+          <long-description><![CDATA[<p>Reference values for transformation are taken from http://www.globalmapper.com/helpv9/datum_list.htm</p>]]></long-description>
+          <tag line="122" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="PHPCoord" line="147" package="PHPCoord">
+        <name>ED50ToWGS84</name>
+        <full_name>ED50ToWGS84</full_name>
+        <docblock line="142">
+          <description><![CDATA[Convert this LatLng object from Bessel1841 datum to WGS84 datum.]]></description>
+          <long-description><![CDATA[<p>Reference values for transformation are taken from http://www.globalmapper.com/helpv9/datum_list.htm</p>]]></long-description>
+          <tag line="142" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="PHPCoord" line="167" package="PHPCoord">
+        <name>WGS84ToNAD27</name>
+        <full_name>WGS84ToNAD27</full_name>
+        <docblock line="162">
+          <description><![CDATA[Convert this LatLng object from WGS84 datum to NAD27 datum.]]></description>
+          <long-description><![CDATA[<p>Reference values for transformation are taken from Wikipedia</p>]]></long-description>
+          <tag line="162" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="PHPCoord" line="187" package="PHPCoord">
+        <name>NAD27ToWGS84</name>
+        <full_name>NAD27ToWGS84</full_name>
+        <docblock line="182">
+          <description><![CDATA[Convert this LatLng object from NAD27 datum to WGS84 datum.]]></description>
+          <long-description><![CDATA[<p>Reference values for transformation are taken from Wikipedia</p>]]></long-description>
+          <tag line="182" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="PHPCoord" line="214" package="PHPCoord">
+        <name>transformDatum</name>
+        <full_name>transformDatum</full_name>
+        <docblock line="202">
+          <description><![CDATA[Transform co-ordinates from one datum to another using a Helmert transformation]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="202" name="param" description="" type="\PHPCoord\RefEll" variable="$aFromEllipsoid">
+            <type by_reference="false">\PHPCoord\RefEll</type>
+          </tag>
+          <tag line="202" name="param" description="" type="\PHPCoord\RefEll" variable="$aToEllipsoid">
+            <type by_reference="false">\PHPCoord\RefEll</type>
+          </tag>
+          <tag line="202" name="param" description="translation vector x coordinate" type="float" variable="$aTranslationX">
+            <type by_reference="false">float</type>
+          </tag>
+          <tag line="202" name="param" description="translation vector y coordinate" type="float" variable="$aTranslationY">
+            <type by_reference="false">float</type>
+          </tag>
+          <tag line="202" name="param" description="translation vector z coordinate" type="float" variable="$aTranslationZ">
+            <type by_reference="false">float</type>
+          </tag>
+          <tag line="202" name="param" description="scale factor" type="float" variable="$aScale">
+            <type by_reference="false">float</type>
+          </tag>
+          <tag line="202" name="param" description="rotation x radians" type="float" variable="$aRotationX">
+            <type by_reference="false">float</type>
+          </tag>
+          <tag line="202" name="param" description="rotation y radians" type="float" variable="$aRotationY">
+            <type by_reference="false">float</type>
+          </tag>
+          <tag line="202" name="param" description="rotation z radians" type="float" variable="$aRotationZ">
+            <type by_reference="false">float</type>
+          </tag>
+        </docblock>
+        <argument line="214">
+          <name>$aFromEllipsoid</name>
+          <default><![CDATA[]]></default>
+          <type>\PHPCoord\RefEll</type>
+        </argument>
+        <argument line="214">
+          <name>$aToEllipsoid</name>
+          <default><![CDATA[]]></default>
+          <type>\PHPCoord\RefEll</type>
+        </argument>
+        <argument line="214">
+          <name>$aTranslationX</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="214">
+          <name>$aTranslationY</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="214">
+          <name>$aTranslationZ</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="214">
+          <name>$aScale</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="214">
+          <name>$aRotationX</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="214">
+          <name>$aRotationY</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="214">
+          <name>$aRotationZ</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="PHPCoord" line="258" package="PHPCoord">
+        <name>toOSRef</name>
+        <full_name>toOSRef</full_name>
+        <docblock line="250">
+          <description><![CDATA[Convert this LatLng object into an OSGB grid reference.]]></description>
+          <long-description><![CDATA[<p>Note that this
+function does not take into account the bounds of the OSGB grid -
+beyond the bounds of the OSGB grid, the resulting OSRef object has no
+meaning</p>]]></long-description>
+          <tag line="250" name="return" description="" type="\PHPCoord\OSRef">
+            <type by_reference="false">\PHPCoord\OSRef</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="PHPCoord" line="332" package="PHPCoord">
+        <name>toUTMRef</name>
+        <full_name>toUTMRef</full_name>
+        <docblock line="328">
+          <description><![CDATA[Convert a WGS84 latitude and longitude to an UTM reference]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="328" name="return" description="" type="\PHPCoord\UTMRef">
+            <type by_reference="false">\PHPCoord\UTMRef</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="PHPCoord" line="428" package="PHPCoord">
+        <name>getUTMLatitudeZoneLetter</name>
+        <full_name>getUTMLatitudeZoneLetter</full_name>
+        <docblock line="423">
+          <description><![CDATA[Work out the UTM latitude zone from the latitude]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="423" name="param" description="" type="float" variable="$aLatitude">
+            <type by_reference="false">float</type>
+          </tag>
+          <tag line="423" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="428">
+          <name>$aLatitude</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+  </file>
+  <file path="OSRef.php" hash="65f70a2f3631cc0590fed630ea4b9474" package="PHPCoord">
+    <docblock line="2">
+      <description><![CDATA[PHPCoord]]></description>
+      <long-description><![CDATA[]]></long-description>
+      <tag line="2" name="package" description="PHPCoord"/>
+      <tag line="2" name="author" description="Jonathan Stott"/>
+      <tag line="2" name="author" description="Doug Wright"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="PHPCoord" line="17" package="PHPCoord">
+      <extends/>
+      <name>OSRef</name>
+      <full_name>\PHPCoord\OSRef</full_name>
+      <docblock line="10">
+        <description><![CDATA[Ordnance Survey grid reference
+References are accurate to 1m]]></description>
+        <long-description><![CDATA[]]></long-description>
+        <tag line="10" name="author" description="Jonathan Stott"/>
+        <tag line="10" name="author" description="Doug Wright"/>
+        <tag line="10" name="package" description="PHPCoord"/>
+      </docblock>
+      <property final="false" static="false" visibility="public" line="24" namespace="PHPCoord" package="Default">
+        <name>$easting</name>
+        <default><![CDATA[]]></default>
+        <docblock line="19">
+          <description><![CDATA[Easting]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="19" name="api" description=""/>
+          <tag line="19" name="var" description="" type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="31" namespace="PHPCoord" package="Default">
+        <name>$northing</name>
+        <default><![CDATA[]]></default>
+        <docblock line="26">
+          <description><![CDATA[Northing]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="26" name="api" description=""/>
+          <tag line="26" name="var" description="" type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="PHPCoord" line="49" package="PHPCoord">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="33">
+          <description><![CDATA[Create a new OSRef object representing an OSGB grid reference.]]></description>
+          <long-description><![CDATA[<p>Note
+that the parameters for this constructor require eastings and
+northings with 1m accuracy and need to be absolute with respect to
+the whole of the British Grid. For example, to create an OSRef
+object from the six-figure grid reference TG514131, the easting would
+be 651400 and the northing would be 313100.</p>
+
+<p>Grid references with accuracy greater than 1m can be represented
+using floating point values for the easting and northing. For example,
+a value representing an easting or northing accurate to 1mm would be
+given as 651400.0001.</p>]]></long-description>
+          <tag line="33" name="param" description="the easting of the reference (with 1m accuracy)" type="int" variable="$aEasting">
+            <type by_reference="false">int</type>
+          </tag>
+          <tag line="33" name="param" description="the northing of the reference (with 1m accuracy)" type="int" variable="$aNorthing">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+        <argument line="49">
+          <name>$aEasting</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="49">
+          <name>$aNorthing</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="PHPCoord" line="59" package="PHPCoord">
+        <name>__toString</name>
+        <full_name>__toString</full_name>
+        <docblock line="54">
+          <description><![CDATA[Convert this grid reference into a string showing the exact values
+of the easting and northing.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="54" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="PHPCoord" line="69" package="PHPCoord">
+        <name>toSixFigureString</name>
+        <full_name>toSixFigureString</full_name>
+        <docblock line="63">
+          <description><![CDATA[Convert this grid reference into a string using a standard six-figure
+grid reference including the two-character designation for the 100km
+square.]]></description>
+          <long-description><![CDATA[<p>e.g. TG514131.</p>]]></long-description>
+          <tag line="63" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="PHPCoord" line="112" package="PHPCoord">
+        <name>toLatLng</name>
+        <full_name>toLatLng</full_name>
+        <docblock line="108">
+          <description><![CDATA[Convert this grid reference into a latitude and longitude]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="108" name="return" description="" type="\PHPCoord\LatLng">
+            <type by_reference="false">\PHPCoord\LatLng</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="PHPCoord" line="207" package="PHPCoord">
+        <name>getOSRefFromSixFigureReference</name>
+        <full_name>getOSRefFromSixFigureReference</full_name>
+        <docblock line="197">
+          <description><![CDATA[Take a string formatted as a six-figure OS grid reference (e.g.]]></description>
+          <long-description><![CDATA[<p>"TG514131") and return a reference to an OSRef object that represents
+that grid reference. The first character must be H, N, S, O or T.
+The second character can be any uppercase character from A through Z
+excluding I.</p>]]></long-description>
+          <tag line="197" name="param" description="" type="string" variable="$aRef">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="197" name="return" description="" type="\PHPCoord\OSRef">
+            <type by_reference="false">\PHPCoord\OSRef</type>
+          </tag>
+        </docblock>
+        <argument line="207">
+          <name>$aRef</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+  </file>
+  <file path="RefEll.php" hash="e704c16c663aa2f8b3205f1e9dd3ce29" package="PHPCoord">
+    <docblock line="2">
+      <description><![CDATA[PHPCoord]]></description>
+      <long-description><![CDATA[]]></long-description>
+      <tag line="2" name="package" description="PHPCoord"/>
+      <tag line="2" name="author" description="Jonathan Stott"/>
+      <tag line="2" name="author" description="Doug Wright"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="PHPCoord" line="16" package="PHPCoord">
+      <extends/>
+      <name>RefEll</name>
+      <full_name>\PHPCoord\RefEll</full_name>
+      <docblock line="10">
+        <description><![CDATA[Reference ellipsoid]]></description>
+        <long-description><![CDATA[]]></long-description>
+        <tag line="10" name="author" description="Jonathan Stott"/>
+        <tag line="10" name="author" description="Doug Wright"/>
+        <tag line="10" name="package" description="PHPCoord"/>
+      </docblock>
+      <property final="false" static="false" visibility="public" line="23" namespace="PHPCoord" package="Default">
+        <name>$maj</name>
+        <default><![CDATA[]]></default>
+        <docblock line="18">
+          <description><![CDATA[Major axis]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="18" name="api" description=""/>
+          <tag line="18" name="var" description="" type="float">
+            <type by_reference="false">float</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="30" namespace="PHPCoord" package="Default">
+        <name>$min</name>
+        <default><![CDATA[]]></default>
+        <docblock line="25">
+          <description><![CDATA[Minor axis]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="25" name="api" description=""/>
+          <tag line="25" name="var" description="" type="float">
+            <type by_reference="false">float</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="37" namespace="PHPCoord" package="Default">
+        <name>$ecc</name>
+        <default><![CDATA[]]></default>
+        <docblock line="32">
+          <description><![CDATA[Eccentricity]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="32" name="api" description=""/>
+          <tag line="32" name="var" description="" type="float">
+            <type by_reference="false">float</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="PHPCoord" line="45" package="PHPCoord">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="39">
+          <description><![CDATA[Create a new RefEll object to represent a reference ellipsoid]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="39" name="param" description="the major axis" type="float" variable="$aMaj">
+            <type by_reference="false">float</type>
+          </tag>
+          <tag line="39" name="param" description="the minor axis" type="float" variable="$aMin">
+            <type by_reference="false">float</type>
+          </tag>
+        </docblock>
+        <argument line="45">
+          <name>$aMaj</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="45">
+          <name>$aMin</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="PHPCoord" line="55" package="PHPCoord">
+        <name>Airy1830</name>
+        <full_name>Airy1830</full_name>
+        <docblock line="51">
+          <description><![CDATA[Helper function to create Airy1830 ellipsoid]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="51" name="return" description="" type="\PHPCoord\RefEll">
+            <type by_reference="false">\PHPCoord\RefEll</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="PHPCoord" line="63" package="PHPCoord">
+        <name>WGS84</name>
+        <full_name>WGS84</full_name>
+        <docblock line="59">
+          <description><![CDATA[Helper function to create WGS84 ellipsoid]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="59" name="return" description="" type="\PHPCoord\RefEll">
+            <type by_reference="false">\PHPCoord\RefEll</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="PHPCoord" line="71" package="PHPCoord">
+        <name>GRS80</name>
+        <full_name>GRS80</full_name>
+        <docblock line="67">
+          <description><![CDATA[Helper function to create GRS80 ellipsoid]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="67" name="return" description="" type="\PHPCoord\RefEll">
+            <type by_reference="false">\PHPCoord\RefEll</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="PHPCoord" line="79" package="PHPCoord">
+        <name>Clarke1866</name>
+        <full_name>Clarke1866</full_name>
+        <docblock line="75">
+          <description><![CDATA[Helper function to create GRS80 ellipsoid]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="75" name="return" description="" type="\PHPCoord\RefEll">
+            <type by_reference="false">\PHPCoord\RefEll</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="PHPCoord" line="87" package="PHPCoord">
+        <name>International1924</name>
+        <full_name>International1924</full_name>
+        <docblock line="83">
+          <description><![CDATA[Helper function to create International 1924 (Heyford) ellipsoid]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="83" name="return" description="" type="\PHPCoord\RefEll">
+            <type by_reference="false">\PHPCoord\RefEll</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="PHPCoord" line="95" package="PHPCoord">
+        <name>Heyford1924</name>
+        <full_name>Heyford1924</full_name>
+        <docblock line="91">
+          <description><![CDATA[Helper function to create International 1924 (Heyford) ellipsoid]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="91" name="return" description="" type="\PHPCoord\RefEll">
+            <type by_reference="false">\PHPCoord\RefEll</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="PHPCoord" line="103" package="PHPCoord">
+        <name>Bessel1841</name>
+        <full_name>Bessel1841</full_name>
+        <docblock line="99">
+          <description><![CDATA[Helper function to create Bessel 1841 ellipsoid]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="99" name="return" description="" type="\PHPCoord\RefEll">
+            <type by_reference="false">\PHPCoord\RefEll</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+  </file>
+  <file path="UTMRef.php" hash="37aca3da4e20bbc75495f0c4759333ae" package="PHPCoord">
+    <docblock line="2">
+      <description><![CDATA[PHPCoord]]></description>
+      <long-description><![CDATA[]]></long-description>
+      <tag line="2" name="package" description="PHPCoord"/>
+      <tag line="2" name="author" description="Jonathan Stott"/>
+      <tag line="2" name="author" description="Doug Wright"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="PHPCoord" line="16" package="PHPCoord">
+      <extends/>
+      <name>UTMRef</name>
+      <full_name>\PHPCoord\UTMRef</full_name>
+      <docblock line="10">
+        <description><![CDATA[UTM reference]]></description>
+        <long-description><![CDATA[]]></long-description>
+        <tag line="10" name="author" description="Jonathan Stott"/>
+        <tag line="10" name="author" description="Doug Wright"/>
+        <tag line="10" name="package" description="PHPCoord"/>
+      </docblock>
+      <property final="false" static="false" visibility="public" line="23" namespace="PHPCoord" package="Default">
+        <name>$easting</name>
+        <default><![CDATA[]]></default>
+        <docblock line="18">
+          <description><![CDATA[Easting]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="18" name="api" description=""/>
+          <tag line="18" name="var" description="" type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="30" namespace="PHPCoord" package="Default">
+        <name>$northing</name>
+        <default><![CDATA[]]></default>
+        <docblock line="25">
+          <description><![CDATA[Easting]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="25" name="api" description=""/>
+          <tag line="25" name="var" description="" type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="37" namespace="PHPCoord" package="Default">
+        <name>$latZone</name>
+        <default><![CDATA[]]></default>
+        <docblock line="32">
+          <description><![CDATA[Latitude zone]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="32" name="api" description=""/>
+          <tag line="32" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="44" namespace="PHPCoord" package="Default">
+        <name>$lngZone</name>
+        <default><![CDATA[]]></default>
+        <docblock line="39">
+          <description><![CDATA[Longitude zone]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="39" name="api" description=""/>
+          <tag line="39" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="PHPCoord" line="54" package="PHPCoord">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="46">
+          <description><![CDATA[Create a new object representing a UTM reference.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="46" name="param" description="" type="int" variable="$aEasting">
+            <type by_reference="false">int</type>
+          </tag>
+          <tag line="46" name="param" description="" type="int" variable="$aNorthing">
+            <type by_reference="false">int</type>
+          </tag>
+          <tag line="46" name="param" description="" type="string" variable="$aLatZone">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="46" name="param" description="" type="int" variable="$aLngZone">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+        <argument line="54">
+          <name>$aEasting</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="54">
+          <name>$aNorthing</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="54">
+          <name>$aLatZone</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="54">
+          <name>$aLngZone</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="PHPCoord" line="66" package="PHPCoord">
+        <name>__toString</name>
+        <full_name>__toString</full_name>
+        <docblock line="62">
+          <description><![CDATA[Return a string representation of this UTM reference]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="62" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="PHPCoord" line="75" package="PHPCoord">
+        <name>toLatLng</name>
+        <full_name>toLatLng</full_name>
+        <docblock line="71">
+          <description><![CDATA[Convert this UTM reference to a WGS84 latitude and longitude]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="71" name="return" description="" type="\PHPCoord\LatLng">
+            <type by_reference="false">\PHPCoord\LatLng</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+  </file>
+  <package name="Default" full_name="Default"/>
+  <package name="PHPCoord" full_name="PHPCoord"/>
+  <namespace name="PHPCoord" full_name="PHPCoord"/>
+  <marker count="0">todo</marker>
+  <marker count="0">fixme</marker>
+  <deprecated count="0"/>
+</project>
