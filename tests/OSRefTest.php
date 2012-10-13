@@ -17,7 +17,7 @@
       self::assertEquals($expected, $OSRef->__toString());
     }
     
-    public function testLatLng() {
+    public function testLatLngWorkHQ() {
     
       $OSRef = new OSRef(530140, 184184);
       $LatLng = $OSRef->toLatLng();
@@ -25,7 +25,16 @@
       $expected = "(51.54105, -0.12319)";
        
       self::assertEquals($expected, $LatLng->__toString());
-      
+    }
+    
+    public function testLatLngOSWorkedExample() {
+    
+      $OSRef = new OSRef(651410, 313177);
+      $LatLng = $OSRef->toLatLng();
+    
+      $expected = "(52.65757, 1.71792)";
+       
+      self::assertEquals($expected, $LatLng->__toString());
     }
     
     public function testToSixFigureString() {
