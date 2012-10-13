@@ -78,6 +78,8 @@
 
     /**
      * Convert this LatLng object from OSGB36 datum to WGS84 datum.
+     * Reference values for transformation are taken from OS document
+     * "A Guide to Coordinate Systems in Great Britain"
      * @return void
      */
     public function OSGB36ToWGS84() {
@@ -85,12 +87,12 @@
       $wgs84 = new RefEll(6378137, 6356752.3141);
       
       $tx =        446.448;
-      $ty =       -125.157; //XXX original project used -124.157. -125.157 is correct per OS.
+      $ty =       -125.157;
       $tz =        542.060;
       $s  =         -0.0000204894;
-      $rx = deg2rad( 0.00004172222);
-      $ry = deg2rad( 0.00006861111);
-      $rz = deg2rad( 0.00023391666);
+      $rx = deg2rad(0.1502/3600);
+      $ry = deg2rad(0.2470/3600);
+      $rz = deg2rad(0.8421/3600);
       
       $this->transformDatum($airy1830, $wgs84, $tx, $ty, $tz, $s, $rx, $ry, $rz);
     }
@@ -98,6 +100,8 @@
 
     /**
      * Convert this LatLng object from WGS84 datum to OSGB36 datum.
+     * Reference values for transformation are taken from OS document
+     * "A Guide to Coordinate Systems in Great Britain" 
      * @return void
      */
     public function WGS84ToOSGB36() {
@@ -105,12 +109,12 @@
       $airy1830 = new RefEll(6377563.396, 6356256.909);
 
       $tx =       -446.448;
-      $ty =        125.157; //XXX original project used 124.157. 125.157 is correct per OS.
+      $ty =        125.157;
       $tz =       -542.060;
       $s  =          0.0000204894;
-      $rx = deg2rad(-0.00004172222);
-      $ry = deg2rad(-0.00006861111);
-      $rz = deg2rad(-0.00023391666);
+      $rx = deg2rad(-0.1502/3600);
+      $ry = deg2rad(-0.2470/3600);
+      $rz = deg2rad(-0.8421/3600);
       
       $this->transformDatum($wgs84, $airy1830, $tx, $ty, $tz, $s, $rx, $ry, $rz);
     }
