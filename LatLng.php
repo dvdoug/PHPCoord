@@ -120,6 +120,86 @@
     }
     
     /**
+     * Convert this LatLng object from WGS84 datum to ED50 datum.
+     * Reference values for transformation are taken from http://www.globalmapper.com/helpv9/datum_list.htm
+     * @return void
+     */
+    public function WGS84ToED50() {
+      $wgs84 = RefEll::WGS84();
+      $heyford1924 = RefEll::Heyford1924();
+    
+      $tx =        87;
+      $ty =        98;
+      $tz =        121;
+      $s  =          0;
+      $rx = deg2rad( 0);
+      $ry = deg2rad( 0);
+      $rz = deg2rad( 0);
+    
+      $this->transformDatum($wgs84, $heyford1924, $tx, $ty, $tz, $s, $rx, $ry, $rz);
+    }
+    
+    /**
+     * Convert this LatLng object from Bessel1841 datum to WGS84 datum.
+     * Reference values for transformation are taken from http://www.globalmapper.com/helpv9/datum_list.htm
+     * @return void
+     */
+    public function ED50ToWGS84() {
+      $wgs84 = RefEll::WGS84();
+      $heyford1924 = RefEll::Heyford1924();
+    
+      $tx =       -87;
+      $ty =       -98;
+      $tz =       -121;
+      $s  =          0;
+      $rx = deg2rad( 0);
+      $ry = deg2rad( 0);
+      $rz = deg2rad( 0);
+    
+      $this->transformDatum($wgs84, $heyford1924, $tx, $ty, $tz, $s, $rx, $ry, $rz);
+    }
+    
+    /**
+     * Convert this LatLng object from WGS84 datum to NAD27 datum.
+     * Reference values for transformation are taken from Wikipedia
+     * @return void
+     */
+    public function WGS84ToNAD27() {
+      $wgs84 = RefEll::WGS84();
+      $clarke1866 = RefEll::Clarke1866();
+    
+      $tx =         8;
+      $ty =       −160;
+      $tz =       −176;
+      $s  =          0;
+      $rx = deg2rad( 0);
+      $ry = deg2rad( 0);
+      $rz = deg2rad( 0);
+    
+      $this->transformDatum($wgs84, $clarke1866, $tx, $ty, $tz, $s, $rx, $ry, $rz);
+    }
+    
+    /**
+     * Convert this LatLng object from NAD27 datum to WGS84 datum.
+     * Reference values for transformation are taken from Wikipedia
+     * @return void
+     */
+    public function NAD27ToWGS84() {
+      $wgs84 = RefEll::WGS84();
+      $clarke1866 = RefEll::Clarke1866();
+    
+      $tx =        -8;
+      $ty =        160;
+      $tz =        176;
+      $s  =          0;
+      $rx = deg2rad( 0);
+      $ry = deg2rad( 0);
+      $rz = deg2rad( 0);
+    
+      $this->transformDatum($clarke1866, $wgs84, $tx, $ty, $tz, $s, $rx, $ry, $rz);
+    }
+    
+    /**
      * Transform co-ordinates from one datum to another using a Helmert transformation
      * @param RefEll $aFromEllipsoid
      * @param RefEll $aToEllipsoid
