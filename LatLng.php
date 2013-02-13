@@ -349,7 +349,8 @@
         $longitudeZone = 32;
       }
 
-      // Special zones for Svalbard      if ($latitude >= 72 && $latitude < 84) {
+      // Special zones for Svalbard
+      if ($latitude >= 72 && $latitude < 84) {
         if ($longitude >= 0 && $longitude < 9) {
           $longitudeZone = 31;
         } else if ($longitude >= 9 && $longitude < 21) {
@@ -411,7 +412,8 @@
                   * pow($A, 6)
                   / 720)));
 
-      // Adjust for the southern hemisphere      if ($latitude < 0) {
+      // Adjust for the southern hemisphere
+      if ($latitude < 0) {
         $UTMNorthing += 10000000;
       }
 
