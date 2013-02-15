@@ -31,8 +31,8 @@
 
     /**
      * Create a new LatLng object from the given latitude and longitude
-     * @param int $aLat
-     * @param int $aLng
+     * @param float $aLat
+     * @param float $aLng
      */
     public function __construct($aLat, $aLng) {
       $this->lat = round($aLat, 5);
