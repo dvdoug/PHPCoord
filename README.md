@@ -36,7 +36,7 @@ $LatLng = $OSRef->toLatLng();
 $LatLng->OSGB36ToWGS84(); //optional, see note above
 
 $lat =  $LatLng->lat;
-$long = $LatLng->long;
+$long = $LatLng->lng;
 
 
 $LatLng = new LatLng(50.12345, 1.23456); //Latitude, Long
