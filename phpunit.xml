@@ -30,11 +30,8 @@
   </logging>
 
   <filter>
-    <whitelist processUncoveredFilesFromWhitelist="true">
-      <directory suffix=".php">.</directory>
-      <exclude>
-       <directory>vendor</directory>
-      </exclude>
-    </whitelist>
+    <blacklist>
+      <directory suffix=".php">vendor</directory>
+    </blacklist>
   </filter>
 </phpunit>
