@@ -37,6 +37,105 @@
       self::assertEquals($expected, $OSRef->__toString());
     }
 
+    /**
+     * @expectedException \PHPUnit_Framework_Error_Warning
+     */
+    public function testOSRefOSWorkedBadEllipsoid() {
+
+      $LatLng = new LatLng(12.3, 12.3, RefEll::Clarke1866());
+      $OSRef = $LatLng->toOSRef();
+    }
+
+    /**
+     * @expectedException \PHPUnit_Framework_Error_Warning
+     */
+    public function testOSGB36ToWGS84BadEllipsoid() {
+
+      $LatLng = new LatLng(12.3, 12.3, RefEll::Heyford1924());
+      $LatLng->OSGB36ToWGS84();
+    }
+
+    /**
+     * @expectedException \PHPUnit_Framework_Error_Warning
+     */
+    public function testWGS84ToOSGB36BadEllipsoid() {
+
+      $LatLng = new LatLng(12.3, 12.3, RefEll::Clarke1866());
+      $LatLng->WGS84ToOSGB36();
+    }
+
+    public function testWGS84ToED50() {
+
+      $LatLng = new LatLng(12.3, 12.3, RefEll::WGS84());
+      $LatLng->WGS84ToED50();
+
+      $expected = "(12.30121, 12.30071)";
+      self::assertEquals($expected, $LatLng->__toString());
+    }
+
+    /**
+     * @expectedException \PHPUnit_Framework_Error_Warning
+     */
+    public function testWGS84ToED50BadEllipsoid() {
+
+      $LatLng = new LatLng(12.3, 12.3, RefEll::Bessel1841());
+      $LatLng->WGS84ToED50();
+    }
+
+    public function testED50ToWGS84() {
+
+      $LatLng = new LatLng(12.30121, 12.30071, RefEll::Heyford1924());
+      $LatLng->ED50ToWGS84();
+
+      $expected = "(12.30069, 12.3)";
+      self::assertEquals($expected, $LatLng->__toString());
+    }
+
+    /**
+     * @expectedException \PHPUnit_Framework_Error_Warning
+     */
+    public function testED50ToWGS84BadEllipsoid() {
+
+      $LatLng = new LatLng(12.3, 12.3, RefEll::GRS80());
+      $LatLng->ED50ToWGS84();
+    }
+
+    public function testWGS84ToNAD27() {
+
+      $LatLng = new LatLng(12.3, 12.3, RefEll::WGS84());
+      $LatLng->WGS84ToNAD27();
+
+      $expected = "(12.29939, 12.29855)";
+      self::assertEquals($expected, $LatLng->__toString());
+    }
+
+    /**
+     * @expectedException \PHPUnit_Framework_Error_Warning
+     */
+    public function testWGS84ToNAD27BadEllipsoid() {
+
+      $LatLng = new LatLng(12.3, 12.3, RefEll::International1924());
+      $LatLng->WGS84ToNAD27();
+    }
+
+    public function testNAD27ToWGS84() {
+
+      $LatLng = new LatLng(12.3, 12.3, RefEll::Clarke1866());
+      $LatLng->NAD27ToWGS84();
+
+      $expected = "(12.30061, 12.30145)";
+      self::assertEquals($expected, $LatLng->__toString());
+    }
+
+    /**
+     * @expectedException \PHPUnit_Framework_Error_Warning
+     */
+    public function testNAD27ToWGS84BadEllipsoid() {
+
+      $LatLng = new LatLng(12.3, 12.3, RefEll::International1924());
+      $LatLng->NAD27ToWGS84();
+    }
+
     public function testUTMRefWorkHQ() {
 
       $LatLng = new LatLng(51.54105, -0.12319);
