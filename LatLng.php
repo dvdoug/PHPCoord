@@ -21,7 +21,7 @@
      * @var float
      */
     public $lat;
-    
+
     /**
      * Longitude
      * @api
@@ -30,13 +30,22 @@
     public $lng;
 
     /**
+     * Reference ellipsoid the co-ordinates are from
+     * @api
+     * @var RefEll
+     */
+    public $refEll;
+
+    /**
      * Create a new LatLng object from the given latitude and longitude
      * @param float $aLat
      * @param float $aLng
+     * @param RefEll $aRefEll
      */
-    public function __construct($aLat, $aLng) {
+    public function __construct($aLat, $aLng, $aRefEll = NULL) {
       $this->lat = round($aLat, 5);
       $this->lng = round($aLng, 5);
+      $this->refEll = $aRefEll;
     }
 
     /**
@@ -55,7 +64,14 @@
      * @return float
      */
     public function distance(LatLng $aTo) {
-      $er = 6366.707;
+
+      if ($this->refEll != $aTo->refEll) {
+        error_log(E_WARNING, 'Source and destination co-ordinates are not using the same ellipsoid');
+      }
+
+      //Mean radius definition from taken from Wikipedia
+      $refEll = $this->refEll ?: RefEll::WGS84();
+      $er = ((2 * $refEll->maj) + $refEll->min) / 3;
 
       $latFrom = deg2rad($this->lat);
       $latTo   = deg2rad($aTo->lat);
@@ -72,7 +88,7 @@
 
       $d = acos(sin($latFrom)*sin($latTo) + cos($latFrom)*cos($latTo)*cos($lngTo-$lngFrom)) * $er;
 
-      return $d;
+      return round($d, 5);
     }
 
 
@@ -83,9 +99,14 @@
      * @return void
      */
     public function OSGB36ToWGS84() {
+
+      if ($this->refEll && $this->refEll != RefEll::Airy1830()) {
+        error_log(E_WARNING, 'Current co-ordinates are not using the Airy ellipsoid');
+      }
+
       $airy1830 = RefEll::Airy1830();
       $wgs84 = RefEll::WGS84();
-      
+
       $tx =        446.448;
       $ty =       -125.157;
       $tz =        542.060;
@@ -93,7 +114,7 @@
       $rx = deg2rad(0.1502/3600);
       $ry = deg2rad(0.2470/3600);
       $rz = deg2rad(0.8421/3600);
-      
+
       $this->transformDatum($airy1830, $wgs84, $tx, $ty, $tz, $s, $rx, $ry, $rz);
     }
 
@@ -101,10 +122,15 @@
     /**
      * Convert this LatLng object from WGS84 datum to OSGB36 datum.
      * Reference values for transformation are taken from OS document
-     * "A Guide to Coordinate Systems in Great Britain" 
+     * "A Guide to Coordinate Systems in Great Britain"
      * @return void
      */
     public function WGS84ToOSGB36() {
+
+      if ($this->refEll && $this->refEll != RefEll::WGS84()) {
+        error_log(E_WARNING, 'Current co-ordinates are not using the WGS84 ellipsoid');
+      }
+
       $wgs84 = RefEll::WGS84();
       $airy1830 = RefEll::Airy1830();
 
@@ -115,19 +141,24 @@
       $rx = deg2rad(-0.1502/3600);
       $ry = deg2rad(-0.2470/3600);
       $rz = deg2rad(-0.8421/3600);
-      
+
       $this->transformDatum($wgs84, $airy1830, $tx, $ty, $tz, $s, $rx, $ry, $rz);
     }
-    
+
     /**
      * Convert this LatLng object from WGS84 datum to ED50 datum.
      * Reference values for transformation are taken from http://www.globalmapper.com/helpv9/datum_list.htm
      * @return void
      */
     public function WGS84ToED50() {
+
+      if ($this->refEll && $this->refEll != RefEll::WGS84()) {
+        error_log(E_WARNING, 'Current co-ordinates are not using the WGS84 ellipsoid');
+      }
+
       $wgs84 = RefEll::WGS84();
       $heyford1924 = RefEll::Heyford1924();
-    
+
       $tx =        87;
       $ty =        98;
       $tz =        121;
@@ -135,19 +166,24 @@
       $rx = deg2rad( 0);
       $ry = deg2rad( 0);
       $rz = deg2rad( 0);
-    
+
       $this->transformDatum($wgs84, $heyford1924, $tx, $ty, $tz, $s, $rx, $ry, $rz);
     }
-    
+
     /**
      * Convert this LatLng object from ED50 datum to WGS84 datum.
      * Reference values for transformation are taken from http://www.globalmapper.com/helpv9/datum_list.htm
      * @return void
      */
     public function ED50ToWGS84() {
+
+      if ($this->refEll && $this->refEll != RefEll::Heyford1924()) {
+        error_log(E_WARNING, 'Current co-ordinates are not using the Heyford ellipsoid');
+      }
+
       $wgs84 = RefEll::WGS84();
       $heyford1924 = RefEll::Heyford1924();
-    
+
       $tx =       -87;
       $ty =       -98;
       $tz =       -121;
@@ -155,19 +191,24 @@
       $rx = deg2rad( 0);
       $ry = deg2rad( 0);
       $rz = deg2rad( 0);
-    
+
       $this->transformDatum($wgs84, $heyford1924, $tx, $ty, $tz, $s, $rx, $ry, $rz);
     }
-    
+
     /**
      * Convert this LatLng object from WGS84 datum to NAD27 datum.
      * Reference values for transformation are taken from Wikipedia
      * @return void
      */
     public function WGS84ToNAD27() {
+
+      if ($this->refEll && $this->refEll != RefEll::WGS84()) {
+        error_log(E_WARNING, 'Current co-ordinates are not using the WGS84 ellipsoid');
+      }
+
       $wgs84 = RefEll::WGS84();
       $clarke1866 = RefEll::Clarke1866();
-    
+
       $tx =         8;
       $ty =       −160;
       $tz =       −176;
@@ -175,19 +216,24 @@
       $rx = deg2rad( 0);
       $ry = deg2rad( 0);
       $rz = deg2rad( 0);
-    
+
       $this->transformDatum($wgs84, $clarke1866, $tx, $ty, $tz, $s, $rx, $ry, $rz);
     }
-    
+
     /**
      * Convert this LatLng object from NAD27 datum to WGS84 datum.
      * Reference values for transformation are taken from Wikipedia
      * @return void
      */
     public function NAD27ToWGS84() {
+
+      if ($this->refEll && $this->refEll != RefEll::Clarke1866()) {
+        error_log(E_WARNING, 'Current co-ordinates are not using the Clarke ellipsoid');
+      }
+
       $wgs84 = RefEll::WGS84();
       $clarke1866 = RefEll::Clarke1866();
-    
+
       $tx =        -8;
       $ty =        160;
       $tz =        176;
@@ -195,10 +241,10 @@
       $rx = deg2rad( 0);
       $ry = deg2rad( 0);
       $rz = deg2rad( 0);
-    
+
       $this->transformDatum($clarke1866, $wgs84, $tx, $ty, $tz, $s, $rx, $ry, $rz);
     }
-    
+
     /**
      * Transform co-ordinates from one datum to another using a Helmert transformation
      * @param RefEll $aFromEllipsoid
@@ -222,15 +268,15 @@
       $x = ($v + $H) * cos($phi) * cos($lambda);
       $y = ($v + $H) * cos($phi) * sin($lambda);
       $z = ((1 - $eSquared) * $v + $H) * sin($phi);
-    
+
       $xB = $aTranslationX + ($x * (1 + $aScale)) + (-$aRotationX * $y)     + ($aRotationY * $z);
       $yB = $aTranslationY + ($aRotationZ * $x)      + ($y * (1 + $aScale)) + (-$aRotationX * $z);
       $zB = $aTranslationZ + (-$aRotationY * $x)     + ($aRotationX * $y)      + ($z * (1 + $aScale));
-    
+
       $a        = $aToEllipsoid->maj;
       $b        = $aToEllipsoid->min;
       $eSquared = $aToEllipsoid->ecc;
-    
+
       $lambdaB = rad2deg(atan($yB / $xB));
       $p = sqrt(($xB * $xB) + ($yB * $yB));
       $phiN = atan($zB / ($p * (1 - $eSquared)));
@@ -239,11 +285,12 @@
         $phiN1 = atan(($zB + ($eSquared * $v * sin($phiN))) / $p);
         $phiN = $phiN1;
       }
-    
+
       $phiB = rad2deg($phiN);
-    
+
       $this->lat = round($phiB, 5);
       $this->lng = round($lambdaB, 5);
+      $this->refEll = $aToEllipsoid;
     }
 
 
@@ -342,10 +389,7 @@
       $longitudeZone = (int) (($longitude + 180) / 6) + 1;
 
       // Special zone for Norway
-      if ($latitude >= 56
-        && $latitude < 64
-        && $longitude >= 3
-        && $longitude < 12) {
+      if ($latitude >= 56 && $latitude < 64 && $longitude >= 3 && $longitude < 12) {
         $longitudeZone = 32;
       }
 
@@ -353,11 +397,14 @@
       if ($latitude >= 72 && $latitude < 84) {
         if ($longitude >= 0 && $longitude < 9) {
           $longitudeZone = 31;
-        } else if ($longitude >= 9 && $longitude < 21) {
+        }
+        else if ($longitude >= 9 && $longitude < 21) {
           $longitudeZone = 33;
-        } else if ($longitude >= 21 && $longitude < 33) {
+        }
+        else if ($longitude >= 21 && $longitude < 33) {
           $longitudeZone = 35;
-        } else if ($longitude >= 33 && $longitude < 42) {
+        }
+        else if ($longitude >= 33 && $longitude < 42) {
           $longitudeZone = 37;
         }
       }
@@ -419,7 +466,7 @@
 
       return new UTMRef($UTMEasting, $UTMNorthing, $UTMZone, $longitudeZone);
     }
-    
+
     /**
      * Work out the UTM latitude zone from the latitude
      * @param float $aLatitude
