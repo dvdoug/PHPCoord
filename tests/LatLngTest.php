@@ -58,6 +58,24 @@
       self::assertEquals($expected, $UTMRef->__toString());
     }
 
+    /**
+     * @expectedException \OutOfRangeException
+     */
+    public function testUTMRefArtic() {
+
+      $LatLng = new LatLng(84.00001, 123);
+      $UTMRef = $LatLng->toUTMRef();
+    }
+
+    /**
+     * @expectedException \OutOfRangeException
+     */
+    public function testUTMRefAntartic() {
+
+      $LatLng = new LatLng(-80.00001, 123);
+      $UTMRef = $LatLng->toUTMRef();
+    }
+
     public function testDistanceLatLngWorkHQtoCharingCross() {
 
       $work = new LatLng(51.54105, -0.12319);

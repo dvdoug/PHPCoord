@@ -473,26 +473,13 @@
      * @return string
      */
     private function getUTMLatitudeZoneLetter($aLatitude) {
-      if ((84 >= $aLatitude) && ($aLatitude >= 72)) return "X";
-      else if (( 72 > $aLatitude) && ($aLatitude >=  64)) return "W";
-      else if (( 64 > $aLatitude) && ($aLatitude >=  56)) return "V";
-      else if (( 56 > $aLatitude) && ($aLatitude >=  48)) return "U";
-      else if (( 48 > $aLatitude) && ($aLatitude >=  40)) return "T";
-      else if (( 40 > $aLatitude) && ($aLatitude >=  32)) return "S";
-      else if (( 32 > $aLatitude) && ($aLatitude >=  24)) return "R";
-      else if (( 24 > $aLatitude) && ($aLatitude >=  16)) return "Q";
-      else if (( 16 > $aLatitude) && ($aLatitude >=   8)) return "P";
-      else if ((  8 > $aLatitude) && ($aLatitude >=   0)) return "N";
-      else if ((  0 > $aLatitude) && ($aLatitude >=  -8)) return "M";
-      else if (( -8 > $aLatitude) && ($aLatitude >= -16)) return "L";
-      else if ((-16 > $aLatitude) && ($aLatitude >= -24)) return "K";
-      else if ((-24 > $aLatitude) && ($aLatitude >= -32)) return "J";
-      else if ((-32 > $aLatitude) && ($aLatitude >= -40)) return "H";
-      else if ((-40 > $aLatitude) && ($aLatitude >= -48)) return "G";
-      else if ((-48 > $aLatitude) && ($aLatitude >= -56)) return "F";
-      else if ((-56 > $aLatitude) && ($aLatitude >= -64)) return "E";
-      else if ((-64 > $aLatitude) && ($aLatitude >= -72)) return "D";
-      else if ((-72 > $aLatitude) && ($aLatitude >= -80)) return "C";
-      else return 'Z';
+
+      if ($aLatitude < -80 || $aLatitude > 84) {
+        throw new \OutOfRangeException('UTM zones do not apply in polar regions');
+      }
+
+      $zones = "CDEFGHJKLMNPQRSTUVWXX";
+      $zoneIndex = (int)(($aLatitude + 80) / 8);
+      return $zones[$zoneIndex];
     }
   }
