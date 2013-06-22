@@ -25,8 +25,10 @@ used if <200m accuracy is important.
 Output of calculations have been changed from the original code in the following two ways:
  * When converting Latitude and Longitude between WGS84 and OSGB36 or vice-versa,
    a wrong constant for the y translation has been corrected (was off by 1 metre)
- * Eastings and northings are rounded to 1m, and lat/long to 5dp (approx 1m) to avoid any misconceptions 
-   that precision is the same thing as accuracy. 
+ * Eastings and northings are rounded to 1m, and lat/long to 5dp (approx 1m) to avoid any
+   misconceptions that precision is the same thing as accuracy
+ * When calculating surface distances, use a more accurate mean radius rather than one derived
+   from historical definition of nautical mile   
 
 Usage
 -----
