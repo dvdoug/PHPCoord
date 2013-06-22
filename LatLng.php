@@ -209,9 +209,9 @@
       $wgs84 = RefEll::WGS84();
       $clarke1866 = RefEll::Clarke1866();
 
-      $tx =         8;
-      $ty =       −160;
-      $tz =       −176;
+      $tx =          8;
+      $ty =       -160;
+      $tz =       -176;
       $s  =          0;
       $rx = deg2rad( 0);
       $ry = deg2rad( 0);
