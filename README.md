@@ -1,7 +1,7 @@
 PHPCoord
 ========
 
-Conversion/modernisation/enhancement of phpcoord for PHP5.3/PSR-0. Based on v2.3 of original project.
+Conversion/modernisation/enhancement of phpcoord for PHP5.3+/PSR-0. Based on v2.3 of original project.
 
 [![Build Status](https://travis-ci.org/Pre-schoolLearningAlliance/PHPCoord.png)](https://travis-ci.org/Pre-schoolLearningAlliance/PHPCoord)
 
@@ -18,17 +18,17 @@ built-in, and helper functions exist to ease conversion between other datums.
 A function is also provided to find the surface distance between two points of latitude
 and longitude.
 
-Please note that the OS conversion functions use the British datum (OSGB36), which is not
+Please note that the OSGB conversion functions use the British datum (OSGB36), which is not
 the same as used by e.g. GPS (WGS84). Conversion functions are provided and should be
 used if <200m accuracy is important.  
 
 Output of calculations have been changed from the original code in the following two ways:
- * When converting Latitude and Longitude between WGS84 and OSGB36 or vice-versa,
+ * When converting latitude and longitude between WGS84 and OSGB36 or vice-versa,
    a wrong constant for the y translation has been corrected (was off by 1 metre)
  * Eastings and northings are rounded to 1m, and lat/long to 5dp (approx 1m) to avoid any
    misconceptions that precision is the same thing as accuracy
- * When calculating surface distances, use a more accurate mean radius rather than one derived
-   from historical definition of nautical mile   
+ * When calculating surface distances, a more accurate mean radius is now used rather than
+   that derived from historical definitions of a nautical mile   
 
 Usage
 -----
