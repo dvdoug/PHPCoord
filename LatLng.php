@@ -66,7 +66,7 @@
     public function distance(LatLng $aTo) {
 
       if ($this->refEll != $aTo->refEll) {
-        error_log(E_WARNING, 'Source and destination co-ordinates are not using the same ellipsoid');
+        trigger_error('Source and destination co-ordinates are not using the same ellipsoid', E_USER_WARNING);
       }
 
       //Mean radius definition from taken from Wikipedia
@@ -101,7 +101,7 @@
     public function OSGB36ToWGS84() {
 
       if ($this->refEll && $this->refEll != RefEll::Airy1830()) {
-        error_log(E_WARNING, 'Current co-ordinates are not using the Airy ellipsoid');
+        trigger_error('Current co-ordinates are not using the Airy ellipsoid', E_USER_WARNING);
       }
 
       $airy1830 = RefEll::Airy1830();
@@ -128,7 +128,7 @@
     public function WGS84ToOSGB36() {
 
       if ($this->refEll && $this->refEll != RefEll::WGS84()) {
-        error_log(E_WARNING, 'Current co-ordinates are not using the WGS84 ellipsoid');
+        trigger_error('Current co-ordinates are not using the WGS84 ellipsoid', E_USER_WARNING);
       }
 
       $wgs84 = RefEll::WGS84();
@@ -153,7 +153,7 @@
     public function WGS84ToED50() {
 
       if ($this->refEll && $this->refEll != RefEll::WGS84()) {
-        error_log(E_WARNING, 'Current co-ordinates are not using the WGS84 ellipsoid');
+        trigger_error('Current co-ordinates are not using the WGS84 ellipsoid', E_USER_WARNING);
       }
 
       $wgs84 = RefEll::WGS84();
@@ -178,7 +178,7 @@
     public function ED50ToWGS84() {
 
       if ($this->refEll && $this->refEll != RefEll::Heyford1924()) {
-        error_log(E_WARNING, 'Current co-ordinates are not using the Heyford ellipsoid');
+        trigger_error('Current co-ordinates are not using the Heyford ellipsoid', E_USER_WARNING);
       }
 
       $wgs84 = RefEll::WGS84();
@@ -203,7 +203,7 @@
     public function WGS84ToNAD27() {
 
       if ($this->refEll && $this->refEll != RefEll::WGS84()) {
-        error_log(E_WARNING, 'Current co-ordinates are not using the WGS84 ellipsoid');
+        trigger_error('Current co-ordinates are not using the WGS84 ellipsoid', E_USER_WARNING);
       }
 
       $wgs84 = RefEll::WGS84();
@@ -228,7 +228,7 @@
     public function NAD27ToWGS84() {
 
       if ($this->refEll && $this->refEll != RefEll::Clarke1866()) {
-        error_log(E_WARNING, 'Current co-ordinates are not using the Clarke ellipsoid');
+        trigger_error('Current co-ordinates are not using the Clarke ellipsoid', E_USER_WARNING);
       }
 
       $wgs84 = RefEll::WGS84();
@@ -305,7 +305,7 @@
     public function toOSRef() {
 
       if ($this->refEll && $this->refEll != RefEll::Airy1830()) {
-        error_log(E_WARNING, 'Current co-ordinates are in a non-OSGB datum');
+        trigger_error('Current co-ordinates are in a non-OSGB datum', E_USER_WARNING);
       }
 
       $airy1830 = RefEll::Airy1830();
