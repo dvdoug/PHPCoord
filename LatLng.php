@@ -303,6 +303,11 @@
      * @return OSRef
      */
     public function toOSRef() {
+
+      if ($this->refEll && $this->refEll != RefEll::Airy1830()) {
+        error_log(E_WARNING, 'Current co-ordinates are in a non-OSGB datum');
+      }
+
       $airy1830 = RefEll::Airy1830();
       $OSGB_F0  = 0.9996012717;
       $N0       = -100000;

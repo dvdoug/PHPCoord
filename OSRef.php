@@ -191,7 +191,7 @@
           + ($XII * pow($E - $E0, 5))
           - ($XIIA * pow($E - $E0, 7));
 
-      return new LatLng(rad2deg($phi), rad2deg($lambda));
+      return new LatLng(rad2deg($phi), rad2deg($lambda), RefEll::Airy1830());
     }
 
     /**
@@ -224,7 +224,7 @@
       }
       $char2ord = ord($char2);
       if ($char2ord > 73) { // Adjust for no I
-        $char2ord--; 
+        $char2ord--;
       }
       $nx = (($char2ord - 65) % 5) * 100000;
       $ny = (4 - floor(($char2ord - 65) / 5)) * 100000;
