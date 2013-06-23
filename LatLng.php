@@ -300,7 +300,8 @@
      * beyond the bounds of the OSGB grid, the resulting OSRef object has no
      * meaning
      *
-     * Formula taken from "A Guide to Coordinate Systems in Great Britain"
+     * Reference values for transformation are taken from OS document
+     * "A Guide to Coordinate Systems in Great Britain"
      *
      * @return OSRef
      */
@@ -320,140 +321,62 @@
       $originLat  = deg2rad(49); //latitude of true origin
       $originLong = deg2rad(-2); //longitude of true origin
 
-      $lat = deg2rad($this->lat);
-      $sinLat = sin($lat);
-      $cosLat = cos($lat);
-      $tanLat = tan($lat);
-      $tanLatSq = pow($tanLat, 2);
-      $long = deg2rad($this->lng);
+      $coords = $this->toTransverseMercatorEastingNorthing(0.9996012717,400000,-100000,49,-2);
 
-      $n = ($this->refEll->maj - $this->refEll->min) / ($this->refEll->maj + $this->refEll->min);
-      $nSq = pow($n, 2);
-      $nCu = pow($n, 3);
-
-      $v = $this->refEll->maj * $scale * pow(1 - $this->refEll->ecc * pow($sinLat, 2), -0.5);
-      $p = $this->refEll->maj * $scale * (1 - $this->refEll->ecc) * pow(1 - $this->refEll->ecc * pow($sinLat, 2), -1.5);
-      $hSq = (($v / $p) - 1);
-
-      $latPlusOrigin = $lat + $originLat;
-      $latMinusOrigin = $lat - $originLat;
-
-      $longMinusOrigin = $long - $originLong;
-
-      $M = $this->refEll->min * $scale
-           * ((1 + $n + 1.25 * ($nSq + $nCu)) * $latMinusOrigin
-             - (3 * ($n + $nSq) + 2.625 * $nCu) * sin($latMinusOrigin) * cos($latPlusOrigin)
-             + 1.875 * ($nSq + $nCu) * sin(2 * $latMinusOrigin) * cos(2 * $latPlusOrigin)
-             - (35 / 24 * $nCu * sin(3 * $latMinusOrigin) * cos(3 * $latPlusOrigin)));
-
-      $I = $M + $N0;
-      $II = $v / 2 * $sinLat * $cosLat;
-      $III = $v / 24 * $sinLat * pow($cosLat, 3) * (5 - $tanLatSq + 9 * $hSq);
-      $IIIA = $v / 720 * $sinLat * pow($cosLat, 5) * (61 - 58 * $tanLatSq + pow($tanLatSq, 2));
-      $IV = $v * $cosLat;
-      $V = $v / 6 * pow($cosLat, 3) * ($v / $p - $tanLatSq);
-      $VI = $v / 120 * pow($cosLat, 5) * (5 - 18 * $tanLatSq + pow($tanLatSq, 2) + 14 * $hSq - 58 * $tanLatSq * $hSq);
-
-      $N = $I + $II * pow($longMinusOrigin, 2) + $III * pow($longMinusOrigin, 4) + $IIIA * pow($longMinusOrigin, 6);
-      $E = $E0 + $IV * $longMinusOrigin + $V * pow($longMinusOrigin, 3) + $VI * pow($longMinusOrigin, 5);
-
-      return new OSRef($E, $N);
+      return new OSRef($coords['E'], $coords['N']);
     }
 
 
     /**
      * Convert a WGS84 latitude and longitude to an UTM reference
+     *
+     * Reference values for transformation are taken from OS document
+     * "A Guide to Coordinate Systems in Great Britain"
      * @return UTMRef
      */
     public function toUTMRef() {
-      $wgs84 = RefEll::WGS84();
-      $UTM_F0   = 0.9996;
-      $a = $wgs84->maj;
-      $eSquared = $wgs84->ecc;
-      $longitude = $this->lng;
-      $latitude = $this->lat;
 
-      $latitudeRad = $latitude * (pi() / 180);
-      $longitudeRad = $longitude * (pi() / 180);
-      $longitudeZone = (int) (($longitude + 180) / 6) + 1;
+      if ($this->refEll && $this->refEll != RefEll::WGS84()) {
+        trigger_error('Current co-ordinates are in a non-WGS84 datum', E_USER_WARNING);
+      }
+      else if (!$this->refEll) {
+        $this->refEll = RefEll::WGS84();
+      }
+
+      $longitudeZone = (int) (($this->lng + 180) / 6) + 1;
 
       // Special zone for Norway
-      if ($latitude >= 56 && $latitude < 64 && $longitude >= 3 && $longitude < 12) {
+      if ($this->lat >= 56 && $this->lat < 64 && $this->lng >= 3 && $this->lng < 12) {
         $longitudeZone = 32;
       }
 
       // Special zones for Svalbard
-      if ($latitude >= 72 && $latitude < 84) {
-        if ($longitude >= 0 && $longitude < 9) {
+      if ($this->lat >= 72 && $this->lat < 84) {
+        if ($this->lng >= 0 && $this->lng < 9) {
           $longitudeZone = 31;
         }
-        else if ($longitude >= 9 && $longitude < 21) {
+        else if ($this->lng >= 9 && $this->lng < 21) {
           $longitudeZone = 33;
         }
-        else if ($longitude >= 21 && $longitude < 33) {
+        else if ($this->lng >= 21 && $this->lng < 33) {
           $longitudeZone = 35;
         }
-        else if ($longitude >= 33 && $longitude < 42) {
+        else if ($this->lng >= 33 && $this->lng < 42) {
           $longitudeZone = 37;
         }
       }
 
       $longitudeOrigin = ($longitudeZone - 1) * 6 - 180 + 3;
-      $longitudeOriginRad = $longitudeOrigin * (pi() / 180);
 
-      $UTMZone = $this->getUTMLatitudeZoneLetter($latitude);
+      $UTMZone = $this->getUTMLatitudeZoneLetter($this->lat);
 
-      $ePrimeSquared = ($eSquared) / (1 - $eSquared);
+      $coords = $this->toTransverseMercatorEastingNorthing(0.9996, 500000, 0, 0, $longitudeOrigin);
 
-      $n = $a / sqrt(1 - $eSquared * sin($latitudeRad) * sin($latitudeRad));
-      $t = tan($latitudeRad) * tan($latitudeRad);
-      $c = $ePrimeSquared * cos($latitudeRad) * cos($latitudeRad);
-      $A = cos($latitudeRad) * ($longitudeRad - $longitudeOriginRad);
-
-      $M =
-        $a
-          * ((1
-            - $eSquared / 4
-            - 3 * $eSquared * $eSquared / 64
-            - 5 * $eSquared * $eSquared * $eSquared / 256)
-            * $latitudeRad
-            - (3 * $eSquared / 8
-              + 3 * $eSquared * $eSquared / 32
-              + 45 * $eSquared * $eSquared * $eSquared / 1024)
-              * sin(2 * $latitudeRad)
-            + (15 * $eSquared * $eSquared / 256
-              + 45 * $eSquared * $eSquared * $eSquared / 1024)
-              * sin(4 * $latitudeRad)
-            - (35 * $eSquared * $eSquared * $eSquared / 3072)
-              * sin(6 * $latitudeRad));
-
-      $UTMEasting =
-        (double) ($UTM_F0
-          * $n
-          * ($A
-            + (1 - $t + $c) * pow($A, 3) / 6
-            + (5 - 18 * $t + $t * $t + 72 * $c - 58 * $ePrimeSquared)
-              * pow($A, 5)
-              / 120)
-          + 500000);
-
-      $UTMNorthing =
-        (double) ($UTM_F0
-          * ($M
-            + $n
-              * tan($latitudeRad)
-              * ($A * $A / 2
-                + (5 - $t + (9 * $c) + (4 * $c * $c)) * pow($A, 4) / 24
-                + (61 - (58 * $t) + ($t * $t) + (600 * $c) - (330 * $ePrimeSquared))
-                  * pow($A, 6)
-                  / 720)));
-
-      // Adjust for the southern hemisphere
-      if ($latitude < 0) {
-        $UTMNorthing += 10000000;
+      if ($this->lat < 0) {
+        $coords['N'] += 10000000;
       }
 
-      return new UTMRef($UTMEasting, $UTMNorthing, $UTMZone, $longitudeZone);
+      return new UTMRef($coords['E'], $coords['N'], $UTMZone, $longitudeZone);
     }
 
     /**
@@ -470,5 +393,63 @@
       $zones = "CDEFGHJKLMNPQRSTUVWXX";
       $zoneIndex = (int)(($aLatitude + 80) / 8);
       return $zones[$zoneIndex];
+    }
+
+
+    /**
+     * Convert a latitude and longitude to easting and northing using a Transverse Mercator projection
+     * Formula for transformation is taken from OS document
+     * "A Guide to Coordinate Systems in Great Britain"
+     *
+     * @param float $aScale      scale factor on central meridian
+     * @param float $E0          easting of true origin
+     * @param float $N0          northing of true origin
+     * @param float $aOriginLat  latitude of true origin
+     * @param float $aOriginLong longitude of true origin
+     * @return array
+     */
+    public function toTransverseMercatorEastingNorthing($aScale, $aOriginEasting, $aOriginNorthing, $aOriginLat, $aOriginLong) {
+
+      $originLat  = deg2rad($aOriginLat);
+      $originLong = deg2rad($aOriginLong);
+
+      $lat = deg2rad($this->lat);
+      $sinLat = sin($lat);
+      $cosLat = cos($lat);
+      $tanLat = tan($lat);
+      $tanLatSq = pow($tanLat, 2);
+      $long = deg2rad($this->lng);
+
+      $n = ($this->refEll->maj - $this->refEll->min) / ($this->refEll->maj + $this->refEll->min);
+      $nSq = pow($n, 2);
+      $nCu = pow($n, 3);
+
+      $v = $this->refEll->maj * $aScale * pow(1 - $this->refEll->ecc * pow($sinLat, 2), -0.5);
+      $p = $this->refEll->maj * $aScale * (1 - $this->refEll->ecc) * pow(1 - $this->refEll->ecc * pow($sinLat, 2), -1.5);
+      $hSq = (($v / $p) - 1);
+
+      $latPlusOrigin = $lat + $originLat;
+      $latMinusOrigin = $lat - $originLat;
+
+      $longMinusOrigin = $long - $originLong;
+
+      $M = $this->refEll->min * $aScale
+      * ((1 + $n + 1.25 * ($nSq + $nCu)) * $latMinusOrigin
+          - (3 * ($n + $nSq) + 2.625 * $nCu) * sin($latMinusOrigin) * cos($latPlusOrigin)
+          + 1.875 * ($nSq + $nCu) * sin(2 * $latMinusOrigin) * cos(2 * $latPlusOrigin)
+          - (35 / 24 * $nCu * sin(3 * $latMinusOrigin) * cos(3 * $latPlusOrigin)));
+
+      $I = $M + $aOriginNorthing;
+      $II = $v / 2 * $sinLat * $cosLat;
+      $III = $v / 24 * $sinLat * pow($cosLat, 3) * (5 - $tanLatSq + 9 * $hSq);
+      $IIIA = $v / 720 * $sinLat * pow($cosLat, 5) * (61 - 58 * $tanLatSq + pow($tanLatSq, 2));
+      $IV = $v * $cosLat;
+      $V = $v / 6 * pow($cosLat, 3) * ($v / $p - $tanLatSq);
+      $VI = $v / 120 * pow($cosLat, 5) * (5 - 18 * $tanLatSq + pow($tanLatSq, 2) + 14 * $hSq - 58 * $tanLatSq * $hSq);
+
+      $E = $aOriginEasting + $IV * $longMinusOrigin + $V * pow($longMinusOrigin, 3) + $VI * pow($longMinusOrigin, 5);
+      $N = $I + $II * pow($longMinusOrigin, 2) + $III * pow($longMinusOrigin, 4) + $IIIA * pow($longMinusOrigin, 6);
+
+      return array('E'=> $E, 'N'=> $N);
     }
   }
