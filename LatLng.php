@@ -300,6 +300,8 @@
      * beyond the bounds of the OSGB grid, the resulting OSRef object has no
      * meaning
      *
+     * Formula taken from "A Guide to Coordinate Systems in Great Britain"
+     *
      * @return OSRef
      */
     public function toOSRef() {
@@ -307,71 +309,53 @@
       if ($this->refEll && $this->refEll != RefEll::Airy1830()) {
         trigger_error('Current co-ordinates are in a non-OSGB datum', E_USER_WARNING);
       }
+      else if (!$this->refEll) {
+        $this->refEll = RefEll::Airy1830();
+      }
 
-      $airy1830 = RefEll::Airy1830();
-      $OSGB_F0  = 0.9996012717;
-      $N0       = -100000;
-      $E0       = 400000;
-      $phi0     = deg2rad(49);
-      $lambda0  = deg2rad(-2);
-      $a        = $airy1830->maj;
-      $b        = $airy1830->min;
-      $eSquared = $airy1830->ecc;
-      $phi = deg2rad($this->lat);
-      $lambda = deg2rad($this->lng);
-      $E = 0;
-      $N = 0;
-      $n = ($a - $b) / ($a + $b);
-      $v = $a * $OSGB_F0 * pow(1 - $eSquared * pow(sin($phi), 2), -0.5);
-      $rho =
-        $a * $OSGB_F0 * (1 - $eSquared) * pow(1 - $eSquared * pow(sin($phi), 2), -1.5);
-      $etaSquared = ($v / $rho) - 1;
-      $M =
-        ($b * $OSGB_F0)
-          * (((1 + $n + ((5 / 4) * $n * $n) + ((5 / 4) * $n * $n * $n))
-            * ($phi - $phi0))
-            - (((3 * $n) + (3 * $n * $n) + ((21 / 8) * $n * $n * $n))
-              * sin($phi - $phi0)
-              * cos($phi + $phi0))
-            + ((((15 / 8) * $n * $n) + ((15 / 8) * $n * $n * $n))
-              * sin(2 * ($phi - $phi0))
-              * cos(2 * ($phi + $phi0)))
-            - (((35 / 24) * $n * $n * $n)
-              * sin(3 * ($phi - $phi0))
-              * cos(3 * ($phi + $phi0))));
+      $scale = 0.9996012717; //scale factor on central meridian
+      $N0 = -100000;         //northing of true origin
+      $E0 =  400000;         //easting of true origin
+
+      $originLat  = deg2rad(49); //latitude of true origin
+      $originLong = deg2rad(-2); //longitude of true origin
+
+      $lat = deg2rad($this->lat);
+      $sinLat = sin($lat);
+      $cosLat = cos($lat);
+      $tanLat = tan($lat);
+      $tanLatSq = pow($tanLat, 2);
+      $long = deg2rad($this->lng);
+
+      $n = ($this->refEll->maj - $this->refEll->min) / ($this->refEll->maj + $this->refEll->min);
+      $nSq = pow($n, 2);
+      $nCu = pow($n, 3);
+
+      $v = $this->refEll->maj * $scale * pow(1 - $this->refEll->ecc * pow($sinLat, 2), -0.5);
+      $p = $this->refEll->maj * $scale * (1 - $this->refEll->ecc) * pow(1 - $this->refEll->ecc * pow($sinLat, 2), -1.5);
+      $hSq = (($v / $p) - 1);
+
+      $latPlusOrigin = $lat + $originLat;
+      $latMinusOrigin = $lat - $originLat;
+
+      $longMinusOrigin = $long - $originLong;
+
+      $M = $this->refEll->min * $scale
+           * ((1 + $n + 1.25 * ($nSq + $nCu)) * $latMinusOrigin
+             - (3 * ($n + $nSq) + 2.625 * $nCu) * sin($latMinusOrigin) * cos($latPlusOrigin)
+             + 1.875 * ($nSq + $nCu) * sin(2 * $latMinusOrigin) * cos(2 * $latPlusOrigin)
+             - (35 / 24 * $nCu * sin(3 * $latMinusOrigin) * cos(3 * $latPlusOrigin)));
+
       $I = $M + $N0;
-      $II = ($v / 2) * sin($phi) * cos($phi);
-      $III =
-        ($v / 24)
-          * sin($phi)
-          * pow(cos($phi), 3)
-          * (5 - pow(tan($phi), 2) + (9 * $etaSquared));
-      $IIIA =
-        ($v / 720)
-          * sin($phi)
-          * pow(cos($phi), 5)
-          * (61 - (58 * pow(tan($phi), 2)) + pow(tan($phi), 4));
-      $IV = $v * cos($phi);
-      $V = ($v / 6) * pow(cos($phi), 3) * (($v / $rho) - pow(tan($phi), 2));
-      $VI =
-        ($v / 120)
-          * pow(cos($phi), 5)
-          * (5
-            - (18 * pow(tan($phi), 2))
-            + (pow(tan($phi), 4))
-            + (14 * $etaSquared)
-            - (58 * pow(tan($phi), 2) * $etaSquared));
+      $II = $v / 2 * $sinLat * $cosLat;
+      $III = $v / 24 * $sinLat * pow($cosLat, 3) * (5 - $tanLatSq + 9 * $hSq);
+      $IIIA = $v / 720 * $sinLat * pow($cosLat, 5) * (61 - 58 * $tanLatSq + pow($tanLatSq, 2));
+      $IV = $v * $cosLat;
+      $V = $v / 6 * pow($cosLat, 3) * ($v / $p - $tanLatSq);
+      $VI = $v / 120 * pow($cosLat, 5) * (5 - 18 * $tanLatSq + pow($tanLatSq, 2) + 14 * $hSq - 58 * $tanLatSq * $hSq);
 
-      $N =
-        $I
-          + ($II * pow($lambda - $lambda0, 2))
-          + ($III * pow($lambda - $lambda0, 4))
-          + ($IIIA * pow($lambda - $lambda0, 6));
-      $E =
-        $E0
-          + ($IV * ($lambda - $lambda0))
-          + ($V * pow($lambda - $lambda0, 3))
-          + ($VI * pow($lambda - $lambda0, 5));
+      $N = $I + $II * pow($longMinusOrigin, 2) + $III * pow($longMinusOrigin, 4) + $IIIA * pow($longMinusOrigin, 6);
+      $E = $E0 + $IV * $longMinusOrigin + $V * pow($longMinusOrigin, 3) + $VI * pow($longMinusOrigin, 5);
 
       return new OSRef($E, $N);
     }
