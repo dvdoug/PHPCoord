@@ -401,11 +401,11 @@
      * Formula for transformation is taken from OS document
      * "A Guide to Coordinate Systems in Great Britain"
      *
-     * @param float $aScale      scale factor on central meridian
-     * @param float $E0          easting of true origin
-     * @param float $N0          northing of true origin
-     * @param float $aOriginLat  latitude of true origin
-     * @param float $aOriginLong longitude of true origin
+     * @param float $aScale           scale factor on central meridian
+     * @param float $aOriginEasting   easting of true origin
+     * @param float $aOriginNorthing  northing of true origin
+     * @param float $aOriginLat       latitude of true origin
+     * @param float $aOriginLong      longitude of true origin
      * @return array
      */
     public function toTransverseMercatorEastingNorthing($aScale, $aOriginEasting, $aOriginNorthing, $aOriginLat, $aOriginLong) {
