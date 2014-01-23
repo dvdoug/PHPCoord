@@ -2,7 +2,7 @@
     "name": "php-coord/php-coord",
     "description": "PHPCoord is a set of PHP functions for handling various co-ordinate systems and converting between them",
     "keywords": ["coord","geo", "wgs84", "osgb36", "latitude", "longitude"],
-    "homepage": "https://github.com/Pre-schoolLearningAlliance/PHPCoord",
+    "homepage": "https://github.com/dvdoug/PHPCoord",
     "license": "GPL-2.0+",
     "require": {
         "php": ">=5.3.0"
