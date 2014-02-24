@@ -4,7 +4,8 @@ php:
   - 5.3
   - 5.4
   - 5.5
-
+  - 5.6
+  - hhvm
 # omitting "script:" will default to phpunit
 # use the $DB env variable to determine the phpunit.xml to use
 script: phpunit --coverage-text tests
