@@ -1,7 +1,7 @@
 PHPCoord
 ========
 
-Conversion/modernisation/enhancement of phpcoord for PHP5.3+/PSR-0. Based on v2.3 of original project.
+Conversion/modernisation/enhancement of phpcoord for PHP5.3+/PSR-4. Based on v2.3 of original project.
 
 [![Build Status](https://travis-ci.org/Pre-schoolLearningAlliance/PHPCoord.png)](https://travis-ci.org/Pre-schoolLearningAlliance/PHPCoord)
 
