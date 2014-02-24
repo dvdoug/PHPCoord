@@ -6,6 +6,10 @@ php:
   - 5.5
   - 5.6
   - hhvm
+
+before_script:
+  - composer self-update
+  - composer install
 # omitting "script:" will default to phpunit
 # use the $DB env variable to determine the phpunit.xml to use
-script: phpunit --coverage-text tests
+script: vendor/bin/phpunit --coverage-text tests
