@@ -38,11 +38,20 @@
     }
     
     public function testToSixFigureString() {
-    
-      $OSRef = new OSRef(530140, 184184);
-   
-      $expected = 'TQ301842';
-    
+
+    $OSRef = new OSRef(530140, 184184);
+
+    $expected = 'TQ301841';
+
+    self::assertEquals($expected, $OSRef->toSixFigureString());
+  }
+
+    public function testToSixFigureString2() {
+
+      $OSRef = new OSRef(439145, 274187);
+
+      $expected = 'SP391741';
+
       self::assertEquals($expected, $OSRef->toSixFigureString());
     }
     

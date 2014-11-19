@@ -28,7 +28,9 @@ Output of calculations have been changed from the original code in the following
  * Eastings and northings are rounded to 1m, and lat/long to 5dp (approx 1m) to avoid any
    misconceptions that precision is the same thing as accuracy
  * When calculating surface distances, a more accurate mean radius is now used rather than
-   that derived from historical definitions of a nautical mile   
+   that derived from historical definitions of a nautical mile 
+ * Corrected calculation of OS 6-figure grid references (rounding instead of truncating meant the
+   grid square was sometimes off by 1) 
 
 Usage
 -----

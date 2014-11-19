@@ -38,11 +38,6 @@
      * object from the six-figure grid reference TG514131, the easting would
      * be 651400 and the northing would be 313100.
      *
-     * Grid references with accuracy greater than 1m can be represented
-     * using floating point values for the easting and northing. For example,
-     * a value representing an easting or northing accurate to 1mm would be
-     * given as 651400.0001.
-     *
      * @param int $aEasting the easting of the reference (with 1m accuracy)
      * @param int $aNorthing the northing of the reference (with 1m accuracy)
      */
@@ -67,41 +62,36 @@
      * @return string
      */
     public function toSixFigureString() {
-      $hundredkmE = floor($this->easting / 100000);
-      $hundredkmN = floor($this->northing / 100000);
-      $firstLetter = "";
-      if ($hundredkmN < 5) {
-        if ($hundredkmE < 5) {
-          $firstLetter = "S";
-        }
-        else {
-          $firstLetter = "T";
-        }
+
+      $easting = str_pad($this->easting, 6, 0, STR_PAD_LEFT);
+      $northing = str_pad($this->northing, 6, 0, STR_PAD_LEFT);
+
+      $hundredkmE = $easting[0];
+      $hundredkmN = $northing[0];
+
+      if ($hundredkmN < 5 && $hundredkmE < 5) {
+        $firstLetter = 'S';
       }
-      else if ($hundredkmN < 10) {
-        if ($hundredkmE < 5) {
-          $firstLetter = "N";
-        }
-        else {
-          $firstLetter = "O";
-        }
+      else if ($hundredkmN < 5 && $hundredkmE >= 5) {
+        $firstLetter = 'T';
+      }
+      else if ($hundredkmN < 10 && $hundredkmE < 5) {
+        $firstLetter = 'N';
+      }
+      else if ($hundredkmN < 10 && $hundredkmE >= 5) {
+        $firstLetter = 'O';
       }
       else {
-        $firstLetter = "H";
+        $firstLetter = 'H';
       }
 
-      $secondLetter = "";
       $index = 65 + ((4 - ($hundredkmN % 5)) * 5) + ($hundredkmE % 5);
-      $ti = $index;
-      if ($index >= 73) {
+      if ($index >= 73) { //skip the letter I
         $index++;
       }
       $secondLetter = chr($index);
 
-      $e = round(($this->easting - (100000 * $hundredkmE)) / 100);
-      $n = round(($this->northing - (100000 * $hundredkmN)) / 100);
-
-      return sprintf("%s%s%03d%03d", $firstLetter, $secondLetter, $e, $n);
+      return $firstLetter . $secondLetter . substr($easting, 1, 3) . substr($northing, 1, 3);
     }
 
 
