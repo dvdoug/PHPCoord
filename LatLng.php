@@ -82,14 +82,6 @@ class LatLng
         $lngFrom = deg2rad($this->lng);
         $lngTo = deg2rad($aTo->lng);
 
-        $x1 = $er * cos($lngFrom) * sin($latFrom);
-        $y1 = $er * sin($lngFrom) * sin($latFrom);
-        $z1 = $er * cos($latFrom);
-
-        $x2 = $er * cos($lngTo) * sin($latTo);
-        $y2 = $er * sin($lngTo) * sin($latTo);
-        $z2 = $er * cos($latTo);
-
         $d = acos(sin($latFrom) * sin($latTo) + cos($latFrom) * cos($latTo) * cos($lngTo - $lngFrom)) * $er;
 
         return round($d, 5);
@@ -279,7 +271,6 @@ class LatLng
         $aRotationZ
     ) {
         $a = $aFromEllipsoid->maj;
-        $b = $aFromEllipsoid->min;
         $eSquared = $aFromEllipsoid->ecc;
         $phi = deg2rad($this->lat);
         $lambda = deg2rad($this->lng);
@@ -294,7 +285,6 @@ class LatLng
         $zB = $aTranslationZ + (-$aRotationY * $x) + ($aRotationX * $y) + ($z * (1 + $aScale));
 
         $a = $aToEllipsoid->maj;
-        $b = $aToEllipsoid->min;
         $eSquared = $aToEllipsoid->ecc;
 
         $lambdaB = rad2deg(atan($yB / $xB));
@@ -336,14 +326,14 @@ class LatLng
             }
         }
 
-        $scale = 0.9996012717; //scale factor on central meridian
-        $N0 = -100000;         //northing of true origin
-        $E0 = 400000;         //easting of true origin
+        $OSGB = new OSRef(0, 0); //dummy to get reference data
+        $scale = $OSGB->getScaleFactor();
+        $N0 = $OSGB->getOriginNorthing();
+        $E0 = $OSGB->getOriginEasting();
+        $phi0 = $OSGB->getOriginLatitude();
+        $lambda0 = $OSGB->getOriginLongitude();
 
-        $originLat = deg2rad(49); //latitude of true origin
-        $originLong = deg2rad(-2); //longitude of true origin
-
-        $coords = $this->toTransverseMercatorEastingNorthing(0.9996012717, 400000, -100000, 49, -2);
+        $coords = $this->toTransverseMercatorEastingNorthing($scale, $E0, $N0, $phi0, $lambda0);
 
         return new OSRef($coords['E'], $coords['N']);
     }
@@ -393,11 +383,16 @@ class LatLng
             }
         }
 
-        $longitudeOrigin = ($longitudeZone - 1) * 6 - 180 + 3;
-
         $UTMZone = $this->getUTMLatitudeZoneLetter($this->lat);
 
-        $coords = $this->toTransverseMercatorEastingNorthing(0.9996, 500000, 0, 0, $longitudeOrigin);
+        $UTM = new UTMRef(0, 0, $UTMZone, $longitudeZone); //dummy to get reference data
+        $scale = $UTM->getScaleFactor();
+        $N0 = $UTM->getOriginNorthing();
+        $E0 = $UTM->getOriginEasting();
+        $phi0 = $UTM->getOriginLatitude();
+        $lambda0 = $UTM->getOriginLongitude();
+
+        $coords = $this->toTransverseMercatorEastingNorthing($scale, $E0, $N0, $phi0, $lambda0);
 
         if ($this->lat < 0) {
             $coords['N'] += 10000000;

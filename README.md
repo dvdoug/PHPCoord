@@ -3,7 +3,7 @@ PHPCoord
 
 Conversion/modernisation/enhancement of phpcoord for PHP5.3+/PSR-4. Based on v2.3 of original project.
 
-[![Build Status](https://travis-ci.org/Pre-schoolLearningAlliance/PHPCoord.png)](https://travis-ci.org/Pre-schoolLearningAlliance/PHPCoord)
+[![Build Status](https://travis-ci.org/dvdoug/PHPCoord.png)](https://travis-ci.org/dvdoug/PHPCoord)
 
 The original code by Jonathan Stott can be found at http://www.jstott.me.uk/phpcoord/
 Backwards compatibility has been maintained with class/function/member naming.
