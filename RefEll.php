@@ -51,12 +51,21 @@ class RefEll
     }
 
     /**
-     * Helper function to create Airy1830 ellipsoid
+     * Helper function to create Airy1830 ellipsoid used in GB
      * @return RefEll
      */
     public static function Airy1830()
     {
         return new RefEll(6377563.396, 6356256.909);
+    }
+
+    /**
+     * Helper function to create Airy Modified ellipsoid used by Ireland
+     * @return RefEll
+     */
+    public static function AiryModified()
+    {
+        return new RefEll(6377340.189, 6356034.447);
     }
 
     /**
@@ -78,7 +87,7 @@ class RefEll
     }
 
     /**
-     * Helper function to create GRS80 ellipsoid
+     * Helper function to create Clarke1866 ellipsoid
      * @return RefEll
      */
     public static function Clarke1866()
