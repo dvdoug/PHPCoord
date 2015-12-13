@@ -14,7 +14,6 @@
          stopOnIncomplete="false"
          stopOnSkipped="false"
          testSuiteLoaderClass="PHPUnit_Runner_StandardTestSuiteLoader"
-         strict="false"
          verbose="false">
 
   <testsuites>
@@ -30,8 +29,12 @@
   </logging>
 
   <filter>
-    <blacklist>
-      <directory suffix=".php">vendor</directory>
-    </blacklist>
+    <whitelist processUncoveredFilesFromWhitelist="true">
+      <directory suffix=".php">./</directory>
+      <exclude>
+        <directory suffix=".php">tests</directory>
+        <directory suffix=".php">vendor</directory>
+      </exclude>
+    </whitelist>
   </filter>
 </phpunit>
