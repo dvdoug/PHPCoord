@@ -2,11 +2,6 @@
 
 namespace PHPCoord;
 
-require_once(__DIR__ . '/../OSRef.php');
-require_once(__DIR__ . '/../LatLng.php');
-require_once(__DIR__ . '/../RefEll.php');
-require_once(__DIR__ . '/../UTMRef.php');
-
 class UTMRefTest extends \PHPUnit_Framework_TestCase
 {
 
