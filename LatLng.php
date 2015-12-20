@@ -43,7 +43,7 @@ class LatLng
      * @param float $aLng
      * @param RefEll $aRefEll
      */
-    public function __construct($aLat, $aLng, $aRefEll = null)
+    public function __construct($aLat, $aLng, RefEll $aRefEll)
     {
         $this->lat = round($aLat, 5);
         $this->lng = round($aLng, 5);
@@ -74,8 +74,7 @@ class LatLng
         }
 
         //Mean radius definition from taken from Wikipedia
-        $refEll = $this->refEll ?: RefEll::WGS84();
-        $er = ((2 * $refEll->maj) + $refEll->min) / 3;
+        $er = ((2 * $this->refEll->maj) + $this->refEll->min) / 3;
 
         $latFrom = deg2rad($this->lat);
         $latTo = deg2rad($aTo->lat);
@@ -97,7 +96,7 @@ class LatLng
     public function OSGB36ToWGS84()
     {
 
-        if ($this->refEll && $this->refEll != RefEll::Airy1830()) {
+        if ($this->refEll != RefEll::Airy1830()) {
             trigger_error('Current co-ordinates are not using the Airy ellipsoid', E_USER_WARNING);
         }
 
@@ -125,7 +124,7 @@ class LatLng
     public function WGS84ToOSGB36()
     {
 
-        if ($this->refEll && $this->refEll != RefEll::WGS84()) {
+        if ($this->refEll != RefEll::WGS84()) {
             trigger_error('Current co-ordinates are not using the WGS84 ellipsoid', E_USER_WARNING);
         }
 
@@ -151,7 +150,7 @@ class LatLng
     public function WGS84ToED50()
     {
 
-        if ($this->refEll && $this->refEll != RefEll::WGS84()) {
+        if ($this->refEll != RefEll::WGS84()) {
             trigger_error('Current co-ordinates are not using the WGS84 ellipsoid', E_USER_WARNING);
         }
 
@@ -177,7 +176,7 @@ class LatLng
     public function ED50ToWGS84()
     {
 
-        if ($this->refEll && $this->refEll != RefEll::Heyford1924()) {
+        if ($this->refEll != RefEll::Heyford1924()) {
             trigger_error('Current co-ordinates are not using the Heyford ellipsoid', E_USER_WARNING);
         }
 
@@ -203,7 +202,7 @@ class LatLng
     public function WGS84ToNAD27()
     {
 
-        if ($this->refEll && $this->refEll != RefEll::WGS84()) {
+        if ($this->refEll != RefEll::WGS84()) {
             trigger_error('Current co-ordinates are not using the WGS84 ellipsoid', E_USER_WARNING);
         }
 
@@ -229,7 +228,7 @@ class LatLng
     public function NAD27ToWGS84()
     {
 
-        if ($this->refEll && $this->refEll != RefEll::Clarke1866()) {
+        if ($this->refEll != RefEll::Clarke1866()) {
             trigger_error('Current co-ordinates are not using the Clarke ellipsoid', E_USER_WARNING);
         }
 
@@ -318,12 +317,8 @@ class LatLng
     public function toOSRef()
     {
 
-        if ($this->refEll && $this->refEll != RefEll::Airy1830()) {
+        if ($this->refEll != RefEll::Airy1830()) {
             trigger_error('Current co-ordinates are in a non-OSGB datum', E_USER_WARNING);
-        } else {
-            if (!$this->refEll) {
-                $this->refEll = RefEll::Airy1830();
-            }
         }
 
         $OSGB = new OSRef(0, 0); //dummy to get reference data
@@ -349,12 +344,8 @@ class LatLng
     public function toUTMRef()
     {
 
-        if ($this->refEll && $this->refEll != RefEll::WGS84()) {
+        if ($this->refEll != RefEll::WGS84()) {
             trigger_error('Current co-ordinates are in a non-WGS84 datum', E_USER_WARNING);
-        } else {
-            if (!$this->refEll) {
-                $this->refEll = RefEll::WGS84();
-            }
         }
 
         $longitudeZone = (int)(($this->lng + 180) / 6) + 1;

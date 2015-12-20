@@ -13,7 +13,7 @@ class LatLngTest extends \PHPUnit_Framework_TestCase
     public function testToString()
     {
 
-        $LatLng = new LatLng(51.54105, -0.12319);
+        $LatLng = new LatLng(51.54105, -0.12319, RefEll::Airy1830());
         $expected = "(51.54105, -0.12319)";
 
         self::assertEquals($expected, $LatLng->__toString());
@@ -22,7 +22,7 @@ class LatLngTest extends \PHPUnit_Framework_TestCase
     public function testOSRefWorkHQ()
     {
 
-        $LatLng = new LatLng(51.54105, -0.12319);
+        $LatLng = new LatLng(51.54105, -0.12319, RefEll::Airy1830());
         $OSRef = $LatLng->toOSRef();
 
         $expected = "(530140, 184184)";
@@ -33,13 +33,14 @@ class LatLngTest extends \PHPUnit_Framework_TestCase
     public function testOSRefOSWorkedExample()
     {
 
-        $LatLng = new LatLng(52.65757, 1.71792);
+        $LatLng = new LatLng(52.65757, 1.71792, RefEll::Airy1830());
         $OSRef = $LatLng->toOSRef();
 
         $expected = "(651410, 313177)";
 
         self::assertEquals($expected, $OSRef->__toString());
     }
+
 
     /**
      * @expectedException \PHPUnit_Framework_Error_Warning
@@ -154,7 +155,7 @@ class LatLngTest extends \PHPUnit_Framework_TestCase
     public function testUTMRefWorkHQ()
     {
 
-        $LatLng = new LatLng(51.54105, -0.12319);
+        $LatLng = new LatLng(51.54105, -0.12319, RefEll::Airy1830());
         $LatLng->OSGB36ToWGS84();
         $UTMRef = $LatLng->toUTMRef();
 
@@ -166,7 +167,7 @@ class LatLngTest extends \PHPUnit_Framework_TestCase
     public function testUTMRefSydney()
     {
 
-        $LatLng = new LatLng(-33.859972, 151.211111);
+        $LatLng = new LatLng(-33.859972, 151.211111, RefEll::WGS84());
         $UTMRef = $LatLng->toUTMRef();
 
         $expected = "56H 334519 6251930";
@@ -180,7 +181,7 @@ class LatLngTest extends \PHPUnit_Framework_TestCase
     public function testUTMRefArtic()
     {
 
-        $LatLng = new LatLng(84.00001, 123);
+        $LatLng = new LatLng(84.00001, 123, RefEll::WGS84());
         $UTMRef = $LatLng->toUTMRef();
     }
 
@@ -190,15 +191,15 @@ class LatLngTest extends \PHPUnit_Framework_TestCase
     public function testUTMRefAntartic()
     {
 
-        $LatLng = new LatLng(-80.00001, 123);
+        $LatLng = new LatLng(-80.00001, 123, RefEll::WGS84());
         $UTMRef = $LatLng->toUTMRef();
     }
 
     public function testDistanceLatLngWorkHQtoCharingCross()
     {
 
-        $work = new LatLng(51.54105, -0.12319);
-        $charingCross = new LatLng(51.507977, -0.124588);
+        $work = new LatLng(51.54105, -0.12319, RefEll::WGS84());
+        $charingCross = new LatLng(51.507977, -0.124588, RefEll::WGS84());
 
         $expected = 3678.49665;
 
@@ -212,7 +213,7 @@ class LatLngTest extends \PHPUnit_Framework_TestCase
     {
 
         $work = new LatLng(51.54105, -0.12319, RefEll::Airy1830());
-        $charingCross = new LatLng(51.507977, -0.124588);
+        $charingCross = new LatLng(51.507977, -0.124588, RefEll::WGS84());
 
         $expected = 3678.49665;
 

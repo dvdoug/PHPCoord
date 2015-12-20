@@ -30,7 +30,9 @@ Output of calculations have been changed from the original code in the following
  * When calculating surface distances, a more accurate mean radius is now used rather than
    that derived from historical definitions of a nautical mile 
  * Corrected calculation of OS 6-figure grid references (rounding instead of truncating meant the
-   grid square was sometimes off by 1) 
+   grid square was sometimes off by 1)
+ * You must specify the reference ellipsoid when creating a LatLng object to avoid guesses as to what
+   was actually meant.
 
 Usage
 -----
@@ -43,7 +45,7 @@ $lat =  $LatLng->lat;
 $long = $LatLng->lng;
 
 
-$LatLng = new LatLng(50.12345, 1.23456); //Latitude, Long
+$LatLng = new LatLng(50.12345, 1.23456, RefEll::WGS84()); //Latitude, Long
 $OSRef = $LatLng->toOSRef(); 
 
 $easting = $OSRef->easting;
