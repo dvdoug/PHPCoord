@@ -286,7 +286,7 @@ class LatLng
         $a = $aToEllipsoid->maj;
         $eSquared = $aToEllipsoid->ecc;
 
-        $lambdaB = rad2deg(atan($yB / $xB));
+        $lambdaB = rad2deg(atan2($yB, $xB));
         $p = sqrt(($xB * $xB) + ($yB * $yB));
         $phiN = atan($zB / ($p * (1 - $eSquared)));
         for ($i = 1; $i < 10; $i++) {

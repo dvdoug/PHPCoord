@@ -215,4 +215,71 @@ class LatLngTest extends \PHPUnit_Framework_TestCase
         self::assertEquals($expected, $work->distance($charingCross));
     }
 
+
+    public function testNoopTransformSanFrancisco()
+    {
+        $LatLng = new LatLng(37.783333, -122.416667, RefEll::GRS80());
+        $LatLngTrans=clone $LatLng;
+
+        $LatLngTrans->transformDatum(RefEll::GRS80(), RefEll::GRS80(), 0, 0, 0, 0, 0, 0, 0);
+
+        $this->assertEquals($LatLng->lat,$LatLngTrans->lat,'Latitude transform failed');
+        $this->assertEquals($LatLng->lng,$LatLngTrans->lng,'Longitude transform failed');
+    }
+
+    public function testNoopTransformSydney()
+    {
+        $LatLng = new LatLng(-33.859972, 151.211111, RefEll::GRS80());
+        $LatLngTrans=clone $LatLng;
+
+        $LatLngTrans->transformDatum(RefEll::GRS80(), RefEll::GRS80(), 0, 0, 0, 0, 0, 0, 0);
+
+        $this->assertEquals($LatLng->lat,$LatLngTrans->lat,'Latitude transform failed');
+        $this->assertEquals($LatLng->lng,$LatLngTrans->lng,'Longitude transform failed');
+    }
+
+    public function testNoopTransformLondon()
+    {
+        $LatLng = new LatLng(51.54105, -0.12319, RefEll::GRS80());
+        $LatLngTrans=clone $LatLng;
+
+        $LatLngTrans->transformDatum(RefEll::GRS80(), RefEll::GRS80(), 0, 0, 0, 0, 0, 0, 0);
+
+        $this->assertEquals($LatLng->lat,$LatLngTrans->lat,'Latitude transform failed');
+        $this->assertEquals($LatLng->lng,$LatLngTrans->lng,'Longitude transform failed');
+    }
+
+    public function testNoopTransformTokyo()
+    {
+        $LatLng = new LatLng(35.694668, 139.693122, RefEll::GRS80());
+        $LatLngTrans=clone $LatLng;
+
+        $LatLngTrans->transformDatum(RefEll::GRS80(), RefEll::GRS80(), 0, 0, 0, 0, 0, 0, 0);
+
+        $this->assertEquals($LatLng->lat,$LatLngTrans->lat,'Latitude transform failed');
+        $this->assertEquals($LatLng->lng,$LatLngTrans->lng,'Longitude transform failed');
+    }
+
+    public function testNoopTransformCapeTown()
+    {
+        $LatLng = new LatLng(-33.925278, 18.423889, RefEll::GRS80());
+        $LatLngTrans=clone $LatLng;
+
+        $LatLngTrans->transformDatum(RefEll::GRS80(), RefEll::GRS80(), 0, 0, 0, 0, 0, 0, 0);
+
+        $this->assertEquals($LatLng->lat,$LatLngTrans->lat,'Latitude transform failed');
+        $this->assertEquals($LatLng->lng,$LatLngTrans->lng,'Longitude transform failed');
+    }
+
+    public function testNoopTransformNewYork()
+    {
+        $LatLng = new LatLng(40.7127, -74.0059, RefEll::GRS80());
+        $LatLngTrans=clone $LatLng;
+
+        $LatLngTrans->transformDatum(RefEll::GRS80(), RefEll::GRS80(), 0, 0, 0, 0, 0, 0, 0);
+
+        $this->assertEquals($LatLng->lat,$LatLngTrans->lat,'Latitude transform failed');
+        $this->assertEquals($LatLng->lng,$LatLngTrans->lng,'Longitude transform failed');
+    }
+
 }

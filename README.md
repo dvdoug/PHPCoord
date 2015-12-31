@@ -33,6 +33,8 @@ Output of calculations have been changed from the original code in the following
    grid square was sometimes off by 1)
  * You must specify the reference ellipsoid when creating a LatLng object to avoid guesses as to what
    was actually meant.
+ * Corrected issue with Helmert transform where the resulting co-ordinate could be placed into
+   the wrong quadrant
 
 Usage
 -----
