@@ -30,7 +30,9 @@ Output of calculations have been changed from the original code in the following
  * When calculating surface distances, a more accurate mean radius is now used rather than
    that derived from historical definitions of a nautical mile 
  * Corrected calculation of OS 6-figure grid references (rounding instead of truncating meant the
-   grid square was sometimes off by 1) 
+   grid square was sometimes off by 1)
+ * Corrected issue with Helmert transform where the resulting co-ordinate could be placed into
+   the wrong quadrant
 
 Usage
 -----
