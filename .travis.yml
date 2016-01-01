@@ -12,6 +12,10 @@ php:
 before_script:
   - composer self-update
   - composer install
-# omitting "script:" will default to phpunit
-# use the $DB env variable to determine the phpunit.xml to use
-script: vendor/bin/phpunit --coverage-text tests
+
+script:
+  - vendor/bin/phpunit --coverage-text --coverage-clover=coverage.clover tests
+
+after_script:
+  - wget https://scrutinizer-ci.com/ocular.phar
+  - php ocular.phar code-coverage:upload --format=php-clover coverage.clover
