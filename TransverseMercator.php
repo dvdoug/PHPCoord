@@ -257,5 +257,4 @@ abstract class TransverseMercator
 
         return new LatLng(rad2deg($phi), rad2deg($lambda), 0, $refEll);
     }
-
 }

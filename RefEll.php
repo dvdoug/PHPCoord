@@ -76,7 +76,7 @@ class RefEll
      * Helper function to create Airy1830 ellipsoid used in GB
      * @return RefEll
      */
-    public static function Airy1830()
+    public static function airy1830()
     {
         return new RefEll(6377563.396, 6356256.909);
     }
@@ -85,7 +85,7 @@ class RefEll
      * Helper function to create Airy Modified ellipsoid used by Ireland
      * @return RefEll
      */
-    public static function AiryModified()
+    public static function airyModified()
     {
         return new RefEll(6377340.189, 6356034.447);
     }
@@ -94,7 +94,7 @@ class RefEll
      * Helper function to create WGS84 ellipsoid
      * @return RefEll
      */
-    public static function WGS84()
+    public static function wgs84()
     {
         return new RefEll(6378137, 6356752.314245);
     }
@@ -103,7 +103,7 @@ class RefEll
      * Helper function to create GRS80 ellipsoid
      * @return RefEll
      */
-    public static function GRS80()
+    public static function grs80()
     {
         return new RefEll(6378137, 6356752.314140);
     }
@@ -112,7 +112,7 @@ class RefEll
      * Helper function to create Clarke1866 ellipsoid
      * @return RefEll
      */
-    public static function Clarke1866()
+    public static function clarke1866()
     {
         return new RefEll(6378206.4, 6356583.8);
     }
@@ -121,7 +121,7 @@ class RefEll
      * Helper function to create International 1924 (Heyford) ellipsoid
      * @return RefEll
      */
-    public static function International1924()
+    public static function international1924()
     {
         return new RefEll(6378388.0, 6356911.9);
     }
@@ -130,7 +130,7 @@ class RefEll
      * Helper function to create International 1924 (Heyford) ellipsoid
      * @return RefEll
      */
-    public static function Heyford1924()
+    public static function heyford1924()
     {
         return new RefEll(6378388.0, 6356911.9);
     }
@@ -139,9 +139,8 @@ class RefEll
      * Helper function to create Bessel 1841 ellipsoid
      * @return RefEll
      */
-    public static function Bessel1841()
+    public static function bessel1841()
     {
         return new RefEll(6377397.155, 6356078.963);
     }
-
 }

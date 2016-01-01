@@ -168,11 +168,11 @@ class LatLng
     public function OSGB36ToWGS84()
     {
 
-        if ($this->refEll != RefEll::Airy1830()) {
+        if ($this->refEll != RefEll::airy1830()) {
             trigger_error('Current co-ordinates are not using the Airy ellipsoid', E_USER_WARNING);
         }
 
-        $wgs84 = RefEll::WGS84();
+        $wgs84 = RefEll::wgs84();
 
         $tx = 446.448;
         $ty = -125.157;
@@ -195,11 +195,11 @@ class LatLng
     public function WGS84ToOSGB36()
     {
 
-        if ($this->refEll != RefEll::WGS84()) {
+        if ($this->refEll != RefEll::wgs84()) {
             trigger_error('Current co-ordinates are not using the WGS84 ellipsoid', E_USER_WARNING);
         }
 
-        $airy1830 = RefEll::Airy1830();
+        $airy1830 = RefEll::airy1830();
 
         $tx = -446.448;
         $ty = 125.157;
@@ -220,11 +220,11 @@ class LatLng
     public function WGS84ToED50()
     {
 
-        if ($this->refEll != RefEll::WGS84()) {
+        if ($this->refEll != RefEll::wgs84()) {
             trigger_error('Current co-ordinates are not using the WGS84 ellipsoid', E_USER_WARNING);
         }
 
-        $heyford1924 = RefEll::Heyford1924();
+        $heyford1924 = RefEll::heyford1924();
 
         $tx = 87;
         $ty = 98;
@@ -245,11 +245,11 @@ class LatLng
     public function ED50ToWGS84()
     {
 
-        if ($this->refEll != RefEll::Heyford1924()) {
+        if ($this->refEll != RefEll::heyford1924()) {
             trigger_error('Current co-ordinates are not using the Heyford ellipsoid', E_USER_WARNING);
         }
 
-        $wgs84 = RefEll::WGS84();
+        $wgs84 = RefEll::wgs84();
 
         $tx = -87;
         $ty = -98;
@@ -270,11 +270,11 @@ class LatLng
     public function WGS84ToNAD27()
     {
 
-        if ($this->refEll != RefEll::WGS84()) {
+        if ($this->refEll != RefEll::wgs84()) {
             trigger_error('Current co-ordinates are not using the WGS84 ellipsoid', E_USER_WARNING);
         }
 
-        $clarke1866 = RefEll::Clarke1866();
+        $clarke1866 = RefEll::clarke1866();
 
         $tx = 8;
         $ty = -160;
@@ -295,11 +295,11 @@ class LatLng
     public function NAD27ToWGS84()
     {
 
-        if ($this->refEll != RefEll::Clarke1866()) {
+        if ($this->refEll != RefEll::clarke1866()) {
             trigger_error('Current co-ordinates are not using the Clarke ellipsoid', E_USER_WARNING);
         }
 
-        $wgs84 = RefEll::WGS84();
+        $wgs84 = RefEll::wgs84();
 
         $tx = -8;
         $ty = 160;
@@ -352,7 +352,7 @@ class LatLng
     public function toOSRef()
     {
 
-        if ($this->refEll != RefEll::Airy1830()) {
+        if ($this->refEll != RefEll::airy1830()) {
             trigger_error('Current co-ordinates are in a non-OSGB datum', E_USER_WARNING);
         }
 
@@ -379,7 +379,7 @@ class LatLng
     public function toUTMRef()
     {
 
-        if ($this->refEll != RefEll::WGS84()) {
+        if ($this->refEll != RefEll::wgs84()) {
             trigger_error('Current co-ordinates are in a non-WGS84 datum', E_USER_WARNING);
         }
 
@@ -480,8 +480,7 @@ class LatLng
         $nCu = pow($n, 3);
 
         $v = $this->refEll->getMaj() * $scale * pow(1 - $this->refEll->getEcc() * pow($sinLat, 2), -0.5);
-        $p = $this->refEll->getMaj() * $scale * (1 - $this->refEll->getEcc()) * pow(1 - $this->refEll->getEcc() * pow($sinLat, 2),
-                -1.5);
+        $p = $this->refEll->getMaj() * $scale * (1 - $this->refEll->getEcc()) * pow(1 - $this->refEll->getEcc() * pow($sinLat, 2), -1.5);
         $hSq = (($v / $p) - 1);
 
         $latPlusOrigin = $lat + $originLat;

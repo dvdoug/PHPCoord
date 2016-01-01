@@ -41,7 +41,7 @@ class UTMRef extends TransverseMercator
         $this->latZone = $latZone;
         $this->lngZone = $lngZone;
 
-        parent::__construct($x, $y, 0, RefEll::WGS84());
+        parent::__construct($x, $y, 0, RefEll::wgs84());
     }
 
     /**
@@ -79,7 +79,7 @@ class UTMRef extends TransverseMercator
 
     public function getReferenceEllipsoid()
     {
-        return RefEll::WGS84();
+        return RefEll::wgs84();
     }
 
     public function getScaleFactor()

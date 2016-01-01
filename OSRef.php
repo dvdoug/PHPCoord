@@ -19,7 +19,7 @@ class OSRef extends TransverseMercator
 
     public function getReferenceEllipsoid()
     {
-        return RefEll::Airy1830();
+        return RefEll::airy1830();
     }
 
     public function getScaleFactor()
@@ -55,7 +55,7 @@ class OSRef extends TransverseMercator
      */
     public function __construct($x, $y)
     {
-        parent::__construct($x, $y, 0, RefEll::Airy1830());
+        parent::__construct($x, $y, 0, RefEll::airy1830());
     }
 
     /**

@@ -8,7 +8,7 @@ class LatLngTest extends \PHPUnit_Framework_TestCase
     public function testToString()
     {
 
-        $LatLng = new LatLng(51.54105, -0.12319, 0, RefEll::Airy1830());
+        $LatLng = new LatLng(51.54105, -0.12319, 0, RefEll::airy1830());
         $expected = "(51.54105, -0.12319)";
 
         self::assertEquals($expected, $LatLng->__toString());
@@ -17,7 +17,7 @@ class LatLngTest extends \PHPUnit_Framework_TestCase
     public function testOSRefWorkHQ()
     {
 
-        $LatLng = new LatLng(51.54105, -0.12319, 0, RefEll::Airy1830());
+        $LatLng = new LatLng(51.54105, -0.12319, 0, RefEll::airy1830());
         $OSRef = $LatLng->toOSRef();
 
         $expected = "(530140, 184184)";
@@ -28,7 +28,7 @@ class LatLngTest extends \PHPUnit_Framework_TestCase
     public function testOSRefOSWorkedExample()
     {
 
-        $LatLng = new LatLng(52.65757, 1.71792, 0, RefEll::Airy1830());
+        $LatLng = new LatLng(52.65757, 1.71792, 0, RefEll::airy1830());
         $OSRef = $LatLng->toOSRef();
 
         $expected = "(651410, 313177)";
@@ -43,7 +43,7 @@ class LatLngTest extends \PHPUnit_Framework_TestCase
     public function testOSRefOSWorkedBadEllipsoid()
     {
 
-        $LatLng = new LatLng(12.3, 12.3, 0, RefEll::Clarke1866());
+        $LatLng = new LatLng(12.3, 12.3, 0, RefEll::clarke1866());
         $OSRef = $LatLng->toOSRef();
     }
 
@@ -53,7 +53,7 @@ class LatLngTest extends \PHPUnit_Framework_TestCase
     public function testOSGB36ToWGS84BadEllipsoid()
     {
 
-        $LatLng = new LatLng(12.3, 12.3, 0, RefEll::Heyford1924());
+        $LatLng = new LatLng(12.3, 12.3, 0, RefEll::heyford1924());
         $LatLng->OSGB36ToWGS84();
     }
 
@@ -63,14 +63,14 @@ class LatLngTest extends \PHPUnit_Framework_TestCase
     public function testWGS84ToOSGB36BadEllipsoid()
     {
 
-        $LatLng = new LatLng(12.3, 12.3, 0, RefEll::Clarke1866());
+        $LatLng = new LatLng(12.3, 12.3, 0, RefEll::clarke1866());
         $LatLng->WGS84ToOSGB36();
     }
 
     public function testWGS84ToED50()
     {
 
-        $LatLng = new LatLng(12.3, 12.3, 0, RefEll::WGS84());
+        $LatLng = new LatLng(12.3, 12.3, 0, RefEll::wgs84());
         $LatLng->WGS84ToED50();
 
         $expected = "(12.30121, 12.30071)";
@@ -83,14 +83,14 @@ class LatLngTest extends \PHPUnit_Framework_TestCase
     public function testWGS84ToED50BadEllipsoid()
     {
 
-        $LatLng = new LatLng(12.3, 12.3, 0, RefEll::Bessel1841());
+        $LatLng = new LatLng(12.3, 12.3, 0, RefEll::bessel1841());
         $LatLng->WGS84ToED50();
     }
 
     public function testED50ToWGS84()
     {
 
-        $LatLng = new LatLng(12.30121, 12.30071, 0, RefEll::Heyford1924());
+        $LatLng = new LatLng(12.30121, 12.30071, 0, RefEll::heyford1924());
         $LatLng->ED50ToWGS84();
 
         $expected = "(12.3, 12.3)";
@@ -103,14 +103,14 @@ class LatLngTest extends \PHPUnit_Framework_TestCase
     public function testED50ToWGS84BadEllipsoid()
     {
 
-        $LatLng = new LatLng(12.3, 12.3, 0, RefEll::GRS80());
+        $LatLng = new LatLng(12.3, 12.3, 0, RefEll::grs80());
         $LatLng->ED50ToWGS84();
     }
 
     public function testWGS84ToNAD27()
     {
 
-        $LatLng = new LatLng(12.3, 12.3, 0, RefEll::WGS84());
+        $LatLng = new LatLng(12.3, 12.3, 0, RefEll::wgs84());
         $LatLng->WGS84ToNAD27();
 
         $expected = "(12.29939, 12.29855)";
@@ -123,14 +123,14 @@ class LatLngTest extends \PHPUnit_Framework_TestCase
     public function testWGS84ToNAD27BadEllipsoid()
     {
 
-        $LatLng = new LatLng(12.3, 12.3, 0, RefEll::International1924());
+        $LatLng = new LatLng(12.3, 12.3, 0, RefEll::international1924());
         $LatLng->WGS84ToNAD27();
     }
 
     public function testNAD27ToWGS84()
     {
 
-        $LatLng = new LatLng(12.3, 12.3, 0, RefEll::Clarke1866());
+        $LatLng = new LatLng(12.3, 12.3, 0, RefEll::clarke1866());
         $LatLng->NAD27ToWGS84();
 
         $expected = "(12.30061, 12.30145)";
@@ -143,14 +143,14 @@ class LatLngTest extends \PHPUnit_Framework_TestCase
     public function testNAD27ToWGS84BadEllipsoid()
     {
 
-        $LatLng = new LatLng(12.3, 12.3, 0, RefEll::International1924());
+        $LatLng = new LatLng(12.3, 12.3, 0, RefEll::international1924());
         $LatLng->NAD27ToWGS84();
     }
 
     public function testUTMRefWorkHQ()
     {
 
-        $LatLng = new LatLng(51.54098, -0.12301, 0, RefEll::Airy1830());
+        $LatLng = new LatLng(51.54098, -0.12301, 0, RefEll::airy1830());
         $LatLng->OSGB36ToWGS84();
         $UTMRef = $LatLng->toUTMRef();
 
@@ -162,7 +162,7 @@ class LatLngTest extends \PHPUnit_Framework_TestCase
     public function testUTMRefSydney()
     {
 
-        $LatLng = new LatLng(-33.859972, 151.211111, 0, RefEll::WGS84());
+        $LatLng = new LatLng(-33.859972, 151.211111, 0, RefEll::wgs84());
         $UTMRef = $LatLng->toUTMRef();
 
         $expected = "56H 334519 6251930";
@@ -176,7 +176,7 @@ class LatLngTest extends \PHPUnit_Framework_TestCase
     public function testUTMRefArtic()
     {
 
-        $LatLng = new LatLng(84.00001, 123, 0, RefEll::WGS84());
+        $LatLng = new LatLng(84.00001, 123, 0, RefEll::wgs84());
         $UTMRef = $LatLng->toUTMRef();
     }
 
@@ -186,15 +186,15 @@ class LatLngTest extends \PHPUnit_Framework_TestCase
     public function testUTMRefAntartic()
     {
 
-        $LatLng = new LatLng(-80.00001, 123, 0, RefEll::WGS84());
+        $LatLng = new LatLng(-80.00001, 123, 0, RefEll::wgs84());
         $UTMRef = $LatLng->toUTMRef();
     }
 
     public function testDistanceLatLngWorkHQtoCharingCross()
     {
 
-        $work = new LatLng(51.54105, -0.12319, 0, RefEll::WGS84());
-        $charingCross = new LatLng(51.507977, -0.124588, 0, RefEll::WGS84());
+        $work = new LatLng(51.54105, -0.12319, 0, RefEll::wgs84());
+        $charingCross = new LatLng(51.507977, -0.124588, 0, RefEll::wgs84());
 
         $expected = 3678.49665;
 
@@ -207,8 +207,8 @@ class LatLngTest extends \PHPUnit_Framework_TestCase
     public function testDistanceDifferentEllipsoids()
     {
 
-        $work = new LatLng(51.54105, -0.12319, 0, RefEll::Airy1830());
-        $charingCross = new LatLng(51.507977, -0.124588, 0, RefEll::WGS84());
+        $work = new LatLng(51.54105, -0.12319, 0, RefEll::airy1830());
+        $charingCross = new LatLng(51.507977, -0.124588, 0, RefEll::wgs84());
 
         $expected = 3678.49665;
 
@@ -218,10 +218,10 @@ class LatLngTest extends \PHPUnit_Framework_TestCase
 
     public function testNoopTransformSanFrancisco()
     {
-        $LatLng = new LatLng(37.783333, -122.416667, 0, RefEll::GRS80());
+        $LatLng = new LatLng(37.783333, -122.416667, 0, RefEll::grs80());
         $LatLngTrans=clone $LatLng;
 
-        $LatLngTrans->transformDatum(RefEll::GRS80(), 0, 0, 0, 0, 0, 0, 0);
+        $LatLngTrans->transformDatum(RefEll::grs80(), 0, 0, 0, 0, 0, 0, 0);
 
         $this->assertEquals($LatLng->getLat(),$LatLngTrans->getLat(),'Latitude transform failed');
         $this->assertEquals($LatLng->getLng(),$LatLngTrans->getLng(),'Longitude transform failed');
@@ -229,10 +229,10 @@ class LatLngTest extends \PHPUnit_Framework_TestCase
 
     public function testNoopTransformSydney()
     {
-        $LatLng = new LatLng(-33.859972, 151.211111, 0, RefEll::GRS80());
+        $LatLng = new LatLng(-33.859972, 151.211111, 0, RefEll::grs80());
         $LatLngTrans=clone $LatLng;
 
-        $LatLngTrans->transformDatum(RefEll::GRS80(), 0, 0, 0, 0, 0, 0, 0);
+        $LatLngTrans->transformDatum(RefEll::grs80(), 0, 0, 0, 0, 0, 0, 0);
 
         $this->assertEquals($LatLng->getLat(),$LatLngTrans->getLat(),'Latitude transform failed');
         $this->assertEquals($LatLng->getLng(),$LatLngTrans->getLng(),'Longitude transform failed');
@@ -240,10 +240,10 @@ class LatLngTest extends \PHPUnit_Framework_TestCase
 
     public function testNoopTransformLondon()
     {
-        $LatLng = new LatLng(51.54105, -0.12319, 0, RefEll::GRS80());
+        $LatLng = new LatLng(51.54105, -0.12319, 0, RefEll::grs80());
         $LatLngTrans=clone $LatLng;
 
-        $LatLngTrans->transformDatum(RefEll::GRS80(), 0, 0, 0, 0, 0, 0, 0);
+        $LatLngTrans->transformDatum(RefEll::grs80(), 0, 0, 0, 0, 0, 0, 0);
 
         $this->assertEquals($LatLng->getLat(),$LatLngTrans->getLat(),'Latitude transform failed');
         $this->assertEquals($LatLng->getLng(),$LatLngTrans->getLng(),'Longitude transform failed');
@@ -251,10 +251,10 @@ class LatLngTest extends \PHPUnit_Framework_TestCase
 
     public function testNoopTransformTokyo()
     {
-        $LatLng = new LatLng(35.694668, 139.693122, 0, RefEll::GRS80());
+        $LatLng = new LatLng(35.694668, 139.693122, 0, RefEll::grs80());
         $LatLngTrans=clone $LatLng;
 
-        $LatLngTrans->transformDatum(RefEll::GRS80(), 0, 0, 0, 0, 0, 0, 0);
+        $LatLngTrans->transformDatum(RefEll::grs80(), 0, 0, 0, 0, 0, 0, 0);
 
         $this->assertEquals($LatLng->getLat(),$LatLngTrans->getLat(),'Latitude transform failed');
         $this->assertEquals($LatLng->getLng(),$LatLngTrans->getLng(),'Longitude transform failed');
@@ -262,10 +262,10 @@ class LatLngTest extends \PHPUnit_Framework_TestCase
 
     public function testNoopTransformCapeTown()
     {
-        $LatLng = new LatLng(-33.925278, 18.423889, 0, RefEll::GRS80());
+        $LatLng = new LatLng(-33.925278, 18.423889, 0, RefEll::grs80());
         $LatLngTrans=clone $LatLng;
 
-        $LatLngTrans->transformDatum(RefEll::GRS80(), 0, 0, 0, 0, 0, 0, 0);
+        $LatLngTrans->transformDatum(RefEll::grs80(), 0, 0, 0, 0, 0, 0, 0);
 
         $this->assertEquals($LatLng->getLat(),$LatLngTrans->getLat(),'Latitude transform failed');
         $this->assertEquals($LatLng->getLng(),$LatLngTrans->getLng(),'Longitude transform failed');
@@ -273,10 +273,10 @@ class LatLngTest extends \PHPUnit_Framework_TestCase
 
     public function testNoopTransformNewYork()
     {
-        $LatLng = new LatLng(40.7127, -74.0059, 0, RefEll::GRS80());
+        $LatLng = new LatLng(40.7127, -74.0059, 0, RefEll::grs80());
         $LatLngTrans=clone $LatLng;
 
-        $LatLngTrans->transformDatum(RefEll::GRS80(), 0, 0, 0, 0, 0, 0, 0);
+        $LatLngTrans->transformDatum(RefEll::grs80(), 0, 0, 0, 0, 0, 0, 0);
 
         $this->assertEquals($LatLng->getLat(),$LatLngTrans->getLat(),'Latitude transform failed');
         $this->assertEquals($LatLng->getLng(),$LatLngTrans->getLng(),'Longitude transform failed');
