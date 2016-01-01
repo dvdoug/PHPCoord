@@ -37,14 +37,14 @@ class RefEll
     /**
      * Create a new RefEll object to represent a reference ellipsoid
      *
-     * @param float $aMaj the major axis
-     * @param float $aMin the minor axis
+     * @param float $maj the major axis
+     * @param float $min the minor axis
      */
-    public function __construct($aMaj, $aMin)
+    public function __construct($maj, $min)
     {
-        $this->maj = $aMaj;
-        $this->min = $aMin;
-        $this->ecc = (($aMaj * $aMaj) - ($aMin * $aMin)) / ($aMaj * $aMaj);
+        $this->maj = $maj;
+        $this->min = $min;
+        $this->ecc = (($maj * $maj) - ($min * $min)) / ($maj * $maj);
     }
 
     /**

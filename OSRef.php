@@ -65,15 +65,15 @@ class OSRef extends TransverseMercator
      * The second character can be any uppercase character from A through Z
      * excluding I.
      *
-     * @param string $aRef
+     * @param string $ref
      * @return OSRef
      */
-    public static function getOSRefFromSixFigureReference($aRef)
+    public static function getOSRefFromSixFigureReference($ref)
     {
-        $char1 = substr($aRef, 0, 1);
-        $char2 = substr($aRef, 1, 1);
-        $east = substr($aRef, 2, 3) * 100;
-        $north = substr($aRef, 5, 3) * 100;
+        $char1 = substr($ref, 0, 1);
+        $char2 = substr($ref, 1, 1);
+        $east = substr($ref, 2, 3) * 100;
+        $north = substr($ref, 5, 3) * 100;
         if ($char1 == 'H') {
             $north += 1000000;
         } else {

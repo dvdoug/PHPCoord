@@ -31,17 +31,17 @@ class UTMRef extends TransverseMercator
     /**
      * Create a new object representing a UTM reference.
      *
-     * @param int $aEasting
-     * @param int $aNorthing
-     * @param string $aLatZone
-     * @param int $aLngZone
+     * @param int $x
+     * @param int $y
+     * @param string $latZone
+     * @param int $lngZone
      */
-    public function __construct($aEasting, $aNorthing, $aLatZone, $aLngZone)
+    public function __construct($x, $y, $latZone, $lngZone)
     {
-        $this->latZone = $aLatZone;
-        $this->lngZone = $aLngZone;
+        $this->latZone = $latZone;
+        $this->lngZone = $lngZone;
 
-        parent::__construct($aEasting, $aNorthing, 0, RefEll::WGS84());
+        parent::__construct($x, $y, 0, RefEll::WGS84());
     }
 
     /**

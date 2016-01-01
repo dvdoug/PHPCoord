@@ -135,13 +135,13 @@ class LatLng
      * Calculate the surface distance between this LatLng object and the one
      * passed in as a parameter.
      *
-     * @param LatLng $aTo a LatLng object to measure the surface distance to
+     * @param LatLng $to a LatLng object to measure the surface distance to
      * @return float
      */
-    public function distance(LatLng $aTo)
+    public function distance(LatLng $to)
     {
 
-        if ($this->refEll != $aTo->refEll) {
+        if ($this->refEll != $to->refEll) {
             trigger_error('Source and destination co-ordinates are not using the same ellipsoid', E_USER_WARNING);
         }
 
@@ -149,9 +149,9 @@ class LatLng
         $er = ((2 * $this->refEll->getMaj()) + $this->refEll->getMin()) / 3;
 
         $latFrom = deg2rad($this->lat);
-        $latTo = deg2rad($aTo->lat);
+        $latTo = deg2rad($to->lat);
         $lngFrom = deg2rad($this->lng);
-        $lngTo = deg2rad($aTo->lng);
+        $lngTo = deg2rad($to->lng);
 
         $d = acos(sin($latFrom) * sin($latTo) + cos($latFrom) * cos($latTo) * cos($lngTo - $lngFrom)) * $er;
 
@@ -429,18 +429,18 @@ class LatLng
 
     /**
      * Work out the UTM latitude zone from the latitude
-     * @param float $aLatitude
+     * @param float $latitude
      * @return string
      */
-    private function getUTMLatitudeZoneLetter($aLatitude)
+    private function getUTMLatitudeZoneLetter($latitude)
     {
 
-        if ($aLatitude < -80 || $aLatitude > 84) {
+        if ($latitude < -80 || $latitude > 84) {
             throw new \OutOfRangeException('UTM zones do not apply in polar regions');
         }
 
         $zones = "CDEFGHJKLMNPQRSTUVWXX";
-        $zoneIndex = (int)(($aLatitude + 80) / 8);
+        $zoneIndex = (int)(($latitude + 80) / 8);
         return $zones[$zoneIndex];
     }
 
@@ -450,23 +450,23 @@ class LatLng
      * Formula for transformation is taken from OS document
      * "A Guide to Coordinate Systems in Great Britain"
      *
-     * @param float $aScale scale factor on central meridian
-     * @param float $aOriginEasting easting of true origin
-     * @param float $aOriginNorthing northing of true origin
-     * @param float $aOriginLat latitude of true origin
-     * @param float $aOriginLong longitude of true origin
+     * @param float $scale scale factor on central meridian
+     * @param float $originEasting easting of true origin
+     * @param float $originNorthing northing of true origin
+     * @param float $originLat latitude of true origin
+     * @param float $originLong longitude of true origin
      * @return array
      */
     public function toTransverseMercatorEastingNorthing(
-        $aScale,
-        $aOriginEasting,
-        $aOriginNorthing,
-        $aOriginLat,
-        $aOriginLong
+        $scale,
+        $originEasting,
+        $originNorthing,
+        $originLat,
+        $originLong
     ) {
 
-        $originLat = deg2rad($aOriginLat);
-        $originLong = deg2rad($aOriginLong);
+        $originLat = deg2rad($originLat);
+        $originLong = deg2rad($originLong);
 
         $lat = deg2rad($this->lat);
         $sinLat = sin($lat);
@@ -479,8 +479,8 @@ class LatLng
         $nSq = pow($n, 2);
         $nCu = pow($n, 3);
 
-        $v = $this->refEll->getMaj() * $aScale * pow(1 - $this->refEll->getEcc() * pow($sinLat, 2), -0.5);
-        $p = $this->refEll->getMaj() * $aScale * (1 - $this->refEll->getEcc()) * pow(1 - $this->refEll->getEcc() * pow($sinLat, 2),
+        $v = $this->refEll->getMaj() * $scale * pow(1 - $this->refEll->getEcc() * pow($sinLat, 2), -0.5);
+        $p = $this->refEll->getMaj() * $scale * (1 - $this->refEll->getEcc()) * pow(1 - $this->refEll->getEcc() * pow($sinLat, 2),
                 -1.5);
         $hSq = (($v / $p) - 1);
 
@@ -489,13 +489,13 @@ class LatLng
 
         $longMinusOrigin = $long - $originLong;
 
-        $M = $this->refEll->getMin() * $aScale
+        $M = $this->refEll->getMin() * $scale
             * ((1 + $n + 1.25 * ($nSq + $nCu)) * $latMinusOrigin
                 - (3 * ($n + $nSq) + 2.625 * $nCu) * sin($latMinusOrigin) * cos($latPlusOrigin)
                 + 1.875 * ($nSq + $nCu) * sin(2 * $latMinusOrigin) * cos(2 * $latPlusOrigin)
                 - (35 / 24 * $nCu * sin(3 * $latMinusOrigin) * cos(3 * $latPlusOrigin)));
 
-        $I = $M + $aOriginNorthing;
+        $I = $M + $originNorthing;
         $II = $v / 2 * $sinLat * $cosLat;
         $III = $v / 24 * $sinLat * pow($cosLat, 3) * (5 - $tanLatSq + 9 * $hSq);
         $IIIA = $v / 720 * $sinLat * pow($cosLat, 5) * (61 - 58 * $tanLatSq + pow($tanLatSq, 2));
@@ -503,7 +503,7 @@ class LatLng
         $V = $v / 6 * pow($cosLat, 3) * ($v / $p - $tanLatSq);
         $VI = $v / 120 * pow($cosLat, 5) * (5 - 18 * $tanLatSq + pow($tanLatSq, 2) + 14 * $hSq - 58 * $tanLatSq * $hSq);
 
-        $E = $aOriginEasting + $IV * $longMinusOrigin + $V * pow($longMinusOrigin, 3) + $VI * pow($longMinusOrigin, 5);
+        $E = $originEasting + $IV * $longMinusOrigin + $V * pow($longMinusOrigin, 3) + $VI * pow($longMinusOrigin, 5);
         $N = $I + $II * pow($longMinusOrigin, 2) + $III * pow($longMinusOrigin, 4) + $IIIA * pow($longMinusOrigin, 6);
 
         return array('E' => $E, 'N' => $N);
