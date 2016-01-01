@@ -172,7 +172,6 @@ class LatLng
             trigger_error('Current co-ordinates are not using the Airy ellipsoid', E_USER_WARNING);
         }
 
-        $airy1830 = RefEll::Airy1830();
         $wgs84 = RefEll::WGS84();
 
         $tx = 446.448;
@@ -183,7 +182,7 @@ class LatLng
         $ry = deg2rad(0.2470 / 3600);
         $rz = deg2rad(0.8421 / 3600);
 
-        $this->transformDatum($airy1830, $wgs84, $tx, $ty, $tz, $s, $rx, $ry, $rz);
+        $this->transformDatum($wgs84, $tx, $ty, $tz, $s, $rx, $ry, $rz);
     }
 
 
@@ -200,7 +199,6 @@ class LatLng
             trigger_error('Current co-ordinates are not using the WGS84 ellipsoid', E_USER_WARNING);
         }
 
-        $wgs84 = RefEll::WGS84();
         $airy1830 = RefEll::Airy1830();
 
         $tx = -446.448;
@@ -211,7 +209,7 @@ class LatLng
         $ry = deg2rad(-0.2470 / 3600);
         $rz = deg2rad(-0.8421 / 3600);
 
-        $this->transformDatum($wgs84, $airy1830, $tx, $ty, $tz, $s, $rx, $ry, $rz);
+        $this->transformDatum($airy1830, $tx, $ty, $tz, $s, $rx, $ry, $rz);
     }
 
     /**
@@ -226,7 +224,6 @@ class LatLng
             trigger_error('Current co-ordinates are not using the WGS84 ellipsoid', E_USER_WARNING);
         }
 
-        $wgs84 = RefEll::WGS84();
         $heyford1924 = RefEll::Heyford1924();
 
         $tx = 87;
@@ -237,7 +234,7 @@ class LatLng
         $ry = deg2rad(0);
         $rz = deg2rad(0);
 
-        $this->transformDatum($wgs84, $heyford1924, $tx, $ty, $tz, $s, $rx, $ry, $rz);
+        $this->transformDatum($heyford1924, $tx, $ty, $tz, $s, $rx, $ry, $rz);
     }
 
     /**
@@ -253,7 +250,6 @@ class LatLng
         }
 
         $wgs84 = RefEll::WGS84();
-        $heyford1924 = RefEll::Heyford1924();
 
         $tx = -87;
         $ty = -98;
@@ -263,7 +259,7 @@ class LatLng
         $ry = deg2rad(0);
         $rz = deg2rad(0);
 
-        $this->transformDatum($wgs84, $heyford1924, $tx, $ty, $tz, $s, $rx, $ry, $rz);
+        $this->transformDatum($wgs84, $tx, $ty, $tz, $s, $rx, $ry, $rz);
     }
 
     /**
@@ -278,7 +274,6 @@ class LatLng
             trigger_error('Current co-ordinates are not using the WGS84 ellipsoid', E_USER_WARNING);
         }
 
-        $wgs84 = RefEll::WGS84();
         $clarke1866 = RefEll::Clarke1866();
 
         $tx = 8;
@@ -289,7 +284,7 @@ class LatLng
         $ry = deg2rad(0);
         $rz = deg2rad(0);
 
-        $this->transformDatum($wgs84, $clarke1866, $tx, $ty, $tz, $s, $rx, $ry, $rz);
+        $this->transformDatum($clarke1866, $tx, $ty, $tz, $s, $rx, $ry, $rz);
     }
 
     /**
@@ -305,7 +300,6 @@ class LatLng
         }
 
         $wgs84 = RefEll::WGS84();
-        $clarke1866 = RefEll::Clarke1866();
 
         $tx = -8;
         $ty = 160;
@@ -315,12 +309,11 @@ class LatLng
         $ry = deg2rad(0);
         $rz = deg2rad(0);
 
-        $this->transformDatum($clarke1866, $wgs84, $tx, $ty, $tz, $s, $rx, $ry, $rz);
+        $this->transformDatum($wgs84, $tx, $ty, $tz, $s, $rx, $ry, $rz);
     }
 
     /**
      * Transform co-ordinates from one datum to another using a Helmert transformation
-     * @param RefEll $aFromEllipsoid
      * @param RefEll $aToEllipsoid
      * @param float $aTranslationX translation vector x coordinate
      * @param float $aTranslationY translation vector y coordinate
@@ -331,7 +324,6 @@ class LatLng
      * @param float $aRotationZ rotation z radians
      */
     public function transformDatum(
-        RefEll $aFromEllipsoid,
         RefEll $aToEllipsoid,
         $aTranslationX,
         $aTranslationY,
@@ -341,8 +333,8 @@ class LatLng
         $aRotationY,
         $aRotationZ
     ) {
-        $a = $aFromEllipsoid->getMaj();
-        $eSquared = $aFromEllipsoid->getEcc();
+        $a = $this->refEll->getMaj();
+        $eSquared = $this->refEll->getEcc();
         $phi = deg2rad($this->lat);
         $lambda = deg2rad($this->lng);
         $v = $a / (sqrt(1 - $eSquared * pow(sin($phi), 2)));

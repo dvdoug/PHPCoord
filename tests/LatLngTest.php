@@ -93,7 +93,7 @@ class LatLngTest extends \PHPUnit_Framework_TestCase
         $LatLng = new LatLng(12.30121, 12.30071, 0, RefEll::Heyford1924());
         $LatLng->ED50ToWGS84();
 
-        $expected = "(12.30069, 12.3)";
+        $expected = "(12.3, 12.3)";
         self::assertEquals($expected, $LatLng->__toString());
     }
 
@@ -221,7 +221,7 @@ class LatLngTest extends \PHPUnit_Framework_TestCase
         $LatLng = new LatLng(37.783333, -122.416667, 0, RefEll::GRS80());
         $LatLngTrans=clone $LatLng;
 
-        $LatLngTrans->transformDatum(RefEll::GRS80(), RefEll::GRS80(), 0, 0, 0, 0, 0, 0, 0);
+        $LatLngTrans->transformDatum(RefEll::GRS80(), 0, 0, 0, 0, 0, 0, 0);
 
         $this->assertEquals($LatLng->getLat(),$LatLngTrans->getLat(),'Latitude transform failed');
         $this->assertEquals($LatLng->getLng(),$LatLngTrans->getLng(),'Longitude transform failed');
@@ -232,7 +232,7 @@ class LatLngTest extends \PHPUnit_Framework_TestCase
         $LatLng = new LatLng(-33.859972, 151.211111, 0, RefEll::GRS80());
         $LatLngTrans=clone $LatLng;
 
-        $LatLngTrans->transformDatum(RefEll::GRS80(), RefEll::GRS80(), 0, 0, 0, 0, 0, 0, 0);
+        $LatLngTrans->transformDatum(RefEll::GRS80(), 0, 0, 0, 0, 0, 0, 0);
 
         $this->assertEquals($LatLng->getLat(),$LatLngTrans->getLat(),'Latitude transform failed');
         $this->assertEquals($LatLng->getLng(),$LatLngTrans->getLng(),'Longitude transform failed');
@@ -243,7 +243,7 @@ class LatLngTest extends \PHPUnit_Framework_TestCase
         $LatLng = new LatLng(51.54105, -0.12319, 0, RefEll::GRS80());
         $LatLngTrans=clone $LatLng;
 
-        $LatLngTrans->transformDatum(RefEll::GRS80(), RefEll::GRS80(), 0, 0, 0, 0, 0, 0, 0);
+        $LatLngTrans->transformDatum(RefEll::GRS80(), 0, 0, 0, 0, 0, 0, 0);
 
         $this->assertEquals($LatLng->getLat(),$LatLngTrans->getLat(),'Latitude transform failed');
         $this->assertEquals($LatLng->getLng(),$LatLngTrans->getLng(),'Longitude transform failed');
@@ -254,7 +254,7 @@ class LatLngTest extends \PHPUnit_Framework_TestCase
         $LatLng = new LatLng(35.694668, 139.693122, 0, RefEll::GRS80());
         $LatLngTrans=clone $LatLng;
 
-        $LatLngTrans->transformDatum(RefEll::GRS80(), RefEll::GRS80(), 0, 0, 0, 0, 0, 0, 0);
+        $LatLngTrans->transformDatum(RefEll::GRS80(), 0, 0, 0, 0, 0, 0, 0);
 
         $this->assertEquals($LatLng->getLat(),$LatLngTrans->getLat(),'Latitude transform failed');
         $this->assertEquals($LatLng->getLng(),$LatLngTrans->getLng(),'Longitude transform failed');
@@ -265,7 +265,7 @@ class LatLngTest extends \PHPUnit_Framework_TestCase
         $LatLng = new LatLng(-33.925278, 18.423889, 0, RefEll::GRS80());
         $LatLngTrans=clone $LatLng;
 
-        $LatLngTrans->transformDatum(RefEll::GRS80(), RefEll::GRS80(), 0, 0, 0, 0, 0, 0, 0);
+        $LatLngTrans->transformDatum(RefEll::GRS80(), 0, 0, 0, 0, 0, 0, 0);
 
         $this->assertEquals($LatLng->getLat(),$LatLngTrans->getLat(),'Latitude transform failed');
         $this->assertEquals($LatLng->getLng(),$LatLngTrans->getLng(),'Longitude transform failed');
@@ -276,7 +276,7 @@ class LatLngTest extends \PHPUnit_Framework_TestCase
         $LatLng = new LatLng(40.7127, -74.0059, 0, RefEll::GRS80());
         $LatLngTrans=clone $LatLng;
 
-        $LatLngTrans->transformDatum(RefEll::GRS80(), RefEll::GRS80(), 0, 0, 0, 0, 0, 0, 0);
+        $LatLngTrans->transformDatum(RefEll::GRS80(), 0, 0, 0, 0, 0, 0, 0);
 
         $this->assertEquals($LatLng->getLat(),$LatLngTrans->getLat(),'Latitude transform failed');
         $this->assertEquals($LatLng->getLng(),$LatLngTrans->getLng(),'Longitude transform failed');
