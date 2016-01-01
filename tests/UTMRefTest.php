@@ -21,7 +21,7 @@ class UTMRefTest extends \PHPUnit_Framework_TestCase
         $LatLng = $UTMRef->toLatLng();
         $LatLng->WGS84ToOSGB36();
 
-        $expected = "(51.54105, -0.12319)";
+        $expected = "(51.54098, -0.12301)";
 
         self::assertEquals($expected, $LatLng->__toString());
     }

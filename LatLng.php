@@ -314,56 +314,27 @@ class LatLng
 
     /**
      * Transform co-ordinates from one datum to another using a Helmert transformation
-     * @param RefEll $aToEllipsoid
-     * @param float $aTranslationX translation vector x coordinate
-     * @param float $aTranslationY translation vector y coordinate
-     * @param float $aTranslationZ translation vector z coordinate
-     * @param float $aScale scale factor
-     * @param float $aRotationX rotation x radians
-     * @param float $aRotationY rotation y radians
-     * @param float $aRotationZ rotation z radians
+     * @param RefEll $toRefEll
+     * @param float $tranX
+     * @param float $tranY
+     * @param float $tranZ
+     * @param float $scale
+     * @param float $rotX  rotation about x-axis in seconds
+     * @param float $rotY  rotation about y-axis in seconds
+     * @param float $rotZ  rotation about z-axis in seconds
+     * @return mixed
      */
-    public function transformDatum(
-        RefEll $aToEllipsoid,
-        $aTranslationX,
-        $aTranslationY,
-        $aTranslationZ,
-        $aScale,
-        $aRotationX,
-        $aRotationY,
-        $aRotationZ
-    ) {
-        $a = $this->refEll->getMaj();
-        $eSquared = $this->refEll->getEcc();
-        $phi = deg2rad($this->lat);
-        $lambda = deg2rad($this->lng);
-        $v = $a / (sqrt(1 - $eSquared * pow(sin($phi), 2)));
-        $H = 0; // height
-        $x = ($v + $H) * cos($phi) * cos($lambda);
-        $y = ($v + $H) * cos($phi) * sin($lambda);
-        $z = ((1 - $eSquared) * $v + $H) * sin($phi);
+    public function transformDatum(RefEll $toRefEll, $tranX, $tranY, $tranZ, $scale, $rotX, $rotY, $rotZ)
+    {
 
-        $xB = $aTranslationX + ($x * (1 + $aScale)) + (-$aRotationX * $y) + ($aRotationY * $z);
-        $yB = $aTranslationY + ($aRotationZ * $x) + ($y * (1 + $aScale)) + (-$aRotationX * $z);
-        $zB = $aTranslationZ + (-$aRotationY * $x) + ($aRotationX * $y) + ($z * (1 + $aScale));
+        $cartesian = Cartesian::fromLatLong($this);
+        $cartesian->transformDatum($toRefEll, $tranX, $tranY, $tranZ, $scale, $rotX, $rotY, $rotZ);
+        $newLatLng = $cartesian->toLatitudeLongitude();
 
-        $a = $aToEllipsoid->getMaj();
-        $eSquared = $aToEllipsoid->getEcc();
-
-        $lambdaB = rad2deg(atan2($yB, $xB));
-        $p = sqrt(($xB * $xB) + ($yB * $yB));
-        $phiN = atan($zB / ($p * (1 - $eSquared)));
-        for ($i = 1; $i < 10; $i++) {
-            $v = $a / (sqrt(1 - $eSquared * pow(sin($phiN), 2)));
-            $phiN1 = atan(($zB + ($eSquared * $v * sin($phiN))) / $p);
-            $phiN = $phiN1;
-        }
-
-        $phiB = rad2deg($phiN);
-
-        $this->lat = round($phiB, 5);
-        $this->lng = round($lambdaB, 5);
-        $this->refEll = $aToEllipsoid;
+        $this->lat = $newLatLng->getLat();
+        $this->lng = $newLatLng->getLng();
+        $this->h = $newLatLng->getH();
+        $this->refEll = $newLatLng->getRefEll();
     }
 
 

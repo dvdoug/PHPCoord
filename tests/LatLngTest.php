@@ -150,7 +150,7 @@ class LatLngTest extends \PHPUnit_Framework_TestCase
     public function testUTMRefWorkHQ()
     {
 
-        $LatLng = new LatLng(51.54105, -0.12319, 0, RefEll::Airy1830());
+        $LatLng = new LatLng(51.54098, -0.12301, 0, RefEll::Airy1830());
         $LatLng->OSGB36ToWGS84();
         $UTMRef = $LatLng->toUTMRef();
 
