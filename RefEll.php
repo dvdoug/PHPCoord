@@ -18,24 +18,21 @@ class RefEll
 
     /**
      * Major axis
-     * @api
      * @var float
      */
-    public $maj;
+    protected $maj;
 
     /**
      * Minor axis
-     * @api
      * @var float
      */
-    public $min;
+    protected $min;
 
     /**
      * Eccentricity
-     * @api
      * @var float
      */
-    public $ecc;
+    protected $ecc;
 
     /**
      * Create a new RefEll object to represent a reference ellipsoid
@@ -49,6 +46,31 @@ class RefEll
         $this->min = $aMin;
         $this->ecc = (($aMaj * $aMaj) - ($aMin * $aMin)) / ($aMaj * $aMaj);
     }
+
+    /**
+     * @return float
+     */
+    public function getMaj()
+    {
+        return $this->maj;
+    }
+
+    /**
+     * @return float
+     */
+    public function getMin()
+    {
+        return $this->min;
+    }
+
+    /**
+     * @return float
+     */
+    public function getEcc()
+    {
+        return $this->ecc;
+    }
+
 
     /**
      * Helper function to create Airy1830 ellipsoid used in GB

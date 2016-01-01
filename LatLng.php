@@ -18,24 +18,21 @@ class LatLng
 
     /**
      * Latitude
-     * @api
      * @var float
      */
-    public $lat;
+    protected $lat;
 
     /**
      * Longitude
-     * @api
      * @var float
      */
-    public $lng;
+    protected $lng;
 
     /**
      * Reference ellipsoid the co-ordinates are from
-     * @api
      * @var RefEll
      */
-    public $refEll;
+    protected $refEll;
 
     /**
      * Create a new LatLng object from the given latitude and longitude
@@ -60,6 +57,55 @@ class LatLng
     }
 
     /**
+     * @return float
+     */
+    public function getLat()
+    {
+        return $this->lat;
+    }
+
+    /**
+     * @param float $lat
+     */
+    public function setLat($lat)
+    {
+        $this->lat = $lat;
+    }
+
+    /**
+     * @return float
+     */
+    public function getLng()
+    {
+        return $this->lng;
+    }
+
+    /**
+     * @param float $lng
+     */
+    public function setLng($lng)
+    {
+        $this->lng = $lng;
+    }
+
+    /**
+     * @return RefEll
+     */
+    public function getRefEll()
+    {
+        return $this->refEll;
+    }
+
+    /**
+     * @param RefEll $refEll
+     */
+    public function setRefEll(RefEll $refEll)
+    {
+        $this->refEll = $refEll;
+    }
+
+
+    /**
      * Calculate the surface distance between this LatLng object and the one
      * passed in as a parameter.
      *
@@ -69,17 +115,17 @@ class LatLng
     public function distance(LatLng $aTo)
     {
 
-        if ($this->refEll != $aTo->refEll) {
+        if ($this->refEll != $aTo->getRefEll()) {
             trigger_error('Source and destination co-ordinates are not using the same ellipsoid', E_USER_WARNING);
         }
 
         //Mean radius definition from taken from Wikipedia
-        $er = ((2 * $this->refEll->maj) + $this->refEll->min) / 3;
+        $er = ((2 * $this->refEll->getMaj()) + $this->refEll->getMin()) / 3;
 
         $latFrom = deg2rad($this->lat);
-        $latTo = deg2rad($aTo->lat);
+        $latTo = deg2rad($aTo->getLat());
         $lngFrom = deg2rad($this->lng);
-        $lngTo = deg2rad($aTo->lng);
+        $lngTo = deg2rad($aTo->getLng());
 
         $d = acos(sin($latFrom) * sin($latTo) + cos($latFrom) * cos($latTo) * cos($lngTo - $lngFrom)) * $er;
 
@@ -269,8 +315,8 @@ class LatLng
         $aRotationY,
         $aRotationZ
     ) {
-        $a = $aFromEllipsoid->maj;
-        $eSquared = $aFromEllipsoid->ecc;
+        $a = $aFromEllipsoid->getMaj();
+        $eSquared = $aFromEllipsoid->getEcc();
         $phi = deg2rad($this->lat);
         $lambda = deg2rad($this->lng);
         $v = $a / (sqrt(1 - $eSquared * pow(sin($phi), 2)));
@@ -283,8 +329,8 @@ class LatLng
         $yB = $aTranslationY + ($aRotationZ * $x) + ($y * (1 + $aScale)) + (-$aRotationX * $z);
         $zB = $aTranslationZ + (-$aRotationY * $x) + ($aRotationX * $y) + ($z * (1 + $aScale));
 
-        $a = $aToEllipsoid->maj;
-        $eSquared = $aToEllipsoid->ecc;
+        $a = $aToEllipsoid->getMaj();
+        $eSquared = $aToEllipsoid->getEcc();
 
         $lambdaB = rad2deg(atan2($yB, $xB));
         $p = sqrt(($xB * $xB) + ($yB * $yB));
@@ -440,12 +486,12 @@ class LatLng
         $tanLatSq = pow($tanLat, 2);
         $long = deg2rad($this->lng);
 
-        $n = ($this->refEll->maj - $this->refEll->min) / ($this->refEll->maj + $this->refEll->min);
+        $n = ($this->refEll->getMaj() - $this->refEll->getMin()) / ($this->refEll->getMaj() + $this->refEll->getMin());
         $nSq = pow($n, 2);
         $nCu = pow($n, 3);
 
-        $v = $this->refEll->maj * $aScale * pow(1 - $this->refEll->ecc * pow($sinLat, 2), -0.5);
-        $p = $this->refEll->maj * $aScale * (1 - $this->refEll->ecc) * pow(1 - $this->refEll->ecc * pow($sinLat, 2),
+        $v = $this->refEll->getMaj() * $aScale * pow(1 - $this->refEll->getEcc() * pow($sinLat, 2), -0.5);
+        $p = $this->refEll->getMaj() * $aScale * (1 - $this->refEll->getEcc()) * pow(1 - $this->refEll->getEcc() * pow($sinLat, 2),
                 -1.5);
         $hSq = (($v / $p) - 1);
 
@@ -454,7 +500,7 @@ class LatLng
 
         $longMinusOrigin = $long - $originLong;
 
-        $M = $this->refEll->min * $aScale
+        $M = $this->refEll->getMin() * $aScale
             * ((1 + $n + 1.25 * ($nSq + $nCu)) * $latMinusOrigin
                 - (3 * ($n + $nSq) + 2.625 * $nCu) * sin($latMinusOrigin) * cos($latPlusOrigin)
                 + 1.875 * ($nSq + $nCu) * sin(2 * $latMinusOrigin) * cos(2 * $latPlusOrigin)

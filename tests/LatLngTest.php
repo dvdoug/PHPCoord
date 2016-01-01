@@ -223,8 +223,8 @@ class LatLngTest extends \PHPUnit_Framework_TestCase
 
         $LatLngTrans->transformDatum(RefEll::GRS80(), RefEll::GRS80(), 0, 0, 0, 0, 0, 0, 0);
 
-        $this->assertEquals($LatLng->lat,$LatLngTrans->lat,'Latitude transform failed');
-        $this->assertEquals($LatLng->lng,$LatLngTrans->lng,'Longitude transform failed');
+        $this->assertEquals($LatLng->getLat(),$LatLngTrans->getLat(),'Latitude transform failed');
+        $this->assertEquals($LatLng->getLng(),$LatLngTrans->getLng(),'Longitude transform failed');
     }
 
     public function testNoopTransformSydney()
@@ -234,8 +234,8 @@ class LatLngTest extends \PHPUnit_Framework_TestCase
 
         $LatLngTrans->transformDatum(RefEll::GRS80(), RefEll::GRS80(), 0, 0, 0, 0, 0, 0, 0);
 
-        $this->assertEquals($LatLng->lat,$LatLngTrans->lat,'Latitude transform failed');
-        $this->assertEquals($LatLng->lng,$LatLngTrans->lng,'Longitude transform failed');
+        $this->assertEquals($LatLng->getLat(),$LatLngTrans->getLat(),'Latitude transform failed');
+        $this->assertEquals($LatLng->getLng(),$LatLngTrans->getLng(),'Longitude transform failed');
     }
 
     public function testNoopTransformLondon()
@@ -245,8 +245,8 @@ class LatLngTest extends \PHPUnit_Framework_TestCase
 
         $LatLngTrans->transformDatum(RefEll::GRS80(), RefEll::GRS80(), 0, 0, 0, 0, 0, 0, 0);
 
-        $this->assertEquals($LatLng->lat,$LatLngTrans->lat,'Latitude transform failed');
-        $this->assertEquals($LatLng->lng,$LatLngTrans->lng,'Longitude transform failed');
+        $this->assertEquals($LatLng->getLat(),$LatLngTrans->getLat(),'Latitude transform failed');
+        $this->assertEquals($LatLng->getLng(),$LatLngTrans->getLng(),'Longitude transform failed');
     }
 
     public function testNoopTransformTokyo()
@@ -256,8 +256,8 @@ class LatLngTest extends \PHPUnit_Framework_TestCase
 
         $LatLngTrans->transformDatum(RefEll::GRS80(), RefEll::GRS80(), 0, 0, 0, 0, 0, 0, 0);
 
-        $this->assertEquals($LatLng->lat,$LatLngTrans->lat,'Latitude transform failed');
-        $this->assertEquals($LatLng->lng,$LatLngTrans->lng,'Longitude transform failed');
+        $this->assertEquals($LatLng->getLat(),$LatLngTrans->getLat(),'Latitude transform failed');
+        $this->assertEquals($LatLng->getLng(),$LatLngTrans->getLng(),'Longitude transform failed');
     }
 
     public function testNoopTransformCapeTown()
@@ -267,8 +267,8 @@ class LatLngTest extends \PHPUnit_Framework_TestCase
 
         $LatLngTrans->transformDatum(RefEll::GRS80(), RefEll::GRS80(), 0, 0, 0, 0, 0, 0, 0);
 
-        $this->assertEquals($LatLng->lat,$LatLngTrans->lat,'Latitude transform failed');
-        $this->assertEquals($LatLng->lng,$LatLngTrans->lng,'Longitude transform failed');
+        $this->assertEquals($LatLng->getLat(),$LatLngTrans->getLat(),'Latitude transform failed');
+        $this->assertEquals($LatLng->getLng(),$LatLngTrans->getLng(),'Longitude transform failed');
     }
 
     public function testNoopTransformNewYork()
@@ -278,8 +278,8 @@ class LatLngTest extends \PHPUnit_Framework_TestCase
 
         $LatLngTrans->transformDatum(RefEll::GRS80(), RefEll::GRS80(), 0, 0, 0, 0, 0, 0, 0);
 
-        $this->assertEquals($LatLng->lat,$LatLngTrans->lat,'Latitude transform failed');
-        $this->assertEquals($LatLng->lng,$LatLngTrans->lng,'Longitude transform failed');
+        $this->assertEquals($LatLng->getLat(),$LatLngTrans->getLat(),'Latitude transform failed');
+        $this->assertEquals($LatLng->getLng(),$LatLngTrans->getLng(),'Longitude transform failed');
     }
 
 }

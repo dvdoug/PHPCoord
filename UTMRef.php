@@ -18,31 +18,27 @@ class UTMRef extends TransverseMercator
 
     /**
      * Easting
-     * @api
      * @var int
      */
-    public $easting;
+    protected $easting;
 
     /**
      * Easting
-     * @api
      * @var int
      */
-    public $northing;
+    protected $northing;
 
     /**
      * Latitude zone
-     * @api
      * @var string
      */
-    public $latZone;
+    protected $latZone;
 
     /**
      * Longitude zone
-     * @api
      * @var string
      */
-    public $lngZone;
+    protected $lngZone;
 
     /**
      * Create a new object representing a UTM reference.
@@ -59,6 +55,71 @@ class UTMRef extends TransverseMercator
 
         parent::__construct($aEasting, $aNorthing);
     }
+
+    /**
+     * @return mixed
+     */
+    public function getEasting()
+    {
+        return $this->easting;
+    }
+
+    /**
+     * @param mixed $easting
+     */
+    public function setEasting($easting)
+    {
+        $this->easting = $easting;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getNorthing()
+    {
+        return $this->northing;
+    }
+
+    /**
+     * @param mixed $northing
+     */
+    public function setNorthing($northing)
+    {
+        $this->northing = $northing;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLatZone()
+    {
+        return $this->latZone;
+    }
+
+    /**
+     * @param mixed $latZone
+     */
+    public function setLatZone($latZone)
+    {
+        $this->latZone = $latZone;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLngZone()
+    {
+        return $this->lngZone;
+    }
+
+    /**
+     * @param mixed $lngZone
+     */
+    public function setLngZone($lngZone)
+    {
+        $this->lngZone = $lngZone;
+    }
+
 
     public function getReferenceEllipsoid()
     {

@@ -17,17 +17,15 @@ abstract class TransverseMercator
 
     /**
      * Easting
-     * @api
      * @var int
      */
-    public $easting;
+    protected $easting;
 
     /**
      * Northing
-     * @api
      * @var int
      */
-    public $northing;
+    protected $northing;
 
     /**
      * Create a new object representing an grid reference. Note
@@ -54,6 +52,38 @@ abstract class TransverseMercator
     public function __toString()
     {
         return "({$this->easting}, {$this->northing})";
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getEasting()
+    {
+        return $this->easting;
+    }
+
+    /**
+     * @param mixed $easting
+     */
+    public function setEasting($easting)
+    {
+        $this->easting = $easting;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getNorthing()
+    {
+        return $this->northing;
+    }
+
+    /**
+     * @param mixed $northing
+     */
+    public function setNorthing($northing)
+    {
+        $this->northing = $northing;
     }
 
 
@@ -115,9 +145,9 @@ abstract class TransverseMercator
         $refEll = $this->getReferenceEllipsoid();
         $F0 = $this->getScaleFactor();
 
-        $a = $refEll->maj;
-        $b = $refEll->min;
-        $eSquared = $refEll->ecc;
+        $a = $refEll->getMaj();
+        $b = $refEll->getMin();
+        $eSquared = $refEll->getEcc();
         $n = ($a - $b) / ($a + $b);
         $phiPrime = (($N - $N0) / ($a * $F0)) + $phi0;
 
