@@ -29,6 +29,12 @@ class LatLng
     protected $lng;
 
     /**
+     * Height
+     * @var float
+     */
+    protected $h;
+
+    /**
      * Reference ellipsoid the co-ordinates are from
      * @var RefEll
      */
@@ -36,15 +42,17 @@ class LatLng
 
     /**
      * Create a new LatLng object from the given latitude and longitude
-     * @param float $aLat
-     * @param float $aLng
-     * @param RefEll $aRefEll
+     * @param float $lat
+     * @param float $lng
+     * @param float $height
+     * @param RefEll $refEll
      */
-    public function __construct($aLat, $aLng, RefEll $aRefEll)
+    public function __construct($lat, $lng, $height, RefEll $refEll)
     {
-        $this->lat = round($aLat, 5);
-        $this->lng = round($aLng, 5);
-        $this->refEll = $aRefEll;
+        $this->lat = round($lat, 5);
+        $this->lng = round($lng, 5);
+        $this->h = round($height);
+        $this->refEll = $refEll;
     }
 
     /**
@@ -89,6 +97,23 @@ class LatLng
     }
 
     /**
+     * @return float
+     */
+    public function getH()
+    {
+        return $this->h;
+    }
+
+    /**
+     * @param float $h
+     */
+    public function setH($h)
+    {
+        $this->h = $h;
+    }
+
+
+    /**
      * @return RefEll
      */
     public function getRefEll()
@@ -105,6 +130,7 @@ class LatLng
     }
 
 
+
     /**
      * Calculate the surface distance between this LatLng object and the one
      * passed in as a parameter.
@@ -115,7 +141,7 @@ class LatLng
     public function distance(LatLng $aTo)
     {
 
-        if ($this->refEll != $aTo->getRefEll()) {
+        if ($this->refEll != $aTo->refEll) {
             trigger_error('Source and destination co-ordinates are not using the same ellipsoid', E_USER_WARNING);
         }
 
@@ -123,9 +149,9 @@ class LatLng
         $er = ((2 * $this->refEll->getMaj()) + $this->refEll->getMin()) / 3;
 
         $latFrom = deg2rad($this->lat);
-        $latTo = deg2rad($aTo->getLat());
+        $latTo = deg2rad($aTo->lat);
         $lngFrom = deg2rad($this->lng);
-        $lngTo = deg2rad($aTo->getLng());
+        $lngTo = deg2rad($aTo->lng);
 
         $d = acos(sin($latFrom) * sin($latTo) + cos($latFrom) * cos($latTo) * cos($lngTo - $lngFrom)) * $er;
 
@@ -376,7 +402,7 @@ class LatLng
 
         $coords = $this->toTransverseMercatorEastingNorthing($scale, $E0, $N0, $phi0, $lambda0);
 
-        return new OSRef($coords['E'], $coords['N']);
+        return new OSRef(round($coords['E']), round($coords['N']));
     }
 
 
@@ -435,7 +461,7 @@ class LatLng
             $coords['N'] += 10000000;
         }
 
-        return new UTMRef($coords['E'], $coords['N'], $UTMZone, $longitudeZone);
+        return new UTMRef(round($coords['E']), round($coords['N']), $UTMZone, $longitudeZone);
     }
 
     /**

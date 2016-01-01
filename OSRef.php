@@ -48,6 +48,17 @@ class OSRef extends TransverseMercator
     }
 
     /**
+     * Create a new object representing a UTM reference.
+     *
+     * @param int $x
+     * @param int $y
+     */
+    public function __construct($x, $y)
+    {
+        parent::__construct($x, $y, 0, RefEll::Airy1830());
+    }
+
+    /**
      * Take a string formatted as a six-figure OS grid reference (e.g.
      * "TG514131") and return a reference to an OSRef object that represents
      * that grid reference. The first character must be H, N, S, O or T.
@@ -97,8 +108,8 @@ class OSRef extends TransverseMercator
     public function toSixFigureString()
     {
 
-        $easting = str_pad($this->easting, 6, 0, STR_PAD_LEFT);
-        $northing = str_pad($this->northing, 6, 0, STR_PAD_LEFT);
+        $easting = str_pad($this->x, 6, 0, STR_PAD_LEFT);
+        $northing = str_pad($this->y, 6, 0, STR_PAD_LEFT);
 
         $hundredkmE = $easting[0];
         $hundredkmN = $northing[0];
@@ -136,13 +147,22 @@ class OSRef extends TransverseMercator
      */
     public function toLatLng()
     {
-        $N = $this->northing;
-        $E = $this->easting;
+        $N = $this->y;
+        $E = $this->x;
         $N0 = $this->getOriginNorthing();
         $E0 = $this->getOriginEasting();
         $phi0 = $this->getOriginLatitude();
         $lambda0 = $this->getOriginLongitude();
 
         return $this->convertToLatitudeLongitude($N, $E, $N0, $E0, $phi0, $lambda0);
+    }
+
+    /**
+     * String version of coordinate.
+     * @return string
+     */
+    public function __toString()
+    {
+        return "({$this->x}, {$this->y})";
     }
 }

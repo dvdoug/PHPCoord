@@ -16,74 +16,115 @@ abstract class TransverseMercator
 {
 
     /**
-     * Easting
-     * @var int
+     * X
+     * @var float
      */
-    protected $easting;
+    protected $x;
 
     /**
-     * Northing
-     * @var int
+     * Y
+     * @var float
      */
-    protected $northing;
+    protected $y;
 
     /**
-     * Create a new object representing an grid reference. Note
-     * that the parameters for this constructor require eastings and
-     * northings with 1m accuracy and need to be absolute with respect to
-     * the whole of the grid. For example, to create an object
-     * from the OSGB six-figure grid reference TG514131, the easting would
-     * be 651400 and the northing would be 313100.
-     *
-     * @param int $aEasting the easting of the reference (with 1m accuracy)
-     * @param int $aNorthing the northing of the reference (with 1m accuracy)
+     * h
+     * @var float
      */
-    public function __construct($aEasting, $aNorthing)
+    protected $h;
+
+    /**
+     * Reference ellipsoid used in this datum
+     * @var RefEll
+     */
+    protected $refEll;
+
+    /**
+     * Cartesian constructor.
+     * @param float $x
+     * @param float $y
+     * @param float $h
+     * @param RefEll $refEll
+     */
+    public function __construct($x, $y, $h, RefEll $refEll)
     {
-        $this->easting = round($aEasting);
-        $this->northing = round($aNorthing);
+        $this->setX($x);
+        $this->setY($y);
+        $this->setH($h);
+        $this->setRefEll($refEll);
     }
 
     /**
-     * Convert this grid reference into a string showing the exact values
-     * of the easting and northing.
+     * String version of coordinate.
      * @return string
      */
     public function __toString()
     {
-        return "({$this->easting}, {$this->northing})";
+        return "({$this->x}, {$this->y}, {$this->h})";
     }
 
     /**
-     * @return mixed
+     * @return float
      */
-    public function getEasting()
+    public function getX()
     {
-        return $this->easting;
+        return $this->x;
     }
 
     /**
-     * @param mixed $easting
+     * @param float $x
      */
-    public function setEasting($easting)
+    public function setX($x)
     {
-        $this->easting = $easting;
+        $this->x = $x;
     }
 
     /**
-     * @return mixed
+     * @return float
      */
-    public function getNorthing()
+    public function getY()
     {
-        return $this->northing;
+        return $this->y;
     }
 
     /**
-     * @param mixed $northing
+     * @param float $y
      */
-    public function setNorthing($northing)
+    public function setY($y)
     {
-        $this->northing = $northing;
+        $this->y = $y;
+    }
+
+    /**
+     * @return float
+     */
+    public function getH()
+    {
+        return $this->h;
+    }
+
+    /**
+     * @param float $h
+     */
+    public function setH($h)
+    {
+        $this->h = $h;
+    }
+
+    /**
+     * @return RefEll
+     */
+    public function getRefEll()
+    {
+        return $this->refEll;
+    }
+
+    /**
+     * @param RefEll $refEll
+     */
+    public function setRefEll(RefEll $refEll)
+    {
+        $this->refEll = $refEll;
     }
 
 
@@ -214,7 +255,7 @@ abstract class TransverseMercator
             + ($XII * pow($E - $E0, 5))
             - ($XIIA * pow($E - $E0, 7));
 
-        return new LatLng(rad2deg($phi), rad2deg($lambda), $refEll);
+        return new LatLng(rad2deg($phi), rad2deg($lambda), 0, $refEll);
     }
 
 }

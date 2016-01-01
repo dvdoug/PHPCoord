@@ -17,18 +17,6 @@ class UTMRef extends TransverseMercator
 {
 
     /**
-     * Easting
-     * @var int
-     */
-    protected $easting;
-
-    /**
-     * Easting
-     * @var int
-     */
-    protected $northing;
-
-    /**
      * Latitude zone
      * @var string
      */
@@ -53,39 +41,7 @@ class UTMRef extends TransverseMercator
         $this->latZone = $aLatZone;
         $this->lngZone = $aLngZone;
 
-        parent::__construct($aEasting, $aNorthing);
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getEasting()
-    {
-        return $this->easting;
-    }
-
-    /**
-     * @param mixed $easting
-     */
-    public function setEasting($easting)
-    {
-        $this->easting = $easting;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getNorthing()
-    {
-        return $this->northing;
-    }
-
-    /**
-     * @param mixed $northing
-     */
-    public function setNorthing($northing)
-    {
-        $this->northing = $northing;
+        parent::__construct($aEasting, $aNorthing, 0, RefEll::WGS84());
     }
 
     /**
@@ -158,7 +114,7 @@ class UTMRef extends TransverseMercator
      */
     public function __toString()
     {
-        return "{$this->lngZone}{$this->latZone} {$this->easting} {$this->northing}";
+        return "{$this->lngZone}{$this->latZone} {$this->x} {$this->y}";
     }
 
     /**
@@ -167,8 +123,8 @@ class UTMRef extends TransverseMercator
      */
     public function toLatLng()
     {
-        $N = $this->northing;
-        $E = $this->easting;
+        $N = $this->y;
+        $E = $this->x;
         $N0 = $this->getOriginNorthing();
         $E0 = $this->getOriginEasting();
         $phi0 = $this->getOriginLatitude();
