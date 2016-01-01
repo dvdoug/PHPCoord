@@ -24,7 +24,7 @@ class UTMRef extends TransverseMercator
 
     /**
      * Longitude zone
-     * @var string
+     * @var int
      */
     protected $lngZone;
 
@@ -45,7 +45,7 @@ class UTMRef extends TransverseMercator
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getLatZone()
     {
@@ -53,7 +53,7 @@ class UTMRef extends TransverseMercator
     }
 
     /**
-     * @param mixed $latZone
+     * @param string $latZone
      */
     public function setLatZone($latZone)
     {
@@ -61,7 +61,7 @@ class UTMRef extends TransverseMercator
     }
 
     /**
-     * @return mixed
+     * @return int
      */
     public function getLngZone()
     {
@@ -69,7 +69,7 @@ class UTMRef extends TransverseMercator
     }
 
     /**
-     * @param mixed $lngZone
+     * @param int $lngZone
      */
     public function setLngZone($lngZone)
     {
