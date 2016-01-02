@@ -103,13 +103,13 @@ class OSRef extends TransverseMercator
         $majorSquaresEast = floor($adjustedX / 500000);
         $majorSquaresNorth = floor($adjustedY / 500000);
         $majorLetterIndex = (int)(5 * $majorSquaresNorth + $majorSquaresEast);
-        $majorLetter = self::GRID_LETTERS[$majorLetterIndex];
+        $majorLetter = substr(self::GRID_LETTERS, $majorLetterIndex, 1);
 
         //second (minor) letter is 100km grid sq, origin at 0,0 of this square
         $minorSquaresEast = $easting[0] % 5;
         $minorSquaresNorth = $northing[0] % 5;
         $minorLetterIndex = (int)(5 * $minorSquaresNorth + $minorSquaresEast);
-        $minorLetter = self::GRID_LETTERS[$minorLetterIndex];
+        $minorLetter = substr(self::GRID_LETTERS, $minorLetterIndex, 1);
 
         return $majorLetter . $minorLetter . substr($easting, 1, 3) . substr($northing, 1, 3);
     }
