@@ -17,6 +17,8 @@ namespace PHPCoord;
 class OSRef extends TransverseMercator
 {
 
+    const GRID_LETTERS = "VWXYZQRSTULMNOPFGHJKABCDE";
+
     public function getReferenceEllipsoid()
     {
         return RefEll::airy1830();
@@ -61,42 +63,26 @@ class OSRef extends TransverseMercator
     /**
      * Take a string formatted as a six-figure OS grid reference (e.g.
      * "TG514131") and return a reference to an OSRef object that represents
-     * that grid reference. The first character must be H, N, S, O or T.
-     * The second character can be any uppercase character from A through Z
-     * excluding I.
+     * that grid reference.
      *
      * @param string $ref
      * @return OSRef
      */
     public static function getOSRefFromSixFigureReference($ref)
     {
-        $char1 = substr($ref, 0, 1);
-        $char2 = substr($ref, 1, 1);
-        $east = substr($ref, 2, 3) * 100;
-        $north = substr($ref, 5, 3) * 100;
-        if ($char1 == 'H') {
-            $north += 1000000;
-        } else {
-            if ($char1 == 'N') {
-                $north += 500000;
-            } else {
-                if ($char1 == 'O') {
-                    $north += 500000;
-                    $east += 500000;
-                } else {
-                    if ($char1 == 'T') {
-                        $east += 500000;
-                    }
-                }
-            }
-        }
-        $char2ord = ord($char2);
-        if ($char2ord > 73) { // Adjust for no I
-            $char2ord--;
-        }
-        $nx = (($char2ord - 65) % 5) * 100000;
-        $ny = (4 - floor(($char2ord - 65) / 5)) * 100000;
-        return new OSRef($east + $nx, $north + $ny);
+
+        //first (major) letter is the 500km grid sq, origin at -1000000, -500000
+        $majorEasting = strpos(self::GRID_LETTERS, $ref[0]) % 5  * 500000 - 1000000;
+        $majorNorthing = (floor(strpos(self::GRID_LETTERS, $ref[0]) / 5)) * 500000 - 500000;
+
+        //second (minor) letter is 100km grid sq, origin at 0,0 of this square
+        $minorEasting = strpos(self::GRID_LETTERS, $ref[1]) % 5  * 100000;
+        $minorNorthing = (floor(strpos(self::GRID_LETTERS, $ref[1]) / 5)) * 100000;
+
+        $easting = $majorEasting + $minorEasting + (substr($ref, 2, 3) * 100);
+        $northing = $majorNorthing + $minorNorthing + (substr($ref, 5, 3) * 100);
+
+        return new OSRef($easting, $northing);
     }
 
     /**
@@ -111,34 +97,21 @@ class OSRef extends TransverseMercator
         $easting = str_pad($this->x, 6, 0, STR_PAD_LEFT);
         $northing = str_pad($this->y, 6, 0, STR_PAD_LEFT);
 
-        $hundredkmE = $easting[0];
-        $hundredkmN = $northing[0];
 
-        if ($hundredkmN < 5 && $hundredkmE < 5) {
-            $firstLetter = 'S';
-        } else {
-            if ($hundredkmN < 5 && $hundredkmE >= 5) {
-                $firstLetter = 'T';
-            } else {
-                if ($hundredkmN < 10 && $hundredkmE < 5) {
-                    $firstLetter = 'N';
-                } else {
-                    if ($hundredkmN < 10 && $hundredkmE >= 5) {
-                        $firstLetter = 'O';
-                    } else {
-                        $firstLetter = 'H';
-                    }
-                }
-            }
-        }
+        $adjustedX = $this->x + 1000000;
+        $adjustedY = $this->y + 500000;
+        $majorSquaresEast = floor($adjustedX / 500000);
+        $majorSquaresNorth = floor($adjustedY / 500000);
+        $majorLetterIndex = (int)(5 * $majorSquaresNorth + $majorSquaresEast);
+        $majorLetter = self::GRID_LETTERS[$majorLetterIndex];
 
-        $index = 65 + ((4 - ($hundredkmN % 5)) * 5) + ($hundredkmE % 5);
-        if ($index >= 73) { //skip the letter I
-            $index++;
-        }
-        $secondLetter = chr($index);
+        //second (minor) letter is 100km grid sq, origin at 0,0 of this square
+        $minorSquaresEast = $easting[0] % 5;
+        $minorSquaresNorth = $northing[0] % 5;
+        $minorLetterIndex = (int)(5 * $minorSquaresNorth + $minorSquaresEast);
+        $minorLetter = self::GRID_LETTERS[$minorLetterIndex];
 
-        return $firstLetter . $secondLetter . substr($easting, 1, 3) . substr($northing, 1, 3);
+        return $majorLetter . $minorLetter . substr($easting, 1, 3) . substr($northing, 1, 3);
     }
 
     /**
