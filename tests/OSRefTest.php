@@ -43,7 +43,7 @@ class OSRefTest extends \PHPUnit_Framework_TestCase
 
         $expected = 'TQ301841';
 
-        self::assertEquals($expected, $OSRef->toSixFigureString());
+        self::assertEquals($expected, $OSRef->toSixFigureReference());
     }
 
     public function testToSixFigureString2()
@@ -53,7 +53,7 @@ class OSRefTest extends \PHPUnit_Framework_TestCase
 
         $expected = 'SP391741';
 
-        self::assertEquals($expected, $OSRef->toSixFigureString());
+        self::assertEquals($expected, $OSRef->toSixFigureReference());
     }
 
     public function testToSixFigureString3()
@@ -63,13 +63,13 @@ class OSRefTest extends \PHPUnit_Framework_TestCase
 
         $expected = 'NN166712';
 
-        self::assertEquals($expected, $OSRef->toSixFigureString());
+        self::assertEquals($expected, $OSRef->toSixFigureReference());
     }
 
     public function testFromSixFigureString()
     {
 
-        $OSRef = OSRef::getOSRefFromSixFigureReference('TQ301842');
+        $OSRef = OSRef::fromSixFigureReference('TQ301842');
         $expected = "(530100, 184200)";
 
         self::assertEquals($expected, $OSRef->__toString());
@@ -78,7 +78,7 @@ class OSRefTest extends \PHPUnit_Framework_TestCase
     public function testFromSixFigureString2()
     {
 
-        $OSRef = OSRef::getOSRefFromSixFigureReference('HU396753');
+        $OSRef = OSRef::fromSixFigureReference('HU396753');
         $expected = "(439600, 1175300)";
 
         self::assertEquals($expected, $OSRef->__toString());

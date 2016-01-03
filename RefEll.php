@@ -118,19 +118,10 @@ class RefEll
     }
 
     /**
-     * Helper function to create International 1924 (Heyford) ellipsoid
+     * Helper function to create International 1924 (Hayford) ellipsoid
      * @return RefEll
      */
     public static function international1924()
-    {
-        return new RefEll(6378388.0, 6356911.9);
-    }
-
-    /**
-     * Helper function to create International 1924 (Heyford) ellipsoid
-     * @return RefEll
-     */
-    public static function heyford1924()
     {
         return new RefEll(6378388.0, 6356911.9);
     }

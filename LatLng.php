@@ -140,9 +140,8 @@ class LatLng
      */
     public function distance(LatLng $to)
     {
-
         if ($this->refEll != $to->refEll) {
-            trigger_error('Source and destination co-ordinates are not using the same ellipsoid', E_USER_WARNING);
+            throw new \RuntimeException('Source and destination co-ordinates are not using the same ellipsoid');
         }
 
         //Mean radius definition from taken from Wikipedia
@@ -160,46 +159,18 @@ class LatLng
 
 
     /**
-     * Convert this LatLng object from OSGB36 datum to WGS84 datum.
+     * Convert this LatLng object to OSGB36 datum.
      * Reference values for transformation are taken from OS document
      * "A Guide to Coordinate Systems in Great Britain"
      * @return void
      */
-    public function OSGB36ToWGS84()
+    public function toOSGB36()
     {
-
-        if ($this->refEll != RefEll::airy1830()) {
-            trigger_error('Current co-ordinates are not using the Airy ellipsoid', E_USER_WARNING);
+        if ($this->refEll == RefEll::airy1830()) {
+            return;
         }
 
-        $wgs84 = RefEll::wgs84();
-
-        $tx = 446.448;
-        $ty = -125.157;
-        $tz = 542.060;
-        $s = -0.0000204894;
-        $rx = deg2rad(0.1502 / 3600);
-        $ry = deg2rad(0.2470 / 3600);
-        $rz = deg2rad(0.8421 / 3600);
-
-        $this->transformDatum($wgs84, $tx, $ty, $tz, $s, $rx, $ry, $rz);
-    }
-
-
-    /**
-     * Convert this LatLng object from WGS84 datum to OSGB36 datum.
-     * Reference values for transformation are taken from OS document
-     * "A Guide to Coordinate Systems in Great Britain"
-     * @return void
-     */
-    public function WGS84ToOSGB36()
-    {
-
-        if ($this->refEll != RefEll::wgs84()) {
-            trigger_error('Current co-ordinates are not using the WGS84 ellipsoid', E_USER_WARNING);
-        }
-
-        $airy1830 = RefEll::airy1830();
+        $this->toWGS84();
 
         $tx = -446.448;
         $ty = 125.157;
@@ -209,22 +180,21 @@ class LatLng
         $ry = deg2rad(-0.2470 / 3600);
         $rz = deg2rad(-0.8421 / 3600);
 
-        $this->transformDatum($airy1830, $tx, $ty, $tz, $s, $rx, $ry, $rz);
+        $this->transformDatum(RefEll::airy1830(), $tx, $ty, $tz, $s, $rx, $ry, $rz);
     }
 
     /**
-     * Convert this LatLng object from WGS84 datum to ED50 datum.
+     * Convert this LatLng object to ED50 datum.
      * Reference values for transformation are taken from http://www.globalmapper.com/helpv9/datum_list.htm
      * @return void
      */
-    public function WGS84ToED50()
+    public function toED50()
     {
-
-        if ($this->refEll != RefEll::wgs84()) {
-            trigger_error('Current co-ordinates are not using the WGS84 ellipsoid', E_USER_WARNING);
+        if ($this->refEll == RefEll::international1924()) {
+            return;
         }
 
-        $heyford1924 = RefEll::heyford1924();
+        $this->toWGS84();
 
         $tx = 87;
         $ty = 98;
@@ -234,47 +204,21 @@ class LatLng
         $ry = deg2rad(0);
         $rz = deg2rad(0);
 
-        $this->transformDatum($heyford1924, $tx, $ty, $tz, $s, $rx, $ry, $rz);
+        $this->transformDatum(RefEll::international1924(), $tx, $ty, $tz, $s, $rx, $ry, $rz);
     }
 
     /**
-     * Convert this LatLng object from ED50 datum to WGS84 datum.
-     * Reference values for transformation are taken from http://www.globalmapper.com/helpv9/datum_list.htm
-     * @return void
-     */
-    public function ED50ToWGS84()
-    {
-
-        if ($this->refEll != RefEll::heyford1924()) {
-            trigger_error('Current co-ordinates are not using the Heyford ellipsoid', E_USER_WARNING);
-        }
-
-        $wgs84 = RefEll::wgs84();
-
-        $tx = -87;
-        $ty = -98;
-        $tz = -121;
-        $s = 0;
-        $rx = deg2rad(0);
-        $ry = deg2rad(0);
-        $rz = deg2rad(0);
-
-        $this->transformDatum($wgs84, $tx, $ty, $tz, $s, $rx, $ry, $rz);
-    }
-
-    /**
-     * Convert this LatLng object from WGS84 datum to NAD27 datum.
+     * Convert this LatLng object to NAD27 datum.
      * Reference values for transformation are taken from Wikipedia
      * @return void
      */
-    public function WGS84ToNAD27()
+    public function toNAD27()
     {
-
-        if ($this->refEll != RefEll::wgs84()) {
-            trigger_error('Current co-ordinates are not using the WGS84 ellipsoid', E_USER_WARNING);
+        if ($this->refEll == RefEll::clarke1866()) {
+            return;
         }
 
-        $clarke1866 = RefEll::clarke1866();
+        $this->toWGS84();
 
         $tx = 8;
         $ty = -160;
@@ -284,32 +228,102 @@ class LatLng
         $ry = deg2rad(0);
         $rz = deg2rad(0);
 
-        $this->transformDatum($clarke1866, $tx, $ty, $tz, $s, $rx, $ry, $rz);
+        $this->transformDatum(RefEll::clarke1866(), $tx, $ty, $tz, $s, $rx, $ry, $rz);
     }
 
     /**
-     * Convert this LatLng object from NAD27 datum to WGS84 datum.
-     * Reference values for transformation are taken from Wikipedia
+     * Convert this LatLng object to Ireland 1975 datum.
+     * Reference values for transformation are taken from OSI document
+     * "Making maps compatible with GPS"
      * @return void
      */
-    public function NAD27ToWGS84()
+    public function toIreland1975()
     {
-
-        if ($this->refEll != RefEll::clarke1866()) {
-            trigger_error('Current co-ordinates are not using the Clarke ellipsoid', E_USER_WARNING);
+        if ($this->refEll == RefEll::airyModified()) {
+            return;
         }
 
-        $wgs84 = RefEll::wgs84();
+        $this->toWGS84();
 
-        $tx = -8;
-        $ty = 160;
-        $tz = 176;
-        $s = 0;
-        $rx = deg2rad(0);
-        $ry = deg2rad(0);
-        $rz = deg2rad(0);
+        $tx = -482.530;
+        $ty = 130.596;
+        $tz = -564.557;
+        $s = -0.00000815;
+        $rx = deg2rad(-1.042 / 3600);
+        $ry = deg2rad(-0.214 / 3600);
+        $rz = deg2rad(-0.631 / 3600);
 
-        $this->transformDatum($wgs84, $tx, $ty, $tz, $s, $rx, $ry, $rz);
+        $this->transformDatum(RefEll::airyModified(), $tx, $ty, $tz, $s, $rx, $ry, $rz);
+    }
+
+    /**
+     * Convert this LatLng object from WGS84 datum to Ireland 1975 datum.
+     * Reference values for transformation are taken from OSI document
+     * "Making maps compatible with GPS"
+     * @return void
+     */
+    public function toWGS84() {
+
+        switch ($this->refEll) {
+
+            case RefEll::wgs84():
+                return; //do nothing
+
+            case RefEll::airy1830(): // values from OSGB document "A Guide to Coordinate Systems in Great Britain"
+                $tx = 446.448;
+                $ty = -125.157;
+                $tz = 542.060;
+                $s = -0.0000204894;
+                $rx = deg2rad(0.1502 / 3600);
+                $ry = deg2rad(0.2470 / 3600);
+                $rz = deg2rad(0.8421 / 3600);
+                break;
+
+            case RefEll::airyModified(): // values from OSI document "Making maps compatible with GPS"
+                $tx = 482.530;
+                $ty = -130.596;
+                $tz = 564.557;
+                $s = 0.00000815;
+                $rx = deg2rad(1.042 / 3600);
+                $ry = deg2rad(0.214 / 3600);
+                $rz = deg2rad(0.631 / 3600);
+                break;
+
+            case RefEll::clarke1866(): // assumes NAD27, values from Wikipedia
+                $tx = -8;
+                $ty = 160;
+                $tz = 176;
+                $s = 0;
+                $rx = deg2rad(0);
+                $ry = deg2rad(0);
+                $rz = deg2rad(0);
+                break;
+
+            case RefEll::international1924(): // assumes ED50, values from http://www.globalmapper.com/helpv9/datum_list.htm
+                $tx = -87;
+                $ty = -98;
+                $tz = -121;
+                $s = 0;
+                $rx = deg2rad(0);
+                $ry = deg2rad(0);
+                $rz = deg2rad(0);
+                break;
+
+            case RefEll::bessel1841(): // assumes Germany, values from Wikipedia
+                $tx = 582;
+                $ty = -105;
+                $tz = -414;
+                $s = 0.0000083;
+                $rx = deg2rad(1.04);
+                $ry = deg2rad(0.35);
+                $rz = deg2rad(-3.08);
+                break;
+
+            default:
+                throw new \RuntimeException('Transform paramaters not known for this ellipsoid');
+        }
+
+        $this->transformDatum(RefEll::wgs84(), $tx, $ty, $tz, $s, $rx, $ry, $rz);
     }
 
     /**
@@ -326,6 +340,10 @@ class LatLng
      */
     public function transformDatum(RefEll $toRefEll, $tranX, $tranY, $tranZ, $scale, $rotX, $rotY, $rotZ)
     {
+
+        if ($this->refEll == $toRefEll) {
+            return;
+        }
 
         $cartesian = Cartesian::fromLatLong($this);
         $cartesian->transformDatum($toRefEll, $tranX, $tranY, $tranZ, $scale, $rotX, $rotY, $rotZ);
@@ -351,10 +369,7 @@ class LatLng
      */
     public function toOSRef()
     {
-
-        if ($this->refEll != RefEll::airy1830()) {
-            trigger_error('Current co-ordinates are in a non-OSGB datum', E_USER_WARNING);
-        }
+        $this->toOSGB36();
 
         $OSGB = new OSRef(0, 0); //dummy to get reference data
         $scale = $OSGB->getScaleFactor();
@@ -378,10 +393,7 @@ class LatLng
      */
     public function toUTMRef()
     {
-
-        if ($this->refEll != RefEll::wgs84()) {
-            trigger_error('Current co-ordinates are in a non-WGS84 datum', E_USER_WARNING);
-        }
+        $this->toWGS84();
 
         $longitudeZone = (int)(($this->lng + 180) / 6) + 1;
 

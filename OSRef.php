@@ -68,7 +68,7 @@ class OSRef extends TransverseMercator
      * @param string $ref
      * @return OSRef
      */
-    public static function getOSRefFromSixFigureReference($ref)
+    public static function fromSixFigureReference($ref)
     {
 
         //first (major) letter is the 500km grid sq, origin at -1000000, -500000
@@ -91,7 +91,7 @@ class OSRef extends TransverseMercator
      * square. e.g. TG514131.
      * @return string
      */
-    public function toSixFigureString()
+    public function toSixFigureReference()
     {
 
         $easting = str_pad($this->x, 6, 0, STR_PAD_LEFT);

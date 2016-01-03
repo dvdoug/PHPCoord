@@ -19,7 +19,7 @@ class UTMRefTest extends \PHPUnit_Framework_TestCase
 
         $UTMRef = new UTMRef(699375, 5713970, 'U', 30);
         $LatLng = $UTMRef->toLatLng();
-        $LatLng->WGS84ToOSGB36();
+        $LatLng->toOSGB36();
 
         $expected = "(51.54098, -0.12301)";
 
