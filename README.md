@@ -54,6 +54,20 @@ $northing = $OSRef->getY();
 
 ```
 
+Installation
+------------
+If you use [Composer](http://getcomposer.org/), just add `php-coord/php-coord` to your project's `composer.json` file:
+```json
+    {
+        "require": {
+            "php-coord/php-coord": "^2.0"
+        }
+    }
+```
+
+Otherwise, the library is PSR-4 compliant, so will work with the autoloader of your choice.
+
+
 Requirements
 ------------
 * PHP 5.3 or higher
