@@ -33,15 +33,16 @@ class UTMRef extends TransverseMercator
      *
      * @param int $x
      * @param int $y
+     * @param int $z
      * @param string $latZone
      * @param int $lngZone
      */
-    public function __construct($x, $y, $latZone, $lngZone)
+    public function __construct($x, $y, $z, $latZone, $lngZone)
     {
         $this->latZone = $latZone;
         $this->lngZone = $lngZone;
 
-        parent::__construct($x, $y, 0, RefEll::wgs84());
+        parent::__construct($x, $y, $z, RefEll::wgs84());
     }
 
     /**

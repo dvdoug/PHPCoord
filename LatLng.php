@@ -380,7 +380,28 @@ class LatLng
 
         $coords = $this->toTransverseMercatorEastingNorthing($scale, $E0, $N0, $phi0, $lambda0);
 
-        return new OSRef(round($coords['E']), round($coords['N']));
+        return new OSRef(round($coords['E']), round($coords['N']), $this->h);
+    }
+
+    /**
+     * Convert this LatLng object into an ITM grid reference
+     *
+     * @return ITMRef
+     */
+    public function toITMRef()
+    {
+        $this->toWGS84();
+
+        $ITM = new ITMRef(0, 0); //dummy to get reference data
+        $scale = $ITM->getScaleFactor();
+        $N0 = $ITM->getOriginNorthing();
+        $E0 = $ITM->getOriginEasting();
+        $phi0 = $ITM->getOriginLatitude();
+        $lambda0 = $ITM->getOriginLongitude();
+
+        $coords = $this->toTransverseMercatorEastingNorthing($scale, $E0, $N0, $phi0, $lambda0);
+
+        return new ITMRef(round($coords['E']), round($coords['N']), $this->h);
     }
 
 
@@ -414,7 +435,7 @@ class LatLng
 
         $UTMZone = $this->getUTMLatitudeZoneLetter($this->lat);
 
-        $UTM = new UTMRef(0, 0, $UTMZone, $longitudeZone); //dummy to get reference data
+        $UTM = new UTMRef(0, 0, 0, $UTMZone, $longitudeZone); //dummy to get reference data
         $scale = $UTM->getScaleFactor();
         $N0 = $UTM->getOriginNorthing();
         $E0 = $UTM->getOriginEasting();
@@ -427,7 +448,7 @@ class LatLng
             $coords['N'] += 10000000;
         }
 
-        return new UTMRef(round($coords['E']), round($coords['N']), $UTMZone, $longitudeZone);
+        return new UTMRef(round($coords['E']), round($coords['N']), $this->h, $UTMZone, $longitudeZone);
     }
 
     /**
