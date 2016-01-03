@@ -50,10 +50,11 @@ class IrishGridRef extends TransverseMercator
     /**
      * @param int $x
      * @param int $y
+     * @param int $z
      */
-    public function __construct($x, $y)
+    public function __construct($x, $y, $z = 0)
     {
-        parent::__construct($x, $y, 0, RefEll::airyModified());
+        parent::__construct($x, $y, $z, RefEll::airyModified());
     }
 
     /**

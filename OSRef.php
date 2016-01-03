@@ -50,14 +50,15 @@ class OSRef extends TransverseMercator
     }
 
     /**
-     * Create a new object representing a UTM reference.
+     * Create a new object representing a OSGB reference.
      *
      * @param int $x
      * @param int $y
+     * @param int $z
      */
-    public function __construct($x, $y)
+    public function __construct($x, $y, $z = 0)
     {
-        parent::__construct($x, $y, 0, RefEll::airy1830());
+        parent::__construct($x, $y, $z, RefEll::airy1830());
     }
 
     /**
