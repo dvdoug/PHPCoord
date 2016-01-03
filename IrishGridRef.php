@@ -62,7 +62,7 @@ class IrishGridRef extends TransverseMercator
      * that grid reference.
      *
      * @param string $ref
-     * @return OSRef
+     * @return IrishGridRef
      */
     public static function fromSixFigureReference($ref)
     {
