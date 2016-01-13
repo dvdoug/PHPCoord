@@ -114,6 +114,80 @@ class OSRef extends TransverseMercator
 
         return $majorLetter . $minorLetter . substr($easting, 1, 3) . substr($northing, 1, 3);
     }
+    
+    /**
+     * Convert this grid reference into a string using a standard eight-figure
+     * grid reference including the two-character designation for the 100km
+     * square. e.g. TG51411311.
+     * @return string
+     */
+    public function toEightFigureString()
+    {
+
+        $easting = str_pad($this->easting, 6, 0, STR_PAD_LEFT);
+        $northing = str_pad($this->northing, 6, 0, STR_PAD_LEFT);
+
+        $hundredkmE = $easting[0];
+        $hundredkmN = $northing[0];
+
+        if ($hundredkmN < 5 && $hundredkmE < 5) {
+            $firstLetter = 'S';
+        } else if ($hundredkmN < 5 && $hundredkmE >= 5) {
+            $firstLetter = 'T';
+        } else if ($hundredkmN < 10 && $hundredkmE < 5) {
+            $firstLetter = 'N';
+        } else if ($hundredkmN < 10 && $hundredkmE >= 5) {
+            $firstLetter = 'O';
+        } else {
+            $firstLetter = 'H';
+        }
+
+        $index = 65 + ((4 - ($hundredkmN % 5)) * 5) + ($hundredkmE % 5);
+        if ($index >= 73) {
+            //skip the letter I
+            $index++;
+        }
+        $secondLetter = chr($index);
+
+        return $firstLetter . $secondLetter . substr($easting, 1, 4) . substr($northing, 1, 4);
+    }
+
+    /**
+     * Convert this grid reference into a string using a standard ten-figure
+     * grid reference including the two-character designation for the 100km
+     * square. e.g. TG5141213112.
+     * @return string
+     */
+    public function toTenFigureString()
+    {
+
+        $easting = str_pad($this->easting, 6, 0, STR_PAD_LEFT);
+        $northing = str_pad($this->northing, 6, 0, STR_PAD_LEFT);
+
+        $hundredkmE = $easting[0];
+        $hundredkmN = $northing[0];
+
+        if ($hundredkmN < 5 && $hundredkmE < 5) {
+            $firstLetter = 'S';
+        } else if ($hundredkmN < 5 && $hundredkmE >= 5) {
+            $firstLetter = 'T';
+        } else if ($hundredkmN < 10 && $hundredkmE < 5) {
+            $firstLetter = 'N';
+        } else if ($hundredkmN < 10 && $hundredkmE >= 5) {
+            $firstLetter = 'O';
+        } else {
+            $firstLetter = 'H';
+        }
+
+        $index = 65 + ((4 - ($hundredkmN % 5)) * 5) + ($hundredkmE % 5);
+        if ($index >= 73) {
+            //skip the letter I
+            $index++;
+        }
+        $secondLetter = chr($index);
+
+        return $firstLetter . $secondLetter . substr($easting, 1, 5) . substr($northing, 1, 5);
+    }
 
     /**
      * Convert this grid reference into a latitude and longitude
