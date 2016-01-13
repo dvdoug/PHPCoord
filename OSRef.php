@@ -87,13 +87,15 @@ class OSRef extends TransverseMercator
     }
 
     /**
-     * Convert this grid reference into a string using a standard six-figure
-     * grid reference including the two-character designation for the 100km
-     * square. e.g. TG514131.
+     * Convert this grid reference into a grid reference string of a 
+     * given length (2, 4, 6, 8 or 10) including the two-character 
+     * designation for the 100km square. e.g. TG514131.
      * @return string
      */
-    public function toSixFigureReference()
+    private function toGridReference($length)
     {
+
+        $halfLength = $length / 2;
 
         $easting = str_pad($this->x, 6, 0, STR_PAD_LEFT);
         $northing = str_pad($this->y, 6, 0, STR_PAD_LEFT);
@@ -112,7 +114,62 @@ class OSRef extends TransverseMercator
         $minorLetterIndex = (int)(5 * $minorSquaresNorth + $minorSquaresEast);
         $minorLetter = substr(self::GRID_LETTERS, $minorLetterIndex, 1);
 
-        return $majorLetter . $minorLetter . substr($easting, 1, 3) . substr($northing, 1, 3);
+        return $majorLetter . $minorLetter . substr($easting, 1, $halfLength) . substr($northing, 1, $halfLength);
+    }
+
+    /**
+     * Convert this grid reference into a string using a standard two-figure
+     * grid reference including the two-character designation for the 100km
+     * square. e.g. TG51 (10km square).
+     * @return string
+     */
+    public function toTwoFigureReference()
+    {
+        return $this->toGridReference(2);
+    }
+
+    /**
+     * Convert this grid reference into a string using a standard four-figure
+     * grid reference including the two-character designation for the 100km
+     * square. e.g. TG5113 (1km square).
+     * @return string
+     */
+    public function toFourFigureReference()
+    {
+        return $this->toGridReference(4);
+    }
+
+    /**
+     * Convert this grid reference into a string using a standard six-figure
+     * grid reference including the two-character designation for the 100km
+     * square. e.g. TG514131 (100m square).
+     * @return string
+     */
+    public function toSixFigureReference()
+    {
+        return $this->toGridReference(6);
+    }
+
+    /**
+     * Convert this grid reference into a string using a standard eight-figure
+     * grid reference including the two-character designation for the 100km
+     * square. e.g. TG51431312 (10m square).
+     * @return string
+     */
+    public function toEightFigureReference()
+    {
+        return $this->toGridReference(8);
+    }
+
+    /**
+     * Convert this grid reference into a string using a standard ten-figure
+     * grid reference including the two-character designation for the 100km
+     * square. e.g. TG5143113121 (1m square).
+     * @return string
+     */
+    public function toTenFigureReference()
+    {
+        return $this->toGridReference(10);
     }
 
     /**
