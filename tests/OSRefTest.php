@@ -41,44 +41,34 @@ class OSRefTest extends \PHPUnit_Framework_TestCase
         self::assertEquals($expected, $LatLng->__toString());
     }
 
-    public function testToSixFigureString()
+    public function testToSixFigureReference()
     {
 
         $OSRef = new OSRef(530140, 184184);
 
         $expected = 'TQ301841';
 
-        self::assertEquals($expected, $OSRef->toSixFigureString());
+        self::assertEquals($expected, $OSRef->toSixFigureReference());
     }
 
-    public function testToSixFigureString2()
-    {
-
-        $OSRef = new OSRef(439145, 274187);
-
-        $expected = 'SP391741';
-
-        self::assertEquals($expected, $OSRef->toSixFigureString());
-    }
-
-    public function testToEightFigureString2()
+    public function testToEightFigureReference()
     {
 
         $OSRef = new OSRef(439145, 274187);
 
         $expected = 'SP39147418';
 
-        self::assertEquals($expected, $OSRef->toEightFigureString());
+        self::assertEquals($expected, $OSRef->toEightFigureReference());
     }
 
-    public function testToTenFigureString2()
+    public function testToTenFigureReference()
     {
 
         $OSRef = new OSRef(439145, 274187);
 
         $expected = 'SP3914574187';
 
-        self::assertEquals($expected, $OSRef->toTenFigureString());
+        self::assertEquals($expected, $OSRef->toTenFigureReference());
     }
 
     public function testFromSixFigureString()
