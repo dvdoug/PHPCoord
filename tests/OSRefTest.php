@@ -2,6 +2,11 @@
 
 namespace PHPCoord;
 
+require_once __DIR__ . '/../OSRef.php';
+require_once __DIR__ . '/../LatLng.php';
+require_once __DIR__ . '/../RefEll.php';
+require_once __DIR__ . '/../UTMRef.php';
+
 class OSRefTest extends \PHPUnit_Framework_TestCase
 {
 
@@ -43,7 +48,7 @@ class OSRefTest extends \PHPUnit_Framework_TestCase
 
         $expected = 'TQ301841';
 
-        self::assertEquals($expected, $OSRef->toSixFigureReference());
+        self::assertEquals($expected, $OSRef->toSixFigureString());
     }
 
     public function testToSixFigureString2()
@@ -53,33 +58,34 @@ class OSRefTest extends \PHPUnit_Framework_TestCase
 
         $expected = 'SP391741';
 
-        self::assertEquals($expected, $OSRef->toSixFigureReference());
+        self::assertEquals($expected, $OSRef->toSixFigureString());
     }
 
-    public function testToSixFigureString3()
+    public function testToEightFigureString2()
     {
 
-        $OSRef = new OSRef(216600, 771200);
+        $OSRef = new OSRef(439145, 274187);
 
-        $expected = 'NN166712';
+        $expected = 'SP39147418';
 
-        self::assertEquals($expected, $OSRef->toSixFigureReference());
+        self::assertEquals($expected, $OSRef->toEightFigureString());
+    }
+
+    public function testToTenFigureString2()
+    {
+
+        $OSRef = new OSRef(439145, 274187);
+
+        $expected = 'SP3914574187';
+
+        self::assertEquals($expected, $OSRef->toTenFigureString());
     }
 
     public function testFromSixFigureString()
     {
 
-        $OSRef = OSRef::fromSixFigureReference('TQ301842');
+        $OSRef = OSRef::getOSRefFromSixFigureReference('TQ301842');
         $expected = "(530100, 184200)";
-
-        self::assertEquals($expected, $OSRef->__toString());
-    }
-
-    public function testFromSixFigureString2()
-    {
-
-        $OSRef = OSRef::fromSixFigureReference('HU396753');
-        $expected = "(439600, 1175300)";
 
         self::assertEquals($expected, $OSRef->__toString());
     }
