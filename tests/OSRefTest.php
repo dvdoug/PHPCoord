@@ -2,11 +2,6 @@
 
 namespace PHPCoord;
 
-require_once __DIR__ . '/../OSRef.php';
-require_once __DIR__ . '/../LatLng.php';
-require_once __DIR__ . '/../RefEll.php';
-require_once __DIR__ . '/../UTMRef.php';
-
 class OSRefTest extends \PHPUnit_Framework_TestCase
 {
 
@@ -41,7 +36,7 @@ class OSRefTest extends \PHPUnit_Framework_TestCase
         self::assertEquals($expected, $LatLng->__toString());
     }
 
-    public function testToSixFigureReference()
+    public function testToSixFigureString()
     {
 
         $OSRef = new OSRef(530140, 184184);
@@ -51,7 +46,27 @@ class OSRefTest extends \PHPUnit_Framework_TestCase
         self::assertEquals($expected, $OSRef->toSixFigureReference());
     }
 
-    public function testToEightFigureReference()
+    public function testToSixFigureString2()
+    {
+
+        $OSRef = new OSRef(439145, 274187);
+
+        $expected = 'SP391741';
+
+        self::assertEquals($expected, $OSRef->toSixFigureReference());
+    }
+
+    public function testToSixFigureString3()
+    {
+
+        $OSRef = new OSRef(216600, 771200);
+
+        $expected = 'NN166712';
+
+        self::assertEquals($expected, $OSRef->toSixFigureReference());
+    }
+    
+        public function testToEightFigureString()
     {
 
         $OSRef = new OSRef(439145, 274187);
@@ -61,7 +76,7 @@ class OSRefTest extends \PHPUnit_Framework_TestCase
         self::assertEquals($expected, $OSRef->toEightFigureReference());
     }
 
-    public function testToTenFigureReference()
+    public function testToTenFigureString()
     {
 
         $OSRef = new OSRef(439145, 274187);
@@ -74,8 +89,17 @@ class OSRefTest extends \PHPUnit_Framework_TestCase
     public function testFromSixFigureString()
     {
 
-        $OSRef = OSRef::getOSRefFromSixFigureReference('TQ301842');
+        $OSRef = OSRef::fromSixFigureReference('TQ301842');
         $expected = "(530100, 184200)";
+
+        self::assertEquals($expected, $OSRef->__toString());
+    }
+
+    public function testFromSixFigureString2()
+    {
+
+        $OSRef = OSRef::fromSixFigureReference('HU396753');
+        $expected = "(439600, 1175300)";
 
         self::assertEquals($expected, $OSRef->__toString());
     }
