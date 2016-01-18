@@ -88,14 +88,14 @@ class OSRef extends TransverseMercator
 
     /**
      * Convert this grid reference into a grid reference string of a 
-     * given length (2, 4, 6, 8 or  10) including the two-character 
+     * given length (2, 4, 6, 8 or 10) including the two-character 
      * designation for the 100km square. e.g. TG514131.
      * @return string
      */
     private function toGridReference($length)
     {
 
-        $halfLangth = $length / 2;
+        $halfLength = $length / 2;
 
         $easting = str_pad($this->x, 6, 0, STR_PAD_LEFT);
         $northing = str_pad($this->y, 6, 0, STR_PAD_LEFT);
@@ -114,7 +114,7 @@ class OSRef extends TransverseMercator
         $minorLetterIndex = (int)(5 * $minorSquaresNorth + $minorSquaresEast);
         $minorLetter = substr(self::GRID_LETTERS, $minorLetterIndex, 1);
 
-        return $majorLetter . $minorLetter . substr($easting, 1, $halfLangth) . substr($northing, 1, $halfLangth);
+        return $majorLetter . $minorLetter . substr($easting, 1, $halfLength) . substr($northing, 1, $halfLength);
     }
 
     /**
