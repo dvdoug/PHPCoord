@@ -87,90 +87,89 @@ class OSRef extends TransverseMercator
     }
 
     /**
+     * Convert this grid reference into a grid reference string of a 
+     * given length (2, 4, 6, 8 or  10) including the two-character 
+     * designation for the 100km square. e.g. TG514131.
+     * @return string
+     */
+    private function toGridReference($length)
+    {
+
+        $halfLangth = $length / 2;
+
+        $easting = str_pad($this->x, 6, 0, STR_PAD_LEFT);
+        $northing = str_pad($this->y, 6, 0, STR_PAD_LEFT);
+
+
+        $adjustedX = $this->x + 1000000;
+        $adjustedY = $this->y + 500000;
+        $majorSquaresEast = floor($adjustedX / 500000);
+        $majorSquaresNorth = floor($adjustedY / 500000);
+        $majorLetterIndex = (int)(5 * $majorSquaresNorth + $majorSquaresEast);
+        $majorLetter = substr(self::GRID_LETTERS, $majorLetterIndex, 1);
+
+        //second (minor) letter is 100km grid sq, origin at 0,0 of this square
+        $minorSquaresEast = $easting[0] % 5;
+        $minorSquaresNorth = $northing[0] % 5;
+        $minorLetterIndex = (int)(5 * $minorSquaresNorth + $minorSquaresEast);
+        $minorLetter = substr(self::GRID_LETTERS, $minorLetterIndex, 1);
+
+        return $majorLetter . $minorLetter . substr($easting, 1, $halfLangth) . substr($northing, 1, $halfLangth);
+    }
+
+    /**
+     * Convert this grid reference into a string using a standard two-figure
+     * grid reference including the two-character designation for the 100km
+     * square. e.g. TG51 (10km square).
+     * @return string
+     */
+    public function toTwoFigureReference()
+    {
+        return $this->toGridReference(2);
+    }
+
+    /**
+     * Convert this grid reference into a string using a standard four-figure
+     * grid reference including the two-character designation for the 100km
+     * square. e.g. TG5113 (1km square).
+     * @return string
+     */
+    public function toFourFigureReference()
+    {
+        return $this->toGridReference(4);
+    }
+
+    /**
      * Convert this grid reference into a string using a standard six-figure
      * grid reference including the two-character designation for the 100km
-     * square. e.g. TG514131.
+     * square. e.g. TG514131 (100m square).
      * @return string
      */
     public function toSixFigureReference()
     {
-
-        $easting = str_pad($this->x, 6, 0, STR_PAD_LEFT);
-        $northing = str_pad($this->y, 6, 0, STR_PAD_LEFT);
-
-
-        $adjustedX = $this->x + 1000000;
-        $adjustedY = $this->y + 500000;
-        $majorSquaresEast = floor($adjustedX / 500000);
-        $majorSquaresNorth = floor($adjustedY / 500000);
-        $majorLetterIndex = (int)(5 * $majorSquaresNorth + $majorSquaresEast);
-        $majorLetter = substr(self::GRID_LETTERS, $majorLetterIndex, 1);
-
-        //second (minor) letter is 100km grid sq, origin at 0,0 of this square
-        $minorSquaresEast = $easting[0] % 5;
-        $minorSquaresNorth = $northing[0] % 5;
-        $minorLetterIndex = (int)(5 * $minorSquaresNorth + $minorSquaresEast);
-        $minorLetter = substr(self::GRID_LETTERS, $minorLetterIndex, 1);
-
-        return $majorLetter . $minorLetter . substr($easting, 1, 3) . substr($northing, 1, 3);
+        return $this->toGridReference(6);
     }
-    
+
     /**
      * Convert this grid reference into a string using a standard eight-figure
      * grid reference including the two-character designation for the 100km
-     * square. e.g. TG51411311.
+     * square. e.g. TG51431312 (10m square).
      * @return string
      */
     public function toEightFigureReference()
-        {
-
-        $easting = str_pad($this->x, 6, 0, STR_PAD_LEFT);
-        $northing = str_pad($this->y, 6, 0, STR_PAD_LEFT);
-
-
-        $adjustedX = $this->x + 1000000;
-        $adjustedY = $this->y + 500000;
-        $majorSquaresEast = floor($adjustedX / 500000);
-        $majorSquaresNorth = floor($adjustedY / 500000);
-        $majorLetterIndex = (int)(5 * $majorSquaresNorth + $majorSquaresEast);
-        $majorLetter = substr(self::GRID_LETTERS, $majorLetterIndex, 1);
-
-        //second (minor) letter is 100km grid sq, origin at 0,0 of this square
-        $minorSquaresEast = $easting[0] % 5;
-        $minorSquaresNorth = $northing[0] % 5;
-        $minorLetterIndex = (int)(5 * $minorSquaresNorth + $minorSquaresEast);
-        $minorLetter = substr(self::GRID_LETTERS, $minorLetterIndex, 1);
-
-        return $majorLetter . $minorLetter . substr($easting, 1, 4) . substr($northing, 1, 4);
+    {
+        return $this->toGridReference(8);
     }
 
     /**
      * Convert this grid reference into a string using a standard ten-figure
      * grid reference including the two-character designation for the 100km
-     * square. e.g. TG5141213112.
+     * square. e.g. TG5143113121 (1m square).
      * @return string
      */
     public function toTenFigureReference()
     {
-
-        $easting = str_pad($this->x, 6, 0, STR_PAD_LEFT);
-        $northing = str_pad($this->y, 6, 0, STR_PAD_LEFT);
-
-
-        $adjustedX = $this->x + 1000000;
-        $adjustedY = $this->y + 500000;
-        $majorSquaresEast = floor($adjustedX / 500000);
-        $majorSquaresNorth = floor($adjustedY / 500000);
-        $majorLetterIndex = (int)(5 * $majorSquaresNorth + $majorSquaresEast);
-        $majorLetter = substr(self::GRID_LETTERS, $majorLetterIndex, 1);
-
-        //second (minor) letter is 100km grid sq, origin at 0,0 of this square
-        $minorSquaresEast = $easting[0] % 5;
-        $minorSquaresNorth = $northing[0] % 5;
-        $minorLetterIndex = (int)(5 * $minorSquaresNorth + $minorSquaresEast);
-        $minorLetter = substr(self::GRID_LETTERS, $minorLetterIndex, 1);
-
-        return $majorLetter . $minorLetter . substr($easting, 1, 5) . substr($northing, 1, 5);
+        return $this->toGridReference(10);
     }
 
     /**
