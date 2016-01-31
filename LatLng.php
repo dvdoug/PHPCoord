@@ -314,13 +314,13 @@ class LatLng
                 $ty = -105;
                 $tz = -414;
                 $s = 0.0000083;
-                $rx = deg2rad(1.04);
-                $ry = deg2rad(0.35);
-                $rz = deg2rad(-3.08);
+                $rx = deg2rad(1.04 / 3600);
+                $ry = deg2rad(0.35 / 3600);
+                $rz = deg2rad(-3.08 / 3600);
                 break;
 
             default:
-                throw new \RuntimeException('Transform paramaters not known for this ellipsoid');
+                throw new \RuntimeException('Transform parameters not known for this ellipsoid');
         }
 
         $this->transformDatum(RefEll::wgs84(), $tx, $ty, $tz, $s, $rx, $ry, $rz);

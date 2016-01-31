@@ -186,18 +186,13 @@ class Cartesian
      * @param float $tranY
      * @param float $tranZ
      * @param float $scale
-     * @param float $rotX  rotation about x-axis in seconds
-     * @param float $rotY  rotation about y-axis in seconds
-     * @param float $rotZ  rotation about z-axis in seconds
+     * @param float $rotX  rotation about x-axis in radians
+     * @param float $rotY  rotation about y-axis in radians
+     * @param float $rotZ  rotation about z-axis in radians
      * @return mixed
      */
     public function transformDatum(RefEll $toRefEll, $tranX, $tranY, $tranZ, $scale, $rotX, $rotY, $rotZ)
     {
-
-        //Helmert uses rotations in radians
-        $rotX = deg2rad($rotX / 3600);
-        $rotY = deg2rad($rotY / 3600);
-        $rotZ = deg2rad($rotZ / 3600);
 
         $x = $tranX + ($this->getX() * (1 + $scale)) - ($this->getY() * $rotZ) + ($this->getZ() * $rotY);
         $y = $tranY + ($this->getX() * $rotZ) + ($this->getY() * (1 + $scale)) - ($this->getZ() * $rotX);

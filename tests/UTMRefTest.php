@@ -17,7 +17,7 @@ class UTMRefTest extends \PHPUnit_Framework_TestCase
     public function testLatLng()
     {
 
-        $UTMRef = new UTMRef(699375, 5713970, 0, 'U', 30);
+        $UTMRef = new UTMRef(699388, 5713963, 0, 'U', 30);
         $LatLng = $UTMRef->toLatLng();
         $LatLng->toOSGB36();
 

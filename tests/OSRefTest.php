@@ -124,4 +124,16 @@ class OSRefTest extends \PHPUnit_Framework_TestCase
         self::assertEquals($expected, $OSRef->__toString());
     }
 
+    public function testIssue7() {
+
+        $osRef = new OSRef(322000, 241000);
+        $osLatLng = $osRef->toLatLng();
+        $osLatLng->toWGS84();
+
+        self::assertEquals(52.06186, $osLatLng->getLat());
+        self::assertEquals(-3.13916, $osLatLng->getLng());
+
+
+    }
+
 }

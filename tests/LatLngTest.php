@@ -104,7 +104,7 @@ class LatLngTest extends \PHPUnit_Framework_TestCase
         $LatLng->toWGS84();
         $UTMRef = $LatLng->toUTMRef();
 
-        $expected = "30U 699375 5713970";
+        $expected = "30U 699388 5713963";
 
         self::assertEquals($expected, $UTMRef->__toString());
     }
