@@ -90,10 +90,30 @@ class LatLngTest extends \PHPUnit_Framework_TestCase
     public function testNAD27ToWGS84()
     {
 
-        $LatLng = new LatLng(12.3, 12.3, 0, RefEll::clarke1866());
+        $LatLng = new LatLng(12.29939, 12.29855, 0, RefEll::clarke1866());
         $LatLng->toWGS84();
 
-        $expected = "(12.30061, 12.30145)";
+        $expected = "(12.3, 12.3)";
+        self::assertEquals($expected, $LatLng->__toString());
+    }
+
+    public function testWGS84ToIreland75()
+    {
+
+        $LatLng = new LatLng(12.3, 12.3, 0, RefEll::wgs84());
+        $LatLng->toIreland1975();
+
+        $expected = "(12.29557, 12.30201)";
+        self::assertEquals($expected, $LatLng->__toString());
+    }
+
+    public function testIreland75ToWGS84()
+    {
+
+        $LatLng = new LatLng(12.29557, 12.30201, 0, RefEll::airyModified());
+        $LatLng->toWGS84();
+
+        $expected = "(12.3, 12.3)";
         self::assertEquals($expected, $LatLng->__toString());
     }
 

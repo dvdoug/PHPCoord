@@ -132,8 +132,14 @@ class OSRefTest extends \PHPUnit_Framework_TestCase
 
         self::assertEquals(52.06186, $osLatLng->getLat());
         self::assertEquals(-3.13916, $osLatLng->getLng());
+    }
 
-
+    public function testGetters() {
+        $osRef = new OSRef(100000, 200000, 123);
+        self::assertEquals(100000, $osRef->getX());
+        self::assertEquals(200000, $osRef->getY());
+        self::assertEquals(123, $osRef->getH());
+        self::assertEquals(RefEll::airy1830(), $osRef->getRefEll());
     }
 
 }
