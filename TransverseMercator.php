@@ -207,7 +207,7 @@ abstract class TransverseMercator
                         * sin(3 * ($phiPrime - $phi0))
                         * cos(3 * ($phiPrime + $phi0))));
             $phiPrime += ($N - $N0 - $M) / ($a * $F0);
-        } while (($N - $N0 - $M) >= 0.001);
+        } while (($N - $N0 - $M) >= 0.00001);
         $v = $a * $F0 * pow(1 - $eSquared * pow(sin($phiPrime), 2), -0.5);
         $rho =
             $a
