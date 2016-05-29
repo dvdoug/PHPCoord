@@ -257,9 +257,7 @@ class LatLng
     }
 
     /**
-     * Convert this LatLng object from WGS84 datum to Ireland 1975 datum.
-     * Reference values for transformation are taken from OSI document
-     * "Making maps compatible with GPS"
+     * Convert this LatLng object to WGS84 datum
      * @return void
      */
     public function toWGS84() {
