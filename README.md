@@ -73,7 +73,7 @@ Otherwise, the library is PSR-4 compliant, so will work with the autoloader of y
 
 Requirements
 ------------
-* PHP 5.3 or higher
+* PHP 5.3 or higher (including PHP7 and HHVM)
 
 License
 -------
