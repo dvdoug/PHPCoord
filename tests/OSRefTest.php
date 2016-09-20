@@ -142,4 +142,15 @@ class OSRefTest extends \PHPUnit_Framework_TestCase
         self::assertEquals(RefEll::airy1830(), $osRef->getRefEll());
     }
 
+    public function testDistance() {
+        //old OS HQ
+        $from = new OSRef(438700, 114800, 0, RefEll::airy1830());
+
+        //Tower of London
+        $to = new OSRef(533600, 180500, 0, RefEll::airy1830());
+
+        $distance = round($from->distance($to));
+        self::assertEquals(115423, $distance);
+    }
+
 }

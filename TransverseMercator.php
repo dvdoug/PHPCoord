@@ -257,4 +257,25 @@ abstract class TransverseMercator
 
         return new LatLng(rad2deg($phi), rad2deg($lambda), 0, $refEll);
     }
+
+    /**
+     * Calculate the surface distance between this object and the one
+     * passed in as a parameter.
+     *
+     * @param self $to object to measure the distance to
+     * @return float
+     */
+    public function distance(self $to) {
+
+        if ($this->refEll != $to->refEll) {
+            throw new \RuntimeException('Source and destination co-ordinates are not using the same ellipsoid');
+        }
+
+        //Because this is a 2D grid, we can use simple Pythagoras
+        $distanceX = $to->getX()-$this->getX();
+        $distanceY = $to->getY()-$this->getY();
+
+        return pow(pow($distanceX, 2) + pow($distanceY, 2), 0.5);
+
+    }
 }
