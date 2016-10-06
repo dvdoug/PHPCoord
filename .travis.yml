@@ -10,6 +10,10 @@ php:
   - 7.1
   - hhvm
 
+cache:
+  directories:
+    - $HOME/.cache/composer/files
+
 before_script:
   - composer install
 
