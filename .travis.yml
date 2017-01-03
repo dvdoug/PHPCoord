@@ -1,21 +1,27 @@
 language: php
 sudo: false
 
-php:
-  - 5.3
-  - 5.4
-  - 5.5
-  - 5.6
-  - 7.0
-  - 7.1
-  - hhvm
+matrix:
+  include:
+    # Use the newer stack for HHVM as HHVM does not support Precise anymore since a long time and so Precise has an outdated version
+    - php: hhvm-nightly
+      sudo: required
+      dist: trusty
+      group: edge
+    - php: 5.3
+      env: lowest=1
+    - php: 5.4
+    - php: 5.5
+    - php: 5.6
+    - php: 7.0
+    - php: 7.1
 
 cache:
   directories:
     - $HOME/.cache/composer/files
 
-before_script:
-  - composer install
+install:
+  - if [ "$lowest" = "1" ]; then composer update --prefer-lowest --prefer-stable; else composer install; fi;
 
 script:
   - vendor/bin/phpunit --coverage-text --coverage-clover=coverage.clover tests
