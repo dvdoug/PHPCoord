@@ -24,8 +24,8 @@ install:
   - if [ "$lowest" = "1" ]; then composer update --prefer-lowest --prefer-stable; else composer install; fi;
 
 script:
-  - vendor/bin/phpunit --coverage-text --coverage-clover=coverage.clover tests
+  - sh -c 'if [ "$TRAVIS_PHP_VERSION" != "hhvm-nightly" ]; then vendor/bin/phpunit --coverage-text --coverage-clover=coverage.clover tests; else vendor/bin/phpunit; fi;'
 
 after_script:
-  - wget https://scrutinizer-ci.com/ocular.phar
-  - php ocular.phar code-coverage:upload --format=php-clover coverage.clover
+  - sh -c 'if [ "$TRAVIS_PHP_VERSION" != "hhvm-nightly" ]; then wget https://scrutinizer-ci.com/ocular.phar; fi;'
+  - sh -c 'if [ "$TRAVIS_PHP_VERSION" != "hhvm-nightly" ]; then php ocular.phar code-coverage:upload --format=php-clover coverage.clover; fi;'
