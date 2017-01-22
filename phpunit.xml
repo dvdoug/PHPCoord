@@ -14,7 +14,7 @@
          stopOnSkipped="false"
          testSuiteLoaderClass="PHPUnit_Runner_StandardTestSuiteLoader"
          verbose="false"
-         bootstrap="tests/autoload.php">
+         bootstrap="vendor/autoload.php">
 
   <testsuites>
     <testsuite name="My Test Suite">
