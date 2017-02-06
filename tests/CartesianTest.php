@@ -2,7 +2,9 @@
 
 namespace PHPCoord;
 
-class CartesianTest extends \PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+class CartesianTest extends TestCase
 {
 
     public function testHelmertOSWorkedExample()

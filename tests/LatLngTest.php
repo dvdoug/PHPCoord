@@ -2,7 +2,9 @@
 
 namespace PHPCoord;
 
-class LatLngTest extends \PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+class LatLngTest extends TestCase
 {
 
     public function testToString()

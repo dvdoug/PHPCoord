@@ -2,7 +2,9 @@
 
 namespace PHPCoord;
 
-class IrishGridRefTest extends \PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+class IrishGridRefTest extends TestCase
 {
 
     public function testToString()

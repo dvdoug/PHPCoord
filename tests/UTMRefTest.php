@@ -2,7 +2,9 @@
 
 namespace PHPCoord;
 
-class UTMRefTest extends \PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+class UTMRefTest extends TestCase
 {
 
     public function testToString()

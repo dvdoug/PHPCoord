@@ -2,7 +2,9 @@
 
 namespace PHPCoord;
 
-class ITMRefTest extends \PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+class ITMRefTest extends TestCase
 {
 
     public function testToString()
