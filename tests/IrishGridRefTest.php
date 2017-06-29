@@ -1,5 +1,6 @@
 <?php
 
+declare(strict_types=1);
 namespace PHPCoord;
 
 use PHPUnit\Framework\TestCase;
@@ -9,7 +10,6 @@ class IrishGridRefTest extends TestCase
 
     public function testToString()
     {
-
         $IrishGridRef = new IrishGridRef(315904, 234671);
         $expected = "(315904, 234671)";
 
@@ -18,8 +18,7 @@ class IrishGridRefTest extends TestCase
 
     public function testLatLngOSIWorkedExample()
     {
-
-        $IrishGridRef = new IrishGridRef(271707.427, 248879.641);
+        $IrishGridRef = new IrishGridRef(271707, 248880);
         $LatLng = $IrishGridRef->toLatLng();
 
         $expected = "(53.48505, -6.91966)";
@@ -28,7 +27,6 @@ class IrishGridRefTest extends TestCase
     }
 
     public function testToSixFigureRef() {
-
         $IrishGridRef = new IrishGridRef(315904, 234671);
 
         $expected = "O159346";

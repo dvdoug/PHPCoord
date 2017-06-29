@@ -5,6 +5,7 @@
  * @author Jonathan Stott
  * @author Doug Wright
  */
+declare(strict_types=1);
 namespace PHPCoord;
 
 /**
@@ -48,72 +49,72 @@ class UTMRef extends TransverseMercator
     /**
      * @return string
      */
-    public function getLatZone()
+    public function getLatZone(): string
     {
         return $this->latZone;
     }
 
     /**
-     * @param string $latZone
-     */
-    public function setLatZone($latZone)
-    {
-        $this->latZone = $latZone;
-    }
-
-    /**
      * @return int
      */
-    public function getLngZone()
+    public function getLngZone(): int
     {
         return $this->lngZone;
     }
 
     /**
-     * @param int $lngZone
+     * @return RefEll
      */
-    public function setLngZone($lngZone)
-    {
-        $this->lngZone = $lngZone;
-    }
-
-
-    public function getReferenceEllipsoid()
+    public function getReferenceEllipsoid(): RefEll
     {
         return RefEll::wgs84();
     }
 
-    public function getScaleFactor()
+    /**
+     * @return float
+     */
+    public function getScaleFactor(): float
     {
         return 0.9996;
     }
 
-    public function getOriginNorthing()
+    /**
+     * @return int
+     */
+    public function getOriginNorthing(): int
     {
         return 0;
     }
 
-    public function getOriginEasting()
+    /**
+     * @return int
+     */
+    public function getOriginEasting(): int
     {
         return 500000;
     }
 
-    public function getOriginLatitude()
+    /**
+     * @return float
+     */
+    public function getOriginLatitude(): float
     {
         return 0;
     }
 
-    public function getOriginLongitude()
+    /**
+     * @return float
+     */
+    public function getOriginLongitude(): float
     {
         return ($this->lngZone - 1) * 6 - 180 + 3;
     }
-
 
     /**
      * Return a string representation of this UTM reference
      * @return string
      */
-    public function __toString()
+    public function __toString(): string
     {
         return "{$this->lngZone}{$this->latZone} {$this->x} {$this->y}";
     }
@@ -122,7 +123,7 @@ class UTMRef extends TransverseMercator
      * Convert this UTM reference to a WGS84 latitude and longitude
      * @return LatLng
      */
-    public function toLatLng()
+    public function toLatLng(): LatLng
     {
         $N = $this->y;
         $E = $this->x;

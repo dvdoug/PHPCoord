@@ -4,6 +4,7 @@
  * @package PHPCoord
  * @author Doug Wright
  */
+declare(strict_types=1);
 namespace PHPCoord;
 
 /**
@@ -17,32 +18,50 @@ class IrishGridRef extends TransverseMercator
 
     const GRID_LETTERS = "VWXYZQRSTULMNOPFGHJKABCDE";
 
-    public function getReferenceEllipsoid()
+    /**
+     * @return RefEll
+     */
+    public function getReferenceEllipsoid(): RefEll
     {
         return RefEll::airyModified();
     }
 
-    public function getScaleFactor()
+    /**
+     * @return float
+     */
+    public function getScaleFactor(): float
     {
         return 1.000035;
     }
 
-    public function getOriginNorthing()
+    /**
+     * @return int
+     */
+    public function getOriginNorthing(): int
     {
         return 250000;
     }
 
-    public function getOriginEasting()
+    /**
+     * @return int
+     */
+    public function getOriginEasting(): int
     {
         return 200000;
     }
 
-    public function getOriginLatitude()
+    /**
+     * @return float
+     */
+    public function getOriginLatitude(): float
     {
         return 53.5;
     }
 
-    public function getOriginLongitude()
+    /**
+     * @return float
+     */
+    public function getOriginLongitude(): float
     {
         return -8;
     }
@@ -52,7 +71,7 @@ class IrishGridRef extends TransverseMercator
      * @param int $y
      * @param int $z
      */
-    public function __construct($x, $y, $z = 0)
+    public function __construct(int $x, int $y, int $z = 0)
     {
         parent::__construct($x, $y, $z, RefEll::airyModified());
     }
@@ -65,11 +84,11 @@ class IrishGridRef extends TransverseMercator
      * @param string $ref
      * @return IrishGridRef
      */
-    public static function fromSixFigureReference($ref)
+    public static function fromSixFigureReference($ref): IrishGridRef
     {
 
-        $easting = strpos(self::GRID_LETTERS, $ref[0]) % 5  * 100000 + (substr($ref, 1, 3) * 100);
-        $northing = (floor(strpos(self::GRID_LETTERS, $ref[0]) / 5)) * 100000 + (substr($ref, 4, 3) * 100);
+        $easting = (int)strpos(self::GRID_LETTERS, $ref[0]) % 5  * 100000 + (substr($ref, 1, 3) * 100);
+        $northing = (int)(floor(strpos(self::GRID_LETTERS, $ref[0]) / 5)) * 100000 + (substr($ref, 4, 3) * 100);
 
         return new IrishGridRef($easting, $northing);
     }
@@ -80,11 +99,11 @@ class IrishGridRef extends TransverseMercator
      * square. e.g. T514131.
      * @return string
      */
-    public function toSixFigureReference()
+    public function toSixFigureReference(): string
     {
 
-        $easting = str_pad($this->x, 6, 0, STR_PAD_LEFT);
-        $northing = str_pad($this->y, 6, 0, STR_PAD_LEFT);
+        $easting = str_pad((string)$this->x, 6, '0', STR_PAD_LEFT);
+        $northing = str_pad((string)$this->y, 6, '0', STR_PAD_LEFT);
 
         //100km grid sq, origin at 0,0
         $minorSquaresEast = $easting[0] % 5;
@@ -99,7 +118,7 @@ class IrishGridRef extends TransverseMercator
      * Convert this grid reference into a latitude and longitude
      * @return LatLng
      */
-    public function toLatLng()
+    public function toLatLng(): LatLng
     {
         $N = $this->y;
         $E = $this->x;
@@ -115,7 +134,7 @@ class IrishGridRef extends TransverseMercator
      * String version of coordinate.
      * @return string
      */
-    public function __toString()
+    public function __toString(): string
     {
         return "({$this->x}, {$this->y})";
     }

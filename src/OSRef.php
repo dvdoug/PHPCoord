@@ -5,6 +5,7 @@
  * @author Jonathan Stott
  * @author Doug Wright
  */
+declare(strict_types=1);
 namespace PHPCoord;
 
 /**
@@ -19,32 +20,50 @@ class OSRef extends TransverseMercator
 
     const GRID_LETTERS = "VWXYZQRSTULMNOPFGHJKABCDE";
 
-    public function getReferenceEllipsoid()
+    /**
+     * @return RefEll
+     */
+    public function getReferenceEllipsoid(): RefEll
     {
         return RefEll::airy1830();
     }
 
-    public function getScaleFactor()
+    /**
+     * @return float
+     */
+    public function getScaleFactor(): float
     {
         return 0.9996012717;
     }
 
-    public function getOriginNorthing()
+    /**
+     * @return int
+     */
+    public function getOriginNorthing(): int
     {
         return -100000;
     }
 
-    public function getOriginEasting()
+    /**
+     * @return int
+     */
+    public function getOriginEasting(): int
     {
         return 400000;
     }
 
-    public function getOriginLatitude()
+    /**
+     * @return float
+     */
+    public function getOriginLatitude(): float
     {
         return 49;
     }
 
-    public function getOriginLongitude()
+    /**
+     * @return float
+     */
+    public function getOriginLongitude(): float
     {
         return -2;
     }
@@ -69,7 +88,7 @@ class OSRef extends TransverseMercator
      * @param string $ref
      * @return OSRef
      */
-    public static function fromSixFigureReference($ref)
+    public static function fromSixFigureReference($ref): OSRef
     {
 
         //first (major) letter is the 500km grid sq, origin at -1000000, -500000
@@ -83,7 +102,7 @@ class OSRef extends TransverseMercator
         $easting = $majorEasting + $minorEasting + (substr($ref, 2, 3) * 100);
         $northing = $majorNorthing + $minorNorthing + (substr($ref, 5, 3) * 100);
 
-        return new OSRef($easting, $northing);
+        return new static((int)$easting, (int)$northing);
     }
 
     /**
@@ -92,13 +111,13 @@ class OSRef extends TransverseMercator
      * designation for the 100km square. e.g. TG514131.
      * @return string
      */
-    private function toGridReference($length)
+    private function toGridReference($length): string
     {
 
         $halfLength = $length / 2;
 
-        $easting = str_pad($this->x, 6, 0, STR_PAD_LEFT);
-        $northing = str_pad($this->y, 6, 0, STR_PAD_LEFT);
+        $easting = str_pad((string)$this->x, 6, '0', STR_PAD_LEFT);
+        $northing = str_pad((string)$this->y, 6, '0', STR_PAD_LEFT);
 
 
         $adjustedX = $this->x + 1000000;
@@ -123,7 +142,7 @@ class OSRef extends TransverseMercator
      * square. e.g. TG51 (10km square).
      * @return string
      */
-    public function toTwoFigureReference()
+    public function toTwoFigureReference(): string
     {
         return $this->toGridReference(2);
     }
@@ -134,7 +153,7 @@ class OSRef extends TransverseMercator
      * square. e.g. TG5113 (1km square).
      * @return string
      */
-    public function toFourFigureReference()
+    public function toFourFigureReference(): string
     {
         return $this->toGridReference(4);
     }
@@ -145,7 +164,7 @@ class OSRef extends TransverseMercator
      * square. e.g. TG514131 (100m square).
      * @return string
      */
-    public function toSixFigureReference()
+    public function toSixFigureReference(): string
     {
         return $this->toGridReference(6);
     }
@@ -156,7 +175,7 @@ class OSRef extends TransverseMercator
      * square. e.g. TG51431312 (10m square).
      * @return string
      */
-    public function toEightFigureReference()
+    public function toEightFigureReference(): string
     {
         return $this->toGridReference(8);
     }
@@ -167,7 +186,7 @@ class OSRef extends TransverseMercator
      * square. e.g. TG5143113121 (1m square).
      * @return string
      */
-    public function toTenFigureReference()
+    public function toTenFigureReference(): string
     {
         return $this->toGridReference(10);
     }
@@ -176,7 +195,7 @@ class OSRef extends TransverseMercator
      * Convert this grid reference into a latitude and longitude
      * @return LatLng
      */
-    public function toLatLng()
+    public function toLatLng(): LatLng
     {
         $N = $this->y;
         $E = $this->x;
@@ -192,7 +211,7 @@ class OSRef extends TransverseMercator
      * String version of coordinate.
      * @return string
      */
-    public function __toString()
+    public function __toString(): string
     {
         return "({$this->x}, {$this->y})";
     }

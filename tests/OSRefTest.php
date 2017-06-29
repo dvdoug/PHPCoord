@@ -1,5 +1,6 @@
 <?php
 
+declare(strict_types=1);
 namespace PHPCoord;
 
 use PHPUnit\Framework\TestCase;
@@ -141,15 +142,15 @@ class OSRefTest extends TestCase
         self::assertEquals(100000, $osRef->getX());
         self::assertEquals(200000, $osRef->getY());
         self::assertEquals(123, $osRef->getH());
-        self::assertEquals(RefEll::airy1830(), $osRef->getRefEll());
+        self::assertEquals(RefEll::airy1830(), $osRef->getReferenceEllipsoid());
     }
 
     public function testDistance() {
         //old OS HQ
-        $from = new OSRef(438700, 114800, 0, RefEll::airy1830());
+        $from = new OSRef(438700, 114800, 0);
 
         //Tower of London
-        $to = new OSRef(533600, 180500, 0, RefEll::airy1830());
+        $to = new OSRef(533600, 180500, 0);
 
         $distance = round($from->distance($to));
         self::assertEquals(115423, $distance);

@@ -5,6 +5,7 @@
  * @author Jonathan Stott
  * @author Doug Wright
  */
+declare(strict_types=1);
 namespace PHPCoord;
 
 /**
@@ -17,19 +18,19 @@ abstract class TransverseMercator
 
     /**
      * X
-     * @var float
+     * @var int
      */
     protected $x;
 
     /**
      * Y
-     * @var float
+     * @var int
      */
     protected $y;
 
     /**
      * h
-     * @var float
+     * @var int
      */
     protected $h;
 
@@ -41,128 +42,87 @@ abstract class TransverseMercator
 
     /**
      * Cartesian constructor.
-     * @param float $x
-     * @param float $y
-     * @param float $h
+     * @param int $x
+     * @param int $y
+     * @param int $h
      * @param RefEll $refEll
      */
-    public function __construct($x, $y, $h, RefEll $refEll)
+    public function __construct(int $x, int $y, int $h, RefEll $refEll)
     {
-        $this->setX($x);
-        $this->setY($y);
-        $this->setH($h);
-        $this->setRefEll($refEll);
+        $this->x = $x;
+        $this->y = $y;
+        $this->h = $h;
+        $this->refEll = $refEll;
     }
 
     /**
      * String version of coordinate.
      * @return string
      */
-    public function __toString()
+    public function __toString(): string
     {
         return "({$this->x}, {$this->y}, {$this->h})";
     }
 
     /**
-     * @return float
+     * @return int
      */
-    public function getX()
+    public function getX(): int
     {
         return $this->x;
     }
 
     /**
-     * @param float $x
+     * @return int
      */
-    public function setX($x)
-    {
-        $this->x = $x;
-    }
-
-    /**
-     * @return float
-     */
-    public function getY()
+    public function getY(): int
     {
         return $this->y;
     }
 
     /**
-     * @param float $y
+     * @return int
      */
-    public function setY($y)
-    {
-        $this->y = $y;
-    }
-
-    /**
-     * @return float
-     */
-    public function getH()
+    public function getH(): int
     {
         return $this->h;
     }
 
     /**
-     * @param float $h
-     */
-    public function setH($h)
-    {
-        $this->h = $h;
-    }
-
-    /**
-     * @return RefEll
-     */
-    public function getRefEll()
-    {
-        return $this->refEll;
-    }
-
-    /**
-     * @param RefEll $refEll
-     */
-    public function setRefEll(RefEll $refEll)
-    {
-        $this->refEll = $refEll;
-    }
-
-
-    /**
      * Reference ellipsoid used by this projection
      * @return RefEll
      */
-    abstract public function getReferenceEllipsoid();
+    abstract public function getReferenceEllipsoid(): RefEll;
 
     /**
      * Scale factor at central meridian
      * @return float
      */
-    abstract public function getScaleFactor();
+    abstract public function getScaleFactor(): float;
 
     /**
      * Northing of true origin
-     * @return float
+     * @return int
      */
-    abstract public function getOriginNorthing();
+    abstract public function getOriginNorthing(): int;
 
     /**
      * Easting of true origin
-     * @return float
+     * @return int
      */
-    abstract public function getOriginEasting();
+    abstract public function getOriginEasting(): int;
 
     /**
      * Latitude of true origin
      * @return float
      */
-    abstract public function getOriginLatitude();
+    abstract public function getOriginLatitude(): float;
 
     /**
      * Longitude of true origin
      * @return float
      */
-    abstract public function getOriginLongitude();
+    abstract public function getOriginLongitude(): float;
 
     /**
      * Convert this grid reference into a latitude and longitude
@@ -177,7 +137,7 @@ abstract class TransverseMercator
      * @param float $lambda0 map coordinate (longitude) of true origin and central meridian
      * @return LatLng
      */
-    public function convertToLatitudeLongitude($N, $E, $N0, $E0, $phi0, $lambda0)
+    public function convertToLatitudeLongitude($N, $E, $N0, $E0, $phi0, $lambda0): LatLng
     {
 
         $phi0 = deg2rad($phi0);
@@ -263,9 +223,9 @@ abstract class TransverseMercator
      * passed in as a parameter.
      *
      * @param self $to object to measure the distance to
-     * @return float
+     * @return int
      */
-    public function distance(self $to) {
+    public function distance(self $to): int {
 
         if ($this->refEll != $to->refEll) {
             throw new \RuntimeException('Source and destination co-ordinates are not using the same ellipsoid');
@@ -275,7 +235,7 @@ abstract class TransverseMercator
         $distanceX = $to->getX()-$this->getX();
         $distanceY = $to->getY()-$this->getY();
 
-        return pow(pow($distanceX, 2) + pow($distanceY, 2), 0.5);
+        return (int) round(pow(pow($distanceX, 2) + pow($distanceY, 2), 0.5));
 
     }
 }

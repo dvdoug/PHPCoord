@@ -5,6 +5,7 @@
  * @author Jonathan Stott
  * @author Doug Wright
  */
+declare(strict_types=1);
 namespace PHPCoord;
 
 /**
@@ -378,7 +379,7 @@ class LatLng
 
         $coords = $this->toTransverseMercatorEastingNorthing($scale, $E0, $N0, $phi0, $lambda0);
 
-        return new OSRef(round($coords['E']), round($coords['N']), $this->h);
+        return new OSRef($coords['E'], $coords['N'], $this->h);
     }
 
     /**
@@ -399,7 +400,7 @@ class LatLng
 
         $coords = $this->toTransverseMercatorEastingNorthing($scale, $E0, $N0, $phi0, $lambda0);
 
-        return new ITMRef(round($coords['E']), round($coords['N']), $this->h);
+        return new ITMRef($coords['E'], $coords['N'], $this->h);
     }
 
 
@@ -446,7 +447,7 @@ class LatLng
             $coords['N'] += 10000000;
         }
 
-        return new UTMRef(round($coords['E']), round($coords['N']), $this->h, $UTMZone, $longitudeZone);
+        return new UTMRef($coords['E'], $coords['N'], $this->getH(), $UTMZone, $longitudeZone);
     }
 
     /**
@@ -524,8 +525,8 @@ class LatLng
         $V = $v / 6 * pow($cosLat, 3) * ($v / $p - $tanLatSq);
         $VI = $v / 120 * pow($cosLat, 5) * (5 - 18 * $tanLatSq + pow($tanLatSq, 2) + 14 * $hSq - 58 * $tanLatSq * $hSq);
 
-        $E = $originEasting + $IV * $longMinusOrigin + $V * pow($longMinusOrigin, 3) + $VI * pow($longMinusOrigin, 5);
-        $N = $I + $II * pow($longMinusOrigin, 2) + $III * pow($longMinusOrigin, 4) + $IIIA * pow($longMinusOrigin, 6);
+        $E = (int)round($originEasting + $IV * $longMinusOrigin + $V * pow($longMinusOrigin, 3) + $VI * pow($longMinusOrigin, 5));
+        $N = (int)round($I + $II * pow($longMinusOrigin, 2) + $III * pow($longMinusOrigin, 4) + $IIIA * pow($longMinusOrigin, 6));
 
         return array('E' => $E, 'N' => $N);
     }
