@@ -1,7 +1,7 @@
 PHPCoord
 ========
 
-Conversion/modernisation/enhancement of phpcoord for PHP5.3+/PSR-4.
+Conversion/modernisation/enhancement of phpcoord.
 
 [![Build Status](https://travis-ci.org/dvdoug/PHPCoord.svg?branch=master)](https://travis-ci.org/dvdoug/PHPCoord)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/dvdoug/PHPCoord/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/dvdoug/PHPCoord/?branch=master)
@@ -63,7 +63,7 @@ If you use [Composer](http://getcomposer.org/), just add `php-coord/php-coord` t
 ```json
     {
         "require": {
-            "php-coord/php-coord": "^2.0"
+            "php-coord/php-coord": "^3.0"
         }
     }
 ```
@@ -73,7 +73,7 @@ Otherwise, the library is PSR-4 compliant, so will work with the autoloader of y
 
 Requirements
 ------------
-* PHP 5.3 or higher (including PHP7 and HHVM)
+* PHP 7.1 or higher
 
 License
 -------
