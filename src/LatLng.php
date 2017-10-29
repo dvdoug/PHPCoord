@@ -45,14 +45,14 @@ class LatLng
      * Create a new LatLng object from the given latitude and longitude
      * @param float $lat
      * @param float $lng
-     * @param float $height
+     * @param int $height
      * @param RefEll $refEll
      */
-    public function __construct($lat, $lng, $height, RefEll $refEll)
+    public function __construct(float $lat, float $lng, int $height, RefEll $refEll)
     {
-        $this->lat = round($lat, 5);
-        $this->lng = round($lng, 5);
-        $this->h = round($height);
+        $this->lat = $lat;
+        $this->lng = $lng;
+        $this->h = $height;
         $this->refEll = $refEll;
     }
 
@@ -60,92 +60,57 @@ class LatLng
      * Return a string representation of this LatLng object
      * @return string
      */
-    public function __toString()
+    public function __toString(): string
     {
-        return "({$this->lat}, {$this->lng})";
+        return "({$this->getLat()}, {$this->getLng()})";
     }
 
     /**
      * @return float
      */
-    public function getLat()
+    public function getLat(): float
     {
-        return $this->lat;
-    }
-
-    /**
-     * @param float $lat
-     */
-    public function setLat($lat)
-    {
-        $this->lat = $lat;
+        return round($this->lat, 5);
     }
 
     /**
      * @return float
      */
-    public function getLng()
+    public function getLng(): float
     {
-        return $this->lng;
+        return round($this->lng, 5);
     }
 
     /**
-     * @param float $lng
+     * @return int
      */
-    public function setLng($lng)
-    {
-        $this->lng = $lng;
-    }
-
-    /**
-     * @return float
-     */
-    public function getH()
+    public function getH(): int
     {
         return $this->h;
     }
 
     /**
-     * @param float $h
-     */
-    public function setH($h)
-    {
-        $this->h = $h;
-    }
-
-
-    /**
      * @return RefEll
      */
-    public function getRefEll()
+    public function getRefEll(): RefEll
     {
         return $this->refEll;
     }
-
-    /**
-     * @param RefEll $refEll
-     */
-    public function setRefEll(RefEll $refEll)
-    {
-        $this->refEll = $refEll;
-    }
-
-
 
     /**
      * Calculate the surface distance between this LatLng object and the one
      * passed in as a parameter.
      *
      * @param LatLng $to a LatLng object to measure the surface distance to
-     * @return float
+     * @return int distance in metres
      */
-    public function distance(LatLng $to)
+    public function distance(LatLng $to): int
     {
         if ($this->refEll != $to->refEll) {
             throw new \RuntimeException('Source and destination co-ordinates are not using the same ellipsoid');
         }
 
-        //Mean radius definition from taken from Wikipedia
+        //Mean radius definition taken from Wikipedia
         $er = ((2 * $this->refEll->getMaj()) + $this->refEll->getMin()) / 3;
 
         $latFrom = deg2rad($this->lat);
@@ -155,7 +120,7 @@ class LatLng
 
         $d = acos(sin($latFrom) * sin($latTo) + cos($latFrom) * cos($latTo) * cos($lngTo - $lngFrom)) * $er;
 
-        return round($d, 5);
+        return (int)round($d);
     }
 
 
@@ -163,15 +128,15 @@ class LatLng
      * Convert this LatLng object to OSGB36 datum.
      * Reference values for transformation are taken from OS document
      * "A Guide to Coordinate Systems in Great Britain"
-     * @return void
+     * @return LatLng
      */
-    public function toOSGB36()
+    public function toOSGB36(): LatLng
     {
         if ($this->refEll == RefEll::airy1830()) {
-            return;
+            return $this;
         }
 
-        $this->toWGS84();
+        $asWGS84 = $this->toWGS84();
 
         $tx = -446.448;
         $ty = 125.157;
@@ -181,21 +146,21 @@ class LatLng
         $ry = deg2rad(-0.2470 / 3600);
         $rz = deg2rad(-0.8421 / 3600);
 
-        $this->transformDatum(RefEll::airy1830(), $tx, $ty, $tz, $s, $rx, $ry, $rz);
+        return $asWGS84->transformDatum(RefEll::airy1830(), $tx, $ty, $tz, $s, $rx, $ry, $rz);
     }
 
     /**
      * Convert this LatLng object to ED50 datum.
      * Reference values for transformation are taken from http://www.globalmapper.com/helpv9/datum_list.htm
-     * @return void
+     * @return LatLng
      */
-    public function toED50()
+    public function toED50(): LatLng
     {
         if ($this->refEll == RefEll::international1924()) {
-            return;
+            return $this;
         }
 
-        $this->toWGS84();
+        $asWGS84 = $this->toWGS84();
 
         $tx = 87;
         $ty = 98;
@@ -205,21 +170,21 @@ class LatLng
         $ry = deg2rad(0);
         $rz = deg2rad(0);
 
-        $this->transformDatum(RefEll::international1924(), $tx, $ty, $tz, $s, $rx, $ry, $rz);
+        return $asWGS84->transformDatum(RefEll::international1924(), $tx, $ty, $tz, $s, $rx, $ry, $rz);
     }
 
     /**
      * Convert this LatLng object to NAD27 datum.
      * Reference values for transformation are taken from Wikipedia
-     * @return void
+     * @return LatLng
      */
-    public function toNAD27()
+    public function toNAD27(): LatLng
     {
         if ($this->refEll == RefEll::clarke1866()) {
-            return;
+            return $this;
         }
 
-        $this->toWGS84();
+        $asWGS84 = $this->toWGS84();
 
         $tx = 8;
         $ty = -160;
@@ -229,22 +194,22 @@ class LatLng
         $ry = deg2rad(0);
         $rz = deg2rad(0);
 
-        $this->transformDatum(RefEll::clarke1866(), $tx, $ty, $tz, $s, $rx, $ry, $rz);
+        return $asWGS84->transformDatum(RefEll::clarke1866(), $tx, $ty, $tz, $s, $rx, $ry, $rz);
     }
 
     /**
      * Convert this LatLng object to Ireland 1975 datum.
      * Reference values for transformation are taken from OSI document
      * "Making maps compatible with GPS"
-     * @return void
+     * @return LatLng
      */
-    public function toIreland1975()
+    public function toIreland1975(): LatLng
     {
         if ($this->refEll == RefEll::airyModified()) {
-            return;
+            return $this;
         }
 
-        $this->toWGS84();
+        $asWGS84 = $this->toWGS84();
 
         $tx = -482.530;
         $ty = 130.596;
@@ -254,19 +219,19 @@ class LatLng
         $ry = deg2rad(-0.214 / 3600);
         $rz = deg2rad(-0.631 / 3600);
 
-        $this->transformDatum(RefEll::airyModified(), $tx, $ty, $tz, $s, $rx, $ry, $rz);
+        return $asWGS84->transformDatum(RefEll::airyModified(), $tx, $ty, $tz, $s, $rx, $ry, $rz);
     }
 
     /**
      * Convert this LatLng object to WGS84 datum
-     * @return void
+     * @return LatLng
      */
-    public function toWGS84() {
+    public function toWGS84(): LatLng {
 
         switch ($this->refEll) {
 
             case RefEll::wgs84():
-                return; //do nothing
+                return $this; //do nothing
 
             case RefEll::airy1830(): // values from OSGB document "A Guide to Coordinate Systems in Great Britain"
                 $tx = 446.448;
@@ -322,7 +287,7 @@ class LatLng
                 throw new \RuntimeException('Transform parameters not known for this ellipsoid');
         }
 
-        $this->transformDatum(RefEll::wgs84(), $tx, $ty, $tz, $s, $rx, $ry, $rz);
+        return $this->transformDatum(RefEll::wgs84(), $tx, $ty, $tz, $s, $rx, $ry, $rz);
     }
 
     /**
@@ -335,23 +300,18 @@ class LatLng
      * @param float $rotX  rotation about x-axis in seconds
      * @param float $rotY  rotation about y-axis in seconds
      * @param float $rotZ  rotation about z-axis in seconds
-     * @return mixed
+     * @return LatLng
      */
-    public function transformDatum(RefEll $toRefEll, $tranX, $tranY, $tranZ, $scale, $rotX, $rotY, $rotZ)
+    public function transformDatum(RefEll $toRefEll, $tranX, $tranY, $tranZ, $scale, $rotX, $rotY, $rotZ): LatLng
     {
 
         if ($this->refEll == $toRefEll) {
-            return;
+            return $this;
         }
 
         $cartesian = Cartesian::fromLatLong($this);
-        $cartesian->transformDatum($toRefEll, $tranX, $tranY, $tranZ, $scale, $rotX, $rotY, $rotZ);
-        $newLatLng = $cartesian->toLatitudeLongitude();
-
-        $this->lat = $newLatLng->getLat();
-        $this->lng = $newLatLng->getLng();
-        $this->h = $newLatLng->getH();
-        $this->refEll = $newLatLng->getRefEll();
+        $newCartesian = $cartesian->transformDatum($toRefEll, $tranX, $tranY, $tranZ, $scale, $rotX, $rotY, $rotZ);
+        return $newCartesian->toLatitudeLongitude();
     }
 
 
@@ -366,9 +326,9 @@ class LatLng
      *
      * @return OSRef
      */
-    public function toOSRef()
+    public function toOSRef(): OSRef
     {
-        $this->toOSGB36();
+        $asOSGB36 = $this->toOSGB36();
 
         $OSGB = new OSRef(0, 0); //dummy to get reference data
         $scale = $OSGB->getScaleFactor();
@@ -377,7 +337,7 @@ class LatLng
         $phi0 = $OSGB->getOriginLatitude();
         $lambda0 = $OSGB->getOriginLongitude();
 
-        $coords = $this->toTransverseMercatorEastingNorthing($scale, $E0, $N0, $phi0, $lambda0);
+        $coords = $asOSGB36->toTransverseMercatorEastingNorthing($scale, $E0, $N0, $phi0, $lambda0);
 
         return new OSRef($coords['E'], $coords['N'], $this->h);
     }
@@ -389,7 +349,7 @@ class LatLng
      */
     public function toITMRef()
     {
-        $this->toWGS84();
+        $asWGS84 = $this->toWGS84();
 
         $ITM = new ITMRef(0, 0); //dummy to get reference data
         $scale = $ITM->getScaleFactor();
@@ -398,7 +358,7 @@ class LatLng
         $phi0 = $ITM->getOriginLatitude();
         $lambda0 = $ITM->getOriginLongitude();
 
-        $coords = $this->toTransverseMercatorEastingNorthing($scale, $E0, $N0, $phi0, $lambda0);
+        $coords = $asWGS84->toTransverseMercatorEastingNorthing($scale, $E0, $N0, $phi0, $lambda0);
 
         return new ITMRef($coords['E'], $coords['N'], $this->h);
     }
@@ -411,28 +371,28 @@ class LatLng
      * "A Guide to Coordinate Systems in Great Britain"
      * @return UTMRef
      */
-    public function toUTMRef()
+    public function toUTMRef(): UTMRef
     {
-        $this->toWGS84();
+        $asWGS84 = $this->toWGS84();
 
-        $longitudeZone = (int)(($this->lng + 180) / 6) + 1;
+        $longitudeZone = (int)(($asWGS84->getLng() + 180) / 6) + 1;
 
         // Special zone for Norway
-        if ($this->lat >= 56 && $this->lat < 64 && $this->lng >= 3 && $this->lng < 12) {
+        if ($asWGS84->getLat() >= 56 && $asWGS84->getLat() < 64 && $asWGS84->getLng() >= 3 && $asWGS84->getLng() < 12) {
             $longitudeZone = 32;
-        } elseif ($this->lat >= 72 && $this->lat < 84) { // Special zones for Svalbard
-            if ($this->lng >= 0 && $this->lng < 9) {
+        } elseif ($asWGS84->getLat() >= 72 && $asWGS84->getLat() < 84) { // Special zones for Svalbard
+            if ($asWGS84->getLng() >= 0 && $asWGS84->getLng() < 9) {
                 $longitudeZone = 31;
-            } elseif ($this->lng >= 9 && $this->lng < 21) {
+            } elseif ($asWGS84->getLng() >= 9 && $asWGS84->getLng() < 21) {
                 $longitudeZone = 33;
-            } elseif ($this->lng >= 21 && $this->lng < 33) {
+            } elseif ($asWGS84->getLng() >= 21 && $asWGS84->getLng() < 33) {
                 $longitudeZone = 35;
-            } elseif ($this->lng >= 33 && $this->lng < 42) {
+            } elseif ($asWGS84->getLng() >= 33 && $asWGS84->getLng() < 42) {
                 $longitudeZone = 37;
             }
         }
 
-        $UTMZone = $this->getUTMLatitudeZoneLetter($this->lat);
+        $UTMZone = $this->getUTMLatitudeZoneLetter($asWGS84->getLat());
 
         $UTM = new UTMRef(0, 0, 0, $UTMZone, $longitudeZone); //dummy to get reference data
         $scale = $UTM->getScaleFactor();
@@ -441,13 +401,13 @@ class LatLng
         $phi0 = $UTM->getOriginLatitude();
         $lambda0 = $UTM->getOriginLongitude();
 
-        $coords = $this->toTransverseMercatorEastingNorthing($scale, $E0, $N0, $phi0, $lambda0);
+        $coords = $asWGS84->toTransverseMercatorEastingNorthing($scale, $E0, $N0, $phi0, $lambda0);
 
-        if ($this->lat < 0) {
+        if ($asWGS84->getLat() < 0) {
             $coords['N'] += 10000000;
         }
 
-        return new UTMRef($coords['E'], $coords['N'], $this->getH(), $UTMZone, $longitudeZone);
+        return new UTMRef($coords['E'], $coords['N'], $asWGS84->getH(), $UTMZone, $longitudeZone);
     }
 
     /**
@@ -455,9 +415,8 @@ class LatLng
      * @param float $latitude
      * @return string
      */
-    private function getUTMLatitudeZoneLetter($latitude)
+    private function getUTMLatitudeZoneLetter($latitude): string
     {
-
         if ($latitude < -80 || $latitude > 84) {
             throw new \OutOfRangeException('UTM zones do not apply in polar regions');
         }
@@ -486,7 +445,7 @@ class LatLng
         $originNorthing,
         $originLat,
         $originLong
-    ) {
+    ): array {
 
         $originLat = deg2rad($originLat);
         $originLong = deg2rad($originLong);

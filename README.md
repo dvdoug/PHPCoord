@@ -44,7 +44,7 @@ Usage
 ```php
 $OSRef = new OSRef(500000, 200000); //Easting, Northing
 $LatLng = $OSRef->toLatLng();
-$LatLng->toWGS84(); //optional, for GPS compatibility
+$GPSLatLng = $LatLng->toWGS84(); //optional, for GPS compatibility
 
 $lat =  $LatLng->getLat();
 $long = $LatLng->getLng();
@@ -73,7 +73,8 @@ Otherwise, the library is PSR-4 compliant, so will work with the autoloader of y
 
 Requirements
 ------------
-* PHP 7.1 or higher
+* PHP version 7.1 or higher (from version 3)
+* PHP version 5.4 or higher (versions 1 and 2 - still maintained)
 
 License
 -------

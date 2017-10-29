@@ -10,7 +10,6 @@ class LatLngTest extends TestCase
 
     public function testToString()
     {
-
         $LatLng = new LatLng(51.54105, -0.12319, 0, RefEll::airy1830());
         $expected = "(51.54105, -0.12319)";
 
@@ -19,7 +18,6 @@ class LatLngTest extends TestCase
 
     public function testOSRefWorkHQ()
     {
-
         $LatLng = new LatLng(51.54105, -0.12319, 0, RefEll::airy1830());
         $OSRef = $LatLng->toOSRef();
 
@@ -30,7 +28,6 @@ class LatLngTest extends TestCase
 
     public function testOSRefOSWorkedExample()
     {
-
         $LatLng = new LatLng(52.65757, 1.71792, 0, RefEll::airy1830());
         $OSRef = $LatLng->toOSRef();
 
@@ -45,7 +42,6 @@ class LatLngTest extends TestCase
      */
     public function testOSRefOSWorkedBadEllipsoid()
     {
-
         $LatLng = new LatLng(12.3, 12.3, 0, new RefEll(123, 456));
         $OSRef = $LatLng->toOSRef();
     }
@@ -55,86 +51,76 @@ class LatLngTest extends TestCase
      */
     public function testToWGS84BadEllipsoid()
     {
-
         $LatLng = new LatLng(12.3, 12.3, 0, new RefEll(123, 456));
         $LatLng->toWGS84();
     }
 
     public function testWGS84ToED50()
     {
-
         $LatLng = new LatLng(12.3, 12.3, 0, RefEll::wgs84());
-        $LatLng->toED50();
+        $asED50 = $LatLng->toED50();
 
         $expected = "(12.30121, 12.30071)";
-        self::assertEquals($expected, $LatLng->__toString());
+        self::assertEquals($expected, $asED50->__toString());
     }
 
     public function testED50ToWGS84()
     {
-
         $LatLng = new LatLng(12.30121, 12.30071, 0, RefEll::international1924());
-        $LatLng->toWGS84();
+        $asWGS84 = $LatLng->toWGS84();
 
         $expected = "(12.3, 12.3)";
-        self::assertEquals($expected, $LatLng->__toString());
+        self::assertEquals($expected, $asWGS84->__toString());
     }
 
     public function testWGS84ToNAD27()
     {
-
         $LatLng = new LatLng(12.3, 12.3, 0, RefEll::wgs84());
-        $LatLng->toNAD27();
+        $asNAD27 = $LatLng->toNAD27();
 
         $expected = "(12.29939, 12.29855)";
-        self::assertEquals($expected, $LatLng->__toString());
+        self::assertEquals($expected, $asNAD27->__toString());
     }
 
     public function testNAD27ToWGS84()
     {
-
         $LatLng = new LatLng(12.29939, 12.29855, 0, RefEll::clarke1866());
-        $LatLng->toWGS84();
+        $asWGS84 = $LatLng->toWGS84();
 
         $expected = "(12.3, 12.3)";
-        self::assertEquals($expected, $LatLng->__toString());
+        self::assertEquals($expected, $asWGS84->__toString());
     }
 
     public function testWGS84ToIreland75()
     {
-
         $LatLng = new LatLng(12.3, 12.3, 0, RefEll::wgs84());
-        $LatLng->toIreland1975();
+        $asIreland1975 = $LatLng->toIreland1975();
 
         $expected = "(12.29557, 12.30201)";
-        self::assertEquals($expected, $LatLng->__toString());
+        self::assertEquals($expected, $asIreland1975->__toString());
     }
 
     public function testIreland75ToWGS84()
     {
-
         $LatLng = new LatLng(12.29557, 12.30201, 0, RefEll::airyModified());
-        $LatLng->toWGS84();
+        $asWGS84 = $LatLng->toWGS84();
 
         $expected = "(12.3, 12.3)";
-        self::assertEquals($expected, $LatLng->__toString());
+        self::assertEquals($expected, $asWGS84->__toString());
     }
 
     public function testUTMRefWorkHQ()
     {
-
         $LatLng = new LatLng(51.54098, -0.12301, 0, RefEll::airy1830());
-        $LatLng->toWGS84();
         $UTMRef = $LatLng->toUTMRef();
 
-        $expected = "30U 699388 5713963";
+        $expected = "30U 699388 5713962";
 
         self::assertEquals($expected, $UTMRef->__toString());
     }
 
     public function testUTMRefSydney()
     {
-
         $LatLng = new LatLng(-33.859972, 151.211111, 0, RefEll::wgs84());
         $UTMRef = $LatLng->toUTMRef();
 
@@ -148,7 +134,6 @@ class LatLngTest extends TestCase
      */
     public function testUTMRefArtic()
     {
-
         $LatLng = new LatLng(84.00001, 123, 0, RefEll::wgs84());
         $UTMRef = $LatLng->toUTMRef();
     }
@@ -158,18 +143,16 @@ class LatLngTest extends TestCase
      */
     public function testUTMRefAntartic()
     {
-
         $LatLng = new LatLng(-80.00001, 123, 0, RefEll::wgs84());
         $UTMRef = $LatLng->toUTMRef();
     }
 
     public function testDistanceLatLngWorkHQtoCharingCross()
     {
-
         $work = new LatLng(51.54105, -0.12319, 0, RefEll::wgs84());
         $charingCross = new LatLng(51.507977, -0.124588, 0, RefEll::wgs84());
 
-        $expected = 3678.49665;
+        $expected = 3679;
 
         self::assertEquals($expected, $work->distance($charingCross));
     }
@@ -183,7 +166,7 @@ class LatLngTest extends TestCase
         $work = new LatLng(51.54105, -0.12319, 0, RefEll::airy1830());
         $charingCross = new LatLng(51.507977, -0.124588, 0, RefEll::wgs84());
 
-        $expected = 3678.49665;
+        $expected = 3679;
 
         self::assertEquals($expected, $work->distance($charingCross));
     }

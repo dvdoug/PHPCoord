@@ -22,11 +22,11 @@ class UTMRefTest extends TestCase
 
         $UTMRef = new UTMRef(699388, 5713963, 0, 'U', 30);
         $LatLng = $UTMRef->toLatLng();
-        $LatLng->toOSGB36();
+        $asOSGB36 = $LatLng->toOSGB36();
 
         $expected = "(51.54098, -0.12301)";
 
-        self::assertEquals($expected, $LatLng->__toString());
+        self::assertEquals($expected, $asOSGB36->__toString());
     }
 
     public function testLatLngSouthernHemisphere()

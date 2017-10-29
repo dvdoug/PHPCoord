@@ -16,19 +16,19 @@ class Cartesian
 {
 
     /**
-     * X
+     * X co-ordinate in metres
      * @var float
      */
     protected $x;
 
     /**
-     * Y
+     * Y co-ordinate in metres
      * @var float
      */
     protected $y;
 
     /**
-     * Z
+     * Z co-ordinate in metres
      * @var float
      */
     protected $z;
@@ -41,24 +41,24 @@ class Cartesian
 
     /**
      * Cartesian constructor.
-     * @param float $x
-     * @param float $y
-     * @param float $z
+     * @param int $x
+     * @param int $y
+     * @param int $z
      * @param RefEll $refEll
      */
-    public function __construct($x, $y, $z, RefEll $refEll)
+    public function __construct(float $x, float $y, float $z, RefEll $refEll)
     {
-        $this->setX($x);
-        $this->setY($y);
-        $this->setZ($z);
-        $this->setRefEll($refEll);
+        $this->x = $x;
+        $this->y = $y;
+        $this->z = $z;
+        $this->refEll = $refEll;
     }
 
     /**
      * String version of coordinate.
      * @return string
      */
-    public function __toString()
+    public function __toString(): string
     {
         return "({$this->x}, {$this->y}, {$this->z})";
     }
@@ -66,65 +66,33 @@ class Cartesian
     /**
      * @return float
      */
-    public function getX()
+    public function getX(): float
     {
         return $this->x;
     }
 
     /**
-     * @param float $x
-     */
-    public function setX($x)
-    {
-        $this->x = $x;
-    }
-
-    /**
      * @return float
      */
-    public function getY()
+    public function getY(): float
     {
         return $this->y;
     }
 
     /**
-     * @param float $y
-     */
-    public function setY($y)
-    {
-        $this->y = $y;
-    }
-
-    /**
      * @return float
      */
-    public function getZ()
+    public function getZ(): float
     {
         return $this->z;
     }
 
     /**
-     * @param float $z
-     */
-    public function setZ($z)
-    {
-        $this->z = $z;
-    }
-
-    /**
      * @return RefEll
      */
-    public function getRefEll()
+    public function getRefEll(): RefEll
     {
         return $this->refEll;
-    }
-
-    /**
-     * @param RefEll $refEll
-     */
-    public function setRefEll($refEll)
-    {
-        $this->refEll = $refEll;
     }
 
     /**
@@ -134,9 +102,8 @@ class Cartesian
      *
      * @return LatLng
      */
-    public function toLatitudeLongitude()
+    public function toLatitudeLongitude(): LatLng
     {
-
         $lambda = rad2deg(atan2($this->y, $this->x));
 
         $p = sqrt(pow($this->x, 2) + pow($this->y, 2));
@@ -149,7 +116,7 @@ class Cartesian
             $phi = atan(($this->z + ($this->refEll->getEcc() * $v * sin($phi))) / $p);
         } while (abs($phi - $phi1) >= 0.00001);
 
-        $h = $p / cos($phi) - $v;
+        $h = (int)round($p / cos($phi) - $v);
 
         $phi = rad2deg($phi);
 
@@ -164,9 +131,8 @@ class Cartesian
      * @param LatLng $latLng
      * @return Cartesian
      */
-    public static function fromLatLong(LatLng $latLng)
+    public static function fromLatLong(LatLng $latLng): Cartesian
     {
-
         $a = $latLng->getRefEll()->getMaj();
         $eSquared = $latLng->getRefEll()->getEcc();
         $phi = deg2rad($latLng->getLat());
@@ -190,18 +156,22 @@ class Cartesian
      * @param float $rotX  rotation about x-axis in radians
      * @param float $rotY  rotation about y-axis in radians
      * @param float $rotZ  rotation about z-axis in radians
-     * @return mixed
+     * @return Cartesian
      */
-    public function transformDatum(RefEll $toRefEll, $tranX, $tranY, $tranZ, $scale, $rotX, $rotY, $rotZ)
+    public function transformDatum(
+        RefEll $toRefEll,
+        float $tranX,
+        float $tranY,
+        float $tranZ,
+        float $scale,
+        float $rotX,
+        float $rotY,
+        float $rotZ): Cartesian
     {
-
         $x = $tranX + ($this->getX() * (1 + $scale)) - ($this->getY() * $rotZ) + ($this->getZ() * $rotY);
         $y = $tranY + ($this->getX() * $rotZ) + ($this->getY() * (1 + $scale)) - ($this->getZ() * $rotX);
         $z = $tranZ - ($this->getX() * $rotY) + ($this->getY() * $rotX) + ($this->getZ() * (1 + $scale));
 
-        $this->setX($x);
-        $this->setY($y);
-        $this->setZ($z);
-        $this->setRefEll($toRefEll);
+        return new static($x, $y, $z, $toRefEll);
     }
 }

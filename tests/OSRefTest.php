@@ -131,10 +131,10 @@ class OSRefTest extends TestCase
 
         $osRef = new OSRef(322000, 241000);
         $osLatLng = $osRef->toLatLng();
-        $osLatLng->toWGS84();
+        $asWGS84 = $osLatLng->toWGS84();
 
-        self::assertEquals(52.06186, $osLatLng->getLat());
-        self::assertEquals(-3.13916, $osLatLng->getLng());
+        self::assertEquals(52.06186, $asWGS84->getLat());
+        self::assertEquals(-3.13916, $asWGS84->getLng());
     }
 
     public function testGetters() {

@@ -2,6 +2,7 @@
 
 ## [Unreleased]
 ### Changed
+ - All value objects are now immutable - calling a conversion function on them now returns a *new* object rather than modifying the existing one  
  - Minimum PHP version is now 7.1
 ### Removed
  - HHVM support now that project has a stated goal of no longer targeting PHP7 compatibility
