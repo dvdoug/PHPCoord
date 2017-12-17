@@ -6,10 +6,8 @@ use PHPUnit\Framework\TestCase;
 
 class CartesianTest extends TestCase
 {
-
     public function testHelmertOSWorkedExample()
     {
-
         $tx = -446.448;
         $ty = 125.157;
         $tz = -542.060;
@@ -26,18 +24,19 @@ class CartesianTest extends TestCase
         self::assertEquals(5019888.070, round($c->getZ(), 3));
     }
 
-    public function testToString() {
-        $c = new Cartesian(1,2,3, RefEll::wgs84());
+    public function testToString()
+    {
+        $c = new Cartesian(1, 2, 3, RefEll::wgs84());
 
         self::assertEquals('(1, 2, 3)', $c->__toString());
     }
 
-    public function testGetters() {
-        $c = new Cartesian(1,2,3, RefEll::wgs84());
+    public function testGetters()
+    {
+        $c = new Cartesian(1, 2, 3, RefEll::wgs84());
         self::assertEquals(1, $c->getX());
         self::assertEquals(2, $c->getY());
         self::assertEquals(3, $c->getZ());
         self::assertEquals(RefEll::wgs84(), $c->getRefEll());
     }
-
 }
