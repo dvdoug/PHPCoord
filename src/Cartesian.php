@@ -1,48 +1,53 @@
 <?php
 /**
- * PHPCoord
- * @package PHPCoord
+ * PHPCoord.
+ *
  * @author Doug Wright
  */
+
 namespace PHPCoord;
 
 /**
- * ECEF Cartesian coordinate
+ * ECEF Cartesian coordinate.
+ *
  * @author Doug Wright
- * @package PHPCoord
  */
 class Cartesian
 {
-
     /**
-     * X
+     * X.
+     *
      * @var float
      */
     protected $x;
 
     /**
-     * Y
+     * Y.
+     *
      * @var float
      */
     protected $y;
 
     /**
-     * Z
+     * Z.
+     *
      * @var float
      */
     protected $z;
 
     /**
-     * Reference ellipsoid used in this datum
+     * Reference ellipsoid used in this datum.
+     *
      * @var RefEll
      */
     protected $refEll;
 
     /**
      * Cartesian constructor.
-     * @param float $x
-     * @param float $y
-     * @param float $z
+     *
+     * @param float  $x
+     * @param float  $y
+     * @param float  $z
      * @param RefEll $refEll
      */
     public function __construct($x, $y, $z, RefEll $refEll)
@@ -55,6 +60,7 @@ class Cartesian
 
     /**
      * String version of coordinate.
+     *
      * @return string
      */
     public function __toString()
@@ -129,13 +135,12 @@ class Cartesian
     /**
      * Convert these coordinates into a latitude, longitude
      * Formula for transformation is taken from OS document
-     * "A Guide to Coordinate Systems in Great Britain"
+     * "A Guide to Coordinate Systems in Great Britain".
      *
      * @return LatLng
      */
     public function toLatitudeLongitude()
     {
-
         $lambda = rad2deg(atan2($this->y, $this->x));
 
         $p = sqrt(pow($this->x, 2) + pow($this->y, 2));
@@ -158,14 +163,14 @@ class Cartesian
     /**
      * Convert a latitude, longitude height to x, y, z
      * Formula for transformation is taken from OS document
-     * "A Guide to Coordinate Systems in Great Britain"
+     * "A Guide to Coordinate Systems in Great Britain".
      *
      * @param LatLng $latLng
+     *
      * @return Cartesian
      */
     public static function fromLatLong(LatLng $latLng)
     {
-
         $a = $latLng->getRefEll()->getMaj();
         $eSquared = $latLng->getRefEll()->getEcc();
         $phi = deg2rad($latLng->getLat());
@@ -180,20 +185,21 @@ class Cartesian
     }
 
     /**
-     * Transform the datum used for these coordinates by using a Helmert Transform
+     * Transform the datum used for these coordinates by using a Helmert Transform.
+     *
      * @param RefEll $toRefEll
-     * @param float $tranX
-     * @param float $tranY
-     * @param float $tranZ
-     * @param float $scale
-     * @param float $rotX  rotation about x-axis in radians
-     * @param float $rotY  rotation about y-axis in radians
-     * @param float $rotZ  rotation about z-axis in radians
+     * @param float  $tranX
+     * @param float  $tranY
+     * @param float  $tranZ
+     * @param float  $scale
+     * @param float  $rotX     rotation about x-axis in radians
+     * @param float  $rotY     rotation about y-axis in radians
+     * @param float  $rotZ     rotation about z-axis in radians
+     *
      * @return mixed
      */
     public function transformDatum(RefEll $toRefEll, $tranX, $tranY, $tranZ, $scale, $rotX, $rotY, $rotZ)
     {
-
         $x = $tranX + ($this->getX() * (1 + $scale)) - ($this->getY() * $rotZ) + ($this->getZ() * $rotY);
         $y = $tranY + ($this->getX() * $rotZ) + ($this->getY() * (1 + $scale)) - ($this->getZ() * $rotX);
         $z = $tranZ - ($this->getX() * $rotY) + ($this->getY() * $rotX) + ($this->getZ() * (1 + $scale));

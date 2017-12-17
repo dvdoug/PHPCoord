@@ -1,16 +1,16 @@
 <?php
 /**
- * PHPCoord
- * @package PHPCoord
+ * PHPCoord.
+ *
  * @author Jonathan Stott
  * @author Doug Wright
  */
+
 namespace PHPCoord;
 
 class AlabamaGrid extends TransverseMercator
 {
-
-    CONST FEET_TO_METERS = 0.3048;
+    const FEET_TO_METERS = 0.3048;
 
     public function getReferenceEllipsoid()
     {
@@ -43,7 +43,7 @@ class AlabamaGrid extends TransverseMercator
     }
 
     /**
-     * Create a new object representing grid ref
+     * Create a new object representing grid ref.
      *
      * @param int $x
      * @param int $y
@@ -57,9 +57,9 @@ class AlabamaGrid extends TransverseMercator
         parent::__construct($x, $y, $z, RefEll::grs80());
     }
 
-
     /**
-     * Convert this grid reference into a latitude and longitude
+     * Convert this grid reference into a latitude and longitude.
+     *
      * @return LatLng
      */
     public function toLatLng()
@@ -76,6 +76,7 @@ class AlabamaGrid extends TransverseMercator
 
     /**
      * String version of coordinate.
+     *
      * @return string
      */
     public function __toString()
