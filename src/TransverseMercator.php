@@ -1,49 +1,54 @@
 <?php
 /**
- * PHPCoord
- * @package PHPCoord
+ * PHPCoord.
+ *
  * @author Jonathan Stott
  * @author Doug Wright
  */
+
 namespace PHPCoord;
 
 /**
- * Abstract class representing a Tranverse Mercator Projection
+ * Abstract class representing a Tranverse Mercator Projection.
+ *
  * @author Doug Wright
- * @package PHPCoord
  */
 abstract class TransverseMercator
 {
-
     /**
-     * X
+     * X.
+     *
      * @var float
      */
     protected $x;
 
     /**
-     * Y
+     * Y.
+     *
      * @var float
      */
     protected $y;
 
     /**
-     * h
+     * h.
+     *
      * @var float
      */
     protected $h;
 
     /**
-     * Reference ellipsoid used in this datum
+     * Reference ellipsoid used in this datum.
+     *
      * @var RefEll
      */
     protected $refEll;
 
     /**
      * Cartesian constructor.
-     * @param float $x
-     * @param float $y
-     * @param float $h
+     *
+     * @param float  $x
+     * @param float  $y
+     * @param float  $h
      * @param RefEll $refEll
      */
     public function __construct($x, $y, $h, RefEll $refEll)
@@ -56,6 +61,7 @@ abstract class TransverseMercator
 
     /**
      * String version of coordinate.
+     *
      * @return string
      */
     public function __toString()
@@ -127,39 +133,44 @@ abstract class TransverseMercator
         $this->refEll = $refEll;
     }
 
-
     /**
-     * Reference ellipsoid used by this projection
+     * Reference ellipsoid used by this projection.
+     *
      * @return RefEll
      */
     abstract public function getReferenceEllipsoid();
 
     /**
-     * Scale factor at central meridian
+     * Scale factor at central meridian.
+     *
      * @return float
      */
     abstract public function getScaleFactor();
 
     /**
-     * Northing of true origin
+     * Northing of true origin.
+     *
      * @return float
      */
     abstract public function getOriginNorthing();
 
     /**
-     * Easting of true origin
+     * Easting of true origin.
+     *
      * @return float
      */
     abstract public function getOriginEasting();
 
     /**
-     * Latitude of true origin
+     * Latitude of true origin.
+     *
      * @return float
      */
     abstract public function getOriginLatitude();
 
     /**
-     * Longitude of true origin
+     * Longitude of true origin.
+     *
      * @return float
      */
     abstract public function getOriginLongitude();
@@ -167,19 +178,19 @@ abstract class TransverseMercator
     /**
      * Convert this grid reference into a latitude and longitude
      * Formula for transformation is taken from OS document
-     * "A Guide to Coordinate Systems in Great Britain"
+     * "A Guide to Coordinate Systems in Great Britain".
      *
-     * @param float $N map coordinate (northing) of point to convert
-     * @param float $E map coordinate (easting) of point to convert
-     * @param float $N0 map coordinate (northing) of true origin
-     * @param float $E0 map coordinate (easting) of true origin
-     * @param float $phi0 map coordinate (latitude) of true origin
+     * @param float $N       map coordinate (northing) of point to convert
+     * @param float $E       map coordinate (easting) of point to convert
+     * @param float $N0      map coordinate (northing) of true origin
+     * @param float $E0      map coordinate (easting) of true origin
+     * @param float $phi0    map coordinate (latitude) of true origin
      * @param float $lambda0 map coordinate (longitude) of true origin and central meridian
+     *
      * @return LatLng
      */
     public function convertToLatitudeLongitude($N, $E, $N0, $E0, $phi0, $lambda0)
     {
-
         $phi0 = deg2rad($phi0);
         $lambda0 = deg2rad($lambda0);
 
@@ -263,19 +274,19 @@ abstract class TransverseMercator
      * passed in as a parameter.
      *
      * @param self $to object to measure the distance to
+     *
      * @return float
      */
-    public function distance(self $to) {
-
+    public function distance(self $to)
+    {
         if ($this->refEll != $to->refEll) {
             throw new \RuntimeException('Source and destination co-ordinates are not using the same ellipsoid');
         }
 
         //Because this is a 2D grid, we can use simple Pythagoras
-        $distanceX = $to->getX()-$this->getX();
-        $distanceY = $to->getY()-$this->getY();
+        $distanceX = $to->getX() - $this->getX();
+        $distanceY = $to->getY() - $this->getY();
 
         return pow(pow($distanceX, 2) + pow($distanceY, 2), 0.5);
-
     }
 }
