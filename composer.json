@@ -18,8 +18,7 @@
         "php": "^7.1"
     },
     "require-dev": {
-        "phpunit/PHPUnit": "^6.0",
-        "squizlabs/php_codesniffer": "^2.5"
+        "phpunit/PHPUnit": "^7.2"
     },
     "autoload": {
         "psr-4": {
