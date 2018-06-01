@@ -1,42 +1,45 @@
 <?php
 /**
- * PHPCoord
- * @package PHPCoord
+ * PHPCoord.
+ *
  * @author Jonathan Stott
  * @author Doug Wright
  */
 declare(strict_types=1);
+
 namespace PHPCoord;
 
 /**
- * Reference ellipsoid
+ * Reference ellipsoid.
+ *
  * @author Jonathan Stott
  * @author Doug Wright
- * @package PHPCoord
  */
 class RefEll
 {
-
     /**
-     * Major axis
+     * Major axis.
+     *
      * @var float
      */
     protected $maj;
 
     /**
-     * Minor axis
+     * Minor axis.
+     *
      * @var float
      */
     protected $min;
 
     /**
-     * Eccentricity
+     * Eccentricity.
+     *
      * @var float
      */
     protected $ecc;
 
     /**
-     * Create a new RefEll object to represent a reference ellipsoid
+     * Create a new RefEll object to represent a reference ellipsoid.
      *
      * @param float $maj the major axis
      * @param float $min the minor axis
@@ -72,67 +75,73 @@ class RefEll
         return $this->ecc;
     }
 
-
     /**
-     * Helper function to create Airy1830 ellipsoid used in GB
+     * Helper function to create Airy1830 ellipsoid used in GB.
+     *
      * @return RefEll
      */
     public static function airy1830()
     {
-        return new RefEll(6377563.396, 6356256.909);
+        return new self(6377563.396, 6356256.909);
     }
 
     /**
-     * Helper function to create Airy Modified ellipsoid used by Ireland
+     * Helper function to create Airy Modified ellipsoid used by Ireland.
+     *
      * @return RefEll
      */
     public static function airyModified()
     {
-        return new RefEll(6377340.189, 6356034.447);
+        return new self(6377340.189, 6356034.447);
     }
 
     /**
-     * Helper function to create WGS84 ellipsoid
+     * Helper function to create WGS84 ellipsoid.
+     *
      * @return RefEll
      */
     public static function wgs84()
     {
-        return new RefEll(6378137, 6356752.314245);
+        return new self(6378137, 6356752.314245);
     }
 
     /**
-     * Helper function to create GRS80 ellipsoid
+     * Helper function to create GRS80 ellipsoid.
+     *
      * @return RefEll
      */
     public static function grs80()
     {
-        return new RefEll(6378137, 6356752.314140);
+        return new self(6378137, 6356752.314140);
     }
 
     /**
-     * Helper function to create Clarke1866 ellipsoid
+     * Helper function to create Clarke1866 ellipsoid.
+     *
      * @return RefEll
      */
     public static function clarke1866()
     {
-        return new RefEll(6378206.4, 6356583.8);
+        return new self(6378206.4, 6356583.8);
     }
 
     /**
-     * Helper function to create International 1924 (Hayford) ellipsoid
+     * Helper function to create International 1924 (Hayford) ellipsoid.
+     *
      * @return RefEll
      */
     public static function international1924()
     {
-        return new RefEll(6378388.0, 6356911.9);
+        return new self(6378388.0, 6356911.9);
     }
 
     /**
-     * Helper function to create Bessel 1841 ellipsoid
+     * Helper function to create Bessel 1841 ellipsoid.
+     *
      * @return RefEll
      */
     public static function bessel1841()
     {
-        return new RefEll(6377397.155, 6356078.963);
+        return new self(6377397.155, 6356078.963);
     }
 }

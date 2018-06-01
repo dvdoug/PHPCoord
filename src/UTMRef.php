@@ -1,30 +1,32 @@
 <?php
 /**
- * PHPCoord
- * @package PHPCoord
+ * PHPCoord.
+ *
  * @author Jonathan Stott
  * @author Doug Wright
  */
 declare(strict_types=1);
+
 namespace PHPCoord;
 
 /**
- * UTM reference
+ * UTM reference.
+ *
  * @author Jonathan Stott
  * @author Doug Wright
- * @package PHPCoord
  */
 class UTMRef extends TransverseMercator
 {
-
     /**
-     * Latitude zone
+     * Latitude zone.
+     *
      * @var string
      */
     protected $latZone;
 
     /**
-     * Longitude zone
+     * Longitude zone.
+     *
      * @var int
      */
     protected $lngZone;
@@ -32,11 +34,11 @@ class UTMRef extends TransverseMercator
     /**
      * Create a new object representing a UTM reference.
      *
-     * @param int $x
-     * @param int $y
-     * @param int $z
+     * @param int    $x
+     * @param int    $y
+     * @param int    $z
      * @param string $latZone
-     * @param int $lngZone
+     * @param int    $lngZone
      */
     public function __construct($x, $y, $z, $latZone, $lngZone)
     {
@@ -111,7 +113,8 @@ class UTMRef extends TransverseMercator
     }
 
     /**
-     * Return a string representation of this UTM reference
+     * Return a string representation of this UTM reference.
+     *
      * @return string
      */
     public function __toString(): string
@@ -120,7 +123,8 @@ class UTMRef extends TransverseMercator
     }
 
     /**
-     * Convert this UTM reference to a WGS84 latitude and longitude
+     * Convert this UTM reference to a WGS84 latitude and longitude.
+     *
      * @return LatLng
      */
     public function toLatLng(): LatLng
@@ -133,7 +137,7 @@ class UTMRef extends TransverseMercator
         $lambda0 = $this->getOriginLongitude();
 
         //Correct northing for southern hemisphere
-        if ((ord($this->latZone) - ord("N")) < 0) {
+        if ((ord($this->latZone) - ord('N')) < 0) {
             $N -= 10000000;
         }
 

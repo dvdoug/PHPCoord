@@ -1,21 +1,21 @@
 <?php
 /**
- * PHPCoord
- * @package PHPCoord
+ * PHPCoord.
+ *
  * @author Doug Wright
  */
 declare(strict_types=1);
+
 namespace PHPCoord;
 
 /**
  * Irish Transverse Mercator grid ref (the new Irish Grid system)
- * References are accurate to 1m
+ * References are accurate to 1m.
+ *
  * @author Doug Wright
- * @package PHPCoord
  */
 class ITMRef extends TransverseMercator
 {
-
     /**
      * @return RefEll
      */
@@ -75,7 +75,8 @@ class ITMRef extends TransverseMercator
     }
 
     /**
-     * Convert this grid reference into a latitude and longitude
+     * Convert this grid reference into a latitude and longitude.
+     *
      * @return LatLng
      */
     public function toLatLng(): LatLng
@@ -92,6 +93,7 @@ class ITMRef extends TransverseMercator
 
     /**
      * String version of coordinate.
+     *
      * @return string
      */
     public function __toString(): string
