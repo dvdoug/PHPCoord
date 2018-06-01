@@ -1,24 +1,24 @@
 <?php
 /**
- * PHPCoord
- * @package PHPCoord
+ * PHPCoord.
+ *
  * @author Jonathan Stott
  * @author Doug Wright
  */
 declare(strict_types=1);
+
 namespace PHPCoord;
 
 /**
  * Ordnance Survey grid reference
- * References are accurate to 1m
+ * References are accurate to 1m.
+ *
  * @author Jonathan Stott
  * @author Doug Wright
- * @package PHPCoord
  */
 class OSRef extends TransverseMercator
 {
-
-    const GRID_LETTERS = "VWXYZQRSTULMNOPFGHJKABCDE";
+    const GRID_LETTERS = 'VWXYZQRSTULMNOPFGHJKABCDE';
 
     /**
      * @return RefEll
@@ -86,60 +86,61 @@ class OSRef extends TransverseMercator
      * that grid reference.
      *
      * @param string $ref
+     *
      * @return OSRef
      */
-    public static function fromSixFigureReference($ref): OSRef
+    public static function fromSixFigureReference($ref): self
     {
 
         //first (major) letter is the 500km grid sq, origin at -1000000, -500000
-        $majorEasting = strpos(self::GRID_LETTERS, $ref[0]) % 5  * 500000 - 1000000;
+        $majorEasting = strpos(self::GRID_LETTERS, $ref[0]) % 5 * 500000 - 1000000;
         $majorNorthing = (floor(strpos(self::GRID_LETTERS, $ref[0]) / 5)) * 500000 - 500000;
 
         //second (minor) letter is 100km grid sq, origin at 0,0 of this square
-        $minorEasting = strpos(self::GRID_LETTERS, $ref[1]) % 5  * 100000;
+        $minorEasting = strpos(self::GRID_LETTERS, $ref[1]) % 5 * 100000;
         $minorNorthing = (floor(strpos(self::GRID_LETTERS, $ref[1]) / 5)) * 100000;
 
         $easting = $majorEasting + $minorEasting + (substr($ref, 2, 3) * 100);
         $northing = $majorNorthing + $minorNorthing + (substr($ref, 5, 3) * 100);
 
-        return new static((int)$easting, (int)$northing);
+        return new static((int) $easting, (int) $northing);
     }
 
     /**
-     * Convert this grid reference into a grid reference string of a 
-     * given length (2, 4, 6, 8 or 10) including the two-character 
+     * Convert this grid reference into a grid reference string of a
+     * given length (2, 4, 6, 8 or 10) including the two-character
      * designation for the 100km square. e.g. TG514131.
+     *
      * @return string
      */
     private function toGridReference($length): string
     {
-
         $halfLength = $length / 2;
 
-        $easting = str_pad((string)$this->x, 6, '0', STR_PAD_LEFT);
-        $northing = str_pad((string)$this->y, 6, '0', STR_PAD_LEFT);
-
+        $easting = str_pad((string) $this->x, 6, '0', STR_PAD_LEFT);
+        $northing = str_pad((string) $this->y, 6, '0', STR_PAD_LEFT);
 
         $adjustedX = $this->x + 1000000;
         $adjustedY = $this->y + 500000;
         $majorSquaresEast = floor($adjustedX / 500000);
         $majorSquaresNorth = floor($adjustedY / 500000);
-        $majorLetterIndex = (int)(5 * $majorSquaresNorth + $majorSquaresEast);
+        $majorLetterIndex = (int) (5 * $majorSquaresNorth + $majorSquaresEast);
         $majorLetter = substr(self::GRID_LETTERS, $majorLetterIndex, 1);
 
         //second (minor) letter is 100km grid sq, origin at 0,0 of this square
         $minorSquaresEast = $easting[0] % 5;
         $minorSquaresNorth = $northing[0] % 5;
-        $minorLetterIndex = (int)(5 * $minorSquaresNorth + $minorSquaresEast);
+        $minorLetterIndex = (int) (5 * $minorSquaresNorth + $minorSquaresEast);
         $minorLetter = substr(self::GRID_LETTERS, $minorLetterIndex, 1);
 
-        return $majorLetter . $minorLetter . substr($easting, 1, $halfLength) . substr($northing, 1, $halfLength);
+        return $majorLetter.$minorLetter.substr($easting, 1, $halfLength).substr($northing, 1, $halfLength);
     }
 
     /**
      * Convert this grid reference into a string using a standard two-figure
      * grid reference including the two-character designation for the 100km
      * square. e.g. TG51 (10km square).
+     *
      * @return string
      */
     public function toTwoFigureReference(): string
@@ -151,6 +152,7 @@ class OSRef extends TransverseMercator
      * Convert this grid reference into a string using a standard four-figure
      * grid reference including the two-character designation for the 100km
      * square. e.g. TG5113 (1km square).
+     *
      * @return string
      */
     public function toFourFigureReference(): string
@@ -162,6 +164,7 @@ class OSRef extends TransverseMercator
      * Convert this grid reference into a string using a standard six-figure
      * grid reference including the two-character designation for the 100km
      * square. e.g. TG514131 (100m square).
+     *
      * @return string
      */
     public function toSixFigureReference(): string
@@ -173,6 +176,7 @@ class OSRef extends TransverseMercator
      * Convert this grid reference into a string using a standard eight-figure
      * grid reference including the two-character designation for the 100km
      * square. e.g. TG51431312 (10m square).
+     *
      * @return string
      */
     public function toEightFigureReference(): string
@@ -184,6 +188,7 @@ class OSRef extends TransverseMercator
      * Convert this grid reference into a string using a standard ten-figure
      * grid reference including the two-character designation for the 100km
      * square. e.g. TG5143113121 (1m square).
+     *
      * @return string
      */
     public function toTenFigureReference(): string
@@ -192,7 +197,8 @@ class OSRef extends TransverseMercator
     }
 
     /**
-     * Convert this grid reference into a latitude and longitude
+     * Convert this grid reference into a latitude and longitude.
+     *
      * @return LatLng
      */
     public function toLatLng(): LatLng
@@ -209,6 +215,7 @@ class OSRef extends TransverseMercator
 
     /**
      * String version of coordinate.
+     *
      * @return string
      */
     public function __toString(): string
