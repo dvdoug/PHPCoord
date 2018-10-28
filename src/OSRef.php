@@ -1,24 +1,22 @@
 <?php
-/**
- * PHPCoord
- * @package PHPCoord
- * @author Jonathan Stott
- * @author Doug Wright
- */
+
 declare(strict_types=1);
+
 namespace PHPCoord;
+
+use function floor;
+use function str_pad;
+use function strpos;
 
 /**
  * Ordnance Survey grid reference
- * References are accurate to 1m
+ * References are accurate to 1m.
  * @author Jonathan Stott
  * @author Doug Wright
- * @package PHPCoord
  */
 class OSRef extends TransverseMercator
 {
-
-    const GRID_LETTERS = "VWXYZQRSTULMNOPFGHJKABCDE";
+    private const GRID_LETTERS = 'VWXYZQRSTULMNOPFGHJKABCDE';
 
     /**
      * @return RefEll
@@ -85,52 +83,50 @@ class OSRef extends TransverseMercator
      * "TG514131") and return a reference to an OSRef object that represents
      * that grid reference.
      *
-     * @param string $ref
-     * @return OSRef
+     * @param  string $ref
+     * @return static
      */
-    public static function fromSixFigureReference($ref): OSRef
+    public static function fromSixFigureReference($ref): self
     {
-
         //first (major) letter is the 500km grid sq, origin at -1000000, -500000
-        $majorEasting = strpos(self::GRID_LETTERS, $ref[0]) % 5  * 500000 - 1000000;
+        $majorEasting = strpos(self::GRID_LETTERS, $ref[0]) % 5 * 500000 - 1000000;
         $majorNorthing = (floor(strpos(self::GRID_LETTERS, $ref[0]) / 5)) * 500000 - 500000;
 
         //second (minor) letter is 100km grid sq, origin at 0,0 of this square
-        $minorEasting = strpos(self::GRID_LETTERS, $ref[1]) % 5  * 100000;
+        $minorEasting = strpos(self::GRID_LETTERS, $ref[1]) % 5 * 100000;
         $minorNorthing = (floor(strpos(self::GRID_LETTERS, $ref[1]) / 5)) * 100000;
 
         $easting = $majorEasting + $minorEasting + (substr($ref, 2, 3) * 100);
         $northing = $majorNorthing + $minorNorthing + (substr($ref, 5, 3) * 100);
 
-        return new static((int)$easting, (int)$northing);
+        return new static((int) $easting, (int) $northing);
     }
 
     /**
-     * Convert this grid reference into a grid reference string of a 
-     * given length (2, 4, 6, 8 or 10) including the two-character 
+     * Convert this grid reference into a grid reference string of a
+     * given length (2, 4, 6, 8 or 10) including the two-character
      * designation for the 100km square. e.g. TG514131.
+     * @param  int    $length
      * @return string
      */
-    private function toGridReference($length): string
+    private function toGridReference(int $length): string
     {
-
         $halfLength = $length / 2;
 
-        $easting = str_pad((string)$this->x, 6, '0', STR_PAD_LEFT);
-        $northing = str_pad((string)$this->y, 6, '0', STR_PAD_LEFT);
-
+        $easting = str_pad((string) $this->x, 6, '0', STR_PAD_LEFT);
+        $northing = str_pad((string) $this->y, 6, '0', STR_PAD_LEFT);
 
         $adjustedX = $this->x + 1000000;
         $adjustedY = $this->y + 500000;
         $majorSquaresEast = floor($adjustedX / 500000);
         $majorSquaresNorth = floor($adjustedY / 500000);
-        $majorLetterIndex = (int)(5 * $majorSquaresNorth + $majorSquaresEast);
+        $majorLetterIndex = (int) (5 * $majorSquaresNorth + $majorSquaresEast);
         $majorLetter = substr(self::GRID_LETTERS, $majorLetterIndex, 1);
 
         //second (minor) letter is 100km grid sq, origin at 0,0 of this square
         $minorSquaresEast = $easting[0] % 5;
         $minorSquaresNorth = $northing[0] % 5;
-        $minorLetterIndex = (int)(5 * $minorSquaresNorth + $minorSquaresEast);
+        $minorLetterIndex = (5 * $minorSquaresNorth + $minorSquaresEast);
         $minorLetter = substr(self::GRID_LETTERS, $minorLetterIndex, 1);
 
         return $majorLetter . $minorLetter . substr($easting, 1, $halfLength) . substr($northing, 1, $halfLength);
@@ -192,7 +188,7 @@ class OSRef extends TransverseMercator
     }
 
     /**
-     * Convert this grid reference into a latitude and longitude
+     * Convert this grid reference into a latitude and longitude.
      * @return LatLng
      */
     public function toLatLng(): LatLng

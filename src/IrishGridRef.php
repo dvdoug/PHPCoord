@@ -1,22 +1,21 @@
 <?php
-/**
- * PHPCoord
- * @package PHPCoord
- * @author Doug Wright
- */
+
 declare(strict_types=1);
+
 namespace PHPCoord;
+
+use function str_pad;
+use function strpos;
+use function substr;
 
 /**
  * Irish grid reference (pre-ITM)
- * References are accurate to 1m
+ * References are accurate to 1m.
  * @author Doug Wright
- * @package PHPCoord
  */
 class IrishGridRef extends TransverseMercator
 {
-
-    const GRID_LETTERS = "VWXYZQRSTULMNOPFGHJKABCDE";
+    private const GRID_LETTERS = 'VWXYZQRSTULMNOPFGHJKABCDE';
 
     /**
      * @return RefEll
@@ -81,16 +80,15 @@ class IrishGridRef extends TransverseMercator
      * "T514131") and return a reference to an IrishGridRef object that represents
      * that grid reference.
      *
-     * @param string $ref
-     * @return IrishGridRef
+     * @param  string $ref
+     * @return self
      */
-    public static function fromSixFigureReference($ref): IrishGridRef
+    public static function fromSixFigureReference($ref): self
     {
+        $easting = (int) strpos(self::GRID_LETTERS, $ref[0]) % 5 * 100000 + (substr($ref, 1, 3) * 100);
+        $northing = (int) floor(strpos(self::GRID_LETTERS, $ref[0]) / 5) * 100000 + (substr($ref, 4, 3) * 100);
 
-        $easting = (int)strpos(self::GRID_LETTERS, $ref[0]) % 5  * 100000 + (substr($ref, 1, 3) * 100);
-        $northing = (int)(floor(strpos(self::GRID_LETTERS, $ref[0]) / 5)) * 100000 + (substr($ref, 4, 3) * 100);
-
-        return new IrishGridRef($easting, $northing);
+        return new self($easting, $northing);
     }
 
     /**
@@ -101,21 +99,20 @@ class IrishGridRef extends TransverseMercator
      */
     public function toSixFigureReference(): string
     {
-
-        $easting = str_pad((string)$this->x, 6, '0', STR_PAD_LEFT);
-        $northing = str_pad((string)$this->y, 6, '0', STR_PAD_LEFT);
+        $easting = str_pad((string) $this->x, 6, '0', STR_PAD_LEFT);
+        $northing = str_pad((string) $this->y, 6, '0', STR_PAD_LEFT);
 
         //100km grid sq, origin at 0,0
         $minorSquaresEast = $easting[0] % 5;
         $minorSquaresNorth = $northing[0] % 5;
-        $minorLetterIndex = (int)(5 * $minorSquaresNorth + $minorSquaresEast);
+        $minorLetterIndex = (5 * $minorSquaresNorth + $minorSquaresEast);
         $minorLetter = substr(self::GRID_LETTERS, $minorLetterIndex, 1);
 
         return $minorLetter . substr($easting, 1, 3) . substr($northing, 1, 3);
     }
 
     /**
-     * Convert this grid reference into a latitude and longitude
+     * Convert this grid reference into a latitude and longitude.
      * @return LatLng
      */
     public function toLatLng(): LatLng

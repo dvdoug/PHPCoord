@@ -1,6 +1,21 @@
 checks:
-    php: true
+  php: true
 
-tools:
-    external_code_coverage:
-        timeout: 1800 # Timeout in seconds.
+filter:
+  excluded_paths:
+    - 'tests/'
+
+build:
+  environment:
+    # Languages
+    php:
+      version: "7.1"
+
+  tests:
+    override:
+      -
+        command: 'vendor/bin/phpunit --coverage-clover=build/phpunit.clover'
+        coverage:
+            file: 'build/phpunit.clover'
+            format: 'clover'
+      - php-scrutinizer-run
