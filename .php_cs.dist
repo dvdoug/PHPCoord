@@ -13,7 +13,7 @@ return PhpCsFixer\Config::create()
             'native_function_invocation' => false,
             'phpdoc_separation' => false,
             'yoda_style' => false,
-            'array_syntax' => 'short',
+            'array_syntax' => ['syntax' => 'short'],
         ]
     )
     ->setRiskyAllowed(true)
@@ -21,5 +21,6 @@ return PhpCsFixer\Config::create()
     ->setFinder(
         PhpCsFixer\Finder::create()
             ->in(__DIR__ . '/src')
+            ->in(__DIR__ . '/tests')
             ->append([__FILE__])
     );
