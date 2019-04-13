@@ -6,10 +6,13 @@
 ### Added
  - Support for _accepting_ 2, 4, 8 and 10 figure Ordnance Survey references (6 figure was already supported)
 ### Changed
+ - fromSixFigureReference
  - All value objects are now immutable - calling a conversion function on them now returns a *new* object rather than modifying the existing one  
  - Minimum PHP version is now 7.1
 ### Removed
  - HHVM support now that project has a stated goal of no longer targeting PHP7 compatibility
+ - `OSRef::fromSixFigureReference()` has been removed, use `OSRef::fromGridReference()` instead
+ - `OSRef::to[Two/Four/Six/Eight/Ten]FigureReference()` have been removed, use `OSRef::toGridReference($length)` instead
 
 ## [2.1] - 2016-09-20
 ### Added
