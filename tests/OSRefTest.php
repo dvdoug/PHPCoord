@@ -49,6 +49,14 @@ class OSRefTest extends TestCase
         self::assertEquals($expected, $OSRef->toTwoFigureReference());
     }
 
+    public function testFromTwoFigureString()
+    {
+        $OSRef = OSRef::fromGridReference('TQ38');
+        $expected = "(530000, 180000)";
+
+        self::assertEquals($expected, $OSRef->__toString());
+    }
+
     public function testToFourFigureString()
     {
 
@@ -57,6 +65,14 @@ class OSRefTest extends TestCase
         $expected = 'TQ3084';
 
         self::assertEquals($expected, $OSRef->toFourFigureReference());
+    }
+
+    public function testFromFourFigureString()
+    {
+        $OSRef = OSRef::fromGridReference('TQ3084');
+        $expected = "(530000, 184000)";
+
+        self::assertEquals($expected, $OSRef->__toString());
     }
 
     public function testToSixFigureString()
@@ -99,14 +115,29 @@ class OSRefTest extends TestCase
         self::assertEquals($expected, $OSRef->toEightFigureReference());
     }
 
+    public function testFromEightFigureString()
+    {
+        $OSRef = OSRef::fromGridReference('NN16607120');
+        $expected = "(216600, 771200)";
+
+        self::assertEquals($expected, $OSRef->__toString());
+    }
+
     public function testToTenFigureString()
     {
+        $OSRef = new OSRef(216604, 771209);
 
-        $OSRef = new OSRef(216600, 771200);
-
-        $expected = 'NN1660071200';
+        $expected = 'NN1660471209';
 
         self::assertEquals($expected, $OSRef->toTenFigureReference());
+    }
+
+    public function testFromTenFigureString()
+    {
+        $OSRef = OSRef::fromGridReference('NN1660471209');
+        $expected = "(216604, 771209)";
+
+        self::assertEquals($expected, $OSRef->__toString());
     }
 
     public function testFromSixFigureString()

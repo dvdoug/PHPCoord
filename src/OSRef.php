@@ -5,12 +5,14 @@ declare(strict_types=1);
 namespace PHPCoord;
 
 use function floor;
+use LengthException;
 use function str_pad;
 use function strpos;
 
 /**
  * Ordnance Survey grid reference
  * References are accurate to 1m.
+ *
  * @author Jonathan Stott
  * @author Doug Wright
  */
@@ -79,15 +81,20 @@ class OSRef extends TransverseMercator
     }
 
     /**
-     * Take a string formatted as a six-figure OS grid reference (e.g.
+     * Take a string formatted as a OS grid reference (e.g.
      * "TG514131") and return a reference to an OSRef object that represents
      * that grid reference.
      *
-     * @param  string $ref
+     * @param string $ref
+     *
      * @return static
      */
-    public static function fromSixFigureReference($ref): self
+    public static function fromGridReference($ref): self
     {
+        if (strlen($ref) % 2 !== 0) {
+            throw new LengthException('Grid ref must be an even number of characters');
+        }
+
         //first (major) letter is the 500km grid sq, origin at -1000000, -500000
         $majorEasting = strpos(self::GRID_LETTERS, $ref[0]) % 5 * 500000 - 1000000;
         $majorNorthing = (floor(strpos(self::GRID_LETTERS, $ref[0]) / 5)) * 500000 - 500000;
@@ -96,21 +103,48 @@ class OSRef extends TransverseMercator
         $minorEasting = strpos(self::GRID_LETTERS, $ref[1]) % 5 * 100000;
         $minorNorthing = (floor(strpos(self::GRID_LETTERS, $ref[1]) / 5)) * 100000;
 
-        $easting = $majorEasting + $minorEasting + (substr($ref, 2, 3) * 100);
-        $northing = $majorNorthing + $minorNorthing + (substr($ref, 5, 3) * 100);
+        //numbers are a division of that square into smaller and smaller pieces
+        $numericPortion = substr($ref, 2);
+        $numericPortionSize = strlen($numericPortion) / 2;
+        $gridSizeInMetres = 1 * (10 ** (5 - $numericPortionSize));
+
+        $easting = $majorEasting + $minorEasting + (substr($numericPortion, 0, $numericPortionSize) * $gridSizeInMetres);
+        $northing = $majorNorthing + $minorNorthing + (substr($numericPortion, -$numericPortionSize, $numericPortionSize) * $gridSizeInMetres);
 
         return new static((int) $easting, (int) $northing);
+    }
+
+    /**
+     * Take a string formatted as a six-figure OS grid reference (e.g.
+     * "TG514131") and return a reference to an OSRef object that represents
+     * that grid reference.
+     *
+     * @param string $ref
+     *
+     * @deprecated use fromGridReference() instead, which can take references of other lengths too
+     *
+     * @return static
+     */
+    public static function fromSixFigureReference($ref): self
+    {
+        return static::fromGridReference($ref);
     }
 
     /**
      * Convert this grid reference into a grid reference string of a
      * given length (2, 4, 6, 8 or 10) including the two-character
      * designation for the 100km square. e.g. TG514131.
-     * @param  int    $length
+     *
+     * @param int $length
+     *
      * @return string
      */
-    private function toGridReference(int $length): string
+    public function toGridReference(int $length): string
     {
+        if ($length % 2 !== 0) {
+            throw new LengthException('Chosen length must be an even number');
+        }
+
         $halfLength = $length / 2;
 
         $easting = str_pad((string) $this->x, 6, '0', STR_PAD_LEFT);
@@ -136,6 +170,9 @@ class OSRef extends TransverseMercator
      * Convert this grid reference into a string using a standard two-figure
      * grid reference including the two-character designation for the 100km
      * square. e.g. TG51 (10km square).
+     *
+     * @deprecated use toGridReference() instead, which can produces references of varying precision
+     *
      * @return string
      */
     public function toTwoFigureReference(): string
@@ -147,6 +184,9 @@ class OSRef extends TransverseMercator
      * Convert this grid reference into a string using a standard four-figure
      * grid reference including the two-character designation for the 100km
      * square. e.g. TG5113 (1km square).
+     *
+     * @deprecated use toGridReference() instead, which can produces references of varying precision
+     *
      * @return string
      */
     public function toFourFigureReference(): string
@@ -158,6 +198,9 @@ class OSRef extends TransverseMercator
      * Convert this grid reference into a string using a standard six-figure
      * grid reference including the two-character designation for the 100km
      * square. e.g. TG514131 (100m square).
+     *
+     * @deprecated use toGridReference() instead, which can produces references of varying precision
+     *
      * @return string
      */
     public function toSixFigureReference(): string
@@ -169,6 +212,9 @@ class OSRef extends TransverseMercator
      * Convert this grid reference into a string using a standard eight-figure
      * grid reference including the two-character designation for the 100km
      * square. e.g. TG51431312 (10m square).
+     *
+     * @deprecated use toGridReference() instead, which can produces references of varying precision
+     *
      * @return string
      */
     public function toEightFigureReference(): string
@@ -180,6 +226,9 @@ class OSRef extends TransverseMercator
      * Convert this grid reference into a string using a standard ten-figure
      * grid reference including the two-character designation for the 100km
      * square. e.g. TG5143113121 (1m square).
+     *
+     * @deprecated use toGridReference() instead, which can produces references of varying precision
+     *
      * @return string
      */
     public function toTenFigureReference(): string
