@@ -89,7 +89,7 @@ class OSRef extends TransverseMercator
      *
      * @return static
      */
-    public static function fromGridReference($ref): self
+    public static function fromGridReference(string $ref): self
     {
         if (strlen($ref) % 2 !== 0) {
             throw new LengthException('Grid ref must be an even number of characters');
@@ -125,7 +125,7 @@ class OSRef extends TransverseMercator
      *
      * @return static
      */
-    public static function fromSixFigureReference($ref): self
+    public static function fromSixFigureReference(string $ref): self
     {
         return static::fromGridReference($ref);
     }
@@ -163,7 +163,7 @@ class OSRef extends TransverseMercator
         $minorLetterIndex = (5 * $minorSquaresNorth + $minorSquaresEast);
         $minorLetter = substr(self::GRID_LETTERS, $minorLetterIndex, 1);
 
-        return $majorLetter . $minorLetter . substr($easting, 1, $halfLength) . substr($northing, 1, $halfLength);
+        return $majorLetter.$minorLetter.substr($easting, 1, $halfLength).substr($northing, 1, $halfLength);
     }
 
     /**
@@ -238,6 +238,7 @@ class OSRef extends TransverseMercator
 
     /**
      * Convert this grid reference into a latitude and longitude.
+     *
      * @return LatLng
      */
     public function toLatLng(): LatLng
@@ -254,6 +255,7 @@ class OSRef extends TransverseMercator
 
     /**
      * String version of coordinate.
+     *
      * @return string
      */
     public function __toString(): string

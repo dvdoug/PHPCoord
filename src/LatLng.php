@@ -423,7 +423,7 @@ class LatLng
      *
      * @return string
      */
-    private function getUTMLatitudeZoneLetter($latitude): string
+    private function getUTMLatitudeZoneLetter(float $latitude): string
     {
         if ($latitude < -80 || $latitude > 84) {
             throw new \OutOfRangeException('UTM zones do not apply in polar regions');
@@ -449,11 +449,11 @@ class LatLng
      * @return array
      */
     public function toTransverseMercatorEastingNorthing(
-        $scale,
-        $originEasting,
-        $originNorthing,
-        $originLat,
-        $originLong
+        float $scale,
+        float $originEasting,
+        float $originNorthing,
+        float $originLat,
+        float $originLong
     ): array {
         $originLat = deg2rad($originLat);
         $originLong = deg2rad($originLong);

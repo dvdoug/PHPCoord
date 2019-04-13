@@ -83,7 +83,7 @@ class IrishGridRef extends TransverseMercator
      * @param  string $ref
      * @return self
      */
-    public static function fromSixFigureReference($ref): self
+    public static function fromSixFigureReference(string $ref): self
     {
         $easting = (int) strpos(self::GRID_LETTERS, $ref[0]) % 5 * 100000 + (substr($ref, 1, 3) * 100);
         $northing = (int) floor(strpos(self::GRID_LETTERS, $ref[0]) / 5) * 100000 + (substr($ref, 4, 3) * 100);
