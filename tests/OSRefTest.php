@@ -42,7 +42,7 @@ class OSRefTest extends TestCase
 
         $expected = 'TQ38';
 
-        self::assertEquals($expected, $OSRef->toTwoFigureReference());
+        self::assertEquals($expected, $OSRef->toGridReference(2));
     }
 
     public function testFromTwoFigureString(): void
@@ -59,7 +59,7 @@ class OSRefTest extends TestCase
 
         $expected = 'TQ3084';
 
-        self::assertEquals($expected, $OSRef->toFourFigureReference());
+        self::assertEquals($expected, $OSRef->toGridReference(4));
     }
 
     public function testFromFourFigureString(): void
@@ -76,7 +76,7 @@ class OSRefTest extends TestCase
 
         $expected = 'TQ301841';
 
-        self::assertEquals($expected, $OSRef->toSixFigureReference());
+        self::assertEquals($expected, $OSRef->toGridReference(6));
     }
 
     public function testToSixFigureString2(): void
@@ -85,7 +85,7 @@ class OSRefTest extends TestCase
 
         $expected = 'SP391741';
 
-        self::assertEquals($expected, $OSRef->toSixFigureReference());
+        self::assertEquals($expected, $OSRef->toGridReference(6));
     }
 
     public function testToSixFigureString3(): void
@@ -94,7 +94,7 @@ class OSRefTest extends TestCase
 
         $expected = 'NN166712';
 
-        self::assertEquals($expected, $OSRef->toSixFigureReference());
+        self::assertEquals($expected, $OSRef->toGridReference(6));
     }
 
     public function testToEightFigureString(): void
@@ -103,7 +103,7 @@ class OSRefTest extends TestCase
 
         $expected = 'NN16607120';
 
-        self::assertEquals($expected, $OSRef->toEightFigureReference());
+        self::assertEquals($expected, $OSRef->toGridReference(8));
     }
 
     public function testFromEightFigureString(): void
@@ -120,7 +120,7 @@ class OSRefTest extends TestCase
 
         $expected = 'NN1660471209';
 
-        self::assertEquals($expected, $OSRef->toTenFigureReference());
+        self::assertEquals($expected, $OSRef->toGridReference(10));
     }
 
     public function testFromTenFigureString(): void
@@ -133,7 +133,7 @@ class OSRefTest extends TestCase
 
     public function testFromSixFigureString(): void
     {
-        $OSRef = OSRef::fromSixFigureReference('TQ301842');
+        $OSRef = OSRef::fromGridReference('TQ301842');
         $expected = '(530100, 184200)';
 
         self::assertEquals($expected, $OSRef->__toString());
@@ -141,7 +141,7 @@ class OSRefTest extends TestCase
 
     public function testFromSixFigureString2(): void
     {
-        $OSRef = OSRef::fromSixFigureReference('HU396753');
+        $OSRef = OSRef::fromGridReference('HU396753');
         $expected = '(439600, 1175300)';
 
         self::assertEquals($expected, $OSRef->__toString());

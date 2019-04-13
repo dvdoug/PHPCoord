@@ -115,22 +115,6 @@ class OSRef extends TransverseMercator
     }
 
     /**
-     * Take a string formatted as a six-figure OS grid reference (e.g.
-     * "TG514131") and return a reference to an OSRef object that represents
-     * that grid reference.
-     *
-     * @param string $ref
-     *
-     * @deprecated use fromGridReference() instead, which can take references of other lengths too
-     *
-     * @return static
-     */
-    public static function fromSixFigureReference(string $ref): self
-    {
-        return static::fromGridReference($ref);
-    }
-
-    /**
      * Convert this grid reference into a grid reference string of a
      * given length (2, 4, 6, 8 or 10) including the two-character
      * designation for the 100km square. e.g. TG514131.
@@ -164,76 +148,6 @@ class OSRef extends TransverseMercator
         $minorLetter = substr(self::GRID_LETTERS, $minorLetterIndex, 1);
 
         return $majorLetter . $minorLetter . substr($easting, 1, $halfLength) . substr($northing, 1, $halfLength);
-    }
-
-    /**
-     * Convert this grid reference into a string using a standard two-figure
-     * grid reference including the two-character designation for the 100km
-     * square. e.g. TG51 (10km square).
-     *
-     * @deprecated use toGridReference() instead, which can produces references of varying precision
-     *
-     * @return string
-     */
-    public function toTwoFigureReference(): string
-    {
-        return $this->toGridReference(2);
-    }
-
-    /**
-     * Convert this grid reference into a string using a standard four-figure
-     * grid reference including the two-character designation for the 100km
-     * square. e.g. TG5113 (1km square).
-     *
-     * @deprecated use toGridReference() instead, which can produces references of varying precision
-     *
-     * @return string
-     */
-    public function toFourFigureReference(): string
-    {
-        return $this->toGridReference(4);
-    }
-
-    /**
-     * Convert this grid reference into a string using a standard six-figure
-     * grid reference including the two-character designation for the 100km
-     * square. e.g. TG514131 (100m square).
-     *
-     * @deprecated use toGridReference() instead, which can produces references of varying precision
-     *
-     * @return string
-     */
-    public function toSixFigureReference(): string
-    {
-        return $this->toGridReference(6);
-    }
-
-    /**
-     * Convert this grid reference into a string using a standard eight-figure
-     * grid reference including the two-character designation for the 100km
-     * square. e.g. TG51431312 (10m square).
-     *
-     * @deprecated use toGridReference() instead, which can produces references of varying precision
-     *
-     * @return string
-     */
-    public function toEightFigureReference(): string
-    {
-        return $this->toGridReference(8);
-    }
-
-    /**
-     * Convert this grid reference into a string using a standard ten-figure
-     * grid reference including the two-character designation for the 100km
-     * square. e.g. TG5143113121 (1m square).
-     *
-     * @deprecated use toGridReference() instead, which can produces references of varying precision
-     *
-     * @return string
-     */
-    public function toTenFigureReference(): string
-    {
-        return $this->toGridReference(10);
     }
 
     /**
