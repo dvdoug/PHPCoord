@@ -3,7 +3,9 @@
 declare(strict_types=1);
 namespace PHPCoord;
 
+use OutOfRangeException;
 use PHPUnit\Framework\TestCase;
+use RuntimeException;
 
 class LatLngTest extends TestCase
 {
@@ -37,20 +39,16 @@ class LatLngTest extends TestCase
     }
 
 
-    /**
-     * @expectedException \RuntimeException
-     */
     public function testOSRefOSWorkedBadEllipsoid()
     {
+        $this->expectException(RuntimeException::class);
         $LatLng = new LatLng(12.3, 12.3, 0, new RefEll(123, 456));
         $OSRef = $LatLng->toOSRef();
     }
 
-    /**
-     * @expectedException \RuntimeException
-     */
     public function testToWGS84BadEllipsoid()
     {
+        $this->expectException(RuntimeException::class);
         $LatLng = new LatLng(12.3, 12.3, 0, new RefEll(123, 456));
         $LatLng->toWGS84();
     }
@@ -129,20 +127,16 @@ class LatLngTest extends TestCase
         self::assertEquals($expected, $UTMRef->__toString());
     }
 
-    /**
-     * @expectedException \OutOfRangeException
-     */
     public function testUTMRefArtic()
     {
+        $this->expectException(OutOfRangeException::class);
         $LatLng = new LatLng(84.00001, 123, 0, RefEll::wgs84());
         $UTMRef = $LatLng->toUTMRef();
     }
 
-    /**
-     * @expectedException \OutOfRangeException
-     */
     public function testUTMRefAntartic()
     {
+        $this->expectException(OutOfRangeException::class);
         $LatLng = new LatLng(-80.00001, 123, 0, RefEll::wgs84());
         $UTMRef = $LatLng->toUTMRef();
     }
@@ -157,12 +151,9 @@ class LatLngTest extends TestCase
         self::assertEquals($expected, $work->distance($charingCross));
     }
 
-    /**
-     * @expectedException \RuntimeException
-     */
     public function testDistanceDifferentEllipsoids()
     {
-
+        $this->expectException(RuntimeException::class);
         $work = new LatLng(51.54105, -0.12319, 0, RefEll::airy1830());
         $charingCross = new LatLng(51.507977, -0.124588, 0, RefEll::wgs84());
 
