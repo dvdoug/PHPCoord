@@ -163,7 +163,7 @@ class OSRef extends TransverseMercator
         $minorLetterIndex = (5 * $minorSquaresNorth + $minorSquaresEast);
         $minorLetter = substr(self::GRID_LETTERS, $minorLetterIndex, 1);
 
-        return $majorLetter.$minorLetter.substr($easting, 1, $halfLength).substr($northing, 1, $halfLength);
+        return $majorLetter . $minorLetter . substr($easting, 1, $halfLength) . substr($northing, 1, $halfLength);
     }
 
     /**

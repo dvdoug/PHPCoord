@@ -1,47 +1,43 @@
 <?php
 
 declare(strict_types=1);
+
 namespace PHPCoord;
 
 use PHPUnit\Framework\TestCase;
 
 class OSRefTest extends TestCase
 {
-
-    public function testToString()
+    public function testToString(): void
     {
-
         $OSRef = new OSRef(530140, 184184);
-        $expected = "(530140, 184184)";
+        $expected = '(530140, 184184)';
 
         self::assertEquals($expected, $OSRef->__toString());
     }
 
-    public function testLatLngWorkHQ()
+    public function testLatLngWorkHQ(): void
     {
-
         $OSRef = new OSRef(530140, 184184);
         $LatLng = $OSRef->toLatLng();
 
-        $expected = "(51.54105, -0.12319)";
+        $expected = '(51.54105, -0.12319)';
 
         self::assertEquals($expected, $LatLng->__toString());
     }
 
-    public function testLatLngOSWorkedExample()
+    public function testLatLngOSWorkedExample(): void
     {
-
         $OSRef = new OSRef(651410, 313177);
         $LatLng = $OSRef->toLatLng();
 
-        $expected = "(52.65757, 1.71792)";
+        $expected = '(52.65757, 1.71792)';
 
         self::assertEquals($expected, $LatLng->__toString());
     }
 
-    public function testToTwoFigureString()
+    public function testToTwoFigureString(): void
     {
-
         $OSRef = new OSRef(530140, 184184);
 
         $expected = 'TQ38';
@@ -49,17 +45,16 @@ class OSRefTest extends TestCase
         self::assertEquals($expected, $OSRef->toTwoFigureReference());
     }
 
-    public function testFromTwoFigureString()
+    public function testFromTwoFigureString(): void
     {
         $OSRef = OSRef::fromGridReference('TQ38');
-        $expected = "(530000, 180000)";
+        $expected = '(530000, 180000)';
 
         self::assertEquals($expected, $OSRef->__toString());
     }
 
-    public function testToFourFigureString()
+    public function testToFourFigureString(): void
     {
-
         $OSRef = new OSRef(530140, 184184);
 
         $expected = 'TQ3084';
@@ -67,17 +62,16 @@ class OSRefTest extends TestCase
         self::assertEquals($expected, $OSRef->toFourFigureReference());
     }
 
-    public function testFromFourFigureString()
+    public function testFromFourFigureString(): void
     {
         $OSRef = OSRef::fromGridReference('TQ3084');
-        $expected = "(530000, 184000)";
+        $expected = '(530000, 184000)';
 
         self::assertEquals($expected, $OSRef->__toString());
     }
 
-    public function testToSixFigureString()
+    public function testToSixFigureString(): void
     {
-
         $OSRef = new OSRef(530140, 184184);
 
         $expected = 'TQ301841';
@@ -85,9 +79,8 @@ class OSRefTest extends TestCase
         self::assertEquals($expected, $OSRef->toSixFigureReference());
     }
 
-    public function testToSixFigureString2()
+    public function testToSixFigureString2(): void
     {
-
         $OSRef = new OSRef(439145, 274187);
 
         $expected = 'SP391741';
@@ -95,9 +88,8 @@ class OSRefTest extends TestCase
         self::assertEquals($expected, $OSRef->toSixFigureReference());
     }
 
-    public function testToSixFigureString3()
+    public function testToSixFigureString3(): void
     {
-
         $OSRef = new OSRef(216600, 771200);
 
         $expected = 'NN166712';
@@ -105,9 +97,8 @@ class OSRefTest extends TestCase
         self::assertEquals($expected, $OSRef->toSixFigureReference());
     }
 
-    public function testToEightFigureString()
+    public function testToEightFigureString(): void
     {
-
         $OSRef = new OSRef(216600, 771200);
 
         $expected = 'NN16607120';
@@ -115,15 +106,15 @@ class OSRefTest extends TestCase
         self::assertEquals($expected, $OSRef->toEightFigureReference());
     }
 
-    public function testFromEightFigureString()
+    public function testFromEightFigureString(): void
     {
         $OSRef = OSRef::fromGridReference('NN16607120');
-        $expected = "(216600, 771200)";
+        $expected = '(216600, 771200)';
 
         self::assertEquals($expected, $OSRef->__toString());
     }
 
-    public function testToTenFigureString()
+    public function testToTenFigureString(): void
     {
         $OSRef = new OSRef(216604, 771209);
 
@@ -132,34 +123,32 @@ class OSRefTest extends TestCase
         self::assertEquals($expected, $OSRef->toTenFigureReference());
     }
 
-    public function testFromTenFigureString()
+    public function testFromTenFigureString(): void
     {
         $OSRef = OSRef::fromGridReference('NN1660471209');
-        $expected = "(216604, 771209)";
+        $expected = '(216604, 771209)';
 
         self::assertEquals($expected, $OSRef->__toString());
     }
 
-    public function testFromSixFigureString()
+    public function testFromSixFigureString(): void
     {
-
         $OSRef = OSRef::fromSixFigureReference('TQ301842');
-        $expected = "(530100, 184200)";
+        $expected = '(530100, 184200)';
 
         self::assertEquals($expected, $OSRef->__toString());
     }
 
-    public function testFromSixFigureString2()
+    public function testFromSixFigureString2(): void
     {
-
         $OSRef = OSRef::fromSixFigureReference('HU396753');
-        $expected = "(439600, 1175300)";
+        $expected = '(439600, 1175300)';
 
         self::assertEquals($expected, $OSRef->__toString());
     }
 
-    public function testIssue7() {
-
+    public function testIssue7(): void
+    {
         $osRef = new OSRef(322000, 241000);
         $osLatLng = $osRef->toLatLng();
         $asWGS84 = $osLatLng->toWGS84();
@@ -168,7 +157,8 @@ class OSRefTest extends TestCase
         self::assertEquals(-3.13916, $asWGS84->getLng());
     }
 
-    public function testGetters() {
+    public function testGetters(): void
+    {
         $osRef = new OSRef(100000, 200000, 123);
         self::assertEquals(100000, $osRef->getX());
         self::assertEquals(200000, $osRef->getY());
@@ -176,7 +166,8 @@ class OSRefTest extends TestCase
         self::assertEquals(RefEll::airy1830(), $osRef->getReferenceEllipsoid());
     }
 
-    public function testDistance() {
+    public function testDistance(): void
+    {
         //old OS HQ
         $from = new OSRef(438700, 114800, 0);
 
@@ -186,5 +177,4 @@ class OSRefTest extends TestCase
         $distance = round($from->distance($to));
         self::assertEquals(115423, $distance);
     }
-
 }

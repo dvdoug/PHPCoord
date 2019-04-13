@@ -380,20 +380,22 @@ class LatLng
     public function toUTMRef(): UTMRef
     {
         $asWGS84 = $this->toWGS84();
+        $lat = $asWGS84->getLat();
+        $lng = $asWGS84->getLng();
 
         $longitudeZone = (int) (($asWGS84->getLng() + 180) / 6) + 1;
 
         // Special zone for Norway
-        if ($asWGS84->getLat() >= 56 && $asWGS84->getLat() < 64 && $asWGS84->getLng() >= 3 && $asWGS84->getLng() < 12) {
+        if ($lat >= 56 && $lat < 64 && $lng >= 3 && $lng < 12) {
             $longitudeZone = 32;
-        } elseif ($asWGS84->getLat() >= 72 && $asWGS84->getLat() < 84) { // Special zones for Svalbard
-            if ($asWGS84->getLng() >= 0 && $asWGS84->getLng() < 9) {
+        } elseif ($lat >= 72 && $lat < 84) { // Special zones for Svalbard
+            if ($lng >= 0 && $lng < 9) {
                 $longitudeZone = 31;
-            } elseif ($asWGS84->getLng() >= 9 && $asWGS84->getLng() < 21) {
+            } elseif ($lng >= 9 && $lng < 21) {
                 $longitudeZone = 33;
-            } elseif ($asWGS84->getLng() >= 21 && $asWGS84->getLng() < 33) {
+            } elseif ($lng >= 21 && $lng < 33) {
                 $longitudeZone = 35;
-            } elseif ($asWGS84->getLng() >= 33 && $asWGS84->getLng() < 42) {
+            } elseif ($lng >= 33 && $lng < 42) {
                 $longitudeZone = 37;
             }
         }
@@ -495,6 +497,6 @@ class LatLng
         $E = (int) round($originEasting + $IV * $longMinusOrigin + $V * ($longMinusOrigin ** 3) + $VI * ($longMinusOrigin ** 5));
         $N = (int) round($I + $II * ($longMinusOrigin ** 2) + $III * ($longMinusOrigin ** 4) + $IIIA * ($longMinusOrigin ** 6));
 
-        return array('E' => $E, 'N' => $N);
+        return ['E' => $E, 'N' => $N];
     }
 }

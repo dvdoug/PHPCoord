@@ -70,7 +70,7 @@ class RefEll
      * Helper function to create Airy1830 ellipsoid used in GB.
      * @return RefEll
      */
-    public static function airy1830(): RefEll
+    public static function airy1830(): self
     {
         return new self(6377563.396, 6356256.909);
     }
@@ -79,7 +79,7 @@ class RefEll
      * Helper function to create Airy Modified ellipsoid used by Ireland.
      * @return RefEll
      */
-    public static function airyModified(): RefEll
+    public static function airyModified(): self
     {
         return new self(6377340.189, 6356034.447);
     }
@@ -88,7 +88,7 @@ class RefEll
      * Helper function to create WGS84 ellipsoid.
      * @return RefEll
      */
-    public static function wgs84(): RefEll
+    public static function wgs84(): self
     {
         return new self(6378137, 6356752.314245);
     }
@@ -97,7 +97,7 @@ class RefEll
      * Helper function to create GRS80 ellipsoid.
      * @return RefEll
      */
-    public static function grs80(): RefEll
+    public static function grs80(): self
     {
         return new self(6378137, 6356752.314140);
     }
@@ -106,7 +106,7 @@ class RefEll
      * Helper function to create Clarke1866 ellipsoid.
      * @return RefEll
      */
-    public static function clarke1866(): RefEll
+    public static function clarke1866(): self
     {
         return new self(6378206.4, 6356583.8);
     }
@@ -115,7 +115,7 @@ class RefEll
      * Helper function to create International 1924 (Hayford) ellipsoid.
      * @return RefEll
      */
-    public static function international1924(): RefEll
+    public static function international1924(): self
     {
         return new self(6378388.0, 6356911.9);
     }
@@ -124,7 +124,7 @@ class RefEll
      * Helper function to create Bessel 1841 ellipsoid.
      * @return RefEll
      */
-    public static function bessel1841(): RefEll
+    public static function bessel1841(): self
     {
         return new self(6377397.155, 6356078.963);
     }

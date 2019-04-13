@@ -215,7 +215,7 @@ abstract class TransverseMercator
      * Calculate the surface distance between this object and the one
      * passed in as a parameter.
      *
-     * @param self $to object to measure the distance to
+     * @param  self $to object to measure the distance to
      * @return int
      */
     public function distance(self $to): int
