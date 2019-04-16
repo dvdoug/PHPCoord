@@ -92,6 +92,7 @@ class OSRef extends TransverseMercator
      */
     public static function fromGridReference(string $ref): self
     {
+        $tetrad = FALSE;
         if(strlen($ref) === 5) {
             $tetrad = TRUE;
         } elseif (strlen($ref) % 2 !== 0) {
