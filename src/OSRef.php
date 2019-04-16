@@ -19,6 +19,7 @@ use function strpos;
 class OSRef extends TransverseMercator
 {
     private const GRID_LETTERS = 'VWXYZQRSTULMNOPFGHJKABCDE';
+    private const GRID_LETTERS_TETRAD = 'AFKQVBGLRWCHMSXDINTYEJPUZ';
 
     /**
      * @return RefEll
@@ -91,7 +92,10 @@ class OSRef extends TransverseMercator
      */
     public static function fromGridReference(string $ref): self
     {
-        if (strlen($ref) % 2 !== 0) {
+        $tetrad = FALSE;
+        if(strlen($ref) === 5) {
+            $tetrad = TRUE;
+        } elseif (strlen($ref) % 2 !== 0) {
             throw new LengthException('Grid ref must be an even number of characters');
         }
 
@@ -103,13 +107,26 @@ class OSRef extends TransverseMercator
         $minorEasting = strpos(self::GRID_LETTERS, $ref[1]) % 5 * 100000;
         $minorNorthing = (floor(strpos(self::GRID_LETTERS, $ref[1]) / 5)) * 100000;
 
+        //tetrad letter is 2km grid sq. THE GRID HAS A DIFFERENT ORIENTATION - starts botom left and runs bottom to top. Includes I but no O.
+        $tetradEasting = 0;
+        $tetradNorthing = 0;
+        if($tetrad) {
+            $tetradEasting = strpos(self::GRID_LETTERS_TETRAD, $ref[4]) % 5 * 2000;
+            $tetradNorthing = (floor(strpos(self::GRID_LETTERS_TETRAD, $ref[4]) / 5)) * 2000;
+        }
+
         //numbers are a division of that square into smaller and smaller pieces
-        $numericPortion = substr($ref, 2);
-        $numericPortionSize = strlen($numericPortion) / 2;
+        if($tetrad) {
+            $numericPortion = substr($ref, 2, 2);
+            $numericPortionSize = strlen($numericPortion) / 2;
+        } else {
+            $numericPortion = substr($ref, 2);
+            $numericPortionSize = strlen($numericPortion) / 2;
+        }
         $gridSizeInMetres = 1 * (10 ** (5 - $numericPortionSize));
 
-        $easting = $majorEasting + $minorEasting + (substr($numericPortion, 0, $numericPortionSize) * $gridSizeInMetres);
-        $northing = $majorNorthing + $minorNorthing + (substr($numericPortion, -$numericPortionSize, $numericPortionSize) * $gridSizeInMetres);
+        $easting = $majorEasting + $minorEasting + $tetradEasting + (substr($numericPortion, 0, $numericPortionSize) * $gridSizeInMetres);
+        $northing = $majorNorthing + $minorNorthing + $tetradNorthing + (substr($numericPortion, -$numericPortionSize, $numericPortionSize) * $gridSizeInMetres);
 
         return new static((int) $easting, (int) $northing);
     }

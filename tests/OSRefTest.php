@@ -147,6 +147,14 @@ class OSRefTest extends TestCase
         self::assertEquals($expected, $OSRef->__toString());
     }
 
+    public function testFromTetradString(): void
+    {
+        $OSRef = OSRef::fromGridReference('SO24G');
+        $expected = '(322000, 242000)';
+
+        self::assertEquals($expected, $OSRef->__toString());
+    }
+
     public function testIssue7(): void
     {
         $osRef = new OSRef(322000, 241000);
