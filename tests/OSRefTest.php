@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace PHPCoord;
 
+use LengthException;
 use PHPUnit\Framework\TestCase;
 
 class OSRefTest extends TestCase
@@ -145,6 +146,20 @@ class OSRefTest extends TestCase
         $expected = '(439600, 1175300)';
 
         self::assertEquals($expected, $OSRef->__toString());
+    }
+
+    public function testFromSevenFigureString(): void
+    {
+        $this->expectException(LengthException::class);
+        $OSRef = OSRef::fromGridReference('AB1234567');
+        $OSRef->__toString();
+    }
+
+    public function testToSevenFigureString(): void
+    {
+        $this->expectException(LengthException::class);
+        $OSRef = new OSRef(216604, 771209);
+        $OSRef->toGridReference(7);
     }
 
     public function testIssue7(): void

@@ -388,14 +388,14 @@ class LatLng
         // Special zone for Norway
         if ($lat >= 56 && $lat < 64 && $lng >= 3 && $lng < 12) {
             $longitudeZone = 32;
-        } elseif ($lat >= 72 && $lat < 84) { // Special zones for Svalbard
-            if ($lng >= 0 && $lng < 9) {
+        } elseif ($lat >= 72 && $lat < 84 && $lng >= 0 && $lng < 42) { // Special zones for Svalbard
+            if ($lng < 9) {
                 $longitudeZone = 31;
-            } elseif ($lng >= 9 && $lng < 21) {
+            } elseif ($lng < 21) {
                 $longitudeZone = 33;
-            } elseif ($lng >= 21 && $lng < 33) {
+            } elseif ($lng < 33) {
                 $longitudeZone = 35;
-            } elseif ($lng >= 33 && $lng < 42) {
+            } else {
                 $longitudeZone = 37;
             }
         }

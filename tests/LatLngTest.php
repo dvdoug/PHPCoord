@@ -126,6 +126,56 @@ class LatLngTest extends TestCase
         self::assertEquals($expected, $UTMRef->__toString());
     }
 
+    public function testUTMRefStavanger(): void
+    {
+        $LatLng = new LatLng(58.963333, 5.718889, 0, RefEll::wgs84());
+        $UTMRef = $LatLng->toUTMRef();
+
+        $expected = '32V 311341 6540600';
+
+        self::assertEquals($expected, $UTMRef->__toString());
+    }
+
+    public function testUTMRefSvalbard1(): void
+    {
+        $LatLng = new LatLng(78.75, 8, 0, RefEll::wgs84());
+        $UTMRef = $LatLng->toUTMRef();
+
+        $expected = '31X 608767 8746730';
+
+        self::assertEquals($expected, $UTMRef->__toString());
+    }
+
+    public function testUTMRefSvalbard2(): void
+    {
+        $LatLng = new LatLng(78.75, 16, 0, RefEll::wgs84());
+        $UTMRef = $LatLng->toUTMRef();
+
+        $expected = '33X 521778 8742259';
+
+        self::assertEquals($expected, $UTMRef->__toString());
+    }
+
+    public function testUTMRefSvalbard3(): void
+    {
+        $LatLng = new LatLng(78.75, 32, 0, RefEll::wgs84());
+        $UTMRef = $LatLng->toUTMRef();
+
+        $expected = '35X 608767 8746730';
+
+        self::assertEquals($expected, $UTMRef->__toString());
+    }
+
+    public function testUTMRefSvalbard4(): void
+    {
+        $LatLng = new LatLng(78.75, 36, 0, RefEll::wgs84());
+        $UTMRef = $LatLng->toUTMRef();
+
+        $expected = '37X 434691 8743750';
+
+        self::assertEquals($expected, $UTMRef->__toString());
+    }
+
     public function testUTMRefArtic(): void
     {
         $this->expectException(OutOfRangeException::class);
