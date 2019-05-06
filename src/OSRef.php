@@ -115,6 +115,30 @@ class OSRef extends TransverseMercator
     }
 
     /**
+     * Grid reference without spaces. e.g. TG514131.
+     *
+     * @param int $length
+     *
+     * @return string
+     */
+    public function toGridReference(int $length): string
+    {
+        return implode('', $this->gridReference($length));
+    }
+    
+    /**
+     * Grid reference with spaces. e.g. TG 514 131.
+     *
+     * @param int $length
+     *
+     * @return string
+     */
+    public function toGridReferenceWithSpaces(int $length): string
+    {
+        return implode(' ', $this->gridReference($length));
+    }
+
+    /**
      * Convert this grid reference into a grid reference string of a
      * given length (2, 4, 6, 8 or 10) including the two-character
      * designation for the 100km square. e.g. TG514131.
@@ -123,7 +147,7 @@ class OSRef extends TransverseMercator
      *
      * @return string
      */
-    public function toGridReference(int $length): string
+    public function gridReference(int $length): array
     {
         if ($length % 2 !== 0) {
             throw new LengthException('Chosen length must be an even number');
@@ -147,7 +171,11 @@ class OSRef extends TransverseMercator
         $minorLetterIndex = (5 * $minorSquaresNorth + $minorSquaresEast);
         $minorLetter = substr(self::GRID_LETTERS, $minorLetterIndex, 1);
 
-        return $majorLetter . $minorLetter . substr($easting, 1, $halfLength) . substr($northing, 1, $halfLength);
+        return [
+            $majorLetter . $minorLetter,
+            substr($easting, 1, $halfLength),
+            substr($northing, 1, $halfLength),
+        ];
     }
 
     /**
