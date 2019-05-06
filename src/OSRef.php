@@ -125,7 +125,7 @@ class OSRef extends TransverseMercator
     {
         return implode('', $this->gridReference($length));
     }
-    
+
     /**
      * Grid reference with spaces. e.g. TG 514 131.
      *
