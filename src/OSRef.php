@@ -92,9 +92,9 @@ class OSRef extends TransverseMercator
      */
     public static function fromGridReference(string $ref): self
     {
-        $tetrad = FALSE;
+        $tetrad = false;
         if(strlen($ref) === 5) {
-            $tetrad = TRUE;
+            $tetrad = true;
         } elseif (strlen($ref) % 2 !== 0) {
             throw new LengthException('Grid ref must be an even number of characters');
         }
@@ -107,16 +107,16 @@ class OSRef extends TransverseMercator
         $minorEasting = strpos(self::GRID_LETTERS, $ref[1]) % 5 * 100000;
         $minorNorthing = (floor(strpos(self::GRID_LETTERS, $ref[1]) / 5)) * 100000;
 
-        //tetrad letter is 2km grid sq. THE GRID HAS A DIFFERENT ORIENTATION - starts botom left and runs bottom to top. Includes I but no O.
+        //tetrad letter is 2km grid sq. THE GRID HAS A DIFFERENT ORIENTATION - starts bottom left and runs bottom to top. Includes I but no O.
         $tetradEasting = 0;
         $tetradNorthing = 0;
-        if($tetrad) {
+        if ($tetrad) {
             $tetradEasting = strpos(self::GRID_LETTERS_TETRAD, $ref[4]) % 5 * 2000;
             $tetradNorthing = (floor(strpos(self::GRID_LETTERS_TETRAD, $ref[4]) / 5)) * 2000;
         }
 
         //numbers are a division of that square into smaller and smaller pieces
-        if($tetrad) {
+        if ($tetrad) {
             $numericPortion = substr($ref, 2, 2);
             $numericPortionSize = strlen($numericPortion) / 2;
         } else {
@@ -133,7 +133,7 @@ class OSRef extends TransverseMercator
 
     /**
      * Convert this grid reference into a grid reference string of a
-     * given length (2, 4, 6, 8 or 10) including the two-character
+     * given length (2, 5, 4, 6, 8 or 10) including the two-character
      * designation for the 100km square. e.g. TG514131.
      *
      * @param int $length
@@ -142,29 +142,50 @@ class OSRef extends TransverseMercator
      */
     public function toGridReference(int $length): string
     {
-        if ($length % 2 !== 0) {
+        $tetrad = false;
+        if($length === 5) {
+            $tetrad = true;
+        } elseif ($length % 2 !== 0) {
             throw new LengthException('Chosen length must be an even number');
         }
 
-        $halfLength = $length / 2;
+        // manually set tetrad half length
+        if ($tetrad) {
+            $halfLength = 1;
+        } else {
+            $halfLength = $length / 2;
+        }
 
         $easting = str_pad((string) $this->x, 6, '0', STR_PAD_LEFT);
         $northing = str_pad((string) $this->y, 6, '0', STR_PAD_LEFT);
 
-        $adjustedX = $this->x + 1000000;
-        $adjustedY = $this->y + 500000;
-        $majorSquaresEast = floor($adjustedX / 500000);
-        $majorSquaresNorth = floor($adjustedY / 500000);
+        $adjustedX = $this->x + 1000000; // Takes us to REAL point of origin.
+        $adjustedY = $this->y + 500000; // Takes us to REAL point of origin.
+        $majorSquaresEast = floor($adjustedX / 500000); // Divide by 500000 and round down. Base of MAJOR square.
+        $majorSquaresNorth = floor($adjustedY / 500000); // Divide by 500000 and round down. Base of MAJOR square.
         $majorLetterIndex = (int) (5 * $majorSquaresNorth + $majorSquaresEast);
         $majorLetter = substr(self::GRID_LETTERS, $majorLetterIndex, 1);
 
-        //second (minor) letter is 100km grid sq, origin at 0,0 of this square
-        $minorSquaresEast = $easting[0] % 5;
-        $minorSquaresNorth = $northing[0] % 5;
-        $minorLetterIndex = (5 * $minorSquaresNorth + $minorSquaresEast);
+        //second (minor) letter is 100km grid sq, origin at 0,0 of this square - work from the modulus
+        $majorSquaresEastModulus = $adjustedX % 500000;
+        $majorSquaresNorthModulus = $adjustedY % 500000;
+        $minorSquaresEast = floor($majorSquaresEastModulus / 100000);
+        $minorSquaresNorth = floor($majorSquaresNorthModulus / 100000);
+        $minorLetterIndex = (int) (5 * $minorSquaresNorth + $minorSquaresEast);
         $minorLetter = substr(self::GRID_LETTERS, $minorLetterIndex, 1);
 
-        return $majorLetter . $minorLetter . substr($easting, 1, $halfLength) . substr($northing, 1, $halfLength);
+        // tetrad
+        $tetradLetter = null;
+        if ($tetrad) {
+            $minorSquaresEastModulus = $majorSquaresEastModulus % 10000;
+            $minorSquaresNorthModulus = $majorSquaresNorthModulus % 10000;
+            $tetradSquaresEast = floor($minorSquaresEastModulus / 2000);
+            $tetradSquaresNorth = floor($minorSquaresNorthModulus / 2000);
+            $tetradLetterIndex = (int) (5 * $tetradSquaresNorth + $tetradSquaresEast);
+            $tetradLetter = substr(self::GRID_LETTERS_TETRAD, $tetradLetterIndex, 1);
+        }
+
+        return $majorLetter . $minorLetter . substr($easting, 1, $halfLength) . substr($northing, 1, $halfLength) . $tetradLetter;
     }
 
     /**
