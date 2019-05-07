@@ -155,6 +155,15 @@ class OSRefTest extends TestCase
         self::assertEquals($expected, $OSRef->__toString());
     }
 
+    public function testToTetradString(): void
+    {
+        $OSRef = new OSRef(216604, 771209);
+
+        $expected = 'NN17Q';
+
+        self::assertEquals($expected, $OSRef->toGridReference(5));
+    }
+
     public function testIssue7(): void
     {
         $osRef = new OSRef(322000, 241000);
