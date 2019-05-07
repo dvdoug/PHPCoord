@@ -159,10 +159,10 @@ class OSRef extends TransverseMercator
         $easting = str_pad((string) $this->x, 6, '0', STR_PAD_LEFT);
         $northing = str_pad((string) $this->y, 6, '0', STR_PAD_LEFT);
 
-        $adjustedX = $this->x + 1000000; // Takes us to REAL point of origin.
-        $adjustedY = $this->y + 500000; // Takes us to REAL point of origin.
-        $majorSquaresEast = floor($adjustedX / 500000); // Divide by 500000 and round down. Base of MAJOR square.
-        $majorSquaresNorth = floor($adjustedY / 500000); // Divide by 500000 and round down. Base of MAJOR square.
+        $adjustedX = $this->x + 1000000;
+        $adjustedY = $this->y + 500000;
+        $majorSquaresEast = floor($adjustedX / 500000);
+        $majorSquaresNorth = floor($adjustedY / 500000);
         $majorLetterIndex = (int) (5 * $majorSquaresNorth + $majorSquaresEast);
         $majorLetter = substr(self::GRID_LETTERS, $majorLetterIndex, 1);
 
