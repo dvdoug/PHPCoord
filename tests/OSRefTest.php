@@ -127,7 +127,7 @@ class OSRefTest extends TestCase
     public function testToEightFigureWithSpacesString(): void
     {
         $OSRef = new OSRef(216600, 771200);
-        
+
         $expected = 'NN 1660 7120';
 
         self::assertEquals($expected, $OSRef->toGridReferenceWithSpaces(8));
