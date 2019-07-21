@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+## [3.1.0] - 2019-07-21
+### Added
+ - Added `OSRef::toGridReferenceWithSpaces` to complement `OSRef::toGridReference` [thomasedwards]
+
 ## [3.0.0] - 2019-04-13
 ### Added
  - Support for _accepting_ 2, 4, 8 and 10 figure Ordnance Survey references (6 figure was already supported)
@@ -58,7 +62,8 @@ Initial release of this fork (based off of v2.3 of original)
  - Eastings and northings are rounded to 1m, and lat/long to 5dp (approx 1m) to avoid any misconceptions that precision is the same thing as accuracy.
  - When calculating surface distances, a more accurate mean radius is now used rather than that derived from historical definitions of a nautical mile
 
-[Unreleased]: https://github.com/dvdoug/PHPCoord/compare/3.0.0...HEAD
+[Unreleased]: https://github.com/dvdoug/PHPCoord/compare/3.1.0...HEAD
+[3.1.0]: https://github.com/dvdoug/PHPCoord/compare/3.0.0...3.1.0
 [3.0.0]: https://github.com/dvdoug/PHPCoord/compare/2.1...3.0.0
 [2.1]: https://github.com/dvdoug/PHPCoord/compare/2.0.3...2.1
 [2.0.3]: https://github.com/dvdoug/PHPCoord/compare/2.0.2...2.0.3
