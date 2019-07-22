@@ -1,6 +1,6 @@
 {
     "name": "wntechs/php-coord",
-    "description": "PHPCoord is a set of PHP functions for handling various co-ordinate systems and converting between them",
+    "description": "Originally Forked from dvdoug/PHPCoord to add Israeli TM Ref class. PHPCoord is a set of PHP functions for handling various co-ordinate systems and converting between them",
     "keywords": ["coord","geo", "wgs84", "osgb36", "latitude", "longitude", "grid ref", "utm", "itm" ,"gps"],
     "homepage": "https://github.com/dvdoug/PHPCoord",
     "authors": [
