@@ -17,59 +17,36 @@ class IrishGridRef extends TransverseMercator
 {
     private const GRID_LETTERS = 'VWXYZQRSTULMNOPFGHJKABCDE';
 
-    /**
-     * @return RefEll
-     */
     public function getReferenceEllipsoid(): RefEll
     {
         return RefEll::airyModified();
     }
 
-    /**
-     * @return float
-     */
     public function getScaleFactor(): float
     {
         return 1.000035;
     }
 
-    /**
-     * @return int
-     */
     public function getOriginNorthing(): int
     {
         return 250000;
     }
 
-    /**
-     * @return int
-     */
     public function getOriginEasting(): int
     {
         return 200000;
     }
 
-    /**
-     * @return float
-     */
     public function getOriginLatitude(): float
     {
         return 53.5;
     }
 
-    /**
-     * @return float
-     */
     public function getOriginLongitude(): float
     {
         return -8;
     }
 
-    /**
-     * @param int $x
-     * @param int $y
-     * @param int $z
-     */
     public function __construct(int $x, int $y, int $z = 0)
     {
         parent::__construct($x, $y, $z, RefEll::airyModified());
@@ -79,9 +56,6 @@ class IrishGridRef extends TransverseMercator
      * Take a string formatted as a six-figure grid reference (e.g.
      * "T514131") and return a reference to an IrishGridRef object that represents
      * that grid reference.
-     *
-     * @param  string $ref
-     * @return self
      */
     public static function fromSixFigureReference(string $ref): self
     {
@@ -95,7 +69,6 @@ class IrishGridRef extends TransverseMercator
      * Convert this grid reference into a string using a standard six-figure
      * grid reference including the character designation for the 100km
      * square. e.g. T514131.
-     * @return string
      */
     public function toSixFigureReference(): string
     {
@@ -113,7 +86,6 @@ class IrishGridRef extends TransverseMercator
 
     /**
      * Convert this grid reference into a latitude and longitude.
-     * @return LatLng
      */
     public function toLatLng(): LatLng
     {
@@ -129,7 +101,6 @@ class IrishGridRef extends TransverseMercator
 
     /**
      * String version of coordinate.
-     * @return string
      */
     public function __toString(): string
     {

@@ -20,49 +20,31 @@ class OSRef extends TransverseMercator
 {
     private const GRID_LETTERS = 'VWXYZQRSTULMNOPFGHJKABCDE';
 
-    /**
-     * @return RefEll
-     */
     public function getReferenceEllipsoid(): RefEll
     {
         return RefEll::airy1830();
     }
 
-    /**
-     * @return float
-     */
     public function getScaleFactor(): float
     {
         return 0.9996012717;
     }
 
-    /**
-     * @return int
-     */
     public function getOriginNorthing(): int
     {
         return -100000;
     }
 
-    /**
-     * @return int
-     */
     public function getOriginEasting(): int
     {
         return 400000;
     }
 
-    /**
-     * @return float
-     */
     public function getOriginLatitude(): float
     {
         return 49;
     }
 
-    /**
-     * @return float
-     */
     public function getOriginLongitude(): float
     {
         return -2;
@@ -84,8 +66,6 @@ class OSRef extends TransverseMercator
      * Take a string formatted as a OS grid reference (e.g.
      * "TG514131") and return a reference to an OSRef object that represents
      * that grid reference.
-     *
-     * @param string $ref
      *
      * @return static
      */
@@ -116,10 +96,6 @@ class OSRef extends TransverseMercator
 
     /**
      * Grid reference without spaces. e.g. TG514131.
-     *
-     * @param int $length
-     *
-     * @return string
      */
     public function toGridReference(int $length): string
     {
@@ -128,10 +104,6 @@ class OSRef extends TransverseMercator
 
     /**
      * Grid reference with spaces. e.g. TG 514 131.
-     *
-     * @param int $length
-     *
-     * @return string
      */
     public function toGridReferenceWithSpaces(int $length): string
     {
@@ -142,8 +114,6 @@ class OSRef extends TransverseMercator
      * Convert this grid reference into a grid reference string of a
      * given length (2, 4, 6, 8 or 10) including the two-character
      * designation for the 100km square. e.g. TG514131.
-     *
-     * @param int $length
      *
      * @return string
      */
@@ -180,8 +150,6 @@ class OSRef extends TransverseMercator
 
     /**
      * Convert this grid reference into a latitude and longitude.
-     *
-     * @return LatLng
      */
     public function toLatLng(): LatLng
     {
@@ -197,8 +165,6 @@ class OSRef extends TransverseMercator
 
     /**
      * String version of coordinate.
-     *
-     * @return string
      */
     public function __toString(): string
     {

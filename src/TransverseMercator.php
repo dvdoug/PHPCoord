@@ -36,10 +36,6 @@ abstract class TransverseMercator
 
     /**
      * Cartesian constructor.
-     * @param int    $x
-     * @param int    $y
-     * @param int    $h
-     * @param RefEll $refEll
      */
     public function __construct(int $x, int $y, int $h, RefEll $refEll)
     {
@@ -51,32 +47,22 @@ abstract class TransverseMercator
 
     /**
      * String version of coordinate.
-     * @return string
      */
     public function __toString(): string
     {
         return "({$this->x}, {$this->y}, {$this->h})";
     }
 
-    /**
-     * @return int
-     */
     public function getX(): int
     {
         return $this->x;
     }
 
-    /**
-     * @return int
-     */
     public function getY(): int
     {
         return $this->y;
     }
 
-    /**
-     * @return int
-     */
     public function getH(): int
     {
         return $this->h;
@@ -84,37 +70,31 @@ abstract class TransverseMercator
 
     /**
      * Reference ellipsoid used by this projection.
-     * @return RefEll
      */
     abstract public function getReferenceEllipsoid(): RefEll;
 
     /**
      * Scale factor at central meridian.
-     * @return float
      */
     abstract public function getScaleFactor(): float;
 
     /**
      * Northing of true origin.
-     * @return int
      */
     abstract public function getOriginNorthing(): int;
 
     /**
      * Easting of true origin.
-     * @return int
      */
     abstract public function getOriginEasting(): int;
 
     /**
      * Latitude of true origin.
-     * @return float
      */
     abstract public function getOriginLatitude(): float;
 
     /**
      * Longitude of true origin.
-     * @return float
      */
     abstract public function getOriginLongitude(): float;
 
@@ -123,13 +103,12 @@ abstract class TransverseMercator
      * Formula for transformation is taken from OS document
      * "A Guide to Coordinate Systems in Great Britain".
      *
-     * @param  float  $N       map coordinate (northing) of point to convert
-     * @param  float  $E       map coordinate (easting) of point to convert
-     * @param  float  $N0      map coordinate (northing) of true origin
-     * @param  float  $E0      map coordinate (easting) of true origin
-     * @param  float  $phi0    map coordinate (latitude) of true origin
-     * @param  float  $lambda0 map coordinate (longitude) of true origin and central meridian
-     * @return LatLng
+     * @param float $N       map coordinate (northing) of point to convert
+     * @param float $E       map coordinate (easting) of point to convert
+     * @param float $N0      map coordinate (northing) of true origin
+     * @param float $E0      map coordinate (easting) of true origin
+     * @param float $phi0    map coordinate (latitude) of true origin
+     * @param float $lambda0 map coordinate (longitude) of true origin and central meridian
      */
     public function convertToLatitudeLongitude(float $N, float $E, float $N0, float $E0, float $phi0, float $lambda0): LatLng
     {
@@ -215,8 +194,7 @@ abstract class TransverseMercator
      * Calculate the surface distance between this object and the one
      * passed in as a parameter.
      *
-     * @param  self $to object to measure the distance to
-     * @return int
+     * @param self $to object to measure the distance to
      */
     public function distance(self $to): int
     {

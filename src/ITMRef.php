@@ -11,49 +11,31 @@ namespace PHPCoord;
  */
 class ITMRef extends TransverseMercator
 {
-    /**
-     * @return RefEll
-     */
     public function getReferenceEllipsoid(): RefEll
     {
         return RefEll::grs80();
     }
 
-    /**
-     * @return float
-     */
     public function getScaleFactor(): float
     {
         return 0.999820;
     }
 
-    /**
-     * @return int
-     */
     public function getOriginNorthing(): int
     {
         return 750000;
     }
 
-    /**
-     * @return int
-     */
     public function getOriginEasting(): int
     {
         return 600000;
     }
 
-    /**
-     * @return float
-     */
     public function getOriginLatitude(): float
     {
         return 53.5;
     }
 
-    /**
-     * @return float
-     */
     public function getOriginLongitude(): float
     {
         return -8;
@@ -71,7 +53,6 @@ class ITMRef extends TransverseMercator
 
     /**
      * Convert this grid reference into a latitude and longitude.
-     * @return LatLng
      */
     public function toLatLng(): LatLng
     {
@@ -87,7 +68,6 @@ class ITMRef extends TransverseMercator
 
     /**
      * String version of coordinate.
-     * @return string
      */
     public function __toString(): string
     {

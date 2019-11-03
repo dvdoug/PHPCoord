@@ -42,11 +42,6 @@ class LatLng
 
     /**
      * Create a new LatLng object from the given latitude and longitude.
-     *
-     * @param float  $lat
-     * @param float  $lng
-     * @param int    $height
-     * @param RefEll $refEll
      */
     public function __construct(float $lat, float $lng, int $height, RefEll $refEll)
     {
@@ -58,41 +53,27 @@ class LatLng
 
     /**
      * Return a string representation of this LatLng object.
-     *
-     * @return string
      */
     public function __toString(): string
     {
         return "({$this->getLat()}, {$this->getLng()})";
     }
 
-    /**
-     * @return float
-     */
     public function getLat(): float
     {
         return round($this->lat, 5);
     }
 
-    /**
-     * @return float
-     */
     public function getLng(): float
     {
         return round($this->lng, 5);
     }
 
-    /**
-     * @return int
-     */
     public function getH(): int
     {
         return $this->h;
     }
 
-    /**
-     * @return RefEll
-     */
     public function getRefEll(): RefEll
     {
         return $this->refEll;
@@ -129,8 +110,6 @@ class LatLng
      * Convert this LatLng object to OSGB36 datum.
      * Reference values for transformation are taken from OS document
      * "A Guide to Coordinate Systems in Great Britain".
-     *
-     * @return self
      */
     public function toOSGB36(): self
     {
@@ -154,8 +133,6 @@ class LatLng
     /**
      * Convert this LatLng object to ED50 datum.
      * Reference values for transformation are taken from http://www.globalmapper.com/helpv9/datum_list.htm .
-     *
-     * @return self
      */
     public function toED50(): self
     {
@@ -179,8 +156,6 @@ class LatLng
     /**
      * Convert this LatLng object to NAD27 datum.
      * Reference values for transformation are taken from Wikipedia.
-     *
-     * @return self
      */
     public function toNAD27(): self
     {
@@ -205,8 +180,6 @@ class LatLng
      * Convert this LatLng object to Ireland 1975 datum.
      * Reference values for transformation are taken from OSI document
      * "Making maps compatible with GPS".
-     *
-     * @return self
      */
     public function toIreland1975(): self
     {
@@ -229,8 +202,6 @@ class LatLng
 
     /**
      * Convert this LatLng object to WGS84 datum.
-     *
-     * @return self
      */
     public function toWGS84(): self
     {
@@ -298,16 +269,9 @@ class LatLng
     /**
      * Transform co-ordinates from one datum to another using a Helmert transformation.
      *
-     * @param RefEll $toRefEll
-     * @param float  $tranX
-     * @param float  $tranY
-     * @param float  $tranZ
-     * @param float  $scale
-     * @param float  $rotX     rotation about x-axis in seconds
-     * @param float  $rotY     rotation about y-axis in seconds
-     * @param float  $rotZ     rotation about z-axis in seconds
-     *
-     * @return self
+     * @param float $rotX rotation about x-axis in seconds
+     * @param float $rotY rotation about y-axis in seconds
+     * @param float $rotZ rotation about z-axis in seconds
      */
     public function transformDatum(RefEll $toRefEll, float $tranX, float $tranY, float $tranZ, float $scale, float $rotX, float $rotY, float $rotZ): self
     {
@@ -329,8 +293,6 @@ class LatLng
      *
      * Reference values for transformation are taken from OS document
      * "A Guide to Coordinate Systems in Great Britain".
-     *
-     * @return OSRef
      */
     public function toOSRef(): OSRef
     {
@@ -374,8 +336,6 @@ class LatLng
      *
      * Reference values for transformation are taken from OS document
      * "A Guide to Coordinate Systems in Great Britain".
-     *
-     * @return UTMRef
      */
     public function toUTMRef(): UTMRef
     {
@@ -420,10 +380,6 @@ class LatLng
 
     /**
      * Work out the UTM latitude zone from the latitude.
-     *
-     * @param float $latitude
-     *
-     * @return string
      */
     private function getUTMLatitudeZoneLetter(float $latitude): string
     {
@@ -447,8 +403,6 @@ class LatLng
      * @param float $originNorthing northing of true origin
      * @param float $originLat      latitude of true origin
      * @param float $originLong     longitude of true origin
-     *
-     * @return array
      */
     public function toTransverseMercatorEastingNorthing(
         float $scale,

@@ -36,10 +36,6 @@ class Cartesian
 
     /**
      * Cartesian constructor.
-     * @param float  $x
-     * @param float  $y
-     * @param float  $z
-     * @param RefEll $refEll
      */
     public function __construct(float $x, float $y, float $z, RefEll $refEll)
     {
@@ -51,40 +47,27 @@ class Cartesian
 
     /**
      * String version of coordinate.
-     * @return string
      */
     public function __toString(): string
     {
         return "({$this->x}, {$this->y}, {$this->z})";
     }
 
-    /**
-     * @return float
-     */
     public function getX(): float
     {
         return $this->x;
     }
 
-    /**
-     * @return float
-     */
     public function getY(): float
     {
         return $this->y;
     }
 
-    /**
-     * @return float
-     */
     public function getZ(): float
     {
         return $this->z;
     }
 
-    /**
-     * @return RefEll
-     */
     public function getRefEll(): RefEll
     {
         return $this->refEll;
@@ -94,8 +77,6 @@ class Cartesian
      * Convert these coordinates into a latitude, longitude
      * Formula for transformation is taken from OS document
      * "A Guide to Coordinate Systems in Great Britain".
-     *
-     * @return LatLng
      */
     public function toLatitudeLongitude(): LatLng
     {
@@ -122,9 +103,6 @@ class Cartesian
      * Convert a latitude, longitude height to x, y, z
      * Formula for transformation is taken from OS document
      * "A Guide to Coordinate Systems in Great Britain".
-     *
-     * @param  LatLng $latLng
-     * @return self
      */
     public static function fromLatLong(LatLng $latLng): self
     {
@@ -143,15 +121,9 @@ class Cartesian
 
     /**
      * Transform the datum used for these coordinates by using a Helmert Transform.
-     * @param  RefEll $toRefEll
-     * @param  float  $tranX
-     * @param  float  $tranY
-     * @param  float  $tranZ
-     * @param  float  $scale
-     * @param  float  $rotX     rotation about x-axis in radians
-     * @param  float  $rotY     rotation about y-axis in radians
-     * @param  float  $rotZ     rotation about z-axis in radians
-     * @return self
+     * @param float $rotX rotation about x-axis in radians
+     * @param float $rotY rotation about y-axis in radians
+     * @param float $rotZ rotation about z-axis in radians
      */
     public function transformDatum(
         RefEll $toRefEll,

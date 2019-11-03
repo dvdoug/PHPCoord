@@ -27,12 +27,6 @@ class UTMRef extends TransverseMercator
 
     /**
      * Create a new object representing a UTM reference.
-     *
-     * @param int    $x
-     * @param int    $y
-     * @param int    $z
-     * @param string $latZone
-     * @param int    $lngZone
      */
     public function __construct(int $x, int $y, int $z, string $latZone, int $lngZone)
     {
@@ -42,65 +36,41 @@ class UTMRef extends TransverseMercator
         parent::__construct($x, $y, $z, RefEll::wgs84());
     }
 
-    /**
-     * @return string
-     */
     public function getLatZone(): string
     {
         return $this->latZone;
     }
 
-    /**
-     * @return int
-     */
     public function getLngZone(): int
     {
         return $this->lngZone;
     }
 
-    /**
-     * @return RefEll
-     */
     public function getReferenceEllipsoid(): RefEll
     {
         return RefEll::wgs84();
     }
 
-    /**
-     * @return float
-     */
     public function getScaleFactor(): float
     {
         return 0.9996;
     }
 
-    /**
-     * @return int
-     */
     public function getOriginNorthing(): int
     {
         return 0;
     }
 
-    /**
-     * @return int
-     */
     public function getOriginEasting(): int
     {
         return 500000;
     }
 
-    /**
-     * @return float
-     */
     public function getOriginLatitude(): float
     {
         return 0;
     }
 
-    /**
-     * @return float
-     */
     public function getOriginLongitude(): float
     {
         return ($this->lngZone - 1) * 6 - 180 + 3;
@@ -108,7 +78,6 @@ class UTMRef extends TransverseMercator
 
     /**
      * Return a string representation of this UTM reference.
-     * @return string
      */
     public function __toString(): string
     {
@@ -117,7 +86,6 @@ class UTMRef extends TransverseMercator
 
     /**
      * Convert this UTM reference to a WGS84 latitude and longitude.
-     * @return LatLng
      */
     public function toLatLng(): LatLng
     {

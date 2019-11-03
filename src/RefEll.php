@@ -42,25 +42,16 @@ class RefEll
         $this->ecc = (($maj * $maj) - ($min * $min)) / ($maj * $maj);
     }
 
-    /**
-     * @return float
-     */
     public function getMaj(): float
     {
         return $this->maj;
     }
 
-    /**
-     * @return float
-     */
     public function getMin(): float
     {
         return $this->min;
     }
 
-    /**
-     * @return float
-     */
     public function getEcc(): float
     {
         return $this->ecc;
