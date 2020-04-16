@@ -193,9 +193,9 @@ class LatLng
         $ty = 130.596;
         $tz = -564.557;
         $s = -0.00000815;
-        $rx = deg2rad(-1.042 / 3600);
-        $ry = deg2rad(-0.214 / 3600);
-        $rz = deg2rad(-0.631 / 3600);
+        $rx = deg2rad(1.042 / 3600);
+        $ry = deg2rad(0.214 / 3600);
+        $rz = deg2rad(0.631 / 3600);
 
         return $asWGS84->transformDatum(RefEll::airyModified(), $tx, $ty, $tz, $s, $rx, $ry, $rz);
     }
@@ -229,9 +229,9 @@ class LatLng
                 $ty = -130.596;
                 $tz = 564.557;
                 $s = 0.00000815;
-                $rx = deg2rad(1.042 / 3600);
-                $ry = deg2rad(0.214 / 3600);
-                $rz = deg2rad(0.631 / 3600);
+                $rx = deg2rad(-1.042 / 3600);
+                $ry = deg2rad(-0.214 / 3600);
+                $rz = deg2rad(-0.631 / 3600);
                 break;
 
             case RefEll::clarke1866(): // assumes NAD27, values from Wikipedia

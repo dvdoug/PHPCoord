@@ -24,6 +24,11 @@ class IrishGridRefTest extends TestCase
         $expected = '(53.48505, -6.91966)';
 
         self::assertEquals($expected, $LatLng->__toString());
+
+        $LatLngWGS84 = $LatLng->toWGS84();
+        $expected = '(53.48527, -6.92054)';
+
+        self::assertEquals($expected, $LatLngWGS84->__toString());
     }
 
     public function testToSixFigureRef(): void

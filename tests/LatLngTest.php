@@ -93,13 +93,13 @@ class LatLngTest extends TestCase
         $LatLng = new LatLng(12.3, 12.3, 0, RefEll::wgs84());
         $asIreland1975 = $LatLng->toIreland1975();
 
-        $expected = '(12.29557, 12.30201)';
+        $expected = '(12.29558, 12.30223)';
         self::assertEquals($expected, $asIreland1975->__toString());
     }
 
     public function testIreland75ToWGS84(): void
     {
-        $LatLng = new LatLng(12.29557, 12.30201, 0, RefEll::airyModified());
+        $LatLng = new LatLng(12.29558, 12.30223, 0, RefEll::airyModified());
         $asWGS84 = $LatLng->toWGS84();
 
         $expected = '(12.3, 12.3)';
