@@ -209,6 +209,11 @@ class LatLng
             case RefEll::wgs84():
                 return $this; //do nothing
 
+            case RefEll::grs80(): //assumes ITM, GRS80 vs WGS84 is well within accuracy tolerance (<1mm) so don't need to do a Helmert
+                $this->refEll = RefEll::wgs84();
+
+                return $this;
+
             case RefEll::airy1830(): // values from OSGB document "A Guide to Coordinate Systems in Great Britain"
                 $tx = 446.448;
                 $ty = -125.157;
@@ -269,9 +274,15 @@ class LatLng
     /**
      * Transform co-ordinates from one datum to another using a Helmert transformation.
      *
-     * @param float $rotX rotation about x-axis in seconds
-     * @param float $rotY rotation about y-axis in seconds
-     * @param float $rotZ rotation about z-axis in seconds
+     * @param  RefEll $toRefEll Reference Ellipsoid
+     * @param  float  $tranX    Translation in x-axis in metres
+     * @param  float  $tranY    Translation in y-axis in metres
+     * @param  float  $tranZ    Translation in z-axis in metres
+     * @param  float  $scale    Scale factor
+     * @param  float  $rotX     rotation about x-axis in seconds
+     * @param  float  $rotY     rotation about y-axis in seconds
+     * @param  float  $rotZ     rotation about z-axis in seconds
+     * @return LatLng
      */
     public function transformDatum(RefEll $toRefEll, float $tranX, float $tranY, float $tranZ, float $scale, float $rotX, float $rotY, float $rotZ): self
     {

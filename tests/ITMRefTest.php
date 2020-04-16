@@ -35,4 +35,14 @@ class ITMRefTest extends TestCase
 
         self::assertEquals($expected, $ITMRef->__toString());
     }
+
+    public function testToWGS84(): void
+    {
+        $ITMRef = new ITMRef(715830, 734697);
+        $LatLng = $ITMRef->toLatLng()->toWGS84();
+
+        $expected = '(53.34979, -6.26025)';
+
+        self::assertEquals($expected, $LatLng->__toString());
+    }
 }
