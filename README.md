@@ -6,7 +6,7 @@ Conversion/modernisation/enhancement of phpcoord.
 [![Build Status](https://travis-ci.org/dvdoug/PHPCoord.svg?branch=master)](https://travis-ci.org/dvdoug/PHPCoord)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/dvdoug/PHPCoord/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/dvdoug/PHPCoord/?branch=master)
 [![Download count](https://img.shields.io/packagist/dt/php-coord/php-coord.svg)](https://packagist.org/packages/php-coord/php-coord)
-[![Download count](https://img.shields.io/packagist/v/php-coord/php-coord.svg)](https://packagist.org/packages/php-coord/php-coord)
+[![Current version](https://img.shields.io/packagist/v/php-coord/php-coord.svg)](https://packagist.org/packages/php-coord/php-coord)
 
 
 The original code by Jonathan Stott can be found at http://www.jstott.me.uk/phpcoord/
