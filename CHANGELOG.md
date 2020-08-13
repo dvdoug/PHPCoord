@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## [3.1.1] - 2020-04-16
+### Fixed
+ - Corrected an issue with transforming ITM references to WGS84
+ - Corrected an issue with transforming Irish Grid references to WGS84
+
 ## [3.1.0] - 2019-07-21
 ### Added
  - Added `OSRef::toGridReferenceWithSpaces` to complement `OSRef::toGridReference` [thomasedwards]
