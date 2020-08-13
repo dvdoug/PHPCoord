@@ -9,13 +9,13 @@ build:
   environment:
     # Languages
     php:
-      version: "7.1"
+      version: "7.4"
 
   tests:
     override:
       -
-        command: 'vendor/bin/phpunit --coverage-clover=build/phpunit.clover'
+        command: 'vendor/bin/phpunit'
         coverage:
-            file: 'build/phpunit.clover'
+            file: 'build/coverage-phpunit/clover.xml'
             format: 'clover'
       - php-scrutinizer-run

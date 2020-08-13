@@ -9,6 +9,7 @@ return PhpCsFixer\Config::create()
             '@Symfony:risky' => true,
             '@PHP71Migration' => true,
             '@PHP71Migration:risky' => true,
+            '@PHP73Migration' => true,
             'concat_space' => ['spacing' => 'one'],
             'native_function_invocation' => false,
             'phpdoc_separation' => false,
