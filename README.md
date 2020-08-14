@@ -21,23 +21,6 @@ built-in, and helper functions exist to ease conversion between other datums.
 A function is also provided to find the surface distance between two points of latitude
 and longitude.
 
-Output of calculations have been changed from the original code in various ways:
- * [BUGFIX] When converting latitude and longitude between WGS84 and OSGB36 or vice-versa,
-   a wrong constant for the y translation has been corrected (was off by 1 metre)
- * [BUGFIX] Corrected issue with Helmert transform where the resulting co-ordinate could be placed into
-   the wrong quadrant
- * [BUGFIX] When calculating surface distances, a more accurate mean radius is now used rather than
-   that derived from historical definitions of a nautical mile 
- * [BUGFIX] Corrected calculation of OS 6-figure grid references (rounding instead of truncating meant the
-   grid square was sometimes off by 1)
- * [CHANGE] Eastings and northings are rounded to 1m, and lat/long to 5dp (approx 1m) to avoid any
-   misconceptions that precision is the same thing as accuracy
- * [CHANGE] You must specify the reference ellipsoid when creating a LatLng object to avoid guesses as to what
-   was actually meant. If you don't know what that means, you probably want WGS84 which gives GPS
-   compatibility
- * [CHANGE] Added Irish grid and ITM support
- * [CHANGE] Co-ordinates are now 3D (i.e. w/height), not 2D
-
 Usage
 -----
 ```php
@@ -64,11 +47,6 @@ If you use [Composer](http://getcomposer.org/), just add `php-coord/php-coord` t
 ```
 
 Otherwise, the library is PSR-4 compliant, so will work with the autoloader of your choice.
-
-
-Requirements
-------------
-* PHP version 7.1 or higher
 
 License
 -------
