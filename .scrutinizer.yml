@@ -1,6 +1,11 @@
 checks:
   php: true
 
+tools:
+  external_code_coverage:
+    runs: 1    # Scrutinizer will wait for this many code coverage submissions
+    timeout: 600    # Timeout in seconds.
+
 filter:
   excluded_paths:
     - 'tests/'
@@ -10,12 +15,9 @@ build:
     # Languages
     php:
       version: "7.4"
+      ini:
+        memory_limit: "-1"
 
   tests:
     override:
-      -
-        command: 'vendor/bin/phpunit'
-        coverage:
-            file: 'build/coverage-phpunit/clover.xml'
-            format: 'clover'
       - php-scrutinizer-run
