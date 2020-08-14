@@ -24,6 +24,8 @@ and longitude.
 Usage
 -----
 ```php
+namespace PHPCoord;
+
 $OSRef = new OSRef(500000, 200000); //Easting, Northing
 $LatLng = $OSRef->toLatLng();
 $GPSLatLng = $LatLng->toWGS84(); //optional, for GPS compatibility
