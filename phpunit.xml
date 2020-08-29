@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- https://phpunit.readthedocs.io/en/latest/configuration.html -->
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
+         colors="true"
+         bootstrap="vendor/autoload.php"
+>
+
+    <testsuites>
+        <testsuite name="PHPCoord">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+
+    <coverage pathCoverage="true" processUncoveredFiles="true" cacheDirectory="build/php-code-coverage-cache">
+        <include>
+            <directory suffix=".php">src</directory>
+        </include>
+
+        <report>
+            <text outputFile="php://stdout" showOnlySummary="true"/>
+            <html outputDirectory="build/coverage-phpunit"/>
+            <clover outputFile="build/coverage-phpunit/clover.xml"/>
+        </report>
+    </coverage>
+
+</phpunit>

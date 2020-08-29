@@ -1,0 +1,26 @@
+{
+    "name": "php-coord/php-coord",
+    "description": "PHPCoord is a set of PHP functions for handling various co-ordinate systems and converting between them",
+    "keywords": ["coord","geo", "wgs84", "osgb36", "latitude", "longitude", "grid ref", "utm", "itm" ,"gps"],
+    "homepage": "https://github.com/dvdoug/PHPCoord",
+    "authors": [
+        {
+            "name": "Doug Wright",
+            "role": "Developer"
+        }
+    ],
+    "license": "(MIT and proprietary)",
+    "require": {
+        "php": "^7.4||^8.0",
+        "ext-sqlite3": "*"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.16.4",
+        "phpunit/phpunit": "^9.3.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "PHPCoord\\": "src/"
+        }
+    }
+}
