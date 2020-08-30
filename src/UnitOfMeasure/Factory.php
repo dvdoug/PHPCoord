@@ -30,6 +30,8 @@ class Factory
     private const EPSG_ANGLE_RADIAN = 9101;
     private const EPSG_ANGLE_DEGREE = 9102;
     private const EPSG_ANGLE_ARCSECOND = 9104;
+    private const EPSG_ANGLE_DEGREE_MINUTE_SECOND = 9107;
+    private const EPSG_ANGLE_DEGREE_MINUTE = 9115;
     private const EPSG_ANGLE_MILLIARCSECOND = 1031;
     private const EPSG_ANGLE_RADIAN_PER_SECOND = 1035;
     private const EPSG_ANGLE_ARCSECOND_PER_YEAR = 1043;
@@ -56,7 +58,10 @@ class Factory
     /** @var Repository */
     private static $repository;
 
-    public static function makeUnit(float $measurement, int $epsgUnitCode): UnitOfMeasure
+    /**
+     * @param float|string $measurement
+     */
+    public static function makeUnit($measurement, int $epsgUnitCode): UnitOfMeasure
     {
         $repository = static::$repository ?? new Repository();
         $unitData = $repository->getUnitsOfMeasure(true);
@@ -125,7 +130,10 @@ class Factory
         }
     }
 
-    private static function makeAngle(float $measurement, array $epsgUnitData): Angle
+    /**
+     * @param float|string $measurement
+     */
+    private static function makeAngle($measurement, array $epsgUnitData): Angle
     {
         switch ($epsgUnitData['uom_code']) {
             case self::EPSG_ANGLE_RADIAN:
@@ -134,6 +142,10 @@ class Factory
                 return new Degree($measurement);
             case self::EPSG_ANGLE_ARCSECOND:
                 return new ArcSecond($measurement);
+            case self::EPSG_ANGLE_DEGREE_MINUTE_SECOND:
+                return Degree::fromDegreeMinuteSecond((string) $measurement);
+            case self::EPSG_ANGLE_DEGREE_MINUTE:
+                return Degree::fromDegreeMinute((string) $measurement);
             default:
                 if ($epsgUnitData['factor_b'] === null || $epsgUnitData['target_uom_code'] !== self::EPSG_ANGLE_RADIAN) { // @codeCoverageIgnoreStart
                     throw new UnknownUnitOfMeasureException($epsgUnitData['uom_code']);
