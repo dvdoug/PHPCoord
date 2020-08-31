@@ -6,9 +6,8 @@
  */
 declare(strict_types=1);
 
-namespace UnitOfMeasure\Time;
+namespace PHPCoord\UnitOfMeasure\Time;
 
-use PHPCoord\UnitOfMeasure\Time\Second;
 use PHPUnit\Framework\TestCase;
 
 class SecondTest extends TestCase

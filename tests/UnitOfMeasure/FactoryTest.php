@@ -6,12 +6,10 @@
  */
 declare(strict_types=1);
 
-namespace UnitOfMeasure;
+namespace PHPCoord\UnitOfMeasure;
 
 use PHPCoord\EPSG\Repository;
 use PHPCoord\Exception\UnknownUnitOfMeasureException;
-use PHPCoord\UnitOfMeasure\Factory;
-use PHPCoord\UnitOfMeasure\UnitOfMeasure;
 use PHPUnit\Framework\TestCase;
 
 class FactoryTest extends TestCase

@@ -6,11 +6,9 @@
  */
 declare(strict_types=1);
 
-namespace UnitOfMeasure\Angle;
+namespace PHPCoord\UnitOfMeasure\Angle;
 
 use InvalidArgumentException;
-use PHPCoord\UnitOfMeasure\Angle\Degree;
-use PHPCoord\UnitOfMeasure\Angle\Radian;
 use PHPUnit\Framework\TestCase;
 
 class DegreeTest extends TestCase

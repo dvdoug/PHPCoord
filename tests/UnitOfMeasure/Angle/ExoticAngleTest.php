@@ -6,9 +6,8 @@
  */
 declare(strict_types=1);
 
-namespace UnitOfMeasure\Angle;
+namespace PHPCoord\UnitOfMeasure\Angle;
 
-use PHPCoord\UnitOfMeasure\Angle\Radian;
 use PHPCoord\UnitOfMeasure\Factory;
 use PHPUnit\Framework\TestCase;
 

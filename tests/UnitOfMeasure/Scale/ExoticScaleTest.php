@@ -6,10 +6,9 @@
  */
 declare(strict_types=1);
 
-namespace UnitOfMeasure\Scale;
+namespace PHPCoord\UnitOfMeasure\Scale;
 
 use PHPCoord\UnitOfMeasure\Factory;
-use PHPCoord\UnitOfMeasure\Scale\Unity;
 use PHPUnit\Framework\TestCase;
 
 class ExoticScaleTest extends TestCase

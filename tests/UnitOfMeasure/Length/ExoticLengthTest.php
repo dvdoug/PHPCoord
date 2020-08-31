@@ -6,10 +6,9 @@
  */
 declare(strict_types=1);
 
-namespace UnitOfMeasure\Length;
+namespace PHPCoord\UnitOfMeasure\Length;
 
 use PHPCoord\UnitOfMeasure\Factory;
-use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPUnit\Framework\TestCase;
 
 class ExoticLengthTest extends TestCase

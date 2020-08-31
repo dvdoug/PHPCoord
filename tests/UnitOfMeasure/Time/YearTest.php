@@ -6,10 +6,8 @@
  */
 declare(strict_types=1);
 
-namespace UnitOfMeasure\Time;
+namespace PHPCoord\UnitOfMeasure\Time;
 
-use PHPCoord\UnitOfMeasure\Time\Second;
-use PHPCoord\UnitOfMeasure\Time\Year;
 use PHPUnit\Framework\TestCase;
 
 class YearTest extends TestCase
