@@ -35,6 +35,6 @@ class SecondTest extends TestCase
     public function testGetUnitName(): void
     {
         $original = new Second(0.12);
-        self::assertEquals('seconds', $original->getUnitName());
+        self::assertEquals('second', $original->getUnitName());
     }
 }

@@ -37,6 +37,6 @@ class Year implements Time
 
     public function getUnitName(): string
     {
-        return 'years';
+        return 'year';
     }
 }

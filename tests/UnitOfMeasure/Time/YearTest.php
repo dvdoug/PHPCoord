@@ -35,6 +35,6 @@ class YearTest extends TestCase
     public function testGetUnitName(): void
     {
         $original = new Year(120000);
-        self::assertEquals('years', $original->getUnitName());
+        self::assertEquals('year', $original->getUnitName());
     }
 }

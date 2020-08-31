@@ -46,7 +46,7 @@ class Rate implements UnitOfMeasure
 
     public function getFormattedValue(): string
     {
-        return $this->change->getValue() . ' per ' . $this->change->getUnitName() . ' per ' . $this->time->getUnitName();
+        return $this->change->getValue() . ' ' . $this->change->getUnitName() . ' per ' . $this->time->getUnitName();
     }
 
     public function getUnitName(): string

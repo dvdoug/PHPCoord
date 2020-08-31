@@ -35,6 +35,6 @@ class Second implements Time
 
     public function getUnitName(): string
     {
-        return 'seconds';
+        return 'second';
     }
 }
