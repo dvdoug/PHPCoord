@@ -42,37 +42,104 @@ class Degree implements Angle
 
     public static function fromDegreeMinuteSecond(string $angle): self
     {
-        $angle = str_replace(' ', '', $angle);
-        $foundAngle = preg_match('/^(?P<negative>[−-])?(?P<degrees>\d+)[°º]?((?P<arcminutes>\d+)[′\'])?((?P<arcseconds>\d+\.?\d*)[″"])?$/u', $angle, $angleParts);
+        $regex = '/^(?P<negative>[−-])?(?P<degrees>\d+)[°º]?((?P<arcminutes>\d+)[′\'])?((?P<arcseconds>\d+\.?\d*)[″"])?$/u';
 
-        if (!$foundAngle) {
-            throw new InvalidArgumentException("Could not find angle in '{$angle}'");
-        }
+        return self::fromRegex($angle, $regex);
+    }
 
-        $degrees = $angleParts['degrees'] + (($angleParts['arcminutes'] ?? 0) / 60) + (($angleParts['arcseconds'] ?? 0) / 3600);
+    public static function fromDegreeMinuteSecondHemisphere(string $angle): self
+    {
+        $regex = '/^(?P<degrees>\d+)[°º]?((?P<arcminutes>\d+)[′\'])?((?P<arcseconds>\d+\.?\d*)[″"])?(?P<hemisphere>[NSEW])$/u';
 
-        if ($angleParts['negative']) {
-            $degrees *= -1;
-        }
+        return self::fromRegex($angle, $regex);
+    }
 
-        return new self($degrees);
+    public static function fromHemisphereDegreeMinuteSecond(string $angle): self
+    {
+        $regex = '/^(?P<hemisphere>[NSEW])(?P<degrees>\d+)[°º]?((?P<arcminutes>\d+)[′\'])?((?P<arcseconds>\d+\.?\d*)[″"])?$/u';
+
+        return self::fromRegex($angle, $regex);
     }
 
     public static function fromDegreeMinute(string $angle): self
     {
+        $regex = '/^(?P<negative>[−-])?(?P<degrees>\d+)[°º]?((?P<arcminutes>\d+\.?\d*)[′\'])?$/u';
+
+        return self::fromRegex($angle, $regex);
+    }
+
+    public static function fromDegreeMinuteHemisphere(string $angle): self
+    {
+        $regex = '/^(?P<degrees>\d+)[°º]?((?P<arcminutes>\d+\.?\d*)[′\'])?(?P<hemisphere>[NSEW])$/u';
+
+        return self::fromRegex($angle, $regex);
+    }
+
+    public static function fromHemisphereDegreeMinute(string $angle): self
+    {
+        $regex = '/^(?P<hemisphere>[NSEW])(?P<degrees>\d+)[°º]?((?P<arcminutes>\d+\.?\d*)[′\'])?$/u';
+
+        return self::fromRegex($angle, $regex);
+    }
+
+    public static function fromDegreeHemisphere(string $angle): self
+    {
+        $regex = '/^(?P<degrees>\d+\.?\d*)[°º]?(?P<hemisphere>[NSEW])$/u';
+
+        return self::fromRegex($angle, $regex);
+    }
+
+    public static function fromHemisphereDegree(string $angle): self
+    {
+        $regex = '/^(?P<hemisphere>[NSEW])(?P<degrees>\d+\.?\d*)[°º]?$/u';
+
+        return self::fromRegex($angle, $regex);
+    }
+
+    public static function fromSexagesimalDMSS(string $angle): self
+    {
+        $regex = '/^(?P<negative>[−-])?(?P<degrees>\d+)(?P<arcminutes>\d{2})(?P<arcseconds>\d{2}\.\d*)$/u';
+
+        return self::fromRegex($angle, $regex);
+    }
+
+    public static function fromSexagesimalDMS(string $angle): self
+    {
+        $decimalPosition = strpos($angle, '.');
+        $angle = str_pad($angle, $decimalPosition + 5, '0', STR_PAD_RIGHT);
+        $regex = '/^(?P<negative>[−-])?(?P<degrees>\d+)\.(?P<arcminutes>\d{2})(?P<arcseconds>\d{2})(?P<fractionarcseconds>\d+)?$/u';
+
+        return self::fromRegex($angle, $regex);
+    }
+
+    public static function fromSexagesimalDM(string $angle): self
+    {
+        $decimalPosition = strpos($angle, '.');
+        $angle = str_pad($angle, $decimalPosition + 5, '0', STR_PAD_RIGHT);
+        $regex = '/^(?P<negative>[−-])?(?P<degrees>\d+)\.(?P<arcminutes>\d{2})(?P<fractionarcminutes>\d+)?$/u';
+
+        return self::fromRegex($angle, $regex);
+    }
+
+    private static function fromRegex(string $angle, string $regex): self
+    {
         $angle = str_replace(' ', '', $angle);
-        $foundAngle = preg_match('/^(?P<negative>[−-])?(?P<degrees>\d+)[°º]?((?P<arcminutes>\d+\.?\d*)[′\'])?$/u', $angle, $angleParts);
+        $foundAngle = preg_match($regex, $angle, $angleParts, PREG_UNMATCHED_AS_NULL);
 
         if (!$foundAngle) {
             throw new InvalidArgumentException("Could not find angle in '{$angle}'");
         }
 
-        $degrees = $angleParts['degrees'] + (($angleParts['arcminutes'] ?? 0) / 60);
+        $degrees = ($angleParts['degrees'] * 1);
+        $degrees += (($angleParts['arcminutes'] ?? 0) / 60);
+        $degrees += (($angleParts['fractionarcminutes'] ?? 0) / 60 / 100);
+        $degrees += (($angleParts['arcseconds'] ?? 0) / 3600);
+        $degrees += (($angleParts['fractionarcseconds'] ?? 0) / 3600 / 100);
 
-        if ($angleParts['negative']) {
+        if ($angleParts['negative'] ?? '' || in_array($angleParts['hemisphere'] ?? [], ['S', 'W'], true)) {
             $degrees *= -1;
         }
 
-        return new self($degrees);
+        return new static($degrees);
     }
 }

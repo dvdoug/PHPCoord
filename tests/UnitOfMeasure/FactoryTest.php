@@ -14,9 +14,6 @@ use PHPCoord\UnitOfMeasure\Factory;
 use PHPCoord\UnitOfMeasure\UnitOfMeasure;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \PHPCoord\UnitOfMeasure\Factory
- */
 class FactoryTest extends TestCase
 {
     /** @var Factory */
@@ -32,7 +29,17 @@ class FactoryTest extends TestCase
      */
     public function testCanCreateAllUnits(int $epsgId): void
     {
-        $newUnit = $this->factory::makeUnit(1, $epsgId);
+        $dummyValue = 1;
+        if (in_array($epsgId, [9108, 9116, 9118], true)) {
+            $dummyValue = '1°N';
+        } elseif (in_array($epsgId, [9117, 9119, 9120], true)) {
+            $dummyValue = 'N1°';
+        } elseif (in_array($epsgId, [9110, 9111], true)) {
+            $dummyValue = '1.0';
+        } elseif (in_array($epsgId, [9121], true)) {
+            $dummyValue = '10000.0';
+        }
+        $newUnit = $this->factory::makeUnit($dummyValue, $epsgId);
         self::assertInstanceOf(UnitOfMeasure::class, $newUnit);
     }
 

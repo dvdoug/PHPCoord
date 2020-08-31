@@ -31,11 +31,20 @@ class Factory
     private const EPSG_ANGLE_DEGREE = 9102;
     private const EPSG_ANGLE_ARCSECOND = 9104;
     private const EPSG_ANGLE_DEGREE_MINUTE_SECOND = 9107;
+    private const EPSG_ANGLE_DEGREE_MINUTE_SECOND_HEMISPHERE = 9108;
     private const EPSG_ANGLE_DEGREE_MINUTE = 9115;
+    private const EPSG_ANGLE_DEGREE_HEMISPHERE = 9116;
+    private const EPSG_ANGLE_HEMISPHERE_DEGREE = 9117;
+    private const EPSG_ANGLE_DEGREE_MINUTE_HEMISPHERE = 9118;
+    private const EPSG_ANGLE_HEMISPHERE_DEGREE_MINUTE = 9119;
+    private const EPSG_ANGLE_HEMISPHERE_DEGREE_MINUTE_SECOND = 9120;
     private const EPSG_ANGLE_MILLIARCSECOND = 1031;
     private const EPSG_ANGLE_RADIAN_PER_SECOND = 1035;
     private const EPSG_ANGLE_ARCSECOND_PER_YEAR = 1043;
     private const EPSG_ANGLE_MILLIARCSECOND_PER_YEAR = 1032;
+    private const EPSG_ANGLE_SEXAGESIMAL_DMS = 9110;
+    private const EPSG_ANGLE_SEXAGESIMAL_DM = 9111;
+    private const EPSG_ANGLE_SEXAGESIMAL_DMSS = 9121;
 
     private const EPSG_LENGTH_METRE = 9001;
     private const EPSG_LENGTH_MILLIMETRE = 1025;
@@ -144,8 +153,26 @@ class Factory
                 return new ArcSecond($measurement);
             case self::EPSG_ANGLE_DEGREE_MINUTE_SECOND:
                 return Degree::fromDegreeMinuteSecond((string) $measurement);
+            case self::EPSG_ANGLE_DEGREE_MINUTE_SECOND_HEMISPHERE:
+                return Degree::fromDegreeMinuteSecondHemisphere((string) $measurement);
+            case self::EPSG_ANGLE_HEMISPHERE_DEGREE_MINUTE_SECOND:
+                return Degree::fromHemisphereDegreeMinuteSecond((string) $measurement);
             case self::EPSG_ANGLE_DEGREE_MINUTE:
                 return Degree::fromDegreeMinute((string) $measurement);
+            case self::EPSG_ANGLE_DEGREE_MINUTE_HEMISPHERE:
+                return Degree::fromDegreeMinuteHemisphere((string) $measurement);
+            case self::EPSG_ANGLE_HEMISPHERE_DEGREE_MINUTE:
+                return Degree::fromHemisphereDegreeMinute((string) $measurement);
+            case self::EPSG_ANGLE_DEGREE_HEMISPHERE:
+                return Degree::fromDegreeHemisphere((string) $measurement);
+            case self::EPSG_ANGLE_HEMISPHERE_DEGREE:
+                return Degree::fromHemisphereDegree((string) $measurement);
+            case self::EPSG_ANGLE_SEXAGESIMAL_DMSS:
+                return Degree::fromSexagesimalDMSS((string) $measurement);
+            case self::EPSG_ANGLE_SEXAGESIMAL_DMS:
+                return Degree::fromSexagesimalDMS((string) $measurement);
+            case self::EPSG_ANGLE_SEXAGESIMAL_DM:
+                return Degree::fromSexagesimalDM((string) $measurement);
             default:
                 if ($epsgUnitData['factor_b'] === null || $epsgUnitData['target_uom_code'] !== self::EPSG_ANGLE_RADIAN) { // @codeCoverageIgnoreStart
                     throw new UnknownUnitOfMeasureException($epsgUnitData['uom_code']);
@@ -185,15 +212,14 @@ class Factory
 
     private static function makeTime(float $measurement, array $epsgUnitData): Time
     {
-        switch ($epsgUnitData['uom_code']) {
-            case self::EPSG_TIME_SECOND:
-                return new Second($measurement);
-
-            case self::EPSG_TIME_YEAR:
-                return new Year($measurement);
-
-            default:
-                throw new UnknownUnitOfMeasureException($epsgUnitData['uom_code']); // @codeCoverageIgnore
+        if ($epsgUnitData['uom_code'] === self::EPSG_TIME_SECOND) {
+            return new Second($measurement);
         }
+
+        if ($epsgUnitData['uom_code'] === self::EPSG_TIME_YEAR) {
+            return new Year($measurement);
+        }
+
+        throw new UnknownUnitOfMeasureException($epsgUnitData['uom_code']); // @codeCoverageIgnore
     }
 }
