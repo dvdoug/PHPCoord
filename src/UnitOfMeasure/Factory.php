@@ -10,19 +10,15 @@ namespace PHPCoord\UnitOfMeasure;
 
 use PHPCoord\EPSG\Repository;
 use PHPCoord\Exception\UnknownUnitOfMeasureException;
-use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPCoord\UnitOfMeasure\Angle\ArcSecond;
 use PHPCoord\UnitOfMeasure\Angle\Degree;
 use PHPCoord\UnitOfMeasure\Angle\ExoticAngle;
 use PHPCoord\UnitOfMeasure\Angle\Radian;
 use PHPCoord\UnitOfMeasure\Length\ExoticLength;
-use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPCoord\UnitOfMeasure\Scale\ExoticScale;
-use PHPCoord\UnitOfMeasure\Scale\Scale;
 use PHPCoord\UnitOfMeasure\Scale\Unity;
 use PHPCoord\UnitOfMeasure\Time\Second;
-use PHPCoord\UnitOfMeasure\Time\Time;
 use PHPCoord\UnitOfMeasure\Time\Year;
 
 class Factory
@@ -79,72 +75,31 @@ class Factory
             throw new UnknownUnitOfMeasureException($epsgUnitCode);
         }
 
-        switch ($unitData[$epsgUnitCode]['unit_of_meas_type']) {
-            case 'angle':
-                switch ($epsgUnitCode) {
-                    case self::EPSG_ANGLE_RADIAN_PER_SECOND:
-                        return new Rate(new Radian($measurement), new Second(1));
-
-                    case self::EPSG_ANGLE_ARCSECOND_PER_YEAR:
-                        return new Rate(new ArcSecond($measurement), new Year(1));
-
-                    case self::EPSG_ANGLE_MILLIARCSECOND_PER_YEAR:
-                        return new Rate(self::makeUnit($measurement, self::EPSG_ANGLE_MILLIARCSECOND), new Year(1));
-
-                    default:
-                        return static::makeAngle($measurement, $unitData[$epsgUnitCode]);
-                }
-
-                // no break
-            case 'length':
-                switch ($epsgUnitCode) {
-                    case self::EPSG_LENGTH_METRE_PER_SECOND:
-                        return new Rate(new Metre($measurement), new Second(1));
-
-                    case self::EPSG_LENGTH_METRE_PER_YEAR:
-                        return new Rate(new Metre($measurement), new Year(1));
-
-                    case self::EPSG_LENGTH_MILLIMETRE_PER_YEAR:
-                        return new Rate(self::makeUnit($measurement, self::EPSG_LENGTH_MILLIMETRE), new Year(1));
-
-                    case self::EPSG_LENGTH_CENTIMETRE_PER_YEAR:
-                        return new Rate(self::makeUnit($measurement, self::EPSG_LENGTH_CENTIMETRE), new Year(1));
-
-                    default:
-                        return static::makeLength($measurement, $unitData[$epsgUnitCode]);
-                }
-
-                // no break
-            case 'scale':
-                switch ($epsgUnitCode) {
-                    case self::EPSG_SCALE_UNITY_PER_SECOND:
-                        return new Rate(new Unity($measurement), new Second(1));
-
-                    case self::EPSG_SCALE_PARTS_PER_BILLION_PER_YEAR:
-                        return new Rate(self::makeUnit($measurement, self::EPSG_SCALE_PARTS_PER_BILLION), new Year(1));
-
-                    case self::EPSG_SCALE_PARTS_PER_MILLION_PER_YEAR:
-                        return new Rate(self::makeUnit($measurement, self::EPSG_SCALE_PARTS_PER_MILLION), new Year(1));
-
-                    default:
-                        return static::makeScale($measurement, $unitData[$epsgUnitCode]);
-                }
-
-                // no break
-            case 'time':
-                return static::makeTime($measurement, $unitData[$epsgUnitCode]);
-
-            default:
-                throw new UnknownUnitOfMeasureException($epsgUnitCode); // @codeCoverageIgnore
-        }
-    }
-
-    /**
-     * @param float|string $measurement
-     */
-    private static function makeAngle($measurement, array $epsgUnitData): Angle
-    {
-        switch ($epsgUnitData['uom_code']) {
+        /*
+         * Common units (and those that require special handling) having discrete implementations,
+         * try those first.
+         */
+        switch ($epsgUnitCode) {
+            case self::EPSG_ANGLE_RADIAN_PER_SECOND:
+                return new Rate(new Radian($measurement), new Second(1));
+            case self::EPSG_ANGLE_ARCSECOND_PER_YEAR:
+                return new Rate(new ArcSecond($measurement), new Year(1));
+            case self::EPSG_ANGLE_MILLIARCSECOND_PER_YEAR:
+                return new Rate(self::makeUnit($measurement, self::EPSG_ANGLE_MILLIARCSECOND), new Year(1));
+            case self::EPSG_LENGTH_METRE_PER_SECOND:
+                return new Rate(new Metre($measurement), new Second(1));
+            case self::EPSG_LENGTH_METRE_PER_YEAR:
+                return new Rate(new Metre($measurement), new Year(1));
+            case self::EPSG_LENGTH_MILLIMETRE_PER_YEAR:
+                return new Rate(self::makeUnit($measurement, self::EPSG_LENGTH_MILLIMETRE), new Year(1));
+            case self::EPSG_LENGTH_CENTIMETRE_PER_YEAR:
+                return new Rate(self::makeUnit($measurement, self::EPSG_LENGTH_CENTIMETRE), new Year(1));
+            case self::EPSG_SCALE_UNITY_PER_SECOND:
+                return new Rate(new Unity($measurement), new Second(1));
+            case self::EPSG_SCALE_PARTS_PER_BILLION_PER_YEAR:
+                return new Rate(self::makeUnit($measurement, self::EPSG_SCALE_PARTS_PER_BILLION), new Year(1));
+            case self::EPSG_SCALE_PARTS_PER_MILLION_PER_YEAR:
+                return new Rate(self::makeUnit($measurement, self::EPSG_SCALE_PARTS_PER_MILLION), new Year(1));
             case self::EPSG_ANGLE_RADIAN:
                 return new Radian($measurement);
             case self::EPSG_ANGLE_DEGREE:
@@ -173,53 +128,44 @@ class Factory
                 return Degree::fromSexagesimalDMS((string) $measurement);
             case self::EPSG_ANGLE_SEXAGESIMAL_DM:
                 return Degree::fromSexagesimalDM((string) $measurement);
-            default:
-                if ($epsgUnitData['factor_b'] === null || $epsgUnitData['target_uom_code'] !== self::EPSG_ANGLE_RADIAN) { // @codeCoverageIgnoreStart
-                    throw new UnknownUnitOfMeasureException($epsgUnitData['uom_code']);
-                } // @codeCoverageIgnoreEnd
-
-                return new ExoticAngle($measurement, $epsgUnitData['unit_of_meas_name'], $epsgUnitData['factor_b'], $epsgUnitData['factor_c']);
-        }
-    }
-
-    private static function makeLength(float $measurement, array $epsgUnitData): Length
-    {
-        switch ($epsgUnitData['uom_code']) {
             case self::EPSG_LENGTH_METRE:
                 return new Metre($measurement);
-            default:
-                if ($epsgUnitData['factor_b'] === null || $epsgUnitData['target_uom_code'] !== self::EPSG_LENGTH_METRE) { // @codeCoverageIgnoreStart
-                    throw new UnknownUnitOfMeasureException($epsgUnitData['uom_code']);
-                } // @codeCoverageIgnoreEnd
-
-                return new ExoticLength($measurement, $epsgUnitData['unit_of_meas_name'], $epsgUnitData['factor_b'], $epsgUnitData['factor_c']);
-        }
-    }
-
-    private static function makeScale(float $measurement, array $epsgUnitData): Scale
-    {
-        switch ($epsgUnitData['uom_code']) {
             case self::EPSG_SCALE_UNITY:
                 return new Unity($measurement);
-            default:
-                if ($epsgUnitData['factor_b'] === null || $epsgUnitData['target_uom_code'] !== self::EPSG_SCALE_UNITY) { // @codeCoverageIgnoreStart
-                    throw new UnknownUnitOfMeasureException($epsgUnitData['uom_code']);
-                } // @codeCoverageIgnoreEnd
-
-                return new ExoticScale($measurement, $epsgUnitData['unit_of_meas_name'], $epsgUnitData['factor_b'], $epsgUnitData['factor_c']);
-        }
-    }
-
-    private static function makeTime(float $measurement, array $epsgUnitData): Time
-    {
-        if ($epsgUnitData['uom_code'] === self::EPSG_TIME_SECOND) {
-            return new Second($measurement);
+            case self::EPSG_TIME_SECOND:
+                return new Second($measurement);
+            case self::EPSG_TIME_YEAR:
+                return new Year($measurement);
         }
 
-        if ($epsgUnitData['uom_code'] === self::EPSG_TIME_YEAR) {
-            return new Year($measurement);
+        /*
+         * Check that the unit can be defined by reference to SI, if it can't it needs special handling and needs to be
+         * in the list above
+         */
+        // @codeCoverageIgnoreStart
+        if ($unitData[$epsgUnitCode]['factor_b'] === null ||
+            !in_array(
+                $unitData[$epsgUnitCode]['target_uom_code'],
+                [
+                    self::EPSG_ANGLE_RADIAN,
+                    self::EPSG_LENGTH_METRE,
+                    self::EPSG_SCALE_UNITY,
+                    //self::EPSG_TIME_SECOND,  all time units in the DB are currently handled above
+                ],
+                true
+            )
+        ) {
+            throw new UnknownUnitOfMeasureException($epsgUnitCode);
         }
+        // @codeCoverageIgnoreEnd
 
-        throw new UnknownUnitOfMeasureException($epsgUnitData['uom_code']); // @codeCoverageIgnore
+        switch ($unitData[$epsgUnitCode]['unit_of_meas_type']) {
+            case 'angle':
+                return new ExoticAngle($measurement, $unitData[$epsgUnitCode]['unit_of_meas_name'], $unitData[$epsgUnitCode]['factor_b'], $unitData[$epsgUnitCode]['factor_c']);
+            case 'length':
+                return new ExoticLength($measurement, $unitData[$epsgUnitCode]['unit_of_meas_name'], $unitData[$epsgUnitCode]['factor_b'], $unitData[$epsgUnitCode]['factor_c']);
+            case 'scale':
+                return new ExoticScale($measurement, $unitData[$epsgUnitCode]['unit_of_meas_name'], $unitData[$epsgUnitCode]['factor_b'], $unitData[$epsgUnitCode]['factor_c']);
+        }
     }
 }
