@@ -55,6 +55,7 @@ function createInterfacesWithIDs(string $dbPath, string $srcDir): void
             SELECT
                 m.uom_code AS constant_value,
                 m.unit_of_meas_type || '_' || m.unit_of_meas_name AS constant_name,
+                m.remarks AS constant_help,
                 m.deprecated
             FROM epsg_unitofmeasure m
             ORDER BY m.unit_of_meas_type, m.unit_of_meas_name
@@ -74,8 +75,16 @@ function generateInterface(string $srcDir, string $namespaceName, string $interf
         $name = str_replace([' ', '-', '\'', '(', ')', '.', '__'], '_', $row['constant_name']);
         $name = rtrim($name, '_');
 
-        if ($row['deprecated']) {
-            $php .= "/** @deprecated */\n";
+        if ($row['constant_help'] || $row['deprecated']) {
+            $php .= "/**\n";
+            $helpLines = explode("\n", trim(wordwrap($row['constant_help'], 112)));
+            foreach ($helpLines as $helpLine) {
+                $php .= '* ' . $helpLine . "\n";
+            }
+            if ($row['deprecated']) {
+                $php .= "* @deprecated\n";
+            }
+            $php .= " */\n";
         }
         $php .= sprintf("public const %s = %d;\n\n", strtoupper('EPSG_' . $name), $row['constant_value']);
     }
