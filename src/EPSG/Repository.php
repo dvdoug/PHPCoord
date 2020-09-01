@@ -31,7 +31,7 @@ class Repository
         return static::$connection;
     }
 
-    public function getUnitsOfMeasure(bool $includeDeprecated = false): array
+    public function getUnitsOfMeasure(): array
     {
         if (!static::$unitsOfMeasureData) {
             $connection = $this->getConnection();
@@ -42,13 +42,10 @@ class Repository
                 m.unit_of_meas_type,
                 m.target_uom_code,
                 m.factor_b,
-                m.factor_c
+                m.factor_c,
+                m.deprecated
             FROM epsg_unitofmeasure m
         ';
-
-            if ($includeDeprecated === false) {
-                $sql .= ' AND m.deprecated = 0';
-            }
 
             $result = $connection->query($sql);
 

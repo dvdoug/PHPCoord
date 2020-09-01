@@ -21,7 +21,7 @@ use PHPCoord\UnitOfMeasure\Scale\Unity;
 use PHPCoord\UnitOfMeasure\Time\Second;
 use PHPCoord\UnitOfMeasure\Time\Year;
 
-class Factory implements UnitOfMeasureIds
+class UnitOfMeasureFactory implements UnitOfMeasureIds
 {
     /** @var Repository */
     private static $repository;
@@ -31,12 +31,14 @@ class Factory implements UnitOfMeasureIds
      */
     public static function makeUnit($measurement, int $epsgUnitCode): UnitOfMeasure
     {
-        $repository = static::$repository ?? new Repository();
-        $unitData = $repository->getUnitsOfMeasure(true);
+        $repository = self::$repository ?? new Repository();
+        $allData = $repository->getUnitsOfMeasure();
 
-        if (!isset($unitData[$epsgUnitCode])) {
+        if (!isset($allData[$epsgUnitCode])) {
             throw new UnknownUnitOfMeasureException($epsgUnitCode);
         }
+
+        $unitData = $allData[$epsgUnitCode];
 
         /*
          * Common units (and those that require special handling) having discrete implementations,
@@ -106,9 +108,9 @@ class Factory implements UnitOfMeasureIds
          * in the list above
          */
         // @codeCoverageIgnoreStart
-        if ($unitData[$epsgUnitCode]['factor_b'] === null ||
+        if ($unitData['factor_b'] === null ||
             !in_array(
-                $unitData[$epsgUnitCode]['target_uom_code'],
+                $unitData['target_uom_code'],
                 [
                     self::EPSG_ANGLE_RADIAN,
                     self::EPSG_LENGTH_METRE,
@@ -122,13 +124,13 @@ class Factory implements UnitOfMeasureIds
         }
         // @codeCoverageIgnoreEnd
 
-        switch ($unitData[$epsgUnitCode]['unit_of_meas_type']) {
+        switch ($unitData['unit_of_meas_type']) {
             case 'angle':
-                return new ExoticAngle($measurement, $unitData[$epsgUnitCode]['unit_of_meas_name'], $unitData[$epsgUnitCode]['factor_b'], $unitData[$epsgUnitCode]['factor_c']);
+                return new ExoticAngle($measurement, $unitData['unit_of_meas_name'], $unitData['factor_b'], $unitData['factor_c']);
             case 'length':
-                return new ExoticLength($measurement, $unitData[$epsgUnitCode]['unit_of_meas_name'], $unitData[$epsgUnitCode]['factor_b'], $unitData[$epsgUnitCode]['factor_c']);
+                return new ExoticLength($measurement, $unitData['unit_of_meas_name'], $unitData['factor_b'], $unitData['factor_c']);
             case 'scale':
-                return new ExoticScale($measurement, $unitData[$epsgUnitCode]['unit_of_meas_name'], $unitData[$epsgUnitCode]['factor_b'], $unitData[$epsgUnitCode]['factor_c']);
+                return new ExoticScale($measurement, $unitData['unit_of_meas_name'], $unitData['factor_b'], $unitData['factor_c']);
         }
     }
 }
