@@ -64,6 +64,19 @@ function createInterfacesWithIDs(string $dbPath, string $srcDir): void
 
     generateInterface($srcDir, 'PHPCoord\UnitOfMeasure', 'UnitOfMeasureIds', $result);
 
+    $sql = "
+            SELECT
+                p.prime_meridian_code AS constant_value,
+                p.prime_meridian_name AS constant_name,
+                p.remarks AS constant_help,
+                p.deprecated
+            FROM epsg_primemeridian p
+            ORDER BY p.prime_meridian_name
+        ";
+    $result = $sqlite->query($sql);
+
+    generateInterface($srcDir, 'PHPCoord\Datum', 'PrimeMeridianIds', $result);
+
     $sqlite->close();
 }
 

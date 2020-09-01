@@ -21,6 +21,9 @@ class Repository
     /** @var array */
     private static $unitsOfMeasureData = [];
 
+    /** @var array */
+    private static $primeMeridianData = [];
+
     private function getConnection(): SQLite3
     {
         if (!static::$connection instanceof SQLite3) {
@@ -45,7 +48,7 @@ class Repository
                 m.factor_c,
                 m.deprecated
             FROM epsg_unitofmeasure m
-        ';
+            ';
 
             $result = $connection->query($sql);
 
@@ -55,5 +58,29 @@ class Repository
         }
 
         return static::$unitsOfMeasureData;
+    }
+
+    public function getPrimeMeridians(): array
+    {
+        if (!static::$primeMeridianData) {
+            $connection = $this->getConnection();
+            $sql = '
+            SELECT
+                p.prime_meridian_code,
+                p.prime_meridian_name,
+                p.greenwich_longitude,
+                p.uom_code,
+                p.deprecated
+            FROM epsg_primemeridian p
+            ';
+
+            $result = $connection->query($sql);
+
+            while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+                static::$primeMeridianData[$row['prime_meridian_code']] = $row;
+            }
+        }
+
+        return static::$primeMeridianData;
     }
 }
