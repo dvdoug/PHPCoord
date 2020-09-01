@@ -82,7 +82,7 @@ function createInterfacesWithIDs(string $dbPath, string $srcDir): void
 
 function generateInterface(string $srcDir, string $namespaceName, string $interfaceName, SQLite3Result $interfaceConstants): void
 {
-    $php = "<?php\nnamespace {$namespaceName};\ninterface {$interfaceName} {\n";
+    $php = "<?php\nnamespace {$namespaceName};\n/**\n* THIS FILE IS AUTO-GENERATED\n*/\ninterface {$interfaceName} {\n";
 
     while ($row = $interfaceConstants->fetchArray(SQLITE3_ASSOC)) {
         $name = str_replace([' ', '-', '\'', '(', ')', '.', '__'], '_', $row['constant_name']);

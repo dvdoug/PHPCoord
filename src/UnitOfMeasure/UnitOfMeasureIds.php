@@ -8,6 +8,9 @@ declare(strict_types=1);
 
 namespace PHPCoord\UnitOfMeasure;
 
+/**
+ * THIS FILE IS AUTO-GENERATED.
+ */
 interface UnitOfMeasureIds
 {
     /**

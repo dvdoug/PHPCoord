@@ -8,6 +8,9 @@ declare(strict_types=1);
 
 namespace PHPCoord\Datum;
 
+/**
+ * THIS FILE IS AUTO-GENERATED.
+ */
 interface PrimeMeridianIds
 {
     /**
