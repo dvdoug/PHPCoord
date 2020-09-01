@@ -8,10 +8,6 @@ declare(strict_types=1);
 
 namespace PHPCoord\Exception;
 
-class UnknownUnitOfMeasureException extends \Exception
+class UnknownUnitOfMeasureException extends UnknownEPSGCodeException
 {
-    public function __construct(int $epsgCode)
-    {
-        parent::__construct('Unknown EPSG code: ' . $epsgCode, $epsgCode);
-    }
 }
