@@ -85,12 +85,6 @@ interface UnitOfMeasureIds
 
     /**
      * =pi/200 radians.
-     * @deprecated
-     */
-    public const EPSG_ANGLE_GON = 9106;
-
-    /**
-     * =pi/200 radians.
      */
     public const EPSG_ANGLE_GRAD = 9105;
 
@@ -165,46 +159,6 @@ interface UnitOfMeasureIds
      * Convert to deg using algorithm.
      */
     public const EPSG_ANGLE_SEXAGESIMAL_DMS_S = 9121;
-
-    /**
-     * @deprecated
-     */
-    public const EPSG_LENGTH_BIN_WIDTH_12_5_METRES = 9209;
-
-    /**
-     * @deprecated
-     */
-    public const EPSG_LENGTH_BIN_WIDTH_165_US_SURVEY_FEET = 9205;
-
-    /**
-     * @deprecated
-     */
-    public const EPSG_LENGTH_BIN_WIDTH_25_METRES = 9208;
-
-    /**
-     * @deprecated
-     */
-    public const EPSG_LENGTH_BIN_WIDTH_3_125_METRES = 9211;
-
-    /**
-     * @deprecated
-     */
-    public const EPSG_LENGTH_BIN_WIDTH_330_US_SURVEY_FEET = 9204;
-
-    /**
-     * @deprecated
-     */
-    public const EPSG_LENGTH_BIN_WIDTH_37_5_METRES = 9207;
-
-    /**
-     * @deprecated
-     */
-    public const EPSG_LENGTH_BIN_WIDTH_6_25_METRES = 9210;
-
-    /**
-     * @deprecated
-     */
-    public const EPSG_LENGTH_BIN_WIDTH_82_5_US_SURVEY_FEET = 9206;
 
     /**
      * Uses Benoit's 1895 British yard-metre ratio as given by Clark as 0.9143992 metres per yard.  Used for deriving
@@ -483,7 +437,7 @@ interface UnitOfMeasureIds
     public const EPSG_LENGTH_YARD = 9096;
 
     /**
-     * @deprecated
+     * Ordinal coordinate systems are sequential counts and are unitless; this is a placeholder.
      */
     public const EPSG_SCALE_BIN = 1024;
 

@@ -79,12 +79,6 @@ interface EllipsoidIds
     public const EPSG_CLARKE_1866_AUTHALIC_SPHERE = 7052;
 
     /**
-     * Used for Michigan NAD27 State Plane zones.  Radius = ellipsoid radius + 800 feet; this approximates the average
-     * elevation of the state.   Derived parameter: 1/f = 294.97870.
-     */
-    public const EPSG_CLARKE_1866_MICHIGAN = 7009;
-
-    /**
      * Clarke gave a and b and also 1/f=293.465 (to 3 decimal places exactly). In the 19th century b was normally given
      * as the second defining parameter.
      */
@@ -267,17 +261,6 @@ interface EllipsoidIds
      * metres exactly. (Ref: Strasser).
      */
     public const EPSG_PLESSIS_1817 = 7027;
-
-    /**
-     * Sphere with radius equal to the semi-major axis of the GRS80 and WGS 84 ellipsoids. Used only for Web
-     * approximate mapping and visualisation. Not recognised by geodetic authorities.
-     */
-    public const EPSG_POPULAR_VISUALISATION_SPHERE = 7059;
-
-    /**
-     * Authalic sphere.  1/f is infinite. Superseded by GRS 1980 authalic sphere (code 7047).
-     */
-    public const EPSG_SPHERE = 7035;
 
     /**
      * Original definition of semi-major axis given as 3272539 toise.  In "Ellipsoidisch Parameter der Erdfigur

@@ -61,8 +61,11 @@ function createInterfacesWithIDs(string $dbPath, string $srcDir): void
                 m.remarks AS constant_help,
                 m.deprecated
             FROM epsg_unitofmeasure m
-            ORDER BY m.unit_of_meas_type, m.unit_of_meas_name
-        ";
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_unitofmeasure' AND dep.object_code = m.uom_code AND dep.deprecation_date <= '2020-09-01'
+            WHERE dep.deprecation_id IS NULL
+            ORDER BY constant_name
+            ";
+
     $result = $sqlite->query($sql);
 
     generateInterface($srcDir, 'PHPCoord\UnitOfMeasure', 'UnitOfMeasureIds', $result);
@@ -77,8 +80,11 @@ function createInterfacesWithIDs(string $dbPath, string $srcDir): void
                 p.remarks AS constant_help,
                 p.deprecated
             FROM epsg_primemeridian p
-            ORDER BY p.prime_meridian_name
-        ";
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_primemeridian' AND dep.object_code = p.prime_meridian_code AND dep.deprecation_date <= '2020-09-01'
+            WHERE dep.deprecation_id IS NULL
+            ORDER BY constant_name
+            ";
+
     $result = $sqlite->query($sql);
 
     generateInterface($srcDir, 'PHPCoord\Datum', 'PrimeMeridianIds', $result);
@@ -86,17 +92,21 @@ function createInterfacesWithIDs(string $dbPath, string $srcDir): void
     /*
      * Ellipsoids
      */
-    $sql = '
+    $sql = "
             SELECT
+            DISTINCT
                 e.ellipsoid_code AS constant_value,
                 e.ellipsoid_name AS constant_name,
                 e.remarks AS constant_help,
                 e.deprecated
             FROM epsg_ellipsoid e
             JOIN epsg_datum d ON d.ellipsoid_code = e.ellipsoid_code -- there are some never used entries
-            GROUP BY e.ellipsoid_code, e.ellipsoid_name
-            ORDER BY e.ellipsoid_name
-        ';
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_ellipsoid' AND dep.object_code = e.ellipsoid_code AND dep.deprecation_date <= '2020-09-01'
+            WHERE dep.deprecation_id IS NULL
+            ORDER BY constant_name
+
+        ";
+
     $result = $sqlite->query($sql);
 
     generateInterface($srcDir, 'PHPCoord\Datum', 'EllipsoidIds', $result);
