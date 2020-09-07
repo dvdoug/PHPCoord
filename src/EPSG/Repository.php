@@ -36,6 +36,9 @@ class Repository
     /** @var array */
     private static $coordinateSystemAxisData = [];
 
+    /** @var array */
+    private static $coordinateReferenceSystemData = [];
+
     private function getConnection(): SQLite3
     {
         if (!static::$connection instanceof SQLite3) {
@@ -180,6 +183,38 @@ class Repository
         }
 
         return static::$coordinateSystemData;
+    }
+
+    public function getCoordinateReferenceSystems(): array
+    {
+        if (!static::$coordinateReferenceSystemData) {
+            $connection = $this->getConnection();
+            $sql = "
+            SELECT
+                crs.coord_ref_sys_code,
+                crs.coord_ref_sys_kind,
+                crs.coord_ref_sys_name,
+                crs.coord_sys_code,
+                crs.datum_code,
+                crs.base_crs_code,
+                crs.projection_conv_code,
+                crs.cmpd_horizcrs_code,
+                crs.cmpd_vertcrs_code,
+                crs.deprecated
+            FROM epsg_coordinatereferencesystem crs
+            WHERE crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
+            AND (crs.cmpd_horizcrs_code IS NULL OR crs.cmpd_horizcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
+            AND (crs.cmpd_vertcrs_code IS NULL OR crs.cmpd_vertcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
+            ";
+
+            $result = $connection->query($sql);
+
+            while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+                static::$coordinateReferenceSystemData[$row['coord_ref_sys_code']] = $row;
+            }
+        }
+
+        return static::$coordinateReferenceSystemData;
     }
 
     private function getCoordinateSystemAxes(): array
