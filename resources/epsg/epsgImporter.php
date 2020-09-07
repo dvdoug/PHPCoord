@@ -131,6 +131,25 @@ function createInterfacesWithIDs(string $dbPath, string $srcDir): void
 
     generateInterface($srcDir, 'PHPCoord\Datum', 'DatumIds', $result);
 
+    /*
+     * Coordinate systems
+     */
+    $sql = "
+            SELECT
+                DISTINCT
+                cs.coord_sys_code AS constant_value,
+                cs.coord_sys_name || CASE cs.coord_sys_code WHEN 4531 THEN '_LOWERCASE' ELSE '' END AS constant_name,
+                'Type: ' || cs.coord_sys_type || '\n' || cs.remarks AS constant_help,
+                cs.deprecated
+            FROM epsg_coordinatesystem cs
+            JOIN epsg_coordinatereferencesystem crs ON crs.coord_sys_code = cs.coord_sys_code AND crs.coord_ref_sys_kind != 'engineering'
+            WHERE cs.coord_sys_type != 'ordinal'
+            ORDER BY constant_name
+        ";
+    $result = $sqlite->query($sql);
+
+    generateInterface($srcDir, 'PHPCoord\CoordinateSystem', 'CoordinateSystemIds', $result);
+
     $sqlite->close();
 }
 
