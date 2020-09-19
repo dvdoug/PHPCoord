@@ -10,6 +10,7 @@ namespace PHPCoord\UnitOfMeasure;
 
 use PHPCoord\EPSG\Repository;
 use PHPCoord\Exception\UnknownUnitOfMeasureException;
+use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPCoord\UnitOfMeasure\Angle\ArcSecond;
 use PHPCoord\UnitOfMeasure\Angle\Degree;
 use PHPCoord\UnitOfMeasure\Angle\ExoticAngle;
@@ -133,6 +134,20 @@ class UnitOfMeasureFactory implements UnitOfMeasureIds
             case 'scale':
                 return new ExoticScale($measurement, $unitData['unit_of_meas_name'], $unitData['factor_b'], $unitData['factor_c']);
         }
+    }
+
+    public static function convertAngle(Angle $angle, int $targetEpsgUnitCode): Angle
+    {
+        $repository = static::$repository ?? new Repository();
+        $allData = $repository->getUnitsOfMeasure();
+
+        if (!isset($allData[$targetEpsgUnitCode])) {
+            throw new UnknownUnitOfMeasureException($targetEpsgUnitCode);
+        }
+
+        $targetUnitData = $allData[$targetEpsgUnitCode];
+
+        return self::makeUnit($angle->asRadians()->getValue() * $targetUnitData['factor_c'] / $targetUnitData['factor_b'], $targetEpsgUnitCode);
     }
 
     public static function convertLength(Length $length, int $targetEpsgUnitCode): Length
