@@ -104,12 +104,32 @@ function createInterfacesWithIDs(string $dbPath, string $srcDir): void
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_ellipsoid' AND dep.object_code = e.ellipsoid_code AND dep.deprecation_date <= '2020-09-01'
             WHERE dep.deprecation_id IS NULL
             ORDER BY constant_name
-
-        ";
-
+            ";
     $result = $sqlite->query($sql);
 
     generateInterface($srcDir, 'PHPCoord\Datum', 'EllipsoidIds', $result);
+
+    /*
+     * Datums
+     */
+    $sql = "
+            SELECT
+                DISTINCT
+                d.datum_code AS constant_value,
+                d.datum_name AS constant_name,
+                'Type: ' || d.datum_type || '\n' || 'Extent: ' || e.extent_description || '\n' || 'Scope: ' || s.scope || '\n' || d.origin_description || '\n' || d.remarks AS constant_help,
+                d.deprecated
+            FROM epsg_datum d
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_datum' AND dep.object_code = d.datum_code AND dep.deprecation_date <= '2020-09-01'
+            LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_datum' AND u.object_code = d.datum_code
+            LEFT JOIN epsg_scope s ON u.scope_code = s.scope_code
+            LEFT JOIN epsg_extent e ON u.extent_code = e.extent_code
+            WHERE dep.deprecation_id IS NULL AND d.datum_type != 'engineering'
+            ORDER BY constant_name
+        ";
+    $result = $sqlite->query($sql);
+
+    generateInterface($srcDir, 'PHPCoord\Datum', 'DatumIds', $result);
 
     $sqlite->close();
 }
@@ -119,7 +139,12 @@ function generateInterface(string $srcDir, string $namespaceName, string $interf
     $php = "<?php\nnamespace {$namespaceName};\n/**\n* THIS FILE IS AUTO-GENERATED\n*/\ninterface {$interfaceName} {\n";
 
     while ($row = $interfaceConstants->fetchArray(SQLITE3_ASSOC)) {
-        $name = str_replace([' ', '-', '\'', '(', ')', '.', '__'], '_', $row['constant_name']);
+        $name = str_replace(
+            [' ', '-', '\'', '(', ')', '[', ']', '.', '/', '=', ',', ':', '°', '+', '&'],
+            ['_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_DEG_', '_PLUS_', '_AND_'],
+            $row['constant_name']
+        );
+        $name = preg_replace('/_+/', '_', $name);
         $name = rtrim($name, '_');
 
         if ($row['constant_help'] || $row['deprecated']) {

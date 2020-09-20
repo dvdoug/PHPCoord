@@ -27,6 +27,9 @@ class Repository
     /** @var array */
     private static $ellipsoidData = [];
 
+    /** @var array */
+    private static $datumData = [];
+
     private function getConnection(): SQLite3
     {
         if (!static::$connection instanceof SQLite3) {
@@ -66,6 +69,33 @@ class Repository
         }
 
         return static::$ellipsoidData;
+    }
+
+    public function getDatums(): array
+    {
+        if (!static::$datumData) {
+            $connection = $this->getConnection();
+            $sql = '
+            SELECT
+                d.datum_code,
+                d.datum_name,
+                d.datum_type,
+                d.ellipsoid_code,
+                d.prime_meridian_code,
+                d.conventional_rs_code,
+                d.frame_reference_epoch,
+                d.deprecated
+            FROM epsg_datum d
+        ';
+
+            $result = $connection->query($sql);
+
+            while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+                static::$datumData[$row['datum_code']] = $row;
+            }
+        }
+
+        return static::$datumData;
     }
 
     public function getUnitsOfMeasure(): array
