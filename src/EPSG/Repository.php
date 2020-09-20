@@ -24,6 +24,9 @@ class Repository
     /** @var array */
     private static $primeMeridianData = [];
 
+    /** @var array */
+    private static $ellipsoidData = [];
+
     private function getConnection(): SQLite3
     {
         if (!static::$connection instanceof SQLite3) {
@@ -32,6 +35,37 @@ class Repository
         }
 
         return static::$connection;
+    }
+
+    public function getEllipsoids(): array
+    {
+        if (!static::$ellipsoidData) {
+            $connection = $this->getConnection();
+            $sql = '
+            SELECT
+                el.ellipsoid_code,
+                el.ellipsoid_name,
+                el.semi_major_axis,
+                el.semi_minor_axis,
+                el.inv_flattening,
+                el.uom_code,
+                el.deprecated
+            FROM epsg_ellipsoid el
+        ';
+
+            $result = $connection->query($sql);
+
+            while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+                // some ellipsoids are defined via inverse flattening and the DB doesn't store the calculated data...
+                if (!$row['semi_minor_axis']) {
+                    $row['semi_minor_axis'] = $row['semi_major_axis'] - ($row['semi_major_axis'] / $row['inv_flattening']);
+                }
+
+                static::$ellipsoidData[$row['ellipsoid_code']] = $row;
+            }
+        }
+
+        return static::$ellipsoidData;
     }
 
     public function getUnitsOfMeasure(): array

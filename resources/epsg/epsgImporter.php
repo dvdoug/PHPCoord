@@ -51,6 +51,9 @@ function createInterfacesWithIDs(string $dbPath, string $srcDir): void
     );
     $sqlite->enableExceptions(true);
 
+    /*
+     * Units of Measure
+     */
     $sql = "
             SELECT
                 m.uom_code AS constant_value,
@@ -64,6 +67,9 @@ function createInterfacesWithIDs(string $dbPath, string $srcDir): void
 
     generateInterface($srcDir, 'PHPCoord\UnitOfMeasure', 'UnitOfMeasureIds', $result);
 
+    /*
+     * Prime Meridians
+     */
     $sql = "
             SELECT
                 p.prime_meridian_code AS constant_value,
@@ -76,6 +82,24 @@ function createInterfacesWithIDs(string $dbPath, string $srcDir): void
     $result = $sqlite->query($sql);
 
     generateInterface($srcDir, 'PHPCoord\Datum', 'PrimeMeridianIds', $result);
+
+    /*
+     * Ellipsoids
+     */
+    $sql = '
+            SELECT
+                e.ellipsoid_code AS constant_value,
+                e.ellipsoid_name AS constant_name,
+                e.remarks AS constant_help,
+                e.deprecated
+            FROM epsg_ellipsoid e
+            JOIN epsg_datum d ON d.ellipsoid_code = e.ellipsoid_code -- there are some never used entries
+            GROUP BY e.ellipsoid_code, e.ellipsoid_name
+            ORDER BY e.ellipsoid_name
+        ';
+    $result = $sqlite->query($sql);
+
+    generateInterface($srcDir, 'PHPCoord\Datum', 'EllipsoidIds', $result);
 
     $sqlite->close();
 }
