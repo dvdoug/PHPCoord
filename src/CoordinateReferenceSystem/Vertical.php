@@ -21,6 +21,8 @@ class Vertical extends CoordinateReferenceSystem
         $this->epsgCode = $epsgCode;
         $this->coordinateSystem = $coordinateSystem;
         $this->datum = $datum;
+
+        assert(count($coordinateSystem->getAxes()) === 1);
     }
 
     public function getEpsgCode(): int

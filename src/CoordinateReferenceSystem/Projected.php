@@ -21,6 +21,8 @@ class Projected extends CoordinateReferenceSystem
         $this->coordinateSystem = $coordinateSystem;
         $this->baseCRS = $baseCRS;
         $this->datum = $baseCRS->getDatum();
+
+        assert(count($coordinateSystem->getAxes()) === 2);
     }
 
     public function getEpsgCode(): int

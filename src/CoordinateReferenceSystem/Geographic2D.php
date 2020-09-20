@@ -21,6 +21,8 @@ class Geographic2D extends Geographic
         $this->epsgCode = $epsgCode;
         $this->coordinateSystem = $coordinateSystem;
         $this->datum = $datum;
+
+        assert(count($coordinateSystem->getAxes()) === 2);
     }
 
     public function getEpsgCode(): int
