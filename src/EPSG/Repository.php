@@ -277,4 +277,20 @@ class Repository
 
         return static::$coordinateSystemAxisData;
     }
+
+    /**
+     * @codeCoverageIgnore
+     */
+    public function clearCache(): void
+    {
+        static::$connection = null;
+        static::$unitsOfMeasureData = [];
+        static::$primeMeridianData = [];
+        static::$ellipsoidData = [];
+        static::$datumData = [];
+        static::$datumEnsembleData = [];
+        static::$coordinateSystemData = [];
+        static::$coordinateSystemAxisData = [];
+        static::$coordinateReferenceSystemData = [];
+    }
 }

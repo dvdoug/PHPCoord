@@ -56,6 +56,9 @@ class UnitOfMeasureFactoryTest extends TestCase
             $data[$measure['unit_of_meas_name']] = [$measure['uom_code']];
         }
 
+        // dataproviders are run before the suite starts, this allows the repository to actually get tested
+        $repository->clearCache();
+
         return $data;
     }
 }

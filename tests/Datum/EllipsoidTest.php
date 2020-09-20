@@ -45,6 +45,9 @@ class EllipsoidTest extends TestCase
             $data[$ellipsoid['ellipsoid_name']] = [$ellipsoid['ellipsoid_code']];
         }
 
+        // dataproviders are run before the suite starts, this allows the repository to actually get tested
+        $repository->clearCache();
+
         return $data;
     }
 }

@@ -45,6 +45,9 @@ class PrimeMeridianTest extends TestCase
             $data[$primeMeridian['prime_meridian_name']] = [$primeMeridian['prime_meridian_code']];
         }
 
+        // dataproviders are run before the suite starts, this allows the repository to actually get tested
+        $repository->clearCache();
+
         return $data;
     }
 }

@@ -52,6 +52,9 @@ class DatumTest extends TestCase
             $data[$ellipsoid['datum_name']] = [$ellipsoid['datum_code']];
         }
 
+        // dataproviders are run before the suite starts, this allows the repository to actually get tested
+        $repository->clearCache();
+
         return $data;
     }
 }

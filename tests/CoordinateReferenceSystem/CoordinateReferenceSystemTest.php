@@ -38,6 +38,9 @@ class CoordinateReferenceSystemTest extends TestCase
             $data[$coordinateSystem['coord_ref_sys_name']] = [$coordinateSystem['coord_ref_sys_code']];
         }
 
+        // dataproviders are run before the suite starts, this allows the repository to actually get tested
+        $repository->clearCache();
+
         return $data;
     }
 }
