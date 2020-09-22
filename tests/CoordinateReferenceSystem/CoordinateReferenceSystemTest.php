@@ -15,6 +15,7 @@ use PHPUnit\Framework\TestCase;
 class CoordinateReferenceSystemTest extends TestCase
 {
     /**
+     * @group integration
      * @dataProvider coordinateReferenceSystems
      */
     public function testCanCreateAllInDB(int $epsgCode): void

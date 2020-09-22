@@ -87,10 +87,13 @@ jobs:
       if: matrix.php-version == '7.4' && matrix.dependencies == 'highest'
       run: vendor/bin/php-cs-fixer fix --verbose --dry-run --diff --diff-format=udiff --allow-risky=yes --format=checkstyle | cs2pr
 
-    - name: PHPUnit (Xdebug)
+    - name: PHPUnit (Unit)
       run: |
-        php -dmemory_limit=-1 vendor/phpunit/phpunit/phpunit;
+        php -dmemory_limit=-1 vendor/phpunit/phpunit/phpunit --exclude-group=integration;
         if [ "${{ matrix.php-version }}" = "7.4" ]; then
           wget https://scrutinizer-ci.com/ocular.phar;
           php ocular.phar code-coverage:upload --format=php-clover build/coverage-phpunit/clover.xml;
         fi;
+
+    - name: PHPUnit (Integration)
+      run: php -dmemory_limit=-1 vendor/phpunit/phpunit/phpunit --group=integration --no-coverage;

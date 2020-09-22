@@ -15,6 +15,7 @@ use PHPUnit\Framework\TestCase;
 class PrimeMeridianTest extends TestCase
 {
     /**
+     * @group integration
      * @dataProvider primeMeridians
      */
     public function testCanCreateAllInDB(int $epsgCode): void

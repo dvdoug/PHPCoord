@@ -15,6 +15,7 @@ use PHPUnit\Framework\TestCase;
 class DatumTest extends TestCase
 {
     /**
+     * @group integration
      * @dataProvider datums
      */
     public function testCanCreateAllInDB(int $epsgCode): void

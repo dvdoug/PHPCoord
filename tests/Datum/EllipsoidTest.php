@@ -15,6 +15,7 @@ use PHPUnit\Framework\TestCase;
 class EllipsoidTest extends TestCase
 {
     /**
+     * @group integration
      * @dataProvider ellipsoids
      */
     public function testCanCreateAllInDB(int $epsgCode): void
