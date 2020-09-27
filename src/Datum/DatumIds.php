@@ -14,6 +14,7 @@ namespace PHPCoord\Datum;
 interface DatumIds
 {
     /**
+     * AIOC 1995
      * Type: vertical
      * Extent: Azerbaijan - Caspian offshore and onshore Sangachal terminal.
      * Scope: Oil and gas exploration and production.
@@ -23,6 +24,7 @@ interface DatumIds
     public const EPSG_AIOC_1995 = 5133;
 
     /**
+     * AbInvA96_2020 Intermediate Reference Frame
      * Type: geodetic
      * Extent: UK - on or related to the A96 highway from Aberdeen to Inverness.
      * Scope: Highway engineering.
@@ -34,6 +36,7 @@ interface DatumIds
     public const EPSG_ABINVA96_2020_INTERMEDIATE_REFERENCE_FRAME = 1273;
 
     /**
+     * Abidjan 1987
      * Type: geodetic
      * Extent: Côte d'Ivoire (Ivory Coast) - onshore and offshore.
      * Scope: Topographic mapping.
@@ -42,6 +45,7 @@ interface DatumIds
     public const EPSG_ABIDJAN_1987 = 6143;
 
     /**
+     * Accra
      * Type: geodetic
      * Extent: Ghana - onshore and offshore.
      * Scope: Topographic mapping.
@@ -51,6 +55,7 @@ interface DatumIds
     public const EPSG_ACCRA = 6168;
 
     /**
+     * Aden 1925
      * Type: geodetic
      * Extent: Yemen - South Yemen onshore mainland.
      * Scope: Engineering survey, harbour hydrography.
@@ -58,6 +63,7 @@ interface DatumIds
     public const EPSG_ADEN_1925 = 1135;
 
     /**
+     * Adindan
      * Type: geodetic
      * Extent: Eritrea; Ethiopia; South Sudan; Sudan.
      * Scope: Topographic mapping.
@@ -68,6 +74,7 @@ interface DatumIds
     public const EPSG_ADINDAN = 6201;
 
     /**
+     * Afgooye
      * Type: geodetic
      * Extent: Somalia - onshore.
      * Scope: Topographic mapping.
@@ -75,6 +82,7 @@ interface DatumIds
     public const EPSG_AFGOOYE = 6205;
 
     /**
+     * Agadez
      * Type: geodetic
      * Extent: Niger.
      * Scope: Topographic mapping.
@@ -82,6 +90,7 @@ interface DatumIds
     public const EPSG_AGADEZ = 6206;
 
     /**
+     * Ain el Abd 1970
      * Type: geodetic
      * Extent: Bahrain, Kuwait and Saudi Arabia - onshore.
      * Scope: Topographic mapping.
@@ -90,6 +99,7 @@ interface DatumIds
     public const EPSG_AIN_EL_ABD_1970 = 6204;
 
     /**
+     * Albanian 1987
      * Type: geodetic
      * Extent: Albania - onshore.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -97,6 +107,7 @@ interface DatumIds
     public const EPSG_ALBANIAN_1987 = 6191;
 
     /**
+     * Alicante
      * Type: vertical
      * Extent: Gibraltar - onshore; Spain - mainland onshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -106,6 +117,7 @@ interface DatumIds
     public const EPSG_ALICANTE = 5180;
 
     /**
+     * American Samoa 1962
      * Type: geodetic
      * Extent: American Samoa - Tutuila, Aunu'u, Ofu, Olesega and Ta'u islands.
      * Scope: Topographic mapping.
@@ -114,6 +126,7 @@ interface DatumIds
     public const EPSG_AMERICAN_SAMOA_1962 = 6169;
 
     /**
+     * American Samoa Vertical Datum of 2002
      * Type: vertical
      * Extent: American Samoa - Tutuila island.
      * Scope: Geodesy, topographic mapping.
@@ -124,6 +137,7 @@ interface DatumIds
     public const EPSG_AMERICAN_SAMOA_VERTICAL_DATUM_OF_2002 = 1125;
 
     /**
+     * Amersfoort
      * Type: geodetic
      * Extent: Netherlands - onshore, including Waddenzee, Dutch Wadden Islands and 12-mile offshore coastal zone.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -134,6 +148,7 @@ interface DatumIds
     public const EPSG_AMERSFOORT = 6289;
 
     /**
+     * Ammassalik 1958
      * Type: geodetic
      * Extent: Greenland - Ammassalik area onshore.
      * Scope: Topographic mapping.
@@ -141,6 +156,7 @@ interface DatumIds
     public const EPSG_AMMASSALIK_1958 = 6196;
 
     /**
+     * Ancienne Triangulation Francaise (Paris)
      * Type: geodetic
      * Extent: France - mainland onshore.
      * Scope: Topographic mapping.
@@ -152,6 +168,7 @@ interface DatumIds
     public const EPSG_ANCIENNE_TRIANGULATION_FRANCAISE_PARIS = 6901;
 
     /**
+     * Anguilla 1957
      * Type: geodetic
      * Extent: Anguilla - onshore.
      * Scope: Topographic mapping.
@@ -160,6 +177,7 @@ interface DatumIds
     public const EPSG_ANGUILLA_1957 = 6600;
 
     /**
+     * Antalya
      * Type: vertical
      * Extent: Turkey - onshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -169,6 +187,7 @@ interface DatumIds
     public const EPSG_ANTALYA = 5173;
 
     /**
+     * Antigua 1943
      * Type: geodetic
      * Extent: Antigua island - onshore.
      * Scope: Topographic mapping.
@@ -177,6 +196,7 @@ interface DatumIds
     public const EPSG_ANTIGUA_1943 = 6601;
 
     /**
+     * Aratu
      * Type: geodetic
      * Extent: Brazil - offshore south and east of a line intersecting the coast at 2°55'S; onshore Tucano basin.
      * Scope: Oil and gas exploration.
@@ -184,6 +204,7 @@ interface DatumIds
     public const EPSG_ARATU = 6208;
 
     /**
+     * Arc 1950
      * Type: geodetic
      * Extent: Botswana; Malawi; Zambia; Zimbabwe.
      * Scope: Geodesy, topographic mapping.
@@ -192,6 +213,7 @@ interface DatumIds
     public const EPSG_ARC_1950 = 6209;
 
     /**
+     * Arc 1960
      * Type: geodetic
      * Extent: Burundi, Kenya, Rwanda, Tanzania and Uganda.
      * Scope: Geodesy, topographic mapping.
@@ -200,6 +222,7 @@ interface DatumIds
     public const EPSG_ARC_1960 = 6210;
 
     /**
+     * Ascension Island 1958
      * Type: geodetic
      * Extent: St Helena, Ascension and Tristan da Cunha - Ascension Island - onshore.
      * Scope: Military survey.
@@ -207,6 +230,7 @@ interface DatumIds
     public const EPSG_ASCENSION_ISLAND_1958 = 6712;
 
     /**
+     * Astro DOS 71
      * Type: geodetic
      * Extent: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore.
      * Scope: Geodesy, topographic mapping.
@@ -215,6 +239,7 @@ interface DatumIds
     public const EPSG_ASTRO_DOS_71 = 6710;
 
     /**
+     * Auckland 1946
      * Type: vertical
      * Extent: New Zealand - North Island - Auckland vertical CRS area.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -223,6 +248,7 @@ interface DatumIds
     public const EPSG_AUCKLAND_1946 = 5157;
 
     /**
+     * Australian Antarctic Datum 1998
      * Type: geodetic
      * Extent: Antarctica between 45°E and 136°E and between 142°E and 160°E - Australian sector.
      * Scope: Topographic mapping.
@@ -230,6 +256,7 @@ interface DatumIds
     public const EPSG_AUSTRALIAN_ANTARCTIC_DATUM_1998 = 6176;
 
     /**
+     * Australian Geodetic Datum 1966
      * Type: geodetic
      * Extent: Australia - onshore and offshore. Papua New Guinea - onshore.
      * Scope: Topographic mapping.
@@ -239,6 +266,7 @@ interface DatumIds
     public const EPSG_AUSTRALIAN_GEODETIC_DATUM_1966 = 6202;
 
     /**
+     * Australian Geodetic Datum 1984
      * Type: geodetic
      * Extent: Australia - Queensland, South Australia, Western Australia, federal areas offshore west of 129°E.
      * Scope: Topographic mapping.
@@ -249,6 +277,7 @@ interface DatumIds
     public const EPSG_AUSTRALIAN_GEODETIC_DATUM_1984 = 6203;
 
     /**
+     * Australian Height Datum
      * Type: vertical
      * Extent: Australia - Australian Capital Territory, New South Wales, Northern Territory, Queensland, South
      * Australia, Tasmania, Western Australia and Victoria - onshore. Christmas Island - onshore. Cocos and Keeling
@@ -263,6 +292,7 @@ interface DatumIds
     public const EPSG_AUSTRALIAN_HEIGHT_DATUM = 5111;
 
     /**
+     * Australian Height Datum (Tasmania)
      * Type: vertical
      * Extent: Australia - Tasmania mainland - onshore.
      * Scope: Geodesy, topographic mapping.
@@ -271,6 +301,7 @@ interface DatumIds
     public const EPSG_AUSTRALIAN_HEIGHT_DATUM_TASMANIA = 5112;
 
     /**
+     * Australian Terrestrial Reference Frame 2014
      * Type: dynamic geodetic
      * Extent: Australia including Lord Howe Island, Macquarie Islands, Ashmore and Cartier Islands, Christmas Island,
      * Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
@@ -281,6 +312,7 @@ interface DatumIds
     public const EPSG_AUSTRALIAN_TERRESTRIAL_REFERENCE_FRAME_2014 = 1291;
 
     /**
+     * Australian Vertical Working Surface
      * Type: vertical
      * Extent: Australia including Lord Howe Island, Macquarie Islands, Ashmore and Cartier Islands, Christmas Island,
      * Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
@@ -292,6 +324,7 @@ interface DatumIds
     public const EPSG_AUSTRALIAN_VERTICAL_WORKING_SURFACE = 1292;
 
     /**
+     * Autonomous Regions of Portugal 2008
      * Type: geodetic
      * Extent: Portugal - Azores and Madeira island groups and surrounding EEZ - Flores, Corvo; Graciosa, Terceira, Sao
      * Jorge, Pico, Faial; Sao Miguel, Santa Maria; Madeira, Porto Santo, Desertas; Selvagens.
@@ -302,6 +335,7 @@ interface DatumIds
     public const EPSG_AUTONOMOUS_REGIONS_OF_PORTUGAL_2008 = 1041;
 
     /**
+     * Average Terrestrial System 1977
      * Type: geodetic
      * Extent: Canada - New Brunswick; Nova Scotia; Prince Edward Island.
      * Scope: Topographic mapping.
@@ -311,6 +345,7 @@ interface DatumIds
     public const EPSG_AVERAGE_TERRESTRIAL_SYSTEM_1977 = 6122;
 
     /**
+     * Ayabelle Lighthouse
      * Type: geodetic
      * Extent: Djibouti - onshore and offshore.
      * Scope: Military survey.
@@ -319,6 +354,7 @@ interface DatumIds
     public const EPSG_AYABELLE_LIGHTHOUSE = 6713;
 
     /**
+     * Azores Central Islands 1948
      * Type: geodetic
      * Extent: Portugal - central Azores onshore - Faial, Graciosa, Pico, Sao Jorge, Terceira.
      * Scope: Topographic mapping.
@@ -329,6 +365,7 @@ interface DatumIds
     public const EPSG_AZORES_CENTRAL_ISLANDS_1948 = 6183;
 
     /**
+     * Azores Central Islands 1995
      * Type: geodetic
      * Extent: Portugal - central Azores onshore - Faial, Graciosa, Pico, Sao Jorge, Terceira.
      * Scope: Topographic mapping.
@@ -338,6 +375,7 @@ interface DatumIds
     public const EPSG_AZORES_CENTRAL_ISLANDS_1995 = 6665;
 
     /**
+     * Azores Occidental Islands 1939
      * Type: geodetic
      * Extent: Portugal - western Azores onshore - Flores, Corvo.
      * Scope: Topographic mapping.
@@ -346,6 +384,7 @@ interface DatumIds
     public const EPSG_AZORES_OCCIDENTAL_ISLANDS_1939 = 6182;
 
     /**
+     * Azores Oriental Islands 1940
      * Type: geodetic
      * Extent: Portugal - eastern Azores onshore - Sao Miguel, Santa Maria, Formigas.
      * Scope: Topographic mapping.
@@ -355,6 +394,7 @@ interface DatumIds
     public const EPSG_AZORES_ORIENTAL_ISLANDS_1940 = 6184;
 
     /**
+     * Azores Oriental Islands 1995
      * Type: geodetic
      * Extent: Portugal - eastern Azores onshore - Sao Miguel, Santa Maria, Formigas.
      * Scope: Topographic mapping.
@@ -364,6 +404,7 @@ interface DatumIds
     public const EPSG_AZORES_ORIENTAL_ISLANDS_1995 = 6664;
 
     /**
+     * Baltic 1957
      * Type: vertical
      * Extent: Czechia; Slovakia.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -374,6 +415,7 @@ interface DatumIds
     public const EPSG_BALTIC_1957 = 1202;
 
     /**
+     * Baltic 1977
      * Type: vertical
      * Extent: Armenia; Azerbaijan; Belarus; Estonia - onshore; Georgia - onshore; Kazakhstan; Kyrgyzstan; Latvia -
      * onshore; Lithuania - onshore; Moldova; Russian Federation - onshore; Tajikistan; Turkmenistan; Ukraine -
@@ -387,6 +429,7 @@ interface DatumIds
     public const EPSG_BALTIC_1977 = 5105;
 
     /**
+     * Baltic 1980
      * Type: vertical
      * Extent: Hungary.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -396,6 +439,7 @@ interface DatumIds
     public const EPSG_BALTIC_1980 = 5185;
 
     /**
+     * Baltic 1982
      * Type: vertical
      * Extent: Bulgaria - onshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -406,6 +450,7 @@ interface DatumIds
     public const EPSG_BALTIC_1982 = 5184;
 
     /**
+     * Bandar Abbas
      * Type: vertical
      * Extent: Iran - onshore.
      * Scope: Geodesy, topographic mapping.
@@ -415,6 +460,7 @@ interface DatumIds
     public const EPSG_BANDAR_ABBAS = 5150;
 
     /**
+     * Barbados 1938
      * Type: geodetic
      * Extent: Barbados - onshore.
      * Scope: Topographic mapping.
@@ -424,6 +470,7 @@ interface DatumIds
     public const EPSG_BARBADOS_1938 = 6212;
 
     /**
+     * Batavia
      * Type: geodetic
      * Extent: Indonesia - Bali, Java and western Sumatra onshore, offshore southern Java Sea, Madura Strait and
      * western Bali Sea.
@@ -434,6 +481,7 @@ interface DatumIds
     public const EPSG_BATAVIA = 6211;
 
     /**
+     * Batavia (Jakarta)
      * Type: geodetic
      * Extent: Indonesia - onshore - Bali, Java and western Sumatra.
      * Scope: Topographic mapping.
@@ -443,6 +491,7 @@ interface DatumIds
     public const EPSG_BATAVIA_JAKARTA = 6813;
 
     /**
+     * Beduaram
      * Type: geodetic
      * Extent: Niger - southeast
      * Scope: Topographic mapping.
@@ -450,6 +499,7 @@ interface DatumIds
     public const EPSG_BEDUARAM = 6213;
 
     /**
+     * Beijing 1954
      * Type: geodetic
      * Extent: China - onshore and offshore.
      * Scope: Topographic mapping.
@@ -460,6 +510,7 @@ interface DatumIds
     public const EPSG_BEIJING_1954 = 6214;
 
     /**
+     * Bekaa Valley 1920
      * Type: geodetic
      * Extent: Lebanon - onshore.
      * Scope: Topographic mapping.
@@ -467,6 +518,7 @@ interface DatumIds
     public const EPSG_BEKAA_VALLEY_1920 = 1137;
 
     /**
+     * Belfast Lough
      * Type: vertical
      * Extent: United Kingdom (UK) - Northern Ireland (Ulster) - onshore.
      * Scope: Topographic mapping (large scale).
@@ -477,6 +529,7 @@ interface DatumIds
     public const EPSG_BELFAST_LOUGH = 5131;
 
     /**
+     * Bellevue
      * Type: geodetic
      * Extent: Vanuatu - southern islands - Aneityum, Efate, Erromango and Tanna.
      * Scope: Military survey.
@@ -487,6 +540,7 @@ interface DatumIds
     public const EPSG_BELLEVUE = 6714;
 
     /**
+     * Bermuda 1957
      * Type: geodetic
      * Extent: Bermuda - onshore.
      * Scope: Topographic mapping.
@@ -495,6 +549,7 @@ interface DatumIds
     public const EPSG_BERMUDA_1957 = 6216;
 
     /**
+     * Bermuda 2000
      * Type: geodetic
      * Extent: Bermuda - onshore and offshore.
      * Scope: Cadastre, engineering survey, topographic mapping.
@@ -503,6 +558,7 @@ interface DatumIds
     public const EPSG_BERMUDA_2000 = 6762;
 
     /**
+     * Bern 1938
      * Type: geodetic
      * Extent: Liechtenstein; Switzerland.
      * Scope: Topographic mapping.
@@ -513,6 +569,7 @@ interface DatumIds
     public const EPSG_BERN_1938 = 6306;
 
     /**
+     * Bhutan National Geodetic Datum
      * Type: geodetic
      * Extent: Bhutan.
      * Scope: Geodesy.
@@ -521,6 +578,7 @@ interface DatumIds
     public const EPSG_BHUTAN_NATIONAL_GEODETIC_DATUM = 1058;
 
     /**
+     * Bioko
      * Type: geodetic
      * Extent: Equatorial Guinea - Bioko onshore.
      * Scope: Topographic mapping.
@@ -528,6 +586,7 @@ interface DatumIds
     public const EPSG_BIOKO = 1136;
 
     /**
+     * Bissau
      * Type: geodetic
      * Extent: Guinea-Bissau - onshore.
      * Scope: Topographic mapping.
@@ -535,6 +594,7 @@ interface DatumIds
     public const EPSG_BISSAU = 6165;
 
     /**
+     * Black Sea
      * Type: vertical
      * Extent: Georgia - onshore.
      * Scope: Hydrography, topographic mapping.
@@ -544,6 +604,7 @@ interface DatumIds
     public const EPSG_BLACK_SEA = 5134;
 
     /**
+     * Bluff 1955
      * Type: vertical
      * Extent: New Zealand - South Island - Bluff vertical CRS area.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -552,6 +613,7 @@ interface DatumIds
     public const EPSG_BLUFF_1955 = 5158;
 
     /**
+     * Bogota 1975
      * Type: geodetic
      * Extent: Colombia - mainland and offshore Caribbean.
      * Scope: Topographic mapping.
@@ -561,6 +623,7 @@ interface DatumIds
     public const EPSG_BOGOTA_1975 = 6218;
 
     /**
+     * Bogota 1975 (Bogota)
      * Type: geodetic
      * Extent: Colombia - mainland onshore.
      * Scope: Topographic mapping.
@@ -569,6 +632,7 @@ interface DatumIds
     public const EPSG_BOGOTA_1975_BOGOTA = 6802;
 
     /**
+     * Bora Bora SAU 2001
      * Type: vertical
      * Extent: French Polynesia - Society Islands - Bora Bora.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -578,6 +642,7 @@ interface DatumIds
     public const EPSG_BORA_BORA_SAU_2001 = 5202;
 
     /**
+     * British Isles height ensemble
      * Type: ensemble
      * Extent: United Kingdom (UK) - offshore to boundary of UKCS within 49°45'N to 61°N and 9°W to 2°E; onshore
      * Great Britain (England, Wales and Scotland) and Northern Ireland. Ireland onshore. Isle of Man onshore.
@@ -588,6 +653,7 @@ interface DatumIds
     public const EPSG_BRITISH_ISLES_HEIGHT_ENSEMBLE = 1288;
 
     /**
+     * Bukit Rimpah
      * Type: geodetic
      * Extent: Indonesia - Banga and Belitung Islands.
      * Scope: Topographic mapping.
@@ -596,6 +662,7 @@ interface DatumIds
     public const EPSG_BUKIT_RIMPAH = 6219;
 
     /**
+     * Bulgaria Geodetic System 2005
      * Type: geodetic
      * Extent: Bulgaria - onshore and offshore.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -605,6 +672,7 @@ interface DatumIds
     public const EPSG_BULGARIA_GEODETIC_SYSTEM_2005 = 1167;
 
     /**
+     * CH1903
      * Type: geodetic
      * Extent: Liechtenstein; Switzerland.
      * Scope: Topographic mapping.
@@ -613,6 +681,7 @@ interface DatumIds
     public const EPSG_CH1903 = 6149;
 
     /**
+     * CH1903 (Bern)
      * Type: geodetic
      * Extent: Liechtenstein; Switzerland.
      * Scope: Topographic mapping.
@@ -621,6 +690,7 @@ interface DatumIds
     public const EPSG_CH1903_BERN = 6801;
 
     /**
+     * CH1903+
      * Type: geodetic
      * Extent: Liechtenstein; Switzerland.
      * Scope: Geodesy, topographic mapping.
@@ -629,6 +699,7 @@ interface DatumIds
     public const EPSG_CH1903_PLUS = 6150;
 
     /**
+     * CR-SIRGAS
      * Type: geodetic
      * Extent: Costa Rica - onshore and offshore.
      * Scope: Geodesy.
@@ -638,6 +709,7 @@ interface DatumIds
     public const EPSG_CR_SIRGAS = 1225;
 
     /**
+     * Cadastre 1997
      * Type: geodetic
      * Extent: Mayotte - onshore.
      * Scope: Cadastre.
@@ -647,6 +719,7 @@ interface DatumIds
     public const EPSG_CADASTRE_1997 = 1037;
 
     /**
+     * Cais da Figueirinha - Angra do Heroismo
      * Type: vertical
      * Extent: Portugal - central Azores - Terceira island onshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -656,6 +729,7 @@ interface DatumIds
     public const EPSG_CAIS_DA_FIGUEIRINHA_ANGRA_DO_HEROISMO = 1107;
 
     /**
+     * Cais da Madalena
      * Type: vertical
      * Extent: Portugal - central Azores - Pico island onshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -665,6 +739,7 @@ interface DatumIds
     public const EPSG_CAIS_DA_MADALENA = 1105;
 
     /**
+     * Cais da Pontinha - Funchal
      * Type: vertical
      * Extent: Portugal - Madeira and Desertas islands - onshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -674,6 +749,7 @@ interface DatumIds
     public const EPSG_CAIS_DA_PONTINHA_FUNCHAL = 1101;
 
     /**
+     * Cais da Vila - Porto Santo
      * Type: vertical
      * Extent: Portugal - Porto Santo island (Madeira archipelago) onshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -683,6 +759,7 @@ interface DatumIds
     public const EPSG_CAIS_DA_VILA_PORTO_SANTO = 1102;
 
     /**
+     * Cais da Vila do Porto
      * Type: vertical
      * Extent: Portugal - eastern Azores onshore - Santa Maria, Formigas.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -692,6 +769,7 @@ interface DatumIds
     public const EPSG_CAIS_DA_VILA_DO_PORTO = 1109;
 
     /**
+     * Cais das Velas
      * Type: vertical
      * Extent: Portugal - central Azores - Sao Jorge island onshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -701,6 +779,7 @@ interface DatumIds
     public const EPSG_CAIS_DAS_VELAS = 1103;
 
     /**
+     * Camacupa 1948
      * Type: geodetic
      * Extent: Angola - Angola proper - onshore and offshore.
      * Scope: Coastal hydrography, offshore oil and gas exploration and production.
@@ -710,6 +789,7 @@ interface DatumIds
     public const EPSG_CAMACUPA_1948 = 6220;
 
     /**
+     * Camacupa 2015
      * Type: geodetic
      * Extent: Angola - onshore and offshore.
      * Scope: EEZ delimitation.
@@ -719,6 +799,7 @@ interface DatumIds
     public const EPSG_CAMACUPA_2015 = 1217;
 
     /**
+     * Camp Area Astro
      * Type: geodetic
      * Extent: Antarctica - McMurdo Sound, Camp McMurdo area.
      * Scope: Geodesy, topographic mapping.
@@ -726,6 +807,7 @@ interface DatumIds
     public const EPSG_CAMP_AREA_ASTRO = 6715;
 
     /**
+     * Campo Inchauspe
      * Type: geodetic
      * Extent: Argentina - mainland onshore and Atlantic offshore Tierra del Fuego.
      * Scope: Topographic mapping.
@@ -734,6 +816,7 @@ interface DatumIds
     public const EPSG_CAMPO_INCHAUSPE = 6221;
 
     /**
+     * Canadian Geodetic Vertical Datum of 1928
      * Type: vertical
      * Extent: Canada - onshore - Alberta; British Columbia; Manitoba south of 57°N; New Brunswick; Northwest
      * Territories south west of a line between 60°N, 110°W and the coast at 132°W; Nova Scotia; Ontario south of
@@ -746,6 +829,7 @@ interface DatumIds
     public const EPSG_CANADIAN_GEODETIC_VERTICAL_DATUM_OF_1928 = 5114;
 
     /**
+     * Canadian Geodetic Vertical Datum of 2013 (CGG2013)
      * Type: vertical
      * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
      * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
@@ -759,6 +843,7 @@ interface DatumIds
     public const EPSG_CANADIAN_GEODETIC_VERTICAL_DATUM_OF_2013_CGG2013 = 1127;
 
     /**
+     * Canadian Geodetic Vertical Datum of 2013 (CGG2013a)
      * Type: vertical
      * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
      * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
@@ -771,6 +856,7 @@ interface DatumIds
     public const EPSG_CANADIAN_GEODETIC_VERTICAL_DATUM_OF_2013_CGG2013A = 1256;
 
     /**
+     * Cape
      * Type: geodetic
      * Extent: Botswana; Eswatini (Swaziland); Lesotho; South Africa - mainland.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -779,6 +865,7 @@ interface DatumIds
     public const EPSG_CAPE = 6222;
 
     /**
+     * Cape Canaveral
      * Type: geodetic
      * Extent: North America - onshore - Bahamas and USA - Florida (east).
      * Scope: US space and military operations.
@@ -787,6 +874,7 @@ interface DatumIds
     public const EPSG_CAPE_CANAVERAL = 6717;
 
     /**
+     * Carthage
      * Type: geodetic
      * Extent: Tunisia - onshore and offshore.
      * Scope: Topographic mapping.
@@ -797,6 +885,7 @@ interface DatumIds
     public const EPSG_CARTHAGE = 6223;
 
     /**
+     * Carthage (Paris)
      * Type: geodetic
      * Extent: Tunisia - onshore.
      * Scope: Topographic mapping.
@@ -806,6 +895,7 @@ interface DatumIds
     public const EPSG_CARTHAGE_PARIS = 6816;
 
     /**
+     * Cascais
      * Type: vertical
      * Extent: Portugal - mainland - onshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -815,6 +905,7 @@ interface DatumIds
     public const EPSG_CASCAIS = 5178;
 
     /**
+     * Caspian Sea
      * Type: vertical
      * Extent: Azerbaijan - offshore; Kazakhstan - offshore; Russian Federation - Caspian Sea; Turkmenistan - offshore.
      * Scope: Hydrography and nautical charting.
@@ -823,6 +914,7 @@ interface DatumIds
     public const EPSG_CASPIAN_SEA = 5106;
 
     /**
+     * Cayman Brac Vertical Datum 1961
      * Type: vertical
      * Extent: Cayman Islands - Cayman Brac.
      * Scope: Geodesy, topographic mapping.
@@ -830,6 +922,7 @@ interface DatumIds
     public const EPSG_CAYMAN_BRAC_VERTICAL_DATUM_1961 = 1099;
 
     /**
+     * Cayman Islands Geodetic Datum 2011
      * Type: geodetic
      * Extent: Cayman Islands - onshore and offshore. Includes Grand Cayman, Little Cayman and Cayman Brac.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -839,6 +932,7 @@ interface DatumIds
     public const EPSG_CAYMAN_ISLANDS_GEODETIC_DATUM_2011 = 1100;
 
     /**
+     * Centre Spatial Guyanais 1967
      * Type: geodetic
      * Extent: French Guiana - coastal area.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -848,6 +942,7 @@ interface DatumIds
     public const EPSG_CENTRE_SPATIAL_GUYANAIS_1967 = 6623;
 
     /**
+     * Ceuta 2
      * Type: vertical
      * Extent: Spain - Ceuta onshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -857,6 +952,7 @@ interface DatumIds
     public const EPSG_CEUTA_2 = 1285;
 
     /**
+     * Chatham Islands Datum 1971
      * Type: geodetic
      * Extent: New Zealand - Chatham Islands group - onshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -866,6 +962,7 @@ interface DatumIds
     public const EPSG_CHATHAM_ISLANDS_DATUM_1971 = 6672;
 
     /**
+     * Chatham Islands Datum 1979
      * Type: geodetic
      * Extent: New Zealand - Chatham Islands group - onshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -876,6 +973,7 @@ interface DatumIds
     public const EPSG_CHATHAM_ISLANDS_DATUM_1979 = 6673;
 
     /**
+     * China 2000
      * Type: geodetic
      * Extent: China - onshore and offshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -886,6 +984,7 @@ interface DatumIds
     public const EPSG_CHINA_2000 = 1043;
 
     /**
+     * Chos Malal 1914
      * Type: geodetic
      * Extent: Argentina - Mendoza province, Neuquen province, western La Pampa province and western Rio Negro
      * province.
@@ -897,6 +996,7 @@ interface DatumIds
     public const EPSG_CHOS_MALAL_1914 = 6160;
 
     /**
+     * Chua
      * Type: geodetic
      * Extent: Brazil - south of 18°S and west of 54°W, plus Distrito Federal. Paraguay - north.
      * Scope: Geodesy.
@@ -907,6 +1007,7 @@ interface DatumIds
     public const EPSG_CHUA = 6224;
 
     /**
+     * Cocos Islands 1965
      * Type: geodetic
      * Extent: Cocos (Keeling) Islands - onshore.
      * Scope: Military survey.
@@ -915,6 +1016,7 @@ interface DatumIds
     public const EPSG_COCOS_ISLANDS_1965 = 6708;
 
     /**
+     * Combani 1950
      * Type: geodetic
      * Extent: Mayotte - onshore.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -924,6 +1026,7 @@ interface DatumIds
     public const EPSG_COMBANI_1950 = 6632;
 
     /**
+     * Conakry 1905
      * Type: geodetic
      * Extent: Guinea - onshore.
      * Scope: Topographic mapping.
@@ -932,6 +1035,7 @@ interface DatumIds
     public const EPSG_CONAKRY_1905 = 6315;
 
     /**
+     * Congo 1960 Pointe Noire
      * Type: geodetic
      * Extent: Congo - onshore and offshore.
      * Scope: Topographic mapping.
@@ -940,6 +1044,7 @@ interface DatumIds
     public const EPSG_CONGO_1960_POINTE_NOIRE = 6282;
 
     /**
+     * Constanta
      * Type: vertical
      * Extent: Romania - onshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -949,6 +1054,7 @@ interface DatumIds
     public const EPSG_CONSTANTA = 5179;
 
     /**
+     * Corrego Alegre 1961
      * Type: geodetic
      * Extent: Brazil - onshore - between 18°S and 27°30'S, also east of 54°W between 15°S and 18°S.
      * Scope: Geodesy, topographic mapping.
@@ -959,6 +1065,7 @@ interface DatumIds
     public const EPSG_CORREGO_ALEGRE_1961 = 1074;
 
     /**
+     * Corrego Alegre 1970-72
      * Type: geodetic
      * Extent: Brazil - onshore - west of 54°W and south of 18°S; also south of 15°S between 54°W and 42°W; also
      * east of 42°W.
@@ -970,6 +1077,7 @@ interface DatumIds
     public const EPSG_CORREGO_ALEGRE_1970_72 = 6225;
 
     /**
+     * Costa Rica 2005
      * Type: geodetic
      * Extent: Costa Rica - onshore and offshore.
      * Scope: Geodesy.
@@ -980,6 +1088,7 @@ interface DatumIds
     public const EPSG_COSTA_RICA_2005 = 1065;
 
     /**
+     * Croatian Terrestrial Reference System
      * Type: geodetic
      * Extent: Croatia - onshore and offshore.
      * Scope: Geodesy.
@@ -989,6 +1098,7 @@ interface DatumIds
     public const EPSG_CROATIAN_TERRESTRIAL_REFERENCE_SYSTEM = 6761;
 
     /**
+     * Croatian Vertical Reference Datum 1971
      * Type: vertical
      * Extent: Croatia - onshore.
      * Scope: Geodesy.
@@ -998,6 +1108,7 @@ interface DatumIds
     public const EPSG_CROATIAN_VERTICAL_REFERENCE_DATUM_1971 = 5207;
 
     /**
+     * Cyprus Geodetic Reference System 1993
      * Type: geodetic
      * Extent: Cyprus - onshore.
      * Scope: Cadastre, engineering survey, topographic mapping.
@@ -1008,6 +1119,7 @@ interface DatumIds
     public const EPSG_CYPRUS_GEODETIC_REFERENCE_SYSTEM_1993 = 1112;
 
     /**
+     * Dabola 1981
      * Type: geodetic
      * Extent: Guinea - onshore.
      * Scope: Topographic mapping.
@@ -1015,6 +1127,7 @@ interface DatumIds
     public const EPSG_DABOLA_1981 = 6155;
 
     /**
+     * Danger 1950
      * Type: vertical
      * Extent: St Pierre and Miquelon - onshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -1023,6 +1136,7 @@ interface DatumIds
     public const EPSG_DANGER_1950 = 5190;
 
     /**
+     * Dansk Normal Nul
      * Type: vertical
      * Extent: Denmark - onshore.
      * Scope: Engineering survey, topographic mapping.
@@ -1032,6 +1146,7 @@ interface DatumIds
     public const EPSG_DANSK_NORMAL_NUL = 5132;
 
     /**
+     * Dansk Vertikal Reference 1990
      * Type: vertical
      * Extent: Denmark - onshore.
      * Scope: Engineering survey, topographic mapping.
@@ -1042,6 +1157,7 @@ interface DatumIds
     public const EPSG_DANSK_VERTIKAL_REFERENCE_1990 = 5206;
 
     /**
+     * Datum 73
      * Type: geodetic
      * Extent: Portugal - mainland - onshore.
      * Scope: Topographic mapping.
@@ -1050,6 +1166,7 @@ interface DatumIds
     public const EPSG_DATUM_73 = 6274;
 
     /**
+     * Datum Altimetrico de Costa Rica 1952
      * Type: vertical
      * Extent: Costa Rica - onshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -1059,6 +1176,7 @@ interface DatumIds
     public const EPSG_DATUM_ALTIMETRICO_DE_COSTA_RICA_1952 = 1226;
 
     /**
+     * Datum Geodesi Nasional 1995
      * Type: geodetic
      * Extent: Indonesia - onshore and offshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -1068,6 +1186,7 @@ interface DatumIds
     public const EPSG_DATUM_GEODESI_NASIONAL_1995 = 6755;
 
     /**
+     * Dealul Piscului 1930
      * Type: geodetic
      * Extent: Romania - onshore.
      * Scope: Topographic mapping.
@@ -1077,6 +1196,7 @@ interface DatumIds
     public const EPSG_DEALUL_PISCULUI_1930 = 6316;
 
     /**
+     * Deception Island
      * Type: geodetic
      * Extent: Antarctica - South Shetland Islands - Deception Island.
      * Scope: Military survey.
@@ -1084,6 +1204,7 @@ interface DatumIds
     public const EPSG_DECEPTION_ISLAND = 6736;
 
     /**
+     * Deir ez Zor
      * Type: geodetic
      * Extent: Lebanon - onshore. Syrian Arab Republic - onshore.
      * Scope: Topographic mapping.
@@ -1092,6 +1213,7 @@ interface DatumIds
     public const EPSG_DEIR_EZ_ZOR = 6227;
 
     /**
+     * Deutsche Bahn Reference System
      * Type: geodetic
      * Extent: Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen,
      * Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt,
@@ -1103,6 +1225,7 @@ interface DatumIds
     public const EPSG_DEUTSCHE_BAHN_REFERENCE_SYSTEM = 1081;
 
     /**
+     * Deutsches Hauptdreiecksnetz
      * Type: geodetic
      * Extent: Germany - states of former West Germany onshore - Baden-Wurtemberg, Bayern, Bremen, Hamburg, Hessen,
      * Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Schleswig-Holstein.
@@ -1113,6 +1236,7 @@ interface DatumIds
     public const EPSG_DEUTSCHES_HAUPTDREIECKSNETZ = 6314;
 
     /**
+     * Deutsches Haupthoehennetz 1912
      * Type: vertical
      * Extent: Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen,
      * Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt,
@@ -1126,6 +1250,7 @@ interface DatumIds
     public const EPSG_DEUTSCHES_HAUPTHOEHENNETZ_1912 = 1161;
 
     /**
+     * Deutsches Haupthoehennetz 1985
      * Type: vertical
      * Extent: Germany - states of former West Germany onshore - Baden-Wurtemberg, Bayern, Bremen, Hamburg, Hessen,
      * Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Schleswig-Holstein.
@@ -1137,6 +1262,7 @@ interface DatumIds
     public const EPSG_DEUTSCHES_HAUPTHOEHENNETZ_1985 = 5182;
 
     /**
+     * Deutsches Haupthoehennetz 1992
      * Type: vertical
      * Extent: Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen,
      * Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt,
@@ -1149,6 +1275,7 @@ interface DatumIds
     public const EPSG_DEUTSCHES_HAUPTHOEHENNETZ_1992 = 5181;
 
     /**
+     * Deutsches Haupthoehennetz 2016
      * Type: vertical
      * Extent: Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen,
      * Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt,
@@ -1161,6 +1288,7 @@ interface DatumIds
     public const EPSG_DEUTSCHES_HAUPTHOEHENNETZ_2016 = 1170;
 
     /**
+     * Diego Garcia 1969
      * Type: geodetic
      * Extent: British Indian Ocean Territory - Chagos Archipelago - Diego Garcia.
      * Scope: Military survey.
@@ -1169,6 +1297,7 @@ interface DatumIds
     public const EPSG_DIEGO_GARCIA_1969 = 6724;
 
     /**
+     * Dominica 1945
      * Type: geodetic
      * Extent: Dominica - onshore.
      * Scope: Topographic mapping.
@@ -1177,6 +1306,7 @@ interface DatumIds
     public const EPSG_DOMINICA_1945 = 6602;
 
     /**
+     * Douala 1948
      * Type: geodetic
      * Extent: Cameroon - coastal area.
      * Scope: Topographic mapping.
@@ -1186,6 +1316,7 @@ interface DatumIds
     public const EPSG_DOUALA_1948 = 6192;
 
     /**
+     * Douglas
      * Type: vertical
      * Extent: Isle of Man - onshore.
      * Scope: Geodesy, topographic mapping.
@@ -1196,6 +1327,7 @@ interface DatumIds
     public const EPSG_DOUGLAS = 5148;
 
     /**
+     * Dunedin 1958
      * Type: vertical
      * Extent: New Zealand - South Island - between approximately 44°S and 46°S - Dunedin vertical CRS area.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -1204,6 +1336,7 @@ interface DatumIds
     public const EPSG_DUNEDIN_1958 = 5159;
 
     /**
+     * Dunedin-Bluff 1960
      * Type: vertical
      * Extent: New Zealand - South Island - Dunedin-Bluff vertical CRS area.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -1212,6 +1345,7 @@ interface DatumIds
     public const EPSG_DUNEDIN_BLUFF_1960 = 1040;
 
     /**
+     * Durres
      * Type: vertical
      * Extent: Albania - onshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -1221,6 +1355,7 @@ interface DatumIds
     public const EPSG_DURRES = 5175;
 
     /**
+     * EGM2008 geoid
      * Type: vertical
      * Extent: World.
      * Scope: Geodesy.
@@ -1232,6 +1367,7 @@ interface DatumIds
     public const EPSG_EGM2008_GEOID = 1027;
 
     /**
+     * EGM84 geoid
      * Type: vertical
      * Extent: World.
      * Scope: Geodesy.
@@ -1242,6 +1378,7 @@ interface DatumIds
     public const EPSG_EGM84_GEOID = 5203;
 
     /**
+     * EGM96 geoid
      * Type: vertical
      * Extent: World.
      * Scope: Geodesy.
@@ -1252,6 +1389,7 @@ interface DatumIds
     public const EPSG_EGM96_GEOID = 5171;
 
     /**
+     * EPSG example wellbore vertical datum
      * Type: vertical
      * Extent: Description of the extent of the CRS.
      * Scope: Wellbore survey.
@@ -1264,6 +1402,7 @@ interface DatumIds
     public const EPSG_EPSG_EXAMPLE_WELLBORE_VERTICAL_DATUM = 1205;
 
     /**
+     * Easter Island 1967
      * Type: geodetic
      * Extent: Chile - Easter Island onshore.
      * Scope: Military survey.
@@ -1271,6 +1410,7 @@ interface DatumIds
     public const EPSG_EASTER_ISLAND_1967 = 6719;
 
     /**
+     * Egypt 1907
      * Type: geodetic
      * Extent: Egypt - onshore and offshore.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -1279,6 +1419,7 @@ interface DatumIds
     public const EPSG_EGYPT_1907 = 6229;
 
     /**
+     * Egypt 1930
      * Type: geodetic
      * Extent: Egypt - onshore.
      * Scope: Geodesy.
@@ -1290,6 +1431,7 @@ interface DatumIds
     public const EPSG_EGYPT_1930 = 6199;
 
     /**
+     * Egypt Gulf of Suez S-650 TL
      * Type: geodetic
      * Extent: Egypt - Gulf of Suez.
      * Scope: Oil and gas exploration and production.
@@ -1302,6 +1444,7 @@ interface DatumIds
     public const EPSG_EGYPT_GULF_OF_SUEZ_S_650_TL = 6706;
 
     /**
+     * El Hierro
      * Type: vertical
      * Extent: Spain - Canary Islands - El Hierro onshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -1311,6 +1454,7 @@ interface DatumIds
     public const EPSG_EL_HIERRO = 1284;
 
     /**
+     * Estonia 1992
      * Type: geodetic
      * Extent: Estonia - onshore.
      * Scope: Geodesy, topographic mapping.
@@ -1320,6 +1464,7 @@ interface DatumIds
     public const EPSG_ESTONIA_1992 = 6133;
 
     /**
+     * Estonia 1997
      * Type: geodetic
      * Extent: Estonia - onshore and offshore.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -1329,6 +1474,7 @@ interface DatumIds
     public const EPSG_ESTONIA_1997 = 6180;
 
     /**
+     * European Datum 1950
      * Type: geodetic
      * Extent: Europe - west: Andorra; Cyprus; Denmark - onshore and offshore; Faroe Islands - onshore; France -
      * offshore; Germany - offshore North Sea; Gibraltar; Greece - offshore; Israel - offshore; Italy including San
@@ -1343,6 +1489,7 @@ interface DatumIds
     public const EPSG_EUROPEAN_DATUM_1950 = 6230;
 
     /**
+     * European Datum 1950(1977)
      * Type: geodetic
      * Extent: Iran - onshore and offshore.
      * Scope: Topographic mapping.
@@ -1352,6 +1499,7 @@ interface DatumIds
     public const EPSG_EUROPEAN_DATUM_1950_1977 = 6154;
 
     /**
+     * European Datum 1979
      * Type: geodetic
      * Extent: Europe - west.
      * Scope: Geodesy.
@@ -1362,6 +1510,7 @@ interface DatumIds
     public const EPSG_EUROPEAN_DATUM_1979 = 6668;
 
     /**
+     * European Datum 1987
      * Type: geodetic
      * Extent: Europe - west.
      * Scope: Geodesy.
@@ -1371,6 +1520,7 @@ interface DatumIds
     public const EPSG_EUROPEAN_DATUM_1987 = 6231;
 
     /**
+     * European Libyan Datum 1979
      * Type: geodetic
      * Extent: Libya - onshore and offshore.
      * Scope: Topographic mapping.
@@ -1379,6 +1529,7 @@ interface DatumIds
     public const EPSG_EUROPEAN_LIBYAN_DATUM_1979 = 6159;
 
     /**
+     * European Terrestrial Reference Frame 1989
      * Type: geodetic
      * Extent: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria;
      * Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary;
@@ -1394,6 +1545,7 @@ interface DatumIds
     public const EPSG_EUROPEAN_TERRESTRIAL_REFERENCE_FRAME_1989 = 1178;
 
     /**
+     * European Terrestrial Reference Frame 1990
      * Type: geodetic
      * Extent: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria;
      * Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary;
@@ -1409,6 +1561,7 @@ interface DatumIds
     public const EPSG_EUROPEAN_TERRESTRIAL_REFERENCE_FRAME_1990 = 1179;
 
     /**
+     * European Terrestrial Reference Frame 1991
      * Type: geodetic
      * Extent: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria;
      * Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary;
@@ -1424,6 +1577,7 @@ interface DatumIds
     public const EPSG_EUROPEAN_TERRESTRIAL_REFERENCE_FRAME_1991 = 1180;
 
     /**
+     * European Terrestrial Reference Frame 1992
      * Type: geodetic
      * Extent: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria;
      * Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary;
@@ -1439,6 +1593,7 @@ interface DatumIds
     public const EPSG_EUROPEAN_TERRESTRIAL_REFERENCE_FRAME_1992 = 1181;
 
     /**
+     * European Terrestrial Reference Frame 1993
      * Type: geodetic
      * Extent: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria;
      * Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary;
@@ -1454,6 +1609,7 @@ interface DatumIds
     public const EPSG_EUROPEAN_TERRESTRIAL_REFERENCE_FRAME_1993 = 1182;
 
     /**
+     * European Terrestrial Reference Frame 1994
      * Type: geodetic
      * Extent: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria;
      * Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary;
@@ -1469,6 +1625,7 @@ interface DatumIds
     public const EPSG_EUROPEAN_TERRESTRIAL_REFERENCE_FRAME_1994 = 1183;
 
     /**
+     * European Terrestrial Reference Frame 1996
      * Type: geodetic
      * Extent: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria;
      * Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary;
@@ -1484,6 +1641,7 @@ interface DatumIds
     public const EPSG_EUROPEAN_TERRESTRIAL_REFERENCE_FRAME_1996 = 1184;
 
     /**
+     * European Terrestrial Reference Frame 1997
      * Type: geodetic
      * Extent: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria;
      * Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary;
@@ -1499,6 +1657,7 @@ interface DatumIds
     public const EPSG_EUROPEAN_TERRESTRIAL_REFERENCE_FRAME_1997 = 1185;
 
     /**
+     * European Terrestrial Reference Frame 2000
      * Type: geodetic
      * Extent: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria;
      * Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary;
@@ -1516,6 +1675,7 @@ interface DatumIds
     public const EPSG_EUROPEAN_TERRESTRIAL_REFERENCE_FRAME_2000 = 1186;
 
     /**
+     * European Terrestrial Reference Frame 2005
      * Type: geodetic
      * Extent: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria;
      * Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary;
@@ -1533,6 +1693,7 @@ interface DatumIds
     public const EPSG_EUROPEAN_TERRESTRIAL_REFERENCE_FRAME_2005 = 1204;
 
     /**
+     * European Terrestrial Reference Frame 2014
      * Type: geodetic
      * Extent: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria;
      * Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary;
@@ -1548,6 +1709,7 @@ interface DatumIds
     public const EPSG_EUROPEAN_TERRESTRIAL_REFERENCE_FRAME_2014 = 1206;
 
     /**
+     * European Terrestrial Reference System 1989 ensemble
      * Type: ensemble
      * Extent: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria;
      * Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary;
@@ -1563,6 +1725,7 @@ interface DatumIds
     public const EPSG_EUROPEAN_TERRESTRIAL_REFERENCE_SYSTEM_1989_ENSEMBLE = 6258;
 
     /**
+     * European Vertical Reference Frame 2000
      * Type: vertical
      * Extent: Europe - onshore - Andorra; Austria; Belgium; Bosnia and Herzegovina; Croatia; Czechia; Denmark;
      * Estonia; Finland; France - mainland; Germany; Gibraltar; Hungary; Italy - mainland and Sicily; Latvia;
@@ -1578,6 +1741,7 @@ interface DatumIds
     public const EPSG_EUROPEAN_VERTICAL_REFERENCE_FRAME_2000 = 5129;
 
     /**
+     * European Vertical Reference Frame 2000 Austria
      * Type: vertical
      * Extent: Austria.
      * Scope: Geodesy.
@@ -1588,6 +1752,7 @@ interface DatumIds
     public const EPSG_EUROPEAN_VERTICAL_REFERENCE_FRAME_2000_AUSTRIA = 1261;
 
     /**
+     * European Vertical Reference Frame 2007
      * Type: vertical
      * Extent: Europe - onshore - Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Czechia;
      * Denmark; Estonia; Finland; France - mainland; Germany; Gibraltar, Hungary; Italy - mainland and Sicily; Latvia;
@@ -1602,6 +1767,7 @@ interface DatumIds
     public const EPSG_EUROPEAN_VERTICAL_REFERENCE_FRAME_2007 = 5215;
 
     /**
+     * European Vertical Reference Frame 2019
      * Type: vertical
      * Extent: Europe - onshore - Andorra; Austria; Belarus; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia;
      * Czechia; Denmark; Estonia; Finland; France - mainland; Germany; Gibraltar, Hungary; Italy - mainland and Sicily;
@@ -1616,6 +1782,7 @@ interface DatumIds
     public const EPSG_EUROPEAN_VERTICAL_REFERENCE_FRAME_2019 = 1274;
 
     /**
+     * European Vertical Reference Frame 2019 mean tide
      * Type: vertical
      * Extent: Europe - onshore - Andorra; Austria; Belarus; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia;
      * Czechia; Denmark; Estonia; Finland; France - mainland; Germany; Gibraltar, Hungary; Italy - mainland and Sicily;
@@ -1632,6 +1799,7 @@ interface DatumIds
     public const EPSG_EUROPEAN_VERTICAL_REFERENCE_FRAME_2019_MEAN_TIDE = 1287;
 
     /**
+     * Fahud
      * Type: geodetic
      * Extent: Oman - mainland onshore.
      * Scope: Oil and gas exploration.
@@ -1641,6 +1809,7 @@ interface DatumIds
     public const EPSG_FAHUD = 6232;
 
     /**
+     * Fahud Height Datum
      * Type: vertical
      * Extent: Oman - mainland onshore.
      * Scope: Oil and gas exploration.
@@ -1650,6 +1819,7 @@ interface DatumIds
     public const EPSG_FAHUD_HEIGHT_DATUM = 5124;
 
     /**
+     * Fair Isle
      * Type: vertical
      * Extent: United Kingdom (UK) - Great Britain - Scotland - Fair Isle onshore.
      * Scope: Geodesy, topographic mapping.
@@ -1659,6 +1829,7 @@ interface DatumIds
     public const EPSG_FAIR_ISLE = 5139;
 
     /**
+     * Famagusta 1960
      * Type: vertical
      * Extent: Cyprus - onshore.
      * Scope: Engineering survey, topographic mapping.
@@ -1668,6 +1839,7 @@ interface DatumIds
     public const EPSG_FAMAGUSTA_1960 = 1148;
 
     /**
+     * Fao
      * Type: vertical
      * Extent: Iraq - onshore southeast; Iran - onshore northern Gulf coast and west bordering southeast Iraq.
      * Scope: Geodesy, topographic mapping.
@@ -1678,6 +1850,7 @@ interface DatumIds
     public const EPSG_FAO = 5149;
 
     /**
+     * Fao 1979
      * Type: vertical
      * Extent: Iraq - onshore.
      * Scope: Geodesy, topographic mapping.
@@ -1687,6 +1860,7 @@ interface DatumIds
     public const EPSG_FAO_1979 = 1028;
 
     /**
+     * Faroe Datum 1954
      * Type: geodetic
      * Extent: Faroe Islands - onshore.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -1696,6 +1870,7 @@ interface DatumIds
     public const EPSG_FAROE_DATUM_1954 = 6741;
 
     /**
+     * Faroe Islands Vertical Reference 2009
      * Type: vertical
      * Extent: Faroe Islands - onshore.
      * Scope: Engineering survey, topographic mapping.
@@ -1705,6 +1880,7 @@ interface DatumIds
     public const EPSG_FAROE_ISLANDS_VERTICAL_REFERENCE_2009 = 1059;
 
     /**
+     * Fatu Iva 72
      * Type: geodetic
      * Extent: French Polynesia - Marquesas Islands - Fatu Hiva.
      * Scope: Hydrography, topographic mapping.
@@ -1715,6 +1891,7 @@ interface DatumIds
     public const EPSG_FATU_IVA_72 = 6688;
 
     /**
+     * Fehmarnbelt Datum 2010
      * Type: geodetic
      * Extent: Fehmarnbelt area of Denmark and Germany.
      * Scope: Engineering survey and construction for Fehmarnbelt tunnel.
@@ -1724,6 +1901,7 @@ interface DatumIds
     public const EPSG_FEHMARNBELT_DATUM_2010 = 1078;
 
     /**
+     * Fehmarnbelt Vertical Reference 2010
      * Type: vertical
      * Extent: Fehmarnbelt area of Denmark and Germany.
      * Scope: Engineering survey and construction for Fehmarnbelt tunnel.
@@ -1733,6 +1911,7 @@ interface DatumIds
     public const EPSG_FEHMARNBELT_VERTICAL_REFERENCE_2010 = 1079;
 
     /**
+     * Fiji 1956
      * Type: geodetic
      * Extent: Fiji - onshore - Vanua Levu, Taveuni, Viti Levu and and immediately adjacent smaller islands of Yasawa
      * and Kandavu groups.
@@ -1744,6 +1923,7 @@ interface DatumIds
     public const EPSG_FIJI_1956 = 6721;
 
     /**
+     * Fiji Geodetic Datum 1986
      * Type: geodetic
      * Extent: Fiji - onshore. Includes Viti Levu, Vanua Levu, Taveuni, the Yasawa Group, the Kadavu Group, the Lau
      * Islands and Rotuma Islands.
@@ -1754,6 +1934,7 @@ interface DatumIds
     public const EPSG_FIJI_GEODETIC_DATUM_1986 = 6720;
 
     /**
+     * Final Datum 1958
      * Type: geodetic
      * Extent: Iran - Arwaz area and onshore Gulf coast west of 54°E, Lavan Island, offshore Balal field and South
      * Pars blocks 2 and 3.
@@ -1764,6 +1945,7 @@ interface DatumIds
     public const EPSG_FINAL_DATUM_1958 = 6132;
 
     /**
+     * Flannan Isles
      * Type: vertical
      * Extent: United Kingdom (UK) - Great Britain - Scotland - Flannan Isles onshore.
      * Scope: Geodesy, topographic mapping.
@@ -1773,6 +1955,7 @@ interface DatumIds
     public const EPSG_FLANNAN_ISLES = 5146;
 
     /**
+     * Fort Marigot
      * Type: geodetic
      * Extent: Guadeloupe - onshore - St Martin and St Barthélemy islands.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -1782,6 +1965,7 @@ interface DatumIds
     public const EPSG_FORT_MARIGOT = 6621;
 
     /**
+     * Foula
      * Type: vertical
      * Extent: United Kingdom (UK) - Great Britain - Scotland - Foula onshore.
      * Scope: Geodesy, topographic mapping.
@@ -1791,6 +1975,7 @@ interface DatumIds
     public const EPSG_FOULA = 5141;
 
     /**
+     * Fuerteventura
      * Type: vertical
      * Extent: Spain - Canary Islands - Fuerteventura onshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -1800,6 +1985,7 @@ interface DatumIds
     public const EPSG_FUERTEVENTURA = 1279;
 
     /**
+     * GBK19 Intermediate Reference Frame
      * Type: geodetic
      * Extent: UK - on or related to the rail route from Glasgow via Barrhead to Kilmarnock and the branch to East
      * Kilbride.
@@ -1812,6 +1998,7 @@ interface DatumIds
     public const EPSG_GBK19_INTERMEDIATE_REFERENCE_FRAME = 1289;
 
     /**
+     * Gambia
      * Type: geodetic
      * Extent: Gambia - onshore.
      * Scope: Topographic mapping.
@@ -1819,6 +2006,7 @@ interface DatumIds
     public const EPSG_GAMBIA = 1139;
 
     /**
+     * Gan 1970
      * Type: geodetic
      * Extent: Maldives - onshore.
      * Scope: Topographic mapping.
@@ -1828,6 +2016,7 @@ interface DatumIds
     public const EPSG_GAN_1970 = 6684;
 
     /**
+     * Garoua
      * Type: geodetic
      * Extent: Cameroon - Garoua area.
      * Scope: Topographic mapping.
@@ -1837,6 +2026,7 @@ interface DatumIds
     public const EPSG_GAROUA = 6197;
 
     /**
+     * Gebrauchshohen ADRIA
      * Type: vertical
      * Extent: Austria.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -1846,6 +2036,7 @@ interface DatumIds
     public const EPSG_GEBRAUCHSHOHEN_ADRIA = 5176;
 
     /**
+     * Genoa
      * Type: vertical
      * Extent: Italy - mainland (including San Marino and Vatican City State) and Sicily.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -1855,6 +2046,7 @@ interface DatumIds
     public const EPSG_GENOA = 1051;
 
     /**
+     * Geocentric Datum Brunei Darussalam 2009
      * Type: geodetic
      * Extent: Brunei Darussalam - onshore and offshore.
      * Scope: Geodesy.
@@ -1864,6 +2056,7 @@ interface DatumIds
     public const EPSG_GEOCENTRIC_DATUM_BRUNEI_DARUSSALAM_2009 = 1056;
 
     /**
+     * Geocentric Datum of Australia 1994
      * Type: geodetic
      * Extent: Australia including Lord Howe Island, Macquarie Islands, Ashmore and Cartier Islands, Christmas Island,
      * Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
@@ -1874,6 +2067,7 @@ interface DatumIds
     public const EPSG_GEOCENTRIC_DATUM_OF_AUSTRALIA_1994 = 6283;
 
     /**
+     * Geocentric Datum of Australia 2020
      * Type: geodetic
      * Extent: Australia including Lord Howe Island, Macquarie Islands, Ashmore and Cartier Islands, Christmas Island,
      * Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
@@ -1883,6 +2077,7 @@ interface DatumIds
     public const EPSG_GEOCENTRIC_DATUM_OF_AUSTRALIA_2020 = 1168;
 
     /**
+     * Geocentric datum of Korea
      * Type: geodetic
      * Extent: Republic of Korea (South Korea) - onshore and offshore.
      * Scope: Geodesy.
@@ -1891,6 +2086,7 @@ interface DatumIds
     public const EPSG_GEOCENTRIC_DATUM_OF_KOREA = 6737;
 
     /**
+     * Geodetic Datum of 1965
      * Type: geodetic
      * Extent: Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -1902,6 +2098,7 @@ interface DatumIds
     public const EPSG_GEODETIC_DATUM_OF_1965 = 6300;
 
     /**
+     * Geodetic Datum of Malaysia 2000
      * Type: geodetic
      * Extent: Malaysia - onshore and offshore. Includes peninsular Malayasia, Sabah and Sarawak.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -1911,6 +2108,7 @@ interface DatumIds
     public const EPSG_GEODETIC_DATUM_OF_MALAYSIA_2000 = 6742;
 
     /**
+     * Geodezicheskaya Sistema Koordinat 2011
      * Type: geodetic
      * Extent: Russian Federation - onshore and offshore.
      * Scope: Geodesy.
@@ -1919,6 +2117,7 @@ interface DatumIds
     public const EPSG_GEODEZICHESKAYA_SISTEMA_KOORDINAT_2011 = 1159;
 
     /**
+     * Gisborne 1926
      * Type: vertical
      * Extent: New Zealand - North Island - Gisborne vertical CRS area.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -1927,6 +2126,7 @@ interface DatumIds
     public const EPSG_GISBORNE_1926 = 5160;
 
     /**
+     * Gran Canaria
      * Type: vertical
      * Extent: Spain - Canary Islands - Gran Canaria onshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -1936,6 +2136,7 @@ interface DatumIds
     public const EPSG_GRAN_CANARIA = 1280;
 
     /**
+     * Grand Cayman Geodetic Datum 1959
      * Type: geodetic
      * Extent: Cayman Islands - Grand Cayman.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -1945,6 +2146,7 @@ interface DatumIds
     public const EPSG_GRAND_CAYMAN_GEODETIC_DATUM_1959 = 6723;
 
     /**
+     * Grand Cayman Vertical Datum 1954
      * Type: vertical
      * Extent: Cayman Islands - Grand Cayman.
      * Scope: Geodesy, topographic mapping.
@@ -1952,6 +2154,7 @@ interface DatumIds
     public const EPSG_GRAND_CAYMAN_VERTICAL_DATUM_1954 = 1097;
 
     /**
+     * Grand Comoros
      * Type: geodetic
      * Extent: Comoros - Njazidja (Grande Comore).
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -1960,6 +2163,7 @@ interface DatumIds
     public const EPSG_GRAND_COMOROS = 6646;
 
     /**
+     * Greek
      * Type: geodetic
      * Extent: Greece - onshore.
      * Scope: Topographic mapping.
@@ -1970,6 +2174,7 @@ interface DatumIds
     public const EPSG_GREEK = 6120;
 
     /**
+     * Greek (Athens)
      * Type: geodetic
      * Extent: Greece - onshore.
      * Scope: Topographic mapping.
@@ -1979,6 +2184,7 @@ interface DatumIds
     public const EPSG_GREEK_ATHENS = 6815;
 
     /**
+     * Greek Geodetic Reference System 1987
      * Type: geodetic
      * Extent: Greece - onshore.
      * Scope: Topographic mapping.
@@ -1988,6 +2194,7 @@ interface DatumIds
     public const EPSG_GREEK_GEODETIC_REFERENCE_SYSTEM_1987 = 6121;
 
     /**
+     * Greenland  Vertical Reference 2000
      * Type: vertical
      * Extent: Greenland - onshore and offshore between 59°N and 84°N and west of 10°W.
      * Scope: Topographic mapping.
@@ -1997,6 +2204,7 @@ interface DatumIds
     public const EPSG_GREENLAND_VERTICAL_REFERENCE_2000 = 1199;
 
     /**
+     * Greenland 1996
      * Type: geodetic
      * Extent: Greenland - onshore and offshore.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -2006,6 +2214,7 @@ interface DatumIds
     public const EPSG_GREENLAND_1996 = 6747;
 
     /**
+     * Greenland Vertical Reference 2016
      * Type: vertical
      * Extent: Greenland - onshore and offshore between 58°N and 85°N and west of 7°W.
      * Scope: Topographic mapping.
@@ -2015,6 +2224,7 @@ interface DatumIds
     public const EPSG_GREENLAND_VERTICAL_REFERENCE_2016 = 1200;
 
     /**
+     * Grenada 1953
      * Type: geodetic
      * Extent: Grenada and southern Grenadine Islands - onshore.
      * Scope: Topographic mapping.
@@ -2023,6 +2233,7 @@ interface DatumIds
     public const EPSG_GRENADA_1953 = 6603;
 
     /**
+     * Guadeloupe 1948
      * Type: geodetic
      * Extent: Guadeloupe - onshore - Basse-Terre, Grande-Terre, La Desirade, Marie-Galante, Les Saintes.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -2032,6 +2243,7 @@ interface DatumIds
     public const EPSG_GUADELOUPE_1948 = 6622;
 
     /**
+     * Guadeloupe 1951
      * Type: vertical
      * Extent: Guadeloupe - onshore - Basse-Terre and Grande-Terre.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -2043,6 +2255,7 @@ interface DatumIds
     public const EPSG_GUADELOUPE_1951 = 5193;
 
     /**
+     * Guadeloupe 1988
      * Type: vertical
      * Extent: Guadeloupe - onshore - Basse-Terre and Grande-Terre.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -2054,6 +2267,7 @@ interface DatumIds
     public const EPSG_GUADELOUPE_1988 = 5155;
 
     /**
+     * Guam 1963
      * Type: geodetic
      * Extent: Guam - onshore. Northern Mariana Islands - onshore.
      * Scope: Topographic mapping.
@@ -2063,6 +2277,7 @@ interface DatumIds
     public const EPSG_GUAM_1963 = 6675;
 
     /**
+     * Guam Vertical Datum of 1963
      * Type: vertical
      * Extent: Guam - onshore.
      * Scope: Geodesy, topographic mapping.
@@ -2072,6 +2287,7 @@ interface DatumIds
     public const EPSG_GUAM_VERTICAL_DATUM_OF_1963 = 1122;
 
     /**
+     * Guam Vertical Datum of 2004
      * Type: vertical
      * Extent: Guam - onshore.
      * Scope: Geodesy, topographic mapping.
@@ -2082,6 +2298,7 @@ interface DatumIds
     public const EPSG_GUAM_VERTICAL_DATUM_OF_2004 = 1126;
 
     /**
+     * Gulshan 303
      * Type: geodetic
      * Extent: Bangladesh - onshore and offshore.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -2092,6 +2309,7 @@ interface DatumIds
     public const EPSG_GULSHAN_303 = 6682;
 
     /**
+     * Gunung Segara
      * Type: geodetic
      * Extent: Indonesia - Kalimantan - onshore east coastal area including Mahakam delta coastal and offshore shelf
      * areas.
@@ -2101,6 +2319,7 @@ interface DatumIds
     public const EPSG_GUNUNG_SEGARA = 6613;
 
     /**
+     * Gunung Segara (Jakarta)
      * Type: geodetic
      * Extent: Indonesia - Kalimantan - onshore east coastal area including Mahakam delta coastal and offshore shelf
      * areas.
@@ -2110,6 +2329,7 @@ interface DatumIds
     public const EPSG_GUNUNG_SEGARA_JAKARTA = 6820;
 
     /**
+     * Gusterberg (Ferro)
      * Type: geodetic
      * Extent: Austria - Upper Austria and Salzburg provinces. Czechia - Bohemia.
      * Scope: Cadastre.
@@ -2118,6 +2338,7 @@ interface DatumIds
     public const EPSG_GUSTERBERG_FERRO = 1188;
 
     /**
+     * HS2 Intermediate Reference Frame
      * Type: geodetic
      * Extent: UK - HS2 phases 1 and 2a railway corridor from London to Birmingham, Lichfield and Crewe.
      * Scope: Engineering survey for HS2 project phases 1 and 2a.
@@ -2129,6 +2350,7 @@ interface DatumIds
     public const EPSG_HS2_INTERMEDIATE_REFERENCE_FRAME = 1264;
 
     /**
+     * HS2 Vertical Reference Frame
      * Type: vertical
      * Extent: UK - HS2 phases 1 and 2a railway corridor from London to Birmingham, Lichfield and Crewe.
      * Scope: Engineering survey for HS2 project phases 1 and 2a.
@@ -2139,6 +2361,7 @@ interface DatumIds
     public const EPSG_HS2_VERTICAL_REFERENCE_FRAME = 1265;
 
     /**
+     * Ha Tien 1960
      * Type: vertical
      * Extent: Cambodia - mainland onshore; Vietnam - mainland onshore.
      * Scope: Geodesy, topographic mapping.
@@ -2148,6 +2371,7 @@ interface DatumIds
     public const EPSG_HA_TIEN_1960 = 5125;
 
     /**
+     * Hanoi 1972
      * Type: geodetic
      * Extent: Vietnam - onshore.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -2155,6 +2379,7 @@ interface DatumIds
     public const EPSG_HANOI_1972 = 6147;
 
     /**
+     * Hartebeesthoek94
      * Type: geodetic
      * Extent: Eswatini (Swaziland); Lesotho; South Africa - onshore and offshore.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -2164,6 +2389,7 @@ interface DatumIds
     public const EPSG_HARTEBEESTHOEK94 = 6148;
 
     /**
+     * Helle 1954
      * Type: geodetic
      * Extent: Jan Mayen - onshore.
      * Scope: Geodesy, topographic mapping.
@@ -2171,6 +2397,7 @@ interface DatumIds
     public const EPSG_HELLE_1954 = 6660;
 
     /**
+     * Helsinki 1943
      * Type: vertical
      * Extent: Finland - onshore mainland south of approximately 66°N.
      * Scope: Geodesy, topographic mapping.
@@ -2181,6 +2408,7 @@ interface DatumIds
     public const EPSG_HELSINKI_1943 = 1213;
 
     /**
+     * Helsinki 1960
      * Type: vertical
      * Extent: Finland - onshore.
      * Scope: Geodesy, topographic mapping.
@@ -2190,6 +2418,7 @@ interface DatumIds
     public const EPSG_HELSINKI_1960 = 5116;
 
     /**
+     * Herat North
      * Type: geodetic
      * Extent: Afghanistan.
      * Scope: Topographic mapping.
@@ -2198,6 +2427,7 @@ interface DatumIds
     public const EPSG_HERAT_NORTH = 6255;
 
     /**
+     * High Water
      * Type: vertical
      * Extent: World.
      * Scope: Hydrography and nautical charting.
@@ -2209,6 +2439,7 @@ interface DatumIds
     public const EPSG_HIGH_WATER = 1094;
 
     /**
+     * Higher High Water Large Tide
      * Type: vertical
      * Extent: World.
      * Scope: Hydrography and nautical charting.
@@ -2219,6 +2450,7 @@ interface DatumIds
     public const EPSG_HIGHER_HIGH_WATER_LARGE_TIDE = 1084;
 
     /**
+     * Highest Astronomical Tide
      * Type: vertical
      * Extent: World.
      * Scope: Hydrography and nautical charting.
@@ -2230,6 +2462,7 @@ interface DatumIds
     public const EPSG_HIGHEST_ASTRONOMICAL_TIDE = 1082;
 
     /**
+     * Hito XVIII 1963
      * Type: geodetic
      * Extent: Chile - Tierra del Fuego, onshore; Argentina - Tierra del Fuego, onshore and offshore Atlantic west of
      * 66°W.
@@ -2240,6 +2473,7 @@ interface DatumIds
     public const EPSG_HITO_XVIII_1963 = 6254;
 
     /**
+     * Hjorsey 1955
      * Type: geodetic
      * Extent: Iceland - onshore.
      * Scope: Topographic mapping (1:50,000).
@@ -2248,6 +2482,7 @@ interface DatumIds
     public const EPSG_HJORSEY_1955 = 6658;
 
     /**
+     * Hon Dau 1992
      * Type: vertical
      * Extent: Vietnam - mainland onshore.
      * Scope: Geodesy, topographic mapping.
@@ -2257,6 +2492,7 @@ interface DatumIds
     public const EPSG_HON_DAU_1992 = 5126;
 
     /**
+     * Hong Kong 1963
      * Type: geodetic
      * Extent: China - Hong Kong - onshore and offshore.
      * Scope: Hydrography, topographic mapping.
@@ -2267,6 +2503,7 @@ interface DatumIds
     public const EPSG_HONG_KONG_1963 = 6738;
 
     /**
+     * Hong Kong 1963(67)
      * Type: geodetic
      * Extent: China - Hong Kong - onshore and offshore.
      * Scope: Military survey.
@@ -2277,6 +2514,7 @@ interface DatumIds
     public const EPSG_HONG_KONG_1963_67 = 6739;
 
     /**
+     * Hong Kong 1980
      * Type: geodetic
      * Extent: China - Hong Kong - onshore and offshore.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -2287,6 +2525,7 @@ interface DatumIds
     public const EPSG_HONG_KONG_1980 = 6611;
 
     /**
+     * Hong Kong Chart Datum
      * Type: vertical
      * Extent: China - Hong Kong - offshore.
      * Scope: Hydrography and nautical charting.
@@ -2296,6 +2535,7 @@ interface DatumIds
     public const EPSG_HONG_KONG_CHART_DATUM = 5136;
 
     /**
+     * Hong Kong Geodetic
      * Type: geodetic
      * Extent: China - Hong Kong - onshore and offshore.
      * Scope: Geodesy.
@@ -2306,6 +2546,7 @@ interface DatumIds
     public const EPSG_HONG_KONG_GEODETIC = 1209;
 
     /**
+     * Hong Kong Principal Datum
      * Type: vertical
      * Extent: China - Hong Kong - onshore.
      * Scope: Geodesy, cadastre, engineering survey.
@@ -2314,6 +2555,7 @@ interface DatumIds
     public const EPSG_HONG_KONG_PRINCIPAL_DATUM = 5135;
 
     /**
+     * Horta
      * Type: vertical
      * Extent: Portugal - central Azores - Faial island onshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -2323,6 +2565,7 @@ interface DatumIds
     public const EPSG_HORTA = 1104;
 
     /**
+     * Hu Tzu Shan 1950
      * Type: geodetic
      * Extent: Taiwan, Republic of China - onshore - Taiwan Island, Penghu (Pescadores) Islands.
      * Scope: Topographic mapping.
@@ -2331,6 +2574,7 @@ interface DatumIds
     public const EPSG_HU_TZU_SHAN_1950 = 6236;
 
     /**
+     * Huahine SAU 2001
      * Type: vertical
      * Extent: French Polynesia - Society Islands - Huahine.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -2340,6 +2584,7 @@ interface DatumIds
     public const EPSG_HUAHINE_SAU_2001 = 5200;
 
     /**
+     * Hungarian Datum 1909
      * Type: geodetic
      * Extent: Hungary.
      * Scope: Topographic mapping.
@@ -2350,6 +2595,7 @@ interface DatumIds
     public const EPSG_HUNGARIAN_DATUM_1909 = 1024;
 
     /**
+     * Hungarian Datum 1972
      * Type: geodetic
      * Extent: Hungary.
      * Scope: Topographic mapping.
@@ -2360,6 +2606,7 @@ interface DatumIds
     public const EPSG_HUNGARIAN_DATUM_1972 = 6237;
 
     /**
+     * IG05 Intermediate Datum
      * Type: geodetic
      * Extent: Israel - onshore; Palestine Territory - onshore.
      * Scope: Intermediate stage in transformations - not used otherwise.
@@ -2368,6 +2615,7 @@ interface DatumIds
     public const EPSG_IG05_INTERMEDIATE_DATUM = 1142;
 
     /**
+     * IG05/12 Intermediate Datum
      * Type: geodetic
      * Extent: Israel - onshore; Palestine Territory - onshore.
      * Scope: Intermediate stage in transformations - not used otherwise.
@@ -2376,6 +2624,7 @@ interface DatumIds
     public const EPSG_IG05_12_INTERMEDIATE_DATUM = 1144;
 
     /**
+     * IGC 1962 Arc of the 6th Parallel South
      * Type: geodetic
      * Extent: The Democratic Republic of the Congo (Zaire) - adjacent to 6th parallel south traverse.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -2386,6 +2635,7 @@ interface DatumIds
     public const EPSG_IGC_1962_ARC_OF_THE_6TH_PARALLEL_SOUTH = 6697;
 
     /**
+     * IGN 1962 Kerguelen
      * Type: geodetic
      * Extent: French Southern Territories - Kerguelen onshore.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -2394,6 +2644,7 @@ interface DatumIds
     public const EPSG_IGN_1962_KERGUELEN = 6698;
 
     /**
+     * IGN 1966
      * Type: vertical
      * Extent: French Polynesia - Society Islands - Tahiti.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -2403,6 +2654,7 @@ interface DatumIds
     public const EPSG_IGN_1966 = 5196;
 
     /**
+     * IGN 1988 LS
      * Type: vertical
      * Extent: Guadeloupe - onshore - Les Saintes.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -2414,6 +2666,7 @@ interface DatumIds
     public const EPSG_IGN_1988_LS = 5210;
 
     /**
+     * IGN 1988 MG
      * Type: vertical
      * Extent: Guadeloupe - onshore - Marie-Galante.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -2425,6 +2678,7 @@ interface DatumIds
     public const EPSG_IGN_1988_MG = 5211;
 
     /**
+     * IGN 1988 SB
      * Type: vertical
      * Extent: Guadeloupe - onshore - St Barthelemy island.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -2435,6 +2689,7 @@ interface DatumIds
     public const EPSG_IGN_1988_SB = 5213;
 
     /**
+     * IGN 1988 SM
      * Type: vertical
      * Extent: Guadeloupe - onshore - St Martin island.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -2445,6 +2700,7 @@ interface DatumIds
     public const EPSG_IGN_1988_SM = 5214;
 
     /**
+     * IGN 1992 LD
      * Type: vertical
      * Extent: Guadeloupe - onshore - La Desirade.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -2455,6 +2711,7 @@ interface DatumIds
     public const EPSG_IGN_1992_LD = 5212;
 
     /**
+     * IGN 2008 LD
      * Type: vertical
      * Extent: Guadeloupe - onshore - La Desirade.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -2464,6 +2721,7 @@ interface DatumIds
     public const EPSG_IGN_2008_LD = 1250;
 
     /**
+     * IGN Astro 1960
      * Type: geodetic
      * Extent: Mauritania - onshore.
      * Scope: Topographic mapping (small scale).
@@ -2474,6 +2732,7 @@ interface DatumIds
     public const EPSG_IGN_ASTRO_1960 = 6700;
 
     /**
+     * IGN53 Mare
      * Type: geodetic
      * Extent: New Caledonia - Loyalty Islands - Mare.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -2482,6 +2741,7 @@ interface DatumIds
     public const EPSG_IGN53_MARE = 6641;
 
     /**
+     * IGN56 Lifou
      * Type: geodetic
      * Extent: New Caledonia - Loyalty Islands - Lifou.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -2490,6 +2750,7 @@ interface DatumIds
     public const EPSG_IGN56_LIFOU = 6633;
 
     /**
+     * IGN63 Hiva Oa
      * Type: geodetic
      * Extent: French Polynesia - Marquesas Islands - Hiva Oa and Tahuata.
      * Scope: Hydrography, topographic mapping.
@@ -2499,6 +2760,7 @@ interface DatumIds
     public const EPSG_IGN63_HIVA_OA = 6689;
 
     /**
+     * IGN72 Grande Terre
      * Type: geodetic
      * Extent: New Caledonia - Grande Terre.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -2507,6 +2769,7 @@ interface DatumIds
     public const EPSG_IGN72_GRANDE_TERRE = 6634;
 
     /**
+     * IGN72 Nuku Hiva
      * Type: geodetic
      * Extent: French Polynesia - Marquesas Islands - Nuku Hiva, Ua Huka and Ua Pou.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -2516,6 +2779,7 @@ interface DatumIds
     public const EPSG_IGN72_NUKU_HIVA = 6630;
 
     /**
+     * IGS00
      * Type: dynamic geodetic
      * Extent: World.
      * Scope: Geodesy.
@@ -2527,6 +2791,7 @@ interface DatumIds
     public const EPSG_IGS00 = 1245;
 
     /**
+     * IGS05
      * Type: dynamic geodetic
      * Extent: World.
      * Scope: Geodesy.
@@ -2539,6 +2804,7 @@ interface DatumIds
     public const EPSG_IGS05 = 1247;
 
     /**
+     * IGS08
      * Type: dynamic geodetic
      * Extent: World.
      * Scope: Geodesy.
@@ -2551,6 +2817,7 @@ interface DatumIds
     public const EPSG_IGS08 = 1141;
 
     /**
+     * IGS14
      * Type: dynamic geodetic
      * Extent: World.
      * Scope: Geodesy.
@@ -2563,6 +2830,7 @@ interface DatumIds
     public const EPSG_IGS14 = 1191;
 
     /**
+     * IGS97
      * Type: dynamic geodetic
      * Extent: World.
      * Scope: Geodesy.
@@ -2574,6 +2842,7 @@ interface DatumIds
     public const EPSG_IGS97 = 1244;
 
     /**
+     * IGb00
      * Type: dynamic geodetic
      * Extent: World.
      * Scope: Geodesy.
@@ -2585,6 +2854,7 @@ interface DatumIds
     public const EPSG_IGB00 = 1246;
 
     /**
+     * IGb08
      * Type: dynamic geodetic
      * Extent: World.
      * Scope: Geodesy.
@@ -2597,6 +2867,7 @@ interface DatumIds
     public const EPSG_IGB08 = 1248;
 
     /**
+     * IGb14
      * Type: dynamic geodetic
      * Extent: World.
      * Scope: Geodesy.
@@ -2610,6 +2881,7 @@ interface DatumIds
     public const EPSG_IGB14 = 1272;
 
     /**
+     * IRENET95
      * Type: geodetic
      * Extent: Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore.
      * Scope: Geodesy.
@@ -2619,6 +2891,7 @@ interface DatumIds
     public const EPSG_IRENET95 = 6173;
 
     /**
+     * Ibiza
      * Type: vertical
      * Extent: Spain - Balearic Islands - Ibiza and Formentera - onshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -2628,6 +2901,7 @@ interface DatumIds
     public const EPSG_IBIZA = 1277;
 
     /**
+     * Incheon
      * Type: vertical
      * Extent: Republic of Korea (South Korea) - mainland onshore.
      * Scope: Geodesy, topographic mapping.
@@ -2636,6 +2910,7 @@ interface DatumIds
     public const EPSG_INCHEON = 1049;
 
     /**
+     * Indian 1954
      * Type: geodetic
      * Extent: Myanmar (Burma) - onshore; Thailand - onshore.
      * Scope: Topographic mapping.
@@ -2644,6 +2919,7 @@ interface DatumIds
     public const EPSG_INDIAN_1954 = 6239;
 
     /**
+     * Indian 1960
      * Type: geodetic
      * Extent: Cambodia - onshore; Vietnam - onshore and offshore Cuu Long basin.
      * Scope: Topographic mapping.
@@ -2653,6 +2929,7 @@ interface DatumIds
     public const EPSG_INDIAN_1960 = 6131;
 
     /**
+     * Indian 1975
      * Type: geodetic
      * Extent: Thailand - onshore plus offshore Gulf of Thailand.
      * Scope: Topographic mapping.
@@ -2661,6 +2938,7 @@ interface DatumIds
     public const EPSG_INDIAN_1975 = 6240;
 
     /**
+     * Indian Spring Low Water
      * Type: vertical
      * Extent: World.
      * Scope: Hydrography and nautical charting.
@@ -2672,6 +2950,7 @@ interface DatumIds
     public const EPSG_INDIAN_SPRING_LOW_WATER = 1085;
 
     /**
+     * Indonesian Datum 1974
      * Type: geodetic
      * Extent: Indonesia - onshore.
      * Scope: Topographic mapping.
@@ -2682,6 +2961,7 @@ interface DatumIds
     public const EPSG_INDONESIAN_DATUM_1974 = 6238;
 
     /**
+     * Indonesian Geoid 2020
      * Type: vertical
      * Extent: Indonesia - onshore and offshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -2690,6 +2970,7 @@ interface DatumIds
     public const EPSG_INDONESIAN_GEOID_2020 = 1294;
 
     /**
+     * Instantaneous Water Level
      * Type: vertical
      * Extent: World.
      * Scope: Hydrography, drilling, marine geophysics.
@@ -2699,6 +2980,7 @@ interface DatumIds
     public const EPSG_INSTANTANEOUS_WATER_LEVEL = 5113;
 
     /**
+     * Institut Geographique du Congo Belge 1955
      * Type: geodetic
      * Extent: The Democratic Republic of the Congo (Zaire) - Lower Congo (Bas Congo)
      * Scope: Cadastre, engineering survey, topographic mapping.
@@ -2708,6 +2990,7 @@ interface DatumIds
     public const EPSG_INSTITUT_GEOGRAPHIQUE_DU_CONGO_BELGE_1955 = 6701;
 
     /**
+     * International Great Lakes Datum 1955
      * Type: vertical
      * Extent: Canada and United States (USA) - Great Lakes basin and St Lawrence Seaway.
      * Scope: Hydrology.
@@ -2717,6 +3000,7 @@ interface DatumIds
     public const EPSG_INTERNATIONAL_GREAT_LAKES_DATUM_1955 = 5204;
 
     /**
+     * International Great Lakes Datum 1985
      * Type: vertical
      * Extent: Canada and United States (USA) - Great Lakes basin and St Lawrence Seaway.
      * Scope: Hydrology.
@@ -2727,6 +3011,7 @@ interface DatumIds
     public const EPSG_INTERNATIONAL_GREAT_LAKES_DATUM_1985 = 5205;
 
     /**
+     * International Terrestrial Reference Frame 1988
      * Type: dynamic geodetic
      * Extent: World.
      * Scope: Geodesy.
@@ -2737,6 +3022,7 @@ interface DatumIds
     public const EPSG_INTERNATIONAL_TERRESTRIAL_REFERENCE_FRAME_1988 = 6647;
 
     /**
+     * International Terrestrial Reference Frame 1989
      * Type: dynamic geodetic
      * Extent: World.
      * Scope: Geodesy.
@@ -2748,6 +3034,7 @@ interface DatumIds
     public const EPSG_INTERNATIONAL_TERRESTRIAL_REFERENCE_FRAME_1989 = 6648;
 
     /**
+     * International Terrestrial Reference Frame 1990
      * Type: dynamic geodetic
      * Extent: World.
      * Scope: Geodesy.
@@ -2759,6 +3046,7 @@ interface DatumIds
     public const EPSG_INTERNATIONAL_TERRESTRIAL_REFERENCE_FRAME_1990 = 6649;
 
     /**
+     * International Terrestrial Reference Frame 1991
      * Type: dynamic geodetic
      * Extent: World.
      * Scope: Geodesy.
@@ -2770,6 +3058,7 @@ interface DatumIds
     public const EPSG_INTERNATIONAL_TERRESTRIAL_REFERENCE_FRAME_1991 = 6650;
 
     /**
+     * International Terrestrial Reference Frame 1992
      * Type: dynamic geodetic
      * Extent: World.
      * Scope: Geodesy.
@@ -2781,6 +3070,7 @@ interface DatumIds
     public const EPSG_INTERNATIONAL_TERRESTRIAL_REFERENCE_FRAME_1992 = 6651;
 
     /**
+     * International Terrestrial Reference Frame 1993
      * Type: dynamic geodetic
      * Extent: World.
      * Scope: Geodesy.
@@ -2792,6 +3082,7 @@ interface DatumIds
     public const EPSG_INTERNATIONAL_TERRESTRIAL_REFERENCE_FRAME_1993 = 6652;
 
     /**
+     * International Terrestrial Reference Frame 1994
      * Type: dynamic geodetic
      * Extent: World.
      * Scope: Geodesy.
@@ -2803,6 +3094,7 @@ interface DatumIds
     public const EPSG_INTERNATIONAL_TERRESTRIAL_REFERENCE_FRAME_1994 = 6653;
 
     /**
+     * International Terrestrial Reference Frame 1996
      * Type: dynamic geodetic
      * Extent: World.
      * Scope: Geodesy.
@@ -2814,6 +3106,7 @@ interface DatumIds
     public const EPSG_INTERNATIONAL_TERRESTRIAL_REFERENCE_FRAME_1996 = 6654;
 
     /**
+     * International Terrestrial Reference Frame 1997
      * Type: dynamic geodetic
      * Extent: World.
      * Scope: Geodesy.
@@ -2825,6 +3118,7 @@ interface DatumIds
     public const EPSG_INTERNATIONAL_TERRESTRIAL_REFERENCE_FRAME_1997 = 6655;
 
     /**
+     * International Terrestrial Reference Frame 2000
      * Type: dynamic geodetic
      * Extent: World.
      * Scope: Geodesy.
@@ -2836,6 +3130,7 @@ interface DatumIds
     public const EPSG_INTERNATIONAL_TERRESTRIAL_REFERENCE_FRAME_2000 = 6656;
 
     /**
+     * International Terrestrial Reference Frame 2005
      * Type: dynamic geodetic
      * Extent: World.
      * Scope: Geodesy.
@@ -2848,6 +3143,7 @@ interface DatumIds
     public const EPSG_INTERNATIONAL_TERRESTRIAL_REFERENCE_FRAME_2005 = 6896;
 
     /**
+     * International Terrestrial Reference Frame 2008
      * Type: dynamic geodetic
      * Extent: World.
      * Scope: Geodesy.
@@ -2858,6 +3154,7 @@ interface DatumIds
     public const EPSG_INTERNATIONAL_TERRESTRIAL_REFERENCE_FRAME_2008 = 1061;
 
     /**
+     * International Terrestrial Reference Frame 2014
      * Type: dynamic geodetic
      * Extent: World.
      * Scope: Geodesy.
@@ -2870,6 +3167,7 @@ interface DatumIds
     public const EPSG_INTERNATIONAL_TERRESTRIAL_REFERENCE_FRAME_2014 = 1165;
 
     /**
+     * Iraq-Kuwait Boundary Datum 1992
      * Type: geodetic
      * Extent: Iraq - Kuwait boundary.
      * Scope: Boundary demarcation.
@@ -2878,6 +3176,7 @@ interface DatumIds
     public const EPSG_IRAQ_KUWAIT_BOUNDARY_DATUM_1992 = 6667;
 
     /**
+     * Iraqi Geospatial Reference System
      * Type: geodetic
      * Extent: Iraq - onshore and offshore.
      * Scope: Geodesy.
@@ -2886,6 +3185,7 @@ interface DatumIds
     public const EPSG_IRAQI_GEOSPATIAL_REFERENCE_SYSTEM = 1029;
 
     /**
+     * Islands Net 1993
      * Type: geodetic
      * Extent: Iceland - onshore and offshore.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -2895,6 +3195,7 @@ interface DatumIds
     public const EPSG_ISLANDS_NET_1993 = 6659;
 
     /**
+     * Islands Net 2004
      * Type: geodetic
      * Extent: Iceland - onshore and offshore.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -2904,6 +3205,7 @@ interface DatumIds
     public const EPSG_ISLANDS_NET_2004 = 1060;
 
     /**
+     * Islands Net 2016
      * Type: geodetic
      * Extent: Iceland - onshore and offshore.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -2913,6 +3215,7 @@ interface DatumIds
     public const EPSG_ISLANDS_NET_2016 = 1187;
 
     /**
+     * Israel 1993
      * Type: geodetic
      * Extent: Israel - onshore; Palestine Territory - onshore.
      * Scope: Topographic mapping.
@@ -2922,6 +3225,7 @@ interface DatumIds
     public const EPSG_ISRAEL_1993 = 6141;
 
     /**
+     * Israeli Geodetic Datum 2005
      * Type: geodetic
      * Extent: Israel - onshore and offshore.
      * Scope: Geodesy.
@@ -2932,6 +3236,7 @@ interface DatumIds
     public const EPSG_ISRAELI_GEODETIC_DATUM_2005 = 1114;
 
     /**
+     * Israeli Geodetic Datum 2005(2012)
      * Type: geodetic
      * Extent: Israel - onshore and offshore.
      * Scope: Geodesy.
@@ -2942,6 +3247,7 @@ interface DatumIds
     public const EPSG_ISRAELI_GEODETIC_DATUM_2005_2012 = 1115;
 
     /**
+     * Istituto Geografico Militaire 1995
      * Type: geodetic
      * Extent: Italy - onshore and offshore; San Marino, Vatican City State.
      * Scope: Geodesy.
@@ -2952,6 +3258,7 @@ interface DatumIds
     public const EPSG_ISTITUTO_GEOGRAFICO_MILITAIRE_1995 = 6670;
 
     /**
+     * Iwo Jima 1945
      * Type: geodetic
      * Extent: Japan - Iwo Jima island.
      * Scope: Military survey.
@@ -2960,6 +3267,7 @@ interface DatumIds
     public const EPSG_IWO_JIMA_1945 = 6709;
 
     /**
+     * Jamaica 1875
      * Type: geodetic
      * Extent: Jamaica - onshore.
      * Scope: Topographic mapping.
@@ -2968,6 +3276,7 @@ interface DatumIds
     public const EPSG_JAMAICA_1875 = 6241;
 
     /**
+     * Jamaica 1969
      * Type: geodetic
      * Extent: Jamaica - onshore.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -2976,6 +3285,7 @@ interface DatumIds
     public const EPSG_JAMAICA_1969 = 6242;
 
     /**
+     * Jamaica 2001
      * Type: geodetic
      * Extent: Jamaica - onshore and offshore. Includes Morant Cays and Pedro Cays.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -2984,6 +3294,7 @@ interface DatumIds
     public const EPSG_JAMAICA_2001 = 6758;
 
     /**
+     * Jamestown 1971
      * Type: vertical
      * Extent: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore.
      * Scope: Topographic mapping.
@@ -2993,6 +3304,7 @@ interface DatumIds
     public const EPSG_JAMESTOWN_1971 = 1175;
 
     /**
+     * Japanese Geodetic Datum 2000
      * Type: geodetic
      * Extent: Japan - onshore and offshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -3004,6 +3316,7 @@ interface DatumIds
     public const EPSG_JAPANESE_GEODETIC_DATUM_2000 = 6612;
 
     /**
+     * Japanese Geodetic Datum 2000 (vertical)
      * Type: vertical
      * Extent: Japan - onshore mainland - Hokkaido, Honshu, Shikoku, Kyushu.
      * Scope: Geodesy, topographic mapping.
@@ -3014,6 +3327,7 @@ interface DatumIds
     public const EPSG_JAPANESE_GEODETIC_DATUM_2000_VERTICAL = 1130;
 
     /**
+     * Japanese Geodetic Datum 2011
      * Type: geodetic
      * Extent: Japan - onshore and offshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -3026,6 +3340,7 @@ interface DatumIds
     public const EPSG_JAPANESE_GEODETIC_DATUM_2011 = 1128;
 
     /**
+     * Japanese Geodetic Datum 2011 (vertical)
      * Type: vertical
      * Extent: Japan - onshore mainland - Hokkaido, Honshu, Shikoku, Kyushu.
      * Scope: Geodesy, topographic mapping.
@@ -3035,6 +3350,7 @@ interface DatumIds
     public const EPSG_JAPANESE_GEODETIC_DATUM_2011_VERTICAL = 1131;
 
     /**
+     * Japanese Standard Levelling Datum 1969
      * Type: vertical
      * Extent: Japan - onshore mainland - Honshu, Shikoku, Kyushu.
      * Scope: Geodesy, topographic mapping.
@@ -3044,6 +3360,7 @@ interface DatumIds
     public const EPSG_JAPANESE_STANDARD_LEVELLING_DATUM_1969 = 5122;
 
     /**
+     * Japanese Standard Levelling Datum 1972
      * Type: vertical
      * Extent: Japan - onshore mainland - Hokkaido.
      * Scope: Geodesy, topographic mapping.
@@ -3053,6 +3370,7 @@ interface DatumIds
     public const EPSG_JAPANESE_STANDARD_LEVELLING_DATUM_1972 = 1129;
 
     /**
+     * Johnston Island 1961
      * Type: geodetic
      * Extent: United States Minor Outlying Islands - Johnston Island.
      * Scope: Military survey.
@@ -3060,6 +3378,7 @@ interface DatumIds
     public const EPSG_JOHNSTON_ISLAND_1961 = 6725;
 
     /**
+     * Jouik 1961
      * Type: geodetic
      * Extent: Mauritania - coastal area north of Cape Timiris.
      * Scope: Hydrography and nautical charting.
@@ -3069,6 +3388,7 @@ interface DatumIds
     public const EPSG_JOUIK_1961 = 6679;
 
     /**
+     * KOC Construction Datum
      * Type: vertical
      * Extent: Kuwait - onshore.
      * Scope: KOC survey control and facilities engineering.
@@ -3078,6 +3398,7 @@ interface DatumIds
     public const EPSG_KOC_CONSTRUCTION_DATUM = 5188;
 
     /**
+     * KOC Well Datum
      * Type: vertical
      * Extent: Kuwait - onshore.
      * Scope: KOC exploration and field development subsurface work.
@@ -3087,6 +3408,7 @@ interface DatumIds
     public const EPSG_KOC_WELL_DATUM = 5187;
 
     /**
+     * Kalianpur 1880
      * Type: geodetic
      * Extent: Bangladesh - onshore; India - mainland onshore; Myanmar (Burma) - onshore; Pakistan - onshore.
      * Scope: Topographic mapping.
@@ -3096,6 +3418,7 @@ interface DatumIds
     public const EPSG_KALIANPUR_1880 = 6243;
 
     /**
+     * Kalianpur 1937
      * Type: geodetic
      * Extent: Bangladesh - onshore; India - mainland onshore; Myanmar - onshore and Moattama area offshore; Pakistan -
      * onshore.
@@ -3107,6 +3430,7 @@ interface DatumIds
     public const EPSG_KALIANPUR_1937 = 6144;
 
     /**
+     * Kalianpur 1962
      * Type: geodetic
      * Extent: Pakistan - onshore and offshore.
      * Scope: Topographic mapping.
@@ -3116,6 +3440,7 @@ interface DatumIds
     public const EPSG_KALIANPUR_1962 = 6145;
 
     /**
+     * Kalianpur 1975
      * Type: geodetic
      * Extent: India - mainland onshore.
      * Scope: Topographic mapping.
@@ -3125,6 +3450,7 @@ interface DatumIds
     public const EPSG_KALIANPUR_1975 = 6146;
 
     /**
+     * Kandawala
      * Type: geodetic
      * Extent: Sri Lanka - onshore.
      * Scope: Topographic mapping.
@@ -3133,6 +3459,7 @@ interface DatumIds
     public const EPSG_KANDAWALA = 6244;
 
     /**
+     * Karbala 1979
      * Type: geodetic
      * Extent: Iraq - onshore.
      * Scope: Geodesy.
@@ -3142,6 +3469,7 @@ interface DatumIds
     public const EPSG_KARBALA_1979 = 6743;
 
     /**
+     * Kartastokoordinaattijarjestelma (1966)
      * Type: geodetic
      * Extent: Finland - onshore.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -3151,6 +3479,7 @@ interface DatumIds
     public const EPSG_KARTASTOKOORDINAATTIJARJESTELMA_1966 = 6123;
 
     /**
+     * Kasai 1953
      * Type: geodetic
      * Extent: The Democratic Republic of the Congo (Zaire) - Kasai - south of 5°S and east of 21°30'E.
      * Scope: Cadastre, engineering survey, topographic mapping.
@@ -3162,6 +3491,7 @@ interface DatumIds
     public const EPSG_KASAI_1953 = 6696;
 
     /**
+     * Katanga 1955
      * Type: geodetic
      * Extent: The Democratic Republic of the Congo (Zaire) - Katanga.
      * Scope: Cadastre, engineering survey, topographic mapping.
@@ -3171,6 +3501,7 @@ interface DatumIds
     public const EPSG_KATANGA_1955 = 6695;
 
     /**
+     * Kertau (RSO)
      * Type: geodetic
      * Extent: Malaysia - West Malaysia; Singapore.
      * Scope: Metrication of RSO grid.
@@ -3180,6 +3511,7 @@ interface DatumIds
     public const EPSG_KERTAU_RSO = 6751;
 
     /**
+     * Kertau 1968
      * Type: geodetic
      * Extent: Malaysia - West Malaysia onshore and offshore east coast; Singapore - onshore and offshore.
      * Scope: Geodesy, cadastre.
@@ -3190,6 +3522,7 @@ interface DatumIds
     public const EPSG_KERTAU_1968 = 6245;
 
     /**
+     * Kingdom of Saudi Arabia Geodetic Reference Frame 2017
      * Type: geodetic
      * Extent: Saudi Arabia - onshore and offshore.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -3200,6 +3533,7 @@ interface DatumIds
     public const EPSG_KINGDOM_OF_SAUDI_ARABIA_GEODETIC_REFERENCE_FRAME_2017 = 1268;
 
     /**
+     * Kingdom of Saudi Arabia Vertical Reference Frame Jeddah 2014
      * Type: vertical
      * Extent: Saudi Arabia - onshore.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -3208,6 +3542,7 @@ interface DatumIds
     public const EPSG_KINGDOM_OF_SAUDI_ARABIA_VERTICAL_REFERENCE_FRAME_JEDDAH_2014 = 1269;
 
     /**
+     * Kiunga
      * Type: vertical
      * Extent: Papua New Guinea - onshore south of 5°S and west of 144°E.
      * Scope: Engineering survey.
@@ -3217,6 +3552,7 @@ interface DatumIds
     public const EPSG_KIUNGA = 1151;
 
     /**
+     * Korean Datum 1985
      * Type: geodetic
      * Extent: Republic of Korea (South Korea) - onshore.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -3227,6 +3563,7 @@ interface DatumIds
     public const EPSG_KOREAN_DATUM_1985 = 6162;
 
     /**
+     * Korean Datum 1995
      * Type: geodetic
      * Extent: Republic of Korea (South Korea) - onshore.
      * Scope: Topographic mapping.
@@ -3234,6 +3571,7 @@ interface DatumIds
     public const EPSG_KOREAN_DATUM_1995 = 6166;
 
     /**
+     * Kosovo Reference System 2001
      * Type: geodetic
      * Extent: Kosovo.
      * Scope: Geodesy.
@@ -3244,6 +3582,7 @@ interface DatumIds
     public const EPSG_KOSOVO_REFERENCE_SYSTEM_2001 = 1251;
 
     /**
+     * Kousseri
      * Type: geodetic
      * Extent: Cameroon - N'Djamena area.
      * Scope: Topographic mapping.
@@ -3252,6 +3591,7 @@ interface DatumIds
     public const EPSG_KOUSSERI = 6198;
 
     /**
+     * Kumul 34
      * Type: vertical
      * Extent: Papua New Guinea - Papuan fold and thrust belt.
      * Scope: Engineering survey.
@@ -3261,6 +3601,7 @@ interface DatumIds
     public const EPSG_KUMUL_34 = 1150;
 
     /**
+     * Kusaie 1951
      * Type: geodetic
      * Extent: Federated States of Micronesia - Kosrae (Kusaie).
      * Scope: Military survey.
@@ -3268,6 +3609,7 @@ interface DatumIds
     public const EPSG_KUSAIE_1951 = 6735;
 
     /**
+     * Kuwait Oil Company
      * Type: geodetic
      * Extent: Kuwait - onshore.
      * Scope: Oil and gas exploration.
@@ -3276,6 +3618,7 @@ interface DatumIds
     public const EPSG_KUWAIT_OIL_COMPANY = 6246;
 
     /**
+     * Kuwait PWD
      * Type: vertical
      * Extent: Kuwait - onshore.
      * Scope: Municipal spatial referencing.
@@ -3285,6 +3628,7 @@ interface DatumIds
     public const EPSG_KUWAIT_PWD = 5186;
 
     /**
+     * Kuwait Utility
      * Type: geodetic
      * Extent: Kuwait - Kuwait City.
      * Scope: Cadastre, engineering survey.
@@ -3292,6 +3636,7 @@ interface DatumIds
     public const EPSG_KUWAIT_UTILITY = 6319;
 
     /**
+     * Kyrgyzstan Geodetic Datum 2006
      * Type: geodetic
      * Extent: Kyrgyzstan.
      * Scope: Geodesy.
@@ -3302,6 +3647,7 @@ interface DatumIds
     public const EPSG_KYRGYZSTAN_GEODETIC_DATUM_2006 = 1160;
 
     /**
+     * La Canoa
      * Type: geodetic
      * Extent: Venezuela - onshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -3311,6 +3657,7 @@ interface DatumIds
     public const EPSG_LA_CANOA = 6247;
 
     /**
+     * La Gomera
      * Type: vertical
      * Extent: Spain - Canary Islands - La Gomera onshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -3320,6 +3667,7 @@ interface DatumIds
     public const EPSG_LA_GOMERA = 1282;
 
     /**
+     * La Palma
      * Type: vertical
      * Extent: Spain - Canary Islands - La Palma onshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -3329,6 +3677,7 @@ interface DatumIds
     public const EPSG_LA_PALMA = 1283;
 
     /**
+     * Lagos 1955
      * Type: vertical
      * Extent: Nigeria - onshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -3337,6 +3686,7 @@ interface DatumIds
     public const EPSG_LAGOS_1955 = 5194;
 
     /**
+     * Lake
      * Type: geodetic
      * Extent: Venezuela - Lake Maracaibo area, onshore and offshore in lake.
      * Scope: Oil and gas exploration.
@@ -3345,6 +3695,7 @@ interface DatumIds
     public const EPSG_LAKE = 6249;
 
     /**
+     * Landeshohennetz 1995
      * Type: vertical
      * Extent: Liechtenstein; Switzerland.
      * Scope: Geodesy.
@@ -3355,6 +3706,7 @@ interface DatumIds
     public const EPSG_LANDESHOHENNETZ_1995 = 5128;
 
     /**
+     * Landesnivellement 1902
      * Type: vertical
      * Extent: Liechtenstein; Switzerland.
      * Scope: Cadastre, topographic mapping.
@@ -3365,6 +3717,7 @@ interface DatumIds
     public const EPSG_LANDESNIVELLEMENT_1902 = 5127;
 
     /**
+     * Landshaedarkerfi Islands 2004
      * Type: vertical
      * Extent: Iceland - onshore.
      * Scope: Geodesy, topographic mapping.
@@ -3373,6 +3726,7 @@ interface DatumIds
     public const EPSG_LANDSHAEDARKERFI_ISLANDS_2004 = 1190;
 
     /**
+     * Lanzarote
      * Type: vertical
      * Extent: Spain - Canary Islands - Lanzarote onshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -3382,6 +3736,7 @@ interface DatumIds
     public const EPSG_LANZAROTE = 1278;
 
     /**
+     * Lao 1993
      * Type: geodetic
      * Extent: Laos.
      * Scope: Topographic mapping.
@@ -3392,6 +3747,7 @@ interface DatumIds
     public const EPSG_LAO_1993 = 6677;
 
     /**
+     * Lao National Datum 1997
      * Type: geodetic
      * Extent: Laos.
      * Scope: Cadastre, engineering survey, topographic mapping.
@@ -3402,6 +3758,7 @@ interface DatumIds
     public const EPSG_LAO_NATIONAL_DATUM_1997 = 6678;
 
     /**
+     * Latvia 1992
      * Type: geodetic
      * Extent: Latvia - onshore and offshore.
      * Scope: Geodesy, topographic mapping.
@@ -3411,6 +3768,7 @@ interface DatumIds
     public const EPSG_LATVIA_1992 = 6661;
 
     /**
+     * Latvian Height System 2000
      * Type: vertical
      * Extent: Latvia - onshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -3421,6 +3779,7 @@ interface DatumIds
     public const EPSG_LATVIAN_HEIGHT_SYSTEM_2000 = 1162;
 
     /**
+     * Le Pouce 1934
      * Type: geodetic
      * Extent: Mauritius - mainland onshore.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -3429,6 +3788,7 @@ interface DatumIds
     public const EPSG_LE_POUCE_1934 = 6699;
 
     /**
+     * Leigon
      * Type: geodetic
      * Extent: Ghana - onshore and offshore.
      * Scope: Topographic mapping.
@@ -3439,6 +3799,7 @@ interface DatumIds
     public const EPSG_LEIGON = 6250;
 
     /**
+     * Lerwick
      * Type: vertical
      * Extent: United Kingdom (UK) - Great Britain - Scotland - Shetland Islands onshore.
      * Scope: Geodesy, topographic mapping.
@@ -3449,6 +3810,7 @@ interface DatumIds
     public const EPSG_LERWICK = 5140;
 
     /**
+     * Liberia 1964
      * Type: geodetic
      * Extent: Liberia - onshore.
      * Scope: Topographic mapping.
@@ -3457,6 +3819,7 @@ interface DatumIds
     public const EPSG_LIBERIA_1964 = 6251;
 
     /**
+     * Libyan Geodetic Datum 2006
      * Type: geodetic
      * Extent: Libya - onshore and offshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -3466,6 +3829,7 @@ interface DatumIds
     public const EPSG_LIBYAN_GEODETIC_DATUM_2006 = 6754;
 
     /**
+     * Lisbon 1890
      * Type: geodetic
      * Extent: Portugal - mainland - onshore.
      * Scope: Topographic mapping.
@@ -3475,6 +3839,7 @@ interface DatumIds
     public const EPSG_LISBON_1890 = 6666;
 
     /**
+     * Lisbon 1890 (Lisbon)
      * Type: geodetic
      * Extent: Portugal - mainland - onshore.
      * Scope: Topographic mapping.
@@ -3484,6 +3849,7 @@ interface DatumIds
     public const EPSG_LISBON_1890_LISBON = 6904;
 
     /**
+     * Lisbon 1937
      * Type: geodetic
      * Extent: Portugal - mainland - onshore.
      * Scope: Topographic mapping.
@@ -3494,6 +3860,7 @@ interface DatumIds
     public const EPSG_LISBON_1937 = 6207;
 
     /**
+     * Lisbon 1937 (Lisbon)
      * Type: geodetic
      * Extent: Portugal - mainland - onshore.
      * Scope: Topographic mapping.
@@ -3503,6 +3870,7 @@ interface DatumIds
     public const EPSG_LISBON_1937_LISBON = 6803;
 
     /**
+     * Lithuania 1994 (ETRS89)
      * Type: geodetic
      * Extent: Lithuania - onshore and offshore.
      * Scope: Geodesy, topographic mapping.
@@ -3512,6 +3880,7 @@ interface DatumIds
     public const EPSG_LITHUANIA_1994_ETRS89 = 6126;
 
     /**
+     * Little Cayman Vertical Datum 1961
      * Type: vertical
      * Extent: Cayman Islands - Little Cayman.
      * Scope: Geodesy, topographic mapping.
@@ -3519,6 +3888,7 @@ interface DatumIds
     public const EPSG_LITTLE_CAYMAN_VERTICAL_DATUM_1961 = 1098;
 
     /**
+     * Locodjo 1965
      * Type: geodetic
      * Extent: Côte d'Ivoire (Ivory Coast) - onshore and offshore.
      * Scope: Topographic mapping.
@@ -3527,6 +3897,7 @@ interface DatumIds
     public const EPSG_LOCODJO_1965 = 6142;
 
     /**
+     * Loma Quintana
      * Type: geodetic
      * Extent: Venezuela - onshore north of approximately 7°45'N.
      * Scope: Topographic mapping.
@@ -3536,6 +3907,7 @@ interface DatumIds
     public const EPSG_LOMA_QUINTANA = 6288;
 
     /**
+     * Lome
      * Type: geodetic
      * Extent: Togo - onshore and offshore.
      * Scope: Topographic mapping.
@@ -3543,6 +3915,7 @@ interface DatumIds
     public const EPSG_LOME = 6252;
 
     /**
+     * Low Water
      * Type: vertical
      * Extent: World.
      * Scope: Hydrography and nautical charting.
@@ -3555,6 +3928,7 @@ interface DatumIds
     public const EPSG_LOW_WATER = 1093;
 
     /**
+     * Lower Low Water Large Tide
      * Type: vertical
      * Extent: World.
      * Scope: Hydrography and nautical charting.
@@ -3565,6 +3939,7 @@ interface DatumIds
     public const EPSG_LOWER_LOW_WATER_LARGE_TIDE = 1083;
 
     /**
+     * Lowest Astronomical Tide
      * Type: vertical
      * Extent: World.
      * Scope: Hydrography and nautical charting.
@@ -3576,6 +3951,7 @@ interface DatumIds
     public const EPSG_LOWEST_ASTRONOMICAL_TIDE = 1080;
 
     /**
+     * Lowest Astronomical Tide Netherlands
      * Type: vertical
      * Extent: Netherlands - offshore North Sea.
      * Scope: Hydrography and nautical charting.
@@ -3586,6 +3962,7 @@ interface DatumIds
     public const EPSG_LOWEST_ASTRONOMICAL_TIDE_NETHERLANDS = 1290;
 
     /**
+     * Luxembourg 1930
      * Type: geodetic
      * Extent: Luxembourg.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -3595,6 +3972,7 @@ interface DatumIds
     public const EPSG_LUXEMBOURG_1930 = 6181;
 
     /**
+     * Luzon 1911
      * Type: geodetic
      * Extent: Philippines - onshore.
      * Scope: Topographic mapping.
@@ -3604,6 +3982,7 @@ interface DatumIds
     public const EPSG_LUZON_1911 = 6253;
 
     /**
+     * Lyttelton 1937
      * Type: vertical
      * Extent: New Zealand - South Island - between approximately 41°20'S and 45°S - Lyttleton vertical CRS area.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -3612,6 +3991,7 @@ interface DatumIds
     public const EPSG_LYTTELTON_1937 = 5161;
 
     /**
+     * M'poraloko
      * Type: geodetic
      * Extent: Gabon - onshore and offshore.
      * Scope: Topographic mapping.
@@ -3619,6 +3999,7 @@ interface DatumIds
     public const EPSG_M_PORALOKO = 6266;
 
     /**
+     * MGI 1901
      * Type: geodetic
      * Extent: Boznia and Herzegovina; Croatia - onshore; Kosovo; Montenegro - onshore; North Macedonia; Serbia;
      * Slovenia - onshore.
@@ -3630,6 +4011,7 @@ interface DatumIds
     public const EPSG_MGI_1901 = 1031;
 
     /**
+     * MML07 Intermediate Reference Frame
      * Type: geodetic
      * Extent: UK - on or related to the Midland Mainline rail route from Sheffield to London.
      * Scope: Engineering survey and topographic mapping for railway applications.
@@ -3640,6 +4022,7 @@ interface DatumIds
     public const EPSG_MML07_INTERMEDIATE_REFERENCE_FRAME = 1271;
 
     /**
+     * MOLDREF99
      * Type: geodetic
      * Extent: Moldova.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -3648,6 +4031,7 @@ interface DatumIds
     public const EPSG_MOLDREF99 = 1032;
 
     /**
+     * MOMRA Terrestrial Reference Frame 2000
      * Type: geodetic
      * Extent: Saudi Arabia - onshore and offshore.
      * Scope: Geodesy.
@@ -3657,6 +4041,7 @@ interface DatumIds
     public const EPSG_MOMRA_TERRESTRIAL_REFERENCE_FRAME_2000 = 1218;
 
     /**
+     * MOMRA Vertical Geodetic Control
      * Type: vertical
      * Extent: Saudi Arabia - onshore.
      * Scope: Geodesy, topographic mapping.
@@ -3665,6 +4050,7 @@ interface DatumIds
     public const EPSG_MOMRA_VERTICAL_GEODETIC_CONTROL = 1219;
 
     /**
+     * MOP78
      * Type: geodetic
      * Extent: Wallis and Futuna - Wallis.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -3672,6 +4058,7 @@ interface DatumIds
     public const EPSG_MOP78 = 6639;
 
     /**
+     * Macao 1920
      * Type: geodetic
      * Extent: China - Macao - onshore and offshore.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -3683,6 +4070,7 @@ interface DatumIds
     public const EPSG_MACAO_1920 = 1207;
 
     /**
+     * Macao Geodetic Datum 2008
      * Type: geodetic
      * Extent: China - Macao - onshore and offshore.
      * Scope: Geodesy.
@@ -3693,6 +4081,7 @@ interface DatumIds
     public const EPSG_MACAO_GEODETIC_DATUM_2008 = 1208;
 
     /**
+     * Macao Height Datum
      * Type: vertical
      * Extent: China - Macao - onshore and offshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -3701,6 +4090,7 @@ interface DatumIds
     public const EPSG_MACAO_HEIGHT_DATUM = 1210;
 
     /**
+     * Madrid 1870 (Madrid)
      * Type: geodetic
      * Extent: Spain - mainland onshore.
      * Scope: Topographic mapping.
@@ -3710,6 +4100,7 @@ interface DatumIds
     public const EPSG_MADRID_1870_MADRID = 6903;
 
     /**
+     * Madzansua
      * Type: geodetic
      * Extent: Mozambique - west - Tete province.
      * Scope: Topographic mapping.
@@ -3719,6 +4110,7 @@ interface DatumIds
     public const EPSG_MADZANSUA = 6128;
 
     /**
+     * Mahe 1971
      * Type: geodetic
      * Extent: Seychelles - Mahe Island.
      * Scope: Military survey.
@@ -3728,6 +4120,7 @@ interface DatumIds
     public const EPSG_MAHE_1971 = 6256;
 
     /**
+     * Makassar
      * Type: geodetic
      * Extent: Indonesia - south west Sulawesi.
      * Scope: Topographic mapping.
@@ -3736,6 +4129,7 @@ interface DatumIds
     public const EPSG_MAKASSAR = 6257;
 
     /**
+     * Makassar (Jakarta)
      * Type: geodetic
      * Extent: Indonesia - south west Sulawesi.
      * Scope: Topographic mapping.
@@ -3744,6 +4138,7 @@ interface DatumIds
     public const EPSG_MAKASSAR_JAKARTA = 6804;
 
     /**
+     * Malin Head
      * Type: vertical
      * Extent: Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore.
      * Scope: Topographic mapping.
@@ -3754,6 +4149,7 @@ interface DatumIds
     public const EPSG_MALIN_HEAD = 5130;
 
     /**
+     * Mallorca
      * Type: vertical
      * Extent: Spain - Balearic Islands - Mallorca onshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -3763,6 +4159,7 @@ interface DatumIds
     public const EPSG_MALLORCA = 1275;
 
     /**
+     * Malongo 1987
      * Type: geodetic
      * Extent: Angola (Cabinda) - offshore; The Democratic Republic of the Congo (Zaire) - offshore.
      * Scope: Oil and gas exploration and production.
@@ -3774,6 +4171,7 @@ interface DatumIds
     public const EPSG_MALONGO_1987 = 6259;
 
     /**
+     * Manoca 1962
      * Type: geodetic
      * Extent: Cameroon - coastal area.
      * Scope: Topographic mapping.
@@ -3784,6 +4182,7 @@ interface DatumIds
     public const EPSG_MANOCA_1962 = 6193;
 
     /**
+     * Maputo
      * Type: vertical
      * Extent: Mozambique - onshore.
      * Scope: Topographic mapping.
@@ -3792,6 +4191,7 @@ interface DatumIds
     public const EPSG_MAPUTO = 5121;
 
     /**
+     * Marco Geocentrico Nacional de Referencia
      * Type: geodetic
      * Extent: Colombia - onshore and offshore. Includes San Andres y Providencia, Malpelo Islands, Roncador Bank,
      * Serrana Bank and Serranilla Bank.
@@ -3803,6 +4203,7 @@ interface DatumIds
     public const EPSG_MARCO_GEOCENTRICO_NACIONAL_DE_REFERENCIA = 6686;
 
     /**
+     * Marco Geodesico Nacional de Bolivia
      * Type: geodetic
      * Extent: Bolivia.
      * Scope: Geodesy.
@@ -3813,6 +4214,7 @@ interface DatumIds
     public const EPSG_MARCO_GEODESICO_NACIONAL_DE_BOLIVIA = 1063;
 
     /**
+     * Marcus Island 1952
      * Type: geodetic
      * Extent: Japan - onshore - Tokyo-to south of 28°N and east of 143°E - Minamitori-shima (Marcus Island).
      * Scope: Military survey.
@@ -3821,6 +4223,7 @@ interface DatumIds
     public const EPSG_MARCUS_ISLAND_1952 = 6711;
 
     /**
+     * Marshall Islands 1960
      * Type: geodetic
      * Extent: Marshall Islands - onshore. Wake atoll onshore.
      * Scope: Military survey.
@@ -3828,6 +4231,7 @@ interface DatumIds
     public const EPSG_MARSHALL_ISLANDS_1960 = 6732;
 
     /**
+     * Martinique 1938
      * Type: geodetic
      * Extent: Martinique - onshore.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -3837,6 +4241,7 @@ interface DatumIds
     public const EPSG_MARTINIQUE_1938 = 6625;
 
     /**
+     * Martinique 1955
      * Type: vertical
      * Extent: Martinique - onshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -3846,6 +4251,7 @@ interface DatumIds
     public const EPSG_MARTINIQUE_1955 = 5192;
 
     /**
+     * Martinique 1987
      * Type: vertical
      * Extent: Martinique - onshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -3856,6 +4262,7 @@ interface DatumIds
     public const EPSG_MARTINIQUE_1987 = 5154;
 
     /**
+     * Massawa
      * Type: geodetic
      * Extent: Eritrea - onshore and offshore.
      * Scope: Topographic mapping.
@@ -3863,6 +4270,7 @@ interface DatumIds
     public const EPSG_MASSAWA = 6262;
 
     /**
+     * Maupiti 83
      * Type: geodetic
      * Extent: French Polynesia - Society Islands - Maupiti.
      * Scope: Hydrography, topographic mapping.
@@ -3872,6 +4280,7 @@ interface DatumIds
     public const EPSG_MAUPITI_83 = 6692;
 
     /**
+     * Maupiti SAU 2001
      * Type: vertical
      * Extent: French Polynesia - Society Islands - Maupiti.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -3881,6 +4290,7 @@ interface DatumIds
     public const EPSG_MAUPITI_SAU_2001 = 5199;
 
     /**
+     * Mauritania 1999
      * Type: geodetic
      * Extent: Mauritania - onshore and offshore.
      * Scope: Geodesy.
@@ -3890,6 +4300,7 @@ interface DatumIds
     public const EPSG_MAURITANIA_1999 = 6702;
 
     /**
+     * Mayotte 1950
      * Type: vertical
      * Extent: Mayotte - onshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -3898,6 +4309,7 @@ interface DatumIds
     public const EPSG_MAYOTTE_1950 = 5191;
 
     /**
+     * Mean High Water
      * Type: vertical
      * Extent: World.
      * Scope: Hydrography and nautical charting.
@@ -3908,6 +4320,7 @@ interface DatumIds
     public const EPSG_MEAN_HIGH_WATER = 1092;
 
     /**
+     * Mean High Water Spring Tides
      * Type: vertical
      * Extent: World.
      * Scope: Hydrography and nautical charting.
@@ -3918,6 +4331,7 @@ interface DatumIds
     public const EPSG_MEAN_HIGH_WATER_SPRING_TIDES = 1088;
 
     /**
+     * Mean Higher High Water
      * Type: vertical
      * Extent: World.
      * Scope: Hydrography and nautical charting.
@@ -3928,6 +4342,7 @@ interface DatumIds
     public const EPSG_MEAN_HIGHER_HIGH_WATER = 1090;
 
     /**
+     * Mean Low Water
      * Type: vertical
      * Extent: World.
      * Scope: Hydrography and nautical charting.
@@ -3938,6 +4353,7 @@ interface DatumIds
     public const EPSG_MEAN_LOW_WATER = 1091;
 
     /**
+     * Mean Low Water Spring Tides
      * Type: vertical
      * Extent: World.
      * Scope: Hydrography and nautical charting.
@@ -3948,6 +4364,7 @@ interface DatumIds
     public const EPSG_MEAN_LOW_WATER_SPRING_TIDES = 1087;
 
     /**
+     * Mean Lower Low Water
      * Type: vertical
      * Extent: World.
      * Scope: Hydrography and nautical charting.
@@ -3958,6 +4375,7 @@ interface DatumIds
     public const EPSG_MEAN_LOWER_LOW_WATER = 1089;
 
     /**
+     * Mean Lower Low Water Spring Tides
      * Type: vertical
      * Extent: World.
      * Scope: Hydrography and nautical charting.
@@ -3968,6 +4386,7 @@ interface DatumIds
     public const EPSG_MEAN_LOWER_LOW_WATER_SPRING_TIDES = 1086;
 
     /**
+     * Mean Sea Level
      * Type: vertical
      * Extent: World.
      * Scope: Hydrography, drilling.
@@ -3979,6 +4398,7 @@ interface DatumIds
     public const EPSG_MEAN_SEA_LEVEL = 5100;
 
     /**
+     * Mean Sea Level Netherlands
      * Type: vertical
      * Extent: Netherlands - offshore North Sea.
      * Scope: Hydrography, drilling, offshore engineering.
@@ -3988,6 +4408,7 @@ interface DatumIds
     public const EPSG_MEAN_SEA_LEVEL_NETHERLANDS = 1270;
 
     /**
+     * Menorca
      * Type: vertical
      * Extent: Spain - Balearic Islands - Menorca onshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -3997,6 +4418,7 @@ interface DatumIds
     public const EPSG_MENORCA = 1276;
 
     /**
+     * Merchich
      * Type: geodetic
      * Extent: Africa - Morocco and Western Sahara - onshore.
      * Scope: Topographic mapping.
@@ -4005,6 +4427,7 @@ interface DatumIds
     public const EPSG_MERCHICH = 6261;
 
     /**
+     * Mexico ITRF2008
      * Type: geodetic
      * Extent: Mexico - onshore and offshore.
      * Scope: Geodesy.
@@ -4015,6 +4438,7 @@ interface DatumIds
     public const EPSG_MEXICO_ITRF2008 = 1120;
 
     /**
+     * Mexico ITRF92
      * Type: geodetic
      * Extent: Mexico - onshore and offshore.
      * Scope: Geodesy.
@@ -4025,6 +4449,7 @@ interface DatumIds
     public const EPSG_MEXICO_ITRF92 = 1042;
 
     /**
+     * Mhast (offshore)
      * Type: geodetic
      * Extent: Angola (Cabinda) - offshore; The Democratic Republic of the Congo (Zaire) - offshore.
      * Scope: Oil and gas exploration and production.
@@ -4037,6 +4462,7 @@ interface DatumIds
     public const EPSG_MHAST_OFFSHORE = 6705;
 
     /**
+     * Mhast (onshore)
      * Type: geodetic
      * Extent: Angola (Cabinda) - onshore and offshore; The Democratic Republic of the Congo (Zaire) - onshore coastal
      * area and offshore.
@@ -4049,6 +4475,7 @@ interface DatumIds
     public const EPSG_MHAST_ONSHORE = 6704;
 
     /**
+     * Midway 1961
      * Type: geodetic
      * Extent: United States Minor Outlying Islands - Midway Islands - Sand Island and Eastern Island.
      * Scope: Military survey.
@@ -4056,6 +4483,7 @@ interface DatumIds
     public const EPSG_MIDWAY_1961 = 6727;
 
     /**
+     * Militar-Geographische Institut
      * Type: geodetic
      * Extent: Austria.
      * Scope: Geodesy.
@@ -4066,6 +4494,7 @@ interface DatumIds
     public const EPSG_MILITAR_GEOGRAPHISCHE_INSTITUT = 6312;
 
     /**
+     * Militar-Geographische Institut (Ferro)
      * Type: geodetic
      * Extent: Austria. Bosnia and Herzegovina. Croatia - onshore. Kosovo. Montenegro - onshore. North Macedonia.
      * Serbia. Slovenia - onshore.
@@ -4076,6 +4505,7 @@ interface DatumIds
     public const EPSG_MILITAR_GEOGRAPHISCHE_INSTITUT_FERRO = 6805;
 
     /**
+     * Ministerio de Marina Norte
      * Type: geodetic
      * Extent: Argentina - Tierra del Fuego onshore.
      * Scope: Oil and gas exploration and production.
@@ -4085,6 +4515,7 @@ interface DatumIds
     public const EPSG_MINISTERIO_DE_MARINA_NORTE = 1258;
 
     /**
+     * Ministerio de Marina Sur
      * Type: geodetic
      * Extent: Argentina - Tierra del Fuego onshore.
      * Scope: Oil and gas exploration and production.
@@ -4094,6 +4525,7 @@ interface DatumIds
     public const EPSG_MINISTERIO_DE_MARINA_SUR = 1259;
 
     /**
+     * Minna
      * Type: geodetic
      * Extent: Nigeria - onshore and offshore.
      * Scope: Topographic mapping.
@@ -4102,6 +4534,7 @@ interface DatumIds
     public const EPSG_MINNA = 6263;
 
     /**
+     * Missao Hidrografico Angola y Sao Tome 1951
      * Type: geodetic
      * Extent: Angola - Cabinda.
      * Scope: Coastal hydrography.
@@ -4113,6 +4546,7 @@ interface DatumIds
     public const EPSG_MISSAO_HIDROGRAFICO_ANGOLA_Y_SAO_TOME_1951 = 6703;
 
     /**
+     * Monte Mario
      * Type: geodetic
      * Extent: Italy - onshore and offshore; San Marino, Vatican City State.
      * Scope: Topographic mapping.
@@ -4122,6 +4556,7 @@ interface DatumIds
     public const EPSG_MONTE_MARIO = 6265;
 
     /**
+     * Monte Mario (Rome)
      * Type: geodetic
      * Extent: Italy - onshore and offshore; San Marino, Vatican City State.
      * Scope: Topographic mapping.
@@ -4131,6 +4566,7 @@ interface DatumIds
     public const EPSG_MONTE_MARIO_ROME = 6806;
 
     /**
+     * Montserrat 1958
      * Type: geodetic
      * Extent: Montserrat - onshore.
      * Scope: Topographic mapping.
@@ -4139,6 +4575,7 @@ interface DatumIds
     public const EPSG_MONTSERRAT_1958 = 6604;
 
     /**
+     * Moorea 87
      * Type: geodetic
      * Extent: French Polynesia - Society Islands - Moorea.
      * Scope: Hydrography, topographic mapping.
@@ -4148,6 +4585,7 @@ interface DatumIds
     public const EPSG_MOOREA_87 = 6691;
 
     /**
+     * Moorea SAU 1981
      * Type: vertical
      * Extent: French Polynesia - Society Islands - Moorea.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -4157,6 +4595,7 @@ interface DatumIds
     public const EPSG_MOOREA_SAU_1981 = 5197;
 
     /**
+     * Moturiki 1953
      * Type: vertical
      * Extent: New Zealand - North Island - Moturiki vertical CRS area.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -4165,6 +4604,7 @@ interface DatumIds
     public const EPSG_MOTURIKI_1953 = 5162;
 
     /**
+     * Mount Dillon
      * Type: geodetic
      * Extent: Trinidad and Tobago - Tobago - onshore.
      * Scope: Topographic mapping.
@@ -4174,6 +4614,7 @@ interface DatumIds
     public const EPSG_MOUNT_DILLON = 6157;
 
     /**
+     * Moznet (ITRF94)
      * Type: geodetic
      * Extent: Mozambique - onshore and offshore.
      * Scope: Topographic mapping.
@@ -4182,6 +4623,7 @@ interface DatumIds
     public const EPSG_MOZNET_ITRF94 = 6130;
 
     /**
+     * N2000
      * Type: vertical
      * Extent: Finland - onshore.
      * Scope: Geodesy, topographic mapping.
@@ -4193,6 +4635,7 @@ interface DatumIds
     public const EPSG_N2000 = 1030;
 
     /**
+     * NAD83 (Continuously Operating Reference Station 1996)
      * Type: geodetic
      * Extent: Puerto Rico - onshore and offshore. United States (USA) onshore and offshore - Alabama; Alaska; Arizona;
      * Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas;
@@ -4209,6 +4652,7 @@ interface DatumIds
     public const EPSG_NAD83_CONTINUOUSLY_OPERATING_REFERENCE_STATION_1996 = 1133;
 
     /**
+     * NAD83 (Federal Base Network)
      * Type: geodetic
      * Extent: American Samoa - Tutuila, Aunu'u, Ofu, Olesega, Ta'u and Rose islands - onshore. Guam - onshore.
      * Northern Mariana Islands - onshore. Puerto Rico - onshore. United States (USA) - CONUS - Alabama; Arizona;
@@ -4227,6 +4671,7 @@ interface DatumIds
     public const EPSG_NAD83_FEDERAL_BASE_NETWORK = 1211;
 
     /**
+     * NAD83 (High Accuracy Reference Network - Corrected)
      * Type: geodetic
      * Extent: Puerto Rico and US Virgin Islands - onshore.
      * Scope: Geodesy.
@@ -4236,6 +4681,7 @@ interface DatumIds
     public const EPSG_NAD83_HIGH_ACCURACY_REFERENCE_NETWORK_CORRECTED = 1212;
 
     /**
+     * NAD83 (High Accuracy Reference Network)
      * Type: geodetic
      * Extent: American Samoa - onshore - Tutuila, Aunu'u, Ofu, Olesega, Ta'u and Rose islands. Guam - onshore.
      * Northern Mariana Islands - onshore. Puerto Rico - onshore. United States (USA) - onshore Alabama, Alaska,
@@ -4253,6 +4699,7 @@ interface DatumIds
     public const EPSG_NAD83_HIGH_ACCURACY_REFERENCE_NETWORK = 6152;
 
     /**
+     * NAD83 (National Spatial Reference System 2007)
      * Type: geodetic
      * Extent: Puerto Rico - onshore and offshore. United States (USA) onshore and offshore - Alabama; Alaska; Arizona;
      * Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas;
@@ -4268,6 +4715,7 @@ interface DatumIds
     public const EPSG_NAD83_NATIONAL_SPATIAL_REFERENCE_SYSTEM_2007 = 6759;
 
     /**
+     * NAD83 (National Spatial Reference System 2011)
      * Type: geodetic
      * Extent: Puerto Rico - onshore and offshore. United States (USA) onshore and offshore - Alabama; Alaska; Arizona;
      * Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas;
@@ -4284,6 +4732,7 @@ interface DatumIds
     public const EPSG_NAD83_NATIONAL_SPATIAL_REFERENCE_SYSTEM_2011 = 1116;
 
     /**
+     * NAD83 (National Spatial Reference System MA11)
      * Type: geodetic
      * Extent: Guam, Northern Mariana Islands and Palau; onshore and offshore.
      * Scope: Geodesy.
@@ -4295,6 +4744,7 @@ interface DatumIds
     public const EPSG_NAD83_NATIONAL_SPATIAL_REFERENCE_SYSTEM_MA11 = 1118;
 
     /**
+     * NAD83 (National Spatial Reference System PA11)
      * Type: geodetic
      * Extent: American Samoa, Marshall Islands, United States (USA) - Hawaii, United States minor outlying islands;
      * onshore and offshore.
@@ -4307,6 +4757,7 @@ interface DatumIds
     public const EPSG_NAD83_NATIONAL_SPATIAL_REFERENCE_SYSTEM_PA11 = 1117;
 
     /**
+     * NAD83 Canadian Spatial Reference System
      * Type: geodetic
      * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
      * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
@@ -4319,6 +4770,7 @@ interface DatumIds
     public const EPSG_NAD83_CANADIAN_SPATIAL_REFERENCE_SYSTEM = 6140;
 
     /**
+     * NEA74 Noumea
      * Type: geodetic
      * Extent: New Caledonia - Grande Terre - Noumea district.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -4327,6 +4779,7 @@ interface DatumIds
     public const EPSG_NEA74_NOUMEA = 6644;
 
     /**
+     * NGO 1948
      * Type: geodetic
      * Extent: Norway - onshore.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -4335,6 +4788,7 @@ interface DatumIds
     public const EPSG_NGO_1948 = 6273;
 
     /**
+     * NGO 1948 (Oslo)
      * Type: geodetic
      * Extent: Norway - onshore.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -4343,6 +4797,7 @@ interface DatumIds
     public const EPSG_NGO_1948_OSLO = 6817;
 
     /**
+     * NSWC 9Z-2
      * Type: geodetic
      * Extent: World.
      * Scope: Satellite navigation.
@@ -4352,6 +4807,7 @@ interface DatumIds
     public const EPSG_NSWC_9Z_2 = 6276;
 
     /**
+     * Nahrwan 1934
      * Type: geodetic
      * Extent: Iraq - onshore; Iran - onshore northern Gulf coast and west bordering southeast Iraq.
      * Scope: Oil and gas exploration and production.
@@ -4362,6 +4818,7 @@ interface DatumIds
     public const EPSG_NAHRWAN_1934 = 6744;
 
     /**
+     * Nahrwan 1967
      * Type: geodetic
      * Extent: Arabian Gulf; Qatar - offshore; United Arab Emirates (UAE) - Abu Dhabi; Dubai; Sharjah; Ajman; Fujairah;
      * Ras Al Kaimah; Umm Al Qaiwain - onshore and offshore.
@@ -4371,6 +4828,7 @@ interface DatumIds
     public const EPSG_NAHRWAN_1967 = 6270;
 
     /**
+     * Nakhl-e Ghanem
      * Type: geodetic
      * Extent: Iran - Kangan district.
      * Scope: Engineering survey for onshore facilities for South Pars phase 11 and Pars LNG.
@@ -4381,6 +4839,7 @@ interface DatumIds
     public const EPSG_NAKHL_E_GHANEM = 6693;
 
     /**
+     * Naparima 1955
      * Type: geodetic
      * Extent: Trinidad and Tobago - Trinidad - onshore.
      * Scope: Topographic mapping.
@@ -4390,6 +4849,7 @@ interface DatumIds
     public const EPSG_NAPARIMA_1955 = 6158;
 
     /**
+     * Naparima 1972
      * Type: geodetic
      * Extent: Trinidad and Tobago - Tobago - onshore.
      * Scope: Topographic mapping.
@@ -4399,6 +4859,7 @@ interface DatumIds
     public const EPSG_NAPARIMA_1972 = 6271;
 
     /**
+     * Napier 1962
      * Type: vertical
      * Extent: New Zealand - North Island - Hawkes Bay meridional circuit and Napier vertical crs area.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -4407,6 +4868,7 @@ interface DatumIds
     public const EPSG_NAPIER_1962 = 5163;
 
     /**
+     * National Geodetic Network
      * Type: geodetic
      * Extent: Kuwait - onshore.
      * Scope: Geodesy.
@@ -4416,6 +4878,7 @@ interface DatumIds
     public const EPSG_NATIONAL_GEODETIC_NETWORK = 6318;
 
     /**
+     * National Geodetic Vertical Datum 1929
      * Type: vertical
      * Extent: United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut;
      * Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland;
@@ -4430,6 +4893,7 @@ interface DatumIds
     public const EPSG_NATIONAL_GEODETIC_VERTICAL_DATUM_1929 = 5102;
 
     /**
+     * Nelson 1955
      * Type: vertical
      * Extent: New Zealand - South Island - north of approximately 42°20'S - Nelson vertical CRS area.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -4438,6 +4902,7 @@ interface DatumIds
     public const EPSG_NELSON_1955 = 5164;
 
     /**
+     * Nepal 1981
      * Type: geodetic
      * Extent: Nepal.
      * Scope: Geodesy, topographic mapping.
@@ -4446,6 +4911,7 @@ interface DatumIds
     public const EPSG_NEPAL_1981 = 1111;
 
     /**
+     * New Beijing
      * Type: geodetic
      * Extent: China - onshore.
      * Scope: Topographic mapping.
@@ -4455,6 +4921,7 @@ interface DatumIds
     public const EPSG_NEW_BEIJING = 1045;
 
     /**
+     * New Zealand Geodetic Datum 1949
      * Type: geodetic
      * Extent: New Zealand - North Island, South Island, Stewart Island - onshore and nearshore.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -4464,6 +4931,7 @@ interface DatumIds
     public const EPSG_NEW_ZEALAND_GEODETIC_DATUM_1949 = 6272;
 
     /**
+     * New Zealand Geodetic Datum 2000
      * Type: geodetic
      * Extent: New Zealand - onshore and offshore. Includes Antipodes Islands, Auckland Islands, Bounty Islands,
      * Chatham Islands, Cambell Island, Kermadec Islands, Raoul Island and Snares Islands.
@@ -4474,6 +4942,7 @@ interface DatumIds
     public const EPSG_NEW_ZEALAND_GEODETIC_DATUM_2000 = 6167;
 
     /**
+     * New Zealand Vertical Datum 2009
      * Type: vertical
      * Extent: New Zealand - onshore and offshore. Includes Antipodes Islands, Auckland Islands, Bounty Islands,
      * Chatham Islands, Cambell Island, Kermadec Islands, Raoul Island and Snares Islands.
@@ -4484,6 +4953,7 @@ interface DatumIds
     public const EPSG_NEW_ZEALAND_VERTICAL_DATUM_2009 = 1039;
 
     /**
+     * New Zealand Vertical Datum 2016
      * Type: vertical
      * Extent: New Zealand - onshore and offshore. Includes Antipodes Islands, Auckland Islands, Bounty Islands,
      * Chatham Islands, Cambell Island, Kermadec Islands, Raoul Island and Snares Islands.
@@ -4494,6 +4964,7 @@ interface DatumIds
     public const EPSG_NEW_ZEALAND_VERTICAL_DATUM_2016 = 1169;
 
     /**
+     * Nivellement General Guyanais 1977
      * Type: vertical
      * Extent: French Guiana - onshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -4505,6 +4976,7 @@ interface DatumIds
     public const EPSG_NIVELLEMENT_GENERAL_GUYANAIS_1977 = 5153;
 
     /**
+     * Nivellement General de Nouvelle Caledonie
      * Type: vertical
      * Extent: New Caledonia - Grande Terre.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -4515,6 +4987,7 @@ interface DatumIds
     public const EPSG_NIVELLEMENT_GENERAL_DE_NOUVELLE_CALEDONIE = 5151;
 
     /**
+     * Nivellement General de Nouvelle Caledonie 2008
      * Type: vertical
      * Extent: New Caledonia - Belep, Grande Terre, Ile des Pins, Loyalty Islands (Lifou, Mare, Ouvea).
      * Scope: Spatial referencing.
@@ -4524,6 +4997,7 @@ interface DatumIds
     public const EPSG_NIVELLEMENT_GENERAL_DE_NOUVELLE_CALEDONIE_2008 = 1255;
 
     /**
+     * Nivellement General de Polynesie Francaise
      * Type: vertical
      * Extent: French Polynesia - Society Islands - Bora Bora, Huahine, Maupiti, Moorea, Raiatea, Tahaa and Tahiti.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -4533,6 +5007,7 @@ interface DatumIds
     public const EPSG_NIVELLEMENT_GENERAL_DE_POLYNESIE_FRANCAISE = 5195;
 
     /**
+     * Nivellement General de la Corse 1948
      * Type: vertical
      * Extent: France - Corsica onshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -4542,6 +5017,7 @@ interface DatumIds
     public const EPSG_NIVELLEMENT_GENERAL_DE_LA_CORSE_1948 = 5189;
 
     /**
+     * Nivellement General de la France - IGN69
      * Type: vertical
      * Extent: France - mainland onshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -4552,6 +5028,7 @@ interface DatumIds
     public const EPSG_NIVELLEMENT_GENERAL_DE_LA_FRANCE_IGN69 = 5119;
 
     /**
+     * Nivellement General de la France - IGN78
      * Type: vertical
      * Extent: France - Corsica onshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -4561,6 +5038,7 @@ interface DatumIds
     public const EPSG_NIVELLEMENT_GENERAL_DE_LA_FRANCE_IGN78 = 5120;
 
     /**
+     * Nivellement General de la France - Lallemand
      * Type: vertical
      * Extent: France - mainland onshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -4571,6 +5049,7 @@ interface DatumIds
     public const EPSG_NIVELLEMENT_GENERAL_DE_LA_FRANCE_LALLEMAND = 5118;
 
     /**
+     * Nivellement General du Luxembourg
      * Type: vertical
      * Extent: Luxembourg.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -4581,6 +5060,7 @@ interface DatumIds
     public const EPSG_NIVELLEMENT_GENERAL_DU_LUXEMBOURG = 5172;
 
     /**
+     * Nord Sahara 1959
      * Type: geodetic
      * Extent: Algeria - onshore and offshore.
      * Scope: Topographic mapping.
@@ -4593,6 +5073,7 @@ interface DatumIds
     public const EPSG_NORD_SAHARA_1959 = 6307;
 
     /**
+     * Normaal Amsterdams Peil
      * Type: vertical
      * Extent: Netherlands - onshore and offshore.
      * Scope: Geodesy, topographic mapping.
@@ -4604,6 +5085,7 @@ interface DatumIds
     public const EPSG_NORMAAL_AMSTERDAMS_PEIL = 5109;
 
     /**
+     * North American Datum 1927
      * Type: geodetic
      * Extent: North and central America: Antigua and Barbuda - onshore. Bahamas - onshore plus offshore over internal
      * continental shelf only. Belize - onshore. British Virgin Islands - onshore. Canada onshore - Alberta, British
@@ -4625,6 +5107,7 @@ interface DatumIds
     public const EPSG_NORTH_AMERICAN_DATUM_1927 = 6267;
 
     /**
+     * North American Datum 1927 (1976)
      * Type: geodetic
      * Extent: Canada - Ontario.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -4634,6 +5117,7 @@ interface DatumIds
     public const EPSG_NORTH_AMERICAN_DATUM_1927_1976 = 6608;
 
     /**
+     * North American Datum 1927 (CGQ77)
      * Type: geodetic
      * Extent: Canada - Quebec.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -4644,6 +5128,7 @@ interface DatumIds
     public const EPSG_NORTH_AMERICAN_DATUM_1927_CGQ77 = 6609;
 
     /**
+     * North American Datum 1983
      * Type: geodetic
      * Extent: North America - onshore and offshore: Canada - Alberta; British Columbia; Manitoba; New Brunswick;
      * Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec;
@@ -4661,6 +5146,7 @@ interface DatumIds
     public const EPSG_NORTH_AMERICAN_DATUM_1983 = 6269;
 
     /**
+     * North American Datum of 1983 (CSRS) version 2
      * Type: geodetic
      * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
      * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
@@ -4674,6 +5160,7 @@ interface DatumIds
     public const EPSG_NORTH_AMERICAN_DATUM_OF_1983_CSRS_VERSION_2 = 1193;
 
     /**
+     * North American Datum of 1983 (CSRS) version 3
      * Type: geodetic
      * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
      * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
@@ -4688,6 +5175,7 @@ interface DatumIds
     public const EPSG_NORTH_AMERICAN_DATUM_OF_1983_CSRS_VERSION_3 = 1194;
 
     /**
+     * North American Datum of 1983 (CSRS) version 4
      * Type: geodetic
      * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
      * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
@@ -4701,6 +5189,7 @@ interface DatumIds
     public const EPSG_NORTH_AMERICAN_DATUM_OF_1983_CSRS_VERSION_4 = 1195;
 
     /**
+     * North American Datum of 1983 (CSRS) version 5
      * Type: geodetic
      * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
      * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
@@ -4713,6 +5202,7 @@ interface DatumIds
     public const EPSG_NORTH_AMERICAN_DATUM_OF_1983_CSRS_VERSION_5 = 1196;
 
     /**
+     * North American Datum of 1983 (CSRS) version 6
      * Type: geodetic
      * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
      * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
@@ -4727,6 +5217,7 @@ interface DatumIds
     public const EPSG_NORTH_AMERICAN_DATUM_OF_1983_CSRS_VERSION_6 = 1197;
 
     /**
+     * North American Datum of 1983 (CSRS) version 7
      * Type: geodetic
      * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
      * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
@@ -4739,6 +5230,7 @@ interface DatumIds
     public const EPSG_NORTH_AMERICAN_DATUM_OF_1983_CSRS_VERSION_7 = 1198;
 
     /**
+     * North American Datum of 1983 (CSRS96)
      * Type: geodetic
      * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
      * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
@@ -4752,6 +5244,7 @@ interface DatumIds
     public const EPSG_NORTH_AMERICAN_DATUM_OF_1983_CSRS96 = 1192;
 
     /**
+     * North American Datum of 1983 (MARP00)
      * Type: geodetic
      * Extent: Guam, Northern Mariana Islands and Palau; onshore and offshore.
      * Scope: Geodesy.
@@ -4763,6 +5256,7 @@ interface DatumIds
     public const EPSG_NORTH_AMERICAN_DATUM_OF_1983_MARP00 = 1221;
 
     /**
+     * North American Datum of 1983 (PACP00)
      * Type: geodetic
      * Extent: American Samoa, Marshall Islands, United States (USA) - Hawaii, United States minor outlying islands;
      * onshore and offshore.
@@ -4775,6 +5269,7 @@ interface DatumIds
     public const EPSG_NORTH_AMERICAN_DATUM_OF_1983_PACP00 = 1249;
 
     /**
+     * North American Vertical Datum 1988
      * Type: vertical
      * Extent: Mexico - onshore. United States (USA) -  CONUS and Alaska - onshore - Alabama; Alaska; Arizona;
      * Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas;
@@ -4790,6 +5285,7 @@ interface DatumIds
     public const EPSG_NORTH_AMERICAN_VERTICAL_DATUM_1988 = 5103;
 
     /**
+     * North Rona
      * Type: vertical
      * Extent: United Kingdom (UK) - Great Britain - Scotland - North Rona onshore.
      * Scope: Geodesy, topographic mapping.
@@ -4799,6 +5295,7 @@ interface DatumIds
     public const EPSG_NORTH_RONA = 5143;
 
     /**
+     * Northern Marianas Vertical Datum of 2003
      * Type: vertical
      * Extent: Northern Mariana Islands - onshore - Rota, Saipan and Tinian.
      * Scope: Geodesy, topographic mapping.
@@ -4810,6 +5307,7 @@ interface DatumIds
     public const EPSG_NORTHERN_MARIANAS_VERTICAL_DATUM_OF_2003 = 1119;
 
     /**
+     * Norway Normal Null 1954
      * Type: vertical
      * Extent: Norway - onshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -4820,6 +5318,7 @@ interface DatumIds
     public const EPSG_NORWAY_NORMAL_NULL_1954 = 5174;
 
     /**
+     * Norway Normal Null 2000
      * Type: vertical
      * Extent: Norway - onshore.
      * Scope: Geodesy, topographic mapping.
@@ -4831,6 +5330,7 @@ interface DatumIds
     public const EPSG_NORWAY_NORMAL_NULL_2000 = 1096;
 
     /**
+     * Not specified (based on Airy 1830 ellipsoid)
      * Type: geodetic
      * Extent: Not specified.
      * Scope: Not a valid datum.
@@ -4840,6 +5340,7 @@ interface DatumIds
     public const EPSG_NOT_SPECIFIED_BASED_ON_AIRY_1830_ELLIPSOID = 6001;
 
     /**
+     * Not specified (based on Airy Modified 1849 ellipsoid)
      * Type: geodetic
      * Extent: Not specified.
      * Scope: Not a valid datum.
@@ -4849,6 +5350,7 @@ interface DatumIds
     public const EPSG_NOT_SPECIFIED_BASED_ON_AIRY_MODIFIED_1849_ELLIPSOID = 6002;
 
     /**
+     * Not specified (based on Australian National Spheroid)
      * Type: geodetic
      * Extent: Not specified.
      * Scope: Not a valid datum.
@@ -4858,6 +5360,7 @@ interface DatumIds
     public const EPSG_NOT_SPECIFIED_BASED_ON_AUSTRALIAN_NATIONAL_SPHEROID = 6003;
 
     /**
+     * Not specified (based on Average Terrestrial System 1977 ellipsoid)
      * Type: geodetic
      * Extent: Not specified.
      * Scope: Not a valid datum.
@@ -4867,6 +5370,7 @@ interface DatumIds
     public const EPSG_NOT_SPECIFIED_BASED_ON_AVERAGE_TERRESTRIAL_SYSTEM_1977_ELLIPSOID = 6041;
 
     /**
+     * Not specified (based on Bessel 1841 ellipsoid)
      * Type: geodetic
      * Extent: Not specified.
      * Scope: Not a valid datum.
@@ -4876,6 +5380,7 @@ interface DatumIds
     public const EPSG_NOT_SPECIFIED_BASED_ON_BESSEL_1841_ELLIPSOID = 6004;
 
     /**
+     * Not specified (based on Bessel Modified ellipsoid)
      * Type: geodetic
      * Extent: Not specified.
      * Scope: Not a valid datum.
@@ -4885,6 +5390,7 @@ interface DatumIds
     public const EPSG_NOT_SPECIFIED_BASED_ON_BESSEL_MODIFIED_ELLIPSOID = 6005;
 
     /**
+     * Not specified (based on Bessel Namibia ellipsoid)
      * Type: geodetic
      * Extent: Not specified.
      * Scope: Not a valid datum.
@@ -4894,6 +5400,7 @@ interface DatumIds
     public const EPSG_NOT_SPECIFIED_BASED_ON_BESSEL_NAMIBIA_ELLIPSOID = 6006;
 
     /**
+     * Not specified (based on Clarke 1858 ellipsoid)
      * Type: geodetic
      * Extent: Not specified.
      * Scope: Not a valid datum.
@@ -4903,6 +5410,7 @@ interface DatumIds
     public const EPSG_NOT_SPECIFIED_BASED_ON_CLARKE_1858_ELLIPSOID = 6007;
 
     /**
+     * Not specified (based on Clarke 1866 Authalic Sphere)
      * Type: geodetic
      * Extent: Not specified.
      * Scope: Not a valid datum.
@@ -4912,6 +5420,7 @@ interface DatumIds
     public const EPSG_NOT_SPECIFIED_BASED_ON_CLARKE_1866_AUTHALIC_SPHERE = 6052;
 
     /**
+     * Not specified (based on Clarke 1866 ellipsoid)
      * Type: geodetic
      * Extent: Not specified.
      * Scope: Not a valid datum.
@@ -4921,6 +5430,7 @@ interface DatumIds
     public const EPSG_NOT_SPECIFIED_BASED_ON_CLARKE_1866_ELLIPSOID = 6008;
 
     /**
+     * Not specified (based on Clarke 1880 (Arc) ellipsoid)
      * Type: geodetic
      * Extent: Not specified.
      * Scope: Not a valid datum.
@@ -4930,6 +5440,7 @@ interface DatumIds
     public const EPSG_NOT_SPECIFIED_BASED_ON_CLARKE_1880_ARC_ELLIPSOID = 6013;
 
     /**
+     * Not specified (based on Clarke 1880 (Benoit) ellipsoid)
      * Type: geodetic
      * Extent: Not specified.
      * Scope: Not a valid datum.
@@ -4939,6 +5450,7 @@ interface DatumIds
     public const EPSG_NOT_SPECIFIED_BASED_ON_CLARKE_1880_BENOIT_ELLIPSOID = 6010;
 
     /**
+     * Not specified (based on Clarke 1880 (IGN) ellipsoid)
      * Type: geodetic
      * Extent: Not specified.
      * Scope: Not a valid datum.
@@ -4948,6 +5460,7 @@ interface DatumIds
     public const EPSG_NOT_SPECIFIED_BASED_ON_CLARKE_1880_IGN_ELLIPSOID = 6011;
 
     /**
+     * Not specified (based on Clarke 1880 (RGS) ellipsoid)
      * Type: geodetic
      * Extent: Not specified.
      * Scope: Not a valid datum.
@@ -4957,6 +5470,7 @@ interface DatumIds
     public const EPSG_NOT_SPECIFIED_BASED_ON_CLARKE_1880_RGS_ELLIPSOID = 6012;
 
     /**
+     * Not specified (based on Clarke 1880 (SGA 1922) ellipsoid)
      * Type: geodetic
      * Extent: Not specified.
      * Scope: Not a valid datum.
@@ -4966,6 +5480,7 @@ interface DatumIds
     public const EPSG_NOT_SPECIFIED_BASED_ON_CLARKE_1880_SGA_1922_ELLIPSOID = 6014;
 
     /**
+     * Not specified (based on Clarke 1880 ellipsoid)
      * Type: geodetic
      * Extent: Not specified.
      * Scope: Not a valid datum.
@@ -4975,6 +5490,7 @@ interface DatumIds
     public const EPSG_NOT_SPECIFIED_BASED_ON_CLARKE_1880_ELLIPSOID = 6034;
 
     /**
+     * Not specified (based on Everest (1830 Definition) ellipsoid)
      * Type: geodetic
      * Extent: Not specified.
      * Scope: Not a valid datum.
@@ -4984,6 +5500,7 @@ interface DatumIds
     public const EPSG_NOT_SPECIFIED_BASED_ON_EVEREST_1830_DEFINITION_ELLIPSOID = 6042;
 
     /**
+     * Not specified (based on Everest 1830 (1937 Adjustment) ellipsoid)
      * Type: geodetic
      * Extent: Not specified.
      * Scope: Not a valid datum.
@@ -4993,6 +5510,7 @@ interface DatumIds
     public const EPSG_NOT_SPECIFIED_BASED_ON_EVEREST_1830_1937_ADJUSTMENT_ELLIPSOID = 6015;
 
     /**
+     * Not specified (based on Everest 1830 (1962 Definition) ellipsoid)
      * Type: geodetic
      * Extent: Not specified.
      * Scope: Not a valid datum.
@@ -5002,6 +5520,7 @@ interface DatumIds
     public const EPSG_NOT_SPECIFIED_BASED_ON_EVEREST_1830_1962_DEFINITION_ELLIPSOID = 6044;
 
     /**
+     * Not specified (based on Everest 1830 (1967 Definition) ellipsoid)
      * Type: geodetic
      * Extent: Not specified.
      * Scope: Not a valid datum.
@@ -5011,6 +5530,7 @@ interface DatumIds
     public const EPSG_NOT_SPECIFIED_BASED_ON_EVEREST_1830_1967_DEFINITION_ELLIPSOID = 6016;
 
     /**
+     * Not specified (based on Everest 1830 (1975 Definition) ellipsoid)
      * Type: geodetic
      * Extent: Not specified.
      * Scope: Not a valid datum.
@@ -5020,6 +5540,7 @@ interface DatumIds
     public const EPSG_NOT_SPECIFIED_BASED_ON_EVEREST_1830_1975_DEFINITION_ELLIPSOID = 6045;
 
     /**
+     * Not specified (based on Everest 1830 Modified ellipsoid)
      * Type: geodetic
      * Extent: Not specified.
      * Scope: Not a valid datum.
@@ -5029,6 +5550,7 @@ interface DatumIds
     public const EPSG_NOT_SPECIFIED_BASED_ON_EVEREST_1830_MODIFIED_ELLIPSOID = 6018;
 
     /**
+     * Not specified (based on GEM 10C ellipsoid)
      * Type: geodetic
      * Extent: Not specified.
      * Scope: Not a valid datum.
@@ -5038,6 +5560,7 @@ interface DatumIds
     public const EPSG_NOT_SPECIFIED_BASED_ON_GEM_10C_ELLIPSOID = 6031;
 
     /**
+     * Not specified (based on GRS 1967 ellipsoid)
      * Type: geodetic
      * Extent: Not specified.
      * Scope: Not a valid datum.
@@ -5047,6 +5570,7 @@ interface DatumIds
     public const EPSG_NOT_SPECIFIED_BASED_ON_GRS_1967_ELLIPSOID = 6036;
 
     /**
+     * Not specified (based on GRS 1980 Authalic Sphere)
      * Type: geodetic
      * Extent: Not specified.
      * Scope: Not a valid datum.
@@ -5056,6 +5580,7 @@ interface DatumIds
     public const EPSG_NOT_SPECIFIED_BASED_ON_GRS_1980_AUTHALIC_SPHERE = 6047;
 
     /**
+     * Not specified (based on GRS 1980 ellipsoid)
      * Type: geodetic
      * Extent: Not specified.
      * Scope: Not a valid datum.
@@ -5065,6 +5590,7 @@ interface DatumIds
     public const EPSG_NOT_SPECIFIED_BASED_ON_GRS_1980_ELLIPSOID = 6019;
 
     /**
+     * Not specified (based on Helmert 1906 ellipsoid)
      * Type: geodetic
      * Extent: Not specified.
      * Scope: Not a valid datum.
@@ -5074,6 +5600,7 @@ interface DatumIds
     public const EPSG_NOT_SPECIFIED_BASED_ON_HELMERT_1906_ELLIPSOID = 6020;
 
     /**
+     * Not specified (based on Hughes 1980 ellipsoid)
      * Type: geodetic
      * Extent: Not specified.
      * Scope: Not a valid datum.
@@ -5083,6 +5610,7 @@ interface DatumIds
     public const EPSG_NOT_SPECIFIED_BASED_ON_HUGHES_1980_ELLIPSOID = 6054;
 
     /**
+     * Not specified (based on Indonesian National Spheroid)
      * Type: geodetic
      * Extent: Not specified.
      * Scope: Not a valid datum.
@@ -5092,6 +5620,7 @@ interface DatumIds
     public const EPSG_NOT_SPECIFIED_BASED_ON_INDONESIAN_NATIONAL_SPHEROID = 6021;
 
     /**
+     * Not specified (based on International 1924 Authalic Sphere)
      * Type: geodetic
      * Extent: Not specified.
      * Scope: Not a valid datum.
@@ -5101,6 +5630,7 @@ interface DatumIds
     public const EPSG_NOT_SPECIFIED_BASED_ON_INTERNATIONAL_1924_AUTHALIC_SPHERE = 6053;
 
     /**
+     * Not specified (based on International 1924 ellipsoid)
      * Type: geodetic
      * Extent: Not specified.
      * Scope: Not a valid datum.
@@ -5110,6 +5640,7 @@ interface DatumIds
     public const EPSG_NOT_SPECIFIED_BASED_ON_INTERNATIONAL_1924_ELLIPSOID = 6022;
 
     /**
+     * Not specified (based on Krassowsky 1940 ellipsoid)
      * Type: geodetic
      * Extent: Not specified.
      * Scope: Not a valid datum.
@@ -5119,6 +5650,7 @@ interface DatumIds
     public const EPSG_NOT_SPECIFIED_BASED_ON_KRASSOWSKY_1940_ELLIPSOID = 6024;
 
     /**
+     * Not specified (based on NWL 9D ellipsoid)
      * Type: geodetic
      * Extent: Not specified.
      * Scope: Not a valid datum.
@@ -5128,6 +5660,7 @@ interface DatumIds
     public const EPSG_NOT_SPECIFIED_BASED_ON_NWL_9D_ELLIPSOID = 6025;
 
     /**
+     * Not specified (based on OSU86F ellipsoid)
      * Type: geodetic
      * Extent: Not specified.
      * Scope: Not a valid datum.
@@ -5137,6 +5670,7 @@ interface DatumIds
     public const EPSG_NOT_SPECIFIED_BASED_ON_OSU86F_ELLIPSOID = 6032;
 
     /**
+     * Not specified (based on OSU91A ellipsoid)
      * Type: geodetic
      * Extent: Not specified.
      * Scope: Not a valid datum.
@@ -5146,6 +5680,7 @@ interface DatumIds
     public const EPSG_NOT_SPECIFIED_BASED_ON_OSU91A_ELLIPSOID = 6033;
 
     /**
+     * Not specified (based on Plessis 1817 ellipsoid)
      * Type: geodetic
      * Extent: Not specified.
      * Scope: Not a valid datum.
@@ -5155,6 +5690,7 @@ interface DatumIds
     public const EPSG_NOT_SPECIFIED_BASED_ON_PLESSIS_1817_ELLIPSOID = 6027;
 
     /**
+     * Not specified (based on Struve 1860 ellipsoid)
      * Type: geodetic
      * Extent: Not specified.
      * Scope: Not a valid datum.
@@ -5164,6 +5700,7 @@ interface DatumIds
     public const EPSG_NOT_SPECIFIED_BASED_ON_STRUVE_1860_ELLIPSOID = 6028;
 
     /**
+     * Not specified (based on WGS 72 ellipsoid)
      * Type: geodetic
      * Extent: Not specified.
      * Scope: Not a valid datum.
@@ -5173,6 +5710,7 @@ interface DatumIds
     public const EPSG_NOT_SPECIFIED_BASED_ON_WGS_72_ELLIPSOID = 6043;
 
     /**
+     * Not specified (based on WGS 84 ellipsoid)
      * Type: geodetic
      * Extent: Not specified.
      * Scope: Not a valid datum.
@@ -5182,6 +5720,7 @@ interface DatumIds
     public const EPSG_NOT_SPECIFIED_BASED_ON_WGS_84_ELLIPSOID = 6030;
 
     /**
+     * Not specified (based on War Office ellipsoid)
      * Type: geodetic
      * Extent: Not specified.
      * Scope: Not a valid datum.
@@ -5191,6 +5730,7 @@ interface DatumIds
     public const EPSG_NOT_SPECIFIED_BASED_ON_WAR_OFFICE_ELLIPSOID = 6029;
 
     /**
+     * Nouakchott 1965
      * Type: geodetic
      * Extent: Mauritania - coastal area south of Cape Timiris.
      * Scope: Topographic mapping.
@@ -5202,6 +5742,7 @@ interface DatumIds
     public const EPSG_NOUAKCHOTT_1965 = 6680;
 
     /**
+     * Nouvelle Triangulation Francaise
      * Type: geodetic
      * Extent: France - onshore - mainland and Corsica.
      * Scope: Topographic mapping.
@@ -5210,6 +5751,7 @@ interface DatumIds
     public const EPSG_NOUVELLE_TRIANGULATION_FRANCAISE = 6275;
 
     /**
+     * Nouvelle Triangulation Francaise (Paris)
      * Type: geodetic
      * Extent: France - onshore - mainland and Corsica.
      * Scope: Topographic mapping.
@@ -5218,6 +5760,7 @@ interface DatumIds
     public const EPSG_NOUVELLE_TRIANGULATION_FRANCAISE_PARIS = 6807;
 
     /**
+     * OS (SN) 1980
      * Type: geodetic
      * Extent: Ireland - onshore. United Kingdom (UK) - onshore - England; Scotland; Wales; Northern Ireland. Isle of
      * Man.
@@ -5227,6 +5770,7 @@ interface DatumIds
     public const EPSG_OS_SN_1980 = 6279;
 
     /**
+     * OSGB 1936
      * Type: geodetic
      * Extent: United Kingdom (UK) - offshore to boundary of UKCS within 49°45'N to 61°N and 9°W to 2°E; onshore
      * Great Britain (England, Wales and Scotland). Isle of Man onshore.
@@ -5240,6 +5784,7 @@ interface DatumIds
     public const EPSG_OSGB_1936 = 6277;
 
     /**
+     * OSGB 1970 (SN)
      * Type: geodetic
      * Extent: United Kingdom (UK) - Great Britain - England and Wales onshore, Scotland onshore and Western Isles
      * nearshore; Isle of Man onshore.
@@ -5249,6 +5794,7 @@ interface DatumIds
     public const EPSG_OSGB_1970_SN = 6278;
 
     /**
+     * OSNI 1952
      * Type: geodetic
      * Extent: United Kingdom (UK) - Northern Ireland (Ulster) - onshore.
      * Scope: Geodesy, topographic mapping.
@@ -5259,6 +5805,7 @@ interface DatumIds
     public const EPSG_OSNI_1952 = 6188;
 
     /**
+     * Observatario
      * Type: geodetic
      * Extent: Mozambique - south.
      * Scope: Topographic mapping.
@@ -5268,6 +5815,7 @@ interface DatumIds
     public const EPSG_OBSERVATARIO = 6129;
 
     /**
+     * Ocotepeque 1935
      * Type: geodetic
      * Extent: Costa Rica; El Salvador; Guatemala; Honduras; Nicaragua.
      * Scope: Engineering survey, topographic mapping.
@@ -5278,6 +5826,7 @@ interface DatumIds
     public const EPSG_OCOTEPEQUE_1935 = 1070;
 
     /**
+     * Old Hawaiian
      * Type: geodetic
      * Extent: United States (USA) - Hawaii - main islands onshore.
      * Scope: Topographic mapping.
@@ -5289,6 +5838,7 @@ interface DatumIds
     public const EPSG_OLD_HAWAIIAN = 6135;
 
     /**
+     * Oman National Geodetic Datum 2014
      * Type: geodetic
      * Extent: Oman - onshore and offshore.
      * Scope: Geodesy.
@@ -5298,6 +5848,7 @@ interface DatumIds
     public const EPSG_OMAN_NATIONAL_GEODETIC_DATUM_2014 = 1147;
 
     /**
+     * Oman National Geodetic Datum 2017
      * Type: geodetic
      * Extent: Oman - onshore and offshore.
      * Scope: Geodesy.
@@ -5307,6 +5858,7 @@ interface DatumIds
     public const EPSG_OMAN_NATIONAL_GEODETIC_DATUM_2017 = 1263;
 
     /**
+     * One Tree Point 1964
      * Type: vertical
      * Extent: New Zealand - North Island - One Tree Point vertical CRS area.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -5315,6 +5867,7 @@ interface DatumIds
     public const EPSG_ONE_TREE_POINT_1964 = 5165;
 
     /**
+     * Ordnance Datum Newlyn
      * Type: vertical
      * Extent: United Kingdom (UK) - Great Britain onshore - England and Wales - mainland; Scotland - mainland and
      * Inner Hebrides.
@@ -5326,6 +5879,7 @@ interface DatumIds
     public const EPSG_ORDNANCE_DATUM_NEWLYN = 5101;
 
     /**
+     * Ordnance Datum Newlyn (Offshore)
      * Type: vertical
      * Extent: United Kingdom (UK) - offshore between 2km from shore and boundary of UKCS within 49°46'N to 61°01'N
      * and 7°33'W to 3°33'E.
@@ -5336,6 +5890,7 @@ interface DatumIds
     public const EPSG_ORDNANCE_DATUM_NEWLYN_OFFSHORE = 1164;
 
     /**
+     * Ordnance Datum Newlyn (Orkney Isles)
      * Type: vertical
      * Extent: United Kingdom (UK) - Great Britain - Scotland - Orkney Islands onshore.
      * Scope: Geodesy, topographic mapping.
@@ -5347,6 +5902,7 @@ interface DatumIds
     public const EPSG_ORDNANCE_DATUM_NEWLYN_ORKNEY_ISLES = 5138;
 
     /**
+     * Ostend
      * Type: vertical
      * Extent: Belgium - onshore.
      * Scope: Geodesy, topographic mapping.
@@ -5356,6 +5912,7 @@ interface DatumIds
     public const EPSG_OSTEND = 5110;
 
     /**
+     * PDO Height Datum 1993
      * Type: vertical
      * Extent: Oman - onshore. Includes Musandam and the Kuria Muria (Al Hallaniyah) islands.
      * Scope: Oil and gas exploration.
@@ -5367,6 +5924,7 @@ interface DatumIds
     public const EPSG_PDO_HEIGHT_DATUM_1993 = 5123;
 
     /**
+     * PDO Survey Datum 1993
      * Type: geodetic
      * Extent: Oman - onshore. Includes Musandam and the Kuria Muria (Al Hallaniyah) islands.
      * Scope: Oil and gas exploration.
@@ -5376,6 +5934,7 @@ interface DatumIds
     public const EPSG_PDO_SURVEY_DATUM_1993 = 6134;
 
     /**
+     * PNG08
      * Type: vertical
      * Extent: Papua New Guinea - between 0°N and 12°S and 140°E and 158°E - onshore and offshore.
      * Scope: Geodesy.
@@ -5385,6 +5944,7 @@ interface DatumIds
     public const EPSG_PNG08 = 1149;
 
     /**
+     * Palestine 1923
      * Type: geodetic
      * Extent: Israel - onshore; Jordan; Palestine Territory - onshore.
      * Scope: Topographic mapping.
@@ -5393,6 +5953,7 @@ interface DatumIds
     public const EPSG_PALESTINE_1923 = 6281;
 
     /**
+     * Pampa del Castillo
      * Type: geodetic
      * Extent: Argentina - Chibut province south of approximately 42°30'S and Santa Cruz province north of
      * approximately 50°20'S.
@@ -5404,6 +5965,7 @@ interface DatumIds
     public const EPSG_PAMPA_DEL_CASTILLO = 6161;
 
     /**
+     * Panama-Colon 1911
      * Type: geodetic
      * Extent: Panama - onshore.
      * Scope: Engineering survey, topographic mapping.
@@ -5415,6 +5977,7 @@ interface DatumIds
     public const EPSG_PANAMA_COLON_1911 = 1072;
 
     /**
+     * Papua New Guinea Geodetic Datum 1994
      * Type: geodetic
      * Extent: Papua New Guinea - onshore and offshore. Includes Bismark archipelago, Louisade archipelago, Admiralty
      * Islands, d'Entrecasteaux Islands, northern Solomon Islands, Trobriand Islands, New Britain, New Ireland,
@@ -5426,6 +5989,7 @@ interface DatumIds
     public const EPSG_PAPUA_NEW_GUINEA_GEODETIC_DATUM_1994 = 1076;
 
     /**
+     * Parametry Zemli 1990
      * Type: dynamic geodetic
      * Extent: World.
      * Scope: Geodesy. Navigation and positioning using Glonass satellite system.
@@ -5435,6 +5999,7 @@ interface DatumIds
     public const EPSG_PARAMETRY_ZEMLI_1990 = 6740;
 
     /**
+     * Parametry Zemli 1990.02
      * Type: dynamic geodetic
      * Extent: World.
      * Scope: Geodesy. Navigation and positioning using Glonass satellite system.
@@ -5446,6 +6011,7 @@ interface DatumIds
     public const EPSG_PARAMETRY_ZEMLI_1990_02 = 1157;
 
     /**
+     * Parametry Zemli 1990.11
      * Type: dynamic geodetic
      * Extent: World.
      * Scope: Geodesy. Navigation and positioning using Glonass satellite system.
@@ -5457,6 +6023,7 @@ interface DatumIds
     public const EPSG_PARAMETRY_ZEMLI_1990_11 = 1158;
 
     /**
+     * Peru96
      * Type: geodetic
      * Extent: Peru - onshore and offshore.
      * Scope: Geodesy.
@@ -5467,6 +6034,7 @@ interface DatumIds
     public const EPSG_PERU96 = 1067;
 
     /**
+     * Petrels 1972
      * Type: geodetic
      * Extent: Antarctica - Adelie Land - Petrels island.
      * Scope: Geodesy, topographic mapping.
@@ -5476,6 +6044,7 @@ interface DatumIds
     public const EPSG_PETRELS_1972 = 6636;
 
     /**
+     * Philippine Reference System 1992
      * Type: geodetic
      * Extent: Philippines - onshore and offshore.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -5486,6 +6055,7 @@ interface DatumIds
     public const EPSG_PHILIPPINE_REFERENCE_SYSTEM_1992 = 6683;
 
     /**
+     * Phoenix Islands 1966
      * Type: geodetic
      * Extent: Kiribati - Phoenix Islands: Kanton, Orona, McKean Atoll, Birnie Atoll, Phoenix Seamounts.
      * Scope: Military survey.
@@ -5493,6 +6063,7 @@ interface DatumIds
     public const EPSG_PHOENIX_ISLANDS_1966 = 6716;
 
     /**
+     * Pico de las Nieves 1968
      * Type: geodetic
      * Extent: Spain - Canary Islands onshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -5503,6 +6074,7 @@ interface DatumIds
     public const EPSG_PICO_DE_LAS_NIEVES_1968 = 1286;
 
     /**
+     * Pico de las Nieves 1984
      * Type: geodetic
      * Extent: Spain - Canary Islands - El Hierro, La Gomera, La Palma and Tenerife - onshore.
      * Scope: Military survey.
@@ -5513,6 +6085,7 @@ interface DatumIds
     public const EPSG_PICO_DE_LAS_NIEVES_1984 = 6728;
 
     /**
+     * Piraeus Harbour 1986
      * Type: vertical
      * Extent: Greece - onshore.
      * Scope: Geodesy, topographic mapping.
@@ -5521,6 +6094,7 @@ interface DatumIds
     public const EPSG_PIRAEUS_HARBOUR_1986 = 5115;
 
     /**
+     * Pitcairn 1967
      * Type: geodetic
      * Extent: Pitcairn - Pitcairn Island.
      * Scope: Military survey.
@@ -5530,6 +6104,7 @@ interface DatumIds
     public const EPSG_PITCAIRN_1967 = 6729;
 
     /**
+     * Pitcairn 2006
      * Type: geodetic
      * Extent: Pitcairn - Pitcairn Island.
      * Scope: Cadastre, engineering survey, topographic mapping.
@@ -5540,6 +6115,7 @@ interface DatumIds
     public const EPSG_PITCAIRN_2006 = 6763;
 
     /**
+     * Point 58
      * Type: geodetic
      * Extent: Senegal - central, Mali - southwest, Burkina Faso - central, Niger - southwest, Nigeria - north, Chad -
      * central. All in proximity to the parallel of latitude of 12°N.
@@ -5551,6 +6127,7 @@ interface DatumIds
     public const EPSG_POINT_58 = 6620;
 
     /**
+     * Pointe Geologie Perroud 1950
      * Type: geodetic
      * Extent: Antarctica - Adelie Land - coastal area between 136°E and 142°E.
      * Scope: Geodesy, topographic mapping.
@@ -5560,6 +6137,7 @@ interface DatumIds
     public const EPSG_POINTE_GEOLOGIE_PERROUD_1950 = 6637;
 
     /**
+     * Ponta Delgada
      * Type: vertical
      * Extent: Portugal - eastern Azores - Sao Miguel island onshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -5569,6 +6147,7 @@ interface DatumIds
     public const EPSG_PONTA_DELGADA = 1110;
 
     /**
+     * Poolbeg
      * Type: vertical
      * Extent: Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore.
      * Scope: Topographic mapping.
@@ -5579,6 +6158,7 @@ interface DatumIds
     public const EPSG_POOLBEG = 5152;
 
     /**
+     * Port Moresby 1996
      * Type: vertical
      * Extent: Papua New Guinea - onshore - Gulf province east of 144°24'E, Central province and National Capital
      * District.
@@ -5591,6 +6171,7 @@ interface DatumIds
     public const EPSG_PORT_MORESBY_1996 = 1171;
 
     /**
+     * Port Moresby 2008
      * Type: vertical
      * Extent: Papua New Guinea - onshore - Gulf province east of 144°24'E, Central province and National Capital
      * District.
@@ -5604,6 +6185,7 @@ interface DatumIds
     public const EPSG_PORT_MORESBY_2008 = 1172;
 
     /**
+     * Porto Santo 1936
      * Type: geodetic
      * Extent: Portugal - Madeira, Porto Santo and Desertas islands - onshore.
      * Scope: Topographic mapping.
@@ -5613,6 +6195,7 @@ interface DatumIds
     public const EPSG_PORTO_SANTO_1936 = 6615;
 
     /**
+     * Porto Santo 1995
      * Type: geodetic
      * Extent: Portugal - Madeira, Porto Santo and Desertas islands - onshore.
      * Scope: Topographic mapping.
@@ -5623,6 +6206,7 @@ interface DatumIds
     public const EPSG_PORTO_SANTO_1995 = 6663;
 
     /**
+     * Posiciones Geodesicas Argentinas 1994
      * Type: geodetic
      * Extent: Argentina - onshore and offshore.
      * Scope: Geodesy, topographic mapping.
@@ -5636,6 +6220,7 @@ interface DatumIds
     public const EPSG_POSICIONES_GEODESICAS_ARGENTINAS_1994 = 6694;
 
     /**
+     * Posiciones Geodesicas Argentinas 1998
      * Type: geodetic
      * Extent: Argentina - onshore and offshore.
      * Scope: Geodesy.
@@ -5646,6 +6231,7 @@ interface DatumIds
     public const EPSG_POSICIONES_GEODESICAS_ARGENTINAS_1998 = 6190;
 
     /**
+     * Posiciones Geodesicas Argentinas 2007
      * Type: geodetic
      * Extent: Argentina - onshore and offshore.
      * Scope: Geodesy, topographic mapping.
@@ -5658,6 +6244,7 @@ interface DatumIds
     public const EPSG_POSICIONES_GEODESICAS_ARGENTINAS_2007 = 1062;
 
     /**
+     * Potsdam Datum/83
      * Type: geodetic
      * Extent: Germany - Thuringen.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -5669,6 +6256,7 @@ interface DatumIds
     public const EPSG_POTSDAM_DATUM_83 = 6746;
 
     /**
+     * Principe
      * Type: geodetic
      * Extent: Sao Tome and Principe - onshore - Principe.
      * Scope: Geodesy, topographic mapping.
@@ -5677,6 +6265,7 @@ interface DatumIds
     public const EPSG_PRINCIPE = 1046;
 
     /**
+     * Provisional South American Datum 1956
      * Type: geodetic
      * Extent: Aruba - onshore; Bolivia; Bonaire - onshore; Brazil - offshore - Amazon Cone shelf; Chile - onshore
      * north of 43°30'S; Curacao - onshore; Ecuador - mainland onshore; Guyana - onshore; Peru - onshore; Venezuela -
@@ -5688,6 +6277,7 @@ interface DatumIds
     public const EPSG_PROVISIONAL_SOUTH_AMERICAN_DATUM_1956 = 6248;
 
     /**
+     * Puerto Rico
      * Type: geodetic
      * Extent: Puerto Rico, US Virgin Islands and British Virgin Islands - onshore.
      * Scope: Topographic mapping.
@@ -5698,6 +6288,7 @@ interface DatumIds
     public const EPSG_PUERTO_RICO = 6139;
 
     /**
+     * Puerto Rico Vertical Datum of 2002
      * Type: vertical
      * Extent: Puerto Rico - onshore.
      * Scope: Geodesy, topographic mapping.
@@ -5707,6 +6298,7 @@ interface DatumIds
     public const EPSG_PUERTO_RICO_VERTICAL_DATUM_OF_2002 = 1123;
 
     /**
+     * Pulkovo 1942
      * Type: geodetic
      * Extent: Armenia; Azerbaijan; Belarus; Estonia - onshore; Georgia - onshore; Kazakhstan; Kyrgyzstan; Latvia -
      * onshore; Lithuania - onshore; Moldova; Russian Federation - onshore; Tajikistan; Turkmenistan; Ukraine -
@@ -5717,6 +6309,7 @@ interface DatumIds
     public const EPSG_PULKOVO_1942 = 6284;
 
     /**
+     * Pulkovo 1942(58)
      * Type: geodetic
      * Extent: Onshore: Bulgaria, Czechia, Germany (former DDR), Hungary, Poland and Slovakia. Onshore and offshore:
      * Albania and Romania.
@@ -5728,6 +6321,7 @@ interface DatumIds
     public const EPSG_PULKOVO_1942_58 = 6179;
 
     /**
+     * Pulkovo 1942(83)
      * Type: geodetic
      * Extent: Onshore Bulgaria, Czechia, Germany (former DDR), Hungary and Slovakia.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -5737,6 +6331,7 @@ interface DatumIds
     public const EPSG_PULKOVO_1942_83 = 6178;
 
     /**
+     * Pulkovo 1995
      * Type: geodetic
      * Extent: Russian Federation - onshore and offshore.
      * Scope: Geodesy.
@@ -5745,6 +6340,7 @@ interface DatumIds
     public const EPSG_PULKOVO_1995 = 6200;
 
     /**
+     * Qatar 1948
      * Type: geodetic
      * Extent: Qatar - onshore.
      * Scope: Topographic mapping.
@@ -5753,6 +6349,7 @@ interface DatumIds
     public const EPSG_QATAR_1948 = 6286;
 
     /**
+     * Qatar 1974
      * Type: geodetic
      * Extent: Qatar - onshore and offshore.
      * Scope: Topographic mapping.
@@ -5761,6 +6358,7 @@ interface DatumIds
     public const EPSG_QATAR_1974 = 6285;
 
     /**
+     * Qatar National Datum 1995
      * Type: geodetic
      * Extent: Qatar - onshore.
      * Scope: Topographic mapping.
@@ -5769,6 +6367,7 @@ interface DatumIds
     public const EPSG_QATAR_NATIONAL_DATUM_1995 = 6614;
 
     /**
+     * Qornoq 1927
      * Type: geodetic
      * Extent: Greenland - west coast onshore.
      * Scope: Topographic mapping.
@@ -5777,6 +6376,7 @@ interface DatumIds
     public const EPSG_QORNOQ_1927 = 6194;
 
     /**
+     * Raiatea SAU 2001
      * Type: vertical
      * Extent: French Polynesia - Society Islands - Raiatea.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -5786,6 +6386,7 @@ interface DatumIds
     public const EPSG_RAIATEA_SAU_2001 = 5198;
 
     /**
+     * Ras Ghumays
      * Type: vertical
      * Extent: United Arab Emirates (UAE) - Abu Dhabi onshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -5795,6 +6396,7 @@ interface DatumIds
     public const EPSG_RAS_GHUMAYS = 1146;
 
     /**
+     * Rassadiran
      * Type: geodetic
      * Extent: Iran - Taheri refinery site.
      * Scope: Oil and gas exploration.
@@ -5803,6 +6405,7 @@ interface DatumIds
     public const EPSG_RASSADIRAN = 6153;
 
     /**
+     * Rauenberg Datum/83
      * Type: geodetic
      * Extent: Germany - Sachsen.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -5814,6 +6417,7 @@ interface DatumIds
     public const EPSG_RAUENBERG_DATUM_83 = 6745;
 
     /**
+     * Red Geodesica Venezolana
      * Type: geodetic
      * Extent: Venezuela - onshore and offshore.
      * Scope: Geodesy.
@@ -5823,6 +6427,7 @@ interface DatumIds
     public const EPSG_RED_GEODESICA_VENEZOLANA = 6189;
 
     /**
+     * Red Geodesica de Canarias 1995
      * Type: geodetic
      * Extent: Spain - Canary Islands onshore and offshore.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -5832,6 +6437,7 @@ interface DatumIds
     public const EPSG_RED_GEODESICA_DE_CANARIAS_1995 = 1035;
 
     /**
+     * Reference System de Angola 2013
      * Type: geodetic
      * Extent: Angola - onshore and offshore.
      * Scope: Geodesy.
@@ -5841,6 +6447,7 @@ interface DatumIds
     public const EPSG_REFERENCE_SYSTEM_DE_ANGOLA_2013 = 1220;
 
     /**
+     * Reseau Geodesique Francais 1993
      * Type: geodetic
      * Extent: France - onshore and offshore, mainland and Corsica.
      * Scope: Geodesy.
@@ -5849,6 +6456,7 @@ interface DatumIds
     public const EPSG_RESEAU_GEODESIQUE_FRANCAIS_1993 = 6171;
 
     /**
+     * Reseau Geodesique Francais Guyane 1995
      * Type: geodetic
      * Extent: French Guiana - onshore and offshore.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -5858,6 +6466,7 @@ interface DatumIds
     public const EPSG_RESEAU_GEODESIQUE_FRANCAIS_GUYANE_1995 = 6624;
 
     /**
+     * Reseau Geodesique de Mayotte 2004
      * Type: geodetic
      * Extent: Mayotte - onshore and offshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -5868,6 +6477,7 @@ interface DatumIds
     public const EPSG_RESEAU_GEODESIQUE_DE_MAYOTTE_2004 = 1036;
 
     /**
+     * Reseau Geodesique de Nouvelle Caledonie 91-93
      * Type: geodetic
      * Extent: New Caledonia - onshore and offshore. Isle de Pins, Loyalty Islands, Huon Islands, Belep archipelago,
      * Chesterfield Islands, and Walpole.
@@ -5877,6 +6487,7 @@ interface DatumIds
     public const EPSG_RESEAU_GEODESIQUE_DE_NOUVELLE_CALEDONIE_91_93 = 6749;
 
     /**
+     * Reseau Geodesique de Saint Pierre et Miquelon 2006
      * Type: geodetic
      * Extent: St Pierre and Miquelon - onshore and offshore.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -5886,6 +6497,7 @@ interface DatumIds
     public const EPSG_RESEAU_GEODESIQUE_DE_SAINT_PIERRE_ET_MIQUELON_2006 = 1038;
 
     /**
+     * Reseau Geodesique de Wallis et Futuna 1996
      * Type: geodetic
      * Extent: Wallis and Futuna - onshore and offshore - Uvea, Futuna, and Alofi.
      * Scope: Geodesy.
@@ -5894,6 +6506,7 @@ interface DatumIds
     public const EPSG_RESEAU_GEODESIQUE_DE_WALLIS_ET_FUTUNA_1996 = 1223;
 
     /**
+     * Reseau Geodesique de la Polynesie Francaise
      * Type: geodetic
      * Extent: French Polynesia - onshore and offshore. Includes Society archipelago, Tuamotu archipelago, Marquesas
      * Islands, Gambier Islands and Austral Islands.
@@ -5906,6 +6519,7 @@ interface DatumIds
     public const EPSG_RESEAU_GEODESIQUE_DE_LA_POLYNESIE_FRANCAISE = 6687;
 
     /**
+     * Reseau Geodesique de la RDC 2005
      * Type: geodetic
      * Extent: The Democratic Republic of the Congo (Zaire) - south of a line through Bandundu, Seke and Pweto -
      * onshore and offshore.
@@ -5915,6 +6529,7 @@ interface DatumIds
     public const EPSG_RESEAU_GEODESIQUE_DE_LA_RDC_2005 = 1033;
 
     /**
+     * Reseau Geodesique de la Reunion 1992
      * Type: geodetic
      * Extent: Reunion - onshore and offshore.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -5924,6 +6539,7 @@ interface DatumIds
     public const EPSG_RESEAU_GEODESIQUE_DE_LA_REUNION_1992 = 6627;
 
     /**
+     * Reseau Geodesique des Antilles Francaises 2009
      * Type: geodetic
      * Extent: French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante,
      * Les Saintes, Iles de la Petite Terre, La Desirade, St Barthélemy, and northern St Martin) and Martinique.
@@ -5934,6 +6550,7 @@ interface DatumIds
     public const EPSG_RESEAU_GEODESIQUE_DES_ANTILLES_FRANCAISES_2009 = 1073;
 
     /**
+     * Reseau Geodesique des Terres Australes et Antarctiques Francaises 2007
      * Type: geodetic
      * Extent: French Southern Territories - onshore and offshore: Amsterdam and St Paul, Crozet, Europa and Kerguelen.
      * Antarctica - Adelie Land coastal area.
@@ -5945,6 +6562,7 @@ interface DatumIds
     public const EPSG_RESEAU_GEODESIQUE_DES_TERRES_AUSTRALES_ET_ANTARCTIQUES_FRANCAISES_2007 = 1113;
 
     /**
+     * Reseau National Belge 1950
      * Type: geodetic
      * Extent: Belgium - onshore.
      * Scope: Topographic mapping.
@@ -5953,6 +6571,7 @@ interface DatumIds
     public const EPSG_RESEAU_NATIONAL_BELGE_1950 = 6215;
 
     /**
+     * Reseau National Belge 1950 (Brussels)
      * Type: geodetic
      * Extent: Belgium - onshore.
      * Scope: Topographic mapping.
@@ -5961,6 +6580,7 @@ interface DatumIds
     public const EPSG_RESEAU_NATIONAL_BELGE_1950_BRUSSELS = 6809;
 
     /**
+     * Reseau National Belge 1972
      * Type: geodetic
      * Extent: Belgium - onshore.
      * Scope: Topographic mapping.
@@ -5969,6 +6589,7 @@ interface DatumIds
     public const EPSG_RESEAU_NATIONAL_BELGE_1972 = 6313;
 
     /**
+     * Reseau de Reference des Antilles Francaises 1991
      * Type: geodetic
      * Extent: French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante,
      * Les Saintes, Iles de la Petite Terre, La Desirade, St Barthélemy, and northern St Martin) and Martinique.
@@ -5980,6 +6601,7 @@ interface DatumIds
     public const EPSG_RESEAU_DE_REFERENCE_DES_ANTILLES_FRANCAISES_1991 = 1047;
 
     /**
+     * Rete Dinamica Nazionale 2008
      * Type: geodetic
      * Extent: Italy - onshore and offshore; San Marino, Vatican City State.
      * Scope: Geodesy, topographic mapping.
@@ -5989,6 +6611,7 @@ interface DatumIds
     public const EPSG_RETE_DINAMICA_NAZIONALE_2008 = 1132;
 
     /**
+     * Reunion 1947
      * Type: geodetic
      * Extent: Reunion - onshore.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -5999,6 +6622,7 @@ interface DatumIds
     public const EPSG_REUNION_1947 = 6626;
 
     /**
+     * Reunion 1989
      * Type: vertical
      * Extent: Reunion - onshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -6009,6 +6633,7 @@ interface DatumIds
     public const EPSG_REUNION_1989 = 5156;
 
     /**
+     * Reykjavik 1900
      * Type: geodetic
      * Extent: Iceland - onshore.
      * Scope: Topographic mapping (medium scale).
@@ -6017,6 +6642,7 @@ interface DatumIds
     public const EPSG_REYKJAVIK_1900 = 6657;
 
     /**
+     * Rikets hojdsystem 1900
      * Type: vertical
      * Extent: Sweden - onshore.
      * Scope: Engineering survey, topographic mapping.
@@ -6026,6 +6652,7 @@ interface DatumIds
     public const EPSG_RIKETS_HOJDSYSTEM_1900 = 5209;
 
     /**
+     * Rikets hojdsystem 1970
      * Type: vertical
      * Extent: Sweden - onshore.
      * Scope: Geodesy, topographic mapping.
@@ -6038,6 +6665,7 @@ interface DatumIds
     public const EPSG_RIKETS_HOJDSYSTEM_1970 = 5117;
 
     /**
+     * Rikets hojdsystem 2000
      * Type: vertical
      * Extent: Sweden - onshore.
      * Scope: Geodesy, topographic mapping.
@@ -6050,6 +6678,7 @@ interface DatumIds
     public const EPSG_RIKETS_HOJDSYSTEM_2000 = 5208;
 
     /**
+     * Rikets koordinatsystem 1990
      * Type: geodetic
      * Extent: Sweden - onshore and offshore.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -6059,6 +6688,7 @@ interface DatumIds
     public const EPSG_RIKETS_KOORDINATSYSTEM_1990 = 6124;
 
     /**
+     * Ross Sea Region Geodetic Datum 2000
      * Type: geodetic
      * Extent: Antarctica - Ross Sea Region - nominally between 160°E and 150°W but includes buffer on eastern
      * hemisphere margin to include Transantarctic Mountains
@@ -6068,6 +6698,7 @@ interface DatumIds
     public const EPSG_ROSS_SEA_REGION_GEODETIC_DATUM_2000 = 6764;
 
     /**
+     * SIRGAS Continuously Operating Network DGF00P01
      * Type: dynamic geodetic
      * Extent: Latin America - Central America and South America, onshore and offshore.
      * Scope: Geodesy.
@@ -6080,6 +6711,7 @@ interface DatumIds
     public const EPSG_SIRGAS_CONTINUOUSLY_OPERATING_NETWORK_DGF00P01 = 1227;
 
     /**
+     * SIRGAS Continuously Operating Network DGF01P01
      * Type: dynamic geodetic
      * Extent: Latin America - Central America and South America, onshore and offshore.
      * Scope: Geodesy.
@@ -6091,6 +6723,7 @@ interface DatumIds
     public const EPSG_SIRGAS_CONTINUOUSLY_OPERATING_NETWORK_DGF01P01 = 1228;
 
     /**
+     * SIRGAS Continuously Operating Network DGF01P02
      * Type: dynamic geodetic
      * Extent: Latin America - Central America and South America, onshore and offshore.
      * Scope: Geodesy.
@@ -6102,6 +6735,7 @@ interface DatumIds
     public const EPSG_SIRGAS_CONTINUOUSLY_OPERATING_NETWORK_DGF01P02 = 1229;
 
     /**
+     * SIRGAS Continuously Operating Network DGF02P01
      * Type: dynamic geodetic
      * Extent: Latin America - Central America and South America, onshore and offshore.
      * Scope: Geodesy.
@@ -6113,6 +6747,7 @@ interface DatumIds
     public const EPSG_SIRGAS_CONTINUOUSLY_OPERATING_NETWORK_DGF02P01 = 1230;
 
     /**
+     * SIRGAS Continuously Operating Network DGF04P01
      * Type: dynamic geodetic
      * Extent: Latin America - Central America and South America, onshore and offshore.
      * Scope: Geodesy.
@@ -6124,6 +6759,7 @@ interface DatumIds
     public const EPSG_SIRGAS_CONTINUOUSLY_OPERATING_NETWORK_DGF04P01 = 1231;
 
     /**
+     * SIRGAS Continuously Operating Network DGF05P01
      * Type: dynamic geodetic
      * Extent: Latin America - Central America and South America, onshore and offshore.
      * Scope: Geodesy.
@@ -6135,6 +6771,7 @@ interface DatumIds
     public const EPSG_SIRGAS_CONTINUOUSLY_OPERATING_NETWORK_DGF05P01 = 1232;
 
     /**
+     * SIRGAS Continuously Operating Network DGF06P01
      * Type: dynamic geodetic
      * Extent: Latin America - Central America and South America, onshore and offshore.
      * Scope: Geodesy.
@@ -6146,6 +6783,7 @@ interface DatumIds
     public const EPSG_SIRGAS_CONTINUOUSLY_OPERATING_NETWORK_DGF06P01 = 1233;
 
     /**
+     * SIRGAS Continuously Operating Network DGF07P01
      * Type: dynamic geodetic
      * Extent: Latin America - Central America and South America, onshore and offshore.
      * Scope: Geodesy.
@@ -6157,6 +6795,7 @@ interface DatumIds
     public const EPSG_SIRGAS_CONTINUOUSLY_OPERATING_NETWORK_DGF07P01 = 1234;
 
     /**
+     * SIRGAS Continuously Operating Network DGF08P01
      * Type: dynamic geodetic
      * Extent: Latin America - Central America and South America, onshore and offshore.
      * Scope: Geodesy.
@@ -6168,6 +6807,7 @@ interface DatumIds
     public const EPSG_SIRGAS_CONTINUOUSLY_OPERATING_NETWORK_DGF08P01 = 1235;
 
     /**
+     * SIRGAS Continuously Operating Network SIR09P01
      * Type: dynamic geodetic
      * Extent: Latin America - Central America and South America, onshore and offshore.
      * Scope: Geodesy.
@@ -6179,6 +6819,7 @@ interface DatumIds
     public const EPSG_SIRGAS_CONTINUOUSLY_OPERATING_NETWORK_SIR09P01 = 1236;
 
     /**
+     * SIRGAS Continuously Operating Network SIR10P01
      * Type: dynamic geodetic
      * Extent: Latin America - Central America and South America, onshore and offshore.
      * Scope: Geodesy.
@@ -6190,6 +6831,7 @@ interface DatumIds
     public const EPSG_SIRGAS_CONTINUOUSLY_OPERATING_NETWORK_SIR10P01 = 1237;
 
     /**
+     * SIRGAS Continuously Operating Network SIR11P01
      * Type: dynamic geodetic
      * Extent: Latin America - Central America and South America, onshore and offshore.
      * Scope: Geodesy.
@@ -6202,6 +6844,7 @@ interface DatumIds
     public const EPSG_SIRGAS_CONTINUOUSLY_OPERATING_NETWORK_SIR11P01 = 1238;
 
     /**
+     * SIRGAS Continuously Operating Network SIR13P01
      * Type: dynamic geodetic
      * Extent: Latin America - Central America and South America, onshore and offshore.
      * Scope: Geodesy.
@@ -6214,6 +6857,7 @@ interface DatumIds
     public const EPSG_SIRGAS_CONTINUOUSLY_OPERATING_NETWORK_SIR13P01 = 1239;
 
     /**
+     * SIRGAS Continuously Operating Network SIR14P01
      * Type: dynamic geodetic
      * Extent: Latin America - Central America and South America, onshore and offshore.
      * Scope: Geodesy.
@@ -6225,6 +6869,7 @@ interface DatumIds
     public const EPSG_SIRGAS_CONTINUOUSLY_OPERATING_NETWORK_SIR14P01 = 1240;
 
     /**
+     * SIRGAS Continuously Operating Network SIR15P01
      * Type: dynamic geodetic
      * Extent: Latin America - Central America and South America, onshore and offshore.
      * Scope: Geodesy.
@@ -6236,6 +6881,7 @@ interface DatumIds
     public const EPSG_SIRGAS_CONTINUOUSLY_OPERATING_NETWORK_SIR15P01 = 1241;
 
     /**
+     * SIRGAS Continuously Operating Network SIR17P01
      * Type: dynamic geodetic
      * Extent: Latin America - Central America and South America, onshore and offshore.
      * Scope: Geodesy.
@@ -6247,6 +6893,7 @@ interface DatumIds
     public const EPSG_SIRGAS_CONTINUOUSLY_OPERATING_NETWORK_SIR17P01 = 1242;
 
     /**
+     * SIRGAS-Chile realization 1 epoch 2002
      * Type: geodetic
      * Extent: Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y
      * Gomez.
@@ -6259,6 +6906,7 @@ interface DatumIds
     public const EPSG_SIRGAS_CHILE_REALIZATION_1_EPOCH_2002 = 1064;
 
     /**
+     * SIRGAS-Chile realization 2 epoch 2010
      * Type: geodetic
      * Extent: Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y
      * Gomez.
@@ -6270,6 +6918,7 @@ interface DatumIds
     public const EPSG_SIRGAS_CHILE_REALIZATION_2_EPOCH_2010 = 1243;
 
     /**
+     * SIRGAS-Chile realization 3 epoch 2013
      * Type: geodetic
      * Extent: Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y
      * Gomez.
@@ -6281,6 +6930,7 @@ interface DatumIds
     public const EPSG_SIRGAS_CHILE_REALIZATION_3_EPOCH_2013 = 1252;
 
     /**
+     * SIRGAS-Chile realization 4 epoch 2016
      * Type: geodetic
      * Extent: Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y
      * Gomez.
@@ -6291,6 +6941,7 @@ interface DatumIds
     public const EPSG_SIRGAS_CHILE_REALIZATION_4_EPOCH_2016 = 1253;
 
     /**
+     * SIRGAS-ROU98
      * Type: geodetic
      * Extent: Uruguay - onshore and offshore.
      * Scope: Geodesy.
@@ -6302,6 +6953,7 @@ interface DatumIds
     public const EPSG_SIRGAS_ROU98 = 1068;
 
     /**
+     * SIRGAS_ES2007.8
      * Type: geodetic
      * Extent: El Salvador - onshore and offshore.
      * Scope: Geodesy.
@@ -6312,6 +6964,7 @@ interface DatumIds
     public const EPSG_SIRGAS_ES2007_8 = 1069;
 
     /**
+     * ST71 Belep
      * Type: geodetic
      * Extent: New Caledonia - Belep.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -6319,6 +6972,7 @@ interface DatumIds
     public const EPSG_ST71_BELEP = 6643;
 
     /**
+     * ST84 Ile des Pins
      * Type: geodetic
      * Extent: New Caledonia - Ile des Pins.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -6327,6 +6981,7 @@ interface DatumIds
     public const EPSG_ST84_ILE_DES_PINS = 6642;
 
     /**
+     * ST87 Ouvea
      * Type: geodetic
      * Extent: New Caledonia - Loyalty Islands - Ouvea.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -6335,6 +6990,7 @@ interface DatumIds
     public const EPSG_ST87_OUVEA = 6750;
 
     /**
+     * SVY21
      * Type: geodetic
      * Extent: Singapore - onshore and offshore.
      * Scope: Cadastre.
@@ -6345,6 +7001,7 @@ interface DatumIds
     public const EPSG_SVY21 = 6757;
 
     /**
+     * SWEREF99
      * Type: geodetic
      * Extent: Sweden - onshore and offshore.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -6355,6 +7012,7 @@ interface DatumIds
     public const EPSG_SWEREF99 = 6619;
 
     /**
+     * Saint Pierre et Miquelon 1950
      * Type: geodetic
      * Extent: St Pierre and Miquelon - onshore.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -6364,6 +7022,7 @@ interface DatumIds
     public const EPSG_SAINT_PIERRE_ET_MIQUELON_1950 = 6638;
 
     /**
+     * Santa Cruz da Graciosa
      * Type: vertical
      * Extent: Portugal - central Azores - Graciosa island onshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -6373,6 +7032,7 @@ interface DatumIds
     public const EPSG_SANTA_CRUZ_DA_GRACIOSA = 1106;
 
     /**
+     * Santa Cruz das Flores
      * Type: vertical
      * Extent: Portugal - western Azores onshore - Flores, Corvo.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -6382,6 +7042,7 @@ interface DatumIds
     public const EPSG_SANTA_CRUZ_DAS_FLORES = 1108;
 
     /**
+     * Santo 1965
      * Type: geodetic
      * Extent: Vanuatu - northern islands - Aese, Ambrym, Aoba, Epi, Espiritu Santo, Maewo, Malo, Malkula, Paama,
      * Pentecost, Shepherd and Tutuba.
@@ -6393,6 +7054,7 @@ interface DatumIds
     public const EPSG_SANTO_1965 = 6730;
 
     /**
+     * Sao Tome
      * Type: geodetic
      * Extent: Sao Tome and Principe - onshore - Sao Tome.
      * Scope: Geodesy, topographic mapping.
@@ -6401,6 +7063,7 @@ interface DatumIds
     public const EPSG_SAO_TOME = 1044;
 
     /**
+     * Sapper Hill 1943
      * Type: geodetic
      * Extent: Falkland Islands (Malvinas) - onshore.
      * Scope: Topographic mapping.
@@ -6408,6 +7071,7 @@ interface DatumIds
     public const EPSG_SAPPER_HILL_1943 = 6292;
 
     /**
+     * Schwarzeck
      * Type: geodetic
      * Extent: Namibia - onshore and offshore.
      * Scope: Topographic mapping.
@@ -6417,6 +7081,7 @@ interface DatumIds
     public const EPSG_SCHWARZECK = 6293;
 
     /**
+     * Scoresbysund 1952
      * Type: geodetic
      * Extent: Greenland - Scoresbysund area onshore.
      * Scope: Topographic mapping.
@@ -6424,6 +7089,7 @@ interface DatumIds
     public const EPSG_SCORESBYSUND_1952 = 6195;
 
     /**
+     * Selvagem Grande
      * Type: geodetic
      * Extent: Portugal - Selvagens islands (Madeira province) - onshore.
      * Scope: Topographic mapping.
@@ -6431,6 +7097,7 @@ interface DatumIds
     public const EPSG_SELVAGEM_GRANDE = 6616;
 
     /**
+     * Serbian Reference Network 1998
      * Type: geodetic
      * Extent: Serbia including Vojvodinja.
      * Scope: Geodesy.
@@ -6441,6 +7108,7 @@ interface DatumIds
     public const EPSG_SERBIAN_REFERENCE_NETWORK_1998 = 1034;
 
     /**
+     * Serbian Spatial Reference System 2000
      * Type: geodetic
      * Extent: Serbia including Vojvodinja.
      * Scope: Geodesy.
@@ -6450,6 +7118,7 @@ interface DatumIds
     public const EPSG_SERBIAN_SPATIAL_REFERENCE_SYSTEM_2000 = 1214;
 
     /**
+     * Serbian Vertical Reference System 2012
      * Type: vertical
      * Extent: Serbia including Vojvodinja.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -6459,6 +7128,7 @@ interface DatumIds
     public const EPSG_SERBIAN_VERTICAL_REFERENCE_SYSTEM_2012 = 1216;
 
     /**
+     * Serindung
      * Type: geodetic
      * Extent: Indonesia - west Kalimantan - onshore coastal area.
      * Scope: Topographic mapping.
@@ -6467,6 +7137,7 @@ interface DatumIds
     public const EPSG_SERINDUNG = 6295;
 
     /**
+     * Sibun Gorge 1922
      * Type: geodetic
      * Extent: Belize - onshore.
      * Scope: Engineering survey, topographic mapping.
@@ -6475,6 +7146,7 @@ interface DatumIds
     public const EPSG_SIBUN_GORGE_1922 = 1071;
 
     /**
+     * Sierra Leone 1968
      * Type: geodetic
      * Extent: Sierra Leone - onshore.
      * Scope: Engineering survey, topographic mapping.
@@ -6485,6 +7157,7 @@ interface DatumIds
     public const EPSG_SIERRA_LEONE_1968 = 6175;
 
     /**
+     * Sierra Leone Colony 1924
      * Type: geodetic
      * Extent: Sierra Leone - Freetown Peninsula.
      * Scope: Engineering survey, topographic mapping.
@@ -6493,6 +7166,7 @@ interface DatumIds
     public const EPSG_SIERRA_LEONE_COLONY_1924 = 6174;
 
     /**
+     * Singapore Height Datum
      * Type: vertical
      * Extent: Singapore - onshore and offshore.
      * Scope: Engineering survey, GIS, topographic mapping.
@@ -6502,6 +7176,7 @@ interface DatumIds
     public const EPSG_SINGAPORE_HEIGHT_DATUM = 1140;
 
     /**
+     * Sistem Referensi Geospasial Indonesia 2013
      * Type: dynamic geodetic
      * Extent: Indonesia - onshore and offshore.
      * Scope: Engineering survey, topographic mapping (large and medium scale).
@@ -6511,6 +7186,7 @@ interface DatumIds
     public const EPSG_SISTEM_REFERENSI_GEOSPASIAL_INDONESIA_2013 = 1293;
 
     /**
+     * Sistema Geodesico Nacional de Panama MACARIO SOLIS
      * Type: geodetic
      * Extent: Panama - onshore and offshore.
      * Scope: Geodesy.
@@ -6520,6 +7196,7 @@ interface DatumIds
     public const EPSG_SISTEMA_GEODESICO_NACIONAL_DE_PANAMA_MACARIO_SOLIS = 1066;
 
     /**
+     * Sistema de Referencia Geocentrico para America del Sur 1995
      * Type: geodetic
      * Extent: South America - onshore and offshore. Ecuador (mainland and Galapagos) - onshore and offshore.
      * Scope: Geodesy.
@@ -6530,6 +7207,7 @@ interface DatumIds
     public const EPSG_SISTEMA_DE_REFERENCIA_GEOCENTRICO_PARA_AMERICA_DEL_SUR_1995 = 6170;
 
     /**
+     * Sistema de Referencia Geocentrico para las AmericaS 2000
      * Type: geodetic
      * Extent: Latin America - Central America and South America - onshore and offshore. Brazil - onshore and offshore.
      * Scope: Geodesy.
@@ -6541,6 +7219,7 @@ interface DatumIds
     public const EPSG_SISTEMA_DE_REFERENCIA_GEOCENTRICO_PARA_LAS_AMERICAS_2000 = 6674;
 
     /**
+     * Sistema de Referencia Vertical Nacional 2016
      * Type: vertical
      * Extent: Argentina - onshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -6552,6 +7231,7 @@ interface DatumIds
     public const EPSG_SISTEMA_DE_REFERENCIA_VERTICAL_NACIONAL_2016 = 1260;
 
     /**
+     * Sister Islands Geodetic Datum 1961
      * Type: geodetic
      * Extent: Cayman Islands - Little Cayman and Cayman Brac.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -6561,6 +7241,7 @@ interface DatumIds
     public const EPSG_SISTER_ISLANDS_GEODETIC_DATUM_1961 = 6726;
 
     /**
+     * Slovenia Geodetic Datum 1996
      * Type: geodetic
      * Extent: Slovenia - onshore and offshore.
      * Scope: Geodesy, topographic mapping.
@@ -6569,6 +7250,7 @@ interface DatumIds
     public const EPSG_SLOVENIA_GEODETIC_DATUM_1996 = 6765;
 
     /**
+     * Slovenian Vertical System 2000
      * Type: vertical
      * Extent: Slovenia - onshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -6578,6 +7260,7 @@ interface DatumIds
     public const EPSG_SLOVENIAN_VERTICAL_SYSTEM_2000 = 5177;
 
     /**
+     * Slovenian Vertical System 2010
      * Type: vertical
      * Extent: Slovenia - onshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -6587,6 +7270,7 @@ interface DatumIds
     public const EPSG_SLOVENIAN_VERTICAL_SYSTEM_2010 = 1215;
 
     /**
+     * Solomon 1968
      * Type: geodetic
      * Extent: Solomon Islands - onshore southern Solomon Islands, primarily Guadalcanal, Malaita, San Cristobel, Santa
      * Isobel, Choiseul, Makira-Ulawa.
@@ -6596,6 +7280,7 @@ interface DatumIds
     public const EPSG_SOLOMON_1968 = 6718;
 
     /**
+     * South Africa Land Levelling Datum
      * Type: vertical
      * Extent: South Africa - mainland onshore.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -6605,6 +7290,7 @@ interface DatumIds
     public const EPSG_SOUTH_AFRICA_LAND_LEVELLING_DATUM = 1262;
 
     /**
+     * South American Datum 1969
      * Type: geodetic
      * Extent: Brazil - onshore and offshore. In rest of South America - onshore north of approximately 45°S and
      * Tierra del Fuego.
@@ -6617,6 +7303,7 @@ interface DatumIds
     public const EPSG_SOUTH_AMERICAN_DATUM_1969 = 6618;
 
     /**
+     * South American Datum 1969(96)
      * Type: geodetic
      * Extent: Brazil - onshore and offshore. Includes Rocas, Fernando de Noronha archipelago, Trindade, Ihlas Martim
      * Vaz and Sao Pedro e Sao Paulo.
@@ -6629,6 +7316,7 @@ interface DatumIds
     public const EPSG_SOUTH_AMERICAN_DATUM_1969_96 = 1075;
 
     /**
+     * South East Island 1943
      * Type: geodetic
      * Extent: Seychelles - Mahe, Silhouette, North, Aride Island, Praslin, La Digue and Frigate islands including
      * adjacent smaller granitic islands on the Seychelles Bank, Bird Island and Denis Island.
@@ -6640,6 +7328,7 @@ interface DatumIds
     public const EPSG_SOUTH_EAST_ISLAND_1943 = 1138;
 
     /**
+     * South Georgia 1968
      * Type: geodetic
      * Extent: South Georgia and the South Sandwich Islands - South Georgia onshore.
      * Scope: Military survey.
@@ -6648,6 +7337,7 @@ interface DatumIds
     public const EPSG_SOUTH_GEORGIA_1968 = 6722;
 
     /**
+     * South Yemen
      * Type: geodetic
      * Extent: Yemen - South Yemen onshore mainland.
      * Scope: Topographic mapping.
@@ -6655,6 +7345,7 @@ interface DatumIds
     public const EPSG_SOUTH_YEMEN = 6164;
 
     /**
+     * Sri Lanka Datum 1999
      * Type: geodetic
      * Extent: Sri Lanka - onshore.
      * Scope: Topographic mapping.
@@ -6664,6 +7355,7 @@ interface DatumIds
     public const EPSG_SRI_LANKA_DATUM_1999 = 1053;
 
     /**
+     * Sri Lanka Vertical Datum
      * Type: vertical
      * Extent: Sri Lanka - onshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -6673,6 +7365,7 @@ interface DatumIds
     public const EPSG_SRI_LANKA_VERTICAL_DATUM = 1054;
 
     /**
+     * St. George Island
      * Type: geodetic
      * Extent: United States (USA) - Alaska - Pribilof Islands - St George Island.
      * Scope: Topographic mapping.
@@ -6684,6 +7377,7 @@ interface DatumIds
     public const EPSG_ST_GEORGE_ISLAND = 6138;
 
     /**
+     * St. Helena Geodetic Datum 2015
      * Type: geodetic
      * Extent: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore.
      * Scope: Geodesy, topographic mapping.
@@ -6694,6 +7388,7 @@ interface DatumIds
     public const EPSG_ST_HELENA_GEODETIC_DATUM_2015 = 1174;
 
     /**
+     * St. Helena Tritan
      * Type: geodetic
      * Extent: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore.
      * Scope: Engineering survey including Airport and Ruperts Wharf construction.
@@ -6703,6 +7398,7 @@ interface DatumIds
     public const EPSG_ST_HELENA_TRITAN = 1173;
 
     /**
+     * St. Helena Tritan Vertical Datum 2011
      * Type: vertical
      * Extent: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore.
      * Scope: Engineering survey.
@@ -6712,6 +7408,7 @@ interface DatumIds
     public const EPSG_ST_HELENA_TRITAN_VERTICAL_DATUM_2011 = 1176;
 
     /**
+     * St. Helena Vertical Datum 2015
      * Type: vertical
      * Extent: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -6721,6 +7418,7 @@ interface DatumIds
     public const EPSG_ST_HELENA_VERTICAL_DATUM_2015 = 1177;
 
     /**
+     * St. Kilda
      * Type: vertical
      * Extent: United Kingdom (UK) - Great Britain - Scotland - St Kilda onshore.
      * Scope: Geodesy, topographic mapping.
@@ -6730,6 +7428,7 @@ interface DatumIds
     public const EPSG_ST_KILDA = 5145;
 
     /**
+     * St. Kitts 1955
      * Type: geodetic
      * Extent: St Kitts and Nevis - onshore.
      * Scope: Topographic mapping.
@@ -6738,6 +7437,7 @@ interface DatumIds
     public const EPSG_ST_KITTS_1955 = 6605;
 
     /**
+     * St. Lawrence Island
      * Type: geodetic
      * Extent: United States (USA) - Alaska - St Lawrence Island.
      * Scope: Topographic mapping.
@@ -6749,6 +7449,7 @@ interface DatumIds
     public const EPSG_ST_LAWRENCE_ISLAND = 6136;
 
     /**
+     * St. Lucia 1955
      * Type: geodetic
      * Extent: St Lucia - onshore.
      * Scope: Topographic mapping.
@@ -6757,6 +7458,7 @@ interface DatumIds
     public const EPSG_ST_LUCIA_1955 = 6606;
 
     /**
+     * St. Marys
      * Type: vertical
      * Extent: United Kingdom (UK) - Great Britain - England - Isles of Scilly onshore.
      * Scope: Geodesy, topographic mapping.
@@ -6767,6 +7469,7 @@ interface DatumIds
     public const EPSG_ST_MARYS = 5147;
 
     /**
+     * St. Paul Island
      * Type: geodetic
      * Extent: United States (USA) - Alaska - Pribilof Islands - St Paul Island.
      * Scope: Topographic mapping.
@@ -6778,6 +7481,7 @@ interface DatumIds
     public const EPSG_ST_PAUL_ISLAND = 6137;
 
     /**
+     * St. Stephen (Ferro)
      * Type: geodetic
      * Extent: Austria - Lower Austria. Czechia - Moravia and Czech Silesia.
      * Scope: Cadastre.
@@ -6787,6 +7491,7 @@ interface DatumIds
     public const EPSG_ST_STEPHEN_FERRO = 1189;
 
     /**
+     * St. Vincent 1945
      * Type: geodetic
      * Extent: St Vincent and the northern Grenadine Islands - onshore.
      * Scope: Topographic mapping.
@@ -6795,6 +7500,7 @@ interface DatumIds
     public const EPSG_ST_VINCENT_1945 = 6607;
 
     /**
+     * Staatlichen Nivellementnetzes 1976
      * Type: vertical
      * Extent: Germany - states of former East Germany - Berlin, Brandenburg; Mecklenburg-Vorpommern; Sachsen;
      * Sachsen-Anhalt; Thuringen.
@@ -6806,6 +7512,7 @@ interface DatumIds
     public const EPSG_STAATLICHEN_NIVELLEMENTNETZES_1976 = 5183;
 
     /**
+     * Stewart Island 1977
      * Type: vertical
      * Extent: New Zealand - Stewart Island.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -6814,6 +7521,7 @@ interface DatumIds
     public const EPSG_STEWART_ISLAND_1977 = 5170;
 
     /**
+     * Stockholm 1938
      * Type: geodetic
      * Extent: Sweden - onshore.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -6823,6 +7531,7 @@ interface DatumIds
     public const EPSG_STOCKHOLM_1938 = 6308;
 
     /**
+     * Stockholm 1938 (Stockholm)
      * Type: geodetic
      * Extent: Sweden - onshore.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -6832,6 +7541,7 @@ interface DatumIds
     public const EPSG_STOCKHOLM_1938_STOCKHOLM = 6814;
 
     /**
+     * Stornoway
      * Type: vertical
      * Extent: United Kingdom (UK) - Great Britain - Scotland - Outer Hebrides onshore.
      * Scope: Geodesy, topographic mapping.
@@ -6842,6 +7552,7 @@ interface DatumIds
     public const EPSG_STORNOWAY = 5144;
 
     /**
+     * Sule Skerry
      * Type: vertical
      * Extent: United Kingdom (UK) - Great Britain - Scotland - Sule Skerry onshore.
      * Scope: Geodesy, topographic mapping.
@@ -6851,6 +7562,7 @@ interface DatumIds
     public const EPSG_SULE_SKERRY = 5142;
 
     /**
+     * Swiss Terrestrial Reference Frame 1995
      * Type: geodetic
      * Extent: Liechtenstein; Switzerland.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -6859,6 +7571,7 @@ interface DatumIds
     public const EPSG_SWISS_TERRESTRIAL_REFERENCE_FRAME_1995 = 6151;
 
     /**
+     * System of the Unified Trigonometrical Cadastral Network
      * Type: geodetic
      * Extent: Czechia; Slovakia.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -6867,6 +7580,7 @@ interface DatumIds
     public const EPSG_SYSTEM_OF_THE_UNIFIED_TRIGONOMETRICAL_CADASTRAL_NETWORK = 6156;
 
     /**
+     * System of the Unified Trigonometrical Cadastral Network (Ferro)
      * Type: geodetic
      * Extent: Czechia; Slovakia.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -6875,6 +7589,7 @@ interface DatumIds
     public const EPSG_SYSTEM_OF_THE_UNIFIED_TRIGONOMETRICAL_CADASTRAL_NETWORK_FERRO = 6818;
 
     /**
+     * System of the Unified Trigonometrical Cadastral Network [JTSK03]
      * Type: geodetic
      * Extent: Slovakia.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -6882,6 +7597,7 @@ interface DatumIds
     public const EPSG_SYSTEM_OF_THE_UNIFIED_TRIGONOMETRICAL_CADASTRAL_NETWORK_JTSK03 = 1201;
 
     /**
+     * System of the Unified Trigonometrical Cadastral Network/05
      * Type: geodetic
      * Extent: Czechia.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -6891,6 +7607,7 @@ interface DatumIds
     public const EPSG_SYSTEM_OF_THE_UNIFIED_TRIGONOMETRICAL_CADASTRAL_NETWORK_05 = 1052;
 
     /**
+     * System of the Unified Trigonometrical Cadastral Network/05 (Ferro)
      * Type: geodetic
      * Extent: Czechia.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -6899,6 +7616,7 @@ interface DatumIds
     public const EPSG_SYSTEM_OF_THE_UNIFIED_TRIGONOMETRICAL_CADASTRAL_NETWORK_05_FERRO = 1055;
 
     /**
+     * TM65
      * Type: geodetic
      * Extent: Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore.
      * Scope: Topographic mapping.
@@ -6910,6 +7628,7 @@ interface DatumIds
     public const EPSG_TM65 = 6299;
 
     /**
+     * TPEN11 Intermediate Reference Frame
      * Type: geodetic
      * Extent: UK - on or related to the Trans-Pennine rail route from Liverpool via Manchester to Bradford and Leeds.
      * Scope: Engineering survey and topographic mapping for railway applications.
@@ -6921,6 +7640,7 @@ interface DatumIds
     public const EPSG_TPEN11_INTERMEDIATE_REFERENCE_FRAME = 1266;
 
     /**
+     * Tahaa 54
      * Type: geodetic
      * Extent: French Polynesia - Society Islands - Bora Bora, Huahine, Raiatea and Tahaa.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -6930,6 +7650,7 @@ interface DatumIds
     public const EPSG_TAHAA_54 = 6629;
 
     /**
+     * Tahaa SAU 2001
      * Type: vertical
      * Extent: French Polynesia - Society Islands - Tahaa.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -6939,6 +7660,7 @@ interface DatumIds
     public const EPSG_TAHAA_SAU_2001 = 5201;
 
     /**
+     * Tahiti 52
      * Type: geodetic
      * Extent: French Polynesia - Society Islands - Moorea and Tahiti.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -6948,6 +7670,7 @@ interface DatumIds
     public const EPSG_TAHITI_52 = 6628;
 
     /**
+     * Tahiti 79
      * Type: geodetic
      * Extent: French Polynesia - Society Islands - Tahiti.
      * Scope: Hydrography, topographic mapping.
@@ -6957,6 +7680,7 @@ interface DatumIds
     public const EPSG_TAHITI_79 = 6690;
 
     /**
+     * Taiwan Datum 1967
      * Type: geodetic
      * Extent: Taiwan, Republic of China - onshore - Taiwan Island, Penghu (Pescadores) Islands.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -6966,6 +7690,7 @@ interface DatumIds
     public const EPSG_TAIWAN_DATUM_1967 = 1025;
 
     /**
+     * Taiwan Datum 1997
      * Type: geodetic
      * Extent: Taiwan, Republic of China - onshore and offshore - Taiwan Island, Penghu (Pescadores) Islands.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -6975,6 +7700,7 @@ interface DatumIds
     public const EPSG_TAIWAN_DATUM_1997 = 1026;
 
     /**
+     * Taiwan Vertical Datum 2001
      * Type: vertical
      * Extent: Taiwan, Republic of China - onshore - Taiwan Island.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -6984,6 +7710,7 @@ interface DatumIds
     public const EPSG_TAIWAN_VERTICAL_DATUM_2001 = 1224;
 
     /**
+     * Tananarive 1925
      * Type: geodetic
      * Extent: Madagascar - onshore and nearshore.
      * Scope: Topographic mapping.
@@ -6992,6 +7719,7 @@ interface DatumIds
     public const EPSG_TANANARIVE_1925 = 6297;
 
     /**
+     * Tananarive 1925 (Paris)
      * Type: geodetic
      * Extent: Madagascar - onshore.
      * Scope: Topographic mapping.
@@ -7000,6 +7728,7 @@ interface DatumIds
     public const EPSG_TANANARIVE_1925_PARIS = 6810;
 
     /**
+     * Tapi Aike
      * Type: geodetic
      * Extent: Argentina - Santa Cruz province south of approximately 50°20'S.
      * Scope: Oil and gas exploration and production.
@@ -7010,6 +7739,7 @@ interface DatumIds
     public const EPSG_TAPI_AIKE = 1257;
 
     /**
+     * Taranaki 1970
      * Type: vertical
      * Extent: New Zealand - North Island - Taranaki vertical CRS area.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -7018,6 +7748,7 @@ interface DatumIds
     public const EPSG_TARANAKI_1970 = 5167;
 
     /**
+     * Tararu 1952
      * Type: vertical
      * Extent: New Zealand - North Island - Tararu vertical CRS area.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -7026,6 +7757,7 @@ interface DatumIds
     public const EPSG_TARARU_1952 = 5166;
 
     /**
+     * Tenerife
      * Type: vertical
      * Extent: Spain - Canary Islands - Tenerife onshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -7035,6 +7767,7 @@ interface DatumIds
     public const EPSG_TENERIFE = 1281;
 
     /**
+     * Tern Island 1961
      * Type: geodetic
      * Extent: United States (USA) - Hawaii - Tern Island and Sorel Atoll.
      * Scope: Military survey.
@@ -7045,6 +7778,7 @@ interface DatumIds
     public const EPSG_TERN_ISLAND_1961 = 6707;
 
     /**
+     * Tete
      * Type: geodetic
      * Extent: Mozambique - onshore.
      * Scope: Topographic mapping.
@@ -7053,6 +7787,7 @@ interface DatumIds
     public const EPSG_TETE = 6127;
 
     /**
+     * Timbalai 1948
      * Type: geodetic
      * Extent: Brunei - onshore and offshore; Malaysia - East Malaysia (Sabah; Sarawak) - onshore and offshore.
      * Scope: Topographic mapping.
@@ -7063,6 +7798,7 @@ interface DatumIds
     public const EPSG_TIMBALAI_1948 = 6298;
 
     /**
+     * Tokyo
      * Type: geodetic
      * Extent: Japan - onshore; North Korea - onshore; South Korea - onshore.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -7074,6 +7810,7 @@ interface DatumIds
     public const EPSG_TOKYO = 6301;
 
     /**
+     * Tokyo 1892
      * Type: geodetic
      * Extent: Japan - onshore; North Korea - onshore; South Korea - onshore.
      * Scope: Cadastre, engineering survey, topographic mapping.
@@ -7086,6 +7823,7 @@ interface DatumIds
     public const EPSG_TOKYO_1892 = 1048;
 
     /**
+     * Tonga Geodetic Datum 2005
      * Type: geodetic
      * Extent: Tonga - onshore and offshore.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -7094,6 +7832,7 @@ interface DatumIds
     public const EPSG_TONGA_GEODETIC_DATUM_2005 = 1095;
 
     /**
+     * Trieste
      * Type: vertical
      * Extent: Boznia and Herzegovina; Croatia - onshore; Kosovo; Montenegro - onshore; North Macedonia; Serbia;
      * Slovenia - onshore.
@@ -7104,6 +7843,7 @@ interface DatumIds
     public const EPSG_TRIESTE = 1050;
 
     /**
+     * Trinidad 1903
      * Type: geodetic
      * Extent: Trinidad and Tobago - Trinidad - onshore and offshore.
      * Scope: Topographic mapping.
@@ -7114,6 +7854,7 @@ interface DatumIds
     public const EPSG_TRINIDAD_1903 = 6302;
 
     /**
+     * Tristan 1968
      * Type: geodetic
      * Extent: St Helena, Ascension and Tristan da Cunha - Tristan da Cunha island group including Tristan,
      * Inaccessible, Nightingale, Middle and Stoltenhoff Islands.
@@ -7122,6 +7863,7 @@ interface DatumIds
     public const EPSG_TRISTAN_1968 = 6734;
 
     /**
+     * Trucial Coast 1948
      * Type: geodetic
      * Extent: United Arab Emirates (UAE) - Abu Dhabi onshore and Dubai onshore.
      * Scope: Oil and gas exploration.
@@ -7130,6 +7872,7 @@ interface DatumIds
     public const EPSG_TRUCIAL_COAST_1948 = 6303;
 
     /**
+     * Turkish National Reference Frame
      * Type: geodetic
      * Extent: Turkey - onshore and offshore.
      * Scope: Geodesy.
@@ -7138,6 +7881,7 @@ interface DatumIds
     public const EPSG_TURKISH_NATIONAL_REFERENCE_FRAME = 1057;
 
     /**
+     * Tutuila Vertical Datum of 1962
      * Type: vertical
      * Extent: American Samoa - Tutuila island.
      * Scope: Geodesy, topographic mapping.
@@ -7148,6 +7892,7 @@ interface DatumIds
     public const EPSG_TUTUILA_VERTICAL_DATUM_OF_1962 = 1121;
 
     /**
+     * Ukraine 2000
      * Type: geodetic
      * Extent: Ukraine - onshore and offshore.
      * Scope: Geodesy.
@@ -7157,6 +7902,7 @@ interface DatumIds
     public const EPSG_UKRAINE_2000 = 1077;
 
     /**
+     * Vanua Levu 1915
      * Type: geodetic
      * Extent: Fiji - Vanua Levu and Taveuni.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -7167,6 +7913,7 @@ interface DatumIds
     public const EPSG_VANUA_LEVU_1915 = 6748;
 
     /**
+     * Vientiane 1982
      * Type: geodetic
      * Extent: Laos.
      * Scope: Topographic mapping.
@@ -7177,6 +7924,7 @@ interface DatumIds
     public const EPSG_VIENTIANE_1982 = 6676;
 
     /**
+     * Vietnam 2000
      * Type: geodetic
      * Extent: Vietnam - onshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -7186,6 +7934,7 @@ interface DatumIds
     public const EPSG_VIETNAM_2000 = 6756;
 
     /**
+     * Virgin Islands Vertical Datum of 2009
      * Type: vertical
      * Extent: US Virgin Islands - onshore - St Croix, St John, and St Thomas.
      * Scope: Geodesy, topographic mapping.
@@ -7197,6 +7946,7 @@ interface DatumIds
     public const EPSG_VIRGIN_ISLANDS_VERTICAL_DATUM_OF_2009 = 1124;
 
     /**
+     * Viti Levu 1912
      * Type: geodetic
      * Extent: Fiji - Viti Levu island.
      * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
@@ -7207,6 +7957,7 @@ interface DatumIds
     public const EPSG_VITI_LEVU_1912 = 6752;
 
     /**
+     * Voirol 1875
      * Type: geodetic
      * Extent: Algeria - onshore north of 32°N.
      * Scope: Topographic mapping.
@@ -7217,6 +7968,7 @@ interface DatumIds
     public const EPSG_VOIROL_1875 = 6304;
 
     /**
+     * Voirol 1875 (Paris)
      * Type: geodetic
      * Extent: Algeria - onshore north of 32°N.
      * Scope: Topographic mapping.
@@ -7225,6 +7977,7 @@ interface DatumIds
     public const EPSG_VOIROL_1875_PARIS = 6811;
 
     /**
+     * Voirol 1879
      * Type: geodetic
      * Extent: Algeria - onshore north of 32°N.
      * Scope: Topographic mapping.
@@ -7235,6 +7988,7 @@ interface DatumIds
     public const EPSG_VOIROL_1879 = 6671;
 
     /**
+     * Voirol 1879 (Paris)
      * Type: geodetic
      * Extent: Algeria - onshore north of 32°N.
      * Scope: Topographic mapping.
@@ -7244,6 +7998,7 @@ interface DatumIds
     public const EPSG_VOIROL_1879_PARIS = 6821;
 
     /**
+     * WGS 72 Transit Broadcast Ephemeris
      * Type: dynamic geodetic
      * Extent: World.
      * Scope: Satellite navigation.
@@ -7254,6 +8009,7 @@ interface DatumIds
     public const EPSG_WGS_72_TRANSIT_BROADCAST_EPHEMERIS = 6324;
 
     /**
+     * Waitangi (Chatham Island) 1959
      * Type: vertical
      * Extent: New Zealand - Chatham Island - onshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -7262,6 +8018,7 @@ interface DatumIds
     public const EPSG_WAITANGI_CHATHAM_ISLAND_1959 = 5169;
 
     /**
+     * Wake Island 1952
      * Type: geodetic
      * Extent: Wake atoll - onshore.
      * Scope: Military survey.
@@ -7269,6 +8026,7 @@ interface DatumIds
     public const EPSG_WAKE_ISLAND_1952 = 6733;
 
     /**
+     * Wellington 1953
      * Type: vertical
      * Extent: New Zealand - North Island - Wellington vertical CRS area.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -7277,6 +8035,7 @@ interface DatumIds
     public const EPSG_WELLINGTON_1953 = 5168;
 
     /**
+     * Wiener Null
      * Type: vertical
      * Extent: Austria - Vienna city state.
      * Scope: Municipal spatial referencing.
@@ -7286,6 +8045,7 @@ interface DatumIds
     public const EPSG_WIENER_NULL = 1267;
 
     /**
+     * World Geodetic System 1966
      * Type: dynamic geodetic
      * Extent: World.
      * Scope: Geodesy.
@@ -7297,6 +8057,7 @@ interface DatumIds
     public const EPSG_WORLD_GEODETIC_SYSTEM_1966 = 6760;
 
     /**
+     * World Geodetic System 1972
      * Type: dynamic geodetic
      * Extent: World.
      * Scope: Satellite navigation.
@@ -7307,6 +8068,7 @@ interface DatumIds
     public const EPSG_WORLD_GEODETIC_SYSTEM_1972 = 6322;
 
     /**
+     * World Geodetic System 1984 (G1150)
      * Type: dynamic geodetic
      * Extent: World.
      * Scope: Geodesy. Navigation and positioning using GPS satellite system.
@@ -7319,6 +8081,7 @@ interface DatumIds
     public const EPSG_WORLD_GEODETIC_SYSTEM_1984_G1150 = 1154;
 
     /**
+     * World Geodetic System 1984 (G1674)
      * Type: dynamic geodetic
      * Extent: World.
      * Scope: Geodesy. Navigation and positioning using GPS satellite system.
@@ -7330,6 +8093,7 @@ interface DatumIds
     public const EPSG_WORLD_GEODETIC_SYSTEM_1984_G1674 = 1155;
 
     /**
+     * World Geodetic System 1984 (G1762)
      * Type: dynamic geodetic
      * Extent: World.
      * Scope: Geodesy. Navigation and positioning using GPS satellite system.
@@ -7340,6 +8104,7 @@ interface DatumIds
     public const EPSG_WORLD_GEODETIC_SYSTEM_1984_G1762 = 1156;
 
     /**
+     * World Geodetic System 1984 (G730)
      * Type: dynamic geodetic
      * Extent: World.
      * Scope: Geodesy. Navigation and positioning using GPS satellite system.
@@ -7352,6 +8117,7 @@ interface DatumIds
     public const EPSG_WORLD_GEODETIC_SYSTEM_1984_G730 = 1152;
 
     /**
+     * World Geodetic System 1984 (G873)
      * Type: dynamic geodetic
      * Extent: World.
      * Scope: Geodesy. Navigation and positioning using GPS satellite system.
@@ -7364,6 +8130,7 @@ interface DatumIds
     public const EPSG_WORLD_GEODETIC_SYSTEM_1984_G873 = 1153;
 
     /**
+     * World Geodetic System 1984 (Transit)
      * Type: dynamic geodetic
      * Extent: World.
      * Scope: Geodesy. Navigation and positioning using GPS satellite system.
@@ -7376,6 +8143,7 @@ interface DatumIds
     public const EPSG_WORLD_GEODETIC_SYSTEM_1984_TRANSIT = 1166;
 
     /**
+     * World Geodetic System 1984 ensemble
      * Type: ensemble
      * Extent: World.
      * Scope: Satellite navigation.
@@ -7389,6 +8157,7 @@ interface DatumIds
     public const EPSG_WORLD_GEODETIC_SYSTEM_1984_ENSEMBLE = 6326;
 
     /**
+     * Xian 1980
      * Type: geodetic
      * Extent: China - onshore.
      * Scope: Geodesy, engineering survey, topographic mapping.
@@ -7397,6 +8166,7 @@ interface DatumIds
     public const EPSG_XIAN_1980 = 6610;
 
     /**
+     * Yacare
      * Type: geodetic
      * Extent: Uruguay - onshore.
      * Scope: Topographic mapping.
@@ -7405,6 +8175,7 @@ interface DatumIds
     public const EPSG_YACARE = 6309;
 
     /**
+     * Yellow Sea 1956
      * Type: vertical
      * Extent: China - onshore.
      * Scope: Geodesy, topographic mapping.
@@ -7414,6 +8185,7 @@ interface DatumIds
     public const EPSG_YELLOW_SEA_1956 = 5104;
 
     /**
+     * Yellow Sea 1985
      * Type: vertical
      * Extent: China - onshore.
      * Scope: Geodesy, topographic mapping.
@@ -7423,6 +8195,7 @@ interface DatumIds
     public const EPSG_YELLOW_SEA_1985 = 5137;
 
     /**
+     * Yemen National Geodetic Network 1996
      * Type: geodetic
      * Extent: Yemen - onshore and offshore.
      * Scope: Topographic mapping.
@@ -7431,6 +8204,7 @@ interface DatumIds
     public const EPSG_YEMEN_NATIONAL_GEODETIC_NETWORK_1996 = 6163;
 
     /**
+     * Yoff
      * Type: geodetic
      * Extent: Senegal - onshore and offshore.
      * Scope: Topographic mapping.
@@ -7439,6 +8213,7 @@ interface DatumIds
     public const EPSG_YOFF = 6310;
 
     /**
+     * Zanderij
      * Type: geodetic
      * Extent: Suriname - onshore and offshore.
      * Scope: Topographic mapping.
@@ -7446,6 +8221,7 @@ interface DatumIds
     public const EPSG_ZANDERIJ = 6311;
 
     /**
+     * fk89
      * Type: geodetic
      * Extent: Faroe Islands - onshore.
      * Scope: Cadastre.

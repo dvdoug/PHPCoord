@@ -58,7 +58,7 @@ function createInterfacesWithIDs(string $dbPath, string $srcDir): void
             SELECT
                 m.uom_code AS constant_value,
                 m.unit_of_meas_type || '_' || m.unit_of_meas_name AS constant_name,
-                m.remarks AS constant_help,
+                m.unit_of_meas_name || '\n' || m.remarks AS constant_help,
                 m.deprecated
             FROM epsg_unitofmeasure m
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_unitofmeasure' AND dep.object_code = m.uom_code AND dep.deprecation_date <= '2020-09-01'
@@ -77,7 +77,7 @@ function createInterfacesWithIDs(string $dbPath, string $srcDir): void
             SELECT
                 p.prime_meridian_code AS constant_value,
                 p.prime_meridian_name AS constant_name,
-                p.remarks AS constant_help,
+                p.prime_meridian_name || '\n' || p.remarks AS constant_help,
                 p.deprecated
             FROM epsg_primemeridian p
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_primemeridian' AND dep.object_code = p.prime_meridian_code AND dep.deprecation_date <= '2020-09-01'
@@ -97,7 +97,7 @@ function createInterfacesWithIDs(string $dbPath, string $srcDir): void
             DISTINCT
                 e.ellipsoid_code AS constant_value,
                 e.ellipsoid_name AS constant_name,
-                e.remarks AS constant_help,
+                e.ellipsoid_name || '\n' || e.remarks AS constant_help,
                 e.deprecated
             FROM epsg_ellipsoid e
             JOIN epsg_datum d ON d.ellipsoid_code = e.ellipsoid_code -- there are some never used entries
@@ -117,7 +117,7 @@ function createInterfacesWithIDs(string $dbPath, string $srcDir): void
                 DISTINCT
                 d.datum_code AS constant_value,
                 d.datum_name AS constant_name,
-                'Type: ' || d.datum_type || '\n' || 'Extent: ' || e.extent_description || '\n' || 'Scope: ' || s.scope || '\n' || d.origin_description || '\n' || d.remarks AS constant_help,
+                d.datum_name || '\n' || 'Type: ' || d.datum_type || '\n' || 'Extent: ' || e.extent_description || '\n' || 'Scope: ' || s.scope || '\n' || d.origin_description || '\n' || d.remarks AS constant_help,
                 d.deprecated
             FROM epsg_datum d
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_datum' AND dep.object_code = d.datum_code AND dep.deprecation_date <= '2020-09-01'
@@ -139,7 +139,7 @@ function createInterfacesWithIDs(string $dbPath, string $srcDir): void
                 DISTINCT
                 cs.coord_sys_code AS constant_value,
                 cs.coord_sys_name || CASE cs.coord_sys_code WHEN 4531 THEN '_LOWERCASE' ELSE '' END AS constant_name,
-                'Type: ' || cs.coord_sys_type || '\n' || cs.remarks AS constant_help,
+                cs.coord_sys_name || '\n' || 'Type: ' || cs.coord_sys_type || '\n' || cs.remarks AS constant_help,
                 cs.deprecated
             FROM epsg_coordinatesystem cs
             JOIN epsg_coordinatereferencesystem crs ON crs.coord_sys_code = cs.coord_sys_code AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
@@ -158,7 +158,7 @@ function createInterfacesWithIDs(string $dbPath, string $srcDir): void
             SELECT
                 crs.coord_ref_sys_code AS constant_value,
                 crs.coord_ref_sys_kind || '_' || crs.coord_ref_sys_name AS constant_name,
-                'Type: ' || crs.coord_ref_sys_kind || '\n' || 'Extent: ' || e.extent_description || '\n' || 'Scope: ' || s.scope || '\n' || crs.remarks AS constant_help,
+                crs.coord_ref_sys_name || '\n' || 'Type: ' || crs.coord_ref_sys_kind || '\n' || 'Extent: ' || e.extent_description || '\n' || 'Scope: ' || s.scope || '\n' || crs.remarks AS constant_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2020-09-01'
