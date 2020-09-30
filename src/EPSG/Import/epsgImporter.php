@@ -76,7 +76,7 @@ function generateConstants(string $resDir, string $srcDir): void
 
     $result = $sqlite->query($sql);
 
-    updateFile($srcDir . '/UnitOfMeasure/UnitOfMeasure.php', $result);
+    updateFile($srcDir . '/UnitOfMeasure/UnitOfMeasure.php', $result, 'public');
 
     /*
      * Prime Meridians
@@ -95,7 +95,7 @@ function generateConstants(string $resDir, string $srcDir): void
 
     $result = $sqlite->query($sql);
 
-    updateFile($srcDir . '/Datum/PrimeMeridian.php', $result);
+    updateFile($srcDir . '/Datum/PrimeMeridian.php', $result, 'public');
 
     /*
      * Ellipsoids
@@ -115,7 +115,7 @@ function generateConstants(string $resDir, string $srcDir): void
             ";
     $result = $sqlite->query($sql);
 
-    updateFile($srcDir . '/Datum/Ellipsoid.php', $result);
+    updateFile($srcDir . '/Datum/Ellipsoid.php', $result, 'public');
 
     /*
      * Datums
@@ -137,7 +137,7 @@ function generateConstants(string $resDir, string $srcDir): void
         ";
     $result = $sqlite->query($sql);
 
-    updateFile($srcDir . '/Datum/Datum.php', $result);
+    updateFile($srcDir . '/Datum/Datum.php', $result, 'public');
 
     /*
      * Coordinate systems
@@ -157,7 +157,7 @@ function generateConstants(string $resDir, string $srcDir): void
         ";
     $result = $sqlite->query($sql);
 
-    updateFile($srcDir . '/CoordinateSystem/CoordinateSystem.php', $result);
+    updateFile($srcDir . '/CoordinateSystem/CoordinateSystem.php', $result, 'public');
 
     /*
      * Coordinate systems (cartesian)
@@ -178,7 +178,7 @@ function generateConstants(string $resDir, string $srcDir): void
         ";
     $result = $sqlite->query($sql);
 
-    updateFile($srcDir . '/CoordinateSystem/Cartesian.php', $result);
+    updateFile($srcDir . '/CoordinateSystem/Cartesian.php', $result, 'public');
 
     /*
      * Coordinate systems (ellipsoidal)
@@ -199,7 +199,7 @@ function generateConstants(string $resDir, string $srcDir): void
         ";
     $result = $sqlite->query($sql);
 
-    updateFile($srcDir . '/CoordinateSystem/Ellipsoidal.php', $result);
+    updateFile($srcDir . '/CoordinateSystem/Ellipsoidal.php', $result, 'public');
 
     /*
      * Coordinate systems (vertical)
@@ -220,7 +220,7 @@ function generateConstants(string $resDir, string $srcDir): void
         ";
     $result = $sqlite->query($sql);
 
-    updateFile($srcDir . '/CoordinateSystem/Vertical.php', $result);
+    updateFile($srcDir . '/CoordinateSystem/Vertical.php', $result, 'public');
 
     /*
      * Coordinate systems (other)
@@ -241,7 +241,7 @@ function generateConstants(string $resDir, string $srcDir): void
         ";
     $result = $sqlite->query($sql);
 
-    updateFile($srcDir . '/CoordinateSystem/CoordinateSystem.php', $result);
+    updateFile($srcDir . '/CoordinateSystem/CoordinateSystem.php', $result, 'public');
 
     /*
      * Coordinate reference systems (compound)
@@ -267,7 +267,7 @@ function generateConstants(string $resDir, string $srcDir): void
 
     $result = $sqlite->query($sql);
 
-    updateFile($srcDir . '/CoordinateReferenceSystem/Compound.php', $result);
+    updateFile($srcDir . '/CoordinateReferenceSystem/Compound.php', $result, 'public');
 
     /*
      * Coordinate reference systems (geocentric)
@@ -293,7 +293,7 @@ function generateConstants(string $resDir, string $srcDir): void
 
     $result = $sqlite->query($sql);
 
-    updateFile($srcDir . '/CoordinateReferenceSystem/Geocentric.php', $result);
+    updateFile($srcDir . '/CoordinateReferenceSystem/Geocentric.php', $result, 'public');
 
     /*
      * Coordinate reference systems (geographic 2D)
@@ -319,7 +319,7 @@ function generateConstants(string $resDir, string $srcDir): void
 
     $result = $sqlite->query($sql);
 
-    updateFile($srcDir . '/CoordinateReferenceSystem/Geographic2D.php', $result);
+    updateFile($srcDir . '/CoordinateReferenceSystem/Geographic2D.php', $result, 'public');
 
     /*
      * Coordinate reference systems (geographic 3D)
@@ -345,7 +345,7 @@ function generateConstants(string $resDir, string $srcDir): void
 
     $result = $sqlite->query($sql);
 
-    updateFile($srcDir . '/CoordinateReferenceSystem/Geographic3D.php', $result);
+    updateFile($srcDir . '/CoordinateReferenceSystem/Geographic3D.php', $result, 'public');
 
     /*
      * Coordinate reference systems (projected)
@@ -371,7 +371,7 @@ function generateConstants(string $resDir, string $srcDir): void
 
     $result = $sqlite->query($sql);
 
-    updateFile($srcDir . '/CoordinateReferenceSystem/Projected.php', $result);
+    updateFile($srcDir . '/CoordinateReferenceSystem/Projected.php', $result, 'public');
 
     /*
      * Coordinate reference systems (vertical)
@@ -397,7 +397,7 @@ function generateConstants(string $resDir, string $srcDir): void
 
     $result = $sqlite->query($sql);
 
-    updateFile($srcDir . '/CoordinateReferenceSystem/Vertical.php', $result);
+    updateFile($srcDir . '/CoordinateReferenceSystem/Vertical.php', $result, 'public');
 
     /*
      * Coordinate reference systems (other)
@@ -423,12 +423,64 @@ function generateConstants(string $resDir, string $srcDir): void
 
     $result = $sqlite->query($sql);
 
-    updateFile($srcDir . '/CoordinateReferenceSystem/CoordinateReferenceSystem.php', $result);
+    updateFile($srcDir . '/CoordinateReferenceSystem/CoordinateReferenceSystem.php', $result, 'public');
+
+    /*
+     * Coordinate operation methods
+     */
+    $sql = "
+            SELECT
+                m.coord_op_method_code AS constant_value,
+                m.coord_op_method_name AS constant_name,
+                m.coord_op_method_name || '\n' || m.remarks AS constant_help,
+                m.deprecated
+            FROM epsg_coordoperationmethod m
+            JOIN epsg_coordoperation o on m.coord_op_method_code = o.coord_op_method_code -- only want methods that are actually used
+            LEFT JOIN epsg_coordoperationparamvalue p ON p.coord_op_code = o.coord_op_code AND p.coord_op_method_code = m.coord_op_method_code
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperationmethod' AND dep.object_code = m.coord_op_method_code AND dep.deprecation_date <= '2020-09-01'
+            WHERE dep.deprecation_id IS NULL
+            AND o.coord_op_type != 'conversion'
+            AND m.coord_op_method_name NOT LIKE '%wellbore%'
+            AND m.coord_op_method_name NOT LIKE '%mining%'
+            AND m.coord_op_method_name NOT LIKE '%seismic%'
+            AND o.coord_op_name NOT LIKE '%example%'
+            AND o.remarks NOT LIKE '%user-defined%'
+            GROUP BY m.coord_op_method_code
+            HAVING (SUM(CASE WHEN p.param_value_file_ref != '' THEN 1 ELSE 0 END) = 0) -- skip anything that needs some kind of datafile
+
+            UNION
+
+            SELECT
+                m.coord_op_method_code AS constant_value,
+                m.coord_op_method_name AS constant_name,
+                m.coord_op_method_name || '\n' || m.remarks AS constant_help,
+                m.deprecated
+            FROM epsg_coordoperationmethod m
+            JOIN epsg_coordoperation o on m.coord_op_method_code = o.coord_op_method_code -- only want methods that are actually used
+            JOIN epsg_coordinatereferencesystem crs ON crs.projection_conv_code = o.coord_op_code
+            LEFT JOIN epsg_coordoperationparamvalue p ON p.coord_op_code = o.coord_op_code AND p.coord_op_method_code = m.coord_op_method_code
+            LEFT JOIN epsg_deprecation dep_method ON dep_method.object_table_name = 'epsg_coordoperationmethod' AND dep_method.object_code = m.coord_op_method_code AND dep_method.deprecation_date <= '2020-09-01'
+            LEFT JOIN epsg_deprecation dep_crs ON dep_crs.object_table_name = 'epsg_coordinatereferencesystem' AND dep_crs.object_code = crs.coord_ref_sys_code AND dep_crs.deprecation_date <= '2020-09-01'            
+            WHERE dep_method.deprecation_id IS NULL AND dep_crs.deprecation_id IS NULL
+            AND m.coord_op_method_name NOT LIKE '%wellbore%'
+            AND m.coord_op_method_name NOT LIKE '%mining%'
+            AND m.coord_op_method_name NOT LIKE '%seismic%'
+            AND o.coord_op_name NOT LIKE '%example%'
+            AND o.remarks NOT LIKE '%user-defined%'
+            GROUP BY m.coord_op_method_code
+            HAVING (SUM(CASE WHEN p.param_value_file_ref != '' THEN 1 ELSE 0 END) = 0) -- skip anything that needs some kind of datafile
+
+            ORDER BY constant_name
+        ";
+
+    $result = $sqlite->query($sql);
+
+    updateFile($srcDir . '/CoordinateOperation/CoordinateOperationMethods.php', $result, 'protected');
 
     $sqlite->close();
 }
 
-function updateFile(string $fileName, SQLite3Result $classConstants): void
+function updateFile(string $fileName, SQLite3Result $classConstants, string $visibility): void
 {
     $lexer = new Emulative([
         'usedAttributes' => [
@@ -458,7 +510,7 @@ function updateFile(string $fileName, SQLite3Result $classConstants): void
      * Then add the ones wanted
      */
     $traverser = new NodeTraverser();
-    $traverser->addVisitor(new AddNewConstantsVisitor($classConstants));
+    $traverser->addVisitor(new AddNewConstantsVisitor($classConstants, $visibility));
     $newStmts = $traverser->traverse($newStmts);
 
     $prettyPrinter = new ASTPrettyPrinter();
