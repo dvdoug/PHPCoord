@@ -22,6 +22,8 @@ use PHPCoord\Datum\Ellipsoid;
 use PHPCoord\Exception\InvalidCoordinateReferenceSystemException;
 use PHPCoord\Exception\UnknownAxisException;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
+use PHPCoord\UnitOfMeasure\Angle\ArcSecond;
+use PHPCoord\UnitOfMeasure\Angle\Radian;
 use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPCoord\UnitOfMeasure\Scale\Scale;
@@ -312,5 +314,46 @@ class GeographicPoint extends Point
         $newGeographic = $newGeocentric->asGeographicValue();
 
         return static::create($newGeographic->getLatitude(), $newGeographic->getLongitude(), $to instanceof Geographic3D ? $newGeographic->getHeight() : null, $to, $this->epoch);
+    }
+
+    /**
+     * Abridged Molodensky
+     * This transformation is a truncated Taylor series expansion of a transformation between two geographic coordinate
+     * systems, modelled as a set of geocentric translations.
+     */
+    public function abridgedMolodensky(
+        Geographic $to,
+        Length $xAxisTranslation,
+        Length $yAxisTranslation,
+        Length $zAxisTranslation,
+        Length $differenceInSemiMajorAxis,
+        Scale $differenceInFlattening
+    ): self {
+        $latitude = $this->latitude->asRadians()->getValue();
+        $longitude = $this->longitude->asRadians()->getValue();
+        $fromHeight = $this->height ? $this->height->asMetres()->getValue() : 0;
+        $tx = $xAxisTranslation->asMetres()->getValue();
+        $ty = $yAxisTranslation->asMetres()->getValue();
+        $tz = $zAxisTranslation->asMetres()->getValue();
+        $da = $differenceInSemiMajorAxis->asMetres()->getValue();
+        $df = $differenceInFlattening->asUnity()->getValue();
+
+        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+
+        $rho = $a * (1 - $e2) / (1 - $e2 * sin($latitude) ** 2) ** (3 / 2);
+        $nu = $a / sqrt(1 - $e2 * (sin($latitude) ** 2));
+
+        $f = $this->crs->getDatum()->getEllipsoid()->getInverseFlattening();
+
+        $dLatitude = ((-$tx * sin($latitude) * cos($longitude)) - ($ty * sin($latitude) * sin($longitude)) + ($tz * cos($latitude)) + ((($a * $df) + ($this->crs->getDatum()->getEllipsoid()->getInverseFlattening() * $da)) * sin(2 * $latitude))) / ($rho * sin((new ArcSecond(1))->asRadians()->getValue()));
+        $dLongitude = (-$tx * sin($longitude) + $ty * cos($longitude)) / (($nu * cos($latitude)) * sin((new ArcSecond(1))->asRadians()->getValue()));
+        $dHeight = ($tx * cos($latitude) * cos($longitude)) + ($ty * cos($latitude) * sin($longitude)) + ($tz * sin($latitude)) + (($a * $df + $f * $da) * (sin($latitude) ** 2)) - $da;
+
+        $toLatitude = $latitude + (new ArcSecond($dLatitude))->asRadians()->getValue();
+        $toLongitude = $longitude + (new ArcSecond($dLongitude))->asRadians()->getValue();
+        $toHeight = $fromHeight + $dHeight;
+
+        return static::create(new Radian($toLatitude), new Radian($toLongitude), $to instanceof Geographic3D ? new Metre($toHeight) : null, $to, $this->epoch);
     }
 }

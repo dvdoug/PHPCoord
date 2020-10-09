@@ -18,6 +18,7 @@ use PHPCoord\UnitOfMeasure\Angle\ArcSecond;
 use PHPCoord\UnitOfMeasure\Angle\Degree;
 use PHPCoord\UnitOfMeasure\Angle\Radian;
 use PHPCoord\UnitOfMeasure\Length\Metre;
+use PHPCoord\UnitOfMeasure\Scale\Unity;
 use PHPCoord\UnitOfMeasure\UnitOfMeasure;
 use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
 use PHPUnit\Framework\TestCase;
@@ -187,5 +188,27 @@ class GeographicPointTest extends TestCase
         self::assertEqualsWithDelta(9.5802779305981, $to->getLatitude()->getValue(), 0.000001);
         self::assertEqualsWithDelta(-66.081862, $to->getLongitude()->getValue(), 0.000001);
         self::assertEqualsWithDelta(180.51, $to->getHeight()->getValue(), 0.01);
+    }
+
+    public function testGeographic2DAbridgedMolodensky(): void
+    {
+        $from = GeographicPoint::create(new Degree(53.80939444), new Degree(2.12955000), new Metre(73), CoordinateReferenceSystem::fromEPSGCode(Geographic3D::EPSG_WGS_84));
+        $toCRS = CoordinateReferenceSystem::fromEPSGCode(Geographic2D::EPSG_WGS_84);
+        $to = $from->abridgedMolodensky($toCRS, new Metre(84.87), new Metre(96.49), new Metre(116.95), new Metre(251), new Unity(0.003367003 - 0.003352811));
+
+        self::assertEqualsWithDelta(53.81015639, $to->getLatitude()->getValue(), 0.000001);
+        self::assertEqualsWithDelta(2.13096583, $to->getLongitude()->getValue(), 0.000001);
+        self::assertNull($to->getHeight());
+    }
+
+    public function testGeographic3DAbridgedMolodensky(): void
+    {
+        $from = GeographicPoint::create(new Degree(53.80939444), new Degree(2.12955000), new Metre(73), CoordinateReferenceSystem::fromEPSGCode(Geographic3D::EPSG_WGS_84));
+        $toCRS = CoordinateReferenceSystem::fromEPSGCode(Geographic3D::EPSG_WGS_84);
+        $to = $from->abridgedMolodensky($toCRS, new Metre(84.87), new Metre(96.49), new Metre(116.95), new Metre(251), new Unity(0.003367003 - 0.003352811));
+
+        self::assertEqualsWithDelta(53.81015639, $to->getLatitude()->getValue(), 0.000001);
+        self::assertEqualsWithDelta(2.13096583, $to->getLongitude()->getValue(), 0.000001);
+        self::assertEqualsWithDelta(28.091, $to->getHeight()->getValue(), 0.01);
     }
 }
