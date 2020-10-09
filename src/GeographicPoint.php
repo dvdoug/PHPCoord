@@ -356,4 +356,45 @@ class GeographicPoint extends Point
 
         return static::create(new Radian($toLatitude), new Radian($toLongitude), $to instanceof Geographic3D ? new Metre($toHeight) : null, $to, $this->epoch);
     }
+
+    /**
+     * Molodensky
+     * See Abridged Molodensky.
+     */
+    public function molodensky(
+        Geographic $to,
+        Length $xAxisTranslation,
+        Length $yAxisTranslation,
+        Length $zAxisTranslation,
+        Length $differenceInSemiMajorAxis,
+        Scale $differenceInFlattening
+    ): self {
+        $latitude = $this->latitude->asRadians()->getValue();
+        $longitude = $this->longitude->asRadians()->getValue();
+        $fromHeight = $this->height ? $this->height->asMetres()->getValue() : 0;
+        $tx = $xAxisTranslation->asMetres()->getValue();
+        $ty = $yAxisTranslation->asMetres()->getValue();
+        $tz = $zAxisTranslation->asMetres()->getValue();
+        $da = $differenceInSemiMajorAxis->asMetres()->getValue();
+        $df = $differenceInFlattening->asUnity()->getValue();
+
+        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+        $b = $this->crs->getDatum()->getEllipsoid()->getSemiMinorAxis()->asMetres()->getValue();
+        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+
+        $rho = $a * (1 - $e2) / (1 - $e2 * sin($latitude) ** 2) ** (3 / 2);
+        $nu = $a / sqrt(1 - $e2 * (sin($latitude) ** 2));
+
+        $f = $this->crs->getDatum()->getEllipsoid()->getInverseFlattening();
+
+        $dLatitude = ((-$tx * sin($latitude) * cos($longitude)) - ($ty * sin($latitude) * sin($longitude)) + ($tz * cos($latitude)) + ($da * ($nu * $e2 * sin($latitude) * cos($latitude)) / $a + $df * ($rho * ($a / $b) + $nu * ($b / $a)) * sin($latitude) * cos($latitude))) / (($rho + $fromHeight) * sin((new ArcSecond(1))->asRadians()->getValue()));
+        $dLongitude = (-$tx * sin($longitude) + $ty * cos($longitude)) / ((($nu + $fromHeight) * cos($latitude)) * sin((new ArcSecond(1))->asRadians()->getValue()));
+        $dHeight = ($tx * cos($latitude) * cos($longitude)) + ($ty * cos($latitude) * sin($longitude)) + ($tz * sin($latitude)) - $da * $a / $nu + $df * $b / $a * $nu * sin($latitude) ** 2;
+
+        $toLatitude = $latitude + (new ArcSecond($dLatitude))->asRadians()->getValue();
+        $toLongitude = $longitude + (new ArcSecond($dLongitude))->asRadians()->getValue();
+        $toHeight = $fromHeight + $dHeight;
+
+        return static::create(new Radian($toLatitude), new Radian($toLongitude), $to instanceof Geographic3D ? new Metre($toHeight) : null, $to, $this->epoch);
+    }
 }
