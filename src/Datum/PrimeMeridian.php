@@ -15,13 +15,19 @@ use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
 
 class PrimeMeridian implements PrimeMeridianIds
 {
-    /** @var Repository */
+    /**
+     * @var Repository
+     */
     private static $repository;
 
-    /** @var string */
+    /**
+     * @var string
+     */
     private $name;
 
-    /** @var Angle */
+    /**
+     * @var Angle
+     */
     private $greenwichLongitude;
 
     public function __construct(string $name, Angle $greenwichLongitude)

@@ -15,13 +15,19 @@ use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
 
 class Ellipsoid implements EllipsoidIds
 {
-    /** @var Repository */
+    /**
+     * @var Repository
+     */
     private static $repository;
 
-    /** @var Length */
+    /**
+     * @var Length
+     */
     protected $semiMajorAxis;
 
-    /** @var Length */
+    /**
+     * @var Length
+     */
     protected $semiMinorAxis;
 
     public function __construct(Length $semiMajorAxis, Length $semiMinorAxis)

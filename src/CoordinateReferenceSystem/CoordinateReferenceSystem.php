@@ -39,19 +39,29 @@ abstract class CoordinateReferenceSystem implements CoordinateReferenceSystemIds
 
     public const CRS_TYPE_VERTICAL = 'vertical';
 
-    /** @var int */
+    /**
+     * @var int
+     */
     protected $epsgCode;
 
-    /** @var CoordinateSystem */
+    /**
+     * @var CoordinateSystem
+     */
     protected $coordinateSystem;
 
-    /** @var Datum */
+    /**
+     * @var Datum
+     */
     protected $datum;
 
-    /** @var CoordinateReferenceSystem */
+    /**
+     * @var CoordinateReferenceSystem
+     */
     protected $baseCRS;
 
-    /** @var Repository */
+    /**
+     * @var Repository
+     */
     private static $repository;
 
     public static function fromEPSGCode(int $epsgCode): self

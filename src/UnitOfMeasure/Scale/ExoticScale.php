@@ -10,16 +10,24 @@ namespace PHPCoord\UnitOfMeasure\Scale;
 
 class ExoticScale implements Scale
 {
-    /** @var float */
+    /**
+     * @var float
+     */
     private $scale;
 
-    /** @var string */
+    /**
+     * @var string
+     */
     private $name;
 
-    /** @var float */
+    /**
+     * @var float
+     */
     private $factorB;
 
-    /** @var float */
+    /**
+     * @var float
+     */
     private $factorC;
 
     public function __construct(

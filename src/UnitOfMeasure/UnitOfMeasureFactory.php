@@ -25,7 +25,9 @@ use PHPCoord\UnitOfMeasure\Time\Year;
 
 class UnitOfMeasureFactory implements UnitOfMeasureIds
 {
-    /** @var Repository */
+    /**
+     * @var Repository
+     */
     private static $repository;
 
     /**

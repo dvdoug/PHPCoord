@@ -15,31 +15,49 @@ use SQLite3;
  */
 class Repository
 {
-    /** @var SQLite3 */
+    /**
+     * @var SQLite3
+     */
     private static $connection;
 
-    /** @var array */
+    /**
+     * @var array
+     */
     private static $unitsOfMeasureData = [];
 
-    /** @var array */
+    /**
+     * @var array
+     */
     private static $primeMeridianData = [];
 
-    /** @var array */
+    /**
+     * @var array
+     */
     private static $ellipsoidData = [];
 
-    /** @var array */
+    /**
+     * @var array
+     */
     private static $datumData = [];
 
-    /** @var array */
+    /**
+     * @var array
+     */
     private static $datumEnsembleData = [];
 
-    /** @var array */
+    /**
+     * @var array
+     */
     private static $coordinateSystemData = [];
 
-    /** @var array */
+    /**
+     * @var array
+     */
     private static $coordinateSystemAxisData = [];
 
-    /** @var array */
+    /**
+     * @var array
+     */
     private static $coordinateReferenceSystemData = [];
 
     private function getConnection(): SQLite3

@@ -10,16 +10,24 @@ namespace PHPCoord\UnitOfMeasure\Angle;
 
 class ExoticAngle implements Angle
 {
-    /** @var float */
+    /**
+     * @var float
+     */
     private $angle;
 
-    /** @var string */
+    /**
+     * @var string
+     */
     private $name;
 
-    /** @var float */
+    /**
+     * @var float
+     */
     private $factorB;
 
-    /** @var float */
+    /**
+     * @var float
+     */
     private $factorC;
 
     public function __construct(

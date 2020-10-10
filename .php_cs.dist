@@ -29,6 +29,7 @@ return PhpCsFixer\Config::create()
                 'separate' => 'none',
                 'header' => "PHPCoord.\n\n@author Doug Wright",
             ],
+            'phpdoc_line_span' => true,
         ]
     )
     ->setRiskyAllowed(true)

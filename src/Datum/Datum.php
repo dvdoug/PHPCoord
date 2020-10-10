@@ -25,19 +25,29 @@ class Datum implements DatumIds
 
     public const DATUM_TYPE_ENSEMBLE = 'ensemble';
 
-    /** @var Repository */
+    /**
+     * @var Repository
+     */
     private static $repository;
 
-    /** @var string */
+    /**
+     * @var string
+     */
     protected $datumType;
 
-    /** @var Ellipsoid */
+    /**
+     * @var Ellipsoid
+     */
     protected $ellipsoid;
 
-    /** @var PrimeMeridian */
+    /**
+     * @var PrimeMeridian
+     */
     protected $primeMeridian;
 
-    /** @var ?float */
+    /**
+     * @var ?float
+     */
     protected $frameReferenceEpoch;
 
     public function __construct(

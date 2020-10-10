@@ -14,7 +14,9 @@ use PHPUnit\Framework\TestCase;
 
 class UnitOfMeasureFactoryTest extends TestCase
 {
-    /** @var UnitOfMeasureFactory */
+    /**
+     * @var UnitOfMeasureFactory
+     */
     private $factory;
 
     public function setUp(): void

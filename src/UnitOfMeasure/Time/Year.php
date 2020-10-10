@@ -12,7 +12,9 @@ class Year implements Time
 {
     private const SECONDS_IN_YEAR = 31556925.445;
 
-    /** @var float */
+    /**
+     * @var float
+     */
     private $time;
 
     public function __construct(float $time)

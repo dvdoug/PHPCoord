@@ -23,13 +23,19 @@ abstract class CoordinateSystem implements CoordinateSystemIds
 
     public const CS_TYPE_VERTICAL = 'vertical';
 
-    /** @var int */
+    /**
+     * @var int
+     */
     protected $epsgCode;
 
-    /** @var Axis[] */
+    /**
+     * @var Axis[]
+     */
     protected $axes;
 
-    /** @var Repository */
+    /**
+     * @var Repository
+     */
     private static $repository;
 
     public static function fromEPSGCode(int $epsgCode): self
