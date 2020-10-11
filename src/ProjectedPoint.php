@@ -277,4 +277,53 @@ class ProjectedPoint extends Point
 
         return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
     }
+
+    /**
+     * American Polyconic.
+     */
+    public function americanPolyconic(
+        Geographic $to,
+        Angle $latitudeOfNaturalOrigin,
+        Angle $longitudeOfNaturalOrigin,
+        Length $falseEasting,
+        Length $falseNorthing
+    ): GeographicPoint {
+        $easting = $this->easting->asMetres()->getValue() - $falseEasting->asMetres()->getValue();
+        $northing = $this->northing->asMetres()->getValue() - $falseNorthing->asMetres()->getValue();
+        $latitudeOrigin = $latitudeOfNaturalOrigin->asRadians()->getValue();
+        $longitudeOrigin = $longitudeOfNaturalOrigin->asRadians()->getValue();
+        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
+        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+        $e4 = $this->crs->getDatum()->getEllipsoid()->getEccentricity() ** 4;
+        $e6 = $this->crs->getDatum()->getEllipsoid()->getEccentricity() ** 6;
+
+        $i = (1 - $e2 / 4 - 3 * $e4 / 64 - 5 * $e6 / 256);
+        $ii = (3 * $e2 / 8 + 3 * $e4 / 32 + 45 * $e6 / 1024);
+        $iii = (15 * $e4 / 256 + 45 * $e6 / 1024);
+        $iv = (35 * $e6 / 3072);
+
+        $MO = $a * ($i * $latitudeOrigin - $ii * sin(2 * $latitudeOrigin) + $iii * sin(4 * $latitudeOrigin) - $iv * sin(6 * $latitudeOrigin));
+
+        if ($MO === $northing) {
+            $latitude = 0;
+            $longitude = $longitudeOrigin + $easting / $a;
+        } else {
+            $A = ($MO + $northing) / $a;
+            $B = $A ** 2 + $easting ** 2 / $a ** 2;
+
+            $latitude = $A;
+            do {
+                $latitudeN = $latitude;
+                $M = $a * ($i * $latitude - $ii * sin(2 * $latitude) + $iii * sin(4 * $latitude) - $iv * sin(6 * $latitude));
+                $C = sqrt(1 - $e2 * sin($latitude) ** 2) * tan($latitude);
+                $J = $M / $a;
+                $latitude = $latitude - ($A * ($C * $J + 1) - $J - $C * ($J ** 2 + $B) / 2) / ($e2 * sin(2 * $latitude) * ($J ** 2 + $B - 2 * $A * $J) / 4 * $C + ($A - $J) * ($C * $M - (2 / sin(2 * $latitude)) - $M));
+            } while (abs($latitude - $latitudeN) >= self::NEWTON_RAPHSON_CONVERGENCE);
+
+            $longitude = $longitudeOrigin + (asin($easting * $C / $a)) / sin($latitude);
+        }
+
+        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+    }
 }

@@ -16,6 +16,8 @@ use Stringable;
 
 abstract class Point implements Stringable
 {
+    protected const NEWTON_RAPHSON_CONVERGENCE = 1e-16;
+
     abstract public function getCRS(): CoordinateReferenceSystem;
 
     abstract public function getCoordinateEpoch(): ?DateTimeImmutable;

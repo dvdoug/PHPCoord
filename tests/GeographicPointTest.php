@@ -254,4 +254,14 @@ class GeographicPointTest extends TestCase
         self::assertEqualsWithDelta(1408623.196, $to->getEasting()->asMetres()->getValue(), 0.01);
         self::assertEqualsWithDelta(1507641.482, $to->getNorthing()->asMetres()->getValue(), 0.01);
     }
+
+    public function testAmericanPolyconic(): void
+    {
+        $from = GeographicPoint::create(new Degree(40), new Degree(-75), null, CoordinateReferenceSystem::fromEPSGCode(Geographic2D::EPSG_NAD27));
+        $toCRS = CoordinateReferenceSystem::fromEPSGCode(Projected::EPSG_NAD27_ALABAMA_EAST);
+        $to = $from->americanPolyconic($toCRS, new Degree(30), new Degree(-96), new Metre(10), new Metre(20));
+
+        self::assertEqualsWithDelta(1776784.5, $to->getEasting()->asMetres()->getValue(), 0.1);
+        self::assertEqualsWithDelta(1319677.8, $to->getNorthing()->asMetres()->getValue(), 0.1);
+    }
 }

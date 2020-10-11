@@ -166,4 +166,15 @@ class ProjectedPointTest extends TestCase
         self::assertEqualsWithDelta(-0.802858912, $to->getLongitude()->asRadians()->getValue(), 0.000001);
         self::assertNull($to->getHeight());
     }
+
+    public function testAmericanPolyconic(): void
+    {
+        $from = ProjectedPoint::createFromEastingNorthing(new Metre(1776784.5), new Metre(1319677.8), CoordinateReferenceSystem::fromEPSGCode(Projected::EPSG_NAD27_ALABAMA_EAST));
+        $toCRS = CoordinateReferenceSystem::fromEPSGCode(Geographic2D::EPSG_NAD27);
+        $to = $from->americanPolyconic($toCRS, new Degree(30), new Degree(-96), new Metre(10), new Metre(20));
+
+        self::assertEqualsWithDelta(40, $to->getLatitude()->getValue(), 0.0001);
+        self::assertEqualsWithDelta(-75, $to->getLongitude()->getValue(), 0.0001);
+        self::assertNull($to->getHeight());
+    }
 }
