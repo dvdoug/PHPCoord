@@ -463,6 +463,9 @@ class CoordinateOperationMethods
             self::EPSG_LAMBERT_CYLINDRICAL_EQUAL_AREA => 'lambertCylindricalEqualArea',
             self::EPSG_MODIFIED_AZIMUTHAL_EQUIDISTANT => 'modifiedAzimuthalEquidistant',
             self::EPSG_OBLIQUE_STEREOGRAPHIC => 'obliqueStereographic',
+            self::EPSG_POLAR_STEREOGRAPHIC_VARIANT_A => 'polarStereographicVariantA',
+            self::EPSG_POLAR_STEREOGRAPHIC_VARIANT_B => 'polarStereographicVariantB',
+            self::EPSG_POLAR_STEREOGRAPHIC_VARIANT_C => 'polarStereographicVariantC',
         ];
     }
 }

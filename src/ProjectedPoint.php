@@ -1292,4 +1292,151 @@ class ProjectedPoint extends Point
 
         return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
     }
+
+    /**
+     * Polar Stereographic (variant A)
+     * Latitude of natural origin must be either 90 degrees or -90 degrees (or equivalent in alternative angle unit).
+     */
+    public function polarStereographicVariantA(
+        Geographic $to,
+        Angle $latitudeOfNaturalOrigin,
+        Angle $longitudeOfNaturalOrigin,
+        Scale $scaleFactorAtNaturalOrigin,
+        Length $falseEasting,
+        Length $falseNorthing
+    ): GeographicPoint {
+        $easting = $this->easting->asMetres()->getValue() - $falseEasting->asMetres()->getValue();
+        $northing = $this->northing->asMetres()->getValue() - $falseNorthing->asMetres()->getValue();
+        $latitudeOrigin = $latitudeOfNaturalOrigin->asRadians()->getValue();
+        $longitudeOrigin = $longitudeOfNaturalOrigin->asRadians()->getValue();
+        $scaleFactorOrigin = $scaleFactorAtNaturalOrigin->asUnity()->getValue();
+        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
+        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+        $e4 = $this->crs->getDatum()->getEllipsoid()->getEccentricity() ** 4;
+        $e6 = $this->crs->getDatum()->getEllipsoid()->getEccentricity() ** 6;
+        $e8 = $this->crs->getDatum()->getEllipsoid()->getEccentricity() ** 8;
+
+        $rho = sqrt($easting ** 2 + $northing ** 2);
+        $t = $rho * sqrt((1 + $e) ** (1 + $e) * (1 - $e) ** (1 - $e)) / (2 * $a * $scaleFactorOrigin);
+
+        if ($latitudeOrigin < 0) {
+            $chi = 2 * atan($t) - M_PI / 2;
+        } else {
+            $chi = M_PI / 2 - 2 * atan($t);
+        }
+
+        $latitude = $chi + ($e2 / 2 + 5 * $e4 / 24 + $e6 / 12 + 13 * $e8 / 360) * sin(2 * $chi) + (7 * $e4 / 48 + 29 * $e6 / 240 + 811 * $e8 / 11520) * sin(4 * $chi) + (7 * $e6 / 120 + 81 * $e8 / 1120) * sin(6 * $chi) + (4279 * $e8 / 161280) * sin(8 * $chi);
+
+        if ($easting === 0.0) {
+            $longitude = $longitudeOrigin;
+        } elseif ($latitudeOrigin < 0) {
+            $longitude = $longitudeOrigin + atan2($easting, $this->northing->asMetres()->getValue() - $falseNorthing->asMetres()->getValue());
+        } else {
+            $longitude = $longitudeOrigin + atan2($easting, $falseNorthing->asMetres()->getValue() - $this->northing->asMetres()->getValue());
+        }
+
+        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+    }
+
+    /**
+     * Polar Stereographic (variant B).
+     */
+    public function polarStereographicVariantB(
+        Geographic $to,
+        Angle $latitudeOfStandardParallel,
+        Angle $longitudeOfOrigin,
+        Length $falseEasting,
+        Length $falseNorthing
+    ): GeographicPoint {
+        $easting = $this->easting->asMetres()->getValue() - $falseEasting->asMetres()->getValue();
+        $northing = $this->northing->asMetres()->getValue() - $falseNorthing->asMetres()->getValue();
+        $standardParallel = $latitudeOfStandardParallel->asRadians()->getValue();
+        $longitudeOrigin = $longitudeOfOrigin->asRadians()->getValue();
+        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
+        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+        $e4 = $this->crs->getDatum()->getEllipsoid()->getEccentricity() ** 4;
+        $e6 = $this->crs->getDatum()->getEllipsoid()->getEccentricity() ** 6;
+        $e8 = $this->crs->getDatum()->getEllipsoid()->getEccentricity() ** 8;
+
+        $rho = sqrt($easting ** 2 + $northing ** 2);
+        if ($standardParallel < 0) {
+            $tF = tan(M_PI / 4 + $standardParallel / 2) / (((1 + $e * sin($standardParallel)) / (1 - $e * sin($standardParallel))) ** ($e / 2));
+        } else {
+            $tF = tan(M_PI / 4 - $standardParallel / 2) * (((1 + $e * sin($standardParallel)) / (1 - $e * sin($standardParallel))) ** ($e / 2));
+        }
+        $mF = cos($standardParallel) / sqrt(1 - $e2 * sin($standardParallel) ** 2);
+        $kO = $mF * sqrt((1 + $e) ** (1 + $e) * (1 - $e) ** (1 - $e)) / (2 * $tF);
+        $t = $rho * sqrt((1 + $e) ** (1 + $e) * (1 - $e) ** (1 - $e)) / (2 * $a * $kO);
+
+        if ($standardParallel < 0) {
+            $chi = 2 * atan($t) - M_PI / 2;
+        } else {
+            $chi = M_PI / 2 - 2 * atan($t);
+        }
+
+        $latitude = $chi + ($e2 / 2 + 5 * $e4 / 24 + $e6 / 12 + 13 * $e8 / 360) * sin(2 * $chi) + (7 * $e4 / 48 + 29 * $e6 / 240 + 811 * $e8 / 11520) * sin(4 * $chi) + (7 * $e6 / 120 + 81 * $e8 / 1120) * sin(6 * $chi) + (4279 * $e8 / 161280) * sin(8 * $chi);
+
+        if ($easting === 0.0) {
+            $longitude = $longitudeOrigin;
+        } elseif ($standardParallel < 0) {
+            $longitude = $longitudeOrigin + atan2($easting, $this->northing->asMetres()->getValue() - $falseNorthing->asMetres()->getValue());
+        } else {
+            $longitude = $longitudeOrigin + atan2($easting, $falseNorthing->asMetres()->getValue() - $this->northing->asMetres()->getValue());
+        }
+
+        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+    }
+
+    /**
+     * Polar Stereographic (variant C).
+     */
+    public function polarStereographicVariantC(
+        Geographic $to,
+        Angle $latitudeOfStandardParallel,
+        Angle $longitudeOfOrigin,
+        Length $eastingAtFalseOrigin,
+        Length $northingAtFalseOrigin
+    ): GeographicPoint {
+        $easting = $this->easting->asMetres()->getValue() - $eastingAtFalseOrigin->asMetres()->getValue();
+        $northing = $this->northing->asMetres()->getValue() - $northingAtFalseOrigin->asMetres()->getValue();
+        $standardParallel = $latitudeOfStandardParallel->asRadians()->getValue();
+        $longitudeOrigin = $longitudeOfOrigin->asRadians()->getValue();
+        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
+        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+        $e4 = $this->crs->getDatum()->getEllipsoid()->getEccentricity() ** 4;
+        $e6 = $this->crs->getDatum()->getEllipsoid()->getEccentricity() ** 6;
+        $e8 = $this->crs->getDatum()->getEllipsoid()->getEccentricity() ** 8;
+
+        if ($standardParallel < 0) {
+            $tF = tan(M_PI / 4 + $standardParallel / 2) / (((1 + $e * sin($standardParallel)) / (1 - $e * sin($standardParallel))) ** ($e / 2));
+        } else {
+            $tF = tan(M_PI / 4 - $standardParallel / 2) * (((1 + $e * sin($standardParallel)) / (1 - $e * sin($standardParallel))) ** ($e / 2));
+        }
+        $mF = cos($standardParallel) / sqrt(1 - $e2 * sin($standardParallel) ** 2);
+        $rhoF = $a * $mF;
+        if ($standardParallel < 0) {
+            $rho = sqrt($easting ** 2 + ($northing + $rhoF) ** 2);
+            $t = $rho * $tF / $rhoF;
+            $chi = 2 * atan($t) - M_PI / 2;
+        } else {
+            $rho = sqrt($easting ** 2 + ($northing - $rhoF) ** 2);
+            $t = $rho * $tF / $rhoF;
+            $chi = M_PI / 2 - 2 * atan($t);
+        }
+
+        $latitude = $chi + ($e2 / 2 + 5 * $e4 / 24 + $e6 / 12 + 13 * $e8 / 360) * sin(2 * $chi) + (7 * $e4 / 48 + 29 * $e6 / 240 + 811 * $e8 / 11520) * sin(4 * $chi) + (7 * $e6 / 120 + 81 * $e8 / 1120) * sin(6 * $chi) + (4279 * $e8 / 161280) * sin(8 * $chi);
+
+        if ($easting === 0.0) {
+            $longitude = $longitudeOrigin;
+        } elseif ($standardParallel < 0) {
+            $longitude = $longitudeOrigin + atan2($easting, $this->northing->asMetres()->getValue() - $northingAtFalseOrigin->asMetres()->getValue() + $rhoF);
+        } else {
+            $longitude = $longitudeOrigin + atan2($easting, $northingAtFalseOrigin->asMetres()->getValue() - $this->northing->asMetres()->getValue() + $rhoF);
+        }
+
+        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+    }
 }

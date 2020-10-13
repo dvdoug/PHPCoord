@@ -534,4 +534,34 @@ class GeographicPointTest extends TestCase
         self::assertEqualsWithDelta(196105.283, $to->getEasting()->asMetres()->getValue(), 0.01);
         self::assertEqualsWithDelta(557057.739, $to->getNorthing()->asMetres()->getValue(), 0.01);
     }
+
+    public function testPolarStereographicVariantA(): void
+    {
+        $from = GeographicPoint::create(new Degree(73), new Degree(44), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
+        $toCRS = Projected::fromSRID(Projected::EPSG_WGS_84_UPS_NORTH_E_N);
+        $to = $from->polarStereographicVariantA($toCRS, new Degree(90), new Degree(0), new Coefficient(0.994), new Metre(2000000), new Metre(2000000));
+
+        self::assertEqualsWithDelta(3320416.75, $to->getEasting()->asMetres()->getValue(), 0.01);
+        self::assertEqualsWithDelta(632668.43, $to->getNorthing()->asMetres()->getValue(), 0.01);
+    }
+
+    public function testPolarStereographicVariantB(): void
+    {
+        $from = GeographicPoint::create(new Degree(-75), new Degree(120), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
+        $toCRS = Projected::fromSRID(Projected::EPSG_WGS_84_AUSTRALIAN_ANTARCTIC_POLAR_STEREOGRAPHIC);
+        $to = $from->polarStereographicVariantB($toCRS, new Degree(-71), new Degree(70), new Metre(6000000), new Metre(6000000));
+
+        self::assertEqualsWithDelta(7255380.79, $to->getEasting()->asMetres()->getValue(), 0.01);
+        self::assertEqualsWithDelta(7053389.56, $to->getNorthing()->asMetres()->getValue(), 0.01);
+    }
+
+    public function testPolarStereographicVariantC(): void
+    {
+        $from = GeographicPoint::create(new Radian(-1.162480524), new Radian(2.444707118), null, Geographic2D::fromSRID(Geographic2D::EPSG_PETRELS_1972));
+        $toCRS = Projected::fromSRID(Projected::EPSG_PETRELS_1972_TERRE_ADELIE_POLAR_STEREOGRAPHIC);
+        $to = $from->polarStereographicVariantC($toCRS, new Degree(-67), new Degree(140), new Metre(300000), new Metre(200000));
+
+        self::assertEqualsWithDelta(303169.52, $to->getEasting()->asMetres()->getValue(), 0.01);
+        self::assertEqualsWithDelta(244055.72, $to->getNorthing()->asMetres()->getValue(), 0.01);
+    }
 }

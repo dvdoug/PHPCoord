@@ -1328,6 +1328,135 @@ class GeographicPoint extends Point
     }
 
     /**
+     * Polar Stereographic (variant A)
+     * Latitude of natural origin must be either 90 degrees or -90 degrees (or equivalent in alternative angle unit).
+     */
+    public function polarStereographicVariantA(
+        Projected $to,
+        Angle $latitudeOfNaturalOrigin,
+        Angle $longitudeOfNaturalOrigin,
+        Scale $scaleFactorAtNaturalOrigin,
+        Length $falseEasting,
+        Length $falseNorthing
+    ): ProjectedPoint {
+        $latitude = $this->latitude->asRadians()->getValue();
+        $longitude = $this->longitude->asRadians()->getValue();
+        $latitudeOrigin = $latitudeOfNaturalOrigin->asRadians()->getValue();
+        $longitudeOrigin = $longitudeOfNaturalOrigin->asRadians()->getValue();
+        $kO = $scaleFactorAtNaturalOrigin->asUnity()->getValue();
+        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
+
+        if ($latitudeOrigin < 0) {
+            $t = tan(M_PI / 4 + $latitude / 2) / (((1 + $e * sin($latitude)) / (1 - $e * sin($latitude))) ** ($e / 2));
+        } else {
+            $t = tan(M_PI / 4 - $latitude / 2) * (((1 + $e * sin($latitude)) / (1 - $e * sin($latitude))) ** ($e / 2));
+        }
+        $rho = 2 * $a * $kO * $t / sqrt((1 + $e) ** (1 + $e) * (1 - $e) ** (1 - $e));
+
+        $theta = $longitude - $longitudeOrigin;
+        $dE = $rho * sin($theta);
+        $dN = $rho * cos($theta);
+
+        $easting = $falseEasting->asMetres()->getValue() + $dE;
+        if ($latitudeOrigin < 0) {
+            $northing = $falseNorthing->asMetres()->getValue() + $dN;
+        } else {
+            $northing = $falseNorthing->asMetres()->getValue() - $dN;
+        }
+
+        return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+    }
+
+    /**
+     * Polar Stereographic (variant B).
+     */
+    public function polarStereographicVariantB(
+        Projected $to,
+        Angle $latitudeOfStandardParallel,
+        Angle $longitudeOfOrigin,
+        Length $falseEasting,
+        Length $falseNorthing
+    ): ProjectedPoint {
+        $latitude = $this->latitude->asRadians()->getValue();
+        $longitude = $this->longitude->asRadians()->getValue();
+        $firstStandardParallel = $latitudeOfStandardParallel->asRadians()->getValue();
+        $longitudeOrigin = $longitudeOfOrigin->asRadians()->getValue();
+        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
+        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+
+        if ($firstStandardParallel < 0) {
+            $tF = tan(M_PI / 4 + $firstStandardParallel / 2) / (((1 + $e * sin($firstStandardParallel)) / (1 - $e * sin($firstStandardParallel))) ** ($e / 2));
+            $t = tan(M_PI / 4 + $latitude / 2) / (((1 + $e * sin($latitude)) / (1 - $e * sin($latitude))) ** ($e / 2));
+        } else {
+            $tF = tan(M_PI / 4 - $firstStandardParallel / 2) * (((1 + $e * sin($firstStandardParallel)) / (1 - $e * sin($firstStandardParallel))) ** ($e / 2));
+            $t = tan(M_PI / 4 - $latitude / 2) * (((1 + $e * sin($latitude)) / (1 - $e * sin($latitude))) ** ($e / 2));
+        }
+        $mF = cos($firstStandardParallel) / sqrt(1 - $e2 * sin($firstStandardParallel) ** 2);
+        $kO = $mF * sqrt((1 + $e) ** (1 + $e) * (1 - $e) ** (1 - $e)) / (2 * $tF);
+
+        $rho = 2 * $a * $kO * $t / sqrt((1 + $e) ** (1 + $e) * (1 - $e) ** (1 - $e));
+
+        $theta = $longitude - $longitudeOrigin;
+        $dE = $rho * sin($theta);
+        $dN = $rho * cos($theta);
+
+        $easting = $falseEasting->asMetres()->getValue() + $dE;
+        if ($firstStandardParallel < 0) {
+            $northing = $falseNorthing->asMetres()->getValue() + $dN;
+        } else {
+            $northing = $falseNorthing->asMetres()->getValue() - $dN;
+        }
+
+        return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+    }
+
+    /**
+     * Polar Stereographic (variant C).
+     */
+    public function polarStereographicVariantC(
+        Projected $to,
+        Angle $latitudeOfStandardParallel,
+        Angle $longitudeOfOrigin,
+        Length $eastingAtFalseOrigin,
+        Length $northingAtFalseOrigin
+    ): ProjectedPoint {
+        $latitude = $this->latitude->asRadians()->getValue();
+        $longitude = $this->longitude->asRadians()->getValue();
+        $firstStandardParallel = $latitudeOfStandardParallel->asRadians()->getValue();
+        $longitudeOrigin = $longitudeOfOrigin->asRadians()->getValue();
+        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
+        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+
+        if ($firstStandardParallel < 0) {
+            $tF = tan(M_PI / 4 + $firstStandardParallel / 2) / (((1 + $e * sin($firstStandardParallel)) / (1 - $e * sin($firstStandardParallel))) ** ($e / 2));
+            $t = tan(M_PI / 4 + $latitude / 2) / (((1 + $e * sin($latitude)) / (1 - $e * sin($latitude))) ** ($e / 2));
+        } else {
+            $tF = tan(M_PI / 4 - $firstStandardParallel / 2) * (((1 + $e * sin($firstStandardParallel)) / (1 - $e * sin($firstStandardParallel))) ** ($e / 2));
+            $t = tan(M_PI / 4 - $latitude / 2) * (((1 + $e * sin($latitude)) / (1 - $e * sin($latitude))) ** ($e / 2));
+        }
+        $mF = cos($firstStandardParallel) / sqrt(1 - $e2 * sin($firstStandardParallel) ** 2);
+
+        $rhoF = $a * $mF;
+        $rho = $rhoF * $t / $tF;
+
+        $theta = $longitude - $longitudeOrigin;
+        $dE = $rho * sin($theta);
+        $dN = $rho * cos($theta);
+
+        $easting = $eastingAtFalseOrigin->asMetres()->getValue() + $dE;
+        if ($firstStandardParallel < 0) {
+            $northing = $northingAtFalseOrigin->asMetres()->getValue() - $rhoF + $dN;
+        } else {
+            $northing = $northingAtFalseOrigin->asMetres()->getValue() + $rhoF - $dN;
+        }
+
+        return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+    }
+
+    /**
      * Geographic3D to 2D conversion.
      */
     public function threeDToTwoD(
