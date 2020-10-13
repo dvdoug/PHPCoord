@@ -564,4 +564,14 @@ class GeographicPointTest extends TestCase
         self::assertEqualsWithDelta(303169.52, $to->getEasting()->asMetres()->getValue(), 0.01);
         self::assertEqualsWithDelta(244055.72, $to->getNorthing()->asMetres()->getValue(), 0.01);
     }
+
+    public function testPopularVisualisationPseudoMercator(): void
+    {
+        $from = GeographicPoint::create(new Radian(0.425542460), new Radian(-1.751147016), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
+        $toCRS = Projected::fromSRID(Projected::EPSG_WGS_84_PSEUDO_MERCATOR);
+        $to = $from->popularVisualisationPseudoMercator($toCRS, new Degree(0), new Degree(0), new Metre(0), new Metre(0));
+
+        self::assertEqualsWithDelta(-11169055.58, $to->getEasting()->asMetres()->getValue(), 0.01);
+        self::assertEqualsWithDelta(2800000.00, $to->getNorthing()->asMetres()->getValue(), 0.01);
+    }
 }

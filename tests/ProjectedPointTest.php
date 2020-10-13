@@ -498,4 +498,14 @@ class ProjectedPointTest extends TestCase
         self::assertEqualsWithDelta(-1.162480524, $to->getLatitude()->asRadians()->getValue(), 0.000000001);
         self::assertEqualsWithDelta(2.444707118, $to->getLongitude()->asRadians()->getValue(), 0.000000001);
     }
+
+    public function testPopularVisualisationPseudoMercator(): void
+    {
+        $from = ProjectedPoint::createFromEastingNorthing(new Metre(-11169055.58), new Metre(2800000.00), Projected::fromSRID(Projected::EPSG_WGS_84_PSEUDO_MERCATOR));
+        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84);
+        $to = $from->popularVisualisationPseudoMercator($toCRS, new Degree(0), new Degree(0), new Metre(0), new Metre(0));
+
+        self::assertEqualsWithDelta(0.425542460, $to->getLatitude()->asRadians()->getValue(), 0.000000001);
+        self::assertEqualsWithDelta(-1.751147016, $to->getLongitude()->asRadians()->getValue(), 0.000000001);
+    }
 }
