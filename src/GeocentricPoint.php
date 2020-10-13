@@ -310,4 +310,146 @@ class GeocentricPoint extends Point
             new Unity(0)
         );
     }
+
+    /**
+     * Time-dependent Coordinate Frame rotation (geocen)
+     * Note the analogy with the Time-dependent Position Vector transformation (code 1053) but beware of the
+     * differences!  The Position Vector convention is used by IAG. See method codes 1057 and 1058 for similar methods
+     * operating between other CRS types.
+     */
+    public function timeDependentCoordinateFrameRotation(
+        Geocentric $to,
+        Length $xAxisTranslation,
+        Length $yAxisTranslation,
+        Length $zAxisTranslation,
+        Angle $xAxisRotation,
+        Angle $yAxisRotation,
+        Angle $zAxisRotation,
+        Scale $scaleDifference,
+        Rate $rateOfChangeOfXAxisTranslation,
+        Rate $rateOfChangeOfYAxisTranslation,
+        Rate $rateOfChangeOfZAxisTranslation,
+        Rate $rateOfChangeOfXAxisRotation,
+        Rate $rateOfChangeOfYAxisRotation,
+        Rate $rateOfChangeOfZAxisRotation,
+        Rate $rateOfChangeOfScaleDifference,
+        Time $parameterReferenceEpoch
+    ): self {
+        if ($this->epoch === null) {
+            throw new InvalidCoordinateException('This transformation requires an epoch, none given');
+        }
+
+        // Points use PHP DateTimes for ease of use, but transformations use decimal years...
+        $pointEpoch = Year::fromDateTime($this->epoch);
+        $yearsToAdjust = $pointEpoch->subtract($parameterReferenceEpoch)->getValue();
+        $xAxisTranslation = $xAxisTranslation->add($rateOfChangeOfXAxisTranslation->getChangePerYear()->multiply($yearsToAdjust));
+        $yAxisTranslation = $yAxisTranslation->add($rateOfChangeOfYAxisTranslation->getChangePerYear()->multiply($yearsToAdjust));
+        $zAxisTranslation = $zAxisTranslation->add($rateOfChangeOfZAxisTranslation->getChangePerYear()->multiply($yearsToAdjust));
+        $xAxisRotation = $xAxisRotation->add($rateOfChangeOfXAxisRotation->getChangePerYear()->multiply($yearsToAdjust));
+        $yAxisRotation = $yAxisRotation->add($rateOfChangeOfYAxisRotation->getChangePerYear()->multiply($yearsToAdjust));
+        $zAxisRotation = $zAxisRotation->add($rateOfChangeOfZAxisRotation->getChangePerYear()->multiply($yearsToAdjust));
+        $scaleDifference = $scaleDifference->add($rateOfChangeOfScaleDifference->getChangePerYear()->multiply($yearsToAdjust));
+
+        return $this->coordinateFrameRotation($to, $xAxisTranslation, $yAxisTranslation, $zAxisTranslation, $xAxisRotation, $yAxisRotation, $zAxisRotation, $scaleDifference);
+    }
+
+    /**
+     * Time-dependent Position Vector tfm (geocentric)
+     * Note the analogy with the Time-dependent Coordinate Frame rotation (code 1056) but beware of the differences!
+     * The Position Vector convention is used by IAG. See method codes 1054 and 1055 for similar methods operating
+     * between other CRS types.
+     */
+    public function timeDependentPositionVectorTransformation(
+        Geocentric $to,
+        Length $xAxisTranslation,
+        Length $yAxisTranslation,
+        Length $zAxisTranslation,
+        Angle $xAxisRotation,
+        Angle $yAxisRotation,
+        Angle $zAxisRotation,
+        Scale $scaleDifference,
+        Rate $rateOfChangeOfXAxisTranslation,
+        Rate $rateOfChangeOfYAxisTranslation,
+        Rate $rateOfChangeOfZAxisTranslation,
+        Rate $rateOfChangeOfXAxisRotation,
+        Rate $rateOfChangeOfYAxisRotation,
+        Rate $rateOfChangeOfZAxisRotation,
+        Rate $rateOfChangeOfScaleDifference,
+        Time $parameterReferenceEpoch
+    ): self {
+        if ($this->epoch === null) {
+            throw new InvalidCoordinateException('This transformation requires an epoch, none given');
+        }
+
+        // Points use PHP DateTimes for ease of use, but transformations use decimal years...
+        $pointEpoch = Year::fromDateTime($this->epoch);
+        $yearsToAdjust = $pointEpoch->subtract($parameterReferenceEpoch)->getValue();
+        $xAxisTranslation = $xAxisTranslation->add($rateOfChangeOfXAxisTranslation->getChangePerYear()->multiply($yearsToAdjust));
+        $yAxisTranslation = $yAxisTranslation->add($rateOfChangeOfYAxisTranslation->getChangePerYear()->multiply($yearsToAdjust));
+        $zAxisTranslation = $zAxisTranslation->add($rateOfChangeOfZAxisTranslation->getChangePerYear()->multiply($yearsToAdjust));
+        $xAxisRotation = $xAxisRotation->add($rateOfChangeOfXAxisRotation->getChangePerYear()->multiply($yearsToAdjust));
+        $yAxisRotation = $yAxisRotation->add($rateOfChangeOfYAxisRotation->getChangePerYear()->multiply($yearsToAdjust));
+        $zAxisRotation = $zAxisRotation->add($rateOfChangeOfZAxisRotation->getChangePerYear()->multiply($yearsToAdjust));
+        $scaleDifference = $scaleDifference->add($rateOfChangeOfScaleDifference->getChangePerYear()->multiply($yearsToAdjust));
+
+        return $this->positionVectorTransformation($to, $xAxisTranslation, $yAxisTranslation, $zAxisTranslation, $xAxisRotation, $yAxisRotation, $zAxisRotation, $scaleDifference);
+    }
+
+    /**
+     * Time-specific Coordinate Frame rotation (geocen)
+     * Note the analogy with the Time-specific Position Vector method (code 1065) but beware of the differences!
+     */
+    public function timeSpecificCoordinateFrameRotation(
+        Geocentric $to,
+        Length $xAxisTranslation,
+        Length $yAxisTranslation,
+        Length $zAxisTranslation,
+        Angle $xAxisRotation,
+        Angle $yAxisRotation,
+        Angle $zAxisRotation,
+        Scale $scaleDifference,
+        Time $transformationReferenceEpoch
+    ): self {
+        if ($this->epoch === null) {
+            throw new InvalidCoordinateException(sprintf('This transformation is only valid for epoch %s, none given', $transformationReferenceEpoch->getValue()));
+        }
+
+        // Points use PHP DateTimes for ease of use, but transformations use decimal years...
+        $pointEpoch = Year::fromDateTime($this->epoch);
+
+        if (abs($pointEpoch->getValue() - $transformationReferenceEpoch->getValue()) > 0.001) {
+            throw new InvalidCoordinateException(sprintf('This transformation is only valid for epoch %s, got %s', $transformationReferenceEpoch, $pointEpoch));
+        }
+
+        return $this->coordinateFrameRotation($to, $xAxisTranslation, $yAxisTranslation, $zAxisTranslation, $xAxisRotation, $yAxisRotation, $zAxisRotation, $scaleDifference);
+    }
+
+    /**
+     * Time-specific Position Vector transform (geocen)
+     * Note the analogy with the Time-specifc Coordinate Frame method (code 1066) but beware of the differences!
+     */
+    public function timeSpecificPositionVectorTransformation(
+        Geocentric $to,
+        Length $xAxisTranslation,
+        Length $yAxisTranslation,
+        Length $zAxisTranslation,
+        Angle $xAxisRotation,
+        Angle $yAxisRotation,
+        Angle $zAxisRotation,
+        Scale $scaleDifference,
+        Time $transformationReferenceEpoch
+    ): self {
+        if ($this->epoch === null) {
+            throw new InvalidCoordinateException(sprintf('This transformation is only valid for epoch %s, none given', $transformationReferenceEpoch->getValue()));
+        }
+
+        // Points use PHP DateTimes for ease of use, but transformations use decimal years...
+        $pointEpoch = Year::fromDateTime($this->epoch);
+
+        if (abs($pointEpoch->getValue() - $transformationReferenceEpoch->getValue()) > 0.001) {
+            throw new InvalidCoordinateException(sprintf('This transformation is only valid for epoch %s, got %s', $transformationReferenceEpoch, $pointEpoch));
+        }
+
+        return $this->positionVectorTransformation($to, $xAxisTranslation, $yAxisTranslation, $zAxisTranslation, $xAxisRotation, $yAxisRotation, $zAxisRotation, $scaleDifference);
+    }
 }
