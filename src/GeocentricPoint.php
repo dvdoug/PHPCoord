@@ -11,6 +11,7 @@ namespace PHPCoord;
 use DateTime;
 use DateTimeImmutable;
 use DateTimeInterface;
+use InvalidArgumentException;
 use PHPCoord\CoordinateReferenceSystem\Geocentric;
 use PHPCoord\CoordinateSystem\Axis;
 use PHPCoord\UnitOfMeasure\Length\Length;
@@ -110,7 +111,7 @@ class GeocentricPoint extends Point
     public function calculateDistance(Point $to): Length
     {
         if ($to->getCRS()->getEpsgCode() !== $this->crs->getEpsgCode()) {
-            throw new \InvalidArgumentException('Can only calculate distances between two points in the same CRS');
+            throw new InvalidArgumentException('Can only calculate distances between two points in the same CRS');
         }
 
         /* @var GeocentricPoint $to */

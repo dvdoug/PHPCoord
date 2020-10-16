@@ -8,6 +8,8 @@ declare(strict_types=1);
 
 namespace PHPCoord\Exception;
 
-class InvalidRateException extends \UnexpectedValueException
+use UnexpectedValueException;
+
+class InvalidRateException extends UnexpectedValueException
 {
 }

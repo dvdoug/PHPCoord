@@ -11,6 +11,7 @@ namespace PHPCoord;
 use DateTime;
 use DateTimeImmutable;
 use DateTimeInterface;
+use InvalidArgumentException;
 use PHPCoord\CoordinateReferenceSystem\Geographic;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Geographic3D;
@@ -131,7 +132,7 @@ class GeographicPoint extends Point
     public function calculateDistance(Point $to): Length
     {
         if ($to->getCRS()->getEpsgCode() !== $this->crs->getEpsgCode()) {
-            throw new \InvalidArgumentException('Can only calculate distances between two points in the same CRS');
+            throw new InvalidArgumentException('Can only calculate distances between two points in the same CRS');
         }
 
         //Mean radius definition taken from Wikipedia

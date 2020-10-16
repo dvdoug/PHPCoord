@@ -8,7 +8,9 @@ declare(strict_types=1);
 
 namespace PHPCoord\Exception;
 
-abstract class UnknownEPSGCodeException extends \Exception
+use Exception;
+
+abstract class UnknownEPSGCodeException extends Exception
 {
     public function __construct(int $epsgCode)
     {
