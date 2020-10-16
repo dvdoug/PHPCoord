@@ -15,6 +15,7 @@ use PHPCoord\UnitOfMeasure\Angle\Degree;
 use PHPCoord\UnitOfMeasure\Angle\ExoticAngle;
 use PHPCoord\UnitOfMeasure\Angle\Radian;
 use PHPCoord\UnitOfMeasure\Length\ExoticLength;
+use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPCoord\UnitOfMeasure\Scale\ExoticScale;
 use PHPCoord\UnitOfMeasure\Scale\Unity;
@@ -132,5 +133,19 @@ class UnitOfMeasureFactory implements UnitOfMeasureIds
             case 'scale':
                 return new ExoticScale($measurement, $unitData['unit_of_meas_name'], $unitData['factor_b'], $unitData['factor_c']);
         }
+    }
+
+    public static function convertLength(Length $length, int $targetEpsgUnitCode): Length
+    {
+        $repository = static::$repository ?? new Repository();
+        $allData = $repository->getUnitsOfMeasure();
+
+        if (!isset($allData[$targetEpsgUnitCode])) {
+            throw new UnknownUnitOfMeasureException($targetEpsgUnitCode);
+        }
+
+        $targetUnitData = $allData[$targetEpsgUnitCode];
+
+        return self::makeUnit($length->asMetres()->getValue() * $targetUnitData['factor_c'] / $targetUnitData['factor_b'], $targetEpsgUnitCode);
     }
 }
