@@ -53,4 +53,9 @@ class ExoticScale implements Scale
     {
         return $this->name;
     }
+
+    public function __toString(): string
+    {
+        return (string) $this->getValue();
+    }
 }

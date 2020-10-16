@@ -37,4 +37,9 @@ class Metre implements Length
     {
         return 'metre';
     }
+
+    public function __toString(): string
+    {
+        return (string) $this->getValue();
+    }
 }

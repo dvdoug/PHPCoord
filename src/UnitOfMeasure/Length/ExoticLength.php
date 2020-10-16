@@ -53,4 +53,9 @@ class ExoticLength implements Length
     {
         return $this->name;
     }
+
+    public function __toString(): string
+    {
+        return (string) $this->getValue();
+    }
 }

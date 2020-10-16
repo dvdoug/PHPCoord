@@ -53,4 +53,9 @@ class Rate implements UnitOfMeasure
     {
         return $this->change->getUnitName() . ' per ' . $this->time->getUnitName();
     }
+
+    public function __toString(): string
+    {
+        return (string) $this->getValue();
+    }
 }

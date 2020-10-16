@@ -37,4 +37,9 @@ class Second implements Time
     {
         return 'second';
     }
+
+    public function __toString(): string
+    {
+        return (string) $this->getValue();
+    }
 }

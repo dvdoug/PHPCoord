@@ -40,6 +40,11 @@ class Degree implements Angle
         return 'degree';
     }
 
+    public function __toString(): string
+    {
+        return (string) $this->getValue();
+    }
+
     public static function fromDegreeMinuteSecond(string $angle): self
     {
         $regex = '/^(?P<negative>[−-])?(?P<degrees>\d+)[°º]?((?P<arcminutes>\d+)[′\'])?((?P<arcseconds>\d+\.?\d*)[″"])?$/u';

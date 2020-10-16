@@ -37,4 +37,9 @@ class Unity implements Scale
     {
         return '';
     }
+
+    public function __toString(): string
+    {
+        return (string) $this->getValue();
+    }
 }

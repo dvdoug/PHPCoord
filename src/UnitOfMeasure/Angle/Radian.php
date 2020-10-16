@@ -37,4 +37,9 @@ class Radian implements Angle
     {
         return 'radian';
     }
+
+    public function __toString(): string
+    {
+        return (string) $this->getValue();
+    }
 }

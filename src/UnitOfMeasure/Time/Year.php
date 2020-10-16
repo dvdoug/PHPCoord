@@ -39,4 +39,9 @@ class Year implements Time
     {
         return 'year';
     }
+
+    public function __toString(): string
+    {
+        return (string) $this->getValue();
+    }
 }

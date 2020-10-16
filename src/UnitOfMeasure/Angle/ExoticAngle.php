@@ -53,4 +53,9 @@ class ExoticAngle implements Angle
     {
         return $this->name;
     }
+
+    public function __toString(): string
+    {
+        return (string) $this->getValue();
+    }
 }

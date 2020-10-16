@@ -8,7 +8,7 @@ declare(strict_types=1);
 
 namespace PHPCoord\UnitOfMeasure;
 
-interface UnitOfMeasure
+interface UnitOfMeasure extends UnitOfMeasureIds, \Stringable
 {
     public function getValue(): float;
 

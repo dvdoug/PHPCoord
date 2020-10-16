@@ -37,4 +37,9 @@ class ArcSecond implements Angle
     {
         return 'arcsecond';
     }
+
+    public function __toString(): string
+    {
+        return (string) $this->getValue();
+    }
 }
