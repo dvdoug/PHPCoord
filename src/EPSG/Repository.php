@@ -31,6 +31,9 @@ class Repository
     private static $datumData = [];
 
     /** @var array */
+    private static $datumEnsembleData = [];
+
+    /** @var array */
     private static $coordinateSystemData = [];
 
     /** @var array */
@@ -106,6 +109,33 @@ class Repository
         }
 
         return static::$datumData;
+    }
+
+    public function getDatumEnsembles(): array
+    {
+        if (!static::$datumEnsembleData) {
+            $connection = $this->getConnection();
+            $sql = '
+            SELECT
+                d.datum_ensemble_code,
+                d.datum_code,
+                d.datum_sequence
+            FROM epsg_datumensemblemember d
+            ORDER BY d.datum_sequence
+            ';
+
+            $result = $connection->query($sql);
+
+            while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+                if (isset(static::$datumEnsembleData[$row['datum_ensemble_code']])) {
+                    static::$datumEnsembleData[$row['datum_ensemble_code']][] = $row['datum_code'];
+                } else {
+                    static::$datumEnsembleData[$row['datum_ensemble_code']] = [$row['datum_code']];
+                }
+            }
+        }
+
+        return static::$datumEnsembleData;
     }
 
     public function getUnitsOfMeasure(): array

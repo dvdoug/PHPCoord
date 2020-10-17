@@ -83,6 +83,11 @@ class Datum implements DatumIds
 
         $data = $allData[$epsgCode];
 
+        if ($data['datum_type'] === self::DATUM_TYPE_ENSEMBLE) { // if ensemble, use latest realisation
+            $ensemble = $repository->getDatumEnsembles()[$epsgCode];
+            $data = $allData[end($ensemble)];
+        }
+
         return new static(
             $data['datum_type'],
             $data['ellipsoid_code'] ? Ellipsoid::fromEPSGCode($data['ellipsoid_code']) : null,
