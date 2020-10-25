@@ -143,6 +143,10 @@ class UnitOfMeasureFactory
 
     public static function convertAngle(Angle $angle, int $targetEpsgUnitCode): Angle
     {
+        if ($targetEpsgUnitCode === UnitOfMeasure::EPSG_ANGLE_DEGREE_SUPPLIER_TO_DEFINE_REPRESENTATION) {
+            $targetEpsgUnitCode = UnitOfMeasure::EPSG_ANGLE_DEGREE;
+        }
+
         $repository = static::$repository ?? new Repository();
         $allData = $repository->getUnitsOfMeasure();
 
