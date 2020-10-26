@@ -14,8 +14,10 @@ use DateTimeInterface;
 use InvalidArgumentException;
 use PHPCoord\CoordinateReferenceSystem\Geocentric;
 use PHPCoord\CoordinateSystem\Axis;
+use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Length\Metre;
+use PHPCoord\UnitOfMeasure\Scale\Scale;
 use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
 
 /**
@@ -127,5 +129,145 @@ class GeocentricPoint extends Point
     public function __toString(): string
     {
         return "({$this->x}, {$this->y}, {$this->z})";
+    }
+
+    /**
+     * Coordinate Frame rotation (geocentric domain)
+     * This method is a specific case of the Molodensky-Badekas (CF) method (code 1034) in which the evaluation point
+     * is at the geocentre with coordinate values of zero. Note the analogy with the Position Vector method (code 1033)
+     * but beware of the differences!
+     */
+    public function coordinateFrameRotation(
+        Geocentric $to,
+        Length $xAxisTranslation,
+        Length $yAxisTranslation,
+        Length $zAxisTranslation,
+        Angle $xAxisRotation,
+        Angle $yAxisRotation,
+        Angle $zAxisRotation,
+        Scale $scaleDifference
+    ): self {
+        return $this->coordinateFrameMolodenskyBadekas(
+            $to,
+            $xAxisTranslation,
+            $yAxisTranslation,
+            $zAxisTranslation,
+            $xAxisRotation,
+            $yAxisRotation,
+            $zAxisRotation,
+            $scaleDifference,
+            new Metre(0),
+            new Metre(0),
+            new Metre(0)
+        );
+    }
+
+    /**
+     * Molodensky-Badekas (CF geocentric domain)
+     * See method codes 1039 and 9636 for this operation in other coordinate domains and method code 1061 for opposite
+     * rotation convention in geocentric domain.
+     */
+    public function coordinateFrameMolodenskyBadekas(
+        Geocentric $to,
+        Length $xAxisTranslation,
+        Length $yAxisTranslation,
+        Length $zAxisTranslation,
+        Angle $xAxisRotation,
+        Angle $yAxisRotation,
+        Angle $zAxisRotation,
+        Scale $scaleDifference,
+        Length $ordinate1OfEvaluationPoint,
+        Length $ordinate2OfEvaluationPoint,
+        Length $ordinate3OfEvaluationPoint
+    ): self {
+        $xs = $this->x->asMetres()->getValue();
+        $ys = $this->y->asMetres()->getValue();
+        $zs = $this->z->asMetres()->getValue();
+        $tx = $xAxisTranslation->asMetres()->getValue();
+        $ty = $yAxisTranslation->asMetres()->getValue();
+        $tz = $zAxisTranslation->asMetres()->getValue();
+        $rx = $xAxisRotation->asRadians()->getValue();
+        $ry = $yAxisRotation->asRadians()->getValue();
+        $rz = $zAxisRotation->asRadians()->getValue();
+        $M = 1 + $scaleDifference->asUnity()->getValue();
+        $xp = $ordinate1OfEvaluationPoint->asMetres()->getValue();
+        $yp = $ordinate2OfEvaluationPoint->asMetres()->getValue();
+        $zp = $ordinate3OfEvaluationPoint->asMetres()->getValue();
+
+        $xt = $M * ((($xs - $xp) * 1) + (($ys - $yp) * $rz) + (($zs - $zp) * -$ry)) + $tx + $xp;
+        $yt = $M * ((($xs - $xp) * -$rz) + (($ys - $yp) * 1) + (($zs - $zp) * $rx)) + $ty + $yp;
+        $zt = $M * ((($xs - $xp) * $ry) + (($ys - $yp) * -$rx) + (($zs - $zp) * 1)) + $tz + $zp;
+
+        return static::create(new Metre($xt), new Metre($yt), new Metre($zt), $to, $this->epoch);
+    }
+
+    /**
+     * Position Vector transformation (geocentric domain)
+     * This method is a specific case of the Molodensky-Badekas (PV) method (code 1061) in which the evaluation point
+     * is the geocentre with coordinate values of zero. Note the analogy with the Coordinate Frame method (code 1032)
+     * but beware of the differences!
+     */
+    public function positionVectorTransformation(
+        Geocentric $to,
+        Length $xAxisTranslation,
+        Length $yAxisTranslation,
+        Length $zAxisTranslation,
+        Angle $xAxisRotation,
+        Angle $yAxisRotation,
+        Angle $zAxisRotation,
+        Scale $scaleDifference
+    ): self {
+        return $this->positionVectorMolodenskyBadekas(
+            $to,
+            $xAxisTranslation,
+            $yAxisTranslation,
+            $zAxisTranslation,
+            $xAxisRotation,
+            $yAxisRotation,
+            $zAxisRotation,
+            $scaleDifference,
+            new Metre(0),
+            new Metre(0),
+            new Metre(0)
+        );
+    }
+
+    /**
+     * Molodensky-Badekas (PV geocentric domain)
+     * See method codes 1062 and 1063 for this operation in other coordinate domains and method code 1034 for opposite
+     * rotation convention in geocentric domain.
+     */
+    public function positionVectorMolodenskyBadekas(
+        Geocentric $to,
+        Length $xAxisTranslation,
+        Length $yAxisTranslation,
+        Length $zAxisTranslation,
+        Angle $xAxisRotation,
+        Angle $yAxisRotation,
+        Angle $zAxisRotation,
+        Scale $scaleDifference,
+        Length $ordinate1OfEvaluationPoint,
+        Length $ordinate2OfEvaluationPoint,
+        Length $ordinate3OfEvaluationPoint
+    ): self {
+        $xs = $this->x->asMetres()->getValue();
+        $ys = $this->y->asMetres()->getValue();
+        $zs = $this->z->asMetres()->getValue();
+        $tx = $xAxisTranslation->asMetres()->getValue();
+        $ty = $yAxisTranslation->asMetres()->getValue();
+        $tz = $zAxisTranslation->asMetres()->getValue();
+        $rx = $xAxisRotation->asRadians()->getValue();
+        $ry = $yAxisRotation->asRadians()->getValue();
+        $rz = $zAxisRotation->asRadians()->getValue();
+        $M = 1 + $scaleDifference->asUnity()->getValue();
+        $xp = $ordinate1OfEvaluationPoint->asMetres()->getValue();
+        $yp = $ordinate2OfEvaluationPoint->asMetres()->getValue();
+        $zp = $ordinate3OfEvaluationPoint->asMetres()->getValue();
+
+        $xt = $M * ((($xs - $xp) * 1) + (($ys - $yp) * -$rz) + (($zs - $zp) * $ry)) + $tx + $xp;
+        $yt = $M * ((($xs - $xp) * $rz) + (($ys - $yp) * 1) + (($zs - $zp) * -$rx)) + $ty + $yp;
+        $zt = $M * ((($xs - $xp) * -$ry) + (($ys - $yp) * $rx) + (($zs - $zp) * 1)) + $tz + $zp;
+
+        return static::create(new Metre($xt), new Metre($yt), new Metre($zt), $to, $this->epoch);
     }
 }

@@ -14,6 +14,7 @@ use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Geographic3D;
 use PHPCoord\Exception\InvalidCoordinateReferenceSystemException;
+use PHPCoord\UnitOfMeasure\Angle\ArcSecond;
 use PHPCoord\UnitOfMeasure\Angle\Degree;
 use PHPCoord\UnitOfMeasure\Angle\Radian;
 use PHPCoord\UnitOfMeasure\Length\Metre;
@@ -23,7 +24,7 @@ use PHPUnit\Framework\TestCase;
 
 class GeographicPointTest extends TestCase
 {
-    public function testGeographic2D(): void
+    public function test2D(): void
     {
         $object = GeographicPoint::create(new Degree(0.123), new Degree(0.456), null, CoordinateReferenceSystem::fromEPSGCode(Geographic2D::EPSG_WGS_84));
         self::assertEquals(0.123, $object->getLatitude()->getValue());
@@ -56,20 +57,20 @@ class GeographicPointTest extends TestCase
         self::assertEquals('(0.123, 0.456)', $object->__toString());
     }
 
-    public function testGeographic2DWithRadianAsUnits(): void
+    public function test2DWithRadianAsUnits(): void
     {
         $object = GeographicPoint::create(new Radian(0.123), new Radian(0.123), null, CoordinateReferenceSystem::fromEPSGCode(Geographic2D::EPSG_WGS_84));
         self::assertEquals(7.047380880109133, $object->getLatitude()->getValue());
         self::assertEquals(7.047380880109133, $object->getLongitude()->getValue());
     }
 
-    public function testGeographic2DWithHeight(): void
+    public function test2DWithHeight(): void
     {
         $this->expectException(InvalidCoordinateReferenceSystemException::class);
         $object = GeographicPoint::create(new Degree(0.123), new Degree(0.456), new Metre(789), CoordinateReferenceSystem::fromEPSGCode(Geographic2D::EPSG_WGS_84));
     }
 
-    public function testGeographic3D(): void
+    public function test3D(): void
     {
         $object = GeographicPoint::create(new Degree(0.123), new Degree(0.456), new Metre(789), CoordinateReferenceSystem::fromEPSGCode(Geographic3D::EPSG_WGS_84));
         self::assertEquals(0.123, $object->getLatitude()->getValue());
@@ -79,7 +80,7 @@ class GeographicPointTest extends TestCase
         self::assertEquals('(0.123, 0.456, 789)', $object->__toString());
     }
 
-    public function testGeographic3DWithRadianAndFeetAsUnits(): void
+    public function test3DWithRadianAndFeetAsUnits(): void
     {
         $object = GeographicPoint::create(new Radian(0.123), new Radian(0.123), UnitOfMeasureFactory::makeUnit(123, UnitOfMeasure::EPSG_LENGTH_FOOT), CoordinateReferenceSystem::fromEPSGCode(Geographic3D::EPSG_WGS_84));
         self::assertEquals(7.047380880109133, $object->getLatitude()->getValue());
@@ -87,7 +88,7 @@ class GeographicPointTest extends TestCase
         self::assertEquals(37.4904, $object->getHeight()->getValue());
     }
 
-    public function testGeographic3DWithoutHeight(): void
+    public function test3DWithoutHeight(): void
     {
         $this->expectException(InvalidCoordinateReferenceSystemException::class);
         $object = GeographicPoint::create(new Degree(0.123), new Degree(0.456), null, CoordinateReferenceSystem::fromEPSGCode(Geographic3D::EPSG_WGS_84));
@@ -98,5 +99,93 @@ class GeographicPointTest extends TestCase
         $from = GeographicPoint::create(new Degree(51.54105), new Degree(-0.12319), null, CoordinateReferenceSystem::fromEPSGCode(Geographic2D::EPSG_WGS_84));
         $to = GeographicPoint::create(new Degree(51.507977), new Degree(-0.124588), null, CoordinateReferenceSystem::fromEPSGCode(Geographic2D::EPSG_WGS_84));
         self::assertEqualsWithDelta(3679, $from->calculateDistance($to)->getValue(), 1);
+    }
+
+    public function test2DCoordinateFrameRotation(): void
+    {
+        $from = GeographicPoint::create(new Degree(55.0), new Degree(44.0), null, CoordinateReferenceSystem::fromEPSGCode(Geographic2D::EPSG_WGS_72));
+        $toCRS = CoordinateReferenceSystem::fromEPSGCode(Geographic2D::EPSG_WGS_84);
+        $to = $from->coordinateFrameRotation($toCRS, new Metre(0), new Metre(0), new Metre(4.5), new ArcSecond(0), new ArcSecond(0), new ArcSecond(-0.554), UnitOfMeasureFactory::makeUnit(0.219, UnitOfMeasure::EPSG_SCALE_PARTS_PER_MILLION));
+
+        self::assertEqualsWithDelta(55.000025, $to->getLatitude()->getValue(), 0.000001);
+        self::assertEqualsWithDelta(44.000154, $to->getLongitude()->getValue(), 0.000001);
+        self::assertNull($to->getHeight());
+    }
+
+    public function test3DCoordinateFrameRotation(): void
+    {
+        $from = GeographicPoint::create(new Degree(55.0), new Degree(44.0), new Metre(0), CoordinateReferenceSystem::fromEPSGCode(Geographic3D::EPSG_WGS_72));
+        $toCRS = CoordinateReferenceSystem::fromEPSGCode(Geographic3D::EPSG_WGS_84);
+        $to = $from->coordinateFrameRotation($toCRS, new Metre(0), new Metre(0), new Metre(4.5), new ArcSecond(0), new ArcSecond(0), new ArcSecond(-0.554), UnitOfMeasureFactory::makeUnit(0.219, UnitOfMeasure::EPSG_SCALE_PARTS_PER_MILLION));
+
+        self::assertEqualsWithDelta(55.000025, $to->getLatitude()->getValue(), 0.000001);
+        self::assertEqualsWithDelta(44.000154, $to->getLongitude()->getValue(), 0.000001);
+        self::assertEqualsWithDelta(3.22, $to->getHeight()->getValue(), 0.01);
+    }
+
+    public function test2DPositionVectorTransformation(): void
+    {
+        $from = GeographicPoint::create(new Degree(55.0), new Degree(44.0), null, CoordinateReferenceSystem::fromEPSGCode(Geographic2D::EPSG_WGS_72));
+        $toCRS = CoordinateReferenceSystem::fromEPSGCode(Geographic2D::EPSG_WGS_84);
+        $to = $from->positionVectorTransformation($toCRS, new Metre(0), new Metre(0), new Metre(4.5), new ArcSecond(0), new ArcSecond(0), new ArcSecond(0.554), UnitOfMeasureFactory::makeUnit(0.219, UnitOfMeasure::EPSG_SCALE_PARTS_PER_MILLION));
+
+        self::assertEqualsWithDelta(55.000025, $to->getLatitude()->getValue(), 0.000001);
+        self::assertEqualsWithDelta(44.000154, $to->getLongitude()->getValue(), 0.000001);
+        self::assertNull($to->getHeight());
+    }
+
+    public function test3DPositionVectorTransformation(): void
+    {
+        $from = GeographicPoint::create(new Degree(55.0), new Degree(44.0), new Metre(0), CoordinateReferenceSystem::fromEPSGCode(Geographic3D::EPSG_WGS_72));
+        $toCRS = CoordinateReferenceSystem::fromEPSGCode(Geographic3D::EPSG_WGS_84);
+        $to = $from->positionVectorTransformation($toCRS, new Metre(0), new Metre(0), new Metre(4.5), new ArcSecond(0), new ArcSecond(0), new ArcSecond(0.554), UnitOfMeasureFactory::makeUnit(0.219, UnitOfMeasure::EPSG_SCALE_PARTS_PER_MILLION));
+
+        self::assertEqualsWithDelta(55.000025, $to->getLatitude()->getValue(), 0.000001);
+        self::assertEqualsWithDelta(44.000154, $to->getLongitude()->getValue(), 0.000001);
+        self::assertEqualsWithDelta(3.22, $to->getHeight()->getValue(), 0.01);
+    }
+
+    public function test2DCoordinateFrameMolodenskyBadekas(): void
+    {
+        $from = GeographicPoint::create(new Degree(9.58344056), new Degree(-66.08002528), null, CoordinateReferenceSystem::fromEPSGCode(Geographic2D::EPSG_LA_CANOA));
+        $toCRS = CoordinateReferenceSystem::fromEPSGCode(Geographic2D::EPSG_WGS_84);
+        $to = $from->coordinateFrameMolodenskyBadekas($toCRS, new Metre(-270.933), new Metre(115.599), new Metre(-360.226), new ArcSecond(-5.266), new ArcSecond(-1.238), new ArcSecond(2.381), UnitOfMeasureFactory::makeUnit(-5.109, UnitOfMeasure::EPSG_SCALE_PARTS_PER_MILLION), new Metre(2464351.59), new Metre(-5783466.61), new Metre(974809.81));
+
+        self::assertEqualsWithDelta(9.580278, $to->getLatitude()->getValue(), 0.000001);
+        self::assertEqualsWithDelta(-66.081862, $to->getLongitude()->getValue(), 0.000001);
+        self::assertNull($to->getHeight());
+    }
+
+    public function test3DCoordinateFrameMolodenskyBadekas(): void
+    {
+        $from = GeographicPoint::create(new Degree(9.58344056), new Degree(-66.08002528), new Metre(201.465), CoordinateReferenceSystem::fromEPSGCode(Geographic3D::EPSG_LGD2006));
+        $toCRS = CoordinateReferenceSystem::fromEPSGCode(Geographic3D::EPSG_REGVEN);
+        $to = $from->coordinateFrameMolodenskyBadekas($toCRS, new Metre(-270.933), new Metre(115.599), new Metre(-360.226), new ArcSecond(-5.266), new ArcSecond(-1.238), new ArcSecond(2.381), UnitOfMeasureFactory::makeUnit(-5.109, UnitOfMeasure::EPSG_SCALE_PARTS_PER_MILLION), new Metre(2464351.59), new Metre(-5783466.61), new Metre(974809.81));
+
+        self::assertEqualsWithDelta(9.5802779305981, $to->getLatitude()->getValue(), 0.000001);
+        self::assertEqualsWithDelta(-66.081862, $to->getLongitude()->getValue(), 0.000001);
+        self::assertEqualsWithDelta(180.51, $to->getHeight()->getValue(), 0.01);
+    }
+
+    public function test2DPositionVectorMolodenskyBadekas(): void
+    {
+        $from = GeographicPoint::create(new Degree(9.58344056), new Degree(-66.08002528), null, CoordinateReferenceSystem::fromEPSGCode(Geographic2D::EPSG_LA_CANOA));
+        $toCRS = CoordinateReferenceSystem::fromEPSGCode(Geographic2D::EPSG_WGS_84);
+        $to = $from->positionVectorMolodenskyBadekas($toCRS, new Metre(-270.933), new Metre(115.599), new Metre(-360.226), new ArcSecond(5.266), new ArcSecond(1.238), new ArcSecond(-2.381), UnitOfMeasureFactory::makeUnit(-5.109, UnitOfMeasure::EPSG_SCALE_PARTS_PER_MILLION), new Metre(2464351.59), new Metre(-5783466.61), new Metre(974809.81));
+
+        self::assertEqualsWithDelta(9.580278, $to->getLatitude()->getValue(), 0.000001);
+        self::assertEqualsWithDelta(-66.081862, $to->getLongitude()->getValue(), 0.000001);
+        self::assertNull($to->getHeight());
+    }
+
+    public function test3DPositionVectorMolodenskyBadekas(): void
+    {
+        $from = GeographicPoint::create(new Degree(9.58344056), new Degree(-66.08002528), new Metre(201.465), CoordinateReferenceSystem::fromEPSGCode(Geographic3D::EPSG_LGD2006));
+        $toCRS = CoordinateReferenceSystem::fromEPSGCode(Geographic3D::EPSG_REGVEN);
+        $to = $from->positionVectorMolodenskyBadekas($toCRS, new Metre(-270.933), new Metre(115.599), new Metre(-360.226), new ArcSecond(5.266), new ArcSecond(1.238), new ArcSecond(-2.381), UnitOfMeasureFactory::makeUnit(-5.109, UnitOfMeasure::EPSG_SCALE_PARTS_PER_MILLION), new Metre(2464351.59), new Metre(-5783466.61), new Metre(974809.81));
+
+        self::assertEqualsWithDelta(9.5802779305981, $to->getLatitude()->getValue(), 0.000001);
+        self::assertEqualsWithDelta(-66.081862, $to->getLongitude()->getValue(), 0.000001);
+        self::assertEqualsWithDelta(180.51, $to->getHeight()->getValue(), 0.01);
     }
 }

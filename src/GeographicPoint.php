@@ -12,6 +12,8 @@ use DateTime;
 use DateTimeImmutable;
 use DateTimeInterface;
 use InvalidArgumentException;
+use PHPCoord\CoordinateOperation\GeocentricValue;
+use PHPCoord\CoordinateOperation\GeographicValue;
 use PHPCoord\CoordinateReferenceSystem\Geographic;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Geographic3D;
@@ -22,6 +24,7 @@ use PHPCoord\Exception\UnknownAxisException;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Length\Metre;
+use PHPCoord\UnitOfMeasure\Scale\Scale;
 use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
 use TypeError;
 
@@ -159,5 +162,155 @@ class GeographicPoint extends Point
         }
 
         return '(' . implode(', ', $values) . ')';
+    }
+
+    /**
+     * Coordinate Frame rotation (geog2D/geog3D domain)
+     * Note the analogy with the Position Vector tfm (codes 9606/1037) but beware of the differences!  The Position Vector
+     * convention is used by IAG and recommended by ISO 19111. See methods 1032/1038/9607 for similar tfms operating
+     * between other CRS types.
+     */
+    public function coordinateFrameRotation(
+        Geographic $to,
+        Length $xAxisTranslation,
+        Length $yAxisTranslation,
+        Length $zAxisTranslation,
+        Angle $xAxisRotation,
+        Angle $yAxisRotation,
+        Angle $zAxisRotation,
+        Scale $scaleDifference
+    ): self {
+        return $this->coordinateFrameMolodenskyBadekas(
+            $to,
+            $xAxisTranslation,
+            $yAxisTranslation,
+            $zAxisTranslation,
+            $xAxisRotation,
+            $yAxisRotation,
+            $zAxisRotation,
+            $scaleDifference,
+            new Metre(0),
+            new Metre(0),
+            new Metre(0)
+        );
+    }
+
+    /**
+     * Molodensky-Badekas (CF geog2D/geog3D domain)
+     * See method codes 1034 and 1039/9636 for this operation in other coordinate domains and method code 1062/1063 for the
+     * opposite rotation convention in geographic 2D domain.
+     */
+    public function coordinateFrameMolodenskyBadekas(
+        Geographic $to,
+        Length $xAxisTranslation,
+        Length $yAxisTranslation,
+        Length $zAxisTranslation,
+        Angle $xAxisRotation,
+        Angle $yAxisRotation,
+        Angle $zAxisRotation,
+        Scale $scaleDifference,
+        Length $ordinate1OfEvaluationPoint,
+        Length $ordinate2OfEvaluationPoint,
+        Length $ordinate3OfEvaluationPoint
+    ): self {
+        $geographicValue = new GeographicValue($this->latitude, $this->longitude, $this->height, $this->crs->getDatum());
+        $asGeocentric = $geographicValue->asGeocentricValue();
+
+        $xs = $asGeocentric->getX()->asMetres()->getValue();
+        $ys = $asGeocentric->getY()->asMetres()->getValue();
+        $zs = $asGeocentric->getZ()->asMetres()->getValue();
+        $tx = $xAxisTranslation->asMetres()->getValue();
+        $ty = $yAxisTranslation->asMetres()->getValue();
+        $tz = $zAxisTranslation->asMetres()->getValue();
+        $rx = $xAxisRotation->asRadians()->getValue();
+        $ry = $yAxisRotation->asRadians()->getValue();
+        $rz = $zAxisRotation->asRadians()->getValue();
+        $M = 1 + $scaleDifference->asUnity()->getValue();
+        $xp = $ordinate1OfEvaluationPoint->asMetres()->getValue();
+        $yp = $ordinate2OfEvaluationPoint->asMetres()->getValue();
+        $zp = $ordinate3OfEvaluationPoint->asMetres()->getValue();
+
+        $xt = $M * ((($xs - $xp) * 1) + (($ys - $yp) * $rz) + (($zs - $zp) * -$ry)) + $tx + $xp;
+        $yt = $M * ((($xs - $xp) * -$rz) + (($ys - $yp) * 1) + (($zs - $zp) * $rx)) + $ty + $yp;
+        $zt = $M * ((($xs - $xp) * $ry) + (($ys - $yp) * -$rx) + (($zs - $zp) * 1)) + $tz + $zp;
+        $newGeocentric = new GeocentricValue(new Metre($xt), new Metre($yt), new Metre($zt), $to->getDatum());
+        $newGeographic = $newGeocentric->asGeographicValue();
+
+        return static::create($newGeographic->getLatitude(), $newGeographic->getLongitude(), $to instanceof Geographic3D ? $newGeographic->getHeight() : null, $to, $this->epoch);
+    }
+
+    /**
+     * Position Vector transformation (geog2D/geog3D domain)
+     * Note the analogy with the Coordinate Frame rotation (code 9607/1038) but beware of the differences!  The Position
+     * Vector convention is used by IAG and recommended by ISO 19111. See methods 1033/1037/9606 for similar tfms
+     * operating between other CRS types.
+     */
+    public function positionVectorTransformation(
+        Geographic $to,
+        Length $xAxisTranslation,
+        Length $yAxisTranslation,
+        Length $zAxisTranslation,
+        Angle $xAxisRotation,
+        Angle $yAxisRotation,
+        Angle $zAxisRotation,
+        Scale $scaleDifference
+    ): self {
+        return $this->positionVectorMolodenskyBadekas(
+            $to,
+            $xAxisTranslation,
+            $yAxisTranslation,
+            $zAxisTranslation,
+            $xAxisRotation,
+            $yAxisRotation,
+            $zAxisRotation,
+            $scaleDifference,
+            new Metre(0),
+            new Metre(0),
+            new Metre(0)
+        );
+    }
+
+    /**
+     * Molodensky-Badekas (PV geog2D/geog3D domain)
+     * See method codes 1061 and 1062/1063 for this operation in other coordinate domains and method code 1039/9636 for opposite
+     * rotation in geographic 2D/3D domain.
+     */
+    public function positionVectorMolodenskyBadekas(
+        Geographic $to,
+        Length $xAxisTranslation,
+        Length $yAxisTranslation,
+        Length $zAxisTranslation,
+        Angle $xAxisRotation,
+        Angle $yAxisRotation,
+        Angle $zAxisRotation,
+        Scale $scaleDifference,
+        Length $ordinate1OfEvaluationPoint,
+        Length $ordinate2OfEvaluationPoint,
+        Length $ordinate3OfEvaluationPoint
+    ): self {
+        $geographicValue = new GeographicValue($this->latitude, $this->longitude, $this->height, $this->crs->getDatum());
+        $asGeocentric = $geographicValue->asGeocentricValue();
+
+        $xs = $asGeocentric->getX()->asMetres()->getValue();
+        $ys = $asGeocentric->getY()->asMetres()->getValue();
+        $zs = $asGeocentric->getZ()->asMetres()->getValue();
+        $tx = $xAxisTranslation->asMetres()->getValue();
+        $ty = $yAxisTranslation->asMetres()->getValue();
+        $tz = $zAxisTranslation->asMetres()->getValue();
+        $rx = $xAxisRotation->asRadians()->getValue();
+        $ry = $yAxisRotation->asRadians()->getValue();
+        $rz = $zAxisRotation->asRadians()->getValue();
+        $M = 1 + $scaleDifference->asUnity()->getValue();
+        $xp = $ordinate1OfEvaluationPoint->asMetres()->getValue();
+        $yp = $ordinate2OfEvaluationPoint->asMetres()->getValue();
+        $zp = $ordinate3OfEvaluationPoint->asMetres()->getValue();
+
+        $xt = $M * ((($xs - $xp) * 1) + (($ys - $yp) * -$rz) + (($zs - $zp) * $ry)) + $tx + $xp;
+        $yt = $M * ((($xs - $xp) * $rz) + (($ys - $yp) * 1) + (($zs - $zp) * -$rx)) + $ty + $yp;
+        $zt = $M * ((($xs - $xp) * -$ry) + (($ys - $yp) * $rx) + (($zs - $zp) * 1)) + $tz + $zp;
+        $newGeocentric = new GeocentricValue(new Metre($xt), new Metre($yt), new Metre($zt), $to->getDatum());
+        $newGeographic = $newGeocentric->asGeographicValue();
+
+        return static::create($newGeographic->getLatitude(), $newGeographic->getLongitude(), $to instanceof Geographic3D ? $newGeographic->getHeight() : null, $to, $this->epoch);
     }
 }
