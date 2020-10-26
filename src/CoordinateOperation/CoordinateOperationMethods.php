@@ -437,6 +437,7 @@ class CoordinateOperationMethods
             self::EPSG_ALBERS_EQUAL_AREA => 'albersEqualArea',
             self::EPSG_AMERICAN_POLYCONIC => 'americanPolyconic',
             self::EPSG_BONNE_SOUTH_ORIENTATED => 'bonneSouthOrientated',
+            self::EPSG_CARTESIAN_GRID_OFFSETS => 'offsets',
         ];
     }
 }

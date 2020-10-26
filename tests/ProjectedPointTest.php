@@ -199,4 +199,12 @@ class ProjectedPointTest extends TestCase
         self::assertEqualsWithDelta(-85, $to->getLongitude()->getValue(), 0.0001);
         self::assertNull($to->getHeight());
     }
+
+    public function testOffsets(): void
+    {
+        $from = ProjectedPoint::create(new Metre(100), new Metre(200), null, null, CoordinateReferenceSystem::fromEPSGCode(Projected::EPSG_JAMAICA_1875_JAMAICA_OLD_GRID));
+        $to = $from->offsets(CoordinateReferenceSystem::fromEPSGCode(Projected::EPSG_JAD69_JAMAICA_NATIONAL_GRID), new Metre(40), new Metre(60));
+        self::assertEquals(140, $to->getEasting()->asMetres()->getValue());
+        self::assertEquals(260, $to->getNorthing()->asMetres()->getValue());
+    }
 }

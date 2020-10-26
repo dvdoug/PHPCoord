@@ -416,4 +416,20 @@ class ProjectedPoint extends Point
 
         return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
     }
+
+    /**
+     * Cartesian Grid Offsets
+     * This transformation allows calculation of coordinates in the target system by adding the parameter value to the
+     * coordinate values of the point in the source system.
+     */
+    public function offsets(
+        Projected $to,
+        Length $eastingOffset,
+        Length $northingOffset
+    ): self {
+        $easting = $this->easting->asMetres()->getValue() + $eastingOffset->asMetres()->getValue();
+        $northing = $this->northing->asMetres()->getValue() + $northingOffset->asMetres()->getValue();
+
+        return static::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+    }
 }
