@@ -326,4 +326,94 @@ class ProjectedPoint extends Point
 
         return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
     }
+
+    /**
+     * Bonne.
+     */
+    public function bonne(
+        Geographic $to,
+        Angle $latitudeOfNaturalOrigin,
+        Angle $longitudeOfNaturalOrigin,
+        Length $falseEasting,
+        Length $falseNorthing
+    ): GeographicPoint {
+        $easting = $this->easting->asMetres()->getValue() - $falseEasting->asMetres()->getValue();
+        $northing = $this->northing->asMetres()->getValue() - $falseNorthing->asMetres()->getValue();
+        $latitudeOrigin = $latitudeOfNaturalOrigin->asRadians()->getValue();
+        $longitudeOrigin = $longitudeOfNaturalOrigin->asRadians()->getValue();
+        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
+        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+        $e4 = $e ** 4;
+        $e6 = $e ** 6;
+
+        $mO = cos($latitudeOrigin) / sqrt(1 - $e2 * sin($latitudeOrigin) ** 2);
+        $MO = $a * ((1 - $e2 / 4 - 3 * $e4 / 64 - 5 * $e6 / 256) * $latitudeOrigin - (3 * $e2 / 8 + 3 * $e4 / 32 + 45 * $e6 / 1024) * sin(2 * $latitudeOrigin) + (15 * $e4 / 256 + 45 * $e6 / 1024) * sin(4 * $latitudeOrigin) - (35 * $e6 / 3072) * sin(6 * $latitudeOrigin));
+        $rho = sqrt($easting ** 2 + ($a * $mO / sin($latitudeOrigin) - $northing) ** 2);
+        if ($latitudeOrigin < 0) {
+            $rho = -$rho;
+        }
+
+        $M = $a * $mO / sin($latitudeOrigin) + $MO - $rho;
+        $mu = $M / ($a * (1 - $e2 / 4 - 3 * $e4 / 64 - 5 * $e6 / 256));
+        $e1 = (1 - sqrt(1 - $e2)) / (1 + sqrt(1 - $e2));
+
+        $latitude = $mu + ((3 * $e1 / 2) - (27 * $e1 ** 3 / 32)) * sin(2 * $mu) + ((21 * $e1 ** 2 / 16) - (55 * $e1 ** 4 / 32)) * sin(4 * $mu) + ((151 * $e1 ** 3 / 96)) * sin(6 * $mu) + ((1097 * $e1 ** 4 / 512)) * sin(8 * $mu);
+        $m = cos($latitude) / sqrt(1 - $e2 * sin($latitude) ** 2);
+
+        if ($m === 0.0) {
+            $longitude = $longitudeOrigin; // pole
+        } elseif ($latitudeOrigin >= 0) {
+            $longitude = $longitudeOrigin + $rho * atan2($easting, $a * $mO / sin($latitudeOrigin) - $northing) / $a / $m;
+        } else {
+            $longitude = $longitudeOrigin + $rho * atan2(-$easting, -($a * $mO / sin($latitudeOrigin) - $northing)) / $a / $m;
+        }
+
+        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+    }
+
+    /**
+     * Bonne South Orientated.
+     */
+    public function bonneSouthOrientated(
+        Geographic $to,
+        Angle $latitudeOfNaturalOrigin,
+        Angle $longitudeOfNaturalOrigin,
+        Length $falseEasting,
+        Length $falseNorthing
+    ): GeographicPoint {
+        $westing = $falseEasting->asMetres()->getValue() - $this->westing->asMetres()->getValue();
+        $southing = $falseNorthing->asMetres()->getValue() - $this->southing->asMetres()->getValue();
+        $latitudeOrigin = $latitudeOfNaturalOrigin->asRadians()->getValue();
+        $longitudeOrigin = $longitudeOfNaturalOrigin->asRadians()->getValue();
+        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
+        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+        $e4 = $e ** 4;
+        $e6 = $e ** 6;
+
+        $mO = cos($latitudeOrigin) / sqrt(1 - $e2 * sin($latitudeOrigin) ** 2);
+        $MO = $a * ((1 - $e2 / 4 - 3 * $e4 / 64 - 5 * $e6 / 256) * $latitudeOrigin - (3 * $e2 / 8 + 3 * $e4 / 32 + 45 * $e6 / 1024) * sin(2 * $latitudeOrigin) + (15 * $e4 / 256 + 45 * $e6 / 1024) * sin(4 * $latitudeOrigin) - (35 * $e6 / 3072) * sin(6 * $latitudeOrigin));
+        $rho = sqrt($westing ** 2 + ($a * $mO / sin($latitudeOrigin) - $southing) ** 2);
+        if ($latitudeOrigin < 0) {
+            $rho = -$rho;
+        }
+
+        $M = $a * $mO / sin($latitudeOrigin) + $MO - $rho;
+        $mu = $M / ($a * (1 - $e2 / 4 - 3 * $e4 / 64 - 5 * $e6 / 256));
+        $e1 = (1 - sqrt(1 - $e2)) / (1 + sqrt(1 - $e2));
+
+        $latitude = $mu + ((3 * $e1 / 2) - (27 * $e1 ** 3 / 32)) * sin(2 * $mu) + ((21 * $e1 ** 2 / 16) - (55 * $e1 ** 4 / 32)) * sin(4 * $mu) + ((151 * $e1 ** 3 / 96)) * sin(6 * $mu) + ((1097 * $e1 ** 4 / 512)) * sin(8 * $mu);
+        $m = cos($latitude) / sqrt(1 - $e2 * sin($latitude) ** 2);
+
+        if ($m === 0.0) {
+            $longitude = $longitudeOrigin; // pole
+        } elseif ($latitudeOrigin >= 0) {
+            $longitude = $longitudeOrigin + $rho * atan2($westing, $a * $mO / sin($latitudeOrigin) - $southing) / $a / $m;
+        } else {
+            $longitude = $longitudeOrigin + $rho * atan2(-$westing, -($a * $mO / sin($latitudeOrigin) - $southing)) / $a / $m;
+        }
+
+        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+    }
 }

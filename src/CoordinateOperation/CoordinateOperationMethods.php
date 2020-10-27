@@ -436,6 +436,7 @@ class CoordinateOperationMethods
             self::EPSG_AFFINE_PARAMETRIC_TRANSFORMATION => 'affineParametricTransform',
             self::EPSG_ALBERS_EQUAL_AREA => 'albersEqualArea',
             self::EPSG_AMERICAN_POLYCONIC => 'americanPolyconic',
+            self::EPSG_BONNE_SOUTH_ORIENTATED => 'bonneSouthOrientated',
         ];
     }
 }

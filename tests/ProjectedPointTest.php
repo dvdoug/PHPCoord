@@ -177,4 +177,26 @@ class ProjectedPointTest extends TestCase
         self::assertEqualsWithDelta(-75, $to->getLongitude()->getValue(), 0.0001);
         self::assertNull($to->getHeight());
     }
+
+    public function testBonneNorthHemisphere(): void
+    {
+        $from = ProjectedPoint::createFromEastingNorthing(new Metre(-962905.1), new Metre(-1056045.0), CoordinateReferenceSystem::fromEPSGCode(Projected::EPSG_NAD27_ALABAMA_EAST));
+        $toCRS = CoordinateReferenceSystem::fromEPSGCode(Geographic2D::EPSG_NAD27);
+        $to = $from->bonne($toCRS, new Degree(40), new Degree(-75), new Metre(10), new Metre(20));
+
+        self::assertEqualsWithDelta(30, $to->getLatitude()->getValue(), 0.0001);
+        self::assertEqualsWithDelta(-85, $to->getLongitude()->getValue(), 0.0001);
+        self::assertNull($to->getHeight());
+    }
+
+    public function testBonneSouthHemisphere(): void
+    {
+        $from = ProjectedPoint::createFromEastingNorthing(new Metre(-962925.1), new Metre(-1056085.0), CoordinateReferenceSystem::fromEPSGCode(Projected::EPSG_NAD27_ALABAMA_EAST));
+        $toCRS = CoordinateReferenceSystem::fromEPSGCode(Geographic2D::EPSG_NAD27);
+        $to = $from->bonneSouthOrientated($toCRS, new Degree(40), new Degree(-75), new Metre(10), new Metre(20));
+
+        self::assertEqualsWithDelta(30, $to->getLatitude()->getValue(), 0.0001);
+        self::assertEqualsWithDelta(-85, $to->getLongitude()->getValue(), 0.0001);
+        self::assertNull($to->getHeight());
+    }
 }
