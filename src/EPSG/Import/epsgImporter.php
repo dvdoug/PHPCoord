@@ -6,36 +6,44 @@
  */
 declare(strict_types=1);
 
-require __DIR__ . '/../../vendor/autoload.php';
+use PHPCoord\EPSG\Import\AddNewConstantsVisitor;
+use PHPCoord\EPSG\Import\ASTPrettyPrinter;
+use PHPCoord\EPSG\Import\RemoveExistingConstantsVisitor;
+use PhpParser\Lexer\Emulative;
+use PhpParser\NodeTraverser;
+use PhpParser\NodeVisitor\CloningVisitor;
+use PhpParser\Parser\Php7;
+
+require __DIR__ . '/../../../vendor/autoload.php';
 
 /**
  * Imports raw EPSG Dataset from Postgres format.
  */
-$dbPath = __DIR__ . '/epsg.sqlite';
-$srcDir = dirname(__DIR__, 2) . '/src';
+$resDir = __DIR__ . '/../../../resources';
+$srcDir = dirname(__DIR__, 2);
 
-createSQLiteDB($dbPath);
-createInterfacesWithIDs($dbPath, $srcDir);
+createSQLiteDB($resDir);
+generateConstants($resDir, $srcDir);
 csFixGeneratedFiles($srcDir);
 
-function createSQLiteDB(string $dbPath): void
+function createSQLiteDB(string $resDir): void
 {
     //remove old file if any
-    if (file_exists($dbPath)) {
-        unlink($dbPath);
+    if (file_exists($resDir . '/epsg/epsg.sqlite')) {
+        unlink($resDir . '/epsg/epsg.sqlite');
     }
 
     $sqlite = new SQLite3(
-        $dbPath,
+        $resDir . '/epsg/epsg.sqlite',
         SQLITE3_OPEN_READWRITE | SQLITE3_OPEN_CREATE
     );
     $sqlite->enableExceptions(true);
     $sqlite->exec('PRAGMA journal_mode=WAL'); //WAL is faster
 
-    $tableSchema = file_get_contents(__DIR__ . '/PostgreSQL_Table_Script.sql');
+    $tableSchema = file_get_contents($resDir . '/epsg/PostgreSQL_Table_Script.sql');
     $sqlite->exec($tableSchema);
 
-    $tableData = file_get_contents(__DIR__ . '/PostgreSQL_Data_Script.sql');
+    $tableData = file_get_contents($resDir . '/epsg/PostgreSQL_Data_Script.sql');
     $sqlite->exec($tableData);
 
     $sqlite->exec('VACUUM');
@@ -43,10 +51,10 @@ function createSQLiteDB(string $dbPath): void
     $sqlite->close();
 }
 
-function createInterfacesWithIDs(string $dbPath, string $srcDir): void
+function generateConstants(string $resDir, string $srcDir): void
 {
     $sqlite = new SQLite3(
-        $dbPath,
+        $resDir . '/epsg/epsg.sqlite',
         SQLITE3_OPEN_READONLY
     );
     $sqlite->enableExceptions(true);
@@ -68,7 +76,7 @@ function createInterfacesWithIDs(string $dbPath, string $srcDir): void
 
     $result = $sqlite->query($sql);
 
-    generateInterface($srcDir, 'PHPCoord\UnitOfMeasure', 'UnitOfMeasureIds', $result);
+    updateFile($srcDir . '/UnitOfMeasure/UnitOfMeasure.php', $result);
 
     /*
      * Prime Meridians
@@ -87,7 +95,7 @@ function createInterfacesWithIDs(string $dbPath, string $srcDir): void
 
     $result = $sqlite->query($sql);
 
-    generateInterface($srcDir, 'PHPCoord\Datum', 'PrimeMeridianIds', $result);
+    updateFile($srcDir . '/Datum/PrimeMeridian.php', $result);
 
     /*
      * Ellipsoids
@@ -107,7 +115,7 @@ function createInterfacesWithIDs(string $dbPath, string $srcDir): void
             ";
     $result = $sqlite->query($sql);
 
-    generateInterface($srcDir, 'PHPCoord\Datum', 'EllipsoidIds', $result);
+    updateFile($srcDir . '/Datum/Ellipsoid.php', $result);
 
     /*
      * Datums
@@ -129,7 +137,7 @@ function createInterfacesWithIDs(string $dbPath, string $srcDir): void
         ";
     $result = $sqlite->query($sql);
 
-    generateInterface($srcDir, 'PHPCoord\Datum', 'DatumIds', $result);
+    updateFile($srcDir . '/Datum/Datum.php', $result);
 
     /*
      * Coordinate systems
@@ -149,7 +157,7 @@ function createInterfacesWithIDs(string $dbPath, string $srcDir): void
         ";
     $result = $sqlite->query($sql);
 
-    generateInterface($srcDir, 'PHPCoord\CoordinateSystem', 'CoordinateSystemIds', $result);
+    updateFile($srcDir . '/CoordinateSystem/CoordinateSystem.php', $result);
 
     /*
     * Coordinate reference systems
@@ -174,42 +182,46 @@ function createInterfacesWithIDs(string $dbPath, string $srcDir): void
 
     $result = $sqlite->query($sql);
 
-    generateInterface($srcDir, 'PHPCoord\CoordinateReferenceSystem', 'CoordinateReferenceSystemIds', $result);
+    updateFile($srcDir . '/CoordinateReferenceSystem/CoordinateReferenceSystem.php', $result);
 
     $sqlite->close();
 }
 
-function generateInterface(string $srcDir, string $namespaceName, string $interfaceName, SQLite3Result $interfaceConstants): void
+function updateFile(string $fileName, SQLite3Result $classConstants): void
 {
-    $php = "<?php\nnamespace {$namespaceName};\n/**\n* THIS FILE IS AUTO-GENERATED\n*/\ninterface {$interfaceName} {\n";
+    $lexer = new Emulative([
+        'usedAttributes' => [
+            'comments',
+            'startLine', 'endLine',
+            'startTokenPos', 'endTokenPos',
+        ],
+    ]);
+    $parser = new Php7($lexer);
 
-    while ($row = $interfaceConstants->fetchArray(SQLITE3_ASSOC)) {
-        $name = str_replace(
-            [' ', '-', '\'', '(', ')', '[', ']', '.', '/', '=', ',', ':', '°', '+', '&'],
-            ['_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_DEG_', '_PLUS_', '_AND_'],
-            $row['constant_name']
-        );
-        $name = preg_replace('/_+/', '_', $name);
-        $name = rtrim($name, '_');
+    $traverser = new NodeTraverser();
+    $traverser->addVisitor(new CloningVisitor());
 
-        if ($row['constant_help'] || $row['deprecated']) {
-            $php .= "/**\n";
-            $helpLines = explode("\n", trim(wordwrap($row['constant_help'], 112)));
-            foreach ($helpLines as $helpLine) {
-                $php .= '* ' . $helpLine . "\n";
-            }
-            if ($row['deprecated']) {
-                $php .= "* @deprecated\n";
-            }
-            $php .= " */\n";
-        }
-        $php .= sprintf("public const %s = %d;\n\n", strtoupper('EPSG_' . $name), $row['constant_value']);
-    }
+    $oldStmts = $parser->parse(file_get_contents($fileName));
+    $oldTokens = $lexer->getTokens();
 
-    $php .= '}';
+    $newStmts = $traverser->traverse($oldStmts);
 
-    $psr4Dir = str_replace(['PHPCoord\\', '\\'], ['', '/'], $namespaceName);
-    file_put_contents($srcDir . "/$psr4Dir/{$interfaceName}.php", $php);
+    /*
+     * First remove all existing EPSG consts
+     */
+    $traverser = new NodeTraverser();
+    $traverser->addVisitor(new RemoveExistingConstantsVisitor());
+    $newStmts = $traverser->traverse($newStmts);
+
+    /*
+     * Then add the ones wanted
+     */
+    $traverser = new NodeTraverser();
+    $traverser->addVisitor(new AddNewConstantsVisitor($classConstants));
+    $newStmts = $traverser->traverse($newStmts);
+
+    $prettyPrinter = new ASTPrettyPrinter();
+    file_put_contents($fileName, $prettyPrinter->printFormatPreserving($newStmts, $oldStmts, $oldTokens));
 }
 
 function csFixGeneratedFiles(string $srcDir): void

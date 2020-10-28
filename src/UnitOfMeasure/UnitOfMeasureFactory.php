@@ -23,7 +23,7 @@ use PHPCoord\UnitOfMeasure\Scale\Unity;
 use PHPCoord\UnitOfMeasure\Time\Second;
 use PHPCoord\UnitOfMeasure\Time\Year;
 
-class UnitOfMeasureFactory implements UnitOfMeasureIds
+class UnitOfMeasureFactory
 {
     /**
      * @var Repository
@@ -49,61 +49,61 @@ class UnitOfMeasureFactory implements UnitOfMeasureIds
          * try those first.
          */
         switch ($epsgUnitCode) {
-            case self::EPSG_ANGLE_RADIAN_PER_SECOND:
+            case UnitOfMeasure::EPSG_ANGLE_RADIAN_PER_SECOND:
                 return new Rate(new Radian($measurement), new Second(1));
-            case self::EPSG_ANGLE_ARC_SECONDS_PER_YEAR:
+            case UnitOfMeasure::EPSG_ANGLE_ARC_SECONDS_PER_YEAR:
                 return new Rate(new ArcSecond($measurement), new Year(1));
-            case self::EPSG_ANGLE_MILLIARC_SECONDS_PER_YEAR:
-                return new Rate(self::makeUnit($measurement, self::EPSG_ANGLE_MILLIARC_SECOND), new Year(1));
-            case self::EPSG_LENGTH_METRE_PER_SECOND:
+            case UnitOfMeasure::EPSG_ANGLE_MILLIARC_SECONDS_PER_YEAR:
+                return new Rate(self::makeUnit($measurement, UnitOfMeasure::EPSG_ANGLE_MILLIARC_SECOND), new Year(1));
+            case UnitOfMeasure::EPSG_LENGTH_METRE_PER_SECOND:
                 return new Rate(new Metre($measurement), new Second(1));
-            case self::EPSG_LENGTH_METRES_PER_YEAR:
+            case UnitOfMeasure::EPSG_LENGTH_METRES_PER_YEAR:
                 return new Rate(new Metre($measurement), new Year(1));
-            case self::EPSG_LENGTH_MILLIMETRES_PER_YEAR:
-                return new Rate(self::makeUnit($measurement, self::EPSG_LENGTH_MILLIMETRE), new Year(1));
-            case self::EPSG_LENGTH_CENTIMETRES_PER_YEAR:
-                return new Rate(self::makeUnit($measurement, self::EPSG_LENGTH_CENTIMETRE), new Year(1));
-            case self::EPSG_SCALE_UNITY_PER_SECOND:
+            case UnitOfMeasure::EPSG_LENGTH_MILLIMETRES_PER_YEAR:
+                return new Rate(self::makeUnit($measurement, UnitOfMeasure::EPSG_LENGTH_MILLIMETRE), new Year(1));
+            case UnitOfMeasure::EPSG_LENGTH_CENTIMETRES_PER_YEAR:
+                return new Rate(self::makeUnit($measurement, UnitOfMeasure::EPSG_LENGTH_CENTIMETRE), new Year(1));
+            case UnitOfMeasure::EPSG_SCALE_UNITY_PER_SECOND:
                 return new Rate(new Unity($measurement), new Second(1));
-            case self::EPSG_SCALE_PARTS_PER_BILLION_PER_YEAR:
-                return new Rate(self::makeUnit($measurement, self::EPSG_SCALE_PARTS_PER_BILLION), new Year(1));
-            case self::EPSG_SCALE_PARTS_PER_MILLION_PER_YEAR:
-                return new Rate(self::makeUnit($measurement, self::EPSG_SCALE_PARTS_PER_MILLION), new Year(1));
-            case self::EPSG_ANGLE_RADIAN:
+            case UnitOfMeasure::EPSG_SCALE_PARTS_PER_BILLION_PER_YEAR:
+                return new Rate(self::makeUnit($measurement, UnitOfMeasure::EPSG_SCALE_PARTS_PER_BILLION), new Year(1));
+            case UnitOfMeasure::EPSG_SCALE_PARTS_PER_MILLION_PER_YEAR:
+                return new Rate(self::makeUnit($measurement, UnitOfMeasure::EPSG_SCALE_PARTS_PER_MILLION), new Year(1));
+            case UnitOfMeasure::EPSG_ANGLE_RADIAN:
                 return new Radian($measurement);
-            case self::EPSG_ANGLE_DEGREE:
+            case UnitOfMeasure::EPSG_ANGLE_DEGREE:
                 return new Degree($measurement);
-            case self::EPSG_ANGLE_ARC_SECOND:
+            case UnitOfMeasure::EPSG_ANGLE_ARC_SECOND:
                 return new ArcSecond($measurement);
-            case self::EPSG_ANGLE_DEGREE_MINUTE_SECOND:
+            case UnitOfMeasure::EPSG_ANGLE_DEGREE_MINUTE_SECOND:
                 return Degree::fromDegreeMinuteSecond((string) $measurement);
-            case self::EPSG_ANGLE_DEGREE_MINUTE_SECOND_HEMISPHERE:
+            case UnitOfMeasure::EPSG_ANGLE_DEGREE_MINUTE_SECOND_HEMISPHERE:
                 return Degree::fromDegreeMinuteSecondHemisphere((string) $measurement);
-            case self::EPSG_ANGLE_HEMISPHERE_DEGREE_MINUTE_SECOND:
+            case UnitOfMeasure::EPSG_ANGLE_HEMISPHERE_DEGREE_MINUTE_SECOND:
                 return Degree::fromHemisphereDegreeMinuteSecond((string) $measurement);
-            case self::EPSG_ANGLE_DEGREE_MINUTE:
+            case UnitOfMeasure::EPSG_ANGLE_DEGREE_MINUTE:
                 return Degree::fromDegreeMinute((string) $measurement);
-            case self::EPSG_ANGLE_DEGREE_MINUTE_HEMISPHERE:
+            case UnitOfMeasure::EPSG_ANGLE_DEGREE_MINUTE_HEMISPHERE:
                 return Degree::fromDegreeMinuteHemisphere((string) $measurement);
-            case self::EPSG_ANGLE_HEMISPHERE_DEGREE_MINUTE:
+            case UnitOfMeasure::EPSG_ANGLE_HEMISPHERE_DEGREE_MINUTE:
                 return Degree::fromHemisphereDegreeMinute((string) $measurement);
-            case self::EPSG_ANGLE_DEGREE_HEMISPHERE:
+            case UnitOfMeasure::EPSG_ANGLE_DEGREE_HEMISPHERE:
                 return Degree::fromDegreeHemisphere((string) $measurement);
-            case self::EPSG_ANGLE_HEMISPHERE_DEGREE:
+            case UnitOfMeasure::EPSG_ANGLE_HEMISPHERE_DEGREE:
                 return Degree::fromHemisphereDegree((string) $measurement);
-            case self::EPSG_ANGLE_SEXAGESIMAL_DMS_S:
+            case UnitOfMeasure::EPSG_ANGLE_SEXAGESIMAL_DMS_S:
                 return Degree::fromSexagesimalDMSS((string) $measurement);
-            case self::EPSG_ANGLE_SEXAGESIMAL_DMS:
+            case UnitOfMeasure::EPSG_ANGLE_SEXAGESIMAL_DMS:
                 return Degree::fromSexagesimalDMS((string) $measurement);
-            case self::EPSG_ANGLE_SEXAGESIMAL_DM:
+            case UnitOfMeasure::EPSG_ANGLE_SEXAGESIMAL_DM:
                 return Degree::fromSexagesimalDM((string) $measurement);
-            case self::EPSG_LENGTH_METRE:
+            case UnitOfMeasure::EPSG_LENGTH_METRE:
                 return new Metre($measurement);
-            case self::EPSG_SCALE_UNITY:
+            case UnitOfMeasure::EPSG_SCALE_UNITY:
                 return new Unity($measurement);
-            case self::EPSG_TIME_SECOND:
+            case UnitOfMeasure::EPSG_TIME_SECOND:
                 return new Second($measurement);
-            case self::EPSG_TIME_YEAR:
+            case UnitOfMeasure::EPSG_TIME_YEAR:
                 return new Year($measurement);
         }
 
@@ -116,10 +116,10 @@ class UnitOfMeasureFactory implements UnitOfMeasureIds
             !in_array(
                 $unitData['target_uom_code'],
                 [
-                    self::EPSG_ANGLE_RADIAN,
-                    self::EPSG_LENGTH_METRE,
-                    self::EPSG_SCALE_UNITY,
-                    //self::EPSG_TIME_SECOND,  all time units in the DB are currently handled above
+                    UnitOfMeasure::EPSG_ANGLE_RADIAN,
+                    UnitOfMeasure::EPSG_LENGTH_METRE,
+                    UnitOfMeasure::EPSG_SCALE_UNITY,
+                    //UnitOfMeasure::EPSG_TIME_SECOND,  all time units in the DB are currently handled above
                 ],
                 true
             )

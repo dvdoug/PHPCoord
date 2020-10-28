@@ -32,7 +32,7 @@ class PrimeMeridianTest extends TestCase
 
     public function testGreenwich(): void
     {
-        $object = PrimeMeridian::fromEPSGCode(PrimeMeridianIds::EPSG_GREENWICH);
+        $object = PrimeMeridian::fromEPSGCode(PrimeMeridian::EPSG_GREENWICH);
         self::assertEquals('Greenwich', $object->getName());
         self::assertEquals('0°', $object->getGreenwichLongitude()->getFormattedValue());
     }

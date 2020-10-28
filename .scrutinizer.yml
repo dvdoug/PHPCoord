@@ -9,6 +9,7 @@ tools:
 filter:
   excluded_paths:
     - 'tests/'
+    - 'src/EPSG/Import/'
 
 build:
   environment:
