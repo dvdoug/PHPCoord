@@ -28,6 +28,7 @@ use PHPCoord\UnitOfMeasure\Angle\Radian;
 use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPCoord\UnitOfMeasure\Scale\Scale;
+use PHPCoord\UnitOfMeasure\Scale\Unity;
 use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
 use TypeError;
 
@@ -315,6 +316,30 @@ class GeographicPoint extends Point
         $newGeographic = $newGeocentric->asGeographicValue();
 
         return static::create($newGeographic->getLatitude(), $newGeographic->getLongitude(), $to instanceof Geographic3D ? $newGeographic->getHeight() : null, $to, $this->epoch);
+    }
+
+    /**
+     * Geocentric translations
+     * This method allows calculation of geocentric coords in the target system by adding the parameter values to the
+     * corresponding coordinates of the point in the source system. See methods 1031 and 1035 for similar tfms
+     * operating between other CRSs types.
+     */
+    public function geocentricTranslation(
+        Geographic $to,
+        Length $xAxisTranslation,
+        Length $yAxisTranslation,
+        Length $zAxisTranslation
+    ): self {
+        return $this->positionVectorTransformation(
+            $to,
+            $xAxisTranslation,
+            $yAxisTranslation,
+            $zAxisTranslation,
+            new Radian(0),
+            new Radian(0),
+            new Radian(0),
+            new Unity(0)
+        );
     }
 
     /**

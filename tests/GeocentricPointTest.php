@@ -192,4 +192,15 @@ class GeocentricPointTest extends TestCase
         self::assertEqualsWithDelta(-5749799.862, $to->getY()->getValue(), 0.1);
         self::assertEqualsWithDelta(1054530.826, $to->getZ()->getValue(), 0.1);
     }
+
+    public function testGeocentricTranslation(): void
+    {
+        $from = GeocentricPoint::create(new Metre(3771793.97), new Metre(140253.34), new Metre(5124304.35), CoordinateReferenceSystem::fromEPSGCode(Geocentric::EPSG_WGS_84));
+        $toCRS = CoordinateReferenceSystem::fromEPSGCode(Geocentric::EPSG_WGS_84);
+        $to = $from->geocentricTranslation($toCRS, new Metre(84.87), new Metre(96.49), new Metre(116.95));
+
+        self::assertEqualsWithDelta(3771878.84, $to->getX()->getValue(), 0.001);
+        self::assertEqualsWithDelta(140349.83, $to->getY()->getValue(), 0.001);
+        self::assertEqualsWithDelta(5124421.30, $to->getZ()->getValue(), 0.001);
+    }
 }

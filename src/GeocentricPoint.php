@@ -15,9 +15,11 @@ use InvalidArgumentException;
 use PHPCoord\CoordinateReferenceSystem\Geocentric;
 use PHPCoord\CoordinateSystem\Axis;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
+use PHPCoord\UnitOfMeasure\Angle\Radian;
 use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPCoord\UnitOfMeasure\Scale\Scale;
+use PHPCoord\UnitOfMeasure\Scale\Unity;
 use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
 
 /**
@@ -269,5 +271,29 @@ class GeocentricPoint extends Point
         $zt = $M * ((($xs - $xp) * -$ry) + (($ys - $yp) * $rx) + (($zs - $zp) * 1)) + $tz + $zp;
 
         return static::create(new Metre($xt), new Metre($yt), new Metre($zt), $to, $this->epoch);
+    }
+
+    /**
+     * Geocentric translations
+     * This method allows calculation of geocentric coords in the target system by adding the parameter values to the
+     * corresponding coordinates of the point in the source system. See methods 1035 and 9603 for similar tfms
+     * operating between other CRSs types.
+     */
+    public function geocentricTranslation(
+        Geocentric $to,
+        Length $xAxisTranslation,
+        Length $yAxisTranslation,
+        Length $zAxisTranslation
+    ): self {
+        return $this->positionVectorTransformation(
+            $to,
+            $xAxisTranslation,
+            $yAxisTranslation,
+            $zAxisTranslation,
+            new Radian(0),
+            new Radian(0),
+            new Radian(0),
+            new Unity(0)
+        );
     }
 }

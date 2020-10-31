@@ -324,4 +324,15 @@ class GeographicPointTest extends TestCase
         self::assertEqualsWithDelta(1113194.91, $to->getEasting()->getValue(), 0.01);
         self::assertEqualsWithDelta(6097230.31, $to->getNorthing()->getValue(), 0.01);
     }
+
+    public function testGeocentricTranslation(): void
+    {
+        $from = GeographicPoint::create(new Degree(38.14349028), new Degree(23.80450972), new Metre(12), CoordinateReferenceSystem::fromEPSGCode(Geographic3D::EPSG_WGS_84));
+        $toCRS = CoordinateReferenceSystem::fromEPSGCode(Geographic3D::EPSG_WGS_84);
+        $to = $from->geocentricTranslation($toCRS, new Metre(84.87), new Metre(96.49), new Metre(116.95));
+
+        self::assertEqualsWithDelta(38.14367013, $to->getLatitude()->getValue(), 0.000001);
+        self::assertEqualsWithDelta(23.80512601, $to->getLongitude()->getValue(), 0.000001);
+        self::assertEqualsWithDelta(175.93046824727, $to->getHeight()->getValue(), 0.00001);
+    }
 }
