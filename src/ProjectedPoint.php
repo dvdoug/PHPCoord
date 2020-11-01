@@ -472,6 +472,49 @@ class ProjectedPoint extends Point
     }
 
     /**
+     * Hyperbolic Cassini-Soldner.
+     */
+    public function hyperbolicCassiniSoldner(
+        Geographic $to,
+        Angle $latitudeOfNaturalOrigin,
+        Angle $longitudeOfNaturalOrigin,
+        Length $falseEasting,
+        Length $falseNorthing
+    ): GeographicPoint {
+        $easting = $this->easting->asMetres()->getValue() - $falseEasting->asMetres()->getValue();
+        $northing = $this->northing->asMetres()->getValue() - $falseNorthing->asMetres()->getValue();
+        $latitudeOrigin = $latitudeOfNaturalOrigin->asRadians()->getValue();
+        $longitudeOrigin = $longitudeOfNaturalOrigin->asRadians()->getValue();
+        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+        $e4 = $this->crs->getDatum()->getEllipsoid()->getEccentricity() ** 4;
+        $e6 = $this->crs->getDatum()->getEllipsoid()->getEccentricity() ** 6;
+
+        $MO = $a * ((1 - $e2 / 4 - 3 * $e4 / 64 - 5 * $e6 / 256) * $latitudeOrigin - (3 * $e2 / 8 + 3 * $e4 / 32 + 45 * $e6 / 1024) * sin(2 * $latitudeOrigin) + (15 * $e4 / 256 + 45 * $e6 / 1024) * sin(4 * $latitudeOrigin) - (35 * $e6 / 3072) * sin(6 * $latitudeOrigin));
+        $e1 = (1 - sqrt(1 - $e2)) / (1 + sqrt(1 - $e2));
+
+        $latitude1 = $latitudeOrigin + $northing / 1567446;
+
+        $nu = $a / sqrt((1 - $e2 * sin($latitude1) ** 2));
+        $rho = $a * (1 - $e2) / (1 - $e2 * sin($latitude1) ** 2) ** 1.5;
+
+        $qPrime = $northing ** 3 / (6 * $rho * $nu);
+        $q = ($northing + $qPrime) ** 3 / (6 * $rho * $nu);
+        $M = $MO + $northing + $q;
+
+        $mu = $M / ($a * (1 - $e2 / 4 - 3 * $e4 / 64 - 5 * $e6 / 256));
+        $latitudeCentralMeridian = $mu + (3 * $e1 / 2 - 27 * $e1 ** 3 / 32) * sin(2 * $mu) + (21 * $e1 ** 2 / 16 - 55 * $e1 ** 4 / 32) * sin(4 * $mu) + (151 * $e1 ** 3 / 96) * sin(6 * $mu) + (1097 * $e1 ** 4 / 512) * sin(8 * $mu);
+
+        $T = tan($latitudeCentralMeridian) ** 2;
+        $D = $easting / $nu;
+
+        $latitude = $latitudeCentralMeridian - ($nu * tan($latitudeCentralMeridian) / $rho) * ($D ** 2 / 2 - (1 + 3 * $T) * $D ** 4 / 24);
+        $longitude = $longitudeOrigin + ($D - $T * $D ** 3 / 3 + (1 + 3 * $T) * $T * $D ** 5 / 15) / cos($latitudeCentralMeridian);
+
+        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+    }
+
+    /**
      * Colombia Urban.
      */
     public function columbiaUrban(

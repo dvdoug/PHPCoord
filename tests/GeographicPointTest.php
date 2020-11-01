@@ -335,6 +335,16 @@ class GeographicPointTest extends TestCase
         self::assertEqualsWithDelta(35242.00, $to->getNorthing()->getValue(), 0.01);
     }
 
+    public function testHyperbolicCassiniSoldner(): void
+    {
+        $from = GeographicPoint::create(new Radian(-0.293938867), new Radian(3.141493807), null, CoordinateReferenceSystem::fromEPSGCode(Geographic2D::EPSG_VANUA_LEVU_1915));
+        $toCRS = CoordinateReferenceSystem::fromEPSGCode(Projected::EPSG_VANUA_LEVU_1915_VANUA_LEVU_GRID);
+        $to = $from->hyperbolicCassiniSoldner($toCRS, new Radian(-0.283616003), new Radian(3.129957125), UnitOfMeasureFactory::makeUnit(12513.318, UnitOfMeasure::EPSG_LENGTH_CHAIN), UnitOfMeasureFactory::makeUnit(16628.885, UnitOfMeasure::EPSG_LENGTH_CHAIN));
+
+        self::assertEqualsWithDelta(1601528.90, $to->getEasting()->getValue(), 0.1);
+        self::assertEqualsWithDelta(1336966.01, $to->getNorthing()->getValue(), 0.1);
+    }
+
     public function testGeocentricTranslation(): void
     {
         $from = GeographicPoint::create(new Degree(38.14349028), new Degree(23.80450972), new Metre(12), CoordinateReferenceSystem::fromEPSGCode(Geographic3D::EPSG_WGS_84));

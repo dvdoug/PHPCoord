@@ -441,6 +441,7 @@ class CoordinateOperationMethods
             self::EPSG_BONNE_SOUTH_ORIENTATED => 'bonneSouthOrientated',
             self::EPSG_CARTESIAN_GRID_OFFSETS => 'offsets',
             self::EPSG_CASSINI_SOLDNER => 'cassiniSoldner',
+            self::EPSG_HYPERBOLIC_CASSINI_SOLDNER => 'hyperbolicCassiniSoldner',
             self::EPSG_COLOMBIA_URBAN => 'columbiaUrban',
             self::EPSG_EQUAL_EARTH => 'equalEarth',
             self::EPSG_EQUIDISTANT_CYLINDRICAL => 'equidistantCylindrical',

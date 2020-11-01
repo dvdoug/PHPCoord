@@ -263,4 +263,15 @@ class ProjectedPointTest extends TestCase
         self::assertEqualsWithDelta(2.524362746, $to->getLongitude()->asRadians()->getValue(), 0.001);
         self::assertNull($to->getHeight());
     }
+
+    public function testHyperbolicCassiniSoldner(): void
+    {
+        $from = ProjectedPoint::createFromEastingNorthing(UnitOfMeasureFactory::makeUnit(1601528.9, UnitOfMeasure::EPSG_LENGTH_LINK), UnitOfMeasureFactory::makeUnit(1336966.6, UnitOfMeasure::EPSG_LENGTH_LINK), CoordinateReferenceSystem::fromEPSGCode(Projected::EPSG_VANUA_LEVU_1915_VANUA_LEVU_GRID));
+        $toCRS = CoordinateReferenceSystem::fromEPSGCode(Geographic2D::EPSG_VANUA_LEVU_1915);
+        $to = $from->hyperbolicCassiniSoldner($toCRS, new Radian(-0.283616003), new Radian(3.129957125), UnitOfMeasureFactory::makeUnit(12513.318, UnitOfMeasure::EPSG_LENGTH_CHAIN), UnitOfMeasureFactory::makeUnit(16628.885, UnitOfMeasure::EPSG_LENGTH_CHAIN));
+
+        self::assertEqualsWithDelta(-0.293938867, $to->getLatitude()->asRadians()->getValue(), 0.0001);
+        self::assertEqualsWithDelta(3.141493807, $to->getLongitude()->asRadians()->getValue(), 0.0001);
+        self::assertNull($to->getHeight());
+    }
 }
