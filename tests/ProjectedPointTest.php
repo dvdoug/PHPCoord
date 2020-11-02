@@ -15,6 +15,7 @@ use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Projected;
 use PHPCoord\Exception\InvalidCoordinateReferenceSystemException;
 use PHPCoord\UnitOfMeasure\Angle\Degree;
+use PHPCoord\UnitOfMeasure\Angle\Radian;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPCoord\UnitOfMeasure\Scale\Coefficient;
 use PHPCoord\UnitOfMeasure\UnitOfMeasure;
@@ -206,5 +207,16 @@ class ProjectedPointTest extends TestCase
         $to = $from->offsets(CoordinateReferenceSystem::fromEPSGCode(Projected::EPSG_JAD69_JAMAICA_NATIONAL_GRID), new Metre(40), new Metre(60));
         self::assertEquals(140, $to->getEasting()->asMetres()->getValue());
         self::assertEquals(260, $to->getNorthing()->asMetres()->getValue());
+    }
+
+    public function testCassiniSoldner(): void
+    {
+        $from = ProjectedPoint::createFromEastingNorthing(UnitOfMeasureFactory::makeUnit(66644.94, UnitOfMeasure::EPSG_LENGTH_CLARKE_S_LINK), UnitOfMeasureFactory::makeUnit(82536.22, UnitOfMeasure::EPSG_LENGTH_CLARKE_S_LINK), CoordinateReferenceSystem::fromEPSGCode(Projected::EPSG_TRINIDAD_1903_TRINIDAD_GRID));
+        $toCRS = CoordinateReferenceSystem::fromEPSGCode(Geographic2D::EPSG_TRINIDAD_1903);
+        $to = $from->cassiniSoldner($toCRS, new Radian(0.182241463), new Radian(-1.070468608), UnitOfMeasureFactory::makeUnit(430000, UnitOfMeasure::EPSG_LENGTH_CLARKE_S_LINK), UnitOfMeasureFactory::makeUnit(325000, UnitOfMeasure::EPSG_LENGTH_CLARKE_S_LINK));
+
+        self::assertEqualsWithDelta(10, $to->getLatitude()->getValue(), 0.0001);
+        self::assertEqualsWithDelta(-62, $to->getLongitude()->getValue(), 0.0001);
+        self::assertNull($to->getHeight());
     }
 }

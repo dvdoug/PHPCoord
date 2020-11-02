@@ -284,4 +284,14 @@ class GeographicPointTest extends TestCase
         self::assertEqualsWithDelta(-962925.1, $to->getEasting()->asMetres()->getValue(), 0.01);
         self::assertEqualsWithDelta(-1056085.0, $to->getNorthing()->asMetres()->getValue(), 0.01);
     }
+
+    public function testCassiniSoldner(): void
+    {
+        $from = GeographicPoint::create(new Degree(10), new Degree(-62), null, CoordinateReferenceSystem::fromEPSGCode(Geographic2D::EPSG_TRINIDAD_1903));
+        $toCRS = CoordinateReferenceSystem::fromEPSGCode(Projected::EPSG_TRINIDAD_1903_TRINIDAD_GRID);
+        $to = $from->cassiniSoldner($toCRS, new Radian(0.182241463), new Radian(-1.070468608), UnitOfMeasureFactory::makeUnit(430000, UnitOfMeasure::EPSG_LENGTH_CLARKE_S_LINK), UnitOfMeasureFactory::makeUnit(325000, UnitOfMeasure::EPSG_LENGTH_CLARKE_S_LINK));
+
+        self::assertEqualsWithDelta(66644.94, $to->getEasting()->getValue(), 0.01);
+        self::assertEqualsWithDelta(82536.22, $to->getNorthing()->getValue(), 0.01);
+    }
 }
