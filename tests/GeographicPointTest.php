@@ -325,6 +325,16 @@ class GeographicPointTest extends TestCase
         self::assertEqualsWithDelta(6097230.31, $to->getNorthing()->getValue(), 0.01);
     }
 
+    public function testGuamProjection(): void
+    {
+        $from = GeographicPoint::create(new Radian(0.232810140), new Radian(2.524362746), null, CoordinateReferenceSystem::fromEPSGCode(Geographic2D::EPSG_GUAM_1963));
+        $toCRS = CoordinateReferenceSystem::fromEPSGCode(Projected::EPSG_GUAM_1963_GUAM_SPCS);
+        $to = $from->guamProjection($toCRS, new Radian(0.235138896), new Radian(2.526342288), new Metre(50000), new Metre(50000));
+
+        self::assertEqualsWithDelta(37712.48, $to->getEasting()->getValue(), 0.01);
+        self::assertEqualsWithDelta(35242.00, $to->getNorthing()->getValue(), 0.01);
+    }
+
     public function testGeocentricTranslation(): void
     {
         $from = GeographicPoint::create(new Degree(38.14349028), new Degree(23.80450972), new Metre(12), CoordinateReferenceSystem::fromEPSGCode(Geographic3D::EPSG_WGS_84));

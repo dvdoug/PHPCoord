@@ -716,6 +716,37 @@ class GeographicPoint extends Point
     }
 
     /**
+     * Guam Projection
+     * Simplified form of Oblique Azimuthal Equidistant projection method.
+     */
+    public function guamProjection(
+        Projected $to,
+        Angle $latitudeOfNaturalOrigin,
+        Angle $longitudeOfNaturalOrigin,
+        Length $falseEasting,
+        Length $falseNorthing
+    ): ProjectedPoint {
+        $latitude = $this->latitude->asRadians()->getValue();
+        $longitude = $this->longitude->asRadians()->getValue();
+        $latitudeOrigin = $latitudeOfNaturalOrigin->asRadians()->getValue();
+        $longitudeOrigin = $longitudeOfNaturalOrigin->asRadians()->getValue();
+        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
+        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+        $e4 = $e ** 4;
+        $e6 = $e ** 6;
+
+        $M = $a * ((1 - $e2 / 4 - 3 * $e4 / 64 - 5 * $e6 / 256) * $latitude - (3 * $e2 / 8 + 3 * $e4 / 32 + 45 * $e6 / 1024) * sin(2 * $latitude) + (15 * $e4 / 256 + 45 * $e6 / 1024) * sin(4 * $latitude) - (35 * $e6 / 3072) * sin(6 * $latitude));
+        $MO = $a * ((1 - $e2 / 4 - 3 * $e4 / 64 - 5 * $e6 / 256) * $latitudeOrigin - (3 * $e2 / 8 + 3 * $e4 / 32 + 45 * $e6 / 1024) * sin(2 * $latitudeOrigin) + (15 * $e4 / 256 + 45 * $e6 / 1024) * sin(4 * $latitudeOrigin) - (35 * $e6 / 3072) * sin(6 * $latitudeOrigin));
+        $x = ($a * ($longitude - $longitudeOrigin) * cos($latitude)) / sqrt(1 - $e2 * sin($latitude) ** 2);
+
+        $easting = $falseEasting->asMetres()->getValue() + $x;
+        $northing = $falseNorthing->asMetres()->getValue() + $M - $MO + ($x ** 2 * tan($latitude) * sqrt(1 - $e2 * sin($latitude) ** 2) / (2 * $a));
+
+        return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+    }
+
+    /**
      * Geographic3D to 2D conversion.
      */
     public function threeDToTwoD(

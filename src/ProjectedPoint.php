@@ -587,4 +587,41 @@ class ProjectedPoint extends Point
 
         return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
     }
+
+    /**
+     * Guam Projection
+     * Simplified form of Oblique Azimuthal Equidistant projection method.
+     */
+    public function guamProjection(
+        Geographic $to,
+        Angle $latitudeOfNaturalOrigin,
+        Angle $longitudeOfNaturalOrigin,
+        Length $falseEasting,
+        Length $falseNorthing
+    ): GeographicPoint {
+        $easting = $this->easting->asMetres()->getValue() - $falseEasting->asMetres()->getValue();
+        $northing = $this->northing->asMetres()->getValue() - $falseNorthing->asMetres()->getValue();
+        $latitudeOrigin = $latitudeOfNaturalOrigin->asRadians()->getValue();
+        $longitudeOrigin = $longitudeOfNaturalOrigin->asRadians()->getValue();
+        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+        $e4 = $this->crs->getDatum()->getEllipsoid()->getEccentricity() ** 4;
+        $e6 = $this->crs->getDatum()->getEllipsoid()->getEccentricity() ** 6;
+
+        $MO = $a * ((1 - $e2 / 4 - 3 * $e4 / 64 - 5 * $e6 / 256) * $latitudeOrigin - (3 * $e2 / 8 + 3 * $e4 / 32 + 45 * $e6 / 1024) * sin(2 * $latitudeOrigin) + (15 * $e4 / 256 + 45 * $e6 / 1024) * sin(4 * $latitudeOrigin) - (35 * $e6 / 3072) * sin(6 * $latitudeOrigin));
+        $e1 = (1 - sqrt(1 - $e2)) / (1 + sqrt(1 - $e2));
+        $i = (1 - $e2 / 4 - 3 * $e4 / 64 - 5 * $e6 / 256);
+
+        $latitude = $latitudeOrigin;
+        do {
+            $latitudeN = $latitude;
+            $M = $MO + $northing - ($easting ** 2 * tan($latitude) * sqrt(1 - $e2 * sin($latitude) ** 2) / (2 * $a));
+            $mu = $M / ($a * $i);
+            $latitude = $mu + (3 * $e1 / 2 - 27 * $e1 ** 3 / 32) * sin(2 * $mu) + (21 * $e1 ** 2 / 16 - 55 * $e1 ** 4 / 32) * sin(4 * $mu) + (151 * $e1 ** 3 / 96) * sin(6 * $mu) + (1097 * $e1 ** 4 / 512) * sin(8 * $mu);
+        } while (abs($latitude - $latitudeN) >= self::NEWTON_RAPHSON_CONVERGENCE);
+
+        $longitude = $longitudeOrigin + $easting * sqrt(1 - $e2 * sin($latitude) ** 2) / ($a * cos($latitude));
+
+        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+    }
 }

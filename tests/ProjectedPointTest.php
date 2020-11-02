@@ -252,4 +252,15 @@ class ProjectedPointTest extends TestCase
         self::assertEqualsWithDelta(10, $to->getLongitude()->getValue(), 0.0000001);
         self::assertNull($to->getHeight());
     }
+
+    public function testGuamProjection(): void
+    {
+        $from = ProjectedPoint::createFromEastingNorthing(new Metre(37712.48), new Metre(35242.00), CoordinateReferenceSystem::fromEPSGCode(Projected::EPSG_GUAM_1963_GUAM_SPCS));
+        $toCRS = CoordinateReferenceSystem::fromEPSGCode(Geographic2D::EPSG_GUAM_1963);
+        $to = $from->guamProjection($toCRS, new Radian(0.235138896), new Radian(2.526342288), new Metre(50000), new Metre(50000));
+
+        self::assertEqualsWithDelta(0.232810140, $to->getLatitude()->asRadians()->getValue(), 0.001);
+        self::assertEqualsWithDelta(2.524362746, $to->getLongitude()->asRadians()->getValue(), 0.001);
+        self::assertNull($to->getHeight());
+    }
 }
