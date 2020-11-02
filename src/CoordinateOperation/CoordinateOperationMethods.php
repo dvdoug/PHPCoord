@@ -444,6 +444,7 @@ class CoordinateOperationMethods
             self::EPSG_COLOMBIA_URBAN => 'columbiaUrban',
             self::EPSG_EQUAL_EARTH => 'equalEarth',
             self::EPSG_EQUIDISTANT_CYLINDRICAL => 'equidistantCylindrical',
+            self::EPSG_GEOGRAPHIC3D_TO_2D_CONVERSION => 'threeDToTwoD',
         ];
     }
 }

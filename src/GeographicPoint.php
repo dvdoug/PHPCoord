@@ -714,4 +714,17 @@ class GeographicPoint extends Point
 
         return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
     }
+
+    /**
+     * Geographic3D to 2D conversion.
+     */
+    public function threeDToTwoD(
+        Geographic $to
+    ): self {
+        if ($to instanceof Geographic2D) {
+            return static::create($this->latitude, $this->longitude, null, $to, $this->epoch);
+        }
+
+        return static::create($this->latitude, $this->longitude, new Metre(0), $to, $this->epoch);
+    }
 }

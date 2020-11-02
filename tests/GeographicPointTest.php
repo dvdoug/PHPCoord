@@ -335,4 +335,15 @@ class GeographicPointTest extends TestCase
         self::assertEqualsWithDelta(23.80512601, $to->getLongitude()->getValue(), 0.000001);
         self::assertEqualsWithDelta(175.93046824727, $to->getHeight()->getValue(), 0.00001);
     }
+
+    public function testThreeDToTwoD(): void
+    {
+        $from = GeographicPoint::create(new Degree(0.123), new Degree(0.456), new Metre(789), CoordinateReferenceSystem::fromEPSGCode(Geographic3D::EPSG_WGS_84));
+        $toCRS = CoordinateReferenceSystem::fromEPSGCode(Geographic2D::EPSG_WGS_84);
+        $to = $from->threeDToTwoD($toCRS);
+
+        self::assertEquals(0.123, $to->getLatitude()->getValue());
+        self::assertEquals(0.456, $to->getLongitude()->getValue());
+        self::assertNull($to->getHeight());
+    }
 }
