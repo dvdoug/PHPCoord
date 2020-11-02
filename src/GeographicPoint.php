@@ -581,4 +581,40 @@ class GeographicPoint extends Point
 
         return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
     }
+
+    /**
+     * Colombia Urban.
+     */
+    public function columbiaUrban(
+        Projected $to,
+        Angle $latitudeOfNaturalOrigin,
+        Angle $longitudeOfNaturalOrigin,
+        Length $falseEasting,
+        Length $falseNorthing,
+        Length $projectionPlaneOriginHeight
+    ): ProjectedPoint {
+        $latitude = $this->latitude->asRadians()->getValue();
+        $longitude = $this->longitude->asRadians()->getValue();
+        $latitudeOrigin = $latitudeOfNaturalOrigin->asRadians()->getValue();
+        $longitudeOrigin = $longitudeOfNaturalOrigin->asRadians()->getValue();
+        $heightOrigin = $projectionPlaneOriginHeight->asMetres()->getValue();
+        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+
+        $rho = $a * (1 - $e2) / (1 - $e2 * sin($latitude) ** 2) ** (3 / 2);
+        $rhoOrigin = $a * (1 - $e2) / (1 - $e2 * sin($latitudeOrigin) ** 2) ** (3 / 2);
+        $rhoMid = $a * (1 - $e2) / (1 - $e2 * sin(($latitude + $latitudeOrigin) / 2) ** 2) ** (3 / 2);
+
+        $nu = $a / sqrt(1 - $e2 * (sin($latitude) ** 2));
+        $nuOrigin = $a / sqrt(1 - $e2 * (sin($latitudeOrigin) ** 2));
+
+        $A = 1 + $heightOrigin / $nuOrigin;
+        $B = tan($latitudeOrigin) / (2 * $rhoOrigin * $nuOrigin);
+        $G = 1 + $heightOrigin / $rhoMid;
+
+        $easting = $falseEasting->asMetres()->getValue() + $A * $nu * cos($latitude) * ($longitude - $longitudeOrigin);
+        $northing = $falseNorthing->asMetres()->getValue() + $G * $rhoOrigin * (($latitude - $latitudeOrigin) + ($B * ($longitude - $longitudeOrigin) ** 2 * $nu ** 2 * cos($latitude) ** 2));
+
+        return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+    }
 }

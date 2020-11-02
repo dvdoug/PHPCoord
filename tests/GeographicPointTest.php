@@ -294,4 +294,14 @@ class GeographicPointTest extends TestCase
         self::assertEqualsWithDelta(66644.94, $to->getEasting()->getValue(), 0.01);
         self::assertEqualsWithDelta(82536.22, $to->getNorthing()->getValue(), 0.01);
     }
+
+    public function testColumbiaUrban(): void
+    {
+        $from = GeographicPoint::create(new Radian(0.083775804), new Radian(-1.295906970), null, CoordinateReferenceSystem::fromEPSGCode(Geographic2D::EPSG_MAGNA_SIRGAS));
+        $toCRS = CoordinateReferenceSystem::fromEPSGCode(Projected::EPSG_MAGNA_SIRGAS_BOGOTA_URBAN_GRID);
+        $to = $from->columbiaUrban($toCRS, new Radian(0.081689893), new Radian(-1.294102154), new Metre(92334.879), new Metre(109320.965), new Metre(2550));
+
+        self::assertEqualsWithDelta(80859.033, $to->getEasting()->getValue(), 0.01);
+        self::assertEqualsWithDelta(122543.174, $to->getNorthing()->getValue(), 0.01);
+    }
 }

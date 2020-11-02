@@ -219,4 +219,15 @@ class ProjectedPointTest extends TestCase
         self::assertEqualsWithDelta(-62, $to->getLongitude()->getValue(), 0.0001);
         self::assertNull($to->getHeight());
     }
+
+    public function testColumbiaUrban(): void
+    {
+        $from = ProjectedPoint::createFromEastingNorthing(new Metre(80859.033), new Metre(122543.174), CoordinateReferenceSystem::fromEPSGCode(Projected::EPSG_MAGNA_SIRGAS_BOGOTA_URBAN_GRID));
+        $toCRS = CoordinateReferenceSystem::fromEPSGCode(Geographic2D::EPSG_MAGNA_SIRGAS);
+        $to = $from->columbiaUrban($toCRS, new Radian(0.081689893), new Radian(-1.294102154), new Metre(92334.879), new Metre(109320.965), new Metre(2550));
+
+        self::assertEqualsWithDelta(0.083775804, $to->getLatitude()->asRadians()->getValue(), 0.0001);
+        self::assertEqualsWithDelta(-1.295906970, $to->getLongitude()->asRadians()->getValue(), 0.0001);
+        self::assertNull($to->getHeight());
+    }
 }

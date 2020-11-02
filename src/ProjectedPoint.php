@@ -470,4 +470,38 @@ class ProjectedPoint extends Point
 
         return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
     }
+
+    /**
+     * Colombia Urban.
+     */
+    public function columbiaUrban(
+        Geographic $to,
+        Angle $latitudeOfNaturalOrigin,
+        Angle $longitudeOfNaturalOrigin,
+        Length $falseEasting,
+        Length $falseNorthing,
+        Length $projectionPlaneOriginHeight
+    ): GeographicPoint {
+        $easting = $this->easting->asMetres()->getValue() - $falseEasting->asMetres()->getValue();
+        $northing = $this->northing->asMetres()->getValue() - $falseNorthing->asMetres()->getValue();
+        $latitudeOrigin = $latitudeOfNaturalOrigin->asRadians()->getValue();
+        $longitudeOrigin = $longitudeOfNaturalOrigin->asRadians()->getValue();
+        $heightOrigin = $projectionPlaneOriginHeight->asMetres()->getValue();
+        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+
+        $rhoOrigin = $a * (1 - $e2) / (1 - $e2 * sin($latitudeOrigin) ** 2) ** 1.5;
+
+        $nuOrigin = $a / sqrt(1 - $e2 * (sin($latitudeOrigin) ** 2));
+
+        $B = tan($latitudeOrigin) / (2 * $rhoOrigin * $nuOrigin);
+        $C = 1 + $heightOrigin / $a;
+        $D = $rhoOrigin * (1 + $heightOrigin / ($a * (1 - $e2)));
+
+        $latitude = $latitudeOrigin + ($northing / $D) - $B * ($easting / $C) ** 2;
+        $nu = $a / sqrt(1 - $e2 * (sin($latitude) ** 2));
+        $longitude = $longitudeOrigin + $easting / ($C * $nu * cos($latitude));
+
+        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+    }
 }
