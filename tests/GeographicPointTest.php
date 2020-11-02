@@ -314,4 +314,14 @@ class GeographicPointTest extends TestCase
         self::assertEqualsWithDelta(-2390749.042, $to->getEasting()->getValue(), 0.001);
         self::assertEqualsWithDelta(4242849.758, $to->getNorthing()->getValue(), 0.001);
     }
+
+    public function testEquidistantCylindrical(): void
+    {
+        $from = GeographicPoint::create(new Degree(55), new Degree(10), null, CoordinateReferenceSystem::fromEPSGCode(Geographic2D::EPSG_WGS_84));
+        $toCRS = CoordinateReferenceSystem::fromEPSGCode(Projected::EPSG_WGS_84_WORLD_EQUIDISTANT_CYLINDRICAL);
+        $to = $from->equidistantCylindrical($toCRS, new Degree(0), new Degree(0), new Metre(0), new Metre(0));
+
+        self::assertEqualsWithDelta(1113194.91, $to->getEasting()->getValue(), 0.01);
+        self::assertEqualsWithDelta(6097230.31, $to->getNorthing()->getValue(), 0.01);
+    }
 }

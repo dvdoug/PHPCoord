@@ -540,4 +540,51 @@ class ProjectedPoint extends Point
 
         return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
     }
+
+    /**
+     * Equidistant Cylindrical
+     * See method code 1029 for spherical development. See also Pseudo Plate Carree, method code 9825.
+     */
+    public function equidistantCylindrical(
+        Geographic $to,
+        Angle $latitudeOf1stStandardParallel,
+        Angle $longitudeOfNaturalOrigin,
+        Length $falseEasting,
+        Length $falseNorthing
+    ): GeographicPoint {
+        $easting = $this->easting->asMetres()->getValue() - $falseEasting->asMetres()->getValue();
+        $northing = $this->northing->asMetres()->getValue() - $falseNorthing->asMetres()->getValue();
+        $latitudeFirstParallel = $latitudeOf1stStandardParallel->asRadians()->getValue();
+        $longitudeOrigin = $longitudeOfNaturalOrigin->asRadians()->getValue();
+        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
+        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+        $e4 = $e ** 4;
+        $e6 = $e ** 6;
+        $e8 = $e ** 8;
+        $e10 = $e ** 10;
+        $e12 = $e ** 12;
+        $e14 = $e ** 14;
+
+        $n = (1 - sqrt(1 - $e2)) / (1 + sqrt(1 - $e2));
+        $n2 = $n ** 2;
+        $n3 = $n ** 3;
+        $n4 = $n ** 4;
+        $n5 = $n ** 5;
+        $n6 = $n ** 6;
+        $n7 = $n ** 7;
+        $mu = $northing / ($a * (1 - 1 / 4 * $e2 - 3 / 64 * $e4 - 5 / 256 * $e6 - 175 / 16384 * $e8 - 441 / 65536 * $e10 - 4851 / 1048576 * $e12 - 14157 / 4194304 * $e14));
+
+        $latitude = $mu + (3 / 2 * $n - 27 / 32 * $n3 + 269 / 512 * $n5 - 6607 / 24576 * $n7) * sin(2 * $mu)
+            + (21 / 16 * $n2 - 55 / 32 * $n4 + 6759 / 4096 * $n6) * sin(4 * $mu)
+            + (151 / 96 * $n3 - 417 / 128 * $n5 + 87963 / 20480 * $n7) * sin(6 * $mu)
+            + (1097 / 512 * $n4 - 15543 / 2560 * $n6) * sin(8 * $mu)
+            + (8011 / 2560 * $n5 - 69119 / 6144 * $n7) * sin(10 * $mu)
+            + (293393 / 61440 * $n6) * sin(12 * $mu)
+            + (6845701 / 860160 * $n7) * sin(14 * $mu);
+
+        $longitude = $longitudeOrigin + $easting * sqrt(1 - $e2 * sin($latitudeFirstParallel) ** 2) / ($a * cos($latitudeFirstParallel));
+
+        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+    }
 }

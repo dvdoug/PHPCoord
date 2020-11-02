@@ -241,4 +241,15 @@ class ProjectedPointTest extends TestCase
         self::assertEqualsWithDelta(-2.0454693977, $to->getLongitude()->asRadians()->getValue(), 0.000000001);
         self::assertNull($to->getHeight());
     }
+
+    public function testEquidistantCylindrical(): void
+    {
+        $from = ProjectedPoint::createFromEastingNorthing(new Metre(1113194.91), new Metre(6097230.31), CoordinateReferenceSystem::fromEPSGCode(Projected::EPSG_WGS_84_WORLD_EQUIDISTANT_CYLINDRICAL));
+        $toCRS = CoordinateReferenceSystem::fromEPSGCode(Geographic2D::EPSG_WGS_84);
+        $to = $from->equidistantCylindrical($toCRS, new Degree(0), new Degree(0), new Metre(0), new Metre(0));
+
+        self::assertEqualsWithDelta(55, $to->getLatitude()->getValue(), 0.0000001);
+        self::assertEqualsWithDelta(10, $to->getLongitude()->getValue(), 0.0000001);
+        self::assertNull($to->getHeight());
+    }
 }

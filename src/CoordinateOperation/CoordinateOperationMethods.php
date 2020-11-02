@@ -441,6 +441,7 @@ class CoordinateOperationMethods
             self::EPSG_CASSINI_SOLDNER => 'cassiniSoldner',
             self::EPSG_COLOMBIA_URBAN => 'columbiaUrban',
             self::EPSG_EQUAL_EARTH => 'equalEarth',
+            self::EPSG_EQUIDISTANT_CYLINDRICAL => 'equidistantCylindrical',
         ];
     }
 }

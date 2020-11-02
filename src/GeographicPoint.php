@@ -645,4 +645,48 @@ class GeographicPoint extends Point
 
         return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
     }
+
+    /**
+     * Equidistant Cylindrical
+     * See method code 1029 for spherical development. See also Pseudo Plate Carree, method code 9825.
+     */
+    public function equidistantCylindrical(
+        Projected $to,
+        Angle $latitudeOf1stStandardParallel,
+        Angle $longitudeOfNaturalOrigin,
+        Length $falseEasting,
+        Length $falseNorthing
+    ): ProjectedPoint {
+        $latitude = $this->latitude->asRadians()->getValue();
+        $longitude = $this->longitude->asRadians()->getValue();
+        $latitudeFirstParallel = $latitudeOf1stStandardParallel->asRadians()->getValue();
+        $longitudeOrigin = $longitudeOfNaturalOrigin->asRadians()->getValue();
+        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
+        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+        $e4 = $e ** 4;
+        $e6 = $e ** 6;
+        $e8 = $e ** 8;
+        $e10 = $e ** 10;
+        $e12 = $e ** 12;
+        $e14 = $e ** 14;
+
+        $nu1 = $a / sqrt(1 - $e2 * sin($latitudeFirstParallel) ** 2);
+
+        $M = $a * (
+            (1 - 1 / 4 * $e2 - 3 / 64 * $e4 - 5 / 256 * $e6 - 175 / 16384 * $e8 - 441 / 65536 * $e10 - 4851 / 1048576 * $e12 - 14157 / 4194304 * $e14) * $latitude +
+            (-3 / 8 * $e2 - 3 / 32 * $e4 - 45 / 1024 * $e6 - 105 / 4096 * $e8 - 2205 / 131072 * $e10 - 6237 / 524288 * $e12 - 297297 / 33554432 * $e14) * sin(2 * $latitude) +
+            (15 / 256 * $e4 + 45 / 1024 * $e ** 6 + 525 / 16384 * $e ** 8 + 1575 / 65536 * $e10 + 155925 / 8388608 * $e12 + 495495 / 33554432 * $e14) * sin(4 * $latitude) +
+            (-35 / 3072 * $e6 - 175 / 12288 * $e8 - 3675 / 262144 * $e10 - 13475 / 1048576 * $e12 - 385385 / 33554432 * $e14) * sin(6 * $latitude) +
+            (315 / 131072 * $e8 + 2205 / 524288 * $e10 + 43659 / 8388608 * $e12 + 189189 / 33554432 * $e14) * sin(8 * $latitude) +
+            (-693 / 1310720 * $e10 - 6537 / 5242880 * $e12 - 297297 / 167772160 * $e14) * sin(10 * $latitude) +
+            (1001 / 8388608 * $e12 + 11011 / 33554432 * $e14) * sin(12 * $latitude) +
+            (-6435 / 234881024 * $e ** 14) * sin(14 * $latitude)
+        );
+
+        $easting = $falseEasting->asMetres()->getValue() + $nu1 * cos($latitudeFirstParallel) * ($longitude - $longitudeOrigin);
+        $northing = $falseNorthing->asMetres()->getValue() + $M;
+
+        return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+    }
 }
