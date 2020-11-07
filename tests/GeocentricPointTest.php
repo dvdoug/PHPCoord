@@ -12,6 +12,7 @@ use DateTime;
 use DateTimeImmutable;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\CoordinateReferenceSystem\Geocentric;
+use PHPCoord\CoordinateReferenceSystem\Geographic3D;
 use PHPCoord\UnitOfMeasure\Angle\ArcSecond;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPCoord\UnitOfMeasure\Scale\Unity;
@@ -67,6 +68,16 @@ class GeocentricPointTest extends TestCase
         $from = GeocentricPoint::create(new Metre(12300), new Metre(45600), new Metre(78900), CoordinateReferenceSystem::fromEPSGCode(Geocentric::EPSG_WGS_84));
         $to = GeocentricPoint::create(new Metre(24600), new Metre(80200), new Metre(16800), CoordinateReferenceSystem::fromEPSGCode(Geocentric::EPSG_WGS_84));
         self::assertEqualsWithDelta(72144.715676, $from->calculateDistance($to)->getValue(), 0.000001);
+    }
+
+    public function testGeographicGeocentric(): void
+    {
+        $from = GeocentricPoint::create(new Metre(3771793.968), new Metre(140253.342), new Metre(5124304.349), CoordinateReferenceSystem::fromEPSGCode(Geocentric::EPSG_WGS_84));
+        $to = $from->geographicGeocentric(CoordinateReferenceSystem::fromEPSGCode(Geographic3D::EPSG_WGS_84));
+
+        self::assertEqualsWithDelta(53.80939444, $to->getLatitude()->getValue(), 0.000001);
+        self::assertEqualsWithDelta(2.12955000, $to->getLongitude()->getValue(), 0.000001);
+        self::assertEqualsWithDelta(73, $to->getHeight()->getValue(), 0.0001);
     }
 
     public function testHelmertOSWorkedExamplePositionVectorTransformation(): void

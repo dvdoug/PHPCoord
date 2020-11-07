@@ -11,6 +11,7 @@ namespace PHPCoord;
 use DateTime;
 use DateTimeImmutable;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
+use PHPCoord\CoordinateReferenceSystem\Geocentric;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Geographic3D;
 use PHPCoord\CoordinateReferenceSystem\Projected;
@@ -105,6 +106,16 @@ class GeographicPointTest extends TestCase
         $from = GeographicPoint::create(new Degree(51.54105), new Degree(-0.12319), null, CoordinateReferenceSystem::fromEPSGCode(Geographic2D::EPSG_WGS_84));
         $to = GeographicPoint::create(new Degree(51.507977), new Degree(-0.124588), null, CoordinateReferenceSystem::fromEPSGCode(Geographic2D::EPSG_WGS_84));
         self::assertEqualsWithDelta(3679, $from->calculateDistance($to)->getValue(), 1);
+    }
+
+    public function testGeographicGeocentric(): void
+    {
+        $from = GeographicPoint::create(new Degree(53.80939444), new Degree(2.12955000), new Metre(73.0), CoordinateReferenceSystem::fromEPSGCode(Geographic3D::EPSG_WGS_84));
+        $to = $from->geographicGeocentric(CoordinateReferenceSystem::fromEPSGCode(Geocentric::EPSG_WGS_84));
+
+        self::assertEqualsWithDelta(3771793.968, $to->getX()->getValue(), 0.0001);
+        self::assertEqualsWithDelta(140253.342, $to->getY()->getValue(), 0.0001);
+        self::assertEqualsWithDelta(5124304.349, $to->getZ()->getValue(), 0.0001);
     }
 
     public function test2DCoordinateFrameRotation(): void

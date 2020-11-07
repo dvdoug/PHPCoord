@@ -12,7 +12,10 @@ use DateTime;
 use DateTimeImmutable;
 use DateTimeInterface;
 use InvalidArgumentException;
+use PHPCoord\CoordinateOperation\GeocentricValue;
 use PHPCoord\CoordinateReferenceSystem\Geocentric;
+use PHPCoord\CoordinateReferenceSystem\Geographic;
+use PHPCoord\CoordinateReferenceSystem\Geographic3D;
 use PHPCoord\CoordinateSystem\Axis;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPCoord\UnitOfMeasure\Angle\Radian;
@@ -131,6 +134,20 @@ class GeocentricPoint extends Point
     public function __toString(): string
     {
         return "({$this->x}, {$this->y}, {$this->z})";
+    }
+
+    /**
+     * Geographic/geocentric conversions
+     * In applications it is often concatenated with the 3- 7- or 10-parameter transformations 9603, 9606, 9607 or
+     * 9636 to form a geographic to geographic transformation.
+     */
+    public function geographicGeocentric(
+        Geographic $to
+    ): GeographicPoint {
+        $geocentricValue = new GeocentricValue($this->x, $this->y, $this->z, $to->getDatum());
+        $asGeographic = $geocentricValue->asGeographicValue();
+
+        return GeographicPoint::create($asGeographic->getLatitude(), $asGeographic->getLongitude(), $to instanceof Geographic3D ? $asGeographic->getHeight() : null, $to, $this->epoch);
     }
 
     /**

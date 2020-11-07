@@ -171,6 +171,20 @@ class GeographicPoint extends Point
     }
 
     /**
+     * Geographic/geocentric conversions
+     * In applications it is often concatenated with the 3- 7- or 10-parameter transformations 9603, 9606, 9607 or
+     * 9636 to form a geographic to geographic transformation.
+     */
+    public function geographicGeocentric(
+        Geocentric $to
+    ): GeocentricPoint {
+        $geographicValue = new GeographicValue($this->latitude, $this->longitude, $this->height, $this->crs->getDatum());
+        $asGeocentric = $geographicValue->asGeocentricValue();
+
+        return GeocentricPoint::create($asGeocentric->getX(), $asGeocentric->getY(), $asGeocentric->getZ(), $to, $this->epoch);
+    }
+
+    /**
      * Coordinate Frame rotation (geog2D/geog3D domain)
      * Note the analogy with the Position Vector tfm (codes 9606/1037) but beware of the differences!  The Position Vector
      * convention is used by IAG and recommended by ISO 19111. See methods 1032/1038/9607 for similar tfms operating
