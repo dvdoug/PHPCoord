@@ -11,6 +11,7 @@ namespace PHPCoord;
 use DateTime;
 use DateTimeImmutable;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
+use PHPCoord\CoordinateReferenceSystem\Vertical;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPCoord\UnitOfMeasure\UnitOfMeasure;
 use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
@@ -20,7 +21,7 @@ class VerticalPointTest extends TestCase
 {
     public function testVertical(): void
     {
-        $object = VerticalPoint::create(new Metre(123), CoordinateReferenceSystem::fromEPSGCode(CoordinateReferenceSystem::EPSG_VERTICAL_EGM2008_HEIGHT));
+        $object = VerticalPoint::create(new Metre(123), CoordinateReferenceSystem::fromEPSGCode(Vertical::EPSG_EGM2008_HEIGHT));
         self::assertEquals(123, $object->getHeight()->getValue());
         self::assertEquals(3855, $object->getCRS()->getEpsgCode());
         self::assertNull($object->getCoordinateEpoch());
@@ -47,14 +48,14 @@ class VerticalPointTest extends TestCase
 
     public function testVerticalWithFeetAsUnits(): void
     {
-        $object = VerticalPoint::create(UnitOfMeasureFactory::makeUnit(123, UnitOfMeasure::EPSG_LENGTH_FOOT), CoordinateReferenceSystem::fromEPSGCode(CoordinateReferenceSystem::EPSG_VERTICAL_EGM2008_HEIGHT));
+        $object = VerticalPoint::create(UnitOfMeasureFactory::makeUnit(123, UnitOfMeasure::EPSG_LENGTH_FOOT), CoordinateReferenceSystem::fromEPSGCode(Vertical::EPSG_EGM2008_HEIGHT));
         self::assertEquals(37.4904, $object->getHeight()->getValue());
     }
 
     public function testDistanceCalculation(): void
     {
-        $from = VerticalPoint::create(new Metre(100), CoordinateReferenceSystem::fromEPSGCode(CoordinateReferenceSystem::EPSG_VERTICAL_EGM2008_HEIGHT));
-        $to = VerticalPoint::create(new Metre(80), CoordinateReferenceSystem::fromEPSGCode(CoordinateReferenceSystem::EPSG_VERTICAL_EGM2008_HEIGHT));
+        $from = VerticalPoint::create(new Metre(100), CoordinateReferenceSystem::fromEPSGCode(Vertical::EPSG_EGM2008_HEIGHT));
+        $to = VerticalPoint::create(new Metre(80), CoordinateReferenceSystem::fromEPSGCode(Vertical::EPSG_EGM2008_HEIGHT));
         self::assertEqualsWithDelta(20, $from->calculateDistance($to)->getValue(), 0.000001);
     }
 }

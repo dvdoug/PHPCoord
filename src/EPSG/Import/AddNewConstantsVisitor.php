@@ -41,7 +41,7 @@ class AddNewConstantsVisitor extends NodeVisitorAbstract
                     $row['constant_name']
                 );
                 $name = preg_replace('/_+/', '_', $name);
-                $name = rtrim($name, '_');
+                $name = trim($name, '_');
 
                 $comment = '';
                 if ($row['constant_help'] || $row['deprecated']) {
