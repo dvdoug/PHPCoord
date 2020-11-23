@@ -440,6 +440,7 @@ class CoordinateOperationMethods
             self::EPSG_CARTESIAN_GRID_OFFSETS => 'offsets',
             self::EPSG_CASSINI_SOLDNER => 'cassiniSoldner',
             self::EPSG_COLOMBIA_URBAN => 'columbiaUrban',
+            self::EPSG_EQUAL_EARTH => 'equalEarth',
         ];
     }
 }

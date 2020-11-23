@@ -230,4 +230,15 @@ class ProjectedPointTest extends TestCase
         self::assertEqualsWithDelta(-1.295906970, $to->getLongitude()->asRadians()->getValue(), 0.0001);
         self::assertNull($to->getHeight());
     }
+
+    public function testEqualEarth(): void
+    {
+        $from = ProjectedPoint::createFromEastingNorthing(new Metre(-2390749.042), new Metre(4242849.758), CoordinateReferenceSystem::fromEPSGCode(Projected::EPSG_WGS_84_EQUAL_EARTH_AMERICAS));
+        $toCRS = CoordinateReferenceSystem::fromEPSGCode(Geographic2D::EPSG_WGS_84);
+        $to = $from->equalEarth($toCRS, new Degree(-90), new Metre(0), new Metre(0));
+
+        self::assertEqualsWithDelta(0.5944163293, $to->getLatitude()->asRadians()->getValue(), 0.0000000001);
+        self::assertEqualsWithDelta(-2.0454693977, $to->getLongitude()->asRadians()->getValue(), 0.000000001);
+        self::assertNull($to->getHeight());
+    }
 }

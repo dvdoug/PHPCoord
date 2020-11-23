@@ -304,4 +304,14 @@ class GeographicPointTest extends TestCase
         self::assertEqualsWithDelta(80859.033, $to->getEasting()->getValue(), 0.01);
         self::assertEqualsWithDelta(122543.174, $to->getNorthing()->getValue(), 0.01);
     }
+
+    public function testEqualEarth(): void
+    {
+        $from = GeographicPoint::create(new Radian(0.5944163293), new Radian(-2.0454693977), null, CoordinateReferenceSystem::fromEPSGCode(Geographic2D::EPSG_WGS_84));
+        $toCRS = CoordinateReferenceSystem::fromEPSGCode(Projected::EPSG_WGS_84_EQUAL_EARTH_AMERICAS);
+        $to = $from->equalEarth($toCRS, new Degree(-90), new Metre(0), new Metre(0));
+
+        self::assertEqualsWithDelta(-2390749.042, $to->getEasting()->getValue(), 0.001);
+        self::assertEqualsWithDelta(4242849.758, $to->getNorthing()->getValue(), 0.001);
+    }
 }
