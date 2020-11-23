@@ -18,6 +18,7 @@ use PHPCoord\Exception\InvalidAxesException;
 use PHPCoord\Exception\InvalidCoordinateReferenceSystemException;
 use PHPCoord\Exception\UnknownAxisException;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
+use PHPCoord\UnitOfMeasure\Angle\ArcSecond;
 use PHPCoord\UnitOfMeasure\Angle\Radian;
 use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Length\Metre;
@@ -768,5 +769,424 @@ class ProjectedPoint extends Point
         $asKrovak = self::create(new Metre(-$Yp), new Metre(-$Xp), new Metre($Yp), new Metre($Xp), $this->crs, $this->epoch);
 
         return $asKrovak->krovak($to, $latitudeOfProjectionCentre, $longitudeOfOrigin, $coLatitudeOfConeAxis, $latitudeOfPseudoStandardParallel, $scaleFactorOnPseudoStandardParallel, new Metre(0), new Metre(0));
+    }
+
+    /**
+     * Lambert Azimuthal Equal Area
+     * This is the ellipsoidal form of the projection.
+     */
+    public function lambertAzimuthalEqualArea(
+        Geographic $to,
+        Angle $latitudeOfNaturalOrigin,
+        Angle $longitudeOfNaturalOrigin,
+        Length $falseEasting,
+        Length $falseNorthing
+    ): GeographicPoint {
+        $easting = $this->easting->asMetres()->getValue() - $falseEasting->asMetres()->getValue();
+        $northing = $this->northing->asMetres()->getValue() - $falseNorthing->asMetres()->getValue();
+        $latitudeOrigin = $latitudeOfNaturalOrigin->asRadians()->getValue();
+        $longitudeOrigin = $longitudeOfNaturalOrigin->asRadians()->getValue();
+        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
+        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+        $e4 = $this->crs->getDatum()->getEllipsoid()->getEccentricity() ** 4;
+        $e6 = $this->crs->getDatum()->getEllipsoid()->getEccentricity() ** 6;
+
+        $qO = (1 - $e2) * ((sin($latitudeOrigin) / (1 - $e2 * sin($latitudeOrigin) ** 2)) - ((1 / (2 * $e)) * log((1 - $e * sin($latitudeOrigin)) / (1 + $e * sin($latitudeOrigin)))));
+        $qP = (1 - $e2) * ((1 / (1 - $e2)) - ((1 / (2 * $e)) * log((1 - $e) / (1 + $e))));
+        $betaO = self::asin($qO / $qP);
+        $Rq = $a * sqrt($qP / 2);
+        $D = $a * (cos($latitudeOrigin) / sqrt(1 - $e2 * sin($latitudeOrigin) ** 2)) / ($Rq * cos($betaO));
+        $rho = sqrt(($easting / $D) ** 2 + ($D * $northing) ** 2) ?: 1;
+        $C = 2 * self::asin($rho / (2 * $Rq));
+        $beta = self::asin(cos($C) * sin($betaO) + ($D * $northing * sin($C) * cos($betaO)) / $rho);
+
+        $latitude = $beta + (($e2 / 3 + 31 * $e4 / 180 + 517 * $e6 / 5040) * sin(2 * $beta)) + ((23 * $e4 / 360 + 251 * $e6 / 3780) * sin(4 * $beta)) + ((761 * $e6 / 45360) * sin(6 * $beta));
+        $longitude = $longitudeOrigin + atan2($easting * sin($C), $D * $rho * cos($betaO) * cos($C) - $D ** 2 * $northing * sin($betaO) * sin($C));
+
+        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+    }
+
+    /**
+     * Lambert Azimuthal Equal Area (Spherical)
+     * This is the spherical form of the projection.  See coordinate operation method Lambert Azimuthal Equal Area
+     * (code 9820) for ellipsoidal form.  Differences of several tens of metres result from comparison of the two
+     * methods.
+     */
+    public function lambertAzimuthalEqualAreaSpherical(
+        Geographic $to,
+        Angle $latitudeOfNaturalOrigin,
+        Angle $longitudeOfNaturalOrigin,
+        Length $falseEasting,
+        Length $falseNorthing
+    ): GeographicPoint {
+        $easting = $this->easting->asMetres()->getValue() - $falseEasting->asMetres()->getValue();
+        $northing = $this->northing->asMetres()->getValue() - $falseNorthing->asMetres()->getValue();
+        $latitudeOrigin = $latitudeOfNaturalOrigin->asRadians()->getValue();
+        $longitudeOrigin = $longitudeOfNaturalOrigin->asRadians()->getValue();
+        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+
+        $rho = sqrt($easting ** 2 + $northing ** 2) ?: 1;
+        $c = 2 * self::asin($rho / (2 * $a));
+
+        $latitude = self::asin(cos($c) * sin($latitudeOrigin) + ($northing * sin($c) * cos($latitudeOrigin) / $rho));
+
+        if ($latitudeOrigin === 90) {
+            $longitude = $longitudeOrigin + atan($easting / -$northing);
+        } elseif ($latitudeOrigin === -90) {
+            $longitude = $longitudeOrigin + atan($easting / $northing);
+        } else {
+            $longitudeDenominator = ($rho * cos($latitudeOrigin) * cos($c) - $northing * sin($latitudeOrigin) * sin($c));
+            $longitude = $longitudeOrigin + atan($easting * sin($c) / $longitudeDenominator);
+            if ($longitudeDenominator < 0) {
+                $longitude += M_PI;
+            }
+        }
+
+        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+    }
+
+    /**
+     * Lambert Conic Conformal (1SP).
+     */
+    public function lambertConicConformal1SP(
+        Geographic $to,
+        Angle $latitudeOfNaturalOrigin,
+        Angle $longitudeOfNaturalOrigin,
+        Scale $scaleFactorAtNaturalOrigin,
+        Length $falseEasting,
+        Length $falseNorthing
+    ): GeographicPoint {
+        $easting = $this->easting->asMetres()->getValue() - $falseEasting->asMetres()->getValue();
+        $northing = $this->northing->asMetres()->getValue() - $falseNorthing->asMetres()->getValue();
+        $latitudeOrigin = $latitudeOfNaturalOrigin->asRadians()->getValue();
+        $longitudeOrigin = $longitudeOfNaturalOrigin->asRadians()->getValue();
+        $scaleFactorOrigin = $scaleFactorAtNaturalOrigin->asUnity()->getValue();
+        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
+        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+
+        $mO = cos($latitudeOrigin) / sqrt(1 - $e2 * sin($latitudeOrigin) ** 2);
+        $tO = tan(M_PI / 4 - $latitudeOrigin / 2) / ((1 - $e * sin($latitudeOrigin)) / (1 + $e * sin($latitudeOrigin))) ** ($e / 2);
+        $n = sin($latitudeOrigin);
+        $F = $mO / ($n * $tO ** $n);
+        $rO = $a * $F * $tO ** $n * $scaleFactorOrigin;
+        $r = sqrt($easting ** 2 + ($rO - $northing) ** 2);
+        if ($n >= 0) {
+            $theta = atan2($easting, $rO - $northing);
+        } else {
+            $r = -$r;
+            $theta = atan2(-$easting, -($rO - $northing));
+        }
+
+        $t = ($r / ($a * $scaleFactorOrigin * $F)) ** (1 / $n);
+
+        $latitude = M_PI / (2 - 2 * atan($t));
+        do {
+            $latitudeN = $latitude;
+            $latitude = M_PI / 2 - 2 * atan($t * ((1 - $e * sin($latitude)) / (1 + $e * sin($latitude))) ** ($e / 2));
+        } while (abs($latitude - $latitudeN) >= self::NEWTON_RAPHSON_CONVERGENCE);
+
+        $longitude = $theta / $n + $longitudeOrigin;
+
+        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+    }
+
+    /**
+     * Lambert Conic Conformal (1SP).
+     */
+    public function lambertConicConformalWestOrientated(
+        Geographic $to,
+        Angle $latitudeOfNaturalOrigin,
+        Angle $longitudeOfNaturalOrigin,
+        Scale $scaleFactorAtNaturalOrigin,
+        Length $falseEasting,
+        Length $falseNorthing
+    ): GeographicPoint {
+        $westing = $falseEasting->asMetres()->getValue() - $this->westing->asMetres()->getValue();
+        $northing = $this->northing->asMetres()->getValue() - $falseNorthing->asMetres()->getValue();
+        $latitudeOrigin = $latitudeOfNaturalOrigin->asRadians()->getValue();
+        $longitudeOrigin = $longitudeOfNaturalOrigin->asRadians()->getValue();
+        $scaleFactorOrigin = $scaleFactorAtNaturalOrigin->asUnity()->getValue();
+        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
+        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+
+        $mO = cos($latitudeOrigin) / sqrt(1 - $e2 * sin($latitudeOrigin) ** 2);
+        $tO = tan(M_PI / 4 - $latitudeOrigin / 2) / ((1 - $e * sin($latitudeOrigin)) / (1 + $e * sin($latitudeOrigin))) ** ($e / 2);
+        $n = sin($latitudeOrigin);
+        $F = $mO / ($n * $tO ** $n);
+        $rO = $a * $F * $tO ** $n ** $scaleFactorOrigin;
+        $r = sqrt($westing ** 2 + ($rO - $northing) ** 2);
+        if ($n >= 0) {
+            $theta = atan2($westing, $rO - $northing);
+        } else {
+            $r = -$r;
+            $theta = atan2(-$westing, -($rO - $northing));
+        }
+
+        $t = ($r / ($a * $scaleFactorOrigin * $F)) ** (1 / $n);
+
+        $latitude = M_PI / (2 - 2 * atan($t));
+        do {
+            $latitudeN = $latitude;
+            $latitude = M_PI / 2 - 2 * atan($t * ((1 - $e * sin($latitude)) / (1 + $e * sin($latitude))) ** ($e / 2));
+        } while (abs($latitude - $latitudeN) >= self::NEWTON_RAPHSON_CONVERGENCE);
+
+        $longitude = $theta / $n + $longitudeOrigin;
+
+        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+    }
+
+    /**
+     * Lambert Conic Conformal (2SP).
+     */
+    public function lambertConicConformal2SP(
+        Geographic $to,
+        Angle $latitudeOfFalseOrigin,
+        Angle $longitudeOfFalseOrigin,
+        Angle $latitudeOf1stStandardParallel,
+        Angle $latitudeOf2ndStandardParallel,
+        Length $eastingAtFalseOrigin,
+        Length $northingAtFalseOrigin
+    ): GeographicPoint {
+        $easting = $this->easting->asMetres()->getValue() - $eastingAtFalseOrigin->asMetres()->getValue();
+        $northing = $this->northing->asMetres()->getValue() - $northingAtFalseOrigin->asMetres()->getValue();
+        $lambdaOrigin = $longitudeOfFalseOrigin->asRadians()->getValue();
+        $phiF = $latitudeOfFalseOrigin->asRadians()->getValue();
+        $phi1 = $latitudeOf1stStandardParallel->asRadians()->getValue();
+        $phi2 = $latitudeOf2ndStandardParallel->asRadians()->getValue();
+        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
+        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+
+        $m1 = cos($phi1) / sqrt(1 - $e2 * sin($phi1) ** 2);
+        $m2 = cos($phi2) / sqrt(1 - $e2 * sin($phi2) ** 2);
+        $t1 = tan(M_PI / 4 - $phi1 / 2) / ((1 - $e * sin($phi1)) / (1 + $e * sin($phi1))) ** ($e / 2);
+        $t2 = tan(M_PI / 4 - $phi2 / 2) / ((1 - $e * sin($phi2)) / (1 + $e * sin($phi2))) ** ($e / 2);
+        $tF = tan(M_PI / 4 - $phiF / 2) / ((1 - $e * sin($phiF)) / (1 + $e * sin($phiF))) ** ($e / 2);
+        $n = (log($m1) - log($m2)) / (log($t1) - log($t2));
+        $F = $m1 / ($n * $t1 ** $n);
+        $rF = $a * $F * $tF ** $n;
+        $r = sqrt($easting ** 2 + ($rF - $northing) ** 2);
+        if ($n < 0) {
+            $r = -$r;
+        }
+        $t = ($r / ($a * $F)) ** (1 / $n);
+        if ($n >= 0) {
+            $theta = atan2($easting, $rF - $northing);
+        } else {
+            $theta = atan2(-$easting, -($rF - $northing));
+        }
+
+        $latitude = M_PI / 2 - 2 * atan($t);
+        do {
+            $latitudeN = $latitude;
+            $latitude = M_PI / 2 - 2 * atan($t * ((1 - $e * sin($latitude)) / (1 + $e * sin($latitude))) ** ($e / 2));
+        } while (abs($latitude - $latitudeN) >= self::NEWTON_RAPHSON_CONVERGENCE);
+
+        $longitude = $theta / $n + $lambdaOrigin;
+
+        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+    }
+
+    /**
+     * Lambert Conic Conformal (2SP Michigan).
+     */
+    public function lambertConicConformal2SPMichigan(
+        Geographic $to,
+        Angle $latitudeOfFalseOrigin,
+        Angle $longitudeOfFalseOrigin,
+        Angle $latitudeOf1stStandardParallel,
+        Angle $latitudeOf2ndStandardParallel,
+        Length $eastingAtFalseOrigin,
+        Length $northingAtFalseOrigin,
+        Scale $ellipsoidScalingFactor
+    ): GeographicPoint {
+        $easting = $this->easting->asMetres()->getValue() - $eastingAtFalseOrigin->asMetres()->getValue();
+        $northing = $this->northing->asMetres()->getValue() - $northingAtFalseOrigin->asMetres()->getValue();
+        $lambdaOrigin = $longitudeOfFalseOrigin->asRadians()->getValue();
+        $phiF = $latitudeOfFalseOrigin->asRadians()->getValue();
+        $phi1 = $latitudeOf1stStandardParallel->asRadians()->getValue();
+        $phi2 = $latitudeOf2ndStandardParallel->asRadians()->getValue();
+        $K = $ellipsoidScalingFactor->asUnity()->getValue();
+        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
+        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+
+        $m1 = cos($phi1) / sqrt(1 - $e2 * sin($phi1) ** 2);
+        $m2 = cos($phi2) / sqrt(1 - $e2 * sin($phi2) ** 2);
+        $t1 = tan(M_PI / 4 - $phi1 / 2) / ((1 - $e * sin($phi1)) / (1 + $e * sin($phi1))) ** ($e / 2);
+        $t2 = tan(M_PI / 4 - $phi2 / 2) / ((1 - $e * sin($phi2)) / (1 + $e * sin($phi2))) ** ($e / 2);
+        $tF = tan(M_PI / 4 - $phiF / 2) / ((1 - $e * sin($phiF)) / (1 + $e * sin($phiF))) ** ($e / 2);
+        $n = (log($m1) - log($m2)) / (log($t1) - log($t2));
+        $F = $m1 / ($n * $t1 ** $n);
+        $rF = $a * $K * $F * $tF ** $n;
+        $r = sqrt($easting ** 2 + ($rF - $northing) ** 2);
+        if ($n < 0) {
+            $r = -$r;
+        }
+        $t = ($r / ($a * $K * $F)) ** (1 / $n);
+        if ($n >= 0) {
+            $theta = atan2($easting, $rF - $northing);
+        } else {
+            $theta = atan2(-$easting, -($rF - $northing));
+        }
+
+        $latitude = M_PI / 2 - 2 * atan($t);
+        do {
+            $latitudeN = $latitude;
+            $latitude = M_PI / 2 - 2 * atan($t * ((1 - $e * sin($latitude)) / (1 + $e * sin($latitude))) ** ($e / 2));
+        } while (abs($latitude - $latitudeN) >= self::NEWTON_RAPHSON_CONVERGENCE);
+
+        $longitude = $theta / $n + $lambdaOrigin;
+
+        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+    }
+
+    /**
+     * Lambert Conic Conformal (2SP Belgium)
+     * In 2000 this modification was replaced through use of the regular Lambert Conic Conformal (2SP) method [9802]
+     * with appropriately modified parameter values.
+     */
+    public function lambertConicConformal2SPBelgium(
+        Geographic $to,
+        Angle $latitudeOfFalseOrigin,
+        Angle $longitudeOfFalseOrigin,
+        Angle $latitudeOf1stStandardParallel,
+        Angle $latitudeOf2ndStandardParallel,
+        Length $eastingAtFalseOrigin,
+        Length $northingAtFalseOrigin
+    ): GeographicPoint {
+        $easting = $this->easting->asMetres()->getValue() - $eastingAtFalseOrigin->asMetres()->getValue();
+        $northing = $this->northing->asMetres()->getValue() - $northingAtFalseOrigin->asMetres()->getValue();
+        $lambdaOrigin = $longitudeOfFalseOrigin->asRadians()->getValue();
+        $phiF = $latitudeOfFalseOrigin->asRadians()->getValue();
+        $phi1 = $latitudeOf1stStandardParallel->asRadians()->getValue();
+        $phi2 = $latitudeOf2ndStandardParallel->asRadians()->getValue();
+        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
+        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+
+        $m1 = cos($phi1) / sqrt(1 - $e2 * sin($phi1) ** 2);
+        $m2 = cos($phi2) / sqrt(1 - $e2 * sin($phi2) ** 2);
+        $t1 = tan(M_PI / 4 - $phi1 / 2) / ((1 - $e * sin($phi1)) / (1 + $e * sin($phi1))) ** ($e / 2);
+        $t2 = tan(M_PI / 4 - $phi2 / 2) / ((1 - $e * sin($phi2)) / (1 + $e * sin($phi2))) ** ($e / 2);
+        $tF = tan(M_PI / 4 - $phiF / 2) / ((1 - $e * sin($phiF)) / (1 + $e * sin($phiF))) ** ($e / 2);
+        $n = (log($m1) - log($m2)) / (log($t1) - log($t2));
+        $F = $m1 / ($n * $t1 ** $n);
+        $rF = $a * $F * $tF ** $n;
+        if (is_nan($rF)) {
+            $rF = 0;
+        }
+        $r = sqrt($easting ** 2 + ($rF - $northing) ** 2);
+        if ($n < 0) {
+            $r = -$r;
+        }
+        $t = ($r / ($a * $F)) ** (1 / $n);
+        if ($n >= 0) {
+            $theta = atan2($easting, $rF - $northing);
+        } else {
+            $theta = atan2(-$easting, -($rF - $northing));
+        }
+
+        $latitude = M_PI / 2 - 2 * atan($t);
+        do {
+            $latitudeN = $latitude;
+            $latitude = M_PI / 2 - 2 * atan($t * ((1 - $e * sin($latitude)) / (1 + $e * sin($latitude))) ** ($e / 2));
+        } while (abs($latitude - $latitudeN) >= self::NEWTON_RAPHSON_CONVERGENCE);
+
+        $longitude = ($theta + (new ArcSecond(29.2985))->asRadians()->getValue()) / $n + $lambdaOrigin;
+
+        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+    }
+
+    /**
+     * Lambert Conic Near-Conformal
+     * The Lambert Near-Conformal projection is derived from the Lambert Conformal Conic projection by truncating the
+     * series expansion of the projection formulae.
+     */
+    public function lambertConicNearConformal(
+        Geographic $to,
+        Angle $latitudeOfNaturalOrigin,
+        Angle $longitudeOfNaturalOrigin,
+        Scale $scaleFactorAtNaturalOrigin,
+        Length $falseEasting,
+        Length $falseNorthing
+    ): GeographicPoint {
+        $easting = $this->easting->asMetres()->getValue() - $falseEasting->asMetres()->getValue();
+        $northing = $this->northing->asMetres()->getValue() - $falseNorthing->asMetres()->getValue();
+        $latitudeOrigin = $latitudeOfNaturalOrigin->asRadians()->getValue();
+        $longitudeOrigin = $longitudeOfNaturalOrigin->asRadians()->getValue();
+        $scaleFactorOrigin = $scaleFactorAtNaturalOrigin->asUnity()->getValue();
+        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+        $f = $this->crs->getDatum()->getEllipsoid()->getInverseFlattening();
+
+        $n = $f / (2 - $f);
+        $rhoO = $a * (1 - $e2) / (1 - $e2 * sin($latitudeOrigin) ** 2) ** (3 / 2);
+        $nuO = $a / sqrt(1 - $e2 * (sin($latitudeOrigin) ** 2));
+        $A = 1 / (6 * $rhoO * $nuO);
+        $APrime = $a * (1 - $n + 5 * ($n ** 2 - $n ** 3) / 4 + 81 * ($n ** 4 - $n ** 5) / 64);
+        $BPrime = 3 * $a * ($n - $n ** 2 + 7 * ($n ** 3 - $n ** 4) / 8 + 55 * $n ** 5 / 64) / 2;
+        $CPrime = 15 * $a * ($n ** 2 - $n ** 3 + 3 * ($n ** 4 - $n ** 5) / 4) / 16;
+        $DPrime = 35 * $a * ($n ** 3 - $n ** 4 + 11 * $n ** 5 / 16) / 48;
+        $EPrime = 315 * $a * ($n ** 4 - $n ** 5) / 512;
+        $rO = $scaleFactorOrigin * $nuO / tan($latitudeOrigin);
+        $sO = $APrime * $latitudeOrigin - $BPrime * sin(2 * $latitudeOrigin) + $CPrime * sin(4 * $latitudeOrigin) - $DPrime * sin(6 * $latitudeOrigin) + $EPrime * sin(8 * $latitudeOrigin);
+
+        $theta = atan2($easting, $rO - $northing);
+        $r = sqrt($easting ** 2 + ($rO - $northing) ** 2);
+        if ($latitudeOrigin < 0) {
+            $r = -$r;
+        }
+        $M = $rO - $r;
+
+        $m = $M;
+        do {
+            $mN = $m;
+            $m = $m - ($M - $scaleFactorOrigin * $m - $scaleFactorOrigin * $A * $m ** 3) / (-$scaleFactorOrigin - 3 * $scaleFactorOrigin * $A * $m ** 2);
+        } while (abs($m - $mN) >= self::NEWTON_RAPHSON_CONVERGENCE);
+
+        $latitude = $latitudeOrigin + $m / $A;
+        do {
+            $latitudeN = $latitude;
+            $latitude = $latitude + ($m + $sO - ($APrime * $latitude - $BPrime * sin(2 * $latitude) + $CPrime * sin(4 * $latitude) - $DPrime * sin(6 * $latitude) + $EPrime * sin(8 * $latitude))) / $APrime;
+        } while (abs($latitude - $latitudeN) >= self::NEWTON_RAPHSON_CONVERGENCE);
+
+        $longitude = $longitudeOrigin + $theta / sin($latitudeOrigin);
+
+        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+    }
+
+    /**
+     * Lambert Cylindrical Equal Area
+     * This is the ellipsoidal form of the projection.
+     */
+    public function lambertCylindricalEqualArea(
+        Geographic $to,
+        Angle $latitudeOf1stStandardParallel,
+        Angle $longitudeOfNaturalOrigin,
+        Length $falseEasting,
+        Length $falseNorthing
+    ): GeographicPoint {
+        $easting = $this->easting->asMetres()->getValue() - $falseEasting->asMetres()->getValue();
+        $northing = $this->northing->asMetres()->getValue() - $falseNorthing->asMetres()->getValue();
+        $latitudeFirstParallel = $latitudeOf1stStandardParallel->asRadians()->getValue();
+        $longitudeOrigin = $longitudeOfNaturalOrigin->asRadians()->getValue();
+        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
+        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+        $e4 = $this->crs->getDatum()->getEllipsoid()->getEccentricity() ** 4;
+        $e6 = $this->crs->getDatum()->getEllipsoid()->getEccentricity() ** 6;
+
+        $k = cos($latitudeFirstParallel) / sqrt(1 - $e2 * sin($latitudeFirstParallel) ** 2);
+        $qP = (1 - $e2) * ((sin(M_PI_2) / (1 - $e2 * sin(M_PI_2) ** 2)) - (1 / (2 * $e)) * log((1 - $e * sin(M_PI_2)) / (1 + $e * sin(M_PI_2))));
+        $beta = asin(2 * $northing * $k / ($a * $qP));
+
+        $latitude = $beta + (($e2 / 3 + 31 * $e4 / 180 + 517 * $e6 / 5040) * sin(2 * $beta)) + ((23 * $e4 / 360 + 251 * $e6 / 3780) * sin(4 * $beta)) + ((761 * $e6 / 45360) * sin(6 * $beta));
+        $longitude = $longitudeOrigin + $easting / ($a * $k);
+
+        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
     }
 }

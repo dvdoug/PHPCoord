@@ -14,6 +14,9 @@ use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Geographic3D;
 use PHPCoord\CoordinateReferenceSystem\Projected;
+use PHPCoord\CoordinateSystem\CoordinateSystem;
+use PHPCoord\Datum\Datum;
+use PHPCoord\Datum\Ellipsoid;
 use PHPCoord\Exception\InvalidCoordinateReferenceSystemException;
 use PHPCoord\UnitOfMeasure\Angle\ArcSecond;
 use PHPCoord\UnitOfMeasure\Angle\Degree;
@@ -395,6 +398,100 @@ class GeographicPointTest extends TestCase
 
         self::assertEqualsWithDelta(-5568990.91, $to->getEasting()->getValue(), 0.01);
         self::assertEqualsWithDelta(-6050538.71, $to->getNorthing()->getValue(), 0.01);
+    }
+
+    public function testLambertAzimuthalEqualArea(): void
+    {
+        $from = GeographicPoint::create(new Degree(50), new Degree(5), null, CoordinateReferenceSystem::fromEPSGCode(Geographic2D::EPSG_ETRS89));
+        $toCRS = CoordinateReferenceSystem::fromEPSGCode(Projected::EPSG_ETRS89_EXTENDED_LAEA_EUROPE);
+        $to = $from->lambertAzimuthalEqualArea($toCRS, new Degree(52), new Degree(10), new Metre(4321000), new Metre(3210000));
+
+        self::assertEqualsWithDelta(3962799.45, $to->getEasting()->getValue(), 0.01);
+        self::assertEqualsWithDelta(2999718.85, $to->getNorthing()->getValue(), 0.01);
+    }
+
+    public function testLambertAzimuthalEqualAreaSpherical(): void
+    {
+        $fromCRS = new Geographic2D(
+            0,
+            CoordinateSystem::fromEPSGCode(6422),
+            new Datum(
+                Datum::DATUM_TYPE_GEODETIC,
+                new Ellipsoid(
+                    new Metre(3),
+                    new Metre(3)
+                ),
+                null,
+                null
+            )
+        );
+        $from = GeographicPoint::create(new Degree(-20), new Degree(100), null, $fromCRS);
+
+        $toCRS = CoordinateReferenceSystem::fromEPSGCode(Projected::EPSG_ETRS89_EXTENDED_LAEA_EUROPE);
+        $to = $from->lambertAzimuthalEqualAreaSpherical($toCRS, new Degree(40), new Degree(-100), new Metre(1), new Metre(2));
+
+        self::assertEqualsWithDelta(-3.2339303, $to->getEasting()->getValue(), 0.0000001);
+        self::assertEqualsWithDelta(6.0257775, $to->getNorthing()->getValue(), 0.0000001);
+    }
+
+    public function testLambertConicConformal1SP(): void
+    {
+        $from = GeographicPoint::create(new Radian(0.31297535), new Radian(-1.34292061), null, CoordinateReferenceSystem::fromEPSGCode(Geographic2D::EPSG_JAD69));
+        $toCRS = CoordinateReferenceSystem::fromEPSGCode(Projected::EPSG_JAD69_JAMAICA_NATIONAL_GRID);
+        $to = $from->lambertConicConformal1SP($toCRS, new Degree(18), new Degree(-77), new Coefficient(1), new Metre(250000), new Metre(150000));
+
+        self::assertEqualsWithDelta(255966.59, $to->getEasting()->getValue(), 0.01);
+        self::assertEqualsWithDelta(142493.51, $to->getNorthing()->getValue(), 0.01);
+    }
+
+    public function testLambertConicConformal2SP(): void
+    {
+        $from = GeographicPoint::create(new Radian(0.49741884), new Radian(-1.67551608), null, CoordinateReferenceSystem::fromEPSGCode(Geographic2D::EPSG_NAD27));
+        $toCRS = CoordinateReferenceSystem::fromEPSGCode(Projected::EPSG_NAD27_TEXAS_SOUTH_CENTRAL);
+        $to = $from->lambertConicConformal2SP($toCRS, new Radian(0.48578331), new Radian(-1.72787596), new Radian(0.49538262), new Radian(0.52854388), UnitOfMeasureFactory::makeUnit(2000000, UnitOfMeasure::EPSG_LENGTH_US_SURVEY_FOOT), new Metre(0));
+
+        self::assertEqualsWithDelta(2963503.95, $to->getEasting()->getValue(), 0.01);
+        self::assertEqualsWithDelta(254759.84, $to->getNorthing()->getValue(), 0.01);
+    }
+
+    public function testLambertConicConformal2SPMichigan(): void
+    {
+        $from = GeographicPoint::create(new Radian(0.763581548), new Radian(-1.451532161), null, CoordinateReferenceSystem::fromEPSGCode(Geographic2D::EPSG_NAD27));
+        $toCRS = CoordinateReferenceSystem::fromEPSGCode(Projected::EPSG_NAD27_MICHIGAN_CENTRAL);
+        $to = $from->lambertConicConformal2SPMichigan($toCRS, new Radian(0.756018454), new Radian(-1.471894336), new Radian(0.771144641), new Radian(0.797615468), UnitOfMeasureFactory::makeUnit(2000000, UnitOfMeasure::EPSG_LENGTH_US_SURVEY_FOOT), new Metre(0), new Coefficient(1.0000382));
+
+        self::assertEqualsWithDelta(2308335.75, $to->getEasting()->getValue(), 0.01);
+        self::assertEqualsWithDelta(160210.49, $to->getNorthing()->getValue(), 0.01);
+    }
+
+    public function testLambertConicConformal2SPBelgium(): void
+    {
+        $from = GeographicPoint::create(new Radian(0.88452540), new Radian(0.10135773), null, CoordinateReferenceSystem::fromEPSGCode(Geographic2D::EPSG_BELGE_1972));
+        $toCRS = CoordinateReferenceSystem::fromEPSGCode(Projected::EPSG_BELGE_1972_BELGE_LAMBERT_72);
+        $to = $from->lambertConicConformal2SPBelgium($toCRS, new Radian(1.57079633), new Radian(0.07604294), new Radian(0.86975574), new Radian(0.89302680), new Metre(150000.01), new Metre(5400088.44));
+
+        self::assertEqualsWithDelta(251763.20, $to->getEasting()->getValue(), 0.01);
+        self::assertEqualsWithDelta(153034.10, $to->getNorthing()->getValue(), 0.01);
+    }
+
+    public function testLambertConicNearConformal(): void
+    {
+        $from = GeographicPoint::create(new Radian(0.654874806), new Radian(0.595793792), null, CoordinateReferenceSystem::fromEPSGCode(Geographic2D::EPSG_DEIR_EZ_ZOR));
+        $toCRS = CoordinateReferenceSystem::fromEPSGCode(Projected::EPSG_DEIR_EZ_ZOR_LEVANT_ZONE);
+        $to = $from->lambertConicNearConformal($toCRS, new Radian(0.604756586), new Radian(0.651880476), new Coefficient(0.99962560), new Metre(300000), new Metre(300000));
+
+        self::assertEqualsWithDelta(15707.96, $to->getEasting()->getValue(), 0.01);
+        self::assertEqualsWithDelta(623165.96, $to->getNorthing()->getValue(), 0.01);
+    }
+
+    public function testLambertCylindricalEqualArea(): void
+    {
+        $from = GeographicPoint::create(new Degree(10), new Degree(-78), null, CoordinateReferenceSystem::fromEPSGCode(Geographic2D::EPSG_NAD27));
+        $toCRS = CoordinateReferenceSystem::fromEPSGCode(Projected::EPSG_NAD27_ALABAMA_EAST);
+        $to = $from->lambertCylindricalEqualArea($toCRS, new Degree(5), new Degree(-75), new Metre(0), new Metre(0));
+
+        self::assertEqualsWithDelta(-332699.8, $to->getEasting()->asMetres()->getValue(), 0.1);
+        self::assertEqualsWithDelta(1104391.2, $to->getNorthing()->asMetres()->getValue(), 0.1);
     }
 
     public function testThreeDToTwoD(): void

@@ -886,6 +886,340 @@ class GeographicPoint extends Point
     }
 
     /**
+     * Lambert Azimuthal Equal Area
+     * This is the ellipsoidal form of the projection.
+     */
+    public function lambertAzimuthalEqualArea(
+        Projected $to,
+        Angle $latitudeOfNaturalOrigin,
+        Angle $longitudeOfNaturalOrigin,
+        Length $falseEasting,
+        Length $falseNorthing
+    ): ProjectedPoint {
+        $latitude = $this->latitude->asRadians()->getValue();
+        $longitude = $this->longitude->asRadians()->getValue();
+        $latitudeOrigin = $latitudeOfNaturalOrigin->asRadians()->getValue();
+        $longitudeOrigin = $longitudeOfNaturalOrigin->asRadians()->getValue();
+        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
+        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+
+        $q = (1 - $e2) * ((sin($latitude) / (1 - $e2 * sin($latitude) ** 2)) - ((1 / (2 * $e)) * log((1 - $e * sin($latitude)) / (1 + $e * sin($latitude)))));
+        $qO = (1 - $e2) * ((sin($latitudeOrigin) / (1 - $e2 * sin($latitudeOrigin) ** 2)) - ((1 / (2 * $e)) * log((1 - $e * sin($latitudeOrigin)) / (1 + $e * sin($latitudeOrigin)))));
+        $qP = (1 - $e2) * ((1 / (1 - $e2)) - ((1 / (2 * $e)) * log((1 - $e) / (1 + $e))));
+        $beta = asin($q / $qP);
+        $betaO = asin($qO / $qP);
+        $Rq = $a * sqrt($qP / 2);
+        $B = $Rq * sqrt(2 / (1 + sin($betaO) * sin($beta) + (cos($betaO) * cos($beta) * cos($longitude - $longitudeOrigin))));
+        $D = $a * (cos($latitudeOrigin) / sqrt(1 - $e2 * sin($latitudeOrigin) ** 2)) / ($Rq * cos($betaO));
+
+        $easting = $falseEasting->asMetres()->getValue() + (($B * $D) * (cos($beta) * sin($longitude - $longitudeOrigin)));
+        $northing = $falseNorthing->asMetres()->getValue() + ($B / $D) * ((cos($betaO) * sin($beta)) - (sin($betaO) * cos($beta) * cos($longitude - $longitudeOrigin)));
+
+        return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+    }
+
+    /**
+     * Lambert Azimuthal Equal Area (Spherical)
+     * This is the spherical form of the projection.  See coordinate operation method Lambert Azimuthal Equal Area
+     * (code 9820) for ellipsoidal form.  Differences of several tens of metres result from comparison of the two
+     * methods.
+     */
+    public function lambertAzimuthalEqualAreaSpherical(
+        Projected $to,
+        Angle $latitudeOfNaturalOrigin,
+        Angle $longitudeOfNaturalOrigin,
+        Length $falseEasting,
+        Length $falseNorthing
+    ): ProjectedPoint {
+        $latitude = $this->latitude->asRadians()->getValue();
+        $longitude = $this->longitude->asRadians()->getValue();
+        $latitudeOrigin = $latitudeOfNaturalOrigin->asRadians()->getValue();
+        $longitudeOrigin = $longitudeOfNaturalOrigin->asRadians()->getValue();
+        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+
+        $k = sqrt(2 / (1 + sin($latitudeOrigin) * sin($latitude) + cos($latitudeOrigin) * cos($latitude) * cos($longitude - $longitudeOrigin)));
+
+        $easting = $falseEasting->asMetres()->getValue() + ($a * $k * cos($latitude) * sin($longitude - $longitudeOrigin));
+        $northing = $falseNorthing->asMetres()->getValue() + ($a * $k * (cos($latitudeOrigin) * sin($latitude) - sin($latitudeOrigin) * cos($latitude) * cos($longitude - $longitudeOrigin)));
+
+        return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+    }
+
+    /**
+     * Lambert Conic Conformal (1SP).
+     */
+    public function lambertConicConformal1SP(
+        Projected $to,
+        Angle $latitudeOfNaturalOrigin,
+        Angle $longitudeOfNaturalOrigin,
+        Scale $scaleFactorAtNaturalOrigin,
+        Length $falseEasting,
+        Length $falseNorthing
+    ): ProjectedPoint {
+        $latitude = $this->latitude->asRadians()->getValue();
+        $longitude = $this->longitude->asRadians()->getValue();
+        $latitudeOrigin = $latitudeOfNaturalOrigin->asRadians()->getValue();
+        $longitudeOrigin = $longitudeOfNaturalOrigin->asRadians()->getValue();
+        $kO = $scaleFactorAtNaturalOrigin->asUnity()->getValue();
+        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
+        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+
+        $mO = cos($latitudeOrigin) / sqrt(1 - $e2 * sin($latitudeOrigin) ** 2);
+        $tO = tan(M_PI / 4 - $latitudeOrigin / 2) / ((1 - $e * sin($latitudeOrigin)) / (1 + $e * sin($latitudeOrigin))) ** ($e / 2);
+        $t = tan(M_PI / 4 - $latitude / 2) / ((1 - $e * sin($latitude)) / (1 + $e * sin($latitude))) ** ($e / 2);
+        $n = sin($latitudeOrigin);
+        $F = $mO / ($n * $tO ** $n);
+        $rO = $a * $F * $tO ** $n * $kO;
+        $r = $a * $F * $t ** $n * $kO;
+        $theta = $n * ($longitude - $longitudeOrigin);
+
+        $easting = $falseEasting->asMetres()->getValue() + $r * sin($theta);
+        $northing = $falseNorthing->asMetres()->getValue() + $rO - $r * cos($theta);
+
+        return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+    }
+
+    /**
+     * Lambert Conic Conformal (2SP Belgium)
+     * In 2000 this modification was replaced through use of the regular Lambert Conic Conformal (2SP) method [9802]
+     * with appropriately modified parameter values.
+     */
+    public function lambertConicConformal2SPBelgium(
+        Projected $to,
+        Angle $latitudeOfFalseOrigin,
+        Angle $longitudeOfFalseOrigin,
+        Angle $latitudeOf1stStandardParallel,
+        Angle $latitudeOf2ndStandardParallel,
+        Length $eastingAtFalseOrigin,
+        Length $northingAtFalseOrigin
+    ): ProjectedPoint {
+        $latitude = $this->latitude->asRadians()->getValue();
+        $longitude = $this->longitude->asRadians()->getValue();
+        $lambdaF = $longitudeOfFalseOrigin->asRadians()->getValue();
+        $phiF = $latitudeOfFalseOrigin->asRadians()->getValue();
+        $phi1 = $latitudeOf1stStandardParallel->asRadians()->getValue();
+        $phi2 = $latitudeOf2ndStandardParallel->asRadians()->getValue();
+        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
+        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+
+        $m1 = cos($phi1) / sqrt(1 - $e2 * sin($phi1) ** 2);
+        $m2 = cos($phi2) / sqrt(1 - $e2 * sin($phi2) ** 2);
+        $t = tan(M_PI / 4 - $latitude / 2) / ((1 - $e * sin($latitude)) / (1 + $e * sin($latitude))) ** ($e / 2);
+        $t1 = tan(M_PI / 4 - $phi1 / 2) / ((1 - $e * sin($phi1)) / (1 + $e * sin($phi1))) ** ($e / 2);
+        $t2 = tan(M_PI / 4 - $phi2 / 2) / ((1 - $e * sin($phi2)) / (1 + $e * sin($phi2))) ** ($e / 2);
+        $tF = tan(M_PI / 4 - $phiF / 2) / ((1 - $e * sin($phiF)) / (1 + $e * sin($phiF))) ** ($e / 2);
+        $n = (log($m1) - log($m2)) / (log($t1) - log($t2));
+        $F = $m1 / ($n * $t1 ** $n);
+        $r = $a * $F * $t ** $n;
+        $rF = $a * $F * $tF ** $n;
+        if (is_nan($rF)) {
+            $rF = 0;
+        }
+        $theta = ($n * ($longitude - $lambdaF)) - (new ArcSecond(29.2985))->asRadians()->getValue();
+
+        $easting = $eastingAtFalseOrigin->asMetres()->getValue() + $r * sin($theta);
+        $northing = $northingAtFalseOrigin->asMetres()->getValue() + $rF - $r * cos($theta);
+
+        return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+    }
+
+    /**
+     * Lambert Conic Conformal (2SP Michigan).
+     */
+    public function lambertConicConformal2SPMichigan(
+        Projected $to,
+        Angle $latitudeOfFalseOrigin,
+        Angle $longitudeOfFalseOrigin,
+        Angle $latitudeOf1stStandardParallel,
+        Angle $latitudeOf2ndStandardParallel,
+        Length $eastingAtFalseOrigin,
+        Length $northingAtFalseOrigin,
+        Scale $ellipsoidScalingFactor
+    ): ProjectedPoint {
+        $latitude = $this->latitude->asRadians()->getValue();
+        $longitude = $this->longitude->asRadians()->getValue();
+        $lambdaF = $longitudeOfFalseOrigin->asRadians()->getValue();
+        $phiF = $latitudeOfFalseOrigin->asRadians()->getValue();
+        $phi1 = $latitudeOf1stStandardParallel->asRadians()->getValue();
+        $phi2 = $latitudeOf2ndStandardParallel->asRadians()->getValue();
+        $K = $ellipsoidScalingFactor->asUnity()->getValue();
+        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
+        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+
+        $m1 = cos($phi1) / sqrt(1 - $e2 * sin($phi1) ** 2);
+        $m2 = cos($phi2) / sqrt(1 - $e2 * sin($phi2) ** 2);
+        $t = tan(M_PI / 4 - $latitude / 2) / ((1 - $e * sin($latitude)) / (1 + $e * sin($latitude))) ** ($e / 2);
+        $t1 = tan(M_PI / 4 - $phi1 / 2) / ((1 - $e * sin($phi1)) / (1 + $e * sin($phi1))) ** ($e / 2);
+        $t2 = tan(M_PI / 4 - $phi2 / 2) / ((1 - $e * sin($phi2)) / (1 + $e * sin($phi2))) ** ($e / 2);
+        $tF = tan(M_PI / 4 - $phiF / 2) / ((1 - $e * sin($phiF)) / (1 + $e * sin($phiF))) ** ($e / 2);
+        $n = (log($m1) - log($m2)) / (log($t1) - log($t2));
+        $F = $m1 / ($n * $t1 ** $n);
+        $r = $a * $K * $F * $t ** $n;
+        $rF = $a * $K * $F * $tF ** $n;
+        $theta = $n * ($longitude - $lambdaF);
+
+        $easting = $eastingAtFalseOrigin->asMetres()->getValue() + $r * sin($theta);
+        $northing = $northingAtFalseOrigin->asMetres()->getValue() + $rF - $r * cos($theta);
+
+        return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+    }
+
+    /**
+     * Lambert Conic Conformal (2SP).
+     */
+    public function lambertConicConformal2SP(
+        Projected $to,
+        Angle $latitudeOfFalseOrigin,
+        Angle $longitudeOfFalseOrigin,
+        Angle $latitudeOf1stStandardParallel,
+        Angle $latitudeOf2ndStandardParallel,
+        Length $eastingAtFalseOrigin,
+        Length $northingAtFalseOrigin
+    ): ProjectedPoint {
+        $latitude = $this->latitude->asRadians()->getValue();
+        $longitude = $this->longitude->asRadians()->getValue();
+        $lambdaF = $longitudeOfFalseOrigin->asRadians()->getValue();
+        $phiF = $latitudeOfFalseOrigin->asRadians()->getValue();
+        $phi1 = $latitudeOf1stStandardParallel->asRadians()->getValue();
+        $phi2 = $latitudeOf2ndStandardParallel->asRadians()->getValue();
+        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
+        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+
+        $m1 = cos($phi1) / sqrt(1 - $e2 * sin($phi1) ** 2);
+        $m2 = cos($phi2) / sqrt(1 - $e2 * sin($phi2) ** 2);
+        $t = tan(M_PI / 4 - $latitude / 2) / ((1 - $e * sin($latitude)) / (1 + $e * sin($latitude))) ** ($e / 2);
+        $t1 = tan(M_PI / 4 - $phi1 / 2) / ((1 - $e * sin($phi1)) / (1 + $e * sin($phi1))) ** ($e / 2);
+        $t2 = tan(M_PI / 4 - $phi2 / 2) / ((1 - $e * sin($phi2)) / (1 + $e * sin($phi2))) ** ($e / 2);
+        $tF = tan(M_PI / 4 - $phiF / 2) / ((1 - $e * sin($phiF)) / (1 + $e * sin($phiF))) ** ($e / 2);
+        $n = (log($m1) - log($m2)) / (log($t1) - log($t2));
+        $F = $m1 / ($n * $t1 ** $n);
+        $r = $a * $F * $t ** $n;
+        $rF = $a * $F * $tF ** $n;
+        $theta = $n * ($longitude - $lambdaF);
+
+        $easting = $eastingAtFalseOrigin->asMetres()->getValue() + $r * sin($theta);
+        $northing = $northingAtFalseOrigin->asMetres()->getValue() + $rF - $r * cos($theta);
+
+        return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+    }
+
+    /**
+     * Lambert Conic Conformal (West Orientated).
+     */
+    public function lambertConicConformalWestOrientated(
+        Projected $to,
+        Angle $latitudeOfNaturalOrigin,
+        Angle $longitudeOfNaturalOrigin,
+        Scale $scaleFactorAtNaturalOrigin,
+        Length $falseEasting,
+        Length $falseNorthing
+    ): ProjectedPoint {
+        $latitude = $this->latitude->asRadians()->getValue();
+        $longitude = $this->longitude->asRadians()->getValue();
+        $latitudeOrigin = $latitudeOfNaturalOrigin->asRadians()->getValue();
+        $longitudeOrigin = $longitudeOfNaturalOrigin->asRadians()->getValue();
+        $kO = $scaleFactorAtNaturalOrigin->asUnity()->getValue();
+        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
+        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+
+        $mO = cos($latitudeOrigin) / sqrt(1 - $e2 * sin($latitudeOrigin) ** 2);
+        $tO = tan(M_PI / 4 - $latitudeOrigin / 2) / ((1 - $e * sin($latitudeOrigin)) / (1 + $e * sin($latitudeOrigin))) ** ($e / 2);
+        $t = tan(M_PI / 4 - $latitude / 2) / ((1 - $e * sin($latitude)) / (1 + $e * sin($latitude))) ** ($e / 2);
+        $n = sin($latitudeOrigin);
+        $F = $mO / ($n * $tO ** $n);
+        $rO = $a * $F * $tO ** $n ** $kO;
+        $r = $a * $F * $t ** $n ** $kO;
+        $theta = $n * ($longitude - $longitudeOrigin);
+
+        $westing = $falseEasting->asMetres()->getValue() - $r * sin($theta);
+        $northing = $falseNorthing->asMetres()->getValue() + $rO - $r * cos($theta);
+
+        return ProjectedPoint::create(new Metre(-$westing), new Metre($northing), new Metre($westing), new Metre(-$northing), $to, $this->epoch);
+    }
+
+    /**
+     * Lambert Conic Near-Conformal
+     * The Lambert Near-Conformal projection is derived from the Lambert Conformal Conic projection by truncating the
+     * series expansion of the projection formulae.
+     */
+    public function lambertConicNearConformal(
+        Projected $to,
+        Angle $latitudeOfNaturalOrigin,
+        Angle $longitudeOfNaturalOrigin,
+        Scale $scaleFactorAtNaturalOrigin,
+        Length $falseEasting,
+        Length $falseNorthing
+    ): ProjectedPoint {
+        $latitude = $this->latitude->asRadians()->getValue();
+        $longitude = $this->longitude->asRadians()->getValue();
+        $latitudeOrigin = $latitudeOfNaturalOrigin->asRadians()->getValue();
+        $longitudeOrigin = $longitudeOfNaturalOrigin->asRadians()->getValue();
+        $kO = $scaleFactorAtNaturalOrigin->asUnity()->getValue();
+        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+        $f = $this->crs->getDatum()->getEllipsoid()->getInverseFlattening();
+
+        $n = $f / (2 - $f);
+        $rhoO = $a * (1 - $e2) / (1 - $e2 * sin($latitudeOrigin) ** 2) ** (3 / 2);
+        $nuO = $a / sqrt(1 - $e2 * (sin($latitudeOrigin) ** 2));
+        $A = 1 / (6 * $rhoO * $nuO);
+        $APrime = $a * (1 - $n + 5 * ($n ** 2 - $n ** 3) / 4 + 81 * ($n ** 4 - $n ** 5) / 64);
+        $BPrime = 3 * $a * ($n - $n ** 2 + 7 * ($n ** 3 - $n ** 4) / 8 + 55 * $n ** 5 / 64) / 2;
+        $CPrime = 15 * $a * ($n ** 2 - $n ** 3 + 3 * ($n ** 4 - $n ** 5) / 4) / 16;
+        $DPrime = 35 * $a * ($n ** 3 - $n ** 4 + 11 * $n ** 5 / 16) / 48;
+        $EPrime = 315 * $a * ($n ** 4 - $n ** 5) / 512;
+        $rO = $kO * $nuO / tan($latitudeOrigin);
+        $sO = $APrime * $latitudeOrigin - $BPrime * sin(2 * $latitudeOrigin) + $CPrime * sin(4 * $latitudeOrigin) - $DPrime * sin(6 * $latitudeOrigin) + $EPrime * sin(8 * $latitudeOrigin);
+        $s = $APrime * $latitude - $BPrime * sin(2 * $latitude) + $CPrime * sin(4 * $latitude) - $DPrime * sin(6 * $latitude) + $EPrime * sin(8 * $latitude);
+        $m = $s - $sO;
+        $M = $kO * ($m + $A * $m ** 3);
+        $r = $rO - $M;
+        $theta = ($longitude - $longitudeOrigin) * sin($latitudeOrigin);
+
+        $easting = $falseEasting->asMetres()->getValue() + $r * sin($theta);
+        $northing = $falseNorthing->asMetres()->getValue() + $M + $r * sin($theta) * tan($theta / 2);
+
+        return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+    }
+
+    /**
+     * Lambert Cylindrical Equal Area
+     * This is the ellipsoidal form of the projection.
+     */
+    public function lambertCylindricalEqualArea(
+        Projected $to,
+        Angle $latitudeOf1stStandardParallel,
+        Angle $longitudeOfNaturalOrigin,
+        Length $falseEasting,
+        Length $falseNorthing
+    ): ProjectedPoint {
+        $latitude = $this->latitude->asRadians()->getValue();
+        $longitude = $this->longitude->asRadians()->getValue();
+        $latitudeFirstParallel = $latitudeOf1stStandardParallel->asRadians()->getValue();
+        $longitudeOrigin = $longitudeOfNaturalOrigin->asRadians()->getValue();
+        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
+        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+
+        $k = cos($latitudeFirstParallel) / sqrt(1 - $e2 * sin($latitudeFirstParallel) ** 2);
+        $q = (1 - $e2) * ((sin($latitude) / (1 - $e2 * sin($latitude) ** 2)) - (1 / (2 * $e)) * log((1 - $e * sin($latitude)) / (1 + $e * sin($latitude))));
+
+        $x = $a * $k * ($longitude - $longitudeOrigin);
+        $y = $a * $q / (2 * $k);
+
+        $easting = $falseEasting->asMetres()->getValue() + $x;
+        $northing = $falseNorthing->asMetres()->getValue() + $y;
+
+        return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+    }
+
+    /**
      * Geographic3D to 2D conversion.
      */
     public function threeDToTwoD(
