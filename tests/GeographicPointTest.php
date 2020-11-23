@@ -577,4 +577,24 @@ class GeographicPointTest extends TestCase
         self::assertEqualsWithDelta(-11169055.58, $to->getEasting()->asMetres()->getValue(), 0.01);
         self::assertEqualsWithDelta(2800000.00, $to->getNorthing()->asMetres()->getValue(), 0.01);
     }
+
+    public function testMercatorVariantA(): void
+    {
+        $from = GeographicPoint::create(new Degree(-3), new Degree(120), null, Geographic2D::fromSRID(Geographic2D::EPSG_MAKASSAR));
+        $toCRS = Projected::fromSRID(Projected::EPSG_MAKASSAR_NEIEZ);
+        $to = $from->mercatorVariantA($toCRS, new Degree(0), new Degree(110), new Unity(0.997), new Metre(3900000), new Metre(900000));
+
+        self::assertEqualsWithDelta(5009726.58, $to->getEasting()->asMetres()->getValue(), 0.01);
+        self::assertEqualsWithDelta(569150.82, $to->getNorthing()->asMetres()->getValue(), 0.01);
+    }
+
+    public function testMercatorVariantB(): void
+    {
+        $from = GeographicPoint::create(new Degree(53), new Degree(53), null, Geographic2D::fromSRID(Geographic2D::EPSG_PULKOVO_1942));
+        $toCRS = Projected::fromSRID(Projected::EPSG_PULKOVO_1942_CASPIAN_SEA_MERCATOR);
+        $to = $from->mercatorVariantB($toCRS, new Degree(42), new Degree(51), new Metre(0), new Metre(0));
+
+        self::assertEqualsWithDelta(165704.29, $to->getEasting()->asMetres()->getValue(), 0.01);
+        self::assertEqualsWithDelta(5171848.07, $to->getNorthing()->asMetres()->getValue(), 0.01);
+    }
 }

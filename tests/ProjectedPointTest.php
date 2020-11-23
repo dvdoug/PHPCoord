@@ -28,6 +28,7 @@ use PHPCoord\UnitOfMeasure\Length\Link;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPCoord\UnitOfMeasure\Length\USSurveyFoot;
 use PHPCoord\UnitOfMeasure\Scale\Coefficient;
+use PHPCoord\UnitOfMeasure\Scale\Unity;
 use PHPUnit\Framework\TestCase;
 
 class ProjectedPointTest extends TestCase
@@ -521,5 +522,25 @@ class ProjectedPointTest extends TestCase
 
         self::assertEqualsWithDelta(299905.06, $to->getEasting()->asMetres()->getValue(), 0.01);
         self::assertEqualsWithDelta(4499796.51, $to->getNorthing()->asMetres()->getValue(), 0.01);
+    }
+
+    public function testMercatorVariantA(): void
+    {
+        $from = ProjectedPoint::createFromEastingNorthing(new Metre(5009726.58), new Metre(569150.82), Projected::fromSRID(Projected::EPSG_MAKASSAR_NEIEZ));
+        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_MAKASSAR);
+        $to = $from->mercatorVariantA($toCRS, new Degree(0), new Degree(110), new Unity(0.997), new Metre(3900000), new Metre(900000));
+
+        self::assertEqualsWithDelta(-3, $to->getLatitude()->getValue(), 0.0000001);
+        self::assertEqualsWithDelta(120, $to->getLongitude()->getValue(), 0.0000001);
+    }
+
+    public function testMercatorVariantB(): void
+    {
+        $from = ProjectedPoint::createFromEastingNorthing(new Metre(165704.29), new Metre(5171848.07), Projected::fromSRID(Projected::EPSG_PULKOVO_1942_CASPIAN_SEA_MERCATOR));
+        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_PULKOVO_1942);
+        $to = $from->mercatorVariantB($toCRS, new Degree(42), new Degree(51), new Metre(0), new Metre(0));
+
+        self::assertEqualsWithDelta(53, $to->getLatitude()->getValue(), 0.0000001);
+        self::assertEqualsWithDelta(53, $to->getLongitude()->getValue(), 0.0000001);
     }
 }

@@ -472,6 +472,8 @@ class CoordinateOperationMethods
             self::EPSG_POLAR_STEREOGRAPHIC_VARIANT_C => 'polarStereographicVariantC',
             self::EPSG_POPULAR_VISUALISATION_PSEUDO_MERCATOR => 'popularVisualisationPseudoMercator',
             self::EPSG_SIMILARITY_TRANSFORMATION => 'similarityTransformation',
+            self::EPSG_MERCATOR_VARIANT_A => 'mercatorVariantA',
+            self::EPSG_MERCATOR_VARIANT_B => 'mercatorVariantB',
         ];
     }
 }

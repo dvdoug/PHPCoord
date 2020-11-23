@@ -1479,6 +1479,63 @@ class GeographicPoint extends Point
     }
 
     /**
+     * Mercator (variant A)
+     * Note that in these formulas the parameter latitude of natural origin (latO) is not used. However for this
+     * Mercator (variant A) method the EPSG dataset includes this parameter, which must have a value of zero, for
+     * completeness in CRS labelling.
+     */
+    public function mercatorVariantA(
+        Projected $to,
+        Angle $latitudeOfNaturalOrigin,
+        Angle $longitudeOfNaturalOrigin,
+        Scale $scaleFactorAtNaturalOrigin,
+        Length $falseEasting,
+        Length $falseNorthing
+    ): ProjectedPoint {
+        $latitude = $this->latitude->asRadians()->getValue();
+        $longitude = $this->longitude->asRadians()->getValue();
+
+        $latitudeOrigin = $latitudeOfNaturalOrigin->asRadians()->getValue();
+        $longitudeOrigin = $longitudeOfNaturalOrigin->asRadians()->getValue();
+        $kO = $scaleFactorAtNaturalOrigin->asUnity()->getValue();
+
+        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
+
+        $easting = $falseEasting->asMetres()->getValue() + $a * $kO * ($longitude - $longitudeOrigin);
+        $northing = $falseNorthing->asMetres()->getValue() + $a * $kO * log(tan(M_PI / 4 + $latitude / 2) * ((1 - $e * sin($latitude)) / (1 + $e * sin($latitude))) ** ($e / 2));
+
+        return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+    }
+
+    /**
+     * Mercator (variant B)
+     * Used for most nautical charts.
+     */
+    public function mercatorVariantB(
+        Projected $to,
+        Angle $latitudeOf1stStandardParallel,
+        Angle $longitudeOfNaturalOrigin,
+        Length $falseEasting,
+        Length $falseNorthing
+    ): ProjectedPoint {
+        $latitude = $this->latitude->asRadians()->getValue();
+        $longitude = $this->longitude->asRadians()->getValue();
+        $longitudeOrigin = $longitudeOfNaturalOrigin->asRadians()->getValue();
+        $firstStandardParallel = $latitudeOf1stStandardParallel->asRadians()->getValue();
+        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
+        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+
+        $scaleFactorOrigin = cos($firstStandardParallel) / sqrt(1 - $e2 * sin($firstStandardParallel) ** 2);
+
+        $easting = $falseEasting->asMetres()->getValue() + $a * $scaleFactorOrigin * ($longitude - $longitudeOrigin);
+        $northing = $falseNorthing->asMetres()->getValue() + $a * $scaleFactorOrigin * log(tan(M_PI / 4 + $latitude / 2) * ((1 - $e * sin($latitude)) / (1 + $e * sin($latitude))) ** ($e / 2));
+
+        return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+    }
+
+    /**
      * Geographic3D to 2D conversion.
      */
     public function threeDToTwoD(
