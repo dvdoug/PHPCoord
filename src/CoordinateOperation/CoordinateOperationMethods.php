@@ -447,6 +447,10 @@ class CoordinateOperationMethods
             self::EPSG_EQUIDISTANT_CYLINDRICAL => 'equidistantCylindrical',
             self::EPSG_GEOGRAPHIC3D_TO_2D_CONVERSION => 'threeDToTwoD',
             self::EPSG_GUAM_PROJECTION => 'guamProjection',
+            self::EPSG_KROVAK => 'krovak',
+            self::EPSG_KROVAK_NORTH_ORIENTATED => 'krovak',
+            self::EPSG_KROVAK_MODIFIED => 'krovakModified',
+            self::EPSG_KROVAK_MODIFIED_NORTH_ORIENTATED => 'krovakModified',
         ];
     }
 }

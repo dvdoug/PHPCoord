@@ -22,6 +22,7 @@ use PHPCoord\UnitOfMeasure\Angle\Radian;
 use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPCoord\UnitOfMeasure\Scale\Coefficient;
+use PHPCoord\UnitOfMeasure\Scale\Scale;
 use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
 
 /**
@@ -666,5 +667,106 @@ class ProjectedPoint extends Point
         $longitude = $longitudeOrigin + $easting * sqrt(1 - $e2 * sin($latitude) ** 2) / ($a * cos($latitude));
 
         return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+    }
+
+    /**
+     * Krovak.
+     */
+    public function krovak(
+        Geographic $to,
+        Angle $latitudeOfProjectionCentre,
+        Angle $longitudeOfOrigin,
+        Angle $coLatitudeOfConeAxis,
+        Angle $latitudeOfPseudoStandardParallel,
+        Scale $scaleFactorOnPseudoStandardParallel,
+        Length $falseEasting,
+        Length $falseNorthing
+    ): GeographicPoint {
+        $longitudeOffset = $this->crs->getDatum()->getPrimeMeridian()->getGreenwichLongitude()->asRadians()->getValue() - $to->getDatum()->getPrimeMeridian()->getGreenwichLongitude()->asRadians()->getValue();
+        $westing = $this->westing->asMetres()->getValue() - $falseEasting->asMetres()->getValue();
+        $southing = $this->southing->asMetres()->getValue() - $falseNorthing->asMetres()->getValue();
+        $latitudeC = $latitudeOfProjectionCentre->asRadians()->getValue();
+        $longitudeO = $longitudeOfOrigin->asRadians()->getValue();
+        $alphaC = $coLatitudeOfConeAxis->asRadians()->getValue();
+        $latitudeP = $latitudeOfPseudoStandardParallel->asRadians()->getValue();
+        $kP = $scaleFactorOnPseudoStandardParallel->asUnity()->getValue();
+        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
+        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+
+        $A = $a * sqrt(1 - $e2) / (1 - $e2 * sin($latitudeC) ** 2);
+        $B = sqrt(1 + $e2 * cos($latitudeC) ** 4 / (1 - $e2));
+        $upsilonO = self::asin(sin($latitudeC) / $B);
+        $tO = tan(M_PI / 4 + $upsilonO / 2) * ((1 + $e * sin($latitudeC)) / (1 - $e * sin($latitudeC))) ** ($e * $B / 2) / (tan(M_PI / 4 + $latitudeC / 2) ** $B);
+        $n = sin($latitudeP);
+        $rO = $kP * $A / tan($latitudeP);
+
+        $r = sqrt($southing ** 2 + $westing ** 2) ?: 1;
+        $theta = atan2($westing, $southing);
+        $D = $theta / sin($latitudeP);
+        $T = 2 * (atan(($rO / $r) ** (1 / $n) * tan(M_PI / 4 + $latitudeP / 2)) - M_PI / 4);
+        $U = self::asin(cos($alphaC) * sin($T) - sin($alphaC) * cos($T) * cos($D));
+        $V = self::asin(cos($T) * sin($D) / cos($U));
+
+        $latitude = $U;
+        do {
+            $latitudeN = $latitude;
+            $latitude = 2 * (atan($tO ** (-1 / $B) * tan($U / 2 + M_PI / 4) ** (1 / $B) * ((1 + $e * sin($latitude)) / (1 - $e * sin($latitude))) ** ($e / 2)) - M_PI / 4);
+        } while (abs($latitude - $latitudeN) >= self::NEWTON_RAPHSON_CONVERGENCE);
+
+        $longitude = $longitudeO + $longitudeOffset - $V / $B;
+
+        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+    }
+
+    /**
+     * Krovak Modified
+     * Incorporates a polynomial transformation which is defined to be exact and for practical purposes is considered
+     * to be a map projection.
+     */
+    public function krovakModified(
+        Geographic $to,
+        Angle $latitudeOfProjectionCentre,
+        Angle $longitudeOfOrigin,
+        Angle $coLatitudeOfConeAxis,
+        Angle $latitudeOfPseudoStandardParallel,
+        Scale $scaleFactorOnPseudoStandardParallel,
+        Length $falseEasting,
+        Length $falseNorthing,
+        Length $ordinate1OfEvaluationPoint,
+        Length $ordinate2OfEvaluationPoint,
+        Coefficient $C1,
+        Coefficient $C2,
+        Coefficient $C3,
+        Coefficient $C4,
+        Coefficient $C5,
+        Coefficient $C6,
+        Coefficient $C7,
+        Coefficient $C8,
+        Coefficient $C9,
+        Coefficient $C10
+    ): GeographicPoint {
+        $Xr = $this->getSouthing()->asMetres()->getValue() - $falseNorthing->asMetres()->getValue() - $ordinate1OfEvaluationPoint->asMetres()->getValue();
+        $Yr = $this->getWesting()->asMetres()->getValue() - $falseEasting->asMetres()->getValue() - $ordinate2OfEvaluationPoint->asMetres()->getValue();
+        $c1 = $C1->asUnity()->getValue();
+        $c2 = $C2->asUnity()->getValue();
+        $c3 = $C3->asUnity()->getValue();
+        $c4 = $C4->asUnity()->getValue();
+        $c5 = $C5->asUnity()->getValue();
+        $c6 = $C6->asUnity()->getValue();
+        $c7 = $C7->asUnity()->getValue();
+        $c8 = $C8->asUnity()->getValue();
+        $c9 = $C9->asUnity()->getValue();
+        $c10 = $C10->asUnity()->getValue();
+
+        $dX = $c1 + $c3 * $Xr - $c4 * $Yr - 2 * $c6 * $Xr * $Yr + $c5 * ($Xr ** 2 - $Yr ** 2) + $c7 * $Xr * ($Xr ** 2 - 3 * $Yr ** 2) - $c8 * $Yr * (3 * $Xr ** 2 - $Yr ** 2) + 4 * $c9 * $Xr * $Yr * ($Xr ** 2 - $Yr ** 2) + $c10 * ($Xr ** 4 + $Yr ** 4 - 6 * $Xr ** 2 * $Yr ** 2);
+        $dY = $c2 + $c3 * $Yr + $c4 * $Xr + 2 * $c5 * $Xr * $Yr + $c6 * ($Xr ** 2 - $Yr ** 2) + $c8 * $Xr * ($Xr ** 2 - 3 * $Yr ** 2) + $c7 * $Yr * (3 * $Xr ** 2 - $Yr ** 2) - 4 * $c10 * $Xr * $Yr * ($Xr ** 2 - $Yr ** 2) + $c9 * ($Xr ** 4 + $Yr ** 4 - 6 * $Xr ** 2 * $Yr ** 2);
+
+        $Xp = $this->getSouthing()->asMetres()->getValue() - $falseNorthing->asMetres()->getValue() + $dX;
+        $Yp = $this->getWesting()->asMetres()->getValue() - $falseEasting->asMetres()->getValue() + $dY;
+
+        $asKrovak = self::create(new Metre(-$Yp), new Metre(-$Xp), new Metre($Yp), new Metre($Xp), $this->crs, $this->epoch);
+
+        return $asKrovak->krovak($to, $latitudeOfProjectionCentre, $longitudeOfOrigin, $coLatitudeOfConeAxis, $latitudeOfPseudoStandardParallel, $scaleFactorOnPseudoStandardParallel, new Metre(0), new Metre(0));
     }
 }

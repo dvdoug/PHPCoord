@@ -19,6 +19,7 @@ use PHPCoord\UnitOfMeasure\Angle\ArcSecond;
 use PHPCoord\UnitOfMeasure\Angle\Degree;
 use PHPCoord\UnitOfMeasure\Angle\Radian;
 use PHPCoord\UnitOfMeasure\Length\Metre;
+use PHPCoord\UnitOfMeasure\Scale\Coefficient;
 use PHPCoord\UnitOfMeasure\Scale\Unity;
 use PHPCoord\UnitOfMeasure\UnitOfMeasure;
 use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
@@ -354,6 +355,46 @@ class GeographicPointTest extends TestCase
         self::assertEqualsWithDelta(38.14367013, $to->getLatitude()->getValue(), 0.000001);
         self::assertEqualsWithDelta(23.80512601, $to->getLongitude()->getValue(), 0.000001);
         self::assertEqualsWithDelta(175.93046824727, $to->getHeight()->getValue(), 0.00001);
+    }
+
+    public function testKrovak(): void
+    {
+        $from = GeographicPoint::create(new Degree(50.20901167), new Degree(16.84977194), null, CoordinateReferenceSystem::fromEPSGCode(Geographic2D::EPSG_S_JTSK));
+        $toCRS = CoordinateReferenceSystem::fromEPSGCode(Projected::EPSG_S_JTSK_FERRO_KROVAK);
+        $to = $from->krovak($toCRS, new Radian(0.863937979), new Radian(0.741764932), new Radian(0.528627763), new Radian(1.370083463), new Coefficient(0.9999), new Metre(0), new Metre(0));
+
+        self::assertEqualsWithDelta(568991.00, $to->getWesting()->getValue(), 0.01);
+        self::assertEqualsWithDelta(1050538.64, $to->getSouthing()->getValue(), 0.01);
+    }
+
+    public function testKrovakNorthOrientated(): void
+    {
+        $from = GeographicPoint::create(new Degree(50.20901167), new Degree(16.84977194), null, CoordinateReferenceSystem::fromEPSGCode(Geographic2D::EPSG_S_JTSK));
+        $toCRS = CoordinateReferenceSystem::fromEPSGCode(Projected::EPSG_S_JTSK_FERRO_KROVAK_EAST_NORTH);
+        $to = $from->krovak($toCRS, new Radian(0.863937979), new Radian(0.741764932), new Radian(0.528627763), new Radian(1.370083463), new Coefficient(0.9999), new Metre(0), new Metre(0));
+
+        self::assertEqualsWithDelta(-568991.00, $to->getEasting()->getValue(), 0.01);
+        self::assertEqualsWithDelta(-1050538.64, $to->getNorthing()->getValue(), 0.01);
+    }
+
+    public function testKrovakModified(): void
+    {
+        $from = GeographicPoint::create(new Degree(50.20901167), new Degree(16.84977194), null, CoordinateReferenceSystem::fromEPSGCode(Geographic2D::EPSG_S_JTSK_05));
+        $toCRS = CoordinateReferenceSystem::fromEPSGCode(Projected::EPSG_S_JTSK_05_FERRO_MODIFIED_KROVAK);
+        $to = $from->krovakModified($toCRS, new Radian(0.863937979), new Radian(0.741764932), new Radian(0.528627763), new Radian(1.370083463), new Coefficient(0.9999), new Metre(5000000), new Metre(5000000), new Metre(1089000), new Metre(654000), new Coefficient(2.946529277E-02), new Coefficient(2.515965696E-02), new Coefficient(1.193845912E-07), new Coefficient(-4.668270147E-07), new Coefficient(9.233980362E-12), new Coefficient(1.523735715E-12), new Coefficient(1.696780024E-18), new Coefficient(4.408314235E-18), new Coefficient(-8.331083518E-24), new Coefficient(-3.689471323E-24));
+
+        self::assertEqualsWithDelta(5568990.91, $to->getWesting()->getValue(), 0.01);
+        self::assertEqualsWithDelta(6050538.71, $to->getSouthing()->getValue(), 0.01);
+    }
+
+    public function testKrovakModifiedNorthOrientated(): void
+    {
+        $from = GeographicPoint::create(new Degree(50.20901167), new Degree(16.84977194), null, CoordinateReferenceSystem::fromEPSGCode(Geographic2D::EPSG_S_JTSK_05));
+        $toCRS = CoordinateReferenceSystem::fromEPSGCode(Projected::EPSG_S_JTSK_05_FERRO_MODIFIED_KROVAK_EAST_NORTH);
+        $to = $from->krovakModified($toCRS, new Radian(0.863937979), new Radian(0.741764932), new Radian(0.528627763), new Radian(1.370083463), new Coefficient(0.9999), new Metre(5000000), new Metre(5000000), new Metre(1089000), new Metre(654000), new Coefficient(2.946529277E-02), new Coefficient(2.515965696E-02), new Coefficient(1.193845912E-07), new Coefficient(-4.668270147E-07), new Coefficient(9.233980362E-12), new Coefficient(1.523735715E-12), new Coefficient(1.696780024E-18), new Coefficient(4.408314235E-18), new Coefficient(-8.331083518E-24), new Coefficient(-3.689471323E-24));
+
+        self::assertEqualsWithDelta(-5568990.91, $to->getEasting()->getValue(), 0.01);
+        self::assertEqualsWithDelta(-6050538.71, $to->getNorthing()->getValue(), 0.01);
     }
 
     public function testThreeDToTwoD(): void

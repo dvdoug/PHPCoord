@@ -274,4 +274,44 @@ class ProjectedPointTest extends TestCase
         self::assertEqualsWithDelta(3.141493807, $to->getLongitude()->asRadians()->getValue(), 0.0001);
         self::assertNull($to->getHeight());
     }
+
+    public function testKrovak(): void
+    {
+        $from = ProjectedPoint::createFromWestingSouthing(new Metre(568991.00), new Metre(1050538.64), CoordinateReferenceSystem::fromEPSGCode(Projected::EPSG_S_JTSK_FERRO_KROVAK));
+        $toCRS = CoordinateReferenceSystem::fromEPSGCode(Geographic2D::EPSG_S_JTSK);
+        $to = $from->krovak($toCRS, new Radian(0.863937979), new Radian(0.741764932), new Radian(0.528627763), new Radian(1.370083463), new Coefficient(0.9999), new Metre(0), new Metre(0));
+
+        self::assertEqualsWithDelta(50.20901167, $to->getLatitude()->getValue(), 0.0000001);
+        self::assertEqualsWithDelta(16.84977194, $to->getLongitude()->getValue(), 0.0000001);
+    }
+
+    public function testKrovakNorthOrientated(): void
+    {
+        $from = ProjectedPoint::createFromEastingNorthing(new Metre(-568991.00), new Metre(-1050538.64), CoordinateReferenceSystem::fromEPSGCode(Projected::EPSG_S_JTSK_FERRO_KROVAK_EAST_NORTH));
+        $toCRS = CoordinateReferenceSystem::fromEPSGCode(Geographic2D::EPSG_S_JTSK);
+        $to = $from->krovak($toCRS, new Radian(0.863937979), new Radian(0.741764932), new Radian(0.528627763), new Radian(1.370083463), new Coefficient(0.9999), new Metre(0), new Metre(0));
+
+        self::assertEqualsWithDelta(50.20901167, $to->getLatitude()->getValue(), 0.0000001);
+        self::assertEqualsWithDelta(16.84977194, $to->getLongitude()->getValue(), 0.0000001);
+    }
+
+    public function testKrovakModified(): void
+    {
+        $from = ProjectedPoint::createFromWestingSouthing(new Metre(5568990.91), new Metre(6050538.71), CoordinateReferenceSystem::fromEPSGCode(Projected::EPSG_S_JTSK_05_FERRO_MODIFIED_KROVAK));
+        $toCRS = CoordinateReferenceSystem::fromEPSGCode(Geographic2D::EPSG_S_JTSK_05);
+        $to = $from->krovakModified($toCRS, new Radian(0.863937979), new Radian(0.741764932), new Radian(0.528627763), new Radian(1.370083463), new Coefficient(0.9999), new Metre(5000000), new Metre(5000000), new Metre(1089000), new Metre(654000), new Coefficient(2.946529277E-02), new Coefficient(2.515965696E-02), new Coefficient(1.193845912E-07), new Coefficient(-4.668270147E-07), new Coefficient(9.233980362E-12), new Coefficient(1.523735715E-12), new Coefficient(1.696780024E-18), new Coefficient(4.408314235E-18), new Coefficient(-8.331083518E-24), new Coefficient(-3.689471323E-24));
+
+        self::assertEqualsWithDelta(50.20901167, $to->getLatitude()->getValue(), 0.0000001);
+        self::assertEqualsWithDelta(16.84977194, $to->getLongitude()->getValue(), 0.0000001);
+    }
+
+    public function testKrovakModifiedNorthOrientated(): void
+    {
+        $from = ProjectedPoint::createFromEastingNorthing(new Metre(-5568990.91), new Metre(-6050538.71), CoordinateReferenceSystem::fromEPSGCode(Projected::EPSG_S_JTSK_05_FERRO_MODIFIED_KROVAK_EAST_NORTH));
+        $toCRS = CoordinateReferenceSystem::fromEPSGCode(Geographic2D::EPSG_S_JTSK_05);
+        $to = $from->krovakModified($toCRS, new Radian(0.863937979), new Radian(0.741764932), new Radian(0.528627763), new Radian(1.370083463), new Coefficient(0.9999), new Metre(5000000), new Metre(5000000), new Metre(1089000), new Metre(654000), new Coefficient(2.946529277E-02), new Coefficient(2.515965696E-02), new Coefficient(1.193845912E-07), new Coefficient(-4.668270147E-07), new Coefficient(9.233980362E-12), new Coefficient(1.523735715E-12), new Coefficient(1.696780024E-18), new Coefficient(4.408314235E-18), new Coefficient(-8.331083518E-24), new Coefficient(-3.689471323E-24));
+
+        self::assertEqualsWithDelta(50.20901167, $to->getLatitude()->getValue(), 0.0000001);
+        self::assertEqualsWithDelta(16.84977194, $to->getLongitude()->getValue(), 0.0000001);
+    }
 }
