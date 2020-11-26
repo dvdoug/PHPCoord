@@ -524,4 +524,14 @@ class GeographicPointTest extends TestCase
         self::assertEqualsWithDelta(42665.90, $to->getEasting()->asMetres()->getValue(), 0.01);
         self::assertEqualsWithDelta(65509.82, $to->getNorthing()->asMetres()->getValue(), 0.01);
     }
+
+    public function testObliqueStereographic(): void
+    {
+        $from = GeographicPoint::create(new Degree(53), new Degree(6), null, Geographic2D::fromSRID(Geographic2D::EPSG_AMERSFOORT));
+        $toCRS = Projected::fromSRID(Projected::EPSG_AMERSFOORT_RD_NEW);
+        $to = $from->obliqueStereographic($toCRS, new Radian(0.910296727), new Radian(0.094032038), new Coefficient(0.9999079), new Metre(155000), new Metre(463000));
+
+        self::assertEqualsWithDelta(196105.283, $to->getEasting()->asMetres()->getValue(), 0.01);
+        self::assertEqualsWithDelta(557057.739, $to->getNorthing()->asMetres()->getValue(), 0.01);
+    }
 }

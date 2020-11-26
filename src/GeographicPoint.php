@@ -1279,6 +1279,55 @@ class GeographicPoint extends Point
     }
 
     /**
+     * Oblique Stereographic
+     * This is not the same as the projection method of the same name in USGS Professional Paper no. 1395, "Map
+     * Projections - A Working Manual" by John P. Snyder.
+     */
+    public function obliqueStereographic(
+        Projected $to,
+        Angle $latitudeOfNaturalOrigin,
+        Angle $longitudeOfNaturalOrigin,
+        Scale $scaleFactorAtNaturalOrigin,
+        Length $falseEasting,
+        Length $falseNorthing
+    ): ProjectedPoint {
+        $latitude = $this->latitude->asRadians()->getValue();
+        $longitude = $this->longitude->asRadians()->getValue();
+        $latitudeOrigin = $latitudeOfNaturalOrigin->asRadians()->getValue();
+        $longitudeOrigin = $longitudeOfNaturalOrigin->asRadians()->getValue();
+        $kO = $scaleFactorAtNaturalOrigin->asUnity()->getValue();
+        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
+        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+
+        $rhoOrigin = $a * (1 - $e2) / (1 - $e2 * sin($latitudeOrigin) ** 2) ** (3 / 2);
+        $nuOrigin = $a / sqrt(1 - $e2 * (sin($latitudeOrigin) ** 2));
+        $R = sqrt($rhoOrigin * $nuOrigin);
+
+        $n = sqrt(1 + ($e2 * cos($latitudeOrigin) ** 4 / (1 - $e2)));
+        $S1 = (1 + sin($latitudeOrigin)) / (1 - sin($latitudeOrigin));
+        $S2 = (1 - $e * sin($latitudeOrigin)) / (1 + $e * sin($latitudeOrigin));
+        $w1 = ($S1 * ($S2 ** $e)) ** $n;
+        $c = (($n + sin($latitudeOrigin)) * (1 - ($w1 - 1) / ($w1 + 1))) / (($n - sin($latitudeOrigin)) * (1 + ($w1 - 1) / ($w1 + 1)));
+        $w2 = $c * $w1;
+        $chiOrigin = asin(($w2 - 1) / ($w2 + 1));
+
+        $lambda = $n * ($longitude - $longitudeOrigin) + $longitudeOrigin;
+
+        $Sa = (1 + sin($latitude)) / (1 - sin($latitude));
+        $Sb = (1 - $e * sin($latitude)) / (1 + $e * sin($latitude));
+        $w = $c * ($Sa * ($Sb ** $e)) ** $n;
+        $chi = asin(($w - 1) / ($w + 1));
+
+        $B = (1 + sin($chi) * sin($chiOrigin) + cos($chi) * cos($chiOrigin) * cos($lambda - $longitudeOrigin));
+
+        $easting = $falseEasting->asMetres()->getValue() + 2 * $R * $kO * cos($chi) * sin($lambda - $longitudeOrigin) / $B;
+        $northing = $falseNorthing->asMetres()->getValue() + 2 * $R * $kO * (sin($chi) * cos($chiOrigin) - cos($chi) * sin($chiOrigin) * cos($lambda - $longitudeOrigin)) / $B;
+
+        return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+    }
+
+    /**
      * Geographic3D to 2D conversion.
      */
     public function threeDToTwoD(

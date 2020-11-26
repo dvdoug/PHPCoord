@@ -462,6 +462,7 @@ class CoordinateOperationMethods
             self::EPSG_LAMBERT_CONIC_NEAR_CONFORMAL => 'lambertConicNearConformal',
             self::EPSG_LAMBERT_CYLINDRICAL_EQUAL_AREA => 'lambertCylindricalEqualArea',
             self::EPSG_MODIFIED_AZIMUTHAL_EQUIDISTANT => 'modifiedAzimuthalEquidistant',
+            self::EPSG_OBLIQUE_STEREOGRAPHIC => 'obliqueStereographic',
         ];
     }
 }

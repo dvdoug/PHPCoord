@@ -1237,4 +1237,59 @@ class ProjectedPoint extends Point
 
         return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
     }
+
+    /**
+     * Oblique Stereographic
+     * This is not the same as the projection method of the same name in USGS Professional Paper no. 1395, "Map
+     * Projections - A Working Manual" by John P. Snyder.
+     */
+    public function obliqueStereographic(
+        Geographic $to,
+        Angle $latitudeOfNaturalOrigin,
+        Angle $longitudeOfNaturalOrigin,
+        Scale $scaleFactorAtNaturalOrigin,
+        Length $falseEasting,
+        Length $falseNorthing
+    ): GeographicPoint {
+        $easting = $this->easting->asMetres()->getValue() - $falseEasting->asMetres()->getValue();
+        $northing = $this->northing->asMetres()->getValue() - $falseNorthing->asMetres()->getValue();
+        $latitudeOrigin = $latitudeOfNaturalOrigin->asRadians()->getValue();
+        $longitudeOrigin = $longitudeOfNaturalOrigin->asRadians()->getValue();
+        $scaleFactorOrigin = $scaleFactorAtNaturalOrigin->asUnity()->getValue();
+        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
+        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+
+        $rhoOrigin = $a * (1 - $e2) / (1 - $e2 * sin($latitudeOrigin) ** 2) ** (3 / 2);
+        $nuOrigin = $a / sqrt(1 - $e2 * (sin($latitudeOrigin) ** 2));
+        $R = sqrt($rhoOrigin * $nuOrigin);
+
+        $n = sqrt(1 + ($e2 * cos($latitudeOrigin) ** 4 / (1 - $e2)));
+        $S1 = (1 + sin($latitudeOrigin)) / (1 - sin($latitudeOrigin));
+        $S2 = (1 - $e * sin($latitudeOrigin)) / (1 + $e * sin($latitudeOrigin));
+        $w1 = ($S1 * ($S2 ** $e)) ** $n;
+        $c = (($n + sin($latitudeOrigin)) * (1 - ($w1 - 1) / ($w1 + 1))) / (($n - sin($latitudeOrigin)) * (1 + ($w1 - 1) / ($w1 + 1)));
+        $w2 = $c * $w1;
+        $chiOrigin = asin(($w2 - 1) / ($w2 + 1));
+
+        $g = 2 * $R * $scaleFactorOrigin * tan(M_PI / 4 - $chiOrigin / 2);
+        $h = 4 * $R * $scaleFactorOrigin * tan($chiOrigin) + $g;
+        $i = atan2($easting, ($h + $northing));
+        $j = atan2($easting, ($g - $northing)) - $i;
+        $chi = $chiOrigin + 2 * atan(($northing - $easting * tan($j / 2)) / (2 * $R * $scaleFactorOrigin));
+        $lambda = $j + 2 * $i + $longitudeOrigin;
+
+        $longitude = ($lambda - $longitudeOrigin) / $n + $longitudeOrigin;
+
+        $psi = 0.5 * log((1 + sin($chi)) / ($c * (1 - sin($chi)))) / $n;
+
+        $latitude = 2 * atan(M_E ** $psi) - M_PI / 2;
+        do {
+            $latitudeN = $latitude;
+            $psiN = log((tan($latitudeN / 2 + M_PI / 4)) * ((1 - $e * sin($latitudeN)) / (1 + $e * sin($latitudeN))) ** ($e / 2));
+            $latitude = $latitudeN - ($psiN - $psi) * cos($latitudeN) * (1 - $e2 * sin($latitudeN) ** 2) / (1 - $e2);
+        } while (abs($latitude - $latitudeN) >= self::NEWTON_RAPHSON_CONVERGENCE);
+
+        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+    }
 }
