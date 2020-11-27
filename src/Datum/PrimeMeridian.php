@@ -8,7 +8,6 @@ declare(strict_types=1);
 
 namespace PHPCoord\Datum;
 
-use PHPCoord\EPSG\Repository;
 use PHPCoord\Exception\UnknownPrimeMeridianException;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
@@ -98,7 +97,78 @@ class PrimeMeridian
      */
     public const EPSG_STOCKHOLM = 'urn:ogc:def:meridian:EPSG::8911';
 
-    private static Repository $repository;
+    protected static array $sridData = [
+        'urn:ogc:def:meridian:EPSG::8901' => [
+            'name' => 'Greenwich',
+            'greenwich_longitude' => 0.0,
+            'uom' => 'urn:ogc:def:uom:EPSG::9102',
+        ],
+        'urn:ogc:def:meridian:EPSG::8902' => [
+            'name' => 'Lisbon',
+            'greenwich_longitude' => -9.0754862,
+            'uom' => 'urn:ogc:def:uom:EPSG::9110',
+        ],
+        'urn:ogc:def:meridian:EPSG::8903' => [
+            'name' => 'Paris',
+            'greenwich_longitude' => 2.5969213,
+            'uom' => 'urn:ogc:def:uom:EPSG::9105',
+        ],
+        'urn:ogc:def:meridian:EPSG::8904' => [
+            'name' => 'Bogota',
+            'greenwich_longitude' => -74.04513,
+            'uom' => 'urn:ogc:def:uom:EPSG::9110',
+        ],
+        'urn:ogc:def:meridian:EPSG::8905' => [
+            'name' => 'Madrid',
+            'greenwich_longitude' => -3.411455,
+            'uom' => 'urn:ogc:def:uom:EPSG::9110',
+        ],
+        'urn:ogc:def:meridian:EPSG::8906' => [
+            'name' => 'Rome',
+            'greenwich_longitude' => 12.27084,
+            'uom' => 'urn:ogc:def:uom:EPSG::9110',
+        ],
+        'urn:ogc:def:meridian:EPSG::8907' => [
+            'name' => 'Bern',
+            'greenwich_longitude' => 7.26225,
+            'uom' => 'urn:ogc:def:uom:EPSG::9110',
+        ],
+        'urn:ogc:def:meridian:EPSG::8908' => [
+            'name' => 'Jakarta',
+            'greenwich_longitude' => 106.482779,
+            'uom' => 'urn:ogc:def:uom:EPSG::9110',
+        ],
+        'urn:ogc:def:meridian:EPSG::8909' => [
+            'name' => 'Ferro',
+            'greenwich_longitude' => -17.4,
+            'uom' => 'urn:ogc:def:uom:EPSG::9110',
+        ],
+        'urn:ogc:def:meridian:EPSG::8910' => [
+            'name' => 'Brussels',
+            'greenwich_longitude' => 4.220471,
+            'uom' => 'urn:ogc:def:uom:EPSG::9110',
+        ],
+        'urn:ogc:def:meridian:EPSG::8911' => [
+            'name' => 'Stockholm',
+            'greenwich_longitude' => 18.03298,
+            'uom' => 'urn:ogc:def:uom:EPSG::9110',
+        ],
+        'urn:ogc:def:meridian:EPSG::8912' => [
+            'name' => 'Athens',
+            'greenwich_longitude' => 23.4258815,
+            'uom' => 'urn:ogc:def:uom:EPSG::9110',
+        ],
+        'urn:ogc:def:meridian:EPSG::8913' => [
+            'name' => 'Oslo',
+            'greenwich_longitude' => 10.43225,
+            'uom' => 'urn:ogc:def:uom:EPSG::9110',
+        ],
+        'urn:ogc:def:meridian:EPSG::8914' => [
+            'name' => 'Paris RGS',
+            'greenwich_longitude' => 2.201395,
+            'uom' => 'urn:ogc:def:uom:EPSG::9110',
+        ],
+    ];
 
     private string $name;
 
@@ -122,15 +192,22 @@ class PrimeMeridian
 
     public static function fromSRID(string $srid): self
     {
-        $repository = static::$repository ?? new Repository();
-        $allData = $repository->getPrimeMeridians();
-
-        if (!isset($allData[$srid])) {
+        if (!isset(static::$sridData[$srid])) {
             throw new UnknownPrimeMeridianException($srid);
         }
 
-        $data = $allData[$srid];
+        $data = static::$sridData[$srid];
 
-        return new static($data['prime_meridian_name'], UnitOfMeasureFactory::makeUnit($data['greenwich_longitude'], $data['uom_code']));
+        return new static($data['name'], UnitOfMeasureFactory::makeUnit($data['greenwich_longitude'], $data['uom']));
+    }
+
+    public static function getSupportedSRIDs(): array
+    {
+        $supported = [];
+        foreach (static::$sridData as $srid => $sridData) {
+            $supported[$srid] = $sridData['name'];
+        }
+
+        return $supported;
     }
 }

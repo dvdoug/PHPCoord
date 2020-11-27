@@ -71,6 +71,9 @@ class EPSGImporter
         );
 
         $sqlite->enableExceptions(true);
+
+        $this->generateDataPrimeMeridians($sqlite);
+
         $this->generateConstantsUnitsOfMeasure($sqlite);
         $this->generateConstantsPrimeMeridians($sqlite);
         $this->generateConstantsEllipsoids($sqlite);
@@ -78,6 +81,7 @@ class EPSGImporter
         $this->generateConstantsCoordinateSystems($sqlite);
         $this->generateConstantsCoordinateReferenceSystems($sqlite);
         $this->generateConstantsCoordinateOperationMethods($sqlite);
+
         $sqlite->close();
     }
 
@@ -125,6 +129,28 @@ class EPSGImporter
         }
 
         $this->updateFileConstants($this->sourceDir . '/Datum/PrimeMeridian.php', $constants, 'public');
+    }
+
+    public function generateDataPrimeMeridians(SQLite3 $sqlite): void
+    {
+        $sql = "
+            SELECT
+                'urn:ogc:def:meridian:EPSG::' || p.prime_meridian_code AS urn,
+                p.prime_meridian_name AS name,
+                p.greenwich_longitude,
+                'urn:ogc:def:uom:EPSG::' || p.uom_code AS uom
+            FROM epsg_primemeridian p
+            ORDER BY urn
+            ";
+
+        $result = $sqlite->query($sql);
+        $data = [];
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            $data[$row['urn']] = $row;
+            unset($data[$row['urn']]['urn']);
+        }
+
+        $this->updateFileData($this->sourceDir . '/Datum/PrimeMeridian.php', $data);
     }
 
     public function generateConstantsEllipsoids(SQLite3 $sqlite): void
@@ -557,7 +583,7 @@ class EPSGImporter
 
     private function updateFileConstants(string $fileName, array $classConstants, string $visibility): void
     {
-        echo "Updating {$fileName}...";
+        echo "Updating constants in {$fileName}...";
 
         $lexer = new Emulative(
             [
@@ -590,6 +616,49 @@ class EPSGImporter
          */
         $traverser = new NodeTraverser();
         $traverser->addVisitor(new AddNewConstantsVisitor($classConstants, $visibility));
+        $newStmts = $traverser->traverse($newStmts);
+
+        $prettyPrinter = new ASTPrettyPrinter();
+        file_put_contents($fileName, $prettyPrinter->printFormatPreserving($newStmts, $oldStmts, $oldTokens));
+        $this->csFixFile($fileName);
+        echo 'done' . PHP_EOL;
+    }
+
+    private function updateFileData(string $fileName, array $data): void
+    {
+        echo "Updating data in {$fileName}...";
+
+        $lexer = new Emulative(
+            [
+                'usedAttributes' => [
+                    'comments',
+                    'startLine', 'endLine',
+                    'startTokenPos', 'endTokenPos',
+                ],
+            ]
+        );
+        $parser = new Php7($lexer);
+
+        $traverser = new NodeTraverser();
+        $traverser->addVisitor(new CloningVisitor());
+
+        $oldStmts = $parser->parse(file_get_contents($fileName));
+        $oldTokens = $lexer->getTokens();
+
+        $newStmts = $traverser->traverse($oldStmts);
+
+        /*
+         * First remove all existing EPSG consts
+         */
+        $traverser = new NodeTraverser();
+        $traverser->addVisitor(new RemoveExistingDataVisitor());
+        $newStmts = $traverser->traverse($newStmts);
+
+        /*
+         * Then add the ones wanted
+         */
+        $traverser = new NodeTraverser();
+        $traverser->addVisitor(new AddNewDataVisitor($data));
         $newStmts = $traverser->traverse($newStmts);
 
         $prettyPrinter = new ASTPrettyPrinter();

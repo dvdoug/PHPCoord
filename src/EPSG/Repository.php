@@ -19,8 +19,6 @@ class Repository
 
     private static array $unitsOfMeasureData = [];
 
-    private static array $primeMeridianData = [];
-
     private static array $ellipsoidData = [];
 
     private static array $datumData = [];
@@ -155,30 +153,6 @@ class Repository
         return static::$unitsOfMeasureData;
     }
 
-    public function getPrimeMeridians(): array
-    {
-        if (!static::$primeMeridianData) {
-            $connection = $this->getConnection();
-            $sql = "
-            SELECT
-                'urn:ogc:def:meridian:EPSG::' || p.prime_meridian_code AS prime_meridian_code,
-                p.prime_meridian_name,
-                p.greenwich_longitude,
-                'urn:ogc:def:uom:EPSG::' || p.uom_code AS uom_code,
-                p.deprecated
-            FROM epsg_primemeridian p
-            ";
-
-            $result = $connection->query($sql);
-
-            while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-                static::$primeMeridianData[$row['prime_meridian_code']] = $row;
-            }
-        }
-
-        return static::$primeMeridianData;
-    }
-
     public function getCoordinateSystems(): array
     {
         if (!static::$coordinateSystemData) {
@@ -276,7 +250,6 @@ class Repository
     {
         static::$connection = null;
         static::$unitsOfMeasureData = [];
-        static::$primeMeridianData = [];
         static::$ellipsoidData = [];
         static::$datumData = [];
         static::$datumEnsembleData = [];
