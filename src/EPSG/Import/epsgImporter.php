@@ -8,7 +8,6 @@ declare(strict_types=1);
 
 namespace PHPCoord;
 
-use function chdir;
 use function dirname;
 use function file_exists;
 use function file_get_contents;
@@ -16,11 +15,15 @@ use function file_put_contents;
 use PHPCoord\EPSG\Import\AddNewConstantsVisitor;
 use PHPCoord\EPSG\Import\ASTPrettyPrinter;
 use PHPCoord\EPSG\Import\RemoveExistingConstantsVisitor;
+use PhpCsFixer\AbstractFixer;
+use PhpCsFixer\Config;
+use PhpCsFixer\Console\ConfigurationResolver;
+use PhpCsFixer\Tokenizer\Tokens;
+use PhpCsFixer\ToolInfo;
 use PhpParser\Lexer\Emulative;
 use PhpParser\NodeTraverser;
 use PhpParser\NodeVisitor\CloningVisitor;
 use PhpParser\Parser\Php7;
-use function shell_exec;
 use SQLite3;
 use SQLite3Result;
 use function unlink;
@@ -530,6 +533,44 @@ function updateFile(string $fileName, SQLite3Result $classConstants, string $vis
 
 function csFixGeneratedFiles(string $srcDir): void
 {
-    chdir(dirname($srcDir));
-    shell_exec('php vendor/friendsofphp/php-cs-fixer/php-cs-fixer fix');
+    /** @var Config $config */
+    $config = require __DIR__ . '/../../../.php_cs.dist';
+
+    $resolver = new ConfigurationResolver(
+        $config,
+        [],
+        dirname($srcDir),
+        new ToolInfo()
+    );
+
+    $fixers = $resolver->getFixers();
+
+    foreach ($config->getFinder() as $file) {
+        $old = file_get_contents($file->getRealPath());
+
+        $tokens = Tokens::fromCode($old);
+
+        foreach ($fixers as $fixer) {
+            if (
+                !$fixer instanceof AbstractFixer &&
+                (!$fixer->supports($file) || !$fixer->isCandidate($tokens))
+            ) {
+                continue;
+            }
+
+            $fixer->fix($file, $tokens);
+
+            if ($tokens->isChanged()) {
+                $tokens->clearEmptyTokens();
+                $tokens->clearChanged();
+            }
+        }
+
+        $new = $tokens->generateCode();
+
+        if ($old !== $new) {
+            $fileName = $file->getRealPath();
+            file_put_contents($fileName, $new);
+        }
+    }
 }
