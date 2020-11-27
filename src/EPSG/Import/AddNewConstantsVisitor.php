@@ -19,7 +19,6 @@ use PhpParser\Node\Stmt\ClassLike;
 use PhpParser\NodeTraverser;
 use PhpParser\NodeVisitorAbstract;
 use function preg_replace;
-use SQLite3Result;
 use function str_replace;
 use function strtoupper;
 use function trim;
@@ -27,11 +26,11 @@ use function wordwrap;
 
 class AddNewConstantsVisitor extends NodeVisitorAbstract
 {
-    private SQLite3Result $constants;
+    private array $constants;
 
     private string $visibility;
 
-    public function __construct(SQLite3Result $constants, string $visibility)
+    public function __construct(array $constants, string $visibility)
     {
         $this->constants = $constants;
         $this->visibility = $visibility;
@@ -42,7 +41,7 @@ class AddNewConstantsVisitor extends NodeVisitorAbstract
         if ($node instanceof ClassLike) {
             $commentNodes = [];
 
-            while ($row = $this->constants->fetchArray(SQLITE3_ASSOC)) {
+            foreach ($this->constants as $row) {
                 $name = str_replace(
                     [' ', '-', '\'', '(', ')', '[', ']', '.', '/', '=', ',', ':', '°', '+', '&', '<>'],
                     ['_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_DEG_', '_PLUS_', '_AND_', '_TO_'],

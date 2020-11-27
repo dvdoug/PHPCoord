@@ -6,15 +6,12 @@
  */
 declare(strict_types=1);
 
-namespace PHPCoord;
+namespace PHPCoord\EPSG\Import;
 
 use function dirname;
 use function file_exists;
 use function file_get_contents;
 use function file_put_contents;
-use PHPCoord\EPSG\Import\AddNewConstantsVisitor;
-use PHPCoord\EPSG\Import\ASTPrettyPrinter;
-use PHPCoord\EPSG\Import\RemoveExistingConstantsVisitor;
 use PhpCsFixer\AbstractFixer;
 use PhpCsFixer\Config;
 use PhpCsFixer\Console\ConfigurationResolver;
@@ -24,59 +21,69 @@ use PhpParser\Lexer\Emulative;
 use PhpParser\NodeTraverser;
 use PhpParser\NodeVisitor\CloningVisitor;
 use PhpParser\Parser\Php7;
+use SplFileInfo;
 use SQLite3;
-use SQLite3Result;
 use function unlink;
 
-require __DIR__ . '/../../../vendor/autoload.php';
-
-/**
- * Imports raw EPSG Dataset from Postgres format.
- */
-$resDir = __DIR__ . '/../../../resources';
-$srcDir = dirname(__DIR__, 2);
-
-createSQLiteDB($resDir);
-generateConstants($resDir, $srcDir);
-csFixGeneratedFiles($srcDir);
-
-function createSQLiteDB(string $resDir): void
+class EPSGImporter
 {
-    //remove old file if any
-    if (file_exists($resDir . '/epsg/epsg.sqlite')) {
-        unlink($resDir . '/epsg/epsg.sqlite');
+    private string $resourceDir;
+
+    private string $sourceDir;
+
+    public function __construct()
+    {
+        $this->resourceDir = __DIR__ . '/../../../resources';
+        $this->sourceDir = dirname(__DIR__, 2);
     }
 
-    $sqlite = new SQLite3(
-        $resDir . '/epsg/epsg.sqlite',
+    public function createSQLiteDB(): void
+    {
+        //remove old file if any
+        if (file_exists($this->resourceDir . '/epsg/epsg.sqlite')) {
+            unlink($this->resourceDir . '/epsg/epsg.sqlite');
+        }
+
+        $sqlite = new SQLite3(
+        $this->resourceDir . '/epsg/epsg.sqlite',
         SQLITE3_OPEN_READWRITE | SQLITE3_OPEN_CREATE
-    );
-    $sqlite->enableExceptions(true);
-    $sqlite->exec('PRAGMA journal_mode=WAL'); //WAL is faster
+        );
 
-    $tableSchema = file_get_contents($resDir . '/epsg/PostgreSQL_Table_Script.sql');
-    $sqlite->exec($tableSchema);
+        $sqlite->enableExceptions(true);
+        $sqlite->exec('PRAGMA journal_mode=WAL'); //WAL is faster
 
-    $tableData = file_get_contents($resDir . '/epsg/PostgreSQL_Data_Script.sql');
-    $sqlite->exec($tableData);
+        $tableSchema = file_get_contents($this->resourceDir . '/epsg/PostgreSQL_Table_Script.sql');
+        $sqlite->exec($tableSchema);
 
-    $sqlite->exec('VACUUM');
-    $sqlite->exec('PRAGMA journal_mode=DELETE'); //but WAL is not openable read-only in older SQLite
-    $sqlite->close();
-}
+        $tableData = file_get_contents($this->resourceDir . '/epsg/PostgreSQL_Data_Script.sql');
+        $sqlite->exec($tableData);
 
-function generateConstants(string $resDir, string $srcDir): void
-{
-    $sqlite = new SQLite3(
-        $resDir . '/epsg/epsg.sqlite',
+        $sqlite->exec('VACUUM');
+        $sqlite->exec('PRAGMA journal_mode=DELETE'); //but WAL is not openable read-only in older SQLite
+        $sqlite->close();
+    }
+
+    public function doCodeGeneration(): void
+    {
+        $sqlite = new SQLite3(
+        $this->resourceDir . '/epsg/epsg.sqlite',
         SQLITE3_OPEN_READONLY
-    );
-    $sqlite->enableExceptions(true);
+        );
 
-    /*
-     * Units of Measure
-     */
-    $sql = "
+        $sqlite->enableExceptions(true);
+        $this->generateConstantsUnitsOfMeasure($sqlite);
+        $this->generateConstantsPrimeMeridians($sqlite);
+        $this->generateConstantsEllipsoids($sqlite);
+        $this->generateConstantsDatums($sqlite);
+        $this->generateConstantsCoordinateSystems($sqlite);
+        $this->generateConstantsCoordinateReferenceSystems($sqlite);
+        $this->generateConstantsCoordinateOperationMethods($sqlite);
+        $sqlite->close();
+    }
+
+    public function generateConstantsUnitsOfMeasure(SQLite3 $sqlite): void
+    {
+        $sql = "
             SELECT
                 'urn:ogc:def:uom:EPSG::' || m.uom_code AS constant_value,
                 m.unit_of_meas_type || '_' || m.unit_of_meas_name AS constant_name,
@@ -88,14 +95,18 @@ function generateConstants(string $resDir, string $srcDir): void
             ORDER BY constant_name
             ";
 
-    $result = $sqlite->query($sql);
+        $result = $sqlite->query($sql);
+        $constants = [];
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            $constants[] = $row;
+        }
 
-    updateFile($srcDir . '/UnitOfMeasure/UnitOfMeasure.php', $result, 'public');
+        $this->updateFileConstants($this->sourceDir . '/UnitOfMeasure/UnitOfMeasure.php', $constants, 'public');
+    }
 
-    /*
-     * Prime Meridians
-     */
-    $sql = "
+    public function generateConstantsPrimeMeridians(SQLite3 $sqlite): void
+    {
+        $sql = "
             SELECT
                 'urn:ogc:def:meridian:EPSG::' || p.prime_meridian_code AS constant_value,
                 p.prime_meridian_name AS constant_name,
@@ -107,14 +118,18 @@ function generateConstants(string $resDir, string $srcDir): void
             ORDER BY constant_name
             ";
 
-    $result = $sqlite->query($sql);
+        $result = $sqlite->query($sql);
+        $constants = [];
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            $constants[] = $row;
+        }
 
-    updateFile($srcDir . '/Datum/PrimeMeridian.php', $result, 'public');
+        $this->updateFileConstants($this->sourceDir . '/Datum/PrimeMeridian.php', $constants, 'public');
+    }
 
-    /*
-     * Ellipsoids
-     */
-    $sql = "
+    public function generateConstantsEllipsoids(SQLite3 $sqlite): void
+    {
+        $sql = "
             SELECT
             DISTINCT
                 'urn:ogc:def:ellipsoid:EPSG::' || e.ellipsoid_code AS constant_value,
@@ -127,14 +142,19 @@ function generateConstants(string $resDir, string $srcDir): void
             WHERE dep.deprecation_id IS NULL
             ORDER BY constant_name
             ";
-    $result = $sqlite->query($sql);
 
-    updateFile($srcDir . '/Datum/Ellipsoid.php', $result, 'public');
+        $result = $sqlite->query($sql);
+        $constants = [];
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            $constants[] = $row;
+        }
 
-    /*
-     * Datums
-     */
-    $sql = "
+        $this->updateFileConstants($this->sourceDir . '/Datum/Ellipsoid.php', $constants, 'public');
+    }
+
+    public function generateConstantsDatums(SQLite3 $sqlite): void
+    {
+        $sql = "
             SELECT
                 DISTINCT
                 'urn:ogc:def:datum:EPSG::' || d.datum_code AS constant_value,
@@ -149,14 +169,22 @@ function generateConstants(string $resDir, string $srcDir): void
             WHERE dep.deprecation_id IS NULL AND d.datum_type != 'engineering'
             ORDER BY constant_name
         ";
-    $result = $sqlite->query($sql);
 
-    updateFile($srcDir . '/Datum/Datum.php', $result, 'public');
+        $result = $sqlite->query($sql);
+        $constants = [];
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            $constants[] = $row;
+        }
 
-    /*
-     * Coordinate systems (cartesian)
-     */
-    $sql = "
+        $this->updateFileConstants($this->sourceDir . '/Datum/Datum.php', $constants, 'public');
+    }
+
+    public function generateConstantsCoordinateSystems(SQLite3 $sqlite): void
+    {
+        /*
+         * Coordinate systems (cartesian)
+         */
+        $sql = "
             SELECT
                 DISTINCT
                 'urn:ogc:def:cs:EPSG::' || cs.coord_sys_code AS constant_value,
@@ -170,14 +198,19 @@ function generateConstants(string $resDir, string $srcDir): void
             AND cs.coord_sys_type = 'Cartesian'
             ORDER BY constant_name
         ";
-    $result = $sqlite->query($sql);
 
-    updateFile($srcDir . '/CoordinateSystem/Cartesian.php', $result, 'public');
+        $result = $sqlite->query($sql);
+        $constants = [];
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            $constants[] = $row;
+        }
 
-    /*
-     * Coordinate systems (ellipsoidal)
-     */
-    $sql = "
+        $this->updateFileConstants($this->sourceDir . '/CoordinateSystem/Cartesian.php', $constants, 'public');
+
+        /*
+         * Coordinate systems (ellipsoidal)
+         */
+        $sql = "
             SELECT
                 DISTINCT
                 'urn:ogc:def:cs:EPSG::' || cs.coord_sys_code AS constant_value,
@@ -191,14 +224,19 @@ function generateConstants(string $resDir, string $srcDir): void
             AND cs.coord_sys_type = 'ellipsoidal'
             ORDER BY constant_name
         ";
-    $result = $sqlite->query($sql);
 
-    updateFile($srcDir . '/CoordinateSystem/Ellipsoidal.php', $result, 'public');
+        $result = $sqlite->query($sql);
+        $constants = [];
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            $constants[] = $row;
+        }
 
-    /*
-     * Coordinate systems (vertical)
-     */
-    $sql = "
+        $this->updateFileConstants($this->sourceDir . '/CoordinateSystem/Ellipsoidal.php', $constants, 'public');
+
+        /*
+         * Coordinate systems (vertical)
+         */
+        $sql = "
             SELECT
                 DISTINCT
                 'urn:ogc:def:cs:EPSG::' || cs.coord_sys_code AS constant_value,
@@ -212,14 +250,19 @@ function generateConstants(string $resDir, string $srcDir): void
             AND cs.coord_sys_type = 'vertical'
             ORDER BY constant_name
         ";
-    $result = $sqlite->query($sql);
 
-    updateFile($srcDir . '/CoordinateSystem/Vertical.php', $result, 'public');
+        $result = $sqlite->query($sql);
+        $constants = [];
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            $constants[] = $row;
+        }
 
-    /*
-     * Coordinate systems (other)
-     */
-    $sql = "
+        $this->updateFileConstants($this->sourceDir . '/CoordinateSystem/Vertical.php', $constants, 'public');
+
+        /*
+         * Coordinate systems (other)
+         */
+        $sql = "
             SELECT
                 DISTINCT
                 'urn:ogc:def:cs:EPSG::' || cs.coord_sys_code AS constant_value,
@@ -233,14 +276,22 @@ function generateConstants(string $resDir, string $srcDir): void
             AND cs.coord_sys_type NOT IN ('Cartesian', 'ellipsoidal', 'vertical')
             ORDER BY constant_name
         ";
-    $result = $sqlite->query($sql);
 
-    updateFile($srcDir . '/CoordinateSystem/CoordinateSystem.php', $result, 'public');
+        $result = $sqlite->query($sql);
+        $constants = [];
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            $constants[] = $row;
+        }
 
-    /*
-     * Coordinate reference systems (compound)
-     */
-    $sql = "
+        $this->updateFileConstants($this->sourceDir . '/CoordinateSystem/CoordinateSystem.php', $constants, 'public');
+    }
+
+    public function generateConstantsCoordinateReferenceSystems(SQLite3 $sqlite): void
+    {
+        /*
+         * Coordinate reference systems (compound)
+         */
+        $sql = "
             SELECT
                 'urn:ogc:def:crs:EPSG::' || crs.coord_ref_sys_code AS constant_value,
                 crs.coord_ref_sys_name AS constant_name,
@@ -259,14 +310,18 @@ function generateConstants(string $resDir, string $srcDir): void
             ORDER BY constant_name
         ";
 
-    $result = $sqlite->query($sql);
+        $result = $sqlite->query($sql);
+        $constants = [];
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            $constants[] = $row;
+        }
 
-    updateFile($srcDir . '/CoordinateReferenceSystem/Compound.php', $result, 'public');
+        $this->updateFileConstants($this->sourceDir . '/CoordinateReferenceSystem/Compound.php', $constants, 'public');
 
-    /*
-     * Coordinate reference systems (geocentric)
-     */
-    $sql = "
+        /*
+         * Coordinate reference systems (geocentric)
+         */
+        $sql = "
             SELECT
                 'urn:ogc:def:crs:EPSG::' || crs.coord_ref_sys_code AS constant_value,
                 crs.coord_ref_sys_name AS constant_name,
@@ -285,14 +340,18 @@ function generateConstants(string $resDir, string $srcDir): void
             ORDER BY constant_name
         ";
 
-    $result = $sqlite->query($sql);
+        $result = $sqlite->query($sql);
+        $constants = [];
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            $constants[] = $row;
+        }
 
-    updateFile($srcDir . '/CoordinateReferenceSystem/Geocentric.php', $result, 'public');
+        $this->updateFileConstants($this->sourceDir . '/CoordinateReferenceSystem/Geocentric.php', $constants, 'public');
 
-    /*
-     * Coordinate reference systems (geographic 2D)
-     */
-    $sql = "
+        /*
+         * Coordinate reference systems (geographic 2D)
+         */
+        $sql = "
             SELECT
                 'urn:ogc:def:crs:EPSG::' || crs.coord_ref_sys_code AS constant_value,
                 crs.coord_ref_sys_name AS constant_name,
@@ -311,14 +370,18 @@ function generateConstants(string $resDir, string $srcDir): void
             ORDER BY constant_name
         ";
 
-    $result = $sqlite->query($sql);
+        $result = $sqlite->query($sql);
+        $constants = [];
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            $constants[] = $row;
+        }
 
-    updateFile($srcDir . '/CoordinateReferenceSystem/Geographic2D.php', $result, 'public');
+        $this->updateFileConstants($this->sourceDir . '/CoordinateReferenceSystem/Geographic2D.php', $constants, 'public');
 
-    /*
-     * Coordinate reference systems (geographic 3D)
-     */
-    $sql = "
+        /*
+         * Coordinate reference systems (geographic 3D)
+         */
+        $sql = "
             SELECT
                 'urn:ogc:def:crs:EPSG::' || crs.coord_ref_sys_code AS constant_value,
                 crs.coord_ref_sys_name AS constant_name,
@@ -337,14 +400,18 @@ function generateConstants(string $resDir, string $srcDir): void
             ORDER BY constant_name
         ";
 
-    $result = $sqlite->query($sql);
+        $result = $sqlite->query($sql);
+        $constants = [];
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            $constants[] = $row;
+        }
 
-    updateFile($srcDir . '/CoordinateReferenceSystem/Geographic3D.php', $result, 'public');
+        $this->updateFileConstants($this->sourceDir . '/CoordinateReferenceSystem/Geographic3D.php', $constants, 'public');
 
-    /*
-     * Coordinate reference systems (projected)
-     */
-    $sql = "
+        /*
+         * Coordinate reference systems (projected)
+         */
+        $sql = "
             SELECT
                 'urn:ogc:def:crs:EPSG::' || crs.coord_ref_sys_code AS constant_value,
                 crs.coord_ref_sys_name AS constant_name,
@@ -363,14 +430,18 @@ function generateConstants(string $resDir, string $srcDir): void
             ORDER BY constant_name
         ";
 
-    $result = $sqlite->query($sql);
+        $result = $sqlite->query($sql);
+        $constants = [];
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            $constants[] = $row;
+        }
 
-    updateFile($srcDir . '/CoordinateReferenceSystem/Projected.php', $result, 'public');
+        $this->updateFileConstants($this->sourceDir . '/CoordinateReferenceSystem/Projected.php', $constants, 'public');
 
-    /*
-     * Coordinate reference systems (vertical)
-     */
-    $sql = "
+        /*
+         * Coordinate reference systems (vertical)
+         */
+        $sql = "
             SELECT
                 'urn:ogc:def:crs:EPSG::' || crs.coord_ref_sys_code AS constant_value,
                 crs.coord_ref_sys_name AS constant_name,
@@ -389,14 +460,18 @@ function generateConstants(string $resDir, string $srcDir): void
             ORDER BY constant_name
         ";
 
-    $result = $sqlite->query($sql);
+        $result = $sqlite->query($sql);
+        $constants = [];
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            $constants[] = $row;
+        }
 
-    updateFile($srcDir . '/CoordinateReferenceSystem/Vertical.php', $result, 'public');
+        $this->updateFileConstants($this->sourceDir . '/CoordinateReferenceSystem/Vertical.php', $constants, 'public');
 
-    /*
-     * Coordinate reference systems (other)
-     */
-    $sql = "
+        /*
+         * Coordinate reference systems (other)
+         */
+        $sql = "
             SELECT
                 'urn:ogc:def:crs:EPSG::' || crs.coord_ref_sys_code AS constant_value,
                 crs.coord_ref_sys_kind || '_' || crs.coord_ref_sys_name AS constant_name,
@@ -415,14 +490,18 @@ function generateConstants(string $resDir, string $srcDir): void
             ORDER BY constant_name
         ";
 
-    $result = $sqlite->query($sql);
+        $result = $sqlite->query($sql);
+        $constants = [];
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            $constants[] = $row;
+        }
 
-    updateFile($srcDir . '/CoordinateReferenceSystem/CoordinateReferenceSystem.php', $result, 'public');
+        $this->updateFileConstants($this->sourceDir . '/CoordinateReferenceSystem/CoordinateReferenceSystem.php', $constants, 'public');
+    }
 
-    /*
-     * Coordinate operation methods
-     */
-    $sql = "
+    public function generateConstantsCoordinateOperationMethods(SQLite3 $sqlite): void
+    {
+        $sql = "
             SELECT
                 'urn:ogc:def:method:EPSG::' || m.coord_op_method_code AS constant_value,
                 m.coord_op_method_name AS constant_name,
@@ -467,66 +546,73 @@ function generateConstants(string $resDir, string $srcDir): void
             ORDER BY constant_name
         ";
 
-    $result = $sqlite->query($sql);
+        $result = $sqlite->query($sql);
+        $constants = [];
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            $constants[] = $row;
+        }
 
-    updateFile($srcDir . '/CoordinateOperation/CoordinateOperationMethods.php', $result, 'protected');
+        $this->updateFileConstants($this->sourceDir . '/CoordinateOperation/CoordinateOperationMethods.php', $constants, 'protected');
+    }
 
-    $sqlite->close();
-}
+    private function updateFileConstants(string $fileName, array $classConstants, string $visibility): void
+    {
+        echo "Updating {$fileName}...";
 
-function updateFile(string $fileName, SQLite3Result $classConstants, string $visibility): void
-{
-    $lexer = new Emulative([
-        'usedAttributes' => [
-            'comments',
-            'startLine', 'endLine',
-            'startTokenPos', 'endTokenPos',
-        ],
-    ]);
-    $parser = new Php7($lexer);
+        $lexer = new Emulative(
+            [
+                'usedAttributes' => [
+                    'comments',
+                    'startLine', 'endLine',
+                    'startTokenPos', 'endTokenPos',
+                ],
+            ]
+        );
+        $parser = new Php7($lexer);
 
-    $traverser = new NodeTraverser();
-    $traverser->addVisitor(new CloningVisitor());
+        $traverser = new NodeTraverser();
+        $traverser->addVisitor(new CloningVisitor());
 
-    $oldStmts = $parser->parse(file_get_contents($fileName));
-    $oldTokens = $lexer->getTokens();
+        $oldStmts = $parser->parse(file_get_contents($fileName));
+        $oldTokens = $lexer->getTokens();
 
-    $newStmts = $traverser->traverse($oldStmts);
+        $newStmts = $traverser->traverse($oldStmts);
 
-    /*
-     * First remove all existing EPSG consts
-     */
-    $traverser = new NodeTraverser();
-    $traverser->addVisitor(new RemoveExistingConstantsVisitor());
-    $newStmts = $traverser->traverse($newStmts);
+        /*
+         * First remove all existing EPSG consts
+         */
+        $traverser = new NodeTraverser();
+        $traverser->addVisitor(new RemoveExistingConstantsVisitor());
+        $newStmts = $traverser->traverse($newStmts);
 
-    /*
-     * Then add the ones wanted
-     */
-    $traverser = new NodeTraverser();
-    $traverser->addVisitor(new AddNewConstantsVisitor($classConstants, $visibility));
-    $newStmts = $traverser->traverse($newStmts);
+        /*
+         * Then add the ones wanted
+         */
+        $traverser = new NodeTraverser();
+        $traverser->addVisitor(new AddNewConstantsVisitor($classConstants, $visibility));
+        $newStmts = $traverser->traverse($newStmts);
 
-    $prettyPrinter = new ASTPrettyPrinter();
-    file_put_contents($fileName, $prettyPrinter->printFormatPreserving($newStmts, $oldStmts, $oldTokens));
-}
+        $prettyPrinter = new ASTPrettyPrinter();
+        file_put_contents($fileName, $prettyPrinter->printFormatPreserving($newStmts, $oldStmts, $oldTokens));
+        $this->csFixFile($fileName);
+        echo 'done' . PHP_EOL;
+    }
 
-function csFixGeneratedFiles(string $srcDir): void
-{
-    /** @var Config $config */
-    $config = require __DIR__ . '/../../../.php_cs.dist';
+    private function csFixFile(string $fileName): void
+    {
+        /** @var Config $config */
+        $config = require __DIR__ . '/../../../.php_cs.dist';
 
-    $resolver = new ConfigurationResolver(
-        $config,
-        [],
-        dirname($srcDir),
-        new ToolInfo()
-    );
+        $resolver = new ConfigurationResolver(
+            $config,
+            [],
+            dirname($this->sourceDir),
+            new ToolInfo()
+        );
 
-    $fixers = $resolver->getFixers();
-
-    foreach ($config->getFinder() as $file) {
-        $old = file_get_contents($file->getRealPath());
+        $file = new SplFileInfo($fileName);
+        $old = file_get_contents($fileName);
+        $fixers = $resolver->getFixers();
 
         $tokens = Tokens::fromCode($old);
 
@@ -549,7 +635,6 @@ function csFixGeneratedFiles(string $srcDir): void
         $new = $tokens->generateCode();
 
         if ($old !== $new) {
-            $fileName = $file->getRealPath();
             file_put_contents($fileName, $new);
         }
     }
