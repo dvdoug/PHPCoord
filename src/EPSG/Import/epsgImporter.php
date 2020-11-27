@@ -154,26 +154,6 @@ function generateConstants(string $resDir, string $srcDir): void
     updateFile($srcDir . '/Datum/Datum.php', $result, 'public');
 
     /*
-     * Coordinate systems
-     */
-    $sql = "
-            SELECT
-                DISTINCT
-                'urn:ogc:def:cs:EPSG::' || cs.coord_sys_code AS constant_value,
-                cs.coord_sys_name || CASE cs.coord_sys_code WHEN 4531 THEN '_LOWERCASE' ELSE '' END AS constant_name,
-                cs.coord_sys_name || '\n' || 'Type: ' || cs.coord_sys_type || '\n' || cs.remarks AS constant_help,
-                cs.deprecated
-            FROM epsg_coordinatesystem cs
-            JOIN epsg_coordinatereferencesystem crs ON crs.coord_sys_code = cs.coord_sys_code AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatesystem' AND dep.object_code = cs.coord_sys_code AND dep.deprecation_date <= '2020-09-01'
-            WHERE dep.deprecation_id IS NULL AND cs.coord_sys_type != 'ordinal'
-            ORDER BY constant_name
-        ";
-    $result = $sqlite->query($sql);
-
-    updateFile($srcDir . '/CoordinateSystem/CoordinateSystem.php', $result, 'public');
-
-    /*
      * Coordinate systems (cartesian)
      */
     $sql = "
