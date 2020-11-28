@@ -8,7 +8,6 @@ declare(strict_types=1);
 
 namespace PHPCoord\Datum;
 
-use PHPCoord\EPSG\Repository;
 use PHPCoord\Exception\UnknownEllipsoidException;
 use PHPUnit\Framework\TestCase;
 
@@ -18,7 +17,7 @@ class EllipsoidTest extends TestCase
      * @group integration
      * @dataProvider ellipsoids
      */
-    public function testCanCreateAllInDB(string $srid): void
+    public function testCanCreateSupported(string $srid): void
     {
         $object = Ellipsoid::fromSRID($srid);
         self::assertInstanceOf(Ellipsoid::class, $object);
@@ -39,15 +38,10 @@ class EllipsoidTest extends TestCase
 
     public function ellipsoids(): array
     {
-        $repository = new Repository();
-
         $data = [];
-        foreach ($repository->getEllipsoids() as $ellipsoid) {
-            $data[$ellipsoid['ellipsoid_name']] = [$ellipsoid['ellipsoid_code']];
+        foreach (Ellipsoid::getSupportedSRIDs() as $srid => $name) {
+            $data[$name] = [$srid];
         }
-
-        // dataproviders are run before the suite starts, this allows the repository to actually get tested
-        $repository->clearCache();
 
         return $data;
     }

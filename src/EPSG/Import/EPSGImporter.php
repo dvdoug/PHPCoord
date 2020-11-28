@@ -73,6 +73,7 @@ class EPSGImporter
         $sqlite->enableExceptions(true);
 
         $this->generateDataPrimeMeridians($sqlite);
+        $this->generateDataEllipsoids($sqlite);
 
         $this->generateConstantsUnitsOfMeasure($sqlite);
         $this->generateConstantsPrimeMeridians($sqlite);
@@ -176,6 +177,35 @@ class EPSGImporter
         }
 
         $this->updateFileConstants($this->sourceDir . '/Datum/Ellipsoid.php', $constants, 'public');
+    }
+
+    public function generateDataEllipsoids(SQLite3 $sqlite): void
+    {
+        $sql = "
+            SELECT
+                'urn:ogc:def:ellipsoid:EPSG::' || el.ellipsoid_code AS urn,
+                el.ellipsoid_name AS name,
+                el.semi_major_axis,
+                el.semi_minor_axis,
+                el.inv_flattening,
+                'urn:ogc:def:uom:EPSG::' || el.uom_code AS uom
+            FROM epsg_ellipsoid el
+            ORDER BY urn
+        ";
+
+        $result = $sqlite->query($sql);
+        $data = [];
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            // some ellipsoids are defined via inverse flattening and the DB doesn't store the calculated data...
+            if (!$row['semi_minor_axis']) {
+                $row['semi_minor_axis'] = $row['semi_major_axis'] - ($row['semi_major_axis'] / $row['inv_flattening']);
+            }
+            $data[$row['urn']] = $row;
+            unset($data[$row['urn']]['urn']);
+            unset($data[$row['urn']]['inv_flattening']);
+        }
+
+        $this->updateFileData($this->sourceDir . '/Datum/Ellipsoid.php', $data);
     }
 
     public function generateConstantsDatums(SQLite3 $sqlite): void

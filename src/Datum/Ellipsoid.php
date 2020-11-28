@@ -8,7 +8,6 @@ declare(strict_types=1);
 
 namespace PHPCoord\Datum;
 
-use PHPCoord\EPSG\Repository;
 use PHPCoord\Exception\UnknownEllipsoidException;
 use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
@@ -354,7 +353,338 @@ class Ellipsoid
      */
     public const EPSG_ZACH_1812 = 'urn:ogc:def:ellipsoid:EPSG::1026';
 
-    private static Repository $repository;
+    protected static array $sridData = [
+        'urn:ogc:def:ellipsoid:EPSG::1024' => [
+            'name' => 'CGCS2000',
+            'semi_major_axis' => 6378137.0,
+            'semi_minor_axis' => 6356752.314140356,
+            'uom' => 'urn:ogc:def:uom:EPSG::9001',
+        ],
+        'urn:ogc:def:ellipsoid:EPSG::1025' => [
+            'name' => 'GSK-2011',
+            'semi_major_axis' => 6378136.5,
+            'semi_minor_axis' => 6356751.757955603,
+            'uom' => 'urn:ogc:def:uom:EPSG::9001',
+        ],
+        'urn:ogc:def:ellipsoid:EPSG::1026' => [
+            'name' => 'Zach 1812',
+            'semi_major_axis' => 6376045.0,
+            'semi_minor_axis' => 6355477.112903226,
+            'uom' => 'urn:ogc:def:uom:EPSG::9001',
+        ],
+        'urn:ogc:def:ellipsoid:EPSG::7001' => [
+            'name' => 'Airy 1830',
+            'semi_major_axis' => 6377563.396,
+            'semi_minor_axis' => 6356256.909237285,
+            'uom' => 'urn:ogc:def:uom:EPSG::9001',
+        ],
+        'urn:ogc:def:ellipsoid:EPSG::7002' => [
+            'name' => 'Airy Modified 1849',
+            'semi_major_axis' => 6377340.189,
+            'semi_minor_axis' => 6356034.447938534,
+            'uom' => 'urn:ogc:def:uom:EPSG::9001',
+        ],
+        'urn:ogc:def:ellipsoid:EPSG::7003' => [
+            'name' => 'Australian National Spheroid',
+            'semi_major_axis' => 6378160.0,
+            'semi_minor_axis' => 6356774.719195306,
+            'uom' => 'urn:ogc:def:uom:EPSG::9001',
+        ],
+        'urn:ogc:def:ellipsoid:EPSG::7004' => [
+            'name' => 'Bessel 1841',
+            'semi_major_axis' => 6377397.155,
+            'semi_minor_axis' => 6356078.962818189,
+            'uom' => 'urn:ogc:def:uom:EPSG::9001',
+        ],
+        'urn:ogc:def:ellipsoid:EPSG::7005' => [
+            'name' => 'Bessel Modified',
+            'semi_major_axis' => 6377492.018,
+            'semi_minor_axis' => 6356173.508712696,
+            'uom' => 'urn:ogc:def:uom:EPSG::9001',
+        ],
+        'urn:ogc:def:ellipsoid:EPSG::7006' => [
+            'name' => 'Bessel Namibia',
+            'semi_major_axis' => 6377483.865,
+            'semi_minor_axis' => 6356165.382966326,
+            'uom' => 'urn:ogc:def:uom:EPSG::9001',
+        ],
+        'urn:ogc:def:ellipsoid:EPSG::7007' => [
+            'name' => 'Clarke 1858',
+            'semi_major_axis' => 20926348.0,
+            'semi_minor_axis' => 20855233.0,
+            'uom' => 'urn:ogc:def:uom:EPSG::9005',
+        ],
+        'urn:ogc:def:ellipsoid:EPSG::7008' => [
+            'name' => 'Clarke 1866',
+            'semi_major_axis' => 6378206.4,
+            'semi_minor_axis' => 6356583.8,
+            'uom' => 'urn:ogc:def:uom:EPSG::9001',
+        ],
+        'urn:ogc:def:ellipsoid:EPSG::7009' => [
+            'name' => 'Clarke 1866 Michigan',
+            'semi_major_axis' => 20926631.531,
+            'semi_minor_axis' => 20855688.674,
+            'uom' => 'urn:ogc:def:uom:EPSG::9003',
+        ],
+        'urn:ogc:def:ellipsoid:EPSG::7010' => [
+            'name' => 'Clarke 1880 (Benoit)',
+            'semi_major_axis' => 6378300.789,
+            'semi_minor_axis' => 6356566.435,
+            'uom' => 'urn:ogc:def:uom:EPSG::9001',
+        ],
+        'urn:ogc:def:ellipsoid:EPSG::7011' => [
+            'name' => 'Clarke 1880 (IGN)',
+            'semi_major_axis' => 6378249.2,
+            'semi_minor_axis' => 6356515.0,
+            'uom' => 'urn:ogc:def:uom:EPSG::9001',
+        ],
+        'urn:ogc:def:ellipsoid:EPSG::7012' => [
+            'name' => 'Clarke 1880 (RGS)',
+            'semi_major_axis' => 6378249.145,
+            'semi_minor_axis' => 6356514.8695497755,
+            'uom' => 'urn:ogc:def:uom:EPSG::9001',
+        ],
+        'urn:ogc:def:ellipsoid:EPSG::7013' => [
+            'name' => 'Clarke 1880 (Arc)',
+            'semi_major_axis' => 6378249.145,
+            'semi_minor_axis' => 6356514.966398753,
+            'uom' => 'urn:ogc:def:uom:EPSG::9001',
+        ],
+        'urn:ogc:def:ellipsoid:EPSG::7014' => [
+            'name' => 'Clarke 1880 (SGA 1922)',
+            'semi_major_axis' => 6378249.2,
+            'semi_minor_axis' => 6356514.996941779,
+            'uom' => 'urn:ogc:def:uom:EPSG::9001',
+        ],
+        'urn:ogc:def:ellipsoid:EPSG::7015' => [
+            'name' => 'Everest 1830 (1937 Adjustment)',
+            'semi_major_axis' => 6377276.345,
+            'semi_minor_axis' => 6356075.413140239,
+            'uom' => 'urn:ogc:def:uom:EPSG::9001',
+        ],
+        'urn:ogc:def:ellipsoid:EPSG::7016' => [
+            'name' => 'Everest 1830 (1967 Definition)',
+            'semi_major_axis' => 6377298.556,
+            'semi_minor_axis' => 6356097.550300896,
+            'uom' => 'urn:ogc:def:uom:EPSG::9001',
+        ],
+        'urn:ogc:def:ellipsoid:EPSG::7018' => [
+            'name' => 'Everest 1830 Modified',
+            'semi_major_axis' => 6377304.063,
+            'semi_minor_axis' => 6356103.038993155,
+            'uom' => 'urn:ogc:def:uom:EPSG::9001',
+        ],
+        'urn:ogc:def:ellipsoid:EPSG::7019' => [
+            'name' => 'GRS 1980',
+            'semi_major_axis' => 6378137.0,
+            'semi_minor_axis' => 6356752.314140356,
+            'uom' => 'urn:ogc:def:uom:EPSG::9001',
+        ],
+        'urn:ogc:def:ellipsoid:EPSG::7020' => [
+            'name' => 'Helmert 1906',
+            'semi_major_axis' => 6378200.0,
+            'semi_minor_axis' => 6356818.169627891,
+            'uom' => 'urn:ogc:def:uom:EPSG::9001',
+        ],
+        'urn:ogc:def:ellipsoid:EPSG::7021' => [
+            'name' => 'Indonesian National Spheroid',
+            'semi_major_axis' => 6378160.0,
+            'semi_minor_axis' => 6356774.50408554,
+            'uom' => 'urn:ogc:def:uom:EPSG::9001',
+        ],
+        'urn:ogc:def:ellipsoid:EPSG::7022' => [
+            'name' => 'International 1924',
+            'semi_major_axis' => 6378388.0,
+            'semi_minor_axis' => 6356911.9461279465,
+            'uom' => 'urn:ogc:def:uom:EPSG::9001',
+        ],
+        'urn:ogc:def:ellipsoid:EPSG::7024' => [
+            'name' => 'Krassowsky 1940',
+            'semi_major_axis' => 6378245.0,
+            'semi_minor_axis' => 6356863.018773047,
+            'uom' => 'urn:ogc:def:uom:EPSG::9001',
+        ],
+        'urn:ogc:def:ellipsoid:EPSG::7025' => [
+            'name' => 'NWL 9D',
+            'semi_major_axis' => 6378145.0,
+            'semi_minor_axis' => 6356759.769488684,
+            'uom' => 'urn:ogc:def:uom:EPSG::9001',
+        ],
+        'urn:ogc:def:ellipsoid:EPSG::7027' => [
+            'name' => 'Plessis 1817',
+            'semi_major_axis' => 6376523.0,
+            'semi_minor_axis' => 6355862.933255573,
+            'uom' => 'urn:ogc:def:uom:EPSG::9001',
+        ],
+        'urn:ogc:def:ellipsoid:EPSG::7028' => [
+            'name' => 'Struve 1860',
+            'semi_major_axis' => 6378298.3,
+            'semi_minor_axis' => 6356657.142669562,
+            'uom' => 'urn:ogc:def:uom:EPSG::9001',
+        ],
+        'urn:ogc:def:ellipsoid:EPSG::7029' => [
+            'name' => 'War Office',
+            'semi_major_axis' => 6378300.0,
+            'semi_minor_axis' => 6356751.689189189,
+            'uom' => 'urn:ogc:def:uom:EPSG::9001',
+        ],
+        'urn:ogc:def:ellipsoid:EPSG::7030' => [
+            'name' => 'WGS 84',
+            'semi_major_axis' => 6378137.0,
+            'semi_minor_axis' => 6356752.314245179,
+            'uom' => 'urn:ogc:def:uom:EPSG::9001',
+        ],
+        'urn:ogc:def:ellipsoid:EPSG::7031' => [
+            'name' => 'GEM 10C',
+            'semi_major_axis' => 6378137.0,
+            'semi_minor_axis' => 6356752.314245179,
+            'uom' => 'urn:ogc:def:uom:EPSG::9001',
+        ],
+        'urn:ogc:def:ellipsoid:EPSG::7032' => [
+            'name' => 'OSU86F',
+            'semi_major_axis' => 6378136.2,
+            'semi_minor_axis' => 6356751.516927429,
+            'uom' => 'urn:ogc:def:uom:EPSG::9001',
+        ],
+        'urn:ogc:def:ellipsoid:EPSG::7033' => [
+            'name' => 'OSU91A',
+            'semi_major_axis' => 6378136.3,
+            'semi_minor_axis' => 6356751.616592146,
+            'uom' => 'urn:ogc:def:uom:EPSG::9001',
+        ],
+        'urn:ogc:def:ellipsoid:EPSG::7034' => [
+            'name' => 'Clarke 1880',
+            'semi_major_axis' => 20926202.0,
+            'semi_minor_axis' => 20854895.0,
+            'uom' => 'urn:ogc:def:uom:EPSG::9005',
+        ],
+        'urn:ogc:def:ellipsoid:EPSG::7035' => [
+            'name' => 'Sphere',
+            'semi_major_axis' => 6371000.0,
+            'semi_minor_axis' => 6371000.0,
+            'uom' => 'urn:ogc:def:uom:EPSG::9001',
+        ],
+        'urn:ogc:def:ellipsoid:EPSG::7036' => [
+            'name' => 'GRS 1967',
+            'semi_major_axis' => 6378160.0,
+            'semi_minor_axis' => 6356774.516090714,
+            'uom' => 'urn:ogc:def:uom:EPSG::9001',
+        ],
+        'urn:ogc:def:ellipsoid:EPSG::7041' => [
+            'name' => 'Average Terrestrial System 1977',
+            'semi_major_axis' => 6378135.0,
+            'semi_minor_axis' => 6356750.304921594,
+            'uom' => 'urn:ogc:def:uom:EPSG::9001',
+        ],
+        'urn:ogc:def:ellipsoid:EPSG::7042' => [
+            'name' => 'Everest (1830 Definition)',
+            'semi_major_axis' => 20922931.8,
+            'semi_minor_axis' => 20853374.58,
+            'uom' => 'urn:ogc:def:uom:EPSG::9080',
+        ],
+        'urn:ogc:def:ellipsoid:EPSG::7043' => [
+            'name' => 'WGS 72',
+            'semi_major_axis' => 6378135.0,
+            'semi_minor_axis' => 6356750.520016094,
+            'uom' => 'urn:ogc:def:uom:EPSG::9001',
+        ],
+        'urn:ogc:def:ellipsoid:EPSG::7044' => [
+            'name' => 'Everest 1830 (1962 Definition)',
+            'semi_major_axis' => 6377301.243,
+            'semi_minor_axis' => 6356100.230165385,
+            'uom' => 'urn:ogc:def:uom:EPSG::9001',
+        ],
+        'urn:ogc:def:ellipsoid:EPSG::7045' => [
+            'name' => 'Everest 1830 (1975 Definition)',
+            'semi_major_axis' => 6377299.151,
+            'semi_minor_axis' => 6356098.145120132,
+            'uom' => 'urn:ogc:def:uom:EPSG::9001',
+        ],
+        'urn:ogc:def:ellipsoid:EPSG::7046' => [
+            'name' => 'Bessel Namibia (GLM)',
+            'semi_major_axis' => 6377397.155,
+            'semi_minor_axis' => 6356078.962818189,
+            'uom' => 'urn:ogc:def:uom:EPSG::9031',
+        ],
+        'urn:ogc:def:ellipsoid:EPSG::7047' => [
+            'name' => 'GRS 1980 Authalic Sphere',
+            'semi_major_axis' => 6370997.0,
+            'semi_minor_axis' => 6370997.0,
+            'uom' => 'urn:ogc:def:uom:EPSG::9001',
+        ],
+        'urn:ogc:def:ellipsoid:EPSG::7048' => [
+            'name' => 'GRS 1980 Authalic Sphere',
+            'semi_major_axis' => 6371007.0,
+            'semi_minor_axis' => 6371007.0,
+            'uom' => 'urn:ogc:def:uom:EPSG::9001',
+        ],
+        'urn:ogc:def:ellipsoid:EPSG::7049' => [
+            'name' => 'IAG 1975',
+            'semi_major_axis' => 6378140.0,
+            'semi_minor_axis' => 6356755.288157528,
+            'uom' => 'urn:ogc:def:uom:EPSG::9001',
+        ],
+        'urn:ogc:def:ellipsoid:EPSG::7050' => [
+            'name' => 'GRS 1967 Modified',
+            'semi_major_axis' => 6378160.0,
+            'semi_minor_axis' => 6356774.719195306,
+            'uom' => 'urn:ogc:def:uom:EPSG::9001',
+        ],
+        'urn:ogc:def:ellipsoid:EPSG::7051' => [
+            'name' => 'Danish 1876',
+            'semi_major_axis' => 6377019.27,
+            'semi_minor_axis' => 6355762.5391,
+            'uom' => 'urn:ogc:def:uom:EPSG::9001',
+        ],
+        'urn:ogc:def:ellipsoid:EPSG::7052' => [
+            'name' => 'Clarke 1866 Authalic Sphere',
+            'semi_major_axis' => 6370997.0,
+            'semi_minor_axis' => 6370997.0,
+            'uom' => 'urn:ogc:def:uom:EPSG::9001',
+        ],
+        'urn:ogc:def:ellipsoid:EPSG::7053' => [
+            'name' => 'Hough 1960',
+            'semi_major_axis' => 6378270.0,
+            'semi_minor_axis' => 6356794.343434343,
+            'uom' => 'urn:ogc:def:uom:EPSG::9001',
+        ],
+        'urn:ogc:def:ellipsoid:EPSG::7054' => [
+            'name' => 'PZ-90',
+            'semi_major_axis' => 6378136.0,
+            'semi_minor_axis' => 6356751.361745712,
+            'uom' => 'urn:ogc:def:uom:EPSG::9001',
+        ],
+        'urn:ogc:def:ellipsoid:EPSG::7055' => [
+            'name' => 'Clarke 1880 (international foot)',
+            'semi_major_axis' => 20926202.0,
+            'semi_minor_axis' => 20854895.0,
+            'uom' => 'urn:ogc:def:uom:EPSG::9002',
+        ],
+        'urn:ogc:def:ellipsoid:EPSG::7056' => [
+            'name' => 'Everest 1830 (RSO 1969)',
+            'semi_major_axis' => 6377295.664,
+            'semi_minor_axis' => 6356094.667915204,
+            'uom' => 'urn:ogc:def:uom:EPSG::9001',
+        ],
+        'urn:ogc:def:ellipsoid:EPSG::7057' => [
+            'name' => 'International 1924 Authalic Sphere',
+            'semi_major_axis' => 6371228.0,
+            'semi_minor_axis' => 6371228.0,
+            'uom' => 'urn:ogc:def:uom:EPSG::9001',
+        ],
+        'urn:ogc:def:ellipsoid:EPSG::7058' => [
+            'name' => 'Hughes 1980',
+            'semi_major_axis' => 6378273.0,
+            'semi_minor_axis' => 6356889.449,
+            'uom' => 'urn:ogc:def:uom:EPSG::9001',
+        ],
+        'urn:ogc:def:ellipsoid:EPSG::7059' => [
+            'name' => 'Popular Visualisation Sphere',
+            'semi_major_axis' => 6378137.0,
+            'semi_minor_axis' => 6378137.0,
+            'uom' => 'urn:ogc:def:uom:EPSG::9001',
+        ],
+    ];
 
     protected Length $semiMajorAxis;
 
@@ -398,18 +728,25 @@ class Ellipsoid
 
     public static function fromSRID(string $srid): self
     {
-        $repository = static::$repository ?? new Repository();
-        $allData = $repository->getEllipsoids();
-
-        if (!isset($allData[$srid])) {
+        if (!isset(static::$sridData[$srid])) {
             throw new UnknownEllipsoidException($srid);
         }
 
-        $data = $allData[$srid];
+        $data = static::$sridData[$srid];
 
         return new static(
-            UnitOfMeasureFactory::makeUnit($data['semi_major_axis'], $data['uom_code']),
-            UnitOfMeasureFactory::makeUnit($data['semi_minor_axis'], $data['uom_code'])
+            UnitOfMeasureFactory::makeUnit($data['semi_major_axis'], $data['uom']),
+            UnitOfMeasureFactory::makeUnit($data['semi_minor_axis'], $data['uom'])
         );
+    }
+
+    public static function getSupportedSRIDs(): array
+    {
+        $supported = [];
+        foreach (static::$sridData as $srid => $sridData) {
+            $supported[$srid] = $sridData['name'];
+        }
+
+        return $supported;
     }
 }

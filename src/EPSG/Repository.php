@@ -19,8 +19,6 @@ class Repository
 
     private static array $unitsOfMeasureData = [];
 
-    private static array $ellipsoidData = [];
-
     private static array $datumData = [];
 
     private static array $datumEnsembleData = [];
@@ -39,37 +37,6 @@ class Repository
         }
 
         return static::$connection;
-    }
-
-    public function getEllipsoids(): array
-    {
-        if (!static::$ellipsoidData) {
-            $connection = $this->getConnection();
-            $sql = "
-            SELECT
-                'urn:ogc:def:ellipsoid:EPSG::' || el.ellipsoid_code AS ellipsoid_code,
-                el.ellipsoid_name,
-                el.semi_major_axis,
-                el.semi_minor_axis,
-                el.inv_flattening,
-                'urn:ogc:def:uom:EPSG::' || el.uom_code AS uom_code,
-                el.deprecated
-            FROM epsg_ellipsoid el
-        ";
-
-            $result = $connection->query($sql);
-
-            while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-                // some ellipsoids are defined via inverse flattening and the DB doesn't store the calculated data...
-                if (!$row['semi_minor_axis']) {
-                    $row['semi_minor_axis'] = $row['semi_major_axis'] - ($row['semi_major_axis'] / $row['inv_flattening']);
-                }
-
-                static::$ellipsoidData[$row['ellipsoid_code']] = $row;
-            }
-        }
-
-        return static::$ellipsoidData;
     }
 
     public function getDatums(): array
@@ -250,7 +217,6 @@ class Repository
     {
         static::$connection = null;
         static::$unitsOfMeasureData = [];
-        static::$ellipsoidData = [];
         static::$datumData = [];
         static::$datumEnsembleData = [];
         static::$coordinateSystemData = [];
