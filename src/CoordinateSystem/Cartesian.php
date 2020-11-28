@@ -8,6 +8,8 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateSystem;
 
+use PHPCoord\Exception\UnknownCoordinateSystemException;
+
 class Cartesian extends CoordinateSystem
 {
     /**
@@ -557,4 +559,1285 @@ class Cartesian extends CoordinateSystem
      * Used in projected and engineering coordinate reference systems.
      */
     public const EPSG_AXES_WESTING_SOUTHING_Y_X_ORIENTATIONS_WEST_SOUTH_UOM_M = 'urn:ogc:def:cs:EPSG::6503';
+
+    protected static array $sridData = [
+        'urn:ogc:def:cs:EPSG::4400' => [
+            'name' => 'Cartesian 2D CS. Axes: easting, northing (E,N). Orientations: east, north. UoM: m.',
+            'axes' => [
+                [
+                    'orientation' => 'east',
+                    'abbreviation' => 'E',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'north',
+                    'abbreviation' => 'N',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::4499' => [
+            'name' => 'Cartesian 2D CS. Axes: easting, northing (X,Y). Orientations: east, north. UoM: m.',
+            'axes' => [
+                [
+                    'orientation' => 'east',
+                    'abbreviation' => 'X',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'north',
+                    'abbreviation' => 'Y',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::4500' => [
+            'name' => 'Cartesian 2D CS. Axes: northing, easting (N,E). Orientations: north, east. UoM: m.',
+            'axes' => [
+                [
+                    'orientation' => 'north',
+                    'abbreviation' => 'N',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'east',
+                    'abbreviation' => 'E',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::4530' => [
+            'name' => 'Cartesian 2D CS. Axes: northing, easting (X,Y). Orientations: north, east. UoM: m.',
+            'axes' => [
+                [
+                    'orientation' => 'north',
+                    'abbreviation' => 'X',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'east',
+                    'abbreviation' => 'Y',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::6503' => [
+            'name' => 'Cartesian 2D CS. Axes: westing, southing (Y,X). Orientations: west, south. UoM: m.',
+            'axes' => [
+                [
+                    'orientation' => 'west',
+                    'abbreviation' => 'Y',
+                    'name' => 'Westing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'south',
+                    'abbreviation' => 'X',
+                    'name' => 'Southing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::6501' => [
+            'name' => 'Cartesian 2D CS. Axes: southing, westing (X,Y). Orientations: south, west. UoM: m.',
+            'axes' => [
+                [
+                    'orientation' => 'south',
+                    'abbreviation' => 'X',
+                    'name' => 'Southing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'west',
+                    'abbreviation' => 'Y',
+                    'name' => 'Westing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::4407' => [
+            'name' => 'Cartesian 2D CS. Axes: easting, northing (E,N). Orientations: east, north. UoM: lkCla.',
+            'axes' => [
+                [
+                    'orientation' => 'east',
+                    'abbreviation' => 'E',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9039',
+                ],
+                [
+                    'orientation' => 'north',
+                    'abbreviation' => 'N',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9039',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::4532' => [
+            'name' => 'Cartesian 2D CS. Axes: northing, easting (Y,X). Orientations: north, east. UoM: m.',
+            'axes' => [
+                [
+                    'orientation' => 'north',
+                    'abbreviation' => 'Y',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'east',
+                    'abbreviation' => 'X',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::4404' => [
+            'name' => 'Cartesian 2D CS. Axes: easting, northing (E,N). Orientations: east, north. UoM: ftGC.',
+            'axes' => [
+                [
+                    'orientation' => 'east',
+                    'abbreviation' => 'E',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9094',
+                ],
+                [
+                    'orientation' => 'north',
+                    'abbreviation' => 'N',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9094',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::4496' => [
+            'name' => 'Cartesian 2D CS. Axes: easting, northing [E(X),N(Y)]. Orientations: east, north. UoM: m.',
+            'axes' => [
+                [
+                    'orientation' => 'east',
+                    'abbreviation' => 'E(X)',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'north',
+                    'abbreviation' => 'N(Y)',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::4497' => [
+            'name' => 'Cartesian 2D CS. Axes: easting, northing (X,Y). Orientations: east, north. UoM: ftUS.',
+            'axes' => [
+                [
+                    'orientation' => 'east',
+                    'abbreviation' => 'X',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9003',
+                ],
+                [
+                    'orientation' => 'north',
+                    'abbreviation' => 'Y',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9003',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::4531' => [
+            'name' => 'Cartesian 2D CS. Axes: northing, easting (x,y). Orientations: north, east. UoM: m.',
+            'axes' => [
+                [
+                    'orientation' => 'north',
+                    'abbreviation' => 'x',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'east',
+                    'abbreviation' => 'y',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::1031' => [
+            'name' => 'Cartesian 2D CS. Axes: northing, westing (Y,X). Orientations: north, west. UoM: m.',
+            'axes' => [
+                [
+                    'orientation' => 'north',
+                    'abbreviation' => 'Y',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'west',
+                    'abbreviation' => 'X',
+                    'name' => 'Westing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::4495' => [
+            'name' => 'Cartesian 2D CS. Axes: easting, northing (X,Y). Orientations: east, north. UoM: ft.',
+            'axes' => [
+                [
+                    'orientation' => 'east',
+                    'abbreviation' => 'X',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9002',
+                ],
+                [
+                    'orientation' => 'north',
+                    'abbreviation' => 'Y',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9002',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::4501' => [
+            'name' => 'Cartesian 2D CS. Axes: northing, westing (N,E). Orientations: north, west. UoM: m.',
+            'axes' => [
+                [
+                    'orientation' => 'north',
+                    'abbreviation' => 'N',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'west',
+                    'abbreviation' => 'E',
+                    'name' => 'Westing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::4403' => [
+            'name' => 'Cartesian 2D CS. Axes: easting, northing (E,N). Orientations: east, north. UoM: ftCla.',
+            'axes' => [
+                [
+                    'orientation' => 'east',
+                    'abbreviation' => 'E',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9005',
+                ],
+                [
+                    'orientation' => 'north',
+                    'abbreviation' => 'N',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9005',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::6509' => [
+            'name' => 'Cartesian 2D CS. Axes: southing, westing (P,M). Orientations: south, west. UoM: m.',
+            'axes' => [
+                [
+                    'orientation' => 'south',
+                    'abbreviation' => 'P',
+                    'name' => 'Southing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'west',
+                    'abbreviation' => 'M',
+                    'name' => 'Westing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::1025' => [
+            'name' => 'Cartesian 2D CS for south polar azimuthal lonO 140°E. Axes: X,Y. Orientations: X along 130°W, Y along 140°E meridians. UoM: m.',
+            'axes' => [
+                [
+                    'orientation' => 'North along 130°W',
+                    'abbreviation' => 'X',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'North along 140°E',
+                    'abbreviation' => 'Y',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::4490' => [
+            'name' => 'Cartesian 2D CS for south polar azimuthal lonO 0°E. Axes: E,N. Orientations: E along 90°E, N along 0°E meridians. UoM: m.',
+            'axes' => [
+                [
+                    'orientation' => 'North along 90°E',
+                    'abbreviation' => 'E',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'North along 0°E',
+                    'abbreviation' => 'N',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::4489' => [
+            'name' => 'Cartesian 2D CS for south polar azimuthal lonO 70°E. Axes: E,N. Orientations: E along 160°E, N along 70°E meridians. UoM: m.',
+            'axes' => [
+                [
+                    'orientation' => 'North along 160°E',
+                    'abbreviation' => 'E',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'North along 70°E',
+                    'abbreviation' => 'N',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::4491' => [
+            'name' => 'Cartesian 2D CS. Axes: westing, northing (W,N). Orientations: west, north. UoM: m.',
+            'axes' => [
+                [
+                    'orientation' => 'west',
+                    'abbreviation' => 'W',
+                    'name' => 'Westing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'north',
+                    'abbreviation' => 'N',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::4533' => [
+            'name' => 'Cartesian 2D CS. Axes: northing, easting (X,Y). Orientations: north, east. UoM: lk.',
+            'axes' => [
+                [
+                    'orientation' => 'north',
+                    'abbreviation' => 'X',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9098',
+                ],
+                [
+                    'orientation' => 'east',
+                    'abbreviation' => 'Y',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9098',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::4410' => [
+            'name' => 'Cartesian 2D CS. Axes: easting, northing (E,N). Orientations: east, north. UoM: chSe(T).',
+            'axes' => [
+                [
+                    'orientation' => 'east',
+                    'abbreviation' => 'E',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9301',
+                ],
+                [
+                    'orientation' => 'north',
+                    'abbreviation' => 'N',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9301',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::4471' => [
+            'name' => 'Cartesian 2D CS for south polar azimuthal lonO 165°W. Axes: E,N. Orientations: E along 75°W, N along 165°W meridians. UoM: m.',
+            'axes' => [
+                [
+                    'orientation' => 'North along 75°W',
+                    'abbreviation' => 'E',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'North along 165°W',
+                    'abbreviation' => 'N',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::4473' => [
+            'name' => 'Cartesian 2D CS for south polar azimuthal lonO 135°W. Axes: E,N. Orientations: E along 45°W, N along 135°W meridians. UoM: m.',
+            'axes' => [
+                [
+                    'orientation' => 'North along 45°W',
+                    'abbreviation' => 'E',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'North along 135°W',
+                    'abbreviation' => 'N',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::4474' => [
+            'name' => 'Cartesian 2D CS for south polar azimuthal lonO 105°W. Axes: E,N. Orientations: E along 15°W, N along 105°W meridians. UoM: m.',
+            'axes' => [
+                [
+                    'orientation' => 'North along 15°W',
+                    'abbreviation' => 'E',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'North along 105°W',
+                    'abbreviation' => 'N',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::4476' => [
+            'name' => 'Cartesian 2D CS for south polar azimuthal lonO 75°W. Axes: E,N. Orientations: E along 15°E, N along 75°W meridians. UoM: m.',
+            'axes' => [
+                [
+                    'orientation' => 'North along 15°E',
+                    'abbreviation' => 'E',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'North along 75°W',
+                    'abbreviation' => 'N',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::4477' => [
+            'name' => 'Cartesian 2D CS for south polar azimuthal lonO 45°W. Axes: E,N. Orientations: E along 45°E, N along 45°W meridians. UoM: m.',
+            'axes' => [
+                [
+                    'orientation' => 'North along 45°E',
+                    'abbreviation' => 'E',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'North along 45°W',
+                    'abbreviation' => 'N',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::4479' => [
+            'name' => 'Cartesian 2D CS for south polar azimuthal lonO 15°W. Axes: E,N. Orientations: E along 75°E, N along 15°W meridians. UoM: m.',
+            'axes' => [
+                [
+                    'orientation' => 'North along 75°E',
+                    'abbreviation' => 'E',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'North along 15°W',
+                    'abbreviation' => 'N',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::4480' => [
+            'name' => 'Cartesian 2D CS for south polar azimuthal lonO 15°E. Axes: E,N. Orientations: E along 105°E, N along 15°E meridians. UoM: m.',
+            'axes' => [
+                [
+                    'orientation' => 'North along 105°E',
+                    'abbreviation' => 'E',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'North along 15°E',
+                    'abbreviation' => 'N',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::4482' => [
+            'name' => 'Cartesian 2D CS for south polar azimuthal lonO 45°E. Axes: E,N. Orientations: E along 135°E, N along 45°E meridians. UoM: m.',
+            'axes' => [
+                [
+                    'orientation' => 'North along 135°E',
+                    'abbreviation' => 'E',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'North along 45°E',
+                    'abbreviation' => 'N',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::4483' => [
+            'name' => 'Cartesian 2D CS for south polar azimuthal lonO 75°E. Axes: E,N. Orientations: E along 165°E, N along 75°E meridians. UoM: m.',
+            'axes' => [
+                [
+                    'orientation' => 'North along 165°E',
+                    'abbreviation' => 'E',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'North along 75°E',
+                    'abbreviation' => 'N',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::4485' => [
+            'name' => 'Cartesian 2D CS for south polar azimuthal lonO 105°E. Axes: E,N. Orientations: E along 165°W, N along 105°E meridians. UoM: m.',
+            'axes' => [
+                [
+                    'orientation' => 'North along 165°W',
+                    'abbreviation' => 'E',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'North along 105°E',
+                    'abbreviation' => 'N',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::4486' => [
+            'name' => 'Cartesian 2D CS for south polar azimuthal lonO 135°E. Axes: E,N. Orientations: E along 135°W, N along 135°E meridians. UoM: m.',
+            'axes' => [
+                [
+                    'orientation' => 'North along 135°W',
+                    'abbreviation' => 'E',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'North along 135°E',
+                    'abbreviation' => 'N',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::4488' => [
+            'name' => 'Cartesian 2D CS for south polar azimuthal lonO 165°E. Axes: E,N. Orientations: E along 105°W, N along 165°E meridians. UoM: m.',
+            'axes' => [
+                [
+                    'orientation' => 'North along 105°W',
+                    'abbreviation' => 'E',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'North along 165°E',
+                    'abbreviation' => 'N',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::4472' => [
+            'name' => 'Cartesian 2D CS for south polar azimuthal lonO 150°W. Axes: E,N. Orientations: E along 60°W, N along 150°W meridians. UoM: m.',
+            'axes' => [
+                [
+                    'orientation' => 'North along 60°W',
+                    'abbreviation' => 'E',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'North along 150°W',
+                    'abbreviation' => 'N',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::4475' => [
+            'name' => 'Cartesian 2D CS for south polar azimuthal lonO 90°W. Axes: E,N. Orientations: E along 0°E, N along 90°W meridians. UoM: m.',
+            'axes' => [
+                [
+                    'orientation' => 'North along 0°E',
+                    'abbreviation' => 'E',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'North along 90°W',
+                    'abbreviation' => 'N',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::4478' => [
+            'name' => 'Cartesian 2D CS for south polar azimuthal lonO 30°W. Axes: E,N. Orientations: E along 60°E, N along 30°W meridians. UoM: m.',
+            'axes' => [
+                [
+                    'orientation' => 'North along 60°E',
+                    'abbreviation' => 'E',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'North along 30°W',
+                    'abbreviation' => 'N',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::4481' => [
+            'name' => 'Cartesian 2D CS for south polar azimuthal lonO 30°E. Axes: E,N. Orientations: E along 120°E, N along 30°Emeridians. UoM: m.',
+            'axes' => [
+                [
+                    'orientation' => 'North along 120°E',
+                    'abbreviation' => 'E',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'North along 30°E',
+                    'abbreviation' => 'N',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::4484' => [
+            'name' => 'Cartesian 2D CS for south polar azimuthal lonO 90°E. Axes: E,N. Orientations: E along 180°E, N along 90°E meridians. UoM: m.',
+            'axes' => [
+                [
+                    'orientation' => 'North along 180°E',
+                    'abbreviation' => 'E',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'North along 90°E',
+                    'abbreviation' => 'N',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::4487' => [
+            'name' => 'Cartesian 2D CS for south polar azimuthal lonO 150°E. Axes: E,N. Orientations: E along 120°W, N along 150°E meridians. UoM: m.',
+            'axes' => [
+                [
+                    'orientation' => 'North along 120°W',
+                    'abbreviation' => 'E',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'North along 150°E',
+                    'abbreviation' => 'N',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::4534' => [
+            'name' => 'Cartesian 2D CS. Axes: northing, easting (no abbrev). Orientations: north, east. UoM: m.',
+            'axes' => [
+                [
+                    'orientation' => 'north',
+                    'abbreviation' => 'none',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'east',
+                    'abbreviation' => 'none',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::4502' => [
+            'name' => 'Cartesian 2D CS. Axes: northing, easting (N,E). Orientations: north, east. UoM: ftCla.',
+            'axes' => [
+                [
+                    'orientation' => 'north',
+                    'abbreviation' => 'N',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9005',
+                ],
+                [
+                    'orientation' => 'east',
+                    'abbreviation' => 'E',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9005',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::4469' => [
+            'name' => 'Cartesian 2D CS for north polar azimuthal lonO 0°E. Axes: X,Y. Orientations: X along 90°E, Y along 180°E meridians. UoM: m.',
+            'axes' => [
+                [
+                    'orientation' => 'South along 90°E',
+                    'abbreviation' => 'X',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'South along 180°E',
+                    'abbreviation' => 'Y',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::4470' => [
+            'name' => 'Cartesian 2D CS for south polar azimuthal lonO 0°E. Axes: X,Y. Orientations: X along 90°E, Y along 0°E meridians. UoM: m.',
+            'axes' => [
+                [
+                    'orientation' => 'North along 90°E',
+                    'abbreviation' => 'X',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'North along 0°E',
+                    'abbreviation' => 'Y',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::4468' => [
+            'name' => 'Cartesian 2D CS for north polar azimuthal lonO 45°W. Axes: X,Y. Orientations: X along 45°E, Y along 135°E meridians. UoM: m.',
+            'axes' => [
+                [
+                    'orientation' => 'South along 45°E',
+                    'abbreviation' => 'X',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'South along 135°E',
+                    'abbreviation' => 'Y',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::4464' => [
+            'name' => 'Cartesian 2D CS for north polar azimuthal lonO 180°E. Axes: X,Y. Orientations: X along 90°W, Y along 0°E meridians. UoM: m.',
+            'axes' => [
+                [
+                    'orientation' => 'South along 90°W',
+                    'abbreviation' => 'X',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'South along 0°E',
+                    'abbreviation' => 'Y',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::4467' => [
+            'name' => 'Cartesian 2D CS for north polar azimuthal lonO 150°W. Axes: X,Y. Orientations: X along 60°W, Y along 30°E meridians. UoM: m.',
+            'axes' => [
+                [
+                    'orientation' => 'South along 60°W',
+                    'abbreviation' => 'X',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'South along 30°E',
+                    'abbreviation' => 'Y',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::4466' => [
+            'name' => 'Cartesian 2D CS for north polar azimuthal lonO 100°W. Axes: X,Y. Orientations: X along 10°W, Y along 80°E meridians. UoM: m.',
+            'axes' => [
+                [
+                    'orientation' => 'South along 10°W',
+                    'abbreviation' => 'X',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'South along 80°E',
+                    'abbreviation' => 'Y',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::4465' => [
+            'name' => 'Cartesian 2D CS for north polar azimuthal lonO 40°W. Axes: X,Y. Orientations: X along 50°E, Y along 140°E meridians. UoM: m.',
+            'axes' => [
+                [
+                    'orientation' => 'South along 50°E',
+                    'abbreviation' => 'X',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'South along 140°E',
+                    'abbreviation' => 'Y',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::4463' => [
+            'name' => 'Cartesian 2D CS for north polar azimuthal lonO 10°E. Axes: X,Y. Orientations: X along 100°E, Y along 170°W meridians. UoM: m.',
+            'axes' => [
+                [
+                    'orientation' => 'South along 100°E',
+                    'abbreviation' => 'X',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'South along 170°W',
+                    'abbreviation' => 'Y',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::1035' => [
+            'name' => 'Cartesian 2D CS for north polar azimuthal lonO 90°E. Axes: X,Y. Orientations: X along 180°E, Y along 90°W meridians. UoM: m.',
+            'axes' => [
+                [
+                    'orientation' => 'South along 180°E',
+                    'abbreviation' => 'X',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'South along 90°W',
+                    'abbreviation' => 'Y',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::4498' => [
+            'name' => 'Cartesian 2D CS. Axes: easting, northing (Y,X). Orientations: east, north. UoM: m.',
+            'axes' => [
+                [
+                    'orientation' => 'east',
+                    'abbreviation' => 'Y',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'north',
+                    'abbreviation' => 'X',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::6500' => [
+            'name' => 'Cartesian 3D CS (geocentric). Axes: geocentric X Y Z. Orientations: X and Y in equatorial plane, X positive through intersection with prime meridian, Y through 0°N 90°E. Z axis parallel to mean earth rotation axis and positive towards North Pole. UoM: m.',
+            'axes' => [
+                [
+                    'orientation' => 'geocentricX',
+                    'abbreviation' => 'X',
+                    'name' => 'Geocentric X',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'geocentricY',
+                    'abbreviation' => 'Y',
+                    'name' => 'Geocentric Y',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'geocentricZ',
+                    'abbreviation' => 'Z',
+                    'name' => 'Geocentric Z',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::1024' => [
+            'name' => 'Cartesian 2D CS. Axes: easting, northing (M,P). Orientations east, north. UoM m.',
+            'axes' => [
+                [
+                    'orientation' => 'east',
+                    'abbreviation' => 'M',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'north',
+                    'abbreviation' => 'P',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::1026' => [
+            'name' => 'Cartesian 2D CS for UPS north. Axes: E,N. Orientations: E along 90°E meridian, N along 180°E meridian. UoM: m.',
+            'axes' => [
+                [
+                    'orientation' => 'South along 90°E',
+                    'abbreviation' => 'E',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'South along 180°E',
+                    'abbreviation' => 'N',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::1027' => [
+            'name' => 'Cartesian 2D CS for UPS south. Axes: E,N. Orientations: E along 90°E, N along 0°E meridians. UoM: m.',
+            'axes' => [
+                [
+                    'orientation' => 'North along 90°E',
+                    'abbreviation' => 'E',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'North along 0°E',
+                    'abbreviation' => 'N',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::1028' => [
+            'name' => 'Cartesian 2D CS. Axes: easting, northing (E,N). Orientations: east, north. UoM: ydCl.',
+            'axes' => [
+                [
+                    'orientation' => 'east',
+                    'abbreviation' => 'E',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9037',
+                ],
+                [
+                    'orientation' => 'north',
+                    'abbreviation' => 'N',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9037',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::1044' => [
+            'name' => 'Cartesian 2D CS for south polar azimuthal lonO 180°E. Axes: N,E. Orientations: N along 180°E, E along 90°W meridians. UoM: m.',
+            'axes' => [
+                [
+                    'orientation' => 'North along 180°E',
+                    'abbreviation' => 'N',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'North along 90°W',
+                    'abbreviation' => 'E',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::1029' => [
+            'name' => 'Cartesian 2D CS. Axes: northing, easting (N,E). Orientations: north, east. UoM: ft.',
+            'axes' => [
+                [
+                    'orientation' => 'north',
+                    'abbreviation' => 'N',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9002',
+                ],
+                [
+                    'orientation' => 'east',
+                    'abbreviation' => 'E',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9002',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::1036' => [
+            'name' => 'Cartesian 2D CS for north polar azimuthal lonO 33°W. Axes: X,Y. Orientations: X along 57°E, Y along 147°E meridians. UoM: m.',
+            'axes' => [
+                [
+                    'orientation' => 'South along 57°E',
+                    'abbreviation' => 'X',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'South along 147°E',
+                    'abbreviation' => 'Y',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::1037' => [
+            'name' => 'Cartesian 2D CS for north polar azimuthal lonO 18°E. Axes: X,Y. Orientations: X along 108°E, Y along 162°W meridians. UoM: m.',
+            'axes' => [
+                [
+                    'orientation' => 'South along 108°E',
+                    'abbreviation' => 'X',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'South along 162°W',
+                    'abbreviation' => 'Y',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::1038' => [
+            'name' => 'Cartesian 2D CS for north polar azimuthal lonO 105°E. Axes: X,Y. Orientations: X along 165°W, Y along 75°W meridians. UoM: m.',
+            'axes' => [
+                [
+                    'orientation' => 'South along 165°W',
+                    'abbreviation' => 'X',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'South along 75°W',
+                    'abbreviation' => 'Y',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::1039' => [
+            'name' => 'Cartesian 2D CS. Axes: easting, northing (E,N). Orientations: east, north. UoM: ft.',
+            'axes' => [
+                [
+                    'orientation' => 'east',
+                    'abbreviation' => 'E',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9002',
+                ],
+                [
+                    'orientation' => 'north',
+                    'abbreviation' => 'N',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9002',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::4406' => [
+            'name' => 'Cartesian 2D CS. Axes: easting, northing (E,N). Orientations: east, north. UoM: km.',
+            'axes' => [
+                [
+                    'orientation' => 'east',
+                    'abbreviation' => 'X',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9036',
+                ],
+                [
+                    'orientation' => 'north',
+                    'abbreviation' => 'Y',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9036',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::4408' => [
+            'name' => 'Cartesian 2D CS. Axes: easting, northing (E,N). Orientations: east, north. UoM: ydInd.',
+            'axes' => [
+                [
+                    'orientation' => 'east',
+                    'abbreviation' => 'E',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9084',
+                ],
+                [
+                    'orientation' => 'north',
+                    'abbreviation' => 'N',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9084',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::4401' => [
+            'name' => 'Cartesian 2D CS. Axes: easting, northing (E,N). Orientations: east, north. UoM: chBnB.',
+            'axes' => [
+                [
+                    'orientation' => 'east',
+                    'abbreviation' => 'E',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9062',
+                ],
+                [
+                    'orientation' => 'north',
+                    'abbreviation' => 'N',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9062',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::4409' => [
+            'name' => 'Cartesian 2D CS. Axes: easting, northing (E,N). Orientations: east, north. UoM: ydSe.',
+            'axes' => [
+                [
+                    'orientation' => 'east',
+                    'abbreviation' => 'E',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9040',
+                ],
+                [
+                    'orientation' => 'north',
+                    'abbreviation' => 'N',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9040',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::6502' => [
+            'name' => 'Cartesian 2D CS. Axes: westing, southing (Y,X). Orientations: west, south. UoM: GLM.',
+            'axes' => [
+                [
+                    'orientation' => 'west',
+                    'abbreviation' => 'Y',
+                    'name' => 'Westing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9031',
+                ],
+                [
+                    'orientation' => 'south',
+                    'abbreviation' => 'X',
+                    'name' => 'Southing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9031',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::4402' => [
+            'name' => 'Cartesian 2D CS. Axes: easting, northing (E,N). Orientations: east, north. UoM: chSe.',
+            'axes' => [
+                [
+                    'orientation' => 'east',
+                    'abbreviation' => 'E',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9042',
+                ],
+                [
+                    'orientation' => 'north',
+                    'abbreviation' => 'N',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9042',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::4405' => [
+            'name' => 'Cartesian 2D CS. Axes: easting, northing (E,N). Orientations: east, north. UoM: ftSe.',
+            'axes' => [
+                [
+                    'orientation' => 'east',
+                    'abbreviation' => 'E',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9041',
+                ],
+                [
+                    'orientation' => 'north',
+                    'abbreviation' => 'N',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9041',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::4493' => [
+            'name' => 'Cartesian 2D CS for UPS north. Axes: N,E. Orientations: N along 180°E meridian, E along 90°E meridian. UoM: m.',
+            'axes' => [
+                [
+                    'orientation' => 'South along 180°E',
+                    'abbreviation' => 'N',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'South along 90°E',
+                    'abbreviation' => 'E',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::4494' => [
+            'name' => 'Cartesian 2D CS for UPS south. Axes: N,E. Orientations: N along 0°E, E along 90°E meridians. UoM: m.',
+            'axes' => [
+                [
+                    'orientation' => 'North along 0°E',
+                    'abbreviation' => 'N',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'North along 90°E',
+                    'abbreviation' => 'E',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+            ],
+        ],
+    ];
+
+    public static function fromSRID(string $srid): self
+    {
+        if (!isset(static::$sridData[$srid])) {
+            throw new UnknownCoordinateSystemException($srid);
+        }
+
+        $data = static::$sridData[$srid];
+
+        $axes = [];
+        foreach ($data['axes'] as $axisData) {
+            $axes[] = new Axis(
+                $axisData['orientation'],
+                $axisData['abbreviation'],
+                $axisData['name'],
+                $axisData['uom'],
+            );
+        }
+
+        return new self($srid, $axes);
+    }
+
+    public static function getSupportedSRIDs(): array
+    {
+        $supported = [];
+        foreach (static::$sridData as $srid => $sridData) {
+            $supported[$srid] = $sridData['name'];
+        }
+
+        return $supported;
+    }
 }

@@ -17,10 +17,6 @@ class Repository
 {
     private static ?SQLite3 $connection = null;
 
-    private static array $coordinateSystemData = [];
-
-    private static array $coordinateSystemAxisData = [];
-
     private static array $coordinateReferenceSystemData = [];
 
     private function getConnection(): SQLite3
@@ -31,33 +27,6 @@ class Repository
         }
 
         return static::$connection;
-    }
-
-    public function getCoordinateSystems(): array
-    {
-        if (!static::$coordinateSystemData) {
-            $connection = $this->getConnection();
-            $sql = "
-            SELECT
-                'urn:ogc:def:cs:EPSG::' || cs.coord_sys_code AS coord_sys_code,
-                cs.coord_sys_name,
-                cs.coord_sys_type,
-                cs.dimension,
-                cs.deprecated
-            FROM epsg_coordinatesystem cs
-            JOIN epsg_coordinatereferencesystem crs ON crs.coord_sys_code = cs.coord_sys_code AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
-            WHERE cs.coord_sys_type != 'ordinal'
-            ";
-
-            $result = $connection->query($sql);
-
-            while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-                $row['axes'] = $this->getCoordinateSystemAxes()[$row['coord_sys_code']];
-                static::$coordinateSystemData[$row['coord_sys_code']] = $row;
-            }
-        }
-
-        return static::$coordinateSystemData;
     }
 
     public function getCoordinateReferenceSystems(): array
@@ -92,45 +61,12 @@ class Repository
         return static::$coordinateReferenceSystemData;
     }
 
-    private function getCoordinateSystemAxes(): array
-    {
-        if (!static::$coordinateSystemAxisData) {
-            $connection = $this->getConnection();
-            $sql = "
-            SELECT
-                'urn:ogc:def:cs:EPSG::' || a.coord_sys_code AS coord_sys_code,
-                a.coord_axis_orientation,
-                a.coord_axis_abbreviation,
-                an.coord_axis_name,
-                'urn:ogc:def:uom:EPSG::' || a.uom_code AS uom_code,
-                a.coord_axis_order
-            FROM epsg_coordinateaxis a
-            JOIN epsg_coordinateaxisname an on a.coord_axis_name_code = an.coord_axis_name_code
-            ORDER BY a.coord_axis_order
-            ";
-
-            $result = $connection->query($sql);
-
-            while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-                if (isset(static::$coordinateSystemAxisData[$row['coord_sys_code']])) {
-                    static::$coordinateSystemAxisData[$row['coord_sys_code']][] = $row;
-                } else {
-                    static::$coordinateSystemAxisData[$row['coord_sys_code']] = [$row];
-                }
-            }
-        }
-
-        return static::$coordinateSystemAxisData;
-    }
-
     /**
      * @codeCoverageIgnore
      */
     public function clearCache(): void
     {
         static::$connection = null;
-        static::$coordinateSystemData = [];
-        static::$coordinateSystemAxisData = [];
         static::$coordinateReferenceSystemData = [];
     }
 }

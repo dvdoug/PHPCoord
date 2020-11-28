@@ -77,6 +77,7 @@ class EPSGImporter
         $this->generateDataPrimeMeridians($sqlite);
         $this->generateDataEllipsoids($sqlite);
         $this->generateDataDatums($sqlite);
+        $this->generateDataCoordinateSystems($sqlite);
 
         $this->generateConstantsUnitsOfMeasure($sqlite);
         $this->generateConstantsPrimeMeridians($sqlite);
@@ -308,7 +309,7 @@ class EPSGImporter
     public function generateConstantsCoordinateSystems(SQLite3 $sqlite): void
     {
         /*
-         * Coordinate systems (cartesian)
+         * cartesian
          */
         $sql = "
             SELECT
@@ -334,7 +335,7 @@ class EPSGImporter
         $this->updateFileConstants($this->sourceDir . '/CoordinateSystem/Cartesian.php', $constants, 'public');
 
         /*
-         * Coordinate systems (ellipsoidal)
+         * ellipsoidal
          */
         $sql = "
             SELECT
@@ -360,7 +361,7 @@ class EPSGImporter
         $this->updateFileConstants($this->sourceDir . '/CoordinateSystem/Ellipsoidal.php', $constants, 'public');
 
         /*
-         * Coordinate systems (vertical)
+         * vertical
          */
         $sql = "
             SELECT
@@ -386,7 +387,7 @@ class EPSGImporter
         $this->updateFileConstants($this->sourceDir . '/CoordinateSystem/Vertical.php', $constants, 'public');
 
         /*
-         * Coordinate systems (other)
+         * other
          */
         $sql = "
             SELECT
@@ -410,6 +411,170 @@ class EPSGImporter
         }
 
         $this->updateFileConstants($this->sourceDir . '/CoordinateSystem/CoordinateSystem.php', $constants, 'public');
+    }
+
+    public function generateDataCoordinateSystems(SQLite3 $sqlite): void
+    {
+        /*
+         * cartesian
+         */
+        $sql = "
+            SELECT
+                'urn:ogc:def:cs:EPSG::' || cs.coord_sys_code AS urn,
+                cs.coord_sys_name AS name
+            FROM epsg_coordinatesystem cs
+            JOIN epsg_coordinatereferencesystem crs ON crs.coord_sys_code = cs.coord_sys_code AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
+            WHERE cs.coord_sys_type = 'Cartesian'
+            ";
+
+        $result = $sqlite->query($sql);
+        $data = [];
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            $row['axes'] = [];
+            $axisSql = "
+                SELECT
+                    'urn:ogc:def:cs:EPSG::' || a.coord_sys_code AS coord_sys,
+                    a.coord_axis_orientation AS orientation,
+                    a.coord_axis_abbreviation AS abbreviation,
+                    an.coord_axis_name AS name,
+                    'urn:ogc:def:uom:EPSG::' || a.uom_code AS uom
+                FROM epsg_coordinateaxis a
+                JOIN epsg_coordinateaxisname an on a.coord_axis_name_code = an.coord_axis_name_code
+                WHERE coord_sys = '{$row['urn']}'
+                ORDER BY a.coord_axis_order
+                ";
+
+            $axisResult = $sqlite->query($axisSql);
+            while ($axisRow = $axisResult->fetchArray(SQLITE3_ASSOC)) {
+                unset($axisRow['coord_sys']);
+                $row['axes'][] = $axisRow;
+            }
+            $data[$row['urn']] = $row;
+            unset($data[$row['urn']]['urn']);
+        }
+
+        $this->updateFileData($this->sourceDir . '/CoordinateSystem/Cartesian.php', $data);
+
+        /*
+         * ellipsoidal
+         */
+        $sql = "
+            SELECT
+                'urn:ogc:def:cs:EPSG::' || cs.coord_sys_code AS urn,
+                cs.coord_sys_name AS name
+            FROM epsg_coordinatesystem cs
+            JOIN epsg_coordinatereferencesystem crs ON crs.coord_sys_code = cs.coord_sys_code AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
+            WHERE cs.coord_sys_type = 'ellipsoidal'
+            ";
+
+        $result = $sqlite->query($sql);
+        $data = [];
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            $row['axes'] = [];
+            $axisSql = "
+                SELECT
+                    'urn:ogc:def:cs:EPSG::' || a.coord_sys_code AS coord_sys,
+                    a.coord_axis_orientation AS orientation,
+                    a.coord_axis_abbreviation AS abbreviation,
+                    an.coord_axis_name AS name,
+                    'urn:ogc:def:uom:EPSG::' || a.uom_code AS uom
+                FROM epsg_coordinateaxis a
+                JOIN epsg_coordinateaxisname an on a.coord_axis_name_code = an.coord_axis_name_code
+                WHERE coord_sys = '{$row['urn']}'
+                ORDER BY a.coord_axis_order
+                ";
+
+            $axisResult = $sqlite->query($axisSql);
+            while ($axisRow = $axisResult->fetchArray(SQLITE3_ASSOC)) {
+                unset($axisRow['coord_sys']);
+                $row['axes'][] = $axisRow;
+            }
+            $data[$row['urn']] = $row;
+            unset($data[$row['urn']]['urn']);
+        }
+
+        $this->updateFileData($this->sourceDir . '/CoordinateSystem/Ellipsoidal.php', $data);
+
+        /*
+         * vertical
+         */
+        $sql = "
+            SELECT
+                'urn:ogc:def:cs:EPSG::' || cs.coord_sys_code AS urn,
+                cs.coord_sys_name AS name
+            FROM epsg_coordinatesystem cs
+            JOIN epsg_coordinatereferencesystem crs ON crs.coord_sys_code = cs.coord_sys_code AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
+            WHERE cs.coord_sys_type = 'vertical'
+            ";
+
+        $result = $sqlite->query($sql);
+        $data = [];
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            $row['axes'] = [];
+            $axisSql = "
+                SELECT
+                    'urn:ogc:def:cs:EPSG::' || a.coord_sys_code AS coord_sys,
+                    a.coord_axis_orientation AS orientation,
+                    a.coord_axis_abbreviation AS abbreviation,
+                    an.coord_axis_name AS name,
+                    'urn:ogc:def:uom:EPSG::' || a.uom_code AS uom
+                FROM epsg_coordinateaxis a
+                JOIN epsg_coordinateaxisname an on a.coord_axis_name_code = an.coord_axis_name_code
+                WHERE coord_sys = '{$row['urn']}'
+                ORDER BY a.coord_axis_order
+                ";
+
+            $axisResult = $sqlite->query($axisSql);
+            while ($axisRow = $axisResult->fetchArray(SQLITE3_ASSOC)) {
+                unset($axisRow['coord_sys']);
+                $row['axes'][] = $axisRow;
+            }
+            $data[$row['urn']] = $row;
+            unset($data[$row['urn']]['urn']);
+        }
+
+        $this->updateFileData($this->sourceDir . '/CoordinateSystem/Vertical.php', $data);
+
+        /*
+         * other
+         */
+        $sql = "
+            SELECT
+                'urn:ogc:def:cs:EPSG::' || cs.coord_sys_code AS urn,
+                cs.coord_sys_name AS name,
+                cs.coord_sys_type AS type
+            FROM epsg_coordinatesystem cs
+            JOIN epsg_coordinatereferencesystem crs ON crs.coord_sys_code = cs.coord_sys_code AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
+            WHERE cs.coord_sys_type NOT IN ('Cartesian', 'ellipsoidal', 'vertical')
+            ";
+
+        $result = $sqlite->query($sql);
+        $data = [];
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            $row['axes'] = [];
+            $axisSql = "
+                SELECT
+                    'urn:ogc:def:cs:EPSG::' || a.coord_sys_code AS coord_sys,
+                    a.coord_axis_orientation AS orientation,
+                    a.coord_axis_abbreviation AS abbreviation,
+                    an.coord_axis_name AS name,
+                    'urn:ogc:def:uom:EPSG::' || a.uom_code AS uom
+                FROM epsg_coordinateaxis a
+                JOIN epsg_coordinateaxisname an on a.coord_axis_name_code = an.coord_axis_name_code
+                WHERE coord_sys = '{$row['urn']}'
+                ORDER BY a.coord_axis_order
+                ";
+
+            $axisResult = $sqlite->query($axisSql);
+            while ($axisRow = $axisResult->fetchArray(SQLITE3_ASSOC)) {
+                unset($axisRow['coord_sys']);
+                $row['axes'][] = $axisRow;
+            }
+            $data[$row['urn']] = $row;
+            unset($data[$row['urn']]['urn']);
+        }
+
+        $this->updateFileData($this->sourceDir . '/CoordinateSystem/CoordinateSystem.php', $data);
     }
 
     public function generateConstantsCoordinateReferenceSystems(SQLite3 $sqlite): void
@@ -757,9 +922,11 @@ class EPSGImporter
         /*
          * Then add the ones wanted
          */
-        $traverser = new NodeTraverser();
-        $traverser->addVisitor(new AddNewDataVisitor($data));
-        $newStmts = $traverser->traverse($newStmts);
+        if ($data) {
+            $traverser = new NodeTraverser();
+            $traverser->addVisitor(new AddNewDataVisitor($data));
+            $newStmts = $traverser->traverse($newStmts);
+        }
 
         $prettyPrinter = new ASTPrettyPrinter();
         file_put_contents($fileName, $prettyPrinter->printFormatPreserving($newStmts, $oldStmts, $oldTokens));

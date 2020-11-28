@@ -8,7 +8,10 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateReferenceSystem;
 
+use PHPCoord\CoordinateSystem\Cartesian;
 use PHPCoord\CoordinateSystem\CoordinateSystem;
+use PHPCoord\CoordinateSystem\Ellipsoidal;
+use PHPCoord\CoordinateSystem\Vertical as VerticalCS;
 use PHPCoord\Datum\Datum;
 use PHPCoord\EPSG\Repository;
 use PHPCoord\Exception\UnknownCoordinateReferenceSystemException;
@@ -67,35 +70,35 @@ abstract class CoordinateReferenceSystem
             case self::CRS_TYPE_GEOCENTRIC:
                 return new Geocentric(
                     $srid,
-                    CoordinateSystem::fromSRID($data['coord_sys_code']),
+                    Cartesian::fromSRID($data['coord_sys_code']),
                     $data['datum_code'] ? Datum::fromSRID($data['datum_code']) : self::fromSRID($data['base_crs_code'])->getDatum()
                 );
 
             case self::CRS_TYPE_GEOGRAPHIC_2D:
                 return new Geographic2D(
                     $srid,
-                    CoordinateSystem::fromSRID($data['coord_sys_code']),
+                    Ellipsoidal::fromSRID($data['coord_sys_code']),
                     $data['datum_code'] ? Datum::fromSRID($data['datum_code']) : self::fromSRID($data['base_crs_code'])->getDatum()
                 );
 
             case self::CRS_TYPE_GEOGRAPHIC_3D:
                 return new Geographic3D(
                     $srid,
-                    CoordinateSystem::fromSRID($data['coord_sys_code']),
+                    Ellipsoidal::fromSRID($data['coord_sys_code']),
                     $data['datum_code'] ? Datum::fromSRID($data['datum_code']) : self::fromSRID($data['base_crs_code'])->getDatum()
                 );
 
             case self::CRS_TYPE_PROJECTED:
                 return new Projected(
                     $srid,
-                    CoordinateSystem::fromSRID($data['coord_sys_code']),
+                    Cartesian::fromSRID($data['coord_sys_code']),
                     self::fromSRID($data['base_crs_code'])
                 );
 
             case self::CRS_TYPE_VERTICAL:
                 return new Vertical(
                     $srid,
-                    CoordinateSystem::fromSRID($data['coord_sys_code']),
+                    VerticalCS::fromSRID($data['coord_sys_code']),
                     Datum::fromSRID($data['datum_code'])
                 );
 

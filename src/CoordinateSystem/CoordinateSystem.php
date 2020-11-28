@@ -8,9 +8,6 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateSystem;
 
-use PHPCoord\EPSG\Repository;
-use PHPCoord\Exception\UnknownCoordinateSystemException;
-
 abstract class CoordinateSystem
 {
     public const CS_TYPE_CARTESIAN = 'Cartesian';
@@ -29,44 +26,6 @@ abstract class CoordinateSystem
      * @var Axis[]
      */
     protected array $axes;
-
-    private static Repository $repository;
-
-    public static function fromSRID(string $srid): self
-    {
-        $repository = static::$repository ?? new Repository();
-        $allData = $repository->getCoordinateSystems();
-
-        if (!isset($allData[$srid])) {
-            throw new UnknownCoordinateSystemException($srid);
-        }
-
-        $data = $allData[$srid];
-
-        $axes = [];
-        foreach ($data['axes'] as $axisData) {
-            $axes[$axisData['coord_axis_order']] = new Axis(
-                $axisData['coord_axis_orientation'],
-                $axisData['coord_axis_abbreviation'],
-                $axisData['coord_axis_name'],
-                $axisData['uom_code'],
-            );
-        }
-
-        if ($data['coord_sys_type'] === self::CS_TYPE_CARTESIAN) {
-            return new Cartesian($srid, $axes);
-        }
-
-        if ($data['coord_sys_type'] === self::CS_TYPE_ELLIPSOIDAL) {
-            return new Ellipsoidal($srid, $axes);
-        }
-
-        if ($data['coord_sys_type'] === self::CS_TYPE_VERTICAL) {
-            return new Vertical($srid, $axes);
-        }
-
-        throw new UnknownCoordinateSystemException($srid); // @codeCoverageIgnore
-    }
 
     public function __construct(
         string $srid,

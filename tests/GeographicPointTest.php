@@ -15,7 +15,6 @@ use PHPCoord\CoordinateReferenceSystem\Geocentric;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Geographic3D;
 use PHPCoord\CoordinateReferenceSystem\Projected;
-use PHPCoord\CoordinateSystem\CoordinateSystem;
 use PHPCoord\CoordinateSystem\Ellipsoidal;
 use PHPCoord\Datum\Datum;
 use PHPCoord\Datum\Ellipsoid;
@@ -426,7 +425,7 @@ class GeographicPointTest extends TestCase
     {
         $fromCRS = new Geographic2D(
             'foo',
-            CoordinateSystem::fromSRID(Ellipsoidal::EPSG_AXES_LATITUDE_LONGITUDE_ORIENTATIONS_NORTH_EAST_UOM_DEGREE),
+            Ellipsoidal::fromSRID(Ellipsoidal::EPSG_AXES_LATITUDE_LONGITUDE_ORIENTATIONS_NORTH_EAST_UOM_DEGREE),
             new Datum(
                 Datum::DATUM_TYPE_GEODETIC,
                 new Ellipsoid(

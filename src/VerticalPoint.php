@@ -43,7 +43,7 @@ class VerticalPoint extends Point
      */
     protected function __construct(Length $height, Vertical $crs, ?DateTimeInterface $epoch = null)
     {
-        $this->height = UnitOfMeasureFactory::convertLength($height, $crs->getCoordinateSystem()->getAxes()[1]->getUnitOfMeasureId());
+        $this->height = UnitOfMeasureFactory::convertLength($height, $crs->getCoordinateSystem()->getAxes()[0]->getUnitOfMeasureId());
         $this->crs = $crs;
 
         if ($epoch instanceof DateTime) {

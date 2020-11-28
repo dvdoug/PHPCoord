@@ -14,7 +14,6 @@ use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Projected;
 use PHPCoord\CoordinateSystem\Cartesian;
-use PHPCoord\CoordinateSystem\CoordinateSystem;
 use PHPCoord\CoordinateSystem\Ellipsoidal;
 use PHPCoord\Datum\Datum;
 use PHPCoord\Datum\Ellipsoid;
@@ -334,10 +333,10 @@ class ProjectedPointTest extends TestCase
     {
         $fromCRS = new Projected(
             'foo',
-            CoordinateSystem::fromSRID(Cartesian::EPSG_AXES_EASTING_NORTHING_E_N_ORIENTATIONS_EAST_NORTH_UOM_M),
+            Cartesian::fromSRID(Cartesian::EPSG_AXES_EASTING_NORTHING_E_N_ORIENTATIONS_EAST_NORTH_UOM_M),
             new Geographic2D(
                 'foo',
-                CoordinateSystem::fromSRID(Ellipsoidal::EPSG_AXES_LATITUDE_LONGITUDE_ORIENTATIONS_NORTH_EAST_UOM_DEGREE),
+                Ellipsoidal::fromSRID(Ellipsoidal::EPSG_AXES_LATITUDE_LONGITUDE_ORIENTATIONS_NORTH_EAST_UOM_DEGREE),
                 new Datum(
                     Datum::DATUM_TYPE_GEODETIC,
                     new Ellipsoid(
