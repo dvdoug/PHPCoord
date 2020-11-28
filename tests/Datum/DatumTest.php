@@ -8,7 +8,6 @@ declare(strict_types=1);
 
 namespace PHPCoord\Datum;
 
-use PHPCoord\EPSG\Repository;
 use PHPCoord\Exception\UnknownDatumException;
 use PHPUnit\Framework\TestCase;
 
@@ -18,7 +17,7 @@ class DatumTest extends TestCase
      * @group integration
      * @dataProvider datums
      */
-    public function testCanCreateAllInDB(string $srid): void
+    public function testCanCreateSupported(string $srid): void
     {
         $object = Datum::fromSRID($srid);
         self::assertInstanceOf(Datum::class, $object);
@@ -46,15 +45,10 @@ class DatumTest extends TestCase
 
     public function datums(): array
     {
-        $repository = new Repository();
-
         $data = [];
-        foreach ($repository->getDatums() as $ellipsoid) {
-            $data[$ellipsoid['datum_name']] = [$ellipsoid['datum_code']];
+        foreach (Datum::getSupportedSRIDs() as $srid => $name) {
+            $data[$name] = [$srid];
         }
-
-        // dataproviders are run before the suite starts, this allows the repository to actually get tested
-        $repository->clearCache();
 
         return $data;
     }

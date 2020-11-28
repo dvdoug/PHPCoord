@@ -12,6 +12,7 @@ use function dirname;
 use function file_exists;
 use function file_get_contents;
 use function file_put_contents;
+use PHPCoord\Datum\Datum;
 use PhpCsFixer\AbstractFixer;
 use PhpCsFixer\Config;
 use PhpCsFixer\Console\ConfigurationResolver;
@@ -75,6 +76,7 @@ class EPSGImporter
         $this->generateDataUnitsOfMeasure($sqlite);
         $this->generateDataPrimeMeridians($sqlite);
         $this->generateDataEllipsoids($sqlite);
+        $this->generateDataDatums($sqlite);
 
         $this->generateConstantsUnitsOfMeasure($sqlite);
         $this->generateConstantsPrimeMeridians($sqlite);
@@ -258,6 +260,49 @@ class EPSGImporter
         }
 
         $this->updateFileConstants($this->sourceDir . '/Datum/Datum.php', $constants, 'public');
+    }
+
+    public function generateDataDatums(SQLite3 $sqlite): void
+    {
+        $sql = "
+            SELECT
+                'urn:ogc:def:datum:EPSG::' || d.datum_code AS urn,
+                d.datum_name AS name,
+                d.datum_type AS type,
+                'urn:ogc:def:ellipsoid:EPSG::' || d.ellipsoid_code AS ellipsoid,
+                'urn:ogc:def:meridian:EPSG::' || d.prime_meridian_code AS prime_meridian,
+                d.conventional_rs_code AS conventional_rs,
+                d.frame_reference_epoch
+            FROM epsg_datum d
+            WHERE d.datum_type != 'engineering'
+            ORDER BY urn
+        ";
+
+        $result = $sqlite->query($sql);
+        $data = [];
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            if ($row['type'] === Datum::DATUM_TYPE_ENSEMBLE) {
+                $row['ensemble'] = [];
+                $ensembleSql = "
+                    SELECT
+                        'urn:ogc:def:datum:EPSG::' || d.datum_ensemble_code AS ensemble,
+                        'urn:ogc:def:datum:EPSG::' || d.datum_code AS datum,
+                        d.datum_sequence
+                    FROM epsg_datumensemblemember d
+                    WHERE ensemble = '{$row['urn']}'
+                    ORDER BY d.datum_sequence
+                    ";
+
+                $ensembleResult = $sqlite->query($ensembleSql);
+                while ($ensembleRow = $ensembleResult->fetchArray(SQLITE3_ASSOC)) {
+                    $row['ensemble'][] = $ensembleRow['datum'];
+                }
+            }
+            $data[$row['urn']] = $row;
+            unset($data[$row['urn']]['urn']);
+        }
+
+        $this->updateFileData($this->sourceDir . '/Datum/Datum.php', $data);
     }
 
     public function generateConstantsCoordinateSystems(SQLite3 $sqlite): void

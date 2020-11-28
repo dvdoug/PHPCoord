@@ -17,10 +17,6 @@ class Repository
 {
     private static ?SQLite3 $connection = null;
 
-    private static array $datumData = [];
-
-    private static array $datumEnsembleData = [];
-
     private static array $coordinateSystemData = [];
 
     private static array $coordinateSystemAxisData = [];
@@ -35,61 +31,6 @@ class Repository
         }
 
         return static::$connection;
-    }
-
-    public function getDatums(): array
-    {
-        if (!static::$datumData) {
-            $connection = $this->getConnection();
-            $sql = "
-            SELECT
-                'urn:ogc:def:datum:EPSG::' || d.datum_code AS datum_code,
-                d.datum_name,
-                d.datum_type,
-                'urn:ogc:def:ellipsoid:EPSG::' || d.ellipsoid_code AS ellipsoid_code,
-                'urn:ogc:def:meridian:EPSG::' || d.prime_meridian_code AS prime_meridian_code,
-                d.conventional_rs_code,
-                d.frame_reference_epoch,
-                d.deprecated
-            FROM epsg_datum d
-            WHERE d.datum_type != 'engineering'
-        ";
-
-            $result = $connection->query($sql);
-
-            while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-                static::$datumData[$row['datum_code']] = $row;
-            }
-        }
-
-        return static::$datumData;
-    }
-
-    public function getDatumEnsembles(): array
-    {
-        if (!static::$datumEnsembleData) {
-            $connection = $this->getConnection();
-            $sql = "
-            SELECT
-                'urn:ogc:def:datum:EPSG::' || d.datum_ensemble_code AS datum_ensemble_code,
-                'urn:ogc:def:datum:EPSG::' || d.datum_code AS datum_code,
-                d.datum_sequence
-            FROM epsg_datumensemblemember d
-            ORDER BY d.datum_sequence
-            ";
-
-            $result = $connection->query($sql);
-
-            while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-                if (isset(static::$datumEnsembleData[$row['datum_ensemble_code']])) {
-                    static::$datumEnsembleData[$row['datum_ensemble_code']][] = $row['datum_code'];
-                } else {
-                    static::$datumEnsembleData[$row['datum_ensemble_code']] = [$row['datum_code']];
-                }
-            }
-        }
-
-        return static::$datumEnsembleData;
     }
 
     public function getCoordinateSystems(): array
@@ -188,8 +129,6 @@ class Repository
     public function clearCache(): void
     {
         static::$connection = null;
-        static::$datumData = [];
-        static::$datumEnsembleData = [];
         static::$coordinateSystemData = [];
         static::$coordinateSystemAxisData = [];
         static::$coordinateReferenceSystemData = [];
