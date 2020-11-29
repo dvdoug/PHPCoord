@@ -9,7 +9,6 @@ declare(strict_types=1);
 namespace PHPCoord\UnitOfMeasure;
 
 use function in_array;
-use PHPCoord\EPSG\Repository;
 use PHPCoord\Exception\UnknownUnitOfMeasureException;
 use PHPUnit\Framework\TestCase;
 
@@ -52,15 +51,10 @@ class UnitOfMeasureFactoryTest extends TestCase
 
     public function unitsOfMeasure(): array
     {
-        $repository = new Repository();
-
         $data = [];
-        foreach ($repository->getUnitsOfMeasure() as $measure) {
-            $data[$measure['unit_of_meas_name']] = [$measure['uom_code']];
+        foreach (UnitOfMeasureFactory::getSupportedSRIDs() as $srid => $name) {
+            $data[$name] = [$srid];
         }
-
-        // dataproviders are run before the suite starts, this allows the repository to actually get tested
-        $repository->clearCache();
 
         return $data;
     }

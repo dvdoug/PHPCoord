@@ -17,8 +17,6 @@ class Repository
 {
     private static ?SQLite3 $connection = null;
 
-    private static array $unitsOfMeasureData = [];
-
     private static array $datumData = [];
 
     private static array $datumEnsembleData = [];
@@ -92,32 +90,6 @@ class Repository
         }
 
         return static::$datumEnsembleData;
-    }
-
-    public function getUnitsOfMeasure(): array
-    {
-        if (!static::$unitsOfMeasureData) {
-            $connection = $this->getConnection();
-            $sql = "
-            SELECT
-               'urn:ogc:def:uom:EPSG::' ||  m.uom_code AS uom_code,
-                m.unit_of_meas_name,
-                m.unit_of_meas_type,
-                'urn:ogc:def:uom:EPSG::' || m.target_uom_code AS target_uom_code,
-                m.factor_b,
-                m.factor_c,
-                m.deprecated
-            FROM epsg_unitofmeasure m
-            ";
-
-            $result = $connection->query($sql);
-
-            while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-                static::$unitsOfMeasureData[$row['uom_code']] = $row;
-            }
-        }
-
-        return static::$unitsOfMeasureData;
     }
 
     public function getCoordinateSystems(): array
@@ -216,7 +188,6 @@ class Repository
     public function clearCache(): void
     {
         static::$connection = null;
-        static::$unitsOfMeasureData = [];
         static::$datumData = [];
         static::$datumEnsembleData = [];
         static::$coordinateSystemData = [];

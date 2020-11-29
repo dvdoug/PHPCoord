@@ -72,6 +72,7 @@ class EPSGImporter
 
         $sqlite->enableExceptions(true);
 
+        $this->generateDataUnitsOfMeasure($sqlite);
         $this->generateDataPrimeMeridians($sqlite);
         $this->generateDataEllipsoids($sqlite);
 
@@ -107,6 +108,30 @@ class EPSGImporter
         }
 
         $this->updateFileConstants($this->sourceDir . '/UnitOfMeasure/UnitOfMeasure.php', $constants, 'public');
+    }
+
+    public function generateDataUnitsOfMeasure(SQLite3 $sqlite): void
+    {
+        $sql = "
+            SELECT
+               'urn:ogc:def:uom:EPSG::' || m.uom_code AS urn,
+                m.unit_of_meas_name AS name,
+                m.unit_of_meas_type AS type,
+                'urn:ogc:def:uom:EPSG::' || m.target_uom_code AS target_uom,
+                m.factor_b,
+                m.factor_c
+            FROM epsg_unitofmeasure m
+            ORDER BY urn
+            ";
+
+        $result = $sqlite->query($sql);
+        $data = [];
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            $data[$row['urn']] = $row;
+            unset($data[$row['urn']]['urn']);
+        }
+
+        $this->updateFileData($this->sourceDir . '/UnitOfMeasure/UnitOfMeasureFactory.php', $data);
     }
 
     public function generateConstantsPrimeMeridians(SQLite3 $sqlite): void
