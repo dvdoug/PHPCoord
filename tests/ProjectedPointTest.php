@@ -16,6 +16,7 @@ use PHPCoord\CoordinateSystem\Cartesian;
 use PHPCoord\CoordinateSystem\Ellipsoidal;
 use PHPCoord\Datum\Datum;
 use PHPCoord\Datum\Ellipsoid;
+use PHPCoord\Exception\InvalidAxesException;
 use PHPCoord\Exception\InvalidCoordinateReferenceSystemException;
 use PHPCoord\UnitOfMeasure\Angle\Degree;
 use PHPCoord\UnitOfMeasure\Angle\Radian;
@@ -139,6 +140,20 @@ class ProjectedPointTest extends TestCase
         $from = ProjectedPoint::createFromWestingSouthing(new Metre(438700), new Metre(114800), Projected::fromSRID(Projected::EPSG_ST_STEPHEN_GRID_FERRO));
         $to = ProjectedPoint::createFromEastingNorthing(new Metre(533600), new Metre(180500), Projected::fromSRID(Projected::EPSG_OSGB_1936_BRITISH_NATIONAL_GRID));
         $from->calculateDistance($to);
+    }
+
+    public function testNoWestingWhenExpected(): void
+    {
+        $this->expectException(InvalidAxesException::class);
+        $this->expectExceptionMessage('This CRS has axes: Southing, Westing');
+        $object = ProjectedPoint::create(null, new Metre(123), null, null, Projected::fromSRID(Projected::EPSG_ST_STEPHEN_GRID_FERRO));
+    }
+
+    public function testNoSouthingWhenExpected(): void
+    {
+        $this->expectException(InvalidAxesException::class);
+        $this->expectExceptionMessage('This CRS has axes: Southing, Westing');
+        $object = ProjectedPoint::create(null, null, new Metre(123), null, Projected::fromSRID(Projected::EPSG_ST_STEPHEN_GRID_FERRO));
     }
 
     public function testAffineParametricTransformEastingNorthing(): void

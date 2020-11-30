@@ -13,6 +13,16 @@ use PHPUnit\Framework\TestCase;
 
 class EllipsoidalTest extends TestCase
 {
+    public function testCanGetSupported(): void
+    {
+        $supported = Ellipsoidal::getSupportedSRIDs();
+        self::assertGreaterThan(0, count($supported));
+        foreach ($supported as $key => $value) {
+            self::assertStringStartsWith('urn:ogc:def:', $key);
+            self::assertIsString($value);
+        }
+    }
+
     /**
      * @group integration
      * @dataProvider ellipsoidal

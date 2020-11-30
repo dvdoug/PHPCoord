@@ -24,6 +24,16 @@ class UnitOfMeasureFactoryTest extends TestCase
         $this->factory = new UnitOfMeasureFactory();
     }
 
+    public function testCanGetSupported(): void
+    {
+        $supported = UnitOfMeasureFactory::getSupportedSRIDs();
+        self::assertGreaterThan(0, count($supported));
+        foreach ($supported as $key => $value) {
+            self::assertStringStartsWith('urn:ogc:def:', $key);
+            self::assertIsString($value);
+        }
+    }
+
     /**
      * @dataProvider unitsOfMeasure
      */

@@ -13,6 +13,16 @@ use PHPUnit\Framework\TestCase;
 
 class ProjectedTest extends TestCase
 {
+    public function testCanGetSupported(): void
+    {
+        $supported = Projected::getSupportedSRIDs();
+        self::assertGreaterThan(0, count($supported));
+        foreach ($supported as $key => $value) {
+            self::assertStringStartsWith('urn:ogc:def:', $key);
+            self::assertIsString($value);
+        }
+    }
+
     /**
      * @group integration
      * @dataProvider coordinateReferenceSystems
