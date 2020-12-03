@@ -107,6 +107,10 @@ class ProjectedPoint extends Point
 
     public static function create(?Length $easting, ?Length $northing, ?Length $westing, ?Length $southing, Projected $crs, ?DateTimeInterface $epoch = null): self
     {
+        if ($crs->getSRID() === Projected::EPSG_OSGB_1936_BRITISH_NATIONAL_GRID) {
+            return new BritishNationalGridPoint($easting, $northing, $epoch);
+        }
+
         return new static($easting, $northing, $westing, $southing, $crs, $epoch);
     }
 

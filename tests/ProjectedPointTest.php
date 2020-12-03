@@ -156,6 +156,12 @@ class ProjectedPointTest extends TestCase
         $object = ProjectedPoint::create(null, null, new Metre(123), null, Projected::fromSRID(Projected::EPSG_ST_STEPHEN_GRID_FERRO));
     }
 
+    public function testCanCreateBritishNationalGridObject(): void
+    {
+        $object = ProjectedPoint::createFromEastingNorthing(new Metre(100), new Metre(200), Projected::fromSRID(Projected::EPSG_OSGB_1936_BRITISH_NATIONAL_GRID));
+        self::assertInstanceOf(BritishNationalGridPoint::class, $object);
+    }
+
     public function testAffineParametricTransformEastingNorthing(): void
     {
         $from = ProjectedPoint::create(UnitOfMeasureFactory::makeUnit(553900, UnitOfMeasure::EPSG_LENGTH_CLARKE_S_FOOT), UnitOfMeasureFactory::makeUnit(482500, UnitOfMeasure::EPSG_LENGTH_CLARKE_S_FOOT), null, null, Projected::fromSRID(Projected::EPSG_JAMAICA_1875_JAMAICA_OLD_GRID));
