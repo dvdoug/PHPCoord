@@ -111,6 +111,14 @@ class ProjectedPoint extends Point
             return new BritishNationalGridPoint($easting, $northing, $epoch);
         }
 
+        if ($crs->getSRID() === Projected::EPSG_TM75_IRISH_GRID) {
+            return new IrishGridPoint($easting, $northing, $epoch);
+        }
+
+        if ($crs->getSRID() === Projected::EPSG_IRENET95_IRISH_TRANSVERSE_MERCATOR) {
+            return new IrishTransverseMercatorPoint($easting, $northing, $epoch);
+        }
+
         return new static($easting, $northing, $westing, $southing, $crs, $epoch);
     }
 

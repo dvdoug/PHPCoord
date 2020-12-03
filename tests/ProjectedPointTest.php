@@ -162,6 +162,18 @@ class ProjectedPointTest extends TestCase
         self::assertInstanceOf(BritishNationalGridPoint::class, $object);
     }
 
+    public function testCanCreateIrishGridObject(): void
+    {
+        $object = ProjectedPoint::createFromEastingNorthing(new Metre(100), new Metre(200), Projected::fromSRID(Projected::EPSG_TM75_IRISH_GRID));
+        self::assertInstanceOf(IrishGridPoint::class, $object);
+    }
+
+    public function testCanCreateITMObject(): void
+    {
+        $object = ProjectedPoint::createFromEastingNorthing(new Metre(100), new Metre(200), Projected::fromSRID(Projected::EPSG_IRENET95_IRISH_TRANSVERSE_MERCATOR));
+        self::assertInstanceOf(IrishTransverseMercatorPoint::class, $object);
+    }
+
     public function testAffineParametricTransformEastingNorthing(): void
     {
         $from = ProjectedPoint::create(UnitOfMeasureFactory::makeUnit(553900, UnitOfMeasure::EPSG_LENGTH_CLARKE_S_FOOT), UnitOfMeasureFactory::makeUnit(482500, UnitOfMeasure::EPSG_LENGTH_CLARKE_S_FOOT), null, null, Projected::fromSRID(Projected::EPSG_JAMAICA_1875_JAMAICA_OLD_GRID));
