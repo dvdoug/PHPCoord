@@ -1463,4 +1463,34 @@ class ProjectedPoint extends Point
 
         return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
     }
+
+    /**
+     * Similarity transformation
+     * Defined for two-dimensional coordinate systems.
+     */
+    public function similarityTransformation(
+        Projected $to,
+        Length $ordinate1OfEvaluationPointInTargetCRS,
+        Length $ordinate2OfEvaluationPointInTargetCRS,
+        Scale $scaleFactorForSourceCRSAxes,
+        Angle $rotationAngleOfSourceCRSAxes,
+        bool $inReverse
+    ): self {
+        $xs = $this->easting->asMetres()->getValue();
+        $ys = $this->northing->asMetres()->getValue();
+        $xo = $ordinate1OfEvaluationPointInTargetCRS->asMetres()->getValue();
+        $yo = $ordinate2OfEvaluationPointInTargetCRS->asMetres()->getValue();
+        $M = $scaleFactorForSourceCRSAxes->asUnity()->getValue();
+        $theta = $rotationAngleOfSourceCRSAxes->asRadians()->getValue();
+
+        if ($inReverse) {
+            $easting = (($xs - $xo) * cos($theta) - ($ys - $yo) * sin($theta)) / $M;
+            $northing = (($xs - $xo) * sin($theta) + ($ys - $yo) * cos($theta)) / $M;
+        } else {
+            $easting = $xo + $xs * $M * cos($theta) + $ys * $M * sin($theta);
+            $northing = $yo - $xs * $M * sin($theta) + $ys * $M * cos($theta);
+        }
+
+        return self::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+    }
 }

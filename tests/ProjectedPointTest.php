@@ -508,4 +508,14 @@ class ProjectedPointTest extends TestCase
         self::assertEqualsWithDelta(0.425542460, $to->getLatitude()->asRadians()->getValue(), 0.000000001);
         self::assertEqualsWithDelta(-1.751147016, $to->getLongitude()->asRadians()->getValue(), 0.000000001);
     }
+
+    public function testSimilarityTransformation(): void
+    {
+        $from = ProjectedPoint::createFromEastingNorthing(new Metre(300000), new Metre(4500000), Projected::fromSRID('urn:ogc:def:crs:EPSG::23031'));
+        $toCRS = Projected::fromSRID('urn:ogc:def:crs:EPSG::25831');
+        $to = $from->similarityTransformation($toCRS, new Metre(-129.549), new Metre(-208.185), new Coefficient(1.00000155), new Radian(0.000007588), false);
+
+        self::assertEqualsWithDelta(299905.06, $to->getEasting()->asMetres()->getValue(), 0.01);
+        self::assertEqualsWithDelta(4499796.51, $to->getNorthing()->asMetres()->getValue(), 0.01);
+    }
 }
