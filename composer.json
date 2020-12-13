@@ -16,8 +16,8 @@
     },
     "require-dev": {
         "ext-sqlite3": "*",
-        "friendsofphp/php-cs-fixer": "^2.16.4",
-        "phpunit/phpunit": "^9.3.5",
+        "friendsofphp/php-cs-fixer": "^2.17.0",
+        "phpunit/phpunit": "^9.5.0",
         "nikic/php-parser": "^4.10"
     },
     "autoload": {

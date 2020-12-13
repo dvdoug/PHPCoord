@@ -47,7 +47,7 @@ class DatumTest extends TestCase
         self::assertEquals(0.0, $object->getPrimeMeridian()->getGreenwichLongitude()->getValue());
     }
 
-    public function testWGS84_G1762(): void
+    public function testWGS84G1762(): void
     {
         $object = Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_G1762);
         self::assertEquals(2005, $object->getFrameReferenceEpoch());
