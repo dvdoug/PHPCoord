@@ -8,7 +8,7 @@ declare(strict_types=1);
 
 namespace PHPCoord\UnitOfMeasure\Time;
 
-class Second implements Time
+class Second extends Time
 {
     private float $time;
 

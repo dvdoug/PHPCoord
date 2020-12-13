@@ -8,10 +8,10 @@ declare(strict_types=1);
 
 namespace PHPCoord\UnitOfMeasure\Time;
 
-class Year implements Time
-{
     private const SECONDS_IN_YEAR = 31556925.445;
 
+class Year extends Time
+{
     private float $time;
 
     public function __construct(float $time)
