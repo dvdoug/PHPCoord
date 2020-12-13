@@ -22,6 +22,11 @@ class Second extends Time
         return $this;
     }
 
+    public function asYears(): Year
+    {
+        return new Year($this->time / self::SECONDS_IN_YEAR);
+    }
+
     public function getValue(): float
     {
         return $this->time;

@@ -12,8 +12,11 @@ use PHPCoord\UnitOfMeasure\UnitOfMeasure;
 
 abstract class Time implements UnitOfMeasure
 {
+    public const SECONDS_IN_YEAR = 31556925.445;
 
     abstract public function asSeconds(): Second;
+
+    abstract public function asYears(): Year;
 
     public function add(self $unit): self
     {

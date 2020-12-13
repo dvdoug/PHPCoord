@@ -20,6 +20,14 @@ class SecondTest extends TestCase
         self::assertEquals(0.12, $asSecond->getValue());
     }
 
+    public function testAsYears(): void
+    {
+        $original = new Second(31556925.445);
+        $asYear = $original->asYears();
+        self::assertInstanceOf(Year::class, $asYear);
+        self::assertEquals(1, $asYear->getValue());
+    }
+
     public function testGetValue(): void
     {
         $original = new Second(0.12);

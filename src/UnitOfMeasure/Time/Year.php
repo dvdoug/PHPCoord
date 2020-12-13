@@ -8,7 +8,6 @@ declare(strict_types=1);
 
 namespace PHPCoord\UnitOfMeasure\Time;
 
-    private const SECONDS_IN_YEAR = 31556925.445;
 
 class Year extends Time
 {
@@ -22,6 +21,11 @@ class Year extends Time
     public function asSeconds(): Second
     {
         return new Second($this->time * self::SECONDS_IN_YEAR);
+    }
+
+    public function asYears(): self
+    {
+        return $this;
     }
 
     public function getValue(): float
