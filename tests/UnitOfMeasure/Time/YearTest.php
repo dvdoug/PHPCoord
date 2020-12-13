@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace PHPCoord\UnitOfMeasure\Time;
 
+use DateTimeImmutable;
 use PHPUnit\Framework\TestCase;
 
 class YearTest extends TestCase
@@ -64,5 +65,17 @@ class YearTest extends TestCase
         $result = (new Year(3))->divide(2);
         self::assertInstanceOf(Year::class, $result);
         self::assertEquals(1.5, $result->getValue());
+    }
+
+    public function testAsDateTime(): void
+    {
+        $original = new Year(2013.90);
+        self::assertEquals('2013-11-26', $original->asDateTime()->format('Y-m-d'));
+    }
+
+    public function testFromDateTime(): void
+    {
+        $original = new DateTimeImmutable('2013-11-26');
+        self::assertEquals(2013.90, Year::fromDateTime($original)->getValue());
     }
 }

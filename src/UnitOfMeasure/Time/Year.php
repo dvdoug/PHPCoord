@@ -8,6 +8,8 @@ declare(strict_types=1);
 
 namespace PHPCoord\UnitOfMeasure\Time;
 
+use DateTimeImmutable;
+use DateTimeInterface;
 
 class Year extends Time
 {
@@ -18,6 +20,11 @@ class Year extends Time
         $this->time = $time;
     }
 
+    public static function fromDateTime(DateTimeInterface $dateTime): self
+    {
+        return new self(round((float) $dateTime->format('Y') + ($dateTime->format('z') / 365.25), 2));
+    }
+
     public function asSeconds(): Second
     {
         return new Second($this->time * self::SECONDS_IN_YEAR);
@@ -26,6 +33,15 @@ class Year extends Time
     public function asYears(): self
     {
         return $this;
+    }
+
+    public function asDateTime(): DateTimeImmutable
+    {
+        $year = (int) $this->time;
+        $yearPortion = $this->time - $year;
+        $days = round($yearPortion * 365.25);
+
+        return DateTimeImmutable::createFromFormat('Yz', $year . $days);
     }
 
     public function getValue(): float
