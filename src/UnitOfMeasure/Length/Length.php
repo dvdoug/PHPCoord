@@ -10,7 +10,33 @@ namespace PHPCoord\UnitOfMeasure\Length;
 
 use PHPCoord\UnitOfMeasure\UnitOfMeasure;
 
-interface Length extends UnitOfMeasure
+abstract class Length implements UnitOfMeasure
 {
-    public function asMetres(): Metre;
+    abstract public function asMetres(): Metre;
+
+    public function add(self $unit): self
+    {
+        $resultAsMetres = new Metre($this->asMetres()->getValue() + $unit->asMetres()->getValue());
+        $conversionRatio = (new static(1))->asMetres()->getValue();
+
+        return new static($resultAsMetres->getValue() / $conversionRatio);
+    }
+
+    public function subtract(self $unit): self
+    {
+        $resultAsMetres = new Metre($this->asMetres()->getValue() - $unit->asMetres()->getValue());
+        $conversionRatio = (new static(1))->asMetres()->getValue();
+
+        return new static($resultAsMetres->getValue() / $conversionRatio);
+    }
+
+    public function multiply(float $multiplicand): self
+    {
+        return new static($this->getValue() * $multiplicand);
+    }
+
+    public function divide(float $divisor): self
+    {
+        return new static($this->getValue() / $divisor);
+    }
 }

@@ -8,7 +8,7 @@ declare(strict_types=1);
 
 namespace PHPCoord\UnitOfMeasure\Length;
 
-class ExoticLength implements Length
+class ExoticLength extends Length
 {
     private float $length;
 
