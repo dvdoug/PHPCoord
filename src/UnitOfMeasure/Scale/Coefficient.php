@@ -8,7 +8,7 @@ declare(strict_types=1);
 
 namespace PHPCoord\UnitOfMeasure\Scale;
 
-class Coefficient implements Scale
+class Coefficient extends Scale
 {
     private float $scale;
 

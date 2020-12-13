@@ -8,7 +8,7 @@ declare(strict_types=1);
 
 namespace PHPCoord\UnitOfMeasure\Scale;
 
-class Unity implements Scale
+class Unity extends Scale
 {
     private float $scale;
 

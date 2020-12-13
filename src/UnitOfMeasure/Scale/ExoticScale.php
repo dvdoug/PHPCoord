@@ -8,7 +8,7 @@ declare(strict_types=1);
 
 namespace PHPCoord\UnitOfMeasure\Scale;
 
-class ExoticScale implements Scale
+class ExoticScale extends Scale
 {
     private float $scale;
 
