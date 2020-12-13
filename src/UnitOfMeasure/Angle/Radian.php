@@ -8,7 +8,7 @@ declare(strict_types=1);
 
 namespace PHPCoord\UnitOfMeasure\Angle;
 
-class Radian implements Angle
+class Radian extends Angle
 {
     private float $angle;
 

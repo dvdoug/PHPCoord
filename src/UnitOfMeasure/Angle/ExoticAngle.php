@@ -8,7 +8,7 @@ declare(strict_types=1);
 
 namespace PHPCoord\UnitOfMeasure\Angle;
 
-class ExoticAngle implements Angle
+class ExoticAngle extends Angle
 {
     private float $angle;
 

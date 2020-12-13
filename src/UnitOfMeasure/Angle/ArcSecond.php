@@ -8,7 +8,7 @@ declare(strict_types=1);
 
 namespace PHPCoord\UnitOfMeasure\Angle;
 
-class ArcSecond implements Angle
+class ArcSecond extends Angle
 {
     private float $angle;
 

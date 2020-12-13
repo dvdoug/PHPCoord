@@ -15,7 +15,7 @@ use function str_pad;
 use function str_replace;
 use function strpos;
 
-class Degree implements Angle
+class Degree extends Angle
 {
     private float $angle;
 

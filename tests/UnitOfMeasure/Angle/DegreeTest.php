@@ -362,4 +362,46 @@ class DegreeTest extends TestCase
         $this->expectException(InvalidArgumentException::class);
         $original = Degree::fromSexagesimalDM('1deg30′30.75″');
     }
+
+    public function testAdd(): void
+    {
+        $result = (new Degree(20))->add((new Degree(24)));
+        self::assertInstanceOf(Degree::class, $result);
+        self::assertEquals(44, $result->getValue());
+    }
+
+    public function testAddMixedUnit(): void
+    {
+        $result = (new Degree(20))->add((new ArcSecond(3600)));
+        self::assertInstanceOf(Degree::class, $result);
+        self::assertEquals(21, $result->getValue());
+    }
+
+    public function testSubtract(): void
+    {
+        $result = (new Degree(20))->subtract((new Degree(24)));
+        self::assertInstanceOf(Degree::class, $result);
+        self::assertEquals(-4, $result->getValue());
+    }
+
+    public function testSubtractMixedUnit(): void
+    {
+        $result = (new Degree(20))->subtract((new ArcSecond(3600)));
+        self::assertInstanceOf(Degree::class, $result);
+        self::assertEquals(19, $result->getValue());
+    }
+
+    public function testMultiply(): void
+    {
+        $result = (new Degree(20))->multiply(4);
+        self::assertInstanceOf(Degree::class, $result);
+        self::assertEquals(80, $result->getValue());
+    }
+
+    public function testDivide(): void
+    {
+        $result = (new Degree(20))->divide(4);
+        self::assertInstanceOf(Degree::class, $result);
+        self::assertEquals(5, $result->getValue());
+    }
 }
