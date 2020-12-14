@@ -100,12 +100,7 @@ abstract class Scale implements UnitOfMeasure
 
     public static function getSupportedSRIDs(): array
     {
-        $supported = [];
-        foreach (static::$sridData as $srid => $sridData) {
-            $supported[$srid] = $sridData['name'];
-        }
-
-        return $supported;
+        return array_map(function ($sridData) {return $sridData['name']; }, static::$sridData);
     }
 
     public function __toString(): string

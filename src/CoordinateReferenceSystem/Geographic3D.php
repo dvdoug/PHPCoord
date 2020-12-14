@@ -3069,11 +3069,6 @@ class Geographic3D extends Geographic
 
     public static function getSupportedSRIDs(): array
     {
-        $supported = [];
-        foreach (static::$sridData as $srid => $sridData) {
-            $supported[$srid] = $sridData['name'];
-        }
-
-        return $supported;
+        return array_map(function ($sridData) {return $sridData['name']; }, static::$sridData);
     }
 }
