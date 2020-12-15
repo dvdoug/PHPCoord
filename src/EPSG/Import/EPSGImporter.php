@@ -32,6 +32,8 @@ class EPSGImporter
 
     private string $sourceDir;
 
+    private const BOM = "\xEF\xBB\xBF";
+
     public function __construct()
     {
         $this->resourceDir = __DIR__ . '/../../../resources';
@@ -54,9 +56,15 @@ class EPSGImporter
         $sqlite->exec('PRAGMA journal_mode=WAL'); //WAL is faster
 
         $tableSchema = file_get_contents($this->resourceDir . '/epsg/PostgreSQL_Table_Script.sql');
+        if (strpos($tableSchema, self::BOM) === 0) {
+            $tableSchema = substr($tableSchema, 3);
+        }
         $sqlite->exec($tableSchema);
 
         $tableData = file_get_contents($this->resourceDir . '/epsg/PostgreSQL_Data_Script.sql');
+        if (strpos($tableData, self::BOM) === 0) {
+            $tableData = substr($tableData, 3);
+        }
         $sqlite->exec($tableData);
 
         $sqlite->exec('VACUUM');
