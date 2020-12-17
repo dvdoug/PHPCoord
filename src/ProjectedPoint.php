@@ -363,10 +363,7 @@ class ProjectedPoint extends Point
 
         $mO = cos($latitudeOrigin) / sqrt(1 - $e2 * sin($latitudeOrigin) ** 2);
         $MO = $a * ((1 - $e2 / 4 - 3 * $e4 / 64 - 5 * $e6 / 256) * $latitudeOrigin - (3 * $e2 / 8 + 3 * $e4 / 32 + 45 * $e6 / 1024) * sin(2 * $latitudeOrigin) + (15 * $e4 / 256 + 45 * $e6 / 1024) * sin(4 * $latitudeOrigin) - (35 * $e6 / 3072) * sin(6 * $latitudeOrigin));
-        $rho = sqrt($easting ** 2 + ($a * $mO / sin($latitudeOrigin) - $northing) ** 2);
-        if ($latitudeOrigin < 0) {
-            $rho = -$rho;
-        }
+        $rho = sqrt($easting ** 2 + ($a * $mO / sin($latitudeOrigin) - $northing) ** 2) * static::sign($latitudeOrigin);
 
         $M = $a * $mO / sin($latitudeOrigin) + $MO - $rho;
         $mu = $M / ($a * (1 - $e2 / 4 - 3 * $e4 / 64 - 5 * $e6 / 256));
@@ -408,10 +405,7 @@ class ProjectedPoint extends Point
 
         $mO = cos($latitudeOrigin) / sqrt(1 - $e2 * sin($latitudeOrigin) ** 2);
         $MO = $a * ((1 - $e2 / 4 - 3 * $e4 / 64 - 5 * $e6 / 256) * $latitudeOrigin - (3 * $e2 / 8 + 3 * $e4 / 32 + 45 * $e6 / 1024) * sin(2 * $latitudeOrigin) + (15 * $e4 / 256 + 45 * $e6 / 1024) * sin(4 * $latitudeOrigin) - (35 * $e6 / 3072) * sin(6 * $latitudeOrigin));
-        $rho = sqrt($westing ** 2 + ($a * $mO / sin($latitudeOrigin) - $southing) ** 2);
-        if ($latitudeOrigin < 0) {
-            $rho = -$rho;
-        }
+        $rho = sqrt($westing ** 2 + ($a * $mO / sin($latitudeOrigin) - $southing) ** 2) * static::sign($latitudeOrigin);
 
         $M = $a * $mO / sin($latitudeOrigin) + $MO - $rho;
         $mu = $M / ($a * (1 - $e2 / 4 - 3 * $e4 / 64 - 5 * $e6 / 256));
@@ -980,10 +974,7 @@ class ProjectedPoint extends Point
         $n = (log($m1) - log($m2)) / (log($t1) - log($t2));
         $F = $m1 / ($n * $t1 ** $n);
         $rF = $a * $F * $tF ** $n;
-        $r = sqrt($easting ** 2 + ($rF - $northing) ** 2);
-        if ($n < 0) {
-            $r = -$r;
-        }
+        $r = sqrt($easting ** 2 + ($rF - $northing) ** 2) * static::sign($n);
         $t = ($r / ($a * $F)) ** (1 / $n);
         if ($n >= 0) {
             $theta = atan2($easting, $rF - $northing);
@@ -1034,10 +1025,7 @@ class ProjectedPoint extends Point
         $n = (log($m1) - log($m2)) / (log($t1) - log($t2));
         $F = $m1 / ($n * $t1 ** $n);
         $rF = $a * $K * $F * $tF ** $n;
-        $r = sqrt($easting ** 2 + ($rF - $northing) ** 2);
-        if ($n < 0) {
-            $r = -$r;
-        }
+        $r = sqrt($easting ** 2 + ($rF - $northing) ** 2) * static::sign($n);
         $t = ($r / ($a * $K * $F)) ** (1 / $n);
         if ($n >= 0) {
             $theta = atan2($easting, $rF - $northing);
@@ -1091,10 +1079,7 @@ class ProjectedPoint extends Point
         if (is_nan($rF)) {
             $rF = 0;
         }
-        $r = sqrt($easting ** 2 + ($rF - $northing) ** 2);
-        if ($n < 0) {
-            $r = -$r;
-        }
+        $r = sqrt($easting ** 2 + ($rF - $northing) ** 2) * static::sign($n);
         $t = ($r / ($a * $F)) ** (1 / $n);
         if ($n >= 0) {
             $theta = atan2($easting, $rF - $northing);
@@ -1148,10 +1133,7 @@ class ProjectedPoint extends Point
         $sO = $APrime * $latitudeOrigin - $BPrime * sin(2 * $latitudeOrigin) + $CPrime * sin(4 * $latitudeOrigin) - $DPrime * sin(6 * $latitudeOrigin) + $EPrime * sin(8 * $latitudeOrigin);
 
         $theta = atan2($easting, $rO - $northing);
-        $r = sqrt($easting ** 2 + ($rO - $northing) ** 2);
-        if ($latitudeOrigin < 0) {
-            $r = -$r;
-        }
+        $r = sqrt($easting ** 2 + ($rO - $northing) ** 2) * static::sign($latitudeOrigin);
         $M = $rO - $r;
 
         $m = $M;

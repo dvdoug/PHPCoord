@@ -34,4 +34,13 @@ abstract class Point implements Stringable
 
         return null;
     }
+
+    protected static function sign(float $number): int
+    {
+        if ($number < 0) {
+            return -1;
+        }
+
+        return 1;
+    }
 }
