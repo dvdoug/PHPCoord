@@ -1664,6 +1664,70 @@ class ProjectedPoint extends Point
     }
 
     /**
+     * Laborde Oblique Mercator.
+     */
+    public function obliqueMercatorLaborde(
+        Geographic $to,
+        Angle $latitudeOfProjectionCentre,
+        Angle $longitudeOfProjectionCentre,
+        Angle $azimuthOfInitialLine,
+        Scale $scaleFactorOnInitialLine,
+        Length $falseEasting,
+        Length $falseNorthing
+    ): GeographicPoint {
+        $easting = $this->easting->asMetres()->getValue() - $falseEasting->asMetres()->getValue();
+        $northing = $this->northing->asMetres()->getValue() - $falseNorthing->asMetres()->getValue();
+        $latC = $latitudeOfProjectionCentre->asRadians()->getValue();
+        $lonC = $longitudeOfProjectionCentre->asRadians()->getValue();
+        $alphaC = $azimuthOfInitialLine->asRadians()->getValue();
+        $kC = $scaleFactorOnInitialLine->asUnity()->getValue();
+        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
+        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+
+        $B = sqrt(1 + ($e2 * cos($latC) ** 4 / (1 - $e2)));
+        $latS = asin(sin($latC) / $B);
+        $R = $a * $kC * (sqrt(1 - $e2) / (1 - $e2 * sin($latC) ** 2));
+        $C = log(tan(M_PI / 4 + $latS / 2)) - $B * log(tan(M_PI / 4 + $latC / 2) * ((1 - $e * sin($latC)) / (1 + $e * sin($latC))) ** ($e / 2));
+
+        $G = (new ComplexNumber(1 - cos(2 * $alphaC), sin(2 * $alphaC)))->divide(new ComplexNumber(12, 0));
+
+        $H0 = new ComplexNumber($northing / $R, $easting / $R);
+        $H = $H0->divide($H0->pow(3)->multiply($G)->add($H0));
+        do {
+            $HN = $H;
+            $H = ($HN->pow(3)->multiply($G)->multiply(new ComplexNumber(2, 0))->add($H0))->divide($HN->pow(2)->multiply($G)->multiply(new ComplexNumber(3, 0))->add(new ComplexNumber(1, 0)));
+        } while (abs($H0->subtract($H)->subtract($H->pow(3)->multiply($G))->getReal()) >= self::NEWTON_RAPHSON_CONVERGENCE);
+
+        $LPrime = -1 * $H->getReal();
+        $PPrime = 2 * atan(M_E ** $H->getImaginary()) - M_PI / 2;
+        $U = cos($PPrime) * cos($LPrime) * cos($latS) + cos($PPrime) * sin($LPrime) * sin($latS);
+        $V = sin($PPrime);
+        $W = cos($PPrime) * cos($LPrime) * sin($latS) - cos($PPrime) * sin($LPrime) * cos($latS);
+
+        $d = sqrt($U ** 2 + $V ** 2);
+        if ($d === 0) {
+            $L = 0;
+            $P = static::sign($W) * M_PI / 2;
+        } else {
+            $L = 2 * atan($V / ($U + $d));
+            $P = atan($W / $d);
+        }
+
+        $longitude = $lonC + ($L / $B);
+
+        $q = (log(tan(M_PI / 4 + $P / 2)) - $C) / $B;
+
+        $latitude = 2 * atan(M_E ** $q) - M_PI / 2;
+        do {
+            $latitudeN = $latitude;
+            $latitude = 2 * atan(((1 + $e * sin($latitude)) / (1 - $e * sin($latitude))) ** ($e / 2) * M_E ** $q) - M_PI / 2;
+        } while (abs($latitude - $latitudeN) >= self::NEWTON_RAPHSON_CONVERGENCE);
+
+        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+    }
+
+    /**
      * Transverse Mercator.
      */
     public function transverseMercator(

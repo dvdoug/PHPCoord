@@ -1671,6 +1671,56 @@ class GeographicPoint extends Point
     }
 
     /**
+     * Laborde Oblique Mercator.
+     */
+    public function obliqueMercatorLaborde(
+        Projected $to,
+        Angle $latitudeOfProjectionCentre,
+        Angle $longitudeOfProjectionCentre,
+        Angle $azimuthOfInitialLine,
+        Scale $scaleFactorOnInitialLine,
+        Length $falseEasting,
+        Length $falseNorthing
+    ): ProjectedPoint {
+        $latitude = $this->latitude->asRadians()->getValue();
+        $longitude = $this->longitude->asRadians()->getValue();
+        $latC = $latitudeOfProjectionCentre->asRadians()->getValue();
+        $lonC = $longitudeOfProjectionCentre->asRadians()->getValue();
+        $alphaC = $azimuthOfInitialLine->asRadians()->getValue();
+        $kC = $scaleFactorOnInitialLine->asUnity()->getValue();
+        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
+        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+
+        $B = sqrt(1 + ($e2 * cos($latC) ** 4 / (1 - $e2)));
+        $latS = asin(sin($latC) / $B);
+        $R = $a * $kC * (sqrt(1 - $e2) / (1 - $e2 * sin($latC) ** 2));
+        $C = log(tan(M_PI / 4 + $latS / 2)) - $B * log(tan(M_PI / 4 + $latC / 2) * ((1 - $e * sin($latC)) / (1 + $e * sin($latC))) ** ($e / 2));
+
+        $L = $B * ($longitude - $lonC);
+        $q = $C + $B * log(tan(M_PI / 4 + $latitude / 2) * ((1 - $e * sin($latitude)) / (1 + $e * sin($latitude))) ** ($e / 2));
+        $P = 2 * atan(M_E ** $q) - M_PI / 2;
+        $U = cos($P) * cos($L) * cos($latS) + sin($P) * sin($latS);
+        $V = cos($P) * cos($L) * sin($latS) - sin($P) * cos($latS);
+        $W = cos($P) * sin($L);
+        $d = sqrt($U ** 2 + $V ** 2);
+        if ($d === 0.0) {
+            $LPrime = 0;
+            $PPrime = static::sign($W) * M_PI / 2;
+        } else {
+            $LPrime = 2 * atan($V / ($U + $d));
+            $PPrime = atan($W / $d);
+        }
+        $H = new ComplexNumber(-$LPrime, log(tan(M_PI / 4 + $PPrime / 2)));
+        $G = (new ComplexNumber(1 - cos(2 * $alphaC), sin(2 * $alphaC)))->divide(new ComplexNumber(12, 0));
+
+        $easting = $falseEasting->asMetres()->getValue() + $R * $H->pow(3)->multiply($G)->add($H)->getImaginary();
+        $northing = $falseNorthing->asMetres()->getValue() + $R * $H->pow(3)->multiply($G)->add($H)->getReal();
+
+        return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+    }
+
+    /**
      * Transverse Mercator.
      */
     public function transverseMercator(

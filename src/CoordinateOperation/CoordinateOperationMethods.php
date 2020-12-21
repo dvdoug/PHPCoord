@@ -489,6 +489,7 @@ class CoordinateOperationMethods
             self::EPSG_REVERSIBLE_POLYNOMIAL_OF_DEGREE_4 => 'reversiblePolynomial',
             self::EPSG_REVERSIBLE_POLYNOMIAL_OF_DEGREE_13 => 'reversiblePolynomial',
             self::EPSG_NEW_ZEALAND_MAP_GRID => 'newZealandMapGrid',
+            self::EPSG_LABORDE_OBLIQUE_MERCATOR => 'obliqueMercatorLaborde',
         ];
     }
 }

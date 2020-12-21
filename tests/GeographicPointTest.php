@@ -20,6 +20,7 @@ use PHPCoord\Datum\Ellipsoid;
 use PHPCoord\Exception\InvalidCoordinateReferenceSystemException;
 use PHPCoord\UnitOfMeasure\Angle\ArcSecond;
 use PHPCoord\UnitOfMeasure\Angle\Degree;
+use PHPCoord\UnitOfMeasure\Angle\Grad;
 use PHPCoord\UnitOfMeasure\Angle\Radian;
 use PHPCoord\UnitOfMeasure\Length\Chain;
 use PHPCoord\UnitOfMeasure\Length\ClarkeLink;
@@ -854,5 +855,15 @@ class GeographicPointTest extends TestCase
 
         self::assertEqualsWithDelta(2216746.395, $to->getEasting()->asMetres()->getValue(), 0.001);
         self::assertEqualsWithDelta(5388508.715, $to->getNorthing()->asMetres()->getValue(), 0.001);
+    }
+
+    public function testObliqueMercatorLaborde(): void
+    {
+        $from = GeographicPoint::create(new Radian(-0.282565315), new Radian(0.735138668), null, Geographic2D::fromSRID(Geographic2D::EPSG_TANANARIVE_PARIS));
+        $toCRS = Projected::fromSRID(Projected::EPSG_TANANARIVE_PARIS_LABORDE_GRID);
+        $to = $from->obliqueMercatorLaborde($toCRS, new Grad(-21), new Grad(49), new Grad(21), new Unity(0.9995), new Metre(400000), new Metre(800000));
+
+        self::assertEqualsWithDelta(188333.848, $to->getEasting()->asMetres()->getValue(), 0.01);
+        self::assertEqualsWithDelta(1098841.091, $to->getNorthing()->asMetres()->getValue(), 0.01);
     }
 }
