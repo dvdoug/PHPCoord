@@ -866,4 +866,14 @@ class GeographicPointTest extends TestCase
         self::assertEqualsWithDelta(188333.848, $to->getEasting()->asMetres()->getValue(), 0.01);
         self::assertEqualsWithDelta(1098841.091, $to->getNorthing()->asMetres()->getValue(), 0.01);
     }
+
+    public function testMadridToED50Polynomial(): void
+    {
+        $from = GeographicPoint::create(new Degree(42.647992), new Degree(3.659603), null, Geographic2D::fromSRID(Geographic2D::EPSG_MADRID_1870_MADRID));
+        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_ED50);
+        $to = $from->madridToED50Polynomial($toCRS, new Coefficient(11.328779), new Coefficient(-0.1674), new Coefficient(-0.03852), new Coefficient(0.0000379), new ArcSecond(-13276.58), new Coefficient(2.5079425), new Coefficient(0.08352), new Coefficient(-0.00864), new Coefficient(-0.0000038));
+
+        self::assertEqualsWithDelta(42.649117, $to->getLatitude()->getValue(), 0.000001);
+        self::assertEqualsWithDelta(-0.02665833, $to->getLongitude()->getValue(), 0.000001);
+    }
 }

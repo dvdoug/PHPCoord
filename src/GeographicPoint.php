@@ -1860,6 +1860,27 @@ class GeographicPoint extends Point
     }
 
     /**
+     * Madrid to ED50 polynomial.
+     */
+    public function madridToED50Polynomial(
+        Geographic2D $to,
+        Scale $A0,
+        Scale $A1,
+        Scale $A2,
+        Scale $A3,
+        Angle $B00,
+        Scale $B0,
+        Scale $B1,
+        Scale $B2,
+        Scale $B3
+    ): self {
+        $dLatitude = new ArcSecond($A0->add($A1->multiply($this->latitude->getValue()))->add($A2->multiply($this->longitude->getValue()))->add($A3->multiply($this->height ? $this->height->getValue() : 0))->getValue());
+        $dLongitude = $B00->add(new ArcSecond($B0->add($B1->multiply($this->latitude->getValue()))->add($B2->multiply($this->longitude->getValue()))->add($B3->multiply($this->height ? $this->height->getValue() : 0))->getValue()));
+
+        return self::create($this->latitude->add($dLatitude), $this->longitude->add($dLongitude), null, $to, $this->epoch);
+    }
+
+    /**
      * Geographic3D to 2D conversion.
      */
     public function threeDToTwoD(
