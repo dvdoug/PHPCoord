@@ -35,10 +35,8 @@ class UnitOfMeasureFactoryTest extends TestCase
             $dummyValue = '1°N';
         } elseif (in_array($srid, [Angle::EPSG_HEMISPHERE_DEGREE, Angle::EPSG_HEMISPHERE_DEGREE_MINUTE, Angle::EPSG_HEMISPHERE_DEGREE_MINUTE_SECOND], true)) {
             $dummyValue = 'N1°';
-        } elseif (in_array($srid, [Angle::EPSG_SEXAGESIMAL_DMS, Angle::EPSG_SEXAGESIMAL_DM], true)) {
+        } elseif ($srid === Angle::EPSG_SEXAGESIMAL_DMS) {
             $dummyValue = '1.0';
-        } elseif (in_array($srid, [Angle::EPSG_SEXAGESIMAL_DMS_S], true)) {
-            $dummyValue = '10000.0';
         }
         $newUnit = UnitOfMeasureFactory::makeUnit($dummyValue, $srid);
         self::assertInstanceOf(UnitOfMeasure::class, $newUnit);

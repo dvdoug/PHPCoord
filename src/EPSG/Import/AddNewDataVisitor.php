@@ -21,6 +21,11 @@ class AddNewDataVisitor extends NodeVisitorAbstract
     public function __construct(array $data)
     {
         $this->data = $data;
+        foreach ($this->data as &$dataRow) {
+            unset($dataRow['constant_help']);
+            unset($dataRow['deprecated']);
+        }
+        ksort($this->data, SORT_NATURAL);
     }
 
     public function enterNode(Node $node)

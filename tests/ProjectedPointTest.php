@@ -20,7 +20,6 @@ use PHPCoord\Exception\InvalidCoordinateReferenceSystemException;
 use PHPCoord\UnitOfMeasure\Angle\Degree;
 use PHPCoord\UnitOfMeasure\Angle\Grad;
 use PHPCoord\UnitOfMeasure\Angle\Radian;
-use PHPCoord\UnitOfMeasure\Length\Chain;
 use PHPCoord\UnitOfMeasure\Length\ClarkeFoot;
 use PHPCoord\UnitOfMeasure\Length\ClarkeLink;
 use PHPCoord\UnitOfMeasure\Length\Foot;
@@ -309,7 +308,7 @@ class ProjectedPointTest extends TestCase
     {
         $from = ProjectedPoint::createFromEastingNorthing(new Link(1601528.9), new Link(1336966.6), Projected::fromSRID(Projected::EPSG_VANUA_LEVU_1915_VANUA_LEVU_GRID));
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_VANUA_LEVU_1915);
-        $to = $from->hyperbolicCassiniSoldner($toCRS, new Radian(-0.283616003), new Radian(3.129957125), new Chain(12513.318), new Chain(16628.885));
+        $to = $from->hyperbolicCassiniSoldner($toCRS, new Radian(-0.283616003), new Radian(3.129957125), new Link(12513.318 * 100), new Link(16628.885 * 100));
 
         self::assertEqualsWithDelta(-0.293938867, $to->getLatitude()->asRadians()->getValue(), 0.0001);
         self::assertEqualsWithDelta(3.141493807, $to->getLongitude()->asRadians()->getValue(), 0.0001);

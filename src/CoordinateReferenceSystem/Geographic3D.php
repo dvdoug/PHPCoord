@@ -1565,141 +1565,6 @@ class Geographic3D extends Geographic
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6423',
             'datum' => 'urn:ogc:def:datum:EPSG::1035',
         ],
-        'urn:ogc:def:crs:EPSG::4327' => [
-            'name' => 'WGS 84 (geographic 3D)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6401',
-            'datum' => 'urn:ogc:def:datum:EPSG::6326',
-        ],
-        'urn:ogc:def:crs:EPSG::4329' => [
-            'name' => 'WGS 84 (3D)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6401',
-            'datum' => 'urn:ogc:def:datum:EPSG::6326',
-        ],
-        'urn:ogc:def:crs:EPSG::4339' => [
-            'name' => 'Australian Antarctic (3D)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6401',
-            'datum' => 'urn:ogc:def:datum:EPSG::6176',
-        ],
-        'urn:ogc:def:crs:EPSG::4341' => [
-            'name' => 'EST97 (3D)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6401',
-            'datum' => 'urn:ogc:def:datum:EPSG::6180',
-        ],
-        'urn:ogc:def:crs:EPSG::4343' => [
-            'name' => 'CHTRF95 (3D)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6401',
-            'datum' => 'urn:ogc:def:datum:EPSG::6151',
-        ],
-        'urn:ogc:def:crs:EPSG::4345' => [
-            'name' => 'ETRS89 (3D)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6401',
-            'datum' => 'urn:ogc:def:datum:EPSG::6258',
-        ],
-        'urn:ogc:def:crs:EPSG::4347' => [
-            'name' => 'GDA94 (3D)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6423',
-            'datum' => 'urn:ogc:def:datum:EPSG::6283',
-        ],
-        'urn:ogc:def:crs:EPSG::4349' => [
-            'name' => 'Hartebeesthoek94 (3D)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6401',
-            'datum' => 'urn:ogc:def:datum:EPSG::6148',
-        ],
-        'urn:ogc:def:crs:EPSG::4351' => [
-            'name' => 'IRENET95 (3D)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6401',
-            'datum' => 'urn:ogc:def:datum:EPSG::6173',
-        ],
-        'urn:ogc:def:crs:EPSG::4353' => [
-            'name' => 'JGD2000 (3D)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6401',
-            'datum' => 'urn:ogc:def:datum:EPSG::6612',
-        ],
-        'urn:ogc:def:crs:EPSG::4355' => [
-            'name' => 'LKS94 (ETRS89) (3D)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6401',
-            'datum' => 'urn:ogc:def:datum:EPSG::6126',
-        ],
-        'urn:ogc:def:crs:EPSG::4357' => [
-            'name' => 'Moznet (3D)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6401',
-            'datum' => 'urn:ogc:def:datum:EPSG::6130',
-        ],
-        'urn:ogc:def:crs:EPSG::4359' => [
-            'name' => 'NAD83(CSRS) (3D)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6401',
-            'datum' => 'urn:ogc:def:datum:EPSG::6140',
-        ],
-        'urn:ogc:def:crs:EPSG::4361' => [
-            'name' => 'NAD83(HARN) (3D)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6401',
-            'datum' => 'urn:ogc:def:datum:EPSG::6152',
-        ],
-        'urn:ogc:def:crs:EPSG::4363' => [
-            'name' => 'NZGD2000 (3D)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6401',
-            'datum' => 'urn:ogc:def:datum:EPSG::6167',
-        ],
-        'urn:ogc:def:crs:EPSG::4365' => [
-            'name' => 'POSGAR 98 (3D)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6401',
-            'datum' => 'urn:ogc:def:datum:EPSG::6190',
-        ],
-        'urn:ogc:def:crs:EPSG::4367' => [
-            'name' => 'REGVEN (3D)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6401',
-            'datum' => 'urn:ogc:def:datum:EPSG::6189',
-        ],
-        'urn:ogc:def:crs:EPSG::4369' => [
-            'name' => 'RGF93 (3D)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6401',
-            'datum' => 'urn:ogc:def:datum:EPSG::6171',
-        ],
-        'urn:ogc:def:crs:EPSG::4371' => [
-            'name' => 'RGFG95 (3D)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6401',
-            'datum' => 'urn:ogc:def:datum:EPSG::6624',
-        ],
-        'urn:ogc:def:crs:EPSG::4373' => [
-            'name' => 'RGR92 (3D)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6401',
-            'datum' => 'urn:ogc:def:datum:EPSG::6627',
-        ],
-        'urn:ogc:def:crs:EPSG::4375' => [
-            'name' => 'SIRGAS (3D)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6401',
-            'datum' => 'urn:ogc:def:datum:EPSG::6170',
-        ],
-        'urn:ogc:def:crs:EPSG::4377' => [
-            'name' => 'SWEREF99 (3D)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6401',
-            'datum' => 'urn:ogc:def:datum:EPSG::6619',
-        ],
-        'urn:ogc:def:crs:EPSG::4379' => [
-            'name' => 'Yemen NGN96 (3D)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6401',
-            'datum' => 'urn:ogc:def:datum:EPSG::6163',
-        ],
-        'urn:ogc:def:crs:EPSG::4381' => [
-            'name' => 'RGNC 1991 (3D)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6401',
-            'datum' => 'urn:ogc:def:datum:EPSG::6645',
-        ],
-        'urn:ogc:def:crs:EPSG::4383' => [
-            'name' => 'RRAF 1991 (3D)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6401',
-            'datum' => 'urn:ogc:def:datum:EPSG::6640',
-        ],
-        'urn:ogc:def:crs:EPSG::4386' => [
-            'name' => 'ISN93 (3D)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6401',
-            'datum' => 'urn:ogc:def:datum:EPSG::6659',
-        ],
-        'urn:ogc:def:crs:EPSG::4388' => [
-            'name' => 'LKS92 (3D)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6401',
-            'datum' => 'urn:ogc:def:datum:EPSG::6661',
-        ],
         'urn:ogc:def:crs:EPSG::4466' => [
             'name' => 'RGSPM06',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6423',
@@ -1905,20 +1770,10 @@ class Geographic3D extends Geographic
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6423',
             'datum' => 'urn:ogc:def:datum:EPSG::6624',
         ],
-        'urn:ogc:def:crs:EPSG::4969' => [
-            'name' => 'RGNC 1991',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6423',
-            'datum' => 'urn:ogc:def:datum:EPSG::6645',
-        ],
         'urn:ogc:def:crs:EPSG::4971' => [
             'name' => 'RGR92',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6423',
             'datum' => 'urn:ogc:def:datum:EPSG::6627',
-        ],
-        'urn:ogc:def:crs:EPSG::4973' => [
-            'name' => 'RRAF 1991',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6423',
-            'datum' => 'urn:ogc:def:datum:EPSG::6640',
         ],
         'urn:ogc:def:crs:EPSG::4975' => [
             'name' => 'SIRGAS 1995',
@@ -2080,95 +1935,10 @@ class Geographic3D extends Geographic
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6423',
             'datum' => 'urn:ogc:def:datum:EPSG::1095',
         ],
-        'urn:ogc:def:crs:EPSG::61266413' => [
-            'name' => 'LKS94 (ETRS89) (3D deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6413',
-            'datum' => 'urn:ogc:def:datum:EPSG::6126',
-        ],
-        'urn:ogc:def:crs:EPSG::61306413' => [
-            'name' => 'Moznet (3D deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6413',
-            'datum' => 'urn:ogc:def:datum:EPSG::6130',
-        ],
         'urn:ogc:def:crs:EPSG::6134' => [
             'name' => 'CIGD11',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6423',
             'datum' => 'urn:ogc:def:datum:EPSG::1100',
-        ],
-        'urn:ogc:def:crs:EPSG::61406413' => [
-            'name' => 'NAD83(CSRS) (3D deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6413',
-            'datum' => 'urn:ogc:def:datum:EPSG::6140',
-        ],
-        'urn:ogc:def:crs:EPSG::61486413' => [
-            'name' => 'Hartebeesthoek94 (3D deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6413',
-            'datum' => 'urn:ogc:def:datum:EPSG::6148',
-        ],
-        'urn:ogc:def:crs:EPSG::61516413' => [
-            'name' => 'CHTRF95 (3D deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6413',
-            'datum' => 'urn:ogc:def:datum:EPSG::6151',
-        ],
-        'urn:ogc:def:crs:EPSG::61526413' => [
-            'name' => 'NAD83(HARN) (3D deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6413',
-            'datum' => 'urn:ogc:def:datum:EPSG::6152',
-        ],
-        'urn:ogc:def:crs:EPSG::61636413' => [
-            'name' => 'Yemen NGN96 (3D deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6413',
-            'datum' => 'urn:ogc:def:datum:EPSG::6163',
-        ],
-        'urn:ogc:def:crs:EPSG::61676413' => [
-            'name' => 'NZGD2000 (3D deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6413',
-            'datum' => 'urn:ogc:def:datum:EPSG::6167',
-        ],
-        'urn:ogc:def:crs:EPSG::61706413' => [
-            'name' => 'SIRGAS (3D deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6413',
-            'datum' => 'urn:ogc:def:datum:EPSG::6170',
-        ],
-        'urn:ogc:def:crs:EPSG::61716413' => [
-            'name' => 'RGF93 (3D deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6413',
-            'datum' => 'urn:ogc:def:datum:EPSG::6171',
-        ],
-        'urn:ogc:def:crs:EPSG::61736413' => [
-            'name' => 'IRENET95 (3D deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6413',
-            'datum' => 'urn:ogc:def:datum:EPSG::6173',
-        ],
-        'urn:ogc:def:crs:EPSG::61766413' => [
-            'name' => 'Australian Antarctic (3D deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6413',
-            'datum' => 'urn:ogc:def:datum:EPSG::6176',
-        ],
-        'urn:ogc:def:crs:EPSG::61806413' => [
-            'name' => 'EST97 (3D deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6413',
-            'datum' => 'urn:ogc:def:datum:EPSG::6180',
-        ],
-        'urn:ogc:def:crs:EPSG::61896413' => [
-            'name' => 'REGVEN (3D deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6413',
-            'datum' => 'urn:ogc:def:datum:EPSG::6189',
-        ],
-        'urn:ogc:def:crs:EPSG::61906413' => [
-            'name' => 'POSGAR 98 (3D deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6413',
-            'datum' => 'urn:ogc:def:datum:EPSG::6190',
-        ],
-        'urn:ogc:def:crs:EPSG::62586413' => [
-            'name' => 'ETRS89 (3D deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6413',
-            'datum' => 'urn:ogc:def:datum:EPSG::6258',
-        ],
-        'urn:ogc:def:crs:EPSG::62836413' => [
-            'name' => 'GDA94 (3D deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6413',
-            'datum' => 'urn:ogc:def:datum:EPSG::6283',
         ],
         'urn:ogc:def:crs:EPSG::6310' => [
             'name' => 'CGRS93',
@@ -2190,90 +1960,10 @@ class Geographic3D extends Geographic
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6423',
             'datum' => 'urn:ogc:def:datum:EPSG::1118',
         ],
-        'urn:ogc:def:crs:EPSG::63266413' => [
-            'name' => 'WGS 84 (3D deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6413',
-            'datum' => 'urn:ogc:def:datum:EPSG::6326',
-        ],
-        'urn:ogc:def:crs:EPSG::63266414' => [
-            'name' => 'WGS 84 (3D degH)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6414',
-            'datum' => 'urn:ogc:def:datum:EPSG::6326',
-        ],
-        'urn:ogc:def:crs:EPSG::63266415' => [
-            'name' => 'WGS 84 (3D Hdeg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6415',
-            'datum' => 'urn:ogc:def:datum:EPSG::6326',
-        ],
-        'urn:ogc:def:crs:EPSG::63266416' => [
-            'name' => 'WGS 84 (3D DM)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6416',
-            'datum' => 'urn:ogc:def:datum:EPSG::6326',
-        ],
-        'urn:ogc:def:crs:EPSG::63266417' => [
-            'name' => 'WGS 84 (3D DMH)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6417',
-            'datum' => 'urn:ogc:def:datum:EPSG::6326',
-        ],
-        'urn:ogc:def:crs:EPSG::63266418' => [
-            'name' => 'WGS 84 (3D HDM)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6418',
-            'datum' => 'urn:ogc:def:datum:EPSG::6326',
-        ],
-        'urn:ogc:def:crs:EPSG::63266419' => [
-            'name' => 'WGS 84 (3D DMS)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6419',
-            'datum' => 'urn:ogc:def:datum:EPSG::6326',
-        ],
-        'urn:ogc:def:crs:EPSG::63266420' => [
-            'name' => 'WGS 84 (3D HDMS)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6420',
-            'datum' => 'urn:ogc:def:datum:EPSG::6326',
-        ],
         'urn:ogc:def:crs:EPSG::6364' => [
             'name' => 'Mexico ITRF2008',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6423',
             'datum' => 'urn:ogc:def:datum:EPSG::1120',
-        ],
-        'urn:ogc:def:crs:EPSG::66126413' => [
-            'name' => 'JGD2000 (3D deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6413',
-            'datum' => 'urn:ogc:def:datum:EPSG::6612',
-        ],
-        'urn:ogc:def:crs:EPSG::66196413' => [
-            'name' => 'SWEREF99 (3D deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6413',
-            'datum' => 'urn:ogc:def:datum:EPSG::6619',
-        ],
-        'urn:ogc:def:crs:EPSG::66246413' => [
-            'name' => 'RGFG95 (3D deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6413',
-            'datum' => 'urn:ogc:def:datum:EPSG::6624',
-        ],
-        'urn:ogc:def:crs:EPSG::66276413' => [
-            'name' => 'RGR92 (3D deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6413',
-            'datum' => 'urn:ogc:def:datum:EPSG::6627',
-        ],
-        'urn:ogc:def:crs:EPSG::66406413' => [
-            'name' => 'RRAF 1991 (3D deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6413',
-            'datum' => 'urn:ogc:def:datum:EPSG::6640',
-        ],
-        'urn:ogc:def:crs:EPSG::66456413' => [
-            'name' => 'RGNC 1991 (3D deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6413',
-            'datum' => 'urn:ogc:def:datum:EPSG::6645',
-        ],
-        'urn:ogc:def:crs:EPSG::66596413' => [
-            'name' => 'ISN93 (3D deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6401',
-            'datum' => 'urn:ogc:def:datum:EPSG::6659',
-        ],
-        'urn:ogc:def:crs:EPSG::66616413' => [
-            'name' => 'LKS92 (3D deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6413',
-            'datum' => 'urn:ogc:def:datum:EPSG::6661',
         ],
         'urn:ogc:def:crs:EPSG::6667' => [
             'name' => 'JGD2011',
@@ -2290,20 +1980,10 @@ class Geographic3D extends Geographic
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6423',
             'datum' => 'urn:ogc:def:datum:EPSG::1133',
         ],
-        'urn:ogc:def:crs:EPSG::6979' => [
-            'name' => 'IGD05',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6423',
-            'datum' => 'urn:ogc:def:datum:EPSG::1143',
-        ],
         'urn:ogc:def:crs:EPSG::6982' => [
             'name' => 'IG05 Intermediate CRS',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6423',
             'datum' => 'urn:ogc:def:datum:EPSG::1142',
-        ],
-        'urn:ogc:def:crs:EPSG::6986' => [
-            'name' => 'IGD05/12',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6423',
-            'datum' => 'urn:ogc:def:datum:EPSG::1145',
         ],
         'urn:ogc:def:crs:EPSG::6989' => [
             'name' => 'IG05/12 Intermediate CRS',
@@ -2789,11 +2469,6 @@ class Geographic3D extends Geographic
             'name' => 'SIRGAS-Chile 2016',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6423',
             'datum' => 'urn:ogc:def:datum:EPSG::1253',
-        ],
-        'urn:ogc:def:crs:EPSG::9183' => [
-            'name' => 'SIRGAS-Chile',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6423',
-            'datum' => 'urn:ogc:def:datum:EPSG::1254',
         ],
         'urn:ogc:def:crs:EPSG::9267' => [
             'name' => 'MGI',

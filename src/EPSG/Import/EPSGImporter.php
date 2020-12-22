@@ -87,152 +87,29 @@ class EPSGImporter
         $this->generateDataDatums($sqlite);
         $this->generateDataCoordinateSystems($sqlite);
         $this->generateDataCoordinateReferenceSystems($sqlite);
-
-        $this->generateConstantsUnitsOfMeasure($sqlite);
-        $this->generateConstantsPrimeMeridians($sqlite);
-        $this->generateConstantsEllipsoids($sqlite);
-        $this->generateConstantsDatums($sqlite);
-        $this->generateConstantsCoordinateSystems($sqlite);
-        $this->generateConstantsCoordinateReferenceSystems($sqlite);
-        $this->generateConstantsCoordinateOperationMethods($sqlite);
+        $this->generateDataCoordinateOperationMethods($sqlite);
 
         $sqlite->close();
-    }
-
-    public function generateConstantsUnitsOfMeasure(SQLite3 $sqlite): void
-    {
-        $sql = "
-            SELECT
-                'urn:ogc:def:uom:EPSG::' || m.uom_code AS constant_value,
-                m.unit_of_meas_name AS constant_name,
-                m.unit_of_meas_name || '\n' || m.remarks AS constant_help,
-                m.deprecated
-            FROM epsg_unitofmeasure m
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_unitofmeasure' AND dep.object_code = m.uom_code AND dep.deprecation_date <= '2020-12-14'
-            WHERE m.unit_of_meas_type = 'angle' AND m.unit_of_meas_name NOT LIKE '%per second%' AND m.unit_of_meas_name NOT LIKE '%per year%'
-            ORDER BY constant_name
-            ";
-
-        $result = $sqlite->query($sql);
-        $constants = [];
-        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-            $constants[] = $row;
-        }
-
-        $this->updateFileConstants($this->sourceDir . '/UnitOfMeasure/Angle/Angle.php', $constants, 'public');
-
-        $sql = "
-            SELECT
-                'urn:ogc:def:uom:EPSG::' || m.uom_code AS constant_value,
-                m.unit_of_meas_name AS constant_name,
-                m.unit_of_meas_name || '\n' || m.remarks AS constant_help,
-                m.deprecated
-            FROM epsg_unitofmeasure m
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_unitofmeasure' AND dep.object_code = m.uom_code AND dep.deprecation_date <= '2020-12-14'
-            WHERE m.unit_of_meas_type = 'length' AND m.unit_of_meas_name NOT LIKE '%per second%' AND m.unit_of_meas_name NOT LIKE '%per year%'
-            AND m.unit_of_meas_name NOT LIKE '%bin%'
-            ORDER BY constant_name
-            ";
-
-        $result = $sqlite->query($sql);
-        $constants = [];
-        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-            $constants[] = $row;
-        }
-
-        $this->updateFileConstants($this->sourceDir . '/UnitOfMeasure/Length/Length.php', $constants, 'public');
-
-        $sql = "
-            SELECT
-                'urn:ogc:def:uom:EPSG::' || m.uom_code AS constant_value,
-                m.unit_of_meas_name AS constant_name,
-                m.unit_of_meas_name || '\n' || m.remarks AS constant_help,
-                m.deprecated
-            FROM epsg_unitofmeasure m
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_unitofmeasure' AND dep.object_code = m.uom_code AND dep.deprecation_date <= '2020-12-14'
-            WHERE m.unit_of_meas_type = 'scale' AND m.unit_of_meas_name NOT LIKE '%per second%' AND m.unit_of_meas_name NOT LIKE '%per year%'
-            AND m.unit_of_meas_name NOT LIKE '%bin%'
-            ORDER BY constant_name
-            ";
-
-        $result = $sqlite->query($sql);
-        $constants = [];
-        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-            $constants[] = $row;
-        }
-
-        $this->updateFileConstants($this->sourceDir . '/UnitOfMeasure/Scale/Scale.php', $constants, 'public');
-
-        $sql = "
-            SELECT
-                'urn:ogc:def:uom:EPSG::' || m.uom_code AS constant_value,
-                m.unit_of_meas_name AS constant_name,
-                m.unit_of_meas_name || '\n' || m.remarks AS constant_help,
-                m.deprecated
-            FROM epsg_unitofmeasure m
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_unitofmeasure' AND dep.object_code = m.uom_code AND dep.deprecation_date <= '2020-12-14'
-            WHERE m.unit_of_meas_type = 'time' AND m.unit_of_meas_name NOT LIKE '%per second%' AND m.unit_of_meas_name NOT LIKE '%per year%'
-            ORDER BY constant_name
-            ";
-
-        $result = $sqlite->query($sql);
-        $constants = [];
-        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-            $constants[] = $row;
-        }
-
-        $this->updateFileConstants($this->sourceDir . '/UnitOfMeasure/Time/Time.php', $constants, 'public');
-
-        $sql = "
-            SELECT
-                'urn:ogc:def:uom:EPSG::' || m.uom_code AS constant_value,
-                m.unit_of_meas_name AS constant_name,
-                m.unit_of_meas_name || '\n' || m.remarks AS constant_help,
-                m.deprecated
-            FROM epsg_unitofmeasure m
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_unitofmeasure' AND dep.object_code = m.uom_code AND dep.deprecation_date <= '2020-12-14'
-            WHERE (m.unit_of_meas_name LIKE '%per second%' OR m.unit_of_meas_name LIKE '%per year%')
-            ORDER BY constant_name
-            ";
-
-        $result = $sqlite->query($sql);
-        $constants = [];
-        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-            $constants[] = $row;
-        }
-
-        $this->updateFileConstants($this->sourceDir . '/UnitOfMeasure/Rate.php', $constants, 'public');
-
-        $sql = "
-            SELECT
-                'urn:ogc:def:uom:EPSG::' || m.uom_code AS constant_value,
-                m.unit_of_meas_type || '_' || m.unit_of_meas_name AS constant_name,
-                m.unit_of_meas_name || '\n' || m.remarks AS constant_help,
-                m.deprecated
-            FROM epsg_unitofmeasure m
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_unitofmeasure' AND dep.object_code = m.uom_code AND dep.deprecation_date <= '2020-12-14'
-            WHERE m.unit_of_meas_type NOT IN ('angle', 'length', 'scale', 'time') AND m.unit_of_meas_name NOT LIKE '%per second%' AND m.unit_of_meas_name NOT LIKE '%per year%'
-            ORDER BY constant_name
-            ";
-
-        $result = $sqlite->query($sql);
-        $constants = [];
-        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-            $constants[] = $row;
-        }
-
-        $this->updateFileConstants($this->sourceDir . '/UnitOfMeasure/UnitOfMeasure.php', $constants, 'public');
     }
 
     public function generateDataUnitsOfMeasure(SQLite3 $sqlite): void
     {
         $sql = "
             SELECT
-               'urn:ogc:def:uom:EPSG::' || m.uom_code AS urn,
-                m.unit_of_meas_name AS name
+                'urn:ogc:def:uom:EPSG::' || m.uom_code AS urn,
+                m.unit_of_meas_name AS name,
+                m.unit_of_meas_name || '\n' || m.remarks AS constant_help,
+                m.deprecated
             FROM epsg_unitofmeasure m
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_unitofmeasure' AND dep.object_code = m.uom_code AND dep.deprecation_date <= '2020-12-14'
+            LEFT JOIN epsg_ellipsoid e ON e.uom_code = m.uom_code
+            LEFT JOIN epsg_primemeridian pm ON pm.uom_code = m.uom_code
+            LEFT JOIN epsg_coordinateaxis ca ON ca.uom_code = m.uom_code
+            LEFT JOIN epsg_coordoperationparamvalue pv ON pv.uom_code = m.uom_code
             WHERE m.unit_of_meas_type = 'angle' AND m.unit_of_meas_name NOT LIKE '%per second%' AND m.unit_of_meas_name NOT LIKE '%per year%'
-            ORDER BY urn
+            AND (e.uom_code IS NOT NULL OR ca.uom_code IS NOT NULL OR pm.uom_code IS NOT NULL OR pv.uom_code IS NOT NULL)
+            GROUP BY m.uom_code
+            ORDER BY name
             ";
 
         $result = $sqlite->query($sql);
@@ -243,15 +120,25 @@ class EPSGImporter
         }
 
         $this->updateFileData($this->sourceDir . '/UnitOfMeasure/Angle/Angle.php', $data);
+        $this->updateFileConstants($this->sourceDir . '/UnitOfMeasure/Angle/Angle.php', $data, 'public');
 
         $sql = "
             SELECT
-               'urn:ogc:def:uom:EPSG::' || m.uom_code AS urn,
-                m.unit_of_meas_name AS name
+                'urn:ogc:def:uom:EPSG::' || m.uom_code AS urn,
+                m.unit_of_meas_name AS name,
+                m.unit_of_meas_name || '\n' || m.remarks AS constant_help,
+                m.deprecated
             FROM epsg_unitofmeasure m
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_unitofmeasure' AND dep.object_code = m.uom_code AND dep.deprecation_date <= '2020-12-14'
+            LEFT JOIN epsg_ellipsoid e ON e.uom_code = m.uom_code
+            LEFT JOIN epsg_coordinateaxis ca ON ca.uom_code = m.uom_code
+            LEFT JOIN epsg_coordoperationparamvalue pv ON pv.uom_code = m.uom_code
             WHERE m.unit_of_meas_type = 'length' AND m.unit_of_meas_name NOT LIKE '%per second%' AND m.unit_of_meas_name NOT LIKE '%per year%'
+            AND dep.deprecation_id IS NULL
             AND m.unit_of_meas_name NOT LIKE '%bin%'
-            ORDER BY urn
+            AND (e.uom_code IS NOT NULL OR ca.uom_code IS NOT NULL OR pv.uom_code IS NOT NULL)
+            GROUP BY m.uom_code
+            ORDER BY name
             ";
 
         $result = $sqlite->query($sql);
@@ -262,15 +149,25 @@ class EPSGImporter
         }
 
         $this->updateFileData($this->sourceDir . '/UnitOfMeasure/Length/Length.php', $data);
+        $this->updateFileConstants($this->sourceDir . '/UnitOfMeasure/Length/Length.php', $data, 'public');
 
         $sql = "
             SELECT
-               'urn:ogc:def:uom:EPSG::' || m.uom_code AS urn,
-                m.unit_of_meas_name AS name
+                'urn:ogc:def:uom:EPSG::' || m.uom_code AS urn,
+                m.unit_of_meas_name AS name,
+                m.unit_of_meas_name || '\n' || m.remarks AS constant_help,
+                m.deprecated
             FROM epsg_unitofmeasure m
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_unitofmeasure' AND dep.object_code = m.uom_code AND dep.deprecation_date <= '2020-12-14'
+            LEFT JOIN epsg_ellipsoid e ON e.uom_code = m.uom_code
+            LEFT JOIN epsg_coordinateaxis ca ON ca.uom_code = m.uom_code
+            LEFT JOIN epsg_coordoperationparamvalue pv ON pv.uom_code = m.uom_code
             WHERE m.unit_of_meas_type = 'scale' AND m.unit_of_meas_name NOT LIKE '%per second%' AND m.unit_of_meas_name NOT LIKE '%per year%'
+            AND dep.deprecation_id IS NULL
             AND m.unit_of_meas_name NOT LIKE '%bin%'
-            ORDER BY urn
+            AND (e.uom_code IS NOT NULL OR ca.uom_code IS NOT NULL OR pv.uom_code IS NOT NULL)
+            GROUP BY m.uom_code
+            ORDER BY name
             ";
 
         $result = $sqlite->query($sql);
@@ -281,14 +178,24 @@ class EPSGImporter
         }
 
         $this->updateFileData($this->sourceDir . '/UnitOfMeasure/Scale/Scale.php', $data);
+        $this->updateFileConstants($this->sourceDir . '/UnitOfMeasure/Scale/Scale.php', $data, 'public');
 
         $sql = "
             SELECT
-               'urn:ogc:def:uom:EPSG::' || m.uom_code AS urn,
-                m.unit_of_meas_name AS name
+                'urn:ogc:def:uom:EPSG::' || m.uom_code AS urn,
+                m.unit_of_meas_name AS name,
+                m.unit_of_meas_name || '\n' || m.remarks AS constant_help,
+                m.deprecated
             FROM epsg_unitofmeasure m
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_unitofmeasure' AND dep.object_code = m.uom_code AND dep.deprecation_date <= '2020-12-14'
+            LEFT JOIN epsg_ellipsoid e ON e.uom_code = m.uom_code
+            LEFT JOIN epsg_coordinateaxis ca ON ca.uom_code = m.uom_code
+            LEFT JOIN epsg_coordoperationparamvalue pv ON pv.uom_code = m.uom_code
             WHERE m.unit_of_meas_type = 'time' AND m.unit_of_meas_name NOT LIKE '%per second%' AND m.unit_of_meas_name NOT LIKE '%per year%'
-            ORDER BY urn
+            AND dep.deprecation_id IS NULL
+            AND (e.uom_code IS NOT NULL OR ca.uom_code IS NOT NULL OR pv.uom_code IS NOT NULL)
+            GROUP BY m.uom_code
+            ORDER BY name
             ";
 
         $result = $sqlite->query($sql);
@@ -299,14 +206,24 @@ class EPSGImporter
         }
 
         $this->updateFileData($this->sourceDir . '/UnitOfMeasure/Time/Time.php', $data);
+        $this->updateFileConstants($this->sourceDir . '/UnitOfMeasure/Time/Time.php', $data, 'public');
 
         $sql = "
             SELECT
-               'urn:ogc:def:uom:EPSG::' || m.uom_code AS urn,
-                m.unit_of_meas_name AS name
+                'urn:ogc:def:uom:EPSG::' || m.uom_code AS urn,
+                m.unit_of_meas_name AS name,
+                m.unit_of_meas_name || '\n' || m.remarks AS constant_help,
+                m.deprecated
             FROM epsg_unitofmeasure m
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_unitofmeasure' AND dep.object_code = m.uom_code AND dep.deprecation_date <= '2020-12-14'
+            LEFT JOIN epsg_ellipsoid e ON e.uom_code = m.uom_code
+            LEFT JOIN epsg_coordinateaxis ca ON ca.uom_code = m.uom_code
+            LEFT JOIN epsg_coordoperationparamvalue pv ON pv.uom_code = m.uom_code
             WHERE (m.unit_of_meas_name LIKE '%per second%' OR m.unit_of_meas_name LIKE '%per year%')
-            ORDER BY urn
+            AND dep.deprecation_id IS NULL
+            AND (e.uom_code IS NOT NULL OR ca.uom_code IS NOT NULL OR pv.uom_code IS NOT NULL)
+            GROUP BY m.uom_code
+            ORDER BY name
             ";
 
         $result = $sqlite->query($sql);
@@ -317,14 +234,24 @@ class EPSGImporter
         }
 
         $this->updateFileData($this->sourceDir . '/UnitOfMeasure/Rate.php', $data);
+        $this->updateFileConstants($this->sourceDir . '/UnitOfMeasure/Rate.php', $data, 'public');
 
         $sql = "
             SELECT
-               'urn:ogc:def:uom:EPSG::' || m.uom_code AS urn,
-                m.unit_of_meas_name AS name
+                'urn:ogc:def:uom:EPSG::' || m.uom_code AS urn,
+                m.unit_of_meas_type || '_' || m.unit_of_meas_name AS name,
+                m.unit_of_meas_name || '\n' || m.remarks AS constant_help,
+                m.deprecated
             FROM epsg_unitofmeasure m
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_unitofmeasure' AND dep.object_code = m.uom_code AND dep.deprecation_date <= '2020-12-14'
+            LEFT JOIN epsg_ellipsoid e ON e.uom_code = m.uom_code
+            LEFT JOIN epsg_coordinateaxis ca ON ca.uom_code = m.uom_code
+            LEFT JOIN epsg_coordoperationparamvalue pv ON pv.uom_code = m.uom_code
             WHERE m.unit_of_meas_type NOT IN ('angle', 'length', 'scale', 'time') AND m.unit_of_meas_name NOT LIKE '%per second%' AND m.unit_of_meas_name NOT LIKE '%per year%'
-            ORDER BY urn
+            AND dep.deprecation_id IS NULL
+            AND (e.uom_code IS NOT NULL OR ca.uom_code IS NOT NULL OR pv.uom_code IS NOT NULL)
+            GROUP BY m.uom_code
+            ORDER BY name
             ";
 
         $result = $sqlite->query($sql);
@@ -334,30 +261,8 @@ class EPSGImporter
             unset($data[$row['urn']]['urn']);
         }
 
-        $this->updateFileData($this->sourceDir . '/UnitOfMeasure/UnitOfMeasureFactory.php', $data);
-    }
-
-    public function generateConstantsPrimeMeridians(SQLite3 $sqlite): void
-    {
-        $sql = "
-            SELECT
-                'urn:ogc:def:meridian:EPSG::' || p.prime_meridian_code AS constant_value,
-                p.prime_meridian_name AS constant_name,
-                p.prime_meridian_name || '\n' || p.remarks AS constant_help,
-                p.deprecated
-            FROM epsg_primemeridian p
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_primemeridian' AND dep.object_code = p.prime_meridian_code AND dep.deprecation_date <= '2020-12-14'
-            WHERE dep.deprecation_id IS NULL
-            ORDER BY constant_name
-            ";
-
-        $result = $sqlite->query($sql);
-        $constants = [];
-        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-            $constants[] = $row;
-        }
-
-        $this->updateFileConstants($this->sourceDir . '/Datum/PrimeMeridian.php', $constants, 'public');
+        $this->updateFileData($this->sourceDir . '/UnitOfMeasure/UnitOfMeasure.php', $data);
+        $this->updateFileConstants($this->sourceDir . '/UnitOfMeasure/UnitOfMeasure.php', $data, 'public');
     }
 
     public function generateDataPrimeMeridians(SQLite3 $sqlite): void
@@ -366,10 +271,14 @@ class EPSGImporter
             SELECT
                 'urn:ogc:def:meridian:EPSG::' || p.prime_meridian_code AS urn,
                 p.prime_meridian_name AS name,
+                p.prime_meridian_name || '\n' || p.remarks AS constant_help,
                 p.greenwich_longitude,
-                'urn:ogc:def:uom:EPSG::' || p.uom_code AS uom
+                'urn:ogc:def:uom:EPSG::' || p.uom_code AS uom,
+                p.deprecated
             FROM epsg_primemeridian p
-            ORDER BY urn
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_primemeridian' AND dep.object_code = p.prime_meridian_code AND dep.deprecation_date <= '2020-12-14'
+            WHERE dep.deprecation_id IS NULL
+            ORDER BY name
             ";
 
         $result = $sqlite->query($sql);
@@ -380,45 +289,25 @@ class EPSGImporter
         }
 
         $this->updateFileData($this->sourceDir . '/Datum/PrimeMeridian.php', $data);
-    }
-
-    public function generateConstantsEllipsoids(SQLite3 $sqlite): void
-    {
-        $sql = "
-            SELECT
-            DISTINCT
-                'urn:ogc:def:ellipsoid:EPSG::' || e.ellipsoid_code AS constant_value,
-                e.ellipsoid_name AS constant_name,
-                e.ellipsoid_name || '\n' || e.remarks AS constant_help,
-                e.deprecated
-            FROM epsg_ellipsoid e
-            JOIN epsg_datum d ON d.ellipsoid_code = e.ellipsoid_code -- there are some never used entries
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_ellipsoid' AND dep.object_code = e.ellipsoid_code AND dep.deprecation_date <= '2020-12-14'
-            WHERE dep.deprecation_id IS NULL
-            ORDER BY constant_name
-            ";
-
-        $result = $sqlite->query($sql);
-        $constants = [];
-        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-            $constants[] = $row;
-        }
-
-        $this->updateFileConstants($this->sourceDir . '/Datum/Ellipsoid.php', $constants, 'public');
+        $this->updateFileConstants($this->sourceDir . '/Datum/PrimeMeridian.php', $data, 'public');
     }
 
     public function generateDataEllipsoids(SQLite3 $sqlite): void
     {
         $sql = "
             SELECT
-                'urn:ogc:def:ellipsoid:EPSG::' || el.ellipsoid_code AS urn,
-                el.ellipsoid_name AS name,
-                el.semi_major_axis,
-                el.semi_minor_axis,
-                el.inv_flattening,
-                'urn:ogc:def:uom:EPSG::' || el.uom_code AS uom
-            FROM epsg_ellipsoid el
-            ORDER BY urn
+                'urn:ogc:def:ellipsoid:EPSG::' || e.ellipsoid_code AS urn,
+                e.ellipsoid_name AS name,
+                e.semi_major_axis,
+                e.semi_minor_axis,
+                e.inv_flattening,
+                'urn:ogc:def:uom:EPSG::' || e.uom_code AS uom,
+                e.ellipsoid_name || '\n' || e.remarks AS constant_help,
+                e.deprecated
+            FROM epsg_ellipsoid e
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_ellipsoid' AND dep.object_code = e.ellipsoid_code AND dep.deprecation_date <= '2020-12-14'
+            WHERE dep.deprecation_id IS NULL
+            ORDER BY name
         ";
 
         $result = $sqlite->query($sql);
@@ -434,32 +323,7 @@ class EPSGImporter
         }
 
         $this->updateFileData($this->sourceDir . '/Datum/Ellipsoid.php', $data);
-    }
-
-    public function generateConstantsDatums(SQLite3 $sqlite): void
-    {
-        $sql = "
-            SELECT
-                DISTINCT
-                'urn:ogc:def:datum:EPSG::' || d.datum_code AS constant_value,
-                d.datum_name AS constant_name,
-                d.datum_name || '\n' || 'Type: ' || d.datum_type || '\n' || 'Extent: ' || e.extent_description || '\n' || d.origin_description || '\n' || d.remarks AS constant_help,
-                d.deprecated
-            FROM epsg_datum d
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_datum' AND dep.object_code = d.datum_code AND dep.deprecation_date <= '2020-12-14'
-            LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_datum' AND u.object_code = d.datum_code
-            LEFT JOIN epsg_extent e ON u.extent_code = e.extent_code
-            WHERE dep.deprecation_id IS NULL AND d.datum_type != 'engineering'
-            ORDER BY constant_name
-        ";
-
-        $result = $sqlite->query($sql);
-        $constants = [];
-        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-            $constants[] = $row;
-        }
-
-        $this->updateFileConstants($this->sourceDir . '/Datum/Datum.php', $constants, 'public');
+        $this->updateFileConstants($this->sourceDir . '/Datum/Ellipsoid.php', $data, 'public');
     }
 
     public function generateDataDatums(SQLite3 $sqlite): void
@@ -472,10 +336,16 @@ class EPSGImporter
                 'urn:ogc:def:ellipsoid:EPSG::' || d.ellipsoid_code AS ellipsoid,
                 'urn:ogc:def:meridian:EPSG::' || d.prime_meridian_code AS prime_meridian,
                 d.conventional_rs_code AS conventional_rs,
-                d.frame_reference_epoch
+                d.frame_reference_epoch,
+                d.datum_name || '\n' || 'Type: ' || d.datum_type || '\n' || 'Extent: ' || e.extent_description || '\n' || d.origin_description || '\n' || d.remarks AS constant_help,
+                d.deprecated
             FROM epsg_datum d
-            WHERE d.datum_type != 'engineering'
-            ORDER BY urn
+            LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_datum' AND u.object_code = d.datum_code
+            LEFT JOIN epsg_extent e ON u.extent_code = e.extent_code
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_datum' AND dep.object_code = d.datum_code AND dep.deprecation_date <= '2020-12-14'
+            WHERE dep.deprecation_id IS NULL AND d.datum_type != 'engineering'
+            GROUP BY d.datum_code
+            ORDER BY name
         ";
 
         $result = $sqlite->query($sql);
@@ -503,113 +373,7 @@ class EPSGImporter
         }
 
         $this->updateFileData($this->sourceDir . '/Datum/Datum.php', $data);
-    }
-
-    public function generateConstantsCoordinateSystems(SQLite3 $sqlite): void
-    {
-        /*
-         * cartesian
-         */
-        $sql = "
-            SELECT
-                DISTINCT
-                'urn:ogc:def:cs:EPSG::' || cs.coord_sys_code AS constant_value,
-                REPLACE(REPLACE(REPLACE(cs.coord_sys_name, 'Cartesian 2D CS', ''), 'Cartesian 3D CS', ''), 'for', '') || CASE cs.coord_sys_code WHEN 4531 THEN '_LOWERCASE' ELSE '' END AS constant_name,
-                cs.coord_sys_name || '\n' || 'Type: ' || cs.coord_sys_type || '\n' || cs.remarks AS constant_help,
-                cs.deprecated
-            FROM epsg_coordinatesystem cs
-            JOIN epsg_coordinatereferencesystem crs ON crs.coord_sys_code = cs.coord_sys_code AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatesystem' AND dep.object_code = cs.coord_sys_code AND dep.deprecation_date <= '2020-12-14'
-            WHERE dep.deprecation_id IS NULL AND cs.coord_sys_type != 'ordinal'
-            AND cs.coord_sys_type = 'Cartesian'
-            ORDER BY constant_name
-        ";
-
-        $result = $sqlite->query($sql);
-        $constants = [];
-        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-            $constants[] = $row;
-        }
-
-        $this->updateFileConstants($this->sourceDir . '/CoordinateSystem/Cartesian.php', $constants, 'public');
-
-        /*
-         * ellipsoidal
-         */
-        $sql = "
-            SELECT
-                DISTINCT
-                'urn:ogc:def:cs:EPSG::' || cs.coord_sys_code AS constant_value,
-                REPLACE(REPLACE(REPLACE(cs.coord_sys_name, 'Ellipsoidal 2D CS', ''), 'Ellipsoidal 3D CS', ''), 'for', '') AS constant_name,
-                cs.coord_sys_name || '\n' || 'Type: ' || cs.coord_sys_type || '\n' || cs.remarks AS constant_help,
-                cs.deprecated
-            FROM epsg_coordinatesystem cs
-            JOIN epsg_coordinatereferencesystem crs ON crs.coord_sys_code = cs.coord_sys_code AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatesystem' AND dep.object_code = cs.coord_sys_code AND dep.deprecation_date <= '2020-12-14'
-            WHERE dep.deprecation_id IS NULL AND cs.coord_sys_type != 'ordinal'
-            AND cs.coord_sys_type = 'ellipsoidal'
-            ORDER BY constant_name
-        ";
-
-        $result = $sqlite->query($sql);
-        $constants = [];
-        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-            $constants[] = $row;
-        }
-
-        $this->updateFileConstants($this->sourceDir . '/CoordinateSystem/Ellipsoidal.php', $constants, 'public');
-
-        /*
-         * vertical
-         */
-        $sql = "
-            SELECT
-                DISTINCT
-                'urn:ogc:def:cs:EPSG::' || cs.coord_sys_code AS constant_value,
-                REPLACE(REPLACE(cs.coord_sys_name, 'Vertical CS', ''), 'for', '') AS constant_name,
-                cs.coord_sys_name || '\n' || 'Type: ' || cs.coord_sys_type || '\n' || cs.remarks AS constant_help,
-                cs.deprecated
-            FROM epsg_coordinatesystem cs
-            JOIN epsg_coordinatereferencesystem crs ON crs.coord_sys_code = cs.coord_sys_code AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatesystem' AND dep.object_code = cs.coord_sys_code AND dep.deprecation_date <= '2020-12-14'
-            WHERE dep.deprecation_id IS NULL AND cs.coord_sys_type != 'ordinal'
-            AND cs.coord_sys_type = 'vertical'
-            ORDER BY constant_name
-        ";
-
-        $result = $sqlite->query($sql);
-        $constants = [];
-        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-            $constants[] = $row;
-        }
-
-        $this->updateFileConstants($this->sourceDir . '/CoordinateSystem/Vertical.php', $constants, 'public');
-
-        /*
-         * other
-         */
-        $sql = "
-            SELECT
-                DISTINCT
-                'urn:ogc:def:cs:EPSG::' || cs.coord_sys_code AS constant_value,
-                cs.coord_sys_name AS constant_name,
-                cs.coord_sys_name || '\n' || 'Type: ' || cs.coord_sys_type || '\n' || cs.remarks AS constant_help,
-                cs.deprecated
-            FROM epsg_coordinatesystem cs
-            JOIN epsg_coordinatereferencesystem crs ON crs.coord_sys_code = cs.coord_sys_code AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatesystem' AND dep.object_code = cs.coord_sys_code AND dep.deprecation_date <= '2020-12-14'
-            WHERE dep.deprecation_id IS NULL AND cs.coord_sys_type != 'ordinal'
-            AND cs.coord_sys_type NOT IN ('Cartesian', 'ellipsoidal', 'vertical')
-            ORDER BY constant_name
-        ";
-
-        $result = $sqlite->query($sql);
-        $constants = [];
-        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-            $constants[] = $row;
-        }
-
-        $this->updateFileConstants($this->sourceDir . '/CoordinateSystem/CoordinateSystem.php', $constants, 'public');
+        $this->updateFileConstants($this->sourceDir . '/Datum/Datum.php', $data, 'public');
     }
 
     public function generateDataCoordinateSystems(SQLite3 $sqlite): void
@@ -620,10 +384,16 @@ class EPSGImporter
         $sql = "
             SELECT
                 'urn:ogc:def:cs:EPSG::' || cs.coord_sys_code AS urn,
-                cs.coord_sys_name AS name
+                REPLACE(REPLACE(REPLACE(cs.coord_sys_name, 'Cartesian 2D CS', ''), 'Cartesian 3D CS', ''), 'for', '') || CASE cs.coord_sys_code WHEN 4531 THEN '_LOWERCASE' ELSE '' END AS name,
+                cs.coord_sys_name || '\n' || 'Type: ' || cs.coord_sys_type || '\n' || cs.remarks AS constant_help,
+                cs.deprecated
             FROM epsg_coordinatesystem cs
             JOIN epsg_coordinatereferencesystem crs ON crs.coord_sys_code = cs.coord_sys_code AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
-            WHERE cs.coord_sys_type = 'Cartesian'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatesystem' AND dep.object_code = cs.coord_sys_code AND dep.deprecation_date <= '2020-12-14'
+            WHERE dep.deprecation_id IS NULL AND cs.coord_sys_type != 'ordinal'
+            AND cs.coord_sys_type = 'Cartesian'
+            GROUP BY cs.coord_sys_code
+            ORDER BY name
             ";
 
         $result = $sqlite->query($sql);
@@ -653,6 +423,7 @@ class EPSGImporter
         }
 
         $this->updateFileData($this->sourceDir . '/CoordinateSystem/Cartesian.php', $data);
+        $this->updateFileConstants($this->sourceDir . '/CoordinateSystem/Cartesian.php', $data, 'public');
 
         /*
          * ellipsoidal
@@ -660,10 +431,16 @@ class EPSGImporter
         $sql = "
             SELECT
                 'urn:ogc:def:cs:EPSG::' || cs.coord_sys_code AS urn,
-                cs.coord_sys_name AS name
+                REPLACE(REPLACE(REPLACE(cs.coord_sys_name, 'Ellipsoidal 2D CS', ''), 'Ellipsoidal 3D CS', ''), 'for', '') AS name,
+                cs.coord_sys_name || '\n' || 'Type: ' || cs.coord_sys_type || '\n' || cs.remarks AS constant_help,
+                cs.deprecated
             FROM epsg_coordinatesystem cs
             JOIN epsg_coordinatereferencesystem crs ON crs.coord_sys_code = cs.coord_sys_code AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
-            WHERE cs.coord_sys_type = 'ellipsoidal'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatesystem' AND dep.object_code = cs.coord_sys_code AND dep.deprecation_date <= '2020-12-14'
+            WHERE dep.deprecation_id IS NULL AND cs.coord_sys_type != 'ordinal'
+            AND cs.coord_sys_type = 'ellipsoidal'
+            GROUP BY cs.coord_sys_code
+            ORDER BY name
             ";
 
         $result = $sqlite->query($sql);
@@ -693,6 +470,7 @@ class EPSGImporter
         }
 
         $this->updateFileData($this->sourceDir . '/CoordinateSystem/Ellipsoidal.php', $data);
+        $this->updateFileConstants($this->sourceDir . '/CoordinateSystem/Ellipsoidal.php', $data, 'public');
 
         /*
          * vertical
@@ -700,10 +478,16 @@ class EPSGImporter
         $sql = "
             SELECT
                 'urn:ogc:def:cs:EPSG::' || cs.coord_sys_code AS urn,
-                cs.coord_sys_name AS name
+                REPLACE(REPLACE(cs.coord_sys_name, 'Vertical CS', ''), 'for', '') AS name,
+                cs.coord_sys_name || '\n' || 'Type: ' || cs.coord_sys_type || '\n' || cs.remarks AS constant_help,
+                cs.deprecated
             FROM epsg_coordinatesystem cs
             JOIN epsg_coordinatereferencesystem crs ON crs.coord_sys_code = cs.coord_sys_code AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
-            WHERE cs.coord_sys_type = 'vertical'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatesystem' AND dep.object_code = cs.coord_sys_code AND dep.deprecation_date <= '2020-12-14'
+            WHERE dep.deprecation_id IS NULL AND cs.coord_sys_type != 'ordinal'
+            AND cs.coord_sys_type = 'vertical'
+            GROUP BY cs.coord_sys_code
+            ORDER BY name
             ";
 
         $result = $sqlite->query($sql);
@@ -733,6 +517,7 @@ class EPSGImporter
         }
 
         $this->updateFileData($this->sourceDir . '/CoordinateSystem/Vertical.php', $data);
+        $this->updateFileConstants($this->sourceDir . '/CoordinateSystem/Vertical.php', $data, 'public');
 
         /*
          * other
@@ -741,10 +526,16 @@ class EPSGImporter
             SELECT
                 'urn:ogc:def:cs:EPSG::' || cs.coord_sys_code AS urn,
                 cs.coord_sys_name AS name,
-                cs.coord_sys_type AS type
+                cs.coord_sys_type AS type,
+                cs.coord_sys_name || '\n' || 'Type: ' || cs.coord_sys_type || '\n' || cs.remarks AS constant_help,
+                cs.deprecated
             FROM epsg_coordinatesystem cs
             JOIN epsg_coordinatereferencesystem crs ON crs.coord_sys_code = cs.coord_sys_code AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
-            WHERE cs.coord_sys_type NOT IN ('Cartesian', 'ellipsoidal', 'vertical')
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatesystem' AND dep.object_code = cs.coord_sys_code AND dep.deprecation_date <= '2020-12-14'
+            WHERE dep.deprecation_id IS NULL AND cs.coord_sys_type != 'ordinal'
+            AND cs.coord_sys_type NOT IN ('Cartesian', 'ellipsoidal', 'vertical')
+            GROUP BY cs.coord_sys_code
+            ORDER BY name
             ";
 
         $result = $sqlite->query($sql);
@@ -774,212 +565,7 @@ class EPSGImporter
         }
 
         $this->updateFileData($this->sourceDir . '/CoordinateSystem/CoordinateSystem.php', $data);
-    }
-
-    public function generateConstantsCoordinateReferenceSystems(SQLite3 $sqlite): void
-    {
-        /*
-         * compound
-         */
-        $sql = "
-            SELECT
-                'urn:ogc:def:crs:EPSG::' || crs.coord_ref_sys_code AS constant_value,
-                crs.coord_ref_sys_name AS constant_name,
-                crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || crs.remarks AS constant_help,
-                crs.deprecated
-            FROM epsg_coordinatereferencesystem crs
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2020-12-14'
-            LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
-            LEFT JOIN epsg_extent e ON u.extent_code = e.extent_code
-            WHERE dep.deprecation_id IS NULL AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
-            AND (crs.cmpd_horizcrs_code IS NULL OR crs.cmpd_horizcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind IN ('engineering', 'derived')))
-            AND (crs.cmpd_vertcrs_code IS NULL OR crs.cmpd_vertcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind IN ('engineering', 'derived')))
-            AND crs.coord_ref_sys_kind = 'compound'
-            GROUP BY crs.coord_ref_sys_code
-            ORDER BY constant_name
-        ";
-
-        $result = $sqlite->query($sql);
-        $constants = [];
-        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-            $constants[] = $row;
-        }
-
-        $this->updateFileConstants($this->sourceDir . '/CoordinateReferenceSystem/Compound.php', $constants, 'public');
-
-        /*
-         * geocentric
-         */
-        $sql = "
-            SELECT
-                'urn:ogc:def:crs:EPSG::' || crs.coord_ref_sys_code AS constant_value,
-                crs.coord_ref_sys_name AS constant_name,
-                crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || crs.remarks AS constant_help,
-                crs.deprecated
-            FROM epsg_coordinatereferencesystem crs
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2020-12-14'
-            LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
-            LEFT JOIN epsg_extent e ON u.extent_code = e.extent_code
-            WHERE dep.deprecation_id IS NULL AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
-            AND (crs.cmpd_horizcrs_code IS NULL OR crs.cmpd_horizcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind IN ('engineering', 'derived')))
-            AND (crs.cmpd_vertcrs_code IS NULL OR crs.cmpd_vertcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind IN ('engineering', 'derived')))
-            AND crs.coord_ref_sys_kind = 'geocentric'
-            GROUP BY crs.coord_ref_sys_code
-            ORDER BY constant_name
-        ";
-
-        $result = $sqlite->query($sql);
-        $constants = [];
-        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-            $constants[] = $row;
-        }
-
-        $this->updateFileConstants($this->sourceDir . '/CoordinateReferenceSystem/Geocentric.php', $constants, 'public');
-
-        /*
-         * geographic 2D
-         */
-        $sql = "
-            SELECT
-                'urn:ogc:def:crs:EPSG::' || crs.coord_ref_sys_code AS constant_value,
-                crs.coord_ref_sys_name AS constant_name,
-                crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || crs.remarks AS constant_help,
-                crs.deprecated
-            FROM epsg_coordinatereferencesystem crs
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2020-12-14'
-            LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
-            LEFT JOIN epsg_extent e ON u.extent_code = e.extent_code
-            WHERE dep.deprecation_id IS NULL AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
-            AND (crs.cmpd_horizcrs_code IS NULL OR crs.cmpd_horizcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind IN ('engineering', 'derived')))
-            AND (crs.cmpd_vertcrs_code IS NULL OR crs.cmpd_vertcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind IN ('engineering', 'derived')))
-            AND crs.coord_ref_sys_kind = 'geographic 2D'
-            GROUP BY crs.coord_ref_sys_code
-            ORDER BY constant_name
-        ";
-
-        $result = $sqlite->query($sql);
-        $constants = [];
-        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-            $constants[] = $row;
-        }
-
-        $this->updateFileConstants($this->sourceDir . '/CoordinateReferenceSystem/Geographic2D.php', $constants, 'public');
-
-        /*
-         * geographic 3D
-         */
-        $sql = "
-            SELECT
-                'urn:ogc:def:crs:EPSG::' || crs.coord_ref_sys_code AS constant_value,
-                crs.coord_ref_sys_name AS constant_name,
-                crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || crs.remarks AS constant_help,
-                crs.deprecated
-            FROM epsg_coordinatereferencesystem crs
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2020-12-14'
-            LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
-            LEFT JOIN epsg_extent e ON u.extent_code = e.extent_code
-            WHERE dep.deprecation_id IS NULL AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
-            AND (crs.cmpd_horizcrs_code IS NULL OR crs.cmpd_horizcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind IN ('engineering', 'derived')))
-            AND (crs.cmpd_vertcrs_code IS NULL OR crs.cmpd_vertcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind IN ('engineering', 'derived')))
-            AND crs.coord_ref_sys_kind = 'geographic 3D'
-            GROUP BY crs.coord_ref_sys_code
-            ORDER BY constant_name
-        ";
-
-        $result = $sqlite->query($sql);
-        $constants = [];
-        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-            $constants[] = $row;
-        }
-
-        $this->updateFileConstants($this->sourceDir . '/CoordinateReferenceSystem/Geographic3D.php', $constants, 'public');
-
-        /*
-         * projected
-         */
-        $sql = "
-            SELECT
-                'urn:ogc:def:crs:EPSG::' || crs.coord_ref_sys_code AS constant_value,
-                crs.coord_ref_sys_name AS constant_name,
-                crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || crs.remarks AS constant_help,
-                crs.deprecated
-            FROM epsg_coordinatereferencesystem crs
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2020-12-14'
-            LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
-            LEFT JOIN epsg_extent e ON u.extent_code = e.extent_code
-            WHERE dep.deprecation_id IS NULL AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
-            AND (crs.cmpd_horizcrs_code IS NULL OR crs.cmpd_horizcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind IN ('engineering', 'derived')))
-            AND (crs.cmpd_vertcrs_code IS NULL OR crs.cmpd_vertcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind IN ('engineering', 'derived')))
-            AND crs.coord_ref_sys_kind = 'projected'
-            GROUP BY crs.coord_ref_sys_code
-            ORDER BY constant_name
-        ";
-
-        $result = $sqlite->query($sql);
-        $constants = [];
-        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-            $constants[] = $row;
-        }
-
-        $this->updateFileConstants($this->sourceDir . '/CoordinateReferenceSystem/Projected.php', $constants, 'public');
-
-        /*
-         * vertical
-         */
-        $sql = "
-            SELECT
-                'urn:ogc:def:crs:EPSG::' || crs.coord_ref_sys_code AS constant_value,
-                crs.coord_ref_sys_name AS constant_name,
-                crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || crs.remarks AS constant_help,
-                crs.deprecated
-            FROM epsg_coordinatereferencesystem crs
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2020-12-14'
-            LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
-            LEFT JOIN epsg_extent e ON u.extent_code = e.extent_code
-            WHERE dep.deprecation_id IS NULL AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
-            AND (crs.cmpd_horizcrs_code IS NULL OR crs.cmpd_horizcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind IN ('engineering', 'derived')))
-            AND (crs.cmpd_vertcrs_code IS NULL OR crs.cmpd_vertcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind IN ('engineering', 'derived')))
-            AND crs.coord_ref_sys_kind = 'vertical'
-            GROUP BY crs.coord_ref_sys_code
-            ORDER BY constant_name
-        ";
-
-        $result = $sqlite->query($sql);
-        $constants = [];
-        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-            $constants[] = $row;
-        }
-
-        $this->updateFileConstants($this->sourceDir . '/CoordinateReferenceSystem/Vertical.php', $constants, 'public');
-
-        /*
-         * other
-         */
-        $sql = "
-            SELECT
-                'urn:ogc:def:crs:EPSG::' || crs.coord_ref_sys_code AS constant_value,
-                crs.coord_ref_sys_kind || '_' || crs.coord_ref_sys_name AS constant_name,
-                crs.coord_ref_sys_name || '\n' || 'Type: ' || crs.coord_ref_sys_kind || '\n' || 'Extent: ' || e.extent_description || '\n' || crs.remarks AS constant_help,
-                crs.deprecated
-            FROM epsg_coordinatereferencesystem crs
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2020-12-14'
-            LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
-            LEFT JOIN epsg_extent e ON u.extent_code = e.extent_code
-            WHERE dep.deprecation_id IS NULL AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
-            AND (crs.cmpd_horizcrs_code IS NULL OR crs.cmpd_horizcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind IN ('engineering', 'derived')))
-            AND (crs.cmpd_vertcrs_code IS NULL OR crs.cmpd_vertcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind IN ('engineering', 'derived')))
-            AND crs.coord_ref_sys_kind NOT IN ('compound', 'geocentric', 'geographic 2D', 'geographic 3D', 'projected', 'vertical')
-            GROUP BY crs.coord_ref_sys_code
-            ORDER BY constant_name
-        ";
-
-        $result = $sqlite->query($sql);
-        $constants = [];
-        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-            $constants[] = $row;
-        }
-
-        $this->updateFileConstants($this->sourceDir . '/CoordinateReferenceSystem/CoordinateReferenceSystem.php', $constants, 'public');
+        $this->updateFileConstants($this->sourceDir . '/CoordinateSystem/CoordinateSystem.php', $data, 'public');
     }
 
     public function generateDataCoordinateReferenceSystems(SQLite3 $sqlite): void
@@ -993,14 +579,19 @@ class EPSGImporter
                 crs.coord_ref_sys_name AS name,
                 'urn:ogc:def:crs:EPSG::' || crs.cmpd_horizcrs_code AS horizontal_crs,
                 horizontal.coord_ref_sys_kind AS horizontal_crs_type,
-                'urn:ogc:def:crs:EPSG::' || crs.cmpd_vertcrs_code AS vertical_crs
+                'urn:ogc:def:crs:EPSG::' || crs.cmpd_vertcrs_code AS vertical_crs,
+                crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || crs.remarks AS constant_help,
+                crs.deprecated
             FROM epsg_coordinatereferencesystem crs
+            LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
+            LEFT JOIN epsg_extent e ON u.extent_code = e.extent_code
             JOIN epsg_coordinatereferencesystem horizontal ON horizontal.coord_ref_sys_code = crs.cmpd_horizcrs_code
-            WHERE crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2020-12-14'
+            WHERE dep.deprecation_id IS NULL AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%' AND crs.coord_ref_sys_name NOT LIKE '%mining%'
             AND (crs.cmpd_horizcrs_code IS NULL OR crs.cmpd_horizcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
             AND (crs.cmpd_vertcrs_code IS NULL OR crs.cmpd_vertcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
             AND crs.coord_ref_sys_kind = 'compound'
-            ORDER BY urn
+            ORDER BY name
             ";
 
         $result = $sqlite->query($sql);
@@ -1011,6 +602,7 @@ class EPSGImporter
         }
 
         $this->updateFileData($this->sourceDir . '/CoordinateReferenceSystem/Compound.php', $data);
+        $this->updateFileConstants($this->sourceDir . '/CoordinateReferenceSystem/Compound.php', $data, 'public');
 
         /*
          * geocentric
@@ -1020,14 +612,19 @@ class EPSGImporter
                 'urn:ogc:def:crs:EPSG::' || crs.coord_ref_sys_code AS urn,
                 crs.coord_ref_sys_name AS name,
                 'urn:ogc:def:cs:EPSG::' || crs.coord_sys_code AS coordinate_system,
-                'urn:ogc:def:datum:EPSG::' || COALESCE(crs.datum_code, crs_base.datum_code) AS datum
+                'urn:ogc:def:datum:EPSG::' || COALESCE(crs.datum_code, crs_base.datum_code) AS datum,
+                crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || crs.remarks AS constant_help,
+                crs.deprecated
             FROM epsg_coordinatereferencesystem crs
+            LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
+            LEFT JOIN epsg_extent e ON u.extent_code = e.extent_code
             LEFT JOIN epsg_coordinatereferencesystem crs_base ON crs_base.coord_ref_sys_code = crs.base_crs_code
-            WHERE crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2020-12-14'
+            WHERE dep.deprecation_id IS NULL AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%' AND crs.coord_ref_sys_name NOT LIKE '%mining%'
             AND (crs.cmpd_horizcrs_code IS NULL OR crs.cmpd_horizcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
             AND (crs.cmpd_vertcrs_code IS NULL OR crs.cmpd_vertcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
             AND crs.coord_ref_sys_kind = 'geocentric'
-            ORDER BY urn
+            ORDER BY name
             ";
 
         $result = $sqlite->query($sql);
@@ -1038,6 +635,7 @@ class EPSGImporter
         }
 
         $this->updateFileData($this->sourceDir . '/CoordinateReferenceSystem/Geocentric.php', $data);
+        $this->updateFileConstants($this->sourceDir . '/CoordinateReferenceSystem/Geocentric.php', $data, 'public');
 
         /*
          * geographic 2D
@@ -1047,14 +645,19 @@ class EPSGImporter
                 'urn:ogc:def:crs:EPSG::' || crs.coord_ref_sys_code AS urn,
                 crs.coord_ref_sys_name AS name,
                 'urn:ogc:def:cs:EPSG::' || crs.coord_sys_code AS coordinate_system,
-                'urn:ogc:def:datum:EPSG::' || COALESCE(crs.datum_code, crs_base.datum_code) AS datum
+                'urn:ogc:def:datum:EPSG::' || COALESCE(crs.datum_code, crs_base.datum_code) AS datum,
+                crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || crs.remarks AS constant_help,
+                crs.deprecated
             FROM epsg_coordinatereferencesystem crs
+            LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
+            LEFT JOIN epsg_extent e ON u.extent_code = e.extent_code
             LEFT JOIN epsg_coordinatereferencesystem crs_base ON crs_base.coord_ref_sys_code = crs.base_crs_code
-            WHERE crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2020-12-14'
+            WHERE dep.deprecation_id IS NULL AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%' AND crs.coord_ref_sys_name NOT LIKE '%mining%'
             AND (crs.cmpd_horizcrs_code IS NULL OR crs.cmpd_horizcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
             AND (crs.cmpd_vertcrs_code IS NULL OR crs.cmpd_vertcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
             AND crs.coord_ref_sys_kind = 'geographic 2D'
-            ORDER BY urn
+            ORDER BY name
             ";
 
         $result = $sqlite->query($sql);
@@ -1065,6 +668,7 @@ class EPSGImporter
         }
 
         $this->updateFileData($this->sourceDir . '/CoordinateReferenceSystem/Geographic2D.php', $data);
+        $this->updateFileConstants($this->sourceDir . '/CoordinateReferenceSystem/Geographic2D.php', $data, 'public');
 
         /*
          * geographic 3D
@@ -1074,14 +678,19 @@ class EPSGImporter
                 'urn:ogc:def:crs:EPSG::' || crs.coord_ref_sys_code AS urn,
                 crs.coord_ref_sys_name AS name,
                 'urn:ogc:def:cs:EPSG::' || crs.coord_sys_code AS coordinate_system,
-                'urn:ogc:def:datum:EPSG::' || COALESCE(crs.datum_code, crs_base.datum_code) AS datum
+                'urn:ogc:def:datum:EPSG::' || COALESCE(crs.datum_code, crs_base.datum_code) AS datum,
+                crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || crs.remarks AS constant_help,
+                crs.deprecated
             FROM epsg_coordinatereferencesystem crs
+            LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
+            LEFT JOIN epsg_extent e ON u.extent_code = e.extent_code
             LEFT JOIN epsg_coordinatereferencesystem crs_base ON crs_base.coord_ref_sys_code = crs.base_crs_code
-            WHERE crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2020-12-14'
+            WHERE dep.deprecation_id IS NULL AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%' AND crs.coord_ref_sys_name NOT LIKE '%mining%'
             AND (crs.cmpd_horizcrs_code IS NULL OR crs.cmpd_horizcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
             AND (crs.cmpd_vertcrs_code IS NULL OR crs.cmpd_vertcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
             AND crs.coord_ref_sys_kind = 'geographic 3D'
-            ORDER BY urn
+            ORDER BY name
             ";
 
         $result = $sqlite->query($sql);
@@ -1092,6 +701,7 @@ class EPSGImporter
         }
 
         $this->updateFileData($this->sourceDir . '/CoordinateReferenceSystem/Geographic3D.php', $data);
+        $this->updateFileConstants($this->sourceDir . '/CoordinateReferenceSystem/Geographic3D.php', $data, 'public');
 
         /*
          * projected
@@ -1101,14 +711,19 @@ class EPSGImporter
                 'urn:ogc:def:crs:EPSG::' || crs.coord_ref_sys_code AS urn,
                 crs.coord_ref_sys_name AS name,
                 'urn:ogc:def:cs:EPSG::' || crs.coord_sys_code AS coordinate_system,
-                'urn:ogc:def:datum:EPSG::' || COALESCE(crs.datum_code, crs_base.datum_code) AS datum
+                'urn:ogc:def:datum:EPSG::' || COALESCE(crs.datum_code, crs_base.datum_code) AS datum,
+                crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || crs.remarks AS constant_help,
+                crs.deprecated
             FROM epsg_coordinatereferencesystem crs
+            LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
+            LEFT JOIN epsg_extent e ON u.extent_code = e.extent_code
             LEFT JOIN epsg_coordinatereferencesystem crs_base ON crs_base.coord_ref_sys_code = crs.base_crs_code
-            WHERE crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2020-12-14'
+            WHERE dep.deprecation_id IS NULL AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%' AND crs.coord_ref_sys_name NOT LIKE '%mining%'
             AND (crs.cmpd_horizcrs_code IS NULL OR crs.cmpd_horizcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
             AND (crs.cmpd_vertcrs_code IS NULL OR crs.cmpd_vertcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
             AND crs.coord_ref_sys_kind = 'projected'
-            ORDER BY urn
+            ORDER BY name
             ";
 
         $result = $sqlite->query($sql);
@@ -1118,7 +733,8 @@ class EPSGImporter
             unset($data[$row['urn']]['urn']);
         }
 
-        $this->updateFileData($this->sourceDir . '/CoordinateReferenceSystem/Projected.php', $data);
+        $this->updateFileData($this->sourceDir . '/CoordinateReferenceSystem/ProjectedSRIDData.php', $data);
+        $this->updateFileConstants($this->sourceDir . '/CoordinateReferenceSystem/Projected.php', $data, 'public');
 
         /*
          * vertical
@@ -1128,14 +744,19 @@ class EPSGImporter
                 'urn:ogc:def:crs:EPSG::' || crs.coord_ref_sys_code AS urn,
                 crs.coord_ref_sys_name AS name,
                 'urn:ogc:def:cs:EPSG::' || crs.coord_sys_code AS coordinate_system,
-                'urn:ogc:def:datum:EPSG::' || COALESCE(crs.datum_code, crs_base.datum_code) AS datum
+                'urn:ogc:def:datum:EPSG::' || COALESCE(crs.datum_code, crs_base.datum_code) AS datum,
+                crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || crs.remarks AS constant_help,
+                crs.deprecated
             FROM epsg_coordinatereferencesystem crs
+            LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
+            LEFT JOIN epsg_extent e ON u.extent_code = e.extent_code
             LEFT JOIN epsg_coordinatereferencesystem crs_base ON crs_base.coord_ref_sys_code = crs.base_crs_code
-            WHERE crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2020-12-14'
+            WHERE dep.deprecation_id IS NULL AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%' AND crs.coord_ref_sys_name NOT LIKE '%mining%'
             AND (crs.cmpd_horizcrs_code IS NULL OR crs.cmpd_horizcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
             AND (crs.cmpd_vertcrs_code IS NULL OR crs.cmpd_vertcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
             AND crs.coord_ref_sys_kind = 'vertical'
-            ORDER BY urn
+            ORDER BY name
             ";
 
         $result = $sqlite->query($sql);
@@ -1146,6 +767,7 @@ class EPSGImporter
         }
 
         $this->updateFileData($this->sourceDir . '/CoordinateReferenceSystem/Vertical.php', $data);
+        $this->updateFileConstants($this->sourceDir . '/CoordinateReferenceSystem/Vertical.php', $data, 'public');
 
         /*
          * other
@@ -1156,14 +778,19 @@ class EPSGImporter
                 crs.coord_ref_sys_kind AS kind,
                 crs.coord_ref_sys_name AS name,
                 'urn:ogc:def:cs:EPSG::' || crs.coord_sys_code AS coordinate_system,
-                'urn:ogc:def:datum:EPSG::' || COALESCE(crs.datum_code, crs_base.datum_code) AS datum
+                'urn:ogc:def:datum:EPSG::' || COALESCE(crs.datum_code, crs_base.datum_code) AS datum,
+                crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || crs.remarks AS constant_help,
+                crs.deprecated
             FROM epsg_coordinatereferencesystem crs
+            LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
+            LEFT JOIN epsg_extent e ON u.extent_code = e.extent_code
             LEFT JOIN epsg_coordinatereferencesystem crs_base ON crs_base.coord_ref_sys_code = crs.base_crs_code
-            WHERE crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2020-12-14'
+            WHERE dep.deprecation_id IS NULL AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%' AND crs.coord_ref_sys_name NOT LIKE '%mining%'
             AND (crs.cmpd_horizcrs_code IS NULL OR crs.cmpd_horizcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
             AND (crs.cmpd_vertcrs_code IS NULL OR crs.cmpd_vertcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
             AND crs.coord_ref_sys_kind NOT IN ('compound', 'geocentric', 'geographic 2D', 'geographic 3D', 'projected', 'vertical')
-            ORDER BY urn
+            ORDER BY name
             ";
 
         $result = $sqlite->query($sql);
@@ -1174,14 +801,15 @@ class EPSGImporter
         }
 
         $this->updateFileData($this->sourceDir . '/CoordinateReferenceSystem/CoordinateReferenceSystem.php', $data);
+        $this->updateFileConstants($this->sourceDir . '/CoordinateReferenceSystem/CoordinateReferenceSystem.php', $data, 'public');
     }
 
-    public function generateConstantsCoordinateOperationMethods(SQLite3 $sqlite): void
+    public function generateDataCoordinateOperationMethods(SQLite3 $sqlite): void
     {
         $sql = "
             SELECT
-                'urn:ogc:def:method:EPSG::' || m.coord_op_method_code AS constant_value,
-                m.coord_op_method_name AS constant_name,
+                'urn:ogc:def:method:EPSG::' || m.coord_op_method_code AS urn,
+                m.coord_op_method_name AS name,
                 m.coord_op_method_name || '\n' || m.remarks AS constant_help,
                 m.deprecated
             FROM epsg_coordoperationmethod m
@@ -1201,8 +829,8 @@ class EPSGImporter
             UNION
 
             SELECT
-                'urn:ogc:def:method:EPSG::' || m.coord_op_method_code AS constant_value,
-                m.coord_op_method_name AS constant_name,
+                'urn:ogc:def:method:EPSG::' || m.coord_op_method_code AS urn,
+                m.coord_op_method_name AS name,
                 m.coord_op_method_name || '\n' || m.remarks AS constant_help,
                 m.deprecated
             FROM epsg_coordoperationmethod m
@@ -1220,19 +848,20 @@ class EPSGImporter
             GROUP BY m.coord_op_method_code
             HAVING (SUM(CASE WHEN p.param_value_file_ref != '' THEN 1 ELSE 0 END) = 0) -- skip anything that needs some kind of datafile
 
-            ORDER BY constant_name
+            ORDER BY name
         ";
 
         $result = $sqlite->query($sql);
-        $constants = [];
+        $data = [];
         while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-            $constants[] = $row;
+            $data[$row['urn']] = $row;
+            unset($data[$row['urn']]['urn']);
         }
 
-        $this->updateFileConstants($this->sourceDir . '/CoordinateOperation/CoordinateOperationMethods.php', $constants, 'protected');
+        $this->updateFileConstants($this->sourceDir . '/CoordinateOperation/CoordinateOperationMethods.php', $data, 'protected');
     }
 
-    private function updateFileConstants(string $fileName, array $classConstants, string $visibility): void
+    private function updateFileConstants(string $fileName, array $data, string $visibility): void
     {
         echo "Updating constants in {$fileName}...";
 
@@ -1266,7 +895,7 @@ class EPSGImporter
          * Then add the ones wanted
          */
         $traverser = new NodeTraverser();
-        $traverser->addVisitor(new AddNewConstantsVisitor($classConstants, $visibility));
+        $traverser->addVisitor(new AddNewConstantsVisitor($data, $visibility));
         $newStmts = $traverser->traverse($newStmts);
 
         $prettyPrinter = new ASTPrettyPrinter();

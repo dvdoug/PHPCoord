@@ -12,14 +12,10 @@ use PHPCoord\Exception\InvalidRateException;
 use PHPCoord\Exception\UnknownUnitOfMeasureException;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPCoord\UnitOfMeasure\Angle\ArcSecond;
-use PHPCoord\UnitOfMeasure\Angle\Radian;
 use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPCoord\UnitOfMeasure\Scale\PartsPerBillion;
 use PHPCoord\UnitOfMeasure\Scale\PartsPerMillion;
-use PHPCoord\UnitOfMeasure\Scale\Scale;
-use PHPCoord\UnitOfMeasure\Scale\Unity;
-use PHPCoord\UnitOfMeasure\Time\Second;
 use PHPCoord\UnitOfMeasure\Time\Time;
 use PHPCoord\UnitOfMeasure\Time\Year;
 
@@ -37,12 +33,6 @@ class Rate implements UnitOfMeasure
      * Year taken to be IUGS definition of 31556925.445 seconds; see UoM code 1029.
      */
     public const EPSG_CENTIMETRES_PER_YEAR = 'urn:ogc:def:uom:EPSG::1034';
-
-    /**
-     * metre per second
-     * SI coherent derived unit (standard unit) for velocity.
-     */
-    public const EPSG_METRE_PER_SECOND = 'urn:ogc:def:uom:EPSG::1026';
 
     /**
      * metres per year
@@ -76,22 +66,7 @@ class Rate implements UnitOfMeasure
      */
     public const EPSG_PARTS_PER_MILLION_PER_YEAR = 'urn:ogc:def:uom:EPSG::1041';
 
-    /**
-     * radian per second
-     * SI coherent derived unit (standard unit) for angular velocity.
-     */
-    public const EPSG_RADIAN_PER_SECOND = 'urn:ogc:def:uom:EPSG::1035';
-
-    /**
-     * unity per second
-     * EPSG standard unit for scale rate. SI coherent derived unit (standard unit) for dimensionless quantity velocity.
-     */
-    public const EPSG_UNITY_PER_SECOND = 'urn:ogc:def:uom:EPSG::1036';
-
     protected static array $sridData = [
-        'urn:ogc:def:uom:EPSG::1026' => [
-            'name' => 'metre per second',
-        ],
         'urn:ogc:def:uom:EPSG::1027' => [
             'name' => 'millimetres per year',
         ],
@@ -103,12 +78,6 @@ class Rate implements UnitOfMeasure
         ],
         'urn:ogc:def:uom:EPSG::1034' => [
             'name' => 'centimetres per year',
-        ],
-        'urn:ogc:def:uom:EPSG::1035' => [
-            'name' => 'radian per second',
-        ],
-        'urn:ogc:def:uom:EPSG::1036' => [
-            'name' => 'unity per second',
         ],
         'urn:ogc:def:uom:EPSG::1041' => [
             'name' => 'parts per million per year',
@@ -172,22 +141,16 @@ class Rate implements UnitOfMeasure
         }
 
         switch ($srid) {
-            case self::EPSG_RADIAN_PER_SECOND:
-                return new self(new Radian($measurement), new Second(1));
             case self::EPSG_ARC_SECONDS_PER_YEAR:
                 return new self(new ArcSecond($measurement), new Year(1));
             case self::EPSG_MILLIARC_SECONDS_PER_YEAR:
                 return new self(Angle::makeUnit($measurement, Angle::EPSG_MILLIARC_SECOND), new Year(1));
-            case self::EPSG_METRE_PER_SECOND:
-                return new self(new Metre($measurement), new Second(1));
             case self::EPSG_METRES_PER_YEAR:
                 return new self(new Metre($measurement), new Year(1));
             case self::EPSG_MILLIMETRES_PER_YEAR:
                 return new self(Length::makeUnit($measurement, Length::EPSG_MILLIMETRE), new Year(1));
             case self::EPSG_CENTIMETRES_PER_YEAR:
                 return new self(Length::makeUnit($measurement, Length::EPSG_CENTIMETRE), new Year(1));
-            case self::EPSG_UNITY_PER_SECOND:
-                return new self(new Unity($measurement), new Second(1));
             case self::EPSG_PARTS_PER_BILLION_PER_YEAR:
                 return new self(new PartsPerBillion($measurement), new Year(1));
             case self::EPSG_PARTS_PER_MILLION_PER_YEAR:

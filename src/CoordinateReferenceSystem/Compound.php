@@ -2893,12 +2893,6 @@ class Compound extends CoordinateReferenceSystem
             'horizontal_crs_type' => 'geographic 2D',
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6693',
         ],
-        'urn:ogc:def:crs:EPSG::6871' => [
-            'name' => 'WGS 84 / Pseudo-Mercator +  EGM2008 geoid height',
-            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::3857',
-            'horizontal_crs_type' => 'projected',
-            'vertical_crs' => 'urn:ogc:def:crs:EPSG::3855',
-        ],
         'urn:ogc:def:crs:EPSG::6893' => [
             'name' => 'WGS 84 / World Mercator +  EGM2008 height',
             'horizontal_crs' => 'urn:ogc:def:crs:EPSG::3395',
@@ -2921,24 +2915,6 @@ class Compound extends CoordinateReferenceSystem
             'name' => 'NTF (Paris) + NGF IGN69 height',
             'horizontal_crs' => 'urn:ogc:def:crs:EPSG::4807',
             'horizontal_crs_type' => 'geographic 2D',
-            'vertical_crs' => 'urn:ogc:def:crs:EPSG::5720',
-        ],
-        'urn:ogc:def:crs:EPSG::7401' => [
-            'name' => 'NTF (Paris) / France II + NGF Lallemand',
-            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::27582',
-            'horizontal_crs_type' => 'projected',
-            'vertical_crs' => 'urn:ogc:def:crs:EPSG::5719',
-        ],
-        'urn:ogc:def:crs:EPSG::7402' => [
-            'name' => 'NTF (Paris) / France II + NGF IGN69',
-            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::27582',
-            'horizontal_crs_type' => 'projected',
-            'vertical_crs' => 'urn:ogc:def:crs:EPSG::5720',
-        ],
-        'urn:ogc:def:crs:EPSG::7403' => [
-            'name' => 'NTF (Paris) / France III + NGF IGN69',
-            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::27583',
-            'horizontal_crs_type' => 'projected',
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5720',
         ],
         'urn:ogc:def:crs:EPSG::7404' => [
@@ -2965,12 +2941,6 @@ class Compound extends CoordinateReferenceSystem
             'horizontal_crs_type' => 'projected',
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5702',
         ],
-        'urn:ogc:def:crs:EPSG::7408' => [
-            'name' => 'RD/NAP',
-            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::4289',
-            'horizontal_crs_type' => 'geographic 2D',
-            'vertical_crs' => 'urn:ogc:def:crs:EPSG::5709',
-        ],
         'urn:ogc:def:crs:EPSG::7409' => [
             'name' => 'ETRS89 + EVRF2000 height',
             'horizontal_crs' => 'urn:ogc:def:crs:EPSG::4258',
@@ -2986,18 +2956,6 @@ class Compound extends CoordinateReferenceSystem
         'urn:ogc:def:crs:EPSG::7411' => [
             'name' => 'NTF (Paris) / Lambert zone II + NGF Lallemand height',
             'horizontal_crs' => 'urn:ogc:def:crs:EPSG::27572',
-            'horizontal_crs_type' => 'projected',
-            'vertical_crs' => 'urn:ogc:def:crs:EPSG::5719',
-        ],
-        'urn:ogc:def:crs:EPSG::7412' => [
-            'name' => 'NTF (Paris) / Lambert zone II + NGF IGN69',
-            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::27572',
-            'horizontal_crs_type' => 'projected',
-            'vertical_crs' => 'urn:ogc:def:crs:EPSG::5719',
-        ],
-        'urn:ogc:def:crs:EPSG::7413' => [
-            'name' => 'NTF (Paris) / Lambert zone III + NGF IGN69',
-            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::27573',
             'horizontal_crs_type' => 'projected',
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5719',
         ],

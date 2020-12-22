@@ -13,12 +13,12 @@ use PHPUnit\Framework\TestCase;
 
 class YearTest extends TestCase
 {
-    public function testAsSeconds(): void
+    public function testAsYears(): void
     {
         $original = new Year(1);
-        $asSecond = $original->asSeconds();
-        self::assertInstanceOf(Second::class, $asSecond);
-        self::assertEquals(31556925.445, $asSecond->getValue());
+        $asYears = $original->asYears();
+        self::assertInstanceOf(Year::class, $asYears);
+        self::assertEquals(1, $asYears->getValue());
     }
 
     public function testGetValue(): void

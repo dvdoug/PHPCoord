@@ -15,22 +15,10 @@ use PHPCoord\UnitOfMeasure\UnitOfMeasure;
 abstract class Angle implements UnitOfMeasure
 {
     /**
-     * arc-minute
-     * 1/60th degree = ((pi/180) / 60) radians.
-     */
-    public const EPSG_ARC_MINUTE = 'urn:ogc:def:uom:EPSG::9103';
-
-    /**
      * arc-second
      * 1/60th arc-minute = ((pi/180) / 3600) radians.
      */
     public const EPSG_ARC_SECOND = 'urn:ogc:def:uom:EPSG::9104';
-
-    /**
-     * centesimal minute
-     * 1/100 of a grad and gon = ((pi/200) / 100) radians.
-     */
-    public const EPSG_CENTESIMAL_MINUTE = 'urn:ogc:def:uom:EPSG::9112';
 
     /**
      * centesimal second
@@ -90,13 +78,6 @@ abstract class Angle implements UnitOfMeasure
     public const EPSG_DEGREE_MINUTE_SECOND_HEMISPHERE = 'urn:ogc:def:uom:EPSG::9108';
 
     /**
-     * gon
-     * =pi/200 radians.
-     * @deprecated
-     */
-    public const EPSG_GON = 'urn:ogc:def:uom:EPSG::9106';
-
-    /**
      * grad
      * =pi/200 radians.
      */
@@ -132,13 +113,6 @@ abstract class Angle implements UnitOfMeasure
     public const EPSG_MICRORADIAN = 'urn:ogc:def:uom:EPSG::9109';
 
     /**
-     * mil_6400
-     * Angle subtended by 1/6400 part of a circle.  Approximates to 1/1000th radian.  Note that other approximations
-     * (notably 1/6300 circle and 1/6000 circle) also exist.
-     */
-    public const EPSG_MIL_6400 = 'urn:ogc:def:uom:EPSG::9114';
-
-    /**
      * milliarc-second
      * = ((pi/180) / 3600 / 1000) radians.
      */
@@ -151,27 +125,12 @@ abstract class Angle implements UnitOfMeasure
     public const EPSG_RADIAN = 'urn:ogc:def:uom:EPSG::9101';
 
     /**
-     * sexagesimal DM
-     * Pseudo unit. Format: signed degrees - period - integer minutes (2 digits) - fraction of minutes (any precision).
-     * Must include leading zero in minutes and exclude decimal point for minutes. Convert to degree using algorithm.
-     */
-    public const EPSG_SEXAGESIMAL_DM = 'urn:ogc:def:uom:EPSG::9111';
-
-    /**
      * sexagesimal DMS
      * Pseudo unit. Format: signed degrees - period - minutes (2 digits) - integer seconds (2 digits) - fraction of
      * seconds (any precision). Must include leading zero in minutes and seconds and exclude decimal point for seconds.
      * Convert to deg using algorithm.
      */
     public const EPSG_SEXAGESIMAL_DMS = 'urn:ogc:def:uom:EPSG::9110';
-
-    /**
-     * sexagesimal DMS.s
-     * Pseudo unit. Format: signed degrees - minutes (2 digits) - integer seconds (2 digits) - period - fraction of
-     * seconds (any precision). Must include leading zero in minutes and seconds and include decimal point for seconds.
-     * Convert to deg using algorithm.
-     */
-    public const EPSG_SEXAGESIMAL_DMS_S = 'urn:ogc:def:uom:EPSG::9121';
 
     protected static array $sridData = [
         'urn:ogc:def:uom:EPSG::1031' => [
@@ -183,17 +142,11 @@ abstract class Angle implements UnitOfMeasure
         'urn:ogc:def:uom:EPSG::9102' => [
             'name' => 'degree',
         ],
-        'urn:ogc:def:uom:EPSG::9103' => [
-            'name' => 'arc-minute',
-        ],
         'urn:ogc:def:uom:EPSG::9104' => [
             'name' => 'arc-second',
         ],
         'urn:ogc:def:uom:EPSG::9105' => [
             'name' => 'grad',
-        ],
-        'urn:ogc:def:uom:EPSG::9106' => [
-            'name' => 'gon',
         ],
         'urn:ogc:def:uom:EPSG::9107' => [
             'name' => 'degree minute second',
@@ -207,17 +160,8 @@ abstract class Angle implements UnitOfMeasure
         'urn:ogc:def:uom:EPSG::9110' => [
             'name' => 'sexagesimal DMS',
         ],
-        'urn:ogc:def:uom:EPSG::9111' => [
-            'name' => 'sexagesimal DM',
-        ],
-        'urn:ogc:def:uom:EPSG::9112' => [
-            'name' => 'centesimal minute',
-        ],
         'urn:ogc:def:uom:EPSG::9113' => [
             'name' => 'centesimal second',
-        ],
-        'urn:ogc:def:uom:EPSG::9114' => [
-            'name' => 'mil_6400',
         ],
         'urn:ogc:def:uom:EPSG::9115' => [
             'name' => 'degree minute',
@@ -236,9 +180,6 @@ abstract class Angle implements UnitOfMeasure
         ],
         'urn:ogc:def:uom:EPSG::9120' => [
             'name' => 'hemisphere degree minute second',
-        ],
-        'urn:ogc:def:uom:EPSG::9121' => [
-            'name' => 'sexagesimal DMS.s',
         ],
         'urn:ogc:def:uom:EPSG::9122' => [
             'name' => 'degree (supplier to define representation)',
@@ -290,21 +231,14 @@ abstract class Angle implements UnitOfMeasure
                 return new Radian($measurement / 1000000);
             case self::EPSG_DEGREE:
                 return new Degree($measurement);
-            case self::EPSG_ARC_MINUTE:
-                return new ArcMinute($measurement);
             case self::EPSG_ARC_SECOND:
                 return new ArcSecond($measurement);
             case self::EPSG_MILLIARC_SECOND:
                 return new ArcSecond($measurement / 1000);
             case self::EPSG_GRAD:
-            case self::EPSG_GON:
                 return new Grad($measurement);
-            case self::EPSG_CENTESIMAL_MINUTE:
-                return new Radian($measurement * M_PI / 20000);
             case self::EPSG_CENTESIMAL_SECOND:
                 return new Radian($measurement * M_PI / 2000000);
-            case self::EPSG_MIL_6400:
-                return new Radian($measurement * M_PI / 3200);
             case self::EPSG_DEGREE_MINUTE_SECOND:
                 return Degree::fromDegreeMinuteSecond((string) $measurement);
             case self::EPSG_DEGREE_MINUTE_SECOND_HEMISPHERE:
@@ -321,12 +255,8 @@ abstract class Angle implements UnitOfMeasure
                 return Degree::fromDegreeHemisphere((string) $measurement);
             case self::EPSG_HEMISPHERE_DEGREE:
                 return Degree::fromHemisphereDegree((string) $measurement);
-            case self::EPSG_SEXAGESIMAL_DMS_S:
-                return Degree::fromSexagesimalDMSS((string) $measurement);
             case self::EPSG_SEXAGESIMAL_DMS:
                 return Degree::fromSexagesimalDMS((string) $measurement);
-            case self::EPSG_SEXAGESIMAL_DM:
-                return Degree::fromSexagesimalDM((string) $measurement);
         }
 
         throw new UnknownUnitOfMeasureException($srid);

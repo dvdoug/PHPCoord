@@ -22,9 +22,9 @@ use PHPCoord\UnitOfMeasure\Angle\ArcSecond;
 use PHPCoord\UnitOfMeasure\Angle\Degree;
 use PHPCoord\UnitOfMeasure\Angle\Grad;
 use PHPCoord\UnitOfMeasure\Angle\Radian;
-use PHPCoord\UnitOfMeasure\Length\Chain;
 use PHPCoord\UnitOfMeasure\Length\ClarkeLink;
 use PHPCoord\UnitOfMeasure\Length\Foot;
+use PHPCoord\UnitOfMeasure\Length\Link;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPCoord\UnitOfMeasure\Length\USSurveyFoot;
 use PHPCoord\UnitOfMeasure\Scale\Coefficient;
@@ -357,7 +357,7 @@ class GeographicPointTest extends TestCase
     {
         $from = GeographicPoint::create(new Radian(-0.293938867), new Radian(3.141493807), null, Geographic2D::fromSRID(Geographic2D::EPSG_VANUA_LEVU_1915));
         $toCRS = Projected::fromSRID(Projected::EPSG_VANUA_LEVU_1915_VANUA_LEVU_GRID);
-        $to = $from->hyperbolicCassiniSoldner($toCRS, new Radian(-0.283616003), new Radian(3.129957125), new Chain(12513.318), new Chain(16628.885));
+        $to = $from->hyperbolicCassiniSoldner($toCRS, new Radian(-0.283616003), new Radian(3.129957125), new Link(12513.318 * 100), new Link(16628.885 * 100));
 
         self::assertEqualsWithDelta(1601528.90, $to->getEasting()->getValue(), 0.1);
         self::assertEqualsWithDelta(1336966.01, $to->getNorthing()->getValue(), 0.1);

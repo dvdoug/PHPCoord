@@ -401,12 +401,6 @@ class Ellipsoid
             'semi_minor_axis' => 6356173.508712696,
             'uom' => 'urn:ogc:def:uom:EPSG::9001',
         ],
-        'urn:ogc:def:ellipsoid:EPSG::7006' => [
-            'name' => 'Bessel Namibia',
-            'semi_major_axis' => 6377483.865,
-            'semi_minor_axis' => 6356165.382966326,
-            'uom' => 'urn:ogc:def:uom:EPSG::9001',
-        ],
         'urn:ogc:def:ellipsoid:EPSG::7007' => [
             'name' => 'Clarke 1858',
             'semi_major_axis' => 20926348.0,
@@ -418,12 +412,6 @@ class Ellipsoid
             'semi_major_axis' => 6378206.4,
             'semi_minor_axis' => 6356583.8,
             'uom' => 'urn:ogc:def:uom:EPSG::9001',
-        ],
-        'urn:ogc:def:ellipsoid:EPSG::7009' => [
-            'name' => 'Clarke 1866 Michigan',
-            'semi_major_axis' => 20926631.531,
-            'semi_minor_axis' => 20855688.674,
-            'uom' => 'urn:ogc:def:uom:EPSG::9003',
         ],
         'urn:ogc:def:ellipsoid:EPSG::7010' => [
             'name' => 'Clarke 1880 (Benoit)',
@@ -557,12 +545,6 @@ class Ellipsoid
             'semi_minor_axis' => 20854895.0,
             'uom' => 'urn:ogc:def:uom:EPSG::9005',
         ],
-        'urn:ogc:def:ellipsoid:EPSG::7035' => [
-            'name' => 'Sphere',
-            'semi_major_axis' => 6371000.0,
-            'semi_minor_axis' => 6371000.0,
-            'uom' => 'urn:ogc:def:uom:EPSG::9001',
-        ],
         'urn:ogc:def:ellipsoid:EPSG::7036' => [
             'name' => 'GRS 1967',
             'semi_major_axis' => 6378160.0,
@@ -604,12 +586,6 @@ class Ellipsoid
             'semi_major_axis' => 6377397.155,
             'semi_minor_axis' => 6356078.962818189,
             'uom' => 'urn:ogc:def:uom:EPSG::9031',
-        ],
-        'urn:ogc:def:ellipsoid:EPSG::7047' => [
-            'name' => 'GRS 1980 Authalic Sphere',
-            'semi_major_axis' => 6370997.0,
-            'semi_minor_axis' => 6370997.0,
-            'uom' => 'urn:ogc:def:uom:EPSG::9001',
         ],
         'urn:ogc:def:ellipsoid:EPSG::7048' => [
             'name' => 'GRS 1980 Authalic Sphere',
@@ -675,12 +651,6 @@ class Ellipsoid
             'name' => 'Hughes 1980',
             'semi_major_axis' => 6378273.0,
             'semi_minor_axis' => 6356889.449,
-            'uom' => 'urn:ogc:def:uom:EPSG::9001',
-        ],
-        'urn:ogc:def:ellipsoid:EPSG::7059' => [
-            'name' => 'Popular Visualisation Sphere',
-            'semi_major_axis' => 6378137.0,
-            'semi_minor_axis' => 6378137.0,
             'uom' => 'urn:ogc:def:uom:EPSG::9001',
         ],
     ];

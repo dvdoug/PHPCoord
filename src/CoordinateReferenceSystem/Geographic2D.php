@@ -3889,230 +3889,15 @@ class Geographic2D extends Geographic
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
             'datum' => 'urn:ogc:def:datum:EPSG::1031',
         ],
-        'urn:ogc:def:crs:EPSG::4001' => [
-            'name' => 'Unknown datum based upon the Airy 1830 ellipsoid',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::6001',
-        ],
-        'urn:ogc:def:crs:EPSG::4002' => [
-            'name' => 'Unknown datum based upon the Airy Modified 1849 ellipsoid',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::6002',
-        ],
-        'urn:ogc:def:crs:EPSG::4003' => [
-            'name' => 'Unknown datum based upon the Australian National Spheroid',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::6003',
-        ],
-        'urn:ogc:def:crs:EPSG::4004' => [
-            'name' => 'Unknown datum based upon the Bessel 1841 ellipsoid',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::6004',
-        ],
-        'urn:ogc:def:crs:EPSG::4005' => [
-            'name' => 'Unknown datum based upon the Bessel Modified ellipsoid',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::6005',
-        ],
-        'urn:ogc:def:crs:EPSG::4006' => [
-            'name' => 'Unknown datum based upon the Bessel Namibia ellipsoid',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::6006',
-        ],
-        'urn:ogc:def:crs:EPSG::4007' => [
-            'name' => 'Unknown datum based upon the Clarke 1858 ellipsoid',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::6007',
-        ],
-        'urn:ogc:def:crs:EPSG::4008' => [
-            'name' => 'Unknown datum based upon the Clarke 1866 ellipsoid',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::6008',
-        ],
-        'urn:ogc:def:crs:EPSG::4009' => [
-            'name' => 'Unknown datum based upon the Clarke 1866 Michigan ellipsoid',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::6009',
-        ],
-        'urn:ogc:def:crs:EPSG::4010' => [
-            'name' => 'Unknown datum based upon the Clarke 1880 (Benoit) ellipsoid',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::6010',
-        ],
-        'urn:ogc:def:crs:EPSG::4011' => [
-            'name' => 'Unknown datum based upon the Clarke 1880 (IGN) ellipsoid',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::6011',
-        ],
-        'urn:ogc:def:crs:EPSG::4012' => [
-            'name' => 'Unknown datum based upon the Clarke 1880 (RGS) ellipsoid',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::6012',
-        ],
-        'urn:ogc:def:crs:EPSG::4013' => [
-            'name' => 'Unknown datum based upon the Clarke 1880 (Arc) ellipsoid',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::6013',
-        ],
-        'urn:ogc:def:crs:EPSG::4014' => [
-            'name' => 'Unknown datum based upon the Clarke 1880 (SGA 1922) ellipsoid',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::6014',
-        ],
-        'urn:ogc:def:crs:EPSG::4015' => [
-            'name' => 'Unknown datum based upon the Everest 1830 (1937 Adjustment) ellipsoid',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::6015',
-        ],
-        'urn:ogc:def:crs:EPSG::4016' => [
-            'name' => 'Unknown datum based upon the Everest 1830 (1967 Definition) ellipsoid',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::6016',
-        ],
-        'urn:ogc:def:crs:EPSG::4018' => [
-            'name' => 'Unknown datum based upon the Everest 1830 Modified ellipsoid',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::6018',
-        ],
-        'urn:ogc:def:crs:EPSG::4019' => [
-            'name' => 'Unknown datum based upon the GRS 1980 ellipsoid',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::6019',
-        ],
-        'urn:ogc:def:crs:EPSG::4020' => [
-            'name' => 'Unknown datum based upon the Helmert 1906 ellipsoid',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::6020',
-        ],
-        'urn:ogc:def:crs:EPSG::4021' => [
-            'name' => 'Unknown datum based upon the Indonesian National Spheroid',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::6021',
-        ],
-        'urn:ogc:def:crs:EPSG::4022' => [
-            'name' => 'Unknown datum based upon the International 1924 ellipsoid',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::6022',
-        ],
         'urn:ogc:def:crs:EPSG::4023' => [
             'name' => 'MOLDREF99',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
             'datum' => 'urn:ogc:def:datum:EPSG::1032',
         ],
-        'urn:ogc:def:crs:EPSG::4024' => [
-            'name' => 'Unknown datum based upon the Krassowsky 1940 ellipsoid',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::6024',
-        ],
-        'urn:ogc:def:crs:EPSG::4025' => [
-            'name' => 'Unknown datum based upon the NWL 9D ellipsoid',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::6025',
-        ],
-        'urn:ogc:def:crs:EPSG::4027' => [
-            'name' => 'Unknown datum based upon the Plessis 1817 ellipsoid',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::6027',
-        ],
-        'urn:ogc:def:crs:EPSG::4028' => [
-            'name' => 'Unknown datum based upon the Struve 1860 ellipsoid',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::6028',
-        ],
-        'urn:ogc:def:crs:EPSG::4029' => [
-            'name' => 'Unknown datum based upon the War Office ellipsoid',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::6029',
-        ],
-        'urn:ogc:def:crs:EPSG::4030' => [
-            'name' => 'Unknown datum based upon the WGS 84 ellipsoid',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::6030',
-        ],
-        'urn:ogc:def:crs:EPSG::4031' => [
-            'name' => 'Unknown datum based upon the GEM 10C ellipsoid',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::6031',
-        ],
-        'urn:ogc:def:crs:EPSG::4032' => [
-            'name' => 'Unknown datum based upon the OSU86F ellipsoid',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::6032',
-        ],
-        'urn:ogc:def:crs:EPSG::4033' => [
-            'name' => 'Unknown datum based upon the OSU91A ellipsoid',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::6033',
-        ],
-        'urn:ogc:def:crs:EPSG::4034' => [
-            'name' => 'Unknown datum based upon the Clarke 1880 ellipsoid',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::6034',
-        ],
-        'urn:ogc:def:crs:EPSG::4035' => [
-            'name' => 'Unknown datum based upon the Authalic Sphere',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6402',
-            'datum' => 'urn:ogc:def:datum:EPSG::6035',
-        ],
-        'urn:ogc:def:crs:EPSG::4036' => [
-            'name' => 'Unknown datum based upon the GRS 1967 ellipsoid',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::6036',
-        ],
-        'urn:ogc:def:crs:EPSG::4041' => [
-            'name' => 'Unknown datum based upon the Average Terrestrial System 1977 ellipsoid',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::6041',
-        ],
-        'urn:ogc:def:crs:EPSG::4042' => [
-            'name' => 'Unknown datum based upon the Everest (1830 Definition) ellipsoid',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::6042',
-        ],
-        'urn:ogc:def:crs:EPSG::4043' => [
-            'name' => 'Unknown datum based upon the WGS 72 ellipsoid',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::6043',
-        ],
-        'urn:ogc:def:crs:EPSG::4044' => [
-            'name' => 'Unknown datum based upon the Everest 1830 (1962 Definition) ellipsoid',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::6044',
-        ],
-        'urn:ogc:def:crs:EPSG::4045' => [
-            'name' => 'Unknown datum based upon the Everest 1830 (1975 Definition) ellipsoid',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::6045',
-        ],
         'urn:ogc:def:crs:EPSG::4046' => [
             'name' => 'RGRDC 2005',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
             'datum' => 'urn:ogc:def:datum:EPSG::1033',
-        ],
-        'urn:ogc:def:crs:EPSG::4047' => [
-            'name' => 'Unspecified datum based upon the GRS 1980 Authalic Sphere',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::6047',
-        ],
-        'urn:ogc:def:crs:EPSG::4052' => [
-            'name' => 'Unspecified datum based upon the Clarke 1866 Authalic Sphere',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::6052',
-        ],
-        'urn:ogc:def:crs:EPSG::4053' => [
-            'name' => 'Unspecified datum based upon the International 1924 Authalic Sphere',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::6053',
-        ],
-        'urn:ogc:def:crs:EPSG::4054' => [
-            'name' => 'Unspecified datum based upon the Hughes 1980 ellipsoid',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::6054',
-        ],
-        'urn:ogc:def:crs:EPSG::4055' => [
-            'name' => 'Popular Visualisation CRS',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::6055',
         ],
         'urn:ogc:def:crs:EPSG::4075' => [
             'name' => 'SREF98',
@@ -4148,16 +3933,6 @@ class Geographic2D extends Geographic
             'name' => 'RT90',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
             'datum' => 'urn:ogc:def:datum:EPSG::6124',
-        ],
-        'urn:ogc:def:crs:EPSG::4125' => [
-            'name' => 'Samboja',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6402',
-            'datum' => 'urn:ogc:def:datum:EPSG::6125',
-        ],
-        'urn:ogc:def:crs:EPSG::4126' => [
-            'name' => 'LKS94 (ETRS89)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6402',
-            'datum' => 'urn:ogc:def:datum:EPSG::6126',
         ],
         'urn:ogc:def:crs:EPSG::4127' => [
             'name' => 'Tete',
@@ -4223,11 +3998,6 @@ class Geographic2D extends Geographic
             'name' => 'Puerto Rico',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
             'datum' => 'urn:ogc:def:datum:EPSG::6139',
-        ],
-        'urn:ogc:def:crs:EPSG::4140' => [
-            'name' => 'NAD83(CSRS98)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6402',
-            'datum' => 'urn:ogc:def:datum:EPSG::6140',
         ],
         'urn:ogc:def:crs:EPSG::4141' => [
             'name' => 'Israel 1993',
@@ -4384,11 +4154,6 @@ class Geographic2D extends Geographic
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
             'datum' => 'urn:ogc:def:datum:EPSG::6171',
         ],
-        'urn:ogc:def:crs:EPSG::4172' => [
-            'name' => 'POSGAR',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6402',
-            'datum' => 'urn:ogc:def:datum:EPSG::6172',
-        ],
         'urn:ogc:def:crs:EPSG::4173' => [
             'name' => 'IRENET95',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
@@ -4443,11 +4208,6 @@ class Geographic2D extends Geographic
             'name' => 'Azores Oriental 1940',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
             'datum' => 'urn:ogc:def:datum:EPSG::6184',
-        ],
-        'urn:ogc:def:crs:EPSG::4185' => [
-            'name' => 'Madeira 1936',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6402',
-            'datum' => 'urn:ogc:def:datum:EPSG::6185',
         ],
         'urn:ogc:def:crs:EPSG::4188' => [
             'name' => 'OSNI 1952',
@@ -4634,20 +4394,10 @@ class Geographic2D extends Geographic
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
             'datum' => 'urn:ogc:def:datum:EPSG::6225',
         ],
-        'urn:ogc:def:crs:EPSG::4226' => [
-            'name' => 'Cote d\'Ivoire',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6402',
-            'datum' => 'urn:ogc:def:datum:EPSG::6226',
-        ],
         'urn:ogc:def:crs:EPSG::4227' => [
             'name' => 'Deir ez Zor',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
             'datum' => 'urn:ogc:def:datum:EPSG::6227',
-        ],
-        'urn:ogc:def:crs:EPSG::4228' => [
-            'name' => 'Douala',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6402',
-            'datum' => 'urn:ogc:def:datum:EPSG::6228',
         ],
         'urn:ogc:def:crs:EPSG::4229' => [
             'name' => 'Egypt 1907',
@@ -4668,21 +4418,6 @@ class Geographic2D extends Geographic
             'name' => 'Fahud',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
             'datum' => 'urn:ogc:def:datum:EPSG::6232',
-        ],
-        'urn:ogc:def:crs:EPSG::4233' => [
-            'name' => 'Gandajika 1970',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::6233',
-        ],
-        'urn:ogc:def:crs:EPSG::4234' => [
-            'name' => 'Garoua',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6402',
-            'datum' => 'urn:ogc:def:datum:EPSG::6234',
-        ],
-        'urn:ogc:def:crs:EPSG::4235' => [
-            'name' => 'Guyane Francaise',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6402',
-            'datum' => 'urn:ogc:def:datum:EPSG::6235',
         ],
         'urn:ogc:def:crs:EPSG::4236' => [
             'name' => 'Hu Tzu Shan 1950',
@@ -4804,11 +4539,6 @@ class Geographic2D extends Geographic
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
             'datum' => 'urn:ogc:def:datum:EPSG::6259',
         ],
-        'urn:ogc:def:crs:EPSG::4260' => [
-            'name' => 'Manoca',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6402',
-            'datum' => 'urn:ogc:def:datum:EPSG::6260',
-        ],
         'urn:ogc:def:crs:EPSG::4261' => [
             'name' => 'Merchich',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
@@ -4824,11 +4554,6 @@ class Geographic2D extends Geographic
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
             'datum' => 'urn:ogc:def:datum:EPSG::6263',
         ],
-        'urn:ogc:def:crs:EPSG::4264' => [
-            'name' => 'Mhast',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::6264',
-        ],
         'urn:ogc:def:crs:EPSG::4265' => [
             'name' => 'Monte Mario',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
@@ -4843,11 +4568,6 @@ class Geographic2D extends Geographic
             'name' => 'NAD27',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
             'datum' => 'urn:ogc:def:datum:EPSG::6267',
-        ],
-        'urn:ogc:def:crs:EPSG::4268' => [
-            'name' => 'NAD27 Michigan',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::6268',
         ],
         'urn:ogc:def:crs:EPSG::4269' => [
             'name' => 'NAD83',
@@ -4904,11 +4624,6 @@ class Geographic2D extends Geographic
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
             'datum' => 'urn:ogc:def:datum:EPSG::6279',
         ],
-        'urn:ogc:def:crs:EPSG::4280' => [
-            'name' => 'Padang',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::6280',
-        ],
         'urn:ogc:def:crs:EPSG::4281' => [
             'name' => 'Palestine 1923',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
@@ -4939,11 +4654,6 @@ class Geographic2D extends Geographic
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
             'datum' => 'urn:ogc:def:datum:EPSG::6286',
         ],
-        'urn:ogc:def:crs:EPSG::4287' => [
-            'name' => 'Qornoq',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6402',
-            'datum' => 'urn:ogc:def:datum:EPSG::6287',
-        ],
         'urn:ogc:def:crs:EPSG::4288' => [
             'name' => 'Loma Quintana',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
@@ -4953,11 +4663,6 @@ class Geographic2D extends Geographic
             'name' => 'Amersfoort',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
             'datum' => 'urn:ogc:def:datum:EPSG::6289',
-        ],
-        'urn:ogc:def:crs:EPSG::4291' => [
-            'name' => 'SAD69',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6402',
-            'datum' => 'urn:ogc:def:datum:EPSG::6291',
         ],
         'urn:ogc:def:crs:EPSG::4292' => [
             'name' => 'Sapper Hill 1943',
@@ -4969,20 +4674,10 @@ class Geographic2D extends Geographic
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
             'datum' => 'urn:ogc:def:datum:EPSG::6293',
         ],
-        'urn:ogc:def:crs:EPSG::4294' => [
-            'name' => 'Segora',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6402',
-            'datum' => 'urn:ogc:def:datum:EPSG::6294',
-        ],
         'urn:ogc:def:crs:EPSG::4295' => [
             'name' => 'Serindung',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
             'datum' => 'urn:ogc:def:datum:EPSG::6295',
-        ],
-        'urn:ogc:def:crs:EPSG::4296' => [
-            'name' => 'Sudan',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6402',
-            'datum' => 'urn:ogc:def:datum:EPSG::6296',
         ],
         'urn:ogc:def:crs:EPSG::4297' => [
             'name' => 'Tananarive',
@@ -5078,11 +4773,6 @@ class Geographic2D extends Geographic
             'name' => 'Dealul Piscului 1930',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
             'datum' => 'urn:ogc:def:datum:EPSG::6316',
-        ],
-        'urn:ogc:def:crs:EPSG::4317' => [
-            'name' => 'Dealul Piscului 1970',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::6317',
         ],
         'urn:ogc:def:crs:EPSG::4318' => [
             'name' => 'NGN',
@@ -5299,11 +4989,6 @@ class Geographic2D extends Geographic
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
             'datum' => 'urn:ogc:def:datum:EPSG::6630',
         ],
-        'urn:ogc:def:crs:EPSG::4631' => [
-            'name' => 'K0 1949',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::6631',
-        ],
         'urn:ogc:def:crs:EPSG::4632' => [
             'name' => 'Combani 1950',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
@@ -5313,16 +4998,6 @@ class Geographic2D extends Geographic
             'name' => 'IGN56 Lifou',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
             'datum' => 'urn:ogc:def:datum:EPSG::6633',
-        ],
-        'urn:ogc:def:crs:EPSG::4634' => [
-            'name' => 'IGN72 Grand Terre',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6402',
-            'datum' => 'urn:ogc:def:datum:EPSG::6634',
-        ],
-        'urn:ogc:def:crs:EPSG::4635' => [
-            'name' => 'ST87 Ouvea',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::6635',
         ],
         'urn:ogc:def:crs:EPSG::4636' => [
             'name' => 'Petrels 1972',
@@ -5344,11 +5019,6 @@ class Geographic2D extends Geographic
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
             'datum' => 'urn:ogc:def:datum:EPSG::6639',
         ],
-        'urn:ogc:def:crs:EPSG::4640' => [
-            'name' => 'RRAF 1991',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::6640',
-        ],
         'urn:ogc:def:crs:EPSG::4641' => [
             'name' => 'IGN53 Mare',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
@@ -5368,11 +5038,6 @@ class Geographic2D extends Geographic
             'name' => 'NEA74 Noumea',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
             'datum' => 'urn:ogc:def:datum:EPSG::6644',
-        ],
-        'urn:ogc:def:crs:EPSG::4645' => [
-            'name' => 'RGNC 1991',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::6645',
         ],
         'urn:ogc:def:crs:EPSG::4646' => [
             'name' => 'Grand Comoros',
@@ -5499,11 +5164,6 @@ class Geographic2D extends Geographic
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
             'datum' => 'urn:ogc:def:datum:EPSG::6680',
         ],
-        'urn:ogc:def:crs:EPSG::4681' => [
-            'name' => 'Mauritania 1999',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::6681',
-        ],
         'urn:ogc:def:crs:EPSG::4682' => [
             'name' => 'Gulshan 303',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
@@ -5518,11 +5178,6 @@ class Geographic2D extends Geographic
             'name' => 'Gan 1970',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
             'datum' => 'urn:ogc:def:datum:EPSG::6684',
-        ],
-        'urn:ogc:def:crs:EPSG::4685' => [
-            'name' => 'Gandajika',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::6685',
         ],
         'urn:ogc:def:crs:EPSG::4686' => [
             'name' => 'MAGNA-SIRGAS',
@@ -5749,11 +5404,6 @@ class Geographic2D extends Geographic
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
             'datum' => 'urn:ogc:def:datum:EPSG::6730',
         ],
-        'urn:ogc:def:crs:EPSG::4731' => [
-            'name' => 'Viti Levu 1916',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::6731',
-        ],
         'urn:ogc:def:crs:EPSG::4732' => [
             'name' => 'Marshall Islands 1960',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
@@ -5959,11 +5609,6 @@ class Geographic2D extends Geographic
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6403',
             'datum' => 'urn:ogc:def:datum:EPSG::6807',
         ],
-        'urn:ogc:def:crs:EPSG::4808' => [
-            'name' => 'Padang (Jakarta)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::6808',
-        ],
         'urn:ogc:def:crs:EPSG::4809' => [
             'name' => 'Belge 1950 (Brussels)',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
@@ -6009,11 +5654,6 @@ class Geographic2D extends Geographic
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
             'datum' => 'urn:ogc:def:datum:EPSG::6818',
         ],
-        'urn:ogc:def:crs:EPSG::4819' => [
-            'name' => 'Nord Sahara 1959 (Paris)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6403',
-            'datum' => 'urn:ogc:def:datum:EPSG::6819',
-        ],
         'urn:ogc:def:crs:EPSG::4820' => [
             'name' => 'Segara (Jakarta)',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
@@ -6038,11 +5678,6 @@ class Geographic2D extends Geographic
             'name' => 'ATF (Paris)',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6403',
             'datum' => 'urn:ogc:def:datum:EPSG::6901',
-        ],
-        'urn:ogc:def:crs:EPSG::4902' => [
-            'name' => 'NDG (Paris)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6403',
-            'datum' => 'urn:ogc:def:datum:EPSG::6902',
         ],
         'urn:ogc:def:crs:EPSG::4903' => [
             'name' => 'Madrid 1870 (Madrid)',
@@ -6194,1280 +5829,40 @@ class Geographic2D extends Geographic
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
             'datum' => 'urn:ogc:def:datum:EPSG::1095',
         ],
-        'urn:ogc:def:crs:EPSG::61206405' => [
-            'name' => 'Greek (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6120',
-        ],
-        'urn:ogc:def:crs:EPSG::61216405' => [
-            'name' => 'GGRS87 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6121',
-        ],
-        'urn:ogc:def:crs:EPSG::61226405' => [
-            'name' => 'ATS77 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6122',
-        ],
-        'urn:ogc:def:crs:EPSG::61236405' => [
-            'name' => 'KKJ (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6123',
-        ],
-        'urn:ogc:def:crs:EPSG::61246405' => [
-            'name' => 'RT90 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6124',
-        ],
-        'urn:ogc:def:crs:EPSG::61266405' => [
-            'name' => 'LKS94 (ETRS89) (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6126',
-        ],
-        'urn:ogc:def:crs:EPSG::61276405' => [
-            'name' => 'Tete (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6127',
-        ],
-        'urn:ogc:def:crs:EPSG::61286405' => [
-            'name' => 'Madzansua (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6128',
-        ],
-        'urn:ogc:def:crs:EPSG::61296405' => [
-            'name' => 'Observatario (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6129',
-        ],
-        'urn:ogc:def:crs:EPSG::61306405' => [
-            'name' => 'Moznet (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6130',
-        ],
-        'urn:ogc:def:crs:EPSG::61316405' => [
-            'name' => 'Indian 1960 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6131',
-        ],
-        'urn:ogc:def:crs:EPSG::61326405' => [
-            'name' => 'FD58 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6132',
-        ],
-        'urn:ogc:def:crs:EPSG::61336405' => [
-            'name' => 'EST92 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6133',
-        ],
-        'urn:ogc:def:crs:EPSG::61346405' => [
-            'name' => 'PDO Survey Datum 1993 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6134',
-        ],
         'urn:ogc:def:crs:EPSG::6135' => [
             'name' => 'CIGD11',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
             'datum' => 'urn:ogc:def:datum:EPSG::1100',
-        ],
-        'urn:ogc:def:crs:EPSG::61356405' => [
-            'name' => 'Old Hawaiian (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6135',
-        ],
-        'urn:ogc:def:crs:EPSG::61366405' => [
-            'name' => 'St. Lawrence Island (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6136',
-        ],
-        'urn:ogc:def:crs:EPSG::61376405' => [
-            'name' => 'St. Paul Island (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6137',
-        ],
-        'urn:ogc:def:crs:EPSG::61386405' => [
-            'name' => 'St. George Island (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6138',
-        ],
-        'urn:ogc:def:crs:EPSG::61396405' => [
-            'name' => 'Puerto Rico (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6139',
-        ],
-        'urn:ogc:def:crs:EPSG::61406405' => [
-            'name' => 'NAD83(CSRS) (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6140',
-        ],
-        'urn:ogc:def:crs:EPSG::61416405' => [
-            'name' => 'Israel (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6141',
-        ],
-        'urn:ogc:def:crs:EPSG::61426405' => [
-            'name' => 'Locodjo 1965 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6142',
-        ],
-        'urn:ogc:def:crs:EPSG::61436405' => [
-            'name' => 'Abidjan 1987 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6143',
-        ],
-        'urn:ogc:def:crs:EPSG::61446405' => [
-            'name' => 'Kalianpur 1937 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6144',
-        ],
-        'urn:ogc:def:crs:EPSG::61456405' => [
-            'name' => 'Kalianpur 1962 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6145',
-        ],
-        'urn:ogc:def:crs:EPSG::61466405' => [
-            'name' => 'Kalianpur 1975 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6146',
-        ],
-        'urn:ogc:def:crs:EPSG::61476405' => [
-            'name' => 'Hanoi 1972 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6147',
-        ],
-        'urn:ogc:def:crs:EPSG::61486405' => [
-            'name' => 'Hartebeesthoek94 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6148',
-        ],
-        'urn:ogc:def:crs:EPSG::61496405' => [
-            'name' => 'CH1903 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6149',
-        ],
-        'urn:ogc:def:crs:EPSG::61506405' => [
-            'name' => 'CH1903+ (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6150',
-        ],
-        'urn:ogc:def:crs:EPSG::61516405' => [
-            'name' => 'CHTRF95 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6151',
-        ],
-        'urn:ogc:def:crs:EPSG::61526405' => [
-            'name' => 'NAD83(HARN) (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6152',
-        ],
-        'urn:ogc:def:crs:EPSG::61536405' => [
-            'name' => 'Rassadiran (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6153',
-        ],
-        'urn:ogc:def:crs:EPSG::61546405' => [
-            'name' => 'ED50(ED77) (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6154',
-        ],
-        'urn:ogc:def:crs:EPSG::61556405' => [
-            'name' => 'Dabola 1981 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6155',
-        ],
-        'urn:ogc:def:crs:EPSG::61566405' => [
-            'name' => 'S-JTSK (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6156',
-        ],
-        'urn:ogc:def:crs:EPSG::61576405' => [
-            'name' => 'Mount Dillon (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6157',
-        ],
-        'urn:ogc:def:crs:EPSG::61586405' => [
-            'name' => 'Naparima 1955 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6158',
-        ],
-        'urn:ogc:def:crs:EPSG::61596405' => [
-            'name' => 'ELD79 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6159',
-        ],
-        'urn:ogc:def:crs:EPSG::61606405' => [
-            'name' => 'Chos Malal 1914 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6160',
-        ],
-        'urn:ogc:def:crs:EPSG::61616405' => [
-            'name' => 'Pampa del Castillo (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6161',
-        ],
-        'urn:ogc:def:crs:EPSG::61626405' => [
-            'name' => 'Korean 1985 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6162',
-        ],
-        'urn:ogc:def:crs:EPSG::61636405' => [
-            'name' => 'Yemen NGN96 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6163',
-        ],
-        'urn:ogc:def:crs:EPSG::61646405' => [
-            'name' => 'South Yemen (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6164',
-        ],
-        'urn:ogc:def:crs:EPSG::61656405' => [
-            'name' => 'Bissau (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6165',
-        ],
-        'urn:ogc:def:crs:EPSG::61666405' => [
-            'name' => 'Korean 1995 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6166',
-        ],
-        'urn:ogc:def:crs:EPSG::61676405' => [
-            'name' => 'NZGD2000 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6167',
-        ],
-        'urn:ogc:def:crs:EPSG::61686405' => [
-            'name' => 'Accra (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6168',
-        ],
-        'urn:ogc:def:crs:EPSG::61696405' => [
-            'name' => 'American Samoa 1962 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6169',
-        ],
-        'urn:ogc:def:crs:EPSG::61706405' => [
-            'name' => 'SIRGAS (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6170',
-        ],
-        'urn:ogc:def:crs:EPSG::61716405' => [
-            'name' => 'RGF93 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6171',
-        ],
-        'urn:ogc:def:crs:EPSG::61736405' => [
-            'name' => 'IRENET95 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6173',
-        ],
-        'urn:ogc:def:crs:EPSG::61746405' => [
-            'name' => 'Sierra Leone 1924 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6174',
-        ],
-        'urn:ogc:def:crs:EPSG::61756405' => [
-            'name' => 'Sierra Leone 1968 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6175',
-        ],
-        'urn:ogc:def:crs:EPSG::61766405' => [
-            'name' => 'Australian Antarctic (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6176',
-        ],
-        'urn:ogc:def:crs:EPSG::61786405' => [
-            'name' => 'Pulkovo 1942(83) (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6178',
-        ],
-        'urn:ogc:def:crs:EPSG::61796405' => [
-            'name' => 'Pulkovo 1942(58) (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6179',
-        ],
-        'urn:ogc:def:crs:EPSG::61806405' => [
-            'name' => 'EST97 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6180',
-        ],
-        'urn:ogc:def:crs:EPSG::61816405' => [
-            'name' => 'Luxembourg 1930 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6181',
-        ],
-        'urn:ogc:def:crs:EPSG::61826405' => [
-            'name' => 'Azores Occidental 1939 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6182',
-        ],
-        'urn:ogc:def:crs:EPSG::61836405' => [
-            'name' => 'Azores Central 1948 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6183',
-        ],
-        'urn:ogc:def:crs:EPSG::61846405' => [
-            'name' => 'Azores Oriental 1940 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6184',
-        ],
-        'urn:ogc:def:crs:EPSG::61886405' => [
-            'name' => 'OSNI 1952 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6188',
-        ],
-        'urn:ogc:def:crs:EPSG::61896405' => [
-            'name' => 'REGVEN (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6189',
-        ],
-        'urn:ogc:def:crs:EPSG::61906405' => [
-            'name' => 'POSGAR 98 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6190',
-        ],
-        'urn:ogc:def:crs:EPSG::61916405' => [
-            'name' => 'Albanian 1987 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6191',
-        ],
-        'urn:ogc:def:crs:EPSG::61926405' => [
-            'name' => 'Douala 1948 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6192',
-        ],
-        'urn:ogc:def:crs:EPSG::61936405' => [
-            'name' => 'Manoca 1962 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6193',
-        ],
-        'urn:ogc:def:crs:EPSG::61946405' => [
-            'name' => 'Qornoq 1927 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6194',
-        ],
-        'urn:ogc:def:crs:EPSG::61956405' => [
-            'name' => 'Scoresbysund 1952 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6195',
-        ],
-        'urn:ogc:def:crs:EPSG::61966405' => [
-            'name' => 'Ammassalik 1958 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6196',
-        ],
-        'urn:ogc:def:crs:EPSG::61976405' => [
-            'name' => 'Garoua (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6197',
-        ],
-        'urn:ogc:def:crs:EPSG::61986405' => [
-            'name' => 'Kousseri (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6198',
-        ],
-        'urn:ogc:def:crs:EPSG::61996405' => [
-            'name' => 'Egypt 1930 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6199',
-        ],
-        'urn:ogc:def:crs:EPSG::62006405' => [
-            'name' => 'Pulkovo 1995 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6200',
-        ],
-        'urn:ogc:def:crs:EPSG::62016405' => [
-            'name' => 'Adindan (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6201',
-        ],
-        'urn:ogc:def:crs:EPSG::62026405' => [
-            'name' => 'AGD66 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6202',
-        ],
-        'urn:ogc:def:crs:EPSG::62036405' => [
-            'name' => 'AGD84 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6203',
-        ],
-        'urn:ogc:def:crs:EPSG::62046405' => [
-            'name' => 'Ain el Abd (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6204',
-        ],
-        'urn:ogc:def:crs:EPSG::62056405' => [
-            'name' => 'Afgooye (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6205',
-        ],
-        'urn:ogc:def:crs:EPSG::62066405' => [
-            'name' => 'Agadez (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6206',
         ],
         'urn:ogc:def:crs:EPSG::6207' => [
             'name' => 'Nepal 1981',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
             'datum' => 'urn:ogc:def:datum:EPSG::1111',
         ],
-        'urn:ogc:def:crs:EPSG::62076405' => [
-            'name' => 'Lisbon (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6207',
-        ],
-        'urn:ogc:def:crs:EPSG::62086405' => [
-            'name' => 'Aratu (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6208',
-        ],
-        'urn:ogc:def:crs:EPSG::62096405' => [
-            'name' => 'Arc 1950 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6209',
-        ],
-        'urn:ogc:def:crs:EPSG::62106405' => [
-            'name' => 'Arc 1960 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6210',
-        ],
-        'urn:ogc:def:crs:EPSG::62116405' => [
-            'name' => 'Batavia (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6211',
-        ],
-        'urn:ogc:def:crs:EPSG::62126405' => [
-            'name' => 'Barbados 1938 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6212',
-        ],
-        'urn:ogc:def:crs:EPSG::62136405' => [
-            'name' => 'Beduaram (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6213',
-        ],
-        'urn:ogc:def:crs:EPSG::62146405' => [
-            'name' => 'Beijing 1954 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6214',
-        ],
-        'urn:ogc:def:crs:EPSG::62156405' => [
-            'name' => 'Belge 1950 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6215',
-        ],
-        'urn:ogc:def:crs:EPSG::62166405' => [
-            'name' => 'Bermuda 1957 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6216',
-        ],
-        'urn:ogc:def:crs:EPSG::62186405' => [
-            'name' => 'Bogota 1975 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6218',
-        ],
-        'urn:ogc:def:crs:EPSG::62196405' => [
-            'name' => 'Bukit Rimpah (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6219',
-        ],
-        'urn:ogc:def:crs:EPSG::62206405' => [
-            'name' => 'Camacupa (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6220',
-        ],
-        'urn:ogc:def:crs:EPSG::62216405' => [
-            'name' => 'Campo Inchauspe (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6221',
-        ],
-        'urn:ogc:def:crs:EPSG::62226405' => [
-            'name' => 'Cape (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6222',
-        ],
-        'urn:ogc:def:crs:EPSG::62236405' => [
-            'name' => 'Carthage (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6223',
-        ],
-        'urn:ogc:def:crs:EPSG::62246405' => [
-            'name' => 'Chua (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6224',
-        ],
-        'urn:ogc:def:crs:EPSG::62256405' => [
-            'name' => 'Corrego Alegre (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6225',
-        ],
-        'urn:ogc:def:crs:EPSG::62276405' => [
-            'name' => 'Deir ez Zor (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6227',
-        ],
-        'urn:ogc:def:crs:EPSG::62296405' => [
-            'name' => 'Egypt 1907 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6229',
-        ],
-        'urn:ogc:def:crs:EPSG::62306405' => [
-            'name' => 'ED50 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6230',
-        ],
-        'urn:ogc:def:crs:EPSG::62316405' => [
-            'name' => 'ED87 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6231',
-        ],
-        'urn:ogc:def:crs:EPSG::62326405' => [
-            'name' => 'Fahud (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6232',
-        ],
-        'urn:ogc:def:crs:EPSG::62336405' => [
-            'name' => 'Gandajika 1970 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6233',
-        ],
-        'urn:ogc:def:crs:EPSG::62366405' => [
-            'name' => 'Hu Tzu Shan (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6236',
-        ],
-        'urn:ogc:def:crs:EPSG::62376405' => [
-            'name' => 'HD72 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6237',
-        ],
-        'urn:ogc:def:crs:EPSG::62386405' => [
-            'name' => 'ID74 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6238',
-        ],
-        'urn:ogc:def:crs:EPSG::62396405' => [
-            'name' => 'Indian 1954 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6239',
-        ],
-        'urn:ogc:def:crs:EPSG::62406405' => [
-            'name' => 'Indian 1975 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6240',
-        ],
-        'urn:ogc:def:crs:EPSG::62416405' => [
-            'name' => 'Jamaica 1875 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6241',
-        ],
-        'urn:ogc:def:crs:EPSG::62426405' => [
-            'name' => 'JAD69 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6242',
-        ],
-        'urn:ogc:def:crs:EPSG::62436405' => [
-            'name' => 'Kalianpur 1880 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6243',
-        ],
-        'urn:ogc:def:crs:EPSG::62446405' => [
-            'name' => 'Kandawala (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6244',
-        ],
-        'urn:ogc:def:crs:EPSG::62456405' => [
-            'name' => 'Kertau (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6245',
-        ],
-        'urn:ogc:def:crs:EPSG::62466405' => [
-            'name' => 'KOC (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6246',
-        ],
-        'urn:ogc:def:crs:EPSG::62476405' => [
-            'name' => 'La Canoa (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6247',
-        ],
-        'urn:ogc:def:crs:EPSG::62486405' => [
-            'name' => 'PSAD56 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6248',
-        ],
-        'urn:ogc:def:crs:EPSG::62496405' => [
-            'name' => 'Lake (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6249',
-        ],
-        'urn:ogc:def:crs:EPSG::62506405' => [
-            'name' => 'Leigon (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6250',
-        ],
-        'urn:ogc:def:crs:EPSG::62516405' => [
-            'name' => 'Liberia 1964 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6251',
-        ],
-        'urn:ogc:def:crs:EPSG::62526405' => [
-            'name' => 'Lome (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6252',
-        ],
-        'urn:ogc:def:crs:EPSG::62536405' => [
-            'name' => 'Luzon 1911 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6253',
-        ],
-        'urn:ogc:def:crs:EPSG::62546405' => [
-            'name' => 'Hito XVIII 1963 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6254',
-        ],
-        'urn:ogc:def:crs:EPSG::62556405' => [
-            'name' => 'Herat North (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6255',
-        ],
-        'urn:ogc:def:crs:EPSG::62566405' => [
-            'name' => 'Mahe 1971 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6256',
-        ],
-        'urn:ogc:def:crs:EPSG::62576405' => [
-            'name' => 'Makassar (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6257',
-        ],
-        'urn:ogc:def:crs:EPSG::62586405' => [
-            'name' => 'ETRS89 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6258',
-        ],
-        'urn:ogc:def:crs:EPSG::62596405' => [
-            'name' => 'Malongo 1987 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6259',
-        ],
-        'urn:ogc:def:crs:EPSG::62616405' => [
-            'name' => 'Merchich (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6261',
-        ],
-        'urn:ogc:def:crs:EPSG::62626405' => [
-            'name' => 'Massawa (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6262',
-        ],
-        'urn:ogc:def:crs:EPSG::62636405' => [
-            'name' => 'Minna (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6263',
-        ],
-        'urn:ogc:def:crs:EPSG::62646405' => [
-            'name' => 'Mhast (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6264',
-        ],
-        'urn:ogc:def:crs:EPSG::62656405' => [
-            'name' => 'Monte Mario (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6265',
-        ],
-        'urn:ogc:def:crs:EPSG::62666405' => [
-            'name' => 'M\'poraloko (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6266',
-        ],
-        'urn:ogc:def:crs:EPSG::62676405' => [
-            'name' => 'NAD27 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6267',
-        ],
-        'urn:ogc:def:crs:EPSG::62686405' => [
-            'name' => 'NAD27 Michigan (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6268',
-        ],
-        'urn:ogc:def:crs:EPSG::62696405' => [
-            'name' => 'NAD83 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6269',
-        ],
-        'urn:ogc:def:crs:EPSG::62706405' => [
-            'name' => 'Nahrwan 1967 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6270',
-        ],
-        'urn:ogc:def:crs:EPSG::62716405' => [
-            'name' => 'Naparima 1972 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6271',
-        ],
-        'urn:ogc:def:crs:EPSG::62726405' => [
-            'name' => 'NZGD49 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6272',
-        ],
-        'urn:ogc:def:crs:EPSG::62736405' => [
-            'name' => 'NGO 1948 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6273',
-        ],
-        'urn:ogc:def:crs:EPSG::62746405' => [
-            'name' => 'Datum 73 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6274',
-        ],
-        'urn:ogc:def:crs:EPSG::62756405' => [
-            'name' => 'NTF (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6275',
-        ],
-        'urn:ogc:def:crs:EPSG::62766405' => [
-            'name' => 'NSWC 9Z-2 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6276',
-        ],
-        'urn:ogc:def:crs:EPSG::62776405' => [
-            'name' => 'OSGB 1936 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6277',
-        ],
-        'urn:ogc:def:crs:EPSG::62786405' => [
-            'name' => 'OSGB70 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6278',
-        ],
-        'urn:ogc:def:crs:EPSG::62796405' => [
-            'name' => 'OS(SN)80 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6279',
-        ],
-        'urn:ogc:def:crs:EPSG::62806405' => [
-            'name' => 'Padang (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6280',
-        ],
-        'urn:ogc:def:crs:EPSG::62816405' => [
-            'name' => 'Palestine 1923 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6281',
-        ],
-        'urn:ogc:def:crs:EPSG::62826405' => [
-            'name' => 'Pointe Noire (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6282',
-        ],
-        'urn:ogc:def:crs:EPSG::62836405' => [
-            'name' => 'GDA94 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6283',
-        ],
-        'urn:ogc:def:crs:EPSG::62846405' => [
-            'name' => 'Pulkovo 1942 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6284',
-        ],
-        'urn:ogc:def:crs:EPSG::62856405' => [
-            'name' => 'Qatar 1974 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6285',
-        ],
-        'urn:ogc:def:crs:EPSG::62866405' => [
-            'name' => 'Qatar 1948 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6286',
-        ],
-        'urn:ogc:def:crs:EPSG::62886405' => [
-            'name' => 'Loma Quintana (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6288',
-        ],
-        'urn:ogc:def:crs:EPSG::62896405' => [
-            'name' => 'Amersfoort (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6289',
-        ],
-        'urn:ogc:def:crs:EPSG::62926405' => [
-            'name' => 'Sapper Hill 1943 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6292',
-        ],
-        'urn:ogc:def:crs:EPSG::62936405' => [
-            'name' => 'Schwarzeck (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6293',
-        ],
-        'urn:ogc:def:crs:EPSG::62956405' => [
-            'name' => 'Serindung (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6295',
-        ],
-        'urn:ogc:def:crs:EPSG::62976405' => [
-            'name' => 'Tananarive (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6297',
-        ],
-        'urn:ogc:def:crs:EPSG::62986405' => [
-            'name' => 'Timbalai 1948 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6298',
-        ],
-        'urn:ogc:def:crs:EPSG::62996405' => [
-            'name' => 'TM65 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6299',
-        ],
-        'urn:ogc:def:crs:EPSG::63006405' => [
-            'name' => 'TM75 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6300',
-        ],
-        'urn:ogc:def:crs:EPSG::63016405' => [
-            'name' => 'Tokyo (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6301',
-        ],
-        'urn:ogc:def:crs:EPSG::63026405' => [
-            'name' => 'Trinidad 1903 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6302',
-        ],
-        'urn:ogc:def:crs:EPSG::63036405' => [
-            'name' => 'TC(1948) (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6303',
-        ],
-        'urn:ogc:def:crs:EPSG::63046405' => [
-            'name' => 'Voirol 1875 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6304',
-        ],
-        'urn:ogc:def:crs:EPSG::63066405' => [
-            'name' => 'Bern 1938 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6306',
-        ],
-        'urn:ogc:def:crs:EPSG::63076405' => [
-            'name' => 'Nord Sahara 1959 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6307',
-        ],
-        'urn:ogc:def:crs:EPSG::63086405' => [
-            'name' => 'RT38 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6308',
-        ],
-        'urn:ogc:def:crs:EPSG::63096405' => [
-            'name' => 'Yacare (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6309',
-        ],
-        'urn:ogc:def:crs:EPSG::63106405' => [
-            'name' => 'Yoff (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6310',
-        ],
         'urn:ogc:def:crs:EPSG::6311' => [
             'name' => 'CGRS93',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
             'datum' => 'urn:ogc:def:datum:EPSG::1112',
-        ],
-        'urn:ogc:def:crs:EPSG::63116405' => [
-            'name' => 'Zanderij (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6311',
-        ],
-        'urn:ogc:def:crs:EPSG::63126405' => [
-            'name' => 'MGI (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6312',
-        ],
-        'urn:ogc:def:crs:EPSG::63136405' => [
-            'name' => 'Belge 1972 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6313',
-        ],
-        'urn:ogc:def:crs:EPSG::63146405' => [
-            'name' => 'DHDN (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6314',
-        ],
-        'urn:ogc:def:crs:EPSG::63156405' => [
-            'name' => 'Conakry 1905 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6315',
-        ],
-        'urn:ogc:def:crs:EPSG::63166405' => [
-            'name' => 'Dealul Piscului 1933 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6316',
-        ],
-        'urn:ogc:def:crs:EPSG::63176405' => [
-            'name' => 'Dealul Piscului 1970 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6317',
         ],
         'urn:ogc:def:crs:EPSG::6318' => [
             'name' => 'NAD83(2011)',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
             'datum' => 'urn:ogc:def:datum:EPSG::1116',
         ],
-        'urn:ogc:def:crs:EPSG::63186405' => [
-            'name' => 'NGN (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6318',
-        ],
-        'urn:ogc:def:crs:EPSG::63196405' => [
-            'name' => 'KUDAMS (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6319',
-        ],
         'urn:ogc:def:crs:EPSG::6322' => [
             'name' => 'NAD83(PA11)',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
             'datum' => 'urn:ogc:def:datum:EPSG::1117',
-        ],
-        'urn:ogc:def:crs:EPSG::63226405' => [
-            'name' => 'WGS 72 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6322',
-        ],
-        'urn:ogc:def:crs:EPSG::63246405' => [
-            'name' => 'WGS 72BE (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6324',
         ],
         'urn:ogc:def:crs:EPSG::6325' => [
             'name' => 'NAD83(MA11)',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
             'datum' => 'urn:ogc:def:datum:EPSG::1118',
         ],
-        'urn:ogc:def:crs:EPSG::63266405' => [
-            'name' => 'WGS 84 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6326',
-        ],
-        'urn:ogc:def:crs:EPSG::63266406' => [
-            'name' => 'WGS 84 (degH)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6406',
-            'datum' => 'urn:ogc:def:datum:EPSG::6326',
-        ],
-        'urn:ogc:def:crs:EPSG::63266407' => [
-            'name' => 'WGS 84 (Hdeg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6407',
-            'datum' => 'urn:ogc:def:datum:EPSG::6326',
-        ],
-        'urn:ogc:def:crs:EPSG::63266408' => [
-            'name' => 'WGS 84 (DM)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6408',
-            'datum' => 'urn:ogc:def:datum:EPSG::6326',
-        ],
-        'urn:ogc:def:crs:EPSG::63266409' => [
-            'name' => 'WGS 84 (DMH)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6409',
-            'datum' => 'urn:ogc:def:datum:EPSG::6326',
-        ],
-        'urn:ogc:def:crs:EPSG::63266410' => [
-            'name' => 'WGS 84 (HDM)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6410',
-            'datum' => 'urn:ogc:def:datum:EPSG::6326',
-        ],
-        'urn:ogc:def:crs:EPSG::63266411' => [
-            'name' => 'WGS 84 (DMS)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6411',
-            'datum' => 'urn:ogc:def:datum:EPSG::6326',
-        ],
-        'urn:ogc:def:crs:EPSG::63266412' => [
-            'name' => 'WGS 84 (HDMS)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6412',
-            'datum' => 'urn:ogc:def:datum:EPSG::6326',
-        ],
         'urn:ogc:def:crs:EPSG::6365' => [
             'name' => 'Mexico ITRF2008',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
             'datum' => 'urn:ogc:def:datum:EPSG::1120',
-        ],
-        'urn:ogc:def:crs:EPSG::66006405' => [
-            'name' => 'Anguilla 1957 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6600',
-        ],
-        'urn:ogc:def:crs:EPSG::66016405' => [
-            'name' => 'Antigua 1943 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6601',
-        ],
-        'urn:ogc:def:crs:EPSG::66026405' => [
-            'name' => 'Dominica 1945 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6602',
-        ],
-        'urn:ogc:def:crs:EPSG::66036405' => [
-            'name' => 'Grenada 1953 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6603',
-        ],
-        'urn:ogc:def:crs:EPSG::66046405' => [
-            'name' => 'Montserrat 1958 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6604',
-        ],
-        'urn:ogc:def:crs:EPSG::66056405' => [
-            'name' => 'St. Kitts 1955 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6605',
-        ],
-        'urn:ogc:def:crs:EPSG::66066405' => [
-            'name' => 'St. Lucia 1955 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6606',
-        ],
-        'urn:ogc:def:crs:EPSG::66076405' => [
-            'name' => 'St. Vincent 1945 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6607',
-        ],
-        'urn:ogc:def:crs:EPSG::66086405' => [
-            'name' => 'NAD27(76) (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6608',
-        ],
-        'urn:ogc:def:crs:EPSG::66096405' => [
-            'name' => 'NAD27(CGQ77) (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6609',
-        ],
-        'urn:ogc:def:crs:EPSG::66106405' => [
-            'name' => 'Xian 1980 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6610',
-        ],
-        'urn:ogc:def:crs:EPSG::66116405' => [
-            'name' => 'Hong Kong 1980 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6611',
-        ],
-        'urn:ogc:def:crs:EPSG::66126405' => [
-            'name' => 'JGD2000 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6612',
-        ],
-        'urn:ogc:def:crs:EPSG::66136405' => [
-            'name' => 'Segara (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6613',
-        ],
-        'urn:ogc:def:crs:EPSG::66146405' => [
-            'name' => 'QND95 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6614',
-        ],
-        'urn:ogc:def:crs:EPSG::66156405' => [
-            'name' => 'Porto Santo (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6615',
-        ],
-        'urn:ogc:def:crs:EPSG::66166405' => [
-            'name' => 'Selvagem Grande (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6616',
-        ],
-        'urn:ogc:def:crs:EPSG::66186405' => [
-            'name' => 'SAD69 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6618',
-        ],
-        'urn:ogc:def:crs:EPSG::66196405' => [
-            'name' => 'SWEREF99 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6619',
-        ],
-        'urn:ogc:def:crs:EPSG::66206405' => [
-            'name' => 'Point 58 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6620',
-        ],
-        'urn:ogc:def:crs:EPSG::66216405' => [
-            'name' => 'Fort Marigot (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6621',
-        ],
-        'urn:ogc:def:crs:EPSG::66226405' => [
-            'name' => 'Sainte Anne (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6622',
-        ],
-        'urn:ogc:def:crs:EPSG::66236405' => [
-            'name' => 'CSG67 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6623',
-        ],
-        'urn:ogc:def:crs:EPSG::66246405' => [
-            'name' => 'RGFG95 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6624',
-        ],
-        'urn:ogc:def:crs:EPSG::66256405' => [
-            'name' => 'Fort Desaix (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6625',
-        ],
-        'urn:ogc:def:crs:EPSG::66266405' => [
-            'name' => 'Piton des Neiges (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6626',
-        ],
-        'urn:ogc:def:crs:EPSG::66276405' => [
-            'name' => 'RGR92 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6627',
-        ],
-        'urn:ogc:def:crs:EPSG::66286405' => [
-            'name' => 'Tahiti (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6628',
-        ],
-        'urn:ogc:def:crs:EPSG::66296405' => [
-            'name' => 'Tahaa (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6629',
-        ],
-        'urn:ogc:def:crs:EPSG::66306405' => [
-            'name' => 'IGN72 Nuku Hiva (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6630',
-        ],
-        'urn:ogc:def:crs:EPSG::66316405' => [
-            'name' => 'K0 1949 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6631',
-        ],
-        'urn:ogc:def:crs:EPSG::66326405' => [
-            'name' => 'Combani 1950 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6632',
-        ],
-        'urn:ogc:def:crs:EPSG::66336405' => [
-            'name' => 'IGN56 Lifou (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6633',
-        ],
-        'urn:ogc:def:crs:EPSG::66346405' => [
-            'name' => 'IGN72 Grande Terre (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6634',
-        ],
-        'urn:ogc:def:crs:EPSG::66356405' => [
-            'name' => 'ST87 Ouvea (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6635',
-        ],
-        'urn:ogc:def:crs:EPSG::66366405' => [
-            'name' => 'Petrels 1972 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6636',
-        ],
-        'urn:ogc:def:crs:EPSG::66376405' => [
-            'name' => 'Perroud 1950 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6637',
-        ],
-        'urn:ogc:def:crs:EPSG::66386405' => [
-            'name' => 'Saint Pierre et Miquelon 1950 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6638',
-        ],
-        'urn:ogc:def:crs:EPSG::66396405' => [
-            'name' => 'MOP78 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6639',
-        ],
-        'urn:ogc:def:crs:EPSG::66406405' => [
-            'name' => 'RRAF 1991 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6640',
-        ],
-        'urn:ogc:def:crs:EPSG::66416405' => [
-            'name' => 'IGN53 Mare (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6641',
-        ],
-        'urn:ogc:def:crs:EPSG::66426405' => [
-            'name' => 'ST84 Ile des Pins (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6642',
-        ],
-        'urn:ogc:def:crs:EPSG::66436405' => [
-            'name' => 'ST71 Belep (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6643',
-        ],
-        'urn:ogc:def:crs:EPSG::66446405' => [
-            'name' => 'NEA74 Noumea (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6644',
-        ],
-        'urn:ogc:def:crs:EPSG::66456405' => [
-            'name' => 'RGNC 1991 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6645',
-        ],
-        'urn:ogc:def:crs:EPSG::66466405' => [
-            'name' => 'Grand Comoros (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6646',
-        ],
-        'urn:ogc:def:crs:EPSG::66576405' => [
-            'name' => 'Reykjavik 1900 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6657',
-        ],
-        'urn:ogc:def:crs:EPSG::66586405' => [
-            'name' => 'Hjorsey 1955 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6658',
-        ],
-        'urn:ogc:def:crs:EPSG::66596405' => [
-            'name' => 'ISN93 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6659',
-        ],
-        'urn:ogc:def:crs:EPSG::66606405' => [
-            'name' => 'Helle 1954 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6660',
-        ],
-        'urn:ogc:def:crs:EPSG::66616405' => [
-            'name' => 'LKS92 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6661',
-        ],
-        'urn:ogc:def:crs:EPSG::66636405' => [
-            'name' => 'Porto Santo 1995 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6663',
-        ],
-        'urn:ogc:def:crs:EPSG::66646405' => [
-            'name' => 'Azores Oriental 1995 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6664',
-        ],
-        'urn:ogc:def:crs:EPSG::66656405' => [
-            'name' => 'Azores Central 1995 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6665',
-        ],
-        'urn:ogc:def:crs:EPSG::66666405' => [
-            'name' => 'Lisbon 1890 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6666',
-        ],
-        'urn:ogc:def:crs:EPSG::66676405' => [
-            'name' => 'IKBD-92 (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6667',
         ],
         'urn:ogc:def:crs:EPSG::6668' => [
             'name' => 'JGD2011',
@@ -7483,71 +5878,6 @@ class Geographic2D extends Geographic
             'name' => 'NAD83(CORS96)',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
             'datum' => 'urn:ogc:def:datum:EPSG::1133',
-        ],
-        'urn:ogc:def:crs:EPSG::68016405' => [
-            'name' => 'Bern 1898 (Bern) (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6801',
-        ],
-        'urn:ogc:def:crs:EPSG::68026405' => [
-            'name' => 'Bogota 1975 (Bogota) (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6802',
-        ],
-        'urn:ogc:def:crs:EPSG::68036405' => [
-            'name' => 'Lisbon (Lisbon) (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6803',
-        ],
-        'urn:ogc:def:crs:EPSG::68046405' => [
-            'name' => 'Makassar (Jakarta) (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6804',
-        ],
-        'urn:ogc:def:crs:EPSG::68056405' => [
-            'name' => 'MGI (Ferro) (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6805',
-        ],
-        'urn:ogc:def:crs:EPSG::68066405' => [
-            'name' => 'Monte Mario (Rome) (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6806',
-        ],
-        'urn:ogc:def:crs:EPSG::68086405' => [
-            'name' => 'Padang (Jakarta) (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6808',
-        ],
-        'urn:ogc:def:crs:EPSG::68096405' => [
-            'name' => 'Belge 1950 (Brussels) (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6809',
-        ],
-        'urn:ogc:def:crs:EPSG::68136405' => [
-            'name' => 'Batavia (Jakarta) (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6813',
-        ],
-        'urn:ogc:def:crs:EPSG::68146405' => [
-            'name' => 'RT38 (Stockholm) (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6814',
-        ],
-        'urn:ogc:def:crs:EPSG::68156405' => [
-            'name' => 'Greek (Athens) (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6815',
-        ],
-        'urn:ogc:def:crs:EPSG::68186405' => [
-            'name' => 'S-JTSK (Ferro) (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6818',
-        ],
-        'urn:ogc:def:crs:EPSG::68206405' => [
-            'name' => 'Segara (Jakarta) (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6820',
         ],
         'urn:ogc:def:crs:EPSG::6881' => [
             'name' => 'Aden 1925',
@@ -7574,25 +5904,10 @@ class Geographic2D extends Geographic
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
             'datum' => 'urn:ogc:def:datum:EPSG::1139',
         ],
-        'urn:ogc:def:crs:EPSG::69036405' => [
-            'name' => 'Madrid 1870 (Madrid) (deg)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6405',
-            'datum' => 'urn:ogc:def:datum:EPSG::6903',
-        ],
-        'urn:ogc:def:crs:EPSG::6980' => [
-            'name' => 'IGD05',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::1143',
-        ],
         'urn:ogc:def:crs:EPSG::6983' => [
             'name' => 'IG05 Intermediate CRS',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
             'datum' => 'urn:ogc:def:datum:EPSG::1142',
-        ],
-        'urn:ogc:def:crs:EPSG::6987' => [
-            'name' => 'IGD05/12',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::1145',
         ],
         'urn:ogc:def:crs:EPSG::6990' => [
             'name' => 'IG05/12 Intermediate CRS',
@@ -7633,11 +5948,6 @@ class Geographic2D extends Geographic
             'name' => 'RGAF09 (lon-lat)',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6424',
             'datum' => 'urn:ogc:def:datum:EPSG::1073',
-        ],
-        'urn:ogc:def:crs:EPSG::7088' => [
-            'name' => 'RGTAAF07 (lon-lat)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6424',
-            'datum' => 'urn:ogc:def:datum:EPSG::1113',
         ],
         'urn:ogc:def:crs:EPSG::7133' => [
             'name' => 'RGTAAF07 (lon-lat)',
@@ -7758,11 +6068,6 @@ class Geographic2D extends Geographic
             'name' => 'Macao 2008',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
             'datum' => 'urn:ogc:def:datum:EPSG::1208',
-        ],
-        'urn:ogc:def:crs:EPSG::8449' => [
-            'name' => 'NAD83(FBN)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6423',
-            'datum' => 'urn:ogc:def:datum:EPSG::6152',
         ],
         'urn:ogc:def:crs:EPSG::8545' => [
             'name' => 'NAD83(HARN Corrected)',
@@ -8103,11 +6408,6 @@ class Geographic2D extends Geographic
             'name' => 'SIRGAS-Chile 2016',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
             'datum' => 'urn:ogc:def:datum:EPSG::1253',
-        ],
-        'urn:ogc:def:crs:EPSG::9184' => [
-            'name' => 'SIRGAS-Chile',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
-            'datum' => 'urn:ogc:def:datum:EPSG::1254',
         ],
         'urn:ogc:def:crs:EPSG::9248' => [
             'name' => 'Tapi Aike',

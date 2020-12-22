@@ -10,7 +10,6 @@ namespace PHPCoord\EPSG\Import;
 
 use function array_merge;
 use function explode;
-use function is_string;
 use PhpParser\Comment\Doc;
 use PhpParser\Node;
 use PhpParser\Node\Stmt\Class_;
@@ -41,18 +40,18 @@ class AddNewConstantsVisitor extends NodeVisitorAbstract
         if ($node instanceof ClassLike) {
             $commentNodes = [];
 
-            foreach ($this->constants as $row) {
+            foreach ($this->constants as $urn => $data) {
                 $name = str_replace(
                     [' ', '-', '\'', '(', ')', '[', ']', '.', '/', '=', ',', ':', '°', '+', '&', '<>'],
                     ['_', '_', '', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_DEG_', '_PLUS_', '_AND_', '_TO_'],
-                    $row['constant_name']
+                    $data['name']
                 );
                 $name = preg_replace('/_+/', '_', $name);
                 $name = trim($name, '_');
 
                 $comment = '';
-                if ($row['constant_help'] || $row['deprecated']) {
-                    $row['constant_help'] = str_replace(
+                if ($data['constant_help'] || $data['deprecated']) {
+                    $data['constant_help'] = str_replace(
                         [
                             'See information source for formula and example.',
                             'This is a parameter-less conversion.',
@@ -61,22 +60,22 @@ class AddNewConstantsVisitor extends NodeVisitorAbstract
                             '',
                             '',
                         ],
-                        $row['constant_help']
+                        $data['constant_help']
                     );
 
                     $comment .= "/**\n";
-                    $helpLines = explode("\n", wordwrap($row['constant_help'], 112));
+                    $helpLines = explode("\n", wordwrap($data['constant_help'], 112));
                     foreach ($helpLines as $helpLine) {
                         $comment .= '* ' . trim($helpLine) . "\n";
                     }
-                    if ($row['deprecated']) {
+                    if ($data['deprecated']) {
                         $comment .= "* @deprecated\n";
                     }
                     $comment .= " */\n";
                 }
 
                 $constName = strtoupper('EPSG_' . $name);
-                $constValue = is_string($row['constant_value']) ? new Node\Scalar\String_($row['constant_value']) : new Node\Scalar\LNumber($row['constant_value']);
+                $constValue = new Node\Scalar\String_($urn);
                 $constComment = new Doc($comment);
                 $const = new Node\Const_($constName, $constValue);
 

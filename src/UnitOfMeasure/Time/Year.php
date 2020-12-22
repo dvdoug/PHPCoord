@@ -25,11 +25,6 @@ class Year extends Time
         return new self(round((float) $dateTime->format('Y') + ($dateTime->format('z') / 365.25), 2));
     }
 
-    public function asSeconds(): Second
-    {
-        return new Second($this->time * self::SECONDS_IN_YEAR);
-    }
-
     public function asYears(): self
     {
         return $this;

@@ -1512,186 +1512,6 @@ class Geocentric extends CoordinateReferenceSystem
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
             'datum' => 'urn:ogc:def:datum:EPSG::1035',
         ],
-        'urn:ogc:def:crs:EPSG::4328' => [
-            'name' => 'WGS 84 (geocentric)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
-            'datum' => 'urn:ogc:def:datum:EPSG::6326',
-        ],
-        'urn:ogc:def:crs:EPSG::4330' => [
-            'name' => 'ITRF88 (geocentric)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
-            'datum' => 'urn:ogc:def:datum:EPSG::6647',
-        ],
-        'urn:ogc:def:crs:EPSG::4331' => [
-            'name' => 'ITRF89 (geocentric)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
-            'datum' => 'urn:ogc:def:datum:EPSG::6648',
-        ],
-        'urn:ogc:def:crs:EPSG::4332' => [
-            'name' => 'ITRF90 (geocentric)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
-            'datum' => 'urn:ogc:def:datum:EPSG::6649',
-        ],
-        'urn:ogc:def:crs:EPSG::4333' => [
-            'name' => 'ITRF91 (geocentric)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
-            'datum' => 'urn:ogc:def:datum:EPSG::6650',
-        ],
-        'urn:ogc:def:crs:EPSG::4334' => [
-            'name' => 'ITRF92 (geocentric)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
-            'datum' => 'urn:ogc:def:datum:EPSG::6651',
-        ],
-        'urn:ogc:def:crs:EPSG::4335' => [
-            'name' => 'ITRF93 (geocentric)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
-            'datum' => 'urn:ogc:def:datum:EPSG::6652',
-        ],
-        'urn:ogc:def:crs:EPSG::4336' => [
-            'name' => 'ITRF94 (geocentric)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
-            'datum' => 'urn:ogc:def:datum:EPSG::6653',
-        ],
-        'urn:ogc:def:crs:EPSG::4337' => [
-            'name' => 'ITRF96 (geocentric)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
-            'datum' => 'urn:ogc:def:datum:EPSG::6654',
-        ],
-        'urn:ogc:def:crs:EPSG::4338' => [
-            'name' => 'ITRF97 (geocentric)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
-            'datum' => 'urn:ogc:def:datum:EPSG::6655',
-        ],
-        'urn:ogc:def:crs:EPSG::4340' => [
-            'name' => 'Australian Antarctic (geocentric)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
-            'datum' => 'urn:ogc:def:datum:EPSG::6176',
-        ],
-        'urn:ogc:def:crs:EPSG::4342' => [
-            'name' => 'EST97 (geocentric)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
-            'datum' => 'urn:ogc:def:datum:EPSG::6180',
-        ],
-        'urn:ogc:def:crs:EPSG::4344' => [
-            'name' => 'CHTRF95 (geocentric)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
-            'datum' => 'urn:ogc:def:datum:EPSG::6151',
-        ],
-        'urn:ogc:def:crs:EPSG::4346' => [
-            'name' => 'ETRS89 (geocentric)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
-            'datum' => 'urn:ogc:def:datum:EPSG::6258',
-        ],
-        'urn:ogc:def:crs:EPSG::4348' => [
-            'name' => 'GDA94 (geocentric)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
-            'datum' => 'urn:ogc:def:datum:EPSG::6283',
-        ],
-        'urn:ogc:def:crs:EPSG::4350' => [
-            'name' => 'Hartebeesthoek94 (geocentric)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
-            'datum' => 'urn:ogc:def:datum:EPSG::6148',
-        ],
-        'urn:ogc:def:crs:EPSG::4352' => [
-            'name' => 'IRENET95 (geocentric)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
-            'datum' => 'urn:ogc:def:datum:EPSG::6173',
-        ],
-        'urn:ogc:def:crs:EPSG::4354' => [
-            'name' => 'JGD2000 (geocentric)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
-            'datum' => 'urn:ogc:def:datum:EPSG::6612',
-        ],
-        'urn:ogc:def:crs:EPSG::4356' => [
-            'name' => 'LKS94 (ETRS89) (geocentric)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
-            'datum' => 'urn:ogc:def:datum:EPSG::6126',
-        ],
-        'urn:ogc:def:crs:EPSG::4358' => [
-            'name' => 'Moznet (geocentric)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
-            'datum' => 'urn:ogc:def:datum:EPSG::6130',
-        ],
-        'urn:ogc:def:crs:EPSG::4360' => [
-            'name' => 'NAD83(CSRS) (geocentric)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
-            'datum' => 'urn:ogc:def:datum:EPSG::6140',
-        ],
-        'urn:ogc:def:crs:EPSG::4362' => [
-            'name' => 'NAD83(HARN) (geocentric)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
-            'datum' => 'urn:ogc:def:datum:EPSG::6152',
-        ],
-        'urn:ogc:def:crs:EPSG::4364' => [
-            'name' => 'NZGD2000 (geocentric)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
-            'datum' => 'urn:ogc:def:datum:EPSG::6167',
-        ],
-        'urn:ogc:def:crs:EPSG::4366' => [
-            'name' => 'POSGAR 98 (geocentric)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
-            'datum' => 'urn:ogc:def:datum:EPSG::6190',
-        ],
-        'urn:ogc:def:crs:EPSG::4368' => [
-            'name' => 'REGVEN (geocentric)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
-            'datum' => 'urn:ogc:def:datum:EPSG::6189',
-        ],
-        'urn:ogc:def:crs:EPSG::4370' => [
-            'name' => 'RGF93 (geocentric)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
-            'datum' => 'urn:ogc:def:datum:EPSG::6171',
-        ],
-        'urn:ogc:def:crs:EPSG::4372' => [
-            'name' => 'RGFG95 (geocentric)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
-            'datum' => 'urn:ogc:def:datum:EPSG::6624',
-        ],
-        'urn:ogc:def:crs:EPSG::4374' => [
-            'name' => 'RGR92 (geocentric)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
-            'datum' => 'urn:ogc:def:datum:EPSG::6627',
-        ],
-        'urn:ogc:def:crs:EPSG::4376' => [
-            'name' => 'SIRGAS (geocentric)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
-            'datum' => 'urn:ogc:def:datum:EPSG::6170',
-        ],
-        'urn:ogc:def:crs:EPSG::4378' => [
-            'name' => 'SWEREF99 (geocentric)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
-            'datum' => 'urn:ogc:def:datum:EPSG::6619',
-        ],
-        'urn:ogc:def:crs:EPSG::4380' => [
-            'name' => 'Yemen NGN96 (geocentric)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
-            'datum' => 'urn:ogc:def:datum:EPSG::6163',
-        ],
-        'urn:ogc:def:crs:EPSG::4382' => [
-            'name' => 'RGNC 1991 (geocentric)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
-            'datum' => 'urn:ogc:def:datum:EPSG::6645',
-        ],
-        'urn:ogc:def:crs:EPSG::4384' => [
-            'name' => 'RRAF 1991 (geocentric)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
-            'datum' => 'urn:ogc:def:datum:EPSG::6640',
-        ],
-        'urn:ogc:def:crs:EPSG::4385' => [
-            'name' => 'ITRF2000 (geocentric)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
-            'datum' => 'urn:ogc:def:datum:EPSG::6656',
-        ],
-        'urn:ogc:def:crs:EPSG::4387' => [
-            'name' => 'ISN93 (geocentric)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
-            'datum' => 'urn:ogc:def:datum:EPSG::6659',
-        ],
-        'urn:ogc:def:crs:EPSG::4389' => [
-            'name' => 'LKS92 (geocentric)',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
-            'datum' => 'urn:ogc:def:datum:EPSG::6661',
-        ],
         'urn:ogc:def:crs:EPSG::4465' => [
             'name' => 'RGSPM06',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
@@ -1952,20 +1772,10 @@ class Geocentric extends CoordinateReferenceSystem
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
             'datum' => 'urn:ogc:def:datum:EPSG::6624',
         ],
-        'urn:ogc:def:crs:EPSG::4968' => [
-            'name' => 'RGNC 1991',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
-            'datum' => 'urn:ogc:def:datum:EPSG::6645',
-        ],
         'urn:ogc:def:crs:EPSG::4970' => [
             'name' => 'RGR92',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
             'datum' => 'urn:ogc:def:datum:EPSG::6627',
-        ],
-        'urn:ogc:def:crs:EPSG::4972' => [
-            'name' => 'RRAF 1991',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
-            'datum' => 'urn:ogc:def:datum:EPSG::6640',
         ],
         'urn:ogc:def:crs:EPSG::4974' => [
             'name' => 'SIRGAS 1995',
@@ -2182,20 +1992,10 @@ class Geocentric extends CoordinateReferenceSystem
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
             'datum' => 'urn:ogc:def:datum:EPSG::1141',
         ],
-        'urn:ogc:def:crs:EPSG::6978' => [
-            'name' => 'IGD05',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
-            'datum' => 'urn:ogc:def:datum:EPSG::1143',
-        ],
         'urn:ogc:def:crs:EPSG::6981' => [
             'name' => 'IG05 Intermediate CRS',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
             'datum' => 'urn:ogc:def:datum:EPSG::1142',
-        ],
-        'urn:ogc:def:crs:EPSG::6985' => [
-            'name' => 'IGD05/12',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
-            'datum' => 'urn:ogc:def:datum:EPSG::1145',
         ],
         'urn:ogc:def:crs:EPSG::6988' => [
             'name' => 'IG05/12 Intermediate CRS',
@@ -2576,11 +2376,6 @@ class Geocentric extends CoordinateReferenceSystem
             'name' => 'SIRGAS-Chile 2016',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
             'datum' => 'urn:ogc:def:datum:EPSG::1253',
-        ],
-        'urn:ogc:def:crs:EPSG::9182' => [
-            'name' => 'SIRGAS-Chile',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
-            'datum' => 'urn:ogc:def:datum:EPSG::1254',
         ],
         'urn:ogc:def:crs:EPSG::9266' => [
             'name' => 'MGI',

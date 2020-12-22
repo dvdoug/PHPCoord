@@ -1919,11 +1919,6 @@ class Vertical extends CoordinateReferenceSystem
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
             'datum' => 'urn:ogc:def:datum:EPSG::5103',
         ],
-        'urn:ogc:def:crs:EPSG::5704' => [
-            'name' => 'Yellow Sea',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
-            'datum' => 'urn:ogc:def:datum:EPSG::5104',
-        ],
         'urn:ogc:def:crs:EPSG::5705' => [
             'name' => 'Baltic 1977 height',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
