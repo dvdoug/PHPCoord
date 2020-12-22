@@ -1859,4 +1859,49 @@ class GeographicPoint extends Point
             $this->epoch
         );
     }
+
+    /**
+     * Reversible polynomial.
+     * @param Coefficient[] $powerCoefficients
+     */
+    public function reversiblePolynomial(
+        Geographic $to,
+        Angle $ordinate1OfEvaluationPoint,
+        Angle $ordinate2OfEvaluationPoint,
+        Scale $scalingFactorForCoordDifferences,
+        Scale $A0,
+        Scale $B0,
+        $powerCoefficients
+    ): self {
+        $xs = $this->latitude->getValue();
+        $ys = $this->longitude->getValue();
+
+        $t = $this->reversiblePolynomialUnitless(
+            $xs,
+            $ys,
+            $ordinate1OfEvaluationPoint,
+            $ordinate2OfEvaluationPoint,
+            $scalingFactorForCoordDifferences,
+            $A0,
+            $B0,
+            $powerCoefficients
+        );
+
+        $xtUnit = $to->getCoordinateSystem()->getAxes()[0]->getUnitOfMeasureId();
+        if ($xtUnit === Angle::EPSG_DEGREE_SUPPLIER_TO_DEFINE_REPRESENTATION) {
+            $xtUnit = Angle::EPSG_DEGREE;
+        }
+        $ytUnit = $to->getCoordinateSystem()->getAxes()[1]->getUnitOfMeasureId();
+        if ($ytUnit === Angle::EPSG_DEGREE_SUPPLIER_TO_DEFINE_REPRESENTATION) {
+            $ytUnit = Angle::EPSG_DEGREE;
+        }
+
+        return static::create(
+            Angle::makeUnit($t['xt'], $xtUnit),
+            Angle::makeUnit($t['yt'], $ytUnit),
+            $this->height,
+            $to,
+            $this->epoch
+        );
+    }
 }

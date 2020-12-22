@@ -731,4 +731,98 @@ class GeographicPointTest extends TestCase
         self::assertEqualsWithDelta(55.00002972, $to->getLatitude()->getValue(), 0.00000001);
         self::assertEqualsWithDelta(-6.50094913, $to->getLongitude()->getValue(), 0.00000001);
     }
+
+    public function testReversiblePolynomialForward(): void
+    {
+        $from = GeographicPoint::create(new Degree(52.508333333), new Degree(2), null, Geographic2D::fromSRID(Geographic2D::EPSG_ED50));
+        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_ED87);
+        $to = $from->reversiblePolynomial(
+            $toCRS,
+            new Degree(55),
+            new Degree(0),
+            new Coefficient(1),
+            new Coefficient(-0.00000556098),
+            new Coefficient(0.0000148944),
+            [
+                'Au1v0' => new Coefficient(-0.00000155391),
+                'Au0v1' => new Coefficient(-0.00000040262),
+                'Au2v0' => new Coefficient(-0.000000509693),
+                'Au1v1' => new Coefficient(-0.000000819775),
+                'Au0v2' => new Coefficient(-0.000000247592),
+                'Au3v0' => new Coefficient(0.000000136682),
+                'Au2v1' => new Coefficient(0.000000186198),
+                'Au1v2' => new Coefficient(0.00000012335),
+                'Au0v3' => new Coefficient(0.0000000568797),
+                'Au4v0' => new Coefficient(-0.00000000232217),
+                'Au3v1' => new Coefficient(-0.00000000769931),
+                'Au2v2' => new Coefficient(-0.00000000786953),
+                'Au1v3' => new Coefficient(-0.00000000612216),
+                'Au0v4' => new Coefficient(-0.00000000401382),
+                'Bu1v0' => new Coefficient(0.00000268191),
+                'Bu0v1' => new Coefficient(0.0000024529),
+                'Bu2v0' => new Coefficient(0.0000002944),
+                'Bu1v1' => new Coefficient(0.0000015226),
+                'Bu0v2' => new Coefficient(0.000000910592),
+                'Bu3v0' => new Coefficient(-0.000000368241),
+                'Bu2v1' => new Coefficient(-0.000000851732),
+                'Bu1v2' => new Coefficient(-0.000000566713),
+                'Bu0v3' => new Coefficient(-0.000000185188),
+                'Bu4v0' => new Coefficient(0.0000000284312),
+                'Bu3v1' => new Coefficient(0.0000000684853),
+                'Bu2v2' => new Coefficient(0.0000000500828),
+                'Bu1v3' => new Coefficient(0.0000000415937),
+                'Bu0v4' => new Coefficient(0.00000000762236),
+            ]
+        );
+
+        self::assertEqualsWithDelta(52.508330203, $to->getLatitude()->getValue(), 0.00000001);
+        self::assertEqualsWithDelta(2.000009801, $to->getLongitude()->getValue(), 0.00000001);
+    }
+
+    public function testReversiblePolynomialBackward(): void
+    {
+        $from = GeographicPoint::create(new Degree(52.508330203), new Degree(2.000009801), null, Geographic2D::fromSRID(Geographic2D::EPSG_ED50));
+        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_ED87);
+        $to = $from->reversiblePolynomial(
+            $toCRS,
+            new Degree(55),
+            new Degree(0),
+            new Coefficient(1),
+            new Coefficient(0.00000556098),
+            new Coefficient(-0.0000148944),
+            [
+                'Au1v0' => new Coefficient(0.00000155391),
+                'Au0v1' => new Coefficient(0.00000040262),
+                'Au2v0' => new Coefficient(0.000000509693),
+                'Au1v1' => new Coefficient(0.000000819775),
+                'Au0v2' => new Coefficient(0.000000247592),
+                'Au3v0' => new Coefficient(-0.000000136682),
+                'Au2v1' => new Coefficient(-0.000000186198),
+                'Au1v2' => new Coefficient(-0.00000012335),
+                'Au0v3' => new Coefficient(-0.0000000568797),
+                'Au4v0' => new Coefficient(0.00000000232217),
+                'Au3v1' => new Coefficient(0.00000000769931),
+                'Au2v2' => new Coefficient(0.00000000786953),
+                'Au1v3' => new Coefficient(0.00000000612216),
+                'Au0v4' => new Coefficient(0.00000000401382),
+                'Bu1v0' => new Coefficient(-0.00000268191),
+                'Bu0v1' => new Coefficient(-0.0000024529),
+                'Bu2v0' => new Coefficient(-0.0000002944),
+                'Bu1v1' => new Coefficient(-0.0000015226),
+                'Bu0v2' => new Coefficient(-0.000000910592),
+                'Bu3v0' => new Coefficient(0.000000368241),
+                'Bu2v1' => new Coefficient(0.000000851732),
+                'Bu1v2' => new Coefficient(0.000000566713),
+                'Bu0v3' => new Coefficient(0.000000185188),
+                'Bu4v0' => new Coefficient(-0.0000000284312),
+                'Bu3v1' => new Coefficient(-0.0000000684853),
+                'Bu2v2' => new Coefficient(-0.0000000500828),
+                'Bu1v3' => new Coefficient(-0.0000000415937),
+                'Bu0v4' => new Coefficient(-0.00000000762236),
+            ]
+        );
+
+        self::assertEqualsWithDelta(52.508333333, $to->getLatitude()->getValue(), 0.00000001);
+        self::assertEqualsWithDelta(2, $to->getLongitude()->getValue(), 0.00000001);
+    }
 }

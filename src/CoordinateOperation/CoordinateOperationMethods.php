@@ -486,6 +486,8 @@ class CoordinateOperationMethods
             self::EPSG_VERTICAL_OFFSET_AND_SLOPE => 'verticalOffsetAndSlope',
             self::EPSG_GENERAL_POLYNOMIAL_OF_DEGREE_2 => 'generalPolynomial',
             self::EPSG_GENERAL_POLYNOMIAL_OF_DEGREE_6 => 'generalPolynomial',
+            self::EPSG_REVERSIBLE_POLYNOMIAL_OF_DEGREE_4 => 'reversiblePolynomial',
+            self::EPSG_REVERSIBLE_POLYNOMIAL_OF_DEGREE_13 => 'reversiblePolynomial',
         ];
     }
 }

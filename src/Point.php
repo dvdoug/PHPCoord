@@ -93,4 +93,45 @@ abstract class Point implements Stringable
 
         return ['xt' => $xt, 'yt' => $yt];
     }
+
+    /**
+     * Reversible polynomial.
+     */
+    protected function reversiblePolynomialUnitless(
+        float $xs,
+        float $ys,
+        Angle $ordinate1OfEvaluationPoint,
+        Angle $ordinate2OfEvaluationPoint,
+        Scale $scalingFactorForCoordDifferences,
+        Scale $A0,
+        Scale $B0,
+        array $powerCoefficients
+    ): array {
+        $xo = $ordinate1OfEvaluationPoint->getValue();
+        $yo = $ordinate2OfEvaluationPoint->getValue();
+
+        $U = $scalingFactorForCoordDifferences->asUnity()->getValue() * ($xs - $xo);
+        $V = $scalingFactorForCoordDifferences->asUnity()->getValue() * ($ys - $yo);
+
+        $mTdX = $A0->getValue();
+        foreach ($powerCoefficients as $coefficientName => $coefficientValue) {
+            if ($coefficientName[0] === 'A') {
+                sscanf($coefficientName, 'Au%dv%d', $uPower, $vPower);
+                $mTdX += $coefficientValue->getValue() * $U ** $uPower * $V ** $vPower;
+            }
+        }
+
+        $mTdY = $B0->getValue();
+        foreach ($powerCoefficients as $coefficientName => $coefficientValue) {
+            if ($coefficientName[0] === 'B') {
+                sscanf($coefficientName, 'Bu%dv%d', $uPower, $vPower);
+                $mTdY += $coefficientValue->getValue() * $U ** $uPower * $V ** $vPower;
+            }
+        }
+
+        $xt = $xs + $mTdX * $scalingFactorForCoordDifferences->asUnity()->getValue();
+        $yt = $ys + $mTdY * $scalingFactorForCoordDifferences->asUnity()->getValue();
+
+        return ['xt' => $xt, 'yt' => $yt];
+    }
 }
