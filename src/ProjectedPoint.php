@@ -17,6 +17,7 @@ use DateTimeImmutable;
 use DateTimeInterface;
 use function implode;
 use function log;
+use PHPCoord\CoordinateOperation\ComplexNumber;
 use PHPCoord\CoordinateReferenceSystem\Geographic;
 use PHPCoord\CoordinateReferenceSystem\Projected;
 use PHPCoord\CoordinateSystem\Axis;
@@ -1801,5 +1802,79 @@ class ProjectedPoint extends Point
             $to,
             $this->epoch
         );
+    }
+
+    /**
+     * New Zealand Map Grid.
+     */
+    public function newZealandMapGrid(
+        Geographic $to,
+        Angle $latitudeOfNaturalOrigin,
+        Angle $longitudeOfNaturalOrigin,
+        Length $falseEasting,
+        Length $falseNorthing
+    ): GeographicPoint {
+        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+
+        $z = new ComplexNumber(
+            $this->northing->subtract($falseNorthing)->divide($a)->asMetres()->getValue(),
+            $this->easting->subtract($falseEasting)->divide($a)->asMetres()->getValue(),
+        );
+
+        $B1 = new ComplexNumber(0.7557853228, 0.0);
+        $B2 = new ComplexNumber(0.249204646, 0.003371507);
+        $B3 = new ComplexNumber(-0.001541739, 0.041058560);
+        $B4 = new ComplexNumber(-0.10162907, 0.01727609);
+        $B5 = new ComplexNumber(-0.26623489, -0.36249218);
+        $B6 = new ComplexNumber(-0.6870983, -1.1651967);
+        $b1 = new ComplexNumber(1.3231270439, 0.0);
+        $b2 = new ComplexNumber(-0.577245789, -0.007809598);
+        $b3 = new ComplexNumber(0.508307513, -0.112208952);
+        $b4 = new ComplexNumber(-0.15094762, 0.18200602);
+        $b5 = new ComplexNumber(1.01418179, 1.64497696);
+        $b6 = new ComplexNumber(1.9660549, 2.5127645);
+
+        $zeta = new ComplexNumber(0, 0);
+        $zeta = $zeta->add($b1->multiply($z->pow(1)));
+        $zeta = $zeta->add($b2->multiply($z->pow(2)));
+        $zeta = $zeta->add($b3->multiply($z->pow(3)));
+        $zeta = $zeta->add($b4->multiply($z->pow(4)));
+        $zeta = $zeta->add($b5->multiply($z->pow(5)));
+        $zeta = $zeta->add($b6->multiply($z->pow(6)));
+
+        for ($iterations = 0; $iterations < 2; ++$iterations) {
+            $numerator = $z;
+            $numerator = $numerator->add($B2->multiply($zeta->pow(2))->multiply(new ComplexNumber(1, 0)));
+            $numerator = $numerator->add($B3->multiply($zeta->pow(3))->multiply(new ComplexNumber(2, 0)));
+            $numerator = $numerator->add($B4->multiply($zeta->pow(4))->multiply(new ComplexNumber(3, 0)));
+            $numerator = $numerator->add($B5->multiply($zeta->pow(5))->multiply(new ComplexNumber(4, 0)));
+            $numerator = $numerator->add($B6->multiply($zeta->pow(6))->multiply(new ComplexNumber(5, 0)));
+
+            $denominator = $B1;
+            $denominator = $denominator->add($B2->multiply($zeta->pow(1))->multiply(new ComplexNumber(2, 0)));
+            $denominator = $denominator->add($B3->multiply($zeta->pow(2))->multiply(new ComplexNumber(3, 0)));
+            $denominator = $denominator->add($B4->multiply($zeta->pow(3))->multiply(new ComplexNumber(4, 0)));
+            $denominator = $denominator->add($B5->multiply($zeta->pow(4))->multiply(new ComplexNumber(5, 0)));
+            $denominator = $denominator->add($B6->multiply($zeta->pow(5))->multiply(new ComplexNumber(6, 0)));
+
+            $zeta = $numerator->divide($denominator);
+        }
+
+        $deltaPsi = $zeta->getReal();
+        $deltaLatitudeToOrigin = 0;
+        $deltaLatitudeToOrigin += 1.5627014243 * $deltaPsi ** 1;
+        $deltaLatitudeToOrigin += 0.5185406398 * $deltaPsi ** 2;
+        $deltaLatitudeToOrigin += -0.03333098 * $deltaPsi ** 3;
+        $deltaLatitudeToOrigin += -0.1052906 * $deltaPsi ** 4;
+        $deltaLatitudeToOrigin += -0.0368594 * $deltaPsi ** 5;
+        $deltaLatitudeToOrigin += 0.007317 * $deltaPsi ** 6;
+        $deltaLatitudeToOrigin += 0.01220 * $deltaPsi ** 7;
+        $deltaLatitudeToOrigin += 0.00394 * $deltaPsi ** 8;
+        $deltaLatitudeToOrigin += -0.0013 * $deltaPsi ** 9;
+
+        $latitude = $latitudeOfNaturalOrigin->add(new ArcSecond($deltaLatitudeToOrigin / 0.00001));
+        $longitude = $longitudeOfNaturalOrigin->add(new Radian($zeta->getImaginary()));
+
+        return GeographicPoint::create($latitude, $longitude, null, $to, $this->epoch);
     }
 }

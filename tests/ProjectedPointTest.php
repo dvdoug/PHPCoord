@@ -598,4 +598,34 @@ class ProjectedPointTest extends TestCase
         self::assertEqualsWithDelta(-33.859972, $to->getLatitude()->getValue(), 0.00001);
         self::assertEqualsWithDelta(151.211111, $to->getLongitude()->getValue(), 0.00001);
     }
+
+    public function testNewZealandMapGrid1(): void
+    {
+        $from = ProjectedPoint::createFromEastingNorthing(new Metre(2487100.664), new Metre(6751049.754), Projected::fromSRID(Projected::EPSG_NZGD49_NEW_ZEALAND_MAP_GRID));
+        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_NZGD49);
+        $to = $from->newZealandMapGrid($toCRS, new Degree(-41), new Degree(173), new Metre(2510000), new Metre(6023150));
+
+        self::assertEqualsWithDelta(-34.444066, $to->getLatitude()->getValue(), 0.0000001);
+        self::assertEqualsWithDelta(172.739194, $to->getLongitude()->getValue(), 0.0000001);
+    }
+
+    public function testNewZealandMapGrid2(): void
+    {
+        $from = ProjectedPoint::createFromEastingNorthing(new Metre(2486533.434), new Metre(6077263.670), Projected::fromSRID(Projected::EPSG_NZGD49_NEW_ZEALAND_MAP_GRID));
+        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_NZGD49);
+        $to = $from->newZealandMapGrid($toCRS, new Degree(-41), new Degree(173), new Metre(2510000), new Metre(6023150));
+
+        self::assertEqualsWithDelta(-40.512409, $to->getLatitude()->getValue(), 0.0000001);
+        self::assertEqualsWithDelta(172.723106, $to->getLongitude()->getValue(), 0.0000001);
+    }
+
+    public function testNewZealandMapGrid3(): void
+    {
+        $from = ProjectedPoint::createFromEastingNorthing(new Metre(2216746.395), new Metre(5388508.715), Projected::fromSRID(Projected::EPSG_NZGD49_NEW_ZEALAND_MAP_GRID));
+        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_NZGD49);
+        $to = $from->newZealandMapGrid($toCRS, new Degree(-41), new Degree(173), new Metre(2510000), new Metre(6023150));
+
+        self::assertEqualsWithDelta(-46.651295, $to->getLatitude()->getValue(), 0.0000001);
+        self::assertEqualsWithDelta(169.172062, $to->getLongitude()->getValue(), 0.0000001);
+    }
 }

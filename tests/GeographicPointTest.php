@@ -825,4 +825,34 @@ class GeographicPointTest extends TestCase
         self::assertEqualsWithDelta(52.508333333, $to->getLatitude()->getValue(), 0.00000001);
         self::assertEqualsWithDelta(2, $to->getLongitude()->getValue(), 0.00000001);
     }
+
+    public function testNewZealandMapGrid1(): void
+    {
+        $from = GeographicPoint::create(new Degree(-34.444066), new Degree(172.739194), null, Geographic2D::fromSRID(Geographic2D::EPSG_NZGD49));
+        $toCRS = Projected::fromSRID(Projected::EPSG_NZGD49_NEW_ZEALAND_MAP_GRID);
+        $to = $from->newZealandMapGrid($toCRS, new Degree(-41), new Degree(173), new Metre(2510000), new Metre(6023150));
+
+        self::assertEqualsWithDelta(2487100.664, $to->getEasting()->asMetres()->getValue(), 0.001);
+        self::assertEqualsWithDelta(6751049.754, $to->getNorthing()->asMetres()->getValue(), 0.001);
+    }
+
+    public function testNewZealandMapGrid2(): void
+    {
+        $from = GeographicPoint::create(new Degree(-40.512409), new Degree(172.723106), null, Geographic2D::fromSRID(Geographic2D::EPSG_NZGD49));
+        $toCRS = Projected::fromSRID(Projected::EPSG_NZGD49_NEW_ZEALAND_MAP_GRID);
+        $to = $from->newZealandMapGrid($toCRS, new Degree(-41), new Degree(173), new Metre(2510000), new Metre(6023150));
+
+        self::assertEqualsWithDelta(2486533.434, $to->getEasting()->asMetres()->getValue(), 0.001);
+        self::assertEqualsWithDelta(6077263.670, $to->getNorthing()->asMetres()->getValue(), 0.001);
+    }
+
+    public function testNewZealandMapGrid3(): void
+    {
+        $from = GeographicPoint::create(new Degree(-46.651295), new Degree(169.172062), null, Geographic2D::fromSRID(Geographic2D::EPSG_NZGD49));
+        $toCRS = Projected::fromSRID(Projected::EPSG_NZGD49_NEW_ZEALAND_MAP_GRID);
+        $to = $from->newZealandMapGrid($toCRS, new Degree(-41), new Degree(173), new Metre(2510000), new Metre(6023150));
+
+        self::assertEqualsWithDelta(2216746.395, $to->getEasting()->asMetres()->getValue(), 0.001);
+        self::assertEqualsWithDelta(5388508.715, $to->getNorthing()->asMetres()->getValue(), 0.001);
+    }
 }

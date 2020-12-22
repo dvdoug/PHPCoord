@@ -488,6 +488,7 @@ class CoordinateOperationMethods
             self::EPSG_GENERAL_POLYNOMIAL_OF_DEGREE_6 => 'generalPolynomial',
             self::EPSG_REVERSIBLE_POLYNOMIAL_OF_DEGREE_4 => 'reversiblePolynomial',
             self::EPSG_REVERSIBLE_POLYNOMIAL_OF_DEGREE_13 => 'reversiblePolynomial',
+            self::EPSG_NEW_ZEALAND_MAP_GRID => 'newZealandMapGrid',
         ];
     }
 }

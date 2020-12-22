@@ -17,6 +17,7 @@ use function get_class;
 use function implode;
 use InvalidArgumentException;
 use function log;
+use PHPCoord\CoordinateOperation\ComplexNumber;
 use PHPCoord\CoordinateOperation\GeocentricValue;
 use PHPCoord\CoordinateOperation\GeographicValue;
 use PHPCoord\CoordinateReferenceSystem\Geocentric;
@@ -1757,6 +1758,55 @@ class GeographicPoint extends Point
         $falseEasting = $falseEasting->add(new Metre($Z * 1000000));
 
         return $this->transverseMercator($to, $latitudeOfNaturalOrigin, $longitudeOrigin, $scaleFactorAtNaturalOrigin, $falseEasting, $falseNorthing);
+    }
+
+    /**
+     * New Zealand Map Grid.
+     */
+    public function newZealandMapGrid(
+        Projected $to,
+        Angle $latitudeOfNaturalOrigin,
+        Angle $longitudeOfNaturalOrigin,
+        Length $falseEasting,
+        Length $falseNorthing
+    ): ProjectedPoint {
+        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+
+        $deltaLatitudeToOrigin = Angle::convert($this->latitude->subtract($latitudeOfNaturalOrigin), Angle::EPSG_ARC_SECOND)->getValue();
+        $deltaLongitudeToOrigin = $this->longitude->subtract($longitudeOfNaturalOrigin)->asRadians();
+
+        $deltaPsi = 0;
+        $deltaPsi += 0.6399175073 * ($deltaLatitudeToOrigin * 0.00001) ** 1;
+        $deltaPsi += -0.1358797613 * ($deltaLatitudeToOrigin * 0.00001) ** 2;
+        $deltaPsi += 0.063294409 * ($deltaLatitudeToOrigin * 0.00001) ** 3;
+        $deltaPsi += -0.02526853 * ($deltaLatitudeToOrigin * 0.00001) ** 4;
+        $deltaPsi += 0.0117879 * ($deltaLatitudeToOrigin * 0.00001) ** 5;
+        $deltaPsi += -0.0055161 * ($deltaLatitudeToOrigin * 0.00001) ** 6;
+        $deltaPsi += 0.0026906 * ($deltaLatitudeToOrigin * 0.00001) ** 7;
+        $deltaPsi += -0.001333 * ($deltaLatitudeToOrigin * 0.00001) ** 8;
+        $deltaPsi += 0.00067 * ($deltaLatitudeToOrigin * 0.00001) ** 9;
+        $deltaPsi += -0.00034 * ($deltaLatitudeToOrigin * 0.00001) ** 10;
+
+        $zeta = new ComplexNumber($deltaPsi, $deltaLongitudeToOrigin->getValue());
+
+        $B1 = new ComplexNumber(0.7557853228, 0.0);
+        $B2 = new ComplexNumber(0.249204646, 0.003371507);
+        $B3 = new ComplexNumber(-0.001541739, 0.041058560);
+        $B4 = new ComplexNumber(-0.10162907, 0.01727609);
+        $B5 = new ComplexNumber(-0.26623489, -0.36249218);
+        $B6 = new ComplexNumber(-0.6870983, -1.1651967);
+        $z = new ComplexNumber(0, 0);
+        $z = $z->add($B1->multiply($zeta->pow(1)));
+        $z = $z->add($B2->multiply($zeta->pow(2)));
+        $z = $z->add($B3->multiply($zeta->pow(3)));
+        $z = $z->add($B4->multiply($zeta->pow(4)));
+        $z = $z->add($B5->multiply($zeta->pow(5)));
+        $z = $z->add($B6->multiply($zeta->pow(6)));
+
+        $easting = $falseEasting->asMetres()->getValue() + $z->getImaginary() * $a;
+        $northing = $falseNorthing->asMetres()->getValue() + $z->getReal() * $a;
+
+        return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
     }
 
     /**
