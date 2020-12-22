@@ -639,4 +639,14 @@ class ProjectedPointTest extends TestCase
         self::assertEqualsWithDelta(-0.282565315, $to->getLatitude()->asRadians()->getValue(), 0.000000001);
         self::assertEqualsWithDelta(0.735138668, $to->getLongitude()->asRadians()->getValue(), 0.000000001);
     }
+
+    public function testComplexPolynomial(): void
+    {
+        $from = ProjectedPoint::createFromEastingNorthing(new Metre(200000), new Metre(500000), Projected::fromSRID(Projected::EPSG_AMERSFOORT_RD_NEW));
+        $toCRS = Projected::fromSRID(Projected::EPSG_ED50_UTM_ZONE_31N);
+        $to = $from->complexPolynomial($toCRS, new Metre(155000), new Metre(463000), new Metre(663395.607), new Metre(5781194.380), new Coefficient(0.00001), new Coefficient(1), new Coefficient(-51.681), new Coefficient(3290.525), new Coefficient(20.172), new Coefficient(1.133), new Coefficient(2.075), new Coefficient(0.251), new Coefficient(0.075), new Coefficient(-0.012));
+
+        self::assertEqualsWithDelta(707155.557, $to->getEasting()->asMetres()->getValue(), 0.001);
+        self::assertEqualsWithDelta(5819663.128, $to->getNorthing()->asMetres()->getValue(), 0.001);
+    }
 }

@@ -1941,4 +1941,56 @@ class ProjectedPoint extends Point
 
         return GeographicPoint::create($latitude, $longitude, null, $to, $this->epoch);
     }
+
+    /**
+     * Complex polynomial.
+     * Coordinate pairs treated as complex numbers.  This exploits the correlation between the polynomial coefficients
+     * and leads to a smaller number of coefficients than the general polynomials.
+     */
+    public function complexPolynomial(
+        Projected $to,
+        Length $ordinate1OfEvaluationPointInSourceCRS,
+        Length $ordinate2OfEvaluationPointInSourceCRS,
+        Length $ordinate1OfEvaluationPointInTargetCRS,
+        Length $ordinate2OfEvaluationPointInTargetCRS,
+        Scale $scalingFactorForSourceCRSCoordDifferences,
+        Scale $scalingFactorForTargetCRSCoordDifferences,
+        Scale $A1,
+        Scale $A2,
+        Scale $A3,
+        Scale $A4,
+        Scale $A5,
+        Scale $A6,
+        ?Scale $A7 = null,
+        ?Scale $A8 = null
+    ): self {
+        $xs = $this->easting->getValue();
+        $ys = $this->northing->getValue();
+        $xso = $ordinate1OfEvaluationPointInSourceCRS->getValue();
+        $yso = $ordinate2OfEvaluationPointInSourceCRS->getValue();
+        $xto = $ordinate1OfEvaluationPointInTargetCRS->getValue();
+        $yto = $ordinate2OfEvaluationPointInTargetCRS->getValue();
+
+        $U = $scalingFactorForSourceCRSCoordDifferences->asUnity()->getValue() * ($xs - $xso);
+        $V = $scalingFactorForSourceCRSCoordDifferences->asUnity()->getValue() * ($ys - $yso);
+
+        $mTdXdY = new ComplexNumber(0, 0);
+        $mTdXdY = $mTdXdY->add((new ComplexNumber($A1->getValue(), $A2->getValue()))->multiply(new ComplexNumber($U, $V))->pow(1));
+        $mTdXdY = $mTdXdY->add((new ComplexNumber($A3->getValue(), $A4->getValue()))->multiply((new ComplexNumber($U, $V))->pow(2)));
+        $mTdXdY = $mTdXdY->add((new ComplexNumber($A5->getValue(), $A6->getValue()))->multiply((new ComplexNumber($U, $V))->pow(3)));
+        $mTdXdY = $mTdXdY->add((new ComplexNumber($A7 ? $A7->getValue() : 0, $A8 ? $A8->getValue() : 0))->multiply((new ComplexNumber($U, $V))->pow(4)));
+
+        $xt = $xs - $xso + $xto + $mTdXdY->getReal() / $scalingFactorForTargetCRSCoordDifferences->asUnity()->getValue();
+        $yt = $ys - $yso + $yto + $mTdXdY->getImaginary() / $scalingFactorForTargetCRSCoordDifferences->asUnity()->getValue();
+
+        $xtUnit = $to->getCoordinateSystem()->getAxes()[0]->getUnitOfMeasureId();
+        $ytUnit = $to->getCoordinateSystem()->getAxes()[1]->getUnitOfMeasureId();
+
+        return static::createFromEastingNorthing(
+            Length::makeUnit($xt, $xtUnit),
+            Length::makeUnit($yt, $ytUnit),
+            $to,
+            $this->epoch
+        );
+    }
 }

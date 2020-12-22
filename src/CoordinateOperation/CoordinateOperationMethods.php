@@ -491,6 +491,8 @@ class CoordinateOperationMethods
             self::EPSG_NEW_ZEALAND_MAP_GRID => 'newZealandMapGrid',
             self::EPSG_LABORDE_OBLIQUE_MERCATOR => 'obliqueMercatorLaborde',
             self::EPSG_MADRID_TO_ED50_POLYNOMIAL => 'madridToED50Polynomial',
+            self::EPSG_COMPLEX_POLYNOMIAL_OF_DEGREE_3 => 'complexPolynomial',
+            self::EPSG_COMPLEX_POLYNOMIAL_OF_DEGREE_4 => 'complexPolynomial',
         ];
     }
 }
