@@ -20,7 +20,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * AHD (Tasmania) height
      * Extent: Australia - Tasmania mainland - onshore.
-     * Scope: Geodesy, engineering survey.
      */
     public const EPSG_AHD_TASMANIA_HEIGHT = 'urn:ogc:def:crs:EPSG::5712';
 
@@ -29,7 +28,6 @@ class Vertical extends CoordinateReferenceSystem
      * Extent: Australia - Australian Capital Territory, New South Wales, Northern Territory, Queensland, South
      * Australia, Tasmania, Western Australia and Victoria - onshore. Christmas Island - onshore. Cocos and Keeling
      * Islands - onshore.
-     * Scope: Cadastre, engineering surveying applications over distances up to 10km.
      * Appropriate for cadastral and local engineering survey including construction or mining. Only suitable onshore.
      * AVWS height (CRS code 9458) is more accurate than AHD height for applications over distances greater than 10 km
      * and also extends offshore.
@@ -39,7 +37,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * AIOC95 depth
      * Extent: Azerbaijan - Caspian offshore and onshore Sangachal terminal.
-     * Scope: Oil and gas exploration and production.
      * Also used by AIOC and BP as a height system for engineering survey at Sangachal terminal (see CRS code 5797).
      * AIOC95 datum is 1.7m above Caspian datum and 26.3m below Baltic datum.
      */
@@ -48,7 +45,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * AIOC95 height
      * Extent: Azerbaijan - Caspian offshore and onshore Sangachal terminal.
-     * Scope: Oil and gas exploration and production.
      * AIOC95 datum is 1.7m above Caspian datum and 26.3m below Baltic datum. Also used by AIOC and BP as the depth
      * system for all offshore Azerbaijan activities (see CRS code 5734).
      */
@@ -57,8 +53,8 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * ASVD02 height
      * Extent: American Samoa - Tutuila island.
-     * Scope: Geodesy, engineering survey, topographic mapping.
-     * Replaces Tutuila 1962 height (CRS code 6638).
+     * Replaces Tutuila 1962 height (CRS code 6638). Replaced by Pago Pago 2020 height after ASVD02 benchmarks
+     * destroyed by earthquake activity.
      */
     public const EPSG_ASVD02_HEIGHT = 'urn:ogc:def:crs:EPSG::6643';
 
@@ -66,7 +62,6 @@ class Vertical extends CoordinateReferenceSystem
      * AVWS height
      * Extent: Australia including Lord Howe Island, Macquarie Islands, Ashmore and Cartier Islands, Christmas Island,
      * Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
-     * Scope: Geodesy, hydrography, transfer of accurate heights over distances greater than 10km.
      * For cadastral and local engineering applications see AHD height (CRS code 5711). AVWS is more accurate than AHD
      * for applications over distances greater than 10 km.
      */
@@ -75,21 +70,18 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * Alicante height
      * Extent: Gibraltar - onshore; Spain - mainland onshore.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_ALICANTE_HEIGHT = 'urn:ogc:def:crs:EPSG::5782';
 
     /**
      * Antalya height
      * Extent: Turkey - onshore.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_ANTALYA_HEIGHT = 'urn:ogc:def:crs:EPSG::5775';
 
     /**
      * Auckland 1946 height
      * Extent: New Zealand - North Island - Auckland vertical CRS area.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_AUCKLAND_1946_HEIGHT = 'urn:ogc:def:crs:EPSG::5759';
 
@@ -97,21 +89,18 @@ class Vertical extends CoordinateReferenceSystem
      * BI height
      * Extent: United Kingdom (UK) - offshore to boundary of UKCS within 49°45'N to 61°N and 9°W to 2°E; onshore
      * Great Britain (England, Wales and Scotland) and Northern Ireland. Ireland onshore. Isle of Man onshore.
-     * Scope: Spatial referencing.
      */
     public const EPSG_BI_HEIGHT = 'urn:ogc:def:crs:EPSG::9451';
 
     /**
      * Baltic 1957 depth
      * Extent: Czechia; Slovakia.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_BALTIC_1957_DEPTH = 'urn:ogc:def:crs:EPSG::8358';
 
     /**
      * Baltic 1957 height
      * Extent: Czechia; Slovakia.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_BALTIC_1957_HEIGHT = 'urn:ogc:def:crs:EPSG::8357';
 
@@ -120,7 +109,6 @@ class Vertical extends CoordinateReferenceSystem
      * Extent: Armenia; Azerbaijan; Belarus; Estonia - onshore; Georgia - onshore; Kazakhstan; Kyrgyzstan; Latvia -
      * onshore; Lithuania - onshore; Moldova; Russian Federation - onshore; Tajikistan; Turkmenistan; Ukraine -
      * onshore; Uzbekistan.
-     * Scope: Oil and gas exploration and production.
      */
     public const EPSG_BALTIC_1977_DEPTH = 'urn:ogc:def:crs:EPSG::5612';
 
@@ -129,7 +117,6 @@ class Vertical extends CoordinateReferenceSystem
      * Extent: Armenia; Azerbaijan; Belarus; Estonia - onshore; Georgia - onshore; Kazakhstan; Kyrgyzstan; Latvia -
      * onshore; Lithuania - onshore; Moldova; Russian Federation - onshore; Tajikistan; Turkmenistan; Ukraine -
      * onshore; Uzbekistan.
-     * Scope: Geodesy, engineering survey.
      * The adjustment also included the Czech and Slovak Republics but not adopted there, with earlier 1957 adjustment
      * remaining in use: see CRS code 8357.
      */
@@ -138,14 +125,12 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * Baltic 1982 height
      * Extent: Bulgaria - onshore.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_BALTIC_1982_HEIGHT = 'urn:ogc:def:crs:EPSG::5786';
 
     /**
      * Bandar Abbas height
      * Extent: Iran - onshore.
-     * Scope: Geodesy, engineering survey.
      * Replaces Fao height (CRS code 5751) for national map agency work in Iran. At time of record creation NIOC data
      * still generally referenced to Fao.
      */
@@ -154,7 +139,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * Belfast height
      * Extent: United Kingdom (UK) - Northern Ireland (Ulster) - onshore.
-     * Scope: Topographic mapping (large scale).
      * Malin Head height (CRS code 5731) used for medium and small scale topographic mapping.
      */
     public const EPSG_BELFAST_HEIGHT = 'urn:ogc:def:crs:EPSG::5732';
@@ -162,7 +146,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * Black Sea depth
      * Extent: Georgia - onshore.
-     * Scope: Hydrography and nautical charting.
      * Black Sea datum is 0.4m below Baltic datum.
      */
     public const EPSG_BLACK_SEA_DEPTH = 'urn:ogc:def:crs:EPSG::5336';
@@ -170,7 +153,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * Black Sea height
      * Extent: Georgia - onshore.
-     * Scope: Topographic mapping.
      * Black Sea datum is 0.4m below Baltic datum.
      */
     public const EPSG_BLACK_SEA_HEIGHT = 'urn:ogc:def:crs:EPSG::5735';
@@ -178,14 +160,12 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * Bluff 1955 height
      * Extent: New Zealand - South Island - Bluff vertical CRS area.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_BLUFF_1955_HEIGHT = 'urn:ogc:def:crs:EPSG::5760';
 
     /**
      * Bora Bora SAU 2001 height
      * Extent: French Polynesia - Society Islands - Bora Bora.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      * Part of NGPF (CRS code 5600).
      */
     public const EPSG_BORA_BORA_SAU_2001_HEIGHT = 'urn:ogc:def:crs:EPSG::5607';
@@ -193,7 +173,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * CBVD61 height (ft)
      * Extent: Cayman Islands - Cayman Brac.
-     * Scope: Geodesy, engineering survey.
      */
     public const EPSG_CBVD61_HEIGHT_FT = 'urn:ogc:def:crs:EPSG::6132';
 
@@ -202,7 +181,6 @@ class Vertical extends CoordinateReferenceSystem
      * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
      * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
      * Yukon.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      * Replaces CGVD28 height (CRS code 5713). CGVD2013(CGG2013) height is realized by geoid model CGG2013 (CT code
      * 9246). Replaced by CGVD2013(CGG2013a) height (CRS code 9245).
      */
@@ -213,7 +191,6 @@ class Vertical extends CoordinateReferenceSystem
      * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
      * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
      * Yukon.
-     * Scope: Geodesy, topographic mapping.
      * Replaces CGVD2013(CGG2013) height (CRS code 6647). CGVD2013(CGG2013a) height is realized by Canadian gravimetric
      * geoid model CGG2013a (CT code 9247).
      */
@@ -225,7 +202,6 @@ class Vertical extends CoordinateReferenceSystem
      * Territories south west of a line between 60°N, 110°W and the coast at 132°W; Nova Scotia; Ontario south of
      * 52°N; Prince Edward Island; Quebec - mainland west of 66°W and south of 55°N; Saskatchewan south of 55°N;
      * Yukon.
-     * Scope: Geodesy, engineering survey.
      * From November 2013 replaced by CGVD2013 height (CRS code 6647).
      */
     public const EPSG_CGVD28_HEIGHT = 'urn:ogc:def:crs:EPSG::5713';
@@ -233,56 +209,48 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * Cais da Figueirinha - Angra do Heroismo height
      * Extent: Portugal - central Azores - Terceira island onshore.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_CAIS_DA_FIGUEIRINHA_ANGRA_DO_HEROISMO_HEIGHT = 'urn:ogc:def:crs:EPSG::6184';
 
     /**
      * Cais da Madalena height
      * Extent: Portugal - central Azores - Pico island onshore.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_CAIS_DA_MADALENA_HEIGHT = 'urn:ogc:def:crs:EPSG::6182';
 
     /**
      * Cais da Pontinha - Funchal height
      * Extent: Portugal - Madeira and Desertas islands - onshore.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_CAIS_DA_PONTINHA_FUNCHAL_HEIGHT = 'urn:ogc:def:crs:EPSG::6178';
 
     /**
      * Cais da Vila - Porto Santo height
      * Extent: Portugal - Porto Santo island (Madeira archipelago) onshore.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_CAIS_DA_VILA_PORTO_SANTO_HEIGHT = 'urn:ogc:def:crs:EPSG::6179';
 
     /**
      * Cais da Vila do Porto height
      * Extent: Portugal - eastern Azores onshore - Santa Maria, Formigas.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_CAIS_DA_VILA_DO_PORTO_HEIGHT = 'urn:ogc:def:crs:EPSG::6186';
 
     /**
      * Cais das Velas height
      * Extent: Portugal - central Azores - Sao Jorge island onshore.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_CAIS_DAS_VELAS_HEIGHT = 'urn:ogc:def:crs:EPSG::6180';
 
     /**
      * Cascais height
      * Extent: Portugal - mainland - onshore.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_CASCAIS_HEIGHT = 'urn:ogc:def:crs:EPSG::5780';
 
     /**
      * Caspian depth
      * Extent: Azerbaijan - offshore; Kazakhstan - offshore; Russian Federation - Caspian Sea; Turkmenistan - offshore.
-     * Scope: Hydrography and nautical charting.
      * Caspian Sea water levels are now offset appreciably from this datum.
      */
     public const EPSG_CASPIAN_DEPTH = 'urn:ogc:def:crs:EPSG::5706';
@@ -290,7 +258,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * Caspian height
      * Extent: Azerbaijan - offshore; Kazakhstan - offshore; Russian Federation - Caspian Sea; Turkmenistan - offshore.
-     * Scope: Oil and gas exploration and production.
      * Caspian Sea water levels are now offset appreciably from this datum.
      */
     public const EPSG_CASPIAN_HEIGHT = 'urn:ogc:def:crs:EPSG::5611';
@@ -298,28 +265,24 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * Ceuta 2 height
      * Extent: Spain - Ceuta onshore.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_CEUTA_2_HEIGHT = 'urn:ogc:def:crs:EPSG::9402';
 
     /**
      * Chatham Island 1959 height
      * Extent: New Zealand - Chatham Island - onshore.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_CHATHAM_ISLAND_1959_HEIGHT = 'urn:ogc:def:crs:EPSG::5771';
 
     /**
      * Constanta height
      * Extent: Romania - onshore.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_CONSTANTA_HEIGHT = 'urn:ogc:def:crs:EPSG::5781';
 
     /**
      * DACR52 height
      * Extent: Costa Rica - onshore.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_DACR52_HEIGHT = 'urn:ogc:def:crs:EPSG::8911';
 
@@ -328,7 +291,6 @@ class Vertical extends CoordinateReferenceSystem
      * Extent: Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen,
      * Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt,
      * Schleswig-Holstein, Thuringen.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      * Replaced by SNN56 and then SNN76 in East Germany and by DHHN85 in West Germany.
      */
     public const EPSG_DHHN12_HEIGHT = 'urn:ogc:def:crs:EPSG::7699';
@@ -338,7 +300,6 @@ class Vertical extends CoordinateReferenceSystem
      * Extent: Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen,
      * Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt,
      * Schleswig-Holstein, Thuringen.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      * Replaces DHHN92 height (CRS code 5783).
      */
     public const EPSG_DHHN2016_HEIGHT = 'urn:ogc:def:crs:EPSG::7837';
@@ -347,7 +308,6 @@ class Vertical extends CoordinateReferenceSystem
      * DHHN85 height
      * Extent: Germany - states of former West Germany onshore - Baden-Wurtemberg, Bayern, Bremen, Hamburg, Hessen,
      * Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Schleswig-Holstein.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      * Replaced by DNNH92 height (CRS code 5783).
      */
     public const EPSG_DHHN85_HEIGHT = 'urn:ogc:def:crs:EPSG::5784';
@@ -357,7 +317,6 @@ class Vertical extends CoordinateReferenceSystem
      * Extent: Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen,
      * Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt,
      * Schleswig-Holstein, Thuringen.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      * Replaces SNN76 height (CRS code 5785) and DHHN85 height (CRS code 5784). Replaced by DHHN2016 height (CRS code
      * 7837).
      */
@@ -366,7 +325,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * DNN height
      * Extent: Denmark - onshore.
-     * Scope: Engineering survey, topographic mapping.
      * Replaced by DVR90 height (CRS code 5799).
      */
     public const EPSG_DNN_HEIGHT = 'urn:ogc:def:crs:EPSG::5733';
@@ -374,7 +332,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * DVR90 height
      * Extent: Denmark - onshore.
-     * Scope: Engineering survey, topographic mapping.
      * Replaces Dansk Normal Null height (CRS code 5733).
      */
     public const EPSG_DVR90_HEIGHT = 'urn:ogc:def:crs:EPSG::5799';
@@ -382,42 +339,36 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * Danger 1950 height
      * Extent: St Pierre and Miquelon - onshore.
-     * Scope: Geodesy, engineering survey.
      */
     public const EPSG_DANGER_1950_HEIGHT = 'urn:ogc:def:crs:EPSG::5792';
 
     /**
      * Douglas height
      * Extent: Isle of Man - onshore.
-     * Scope: Geodesy, engineering survey.
      */
     public const EPSG_DOUGLAS_HEIGHT = 'urn:ogc:def:crs:EPSG::5750';
 
     /**
      * Dunedin 1958 height
      * Extent: New Zealand - South Island - between approximately 44°S and 46°S - Dunedin vertical CRS area.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_DUNEDIN_1958_HEIGHT = 'urn:ogc:def:crs:EPSG::5761';
 
     /**
      * Dunedin-Bluff 1960 height
      * Extent: New Zealand - South Island - Dunedin-Bluff vertical CRS area.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_DUNEDIN_BLUFF_1960_HEIGHT = 'urn:ogc:def:crs:EPSG::4458';
 
     /**
      * Durres height
      * Extent: Albania - onshore.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_DURRES_HEIGHT = 'urn:ogc:def:crs:EPSG::5777';
 
     /**
      * EGM2008 height
      * Extent: World.
-     * Scope: Geodesy.
      * Zero-height surface resulting from the application of the EGM2008 geoid model to the WGS 84 ellipsoid. Replaces
      * EGM96 height (CRS code 5773).
      */
@@ -426,7 +377,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * EGM84 height
      * Extent: World.
-     * Scope: Geodesy.
      * Zero-height surface resulting from the application of the EGM84 geoid model to the WGS 84 ellipsoid. Replaced by
      * EGM96 height (CRS code 5773).
      */
@@ -435,7 +385,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * EGM96 height
      * Extent: World.
-     * Scope: Geodesy.
      * Zero-height surface resulting from the application of the EGM96 geoid model to the WGS 84 ellipsoid. Replaces
      * EGM84 height (CRS code 5798). Replaced by EGM2008 height (CRS code 3855).
      */
@@ -444,14 +393,12 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * EOMA 1980 height
      * Extent: Hungary.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_EOMA_1980_HEIGHT = 'urn:ogc:def:crs:EPSG::5787';
 
     /**
      * EVRF2000 Austria height
      * Extent: Austria.
-     * Scope: Geodesy.
      * Austria-specific version of EVRF using orthometric heights instead of the Normal heights used in EVRF2000 (CRS
      * code 5730). Used for scientific purposes. See GHA height (CRS code 5778) for cadastral and other land survey
      * purposes.
@@ -465,7 +412,6 @@ class Vertical extends CoordinateReferenceSystem
      * Liechtenstein; Lithuania; Luxembourg; Netherlands; Norway; Poland; Portugal - mainland; Romania; San Marino;
      * Slovakia; Slovenia; Spain - mainland; Sweden; Switzerland; United Kingdom (UK) - Great Britain mainland; Vatican
      * City State.
-     * Scope: Pan-European spatial positioning.
      * Uses Normal heights. Replaced by EVRF2007 height (CRS code 5621). In Austria, orthometric heights used instead -
      * see CRS code 9274.
      */
@@ -478,7 +424,6 @@ class Vertical extends CoordinateReferenceSystem
      * Liechtenstein; Lithuania; Luxembourg; Netherlands; Norway; Poland; Portugal - mainland; Romania; San Marino;
      * Slovakia; Slovenia; Spain - mainland; Sweden; Switzerland; United Kingdom (UK) - Great Britain mainland; Vatican
      * City State.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      * Uses Normal heights. Replaces EVRF2000 height (CRS code 5730). Replaced by EVRF2019 height (CRS code 9389).
      */
     public const EPSG_EVRF2007_HEIGHT = 'urn:ogc:def:crs:EPSG::5621';
@@ -490,9 +435,9 @@ class Vertical extends CoordinateReferenceSystem
      * Latvia; Liechtenstein; Lithuania; Luxembourg; Netherlands; North Macedonia; Norway; Poland; Portugal - mainland;
      * Romania; Russia – west of approximately 60°E; San Marino; Slovakia; Slovenia; Spain - mainland; Sweden;
      * Switzerland; United Kingdom (UK) - Great Britain mainland; Ukraine; Vatican City State.
-     * Scope: Geodesy (gravity).
-     * Replaces EVRF2007 height (CRS code 5621). Uses Normal heights. Zero-tide solution. See EVRF2019 mean-tide height
-     * (CRS code 9390) for solution more appropriate for oceanography and GNSS-related activities.
+     * September 2020 adjustment. Replaces 2019 adjustment and EVRF2007 height (CRS code 5621). Uses Normal heights.
+     * Zero-tide solution. See EVRF2019 mean-tide height (CRS code 9390) for solution more appropriate for oceanography
+     * and GNSS-related activities.
      */
     public const EPSG_EVRF2019_HEIGHT = 'urn:ogc:def:crs:EPSG::9389';
 
@@ -503,30 +448,26 @@ class Vertical extends CoordinateReferenceSystem
      * Latvia; Liechtenstein; Lithuania; Luxembourg; Netherlands; North Macedonia; Norway; Poland; Portugal - mainland;
      * Romania; Russia – west of approximately 60°E; San Marino; Slovakia; Slovenia; Spain - mainland; Sweden;
      * Switzerland; United Kingdom (UK) - Great Britain mainland; Ukraine; Vatican City State.
-     * Scope: Geodesy (GNSS), oceanography.
-     * Uses Normal heights. Mean-tide solution. See EVRF2019 height (CRS code 9389) for zero-tide solution more
-     * appropriate for gravity-related activities.
+     * September 2020 adjustment. Replaces 2019 adjustment. Uses Normal heights. Mean-tide solution. See EVRF2019
+     * height (CRS code 9389) for zero-tide solution more appropriate for gravity-related activities.
      */
     public const EPSG_EVRF2019_MEAN_TIDE_HEIGHT = 'urn:ogc:def:crs:EPSG::9390';
 
     /**
      * El Hierro height
      * Extent: Spain - Canary Islands - El Hierro onshore.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_EL_HIERRO_HEIGHT = 'urn:ogc:def:crs:EPSG::9401';
 
     /**
      * FCSVR10 height
      * Extent: Fehmarnbelt area of Denmark and Germany.
-     * Scope: Engineering survey and construction for Fehmarnbelt tunnel.
      */
     public const EPSG_FCSVR10_HEIGHT = 'urn:ogc:def:crs:EPSG::5597';
 
     /**
      * FVR09 height
      * Extent: Faroe Islands - onshore.
-     * Scope: Engineering survey.
      * Introduced in 2010.
      */
     public const EPSG_FVR09_HEIGHT = 'urn:ogc:def:crs:EPSG::5317';
@@ -534,7 +475,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * Fahud HD height
      * Extent: Oman - mainland onshore.
-     * Scope: Geodesy, engineering survey.
      * Replaced by PHD93 height (CRS code 5724) from 1993.
      */
     public const EPSG_FAHUD_HD_HEIGHT = 'urn:ogc:def:crs:EPSG::5725';
@@ -542,7 +482,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * Fair Isle height
      * Extent: United Kingdom (UK) - Great Britain - Scotland - Fair Isle onshore.
-     * Scope: Geodesy, engineering survey.
      * Replaced by ODN (Offshore) height (CRS code 7707) in 2016.
      */
     public const EPSG_FAIR_ISLE_HEIGHT = 'urn:ogc:def:crs:EPSG::5741';
@@ -550,14 +489,12 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * Famagusta 1960 height
      * Extent: Cyprus - onshore.
-     * Scope: Engineering survey, topographic mapping.
      */
     public const EPSG_FAMAGUSTA_1960_HEIGHT = 'urn:ogc:def:crs:EPSG::7446';
 
     /**
      * Fao 1979 height
      * Extent: Iraq - onshore.
-     * Scope: Geodesy, engineering survey.
      * Replaces Fao height (CRS code 5751) for national map agency work in Iraq. At time of record creation some
      * irrigation project data still referenced to Fao. Usage in oil industry is uncertain.
      */
@@ -566,7 +503,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * Fao height
      * Extent: Iraq - onshore southeast; Iran - onshore northern Gulf coast and west bordering southeast Iraq.
-     * Scope: Oil and gas exploration and production.
      * Replaced by Bandar Abbas (CRS code 5752) in Iran and Fao 1979 (code 3886) in Iraq. At time of record creation
      * NIOC data in Ahwaz area of Iran and some irrigation project data in Iraq still usually referenced to Fao. Usage
      * in Iraqi oil industry uncertain.
@@ -576,7 +512,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * Flannan Isles height
      * Extent: United Kingdom (UK) - Great Britain - Scotland - Flannan Isles onshore.
-     * Scope: Geodesy, engineering survey.
      * Replaced by ODN (Offshore) height (CRS code 7707) in 2016.
      */
     public const EPSG_FLANNAN_ISLES_HEIGHT = 'urn:ogc:def:crs:EPSG::5748';
@@ -584,7 +519,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * Foula height
      * Extent: United Kingdom (UK) - Great Britain - Scotland - Foula onshore.
-     * Scope: Geodesy, engineering survey.
      * Replaced by ODN (Offshore) height (CRS code 7707) in 2016.
      */
     public const EPSG_FOULA_HEIGHT = 'urn:ogc:def:crs:EPSG::5743';
@@ -592,21 +526,18 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * Fuerteventura height
      * Extent: Spain - Canary Islands - Fuerteventura onshore.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_FUERTEVENTURA_HEIGHT = 'urn:ogc:def:crs:EPSG::9396';
 
     /**
      * GCVD54 height (ft)
      * Extent: Cayman Islands - Grand Cayman.
-     * Scope: Geodesy, engineering survey.
      */
     public const EPSG_GCVD54_HEIGHT_FT = 'urn:ogc:def:crs:EPSG::6130';
 
     /**
      * GHA height
      * Extent: Austria.
-     * Scope: Cadastre, engineering survey, topographic mapping.
      * For scientific purposes see EVRF2000 Austria height (CRS code 9274).
      */
     public const EPSG_GHA_HEIGHT = 'urn:ogc:def:crs:EPSG::5778';
@@ -614,7 +545,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * GUVD04 height
      * Extent: Guam - onshore.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      * Replaces Guam 1963 height (CRS code 6639).
      */
     public const EPSG_GUVD04_HEIGHT = 'urn:ogc:def:crs:EPSG::6644';
@@ -622,7 +552,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * GVR2000 height
      * Extent: Greenland - onshore and offshore between 59°N and 84°N and west of 10°W.
-     * Scope: Topographic mapping.
      * Replaced by GVR2016 height (CRS code 8267). GVR2000 is realized by gravimetric geoid model 2000 (transformation
      * code 8268) applied to GR96 (CRS code 4909).
      */
@@ -631,7 +560,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * GVR2016 height
      * Extent: Greenland - onshore and offshore between 58°N and 85°N and west of 7°W.
-     * Scope: Topographic mapping.
      * Replaces GVR2000 height (CRS code 8266). GVR2016 is realized by gravimetric geoid model 2016 (transformation
      * code 8269) applied to GR96 (CRS code 4909).
      */
@@ -640,28 +568,24 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * Genoa height
      * Extent: Italy - mainland (including San Marino and Vatican City State) and Sicily.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_GENOA_HEIGHT = 'urn:ogc:def:crs:EPSG::5214';
 
     /**
      * Gisborne 1926 height
      * Extent: New Zealand - North Island - Gisborne vertical CRS area.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_GISBORNE_1926_HEIGHT = 'urn:ogc:def:crs:EPSG::5762';
 
     /**
      * Gran Canaria height
      * Extent: Spain - Canary Islands - Gran Canaria onshore.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_GRAN_CANARIA_HEIGHT = 'urn:ogc:def:crs:EPSG::9397';
 
     /**
      * Guadeloupe 1951 height
      * Extent: Guadeloupe - onshore - Basse-Terre and Grande-Terre.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      * Replaced by Guadeloupe 1988 height (CRS code 5757).
      */
     public const EPSG_GUADELOUPE_1951_HEIGHT = 'urn:ogc:def:crs:EPSG::5795';
@@ -669,7 +593,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * Guadeloupe 1988 height
      * Extent: Guadeloupe - onshore - Basse-Terre and Grande-Terre.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      * Replaces Guadeloupe 1951 height (CRS code 5795).
      */
     public const EPSG_GUADELOUPE_1988_HEIGHT = 'urn:ogc:def:crs:EPSG::5757';
@@ -677,7 +600,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * Guam 1963 height
      * Extent: Guam - onshore.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      * Replaced by GUVD04 height (CRS code 6644).
      */
     public const EPSG_GUAM_1963_HEIGHT = 'urn:ogc:def:crs:EPSG::6639';
@@ -685,7 +607,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * HAT height
      * Extent: World.
-     * Scope: Hydrography and nautical charting.
      * Not specific to any location or epoch.
      */
     public const EPSG_HAT_HEIGHT = 'urn:ogc:def:crs:EPSG::5872';
@@ -693,7 +614,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * HHWLT height
      * Extent: World.
-     * Scope: Hydrography and nautical charting.
      * Not specific to any location or epoch.
      */
     public const EPSG_HHWLT_HEIGHT = 'urn:ogc:def:crs:EPSG::5871';
@@ -701,7 +621,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * HKCD depth
      * Extent: China - Hong Kong - offshore.
-     * Scope: Hydrography and nautical charting.
      * Chart datum is 0.15 metres below Hong Kong Principal Datum (CRS code 5738) and 1.38m below MSL at Quarry Bay.
      */
     public const EPSG_HKCD_DEPTH = 'urn:ogc:def:crs:EPSG::5739';
@@ -709,21 +628,18 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * HKPD depth
      * Extent: China - Hong Kong - onshore.
-     * Scope: Intermediate stage in transformations - not used otherwise.
      */
     public const EPSG_HKPD_DEPTH = 'urn:ogc:def:crs:EPSG::7976';
 
     /**
      * HKPD height
      * Extent: China - Hong Kong - onshore.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_HKPD_HEIGHT = 'urn:ogc:def:crs:EPSG::5738';
 
     /**
      * HS2-VRF height
      * Extent: UK - HS2 phases 1 and 2a railway corridor from London to Birmingham, Lichfield and Crewe.
-     * Scope: Engineering survey for HS2 project phases 1 and 2a.
      * HS2-VRF height is equivalent to ODN height as historically realised through OSNet v2001 and OSGM02. After the
      * ODN realization was updated to be through OSNet v2009 and OSGM15, HS2-VRF height was introduced for backward
      * consistency.
@@ -733,7 +649,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * HVRS71 height
      * Extent: Croatia - onshore.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      * Replaces Trieste height (CRS code 5195).
      */
     public const EPSG_HVRS71_HEIGHT = 'urn:ogc:def:crs:EPSG::5610';
@@ -741,7 +656,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * Ha Tien 1960 height
      * Extent: Cambodia - mainland onshore; Vietnam - mainland onshore.
-     * Scope: Geodesy, engineering survey.
      * In Vietnam replaced by Hon Dau height (CRS code 5727) from 1992.
      */
     public const EPSG_HA_TIEN_1960_HEIGHT = 'urn:ogc:def:crs:EPSG::5726';
@@ -749,7 +663,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * High Water height
      * Extent: World.
-     * Scope: Hydrography and nautical charting.
      * Not specific to any location or epoch.
      */
     public const EPSG_HIGH_WATER_HEIGHT = 'urn:ogc:def:crs:EPSG::5874';
@@ -757,7 +670,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * Hon Dau 1992 height
      * Extent: Vietnam - mainland onshore.
-     * Scope: Geodesy, engineering survey.
      * In Vietnam replaces Ha Tien height (CRS code 5726) from 1992.
      */
     public const EPSG_HON_DAU_1992_HEIGHT = 'urn:ogc:def:crs:EPSG::5727';
@@ -765,14 +677,12 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * Horta height
      * Extent: Portugal - central Azores - Faial island onshore.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_HORTA_HEIGHT = 'urn:ogc:def:crs:EPSG::6181';
 
     /**
      * Huahine SAU 2001 height
      * Extent: French Polynesia - Society Islands - Huahine.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      * Part of NGPF (CRS code 5600).
      */
     public const EPSG_HUAHINE_SAU_2001_HEIGHT = 'urn:ogc:def:crs:EPSG::5605';
@@ -780,7 +690,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * IGLD 1955 height
      * Extent: Canada and United States (USA) - Great Lakes basin and St Lawrence Seaway.
-     * Scope: Hydrology.
      * Replaces several earlier systems. Replaced by IGLD 1985 (CRS code 5609).
      */
     public const EPSG_IGLD_1955_HEIGHT = 'urn:ogc:def:crs:EPSG::5608';
@@ -788,7 +697,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * IGLD 1985 height
      * Extent: Canada and United States (USA) - Great Lakes basin and St Lawrence Seaway.
-     * Scope: Hydrology.
      * Replaces IGLD 1955 (CRS code 5608).
      */
     public const EPSG_IGLD_1985_HEIGHT = 'urn:ogc:def:crs:EPSG::5609';
@@ -796,7 +704,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * IGN 1966 height
      * Extent: French Polynesia - Society Islands - Tahiti.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      * Part of NGPF (CRS code 5600).
      */
     public const EPSG_IGN_1966_HEIGHT = 'urn:ogc:def:crs:EPSG::5601';
@@ -804,35 +711,30 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * IGN 1988 LS height
      * Extent: Guadeloupe - onshore - Les Saintes.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_IGN_1988_LS_HEIGHT = 'urn:ogc:def:crs:EPSG::5616';
 
     /**
      * IGN 1988 MG height
      * Extent: Guadeloupe - onshore - Marie-Galante.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_IGN_1988_MG_HEIGHT = 'urn:ogc:def:crs:EPSG::5617';
 
     /**
      * IGN 1988 SB height
      * Extent: Guadeloupe - onshore - St Barthelemy island.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_IGN_1988_SB_HEIGHT = 'urn:ogc:def:crs:EPSG::5619';
 
     /**
      * IGN 1988 SM height
      * Extent: Guadeloupe - onshore - St Martin island.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_IGN_1988_SM_HEIGHT = 'urn:ogc:def:crs:EPSG::5620';
 
     /**
      * IGN 1992 LD height
      * Extent: Guadeloupe - onshore - La Desirade.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      * Replaced by IGN 2008 LD height (CRS code 9130).
      */
     public const EPSG_IGN_1992_LD_HEIGHT = 'urn:ogc:def:crs:EPSG::5618';
@@ -840,7 +742,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * IGN 2008 LD height
      * Extent: Guadeloupe - onshore - La Desirade.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      * Replaces IGN 1992 LD height (CRS code 5618).
      */
     public const EPSG_IGN_2008_LD_HEIGHT = 'urn:ogc:def:crs:EPSG::9130';
@@ -848,7 +749,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * INAGeoid2020 height
      * Extent: Indonesia - onshore and offshore.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      * Physical height component of national vertical control network (JKVN). Orthometric heights.
      */
     public const EPSG_INAGEOID2020_HEIGHT = 'urn:ogc:def:crs:EPSG::9471';
@@ -856,7 +756,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * ISH2004 height
      * Extent: Iceland - onshore.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      * National system replacing older local systems from March 2011.
      */
     public const EPSG_ISH2004_HEIGHT = 'urn:ogc:def:crs:EPSG::8089';
@@ -864,7 +763,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * ISLW depth
      * Extent: World.
-     * Scope: Hydrography and nautical charting.
      * Not specific to any location or epoch.
      */
     public const EPSG_ISLW_DEPTH = 'urn:ogc:def:crs:EPSG::5863';
@@ -872,21 +770,18 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * Ibiza height
      * Extent: Spain - Balearic Islands - Ibiza and Formentera - onshore.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_IBIZA_HEIGHT = 'urn:ogc:def:crs:EPSG::9394';
 
     /**
      * Incheon height
      * Extent: Republic of Korea (South Korea) - mainland onshore.
-     * Scope: Geodesy, engineering survey.
      */
     public const EPSG_INCHEON_HEIGHT = 'urn:ogc:def:crs:EPSG::5193';
 
     /**
      * Instantaneous Water Level depth
      * Extent: World.
-     * Scope: Hydrography, drilling, marine geophysics.
      * Depth relative to instantaneous water level uncorrected for tide. Not specific to any location or epoch.
      */
     public const EPSG_INSTANTANEOUS_WATER_LEVEL_DEPTH = 'urn:ogc:def:crs:EPSG::5831';
@@ -894,7 +789,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * Instantaneous Water Level height
      * Extent: World.
-     * Scope: Hydrography, drilling, marine geophysics.
      * Height relative to instantaneous water level uncorrected for tide. Not specific to any location or epoch.
      */
     public const EPSG_INSTANTANEOUS_WATER_LEVEL_HEIGHT = 'urn:ogc:def:crs:EPSG::5829';
@@ -902,7 +796,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * JGD2000 (vertical) height
      * Extent: Japan - onshore mainland - Hokkaido, Honshu, Shikoku, Kyushu.
-     * Scope: Geodesy, engineering survey.
      * Replaced JSLD69 and JSLD72 (CRS codes 5723 and 6693) from April 2002. Replaced by JGD2011 (vertical) (CRS code
      * 6695) with effect from 21st October 2011.
      */
@@ -911,7 +804,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * JGD2011 (vertical) height
      * Extent: Japan - onshore mainland - Hokkaido, Honshu, Shikoku, Kyushu.
-     * Scope: Geodesy, engineering survey.
      * Replaces JGD2000 (vertical) (CRS code 6694) with effect from 21st October 2011.
      */
     public const EPSG_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::6695';
@@ -919,7 +811,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * JSLD69 height
      * Extent: Japan - onshore mainland - Honshu, Shikoku, Kyushu.
-     * Scope: Geodesy, engineering survey.
      * Replaces JSLD49. Replaced by JGD2000 (vertical) (CRS code 6694) with effect from April 2002.
      */
     public const EPSG_JSLD69_HEIGHT = 'urn:ogc:def:crs:EPSG::5723';
@@ -927,7 +818,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * JSLD72 height
      * Extent: Japan - onshore mainland - Hokkaido.
-     * Scope: Geodesy, engineering survey.
      * Replaced by JGD2000 (vertical) (CRS code 6694) with effect from April 2002.
      */
     public const EPSG_JSLD72_HEIGHT = 'urn:ogc:def:crs:EPSG::6693';
@@ -935,7 +825,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * Jamestown 1971 height
      * Extent: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore.
-     * Scope: Topographic mapping.
      * Replaced by SHVD2016 (CRS code 7890) from 2016.
      */
     public const EPSG_JAMESTOWN_1971_HEIGHT = 'urn:ogc:def:crs:EPSG::7888';
@@ -943,14 +832,12 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * KOC CD height
      * Extent: Kuwait - onshore.
-     * Scope: KOC survey control and facilities engineering.
      */
     public const EPSG_KOC_CD_HEIGHT = 'urn:ogc:def:crs:EPSG::5790';
 
     /**
      * KOC WD depth
      * Extent: Kuwait - onshore.
-     * Scope: KOC exploration and field development subsurface work.
      * See CRS code 5614 for equivalent system in feet.
      */
     public const EPSG_KOC_WD_DEPTH = 'urn:ogc:def:crs:EPSG::5789';
@@ -958,7 +845,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * KOC WD depth (ft)
      * Extent: Kuwait - onshore.
-     * Scope: KOC exploration and field development subsurface work.
      * See CRS code 5789 for equivalent system in feet.
      */
     public const EPSG_KOC_WD_DEPTH_FT = 'urn:ogc:def:crs:EPSG::5614';
@@ -966,7 +852,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * KOC WD height
      * Extent: Kuwait - onshore.
-     * Scope: KOC exploration and field development subsurface work.
      * See CRS code 5789 for equivalent depth system.
      */
     public const EPSG_KOC_WD_HEIGHT = 'urn:ogc:def:crs:EPSG::7979';
@@ -974,7 +859,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * KSA-VRF14 height
      * Extent: Saudi Arabia - onshore.
-     * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
      * Orthometric heights.
      */
     public const EPSG_KSA_VRF14_HEIGHT = 'urn:ogc:def:crs:EPSG::9335';
@@ -982,7 +866,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * Kiunga height
      * Extent: Papua New Guinea - onshore south of 5°S and west of 144°E.
-     * Scope: Engineering survey.
      * Kiunga height = WGS 84 ellipsoid height - value of geoid undulation derived by bilinear interpolation of EGM2008
      * geoid model - 3.0m = EGM2008 height - 3.0m.  See CRS code 3855 and transformation code 3858.
      */
@@ -991,7 +874,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * Kumul 34 height
      * Extent: Papua New Guinea - Papuan fold and thrust belt.
-     * Scope: Engineering survey.
      * Kumul 34 height = WGS 84 ellipsoid height - value of geoid undulation derived by bilinear interpolation of EGM96
      * geoid model - 0.87m = EGM96 height - 0.87m. See CRS code 5773 and transformation code 10084.
      */
@@ -1000,21 +882,18 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * Kuwait PWD height
      * Extent: Kuwait - onshore.
-     * Scope: Municipal spatial referencing.
      */
     public const EPSG_KUWAIT_PWD_HEIGHT = 'urn:ogc:def:crs:EPSG::5788';
 
     /**
      * LAT NL depth
      * Extent: Netherlands - offshore North Sea.
-     * Scope: Hydrography and nautical charting.
      */
     public const EPSG_LAT_NL_DEPTH = 'urn:ogc:def:crs:EPSG::9287';
 
     /**
      * LAT depth
      * Extent: World.
-     * Scope: Hydrography and nautical charting.
      * Not specific to any location or epoch.
      */
     public const EPSG_LAT_DEPTH = 'urn:ogc:def:crs:EPSG::5861';
@@ -1022,14 +901,12 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * LCVD61 height (ft)
      * Extent: Cayman Islands - Little Cayman.
-     * Scope: Geodesy, engineering survey.
      */
     public const EPSG_LCVD61_HEIGHT_FT = 'urn:ogc:def:crs:EPSG::6131';
 
     /**
      * LHN95 height
      * Extent: Liechtenstein; Switzerland.
-     * Scope: Geodesy.
      * Replaces LN02 height (CRS code 5728).
      */
     public const EPSG_LHN95_HEIGHT = 'urn:ogc:def:crs:EPSG::5729';
@@ -1037,7 +914,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * LLWLT depth
      * Extent: World.
-     * Scope: Hydrography and nautical charting.
      * Not specific to any location or epoch.
      */
     public const EPSG_LLWLT_DEPTH = 'urn:ogc:def:crs:EPSG::5862';
@@ -1045,7 +921,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * LN02 height
      * Extent: Liechtenstein; Switzerland.
-     * Scope: Engineering survey, topographic mapping.
      * Replaced by LHN95 height (CRS code 5729).
      */
     public const EPSG_LN02_HEIGHT = 'urn:ogc:def:crs:EPSG::5728';
@@ -1053,35 +928,30 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * La Gomera height
      * Extent: Spain - Canary Islands - La Gomera onshore.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_LA_GOMERA_HEIGHT = 'urn:ogc:def:crs:EPSG::9399';
 
     /**
      * La Palma height
      * Extent: Spain - Canary Islands - La Palma onshore.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_LA_PALMA_HEIGHT = 'urn:ogc:def:crs:EPSG::9400';
 
     /**
      * Lagos 1955 height
      * Extent: Nigeria - onshore.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_LAGOS_1955_HEIGHT = 'urn:ogc:def:crs:EPSG::5796';
 
     /**
      * Lanzarote height
      * Extent: Spain - Canary Islands - Lanzarote onshore.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_LANZAROTE_HEIGHT = 'urn:ogc:def:crs:EPSG::9395';
 
     /**
      * Latvia 2000 height
      * Extent: Latvia - onshore.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      * In Latvia replaces Baltic 1977 system (CRS code 5705) from December 2014.
      */
     public const EPSG_LATVIA_2000_HEIGHT = 'urn:ogc:def:crs:EPSG::7700';
@@ -1089,14 +959,12 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * Lerwick height
      * Extent: United Kingdom (UK) - Great Britain - Scotland - Shetland Islands onshore.
-     * Scope: Geodesy, engineering survey.
      */
     public const EPSG_LERWICK_HEIGHT = 'urn:ogc:def:crs:EPSG::5742';
 
     /**
      * Low Water depth
      * Extent: World.
-     * Scope: Hydrography and nautical charting.
      * Not specific to any location or epoch.
      */
     public const EPSG_LOW_WATER_DEPTH = 'urn:ogc:def:crs:EPSG::5873';
@@ -1104,14 +972,12 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * Lyttelton 1937 height
      * Extent: New Zealand - South Island - between approximately 41°20'S and 45°S - Lyttleton vertical CRS area.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_LYTTELTON_1937_HEIGHT = 'urn:ogc:def:crs:EPSG::5763';
 
     /**
      * MHHW height
      * Extent: World.
-     * Scope: Hydrography and nautical charting.
      * Not specific to any location or epoch.
      */
     public const EPSG_MHHW_HEIGHT = 'urn:ogc:def:crs:EPSG::5869';
@@ -1119,7 +985,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * MHW height
      * Extent: World.
-     * Scope: Hydrography and nautical charting.
      * Not specific to any location or epoch.
      */
     public const EPSG_MHW_HEIGHT = 'urn:ogc:def:crs:EPSG::5868';
@@ -1127,7 +992,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * MHWS height
      * Extent: World.
-     * Scope: Hydrography and nautical charting.
      * Not specific to any location or epoch.
      */
     public const EPSG_MHWS_HEIGHT = 'urn:ogc:def:crs:EPSG::5870';
@@ -1135,7 +999,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * MLLW depth
      * Extent: World.
-     * Scope: Hydrography and nautical charting.
      * Not specific to any location or epoch.
      */
     public const EPSG_MLLW_DEPTH = 'urn:ogc:def:crs:EPSG::5866';
@@ -1143,7 +1006,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * MLLWS depth
      * Extent: World.
-     * Scope: Hydrography and nautical charting.
      * Not specific to any location or epoch.
      */
     public const EPSG_MLLWS_DEPTH = 'urn:ogc:def:crs:EPSG::5864';
@@ -1151,7 +1013,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * MLW depth
      * Extent: World.
-     * Scope: Hydrography and nautical charting.
      * Not specific to any location or epoch.
      */
     public const EPSG_MLW_DEPTH = 'urn:ogc:def:crs:EPSG::5867';
@@ -1159,7 +1020,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * MLWS depth
      * Extent: World.
-     * Scope: Hydrography and nautical charting.
      * Not specific to any location or epoch.
      */
     public const EPSG_MLWS_DEPTH = 'urn:ogc:def:crs:EPSG::5865';
@@ -1167,14 +1027,12 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * MSL NL depth
      * Extent: Netherlands - offshore North Sea.
-     * Scope: Hydrography, drilling, offshore engineering.
      */
     public const EPSG_MSL_NL_DEPTH = 'urn:ogc:def:crs:EPSG::9288';
 
     /**
      * MSL depth
      * Extent: World.
-     * Scope: Hydrography, drilling.
      * Not specific to any location or epoch.
      */
     public const EPSG_MSL_DEPTH = 'urn:ogc:def:crs:EPSG::5715';
@@ -1182,7 +1040,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * MSL depth (ft)
      * Extent: World.
-     * Scope: Hydrography, drilling.
      * Not specific to any location or epoch.
      */
     public const EPSG_MSL_DEPTH_FT = 'urn:ogc:def:crs:EPSG::8051';
@@ -1190,7 +1047,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * MSL depth (ftUS)
      * Extent: United States (USA) - onshore and offshore.
-     * Scope: Hydrography, drilling.
      * Not specific to any location or epoch.
      */
     public const EPSG_MSL_DEPTH_FTUS = 'urn:ogc:def:crs:EPSG::8053';
@@ -1198,7 +1054,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * MSL height
      * Extent: World.
-     * Scope: Hydrography, drilling.
      * Not specific to any location or epoch.
      */
     public const EPSG_MSL_HEIGHT = 'urn:ogc:def:crs:EPSG::5714';
@@ -1206,7 +1061,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * MSL height (ft)
      * Extent: World.
-     * Scope: Hydrography, drilling.
      * Not specific to any location or epoch.
      */
     public const EPSG_MSL_HEIGHT_FT = 'urn:ogc:def:crs:EPSG::8050';
@@ -1214,7 +1068,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * MSL height (ftUS)
      * Extent: United States (USA) - onshore and offshore.
-     * Scope: Hydrography, drilling.
      * Not specific to any location or epoch.
      */
     public const EPSG_MSL_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8052';
@@ -1222,21 +1075,18 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * MVGC height
      * Extent: Saudi Arabia - onshore.
-     * Scope: Geodesy, cadastre, engineering survey, topographic mapping.
      */
     public const EPSG_MVGC_HEIGHT = 'urn:ogc:def:crs:EPSG::8841';
 
     /**
      * Macao height
      * Extent: China - Macao - onshore and offshore.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_MACAO_HEIGHT = 'urn:ogc:def:crs:EPSG::8434';
 
     /**
      * Malin Head height
      * Extent: Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore.
-     * Scope: Topographic mapping.
      * Topographic mapping at all scales in Republic and medium and small scales in Northern Ireland. Belfast Lough
      * height (CRS code 5732) used for large scale topographic mapping in Northern Ireland.
      */
@@ -1245,21 +1095,18 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * Mallorca height
      * Extent: Spain - Balearic Islands - Mallorca onshore.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_MALLORCA_HEIGHT = 'urn:ogc:def:crs:EPSG::9392';
 
     /**
      * Maputo height
      * Extent: Mozambique - onshore.
-     * Scope: Geodesy, engineering survey.
      */
     public const EPSG_MAPUTO_HEIGHT = 'urn:ogc:def:crs:EPSG::5722';
 
     /**
      * Martinique 1955 height
      * Extent: Martinique - onshore.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      * Replaced by Martinique 1987 height (CRS code 5756).
      */
     public const EPSG_MARTINIQUE_1955_HEIGHT = 'urn:ogc:def:crs:EPSG::5794';
@@ -1267,7 +1114,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * Martinique 1987 height
      * Extent: Martinique - onshore.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      * Replaces Martinique 1955 height (CRS code 5794).
      */
     public const EPSG_MARTINIQUE_1987_HEIGHT = 'urn:ogc:def:crs:EPSG::5756';
@@ -1275,7 +1121,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * Maupiti SAU 2001 height
      * Extent: French Polynesia - Society Islands - Maupiti.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      * Part of NGPF (CRS code 5600).
      */
     public const EPSG_MAUPITI_SAU_2001_HEIGHT = 'urn:ogc:def:crs:EPSG::5604';
@@ -1283,21 +1128,18 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * Mayotte 1950 height
      * Extent: Mayotte - onshore.
-     * Scope: Geodesy, engineering survey.
      */
     public const EPSG_MAYOTTE_1950_HEIGHT = 'urn:ogc:def:crs:EPSG::5793';
 
     /**
      * Menorca height
      * Extent: Spain - Balearic Islands - Menorca onshore.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_MENORCA_HEIGHT = 'urn:ogc:def:crs:EPSG::9393';
 
     /**
      * Moorea SAU 1981 height
      * Extent: French Polynesia - Society Islands - Moorea.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      * Part of NGPF (CRS code 5600).
      */
     public const EPSG_MOOREA_SAU_1981_HEIGHT = 'urn:ogc:def:crs:EPSG::5602';
@@ -1305,14 +1147,12 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * Moturiki 1953 height
      * Extent: New Zealand - North Island - Moturiki vertical CRS area.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_MOTURIKI_1953_HEIGHT = 'urn:ogc:def:crs:EPSG::5764';
 
     /**
      * N2000 height
      * Extent: Finland - onshore.
-     * Scope: Geodesy, engineering survey.
      * Replaces N43 height and N60 height (CRS codes 8675 and 5717).
      */
     public const EPSG_N2000_HEIGHT = 'urn:ogc:def:crs:EPSG::3900';
@@ -1320,7 +1160,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * N43 height
      * Extent: Finland - onshore mainland south of approximately 66°N.
-     * Scope: Geodesy, engineering survey.
      * Introduced during second national precise levelling as a temporary height system (or intended to be such).
      * Replaced by N60 height (CRS code 5717).
      */
@@ -1329,7 +1168,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * N60 height
      * Extent: Finland - onshore.
-     * Scope: Geodesy, engineering survey.
      * In use since 1968. Replaced by N2000 height (CRS code 3900).
      */
     public const EPSG_N60_HEIGHT = 'urn:ogc:def:crs:EPSG::5717';
@@ -1337,7 +1175,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * NAP height
      * Extent: Netherlands - onshore and offshore.
-     * Scope: Geodesy, engineering survey.
      * Use has been extended from Netherlands onshore to Netherlands onshore and offshore from 2018.
      */
     public const EPSG_NAP_HEIGHT = 'urn:ogc:def:crs:EPSG::5709';
@@ -1350,7 +1187,6 @@ class Vertical extends CoordinateReferenceSystem
      * Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma;
      * Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia;
      * Washington; West Virginia; Wisconsin; Wyoming.
-     * Scope: Geodesy, engineering survey.
      */
     public const EPSG_NAVD88_DEPTH = 'urn:ogc:def:crs:EPSG::6357';
 
@@ -1362,7 +1198,6 @@ class Vertical extends CoordinateReferenceSystem
      * Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon;
      * Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington;
      * West Virginia; Wisconsin; Wyoming.
-     * Scope: Geodesy, engineering survey.
      * Replaces NGVD29 depth (ftUS) (CRS code 6359).
      */
     public const EPSG_NAVD88_DEPTH_FTUS = 'urn:ogc:def:crs:EPSG::6358';
@@ -1375,14 +1210,12 @@ class Vertical extends CoordinateReferenceSystem
      * Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma;
      * Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia;
      * Washington; West Virginia; Wisconsin; Wyoming.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_NAVD88_HEIGHT = 'urn:ogc:def:crs:EPSG::5703';
 
     /**
      * NAVD88 height (ft)
      * Extent: United States (USA) - onshore - Arizona; Michigan; Montana; North Dakota; Oregon; South Carolina.
-     * Scope: Engineering survey, GIS, topographic mapping.
      * Care: only for use as part of a compound CRS in conjunction with State Plane CS in States which have passed
      * State Plane legislation in International feet (note: not US survet feet).
      */
@@ -1396,7 +1229,6 @@ class Vertical extends CoordinateReferenceSystem
      * Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon;
      * Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington;
      * West Virginia; Wisconsin; Wyoming.
-     * Scope: Geodesy, engineering survey.
      * Replaces NGVD29 height (ftUS) (CRS code 5702).
      */
     public const EPSG_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::6360';
@@ -1404,14 +1236,12 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * NG-L height
      * Extent: Luxembourg.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_NG_L_HEIGHT = 'urn:ogc:def:crs:EPSG::5774';
 
     /**
      * NGC 1948 height
      * Extent: France - Corsica onshore.
-     * Scope: Geodesy, engineering survey.
      * Replaced by IGN78 height (CRS code 5721).
      */
     public const EPSG_NGC_1948_HEIGHT = 'urn:ogc:def:crs:EPSG::5791';
@@ -1419,7 +1249,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * NGF Lallemand height
      * Extent: France - mainland onshore.
-     * Scope: Geodesy, engineering survey.
      * Generally but not entirely replaced by NGF IGN69 height (CRS code 5720).
      */
     public const EPSG_NGF_LALLEMAND_HEIGHT = 'urn:ogc:def:crs:EPSG::5719';
@@ -1427,7 +1256,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * NGF-IGN69 height
      * Extent: France - mainland onshore.
-     * Scope: Geodesy, engineering survey.
      * Generally but not entirely replaces NGF Lallemand height (CRS code 5719).
      */
     public const EPSG_NGF_IGN69_HEIGHT = 'urn:ogc:def:crs:EPSG::5720';
@@ -1435,7 +1263,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * NGF-IGN78 height
      * Extent: France - Corsica onshore.
-     * Scope: Geodesy, engineering survey.
      * Replaces NGC 1948 height (CRS code 5791).
      */
     public const EPSG_NGF_IGN78_HEIGHT = 'urn:ogc:def:crs:EPSG::5721';
@@ -1443,14 +1270,12 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * NGG1977 height
      * Extent: French Guiana - onshore.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_NGG1977_HEIGHT = 'urn:ogc:def:crs:EPSG::5755';
 
     /**
      * NGNC08 height
      * Extent: New Caledonia - Belep, Grande Terre, Ile des Pins, Loyalty Islands (Lifou, Mare, Ouvea).
-     * Scope: Spatial referencing.
      * On Grande Terre replaces NGNC69 (CRS code 5753).
      */
     public const EPSG_NGNC08_HEIGHT = 'urn:ogc:def:crs:EPSG::9351';
@@ -1458,7 +1283,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * NGNC69 height
      * Extent: New Caledonia - Grande Terre.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      * Replaced by NGNC08 height (CRS code 9351).
      */
     public const EPSG_NGNC69_HEIGHT = 'urn:ogc:def:crs:EPSG::5753';
@@ -1466,7 +1290,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * NGPF height
      * Extent: French Polynesia - Society Islands - Bora Bora, Huahine, Maupiti, Moorea, Raiatea, Tahaa and Tahiti.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      * The collection of heterogeneous vertical coordinate reference systems throughout the Society Islands of French
      * Polynesia.
      */
@@ -1480,7 +1303,6 @@ class Vertical extends CoordinateReferenceSystem
      * New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South
      * Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin;
      * Wyoming.
-     * Scope: Geodesy, engineering survey.
      * Replaced by NAVD88 depth (ftUS) (CRS code 6358).
      */
     public const EPSG_NGVD29_DEPTH_FTUS = 'urn:ogc:def:crs:EPSG::6359';
@@ -1493,7 +1315,6 @@ class Vertical extends CoordinateReferenceSystem
      * New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South
      * Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin;
      * Wyoming.
-     * Scope: Geodesy, engineering survey.
      * Replaced by NAVD88 height (ftUS) (CRS code 6360).
      */
     public const EPSG_NGVD29_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::5702';
@@ -1506,7 +1327,6 @@ class Vertical extends CoordinateReferenceSystem
      * New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South
      * Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin;
      * Wyoming.
-     * Scope: Intermediate stage in transformations - not used otherwise.
      * System defined by IOGP to allow transformation of heights to and from NGVD29. See CRS code 5702 for system in US
      * survey feet in actual use.
      */
@@ -1515,7 +1335,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * NMVD03 height
      * Extent: Northern Mariana Islands - onshore - Rota, Saipan and Tinian.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      * Replaces all earlier vertical CRSs on these islands.
      */
     public const EPSG_NMVD03_HEIGHT = 'urn:ogc:def:crs:EPSG::6640';
@@ -1523,7 +1342,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * NN2000 height
      * Extent: Norway - onshore.
-     * Scope: Geodesy, engineering survey.
      * Replaces NN54 height (CRS code 5776).
      */
     public const EPSG_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5941';
@@ -1531,7 +1349,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * NN54 height
      * Extent: Norway - onshore.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      * Replaced by NN2000 height (CRS code 5941).
      */
     public const EPSG_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::5776';
@@ -1540,7 +1357,6 @@ class Vertical extends CoordinateReferenceSystem
      * NZVD2009 height
      * Extent: New Zealand - onshore and offshore. Includes Antipodes Islands, Auckland Islands, Bounty Islands,
      * Chatham Islands, Cambell Island, Kermadec Islands, Raoul Island and Snares Islands.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      * Replaced by NZVD2016 from 2016-06-27.
      */
     public const EPSG_NZVD2009_HEIGHT = 'urn:ogc:def:crs:EPSG::4440';
@@ -1549,7 +1365,6 @@ class Vertical extends CoordinateReferenceSystem
      * NZVD2016 height
      * Extent: New Zealand - onshore and offshore. Includes Antipodes Islands, Auckland Islands, Bounty Islands,
      * Chatham Islands, Cambell Island, Kermadec Islands, Raoul Island and Snares Islands.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      * Normal-orthometric heights. Replaces NZVD2009 height (CRS code 4440).
      */
     public const EPSG_NZVD2016_HEIGHT = 'urn:ogc:def:crs:EPSG::7839';
@@ -1557,21 +1372,18 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * Napier 1962 height
      * Extent: New Zealand - North Island - Hawkes Bay meridional circuit and Napier vertical crs area.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_NAPIER_1962_HEIGHT = 'urn:ogc:def:crs:EPSG::5765';
 
     /**
      * Nelson 1955 height
      * Extent: New Zealand - South Island - north of approximately 42°20'S - Nelson vertical CRS area.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_NELSON_1955_HEIGHT = 'urn:ogc:def:crs:EPSG::5766';
 
     /**
      * North Rona height
      * Extent: United Kingdom (UK) - Great Britain - Scotland - North Rona onshore.
-     * Scope: Geodesy, engineering survey.
      * Replaced by ODN (Offshore) height (CRS code 7707) in 2016.
      */
     public const EPSG_NORTH_RONA_HEIGHT = 'urn:ogc:def:crs:EPSG::5745';
@@ -1580,7 +1392,6 @@ class Vertical extends CoordinateReferenceSystem
      * ODN (Offshore) height
      * Extent: United Kingdom (UK) - offshore between 2km from shore and boundary of UKCS within 49°46'N to 61°01'N
      * and 7°33'W to 3°33'E.
-     * Scope: Geodesy, engineering survey.
      * Defined through OSGM geoid model (transformation code 7713). Replaces Fair Isle height, Flannan Isles height,
      * Foula height, North Rona height, St Kilda height and Sule Skerry height (CRS codes 5741, 5748, 5743, 5745, 5747
      * and 5744) from 2016.
@@ -1590,7 +1401,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * ODN Orkney height
      * Extent: United Kingdom (UK) - Great Britain - Scotland - Orkney Islands onshore.
-     * Scope: Geodesy, engineering survey.
      */
     public const EPSG_ODN_ORKNEY_HEIGHT = 'urn:ogc:def:crs:EPSG::5740';
 
@@ -1598,21 +1408,18 @@ class Vertical extends CoordinateReferenceSystem
      * ODN height
      * Extent: United Kingdom (UK) - Great Britain onshore - England and Wales - mainland; Scotland - mainland and
      * Inner Hebrides.
-     * Scope: Geodesy, engineering survey.
      */
     public const EPSG_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::5701';
 
     /**
      * One Tree Point 1964 height
      * Extent: New Zealand - North Island - One Tree Point vertical CRS area.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_ONE_TREE_POINT_1964_HEIGHT = 'urn:ogc:def:crs:EPSG::5767';
 
     /**
      * Ostend height
      * Extent: Belgium - onshore.
-     * Scope: Geodesy, engineering survey.
      * No gravity corrections applied.
      */
     public const EPSG_OSTEND_HEIGHT = 'urn:ogc:def:crs:EPSG::5710';
@@ -1620,7 +1427,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * PHD93 height
      * Extent: Oman - onshore. Includes Musandam and the Kuria Muria (Al Hallaniyah) islands.
-     * Scope: Geodesy, engineering survey.
      * Replaces Fahud Height Datum height (CRS code 5725) from 1993.
      */
     public const EPSG_PHD93_HEIGHT = 'urn:ogc:def:crs:EPSG::5724';
@@ -1628,7 +1434,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * PNG08 height
      * Extent: Papua New Guinea - between 0°N and 12°S and 140°E and 158°E - onshore and offshore.
-     * Scope: Geodesy.
      * PNG08 height = PNG94 ellipsoidal height - value of geoid undulation derived by bilinear interpolation of PNG08
      * geoid model (see transformation code 7655).
      */
@@ -1638,7 +1443,6 @@ class Vertical extends CoordinateReferenceSystem
      * POM08 height
      * Extent: Papua New Guinea - onshore - Gulf province east of 144°24'E, Central province and National Capital
      * District.
-     * Scope: Engineering survey.
      * POM08 height = WGS 84 ellipsoid height - value of geoid undulation derived by bilinear interpolation of EGM2008
      * geoid model - 0.93m = EGM2008 height - 0.93m. See CRS code 3855 and transformation codes 3858 and 3859.
      */
@@ -1648,7 +1452,6 @@ class Vertical extends CoordinateReferenceSystem
      * POM96 height
      * Extent: Papua New Guinea - onshore - Gulf province east of 144°24'E, Central province and National Capital
      * District.
-     * Scope: Engineering survey.
      * POM96 height = WGS 84 ellipsoid height - value of geoid undulation derived by bilinear interpolation of EGM96
      * geoid model - 1.58m = EGM96 height - 1.58m. See CRS code 5773 and transformation code 10084.
      */
@@ -1657,29 +1460,32 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * PRVD02 height
      * Extent: Puerto Rico - onshore.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      * Replaces all earlier vertical CRSs for Puerto Rico.
      */
     public const EPSG_PRVD02_HEIGHT = 'urn:ogc:def:crs:EPSG::6641';
 
     /**
+     * Pago Pago 2020 height
+     * Extent: American Samoa - Tutuila island.
+     * Replaces ASVD02 height (CRS 6643) from March 2020.
+     */
+    public const EPSG_PAGO_PAGO_2020_HEIGHT = 'urn:ogc:def:crs:EPSG::9675';
+
+    /**
      * Piraeus height
      * Extent: Greece - onshore.
-     * Scope: Geodesy, engineering survey.
      */
     public const EPSG_PIRAEUS_HEIGHT = 'urn:ogc:def:crs:EPSG::5716';
 
     /**
      * Ponta Delgada height
      * Extent: Portugal - eastern Azores - Sao Miguel island onshore.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_PONTA_DELGADA_HEIGHT = 'urn:ogc:def:crs:EPSG::6187';
 
     /**
      * Poolbeg height (ft(Br36))
      * Extent: Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore.
-     * Scope: Topographic mapping.
      * Topographic mapping before 1956 in Northern Ireland and 1970 in the Republic of Ireland. Replaced by Belfast
      * Lough height and Malin Head height (CRS codes 5732 and 5731).
      */
@@ -1688,7 +1494,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * Poolbeg height (m)
      * Extent: Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore.
-     * Scope: Intermediate stage in transformations - not used otherwise.
      * CRS in metres used only for transformation of heights referenced to Poolbeg height (ft). For CRS in feet see
      * code 5754.
      */
@@ -1697,7 +1502,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * RH00 height
      * Extent: Sweden - onshore.
-     * Scope: Engineering survey.
      * Replaced by RH70 (CRS code 5718).
      */
     public const EPSG_RH00_HEIGHT = 'urn:ogc:def:crs:EPSG::5615';
@@ -1705,7 +1509,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * RH2000 height
      * Extent: Sweden - onshore.
-     * Scope: Geodesy, engineering survey.
      * Replaces RH70 (CRS code 5718) from 2005.
      */
     public const EPSG_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5613';
@@ -1713,7 +1516,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * RH70 height
      * Extent: Sweden - onshore.
-     * Scope: Geodesy, engineering survey.
      * Replaces RH00 (CRS code 5615). Replaced by RH2000 (CRS code 5613) from 2005.
      */
     public const EPSG_RH70_HEIGHT = 'urn:ogc:def:crs:EPSG::5718';
@@ -1721,7 +1523,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * Raiatea SAU 2001 height
      * Extent: French Polynesia - Society Islands - Raiatea.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      * Part of NGPF (CRS code 5600).
      */
     public const EPSG_RAIATEA_SAU_2001_HEIGHT = 'urn:ogc:def:crs:EPSG::5603';
@@ -1729,35 +1530,30 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * Ras Ghumays height
      * Extent: United Arab Emirates (UAE) - Abu Dhabi onshore.
-     * Scope: Engineering survey, topographic mapping.
      */
     public const EPSG_RAS_GHUMAYS_HEIGHT = 'urn:ogc:def:crs:EPSG::5843';
 
     /**
      * Reunion 1989 height
      * Extent: Reunion - onshore.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_REUNION_1989_HEIGHT = 'urn:ogc:def:crs:EPSG::5758';
 
     /**
      * SA LLD height
      * Extent: South Africa - mainland onshore.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_SA_LLD_HEIGHT = 'urn:ogc:def:crs:EPSG::9279';
 
     /**
      * SHD height
      * Extent: Singapore - onshore and offshore.
-     * Scope: Engineering survey, GIS, topographic mapping.
      */
     public const EPSG_SHD_HEIGHT = 'urn:ogc:def:crs:EPSG::6916';
 
     /**
      * SHVD2015 height
      * Extent: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore.
-     * Scope: Geodesy.
      * Replaces Jamestown 1971 height and Tritan 2011 height (CRS codes 7888-89) from 2016.
      */
     public const EPSG_SHVD2015_HEIGHT = 'urn:ogc:def:crs:EPSG::7890';
@@ -1765,7 +1561,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * SLVD height
      * Extent: Sri Lanka - onshore.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_SLVD_HEIGHT = 'urn:ogc:def:crs:EPSG::5237';
 
@@ -1773,7 +1568,6 @@ class Vertical extends CoordinateReferenceSystem
      * SNN76 height
      * Extent: Germany - states of former East Germany - Berlin, Brandenburg; Mecklenburg-Vorpommern; Sachsen;
      * Sachsen-Anhalt; Thuringen.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      * Replaced by DNNH92 height (CRS code 5783).
      */
     public const EPSG_SNN76_HEIGHT = 'urn:ogc:def:crs:EPSG::5785';
@@ -1781,7 +1575,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * SRB_VRS12 height
      * Extent: Serbia including Vojvodina.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      * Replaces Trieste height (CRS code 5195) in Serbia from 2012-03.
      */
     public const EPSG_SRB_VRS12_HEIGHT = 'urn:ogc:def:crs:EPSG::8691';
@@ -1789,7 +1582,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * SRVN16 height
      * Extent: Argentina - onshore.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      * Orthometric heights. Replaces SRVN71.
      */
     public const EPSG_SRVN16_HEIGHT = 'urn:ogc:def:crs:EPSG::9255';
@@ -1797,7 +1589,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * SVS2000 height
      * Extent: Slovenia - onshore.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      * Replaces Trieste height (CRS code 5195) in Slovenia from 2000. Replaced by SVS2010 (CRS code 8690) from 2019-01.
      */
     public const EPSG_SVS2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5779';
@@ -1805,7 +1596,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * SVS2010 height
      * Extent: Slovenia - onshore.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      * Replaces SVS2000 height (CRS code 5779) from 2019-01.
      */
     public const EPSG_SVS2010_HEIGHT = 'urn:ogc:def:crs:EPSG::8690';
@@ -1813,21 +1603,18 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * Santa Cruz da Graciosa height
      * Extent: Portugal - central Azores - Graciosa island onshore.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_SANTA_CRUZ_DA_GRACIOSA_HEIGHT = 'urn:ogc:def:crs:EPSG::6183';
 
     /**
      * Santa Cruz das Flores height
      * Extent: Portugal - western Azores onshore - Flores, Corvo.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_SANTA_CRUZ_DAS_FLORES_HEIGHT = 'urn:ogc:def:crs:EPSG::6185';
 
     /**
      * St. Helena Tritan 2011 height
      * Extent: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore.
-     * Scope: Engineering survey 2011 to 2015.
      * Replaced by SHVD2016 (CRS code 7890) from 2016.
      */
     public const EPSG_ST_HELENA_TRITAN_2011_HEIGHT = 'urn:ogc:def:crs:EPSG::7889';
@@ -1835,7 +1622,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * St. Kilda height
      * Extent: United Kingdom (UK) - Great Britain - Scotland - St Kilda onshore.
-     * Scope: Geodesy, engineering survey.
      * Replaced by ODN (Offshore) height (CRS code 7707) in 2016.
      */
     public const EPSG_ST_KILDA_HEIGHT = 'urn:ogc:def:crs:EPSG::5747';
@@ -1843,28 +1629,24 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * St. Marys height
      * Extent: United Kingdom (UK) - Great Britain - England - Isles of Scilly onshore.
-     * Scope: Geodesy, engineering survey.
      */
     public const EPSG_ST_MARYS_HEIGHT = 'urn:ogc:def:crs:EPSG::5749';
 
     /**
      * Stewart Island 1977 height
      * Extent: New Zealand - Stewart Island.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_STEWART_ISLAND_1977_HEIGHT = 'urn:ogc:def:crs:EPSG::5772';
 
     /**
      * Stornoway height
      * Extent: United Kingdom (UK) - Great Britain - Scotland - Outer Hebrides onshore.
-     * Scope: Geodesy, engineering survey.
      */
     public const EPSG_STORNOWAY_HEIGHT = 'urn:ogc:def:crs:EPSG::5746';
 
     /**
      * Sule Skerry height
      * Extent: United Kingdom (UK) - Great Britain - Scotland - Sule Skerry onshore.
-     * Scope: Geodesy, engineering survey.
      * Replaced by ODN (Offshore) height (CRS code 7707) in 2016.
      */
     public const EPSG_SULE_SKERRY_HEIGHT = 'urn:ogc:def:crs:EPSG::5744';
@@ -1872,7 +1654,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * TWVD 2001 height
      * Extent: Taiwan, Republic of China - onshore - Taiwan Island.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      * Replaces TWVD79.
      */
     public const EPSG_TWVD_2001_HEIGHT = 'urn:ogc:def:crs:EPSG::8904';
@@ -1880,7 +1661,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * Tahaa SAU 2001 height
      * Extent: French Polynesia - Society Islands - Tahaa.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      * Part of NGPF (CRS code 5600).
      */
     public const EPSG_TAHAA_SAU_2001_HEIGHT = 'urn:ogc:def:crs:EPSG::5606';
@@ -1888,29 +1668,25 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * Taranaki 1970 height
      * Extent: New Zealand - North Island - Taranaki vertical CRS area.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_TARANAKI_1970_HEIGHT = 'urn:ogc:def:crs:EPSG::5769';
 
     /**
      * Tararu 1952 height
      * Extent: New Zealand - North Island - Tararu vertical CRS area.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_TARARU_1952_HEIGHT = 'urn:ogc:def:crs:EPSG::5768';
 
     /**
      * Tenerife height
      * Extent: Spain - Canary Islands - Tenerife onshore.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_TENERIFE_HEIGHT = 'urn:ogc:def:crs:EPSG::9398';
 
     /**
      * Trieste height
-     * Extent: Boznia and Herzegovina; Croatia - onshore; Kosovo; Montenegro - onshore; North Macedonia; Serbia;
+     * Extent: Bosnia and Herzegovina; Croatia - onshore; Kosovo; Montenegro - onshore; North Macedonia; Serbia;
      * Slovenia - onshore.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      * In Croatia replaced by HVRS71 height (CRS code 5610). In Serbia replaced by SRB_VRS12 height (CRS code 8691). In
      * Slovenia replaced by SVS2000 height (CRS code 5779).
      */
@@ -1919,7 +1695,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * Tutuila 1962 height
      * Extent: American Samoa - Tutuila island.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      * Replaced by ASVD02 height (CRS code 6643).
      */
     public const EPSG_TUTUILA_1962_HEIGHT = 'urn:ogc:def:crs:EPSG::6638';
@@ -1927,7 +1702,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * VIVD09 height
      * Extent: US Virgin Islands - onshore - St Croix, St John, and St Thomas.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      * Replaces all earlier vertical CRSs on these islands.
      */
     public const EPSG_VIVD09_HEIGHT = 'urn:ogc:def:crs:EPSG::6642';
@@ -1935,7 +1709,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * Vienna height
      * Extent: Austria - Vienna city state.
-     * Scope: Municipal spatial referencing.
      * Defined from GHA height (EPSG:5778) using a vertical offset (Wiener Null is 156.68m above GHA height).
      */
     public const EPSG_VIENNA_HEIGHT = 'urn:ogc:def:crs:EPSG::8881';
@@ -1943,14 +1716,12 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * Wellington 1953 height
      * Extent: New Zealand - North Island - Wellington vertical CRS area.
-     * Scope: Geodesy, engineering survey, topographic mapping.
      */
     public const EPSG_WELLINGTON_1953_HEIGHT = 'urn:ogc:def:crs:EPSG::5770';
 
     /**
      * Yellow Sea 1956 height
      * Extent: China - onshore.
-     * Scope: Geodesy, engineering survey.
      * Replaced by Yellow Sea 1985 height (CRS code 5737).
      */
     public const EPSG_YELLOW_SEA_1956_HEIGHT = 'urn:ogc:def:crs:EPSG::5736';
@@ -1958,7 +1729,6 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * Yellow Sea 1985 height
      * Extent: China - onshore.
-     * Scope: Geodesy, engineering survey.
      * Replaces Yellow Sea 1956 height (CRS code 5736).
      */
     public const EPSG_YELLOW_SEA_1985_HEIGHT = 'urn:ogc:def:crs:EPSG::5737';
@@ -3163,6 +2933,11 @@ class Vertical extends CoordinateReferenceSystem
             'name' => 'INAGeoid2020 height',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
             'datum' => 'urn:ogc:def:datum:EPSG::1294',
+        ],
+        'urn:ogc:def:crs:EPSG::9675' => [
+            'name' => 'Pago Pago 2020 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1302',
         ],
     ];
 

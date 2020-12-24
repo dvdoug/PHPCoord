@@ -244,12 +244,11 @@ class EPSGImporter
                 DISTINCT
                 'urn:ogc:def:datum:EPSG::' || d.datum_code AS constant_value,
                 d.datum_name AS constant_name,
-                d.datum_name || '\n' || 'Type: ' || d.datum_type || '\n' || 'Extent: ' || e.extent_description || '\n' || 'Scope: ' || s.scope || '\n' || d.origin_description || '\n' || d.remarks AS constant_help,
+                d.datum_name || '\n' || 'Type: ' || d.datum_type || '\n' || 'Extent: ' || e.extent_description || '\n' || d.origin_description || '\n' || d.remarks AS constant_help,
                 d.deprecated
             FROM epsg_datum d
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_datum' AND dep.object_code = d.datum_code AND dep.deprecation_date <= '2020-09-01'
             LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_datum' AND u.object_code = d.datum_code
-            LEFT JOIN epsg_scope s ON u.scope_code = s.scope_code
             LEFT JOIN epsg_extent e ON u.extent_code = e.extent_code
             WHERE dep.deprecation_id IS NULL AND d.datum_type != 'engineering'
             ORDER BY constant_name
@@ -587,12 +586,11 @@ class EPSGImporter
             SELECT
                 'urn:ogc:def:crs:EPSG::' || crs.coord_ref_sys_code AS constant_value,
                 crs.coord_ref_sys_name AS constant_name,
-                crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || 'Scope: ' || s.scope || '\n' || crs.remarks AS constant_help,
+                crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || crs.remarks AS constant_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2020-09-01'
             LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
-            LEFT JOIN epsg_scope s ON u.scope_code = s.scope_code
             LEFT JOIN epsg_extent e ON u.extent_code = e.extent_code
             WHERE dep.deprecation_id IS NULL AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
             AND (crs.cmpd_horizcrs_code IS NULL OR crs.cmpd_horizcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind IN ('engineering', 'derived')))
@@ -617,12 +615,11 @@ class EPSGImporter
             SELECT
                 'urn:ogc:def:crs:EPSG::' || crs.coord_ref_sys_code AS constant_value,
                 crs.coord_ref_sys_name AS constant_name,
-                crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || 'Scope: ' || s.scope || '\n' || crs.remarks AS constant_help,
+                crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || crs.remarks AS constant_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2020-09-01'
             LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
-            LEFT JOIN epsg_scope s ON u.scope_code = s.scope_code
             LEFT JOIN epsg_extent e ON u.extent_code = e.extent_code
             WHERE dep.deprecation_id IS NULL AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
             AND (crs.cmpd_horizcrs_code IS NULL OR crs.cmpd_horizcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind IN ('engineering', 'derived')))
@@ -647,12 +644,11 @@ class EPSGImporter
             SELECT
                 'urn:ogc:def:crs:EPSG::' || crs.coord_ref_sys_code AS constant_value,
                 crs.coord_ref_sys_name AS constant_name,
-                crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || 'Scope: ' || s.scope || '\n' || crs.remarks AS constant_help,
+                crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || crs.remarks AS constant_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2020-09-01'
             LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
-            LEFT JOIN epsg_scope s ON u.scope_code = s.scope_code
             LEFT JOIN epsg_extent e ON u.extent_code = e.extent_code
             WHERE dep.deprecation_id IS NULL AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
             AND (crs.cmpd_horizcrs_code IS NULL OR crs.cmpd_horizcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind IN ('engineering', 'derived')))
@@ -677,12 +673,11 @@ class EPSGImporter
             SELECT
                 'urn:ogc:def:crs:EPSG::' || crs.coord_ref_sys_code AS constant_value,
                 crs.coord_ref_sys_name AS constant_name,
-                crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || 'Scope: ' || s.scope || '\n' || crs.remarks AS constant_help,
+                crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || crs.remarks AS constant_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2020-09-01'
             LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
-            LEFT JOIN epsg_scope s ON u.scope_code = s.scope_code
             LEFT JOIN epsg_extent e ON u.extent_code = e.extent_code
             WHERE dep.deprecation_id IS NULL AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
             AND (crs.cmpd_horizcrs_code IS NULL OR crs.cmpd_horizcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind IN ('engineering', 'derived')))
@@ -707,12 +702,11 @@ class EPSGImporter
             SELECT
                 'urn:ogc:def:crs:EPSG::' || crs.coord_ref_sys_code AS constant_value,
                 crs.coord_ref_sys_name AS constant_name,
-                crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || 'Scope: ' || s.scope || '\n' || crs.remarks AS constant_help,
+                crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || crs.remarks AS constant_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2020-09-01'
             LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
-            LEFT JOIN epsg_scope s ON u.scope_code = s.scope_code
             LEFT JOIN epsg_extent e ON u.extent_code = e.extent_code
             WHERE dep.deprecation_id IS NULL AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
             AND (crs.cmpd_horizcrs_code IS NULL OR crs.cmpd_horizcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind IN ('engineering', 'derived')))
@@ -737,12 +731,11 @@ class EPSGImporter
             SELECT
                 'urn:ogc:def:crs:EPSG::' || crs.coord_ref_sys_code AS constant_value,
                 crs.coord_ref_sys_name AS constant_name,
-                crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || 'Scope: ' || s.scope || '\n' || crs.remarks AS constant_help,
+                crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || crs.remarks AS constant_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2020-09-01'
             LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
-            LEFT JOIN epsg_scope s ON u.scope_code = s.scope_code
             LEFT JOIN epsg_extent e ON u.extent_code = e.extent_code
             WHERE dep.deprecation_id IS NULL AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
             AND (crs.cmpd_horizcrs_code IS NULL OR crs.cmpd_horizcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind IN ('engineering', 'derived')))
@@ -767,12 +760,11 @@ class EPSGImporter
             SELECT
                 'urn:ogc:def:crs:EPSG::' || crs.coord_ref_sys_code AS constant_value,
                 crs.coord_ref_sys_kind || '_' || crs.coord_ref_sys_name AS constant_name,
-                crs.coord_ref_sys_name || '\n' || 'Type: ' || crs.coord_ref_sys_kind || '\n' || 'Extent: ' || e.extent_description || '\n' || 'Scope: ' || s.scope || '\n' || crs.remarks AS constant_help,
+                crs.coord_ref_sys_name || '\n' || 'Type: ' || crs.coord_ref_sys_kind || '\n' || 'Extent: ' || e.extent_description || '\n' || crs.remarks AS constant_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2020-09-01'
             LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
-            LEFT JOIN epsg_scope s ON u.scope_code = s.scope_code
             LEFT JOIN epsg_extent e ON u.extent_code = e.extent_code
             WHERE dep.deprecation_id IS NULL AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
             AND (crs.cmpd_horizcrs_code IS NULL OR crs.cmpd_horizcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind IN ('engineering', 'derived')))
