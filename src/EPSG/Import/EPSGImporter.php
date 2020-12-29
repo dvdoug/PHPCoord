@@ -1020,9 +1020,9 @@ class EPSGImporter
                 'urn:ogc:def:crs:EPSG::' || crs.coord_ref_sys_code AS urn,
                 crs.coord_ref_sys_name AS name,
                 'urn:ogc:def:cs:EPSG::' || crs.coord_sys_code AS coordinate_system,
-                'urn:ogc:def:datum:EPSG::' || crs.datum_code AS datum,
-                'urn:ogc:def:crs:EPSG::' || crs.base_crs_code AS base_crs
+                'urn:ogc:def:datum:EPSG::' || COALESCE(crs.datum_code, crs_base.datum_code) AS datum
             FROM epsg_coordinatereferencesystem crs
+            LEFT JOIN epsg_coordinatereferencesystem crs_base ON crs_base.coord_ref_sys_code = crs.base_crs_code
             WHERE crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
             AND (crs.cmpd_horizcrs_code IS NULL OR crs.cmpd_horizcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
             AND (crs.cmpd_vertcrs_code IS NULL OR crs.cmpd_vertcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
@@ -1033,12 +1033,6 @@ class EPSGImporter
         $result = $sqlite->query($sql);
         $data = [];
         while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-            if ($row['datum'] === null) {
-                unset($row['datum']);
-            }
-            if ($row['base_crs'] === null) {
-                unset($row['base_crs']);
-            }
             $data[$row['urn']] = $row;
             unset($data[$row['urn']]['urn']);
         }
@@ -1053,9 +1047,9 @@ class EPSGImporter
                 'urn:ogc:def:crs:EPSG::' || crs.coord_ref_sys_code AS urn,
                 crs.coord_ref_sys_name AS name,
                 'urn:ogc:def:cs:EPSG::' || crs.coord_sys_code AS coordinate_system,
-                'urn:ogc:def:datum:EPSG::' || crs.datum_code AS datum,
-                'urn:ogc:def:crs:EPSG::' || crs.base_crs_code AS base_crs
+                'urn:ogc:def:datum:EPSG::' || COALESCE(crs.datum_code, crs_base.datum_code) AS datum
             FROM epsg_coordinatereferencesystem crs
+            LEFT JOIN epsg_coordinatereferencesystem crs_base ON crs_base.coord_ref_sys_code = crs.base_crs_code
             WHERE crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
             AND (crs.cmpd_horizcrs_code IS NULL OR crs.cmpd_horizcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
             AND (crs.cmpd_vertcrs_code IS NULL OR crs.cmpd_vertcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
@@ -1066,12 +1060,6 @@ class EPSGImporter
         $result = $sqlite->query($sql);
         $data = [];
         while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-            if ($row['datum'] === null) {
-                unset($row['datum']);
-            }
-            if ($row['base_crs'] === null) {
-                unset($row['base_crs']);
-            }
             $data[$row['urn']] = $row;
             unset($data[$row['urn']]['urn']);
         }
@@ -1086,9 +1074,9 @@ class EPSGImporter
                 'urn:ogc:def:crs:EPSG::' || crs.coord_ref_sys_code AS urn,
                 crs.coord_ref_sys_name AS name,
                 'urn:ogc:def:cs:EPSG::' || crs.coord_sys_code AS coordinate_system,
-                'urn:ogc:def:datum:EPSG::' || crs.datum_code AS datum,
-                'urn:ogc:def:crs:EPSG::' || crs.base_crs_code AS base_crs
+                'urn:ogc:def:datum:EPSG::' || COALESCE(crs.datum_code, crs_base.datum_code) AS datum
             FROM epsg_coordinatereferencesystem crs
+            LEFT JOIN epsg_coordinatereferencesystem crs_base ON crs_base.coord_ref_sys_code = crs.base_crs_code
             WHERE crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
             AND (crs.cmpd_horizcrs_code IS NULL OR crs.cmpd_horizcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
             AND (crs.cmpd_vertcrs_code IS NULL OR crs.cmpd_vertcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
@@ -1099,12 +1087,6 @@ class EPSGImporter
         $result = $sqlite->query($sql);
         $data = [];
         while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-            if ($row['datum'] === null) {
-                unset($row['datum']);
-            }
-            if ($row['base_crs'] === null) {
-                unset($row['base_crs']);
-            }
             $data[$row['urn']] = $row;
             unset($data[$row['urn']]['urn']);
         }
@@ -1119,9 +1101,9 @@ class EPSGImporter
                 'urn:ogc:def:crs:EPSG::' || crs.coord_ref_sys_code AS urn,
                 crs.coord_ref_sys_name AS name,
                 'urn:ogc:def:cs:EPSG::' || crs.coord_sys_code AS coordinate_system,
-                'urn:ogc:def:datum:EPSG::' || crs.datum_code AS datum,
-                'urn:ogc:def:crs:EPSG::' || crs.base_crs_code AS base_crs
+                'urn:ogc:def:datum:EPSG::' || COALESCE(crs.datum_code, crs_base.datum_code) AS datum
             FROM epsg_coordinatereferencesystem crs
+            LEFT JOIN epsg_coordinatereferencesystem crs_base ON crs_base.coord_ref_sys_code = crs.base_crs_code
             WHERE crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
             AND (crs.cmpd_horizcrs_code IS NULL OR crs.cmpd_horizcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
             AND (crs.cmpd_vertcrs_code IS NULL OR crs.cmpd_vertcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
@@ -1132,12 +1114,6 @@ class EPSGImporter
         $result = $sqlite->query($sql);
         $data = [];
         while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-            if ($row['datum'] === null) {
-                unset($row['datum']);
-            }
-            if ($row['base_crs'] === null) {
-                unset($row['base_crs']);
-            }
             $data[$row['urn']] = $row;
             unset($data[$row['urn']]['urn']);
         }
@@ -1152,9 +1128,9 @@ class EPSGImporter
                 'urn:ogc:def:crs:EPSG::' || crs.coord_ref_sys_code AS urn,
                 crs.coord_ref_sys_name AS name,
                 'urn:ogc:def:cs:EPSG::' || crs.coord_sys_code AS coordinate_system,
-                'urn:ogc:def:datum:EPSG::' || crs.datum_code AS datum,
-                'urn:ogc:def:crs:EPSG::' || crs.base_crs_code AS base_crs
+                'urn:ogc:def:datum:EPSG::' || COALESCE(crs.datum_code, crs_base.datum_code) AS datum
             FROM epsg_coordinatereferencesystem crs
+            LEFT JOIN epsg_coordinatereferencesystem crs_base ON crs_base.coord_ref_sys_code = crs.base_crs_code
             WHERE crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
             AND (crs.cmpd_horizcrs_code IS NULL OR crs.cmpd_horizcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
             AND (crs.cmpd_vertcrs_code IS NULL OR crs.cmpd_vertcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
@@ -1165,12 +1141,6 @@ class EPSGImporter
         $result = $sqlite->query($sql);
         $data = [];
         while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-            if ($row['datum'] === null) {
-                unset($row['datum']);
-            }
-            if ($row['base_crs'] === null) {
-                unset($row['base_crs']);
-            }
             $data[$row['urn']] = $row;
             unset($data[$row['urn']]['urn']);
         }
@@ -1186,9 +1156,9 @@ class EPSGImporter
                 crs.coord_ref_sys_kind AS kind,
                 crs.coord_ref_sys_name AS name,
                 'urn:ogc:def:cs:EPSG::' || crs.coord_sys_code AS coordinate_system,
-                'urn:ogc:def:datum:EPSG::' || crs.datum_code AS datum,
-                'urn:ogc:def:crs:EPSG::' || crs.base_crs_code AS base_crs
+                'urn:ogc:def:datum:EPSG::' || COALESCE(crs.datum_code, crs_base.datum_code) AS datum
             FROM epsg_coordinatereferencesystem crs
+            LEFT JOIN epsg_coordinatereferencesystem crs_base ON crs_base.coord_ref_sys_code = crs.base_crs_code
             WHERE crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
             AND (crs.cmpd_horizcrs_code IS NULL OR crs.cmpd_horizcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
             AND (crs.cmpd_vertcrs_code IS NULL OR crs.cmpd_vertcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))

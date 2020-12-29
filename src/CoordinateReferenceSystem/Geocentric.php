@@ -2652,7 +2652,7 @@ class Geocentric extends CoordinateReferenceSystem
         return new self(
             $srid,
             Cartesian::fromSRID($data['coordinate_system']),
-            $data['datum'] ? Datum::fromSRID($data['datum']) : self::fromSRID($data['base_crs'])->getDatum()
+            Datum::fromSRID($data['datum'])
         );
     }
 

@@ -44,8 +44,6 @@ abstract class CoordinateReferenceSystem
 
     protected Datum $datum;
 
-    protected CoordinateReferenceSystem $baseCRS;
-
     public function getSRID(): string
     {
         return $this->srid;

@@ -371,18 +371,14 @@ class ProjectedPointTest extends TestCase
         $fromCRS = new Projected(
             'foo',
             Cartesian::fromSRID(Cartesian::EPSG_AXES_EASTING_NORTHING_E_N_ORIENTATIONS_EAST_NORTH_UOM_M),
-            new Geographic2D(
-                'foo',
-                Ellipsoidal::fromSRID(Ellipsoidal::EPSG_AXES_LATITUDE_LONGITUDE_ORIENTATIONS_NORTH_EAST_UOM_DEGREE),
-                new Datum(
-                    Datum::DATUM_TYPE_GEODETIC,
-                    new Ellipsoid(
-                        new Metre(3),
-                        new Metre(3)
-                    ),
-                    null,
-                    null
-                )
+            new Datum(
+                Datum::DATUM_TYPE_GEODETIC,
+                new Ellipsoid(
+                    new Metre(3),
+                    new Metre(3)
+                ),
+                null,
+                null
             )
         );
         $from = ProjectedPoint::createFromEastingNorthing(new Metre(-3.2339303), new Metre(6.0257775), $fromCRS);
