@@ -108,7 +108,7 @@ class EPSGImporter
                 m.unit_of_meas_name || '\n' || m.remarks AS constant_help,
                 m.deprecated
             FROM epsg_unitofmeasure m
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_unitofmeasure' AND dep.object_code = m.uom_code AND dep.deprecation_date <= '2020-09-01'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_unitofmeasure' AND dep.object_code = m.uom_code AND dep.deprecation_date <= '2020-12-14'
             WHERE m.unit_of_meas_type = 'angle' AND m.unit_of_meas_name NOT LIKE '%per second%' AND m.unit_of_meas_name NOT LIKE '%per year%'
             ORDER BY constant_name
             ";
@@ -128,7 +128,7 @@ class EPSGImporter
                 m.unit_of_meas_name || '\n' || m.remarks AS constant_help,
                 m.deprecated
             FROM epsg_unitofmeasure m
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_unitofmeasure' AND dep.object_code = m.uom_code AND dep.deprecation_date <= '2020-09-01'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_unitofmeasure' AND dep.object_code = m.uom_code AND dep.deprecation_date <= '2020-12-14'
             WHERE m.unit_of_meas_type = 'length' AND m.unit_of_meas_name NOT LIKE '%per second%' AND m.unit_of_meas_name NOT LIKE '%per year%'
             AND m.unit_of_meas_name NOT LIKE '%bin%'
             ORDER BY constant_name
@@ -149,7 +149,7 @@ class EPSGImporter
                 m.unit_of_meas_name || '\n' || m.remarks AS constant_help,
                 m.deprecated
             FROM epsg_unitofmeasure m
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_unitofmeasure' AND dep.object_code = m.uom_code AND dep.deprecation_date <= '2020-09-01'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_unitofmeasure' AND dep.object_code = m.uom_code AND dep.deprecation_date <= '2020-12-14'
             WHERE m.unit_of_meas_type = 'scale' AND m.unit_of_meas_name NOT LIKE '%per second%' AND m.unit_of_meas_name NOT LIKE '%per year%'
             AND m.unit_of_meas_name NOT LIKE '%bin%'
             ORDER BY constant_name
@@ -170,7 +170,7 @@ class EPSGImporter
                 m.unit_of_meas_name || '\n' || m.remarks AS constant_help,
                 m.deprecated
             FROM epsg_unitofmeasure m
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_unitofmeasure' AND dep.object_code = m.uom_code AND dep.deprecation_date <= '2020-09-01'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_unitofmeasure' AND dep.object_code = m.uom_code AND dep.deprecation_date <= '2020-12-14'
             WHERE m.unit_of_meas_type = 'time' AND m.unit_of_meas_name NOT LIKE '%per second%' AND m.unit_of_meas_name NOT LIKE '%per year%'
             ORDER BY constant_name
             ";
@@ -190,7 +190,7 @@ class EPSGImporter
                 m.unit_of_meas_name || '\n' || m.remarks AS constant_help,
                 m.deprecated
             FROM epsg_unitofmeasure m
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_unitofmeasure' AND dep.object_code = m.uom_code AND dep.deprecation_date <= '2020-09-01'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_unitofmeasure' AND dep.object_code = m.uom_code AND dep.deprecation_date <= '2020-12-14'
             WHERE (m.unit_of_meas_name LIKE '%per second%' OR m.unit_of_meas_name LIKE '%per year%')
             ORDER BY constant_name
             ";
@@ -210,7 +210,7 @@ class EPSGImporter
                 m.unit_of_meas_name || '\n' || m.remarks AS constant_help,
                 m.deprecated
             FROM epsg_unitofmeasure m
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_unitofmeasure' AND dep.object_code = m.uom_code AND dep.deprecation_date <= '2020-09-01'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_unitofmeasure' AND dep.object_code = m.uom_code AND dep.deprecation_date <= '2020-12-14'
             WHERE m.unit_of_meas_type NOT IN ('angle', 'length', 'scale', 'time') AND m.unit_of_meas_name NOT LIKE '%per second%' AND m.unit_of_meas_name NOT LIKE '%per year%'
             ORDER BY constant_name
             ";
@@ -346,7 +346,7 @@ class EPSGImporter
                 p.prime_meridian_name || '\n' || p.remarks AS constant_help,
                 p.deprecated
             FROM epsg_primemeridian p
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_primemeridian' AND dep.object_code = p.prime_meridian_code AND dep.deprecation_date <= '2020-09-01'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_primemeridian' AND dep.object_code = p.prime_meridian_code AND dep.deprecation_date <= '2020-12-14'
             WHERE dep.deprecation_id IS NULL
             ORDER BY constant_name
             ";
@@ -393,7 +393,7 @@ class EPSGImporter
                 e.deprecated
             FROM epsg_ellipsoid e
             JOIN epsg_datum d ON d.ellipsoid_code = e.ellipsoid_code -- there are some never used entries
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_ellipsoid' AND dep.object_code = e.ellipsoid_code AND dep.deprecation_date <= '2020-09-01'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_ellipsoid' AND dep.object_code = e.ellipsoid_code AND dep.deprecation_date <= '2020-12-14'
             WHERE dep.deprecation_id IS NULL
             ORDER BY constant_name
             ";
@@ -446,7 +446,7 @@ class EPSGImporter
                 d.datum_name || '\n' || 'Type: ' || d.datum_type || '\n' || 'Extent: ' || e.extent_description || '\n' || d.origin_description || '\n' || d.remarks AS constant_help,
                 d.deprecated
             FROM epsg_datum d
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_datum' AND dep.object_code = d.datum_code AND dep.deprecation_date <= '2020-09-01'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_datum' AND dep.object_code = d.datum_code AND dep.deprecation_date <= '2020-12-14'
             LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_datum' AND u.object_code = d.datum_code
             LEFT JOIN epsg_extent e ON u.extent_code = e.extent_code
             WHERE dep.deprecation_id IS NULL AND d.datum_type != 'engineering'
@@ -519,7 +519,7 @@ class EPSGImporter
                 cs.deprecated
             FROM epsg_coordinatesystem cs
             JOIN epsg_coordinatereferencesystem crs ON crs.coord_sys_code = cs.coord_sys_code AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatesystem' AND dep.object_code = cs.coord_sys_code AND dep.deprecation_date <= '2020-09-01'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatesystem' AND dep.object_code = cs.coord_sys_code AND dep.deprecation_date <= '2020-12-14'
             WHERE dep.deprecation_id IS NULL AND cs.coord_sys_type != 'ordinal'
             AND cs.coord_sys_type = 'Cartesian'
             ORDER BY constant_name
@@ -545,7 +545,7 @@ class EPSGImporter
                 cs.deprecated
             FROM epsg_coordinatesystem cs
             JOIN epsg_coordinatereferencesystem crs ON crs.coord_sys_code = cs.coord_sys_code AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatesystem' AND dep.object_code = cs.coord_sys_code AND dep.deprecation_date <= '2020-09-01'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatesystem' AND dep.object_code = cs.coord_sys_code AND dep.deprecation_date <= '2020-12-14'
             WHERE dep.deprecation_id IS NULL AND cs.coord_sys_type != 'ordinal'
             AND cs.coord_sys_type = 'ellipsoidal'
             ORDER BY constant_name
@@ -571,7 +571,7 @@ class EPSGImporter
                 cs.deprecated
             FROM epsg_coordinatesystem cs
             JOIN epsg_coordinatereferencesystem crs ON crs.coord_sys_code = cs.coord_sys_code AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatesystem' AND dep.object_code = cs.coord_sys_code AND dep.deprecation_date <= '2020-09-01'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatesystem' AND dep.object_code = cs.coord_sys_code AND dep.deprecation_date <= '2020-12-14'
             WHERE dep.deprecation_id IS NULL AND cs.coord_sys_type != 'ordinal'
             AND cs.coord_sys_type = 'vertical'
             ORDER BY constant_name
@@ -597,7 +597,7 @@ class EPSGImporter
                 cs.deprecated
             FROM epsg_coordinatesystem cs
             JOIN epsg_coordinatereferencesystem crs ON crs.coord_sys_code = cs.coord_sys_code AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatesystem' AND dep.object_code = cs.coord_sys_code AND dep.deprecation_date <= '2020-09-01'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatesystem' AND dep.object_code = cs.coord_sys_code AND dep.deprecation_date <= '2020-12-14'
             WHERE dep.deprecation_id IS NULL AND cs.coord_sys_type != 'ordinal'
             AND cs.coord_sys_type NOT IN ('Cartesian', 'ellipsoidal', 'vertical')
             ORDER BY constant_name
@@ -788,7 +788,7 @@ class EPSGImporter
                 crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || crs.remarks AS constant_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2020-09-01'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2020-12-14'
             LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
             LEFT JOIN epsg_extent e ON u.extent_code = e.extent_code
             WHERE dep.deprecation_id IS NULL AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
@@ -817,7 +817,7 @@ class EPSGImporter
                 crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || crs.remarks AS constant_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2020-09-01'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2020-12-14'
             LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
             LEFT JOIN epsg_extent e ON u.extent_code = e.extent_code
             WHERE dep.deprecation_id IS NULL AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
@@ -846,7 +846,7 @@ class EPSGImporter
                 crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || crs.remarks AS constant_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2020-09-01'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2020-12-14'
             LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
             LEFT JOIN epsg_extent e ON u.extent_code = e.extent_code
             WHERE dep.deprecation_id IS NULL AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
@@ -875,7 +875,7 @@ class EPSGImporter
                 crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || crs.remarks AS constant_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2020-09-01'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2020-12-14'
             LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
             LEFT JOIN epsg_extent e ON u.extent_code = e.extent_code
             WHERE dep.deprecation_id IS NULL AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
@@ -904,7 +904,7 @@ class EPSGImporter
                 crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || crs.remarks AS constant_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2020-09-01'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2020-12-14'
             LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
             LEFT JOIN epsg_extent e ON u.extent_code = e.extent_code
             WHERE dep.deprecation_id IS NULL AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
@@ -933,7 +933,7 @@ class EPSGImporter
                 crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || crs.remarks AS constant_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2020-09-01'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2020-12-14'
             LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
             LEFT JOIN epsg_extent e ON u.extent_code = e.extent_code
             WHERE dep.deprecation_id IS NULL AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
@@ -962,7 +962,7 @@ class EPSGImporter
                 crs.coord_ref_sys_name || '\n' || 'Type: ' || crs.coord_ref_sys_kind || '\n' || 'Extent: ' || e.extent_description || '\n' || crs.remarks AS constant_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2020-09-01'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2020-12-14'
             LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
             LEFT JOIN epsg_extent e ON u.extent_code = e.extent_code
             WHERE dep.deprecation_id IS NULL AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
@@ -1217,7 +1217,7 @@ class EPSGImporter
             FROM epsg_coordoperationmethod m
             JOIN epsg_coordoperation o on m.coord_op_method_code = o.coord_op_method_code -- only want methods that are actually used
             LEFT JOIN epsg_coordoperationparamvalue p ON p.coord_op_code = o.coord_op_code AND p.coord_op_method_code = m.coord_op_method_code
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperationmethod' AND dep.object_code = m.coord_op_method_code AND dep.deprecation_date <= '2020-09-01'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperationmethod' AND dep.object_code = m.coord_op_method_code AND dep.deprecation_date <= '2020-12-14'
             WHERE dep.deprecation_id IS NULL
             AND o.coord_op_type != 'conversion'
             AND m.coord_op_method_name NOT LIKE '%wellbore%'
@@ -1239,8 +1239,8 @@ class EPSGImporter
             JOIN epsg_coordoperation o on m.coord_op_method_code = o.coord_op_method_code -- only want methods that are actually used
             JOIN epsg_coordinatereferencesystem crs ON crs.projection_conv_code = o.coord_op_code
             LEFT JOIN epsg_coordoperationparamvalue p ON p.coord_op_code = o.coord_op_code AND p.coord_op_method_code = m.coord_op_method_code
-            LEFT JOIN epsg_deprecation dep_method ON dep_method.object_table_name = 'epsg_coordoperationmethod' AND dep_method.object_code = m.coord_op_method_code AND dep_method.deprecation_date <= '2020-09-01'
-            LEFT JOIN epsg_deprecation dep_crs ON dep_crs.object_table_name = 'epsg_coordinatereferencesystem' AND dep_crs.object_code = crs.coord_ref_sys_code AND dep_crs.deprecation_date <= '2020-09-01'
+            LEFT JOIN epsg_deprecation dep_method ON dep_method.object_table_name = 'epsg_coordoperationmethod' AND dep_method.object_code = m.coord_op_method_code AND dep_method.deprecation_date <= '2020-12-14'
+            LEFT JOIN epsg_deprecation dep_crs ON dep_crs.object_table_name = 'epsg_coordinatereferencesystem' AND dep_crs.object_code = crs.coord_ref_sys_code AND dep_crs.deprecation_date <= '2020-12-14'
             WHERE dep_method.deprecation_id IS NULL AND dep_crs.deprecation_id IS NULL
             AND m.coord_op_method_name NOT LIKE '%wellbore%'
             AND m.coord_op_method_name NOT LIKE '%mining%'

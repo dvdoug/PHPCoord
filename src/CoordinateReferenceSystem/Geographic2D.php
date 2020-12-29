@@ -1850,7 +1850,7 @@ class Geographic2D extends Geographic
 
     /**
      * MGI 1901
-     * Extent: Boznia and Herzegovina; Croatia - onshore; Kosovo; Montenegro - onshore; North Macedonia; Serbia;
+     * Extent: Bosnia and Herzegovina; Croatia - onshore; Kosovo; Montenegro - onshore; North Macedonia; Serbia;
      * Slovenia - onshore.
      * Adopted in 1924 replacing MGI (Ferro) (CRS code 4805). Densified in 1948. In Slovenia replaced by D96 (CRS code
      * 4765). In Croatia replaced by HTRS96 (CRS code 4761). In Serbia replaced by SREF98 and then by SRB_ETRS89

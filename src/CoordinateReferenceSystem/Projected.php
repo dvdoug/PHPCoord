@@ -5779,7 +5779,7 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * KKJ / Finland Uniform Coordinate System
-     * Extent: Finland - onshore between 25°30'E and 28°30'E.
+     * Extent: Finland - onshore.
      * Known as Uniform Coordinate System (YKJ) when used over all country and also as Basic Coordinate System zone 3
      * at larger scales.
      */
@@ -6711,13 +6711,13 @@ class Projected extends CoordinateReferenceSystem
      * M'poraloko / UTM zone 32N
      * Extent: Gabon - onshore north of equator and west of 12°E.
      */
-    public const EPSG_M_PORALOKO_UTM_ZONE_32N = 'urn:ogc:def:crs:EPSG::26632';
+    public const EPSG_MPORALOKO_UTM_ZONE_32N = 'urn:ogc:def:crs:EPSG::26632';
 
     /**
      * M'poraloko / UTM zone 32S
      * Extent: Gabon - west of 12°E - onshore and offshore.
      */
-    public const EPSG_M_PORALOKO_UTM_ZONE_32S = 'urn:ogc:def:crs:EPSG::26692';
+    public const EPSG_MPORALOKO_UTM_ZONE_32S = 'urn:ogc:def:crs:EPSG::26692';
 
     /**
      * MAGNA-SIRGAS / Arauca urban grid
@@ -6763,7 +6763,7 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * MAGNA-SIRGAS / Colombia Bogota zone
-     * Extent: Colombia - onshore between 1°30'W and 1°30'E of Bogota (75°35'W and 72°35'W of Greenwich).
+     * Extent: Colombia - mainland onshore.
      * Replaces Bogota 1975 / Colombia Bogota zone (CRS code 21897).
      */
     public const EPSG_MAGNA_SIRGAS_COLOMBIA_BOGOTA_ZONE = 'urn:ogc:def:crs:EPSG::3116';
@@ -30344,7 +30344,7 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * RT38 2.5 gon V
-     * Extent: Sweden - communes between approximately 14°40'E and 16°55'E. See information source for map.
+     * Extent: Sweden - onshore.
      * Replaced by RT90 2.5 gon V (CRS code 3021).
      */
     public const EPSG_RT38_2_5_GON_V = 'urn:ogc:def:crs:EPSG::3027';
@@ -30386,7 +30386,7 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * RT90 2.5 gon V
-     * Extent: Sweden - communes between approximately 14°40'E and 16°55'E. See information source for map.
+     * Extent: Sweden - onshore.
      * Replaces RT38 2.5 gon V (CRS code 3027) from 1990. From 2003 replaced by SWEREF systems (CRS codes 3006-3018).
      */
     public const EPSG_RT90_2_5_GON_V = 'urn:ogc:def:crs:EPSG::3021';
@@ -32391,13 +32391,14 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * VN-2000 / TM-3 zone 482
-     * Extent: Vietnam - between 103°30'E and 106°30'E, onshore.
+     * Extent: Vietnam - Ha Noi city, Ha Nam, Ha Tay, Ninh Binh, Thanh Hoa and Vinh Phuc provinces; Can Tho city, Bac
+     * Lieu, Dong Thap and Hau Giang provinces.
      */
     public const EPSG_VN_2000_TM_3_ZONE_482 = 'urn:ogc:def:crs:EPSG::5897';
 
     /**
      * VN-2000 / TM-3 zone 491
-     * Extent: Vietnam - onshore east of 106°30'E.
+     * Extent: Vietnam - Quang Ngai province.
      */
     public const EPSG_VN_2000_TM_3_ZONE_491 = 'urn:ogc:def:crs:EPSG::5898';
 
@@ -45709,6 +45710,11 @@ class Projected extends CoordinateReferenceSystem
         ],
         'urn:ogc:def:crs:EPSG::29873' => [
             'name' => 'Timbalai 1948 / RSO Borneo (m)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::4400',
+            'base_crs' => 'urn:ogc:def:crs:EPSG::4298',
+        ],
+        'urn:ogc:def:crs:EPSG::29874' => [
+            'name' => 'Timbalai 1948 / RSO Sarawak LSD (m)',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::4400',
             'base_crs' => 'urn:ogc:def:crs:EPSG::4298',
         ],
@@ -62319,8 +62325,13 @@ class Projected extends CoordinateReferenceSystem
         ],
         'urn:ogc:def:crs:EPSG::9498' => [
             'name' => 'POSGAR 2007 / CABA 2019',
-            'coordinate_system' => 'urn:ogc:def:cs:EPSG::4500',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::4530',
             'base_crs' => 'urn:ogc:def:crs:EPSG::5340',
+        ],
+        'urn:ogc:def:crs:EPSG::9674' => [
+            'name' => 'NAD83 / USFS R6 Albers',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::4400',
+            'base_crs' => 'urn:ogc:def:crs:EPSG::4269',
         ],
     ];
 
