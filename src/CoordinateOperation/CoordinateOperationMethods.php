@@ -482,6 +482,7 @@ class CoordinateOperationMethods
             self::EPSG_TRANSVERSE_MERCATOR => 'transverseMercator',
             self::EPSG_TRANSVERSE_MERCATOR_SOUTH_ORIENTATED => 'transverseMercator',
             self::EPSG_TRANSVERSE_MERCATOR_ZONED_GRID_SYSTEM => 'transverseMercatorZonedGrid',
+            self::EPSG_VERTICAL_OFFSET => 'verticalOffset',
         ];
     }
 }

@@ -56,4 +56,13 @@ class VerticalPointTest extends TestCase
         $to = VerticalPoint::create(new Metre(80), Vertical::fromSRID(Vertical::EPSG_EGM2008_HEIGHT));
         self::assertEqualsWithDelta(20, $from->calculateDistance($to)->getValue(), 0.000001);
     }
+
+    public function testVerticalOffset(): void
+    {
+        $from = VerticalPoint::create(new Metre(2.55), Vertical::fromSRID(Vertical::EPSG_BALTIC_1977_HEIGHT));
+        $toCRS = Vertical::fromSRID(Vertical::EPSG_BLACK_SEA_HEIGHT);
+        $to = $from->verticalOffset($toCRS, new Metre(0.4));
+
+        self::assertEqualsWithDelta(2.95, $to->getHeight()->getValue(), 0.001);
+    }
 }

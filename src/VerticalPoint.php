@@ -85,4 +85,16 @@ class VerticalPoint extends Point
     {
         return "({$this->height})";
     }
+
+    /**
+     * Vertical Offset
+     * This transformation allows calculation of height (or depth) in the target system by adding the parameter value
+     * to the height (or depth)-value of the point in the source system.
+     */
+    public function verticalOffset(
+        Vertical $to,
+        Length $verticalOffset
+    ): self {
+        return static::create($this->height->add($verticalOffset), $to);
+    }
 }
