@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\Datum;
 
 use PHPCoord\Exception\UnknownPrimeMeridianException;
+use PHPCoord\UnitOfMeasure\Angle\Degree;
 use PHPUnit\Framework\TestCase;
 
 class PrimeMeridianTest extends TestCase
@@ -43,7 +44,8 @@ class PrimeMeridianTest extends TestCase
     {
         $object = PrimeMeridian::fromSRID(PrimeMeridian::EPSG_GREENWICH);
         self::assertEquals('Greenwich', $object->getName());
-        self::assertEquals('0°', $object->getGreenwichLongitude()->getFormattedValue());
+        self::assertEquals('0', $object->getGreenwichLongitude()->getValue());
+        self::assertInstanceOf(Degree::class, $object->getGreenwichLongitude());
     }
 
     public function primeMeridians(): array

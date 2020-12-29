@@ -30,7 +30,6 @@ use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPCoord\UnitOfMeasure\Scale\Coefficient;
 use PHPCoord\UnitOfMeasure\Scale\Scale;
-use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
 use function sin;
 use function sqrt;
 use function tan;
@@ -80,21 +79,21 @@ class ProjectedPoint extends Point
         $southingAxis = $this->getAxisByName(Axis::SOUTHING);
 
         if ($easting && $eastingAxis) {
-            $this->easting = UnitOfMeasureFactory::convertLength($easting, $eastingAxis->getUnitOfMeasureId());
-            $this->westing = UnitOfMeasureFactory::makeUnit(-$this->easting->getValue(), $eastingAxis->getUnitOfMeasureId());
+            $this->easting = Length::convert($easting, $eastingAxis->getUnitOfMeasureId());
+            $this->westing = $this->easting->multiply(-1);
         } elseif ($westing && $westingAxis) {
-            $this->westing = UnitOfMeasureFactory::convertLength($westing, $westingAxis->getUnitOfMeasureId());
-            $this->easting = UnitOfMeasureFactory::makeUnit(-$this->westing->getValue(), $westingAxis->getUnitOfMeasureId());
+            $this->westing = Length::convert($westing, $westingAxis->getUnitOfMeasureId());
+            $this->easting = $this->westing->multiply(-1);
         } else {
             throw new InvalidAxesException($crs->getCoordinateSystem()->getAxes());
         }
 
         if ($northing && $northingAxis) {
-            $this->northing = UnitOfMeasureFactory::convertLength($northing, $northingAxis->getUnitOfMeasureId());
-            $this->southing = UnitOfMeasureFactory::makeUnit(-$this->northing->getValue(), $northingAxis->getUnitOfMeasureId());
+            $this->northing = Length::convert($northing, $northingAxis->getUnitOfMeasureId());
+            $this->southing = $this->northing->multiply(-1);
         } elseif ($southing && $southingAxis) {
-            $this->southing = UnitOfMeasureFactory::convertLength($southing, $southingAxis->getUnitOfMeasureId());
-            $this->northing = UnitOfMeasureFactory::makeUnit(-$this->southing->getValue(), $southingAxis->getUnitOfMeasureId());
+            $this->southing = Length::convert($southing, $southingAxis->getUnitOfMeasureId());
+            $this->northing = $this->southing->multiply(-1);
         } else {
             throw new InvalidAxesException($crs->getCoordinateSystem()->getAxes());
         }

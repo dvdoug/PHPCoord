@@ -26,12 +26,6 @@ class CoefficientTest extends TestCase
         self::assertEquals(0.12, $original->getValue());
     }
 
-    public function testGetFormattedValue(): void
-    {
-        $original = new Coefficient(0.12);
-        self::assertEquals('0.12', $original->getFormattedValue());
-    }
-
     public function testGetUnitName(): void
     {
         $original = new Coefficient(0.12);

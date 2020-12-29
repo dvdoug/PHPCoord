@@ -11,9 +11,8 @@ namespace PHPCoord;
 use DateTime;
 use DateTimeImmutable;
 use PHPCoord\CoordinateReferenceSystem\Vertical;
+use PHPCoord\UnitOfMeasure\Length\Foot;
 use PHPCoord\UnitOfMeasure\Length\Metre;
-use PHPCoord\UnitOfMeasure\UnitOfMeasure;
-use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
 use PHPUnit\Framework\TestCase;
 
 class VerticalPointTest extends TestCase
@@ -47,7 +46,7 @@ class VerticalPointTest extends TestCase
 
     public function testVerticalWithFeetAsUnits(): void
     {
-        $object = VerticalPoint::create(UnitOfMeasureFactory::makeUnit(123, UnitOfMeasure::EPSG_LENGTH_FOOT), Vertical::fromSRID(Vertical::EPSG_EGM2008_HEIGHT));
+        $object = VerticalPoint::create(new Foot(123), Vertical::fromSRID(Vertical::EPSG_EGM2008_HEIGHT));
         self::assertEquals(37.4904, $object->getHeight()->getValue());
     }
 

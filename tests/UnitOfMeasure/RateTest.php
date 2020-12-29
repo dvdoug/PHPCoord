@@ -9,8 +9,10 @@ declare(strict_types=1);
 namespace PHPCoord\UnitOfMeasure;
 
 use PHPCoord\Exception\InvalidRateException;
+use PHPCoord\Exception\UnknownUnitOfMeasureException;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPCoord\UnitOfMeasure\Time\Second;
+use PHPCoord\UnitOfMeasure\Time\Time;
 use PHPCoord\UnitOfMeasure\Time\Year;
 use PHPUnit\Framework\TestCase;
 
@@ -25,19 +27,13 @@ class RateTest extends TestCase
         self::assertInstanceOf(Second::class, $original->getTime());
         self::assertEquals(1, $original->getTime()->getValue());
         self::assertEquals('metre per second', $original->getUnitName());
-        self::assertEquals('0.12 metre per second', $original->getFormattedValue());
     }
 
     public function testGetValue(): void
     {
-        $original = new Metre(0.12);
+        $original = new Rate(new Metre(0.12), new Second(1));
         self::assertEquals(0.12, $original->getValue());
-    }
-
-    public function testGetFormattedValue(): void
-    {
-        $original = new Metre(0.12);
-        self::assertEquals('0.12m', $original->getFormattedValue());
+        self::assertEquals(0.12, $original->__toString());
     }
 
     public function testGetUnitName(): void
@@ -50,5 +46,40 @@ class RateTest extends TestCase
     {
         $this->expectException(InvalidRateException::class);
         $original = new Rate(new Year(1), new Second(1));
+    }
+
+    public function testCanGetSupported(): void
+    {
+        $supported = Time::getSupportedSRIDs();
+        self::assertGreaterThan(0, count($supported));
+        foreach ($supported as $key => $value) {
+            self::assertStringStartsWith('urn:ogc:def:', $key);
+            self::assertIsString($value);
+        }
+    }
+
+    /**
+     * @dataProvider unitsOfMeasure
+     */
+    public function testCanCreateAllUnits(string $srid): void
+    {
+        $newUnit = Rate::makeUnit(1, $srid);
+        self::assertInstanceOf(Rate::class, $newUnit);
+    }
+
+    public function testExceptionOnUnknownSRIDCode(): void
+    {
+        $this->expectException(UnknownUnitOfMeasureException::class);
+        $newUnit = Rate::makeUnit(1, 'foo');
+    }
+
+    public function unitsOfMeasure(): array
+    {
+        $data = [];
+        foreach (Rate::getSupportedSRIDs() as $srid => $name) {
+            $data[$name] = [$srid];
+        }
+
+        return $data;
     }
 }

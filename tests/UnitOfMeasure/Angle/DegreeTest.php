@@ -27,12 +27,6 @@ class DegreeTest extends TestCase
         self::assertEquals(1, $original->getValue());
     }
 
-    public function testGetFormattedValue(): void
-    {
-        $original = new Degree(1);
-        self::assertEquals('1°', $original->getFormattedValue());
-    }
-
     public function testGetUnitName(): void
     {
         $original = new Degree(1);

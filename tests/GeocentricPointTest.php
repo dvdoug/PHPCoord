@@ -12,11 +12,14 @@ use DateTime;
 use DateTimeImmutable;
 use PHPCoord\CoordinateReferenceSystem\Geocentric;
 use PHPCoord\CoordinateReferenceSystem\Geographic3D;
+use PHPCoord\Exception\InvalidCoordinateException;
 use PHPCoord\UnitOfMeasure\Angle\ArcSecond;
+use PHPCoord\UnitOfMeasure\Length\Foot;
 use PHPCoord\UnitOfMeasure\Length\Metre;
+use PHPCoord\UnitOfMeasure\Rate;
+use PHPCoord\UnitOfMeasure\Scale\PartsPerMillion;
 use PHPCoord\UnitOfMeasure\Scale\Unity;
-use PHPCoord\UnitOfMeasure\UnitOfMeasure;
-use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
+use PHPCoord\UnitOfMeasure\Time\Year;
 use PHPUnit\Framework\TestCase;
 
 class GeocentricPointTest extends TestCase
@@ -56,7 +59,7 @@ class GeocentricPointTest extends TestCase
 
     public function testWithFeetAsUnits(): void
     {
-        $object = GeocentricPoint::create(UnitOfMeasureFactory::makeUnit(123, UnitOfMeasure::EPSG_LENGTH_FOOT), UnitOfMeasureFactory::makeUnit(123, UnitOfMeasure::EPSG_LENGTH_FOOT), UnitOfMeasureFactory::makeUnit(123, UnitOfMeasure::EPSG_LENGTH_FOOT), Geocentric::fromSRID(Geocentric::EPSG_WGS_84));
+        $object = GeocentricPoint::create(new Foot(123), new Foot(123), new Foot(123), Geocentric::fromSRID(Geocentric::EPSG_WGS_84));
         self::assertEquals(37.4904, $object->getX()->getValue());
         self::assertEquals(37.4904, $object->getY()->getValue());
         self::assertEquals(37.4904, $object->getZ()->getValue());
@@ -163,7 +166,7 @@ class GeocentricPointTest extends TestCase
     {
         $from = GeocentricPoint::create(new Metre(3657660.66), new Metre(255768.55), new Metre(5201382.11), Geocentric::fromSRID(Geocentric::EPSG_WGS_72));
         $toCRS = Geocentric::fromSRID(Geocentric::EPSG_WGS_84);
-        $to = $from->coordinateFrameRotation($toCRS, new Metre(0), new Metre(0), new Metre(4.5), new ArcSecond(0), new ArcSecond(0), new ArcSecond(-0.554), UnitOfMeasureFactory::makeUnit(0.219, UnitOfMeasure::EPSG_SCALE_PARTS_PER_MILLION));
+        $to = $from->coordinateFrameRotation($toCRS, new Metre(0), new Metre(0), new Metre(4.5), new ArcSecond(0), new ArcSecond(0), new ArcSecond(-0.554), new PartsPerMillion(0.219));
 
         self::assertEqualsWithDelta(3657660.78, $to->getX()->getValue(), 0.01);
         self::assertEqualsWithDelta(255778.43, $to->getY()->getValue(), 0.01);
@@ -174,7 +177,7 @@ class GeocentricPointTest extends TestCase
     {
         $from = GeocentricPoint::create(new Metre(3657660.66), new Metre(255768.55), new Metre(5201382.11), Geocentric::fromSRID(Geocentric::EPSG_WGS_72));
         $toCRS = Geocentric::fromSRID(Geocentric::EPSG_WGS_84);
-        $to = $from->positionVectorTransformation($toCRS, new Metre(0), new Metre(0), new Metre(4.5), new ArcSecond(0), new ArcSecond(0), new ArcSecond(0.554), UnitOfMeasureFactory::makeUnit(0.219, UnitOfMeasure::EPSG_SCALE_PARTS_PER_MILLION));
+        $to = $from->positionVectorTransformation($toCRS, new Metre(0), new Metre(0), new Metre(4.5), new ArcSecond(0), new ArcSecond(0), new ArcSecond(0.554), new PartsPerMillion(0.219));
 
         self::assertEqualsWithDelta(3657660.78, $to->getX()->getValue(), 0.01);
         self::assertEqualsWithDelta(255778.43, $to->getY()->getValue(), 0.01);
@@ -185,7 +188,7 @@ class GeocentricPointTest extends TestCase
     {
         $from = GeocentricPoint::create(new Metre(2550408.96), new Metre(-5749912.26), new Metre(1054891.11), Geocentric::fromSRID(Geocentric::EPSG_LGD2006));
         $toCRS = Geocentric::fromSRID(Geocentric::EPSG_WGS_84);
-        $to = $from->coordinateFrameMolodenskyBadekas($toCRS, new Metre(-270.933), new Metre(115.599), new Metre(-360.226), new ArcSecond(-5.266), new ArcSecond(-1.238), new ArcSecond(2.381), UnitOfMeasureFactory::makeUnit(-5.109, UnitOfMeasure::EPSG_SCALE_PARTS_PER_MILLION), new Metre(2464351.59), new Metre(-5783466.61), new Metre(974809.81));
+        $to = $from->coordinateFrameMolodenskyBadekas($toCRS, new Metre(-270.933), new Metre(115.599), new Metre(-360.226), new ArcSecond(-5.266), new ArcSecond(-1.238), new ArcSecond(2.381), new PartsPerMillion(-5.109), new Metre(2464351.59), new Metre(-5783466.61), new Metre(974809.81));
 
         self::assertEqualsWithDelta(2550138.467, $to->getX()->getValue(), 0.1);
         self::assertEqualsWithDelta(-5749799.862, $to->getY()->getValue(), 0.1);
@@ -196,7 +199,7 @@ class GeocentricPointTest extends TestCase
     {
         $from = GeocentricPoint::create(new Metre(2550408.96), new Metre(-5749912.26), new Metre(1054891.11), Geocentric::fromSRID(Geocentric::EPSG_LGD2006));
         $toCRS = Geocentric::fromSRID(Geocentric::EPSG_WGS_84);
-        $to = $from->positionVectorMolodenskyBadekas($toCRS, new Metre(-270.933), new Metre(115.599), new Metre(-360.226), new ArcSecond(5.266), new ArcSecond(1.238), new ArcSecond(-2.381), UnitOfMeasureFactory::makeUnit(-5.109, UnitOfMeasure::EPSG_SCALE_PARTS_PER_MILLION), new Metre(2464351.59), new Metre(-5783466.61), new Metre(974809.81));
+        $to = $from->positionVectorMolodenskyBadekas($toCRS, new Metre(-270.933), new Metre(115.599), new Metre(-360.226), new ArcSecond(5.266), new ArcSecond(1.238), new ArcSecond(-2.381), new PartsPerMillion(-5.109), new Metre(2464351.59), new Metre(-5783466.61), new Metre(974809.81));
 
         self::assertEqualsWithDelta(2550138.467, $to->getX()->getValue(), 0.1);
         self::assertEqualsWithDelta(-5749799.862, $to->getY()->getValue(), 0.1);

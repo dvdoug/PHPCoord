@@ -1810,7 +1810,7 @@ class Geographic2D extends Geographic
      * M'poraloko
      * Extent: Gabon - onshore and offshore.
      */
-    public const EPSG_M_PORALOKO = 'urn:ogc:def:crs:EPSG::4266';
+    public const EPSG_MPORALOKO = 'urn:ogc:def:crs:EPSG::4266';
 
     /**
      * MACARIO SOLIS

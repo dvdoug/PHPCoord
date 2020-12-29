@@ -21,11 +21,14 @@ use PHPCoord\Exception\InvalidCoordinateReferenceSystemException;
 use PHPCoord\UnitOfMeasure\Angle\ArcSecond;
 use PHPCoord\UnitOfMeasure\Angle\Degree;
 use PHPCoord\UnitOfMeasure\Angle\Radian;
+use PHPCoord\UnitOfMeasure\Length\Chain;
+use PHPCoord\UnitOfMeasure\Length\ClarkeLink;
+use PHPCoord\UnitOfMeasure\Length\Foot;
 use PHPCoord\UnitOfMeasure\Length\Metre;
+use PHPCoord\UnitOfMeasure\Length\USSurveyFoot;
 use PHPCoord\UnitOfMeasure\Scale\Coefficient;
+use PHPCoord\UnitOfMeasure\Scale\PartsPerMillion;
 use PHPCoord\UnitOfMeasure\Scale\Unity;
-use PHPCoord\UnitOfMeasure\UnitOfMeasure;
-use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
 use PHPUnit\Framework\TestCase;
 
 class GeographicPointTest extends TestCase
@@ -88,7 +91,7 @@ class GeographicPointTest extends TestCase
 
     public function test3DWithRadianAndFeetAsUnits(): void
     {
-        $object = GeographicPoint::create(new Radian(0.123), new Radian(0.123), UnitOfMeasureFactory::makeUnit(123, UnitOfMeasure::EPSG_LENGTH_FOOT), Geographic3D::fromSRID(Geographic3D::EPSG_WGS_84));
+        $object = GeographicPoint::create(new Radian(0.123), new Radian(0.123), new Foot(123), Geographic3D::fromSRID(Geographic3D::EPSG_WGS_84));
         self::assertEquals(7.047380880109133, $object->getLatitude()->getValue());
         self::assertEquals(7.047380880109133, $object->getLongitude()->getValue());
         self::assertEquals(37.4904, $object->getHeight()->getValue());
@@ -121,7 +124,7 @@ class GeographicPointTest extends TestCase
     {
         $from = GeographicPoint::create(new Degree(55.0), new Degree(44.0), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_72));
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84);
-        $to = $from->coordinateFrameRotation($toCRS, new Metre(0), new Metre(0), new Metre(4.5), new ArcSecond(0), new ArcSecond(0), new ArcSecond(-0.554), UnitOfMeasureFactory::makeUnit(0.219, UnitOfMeasure::EPSG_SCALE_PARTS_PER_MILLION));
+        $to = $from->coordinateFrameRotation($toCRS, new Metre(0), new Metre(0), new Metre(4.5), new ArcSecond(0), new ArcSecond(0), new ArcSecond(-0.554), new PartsPerMillion(0.219));
 
         self::assertEqualsWithDelta(55.000025, $to->getLatitude()->getValue(), 0.000001);
         self::assertEqualsWithDelta(44.000154, $to->getLongitude()->getValue(), 0.000001);
@@ -132,7 +135,7 @@ class GeographicPointTest extends TestCase
     {
         $from = GeographicPoint::create(new Degree(55.0), new Degree(44.0), new Metre(0), Geographic3D::fromSRID(Geographic3D::EPSG_WGS_72));
         $toCRS = Geographic3D::fromSRID(Geographic3D::EPSG_WGS_84);
-        $to = $from->coordinateFrameRotation($toCRS, new Metre(0), new Metre(0), new Metre(4.5), new ArcSecond(0), new ArcSecond(0), new ArcSecond(-0.554), UnitOfMeasureFactory::makeUnit(0.219, UnitOfMeasure::EPSG_SCALE_PARTS_PER_MILLION));
+        $to = $from->coordinateFrameRotation($toCRS, new Metre(0), new Metre(0), new Metre(4.5), new ArcSecond(0), new ArcSecond(0), new ArcSecond(-0.554), new PartsPerMillion(0.219));
 
         self::assertEqualsWithDelta(55.000025, $to->getLatitude()->getValue(), 0.000001);
         self::assertEqualsWithDelta(44.000154, $to->getLongitude()->getValue(), 0.000001);
@@ -143,7 +146,7 @@ class GeographicPointTest extends TestCase
     {
         $from = GeographicPoint::create(new Degree(55.0), new Degree(44.0), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_72));
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84);
-        $to = $from->positionVectorTransformation($toCRS, new Metre(0), new Metre(0), new Metre(4.5), new ArcSecond(0), new ArcSecond(0), new ArcSecond(0.554), UnitOfMeasureFactory::makeUnit(0.219, UnitOfMeasure::EPSG_SCALE_PARTS_PER_MILLION));
+        $to = $from->positionVectorTransformation($toCRS, new Metre(0), new Metre(0), new Metre(4.5), new ArcSecond(0), new ArcSecond(0), new ArcSecond(0.554), new PartsPerMillion(0.219));
 
         self::assertEqualsWithDelta(55.000025, $to->getLatitude()->getValue(), 0.000001);
         self::assertEqualsWithDelta(44.000154, $to->getLongitude()->getValue(), 0.000001);
@@ -154,7 +157,7 @@ class GeographicPointTest extends TestCase
     {
         $from = GeographicPoint::create(new Degree(55.0), new Degree(44.0), new Metre(0), Geographic3D::fromSRID(Geographic3D::EPSG_WGS_72));
         $toCRS = Geographic3D::fromSRID(Geographic3D::EPSG_WGS_84);
-        $to = $from->positionVectorTransformation($toCRS, new Metre(0), new Metre(0), new Metre(4.5), new ArcSecond(0), new ArcSecond(0), new ArcSecond(0.554), UnitOfMeasureFactory::makeUnit(0.219, UnitOfMeasure::EPSG_SCALE_PARTS_PER_MILLION));
+        $to = $from->positionVectorTransformation($toCRS, new Metre(0), new Metre(0), new Metre(4.5), new ArcSecond(0), new ArcSecond(0), new ArcSecond(0.554), new PartsPerMillion(0.219));
 
         self::assertEqualsWithDelta(55.000025, $to->getLatitude()->getValue(), 0.000001);
         self::assertEqualsWithDelta(44.000154, $to->getLongitude()->getValue(), 0.000001);
@@ -165,7 +168,7 @@ class GeographicPointTest extends TestCase
     {
         $from = GeographicPoint::create(new Degree(9.58344056), new Degree(-66.08002528), null, Geographic2D::fromSRID(Geographic2D::EPSG_LA_CANOA));
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84);
-        $to = $from->coordinateFrameMolodenskyBadekas($toCRS, new Metre(-270.933), new Metre(115.599), new Metre(-360.226), new ArcSecond(-5.266), new ArcSecond(-1.238), new ArcSecond(2.381), UnitOfMeasureFactory::makeUnit(-5.109, UnitOfMeasure::EPSG_SCALE_PARTS_PER_MILLION), new Metre(2464351.59), new Metre(-5783466.61), new Metre(974809.81));
+        $to = $from->coordinateFrameMolodenskyBadekas($toCRS, new Metre(-270.933), new Metre(115.599), new Metre(-360.226), new ArcSecond(-5.266), new ArcSecond(-1.238), new ArcSecond(2.381), new PartsPerMillion(-5.109), new Metre(2464351.59), new Metre(-5783466.61), new Metre(974809.81));
 
         self::assertEqualsWithDelta(9.580278, $to->getLatitude()->getValue(), 0.000001);
         self::assertEqualsWithDelta(-66.081862, $to->getLongitude()->getValue(), 0.000001);
@@ -176,7 +179,7 @@ class GeographicPointTest extends TestCase
     {
         $from = GeographicPoint::create(new Degree(9.58344056), new Degree(-66.08002528), new Metre(201.465), Geographic3D::fromSRID(Geographic3D::EPSG_LGD2006));
         $toCRS = Geographic3D::fromSRID(Geographic3D::EPSG_REGVEN);
-        $to = $from->coordinateFrameMolodenskyBadekas($toCRS, new Metre(-270.933), new Metre(115.599), new Metre(-360.226), new ArcSecond(-5.266), new ArcSecond(-1.238), new ArcSecond(2.381), UnitOfMeasureFactory::makeUnit(-5.109, UnitOfMeasure::EPSG_SCALE_PARTS_PER_MILLION), new Metre(2464351.59), new Metre(-5783466.61), new Metre(974809.81));
+        $to = $from->coordinateFrameMolodenskyBadekas($toCRS, new Metre(-270.933), new Metre(115.599), new Metre(-360.226), new ArcSecond(-5.266), new ArcSecond(-1.238), new ArcSecond(2.381), new PartsPerMillion(-5.109), new Metre(2464351.59), new Metre(-5783466.61), new Metre(974809.81));
 
         self::assertEqualsWithDelta(9.5802779305981, $to->getLatitude()->getValue(), 0.000001);
         self::assertEqualsWithDelta(-66.081862, $to->getLongitude()->getValue(), 0.000001);
@@ -187,7 +190,7 @@ class GeographicPointTest extends TestCase
     {
         $from = GeographicPoint::create(new Degree(9.58344056), new Degree(-66.08002528), null, Geographic2D::fromSRID(Geographic2D::EPSG_LA_CANOA));
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84);
-        $to = $from->positionVectorMolodenskyBadekas($toCRS, new Metre(-270.933), new Metre(115.599), new Metre(-360.226), new ArcSecond(5.266), new ArcSecond(1.238), new ArcSecond(-2.381), UnitOfMeasureFactory::makeUnit(-5.109, UnitOfMeasure::EPSG_SCALE_PARTS_PER_MILLION), new Metre(2464351.59), new Metre(-5783466.61), new Metre(974809.81));
+        $to = $from->positionVectorMolodenskyBadekas($toCRS, new Metre(-270.933), new Metre(115.599), new Metre(-360.226), new ArcSecond(5.266), new ArcSecond(1.238), new ArcSecond(-2.381), new PartsPerMillion(-5.109), new Metre(2464351.59), new Metre(-5783466.61), new Metre(974809.81));
 
         self::assertEqualsWithDelta(9.580278, $to->getLatitude()->getValue(), 0.000001);
         self::assertEqualsWithDelta(-66.081862, $to->getLongitude()->getValue(), 0.000001);
@@ -198,7 +201,7 @@ class GeographicPointTest extends TestCase
     {
         $from = GeographicPoint::create(new Degree(9.58344056), new Degree(-66.08002528), new Metre(201.465), Geographic3D::fromSRID(Geographic3D::EPSG_LGD2006));
         $toCRS = Geographic3D::fromSRID(Geographic3D::EPSG_REGVEN);
-        $to = $from->positionVectorMolodenskyBadekas($toCRS, new Metre(-270.933), new Metre(115.599), new Metre(-360.226), new ArcSecond(5.266), new ArcSecond(1.238), new ArcSecond(-2.381), UnitOfMeasureFactory::makeUnit(-5.109, UnitOfMeasure::EPSG_SCALE_PARTS_PER_MILLION), new Metre(2464351.59), new Metre(-5783466.61), new Metre(974809.81));
+        $to = $from->positionVectorMolodenskyBadekas($toCRS, new Metre(-270.933), new Metre(115.599), new Metre(-360.226), new ArcSecond(5.266), new ArcSecond(1.238), new ArcSecond(-2.381), new PartsPerMillion(-5.109), new Metre(2464351.59), new Metre(-5783466.61), new Metre(974809.81));
 
         self::assertEqualsWithDelta(9.5802779305981, $to->getLatitude()->getValue(), 0.000001);
         self::assertEqualsWithDelta(-66.081862, $to->getLongitude()->getValue(), 0.000001);
@@ -303,7 +306,7 @@ class GeographicPointTest extends TestCase
     {
         $from = GeographicPoint::create(new Degree(10), new Degree(-62), null, Geographic2D::fromSRID(Geographic2D::EPSG_TRINIDAD_1903));
         $toCRS = Projected::fromSRID(Projected::EPSG_TRINIDAD_1903_TRINIDAD_GRID);
-        $to = $from->cassiniSoldner($toCRS, new Radian(0.182241463), new Radian(-1.070468608), UnitOfMeasureFactory::makeUnit(430000, UnitOfMeasure::EPSG_LENGTH_CLARKE_S_LINK), UnitOfMeasureFactory::makeUnit(325000, UnitOfMeasure::EPSG_LENGTH_CLARKE_S_LINK));
+        $to = $from->cassiniSoldner($toCRS, new Radian(0.182241463), new Radian(-1.070468608), new ClarkeLink(430000), new ClarkeLink(325000));
 
         self::assertEqualsWithDelta(66644.94, $to->getEasting()->getValue(), 0.01);
         self::assertEqualsWithDelta(82536.22, $to->getNorthing()->getValue(), 0.01);
@@ -353,7 +356,7 @@ class GeographicPointTest extends TestCase
     {
         $from = GeographicPoint::create(new Radian(-0.293938867), new Radian(3.141493807), null, Geographic2D::fromSRID(Geographic2D::EPSG_VANUA_LEVU_1915));
         $toCRS = Projected::fromSRID(Projected::EPSG_VANUA_LEVU_1915_VANUA_LEVU_GRID);
-        $to = $from->hyperbolicCassiniSoldner($toCRS, new Radian(-0.283616003), new Radian(3.129957125), UnitOfMeasureFactory::makeUnit(12513.318, UnitOfMeasure::EPSG_LENGTH_CHAIN), UnitOfMeasureFactory::makeUnit(16628.885, UnitOfMeasure::EPSG_LENGTH_CHAIN));
+        $to = $from->hyperbolicCassiniSoldner($toCRS, new Radian(-0.283616003), new Radian(3.129957125), new Chain(12513.318), new Chain(16628.885));
 
         self::assertEqualsWithDelta(1601528.90, $to->getEasting()->getValue(), 0.1);
         self::assertEqualsWithDelta(1336966.01, $to->getNorthing()->getValue(), 0.1);
@@ -458,7 +461,7 @@ class GeographicPointTest extends TestCase
     {
         $from = GeographicPoint::create(new Radian(0.49741884), new Radian(-1.67551608), null, Geographic2D::fromSRID(Geographic2D::EPSG_NAD27));
         $toCRS = Projected::fromSRID(Projected::EPSG_NAD27_TEXAS_SOUTH_CENTRAL);
-        $to = $from->lambertConicConformal2SP($toCRS, new Radian(0.48578331), new Radian(-1.72787596), new Radian(0.49538262), new Radian(0.52854388), UnitOfMeasureFactory::makeUnit(2000000, UnitOfMeasure::EPSG_LENGTH_US_SURVEY_FOOT), new Metre(0));
+        $to = $from->lambertConicConformal2SP($toCRS, new Radian(0.48578331), new Radian(-1.72787596), new Radian(0.49538262), new Radian(0.52854388), new USSurveyFoot(2000000), new Metre(0));
 
         self::assertEqualsWithDelta(2963503.95, $to->getEasting()->getValue(), 0.01);
         self::assertEqualsWithDelta(254759.84, $to->getNorthing()->getValue(), 0.01);
@@ -468,7 +471,7 @@ class GeographicPointTest extends TestCase
     {
         $from = GeographicPoint::create(new Radian(0.763581548), new Radian(-1.451532161), null, Geographic2D::fromSRID(Geographic2D::EPSG_NAD27));
         $toCRS = Projected::fromSRID(Projected::EPSG_NAD27_MICHIGAN_CENTRAL);
-        $to = $from->lambertConicConformal2SPMichigan($toCRS, new Radian(0.756018454), new Radian(-1.471894336), new Radian(0.771144641), new Radian(0.797615468), UnitOfMeasureFactory::makeUnit(2000000, UnitOfMeasure::EPSG_LENGTH_US_SURVEY_FOOT), new Metre(0), new Coefficient(1.0000382));
+        $to = $from->lambertConicConformal2SPMichigan($toCRS, new Radian(0.756018454), new Radian(-1.471894336), new Radian(0.771144641), new Radian(0.797615468), new USSurveyFoot(2000000), new Metre(0), new Coefficient(1.0000382));
 
         self::assertEqualsWithDelta(2308335.75, $to->getEasting()->getValue(), 0.01);
         self::assertEqualsWithDelta(160210.49, $to->getNorthing()->getValue(), 0.01);

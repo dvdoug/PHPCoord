@@ -27,18 +27,8 @@ class ArcSecond extends Angle
         return $this->angle;
     }
 
-    public function getFormattedValue(): string
-    {
-        return $this->angle . '″';
-    }
-
     public function getUnitName(): string
     {
         return 'arcsecond';
-    }
-
-    public function __toString(): string
-    {
-        return (string) $this->getValue();
     }
 }

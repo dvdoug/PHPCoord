@@ -27,18 +27,8 @@ class Radian extends Angle
         return $this->angle;
     }
 
-    public function getFormattedValue(): string
-    {
-        return $this->angle . ' rad';
-    }
-
     public function getUnitName(): string
     {
         return 'radian';
-    }
-
-    public function __toString(): string
-    {
-        return (string) $this->getValue();
     }
 }

@@ -96,12 +96,114 @@ class EPSGImporter
         $sql = "
             SELECT
                 'urn:ogc:def:uom:EPSG::' || m.uom_code AS constant_value,
+                m.unit_of_meas_name AS constant_name,
+                m.unit_of_meas_name || '\n' || m.remarks AS constant_help,
+                m.deprecated
+            FROM epsg_unitofmeasure m
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_unitofmeasure' AND dep.object_code = m.uom_code AND dep.deprecation_date <= '2020-09-01'
+            WHERE m.unit_of_meas_type = 'angle' AND m.unit_of_meas_name NOT LIKE '%per second%' AND m.unit_of_meas_name NOT LIKE '%per year%'
+            ORDER BY constant_name
+            ";
+
+        $result = $sqlite->query($sql);
+        $constants = [];
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            $constants[] = $row;
+        }
+
+        $this->updateFileConstants($this->sourceDir . '/UnitOfMeasure/Angle/Angle.php', $constants, 'public');
+
+        $sql = "
+            SELECT
+                'urn:ogc:def:uom:EPSG::' || m.uom_code AS constant_value,
+                m.unit_of_meas_name AS constant_name,
+                m.unit_of_meas_name || '\n' || m.remarks AS constant_help,
+                m.deprecated
+            FROM epsg_unitofmeasure m
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_unitofmeasure' AND dep.object_code = m.uom_code AND dep.deprecation_date <= '2020-09-01'
+            WHERE m.unit_of_meas_type = 'length' AND m.unit_of_meas_name NOT LIKE '%per second%' AND m.unit_of_meas_name NOT LIKE '%per year%'
+            AND m.unit_of_meas_name NOT LIKE '%bin%'
+            ORDER BY constant_name
+            ";
+
+        $result = $sqlite->query($sql);
+        $constants = [];
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            $constants[] = $row;
+        }
+
+        $this->updateFileConstants($this->sourceDir . '/UnitOfMeasure/Length/Length.php', $constants, 'public');
+
+        $sql = "
+            SELECT
+                'urn:ogc:def:uom:EPSG::' || m.uom_code AS constant_value,
+                m.unit_of_meas_name AS constant_name,
+                m.unit_of_meas_name || '\n' || m.remarks AS constant_help,
+                m.deprecated
+            FROM epsg_unitofmeasure m
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_unitofmeasure' AND dep.object_code = m.uom_code AND dep.deprecation_date <= '2020-09-01'
+            WHERE m.unit_of_meas_type = 'scale' AND m.unit_of_meas_name NOT LIKE '%per second%' AND m.unit_of_meas_name NOT LIKE '%per year%'
+            AND m.unit_of_meas_name NOT LIKE '%bin%'
+            ORDER BY constant_name
+            ";
+
+        $result = $sqlite->query($sql);
+        $constants = [];
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            $constants[] = $row;
+        }
+
+        $this->updateFileConstants($this->sourceDir . '/UnitOfMeasure/Scale/Scale.php', $constants, 'public');
+
+        $sql = "
+            SELECT
+                'urn:ogc:def:uom:EPSG::' || m.uom_code AS constant_value,
+                m.unit_of_meas_name AS constant_name,
+                m.unit_of_meas_name || '\n' || m.remarks AS constant_help,
+                m.deprecated
+            FROM epsg_unitofmeasure m
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_unitofmeasure' AND dep.object_code = m.uom_code AND dep.deprecation_date <= '2020-09-01'
+            WHERE m.unit_of_meas_type = 'time' AND m.unit_of_meas_name NOT LIKE '%per second%' AND m.unit_of_meas_name NOT LIKE '%per year%'
+            ORDER BY constant_name
+            ";
+
+        $result = $sqlite->query($sql);
+        $constants = [];
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            $constants[] = $row;
+        }
+
+        $this->updateFileConstants($this->sourceDir . '/UnitOfMeasure/Time/Time.php', $constants, 'public');
+
+        $sql = "
+            SELECT
+                'urn:ogc:def:uom:EPSG::' || m.uom_code AS constant_value,
+                m.unit_of_meas_name AS constant_name,
+                m.unit_of_meas_name || '\n' || m.remarks AS constant_help,
+                m.deprecated
+            FROM epsg_unitofmeasure m
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_unitofmeasure' AND dep.object_code = m.uom_code AND dep.deprecation_date <= '2020-09-01'
+            WHERE (m.unit_of_meas_name LIKE '%per second%' OR m.unit_of_meas_name LIKE '%per year%')
+            ORDER BY constant_name
+            ";
+
+        $result = $sqlite->query($sql);
+        $constants = [];
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            $constants[] = $row;
+        }
+
+        $this->updateFileConstants($this->sourceDir . '/UnitOfMeasure/Rate.php', $constants, 'public');
+
+        $sql = "
+            SELECT
+                'urn:ogc:def:uom:EPSG::' || m.uom_code AS constant_value,
                 m.unit_of_meas_type || '_' || m.unit_of_meas_name AS constant_name,
                 m.unit_of_meas_name || '\n' || m.remarks AS constant_help,
                 m.deprecated
             FROM epsg_unitofmeasure m
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_unitofmeasure' AND dep.object_code = m.uom_code AND dep.deprecation_date <= '2020-09-01'
-            WHERE dep.deprecation_id IS NULL
+            WHERE m.unit_of_meas_type NOT IN ('angle', 'length', 'scale', 'time') AND m.unit_of_meas_name NOT LIKE '%per second%' AND m.unit_of_meas_name NOT LIKE '%per year%'
             ORDER BY constant_name
             ";
 
@@ -119,12 +221,101 @@ class EPSGImporter
         $sql = "
             SELECT
                'urn:ogc:def:uom:EPSG::' || m.uom_code AS urn,
-                m.unit_of_meas_name AS name,
-                m.unit_of_meas_type AS type,
-                'urn:ogc:def:uom:EPSG::' || m.target_uom_code AS target_uom,
-                m.factor_b,
-                m.factor_c
+                m.unit_of_meas_name AS name
             FROM epsg_unitofmeasure m
+            WHERE m.unit_of_meas_type = 'angle' AND m.unit_of_meas_name NOT LIKE '%per second%' AND m.unit_of_meas_name NOT LIKE '%per year%'
+            ORDER BY urn
+            ";
+
+        $result = $sqlite->query($sql);
+        $data = [];
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            $data[$row['urn']] = $row;
+            unset($data[$row['urn']]['urn']);
+        }
+
+        $this->updateFileData($this->sourceDir . '/UnitOfMeasure/Angle/Angle.php', $data);
+
+        $sql = "
+            SELECT
+               'urn:ogc:def:uom:EPSG::' || m.uom_code AS urn,
+                m.unit_of_meas_name AS name
+            FROM epsg_unitofmeasure m
+            WHERE m.unit_of_meas_type = 'length' AND m.unit_of_meas_name NOT LIKE '%per second%' AND m.unit_of_meas_name NOT LIKE '%per year%'
+            AND m.unit_of_meas_name NOT LIKE '%bin%'
+            ORDER BY urn
+            ";
+
+        $result = $sqlite->query($sql);
+        $data = [];
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            $data[$row['urn']] = $row;
+            unset($data[$row['urn']]['urn']);
+        }
+
+        $this->updateFileData($this->sourceDir . '/UnitOfMeasure/Length/Length.php', $data);
+
+        $sql = "
+            SELECT
+               'urn:ogc:def:uom:EPSG::' || m.uom_code AS urn,
+                m.unit_of_meas_name AS name
+            FROM epsg_unitofmeasure m
+            WHERE m.unit_of_meas_type = 'scale' AND m.unit_of_meas_name NOT LIKE '%per second%' AND m.unit_of_meas_name NOT LIKE '%per year%'
+            AND m.unit_of_meas_name NOT LIKE '%bin%'
+            ORDER BY urn
+            ";
+
+        $result = $sqlite->query($sql);
+        $data = [];
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            $data[$row['urn']] = $row;
+            unset($data[$row['urn']]['urn']);
+        }
+
+        $this->updateFileData($this->sourceDir . '/UnitOfMeasure/Scale/Scale.php', $data);
+
+        $sql = "
+            SELECT
+               'urn:ogc:def:uom:EPSG::' || m.uom_code AS urn,
+                m.unit_of_meas_name AS name
+            FROM epsg_unitofmeasure m
+            WHERE m.unit_of_meas_type = 'time' AND m.unit_of_meas_name NOT LIKE '%per second%' AND m.unit_of_meas_name NOT LIKE '%per year%'
+            ORDER BY urn
+            ";
+
+        $result = $sqlite->query($sql);
+        $data = [];
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            $data[$row['urn']] = $row;
+            unset($data[$row['urn']]['urn']);
+        }
+
+        $this->updateFileData($this->sourceDir . '/UnitOfMeasure/Time/Time.php', $data);
+
+        $sql = "
+            SELECT
+               'urn:ogc:def:uom:EPSG::' || m.uom_code AS urn,
+                m.unit_of_meas_name AS name
+            FROM epsg_unitofmeasure m
+            WHERE (m.unit_of_meas_name LIKE '%per second%' OR m.unit_of_meas_name LIKE '%per year%')
+            ORDER BY urn
+            ";
+
+        $result = $sqlite->query($sql);
+        $data = [];
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            $data[$row['urn']] = $row;
+            unset($data[$row['urn']]['urn']);
+        }
+
+        $this->updateFileData($this->sourceDir . '/UnitOfMeasure/Rate.php', $data);
+
+        $sql = "
+            SELECT
+               'urn:ogc:def:uom:EPSG::' || m.uom_code AS urn,
+                m.unit_of_meas_name AS name
+            FROM epsg_unitofmeasure m
+            WHERE m.unit_of_meas_type NOT IN ('angle', 'length', 'scale', 'time') AND m.unit_of_meas_name NOT LIKE '%per second%' AND m.unit_of_meas_name NOT LIKE '%per year%'
             ORDER BY urn
             ";
 

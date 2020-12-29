@@ -32,18 +32,8 @@ class Second extends Time
         return $this->time;
     }
 
-    public function getFormattedValue(): string
-    {
-        return $this->time . 's';
-    }
-
     public function getUnitName(): string
     {
         return 'second';
-    }
-
-    public function __toString(): string
-    {
-        return (string) $this->getValue();
     }
 }

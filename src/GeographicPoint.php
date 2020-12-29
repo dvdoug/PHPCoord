@@ -36,7 +36,6 @@ use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPCoord\UnitOfMeasure\Scale\Coefficient;
 use PHPCoord\UnitOfMeasure\Scale\Scale;
 use PHPCoord\UnitOfMeasure\Scale\Unity;
-use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
 use function sin;
 use function sprintf;
 use function sqrt;
@@ -89,11 +88,11 @@ class GeographicPoint extends Point
 
         $this->crs = $crs;
 
-        $this->latitude = UnitOfMeasureFactory::convertAngle($latitude, $this->getAxisByName(Axis::GEODETIC_LATITUDE)->getUnitOfMeasureId());
-        $this->longitude = UnitOfMeasureFactory::convertAngle($longitude, $this->getAxisByName(Axis::GEODETIC_LONGITUDE)->getUnitOfMeasureId());
+        $this->latitude = Angle::convert($latitude, $this->getAxisByName(Axis::GEODETIC_LATITUDE)->getUnitOfMeasureId());
+        $this->longitude = Angle::convert($longitude, $this->getAxisByName(Axis::GEODETIC_LONGITUDE)->getUnitOfMeasureId());
 
         if ($height) {
-            $this->height = UnitOfMeasureFactory::convertLength($height, $this->getAxisByName(Axis::ELLIPSOIDAL_HEIGHT)->getUnitOfMeasureId());
+            $this->height = Length::convert($height, $this->getAxisByName(Axis::ELLIPSOIDAL_HEIGHT)->getUnitOfMeasureId());
         } else {
             $this->height = null;
         }

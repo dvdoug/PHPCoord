@@ -26,12 +26,6 @@ class MetreTest extends TestCase
         self::assertEquals(0.12, $original->getValue());
     }
 
-    public function testGetFormattedValue(): void
-    {
-        $original = new Metre(0.12);
-        self::assertEquals('0.12m', $original->getFormattedValue());
-    }
-
     public function testGetUnitName(): void
     {
         $original = new Metre(0.12);

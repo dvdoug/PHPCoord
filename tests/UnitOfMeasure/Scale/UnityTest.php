@@ -24,12 +24,7 @@ class UnityTest extends TestCase
     {
         $original = new Unity(0.12);
         self::assertEquals(0.12, $original->getValue());
-    }
-
-    public function testGetFormattedValue(): void
-    {
-        $original = new Unity(0.12);
-        self::assertEquals('0.12', $original->getFormattedValue());
+        self::assertEquals(0.12, $original->__toString());
     }
 
     public function testGetUnitName(): void

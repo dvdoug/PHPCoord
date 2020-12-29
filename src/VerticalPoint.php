@@ -15,7 +15,6 @@ use DateTimeInterface;
 use PHPCoord\CoordinateReferenceSystem\Vertical;
 use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Length\Metre;
-use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
 
 /**
  * Coordinate representing a vertical dimension.
@@ -43,7 +42,7 @@ class VerticalPoint extends Point
      */
     protected function __construct(Length $height, Vertical $crs, ?DateTimeInterface $epoch = null)
     {
-        $this->height = UnitOfMeasureFactory::convertLength($height, $crs->getCoordinateSystem()->getAxes()[0]->getUnitOfMeasureId());
+        $this->height = Length::convert($height, $crs->getCoordinateSystem()->getAxes()[0]->getUnitOfMeasureId());
         $this->crs = $crs;
 
         if ($epoch instanceof DateTime) {

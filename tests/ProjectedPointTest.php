@@ -20,10 +20,14 @@ use PHPCoord\Exception\InvalidAxesException;
 use PHPCoord\Exception\InvalidCoordinateReferenceSystemException;
 use PHPCoord\UnitOfMeasure\Angle\Degree;
 use PHPCoord\UnitOfMeasure\Angle\Radian;
+use PHPCoord\UnitOfMeasure\Length\Chain;
+use PHPCoord\UnitOfMeasure\Length\ClarkeFoot;
+use PHPCoord\UnitOfMeasure\Length\ClarkeLink;
+use PHPCoord\UnitOfMeasure\Length\Foot;
+use PHPCoord\UnitOfMeasure\Length\Link;
 use PHPCoord\UnitOfMeasure\Length\Metre;
+use PHPCoord\UnitOfMeasure\Length\USSurveyFoot;
 use PHPCoord\UnitOfMeasure\Scale\Coefficient;
-use PHPCoord\UnitOfMeasure\UnitOfMeasure;
-use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
 use PHPUnit\Framework\TestCase;
 
 class ProjectedPointTest extends TestCase
@@ -60,7 +64,7 @@ class ProjectedPointTest extends TestCase
 
     public function testWithFeetAsUnitsEastingNorthing(): void
     {
-        $object = ProjectedPoint::createFromEastingNorthing(UnitOfMeasureFactory::makeUnit(123, UnitOfMeasure::EPSG_LENGTH_FOOT), UnitOfMeasureFactory::makeUnit(123, UnitOfMeasure::EPSG_LENGTH_FOOT), Projected::fromSRID(Projected::EPSG_WGS_84_WORLD_MERCATOR));
+        $object = ProjectedPoint::createFromEastingNorthing(new Foot(123), new Foot(123), Projected::fromSRID(Projected::EPSG_WGS_84_WORLD_MERCATOR));
         self::assertEquals(37.4904, $object->getEasting()->getValue());
         self::assertEquals(37.4904, $object->getNorthing()->getValue());
     }
@@ -91,7 +95,7 @@ class ProjectedPointTest extends TestCase
 
     public function testWithFeetAsUnitsWestingNorthing(): void
     {
-        $object = ProjectedPoint::createFromWestingNorthing(UnitOfMeasureFactory::makeUnit(123, UnitOfMeasure::EPSG_LENGTH_FOOT), UnitOfMeasureFactory::makeUnit(123, UnitOfMeasure::EPSG_LENGTH_FOOT), Projected::fromSRID(Projected::EPSG_ETRS89_FAROE_LAMBERT));
+        $object = ProjectedPoint::createFromWestingNorthing(new Foot(123), new Foot(123), Projected::fromSRID(Projected::EPSG_ETRS89_FAROE_LAMBERT));
         self::assertEquals(37.4904, $object->getWesting()->getValue());
         self::assertEquals(37.4904, $object->getNorthing()->getValue());
     }
@@ -122,7 +126,7 @@ class ProjectedPointTest extends TestCase
 
     public function testWithFeetAsUnitsWestingSouthing(): void
     {
-        $object = ProjectedPoint::createFromWestingSouthing(UnitOfMeasureFactory::makeUnit(123, UnitOfMeasure::EPSG_LENGTH_FOOT), UnitOfMeasureFactory::makeUnit(123, UnitOfMeasure::EPSG_LENGTH_FOOT), Projected::fromSRID(Projected::EPSG_ST_STEPHEN_GRID_FERRO));
+        $object = ProjectedPoint::createFromWestingSouthing(new Foot(123), new Foot(123), Projected::fromSRID(Projected::EPSG_ST_STEPHEN_GRID_FERRO));
         self::assertEquals(37.4904, $object->getWesting()->getValue());
         self::assertEquals(37.4904, $object->getSouthing()->getValue());
     }
@@ -176,7 +180,7 @@ class ProjectedPointTest extends TestCase
 
     public function testAffineParametricTransformEastingNorthing(): void
     {
-        $from = ProjectedPoint::create(UnitOfMeasureFactory::makeUnit(553900, UnitOfMeasure::EPSG_LENGTH_CLARKE_S_FOOT), UnitOfMeasureFactory::makeUnit(482500, UnitOfMeasure::EPSG_LENGTH_CLARKE_S_FOOT), null, null, Projected::fromSRID(Projected::EPSG_JAMAICA_1875_JAMAICA_OLD_GRID));
+        $from = ProjectedPoint::create(new ClarkeFoot(553900), new ClarkeFoot(482500), null, null, Projected::fromSRID(Projected::EPSG_JAMAICA_1875_JAMAICA_OLD_GRID));
         $to = $from->affineParametricTransform(Projected::fromSRID(Projected::EPSG_JAD69_JAMAICA_NATIONAL_GRID), new Metre(82357.457), new Coefficient(0.304794369), new Coefficient(0.000015417425), new Metre(28091.324), new Coefficient(-0.000015417425), new Coefficient(0.304794369), false);
         self::assertEqualsWithDelta(251190.497, $to->getEasting()->asMetres()->getValue(), 0.001);
         self::assertEqualsWithDelta(175146.067, $to->getNorthing()->asMetres()->getValue(), 0.001);
@@ -247,9 +251,9 @@ class ProjectedPointTest extends TestCase
 
     public function testCassiniSoldner(): void
     {
-        $from = ProjectedPoint::createFromEastingNorthing(UnitOfMeasureFactory::makeUnit(66644.94, UnitOfMeasure::EPSG_LENGTH_CLARKE_S_LINK), UnitOfMeasureFactory::makeUnit(82536.22, UnitOfMeasure::EPSG_LENGTH_CLARKE_S_LINK), Projected::fromSRID(Projected::EPSG_TRINIDAD_1903_TRINIDAD_GRID));
+        $from = ProjectedPoint::createFromEastingNorthing(new ClarkeLink(66644.94), new ClarkeLink(82536.22), Projected::fromSRID(Projected::EPSG_TRINIDAD_1903_TRINIDAD_GRID));
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_TRINIDAD_1903);
-        $to = $from->cassiniSoldner($toCRS, new Radian(0.182241463), new Radian(-1.070468608), UnitOfMeasureFactory::makeUnit(430000, UnitOfMeasure::EPSG_LENGTH_CLARKE_S_LINK), UnitOfMeasureFactory::makeUnit(325000, UnitOfMeasure::EPSG_LENGTH_CLARKE_S_LINK));
+        $to = $from->cassiniSoldner($toCRS, new Radian(0.182241463), new Radian(-1.070468608), new ClarkeLink(430000), new ClarkeLink(325000));
 
         self::assertEqualsWithDelta(10, $to->getLatitude()->getValue(), 0.0001);
         self::assertEqualsWithDelta(-62, $to->getLongitude()->getValue(), 0.0001);
@@ -302,9 +306,9 @@ class ProjectedPointTest extends TestCase
 
     public function testHyperbolicCassiniSoldner(): void
     {
-        $from = ProjectedPoint::createFromEastingNorthing(UnitOfMeasureFactory::makeUnit(1601528.9, UnitOfMeasure::EPSG_LENGTH_LINK), UnitOfMeasureFactory::makeUnit(1336966.6, UnitOfMeasure::EPSG_LENGTH_LINK), Projected::fromSRID(Projected::EPSG_VANUA_LEVU_1915_VANUA_LEVU_GRID));
+        $from = ProjectedPoint::createFromEastingNorthing(new Link(1601528.9), new Link(1336966.6), Projected::fromSRID(Projected::EPSG_VANUA_LEVU_1915_VANUA_LEVU_GRID));
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_VANUA_LEVU_1915);
-        $to = $from->hyperbolicCassiniSoldner($toCRS, new Radian(-0.283616003), new Radian(3.129957125), UnitOfMeasureFactory::makeUnit(12513.318, UnitOfMeasure::EPSG_LENGTH_CHAIN), UnitOfMeasureFactory::makeUnit(16628.885, UnitOfMeasure::EPSG_LENGTH_CHAIN));
+        $to = $from->hyperbolicCassiniSoldner($toCRS, new Radian(-0.283616003), new Radian(3.129957125), new Chain(12513.318), new Chain(16628.885));
 
         self::assertEqualsWithDelta(-0.293938867, $to->getLatitude()->asRadians()->getValue(), 0.0001);
         self::assertEqualsWithDelta(3.141493807, $to->getLongitude()->asRadians()->getValue(), 0.0001);
@@ -401,9 +405,9 @@ class ProjectedPointTest extends TestCase
 
     public function testLambertConicConformal2SP(): void
     {
-        $from = ProjectedPoint::createFromEastingNorthing(UnitOfMeasureFactory::makeUnit(2963503.95, UnitOfMeasure::EPSG_LENGTH_US_SURVEY_FOOT), UnitOfMeasureFactory::makeUnit(254759.84, UnitOfMeasure::EPSG_LENGTH_US_SURVEY_FOOT), Projected::fromSRID(Projected::EPSG_NAD27_TEXAS_SOUTH_CENTRAL));
+        $from = ProjectedPoint::createFromEastingNorthing(new USSurveyFoot(2963503.95), new USSurveyFoot(254759.84), Projected::fromSRID(Projected::EPSG_NAD27_TEXAS_SOUTH_CENTRAL));
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_NAD27);
-        $to = $from->lambertConicConformal2SP($toCRS, new Radian(0.48578331), new Radian(-1.72787596), new Radian(0.49538262), new Radian(0.52854388), UnitOfMeasureFactory::makeUnit(2000000, UnitOfMeasure::EPSG_LENGTH_US_SURVEY_FOOT), new Metre(0));
+        $to = $from->lambertConicConformal2SP($toCRS, new Radian(0.48578331), new Radian(-1.72787596), new Radian(0.49538262), new Radian(0.52854388), new USSurveyFoot(2000000), new Metre(0));
 
         self::assertEqualsWithDelta(0.49741884, $to->getLatitude()->asRadians()->getValue(), 0.0000001);
         self::assertEqualsWithDelta(-1.67551608, $to->getLongitude()->asRadians()->getValue(), 0.0000001);
@@ -411,9 +415,9 @@ class ProjectedPointTest extends TestCase
 
     public function testLambertConicConformal2SPMichigan(): void
     {
-        $from = ProjectedPoint::createFromEastingNorthing(UnitOfMeasureFactory::makeUnit(2308335.75, UnitOfMeasure::EPSG_LENGTH_US_SURVEY_FOOT), UnitOfMeasureFactory::makeUnit(160210.49, UnitOfMeasure::EPSG_LENGTH_US_SURVEY_FOOT), Projected::fromSRID(Projected::EPSG_NAD27_MICHIGAN_CENTRAL));
+        $from = ProjectedPoint::createFromEastingNorthing(new USSurveyFoot(2308335.75), new USSurveyFoot(160210.49), Projected::fromSRID(Projected::EPSG_NAD27_MICHIGAN_CENTRAL));
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_NAD27);
-        $to = $from->lambertConicConformal2SPMichigan($toCRS, new Radian(0.756018454), new Radian(-1.471894336), new Radian(0.771144641), new Radian(0.797615468), UnitOfMeasureFactory::makeUnit(2000000, UnitOfMeasure::EPSG_LENGTH_US_SURVEY_FOOT), new Metre(0), new Coefficient(1.0000382));
+        $to = $from->lambertConicConformal2SPMichigan($toCRS, new Radian(0.756018454), new Radian(-1.471894336), new Radian(0.771144641), new Radian(0.797615468), new USSurveyFoot(2000000), new Metre(0), new Coefficient(1.0000382));
 
         self::assertEqualsWithDelta(0.763581548, $to->getLatitude()->asRadians()->getValue(), 0.0000001);
         self::assertEqualsWithDelta(-1.451532161, $to->getLongitude()->asRadians()->getValue(), 0.0000001);

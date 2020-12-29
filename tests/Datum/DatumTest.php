@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\Datum;
 
 use PHPCoord\Exception\UnknownDatumException;
+use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPUnit\Framework\TestCase;
 
 class DatumTest extends TestCase
@@ -43,7 +44,8 @@ class DatumTest extends TestCase
     {
         $object = Datum::fromSRID(Datum::EPSG_OSGB_1936);
         self::assertEquals(Datum::DATUM_TYPE_GEODETIC, $object->getDatumType());
-        self::assertEquals('6356256.9092373m', $object->getEllipsoid()->getSemiMinorAxis()->getFormattedValue());
+        self::assertEquals('6356256.909237285', $object->getEllipsoid()->getSemiMinorAxis()->getValue());
+        self::assertInstanceOf(Metre::class, $object->getEllipsoid()->getSemiMinorAxis());
         self::assertEquals(0.0, $object->getPrimeMeridian()->getGreenwichLongitude()->getValue());
     }
 

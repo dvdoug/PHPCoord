@@ -42,8 +42,8 @@ class EllipsoidTest extends TestCase
     public function testAiry1830(): void
     {
         $object = Ellipsoid::fromSRID(Ellipsoid::EPSG_AIRY_1830);
-        self::assertEquals('6377563.396m', $object->getSemiMajorAxis()->getFormattedValue());
-        self::assertEquals('6356256.9092373m', $object->getSemiMinorAxis()->getFormattedValue());
+        self::assertEquals('6377563.396', $object->getSemiMajorAxis()->getValue());
+        self::assertEquals('6356256.909237285', $object->getSemiMinorAxis()->getValue());
     }
 
     public function ellipsoids(): array

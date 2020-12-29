@@ -27,18 +27,8 @@ class Coefficient extends Scale
         return $this->scale;
     }
 
-    public function getFormattedValue(): string
-    {
-        return (string) $this->scale;
-    }
-
     public function getUnitName(): string
     {
         return '';
-    }
-
-    public function __toString(): string
-    {
-        return (string) $this->getValue();
     }
 }

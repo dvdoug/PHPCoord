@@ -44,7 +44,7 @@ class AddNewConstantsVisitor extends NodeVisitorAbstract
             foreach ($this->constants as $row) {
                 $name = str_replace(
                     [' ', '-', '\'', '(', ')', '[', ']', '.', '/', '=', ',', ':', '°', '+', '&', '<>'],
-                    ['_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_DEG_', '_PLUS_', '_AND_', '_TO_'],
+                    ['_', '_', '', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_DEG_', '_PLUS_', '_AND_', '_TO_'],
                     $row['constant_name']
                 );
                 $name = preg_replace('/_+/', '_', $name);

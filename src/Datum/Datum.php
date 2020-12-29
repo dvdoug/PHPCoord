@@ -3629,7 +3629,7 @@ class Datum
      * Type: geodetic
      * Extent: Gabon - onshore and offshore.
      */
-    public const EPSG_M_PORALOKO = 'urn:ogc:def:datum:EPSG::6266';
+    public const EPSG_MPORALOKO = 'urn:ogc:def:datum:EPSG::6266';
 
     /**
      * MGI 1901

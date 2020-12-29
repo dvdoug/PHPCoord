@@ -34,19 +34,9 @@ class Degree extends Angle
         return $this->angle;
     }
 
-    public function getFormattedValue(): string
-    {
-        return $this->angle . '°';
-    }
-
     public function getUnitName(): string
     {
         return 'degree';
-    }
-
-    public function __toString(): string
-    {
-        return (string) $this->getValue();
     }
 
     public static function fromDegreeMinuteSecond(string $angle): self

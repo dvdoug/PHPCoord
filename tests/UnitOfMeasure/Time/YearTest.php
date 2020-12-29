@@ -27,12 +27,6 @@ class YearTest extends TestCase
         self::assertEquals(120000, $original->getValue());
     }
 
-    public function testGetFormattedValue(): void
-    {
-        $original = new Year(120000);
-        self::assertEquals('120000 years', $original->getFormattedValue());
-    }
-
     public function testGetUnitName(): void
     {
         $original = new Year(120000);

@@ -17,13 +17,16 @@ use PHPCoord\CoordinateReferenceSystem\Geocentric;
 use PHPCoord\CoordinateReferenceSystem\Geographic;
 use PHPCoord\CoordinateReferenceSystem\Geographic3D;
 use PHPCoord\CoordinateSystem\Axis;
+use PHPCoord\Exception\InvalidCoordinateException;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPCoord\UnitOfMeasure\Angle\Radian;
 use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Length\Metre;
+use PHPCoord\UnitOfMeasure\Rate;
 use PHPCoord\UnitOfMeasure\Scale\Scale;
 use PHPCoord\UnitOfMeasure\Scale\Unity;
-use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
+use PHPCoord\UnitOfMeasure\Time\Time;
+use PHPCoord\UnitOfMeasure\Time\Year;
 use function sqrt;
 
 /**
@@ -59,9 +62,9 @@ class GeocentricPoint extends Point
     protected function __construct(Length $x, Length $y, Length $z, Geocentric $crs, ?DateTimeInterface $epoch = null)
     {
         $this->crs = $crs;
-        $this->x = UnitOfMeasureFactory::convertLength($x, $this->getAxisByName(Axis::GEOCENTRIC_X)->getUnitOfMeasureId());
-        $this->y = UnitOfMeasureFactory::convertLength($y, $this->getAxisByName(Axis::GEOCENTRIC_Y)->getUnitOfMeasureId());
-        $this->z = UnitOfMeasureFactory::convertLength($z, $this->getAxisByName(Axis::GEOCENTRIC_Z)->getUnitOfMeasureId());
+        $this->x = Length::convert($x, $this->getAxisByName(Axis::GEOCENTRIC_X)->getUnitOfMeasureId());
+        $this->y = Length::convert($y, $this->getAxisByName(Axis::GEOCENTRIC_Y)->getUnitOfMeasureId());
+        $this->z = Length::convert($z, $this->getAxisByName(Axis::GEOCENTRIC_Z)->getUnitOfMeasureId());
 
         if ($epoch instanceof DateTime) {
             $epoch = DateTimeImmutable::createFromMutable($epoch);

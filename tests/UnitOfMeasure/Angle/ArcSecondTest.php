@@ -26,12 +26,6 @@ class ArcSecondTest extends TestCase
         self::assertEquals(3600, $original->getValue());
     }
 
-    public function testGetFormattedValue(): void
-    {
-        $original = new ArcSecond(3600);
-        self::assertEquals('3600″', $original->getFormattedValue());
-    }
-
     public function testGetUnitName(): void
     {
         $original = new ArcSecond(3600);

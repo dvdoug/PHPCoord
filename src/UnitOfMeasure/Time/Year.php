@@ -49,18 +49,8 @@ class Year extends Time
         return $this->time;
     }
 
-    public function getFormattedValue(): string
-    {
-        return $this->time . ' years';
-    }
-
     public function getUnitName(): string
     {
         return 'year';
-    }
-
-    public function __toString(): string
-    {
-        return (string) $this->getValue();
     }
 }

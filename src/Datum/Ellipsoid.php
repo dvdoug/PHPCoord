@@ -10,7 +10,6 @@ namespace PHPCoord\Datum;
 
 use PHPCoord\Exception\UnknownEllipsoidException;
 use PHPCoord\UnitOfMeasure\Length\Length;
-use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
 use function sqrt;
 
 class Ellipsoid
@@ -735,8 +734,8 @@ class Ellipsoid
         $data = static::$sridData[$srid];
 
         return new static(
-            UnitOfMeasureFactory::makeUnit($data['semi_major_axis'], $data['uom']),
-            UnitOfMeasureFactory::makeUnit($data['semi_minor_axis'], $data['uom'])
+            Length::makeUnit($data['semi_major_axis'], $data['uom']),
+            Length::makeUnit($data['semi_minor_axis'], $data['uom'])
         );
     }
 

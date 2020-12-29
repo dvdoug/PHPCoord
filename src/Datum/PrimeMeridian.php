@@ -10,7 +10,6 @@ namespace PHPCoord\Datum;
 
 use PHPCoord\Exception\UnknownPrimeMeridianException;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
-use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
 
 class PrimeMeridian
 {
@@ -198,7 +197,7 @@ class PrimeMeridian
 
         $data = static::$sridData[$srid];
 
-        return new static($data['name'], UnitOfMeasureFactory::makeUnit($data['greenwich_longitude'], $data['uom']));
+        return new static($data['name'], Angle::makeUnit($data['greenwich_longitude'], $data['uom']));
     }
 
     public static function getSupportedSRIDs(): array

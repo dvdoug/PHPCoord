@@ -27,18 +27,8 @@ class Metre extends Length
         return $this->length;
     }
 
-    public function getFormattedValue(): string
-    {
-        return $this->length . 'm';
-    }
-
     public function getUnitName(): string
     {
         return 'metre';
-    }
-
-    public function __toString(): string
-    {
-        return (string) $this->getValue();
     }
 }
