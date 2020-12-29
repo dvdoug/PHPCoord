@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace PHPCoord;
 
+use function abs;
 use DateTime;
 use DateTimeImmutable;
 use DateTimeInterface;

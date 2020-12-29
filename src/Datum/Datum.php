@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace PHPCoord\Datum;
 
+use function end;
 use PHPCoord\EPSG\Repository;
 use PHPCoord\Exception\UnknownDatumException;
 

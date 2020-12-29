@@ -12,6 +12,7 @@ use PHPCoord\EPSG\Repository;
 use PHPCoord\Exception\UnknownEllipsoidException;
 use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
+use function sqrt;
 
 class Ellipsoid
 {

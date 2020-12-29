@@ -8,7 +8,12 @@ declare(strict_types=1);
 
 namespace PHPCoord\UnitOfMeasure\Angle;
 
+use function in_array;
 use InvalidArgumentException;
+use function preg_match;
+use function str_pad;
+use function str_replace;
+use function strpos;
 
 class Degree implements Angle
 {

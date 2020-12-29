@@ -8,9 +8,15 @@ declare(strict_types=1);
 
 namespace PHPCoord;
 
+use function abs;
+use function asin;
+use function atan2;
+use function cos;
 use DateTime;
 use DateTimeImmutable;
 use DateTimeInterface;
+use function implode;
+use function log;
 use PHPCoord\CoordinateReferenceSystem\Geographic;
 use PHPCoord\CoordinateReferenceSystem\Projected;
 use PHPCoord\CoordinateSystem\Axis;
@@ -25,6 +31,9 @@ use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPCoord\UnitOfMeasure\Scale\Coefficient;
 use PHPCoord\UnitOfMeasure\Scale\Scale;
 use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
+use function sin;
+use function sqrt;
+use function tan;
 
 /**
  * Coordinate representing a point on a map projection.

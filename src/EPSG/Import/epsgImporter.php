@@ -6,6 +6,13 @@
  */
 declare(strict_types=1);
 
+namespace PHPCoord;
+
+use function chdir;
+use function dirname;
+use function file_exists;
+use function file_get_contents;
+use function file_put_contents;
 use PHPCoord\EPSG\Import\AddNewConstantsVisitor;
 use PHPCoord\EPSG\Import\ASTPrettyPrinter;
 use PHPCoord\EPSG\Import\RemoveExistingConstantsVisitor;
@@ -13,6 +20,10 @@ use PhpParser\Lexer\Emulative;
 use PhpParser\NodeTraverser;
 use PhpParser\NodeVisitor\CloningVisitor;
 use PhpParser\Parser\Php7;
+use function shell_exec;
+use SQLite3;
+use SQLite3Result;
+use function unlink;
 
 require __DIR__ . '/../../../vendor/autoload.php';
 

@@ -8,6 +8,9 @@ declare(strict_types=1);
 
 namespace PHPCoord\EPSG\Import;
 
+use function array_merge;
+use function explode;
+use function is_string;
 use PhpParser\Comment\Doc;
 use PhpParser\Node;
 use PhpParser\Node\Stmt\Class_;
@@ -15,7 +18,12 @@ use PhpParser\Node\Stmt\ClassConst;
 use PhpParser\Node\Stmt\ClassLike;
 use PhpParser\NodeTraverser;
 use PhpParser\NodeVisitorAbstract;
+use function preg_replace;
 use SQLite3Result;
+use function str_replace;
+use function strtoupper;
+use function trim;
+use function wordwrap;
 
 class AddNewConstantsVisitor extends NodeVisitorAbstract
 {

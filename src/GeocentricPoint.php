@@ -24,6 +24,7 @@ use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPCoord\UnitOfMeasure\Scale\Scale;
 use PHPCoord\UnitOfMeasure\Scale\Unity;
 use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
+use function sqrt;
 
 /**
  * Coordinate representing a point in ECEF geocentric form.
