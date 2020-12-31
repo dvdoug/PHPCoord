@@ -11,11 +11,14 @@ namespace PHPCoord;
 use DateTime;
 use DateTimeImmutable;
 use DateTimeInterface;
+use PHPCoord\CoordinateReferenceSystem\Geographic;
 use PHPCoord\CoordinateReferenceSystem\Projected;
 use PHPCoord\CoordinateSystem\Axis;
 use PHPCoord\Exception\InvalidAxesException;
 use PHPCoord\Exception\InvalidCoordinateReferenceSystemException;
 use PHPCoord\Exception\UnknownAxisException;
+use PHPCoord\UnitOfMeasure\Angle\Angle;
+use PHPCoord\UnitOfMeasure\Angle\Radian;
 use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPCoord\UnitOfMeasure\Scale\Coefficient;
@@ -225,5 +228,53 @@ class ProjectedPoint extends Point
         $yt = $b0 + ($b1 * $xs) + ($b2 * $ys);
 
         return static::create(new Metre($xt), new Metre($yt), new Metre(-$xt), new Metre(-$yt), $to, $this->epoch);
+    }
+
+    /**
+     * Albers Equal Area.
+     */
+    public function albersEqualArea(
+        Geographic $to,
+        Angle $latitudeOfFalseOrigin,
+        Angle $longitudeOfFalseOrigin,
+        Angle $latitudeOf1stStandardParallel,
+        Angle $latitudeOf2ndStandardParallel,
+        Length $eastingAtFalseOrigin,
+        Length $northingAtFalseOrigin
+    ): GeographicPoint {
+        $easting = $this->easting->asMetres()->getValue() - $eastingAtFalseOrigin->asMetres()->getValue();
+        $northing = $this->northing->asMetres()->getValue() - $northingAtFalseOrigin->asMetres()->getValue();
+        $phiOrigin = $latitudeOfFalseOrigin->asRadians()->getValue();
+        $phi1 = $latitudeOf1stStandardParallel->asRadians()->getValue();
+        $phi2 = $latitudeOf2ndStandardParallel->asRadians()->getValue();
+        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
+        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+        $e4 = $e ** 4;
+        $e6 = $e ** 6;
+
+        $centralMeridianFirstParallel = cos($phi1) / sqrt(1 - $e2 * sin($phi1) ** 2);
+        $centralMeridianSecondParallel = cos($phi2) / sqrt(1 - $e2 * sin($phi2) ** 2);
+
+        $alphaOrigin = (1 - $e2) * (sin($phiOrigin) / (1 - $e2 * sin($phiOrigin) ** 2) - (1 / 2 / $e) * log((1 - $e * sin($phiOrigin)) / (1 + $e * sin($phiOrigin))));
+        $alphaFirstParallel = (1 - $e2) * (sin($phi1) / (1 - $e2 * sin($phi1) ** 2) - (1 / 2 / $e) * log((1 - $e * sin($phi1)) / (1 + $e * sin($phi1))));
+        $alphaSecondParallel = (1 - $e2) * (sin($phi2) / (1 - $e2 * sin($phi2) ** 2) - (1 / 2 / $e) * log((1 - $e * sin($phi2)) / (1 + $e * sin($phi2))));
+
+        $n = ($centralMeridianFirstParallel ** 2 - $centralMeridianSecondParallel ** 2) / ($alphaSecondParallel - $alphaFirstParallel);
+        $C = $centralMeridianFirstParallel ** 2 + $n * $alphaFirstParallel;
+        $rhoOrigin = $a * sqrt($C - $n * $alphaOrigin) / $n;
+        $rhoPrime = sqrt($easting ** 2 + ($rhoOrigin - $northing) ** 2);
+        $alphaPrime = ($C - $rhoPrime ** 2 * $n ** 2 / $a ** 2) / $n;
+        $betaPrime = asin($alphaPrime / (1 - (1 - $e2) / 2 / $e * log((1 - $e) / (1 + $e))));
+        if ($n > 0) {
+            $theta = atan2($easting, $rhoOrigin - $northing);
+        } else {
+            $theta = atan2(-$easting, $northing - $rhoOrigin);
+        }
+
+        $latitude = $betaPrime + (($e2 / 3 + 31 * $e4 / 180 + 517 * $e6 / 5040) * sin(2 * $betaPrime)) + ((23 * $e4 / 360 + 251 * $e6 / 3780) * sin(4 * $betaPrime)) + ((761 * $e6 / 45360) * sin(6 * $betaPrime));
+        $longitude = $longitudeOfFalseOrigin->asRadians()->getValue() + ($theta / $n);
+
+        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
     }
 }

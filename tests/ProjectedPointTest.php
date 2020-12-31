@@ -11,8 +11,10 @@ namespace PHPCoord;
 use DateTime;
 use DateTimeImmutable;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
+use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Projected;
 use PHPCoord\Exception\InvalidCoordinateReferenceSystemException;
+use PHPCoord\UnitOfMeasure\Angle\Degree;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPCoord\UnitOfMeasure\Scale\Coefficient;
 use PHPCoord\UnitOfMeasure\UnitOfMeasure;
@@ -141,5 +143,27 @@ class ProjectedPointTest extends TestCase
         $to = $from->affineParametricTransform(CoordinateReferenceSystem::fromEPSGCode(Projected::EPSG_JAD69_JAMAICA_NATIONAL_GRID), new Metre(82357.457), new Coefficient(0.304794369), new Coefficient(0.000015417425), new Metre(28091.324), new Coefficient(-0.000015417425), new Coefficient(0.304794369), false);
         self::assertEqualsWithDelta(251190.497, $to->getEasting()->asMetres()->getValue(), 0.001);
         self::assertEqualsWithDelta(175146.067, $to->getNorthing()->asMetres()->getValue(), 0.001);
+    }
+
+    public function testAlbersEqualAreaNorthHemisphere(): void
+    {
+        $from = ProjectedPoint::createFromEastingNorthing(new Metre(1466493.492), new Metre(702903.006), CoordinateReferenceSystem::fromEPSGCode(Projected::EPSG_NAD83_GREAT_LAKES_ALBERS));
+        $toCRS = CoordinateReferenceSystem::fromEPSGCode(Geographic2D::EPSG_NAD83);
+        $to = $from->albersEqualArea($toCRS, new Degree(45.568977), new Degree(-84.455955), new Degree(42.122774), new Degree(49.01518), new Metre(1000000), new Metre(1000000));
+
+        self::assertEqualsWithDelta(0.746128255, $to->getLatitude()->asRadians()->getValue(), 0.000001);
+        self::assertEqualsWithDelta(-1.374446786, $to->getLongitude()->asRadians()->getValue(), 0.000001);
+        self::assertNull($to->getHeight());
+    }
+
+    public function testAlbersEqualAreaSouthHemisphere(): void
+    {
+        $from = ProjectedPoint::createFromEastingNorthing(new Metre(1408623.196), new Metre(1507641.482), CoordinateReferenceSystem::fromEPSGCode(Projected::EPSG_TWD67_TM2_ZONE_119));
+        $toCRS = CoordinateReferenceSystem::fromEPSGCode(Geographic2D::EPSG_TWD67);
+        $to = $from->albersEqualArea($toCRS, new Degree(-32), new Degree(-60), new Degree(-5), new Degree(-42), new Metre(0), new Metre(0));
+
+        self::assertEqualsWithDelta(-0.322895686, $to->getLatitude()->asRadians()->getValue(), 0.000001);
+        self::assertEqualsWithDelta(-0.802858912, $to->getLongitude()->asRadians()->getValue(), 0.000001);
+        self::assertNull($to->getHeight());
     }
 }

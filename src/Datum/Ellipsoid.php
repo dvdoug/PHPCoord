@@ -394,6 +394,11 @@ class Ellipsoid
         return ($this->semiMajorAxis->getValue() - $this->semiMinorAxis->getValue()) / $this->semiMajorAxis->getValue();
     }
 
+    public function getEccentricity(): float
+    {
+        return sqrt($this->getEccentricitySquared());
+    }
+
     public function getEccentricitySquared(): float
     {
         return (2 * $this->getInverseFlattening()) - $this->getInverseFlattening() ** 2;

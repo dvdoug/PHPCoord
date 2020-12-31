@@ -434,6 +434,7 @@ class CoordinateOperationMethods
             self::EPSG_MOLODENSKY_BADEKAS_PV_GEOCENTRIC_DOMAIN => 'positionVectorMolodenskyBadekas',
             self::EPSG_MOLODENSKY_BADEKAS_PV_GEOG2D_DOMAIN => 'positionVectorMolodenskyBadekas',
             self::EPSG_AFFINE_PARAMETRIC_TRANSFORMATION => 'affineParametricTransform',
+            self::EPSG_ALBERS_EQUAL_AREA => 'albersEqualArea',
         ];
     }
 }

@@ -13,6 +13,7 @@ use DateTimeImmutable;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Geographic3D;
+use PHPCoord\CoordinateReferenceSystem\Projected;
 use PHPCoord\Exception\InvalidCoordinateReferenceSystemException;
 use PHPCoord\UnitOfMeasure\Angle\ArcSecond;
 use PHPCoord\UnitOfMeasure\Angle\Degree;
@@ -232,5 +233,25 @@ class GeographicPointTest extends TestCase
         self::assertEqualsWithDelta(53.81015639, $to->getLatitude()->getValue(), 0.000001);
         self::assertEqualsWithDelta(2.13096583, $to->getLongitude()->getValue(), 0.000001);
         self::assertEqualsWithDelta(28.018, $to->getHeight()->getValue(), 0.01);
+    }
+
+    public function testAlbersEqualAreaNorthHemisphere(): void
+    {
+        $from = GeographicPoint::create(new Radian(0.746128255), new Radian(-1.374446786), null, CoordinateReferenceSystem::fromEPSGCode(Geographic2D::EPSG_NAD83));
+        $toCRS = CoordinateReferenceSystem::fromEPSGCode(Projected::EPSG_NAD83_GREAT_LAKES_ALBERS);
+        $to = $from->albersEqualArea($toCRS, new Degree(45.568977), new Degree(-84.455955), new Degree(42.122774), new Degree(49.01518), new Metre(1000000), new Metre(1000000));
+
+        self::assertEqualsWithDelta(1466493.492, $to->getEasting()->asMetres()->getValue(), 0.01);
+        self::assertEqualsWithDelta(702903.006, $to->getNorthing()->asMetres()->getValue(), 0.01);
+    }
+
+    public function testAlbersEqualAreaSouthHemisphere(): void
+    {
+        $from = GeographicPoint::create(new Radian(-0.322895686), new Radian(-0.802858912), null, CoordinateReferenceSystem::fromEPSGCode(Geographic2D::EPSG_TWD67));
+        $toCRS = CoordinateReferenceSystem::fromEPSGCode(Projected::EPSG_TWD67_TM2_ZONE_119);
+        $to = $from->albersEqualArea($toCRS, new Degree(-32), new Degree(-60), new Degree(-5), new Degree(-42), new Metre(0), new Metre(0));
+
+        self::assertEqualsWithDelta(1408623.196, $to->getEasting()->asMetres()->getValue(), 0.01);
+        self::assertEqualsWithDelta(1507641.482, $to->getNorthing()->asMetres()->getValue(), 0.01);
     }
 }
