@@ -98,20 +98,11 @@ class PrimeMeridian
      */
     public const EPSG_STOCKHOLM = 8911;
 
-    /**
-     * @var Repository
-     */
-    private static $repository;
+    private static Repository $repository;
 
-    /**
-     * @var string
-     */
-    private $name;
+    private string $name;
 
-    /**
-     * @var Angle
-     */
-    private $greenwichLongitude;
+    private Angle $greenwichLongitude;
 
     public function __construct(string $name, Angle $greenwichLongitude)
     {

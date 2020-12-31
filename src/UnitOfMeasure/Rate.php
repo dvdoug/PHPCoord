@@ -13,15 +13,9 @@ use PHPCoord\UnitOfMeasure\Time\Time;
 
 class Rate implements UnitOfMeasure
 {
-    /**
-     * @var UnitOfMeasure
-     */
-    private $change;
+    private UnitOfMeasure $change;
 
-    /**
-     * @var Time
-     */
-    private $time;
+    private Time $time;
 
     public function __construct(UnitOfMeasure $change, Time $time)
     {

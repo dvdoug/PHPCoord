@@ -23,27 +23,24 @@ class VerticalPoint extends Point
 {
     /**
      * Height.
-     * @var Length
      */
-    protected $height;
+    protected Length $height;
 
     /**
      * Coordinate reference system.
-     * @var Vertical
      */
-    protected $crs;
+    protected Vertical $crs;
 
     /**
      * Coordinate epoch (date for which the specified coordinates represented this point).
-     * @var DateTimeImmutable
      */
-    protected $epoch;
+    protected ?DateTimeImmutable $epoch;
 
     /**
      * Constructor.
      * @param Length $height refer to CRS for preferred unit of measure, but any length unit accepted
      */
-    protected function __construct(Length $height, Vertical $crs, ?DateTimeInterface $epoch)
+    protected function __construct(Length $height, Vertical $crs, ?DateTimeInterface $epoch = null)
     {
         $this->height = UnitOfMeasureFactory::convertLength($height, $crs->getCoordinateSystem()->getAxes()[1]->getUnitOfMeasureId());
         $this->crs = $crs;
@@ -51,9 +48,7 @@ class VerticalPoint extends Point
         if ($epoch instanceof DateTime) {
             $epoch = DateTimeImmutable::createFromMutable($epoch);
         }
-        if ($epoch) {
-            $this->epoch = $epoch;
-        }
+        $this->epoch = $epoch;
     }
 
     /**

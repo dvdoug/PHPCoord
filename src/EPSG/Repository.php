@@ -15,50 +15,23 @@ use SQLite3;
  */
 class Repository
 {
-    /**
-     * @var SQLite3
-     */
-    private static $connection;
+    private static ?SQLite3 $connection = null;
 
-    /**
-     * @var array
-     */
-    private static $unitsOfMeasureData = [];
+    private static array $unitsOfMeasureData = [];
 
-    /**
-     * @var array
-     */
-    private static $primeMeridianData = [];
+    private static array $primeMeridianData = [];
 
-    /**
-     * @var array
-     */
-    private static $ellipsoidData = [];
+    private static array $ellipsoidData = [];
 
-    /**
-     * @var array
-     */
-    private static $datumData = [];
+    private static array $datumData = [];
 
-    /**
-     * @var array
-     */
-    private static $datumEnsembleData = [];
+    private static array $datumEnsembleData = [];
 
-    /**
-     * @var array
-     */
-    private static $coordinateSystemData = [];
+    private static array $coordinateSystemData = [];
 
-    /**
-     * @var array
-     */
-    private static $coordinateSystemAxisData = [];
+    private static array $coordinateSystemAxisData = [];
 
-    /**
-     * @var array
-     */
-    private static $coordinateReferenceSystemData = [];
+    private static array $coordinateReferenceSystemData = [];
 
     private function getConnection(): SQLite3
     {

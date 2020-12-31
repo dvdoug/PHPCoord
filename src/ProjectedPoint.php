@@ -33,41 +33,35 @@ class ProjectedPoint extends Point
 {
     /**
      * Easting.
-     * @var Length
      */
-    protected $easting;
+    protected Length $easting;
 
     /**
      * Northing.
-     * @var Length
      */
-    protected $northing;
+    protected Length $northing;
 
     /**
      * Westing.
-     * @var Length
      */
-    protected $westing;
+    protected Length $westing;
 
     /**
      * Southing.
-     * @var Length
      */
-    protected $southing;
+    protected Length $southing;
 
     /**
      * Coordinate reference system.
-     * @var Projected
      */
-    protected $crs;
+    protected Projected $crs;
 
     /**
      * Coordinate epoch (date for which the specified coordinates represented this point).
-     * @var DateTimeImmutable
      */
-    protected $epoch;
+    protected ?DateTimeImmutable $epoch;
 
-    protected function __construct(?Length $easting, ?Length $northing, ?Length $westing, ?Length $southing, Projected $crs, ?DateTimeInterface $epoch)
+    protected function __construct(?Length $easting, ?Length $northing, ?Length $westing, ?Length $southing, Projected $crs, ?DateTimeInterface $epoch = null)
     {
         $this->crs = $crs;
 
@@ -99,9 +93,7 @@ class ProjectedPoint extends Point
         if ($epoch instanceof DateTime) {
             $epoch = DateTimeImmutable::createFromMutable($epoch);
         }
-        if ($epoch) {
-            $this->epoch = $epoch;
-        }
+        $this->epoch = $epoch;
     }
 
     public static function create(?Length $easting, ?Length $northing, ?Length $westing, ?Length $southing, Projected $crs, ?DateTimeInterface $epoch = null): self

@@ -2436,12 +2436,9 @@ class Compound extends CoordinateReferenceSystem
     /**
      * @var Geocentric|Geographic|Projected
      */
-    private $horizontal;
+    private CoordinateReferenceSystem $horizontal;
 
-    /**
-     * @var Vertical
-     */
-    private $vertical;
+    private Vertical $vertical;
 
     /**
      * Compound constructor.

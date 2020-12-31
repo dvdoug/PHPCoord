@@ -24,31 +24,28 @@ class CompoundPoint extends Point
      * Horizontal point.
      * @var GeocentricPoint|GeographicPoint|ProjectedPoint
      */
-    protected $horizontalPoint;
+    protected Point $horizontalPoint;
 
     /**
      * Vertical point.
-     * @var VerticalPoint
      */
-    protected $verticalPoint;
+    protected VerticalPoint $verticalPoint;
 
     /**
      * Coordinate reference system.
-     * @var Compound
      */
-    protected $crs;
+    protected Compound $crs;
 
     /**
      * Coordinate epoch (date for which the specified coordinates represented this point).
-     * @var DateTimeImmutable
      */
-    protected $epoch;
+    protected ?DateTimeImmutable $epoch;
 
     /**
      * Constructor.
      * @param GeocentricPoint|GeographicPoint|ProjectedPoint $horizontalPoint
      */
-    protected function __construct(Point $horizontalPoint, VerticalPoint $verticalPoint, Compound $crs, ?DateTimeInterface $epoch)
+    protected function __construct(Point $horizontalPoint, VerticalPoint $verticalPoint, Compound $crs, ?DateTimeInterface $epoch = null)
     {
         $this->horizontalPoint = $horizontalPoint;
         $this->verticalPoint = $verticalPoint;
@@ -57,9 +54,7 @@ class CompoundPoint extends Point
         if ($epoch instanceof DateTime) {
             $epoch = DateTimeImmutable::createFromMutable($epoch);
         }
-        if ($epoch) {
-            $this->epoch = $epoch;
-        }
+        $this->epoch = $epoch;
     }
 
     /**

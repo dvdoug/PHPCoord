@@ -12,10 +12,7 @@ use InvalidArgumentException;
 
 class Degree implements Angle
 {
-    /**
-     * @var float
-     */
-    private $angle;
+    private float $angle;
 
     public function __construct(float $angle)
     {

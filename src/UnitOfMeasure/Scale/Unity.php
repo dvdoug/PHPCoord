@@ -10,10 +10,7 @@ namespace PHPCoord\UnitOfMeasure\Scale;
 
 class Unity implements Scale
 {
-    /**
-     * @var float
-     */
-    private $scale;
+    private float $scale;
 
     public function __construct(float $scale)
     {

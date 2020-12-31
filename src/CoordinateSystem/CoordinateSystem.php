@@ -23,20 +23,14 @@ abstract class CoordinateSystem
 
     public const CS_TYPE_VERTICAL = 'vertical';
 
-    /**
-     * @var int
-     */
-    protected $epsgCode;
+    protected int $epsgCode;
 
     /**
      * @var Axis[]
      */
-    protected $axes;
+    protected array $axes;
 
-    /**
-     * @var Repository
-     */
-    private static $repository;
+    private static Repository $repository;
 
     public static function fromEPSGCode(int $epsgCode): self
     {

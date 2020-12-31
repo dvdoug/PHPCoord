@@ -36,25 +36,13 @@ class Axis
 
     public const WESTING = 'Westing';
 
-    /**
-     * @var string
-     */
-    private $orientation;
+    private string $orientation;
 
-    /**
-     * @var string
-     */
-    private $abbreviation;
+    private string $abbreviation;
 
-    /**
-     * @var string
-     */
-    private $name;
+    private string $name;
 
-    /**
-     * @var int
-     */
-    private $unitOfMeasureId;
+    private int $unitOfMeasureId;
 
     public function __construct(
         string $orientation,

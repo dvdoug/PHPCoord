@@ -16,6 +16,7 @@ use InvalidArgumentException;
 use PHPCoord\UnitOfMeasure\Scale\Coefficient;
 use PHPCoord\CoordinateOperation\GeocentricValue;
 use PHPCoord\CoordinateOperation\GeographicValue;
+use PHPCoord\CoordinateReferenceSystem\Geocentric;
 use PHPCoord\CoordinateReferenceSystem\Geographic;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Geographic3D;
@@ -41,35 +42,30 @@ class GeographicPoint extends Point
 {
     /**
      * Latitude.
-     * @var Angle
      */
-    protected $latitude;
+    protected Angle $latitude;
 
     /**
      * Longitude.
-     * @var Angle
      */
-    protected $longitude;
+    protected Angle $longitude;
 
     /**
      * Height above ellipsoid (N.B. *not* height above ground, sea-level or anything else tangible).
-     * @var ?Length
      */
-    protected $height;
+    protected ?Length $height;
 
     /**
      * Coordinate reference system.
-     * @var Geographic
      */
-    protected $crs;
+    protected Geographic $crs;
 
     /**
      * Coordinate epoch (date for which the specified coordinates represented this point).
-     * @var DateTimeImmutable
      */
-    protected $epoch;
+    protected ?DateTimeImmutable $epoch;
 
-    protected function __construct(Angle $latitude, Angle $longitude, ?Length $height, Geographic $crs, ?DateTimeInterface $epoch)
+    protected function __construct(Angle $latitude, Angle $longitude, ?Length $height, Geographic $crs, ?DateTimeInterface $epoch = null)
     {
         if (!$crs instanceof Geographic2D && !$crs instanceof Geographic3D) {
             throw new TypeError(sprintf("A geographic point must be associated with a geographic CRS, but a '%s' CRS was given", get_class($crs)));
@@ -90,14 +86,14 @@ class GeographicPoint extends Point
 
         if ($height) {
             $this->height = UnitOfMeasureFactory::convertLength($height, $this->getAxisByName(Axis::ELLIPSOIDAL_HEIGHT)->getUnitOfMeasureId());
+        } else {
+            $this->height = null;
         }
 
         if ($epoch instanceof DateTime) {
             $epoch = DateTimeImmutable::createFromMutable($epoch);
         }
-        if ($epoch) {
-            $this->epoch = $epoch;
-        }
+        $this->epoch = $epoch;
     }
 
     /**

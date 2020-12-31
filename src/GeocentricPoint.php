@@ -32,35 +32,30 @@ class GeocentricPoint extends Point
 {
     /**
      * X co-ordinate.
-     * @var Length
      */
-    protected $x;
+    protected Length $x;
 
     /**
      * Y co-ordinate.
-     * @var Length
      */
-    protected $y;
+    protected Length $y;
 
     /**
      * Z co-ordinate.
-     * @var Length
      */
-    protected $z;
+    protected Length $z;
 
     /**
      * Coordinate reference system.
-     * @var Geocentric
      */
-    protected $crs;
+    protected Geocentric $crs;
 
     /**
      * Coordinate epoch (date for which the specified coordinates represented this point).
-     * @var DateTimeImmutable
      */
-    protected $epoch;
+    protected ?DateTimeImmutable $epoch;
 
-    protected function __construct(Length $x, Length $y, Length $z, Geocentric $crs, ?DateTimeInterface $epoch)
+    protected function __construct(Length $x, Length $y, Length $z, Geocentric $crs, ?DateTimeInterface $epoch = null)
     {
         $this->crs = $crs;
         $this->x = UnitOfMeasureFactory::convertLength($x, $this->getAxisByName(Axis::GEOCENTRIC_X)->getUnitOfMeasureId());
@@ -70,9 +65,7 @@ class GeocentricPoint extends Point
         if ($epoch instanceof DateTime) {
             $epoch = DateTimeImmutable::createFromMutable($epoch);
         }
-        if ($epoch) {
-            $this->epoch = $epoch;
-        }
+        $this->epoch = $epoch;
     }
 
     /**

@@ -10,10 +10,7 @@ namespace PHPCoord\UnitOfMeasure\Angle;
 
 class Radian implements Angle
 {
-    /**
-     * @var float
-     */
-    private $angle;
+    private float $angle;
 
     public function __construct(float $angle)
     {

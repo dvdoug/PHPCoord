@@ -8240,30 +8240,15 @@ class Datum
 
     public const DATUM_TYPE_ENSEMBLE = 'ensemble';
 
-    /**
-     * @var Repository
-     */
-    private static $repository;
+    private static Repository $repository;
 
-    /**
-     * @var string
-     */
-    protected $datumType;
+    protected string $datumType;
 
-    /**
-     * @var Ellipsoid
-     */
-    protected $ellipsoid;
+    protected ?Ellipsoid $ellipsoid;
 
-    /**
-     * @var PrimeMeridian
-     */
-    protected $primeMeridian;
+    protected ?PrimeMeridian $primeMeridian;
 
-    /**
-     * @var ?float
-     */
-    protected $frameReferenceEpoch;
+    protected ?float $frameReferenceEpoch;
 
     public function __construct(
         string $datumType,

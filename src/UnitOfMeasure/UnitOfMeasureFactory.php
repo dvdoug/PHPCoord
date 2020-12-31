@@ -26,10 +26,7 @@ use PHPCoord\UnitOfMeasure\Time\Year;
 
 class UnitOfMeasureFactory
 {
-    /**
-     * @var Repository
-     */
-    private static $repository;
+    private static Repository $repository;
 
     /**
      * @param float|string $measurement

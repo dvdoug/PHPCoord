@@ -39,25 +39,13 @@ abstract class CoordinateReferenceSystem
 
     public const CRS_TYPE_VERTICAL = 'vertical';
 
-    /**
-     * @var int
-     */
-    protected $epsgCode;
+    protected int $epsgCode;
 
-    /**
-     * @var CoordinateSystem
-     */
-    protected $coordinateSystem;
+    protected CoordinateSystem $coordinateSystem;
 
-    /**
-     * @var Datum
-     */
-    protected $datum;
+    protected Datum $datum;
 
-    /**
-     * @var CoordinateReferenceSystem
-     */
-    protected $baseCRS;
+    protected CoordinateReferenceSystem $baseCRS;
 
     /**
      * @var Repository

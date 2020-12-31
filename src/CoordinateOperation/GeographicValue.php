@@ -20,25 +20,13 @@ use PHPCoord\UnitOfMeasure\Length\Metre;
  */
 class GeographicValue
 {
-    /**
-     * @var Radian
-     */
-    private $latitude;
+    private Radian $latitude;
 
-    /**
-     * @var Radian
-     */
-    private $longitude;
+    private Radian $longitude;
 
-    /**
-     * @var ?Metre
-     */
-    private $height;
+    private ?Metre $height;
 
-    /**
-     * @var Datum
-     */
-    private $datum;
+    private Datum $datum;
 
     public function __construct(Angle $latitude, Angle $longitude, ?Length $height, Datum $datum)
     {
@@ -77,7 +65,7 @@ class GeographicValue
         $e2 = $this->datum->getEllipsoid()->getEccentricitySquared();
         $latitude = $this->latitude->getValue();
         $longitude = $this->longitude->getValue() - $this->datum->getPrimeMeridian()->getGreenwichLongitude()->asRadians()->getValue();
-        $h = $this->height ? $this->height->getValue() : 0;
+        $h = isset($this->height) ? $this->height->getValue() : 0;
 
         $nu = $a / sqrt(1 - $e2 * (sin($latitude) ** 2));
         $x = ($nu + $h) * cos($latitude) * cos($longitude);

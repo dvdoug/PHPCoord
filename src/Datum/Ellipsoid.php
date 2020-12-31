@@ -353,20 +353,11 @@ class Ellipsoid
      */
     public const EPSG_ZACH_1812 = 1026;
 
-    /**
-     * @var Repository
-     */
-    private static $repository;
+    private static Repository $repository;
 
-    /**
-     * @var Length
-     */
-    protected $semiMajorAxis;
+    protected Length $semiMajorAxis;
 
-    /**
-     * @var Length
-     */
-    protected $semiMinorAxis;
+    protected Length $semiMinorAxis;
 
     public function __construct(Length $semiMajorAxis, Length $semiMinorAxis)
     {

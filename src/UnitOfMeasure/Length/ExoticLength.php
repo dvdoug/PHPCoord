@@ -10,25 +10,13 @@ namespace PHPCoord\UnitOfMeasure\Length;
 
 class ExoticLength implements Length
 {
-    /**
-     * @var float
-     */
-    private $length;
+    private float $length;
 
-    /**
-     * @var string
-     */
-    private $name;
+    private string $name;
 
-    /**
-     * @var float
-     */
-    private $factorB;
+    private float $factorB;
 
-    /**
-     * @var float
-     */
-    private $factorC;
+    private float $factorC;
 
     public function __construct(
         float $length,

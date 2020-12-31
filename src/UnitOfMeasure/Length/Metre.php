@@ -10,10 +10,7 @@ namespace PHPCoord\UnitOfMeasure\Length;
 
 class Metre implements Length
 {
-    /**
-     * @var float
-     */
-    private $length;
+    private float $length;
 
     public function __construct(float $length)
     {

@@ -10,10 +10,7 @@ namespace PHPCoord\UnitOfMeasure\Time;
 
 class Second implements Time
 {
-    /**
-     * @var float
-     */
-    private $time;
+    private float $time;
 
     public function __construct(float $time)
     {

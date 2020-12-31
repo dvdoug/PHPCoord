@@ -19,10 +19,7 @@ use SQLite3Result;
 
 class AddNewConstantsVisitor extends NodeVisitorAbstract
 {
-    /**
-     * @var SQLite3Result
-     */
-    private $constants;
+    private SQLite3Result $constants;
 
     private string $visibility;
 
