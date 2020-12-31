@@ -597,4 +597,15 @@ class GeographicPointTest extends TestCase
         self::assertEqualsWithDelta(165704.29, $to->getEasting()->asMetres()->getValue(), 0.01);
         self::assertEqualsWithDelta(5171848.07, $to->getNorthing()->asMetres()->getValue(), 0.01);
     }
+
+    public function testGeographic2DOffset(): void
+    {
+        $from = GeographicPoint::create(new Degree(38.14349028), new Degree(23.80450972), null, Geographic2D::fromSRID(Geographic2D::EPSG_GREEK));
+        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_GGRS87);
+        $to = $from->geographic2DOffsets($toCRS, new ArcSecond(-5.86), new ArcSecond(0.28));
+
+        self::assertEqualsWithDelta(38.14186250, $to->getLatitude()->getValue(), 0.000001);
+        self::assertEqualsWithDelta(23.80458750, $to->getLongitude()->getValue(), 0.000001);
+        self::assertNull($to->getHeight());
+    }
 }

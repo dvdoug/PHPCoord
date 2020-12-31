@@ -20,6 +20,7 @@ use function log;
 use PHPCoord\CoordinateOperation\GeocentricValue;
 use PHPCoord\CoordinateOperation\GeographicValue;
 use PHPCoord\CoordinateReferenceSystem\Geocentric;
+use PHPCoord\CoordinateReferenceSystem\Compound;
 use PHPCoord\CoordinateReferenceSystem\Geographic;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Geographic3D;
@@ -1546,5 +1547,42 @@ class GeographicPoint extends Point
         }
 
         return static::create($this->latitude, $this->longitude, new Metre(0), $to, $this->epoch);
+    }
+
+    /**
+     * Geographic2D offsets.
+     * This transformation allows calculation of coordinates in the target system by adding the parameter value to the
+     * coordinate values of the point in the source system.
+     */
+    public function geographic2DOffsets(
+        Geographic $to,
+        Angle $latitudeOffset,
+        Angle $longitudeOffset
+    ): self {
+        $toLatitude = $this->latitude->add($latitudeOffset);
+        $toLongitude = $this->longitude->add($longitudeOffset);
+
+        return static::create($toLatitude, $toLongitude, null, $to, $this->epoch);
+    }
+
+    /*
+     * Geographic2D with Height Offsets.
+     * This transformation allows calculation of coordinates in the target system by adding the parameter value to the
+     * coordinate values of the point in the source system.
+     */
+    public function geographic2DWithHeightOffsets(
+        Compound $to,
+        Angle $latitudeOffset,
+        Angle $longitudeOffset,
+        Length $geoidUndulation
+    ): CompoundPoint {
+        $toLatitude = $this->latitude->add($latitudeOffset);
+        $toLongitude = $this->longitude->add($longitudeOffset);
+        $toHeight = $this->height->add($geoidUndulation);
+
+        $horizontal = static::create($toLatitude, $toLongitude, null, $to->getHorizontal(), $this->epoch);
+        $vertical = VerticalPoint::create($toHeight, $to->getVertical(), $this->epoch);
+
+        return CompoundPoint::create($horizontal, $vertical, $to, $this->epoch);
     }
 }

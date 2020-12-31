@@ -12,7 +12,9 @@ use DateTime;
 use DateTimeImmutable;
 use DateTimeInterface;
 use PHPCoord\CoordinateReferenceSystem\Compound;
+use PHPCoord\CoordinateReferenceSystem\Geographic3D;
 use PHPCoord\Exception\InvalidCoordinateReferenceSystemException;
+use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPCoord\UnitOfMeasure\Length\Length;
 
 /**
@@ -101,5 +103,23 @@ class CompoundPoint extends Point
     public function __toString(): string
     {
         return "({$this->horizontalPoint}, {$this->verticalPoint})";
+    }
+
+    /*
+     * Geographic2D with Height Offsets.
+     * This transformation allows calculation of coordinates in the target system by adding the parameter value to the
+     * coordinate values of the point in the source system.
+     */
+    public function geographic2DWithHeightOffsets(
+        Geographic3D $to,
+        Angle $latitudeOffset,
+        Angle $longitudeOffset,
+        Length $geoidUndulation
+    ): GeographicPoint {
+        $toLatitude = $this->getHorizontalPoint()->getLatitude()->add($latitudeOffset);
+        $toLongitude = $this->getHorizontalPoint()->getLongitude()->add($longitudeOffset);
+        $toHeight = $this->getVerticalPoint()->getHeight()->add($geoidUndulation);
+
+        return GeographicPoint::create($toLatitude, $toLongitude, $toHeight, $to, $this->epoch);
     }
 }
