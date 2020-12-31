@@ -608,4 +608,15 @@ class GeographicPointTest extends TestCase
         self::assertEqualsWithDelta(23.80458750, $to->getLongitude()->getValue(), 0.000001);
         self::assertNull($to->getHeight());
     }
+
+    public function testLongitudeRotation(): void
+    {
+        $from = GeographicPoint::create(new Degree(0), new Degree(0), new Metre(0), Geographic3D::fromSRID(Geographic3D::EPSG_WGS_84));
+        $toCRS = Geographic3D::fromSRID(Geographic3D::EPSG_WGS_84);
+        $to = $from->longitudeRotation($toCRS, new Degree(12.34));
+
+        self::assertEqualsWithDelta(0, $to->getLatitude()->getValue(), 0.000001);
+        self::assertEqualsWithDelta(12.34, $to->getLongitude()->getValue(), 0.000001);
+        self::assertEqualsWithDelta(0, $to->getHeight()->getValue(), 0.00001);
+    }
 }

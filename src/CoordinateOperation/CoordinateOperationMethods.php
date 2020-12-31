@@ -476,6 +476,7 @@ class CoordinateOperationMethods
             self::EPSG_MERCATOR_VARIANT_B => 'mercatorVariantB',
             self::EPSG_GEOGRAPHIC2D_OFFSETS => 'geographic2DOffsets',
             self::EPSG_GEOGRAPHIC2D_WITH_HEIGHT_OFFSETS => 'geographic2DWithHeightOffsets',
+            self::EPSG_LONGITUDE_ROTATION => 'longitudeRotation',
         ];
     }
 }

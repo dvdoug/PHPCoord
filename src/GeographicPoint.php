@@ -1537,6 +1537,23 @@ class GeographicPoint extends Point
     }
 
     /**
+     * Longitude rotation
+     * This transformation allows calculation of the longitude of a point in the target system by adding the parameter
+     * value to the longitude value of the point in the source system.
+     */
+    public function longitudeRotation(
+        Geographic $to,
+        Angle $longitudeOffset
+    ): self {
+        $newLongitude = $this->longitude->add($longitudeOffset);
+        if ($newLongitude->asDegrees()->getValue() < -180) {
+            $newLongitude = $newLongitude->add(new Degree(360));
+        }
+
+        return static::create($this->latitude, $newLongitude, $this->height, $to, $this->epoch);
+    }
+
+    /**
      * Geographic3D to 2D conversion.
      */
     public function threeDToTwoD(
