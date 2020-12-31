@@ -8,7 +8,6 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateOperation;
 
-use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Geographic3D;
 use PHPCoord\UnitOfMeasure\Angle\Degree;
@@ -19,7 +18,7 @@ class GeographicValueTest extends TestCase
 {
     public function test2DToGeocentric(): void
     {
-        $crs = CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_WGS_84);
+        $crs = Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84);
         $point = new GeographicValue(new Degree(53.809395), new Degree(2.129550), null, $crs->getDatum());
         $asGeocentric = $point->asGeocentricValue();
         self::assertEqualsWithDelta(3771750.843, $asGeocentric->getX()->getValue(), 0.1);
@@ -29,7 +28,7 @@ class GeographicValueTest extends TestCase
 
     public function test3DToGeocentric(): void
     {
-        $crs = CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_WGS_84);
+        $crs = Geographic3D::fromSRID(Geographic3D::EPSG_WGS_84);
         $point = new GeographicValue(new Degree(53.809395), new Degree(2.129550), new Metre(73.0), $crs->getDatum());
         $asGeocentric = $point->asGeocentricValue();
         self::assertEqualsWithDelta(3771793.968, $asGeocentric->getX()->getValue(), 0.1);

@@ -10,8 +10,10 @@ namespace PHPCoord\CoordinateReferenceSystem;
 
 use function assert;
 use function count;
+use PHPCoord\CoordinateSystem\Cartesian;
 use PHPCoord\CoordinateSystem\CoordinateSystem;
 use PHPCoord\Datum\Datum;
+use PHPCoord\Exception\UnknownCoordinateReferenceSystemException;
 
 class Geocentric extends CoordinateReferenceSystem
 {
@@ -1664,6 +1666,1139 @@ class Geocentric extends CoordinateReferenceSystem
      */
     public const EPSG_YEMEN_NGN96 = 'urn:ogc:def:crs:EPSG::4980';
 
+    protected static array $sridData = [
+        'urn:ogc:def:crs:EPSG::3822' => [
+            'name' => 'TWD97',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1026',
+        ],
+        'urn:ogc:def:crs:EPSG::3887' => [
+            'name' => 'IGRS',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1029',
+        ],
+        'urn:ogc:def:crs:EPSG::4000' => [
+            'name' => 'MOLDREF99',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1032',
+        ],
+        'urn:ogc:def:crs:EPSG::4039' => [
+            'name' => 'RGRDC 2005',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1033',
+        ],
+        'urn:ogc:def:crs:EPSG::4073' => [
+            'name' => 'SREF98',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1034',
+        ],
+        'urn:ogc:def:crs:EPSG::4079' => [
+            'name' => 'REGCAN95',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1035',
+        ],
+        'urn:ogc:def:crs:EPSG::4328' => [
+            'name' => 'WGS 84 (geocentric)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6326',
+        ],
+        'urn:ogc:def:crs:EPSG::4330' => [
+            'name' => 'ITRF88 (geocentric)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6647',
+        ],
+        'urn:ogc:def:crs:EPSG::4331' => [
+            'name' => 'ITRF89 (geocentric)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6648',
+        ],
+        'urn:ogc:def:crs:EPSG::4332' => [
+            'name' => 'ITRF90 (geocentric)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6649',
+        ],
+        'urn:ogc:def:crs:EPSG::4333' => [
+            'name' => 'ITRF91 (geocentric)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6650',
+        ],
+        'urn:ogc:def:crs:EPSG::4334' => [
+            'name' => 'ITRF92 (geocentric)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6651',
+        ],
+        'urn:ogc:def:crs:EPSG::4335' => [
+            'name' => 'ITRF93 (geocentric)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6652',
+        ],
+        'urn:ogc:def:crs:EPSG::4336' => [
+            'name' => 'ITRF94 (geocentric)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6653',
+        ],
+        'urn:ogc:def:crs:EPSG::4337' => [
+            'name' => 'ITRF96 (geocentric)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6654',
+        ],
+        'urn:ogc:def:crs:EPSG::4338' => [
+            'name' => 'ITRF97 (geocentric)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6655',
+        ],
+        'urn:ogc:def:crs:EPSG::4340' => [
+            'name' => 'Australian Antarctic (geocentric)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6176',
+        ],
+        'urn:ogc:def:crs:EPSG::4342' => [
+            'name' => 'EST97 (geocentric)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6180',
+        ],
+        'urn:ogc:def:crs:EPSG::4344' => [
+            'name' => 'CHTRF95 (geocentric)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6151',
+        ],
+        'urn:ogc:def:crs:EPSG::4346' => [
+            'name' => 'ETRS89 (geocentric)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6258',
+        ],
+        'urn:ogc:def:crs:EPSG::4348' => [
+            'name' => 'GDA94 (geocentric)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6283',
+        ],
+        'urn:ogc:def:crs:EPSG::4350' => [
+            'name' => 'Hartebeesthoek94 (geocentric)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6148',
+        ],
+        'urn:ogc:def:crs:EPSG::4352' => [
+            'name' => 'IRENET95 (geocentric)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6173',
+        ],
+        'urn:ogc:def:crs:EPSG::4354' => [
+            'name' => 'JGD2000 (geocentric)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6612',
+        ],
+        'urn:ogc:def:crs:EPSG::4356' => [
+            'name' => 'LKS94 (ETRS89) (geocentric)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6126',
+        ],
+        'urn:ogc:def:crs:EPSG::4358' => [
+            'name' => 'Moznet (geocentric)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6130',
+        ],
+        'urn:ogc:def:crs:EPSG::4360' => [
+            'name' => 'NAD83(CSRS) (geocentric)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6140',
+        ],
+        'urn:ogc:def:crs:EPSG::4362' => [
+            'name' => 'NAD83(HARN) (geocentric)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6152',
+        ],
+        'urn:ogc:def:crs:EPSG::4364' => [
+            'name' => 'NZGD2000 (geocentric)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6167',
+        ],
+        'urn:ogc:def:crs:EPSG::4366' => [
+            'name' => 'POSGAR 98 (geocentric)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6190',
+        ],
+        'urn:ogc:def:crs:EPSG::4368' => [
+            'name' => 'REGVEN (geocentric)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6189',
+        ],
+        'urn:ogc:def:crs:EPSG::4370' => [
+            'name' => 'RGF93 (geocentric)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6171',
+        ],
+        'urn:ogc:def:crs:EPSG::4372' => [
+            'name' => 'RGFG95 (geocentric)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6624',
+        ],
+        'urn:ogc:def:crs:EPSG::4374' => [
+            'name' => 'RGR92 (geocentric)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6627',
+        ],
+        'urn:ogc:def:crs:EPSG::4376' => [
+            'name' => 'SIRGAS (geocentric)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6170',
+        ],
+        'urn:ogc:def:crs:EPSG::4378' => [
+            'name' => 'SWEREF99 (geocentric)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6619',
+        ],
+        'urn:ogc:def:crs:EPSG::4380' => [
+            'name' => 'Yemen NGN96 (geocentric)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6163',
+        ],
+        'urn:ogc:def:crs:EPSG::4382' => [
+            'name' => 'RGNC 1991 (geocentric)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6645',
+        ],
+        'urn:ogc:def:crs:EPSG::4384' => [
+            'name' => 'RRAF 1991 (geocentric)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6640',
+        ],
+        'urn:ogc:def:crs:EPSG::4385' => [
+            'name' => 'ITRF2000 (geocentric)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6656',
+        ],
+        'urn:ogc:def:crs:EPSG::4387' => [
+            'name' => 'ISN93 (geocentric)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6659',
+        ],
+        'urn:ogc:def:crs:EPSG::4389' => [
+            'name' => 'LKS92 (geocentric)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6661',
+        ],
+        'urn:ogc:def:crs:EPSG::4465' => [
+            'name' => 'RGSPM06',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1038',
+        ],
+        'urn:ogc:def:crs:EPSG::4468' => [
+            'name' => 'RGM04',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1036',
+        ],
+        'urn:ogc:def:crs:EPSG::4473' => [
+            'name' => 'Cadastre 1997',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1037',
+        ],
+        'urn:ogc:def:crs:EPSG::4479' => [
+            'name' => 'China Geodetic Coordinate System 2000',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1043',
+        ],
+        'urn:ogc:def:crs:EPSG::4481' => [
+            'name' => 'Mexico ITRF92',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1042',
+        ],
+        'urn:ogc:def:crs:EPSG::4556' => [
+            'name' => 'RRAF 1991',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1047',
+        ],
+        'urn:ogc:def:crs:EPSG::4882' => [
+            'name' => 'Slovenia 1996',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6765',
+        ],
+        'urn:ogc:def:crs:EPSG::4884' => [
+            'name' => 'RSRGD2000',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6764',
+        ],
+        'urn:ogc:def:crs:EPSG::4886' => [
+            'name' => 'BDA2000',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6762',
+        ],
+        'urn:ogc:def:crs:EPSG::4888' => [
+            'name' => 'HTRS96',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6761',
+        ],
+        'urn:ogc:def:crs:EPSG::4890' => [
+            'name' => 'WGS 66',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6760',
+        ],
+        'urn:ogc:def:crs:EPSG::4892' => [
+            'name' => 'NAD83(NSRS2007)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6759',
+        ],
+        'urn:ogc:def:crs:EPSG::4894' => [
+            'name' => 'JAD2001',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6758',
+        ],
+        'urn:ogc:def:crs:EPSG::4896' => [
+            'name' => 'ITRF2005',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6896',
+        ],
+        'urn:ogc:def:crs:EPSG::4897' => [
+            'name' => 'DGN95',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6755',
+        ],
+        'urn:ogc:def:crs:EPSG::4899' => [
+            'name' => 'LGD2006',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6754',
+        ],
+        'urn:ogc:def:crs:EPSG::4906' => [
+            'name' => 'RGNC91-93',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6749',
+        ],
+        'urn:ogc:def:crs:EPSG::4908' => [
+            'name' => 'GR96',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6747',
+        ],
+        'urn:ogc:def:crs:EPSG::4910' => [
+            'name' => 'ITRF88',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6647',
+        ],
+        'urn:ogc:def:crs:EPSG::4911' => [
+            'name' => 'ITRF89',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6648',
+        ],
+        'urn:ogc:def:crs:EPSG::4912' => [
+            'name' => 'ITRF90',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6649',
+        ],
+        'urn:ogc:def:crs:EPSG::4913' => [
+            'name' => 'ITRF91',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6650',
+        ],
+        'urn:ogc:def:crs:EPSG::4914' => [
+            'name' => 'ITRF92',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6651',
+        ],
+        'urn:ogc:def:crs:EPSG::4915' => [
+            'name' => 'ITRF93',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6652',
+        ],
+        'urn:ogc:def:crs:EPSG::4916' => [
+            'name' => 'ITRF94',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6653',
+        ],
+        'urn:ogc:def:crs:EPSG::4917' => [
+            'name' => 'ITRF96',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6654',
+        ],
+        'urn:ogc:def:crs:EPSG::4918' => [
+            'name' => 'ITRF97',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6655',
+        ],
+        'urn:ogc:def:crs:EPSG::4919' => [
+            'name' => 'ITRF2000',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6656',
+        ],
+        'urn:ogc:def:crs:EPSG::4920' => [
+            'name' => 'GDM2000',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6742',
+        ],
+        'urn:ogc:def:crs:EPSG::4922' => [
+            'name' => 'PZ-90',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6740',
+        ],
+        'urn:ogc:def:crs:EPSG::4924' => [
+            'name' => 'Mauritania 1999',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6702',
+        ],
+        'urn:ogc:def:crs:EPSG::4926' => [
+            'name' => 'Korea 2000',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6737',
+        ],
+        'urn:ogc:def:crs:EPSG::4928' => [
+            'name' => 'POSGAR 94',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6694',
+        ],
+        'urn:ogc:def:crs:EPSG::4930' => [
+            'name' => 'Australian Antarctic',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6176',
+        ],
+        'urn:ogc:def:crs:EPSG::4932' => [
+            'name' => 'CHTRF95',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6151',
+        ],
+        'urn:ogc:def:crs:EPSG::4934' => [
+            'name' => 'EST97',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6180',
+        ],
+        'urn:ogc:def:crs:EPSG::4936' => [
+            'name' => 'ETRS89',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6258',
+        ],
+        'urn:ogc:def:crs:EPSG::4938' => [
+            'name' => 'GDA94',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6283',
+        ],
+        'urn:ogc:def:crs:EPSG::4940' => [
+            'name' => 'Hartebeesthoek94',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6148',
+        ],
+        'urn:ogc:def:crs:EPSG::4942' => [
+            'name' => 'IRENET95',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6173',
+        ],
+        'urn:ogc:def:crs:EPSG::4944' => [
+            'name' => 'ISN93',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6659',
+        ],
+        'urn:ogc:def:crs:EPSG::4946' => [
+            'name' => 'JGD2000',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6612',
+        ],
+        'urn:ogc:def:crs:EPSG::4948' => [
+            'name' => 'LKS92',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6661',
+        ],
+        'urn:ogc:def:crs:EPSG::4950' => [
+            'name' => 'LKS94',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6126',
+        ],
+        'urn:ogc:def:crs:EPSG::4952' => [
+            'name' => 'Moznet',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6130',
+        ],
+        'urn:ogc:def:crs:EPSG::4954' => [
+            'name' => 'NAD83(CSRS)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6140',
+        ],
+        'urn:ogc:def:crs:EPSG::4956' => [
+            'name' => 'NAD83(HARN)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6152',
+        ],
+        'urn:ogc:def:crs:EPSG::4958' => [
+            'name' => 'NZGD2000',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6167',
+        ],
+        'urn:ogc:def:crs:EPSG::4960' => [
+            'name' => 'POSGAR 98',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6190',
+        ],
+        'urn:ogc:def:crs:EPSG::4962' => [
+            'name' => 'REGVEN',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6189',
+        ],
+        'urn:ogc:def:crs:EPSG::4964' => [
+            'name' => 'RGF93',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6171',
+        ],
+        'urn:ogc:def:crs:EPSG::4966' => [
+            'name' => 'RGFG95',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6624',
+        ],
+        'urn:ogc:def:crs:EPSG::4968' => [
+            'name' => 'RGNC 1991',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6645',
+        ],
+        'urn:ogc:def:crs:EPSG::4970' => [
+            'name' => 'RGR92',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6627',
+        ],
+        'urn:ogc:def:crs:EPSG::4972' => [
+            'name' => 'RRAF 1991',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6640',
+        ],
+        'urn:ogc:def:crs:EPSG::4974' => [
+            'name' => 'SIRGAS 1995',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6170',
+        ],
+        'urn:ogc:def:crs:EPSG::4976' => [
+            'name' => 'SWEREF99',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6619',
+        ],
+        'urn:ogc:def:crs:EPSG::4978' => [
+            'name' => 'WGS 84',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6326',
+        ],
+        'urn:ogc:def:crs:EPSG::4980' => [
+            'name' => 'Yemen NGN96',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6163',
+        ],
+        'urn:ogc:def:crs:EPSG::4982' => [
+            'name' => 'IGM95',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6670',
+        ],
+        'urn:ogc:def:crs:EPSG::4984' => [
+            'name' => 'WGS 72',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6322',
+        ],
+        'urn:ogc:def:crs:EPSG::4986' => [
+            'name' => 'WGS 72BE',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6324',
+        ],
+        'urn:ogc:def:crs:EPSG::4988' => [
+            'name' => 'SIRGAS 2000',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6674',
+        ],
+        'urn:ogc:def:crs:EPSG::4990' => [
+            'name' => 'Lao 1993',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6677',
+        ],
+        'urn:ogc:def:crs:EPSG::4992' => [
+            'name' => 'Lao 1997',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6678',
+        ],
+        'urn:ogc:def:crs:EPSG::4994' => [
+            'name' => 'PRS92',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6683',
+        ],
+        'urn:ogc:def:crs:EPSG::4996' => [
+            'name' => 'MAGNA-SIRGAS',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6686',
+        ],
+        'urn:ogc:def:crs:EPSG::4998' => [
+            'name' => 'RGPF',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6687',
+        ],
+        'urn:ogc:def:crs:EPSG::5011' => [
+            'name' => 'PTRA08',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1041',
+        ],
+        'urn:ogc:def:crs:EPSG::5244' => [
+            'name' => 'GDBD2009',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1056',
+        ],
+        'urn:ogc:def:crs:EPSG::5250' => [
+            'name' => 'TUREF',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1057',
+        ],
+        'urn:ogc:def:crs:EPSG::5262' => [
+            'name' => 'DRUKREF 03',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1058',
+        ],
+        'urn:ogc:def:crs:EPSG::5322' => [
+            'name' => 'ISN2004',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1060',
+        ],
+        'urn:ogc:def:crs:EPSG::5332' => [
+            'name' => 'ITRF2008',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1061',
+        ],
+        'urn:ogc:def:crs:EPSG::5341' => [
+            'name' => 'POSGAR 2007',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1062',
+        ],
+        'urn:ogc:def:crs:EPSG::5352' => [
+            'name' => 'MARGEN',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1063',
+        ],
+        'urn:ogc:def:crs:EPSG::5358' => [
+            'name' => 'SIRGAS-Chile 2002',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1064',
+        ],
+        'urn:ogc:def:crs:EPSG::5363' => [
+            'name' => 'CR05',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1065',
+        ],
+        'urn:ogc:def:crs:EPSG::5368' => [
+            'name' => 'MACARIO SOLIS',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1066',
+        ],
+        'urn:ogc:def:crs:EPSG::5369' => [
+            'name' => 'Peru96',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1067',
+        ],
+        'urn:ogc:def:crs:EPSG::5379' => [
+            'name' => 'SIRGAS-ROU98',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1068',
+        ],
+        'urn:ogc:def:crs:EPSG::5391' => [
+            'name' => 'SIRGAS_ES2007.8',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1069',
+        ],
+        'urn:ogc:def:crs:EPSG::5487' => [
+            'name' => 'RGAF09',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1073',
+        ],
+        'urn:ogc:def:crs:EPSG::5544' => [
+            'name' => 'PNG94',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1076',
+        ],
+        'urn:ogc:def:crs:EPSG::5558' => [
+            'name' => 'UCS-2000',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1077',
+        ],
+        'urn:ogc:def:crs:EPSG::5591' => [
+            'name' => 'FEH2010',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1078',
+        ],
+        'urn:ogc:def:crs:EPSG::5828' => [
+            'name' => 'DB_REF',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1081',
+        ],
+        'urn:ogc:def:crs:EPSG::5884' => [
+            'name' => 'TGD2005',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1095',
+        ],
+        'urn:ogc:def:crs:EPSG::6133' => [
+            'name' => 'CIGD11',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1100',
+        ],
+        'urn:ogc:def:crs:EPSG::6309' => [
+            'name' => 'CGRS93',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1112',
+        ],
+        'urn:ogc:def:crs:EPSG::6317' => [
+            'name' => 'NAD83(2011)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1116',
+        ],
+        'urn:ogc:def:crs:EPSG::6320' => [
+            'name' => 'NAD83(PA11)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1117',
+        ],
+        'urn:ogc:def:crs:EPSG::6323' => [
+            'name' => 'NAD83(MA11)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1118',
+        ],
+        'urn:ogc:def:crs:EPSG::6363' => [
+            'name' => 'Mexico ITRF2008',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1120',
+        ],
+        'urn:ogc:def:crs:EPSG::6666' => [
+            'name' => 'JGD2011',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1128',
+        ],
+        'urn:ogc:def:crs:EPSG::6704' => [
+            'name' => 'RDN2008',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1132',
+        ],
+        'urn:ogc:def:crs:EPSG::6781' => [
+            'name' => 'NAD83(CORS96)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1133',
+        ],
+        'urn:ogc:def:crs:EPSG::6934' => [
+            'name' => 'IGS08',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1141',
+        ],
+        'urn:ogc:def:crs:EPSG::6978' => [
+            'name' => 'IGD05',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1143',
+        ],
+        'urn:ogc:def:crs:EPSG::6981' => [
+            'name' => 'IG05 Intermediate CRS',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1142',
+        ],
+        'urn:ogc:def:crs:EPSG::6985' => [
+            'name' => 'IGD05/12',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1145',
+        ],
+        'urn:ogc:def:crs:EPSG::6988' => [
+            'name' => 'IG05/12 Intermediate CRS',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1144',
+        ],
+        'urn:ogc:def:crs:EPSG::7071' => [
+            'name' => 'RGTAAF07',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1113',
+        ],
+        'urn:ogc:def:crs:EPSG::7134' => [
+            'name' => 'IGD05',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1114',
+        ],
+        'urn:ogc:def:crs:EPSG::7137' => [
+            'name' => 'IGD05/12',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1115',
+        ],
+        'urn:ogc:def:crs:EPSG::7371' => [
+            'name' => 'ONGD14',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1147',
+        ],
+        'urn:ogc:def:crs:EPSG::7656' => [
+            'name' => 'WGS 84 (G730)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1152',
+        ],
+        'urn:ogc:def:crs:EPSG::7658' => [
+            'name' => 'WGS 84 (G873)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1153',
+        ],
+        'urn:ogc:def:crs:EPSG::7660' => [
+            'name' => 'WGS 84 (G1150)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1154',
+        ],
+        'urn:ogc:def:crs:EPSG::7662' => [
+            'name' => 'WGS 84 (G1674)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1155',
+        ],
+        'urn:ogc:def:crs:EPSG::7664' => [
+            'name' => 'WGS 84 (G1762)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1156',
+        ],
+        'urn:ogc:def:crs:EPSG::7677' => [
+            'name' => 'PZ-90.02',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1157',
+        ],
+        'urn:ogc:def:crs:EPSG::7679' => [
+            'name' => 'PZ-90.11',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1158',
+        ],
+        'urn:ogc:def:crs:EPSG::7681' => [
+            'name' => 'GSK-2011',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1159',
+        ],
+        'urn:ogc:def:crs:EPSG::7684' => [
+            'name' => 'Kyrg-06',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1160',
+        ],
+        'urn:ogc:def:crs:EPSG::7789' => [
+            'name' => 'ITRF2014',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1165',
+        ],
+        'urn:ogc:def:crs:EPSG::7796' => [
+            'name' => 'BGS2005',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1167',
+        ],
+        'urn:ogc:def:crs:EPSG::7815' => [
+            'name' => 'WGS 84 (Transit)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1166',
+        ],
+        'urn:ogc:def:crs:EPSG::7842' => [
+            'name' => 'GDA2020',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1168',
+        ],
+        'urn:ogc:def:crs:EPSG::7879' => [
+            'name' => 'St. Helena Tritan',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1173',
+        ],
+        'urn:ogc:def:crs:EPSG::7884' => [
+            'name' => 'SHGD2015',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1174',
+        ],
+        'urn:ogc:def:crs:EPSG::7914' => [
+            'name' => 'ETRF89',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1178',
+        ],
+        'urn:ogc:def:crs:EPSG::7916' => [
+            'name' => 'ETRF90',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1179',
+        ],
+        'urn:ogc:def:crs:EPSG::7918' => [
+            'name' => 'ETRF91',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1180',
+        ],
+        'urn:ogc:def:crs:EPSG::7920' => [
+            'name' => 'ETRF92',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1181',
+        ],
+        'urn:ogc:def:crs:EPSG::7922' => [
+            'name' => 'ETRF93',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1182',
+        ],
+        'urn:ogc:def:crs:EPSG::7924' => [
+            'name' => 'ETRF94',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1183',
+        ],
+        'urn:ogc:def:crs:EPSG::7926' => [
+            'name' => 'ETRF96',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1184',
+        ],
+        'urn:ogc:def:crs:EPSG::7928' => [
+            'name' => 'ETRF97',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1185',
+        ],
+        'urn:ogc:def:crs:EPSG::7930' => [
+            'name' => 'ETRF2000',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1186',
+        ],
+        'urn:ogc:def:crs:EPSG::8084' => [
+            'name' => 'ISN2016',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1187',
+        ],
+        'urn:ogc:def:crs:EPSG::8227' => [
+            'name' => 'IGS14',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1191',
+        ],
+        'urn:ogc:def:crs:EPSG::8230' => [
+            'name' => 'NAD83(CSRS96)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1192',
+        ],
+        'urn:ogc:def:crs:EPSG::8233' => [
+            'name' => 'NAD83(CSRS)v2',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1193',
+        ],
+        'urn:ogc:def:crs:EPSG::8238' => [
+            'name' => 'NAD83(CSRS)v3',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1194',
+        ],
+        'urn:ogc:def:crs:EPSG::8242' => [
+            'name' => 'NAD83(CSRS)v4',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1195',
+        ],
+        'urn:ogc:def:crs:EPSG::8247' => [
+            'name' => 'NAD83(CSRS)v5',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1196',
+        ],
+        'urn:ogc:def:crs:EPSG::8250' => [
+            'name' => 'NAD83(CSRS)v6',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1197',
+        ],
+        'urn:ogc:def:crs:EPSG::8253' => [
+            'name' => 'NAD83(CSRS)v7',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1198',
+        ],
+        'urn:ogc:def:crs:EPSG::8397' => [
+            'name' => 'ETRF2005',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1204',
+        ],
+        'urn:ogc:def:crs:EPSG::8401' => [
+            'name' => 'ETRF2014',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1206',
+        ],
+        'urn:ogc:def:crs:EPSG::8425' => [
+            'name' => 'Hong Kong Geodetic CS',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1209',
+        ],
+        'urn:ogc:def:crs:EPSG::8429' => [
+            'name' => 'Macao 2008',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1208',
+        ],
+        'urn:ogc:def:crs:EPSG::8541' => [
+            'name' => 'NAD83(FBN)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1211',
+        ],
+        'urn:ogc:def:crs:EPSG::8543' => [
+            'name' => 'NAD83(HARN Corrected)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1212',
+        ],
+        'urn:ogc:def:crs:EPSG::8683' => [
+            'name' => 'SRB_ETRS89',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1214',
+        ],
+        'urn:ogc:def:crs:EPSG::8697' => [
+            'name' => 'RSAO13',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1220',
+        ],
+        'urn:ogc:def:crs:EPSG::8816' => [
+            'name' => 'MTRF-2000',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1218',
+        ],
+        'urn:ogc:def:crs:EPSG::8898' => [
+            'name' => 'RGWF96',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1223',
+        ],
+        'urn:ogc:def:crs:EPSG::8905' => [
+            'name' => 'CR-SIRGAS',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1225',
+        ],
+        'urn:ogc:def:crs:EPSG::8915' => [
+            'name' => 'SIRGAS-CON DGF00P01',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1227',
+        ],
+        'urn:ogc:def:crs:EPSG::8917' => [
+            'name' => 'SIRGAS-CON DGF01P01',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1228',
+        ],
+        'urn:ogc:def:crs:EPSG::8919' => [
+            'name' => 'SIRGAS-CON DGF01P02',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1229',
+        ],
+        'urn:ogc:def:crs:EPSG::8921' => [
+            'name' => 'SIRGAS-CON DGF02P01',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1230',
+        ],
+        'urn:ogc:def:crs:EPSG::8923' => [
+            'name' => 'SIRGAS-CON DGF04P01',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1231',
+        ],
+        'urn:ogc:def:crs:EPSG::8925' => [
+            'name' => 'SIRGAS-CON DGF05P01',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1232',
+        ],
+        'urn:ogc:def:crs:EPSG::8927' => [
+            'name' => 'SIRGAS-CON DGF06P01',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1233',
+        ],
+        'urn:ogc:def:crs:EPSG::8929' => [
+            'name' => 'SIRGAS-CON DGF07P01',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1234',
+        ],
+        'urn:ogc:def:crs:EPSG::8931' => [
+            'name' => 'SIRGAS-CON DGF08P01',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1235',
+        ],
+        'urn:ogc:def:crs:EPSG::8933' => [
+            'name' => 'SIRGAS-CON SIR09P01',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1236',
+        ],
+        'urn:ogc:def:crs:EPSG::8935' => [
+            'name' => 'SIRGAS-CON SIR10P01',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1237',
+        ],
+        'urn:ogc:def:crs:EPSG::8937' => [
+            'name' => 'SIRGAS-CON SIR11P01',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1238',
+        ],
+        'urn:ogc:def:crs:EPSG::8939' => [
+            'name' => 'SIRGAS-CON SIR13P01',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1239',
+        ],
+        'urn:ogc:def:crs:EPSG::8941' => [
+            'name' => 'SIRGAS-CON SIR14P01',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1240',
+        ],
+        'urn:ogc:def:crs:EPSG::8943' => [
+            'name' => 'SIRGAS-CON SIR15P01',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1241',
+        ],
+        'urn:ogc:def:crs:EPSG::8945' => [
+            'name' => 'SIRGAS-CON SIR17P01',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1242',
+        ],
+        'urn:ogc:def:crs:EPSG::8947' => [
+            'name' => 'SIRGAS-Chile 2010',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1243',
+        ],
+        'urn:ogc:def:crs:EPSG::9001' => [
+            'name' => 'IGS97',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1244',
+        ],
+        'urn:ogc:def:crs:EPSG::9004' => [
+            'name' => 'IGS00',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1245',
+        ],
+        'urn:ogc:def:crs:EPSG::9007' => [
+            'name' => 'IGb00',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1246',
+        ],
+        'urn:ogc:def:crs:EPSG::9010' => [
+            'name' => 'IGS05',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1247',
+        ],
+        'urn:ogc:def:crs:EPSG::9015' => [
+            'name' => 'IGb08',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1248',
+        ],
+        'urn:ogc:def:crs:EPSG::9070' => [
+            'name' => 'NAD83(MARP00)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1221',
+        ],
+        'urn:ogc:def:crs:EPSG::9073' => [
+            'name' => 'NAD83(PACP00)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1249',
+        ],
+        'urn:ogc:def:crs:EPSG::9138' => [
+            'name' => 'KOSOVAREF01',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1251',
+        ],
+        'urn:ogc:def:crs:EPSG::9146' => [
+            'name' => 'SIRGAS-Chile 2013',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1252',
+        ],
+        'urn:ogc:def:crs:EPSG::9151' => [
+            'name' => 'SIRGAS-Chile 2016',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1253',
+        ],
+        'urn:ogc:def:crs:EPSG::9182' => [
+            'name' => 'SIRGAS-Chile',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1254',
+        ],
+        'urn:ogc:def:crs:EPSG::9266' => [
+            'name' => 'MGI',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::6312',
+        ],
+        'urn:ogc:def:crs:EPSG::9292' => [
+            'name' => 'ONGD17',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1263',
+        ],
+        'urn:ogc:def:crs:EPSG::9307' => [
+            'name' => 'ATRF2014',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1291',
+        ],
+        'urn:ogc:def:crs:EPSG::9331' => [
+            'name' => 'KSA-GRF17',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1268',
+        ],
+        'urn:ogc:def:crs:EPSG::9378' => [
+            'name' => 'IGb14',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1272',
+        ],
+        'urn:ogc:def:crs:EPSG::9468' => [
+            'name' => 'SRGI2013',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1293',
+        ],
+    ];
+
     public function __construct(
         string $srid,
         CoordinateSystem $coordinateSystem,
@@ -1689,5 +2824,30 @@ class Geocentric extends CoordinateReferenceSystem
     public function getDatum(): Datum
     {
         return $this->datum;
+    }
+
+    public static function fromSRID(string $srid): self
+    {
+        if (!isset(static::$sridData[$srid])) {
+            throw new UnknownCoordinateReferenceSystemException($srid);
+        }
+
+        $data = static::$sridData[$srid];
+
+        return new self(
+            $srid,
+            Cartesian::fromSRID($data['coordinate_system']),
+            $data['datum'] ? Datum::fromSRID($data['datum']) : self::fromSRID($data['base_crs'])->getDatum()
+        );
+    }
+
+    public static function getSupportedSRIDs(): array
+    {
+        $supported = [];
+        foreach (static::$sridData as $srid => $sridData) {
+            $supported[$srid] = $sridData['name'];
+        }
+
+        return $supported;
     }
 }

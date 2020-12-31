@@ -7,5 +7,5 @@
 
 *.php diff=php
 
-/src/EPSG/Import export-ignore
+/src/EPSG export-ignore
 /resources export-ignore

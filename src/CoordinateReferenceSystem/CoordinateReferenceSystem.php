@@ -8,12 +8,8 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateReferenceSystem;
 
-use PHPCoord\CoordinateSystem\Cartesian;
 use PHPCoord\CoordinateSystem\CoordinateSystem;
-use PHPCoord\CoordinateSystem\Ellipsoidal;
-use PHPCoord\CoordinateSystem\Vertical as VerticalCS;
 use PHPCoord\Datum\Datum;
-use PHPCoord\EPSG\Repository;
 use PHPCoord\Exception\UnknownCoordinateReferenceSystemException;
 
 abstract class CoordinateReferenceSystem
@@ -50,70 +46,6 @@ abstract class CoordinateReferenceSystem
 
     protected CoordinateReferenceSystem $baseCRS;
 
-    /**
-     * @var Repository
-     */
-    private static $repository;
-
-    public static function fromSRID(string $srid): self
-    {
-        $repository = static::$repository ?? new Repository();
-        $allData = $repository->getCoordinateReferenceSystems();
-
-        if (!isset($allData[$srid])) {
-            throw new UnknownCoordinateReferenceSystemException($srid);
-        }
-
-        $data = $allData[$srid];
-
-        switch ($data['coord_ref_sys_kind']) {
-            case self::CRS_TYPE_GEOCENTRIC:
-                return new Geocentric(
-                    $srid,
-                    Cartesian::fromSRID($data['coord_sys_code']),
-                    $data['datum_code'] ? Datum::fromSRID($data['datum_code']) : self::fromSRID($data['base_crs_code'])->getDatum()
-                );
-
-            case self::CRS_TYPE_GEOGRAPHIC_2D:
-                return new Geographic2D(
-                    $srid,
-                    Ellipsoidal::fromSRID($data['coord_sys_code']),
-                    $data['datum_code'] ? Datum::fromSRID($data['datum_code']) : self::fromSRID($data['base_crs_code'])->getDatum()
-                );
-
-            case self::CRS_TYPE_GEOGRAPHIC_3D:
-                return new Geographic3D(
-                    $srid,
-                    Ellipsoidal::fromSRID($data['coord_sys_code']),
-                    $data['datum_code'] ? Datum::fromSRID($data['datum_code']) : self::fromSRID($data['base_crs_code'])->getDatum()
-                );
-
-            case self::CRS_TYPE_PROJECTED:
-                return new Projected(
-                    $srid,
-                    Cartesian::fromSRID($data['coord_sys_code']),
-                    self::fromSRID($data['base_crs_code'])
-                );
-
-            case self::CRS_TYPE_VERTICAL:
-                return new Vertical(
-                    $srid,
-                    VerticalCS::fromSRID($data['coord_sys_code']),
-                    Datum::fromSRID($data['datum_code'])
-                );
-
-            case self::CRS_TYPE_COMPOUND:
-                return new Compound(
-                    $srid,
-                    self::fromSRID($data['cmpd_horizcrs_code']),
-                    self::fromSRID($data['cmpd_vertcrs_code'])
-                );
-
-            default:
-                throw new UnknownCoordinateReferenceSystemException($srid);
-        }
-    }
-
     public function getSRID(): string
     {
         return $this->srid;
@@ -127,5 +59,39 @@ abstract class CoordinateReferenceSystem
     public function getDatum(): Datum
     {
         return $this->datum;
+    }
+
+    public static function fromSRID(string $srid): self
+    {
+        if (isset(Projected::getSupportedSRIDs()[$srid])) {
+            return Projected::fromSRID($srid);
+        }
+
+        if (isset(Geographic2D::getSupportedSRIDs()[$srid])) {
+            return Geographic2D::fromSRID($srid);
+        }
+
+        if (isset(Geographic3D::getSupportedSRIDs()[$srid])) {
+            return Geographic3D::fromSRID($srid);
+        }
+
+        if (isset(Geocentric::getSupportedSRIDs()[$srid])) {
+            return Geocentric::fromSRID($srid);
+        }
+
+        if (isset(Vertical::getSupportedSRIDs()[$srid])) {
+            return Vertical::fromSRID($srid);
+        }
+
+        if (isset(Compound::getSupportedSRIDs()[$srid])) {
+            return Compound::fromSRID($srid);
+        }
+
+        throw new UnknownCoordinateReferenceSystemException($srid);
+    }
+
+    public static function getSupportedSRIDs(): array
+    {
+        return array_merge(Compound::getSupportedSRIDs(), Geocentric::getSupportedSRIDs(), Geographic2D::getSupportedSRIDs(), Geographic3D::getSupportedSRIDs(), Projected::getSupportedSRIDs(), Vertical::getSupportedSRIDs());
     }
 }

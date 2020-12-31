@@ -12,10 +12,10 @@
     "license": "(MIT and proprietary)",
     "require": {
         "php": "^7.4||^8.0",
-        "ext-sqlite3": "*",
         "symfony/polyfill-php80": "^1.18"
     },
     "require-dev": {
+        "ext-sqlite3": "*",
         "friendsofphp/php-cs-fixer": "^2.16.4",
         "phpunit/phpunit": "^9.3.5",
         "nikic/php-parser": "^4.10"

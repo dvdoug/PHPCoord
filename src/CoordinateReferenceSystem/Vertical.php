@@ -11,7 +11,9 @@ namespace PHPCoord\CoordinateReferenceSystem;
 use function assert;
 use function count;
 use PHPCoord\CoordinateSystem\CoordinateSystem;
+use PHPCoord\CoordinateSystem\Vertical as VerticalCS;
 use PHPCoord\Datum\Datum;
+use PHPCoord\Exception\UnknownCoordinateReferenceSystemException;
 
 class Vertical extends CoordinateReferenceSystem
 {
@@ -1961,6 +1963,1209 @@ class Vertical extends CoordinateReferenceSystem
      */
     public const EPSG_YELLOW_SEA_1985_HEIGHT = 'urn:ogc:def:crs:EPSG::5737';
 
+    protected static array $sridData = [
+        'urn:ogc:def:crs:EPSG::3855' => [
+            'name' => 'EGM2008 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1027',
+        ],
+        'urn:ogc:def:crs:EPSG::3886' => [
+            'name' => 'Fao 1979 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1028',
+        ],
+        'urn:ogc:def:crs:EPSG::3900' => [
+            'name' => 'N2000 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1030',
+        ],
+        'urn:ogc:def:crs:EPSG::4440' => [
+            'name' => 'NZVD2009 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1039',
+        ],
+        'urn:ogc:def:crs:EPSG::4458' => [
+            'name' => 'Dunedin-Bluff 1960 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1040',
+        ],
+        'urn:ogc:def:crs:EPSG::5193' => [
+            'name' => 'Incheon height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1049',
+        ],
+        'urn:ogc:def:crs:EPSG::5195' => [
+            'name' => 'Trieste height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1050',
+        ],
+        'urn:ogc:def:crs:EPSG::5214' => [
+            'name' => 'Genoa height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1051',
+        ],
+        'urn:ogc:def:crs:EPSG::5237' => [
+            'name' => 'SLVD height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1054',
+        ],
+        'urn:ogc:def:crs:EPSG::5317' => [
+            'name' => 'FVR09 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1059',
+        ],
+        'urn:ogc:def:crs:EPSG::5336' => [
+            'name' => 'Black Sea depth',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6498',
+            'datum' => 'urn:ogc:def:datum:EPSG::5134',
+        ],
+        'urn:ogc:def:crs:EPSG::5597' => [
+            'name' => 'FCSVR10 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1079',
+        ],
+        'urn:ogc:def:crs:EPSG::5600' => [
+            'name' => 'NGPF height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5195',
+        ],
+        'urn:ogc:def:crs:EPSG::5601' => [
+            'name' => 'IGN 1966 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5196',
+        ],
+        'urn:ogc:def:crs:EPSG::5602' => [
+            'name' => 'Moorea SAU 1981 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5197',
+        ],
+        'urn:ogc:def:crs:EPSG::5603' => [
+            'name' => 'Raiatea SAU 2001 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5198',
+        ],
+        'urn:ogc:def:crs:EPSG::5604' => [
+            'name' => 'Maupiti SAU 2001 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5199',
+        ],
+        'urn:ogc:def:crs:EPSG::5605' => [
+            'name' => 'Huahine SAU 2001 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5200',
+        ],
+        'urn:ogc:def:crs:EPSG::5606' => [
+            'name' => 'Tahaa SAU 2001 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5201',
+        ],
+        'urn:ogc:def:crs:EPSG::5607' => [
+            'name' => 'Bora Bora SAU 2001 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5202',
+        ],
+        'urn:ogc:def:crs:EPSG::5608' => [
+            'name' => 'IGLD 1955 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5204',
+        ],
+        'urn:ogc:def:crs:EPSG::5609' => [
+            'name' => 'IGLD 1985 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5205',
+        ],
+        'urn:ogc:def:crs:EPSG::5610' => [
+            'name' => 'HVRS71 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5207',
+        ],
+        'urn:ogc:def:crs:EPSG::5611' => [
+            'name' => 'Caspian height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5106',
+        ],
+        'urn:ogc:def:crs:EPSG::5612' => [
+            'name' => 'Baltic 1977 depth',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6498',
+            'datum' => 'urn:ogc:def:datum:EPSG::5105',
+        ],
+        'urn:ogc:def:crs:EPSG::5613' => [
+            'name' => 'RH2000 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5208',
+        ],
+        'urn:ogc:def:crs:EPSG::5614' => [
+            'name' => 'KOC WD depth (ft)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6495',
+            'datum' => 'urn:ogc:def:datum:EPSG::5187',
+        ],
+        'urn:ogc:def:crs:EPSG::5615' => [
+            'name' => 'RH00 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5209',
+        ],
+        'urn:ogc:def:crs:EPSG::5616' => [
+            'name' => 'IGN 1988 LS height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5210',
+        ],
+        'urn:ogc:def:crs:EPSG::5617' => [
+            'name' => 'IGN 1988 MG height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5211',
+        ],
+        'urn:ogc:def:crs:EPSG::5618' => [
+            'name' => 'IGN 1992 LD height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5212',
+        ],
+        'urn:ogc:def:crs:EPSG::5619' => [
+            'name' => 'IGN 1988 SB height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5213',
+        ],
+        'urn:ogc:def:crs:EPSG::5620' => [
+            'name' => 'IGN 1988 SM height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5214',
+        ],
+        'urn:ogc:def:crs:EPSG::5621' => [
+            'name' => 'EVRF2007 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5215',
+        ],
+        'urn:ogc:def:crs:EPSG::5701' => [
+            'name' => 'ODN height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5101',
+        ],
+        'urn:ogc:def:crs:EPSG::5702' => [
+            'name' => 'NGVD29 height (ftUS)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6497',
+            'datum' => 'urn:ogc:def:datum:EPSG::5102',
+        ],
+        'urn:ogc:def:crs:EPSG::5703' => [
+            'name' => 'NAVD88 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5103',
+        ],
+        'urn:ogc:def:crs:EPSG::5704' => [
+            'name' => 'Yellow Sea',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5104',
+        ],
+        'urn:ogc:def:crs:EPSG::5705' => [
+            'name' => 'Baltic 1977 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5105',
+        ],
+        'urn:ogc:def:crs:EPSG::5706' => [
+            'name' => 'Caspian depth',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6498',
+            'datum' => 'urn:ogc:def:datum:EPSG::5106',
+        ],
+        'urn:ogc:def:crs:EPSG::5709' => [
+            'name' => 'NAP height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5109',
+        ],
+        'urn:ogc:def:crs:EPSG::5710' => [
+            'name' => 'Ostend height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5110',
+        ],
+        'urn:ogc:def:crs:EPSG::5711' => [
+            'name' => 'AHD height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5111',
+        ],
+        'urn:ogc:def:crs:EPSG::5712' => [
+            'name' => 'AHD (Tasmania) height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5112',
+        ],
+        'urn:ogc:def:crs:EPSG::5713' => [
+            'name' => 'CGVD28 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5114',
+        ],
+        'urn:ogc:def:crs:EPSG::5714' => [
+            'name' => 'MSL height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5100',
+        ],
+        'urn:ogc:def:crs:EPSG::5715' => [
+            'name' => 'MSL depth',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6498',
+            'datum' => 'urn:ogc:def:datum:EPSG::5100',
+        ],
+        'urn:ogc:def:crs:EPSG::5716' => [
+            'name' => 'Piraeus height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5115',
+        ],
+        'urn:ogc:def:crs:EPSG::5717' => [
+            'name' => 'N60 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5116',
+        ],
+        'urn:ogc:def:crs:EPSG::5718' => [
+            'name' => 'RH70 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5117',
+        ],
+        'urn:ogc:def:crs:EPSG::5719' => [
+            'name' => 'NGF Lallemand height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5118',
+        ],
+        'urn:ogc:def:crs:EPSG::5720' => [
+            'name' => 'NGF-IGN69 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5119',
+        ],
+        'urn:ogc:def:crs:EPSG::5721' => [
+            'name' => 'NGF-IGN78 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5120',
+        ],
+        'urn:ogc:def:crs:EPSG::5722' => [
+            'name' => 'Maputo height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5121',
+        ],
+        'urn:ogc:def:crs:EPSG::5723' => [
+            'name' => 'JSLD69 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5122',
+        ],
+        'urn:ogc:def:crs:EPSG::5724' => [
+            'name' => 'PHD93 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5123',
+        ],
+        'urn:ogc:def:crs:EPSG::5725' => [
+            'name' => 'Fahud HD height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5124',
+        ],
+        'urn:ogc:def:crs:EPSG::5726' => [
+            'name' => 'Ha Tien 1960 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5125',
+        ],
+        'urn:ogc:def:crs:EPSG::5727' => [
+            'name' => 'Hon Dau 1992 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5126',
+        ],
+        'urn:ogc:def:crs:EPSG::5728' => [
+            'name' => 'LN02 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5127',
+        ],
+        'urn:ogc:def:crs:EPSG::5729' => [
+            'name' => 'LHN95 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5128',
+        ],
+        'urn:ogc:def:crs:EPSG::5730' => [
+            'name' => 'EVRF2000 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5129',
+        ],
+        'urn:ogc:def:crs:EPSG::5731' => [
+            'name' => 'Malin Head height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5130',
+        ],
+        'urn:ogc:def:crs:EPSG::5732' => [
+            'name' => 'Belfast height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5131',
+        ],
+        'urn:ogc:def:crs:EPSG::5733' => [
+            'name' => 'DNN height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5132',
+        ],
+        'urn:ogc:def:crs:EPSG::5734' => [
+            'name' => 'AIOC95 depth',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6498',
+            'datum' => 'urn:ogc:def:datum:EPSG::5133',
+        ],
+        'urn:ogc:def:crs:EPSG::5735' => [
+            'name' => 'Black Sea height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5134',
+        ],
+        'urn:ogc:def:crs:EPSG::5736' => [
+            'name' => 'Yellow Sea 1956 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5104',
+        ],
+        'urn:ogc:def:crs:EPSG::5737' => [
+            'name' => 'Yellow Sea 1985 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5137',
+        ],
+        'urn:ogc:def:crs:EPSG::5738' => [
+            'name' => 'HKPD height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5135',
+        ],
+        'urn:ogc:def:crs:EPSG::5739' => [
+            'name' => 'HKCD depth',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6498',
+            'datum' => 'urn:ogc:def:datum:EPSG::5136',
+        ],
+        'urn:ogc:def:crs:EPSG::5740' => [
+            'name' => 'ODN Orkney height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5138',
+        ],
+        'urn:ogc:def:crs:EPSG::5741' => [
+            'name' => 'Fair Isle height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5139',
+        ],
+        'urn:ogc:def:crs:EPSG::5742' => [
+            'name' => 'Lerwick height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5140',
+        ],
+        'urn:ogc:def:crs:EPSG::5743' => [
+            'name' => 'Foula height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5141',
+        ],
+        'urn:ogc:def:crs:EPSG::5744' => [
+            'name' => 'Sule Skerry height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5142',
+        ],
+        'urn:ogc:def:crs:EPSG::5745' => [
+            'name' => 'North Rona height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5143',
+        ],
+        'urn:ogc:def:crs:EPSG::5746' => [
+            'name' => 'Stornoway height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5144',
+        ],
+        'urn:ogc:def:crs:EPSG::5747' => [
+            'name' => 'St. Kilda height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5145',
+        ],
+        'urn:ogc:def:crs:EPSG::5748' => [
+            'name' => 'Flannan Isles height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5146',
+        ],
+        'urn:ogc:def:crs:EPSG::5749' => [
+            'name' => 'St. Marys height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5147',
+        ],
+        'urn:ogc:def:crs:EPSG::5750' => [
+            'name' => 'Douglas height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5148',
+        ],
+        'urn:ogc:def:crs:EPSG::5751' => [
+            'name' => 'Fao height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5149',
+        ],
+        'urn:ogc:def:crs:EPSG::5752' => [
+            'name' => 'Bandar Abbas height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5150',
+        ],
+        'urn:ogc:def:crs:EPSG::5753' => [
+            'name' => 'NGNC69 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5151',
+        ],
+        'urn:ogc:def:crs:EPSG::5754' => [
+            'name' => 'Poolbeg height (ft(Br36))',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6496',
+            'datum' => 'urn:ogc:def:datum:EPSG::5152',
+        ],
+        'urn:ogc:def:crs:EPSG::5755' => [
+            'name' => 'NGG1977 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5153',
+        ],
+        'urn:ogc:def:crs:EPSG::5756' => [
+            'name' => 'Martinique 1987 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5154',
+        ],
+        'urn:ogc:def:crs:EPSG::5757' => [
+            'name' => 'Guadeloupe 1988 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5155',
+        ],
+        'urn:ogc:def:crs:EPSG::5758' => [
+            'name' => 'Reunion 1989 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5156',
+        ],
+        'urn:ogc:def:crs:EPSG::5759' => [
+            'name' => 'Auckland 1946 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5157',
+        ],
+        'urn:ogc:def:crs:EPSG::5760' => [
+            'name' => 'Bluff 1955 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5158',
+        ],
+        'urn:ogc:def:crs:EPSG::5761' => [
+            'name' => 'Dunedin 1958 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5159',
+        ],
+        'urn:ogc:def:crs:EPSG::5762' => [
+            'name' => 'Gisborne 1926 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5160',
+        ],
+        'urn:ogc:def:crs:EPSG::5763' => [
+            'name' => 'Lyttelton 1937 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5161',
+        ],
+        'urn:ogc:def:crs:EPSG::5764' => [
+            'name' => 'Moturiki 1953 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5162',
+        ],
+        'urn:ogc:def:crs:EPSG::5765' => [
+            'name' => 'Napier 1962 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5163',
+        ],
+        'urn:ogc:def:crs:EPSG::5766' => [
+            'name' => 'Nelson 1955 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5164',
+        ],
+        'urn:ogc:def:crs:EPSG::5767' => [
+            'name' => 'One Tree Point 1964 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5165',
+        ],
+        'urn:ogc:def:crs:EPSG::5768' => [
+            'name' => 'Tararu 1952 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5166',
+        ],
+        'urn:ogc:def:crs:EPSG::5769' => [
+            'name' => 'Taranaki 1970 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5167',
+        ],
+        'urn:ogc:def:crs:EPSG::5770' => [
+            'name' => 'Wellington 1953 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5168',
+        ],
+        'urn:ogc:def:crs:EPSG::5771' => [
+            'name' => 'Chatham Island 1959 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5169',
+        ],
+        'urn:ogc:def:crs:EPSG::5772' => [
+            'name' => 'Stewart Island 1977 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5170',
+        ],
+        'urn:ogc:def:crs:EPSG::5773' => [
+            'name' => 'EGM96 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5171',
+        ],
+        'urn:ogc:def:crs:EPSG::5774' => [
+            'name' => 'NG-L height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5172',
+        ],
+        'urn:ogc:def:crs:EPSG::5775' => [
+            'name' => 'Antalya height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5173',
+        ],
+        'urn:ogc:def:crs:EPSG::5776' => [
+            'name' => 'NN54 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5174',
+        ],
+        'urn:ogc:def:crs:EPSG::5777' => [
+            'name' => 'Durres height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5175',
+        ],
+        'urn:ogc:def:crs:EPSG::5778' => [
+            'name' => 'GHA height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5176',
+        ],
+        'urn:ogc:def:crs:EPSG::5779' => [
+            'name' => 'SVS2000 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5177',
+        ],
+        'urn:ogc:def:crs:EPSG::5780' => [
+            'name' => 'Cascais height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5178',
+        ],
+        'urn:ogc:def:crs:EPSG::5781' => [
+            'name' => 'Constanta height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5179',
+        ],
+        'urn:ogc:def:crs:EPSG::5782' => [
+            'name' => 'Alicante height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5180',
+        ],
+        'urn:ogc:def:crs:EPSG::5783' => [
+            'name' => 'DHHN92 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5181',
+        ],
+        'urn:ogc:def:crs:EPSG::5784' => [
+            'name' => 'DHHN85 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5182',
+        ],
+        'urn:ogc:def:crs:EPSG::5785' => [
+            'name' => 'SNN76 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5183',
+        ],
+        'urn:ogc:def:crs:EPSG::5786' => [
+            'name' => 'Baltic 1982 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5184',
+        ],
+        'urn:ogc:def:crs:EPSG::5787' => [
+            'name' => 'EOMA 1980 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5185',
+        ],
+        'urn:ogc:def:crs:EPSG::5788' => [
+            'name' => 'Kuwait PWD height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5186',
+        ],
+        'urn:ogc:def:crs:EPSG::5789' => [
+            'name' => 'KOC WD depth',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6498',
+            'datum' => 'urn:ogc:def:datum:EPSG::5187',
+        ],
+        'urn:ogc:def:crs:EPSG::5790' => [
+            'name' => 'KOC CD height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5188',
+        ],
+        'urn:ogc:def:crs:EPSG::5791' => [
+            'name' => 'NGC 1948 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5189',
+        ],
+        'urn:ogc:def:crs:EPSG::5792' => [
+            'name' => 'Danger 1950 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5190',
+        ],
+        'urn:ogc:def:crs:EPSG::5793' => [
+            'name' => 'Mayotte 1950 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5191',
+        ],
+        'urn:ogc:def:crs:EPSG::5794' => [
+            'name' => 'Martinique 1955 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5192',
+        ],
+        'urn:ogc:def:crs:EPSG::5795' => [
+            'name' => 'Guadeloupe 1951 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5193',
+        ],
+        'urn:ogc:def:crs:EPSG::5796' => [
+            'name' => 'Lagos 1955 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5194',
+        ],
+        'urn:ogc:def:crs:EPSG::5797' => [
+            'name' => 'AIOC95 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5133',
+        ],
+        'urn:ogc:def:crs:EPSG::5798' => [
+            'name' => 'EGM84 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5203',
+        ],
+        'urn:ogc:def:crs:EPSG::5799' => [
+            'name' => 'DVR90 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5206',
+        ],
+        'urn:ogc:def:crs:EPSG::5829' => [
+            'name' => 'Instantaneous Water Level height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5113',
+        ],
+        'urn:ogc:def:crs:EPSG::5831' => [
+            'name' => 'Instantaneous Water Level depth',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6498',
+            'datum' => 'urn:ogc:def:datum:EPSG::5113',
+        ],
+        'urn:ogc:def:crs:EPSG::5843' => [
+            'name' => 'Ras Ghumays height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1146',
+        ],
+        'urn:ogc:def:crs:EPSG::5861' => [
+            'name' => 'LAT depth',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6498',
+            'datum' => 'urn:ogc:def:datum:EPSG::1080',
+        ],
+        'urn:ogc:def:crs:EPSG::5862' => [
+            'name' => 'LLWLT depth',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6498',
+            'datum' => 'urn:ogc:def:datum:EPSG::1083',
+        ],
+        'urn:ogc:def:crs:EPSG::5863' => [
+            'name' => 'ISLW depth',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6498',
+            'datum' => 'urn:ogc:def:datum:EPSG::1085',
+        ],
+        'urn:ogc:def:crs:EPSG::5864' => [
+            'name' => 'MLLWS depth',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6498',
+            'datum' => 'urn:ogc:def:datum:EPSG::1086',
+        ],
+        'urn:ogc:def:crs:EPSG::5865' => [
+            'name' => 'MLWS depth',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6498',
+            'datum' => 'urn:ogc:def:datum:EPSG::1087',
+        ],
+        'urn:ogc:def:crs:EPSG::5866' => [
+            'name' => 'MLLW depth',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6498',
+            'datum' => 'urn:ogc:def:datum:EPSG::1089',
+        ],
+        'urn:ogc:def:crs:EPSG::5867' => [
+            'name' => 'MLW depth',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6498',
+            'datum' => 'urn:ogc:def:datum:EPSG::1091',
+        ],
+        'urn:ogc:def:crs:EPSG::5868' => [
+            'name' => 'MHW height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1092',
+        ],
+        'urn:ogc:def:crs:EPSG::5869' => [
+            'name' => 'MHHW height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1090',
+        ],
+        'urn:ogc:def:crs:EPSG::5870' => [
+            'name' => 'MHWS height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1088',
+        ],
+        'urn:ogc:def:crs:EPSG::5871' => [
+            'name' => 'HHWLT height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1084',
+        ],
+        'urn:ogc:def:crs:EPSG::5872' => [
+            'name' => 'HAT height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1082',
+        ],
+        'urn:ogc:def:crs:EPSG::5873' => [
+            'name' => 'Low Water depth',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6498',
+            'datum' => 'urn:ogc:def:datum:EPSG::1093',
+        ],
+        'urn:ogc:def:crs:EPSG::5874' => [
+            'name' => 'High Water height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1094',
+        ],
+        'urn:ogc:def:crs:EPSG::5941' => [
+            'name' => 'NN2000 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1096',
+        ],
+        'urn:ogc:def:crs:EPSG::6130' => [
+            'name' => 'GCVD54 height (ft)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::1030',
+            'datum' => 'urn:ogc:def:datum:EPSG::1097',
+        ],
+        'urn:ogc:def:crs:EPSG::6131' => [
+            'name' => 'LCVD61 height (ft)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::1030',
+            'datum' => 'urn:ogc:def:datum:EPSG::1098',
+        ],
+        'urn:ogc:def:crs:EPSG::6132' => [
+            'name' => 'CBVD61 height (ft)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::1030',
+            'datum' => 'urn:ogc:def:datum:EPSG::1099',
+        ],
+        'urn:ogc:def:crs:EPSG::6178' => [
+            'name' => 'Cais da Pontinha - Funchal height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1101',
+        ],
+        'urn:ogc:def:crs:EPSG::6179' => [
+            'name' => 'Cais da Vila - Porto Santo height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1102',
+        ],
+        'urn:ogc:def:crs:EPSG::6180' => [
+            'name' => 'Cais das Velas height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1103',
+        ],
+        'urn:ogc:def:crs:EPSG::6181' => [
+            'name' => 'Horta height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1104',
+        ],
+        'urn:ogc:def:crs:EPSG::6182' => [
+            'name' => 'Cais da Madalena height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1105',
+        ],
+        'urn:ogc:def:crs:EPSG::6183' => [
+            'name' => 'Santa Cruz da Graciosa height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1106',
+        ],
+        'urn:ogc:def:crs:EPSG::6184' => [
+            'name' => 'Cais da Figueirinha - Angra do Heroismo height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1107',
+        ],
+        'urn:ogc:def:crs:EPSG::6185' => [
+            'name' => 'Santa Cruz das Flores height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1108',
+        ],
+        'urn:ogc:def:crs:EPSG::6186' => [
+            'name' => 'Cais da Vila do Porto height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1109',
+        ],
+        'urn:ogc:def:crs:EPSG::6187' => [
+            'name' => 'Ponta Delgada height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1110',
+        ],
+        'urn:ogc:def:crs:EPSG::6357' => [
+            'name' => 'NAVD88 depth',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6498',
+            'datum' => 'urn:ogc:def:datum:EPSG::5103',
+        ],
+        'urn:ogc:def:crs:EPSG::6358' => [
+            'name' => 'NAVD88 depth (ftUS)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::1043',
+            'datum' => 'urn:ogc:def:datum:EPSG::5103',
+        ],
+        'urn:ogc:def:crs:EPSG::6359' => [
+            'name' => 'NGVD29 depth (ftUS)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::1043',
+            'datum' => 'urn:ogc:def:datum:EPSG::5102',
+        ],
+        'urn:ogc:def:crs:EPSG::6360' => [
+            'name' => 'NAVD88 height (ftUS)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6497',
+            'datum' => 'urn:ogc:def:datum:EPSG::5103',
+        ],
+        'urn:ogc:def:crs:EPSG::6638' => [
+            'name' => 'Tutuila 1962 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1121',
+        ],
+        'urn:ogc:def:crs:EPSG::6639' => [
+            'name' => 'Guam 1963 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1122',
+        ],
+        'urn:ogc:def:crs:EPSG::6640' => [
+            'name' => 'NMVD03 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1119',
+        ],
+        'urn:ogc:def:crs:EPSG::6641' => [
+            'name' => 'PRVD02 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1123',
+        ],
+        'urn:ogc:def:crs:EPSG::6642' => [
+            'name' => 'VIVD09 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1124',
+        ],
+        'urn:ogc:def:crs:EPSG::6643' => [
+            'name' => 'ASVD02 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1125',
+        ],
+        'urn:ogc:def:crs:EPSG::6644' => [
+            'name' => 'GUVD04 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1126',
+        ],
+        'urn:ogc:def:crs:EPSG::6647' => [
+            'name' => 'CGVD2013(CGG2013) height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1127',
+        ],
+        'urn:ogc:def:crs:EPSG::6693' => [
+            'name' => 'JSLD72 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1129',
+        ],
+        'urn:ogc:def:crs:EPSG::6694' => [
+            'name' => 'JGD2000 (vertical) height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1130',
+        ],
+        'urn:ogc:def:crs:EPSG::6695' => [
+            'name' => 'JGD2011 (vertical) height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1131',
+        ],
+        'urn:ogc:def:crs:EPSG::6916' => [
+            'name' => 'SHD height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1140',
+        ],
+        'urn:ogc:def:crs:EPSG::7446' => [
+            'name' => 'Famagusta 1960 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1148',
+        ],
+        'urn:ogc:def:crs:EPSG::7447' => [
+            'name' => 'PNG08 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1149',
+        ],
+        'urn:ogc:def:crs:EPSG::7651' => [
+            'name' => 'Kumul 34 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1150',
+        ],
+        'urn:ogc:def:crs:EPSG::7652' => [
+            'name' => 'Kiunga height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1151',
+        ],
+        'urn:ogc:def:crs:EPSG::7699' => [
+            'name' => 'DHHN12 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1161',
+        ],
+        'urn:ogc:def:crs:EPSG::7700' => [
+            'name' => 'Latvia 2000 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1162',
+        ],
+        'urn:ogc:def:crs:EPSG::7707' => [
+            'name' => 'ODN (Offshore) height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1164',
+        ],
+        'urn:ogc:def:crs:EPSG::7832' => [
+            'name' => 'POM96 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1171',
+        ],
+        'urn:ogc:def:crs:EPSG::7837' => [
+            'name' => 'DHHN2016 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1170',
+        ],
+        'urn:ogc:def:crs:EPSG::7839' => [
+            'name' => 'NZVD2016 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1169',
+        ],
+        'urn:ogc:def:crs:EPSG::7841' => [
+            'name' => 'POM08 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1172',
+        ],
+        'urn:ogc:def:crs:EPSG::7888' => [
+            'name' => 'Jamestown 1971 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1175',
+        ],
+        'urn:ogc:def:crs:EPSG::7889' => [
+            'name' => 'St. Helena Tritan 2011 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1176',
+        ],
+        'urn:ogc:def:crs:EPSG::7890' => [
+            'name' => 'SHVD2015 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1177',
+        ],
+        'urn:ogc:def:crs:EPSG::7962' => [
+            'name' => 'Poolbeg height (m)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5152',
+        ],
+        'urn:ogc:def:crs:EPSG::7968' => [
+            'name' => 'NGVD29 height (m)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5102',
+        ],
+        'urn:ogc:def:crs:EPSG::7976' => [
+            'name' => 'HKPD depth',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6498',
+            'datum' => 'urn:ogc:def:datum:EPSG::5135',
+        ],
+        'urn:ogc:def:crs:EPSG::7979' => [
+            'name' => 'KOC WD height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::5187',
+        ],
+        'urn:ogc:def:crs:EPSG::8050' => [
+            'name' => 'MSL height (ft)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::1030',
+            'datum' => 'urn:ogc:def:datum:EPSG::5100',
+        ],
+        'urn:ogc:def:crs:EPSG::8051' => [
+            'name' => 'MSL depth (ft)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6495',
+            'datum' => 'urn:ogc:def:datum:EPSG::5100',
+        ],
+        'urn:ogc:def:crs:EPSG::8052' => [
+            'name' => 'MSL height (ftUS)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6497',
+            'datum' => 'urn:ogc:def:datum:EPSG::5100',
+        ],
+        'urn:ogc:def:crs:EPSG::8053' => [
+            'name' => 'MSL depth (ftUS)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::1043',
+            'datum' => 'urn:ogc:def:datum:EPSG::5100',
+        ],
+        'urn:ogc:def:crs:EPSG::8089' => [
+            'name' => 'ISH2004 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1190',
+        ],
+        'urn:ogc:def:crs:EPSG::8228' => [
+            'name' => 'NAVD88 height (ft)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::1030',
+            'datum' => 'urn:ogc:def:datum:EPSG::5103',
+        ],
+        'urn:ogc:def:crs:EPSG::8266' => [
+            'name' => 'GVR2000 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1199',
+        ],
+        'urn:ogc:def:crs:EPSG::8267' => [
+            'name' => 'GVR2016 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1200',
+        ],
+        'urn:ogc:def:crs:EPSG::8357' => [
+            'name' => 'Baltic 1957 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1202',
+        ],
+        'urn:ogc:def:crs:EPSG::8358' => [
+            'name' => 'Baltic 1957 depth',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6498',
+            'datum' => 'urn:ogc:def:datum:EPSG::1202',
+        ],
+        'urn:ogc:def:crs:EPSG::8434' => [
+            'name' => 'Macao height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1210',
+        ],
+        'urn:ogc:def:crs:EPSG::8675' => [
+            'name' => 'N43 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1213',
+        ],
+        'urn:ogc:def:crs:EPSG::8690' => [
+            'name' => 'SVS2010 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1215',
+        ],
+        'urn:ogc:def:crs:EPSG::8691' => [
+            'name' => 'SRB_VRS12 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1216',
+        ],
+        'urn:ogc:def:crs:EPSG::8841' => [
+            'name' => 'MVGC height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1219',
+        ],
+        'urn:ogc:def:crs:EPSG::8881' => [
+            'name' => 'Vienna height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1267',
+        ],
+        'urn:ogc:def:crs:EPSG::8904' => [
+            'name' => 'TWVD 2001 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1224',
+        ],
+        'urn:ogc:def:crs:EPSG::8911' => [
+            'name' => 'DACR52 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1226',
+        ],
+        'urn:ogc:def:crs:EPSG::9130' => [
+            'name' => 'IGN 2008 LD height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1250',
+        ],
+        'urn:ogc:def:crs:EPSG::9245' => [
+            'name' => 'CGVD2013(CGG2013a) height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1256',
+        ],
+        'urn:ogc:def:crs:EPSG::9255' => [
+            'name' => 'SRVN16 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1260',
+        ],
+        'urn:ogc:def:crs:EPSG::9274' => [
+            'name' => 'EVRF2000 Austria height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1261',
+        ],
+        'urn:ogc:def:crs:EPSG::9279' => [
+            'name' => 'SA LLD height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1262',
+        ],
+        'urn:ogc:def:crs:EPSG::9287' => [
+            'name' => 'LAT NL depth',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6498',
+            'datum' => 'urn:ogc:def:datum:EPSG::1290',
+        ],
+        'urn:ogc:def:crs:EPSG::9288' => [
+            'name' => 'MSL NL depth',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6498',
+            'datum' => 'urn:ogc:def:datum:EPSG::1270',
+        ],
+        'urn:ogc:def:crs:EPSG::9303' => [
+            'name' => 'HS2-VRF height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1265',
+        ],
+        'urn:ogc:def:crs:EPSG::9335' => [
+            'name' => 'KSA-VRF14 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1269',
+        ],
+        'urn:ogc:def:crs:EPSG::9351' => [
+            'name' => 'NGNC08 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1255',
+        ],
+        'urn:ogc:def:crs:EPSG::9389' => [
+            'name' => 'EVRF2019 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1274',
+        ],
+        'urn:ogc:def:crs:EPSG::9390' => [
+            'name' => 'EVRF2019 mean-tide height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1287',
+        ],
+        'urn:ogc:def:crs:EPSG::9392' => [
+            'name' => 'Mallorca height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1275',
+        ],
+        'urn:ogc:def:crs:EPSG::9393' => [
+            'name' => 'Menorca height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1276',
+        ],
+        'urn:ogc:def:crs:EPSG::9394' => [
+            'name' => 'Ibiza height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1277',
+        ],
+        'urn:ogc:def:crs:EPSG::9395' => [
+            'name' => 'Lanzarote height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1278',
+        ],
+        'urn:ogc:def:crs:EPSG::9396' => [
+            'name' => 'Fuerteventura height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1279',
+        ],
+        'urn:ogc:def:crs:EPSG::9397' => [
+            'name' => 'Gran Canaria height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1280',
+        ],
+        'urn:ogc:def:crs:EPSG::9398' => [
+            'name' => 'Tenerife height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1281',
+        ],
+        'urn:ogc:def:crs:EPSG::9399' => [
+            'name' => 'La Gomera height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1282',
+        ],
+        'urn:ogc:def:crs:EPSG::9400' => [
+            'name' => 'La Palma height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1283',
+        ],
+        'urn:ogc:def:crs:EPSG::9401' => [
+            'name' => 'El Hierro height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1284',
+        ],
+        'urn:ogc:def:crs:EPSG::9402' => [
+            'name' => 'Ceuta 2 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1285',
+        ],
+        'urn:ogc:def:crs:EPSG::9451' => [
+            'name' => 'BI height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1288',
+        ],
+        'urn:ogc:def:crs:EPSG::9458' => [
+            'name' => 'AVWS height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1292',
+        ],
+        'urn:ogc:def:crs:EPSG::9471' => [
+            'name' => 'INAGeoid2020 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1294',
+        ],
+    ];
+
     public function __construct(
         string $srid,
         CoordinateSystem $coordinateSystem,
@@ -1986,5 +3191,30 @@ class Vertical extends CoordinateReferenceSystem
     public function getDatum(): Datum
     {
         return $this->datum;
+    }
+
+    public static function fromSRID(string $srid): self
+    {
+        if (!isset(static::$sridData[$srid])) {
+            throw new UnknownCoordinateReferenceSystemException($srid);
+        }
+
+        $data = static::$sridData[$srid];
+
+        return new self(
+            $srid,
+            VerticalCS::fromSRID($data['coordinate_system']),
+            Datum::fromSRID($data['datum'])
+        );
+    }
+
+    public static function getSupportedSRIDs(): array
+    {
+        $supported = [];
+        foreach (static::$sridData as $srid => $sridData) {
+            $supported[$srid] = $sridData['name'];
+        }
+
+        return $supported;
     }
 }

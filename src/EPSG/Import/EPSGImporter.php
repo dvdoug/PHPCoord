@@ -78,6 +78,7 @@ class EPSGImporter
         $this->generateDataEllipsoids($sqlite);
         $this->generateDataDatums($sqlite);
         $this->generateDataCoordinateSystems($sqlite);
+        $this->generateDataCoordinateReferenceSystems($sqlite);
 
         $this->generateConstantsUnitsOfMeasure($sqlite);
         $this->generateConstantsPrimeMeridians($sqlite);
@@ -580,7 +581,7 @@ class EPSGImporter
     public function generateConstantsCoordinateReferenceSystems(SQLite3 $sqlite): void
     {
         /*
-         * Coordinate reference systems (compound)
+         * compound
          */
         $sql = "
             SELECT
@@ -610,7 +611,7 @@ class EPSGImporter
         $this->updateFileConstants($this->sourceDir . '/CoordinateReferenceSystem/Compound.php', $constants, 'public');
 
         /*
-         * Coordinate reference systems (geocentric)
+         * geocentric
          */
         $sql = "
             SELECT
@@ -640,7 +641,7 @@ class EPSGImporter
         $this->updateFileConstants($this->sourceDir . '/CoordinateReferenceSystem/Geocentric.php', $constants, 'public');
 
         /*
-         * Coordinate reference systems (geographic 2D)
+         * geographic 2D
          */
         $sql = "
             SELECT
@@ -670,7 +671,7 @@ class EPSGImporter
         $this->updateFileConstants($this->sourceDir . '/CoordinateReferenceSystem/Geographic2D.php', $constants, 'public');
 
         /*
-         * Coordinate reference systems (geographic 3D)
+         * geographic 3D
          */
         $sql = "
             SELECT
@@ -700,7 +701,7 @@ class EPSGImporter
         $this->updateFileConstants($this->sourceDir . '/CoordinateReferenceSystem/Geographic3D.php', $constants, 'public');
 
         /*
-         * Coordinate reference systems (projected)
+         * projected
          */
         $sql = "
             SELECT
@@ -730,7 +731,7 @@ class EPSGImporter
         $this->updateFileConstants($this->sourceDir . '/CoordinateReferenceSystem/Projected.php', $constants, 'public');
 
         /*
-         * Coordinate reference systems (vertical)
+         * vertical
          */
         $sql = "
             SELECT
@@ -760,7 +761,7 @@ class EPSGImporter
         $this->updateFileConstants($this->sourceDir . '/CoordinateReferenceSystem/Vertical.php', $constants, 'public');
 
         /*
-         * Coordinate reference systems (other)
+         * other
          */
         $sql = "
             SELECT
@@ -788,6 +789,230 @@ class EPSGImporter
         }
 
         $this->updateFileConstants($this->sourceDir . '/CoordinateReferenceSystem/CoordinateReferenceSystem.php', $constants, 'public');
+    }
+
+    public function generateDataCoordinateReferenceSystems(SQLite3 $sqlite): void
+    {
+        /*
+         * compound
+         */
+        $sql = "
+            SELECT
+                'urn:ogc:def:crs:EPSG::' || crs.coord_ref_sys_code AS urn,
+                crs.coord_ref_sys_name AS name,
+                'urn:ogc:def:crs:EPSG::' || crs.cmpd_horizcrs_code AS horizontal_crs,
+                horizontal.coord_ref_sys_kind AS horizontal_crs_type,
+                'urn:ogc:def:crs:EPSG::' || crs.cmpd_vertcrs_code AS vertical_crs
+            FROM epsg_coordinatereferencesystem crs
+            JOIN epsg_coordinatereferencesystem horizontal ON horizontal.coord_ref_sys_code = crs.cmpd_horizcrs_code
+            WHERE crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
+            AND (crs.cmpd_horizcrs_code IS NULL OR crs.cmpd_horizcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
+            AND (crs.cmpd_vertcrs_code IS NULL OR crs.cmpd_vertcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
+            AND crs.coord_ref_sys_kind = 'compound'
+            ORDER BY urn
+            ";
+
+        $result = $sqlite->query($sql);
+        $data = [];
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            $data[$row['urn']] = $row;
+            unset($data[$row['urn']]['urn']);
+        }
+
+        $this->updateFileData($this->sourceDir . '/CoordinateReferenceSystem/Compound.php', $data);
+
+        /*
+         * geocentric
+         */
+        $sql = "
+            SELECT
+                'urn:ogc:def:crs:EPSG::' || crs.coord_ref_sys_code AS urn,
+                crs.coord_ref_sys_name AS name,
+                'urn:ogc:def:cs:EPSG::' || crs.coord_sys_code AS coordinate_system,
+                'urn:ogc:def:datum:EPSG::' || crs.datum_code AS datum,
+                'urn:ogc:def:crs:EPSG::' || crs.base_crs_code AS base_crs
+            FROM epsg_coordinatereferencesystem crs
+            WHERE crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
+            AND (crs.cmpd_horizcrs_code IS NULL OR crs.cmpd_horizcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
+            AND (crs.cmpd_vertcrs_code IS NULL OR crs.cmpd_vertcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
+            AND crs.coord_ref_sys_kind = 'geocentric'
+            ORDER BY urn
+            ";
+
+        $result = $sqlite->query($sql);
+        $data = [];
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            if ($row['datum'] === null) {
+                unset($row['datum']);
+            }
+            if ($row['base_crs'] === null) {
+                unset($row['base_crs']);
+            }
+            $data[$row['urn']] = $row;
+            unset($data[$row['urn']]['urn']);
+        }
+
+        $this->updateFileData($this->sourceDir . '/CoordinateReferenceSystem/Geocentric.php', $data);
+
+        /*
+         * geographic 2D
+         */
+        $sql = "
+            SELECT
+                'urn:ogc:def:crs:EPSG::' || crs.coord_ref_sys_code AS urn,
+                crs.coord_ref_sys_name AS name,
+                'urn:ogc:def:cs:EPSG::' || crs.coord_sys_code AS coordinate_system,
+                'urn:ogc:def:datum:EPSG::' || crs.datum_code AS datum,
+                'urn:ogc:def:crs:EPSG::' || crs.base_crs_code AS base_crs
+            FROM epsg_coordinatereferencesystem crs
+            WHERE crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
+            AND (crs.cmpd_horizcrs_code IS NULL OR crs.cmpd_horizcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
+            AND (crs.cmpd_vertcrs_code IS NULL OR crs.cmpd_vertcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
+            AND crs.coord_ref_sys_kind = 'geographic 2D'
+            ORDER BY urn
+            ";
+
+        $result = $sqlite->query($sql);
+        $data = [];
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            if ($row['datum'] === null) {
+                unset($row['datum']);
+            }
+            if ($row['base_crs'] === null) {
+                unset($row['base_crs']);
+            }
+            $data[$row['urn']] = $row;
+            unset($data[$row['urn']]['urn']);
+        }
+
+        $this->updateFileData($this->sourceDir . '/CoordinateReferenceSystem/Geographic2D.php', $data);
+
+        /*
+         * geographic 3D
+         */
+        $sql = "
+            SELECT
+                'urn:ogc:def:crs:EPSG::' || crs.coord_ref_sys_code AS urn,
+                crs.coord_ref_sys_name AS name,
+                'urn:ogc:def:cs:EPSG::' || crs.coord_sys_code AS coordinate_system,
+                'urn:ogc:def:datum:EPSG::' || crs.datum_code AS datum,
+                'urn:ogc:def:crs:EPSG::' || crs.base_crs_code AS base_crs
+            FROM epsg_coordinatereferencesystem crs
+            WHERE crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
+            AND (crs.cmpd_horizcrs_code IS NULL OR crs.cmpd_horizcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
+            AND (crs.cmpd_vertcrs_code IS NULL OR crs.cmpd_vertcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
+            AND crs.coord_ref_sys_kind = 'geographic 3D'
+            ORDER BY urn
+            ";
+
+        $result = $sqlite->query($sql);
+        $data = [];
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            if ($row['datum'] === null) {
+                unset($row['datum']);
+            }
+            if ($row['base_crs'] === null) {
+                unset($row['base_crs']);
+            }
+            $data[$row['urn']] = $row;
+            unset($data[$row['urn']]['urn']);
+        }
+
+        $this->updateFileData($this->sourceDir . '/CoordinateReferenceSystem/Geographic3D.php', $data);
+
+        /*
+         * projected
+         */
+        $sql = "
+            SELECT
+                'urn:ogc:def:crs:EPSG::' || crs.coord_ref_sys_code AS urn,
+                crs.coord_ref_sys_name AS name,
+                'urn:ogc:def:cs:EPSG::' || crs.coord_sys_code AS coordinate_system,
+                'urn:ogc:def:datum:EPSG::' || crs.datum_code AS datum,
+                'urn:ogc:def:crs:EPSG::' || crs.base_crs_code AS base_crs
+            FROM epsg_coordinatereferencesystem crs
+            WHERE crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
+            AND (crs.cmpd_horizcrs_code IS NULL OR crs.cmpd_horizcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
+            AND (crs.cmpd_vertcrs_code IS NULL OR crs.cmpd_vertcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
+            AND crs.coord_ref_sys_kind = 'projected'
+            ORDER BY urn
+            ";
+
+        $result = $sqlite->query($sql);
+        $data = [];
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            if ($row['datum'] === null) {
+                unset($row['datum']);
+            }
+            if ($row['base_crs'] === null) {
+                unset($row['base_crs']);
+            }
+            $data[$row['urn']] = $row;
+            unset($data[$row['urn']]['urn']);
+        }
+
+        $this->updateFileData($this->sourceDir . '/CoordinateReferenceSystem/Projected.php', $data);
+
+        /*
+         * vertical
+         */
+        $sql = "
+            SELECT
+                'urn:ogc:def:crs:EPSG::' || crs.coord_ref_sys_code AS urn,
+                crs.coord_ref_sys_name AS name,
+                'urn:ogc:def:cs:EPSG::' || crs.coord_sys_code AS coordinate_system,
+                'urn:ogc:def:datum:EPSG::' || crs.datum_code AS datum,
+                'urn:ogc:def:crs:EPSG::' || crs.base_crs_code AS base_crs
+            FROM epsg_coordinatereferencesystem crs
+            WHERE crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
+            AND (crs.cmpd_horizcrs_code IS NULL OR crs.cmpd_horizcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
+            AND (crs.cmpd_vertcrs_code IS NULL OR crs.cmpd_vertcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
+            AND crs.coord_ref_sys_kind = 'vertical'
+            ORDER BY urn
+            ";
+
+        $result = $sqlite->query($sql);
+        $data = [];
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            if ($row['datum'] === null) {
+                unset($row['datum']);
+            }
+            if ($row['base_crs'] === null) {
+                unset($row['base_crs']);
+            }
+            $data[$row['urn']] = $row;
+            unset($data[$row['urn']]['urn']);
+        }
+
+        $this->updateFileData($this->sourceDir . '/CoordinateReferenceSystem/Vertical.php', $data);
+
+        /*
+         * other
+         */
+        $sql = "
+            SELECT
+                'urn:ogc:def:crs:EPSG::' || crs.coord_ref_sys_code AS urn,
+                crs.coord_ref_sys_kind AS kind,
+                crs.coord_ref_sys_name AS name,
+                'urn:ogc:def:cs:EPSG::' || crs.coord_sys_code AS coordinate_system,
+                'urn:ogc:def:datum:EPSG::' || crs.datum_code AS datum,
+                'urn:ogc:def:crs:EPSG::' || crs.base_crs_code AS base_crs
+            FROM epsg_coordinatereferencesystem crs
+            WHERE crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
+            AND (crs.cmpd_horizcrs_code IS NULL OR crs.cmpd_horizcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
+            AND (crs.cmpd_vertcrs_code IS NULL OR crs.cmpd_vertcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
+            AND crs.coord_ref_sys_kind NOT IN ('compound', 'geocentric', 'geographic 2D', 'geographic 3D', 'projected', 'vertical')
+            ORDER BY urn
+            ";
+
+        $result = $sqlite->query($sql);
+        $data = [];
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            $data[$row['urn']] = $row;
+            unset($data[$row['urn']]['urn']);
+        }
+
+        $this->updateFileData($this->sourceDir . '/CoordinateReferenceSystem/CoordinateReferenceSystem.php', $data);
     }
 
     public function generateConstantsCoordinateOperationMethods(SQLite3 $sqlite): void
