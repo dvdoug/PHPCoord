@@ -1189,4 +1189,39 @@ class ProjectedPoint extends Point
 
         return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
     }
+
+    /**
+     * Modified Azimuthal Equidistant
+     * Modified form of Oblique Azimuthal Equidistant projection method developed for Polynesian islands. For the
+     * distances over which these projections are used (under 800km) this modification introduces no significant error.
+     */
+    public function modifiedAzimuthalEquidistant(
+        Geographic $to,
+        Angle $latitudeOfNaturalOrigin,
+        Angle $longitudeOfNaturalOrigin,
+        Length $falseEasting,
+        Length $falseNorthing
+    ): GeographicPoint {
+        $easting = $this->easting->asMetres()->getValue() - $falseEasting->asMetres()->getValue();
+        $northing = $this->northing->asMetres()->getValue() - $falseNorthing->asMetres()->getValue();
+        $latitudeOrigin = $latitudeOfNaturalOrigin->asRadians()->getValue();
+        $longitudeOrigin = $longitudeOfNaturalOrigin->asRadians()->getValue();
+        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+
+        $nuO = $a / sqrt(1 - $e2 * sin($latitudeOrigin) ** 2);
+        $c = sqrt($easting ** 2 + $northing ** 2);
+        $alpha = atan2($easting, $northing);
+        $A = -$e2 * cos($latitudeOrigin) ** 2 * cos($alpha) ** 2 / (1 - $e2);
+        $B = 3 * $e2 * (1 - $A) * sin($latitudeOrigin) * cos($latitudeOrigin) * cos($alpha) / (1 - $e2);
+        $D = $c / $nuO;
+        $J = $D - ($A * (1 + $A) * $D ** 3 / 6) - ($B * (1 + 3 * $A) * $D ** 4 / 24);
+        $K = 1 - ($A * $J ** 2 / 2) - ($B * $J ** 3 / 6);
+        $psi = asin(sin($latitudeOrigin) * cos($J) + cos($latitudeOrigin) * sin($J) * cos($alpha));
+
+        $latitude = atan((1 - $e2 * $K * sin($latitudeOrigin) / sin($psi)) * tan($psi) / (1 - $e2));
+        $longitude = $longitudeOrigin + asin(sin($alpha) * sin($J) / cos($psi));
+
+        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+    }
 }

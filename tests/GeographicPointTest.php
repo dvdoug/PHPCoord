@@ -504,4 +504,14 @@ class GeographicPointTest extends TestCase
         self::assertEquals(0.456, $to->getLongitude()->getValue());
         self::assertNull($to->getHeight());
     }
+
+    public function testModifiedAzimuthalEquidistant(): void
+    {
+        $from = GeographicPoint::create(new Radian(0.167490973), new Radian(2.411923377), null, CoordinateReferenceSystem::fromEPSGCode(Geographic2D::EPSG_GUAM_1963));
+        $toCRS = CoordinateReferenceSystem::fromEPSGCode(Projected::EPSG_GUAM_1963_YAP_ISLANDS);
+        $to = $from->modifiedAzimuthalEquidistant($toCRS, new Radian(0.166621493), new Radian(2.411499514), new Metre(40000), new Metre(60000));
+
+        self::assertEqualsWithDelta(42665.90, $to->getEasting()->asMetres()->getValue(), 0.01);
+        self::assertEqualsWithDelta(65509.82, $to->getNorthing()->asMetres()->getValue(), 0.01);
+    }
 }

@@ -1220,6 +1220,47 @@ class GeographicPoint extends Point
     }
 
     /**
+     * Modified Azimuthal Equidistant
+     * Modified form of Oblique Azimuthal Equidistant projection method developed for Polynesian islands. For the
+     * distances over which these projections are used (under 800km) this modification introduces no significant error.
+     */
+    public function modifiedAzimuthalEquidistant(
+        Projected $to,
+        Angle $latitudeOfNaturalOrigin,
+        Angle $longitudeOfNaturalOrigin,
+        Length $falseEasting,
+        Length $falseNorthing
+    ): ProjectedPoint {
+        $latitude = $this->latitude->asRadians()->getValue();
+        $longitude = $this->longitude->asRadians()->getValue();
+        $latitudeOrigin = $latitudeOfNaturalOrigin->asRadians()->getValue();
+        $longitudeOrigin = $longitudeOfNaturalOrigin->asRadians()->getValue();
+        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
+        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+
+        $nuO = $a / sqrt(1 - $e2 * sin($latitudeOrigin) ** 2);
+        $nu = $a / sqrt(1 - $e2 * sin($latitude) ** 2);
+        $psi = atan((1 - $e2) * tan($latitude) + ($e2 * $nuO * sin($latitudeOrigin)) / ($nu * cos($latitude)));
+        $alpha = atan2(sin($longitude - $longitudeOrigin), (cos($latitudeOrigin) * tan($psi) - sin($latitudeOrigin) * cos($longitude - $longitudeOrigin)));
+        $G = $e * sin($latitudeOrigin) / sqrt(1 - $e2);
+        $H = $e * cos($latitudeOrigin) * cos($alpha) / sqrt(1 - $e2);
+
+        if (sin($alpha) === 0.0) {
+            $s = asin(cos($latitudeOrigin) * sin($psi) - sin($latitudeOrigin) * cos($alpha)) * cos($alpha) / abs(cos($alpha));
+        } else {
+            $s = asin(sin($longitude - $longitudeOrigin) * cos($psi) / sin($alpha));
+        }
+
+        $c = $nuO * $s * ((1 - $s ** 2 * $H ** 2 * (1 - $H ** 2) / 6) + (($s ** 3 / 8) * $G * $H * (1 - 2 * $H ** 2)) + ($s ** 4 / 120) * ($H ** 2 * (4 - 7 * $H ** 2) - 3 * $G ** 2 * (1 - 7 * $H ** 2)) - (($s ** 5 / 48) * $G * $H));
+
+        $easting = $falseEasting->asMetres()->getValue() + $c * sin($alpha);
+        $northing = $falseNorthing->asMetres()->getValue() + $c * cos($alpha);
+
+        return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+    }
+
+    /**
      * Geographic3D to 2D conversion.
      */
     public function threeDToTwoD(

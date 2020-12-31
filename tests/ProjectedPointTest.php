@@ -415,4 +415,14 @@ class ProjectedPointTest extends TestCase
         self::assertEqualsWithDelta(10, $to->getLatitude()->getValue(), 0.001);
         self::assertEqualsWithDelta(-78, $to->getLongitude()->getValue(), 0.001);
     }
+
+    public function testModifiedAzimuthalEquidistant(): void
+    {
+        $from = ProjectedPoint::createFromEastingNorthing(new Metre(42665.90), new Metre(65509.82), CoordinateReferenceSystem::fromEPSGCode(Projected::EPSG_GUAM_1963_YAP_ISLANDS));
+        $toCRS = CoordinateReferenceSystem::fromEPSGCode(Geographic2D::EPSG_GUAM_1963);
+        $to = $from->modifiedAzimuthalEquidistant($toCRS, new Radian(0.166621493), new Radian(2.411499514), new Metre(40000), new Metre(60000));
+
+        self::assertEqualsWithDelta(0.167490973, $to->getLatitude()->asRadians()->getValue(), 0.000000001);
+        self::assertEqualsWithDelta(2.411923377, $to->getLongitude()->asRadians()->getValue(), 0.000000001);
+    }
 }
