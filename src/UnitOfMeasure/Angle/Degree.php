@@ -29,6 +29,11 @@ class Degree extends Angle
         return new Radian($this->angle * M_PI / 180);
     }
 
+    public function asDegrees(): self
+    {
+        return $this;
+    }
+
     public function getValue(): float
     {
         return $this->angle;

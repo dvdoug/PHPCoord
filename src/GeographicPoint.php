@@ -31,6 +31,7 @@ use PHPCoord\Exception\InvalidCoordinateReferenceSystemException;
 use PHPCoord\Exception\UnknownAxisException;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPCoord\UnitOfMeasure\Angle\ArcSecond;
+use PHPCoord\UnitOfMeasure\Angle\Degree;
 use PHPCoord\UnitOfMeasure\Angle\Radian;
 use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Length\Metre;
@@ -1528,10 +1529,10 @@ class GeographicPoint extends Point
         $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
         $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
 
-        $scaleFactorOrigin = cos($firstStandardParallel) / sqrt(1 - $e2 * sin($firstStandardParallel) ** 2);
+        $kO = cos($firstStandardParallel) / sqrt(1 - $e2 * sin($firstStandardParallel) ** 2);
 
-        $easting = $falseEasting->asMetres()->getValue() + $a * $scaleFactorOrigin * ($longitude - $longitudeOrigin);
-        $northing = $falseNorthing->asMetres()->getValue() + $a * $scaleFactorOrigin * log(tan(M_PI / 4 + $latitude / 2) * ((1 - $e * sin($latitude)) / (1 + $e * sin($latitude))) ** ($e / 2));
+        $easting = $falseEasting->asMetres()->getValue() + $a * $kO * ($longitude - $longitudeOrigin);
+        $northing = $falseNorthing->asMetres()->getValue() + $a * $kO * log(tan(M_PI / 4 + $latitude / 2) * ((1 - $e * sin($latitude)) / (1 + $e * sin($latitude))) ** ($e / 2));
 
         return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
     }
@@ -1666,6 +1667,96 @@ class GeographicPoint extends Point
         $northing = $u * cos($gammaC) - $v * sin($gammaC) + $northingAtProjectionCentre->asMetres()->getValue();
 
         return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+    }
+
+    /**
+     * Transverse Mercator.
+     */
+    public function transverseMercator(
+        Projected $to,
+        Angle $latitudeOfNaturalOrigin,
+        Angle $longitudeOfNaturalOrigin,
+        Scale $scaleFactorAtNaturalOrigin,
+        Length $falseEasting,
+        Length $falseNorthing
+    ): ProjectedPoint {
+        $latitude = $this->latitude->asRadians()->getValue();
+        $longitude = $this->longitude->asRadians()->getValue();
+        $latitudeOrigin = $latitudeOfNaturalOrigin->asRadians()->getValue();
+        $longitudeOrigin = $longitudeOfNaturalOrigin->asRadians()->getValue();
+        $kO = $scaleFactorAtNaturalOrigin->asUnity()->getValue();
+        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
+        $f = $this->crs->getDatum()->getEllipsoid()->getInverseFlattening();
+
+        $n = $f / (2 - $f);
+        $B = ($a / (1 + $n)) * (1 + $n ** 2 / 4 + $n ** 4 / 64);
+
+        $h1 = $n / 2 - (2 / 3) * $n ** 2 + (5 / 16) * $n ** 3 + (41 / 180) * $n ** 4;
+        $h2 = (13 / 48) * $n ** 2 - (3 / 5) * $n ** 3 + (557 / 1440) * $n ** 4;
+        $h3 = (61 / 240) * $n ** 3 - (103 / 140) * $n ** 4;
+        $h4 = (49561 / 161280) * $n ** 4;
+
+        if ($latitudeOrigin === 0.0) {
+            $mO = 0;
+        } elseif ($latitudeOrigin === M_PI / 2) {
+            $mO = $B * M_PI / 2;
+        } elseif ($latitudeOrigin === -M_PI / 2) {
+            $mO = $B * -M_PI / 2;
+        } else {
+            $qO = asinh(tan($latitudeOrigin)) - ($e * atanh($e * sin($latitudeOrigin)));
+            $betaO = atan(sinh($qO));
+            $xiO0 = asin(sin($betaO));
+            $xiO1 = $h1 * sin(2 * $xiO0);
+            $xiO2 = $h2 * sin(4 * $xiO0);
+            $xiO3 = $h3 * sin(6 * $xiO0);
+            $xiO4 = $h4 * sin(8 * $xiO0);
+            $xiO = $xiO0 + $xiO1 + $xiO2 + $xiO3 + $xiO4;
+            $mO = $B * $xiO;
+        }
+
+        $Q = asinh(tan($latitude)) - ($e * atanh($e * sin($latitude)));
+        $beta = atan(sinh($Q));
+        $eta0 = atanh(cos($beta) * sin($longitude - $longitudeOrigin));
+        $xi0 = asin(sin($beta) * cosh($eta0));
+        $xi1 = $h1 * sin(2 * $xi0) * cosh(2 * $eta0);
+        $eta1 = $h1 * cos(2 * $xi0) * sinh(2 * $eta0);
+        $xi2 = $h2 * sin(4 * $xi0) * cosh(4 * $eta0);
+        $eta2 = $h2 * cos(4 * $xi0) * sinh(4 * $eta0);
+        $xi3 = $h3 * sin(6 * $xi0) * cosh(6 * $eta0);
+        $eta3 = $h3 * cos(6 * $xi0) * sinh(6 * $eta0);
+        $xi4 = $h4 * sin(8 * $xi0) * cosh(8 * $eta0);
+        $eta4 = $h4 * cos(8 * $xi0) * sinh(8 * $eta0);
+        $xi = $xi0 + $xi1 + $xi2 + $xi3 + $xi4;
+        $eta = $eta0 + $eta1 + $eta2 + $eta3 + $eta4;
+
+        $easting = $falseEasting->asMetres()->getValue() + $kO * $B * $eta;
+        $northing = $falseNorthing->asMetres()->getValue() + $kO * ($B * $xi - $mO);
+
+        return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+    }
+
+    /**
+     * Transverse Mercator Zoned Grid System
+     * If locations fall outwith the fixed zones the general Transverse Mercator method (code 9807) must be used for
+     * each zone.
+     */
+    public function transverseMercatorZonedGrid(
+        Projected $to,
+        Angle $latitudeOfNaturalOrigin,
+        Angle $initialLongitude,
+        Angle $zoneWidth,
+        Scale $scaleFactorAtNaturalOrigin,
+        Length $falseEasting,
+        Length $falseNorthing
+    ): ProjectedPoint {
+        $W = $zoneWidth->asDegrees()->getValue();
+        $Z = ($this->longitude->subtract($initialLongitude)->asDegrees()->getValue() / $W) % (360 / $W) + 1;
+
+        $longitudeOrigin = $initialLongitude->add(new Degree($Z * $W - $W / 2));
+        $falseEasting = $falseEasting->add(new Metre($Z * 1000000));
+
+        return $this->transverseMercator($to, $latitudeOfNaturalOrigin, $longitudeOrigin, $scaleFactorAtNaturalOrigin, $falseEasting, $falseNorthing);
     }
 
     /**

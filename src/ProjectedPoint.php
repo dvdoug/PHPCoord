@@ -25,6 +25,7 @@ use PHPCoord\Exception\InvalidCoordinateReferenceSystemException;
 use PHPCoord\Exception\UnknownAxisException;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPCoord\UnitOfMeasure\Angle\ArcSecond;
+use PHPCoord\UnitOfMeasure\Angle\Degree;
 use PHPCoord\UnitOfMeasure\Angle\Radian;
 use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Length\Metre;
@@ -1659,5 +1660,102 @@ class ProjectedPoint extends Point
         $longitude = $lonO - atan2(($S * cos($gammaO) - $V * sin($gammaO)), cos($B * $u / $A)) / $B;
 
         return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+    }
+
+    /**
+     * Transverse Mercator.
+     */
+    public function transverseMercator(
+        Geographic $to,
+        Angle $latitudeOfNaturalOrigin,
+        Angle $longitudeOfNaturalOrigin,
+        Scale $scaleFactorAtNaturalOrigin,
+        Length $falseEasting,
+        Length $falseNorthing
+    ): GeographicPoint {
+        $easting = $this->easting->asMetres()->getValue() - $falseEasting->asMetres()->getValue();
+        $northing = $this->northing->asMetres()->getValue() - $falseNorthing->asMetres()->getValue();
+        $latitudeOrigin = $latitudeOfNaturalOrigin->asRadians()->getValue();
+        $longitudeOrigin = $longitudeOfNaturalOrigin->asRadians()->getValue();
+        $kO = $scaleFactorAtNaturalOrigin->asUnity()->getValue();
+        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
+        $f = $this->crs->getDatum()->getEllipsoid()->getInverseFlattening();
+
+        $n = $f / (2 - $f);
+        $B = ($a / (1 + $n)) * (1 + $n ** 2 / 4 + $n ** 4 / 64);
+
+        $h1 = $n / 2 - (2 / 3) * $n ** 2 + (37 / 96) * $n ** 3 - (1 / 360) * $n ** 4;
+        $h2 = (1 / 48) * $n ** 2 + (1 / 15) * $n ** 3 - (437 / 1440) * $n ** 4;
+        $h3 = (17 / 480) * $n ** 3 - (37 / 840) * $n ** 4;
+        $h4 = (4397 / 161280) * $n ** 4;
+
+        if ($latitudeOrigin === 0.0) {
+            $mO = 0;
+        } elseif ($latitudeOrigin === M_PI / 2) {
+            $mO = $B * M_PI / 2;
+        } elseif ($latitudeOrigin === -M_PI / 2) {
+            $mO = $B * -M_PI / 2;
+        } else {
+            $qO = asinh(tan($latitudeOrigin)) - ($e * atanh($e * sin($latitudeOrigin)));
+            $betaO = atan(sinh($qO));
+            $xiO0 = asin(sin($betaO));
+            $xiO1 = $h1 * sin(2 * $xiO0);
+            $xiO2 = $h2 * sin(4 * $xiO0);
+            $xiO3 = $h3 * sin(6 * $xiO0);
+            $xiO4 = $h4 * sin(8 * $xiO0);
+            $xiO = $xiO0 + $xiO1 + $xiO2 + $xiO3 + $xiO4;
+            $mO = $B * $xiO;
+        }
+
+        $eta = $easting / ($B * $kO);
+        $xi = ($northing + $kO * $mO) / ($B * $kO);
+        $xi1 = $h1 * sin(2 * $xi) * cosh(2 * $eta);
+        $eta1 = $h1 * cos(2 * $xi) * sinh(2 * $eta);
+        $xi2 = $h2 * sin(4 * $xi) * cosh(4 * $eta);
+        $eta2 = $h2 * cos(4 * $xi) * sinh(4 * $eta);
+        $xi3 = $h3 * sin(6 * $xi) * cosh(6 * $eta);
+        $eta3 = $h3 * cos(6 * $xi) * sinh(6 * $eta);
+        $xi4 = $h4 * sin(8 * $xi) * cosh(8 * $eta);
+        $eta4 = $h4 * cos(8 * $xi) * sinh(8 * $eta);
+        $xi0 = $xi - ($xi1 + $xi2 + $xi3 + $xi4);
+        $eta0 = $eta - ($eta1 + $eta2 + $eta3 + $eta4);
+
+        $beta = asin(sin($xi0) / cosh($eta0));
+
+        $QPrime = asinh(tan($beta));
+        $Q = asinh(tan($beta));
+        do {
+            $QN = $Q;
+            $Q = $QPrime + ($e * atanh($e * tanh($Q)));
+        } while (abs($Q - $QN) >= self::NEWTON_RAPHSON_CONVERGENCE);
+
+        $latitude = atan(sinh($Q));
+        $longitude = $longitudeOrigin + asin(tanh($eta0) / cos($beta));
+
+        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+    }
+
+    /**
+     * Transverse Mercator Zoned Grid System
+     * If locations fall outwith the fixed zones the general Transverse Mercator method (code 9807) must be used for
+     * each zone.
+     */
+    public function transverseMercatorZonedGrid(
+        Geographic $to,
+        Angle $latitudeOfNaturalOrigin,
+        Angle $initialLongitude,
+        Angle $zoneWidth,
+        Scale $scaleFactorAtNaturalOrigin,
+        Length $falseEasting,
+        Length $falseNorthing
+    ): GeographicPoint {
+        $Z = substr((string) $this->easting->asMetres()->getValue(), 0, 2);
+        $falseEasting = $falseEasting->add(new Metre($Z * 1000000));
+
+        $W = $zoneWidth->asDegrees()->getValue();
+        $longitudeOrigin = $initialLongitude->add(new Degree($Z * $W - $W / 2));
+
+        return $this->transverseMercator($to, $latitudeOfNaturalOrigin, $longitudeOrigin, $scaleFactorAtNaturalOrigin, $falseEasting, $falseNorthing);
     }
 }

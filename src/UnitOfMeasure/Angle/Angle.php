@@ -247,6 +247,11 @@ abstract class Angle implements UnitOfMeasure
 
     abstract public function asRadians(): Radian;
 
+    public function asDegrees(): Degree
+    {
+        return new Degree($this->asRadians()->getValue() * 180 / M_PI);
+    }
+
     public function add(self $unit): self
     {
         $resultAsRadians = new Radian($this->asRadians()->getValue() + $unit->asRadians()->getValue());

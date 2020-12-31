@@ -479,6 +479,9 @@ class CoordinateOperationMethods
             self::EPSG_LONGITUDE_ROTATION => 'longitudeRotation',
             self::EPSG_HOTINE_OBLIQUE_MERCATOR_VARIANT_A => 'obliqueMercatorHotineVariantA',
             self::EPSG_HOTINE_OBLIQUE_MERCATOR_VARIANT_B => 'obliqueMercatorHotineVariantB',
+            self::EPSG_TRANSVERSE_MERCATOR => 'transverseMercator',
+            self::EPSG_TRANSVERSE_MERCATOR_SOUTH_ORIENTATED => 'transverseMercator',
+            self::EPSG_TRANSVERSE_MERCATOR_ZONED_GRID_SYSTEM => 'transverseMercatorZonedGrid',
         ];
     }
 }

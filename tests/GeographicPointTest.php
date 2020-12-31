@@ -639,4 +639,44 @@ class GeographicPointTest extends TestCase
         self::assertEqualsWithDelta(679245.73, $to->getEasting()->asMetres()->getValue(), 0.01);
         self::assertEqualsWithDelta(596562.78, $to->getNorthing()->asMetres()->getValue(), 0.01);
     }
+
+    public function testTransverseMercator(): void
+    {
+        $from = GeographicPoint::create(new Degree(50.5), new Degree(0.5), null, Geographic2D::fromSRID(Geographic2D::EPSG_OSGB_1936));
+        $toCRS = Projected::fromSRID(Projected::EPSG_OSGB_1936_BRITISH_NATIONAL_GRID);
+        $to = $from->transverseMercator($toCRS, new Degree(49), new Degree(-2), new Unity(0.9996012717), new Metre(400000), new Metre(-100000));
+
+        self::assertEqualsWithDelta(577274.99, $to->getEasting()->asMetres()->getValue(), 0.01);
+        self::assertEqualsWithDelta(69740.50, $to->getNorthing()->asMetres()->getValue(), 0.01);
+    }
+
+    public function testTransverseMercatorSouthOrientated(): void
+    {
+        $from = GeographicPoint::create(new Radian(-0.449108618), new Radian(0.493625066), null, Geographic2D::fromSRID(Geographic2D::EPSG_HARTEBEESTHOEK94));
+        $toCRS = Projected::fromSRID(Projected::EPSG_HARTEBEESTHOEK94_LO29);
+        $to = $from->transverseMercator($toCRS, new Degree(0), new Degree(29), new Unity(1), new Metre(0), new Metre(0));
+
+        self::assertEqualsWithDelta(71984.49, $to->getWesting()->asMetres()->getValue(), 0.01);
+        self::assertEqualsWithDelta(2847342.74, $to->getSouthing()->asMetres()->getValue(), 0.01);
+    }
+
+    public function testTransverseMercatorZonedGridNothernHemisphere(): void
+    {
+        $from = GeographicPoint::create(new Degree(43.642567), new Degree(-79.387139), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
+        $toCRS = Projected::fromSRID(Projected::EPSG_WGS_84_UTM_GRID_SYSTEM_NORTHERN_HEMISPHERE);
+        $to = $from->transverseMercatorZonedGrid($toCRS, new Degree(0), new Degree(-180), new Degree(6), new Unity(0.9996), new Metre(500000), new Metre(0));
+
+        self::assertEqualsWithDelta(17630084, $to->getEasting()->asMetres()->getValue(), 1);
+        self::assertEqualsWithDelta(4833439, $to->getNorthing()->asMetres()->getValue(), 1);
+    }
+
+    public function testTransverseMercatorZonedGridSouthernHemisphere(): void
+    {
+        $from = GeographicPoint::create(new Degree(-33.859972), new Degree(151.211111), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
+        $toCRS = Projected::fromSRID(Projected::EPSG_WGS_84_UTM_GRID_SYSTEM_SOUTHERN_HEMISPHERE);
+        $to = $from->transverseMercatorZonedGrid($toCRS, new Degree(0), new Degree(-180), new Degree(6), new Unity(0.9996), new Metre(500000), new Metre(10000000));
+
+        self::assertEqualsWithDelta(56334519, $to->getEasting()->asMetres()->getValue(), 1);
+        self::assertEqualsWithDelta(6251930, $to->getNorthing()->asMetres()->getValue(), 1);
+    }
 }
