@@ -1758,4 +1758,48 @@ class ProjectedPoint extends Point
 
         return $this->transverseMercator($to, $latitudeOfNaturalOrigin, $longitudeOrigin, $scaleFactorAtNaturalOrigin, $falseEasting, $falseNorthing);
     }
+
+    /**
+     * General polynomial.
+     * @param Coefficient[] $powerCoefficients
+     */
+    public function generalPolynomial(
+        Projected $to,
+        Length $ordinate1OfEvaluationPointInSourceCRS,
+        Length $ordinate2OfEvaluationPointInSourceCRS,
+        Length $ordinate1OfEvaluationPointInTargetCRS,
+        Length $ordinate2OfEvaluationPointInTargetCRS,
+        Scale $scalingFactorForSourceCRSCoordDifferences,
+        Scale $scalingFactorForTargetCRSCoordDifferences,
+        Scale $A0,
+        Scale $B0,
+        array $powerCoefficients
+    ): self {
+        $xs = $this->easting->getValue();
+        $ys = $this->northing->getValue();
+
+        $t = $this->generalPolynomialUnitless(
+            $xs,
+            $ys,
+            $ordinate1OfEvaluationPointInSourceCRS,
+            $ordinate2OfEvaluationPointInSourceCRS,
+            $ordinate1OfEvaluationPointInTargetCRS,
+            $ordinate2OfEvaluationPointInTargetCRS,
+            $scalingFactorForSourceCRSCoordDifferences,
+            $scalingFactorForTargetCRSCoordDifferences,
+            $A0,
+            $B0,
+            $powerCoefficients
+        );
+
+        $xtUnit = $to->getCoordinateSystem()->getAxes()[0]->getUnitOfMeasureId();
+        $ytUnit = $to->getCoordinateSystem()->getAxes()[1]->getUnitOfMeasureId();
+
+        return static::createFromEastingNorthing(
+            Length::makeUnit($t['xt'], $xtUnit),
+            Length::makeUnit($t['yt'], $ytUnit),
+            $to,
+            $this->epoch
+        );
+    }
 }

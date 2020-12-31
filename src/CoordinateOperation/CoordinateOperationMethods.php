@@ -484,6 +484,8 @@ class CoordinateOperationMethods
             self::EPSG_TRANSVERSE_MERCATOR_ZONED_GRID_SYSTEM => 'transverseMercatorZonedGrid',
             self::EPSG_VERTICAL_OFFSET => 'verticalOffset',
             self::EPSG_VERTICAL_OFFSET_AND_SLOPE => 'verticalOffsetAndSlope',
+            self::EPSG_GENERAL_POLYNOMIAL_OF_DEGREE_2 => 'generalPolynomial',
+            self::EPSG_GENERAL_POLYNOMIAL_OF_DEGREE_6 => 'generalPolynomial',
         ];
     }
 }

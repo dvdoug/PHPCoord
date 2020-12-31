@@ -679,4 +679,56 @@ class GeographicPointTest extends TestCase
         self::assertEqualsWithDelta(56334519, $to->getEasting()->asMetres()->getValue(), 1);
         self::assertEqualsWithDelta(6251930, $to->getNorthing()->asMetres()->getValue(), 1);
     }
+
+    public function testGeneralPolynomial(): void
+    {
+        $from = GeographicPoint::create(new Degree(55), new Degree(-6.5), null, Geographic2D::fromSRID(Geographic2D::EPSG_TM75));
+        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89);
+        $to = $from->generalPolynomial(
+            $toCRS,
+            new Degree(53.5),
+            new Degree(-7.7),
+            new Degree(53.5),
+            new Degree(-7.7),
+            new Coefficient(0.1),
+            new Coefficient(3600),
+            new Coefficient(0.763),
+            new Coefficient(-2.81),
+            [
+                'Au1v0' => new Coefficient(-4.487),
+                'Au0v1' => new Coefficient(0.123),
+                'Au2v0' => new Coefficient(0.215),
+                'Au1v1' => new Coefficient(-0.515),
+                'Au0v2' => new Coefficient(0.183),
+                'Au3v0' => new Coefficient(-0.265),
+                'Au2v1' => new Coefficient(-0.57),
+                'Au1v2' => new Coefficient(0.414),
+                'Au0v3' => new Coefficient(-0.374),
+                'Au3v1' => new Coefficient(2.852),
+                'Au2v2' => new Coefficient(5.703),
+                'Au1v3' => new Coefficient(13.11),
+                'Au3v2' => new Coefficient(-61.678),
+                'Au2v3' => new Coefficient(113.743),
+                'Au3v3' => new Coefficient(-265.898),
+                'Bu1v0' => new Coefficient(-0.341),
+                'Bu0v1' => new Coefficient(-4.68),
+                'Bu2v0' => new Coefficient(1.196),
+                'Bu1v1' => new Coefficient(-0.119),
+                'Bu0v2' => new Coefficient(0.17),
+                'Bu3v0' => new Coefficient(-0.887),
+                'Bu2v1' => new Coefficient(4.877),
+                'Bu1v2' => new Coefficient(3.913),
+                'Bu0v3' => new Coefficient(2.163),
+                'Bu3v1' => new Coefficient(-46.666),
+                'Bu2v2' => new Coefficient(-27.795),
+                'Bu1v3' => new Coefficient(18.867),
+                'Bu3v2' => new Coefficient(-95.377),
+                'Bu2v3' => new Coefficient(-284.294),
+                'Bu3v3' => new Coefficient(-853.95),
+            ]
+        );
+
+        self::assertEqualsWithDelta(55.00002972, $to->getLatitude()->getValue(), 0.00000001);
+        self::assertEqualsWithDelta(-6.50094913, $to->getLongitude()->getValue(), 0.00000001);
+    }
 }
