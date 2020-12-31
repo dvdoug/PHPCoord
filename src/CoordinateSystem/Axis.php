@@ -42,13 +42,13 @@ class Axis
 
     private string $name;
 
-    private int $unitOfMeasureId;
+    private string $unitOfMeasureId;
 
     public function __construct(
         string $orientation,
         string $abbreviation,
         string $name,
-        int $unitOfMeasureId
+        string $unitOfMeasureId
     ) {
         $this->orientation = $orientation;
         $this->abbreviation = $abbreviation;
@@ -71,7 +71,7 @@ class Axis
         return $this->name;
     }
 
-    public function getUnitOfMeasureId(): int
+    public function getUnitOfMeasureId(): string
     {
         return $this->unitOfMeasureId;
     }

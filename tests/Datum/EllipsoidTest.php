@@ -18,21 +18,21 @@ class EllipsoidTest extends TestCase
      * @group integration
      * @dataProvider ellipsoids
      */
-    public function testCanCreateAllInDB(int $epsgCode): void
+    public function testCanCreateAllInDB(string $srid): void
     {
-        $object = Ellipsoid::fromEPSGCode($epsgCode);
+        $object = Ellipsoid::fromSRID($srid);
         self::assertInstanceOf(Ellipsoid::class, $object);
     }
 
-    public function testExceptionOnUnknownEPSGCode(): void
+    public function testExceptionOnUnknownSRIDCode(): void
     {
         $this->expectException(UnknownEllipsoidException::class);
-        $object = Ellipsoid::fromEPSGCode(PHP_INT_MAX);
+        $object = Ellipsoid::fromSRID('foo');
     }
 
     public function testAiry1830(): void
     {
-        $object = Ellipsoid::fromEPSGCode(Ellipsoid::EPSG_AIRY_1830);
+        $object = Ellipsoid::fromSRID(Ellipsoid::EPSG_AIRY_1830);
         self::assertEquals('6377563.396m', $object->getSemiMajorAxis()->getFormattedValue());
         self::assertEquals('6356256.9092373m', $object->getSemiMinorAxis()->getFormattedValue());
     }

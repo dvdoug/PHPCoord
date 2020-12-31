@@ -39,7 +39,7 @@ abstract class CoordinateReferenceSystem
 
     public const CRS_TYPE_VERTICAL = 'vertical';
 
-    protected int $epsgCode;
+    protected string $srid;
 
     protected CoordinateSystem $coordinateSystem;
 
@@ -52,68 +52,68 @@ abstract class CoordinateReferenceSystem
      */
     private static $repository;
 
-    public static function fromEPSGCode(int $epsgCode): self
+    public static function fromSRID(string $srid): self
     {
         $repository = static::$repository ?? new Repository();
         $allData = $repository->getCoordinateReferenceSystems();
 
-        if (!isset($allData[$epsgCode])) {
-            throw new UnknownCoordinateReferenceSystemException($epsgCode);
+        if (!isset($allData[$srid])) {
+            throw new UnknownCoordinateReferenceSystemException($srid);
         }
 
-        $data = $allData[$epsgCode];
+        $data = $allData[$srid];
 
         switch ($data['coord_ref_sys_kind']) {
             case self::CRS_TYPE_GEOCENTRIC:
                 return new Geocentric(
-                    $epsgCode,
-                    CoordinateSystem::fromEPSGCode($data['coord_sys_code']),
-                    $data['datum_code'] ? Datum::fromEPSGCode($data['datum_code']) : self::fromEPSGCode($data['base_crs_code'])->getDatum()
+                    $srid,
+                    CoordinateSystem::fromSRID($data['coord_sys_code']),
+                    $data['datum_code'] ? Datum::fromSRID($data['datum_code']) : self::fromSRID($data['base_crs_code'])->getDatum()
                 );
 
             case self::CRS_TYPE_GEOGRAPHIC_2D:
                 return new Geographic2D(
-                    $epsgCode,
-                    CoordinateSystem::fromEPSGCode($data['coord_sys_code']),
-                    $data['datum_code'] ? Datum::fromEPSGCode($data['datum_code']) : self::fromEPSGCode($data['base_crs_code'])->getDatum()
+                    $srid,
+                    CoordinateSystem::fromSRID($data['coord_sys_code']),
+                    $data['datum_code'] ? Datum::fromSRID($data['datum_code']) : self::fromSRID($data['base_crs_code'])->getDatum()
                 );
 
             case self::CRS_TYPE_GEOGRAPHIC_3D:
                 return new Geographic3D(
-                    $epsgCode,
-                    CoordinateSystem::fromEPSGCode($data['coord_sys_code']),
-                    $data['datum_code'] ? Datum::fromEPSGCode($data['datum_code']) : self::fromEPSGCode($data['base_crs_code'])->getDatum()
+                    $srid,
+                    CoordinateSystem::fromSRID($data['coord_sys_code']),
+                    $data['datum_code'] ? Datum::fromSRID($data['datum_code']) : self::fromSRID($data['base_crs_code'])->getDatum()
                 );
 
             case self::CRS_TYPE_PROJECTED:
                 return new Projected(
-                    $epsgCode,
-                    CoordinateSystem::fromEPSGCode($data['coord_sys_code']),
-                    self::fromEPSGCode($data['base_crs_code'])
+                    $srid,
+                    CoordinateSystem::fromSRID($data['coord_sys_code']),
+                    self::fromSRID($data['base_crs_code'])
                 );
 
             case self::CRS_TYPE_VERTICAL:
                 return new Vertical(
-                    $epsgCode,
-                    CoordinateSystem::fromEPSGCode($data['coord_sys_code']),
-                    Datum::fromEPSGCode($data['datum_code'])
+                    $srid,
+                    CoordinateSystem::fromSRID($data['coord_sys_code']),
+                    Datum::fromSRID($data['datum_code'])
                 );
 
             case self::CRS_TYPE_COMPOUND:
                 return new Compound(
-                    $epsgCode,
-                    self::fromEPSGCode($data['cmpd_horizcrs_code']),
-                    self::fromEPSGCode($data['cmpd_vertcrs_code'])
+                    $srid,
+                    self::fromSRID($data['cmpd_horizcrs_code']),
+                    self::fromSRID($data['cmpd_vertcrs_code'])
                 );
 
             default:
-                throw new UnknownCoordinateReferenceSystemException($epsgCode);
+                throw new UnknownCoordinateReferenceSystemException($srid);
         }
     }
 
-    public function getEpsgCode(): int
+    public function getSRID(): string
     {
-        return $this->epsgCode;
+        return $this->srid;
     }
 
     public function getCoordinateSystem(): CoordinateSystem

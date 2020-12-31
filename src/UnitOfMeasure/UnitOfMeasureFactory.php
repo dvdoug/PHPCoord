@@ -32,22 +32,22 @@ class UnitOfMeasureFactory
     /**
      * @param float|string $measurement
      */
-    public static function makeUnit($measurement, int $epsgUnitCode): UnitOfMeasure
+    public static function makeUnit($measurement, string $srid): UnitOfMeasure
     {
         $repository = self::$repository ?? new Repository();
         $allData = $repository->getUnitsOfMeasure();
 
-        if (!isset($allData[$epsgUnitCode])) {
-            throw new UnknownUnitOfMeasureException($epsgUnitCode);
+        if (!isset($allData[$srid])) {
+            throw new UnknownUnitOfMeasureException($srid);
         }
 
-        $unitData = $allData[$epsgUnitCode];
+        $unitData = $allData[$srid];
 
         /*
          * Common units (and those that require special handling) having discrete implementations,
          * try those first.
          */
-        switch ($epsgUnitCode) {
+        switch ($srid) {
             case UnitOfMeasure::EPSG_ANGLE_RADIAN_PER_SECOND:
                 return new Rate(new Radian($measurement), new Second(1));
             case UnitOfMeasure::EPSG_ANGLE_ARC_SECONDS_PER_YEAR:
@@ -125,7 +125,7 @@ class UnitOfMeasureFactory
                 true
             )
         ) {
-            throw new UnknownUnitOfMeasureException($epsgUnitCode);
+            throw new UnknownUnitOfMeasureException($srid);
         }
         // @codeCoverageIgnoreEnd
 
@@ -139,35 +139,35 @@ class UnitOfMeasureFactory
         }
     }
 
-    public static function convertAngle(Angle $angle, int $targetEpsgUnitCode): Angle
+    public static function convertAngle(Angle $angle, string $targetSRID): Angle
     {
-        if ($targetEpsgUnitCode === UnitOfMeasure::EPSG_ANGLE_DEGREE_SUPPLIER_TO_DEFINE_REPRESENTATION) {
-            $targetEpsgUnitCode = UnitOfMeasure::EPSG_ANGLE_DEGREE;
+        if ($targetSRID === UnitOfMeasure::EPSG_ANGLE_DEGREE_SUPPLIER_TO_DEFINE_REPRESENTATION) {
+            $targetSRID = UnitOfMeasure::EPSG_ANGLE_DEGREE;
         }
 
         $repository = static::$repository ?? new Repository();
         $allData = $repository->getUnitsOfMeasure();
 
-        if (!isset($allData[$targetEpsgUnitCode])) {
-            throw new UnknownUnitOfMeasureException($targetEpsgUnitCode);
+        if (!isset($allData[$targetSRID])) {
+            throw new UnknownUnitOfMeasureException($targetSRID);
         }
 
-        $targetUnitData = $allData[$targetEpsgUnitCode];
+        $targetUnitData = $allData[$targetSRID];
 
-        return self::makeUnit($angle->asRadians()->getValue() * $targetUnitData['factor_c'] / $targetUnitData['factor_b'], $targetEpsgUnitCode);
+        return self::makeUnit($angle->asRadians()->getValue() * $targetUnitData['factor_c'] / $targetUnitData['factor_b'], $targetSRID);
     }
 
-    public static function convertLength(Length $length, int $targetEpsgUnitCode): Length
+    public static function convertLength(Length $length, string $targetSRID): Length
     {
         $repository = static::$repository ?? new Repository();
         $allData = $repository->getUnitsOfMeasure();
 
-        if (!isset($allData[$targetEpsgUnitCode])) {
-            throw new UnknownUnitOfMeasureException($targetEpsgUnitCode);
+        if (!isset($allData[$targetSRID])) {
+            throw new UnknownUnitOfMeasureException($targetSRID);
         }
 
-        $targetUnitData = $allData[$targetEpsgUnitCode];
+        $targetUnitData = $allData[$targetSRID];
 
-        return self::makeUnit($length->asMetres()->getValue() * $targetUnitData['factor_c'] / $targetUnitData['factor_b'], $targetEpsgUnitCode);
+        return self::makeUnit($length->asMetres()->getValue() * $targetUnitData['factor_c'] / $targetUnitData['factor_b'], $targetSRID);
     }
 }

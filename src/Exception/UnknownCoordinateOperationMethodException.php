@@ -8,6 +8,6 @@ declare(strict_types=1);
 
 namespace PHPCoord\Exception;
 
-class UnknownCoordinateOperationMethodException extends UnknownEPSGCodeException
+class UnknownCoordinateOperationMethodException extends UnknownSRIDException
 {
 }

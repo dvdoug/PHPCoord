@@ -18,7 +18,7 @@ class GeocentricValueTest extends TestCase
 {
     public function testToGeographic(): void
     {
-        $crs = CoordinateReferenceSystem::fromEPSGCode(Geocentric::EPSG_WGS_84);
+        $crs = CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_WGS_84);
         $point = new GeocentricValue(new Metre(3771793.968), new Metre(140253.342), new Metre(5124304.349), $crs->getDatum());
         $asGeographic = $point->asGeographicValue();
         self::assertEqualsWithDelta(53.809395, rad2deg($asGeographic->getLatitude()->getValue()), 0.000001);

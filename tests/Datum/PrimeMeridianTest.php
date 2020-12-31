@@ -18,21 +18,21 @@ class PrimeMeridianTest extends TestCase
      * @group integration
      * @dataProvider primeMeridians
      */
-    public function testCanCreateAllInDB(int $epsgCode): void
+    public function testCanCreateAllInDB(string $srid): void
     {
-        $object = PrimeMeridian::fromEPSGCode($epsgCode);
+        $object = PrimeMeridian::fromSRID($srid);
         self::assertInstanceOf(PrimeMeridian::class, $object);
     }
 
-    public function testExceptionOnUnknownEPSGCode(): void
+    public function testExceptionOnUnknownSRIDCode(): void
     {
         $this->expectException(UnknownPrimeMeridianException::class);
-        $object = PrimeMeridian::fromEPSGCode(PHP_INT_MAX);
+        $object = PrimeMeridian::fromSRID('foo');
     }
 
     public function testGreenwich(): void
     {
-        $object = PrimeMeridian::fromEPSGCode(PrimeMeridian::EPSG_GREENWICH);
+        $object = PrimeMeridian::fromSRID(PrimeMeridian::EPSG_GREENWICH);
         self::assertEquals('Greenwich', $object->getName());
         self::assertEquals('0°', $object->getGreenwichLongitude()->getFormattedValue());
     }

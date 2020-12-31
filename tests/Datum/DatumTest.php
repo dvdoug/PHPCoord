@@ -18,21 +18,21 @@ class DatumTest extends TestCase
      * @group integration
      * @dataProvider datums
      */
-    public function testCanCreateAllInDB(int $epsgCode): void
+    public function testCanCreateAllInDB(string $srid): void
     {
-        $object = Datum::fromEPSGCode($epsgCode);
+        $object = Datum::fromSRID($srid);
         self::assertInstanceOf(Datum::class, $object);
     }
 
-    public function testExceptionOnUnknownEPSGCode(): void
+    public function testExceptionOnUnknownSRIDCode(): void
     {
         $this->expectException(UnknownDatumException::class);
-        $object = Datum::fromEPSGCode(PHP_INT_MAX);
+        $object = Datum::fromSRID('foo');
     }
 
     public function testOSGB36(): void
     {
-        $object = Datum::fromEPSGCode(Datum::EPSG_OSGB_1936);
+        $object = Datum::fromSRID(Datum::EPSG_OSGB_1936);
         self::assertEquals(Datum::DATUM_TYPE_GEODETIC, $object->getDatumType());
         self::assertEquals('6356256.9092373m', $object->getEllipsoid()->getSemiMinorAxis()->getFormattedValue());
         self::assertEquals(0.0, $object->getPrimeMeridian()->getGreenwichLongitude()->getValue());
@@ -40,7 +40,7 @@ class DatumTest extends TestCase
 
     public function testWGS84_G1762(): void
     {
-        $object = Datum::fromEPSGCode(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_G1762);
+        $object = Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_G1762);
         self::assertEquals(2005, $object->getFrameReferenceEpoch());
     }
 

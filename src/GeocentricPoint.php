@@ -111,7 +111,7 @@ class GeocentricPoint extends Point
      */
     public function calculateDistance(Point $to): Length
     {
-        if ($to->getCRS()->getEpsgCode() !== $this->crs->getEpsgCode()) {
+        if ($to->getCRS()->getSRID() !== $this->crs->getSRID()) {
             throw new InvalidArgumentException('Can only calculate distances between two points in the same CRS');
         }
 

@@ -75,7 +75,7 @@ function generateConstants(string $resDir, string $srcDir): void
      */
     $sql = "
             SELECT
-                m.uom_code AS constant_value,
+                'urn:ogc:def:uom:EPSG::' || m.uom_code AS constant_value,
                 m.unit_of_meas_type || '_' || m.unit_of_meas_name AS constant_name,
                 m.unit_of_meas_name || '\n' || m.remarks AS constant_help,
                 m.deprecated
@@ -94,7 +94,7 @@ function generateConstants(string $resDir, string $srcDir): void
      */
     $sql = "
             SELECT
-                p.prime_meridian_code AS constant_value,
+                'urn:ogc:def:meridian:EPSG::' || p.prime_meridian_code AS constant_value,
                 p.prime_meridian_name AS constant_name,
                 p.prime_meridian_name || '\n' || p.remarks AS constant_help,
                 p.deprecated
@@ -114,7 +114,7 @@ function generateConstants(string $resDir, string $srcDir): void
     $sql = "
             SELECT
             DISTINCT
-                e.ellipsoid_code AS constant_value,
+                'urn:ogc:def:ellipsoid:EPSG::' || e.ellipsoid_code AS constant_value,
                 e.ellipsoid_name AS constant_name,
                 e.ellipsoid_name || '\n' || e.remarks AS constant_help,
                 e.deprecated
@@ -134,7 +134,7 @@ function generateConstants(string $resDir, string $srcDir): void
     $sql = "
             SELECT
                 DISTINCT
-                d.datum_code AS constant_value,
+                'urn:ogc:def:datum:EPSG::' || d.datum_code AS constant_value,
                 d.datum_name AS constant_name,
                 d.datum_name || '\n' || 'Type: ' || d.datum_type || '\n' || 'Extent: ' || e.extent_description || '\n' || 'Scope: ' || s.scope || '\n' || d.origin_description || '\n' || d.remarks AS constant_help,
                 d.deprecated
@@ -156,7 +156,7 @@ function generateConstants(string $resDir, string $srcDir): void
     $sql = "
             SELECT
                 DISTINCT
-                cs.coord_sys_code AS constant_value,
+                'urn:ogc:def:cs:EPSG::' || cs.coord_sys_code AS constant_value,
                 cs.coord_sys_name || CASE cs.coord_sys_code WHEN 4531 THEN '_LOWERCASE' ELSE '' END AS constant_name,
                 cs.coord_sys_name || '\n' || 'Type: ' || cs.coord_sys_type || '\n' || cs.remarks AS constant_help,
                 cs.deprecated
@@ -176,7 +176,7 @@ function generateConstants(string $resDir, string $srcDir): void
     $sql = "
             SELECT
                 DISTINCT
-                cs.coord_sys_code AS constant_value,
+                'urn:ogc:def:cs:EPSG::' || cs.coord_sys_code AS constant_value,
                 REPLACE(REPLACE(REPLACE(cs.coord_sys_name, 'Cartesian 2D CS', ''), 'Cartesian 3D CS', ''), 'for', '') || CASE cs.coord_sys_code WHEN 4531 THEN '_LOWERCASE' ELSE '' END AS constant_name,
                 cs.coord_sys_name || '\n' || 'Type: ' || cs.coord_sys_type || '\n' || cs.remarks AS constant_help,
                 cs.deprecated
@@ -197,7 +197,7 @@ function generateConstants(string $resDir, string $srcDir): void
     $sql = "
             SELECT
                 DISTINCT
-                cs.coord_sys_code AS constant_value,
+                'urn:ogc:def:cs:EPSG::' || cs.coord_sys_code AS constant_value,
                 REPLACE(REPLACE(REPLACE(cs.coord_sys_name, 'Ellipsoidal 2D CS', ''), 'Ellipsoidal 3D CS', ''), 'for', '') AS constant_name,
                 cs.coord_sys_name || '\n' || 'Type: ' || cs.coord_sys_type || '\n' || cs.remarks AS constant_help,
                 cs.deprecated
@@ -218,7 +218,7 @@ function generateConstants(string $resDir, string $srcDir): void
     $sql = "
             SELECT
                 DISTINCT
-                cs.coord_sys_code AS constant_value,
+                'urn:ogc:def:cs:EPSG::' || cs.coord_sys_code AS constant_value,
                 REPLACE(REPLACE(cs.coord_sys_name, 'Vertical CS', ''), 'for', '') AS constant_name,
                 cs.coord_sys_name || '\n' || 'Type: ' || cs.coord_sys_type || '\n' || cs.remarks AS constant_help,
                 cs.deprecated
@@ -239,7 +239,7 @@ function generateConstants(string $resDir, string $srcDir): void
     $sql = "
             SELECT
                 DISTINCT
-                cs.coord_sys_code AS constant_value,
+                'urn:ogc:def:cs:EPSG::' || cs.coord_sys_code AS constant_value,
                 cs.coord_sys_name AS constant_name,
                 cs.coord_sys_name || '\n' || 'Type: ' || cs.coord_sys_type || '\n' || cs.remarks AS constant_help,
                 cs.deprecated
@@ -259,7 +259,7 @@ function generateConstants(string $resDir, string $srcDir): void
      */
     $sql = "
             SELECT
-                crs.coord_ref_sys_code AS constant_value,
+                'urn:ogc:def:crs:EPSG::' || crs.coord_ref_sys_code AS constant_value,
                 crs.coord_ref_sys_name AS constant_name,
                 crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || 'Scope: ' || s.scope || '\n' || crs.remarks AS constant_help,
                 crs.deprecated
@@ -285,7 +285,7 @@ function generateConstants(string $resDir, string $srcDir): void
      */
     $sql = "
             SELECT
-                crs.coord_ref_sys_code AS constant_value,
+                'urn:ogc:def:crs:EPSG::' || crs.coord_ref_sys_code AS constant_value,
                 crs.coord_ref_sys_name AS constant_name,
                 crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || 'Scope: ' || s.scope || '\n' || crs.remarks AS constant_help,
                 crs.deprecated
@@ -311,7 +311,7 @@ function generateConstants(string $resDir, string $srcDir): void
      */
     $sql = "
             SELECT
-                crs.coord_ref_sys_code AS constant_value,
+                'urn:ogc:def:crs:EPSG::' || crs.coord_ref_sys_code AS constant_value,
                 crs.coord_ref_sys_name AS constant_name,
                 crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || 'Scope: ' || s.scope || '\n' || crs.remarks AS constant_help,
                 crs.deprecated
@@ -337,7 +337,7 @@ function generateConstants(string $resDir, string $srcDir): void
      */
     $sql = "
             SELECT
-                crs.coord_ref_sys_code AS constant_value,
+                'urn:ogc:def:crs:EPSG::' || crs.coord_ref_sys_code AS constant_value,
                 crs.coord_ref_sys_name AS constant_name,
                 crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || 'Scope: ' || s.scope || '\n' || crs.remarks AS constant_help,
                 crs.deprecated
@@ -363,7 +363,7 @@ function generateConstants(string $resDir, string $srcDir): void
      */
     $sql = "
             SELECT
-                crs.coord_ref_sys_code AS constant_value,
+                'urn:ogc:def:crs:EPSG::' || crs.coord_ref_sys_code AS constant_value,
                 crs.coord_ref_sys_name AS constant_name,
                 crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || 'Scope: ' || s.scope || '\n' || crs.remarks AS constant_help,
                 crs.deprecated
@@ -389,7 +389,7 @@ function generateConstants(string $resDir, string $srcDir): void
      */
     $sql = "
             SELECT
-                crs.coord_ref_sys_code AS constant_value,
+                'urn:ogc:def:crs:EPSG::' || crs.coord_ref_sys_code AS constant_value,
                 crs.coord_ref_sys_name AS constant_name,
                 crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || 'Scope: ' || s.scope || '\n' || crs.remarks AS constant_help,
                 crs.deprecated
@@ -415,7 +415,7 @@ function generateConstants(string $resDir, string $srcDir): void
      */
     $sql = "
             SELECT
-                crs.coord_ref_sys_code AS constant_value,
+                'urn:ogc:def:crs:EPSG::' || crs.coord_ref_sys_code AS constant_value,
                 crs.coord_ref_sys_kind || '_' || crs.coord_ref_sys_name AS constant_name,
                 crs.coord_ref_sys_name || '\n' || 'Type: ' || crs.coord_ref_sys_kind || '\n' || 'Extent: ' || e.extent_description || '\n' || 'Scope: ' || s.scope || '\n' || crs.remarks AS constant_help,
                 crs.deprecated
@@ -441,7 +441,7 @@ function generateConstants(string $resDir, string $srcDir): void
      */
     $sql = "
             SELECT
-                m.coord_op_method_code AS constant_value,
+                'urn:ogc:def:method:EPSG::' || m.coord_op_method_code AS constant_value,
                 m.coord_op_method_name AS constant_name,
                 m.coord_op_method_name || '\n' || m.remarks AS constant_help,
                 m.deprecated
@@ -462,7 +462,7 @@ function generateConstants(string $resDir, string $srcDir): void
             UNION
 
             SELECT
-                m.coord_op_method_code AS constant_value,
+                'urn:ogc:def:method:EPSG::' || m.coord_op_method_code AS constant_value,
                 m.coord_op_method_name AS constant_name,
                 m.coord_op_method_name || '\n' || m.remarks AS constant_help,
                 m.deprecated

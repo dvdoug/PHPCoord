@@ -15,28 +15,28 @@ class Compound extends CoordinateReferenceSystem
      * Extent: UK - on or related to the A96 highway from Aberdeen to Inverness.
      * Scope: Highway engineering.
      */
-    public const EPSG_ABINVA96_2020_GRID_PLUS_ODN_HEIGHT = 9388;
+    public const EPSG_ABINVA96_2020_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::9388';
 
     /**
      * Amersfoort / RD New + NAP height
      * Extent: Netherlands - onshore, including Waddenzee, Dutch Wadden Islands and 12-mile offshore coastal zone.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_AMERSFOORT_RD_NEW_PLUS_NAP_HEIGHT = 7415;
+    public const EPSG_AMERSFOORT_RD_NEW_PLUS_NAP_HEIGHT = 'urn:ogc:def:crs:EPSG::7415';
 
     /**
      * Astro DOS 71 / UTM zone 30S + Jamestown 1971 height
      * Extent: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore.
      * Scope: Topographic mapping.
      */
-    public const EPSG_ASTRO_DOS_71_UTM_ZONE_30S_PLUS_JAMESTOWN_1971_HEIGHT = 7954;
+    public const EPSG_ASTRO_DOS_71_UTM_ZONE_30S_PLUS_JAMESTOWN_1971_HEIGHT = 'urn:ogc:def:crs:EPSG::7954';
 
     /**
      * Belge 1972 / Belgian Lambert 72 + Ostend height
      * Extent: Belgium - onshore.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_BELGE_1972_BELGIAN_LAMBERT_72_PLUS_OSTEND_HEIGHT = 6190;
+    public const EPSG_BELGE_1972_BELGIAN_LAMBERT_72_PLUS_OSTEND_HEIGHT = 'urn:ogc:def:crs:EPSG::6190';
 
     /**
      * CR-SIRGAS / CRTM05 + DACR52 height
@@ -44,7 +44,7 @@ class Compound extends CoordinateReferenceSystem
      * Scope: Engineering survey, topographic mapping.
      * With geoid model and gravity, part of official national dynamic geodetic framework from April 2018.
      */
-    public const EPSG_CR_SIRGAS_CRTM05_PLUS_DACR52_HEIGHT = 8912;
+    public const EPSG_CR_SIRGAS_CRTM05_PLUS_DACR52_HEIGHT = 'urn:ogc:def:crs:EPSG::8912';
 
     /**
      * DB_REF / 3-degree Gauss-Kruger zone 2 (E-N) + DHHN92 height
@@ -52,28 +52,28 @@ class Compound extends CoordinateReferenceSystem
      * Rheinland-Pfalz, Saarland.
      * Scope: Engineering survey and topographic mapping for railway applications.
      */
-    public const EPSG_DB_REF_3_DEGREE_GAUSS_KRUGER_ZONE_2_E_N_PLUS_DHHN92_HEIGHT = 5832;
+    public const EPSG_DB_REF_3_DEGREE_GAUSS_KRUGER_ZONE_2_E_N_PLUS_DHHN92_HEIGHT = 'urn:ogc:def:crs:EPSG::5832';
 
     /**
      * DB_REF / 3-degree Gauss-Kruger zone 3 (E-N) + DHHN92 height
      * Extent: Germany - onshore between 7°30'E and 10°30'E.
      * Scope: Engineering survey and topographic mapping for railway applications.
      */
-    public const EPSG_DB_REF_3_DEGREE_GAUSS_KRUGER_ZONE_3_E_N_PLUS_DHHN92_HEIGHT = 5833;
+    public const EPSG_DB_REF_3_DEGREE_GAUSS_KRUGER_ZONE_3_E_N_PLUS_DHHN92_HEIGHT = 'urn:ogc:def:crs:EPSG::5833';
 
     /**
      * DB_REF / 3-degree Gauss-Kruger zone 4 (E-N) + DHHN92 height
      * Extent: Germany - onshore between 10°30'E and 13°30'E.
      * Scope: Engineering survey and topographic mapping for railway applications.
      */
-    public const EPSG_DB_REF_3_DEGREE_GAUSS_KRUGER_ZONE_4_E_N_PLUS_DHHN92_HEIGHT = 5834;
+    public const EPSG_DB_REF_3_DEGREE_GAUSS_KRUGER_ZONE_4_E_N_PLUS_DHHN92_HEIGHT = 'urn:ogc:def:crs:EPSG::5834';
 
     /**
      * DB_REF / 3-degree Gauss-Kruger zone 5 (E-N) + DHHN92 height
      * Extent: Germany - onshore east of 13°30'E.
      * Scope: Engineering survey and topographic mapping for railway applications.
      */
-    public const EPSG_DB_REF_3_DEGREE_GAUSS_KRUGER_ZONE_5_E_N_PLUS_DHHN92_HEIGHT = 5835;
+    public const EPSG_DB_REF_3_DEGREE_GAUSS_KRUGER_ZONE_5_E_N_PLUS_DHHN92_HEIGHT = 'urn:ogc:def:crs:EPSG::5835';
 
     /**
      * ETRS89 + BI height
@@ -81,28 +81,28 @@ class Compound extends CoordinateReferenceSystem
      * Great Britain (England, Wales and Scotland) and Northern Ireland. Ireland onshore. Isle of Man onshore.
      * Scope: Spatial referencing.
      */
-    public const EPSG_ETRS89_PLUS_BI_HEIGHT = 9452;
+    public const EPSG_ETRS89_PLUS_BI_HEIGHT = 'urn:ogc:def:crs:EPSG::9452';
 
     /**
      * ETRS89 + Baltic 1957 height
      * Extent: Czechia; Slovakia.
      * Scope: Intermediate stage in transformations - not used otherwise.
      */
-    public const EPSG_ETRS89_PLUS_BALTIC_1957_HEIGHT = 8360;
+    public const EPSG_ETRS89_PLUS_BALTIC_1957_HEIGHT = 'urn:ogc:def:crs:EPSG::8360';
 
     /**
      * ETRS89 + Belfast height
      * Extent: United Kingdom (UK) - Northern Ireland (Ulster) - onshore.
      * Scope: Spatial referencing.
      */
-    public const EPSG_ETRS89_PLUS_BELFAST_HEIGHT = 9450;
+    public const EPSG_ETRS89_PLUS_BELFAST_HEIGHT = 'urn:ogc:def:crs:EPSG::9450';
 
     /**
      * ETRS89 + Douglas height
      * Extent: Isle of Man - onshore.
      * Scope: Spatial referencing.
      */
-    public const EPSG_ETRS89_PLUS_DOUGLAS_HEIGHT = 9429;
+    public const EPSG_ETRS89_PLUS_DOUGLAS_HEIGHT = 'urn:ogc:def:crs:EPSG::9429';
 
     /**
      * ETRS89 + EVRF2000 height
@@ -114,7 +114,7 @@ class Compound extends CoordinateReferenceSystem
      * Scope: Pan-European spatial positioning.
      * Replaced by ETRS89 + EVRF2007 height (CRS code 7423).
      */
-    public const EPSG_ETRS89_PLUS_EVRF2000_HEIGHT = 7409;
+    public const EPSG_ETRS89_PLUS_EVRF2000_HEIGHT = 'urn:ogc:def:crs:EPSG::7409';
 
     /**
      * ETRS89 + EVRF2007 height
@@ -126,7 +126,7 @@ class Compound extends CoordinateReferenceSystem
      * Scope: Pan-European spatial positioning.
      * Replaces ETRS89 + EVRF2000 height (CRS code 7409).
      */
-    public const EPSG_ETRS89_PLUS_EVRF2007_HEIGHT = 7423;
+    public const EPSG_ETRS89_PLUS_EVRF2007_HEIGHT = 'urn:ogc:def:crs:EPSG::7423';
 
     /**
      * ETRS89 + EVRF2019 height
@@ -138,7 +138,7 @@ class Compound extends CoordinateReferenceSystem
      * Scope: Geodesy (gravity).
      * Replaces ETRS89 + EVRF2007 height (CRS code 7423). See also ETRS89 + EVRF2019 mean-tide height (CRS code 9423).
      */
-    public const EPSG_ETRS89_PLUS_EVRF2019_HEIGHT = 9422;
+    public const EPSG_ETRS89_PLUS_EVRF2019_HEIGHT = 'urn:ogc:def:crs:EPSG::9422';
 
     /**
      * ETRS89 + EVRF2019 mean-tide height
@@ -150,49 +150,49 @@ class Compound extends CoordinateReferenceSystem
      * Scope: Geodesy (GNSS), oceanography.
      * See also ETRS89 + EVRF2019 (CRS code 9422).
      */
-    public const EPSG_ETRS89_PLUS_EVRF2019_MEAN_TIDE_HEIGHT = 9423;
+    public const EPSG_ETRS89_PLUS_EVRF2019_MEAN_TIDE_HEIGHT = 'urn:ogc:def:crs:EPSG::9423';
 
     /**
      * ETRS89 + LAT NL depth
      * Extent: Netherlands - offshore North Sea.
      * Scope: Hydrography and nautical charting.
      */
-    public const EPSG_ETRS89_PLUS_LAT_NL_DEPTH = 9289;
+    public const EPSG_ETRS89_PLUS_LAT_NL_DEPTH = 'urn:ogc:def:crs:EPSG::9289';
 
     /**
      * ETRS89 + Lerwick height
      * Extent: United Kingdom (UK) - Great Britain - Scotland - Shetland Islands onshore.
      * Scope: Spatial referencing.
      */
-    public const EPSG_ETRS89_PLUS_LERWICK_HEIGHT = 9427;
+    public const EPSG_ETRS89_PLUS_LERWICK_HEIGHT = 'urn:ogc:def:crs:EPSG::9427';
 
     /**
      * ETRS89 + MSL NL depth
      * Extent: Netherlands - offshore North Sea.
      * Scope: Hydrography, drilling, offshore engineering.
      */
-    public const EPSG_ETRS89_PLUS_MSL_NL_DEPTH = 9290;
+    public const EPSG_ETRS89_PLUS_MSL_NL_DEPTH = 'urn:ogc:def:crs:EPSG::9290';
 
     /**
      * ETRS89 + Malin Head height
      * Extent: Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore.
      * Scope: Spatial referencing.
      */
-    public const EPSG_ETRS89_PLUS_MALIN_HEAD_HEIGHT = 9449;
+    public const EPSG_ETRS89_PLUS_MALIN_HEAD_HEIGHT = 'urn:ogc:def:crs:EPSG::9449';
 
     /**
      * ETRS89 + NAP height
      * Extent: Netherlands - onshore and offshore.
      * Scope: Spatial referencing.
      */
-    public const EPSG_ETRS89_PLUS_NAP_HEIGHT = 9286;
+    public const EPSG_ETRS89_PLUS_NAP_HEIGHT = 'urn:ogc:def:crs:EPSG::9286';
 
     /**
      * ETRS89 + NN2000 height
      * Extent: Norway - onshore.
      * Scope: Geodesy.
      */
-    public const EPSG_ETRS89_PLUS_NN2000_HEIGHT = 5942;
+    public const EPSG_ETRS89_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5942';
 
     /**
      * ETRS89 + NN54 height
@@ -200,7 +200,7 @@ class Compound extends CoordinateReferenceSystem
      * Scope: Geodesy.
      * Replaced by ETRS89 + NN2000 height (compound CRS code 5942).
      */
-    public const EPSG_ETRS89_PLUS_NN54_HEIGHT = 6144;
+    public const EPSG_ETRS89_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6144';
 
     /**
      * ETRS89 + ODN (Offshore) height
@@ -208,14 +208,14 @@ class Compound extends CoordinateReferenceSystem
      * and 7°33'W to 3°33'E.
      * Scope: Spatial referencing.
      */
-    public const EPSG_ETRS89_PLUS_ODN_OFFSHORE_HEIGHT = 9425;
+    public const EPSG_ETRS89_PLUS_ODN_OFFSHORE_HEIGHT = 'urn:ogc:def:crs:EPSG::9425';
 
     /**
      * ETRS89 + ODN Orkney height
      * Extent: United Kingdom (UK) - Great Britain - Scotland - Orkney Islands onshore.
      * Scope: Spatial referencing.
      */
-    public const EPSG_ETRS89_PLUS_ODN_ORKNEY_HEIGHT = 9426;
+    public const EPSG_ETRS89_PLUS_ODN_ORKNEY_HEIGHT = 'urn:ogc:def:crs:EPSG::9426';
 
     /**
      * ETRS89 + ODN height
@@ -223,56 +223,56 @@ class Compound extends CoordinateReferenceSystem
      * Inner Hebrides.
      * Scope: Spatial referencing.
      */
-    public const EPSG_ETRS89_PLUS_ODN_HEIGHT = 9424;
+    public const EPSG_ETRS89_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::9424';
 
     /**
      * ETRS89 + St. Marys height
      * Extent: United Kingdom (UK) - Great Britain - England - Isles of Scilly onshore.
      * Scope: Spatial referencing.
      */
-    public const EPSG_ETRS89_PLUS_ST_MARYS_HEIGHT = 9430;
+    public const EPSG_ETRS89_PLUS_ST_MARYS_HEIGHT = 'urn:ogc:def:crs:EPSG::9430';
 
     /**
      * ETRS89 + Stornoway height
      * Extent: United Kingdom (UK) - Great Britain - Scotland - Outer Hebrides onshore.
      * Scope: Spatial referencing.
      */
-    public const EPSG_ETRS89_PLUS_STORNOWAY_HEIGHT = 9428;
+    public const EPSG_ETRS89_PLUS_STORNOWAY_HEIGHT = 'urn:ogc:def:crs:EPSG::9428';
 
     /**
      * ETRS89 / Belgian Lambert 2008 + Ostend height
      * Extent: Belgium - onshore.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_ETRS89_BELGIAN_LAMBERT_2008_PLUS_OSTEND_HEIGHT = 8370;
+    public const EPSG_ETRS89_BELGIAN_LAMBERT_2008_PLUS_OSTEND_HEIGHT = 'urn:ogc:def:crs:EPSG::8370';
 
     /**
      * ETRS89 / DKTM1 + DVR90 height
      * Extent: Denmark - Jutland onshore west of 10°E.
      * Scope: Engineering survey.
      */
-    public const EPSG_ETRS89_DKTM1_PLUS_DVR90_HEIGHT = 4097;
+    public const EPSG_ETRS89_DKTM1_PLUS_DVR90_HEIGHT = 'urn:ogc:def:crs:EPSG::4097';
 
     /**
      * ETRS89 / DKTM2 + DVR90 height
      * Extent: Denmark - onshore - Jutland east of 9°E and Funen.
      * Scope: Engineering survey.
      */
-    public const EPSG_ETRS89_DKTM2_PLUS_DVR90_HEIGHT = 4098;
+    public const EPSG_ETRS89_DKTM2_PLUS_DVR90_HEIGHT = 'urn:ogc:def:crs:EPSG::4098';
 
     /**
      * ETRS89 / DKTM3 + DVR90 height
      * Extent: Denmark - Zealand and Lolland (onshore).
      * Scope: Engineering survey.
      */
-    public const EPSG_ETRS89_DKTM3_PLUS_DVR90_HEIGHT = 4099;
+    public const EPSG_ETRS89_DKTM3_PLUS_DVR90_HEIGHT = 'urn:ogc:def:crs:EPSG::4099';
 
     /**
      * ETRS89 / DKTM4 + DVR90 height
      * Extent: Denmark - Bornholm onshore.
      * Scope: Engineering survey.
      */
-    public const EPSG_ETRS89_DKTM4_PLUS_DVR90_HEIGHT = 4100;
+    public const EPSG_ETRS89_DKTM4_PLUS_DVR90_HEIGHT = 'urn:ogc:def:crs:EPSG::4100';
 
     /**
      * ETRS89 / Faroe TM + FVR09 height
@@ -280,35 +280,35 @@ class Compound extends CoordinateReferenceSystem
      * Scope: Engineering survey.
      * Introduced in 2010.
      */
-    public const EPSG_ETRS89_FAROE_TM_PLUS_FVR09_HEIGHT = 5318;
+    public const EPSG_ETRS89_FAROE_TM_PLUS_FVR09_HEIGHT = 'urn:ogc:def:crs:EPSG::5318';
 
     /**
      * ETRS89 / Kp2000 Bornholm + DVR90 height
      * Extent: Denmark - Bornholm onshore.
      * Scope: Topographic mapping (large scale).
      */
-    public const EPSG_ETRS89_KP2000_BORNHOLM_PLUS_DVR90_HEIGHT = 7420;
+    public const EPSG_ETRS89_KP2000_BORNHOLM_PLUS_DVR90_HEIGHT = 'urn:ogc:def:crs:EPSG::7420';
 
     /**
      * ETRS89 / Kp2000 Jutland + DVR90 height
      * Extent: Denmark - Jutland and Funen - onshore.
      * Scope: Topographic mapping (large scale).
      */
-    public const EPSG_ETRS89_KP2000_JUTLAND_PLUS_DVR90_HEIGHT = 7418;
+    public const EPSG_ETRS89_KP2000_JUTLAND_PLUS_DVR90_HEIGHT = 'urn:ogc:def:crs:EPSG::7418';
 
     /**
      * ETRS89 / Kp2000 Zealand + DVR90 height
      * Extent: Denmark - Zealand and Lolland (onshore).
      * Scope: Topographic mapping (large scale).
      */
-    public const EPSG_ETRS89_KP2000_ZEALAND_PLUS_DVR90_HEIGHT = 7419;
+    public const EPSG_ETRS89_KP2000_ZEALAND_PLUS_DVR90_HEIGHT = 'urn:ogc:def:crs:EPSG::7419';
 
     /**
      * ETRS89 / NTM zone 10 + NN2000 height
      * Extent: Norway - onshore - between 10°E and 11°E.
      * Scope: Engineering survey.
      */
-    public const EPSG_ETRS89_NTM_ZONE_10_PLUS_NN2000_HEIGHT = 5950;
+    public const EPSG_ETRS89_NTM_ZONE_10_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5950';
 
     /**
      * ETRS89 / NTM zone 10 + NN54 height
@@ -316,14 +316,14 @@ class Compound extends CoordinateReferenceSystem
      * Scope: Engineering survey.
      * Replaced by ETRS89 / NTM zone 10 + NN2000 height (compound CRS code 5950).
      */
-    public const EPSG_ETRS89_NTM_ZONE_10_PLUS_NN54_HEIGHT = 6150;
+    public const EPSG_ETRS89_NTM_ZONE_10_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6150';
 
     /**
      * ETRS89 / NTM zone 11 + NN2000 height
      * Extent: Norway - onshore - between 11°E and 12°E.
      * Scope: Engineering survey.
      */
-    public const EPSG_ETRS89_NTM_ZONE_11_PLUS_NN2000_HEIGHT = 5951;
+    public const EPSG_ETRS89_NTM_ZONE_11_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5951';
 
     /**
      * ETRS89 / NTM zone 11 + NN54 height
@@ -331,14 +331,14 @@ class Compound extends CoordinateReferenceSystem
      * Scope: Engineering survey.
      * Replaced by ETRS89 / NTM zone 11 + NN2000 height (compound CRS code 5951).
      */
-    public const EPSG_ETRS89_NTM_ZONE_11_PLUS_NN54_HEIGHT = 6151;
+    public const EPSG_ETRS89_NTM_ZONE_11_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6151';
 
     /**
      * ETRS89 / NTM zone 12 + NN2000 height
      * Extent: Norway - onshore - between 12°E and 13°E.
      * Scope: Engineering survey.
      */
-    public const EPSG_ETRS89_NTM_ZONE_12_PLUS_NN2000_HEIGHT = 5952;
+    public const EPSG_ETRS89_NTM_ZONE_12_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5952';
 
     /**
      * ETRS89 / NTM zone 12 + NN54 height
@@ -346,14 +346,14 @@ class Compound extends CoordinateReferenceSystem
      * Scope: Engineering survey.
      * Replaced by ETRS89 / NTM zone 12 + NN2000 height (compound CRS code 5952).
      */
-    public const EPSG_ETRS89_NTM_ZONE_12_PLUS_NN54_HEIGHT = 6152;
+    public const EPSG_ETRS89_NTM_ZONE_12_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6152';
 
     /**
      * ETRS89 / NTM zone 13 + NN2000 height
      * Extent: Norway - onshore - between 13°E and 14°E.
      * Scope: Engineering survey.
      */
-    public const EPSG_ETRS89_NTM_ZONE_13_PLUS_NN2000_HEIGHT = 5953;
+    public const EPSG_ETRS89_NTM_ZONE_13_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5953';
 
     /**
      * ETRS89 / NTM zone 13 + NN54 height
@@ -361,14 +361,14 @@ class Compound extends CoordinateReferenceSystem
      * Scope: Engineering survey.
      * Replaced by ETRS89 / NTM zone 13 + NN2000 height (compound CRS code 5953).
      */
-    public const EPSG_ETRS89_NTM_ZONE_13_PLUS_NN54_HEIGHT = 6153;
+    public const EPSG_ETRS89_NTM_ZONE_13_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6153';
 
     /**
      * ETRS89 / NTM zone 14 + NN2000 height
      * Extent: Norway - onshore - between 14°E and 15°E.
      * Scope: Engineering survey.
      */
-    public const EPSG_ETRS89_NTM_ZONE_14_PLUS_NN2000_HEIGHT = 5954;
+    public const EPSG_ETRS89_NTM_ZONE_14_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5954';
 
     /**
      * ETRS89 / NTM zone 14 + NN54 height
@@ -376,14 +376,14 @@ class Compound extends CoordinateReferenceSystem
      * Scope: Engineering survey.
      * Replaced by ETRS89 / NTM zone 14 + NN2000 height (compound CRS code 5954).
      */
-    public const EPSG_ETRS89_NTM_ZONE_14_PLUS_NN54_HEIGHT = 6154;
+    public const EPSG_ETRS89_NTM_ZONE_14_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6154';
 
     /**
      * ETRS89 / NTM zone 15 + NN2000 height
      * Extent: Norway - onshore - between 15°E and 16°E.
      * Scope: Engineering survey.
      */
-    public const EPSG_ETRS89_NTM_ZONE_15_PLUS_NN2000_HEIGHT = 5955;
+    public const EPSG_ETRS89_NTM_ZONE_15_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5955';
 
     /**
      * ETRS89 / NTM zone 15 + NN54 height
@@ -391,14 +391,14 @@ class Compound extends CoordinateReferenceSystem
      * Scope: Engineering survey.
      * Replaced by ETRS89 / NTM zone 15 + NN2000 height (compound CRS code 5955).
      */
-    public const EPSG_ETRS89_NTM_ZONE_15_PLUS_NN54_HEIGHT = 6155;
+    public const EPSG_ETRS89_NTM_ZONE_15_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6155';
 
     /**
      * ETRS89 / NTM zone 16 + NN2000 height
      * Extent: Norway - onshore - between 16°E and 17°E.
      * Scope: Engineering survey.
      */
-    public const EPSG_ETRS89_NTM_ZONE_16_PLUS_NN2000_HEIGHT = 5956;
+    public const EPSG_ETRS89_NTM_ZONE_16_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5956';
 
     /**
      * ETRS89 / NTM zone 16 + NN54 height
@@ -406,14 +406,14 @@ class Compound extends CoordinateReferenceSystem
      * Scope: Engineering survey.
      * Replaced by ETRS89 / NTM zone 16 + NN2000 height (compound CRS code 5956).
      */
-    public const EPSG_ETRS89_NTM_ZONE_16_PLUS_NN54_HEIGHT = 6156;
+    public const EPSG_ETRS89_NTM_ZONE_16_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6156';
 
     /**
      * ETRS89 / NTM zone 17 + NN2000 height
      * Extent: Norway - onshore - between 17°E and 18°E.
      * Scope: Engineering survey.
      */
-    public const EPSG_ETRS89_NTM_ZONE_17_PLUS_NN2000_HEIGHT = 5957;
+    public const EPSG_ETRS89_NTM_ZONE_17_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5957';
 
     /**
      * ETRS89 / NTM zone 17 + NN54 height
@@ -421,14 +421,14 @@ class Compound extends CoordinateReferenceSystem
      * Scope: Engineering survey.
      * Replaced by ETRS89 / NTM zone 17 + NN2000 height (compound CRS code 5957).
      */
-    public const EPSG_ETRS89_NTM_ZONE_17_PLUS_NN54_HEIGHT = 6157;
+    public const EPSG_ETRS89_NTM_ZONE_17_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6157';
 
     /**
      * ETRS89 / NTM zone 18 + NN2000 height
      * Extent: Norway - onshore - between 18°E and 19°E.
      * Scope: Engineering survey.
      */
-    public const EPSG_ETRS89_NTM_ZONE_18_PLUS_NN2000_HEIGHT = 5958;
+    public const EPSG_ETRS89_NTM_ZONE_18_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5958';
 
     /**
      * ETRS89 / NTM zone 18 + NN54 height
@@ -436,14 +436,14 @@ class Compound extends CoordinateReferenceSystem
      * Scope: Engineering survey.
      * Replaced by ETRS89 / NTM zone 18 + NN2000 height (compound CRS code 5958).
      */
-    public const EPSG_ETRS89_NTM_ZONE_18_PLUS_NN54_HEIGHT = 6158;
+    public const EPSG_ETRS89_NTM_ZONE_18_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6158';
 
     /**
      * ETRS89 / NTM zone 19 + NN2000 height
      * Extent: Norway - onshore - between 19°E and 20°E.
      * Scope: Engineering survey.
      */
-    public const EPSG_ETRS89_NTM_ZONE_19_PLUS_NN2000_HEIGHT = 5959;
+    public const EPSG_ETRS89_NTM_ZONE_19_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5959';
 
     /**
      * ETRS89 / NTM zone 19 + NN54 height
@@ -451,14 +451,14 @@ class Compound extends CoordinateReferenceSystem
      * Scope: Engineering survey.
      * Replaced by ETRS89 / NTM zone 19 + NN2000 height (compound CRS code 5959).
      */
-    public const EPSG_ETRS89_NTM_ZONE_19_PLUS_NN54_HEIGHT = 6159;
+    public const EPSG_ETRS89_NTM_ZONE_19_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6159';
 
     /**
      * ETRS89 / NTM zone 20 + NN2000 height
      * Extent: Norway - onshore - between 20°E and 21°E.
      * Scope: Engineering survey.
      */
-    public const EPSG_ETRS89_NTM_ZONE_20_PLUS_NN2000_HEIGHT = 5960;
+    public const EPSG_ETRS89_NTM_ZONE_20_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5960';
 
     /**
      * ETRS89 / NTM zone 20 + NN54 height
@@ -466,14 +466,14 @@ class Compound extends CoordinateReferenceSystem
      * Scope: Engineering survey.
      * Replaced by ETRS89 / NTM zone 20 + NN2000 height (compound CRS code 5960).
      */
-    public const EPSG_ETRS89_NTM_ZONE_20_PLUS_NN54_HEIGHT = 6160;
+    public const EPSG_ETRS89_NTM_ZONE_20_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6160';
 
     /**
      * ETRS89 / NTM zone 21 + NN2000 height
      * Extent: Norway - onshore - between 21°E and 22°E.
      * Scope: Engineering survey.
      */
-    public const EPSG_ETRS89_NTM_ZONE_21_PLUS_NN2000_HEIGHT = 5961;
+    public const EPSG_ETRS89_NTM_ZONE_21_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5961';
 
     /**
      * ETRS89 / NTM zone 21 + NN54 height
@@ -481,14 +481,14 @@ class Compound extends CoordinateReferenceSystem
      * Scope: Engineering survey.
      * Replaced by ETRS89 / NTM zone 21 + NN2000 height (compound CRS code 5961).
      */
-    public const EPSG_ETRS89_NTM_ZONE_21_PLUS_NN54_HEIGHT = 6161;
+    public const EPSG_ETRS89_NTM_ZONE_21_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6161';
 
     /**
      * ETRS89 / NTM zone 22 + NN2000 height
      * Extent: Norway - onshore - between 22°E and 23°E.
      * Scope: Engineering survey.
      */
-    public const EPSG_ETRS89_NTM_ZONE_22_PLUS_NN2000_HEIGHT = 5962;
+    public const EPSG_ETRS89_NTM_ZONE_22_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5962';
 
     /**
      * ETRS89 / NTM zone 22 + NN54 height
@@ -496,14 +496,14 @@ class Compound extends CoordinateReferenceSystem
      * Scope: Engineering survey.
      * Replaced by ETRS89 / NTM zone 22 + NN2000 height (compound CRS code 5962).
      */
-    public const EPSG_ETRS89_NTM_ZONE_22_PLUS_NN54_HEIGHT = 6162;
+    public const EPSG_ETRS89_NTM_ZONE_22_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6162';
 
     /**
      * ETRS89 / NTM zone 23 + NN2000 height
      * Extent: Norway - onshore - between 23°E and 24°E.
      * Scope: Engineering survey.
      */
-    public const EPSG_ETRS89_NTM_ZONE_23_PLUS_NN2000_HEIGHT = 5963;
+    public const EPSG_ETRS89_NTM_ZONE_23_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5963';
 
     /**
      * ETRS89 / NTM zone 23 + NN54 height
@@ -511,14 +511,14 @@ class Compound extends CoordinateReferenceSystem
      * Scope: Engineering survey.
      * Replaced by ETRS89 / NTM zone 23 + NN2000 height (compound CRS code 5963).
      */
-    public const EPSG_ETRS89_NTM_ZONE_23_PLUS_NN54_HEIGHT = 6163;
+    public const EPSG_ETRS89_NTM_ZONE_23_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6163';
 
     /**
      * ETRS89 / NTM zone 24 + NN2000 height
      * Extent: Norway - onshore - between 24°E and 25°E.
      * Scope: Engineering survey.
      */
-    public const EPSG_ETRS89_NTM_ZONE_24_PLUS_NN2000_HEIGHT = 5964;
+    public const EPSG_ETRS89_NTM_ZONE_24_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5964';
 
     /**
      * ETRS89 / NTM zone 24 + NN54 height
@@ -526,14 +526,14 @@ class Compound extends CoordinateReferenceSystem
      * Scope: Engineering survey.
      * Replaced by ETRS89 / NTM zone 24 + NN2000 height (compound CRS code 5964).
      */
-    public const EPSG_ETRS89_NTM_ZONE_24_PLUS_NN54_HEIGHT = 6164;
+    public const EPSG_ETRS89_NTM_ZONE_24_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6164';
 
     /**
      * ETRS89 / NTM zone 25 + NN2000 height
      * Extent: Norway - onshore - between 25°E and 26°E.
      * Scope: Engineering survey.
      */
-    public const EPSG_ETRS89_NTM_ZONE_25_PLUS_NN2000_HEIGHT = 5965;
+    public const EPSG_ETRS89_NTM_ZONE_25_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5965';
 
     /**
      * ETRS89 / NTM zone 25 + NN54 height
@@ -541,14 +541,14 @@ class Compound extends CoordinateReferenceSystem
      * Scope: Engineering survey.
      * Replaced by ETRS89 / NTM zone 25 + NN2000 height (compound CRS code 5965).
      */
-    public const EPSG_ETRS89_NTM_ZONE_25_PLUS_NN54_HEIGHT = 6165;
+    public const EPSG_ETRS89_NTM_ZONE_25_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6165';
 
     /**
      * ETRS89 / NTM zone 26 + NN2000 height
      * Extent: Norway - onshore - between 26°E and 27°E.
      * Scope: Engineering survey.
      */
-    public const EPSG_ETRS89_NTM_ZONE_26_PLUS_NN2000_HEIGHT = 5966;
+    public const EPSG_ETRS89_NTM_ZONE_26_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5966';
 
     /**
      * ETRS89 / NTM zone 26 + NN54 height
@@ -556,14 +556,14 @@ class Compound extends CoordinateReferenceSystem
      * Scope: Engineering survey.
      * Replaced by ETRS89 / NTM zone 26 + NN2000 height (compound CRS code 5966).
      */
-    public const EPSG_ETRS89_NTM_ZONE_26_PLUS_NN54_HEIGHT = 6166;
+    public const EPSG_ETRS89_NTM_ZONE_26_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6166';
 
     /**
      * ETRS89 / NTM zone 27 + NN2000 height
      * Extent: Norway - onshore - between 27°E and 28°E.
      * Scope: Engineering survey.
      */
-    public const EPSG_ETRS89_NTM_ZONE_27_PLUS_NN2000_HEIGHT = 5967;
+    public const EPSG_ETRS89_NTM_ZONE_27_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5967';
 
     /**
      * ETRS89 / NTM zone 27 + NN54 height
@@ -571,14 +571,14 @@ class Compound extends CoordinateReferenceSystem
      * Scope: Engineering survey.
      * Replaced by ETRS89 / NTM zone 27 + NN2000 height (compound CRS code 5967).
      */
-    public const EPSG_ETRS89_NTM_ZONE_27_PLUS_NN54_HEIGHT = 6167;
+    public const EPSG_ETRS89_NTM_ZONE_27_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6167';
 
     /**
      * ETRS89 / NTM zone 28 + NN2000 height
      * Extent: Norway - onshore - between 28°E and 29°E.
      * Scope: Engineering survey.
      */
-    public const EPSG_ETRS89_NTM_ZONE_28_PLUS_NN2000_HEIGHT = 5968;
+    public const EPSG_ETRS89_NTM_ZONE_28_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5968';
 
     /**
      * ETRS89 / NTM zone 28 + NN54 height
@@ -586,14 +586,14 @@ class Compound extends CoordinateReferenceSystem
      * Scope: Engineering survey.
      * Replaced by ETRS89 / NTM zone 28 + NN2000 height (compound CRS code 5968).
      */
-    public const EPSG_ETRS89_NTM_ZONE_28_PLUS_NN54_HEIGHT = 6168;
+    public const EPSG_ETRS89_NTM_ZONE_28_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6168';
 
     /**
      * ETRS89 / NTM zone 29 + NN2000 height
      * Extent: Norway - onshore - between 29°E and 30°E.
      * Scope: Engineering survey.
      */
-    public const EPSG_ETRS89_NTM_ZONE_29_PLUS_NN2000_HEIGHT = 5969;
+    public const EPSG_ETRS89_NTM_ZONE_29_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5969';
 
     /**
      * ETRS89 / NTM zone 29 + NN54 height
@@ -601,14 +601,14 @@ class Compound extends CoordinateReferenceSystem
      * Scope: Engineering survey.
      * Replaced by ETRS89 / NTM zone 29 + NN2000 height (compound CRS code 5969).
      */
-    public const EPSG_ETRS89_NTM_ZONE_29_PLUS_NN54_HEIGHT = 6169;
+    public const EPSG_ETRS89_NTM_ZONE_29_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6169';
 
     /**
      * ETRS89 / NTM zone 30 + NN2000 height
      * Extent: Norway - onshore - east of 30°E.
      * Scope: Engineering survey.
      */
-    public const EPSG_ETRS89_NTM_ZONE_30_PLUS_NN2000_HEIGHT = 5970;
+    public const EPSG_ETRS89_NTM_ZONE_30_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5970';
 
     /**
      * ETRS89 / NTM zone 30 + NN54 height
@@ -616,14 +616,14 @@ class Compound extends CoordinateReferenceSystem
      * Scope: Engineering survey.
      * Replaced by ETRS89 / NTM zone 30 + NN2000 height (compound CRS code 5970).
      */
-    public const EPSG_ETRS89_NTM_ZONE_30_PLUS_NN54_HEIGHT = 6170;
+    public const EPSG_ETRS89_NTM_ZONE_30_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6170';
 
     /**
      * ETRS89 / NTM zone 5 + NN2000 height
      * Extent: Norway - onshore - west of 6°E.
      * Scope: Engineering survey.
      */
-    public const EPSG_ETRS89_NTM_ZONE_5_PLUS_NN2000_HEIGHT = 5945;
+    public const EPSG_ETRS89_NTM_ZONE_5_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5945';
 
     /**
      * ETRS89 / NTM zone 5 + NN54 height
@@ -631,14 +631,14 @@ class Compound extends CoordinateReferenceSystem
      * Scope: Engineering survey.
      * Replaced by ETRS89 / NTM zone 5 + NN2000 height (compound CRS code 5945).
      */
-    public const EPSG_ETRS89_NTM_ZONE_5_PLUS_NN54_HEIGHT = 6145;
+    public const EPSG_ETRS89_NTM_ZONE_5_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6145';
 
     /**
      * ETRS89 / NTM zone 6 + NN2000 height
      * Extent: Norway - onshore - between 6°E and 7°E.
      * Scope: Engineering survey.
      */
-    public const EPSG_ETRS89_NTM_ZONE_6_PLUS_NN2000_HEIGHT = 5946;
+    public const EPSG_ETRS89_NTM_ZONE_6_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5946';
 
     /**
      * ETRS89 / NTM zone 6 + NN54 height
@@ -646,14 +646,14 @@ class Compound extends CoordinateReferenceSystem
      * Scope: Engineering survey.
      * Replaced by ETRS89 / NTM zone 6 + NN2000 height (compound CRS code 5946).
      */
-    public const EPSG_ETRS89_NTM_ZONE_6_PLUS_NN54_HEIGHT = 6146;
+    public const EPSG_ETRS89_NTM_ZONE_6_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6146';
 
     /**
      * ETRS89 / NTM zone 7 + NN2000 height
      * Extent: Norway - onshore - between 7°E and 8°E.
      * Scope: Engineering survey.
      */
-    public const EPSG_ETRS89_NTM_ZONE_7_PLUS_NN2000_HEIGHT = 5947;
+    public const EPSG_ETRS89_NTM_ZONE_7_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5947';
 
     /**
      * ETRS89 / NTM zone 7 + NN54 height
@@ -661,14 +661,14 @@ class Compound extends CoordinateReferenceSystem
      * Scope: Engineering survey.
      * Replaced by ETRS89 / NTM zone 7 + NN2000 height (compound CRS code 5947).
      */
-    public const EPSG_ETRS89_NTM_ZONE_7_PLUS_NN54_HEIGHT = 6147;
+    public const EPSG_ETRS89_NTM_ZONE_7_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6147';
 
     /**
      * ETRS89 / NTM zone 8 + NN2000 height
      * Extent: Norway - onshore - between 8°E and 9°E.
      * Scope: Engineering survey.
      */
-    public const EPSG_ETRS89_NTM_ZONE_8_PLUS_NN2000_HEIGHT = 5948;
+    public const EPSG_ETRS89_NTM_ZONE_8_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5948';
 
     /**
      * ETRS89 / NTM zone 8 + NN54 height
@@ -676,14 +676,14 @@ class Compound extends CoordinateReferenceSystem
      * Scope: Engineering survey.
      * Replaced by ETRS89 / NTM zone 8 + NN2000 height (compound CRS code 5948).
      */
-    public const EPSG_ETRS89_NTM_ZONE_8_PLUS_NN54_HEIGHT = 6148;
+    public const EPSG_ETRS89_NTM_ZONE_8_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6148';
 
     /**
      * ETRS89 / NTM zone 9 + NN2000 height
      * Extent: Norway - onshore - between 9°E and 10°E.
      * Scope: Engineering survey.
      */
-    public const EPSG_ETRS89_NTM_ZONE_9_PLUS_NN2000_HEIGHT = 5949;
+    public const EPSG_ETRS89_NTM_ZONE_9_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5949';
 
     /**
      * ETRS89 / NTM zone 9 + NN54 height
@@ -691,7 +691,7 @@ class Compound extends CoordinateReferenceSystem
      * Scope: Engineering survey.
      * Replaced by ETRS89 / NTM zone 9 + NN2000 height (compound CRS code 5949).
      */
-    public const EPSG_ETRS89_NTM_ZONE_9_PLUS_NN54_HEIGHT = 6149;
+    public const EPSG_ETRS89_NTM_ZONE_9_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6149';
 
     /**
      * ETRS89 / TM35FIN(N,E) + N2000 height
@@ -699,7 +699,7 @@ class Compound extends CoordinateReferenceSystem
      * Scope: Engineering survey, topographic mapping.
      * Replaces ETRS89 / TM35FIN(N,E) + N60 height (CRS code 3902).
      */
-    public const EPSG_ETRS89_TM35FIN_N_E_PLUS_N2000_HEIGHT = 3903;
+    public const EPSG_ETRS89_TM35FIN_N_E_PLUS_N2000_HEIGHT = 'urn:ogc:def:crs:EPSG::3903';
 
     /**
      * ETRS89 / TM35FIN(N,E) + N60 height
@@ -707,21 +707,21 @@ class Compound extends CoordinateReferenceSystem
      * Scope: Engineering survey, topographic mapping.
      * Replaces YKJ/N60 (CRS code 3901). Replaced by ETRS89-TM35FIN(N,E)/N2000 (CRS code 3903).
      */
-    public const EPSG_ETRS89_TM35FIN_N_E_PLUS_N60_HEIGHT = 3902;
+    public const EPSG_ETRS89_TM35FIN_N_E_PLUS_N60_HEIGHT = 'urn:ogc:def:crs:EPSG::3902';
 
     /**
      * ETRS89 / UTM zone 31N + DHHN92 height
      * Extent: Germany - onshore west of 6°E.
      * Scope: Geological analysis.
      */
-    public const EPSG_ETRS89_UTM_ZONE_31N_PLUS_DHHN92_HEIGHT = 5554;
+    public const EPSG_ETRS89_UTM_ZONE_31N_PLUS_DHHN92_HEIGHT = 'urn:ogc:def:crs:EPSG::5554';
 
     /**
      * ETRS89 / UTM zone 31N + NN2000 height
      * Extent: Norway - onshore - west of 6°E.
      * Scope: Topographic mapping.
      */
-    public const EPSG_ETRS89_UTM_ZONE_31N_PLUS_NN2000_HEIGHT = 5971;
+    public const EPSG_ETRS89_UTM_ZONE_31N_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5971';
 
     /**
      * ETRS89 / UTM zone 31N + NN54 height
@@ -729,28 +729,28 @@ class Compound extends CoordinateReferenceSystem
      * Scope: Topographic mapping.
      * Replaced by ETRS89 / UTM zone 31N + NN2000 height (compound CRS code 5971).
      */
-    public const EPSG_ETRS89_UTM_ZONE_31N_PLUS_NN54_HEIGHT = 6171;
+    public const EPSG_ETRS89_UTM_ZONE_31N_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6171';
 
     /**
      * ETRS89 / UTM zone 32N + DHHN92 height
      * Extent: Germany - onshore between 6°E and 12°E.
      * Scope: Geological analysis.
      */
-    public const EPSG_ETRS89_UTM_ZONE_32N_PLUS_DHHN92_HEIGHT = 5555;
+    public const EPSG_ETRS89_UTM_ZONE_32N_PLUS_DHHN92_HEIGHT = 'urn:ogc:def:crs:EPSG::5555';
 
     /**
      * ETRS89 / UTM zone 32N + DVR90 height
      * Extent: Denmark - onshore west of 12°E - Zealand, Jutland, Fuen and Lolland.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_ETRS89_UTM_ZONE_32N_PLUS_DVR90_HEIGHT = 7416;
+    public const EPSG_ETRS89_UTM_ZONE_32N_PLUS_DVR90_HEIGHT = 'urn:ogc:def:crs:EPSG::7416';
 
     /**
      * ETRS89 / UTM zone 32N + NN2000 height
      * Extent: Norway - onshore - between 6°E and 12°E.
      * Scope: Topographic mapping.
      */
-    public const EPSG_ETRS89_UTM_ZONE_32N_PLUS_NN2000_HEIGHT = 5972;
+    public const EPSG_ETRS89_UTM_ZONE_32N_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5972';
 
     /**
      * ETRS89 / UTM zone 32N + NN54 height
@@ -758,28 +758,28 @@ class Compound extends CoordinateReferenceSystem
      * Scope: Topographic mapping.
      * Replaced by ETRS89 / UTM zone 32N + NN2000 height (compound CRS code 5972).
      */
-    public const EPSG_ETRS89_UTM_ZONE_32N_PLUS_NN54_HEIGHT = 6172;
+    public const EPSG_ETRS89_UTM_ZONE_32N_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6172';
 
     /**
      * ETRS89 / UTM zone 33N + DHHN92 height
      * Extent: Germany - onshore east of 12°E.
      * Scope: Geological analysis.
      */
-    public const EPSG_ETRS89_UTM_ZONE_33N_PLUS_DHHN92_HEIGHT = 5556;
+    public const EPSG_ETRS89_UTM_ZONE_33N_PLUS_DHHN92_HEIGHT = 'urn:ogc:def:crs:EPSG::5556';
 
     /**
      * ETRS89 / UTM zone 33N + DVR90 height
      * Extent: Denmark - onshore east of 12°E - Zealand and Falster, Bornholm.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_ETRS89_UTM_ZONE_33N_PLUS_DVR90_HEIGHT = 7417;
+    public const EPSG_ETRS89_UTM_ZONE_33N_PLUS_DVR90_HEIGHT = 'urn:ogc:def:crs:EPSG::7417';
 
     /**
      * ETRS89 / UTM zone 33N + NN2000 height
      * Extent: Norway - onshore - between 12°E and 18°E.
      * Scope: Topographic mapping.
      */
-    public const EPSG_ETRS89_UTM_ZONE_33N_PLUS_NN2000_HEIGHT = 5973;
+    public const EPSG_ETRS89_UTM_ZONE_33N_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5973';
 
     /**
      * ETRS89 / UTM zone 33N + NN54 height
@@ -787,14 +787,14 @@ class Compound extends CoordinateReferenceSystem
      * Scope: Topographic mapping.
      * Replaced by ETRS89 / UTM zone 33N + NN2000 height (compound CRS code 5973).
      */
-    public const EPSG_ETRS89_UTM_ZONE_33N_PLUS_NN54_HEIGHT = 6173;
+    public const EPSG_ETRS89_UTM_ZONE_33N_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6173';
 
     /**
      * ETRS89 / UTM zone 34N + NN2000 height
      * Extent: Norway - onshore - between 18°E and 24°E.
      * Scope: Topographic mapping.
      */
-    public const EPSG_ETRS89_UTM_ZONE_34N_PLUS_NN2000_HEIGHT = 5974;
+    public const EPSG_ETRS89_UTM_ZONE_34N_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5974';
 
     /**
      * ETRS89 / UTM zone 34N + NN54 height
@@ -802,14 +802,14 @@ class Compound extends CoordinateReferenceSystem
      * Scope: Topographic mapping.
      * Replaced by ETRS89 / UTM zone 34N + NN2000 height (compound CRS code 5974).
      */
-    public const EPSG_ETRS89_UTM_ZONE_34N_PLUS_NN54_HEIGHT = 6174;
+    public const EPSG_ETRS89_UTM_ZONE_34N_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6174';
 
     /**
      * ETRS89 / UTM zone 35N + NN2000 height
      * Extent: Norway - onshore - between 24°E and 30°E.
      * Scope: Topographic mapping.
      */
-    public const EPSG_ETRS89_UTM_ZONE_35N_PLUS_NN2000_HEIGHT = 5975;
+    public const EPSG_ETRS89_UTM_ZONE_35N_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5975';
 
     /**
      * ETRS89 / UTM zone 35N + NN54 height
@@ -817,14 +817,14 @@ class Compound extends CoordinateReferenceSystem
      * Scope: Topographic mapping.
      * Replaced by ETRS89 / UTM zone 35N + NN2000 height (compound CRS code 5975).
      */
-    public const EPSG_ETRS89_UTM_ZONE_35N_PLUS_NN54_HEIGHT = 6175;
+    public const EPSG_ETRS89_UTM_ZONE_35N_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6175';
 
     /**
      * ETRS89 / UTM zone 36N + NN2000 height
      * Extent: Norway - onshore - east of 30°E.
      * Scope: Topographic mapping.
      */
-    public const EPSG_ETRS89_UTM_ZONE_36N_PLUS_NN2000_HEIGHT = 5976;
+    public const EPSG_ETRS89_UTM_ZONE_36N_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5976';
 
     /**
      * ETRS89 / UTM zone 36N + NN54 height
@@ -832,14 +832,14 @@ class Compound extends CoordinateReferenceSystem
      * Scope: Topographic mapping.
      * Replaced by ETRS89 / UTM zone 36N + NN2000 height (compound CRS code 5976).
      */
-    public const EPSG_ETRS89_UTM_ZONE_36N_PLUS_NN54_HEIGHT = 6176;
+    public const EPSG_ETRS89_UTM_ZONE_36N_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6176';
 
     /**
      * FEH2010 / Fehmarnbelt TM + FCSVR10 height
      * Extent: Fehmarnbelt area of Denmark and Germany.
      * Scope: Engineering survey and construction for Fehmarnbelt tunnel.
      */
-    public const EPSG_FEH2010_FEHMARNBELT_TM_PLUS_FCSVR10_HEIGHT = 5598;
+    public const EPSG_FEH2010_FEHMARNBELT_TM_PLUS_FCSVR10_HEIGHT = 'urn:ogc:def:crs:EPSG::5598';
 
     /**
      * GBK19 Grid + ODN height
@@ -847,7 +847,7 @@ class Compound extends CoordinateReferenceSystem
      * Kilbride.
      * Scope: Engineering survey and topographic mapping for railway applications.
      */
-    public const EPSG_GBK19_GRID_PLUS_ODN_HEIGHT = 9457;
+    public const EPSG_GBK19_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::9457';
 
     /**
      * GDA2020 + AHD height
@@ -856,7 +856,7 @@ class Compound extends CoordinateReferenceSystem
      * Islands - onshore.
      * Scope: Cadastre, engineering surveying applications over distances up to 10km.
      */
-    public const EPSG_GDA2020_PLUS_AHD_HEIGHT = 9463;
+    public const EPSG_GDA2020_PLUS_AHD_HEIGHT = 'urn:ogc:def:crs:EPSG::9463';
 
     /**
      * GDA2020 + AVWS height
@@ -864,7 +864,7 @@ class Compound extends CoordinateReferenceSystem
      * Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
      * Scope: Location-based services, Intelligent Transport Services, navigation, positioning.
      */
-    public const EPSG_GDA2020_PLUS_AVWS_HEIGHT = 9462;
+    public const EPSG_GDA2020_PLUS_AVWS_HEIGHT = 'urn:ogc:def:crs:EPSG::9462';
 
     /**
      * GDA94 + AHD height
@@ -873,7 +873,7 @@ class Compound extends CoordinateReferenceSystem
      * Islands - onshore.
      * Scope: Cadastre, engineering surveying applications over distances up to 10km.
      */
-    public const EPSG_GDA94_PLUS_AHD_HEIGHT = 9464;
+    public const EPSG_GDA94_PLUS_AHD_HEIGHT = 'urn:ogc:def:crs:EPSG::9464';
 
     /**
      * GR96 + GVR2000 height
@@ -881,7 +881,7 @@ class Compound extends CoordinateReferenceSystem
      * Scope: Topographic mapping.
      * Replaced by GR96 + GVR2016 height (CRS code 8350).
      */
-    public const EPSG_GR96_PLUS_GVR2000_HEIGHT = 8349;
+    public const EPSG_GR96_PLUS_GVR2000_HEIGHT = 'urn:ogc:def:crs:EPSG::8349';
 
     /**
      * GR96 + GVR2016 height
@@ -889,7 +889,7 @@ class Compound extends CoordinateReferenceSystem
      * Scope: Topographic mapping.
      * Replaces GR96 + GVR2000 height (CRS code 8349).
      */
-    public const EPSG_GR96_PLUS_GVR2016_HEIGHT = 8350;
+    public const EPSG_GR96_PLUS_GVR2016_HEIGHT = 'urn:ogc:def:crs:EPSG::8350';
 
     /**
      * HS2 Survey Grid + HS2-VRF height
@@ -897,7 +897,7 @@ class Compound extends CoordinateReferenceSystem
      * Scope: Engineering survey for HS2 project phases 1 and 2a.
      * Realized by use of HS2TN15 transformation and HS2GM15 geoid model from ETRS89 OSNet v2009.
      */
-    public const EPSG_HS2_SURVEY_GRID_PLUS_HS2_VRF_HEIGHT = 9306;
+    public const EPSG_HS2_SURVEY_GRID_PLUS_HS2_VRF_HEIGHT = 'urn:ogc:def:crs:EPSG::9306';
 
     /**
      * JGD2000 + JGD2000 (vertical) height
@@ -906,7 +906,7 @@ class Compound extends CoordinateReferenceSystem
      * Replaces Tokyo + JSLD69 height and Tokyo + JSLD72 height (CRS codes 7414 and 6700) from April 2002. Replaced by
      * JGD2011 + JGD2011 (vertical) height (CRS code 6697) with effect from 21st October 2011.
      */
-    public const EPSG_JGD2000_PLUS_JGD2000_VERTICAL_HEIGHT = 6696;
+    public const EPSG_JGD2000_PLUS_JGD2000_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::6696';
 
     /**
      * JGD2011 + JGD2011 (vertical) height
@@ -914,7 +914,7 @@ class Compound extends CoordinateReferenceSystem
      * Scope: Engineering survey, topographic mapping.
      * Replaces JGD2000 + JGD2000 (vertical) height (CRS code 6696) with effect from 21st October 2011.
      */
-    public const EPSG_JGD2011_PLUS_JGD2011_VERTICAL_HEIGHT = 6697;
+    public const EPSG_JGD2011_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::6697';
 
     /**
      * KKJ / Finland Uniform Coordinate System + N60 height
@@ -922,14 +922,14 @@ class Compound extends CoordinateReferenceSystem
      * Scope: Engineering survey, topographic mapping.
      * Replaced by ETRS89 / TM35FIN(N,E) + N60 height (CRS code 3902).
      */
-    public const EPSG_KKJ_FINLAND_UNIFORM_COORDINATE_SYSTEM_PLUS_N60_HEIGHT = 3901;
+    public const EPSG_KKJ_FINLAND_UNIFORM_COORDINATE_SYSTEM_PLUS_N60_HEIGHT = 'urn:ogc:def:crs:EPSG::3901';
 
     /**
      * MML07 Grid + ODN height
      * Extent: UK - on or related to the Midland Mainline rail route from Sheffield to London.
      * Scope: Engineering survey and topographic mapping for railway applications.
      */
-    public const EPSG_MML07_GRID_PLUS_ODN_HEIGHT = 9374;
+    public const EPSG_MML07_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::9374';
 
     /**
      * NAD27 + NGVD29 height (ftUS)
@@ -941,7 +941,7 @@ class Compound extends CoordinateReferenceSystem
      * Wyoming.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD27_PLUS_NGVD29_HEIGHT_FTUS = 7406;
+    public const EPSG_NAD27_PLUS_NGVD29_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::7406';
 
     /**
      * NAD27 / Texas North + NGVD29 height (ftUS)
@@ -950,7 +950,7 @@ class Compound extends CoordinateReferenceSystem
      * Oldham; Parmer; Potter; Randall; Roberts; Sherman; Swisher; Wheeler.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD27_TEXAS_NORTH_PLUS_NGVD29_HEIGHT_FTUS = 7407;
+    public const EPSG_NAD27_TEXAS_NORTH_PLUS_NGVD29_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::7407';
 
     /**
      * NAD83 + NAVD88 height
@@ -962,7 +962,7 @@ class Compound extends CoordinateReferenceSystem
      * West Virginia; Wisconsin; Wyoming.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_PLUS_NAVD88_HEIGHT = 5498;
+    public const EPSG_NAD83_PLUS_NAVD88_HEIGHT = 'urn:ogc:def:crs:EPSG::5498';
 
     /**
      * NAD83 / Alabama East + NAVD88 height
@@ -972,7 +972,7 @@ class Compound extends CoordinateReferenceSystem
      * Tallapoosa.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_ALABAMA_EAST_PLUS_NAVD88_HEIGHT = 8801;
+    public const EPSG_NAD83_ALABAMA_EAST_PLUS_NAVD88_HEIGHT = 'urn:ogc:def:crs:EPSG::8801';
 
     /**
      * NAD83 / Alabama West + NAVD88 height
@@ -982,98 +982,98 @@ class Compound extends CoordinateReferenceSystem
      * Pickens; Shelby; Sumter; Tuscaloosa; Walker; Washington; Wilcox; Winston.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_ALABAMA_WEST_PLUS_NAVD88_HEIGHT = 8802;
+    public const EPSG_NAD83_ALABAMA_WEST_PLUS_NAVD88_HEIGHT = 'urn:ogc:def:crs:EPSG::8802';
 
     /**
      * NAD83 / Alaska zone 1 + NAVD88 height
      * Extent: United States (USA) - Alaska - east of 141°W; i.e. Panhandle.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_ALASKA_ZONE_1_PLUS_NAVD88_HEIGHT = 8803;
+    public const EPSG_NAD83_ALASKA_ZONE_1_PLUS_NAVD88_HEIGHT = 'urn:ogc:def:crs:EPSG::8803';
 
     /**
      * NAD83 / Alaska zone 10 + NAVD88 height
      * Extent: United States (USA) - Alaska - Aleutian Islands onshore.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_ALASKA_ZONE_10_PLUS_NAVD88_HEIGHT = 8812;
+    public const EPSG_NAD83_ALASKA_ZONE_10_PLUS_NAVD88_HEIGHT = 'urn:ogc:def:crs:EPSG::8812';
 
     /**
      * NAD83 / Alaska zone 2 + NAVD88 height
      * Extent: United States (USA) - Alaska - between 144°W and 141°W, onshore.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_ALASKA_ZONE_2_PLUS_NAVD88_HEIGHT = 8804;
+    public const EPSG_NAD83_ALASKA_ZONE_2_PLUS_NAVD88_HEIGHT = 'urn:ogc:def:crs:EPSG::8804';
 
     /**
      * NAD83 / Alaska zone 3 + NAVD88 height
      * Extent: United States (USA) - Alaska - between 148°W and 144°W.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_ALASKA_ZONE_3_PLUS_NAVD88_HEIGHT = 8805;
+    public const EPSG_NAD83_ALASKA_ZONE_3_PLUS_NAVD88_HEIGHT = 'urn:ogc:def:crs:EPSG::8805';
 
     /**
      * NAD83 / Alaska zone 4 + NAVD88 height
      * Extent: United States (USA) - Alaska - between 152°W and 148°W, onshore.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_ALASKA_ZONE_4_PLUS_NAVD88_HEIGHT = 8806;
+    public const EPSG_NAD83_ALASKA_ZONE_4_PLUS_NAVD88_HEIGHT = 'urn:ogc:def:crs:EPSG::8806';
 
     /**
      * NAD83 / Alaska zone 5 + NAVD88 height
      * Extent: United States (USA) - Alaska - between 156°W and 152°W.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_ALASKA_ZONE_5_PLUS_NAVD88_HEIGHT = 8807;
+    public const EPSG_NAD83_ALASKA_ZONE_5_PLUS_NAVD88_HEIGHT = 'urn:ogc:def:crs:EPSG::8807';
 
     /**
      * NAD83 / Alaska zone 6 + NAVD88 height
      * Extent: United States (USA) - Alaska - between 160°W and 156°W, onshore.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_ALASKA_ZONE_6_PLUS_NAVD88_HEIGHT = 8808;
+    public const EPSG_NAD83_ALASKA_ZONE_6_PLUS_NAVD88_HEIGHT = 'urn:ogc:def:crs:EPSG::8808';
 
     /**
      * NAD83 / Alaska zone 7 + NAVD88 height
      * Extent: United States (USA) - Alaska - between 164°W and 160°W, onshore.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_ALASKA_ZONE_7_PLUS_NAVD88_HEIGHT = 8809;
+    public const EPSG_NAD83_ALASKA_ZONE_7_PLUS_NAVD88_HEIGHT = 'urn:ogc:def:crs:EPSG::8809';
 
     /**
      * NAD83 / Alaska zone 8 + NAVD88 height
      * Extent: United States (USA) - Alaska onshore north of 54°30'N and between 168°W and 164°W.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_ALASKA_ZONE_8_PLUS_NAVD88_HEIGHT = 8810;
+    public const EPSG_NAD83_ALASKA_ZONE_8_PLUS_NAVD88_HEIGHT = 'urn:ogc:def:crs:EPSG::8810';
 
     /**
      * NAD83 / Alaska zone 9 + NAVD88 height
      * Extent: United States (USA) - Alaska onshore north of 54°30'N and west of 168°W.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_ALASKA_ZONE_9_PLUS_NAVD88_HEIGHT = 8811;
+    public const EPSG_NAD83_ALASKA_ZONE_9_PLUS_NAVD88_HEIGHT = 'urn:ogc:def:crs:EPSG::8811';
 
     /**
      * NAD83 / Arizona Central (ft) + NAVD88 height (ft)
      * Extent: United States (USA) - Arizona - counties Coconino; Maricopa; Pima; Pinal; Santa Cruz; Yavapai.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_ARIZONA_CENTRAL_FT_PLUS_NAVD88_HEIGHT_FT = 8701;
+    public const EPSG_NAD83_ARIZONA_CENTRAL_FT_PLUS_NAVD88_HEIGHT_FT = 'urn:ogc:def:crs:EPSG::8701';
 
     /**
      * NAD83 / Arizona East (ft) + NAVD88 height (ft)
      * Extent: United States (USA) - Arizona - counties Apache; Cochise; Gila; Graham; Greenlee; Navajo.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_ARIZONA_EAST_FT_PLUS_NAVD88_HEIGHT_FT = 8700;
+    public const EPSG_NAD83_ARIZONA_EAST_FT_PLUS_NAVD88_HEIGHT_FT = 'urn:ogc:def:crs:EPSG::8700';
 
     /**
      * NAD83 / Arizona West (ft) + NAVD88 height (ft)
      * Extent: United States (USA) - Arizona - counties of La Paz; Mohave; Yuma.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_ARIZONA_WEST_FT_PLUS_NAVD88_HEIGHT_FT = 8702;
+    public const EPSG_NAD83_ARIZONA_WEST_FT_PLUS_NAVD88_HEIGHT_FT = 'urn:ogc:def:crs:EPSG::8702';
 
     /**
      * NAD83 / Arkansas North (ftUS) + NAVD88 height (ftUS)
@@ -1083,7 +1083,7 @@ class Compound extends CoordinateReferenceSystem
      * Sebastian; Sharp; St Francis; Stone; Van Buren; Washington; White; Woodruff; Yell.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_ARKANSAS_NORTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8712;
+    public const EPSG_NAD83_ARKANSAS_NORTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8712';
 
     /**
      * NAD83 / Arkansas South (ftUS) + NAVD88 height (ftUS)
@@ -1093,7 +1093,7 @@ class Compound extends CoordinateReferenceSystem
      * Pulaski; Saline; Sevier; Union.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_ARKANSAS_SOUTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8713;
+    public const EPSG_NAD83_ARKANSAS_SOUTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8713';
 
     /**
      * NAD83 / California zone 1 (ftUS) + NAVD88 height (ftUS)
@@ -1101,7 +1101,7 @@ class Compound extends CoordinateReferenceSystem
      * Siskiyou; Tehama; Trinity.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_CALIFORNIA_ZONE_1_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8714;
+    public const EPSG_NAD83_CALIFORNIA_ZONE_1_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8714';
 
     /**
      * NAD83 / California zone 2 (ftUS) + NAVD88 height (ftUS)
@@ -1109,7 +1109,7 @@ class Compound extends CoordinateReferenceSystem
      * Mendocino; Napa; Nevada; Placer; Sacramento; Sierra; Solano; Sonoma; Sutter; Yolo; Yuba.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_CALIFORNIA_ZONE_2_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8715;
+    public const EPSG_NAD83_CALIFORNIA_ZONE_2_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8715';
 
     /**
      * NAD83 / California zone 3 (ftUS) + NAVD88 height (ftUS)
@@ -1117,14 +1117,14 @@ class Compound extends CoordinateReferenceSystem
      * Merced; Mono; San Francisco; San Joaquin; San Mateo; Santa Clara; Santa Cruz; Stanislaus; Tuolumne.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_CALIFORNIA_ZONE_3_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8716;
+    public const EPSG_NAD83_CALIFORNIA_ZONE_3_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8716';
 
     /**
      * NAD83 / California zone 4 (ftUS) + NAVD88 height (ftUS)
      * Extent: United States (USA) - California - counties Fresno; Inyo; Kings; Monterey; San Benito; Tulare.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_CALIFORNIA_ZONE_4_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8717;
+    public const EPSG_NAD83_CALIFORNIA_ZONE_4_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8717';
 
     /**
      * NAD83 / California zone 5 (ftUS) + NAVD88 height (ftUS)
@@ -1132,14 +1132,14 @@ class Compound extends CoordinateReferenceSystem
      * Barbara; Ventura.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_CALIFORNIA_ZONE_5_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8718;
+    public const EPSG_NAD83_CALIFORNIA_ZONE_5_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8718';
 
     /**
      * NAD83 / California zone 6 (ftUS) + NAVD88 height (ftUS)
      * Extent: United States (USA) - California - counties Imperial; Orange; Riverside; San Diego.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_CALIFORNIA_ZONE_6_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8719;
+    public const EPSG_NAD83_CALIFORNIA_ZONE_6_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8719';
 
     /**
      * NAD83 / Colorado Central (ftUS) + NAVD88 height (ftUS)
@@ -1148,7 +1148,7 @@ class Compound extends CoordinateReferenceSystem
      * Pitkin; Summit; Teller.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_COLORADO_CENTRAL_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8721;
+    public const EPSG_NAD83_COLORADO_CENTRAL_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8721';
 
     /**
      * NAD83 / Colorado North (ftUS) + NAVD88 height (ftUS)
@@ -1156,7 +1156,7 @@ class Compound extends CoordinateReferenceSystem
      * Moffat; Morgan; Phillips; Rio Blanco; Routt; Sedgwick; Washington; Weld; Yuma.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_COLORADO_NORTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8720;
+    public const EPSG_NAD83_COLORADO_NORTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8720';
 
     /**
      * NAD83 / Colorado South (ftUS) + NAVD88 height (ftUS)
@@ -1165,7 +1165,7 @@ class Compound extends CoordinateReferenceSystem
      * Prowers; Pueblo; Rio Grande; Saguache; San Juan; San Miguel.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_COLORADO_SOUTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8722;
+    public const EPSG_NAD83_COLORADO_SOUTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8722';
 
     /**
      * NAD83 / Connecticut (ftUS) + NAVD88 height (ftUS)
@@ -1173,14 +1173,14 @@ class Compound extends CoordinateReferenceSystem
      * New London; Tolland; Windham.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_CONNECTICUT_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8723;
+    public const EPSG_NAD83_CONNECTICUT_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8723';
 
     /**
      * NAD83 / Delaware (ftUS) + NAVD88 height (ftUS)
      * Extent: United States (USA) - Delaware - counties of Kent; New Castle; Sussex.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_DELAWARE_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8724;
+    public const EPSG_NAD83_DELAWARE_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8724';
 
     /**
      * NAD83 / Florida East (ftUS) + NAVD88 height (ftUS)
@@ -1189,7 +1189,7 @@ class Compound extends CoordinateReferenceSystem
      * Putnam; Seminole; St Johns; St Lucie; Volusia.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_FLORIDA_EAST_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8726;
+    public const EPSG_NAD83_FLORIDA_EAST_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8726';
 
     /**
      * NAD83 / Florida North (ftUS) + NAVD88 height (ftUS)
@@ -1198,7 +1198,7 @@ class Compound extends CoordinateReferenceSystem
      * Madison; Okaloosa; Santa Rosa; Suwannee; Taylor; Union; Wakulla; Walton; Washington.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_FLORIDA_NORTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8725;
+    public const EPSG_NAD83_FLORIDA_NORTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8725';
 
     /**
      * NAD83 / Florida West (ftUS) + NAVD88 height (ftUS)
@@ -1206,7 +1206,7 @@ class Compound extends CoordinateReferenceSystem
      * Lee; Levy; Manatee; Marion; Pasco; Pinellas; Polk; Sarasota; Sumter.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_FLORIDA_WEST_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8727;
+    public const EPSG_NAD83_FLORIDA_WEST_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8727';
 
     /**
      * NAD83 / Georgia East (ftUS) + NAVD88 height (ftUS)
@@ -1218,7 +1218,7 @@ class Compound extends CoordinateReferenceSystem
      * Wilkinson.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_GEORGIA_EAST_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8728;
+    public const EPSG_NAD83_GEORGIA_EAST_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8728';
 
     /**
      * NAD83 / Georgia West (ftUS) + NAVD88 height (ftUS)
@@ -1233,7 +1233,7 @@ class Compound extends CoordinateReferenceSystem
      * Whitfield; Wilcox; Worth.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_GEORGIA_WEST_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8729;
+    public const EPSG_NAD83_GEORGIA_WEST_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8729';
 
     /**
      * NAD83 / Idaho Central (ftUS) + NAVD88 height (ftUS)
@@ -1241,7 +1241,7 @@ class Compound extends CoordinateReferenceSystem
      * Lincoln; Minidoka; Twin Falls.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_IDAHO_CENTRAL_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8731;
+    public const EPSG_NAD83_IDAHO_CENTRAL_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8731';
 
     /**
      * NAD83 / Idaho East (ftUS) + NAVD88 height (ftUS)
@@ -1249,7 +1249,7 @@ class Compound extends CoordinateReferenceSystem
      * Franklin; Fremont; Jefferson; Madison; Oneida; Power; Teton.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_IDAHO_EAST_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8730;
+    public const EPSG_NAD83_IDAHO_EAST_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8730';
 
     /**
      * NAD83 / Idaho West (ftUS) + NAVD88 height (ftUS)
@@ -1258,7 +1258,7 @@ class Compound extends CoordinateReferenceSystem
      * Washington.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_IDAHO_WEST_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8732;
+    public const EPSG_NAD83_IDAHO_WEST_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8732';
 
     /**
      * NAD83 / Illinois East (ftUS) + NAVD88 height (ftUS)
@@ -1269,7 +1269,7 @@ class Compound extends CoordinateReferenceSystem
      * Vermilion; Wabash; Wayne; White; Will; Williamson.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_ILLINOIS_EAST_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8733;
+    public const EPSG_NAD83_ILLINOIS_EAST_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8733';
 
     /**
      * NAD83 / Illinois West (ftUS) + NAVD88 height (ftUS)
@@ -1280,7 +1280,7 @@ class Compound extends CoordinateReferenceSystem
      * Tazewell; Union; Warren; Washington; Whiteside; Winnebago; Woodford.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_ILLINOIS_WEST_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8734;
+    public const EPSG_NAD83_ILLINOIS_WEST_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8734';
 
     /**
      * NAD83 / Indiana East (ftUS) + NAVD88 height (ftUS)
@@ -1291,7 +1291,7 @@ class Compound extends CoordinateReferenceSystem
      * Tipton; Union; Wabash; Washington; Wayne; Wells; Whitley.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_INDIANA_EAST_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8735;
+    public const EPSG_NAD83_INDIANA_EAST_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8735';
 
     /**
      * NAD83 / Indiana West (ftUS) + NAVD88 height (ftUS)
@@ -1301,7 +1301,7 @@ class Compound extends CoordinateReferenceSystem
      * Tippecanoe; Vanderburgh; Vermillion; Vigo; Warren; Warrick; White.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_INDIANA_WEST_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8736;
+    public const EPSG_NAD83_INDIANA_WEST_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8736';
 
     /**
      * NAD83 / Iowa North (ftUS) + NAVD88 height (ftUS)
@@ -1312,7 +1312,7 @@ class Compound extends CoordinateReferenceSystem
      * Pocahontas; Sac; Sioux; Story; Tama; Webster; Winnebago; Winneshiek; Woodbury; Worth; Wright.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_IOWA_NORTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8737;
+    public const EPSG_NAD83_IOWA_NORTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8737';
 
     /**
      * NAD83 / Iowa South (ftUS) + NAVD88 height (ftUS)
@@ -1322,7 +1322,7 @@ class Compound extends CoordinateReferenceSystem
      * Poweshiek; Ringgold; Scott; Shelby; Taylor; Union; Van Buren; Wapello; Warren; Washington; Wayne.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_IOWA_SOUTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8738;
+    public const EPSG_NAD83_IOWA_SOUTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8738';
 
     /**
      * NAD83 / Kansas North (ftUS) + NAVD88 height (ftUS)
@@ -1333,7 +1333,7 @@ class Compound extends CoordinateReferenceSystem
      * Washington; Wyandotte.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_KANSAS_NORTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8739;
+    public const EPSG_NAD83_KANSAS_NORTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8739';
 
     /**
      * NAD83 / Kansas South (ftUS) + NAVD88 height (ftUS)
@@ -1344,7 +1344,7 @@ class Compound extends CoordinateReferenceSystem
      * Rush; Scott; Sedgwick; Seward; Stafford; Stanton; Stevens; Sumner; Wichita; Wilson; Woodson.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_KANSAS_SOUTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8740;
+    public const EPSG_NAD83_KANSAS_SOUTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8740';
 
     /**
      * NAD83 / Kentucky North (ftUS) + NAVD88 height (ftUS)
@@ -1354,7 +1354,7 @@ class Compound extends CoordinateReferenceSystem
      * Owen; Pendleton; Robertson; Rowan; Scott; Shelby; Spencer; Trimble; Woodford.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_KENTUCKY_NORTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8741;
+    public const EPSG_NAD83_KENTUCKY_NORTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8741';
 
     /**
      * NAD83 / Kentucky South (ftUS) + NAVD88 height (ftUS)
@@ -1367,7 +1367,7 @@ class Compound extends CoordinateReferenceSystem
      * Simpson; Taylor; Todd; Trigg; Union; Warren; Washington; Wayne; Webster; Whitley; Wolfe.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_KENTUCKY_SOUTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8742;
+    public const EPSG_NAD83_KENTUCKY_SOUTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8742';
 
     /**
      * NAD83 / Louisiana North (ftUS) + NAVD88 height (ftUS)
@@ -1377,7 +1377,7 @@ class Compound extends CoordinateReferenceSystem
      * Winn.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_LOUISIANA_NORTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8743;
+    public const EPSG_NAD83_LOUISIANA_NORTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8743';
 
     /**
      * NAD83 / Louisiana South (ftUS) + NAVD88 height (ftUS)
@@ -1388,7 +1388,7 @@ class Compound extends CoordinateReferenceSystem
      * Washington; West Baton Rouge; West Feliciana.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_LOUISIANA_SOUTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8744;
+    public const EPSG_NAD83_LOUISIANA_SOUTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8744';
 
     /**
      * NAD83 / Maine East (ftUS) + NAVD88 height (ftUS)
@@ -1396,7 +1396,7 @@ class Compound extends CoordinateReferenceSystem
      * Washington.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_MAINE_EAST_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8745;
+    public const EPSG_NAD83_MAINE_EAST_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8745';
 
     /**
      * NAD83 / Maine West (ftUS) + NAVD88 height (ftUS)
@@ -1404,7 +1404,7 @@ class Compound extends CoordinateReferenceSystem
      * Sagadahoc; Somerset; York.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_MAINE_WEST_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8746;
+    public const EPSG_NAD83_MAINE_WEST_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8746';
 
     /**
      * NAD83 / Maryland (ftUS) + NAVD88 height (ftUS)
@@ -1413,14 +1413,14 @@ class Compound extends CoordinateReferenceSystem
      * Queen Annes; Somerset; St Marys; Talbot; Washington; Wicomico; Worcester.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_MARYLAND_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8747;
+    public const EPSG_NAD83_MARYLAND_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8747';
 
     /**
      * NAD83 / Massachusetts Island (ftUS) + NAVD88 height (ftUS)
      * Extent: United States (USA) - Massachusetts offshore - counties of Dukes; Nantucket.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_MASSACHUSETTS_ISLAND_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8749;
+    public const EPSG_NAD83_MASSACHUSETTS_ISLAND_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8749';
 
     /**
      * NAD83 / Massachusetts Mainland (ftUS) + NAVD88 height (ftUS)
@@ -1428,7 +1428,7 @@ class Compound extends CoordinateReferenceSystem
      * Franklin; Hampden; Hampshire; Middlesex; Norfolk; Plymouth; Suffolk; Worcester.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_MASSACHUSETTS_MAINLAND_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8748;
+    public const EPSG_NAD83_MASSACHUSETTS_MAINLAND_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8748';
 
     /**
      * NAD83 / Michigan Central (ft) + NAVD88 height (ft)
@@ -1437,7 +1437,7 @@ class Compound extends CoordinateReferenceSystem
      * Missaukee; Montmorency; Ogemaw; Osceola; Oscoda; Otsego; Presque Isle; Roscommon; Wexford.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_MICHIGAN_CENTRAL_FT_PLUS_NAVD88_HEIGHT_FT = 8704;
+    public const EPSG_NAD83_MICHIGAN_CENTRAL_FT_PLUS_NAVD88_HEIGHT_FT = 'urn:ogc:def:crs:EPSG::8704';
 
     /**
      * NAD83 / Michigan North (ft) + NAVD88 height (ft)
@@ -1446,7 +1446,7 @@ class Compound extends CoordinateReferenceSystem
      * Schoolcraft.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_MICHIGAN_NORTH_FT_PLUS_NAVD88_HEIGHT_FT = 8703;
+    public const EPSG_NAD83_MICHIGAN_NORTH_FT_PLUS_NAVD88_HEIGHT_FT = 'urn:ogc:def:crs:EPSG::8703';
 
     /**
      * NAD83 / Michigan South (ft) + NAVD88 height (ft)
@@ -1456,7 +1456,7 @@ class Compound extends CoordinateReferenceSystem
      * Saginaw; Sanilac; Shiawassee; St Clair; St Joseph; Tuscola; Van Buren; Washtenaw; Wayne.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_MICHIGAN_SOUTH_FT_PLUS_NAVD88_HEIGHT_FT = 8705;
+    public const EPSG_NAD83_MICHIGAN_SOUTH_FT_PLUS_NAVD88_HEIGHT_FT = 'urn:ogc:def:crs:EPSG::8705';
 
     /**
      * NAD83 / Minnesota Central (ftUS) + NAVD88 height (ftUS)
@@ -1465,7 +1465,7 @@ class Compound extends CoordinateReferenceSystem
      * Todd; Traverse; Wadena; Wilkin.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_MINNESOTA_CENTRAL_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8751;
+    public const EPSG_NAD83_MINNESOTA_CENTRAL_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8751';
 
     /**
      * NAD83 / Minnesota North (ftUS) + NAVD88 height (ftUS)
@@ -1473,7 +1473,7 @@ class Compound extends CoordinateReferenceSystem
      * Lake; Lake of the Woods; Mahnomen; Marshall; Norman; Pennington; Polk; Red Lake; Roseau; St Louis.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_MINNESOTA_NORTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8750;
+    public const EPSG_NAD83_MINNESOTA_NORTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8750';
 
     /**
      * NAD83 / Minnesota South (ftUS) + NAVD88 height (ftUS)
@@ -1484,7 +1484,7 @@ class Compound extends CoordinateReferenceSystem
      * Watonwan; Winona; Wright; Yellow Medicine.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_MINNESOTA_SOUTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8752;
+    public const EPSG_NAD83_MINNESOTA_SOUTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8752';
 
     /**
      * NAD83 / Mississippi East (ftUS) + NAVD88 height (ftUS)
@@ -1494,7 +1494,7 @@ class Compound extends CoordinateReferenceSystem
      * River; Perry; Pontotoc; Prentiss; Scott; Smith; Stone; Tippah; Tishomingo; Union; Wayne; Webster; Winston.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_MISSISSIPPI_EAST_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8753;
+    public const EPSG_NAD83_MISSISSIPPI_EAST_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8753';
 
     /**
      * NAD83 / Mississippi West (ftUS) + NAVD88 height (ftUS)
@@ -1504,7 +1504,7 @@ class Compound extends CoordinateReferenceSystem
      * Tallahatchie; Tate; Tunica; Walthall; Warren; Washington; Wilkinson; Yalobusha; Yazoo.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_MISSISSIPPI_WEST_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8754;
+    public const EPSG_NAD83_MISSISSIPPI_WEST_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8754';
 
     /**
      * NAD83 / Missouri Central + NAVD88 height
@@ -1514,7 +1514,7 @@ class Compound extends CoordinateReferenceSystem
      * Pulaski; Putnam; Randolph; Saline; Schuyler; Scotland; Shelby; Stone; Sullivan; Taney; Texas; Webster; Wright.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_MISSOURI_CENTRAL_PLUS_NAVD88_HEIGHT = 8814;
+    public const EPSG_NAD83_MISSOURI_CENTRAL_PLUS_NAVD88_HEIGHT = 'urn:ogc:def:crs:EPSG::8814';
 
     /**
      * NAD83 / Missouri East + NAVD88 height
@@ -1524,7 +1524,7 @@ class Compound extends CoordinateReferenceSystem
      * Louis; Ste. Genevieve; Stoddard; Warren; Washington; Wayne.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_MISSOURI_EAST_PLUS_NAVD88_HEIGHT = 8813;
+    public const EPSG_NAD83_MISSOURI_EAST_PLUS_NAVD88_HEIGHT = 'urn:ogc:def:crs:EPSG::8813';
 
     /**
      * NAD83 / Missouri West + NAVD88 height
@@ -1533,7 +1533,7 @@ class Compound extends CoordinateReferenceSystem
      * Lafayette; Lawrence; McDonald; Newton; Nodaway; Platte; Ray; St Clair; Vernon; Worth.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_MISSOURI_WEST_PLUS_NAVD88_HEIGHT = 8815;
+    public const EPSG_NAD83_MISSOURI_WEST_PLUS_NAVD88_HEIGHT = 'urn:ogc:def:crs:EPSG::8815';
 
     /**
      * NAD83 / Montana (ft) + NAVD88 height (ft)
@@ -1545,7 +1545,7 @@ class Compound extends CoordinateReferenceSystem
      * Treasure; Valley; Wheatland; Wibaux; Yellowstone.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_MONTANA_FT_PLUS_NAVD88_HEIGHT_FT = 8706;
+    public const EPSG_NAD83_MONTANA_FT_PLUS_NAVD88_HEIGHT_FT = 'urn:ogc:def:crs:EPSG::8706';
 
     /**
      * NAD83 / Nebraska (ftUS) + NAVD88 height (ftUS)
@@ -1559,21 +1559,21 @@ class Compound extends CoordinateReferenceSystem
      * Thurston; Valley; Washington; Wayne; Webster; Wheeler; York.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_NEBRASKA_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8755;
+    public const EPSG_NAD83_NEBRASKA_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8755';
 
     /**
      * NAD83 / Nevada Central (ftUS) + NAVD88 height (ftUS)
      * Extent: United States (USA) - Nevada - counties of Lander; Nye.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_NEVADA_CENTRAL_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8757;
+    public const EPSG_NAD83_NEVADA_CENTRAL_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8757';
 
     /**
      * NAD83 / Nevada East (ftUS) + NAVD88 height (ftUS)
      * Extent: United States (USA) - Nevada - counties of Clark; Elko; Eureka; Lincoln; White Pine.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_NEVADA_EAST_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8756;
+    public const EPSG_NAD83_NEVADA_EAST_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8756';
 
     /**
      * NAD83 / Nevada West (ftUS) + NAVD88 height (ftUS)
@@ -1581,7 +1581,7 @@ class Compound extends CoordinateReferenceSystem
      * Pershing; Storey; Washoe.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_NEVADA_WEST_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8758;
+    public const EPSG_NAD83_NEVADA_WEST_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8758';
 
     /**
      * NAD83 / New Hampshire (ftUS) + NAVD88 height (ftUS)
@@ -1589,7 +1589,7 @@ class Compound extends CoordinateReferenceSystem
      * Hillsborough; Merrimack; Rockingham; Strafford; Sullivan.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_NEW_HAMPSHIRE_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8759;
+    public const EPSG_NAD83_NEW_HAMPSHIRE_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8759';
 
     /**
      * NAD83 / New Jersey (ftUS) + NAVD88 height (ftUS)
@@ -1598,7 +1598,7 @@ class Compound extends CoordinateReferenceSystem
      * Somerset; Sussex; Union; Warren.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_NEW_JERSEY_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8760;
+    public const EPSG_NAD83_NEW_JERSEY_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8760';
 
     /**
      * NAD83 / New Mexico Central (ftUS) + NAVD88 height (ftUS)
@@ -1606,7 +1606,7 @@ class Compound extends CoordinateReferenceSystem
      * Arriba; Sandoval; Santa Fe; Socorro; Taos; Torrance; Valencia.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_NEW_MEXICO_CENTRAL_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8762;
+    public const EPSG_NAD83_NEW_MEXICO_CENTRAL_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8762';
 
     /**
      * NAD83 / New Mexico East (ftUS) + NAVD88 height (ftUS)
@@ -1614,7 +1614,7 @@ class Compound extends CoordinateReferenceSystem
      * Lea; Mora; Quay; Roosevelt; San Miguel; Union.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_NEW_MEXICO_EAST_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8761;
+    public const EPSG_NAD83_NEW_MEXICO_EAST_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8761';
 
     /**
      * NAD83 / New Mexico West (ftUS) + NAVD88 height (ftUS)
@@ -1622,7 +1622,7 @@ class Compound extends CoordinateReferenceSystem
      * Sierra.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_NEW_MEXICO_WEST_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8763;
+    public const EPSG_NAD83_NEW_MEXICO_WEST_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8763';
 
     /**
      * NAD83 / New York Central (ftUS) + NAVD88 height (ftUS)
@@ -1630,7 +1630,7 @@ class Compound extends CoordinateReferenceSystem
      * Lewis; Madison; Oneida; Onondaga; Ontario; Oswego; Schuyler; Seneca; Steuben; Tioga; Tompkins; Wayne; Yates.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_NEW_YORK_CENTRAL_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8765;
+    public const EPSG_NAD83_NEW_YORK_CENTRAL_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8765';
 
     /**
      * NAD83 / New York East (ftUS) + NAVD88 height (ftUS)
@@ -1639,14 +1639,14 @@ class Compound extends CoordinateReferenceSystem
      * Saratoga; Schenectady; Schoharie; St Lawrence; Sullivan; Ulster; Warren; Washington; Westchester.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_NEW_YORK_EAST_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8764;
+    public const EPSG_NAD83_NEW_YORK_EAST_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8764';
 
     /**
      * NAD83 / New York Long Island (ftUS) + NAVD88 height (ftUS)
      * Extent: United States (USA) - New York - counties of Bronx; Kings; Nassau; New York; Queens; Richmond; Suffolk.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_NEW_YORK_LONG_ISLAND_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8767;
+    public const EPSG_NAD83_NEW_YORK_LONG_ISLAND_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8767';
 
     /**
      * NAD83 / New York West (ftUS) + NAVD88 height (ftUS)
@@ -1654,7 +1654,7 @@ class Compound extends CoordinateReferenceSystem
      * Livingston; Monroe; Niagara; Orleans; Wyoming.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_NEW_YORK_WEST_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8766;
+    public const EPSG_NAD83_NEW_YORK_WEST_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8766';
 
     /**
      * NAD83 / North Carolina (ftUS) + NAVD88 height (ftUS)
@@ -1669,7 +1669,7 @@ class Compound extends CoordinateReferenceSystem
      * Vance; Wake; Warren; Washington; Watauga; Wayne; Wilkes; Wilson; Yadkin; Yancey.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_NORTH_CAROLINA_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8768;
+    public const EPSG_NAD83_NORTH_CAROLINA_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8768';
 
     /**
      * NAD83 / North Dakota North (ft) + NAVD88 height (ft)
@@ -1678,7 +1678,7 @@ class Compound extends CoordinateReferenceSystem
      * Rolette; Sheridan; Steele; Towner; Traill; Walsh; Ward; Wells; Williams.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_NORTH_DAKOTA_NORTH_FT_PLUS_NAVD88_HEIGHT_FT = 8707;
+    public const EPSG_NAD83_NORTH_DAKOTA_NORTH_FT_PLUS_NAVD88_HEIGHT_FT = 'urn:ogc:def:crs:EPSG::8707';
 
     /**
      * NAD83 / North Dakota South (ft) + NAVD88 height (ft)
@@ -1687,7 +1687,7 @@ class Compound extends CoordinateReferenceSystem
      * Oliver; Ransom; Richland; Sargent; Sioux; Slope; Stark; Stutsman.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_NORTH_DAKOTA_SOUTH_FT_PLUS_NAVD88_HEIGHT_FT = 8708;
+    public const EPSG_NAD83_NORTH_DAKOTA_SOUTH_FT_PLUS_NAVD88_HEIGHT_FT = 'urn:ogc:def:crs:EPSG::8708';
 
     /**
      * NAD83 / Ohio North (ftUS) + NAVD88 height (ftUS)
@@ -1698,7 +1698,7 @@ class Compound extends CoordinateReferenceSystem
      * Wert; Wayne; Williams; Wood; Wyandot.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_OHIO_NORTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8769;
+    public const EPSG_NAD83_OHIO_NORTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8769';
 
     /**
      * NAD83 / Ohio South (ftUS) + NAVD88 height (ftUS)
@@ -1708,7 +1708,7 @@ class Compound extends CoordinateReferenceSystem
      * Pickaway; Pike; Preble; Ross; Scioto; Vinton; Warren; Washington.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_OHIO_SOUTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8770;
+    public const EPSG_NAD83_OHIO_SOUTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8770';
 
     /**
      * NAD83 / Oklahoma North (ftUS) + NAVD88 height (ftUS)
@@ -1718,7 +1718,7 @@ class Compound extends CoordinateReferenceSystem
      * Mills; Rogers; Sequoyah; Texas; Tulsa; Wagoner; Washington; Woods; Woodward.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_OKLAHOMA_NORTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8771;
+    public const EPSG_NAD83_OKLAHOMA_NORTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8771';
 
     /**
      * NAD83 / Oklahoma South (ftUS) + NAVD88 height (ftUS)
@@ -1728,7 +1728,7 @@ class Compound extends CoordinateReferenceSystem
      * Pushmataha; Seminole; Stephens; Tillman; Washita.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_OKLAHOMA_SOUTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8772;
+    public const EPSG_NAD83_OKLAHOMA_SOUTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8772';
 
     /**
      * NAD83 / Oregon North (ft) + NAVD88 height (ft)
@@ -1737,7 +1737,7 @@ class Compound extends CoordinateReferenceSystem
      * Wallowa; Wasco; Washington; Wheeler; Yamhill.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_OREGON_NORTH_FT_PLUS_NAVD88_HEIGHT_FT = 8709;
+    public const EPSG_NAD83_OREGON_NORTH_FT_PLUS_NAVD88_HEIGHT_FT = 'urn:ogc:def:crs:EPSG::8709';
 
     /**
      * NAD83 / Oregon South (ft) + NAVD88 height (ft)
@@ -1745,7 +1745,7 @@ class Compound extends CoordinateReferenceSystem
      * Josephine; Klamath; Lake; Lane; Malheur.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_OREGON_SOUTH_FT_PLUS_NAVD88_HEIGHT_FT = 8710;
+    public const EPSG_NAD83_OREGON_SOUTH_FT_PLUS_NAVD88_HEIGHT_FT = 'urn:ogc:def:crs:EPSG::8710';
 
     /**
      * NAD83 / Pennsylvania North (ftUS) + NAVD88 height (ftUS)
@@ -1755,7 +1755,7 @@ class Compound extends CoordinateReferenceSystem
      * Wyoming.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_PENNSYLVANIA_NORTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8773;
+    public const EPSG_NAD83_PENNSYLVANIA_NORTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8773';
 
     /**
      * NAD83 / Pennsylvania South (ftUS) + NAVD88 height (ftUS)
@@ -1765,14 +1765,14 @@ class Compound extends CoordinateReferenceSystem
      * Philadelphia; Schuylkill; Snyder; Somerset; Washington; Westmoreland; York.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_PENNSYLVANIA_SOUTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8774;
+    public const EPSG_NAD83_PENNSYLVANIA_SOUTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8774';
 
     /**
      * NAD83 / Rhode Island (ftUS) + NAVD88 height (ftUS)
      * Extent: United States (USA) - Rhode Island - counties of Bristol; Kent; Newport; Providence; Washington.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_RHODE_ISLAND_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8775;
+    public const EPSG_NAD83_RHODE_ISLAND_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8775';
 
     /**
      * NAD83 / South Carolina (ft) + NAVD88 height (ft)
@@ -1783,7 +1783,7 @@ class Compound extends CoordinateReferenceSystem
      * Orangeburg; Pickens; Richland; Saluda; Spartanburg; Sumter; Union; Williamsburg; York.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_SOUTH_CAROLINA_FT_PLUS_NAVD88_HEIGHT_FT = 8711;
+    public const EPSG_NAD83_SOUTH_CAROLINA_FT_PLUS_NAVD88_HEIGHT_FT = 'urn:ogc:def:crs:EPSG::8711';
 
     /**
      * NAD83 / South Dakota North (ftUS) + NAVD88 height (ftUS)
@@ -1792,7 +1792,7 @@ class Compound extends CoordinateReferenceSystem
      * Marshall; McPherson; Meade; Perkins; Potter; Roberts; Spink; Sully; Walworth; Ziebach.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_SOUTH_DAKOTA_NORTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8776;
+    public const EPSG_NAD83_SOUTH_DAKOTA_NORTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8776';
 
     /**
      * NAD83 / South Dakota South (ftUS) + NAVD88 height (ftUS)
@@ -1802,7 +1802,7 @@ class Compound extends CoordinateReferenceSystem
      * Todd; Tripp; Turner; Union; Yankton.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_SOUTH_DAKOTA_SOUTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8777;
+    public const EPSG_NAD83_SOUTH_DAKOTA_SOUTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8777';
 
     /**
      * NAD83 / Tennessee (ftUS) + NAVD88 height (ftUS)
@@ -1817,7 +1817,7 @@ class Compound extends CoordinateReferenceSystem
      * Wilson.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_TENNESSEE_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8778;
+    public const EPSG_NAD83_TENNESSEE_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8778';
 
     /**
      * NAD83 / Texas Central (ftUS) + NAVD88 height (ftUS)
@@ -1830,7 +1830,7 @@ class Compound extends CoordinateReferenceSystem
      * Trinity; Tyler; Upton; Walker; Ward; Washington; Williamson; Winkler.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_TEXAS_CENTRAL_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8781;
+    public const EPSG_NAD83_TEXAS_CENTRAL_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8781';
 
     /**
      * NAD83 / Texas North (ftUS) + NAVD88 height (ftUS)
@@ -1839,7 +1839,7 @@ class Compound extends CoordinateReferenceSystem
      * Oldham; Parmer; Potter; Randall; Roberts; Sherman; Swisher; Wheeler.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_TEXAS_NORTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8779;
+    public const EPSG_NAD83_TEXAS_NORTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8779';
 
     /**
      * NAD83 / Texas North Central (ftUS) + NAVD88 height (ftUS)
@@ -1852,7 +1852,7 @@ class Compound extends CoordinateReferenceSystem
      * Tarrant; Taylor; Terry; Throckmorton; Titus; Upshur; Van Zandt; Wichita; Wilbarger; Wise; Wood; Yoakum; Young.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_TEXAS_NORTH_CENTRAL_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8780;
+    public const EPSG_NAD83_TEXAS_NORTH_CENTRAL_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8780';
 
     /**
      * NAD83 / Texas South (ftUS) + NAVD88 height (ftUS)
@@ -1860,7 +1860,7 @@ class Compound extends CoordinateReferenceSystem
      * Kleberg; Nueces; San Patricio; Starr; Webb; Willacy; Zapata.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_TEXAS_SOUTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8783;
+    public const EPSG_NAD83_TEXAS_SOUTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8783';
 
     /**
      * NAD83 / Texas South Central (ftUS) + NAVD88 height (ftUS)
@@ -1871,7 +1871,7 @@ class Compound extends CoordinateReferenceSystem
      * Verde; Victoria; Waller; Wharton; Wilson; Zavala.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_TEXAS_SOUTH_CENTRAL_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8782;
+    public const EPSG_NAD83_TEXAS_SOUTH_CENTRAL_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8782';
 
     /**
      * NAD83 / Utah Central (ftUS) + NAVD88 height (ftUS)
@@ -1879,14 +1879,14 @@ class Compound extends CoordinateReferenceSystem
      * Sanpete; Sevier; Tooele; Uintah; Utah; Wasatch.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_UTAH_CENTRAL_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8785;
+    public const EPSG_NAD83_UTAH_CENTRAL_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8785';
 
     /**
      * NAD83 / Utah North (ftUS) + NAVD88 height (ftUS)
      * Extent: United States (USA) - Utah - counties of Box Elder; Cache; Daggett; Davis; Morgan; Rich; Summit; Weber.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_UTAH_NORTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8784;
+    public const EPSG_NAD83_UTAH_NORTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8784';
 
     /**
      * NAD83 / Utah South (ftUS) + NAVD88 height (ftUS)
@@ -1894,7 +1894,7 @@ class Compound extends CoordinateReferenceSystem
      * Wayne.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_UTAH_SOUTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8786;
+    public const EPSG_NAD83_UTAH_SOUTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8786';
 
     /**
      * NAD83 / Vermont (ftUS) + NAVD88 height (ftUS)
@@ -1902,7 +1902,7 @@ class Compound extends CoordinateReferenceSystem
      * Grand Isle; Lamoille; Orange; Orleans; Rutland; Washington; Windham; Windsor.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_VERMONT_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8787;
+    public const EPSG_NAD83_VERMONT_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8787';
 
     /**
      * NAD83 / Virginia North (ftUS) + NAVD88 height (ftUS)
@@ -1911,7 +1911,7 @@ class Compound extends CoordinateReferenceSystem
      * Rappahannock; Rockingham; Shenandoah; Spotsylvania; Stafford; Warren; Westmoreland.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_VIRGINIA_NORTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8788;
+    public const EPSG_NAD83_VIRGINIA_NORTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8788';
 
     /**
      * NAD83 / Virginia South (ftUS) + NAVD88 height (ftUS)
@@ -1926,7 +1926,7 @@ class Compound extends CoordinateReferenceSystem
      * Tazewell; Washington; Wise; Wythe; York.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_VIRGINIA_SOUTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8789;
+    public const EPSG_NAD83_VIRGINIA_SOUTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8789';
 
     /**
      * NAD83 / Washington North (ftUS) + NAVD88 height (ftUS)
@@ -1935,7 +1935,7 @@ class Compound extends CoordinateReferenceSystem
      * Snohomish; Spokane; Stevens; Whatcom.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_WASHINGTON_NORTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8790;
+    public const EPSG_NAD83_WASHINGTON_NORTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8790';
 
     /**
      * NAD83 / Washington South (ftUS) + NAVD88 height (ftUS)
@@ -1944,7 +1944,7 @@ class Compound extends CoordinateReferenceSystem
      * Pacific; Pierce; Skamania; Thurston; Wahkiakum; Walla Walla; Whitman; Yakima.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_WASHINGTON_SOUTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8791;
+    public const EPSG_NAD83_WASHINGTON_SOUTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8791';
 
     /**
      * NAD83 / West Virginia North (ftUS) + NAVD88 height (ftUS)
@@ -1953,7 +1953,7 @@ class Compound extends CoordinateReferenceSystem
      * Preston; Ritchie; Taylor; Tucker; Tyler; Wetzel; Wirt; Wood.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_WEST_VIRGINIA_NORTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8792;
+    public const EPSG_NAD83_WEST_VIRGINIA_NORTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8792';
 
     /**
      * NAD83 / West Virginia South (ftUS) + NAVD88 height (ftUS)
@@ -1962,7 +1962,7 @@ class Compound extends CoordinateReferenceSystem
      * Pendleton; Pocahontas; Putnam; Raleigh; Randolph; Roane; Summers; Upshur; Wayne; Webster; Wyoming.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_WEST_VIRGINIA_SOUTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8793;
+    public const EPSG_NAD83_WEST_VIRGINIA_SOUTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8793';
 
     /**
      * NAD83 / Wisconsin Central (ftUS) + NAVD88 height (ftUS)
@@ -1971,7 +1971,7 @@ class Compound extends CoordinateReferenceSystem
      * Polk; Portage; Rusk; Shawano; St Croix; Taylor; Trempealeau; Waupaca; Wood.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_WISCONSIN_CENTRAL_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8795;
+    public const EPSG_NAD83_WISCONSIN_CENTRAL_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8795';
 
     /**
      * NAD83 / Wisconsin North (ftUS) + NAVD88 height (ftUS)
@@ -1979,7 +1979,7 @@ class Compound extends CoordinateReferenceSystem
      * Iron; Oneida; Price; Sawyer; Vilas; Washburn.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_WISCONSIN_NORTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8794;
+    public const EPSG_NAD83_WISCONSIN_NORTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8794';
 
     /**
      * NAD83 / Wisconsin South (ftUS) + NAVD88 height (ftUS)
@@ -1989,7 +1989,7 @@ class Compound extends CoordinateReferenceSystem
      * Waushara; Winnebago.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_WISCONSIN_SOUTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8796;
+    public const EPSG_NAD83_WISCONSIN_SOUTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8796';
 
     /**
      * NAD83 / Wyoming East (ftUS) + NAVD88 height (ftUS)
@@ -1997,28 +1997,28 @@ class Compound extends CoordinateReferenceSystem
      * Niobrara; Platte; Weston.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_WYOMING_EAST_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8797;
+    public const EPSG_NAD83_WYOMING_EAST_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8797';
 
     /**
      * NAD83 / Wyoming East Central (ftUS) + NAVD88 height (ftUS)
      * Extent: United States (USA) - Wyoming - counties of Big Horn; Carbon; Johnson; Natrona; Sheridan; Washakie.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_WYOMING_EAST_CENTRAL_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8798;
+    public const EPSG_NAD83_WYOMING_EAST_CENTRAL_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8798';
 
     /**
      * NAD83 / Wyoming West (ftUS) + NAVD88 height (ftUS)
      * Extent: United States (USA) - Wyoming - counties of Lincoln; Sublette; Teton; Uinta.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_WYOMING_WEST_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8800;
+    public const EPSG_NAD83_WYOMING_WEST_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8800';
 
     /**
      * NAD83 / Wyoming West Central (ftUS) + NAVD88 height (ftUS)
      * Extent: United States (USA) - Wyoming - counties of Fremont; Hot Springs; Park; Sweetwater.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_WYOMING_WEST_CENTRAL_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 8799;
+    public const EPSG_NAD83_WYOMING_WEST_CENTRAL_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8799';
 
     /**
      * NAD83(2011) + NAVD88 height
@@ -2031,7 +2031,7 @@ class Compound extends CoordinateReferenceSystem
      * Scope: Engineering survey, topographic mapping.
      * Replaces NAD83(NSRS2007) + NAVD88 height.
      */
-    public const EPSG_NAD83_2011_PLUS_NAVD88_HEIGHT = 6349;
+    public const EPSG_NAD83_2011_PLUS_NAVD88_HEIGHT = 'urn:ogc:def:crs:EPSG::6349';
 
     /**
      * NAD83(CSRS) + CGVD2013 height
@@ -2040,7 +2040,7 @@ class Compound extends CoordinateReferenceSystem
      * Yukon.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_CSRS_PLUS_CGVD2013_HEIGHT = 6649;
+    public const EPSG_NAD83_CSRS_PLUS_CGVD2013_HEIGHT = 'urn:ogc:def:crs:EPSG::6649';
 
     /**
      * NAD83(CSRS) / UTM zone 10N + CGVD2013 height
@@ -2048,7 +2048,7 @@ class Compound extends CoordinateReferenceSystem
      * Territories, Yukon.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_CSRS_UTM_ZONE_10N_PLUS_CGVD2013_HEIGHT = 6653;
+    public const EPSG_NAD83_CSRS_UTM_ZONE_10N_PLUS_CGVD2013_HEIGHT = 'urn:ogc:def:crs:EPSG::6653';
 
     /**
      * NAD83(CSRS) / UTM zone 11N + CGVD2013 height
@@ -2056,7 +2056,7 @@ class Compound extends CoordinateReferenceSystem
      * Territories, Nunavut.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_CSRS_UTM_ZONE_11N_PLUS_CGVD2013_HEIGHT = 6654;
+    public const EPSG_NAD83_CSRS_UTM_ZONE_11N_PLUS_CGVD2013_HEIGHT = 'urn:ogc:def:crs:EPSG::6654';
 
     /**
      * NAD83(CSRS) / UTM zone 12N + CGVD2013 height
@@ -2064,49 +2064,49 @@ class Compound extends CoordinateReferenceSystem
      * Saskatchewan.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_CSRS_UTM_ZONE_12N_PLUS_CGVD2013_HEIGHT = 6655;
+    public const EPSG_NAD83_CSRS_UTM_ZONE_12N_PLUS_CGVD2013_HEIGHT = 'urn:ogc:def:crs:EPSG::6655';
 
     /**
      * NAD83(CSRS) / UTM zone 13N + CGVD2013 height
      * Extent: Canada between 108°W and 102°W onshore and offshore - Northwest Territories, Nunavut, Saskatchewan.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_CSRS_UTM_ZONE_13N_PLUS_CGVD2013_HEIGHT = 6656;
+    public const EPSG_NAD83_CSRS_UTM_ZONE_13N_PLUS_CGVD2013_HEIGHT = 'urn:ogc:def:crs:EPSG::6656';
 
     /**
      * NAD83(CSRS) / UTM zone 14N + CGVD2013 height
      * Extent: Canada between 102°W and 96°W, onshore and offshore south of 84°N - Manitoba, Nunavut, Saskatchewan.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_CSRS_UTM_ZONE_14N_PLUS_CGVD2013_HEIGHT = 6657;
+    public const EPSG_NAD83_CSRS_UTM_ZONE_14N_PLUS_CGVD2013_HEIGHT = 'urn:ogc:def:crs:EPSG::6657';
 
     /**
      * NAD83(CSRS) / UTM zone 15N + CGVD2013 height
      * Extent: Canada between 96°W and 90°W, onshore and offshore south of 84°N - Manitoba, Nunavut, Ontario.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_CSRS_UTM_ZONE_15N_PLUS_CGVD2013_HEIGHT = 6658;
+    public const EPSG_NAD83_CSRS_UTM_ZONE_15N_PLUS_CGVD2013_HEIGHT = 'urn:ogc:def:crs:EPSG::6658';
 
     /**
      * NAD83(CSRS) / UTM zone 16N + CGVD2013 height
      * Extent: Canada between 90°W and 84°W, onshore and offshore south of 84°N - Manitoba, Nunavut, Ontario.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_CSRS_UTM_ZONE_16N_PLUS_CGVD2013_HEIGHT = 6659;
+    public const EPSG_NAD83_CSRS_UTM_ZONE_16N_PLUS_CGVD2013_HEIGHT = 'urn:ogc:def:crs:EPSG::6659';
 
     /**
      * NAD83(CSRS) / UTM zone 17N + CGVD2013 height
      * Extent: Canada between 84°W and 78°W, onshore and offshore south of 84°N - Nunavut, Ontario and Quebec.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_CSRS_UTM_ZONE_17N_PLUS_CGVD2013_HEIGHT = 6660;
+    public const EPSG_NAD83_CSRS_UTM_ZONE_17N_PLUS_CGVD2013_HEIGHT = 'urn:ogc:def:crs:EPSG::6660';
 
     /**
      * NAD83(CSRS) / UTM zone 18N + CGVD2013 height
      * Extent: Canada between 78°W and 72°W, onshore and offshore south of 84°N - Nunavut, Ontario and Quebec.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_CSRS_UTM_ZONE_18N_PLUS_CGVD2013_HEIGHT = 6661;
+    public const EPSG_NAD83_CSRS_UTM_ZONE_18N_PLUS_CGVD2013_HEIGHT = 'urn:ogc:def:crs:EPSG::6661';
 
     /**
      * NAD83(CSRS) / UTM zone 19N + CGVD2013 height
@@ -2114,7 +2114,7 @@ class Compound extends CoordinateReferenceSystem
      * Quebec.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_CSRS_UTM_ZONE_19N_PLUS_CGVD2013_HEIGHT = 6662;
+    public const EPSG_NAD83_CSRS_UTM_ZONE_19N_PLUS_CGVD2013_HEIGHT = 'urn:ogc:def:crs:EPSG::6662';
 
     /**
      * NAD83(CSRS) / UTM zone 20N + CGVD2013 height
@@ -2122,28 +2122,28 @@ class Compound extends CoordinateReferenceSystem
      * Prince Edward Island, Quebec.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_CSRS_UTM_ZONE_20N_PLUS_CGVD2013_HEIGHT = 6663;
+    public const EPSG_NAD83_CSRS_UTM_ZONE_20N_PLUS_CGVD2013_HEIGHT = 'urn:ogc:def:crs:EPSG::6663';
 
     /**
      * NAD83(CSRS) / UTM zone 21N + CGVD2013 height
      * Extent: Canada between 60°W and 54°W - Newfoundland and Labrador; Nunavut; Quebec.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_CSRS_UTM_ZONE_21N_PLUS_CGVD2013_HEIGHT = 6664;
+    public const EPSG_NAD83_CSRS_UTM_ZONE_21N_PLUS_CGVD2013_HEIGHT = 'urn:ogc:def:crs:EPSG::6664';
 
     /**
      * NAD83(CSRS) / UTM zone 22N + CGVD2013 height
      * Extent: Canada between 54°W and 48°W onshore and offshore - Newfoundland and Labrador.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_CSRS_UTM_ZONE_22N_PLUS_CGVD2013_HEIGHT = 6665;
+    public const EPSG_NAD83_CSRS_UTM_ZONE_22N_PLUS_CGVD2013_HEIGHT = 'urn:ogc:def:crs:EPSG::6665';
 
     /**
      * NAD83(CSRS) / UTM zone 7N + CGVD2013 height
      * Extent: Canada west of 138°W, onshore and offshore south of 84°N - British Columbia, Yukon.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_CSRS_UTM_ZONE_7N_PLUS_CGVD2013_HEIGHT = 6650;
+    public const EPSG_NAD83_CSRS_UTM_ZONE_7N_PLUS_CGVD2013_HEIGHT = 'urn:ogc:def:crs:EPSG::6650';
 
     /**
      * NAD83(CSRS) / UTM zone 8N + CGVD2013 height
@@ -2151,7 +2151,7 @@ class Compound extends CoordinateReferenceSystem
      * Territories, Yukon.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_CSRS_UTM_ZONE_8N_PLUS_CGVD2013_HEIGHT = 6651;
+    public const EPSG_NAD83_CSRS_UTM_ZONE_8N_PLUS_CGVD2013_HEIGHT = 'urn:ogc:def:crs:EPSG::6651';
 
     /**
      * NAD83(CSRS) / UTM zone 9N + CGVD2013 height
@@ -2159,7 +2159,7 @@ class Compound extends CoordinateReferenceSystem
      * Territories, Yukon.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_CSRS_UTM_ZONE_9N_PLUS_CGVD2013_HEIGHT = 6652;
+    public const EPSG_NAD83_CSRS_UTM_ZONE_9N_PLUS_CGVD2013_HEIGHT = 'urn:ogc:def:crs:EPSG::6652';
 
     /**
      * NAD83(HARN) + NAVD88 height
@@ -2171,7 +2171,7 @@ class Compound extends CoordinateReferenceSystem
      * Wyoming.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_HARN_PLUS_NAVD88_HEIGHT = 5499;
+    public const EPSG_NAD83_HARN_PLUS_NAVD88_HEIGHT = 'urn:ogc:def:crs:EPSG::5499';
 
     /**
      * NAD83(NSRS2007) + NAVD88 height
@@ -2183,49 +2183,49 @@ class Compound extends CoordinateReferenceSystem
      * Wyoming.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NAD83_NSRS2007_PLUS_NAVD88_HEIGHT = 5500;
+    public const EPSG_NAD83_NSRS2007_PLUS_NAVD88_HEIGHT = 'urn:ogc:def:crs:EPSG::5500';
 
     /**
      * NTF (Paris) + NGF IGN69 height
      * Extent: France - mainland onshore.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NTF_PARIS_PLUS_NGF_IGN69_HEIGHT = 7400;
+    public const EPSG_NTF_PARIS_PLUS_NGF_IGN69_HEIGHT = 'urn:ogc:def:crs:EPSG::7400';
 
     /**
      * NTF (Paris) / Lambert zone I + NGF-IGN69 height
      * Extent: France mainland onshore north of 53.5 grads North (48°09'N).
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NTF_PARIS_LAMBERT_ZONE_I_PLUS_NGF_IGN69_HEIGHT = 5707;
+    public const EPSG_NTF_PARIS_LAMBERT_ZONE_I_PLUS_NGF_IGN69_HEIGHT = 'urn:ogc:def:crs:EPSG::5707';
 
     /**
      * NTF (Paris) / Lambert zone II + NGF Lallemand height
      * Extent: France - mainland onshore.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NTF_PARIS_LAMBERT_ZONE_II_PLUS_NGF_LALLEMAND_HEIGHT = 7411;
+    public const EPSG_NTF_PARIS_LAMBERT_ZONE_II_PLUS_NGF_LALLEMAND_HEIGHT = 'urn:ogc:def:crs:EPSG::7411';
 
     /**
      * NTF (Paris) / Lambert zone II + NGF-IGN69 height
      * Extent: France - mainland onshore.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NTF_PARIS_LAMBERT_ZONE_II_PLUS_NGF_IGN69_HEIGHT = 7421;
+    public const EPSG_NTF_PARIS_LAMBERT_ZONE_II_PLUS_NGF_IGN69_HEIGHT = 'urn:ogc:def:crs:EPSG::7421';
 
     /**
      * NTF (Paris) / Lambert zone III + NGF-IGN69 height
      * Extent: France - mainland onshore south of 50.5 grads North (45°27'N).
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NTF_PARIS_LAMBERT_ZONE_III_PLUS_NGF_IGN69_HEIGHT = 7422;
+    public const EPSG_NTF_PARIS_LAMBERT_ZONE_III_PLUS_NGF_IGN69_HEIGHT = 'urn:ogc:def:crs:EPSG::7422';
 
     /**
      * NTF (Paris) / Lambert zone IV + NGF-IGN78 height
      * Extent: France - Corsica onshore.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_NTF_PARIS_LAMBERT_ZONE_IV_PLUS_NGF_IGN78_HEIGHT = 5708;
+    public const EPSG_NTF_PARIS_LAMBERT_ZONE_IV_PLUS_NGF_IGN78_HEIGHT = 'urn:ogc:def:crs:EPSG::5708';
 
     /**
      * OSGB 1936 / British National Grid + ODN height
@@ -2233,28 +2233,28 @@ class Compound extends CoordinateReferenceSystem
      * Inner Hebrides.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_OSGB_1936_BRITISH_NATIONAL_GRID_PLUS_ODN_HEIGHT = 7405;
+    public const EPSG_OSGB_1936_BRITISH_NATIONAL_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::7405';
 
     /**
      * PSHD93
      * Extent: Oman - onshore. Includes Musandam and the Kuria Muria (Al Hallaniyah) islands.
      * Scope: Oil and gas exploration and production.
      */
-    public const EPSG_PSHD93 = 7410;
+    public const EPSG_PSHD93 = 'urn:ogc:def:crs:EPSG::7410';
 
     /**
      * RGF93 / Lambert-93 + NGF-IGN69 height
      * Extent: France - mainland onshore.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_RGF93_LAMBERT_93_PLUS_NGF_IGN69_HEIGHT = 5698;
+    public const EPSG_RGF93_LAMBERT_93_PLUS_NGF_IGN69_HEIGHT = 'urn:ogc:def:crs:EPSG::5698';
 
     /**
      * RGF93 / Lambert-93 + NGF-IGN78 height
      * Extent: France - Corsica onshore.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_RGF93_LAMBERT_93_PLUS_NGF_IGN78_HEIGHT = 5699;
+    public const EPSG_RGF93_LAMBERT_93_PLUS_NGF_IGN78_HEIGHT = 'urn:ogc:def:crs:EPSG::5699';
 
     /**
      * RT90 + RH70 height
@@ -2262,35 +2262,35 @@ class Compound extends CoordinateReferenceSystem
      * Scope: Engineering survey, topographic mapping.
      * When combined with geoid model RN92 forms geographic 3D CRS RR92.
      */
-    public const EPSG_RT90_PLUS_RH70_HEIGHT = 7404;
+    public const EPSG_RT90_PLUS_RH70_HEIGHT = 'urn:ogc:def:crs:EPSG::7404';
 
     /**
      * SHMG2015 +  SHVD2015 height
      * Extent: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore.
      * Scope: Topographic mapping.
      */
-    public const EPSG_SHMG2015_PLUS_SHVD2015_HEIGHT = 7956;
+    public const EPSG_SHMG2015_PLUS_SHVD2015_HEIGHT = 'urn:ogc:def:crs:EPSG::7956';
 
     /**
      * SVY21 + SHD height
      * Extent: Singapore - onshore and offshore.
      * Scope: Engineering survey, GIS, topographic mapping.
      */
-    public const EPSG_SVY21_PLUS_SHD_HEIGHT = 6917;
+    public const EPSG_SVY21_PLUS_SHD_HEIGHT = 'urn:ogc:def:crs:EPSG::6917';
 
     /**
      * SVY21 / Singapore TM + SHD height
      * Extent: Singapore - onshore and offshore.
      * Scope: Engineering survey, GIS, topographic mapping.
      */
-    public const EPSG_SVY21_SINGAPORE_TM_PLUS_SHD_HEIGHT = 6927;
+    public const EPSG_SVY21_SINGAPORE_TM_PLUS_SHD_HEIGHT = 'urn:ogc:def:crs:EPSG::6927';
 
     /**
      * SWEREF99 + RH2000 height
      * Extent: Sweden - onshore.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_SWEREF99_PLUS_RH2000_HEIGHT = 5628;
+    public const EPSG_SWEREF99_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5628';
 
     /**
      * SWEREF99 12 00 + RH2000 height
@@ -2298,7 +2298,7 @@ class Compound extends CoordinateReferenceSystem
      * source for map.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_SWEREF99_12_00_PLUS_RH2000_HEIGHT = 5846;
+    public const EPSG_SWEREF99_12_00_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5846';
 
     /**
      * SWEREF99 13 30 + RH2000 height
@@ -2306,7 +2306,7 @@ class Compound extends CoordinateReferenceSystem
      * information source for map.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_SWEREF99_13_30_PLUS_RH2000_HEIGHT = 5847;
+    public const EPSG_SWEREF99_13_30_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5847';
 
     /**
      * SWEREF99 14 15 + RH2000 height
@@ -2314,7 +2314,7 @@ class Compound extends CoordinateReferenceSystem
      * information source for map.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_SWEREF99_14_15_PLUS_RH2000_HEIGHT = 5851;
+    public const EPSG_SWEREF99_14_15_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5851';
 
     /**
      * SWEREF99 15 00 + RH2000 height
@@ -2322,7 +2322,7 @@ class Compound extends CoordinateReferenceSystem
      * information source for map.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_SWEREF99_15_00_PLUS_RH2000_HEIGHT = 5848;
+    public const EPSG_SWEREF99_15_00_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5848';
 
     /**
      * SWEREF99 15 45 + RH2000 height
@@ -2330,7 +2330,7 @@ class Compound extends CoordinateReferenceSystem
      * See information source for map.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_SWEREF99_15_45_PLUS_RH2000_HEIGHT = 5852;
+    public const EPSG_SWEREF99_15_45_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5852';
 
     /**
      * SWEREF99 16 30 + RH2000 height
@@ -2338,7 +2338,7 @@ class Compound extends CoordinateReferenceSystem
      * information source for map.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_SWEREF99_16_30_PLUS_RH2000_HEIGHT = 5849;
+    public const EPSG_SWEREF99_16_30_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5849';
 
     /**
      * SWEREF99 17 15 + RH2000 height
@@ -2346,7 +2346,7 @@ class Compound extends CoordinateReferenceSystem
      * 62°05'N. See information source for map.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_SWEREF99_17_15_PLUS_RH2000_HEIGHT = 5853;
+    public const EPSG_SWEREF99_17_15_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5853';
 
     /**
      * SWEREF99 18 00 + RH2000 height
@@ -2354,7 +2354,7 @@ class Compound extends CoordinateReferenceSystem
      * information source for map.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_SWEREF99_18_00_PLUS_RH2000_HEIGHT = 5850;
+    public const EPSG_SWEREF99_18_00_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5850';
 
     /**
      * SWEREF99 18 45 + RH2000 height
@@ -2362,7 +2362,7 @@ class Compound extends CoordinateReferenceSystem
      * and 66°N. Also Gotland. See information source for map.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_SWEREF99_18_45_PLUS_RH2000_HEIGHT = 5854;
+    public const EPSG_SWEREF99_18_45_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5854';
 
     /**
      * SWEREF99 20 15 + RH2000 height
@@ -2370,7 +2370,7 @@ class Compound extends CoordinateReferenceSystem
      * south of approximately 65°05'N. Also Norbotten west of approximately 23°20'E. See information source for map.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_SWEREF99_20_15_PLUS_RH2000_HEIGHT = 5855;
+    public const EPSG_SWEREF99_20_15_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5855';
 
     /**
      * SWEREF99 21 45 + RH2000 height
@@ -2378,35 +2378,35 @@ class Compound extends CoordinateReferenceSystem
      * information source for map.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_SWEREF99_21_45_PLUS_RH2000_HEIGHT = 5856;
+    public const EPSG_SWEREF99_21_45_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5856';
 
     /**
      * SWEREF99 23 15 + RH2000 height
      * Extent: Sweden - communes east of approximately 21°50'E. See information source for map.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_SWEREF99_23_15_PLUS_RH2000_HEIGHT = 5857;
+    public const EPSG_SWEREF99_23_15_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5857';
 
     /**
      * SWEREF99 TM + RH2000 height
      * Extent: Sweden - onshore.
      * Scope: Engineering survey, topographic mapping.
      */
-    public const EPSG_SWEREF99_TM_PLUS_RH2000_HEIGHT = 5845;
+    public const EPSG_SWEREF99_TM_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5845';
 
     /**
      * St. Helena Tritan / UTM zone 30S +  Tritan 2011 height
      * Extent: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore.
      * Scope: Engineering survey including Airport and Ruperts Wharf construction.
      */
-    public const EPSG_ST_HELENA_TRITAN_UTM_ZONE_30S_PLUS_TRITAN_2011_HEIGHT = 7955;
+    public const EPSG_ST_HELENA_TRITAN_UTM_ZONE_30S_PLUS_TRITAN_2011_HEIGHT = 'urn:ogc:def:crs:EPSG::7955';
 
     /**
      * TPEN11 Grid + ODN height
      * Extent: UK - on or related to the Trans-Pennine rail route from Liverpool via Manchester to Bradford and Leeds.
      * Scope: Engineering survey and topographic mapping for railway applications.
      */
-    public const EPSG_TPEN11_GRID_PLUS_ODN_HEIGHT = 9368;
+    public const EPSG_TPEN11_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::9368';
 
     /**
      * Tokyo + JSLD69 height
@@ -2414,7 +2414,7 @@ class Compound extends CoordinateReferenceSystem
      * Scope: Engineering survey, topographic mapping.
      * Replaced by JGD2000 + JGD2000 (vertical) (CRS code 6696) from April 2002).
      */
-    public const EPSG_TOKYO_PLUS_JSLD69_HEIGHT = 7414;
+    public const EPSG_TOKYO_PLUS_JSLD69_HEIGHT = 'urn:ogc:def:crs:EPSG::7414';
 
     /**
      * Tokyo + JSLD72 height
@@ -2422,7 +2422,7 @@ class Compound extends CoordinateReferenceSystem
      * Scope: Engineering survey, topographic mapping.
      * Replaced by JGD2000 + JGD2000 (vertical) (CRS code 6696) from April 2002).
      */
-    public const EPSG_TOKYO_PLUS_JSLD72_HEIGHT = 6700;
+    public const EPSG_TOKYO_PLUS_JSLD72_HEIGHT = 'urn:ogc:def:crs:EPSG::6700';
 
     /**
      * WGS 84 / World Mercator +  EGM2008 height
@@ -2431,7 +2431,7 @@ class Compound extends CoordinateReferenceSystem
      * Note: for preliminary concept visualisation only. Detailed design will require use of appropriate low-distortion
      * local projected and vertical CRSs.
      */
-    public const EPSG_WGS_84_WORLD_MERCATOR_PLUS_EGM2008_HEIGHT = 6893;
+    public const EPSG_WGS_84_WORLD_MERCATOR_PLUS_EGM2008_HEIGHT = 'urn:ogc:def:crs:EPSG::6893';
 
     /**
      * @var Geocentric|Geographic|Projected
@@ -2445,18 +2445,18 @@ class Compound extends CoordinateReferenceSystem
      * @param Geocentric|Geographic|Projected $horizontal
      */
     public function __construct(
-        int $epsgCode,
+        string $srid,
         CoordinateReferenceSystem $horizontal,
         Vertical $vertical
     ) {
-        $this->epsgCode = $epsgCode;
+        $this->srid = $srid;
         $this->horizontal = $horizontal;
         $this->vertical = $vertical;
     }
 
-    public function getEpsgCode(): int
+    public function getSRID(): string
     {
-        return $this->epsgCode;
+        return $this->srid;
     }
 
     public function getHorizontal(): CoordinateReferenceSystem

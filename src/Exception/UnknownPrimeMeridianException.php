@@ -8,6 +8,6 @@ declare(strict_types=1);
 
 namespace PHPCoord\Exception;
 
-class UnknownPrimeMeridianException extends UnknownEPSGCodeException
+class UnknownPrimeMeridianException extends UnknownSRIDException
 {
 }

@@ -47,17 +47,17 @@ class Repository
     {
         if (!static::$ellipsoidData) {
             $connection = $this->getConnection();
-            $sql = '
+            $sql = "
             SELECT
-                el.ellipsoid_code,
+                'urn:ogc:def:ellipsoid:EPSG::' || el.ellipsoid_code AS ellipsoid_code,
                 el.ellipsoid_name,
                 el.semi_major_axis,
                 el.semi_minor_axis,
                 el.inv_flattening,
-                el.uom_code,
+                'urn:ogc:def:uom:EPSG::' || el.uom_code AS uom_code,
                 el.deprecated
             FROM epsg_ellipsoid el
-        ';
+        ";
 
             $result = $connection->query($sql);
 
@@ -80,11 +80,11 @@ class Repository
             $connection = $this->getConnection();
             $sql = "
             SELECT
-                d.datum_code,
+                'urn:ogc:def:datum:EPSG::' || d.datum_code AS datum_code,
                 d.datum_name,
                 d.datum_type,
-                d.ellipsoid_code,
-                d.prime_meridian_code,
+                'urn:ogc:def:ellipsoid:EPSG::' || d.ellipsoid_code AS ellipsoid_code,
+                'urn:ogc:def:meridian:EPSG::' || d.prime_meridian_code AS prime_meridian_code,
                 d.conventional_rs_code,
                 d.frame_reference_epoch,
                 d.deprecated
@@ -106,14 +106,14 @@ class Repository
     {
         if (!static::$datumEnsembleData) {
             $connection = $this->getConnection();
-            $sql = '
+            $sql = "
             SELECT
-                d.datum_ensemble_code,
-                d.datum_code,
+                'urn:ogc:def:datum:EPSG::' || d.datum_ensemble_code AS datum_ensemble_code,
+                'urn:ogc:def:datum:EPSG::' || d.datum_code AS datum_code,
                 d.datum_sequence
             FROM epsg_datumensemblemember d
             ORDER BY d.datum_sequence
-            ';
+            ";
 
             $result = $connection->query($sql);
 
@@ -133,17 +133,17 @@ class Repository
     {
         if (!static::$unitsOfMeasureData) {
             $connection = $this->getConnection();
-            $sql = '
+            $sql = "
             SELECT
-                m.uom_code,
+               'urn:ogc:def:uom:EPSG::' ||  m.uom_code AS uom_code,
                 m.unit_of_meas_name,
                 m.unit_of_meas_type,
-                m.target_uom_code,
+                'urn:ogc:def:uom:EPSG::' || m.target_uom_code AS target_uom_code,
                 m.factor_b,
                 m.factor_c,
                 m.deprecated
             FROM epsg_unitofmeasure m
-            ';
+            ";
 
             $result = $connection->query($sql);
 
@@ -159,15 +159,15 @@ class Repository
     {
         if (!static::$primeMeridianData) {
             $connection = $this->getConnection();
-            $sql = '
+            $sql = "
             SELECT
-                p.prime_meridian_code,
+                'urn:ogc:def:meridian:EPSG::' || p.prime_meridian_code AS prime_meridian_code,
                 p.prime_meridian_name,
                 p.greenwich_longitude,
-                p.uom_code,
+                'urn:ogc:def:uom:EPSG::' || p.uom_code AS uom_code,
                 p.deprecated
             FROM epsg_primemeridian p
-            ';
+            ";
 
             $result = $connection->query($sql);
 
@@ -185,7 +185,7 @@ class Repository
             $connection = $this->getConnection();
             $sql = "
             SELECT
-                cs.coord_sys_code,
+                'urn:ogc:def:cs:EPSG::' || cs.coord_sys_code AS coord_sys_code,
                 cs.coord_sys_name,
                 cs.coord_sys_type,
                 cs.dimension,
@@ -212,15 +212,15 @@ class Repository
             $connection = $this->getConnection();
             $sql = "
             SELECT
-                crs.coord_ref_sys_code,
+                'urn:ogc:def:crs:EPSG::' || crs.coord_ref_sys_code AS coord_ref_sys_code,
                 crs.coord_ref_sys_kind,
                 crs.coord_ref_sys_name,
-                crs.coord_sys_code,
-                crs.datum_code,
-                crs.base_crs_code,
-                crs.projection_conv_code,
-                crs.cmpd_horizcrs_code,
-                crs.cmpd_vertcrs_code,
+                'urn:ogc:def:cs:EPSG::' || crs.coord_sys_code AS coord_sys_code,
+                'urn:ogc:def:datum:EPSG::' || crs.datum_code AS datum_code,
+                'urn:ogc:def:crs:EPSG::' || crs.base_crs_code AS base_crs_code,
+                'urn:ogc:def:coordinateOperation:EPSG::' || crs.projection_conv_code AS projection_conv_code,
+                'urn:ogc:def:crs:EPSG::' || crs.cmpd_horizcrs_code AS cmpd_horizcrs_code,
+                'urn:ogc:def:crs:EPSG::' || crs.cmpd_vertcrs_code AS cmpd_vertcrs_code,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
             WHERE crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
@@ -242,18 +242,18 @@ class Repository
     {
         if (!static::$coordinateSystemAxisData) {
             $connection = $this->getConnection();
-            $sql = '
+            $sql = "
             SELECT
-                a.coord_sys_code,
+                'urn:ogc:def:cs:EPSG::' || a.coord_sys_code AS coord_sys_code,
                 a.coord_axis_orientation,
                 a.coord_axis_abbreviation,
                 an.coord_axis_name,
-                a.uom_code,
+                'urn:ogc:def:uom:EPSG::' || a.uom_code AS uom_code,
                 a.coord_axis_order
             FROM epsg_coordinateaxis a
             JOIN epsg_coordinateaxisname an on a.coord_axis_name_code = an.coord_axis_name_code
             ORDER BY a.coord_axis_order
-            ';
+            ";
 
             $result = $connection->query($sql);
 

@@ -23,7 +23,7 @@ abstract class CoordinateSystem
 
     public const CS_TYPE_VERTICAL = 'vertical';
 
-    protected int $epsgCode;
+    protected string $srid;
 
     /**
      * @var Axis[]
@@ -32,16 +32,16 @@ abstract class CoordinateSystem
 
     private static Repository $repository;
 
-    public static function fromEPSGCode(int $epsgCode): self
+    public static function fromSRID(string $srid): self
     {
         $repository = static::$repository ?? new Repository();
         $allData = $repository->getCoordinateSystems();
 
-        if (!isset($allData[$epsgCode])) {
-            throw new UnknownCoordinateSystemException($epsgCode);
+        if (!isset($allData[$srid])) {
+            throw new UnknownCoordinateSystemException($srid);
         }
 
-        $data = $allData[$epsgCode];
+        $data = $allData[$srid];
 
         $axes = [];
         foreach ($data['axes'] as $axisData) {
@@ -54,31 +54,31 @@ abstract class CoordinateSystem
         }
 
         if ($data['coord_sys_type'] === self::CS_TYPE_CARTESIAN) {
-            return new Cartesian($epsgCode, $axes);
+            return new Cartesian($srid, $axes);
         }
 
         if ($data['coord_sys_type'] === self::CS_TYPE_ELLIPSOIDAL) {
-            return new Ellipsoidal($epsgCode, $axes);
+            return new Ellipsoidal($srid, $axes);
         }
 
         if ($data['coord_sys_type'] === self::CS_TYPE_VERTICAL) {
-            return new Vertical($epsgCode, $axes);
+            return new Vertical($srid, $axes);
         }
 
-        throw new UnknownCoordinateSystemException($epsgCode); // @codeCoverageIgnore
+        throw new UnknownCoordinateSystemException($srid); // @codeCoverageIgnore
     }
 
     public function __construct(
-        int $epsgCode,
+        string $srid,
         array $axes
     ) {
-        $this->epsgCode = $epsgCode;
+        $this->srid = $srid;
         $this->axes = $axes;
     }
 
-    public function getEpsgCode(): int
+    public function getSRID(): string
     {
-        return $this->epsgCode;
+        return $this->srid;
     }
 
     /**

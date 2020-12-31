@@ -18,16 +18,16 @@ class CoordinateSystemTest extends TestCase
      * @group integration
      * @dataProvider coordinateSystems
      */
-    public function testCanCreateAllInDB(int $epsgCode): void
+    public function testCanCreateAllInDB(string $srid): void
     {
-        $object = CoordinateSystem::fromEPSGCode($epsgCode);
+        $object = CoordinateSystem::fromSRID($srid);
         self::assertInstanceOf(CoordinateSystem::class, $object);
     }
 
     public function testExceptionOnUnknownEPSGCode(): void
     {
         $this->expectException(UnknownCoordinateSystemException::class);
-        $object = CoordinateSystem::fromEPSGCode(PHP_INT_MAX);
+        $object = CoordinateSystem::fromSRID('foo');
     }
 
     public function coordinateSystems(): array

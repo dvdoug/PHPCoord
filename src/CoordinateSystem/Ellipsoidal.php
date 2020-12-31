@@ -18,7 +18,7 @@ class Ellipsoidal extends CoordinateSystem
      * etc.) may be used but that used must be declared for the user. Used in geographic 3D coordinate reference
      * systems.
      */
-    public const EPSG_AXES_LATITUDE_LONGITUDE_ELLIPSOIDAL_HEIGHT_ORIENTATIONS_NORTH_EAST_UP_UOM_DEGREE_DEGREE_METRE = 6423;
+    public const EPSG_AXES_LATITUDE_LONGITUDE_ELLIPSOIDAL_HEIGHT_ORIENTATIONS_NORTH_EAST_UP_UOM_DEGREE_DEGREE_METRE = 'urn:ogc:def:cs:EPSG::6423';
 
     /**
      * Ellipsoidal 2D CS. Axes: latitude, longitude. Orientations: north, east. UoM: degree
@@ -27,14 +27,14 @@ class Ellipsoidal extends CoordinateSystem
      * used but that used must be declared for the user by the supplier of data. Used in geographic 2D coordinate
      * reference systems.
      */
-    public const EPSG_AXES_LATITUDE_LONGITUDE_ORIENTATIONS_NORTH_EAST_UOM_DEGREE = 6422;
+    public const EPSG_AXES_LATITUDE_LONGITUDE_ORIENTATIONS_NORTH_EAST_UOM_DEGREE = 'urn:ogc:def:cs:EPSG::6422';
 
     /**
      * Ellipsoidal 2D CS. Axes: latitude, longitude. Orientations: north, east. UoM: grads.
      * Type: ellipsoidal
      * Used in geographic 2D coordinate reference systems.
      */
-    public const EPSG_AXES_LATITUDE_LONGITUDE_ORIENTATIONS_NORTH_EAST_UOM_GRADS = 6403;
+    public const EPSG_AXES_LATITUDE_LONGITUDE_ORIENTATIONS_NORTH_EAST_UOM_GRADS = 'urn:ogc:def:cs:EPSG::6403';
 
     /**
      * Ellipsoidal 3D CS. Axes: longitude, latitude, ellipsoidal height. Orientations: east, north, up. UoM: degree,
@@ -44,7 +44,7 @@ class Ellipsoidal extends CoordinateSystem
      * referenced to this CS are in degrees. Any degree representation (e.g. DMSH, decimal, etc.) may be used but that
      * used must be declared for the user.
      */
-    public const EPSG_AXES_LONGITUDE_LATITUDE_ELLIPSOIDAL_HEIGHT_ORIENTATIONS_EAST_NORTH_UP_UOM_DEGREE_DEGREE_METRE = 6426;
+    public const EPSG_AXES_LONGITUDE_LATITUDE_ELLIPSOIDAL_HEIGHT_ORIENTATIONS_EAST_NORTH_UP_UOM_DEGREE_DEGREE_METRE = 'urn:ogc:def:cs:EPSG::6426';
 
     /**
      * Ellipsoidal 2D CS. Axes: longitude, latitude. Orientations: east, north. UoM: degree
@@ -53,5 +53,5 @@ class Ellipsoidal extends CoordinateSystem
      * degrees. Any degree representation (e.g. DMSH, decimal, etc.) may be used but that used must be declared for the
      * user by the supplier of data.
      */
-    public const EPSG_AXES_LONGITUDE_LATITUDE_ORIENTATIONS_EAST_NORTH_UOM_DEGREE = 6424;
+    public const EPSG_AXES_LONGITUDE_LATITUDE_ORIENTATIONS_EAST_NORTH_UOM_DEGREE = 'urn:ogc:def:cs:EPSG::6424';
 }

@@ -28,26 +28,26 @@ class UnitOfMeasureFactoryTest extends TestCase
     /**
      * @dataProvider unitsOfMeasure
      */
-    public function testCanCreateAllUnits(int $epsgCode): void
+    public function testCanCreateAllUnits(string $srid): void
     {
         $dummyValue = 1;
-        if (in_array($epsgCode, [9108, 9116, 9118], true)) {
+        if (in_array($srid, [UnitOfMeasure::EPSG_ANGLE_DEGREE_MINUTE_SECOND_HEMISPHERE, UnitOfMeasure::EPSG_ANGLE_DEGREE_HEMISPHERE, UnitOfMeasure::EPSG_ANGLE_DEGREE_MINUTE_HEMISPHERE], true)) {
             $dummyValue = '1°N';
-        } elseif (in_array($epsgCode, [9117, 9119, 9120], true)) {
+        } elseif (in_array($srid, [UnitOfMeasure::EPSG_ANGLE_HEMISPHERE_DEGREE, UnitOfMeasure::EPSG_ANGLE_HEMISPHERE_DEGREE_MINUTE, UnitOfMeasure::EPSG_ANGLE_HEMISPHERE_DEGREE_MINUTE_SECOND], true)) {
             $dummyValue = 'N1°';
-        } elseif (in_array($epsgCode, [9110, 9111], true)) {
+        } elseif (in_array($srid, [UnitOfMeasure::EPSG_ANGLE_SEXAGESIMAL_DMS, UnitOfMeasure::EPSG_ANGLE_SEXAGESIMAL_DM], true)) {
             $dummyValue = '1.0';
-        } elseif (in_array($epsgCode, [9121], true)) {
+        } elseif (in_array($srid, [UnitOfMeasure::EPSG_ANGLE_SEXAGESIMAL_DMS_S], true)) {
             $dummyValue = '10000.0';
         }
-        $newUnit = $this->factory::makeUnit($dummyValue, $epsgCode);
+        $newUnit = $this->factory::makeUnit($dummyValue, $srid);
         self::assertInstanceOf(UnitOfMeasure::class, $newUnit);
     }
 
-    public function testExceptionOnUnknownEPSGCode(): void
+    public function testExceptionOnUnknownSRIDCode(): void
     {
         $this->expectException(UnknownUnitOfMeasureException::class);
-        $newUnit = $this->factory::makeUnit(1, 0);
+        $newUnit = $this->factory::makeUnit(1, 'foo');
     }
 
     public function unitsOfMeasure(): array
