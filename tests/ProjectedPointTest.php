@@ -13,7 +13,6 @@ use DateTimeImmutable;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Projected;
 use PHPCoord\CoordinateSystem\Cartesian;
-use PHPCoord\CoordinateSystem\Ellipsoidal;
 use PHPCoord\Datum\Datum;
 use PHPCoord\Datum\Ellipsoid;
 use PHPCoord\Exception\InvalidAxesException;
@@ -538,5 +537,25 @@ class ProjectedPointTest extends TestCase
 
         self::assertEqualsWithDelta(53, $to->getLatitude()->getValue(), 0.0000001);
         self::assertEqualsWithDelta(53, $to->getLongitude()->getValue(), 0.0000001);
+    }
+
+    public function testObliqueMercatorHotineVariantA(): void
+    {
+        $from = ProjectedPoint::createFromEastingNorthing(new Metre(679245.73), new Metre(596562.78), Projected::fromSRID(Projected::EPSG_TIMBALAI_1948_RSO_BORNEO_M));
+        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_TIMBALAI_1948);
+        $to = $from->obliqueMercatorHotineVariantA($toCRS, new Radian(0.069813170), new Radian(2.007128640), new Radian(0.930536611), new Radian(0.927295218), new Coefficient(0.99984), new Metre(0), new Metre(0));
+
+        self::assertEqualsWithDelta(0.094025313, $to->getLatitude()->asRadians()->getValue(), 0.0000001);
+        self::assertEqualsWithDelta(2.021187362, $to->getLongitude()->asRadians()->getValue(), 0.0000001);
+    }
+
+    public function testObliqueMercatorHotineVariantB(): void
+    {
+        $from = ProjectedPoint::createFromEastingNorthing(new Metre(679245.73), new Metre(596562.78), Projected::fromSRID(Projected::EPSG_TIMBALAI_1948_RSO_BORNEO_M));
+        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_TIMBALAI_1948);
+        $to = $from->obliqueMercatorHotineVariantB($toCRS, new Radian(0.069813170), new Radian(2.007128640), new Radian(0.930536611), new Radian(0.927295218), new Coefficient(0.99984), new Metre(590476.87), new Metre(442857.65));
+
+        self::assertEqualsWithDelta(0.094025313, $to->getLatitude()->asRadians()->getValue(), 0.0000001);
+        self::assertEqualsWithDelta(2.021187362, $to->getLongitude()->asRadians()->getValue(), 0.0000001);
     }
 }

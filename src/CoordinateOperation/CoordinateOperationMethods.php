@@ -477,6 +477,8 @@ class CoordinateOperationMethods
             self::EPSG_GEOGRAPHIC2D_OFFSETS => 'geographic2DOffsets',
             self::EPSG_GEOGRAPHIC2D_WITH_HEIGHT_OFFSETS => 'geographic2DWithHeightOffsets',
             self::EPSG_LONGITUDE_ROTATION => 'longitudeRotation',
+            self::EPSG_HOTINE_OBLIQUE_MERCATOR_VARIANT_A => 'obliqueMercatorHotineVariantA',
+            self::EPSG_HOTINE_OBLIQUE_MERCATOR_VARIANT_B => 'obliqueMercatorHotineVariantB',
         ];
     }
 }

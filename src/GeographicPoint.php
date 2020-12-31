@@ -1554,6 +1554,121 @@ class GeographicPoint extends Point
     }
 
     /**
+     * Hotine Oblique Mercator (variant A).
+     */
+    public function obliqueMercatorHotineVariantA(
+        Projected $to,
+        Angle $latitudeOfProjectionCentre,
+        Angle $longitudeOfProjectionCentre,
+        Angle $azimuthOfInitialLine,
+        Angle $angleFromRectifiedToSkewGrid,
+        Scale $scaleFactorOnInitialLine,
+        Length $falseEasting,
+        Length $falseNorthing
+    ): ProjectedPoint {
+        $latitude = $this->latitude->asRadians()->getValue();
+        $longitude = $this->longitude->asRadians()->getValue();
+        $latC = $latitudeOfProjectionCentre->asRadians()->getValue();
+        $lonC = $longitudeOfProjectionCentre->asRadians()->getValue();
+        $alphaC = $azimuthOfInitialLine->asRadians()->getValue();
+        $kC = $scaleFactorOnInitialLine->asUnity()->getValue();
+        $gammaC = $angleFromRectifiedToSkewGrid->asRadians()->getValue();
+        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
+        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+
+        $B = sqrt(1 + ($e2 * cos($latC) ** 4 / (1 - $e2)));
+        $A = $a * $B * $kC * sqrt(1 - $e2) / (1 - $e2 * sin($latC) ** 2);
+        $tO = tan(M_PI / 4 - $latC / 2) / ((1 - $e * sin($latC)) / (1 + $e * sin($latC))) ** ($e / 2);
+        $D = $B * sqrt((1 - $e2)) / (cos($latC) * sqrt(1 - $e2 * sin($latC) ** 2));
+        $DD = max(1, $D ** 2);
+        $F = $D + sqrt($DD - 1) * static::sign($latC);
+        $H = $F * ($tO) ** $B;
+        $G = ($F - 1 / $F) / 2;
+        $gammaO = asin(sin($alphaC) / $D);
+        $lonO = $lonC - (asin($G * tan($gammaO))) / $B;
+
+        $t = tan(M_PI / 4 - $latitude / 2) / ((1 - $e * sin($latitude)) / (1 + $e * sin($latitude))) ** ($e / 2);
+        $Q = $H / $t ** $B;
+        $S = ($Q - 1 / $Q) / 2;
+        $T = ($Q + 1 / $Q) / 2;
+        $V = sin($B * ($longitude - $lonO));
+        $U = (-$V * cos($gammaO) + $S * sin($gammaO)) / $T;
+        $v = $A * log((1 - $U) / (1 + $U)) / (2 * $B);
+        $u = $A * atan2(($S * cos($gammaO) + $V * sin($gammaO)), cos($B * ($longitude - $lonO))) / $B;
+
+        $easting = $v * cos($gammaC) + $u * sin($gammaC) + $falseEasting->asMetres()->getValue();
+        $northing = $u * cos($gammaC) - $v * sin($gammaC) + $falseNorthing->asMetres()->getValue();
+
+        return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+    }
+
+    /**
+     * Hotine Oblique Mercator (variant B).
+     */
+    public function obliqueMercatorHotineVariantB(
+        Projected $to,
+        Angle $latitudeOfProjectionCentre,
+        Angle $longitudeOfProjectionCentre,
+        Angle $azimuthOfInitialLine,
+        Angle $angleFromRectifiedToSkewGrid,
+        Scale $scaleFactorOnInitialLine,
+        Length $eastingAtProjectionCentre,
+        Length $northingAtProjectionCentre
+    ): ProjectedPoint {
+        $latitude = $this->latitude->asRadians()->getValue();
+        $longitude = $this->longitude->asRadians()->getValue();
+        $latC = $latitudeOfProjectionCentre->asRadians()->getValue();
+        $lonC = $longitudeOfProjectionCentre->asRadians()->getValue();
+        $alphaC = $azimuthOfInitialLine->asRadians()->getValue();
+        $kC = $scaleFactorOnInitialLine->asUnity()->getValue();
+        $gammaC = $angleFromRectifiedToSkewGrid->asRadians()->getValue();
+        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
+        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+
+        $B = sqrt(1 + ($e2 * cos($latC) ** 4 / (1 - $e2)));
+        $A = $a * $B * $kC * sqrt(1 - $e2) / (1 - $e2 * sin($latC) ** 2);
+        $tO = tan(M_PI / 4 - $latC / 2) / ((1 - $e * sin($latC)) / (1 + $e * sin($latC))) ** ($e / 2);
+        $D = $B * sqrt((1 - $e2)) / (cos($latC) * sqrt(1 - $e2 * sin($latC) ** 2));
+        $DD = max(1, $D ** 2);
+        $F = $D + sqrt($DD - 1) * static::sign($latC);
+        $H = $F * ($tO) ** $B;
+        $G = ($F - 1 / $F) / 2;
+        $gammaO = asin(sin($alphaC) / $D);
+        $lonO = $lonC - (asin($G * tan($gammaO))) / $B;
+        $vC = 0;
+        if ($alphaC === M_PI / 2) {
+            $uC = $A * ($lonC - $lonO);
+        } else {
+            $uC = ($A / $B) * atan2(sqrt($DD - 1), cos($alphaC)) * static::sign($latC);
+        }
+
+        $t = tan(M_PI / 4 - $latitude / 2) / ((1 - $e * sin($latitude)) / (1 + $e * sin($latitude))) ** ($e / 2);
+        $Q = $H / $t ** $B;
+        $S = ($Q - 1 / $Q) / 2;
+        $T = ($Q + 1 / $Q) / 2;
+        $V = sin($B * ($longitude - $lonO));
+        $U = (-$V * cos($gammaO) + $S * sin($gammaO)) / $T;
+        $v = $A * log((1 - $U) / (1 + $U)) / (2 * $B);
+
+        if ($alphaC === M_PI / 2) {
+            if ($longitude === $lonC) {
+                $u = 0;
+            } else {
+                $u = ($A * atan(($S * cos($gammaO) + $V * sin($gammaO)) / cos($B * ($longitude - $lonO))) / $B) - (abs($uC) * static::sign($latC) * static::sign($lonC - $longitude));
+            }
+        } else {
+            $u = ($A * atan2(($S * cos($gammaO) + $V * sin($gammaO)), cos($B * ($longitude - $lonO))) / $B) - (abs($uC) * static::sign($latC));
+        }
+
+        $easting = $v * cos($gammaC) + $u * sin($gammaC) + $eastingAtProjectionCentre->asMetres()->getValue();
+        $northing = $u * cos($gammaC) - $v * sin($gammaC) + $northingAtProjectionCentre->asMetres()->getValue();
+
+        return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+    }
+
+    /**
      * Geographic3D to 2D conversion.
      */
     public function threeDToTwoD(

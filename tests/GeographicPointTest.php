@@ -619,4 +619,24 @@ class GeographicPointTest extends TestCase
         self::assertEqualsWithDelta(12.34, $to->getLongitude()->getValue(), 0.000001);
         self::assertEqualsWithDelta(0, $to->getHeight()->getValue(), 0.00001);
     }
+
+    public function testObliqueMercatorHotineVariantA(): void
+    {
+        $from = GeographicPoint::create(new Radian(0.094025313), new Radian(2.021187362), null, Geographic2D::fromSRID(Geographic2D::EPSG_TIMBALAI_1948));
+        $toCRS = Projected::fromSRID(Projected::EPSG_TIMBALAI_1948_RSO_BORNEO_M);
+        $to = $from->obliqueMercatorHotineVariantA($toCRS, new Radian(0.069813170), new Radian(2.007128640), new Radian(0.930536611), new Radian(0.927295218), new Coefficient(0.99984), new Metre(0), new Metre(0));
+
+        self::assertEqualsWithDelta(679245.73, $to->getEasting()->asMetres()->getValue(), 0.01);
+        self::assertEqualsWithDelta(596562.78, $to->getNorthing()->asMetres()->getValue(), 0.01);
+    }
+
+    public function testObliqueMercatorHotineVariantB(): void
+    {
+        $from = GeographicPoint::create(new Radian(0.094025313), new Radian(2.021187362), null, Geographic2D::fromSRID(Geographic2D::EPSG_TIMBALAI_1948));
+        $toCRS = Projected::fromSRID(Projected::EPSG_TIMBALAI_1948_RSO_BORNEO_M);
+        $to = $from->obliqueMercatorHotineVariantB($toCRS, new Radian(0.069813170), new Radian(2.007128640), new Radian(0.930536611), new Radian(0.927295218), new Coefficient(0.99984), new Metre(590476.87), new Metre(442857.65));
+
+        self::assertEqualsWithDelta(679245.73, $to->getEasting()->asMetres()->getValue(), 0.01);
+        self::assertEqualsWithDelta(596562.78, $to->getNorthing()->asMetres()->getValue(), 0.01);
+    }
 }
