@@ -18,6 +18,7 @@ use PHPCoord\UnitOfMeasure\Angle\Radian;
 use PHPCoord\UnitOfMeasure\Length\ExoticLength;
 use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Length\Metre;
+use PHPCoord\UnitOfMeasure\Scale\Coefficient;
 use PHPCoord\UnitOfMeasure\Scale\ExoticScale;
 use PHPCoord\UnitOfMeasure\Scale\Unity;
 use PHPCoord\UnitOfMeasure\Time\Second;
@@ -99,6 +100,8 @@ class UnitOfMeasureFactory
                 return Degree::fromSexagesimalDM((string) $measurement);
             case UnitOfMeasure::EPSG_LENGTH_METRE:
                 return new Metre($measurement);
+            case UnitOfMeasure::EPSG_SCALE_COEFFICIENT:
+                return new Coefficient($measurement);
             case UnitOfMeasure::EPSG_SCALE_UNITY:
                 return new Unity($measurement);
             case UnitOfMeasure::EPSG_TIME_SECOND:

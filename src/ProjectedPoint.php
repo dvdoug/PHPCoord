@@ -18,6 +18,7 @@ use PHPCoord\Exception\InvalidCoordinateReferenceSystemException;
 use PHPCoord\Exception\UnknownAxisException;
 use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Length\Metre;
+use PHPCoord\UnitOfMeasure\Scale\Coefficient;
 use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
 
 /**
@@ -185,5 +186,44 @@ class ProjectedPoint extends Point
         }
 
         return '(' . implode(', ', $values) . ')';
+    }
+
+    /**
+     * Affine parametric transformation.
+     */
+    public function affineParametricTransform(
+        Projected $to,
+        Length $A0,
+        Coefficient $A1,
+        Coefficient $A2,
+        Length $B0,
+        Coefficient $B1,
+        Coefficient $B2,
+        bool $inReverse
+    ): self {
+        $xs = $this->easting->getValue(); // native unit to metre conversion already embedded in the scale factor
+        $ys = $this->northing->getValue(); // native unit to metre conversion already embedded in the scale factor
+
+        if ($inReverse) {
+            $D = ($A1->getValue() * $B2->getValue()) - ($A2->getValue() * $B1->getValue());
+            $a0 = (($A2->getValue() * $B0->asMetres()->getValue()) - ($B2->getValue() * $A0->asMetres()->getValue())) / $D;
+            $b0 = (($B1->getValue() * $A0->asMetres()->getValue()) - ($A1->getValue() * $B0->asMetres()->getValue())) / $D;
+            $a1 = $B2->getValue() / $D;
+            $a2 = -$A2->getValue() / $D;
+            $b1 = -$B1->getValue() / $D;
+            $b2 = $A1->getValue() / $D;
+        } else {
+            $a0 = $A0->asMetres()->getValue();
+            $a1 = $A1->getValue();
+            $a2 = $A2->getValue();
+            $b0 = $B0->asMetres()->getValue();
+            $b1 = $B1->getValue();
+            $b2 = $B2->getValue();
+        }
+
+        $xt = $a0 + ($a1 * $xs) + ($a2 * $ys);
+        $yt = $b0 + ($b1 * $xs) + ($b2 * $ys);
+
+        return static::create(new Metre($xt), new Metre($yt), new Metre(-$xt), new Metre(-$yt), $to, $this->epoch);
     }
 }

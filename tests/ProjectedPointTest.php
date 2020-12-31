@@ -14,6 +14,7 @@ use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\CoordinateReferenceSystem\Projected;
 use PHPCoord\Exception\InvalidCoordinateReferenceSystemException;
 use PHPCoord\UnitOfMeasure\Length\Metre;
+use PHPCoord\UnitOfMeasure\Scale\Coefficient;
 use PHPCoord\UnitOfMeasure\UnitOfMeasure;
 use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
 use PHPUnit\Framework\TestCase;
@@ -132,5 +133,13 @@ class ProjectedPointTest extends TestCase
         $from = ProjectedPoint::createFromWestingSouthing(new Metre(438700), new Metre(114800), CoordinateReferenceSystem::fromEPSGCode(Projected::EPSG_ST_STEPHEN_GRID_FERRO));
         $to = ProjectedPoint::createFromEastingNorthing(new Metre(533600), new Metre(180500), CoordinateReferenceSystem::fromEPSGCode(Projected::EPSG_OSGB_1936_BRITISH_NATIONAL_GRID));
         $from->calculateDistance($to);
+    }
+
+    public function testAffineParametricTransformEastingNorthing(): void
+    {
+        $from = ProjectedPoint::create(UnitOfMeasureFactory::makeUnit(553900, UnitOfMeasure::EPSG_LENGTH_CLARKE_S_FOOT), UnitOfMeasureFactory::makeUnit(482500, UnitOfMeasure::EPSG_LENGTH_CLARKE_S_FOOT), null, null, CoordinateReferenceSystem::fromEPSGCode(Projected::EPSG_JAMAICA_1875_JAMAICA_OLD_GRID));
+        $to = $from->affineParametricTransform(CoordinateReferenceSystem::fromEPSGCode(Projected::EPSG_JAD69_JAMAICA_NATIONAL_GRID), new Metre(82357.457), new Coefficient(0.304794369), new Coefficient(0.000015417425), new Metre(28091.324), new Coefficient(-0.000015417425), new Coefficient(0.304794369), false);
+        self::assertEqualsWithDelta(251190.497, $to->getEasting()->asMetres()->getValue(), 0.001);
+        self::assertEqualsWithDelta(175146.067, $to->getNorthing()->asMetres()->getValue(), 0.001);
     }
 }
