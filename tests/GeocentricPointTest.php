@@ -10,6 +10,11 @@ namespace PHPCoord;
 
 use DateTime;
 use DateTimeImmutable;
+use PHPCoord\CoordinateOperation\CoordinateOperationMethods;
+use PHPCoord\CoordinateOperation\CoordinateOperationParams;
+use PHPCoord\CoordinateOperation\CoordinateOperations;
+use PHPCoord\CoordinateOperation\CRSTransformations;
+use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\CoordinateReferenceSystem\Geocentric;
 use PHPCoord\CoordinateReferenceSystem\Geographic3D;
 use PHPCoord\Exception\InvalidCoordinateException;
@@ -313,5 +318,54 @@ class GeocentricPointTest extends TestCase
         $from = GeocentricPoint::create(new Metre(-3789470.710), new Metre(4841770.404), new Metre(-1690893.952), Geocentric::fromSRID(Geocentric::EPSG_ITRF2008));
         $toCRS = Geocentric::fromSRID(Geocentric::EPSG_GDA94);
         $to = $from->timeDependentPositionVectorTransformation($toCRS, new Metre(-84.68 / 1000), new Metre(-19.42 / 1000), new Metre(32.01 / 1000), new ArcSecond(0.4254 / 1000), new ArcSecond(-2.2578 / 1000), new ArcSecond(-2.4015 / 1000), new PartsPerMillion(0.00971), new Rate(new Metre(1.42 / 1000), new Year(1)), new Rate(new Metre(1.34 / 1000), new Year(1)), new Rate(new Metre(0.90 / 1000), new Year(1)), new Rate(new ArcSecond(-1.5461 / 1000), new Year(1)), new Rate(new ArcSecond(-1.1820 / 1000), new Year(1)), new Rate(new ArcSecond(-1.1551 / 1000), new Year(1)), new Rate(new PartsPerMillion(0.000109), new Year(1)), new Year(1994.0));
+    }
+
+    /**
+     * @group integration
+     * @dataProvider supportedOperations
+     */
+    public function testOperations(string $sourceCrsSrid, string $targetCrsSrid, string $operationSrid, bool $reversible): void
+    {
+        $operation = CoordinateOperations::getOperationData($operationSrid);
+
+        $sourceCRS = Geocentric::fromSRID($sourceCrsSrid);
+        $targetCRS = CoordinateReferenceSystem::fromSRID($targetCrsSrid);
+
+        $epoch = new DateTime();
+        if (isset($operation['method']) && in_array($operation['method'], [CoordinateOperationMethods::EPSG_TIME_SPECIFIC_COORDINATE_FRAME_ROTATION_GEOCEN, CoordinateOperationMethods::EPSG_TIME_SPECIFIC_POSITION_VECTOR_TRANSFORM_GEOCEN], true)) {
+            $params = CoordinateOperationParams::getParamData($operationSrid);
+            $epoch = (new Year($params['Transformation reference epoch']['value']))->asDateTime();
+        }
+
+        $originalPoint = GeocentricPoint::create(new Metre(0), new Metre(0), new Metre(0), $sourceCRS, $epoch);
+        $newPoint = $originalPoint->performOperation($operationSrid, $targetCRS, false);
+        self::assertInstanceOf(Point::class, $newPoint);
+        self::assertEquals($targetCRS, $newPoint->getCRS());
+
+        if ($reversible) {
+            $reversedPoint = $newPoint->performOperation($operationSrid, $sourceCRS, true);
+            self::assertEquals($sourceCRS, $reversedPoint->getCRS());
+            self::assertEqualsWithDelta($originalPoint->getX()->getValue(), $reversedPoint->getX()->getValue(), 0.0001);
+            self::assertEqualsWithDelta($originalPoint->getY()->getValue(), $reversedPoint->getY()->getValue(), 0.0001);
+            self::assertEqualsWithDelta($originalPoint->getZ()->getValue(), $reversedPoint->getZ()->getValue(), 0.0001);
+        }
+    }
+
+    public function supportedOperations(): array
+    {
+        $toTest = [];
+        $crss = Geocentric::getSupportedSRIDs();
+        foreach (CRSTransformations::getSupportedTransformations() as $transformation) {
+            if (isset($crss[$transformation['source_crs']])) {
+                $toTest[] = [
+                    $transformation['source_crs'],
+                    $transformation['target_crs'],
+                    $transformation['operation'],
+                    $transformation['reversible'],
+                ];
+            }
+        }
+
+        return $toTest;
     }
 }
