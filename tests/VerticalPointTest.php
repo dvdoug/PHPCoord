@@ -10,6 +10,9 @@ namespace PHPCoord;
 
 use DateTime;
 use DateTimeImmutable;
+use PHPCoord\CoordinateOperation\CoordinateOperationMethods;
+use PHPCoord\CoordinateOperation\CRSTransformations;
+use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\CoordinateReferenceSystem\Vertical;
 use PHPCoord\UnitOfMeasure\Length\Foot;
 use PHPCoord\UnitOfMeasure\Length\Metre;
@@ -64,5 +67,51 @@ class VerticalPointTest extends TestCase
         $to = $from->verticalOffset($toCRS, new Metre(0.4));
 
         self::assertEqualsWithDelta(2.95, $to->getHeight()->getValue(), 0.001);
+    }
+
+    /**
+     * @group integration
+     * @dataProvider supportedOperations
+     */
+    public function testOperations(string $sourceCrsSrid, string $targetCrsSrid, string $operationSrid, bool $reversible): void
+    {
+        $sourceCRS = Vertical::fromSRID($sourceCrsSrid);
+        $targetCRS = CoordinateReferenceSystem::fromSRID($targetCrsSrid);
+
+        $epoch = new DateTime();
+
+        $originalPoint = VerticalPoint::create(new Metre(0), $sourceCRS, $epoch);
+        $newPoint = $originalPoint->performOperation($operationSrid, $targetCRS, false);
+        self::assertInstanceOf(Point::class, $newPoint);
+        self::assertEquals($targetCRS, $newPoint->getCRS());
+
+        if ($reversible) {
+            $reversedPoint = $newPoint->performOperation($operationSrid, $sourceCRS, true);
+
+            self::assertEquals($sourceCRS, $reversedPoint->getCRS());
+            self::assertEqualsWithDelta($originalPoint->getHeight()->getValue(), $reversedPoint->getHeight()->getValue(), 0.0001);
+        }
+    }
+
+    public function supportedOperations(): array
+    {
+        $toTest = [];
+        $crss = Vertical::getSupportedSRIDs();
+        foreach (CRSTransformations::getSupportedTransformations() as $transformation) {
+            if ($transformation['method'] === CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_AND_SLOPE) { // tested as part of CompoundPoint
+                continue;
+            }
+
+            if (isset($crss[$transformation['source_crs']])) {
+                $toTest[] = [
+                    $transformation['source_crs'],
+                    $transformation['target_crs'],
+                    $transformation['operation'],
+                    $transformation['reversible'],
+                ];
+            }
+        }
+
+        return $toTest;
     }
 }
