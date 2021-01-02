@@ -8,7 +8,6 @@ declare(strict_types=1);
 
 namespace PHPCoord;
 
-use function acos;
 use function cos;
 use DateTime;
 use DateTimeImmutable;
@@ -20,8 +19,8 @@ use function log;
 use PHPCoord\CoordinateOperation\ComplexNumber;
 use PHPCoord\CoordinateOperation\GeocentricValue;
 use PHPCoord\CoordinateOperation\GeographicValue;
-use PHPCoord\CoordinateReferenceSystem\Geocentric;
 use PHPCoord\CoordinateReferenceSystem\Compound;
+use PHPCoord\CoordinateReferenceSystem\Geocentric;
 use PHPCoord\CoordinateReferenceSystem\Geographic;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Geographic3D;
@@ -155,7 +154,7 @@ class GeographicPoint extends Point
         $ellipsoid = $this->getCRS()->getDatum()->getEllipsoid();
         $radius = ((2 * $ellipsoid->getSemiMajorAxis()->asMetres()->getValue()) + $ellipsoid->getSemiMinorAxis()->asMetres()->getValue()) / 3;
 
-        return new Metre(acos(sin($this->latitude->asRadians()->getValue()) * sin($to->latitude->asRadians()->getValue()) + cos($this->latitude->asRadians()->getValue()) * cos($to->latitude->asRadians()->getValue()) * cos($to->longitude->asRadians()->getValue() - $this->longitude->asRadians()->getValue())) * $radius);
+        return new Metre(self::acos(sin($this->latitude->asRadians()->getValue()) * sin($to->latitude->asRadians()->getValue()) + cos($this->latitude->asRadians()->getValue()) * cos($to->latitude->asRadians()->getValue()) * cos($to->longitude->asRadians()->getValue() - $this->longitude->asRadians()->getValue())) * $radius);
     }
 
     public function __toString(): string
@@ -719,8 +718,8 @@ class GeographicPoint extends Point
 
         $q = (1 - $e2) * ((sin($latitude) / (1 - $e2 * sin($latitude) ** 2)) - (1 / (2 * $e) * log((1 - $e * sin($latitude)) / (1 + $e * sin($latitude)))));
         $qP = (1 - $e2) * ((1 / (1 - $e2)) - (1 / (2 * $e) * log((1 - $e) / (1 + $e))));
-        $beta = asin($q / $qP);
-        $theta = asin(sin($beta) * sqrt(3) / 2);
+        $beta = self::asin($q / $qP);
+        $theta = self::asin(sin($beta) * sqrt(3) / 2);
         $Rq = $a * sqrt($qP / 2);
 
         $easting = $falseEasting->asMetres()->getValue() + ($Rq * 2 * ($longitude - $longitudeOrigin) * cos($theta)) / (sqrt(3) * (1.340264 - 0.243318 * $theta ** 2 + $theta ** 6 * (0.006251 + 0.034164 * $theta ** 2)));
@@ -831,14 +830,14 @@ class GeographicPoint extends Point
 
         $A = $a * sqrt(1 - $e2) / (1 - $e2 * sin($latitudeC) ** 2);
         $B = sqrt(1 + $e2 * cos($latitudeC) ** 4 / (1 - $e2));
-        $upsilonO = asin(sin($latitudeC) / $B);
+        $upsilonO = self::asin(sin($latitudeC) / $B);
         $tO = tan(M_PI / 4 + $upsilonO / 2) * ((1 + $e * sin($latitudeC)) / (1 - $e * sin($latitudeC))) ** ($e * $B / 2) / (tan(M_PI / 4 + $latitudeC / 2) ** $B);
         $n = sin($latitudeP);
         $rO = $kP * $A / tan($latitudeP);
 
         $U = 2 * (atan($tO * tan($latitude / 2 + M_PI / 4) ** $B / ((1 + $e * sin($latitude)) / (1 - $e * sin($latitude))) ** ($e * $B / 2)) - M_PI / 4);
         $V = $B * ($longitudeO - $longitude);
-        $T = asin(cos($alphaC) * sin($U) + sin($alphaC) * cos($U) * cos($V));
+        $T = self::asin(cos($alphaC) * sin($U) + sin($alphaC) * cos($U) * cos($V));
         $D = atan2(cos($U) * sin($V) / cos($T), ((cos($alphaC) * sin($T) - sin($U)) / (sin($alphaC) * cos($T))));
         $theta = $n * $D;
         $r = $rO * tan(M_PI / 4 + $latitudeP / 2) ** $n / tan($T / 2 + M_PI / 4) ** $n;
@@ -927,8 +926,8 @@ class GeographicPoint extends Point
         $q = (1 - $e2) * ((sin($latitude) / (1 - $e2 * sin($latitude) ** 2)) - ((1 / (2 * $e)) * log((1 - $e * sin($latitude)) / (1 + $e * sin($latitude)))));
         $qO = (1 - $e2) * ((sin($latitudeOrigin) / (1 - $e2 * sin($latitudeOrigin) ** 2)) - ((1 / (2 * $e)) * log((1 - $e * sin($latitudeOrigin)) / (1 + $e * sin($latitudeOrigin)))));
         $qP = (1 - $e2) * ((1 / (1 - $e2)) - ((1 / (2 * $e)) * log((1 - $e) / (1 + $e))));
-        $beta = asin($q / $qP);
-        $betaO = asin($qO / $qP);
+        $beta = self::asin($q / $qP);
+        $betaO = self::asin($qO / $qP);
         $Rq = $a * sqrt($qP / 2);
         $B = $Rq * sqrt(2 / (1 + sin($betaO) * sin($beta) + (cos($betaO) * cos($beta) * cos($longitude - $longitudeOrigin))));
         $D = $a * (cos($latitudeOrigin) / sqrt(1 - $e2 * sin($latitudeOrigin) ** 2)) / ($Rq * cos($betaO));
@@ -1267,9 +1266,9 @@ class GeographicPoint extends Point
         $H = $e * cos($latitudeOrigin) * cos($alpha) / sqrt(1 - $e2);
 
         if (sin($alpha) === 0.0) {
-            $s = asin(cos($latitudeOrigin) * sin($psi) - sin($latitudeOrigin) * cos($alpha)) * cos($alpha) / abs(cos($alpha));
+            $s = self::asin(cos($latitudeOrigin) * sin($psi) - sin($latitudeOrigin) * cos($alpha)) * cos($alpha) / abs(cos($alpha));
         } else {
-            $s = asin(sin($longitude - $longitudeOrigin) * cos($psi) / sin($alpha));
+            $s = self::asin(sin($longitude - $longitudeOrigin) * cos($psi) / sin($alpha));
         }
 
         $c = $nuO * $s * ((1 - $s ** 2 * $H ** 2 * (1 - $H ** 2) / 6) + (($s ** 3 / 8) * $G * $H * (1 - 2 * $H ** 2)) + ($s ** 4 / 120) * ($H ** 2 * (4 - 7 * $H ** 2) - 3 * $G ** 2 * (1 - 7 * $H ** 2)) - (($s ** 5 / 48) * $G * $H));
@@ -1312,14 +1311,14 @@ class GeographicPoint extends Point
         $w1 = ($S1 * ($S2 ** $e)) ** $n;
         $c = (($n + sin($latitudeOrigin)) * (1 - ($w1 - 1) / ($w1 + 1))) / (($n - sin($latitudeOrigin)) * (1 + ($w1 - 1) / ($w1 + 1)));
         $w2 = $c * $w1;
-        $chiOrigin = asin(($w2 - 1) / ($w2 + 1));
+        $chiOrigin = self::asin(($w2 - 1) / ($w2 + 1));
 
         $lambda = $n * ($longitude - $longitudeOrigin) + $longitudeOrigin;
 
         $Sa = (1 + sin($latitude)) / (1 - sin($latitude));
         $Sb = (1 - $e * sin($latitude)) / (1 + $e * sin($latitude));
         $w = $c * ($Sa * ($Sb ** $e)) ** $n;
-        $chi = asin(($w - 1) / ($w + 1));
+        $chi = self::asin(($w - 1) / ($w + 1));
 
         $B = (1 + sin($chi) * sin($chiOrigin) + cos($chi) * cos($chiOrigin) * cos($lambda - $longitudeOrigin));
 
@@ -1587,8 +1586,8 @@ class GeographicPoint extends Point
         $F = $D + sqrt($DD - 1) * static::sign($latC);
         $H = $F * ($tO) ** $B;
         $G = ($F - 1 / $F) / 2;
-        $gammaO = asin(sin($alphaC) / $D);
-        $lonO = $lonC - (asin($G * tan($gammaO))) / $B;
+        $gammaO = self::asin(sin($alphaC) / $D);
+        $lonO = $lonC - (self::asin($G * tan($gammaO))) / $B;
 
         $t = tan(M_PI / 4 - $latitude / 2) / ((1 - $e * sin($latitude)) / (1 + $e * sin($latitude))) ** ($e / 2);
         $Q = $H / $t ** $B;
@@ -1637,8 +1636,8 @@ class GeographicPoint extends Point
         $F = $D + sqrt($DD - 1) * static::sign($latC);
         $H = $F * ($tO) ** $B;
         $G = ($F - 1 / $F) / 2;
-        $gammaO = asin(sin($alphaC) / $D);
-        $lonO = $lonC - (asin($G * tan($gammaO))) / $B;
+        $gammaO = self::asin(sin($alphaC) / $D);
+        $lonO = $lonC - (self::asin($G * tan($gammaO))) / $B;
         $vC = 0;
         if ($alphaC === M_PI / 2) {
             $uC = $A * ($lonC - $lonO);
@@ -1693,7 +1692,7 @@ class GeographicPoint extends Point
         $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
 
         $B = sqrt(1 + ($e2 * cos($latC) ** 4 / (1 - $e2)));
-        $latS = asin(sin($latC) / $B);
+        $latS = self::asin(sin($latC) / $B);
         $R = $a * $kC * (sqrt(1 - $e2) / (1 - $e2 * sin($latC) ** 2));
         $C = log(tan(M_PI / 4 + $latS / 2)) - $B * log(tan(M_PI / 4 + $latC / 2) * ((1 - $e * sin($latC)) / (1 + $e * sin($latC))) ** ($e / 2));
 
@@ -1757,7 +1756,7 @@ class GeographicPoint extends Point
         } else {
             $qO = asinh(tan($latitudeOrigin)) - ($e * atanh($e * sin($latitudeOrigin)));
             $betaO = atan(sinh($qO));
-            $xiO0 = asin(sin($betaO));
+            $xiO0 = self::asin(sin($betaO));
             $xiO1 = $h1 * sin(2 * $xiO0);
             $xiO2 = $h2 * sin(4 * $xiO0);
             $xiO3 = $h3 * sin(6 * $xiO0);
@@ -1769,7 +1768,7 @@ class GeographicPoint extends Point
         $Q = asinh(tan($latitude)) - ($e * atanh($e * sin($latitude)));
         $beta = atan(sinh($Q));
         $eta0 = atanh(cos($beta) * sin($longitude - $longitudeOrigin));
-        $xi0 = asin(sin($beta) * cosh($eta0));
+        $xi0 = self::asin(sin($beta) * cosh($eta0));
         $xi1 = $h1 * sin(2 * $xi0) * cosh(2 * $eta0);
         $eta1 = $h1 * cos(2 * $xi0) * sinh(2 * $eta0);
         $xi2 = $h2 * sin(4 * $xi0) * cosh(4 * $eta0);

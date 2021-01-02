@@ -9,7 +9,6 @@ declare(strict_types=1);
 namespace PHPCoord;
 
 use function abs;
-use function asin;
 use function atan2;
 use function cos;
 use DateTime;
@@ -281,7 +280,7 @@ class ProjectedPoint extends Point
         $rhoOrigin = $a * sqrt($C - $n * $alphaOrigin) / $n;
         $rhoPrime = sqrt($easting ** 2 + ($rhoOrigin - $northing) ** 2);
         $alphaPrime = ($C - $rhoPrime ** 2 * $n ** 2 / $a ** 2) / $n;
-        $betaPrime = asin($alphaPrime / (1 - (1 - $e2) / 2 / $e * log((1 - $e) / (1 + $e))));
+        $betaPrime = self::asin($alphaPrime / (1 - (1 - $e2) / 2 / $e * log((1 - $e) / (1 + $e))));
         if ($n > 0) {
             $theta = atan2($easting, $rhoOrigin - $northing);
         } else {
@@ -337,7 +336,7 @@ class ProjectedPoint extends Point
                 $latitude = $latitude - ($A * ($C * $J + 1) - $J - $C * ($J ** 2 + $B) / 2) / ($e2 * sin(2 * $latitude) * ($J ** 2 + $B - 2 * $A * $J) / 4 * $C + ($A - $J) * ($C * $M - (2 / sin(2 * $latitude)) - $M));
             } while (abs($latitude - $latitudeN) >= self::NEWTON_RAPHSON_CONVERGENCE);
 
-            $longitude = $longitudeOrigin + (asin($easting * $C / $a)) / sin($latitude);
+            $longitude = $longitudeOrigin + (self::asin($easting * $C / $a)) / sin($latitude);
         }
 
         return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
@@ -586,7 +585,7 @@ class ProjectedPoint extends Point
             $theta = $theta - $correctionFactor;
         } while (abs($theta - $thetaN) >= self::NEWTON_RAPHSON_CONVERGENCE);
 
-        $beta = asin(2 * sin($theta) / sqrt(3));
+        $beta = self::asin(2 * sin($theta) / sqrt(3));
 
         $latitude = $beta + (($e2 / 3 + 31 * $e4 / 180 + 517 * $e6 / 5040) * sin(2 * $beta)) + ((23 * $e4 / 360 + 251 * $e6 / 3780) * sin(4 * $beta)) + ((761 * $e6 / 45360) * sin(6 * $beta));
         $longitude = $longitudeOrigin + sqrt(3) * $easting * (1.340264 - 0.243318 * $theta ** 2 + $theta ** 6 * (0.006251 + 0.034164 * $theta ** 2)) / (2 * $Rq * cos($theta));
@@ -1178,7 +1177,7 @@ class ProjectedPoint extends Point
 
         $k = cos($latitudeFirstParallel) / sqrt(1 - $e2 * sin($latitudeFirstParallel) ** 2);
         $qP = (1 - $e2) * ((sin(M_PI_2) / (1 - $e2 * sin(M_PI_2) ** 2)) - (1 / (2 * $e)) * log((1 - $e * sin(M_PI_2)) / (1 + $e * sin(M_PI_2))));
-        $beta = asin(2 * $northing * $k / ($a * $qP));
+        $beta = self::asin(2 * $northing * $k / ($a * $qP));
 
         $latitude = $beta + (($e2 / 3 + 31 * $e4 / 180 + 517 * $e6 / 5040) * sin(2 * $beta)) + ((23 * $e4 / 360 + 251 * $e6 / 3780) * sin(4 * $beta)) + ((761 * $e6 / 45360) * sin(6 * $beta));
         $longitude = $longitudeOrigin + $easting / ($a * $k);
@@ -1213,10 +1212,10 @@ class ProjectedPoint extends Point
         $D = $c / $nuO;
         $J = $D - ($A * (1 + $A) * $D ** 3 / 6) - ($B * (1 + 3 * $A) * $D ** 4 / 24);
         $K = 1 - ($A * $J ** 2 / 2) - ($B * $J ** 3 / 6);
-        $psi = asin(sin($latitudeOrigin) * cos($J) + cos($latitudeOrigin) * sin($J) * cos($alpha));
+        $psi = self::asin(sin($latitudeOrigin) * cos($J) + cos($latitudeOrigin) * sin($J) * cos($alpha));
 
         $latitude = atan((1 - $e2 * $K * sin($latitudeOrigin) / sin($psi)) * tan($psi) / (1 - $e2));
-        $longitude = $longitudeOrigin + asin(sin($alpha) * sin($J) / cos($psi));
+        $longitude = $longitudeOrigin + self::asin(sin($alpha) * sin($J) / cos($psi));
 
         return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
     }
@@ -1253,7 +1252,7 @@ class ProjectedPoint extends Point
         $w1 = ($S1 * ($S2 ** $e)) ** $n;
         $c = (($n + sin($latitudeOrigin)) * (1 - ($w1 - 1) / ($w1 + 1))) / (($n - sin($latitudeOrigin)) * (1 + ($w1 - 1) / ($w1 + 1)));
         $w2 = $c * $w1;
-        $chiOrigin = asin(($w2 - 1) / ($w2 + 1));
+        $chiOrigin = self::asin(($w2 - 1) / ($w2 + 1));
 
         $g = 2 * $R * $scaleFactorOrigin * tan(M_PI / 4 - $chiOrigin / 2);
         $h = 4 * $R * $scaleFactorOrigin * tan($chiOrigin) + $g;
@@ -1580,8 +1579,8 @@ class ProjectedPoint extends Point
         $F = $D + sqrt($DD - 1) * static::sign($latC);
         $H = $F * ($tO) ** $B;
         $G = ($F - 1 / $F) / 2;
-        $gammaO = asin(sin($alphaC) / $D);
-        $lonO = $lonC - (asin($G * tan($gammaO))) / $B;
+        $gammaO = self::asin(sin($alphaC) / $D);
+        $lonO = $lonC - (self::asin($G * tan($gammaO))) / $B;
 
         $v = $easting * cos($gammaC) - $northing * sin($gammaC);
         $u = $northing * cos($gammaC) + $easting * sin($gammaC);
@@ -1636,8 +1635,8 @@ class ProjectedPoint extends Point
         $F = $D + sqrt($DD - 1) * static::sign($latC);
         $H = $F * ($tO) ** $B;
         $G = ($F - 1 / $F) / 2;
-        $gammaO = asin(sin($alphaC) / $D);
-        $lonO = $lonC - (asin($G * tan($gammaO))) / $B;
+        $gammaO = self::asin(sin($alphaC) / $D);
+        $lonO = $lonC - (self::asin($G * tan($gammaO))) / $B;
         $vC = 0;
         if ($alphaC === M_PI / 2) {
             $uC = $A * ($lonC - $lonO);
@@ -1686,7 +1685,7 @@ class ProjectedPoint extends Point
         $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
 
         $B = sqrt(1 + ($e2 * cos($latC) ** 4 / (1 - $e2)));
-        $latS = asin(sin($latC) / $B);
+        $latS = self::asin(sin($latC) / $B);
         $R = $a * $kC * (sqrt(1 - $e2) / (1 - $e2 * sin($latC) ** 2));
         $C = log(tan(M_PI / 4 + $latS / 2)) - $B * log(tan(M_PI / 4 + $latC / 2) * ((1 - $e * sin($latC)) / (1 + $e * sin($latC))) ** ($e / 2));
 
@@ -1764,7 +1763,7 @@ class ProjectedPoint extends Point
         } else {
             $qO = asinh(tan($latitudeOrigin)) - ($e * atanh($e * sin($latitudeOrigin)));
             $betaO = atan(sinh($qO));
-            $xiO0 = asin(sin($betaO));
+            $xiO0 = self::asin(sin($betaO));
             $xiO1 = $h1 * sin(2 * $xiO0);
             $xiO2 = $h2 * sin(4 * $xiO0);
             $xiO3 = $h3 * sin(6 * $xiO0);
@@ -1786,7 +1785,7 @@ class ProjectedPoint extends Point
         $xi0 = $xi - ($xi1 + $xi2 + $xi3 + $xi4);
         $eta0 = $eta - ($eta1 + $eta2 + $eta3 + $eta4);
 
-        $beta = asin(sin($xi0) / cosh($eta0));
+        $beta = self::asin(sin($xi0) / cosh($eta0));
 
         $QPrime = asinh(tan($beta));
         $Q = asinh(tan($beta));
@@ -1796,7 +1795,7 @@ class ProjectedPoint extends Point
         } while (abs($Q - $QN) >= self::NEWTON_RAPHSON_CONVERGENCE);
 
         $latitude = atan(sinh($Q));
-        $longitude = $longitudeOrigin + asin(tanh($eta0) / cos($beta));
+        $longitude = $longitudeOrigin + self::asin(tanh($eta0) / cos($beta));
 
         return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
     }

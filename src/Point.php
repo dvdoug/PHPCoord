@@ -134,4 +134,34 @@ abstract class Point implements Stringable
 
         return ['xt' => $xt, 'yt' => $yt];
     }
+
+    /**
+     * Floating point vagaries mean that it's possible for inputs to be e.g. 1.00000000000001 which makes PHP give a
+     * silent NaN as output so inputs need to be capped. atan/atan2 are not affected, they seem to cap internally.
+     */
+    protected static function acos(float $num): float
+    {
+        if ($num > 1.0) {
+            $num = 1.0;
+        } elseif ($num < -1) {
+            $num = -1.0;
+        }
+
+        return acos($num);
+    }
+
+    /**
+     * Floating point vagaries mean that it's possible for inputs to be e.g. 1.00000000000001 which makes PHP give a
+     * silent NaN as output so inputs need to be capped. atan/atan2 are not affected, they seem to cap internally.
+     */
+    protected static function asin(float $num): float
+    {
+        if ($num > 1.0) {
+            $num = 1.0;
+        } elseif ($num < -1.0) {
+            $num = -1.0;
+        }
+
+        return asin($num);
+    }
 }
