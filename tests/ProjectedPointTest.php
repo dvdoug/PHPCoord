@@ -10,6 +10,8 @@ namespace PHPCoord;
 
 use DateTime;
 use DateTimeImmutable;
+use PHPCoord\CoordinateOperation\CRSTransformations;
+use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Projected;
 use PHPCoord\CoordinateSystem\Cartesian;
@@ -647,5 +649,48 @@ class ProjectedPointTest extends TestCase
 
         self::assertEqualsWithDelta(707155.557, $to->getEasting()->asMetres()->getValue(), 0.001);
         self::assertEqualsWithDelta(5819663.128, $to->getNorthing()->asMetres()->getValue(), 0.001);
+    }
+
+    /**
+     * @group integration
+     * @dataProvider supportedOperations
+     */
+    public function testOperations(string $sourceCrsSrid, string $targetCrsSrid, string $operationSrid, bool $reversible): void
+    {
+        $sourceCRS = Projected::fromSRID($sourceCrsSrid);
+        $targetCRS = CoordinateReferenceSystem::fromSRID($targetCrsSrid);
+
+        $epoch = new DateTime();
+
+        $originalPoint = ProjectedPoint::create(new Metre(0), new Metre(0), new Metre(0), new Metre(0), $sourceCRS, $epoch);
+        $newPoint = $originalPoint->performOperation($operationSrid, $targetCRS, false);
+        self::assertInstanceOf(Point::class, $newPoint);
+        self::assertEquals($targetCRS, $newPoint->getCRS());
+
+        if ($reversible) {
+            $reversedPoint = $newPoint->performOperation($operationSrid, $sourceCRS, true);
+
+            self::assertEquals($sourceCRS, $reversedPoint->getCRS());
+            self::assertEqualsWithDelta($originalPoint->getEasting()->getValue(), $reversedPoint->getEasting()->getValue(), 0.00001);
+            self::assertEqualsWithDelta($originalPoint->getNorthing()->getValue(), $reversedPoint->getNorthing()->getValue(), 0.00001);
+        }
+    }
+
+    public function supportedOperations(): array
+    {
+        $toTest = [];
+        $crss = Projected::getSupportedSRIDs();
+        foreach (CRSTransformations::getSupportedTransformations() as $transformation) {
+            if (isset($crss[$transformation['source_crs']])) {
+                $toTest[] = [
+                    $transformation['source_crs'],
+                    $transformation['target_crs'],
+                    $transformation['operation'],
+                    $transformation['reversible'],
+                ];
+            }
+        }
+
+        return $toTest;
     }
 }
