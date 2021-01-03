@@ -788,8 +788,8 @@ class GeographicPointTest extends TestCase
 
     public function testReversiblePolynomialBackward(): void
     {
-        $from = GeographicPoint::create(new Degree(52.508330203), new Degree(2.000009801), null, Geographic2D::fromSRID(Geographic2D::EPSG_ED50));
-        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_ED87);
+        $from = GeographicPoint::create(new Degree(52.508330203), new Degree(2.000009801), null, Geographic2D::fromSRID(Geographic2D::EPSG_ED87));
+        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_ED50);
         $to = $from->reversiblePolynomial(
             $toCRS,
             new Degree(55),
@@ -921,6 +921,36 @@ class GeographicPointTest extends TestCase
 
         self::assertEqualsWithDelta(1601528.90, $to->getEasting()->getValue(), 0.1);
         self::assertEqualsWithDelta(1336966.01, $to->getNorthing()->getValue(), 0.1);
+    }
+
+    public function testAutoConversionTM75ToETRS89(): void
+    {
+        $from = GeographicPoint::create(new Degree(55), new Degree(-6.5), null, Geographic2D::fromSRID(Geographic2D::EPSG_TM75));
+        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89);
+        $to = $from->convert($toCRS);
+
+        self::assertEqualsWithDelta(55.00002972, $to->getLatitude()->getValue(), 0.00000001);
+        self::assertEqualsWithDelta(-6.50094913, $to->getLongitude()->getValue(), 0.00000001);
+    }
+
+    public function testAutoConversionED50ToED87(): void
+    {
+        $from = GeographicPoint::create(new Degree(52.508333333), new Degree(2), null, Geographic2D::fromSRID(Geographic2D::EPSG_ED50));
+        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_ED87);
+        $to = $from->convert($toCRS);
+
+        self::assertEqualsWithDelta(52.508330203, $to->getLatitude()->getValue(), 0.00000001);
+        self::assertEqualsWithDelta(2.000009801, $to->getLongitude()->getValue(), 0.00000001);
+    }
+
+    public function testAutoConversionED87ToED50(): void
+    {
+        $from = GeographicPoint::create(new Degree(52.508330203), new Degree(2.000009801), null, Geographic2D::fromSRID(Geographic2D::EPSG_ED87));
+        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_ED50);
+        $to = $from->convert($toCRS);
+
+        self::assertEqualsWithDelta(52.508333333, $to->getLatitude()->getValue(), 0.00000001);
+        self::assertEqualsWithDelta(2, $to->getLongitude()->getValue(), 0.00000001);
     }
 
     // Issue #23

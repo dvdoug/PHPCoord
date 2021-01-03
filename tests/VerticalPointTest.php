@@ -16,6 +16,7 @@ use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\CoordinateReferenceSystem\Vertical;
 use PHPCoord\UnitOfMeasure\Length\Foot;
 use PHPCoord\UnitOfMeasure\Length\Metre;
+use PHPCoord\UnitOfMeasure\Scale\Unity;
 use PHPUnit\Framework\TestCase;
 
 class VerticalPointTest extends TestCase
@@ -67,6 +68,24 @@ class VerticalPointTest extends TestCase
         $to = $from->verticalOffset($toCRS, new Metre(0.4));
 
         self::assertEqualsWithDelta(2.95, $to->getHeight()->getValue(), 0.001);
+    }
+
+    public function testHeightDepthReversal(): void
+    {
+        $from = VerticalPoint::create(new Metre(2.55), Vertical::fromSRID(Vertical::EPSG_BALTIC_1977_HEIGHT));
+        $toCRS = Vertical::fromSRID(Vertical::EPSG_BALTIC_1977_HEIGHT);
+        $to = $from->heightDepthReversal($toCRS);
+
+        self::assertEqualsWithDelta(-2.55, $to->getHeight()->getValue(), 0.001);
+    }
+
+    public function testChangeOfVerticalUnit(): void
+    {
+        $from = VerticalPoint::create(new Foot(1), Vertical::fromSRID(Vertical::EPSG_POOLBEG_HEIGHT_FT_BR36));
+        $toCRS = Vertical::fromSRID(Vertical::EPSG_POOLBEG_HEIGHT_M);
+        $to = $from->changeOfVerticalUnit($toCRS, new Unity(0));
+
+        self::assertEqualsWithDelta(0.3048, $to->getHeight()->getValue(), 0.001);
     }
 
     /**
