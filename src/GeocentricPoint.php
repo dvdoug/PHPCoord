@@ -12,7 +12,9 @@ use DateTime;
 use DateTimeImmutable;
 use DateTimeInterface;
 use InvalidArgumentException;
+use PHPCoord\CoordinateOperation\AutoConversion;
 use PHPCoord\CoordinateOperation\GeocentricValue;
+use PHPCoord\CoordinateOperation\GeographicValue;
 use PHPCoord\CoordinateReferenceSystem\Geocentric;
 use PHPCoord\CoordinateReferenceSystem\Geographic;
 use PHPCoord\CoordinateReferenceSystem\Geographic3D;
@@ -34,6 +36,8 @@ use function sqrt;
  */
 class GeocentricPoint extends Point
 {
+    use AutoConversion;
+
     /**
      * X co-ordinate.
      */
@@ -451,5 +455,10 @@ class GeocentricPoint extends Point
         }
 
         return $this->positionVectorTransformation($to, $xAxisTranslation, $yAxisTranslation, $zAxisTranslation, $xAxisRotation, $yAxisRotation, $zAxisRotation, $scaleDifference);
+    }
+
+    protected function asGeographicValue(): GeographicValue
+    {
+        return (new GeocentricValue($this->x, $this->y, $this->z, $this->getCRS()->getDatum()))->asGeographicValue();
     }
 }

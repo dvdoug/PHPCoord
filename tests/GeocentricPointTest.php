@@ -18,6 +18,7 @@ use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\CoordinateReferenceSystem\Geocentric;
 use PHPCoord\CoordinateReferenceSystem\Geographic3D;
 use PHPCoord\Exception\InvalidCoordinateException;
+use PHPCoord\Exception\UnknownConversionException;
 use PHPCoord\UnitOfMeasure\Angle\ArcSecond;
 use PHPCoord\UnitOfMeasure\Length\Foot;
 use PHPCoord\UnitOfMeasure\Length\Metre;
@@ -318,6 +319,25 @@ class GeocentricPointTest extends TestCase
         $from = GeocentricPoint::create(new Metre(-3789470.710), new Metre(4841770.404), new Metre(-1690893.952), Geocentric::fromSRID(Geocentric::EPSG_ITRF2008));
         $toCRS = Geocentric::fromSRID(Geocentric::EPSG_GDA94);
         $to = $from->timeDependentPositionVectorTransformation($toCRS, new Metre(-84.68 / 1000), new Metre(-19.42 / 1000), new Metre(32.01 / 1000), new ArcSecond(0.4254 / 1000), new ArcSecond(-2.2578 / 1000), new ArcSecond(-2.4015 / 1000), new PartsPerMillion(0.00971), new Rate(new Metre(1.42 / 1000), new Year(1)), new Rate(new Metre(1.34 / 1000), new Year(1)), new Rate(new Metre(0.90 / 1000), new Year(1)), new Rate(new ArcSecond(-1.5461 / 1000), new Year(1)), new Rate(new ArcSecond(-1.1820 / 1000), new Year(1)), new Rate(new ArcSecond(-1.1551 / 1000), new Year(1)), new Rate(new PartsPerMillion(0.000109), new Year(1)), new Year(1994.0));
+    }
+
+    public function testAutoConversionPZ9011ToITRF2008(): void
+    {
+        $from = GeocentricPoint::create(new Metre(2845455.9753), new Metre(2160954.3073), new Metre(5265993.2656), Geocentric::fromSRID(Geocentric::EPSG_PZ_90_11), new DateTime('2010-01-01'));
+        $toCRS = Geocentric::fromSRID(Geocentric::EPSG_ITRF2008);
+        $to = $from->convert($toCRS);
+
+        self::assertEqualsWithDelta(2845455.9734, $to->getX()->getValue(), 0.0001);
+        self::assertEqualsWithDelta(2160954.3068, $to->getY()->getValue(), 0.0001);
+        self::assertEqualsWithDelta(5265993.2648, $to->getZ()->getValue(), 0.0001);
+    }
+
+    public function testAutoConversionPZ9011ToITRF2008NoEpoch(): void
+    {
+        $this->expectException(UnknownConversionException::class);
+        $from = GeocentricPoint::create(new Metre(2845455.9753), new Metre(2160954.3073), new Metre(5265993.2656), Geocentric::fromSRID(Geocentric::EPSG_PZ_90_11));
+        $toCRS = Geocentric::fromSRID(Geocentric::EPSG_ITRF2008);
+        $to = $from->convert($toCRS);
     }
 
     /**
