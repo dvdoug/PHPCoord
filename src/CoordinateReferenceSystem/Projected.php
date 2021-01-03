@@ -36776,16 +36776,6 @@ class Projected extends CoordinateReferenceSystem
         assert(count($coordinateSystem->getAxes()) === 2);
     }
 
-    public function getSRID(): string
-    {
-        return $this->srid;
-    }
-
-    public function getCoordinateSystem(): CoordinateSystem
-    {
-        return $this->coordinateSystem;
-    }
-
     public function getBaseCRS(): ?CoordinateReferenceSystem
     {
         return $this->baseCRS;

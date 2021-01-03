@@ -57,11 +57,6 @@ class GeocentricValue
         return $this->z;
     }
 
-    public function getDatum(): Datum
-    {
-        return $this->datum;
-    }
-
     public function asGeographicValue(): GeographicValue
     {
         $a = $this->datum->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();

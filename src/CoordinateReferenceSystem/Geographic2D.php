@@ -6503,21 +6503,6 @@ class Geographic2D extends Geographic
         assert(count($coordinateSystem->getAxes()) === 2);
     }
 
-    public function getSRID(): string
-    {
-        return $this->srid;
-    }
-
-    public function getCoordinateSystem(): CoordinateSystem
-    {
-        return $this->coordinateSystem;
-    }
-
-    public function getDatum(): Datum
-    {
-        return $this->datum;
-    }
-
     public static function fromSRID(string $srid): self
     {
         if (!isset(static::$sridData[$srid])) {
