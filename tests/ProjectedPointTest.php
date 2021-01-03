@@ -651,6 +651,16 @@ class ProjectedPointTest extends TestCase
         self::assertEqualsWithDelta(5819663.128, $to->getNorthing()->asMetres()->getValue(), 0.001);
     }
 
+    public function testAutoConversionBritishNationalGridToOSGB(): void
+    {
+        $from = ProjectedPoint::createFromEastingNorthing(new Metre(577274.99), new Metre(69740.50), Projected::fromSRID(Projected::EPSG_OSGB_1936_BRITISH_NATIONAL_GRID));
+        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_OSGB_1936);
+        $to = $from->convert($toCRS);
+
+        self::assertEqualsWithDelta(50.5, $to->getLatitude()->getValue(), 0.0001);
+        self::assertEqualsWithDelta(0.5, $to->getLongitude()->getValue(), 0.0001);
+    }
+
     /**
      * @group integration
      * @dataProvider supportedOperations

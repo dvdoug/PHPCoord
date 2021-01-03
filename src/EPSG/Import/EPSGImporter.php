@@ -719,6 +719,8 @@ class EPSGImporter
                 crs.coord_ref_sys_name AS name,
                 'urn:ogc:def:cs:EPSG::' || crs.coord_sys_code AS coordinate_system,
                 'urn:ogc:def:datum:EPSG::' || COALESCE(crs.datum_code, crs_base.datum_code) AS datum,
+                'urn:ogc:def:crs:EPSG::' || crs.base_crs_code AS base_crs,
+                'urn:ogc:def:coordinateOperation:EPSG::' || crs.projection_conv_code AS conversion_operation,
                 crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || crs.remarks AS constant_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs

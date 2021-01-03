@@ -36756,14 +36756,22 @@ class Projected extends CoordinateReferenceSystem
 
     use ProjectedSRIDData;
 
+    protected ?CoordinateReferenceSystem $baseCRS;
+
+    protected ?string $baseCRSConversionOperation;
+
     public function __construct(
         string $srid,
         CoordinateSystem $coordinateSystem,
-        Datum $datum
+        Datum $datum,
+        ?CoordinateReferenceSystem $baseCRS = null,
+        ?string $baseCRSConversionOperation = null
     ) {
         $this->srid = $srid;
         $this->coordinateSystem = $coordinateSystem;
         $this->datum = $datum;
+        $this->baseCRS = $baseCRS;
+        $this->baseCRSConversionOperation = $baseCRSConversionOperation;
 
         assert(count($coordinateSystem->getAxes()) === 2);
     }
@@ -36778,6 +36786,16 @@ class Projected extends CoordinateReferenceSystem
         return $this->coordinateSystem;
     }
 
+    public function getBaseCRS(): ?CoordinateReferenceSystem
+    {
+        return $this->baseCRS;
+    }
+
+    public function getBaseCRSConversionOperation(): ?string
+    {
+        return $this->baseCRSConversionOperation;
+    }
+
     public static function fromSRID(string $srid): self
     {
         if (!isset(static::$sridData[$srid])) {
@@ -36789,7 +36807,9 @@ class Projected extends CoordinateReferenceSystem
         return new self(
             $srid,
             Cartesian::fromSRID($data['coordinate_system']),
-            Datum::fromSRID($data['datum'])
+            Datum::fromSRID($data['datum']),
+            CoordinateReferenceSystem::fromSRID($data['base_crs']),
+            $data['conversion_operation']
         );
     }
 

@@ -16,7 +16,9 @@ use DateTimeImmutable;
 use DateTimeInterface;
 use function implode;
 use function log;
+use PHPCoord\CoordinateOperation\AutoConversion;
 use PHPCoord\CoordinateOperation\ComplexNumber;
+use PHPCoord\CoordinateOperation\GeographicValue;
 use PHPCoord\CoordinateReferenceSystem\Geographic;
 use PHPCoord\CoordinateReferenceSystem\Projected;
 use PHPCoord\CoordinateSystem\Axis;
@@ -40,6 +42,8 @@ use function tan;
  */
 class ProjectedPoint extends Point
 {
+    use AutoConversion;
+
     /**
      * Easting.
      */
@@ -1991,5 +1995,12 @@ class ProjectedPoint extends Point
             $to,
             $this->epoch
         );
+    }
+
+    protected function asGeographicValue(): GeographicValue
+    {
+        $asGeographicPoint = $this->performOperation($this->getCRS()->getBaseCRSConversionOperation(), $this->getCRS()->getBaseCRS(), true);
+
+        return new GeographicValue($asGeographicPoint->getLatitude(), $asGeographicPoint->getLongitude(), null, $this->getCRS()->getDatum());
     }
 }
