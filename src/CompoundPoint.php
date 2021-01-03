@@ -11,6 +11,8 @@ namespace PHPCoord;
 use DateTime;
 use DateTimeImmutable;
 use DateTimeInterface;
+use PHPCoord\CoordinateOperation\AutoConversion;
+use PHPCoord\CoordinateOperation\GeographicValue;
 use PHPCoord\CoordinateReferenceSystem\Compound;
 use PHPCoord\CoordinateReferenceSystem\Geographic3D;
 use PHPCoord\CoordinateReferenceSystem\Vertical;
@@ -24,9 +26,11 @@ use PHPCoord\UnitOfMeasure\Length\Metre;
  */
 class CompoundPoint extends Point
 {
+    use AutoConversion;
+
     /**
      * Horizontal point.
-     * @var GeocentricPoint|GeographicPoint|ProjectedPoint
+     * @var GeographicPoint|ProjectedPoint
      */
     protected Point $horizontalPoint;
 
@@ -47,7 +51,7 @@ class CompoundPoint extends Point
 
     /**
      * Constructor.
-     * @param GeocentricPoint|GeographicPoint|ProjectedPoint $horizontalPoint
+     * @param GeographicPoint|ProjectedPoint $horizontalPoint
      */
     protected function __construct(Point $horizontalPoint, VerticalPoint $verticalPoint, Compound $crs, ?DateTimeInterface $epoch = null)
     {
@@ -62,7 +66,7 @@ class CompoundPoint extends Point
     }
 
     /**
-     * @param GeocentricPoint|GeographicPoint|ProjectedPoint $horizontalPoint
+     * @param GeographicPoint|ProjectedPoint $horizontalPoint
      */
     public static function create(Point $horizontalPoint, VerticalPoint $verticalPoint, Compound $crs, ?DateTimeInterface $epoch = null)
     {
@@ -156,5 +160,10 @@ class CompoundPoint extends Point
         $newVerticalPoint = VerticalPoint::create($newVerticalHeight, $to->getVertical());
 
         return static::create($this->horizontalPoint, $newVerticalPoint, $to);
+    }
+
+    public function asGeographicValue(): GeographicValue
+    {
+        return $this->horizontalPoint->asGeographicValue();
     }
 }

@@ -1997,7 +1997,7 @@ class ProjectedPoint extends Point
         );
     }
 
-    protected function asGeographicValue(): GeographicValue
+    public function asGeographicValue(): GeographicValue
     {
         $asGeographicPoint = $this->performOperation($this->getCRS()->getBaseCRSConversionOperation(), $this->getCRS()->getBaseCRS(), true);
 

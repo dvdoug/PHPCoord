@@ -457,7 +457,7 @@ class GeocentricPoint extends Point
         return $this->positionVectorTransformation($to, $xAxisTranslation, $yAxisTranslation, $zAxisTranslation, $xAxisRotation, $yAxisRotation, $zAxisRotation, $scaleDifference);
     }
 
-    protected function asGeographicValue(): GeographicValue
+    public function asGeographicValue(): GeographicValue
     {
         return (new GeocentricValue($this->x, $this->y, $this->z, $this->getCRS()->getDatum()))->asGeographicValue();
     }

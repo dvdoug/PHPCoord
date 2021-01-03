@@ -91,10 +91,10 @@ trait AutoConversion
             return $ok;
         });
 
-        usort($candidates, function (array $a, array $b) { return $a['accuracy'] <=> $b['accuracy']; });
+        usort($candidates, static function (array $a, array $b) { return $a['accuracy'] <=> $b['accuracy']; });
 
         if (!$candidates) {
-            throw new UnknownConversionException('Unable to perform conversion, please file a bug?');
+            throw new UnknownConversionException('Unable to perform conversion, please file a bug if you think this is incorrect');
         }
 
         return [reset($candidates)];
@@ -104,7 +104,7 @@ trait AutoConversion
 
     abstract public function getCoordinateEpoch(): ?DateTimeImmutable;
 
-    abstract protected function asGeographicValue(): GeographicValue;
+    abstract public function asGeographicValue(): GeographicValue;
 
     abstract protected function performOperation(string $srid, CoordinateReferenceSystem $to, bool $inReverse): Point;
 }

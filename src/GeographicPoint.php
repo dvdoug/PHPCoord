@@ -2038,7 +2038,7 @@ class GeographicPoint extends Point
         return static::create($this->latitude, $this->longitude, $this->height, $to, $this->epoch);
     }
 
-    protected function asGeographicValue(): GeographicValue
+    public function asGeographicValue(): GeographicValue
     {
         return new GeographicValue($this->latitude, $this->longitude, $this->height, $this->crs->getDatum());
     }
