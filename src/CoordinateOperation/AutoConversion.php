@@ -16,7 +16,7 @@ use PHPCoord\UnitOfMeasure\Time\Year;
 
 trait AutoConversion
 {
-    public function convert(CoordinateReferenceSystem $to): Point
+    public function convert(CoordinateReferenceSystem $to, bool $ignoreBoundaryRestrictions = false): Point
     {
         if ($this->getCRS() == $to) {
             return $this;
@@ -27,7 +27,7 @@ trait AutoConversion
         }
 
         $point = $this;
-        $path = $this->findOperationPath($to);
+        $path = $this->findOperationPath($to, $ignoreBoundaryRestrictions);
 
         $inReverse = reset($path)['source_crs'] !== $this->getCRS()->getSRID();
 
@@ -39,7 +39,7 @@ trait AutoConversion
         return $point;
     }
 
-    protected function findOperationPath(CoordinateReferenceSystem $to): array
+    protected function findOperationPath(CoordinateReferenceSystem $to, bool $ignoreBoundaryRestrictions): array
     {
         $candidates = [];
         foreach (CRSTransformations::getSupportedTransformations() as $transformation) {
@@ -53,15 +53,17 @@ trait AutoConversion
         $asGeog = $this->asGeographicValue();
         $lat = $asGeog->getLatitude()->asDegrees()->getValue();
         $long = $asGeog->getLongitude()->asDegrees()->getValue();
-        $candidates = array_filter($candidates, function (array $candidate) use ($lat, $long) {
+        $candidates = array_filter($candidates, function (array $candidate) use ($lat, $long, $ignoreBoundaryRestrictions) {
             $operation = CoordinateOperations::getOperationData($candidate['operation']);
             $ok = true;
 
-            //filter out operations that only operate outside this point
-            if ($operation['bounding_box']['east'] < $operation['bounding_box']['west']) {
-                $ok = $ok && $lat <= $operation['bounding_box']['north'] && $lat >= $operation['bounding_box']['south'] && $long >= $operation['bounding_box']['west'] && $long <= ($operation['bounding_box']['east'] + 360);
-            } else {
-                $ok = $ok && $lat <= $operation['bounding_box']['north'] && $lat >= $operation['bounding_box']['south'] && $long >= $operation['bounding_box']['west'] && $long <= $operation['bounding_box']['east'];
+            if (!$ignoreBoundaryRestrictions) {
+                //filter out operations that only operate outside this point
+                if ($operation['bounding_box']['east'] < $operation['bounding_box']['west']) {
+                    $ok = $ok && $lat <= $operation['bounding_box']['north'] && $lat >= $operation['bounding_box']['south'] && $long >= $operation['bounding_box']['west'] && $long <= ($operation['bounding_box']['east'] + 360);
+                } else {
+                    $ok = $ok && $lat <= $operation['bounding_box']['north'] && $lat >= $operation['bounding_box']['south'] && $long >= $operation['bounding_box']['west'] && $long <= $operation['bounding_box']['east'];
+                }
             }
 
             //filter out operations that require an epoch if we don't have one
