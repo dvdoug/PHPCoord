@@ -24,7 +24,7 @@ use Stringable;
 
 abstract class Point implements Stringable
 {
-    protected const NEWTON_RAPHSON_CONVERGENCE = 1e-15;
+    protected const NEWTON_RAPHSON_CONVERGENCE = 1e-12;
 
     /**
      * @internal
