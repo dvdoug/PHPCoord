@@ -23,6 +23,18 @@ class GeographicTest extends TestCase
         }
     }
 
+    public function testCanCreate2D(): void
+    {
+        $object = Geographic::fromSRID(Geographic2D::EPSG_WGS_84);
+        self::assertInstanceOf(Geographic2D::class, $object);
+    }
+
+    public function testCanCreate3D(): void
+    {
+        $object = Geographic::fromSRID(Geographic3D::EPSG_WGS_84);
+        self::assertInstanceOf(Geographic3D::class, $object);
+    }
+
     /**
      * @group integration
      * @dataProvider coordinateReferenceSystems
