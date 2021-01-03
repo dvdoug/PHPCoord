@@ -86,7 +86,11 @@ abstract class Point implements Stringable
                 $params['inReverse'] = $inReverse;
             }
 
-            $point = $point->$method($destCRS, ...$params);
+            if (PHP_MAJOR_VERSION >= 8) {
+                $point = $point->$method($destCRS, ...$params);
+            } else {
+                $point = $point->$method($destCRS, ...array_values($params));
+            }
         }
 
         $point->crs = $to; //some operations are reused across CRSses (e.g. ETRS89 and WGS84), so the $destCRS of the final suboperation might not be the intended target
