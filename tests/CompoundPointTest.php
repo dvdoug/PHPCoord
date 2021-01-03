@@ -10,11 +10,16 @@ namespace PHPCoord;
 
 use DateTime;
 use DateTimeImmutable;
+use PHPCoord\CoordinateOperation\CoordinateOperations;
+use PHPCoord\CoordinateOperation\CRSTransformations;
 use PHPCoord\CoordinateReferenceSystem\Compound;
+use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
+use PHPCoord\CoordinateReferenceSystem\Geographic;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Projected;
 use PHPCoord\CoordinateReferenceSystem\Vertical;
 use PHPCoord\Exception\InvalidCoordinateReferenceSystemException;
+use PHPCoord\UnitOfMeasure\Angle\Degree;
 use PHPCoord\UnitOfMeasure\Angle\Radian;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPUnit\Framework\TestCase;
@@ -108,5 +113,66 @@ class CompoundPointTest extends TestCase
         self::assertEqualsWithDelta(0.826122513, $to->getHorizontalPoint()->getLatitude()->asRadians()->getValue(), 0.0000000001);
         self::assertEqualsWithDelta(0.168715161, $to->getHorizontalPoint()->getLongitude()->asRadians()->getValue(), 0.0000000001);
         self::assertEqualsWithDelta(472.69, $to->getVerticalPoint()->getHeight()->asMetres()->getValue(), 0.001);
+    }
+
+    /**
+     * @group integration
+     * @dataProvider supportedOperations
+     */
+    public function testOperations(string $sourceCrsSrid, string $targetCrsSrid, string $operationSrid, bool $reversible): void
+    {
+        $operation = CoordinateOperations::getOperationData($operationSrid);
+
+        $sourceCRS = Compound::fromSRID($sourceCrsSrid);
+        $sourceHorizontalCRS = $sourceCRS->getHorizontal();
+        if ($sourceHorizontalCRS instanceof Geographic2D) {
+            $latitude = new Degree(($operation['bounding_box']['north'] + $operation['bounding_box']['south']) / 2);
+
+            $longitude = new Degree(($operation['bounding_box']['west'] + $operation['bounding_box']['east']) / 2);
+            if ($operation['bounding_box']['east'] < $operation['bounding_box']['west'] && $longitude->getValue() <= 0) {
+                $longitude = $longitude->add(new Degree(180));
+            }
+            $horizontalPoint = GeographicPoint::create($latitude, $longitude, null, $sourceHorizontalCRS);
+        }
+        $verticalCRS = $sourceCRS->getVertical();
+        $verticalPoint = VerticalPoint::create(new Metre(0), $verticalCRS);
+        $targetCRS = CoordinateReferenceSystem::fromSRID($targetCrsSrid);
+
+        $epoch = new DateTime();
+
+        $originalPoint = CompoundPoint::create($horizontalPoint, $verticalPoint, $sourceCRS, $epoch);
+        $newPoint = $originalPoint->performOperation($operationSrid, $targetCRS, false);
+        self::assertInstanceOf(Point::class, $newPoint);
+        self::assertEquals($targetCRS, $newPoint->getCRS());
+
+        if ($reversible) {
+            $reversedPoint = $newPoint->performOperation($operationSrid, $sourceCRS, true);
+
+            self::assertEquals($sourceCRS, $reversedPoint->getCRS());
+            self::assertEqualsWithDelta($originalPoint->getVerticalPoint()->getHeight()->getValue(), $reversedPoint->getVerticalPoint()->getHeight()->getValue(), 0.001);
+
+            if ($sourceCRS instanceof Geographic) {
+                self::assertEqualsWithDelta($originalPoint->getHorizontalPoint()->getLatitude()->getValue(), $reversedPoint->getHorizontalPoint()->getLatitude()->getValue(), 0.001);
+                self::assertEqualsWithDelta($originalPoint->getHorizontalPoint()->getLongitude()->getValue(), $reversedPoint->getHorizontalPoint()->getLongitude()->getValue(), 0.001);
+            }
+        }
+    }
+
+    public function supportedOperations(): array
+    {
+        $toTest = [];
+        $crss = Compound::getSupportedSRIDs();
+        foreach (CRSTransformations::getSupportedTransformations() as $transformation) {
+            if (isset($crss[$transformation['source_crs']])) {
+                $toTest[] = [
+                    $transformation['source_crs'],
+                    $transformation['target_crs'],
+                    $transformation['operation'],
+                    $transformation['reversible'],
+                ];
+            }
+        }
+
+        return $toTest;
     }
 }
