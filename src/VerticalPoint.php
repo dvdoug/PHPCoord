@@ -15,6 +15,7 @@ use DateTimeInterface;
 use PHPCoord\CoordinateReferenceSystem\Vertical;
 use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Length\Metre;
+use PHPCoord\UnitOfMeasure\Scale\Scale;
 
 /**
  * Coordinate representing a vertical dimension.
@@ -96,5 +97,25 @@ class VerticalPoint extends Point
         Length $verticalOffset
     ): self {
         return static::create($this->height->add($verticalOffset), $to);
+    }
+
+    /**
+     * Height Depth Reversal.
+     */
+    public function heightDepthReversal(
+        Vertical $to
+    ): self {
+        return static::create($this->height->multiply(-1), $to);
+    }
+
+    /**
+     * Change of Vertical Unit.
+     */
+    public function changeOfVerticalUnit(
+        Vertical $to,
+        Scale $unitConversionScalar
+    ) {
+        // units are auto-converted, don't need to use the supplied param
+        return static::create($this->height, $to, $this->epoch);
     }
 }

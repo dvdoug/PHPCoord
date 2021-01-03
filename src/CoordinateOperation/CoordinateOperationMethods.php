@@ -9,58 +9,95 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateOperation;
 
+/**
+ * @internal
+ */
 class CoordinateOperationMethods
 {
     /**
+     * Abridged Molodensky
+     * This transformation is a truncated Taylor series expansion of a transformation between two geographic coordinate
+     * systems, modelled as a set of geocentric translations.
+     */
+    public const EPSG_ABRIDGED_MOLODENSKY = 'urn:ogc:def:method:EPSG::9605';
+
+    /**
+     * Affine geometric transformation.
+     */
+    public const EPSG_AFFINE_GEOMETRIC_TRANSFORMATION = 'urn:ogc:def:method:EPSG::9623';
+
+    /**
      * Affine parametric transformation.
      */
-    protected const EPSG_AFFINE_PARAMETRIC_TRANSFORMATION = 'urn:ogc:def:method:EPSG::9624';
+    public const EPSG_AFFINE_PARAMETRIC_TRANSFORMATION = 'urn:ogc:def:method:EPSG::9624';
 
     /**
      * Albers Equal Area.
      */
-    protected const EPSG_ALBERS_EQUAL_AREA = 'urn:ogc:def:method:EPSG::9822';
+    public const EPSG_ALBERS_EQUAL_AREA = 'urn:ogc:def:method:EPSG::9822';
 
     /**
      * American Polyconic.
      */
-    protected const EPSG_AMERICAN_POLYCONIC = 'urn:ogc:def:method:EPSG::9818';
+    public const EPSG_AMERICAN_POLYCONIC = 'urn:ogc:def:method:EPSG::9818';
+
+    /**
+     * Axis Order Reversal (2D)
+     * This is a parameter-less conversion to reverse the order of the axes of a 2D CRS.
+     */
+    public const EPSG_AXIS_ORDER_REVERSAL_2D = 'urn:ogc:def:method:EPSG::9843';
+
+    /**
+     * Axis Order Reversal (Geographic3D horizontal)
+     * This is a parameter-less conversion to change the order of horizontal coordinates of a geographic 3D CRS.
+     */
+    public const EPSG_AXIS_ORDER_REVERSAL_GEOGRAPHIC3D_HORIZONTAL = 'urn:ogc:def:method:EPSG::9844';
+
+    /**
+     * Bonne.
+     */
+    public const EPSG_BONNE = 'urn:ogc:def:method:EPSG::9827';
 
     /**
      * Bonne (South Orientated).
      */
-    protected const EPSG_BONNE_SOUTH_ORIENTATED = 'urn:ogc:def:method:EPSG::9828';
+    public const EPSG_BONNE_SOUTH_ORIENTATED = 'urn:ogc:def:method:EPSG::9828';
 
     /**
      * Cartesian Grid Offsets
      * This transformation allows calculation of coordinates in the target system by adding the parameter value to the
      * coordinate values of the point in the source system.
      */
-    protected const EPSG_CARTESIAN_GRID_OFFSETS = 'urn:ogc:def:method:EPSG::9656';
+    public const EPSG_CARTESIAN_GRID_OFFSETS = 'urn:ogc:def:method:EPSG::9656';
 
     /**
      * Cassini-Soldner.
      */
-    protected const EPSG_CASSINI_SOLDNER = 'urn:ogc:def:method:EPSG::9806';
+    public const EPSG_CASSINI_SOLDNER = 'urn:ogc:def:method:EPSG::9806';
+
+    /**
+     * Change of Vertical Unit.
+     */
+    public const EPSG_CHANGE_OF_VERTICAL_UNIT = 'urn:ogc:def:method:EPSG::1069';
 
     /**
      * Colombia Urban.
      */
-    protected const EPSG_COLOMBIA_URBAN = 'urn:ogc:def:method:EPSG::1052';
+    public const EPSG_COLOMBIA_URBAN = 'urn:ogc:def:method:EPSG::1052';
 
     /**
      * Complex polynomial of degree 3
      * Coordinate pairs treated as complex numbers.  This exploits the correlation between the polynomial coefficients
      * and leads to a smaller number of coefficients than the general polynomial of degree 3.
      */
-    protected const EPSG_COMPLEX_POLYNOMIAL_OF_DEGREE_3 = 'urn:ogc:def:method:EPSG::9652';
+    public const EPSG_COMPLEX_POLYNOMIAL_OF_DEGREE_3 = 'urn:ogc:def:method:EPSG::9652';
 
     /**
      * Complex polynomial of degree 4
      * Coordinate pairs treated as complex numbers.  This exploits the correlation between the polynomial coefficients
      * and leads to a smaller number of coefficients than the general polynomial of degree 4.
      */
-    protected const EPSG_COMPLEX_POLYNOMIAL_OF_DEGREE_4 = 'urn:ogc:def:method:EPSG::9653';
+    public const EPSG_COMPLEX_POLYNOMIAL_OF_DEGREE_4 = 'urn:ogc:def:method:EPSG::9653';
 
     /**
      * Coordinate Frame rotation (geocentric domain)
@@ -68,7 +105,7 @@ class CoordinateOperationMethods
      * is at the geocentre with coordinate values of zero. Note the analogy with the Position Vector method (code 1033)
      * but beware of the differences!
      */
-    protected const EPSG_COORDINATE_FRAME_ROTATION_GEOCENTRIC_DOMAIN = 'urn:ogc:def:method:EPSG::1032';
+    public const EPSG_COORDINATE_FRAME_ROTATION_GEOCENTRIC_DOMAIN = 'urn:ogc:def:method:EPSG::1032';
 
     /**
      * Coordinate Frame rotation (geog2D domain)
@@ -76,28 +113,59 @@ class CoordinateOperationMethods
      * convention is used by IAG and recommended by ISO 19111. See methods 1032 and 1038 for similar tfms operating
      * between other CRS types.
      */
-    protected const EPSG_COORDINATE_FRAME_ROTATION_GEOG2D_DOMAIN = 'urn:ogc:def:method:EPSG::9607';
+    public const EPSG_COORDINATE_FRAME_ROTATION_GEOG2D_DOMAIN = 'urn:ogc:def:method:EPSG::9607';
+
+    /**
+     * Coordinate Frame rotation (geog3D domain)
+     * Note the analogy with the Position Vector tfm (code 1037) but beware of the differences!  The Position Vector
+     * convention is used by IAG and recommended by ISO 19111. See methods 1032 and 9607 for similar tfms operating
+     * between other CRS types.
+     */
+    public const EPSG_COORDINATE_FRAME_ROTATION_GEOG3D_DOMAIN = 'urn:ogc:def:method:EPSG::1038';
 
     /**
      * Equal Earth.
      */
-    protected const EPSG_EQUAL_EARTH = 'urn:ogc:def:method:EPSG::1078';
+    public const EPSG_EQUAL_EARTH = 'urn:ogc:def:method:EPSG::1078';
 
     /**
      * Equidistant Cylindrical
      * See method code 1029 for spherical development. See also Pseudo Plate Carree, method code 9825.
      */
-    protected const EPSG_EQUIDISTANT_CYLINDRICAL = 'urn:ogc:def:method:EPSG::1028';
+    public const EPSG_EQUIDISTANT_CYLINDRICAL = 'urn:ogc:def:method:EPSG::1028';
+
+    /**
+     * Equidistant Cylindrical (Spherical)
+     * See method code 1028 for ellipsoidal development. If the latitude of natural origin is at the equator, also
+     * known as Plate Carrée. See also Pseudo Plate Carree, method code 9825.
+     */
+    public const EPSG_EQUIDISTANT_CYLINDRICAL_SPHERICAL = 'urn:ogc:def:method:EPSG::1029';
 
     /**
      * General polynomial of degree 2.
      */
-    protected const EPSG_GENERAL_POLYNOMIAL_OF_DEGREE_2 = 'urn:ogc:def:method:EPSG::9645';
+    public const EPSG_GENERAL_POLYNOMIAL_OF_DEGREE_2 = 'urn:ogc:def:method:EPSG::9645';
+
+    /**
+     * General polynomial of degree 3.
+     */
+    public const EPSG_GENERAL_POLYNOMIAL_OF_DEGREE_3 = 'urn:ogc:def:method:EPSG::9646';
+
+    /**
+     * General polynomial of degree 4.
+     */
+    public const EPSG_GENERAL_POLYNOMIAL_OF_DEGREE_4 = 'urn:ogc:def:method:EPSG::9647';
 
     /**
      * General polynomial of degree 6.
      */
-    protected const EPSG_GENERAL_POLYNOMIAL_OF_DEGREE_6 = 'urn:ogc:def:method:EPSG::9648';
+    public const EPSG_GENERAL_POLYNOMIAL_OF_DEGREE_6 = 'urn:ogc:def:method:EPSG::9648';
+
+    /**
+     * Geocentric translations  (geog3D domain)
+     * See methods 1031 and 9603 for similar tfms operating between other CRSs types.
+     */
+    public const EPSG_GEOCENTRIC_TRANSLATIONS_GEOG3D_DOMAIN = 'urn:ogc:def:method:EPSG::1035';
 
     /**
      * Geocentric translations (geocentric domain)
@@ -105,95 +173,122 @@ class CoordinateOperationMethods
      * corresponding coordinates of the point in the source system. See methods 1035 and 9603 for similar tfms
      * operating between other CRSs types.
      */
-    protected const EPSG_GEOCENTRIC_TRANSLATIONS_GEOCENTRIC_DOMAIN = 'urn:ogc:def:method:EPSG::1031';
+    public const EPSG_GEOCENTRIC_TRANSLATIONS_GEOCENTRIC_DOMAIN = 'urn:ogc:def:method:EPSG::1031';
 
     /**
      * Geocentric translations (geog2D domain)
      * See methods 1031 and 1035 for similar tfms operating between other CRSs types.
      */
-    protected const EPSG_GEOCENTRIC_TRANSLATIONS_GEOG2D_DOMAIN = 'urn:ogc:def:method:EPSG::9603';
+    public const EPSG_GEOCENTRIC_TRANSLATIONS_GEOG2D_DOMAIN = 'urn:ogc:def:method:EPSG::9603';
+
+    /**
+     * Geocentric/topocentric conversions.
+     */
+    public const EPSG_GEOCENTRIC_TOPOCENTRIC_CONVERSIONS = 'urn:ogc:def:method:EPSG::9836';
+
+    /**
+     * Geog3D to Geog2D+GravityRelatedHeight (gtx).
+     */
+    public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_GTX = 'urn:ogc:def:method:EPSG::1088';
 
     /**
      * Geographic/geocentric conversions
      * In applications it is often concatenated with the 3- 7- or 10-parameter transformations 9603, 9606, 9607 or
      * 9636 to form a geographic to geographic transformation.
      */
-    protected const EPSG_GEOGRAPHIC_GEOCENTRIC_CONVERSIONS = 'urn:ogc:def:method:EPSG::9602';
+    public const EPSG_GEOGRAPHIC_GEOCENTRIC_CONVERSIONS = 'urn:ogc:def:method:EPSG::9602';
+
+    /**
+     * Geographic/topocentric conversions.
+     */
+    public const EPSG_GEOGRAPHIC_TOPOCENTRIC_CONVERSIONS = 'urn:ogc:def:method:EPSG::9837';
 
     /**
      * Geographic2D offsets
      * This transformation allows calculation of coordinates in the target system by adding the parameter value to the
      * coordinate values of the point in the source system.
      */
-    protected const EPSG_GEOGRAPHIC2D_OFFSETS = 'urn:ogc:def:method:EPSG::9619';
+    public const EPSG_GEOGRAPHIC2D_OFFSETS = 'urn:ogc:def:method:EPSG::9619';
 
     /**
      * Geographic2D with Height Offsets
      * This transformation allows calculation of coordinates in the target system by adding the parameter value to the
      * coordinate values of the point in the source system.
      */
-    protected const EPSG_GEOGRAPHIC2D_WITH_HEIGHT_OFFSETS = 'urn:ogc:def:method:EPSG::9618';
+    public const EPSG_GEOGRAPHIC2D_WITH_HEIGHT_OFFSETS = 'urn:ogc:def:method:EPSG::9618';
+
+    /**
+     * Geographic3D offsets
+     * This transformation allows calculation of coordinates in the target system by adding the parameter value to the
+     * coordinate values of the point in the source system.
+     */
+    public const EPSG_GEOGRAPHIC3D_OFFSETS = 'urn:ogc:def:method:EPSG::9660';
 
     /**
      * Geographic3D to 2D conversion.
      */
-    protected const EPSG_GEOGRAPHIC3D_TO_2D_CONVERSION = 'urn:ogc:def:method:EPSG::9659';
+    public const EPSG_GEOGRAPHIC3D_TO_2D_CONVERSION = 'urn:ogc:def:method:EPSG::9659';
 
     /**
      * Guam Projection
      * Simplified form of Oblique Azimuthal Equidistant projection method.
      */
-    protected const EPSG_GUAM_PROJECTION = 'urn:ogc:def:method:EPSG::9831';
+    public const EPSG_GUAM_PROJECTION = 'urn:ogc:def:method:EPSG::9831';
+
+    /**
+     * Height Depth Reversal.
+     */
+    public const EPSG_HEIGHT_DEPTH_REVERSAL = 'urn:ogc:def:method:EPSG::1068';
 
     /**
      * Hotine Oblique Mercator (variant A).
      */
-    protected const EPSG_HOTINE_OBLIQUE_MERCATOR_VARIANT_A = 'urn:ogc:def:method:EPSG::9812';
+    public const EPSG_HOTINE_OBLIQUE_MERCATOR_VARIANT_A = 'urn:ogc:def:method:EPSG::9812';
 
     /**
      * Hotine Oblique Mercator (variant B).
      */
-    protected const EPSG_HOTINE_OBLIQUE_MERCATOR_VARIANT_B = 'urn:ogc:def:method:EPSG::9815';
+    public const EPSG_HOTINE_OBLIQUE_MERCATOR_VARIANT_B = 'urn:ogc:def:method:EPSG::9815';
 
     /**
      * Hyperbolic Cassini-Soldner.
      */
-    protected const EPSG_HYPERBOLIC_CASSINI_SOLDNER = 'urn:ogc:def:method:EPSG::9833';
+    public const EPSG_HYPERBOLIC_CASSINI_SOLDNER = 'urn:ogc:def:method:EPSG::9833';
 
     /**
      * Krovak.
      */
-    protected const EPSG_KROVAK = 'urn:ogc:def:method:EPSG::9819';
+    public const EPSG_KROVAK = 'urn:ogc:def:method:EPSG::9819';
 
     /**
      * Krovak (North Orientated).
      */
-    protected const EPSG_KROVAK_NORTH_ORIENTATED = 'urn:ogc:def:method:EPSG::1041';
+    public const EPSG_KROVAK_NORTH_ORIENTATED = 'urn:ogc:def:method:EPSG::1041';
 
     /**
      * Krovak Modified
      * Incorporates a polynomial transformation which is defined to be exact and for practical purposes is considered
      * to be a map projection.
      */
-    protected const EPSG_KROVAK_MODIFIED = 'urn:ogc:def:method:EPSG::1042';
+    public const EPSG_KROVAK_MODIFIED = 'urn:ogc:def:method:EPSG::1042';
 
     /**
      * Krovak Modified (North Orientated)
      * Incorporates a polynomial transformation which is defined to be exact and for practical purposes is considered
      * to be a map projection.
      */
-    protected const EPSG_KROVAK_MODIFIED_NORTH_ORIENTATED = 'urn:ogc:def:method:EPSG::1043';
+    public const EPSG_KROVAK_MODIFIED_NORTH_ORIENTATED = 'urn:ogc:def:method:EPSG::1043';
 
     /**
      * Laborde Oblique Mercator.
      */
-    protected const EPSG_LABORDE_OBLIQUE_MERCATOR = 'urn:ogc:def:method:EPSG::9813';
+    public const EPSG_LABORDE_OBLIQUE_MERCATOR = 'urn:ogc:def:method:EPSG::9813';
 
     /**
      * Lambert Azimuthal Equal Area
      * This is the ellipsoidal form of the projection.
      */
-    protected const EPSG_LAMBERT_AZIMUTHAL_EQUAL_AREA = 'urn:ogc:def:method:EPSG::9820';
+    public const EPSG_LAMBERT_AZIMUTHAL_EQUAL_AREA = 'urn:ogc:def:method:EPSG::9820';
 
     /**
      * Lambert Azimuthal Equal Area (Spherical)
@@ -201,59 +296,72 @@ class CoordinateOperationMethods
      * (code 9820) for ellipsoidal form.  Differences of several tens of metres result from comparison of the two
      * methods.
      */
-    protected const EPSG_LAMBERT_AZIMUTHAL_EQUAL_AREA_SPHERICAL = 'urn:ogc:def:method:EPSG::1027';
+    public const EPSG_LAMBERT_AZIMUTHAL_EQUAL_AREA_SPHERICAL = 'urn:ogc:def:method:EPSG::1027';
 
     /**
      * Lambert Conic Conformal (1SP).
      */
-    protected const EPSG_LAMBERT_CONIC_CONFORMAL_1SP = 'urn:ogc:def:method:EPSG::9801';
+    public const EPSG_LAMBERT_CONIC_CONFORMAL_1SP = 'urn:ogc:def:method:EPSG::9801';
 
     /**
      * Lambert Conic Conformal (2SP Belgium)
      * In 2000 this modification was replaced through use of the regular Lambert Conic Conformal (2SP) method [9802]
      * with appropriately modified parameter values.
      */
-    protected const EPSG_LAMBERT_CONIC_CONFORMAL_2SP_BELGIUM = 'urn:ogc:def:method:EPSG::9803';
+    public const EPSG_LAMBERT_CONIC_CONFORMAL_2SP_BELGIUM = 'urn:ogc:def:method:EPSG::9803';
 
     /**
      * Lambert Conic Conformal (2SP Michigan).
      */
-    protected const EPSG_LAMBERT_CONIC_CONFORMAL_2SP_MICHIGAN = 'urn:ogc:def:method:EPSG::1051';
+    public const EPSG_LAMBERT_CONIC_CONFORMAL_2SP_MICHIGAN = 'urn:ogc:def:method:EPSG::1051';
 
     /**
      * Lambert Conic Conformal (2SP).
      */
-    protected const EPSG_LAMBERT_CONIC_CONFORMAL_2SP = 'urn:ogc:def:method:EPSG::9802';
+    public const EPSG_LAMBERT_CONIC_CONFORMAL_2SP = 'urn:ogc:def:method:EPSG::9802';
 
     /**
      * Lambert Conic Conformal (West Orientated).
      */
-    protected const EPSG_LAMBERT_CONIC_CONFORMAL_WEST_ORIENTATED = 'urn:ogc:def:method:EPSG::9826';
+    public const EPSG_LAMBERT_CONIC_CONFORMAL_WEST_ORIENTATED = 'urn:ogc:def:method:EPSG::9826';
 
     /**
      * Lambert Conic Near-Conformal
      * The Lambert Near-Conformal projection is derived from the Lambert Conformal Conic projection by truncating the
      * series expansion of the projection formulae.
      */
-    protected const EPSG_LAMBERT_CONIC_NEAR_CONFORMAL = 'urn:ogc:def:method:EPSG::9817';
+    public const EPSG_LAMBERT_CONIC_NEAR_CONFORMAL = 'urn:ogc:def:method:EPSG::9817';
 
     /**
      * Lambert Cylindrical Equal Area
      * This is the ellipsoidal form of the projection.
      */
-    protected const EPSG_LAMBERT_CYLINDRICAL_EQUAL_AREA = 'urn:ogc:def:method:EPSG::9835';
+    public const EPSG_LAMBERT_CYLINDRICAL_EQUAL_AREA = 'urn:ogc:def:method:EPSG::9835';
+
+    /**
+     * Lambert Cylindrical Equal Area (Spherical)
+     * This is the spherical form of the projection.  See coordinate operation method Lambert Cylindrical Equal Area
+     * (code 9835) for ellipsoidal form.  Differences of several tens of metres result from comparison of the two
+     * methods.
+     */
+    public const EPSG_LAMBERT_CYLINDRICAL_EQUAL_AREA_SPHERICAL = 'urn:ogc:def:method:EPSG::9834';
 
     /**
      * Longitude rotation
      * This transformation allows calculation of the longitude of a point in the target system by adding the parameter
      * value to the longitude value of the point in the source system.
      */
-    protected const EPSG_LONGITUDE_ROTATION = 'urn:ogc:def:method:EPSG::9601';
+    public const EPSG_LONGITUDE_ROTATION = 'urn:ogc:def:method:EPSG::9601';
 
     /**
      * Madrid to ED50 polynomial.
      */
-    protected const EPSG_MADRID_TO_ED50_POLYNOMIAL = 'urn:ogc:def:method:EPSG::9617';
+    public const EPSG_MADRID_TO_ED50_POLYNOMIAL = 'urn:ogc:def:method:EPSG::9617';
+
+    /**
+     * Mercator (Spherical).
+     */
+    public const EPSG_MERCATOR_SPHERICAL = 'urn:ogc:def:method:EPSG::1026';
 
     /**
      * Mercator (variant A)
@@ -261,75 +369,125 @@ class CoordinateOperationMethods
      * Mercator (variant A) method the EPSG dataset includes this parameter, which must have a value of zero, for
      * completeness in CRS labelling.
      */
-    protected const EPSG_MERCATOR_VARIANT_A = 'urn:ogc:def:method:EPSG::9804';
+    public const EPSG_MERCATOR_VARIANT_A = 'urn:ogc:def:method:EPSG::9804';
 
     /**
      * Mercator (variant B)
      * Used for most nautical charts.
      */
-    protected const EPSG_MERCATOR_VARIANT_B = 'urn:ogc:def:method:EPSG::9805';
+    public const EPSG_MERCATOR_VARIANT_B = 'urn:ogc:def:method:EPSG::9805';
+
+    /**
+     * Mercator (variant C).
+     */
+    public const EPSG_MERCATOR_VARIANT_C = 'urn:ogc:def:method:EPSG::1044';
 
     /**
      * Modified Azimuthal Equidistant
      * Modified form of Oblique Azimuthal Equidistant projection method developed for Polynesian islands. For the
      * distances over which these projections are used (under 800km) this modification introduces no significant error.
      */
-    protected const EPSG_MODIFIED_AZIMUTHAL_EQUIDISTANT = 'urn:ogc:def:method:EPSG::9832';
+    public const EPSG_MODIFIED_AZIMUTHAL_EQUIDISTANT = 'urn:ogc:def:method:EPSG::9832';
+
+    /**
+     * Molodensky
+     * See Abridged Molodensky.
+     */
+    public const EPSG_MOLODENSKY = 'urn:ogc:def:method:EPSG::9604';
+
+    /**
+     * Molodensky-Badekas (CF geocentric domain)
+     * See method codes 1039 and 9636 for this operation in other coordinate domains and method code 1061 for opposite
+     * rotation convention in geocentric domain.
+     */
+    public const EPSG_MOLODENSKY_BADEKAS_CF_GEOCENTRIC_DOMAIN = 'urn:ogc:def:method:EPSG::1034';
 
     /**
      * Molodensky-Badekas (CF geog2D domain)
      * See method codes 1034 and 1039 for this operation in other coordinate domains and method code 1063 for the
      * opposite rotation convention in geographic 2D domain.
      */
-    protected const EPSG_MOLODENSKY_BADEKAS_CF_GEOG2D_DOMAIN = 'urn:ogc:def:method:EPSG::9636';
+    public const EPSG_MOLODENSKY_BADEKAS_CF_GEOG2D_DOMAIN = 'urn:ogc:def:method:EPSG::9636';
+
+    /**
+     * Molodensky-Badekas (CF geog3D domain)
+     * See method codes 1034 and 9636 for this operation in other coordinate domains and method code 1062 for opposite
+     * rotation convention in geographic 3D domain.
+     */
+    public const EPSG_MOLODENSKY_BADEKAS_CF_GEOG3D_DOMAIN = 'urn:ogc:def:method:EPSG::1039';
 
     /**
      * Molodensky-Badekas (PV geocentric domain)
      * See method codes 1062 and 1063 for this operation in other coordinate domains and method code 1034 for opposite
      * rotation convention in geocentric domain.
      */
-    protected const EPSG_MOLODENSKY_BADEKAS_PV_GEOCENTRIC_DOMAIN = 'urn:ogc:def:method:EPSG::1061';
+    public const EPSG_MOLODENSKY_BADEKAS_PV_GEOCENTRIC_DOMAIN = 'urn:ogc:def:method:EPSG::1061';
 
     /**
      * Molodensky-Badekas (PV geog2D domain)
      * See method codes 1061 and 1062 for this operation in other coordinate domains and method code 9636 for opposite
      * rotation in geographic 2D domain.
      */
-    protected const EPSG_MOLODENSKY_BADEKAS_PV_GEOG2D_DOMAIN = 'urn:ogc:def:method:EPSG::1063';
+    public const EPSG_MOLODENSKY_BADEKAS_PV_GEOG2D_DOMAIN = 'urn:ogc:def:method:EPSG::1063';
+
+    /**
+     * Molodensky-Badekas (PV geog3D domain)
+     * See method codes 1061 and 1063 for this operation in other coordinate domains and method code 1039 for opposite
+     * rotation convention in geographic 3D domain.
+     */
+    public const EPSG_MOLODENSKY_BADEKAS_PV_GEOG3D_DOMAIN = 'urn:ogc:def:method:EPSG::1062';
 
     /**
      * New Zealand Map Grid.
      */
-    protected const EPSG_NEW_ZEALAND_MAP_GRID = 'urn:ogc:def:method:EPSG::9811';
+    public const EPSG_NEW_ZEALAND_MAP_GRID = 'urn:ogc:def:method:EPSG::9811';
 
     /**
      * Oblique Stereographic
      * This is not the same as the projection method of the same name in USGS Professional Paper no. 1395, "Map
      * Projections - A Working Manual" by John P. Snyder.
      */
-    protected const EPSG_OBLIQUE_STEREOGRAPHIC = 'urn:ogc:def:method:EPSG::9809';
+    public const EPSG_OBLIQUE_STEREOGRAPHIC = 'urn:ogc:def:method:EPSG::9809';
+
+    /**
+     * Orthographic
+     * If the natural origin of the projection is at the topocentric origin, this is a special case of the Vertical
+     * Perspective (orthographic case) (method code 9839) in which the ellipsoid height of all mapped points is zero (h
+     * = 0).
+     */
+    public const EPSG_ORTHOGRAPHIC = 'urn:ogc:def:method:EPSG::9840';
+
+    /**
+     * Point motion (ellipsoidal).
+     */
+    public const EPSG_POINT_MOTION_ELLIPSOIDAL = 'urn:ogc:def:method:EPSG::1067';
+
+    /**
+     * Point motion (geocentric Cartesian).
+     */
+    public const EPSG_POINT_MOTION_GEOCENTRIC_CARTESIAN = 'urn:ogc:def:method:EPSG::1064';
 
     /**
      * Polar Stereographic (variant A)
      * Latitude of natural origin must be either 90 degrees or -90 degrees (or equivalent in alternative angle unit).
      */
-    protected const EPSG_POLAR_STEREOGRAPHIC_VARIANT_A = 'urn:ogc:def:method:EPSG::9810';
+    public const EPSG_POLAR_STEREOGRAPHIC_VARIANT_A = 'urn:ogc:def:method:EPSG::9810';
 
     /**
      * Polar Stereographic (variant B).
      */
-    protected const EPSG_POLAR_STEREOGRAPHIC_VARIANT_B = 'urn:ogc:def:method:EPSG::9829';
+    public const EPSG_POLAR_STEREOGRAPHIC_VARIANT_B = 'urn:ogc:def:method:EPSG::9829';
 
     /**
      * Polar Stereographic (variant C).
      */
-    protected const EPSG_POLAR_STEREOGRAPHIC_VARIANT_C = 'urn:ogc:def:method:EPSG::9830';
+    public const EPSG_POLAR_STEREOGRAPHIC_VARIANT_C = 'urn:ogc:def:method:EPSG::9830';
 
     /**
      * Popular Visualisation Pseudo Mercator
      * Applies spherical formulas to the ellipsoid. As such does not have the properties of a true Mercator projection.
      */
-    protected const EPSG_POPULAR_VISUALISATION_PSEUDO_MERCATOR = 'urn:ogc:def:method:EPSG::1024';
+    public const EPSG_POPULAR_VISUALISATION_PSEUDO_MERCATOR = 'urn:ogc:def:method:EPSG::1024';
 
     /**
      * Position Vector transformation (geocentric domain)
@@ -337,7 +495,7 @@ class CoordinateOperationMethods
      * is the geocentre with coordinate values of zero. Note the analogy with the Coordinate Frame method (code 1032)
      * but beware of the differences!
      */
-    protected const EPSG_POSITION_VECTOR_TRANSFORMATION_GEOCENTRIC_DOMAIN = 'urn:ogc:def:method:EPSG::1033';
+    public const EPSG_POSITION_VECTOR_TRANSFORMATION_GEOCENTRIC_DOMAIN = 'urn:ogc:def:method:EPSG::1033';
 
     /**
      * Position Vector transformation (geog2D domain)
@@ -345,24 +503,59 @@ class CoordinateOperationMethods
      * Vector convention is used by IAG and recommended by ISO 19111. See methods 1033 and 1037 for similar tfms
      * operating between other CRS types.
      */
-    protected const EPSG_POSITION_VECTOR_TRANSFORMATION_GEOG2D_DOMAIN = 'urn:ogc:def:method:EPSG::9606';
+    public const EPSG_POSITION_VECTOR_TRANSFORMATION_GEOG2D_DOMAIN = 'urn:ogc:def:method:EPSG::9606';
+
+    /**
+     * Position Vector transformation (geog3D domain)
+     * Note the analogy with the Coordinate Frame rotation (code 1038) but beware of the differences!  The Position
+     * Vector convention is used by IAG and recommended by ISO 19111. See methods 1033 and 9606 for similar tfms
+     * operating between other CRS types.
+     */
+    public const EPSG_POSITION_VECTOR_TRANSFORMATION_GEOG3D_DOMAIN = 'urn:ogc:def:method:EPSG::1037';
+
+    /**
+     * Pseudo Plate Carree
+     * Used only for depiction of graticule (latitude/longitude) coordinates on a computer display. The axes units are
+     * decimal degrees and of variable scale. The origin is at Lat = 0, Long = 0. See Equidistant Cylindrical, code
+     * 1029, for proper Plate Carrée.
+     */
+    public const EPSG_PSEUDO_PLATE_CARREE = 'urn:ogc:def:method:EPSG::9825';
 
     /**
      * Reversible polynomial of degree 13.
      */
-    protected const EPSG_REVERSIBLE_POLYNOMIAL_OF_DEGREE_13 = 'urn:ogc:def:method:EPSG::9654';
+    public const EPSG_REVERSIBLE_POLYNOMIAL_OF_DEGREE_13 = 'urn:ogc:def:method:EPSG::9654';
+
+    /**
+     * Reversible polynomial of degree 2
+     * Reversibility is subject to constraints.  See Guidance Note 7 for conditions and clarification.
+     */
+    public const EPSG_REVERSIBLE_POLYNOMIAL_OF_DEGREE_2 = 'urn:ogc:def:method:EPSG::9649';
+
+    /**
+     * Reversible polynomial of degree 3
+     * Reversibility is subject to constraints.  See Guidance Note 7 for conditions and clarification.
+     */
+    public const EPSG_REVERSIBLE_POLYNOMIAL_OF_DEGREE_3 = 'urn:ogc:def:method:EPSG::9650';
 
     /**
      * Reversible polynomial of degree 4
      * Reversibility is subject to constraints.  See Guidance Note 7 for conditions and clarification.
      */
-    protected const EPSG_REVERSIBLE_POLYNOMIAL_OF_DEGREE_4 = 'urn:ogc:def:method:EPSG::9651';
+    public const EPSG_REVERSIBLE_POLYNOMIAL_OF_DEGREE_4 = 'urn:ogc:def:method:EPSG::9651';
 
     /**
      * Similarity transformation
      * Defined for two-dimensional coordinate systems.
      */
-    protected const EPSG_SIMILARITY_TRANSFORMATION = 'urn:ogc:def:method:EPSG::9621';
+    public const EPSG_SIMILARITY_TRANSFORMATION = 'urn:ogc:def:method:EPSG::9621';
+
+    /**
+     * Swiss Oblique Cylindrical
+     * Can be accommodated by Oblique Mercator method (code 9815), for which this method is an approximation (see BfL
+     * document swissprojectionen.pdf at www.swisstopo.com).
+     */
+    public const EPSG_SWISS_OBLIQUE_CYLINDRICAL = 'urn:ogc:def:method:EPSG::9814';
 
     /**
      * Time-dependent Coordinate Frame rotation (geocen)
@@ -370,7 +563,23 @@ class CoordinateOperationMethods
      * differences!  The Position Vector convention is used by IAG. See method codes 1057 and 1058 for similar methods
      * operating between other CRS types.
      */
-    protected const EPSG_TIME_DEPENDENT_COORDINATE_FRAME_ROTATION_GEOCEN = 'urn:ogc:def:method:EPSG::1056';
+    public const EPSG_TIME_DEPENDENT_COORDINATE_FRAME_ROTATION_GEOCEN = 'urn:ogc:def:method:EPSG::1056';
+
+    /**
+     * Time-dependent Coordinate Frame rotation (geog2D)
+     * Note the analogy with the Time-dependent Position Vector transformation (code 1054) but beware of the
+     * differences!  The Position Vector convention is used by IAG. See methods 1056 and 1058 for similar tfms
+     * operating between other CRS types.
+     */
+    public const EPSG_TIME_DEPENDENT_COORDINATE_FRAME_ROTATION_GEOG2D = 'urn:ogc:def:method:EPSG::1057';
+
+    /**
+     * Time-dependent Coordinate Frame rotation (geog3D)
+     * Note the analogy with the Time-dependent Position Vector transformation (code 1055) but beware of the
+     * differences!  The Position Vector convention is used by IAG. See method codes 1056 and 1057 for similar methods
+     * operating between other CRS types.
+     */
+    public const EPSG_TIME_DEPENDENT_COORDINATE_FRAME_ROTATION_GEOG3D = 'urn:ogc:def:method:EPSG::1058';
 
     /**
      * Time-dependent Position Vector tfm (geocentric)
@@ -378,54 +587,84 @@ class CoordinateOperationMethods
      * The Position Vector convention is used by IAG. See method codes 1054 and 1055 for similar methods operating
      * between other CRS types.
      */
-    protected const EPSG_TIME_DEPENDENT_POSITION_VECTOR_TFM_GEOCENTRIC = 'urn:ogc:def:method:EPSG::1053';
+    public const EPSG_TIME_DEPENDENT_POSITION_VECTOR_TFM_GEOCENTRIC = 'urn:ogc:def:method:EPSG::1053';
+
+    /**
+     * Time-dependent Position Vector tfm (geog2D)
+     * Note the analogy with the Time-dependent Coordinate Frame rotation (code 1057) but beware of the differences!
+     * The Position Vector convention is used by IAG. See method codes 1053 and 1055 for similar methods operating
+     * between other CRS types.
+     */
+    public const EPSG_TIME_DEPENDENT_POSITION_VECTOR_TFM_GEOG2D = 'urn:ogc:def:method:EPSG::1054';
+
+    /**
+     * Time-dependent Position Vector tfm (geog3D)
+     * Note the analogy with the Coordinate Frame rotation (code 1058) but beware of the differences!  The Position
+     * Vector convention is used by IAG. See method codes 1053 and 1054 for similar methods operating between other CRS
+     * types.
+     */
+    public const EPSG_TIME_DEPENDENT_POSITION_VECTOR_TFM_GEOG3D = 'urn:ogc:def:method:EPSG::1055';
 
     /**
      * Time-specific Coordinate Frame rotation (geocen)
      * Note the analogy with the Time-specific Position Vector method (code 1065) but beware of the differences!
      */
-    protected const EPSG_TIME_SPECIFIC_COORDINATE_FRAME_ROTATION_GEOCEN = 'urn:ogc:def:method:EPSG::1066';
+    public const EPSG_TIME_SPECIFIC_COORDINATE_FRAME_ROTATION_GEOCEN = 'urn:ogc:def:method:EPSG::1066';
 
     /**
      * Time-specific Position Vector transform (geocen)
      * Note the analogy with the Time-specifc Coordinate Frame method (code 1066) but beware of the differences!
      */
-    protected const EPSG_TIME_SPECIFIC_POSITION_VECTOR_TRANSFORM_GEOCEN = 'urn:ogc:def:method:EPSG::1065';
+    public const EPSG_TIME_SPECIFIC_POSITION_VECTOR_TRANSFORM_GEOCEN = 'urn:ogc:def:method:EPSG::1065';
 
     /**
      * Transverse Mercator.
      */
-    protected const EPSG_TRANSVERSE_MERCATOR = 'urn:ogc:def:method:EPSG::9807';
+    public const EPSG_TRANSVERSE_MERCATOR = 'urn:ogc:def:method:EPSG::9807';
 
     /**
      * Transverse Mercator (South Orientated).
      */
-    protected const EPSG_TRANSVERSE_MERCATOR_SOUTH_ORIENTATED = 'urn:ogc:def:method:EPSG::9808';
+    public const EPSG_TRANSVERSE_MERCATOR_SOUTH_ORIENTATED = 'urn:ogc:def:method:EPSG::9808';
 
     /**
      * Transverse Mercator Zoned Grid System
      * If locations fall outwith the fixed zones the general Transverse Mercator method (code 9807) must be used for
      * each zone.
      */
-    protected const EPSG_TRANSVERSE_MERCATOR_ZONED_GRID_SYSTEM = 'urn:ogc:def:method:EPSG::9824';
+    public const EPSG_TRANSVERSE_MERCATOR_ZONED_GRID_SYSTEM = 'urn:ogc:def:method:EPSG::9824';
 
     /**
      * Vertical Offset
      * This transformation allows calculation of height (or depth) in the target system by adding the parameter value
      * to the height (or depth)-value of the point in the source system.
      */
-    protected const EPSG_VERTICAL_OFFSET = 'urn:ogc:def:method:EPSG::9616';
+    public const EPSG_VERTICAL_OFFSET = 'urn:ogc:def:method:EPSG::9616';
 
     /**
      * Vertical Offset and Slope
      * This transformation allows calculation of height in the target system by applying the parameter values to the
      * height value of the point in the source system.
      */
-    protected const EPSG_VERTICAL_OFFSET_AND_SLOPE = 'urn:ogc:def:method:EPSG::1046';
+    public const EPSG_VERTICAL_OFFSET_AND_SLOPE = 'urn:ogc:def:method:EPSG::1046';
 
-    public function operationBySRID(string $srid)
+    /**
+     * Vertical Perspective
+     * For a viewing point height approaching or at infinity, see the Vertical Perspective (orthographic case) (method
+     * code 9839).
+     */
+    public const EPSG_VERTICAL_PERSPECTIVE = 'urn:ogc:def:method:EPSG::9838';
+
+    /**
+     * Vertical Perspective (Orthographic case)
+     * This is a special case of the general Vertical Perspective (method code 9838) in which the viewing point at
+     * infinity.
+     */
+    public const EPSG_VERTICAL_PERSPECTIVE_ORTHOGRAPHIC_CASE = 'urn:ogc:def:method:EPSG::9839';
+
+    public static function getFunctionName(string $srid): string
     {
-        return [
+        $lookup = [
             self::EPSG_GEOGRAPHIC_GEOCENTRIC_CONVERSIONS => 'geographicGeocentric',
             self::EPSG_GEOCENTRIC_TRANSLATIONS_GEOCENTRIC_DOMAIN => 'geocentricTranslation',
             self::EPSG_GEOCENTRIC_TRANSLATIONS_GEOG2D_DOMAIN => 'geocentricTranslation',
@@ -493,6 +732,12 @@ class CoordinateOperationMethods
             self::EPSG_MADRID_TO_ED50_POLYNOMIAL => 'madridToED50Polynomial',
             self::EPSG_COMPLEX_POLYNOMIAL_OF_DEGREE_3 => 'complexPolynomial',
             self::EPSG_COMPLEX_POLYNOMIAL_OF_DEGREE_4 => 'complexPolynomial',
+            self::EPSG_AXIS_ORDER_REVERSAL_2D => 'axisReversal',
+            self::EPSG_AXIS_ORDER_REVERSAL_GEOGRAPHIC3D_HORIZONTAL => 'axisReversal',
+            self::EPSG_HEIGHT_DEPTH_REVERSAL => 'heightDepthReversal',
+            self::EPSG_CHANGE_OF_VERTICAL_UNIT => 'changeOfVerticalUnit',
         ];
+
+        return $lookup[$srid];
     }
 }

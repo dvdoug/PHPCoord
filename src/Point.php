@@ -9,23 +9,100 @@ declare(strict_types=1);
 namespace PHPCoord;
 
 use DateTimeImmutable;
+use PHPCoord\CoordinateOperation\CoordinateOperationMethods;
+use PHPCoord\CoordinateOperation\CoordinateOperationParams;
+use PHPCoord\CoordinateOperation\CoordinateOperations;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\CoordinateSystem\Axis;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Scale\Coefficient;
+use PHPCoord\UnitOfMeasure\Scale\Scale;
 use PHPCoord\UnitOfMeasure\UnitOfMeasure;
+use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
 use Stringable;
 
 abstract class Point implements Stringable
 {
-    protected const NEWTON_RAPHSON_CONVERGENCE = 1e-16;
+    protected const NEWTON_RAPHSON_CONVERGENCE = 1e-15;
 
-    abstract public function getCRS(): CoordinateReferenceSystem;
+    /**
+     * @internal
+     */
+    public function performOperation(string $srid, CoordinateReferenceSystem $to, bool $inReverse): self
+    {
+        $operations = [];
+        $operation = CoordinateOperations::getOperationData($srid);
+        if (isset($operation['operations'])) {
+            foreach ($operation['operations'] as $subOperation) {
+                $subOperationData = CoordinateOperations::getOperationData($subOperation['operation']);
+                $subOperationData['source_crs'] = $subOperation['source_crs'];
+                $subOperationData['target_crs'] = $subOperation['target_crs'];
+                $operations[$subOperation['operation']] = $subOperationData;
+            }
+        } else {
+            $operations[$srid] = $operation;
+        }
 
-    abstract public function getCoordinateEpoch(): ?DateTimeImmutable;
+        if ($inReverse) {
+            $operations = array_reverse($operations, true);
+        }
 
-    abstract public function calculateDistance(self $to): Length;
+        $point = $this;
+        foreach ($operations as $operationSrid => $operation) {
+            $method = CoordinateOperationMethods::getFunctionName($operation['method']);
+            if (isset($operation['source_crs']) && $operation['target_crs']) {
+                $destCRS = CoordinateReferenceSystem::fromSRID($inReverse ? $operation['source_crs'] : $operation['target_crs']);
+            } else {
+                $destCRS = $to;
+            }
+
+            $params = [];
+            $powerCoefficients = [];
+            foreach (CoordinateOperationParams::getParamData($operationSrid) as $paramName => $paramData) {
+                $value = $paramData['value'];
+                if ($inReverse && $paramData['reverses']) {
+                    $value *= -1;
+                }
+                if ($paramData['uom']) {
+                    $param = UnitOfMeasureFactory::makeUnit($value, $paramData['uom']);
+                } else {
+                    $param = $paramData['value'];
+                }
+                $paramName = static::camelCase($paramName);
+                if (strpos($paramName, 'Au') === 0 || strpos($paramName, 'Bu') === 0) {
+                    $powerCoefficients[$paramName] = $param;
+                } else {
+                    $params[$paramName] = $param;
+                }
+            }
+            if ($powerCoefficients) {
+                $params['powerCoefficients'] = $powerCoefficients;
+            }
+            if (in_array($operation['method'], [
+                CoordinateOperationMethods::EPSG_SIMILARITY_TRANSFORMATION,
+                CoordinateOperationMethods::EPSG_AFFINE_PARAMETRIC_TRANSFORMATION,
+            ], true)) {
+                $params['inReverse'] = $inReverse;
+            }
+
+            $point = $point->$method($destCRS, ...$params);
+        }
+
+        $point->crs = $to; //some operations are reused across CRSses (e.g. ETRS89 and WGS84), so the $destCRS of the final suboperation might not be the intended target
+
+        return $point;
+    }
+
+    protected static function camelCase(string $string): string
+    {
+        $string = str_replace([' ', '-'], '', ucwords($string, ' -'));
+        if (!preg_match('/[ABC][uv\d]/', $string)) {
+            $string = lcfirst($string);
+        }
+
+        return $string;
+    }
 
     protected function getAxisByName(string $name): ?Axis
     {
@@ -164,4 +241,10 @@ abstract class Point implements Stringable
 
         return asin($num);
     }
+
+    abstract public function getCRS(): CoordinateReferenceSystem;
+
+    abstract public function getCoordinateEpoch(): ?DateTimeImmutable;
+
+    abstract public function calculateDistance(self $to): Length;
 }

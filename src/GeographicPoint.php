@@ -2024,4 +2024,14 @@ class GeographicPoint extends Point
             $this->epoch
         );
     }
+
+    /**
+     * Axis Order Reversal.
+     */
+    public function axisReversal(
+        Geographic $to
+    ) {
+        // axes are read in from the CRS, this is a book-keeping adjustment only
+        return static::create($this->latitude, $this->longitude, $this->height, $to, $this->epoch);
+    }
 }

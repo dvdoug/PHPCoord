@@ -12,6 +12,7 @@ use function dirname;
 use function file_exists;
 use function file_get_contents;
 use function file_put_contents;
+use PHPCoord\CoordinateOperation\CoordinateOperations;
 use PHPCoord\Datum\Datum;
 use PhpCsFixer\AbstractFixer;
 use PhpCsFixer\Config;
@@ -67,6 +68,11 @@ class EPSGImporter
         }
         $sqlite->exec($tableData);
 
+        //Corrections
+        $sqlite->exec('UPDATE epsg_coordinatereferencesystem SET base_crs_code = 8817 WHERE coord_ref_sys_code = 8818');
+        $sqlite->exec('UPDATE epsg_coordinatereferencesystem SET projection_conv_code = 15593 WHERE coord_ref_sys_code = 9057');
+        $sqlite->exec('UPDATE epsg_coordinatereferencesystem SET projection_conv_code = 15593 WHERE coord_ref_sys_code = 9066');
+
         $sqlite->exec('VACUUM');
         $sqlite->exec('PRAGMA journal_mode=DELETE'); //but WAL is not openable read-only in older SQLite
         $sqlite->close();
@@ -88,6 +94,7 @@ class EPSGImporter
         $this->generateDataCoordinateSystems($sqlite);
         $this->generateDataCoordinateReferenceSystems($sqlite);
         $this->generateDataCoordinateOperationMethods($sqlite);
+        $this->generateDataCoordinateOperations($sqlite);
 
         $sqlite->close();
     }
@@ -813,38 +820,12 @@ class EPSGImporter
                 m.coord_op_method_name || '\n' || m.remarks AS constant_help,
                 m.deprecated
             FROM epsg_coordoperationmethod m
-            JOIN epsg_coordoperation o on m.coord_op_method_code = o.coord_op_method_code -- only want methods that are actually used
-            LEFT JOIN epsg_coordoperationparamvalue p ON p.coord_op_code = o.coord_op_code AND p.coord_op_method_code = m.coord_op_method_code
+            LEFT JOIN epsg_coordoperationparamvalue p ON p.coord_op_method_code = m.coord_op_method_code
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperationmethod' AND dep.object_code = m.coord_op_method_code AND dep.deprecation_date <= '2020-12-14'
             WHERE dep.deprecation_id IS NULL
-            AND o.coord_op_type != 'conversion'
             AND m.coord_op_method_name NOT LIKE '%wellbore%'
             AND m.coord_op_method_name NOT LIKE '%mining%'
             AND m.coord_op_method_name NOT LIKE '%seismic%'
-            AND o.coord_op_name NOT LIKE '%example%'
-            AND o.remarks NOT LIKE '%user-defined%'
-            GROUP BY m.coord_op_method_code
-            HAVING (SUM(CASE WHEN p.param_value_file_ref != '' THEN 1 ELSE 0 END) = 0) -- skip anything that needs some kind of datafile
-
-            UNION
-
-            SELECT
-                'urn:ogc:def:method:EPSG::' || m.coord_op_method_code AS urn,
-                m.coord_op_method_name AS name,
-                m.coord_op_method_name || '\n' || m.remarks AS constant_help,
-                m.deprecated
-            FROM epsg_coordoperationmethod m
-            JOIN epsg_coordoperation o on m.coord_op_method_code = o.coord_op_method_code -- only want methods that are actually used
-            JOIN epsg_coordinatereferencesystem crs ON crs.projection_conv_code = o.coord_op_code
-            LEFT JOIN epsg_coordoperationparamvalue p ON p.coord_op_code = o.coord_op_code AND p.coord_op_method_code = m.coord_op_method_code
-            LEFT JOIN epsg_deprecation dep_method ON dep_method.object_table_name = 'epsg_coordoperationmethod' AND dep_method.object_code = m.coord_op_method_code AND dep_method.deprecation_date <= '2020-12-14'
-            LEFT JOIN epsg_deprecation dep_crs ON dep_crs.object_table_name = 'epsg_coordinatereferencesystem' AND dep_crs.object_code = crs.coord_ref_sys_code AND dep_crs.deprecation_date <= '2020-12-14'
-            WHERE dep_method.deprecation_id IS NULL AND dep_crs.deprecation_id IS NULL
-            AND m.coord_op_method_name NOT LIKE '%wellbore%'
-            AND m.coord_op_method_name NOT LIKE '%mining%'
-            AND m.coord_op_method_name NOT LIKE '%seismic%'
-            AND o.coord_op_name NOT LIKE '%example%'
-            AND o.remarks NOT LIKE '%user-defined%'
             GROUP BY m.coord_op_method_code
             HAVING (SUM(CASE WHEN p.param_value_file_ref != '' THEN 1 ELSE 0 END) = 0) -- skip anything that needs some kind of datafile
 
@@ -858,7 +839,260 @@ class EPSGImporter
             unset($data[$row['urn']]['urn']);
         }
 
-        $this->updateFileConstants($this->sourceDir . '/CoordinateOperation/CoordinateOperationMethods.php', $data, 'protected');
+        $this->updateFileConstants($this->sourceDir . '/CoordinateOperation/CoordinateOperationMethods.php', $data, 'public');
+    }
+
+    public function generateDataCoordinateOperations(SQLite3 $sqlite): void
+    {
+        $sql = "
+            SELECT
+                'urn:ogc:def:coordinateOperation:EPSG::' || o.coord_op_code AS operation,
+                o.coord_op_name AS name,
+                o.coord_op_type AS type,
+                'urn:ogc:def:crs:EPSG::' || o.source_crs_code AS source_crs,
+                'urn:ogc:def:crs:EPSG::' || o.target_crs_code AS target_crs,
+                'urn:ogc:def:method:EPSG::' || o.coord_op_method_code AS method,
+                COALESCE(o.coord_op_accuracy, 0) AS accuracy,
+                m.reverse_op AS reversible
+            FROM epsg_coordoperation o
+            JOIN epsg_coordoperationmethod m ON m.coord_op_method_code = o.coord_op_method_code
+            JOIN epsg_coordinatereferencesystem sourcecrs ON sourcecrs.coord_ref_sys_code = o.source_crs_code AND sourcecrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND sourcecrs.deprecated = 0
+            JOIN epsg_coordinatereferencesystem targetcrs ON targetcrs.coord_ref_sys_code = o.target_crs_code AND targetcrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND targetcrs.deprecated = 0
+            LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordoperation' AND u.object_code = o.coord_op_code
+            LEFT JOIN epsg_extent e ON u.extent_code = e.extent_code
+            LEFT JOIN epsg_coordoperationparamvalue p ON p.coord_op_code = o.coord_op_code
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperation' AND dep.object_code = o.coord_op_code AND dep.deprecation_date <= '2020-12-14'
+            WHERE o.coord_op_type != 'conversion' AND o.coord_op_name NOT LIKE '%example%' AND o.coord_op_name NOT LIKE '%mining%'
+            AND dep.deprecation_id IS NULL
+            GROUP BY source_crs, target_crs, o.coord_op_code
+            HAVING (SUM(CASE WHEN p.param_value_file_ref != '' THEN 1 ELSE 0 END) = 0) -- skip anything that needs some kind of datafile
+
+            UNION
+
+            SELECT
+                'urn:ogc:def:coordinateOperation:EPSG::' || o.coord_op_code AS operation,
+                o.coord_op_name AS name,
+                o.coord_op_type AS type,
+                'urn:ogc:def:crs:EPSG::' || projcrs.base_crs_code AS source_crs,
+                'urn:ogc:def:crs:EPSG::' || projcrs.coord_ref_sys_code AS target_crs,
+                'urn:ogc:def:method:EPSG::' || o.coord_op_method_code AS method,
+                COALESCE(o.coord_op_accuracy, 0) AS accuracy,
+                m.reverse_op AS reversible
+            FROM epsg_coordoperation o
+            JOIN epsg_coordinatereferencesystem projcrs ON projcrs.projection_conv_code = o.coord_op_code AND projcrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND projcrs.deprecated = 0
+            JOIN epsg_coordoperationmethod m ON m.coord_op_method_code = o.coord_op_method_code
+            LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordoperation' AND u.object_code = o.coord_op_code
+            LEFT JOIN epsg_extent e ON u.extent_code = e.extent_code
+            LEFT JOIN epsg_coordoperationparamvalue p ON p.coord_op_code = o.coord_op_code
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperation' AND dep.object_code = o.coord_op_code AND dep.deprecation_date <= '2020-12-14'
+            WHERE o.coord_op_type = 'conversion' AND o.coord_op_name NOT LIKE '%example%' AND o.coord_op_name NOT LIKE '%mining%'
+            AND dep.deprecation_id IS NULL
+            GROUP BY source_crs, target_crs, o.coord_op_code
+            HAVING (SUM(CASE WHEN p.param_value_file_ref != '' THEN 1 ELSE 0 END) = 0) -- skip anything that needs some kind of datafile
+
+            UNION
+
+            SELECT
+                'urn:ogc:def:coordinateOperation:EPSG::' || o.coord_op_code AS operation,
+                o.coord_op_name AS name,
+                o.coord_op_type AS type,
+                'urn:ogc:def:crs:EPSG::' || o.source_crs_code AS source_crs,
+                'urn:ogc:def:crs:EPSG::' || o.target_crs_code AS target_crs,
+                null AS method,
+                COALESCE(o.coord_op_accuracy, 0) AS accuracy,
+                CASE WHEN SUM(CASE WHEN cm.reverse_op = 0 THEN 1 ELSE 0 END) = 0 THEN 1 ELSE 0 END AS reversible
+            FROM epsg_coordoperation o
+            LEFT JOIN epsg_coordoperationpath p ON p.concat_operation_code = o.coord_op_code
+            LEFT JOIN epsg_coordoperation co ON p.single_operation_code = co.coord_op_code
+            LEFT JOIN epsg_coordoperationmethod cm ON co.coord_op_method_code = cm.coord_op_method_code
+            JOIN epsg_coordinatereferencesystem sourcecrs ON sourcecrs.coord_ref_sys_code = o.source_crs_code AND sourcecrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND sourcecrs.deprecated = 0
+            JOIN epsg_coordinatereferencesystem targetcrs ON targetcrs.coord_ref_sys_code = o.target_crs_code AND targetcrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND targetcrs.deprecated = 0
+            LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordoperation' AND u.object_code = o.coord_op_code
+            LEFT JOIN epsg_extent e ON u.extent_code = e.extent_code
+            LEFT JOIN epsg_coordoperationparamvalue p ON p.coord_op_code = co.coord_op_code
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperation' AND dep.object_code = o.coord_op_code AND dep.deprecation_date <= '2020-12-14'
+            WHERE o.coord_op_type = 'concatenated operation' AND o.coord_op_name NOT LIKE '%example%' AND o.coord_op_name NOT LIKE '%mining%'
+            AND dep.deprecation_id IS NULL
+            GROUP BY source_crs, target_crs, o.coord_op_code
+            HAVING (SUM(CASE WHEN p.param_value_file_ref != '' THEN 1 ELSE 0 END) = 0) -- skip anything that needs some kind of datafile
+
+            ORDER BY source_crs, target_crs, operation
+            ";
+
+        $result = $sqlite->query($sql);
+        $data = [];
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            $row['reversible'] = (bool) $row['reversible'];
+            $data[] = $row;
+        }
+
+        $this->updateFileData($this->sourceDir . '/CoordinateOperation/CRSTransformations.php', $data);
+
+        $sql = "
+            SELECT
+                'urn:ogc:def:coordinateOperation:EPSG::' || o.coord_op_code AS urn,
+                o.coord_op_name AS name,
+                o.coord_op_type AS type,
+                'urn:ogc:def:method:EPSG::' || o.coord_op_method_code AS method,
+                e.bbox_north_bound_lat AS bbox_north_bound_latitude,
+                e.bbox_east_bound_lon AS bbox_east_bound_longitude,
+                e.bbox_south_bound_lat AS bbox_south_bound_latitude,
+                e.bbox_west_bound_lon AS bbox_west_bound_longitude
+            FROM epsg_coordoperation o
+            JOIN epsg_coordoperationmethod m ON m.coord_op_method_code = o.coord_op_method_code
+            JOIN epsg_coordinatereferencesystem sourcecrs ON sourcecrs.coord_ref_sys_code = o.source_crs_code AND sourcecrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND sourcecrs.deprecated = 0
+            JOIN epsg_coordinatereferencesystem targetcrs ON targetcrs.coord_ref_sys_code = o.target_crs_code AND targetcrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND targetcrs.deprecated = 0
+            LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordoperation' AND u.object_code = o.coord_op_code
+            LEFT JOIN epsg_extent e ON u.extent_code = e.extent_code
+            LEFT JOIN epsg_coordoperationparamvalue p ON p.coord_op_code = o.coord_op_code
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperation' AND dep.object_code = o.coord_op_code AND dep.deprecation_date <= '2020-12-14'
+            WHERE o.coord_op_type != 'conversion' AND o.coord_op_type != 'concatenated operation' AND o.coord_op_name NOT LIKE '%example%'
+            AND dep.deprecation_id IS NULL
+            GROUP BY o.coord_op_code
+            HAVING (SUM(CASE WHEN p.param_value_file_ref != '' THEN 1 ELSE 0 END) = 0) -- skip anything that needs some kind of datafile
+
+            UNION
+
+            SELECT
+                'urn:ogc:def:coordinateOperation:EPSG::' || o.coord_op_code AS urn,
+                o.coord_op_name AS name,
+                o.coord_op_type AS type,
+                'urn:ogc:def:method:EPSG::' || o.coord_op_method_code AS method,
+                e.bbox_north_bound_lat AS bbox_north_bound_latitude,
+                e.bbox_east_bound_lon AS bbox_east_bound_longitude,
+                e.bbox_south_bound_lat AS bbox_south_bound_latitude,
+                e.bbox_west_bound_lon AS bbox_west_bound_longitude
+            FROM epsg_coordoperation o
+            JOIN epsg_coordinatereferencesystem projcrs ON projcrs.projection_conv_code = o.coord_op_code AND projcrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND projcrs.deprecated = 0
+            JOIN epsg_coordoperationmethod m ON m.coord_op_method_code = o.coord_op_method_code
+            LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordoperation' AND u.object_code = o.coord_op_code
+            LEFT JOIN epsg_extent e ON u.extent_code = e.extent_code
+            LEFT JOIN epsg_coordoperationparamvalue p ON p.coord_op_code = o.coord_op_code
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperation' AND dep.object_code = o.coord_op_code AND dep.deprecation_date <= '2020-12-14'
+            WHERE o.coord_op_type = 'conversion' AND o.coord_op_name NOT LIKE '%example%'
+            AND dep.deprecation_id IS NULL
+            GROUP BY o.coord_op_code
+            HAVING (SUM(CASE WHEN p.param_value_file_ref != '' THEN 1 ELSE 0 END) = 0) -- skip anything that needs some kind of datafile
+
+            UNION
+
+            SELECT
+                'urn:ogc:def:coordinateOperation:EPSG::' || o.coord_op_code AS urn,
+                o.coord_op_name AS name,
+                o.coord_op_type AS type,
+                null AS method,
+                e.bbox_north_bound_lat AS bbox_north_bound_latitude,
+                e.bbox_east_bound_lon AS bbox_east_bound_longitude,
+                e.bbox_south_bound_lat AS bbox_south_bound_latitude,
+                e.bbox_west_bound_lon AS bbox_west_bound_longitude
+            FROM epsg_coordoperation o
+            LEFT JOIN epsg_coordoperationpath p ON p.concat_operation_code = o.coord_op_code
+            LEFT JOIN epsg_coordoperation co ON p.single_operation_code = co.coord_op_code
+            LEFT JOIN epsg_coordoperationmethod cm ON co.coord_op_method_code = cm.coord_op_method_code
+            JOIN epsg_coordinatereferencesystem sourcecrs ON sourcecrs.coord_ref_sys_code = o.source_crs_code AND sourcecrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND sourcecrs.deprecated = 0
+            JOIN epsg_coordinatereferencesystem targetcrs ON targetcrs.coord_ref_sys_code = o.target_crs_code AND targetcrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND targetcrs.deprecated = 0
+            LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordoperation' AND u.object_code = o.coord_op_code
+            LEFT JOIN epsg_extent e ON u.extent_code = e.extent_code
+            LEFT JOIN epsg_coordoperationparamvalue p ON p.coord_op_code = co.coord_op_code
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperation' AND dep.object_code = o.coord_op_code AND dep.deprecation_date <= '2020-12-14'
+            WHERE o.coord_op_type = 'concatenated operation' AND o.coord_op_name NOT LIKE '%example%'
+            AND dep.deprecation_id IS NULL
+            GROUP BY o.coord_op_code
+            HAVING (SUM(CASE WHEN p.param_value_file_ref != '' THEN 1 ELSE 0 END) = 0) -- skip anything that needs some kind of datafile
+
+            UNION
+
+            SELECT
+                'urn:ogc:def:coordinateOperation:EPSG::' || o.coord_op_code AS urn,
+                o.coord_op_name AS name,
+                o.coord_op_type AS type,
+                'urn:ogc:def:method:EPSG::' || o.coord_op_method_code AS method,
+                e.bbox_north_bound_lat AS bbox_north_bound_latitude,
+                e.bbox_east_bound_lon AS bbox_east_bound_longitude,
+                e.bbox_south_bound_lat AS bbox_south_bound_latitude,
+                e.bbox_west_bound_lon AS bbox_west_bound_longitude
+            FROM epsg_coordoperation o
+            JOIN epsg_coordoperationpath p ON p.single_operation_code = o.coord_op_code
+            LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordoperation' AND u.object_code = o.coord_op_code
+            LEFT JOIN epsg_extent e ON u.extent_code = e.extent_code
+            LEFT JOIN epsg_coordoperationparamvalue p ON p.coord_op_code = o.coord_op_code
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperation' AND dep.object_code = o.coord_op_code AND dep.deprecation_date <= '2020-12-14'
+            WHERE o.coord_op_name NOT LIKE '%example%'
+            AND dep.deprecation_id IS NULL
+            GROUP BY o.coord_op_code
+            HAVING (SUM(CASE WHEN p.param_value_file_ref != '' THEN 1 ELSE 0 END) = 0) -- skip anything that needs some kind of datafile
+
+            ORDER BY urn
+            ";
+
+        $result = $sqlite->query($sql);
+        $data = [];
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            if ($row['type'] === 'concatenated operation') {
+                unset($row['method']);
+                $row['operations'] = [];
+                $operationsSql = "
+                    SELECT
+                        'urn:ogc:def:coordinateOperation:EPSG::' || p.concat_operation_code AS concat_code,
+                        'urn:ogc:def:coordinateOperation:EPSG::' || p.single_operation_code AS single_code,
+                        'urn:ogc:def:crs:EPSG::' || o.source_crs_code AS source_crs,
+                        'urn:ogc:def:crs:EPSG::' || o.target_crs_code AS target_crs
+                    FROM epsg_coordoperationpath p
+                    JOIN epsg_coordoperation o ON p.single_operation_code = o.coord_op_code
+                    WHERE concat_code = '{$row['urn']}'
+                    ORDER BY p.op_path_step
+                    ";
+
+                $operationsResult = $sqlite->query($operationsSql);
+                while ($operationsRow = $operationsResult->fetchArray(SQLITE3_ASSOC)) {
+                    $row['operations'][] = [
+                            'operation' => $operationsRow['single_code'],
+                            'source_crs' => $operationsRow['source_crs'],
+                            'target_crs' => $operationsRow['target_crs'],
+                    ];
+                }
+            }
+
+            $row['bounding_box'] = ['north' => $row['bbox_north_bound_latitude'], 'east' => $row['bbox_east_bound_longitude'], 'south' => $row['bbox_south_bound_latitude'], 'west' => $row['bbox_west_bound_longitude']];
+            $data[$row['urn']] = $row;
+            unset($data[$row['urn']]['urn']);
+            unset($data[$row['urn']]['type']);
+            unset($data[$row['urn']]['bbox_north_bound_latitude']);
+            unset($data[$row['urn']]['bbox_east_bound_longitude']);
+            unset($data[$row['urn']]['bbox_south_bound_latitude']);
+            unset($data[$row['urn']]['bbox_west_bound_longitude']);
+        }
+
+        $this->updateFileData($this->sourceDir . '/CoordinateOperation/CoordinateOperations.php', $data);
+
+        $data = [];
+        foreach (CoordinateOperations::getOperationsData() as $operation => $operationData) {
+            $params = [];
+            $paramsSql = "
+                    SELECT
+                        'urn:ogc:def:coordinateOperation:EPSG::' || pv.coord_op_code AS operation_code,
+                        p.parameter_name AS name,
+                        pv.parameter_value AS value,
+                        CASE WHEN pv.uom_code IS NULL THEN NULL ELSE 'urn:ogc:def:uom:EPSG::' || pv.uom_code END AS uom,
+                        CASE WHEN pu.param_sign_reversal = 'Yes' THEN 1 ELSE 0 END AS reverses
+                    FROM epsg_coordoperationparamvalue pv
+                    JOIN epsg_coordoperationparamusage pu ON pv.coord_op_method_code = pu.coord_op_method_code AND pv.parameter_code = pu.parameter_code
+                    JOIN epsg_coordoperationparam p ON pv.parameter_code = p.parameter_code
+                    WHERE operation_code = '{$operation}'
+                    ORDER BY pu.sort_order
+                    ";
+
+            $paramsResult = $sqlite->query($paramsSql);
+            while ($paramsRow = $paramsResult->fetchArray(SQLITE3_ASSOC)) {
+                unset($paramsRow['operation_code']);
+                $paramsRow['reverses'] = (bool) $paramsRow['reverses'];
+                $params[$paramsRow['name']] = $paramsRow;
+                unset($params[$paramsRow['name']]['name']);
+            }
+            $data[$operation] = $params;
+        }
+
+        $this->updateFileData($this->sourceDir . '/CoordinateOperation/CoordinateOperationParams.php', $data);
     }
 
     private function updateFileConstants(string $fileName, array $data, string $visibility): void

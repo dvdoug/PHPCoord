@@ -110,7 +110,11 @@ class Degree extends Angle
     public static function fromSexagesimalDMS(string $angle): self
     {
         $decimalPosition = strpos($angle, '.');
-        $angle = str_pad($angle, $decimalPosition + 5, '0', STR_PAD_RIGHT);
+        if ($decimalPosition) {
+            $angle = str_pad($angle, $decimalPosition + 5, '0', STR_PAD_RIGHT);
+        } else {
+            $angle .= '.0000';
+        }
         $regex = '/^(?P<negative>[−-])?(?P<degrees>\d+)\.(?P<arcminutes>\d{2})(?P<arcseconds>\d{2})(?P<fractionarcseconds>\d+)?$/u';
 
         return self::fromRegex($angle, $regex);
@@ -119,7 +123,11 @@ class Degree extends Angle
     public static function fromSexagesimalDM(string $angle): self
     {
         $decimalPosition = strpos($angle, '.');
-        $angle = str_pad($angle, $decimalPosition + 5, '0', STR_PAD_RIGHT);
+        if ($decimalPosition) {
+            $angle = str_pad($angle, $decimalPosition + 5, '0', STR_PAD_RIGHT);
+        } else {
+            $angle .= '.0000';
+        }
         $regex = '/^(?P<negative>[−-])?(?P<degrees>\d+)\.(?P<arcminutes>\d{2})(?P<fractionarcminutes>\d+)?$/u';
 
         return self::fromRegex($angle, $regex);
