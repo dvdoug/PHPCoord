@@ -882,6 +882,46 @@ class GeographicPointTest extends TestCase
         self::assertEqualsWithDelta(-0.02665833, $to->getLongitude()->getValue(), 0.000001);
     }
 
+    public function testAutoConversionWGS72ToWGS84(): void
+    {
+        $from = GeographicPoint::create(new Degree(55.0), new Degree(44.0), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_72));
+        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84);
+        $to = $from->convert($toCRS);
+
+        self::assertEqualsWithDelta(55.000025, $to->getLatitude()->getValue(), 0.000001);
+        self::assertEqualsWithDelta(44.000154, $to->getLongitude()->getValue(), 0.000001);
+        self::assertNull($to->getHeight());
+    }
+
+    public function testAutoConversionOSGB36ToBritishNationalGrid(): void
+    {
+        $from = GeographicPoint::create(new Degree(50.5), new Degree(0.5), null, Geographic2D::fromSRID(Geographic2D::EPSG_OSGB_1936));
+        $toCRS = Projected::fromSRID(Projected::EPSG_OSGB_1936_BRITISH_NATIONAL_GRID);
+        $to = $from->convert($toCRS);
+
+        self::assertEqualsWithDelta(577274.99, $to->getEasting()->asMetres()->getValue(), 0.01);
+        self::assertEqualsWithDelta(69740.50, $to->getNorthing()->asMetres()->getValue(), 0.01);
+    }
+
+    public function testAutoConversionNoop(): void
+    {
+        $from = GeographicPoint::create(new Degree(40.7127), new Degree(-74.0059), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
+        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84);
+        $to = $from->convert($toCRS);
+
+        self::assertSame($from, $to);
+    }
+
+    public function testAutoConversionVanuaLevuGrid(): void
+    {
+        $from = GeographicPoint::create(new Radian(-0.293938867), new Radian(3.141493807), null, Geographic2D::fromSRID(Geographic2D::EPSG_VANUA_LEVU_1915));
+        $toCRS = Projected::fromSRID(Projected::EPSG_VANUA_LEVU_1915_VANUA_LEVU_GRID);
+        $to = $from->convert($toCRS);
+
+        self::assertEqualsWithDelta(1601528.90, $to->getEasting()->getValue(), 0.1);
+        self::assertEqualsWithDelta(1336966.01, $to->getNorthing()->getValue(), 0.1);
+    }
+
     /**
      * @group integration
      * @dataProvider supportedOperations

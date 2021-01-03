@@ -16,6 +16,7 @@ use function get_class;
 use function implode;
 use InvalidArgumentException;
 use function log;
+use PHPCoord\CoordinateOperation\AutoConversion;
 use PHPCoord\CoordinateOperation\ComplexNumber;
 use PHPCoord\CoordinateOperation\GeocentricValue;
 use PHPCoord\CoordinateOperation\GeographicValue;
@@ -49,6 +50,8 @@ use TypeError;
  */
 class GeographicPoint extends Point
 {
+    use AutoConversion;
+
     /**
      * Latitude.
      */
@@ -2033,5 +2036,10 @@ class GeographicPoint extends Point
     ) {
         // axes are read in from the CRS, this is a book-keeping adjustment only
         return static::create($this->latitude, $this->longitude, $this->height, $to, $this->epoch);
+    }
+
+    protected function asGeographicValue(): GeographicValue
+    {
+        return new GeographicValue($this->latitude, $this->longitude, $this->height, $this->crs->getDatum());
     }
 }

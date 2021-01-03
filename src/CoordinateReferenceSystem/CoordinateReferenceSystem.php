@@ -38,6 +38,8 @@ abstract class CoordinateReferenceSystem
 
     public const CRS_TYPE_VERTICAL = 'vertical';
 
+    public const CRS_SRID_PREFIX_EPSG = 'urn:ogc:def:crs:EPSG::';
+
     protected string $srid;
 
     protected CoordinateSystem $coordinateSystem;
