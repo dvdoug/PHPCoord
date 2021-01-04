@@ -8,6 +8,8 @@ declare(strict_types=1);
 
 namespace PHPCoord\EPSG\Import;
 
+use function array_unshift;
+use function ksort;
 use PhpParser\BuilderFactory;
 use PhpParser\Node;
 use PhpParser\Node\Stmt\ClassLike;

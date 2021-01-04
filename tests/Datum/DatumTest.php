@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace PHPCoord\Datum;
 
+use function count;
 use PHPCoord\Exception\UnknownDatumException;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPUnit\Framework\TestCase;

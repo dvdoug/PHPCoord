@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace PHPCoord\Datum;
 
+use function array_map;
 use function end;
 use PHPCoord\Exception\UnknownDatumException;
 

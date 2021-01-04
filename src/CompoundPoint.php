@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace PHPCoord;
 
+use function cos;
 use DateTime;
 use DateTimeImmutable;
 use DateTimeInterface;
@@ -20,6 +21,8 @@ use PHPCoord\Exception\InvalidCoordinateReferenceSystemException;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Length\Metre;
+use function sin;
+use function sqrt;
 
 /**
  * Coordinate representing a point expressed in 2 different CRSs (2D horizontal + 1D Vertical).

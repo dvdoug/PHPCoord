@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace PHPCoord\UnitOfMeasure;
 
+use function array_map;
 use PHPCoord\Exception\InvalidRateException;
 use PHPCoord\Exception\UnknownUnitOfMeasureException;
 use PHPCoord\UnitOfMeasure\Angle\Angle;

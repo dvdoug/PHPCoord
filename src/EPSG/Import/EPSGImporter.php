@@ -24,6 +24,8 @@ use PhpParser\NodeVisitor\CloningVisitor;
 use PhpParser\Parser\Php7;
 use SplFileInfo;
 use SQLite3;
+use function strpos;
+use function substr;
 use function unlink;
 
 class EPSGImporter

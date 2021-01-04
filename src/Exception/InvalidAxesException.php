@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace PHPCoord\Exception;
 
+use function array_map;
 use function implode;
 use PHPCoord\CoordinateSystem\Axis;
 use UnexpectedValueException;

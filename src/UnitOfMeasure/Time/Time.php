@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace PHPCoord\UnitOfMeasure\Time;
 
+use function array_map;
 use PHPCoord\Exception\UnknownUnitOfMeasureException;
 use PHPCoord\UnitOfMeasure\UnitOfMeasure;
 

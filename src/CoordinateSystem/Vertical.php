@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateSystem;
 
+use function array_map;
 use PHPCoord\Exception\UnknownCoordinateSystemException;
 
 class Vertical extends CoordinateSystem

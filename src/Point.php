@@ -8,7 +8,13 @@ declare(strict_types=1);
 
 namespace PHPCoord;
 
+use function acos;
+use function array_reverse;
+use function array_values;
+use function asin;
 use DateTimeImmutable;
+use function in_array;
+use function lcfirst;
 use PHPCoord\CoordinateOperation\CoordinateOperationMethods;
 use PHPCoord\CoordinateOperation\CoordinateOperationParams;
 use PHPCoord\CoordinateOperation\CoordinateOperations;
@@ -20,7 +26,11 @@ use PHPCoord\UnitOfMeasure\Scale\Coefficient;
 use PHPCoord\UnitOfMeasure\Scale\Scale;
 use PHPCoord\UnitOfMeasure\UnitOfMeasure;
 use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
+use function preg_match;
+use function sscanf;
+use function str_replace;
 use Stringable;
+use function ucwords;
 
 abstract class Point implements Stringable
 {

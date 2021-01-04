@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateReferenceSystem;
 
+use function array_map;
 use function assert;
 use function count;
 use PHPCoord\CoordinateSystem\CoordinateSystem;

@@ -8,11 +8,17 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateOperation;
 
+use function abs;
+use function array_filter;
 use DateTimeImmutable;
+use function in_array;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\Exception\UnknownConversionException;
 use PHPCoord\Point;
 use PHPCoord\UnitOfMeasure\Time\Year;
+use function reset;
+use function strpos;
+use function usort;
 
 trait AutoConversion
 {

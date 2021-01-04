@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace PHPCoord\UnitOfMeasure\Angle;
 
+use function count;
 use function in_array;
 use PHPCoord\Exception\UnknownUnitOfMeasureException;
 use PHPUnit\Framework\TestCase;

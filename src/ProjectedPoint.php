@@ -9,13 +9,19 @@ declare(strict_types=1);
 namespace PHPCoord;
 
 use function abs;
+use function asinh;
+use function atan;
 use function atan2;
+use function atanh;
 use function cos;
+use function cosh;
 use DateTime;
 use DateTimeImmutable;
 use DateTimeInterface;
 use function implode;
+use function is_nan;
 use function log;
+use function max;
 use PHPCoord\CoordinateOperation\AutoConversion;
 use PHPCoord\CoordinateOperation\ComplexNumber;
 use PHPCoord\CoordinateOperation\GeographicValue;
@@ -34,8 +40,11 @@ use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPCoord\UnitOfMeasure\Scale\Coefficient;
 use PHPCoord\UnitOfMeasure\Scale\Scale;
 use function sin;
+use function sinh;
 use function sqrt;
+use function substr;
 use function tan;
+use function tanh;
 
 /**
  * Coordinate representing a point on a map projection.

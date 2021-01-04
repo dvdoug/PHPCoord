@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateReferenceSystem;
 
+use function array_merge;
 use PHPCoord\Exception\UnknownCoordinateReferenceSystemException;
 
 abstract class Geographic extends CoordinateReferenceSystem
