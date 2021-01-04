@@ -7466,7 +7466,7 @@ class Datum
      */
     public const EPSG_FK89 = 'urn:ogc:def:datum:EPSG::6753';
 
-    protected static array $sridData = [
+    protected static $sridData = [
         'urn:ogc:def:datum:EPSG::1024' => [
             'name' => 'Hungarian Datum 1909',
             'type' => 'geodetic',
@@ -13729,13 +13729,13 @@ class Datum
 
     public const DATUM_TYPE_ENSEMBLE = 'ensemble';
 
-    protected string $datumType;
+    protected $datumType;
 
-    protected ?Ellipsoid $ellipsoid;
+    protected $ellipsoid;
 
-    protected ?PrimeMeridian $primeMeridian;
+    protected $primeMeridian;
 
-    protected ?float $frameReferenceEpoch;
+    protected $frameReferenceEpoch;
 
     public function __construct(
         string $datumType,

@@ -270,7 +270,7 @@ abstract class Point implements Stringable
         return asin($num);
     }
 
-    abstract public function getCRS(): CoordinateReferenceSystem;
+    abstract public function getCRS();
 
     abstract public function getCoordinateEpoch(): ?DateTimeImmutable;
 

@@ -25,9 +25,9 @@ use function wordwrap;
 
 class AddNewConstantsVisitor extends NodeVisitorAbstract
 {
-    private array $constants;
+    private $constants;
 
-    private string $visibility;
+    private $visibility;
 
     public function __construct(array $constants, string $visibility)
     {

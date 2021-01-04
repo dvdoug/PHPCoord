@@ -14,9 +14,9 @@ namespace PHPCoord\CoordinateOperation;
  */
 class ComplexNumber
 {
-    private float $real;
+    private $real;
 
-    private float $imaginary;
+    private $imaginary;
 
     public function __construct(float $real, float $imaginary)
     {

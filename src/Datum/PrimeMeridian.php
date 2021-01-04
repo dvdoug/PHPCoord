@@ -97,7 +97,7 @@ class PrimeMeridian
      */
     public const EPSG_STOCKHOLM = 'urn:ogc:def:meridian:EPSG::8911';
 
-    protected static array $sridData = [
+    protected static $sridData = [
         'urn:ogc:def:meridian:EPSG::8901' => [
             'name' => 'Greenwich',
             'greenwich_longitude' => 0.0,
@@ -170,9 +170,9 @@ class PrimeMeridian
         ],
     ];
 
-    private string $name;
+    private $name;
 
-    private Angle $greenwichLongitude;
+    private $greenwichLongitude;
 
     public function __construct(string $name, Angle $greenwichLongitude)
     {

@@ -20,12 +20,12 @@ abstract class CoordinateSystem
 
     public const CS_TYPE_VERTICAL = 'vertical';
 
-    protected string $srid;
+    protected $srid;
 
     /**
      * @var Axis[]
      */
-    protected array $axes;
+    protected $axes;
 
     public function __construct(
         string $srid,

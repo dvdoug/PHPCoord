@@ -67,7 +67,7 @@ class Rate implements UnitOfMeasure
      */
     public const EPSG_PARTS_PER_MILLION_PER_YEAR = 'urn:ogc:def:uom:EPSG::1041';
 
-    protected static array $sridData = [
+    protected static $sridData = [
         'urn:ogc:def:uom:EPSG::1027' => [
             'name' => 'millimetres per year',
         ],
@@ -91,9 +91,9 @@ class Rate implements UnitOfMeasure
         ],
     ];
 
-    private UnitOfMeasure $change;
+    private $change;
 
-    private Time $time;
+    private $time;
 
     public function __construct(UnitOfMeasure $change, Time $time)
     {

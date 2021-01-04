@@ -23,13 +23,13 @@ use function sqrt;
  */
 class GeographicValue
 {
-    private Radian $latitude;
+    private $latitude;
 
-    private Radian $longitude;
+    private $longitude;
 
-    private ?Metre $height;
+    private $height;
 
-    private Datum $datum;
+    private $datum;
 
     public function __construct(Angle $latitude, Angle $longitude, ?Length $height, Datum $datum)
     {

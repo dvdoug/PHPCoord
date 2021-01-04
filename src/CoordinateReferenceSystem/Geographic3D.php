@@ -1535,7 +1535,7 @@ class Geographic3D extends Geographic
      */
     public const EPSG_YEMEN_NGN96 = 'urn:ogc:def:crs:EPSG::4981';
 
-    protected static array $sridData = [
+    protected static $sridData = [
         'urn:ogc:def:crs:EPSG::3823' => [
             'name' => 'TWD97',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6423',

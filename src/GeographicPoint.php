@@ -64,27 +64,27 @@ class GeographicPoint extends Point
     /**
      * Latitude.
      */
-    protected Angle $latitude;
+    protected $latitude;
 
     /**
      * Longitude.
      */
-    protected Angle $longitude;
+    protected $longitude;
 
     /**
      * Height above ellipsoid (N.B. *not* height above ground, sea-level or anything else tangible).
      */
-    protected ?Length $height;
+    protected $height;
 
     /**
      * Coordinate reference system.
      */
-    protected Geographic $crs;
+    protected $crs;
 
     /**
      * Coordinate epoch (date for which the specified coordinates represented this point).
      */
-    protected ?DateTimeImmutable $epoch;
+    protected $epoch;
 
     protected function __construct(Angle $latitude, Angle $longitude, ?Length $height, Geographic $crs, ?DateTimeInterface $epoch = null)
     {

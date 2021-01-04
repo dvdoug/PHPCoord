@@ -41,11 +41,11 @@ abstract class CoordinateReferenceSystem
 
     public const CRS_SRID_PREFIX_EPSG = 'urn:ogc:def:crs:EPSG::';
 
-    protected string $srid;
+    protected $srid;
 
-    protected CoordinateSystem $coordinateSystem;
+    protected $coordinateSystem;
 
-    protected Datum $datum;
+    protected $datum;
 
     public function getSRID(): string
     {
@@ -62,7 +62,7 @@ abstract class CoordinateReferenceSystem
         return $this->datum;
     }
 
-    public static function fromSRID(string $srid): self
+    public static function fromSRID(string $srid)
     {
         if (isset(Projected::getSupportedSRIDs()[$srid])) {
             return Projected::fromSRID($srid);

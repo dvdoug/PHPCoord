@@ -25,17 +25,17 @@ class VerticalPoint extends Point
     /**
      * Height.
      */
-    protected Length $height;
+    protected $height;
 
     /**
      * Coordinate reference system.
      */
-    protected Vertical $crs;
+    protected $crs;
 
     /**
      * Coordinate epoch (date for which the specified coordinates represented this point).
      */
-    protected ?DateTimeImmutable $epoch;
+    protected $epoch;
 
     /**
      * Constructor.

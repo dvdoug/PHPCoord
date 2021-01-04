@@ -35,22 +35,22 @@ class CompoundPoint extends Point
      * Horizontal point.
      * @var GeographicPoint|ProjectedPoint
      */
-    protected Point $horizontalPoint;
+    protected $horizontalPoint;
 
     /**
      * Vertical point.
      */
-    protected VerticalPoint $verticalPoint;
+    protected $verticalPoint;
 
     /**
      * Coordinate reference system.
      */
-    protected Compound $crs;
+    protected $crs;
 
     /**
      * Coordinate epoch (date for which the specified coordinates represented this point).
      */
-    protected ?DateTimeImmutable $epoch;
+    protected $epoch;
 
     /**
      * Constructor.

@@ -14,7 +14,7 @@ use function round;
 
 class Year extends Time
 {
-    private float $time;
+    private $time;
 
     public function __construct(float $time)
     {

@@ -144,7 +144,7 @@ abstract class Length implements UnitOfMeasure
      */
     public const EPSG_MILLIMETRE = 'urn:ogc:def:uom:EPSG::1025';
 
-    protected static array $sridData = [
+    protected static $sridData = [
         'urn:ogc:def:uom:EPSG::1025' => [
             'name' => 'millimetre',
         ],

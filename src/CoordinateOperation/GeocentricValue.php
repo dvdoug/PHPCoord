@@ -26,13 +26,13 @@ class GeocentricValue
 {
     protected const NEWTON_RAPHSON_CONVERGENCE = 1e-16;
 
-    private Metre$x;
+    private $x;
 
-    private Metre $y;
+    private $y;
 
-    private Metre $z;
+    private $z;
 
-    private Datum $datum;
+    private $datum;
 
     public function __construct(Length $x, Length $y, Length $z, Datum $datum)
     {

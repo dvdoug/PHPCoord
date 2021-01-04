@@ -11,7 +11,7 @@
     ],
     "license": "(MIT and proprietary)",
     "require": {
-        "php": "^7.4||^8.0",
+        "php": "^7.3||^8.0",
         "symfony/polyfill-php80": "^1.18"
     },
     "require-dev": {

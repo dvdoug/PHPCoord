@@ -18,7 +18,7 @@ use PhpParser\NodeVisitorAbstract;
 
 class AddNewDataVisitor extends NodeVisitorAbstract
 {
-    private array $data;
+    private $data;
 
     public function __construct(array $data)
     {

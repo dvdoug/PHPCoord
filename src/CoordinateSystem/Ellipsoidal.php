@@ -58,7 +58,7 @@ class Ellipsoidal extends CoordinateSystem
      */
     public const EPSG_AXES_LONGITUDE_LATITUDE_ORIENTATIONS_EAST_NORTH_UOM_DEGREE = 'urn:ogc:def:cs:EPSG::6424';
 
-    protected static array $sridData = [
+    protected static $sridData = [
         'urn:ogc:def:cs:EPSG::6403' => [
             'name' => '. Axes: latitude, longitude. Orientations: north, east. UoM: grads.',
             'axes' => [

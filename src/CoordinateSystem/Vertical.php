@@ -62,7 +62,7 @@ class Vertical extends CoordinateSystem
      */
     public const EPSG_AXIS_HEIGHT_H_ORIENTATION_UP_UOM_M = 'urn:ogc:def:cs:EPSG::6499';
 
-    protected static array $sridData = [
+    protected static $sridData = [
         'urn:ogc:def:cs:EPSG::1030' => [
             'name' => '. Axis: height (H). Orientation: up. UoM: ft.',
             'axes' => [

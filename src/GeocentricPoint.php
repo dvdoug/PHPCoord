@@ -43,27 +43,27 @@ class GeocentricPoint extends Point
     /**
      * X co-ordinate.
      */
-    protected Length $x;
+    protected $x;
 
     /**
      * Y co-ordinate.
      */
-    protected Length $y;
+    protected $y;
 
     /**
      * Z co-ordinate.
      */
-    protected Length $z;
+    protected $z;
 
     /**
      * Coordinate reference system.
      */
-    protected Geocentric $crs;
+    protected $crs;
 
     /**
      * Coordinate epoch (date for which the specified coordinates represented this point).
      */
-    protected ?DateTimeImmutable $epoch;
+    protected $epoch;
 
     protected function __construct(Length $x, Length $y, Length $z, Geocentric $crs, ?DateTimeInterface $epoch = null)
     {

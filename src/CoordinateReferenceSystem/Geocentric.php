@@ -1482,7 +1482,7 @@ class Geocentric extends CoordinateReferenceSystem
      */
     public const EPSG_YEMEN_NGN96 = 'urn:ogc:def:crs:EPSG::4980';
 
-    protected static array $sridData = [
+    protected static $sridData = [
         'urn:ogc:def:crs:EPSG::3822' => [
             'name' => 'TWD97',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',

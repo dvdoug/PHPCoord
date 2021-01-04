@@ -2143,7 +2143,7 @@ class Compound extends CoordinateReferenceSystem
      */
     public const EPSG_WGS_84_WORLD_MERCATOR_PLUS_EGM2008_HEIGHT = 'urn:ogc:def:crs:EPSG::6893';
 
-    protected static array $sridData = [
+    protected static $sridData = [
         'urn:ogc:def:crs:EPSG::3901' => [
             'name' => 'KKJ / Finland Uniform Coordinate System + N60 height',
             'horizontal_crs' => 'urn:ogc:def:crs:EPSG::2393',
@@ -3907,9 +3907,9 @@ class Compound extends CoordinateReferenceSystem
     /**
      * @var Geocentric|Geographic|Projected
      */
-    private CoordinateReferenceSystem $horizontal;
+    private $horizontal;
 
-    private Vertical $vertical;
+    private $vertical;
 
     /**
      * Compound constructor.

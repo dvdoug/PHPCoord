@@ -133,7 +133,7 @@ abstract class Angle implements UnitOfMeasure
      */
     public const EPSG_SEXAGESIMAL_DMS = 'urn:ogc:def:uom:EPSG::9110';
 
-    protected static array $sridData = [
+    protected static $sridData = [
         'urn:ogc:def:uom:EPSG::1031' => [
             'name' => 'milliarc-second',
         ],

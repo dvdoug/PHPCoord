@@ -1734,7 +1734,7 @@ class Vertical extends CoordinateReferenceSystem
      */
     public const EPSG_YELLOW_SEA_1985_HEIGHT = 'urn:ogc:def:crs:EPSG::5737';
 
-    protected static array $sridData = [
+    protected static $sridData = [
         'urn:ogc:def:crs:EPSG::3855' => [
             'name' => 'EGM2008 height',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',

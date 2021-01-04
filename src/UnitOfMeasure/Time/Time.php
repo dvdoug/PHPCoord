@@ -19,7 +19,7 @@ abstract class Time implements UnitOfMeasure
      */
     public const EPSG_YEAR = 'urn:ogc:def:uom:EPSG::1029';
 
-    protected static array $sridData = [
+    protected static $sridData = [
         'urn:ogc:def:uom:EPSG::1029' => [
             'name' => 'year',
         ],

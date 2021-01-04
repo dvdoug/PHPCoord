@@ -14,7 +14,7 @@ namespace PHPCoord\CoordinateOperation;
  */
 class CRSTransformations
 {
-    protected static array $sridData = [
+    protected static $sridData = [
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5166',
             'name' => 'ED50 / UTM zone 31N to ETRS89 / UTM zone 31N (1)',

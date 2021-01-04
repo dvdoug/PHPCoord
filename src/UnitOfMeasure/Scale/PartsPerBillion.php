@@ -10,7 +10,7 @@ namespace PHPCoord\UnitOfMeasure\Scale;
 
 class PartsPerBillion extends Scale
 {
-    private float $scale;
+    private $scale;
 
     public function __construct(float $scale)
     {

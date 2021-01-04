@@ -14,7 +14,7 @@ namespace PHPCoord\UnitOfMeasure\Length;
  */
 class GermanLegalMetre extends Length
 {
-    private float $length;
+    private $length;
 
     public function __construct(float $length)
     {

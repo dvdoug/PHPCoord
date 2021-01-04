@@ -14,7 +14,7 @@ namespace PHPCoord\CoordinateOperation;
  */
 class CoordinateOperations
 {
-    protected static array $sridData = [
+    protected static $sridData = [
         'urn:ogc:def:coordinateOperation:EPSG::1024' => [
             'name' => 'MGI to ETRS89 (4)',
             'method' => 'urn:ogc:def:method:EPSG::9607',

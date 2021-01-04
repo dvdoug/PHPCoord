@@ -14,7 +14,7 @@ namespace PHPCoord\CoordinateOperation;
  */
 class CoordinateOperationParams
 {
-    protected static array $sridData = [
+    protected static $sridData = [
         'urn:ogc:def:coordinateOperation:EPSG::1024' => [
             'X-axis translation' => [
                 'value' => 601.705,

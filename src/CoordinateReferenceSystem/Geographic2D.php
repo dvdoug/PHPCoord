@@ -3864,7 +3864,7 @@ class Geographic2D extends Geographic
      */
     public const EPSG_FK89 = 'urn:ogc:def:crs:EPSG::4753';
 
-    protected static array $sridData = [
+    protected static $sridData = [
         'urn:ogc:def:crs:EPSG::3819' => [
             'name' => 'HD1909',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',

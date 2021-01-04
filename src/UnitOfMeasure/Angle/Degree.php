@@ -17,7 +17,7 @@ use function strpos;
 
 class Degree extends Angle
 {
-    private float $angle;
+    private $angle;
 
     public function __construct(float $angle)
     {

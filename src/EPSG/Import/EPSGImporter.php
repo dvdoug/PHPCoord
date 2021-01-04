@@ -30,9 +30,9 @@ use function unlink;
 
 class EPSGImporter
 {
-    private string $resourceDir;
+    private $resourceDir;
 
-    private string $sourceDir;
+    private $sourceDir;
 
     private const BOM = "\xEF\xBB\xBF";
 

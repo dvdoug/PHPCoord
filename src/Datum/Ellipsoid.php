@@ -353,7 +353,7 @@ class Ellipsoid
      */
     public const EPSG_ZACH_1812 = 'urn:ogc:def:ellipsoid:EPSG::1026';
 
-    protected static array $sridData = [
+    protected static $sridData = [
         'urn:ogc:def:ellipsoid:EPSG::1024' => [
             'name' => 'CGCS2000',
             'semi_major_axis' => 6378137.0,
@@ -656,9 +656,9 @@ class Ellipsoid
         ],
     ];
 
-    protected Length $semiMajorAxis;
+    protected $semiMajorAxis;
 
-    protected Length $semiMinorAxis;
+    protected $semiMinorAxis;
 
     public function __construct(Length $semiMajorAxis, Length $semiMinorAxis)
     {

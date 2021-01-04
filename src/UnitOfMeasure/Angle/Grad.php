@@ -10,7 +10,7 @@ namespace PHPCoord\UnitOfMeasure\Angle;
 
 class Grad extends Angle
 {
-    private float $angle;
+    private $angle;
 
     public function __construct(float $angle)
     {

@@ -36757,9 +36757,9 @@ class Projected extends CoordinateReferenceSystem
 
     use ProjectedSRIDData;
 
-    protected ?CoordinateReferenceSystem $baseCRS;
+    protected $baseCRS;
 
-    protected ?string $baseCRSConversionOperation;
+    protected $baseCRSConversionOperation;
 
     public function __construct(
         string $srid,

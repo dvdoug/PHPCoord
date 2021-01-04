@@ -561,7 +561,7 @@ class Cartesian extends CoordinateSystem
      */
     public const EPSG_AXES_WESTING_SOUTHING_Y_X_ORIENTATIONS_WEST_SOUTH_UOM_M = 'urn:ogc:def:cs:EPSG::6503';
 
-    protected static array $sridData = [
+    protected static $sridData = [
         'urn:ogc:def:cs:EPSG::1024' => [
             'name' => '. Axes: easting, northing (M,P). Orientations east, north. UoM m.',
             'axes' => [

@@ -56,32 +56,32 @@ class ProjectedPoint extends Point
     /**
      * Easting.
      */
-    protected Length $easting;
+    protected $easting;
 
     /**
      * Northing.
      */
-    protected Length $northing;
+    protected $northing;
 
     /**
      * Westing.
      */
-    protected Length $westing;
+    protected $westing;
 
     /**
      * Southing.
      */
-    protected Length $southing;
+    protected $southing;
 
     /**
      * Coordinate reference system.
      */
-    protected Projected $crs;
+    protected $crs;
 
     /**
      * Coordinate epoch (date for which the specified coordinates represented this point).
      */
-    protected ?DateTimeImmutable $epoch;
+    protected $epoch;
 
     protected function __construct(?Length $easting, ?Length $northing, ?Length $westing, ?Length $southing, Projected $crs, ?DateTimeInterface $epoch = null)
     {

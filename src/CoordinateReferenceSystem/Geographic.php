@@ -13,7 +13,7 @@ use PHPCoord\Exception\UnknownCoordinateReferenceSystemException;
 
 abstract class Geographic extends CoordinateReferenceSystem
 {
-    public static function fromSRID(string $srid): self
+    public static function fromSRID(string $srid)
     {
         if (isset(Geographic2D::getSupportedSRIDs()[$srid])) {
             return Geographic2D::fromSRID($srid);

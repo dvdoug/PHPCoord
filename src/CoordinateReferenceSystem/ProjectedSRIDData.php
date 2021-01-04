@@ -16,7 +16,7 @@ namespace PHPCoord\CoordinateReferenceSystem;
  */
 trait ProjectedSRIDData
 {
-    protected static array $sridData = [
+    protected static $sridData = [
         'urn:ogc:def:crs:EPSG::2000' => [
             'name' => 'Anguilla 1957 / British West Indies Grid',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::4400',

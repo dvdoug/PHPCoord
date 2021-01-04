@@ -40,7 +40,7 @@ abstract class Scale implements UnitOfMeasure
      */
     public const EPSG_UNITY = 'urn:ogc:def:uom:EPSG::9201';
 
-    protected static array $sridData = [
+    protected static $sridData = [
         'urn:ogc:def:uom:EPSG::1028' => [
             'name' => 'parts per billion',
         ],
