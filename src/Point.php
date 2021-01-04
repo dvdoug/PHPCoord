@@ -31,60 +31,18 @@ abstract class Point implements Stringable
      */
     public function performOperation(string $srid, CoordinateReferenceSystem $to, bool $inReverse): self
     {
-        $operations = [];
-        $operation = CoordinateOperations::getOperationData($srid);
-        if (isset($operation['operations'])) {
-            foreach ($operation['operations'] as $subOperation) {
-                $subOperationData = CoordinateOperations::getOperationData($subOperation['operation']);
-                $subOperationData['source_crs'] = $subOperation['source_crs'];
-                $subOperationData['target_crs'] = $subOperation['target_crs'];
-                $operations[$subOperation['operation']] = $subOperationData;
-            }
-        } else {
-            $operations[$srid] = $operation;
-        }
-
-        if ($inReverse) {
-            $operations = array_reverse($operations, true);
-        }
+        $operations = self::resolveConcatenatedOperations($srid, $inReverse);
 
         $point = $this;
         foreach ($operations as $operationSrid => $operation) {
             $method = CoordinateOperationMethods::getFunctionName($operation['method']);
-            if (isset($operation['source_crs']) && $operation['target_crs']) {
+            if (isset($operation['source_crs'])) {
                 $destCRS = CoordinateReferenceSystem::fromSRID($inReverse ? $operation['source_crs'] : $operation['target_crs']);
             } else {
                 $destCRS = $to;
             }
 
-            $params = [];
-            $powerCoefficients = [];
-            foreach (CoordinateOperationParams::getParamData($operationSrid) as $paramName => $paramData) {
-                $value = $paramData['value'];
-                if ($inReverse && $paramData['reverses']) {
-                    $value *= -1;
-                }
-                if ($paramData['uom']) {
-                    $param = UnitOfMeasureFactory::makeUnit($value, $paramData['uom']);
-                } else {
-                    $param = $paramData['value'];
-                }
-                $paramName = static::camelCase($paramName);
-                if (strpos($paramName, 'Au') === 0 || strpos($paramName, 'Bu') === 0) {
-                    $powerCoefficients[$paramName] = $param;
-                } else {
-                    $params[$paramName] = $param;
-                }
-            }
-            if ($powerCoefficients) {
-                $params['powerCoefficients'] = $powerCoefficients;
-            }
-            if (in_array($operation['method'], [
-                CoordinateOperationMethods::EPSG_SIMILARITY_TRANSFORMATION,
-                CoordinateOperationMethods::EPSG_AFFINE_PARAMETRIC_TRANSFORMATION,
-            ], true)) {
-                $params['inReverse'] = $inReverse;
-            }
+            $params = self::resolveParamsByOperation($operationSrid, $operation['method'], $inReverse);
 
             if (PHP_MAJOR_VERSION >= 8) {
                 $point = $point->$method($destCRS, ...$params);
@@ -106,6 +64,62 @@ abstract class Point implements Stringable
         }
 
         return $string;
+    }
+
+    protected static function resolveConcatenatedOperations(string $operationSrid, bool $inReverse): array
+    {
+        $operations = [];
+        $operation = CoordinateOperations::getOperationData($operationSrid);
+        if (isset($operation['operations'])) {
+            foreach ($operation['operations'] as $subOperation) {
+                $subOperationData = CoordinateOperations::getOperationData($subOperation['operation']);
+                $subOperationData['source_crs'] = $subOperation['source_crs'];
+                $subOperationData['target_crs'] = $subOperation['target_crs'];
+                $operations[$subOperation['operation']] = $subOperationData;
+            }
+        } else {
+            $operations[$operationSrid] = $operation;
+        }
+
+        if ($inReverse) {
+            $operations = array_reverse($operations, true);
+        }
+
+        return $operations;
+    }
+
+    protected static function resolveParamsByOperation(string $operationSrid, string $methodSrid, bool $inReverse): array
+    {
+        $params = [];
+        $powerCoefficients = [];
+        foreach (CoordinateOperationParams::getParamData($operationSrid) as $paramName => $paramData) {
+            $value = $paramData['value'];
+            if ($inReverse && $paramData['reverses']) {
+                $value *= -1;
+            }
+            if ($paramData['uom']) {
+                $param = UnitOfMeasureFactory::makeUnit($value, $paramData['uom']);
+            } else {
+                $param = $paramData['value'];
+            }
+            $paramName = static::camelCase($paramName);
+            if (preg_match('/^(Au|Bu)/', $paramName)) {
+                $powerCoefficients[$paramName] = $param;
+            } else {
+                $params[$paramName] = $param;
+            }
+        }
+        if ($powerCoefficients) {
+            $params['powerCoefficients'] = $powerCoefficients;
+        }
+        if (in_array($methodSrid, [
+            CoordinateOperationMethods::EPSG_SIMILARITY_TRANSFORMATION,
+            CoordinateOperationMethods::EPSG_AFFINE_PARAMETRIC_TRANSFORMATION,
+        ], true)) {
+            $params['inReverse'] = $inReverse;
+        }
+
+        return $params;
     }
 
     protected function getAxisByName(string $name): ?Axis
