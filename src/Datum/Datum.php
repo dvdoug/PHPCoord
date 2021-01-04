@@ -13753,12 +13753,12 @@ class Datum
         return $this->datumType;
     }
 
-    public function getEllipsoid(): ?Ellipsoid
+    public function getEllipsoid(): Ellipsoid
     {
         return $this->ellipsoid;
     }
 
-    public function getPrimeMeridian(): ?PrimeMeridian
+    public function getPrimeMeridian(): PrimeMeridian
     {
         return $this->primeMeridian;
     }
