@@ -12,7 +12,6 @@ use function dirname;
 use function file_exists;
 use function file_get_contents;
 use function file_put_contents;
-use PHPCoord\CoordinateOperation\CoordinateOperations;
 use PHPCoord\Datum\Datum;
 use PhpCsFixer\AbstractFixer;
 use PhpCsFixer\Config;
@@ -1067,8 +1066,8 @@ class EPSGImporter
 
         $this->updateFileData($this->sourceDir . '/CoordinateOperation/CoordinateOperations.php', $data);
 
-        $data = [];
-        foreach (CoordinateOperations::getOperationsData() as $operation => $operationData) {
+        $paramData = [];
+        foreach ($data as $operation => $operationData) {
             $params = [];
             $paramsSql = "
                     SELECT
@@ -1091,10 +1090,10 @@ class EPSGImporter
                 $params[$paramsRow['name']] = $paramsRow;
                 unset($params[$paramsRow['name']]['name']);
             }
-            $data[$operation] = $params;
+            $paramData[$operation] = $params;
         }
 
-        $this->updateFileData($this->sourceDir . '/CoordinateOperation/CoordinateOperationParams.php', $data);
+        $this->updateFileData($this->sourceDir . '/CoordinateOperation/CoordinateOperationParams.php', $paramData);
     }
 
     private function updateFileConstants(string $fileName, array $data, string $visibility): void

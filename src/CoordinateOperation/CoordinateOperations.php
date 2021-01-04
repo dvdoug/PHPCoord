@@ -38237,11 +38237,6 @@ class CoordinateOperations
         ],
     ];
 
-    public static function getOperationsData(): array
-    {
-        return static::$sridData;
-    }
-
     public static function getOperationData(string $srid): array
     {
         return static::$sridData[$srid];

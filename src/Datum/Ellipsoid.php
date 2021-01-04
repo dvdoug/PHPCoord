@@ -675,11 +675,6 @@ class Ellipsoid
         return $this->semiMinorAxis;
     }
 
-    public function getFlattening(): float
-    {
-        return $this->semiMajorAxis->getValue() / ($this->semiMajorAxis->getValue() - $this->semiMinorAxis->getValue());
-    }
-
     public function getInverseFlattening(): float
     {
         return ($this->semiMajorAxis->getValue() - $this->semiMinorAxis->getValue()) / $this->semiMajorAxis->getValue();
