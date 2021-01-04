@@ -13778,13 +13778,22 @@ class Datum
         $data = static::$sridData[$srid];
 
         if ($data['type'] === self::DATUM_TYPE_ENSEMBLE) { // if ensemble, use latest realisation
-            $data = static::$sridData[end(static::$sridData[$srid]['ensemble'])];
+            return static::fromSRID(end(static::$sridData[$srid]['ensemble']));
+        }
+
+        if ($data['ellipsoid']) {
+            return new static(
+                $data['type'],
+                Ellipsoid::fromSRID($data['ellipsoid']),
+                PrimeMeridian::fromSRID($data['prime_meridian']),
+                $data['frame_reference_epoch'],
+            );
         }
 
         return new static(
             $data['type'],
-            $data['ellipsoid'] ? Ellipsoid::fromSRID($data['ellipsoid']) : null,
-            $data['prime_meridian'] ? PrimeMeridian::fromSRID($data['prime_meridian']) : null,
+            null,
+            null,
             $data['frame_reference_epoch'],
         );
     }
