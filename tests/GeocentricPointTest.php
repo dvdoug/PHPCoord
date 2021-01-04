@@ -17,6 +17,7 @@ use PHPCoord\CoordinateOperation\CoordinateOperations;
 use PHPCoord\CoordinateOperation\CRSTransformations;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\CoordinateReferenceSystem\Geocentric;
+use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Geographic3D;
 use PHPCoord\Exception\InvalidCoordinateException;
 use PHPCoord\Exception\UnknownConversionException;
@@ -87,7 +88,17 @@ class GeocentricPointTest extends TestCase
         $from->calculateDistance($to);
     }
 
-    public function testGeographicGeocentric(): void
+    public function testGeographicGeocentric2D(): void
+    {
+        $from = GeocentricPoint::create(new Metre(3771793.968), new Metre(140253.342), new Metre(5124304.349), Geocentric::fromSRID(Geocentric::EPSG_WGS_84));
+        $to = $from->geographicGeocentric(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
+
+        self::assertEqualsWithDelta(53.80939444, $to->getLatitude()->getValue(), 0.000001);
+        self::assertEqualsWithDelta(2.12955000, $to->getLongitude()->getValue(), 0.000001);
+        self::assertNull($to->getHeight());
+    }
+
+    public function testGeographicGeocentric3D(): void
     {
         $from = GeocentricPoint::create(new Metre(3771793.968), new Metre(140253.342), new Metre(5124304.349), Geocentric::fromSRID(Geocentric::EPSG_WGS_84));
         $to = $from->geographicGeocentric(Geographic3D::fromSRID(Geographic3D::EPSG_WGS_84));
