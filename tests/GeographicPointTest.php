@@ -10,6 +10,7 @@ namespace PHPCoord;
 
 use DateTime;
 use DateTimeImmutable;
+use InvalidArgumentException;
 use PHPCoord\CoordinateOperation\CoordinateOperationMethods;
 use PHPCoord\CoordinateOperation\CoordinateOperations;
 use PHPCoord\CoordinateOperation\CRSTransformations;
@@ -115,6 +116,14 @@ class GeographicPointTest extends TestCase
         $from = GeographicPoint::create(new Degree(51.54105), new Degree(-0.12319), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
         $to = GeographicPoint::create(new Degree(51.507977), new Degree(-0.124588), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
         self::assertEqualsWithDelta(3679, $from->calculateDistance($to)->getValue(), 1);
+    }
+
+    public function testDistanceDifferentCRSs(): void
+    {
+        $this->expectException(InvalidArgumentException::class);
+        $from = GeographicPoint::create(new Degree(51.54105), new Degree(-0.12319), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
+        $to = GeographicPoint::create(new Degree(51.507977), new Degree(-0.124588), null, Geographic2D::fromSRID(Geographic2D::EPSG_PZ_90));
+        $from->calculateDistance($to);
     }
 
     public function testGeographicGeocentric(): void
