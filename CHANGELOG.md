@@ -2,10 +2,11 @@
 
 ## [Unreleased]
 
-## [4.0.0] - 2020-xx-xx
+## [4.0.0beta1] - 2021-01-05
+### Added
+ - 6200 new coordinate systems.
 ### Changed
- - Code reimplemented from scratch. License changed from GPL to MIT.
- - Minimum PHP version is now 7.4
+ - Project reimplemented from scratch. License changed from GPL to MIT.
 
 ## [3.1.2] - 2020-09-29
 ### Changed
