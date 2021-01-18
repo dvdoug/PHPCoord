@@ -23,6 +23,8 @@ use function implode;
 use InvalidArgumentException;
 use function is_nan;
 use function log;
+use const M_E;
+use const M_PI;
 use function max;
 use PHPCoord\CoordinateOperation\AutoConversion;
 use PHPCoord\CoordinateOperation\ComplexNumber;

@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\UnitOfMeasure\Angle;
 
 use function array_map;
+use const M_PI;
 use PHPCoord\Exception\UnknownUnitOfMeasureException;
 use PHPCoord\UnitOfMeasure\Time\Second;
 use PHPCoord\UnitOfMeasure\UnitOfMeasure;

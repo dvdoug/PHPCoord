@@ -15,6 +15,7 @@ use function asin;
 use DateTimeImmutable;
 use function in_array;
 use function lcfirst;
+use const PHP_MAJOR_VERSION;
 use PHPCoord\CoordinateOperation\CoordinateOperationMethods;
 use PHPCoord\CoordinateOperation\CoordinateOperationParams;
 use PHPCoord\CoordinateOperation\CoordinateOperations;

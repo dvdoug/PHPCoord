@@ -16,6 +16,7 @@ use PHPCoord\Exception\InvalidCoordinateException;
 use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 use function str_pad;
+use const STR_PAD_LEFT;
 use function strlen;
 use function strpos;
 use function substr;

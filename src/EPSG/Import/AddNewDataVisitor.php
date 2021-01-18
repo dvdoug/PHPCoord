@@ -15,6 +15,7 @@ use PhpParser\Node;
 use PhpParser\Node\Stmt\ClassLike;
 use PhpParser\NodeTraverser;
 use PhpParser\NodeVisitorAbstract;
+use const SORT_NATURAL;
 
 class AddNewDataVisitor extends NodeVisitorAbstract
 {

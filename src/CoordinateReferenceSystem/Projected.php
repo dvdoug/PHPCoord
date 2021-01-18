@@ -18,6 +18,7 @@ use PHPCoord\Exception\UnknownCoordinateReferenceSystemException;
 
 class Projected extends CoordinateReferenceSystem
 {
+    use ProjectedSRIDData;
     /**
      * AGD66 / ACT Standard Grid
      * Extent: Australia - Australian Capital Territory.
@@ -36754,8 +36755,6 @@ class Projected extends CoordinateReferenceSystem
      * Replaces FD54 / Faroe Lambert (fk54) (CRS code 3144) for cadastral survey.
      */
     public const EPSG_FK89_FAROE_LAMBERT_FK89 = 'urn:ogc:def:crs:EPSG::3173';
-
-    use ProjectedSRIDData;
 
     protected ?CoordinateReferenceSystem $baseCRS;
 
