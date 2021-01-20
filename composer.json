@@ -1,7 +1,8 @@
 {
     "name": "php-coord/php-coord",
     "description": "PHPCoord is a set of PHP functions for handling various co-ordinate systems and converting between them",
-    "keywords": ["coord","geo", "wgs84", "osgb36", "latitude", "longitude", "grid ref", "utm", "itm" ,"gps"],
+    "keywords": ["coord","geo", "latitude", "longitude", "grid ref", "map", "wgs84", "osgb36", "utm", "nad", "nzmg", "gda", "ed50", "epsg"],
+    "type": "library",
     "homepage": "https://github.com/dvdoug/PHPCoord",
     "authors": [
         {

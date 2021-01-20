@@ -1,5 +1,6 @@
 /.idea
 /build
+/docs/_build
 /vendor
 
 /composer.lock
