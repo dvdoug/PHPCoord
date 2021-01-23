@@ -344,12 +344,13 @@ class ProjectedPoint extends Point
             $B = $A ** 2 + $easting ** 2 / $a ** 2;
 
             $latitude = $A;
+            $C = sqrt(1 - $e2 * sin($latitude) ** 2) * tan($latitude);
             do {
                 $latitudeN = $latitude;
-                $M = $a * ($i * $latitude - $ii * sin(2 * $latitude) + $iii * sin(4 * $latitude) - $iv * sin(6 * $latitude));
+                $Ma = $i * $latitude - $ii * sin(2 * $latitude) + $iii * sin(4 * $latitude) - $iv * sin(6 * $latitude);
+                $MnPrime = $i - 2 * $ii * cos(2 * $latitude) + 4 * $iii * cos(4 * $latitude) - 6 * $iv * cos(6 * $latitude);
+                $latitude = $latitude - ($A * ($C * $Ma + 1) - $Ma - $C * ($Ma ** 2 + $B) / 2) / ($e2 * sin(2 * $latitude) * ($Ma ** 2 + $B - 2 * $A * $Ma) / 4 * $C + ($A - $Ma) * ($C * $MnPrime - (2 / sin(2 * $latitude))) - $MnPrime);
                 $C = sqrt(1 - $e2 * sin($latitude) ** 2) * tan($latitude);
-                $J = $M / $a;
-                $latitude = $latitude - ($A * ($C * $J + 1) - $J - $C * ($J ** 2 + $B) / 2) / ($e2 * sin(2 * $latitude) * ($J ** 2 + $B - 2 * $A * $J) / 4 * $C + ($A - $J) * ($C * $M - (2 / sin(2 * $latitude)) - $M));
             } while (abs($latitude - $latitudeN) >= self::NEWTON_RAPHSON_CONVERGENCE);
 
             $longitude = $longitudeOrigin + (self::asin($easting * $C / $a)) / sin($latitude);
