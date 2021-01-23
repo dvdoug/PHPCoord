@@ -8,7 +8,6 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateReferenceSystem;
 
-use function array_map;
 use function assert;
 use function count;
 use PHPCoord\CoordinateSystem\CoordinateSystem;
@@ -6532,6 +6531,11 @@ class Geographic2D extends Geographic
 
     public static function getSupportedSRIDs(): array
     {
-        return array_map(function ($sridData) {return $sridData['name']; }, static::$sridData);
+        $supported = [];
+        foreach (static::$sridData as $srid => $data) {
+            $supported[$srid] = $data['name'];
+        }
+
+        return $supported;
     }
 }

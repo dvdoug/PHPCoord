@@ -8,7 +8,6 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateReferenceSystem;
 
-use function array_map;
 use PHPCoord\Exception\UnknownCoordinateReferenceSystemException;
 
 class Compound extends CoordinateReferenceSystem
@@ -3963,6 +3962,11 @@ class Compound extends CoordinateReferenceSystem
 
     public static function getSupportedSRIDs(): array
     {
-        return array_map(function ($sridData) {return $sridData['name']; }, static::$sridData);
+        $supported = [];
+        foreach (static::$sridData as $srid => $data) {
+            $supported[$srid] = $data['name'];
+        }
+
+        return $supported;
     }
 }
