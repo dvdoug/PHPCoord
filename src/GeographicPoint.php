@@ -1015,6 +1015,44 @@ class GeographicPoint extends Point
     }
 
     /**
+     * Lambert Conic Conformal (1SP) Variant B.
+     */
+    public function lambertConicConformal1SPVariantB(
+        Projected $to,
+        Angle $latitudeOfNaturalOrigin,
+        Scale $scaleFactorAtNaturalOrigin,
+        Angle $latitudeOfFalseOrigin,
+        Angle $longitudeOfFalseOrigin,
+        Length $eastingAtFalseOrigin,
+        Length $northingAtFalseOrigin
+    ): ProjectedPoint {
+        $latitude = $this->latitude->asRadians()->getValue();
+        $longitude = $this->longitude->asRadians()->getValue();
+        $latitudeNaturalOrigin = $latitudeOfNaturalOrigin->asRadians()->getValue();
+        $latitudeFalseOrigin = $latitudeOfFalseOrigin->asRadians()->getValue();
+        $longitudeFalseOrigin = $longitudeOfFalseOrigin->asRadians()->getValue();
+        $kO = $scaleFactorAtNaturalOrigin->asUnity()->getValue();
+        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
+        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+
+        $mO = cos($latitudeNaturalOrigin) / sqrt(1 - $e2 * sin($latitudeNaturalOrigin) ** 2);
+        $tO = tan(M_PI / 4 - $latitudeNaturalOrigin / 2) / ((1 - $e * sin($latitudeNaturalOrigin)) / (1 + $e * sin($latitudeNaturalOrigin))) ** ($e / 2);
+        $tF = tan(M_PI / 4 - $latitudeFalseOrigin / 2) / ((1 - $e * sin($latitudeFalseOrigin)) / (1 + $e * sin($latitudeFalseOrigin))) ** ($e / 2);
+        $t = tan(M_PI / 4 - $latitude / 2) / ((1 - $e * sin($latitude)) / (1 + $e * sin($latitude))) ** ($e / 2);
+        $n = sin($latitudeNaturalOrigin);
+        $F = $mO / ($n * $tO ** $n);
+        $rF = $a * $F * $tF ** $n * $kO;
+        $r = $a * $F * $t ** $n * $kO;
+        $theta = $n * ($longitude - $longitudeFalseOrigin);
+
+        $easting = $eastingAtFalseOrigin->asMetres()->getValue() + $r * sin($theta);
+        $northing = $northingAtFalseOrigin->asMetres()->getValue() + $rF - $r * cos($theta);
+
+        return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+    }
+
+    /**
      * Lambert Conic Conformal (2SP Belgium)
      * In 2000 this modification was replaced through use of the regular Lambert Conic Conformal (2SP) method [9802]
      * with appropriately modified parameter values.

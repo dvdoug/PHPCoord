@@ -7193,7 +7193,7 @@ trait ProjectedSRIDData
             'conversion_operation' => 'urn:ogc:def:coordinateOperation:EPSG::15376',
         ],
         'urn:ogc:def:crs:EPSG::3106' => [
-            'name' => 'Gulshan 303 / Bangladesh Transverse Mercator',
+            'name' => 'Gulshan 303 / TM 90 NE',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::4400',
             'datum' => 'urn:ogc:def:datum:EPSG::6682',
             'base_crs' => 'urn:ogc:def:crs:EPSG::4682',
@@ -24349,12 +24349,33 @@ trait ProjectedSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::5340',
             'conversion_operation' => 'urn:ogc:def:coordinateOperation:EPSG::9497',
         ],
+        'urn:ogc:def:crs:EPSG::9549' => [
+            'name' => 'LTF2004(C)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::4400',
+            'datum' => 'urn:ogc:def:datum:EPSG::1295',
+            'base_crs' => 'urn:ogc:def:crs:EPSG::9547',
+            'conversion_operation' => 'urn:ogc:def:coordinateOperation:EPSG::9548',
+        ],
         'urn:ogc:def:crs:EPSG::9674' => [
             'name' => 'NAD83 / USFS R6 Albers',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::4400',
             'datum' => 'urn:ogc:def:datum:EPSG::6269',
             'base_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'conversion_operation' => 'urn:ogc:def:coordinateOperation:EPSG::9673',
+        ],
+        'urn:ogc:def:crs:EPSG::9678' => [
+            'name' => 'Gulshan 303 / Bangladesh Transverse Mercator',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::4400',
+            'datum' => 'urn:ogc:def:datum:EPSG::6682',
+            'base_crs' => 'urn:ogc:def:crs:EPSG::4682',
+            'conversion_operation' => 'urn:ogc:def:coordinateOperation:EPSG::9677',
+        ],
+        'urn:ogc:def:crs:EPSG::9680' => [
+            'name' => 'WGS 84 / TM 90 NE',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::4400',
+            'datum' => 'urn:ogc:def:datum:EPSG::6326',
+            'base_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'conversion_operation' => 'urn:ogc:def:coordinateOperation:EPSG::16490',
         ],
         'urn:ogc:def:crs:EPSG::20004' => [
             'name' => 'Pulkovo 1995 / Gauss-Kruger zone 4',

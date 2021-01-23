@@ -2193,7 +2193,7 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * DGN95 / UTM zone 47S
-     * Extent: Indonesia - south of equator and between 96°E and 102°E  - onshore and offshore.
+     * Extent: Indonesia - south of equator and between 96°E and 102°E - onshore and offshore.
      * Replaces ID74 / UTM zone 47S.
      */
     public const EPSG_DGN95_UTM_ZONE_47S = 'urn:ogc:def:crs:EPSG::23877';
@@ -4174,7 +4174,7 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * GDA2020 / MGA zone 58
-     * Extent: Australia - offshore east of 162°E.  Norfolk Island - onshore and offshore west of 168°E.
+     * Extent: Australia - offshore east of 162°E. Norfolk Island - onshore and offshore west of 168°E.
      */
     public const EPSG_GDA2020_MGA_ZONE_58 = 'urn:ogc:def:crs:EPSG::7858';
 
@@ -4328,7 +4328,7 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * GDA94 / MGA zone 58
-     * Extent: Australia - offshore east of 162°E.  Norfolk Island - onshore and offshore west of 168°E.
+     * Extent: Australia - offshore east of 162°E. Norfolk Island - onshore and offshore west of 168°E.
      */
     public const EPSG_GDA94_MGA_ZONE_58 = 'urn:ogc:def:crs:EPSG::28358';
 
@@ -4707,9 +4707,18 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * Gulshan 303 / Bangladesh Transverse Mercator
-     * Extent: Bangladesh - onshore and offshore.
+     * Extent: Bangladesh - onshore.
+     * See Gulshan 303 / TM 90 NE (CRS code 3106) for topographic mapping and offshore oil and gas activities.
      */
-    public const EPSG_GULSHAN_303_BANGLADESH_TRANSVERSE_MERCATOR = 'urn:ogc:def:crs:EPSG::3106';
+    public const EPSG_GULSHAN_303_BANGLADESH_TRANSVERSE_MERCATOR = 'urn:ogc:def:crs:EPSG::9678';
+
+    /**
+     * Gulshan 303 / TM 90 NE
+     * Extent: Bangladesh - onshore.
+     * Used by Survey of Bangladesh from 1995 to 2009, after which replaced by WGS 84 / TM 90 NE (CRS code 9680). See
+     * Gulshan 303 / BTM (code 9678) for other uses including water resource management.
+     */
+    public const EPSG_GULSHAN_303_TM_90_NE = 'urn:ogc:def:crs:EPSG::3106';
 
     /**
      * Gusterberg Grid (Ferro)
@@ -5910,8 +5919,9 @@ class Projected extends CoordinateReferenceSystem
     /**
      * Kalianpur 1937 / India zone IIb
      * Extent: Bangladesh - onshore.
-     * Used by Bangladesh since metrication. Metric conversion applies A.R.Clarke's Indian foot-British foot ratio of
-     * 0.99999566 and Benoit's 1895 British inch-metre ratio of 39.370115 rounded as Ind ft = 0.30479841m exactly.
+     * Used by Survey of Bangladesh since metrication to end of 1994. Metric conversion applies A.R.Clarke's Indian
+     * foot-British foot ratio of 0.99999566 and Benoit's 1895 British inch-metre ratio of 39.370115 rounded as Ind ft
+     * = 0.30479841m exactly.
      */
     public const EPSG_KALIANPUR_1937_INDIA_ZONE_IIB = 'urn:ogc:def:crs:EPSG::24375';
 
@@ -6531,6 +6541,12 @@ class Projected extends CoordinateReferenceSystem
      * LKS94 / TM Baltic (CRS code 25884) used for medium and small scale applications.
      */
     public const EPSG_LKS94_LITHUANIA_TM = 'urn:ogc:def:crs:EPSG::3346';
+
+    /**
+     * LTF2004(C)
+     * Extent: France and Italy - on or related to the rail route from Lyon to Turin.
+     */
+    public const EPSG_LTF2004_C = 'urn:ogc:def:crs:EPSG::9549';
 
     /**
      * La Canoa / UTM zone 18N
@@ -8786,7 +8802,7 @@ class Projected extends CoordinateReferenceSystem
      * NAD27 / UTM zone 12N
      * Extent: North America - between 114°W and 108°W. Canada - Alberta; Northwest Territories; Nunavut;
      * Saskatchewan. Mexico. United States (USA) - Arizona; Colorado; Idaho; Montana; New Mexico; Utah; Wyoming.
-     * Onshore for Mexican Pacific  and Canadian Arctic coasts.
+     * Onshore for Mexican Pacific and Canadian Arctic coasts.
      * In Mexico, replaced by Mexican Datum of 1993 / UTM zone 12N (code 4485).  In Canada and USA, replaced by NAD83 /
      * UTM zone 12N (code 26912).
      */
@@ -8950,7 +8966,7 @@ class Projected extends CoordinateReferenceSystem
     /**
      * NAD27 / UTM zone 8N
      * Extent: North America - between 138°W and 132°W - onshore. Canada - British Columbia; Northwest Territiories;
-     * Yukon. United States (USA) - Alaska.  Onshore for Canadian British Columbia & Arctic and for US Pacific coast
+     * Yukon. United States (USA) - Alaska. Onshore for Canadian British Columbia & Arctic and for US Pacific coast
      * including Alaska panhandle.
      */
     public const EPSG_NAD27_UTM_ZONE_8N = 'urn:ogc:def:crs:EPSG::26708';
@@ -8958,7 +8974,7 @@ class Projected extends CoordinateReferenceSystem
     /**
      * NAD27 / UTM zone 9N
      * Extent: North America - between 132°W and 126°W - onshore. Canada - British Columbia; Northwest Territories;
-     * Yukon. United States (USA) - Alaska.   Onshore for Canadian British Colombia & Arctic coasts and for the US
+     * Yukon. United States (USA) - Alaska. Onshore for Canadian British Colombia & Arctic coasts and for the US
      * Pacific coast including Alaska panhandle.
      */
     public const EPSG_NAD27_UTM_ZONE_9N = 'urn:ogc:def:crs:EPSG::26709';
@@ -11847,7 +11863,7 @@ class Projected extends CoordinateReferenceSystem
     /**
      * NAD83 / UTM zone 12N
      * Extent: North America - between 114°W and 108°W - onshore and offshore. Canada - Alberta; Northwest
-     * Territories; Nunavut; Saskatchewan.  United States (USA) - Arizona; Colorado; Idaho; Montana; New Mexico; Utah;
+     * Territories; Nunavut; Saskatchewan. United States (USA) - Arizona; Colorado; Idaho; Montana; New Mexico; Utah;
      * Wyoming.
      * Replaces NAD27 / UTM zone 12N. For accuracies better than 1m replaced by NAD83(CSRS) / UTM zone 12N in Canada
      * and NAD83(HARN) / UTM zone 12N in US.
@@ -20840,8 +20856,8 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * NAD83(HARN) / UTM zone 11N
-     * Extent: United States (USA) - between 120°W and 114°W - onshore - Arizona; California; Idaho; Montana;
-     * Nevada; Oregon; Utah; Washington.
+     * Extent: United States (USA) - between 120°W and 114°W - onshore - Arizona; California; Idaho; Montana; Nevada;
+     * Oregon; Utah; Washington.
      * Replaces NAD83 / UTM zone 11N for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) /
      * UTM zone 11N.
      */
@@ -26228,7 +26244,7 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * PN68 / UTM zone 28N
-     * Extent: Spain - Canary Islands onshore - El Hierro east of 18°W, Fuerteventura, Gran Canaria, La Gomera,  La
+     * Extent: Spain - Canary Islands onshore - El Hierro east of 18°W, Fuerteventura, Gran Canaria, La Gomera, La
      * Palma, Lanzarote and Tenerife.
      * Replaced by PN84 / UTM zone 28N only on western islands (El Hierro, La Gomera, La Palma and Tenerife). PN84
      * later replaced by REGCAN95. On eastern islands (Fuerteventura, Gran Canaria and Lanzarote) replaced by REGCAN95
@@ -29736,7 +29752,7 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * Qornoq 1927 / Greenland zone 8 east
-     * Extent: Greenland - onshore southwest coastal area  south of 63°N.
+     * Extent: Greenland - onshore southwest coastal area south of 63°N.
      * Historically also found with coordinate system axis abbreviations N/E (CS code 4501); second axis has
      * abbreviation E but is positive to the west.
      */
@@ -30854,7 +30870,7 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * SIRGAS 2000 / UTM zone 13N
-     * Extent: Latin America between 108°W and 102°W,  northern hemisphere, onshore and offshore.
+     * Extent: Latin America between 108°W and 102°W, northern hemisphere, onshore and offshore.
      */
     public const EPSG_SIRGAS_2000_UTM_ZONE_13N = 'urn:ogc:def:crs:EPSG::31967';
 
@@ -31117,7 +31133,7 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * SRGI2013 / UTM zone 47S
-     * Extent: Indonesia - south of equator and between 96°E and 102°E  - onshore and offshore.
+     * Extent: Indonesia - south of equator and between 96°E and 102°E - onshore and offshore.
      * Replaces DGN95 / UTM zone 47S.
      */
     public const EPSG_SRGI2013_UTM_ZONE_47S = 'urn:ogc:def:crs:EPSG::9487';
@@ -35283,6 +35299,14 @@ class Projected extends CoordinateReferenceSystem
      * Extent: Falkland Islands (Malvinas) - offshore - between 63°W and 57°W.
      */
     public const EPSG_WGS_84_TM_60_SW = 'urn:ogc:def:crs:EPSG::6703';
+
+    /**
+     * WGS 84 / TM 90 NE
+     * Extent: Bangladesh - onshore and offshore.
+     * Replaced use of Gulshan 303 / TM 90 NE (CRS code 3106) in Survey of Bangladesh from 2010. Not part of the global
+     * UTM grid system (for which see CRSs 32645 and 32646).
+     */
+    public const EPSG_WGS_84_TM_90_NE = 'urn:ogc:def:crs:EPSG::9680';
 
     /**
      * WGS 84 / TM Zone 20N (ftUS)

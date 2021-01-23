@@ -162,12 +162,6 @@ class CoordinateOperationMethods
     public const EPSG_GENERAL_POLYNOMIAL_OF_DEGREE_6 = 'urn:ogc:def:method:EPSG::9648';
 
     /**
-     * Geocentric translations  (geog3D domain)
-     * See methods 1031 and 9603 for similar tfms operating between other CRSs types.
-     */
-    public const EPSG_GEOCENTRIC_TRANSLATIONS_GEOG3D_DOMAIN = 'urn:ogc:def:method:EPSG::1035';
-
-    /**
      * Geocentric translations (geocentric domain)
      * This method allows calculation of geocentric coords in the target system by adding the parameter values to the
      * corresponding coordinates of the point in the source system. See methods 1035 and 9603 for similar tfms
@@ -182,14 +176,23 @@ class CoordinateOperationMethods
     public const EPSG_GEOCENTRIC_TRANSLATIONS_GEOG2D_DOMAIN = 'urn:ogc:def:method:EPSG::9603';
 
     /**
+     * Geocentric translations (geog3D domain)
+     * See methods 1031 and 9603 for similar tfms operating between other CRSs types.
+     */
+    public const EPSG_GEOCENTRIC_TRANSLATIONS_GEOG3D_DOMAIN = 'urn:ogc:def:method:EPSG::1035';
+
+    /**
      * Geocentric/topocentric conversions.
      */
     public const EPSG_GEOCENTRIC_TOPOCENTRIC_CONVERSIONS = 'urn:ogc:def:method:EPSG::9836';
 
     /**
-     * Geog3D to Geog2D+GravityRelatedHeight (gtx).
+     * Geog3D to Geog2D+GravityRelatedHeight (US .gtx)
+     * Transformation from a Geographic 3D CRS to a Compound CRS consisting of a Geographic 2D CRS and a Vertical CRS,
+     * or vice versa. The Geographic 3D and the Geographic 2D CRS must be based on the same Geodetic Datum.
+     * @deprecated
      */
-    public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_GTX = 'urn:ogc:def:method:EPSG::1088';
+    public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_US_GTX = 'urn:ogc:def:method:EPSG::9635';
 
     /**
      * Geographic/geocentric conversions
@@ -297,6 +300,11 @@ class CoordinateOperationMethods
      * methods.
      */
     public const EPSG_LAMBERT_AZIMUTHAL_EQUAL_AREA_SPHERICAL = 'urn:ogc:def:method:EPSG::1027';
+
+    /**
+     * Lambert Conic Conformal (1SP variant B).
+     */
+    public const EPSG_LAMBERT_CONIC_CONFORMAL_1SP_VARIANT_B = 'urn:ogc:def:method:EPSG::1102';
 
     /**
      * Lambert Conic Conformal (1SP).
@@ -698,6 +706,7 @@ class CoordinateOperationMethods
             self::EPSG_LAMBERT_AZIMUTHAL_EQUAL_AREA => 'lambertAzimuthalEqualArea',
             self::EPSG_LAMBERT_AZIMUTHAL_EQUAL_AREA_SPHERICAL => 'lambertAzimuthalEqualAreaSpherical',
             self::EPSG_LAMBERT_CONIC_CONFORMAL_1SP => 'lambertConicConformal1SP',
+            self::EPSG_LAMBERT_CONIC_CONFORMAL_1SP_VARIANT_B => 'lambertConicConformal1SPVariantB',
             self::EPSG_LAMBERT_CONIC_CONFORMAL_2SP_BELGIUM => 'lambertConicConformal2SPBelgium',
             self::EPSG_LAMBERT_CONIC_CONFORMAL_2SP_MICHIGAN => 'lambertConicConformal2SPMichigan',
             self::EPSG_LAMBERT_CONIC_CONFORMAL_2SP => 'lambertConicConformal2SP',

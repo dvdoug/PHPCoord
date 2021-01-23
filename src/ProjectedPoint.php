@@ -963,6 +963,55 @@ class ProjectedPoint extends Point
     }
 
     /**
+     * Lambert Conic Conformal (1SP) Variant B.
+     */
+    public function lambertConicConformal1SPVariantB(
+        Geographic $to,
+        Angle $latitudeOfNaturalOrigin,
+        Scale $scaleFactorAtNaturalOrigin,
+        Angle $latitudeOfFalseOrigin,
+        Angle $longitudeOfFalseOrigin,
+        Length $eastingAtFalseOrigin,
+        Length $northingAtFalseOrigin
+    ): GeographicPoint {
+        $easting = $this->easting->asMetres()->getValue() - $eastingAtFalseOrigin->asMetres()->getValue();
+        $northing = $this->northing->asMetres()->getValue() - $northingAtFalseOrigin->asMetres()->getValue();
+        $latitudeNaturalOrigin = $latitudeOfNaturalOrigin->asRadians()->getValue();
+        $latitudeFalseOrigin = $latitudeOfFalseOrigin->asRadians()->getValue();
+        $longitudeFalseOrigin = $longitudeOfFalseOrigin->asRadians()->getValue();
+        $scaleFactorOrigin = $scaleFactorAtNaturalOrigin->asUnity()->getValue();
+        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
+        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+
+        $mO = cos($latitudeNaturalOrigin) / sqrt(1 - $e2 * sin($latitudeNaturalOrigin) ** 2);
+        $tO = tan(M_PI / 4 - $latitudeNaturalOrigin / 2) / ((1 - $e * sin($latitudeNaturalOrigin)) / (1 + $e * sin($latitudeNaturalOrigin))) ** ($e / 2);
+        $tF = tan(M_PI / 4 - $latitudeFalseOrigin / 2) / ((1 - $e * sin($latitudeFalseOrigin)) / (1 + $e * sin($latitudeFalseOrigin))) ** ($e / 2);
+        $n = sin($latitudeNaturalOrigin);
+        $F = $mO / ($n * $tO ** $n);
+        $rF = $a * $F * $tF ** $n * $scaleFactorOrigin;
+        $r = sqrt($easting ** 2 + ($rF - $northing) ** 2);
+        if ($n >= 0) {
+            $theta = atan2($easting, $rF - $northing);
+        } else {
+            $r = -$r;
+            $theta = atan2(-$easting, -($rF - $northing));
+        }
+
+        $t = ($r / ($a * $scaleFactorOrigin * $F)) ** (1 / $n);
+
+        $latitude = M_PI / (2 - 2 * atan($t));
+        do {
+            $latitudeN = $latitude;
+            $latitude = M_PI / 2 - 2 * atan($t * ((1 - $e * sin($latitude)) / (1 + $e * sin($latitude))) ** ($e / 2));
+        } while (abs($latitude - $latitudeN) >= self::NEWTON_RAPHSON_CONVERGENCE);
+
+        $longitude = $theta / $n + $longitudeFalseOrigin;
+
+        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+    }
+
+    /**
      * Lambert Conic Conformal (2SP).
      */
     public function lambertConicConformal2SP(

@@ -1697,6 +1697,12 @@ class Geographic2D extends Geographic
     public const EPSG_LKS94 = 'urn:ogc:def:crs:EPSG::4669';
 
     /**
+     * LTF2004(G)
+     * Extent: France and Italy - on or related to the rail route from Lyon to Turin.
+     */
+    public const EPSG_LTF2004_G = 'urn:ogc:def:crs:EPSG::9547';
+
+    /**
      * La Canoa
      * Extent: Venezuela - onshore.
      * This CRS is incorporated within PSAD56. See CRS code 4248.
@@ -2140,7 +2146,7 @@ class Geographic2D extends Geographic
      * Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska;
      * Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon;
      * Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington;
-     * West Virginia; Wisconsin; Wyoming. US Virgin Islands.  British Virgin Islands.
+     * West Virginia; Wisconsin; Wyoming. US Virgin Islands. British Virgin Islands.
      * Longitude is POSITIVE EAST. The adjustment included connections to Greenland and Mexico but the system was not
      * adopted there. For applications with an accuracy of better than 1m replaced by NAD83(HARN) in the US and PRVI
      * and by NAD83(CSRS) in Canada.
@@ -6489,6 +6495,11 @@ class Geographic2D extends Geographic
             'name' => 'PZ-90.11',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
             'datum' => 'urn:ogc:def:datum:EPSG::1158',
+        ],
+        'urn:ogc:def:crs:EPSG::9547' => [
+            'name' => 'LTF2004(G)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
+            'datum' => 'urn:ogc:def:datum:EPSG::1295',
         ],
     ];
 

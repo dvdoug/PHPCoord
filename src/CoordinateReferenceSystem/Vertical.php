@@ -178,6 +178,12 @@ class Vertical extends CoordinateReferenceSystem
     public const EPSG_CBVD61_HEIGHT_FT = 'urn:ogc:def:crs:EPSG::6132';
 
     /**
+     * CD Norway
+     * Extent: Norway (offshore) and Svalbard and Jan Mayen (offshore).
+     */
+    public const EPSG_CD_NORWAY = 'urn:ogc:def:crs:EPSG::9672';
+
+    /**
      * CGVD2013(CGG2013) height
      * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
      * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
@@ -1182,18 +1188,18 @@ class Vertical extends CoordinateReferenceSystem
 
     /**
      * NAVD88 depth
-     * Extent: Mexico - onshore. United States (USA) -  CONUS and Alaska - onshore - Alabama; Alaska; Arizona;
-     * Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas;
-     * Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana;
-     * Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma;
-     * Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia;
-     * Washington; West Virginia; Wisconsin; Wyoming.
+     * Extent: Mexico - onshore. United States (USA) - CONUS and Alaska - onshore - Alabama; Alaska; Arizona; Arkansas;
+     * California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky;
+     * Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska;
+     * Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon;
+     * Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington;
+     * West Virginia; Wisconsin; Wyoming.
      */
     public const EPSG_NAVD88_DEPTH = 'urn:ogc:def:crs:EPSG::6357';
 
     /**
      * NAVD88 depth (ftUS)
-     * Extent: United States (USA) -  CONUS and Alaska - onshore - Alabama; Alaska mainland; Arizona; Arkansas;
+     * Extent: United States (USA) - CONUS and Alaska - onshore - Alabama; Alaska mainland; Arizona; Arkansas;
      * California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky;
      * Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska;
      * Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon;
@@ -1205,12 +1211,12 @@ class Vertical extends CoordinateReferenceSystem
 
     /**
      * NAVD88 height
-     * Extent: Mexico - onshore. United States (USA) -  CONUS and Alaska - onshore - Alabama; Alaska; Arizona;
-     * Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas;
-     * Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana;
-     * Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma;
-     * Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia;
-     * Washington; West Virginia; Wisconsin; Wyoming.
+     * Extent: Mexico - onshore. United States (USA) - CONUS and Alaska - onshore - Alabama; Alaska; Arizona; Arkansas;
+     * California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky;
+     * Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska;
+     * Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon;
+     * Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington;
+     * West Virginia; Wisconsin; Wyoming.
      */
     public const EPSG_NAVD88_HEIGHT = 'urn:ogc:def:crs:EPSG::5703';
 
@@ -1224,7 +1230,7 @@ class Vertical extends CoordinateReferenceSystem
 
     /**
      * NAVD88 height (ftUS)
-     * Extent: United States (USA) -  CONUS and Alaska - onshore - Alabama; Alaska mainland; Arizona; Arkansas;
+     * Extent: United States (USA) - CONUS and Alaska - onshore - Alabama; Alaska mainland; Arizona; Arkansas;
      * California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky;
      * Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska;
      * Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon;
@@ -1353,6 +1359,13 @@ class Vertical extends CoordinateReferenceSystem
      * Replaced by NN2000 height (CRS code 5941).
      */
     public const EPSG_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::5776';
+
+    /**
+     * NVD 1992 height
+     * Extent: Bangladesh - onshore.
+     * Replaces PWD Datum.
+     */
+    public const EPSG_NVD_1992_HEIGHT = 'urn:ogc:def:crs:EPSG::9681';
 
     /**
      * NZVD2009 height
@@ -2930,10 +2943,20 @@ class Vertical extends CoordinateReferenceSystem
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
             'datum' => 'urn:ogc:def:datum:EPSG::1294',
         ],
+        'urn:ogc:def:crs:EPSG::9672' => [
+            'name' => 'CD Norway',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6498',
+            'datum' => 'urn:ogc:def:datum:EPSG::1301',
+        ],
         'urn:ogc:def:crs:EPSG::9675' => [
             'name' => 'Pago Pago 2020 height',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
             'datum' => 'urn:ogc:def:datum:EPSG::1302',
+        ],
+        'urn:ogc:def:crs:EPSG::9681' => [
+            'name' => 'NVD 1992 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1303',
         ],
     ];
 

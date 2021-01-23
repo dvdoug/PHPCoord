@@ -834,7 +834,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * NAD83 + NAVD88 height
-     * Extent: United States (USA) -  CONUS and Alaska - onshore - Alabama; Alaska mainland; Arizona; Arkansas;
+     * Extent: United States (USA) - CONUS and Alaska - onshore - Alabama; Alaska mainland; Arizona; Arkansas;
      * California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky;
      * Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska;
      * Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon;
@@ -1785,7 +1785,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * NAD83(2011) + NAVD88 height
-     * Extent: United States (USA) -  CONUS and Alaska - onshore - Alabama; Alaska mainland; Arizona; Arkansas;
+     * Extent: United States (USA) - CONUS and Alaska - onshore - Alabama; Alaska mainland; Arizona; Arkansas;
      * California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky;
      * Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska;
      * Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon;
@@ -1997,7 +1997,7 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_RT90_PLUS_RH70_HEIGHT = 'urn:ogc:def:crs:EPSG::7404';
 
     /**
-     * SHMG2015 +  SHVD2015 height
+     * SHMG2015 + SHVD2015 height
      * Extent: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore.
      */
     public const EPSG_SHMG2015_PLUS_SHVD2015_HEIGHT = 'urn:ogc:def:crs:EPSG::7956';
@@ -2110,7 +2110,7 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_SWEREF99_TM_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5845';
 
     /**
-     * St. Helena Tritan / UTM zone 30S +  Tritan 2011 height
+     * St. Helena Tritan / UTM zone 30S + Tritan 2011 height
      * Extent: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore.
      */
     public const EPSG_ST_HELENA_TRITAN_UTM_ZONE_30S_PLUS_TRITAN_2011_HEIGHT = 'urn:ogc:def:crs:EPSG::7955';
@@ -2136,7 +2136,7 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_TOKYO_PLUS_JSLD72_HEIGHT = 'urn:ogc:def:crs:EPSG::6700';
 
     /**
-     * WGS 84 / World Mercator +  EGM2008 height
+     * WGS 84 / World Mercator + EGM2008 height
      * Extent: World.
      * Note: for preliminary concept visualisation only. Detailed design will require use of appropriate low-distortion
      * local projected and vertical CRSs.
@@ -2895,7 +2895,7 @@ class Compound extends CoordinateReferenceSystem
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6693',
         ],
         'urn:ogc:def:crs:EPSG::6893' => [
-            'name' => 'WGS 84 / World Mercator +  EGM2008 height',
+            'name' => 'WGS 84 / World Mercator + EGM2008 height',
             'horizontal_crs' => 'urn:ogc:def:crs:EPSG::3395',
             'horizontal_crs_type' => 'projected',
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::3855',
@@ -3027,13 +3027,13 @@ class Compound extends CoordinateReferenceSystem
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::7888',
         ],
         'urn:ogc:def:crs:EPSG::7955' => [
-            'name' => 'St. Helena Tritan / UTM zone 30S +  Tritan 2011 height',
+            'name' => 'St. Helena Tritan / UTM zone 30S + Tritan 2011 height',
             'horizontal_crs' => 'urn:ogc:def:crs:EPSG::7883',
             'horizontal_crs_type' => 'projected',
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::7889',
         ],
         'urn:ogc:def:crs:EPSG::7956' => [
-            'name' => 'SHMG2015 +  SHVD2015 height',
+            'name' => 'SHMG2015 + SHVD2015 height',
             'horizontal_crs' => 'urn:ogc:def:crs:EPSG::7887',
             'horizontal_crs_type' => 'projected',
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::7890',

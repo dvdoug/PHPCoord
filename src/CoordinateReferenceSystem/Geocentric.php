@@ -677,6 +677,12 @@ class Geocentric extends CoordinateReferenceSystem
     public const EPSG_LKS94 = 'urn:ogc:def:crs:EPSG::4950';
 
     /**
+     * LTF2004(G)
+     * Extent: France and Italy - on or related to the rail route from Lyon to Turin.
+     */
+    public const EPSG_LTF2004_G = 'urn:ogc:def:crs:EPSG::9545';
+
+    /**
      * Lao 1993
      * Extent: Laos.
      * Replaced by Lao 1997. Lao 1993 coordinate values are within 1m of Lao 1997 values.
@@ -2407,6 +2413,11 @@ class Geocentric extends CoordinateReferenceSystem
             'name' => 'SRGI2013',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
             'datum' => 'urn:ogc:def:datum:EPSG::1293',
+        ],
+        'urn:ogc:def:crs:EPSG::9545' => [
+            'name' => 'LTF2004(G)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1295',
         ],
     ];
 

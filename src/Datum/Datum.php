@@ -1873,7 +1873,6 @@ class Datum
      * Extent: Australia including Lord Howe Island, Macquarie Islands, Ashmore and Cartier Islands, Christmas Island,
      * Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
      * ITRF92 at epoch 1994.0.
-     * Coincident with WGS84 to within 1 metre.
      */
     public const EPSG_GEOCENTRIC_DATUM_OF_AUSTRALIA_1994 = 'urn:ogc:def:datum:EPSG::6283';
 
@@ -1992,15 +1991,6 @@ class Datum
     public const EPSG_GREEK_GEODETIC_REFERENCE_SYSTEM_1987 = 'urn:ogc:def:datum:EPSG::6121';
 
     /**
-     * Greenland  Vertical Reference 2000
-     * Type: vertical
-     * Extent: Greenland - onshore and offshore between 59°N and 84°N and west of 10°W.
-     * Defined through the gravimetric geoid 2000 model locally aligned with MSL at a number of sites.
-     * Orthometric heights. Replaced by GVR2016.
-     */
-    public const EPSG_GREENLAND_VERTICAL_REFERENCE_2000 = 'urn:ogc:def:datum:EPSG::1199';
-
-    /**
      * Greenland 1996
      * Type: geodetic
      * Extent: Greenland - onshore and offshore.
@@ -2008,6 +1998,15 @@ class Datum
      * Replaces Ammassalik 1958, Qornoq 1927 and Scoresbysund 1952.
      */
     public const EPSG_GREENLAND_1996 = 'urn:ogc:def:datum:EPSG::6747';
+
+    /**
+     * Greenland Vertical Reference 2000
+     * Type: vertical
+     * Extent: Greenland - onshore and offshore between 59°N and 84°N and west of 10°W.
+     * Defined through the gravimetric geoid 2000 model locally aligned with MSL at a number of sites.
+     * Orthometric heights. Replaced by GVR2016.
+     */
+    public const EPSG_GREENLAND_VERTICAL_REFERENCE_2000 = 'urn:ogc:def:datum:EPSG::1199';
 
     /**
      * Greenland Vertical Reference 2016
@@ -3618,6 +3617,15 @@ class Datum
     public const EPSG_LUZON_1911 = 'urn:ogc:def:datum:EPSG::6253';
 
     /**
+     * Lyon Turin Ferroviaire 2004
+     * Type: geodetic
+     * Extent: France and Italy - on or related to the rail route from Lyon to Turin.
+     * Densification of ETRS89 realised through network of 40 stations adjusted to 7 EUREF reference stations in
+     * ETRF2000@2002.0.
+     */
+    public const EPSG_LYON_TURIN_FERROVIAIRE_2004 = 'urn:ogc:def:datum:EPSG::1295';
+
+    /**
      * Lyttelton 1937
      * Type: vertical
      * Extent: New Zealand - South Island - between approximately 41°20'S and 45°S - Lyttleton vertical CRS area.
@@ -4444,6 +4452,14 @@ class Datum
     public const EPSG_NATIONAL_GEODETIC_VERTICAL_DATUM_1929 = 'urn:ogc:def:datum:EPSG::5102';
 
     /**
+     * National Vertical Datum 1992
+     * Type: vertical
+     * Extent: Bangladesh - onshore.
+     * Mean Sea Level 1992-1994 at tidal station at Rangadia, Chittagong.
+     */
+    public const EPSG_NATIONAL_VERTICAL_DATUM_1992 = 'urn:ogc:def:datum:EPSG::1303';
+
+    /**
      * Nelson 1955
      * Type: vertical
      * Extent: New Zealand - South Island - north of approximately 42°20'S - Nelson vertical CRS area.
@@ -4667,7 +4683,7 @@ class Datum
      * Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska;
      * Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon;
      * Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington;
-     * West Virginia; Wisconsin; Wyoming. US Virgin Islands.  British Virgin Islands.
+     * West Virginia; Wisconsin; Wyoming. US Virgin Islands. British Virgin Islands.
      * Origin at geocentre.
      * Although the 1986 adjustment included connections to Greenland and Mexico, it has not been adopted there. In
      * Canada and US, replaced NAD27.
@@ -4791,12 +4807,12 @@ class Datum
     /**
      * North American Vertical Datum 1988
      * Type: vertical
-     * Extent: Mexico - onshore. United States (USA) -  CONUS and Alaska - onshore - Alabama; Alaska; Arizona;
-     * Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas;
-     * Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana;
-     * Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma;
-     * Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia;
-     * Washington; West Virginia; Wisconsin; Wyoming.
+     * Extent: Mexico - onshore. United States (USA) - CONUS and Alaska - onshore - Alabama; Alaska; Arizona; Arkansas;
+     * California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky;
+     * Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska;
+     * Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon;
+     * Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington;
+     * West Virginia; Wisconsin; Wyoming.
      * Mean water level 1970-1983 at Pointe-au-Père (Father's Point) and 1984-1988 at Rimouski, Quebec. Benchmark
      * 1250-G = 6.273m.
      * Helmert orthometric heights.
@@ -4843,6 +4859,19 @@ class Datum
      * Replaces NN54. Uses Normal heights.
      */
     public const EPSG_NORWAY_NORMAL_NULL_2000 = 'urn:ogc:def:datum:EPSG::1096';
+
+    /**
+     * Norwegian Chart Datum
+     * Type: vertical
+     * Extent: Norway (offshore) and Svalbard and Jan Mayen (offshore).
+     * LAT (sum of all harmonic constituents) with an added safety margin in areas where low water levels frequently
+     * deviate from LAT. The safety margin is 20 cm from Utsira to the Swedish border and 30 cm in the inner part of
+     * the Oslofjord (north of Drøbak).
+     * Prior to 2000-01-01 the definition of chart datum was Z0 = M2 + S2 + N2 + K2 + K1 + ½Sa plus safety margins (10
+     * cm north of Hordaland, 20 cm in Hordaland, 30 cm from Rogaland to the Swedish border and 40 cm in the inner
+     * parts of the Oslofjord).
+     */
+    public const EPSG_NORWEGIAN_CHART_DATUM = 'urn:ogc:def:datum:EPSG::1301';
 
     /**
      * Not specified (based on Airy 1830 ellipsoid)
@@ -8836,7 +8865,7 @@ class Datum
             'frame_reference_epoch' => null,
         ],
         'urn:ogc:def:datum:EPSG::1199' => [
-            'name' => 'Greenland  Vertical Reference 2000',
+            'name' => 'Greenland Vertical Reference 2000',
             'type' => 'vertical',
             'ellipsoid' => null,
             'prime_meridian' => null,
@@ -9590,8 +9619,32 @@ class Datum
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
         ],
+        'urn:ogc:def:datum:EPSG::1295' => [
+            'name' => 'Lyon Turin Ferroviaire 2004',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
+        'urn:ogc:def:datum:EPSG::1301' => [
+            'name' => 'Norwegian Chart Datum',
+            'type' => 'vertical',
+            'ellipsoid' => null,
+            'prime_meridian' => null,
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
         'urn:ogc:def:datum:EPSG::1302' => [
             'name' => 'Local Tidal Datum at Pago Pago 2020',
+            'type' => 'vertical',
+            'ellipsoid' => null,
+            'prime_meridian' => null,
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
+        'urn:ogc:def:datum:EPSG::1303' => [
+            'name' => 'National Vertical Datum 1992',
             'type' => 'vertical',
             'ellipsoid' => null,
             'prime_meridian' => null,
