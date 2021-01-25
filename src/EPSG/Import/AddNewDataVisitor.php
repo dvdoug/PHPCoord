@@ -16,6 +16,7 @@ use PhpParser\Node\Stmt\ClassLike;
 use PhpParser\NodeTraverser;
 use PhpParser\NodeVisitorAbstract;
 use const SORT_NATURAL;
+use function str_replace;
 
 class AddNewDataVisitor extends NodeVisitorAbstract
 {
@@ -27,6 +28,9 @@ class AddNewDataVisitor extends NodeVisitorAbstract
         foreach ($this->data as &$dataRow) {
             unset($dataRow['constant_help']);
             unset($dataRow['deprecated']);
+            if (isset($dataRow['name'])) {
+                $dataRow['name'] = str_replace('_LOWERCASE', '', $dataRow['name']);
+            }
         }
         ksort($this->data, SORT_NATURAL);
     }

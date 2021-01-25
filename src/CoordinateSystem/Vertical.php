@@ -63,7 +63,7 @@ class Vertical extends CoordinateSystem
 
     protected static array $sridData = [
         'urn:ogc:def:cs:EPSG::1030' => [
-            'name' => '. Axis: height (H). Orientation: up. UoM: ft.',
+            'name' => 'Axis: height (H). Orientation: up. UoM: ft.',
             'axes' => [
                 [
                     'orientation' => 'up',
@@ -74,7 +74,7 @@ class Vertical extends CoordinateSystem
             ],
         ],
         'urn:ogc:def:cs:EPSG::1043' => [
-            'name' => '. Axis: depth (D). Orientation: down. UoM: ftUS.',
+            'name' => 'Axis: depth (D). Orientation: down. UoM: ftUS.',
             'axes' => [
                 [
                     'orientation' => 'down',
@@ -85,7 +85,7 @@ class Vertical extends CoordinateSystem
             ],
         ],
         'urn:ogc:def:cs:EPSG::6495' => [
-            'name' => '. Axis: depth (D). Orientation: down. UoM: ft.',
+            'name' => 'Axis: depth (D). Orientation: down. UoM: ft.',
             'axes' => [
                 [
                     'orientation' => 'down',
@@ -96,7 +96,7 @@ class Vertical extends CoordinateSystem
             ],
         ],
         'urn:ogc:def:cs:EPSG::6496' => [
-            'name' => '. Axis: height (H). Orientation: up. UoM: ft(Br36).',
+            'name' => 'Axis: height (H). Orientation: up. UoM: ft(Br36).',
             'axes' => [
                 [
                     'orientation' => 'up',
@@ -107,7 +107,7 @@ class Vertical extends CoordinateSystem
             ],
         ],
         'urn:ogc:def:cs:EPSG::6497' => [
-            'name' => '. Axis: height (H). Orientation: up. UoM: ftUS.',
+            'name' => 'Axis: height (H). Orientation: up. UoM: ftUS.',
             'axes' => [
                 [
                     'orientation' => 'up',
@@ -118,7 +118,7 @@ class Vertical extends CoordinateSystem
             ],
         ],
         'urn:ogc:def:cs:EPSG::6498' => [
-            'name' => '. Axis: depth (D). Orientation: down. UoM: m.',
+            'name' => 'Axis: depth (D). Orientation: down. UoM: m.',
             'axes' => [
                 [
                     'orientation' => 'down',
@@ -129,7 +129,7 @@ class Vertical extends CoordinateSystem
             ],
         ],
         'urn:ogc:def:cs:EPSG::6499' => [
-            'name' => '. Axis: height (H). Orientation: up. UoM: m.',
+            'name' => 'Axis: height (H). Orientation: up. UoM: m.',
             'axes' => [
                 [
                     'orientation' => 'up',

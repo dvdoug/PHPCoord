@@ -443,7 +443,7 @@ class GeographicPointTest extends TestCase
     {
         $fromCRS = new Geographic2D(
             'foo',
-            Ellipsoidal::fromSRID(Ellipsoidal::EPSG_AXES_LATITUDE_LONGITUDE_ORIENTATIONS_NORTH_EAST_UOM_DEGREE),
+            Ellipsoidal::fromSRID(Ellipsoidal::EPSG_2D_AXES_LATITUDE_LONGITUDE_ORIENTATIONS_NORTH_EAST_UOM_DEGREE),
             new Datum(
                 Datum::DATUM_TYPE_GEODETIC,
                 new Ellipsoid(

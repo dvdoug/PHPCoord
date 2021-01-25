@@ -397,7 +397,7 @@ class EPSGImporter
         $sql = "
             SELECT
                 'urn:ogc:def:cs:EPSG::' || cs.coord_sys_code AS urn,
-                REPLACE(REPLACE(REPLACE(cs.coord_sys_name, 'Cartesian 2D CS', ''), 'Cartesian 3D CS', ''), 'for', '') || CASE cs.coord_sys_code WHEN 4531 THEN '_LOWERCASE' ELSE '' END AS name,
+                REPLACE(REPLACE(cs.coord_sys_name, 'Cartesian ', ''), 'CS. ', '') || CASE cs.coord_sys_code WHEN 4531 THEN '_LOWERCASE' ELSE '' END AS name,
                 cs.coord_sys_name || '\n' || 'Type: ' || cs.coord_sys_type || '\n' || cs.remarks AS constant_help,
                 cs.deprecated
             FROM epsg_coordinatesystem cs
@@ -444,7 +444,7 @@ class EPSGImporter
         $sql = "
             SELECT
                 'urn:ogc:def:cs:EPSG::' || cs.coord_sys_code AS urn,
-                REPLACE(REPLACE(REPLACE(cs.coord_sys_name, 'Ellipsoidal 2D CS', ''), 'Ellipsoidal 3D CS', ''), 'for', '') AS name,
+                REPLACE(REPLACE(cs.coord_sys_name, 'Ellipsoidal ', ''), 'CS. ', '') AS name,
                 cs.coord_sys_name || '\n' || 'Type: ' || cs.coord_sys_type || '\n' || cs.remarks AS constant_help,
                 cs.deprecated
             FROM epsg_coordinatesystem cs
@@ -491,7 +491,7 @@ class EPSGImporter
         $sql = "
             SELECT
                 'urn:ogc:def:cs:EPSG::' || cs.coord_sys_code AS urn,
-                REPLACE(REPLACE(cs.coord_sys_name, 'Vertical CS', ''), 'for', '') AS name,
+                REPLACE(REPLACE(cs.coord_sys_name, 'Vertical ', ''), 'CS. ', '') AS name,
                 cs.coord_sys_name || '\n' || 'Type: ' || cs.coord_sys_type || '\n' || cs.remarks AS constant_help,
                 cs.deprecated
             FROM epsg_coordinatesystem cs
