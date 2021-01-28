@@ -12,8 +12,9 @@ use PHPCoord\Exception\InvalidRateException;
 use PHPCoord\Exception\UnknownUnitOfMeasureException;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPCoord\UnitOfMeasure\Angle\ArcSecond;
-use PHPCoord\UnitOfMeasure\Length\Length;
+use PHPCoord\UnitOfMeasure\Length\Centimetre;
 use PHPCoord\UnitOfMeasure\Length\Metre;
+use PHPCoord\UnitOfMeasure\Length\Millimetre;
 use PHPCoord\UnitOfMeasure\Scale\PartsPerBillion;
 use PHPCoord\UnitOfMeasure\Scale\PartsPerMillion;
 use PHPCoord\UnitOfMeasure\Time\Time;
@@ -148,9 +149,9 @@ class Rate implements UnitOfMeasure
             case self::EPSG_METRES_PER_YEAR:
                 return new self(new Metre($measurement), new Year(1));
             case self::EPSG_MILLIMETRES_PER_YEAR:
-                return new self(Length::makeUnit($measurement, Length::EPSG_MILLIMETRE), new Year(1));
+                return new self(new Millimetre($measurement), new Year(1));
             case self::EPSG_CENTIMETRES_PER_YEAR:
-                return new self(Length::makeUnit($measurement, Length::EPSG_CENTIMETRE), new Year(1));
+                return new self(new Centimetre($measurement), new Year(1));
             case self::EPSG_PARTS_PER_BILLION_PER_YEAR:
                 return new self(new PartsPerBillion($measurement), new Year(1));
             case self::EPSG_PARTS_PER_MILLION_PER_YEAR:
