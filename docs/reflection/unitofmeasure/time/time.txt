@@ -1,0 +1,10 @@
+Year
+----
+
+
+.. code-block:: php
+
+    Time::makeUnit($measurement, Time::EPSG_YEAR)
+    Time::makeUnit($measurement, 'urn:ogc:def:uom:EPSG::1029')
+
+

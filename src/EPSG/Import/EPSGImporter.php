@@ -8,12 +8,32 @@ declare(strict_types=1);
 
 namespace PHPCoord\EPSG\Import;
 
+use function array_flip;
 use function dirname;
+use function fclose;
 use function file_exists;
 use function file_get_contents;
 use function file_put_contents;
+use function fopen;
+use function fwrite;
 use const PHP_EOL;
+use PHPCoord\CoordinateReferenceSystem\Compound;
+use PHPCoord\CoordinateReferenceSystem\Geocentric;
+use PHPCoord\CoordinateReferenceSystem\Geographic2D;
+use PHPCoord\CoordinateReferenceSystem\Geographic3D;
+use PHPCoord\CoordinateReferenceSystem\Projected;
+use PHPCoord\CoordinateReferenceSystem\Vertical;
+use PHPCoord\CoordinateSystem\Cartesian;
+use PHPCoord\CoordinateSystem\Ellipsoidal;
+use PHPCoord\CoordinateSystem\Vertical as VerticalCS;
 use PHPCoord\Datum\Datum;
+use PHPCoord\Datum\Ellipsoid;
+use PHPCoord\Datum\PrimeMeridian;
+use PHPCoord\UnitOfMeasure\Angle\Angle;
+use PHPCoord\UnitOfMeasure\Length\Length;
+use PHPCoord\UnitOfMeasure\Rate;
+use PHPCoord\UnitOfMeasure\Scale\Scale;
+use PHPCoord\UnitOfMeasure\Time\Time;
 use PhpCsFixer\AbstractFixer;
 use PhpCsFixer\Config;
 use PhpCsFixer\Console\ConfigurationResolver;
@@ -23,14 +43,21 @@ use PhpParser\Lexer\Emulative;
 use PhpParser\NodeTraverser;
 use PhpParser\NodeVisitor\CloningVisitor;
 use PhpParser\Parser\Php7;
+use ReflectionClass;
 use SplFileInfo;
 use SQLite3;
 use const SQLITE3_ASSOC;
 use const SQLITE3_OPEN_CREATE;
 use const SQLITE3_OPEN_READONLY;
 use const SQLITE3_OPEN_READWRITE;
+use function str_repeat;
+use function str_replace;
+use function strlen;
 use function strpos;
+use function strtolower;
 use function substr;
+use function trim;
+use function ucfirst;
 use function unlink;
 
 class EPSGImporter
@@ -112,6 +139,7 @@ class EPSGImporter
                 'urn:ogc:def:uom:EPSG::' || m.uom_code AS urn,
                 m.unit_of_meas_name AS name,
                 m.unit_of_meas_name || '\n' || m.remarks AS constant_help,
+                m.remarks AS doc_help,
                 m.deprecated
             FROM epsg_unitofmeasure m
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_unitofmeasure' AND dep.object_code = m.uom_code AND dep.deprecation_date <= '2020-12-14'
@@ -134,12 +162,14 @@ class EPSGImporter
 
         $this->updateFileData($this->sourceDir . '/UnitOfMeasure/Angle/Angle.php', $data);
         $this->updateFileConstants($this->sourceDir . '/UnitOfMeasure/Angle/Angle.php', $data, 'public');
+        $this->updateDocs(Angle::class, $data);
 
         $sql = "
             SELECT
                 'urn:ogc:def:uom:EPSG::' || m.uom_code AS urn,
                 m.unit_of_meas_name AS name,
                 m.unit_of_meas_name || '\n' || m.remarks AS constant_help,
+                m.remarks AS doc_help,
                 m.deprecated
             FROM epsg_unitofmeasure m
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_unitofmeasure' AND dep.object_code = m.uom_code AND dep.deprecation_date <= '2020-12-14'
@@ -163,12 +193,14 @@ class EPSGImporter
 
         $this->updateFileData($this->sourceDir . '/UnitOfMeasure/Length/Length.php', $data);
         $this->updateFileConstants($this->sourceDir . '/UnitOfMeasure/Length/Length.php', $data, 'public');
+        $this->updateDocs(Length::class, $data);
 
         $sql = "
             SELECT
                 'urn:ogc:def:uom:EPSG::' || m.uom_code AS urn,
                 m.unit_of_meas_name AS name,
                 m.unit_of_meas_name || '\n' || m.remarks AS constant_help,
+                m.remarks AS doc_help,
                 m.deprecated
             FROM epsg_unitofmeasure m
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_unitofmeasure' AND dep.object_code = m.uom_code AND dep.deprecation_date <= '2020-12-14'
@@ -192,12 +224,14 @@ class EPSGImporter
 
         $this->updateFileData($this->sourceDir . '/UnitOfMeasure/Scale/Scale.php', $data);
         $this->updateFileConstants($this->sourceDir . '/UnitOfMeasure/Scale/Scale.php', $data, 'public');
+        $this->updateDocs(Scale::class, $data);
 
         $sql = "
             SELECT
                 'urn:ogc:def:uom:EPSG::' || m.uom_code AS urn,
                 m.unit_of_meas_name AS name,
                 m.unit_of_meas_name || '\n' || m.remarks AS constant_help,
+                m.remarks AS doc_help,
                 m.deprecated
             FROM epsg_unitofmeasure m
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_unitofmeasure' AND dep.object_code = m.uom_code AND dep.deprecation_date <= '2020-12-14'
@@ -220,12 +254,14 @@ class EPSGImporter
 
         $this->updateFileData($this->sourceDir . '/UnitOfMeasure/Time/Time.php', $data);
         $this->updateFileConstants($this->sourceDir . '/UnitOfMeasure/Time/Time.php', $data, 'public');
+        $this->updateDocs(Time::class, $data);
 
         $sql = "
             SELECT
                 'urn:ogc:def:uom:EPSG::' || m.uom_code AS urn,
                 m.unit_of_meas_name AS name,
                 m.unit_of_meas_name || '\n' || m.remarks AS constant_help,
+                m.remarks AS doc_help,
                 m.deprecated
             FROM epsg_unitofmeasure m
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_unitofmeasure' AND dep.object_code = m.uom_code AND dep.deprecation_date <= '2020-12-14'
@@ -248,6 +284,7 @@ class EPSGImporter
 
         $this->updateFileData($this->sourceDir . '/UnitOfMeasure/Rate.php', $data);
         $this->updateFileConstants($this->sourceDir . '/UnitOfMeasure/Rate.php', $data, 'public');
+        $this->updateDocs(Rate::class, $data);
 
         $sql = "
             SELECT
@@ -287,6 +324,7 @@ class EPSGImporter
                 p.prime_meridian_name || '\n' || p.remarks AS constant_help,
                 p.greenwich_longitude,
                 'urn:ogc:def:uom:EPSG::' || p.uom_code AS uom,
+                p.remarks AS doc_help,
                 p.deprecated
             FROM epsg_primemeridian p
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_primemeridian' AND dep.object_code = p.prime_meridian_code AND dep.deprecation_date <= '2020-12-14'
@@ -303,6 +341,7 @@ class EPSGImporter
 
         $this->updateFileData($this->sourceDir . '/Datum/PrimeMeridian.php', $data);
         $this->updateFileConstants($this->sourceDir . '/Datum/PrimeMeridian.php', $data, 'public');
+        $this->updateDocs(PrimeMeridian::class, $data);
     }
 
     public function generateDataEllipsoids(SQLite3 $sqlite): void
@@ -316,6 +355,7 @@ class EPSGImporter
                 e.inv_flattening,
                 'urn:ogc:def:uom:EPSG::' || e.uom_code AS uom,
                 e.ellipsoid_name || '\n' || e.remarks AS constant_help,
+                e.remarks AS doc_help,
                 e.deprecated
             FROM epsg_ellipsoid e
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_ellipsoid' AND dep.object_code = e.ellipsoid_code AND dep.deprecation_date <= '2020-12-14'
@@ -337,6 +377,7 @@ class EPSGImporter
 
         $this->updateFileData($this->sourceDir . '/Datum/Ellipsoid.php', $data);
         $this->updateFileConstants($this->sourceDir . '/Datum/Ellipsoid.php', $data, 'public');
+        $this->updateDocs(Ellipsoid::class, $data);
     }
 
     public function generateDataDatums(SQLite3 $sqlite): void
@@ -351,6 +392,8 @@ class EPSGImporter
                 d.conventional_rs_code AS conventional_rs,
                 d.frame_reference_epoch,
                 d.datum_name || '\n' || 'Type: ' || d.datum_type || '\n' || 'Extent: ' || e.extent_description || '\n' || d.origin_description || '\n' || d.remarks AS constant_help,
+                e.extent_description AS extent,
+                d.origin_description || '\n' || d.remarks AS doc_help,
                 d.deprecated
             FROM epsg_datum d
             LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_datum' AND u.object_code = d.datum_code
@@ -387,6 +430,7 @@ class EPSGImporter
 
         $this->updateFileData($this->sourceDir . '/Datum/Datum.php', $data);
         $this->updateFileConstants($this->sourceDir . '/Datum/Datum.php', $data, 'public');
+        $this->updateDocs(Datum::class, $data);
     }
 
     public function generateDataCoordinateSystems(SQLite3 $sqlite): void
@@ -399,6 +443,7 @@ class EPSGImporter
                 'urn:ogc:def:cs:EPSG::' || cs.coord_sys_code AS urn,
                 REPLACE(REPLACE(cs.coord_sys_name, 'Cartesian ', ''), 'CS. ', '') || CASE cs.coord_sys_code WHEN 4531 THEN '_LOWERCASE' ELSE '' END AS name,
                 cs.coord_sys_name || '\n' || 'Type: ' || cs.coord_sys_type || '\n' || cs.remarks AS constant_help,
+                cs.remarks AS doc_help,
                 cs.deprecated
             FROM epsg_coordinatesystem cs
             JOIN epsg_coordinatereferencesystem crs ON crs.coord_sys_code = cs.coord_sys_code AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
@@ -437,6 +482,7 @@ class EPSGImporter
 
         $this->updateFileData($this->sourceDir . '/CoordinateSystem/Cartesian.php', $data);
         $this->updateFileConstants($this->sourceDir . '/CoordinateSystem/Cartesian.php', $data, 'public');
+        $this->updateDocs(Cartesian::class, $data);
 
         /*
          * ellipsoidal
@@ -446,6 +492,7 @@ class EPSGImporter
                 'urn:ogc:def:cs:EPSG::' || cs.coord_sys_code AS urn,
                 REPLACE(REPLACE(cs.coord_sys_name, 'Ellipsoidal ', ''), 'CS. ', '') AS name,
                 cs.coord_sys_name || '\n' || 'Type: ' || cs.coord_sys_type || '\n' || cs.remarks AS constant_help,
+                cs.remarks AS doc_help,
                 cs.deprecated
             FROM epsg_coordinatesystem cs
             JOIN epsg_coordinatereferencesystem crs ON crs.coord_sys_code = cs.coord_sys_code AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
@@ -484,6 +531,7 @@ class EPSGImporter
 
         $this->updateFileData($this->sourceDir . '/CoordinateSystem/Ellipsoidal.php', $data);
         $this->updateFileConstants($this->sourceDir . '/CoordinateSystem/Ellipsoidal.php', $data, 'public');
+        $this->updateDocs(Ellipsoidal::class, $data);
 
         /*
          * vertical
@@ -493,6 +541,7 @@ class EPSGImporter
                 'urn:ogc:def:cs:EPSG::' || cs.coord_sys_code AS urn,
                 REPLACE(REPLACE(cs.coord_sys_name, 'Vertical ', ''), 'CS. ', '') AS name,
                 cs.coord_sys_name || '\n' || 'Type: ' || cs.coord_sys_type || '\n' || cs.remarks AS constant_help,
+                cs.remarks AS doc_help,
                 cs.deprecated
             FROM epsg_coordinatesystem cs
             JOIN epsg_coordinatereferencesystem crs ON crs.coord_sys_code = cs.coord_sys_code AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
@@ -531,6 +580,7 @@ class EPSGImporter
 
         $this->updateFileData($this->sourceDir . '/CoordinateSystem/Vertical.php', $data);
         $this->updateFileConstants($this->sourceDir . '/CoordinateSystem/Vertical.php', $data, 'public');
+        $this->updateDocs(VerticalCS::class, $data);
 
         /*
          * other
@@ -594,6 +644,8 @@ class EPSGImporter
                 horizontal.coord_ref_sys_kind AS horizontal_crs_type,
                 'urn:ogc:def:crs:EPSG::' || crs.cmpd_vertcrs_code AS vertical_crs,
                 crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || crs.remarks AS constant_help,
+                e.extent_description AS extent,
+                crs.remarks AS doc_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
             LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
@@ -616,6 +668,7 @@ class EPSGImporter
 
         $this->updateFileData($this->sourceDir . '/CoordinateReferenceSystem/Compound.php', $data);
         $this->updateFileConstants($this->sourceDir . '/CoordinateReferenceSystem/Compound.php', $data, 'public');
+        $this->updateDocs(Compound::class, $data);
 
         /*
          * geocentric
@@ -627,6 +680,8 @@ class EPSGImporter
                 'urn:ogc:def:cs:EPSG::' || crs.coord_sys_code AS coordinate_system,
                 'urn:ogc:def:datum:EPSG::' || COALESCE(crs.datum_code, crs_base.datum_code) AS datum,
                 crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || crs.remarks AS constant_help,
+                e.extent_description AS extent,
+                crs.remarks AS doc_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
             LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
@@ -649,6 +704,7 @@ class EPSGImporter
 
         $this->updateFileData($this->sourceDir . '/CoordinateReferenceSystem/Geocentric.php', $data);
         $this->updateFileConstants($this->sourceDir . '/CoordinateReferenceSystem/Geocentric.php', $data, 'public');
+        $this->updateDocs(Geocentric::class, $data);
 
         /*
          * geographic 2D
@@ -660,6 +716,8 @@ class EPSGImporter
                 'urn:ogc:def:cs:EPSG::' || crs.coord_sys_code AS coordinate_system,
                 'urn:ogc:def:datum:EPSG::' || COALESCE(crs.datum_code, crs_base.datum_code) AS datum,
                 crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || crs.remarks AS constant_help,
+                e.extent_description AS extent,
+                crs.remarks AS doc_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
             LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
@@ -682,6 +740,7 @@ class EPSGImporter
 
         $this->updateFileData($this->sourceDir . '/CoordinateReferenceSystem/Geographic2D.php', $data);
         $this->updateFileConstants($this->sourceDir . '/CoordinateReferenceSystem/Geographic2D.php', $data, 'public');
+        $this->updateDocs(Geographic2D::class, $data);
 
         /*
          * geographic 3D
@@ -693,6 +752,8 @@ class EPSGImporter
                 'urn:ogc:def:cs:EPSG::' || crs.coord_sys_code AS coordinate_system,
                 'urn:ogc:def:datum:EPSG::' || COALESCE(crs.datum_code, crs_base.datum_code) AS datum,
                 crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || crs.remarks AS constant_help,
+                e.extent_description AS extent,
+                crs.remarks AS doc_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
             LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
@@ -715,6 +776,7 @@ class EPSGImporter
 
         $this->updateFileData($this->sourceDir . '/CoordinateReferenceSystem/Geographic3D.php', $data);
         $this->updateFileConstants($this->sourceDir . '/CoordinateReferenceSystem/Geographic3D.php', $data, 'public');
+        $this->updateDocs(Geographic3D::class, $data);
 
         /*
          * projected
@@ -728,6 +790,8 @@ class EPSGImporter
                 'urn:ogc:def:crs:EPSG::' || crs.base_crs_code AS base_crs,
                 'urn:ogc:def:coordinateOperation:EPSG::' || crs.projection_conv_code AS conversion_operation,
                 crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || crs.remarks AS constant_help,
+                e.extent_description AS extent,
+                crs.remarks AS doc_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
             LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
@@ -750,6 +814,7 @@ class EPSGImporter
 
         $this->updateFileData($this->sourceDir . '/CoordinateReferenceSystem/ProjectedSRIDData.php', $data);
         $this->updateFileConstants($this->sourceDir . '/CoordinateReferenceSystem/Projected.php', $data, 'public');
+        $this->updateDocs(Projected::class, $data);
 
         /*
          * vertical
@@ -761,6 +826,8 @@ class EPSGImporter
                 'urn:ogc:def:cs:EPSG::' || crs.coord_sys_code AS coordinate_system,
                 'urn:ogc:def:datum:EPSG::' || COALESCE(crs.datum_code, crs_base.datum_code) AS datum,
                 crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || crs.remarks AS constant_help,
+                e.extent_description AS extent,
+                crs.remarks AS doc_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
             LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
@@ -783,6 +850,7 @@ class EPSGImporter
 
         $this->updateFileData($this->sourceDir . '/CoordinateReferenceSystem/Vertical.php', $data);
         $this->updateFileConstants($this->sourceDir . '/CoordinateReferenceSystem/Vertical.php', $data, 'public');
+        $this->updateDocs(Vertical::class, $data);
 
         /*
          * other
@@ -1230,5 +1298,53 @@ class EPSGImporter
         if ($old !== $new) {
             file_put_contents($fileName, $new);
         }
+    }
+
+    private function updateDocs(string $class, array $data): void
+    {
+        $file = fopen($this->sourceDir . '/../docs/reflection/' . str_replace('phpcoord/', '', str_replace('\\', '/', strtolower($class))) . '.txt', 'wb');
+        $reflectionClass = new ReflectionClass($class);
+        $constants = array_flip($reflectionClass->getConstants());
+
+        foreach ($data as $urn => $row) {
+            if ($urn === Angle::EPSG_DEGREE_SUPPLIER_TO_DEFINE_REPRESENTATION) {
+                continue;
+            }
+
+            $name = ucfirst(trim($row['name']));
+            $name = str_replace('_LOWERCASE', '', $name);
+            fwrite($file, $name . "\n");
+            fwrite($file, str_repeat('-', strlen($name)) . "\n\n");
+
+            if (isset($row['type']) && $row['type']) {
+                fwrite($file, '| Type: ' . ucfirst($row['type']) . "\n");
+            }
+            if (isset($row['extent']) && $row['extent']) {
+                fwrite($file, "| Used: {$row['extent']}" . "\n");
+            }
+
+            fwrite($file, "\n.. code-block:: php\n\n");
+            $invokeClass = $reflectionClass;
+            do {
+                if ($invokeClass->hasMethod('fromSRID')) {
+                    fwrite($file, "    {$invokeClass->getShortName()}::fromSRID({$reflectionClass->getShortName()}::{$constants[$urn]})" . "\n");
+                    fwrite($file, "    {$invokeClass->getShortName()}::fromSRID('{$urn}')" . "\n");
+                } elseif ($invokeClass->hasMethod('makeUnit')) {
+                    fwrite($file, "    {$invokeClass->getShortName()}::makeUnit(\$measurement, {$reflectionClass->getShortName()}::{$constants[$urn]})" . "\n");
+                    fwrite($file, "    {$invokeClass->getShortName()}::makeUnit(\$measurement, '{$urn}')" . "\n");
+                }
+            } while ($invokeClass = $invokeClass->getParentClass());
+            fwrite($file, "\n");
+
+            if (trim($row['doc_help'])) {
+                $help = str_replace("\n", "\n\n", trim($row['doc_help']));
+                $help = str_replace('Convert to degrees using algorithm.', '', $help);
+                $help = str_replace('Convert to deg using algorithm.', '', $help);
+                fwrite($file, "{$help}" . "\n");
+            }
+            fwrite($file, "\n");
+        }
+
+        fclose($file);
     }
 }

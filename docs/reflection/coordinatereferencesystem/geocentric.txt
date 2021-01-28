@@ -1,0 +1,2543 @@
+ATRF2014
+--------
+
+| Used: Australia including Lord Howe Island, Macquarie Islands, Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_ATRF2014)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::9307')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_ATRF2014)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9307')
+
+
+Australian Antarctic
+--------------------
+
+| Used: Antarctica between 45°E and 136°E and between 142°E and 160°E - Australian sector.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_AUSTRALIAN_ANTARCTIC)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4930')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_AUSTRALIAN_ANTARCTIC)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4930')
+
+
+BDA2000
+-------
+
+| Used: Bermuda - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_BDA2000)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4886')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_BDA2000)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4886')
+
+
+BGS2005
+-------
+
+| Used: Bulgaria - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_BGS2005)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::7796')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_BGS2005)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::7796')
+
+Adopted 2010-07-29.
+
+CGRS93
+------
+
+| Used: Cyprus - onshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_CGRS93)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::6309')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_CGRS93)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::6309')
+
+
+CHTRF95
+-------
+
+| Used: Liechtenstein; Switzerland.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_CHTRF95)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4932')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_CHTRF95)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4932')
+
+Referenced to ETRS89 at epoch 1993.0. For CRS used for topographic and cadastral purposes see CH1903+ (CRS code 4150).
+
+CIGD11
+------
+
+| Used: Cayman Islands - onshore and offshore. Includes Grand Cayman, Little Cayman and Cayman Brac.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_CIGD11)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::6133')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_CIGD11)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::6133')
+
+
+CR-SIRGAS
+---------
+
+| Used: Costa Rica - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_CR_SIRGAS)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::8905')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_CR_SIRGAS)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::8905')
+
+Replaces CR05 (CRS code 5363) from April 2018.
+
+CR05
+----
+
+| Used: Costa Rica - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_CR05)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::5363')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_CR05)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5363')
+
+Replaced by CR-SIRGAS (CRS code 8905) from April 2018.
+
+Cadastre 1997
+-------------
+
+| Used: Mayotte - onshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_CADASTRE_1997)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4473')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_CADASTRE_1997)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4473')
+
+
+China Geodetic Coordinate System 2000
+-------------------------------------
+
+| Used: China - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_CHINA_GEODETIC_COORDINATE_SYSTEM_2000)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4479')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_CHINA_GEODETIC_COORDINATE_SYSTEM_2000)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4479')
+
+
+DB_REF
+------
+
+| Used: Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt, Schleswig-Holstein, Thuringen.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_DB_REF)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::5828')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_DB_REF)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5828')
+
+Derived from ETRS89 through transformation code 5826.
+
+DGN95
+-----
+
+| Used: Indonesia - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_DGN95)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4897')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_DGN95)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4897')
+
+
+DRUKREF 03
+----------
+
+| Used: Bhutan.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_DRUKREF_03)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::5262')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_DRUKREF_03)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5262')
+
+
+EST97
+-----
+
+| Used: Estonia - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_EST97)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4934')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_EST97)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4934')
+
+
+ETRF2000
+--------
+
+| Used: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_ETRF2000)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::7930')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_ETRF2000)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::7930')
+
+Replaces ETRF97 (code 7928). On the publication of ETRF2005 (code 8397),  the EUREF Technical Working Group recommended that ETRF2000 be the realization of ETRS89. ETRF2014 (code 8401) is technically superior to all earlier realizations of ETRS89.
+
+ETRF2005
+--------
+
+| Used: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_ETRF2005)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::8397')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_ETRF2005)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::8397')
+
+On publication in 2007 of this CRS, the EUREF Technical Working Group recommended that ETRF2000 (EPSG code 7930) remained as the preferred realization of ETRS89. Replaced by ETRF2014 (code 8401).
+
+ETRF2014
+--------
+
+| Used: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_ETRF2014)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::8401')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_ETRF2014)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::8401')
+
+Replaces ETRF2005 (code 8397). ETRF2014 is technically superior to ETRF2000 but ETRF2000 and other previous realizations may be preferred for backward compatibility reasons. Differences between ETRF2014 and ETRF2000 can reach 7cm.
+
+ETRF89
+------
+
+| Used: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_ETRF89)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::7914')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_ETRF89)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::7914')
+
+Replaced by ETRF90 (code 7916).
+
+ETRF90
+------
+
+| Used: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_ETRF90)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::7916')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_ETRF90)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::7916')
+
+Replaces ETRF89 (code 7914). Replaced by ETRF91 (code 7918).
+
+ETRF91
+------
+
+| Used: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_ETRF91)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::7918')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_ETRF91)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::7918')
+
+Replaces ETRF90 (code 7916). Replaced by ETRF92 (code 7920).
+
+ETRF92
+------
+
+| Used: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_ETRF92)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::7920')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_ETRF92)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::7920')
+
+Replaces ETRF91 (code 7918). Replaced by ETRF93 (code 7922).
+
+ETRF93
+------
+
+| Used: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_ETRF93)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::7922')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_ETRF93)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::7922')
+
+Replaces ETRF92 (code 7920). Replaced by ETRF94 (code 7924).
+
+ETRF94
+------
+
+| Used: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_ETRF94)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::7924')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_ETRF94)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::7924')
+
+Replaces ETRF93 (code 7922). Replaced by ETRF96 (code 7926).
+
+ETRF96
+------
+
+| Used: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_ETRF96)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::7926')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_ETRF96)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::7926')
+
+Replaces ETRF94 (code 7924). Replaced by ETRF97 (code 7928).
+
+ETRF97
+------
+
+| Used: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_ETRF97)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::7928')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_ETRF97)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::7928')
+
+Replaces ETRF96 (code 7926). Replaced by ETRF2000 (code 7930).
+
+ETRS89
+------
+
+| Used: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_ETRS89)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4936')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_ETRS89)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4936')
+
+Has been realized through ETRF89, ETRF90, ETRF91, ETRF92, ETRF93, ETRF94, ETRF96, ETRF97, ETRF2000, ETRF2005 and ETRF2014. This 'ensemble' covers any or all of these realizations without distinction.
+
+FEH2010
+-------
+
+| Used: Fehmarnbelt area of Denmark and Germany.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_FEH2010)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::5591')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_FEH2010)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5591')
+
+Trans-national system created due to small (but unacceptable for engineering tolerance) differences between the German and Danish realisations of ETRS89.
+
+GDA2020
+-------
+
+| Used: Australia including Lord Howe Island, Macquarie Islands, Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_GDA2020)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::7842')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_GDA2020)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::7842')
+
+
+GDA94
+-----
+
+| Used: Australia including Lord Howe Island, Macquarie Islands, Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_GDA94)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4938')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_GDA94)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4938')
+
+
+GDBD2009
+--------
+
+| Used: Brunei Darussalam - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_GDBD2009)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::5244')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_GDBD2009)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5244')
+
+
+GDM2000
+-------
+
+| Used: Malaysia - onshore and offshore. Includes peninsular Malayasia, Sabah and Sarawak.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_GDM2000)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4920')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_GDM2000)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4920')
+
+
+GR96
+----
+
+| Used: Greenland - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_GR96)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4908')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_GR96)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4908')
+
+
+GSK-2011
+--------
+
+| Used: Russian Federation - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_GSK_2011)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::7681')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_GSK_2011)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::7681')
+
+
+HTRS96
+------
+
+| Used: Croatia - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_HTRS96)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4888')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_HTRS96)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4888')
+
+
+Hartebeesthoek94
+----------------
+
+| Used: Eswatini (Swaziland); Lesotho; South Africa - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_HARTEBEESTHOEK94)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4940')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_HARTEBEESTHOEK94)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4940')
+
+
+Hong Kong Geodetic CS
+---------------------
+
+| Used: China - Hong Kong - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_HONG_KONG_GEODETIC_CS)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::8425')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_HONG_KONG_GEODETIC_CS)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::8425')
+
+Locally sometimes referred to as ITRF96 or WGS 84, these are not strictly correct.
+
+IG05 Intermediate CRS
+---------------------
+
+| Used: Israel - onshore; Palestine Territory - onshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_IG05_INTERMEDIATE_CRS)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::6981')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_IG05_INTERMEDIATE_CRS)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::6981')
+
+Intermediate system not used for spatial referencing - use IGD05 (CRS code 6978).
+
+IG05/12 Intermediate CRS
+------------------------
+
+| Used: Israel - onshore; Palestine Territory - onshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_IG05_12_INTERMEDIATE_CRS)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::6988')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_IG05_12_INTERMEDIATE_CRS)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::6988')
+
+Intermediate system not used for spatial referencing - use IGD05/12 (CRS code 6985).
+
+IGD05
+-----
+
+| Used: Israel - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_IGD05)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::7134')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_IGD05)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::7134')
+
+Replaced by IGD05/12 (CRS code 7137).
+
+IGD05/12
+--------
+
+| Used: Israel - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_IGD05_12)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::7137')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_IGD05_12)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::7137')
+
+Replaces IGD05 (CRS code 7134).
+
+IGM95
+-----
+
+| Used: Italy - onshore and offshore; San Marino, Vatican City State.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_IGM95)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4982')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_IGM95)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4982')
+
+Replaced by RDN2008 (CRS code 6704) from 2011-11-10.
+
+IGRS
+----
+
+| Used: Iraq - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_IGRS)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::3887')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_IGRS)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3887')
+
+
+IGS00
+-----
+
+| Used: World.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_IGS00)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::9004')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_IGS00)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9004')
+
+Adopted by the International GNSS Service (IGS) from 2001-12-02 through 2004-01-10. Replaces IGS97, replaced by IGb00 (CRS codes 9001 and 9007). For all practical purposes IGS00 is equivalent to ITRF2000.
+
+IGS05
+-----
+
+| Used: World.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_IGS05)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::9010')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_IGS05)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9010')
+
+Adopted by the International GNSS Service (IGS) from 2006-11-05 through 2011-04-16. Replaces IGb00, replaced by IGS08 (CRS codes 9007 and 6834). For all practical purposes IGS05 is equivalent to ITRF2005.
+
+IGS08
+-----
+
+| Used: World.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_IGS08)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::6934')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_IGS08)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::6934')
+
+Used for products from International GNSS Service (IGS) analysis centres from 2011-04-17 through 2012-10-06. Replaces IGS05 (code 9010). Replaced by IGb08 (code 9015). For most practical purposes IGS08 is equivalent to ITRF2008.
+
+IGS14
+-----
+
+| Used: World.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_IGS14)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::8227')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_IGS14)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::8227')
+
+Used for products from the International GNSS Service (IGS) from 2017-01-29 to 2020-05-16. Replaces IGb08 (code 9015), replaced by IGb14 (code 9378). For most practical purposes IGS14 is equivalent to ITRF2014.
+
+IGS97
+-----
+
+| Used: World.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_IGS97)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::9001')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_IGS97)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9001')
+
+Adopted by the International GNSS Service (IGS) from 2000-06-04 through 2001-12-01. Replaced by IGS00 (CRS code 9004). For all practical purposes IGS97 is equivalent to ITRF97.
+
+IGb00
+-----
+
+| Used: World.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_IGB00)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::9007')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_IGB00)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9007')
+
+Adopted by the International GNSS Service (IGS) from 2004-01-11 through 2006-11-04. Replaces IGS00, replaced by IGS05 (CRS codes 9004 and 9010). For all practical purposes IGb00 is equivalent to ITRF2000.
+
+IGb08
+-----
+
+| Used: World.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_IGB08)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::9015')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_IGB08)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9015')
+
+Adopted by the International GNSS Service (IGS) from 2012-10-07 through 2017-01-28. Replaces IGS08, replaced by IGS14 (CRS codes 6934 and 8227). For all practical purposes IGb08 is equivalent to ITRF2008.
+
+IGb14
+-----
+
+| Used: World: Afghanistan, Albania, Algeria, American Samoa, Andorra, Angola, Anguilla, Antarctica, Antigua and Barbuda, Argentina, Armenia, Aruba, Australia, Austria, Azerbaijan, Bahamas, Bahrain, Bangladesh, Barbados, Belgium, Belgium, Belize, Benin, Bermuda, Bhutan, Bolivia, Bonaire, Saint Eustasius and Saba, Bosnia and Herzegovina, Botswana, Bouvet Island, Brazil, British Indian Ocean Territory, British Virgin Islands, Brunei Darussalam, Bulgaria, Burkina Faso, Burundi, Cambodia, Cameroon, Canada, Cape Verde, Cayman Islands, Central African Republic, Chad, Chile, China, Christmas Island, Cocos (Keeling) Islands, Comoros, Congo, Cook Islands, Costa Rica, Côte d'Ivoire (Ivory Coast), Croatia, Cuba, Curacao, Cyprus, Czechia, Denmark, Djibouti, Dominica, Dominican Republic, East Timor, Ecuador, Egypt, El Salvador, Equatorial Guinea, Eritrea, Estonia, Eswatini (Swaziland), Ethiopia, Falkland Islands (Malvinas), Faroe Islands, Fiji, Finland, France, French Guiana, French Polynesia, French Southern Territories, Gabon, Gambia, Georgia, Germany, Ghana, Gibraltar, Greece, Greenland, Grenada, Guadeloupe, Guam, Guatemala, Guinea, Guinea-Bissau, Guyana, Haiti, Heard Island and McDonald Islands, Holy See (Vatican City State), Honduras, China - Hong Kong, Hungary, Iceland, India, Indonesia, Islamic Republic of Iran, Iraq, Ireland, Israel, Italy, Jamaica, Japan, Jordan, Kazakhstan, Kenya, Kiribati, Democratic People's Republic of Korea (North Korea), Republic of Korea (South Korea), Kosovo, Kuwait, Kyrgyzstan, Lao People's Democratic Republic (Laos), Latvia, Lebanon, Lesotho, Liberia, Libyan Arab Jamahiriya, Liechtenstein, Lithuania, Luxembourg, China - Macao, Madagascar, Malawi, Malaysia, Maldives, Mali, Malta, Marshall Islands, Martinique, Mauritania, Mauritius, Mayotte, Mexico, Federated States of Micronesia, Monaco, Mongolia, Montenegro, Montserrat, Morocco, Mozambique, Myanmar (Burma), Namibia, Nauru, Nepal, Netherlands, New Caledonia, New Zealand, Nicaragua, Niger, Nigeria, Niue, Norfolk Island, North Macedonia, Northern Mariana Islands, Norway, Oman, Pakistan, Palau, Panama, Papua New Guinea (PNG), Paraguay, Peru, Philippines, Pitcairn, Poland, Portugal, Puerto Rico, Qatar, Reunion, Romania, Russian Federation, Rwanda, Saint Kitts and Nevis, Saint Helena, Ascension and Tristan da Cunha, Saint Lucia, Saint Pierre and Miquelon, Saint Vincent and the Grenadines, Samoa, San Marino, Sao Tome and Principe, Saudi Arabia, Senegal, Serbia, Seychelles, Sierra Leone, Singapore, Slovakia (Slovak Republic), Slovenia, Sint Maarten, Solomon Islands, Somalia, South Africa, South Georgia and the South Sandwich Islands, South Sudan, Spain, Sri Lanka, Sudan, Suriname, Svalbard and Jan Mayen, Sweden, Switzerland, Syrian Arab Republic, Taiwan, Tajikistan, United Republic of Tanzania, Thailand, The Democratic Republic of the Congo (Zaire), Togo, Tokelau, Tonga, Trinidad and Tobago, Tunisia, Turkey, Turkmenistan, Turks and Caicos Islands, Tuvalu, Uganda, Ukraine, United Arab Emirates (UAE), United Kingdom (UK), United States (USA), United States Minor Outlying Islands, Uruguay, Uzbekistan, Vanuatu, Venezuela, Vietnam, US Virgin Islands, Wallis and Futuna, Western Sahara, Yemen, Zambia, Zimbabwe.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_IGB14)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::9378')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_IGB14)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9378')
+
+Used for products from the International GNSS Service (IGS) from 2020-05-17. Replaces IGS14 (code 8227). For most practical purposes IGb14 is equivalent to ITRF2014.
+
+IRENET95
+--------
+
+| Used: Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_IRENET95)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4942')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_IRENET95)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4942')
+
+
+ISN2004
+-------
+
+| Used: Iceland - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_ISN2004)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::5322')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_ISN2004)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5322')
+
+Replaces ISN93 (CRS code 4944).
+
+ISN2016
+-------
+
+| Used: Iceland - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_ISN2016)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::8084')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_ISN2016)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::8084')
+
+Replaces ISN2004 (CRS code 5322) from September 2017.
+
+ISN93
+-----
+
+| Used: Iceland - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_ISN93)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4944')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_ISN93)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4944')
+
+Replaced by ISN2004 (CRS code 5322).
+
+ITRF2000
+--------
+
+| Used: World.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_ITRF2000)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4919')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_ITRF2000)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4919')
+
+Replaces ITRF97 (code 4918). Replaced by ITRF2005 (code 4896).
+
+ITRF2005
+--------
+
+| Used: World.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_ITRF2005)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4896')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_ITRF2005)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4896')
+
+Replaces ITRF2000 (CRS code 4919). Replaced by ITRF2008 (CRS code 5332).
+
+ITRF2008
+--------
+
+| Used: World.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_ITRF2008)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::5332')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_ITRF2008)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5332')
+
+Replaces ITRF2005 (CRS code 4896). Replaced by ITRF2014 (CRS code 7789).
+
+ITRF2014
+--------
+
+| Used: World: Afghanistan, Albania, Algeria, American Samoa, Andorra, Angola, Anguilla, Antarctica, Antigua and Barbuda, Argentina, Armenia, Aruba, Australia, Austria, Azerbaijan, Bahamas, Bahrain, Bangladesh, Barbados, Belgium, Belgium, Belize, Benin, Bermuda, Bhutan, Bolivia, Bonaire, Saint Eustasius and Saba, Bosnia and Herzegovina, Botswana, Bouvet Island, Brazil, British Indian Ocean Territory, British Virgin Islands, Brunei Darussalam, Bulgaria, Burkina Faso, Burundi, Cambodia, Cameroon, Canada, Cape Verde, Cayman Islands, Central African Republic, Chad, Chile, China, Christmas Island, Cocos (Keeling) Islands, Comoros, Congo, Cook Islands, Costa Rica, Côte d'Ivoire (Ivory Coast), Croatia, Cuba, Curacao, Cyprus, Czechia, Denmark, Djibouti, Dominica, Dominican Republic, East Timor, Ecuador, Egypt, El Salvador, Equatorial Guinea, Eritrea, Estonia, Eswatini (Swaziland), Ethiopia, Falkland Islands (Malvinas), Faroe Islands, Fiji, Finland, France, French Guiana, French Polynesia, French Southern Territories, Gabon, Gambia, Georgia, Germany, Ghana, Gibraltar, Greece, Greenland, Grenada, Guadeloupe, Guam, Guatemala, Guinea, Guinea-Bissau, Guyana, Haiti, Heard Island and McDonald Islands, Holy See (Vatican City State), Honduras, China - Hong Kong, Hungary, Iceland, India, Indonesia, Islamic Republic of Iran, Iraq, Ireland, Israel, Italy, Jamaica, Japan, Jordan, Kazakhstan, Kenya, Kiribati, Democratic People's Republic of Korea (North Korea), Republic of Korea (South Korea), Kosovo, Kuwait, Kyrgyzstan, Lao People's Democratic Republic (Laos), Latvia, Lebanon, Lesotho, Liberia, Libyan Arab Jamahiriya, Liechtenstein, Lithuania, Luxembourg, China - Macao, Madagascar, Malawi, Malaysia, Maldives, Mali, Malta, Marshall Islands, Martinique, Mauritania, Mauritius, Mayotte, Mexico, Federated States of Micronesia, Monaco, Mongolia, Montenegro, Montserrat, Morocco, Mozambique, Myanmar (Burma), Namibia, Nauru, Nepal, Netherlands, New Caledonia, New Zealand, Nicaragua, Niger, Nigeria, Niue, Norfolk Island, North Macedonia, Northern Mariana Islands, Norway, Oman, Pakistan, Palau, Panama, Papua New Guinea (PNG), Paraguay, Peru, Philippines, Pitcairn, Poland, Portugal, Puerto Rico, Qatar, Reunion, Romania, Russian Federation, Rwanda, Saint Kitts and Nevis, Saint Helena, Ascension and Tristan da Cunha, Saint Lucia, Saint Pierre and Miquelon, Saint Vincent and the Grenadines, Samoa, San Marino, Sao Tome and Principe, Saudi Arabia, Senegal, Serbia, Seychelles, Sierra Leone, Singapore, Slovakia (Slovak Republic), Slovenia, Sint Maarten, Solomon Islands, Somalia, South Africa, South Georgia and the South Sandwich Islands, South Sudan, Spain, Sri Lanka, Sudan, Suriname, Svalbard and Jan Mayen, Sweden, Switzerland, Syrian Arab Republic, Taiwan, Tajikistan, United Republic of Tanzania, Thailand, The Democratic Republic of the Congo (Zaire), Togo, Tokelau, Tonga, Trinidad and Tobago, Tunisia, Turkey, Turkmenistan, Turks and Caicos Islands, Tuvalu, Uganda, Ukraine, United Arab Emirates (UAE), United Kingdom (UK), United States (USA), United States Minor Outlying Islands, Uruguay, Uzbekistan, Vanuatu, Venezuela, Vietnam, US Virgin Islands, Wallis and Futuna, Western Sahara, Yemen, Zambia, Zimbabwe.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_ITRF2014)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::7789')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_ITRF2014)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::7789')
+
+Replaces ITRF2008 (CRS code 5332).
+
+ITRF88
+------
+
+| Used: World.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_ITRF88)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4910')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_ITRF88)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4910')
+
+Replaced by ITRF89 (code 4911).
+
+ITRF89
+------
+
+| Used: World.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_ITRF89)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4911')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_ITRF89)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4911')
+
+Replaces ITRF88 (code 4910). Replaced by ITRF90 (code 4912).
+
+ITRF90
+------
+
+| Used: World.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_ITRF90)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4912')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_ITRF90)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4912')
+
+Replaces ITRF89 (code 4911). Replaced by ITRF91 (code 4913).
+
+ITRF91
+------
+
+| Used: World.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_ITRF91)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4913')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_ITRF91)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4913')
+
+Replaces ITRF90 (code 4912). Replaced by ITRF92 (code 4914).
+
+ITRF92
+------
+
+| Used: World.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_ITRF92)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4914')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_ITRF92)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4914')
+
+Replaces ITRF91 (code 4913). Replaced by ITRF93 (code 4915).
+
+ITRF93
+------
+
+| Used: World.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_ITRF93)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4915')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_ITRF93)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4915')
+
+Replaces ITRF92 (code 4914). Replaced by ITRF94 (code 4916).
+
+ITRF94
+------
+
+| Used: World.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_ITRF94)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4916')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_ITRF94)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4916')
+
+Replaces ITRF93 (code 4915). Replaced by ITRF96 (code 4917).
+
+ITRF96
+------
+
+| Used: World.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_ITRF96)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4917')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_ITRF96)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4917')
+
+Replaces ITRF94 (code 4916). Replaced by ITRF97 (code 4918).
+
+ITRF97
+------
+
+| Used: World.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_ITRF97)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4918')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_ITRF97)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4918')
+
+Replaces ITRF96 (code 4917). Replaced by ITRF2000 (code 4919).
+
+JAD2001
+-------
+
+| Used: Jamaica - onshore and offshore. Includes Morant Cays and Pedro Cays.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_JAD2001)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4894')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_JAD2001)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4894')
+
+
+JGD2000
+-------
+
+| Used: Japan - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_JGD2000)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4946')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_JGD2000)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4946')
+
+From 21st October 2011 replaced by JGD2011 (CRS code 6666).
+
+JGD2011
+-------
+
+| Used: Japan - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_JGD2011)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::6666')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_JGD2011)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::6666')
+
+Replaces JGD2000 (CRS code 4946) with effect from 21st October 2011.
+
+KOSOVAREF01
+-----------
+
+| Used: Kosovo.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_KOSOVAREF01)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::9138')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_KOSOVAREF01)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9138')
+
+
+KSA-GRF17
+---------
+
+| Used: Saudi Arabia - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_KSA_GRF17)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::9331')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_KSA_GRF17)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9331')
+
+
+Korea 2000
+----------
+
+| Used: Republic of Korea (South Korea) - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_KOREA_2000)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4926')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_KOREA_2000)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4926')
+
+
+Kyrg-06
+-------
+
+| Used: Kyrgyzstan.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_KYRG_06)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::7684')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_KYRG_06)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::7684')
+
+
+LGD2006
+-------
+
+| Used: Libya - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_LGD2006)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4899')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_LGD2006)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4899')
+
+
+LKS92
+-----
+
+| Used: Latvia - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_LKS92)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4948')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_LKS92)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4948')
+
+
+LKS94
+-----
+
+| Used: Lithuania - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_LKS94)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4950')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_LKS94)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4950')
+
+
+LTF2004(G)
+----------
+
+| Used: France and Italy - on or related to the rail route from Lyon to Turin.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_LTF2004_G)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::9545')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_LTF2004_G)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9545')
+
+
+Lao 1993
+--------
+
+| Used: Laos.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_LAO_1993)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4990')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_LAO_1993)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4990')
+
+Replaced by Lao 1997. Lao 1993 coordinate values are within 1m of Lao 1997 values.
+
+Lao 1997
+--------
+
+| Used: Laos.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_LAO_1997)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4992')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_LAO_1997)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4992')
+
+Replaces Lao 1993. Lao 1993 coordinate values are within 1m of Lao 1997 values.
+
+MACARIO SOLIS
+-------------
+
+| Used: Panama - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_MACARIO_SOLIS)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::5368')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_MACARIO_SOLIS)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5368')
+
+Densification of SIRGAS 2000 within Panama.
+
+MAGNA-SIRGAS
+------------
+
+| Used: Colombia - onshore and offshore. Includes San Andres y Providencia, Malpelo Islands, Roncador Bank, Serrana Bank and Serranilla Bank.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_MAGNA_SIRGAS)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4996')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_MAGNA_SIRGAS)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4996')
+
+
+MARGEN
+------
+
+| Used: Bolivia.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_MARGEN)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::5352')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_MARGEN)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5352')
+
+
+MGI
+---
+
+| Used: Austria.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_MGI)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::9266')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_MGI)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9266')
+
+
+MOLDREF99
+---------
+
+| Used: Moldova.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_MOLDREF99)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4000')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_MOLDREF99)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4000')
+
+
+MTRF-2000
+---------
+
+| Used: Saudi Arabia - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_MTRF_2000)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::8816')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_MTRF_2000)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::8816')
+
+
+Macao 2008
+----------
+
+| Used: China - Macao - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_MACAO_2008)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::8429')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_MACAO_2008)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::8429')
+
+Locally sometimes referred to as ITRF2005, this is not strictly correct.
+
+Mauritania 1999
+---------------
+
+| Used: Mauritania - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_MAURITANIA_1999)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4924')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_MAURITANIA_1999)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4924')
+
+
+Mexico ITRF2008
+---------------
+
+| Used: Mexico - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_MEXICO_ITRF2008)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::6363')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_MEXICO_ITRF2008)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::6363')
+
+Replaces Mexico ITRF92 (CRS code 4481) from December 2010.
+
+Mexico ITRF92
+-------------
+
+| Used: Mexico - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_MEXICO_ITRF92)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4481')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_MEXICO_ITRF92)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4481')
+
+Replaced by Mexico ITRF2008 (CRS code 6363) from December 2010.
+
+Moznet
+------
+
+| Used: Mozambique - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_MOZNET)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4952')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_MOZNET)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4952')
+
+
+NAD83(2011)
+-----------
+
+| Used: Puerto Rico - onshore and offshore. United States (USA) onshore and offshore - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming. US Virgin Islands - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_NAD83_2011)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::6317')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_NAD83_2011)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::6317')
+
+Replaces NAD83(CORS96) and NAD83(NSRS2007) (CRS codes 6781 and 4892).
+
+NAD83(CORS96)
+-------------
+
+| Used: Puerto Rico - onshore and offshore. United States (USA) onshore and offshore - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming. US Virgin Islands - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_NAD83_CORS96)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::6781')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_NAD83_CORS96)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::6781')
+
+Replaced by NAD83(2011) (CRS code 6317) from 2011-09-06.
+
+NAD83(CSRS)
+-----------
+
+| Used: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_NAD83_CSRS)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4954')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_NAD83_CSRS)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4954')
+
+Includes all versions of NAD83(CSRS) from v2 [CSRS98] onwards without specific identification. As such it has an accuracy of approximately 1m.
+
+NAD83(CSRS)v2
+-------------
+
+| Used: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_NAD83_CSRS_V2)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::8233')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_NAD83_CSRS_V2)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::8233')
+
+Adopted by the Canadian federal government from 1998-01-01 and by the provincial governments of British Columbia, New Brunswick, Prince Edward Island and Quebec. Replaces NAD83(CSRS96). Replaced by NAD83(CSRS)v3 (CRS code 8238).
+
+NAD83(CSRS)v3
+-------------
+
+| Used: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_NAD83_CSRS_V3)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::8238')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_NAD83_CSRS_V3)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::8238')
+
+Adopted by the Canadian federal government from 1999-01-01 and by the provincial governments of Alberta, British Columbia, Manitoba, Newfoundland and Labrador, Nova Scotia, Ontario and Saskatchewan. Replaces NAD83(CSRS)v2. Replaced by NAD83(CSRS)v4.
+
+NAD83(CSRS)v4
+-------------
+
+| Used: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_NAD83_CSRS_V4)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::8242')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_NAD83_CSRS_V4)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::8242')
+
+Adopted by the Canadian federal government from 2002-01-01 and by the provincial governments of Alberta and British Columbia. Replaces NAD83(CSRS)v3. Replaced by NAD83(CSRS)v5 (CRS code 8247).
+
+NAD83(CSRS)v5
+-------------
+
+| Used: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_NAD83_CSRS_V5)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::8247')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_NAD83_CSRS_V5)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::8247')
+
+Adopted by the Canadian federal government from 2006-01-01. Replaces NAD83(CSRS)v4. Replaced by NAD83(CSRS)v6 (CRS code 8250).
+
+NAD83(CSRS)v6
+-------------
+
+| Used: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_NAD83_CSRS_V6)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::8250')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_NAD83_CSRS_V6)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::8250')
+
+Adopted by the Canadian federal government from 2010-01-01 and the provincial governments of Alberta, British Columbia, Manitoba, Newfoundland and Labrador, Nova Scotia, Ontario and Prince Edward Island. Replaces NAD83(CSRS)v5. Replaced by NAD83(CSRS)v7.
+
+NAD83(CSRS)v7
+-------------
+
+| Used: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_NAD83_CSRS_V7)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::8253')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_NAD83_CSRS_V7)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::8253')
+
+Adopted by the Canadian federal government from 2017-05-01. Replaces NAD83(CSRS)v6.
+
+NAD83(CSRS96)
+-------------
+
+| Used: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_NAD83_CSRS96)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::8230')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_NAD83_CSRS96)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::8230')
+
+Adopted by the Canadian federal government from 1996-01-01. Replaced by NAD83(CSRS)v2 (CRS code 8233).
+
+NAD83(FBN)
+----------
+
+| Used: American Samoa - Tutuila, Aunu'u, Ofu, Olesega, Ta'u and Rose islands - onshore. Guam - onshore. Northern Mariana Islands - onshore. Puerto Rico - onshore. United States (USA) - CONUS - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming - onshore plus Gulf of Mexico offshore continental shelf (GoM OCS). US Virgin Islands - onshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_NAD83_FBN)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::8541')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_NAD83_FBN)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::8541')
+
+In Continental US, American Samoa, Guam/NMI and PRVI, replaces NAD83(HARN). In Continental US, Puerto Rico and US Virgin Islands replaced by NAD83(NSRS2007). In American Samoa and Hawaii replaced by NAD83(PA11). In Guam/NMI replaced by NAD83(MA11).
+
+NAD83(HARN Corrected)
+---------------------
+
+| Used: Puerto Rico and US Virgin Islands - onshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_NAD83_HARN_CORRECTED)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::8543')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_NAD83_HARN_CORRECTED)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::8543')
+
+In PRVI replaces NAD83(HARN) = NAD83(1993 PRVI) to correct errors. Replaced by NAD83(FBN) = NAD83(2002 PRVI).
+
+NAD83(HARN)
+-----------
+
+| Used: American Samoa - onshore - Tutuila, Aunu'u, Ofu, Olesega, Ta'u and Rose islands. Guam - onshore. Northern Mariana Islands - onshore. Puerto Rico - onshore. United States (USA) - onshore Alabama, Alaska, Arizona, Arkansas, California, Colorado, Connecticut, Delaware, Florida, Georgia, Hawaii, Idaho, Illinois, Indiana, Iowa, Kansas, Kentucky, Louisiana, Maine, Maryland, Massachusetts, Michigan, Minnesota, Mississippi, Missouri, Montana, Nebraska, Nevada, New Hampshire, New Jersey, New Mexico, New York, North Carolina, North Dakota, Ohio, Oklahoma, Oregon, Pennsylvania, Rhode Island, South Carolina, South Dakota, Tennessee, Texas, Utah, Vermont, Virginia, Washington, West Virginia, Wisconsin and Wyoming; offshore Gulf of Mexico continental shelf (GoM OCS). US Virgin Islands - onshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_NAD83_HARN)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4956')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_NAD83_HARN)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4956')
+
+In CONUS and Hawaii replaces NAD83 for applications with an accuracy of better than 1m. Replaced by NAD83(FBN) in CONUS, American Samoa and Guam/NMI, by NAD83(NSRS2007) in Alaska, by NAD83(PA11) in Hawaii and by NAD83(HARN Corrected) in PRVI.
+
+NAD83(MA11)
+-----------
+
+| Used: Guam, Northern Mariana Islands and Palau; onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_NAD83_MA11)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::6323')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_NAD83_MA11)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::6323')
+
+Replaces NAD83(HARN) (GGN93) and NAD83(FBN) in Guam.
+
+NAD83(MARP00)
+-------------
+
+| Used: Guam, Northern Mariana Islands and Palau; onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_NAD83_MARP00)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::9070')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_NAD83_MARP00)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9070')
+
+Replaces NAD83(HARN) (GGN93) and NAD83(FBN) in Guam. Replaced by NAD83(MA11).
+
+NAD83(NSRS2007)
+---------------
+
+| Used: Puerto Rico - onshore and offshore. United States (USA) onshore and offshore - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming. US Virgin Islands - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_NAD83_NSRS2007)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4892')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_NAD83_NSRS2007)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4892')
+
+Replaces NAD83(HARN) and NAD83(FBN). Replaced by NAD83(2011).
+
+NAD83(PA11)
+-----------
+
+| Used: American Samoa, Marshall Islands, United States (USA) - Hawaii, United States minor outlying islands; onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_NAD83_PA11)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::6320')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_NAD83_PA11)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::6320')
+
+Replaces NAD83(HARN) and NAD83(FBN) in Hawaii and American Samoa.
+
+NAD83(PACP00)
+-------------
+
+| Used: American Samoa, Marshall Islands, United States (USA) - Hawaii, United States minor outlying islands; onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_NAD83_PACP00)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::9073')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_NAD83_PACP00)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9073')
+
+Replaces NAD83(HARN) and NAD83(FBN) in Hawaii and American Samoa. Replaced by NAD83(PA11).
+
+NZGD2000
+--------
+
+| Used: New Zealand - onshore and offshore. Includes Antipodes Islands, Auckland Islands, Bounty Islands, Chatham Islands, Cambell Island, Kermadec Islands, Raoul Island and Snares Islands.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_NZGD2000)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4958')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_NZGD2000)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4958')
+
+
+ONGD14
+------
+
+| Used: Oman - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_ONGD14)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::7371')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_ONGD14)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::7371')
+
+In Oman replaces usage of WGS 84 (G873) from 2014. Replaced by ONGD17 (CRS code 9292) from March 2019.
+
+ONGD17
+------
+
+| Used: Oman - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_ONGD17)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::9292')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_ONGD17)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9292')
+
+Replaces ONGD14 (CRS code 7371) from March 2019.
+
+PNG94
+-----
+
+| Used: Papua New Guinea - onshore and offshore. Includes Bismark archipelago, Louisade archipelago, Admiralty Islands, d'Entrecasteaux Islands, northern Solomon Islands, Trobriand Islands, New Britain, New Ireland, Woodlark, and associated islands.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_PNG94)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::5544')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_PNG94)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5544')
+
+
+POSGAR 2007
+-----------
+
+| Used: Argentina - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_POSGAR_2007)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::5341')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_POSGAR_2007)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5341')
+
+Adopted as official replacement of POSGAR 94 in May 2009.   Also replaces de facto use of POSGAR 98 as of same date.
+
+POSGAR 94
+---------
+
+| Used: Argentina - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_POSGAR_94)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4928')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_POSGAR_94)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4928')
+
+Legally adopted in May 1997. Replaced by POSGAR 98 for scientific and many practical purposes until May 2009.  Officially replaced by POSGAR 2007 in May 2009.
+
+POSGAR 98
+---------
+
+| Used: Argentina - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_POSGAR_98)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4960')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_POSGAR_98)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4960')
+
+Densification in Argentina of SIRGAS 1995. Until May 2009 replaced POSGAR 94 for many practical purposes (but not as the legal system).  POSGAR 94 was officially replaced by POSGAR 2007 in May 2009.
+
+PRS92
+-----
+
+| Used: Philippines - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_PRS92)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4994')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_PRS92)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4994')
+
+
+PTRA08
+------
+
+| Used: Portugal - Azores and Madeira island groups and surrounding EEZ - Flores, Corvo; Graciosa, Terceira, Sao Jorge, Pico, Faial; Sao Miguel, Santa Maria; Madeira, Porto Santo, Desertas; Selvagens.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_PTRA08)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::5011')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_PTRA08)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5011')
+
+
+PZ-90
+-----
+
+| Used: World.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_PZ_90)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4922')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_PZ_90)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4922')
+
+Replaced by PZ-90.02 from 2007-09-20.
+
+PZ-90.02
+--------
+
+| Used: World.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_PZ_90_02)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::7677')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_PZ_90_02)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::7677')
+
+Replaces PZ-90 (CRS code 4922) from 2007-09-20. Replaced by PZ-90.11 (CRS code 7679) from 2014-01-15.
+
+PZ-90.11
+--------
+
+| Used: World.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_PZ_90_11)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::7679')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_PZ_90_11)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::7679')
+
+Replaces PZ-90.02 (CRS code 7677) from 2014-01-15.
+
+Peru96
+------
+
+| Used: Peru - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_PERU96)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::5369')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_PERU96)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5369')
+
+Densification of SIRGAS95 in Peru.
+
+RDN2008
+-------
+
+| Used: Italy - onshore and offshore; San Marino, Vatican City State.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_RDN2008)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::6704')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_RDN2008)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::6704')
+
+Replaces IGM95 (CRS code 4982) from 2011-11-10.
+
+REGCAN95
+--------
+
+| Used: Spain - Canary Islands onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_REGCAN95)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4079')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_REGCAN95)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4079')
+
+
+REGVEN
+------
+
+| Used: Venezuela - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_REGVEN)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4962')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_REGVEN)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4962')
+
+Densification in Venezuela of SIRGAS.
+
+RGAF09
+------
+
+| Used: French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante, Les Saintes, Iles de la Petite Terre, La Desirade, St Barthélemy, and northern St Martin) and Martinique.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_RGAF09)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::5487')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_RGAF09)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5487')
+
+Replaces RRAF 1991 (CRS code 4556).
+
+RGF93
+-----
+
+| Used: France - onshore and offshore, mainland and Corsica.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_RGF93)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4964')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_RGF93)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4964')
+
+
+RGFG95
+------
+
+| Used: French Guiana - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_RGFG95)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4966')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_RGFG95)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4966')
+
+
+RGM04
+-----
+
+| Used: Mayotte - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_RGM04)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4468')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_RGM04)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4468')
+
+
+RGNC91-93
+---------
+
+| Used: New Caledonia - onshore and offshore. Isle de Pins, Loyalty Islands, Huon Islands, Belep archipelago, Chesterfield Islands, and Walpole.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_RGNC91_93)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4906')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_RGNC91_93)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4906')
+
+Replaces older local geographic 2D systems IGN56 Lifou, IGN72 Grande Terre, ST87 Ouvea, IGN53 Mare, ST84 Ile des Pins, ST71 Belep and NEA74 Noumea (CRS codes 4633, 4641-44, 4662 and 4750).
+
+RGPF
+----
+
+| Used: French Polynesia - onshore and offshore. Includes Society archipelago, Tuamotu archipelago, Marquesas Islands, Gambier Islands and Austral Islands.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_RGPF)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4998')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_RGPF)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4998')
+
+
+RGR92
+-----
+
+| Used: Reunion - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_RGR92)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4970')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_RGR92)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4970')
+
+
+RGRDC 2005
+----------
+
+| Used: The Democratic Republic of the Congo (Zaire) - south of a line through Bandundu, Seke and Pweto - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_RGRDC_2005)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4039')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_RGRDC_2005)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4039')
+
+
+RGSPM06
+-------
+
+| Used: St Pierre and Miquelon - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_RGSPM06)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4465')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_RGSPM06)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4465')
+
+
+RGTAAF07
+--------
+
+| Used: French Southern Territories - onshore and offshore: Amsterdam and St Paul, Crozet, Europa and Kerguelen. Antarctica - Adelie Land coastal area.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_RGTAAF07)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::7071')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_RGTAAF07)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::7071')
+
+
+RGWF96
+------
+
+| Used: Wallis and Futuna - onshore and offshore - Uvea, Futuna, and Alofi.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_RGWF96)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::8898')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_RGWF96)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::8898')
+
+
+RRAF 1991
+---------
+
+| Used: French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante, Les Saintes, Iles de la Petite Terre, La Desirade, St Barthélemy, and northern St Martin) and Martinique.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_RRAF_1991)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4556')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_RRAF_1991)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4556')
+
+Replaces older local geographic 2D systems Fort Marigot and Sainte Anne CRS (codes 4621-22) in Guadeloupe and Fort Desaix (CRS code 4625) in Martinique. Replaced by RGAF09 (CRS code 5487).
+
+RSAO13
+------
+
+| Used: Angola - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_RSAO13)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::8697')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_RSAO13)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::8697')
+
+
+RSRGD2000
+---------
+
+| Used: Antarctica - Ross Sea Region - nominally between 160°E and 150°W but includes buffer on eastern hemisphere margin to include Transantarctic Mountains
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_RSRGD2000)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4884')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_RSRGD2000)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4884')
+
+
+SHGD2015
+--------
+
+| Used: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_SHGD2015)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::7884')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_SHGD2015)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::7884')
+
+
+SIRGAS 1995
+-----------
+
+| Used: South America - onshore and offshore. Ecuador (mainland and Galapagos) - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_SIRGAS_1995)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4974')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_SIRGAS_1995)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4974')
+
+Replaced by SIRGAS 2000 (CRS code 4988).
+
+SIRGAS 2000
+-----------
+
+| Used: Latin America - Central America and South America - onshore and offshore. Brazil - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_SIRGAS_2000)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4988')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_SIRGAS_2000)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4988')
+
+Replaces SIRGAS 1995 system (CRS code 4974) for South America; expands SIRGAS to Central America.
+
+SIRGAS-CON DGF00P01
+-------------------
+
+| Used: Latin America - Central America and South America, onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_SIRGAS_CON_DGF00P01)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::8915')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_SIRGAS_CON_DGF00P01)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::8915')
+
+Replaced by SIRGAS-CON DGF01P01 (CRS code 8917).
+
+SIRGAS-CON DGF01P01
+-------------------
+
+| Used: Latin America - Central America and South America, onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_SIRGAS_CON_DGF01P01)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::8917')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_SIRGAS_CON_DGF01P01)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::8917')
+
+Replaces SIRGAS-CON DGF00P01 (CRS code 8915). Replaced by SIRGAS-CON DGF01P02 (CRS code 8919).
+
+SIRGAS-CON DGF01P02
+-------------------
+
+| Used: Latin America - Central America and South America, onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_SIRGAS_CON_DGF01P02)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::8919')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_SIRGAS_CON_DGF01P02)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::8919')
+
+Replaces SIRGAS-CON DGF01P01 (CRS code 8917). Replaced by SIRGAS-CON DGF02P01 (CRS code 8921).
+
+SIRGAS-CON DGF02P01
+-------------------
+
+| Used: Latin America - Central America and South America, onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_SIRGAS_CON_DGF02P01)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::8921')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_SIRGAS_CON_DGF02P01)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::8921')
+
+Replaces SIRGAS-CON DGF01P02 (CRS code 8919). Replaced by SIRGAS-CON DGF04P01 (CRS code 8923).
+
+SIRGAS-CON DGF04P01
+-------------------
+
+| Used: Latin America - Central America and South America, onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_SIRGAS_CON_DGF04P01)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::8923')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_SIRGAS_CON_DGF04P01)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::8923')
+
+Replaces SIRGAS-CON DGF02P01 (CRS code 8921). Replaced by SIRGAS-CON DGF05P01 (CRS code 8925).
+
+SIRGAS-CON DGF05P01
+-------------------
+
+| Used: Latin America - Central America and South America, onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_SIRGAS_CON_DGF05P01)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::8925')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_SIRGAS_CON_DGF05P01)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::8925')
+
+Replaces SIRGAS-CON DGF04P01 (CRS code 8923). Replaced by SIRGAS-CON DGF06P01 (CRS code 8927).
+
+SIRGAS-CON DGF06P01
+-------------------
+
+| Used: Latin America - Central America and South America, onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_SIRGAS_CON_DGF06P01)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::8927')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_SIRGAS_CON_DGF06P01)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::8927')
+
+Replaces SIRGAS-CON DGF05P01 (CRS code 8925). Replaced by SIRGAS-CON DGF07P01 (CRS code 8929).
+
+SIRGAS-CON DGF07P01
+-------------------
+
+| Used: Latin America - Central America and South America, onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_SIRGAS_CON_DGF07P01)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::8929')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_SIRGAS_CON_DGF07P01)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::8929')
+
+Replaces SIRGAS-CON DGF06P01 (CRS code 8927). Replaced by SIRGAS-CON DGF08P01 (CRS code 8931).
+
+SIRGAS-CON DGF08P01
+-------------------
+
+| Used: Latin America - Central America and South America, onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_SIRGAS_CON_DGF08P01)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::8931')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_SIRGAS_CON_DGF08P01)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::8931')
+
+Replaces SIRGAS-CON DGF07P01 (CRS code 8929). Replaced by SIRGAS-CON SIR09P01 (CRS code 8933).
+
+SIRGAS-CON SIR09P01
+-------------------
+
+| Used: Latin America - Central America and South America, onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_SIRGAS_CON_SIR09P01)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::8933')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_SIRGAS_CON_SIR09P01)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::8933')
+
+Replaces SIRGAS-CON DGF08P01 (CRS code 8931). Replaced by SIRGAS-CON SIR10P01 (CRS code 8935).
+
+SIRGAS-CON SIR10P01
+-------------------
+
+| Used: Latin America - Central America and South America, onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_SIRGAS_CON_SIR10P01)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::8935')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_SIRGAS_CON_SIR10P01)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::8935')
+
+Replaces SIRGAS-CON SIR09P01 (CRS code 8933). Replaced by SIRGAS-CON SIR11P01 (CRS code 8937).
+
+SIRGAS-CON SIR11P01
+-------------------
+
+| Used: Latin America - Central America and South America, onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_SIRGAS_CON_SIR11P01)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::8937')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_SIRGAS_CON_SIR11P01)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::8937')
+
+Replaces SIRGAS-CON SIR10P01 (CRS code 8935). Replaced by SIRGAS-CON SIR13P01 (CRS code 8939).
+
+SIRGAS-CON SIR13P01
+-------------------
+
+| Used: Latin America - Central America and South America, onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_SIRGAS_CON_SIR13P01)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::8939')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_SIRGAS_CON_SIR13P01)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::8939')
+
+Replaces SIRGAS-CON SIR11P01 (CRS code 8937). Replaced by SIRGAS-CON SIR14P01 (CRS code 8941).
+
+SIRGAS-CON SIR14P01
+-------------------
+
+| Used: Latin America - Central America and South America, onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_SIRGAS_CON_SIR14P01)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::8941')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_SIRGAS_CON_SIR14P01)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::8941')
+
+Replaces SIRGAS-CON SIR13P01 (CRS code 8939). Replaced by SIRGAS-CON SIR15P01 (CRS code 8943).
+
+SIRGAS-CON SIR15P01
+-------------------
+
+| Used: Latin America - Central America and South America, onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_SIRGAS_CON_SIR15P01)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::8943')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_SIRGAS_CON_SIR15P01)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::8943')
+
+Replaces SIRGAS-CON SIR14P01 (CRS code 8941). Replaced by SIRGAS-CON SIR17P01 (CRS code 8945).
+
+SIRGAS-CON SIR17P01
+-------------------
+
+| Used: Latin America - Central America and South America, onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_SIRGAS_CON_SIR17P01)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::8945')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_SIRGAS_CON_SIR17P01)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::8945')
+
+Replaces SIRGAS-CON SIR15P01 (CRS code 8943).
+
+SIRGAS-Chile 2002
+-----------------
+
+| Used: Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_SIRGAS_CHILE_2002)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::5358')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_SIRGAS_CHILE_2002)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5358')
+
+Densification of SIRGAS 2000 within Chile. Replaced by SIRGAS-Chile 2010 (CRS code 8947).
+
+SIRGAS-Chile 2010
+-----------------
+
+| Used: Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_SIRGAS_CHILE_2010)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::8947')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_SIRGAS_CHILE_2010)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::8947')
+
+Densification of SIRGAS-CON within Chile at epoch 2010.00. Replaces SIRGAS-Chile 2002 (CRS code 5358), replaced by SIRGAS-Chile 2013 (CRS code 9146) due to significant tectonic deformation.
+
+SIRGAS-Chile 2013
+-----------------
+
+| Used: Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_SIRGAS_CHILE_2013)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::9146')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_SIRGAS_CHILE_2013)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9146')
+
+Densification of SIRGAS-CON within Chile at epoch 2013.00. Replaces SIRGAS-Chile 2010 (CRS code 8947), replaced by SIRGAS-Chile 2016 (CRS code 9151) due to significant tectonic deformation.
+
+SIRGAS-Chile 2016
+-----------------
+
+| Used: Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_SIRGAS_CHILE_2016)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::9151')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_SIRGAS_CHILE_2016)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9151')
+
+Densification of SIRGAS-CON within Chile at epoch 2016.00. Replaces SIRGAS-Chile 2013 (CRS code 9146) due to significant tectonic deformation.
+
+SIRGAS-ROU98
+------------
+
+| Used: Uruguay - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_SIRGAS_ROU98)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::5379')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_SIRGAS_ROU98)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5379')
+
+
+SIRGAS_ES2007.8
+---------------
+
+| Used: El Salvador - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_SIRGAS_ES2007_8)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::5391')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_SIRGAS_ES2007_8)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5391')
+
+Densification of SIRGAS 2000 within El Salvador.
+
+SRB_ETRS89
+----------
+
+| Used: Serbia including Vojvodina.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_SRB_ETRS89)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::8683')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_SRB_ETRS89)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::8683')
+
+Replaces SREF98 (CRS code 4073).
+
+SREF98
+------
+
+| Used: Serbia including Vojvodina.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_SREF98)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4073')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_SREF98)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4073')
+
+Replaced by SRB_ETRS89 (STRS00) (CRS code 8683).
+
+SRGI2013
+--------
+
+| Used: Indonesia - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_SRGI2013)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::9468')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_SRGI2013)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9468')
+
+Supports horizontal component of national horizontal control network (JKHN). Adopted 2013-10-11. Replaces DGN95 and all older systems.
+
+SWEREF99
+--------
+
+| Used: Sweden - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_SWEREF99)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4976')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_SWEREF99)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4976')
+
+
+Slovenia 1996
+-------------
+
+| Used: Slovenia - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_SLOVENIA_1996)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4882')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_SLOVENIA_1996)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4882')
+
+
+St. Helena Tritan
+-----------------
+
+| Used: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_ST_HELENA_TRITAN)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::7879')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_ST_HELENA_TRITAN)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::7879')
+
+Replaced by SHGD2015 (CRS code 7884) from 2015.
+
+TGD2005
+-------
+
+| Used: Tonga - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_TGD2005)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::5884')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_TGD2005)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5884')
+
+
+TUREF
+-----
+
+| Used: Turkey - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_TUREF)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::5250')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_TUREF)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5250')
+
+
+TWD97
+-----
+
+| Used: Taiwan, Republic of China - onshore and offshore - Taiwan Island, Penghu (Pescadores) Islands.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_TWD97)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::3822')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_TWD97)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3822')
+
+
+UCS-2000
+--------
+
+| Used: Ukraine - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_UCS_2000)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::5558')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_UCS_2000)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5558')
+
+Adopted 1st January 2007. Defined through transformation code 7817 at epoch 2005.0.
+
+WGS 66
+------
+
+| Used: World.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_WGS_66)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4890')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_WGS_66)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4890')
+
+Replaced by WGS 72.
+
+WGS 72
+------
+
+| Used: World.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_WGS_72)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4984')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_WGS_72)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4984')
+
+Replaced by WGS 84.
+
+WGS 72BE
+--------
+
+| Used: World.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_WGS_72BE)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4986')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_WGS_72BE)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4986')
+
+Broadcast ephemeris. Replaced by WGS 84.
+
+WGS 84
+------
+
+| Used: World.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_WGS_84)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4978')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_WGS_84)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4978')
+
+
+WGS 84 (G1150)
+--------------
+
+| Used: World.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_WGS_84_G1150)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::7660')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_WGS_84_G1150)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::7660')
+
+Replaces  WGS 84 (G873) (CRS code 7658) from 2002-01-20. Replaced by WGS 84 (G1674) (CRS code 7662) from 2012-02-08.
+
+WGS 84 (G1674)
+--------------
+
+| Used: World.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_WGS_84_G1674)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::7662')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_WGS_84_G1674)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::7662')
+
+Replaces WGS 84 (G1150) (CRS code 7660) from 2012-02-08. Replaced by WGS 84 (G1762) (CRS code 7664) from 2013-10-16.
+
+WGS 84 (G1762)
+--------------
+
+| Used: World.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_WGS_84_G1762)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::7664')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_WGS_84_G1762)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::7664')
+
+Replaces WGS 84 (G1674) (CRS code 7662) from 2013-10-16.
+
+WGS 84 (G730)
+-------------
+
+| Used: World.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_WGS_84_G730)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::7656')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_WGS_84_G730)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::7656')
+
+Replaces WGS 84 (Transit) (CRS code 7815) from 1994-06-29. Replaced by WGS84 (G873) (CRS code 7658) from 1997-01-29.
+
+WGS 84 (G873)
+-------------
+
+| Used: World.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_WGS_84_G873)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::7658')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_WGS_84_G873)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::7658')
+
+Replaces WGS 84 (G730) (CRS code 7656) from 1997-01-29. Replaced by WGS 84 (G1150) (CRS code 7660) from 2002-01-20.
+
+WGS 84 (Transit)
+----------------
+
+| Used: World.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_WGS_84_TRANSIT)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::7815')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_WGS_84_TRANSIT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::7815')
+
+Replaced by WGS84 (G730) (CRS code 7656) from 1994-06-29.
+
+Yemen NGN96
+-----------
+
+| Used: Yemen - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_YEMEN_NGN96)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4980')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_YEMEN_NGN96)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4980')
+
+

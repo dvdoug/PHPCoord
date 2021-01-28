@@ -27,3 +27,9 @@ See `license.txt`_ for full details.
 
     installation
     primer
+    builtin_coordinate_reference_systems
+    builtin_units
+    builtin_datums
+    builtin_ellipsoids
+    builtin_prime_meridians
+    builtin_coordinate_systems
