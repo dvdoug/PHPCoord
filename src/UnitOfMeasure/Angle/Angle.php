@@ -10,7 +10,6 @@ namespace PHPCoord\UnitOfMeasure\Angle;
 
 use const M_PI;
 use PHPCoord\Exception\UnknownUnitOfMeasureException;
-use PHPCoord\UnitOfMeasure\Time\Second;
 use PHPCoord\UnitOfMeasure\UnitOfMeasure;
 
 abstract class Angle implements UnitOfMeasure
