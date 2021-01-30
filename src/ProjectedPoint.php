@@ -138,17 +138,17 @@ class ProjectedPoint extends Point
         return new static($easting, $northing, $westing, $southing, $crs, $epoch);
     }
 
-    public static function createFromEastingNorthing(?Length $easting, ?Length $northing, Projected $crs, ?DateTimeInterface $epoch = null): self
+    public static function createFromEastingNorthing(Length $easting, Length $northing, Projected $crs, ?DateTimeInterface $epoch = null): self
     {
         return static::create($easting, $northing, null, null, $crs, $epoch);
     }
 
-    public static function createFromWestingNorthing(?Length $westing, ?Length $northing, Projected $crs, ?DateTimeInterface $epoch = null): self
+    public static function createFromWestingNorthing(Length $westing, Length $northing, Projected $crs, ?DateTimeInterface $epoch = null): self
     {
         return static::create(null, $northing, $westing, null, $crs, $epoch);
     }
 
-    public static function createFromWestingSouthing(?Length $westing, ?Length $southing, Projected $crs, ?DateTimeInterface $epoch = null): self
+    public static function createFromWestingSouthing(Length $westing, Length $southing, Projected $crs, ?DateTimeInterface $epoch = null): self
     {
         return static::create(null, null, $westing, $southing, $crs, $epoch);
     }
