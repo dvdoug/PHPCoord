@@ -34,7 +34,7 @@ class IrishGridPoint extends ProjectedPoint
     }
 
     /**
-     * @param string Irish grid reference (e.g. "T514131")
+     * @param string $reference Irish grid reference (e.g. "T514131")
      */
     public static function fromGridReference(string $reference, ?DateTimeInterface $epoch = null): self
     {

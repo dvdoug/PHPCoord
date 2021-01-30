@@ -31,7 +31,7 @@ class BritishNationalGridPoint extends ProjectedPoint
     }
 
     /**
-     * @param string OS grid reference (e.g. "TG514131")
+     * @param string $reference OS grid reference (e.g. "TG514131")
      */
     public static function fromGridReference(string $reference, ?DateTimeInterface $epoch = null): self
     {
