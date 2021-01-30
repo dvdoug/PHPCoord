@@ -124,7 +124,7 @@ class GeographicPoint extends Point
      * @param Angle   $longitude refer to CRS for preferred unit of measure, but any angle unit accepted
      * @param ?Length $height    refer to CRS for preferred unit of measure, but any length unit accepted
      */
-    public static function create(Angle $latitude, Angle $longitude, ?Length $height, Geographic $crs, ?DateTimeInterface $epoch = null): self
+    public static function create(Angle $latitude, Angle $longitude, ?Length $height = null, Geographic $crs, ?DateTimeInterface $epoch = null): self
     {
         return new static($latitude, $longitude, $height, $crs, $epoch);
     }
