@@ -9,7 +9,7 @@ and configuring an autoloader:
 
     composer require php-coord/php-coord
 
-If you don't want to use Composer, the code is available to download from `GitHub`_
+The code is also available to download from `GitHub`_
 
 Requirements
 ------------

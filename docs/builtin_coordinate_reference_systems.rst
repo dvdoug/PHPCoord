@@ -1,3 +1,5 @@
+.. _builtincrs:
+
 Built in coordinate systems
 ===========================
 
@@ -6,6 +8,10 @@ Built in coordinate systems
     *Coordinate Reference System* (or *CRS* for short), with the term *Coordinate System* being used to refer to the
     :ref:`axes used <builtincs>`. PHPCoord's actual code uses the ISO naming system, although this documentation uses
     the more common version.
+
+.. tip::
+    A constant has been defined for each and every built in CRS, with supporting docblocks that match the contents of
+    the following pages. These should be searchable/available for autocomplete from inside your favourite IDE.
 
 .. toctree::
     :maxdepth: 1

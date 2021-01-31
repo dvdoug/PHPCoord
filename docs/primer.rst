@@ -125,8 +125,24 @@ means this imaginary ellipsoid sometimes passes underneath "true" ground level, 
 Thus, although "height" above or below the ellipsoid can theoretically be calculated and used to accurately place a point
 within a 3D space, it is of very limited practical use on the ground since the ellipsoid cannot actually be seen.
 
-Coordinate types
-^^^^^^^^^^^^^^^^
+Coordinate reference systems (CRSs)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+A Coordinate Reference System, is the combination of a *Datum* and a *Coordinate System* which the particular set of
+axes being used to measure distances on.
+
+It is very important to know the set of axes being used, because otherwise numbers are very prone to misintepretation -
+for example ``42.0669, 11.8128`` would be near Rome if the order is (latitude, longitude), but near
+is longitude/latitude then it's near Djibouti if the order is (longitude, latitude). That's assuming the measurement
+is in decimal degrees, and not some other unit such as gradians.
+
+Most map projections use metres, but some use feet. Many use Eastings and Northings, but some are Northings and Eastings.
+Some are Southings and Westings. Some are just X and Y, but some use X to mean East and others use it means North. Some
+write the X coordinate first, some write the Y coordinate first. Just about every permutation of meaning and order
+exists.
+
+.. warning::
+    When taking in coordinates from an external system, always, always, always check the **unit**, and the **order** of
+    a numbers if they are not already clearly labelled.
 
 Geographic
 """"""""""
@@ -255,8 +271,12 @@ keeping the spirit level level, is therefore not ellipsoidal but it also does no
 physical surface. It is it's own unique imaginary shape (yes, another one) and is called the *local geoid*.
 
 .. note::
+    Confusingly, "geoid height" refers to the distance between the *geoid* and the *ellipsoid*. The distance between the
+    geoid and what you're measuring is called *orthometric height*.
+
+.. note::
     For most of a landmass, this does mean that just as an "ellipsoid height" is not related to anything the eye can see,
-    neither is a "geoid height" other than at that single primary marker point.
+    neither are geoid based heights other than at that single primary marker point.
 
 Although countries worldwide have tended to settle on using bodies of water to set their 0 height points, this is an
 arbitrary choice. It makes most of the country have positive height numbers which has practical benefits, but
@@ -291,6 +311,8 @@ with absolutely none of them being referenced to actual physical ground characte
 
     And if you are trying to reference a height compared to local surface level ("the treasure is 6 feet below ground",
     "that building is 100 metres tall") specify that information separately to the coordinates.
+
+.. _explained_epochs:
 
 Epochs
 ^^^^^^

@@ -4,7 +4,7 @@ PHPCoord
 [![Build Status](https://github.com/dvdoug/PHPCoord/workflows/CI/badge.svg?branch=master)](https://github.com/dvdoug/PHPCoord/actions?query=workflow%3ACI+branch%3Amaster)
 [![Download count](https://img.shields.io/packagist/dt/php-coord/php-coord.svg)](https://packagist.org/packages/php-coord/php-coord)
 [![Current version](https://img.shields.io/packagist/v/php-coord/php-coord.svg)](https://packagist.org/packages/php-coord/php-coord)
-[![Documentation](https://readthedocs.org/projects/phpcoord/badge/?version=latest)](https://phpcoord.readthedocs.io/en/latest/)
+[![Documentation](https://readthedocs.org/projects/phpcoord/badge/?version=master)](https://phpcoord.readthedocs.io/en/master/)
 
 PHPCoord is a PHP library to aid in handling coordinates. It's main function is to convert coordinates from one system
 to another, although additional helper functionality exists as well such as distance calculation and unit conversion.

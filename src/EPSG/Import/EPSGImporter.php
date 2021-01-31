@@ -1302,6 +1302,8 @@ class EPSGImporter
 
     private function updateDocs(string $class, array $data): void
     {
+        echo "Updating docs for {$class}...";
+
         $file = fopen($this->sourceDir . '/../docs/reflection/' . str_replace('phpcoord/', '', str_replace('\\', '/', strtolower($class))) . '.txt', 'wb');
         $reflectionClass = new ReflectionClass($class);
         $constants = array_flip($reflectionClass->getConstants());
