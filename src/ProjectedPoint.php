@@ -351,7 +351,7 @@ class ProjectedPoint extends Point
                 $MnPrime = $i - 2 * $ii * cos(2 * $latitude) + 4 * $iii * cos(4 * $latitude) - 6 * $iv * cos(6 * $latitude);
                 $latitude = $latitude - ($A * ($C * $Ma + 1) - $Ma - $C * ($Ma ** 2 + $B) / 2) / ($e2 * sin(2 * $latitude) * ($Ma ** 2 + $B - 2 * $A * $Ma) / 4 * $C + ($A - $Ma) * ($C * $MnPrime - (2 / sin(2 * $latitude))) - $MnPrime);
                 $C = sqrt(1 - $e2 * sin($latitude) ** 2) * tan($latitude);
-            } while (abs($latitude - $latitudeN) >= self::NEWTON_RAPHSON_CONVERGENCE);
+            } while (abs($latitude - $latitudeN) >= static::ITERATION_CONVERGENCE);
 
             $longitude = $longitudeOrigin + (self::asin($easting * $C / $a)) / sin($latitude);
         }
@@ -600,7 +600,7 @@ class ProjectedPoint extends Point
             $thetaN = $theta;
             $correctionFactor = ($theta * (1.340264 - 0.081106 * $theta ** 2 + $theta ** 6 * (0.000893 + 0.003796 * $theta ** 2)) - $northing / $Rq) / (1.340264 - 0.243318 * $theta ** 2 + $theta ** 6 * (0.006251 + 0.034164 * $theta ** 2));
             $theta = $theta - $correctionFactor;
-        } while (abs($theta - $thetaN) >= self::NEWTON_RAPHSON_CONVERGENCE);
+        } while (abs($theta - $thetaN) >= static::ITERATION_CONVERGENCE);
 
         $beta = self::asin(2 * sin($theta) / sqrt(3));
 
@@ -687,7 +687,7 @@ class ProjectedPoint extends Point
             $M = $MO + $northing - ($easting ** 2 * tan($latitude) * sqrt(1 - $e2 * sin($latitude) ** 2) / (2 * $a));
             $mu = $M / ($a * $i);
             $latitude = $mu + (3 * $e1 / 2 - 27 * $e1 ** 3 / 32) * sin(2 * $mu) + (21 * $e1 ** 2 / 16 - 55 * $e1 ** 4 / 32) * sin(4 * $mu) + (151 * $e1 ** 3 / 96) * sin(6 * $mu) + (1097 * $e1 ** 4 / 512) * sin(8 * $mu);
-        } while (abs($latitude - $latitudeN) >= self::NEWTON_RAPHSON_CONVERGENCE);
+        } while (abs($latitude - $latitudeN) >= static::ITERATION_CONVERGENCE);
 
         $longitude = $longitudeOrigin + $easting * sqrt(1 - $e2 * sin($latitude) ** 2) / ($a * cos($latitude));
 
@@ -737,7 +737,7 @@ class ProjectedPoint extends Point
         do {
             $latitudeN = $latitude;
             $latitude = 2 * (atan($tO ** (-1 / $B) * tan($U / 2 + M_PI / 4) ** (1 / $B) * ((1 + $e * sin($latitude)) / (1 - $e * sin($latitude))) ** ($e / 2)) - M_PI / 4);
-        } while (abs($latitude - $latitudeN) >= self::NEWTON_RAPHSON_CONVERGENCE);
+        } while (abs($latitude - $latitudeN) >= static::ITERATION_CONVERGENCE);
 
         $longitude = $longitudeO + $longitudeOffset - $V / $B;
 
@@ -909,7 +909,7 @@ class ProjectedPoint extends Point
         do {
             $latitudeN = $latitude;
             $latitude = M_PI / 2 - 2 * atan($t * ((1 - $e * sin($latitude)) / (1 + $e * sin($latitude))) ** ($e / 2));
-        } while (abs($latitude - $latitudeN) >= self::NEWTON_RAPHSON_CONVERGENCE);
+        } while (abs($latitude - $latitudeN) >= static::ITERATION_CONVERGENCE);
 
         $longitude = $theta / $n + $longitudeOrigin;
 
@@ -955,7 +955,7 @@ class ProjectedPoint extends Point
         do {
             $latitudeN = $latitude;
             $latitude = M_PI / 2 - 2 * atan($t * ((1 - $e * sin($latitude)) / (1 + $e * sin($latitude))) ** ($e / 2));
-        } while (abs($latitude - $latitudeN) >= self::NEWTON_RAPHSON_CONVERGENCE);
+        } while (abs($latitude - $latitudeN) >= static::ITERATION_CONVERGENCE);
 
         $longitude = $theta / $n + $longitudeOrigin;
 
@@ -1004,7 +1004,7 @@ class ProjectedPoint extends Point
         do {
             $latitudeN = $latitude;
             $latitude = M_PI / 2 - 2 * atan($t * ((1 - $e * sin($latitude)) / (1 + $e * sin($latitude))) ** ($e / 2));
-        } while (abs($latitude - $latitudeN) >= self::NEWTON_RAPHSON_CONVERGENCE);
+        } while (abs($latitude - $latitudeN) >= static::ITERATION_CONVERGENCE);
 
         $longitude = $theta / $n + $longitudeFalseOrigin;
 
@@ -1053,7 +1053,7 @@ class ProjectedPoint extends Point
         do {
             $latitudeN = $latitude;
             $latitude = M_PI / 2 - 2 * atan($t * ((1 - $e * sin($latitude)) / (1 + $e * sin($latitude))) ** ($e / 2));
-        } while (abs($latitude - $latitudeN) >= self::NEWTON_RAPHSON_CONVERGENCE);
+        } while (abs($latitude - $latitudeN) >= static::ITERATION_CONVERGENCE);
 
         $longitude = $theta / $n + $lambdaOrigin;
 
@@ -1104,7 +1104,7 @@ class ProjectedPoint extends Point
         do {
             $latitudeN = $latitude;
             $latitude = M_PI / 2 - 2 * atan($t * ((1 - $e * sin($latitude)) / (1 + $e * sin($latitude))) ** ($e / 2));
-        } while (abs($latitude - $latitudeN) >= self::NEWTON_RAPHSON_CONVERGENCE);
+        } while (abs($latitude - $latitudeN) >= static::ITERATION_CONVERGENCE);
 
         $longitude = $theta / $n + $lambdaOrigin;
 
@@ -1158,7 +1158,7 @@ class ProjectedPoint extends Point
         do {
             $latitudeN = $latitude;
             $latitude = M_PI / 2 - 2 * atan($t * ((1 - $e * sin($latitude)) / (1 + $e * sin($latitude))) ** ($e / 2));
-        } while (abs($latitude - $latitudeN) >= self::NEWTON_RAPHSON_CONVERGENCE);
+        } while (abs($latitude - $latitudeN) >= static::ITERATION_CONVERGENCE);
 
         $longitude = ($theta + (new ArcSecond(29.2985))->asRadians()->getValue()) / $n + $lambdaOrigin;
 
@@ -1207,13 +1207,13 @@ class ProjectedPoint extends Point
         do {
             $mN = $m;
             $m = $m - ($M - $scaleFactorOrigin * $m - $scaleFactorOrigin * $A * $m ** 3) / (-$scaleFactorOrigin - 3 * $scaleFactorOrigin * $A * $m ** 2);
-        } while (abs($m - $mN) >= self::NEWTON_RAPHSON_CONVERGENCE);
+        } while (abs($m - $mN) >= static::ITERATION_CONVERGENCE);
 
         $latitude = $latitudeOrigin + $m / $A;
         do {
             $latitudeN = $latitude;
             $latitude = $latitude + ($m + $sO - ($APrime * $latitude - $BPrime * sin(2 * $latitude) + $CPrime * sin(4 * $latitude) - $DPrime * sin(6 * $latitude) + $EPrime * sin(8 * $latitude))) / $APrime;
-        } while (abs($latitude - $latitudeN) >= self::NEWTON_RAPHSON_CONVERGENCE);
+        } while (abs($latitude - $latitudeN) >= static::ITERATION_CONVERGENCE);
 
         $longitude = $longitudeOrigin + $theta / sin($latitudeOrigin);
 
@@ -1336,7 +1336,7 @@ class ProjectedPoint extends Point
             $latitudeN = $latitude;
             $psiN = log((tan($latitudeN / 2 + M_PI / 4)) * ((1 - $e * sin($latitudeN)) / (1 + $e * sin($latitudeN))) ** ($e / 2));
             $latitude = $latitudeN - ($psiN - $psi) * cos($latitudeN) * (1 - $e2 * sin($latitudeN) ** 2) / (1 - $e2);
-        } while (abs($latitude - $latitudeN) >= self::NEWTON_RAPHSON_CONVERGENCE);
+        } while (abs($latitude - $latitudeN) >= static::ITERATION_CONVERGENCE);
 
         return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
     }
@@ -1762,7 +1762,7 @@ class ProjectedPoint extends Point
         do {
             $HN = $H;
             $H = ($HN->pow(3)->multiply($G)->multiply(new ComplexNumber(2, 0))->add($H0))->divide($HN->pow(2)->multiply($G)->multiply(new ComplexNumber(3, 0))->add(new ComplexNumber(1, 0)));
-        } while (abs($H0->subtract($H)->subtract($H->pow(3)->multiply($G))->getReal()) >= self::NEWTON_RAPHSON_CONVERGENCE);
+        } while (abs($H0->subtract($H)->subtract($H->pow(3)->multiply($G))->getReal()) >= static::ITERATION_CONVERGENCE);
 
         $LPrime = -1 * $H->getReal();
         $PPrime = 2 * atan(M_E ** $H->getImaginary()) - M_PI / 2;
@@ -1787,7 +1787,7 @@ class ProjectedPoint extends Point
         do {
             $latitudeN = $latitude;
             $latitude = 2 * atan(((1 + $e * sin($latitude)) / (1 - $e * sin($latitude))) ** ($e / 2) * M_E ** $q) - M_PI / 2;
-        } while (abs($latitude - $latitudeN) >= self::NEWTON_RAPHSON_CONVERGENCE);
+        } while (abs($latitude - $latitudeN) >= static::ITERATION_CONVERGENCE);
 
         return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
     }
@@ -1858,7 +1858,7 @@ class ProjectedPoint extends Point
         do {
             $QN = $Q;
             $Q = $QPrime + ($e * atanh($e * tanh($Q)));
-        } while (abs($Q - $QN) >= self::NEWTON_RAPHSON_CONVERGENCE);
+        } while (abs($Q - $QN) >= static::ITERATION_CONVERGENCE);
 
         $latitude = atan(sinh($Q));
         $longitude = $longitudeOrigin + self::asin(tanh($eta0) / cos($beta));

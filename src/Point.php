@@ -35,7 +35,7 @@ use function ucwords;
 
 abstract class Point implements Stringable
 {
-    protected const NEWTON_RAPHSON_CONVERGENCE = 1e-12;
+    protected const ITERATION_CONVERGENCE = 1e-12;
 
     /**
      * @internal

@@ -74,7 +74,7 @@ class GeocentricValue
             $phi1 = $latitude;
             $v = $a / sqrt(1 - $e2 * (sin($latitude) ** 2));
             $latitude = atan2($z + ($e2 * $v * sin($latitude)), $p);
-        } while (abs($latitude - $phi1) >= self::NEWTON_RAPHSON_CONVERGENCE);
+        } while (abs($latitude - $phi1) >= static::NEWTON_RAPHSON_CONVERGENCE);
 
         $latitude += $this->datum->getPrimeMeridian()->getGreenwichLongitude()->asRadians()->getValue();
         $h = $p / cos($latitude) - $v;
