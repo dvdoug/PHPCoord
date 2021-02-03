@@ -163,12 +163,7 @@ class GeographicPoint extends Point
             throw new InvalidArgumentException('Can only calculate distances between two points in the same CRS');
         }
 
-        //Mean radius definition taken from Wikipedia
-        /** @var Ellipsoid $ellipsoid */
-        $ellipsoid = $this->getCRS()->getDatum()->getEllipsoid();
-        $radius = ((2 * $ellipsoid->getSemiMajorAxis()->asMetres()->getValue()) + $ellipsoid->getSemiMinorAxis()->asMetres()->getValue()) / 3;
-
-        return new Metre(self::acos(sin($this->latitude->asRadians()->getValue()) * sin($to->latitude->asRadians()->getValue()) + cos($this->latitude->asRadians()->getValue()) * cos($to->latitude->asRadians()->getValue()) * cos($to->longitude->asRadians()->getValue() - $this->longitude->asRadians()->getValue())) * $radius);
+        return static::vincenty($this->asGeographicValue(), $to->asGeographicValue(), $this->getCRS()->getDatum()->getEllipsoid());
     }
 
     public function __toString(): string

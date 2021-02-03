@@ -76,9 +76,9 @@ class GeocentricPointTest extends TestCase
 
     public function testDistanceCalculation(): void
     {
-        $from = GeocentricPoint::create(new Metre(12300), new Metre(45600), new Metre(78900), Geocentric::fromSRID(Geocentric::EPSG_WGS_84));
-        $to = GeocentricPoint::create(new Metre(24600), new Metre(80200), new Metre(16800), Geocentric::fromSRID(Geocentric::EPSG_WGS_84));
-        self::assertEqualsWithDelta(72144.715676, $from->calculateDistance($to)->getValue(), 0.000001);
+        $from = GeocentricPoint::create(new Metre(6121151.5493), new Metre(-1563978.9235), new Metre(-872615.3556), Geocentric::fromSRID(Geocentric::EPSG_WGS_84));
+        $to = GeocentricPoint::create(new Metre(3797282.484), new Metre(-423484.681), new Metre(5090128.466), Geocentric::fromSRID(Geocentric::EPSG_WGS_84));
+        self::assertEqualsWithDelta(6824225.464, $from->calculateDistance($to)->getValue(), 0.001);
     }
 
     public function testDistanceDifferentCRSs(): void

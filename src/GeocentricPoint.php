@@ -31,7 +31,6 @@ use PHPCoord\UnitOfMeasure\Scale\Unity;
 use PHPCoord\UnitOfMeasure\Time\Time;
 use PHPCoord\UnitOfMeasure\Time\Year;
 use function sprintf;
-use function sqrt;
 
 /**
  * Coordinate representing a point in ECEF geocentric form.
@@ -115,8 +114,6 @@ class GeocentricPoint extends Point
 
     /**
      * Calculate surface distance between two points.
-     * Note: this implementation is currently not accurate over long distances, it is the straight line distance, not
-     * the surface distance.
      */
     public function calculateDistance(Point $to): Length
     {
@@ -124,14 +121,7 @@ class GeocentricPoint extends Point
             throw new InvalidArgumentException('Can only calculate distances between two points in the same CRS');
         }
 
-        /* @var GeocentricPoint $to */
-        return new Metre(
-            sqrt(
-                ($to->getX()->getValue() - $this->x->getValue()) ** 2 +
-                ($to->getY()->getValue() - $this->y->getValue()) ** 2 +
-                ($to->getZ()->getValue() - $this->z->getValue()) ** 2
-            )
-        );
+        return static::vincenty($this->asGeographicValue(), $to->asGeographicValue(), $this->getCRS()->getDatum()->getEllipsoid());
     }
 
     public function __toString(): string
