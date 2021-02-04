@@ -6,10 +6,10 @@ PHPCoord
 [![Current version](https://img.shields.io/packagist/v/php-coord/php-coord.svg)](https://packagist.org/packages/php-coord/php-coord)
 [![Documentation](https://readthedocs.org/projects/phpcoord/badge/?version=master)](https://phpcoord.readthedocs.io/en/master/)
 
-PHPCoord is a PHP library to aid in handling coordinates. It's main function is to convert coordinates from one system
-to another, although additional helper functionality exists as well such as distance calculation and unit conversion.
+PHPCoord is a PHP library to aid in handling coordinates. It can convert coordinates for a point from one system
+to another and also calculate distance between points.
 
-6000+ different coordinate systems are supported, covering the entire globe. Some common systems include:
+6000+ different coordinate systems are supported, covering the entire globe. Common systems supported include:
  - WGS84 (GPS)
  - OSGB36 (Great Britain)
  - NAD27 and NAD83 (North America)
@@ -17,6 +17,10 @@ to another, although additional helper functionality exists as well such as dist
  - ED50 and ETRS89 (Europe)
  - GDA94 and GDA2020 (Australia)
  - NZGD49 and NZGD2000 (New Zealand)
+
+Documentation
+-------------
+[Documentation and usage examples are available here](https://phpcoord.readthedocs.io/en/stable/).
 
 Installation
 ------------
