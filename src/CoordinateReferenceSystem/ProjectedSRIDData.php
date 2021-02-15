@@ -24377,6 +24377,27 @@ trait ProjectedSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'conversion_operation' => 'urn:ogc:def:coordinateOperation:EPSG::16490',
         ],
+        'urn:ogc:def:crs:EPSG::9697' => [
+            'name' => 'REDGEOMIN / UTM zone 12S',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::4400',
+            'datum' => 'urn:ogc:def:datum:EPSG::1304',
+            'base_crs' => 'urn:ogc:def:crs:EPSG::9696',
+            'conversion_operation' => 'urn:ogc:def:coordinateOperation:EPSG::16112',
+        ],
+        'urn:ogc:def:crs:EPSG::9698' => [
+            'name' => 'REDGEOMIN / UTM zone 18S',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::4400',
+            'datum' => 'urn:ogc:def:datum:EPSG::1304',
+            'base_crs' => 'urn:ogc:def:crs:EPSG::9696',
+            'conversion_operation' => 'urn:ogc:def:coordinateOperation:EPSG::16118',
+        ],
+        'urn:ogc:def:crs:EPSG::9699' => [
+            'name' => 'REDGEOMIN / UTM zone 19S',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::4400',
+            'datum' => 'urn:ogc:def:datum:EPSG::1304',
+            'base_crs' => 'urn:ogc:def:crs:EPSG::9696',
+            'conversion_operation' => 'urn:ogc:def:coordinateOperation:EPSG::16119',
+        ],
         'urn:ogc:def:crs:EPSG::20004' => [
             'name' => 'Pulkovo 1995 / Gauss-Kruger zone 4',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::4530',

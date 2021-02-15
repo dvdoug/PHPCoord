@@ -104,7 +104,7 @@ class Cartesian extends CoordinateSystem
     public const EPSG_2D_AXES_EASTING_NORTHING_E_N_ORIENTATIONS_EAST_NORTH_UOM_YDSE = 'urn:ogc:def:cs:EPSG::4409';
 
     /**
-     * Cartesian 2D CS. Axes: easting, northing (M,P). Orientations east, north. UoM m.
+     * Cartesian 2D CS. Axes: easting, northing (M,P). Orientations east, north. UoM: m.
      * Type: Cartesian
      * Used in projected and engineering coordinate reference systems in Portuguese territories.
      */
@@ -562,7 +562,7 @@ class Cartesian extends CoordinateSystem
 
     protected static array $sridData = [
         'urn:ogc:def:cs:EPSG::1024' => [
-            'name' => '2D Axes: easting, northing (M,P). Orientations east, north. UoM m.',
+            'name' => '2D Axes: easting, northing (M,P). Orientations east, north. UoM: m.',
             'axes' => [
                 [
                     'orientation' => 'east',

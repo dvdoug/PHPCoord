@@ -141,8 +141,8 @@ Used in projected and engineering coordinate reference systems.
 
 Used in projected and engineering coordinate reference systems.
 
-2D Axes: easting, northing (M,P). Orientations east, north. UoM m.
-------------------------------------------------------------------
+2D Axes: easting, northing (M,P). Orientations east, north. UoM: m.
+-------------------------------------------------------------------
 
 
 .. code-block:: php

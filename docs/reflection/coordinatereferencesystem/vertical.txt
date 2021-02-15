@@ -120,6 +120,20 @@ Auckland 1946 height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5759')
 
 
+BGS2005 height
+--------------
+
+| Used: Bulgaria - onshore.
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_BGS2005_HEIGHT)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::9669')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_BGS2005_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9669')
+
+Adopted 2010-07-29 as official Bulgarian reference datum through decree 153, replacing Baltic 1982 system (CRS code 5786).
+
 BI height
 ---------
 
@@ -295,16 +309,16 @@ CBVD61 height (ft)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::6132')
 
 
-CD Norway
----------
+CD Norway depth
+---------------
 
 | Used: Norway (offshore) and Svalbard and Jan Mayen (offshore).
 
 .. code-block:: php
 
-    Vertical::fromSRID(Vertical::EPSG_CD_NORWAY)
+    Vertical::fromSRID(Vertical::EPSG_CD_NORWAY_DEPTH)
     Vertical::fromSRID('urn:ogc:def:crs:EPSG::9672')
-    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_CD_NORWAY)
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_CD_NORWAY_DEPTH)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9672')
 
 
@@ -711,6 +725,20 @@ EGM96 height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5773')
 
 Zero-height surface resulting from the application of the EGM96 geoid model to the WGS 84 ellipsoid. Replaces EGM84 height (CRS code 5798). Replaced by EGM2008 height (CRS code 3855).
+
+EH2000 height
+-------------
+
+| Used: Estonia - onshore.
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_EH2000_HEIGHT)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::9663')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_EH2000_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9663')
+
+In Estonia replaces Baltic 1977 system (CRS code 5705) from January 2018.
 
 EOMA 1980 height
 ----------------
@@ -1657,6 +1685,20 @@ Kuwait PWD height
     CoordinateReferenceSystem::fromSRID(Vertical::EPSG_KUWAIT_PWD_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5788')
 
+
+LAS07 height
+------------
+
+| Used: Lithuania - onshore.
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_LAS07_HEIGHT)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::9666')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_LAS07_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9666')
+
+In Lithuania replaces Baltic 1977 system (CRS code 5705) from January 2016.
 
 LAT NL depth
 ------------

@@ -606,6 +606,15 @@ class Datum
     public const EPSG_BULGARIA_GEODETIC_SYSTEM_2005 = 'urn:ogc:def:datum:EPSG::1167';
 
     /**
+     * Bulgarian Height System 2005
+     * Type: vertical
+     * Extent: Bulgaria - onshore.
+     * Bulgarian realisation of EVRF2007. EVRF2007 heights of 58 points in Bulgaria held fixed.
+     * Uses Normal heights. Adopted as official Bulgarian height reference datum through decree 153 of 2010-07-29.
+     */
+    public const EPSG_BULGARIAN_HEIGHT_SYSTEM_2005 = 'urn:ogc:def:datum:EPSG::1300';
+
+    /**
      * CH1903
      * Type: geodetic
      * Extent: Liechtenstein; Switzerland.
@@ -1330,6 +1339,16 @@ class Datum
     public const EPSG_ESTONIA_1997 = 'urn:ogc:def:datum:EPSG::6180';
 
     /**
+     * Estonian Height System 2000
+     * Type: vertical
+     * Extent: Estonia - onshore.
+     * Estonian realisation of EVRF2007. Relevelling observed  2004-2013 and reduced to epoch 2000 using the NKG2005LU
+     * empirical land uplift model. EVRF2007 height of Poltsamaa fundamental bench mark (H=55.2114m) held fixed.
+     * Uses Normal heights.
+     */
+    public const EPSG_ESTONIAN_HEIGHT_SYSTEM_2000 = 'urn:ogc:def:datum:EPSG::1298';
+
+    /**
      * European Datum 1950
      * Type: geodetic
      * Extent: Europe - west: Andorra; Cyprus; Denmark - onshore and offshore; Faroe Islands - onshore; France -
@@ -1388,9 +1407,9 @@ class Datum
      * Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino;
      * Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle
      * of Man; Vatican City State.
-     * Fixed to the stable part of the Eurasian continental plate at epoch 1989.0 and coincides with ITRF89 at epoch
-     * 1989.0. Defined by transformation from ITRF89 - see code 7932.
-     * Replaced by ETRF90 (code 1179).
+     * Coincides with ITRF89 at epoch 1989.0. Fixed to the stable part of the Eurasian tectonic plate through 3
+     * rotation rates derived from the AM02 geophysical model.
+     * Defined by transformation from ITRF89 (CT code 7932). Replaced by ETRF90 (datum code 1179).
      */
     public const EPSG_EUROPEAN_TERRESTRIAL_REFERENCE_FRAME_1989 = 'urn:ogc:def:datum:EPSG::1178';
 
@@ -1403,9 +1422,11 @@ class Datum
      * Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino;
      * Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle
      * of Man; Vatican City State.
-     * Fixed to the stable part of the Eurasian continental plate at epoch 1989.0 and coincides with ITRF89 at epoch
-     * 1989.0. Defined by transformation from ITRF90 - see code 7933.
-     * Replaces ETRF89 (code 1178). Replaced by ETRF91 (code 1180).
+     * Coincides with ITRF90 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3
+     * translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the
+     * AM02 geophysical model.
+     * Defined by transformation from ITRF90 (CT code 7933). Replaces ETRF89 (datum code 1178). Replaced by ETRF91
+     * (datum code 1180).
      */
     public const EPSG_EUROPEAN_TERRESTRIAL_REFERENCE_FRAME_1990 = 'urn:ogc:def:datum:EPSG::1179';
 
@@ -1418,9 +1439,11 @@ class Datum
      * Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino;
      * Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle
      * of Man; Vatican City State.
-     * Fixed to the stable part of the Eurasian continental plate at epoch 1989.0 and coincides with ITRF89 at epoch
-     * 1989.0. Defined by transformation from ITRF91 - see code 7934.
-     * Replaces ETRF90 (code 1179). Replaced by ETRF92 (code 1181).
+     * Coincides with ITRF91 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3
+     * translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the
+     * AM02 geophysical model.
+     * Defined by transformation from ITRF91 (CT code 7934). Replaces ETRF90 (datum code 1179). Replaced by ETRF92
+     * (datum code 1181).
      */
     public const EPSG_EUROPEAN_TERRESTRIAL_REFERENCE_FRAME_1991 = 'urn:ogc:def:datum:EPSG::1180';
 
@@ -1433,9 +1456,11 @@ class Datum
      * Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino;
      * Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle
      * of Man; Vatican City State.
-     * Fixed to the stable part of the Eurasian continental plate at epoch 1989.0 and coincides with ITRF89 at epoch
-     * 1989.0. Defined by transformation from ITRF92 - see code 7935.
-     * Replaces ETRF91 (code 1180). Replaced by ETRF93 (code 1182).
+     * Coincides with ITRF92 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3
+     * translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the
+     * NNR-NUVEL-1 geophysical model.
+     * Defined by transformation from ITRF92 (CT code 7935). Replaces ETRF91 (datum code 1180). Replaced by ETRF93
+     * (datum code 1182).
      */
     public const EPSG_EUROPEAN_TERRESTRIAL_REFERENCE_FRAME_1992 = 'urn:ogc:def:datum:EPSG::1181';
 
@@ -1448,9 +1473,11 @@ class Datum
      * Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino;
      * Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle
      * of Man; Vatican City State.
-     * Fixed to the stable part of the Eurasian continental plate at epoch 1989.0 and coincides with ITRF89 at epoch
-     * 1989.0. Defined by transformation from ITRF93 - see code 7936.
-     * Replaces ETRF92 (code 1181). Replaced by ETRF94 (code 1183).
+     * Coincides with ITRF93 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3
+     * translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the
+     * ITRF93 velocity field.
+     * Defined by transformation from ITRF93 (CT code 7936). Replaces ETRF92 (datum code 1181). Replaced by ETRF94
+     * (datum code 1183).
      */
     public const EPSG_EUROPEAN_TERRESTRIAL_REFERENCE_FRAME_1993 = 'urn:ogc:def:datum:EPSG::1182';
 
@@ -1463,9 +1490,11 @@ class Datum
      * Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino;
      * Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle
      * of Man; Vatican City State.
-     * Fixed to the stable part of the Eurasian continental plate at epoch 1989.0 and coincides with ITRF89 at epoch
-     * 1989.0. Defined by transformation from ITRF94 - see code 7937.
-     * Replaces ETRF93 (code 1182). Replaced by ETRF96 (code 1184).
+     * Coincides with ITRF94 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3
+     * translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the
+     * NNR-NUVEL-1A geophysical model.
+     * Defined by transformation from ITRF94 (CT code 7937). Replaces ETRF93 (datum code 1182). Replaced by ETRF96
+     * (datum code 1184).
      */
     public const EPSG_EUROPEAN_TERRESTRIAL_REFERENCE_FRAME_1994 = 'urn:ogc:def:datum:EPSG::1183';
 
@@ -1478,9 +1507,11 @@ class Datum
      * Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino;
      * Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle
      * of Man; Vatican City State.
-     * Fixed to the stable part of the Eurasian continental plate at epoch 1989.0 and coincides with ITRF89 at epoch
-     * 1989.0. Defined by transformation from ITRF96 - see code 7938.
-     * Replaces ETRF94 (code 1183). Replaced by ETRF97 (code 1185).
+     * Coincides with ITRF96 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3
+     * translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the
+     * NNR-NUVEL-1A geophysical model.
+     * Defined by transformation from ITRF96 (CT code 7938). Replaces ETRF94 (datum code 1183). Replaced by ETRF97
+     * (datum code 1185).
      */
     public const EPSG_EUROPEAN_TERRESTRIAL_REFERENCE_FRAME_1996 = 'urn:ogc:def:datum:EPSG::1184';
 
@@ -1493,9 +1524,11 @@ class Datum
      * Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino;
      * Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle
      * of Man; Vatican City State.
-     * Fixed to the stable part of the Eurasian continental plate at epoch 1989.0 and coincides with ITRF89 at epoch
-     * 1989.0. Defined by transformation from ITRF97 - see code 7939.
-     * Replaces ETRF96 (code 1184). Replaced by ETRF2000 (code 1186).
+     * Coincides with ITRF97 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3
+     * translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the
+     * NNR-NUVEL-1A geophysical model.
+     * Defined by transformation from ITRF97 (CT code 7939). Replaces ETRF96 (datum code 1184). Replaced by ETRF2000
+     * (datum code 1186).
      */
     public const EPSG_EUROPEAN_TERRESTRIAL_REFERENCE_FRAME_1997 = 'urn:ogc:def:datum:EPSG::1185';
 
@@ -1508,9 +1541,10 @@ class Datum
      * Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino;
      * Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle
      * of Man; Vatican City State.
-     * Fixed to the stable part of the Eurasian continental plate at epoch 1989.0 and coincides with ITRF89 at epoch
-     * 1989.0. Defined by transformation from ITRF2000 - see code 7940.
-     * Replaces ETRF97 (code 1185). On the publication of ETRF2005 (code 1204),  the EUREF Technical Working Group
+     * Coincides with ITRF2000 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3
+     * translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the
+     * ITRF2000 velocity field.
+     * Defined by transformation from ITRF2000 (CT 7940). Replaces ETRF97. On the publication of ETRF2005 the EUREF TWG
      * recommended that ETRF2000 be the realization of ETRS89. ETRF2014 (code 1206) is technically superior to all
      * earlier realizations of ETRS89.
      */
@@ -1525,11 +1559,12 @@ class Datum
      * Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino;
      * Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle
      * of Man; Vatican City State.
-     * Fixed to the stable part of the Eurasian continental plate at epoch 1989.0 and coincides with ITRF89 at epoch
-     * 1989.0. Defined by transformation from ITRF2005 - see code 5900.
-     * On publication in 2007 of this reference frame, the EUREF Technical Working Group recommended that ETRF2000
-     * (EPSG code 1186) rather than this reference frame remained as the preferred realization of ETRS89. Replaced by
-     * ETRF2014 (code 1206).
+     * Coincides with ITRF2005 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3
+     * translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the
+     * ITRF2005 velocity field.
+     * Defined by transformation from ITRF2005 (CT 5900). On publication in 2007 of this reference frame, the EUREF TWG
+     * recommended that ETRF2000 rather than this reference frame remained as the preferred realization of ETRS89.
+     * Replaced by ETRF2014 (code 1206).
      */
     public const EPSG_EUROPEAN_TERRESTRIAL_REFERENCE_FRAME_2005 = 'urn:ogc:def:datum:EPSG::1204';
 
@@ -1542,9 +1577,10 @@ class Datum
      * Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino;
      * Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle
      * of Man; Vatican City State.
-     * Fixed to the stable part of the Eurasian continental plate at epoch 2014.0 and coincides with ITRF2014 at epoch
-     * 2010.0. Defined by transformation from ITRF2014 - see code 8366.
-     * Replaces ETRF2005 (code 1204). Technically superior to ETRF2000 (code 1186).
+     * Coincides with ITRF2014 at epoch 1989.0. Fixed to the stable part of the Eurasian tectonic plate through 3
+     * rotation rates derived from the ITRF2014 velocity field.
+     * Defined by transformation from ITRF2014 (CT code 8366). Replaces ETRF2005 (datum code 1204). Technically
+     * superior to ETRF2000 (datum code 1186).
      */
     public const EPSG_EUROPEAN_TERRESTRIAL_REFERENCE_FRAME_2014 = 'urn:ogc:def:datum:EPSG::1206';
 
@@ -3512,6 +3548,15 @@ class Datum
      * Densification of ETRS89 during the 1992 Baltic campaign.
      */
     public const EPSG_LITHUANIA_1994_ETRS89 = 'urn:ogc:def:datum:EPSG::6126';
+
+    /**
+     * Lithuanian Height System 2007
+     * Type: vertical
+     * Extent: Lithuania - onshore.
+     * Lithuanian realisation of EVRF2007. EVRF2007 heights of 10 points in Lithuania held fixed.
+     * Uses Normal heights.
+     */
+    public const EPSG_LITHUANIAN_HEIGHT_SYSTEM_2007 = 'urn:ogc:def:datum:EPSG::1299';
 
     /**
      * Little Cayman Vertical Datum 1961
@@ -5856,6 +5901,15 @@ class Datum
     public const EPSG_RAUENBERG_DATUM_83 = 'urn:ogc:def:datum:EPSG::6745';
 
     /**
+     * Red Geodesica Para Mineria en Chile
+     * Type: dynamic geodetic
+     * Extent: Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y
+     * Gomez.
+     * Realized through 26 stations in the IGS (SIRGAS-CON) active reference station network in Chile.
+     */
+    public const EPSG_RED_GEODESICA_PARA_MINERIA_EN_CHILE = 'urn:ogc:def:datum:EPSG::1304';
+
+    /**
      * Red Geodesica Venezolana
      * Type: geodetic
      * Extent: Venezuela - onshore and offshore.
@@ -6380,7 +6434,7 @@ class Datum
      * SVY21
      * Type: geodetic
      * Extent: Singapore - onshore and offshore.
-     * Fundamental point: Base 7 at Pierce Resevoir. Latitude: 1°22'02.9154"N, longitude: 103°49'31.9752"E (of
+     * Fundamental point: Base 7 at Pierce Reservoir. Latitude: 1°22'02.9154"N, longitude: 103°49'31.9752"E (of
      * Greenwich).
      * Replaces Kertau 1968 for cadastral purposes from August 2004.
      */
@@ -9626,6 +9680,30 @@ class Datum
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
         ],
+        'urn:ogc:def:datum:EPSG::1298' => [
+            'name' => 'Estonian Height System 2000',
+            'type' => 'vertical',
+            'ellipsoid' => null,
+            'prime_meridian' => null,
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
+        'urn:ogc:def:datum:EPSG::1299' => [
+            'name' => 'Lithuanian Height System 2007',
+            'type' => 'vertical',
+            'ellipsoid' => null,
+            'prime_meridian' => null,
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
+        'urn:ogc:def:datum:EPSG::1300' => [
+            'name' => 'Bulgarian Height System 2005',
+            'type' => 'vertical',
+            'ellipsoid' => null,
+            'prime_meridian' => null,
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
         'urn:ogc:def:datum:EPSG::1301' => [
             'name' => 'Norwegian Chart Datum',
             'type' => 'vertical',
@@ -9649,6 +9727,14 @@ class Datum
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
+        ],
+        'urn:ogc:def:datum:EPSG::1304' => [
+            'name' => 'Red Geodesica Para Mineria en Chile',
+            'type' => 'dynamic geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => 2019.0,
         ],
         'urn:ogc:def:datum:EPSG::5100' => [
             'name' => 'Mean Sea Level',

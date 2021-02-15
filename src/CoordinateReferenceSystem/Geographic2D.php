@@ -2821,6 +2821,13 @@ class Geographic2D extends Geographic
     public const EPSG_RDN2008 = 'urn:ogc:def:crs:EPSG::6706';
 
     /**
+     * REDGEOMIN
+     * Extent: Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y
+     * Gomez.
+     */
+    public const EPSG_REDGEOMIN = 'urn:ogc:def:crs:EPSG::9696';
+
+    /**
      * REGCAN95
      * Extent: Spain - Canary Islands onshore and offshore.
      * Replaces Pico de las Nieves 1984 (PN84).
@@ -6499,6 +6506,11 @@ class Geographic2D extends Geographic
             'name' => 'LTF2004(G)',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
             'datum' => 'urn:ogc:def:datum:EPSG::1295',
+        ],
+        'urn:ogc:def:crs:EPSG::9696' => [
+            'name' => 'REDGEOMIN',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
+            'datum' => 'urn:ogc:def:datum:EPSG::1304',
         ],
     ];
 

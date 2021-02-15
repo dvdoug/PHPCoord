@@ -1694,6 +1694,19 @@ RDN2008
 
 Replaces IGM95 (CRS code 4982) from 2011-11-10.
 
+REDGEOMIN
+---------
+
+| Used: Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_REDGEOMIN)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::9694')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_REDGEOMIN)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9694')
+
+
 REGCAN95
 --------
 

@@ -86,6 +86,14 @@ class Vertical extends CoordinateReferenceSystem
     public const EPSG_AUCKLAND_1946_HEIGHT = 'urn:ogc:def:crs:EPSG::5759';
 
     /**
+     * BGS2005 height
+     * Extent: Bulgaria - onshore.
+     * Adopted 2010-07-29 as official Bulgarian reference datum through decree 153, replacing Baltic 1982 system (CRS
+     * code 5786).
+     */
+    public const EPSG_BGS2005_HEIGHT = 'urn:ogc:def:crs:EPSG::9669';
+
+    /**
      * BI height
      * Extent: United Kingdom (UK) - offshore to boundary of UKCS within 49°45'N to 61°N and 9°W to 2°E; onshore
      * Great Britain (England, Wales and Scotland) and Northern Ireland. Ireland onshore. Isle of Man onshore.
@@ -177,10 +185,10 @@ class Vertical extends CoordinateReferenceSystem
     public const EPSG_CBVD61_HEIGHT_FT = 'urn:ogc:def:crs:EPSG::6132';
 
     /**
-     * CD Norway
+     * CD Norway depth
      * Extent: Norway (offshore) and Svalbard and Jan Mayen (offshore).
      */
-    public const EPSG_CD_NORWAY = 'urn:ogc:def:crs:EPSG::9672';
+    public const EPSG_CD_NORWAY_DEPTH = 'urn:ogc:def:crs:EPSG::9672';
 
     /**
      * CGVD2013(CGG2013) height
@@ -395,6 +403,13 @@ class Vertical extends CoordinateReferenceSystem
      * EGM84 height (CRS code 5798). Replaced by EGM2008 height (CRS code 3855).
      */
     public const EPSG_EGM96_HEIGHT = 'urn:ogc:def:crs:EPSG::5773';
+
+    /**
+     * EH2000 height
+     * Extent: Estonia - onshore.
+     * In Estonia replaces Baltic 1977 system (CRS code 5705) from January 2018.
+     */
+    public const EPSG_EH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::9663';
 
     /**
      * EOMA 1980 height
@@ -890,6 +905,13 @@ class Vertical extends CoordinateReferenceSystem
      * Extent: Kuwait - onshore.
      */
     public const EPSG_KUWAIT_PWD_HEIGHT = 'urn:ogc:def:crs:EPSG::5788';
+
+    /**
+     * LAS07 height
+     * Extent: Lithuania - onshore.
+     * In Lithuania replaces Baltic 1977 system (CRS code 5705) from January 2016.
+     */
+    public const EPSG_LAS07_HEIGHT = 'urn:ogc:def:crs:EPSG::9666';
 
     /**
      * LAT NL depth
@@ -2942,8 +2964,23 @@ class Vertical extends CoordinateReferenceSystem
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
             'datum' => 'urn:ogc:def:datum:EPSG::1294',
         ],
+        'urn:ogc:def:crs:EPSG::9663' => [
+            'name' => 'EH2000 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1298',
+        ],
+        'urn:ogc:def:crs:EPSG::9666' => [
+            'name' => 'LAS07 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1299',
+        ],
+        'urn:ogc:def:crs:EPSG::9669' => [
+            'name' => 'BGS2005 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1300',
+        ],
         'urn:ogc:def:crs:EPSG::9672' => [
-            'name' => 'CD Norway',
+            'name' => 'CD Norway depth',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6498',
             'datum' => 'urn:ogc:def:datum:EPSG::1301',
         ],

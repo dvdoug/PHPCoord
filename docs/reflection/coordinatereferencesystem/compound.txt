@@ -50,6 +50,45 @@ Belge 1972 / Belgian Lambert 72 + Ostend height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::6190')
 
 
+CIGD11 + CBVD61 height (ft)
+---------------------------
+
+| Used: Cayman Islands - Cayman Brac.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_CIGD11_PLUS_CBVD61_HEIGHT_FT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9502')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_CIGD11_PLUS_CBVD61_HEIGHT_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9502')
+
+
+CIGD11 + GCVD54 height (ft)
+---------------------------
+
+| Used: Cayman Islands - Grand Cayman.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_CIGD11_PLUS_GCVD54_HEIGHT_FT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9503')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_CIGD11_PLUS_GCVD54_HEIGHT_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9503')
+
+
+CIGD11 + LCVD61 height (ft)
+---------------------------
+
+| Used: Cayman Islands - Little Cayman.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_CIGD11_PLUS_LCVD61_HEIGHT_FT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9504')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_CIGD11_PLUS_LCVD61_HEIGHT_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9504')
+
+
 CR-SIRGAS / CRTM05 + DACR52 height
 ----------------------------------
 
@@ -116,6 +155,19 @@ DB_REF / 3-degree Gauss-Kruger zone 5 (E-N) + DHHN92 height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5835')
 
 
+ETRS89 + Alicante height
+------------------------
+
+| Used: Gibraltar - onshore; Spain - mainland onshore.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_ETRS89_PLUS_ALICANTE_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9505')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_ETRS89_PLUS_ALICANTE_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9505')
+
+
 ETRS89 + BI height
 ------------------
 
@@ -155,6 +207,19 @@ ETRS89 + Belfast height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9450')
 
 
+ETRS89 + Ceuta 2 height
+-----------------------
+
+| Used: Spain - Ceuta onshore.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_ETRS89_PLUS_CEUTA_2_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9506')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_ETRS89_PLUS_CEUTA_2_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9506')
+
+
 ETRS89 + Douglas height
 -----------------------
 
@@ -166,6 +231,19 @@ ETRS89 + Douglas height
     Compound::fromSRID('urn:ogc:def:crs:EPSG::9429')
     CoordinateReferenceSystem::fromSRID(Compound::EPSG_ETRS89_PLUS_DOUGLAS_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9429')
+
+
+ETRS89 + EVRF2000 Austria height
+--------------------------------
+
+| Used: Austria.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_ETRS89_PLUS_EVRF2000_AUSTRIA_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9500')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_ETRS89_PLUS_EVRF2000_AUSTRIA_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9500')
 
 
 ETRS89 + EVRF2000 height
@@ -224,6 +302,19 @@ ETRS89 + EVRF2019 mean-tide height
 
 See also ETRS89 + EVRF2019 (CRS code 9422).
 
+ETRS89 + Ibiza height
+---------------------
+
+| Used: Spain - Balearic Islands - Ibiza and Formentera - onshore.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_ETRS89_PLUS_IBIZA_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9507')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_ETRS89_PLUS_IBIZA_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9507')
+
+
 ETRS89 + LAT NL depth
 ---------------------
 
@@ -274,6 +365,32 @@ ETRS89 + Malin Head height
     Compound::fromSRID('urn:ogc:def:crs:EPSG::9449')
     CoordinateReferenceSystem::fromSRID(Compound::EPSG_ETRS89_PLUS_MALIN_HEAD_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9449')
+
+
+ETRS89 + Mallorca height
+------------------------
+
+| Used: Spain - Balearic Islands - Mallorca onshore.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_ETRS89_PLUS_MALLORCA_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9508')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_ETRS89_PLUS_MALLORCA_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9508')
+
+
+ETRS89 + Menorca height
+-----------------------
+
+| Used: Spain - Balearic Islands - Menorca onshore.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_ETRS89_PLUS_MENORCA_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9509')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_ETRS89_PLUS_MENORCA_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9509')
 
 
 ETRS89 + NAP height
@@ -1456,6 +1573,19 @@ ETRS89 / UTM zone 36N + NN54 height
 
 Replaced by ETRS89 / UTM zone 36N + NN2000 height (compound CRS code 5976).
 
+FEH2010 + FCSVR10 height
+------------------------
+
+| Used: Fehmarnbelt area of Denmark and Germany.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_FEH2010_PLUS_FCSVR10_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9519')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_FEH2010_PLUS_FCSVR10_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9519')
+
+
 FEH2010 / Fehmarnbelt TM + FCSVR10 height
 -----------------------------------------
 
@@ -1563,6 +1693,19 @@ HS2 Survey Grid + HS2-VRF height
 
 Realized by use of HS2TN15 transformation and HS2GM15 geoid model from ETRS89 OSNet v2009.
 
+ITRF2005 + SA LLD height
+------------------------
+
+| Used: South Africa - mainland onshore.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_ITRF2005_PLUS_SA_LLD_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9543')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_ITRF2005_PLUS_SA_LLD_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9543')
+
+
 JGD2000 + JGD2000 (vertical) height
 -----------------------------------
 
@@ -1604,6 +1747,32 @@ KKJ / Finland Uniform Coordinate System + N60 height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3901')
 
 Replaced by ETRS89 / TM35FIN(N,E) + N60 height (CRS code 3902).
+
+KSA-GRF17 + KSA-VRF14 height
+----------------------------
+
+| Used: Saudi Arabia - onshore.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_KSA_GRF17_PLUS_KSA_VRF14_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9520')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_KSA_GRF17_PLUS_KSA_VRF14_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9520')
+
+
+MGI + EVRF2000 Austria height
+-----------------------------
+
+| Used: Austria.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_MGI_PLUS_EVRF2000_AUSTRIA_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9501')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_MGI_PLUS_EVRF2000_AUSTRIA_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9501')
+
 
 MML07 Grid + ODN height
 -----------------------
@@ -3179,6 +3348,32 @@ NAD83(2011) + NAVD88 height
 
 Replaces NAD83(NSRS2007) + NAVD88 height
 
+NAD83(2011) + PRVD02 height
+---------------------------
+
+| Used: Puerto Rico - onshore.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_NAD83_2011_PLUS_PRVD02_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9522')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_NAD83_2011_PLUS_PRVD02_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9522')
+
+
+NAD83(2011) + VIVD09 height
+---------------------------
+
+| Used: US Virgin Islands - onshore - St Croix, St John, and St Thomas.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_NAD83_2011_PLUS_VIVD09_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9523')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_NAD83_2011_PLUS_VIVD09_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9523')
+
+
 NAD83(CSRS) + CGVD2013 height
 -----------------------------
 
@@ -3400,6 +3595,19 @@ NAD83(CSRS) / UTM zone 9N + CGVD2013 height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::6652')
 
 
+NAD83(CSRS)v6 + CGVD2013(CGG2013a) height
+-----------------------------------------
+
+| Used: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_NAD83_CSRS_V6_PLUS_CGVD2013_CGG2013A_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9544')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_NAD83_CSRS_V6_PLUS_CGVD2013_CGG2013A_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9544')
+
+
 NAD83(HARN) + NAVD88 height
 ---------------------------
 
@@ -3413,6 +3621,32 @@ NAD83(HARN) + NAVD88 height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5499')
 
 
+NAD83(MA11) + GUVD04 height
+---------------------------
+
+| Used: Guam - onshore.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_NAD83_MA11_PLUS_GUVD04_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9524')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_NAD83_MA11_PLUS_GUVD04_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9524')
+
+
+NAD83(MA11) + NMVD03 height
+---------------------------
+
+| Used: Northern Mariana Islands - onshore.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_NAD83_MA11_PLUS_NMVD03_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9525')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_NAD83_MA11_PLUS_NMVD03_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9525')
+
+
 NAD83(NSRS2007) + NAVD88 height
 -------------------------------
 
@@ -3424,6 +3658,19 @@ NAD83(NSRS2007) + NAVD88 height
     Compound::fromSRID('urn:ogc:def:crs:EPSG::5500')
     CoordinateReferenceSystem::fromSRID(Compound::EPSG_NAD83_NSRS2007_PLUS_NAVD88_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5500')
+
+
+NAD83(PA11) + ASVD02 height
+---------------------------
+
+| Used: American Samoa - Tutuila island.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_NAD83_PA11_PLUS_ASVD02_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9526')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_NAD83_PA11_PLUS_ASVD02_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9526')
 
 
 NTF (Paris) + NGF IGN69 height
@@ -3504,6 +3751,32 @@ NTF (Paris) / Lambert zone IV + NGF-IGN78 height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5708')
 
 
+NZGD2000 + NZVD2009 height
+--------------------------
+
+| Used: New Zealand - onshore and offshore. Includes Antipodes Islands, Auckland Islands, Bounty Islands, Chatham Islands, Cambell Island, Kermadec Islands, Raoul Island and Snares Islands.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_NZGD2000_PLUS_NZVD2009_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9527')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_NZGD2000_PLUS_NZVD2009_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9527')
+
+
+NZGD2000 + NZVD2016 height
+--------------------------
+
+| Used: New Zealand - onshore and offshore. Includes Antipodes Islands, Auckland Islands, Bounty Islands, Chatham Islands, Cambell Island, Kermadec Islands, Raoul Island and Snares Islands.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_NZGD2000_PLUS_NZVD2016_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9528')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_NZGD2000_PLUS_NZVD2016_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9528')
+
+
 OSGB 1936 / British National Grid + ODN height
 ----------------------------------------------
 
@@ -3517,6 +3790,19 @@ OSGB 1936 / British National Grid + ODN height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::7405')
 
 
+POSGAR 2007 + SRVN16 height
+---------------------------
+
+| Used: Argentina - onshore.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_POSGAR_2007_PLUS_SRVN16_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9521')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_POSGAR_2007_PLUS_SRVN16_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9521')
+
+
 PSHD93
 ------
 
@@ -3528,6 +3814,214 @@ PSHD93
     Compound::fromSRID('urn:ogc:def:crs:EPSG::7410')
     CoordinateReferenceSystem::fromSRID(Compound::EPSG_PSHD93)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::7410')
+
+
+REGCAN95 + El Hierro height
+---------------------------
+
+| Used: Spain - Canary Islands - El Hierro onshore.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_REGCAN95_PLUS_EL_HIERRO_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9510')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_REGCAN95_PLUS_EL_HIERRO_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9510')
+
+
+REGCAN95 + Fuerteventura height
+-------------------------------
+
+| Used: Spain - Canary Islands - Fuerteventura onshore.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_REGCAN95_PLUS_FUERTEVENTURA_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9511')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_REGCAN95_PLUS_FUERTEVENTURA_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9511')
+
+
+REGCAN95 + Gran Canaria height
+------------------------------
+
+| Used: Spain - Canary Islands - Gran Canaria onshore.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_REGCAN95_PLUS_GRAN_CANARIA_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9512')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_REGCAN95_PLUS_GRAN_CANARIA_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9512')
+
+
+REGCAN95 + La Gomera height
+---------------------------
+
+| Used: Spain - Canary Islands - La Gomera onshore.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_REGCAN95_PLUS_LA_GOMERA_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9513')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_REGCAN95_PLUS_LA_GOMERA_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9513')
+
+
+REGCAN95 + La Palma height
+--------------------------
+
+| Used: Spain - Canary Islands - La Palma onshore.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_REGCAN95_PLUS_LA_PALMA_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9514')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_REGCAN95_PLUS_LA_PALMA_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9514')
+
+
+REGCAN95 + Lanzarote height
+---------------------------
+
+| Used: Spain - Canary Islands - Lanzarote onshore.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_REGCAN95_PLUS_LANZAROTE_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9515')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_REGCAN95_PLUS_LANZAROTE_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9515')
+
+
+REGCAN95 + Tenerife height
+--------------------------
+
+| Used: Spain - Canary Islands - Tenerife onshore.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_REGCAN95_PLUS_TENERIFE_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9516')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_REGCAN95_PLUS_TENERIFE_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9516')
+
+
+RGAF09 + Guadeloupe 1988 height
+-------------------------------
+
+| Used: Guadeloupe - onshore - Basse-Terre and Grande-Terre.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_RGAF09_PLUS_GUADELOUPE_1988_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9531')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_RGAF09_PLUS_GUADELOUPE_1988_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9531')
+
+
+RGAF09 + IGN 1988 LS height
+---------------------------
+
+| Used: Guadeloupe - onshore - Les Saintes.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_RGAF09_PLUS_IGN_1988_LS_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9532')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_RGAF09_PLUS_IGN_1988_LS_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9532')
+
+
+RGAF09 + IGN 1988 MG height
+---------------------------
+
+| Used: Guadeloupe - onshore - Marie-Galante.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_RGAF09_PLUS_IGN_1988_MG_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9533')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_RGAF09_PLUS_IGN_1988_MG_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9533')
+
+
+RGAF09 + IGN 1988 SB height
+---------------------------
+
+| Used: Guadeloupe - onshore - St Barthelemy island.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_RGAF09_PLUS_IGN_1988_SB_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9534')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_RGAF09_PLUS_IGN_1988_SB_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9534')
+
+
+RGAF09 + IGN 1988 SM height
+---------------------------
+
+| Used: Guadeloupe - onshore - St Martin island.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_RGAF09_PLUS_IGN_1988_SM_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9535')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_RGAF09_PLUS_IGN_1988_SM_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9535')
+
+
+RGAF09 + IGN 2008 LD height
+---------------------------
+
+| Used: Guadeloupe - onshore - La Desirade.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_RGAF09_PLUS_IGN_2008_LD_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9536')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_RGAF09_PLUS_IGN_2008_LD_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9536')
+
+
+RGAF09 + Martinique 1987 height
+-------------------------------
+
+| Used: Martinique - onshore.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_RGAF09_PLUS_MARTINIQUE_1987_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9537')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_RGAF09_PLUS_MARTINIQUE_1987_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9537')
+
+
+RGF93 + NGF-IGN69 height
+------------------------
+
+| Used: France - mainland onshore.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_RGF93_PLUS_NGF_IGN69_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9538')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_RGF93_PLUS_NGF_IGN69_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9538')
+
+
+RGF93 + NGF-IGN78 height
+------------------------
+
+| Used: France - Corsica onshore.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_RGF93_PLUS_NGF_IGN78_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9539')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_RGF93_PLUS_NGF_IGN78_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9539')
 
 
 RGF93 / Lambert-93 + NGF-IGN69 height
@@ -3556,6 +4050,58 @@ RGF93 / Lambert-93 + NGF-IGN78 height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5699')
 
 
+RGFG95 + NGG1977 height
+-----------------------
+
+| Used: French Guiana - onshore.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_RGFG95_PLUS_NGG1977_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9530')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_RGFG95_PLUS_NGG1977_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9530')
+
+
+RGNC91-93 + NGNC08 height
+-------------------------
+
+| Used: New Caledonia - Belep, Grande Terre, Ile des Pins, Loyalty Islands (Lifou, Mare, Ouvea).
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_RGNC91_93_PLUS_NGNC08_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9540')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_RGNC91_93_PLUS_NGNC08_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9540')
+
+
+RGSPM06 + Danger 1950 height
+----------------------------
+
+| Used: St Pierre and Miquelon - onshore.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_RGSPM06_PLUS_DANGER_1950_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9541')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_RGSPM06_PLUS_DANGER_1950_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9541')
+
+
+RRAF 1991 + IGN 2008 LD height
+------------------------------
+
+| Used: Guadeloupe - onshore - La Desirade.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_RRAF_1991_PLUS_IGN_2008_LD_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9542')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_RRAF_1991_PLUS_IGN_2008_LD_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9542')
+
+
 RT90 + RH70 height
 ------------------
 
@@ -3570,6 +4116,19 @@ RT90 + RH70 height
 
 When combined with geoid model RN92 forms geographic 3D CRS RR92.
 
+SHGD2015 + SHVD2015 height
+--------------------------
+
+| Used: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_SHGD2015_PLUS_SHVD2015_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9517')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_SHGD2015_PLUS_SHVD2015_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9517')
+
+
 SHMG2015 + SHVD2015 height
 --------------------------
 
@@ -3581,6 +4140,19 @@ SHMG2015 + SHVD2015 height
     Compound::fromSRID('urn:ogc:def:crs:EPSG::7956')
     CoordinateReferenceSystem::fromSRID(Compound::EPSG_SHMG2015_PLUS_SHVD2015_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::7956')
+
+
+SRGI2013 + INAGeoid2020 height
+------------------------------
+
+| Used: Indonesia - onshore and offshore.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_SRGI2013_PLUS_INAGEOID2020_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9529')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_SRGI2013_PLUS_INAGEOID2020_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9529')
 
 
 SVY21 + SHD height
@@ -3844,6 +4416,46 @@ Tokyo + JSLD72 height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::6700')
 
 Replaced by JGD2000 + JGD2000 (vertical) (CRS code 6696) from April 2002).
+
+WGS 84 + EGM2008 height
+-----------------------
+
+| Used: World.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_WGS_84_PLUS_EGM2008_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9518')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_WGS_84_PLUS_EGM2008_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9518')
+
+
+WGS 84 + EGM96 height
+---------------------
+
+| Used: World.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_WGS_84_PLUS_EGM96_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9707')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_WGS_84_PLUS_EGM96_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9707')
+
+
+WGS 84 + MSL height
+-------------------
+
+| Used: World.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_WGS_84_PLUS_MSL_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9705')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_WGS_84_PLUS_MSL_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9705')
+
+Component vertical CRS is not specific to any location or epoch.
 
 WGS 84 / World Mercator + EGM2008 height
 ----------------------------------------

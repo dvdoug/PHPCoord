@@ -1054,6 +1054,13 @@ class Geocentric extends CoordinateReferenceSystem
     public const EPSG_RDN2008 = 'urn:ogc:def:crs:EPSG::6704';
 
     /**
+     * REDGEOMIN
+     * Extent: Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y
+     * Gomez.
+     */
+    public const EPSG_REDGEOMIN = 'urn:ogc:def:crs:EPSG::9694';
+
+    /**
      * REGCAN95
      * Extent: Spain - Canary Islands onshore and offshore.
      */
@@ -2417,6 +2424,11 @@ class Geocentric extends CoordinateReferenceSystem
             'name' => 'LTF2004(G)',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
             'datum' => 'urn:ogc:def:datum:EPSG::1295',
+        ],
+        'urn:ogc:def:crs:EPSG::9694' => [
+            'name' => 'REDGEOMIN',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1304',
         ],
     ];
 

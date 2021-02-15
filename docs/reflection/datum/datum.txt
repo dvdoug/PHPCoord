@@ -911,6 +911,21 @@ Densification of ETRS89 realised through network of 112 permanent GNSS reference
 
 Adopted as official Bulgarian reference datum through decree 153 of 2010-07-29.
 
+Bulgarian Height System 2005
+----------------------------
+
+| Type: Vertical
+| Used: Bulgaria - onshore.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_BULGARIAN_HEIGHT_SYSTEM_2005)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1300')
+
+Bulgarian realisation of EVRF2007. EVRF2007 heights of 58 points in Bulgaria held fixed.
+
+Uses Normal heights. Adopted as official Bulgarian height reference datum through decree 153 of 2010-07-29.
+
 CH1903
 ------
 
@@ -2024,6 +2039,21 @@ Densification of ETRS89 during EUREF-ESTONIA97 campaign through transformation f
 
 Replaces Estonia 1992 adjustment (code 6133).
 
+Estonian Height System 2000
+---------------------------
+
+| Type: Vertical
+| Used: Estonia - onshore.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_ESTONIAN_HEIGHT_SYSTEM_2000)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1298')
+
+Estonian realisation of EVRF2007. Relevelling observed  2004-2013 and reduced to epoch 2000 using the NKG2005LU empirical land uplift model. EVRF2007 height of Poltsamaa fundamental bench mark (H=55.2114m) held fixed.
+
+Uses Normal heights.
+
 European Datum 1950
 -------------------
 
@@ -2104,9 +2134,9 @@ European Terrestrial Reference Frame 1989
     Datum::fromSRID(Datum::EPSG_EUROPEAN_TERRESTRIAL_REFERENCE_FRAME_1989)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1178')
 
-Fixed to the stable part of the Eurasian continental plate at epoch 1989.0 and coincides with ITRF89 at epoch 1989.0. Defined by transformation from ITRF89 - see code 7932.
+Coincides with ITRF89 at epoch 1989.0. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the AM02 geophysical model.
 
-Replaced by ETRF90 (code 1179).
+Defined by transformation from ITRF89 (CT code 7932). Replaced by ETRF90 (datum code 1179).
 
 European Terrestrial Reference Frame 1990
 -----------------------------------------
@@ -2119,9 +2149,9 @@ European Terrestrial Reference Frame 1990
     Datum::fromSRID(Datum::EPSG_EUROPEAN_TERRESTRIAL_REFERENCE_FRAME_1990)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1179')
 
-Fixed to the stable part of the Eurasian continental plate at epoch 1989.0 and coincides with ITRF89 at epoch 1989.0. Defined by transformation from ITRF90 - see code 7933.
+Coincides with ITRF90 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3 translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the AM02 geophysical model.
 
-Replaces ETRF89 (code 1178). Replaced by ETRF91 (code 1180).
+Defined by transformation from ITRF90 (CT code 7933). Replaces ETRF89 (datum code 1178). Replaced by ETRF91 (datum code 1180).
 
 European Terrestrial Reference Frame 1991
 -----------------------------------------
@@ -2134,9 +2164,9 @@ European Terrestrial Reference Frame 1991
     Datum::fromSRID(Datum::EPSG_EUROPEAN_TERRESTRIAL_REFERENCE_FRAME_1991)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1180')
 
-Fixed to the stable part of the Eurasian continental plate at epoch 1989.0 and coincides with ITRF89 at epoch 1989.0. Defined by transformation from ITRF91 - see code 7934.
+Coincides with ITRF91 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3 translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the AM02 geophysical model.
 
-Replaces ETRF90 (code 1179). Replaced by ETRF92 (code 1181).
+Defined by transformation from ITRF91 (CT code 7934). Replaces ETRF90 (datum code 1179). Replaced by ETRF92 (datum code 1181).
 
 European Terrestrial Reference Frame 1992
 -----------------------------------------
@@ -2149,9 +2179,9 @@ European Terrestrial Reference Frame 1992
     Datum::fromSRID(Datum::EPSG_EUROPEAN_TERRESTRIAL_REFERENCE_FRAME_1992)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1181')
 
-Fixed to the stable part of the Eurasian continental plate at epoch 1989.0 and coincides with ITRF89 at epoch 1989.0. Defined by transformation from ITRF92 - see code 7935.
+Coincides with ITRF92 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3 translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the NNR-NUVEL-1 geophysical model.
 
-Replaces ETRF91 (code 1180). Replaced by ETRF93 (code 1182).
+Defined by transformation from ITRF92 (CT code 7935). Replaces ETRF91 (datum code 1180). Replaced by ETRF93 (datum code 1182).
 
 European Terrestrial Reference Frame 1993
 -----------------------------------------
@@ -2164,9 +2194,9 @@ European Terrestrial Reference Frame 1993
     Datum::fromSRID(Datum::EPSG_EUROPEAN_TERRESTRIAL_REFERENCE_FRAME_1993)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1182')
 
-Fixed to the stable part of the Eurasian continental plate at epoch 1989.0 and coincides with ITRF89 at epoch 1989.0. Defined by transformation from ITRF93 - see code 7936.
+Coincides with ITRF93 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3 translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the ITRF93 velocity field.
 
-Replaces ETRF92 (code 1181). Replaced by ETRF94 (code 1183).
+Defined by transformation from ITRF93 (CT code 7936). Replaces ETRF92 (datum code 1181). Replaced by ETRF94 (datum code 1183).
 
 European Terrestrial Reference Frame 1994
 -----------------------------------------
@@ -2179,9 +2209,9 @@ European Terrestrial Reference Frame 1994
     Datum::fromSRID(Datum::EPSG_EUROPEAN_TERRESTRIAL_REFERENCE_FRAME_1994)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1183')
 
-Fixed to the stable part of the Eurasian continental plate at epoch 1989.0 and coincides with ITRF89 at epoch 1989.0. Defined by transformation from ITRF94 - see code 7937.
+Coincides with ITRF94 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3 translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the NNR-NUVEL-1A geophysical model.
 
-Replaces ETRF93 (code 1182). Replaced by ETRF96 (code 1184).
+Defined by transformation from ITRF94 (CT code 7937). Replaces ETRF93 (datum code 1182). Replaced by ETRF96 (datum code 1184).
 
 European Terrestrial Reference Frame 1996
 -----------------------------------------
@@ -2194,9 +2224,9 @@ European Terrestrial Reference Frame 1996
     Datum::fromSRID(Datum::EPSG_EUROPEAN_TERRESTRIAL_REFERENCE_FRAME_1996)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1184')
 
-Fixed to the stable part of the Eurasian continental plate at epoch 1989.0 and coincides with ITRF89 at epoch 1989.0. Defined by transformation from ITRF96 - see code 7938.
+Coincides with ITRF96 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3 translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the NNR-NUVEL-1A geophysical model.
 
-Replaces ETRF94 (code 1183). Replaced by ETRF97 (code 1185).
+Defined by transformation from ITRF96 (CT code 7938). Replaces ETRF94 (datum code 1183). Replaced by ETRF97 (datum code 1185).
 
 European Terrestrial Reference Frame 1997
 -----------------------------------------
@@ -2209,9 +2239,9 @@ European Terrestrial Reference Frame 1997
     Datum::fromSRID(Datum::EPSG_EUROPEAN_TERRESTRIAL_REFERENCE_FRAME_1997)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1185')
 
-Fixed to the stable part of the Eurasian continental plate at epoch 1989.0 and coincides with ITRF89 at epoch 1989.0. Defined by transformation from ITRF97 - see code 7939.
+Coincides with ITRF97 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3 translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the NNR-NUVEL-1A geophysical model.
 
-Replaces ETRF96 (code 1184). Replaced by ETRF2000 (code 1186).
+Defined by transformation from ITRF97 (CT code 7939). Replaces ETRF96 (datum code 1184). Replaced by ETRF2000 (datum code 1186).
 
 European Terrestrial Reference Frame 2000
 -----------------------------------------
@@ -2224,9 +2254,9 @@ European Terrestrial Reference Frame 2000
     Datum::fromSRID(Datum::EPSG_EUROPEAN_TERRESTRIAL_REFERENCE_FRAME_2000)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1186')
 
-Fixed to the stable part of the Eurasian continental plate at epoch 1989.0 and coincides with ITRF89 at epoch 1989.0. Defined by transformation from ITRF2000 - see code 7940.
+Coincides with ITRF2000 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3 translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the ITRF2000 velocity field.
 
-Replaces ETRF97 (code 1185). On the publication of ETRF2005 (code 1204),  the EUREF Technical Working Group recommended that ETRF2000 be the realization of ETRS89. ETRF2014 (code 1206) is technically superior to all earlier realizations of ETRS89.
+Defined by transformation from ITRF2000 (CT 7940). Replaces ETRF97. On the publication of ETRF2005 the EUREF TWG recommended that ETRF2000 be the realization of ETRS89. ETRF2014 (code 1206) is technically superior to all earlier realizations of ETRS89.
 
 European Terrestrial Reference Frame 2005
 -----------------------------------------
@@ -2239,9 +2269,9 @@ European Terrestrial Reference Frame 2005
     Datum::fromSRID(Datum::EPSG_EUROPEAN_TERRESTRIAL_REFERENCE_FRAME_2005)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1204')
 
-Fixed to the stable part of the Eurasian continental plate at epoch 1989.0 and coincides with ITRF89 at epoch 1989.0. Defined by transformation from ITRF2005 - see code 5900.
+Coincides with ITRF2005 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3 translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the ITRF2005 velocity field.
 
-On publication in 2007 of this reference frame, the EUREF Technical Working Group recommended that ETRF2000 (EPSG code 1186) rather than this reference frame remained as the preferred realization of ETRS89. Replaced by ETRF2014 (code 1206).
+Defined by transformation from ITRF2005 (CT 5900). On publication in 2007 of this reference frame, the EUREF TWG recommended that ETRF2000 rather than this reference frame remained as the preferred realization of ETRS89. Replaced by ETRF2014 (code 1206).
 
 European Terrestrial Reference Frame 2014
 -----------------------------------------
@@ -2254,9 +2284,9 @@ European Terrestrial Reference Frame 2014
     Datum::fromSRID(Datum::EPSG_EUROPEAN_TERRESTRIAL_REFERENCE_FRAME_2014)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1206')
 
-Fixed to the stable part of the Eurasian continental plate at epoch 2014.0 and coincides with ITRF2014 at epoch 2010.0. Defined by transformation from ITRF2014 - see code 8366.
+Coincides with ITRF2014 at epoch 1989.0. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the ITRF2014 velocity field.
 
-Replaces ETRF2005 (code 1204). Technically superior to ETRF2000 (code 1186).
+Defined by transformation from ITRF2014 (CT code 8366). Replaces ETRF2005 (datum code 1204). Technically superior to ETRF2000 (datum code 1186).
 
 European Terrestrial Reference System 1989 ensemble
 ---------------------------------------------------
@@ -5216,6 +5246,21 @@ Lithuania 1994 (ETRS89)
 Constrained to 4 ETRS89 points in Lithuania from the EUREF Baltic 1992 campaign.
 
 Densification of ETRS89 during the 1992 Baltic campaign.
+
+Lithuanian Height System 2007
+-----------------------------
+
+| Type: Vertical
+| Used: Lithuania - onshore.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_LITHUANIAN_HEIGHT_SYSTEM_2007)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1299')
+
+Lithuanian realisation of EVRF2007. EVRF2007 heights of 10 points in Lithuania held fixed.
+
+Uses Normal heights.
 
 Little Cayman Vertical Datum 1961
 ---------------------------------
@@ -8584,6 +8629,19 @@ Fundamental point: Rauenberg. Latitude: 52°27'12.021"N, longitude: 13°22'04.92
 
 RD/83 is the realization of DHDN in Saxony. It is the resultant of applying a transformation derived at 106 points throughout former East Germany to Pulkovo 1942/83 points in Saxony.
 
+Red Geodesica Para Mineria en Chile
+-----------------------------------
+
+| Type: Dynamic geodetic
+| Used: Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_RED_GEODESICA_PARA_MINERIA_EN_CHILE)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1304')
+
+Realized through 26 stations in the IGS (SIRGAS-CON) active reference station network in Chile.
+
 Red Geodesica Venezolana
 ------------------------
 
@@ -9346,7 +9404,7 @@ SVY21
     Datum::fromSRID(Datum::EPSG_SVY21)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::6757')
 
-Fundamental point: Base 7 at Pierce Resevoir. Latitude: 1°22'02.9154"N, longitude: 103°49'31.9752"E (of Greenwich).
+Fundamental point: Base 7 at Pierce Reservoir. Latitude: 1°22'02.9154"N, longitude: 103°49'31.9752"E (of Greenwich).
 
 Replaces Kertau 1968 for cadastral purposes from August 2004.
 

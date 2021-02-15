@@ -37,6 +37,24 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_BELGE_1972_BELGIAN_LAMBERT_72_PLUS_OSTEND_HEIGHT = 'urn:ogc:def:crs:EPSG::6190';
 
     /**
+     * CIGD11 + CBVD61 height (ft)
+     * Extent: Cayman Islands - Cayman Brac.
+     */
+    public const EPSG_CIGD11_PLUS_CBVD61_HEIGHT_FT = 'urn:ogc:def:crs:EPSG::9502';
+
+    /**
+     * CIGD11 + GCVD54 height (ft)
+     * Extent: Cayman Islands - Grand Cayman.
+     */
+    public const EPSG_CIGD11_PLUS_GCVD54_HEIGHT_FT = 'urn:ogc:def:crs:EPSG::9503';
+
+    /**
+     * CIGD11 + LCVD61 height (ft)
+     * Extent: Cayman Islands - Little Cayman.
+     */
+    public const EPSG_CIGD11_PLUS_LCVD61_HEIGHT_FT = 'urn:ogc:def:crs:EPSG::9504';
+
+    /**
      * CR-SIRGAS / CRTM05 + DACR52 height
      * Extent: Costa Rica - onshore.
      * With geoid model and gravity, part of official national dynamic geodetic framework from April 2018.
@@ -69,6 +87,12 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_DB_REF_3_DEGREE_GAUSS_KRUGER_ZONE_5_E_N_PLUS_DHHN92_HEIGHT = 'urn:ogc:def:crs:EPSG::5835';
 
     /**
+     * ETRS89 + Alicante height
+     * Extent: Gibraltar - onshore; Spain - mainland onshore.
+     */
+    public const EPSG_ETRS89_PLUS_ALICANTE_HEIGHT = 'urn:ogc:def:crs:EPSG::9505';
+
+    /**
      * ETRS89 + BI height
      * Extent: United Kingdom (UK) - offshore to boundary of UKCS within 49°45'N to 61°N and 9°W to 2°E; onshore
      * Great Britain (England, Wales and Scotland) and Northern Ireland. Ireland onshore. Isle of Man onshore.
@@ -88,10 +112,22 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_ETRS89_PLUS_BELFAST_HEIGHT = 'urn:ogc:def:crs:EPSG::9450';
 
     /**
+     * ETRS89 + Ceuta 2 height
+     * Extent: Spain - Ceuta onshore.
+     */
+    public const EPSG_ETRS89_PLUS_CEUTA_2_HEIGHT = 'urn:ogc:def:crs:EPSG::9506';
+
+    /**
      * ETRS89 + Douglas height
      * Extent: Isle of Man - onshore.
      */
     public const EPSG_ETRS89_PLUS_DOUGLAS_HEIGHT = 'urn:ogc:def:crs:EPSG::9429';
+
+    /**
+     * ETRS89 + EVRF2000 Austria height
+     * Extent: Austria.
+     */
+    public const EPSG_ETRS89_PLUS_EVRF2000_AUSTRIA_HEIGHT = 'urn:ogc:def:crs:EPSG::9500';
 
     /**
      * ETRS89 + EVRF2000 height
@@ -138,6 +174,12 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_ETRS89_PLUS_EVRF2019_MEAN_TIDE_HEIGHT = 'urn:ogc:def:crs:EPSG::9423';
 
     /**
+     * ETRS89 + Ibiza height
+     * Extent: Spain - Balearic Islands - Ibiza and Formentera - onshore.
+     */
+    public const EPSG_ETRS89_PLUS_IBIZA_HEIGHT = 'urn:ogc:def:crs:EPSG::9507';
+
+    /**
      * ETRS89 + LAT NL depth
      * Extent: Netherlands - offshore North Sea.
      */
@@ -160,6 +202,18 @@ class Compound extends CoordinateReferenceSystem
      * Extent: Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore.
      */
     public const EPSG_ETRS89_PLUS_MALIN_HEAD_HEIGHT = 'urn:ogc:def:crs:EPSG::9449';
+
+    /**
+     * ETRS89 + Mallorca height
+     * Extent: Spain - Balearic Islands - Mallorca onshore.
+     */
+    public const EPSG_ETRS89_PLUS_MALLORCA_HEIGHT = 'urn:ogc:def:crs:EPSG::9508';
+
+    /**
+     * ETRS89 + Menorca height
+     * Extent: Spain - Balearic Islands - Menorca onshore.
+     */
+    public const EPSG_ETRS89_PLUS_MENORCA_HEIGHT = 'urn:ogc:def:crs:EPSG::9509';
 
     /**
      * ETRS89 + NAP height
@@ -728,6 +782,12 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_ETRS89_UTM_ZONE_36N_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6176';
 
     /**
+     * FEH2010 + FCSVR10 height
+     * Extent: Fehmarnbelt area of Denmark and Germany.
+     */
+    public const EPSG_FEH2010_PLUS_FCSVR10_HEIGHT = 'urn:ogc:def:crs:EPSG::9519';
+
+    /**
      * FEH2010 / Fehmarnbelt TM + FCSVR10 height
      * Extent: Fehmarnbelt area of Denmark and Germany.
      */
@@ -785,6 +845,12 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_HS2_SURVEY_GRID_PLUS_HS2_VRF_HEIGHT = 'urn:ogc:def:crs:EPSG::9306';
 
     /**
+     * ITRF2005 + SA LLD height
+     * Extent: South Africa - mainland onshore.
+     */
+    public const EPSG_ITRF2005_PLUS_SA_LLD_HEIGHT = 'urn:ogc:def:crs:EPSG::9543';
+
+    /**
      * JGD2000 + JGD2000 (vertical) height
      * Extent: Japan - onshore mainland - Hokkaido, Honshu, Shikoku, Kyushu.
      * Replaces Tokyo + JSLD69 height and Tokyo + JSLD72 height (CRS codes 7414 and 6700) from April 2002. Replaced by
@@ -805,6 +871,18 @@ class Compound extends CoordinateReferenceSystem
      * Replaced by ETRS89 / TM35FIN(N,E) + N60 height (CRS code 3902).
      */
     public const EPSG_KKJ_FINLAND_UNIFORM_COORDINATE_SYSTEM_PLUS_N60_HEIGHT = 'urn:ogc:def:crs:EPSG::3901';
+
+    /**
+     * KSA-GRF17 + KSA-VRF14 height
+     * Extent: Saudi Arabia - onshore.
+     */
+    public const EPSG_KSA_GRF17_PLUS_KSA_VRF14_HEIGHT = 'urn:ogc:def:crs:EPSG::9520';
+
+    /**
+     * MGI + EVRF2000 Austria height
+     * Extent: Austria.
+     */
+    public const EPSG_MGI_PLUS_EVRF2000_AUSTRIA_HEIGHT = 'urn:ogc:def:crs:EPSG::9501';
 
     /**
      * MML07 Grid + ODN height
@@ -1795,6 +1873,18 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_NAD83_2011_PLUS_NAVD88_HEIGHT = 'urn:ogc:def:crs:EPSG::6349';
 
     /**
+     * NAD83(2011) + PRVD02 height
+     * Extent: Puerto Rico - onshore.
+     */
+    public const EPSG_NAD83_2011_PLUS_PRVD02_HEIGHT = 'urn:ogc:def:crs:EPSG::9522';
+
+    /**
+     * NAD83(2011) + VIVD09 height
+     * Extent: US Virgin Islands - onshore - St Croix, St John, and St Thomas.
+     */
+    public const EPSG_NAD83_2011_PLUS_VIVD09_HEIGHT = 'urn:ogc:def:crs:EPSG::9523';
+
+    /**
      * NAD83(CSRS) + CGVD2013 height
      * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
      * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
@@ -1906,6 +1996,14 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_NAD83_CSRS_UTM_ZONE_9N_PLUS_CGVD2013_HEIGHT = 'urn:ogc:def:crs:EPSG::6652';
 
     /**
+     * NAD83(CSRS)v6 + CGVD2013(CGG2013a) height
+     * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
+     * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
+     * Yukon.
+     */
+    public const EPSG_NAD83_CSRS_V6_PLUS_CGVD2013_CGG2013A_HEIGHT = 'urn:ogc:def:crs:EPSG::9544';
+
+    /**
      * NAD83(HARN) + NAVD88 height
      * Extent: United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut;
      * Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland;
@@ -1917,6 +2015,18 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_NAD83_HARN_PLUS_NAVD88_HEIGHT = 'urn:ogc:def:crs:EPSG::5499';
 
     /**
+     * NAD83(MA11) + GUVD04 height
+     * Extent: Guam - onshore.
+     */
+    public const EPSG_NAD83_MA11_PLUS_GUVD04_HEIGHT = 'urn:ogc:def:crs:EPSG::9524';
+
+    /**
+     * NAD83(MA11) + NMVD03 height
+     * Extent: Northern Mariana Islands - onshore.
+     */
+    public const EPSG_NAD83_MA11_PLUS_NMVD03_HEIGHT = 'urn:ogc:def:crs:EPSG::9525';
+
+    /**
      * NAD83(NSRS2007) + NAVD88 height
      * Extent: United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut;
      * Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland;
@@ -1926,6 +2036,12 @@ class Compound extends CoordinateReferenceSystem
      * Wyoming.
      */
     public const EPSG_NAD83_NSRS2007_PLUS_NAVD88_HEIGHT = 'urn:ogc:def:crs:EPSG::5500';
+
+    /**
+     * NAD83(PA11) + ASVD02 height
+     * Extent: American Samoa - Tutuila island.
+     */
+    public const EPSG_NAD83_PA11_PLUS_ASVD02_HEIGHT = 'urn:ogc:def:crs:EPSG::9526';
 
     /**
      * NTF (Paris) + NGF IGN69 height
@@ -1964,6 +2080,20 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_NTF_PARIS_LAMBERT_ZONE_IV_PLUS_NGF_IGN78_HEIGHT = 'urn:ogc:def:crs:EPSG::5708';
 
     /**
+     * NZGD2000 + NZVD2009 height
+     * Extent: New Zealand - onshore and offshore. Includes Antipodes Islands, Auckland Islands, Bounty Islands,
+     * Chatham Islands, Cambell Island, Kermadec Islands, Raoul Island and Snares Islands.
+     */
+    public const EPSG_NZGD2000_PLUS_NZVD2009_HEIGHT = 'urn:ogc:def:crs:EPSG::9527';
+
+    /**
+     * NZGD2000 + NZVD2016 height
+     * Extent: New Zealand - onshore and offshore. Includes Antipodes Islands, Auckland Islands, Bounty Islands,
+     * Chatham Islands, Cambell Island, Kermadec Islands, Raoul Island and Snares Islands.
+     */
+    public const EPSG_NZGD2000_PLUS_NZVD2016_HEIGHT = 'urn:ogc:def:crs:EPSG::9528';
+
+    /**
      * OSGB 1936 / British National Grid + ODN height
      * Extent: United Kingdom (UK) - Great Britain onshore - England and Wales - mainland; Scotland - mainland and
      * Inner Hebrides.
@@ -1971,10 +2101,112 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_OSGB_1936_BRITISH_NATIONAL_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::7405';
 
     /**
+     * POSGAR 2007 + SRVN16 height
+     * Extent: Argentina - onshore.
+     */
+    public const EPSG_POSGAR_2007_PLUS_SRVN16_HEIGHT = 'urn:ogc:def:crs:EPSG::9521';
+
+    /**
      * PSHD93
      * Extent: Oman - onshore. Includes Musandam and the Kuria Muria (Al Hallaniyah) islands.
      */
     public const EPSG_PSHD93 = 'urn:ogc:def:crs:EPSG::7410';
+
+    /**
+     * REGCAN95 + El Hierro height
+     * Extent: Spain - Canary Islands - El Hierro onshore.
+     */
+    public const EPSG_REGCAN95_PLUS_EL_HIERRO_HEIGHT = 'urn:ogc:def:crs:EPSG::9510';
+
+    /**
+     * REGCAN95 + Fuerteventura height
+     * Extent: Spain - Canary Islands - Fuerteventura onshore.
+     */
+    public const EPSG_REGCAN95_PLUS_FUERTEVENTURA_HEIGHT = 'urn:ogc:def:crs:EPSG::9511';
+
+    /**
+     * REGCAN95 + Gran Canaria height
+     * Extent: Spain - Canary Islands - Gran Canaria onshore.
+     */
+    public const EPSG_REGCAN95_PLUS_GRAN_CANARIA_HEIGHT = 'urn:ogc:def:crs:EPSG::9512';
+
+    /**
+     * REGCAN95 + La Gomera height
+     * Extent: Spain - Canary Islands - La Gomera onshore.
+     */
+    public const EPSG_REGCAN95_PLUS_LA_GOMERA_HEIGHT = 'urn:ogc:def:crs:EPSG::9513';
+
+    /**
+     * REGCAN95 + La Palma height
+     * Extent: Spain - Canary Islands - La Palma onshore.
+     */
+    public const EPSG_REGCAN95_PLUS_LA_PALMA_HEIGHT = 'urn:ogc:def:crs:EPSG::9514';
+
+    /**
+     * REGCAN95 + Lanzarote height
+     * Extent: Spain - Canary Islands - Lanzarote onshore.
+     */
+    public const EPSG_REGCAN95_PLUS_LANZAROTE_HEIGHT = 'urn:ogc:def:crs:EPSG::9515';
+
+    /**
+     * REGCAN95 + Tenerife height
+     * Extent: Spain - Canary Islands - Tenerife onshore.
+     */
+    public const EPSG_REGCAN95_PLUS_TENERIFE_HEIGHT = 'urn:ogc:def:crs:EPSG::9516';
+
+    /**
+     * RGAF09 + Guadeloupe 1988 height
+     * Extent: Guadeloupe - onshore - Basse-Terre and Grande-Terre.
+     */
+    public const EPSG_RGAF09_PLUS_GUADELOUPE_1988_HEIGHT = 'urn:ogc:def:crs:EPSG::9531';
+
+    /**
+     * RGAF09 + IGN 1988 LS height
+     * Extent: Guadeloupe - onshore - Les Saintes.
+     */
+    public const EPSG_RGAF09_PLUS_IGN_1988_LS_HEIGHT = 'urn:ogc:def:crs:EPSG::9532';
+
+    /**
+     * RGAF09 + IGN 1988 MG height
+     * Extent: Guadeloupe - onshore - Marie-Galante.
+     */
+    public const EPSG_RGAF09_PLUS_IGN_1988_MG_HEIGHT = 'urn:ogc:def:crs:EPSG::9533';
+
+    /**
+     * RGAF09 + IGN 1988 SB height
+     * Extent: Guadeloupe - onshore - St Barthelemy island.
+     */
+    public const EPSG_RGAF09_PLUS_IGN_1988_SB_HEIGHT = 'urn:ogc:def:crs:EPSG::9534';
+
+    /**
+     * RGAF09 + IGN 1988 SM height
+     * Extent: Guadeloupe - onshore - St Martin island.
+     */
+    public const EPSG_RGAF09_PLUS_IGN_1988_SM_HEIGHT = 'urn:ogc:def:crs:EPSG::9535';
+
+    /**
+     * RGAF09 + IGN 2008 LD height
+     * Extent: Guadeloupe - onshore - La Desirade.
+     */
+    public const EPSG_RGAF09_PLUS_IGN_2008_LD_HEIGHT = 'urn:ogc:def:crs:EPSG::9536';
+
+    /**
+     * RGAF09 + Martinique 1987 height
+     * Extent: Martinique - onshore.
+     */
+    public const EPSG_RGAF09_PLUS_MARTINIQUE_1987_HEIGHT = 'urn:ogc:def:crs:EPSG::9537';
+
+    /**
+     * RGF93 + NGF-IGN69 height
+     * Extent: France - mainland onshore.
+     */
+    public const EPSG_RGF93_PLUS_NGF_IGN69_HEIGHT = 'urn:ogc:def:crs:EPSG::9538';
+
+    /**
+     * RGF93 + NGF-IGN78 height
+     * Extent: France - Corsica onshore.
+     */
+    public const EPSG_RGF93_PLUS_NGF_IGN78_HEIGHT = 'urn:ogc:def:crs:EPSG::9539';
 
     /**
      * RGF93 / Lambert-93 + NGF-IGN69 height
@@ -1989,6 +2221,30 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_RGF93_LAMBERT_93_PLUS_NGF_IGN78_HEIGHT = 'urn:ogc:def:crs:EPSG::5699';
 
     /**
+     * RGFG95 + NGG1977 height
+     * Extent: French Guiana - onshore.
+     */
+    public const EPSG_RGFG95_PLUS_NGG1977_HEIGHT = 'urn:ogc:def:crs:EPSG::9530';
+
+    /**
+     * RGNC91-93 + NGNC08 height
+     * Extent: New Caledonia - Belep, Grande Terre, Ile des Pins, Loyalty Islands (Lifou, Mare, Ouvea).
+     */
+    public const EPSG_RGNC91_93_PLUS_NGNC08_HEIGHT = 'urn:ogc:def:crs:EPSG::9540';
+
+    /**
+     * RGSPM06 + Danger 1950 height
+     * Extent: St Pierre and Miquelon - onshore.
+     */
+    public const EPSG_RGSPM06_PLUS_DANGER_1950_HEIGHT = 'urn:ogc:def:crs:EPSG::9541';
+
+    /**
+     * RRAF 1991 + IGN 2008 LD height
+     * Extent: Guadeloupe - onshore - La Desirade.
+     */
+    public const EPSG_RRAF_1991_PLUS_IGN_2008_LD_HEIGHT = 'urn:ogc:def:crs:EPSG::9542';
+
+    /**
      * RT90 + RH70 height
      * Extent: Sweden - onshore.
      * When combined with geoid model RN92 forms geographic 3D CRS RR92.
@@ -1996,10 +2252,22 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_RT90_PLUS_RH70_HEIGHT = 'urn:ogc:def:crs:EPSG::7404';
 
     /**
+     * SHGD2015 + SHVD2015 height
+     * Extent: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore.
+     */
+    public const EPSG_SHGD2015_PLUS_SHVD2015_HEIGHT = 'urn:ogc:def:crs:EPSG::9517';
+
+    /**
      * SHMG2015 + SHVD2015 height
      * Extent: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore.
      */
     public const EPSG_SHMG2015_PLUS_SHVD2015_HEIGHT = 'urn:ogc:def:crs:EPSG::7956';
+
+    /**
+     * SRGI2013 + INAGeoid2020 height
+     * Extent: Indonesia - onshore and offshore.
+     */
+    public const EPSG_SRGI2013_PLUS_INAGEOID2020_HEIGHT = 'urn:ogc:def:crs:EPSG::9529';
 
     /**
      * SVY21 + SHD height
@@ -2133,6 +2401,25 @@ class Compound extends CoordinateReferenceSystem
      * Replaced by JGD2000 + JGD2000 (vertical) (CRS code 6696) from April 2002).
      */
     public const EPSG_TOKYO_PLUS_JSLD72_HEIGHT = 'urn:ogc:def:crs:EPSG::6700';
+
+    /**
+     * WGS 84 + EGM2008 height
+     * Extent: World.
+     */
+    public const EPSG_WGS_84_PLUS_EGM2008_HEIGHT = 'urn:ogc:def:crs:EPSG::9518';
+
+    /**
+     * WGS 84 + EGM96 height
+     * Extent: World.
+     */
+    public const EPSG_WGS_84_PLUS_EGM96_HEIGHT = 'urn:ogc:def:crs:EPSG::9707';
+
+    /**
+     * WGS 84 + MSL height
+     * Extent: World.
+     * Component vertical CRS is not specific to any location or epoch.
+     */
+    public const EPSG_WGS_84_PLUS_MSL_HEIGHT = 'urn:ogc:def:crs:EPSG::9705';
 
     /**
      * WGS 84 / World Mercator + EGM2008 height
@@ -3900,6 +4187,288 @@ class Compound extends CoordinateReferenceSystem
             'horizontal_crs' => 'urn:ogc:def:crs:EPSG::4283',
             'horizontal_crs_type' => 'geographic 2D',
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5711',
+        ],
+        'urn:ogc:def:crs:EPSG::9500' => [
+            'name' => 'ETRS89 + EVRF2000 Austria height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::4258',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::9274',
+        ],
+        'urn:ogc:def:crs:EPSG::9501' => [
+            'name' => 'MGI + EVRF2000 Austria height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::4312',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::9274',
+        ],
+        'urn:ogc:def:crs:EPSG::9502' => [
+            'name' => 'CIGD11 + CBVD61 height (ft)',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::6135',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::6132',
+        ],
+        'urn:ogc:def:crs:EPSG::9503' => [
+            'name' => 'CIGD11 + GCVD54 height (ft)',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::6135',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::6130',
+        ],
+        'urn:ogc:def:crs:EPSG::9504' => [
+            'name' => 'CIGD11 + LCVD61 height (ft)',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::6135',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::6131',
+        ],
+        'urn:ogc:def:crs:EPSG::9505' => [
+            'name' => 'ETRS89 + Alicante height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::4258',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::5782',
+        ],
+        'urn:ogc:def:crs:EPSG::9506' => [
+            'name' => 'ETRS89 + Ceuta 2 height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::4258',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::9402',
+        ],
+        'urn:ogc:def:crs:EPSG::9507' => [
+            'name' => 'ETRS89 + Ibiza height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::4258',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::9394',
+        ],
+        'urn:ogc:def:crs:EPSG::9508' => [
+            'name' => 'ETRS89 + Mallorca height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::4258',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::9392',
+        ],
+        'urn:ogc:def:crs:EPSG::9509' => [
+            'name' => 'ETRS89 + Menorca height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::4258',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::9393',
+        ],
+        'urn:ogc:def:crs:EPSG::9510' => [
+            'name' => 'REGCAN95 + El Hierro height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::4081',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::9401',
+        ],
+        'urn:ogc:def:crs:EPSG::9511' => [
+            'name' => 'REGCAN95 + Fuerteventura height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::4081',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::9396',
+        ],
+        'urn:ogc:def:crs:EPSG::9512' => [
+            'name' => 'REGCAN95 + Gran Canaria height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::4081',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::9397',
+        ],
+        'urn:ogc:def:crs:EPSG::9513' => [
+            'name' => 'REGCAN95 + La Gomera height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::4081',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::9399',
+        ],
+        'urn:ogc:def:crs:EPSG::9514' => [
+            'name' => 'REGCAN95 + La Palma height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::4081',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::9400',
+        ],
+        'urn:ogc:def:crs:EPSG::9515' => [
+            'name' => 'REGCAN95 + Lanzarote height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::4081',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::9395',
+        ],
+        'urn:ogc:def:crs:EPSG::9516' => [
+            'name' => 'REGCAN95 + Tenerife height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::4081',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::9398',
+        ],
+        'urn:ogc:def:crs:EPSG::9517' => [
+            'name' => 'SHGD2015 + SHVD2015 height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::7886',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::7890',
+        ],
+        'urn:ogc:def:crs:EPSG::9518' => [
+            'name' => 'WGS 84 + EGM2008 height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::3855',
+        ],
+        'urn:ogc:def:crs:EPSG::9519' => [
+            'name' => 'FEH2010 + FCSVR10 height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::5593',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::5597',
+        ],
+        'urn:ogc:def:crs:EPSG::9520' => [
+            'name' => 'KSA-GRF17 + KSA-VRF14 height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::9333',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::9335',
+        ],
+        'urn:ogc:def:crs:EPSG::9521' => [
+            'name' => 'POSGAR 2007 + SRVN16 height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::5340',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::9255',
+        ],
+        'urn:ogc:def:crs:EPSG::9522' => [
+            'name' => 'NAD83(2011) + PRVD02 height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::6318',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::6641',
+        ],
+        'urn:ogc:def:crs:EPSG::9523' => [
+            'name' => 'NAD83(2011) + VIVD09 height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::6318',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::6642',
+        ],
+        'urn:ogc:def:crs:EPSG::9524' => [
+            'name' => 'NAD83(MA11) + GUVD04 height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::6325',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::6644',
+        ],
+        'urn:ogc:def:crs:EPSG::9525' => [
+            'name' => 'NAD83(MA11) + NMVD03 height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::6325',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::6640',
+        ],
+        'urn:ogc:def:crs:EPSG::9526' => [
+            'name' => 'NAD83(PA11) + ASVD02 height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::6322',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::6643',
+        ],
+        'urn:ogc:def:crs:EPSG::9527' => [
+            'name' => 'NZGD2000 + NZVD2009 height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::4167',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::4440',
+        ],
+        'urn:ogc:def:crs:EPSG::9528' => [
+            'name' => 'NZGD2000 + NZVD2016 height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::4167',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::7839',
+        ],
+        'urn:ogc:def:crs:EPSG::9529' => [
+            'name' => 'SRGI2013 + INAGeoid2020 height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::9470',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::9471',
+        ],
+        'urn:ogc:def:crs:EPSG::9530' => [
+            'name' => 'RGFG95 + NGG1977 height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::4624',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::5755',
+        ],
+        'urn:ogc:def:crs:EPSG::9531' => [
+            'name' => 'RGAF09 + Guadeloupe 1988 height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::5489',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::5757',
+        ],
+        'urn:ogc:def:crs:EPSG::9532' => [
+            'name' => 'RGAF09 + IGN 1988 LS height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::5489',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::5616',
+        ],
+        'urn:ogc:def:crs:EPSG::9533' => [
+            'name' => 'RGAF09 + IGN 1988 MG height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::5489',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::5617',
+        ],
+        'urn:ogc:def:crs:EPSG::9534' => [
+            'name' => 'RGAF09 + IGN 1988 SB height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::5489',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::5619',
+        ],
+        'urn:ogc:def:crs:EPSG::9535' => [
+            'name' => 'RGAF09 + IGN 1988 SM height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::5489',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::5620',
+        ],
+        'urn:ogc:def:crs:EPSG::9536' => [
+            'name' => 'RGAF09 + IGN 2008 LD height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::5489',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::9130',
+        ],
+        'urn:ogc:def:crs:EPSG::9537' => [
+            'name' => 'RGAF09 + Martinique 1987 height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::5489',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::5756',
+        ],
+        'urn:ogc:def:crs:EPSG::9538' => [
+            'name' => 'RGF93 + NGF-IGN69 height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::4171',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::5720',
+        ],
+        'urn:ogc:def:crs:EPSG::9539' => [
+            'name' => 'RGF93 + NGF-IGN78 height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::4171',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::5721',
+        ],
+        'urn:ogc:def:crs:EPSG::9540' => [
+            'name' => 'RGNC91-93 + NGNC08 height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::4749',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::9351',
+        ],
+        'urn:ogc:def:crs:EPSG::9541' => [
+            'name' => 'RGSPM06 + Danger 1950 height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::4463',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::5792',
+        ],
+        'urn:ogc:def:crs:EPSG::9542' => [
+            'name' => 'RRAF 1991 + IGN 2008 LD height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::4558',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::9130',
+        ],
+        'urn:ogc:def:crs:EPSG::9543' => [
+            'name' => 'ITRF2005 + SA LLD height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::8998',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::9279',
+        ],
+        'urn:ogc:def:crs:EPSG::9544' => [
+            'name' => 'NAD83(CSRS)v6 + CGVD2013(CGG2013a) height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::8252',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::9245',
+        ],
+        'urn:ogc:def:crs:EPSG::9705' => [
+            'name' => 'WGS 84 + MSL height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::5714',
+        ],
+        'urn:ogc:def:crs:EPSG::9707' => [
+            'name' => 'WGS 84 + EGM96 height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::5773',
         ],
     ];
 

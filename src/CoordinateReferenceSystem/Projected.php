@@ -29888,6 +29888,24 @@ class Projected extends CoordinateReferenceSystem
     public const EPSG_RDN2008_ZONE_12_N_E = 'urn:ogc:def:crs:EPSG::6876';
 
     /**
+     * REDGEOMIN / UTM zone 12S
+     * Extent: Chile - Easter Island onshore.
+     */
+    public const EPSG_REDGEOMIN_UTM_ZONE_12S = 'urn:ogc:def:crs:EPSG::9697';
+
+    /**
+     * REDGEOMIN / UTM zone 18S
+     * Extent: Chile - 78°W to 72°W, onshore and offshore.
+     */
+    public const EPSG_REDGEOMIN_UTM_ZONE_18S = 'urn:ogc:def:crs:EPSG::9698';
+
+    /**
+     * REDGEOMIN / UTM zone 19S
+     * Extent: Chile - 72°W to 66°W, onshore and offshore.
+     */
+    public const EPSG_REDGEOMIN_UTM_ZONE_19S = 'urn:ogc:def:crs:EPSG::9699';
+
+    /**
      * REGCAN95 / LAEA Europe
      * Extent: Spain - Canary Islands onshore and offshore.
      * At applicable scales and usages, may be considered consistent with ETRS89-extended / LAEA Europe (CRS code

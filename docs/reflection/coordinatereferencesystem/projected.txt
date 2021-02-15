@@ -51420,6 +51420,45 @@ RDN2008 / Zone 12 (N-E)
 
 Used in some Italian Departments whose territory falls in both UTM zones 32N and 33N (i.e. crosses the meridan of 12°E). See RDN2008 / Zone 12 (E-N) (CRS code 7795) for similar CRS with east-north axis order used for GIS purposes.
 
+REDGEOMIN / UTM zone 12S
+------------------------
+
+| Used: Chile - Easter Island onshore.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_REDGEOMIN_UTM_ZONE_12S)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9697')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_REDGEOMIN_UTM_ZONE_12S)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9697')
+
+
+REDGEOMIN / UTM zone 18S
+------------------------
+
+| Used: Chile - 78°W to 72°W, onshore and offshore.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_REDGEOMIN_UTM_ZONE_18S)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9698')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_REDGEOMIN_UTM_ZONE_18S)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9698')
+
+
+REDGEOMIN / UTM zone 19S
+------------------------
+
+| Used: Chile - 72°W to 66°W, onshore and offshore.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_REDGEOMIN_UTM_ZONE_19S)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9699')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_REDGEOMIN_UTM_ZONE_19S)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9699')
+
+
 REGCAN95 / LAEA Europe
 ----------------------
 
