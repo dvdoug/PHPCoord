@@ -11,6 +11,7 @@ namespace PHPCoord\CoordinateOperation;
 use function cos;
 use PHPCoord\Datum\Datum;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
+use PHPCoord\UnitOfMeasure\Angle\Degree;
 use PHPCoord\UnitOfMeasure\Angle\Radian;
 use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Length\Metre;
@@ -33,13 +34,11 @@ class GeographicValue
 
     public function __construct(Angle $latitude, Angle $longitude, ?Length $height, Datum $datum)
     {
-        $this->latitude = $latitude->asRadians();
-        $this->longitude = $longitude->asRadians();
+        $this->latitude = $this->normaliseLatitude($latitude)->asRadians();
+        $this->longitude = $this->normaliseLongitude($longitude)->asRadians();
         $this->datum = $datum;
 
-        if ($height) {
-            $this->height = $height->asMetres();
-        }
+        $this->height = $height ? $height->asMetres() : null;
     }
 
     public function getLatitude(): Radian
@@ -57,6 +56,11 @@ class GeographicValue
         return $this->height;
     }
 
+    public function getDatum(): Datum
+    {
+        return $this->datum;
+    }
+
     public function asGeocentricValue(): GeocentricValue
     {
         $a = $this->datum->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
@@ -71,5 +75,29 @@ class GeographicValue
         $z = ((1 - $e2) * $nu + $h) * sin($latitude);
 
         return new GeocentricValue(new Metre($x), new Metre($y), new Metre($z), $this->datum);
+    }
+
+    protected function normaliseLatitude(Angle $latitude): Angle
+    {
+        if ($latitude->asDegrees()->getValue() > 90) {
+            return new Degree(90);
+        }
+        if ($latitude->asDegrees()->getValue() < -90) {
+            return new Degree(-90);
+        }
+
+        return $latitude;
+    }
+
+    protected function normaliseLongitude(Angle $longitude): Angle
+    {
+        while ($longitude->asDegrees()->getValue() > 180) {
+            $longitude = $longitude->subtract(new Degree(360));
+        }
+        while ($longitude->asDegrees()->getValue() <= -180) {
+            $longitude = $longitude->add(new Degree(360));
+        }
+
+        return $longitude;
     }
 }

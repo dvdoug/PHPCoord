@@ -8993,7 +8993,7 @@ See Gulshan 303 / TM 90 NE (CRS code 3106) for topographic mapping and offshore 
 Gulshan 303 / TM 90 NE
 ----------------------
 
-| Used: Bangladesh - onshore.
+| Used: Bangladesh - onshore and offshore.
 
 .. code-block:: php
 

@@ -12,6 +12,7 @@ use function array_merge;
 use PHPCoord\CoordinateSystem\CoordinateSystem;
 use PHPCoord\Datum\Datum;
 use PHPCoord\Exception\UnknownCoordinateReferenceSystemException;
+use PHPCoord\Geometry\GeographicPolygon;
 
 abstract class CoordinateReferenceSystem
 {
@@ -47,6 +48,8 @@ abstract class CoordinateReferenceSystem
 
     protected Datum $datum;
 
+    protected GeographicPolygon $boundingBox;
+
     public function getSRID(): string
     {
         return $this->srid;
@@ -60,6 +63,11 @@ abstract class CoordinateReferenceSystem
     public function getDatum(): Datum
     {
         return $this->datum;
+    }
+
+    public function getBoundingBox(): GeographicPolygon
+    {
+        return $this->boundingBox;
     }
 
     public static function fromSRID(string $srid): self

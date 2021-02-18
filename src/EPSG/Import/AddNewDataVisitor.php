@@ -13,7 +13,6 @@ use function ksort;
 use PhpParser\BuilderFactory;
 use PhpParser\Node;
 use PhpParser\Node\Stmt\ClassLike;
-use PhpParser\NodeTraverser;
 use PhpParser\NodeVisitorAbstract;
 use const SORT_NATURAL;
 use function str_replace;
@@ -42,9 +41,8 @@ class AddNewDataVisitor extends NodeVisitorAbstract
         $factory = new BuilderFactory();
         if ($node instanceof ClassLike) {
             $property = $factory->property('sridData')->makeProtected()->makeStatic()->setType('array')->setDefault($this->data)->setDocComment('');
-            array_unshift($node->stmts, $property->getNode());
-
-            return NodeTraverser::STOP_TRAVERSAL;
+            $propertyNode = $property->getNode();
+            array_unshift($node->stmts, $propertyNode);
         }
 
         return null;

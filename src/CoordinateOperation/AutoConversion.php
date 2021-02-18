@@ -14,6 +14,7 @@ use DateTimeImmutable;
 use function in_array;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\Exception\UnknownConversionException;
+use PHPCoord\Geometry\GeographicPolygon;
 use PHPCoord\Point;
 use PHPCoord\UnitOfMeasure\Time\Year;
 use function reset;
@@ -56,20 +57,14 @@ trait AutoConversion
             }
         }
 
-        $asGeog = $this->asGeographicValue();
-        $lat = $asGeog->getLatitude()->asDegrees()->getValue();
-        $long = $asGeog->getLongitude()->asDegrees()->getValue();
-        $candidates = array_filter($candidates, function (array $candidate) use ($lat, $long, $ignoreBoundaryRestrictions) {
+        $candidates = array_filter($candidates, function (array $candidate) use ($ignoreBoundaryRestrictions) {
             $operation = CoordinateOperations::getOperationData($candidate['operation']);
             $ok = true;
 
             if (!$ignoreBoundaryRestrictions) {
                 //filter out operations that only operate outside this point
-                if ($operation['bounding_box']['east'] < $operation['bounding_box']['west']) {
-                    $ok = $ok && $lat <= $operation['bounding_box']['north'] && $lat >= $operation['bounding_box']['south'] && $long >= $operation['bounding_box']['west'] && $long <= ($operation['bounding_box']['east'] + 360);
-                } else {
-                    $ok = $ok && $lat <= $operation['bounding_box']['north'] && $lat >= $operation['bounding_box']['south'] && $long >= $operation['bounding_box']['west'] && $long <= $operation['bounding_box']['east'];
-                }
+                $polygon = GeographicPolygon::createFromArray($operation['bounding_box'], $operation['bounding_box_crosses_antimeridian']);
+                $ok = $ok && $polygon->containsPoint($this->asGeographicValue());
             }
 
             //filter out operations that require an epoch if we don't have one

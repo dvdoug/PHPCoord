@@ -14,6 +14,7 @@ use PHPCoord\CoordinateSystem\Cartesian;
 use PHPCoord\CoordinateSystem\CoordinateSystem;
 use PHPCoord\Datum\Datum;
 use PHPCoord\Exception\UnknownCoordinateReferenceSystemException;
+use PHPCoord\Geometry\GeographicPolygon;
 
 class Projected extends CoordinateReferenceSystem
 {
@@ -4713,7 +4714,7 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * Gulshan 303 / TM 90 NE
-     * Extent: Bangladesh - onshore.
+     * Extent: Bangladesh - onshore and offshore.
      * Used by Survey of Bangladesh from 1995 to 2009, after which replaced by WGS 84 / TM 90 NE (CRS code 9680). See
      * Gulshan 303 / BTM (code 9678) for other uses including water resource management.
      */
@@ -36805,14 +36806,16 @@ class Projected extends CoordinateReferenceSystem
         string $srid,
         CoordinateSystem $coordinateSystem,
         Datum $datum,
-        ?CoordinateReferenceSystem $baseCRS = null,
-        ?string $baseCRSConversionOperation = null
+        CoordinateReferenceSystem $baseCRS,
+        ?string $baseCRSConversionOperation,
+        GeographicPolygon $boundingBox
     ) {
         $this->srid = $srid;
         $this->coordinateSystem = $coordinateSystem;
         $this->datum = $datum;
         $this->baseCRS = $baseCRS;
         $this->baseCRSConversionOperation = $baseCRSConversionOperation;
+        $this->boundingBox = $boundingBox;
 
         assert(count($coordinateSystem->getAxes()) === 2);
     }
@@ -36840,7 +36843,8 @@ class Projected extends CoordinateReferenceSystem
             Cartesian::fromSRID($data['coordinate_system']),
             Datum::fromSRID($data['datum']),
             CoordinateReferenceSystem::fromSRID($data['base_crs']),
-            $data['conversion_operation']
+            $data['conversion_operation'],
+            GeographicPolygon::createFromArray($data['bounding_box'], $data['bounding_box_crosses_antimeridian']),
         );
     }
 

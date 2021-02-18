@@ -25,6 +25,7 @@ use PHPCoord\Datum\Datum;
 use PHPCoord\Datum\Ellipsoid;
 use PHPCoord\Exception\InvalidCoordinateReferenceSystemException;
 use PHPCoord\Exception\UnknownConversionException;
+use PHPCoord\Geometry\GeographicPolygon;
 use PHPCoord\UnitOfMeasure\Angle\ArcSecond;
 use PHPCoord\UnitOfMeasure\Angle\Degree;
 use PHPCoord\UnitOfMeasure\Angle\Grad;
@@ -551,8 +552,9 @@ class GeographicPointTest extends TestCase
                     new Metre(3)
                 ),
                 null,
-                null
-            )
+                null,
+            ),
+            GeographicPolygon::createWorld()
         );
         $from = GeographicPoint::create(new Degree(-20), new Degree(100), null, $fromCRS);
 
@@ -1100,12 +1102,8 @@ class GeographicPointTest extends TestCase
     public function testOperations(string $sourceCrsSrid, string $targetCrsSrid, string $operationSrid, bool $reversible): void
     {
         $operation = CoordinateOperations::getOperationData($operationSrid);
-        $latitude = new Degree(($operation['bounding_box']['north'] + $operation['bounding_box']['south']) / 2);
-
-        $longitude = new Degree(($operation['bounding_box']['west'] + $operation['bounding_box']['east']) / 2);
-        if ($operation['bounding_box']['east'] < $operation['bounding_box']['west'] && $longitude->getValue() <= 0) {
-            $longitude = $longitude->add(new Degree(180));
-        }
+        $boundingBox = GeographicPolygon::createFromArray($operation['bounding_box'], $operation['bounding_box_crosses_antimeridian']);
+        $centre = $boundingBox->getCentre();
 
         $sourceCRS = Geographic::fromSRID($sourceCrsSrid);
         $sourceHeight = $sourceCRS instanceof Geographic3D ? new Metre(0) : null;
@@ -1113,7 +1111,7 @@ class GeographicPointTest extends TestCase
 
         $epoch = new DateTime();
 
-        $originalPoint = GeographicPoint::create($latitude, $longitude, $sourceHeight, $sourceCRS, $epoch);
+        $originalPoint = GeographicPoint::create($centre[0], $centre[1], $sourceHeight, $sourceCRS, $epoch);
         $newPoint = $originalPoint->performOperation($operationSrid, $targetCRS, false);
         self::assertInstanceOf(Point::class, $newPoint);
         self::assertEquals($targetCRS, $newPoint->getCRS());

@@ -397,8 +397,8 @@ class EPSGImporter
                 d.origin_description || '\n' || d.remarks AS doc_help,
                 d.deprecated
             FROM epsg_datum d
-            LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_datum' AND u.object_code = d.datum_code
-            LEFT JOIN epsg_extent e ON u.extent_code = e.extent_code
+            JOIN epsg_usage u ON u.object_table_name = 'epsg_datum' AND u.object_code = d.datum_code
+            JOIN epsg_extent e ON u.extent_code = e.extent_code
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_datum' AND dep.object_code = d.datum_code AND dep.deprecation_date <= '2020-12-14'
             WHERE dep.deprecation_id IS NULL AND d.datum_type != 'engineering'
             GROUP BY d.datum_code
@@ -646,11 +646,15 @@ class EPSGImporter
                 'urn:ogc:def:crs:EPSG::' || crs.cmpd_vertcrs_code AS vertical_crs,
                 crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || crs.remarks AS constant_help,
                 e.extent_description AS extent,
+                e.bbox_north_bound_lat AS bbox_north_bound_latitude,
+                e.bbox_east_bound_lon AS bbox_east_bound_longitude,
+                e.bbox_south_bound_lat AS bbox_south_bound_latitude,
+                e.bbox_west_bound_lon AS bbox_west_bound_longitude,
                 crs.remarks AS doc_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
-            LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
-            LEFT JOIN epsg_extent e ON u.extent_code = e.extent_code
+            JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
+            JOIN epsg_extent e ON u.extent_code = e.extent_code
             JOIN epsg_coordinatereferencesystem horizontal ON horizontal.coord_ref_sys_code = crs.cmpd_horizcrs_code
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2020-12-14'
             WHERE dep.deprecation_id IS NULL AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%' AND crs.coord_ref_sys_name NOT LIKE '%mining%'
@@ -663,8 +667,19 @@ class EPSGImporter
         $result = $sqlite->query($sql);
         $data = [];
         while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            $row['bounding_box'] = [
+                [$row['bbox_west_bound_longitude'], $row['bbox_south_bound_latitude']],
+                [$row['bbox_west_bound_longitude'], $row['bbox_north_bound_latitude']],
+                [$row['bbox_east_bound_longitude'], $row['bbox_north_bound_latitude']],
+                [$row['bbox_east_bound_longitude'], $row['bbox_south_bound_latitude']],
+            ];
+            $row['bounding_box_crosses_antimeridian'] = $row['bbox_east_bound_longitude'] < $row['bbox_west_bound_longitude'];
             $data[$row['urn']] = $row;
             unset($data[$row['urn']]['urn']);
+            unset($data[$row['urn']]['bbox_north_bound_latitude']);
+            unset($data[$row['urn']]['bbox_east_bound_longitude']);
+            unset($data[$row['urn']]['bbox_south_bound_latitude']);
+            unset($data[$row['urn']]['bbox_west_bound_longitude']);
         }
 
         $this->updateFileData($this->sourceDir . '/CoordinateReferenceSystem/Compound.php', $data);
@@ -682,11 +697,15 @@ class EPSGImporter
                 'urn:ogc:def:datum:EPSG::' || COALESCE(crs.datum_code, crs_base.datum_code) AS datum,
                 crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || crs.remarks AS constant_help,
                 e.extent_description AS extent,
+                e.bbox_north_bound_lat AS bbox_north_bound_latitude,
+                e.bbox_east_bound_lon AS bbox_east_bound_longitude,
+                e.bbox_south_bound_lat AS bbox_south_bound_latitude,
+                e.bbox_west_bound_lon AS bbox_west_bound_longitude,
                 crs.remarks AS doc_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
-            LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
-            LEFT JOIN epsg_extent e ON u.extent_code = e.extent_code
+            JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
+            JOIN epsg_extent e ON u.extent_code = e.extent_code
             LEFT JOIN epsg_coordinatereferencesystem crs_base ON crs_base.coord_ref_sys_code = crs.base_crs_code
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2020-12-14'
             WHERE dep.deprecation_id IS NULL AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%' AND crs.coord_ref_sys_name NOT LIKE '%mining%'
@@ -699,8 +718,19 @@ class EPSGImporter
         $result = $sqlite->query($sql);
         $data = [];
         while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            $row['bounding_box'] = [
+                [$row['bbox_west_bound_longitude'], $row['bbox_south_bound_latitude']],
+                [$row['bbox_west_bound_longitude'], $row['bbox_north_bound_latitude']],
+                [$row['bbox_east_bound_longitude'], $row['bbox_north_bound_latitude']],
+                [$row['bbox_east_bound_longitude'], $row['bbox_south_bound_latitude']],
+            ];
+            $row['bounding_box_crosses_antimeridian'] = $row['bbox_east_bound_longitude'] < $row['bbox_west_bound_longitude'];
             $data[$row['urn']] = $row;
             unset($data[$row['urn']]['urn']);
+            unset($data[$row['urn']]['bbox_north_bound_latitude']);
+            unset($data[$row['urn']]['bbox_east_bound_longitude']);
+            unset($data[$row['urn']]['bbox_south_bound_latitude']);
+            unset($data[$row['urn']]['bbox_west_bound_longitude']);
         }
 
         $this->updateFileData($this->sourceDir . '/CoordinateReferenceSystem/Geocentric.php', $data);
@@ -718,11 +748,15 @@ class EPSGImporter
                 'urn:ogc:def:datum:EPSG::' || COALESCE(crs.datum_code, crs_base.datum_code) AS datum,
                 crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || crs.remarks AS constant_help,
                 e.extent_description AS extent,
+                e.bbox_north_bound_lat AS bbox_north_bound_latitude,
+                e.bbox_east_bound_lon AS bbox_east_bound_longitude,
+                e.bbox_south_bound_lat AS bbox_south_bound_latitude,
+                e.bbox_west_bound_lon AS bbox_west_bound_longitude,
                 crs.remarks AS doc_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
-            LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
-            LEFT JOIN epsg_extent e ON u.extent_code = e.extent_code
+            JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
+            JOIN epsg_extent e ON u.extent_code = e.extent_code
             LEFT JOIN epsg_coordinatereferencesystem crs_base ON crs_base.coord_ref_sys_code = crs.base_crs_code
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2020-12-14'
             WHERE dep.deprecation_id IS NULL AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%' AND crs.coord_ref_sys_name NOT LIKE '%mining%'
@@ -735,8 +769,19 @@ class EPSGImporter
         $result = $sqlite->query($sql);
         $data = [];
         while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            $row['bounding_box'] = [
+                [$row['bbox_west_bound_longitude'], $row['bbox_south_bound_latitude']],
+                [$row['bbox_west_bound_longitude'], $row['bbox_north_bound_latitude']],
+                [$row['bbox_east_bound_longitude'], $row['bbox_north_bound_latitude']],
+                [$row['bbox_east_bound_longitude'], $row['bbox_south_bound_latitude']],
+            ];
+            $row['bounding_box_crosses_antimeridian'] = $row['bbox_east_bound_longitude'] < $row['bbox_west_bound_longitude'];
             $data[$row['urn']] = $row;
             unset($data[$row['urn']]['urn']);
+            unset($data[$row['urn']]['bbox_north_bound_latitude']);
+            unset($data[$row['urn']]['bbox_east_bound_longitude']);
+            unset($data[$row['urn']]['bbox_south_bound_latitude']);
+            unset($data[$row['urn']]['bbox_west_bound_longitude']);
         }
 
         $this->updateFileData($this->sourceDir . '/CoordinateReferenceSystem/Geographic2D.php', $data);
@@ -754,11 +799,15 @@ class EPSGImporter
                 'urn:ogc:def:datum:EPSG::' || COALESCE(crs.datum_code, crs_base.datum_code) AS datum,
                 crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || crs.remarks AS constant_help,
                 e.extent_description AS extent,
+                e.bbox_north_bound_lat AS bbox_north_bound_latitude,
+                e.bbox_east_bound_lon AS bbox_east_bound_longitude,
+                e.bbox_south_bound_lat AS bbox_south_bound_latitude,
+                e.bbox_west_bound_lon AS bbox_west_bound_longitude,
                 crs.remarks AS doc_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
-            LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
-            LEFT JOIN epsg_extent e ON u.extent_code = e.extent_code
+            JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
+            JOIN epsg_extent e ON u.extent_code = e.extent_code
             LEFT JOIN epsg_coordinatereferencesystem crs_base ON crs_base.coord_ref_sys_code = crs.base_crs_code
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2020-12-14'
             WHERE dep.deprecation_id IS NULL AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%' AND crs.coord_ref_sys_name NOT LIKE '%mining%'
@@ -771,8 +820,19 @@ class EPSGImporter
         $result = $sqlite->query($sql);
         $data = [];
         while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            $row['bounding_box'] = [
+                [$row['bbox_west_bound_longitude'], $row['bbox_south_bound_latitude']],
+                [$row['bbox_west_bound_longitude'], $row['bbox_north_bound_latitude']],
+                [$row['bbox_east_bound_longitude'], $row['bbox_north_bound_latitude']],
+                [$row['bbox_east_bound_longitude'], $row['bbox_south_bound_latitude']],
+            ];
+            $row['bounding_box_crosses_antimeridian'] = $row['bbox_east_bound_longitude'] < $row['bbox_west_bound_longitude'];
             $data[$row['urn']] = $row;
             unset($data[$row['urn']]['urn']);
+            unset($data[$row['urn']]['bbox_north_bound_latitude']);
+            unset($data[$row['urn']]['bbox_east_bound_longitude']);
+            unset($data[$row['urn']]['bbox_south_bound_latitude']);
+            unset($data[$row['urn']]['bbox_west_bound_longitude']);
         }
 
         $this->updateFileData($this->sourceDir . '/CoordinateReferenceSystem/Geographic3D.php', $data);
@@ -792,11 +852,15 @@ class EPSGImporter
                 'urn:ogc:def:coordinateOperation:EPSG::' || crs.projection_conv_code AS conversion_operation,
                 crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || crs.remarks AS constant_help,
                 e.extent_description AS extent,
+                e.bbox_north_bound_lat AS bbox_north_bound_latitude,
+                e.bbox_east_bound_lon AS bbox_east_bound_longitude,
+                e.bbox_south_bound_lat AS bbox_south_bound_latitude,
+                e.bbox_west_bound_lon AS bbox_west_bound_longitude,
                 crs.remarks AS doc_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
-            LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
-            LEFT JOIN epsg_extent e ON u.extent_code = e.extent_code
+            JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
+            JOIN epsg_extent e ON u.extent_code = e.extent_code
             LEFT JOIN epsg_coordinatereferencesystem crs_base ON crs_base.coord_ref_sys_code = crs.base_crs_code
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2020-12-14'
             WHERE dep.deprecation_id IS NULL AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%' AND crs.coord_ref_sys_name NOT LIKE '%mining%'
@@ -809,8 +873,19 @@ class EPSGImporter
         $result = $sqlite->query($sql);
         $data = [];
         while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            $row['bounding_box'] = [
+                [$row['bbox_west_bound_longitude'], $row['bbox_south_bound_latitude']],
+                [$row['bbox_west_bound_longitude'], $row['bbox_north_bound_latitude']],
+                [$row['bbox_east_bound_longitude'], $row['bbox_north_bound_latitude']],
+                [$row['bbox_east_bound_longitude'], $row['bbox_south_bound_latitude']],
+            ];
+            $row['bounding_box_crosses_antimeridian'] = $row['bbox_east_bound_longitude'] < $row['bbox_west_bound_longitude'];
             $data[$row['urn']] = $row;
             unset($data[$row['urn']]['urn']);
+            unset($data[$row['urn']]['bbox_north_bound_latitude']);
+            unset($data[$row['urn']]['bbox_east_bound_longitude']);
+            unset($data[$row['urn']]['bbox_south_bound_latitude']);
+            unset($data[$row['urn']]['bbox_west_bound_longitude']);
         }
 
         $this->updateFileData($this->sourceDir . '/CoordinateReferenceSystem/ProjectedSRIDData.php', $data);
@@ -828,11 +903,15 @@ class EPSGImporter
                 'urn:ogc:def:datum:EPSG::' || COALESCE(crs.datum_code, crs_base.datum_code) AS datum,
                 crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || crs.remarks AS constant_help,
                 e.extent_description AS extent,
+                e.bbox_north_bound_lat AS bbox_north_bound_latitude,
+                e.bbox_east_bound_lon AS bbox_east_bound_longitude,
+                e.bbox_south_bound_lat AS bbox_south_bound_latitude,
+                e.bbox_west_bound_lon AS bbox_west_bound_longitude,
                 crs.remarks AS doc_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
-            LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
-            LEFT JOIN epsg_extent e ON u.extent_code = e.extent_code
+            JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
+            JOIN epsg_extent e ON u.extent_code = e.extent_code
             LEFT JOIN epsg_coordinatereferencesystem crs_base ON crs_base.coord_ref_sys_code = crs.base_crs_code
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2020-12-14'
             WHERE dep.deprecation_id IS NULL AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%' AND crs.coord_ref_sys_name NOT LIKE '%mining%'
@@ -845,8 +924,19 @@ class EPSGImporter
         $result = $sqlite->query($sql);
         $data = [];
         while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            $row['bounding_box'] = [
+                [$row['bbox_west_bound_longitude'], $row['bbox_south_bound_latitude']],
+                [$row['bbox_west_bound_longitude'], $row['bbox_north_bound_latitude']],
+                [$row['bbox_east_bound_longitude'], $row['bbox_north_bound_latitude']],
+                [$row['bbox_east_bound_longitude'], $row['bbox_south_bound_latitude']],
+            ];
+            $row['bounding_box_crosses_antimeridian'] = $row['bbox_east_bound_longitude'] < $row['bbox_west_bound_longitude'];
             $data[$row['urn']] = $row;
             unset($data[$row['urn']]['urn']);
+            unset($data[$row['urn']]['bbox_north_bound_latitude']);
+            unset($data[$row['urn']]['bbox_east_bound_longitude']);
+            unset($data[$row['urn']]['bbox_south_bound_latitude']);
+            unset($data[$row['urn']]['bbox_west_bound_longitude']);
         }
 
         $this->updateFileData($this->sourceDir . '/CoordinateReferenceSystem/Vertical.php', $data);
@@ -866,8 +956,8 @@ class EPSGImporter
                 crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || crs.remarks AS constant_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
-            LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
-            LEFT JOIN epsg_extent e ON u.extent_code = e.extent_code
+            JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
+            JOIN epsg_extent e ON u.extent_code = e.extent_code
             LEFT JOIN epsg_coordinatereferencesystem crs_base ON crs_base.coord_ref_sys_code = crs.base_crs_code
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2020-12-14'
             WHERE dep.deprecation_id IS NULL AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%' AND crs.coord_ref_sys_name NOT LIKE '%mining%'
@@ -935,8 +1025,8 @@ class EPSGImporter
             JOIN epsg_coordoperationmethod m ON m.coord_op_method_code = o.coord_op_method_code
             JOIN epsg_coordinatereferencesystem sourcecrs ON sourcecrs.coord_ref_sys_code = o.source_crs_code AND sourcecrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND sourcecrs.deprecated = 0
             JOIN epsg_coordinatereferencesystem targetcrs ON targetcrs.coord_ref_sys_code = o.target_crs_code AND targetcrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND targetcrs.deprecated = 0
-            LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordoperation' AND u.object_code = o.coord_op_code
-            LEFT JOIN epsg_extent e ON u.extent_code = e.extent_code
+            JOIN epsg_usage u ON u.object_table_name = 'epsg_coordoperation' AND u.object_code = o.coord_op_code
+            JOIN epsg_extent e ON u.extent_code = e.extent_code
             LEFT JOIN epsg_coordoperationparamvalue p ON p.coord_op_code = o.coord_op_code
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperation' AND dep.object_code = o.coord_op_code AND dep.deprecation_date <= '2020-12-14'
             WHERE o.coord_op_type != 'conversion' AND o.coord_op_name NOT LIKE '%example%' AND o.coord_op_name NOT LIKE '%mining%'
@@ -958,8 +1048,8 @@ class EPSGImporter
             FROM epsg_coordoperation o
             JOIN epsg_coordinatereferencesystem projcrs ON projcrs.projection_conv_code = o.coord_op_code AND projcrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND projcrs.deprecated = 0
             JOIN epsg_coordoperationmethod m ON m.coord_op_method_code = o.coord_op_method_code
-            LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordoperation' AND u.object_code = o.coord_op_code
-            LEFT JOIN epsg_extent e ON u.extent_code = e.extent_code
+            JOIN epsg_usage u ON u.object_table_name = 'epsg_coordoperation' AND u.object_code = o.coord_op_code
+            JOIN epsg_extent e ON u.extent_code = e.extent_code
             LEFT JOIN epsg_coordoperationparamvalue p ON p.coord_op_code = o.coord_op_code
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperation' AND dep.object_code = o.coord_op_code AND dep.deprecation_date <= '2020-12-14'
             WHERE o.coord_op_type = 'conversion' AND o.coord_op_name NOT LIKE '%example%' AND o.coord_op_name NOT LIKE '%mining%'
@@ -984,8 +1074,8 @@ class EPSGImporter
             LEFT JOIN epsg_coordoperationmethod cm ON co.coord_op_method_code = cm.coord_op_method_code
             JOIN epsg_coordinatereferencesystem sourcecrs ON sourcecrs.coord_ref_sys_code = o.source_crs_code AND sourcecrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND sourcecrs.deprecated = 0
             JOIN epsg_coordinatereferencesystem targetcrs ON targetcrs.coord_ref_sys_code = o.target_crs_code AND targetcrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND targetcrs.deprecated = 0
-            LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordoperation' AND u.object_code = o.coord_op_code
-            LEFT JOIN epsg_extent e ON u.extent_code = e.extent_code
+            JOIN epsg_usage u ON u.object_table_name = 'epsg_coordoperation' AND u.object_code = o.coord_op_code
+            JOIN epsg_extent e ON u.extent_code = e.extent_code
             LEFT JOIN epsg_coordoperationparamvalue p ON p.coord_op_code = co.coord_op_code
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperation' AND dep.object_code = o.coord_op_code AND dep.deprecation_date <= '2020-12-14'
             WHERE o.coord_op_type = 'concatenated operation' AND o.coord_op_name NOT LIKE '%example%' AND o.coord_op_name NOT LIKE '%mining%'
@@ -1019,8 +1109,8 @@ class EPSGImporter
             JOIN epsg_coordoperationmethod m ON m.coord_op_method_code = o.coord_op_method_code
             JOIN epsg_coordinatereferencesystem sourcecrs ON sourcecrs.coord_ref_sys_code = o.source_crs_code AND sourcecrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND sourcecrs.deprecated = 0
             JOIN epsg_coordinatereferencesystem targetcrs ON targetcrs.coord_ref_sys_code = o.target_crs_code AND targetcrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND targetcrs.deprecated = 0
-            LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordoperation' AND u.object_code = o.coord_op_code
-            LEFT JOIN epsg_extent e ON u.extent_code = e.extent_code
+            JOIN epsg_usage u ON u.object_table_name = 'epsg_coordoperation' AND u.object_code = o.coord_op_code
+            JOIN epsg_extent e ON u.extent_code = e.extent_code
             LEFT JOIN epsg_coordoperationparamvalue p ON p.coord_op_code = o.coord_op_code
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperation' AND dep.object_code = o.coord_op_code AND dep.deprecation_date <= '2020-12-14'
             WHERE o.coord_op_type != 'conversion' AND o.coord_op_type != 'concatenated operation' AND o.coord_op_name NOT LIKE '%example%'
@@ -1042,8 +1132,8 @@ class EPSGImporter
             FROM epsg_coordoperation o
             JOIN epsg_coordinatereferencesystem projcrs ON projcrs.projection_conv_code = o.coord_op_code AND projcrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND projcrs.deprecated = 0
             JOIN epsg_coordoperationmethod m ON m.coord_op_method_code = o.coord_op_method_code
-            LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordoperation' AND u.object_code = o.coord_op_code
-            LEFT JOIN epsg_extent e ON u.extent_code = e.extent_code
+            JOIN epsg_usage u ON u.object_table_name = 'epsg_coordoperation' AND u.object_code = o.coord_op_code
+            JOIN epsg_extent e ON u.extent_code = e.extent_code
             LEFT JOIN epsg_coordoperationparamvalue p ON p.coord_op_code = o.coord_op_code
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperation' AND dep.object_code = o.coord_op_code AND dep.deprecation_date <= '2020-12-14'
             WHERE o.coord_op_type = 'conversion' AND o.coord_op_name NOT LIKE '%example%'
@@ -1068,8 +1158,8 @@ class EPSGImporter
             LEFT JOIN epsg_coordoperationmethod cm ON co.coord_op_method_code = cm.coord_op_method_code
             JOIN epsg_coordinatereferencesystem sourcecrs ON sourcecrs.coord_ref_sys_code = o.source_crs_code AND sourcecrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND sourcecrs.deprecated = 0
             JOIN epsg_coordinatereferencesystem targetcrs ON targetcrs.coord_ref_sys_code = o.target_crs_code AND targetcrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND targetcrs.deprecated = 0
-            LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordoperation' AND u.object_code = o.coord_op_code
-            LEFT JOIN epsg_extent e ON u.extent_code = e.extent_code
+            JOIN epsg_usage u ON u.object_table_name = 'epsg_coordoperation' AND u.object_code = o.coord_op_code
+            JOIN epsg_extent e ON u.extent_code = e.extent_code
             LEFT JOIN epsg_coordoperationparamvalue p ON p.coord_op_code = co.coord_op_code
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperation' AND dep.object_code = o.coord_op_code AND dep.deprecation_date <= '2020-12-14'
             WHERE o.coord_op_type = 'concatenated operation' AND o.coord_op_name NOT LIKE '%example%'
@@ -1090,8 +1180,8 @@ class EPSGImporter
                 e.bbox_west_bound_lon AS bbox_west_bound_longitude
             FROM epsg_coordoperation o
             JOIN epsg_coordoperationpath p ON p.single_operation_code = o.coord_op_code
-            LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordoperation' AND u.object_code = o.coord_op_code
-            LEFT JOIN epsg_extent e ON u.extent_code = e.extent_code
+            JOIN epsg_usage u ON u.object_table_name = 'epsg_coordoperation' AND u.object_code = o.coord_op_code
+            JOIN epsg_extent e ON u.extent_code = e.extent_code
             LEFT JOIN epsg_coordoperationparamvalue p ON p.coord_op_code = o.coord_op_code
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperation' AND dep.object_code = o.coord_op_code AND dep.deprecation_date <= '2020-12-14'
             WHERE o.coord_op_name NOT LIKE '%example%'
@@ -1130,7 +1220,13 @@ class EPSGImporter
                 }
             }
 
-            $row['bounding_box'] = ['north' => $row['bbox_north_bound_latitude'], 'east' => $row['bbox_east_bound_longitude'], 'south' => $row['bbox_south_bound_latitude'], 'west' => $row['bbox_west_bound_longitude']];
+            $row['bounding_box'] = [
+                [$row['bbox_west_bound_longitude'], $row['bbox_south_bound_latitude']],
+                [$row['bbox_west_bound_longitude'], $row['bbox_north_bound_latitude']],
+                [$row['bbox_east_bound_longitude'], $row['bbox_north_bound_latitude']],
+                [$row['bbox_east_bound_longitude'], $row['bbox_south_bound_latitude']],
+            ];
+            $row['bounding_box_crosses_antimeridian'] = $row['bbox_east_bound_longitude'] < $row['bbox_west_bound_longitude'];
             $data[$row['urn']] = $row;
             unset($data[$row['urn']]['urn']);
             unset($data[$row['urn']]['type']);
@@ -1251,6 +1347,7 @@ class EPSGImporter
         if ($data) {
             $traverser = new NodeTraverser();
             $traverser->addVisitor(new AddNewDataVisitor($data));
+            $traverser->addVisitor(new PrettyPrintDataVisitor());
             $newStmts = $traverser->traverse($newStmts);
         }
 

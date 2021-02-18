@@ -20,6 +20,7 @@ use PHPCoord\CoordinateReferenceSystem\Geographic3D;
 use PHPCoord\CoordinateReferenceSystem\Projected;
 use PHPCoord\CoordinateReferenceSystem\Vertical;
 use PHPCoord\Exception\InvalidCoordinateReferenceSystemException;
+use PHPCoord\Geometry\GeographicPolygon;
 use PHPCoord\UnitOfMeasure\Angle\Degree;
 use PHPCoord\UnitOfMeasure\Angle\Radian;
 use PHPCoord\UnitOfMeasure\Length\Metre;
@@ -134,17 +135,14 @@ class CompoundPointTest extends TestCase
     public function testOperations(string $sourceCrsSrid, string $targetCrsSrid, string $operationSrid, bool $reversible): void
     {
         $operation = CoordinateOperations::getOperationData($operationSrid);
+        $boundingBox = GeographicPolygon::createFromArray($operation['bounding_box'], $operation['bounding_box_crosses_antimeridian']);
 
         $sourceCRS = Compound::fromSRID($sourceCrsSrid);
         $sourceHorizontalCRS = $sourceCRS->getHorizontal();
         if ($sourceHorizontalCRS instanceof Geographic2D) {
-            $latitude = new Degree(($operation['bounding_box']['north'] + $operation['bounding_box']['south']) / 2);
+            $centre = $boundingBox->getCentre();
 
-            $longitude = new Degree(($operation['bounding_box']['west'] + $operation['bounding_box']['east']) / 2);
-            if ($operation['bounding_box']['east'] < $operation['bounding_box']['west'] && $longitude->getValue() <= 0) {
-                $longitude = $longitude->add(new Degree(180));
-            }
-            $horizontalPoint = GeographicPoint::create($latitude, $longitude, null, $sourceHorizontalCRS);
+            $horizontalPoint = GeographicPoint::create($centre[0], $centre[1], null, $sourceHorizontalCRS);
         }
         $verticalCRS = $sourceCRS->getVertical();
         $verticalPoint = VerticalPoint::create(new Metre(0), $verticalCRS);

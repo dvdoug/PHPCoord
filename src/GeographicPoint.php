@@ -104,6 +104,9 @@ class GeographicPoint extends Point
 
         $this->crs = $crs;
 
+        $latitude = $this->normaliseLatitude($latitude);
+        $longitude = $this->normaliseLongitude($longitude);
+
         $this->latitude = Angle::convert($latitude, $this->getAxisByName(Axis::GEODETIC_LATITUDE)->getUnitOfMeasureId());
         $this->longitude = Angle::convert($longitude, $this->getAxisByName(Axis::GEODETIC_LONGITUDE)->getUnitOfMeasureId());
 
@@ -152,6 +155,30 @@ class GeographicPoint extends Point
     public function getCoordinateEpoch(): ?DateTimeImmutable
     {
         return $this->epoch;
+    }
+
+    protected function normaliseLatitude(Angle $latitude): Angle
+    {
+        if ($latitude->asDegrees()->getValue() > 90) {
+            return new Degree(90);
+        }
+        if ($latitude->asDegrees()->getValue() < -90) {
+            return new Degree(-90);
+        }
+
+        return $latitude;
+    }
+
+    protected function normaliseLongitude(Angle $longitude): Angle
+    {
+        while ($longitude->asDegrees()->getValue() > 180) {
+            $longitude = $longitude->subtract(new Degree(360));
+        }
+        while ($longitude->asDegrees()->getValue() <= -180) {
+            $longitude = $longitude->add(new Degree(360));
+        }
+
+        return $longitude;
     }
 
     /**
@@ -1594,9 +1621,6 @@ class GeographicPoint extends Point
         Angle $longitudeOffset
     ): self {
         $newLongitude = $this->longitude->add($longitudeOffset);
-        if ($newLongitude->asDegrees()->getValue() < -180) {
-            $newLongitude = $newLongitude->add(new Degree(360));
-        }
 
         return static::create($this->latitude, $newLongitude, $this->height, $to, $this->epoch);
     }
