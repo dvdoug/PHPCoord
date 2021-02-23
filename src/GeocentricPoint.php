@@ -12,8 +12,8 @@ use function abs;
 use DateTime;
 use DateTimeImmutable;
 use DateTimeInterface;
-use InvalidArgumentException;
 use PHPCoord\CoordinateOperation\AutoConversion;
+use PHPCoord\CoordinateOperation\ConvertiblePoint;
 use PHPCoord\CoordinateOperation\GeocentricValue;
 use PHPCoord\CoordinateOperation\GeographicValue;
 use PHPCoord\CoordinateReferenceSystem\Geocentric;
@@ -21,6 +21,7 @@ use PHPCoord\CoordinateReferenceSystem\Geographic;
 use PHPCoord\CoordinateReferenceSystem\Geographic3D;
 use PHPCoord\CoordinateSystem\Axis;
 use PHPCoord\Exception\InvalidCoordinateException;
+use PHPCoord\Exception\InvalidCoordinateReferenceSystemException;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPCoord\UnitOfMeasure\Angle\Radian;
 use PHPCoord\UnitOfMeasure\Length\Length;
@@ -35,7 +36,7 @@ use function sprintf;
 /**
  * Coordinate representing a point in ECEF geocentric form.
  */
-class GeocentricPoint extends Point
+class GeocentricPoint extends Point implements ConvertiblePoint
 {
     use AutoConversion;
 
@@ -117,11 +118,18 @@ class GeocentricPoint extends Point
      */
     public function calculateDistance(Point $to): Length
     {
-        if ($to->getCRS()->getSRID() !== $this->crs->getSRID()) {
-            throw new InvalidArgumentException('Can only calculate distances between two points in the same CRS');
-        }
+        try {
+            if ($to instanceof ConvertiblePoint) {
+                $to = $to->convert($this->crs);
+            }
+        } finally {
+            if ($to->getCRS()->getSRID() !== $this->crs->getSRID()) {
+                throw new InvalidCoordinateReferenceSystemException('Can only calculate distances between two points in the same CRS');
+            }
 
-        return static::vincenty($this->asGeographicValue(), $to->asGeographicValue(), $this->getCRS()->getDatum()->getEllipsoid());
+            /* @var GeocentricPoint $to */
+            return static::vincenty($this->asGeographicValue(), $to->asGeographicValue(), $this->getCRS()->getDatum()->getEllipsoid());
+        }
     }
 
     public function __toString(): string

@@ -848,8 +848,6 @@ class EPSGImporter
                 crs.coord_ref_sys_name AS name,
                 'urn:ogc:def:cs:EPSG::' || crs.coord_sys_code AS coordinate_system,
                 'urn:ogc:def:datum:EPSG::' || COALESCE(crs.datum_code, crs_base.datum_code) AS datum,
-                'urn:ogc:def:crs:EPSG::' || crs.base_crs_code AS base_crs,
-                'urn:ogc:def:coordinateOperation:EPSG::' || crs.projection_conv_code AS conversion_operation,
                 crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || crs.remarks AS constant_help,
                 e.extent_description AS extent,
                 e.bbox_north_bound_lat AS bbox_north_bound_latitude,
@@ -1015,10 +1013,8 @@ class EPSGImporter
             SELECT
                 'urn:ogc:def:coordinateOperation:EPSG::' || o.coord_op_code AS operation,
                 o.coord_op_name AS name,
-                o.coord_op_type AS type,
                 'urn:ogc:def:crs:EPSG::' || o.source_crs_code AS source_crs,
                 'urn:ogc:def:crs:EPSG::' || o.target_crs_code AS target_crs,
-                'urn:ogc:def:method:EPSG::' || o.coord_op_method_code AS method,
                 COALESCE(o.coord_op_accuracy, 0) AS accuracy,
                 m.reverse_op AS reversible
             FROM epsg_coordoperation o
@@ -1039,10 +1035,8 @@ class EPSGImporter
             SELECT
                 'urn:ogc:def:coordinateOperation:EPSG::' || o.coord_op_code AS operation,
                 o.coord_op_name AS name,
-                o.coord_op_type AS type,
                 'urn:ogc:def:crs:EPSG::' || projcrs.base_crs_code AS source_crs,
                 'urn:ogc:def:crs:EPSG::' || projcrs.coord_ref_sys_code AS target_crs,
-                'urn:ogc:def:method:EPSG::' || o.coord_op_method_code AS method,
                 COALESCE(o.coord_op_accuracy, 0) AS accuracy,
                 m.reverse_op AS reversible
             FROM epsg_coordoperation o
@@ -1062,10 +1056,8 @@ class EPSGImporter
             SELECT
                 'urn:ogc:def:coordinateOperation:EPSG::' || o.coord_op_code AS operation,
                 o.coord_op_name AS name,
-                o.coord_op_type AS type,
                 'urn:ogc:def:crs:EPSG::' || o.source_crs_code AS source_crs,
                 'urn:ogc:def:crs:EPSG::' || o.target_crs_code AS target_crs,
-                null AS method,
                 COALESCE(o.coord_op_accuracy, 0) AS accuracy,
                 CASE WHEN SUM(CASE WHEN cm.reverse_op = 0 THEN 1 ELSE 0 END) = 0 THEN 1 ELSE 0 END AS reversible
             FROM epsg_coordoperation o

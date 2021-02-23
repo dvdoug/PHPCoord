@@ -20,7 +20,6 @@ use DateTimeImmutable;
 use DateTimeInterface;
 use function get_class;
 use function implode;
-use InvalidArgumentException;
 use function is_nan;
 use function log;
 use const M_E;
@@ -28,6 +27,7 @@ use const M_PI;
 use function max;
 use PHPCoord\CoordinateOperation\AutoConversion;
 use PHPCoord\CoordinateOperation\ComplexNumber;
+use PHPCoord\CoordinateOperation\ConvertiblePoint;
 use PHPCoord\CoordinateOperation\GeocentricValue;
 use PHPCoord\CoordinateOperation\GeographicValue;
 use PHPCoord\CoordinateReferenceSystem\Compound;
@@ -59,7 +59,7 @@ use TypeError;
 /**
  * Coordinate representing a point on an ellipsoid.
  */
-class GeographicPoint extends Point
+class GeographicPoint extends Point implements ConvertiblePoint
 {
     use AutoConversion;
 
@@ -186,11 +186,18 @@ class GeographicPoint extends Point
      */
     public function calculateDistance(Point $to): Length
     {
-        if ($to->getCRS()->getSRID() !== $this->crs->getSRID()) {
-            throw new InvalidArgumentException('Can only calculate distances between two points in the same CRS');
-        }
+        try {
+            if ($to instanceof ConvertiblePoint) {
+                $to = $to->convert($this->crs);
+            }
+        } finally {
+            if ($to->getCRS()->getSRID() !== $this->crs->getSRID()) {
+                throw new InvalidCoordinateReferenceSystemException('Can only calculate distances between two points in the same CRS');
+            }
 
-        return static::vincenty($this->asGeographicValue(), $to->asGeographicValue(), $this->getCRS()->getDatum()->getEllipsoid());
+            /* @var GeographicPoint $to */
+            return static::vincenty($this->asGeographicValue(), $to->asGeographicValue(), $this->getCRS()->getDatum()->getEllipsoid());
+        }
     }
 
     public function __toString(): string

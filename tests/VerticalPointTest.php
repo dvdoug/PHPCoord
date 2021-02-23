@@ -11,6 +11,7 @@ namespace PHPCoord;
 use DateTime;
 use DateTimeImmutable;
 use PHPCoord\CoordinateOperation\CoordinateOperationMethods;
+use PHPCoord\CoordinateOperation\CoordinateOperations;
 use PHPCoord\CoordinateOperation\CRSTransformations;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\CoordinateReferenceSystem\Vertical;
@@ -117,8 +118,22 @@ class VerticalPointTest extends TestCase
         $toTest = [];
         $crss = Vertical::getSupportedSRIDs();
         foreach (CRSTransformations::getSupportedTransformations() as $transformation) {
-            if ($transformation['method'] === CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_AND_SLOPE) { // tested as part of CompoundPoint
-                continue;
+            $operation = CoordinateOperations::getOperationData($transformation['operation']);
+            if (isset($operation['operations'])) {
+                foreach ($operation['operations'] as $subOperation) {
+                    $subOperationData = CoordinateOperations::getOperationData($subOperation['operation']);
+                    $subOperationData['source_crs'] = $subOperation['source_crs'];
+                    $subOperationData['target_crs'] = $subOperation['target_crs'];
+                    $operations[$subOperation['operation']] = $subOperationData;
+                }
+            } else {
+                $operations[$transformation['operation']] = $operation;
+            }
+
+            foreach ($operations as $operation) {
+                if ($operation['method'] === CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_AND_SLOPE) { // tested as part of CompoundPoint
+                    continue 2;
+                }
             }
 
             if (isset($crss[$transformation['source_crs']])) {

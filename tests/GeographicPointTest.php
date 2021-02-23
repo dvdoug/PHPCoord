@@ -10,7 +10,6 @@ namespace PHPCoord;
 
 use DateTime;
 use DateTimeImmutable;
-use InvalidArgumentException;
 use PHPCoord\CoordinateOperation\CoordinateOperationMethods;
 use PHPCoord\CoordinateOperation\CoordinateOperations;
 use PHPCoord\CoordinateOperation\CRSTransformations;
@@ -20,11 +19,11 @@ use PHPCoord\CoordinateReferenceSystem\Geographic;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Geographic3D;
 use PHPCoord\CoordinateReferenceSystem\Projected;
+use PHPCoord\CoordinateReferenceSystem\Vertical;
 use PHPCoord\CoordinateSystem\Ellipsoidal;
 use PHPCoord\Datum\Datum;
 use PHPCoord\Datum\Ellipsoid;
 use PHPCoord\Exception\InvalidCoordinateReferenceSystemException;
-use PHPCoord\Exception\UnknownConversionException;
 use PHPCoord\Geometry\GeographicPolygon;
 use PHPCoord\UnitOfMeasure\Angle\ArcSecond;
 use PHPCoord\UnitOfMeasure\Angle\Degree;
@@ -221,9 +220,16 @@ class GeographicPointTest extends TestCase
 
     public function testDistanceDifferentCRSs(): void
     {
-        $this->expectException(InvalidArgumentException::class);
-        $from = GeographicPoint::create(new Degree(51.54105), new Degree(-0.12319), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
+        $from = GeographicPoint::create(new Degree(51.54105), new Degree(-0.12319), null, Geographic2D::fromSRID(Geographic2D::EPSG_OSGB_1936));
         $to = GeographicPoint::create(new Degree(51.507977), new Degree(-0.124588), null, Geographic2D::fromSRID(Geographic2D::EPSG_PZ_90));
+        self::assertEqualsWithDelta(3735.156, $from->calculateDistance($to)->getValue(), 0.001);
+    }
+
+    public function testDistanceDifferentCRSsNoAutoconversion(): void
+    {
+        $this->expectException(InvalidCoordinateReferenceSystemException::class);
+        $from = GeographicPoint::create(new Degree(51.54105), new Degree(-0.12319), null, Geographic2D::fromSRID(Geographic2D::EPSG_OSGB_1936));
+        $to = VerticalPoint::create(new Metre(10), Vertical::fromSRID(Vertical::EPSG_TENERIFE_HEIGHT));
         $from->calculateDistance($to);
     }
 
@@ -992,107 +998,6 @@ class GeographicPointTest extends TestCase
 
         self::assertEqualsWithDelta(42.649117, $to->getLatitude()->getValue(), 0.000001);
         self::assertEqualsWithDelta(-0.02665833, $to->getLongitude()->getValue(), 0.000001);
-    }
-
-    public function testAutoConversionWGS72ToWGS84(): void
-    {
-        $from = GeographicPoint::create(new Degree(55.0), new Degree(44.0), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_72));
-        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84);
-        $to = $from->convert($toCRS);
-
-        self::assertEqualsWithDelta(55.000025, $to->getLatitude()->getValue(), 0.000001);
-        self::assertEqualsWithDelta(44.000154, $to->getLongitude()->getValue(), 0.000001);
-        self::assertNull($to->getHeight());
-    }
-
-    public function testAutoConversionOSGB36ToBritishNationalGrid(): void
-    {
-        $from = GeographicPoint::create(new Degree(50.5), new Degree(0.5), null, Geographic2D::fromSRID(Geographic2D::EPSG_OSGB_1936));
-        $toCRS = Projected::fromSRID(Projected::EPSG_OSGB_1936_BRITISH_NATIONAL_GRID);
-        $to = $from->convert($toCRS);
-
-        self::assertEqualsWithDelta(577274.99, $to->getEasting()->asMetres()->getValue(), 0.01);
-        self::assertEqualsWithDelta(69740.50, $to->getNorthing()->asMetres()->getValue(), 0.01);
-    }
-
-    public function testAutoConversionNoop(): void
-    {
-        $from = GeographicPoint::create(new Degree(40.7127), new Degree(-74.0059), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
-        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84);
-        $to = $from->convert($toCRS);
-
-        self::assertSame($from, $to);
-    }
-
-    public function testAutoConversionVanuaLevuGrid(): void
-    {
-        $from = GeographicPoint::create(new Radian(-0.293938867), new Radian(3.141493807), null, Geographic2D::fromSRID(Geographic2D::EPSG_VANUA_LEVU_1915));
-        $toCRS = Projected::fromSRID(Projected::EPSG_VANUA_LEVU_1915_VANUA_LEVU_GRID);
-        $to = $from->convert($toCRS);
-
-        self::assertEqualsWithDelta(1601528.90, $to->getEasting()->getValue(), 0.1);
-        self::assertEqualsWithDelta(1336966.01, $to->getNorthing()->getValue(), 0.1);
-    }
-
-    public function testAutoConversionTM75ToETRS89(): void
-    {
-        $from = GeographicPoint::create(new Degree(55), new Degree(-6.5), null, Geographic2D::fromSRID(Geographic2D::EPSG_TM75));
-        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89);
-        $to = $from->convert($toCRS);
-
-        self::assertEqualsWithDelta(55.00002972, $to->getLatitude()->getValue(), 0.00000001);
-        self::assertEqualsWithDelta(-6.50094913, $to->getLongitude()->getValue(), 0.00000001);
-    }
-
-    public function testAutoConversionED50ToED87(): void
-    {
-        $from = GeographicPoint::create(new Degree(52.508333333), new Degree(2), null, Geographic2D::fromSRID(Geographic2D::EPSG_ED50));
-        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_ED87);
-        $to = $from->convert($toCRS);
-
-        self::assertEqualsWithDelta(52.508330203, $to->getLatitude()->getValue(), 0.00000001);
-        self::assertEqualsWithDelta(2.000009801, $to->getLongitude()->getValue(), 0.00000001);
-    }
-
-    public function testAutoConversionED87ToED50(): void
-    {
-        $from = GeographicPoint::create(new Degree(52.508330203), new Degree(2.000009801), null, Geographic2D::fromSRID(Geographic2D::EPSG_ED87));
-        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_ED50);
-        $to = $from->convert($toCRS);
-
-        self::assertEqualsWithDelta(52.508333333, $to->getLatitude()->getValue(), 0.00000001);
-        self::assertEqualsWithDelta(2, $to->getLongitude()->getValue(), 0.00000001);
-    }
-
-    // Issue #23
-    public function testBerlinPointPlacedIntoZone33WhenCalculatedAutomatically(): void
-    {
-        $from = GeographicPoint::create(new Degree(52.518590), new Degree(13.375520), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
-        $toCRS = Projected::fromSRID(Projected::EPSG_WGS_84_UTM_GRID_SYSTEM_NORTHERN_HEMISPHERE);
-        $to = $from->convert($toCRS);
-
-        self::assertEqualsWithDelta(33389776, $to->getEasting()->getValue(), 1);
-        self::assertEqualsWithDelta(5819959, $to->getNorthing()->getValue(), 1);
-    }
-
-    // Issue #23
-    public function testBerlinPointNotZone32(): void
-    {
-        $this->expectException(UnknownConversionException::class);
-        $from = GeographicPoint::create(new Degree(52.518590), new Degree(13.375520), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
-        $toCRS = Projected::fromSRID(Projected::EPSG_WGS_84_UTM_ZONE_32N);
-        $to = $from->convert($toCRS);
-    }
-
-    // Issue #23
-    public function testBerlinPointZone32WhenForced(): void
-    {
-        $from = GeographicPoint::create(new Degree(52.518590), new Degree(13.375520), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
-        $toCRS = Projected::fromSRID(Projected::EPSG_WGS_84_UTM_ZONE_32N);
-        $to = $from->convert($toCRS, true);
-
-        self::assertEqualsWithDelta(796823.561, $to->getEasting()->getValue(), 0.001);
-        self::assertEqualsWithDelta(5827721.404, $to->getNorthing()->getValue(), 0.001);
     }
 
     /**

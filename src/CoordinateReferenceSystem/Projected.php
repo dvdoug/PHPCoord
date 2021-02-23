@@ -36798,36 +36798,18 @@ class Projected extends CoordinateReferenceSystem
      */
     public const EPSG_FK89_FAROE_LAMBERT_FK89 = 'urn:ogc:def:crs:EPSG::3173';
 
-    protected ?CoordinateReferenceSystem $baseCRS;
-
-    protected ?string $baseCRSConversionOperation;
-
     public function __construct(
         string $srid,
         CoordinateSystem $coordinateSystem,
         Datum $datum,
-        CoordinateReferenceSystem $baseCRS,
-        ?string $baseCRSConversionOperation,
         GeographicPolygon $boundingBox
     ) {
         $this->srid = $srid;
         $this->coordinateSystem = $coordinateSystem;
         $this->datum = $datum;
-        $this->baseCRS = $baseCRS;
-        $this->baseCRSConversionOperation = $baseCRSConversionOperation;
         $this->boundingBox = $boundingBox;
 
         assert(count($coordinateSystem->getAxes()) === 2);
-    }
-
-    public function getBaseCRS(): ?CoordinateReferenceSystem
-    {
-        return $this->baseCRS;
-    }
-
-    public function getBaseCRSConversionOperation(): ?string
-    {
-        return $this->baseCRSConversionOperation;
     }
 
     public static function fromSRID(string $srid): self
@@ -36842,8 +36824,6 @@ class Projected extends CoordinateReferenceSystem
             $srid,
             Cartesian::fromSRID($data['coordinate_system']),
             Datum::fromSRID($data['datum']),
-            CoordinateReferenceSystem::fromSRID($data['base_crs']),
-            $data['conversion_operation'],
             GeographicPolygon::createFromArray($data['bounding_box'], $data['bounding_box_crosses_antimeridian']),
         );
     }

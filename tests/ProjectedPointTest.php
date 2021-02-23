@@ -81,8 +81,15 @@ class ProjectedPointTest extends TestCase
 
     public function testDistanceDifferentCRSEastingNorthing(): void
     {
-        $this->expectException(InvalidCoordinateReferenceSystemException::class);
         $from = ProjectedPoint::createFromEastingNorthing(new Metre(438700), new Metre(114800), Projected::fromSRID(Projected::EPSG_WGS_84_WORLD_MERCATOR));
+        $to = ProjectedPoint::createFromEastingNorthing(new Metre(533600), new Metre(180500), Projected::fromSRID(Projected::EPSG_WGS_84_PSEUDO_MERCATOR));
+        self::assertEqualsWithDelta(114739.81913, $from->calculateDistance($to)->getValue(), 0.000001);
+    }
+
+    public function testDistanceDifferentCRSNoAutoconversion(): void
+    {
+        $this->expectException(InvalidCoordinateReferenceSystemException::class);
+        $from = ProjectedPoint::createFromEastingNorthing(new Metre(438700), new Metre(114800), Projected::fromSRID(Projected::EPSG_IRENET95_IRISH_TRANSVERSE_MERCATOR));
         $to = ProjectedPoint::createFromEastingNorthing(new Metre(533600), new Metre(180500), Projected::fromSRID(Projected::EPSG_OSGB_1936_BRITISH_NATIONAL_GRID));
         $from->calculateDistance($to);
     }
@@ -110,7 +117,7 @@ class ProjectedPointTest extends TestCase
         self::assertEqualsWithDelta(115423.134596, $from->calculateDistance($to)->getValue(), 0.000001);
     }
 
-    public function testDistanceDifferentCRSWestingNorthing(): void
+    public function testDistanceDifferentCRSNoAutoconversionWestingNorthing(): void
     {
         $this->expectException(InvalidCoordinateReferenceSystemException::class);
         $from = ProjectedPoint::createFromWestingNorthing(new Metre(438700), new Metre(114800), Projected::fromSRID(Projected::EPSG_ETRS89_FAROE_LAMBERT));
@@ -141,7 +148,7 @@ class ProjectedPointTest extends TestCase
         self::assertEqualsWithDelta(115423.134596, $from->calculateDistance($to)->getValue(), 0.000001);
     }
 
-    public function testDistanceDifferentCRSWestingSouthing(): void
+    public function testDistanceDifferentCRSNoAutoconversionWestingSouthing(): void
     {
         $this->expectException(InvalidCoordinateReferenceSystemException::class);
         $from = ProjectedPoint::createFromWestingSouthing(new Metre(438700), new Metre(114800), Projected::fromSRID(Projected::EPSG_ST_STEPHEN_GRID_FERRO));
@@ -382,8 +389,6 @@ class ProjectedPointTest extends TestCase
                 null,
                 null,
             ),
-            Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84),
-            null,
             GeographicPolygon::createWorld(),
         );
         $from = ProjectedPoint::createFromEastingNorthing(new Metre(-3.2339303), new Metre(6.0257775), $fromCRS);
@@ -653,16 +658,6 @@ class ProjectedPointTest extends TestCase
 
         self::assertEqualsWithDelta(707155.557, $to->getEasting()->asMetres()->getValue(), 0.001);
         self::assertEqualsWithDelta(5819663.128, $to->getNorthing()->asMetres()->getValue(), 0.001);
-    }
-
-    public function testAutoConversionBritishNationalGridToOSGB(): void
-    {
-        $from = ProjectedPoint::createFromEastingNorthing(new Metre(577274.99), new Metre(69740.50), Projected::fromSRID(Projected::EPSG_OSGB_1936_BRITISH_NATIONAL_GRID));
-        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_OSGB_1936);
-        $to = $from->convert($toCRS);
-
-        self::assertEqualsWithDelta(50.5, $to->getLatitude()->getValue(), 0.0001);
-        self::assertEqualsWithDelta(0.5, $to->getLongitude()->getValue(), 0.0001);
     }
 
     /**

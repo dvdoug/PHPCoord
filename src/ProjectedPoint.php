@@ -27,7 +27,7 @@ use const M_PI_2;
 use function max;
 use PHPCoord\CoordinateOperation\AutoConversion;
 use PHPCoord\CoordinateOperation\ComplexNumber;
-use PHPCoord\CoordinateOperation\GeographicValue;
+use PHPCoord\CoordinateOperation\ConvertiblePoint;
 use PHPCoord\CoordinateReferenceSystem\Geographic;
 use PHPCoord\CoordinateReferenceSystem\Projected;
 use PHPCoord\CoordinateSystem\Axis;
@@ -52,7 +52,7 @@ use function tanh;
 /**
  * Coordinate representing a point on a map projection.
  */
-class ProjectedPoint extends Point
+class ProjectedPoint extends Point implements ConvertiblePoint
 {
     use AutoConversion;
 
@@ -189,17 +189,23 @@ class ProjectedPoint extends Point
      */
     public function calculateDistance(Point $to): Length
     {
-        if ($to->getCRS()->getSRID() !== $this->crs->getSRID()) {
-            throw new InvalidCoordinateReferenceSystemException('Can only calculate distances between two points in the same CRS');
-        }
+        try {
+            if ($to instanceof ConvertiblePoint) {
+                $to = $to->convert($this->crs);
+            }
+        } finally {
+            if ($to->getCRS()->getSRID() !== $this->crs->getSRID()) {
+                throw new InvalidCoordinateReferenceSystemException('Can only calculate distances between two points in the same CRS');
+            }
 
-        /* @var ProjectedPoint $to */
-        return new Metre(
-            sqrt(
-                ($to->getEasting()->getValue() - $this->getEasting()->getValue()) ** 2 +
-                ($to->getNorthing()->getValue() - $this->getNorthing()->getValue()) ** 2
-            )
-        );
+            /* @var ProjectedPoint $to */
+            return new Metre(
+                sqrt(
+                    ($to->getEasting()->getValue() - $this->getEasting()->getValue()) ** 2 +
+                    ($to->getNorthing()->getValue() - $this->getNorthing()->getValue()) ** 2
+                )
+            );
+        }
     }
 
     public function __toString(): string
@@ -2057,12 +2063,5 @@ class ProjectedPoint extends Point
             $to,
             $this->epoch
         );
-    }
-
-    public function asGeographicValue(): GeographicValue
-    {
-        $asGeographicPoint = $this->performOperation($this->getCRS()->getBaseCRSConversionOperation(), $this->getCRS()->getBaseCRS(), true);
-
-        return new GeographicValue($asGeographicPoint->getLatitude(), $asGeographicPoint->getLongitude(), null, $this->getCRS()->getDatum());
     }
 }

@@ -16,12 +16,10 @@ use PHPCoord\CoordinateReferenceSystem\Compound;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\CoordinateReferenceSystem\Geographic;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
-use PHPCoord\CoordinateReferenceSystem\Geographic3D;
 use PHPCoord\CoordinateReferenceSystem\Projected;
 use PHPCoord\CoordinateReferenceSystem\Vertical;
 use PHPCoord\Exception\InvalidCoordinateReferenceSystemException;
 use PHPCoord\Geometry\GeographicPolygon;
-use PHPCoord\UnitOfMeasure\Angle\Degree;
 use PHPCoord\UnitOfMeasure\Angle\Radian;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPUnit\Framework\TestCase;
@@ -117,17 +115,6 @@ class CompoundPointTest extends TestCase
         self::assertEqualsWithDelta(472.69, $to->getVerticalPoint()->getHeight()->asMetres()->getValue(), 0.001);
     }
 
-    public function testAutoConversionTokyoJSLDToWGS84(): void
-    {
-        $from = CompoundPoint::create(GeographicPoint::create(new Degree(35.689722), new Degree(139.692222), null, Geographic2D::fromSRID(Geographic2D::EPSG_TOKYO)), VerticalPoint::create(new Metre(100), Vertical::fromSRID(Vertical::EPSG_JSLD69_HEIGHT)), Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT));
-        $toCRS = Geographic3D::fromSRID(Geographic3D::EPSG_WGS_84);
-        $to = $from->convert($toCRS);
-
-        self::assertEqualsWithDelta(35.692958, $to->getLatitude()->getValue(), 0.000001);
-        self::assertEqualsWithDelta(139.689019, $to->getLongitude()->getValue(), 0.000001);
-        self::assertEqualsWithDelta(138.5, $to->getHeight()->getValue(), 0.001);
-    }
-
     /**
      * @group integration
      * @dataProvider supportedOperations
@@ -143,6 +130,8 @@ class CompoundPointTest extends TestCase
             $centre = $boundingBox->getCentre();
 
             $horizontalPoint = GeographicPoint::create($centre[0], $centre[1], null, $sourceHorizontalCRS);
+        } elseif ($sourceHorizontalCRS instanceof Geographic2D) {
+            $horizontalPoint = ProjectedPoint::create(new Metre(0), new Metre(0), new Metre(0), new Metre(0), $sourceHorizontalCRS);
         }
         $verticalCRS = $sourceCRS->getVertical();
         $verticalPoint = VerticalPoint::create(new Metre(0), $verticalCRS);

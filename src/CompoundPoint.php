@@ -13,7 +13,7 @@ use DateTime;
 use DateTimeImmutable;
 use DateTimeInterface;
 use PHPCoord\CoordinateOperation\AutoConversion;
-use PHPCoord\CoordinateOperation\GeographicValue;
+use PHPCoord\CoordinateOperation\ConvertiblePoint;
 use PHPCoord\CoordinateReferenceSystem\Compound;
 use PHPCoord\CoordinateReferenceSystem\Geographic3D;
 use PHPCoord\CoordinateReferenceSystem\Vertical;
@@ -27,7 +27,7 @@ use function sqrt;
 /**
  * Coordinate representing a point expressed in 2 different CRSs (2D horizontal + 1D Vertical).
  */
-class CompoundPoint extends Point
+class CompoundPoint extends Point implements ConvertiblePoint
 {
     use AutoConversion;
 
@@ -101,12 +101,18 @@ class CompoundPoint extends Point
      */
     public function calculateDistance(Point $to): Length
     {
-        if ($to->getCRS()->getSRID() !== $this->crs->getSRID()) {
-            throw new InvalidCoordinateReferenceSystemException('Can only calculate distances between two points in the same CRS');
-        }
+        try {
+            if ($to instanceof ConvertiblePoint) {
+                $to = $to->convert($this->crs);
+            }
+        } finally {
+            if ($to->getCRS()->getSRID() !== $this->crs->getSRID()) {
+                throw new InvalidCoordinateReferenceSystemException('Can only calculate distances between two points in the same CRS');
+            }
 
-        /* @var CompoundPoint $to */
-        return $this->horizontalPoint->calculateDistance($to->horizontalPoint);
+            /* @var CompoundPoint $to */
+            return $this->horizontalPoint->calculateDistance($to->horizontalPoint);
+        }
     }
 
     public function __toString(): string
@@ -163,10 +169,5 @@ class CompoundPoint extends Point
         $newVerticalPoint = VerticalPoint::create($newVerticalHeight, $to->getVertical());
 
         return static::create($this->horizontalPoint, $newVerticalPoint, $to);
-    }
-
-    public function asGeographicValue(): GeographicValue
-    {
-        return $this->horizontalPoint->asGeographicValue();
     }
 }
