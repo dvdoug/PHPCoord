@@ -14,10 +14,6 @@ namespace PHPCoord\CoordinateOperation;
  */
 class CRSTransformations
 {
-    protected static array $byCRS = [];
-
-    protected static array $byCRSPair = [];
-
     protected static array $sridData = [
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5166',
@@ -54148,6 +54144,10 @@ class CRSTransformations
             'reversible' => true,
         ],
     ];
+
+    protected static array $byCRS = [];
+
+    protected static array $byCRSPair = [];
 
     public static function getSupportedTransformations(): array
     {

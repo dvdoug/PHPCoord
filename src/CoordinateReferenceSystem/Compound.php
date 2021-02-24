@@ -5153,6 +5153,10 @@ class Compound extends CoordinateReferenceSystem
         ],
     ];
 
+    private static array $cachedObjects = [];
+
+    private static array $supportedCache = [];
+
     /**
      * @var Geocentric|Geographic|Projected
      */
@@ -5197,29 +5201,34 @@ class Compound extends CoordinateReferenceSystem
             throw new UnknownCoordinateReferenceSystemException($srid);
         }
 
-        $data = static::$sridData[$srid];
+        if (!isset(self::$cachedObjects[$srid])) {
+            $data = static::$sridData[$srid];
 
-        if (isset(Projected::getSupportedSRIDs()[$data['horizontal_crs']])) {
-            $horizontalCRS = Projected::fromSRID($data['horizontal_crs']);
-        } else {
-            $horizontalCRS = Geographic::fromSRID($data['horizontal_crs']);
+            if (isset(Projected::getSupportedSRIDs()[$data['horizontal_crs']])) {
+                $horizontalCRS = Projected::fromSRID($data['horizontal_crs']);
+            } else {
+                $horizontalCRS = Geographic::fromSRID($data['horizontal_crs']);
+            }
+
+            self::$cachedObjects[$srid] = new self(
+                $srid,
+                $horizontalCRS,
+                Vertical::fromSRID($data['vertical_crs']),
+                GeographicPolygon::createFromArray($data['bounding_box'], $data['bounding_box_crosses_antimeridian']),
+            );
         }
 
-        return new self(
-            $srid,
-            $horizontalCRS,
-            Vertical::fromSRID($data['vertical_crs']),
-            GeographicPolygon::createFromArray($data['bounding_box'], $data['bounding_box_crosses_antimeridian']),
-        );
+        return self::$cachedObjects[$srid];
     }
 
     public static function getSupportedSRIDs(): array
     {
-        $supported = [];
-        foreach (static::$sridData as $srid => $data) {
-            $supported[$srid] = $data['name'];
+        if (!self::$supportedCache) {
+            foreach (static::$sridData as $srid => $data) {
+                self::$supportedCache[$srid] = $data['name'];
+            }
         }
 
-        return $supported;
+        return self::$supportedCache;
     }
 }

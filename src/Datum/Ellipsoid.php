@@ -655,6 +655,8 @@ class Ellipsoid
         ],
     ];
 
+    private static array $cachedObjects = [];
+
     protected Length $semiMajorAxis;
 
     protected Length $semiMinorAxis;
@@ -696,12 +698,16 @@ class Ellipsoid
             throw new UnknownEllipsoidException($srid);
         }
 
-        $data = static::$sridData[$srid];
+        if (!isset(self::$cachedObjects[$srid])) {
+            $data = static::$sridData[$srid];
 
-        return new static(
-            Length::makeUnit($data['semi_major_axis'], $data['uom']),
-            Length::makeUnit($data['semi_minor_axis'], $data['uom'])
-        );
+            self::$cachedObjects[$srid] = new static(
+                Length::makeUnit($data['semi_major_axis'], $data['uom']),
+                Length::makeUnit($data['semi_minor_axis'], $data['uom'])
+            );
+        }
+
+        return self::$cachedObjects[$srid];
     }
 
     public static function getSupportedSRIDs(): array

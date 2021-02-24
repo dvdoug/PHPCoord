@@ -13867,6 +13867,8 @@ class Datum
 
     public const DATUM_TYPE_ENSEMBLE = 'ensemble';
 
+    private static array $cachedObjects = [];
+
     protected string $datumType;
 
     protected ?Ellipsoid $ellipsoid;
@@ -13913,27 +13915,31 @@ class Datum
             throw new UnknownDatumException($srid);
         }
 
-        $data = static::$sridData[$srid];
+        if (!isset(self::$cachedObjects[$srid])) {
+            $data = static::$sridData[$srid];
 
-        if ($data['type'] === self::DATUM_TYPE_ENSEMBLE) { // if ensemble, use latest realisation
-            return static::fromSRID(end(static::$sridData[$srid]['ensemble']));
-        }
+            if ($data['type'] === self::DATUM_TYPE_ENSEMBLE) { // if ensemble, use latest realisation
+                return static::fromSRID(end(static::$sridData[$srid]['ensemble']));
+            }
 
-        if ($data['ellipsoid']) {
-            return new static(
+            if ($data['ellipsoid']) {
+                return new static(
+                    $data['type'],
+                    Ellipsoid::fromSRID($data['ellipsoid']),
+                    PrimeMeridian::fromSRID($data['prime_meridian']),
+                    $data['frame_reference_epoch'],
+                );
+            }
+
+            self::$cachedObjects[$srid] = new static(
                 $data['type'],
-                Ellipsoid::fromSRID($data['ellipsoid']),
-                PrimeMeridian::fromSRID($data['prime_meridian']),
+                null,
+                null,
                 $data['frame_reference_epoch'],
             );
         }
 
-        return new static(
-            $data['type'],
-            null,
-            null,
-            $data['frame_reference_epoch'],
-        );
+        return self::$cachedObjects[$srid];
     }
 
     public static function getSupportedSRIDs(): array

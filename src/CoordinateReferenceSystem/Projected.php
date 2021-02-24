@@ -36798,6 +36798,10 @@ class Projected extends CoordinateReferenceSystem
      */
     public const EPSG_FK89_FAROE_LAMBERT_FK89 = 'urn:ogc:def:crs:EPSG::3173';
 
+    private static array $cachedObjects = [];
+
+    private static array $supportedCache = [];
+
     public function __construct(
         string $srid,
         CoordinateSystem $coordinateSystem,
@@ -36818,23 +36822,28 @@ class Projected extends CoordinateReferenceSystem
             throw new UnknownCoordinateReferenceSystemException($srid);
         }
 
-        $data = static::$sridData[$srid];
+        if (!isset(self::$cachedObjects[$srid])) {
+            $data = static::$sridData[$srid];
 
-        return new self(
-            $srid,
-            Cartesian::fromSRID($data['coordinate_system']),
-            Datum::fromSRID($data['datum']),
-            GeographicPolygon::createFromArray($data['bounding_box'], $data['bounding_box_crosses_antimeridian']),
-        );
+            self::$cachedObjects[$srid] = new self(
+                $srid,
+                Cartesian::fromSRID($data['coordinate_system']),
+                Datum::fromSRID($data['datum']),
+                GeographicPolygon::createFromArray($data['bounding_box'], $data['bounding_box_crosses_antimeridian']),
+            );
+        }
+
+        return self::$cachedObjects[$srid];
     }
 
     public static function getSupportedSRIDs(): array
     {
-        $supported = [];
-        foreach (static::$sridData as $srid => $data) {
-            $supported[$srid] = $data['name'];
+        if (!self::$supportedCache) {
+            foreach (static::$sridData as $srid => $data) {
+                self::$supportedCache[$srid] = $data['name'];
+            }
         }
 
-        return $supported;
+        return self::$supportedCache;
     }
 }

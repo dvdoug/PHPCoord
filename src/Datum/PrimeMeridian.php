@@ -169,6 +169,8 @@ class PrimeMeridian
         ],
     ];
 
+    private static array $cachedObjects = [];
+
     private string $name;
 
     private Angle $greenwichLongitude;
@@ -195,9 +197,13 @@ class PrimeMeridian
             throw new UnknownPrimeMeridianException($srid);
         }
 
-        $data = static::$sridData[$srid];
+        if (!isset(self::$cachedObjects[$srid])) {
+            $data = static::$sridData[$srid];
 
-        return new static($data['name'], Angle::makeUnit($data['greenwich_longitude'], $data['uom']));
+            self::$cachedObjects[$srid] = new static($data['name'], Angle::makeUnit($data['greenwich_longitude'], $data['uom']));
+        }
+
+        return self::$cachedObjects[$srid];
     }
 
     public static function getSupportedSRIDs(): array

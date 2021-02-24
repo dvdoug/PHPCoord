@@ -141,25 +141,31 @@ class Vertical extends CoordinateSystem
         ],
     ];
 
+    private static array $cachedObjects = [];
+
     public static function fromSRID(string $srid): self
     {
         if (!isset(static::$sridData[$srid])) {
             throw new UnknownCoordinateSystemException($srid);
         }
 
-        $data = static::$sridData[$srid];
+        if (!isset(self::$cachedObjects[$srid])) {
+            $data = static::$sridData[$srid];
 
-        $axes = [];
-        foreach ($data['axes'] as $axisData) {
-            $axes[] = new Axis(
-                $axisData['orientation'],
-                $axisData['abbreviation'],
-                $axisData['name'],
-                $axisData['uom'],
-            );
+            $axes = [];
+            foreach ($data['axes'] as $axisData) {
+                $axes[] = new Axis(
+                    $axisData['orientation'],
+                    $axisData['abbreviation'],
+                    $axisData['name'],
+                    $axisData['uom'],
+                );
+            }
+
+            self::$cachedObjects[$srid] = new self($srid, $axes);
         }
 
-        return new self($srid, $axes);
+        return self::$cachedObjects[$srid];
     }
 
     public static function getSupportedSRIDs(): array
