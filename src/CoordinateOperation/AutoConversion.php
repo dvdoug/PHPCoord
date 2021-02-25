@@ -121,14 +121,19 @@ trait AutoConversion
     {
         $cacheKey = $this->getCRS()->getSRID() . '|' . $target->getSRID();
         if (!isset(self::$pathCache[$cacheKey])) {
-            // First calculate the permutations of intermediate CRSs
-            $visited = [];
-            foreach (CoordinateReferenceSystem::getSupportedSRIDs() as $crs => $name) {
-                $visited[$crs] = false;
-            }
-            $currentPath = [];
             $simplePaths = [];
-            $this->DFS($this->getCRS()->getSRID(), $target->getSRID(), $visited, $currentPath, $simplePaths);
+
+            // Try a simple direct match before doing anything more complex!
+            if (CRSTransformations::getSupportedTransformationsForCRSPair($this->getCRS()->getSRID(), $target->getSRID())) {
+                $simplePaths[] = [$this->getCRS()->getSRID(), $target->getSRID()];
+            } else { // Otherwise, recursively calculate permutations of intermediate CRSs
+                $visited = [];
+                foreach (CoordinateReferenceSystem::getSupportedSRIDs() as $crs => $name) {
+                    $visited[$crs] = false;
+                }
+                $currentPath = [];
+                $this->DFS($this->getCRS()->getSRID(), $target->getSRID(), $visited, $currentPath, $simplePaths);
+            }
 
             // Then expand each CRS->CRS permutation with the various ways of achieving that (can be lots :/)
             $candidatePaths = [];
