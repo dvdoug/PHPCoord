@@ -158,21 +158,20 @@ trait AutoConversion
 
     protected function DFS(string $u, string $v, array &$visited, array &$currentPath, array &$simplePaths): void
     {
-        if ($visited[$u] || count($currentPath) > $this->maxChainDepth) {
-            return;
-        }
-        $visited[$u] = true;
         $currentPath[] = $u;
         if ($u === $v) {
             $simplePaths[] = $currentPath;
-            $visited[$u] = false;
-            array_pop($currentPath);
+        } else {
+            $visited[$u] = true;
+            if (count($currentPath) <= $this->maxChainDepth) {
+                foreach (CRSTransformations::getSupportedTransformationsForCRS($u) as $nextU) {
+                    if (!$visited[$nextU]) {
+                        $this->DFS($nextU, $v, $visited, $currentPath, $simplePaths);
+                    }
+                }
+            }
+        }
 
-            return;
-        }
-        foreach (CRSTransformations::getSupportedTransformationsForCRS($u) as $nextU) {
-            $this->DFS($nextU, $v, $visited, $currentPath, $simplePaths);
-        }
         array_pop($currentPath);
         $visited[$u] = false;
     }
