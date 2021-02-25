@@ -33,6 +33,8 @@ trait AutoConversion
 {
     private int $maxChainDepth = 4; // if traits could have constants...
 
+    private static array $pathCache = [];
+
     public function convert(CoordinateReferenceSystem $to, bool $ignoreBoundaryRestrictions = false): Point
     {
         if ($this->getCRS() == $to) {
@@ -117,43 +119,48 @@ trait AutoConversion
      */
     protected function buildTransformationPathsToCRS(CoordinateReferenceSystem $target): array
     {
-        // First calculate the permutations of intermediate CRSs
-        $visited = [];
-        foreach (CoordinateReferenceSystem::getSupportedSRIDs() as $crs => $name) {
-            $visited[$crs] = false;
-        }
-        $currentPath = [];
-        $simplePaths = [];
-        $this->DFS($this->getCRS()->getSRID(), $target->getSRID(), $visited, $currentPath, $simplePaths);
+        $cacheKey = $this->getCRS()->getSRID() . '|' . $target->getSRID();
+        if (!isset(self::$pathCache[$cacheKey])) {
+            // First calculate the permutations of intermediate CRSs
+            $visited = [];
+            foreach (CoordinateReferenceSystem::getSupportedSRIDs() as $crs => $name) {
+                $visited[$crs] = false;
+            }
+            $currentPath = [];
+            $simplePaths = [];
+            $this->DFS($this->getCRS()->getSRID(), $target->getSRID(), $visited, $currentPath, $simplePaths);
 
-        // Then expand each CRS->CRS permutation with the various ways of achieving that (can be lots :/)
-        $candidatePaths = [];
-        foreach ($simplePaths as $simplePath) {
-            $transformationsToMakePath = [[]];
-            $from = array_shift($simplePath);
-            assert($from === $this->getCRS()->getSRID());
-            do {
-                $to = array_shift($simplePath);
-                $wipTransformationsInPath = [];
-                foreach (CRSTransformations::getSupportedTransformationsForCRSPair($from, $to) as $transformation) {
-                    foreach ($transformationsToMakePath as $transformationToMakePath) {
-                        $wipTransformationsInPath[] = array_merge($transformationToMakePath, [$transformation]);
+            // Then expand each CRS->CRS permutation with the various ways of achieving that (can be lots :/)
+            $candidatePaths = [];
+            foreach ($simplePaths as $simplePath) {
+                $transformationsToMakePath = [[]];
+                $from = array_shift($simplePath);
+                assert($from === $this->getCRS()->getSRID());
+                do {
+                    $to = array_shift($simplePath);
+                    $wipTransformationsInPath = [];
+                    foreach (CRSTransformations::getSupportedTransformationsForCRSPair($from, $to) as $transformation) {
+                        foreach ($transformationsToMakePath as $transformationToMakePath) {
+                            $wipTransformationsInPath[] = array_merge($transformationToMakePath, [$transformation]);
+                        }
                     }
-                }
 
-                $transformationsToMakePath = $wipTransformationsInPath;
-                $from = $to;
-            } while (count($simplePath) > 0);
-            assert($to === $target->getSRID());
-            $candidatePaths = array_merge($candidatePaths, $transformationsToMakePath);
+                    $transformationsToMakePath = $wipTransformationsInPath;
+                    $from = $to;
+                } while (count($simplePath) > 0);
+                assert($to === $target->getSRID());
+                $candidatePaths = array_merge($candidatePaths, $transformationsToMakePath);
+            }
+
+            $candidates = [];
+            foreach ($candidatePaths as $candidatePath) {
+                $candidates[] = ['path' => $candidatePath, 'accuracy' => array_sum(array_column($candidatePath, 'accuracy'))];
+            }
+
+            self::$pathCache[$cacheKey] = $candidates;
         }
 
-        $candidates = [];
-        foreach ($candidatePaths as $candidatePath) {
-            $candidates[] = ['path' => $candidatePath, 'accuracy' => array_sum(array_column($candidatePath, 'accuracy'))];
-        }
-
-        return $candidates;
+        return self::$pathCache[$cacheKey];
     }
 
     protected function DFS(string $u, string $v, array &$visited, array &$currentPath, array &$simplePaths): void
