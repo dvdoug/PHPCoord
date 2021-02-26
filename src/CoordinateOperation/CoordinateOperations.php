@@ -21446,7 +21446,7 @@ class CoordinateOperations
         'urn:ogc:def:coordinateOperation:EPSG::18057' => [
             'name' => 'Colombia MAGNA Bogota zone',
             'method' => 'urn:ogc:def:method:EPSG::9807',
-            'bounding_box' => [[-75.59, -2.51], [-75.59, 11.82], [-72.58, 11.82], [-72.58, -2.51]],
+            'bounding_box' => [[-79.09999999999999, -4.23], [-79.09999999999999, 12.52], [-66.87, 12.52], [-66.87, -4.23]],
             'bounding_box_crosses_antimeridian' => false,
         ],
         'urn:ogc:def:coordinateOperation:EPSG::18058' => [
@@ -21836,7 +21836,7 @@ class CoordinateOperations
         'urn:ogc:def:coordinateOperation:EPSG::18193' => [
             'name' => 'Finland Uniform Coordinate System',
             'method' => 'urn:ogc:def:method:EPSG::9807',
-            'bounding_box' => [[25.5, 59.75], [25.5, 70.09], [28.5, 70.09], [28.5, 59.75]],
+            'bounding_box' => [[19.24, 59.75], [19.24, 70.09], [31.59, 70.09], [31.59, 59.75]],
             'bounding_box_crosses_antimeridian' => false,
         ],
         'urn:ogc:def:coordinateOperation:EPSG::18194' => [
@@ -22868,7 +22868,7 @@ class CoordinateOperations
         'urn:ogc:def:coordinateOperation:EPSG::19929' => [
             'name' => 'Sweden zone 2.5 gon V',
             'method' => 'urn:ogc:def:method:EPSG::9807',
-            'bounding_box' => [[13.66, 55.95], [13.66, 67.18000000000001], [17.73, 67.18000000000001], [17.73, 55.95]],
+            'bounding_box' => [[10.93, 55.28], [10.93, 69.06999999999999], [24.17, 69.06999999999999], [24.17, 55.28]],
             'bounding_box_crosses_antimeridian' => false,
         ],
         'urn:ogc:def:coordinateOperation:EPSG::19930' => [

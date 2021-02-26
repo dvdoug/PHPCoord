@@ -4714,7 +4714,7 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * Gulshan 303 / TM 90 NE
-     * Extent: Bangladesh - onshore and offshore.
+     * Extent: Bangladesh - onshore and offshore. Bangladesh - onshore.
      * Used by Survey of Bangladesh from 1995 to 2009, after which replaced by WGS 84 / TM 90 NE (CRS code 9680). See
      * Gulshan 303 / BTM (code 9678) for other uses including water resource management.
      */
@@ -5782,7 +5782,7 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * KKJ / Finland Uniform Coordinate System
-     * Extent: Finland - onshore.
+     * Extent: Finland - onshore between 25°30'E and 28°30'E. Finland - onshore.
      * Known as Uniform Coordinate System (YKJ) when used over all country and also as Basic Coordinate System zone 3
      * at larger scales.
      */
@@ -6773,7 +6773,8 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * MAGNA-SIRGAS / Colombia Bogota zone
-     * Extent: Colombia - mainland onshore.
+     * Extent: Colombia - onshore between 1°30'W and 1°30'E of Bogota (75°35'W and 72°35'W of Greenwich). Colombia
+     * - mainland onshore.
      * Replaces Bogota 1975 / Colombia Bogota zone (CRS code 21897).
      */
     public const EPSG_MAGNA_SIRGAS_COLOMBIA_BOGOTA_ZONE = 'urn:ogc:def:crs:EPSG::3116';
@@ -30372,7 +30373,8 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * RT38 2.5 gon V
-     * Extent: Sweden - onshore.
+     * Extent: Sweden - communes between approximately 14°40'E and 16°55'E. See information source for map. Sweden -
+     * onshore.
      * Replaced by RT90 2.5 gon V (CRS code 3021).
      */
     public const EPSG_RT38_2_5_GON_V = 'urn:ogc:def:crs:EPSG::3027';
@@ -30414,7 +30416,8 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * RT90 2.5 gon V
-     * Extent: Sweden - onshore.
+     * Extent: Sweden - communes between approximately 14°40'E and 16°55'E. See information source for map. Sweden -
+     * onshore.
      * Replaces RT38 2.5 gon V (CRS code 3027) from 1990. From 2003 replaced by SWEREF systems (CRS codes 3006-3018).
      */
     public const EPSG_RT90_2_5_GON_V = 'urn:ogc:def:crs:EPSG::3021';
@@ -32419,14 +32422,14 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * VN-2000 / TM-3 zone 482
-     * Extent: Vietnam - Ha Noi city, Ha Nam, Ha Tay, Ninh Binh, Thanh Hoa and Vinh Phuc provinces; Can Tho city, Bac
-     * Lieu, Dong Thap and Hau Giang provinces.
+     * Extent: Vietnam - between 103°30'E and 106°30'E, onshore. Vietnam - Ha Noi city, Ha Nam, Ha Tay, Ninh Binh,
+     * Thanh Hoa and Vinh Phuc provinces; Can Tho city, Bac Lieu, Dong Thap and Hau Giang provinces.
      */
     public const EPSG_VN_2000_TM_3_ZONE_482 = 'urn:ogc:def:crs:EPSG::5897';
 
     /**
      * VN-2000 / TM-3 zone 491
-     * Extent: Vietnam - Quang Ngai province.
+     * Extent: Vietnam - onshore east of 106°30'E. Vietnam - Quang Ngai province.
      */
     public const EPSG_VN_2000_TM_3_ZONE_491 = 'urn:ogc:def:crs:EPSG::5898';
 

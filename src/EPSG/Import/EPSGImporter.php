@@ -392,8 +392,8 @@ class EPSGImporter
                 'urn:ogc:def:meridian:EPSG::' || d.prime_meridian_code AS prime_meridian,
                 d.conventional_rs_code AS conventional_rs,
                 d.frame_reference_epoch,
-                d.datum_name || '\n' || 'Type: ' || d.datum_type || '\n' || 'Extent: ' || e.extent_description || '\n' || d.origin_description || '\n' || d.remarks AS constant_help,
-                e.extent_description AS extent,
+                d.datum_name || '\n' || 'Type: ' || d.datum_type || '\n' || 'Extent: ' || GROUP_CONCAT(e.extent_description, ' ') || '\n' || d.origin_description || '\n' || d.remarks AS constant_help,
+                GROUP_CONCAT(e.extent_description, ' ') AS extent,
                 d.origin_description || '\n' || d.remarks AS doc_help,
                 d.deprecated
             FROM epsg_datum d
@@ -644,12 +644,12 @@ class EPSGImporter
                 'urn:ogc:def:crs:EPSG::' || crs.cmpd_horizcrs_code AS horizontal_crs,
                 horizontal.coord_ref_sys_kind AS horizontal_crs_type,
                 'urn:ogc:def:crs:EPSG::' || crs.cmpd_vertcrs_code AS vertical_crs,
-                crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || crs.remarks AS constant_help,
-                e.extent_description AS extent,
-                e.bbox_north_bound_lat AS bbox_north_bound_latitude,
-                e.bbox_east_bound_lon AS bbox_east_bound_longitude,
-                e.bbox_south_bound_lat AS bbox_south_bound_latitude,
-                e.bbox_west_bound_lon AS bbox_west_bound_longitude,
+                crs.coord_ref_sys_name || '\n' || 'Extent: ' || GROUP_CONCAT(e.extent_description, ' ') || '\n' || crs.remarks AS constant_help,
+                GROUP_CONCAT(e.extent_description, ' ') AS extent,
+                MAX(e.bbox_north_bound_lat) AS bbox_north_bound_latitude,
+                MAX(e.bbox_east_bound_lon) AS bbox_east_bound_longitude,
+                MIN(e.bbox_south_bound_lat) AS bbox_south_bound_latitude,
+                MIN(e.bbox_west_bound_lon) AS bbox_west_bound_longitude,
                 crs.remarks AS doc_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
@@ -661,6 +661,7 @@ class EPSGImporter
             AND (crs.cmpd_horizcrs_code IS NULL OR crs.cmpd_horizcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
             AND (crs.cmpd_vertcrs_code IS NULL OR crs.cmpd_vertcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
             AND crs.coord_ref_sys_kind = 'compound'
+            GROUP BY crs.coord_ref_sys_code
             ORDER BY name
             ";
 
@@ -695,12 +696,12 @@ class EPSGImporter
                 crs.coord_ref_sys_name AS name,
                 'urn:ogc:def:cs:EPSG::' || crs.coord_sys_code AS coordinate_system,
                 'urn:ogc:def:datum:EPSG::' || COALESCE(crs.datum_code, crs_base.datum_code) AS datum,
-                crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || crs.remarks AS constant_help,
-                e.extent_description AS extent,
-                e.bbox_north_bound_lat AS bbox_north_bound_latitude,
-                e.bbox_east_bound_lon AS bbox_east_bound_longitude,
-                e.bbox_south_bound_lat AS bbox_south_bound_latitude,
-                e.bbox_west_bound_lon AS bbox_west_bound_longitude,
+                crs.coord_ref_sys_name || '\n' || 'Extent: ' || GROUP_CONCAT(e.extent_description, ' ') || '\n' || crs.remarks AS constant_help,
+                GROUP_CONCAT(e.extent_description, ' ') AS extent,
+                MAX(e.bbox_north_bound_lat) AS bbox_north_bound_latitude,
+                MAX(e.bbox_east_bound_lon) AS bbox_east_bound_longitude,
+                MIN(e.bbox_south_bound_lat) AS bbox_south_bound_latitude,
+                MIN(e.bbox_west_bound_lon) AS bbox_west_bound_longitude,
                 crs.remarks AS doc_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
@@ -712,6 +713,7 @@ class EPSGImporter
             AND (crs.cmpd_horizcrs_code IS NULL OR crs.cmpd_horizcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
             AND (crs.cmpd_vertcrs_code IS NULL OR crs.cmpd_vertcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
             AND crs.coord_ref_sys_kind = 'geocentric'
+            GROUP BY crs.coord_ref_sys_code
             ORDER BY name
             ";
 
@@ -746,12 +748,12 @@ class EPSGImporter
                 crs.coord_ref_sys_name AS name,
                 'urn:ogc:def:cs:EPSG::' || crs.coord_sys_code AS coordinate_system,
                 'urn:ogc:def:datum:EPSG::' || COALESCE(crs.datum_code, crs_base.datum_code) AS datum,
-                crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || crs.remarks AS constant_help,
-                e.extent_description AS extent,
-                e.bbox_north_bound_lat AS bbox_north_bound_latitude,
-                e.bbox_east_bound_lon AS bbox_east_bound_longitude,
-                e.bbox_south_bound_lat AS bbox_south_bound_latitude,
-                e.bbox_west_bound_lon AS bbox_west_bound_longitude,
+                crs.coord_ref_sys_name || '\n' || 'Extent: ' || GROUP_CONCAT(e.extent_description, ' ') || '\n' || crs.remarks AS constant_help,
+                GROUP_CONCAT(e.extent_description, ' ') AS extent,
+                MAX(e.bbox_north_bound_lat) AS bbox_north_bound_latitude,
+                MAX(e.bbox_east_bound_lon) AS bbox_east_bound_longitude,
+                MIN(e.bbox_south_bound_lat) AS bbox_south_bound_latitude,
+                MIN(e.bbox_west_bound_lon) AS bbox_west_bound_longitude,
                 crs.remarks AS doc_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
@@ -763,6 +765,7 @@ class EPSGImporter
             AND (crs.cmpd_horizcrs_code IS NULL OR crs.cmpd_horizcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
             AND (crs.cmpd_vertcrs_code IS NULL OR crs.cmpd_vertcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
             AND crs.coord_ref_sys_kind = 'geographic 2D'
+            GROUP BY crs.coord_ref_sys_code
             ORDER BY name
             ";
 
@@ -797,12 +800,12 @@ class EPSGImporter
                 crs.coord_ref_sys_name AS name,
                 'urn:ogc:def:cs:EPSG::' || crs.coord_sys_code AS coordinate_system,
                 'urn:ogc:def:datum:EPSG::' || COALESCE(crs.datum_code, crs_base.datum_code) AS datum,
-                crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || crs.remarks AS constant_help,
-                e.extent_description AS extent,
-                e.bbox_north_bound_lat AS bbox_north_bound_latitude,
-                e.bbox_east_bound_lon AS bbox_east_bound_longitude,
-                e.bbox_south_bound_lat AS bbox_south_bound_latitude,
-                e.bbox_west_bound_lon AS bbox_west_bound_longitude,
+                crs.coord_ref_sys_name || '\n' || 'Extent: ' || GROUP_CONCAT(e.extent_description, ' ') || '\n' || crs.remarks AS constant_help,
+                GROUP_CONCAT(e.extent_description, ' ') AS extent,
+                MAX(e.bbox_north_bound_lat) AS bbox_north_bound_latitude,
+                MAX(e.bbox_east_bound_lon) AS bbox_east_bound_longitude,
+                MIN(e.bbox_south_bound_lat) AS bbox_south_bound_latitude,
+                MIN(e.bbox_west_bound_lon) AS bbox_west_bound_longitude,
                 crs.remarks AS doc_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
@@ -814,6 +817,7 @@ class EPSGImporter
             AND (crs.cmpd_horizcrs_code IS NULL OR crs.cmpd_horizcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
             AND (crs.cmpd_vertcrs_code IS NULL OR crs.cmpd_vertcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
             AND crs.coord_ref_sys_kind = 'geographic 3D'
+            GROUP BY crs.coord_ref_sys_code
             ORDER BY name
             ";
 
@@ -848,12 +852,12 @@ class EPSGImporter
                 crs.coord_ref_sys_name AS name,
                 'urn:ogc:def:cs:EPSG::' || crs.coord_sys_code AS coordinate_system,
                 'urn:ogc:def:datum:EPSG::' || COALESCE(crs.datum_code, crs_base.datum_code) AS datum,
-                crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || crs.remarks AS constant_help,
-                e.extent_description AS extent,
-                e.bbox_north_bound_lat AS bbox_north_bound_latitude,
-                e.bbox_east_bound_lon AS bbox_east_bound_longitude,
-                e.bbox_south_bound_lat AS bbox_south_bound_latitude,
-                e.bbox_west_bound_lon AS bbox_west_bound_longitude,
+                crs.coord_ref_sys_name || '\n' || 'Extent: ' || GROUP_CONCAT(e.extent_description, ' ') || '\n' || crs.remarks AS constant_help,
+                GROUP_CONCAT(e.extent_description, ' ') AS extent,
+                MAX(e.bbox_north_bound_lat) AS bbox_north_bound_latitude,
+                MAX(e.bbox_east_bound_lon) AS bbox_east_bound_longitude,
+                MIN(e.bbox_south_bound_lat) AS bbox_south_bound_latitude,
+                MIN(e.bbox_west_bound_lon) AS bbox_west_bound_longitude,
                 crs.remarks AS doc_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
@@ -865,6 +869,7 @@ class EPSGImporter
             AND (crs.cmpd_horizcrs_code IS NULL OR crs.cmpd_horizcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
             AND (crs.cmpd_vertcrs_code IS NULL OR crs.cmpd_vertcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
             AND crs.coord_ref_sys_kind = 'projected'
+            GROUP BY crs.coord_ref_sys_code
             ORDER BY name
             ";
 
@@ -899,12 +904,12 @@ class EPSGImporter
                 crs.coord_ref_sys_name AS name,
                 'urn:ogc:def:cs:EPSG::' || crs.coord_sys_code AS coordinate_system,
                 'urn:ogc:def:datum:EPSG::' || COALESCE(crs.datum_code, crs_base.datum_code) AS datum,
-                crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || crs.remarks AS constant_help,
-                e.extent_description AS extent,
-                e.bbox_north_bound_lat AS bbox_north_bound_latitude,
-                e.bbox_east_bound_lon AS bbox_east_bound_longitude,
-                e.bbox_south_bound_lat AS bbox_south_bound_latitude,
-                e.bbox_west_bound_lon AS bbox_west_bound_longitude,
+                crs.coord_ref_sys_name || '\n' || 'Extent: ' || GROUP_CONCAT(e.extent_description, ' ') || '\n' || crs.remarks AS constant_help,
+                GROUP_CONCAT(e.extent_description, ' ') AS extent,
+                MAX(e.bbox_north_bound_lat) AS bbox_north_bound_latitude,
+                MAX(e.bbox_east_bound_lon) AS bbox_east_bound_longitude,
+                MIN(e.bbox_south_bound_lat) AS bbox_south_bound_latitude,
+                MIN(e.bbox_west_bound_lon) AS bbox_west_bound_longitude,
                 crs.remarks AS doc_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
@@ -916,6 +921,7 @@ class EPSGImporter
             AND (crs.cmpd_horizcrs_code IS NULL OR crs.cmpd_horizcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
             AND (crs.cmpd_vertcrs_code IS NULL OR crs.cmpd_vertcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
             AND crs.coord_ref_sys_kind = 'vertical'
+            GROUP BY crs.coord_ref_sys_code
             ORDER BY name
             ";
 
@@ -951,7 +957,7 @@ class EPSGImporter
                 crs.coord_ref_sys_name AS name,
                 'urn:ogc:def:cs:EPSG::' || crs.coord_sys_code AS coordinate_system,
                 'urn:ogc:def:datum:EPSG::' || COALESCE(crs.datum_code, crs_base.datum_code) AS datum,
-                crs.coord_ref_sys_name || '\n' || 'Extent: ' || e.extent_description || '\n' || crs.remarks AS constant_help,
+                crs.coord_ref_sys_name || '\n' || 'Extent: ' || GROUP_CONCAT(e.extent_description, ' ') || '\n' || crs.remarks AS constant_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
             JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
@@ -962,6 +968,7 @@ class EPSGImporter
             AND (crs.cmpd_horizcrs_code IS NULL OR crs.cmpd_horizcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
             AND (crs.cmpd_vertcrs_code IS NULL OR crs.cmpd_vertcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
             AND crs.coord_ref_sys_kind NOT IN ('compound', 'geocentric', 'geographic 2D', 'geographic 3D', 'projected', 'vertical')
+            GROUP BY crs.coord_ref_sys_code
             ORDER BY name
             ";
 
@@ -993,7 +1000,6 @@ class EPSGImporter
             AND m.coord_op_method_name NOT LIKE '%seismic%'
             GROUP BY m.coord_op_method_code
             HAVING (SUM(CASE WHEN p.param_value_file_ref != '' THEN 1 ELSE 0 END) = 0) -- skip anything that needs some kind of datafile
-
             ORDER BY name
         ";
 
@@ -1093,10 +1099,10 @@ class EPSGImporter
                 o.coord_op_name AS name,
                 o.coord_op_type AS type,
                 'urn:ogc:def:method:EPSG::' || o.coord_op_method_code AS method,
-                e.bbox_north_bound_lat AS bbox_north_bound_latitude,
-                e.bbox_east_bound_lon AS bbox_east_bound_longitude,
-                e.bbox_south_bound_lat AS bbox_south_bound_latitude,
-                e.bbox_west_bound_lon AS bbox_west_bound_longitude
+                MAX(e.bbox_north_bound_lat) AS bbox_north_bound_latitude,
+                MAX(e.bbox_east_bound_lon) AS bbox_east_bound_longitude,
+                MIN(e.bbox_south_bound_lat) AS bbox_south_bound_latitude,
+                MIN(e.bbox_west_bound_lon) AS bbox_west_bound_longitude
             FROM epsg_coordoperation o
             JOIN epsg_coordoperationmethod m ON m.coord_op_method_code = o.coord_op_method_code
             JOIN epsg_coordinatereferencesystem sourcecrs ON sourcecrs.coord_ref_sys_code = o.source_crs_code AND sourcecrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND sourcecrs.deprecated = 0
@@ -1117,10 +1123,10 @@ class EPSGImporter
                 o.coord_op_name AS name,
                 o.coord_op_type AS type,
                 'urn:ogc:def:method:EPSG::' || o.coord_op_method_code AS method,
-                e.bbox_north_bound_lat AS bbox_north_bound_latitude,
-                e.bbox_east_bound_lon AS bbox_east_bound_longitude,
-                e.bbox_south_bound_lat AS bbox_south_bound_latitude,
-                e.bbox_west_bound_lon AS bbox_west_bound_longitude
+                MAX(e.bbox_north_bound_lat) AS bbox_north_bound_latitude,
+                MAX(e.bbox_east_bound_lon) AS bbox_east_bound_longitude,
+                MIN(e.bbox_south_bound_lat) AS bbox_south_bound_latitude,
+                MIN(e.bbox_west_bound_lon) AS bbox_west_bound_longitude
             FROM epsg_coordoperation o
             JOIN epsg_coordinatereferencesystem projcrs ON projcrs.projection_conv_code = o.coord_op_code AND projcrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND projcrs.deprecated = 0
             JOIN epsg_coordoperationmethod m ON m.coord_op_method_code = o.coord_op_method_code
@@ -1140,10 +1146,10 @@ class EPSGImporter
                 o.coord_op_name AS name,
                 o.coord_op_type AS type,
                 null AS method,
-                e.bbox_north_bound_lat AS bbox_north_bound_latitude,
-                e.bbox_east_bound_lon AS bbox_east_bound_longitude,
-                e.bbox_south_bound_lat AS bbox_south_bound_latitude,
-                e.bbox_west_bound_lon AS bbox_west_bound_longitude
+                MAX(e.bbox_north_bound_lat) AS bbox_north_bound_latitude,
+                MAX(e.bbox_east_bound_lon) AS bbox_east_bound_longitude,
+                MIN(e.bbox_south_bound_lat) AS bbox_south_bound_latitude,
+                MIN(e.bbox_west_bound_lon) AS bbox_west_bound_longitude
             FROM epsg_coordoperation o
             LEFT JOIN epsg_coordoperationpath p ON p.concat_operation_code = o.coord_op_code
             LEFT JOIN epsg_coordoperation co ON p.single_operation_code = co.coord_op_code
@@ -1166,10 +1172,10 @@ class EPSGImporter
                 o.coord_op_name AS name,
                 o.coord_op_type AS type,
                 'urn:ogc:def:method:EPSG::' || o.coord_op_method_code AS method,
-                e.bbox_north_bound_lat AS bbox_north_bound_latitude,
-                e.bbox_east_bound_lon AS bbox_east_bound_longitude,
-                e.bbox_south_bound_lat AS bbox_south_bound_latitude,
-                e.bbox_west_bound_lon AS bbox_west_bound_longitude
+                MAX(e.bbox_north_bound_lat) AS bbox_north_bound_latitude,
+                MAX(e.bbox_east_bound_lon) AS bbox_east_bound_longitude,
+                MIN(e.bbox_south_bound_lat) AS bbox_south_bound_latitude,
+                MIN(e.bbox_west_bound_lon) AS bbox_west_bound_longitude
             FROM epsg_coordoperation o
             JOIN epsg_coordoperationpath p ON p.single_operation_code = o.coord_op_code
             JOIN epsg_usage u ON u.object_table_name = 'epsg_coordoperation' AND u.object_code = o.coord_op_code
@@ -1244,6 +1250,7 @@ class EPSGImporter
                     JOIN epsg_coordoperationparamusage pu ON pv.coord_op_method_code = pu.coord_op_method_code AND pv.parameter_code = pu.parameter_code
                     JOIN epsg_coordoperationparam p ON pv.parameter_code = p.parameter_code
                     WHERE operation_code = '{$operation}'
+                    GROUP BY pv.coord_op_code, p.parameter_code
                     ORDER BY pu.sort_order
                     ";
 

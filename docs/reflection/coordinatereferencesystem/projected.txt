@@ -8993,7 +8993,7 @@ See Gulshan 303 / TM 90 NE (CRS code 3106) for topographic mapping and offshore 
 Gulshan 303 / TM 90 NE
 ----------------------
 
-| Used: Bangladesh - onshore and offshore.
+| Used: Bangladesh - onshore and offshore. Bangladesh - onshore.
 
 .. code-block:: php
 
@@ -11050,7 +11050,7 @@ Replaced by JAD69 / Jamaica National Grid (CRS code 24200).
 KKJ / Finland Uniform Coordinate System
 ---------------------------------------
 
-| Used: Finland - onshore.
+| Used: Finland - onshore between 25°30'E and 28°30'E. Finland - onshore.
 
 .. code-block:: php
 
@@ -12976,7 +12976,7 @@ MAGNA-SIRGAS / Cartagena urban grid
 MAGNA-SIRGAS / Colombia Bogota zone
 -----------------------------------
 
-| Used: Colombia - mainland onshore.
+| Used: Colombia - onshore between 1°30'W and 1°30'E of Bogota (75°35'W and 72°35'W of Greenwich). Colombia - mainland onshore.
 
 .. code-block:: php
 
@@ -52374,7 +52374,7 @@ Replaced by RT90 2.5 gon O (CRS code 3023).
 RT38 2.5 gon V
 --------------
 
-| Used: Sweden - onshore.
+| Used: Sweden - communes between approximately 14°40'E and 16°55'E. See information source for map. Sweden - onshore.
 
 .. code-block:: php
 
@@ -52458,7 +52458,7 @@ Replaces RT38 2.5 gon O (CRS code 3029) from 1990. From 2003 replaced by SWEREF 
 RT90 2.5 gon V
 --------------
 
-| Used: Sweden - onshore.
+| Used: Sweden - communes between approximately 14°40'E and 16°55'E. See information source for map. Sweden - onshore.
 
 .. code-block:: php
 
@@ -56241,7 +56241,7 @@ VN-2000 / TM-3 zone 481
 VN-2000 / TM-3 zone 482
 -----------------------
 
-| Used: Vietnam - Ha Noi city, Ha Nam, Ha Tay, Ninh Binh, Thanh Hoa and Vinh Phuc provinces; Can Tho city, Bac Lieu, Dong Thap and Hau Giang provinces.
+| Used: Vietnam - between 103°30'E and 106°30'E, onshore. Vietnam - Ha Noi city, Ha Nam, Ha Tay, Ninh Binh, Thanh Hoa and Vinh Phuc provinces; Can Tho city, Bac Lieu, Dong Thap and Hau Giang provinces.
 
 .. code-block:: php
 
@@ -56254,7 +56254,7 @@ VN-2000 / TM-3 zone 482
 VN-2000 / TM-3 zone 491
 -----------------------
 
-| Used: Vietnam - Quang Ngai province.
+| Used: Vietnam - onshore east of 106°30'E. Vietnam - Quang Ngai province.
 
 .. code-block:: php
 

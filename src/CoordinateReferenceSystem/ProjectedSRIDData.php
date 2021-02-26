@@ -15589,14 +15589,14 @@ trait ProjectedSRIDData
             'name' => 'VN-2000 / TM-3 zone 482',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::4400',
             'datum' => 'urn:ogc:def:datum:EPSG::6756',
-            'bounding_box' => [[104.37, 8.970000000000001], [104.37, 21.58], [106.19, 21.58], [106.19, 8.970000000000001]],
+            'bounding_box' => [[103.5, 8.33], [103.5, 23.4], [106.51, 23.4], [106.51, 8.33]],
             'bounding_box_crosses_antimeridian' => false,
         ],
         'urn:ogc:def:crs:EPSG::5898' => [
             'name' => 'VN-2000 / TM-3 zone 491',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::4400',
             'datum' => 'urn:ogc:def:datum:EPSG::6756',
-            'bounding_box' => [[108.23, 14.53], [108.23, 15.49], [109.2, 15.49], [109.2, 14.53]],
+            'bounding_box' => [[106.5, 8.57], [106.5, 22.95], [109.53, 22.95], [109.53, 8.57]],
             'bounding_box_crosses_antimeridian' => false,
         ],
         'urn:ogc:def:crs:EPSG::5899' => [
