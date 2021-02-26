@@ -3,7 +3,7 @@
     "description": "PHPCoord is a PHP library to aid in handling coordinates. It can convert coordinates for a point from one system\nto another and also calculate distance between points.",
     "keywords": ["coord","geo", "latitude", "longitude", "grid ref", "map", "projection" ,"wgs84", "osgb36", "utm", "nad", "nzmg", "gda", "ed50", "epsg"],
     "type": "library",
-    "homepage": "https://github.com/dvdoug/PHPCoord",
+    "homepage": "https://www.phpcoord.net/",
     "authors": [
         {
             "name": "Doug Wright",
