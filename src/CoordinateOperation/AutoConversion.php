@@ -22,9 +22,11 @@ use PHPCoord\CompoundPoint;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\Exception\UnknownConversionException;
+use PHPCoord\GeocentricPoint;
 use PHPCoord\GeographicPoint;
 use PHPCoord\Geometry\GeographicPolygon;
 use PHPCoord\Point;
+use PHPCoord\ProjectedPoint;
 use PHPCoord\UnitOfMeasure\Time\Year;
 use function strpos;
 use function usort;
@@ -64,17 +66,17 @@ trait AutoConversion
             return count($a['path']) <=> count($b['path']) ?: $a['accuracy'] <=> $b['accuracy'];
         });
 
-        $asWGS84Value = $ignoreBoundaryRestrictions ? null : $this->asWGS84()->asGeographicValue();
+        $boundaryCheckPoint = $ignoreBoundaryRestrictions ? null : $this->getPointForBoundaryCheck();
 
         foreach ($candidatePaths as $candidatePath) {
             $ok = true;
 
             foreach ($candidatePath['path'] as $pathStep) {
                 $operation = CoordinateOperations::getOperationData($pathStep['operation']);
-                if (!$ignoreBoundaryRestrictions) {
+                if ($boundaryCheckPoint) {
                     //filter out operations that only operate outside this point
                     $polygon = GeographicPolygon::createFromArray($operation['bounding_box'], $operation['bounding_box_crosses_antimeridian']);
-                    $ok = $ok && $polygon->containsPoint($asWGS84Value);
+                    $ok = $ok && $polygon->containsPoint($boundaryCheckPoint);
                 }
 
                 $operations = static::resolveConcatenatedOperations($pathStep['operation'], false);
@@ -188,7 +190,13 @@ trait AutoConversion
         $visited[$u] = false;
     }
 
-    protected function asWGS84(): GeographicPoint
+    /**
+     * Boundary polygons are defined as WGS84, so theoretically all that needs to happen is
+     * to conversion to WGS84 by calling ->convert(). However, that leads quickly to either circularity
+     * when a conversion is possible, or an exception because not every CRS has a WGS84 transformation
+     * available to it even when chaining.
+     */
+    protected function getPointForBoundaryCheck(): ?GeographicValue
     {
         if ($this instanceof CompoundPoint) {
             $point = $this->getHorizontalPoint();
@@ -196,7 +204,33 @@ trait AutoConversion
             $point = $this;
         }
 
-        return $point->convert(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), true);
+        try {
+            // try converting to WGS84 if possible...
+            return $point->convert(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), true)->asGeographicValue();
+        } catch (UnknownConversionException $e) {
+            /*
+             * If Projected then either the point is inside the boundary by definition
+             * or the user is deliberately exceeding the safe zone so safe to make a no-op either way.
+             */
+            if ($point instanceof ProjectedPoint) {
+                return null;
+            }
+
+            /*
+             * Otherwise, compensate for non-Greenwich Prime Meridian, but otherwise assume that coordinates
+             * are interchangeable between the actual CRS and WGS84. Boundaries are only defined to the nearest
+             * ≈1km so the error bound should be acceptable within the area of interest
+             */
+            if ($point instanceof GeographicPoint) {
+                return new GeographicValue($point->getLatitude(), $point->getLongitude()->subtract($point->getCRS()->getDatum()->getPrimeMeridian()->getGreenwichLongitude()), null, $point->getCRS()->getDatum());
+            }
+
+            if ($point instanceof GeocentricPoint) {
+                $asGeographic = $point->asGeographicValue();
+
+                return new GeographicValue($asGeographic->getLatitude(), $asGeographic->getLongitude()->subtract($asGeographic->getDatum()->getPrimeMeridian()->getGreenwichLongitude()), null, $asGeographic->getDatum());
+            }
+        }
     }
 
     abstract public function getCRS(): CoordinateReferenceSystem;
