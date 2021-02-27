@@ -15,9 +15,13 @@ use DateTimeInterface;
 use PHPCoord\CoordinateOperation\AutoConversion;
 use PHPCoord\CoordinateOperation\ConvertiblePoint;
 use PHPCoord\CoordinateReferenceSystem\Compound;
+use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
+use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Geographic3D;
+use PHPCoord\CoordinateReferenceSystem\Projected;
 use PHPCoord\CoordinateReferenceSystem\Vertical;
 use PHPCoord\Exception\InvalidCoordinateReferenceSystemException;
+use PHPCoord\Exception\UnknownConversionException;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Length\Metre;
@@ -29,7 +33,9 @@ use function sqrt;
  */
 class CompoundPoint extends Point implements ConvertiblePoint
 {
-    use AutoConversion;
+    use AutoConversion {
+        convert as protected autoConvert;
+    }
 
     /**
      * Horizontal point.
@@ -112,6 +118,17 @@ class CompoundPoint extends Point implements ConvertiblePoint
 
             /* @var CompoundPoint $to */
             return $this->horizontalPoint->calculateDistance($to->horizontalPoint);
+        }
+    }
+
+    public function convert(CoordinateReferenceSystem $to, bool $ignoreBoundaryRestrictions = false): Point
+    {
+        try {
+            return $this->autoConvert($to, $ignoreBoundaryRestrictions);
+        } catch (UnknownConversionException $e) {
+            if (($to instanceof Geographic2D || $to instanceof Projected) && $this->getHorizontalPoint() instanceof ConvertiblePoint) {
+                return $this->getHorizontalPoint()->convert($to, $ignoreBoundaryRestrictions);
+            }
         }
     }
 
