@@ -1,4 +1,4 @@
 Geographic 2D
 =============
 
-.. include:: reflection/coordinatereferencesystem/geographic2D.txt
+.. include:: reflection/coordinatereferencesystem/geographic2d.txt
