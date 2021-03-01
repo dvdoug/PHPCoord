@@ -119,11 +119,7 @@ abstract class Point implements Stringable
             if ($inReverse && $paramData['reverses']) {
                 $value *= -1;
             }
-            if ($paramData['uom']) {
-                $param = UnitOfMeasureFactory::makeUnit($value, $paramData['uom']);
-            } else {
-                $param = $paramData['value'];
-            }
+            $param = UnitOfMeasureFactory::makeUnit($value, $paramData['uom']);
             $paramName = static::camelCase($paramName);
             if (preg_match('/^(Au|Bu)/', $paramName)) {
                 $powerCoefficients[$paramName] = $param;

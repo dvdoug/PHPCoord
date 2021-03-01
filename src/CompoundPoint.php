@@ -166,8 +166,7 @@ class CompoundPoint extends Point implements ConvertiblePoint
         Angle $ordinate2OfEvaluationPoint,
         Length $verticalOffset,
         Angle $inclinationInLatitude,
-        Angle $inclinationInLongitude,
-        int $horizontalCRSCode
+        Angle $inclinationInLongitude
     ): self {
         $latitude = $this->horizontalPoint->getLatitude()->asRadians()->getValue();
         $longitude = $this->horizontalPoint->getLongitude()->asRadians()->getValue();
