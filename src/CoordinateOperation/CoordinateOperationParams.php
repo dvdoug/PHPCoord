@@ -59851,6 +59851,38 @@ class CoordinateOperationParams
                 'reverses' => false,
             ],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9548' => [
+            'Latitude of natural origin' => [
+                'value' => 44.2245,
+                'uom' => 'urn:ogc:def:uom:EPSG::9110',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'Latitude of false origin' => [
+                'value' => 45.11,
+                'uom' => 'urn:ogc:def:uom:EPSG::9110',
+                'reverses' => false,
+            ],
+            'Longitude of false origin' => [
+                'value' => 6.49,
+                'uom' => 'urn:ogc:def:uom:EPSG::9110',
+                'reverses' => false,
+            ],
+            'Easting at false origin' => [
+                'value' => 150000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'Northing at false origin' => [
+                'value' => 50000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::9551' => [
             'Vertical Offset' => [
                 'value' => -0.394,
@@ -59902,6 +59934,392 @@ class CoordinateOperationParams
                 'value' => 0.0,
                 'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9676' => [
+            'X-axis translation' => [
+                'value' => 23.772,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => true,
+            ],
+            'Y-axis translation' => [
+                'value' => 17.49,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => true,
+            ],
+            'Z-axis translation' => [
+                'value' => 17.859,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => true,
+            ],
+            'X-axis rotation' => [
+                'value' => 0.3132,
+                'uom' => 'urn:ogc:def:uom:EPSG::9104',
+                'reverses' => true,
+            ],
+            'Y-axis rotation' => [
+                'value' => 1.85274,
+                'uom' => 'urn:ogc:def:uom:EPSG::9104',
+                'reverses' => true,
+            ],
+            'Z-axis rotation' => [
+                'value' => -1.67299,
+                'uom' => 'urn:ogc:def:uom:EPSG::9104',
+                'reverses' => true,
+            ],
+            'Scale difference' => [
+                'value' => -5.4262,
+                'uom' => 'urn:ogc:def:uom:EPSG::9202',
+                'reverses' => true,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9677' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 90.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 0.9996,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 500000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => -2000000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9679' => [
+            'X-axis translation' => [
+                'value' => 283.729,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => true,
+            ],
+            'Y-axis translation' => [
+                'value' => 735.942,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => true,
+            ],
+            'Z-axis translation' => [
+                'value' => 261.143,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => true,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9682' => [
+            'X-axis translation' => [
+                'value' => -61.55,
+                'uom' => 'urn:ogc:def:uom:EPSG::1025',
+                'reverses' => true,
+            ],
+            'Y-axis translation' => [
+                'value' => 10.87,
+                'uom' => 'urn:ogc:def:uom:EPSG::1025',
+                'reverses' => true,
+            ],
+            'Z-axis translation' => [
+                'value' => 40.19,
+                'uom' => 'urn:ogc:def:uom:EPSG::1025',
+                'reverses' => true,
+            ],
+            'X-axis rotation' => [
+                'value' => 39.4924,
+                'uom' => 'urn:ogc:def:uom:EPSG::1031',
+                'reverses' => true,
+            ],
+            'Y-axis rotation' => [
+                'value' => 32.7221,
+                'uom' => 'urn:ogc:def:uom:EPSG::1031',
+                'reverses' => true,
+            ],
+            'Z-axis rotation' => [
+                'value' => 32.8979,
+                'uom' => 'urn:ogc:def:uom:EPSG::1031',
+                'reverses' => true,
+            ],
+            'Scale difference' => [
+                'value' => 9.994,
+                'uom' => 'urn:ogc:def:uom:EPSG::1028',
+                'reverses' => true,
+            ],
+            'Rate of change of X-axis translation' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::1027',
+                'reverses' => true,
+            ],
+            'Rate of change of Y-axis translation' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::1027',
+                'reverses' => true,
+            ],
+            'Rate of change of Z-axis translation' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::1027',
+                'reverses' => true,
+            ],
+            'Rate of change of X-axis rotation' => [
+                'value' => 1.50379,
+                'uom' => 'urn:ogc:def:uom:EPSG::1032',
+                'reverses' => true,
+            ],
+            'Rate of change of Y-axis rotation' => [
+                'value' => 1.18346,
+                'uom' => 'urn:ogc:def:uom:EPSG::1032',
+                'reverses' => true,
+            ],
+            'Rate of change of Z-axis rotation' => [
+                'value' => 1.20716,
+                'uom' => 'urn:ogc:def:uom:EPSG::1032',
+                'reverses' => true,
+            ],
+            'Rate of change of scale difference' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::1030',
+                'reverses' => true,
+            ],
+            'Parameter reference epoch' => [
+                'value' => 2020.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::1029',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9684' => [
+            'X-axis translation' => [
+                'value' => -61.55,
+                'uom' => 'urn:ogc:def:uom:EPSG::1025',
+                'reverses' => true,
+            ],
+            'Y-axis translation' => [
+                'value' => 10.87,
+                'uom' => 'urn:ogc:def:uom:EPSG::1025',
+                'reverses' => true,
+            ],
+            'Z-axis translation' => [
+                'value' => 40.19,
+                'uom' => 'urn:ogc:def:uom:EPSG::1025',
+                'reverses' => true,
+            ],
+            'X-axis rotation' => [
+                'value' => 39.4924,
+                'uom' => 'urn:ogc:def:uom:EPSG::1031',
+                'reverses' => true,
+            ],
+            'Y-axis rotation' => [
+                'value' => 32.7221,
+                'uom' => 'urn:ogc:def:uom:EPSG::1031',
+                'reverses' => true,
+            ],
+            'Z-axis rotation' => [
+                'value' => 32.8979,
+                'uom' => 'urn:ogc:def:uom:EPSG::1031',
+                'reverses' => true,
+            ],
+            'Scale difference' => [
+                'value' => 9.994,
+                'uom' => 'urn:ogc:def:uom:EPSG::1028',
+                'reverses' => true,
+            ],
+            'Rate of change of X-axis translation' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::1027',
+                'reverses' => true,
+            ],
+            'Rate of change of Y-axis translation' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::1027',
+                'reverses' => true,
+            ],
+            'Rate of change of Z-axis translation' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::1027',
+                'reverses' => true,
+            ],
+            'Rate of change of X-axis rotation' => [
+                'value' => 1.50379,
+                'uom' => 'urn:ogc:def:uom:EPSG::1032',
+                'reverses' => true,
+            ],
+            'Rate of change of Y-axis rotation' => [
+                'value' => 1.18346,
+                'uom' => 'urn:ogc:def:uom:EPSG::1032',
+                'reverses' => true,
+            ],
+            'Rate of change of Z-axis rotation' => [
+                'value' => 1.20716,
+                'uom' => 'urn:ogc:def:uom:EPSG::1032',
+                'reverses' => true,
+            ],
+            'Rate of change of scale difference' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::1030',
+                'reverses' => true,
+            ],
+            'Parameter reference epoch' => [
+                'value' => 2020.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::1029',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9686' => [
+            'X-axis translation' => [
+                'value' => 61.55,
+                'uom' => 'urn:ogc:def:uom:EPSG::1025',
+                'reverses' => true,
+            ],
+            'Y-axis translation' => [
+                'value' => -10.87,
+                'uom' => 'urn:ogc:def:uom:EPSG::1025',
+                'reverses' => true,
+            ],
+            'Z-axis translation' => [
+                'value' => -40.19,
+                'uom' => 'urn:ogc:def:uom:EPSG::1025',
+                'reverses' => true,
+            ],
+            'X-axis rotation' => [
+                'value' => -39.4924,
+                'uom' => 'urn:ogc:def:uom:EPSG::1031',
+                'reverses' => true,
+            ],
+            'Y-axis rotation' => [
+                'value' => -32.7221,
+                'uom' => 'urn:ogc:def:uom:EPSG::1031',
+                'reverses' => true,
+            ],
+            'Z-axis rotation' => [
+                'value' => -32.8979,
+                'uom' => 'urn:ogc:def:uom:EPSG::1031',
+                'reverses' => true,
+            ],
+            'Scale difference' => [
+                'value' => -9.994,
+                'uom' => 'urn:ogc:def:uom:EPSG::1028',
+                'reverses' => true,
+            ],
+            'Rate of change of X-axis translation' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::1027',
+                'reverses' => true,
+            ],
+            'Rate of change of Y-axis translation' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::1027',
+                'reverses' => true,
+            ],
+            'Rate of change of Z-axis translation' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::1027',
+                'reverses' => true,
+            ],
+            'Rate of change of X-axis rotation' => [
+                'value' => -1.50379,
+                'uom' => 'urn:ogc:def:uom:EPSG::1032',
+                'reverses' => true,
+            ],
+            'Rate of change of Y-axis rotation' => [
+                'value' => -1.18346,
+                'uom' => 'urn:ogc:def:uom:EPSG::1032',
+                'reverses' => true,
+            ],
+            'Rate of change of Z-axis rotation' => [
+                'value' => -1.20716,
+                'uom' => 'urn:ogc:def:uom:EPSG::1032',
+                'reverses' => true,
+            ],
+            'Rate of change of scale difference' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::1030',
+                'reverses' => true,
+            ],
+            'Parameter reference epoch' => [
+                'value' => 2020.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::1029',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9688' => [
+            'X-axis translation' => [
+                'value' => 61.55,
+                'uom' => 'urn:ogc:def:uom:EPSG::1025',
+                'reverses' => true,
+            ],
+            'Y-axis translation' => [
+                'value' => -10.87,
+                'uom' => 'urn:ogc:def:uom:EPSG::1025',
+                'reverses' => true,
+            ],
+            'Z-axis translation' => [
+                'value' => -40.19,
+                'uom' => 'urn:ogc:def:uom:EPSG::1025',
+                'reverses' => true,
+            ],
+            'X-axis rotation' => [
+                'value' => -39.4924,
+                'uom' => 'urn:ogc:def:uom:EPSG::1031',
+                'reverses' => true,
+            ],
+            'Y-axis rotation' => [
+                'value' => -32.7221,
+                'uom' => 'urn:ogc:def:uom:EPSG::1031',
+                'reverses' => true,
+            ],
+            'Z-axis rotation' => [
+                'value' => -32.8979,
+                'uom' => 'urn:ogc:def:uom:EPSG::1031',
+                'reverses' => true,
+            ],
+            'Scale difference' => [
+                'value' => -9.994,
+                'uom' => 'urn:ogc:def:uom:EPSG::1028',
+                'reverses' => true,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9690' => [
+            'X-axis translation' => [
+                'value' => 61.55,
+                'uom' => 'urn:ogc:def:uom:EPSG::1025',
+                'reverses' => true,
+            ],
+            'Y-axis translation' => [
+                'value' => -10.87,
+                'uom' => 'urn:ogc:def:uom:EPSG::1025',
+                'reverses' => true,
+            ],
+            'Z-axis translation' => [
+                'value' => -40.19,
+                'uom' => 'urn:ogc:def:uom:EPSG::1025',
+                'reverses' => true,
+            ],
+            'X-axis rotation' => [
+                'value' => -39.4924,
+                'uom' => 'urn:ogc:def:uom:EPSG::1031',
+                'reverses' => true,
+            ],
+            'Y-axis rotation' => [
+                'value' => -32.7221,
+                'uom' => 'urn:ogc:def:uom:EPSG::1031',
+                'reverses' => true,
+            ],
+            'Z-axis rotation' => [
+                'value' => -32.8979,
+                'uom' => 'urn:ogc:def:uom:EPSG::1031',
+                'reverses' => true,
+            ],
+            'Scale difference' => [
+                'value' => -9.994,
+                'uom' => 'urn:ogc:def:uom:EPSG::1028',
+                'reverses' => true,
             ],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::10085' => [

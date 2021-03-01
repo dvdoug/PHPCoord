@@ -21,10 +21,13 @@ use DateTimeInterface;
 use function implode;
 use function is_nan;
 use function log;
+use const M_E;
+use const M_PI;
+use const M_PI_2;
 use function max;
 use PHPCoord\CoordinateOperation\AutoConversion;
 use PHPCoord\CoordinateOperation\ComplexNumber;
-use PHPCoord\CoordinateOperation\GeographicValue;
+use PHPCoord\CoordinateOperation\ConvertiblePoint;
 use PHPCoord\CoordinateReferenceSystem\Geographic;
 use PHPCoord\CoordinateReferenceSystem\Projected;
 use PHPCoord\CoordinateSystem\Axis;
@@ -49,7 +52,7 @@ use function tanh;
 /**
  * Coordinate representing a point on a map projection.
  */
-class ProjectedPoint extends Point
+class ProjectedPoint extends Point implements ConvertiblePoint
 {
     use AutoConversion;
 
@@ -135,17 +138,17 @@ class ProjectedPoint extends Point
         return new static($easting, $northing, $westing, $southing, $crs, $epoch);
     }
 
-    public static function createFromEastingNorthing(?Length $easting, ?Length $northing, Projected $crs, ?DateTimeInterface $epoch = null): self
+    public static function createFromEastingNorthing(Length $easting, Length $northing, Projected $crs, ?DateTimeInterface $epoch = null): self
     {
         return static::create($easting, $northing, null, null, $crs, $epoch);
     }
 
-    public static function createFromWestingNorthing(?Length $westing, ?Length $northing, Projected $crs, ?DateTimeInterface $epoch = null): self
+    public static function createFromWestingNorthing(Length $westing, Length $northing, Projected $crs, ?DateTimeInterface $epoch = null): self
     {
         return static::create(null, $northing, $westing, null, $crs, $epoch);
     }
 
-    public static function createFromWestingSouthing(?Length $westing, ?Length $southing, Projected $crs, ?DateTimeInterface $epoch = null): self
+    public static function createFromWestingSouthing(Length $westing, Length $southing, Projected $crs, ?DateTimeInterface $epoch = null): self
     {
         return static::create(null, null, $westing, $southing, $crs, $epoch);
     }
@@ -186,17 +189,23 @@ class ProjectedPoint extends Point
      */
     public function calculateDistance(Point $to): Length
     {
-        if ($to->getCRS()->getSRID() !== $this->crs->getSRID()) {
-            throw new InvalidCoordinateReferenceSystemException('Can only calculate distances between two points in the same CRS');
-        }
+        try {
+            if ($to instanceof ConvertiblePoint) {
+                $to = $to->convert($this->crs);
+            }
+        } finally {
+            if ($to->getCRS()->getSRID() !== $this->crs->getSRID()) {
+                throw new InvalidCoordinateReferenceSystemException('Can only calculate distances between two points in the same CRS');
+            }
 
-        /* @var ProjectedPoint $to */
-        return new Metre(
-            sqrt(
-                ($to->getEasting()->getValue() - $this->getEasting()->getValue()) ** 2 +
-                ($to->getNorthing()->getValue() - $this->getNorthing()->getValue()) ** 2
-            )
-        );
+            /* @var ProjectedPoint $to */
+            return new Metre(
+                sqrt(
+                    ($to->getEasting()->getValue() - $this->getEasting()->getValue()) ** 2 +
+                    ($to->getNorthing()->getValue() - $this->getNorthing()->getValue()) ** 2
+                )
+            );
+        }
     }
 
     public function __toString(): string
@@ -341,13 +350,14 @@ class ProjectedPoint extends Point
             $B = $A ** 2 + $easting ** 2 / $a ** 2;
 
             $latitude = $A;
+            $C = sqrt(1 - $e2 * sin($latitude) ** 2) * tan($latitude);
             do {
                 $latitudeN = $latitude;
-                $M = $a * ($i * $latitude - $ii * sin(2 * $latitude) + $iii * sin(4 * $latitude) - $iv * sin(6 * $latitude));
+                $Ma = $i * $latitude - $ii * sin(2 * $latitude) + $iii * sin(4 * $latitude) - $iv * sin(6 * $latitude);
+                $MnPrime = $i - 2 * $ii * cos(2 * $latitude) + 4 * $iii * cos(4 * $latitude) - 6 * $iv * cos(6 * $latitude);
+                $latitude = $latitude - ($A * ($C * $Ma + 1) - $Ma - $C * ($Ma ** 2 + $B) / 2) / ($e2 * sin(2 * $latitude) * ($Ma ** 2 + $B - 2 * $A * $Ma) / 4 * $C + ($A - $Ma) * ($C * $MnPrime - (2 / sin(2 * $latitude))) - $MnPrime);
                 $C = sqrt(1 - $e2 * sin($latitude) ** 2) * tan($latitude);
-                $J = $M / $a;
-                $latitude = $latitude - ($A * ($C * $J + 1) - $J - $C * ($J ** 2 + $B) / 2) / ($e2 * sin(2 * $latitude) * ($J ** 2 + $B - 2 * $A * $J) / 4 * $C + ($A - $J) * ($C * $M - (2 / sin(2 * $latitude)) - $M));
-            } while (abs($latitude - $latitudeN) >= self::NEWTON_RAPHSON_CONVERGENCE);
+            } while (abs($latitude - $latitudeN) >= static::ITERATION_CONVERGENCE);
 
             $longitude = $longitudeOrigin + (self::asin($easting * $C / $a)) / sin($latitude);
         }
@@ -596,7 +606,7 @@ class ProjectedPoint extends Point
             $thetaN = $theta;
             $correctionFactor = ($theta * (1.340264 - 0.081106 * $theta ** 2 + $theta ** 6 * (0.000893 + 0.003796 * $theta ** 2)) - $northing / $Rq) / (1.340264 - 0.243318 * $theta ** 2 + $theta ** 6 * (0.006251 + 0.034164 * $theta ** 2));
             $theta = $theta - $correctionFactor;
-        } while (abs($theta - $thetaN) >= self::NEWTON_RAPHSON_CONVERGENCE);
+        } while (abs($theta - $thetaN) >= static::ITERATION_CONVERGENCE);
 
         $beta = self::asin(2 * sin($theta) / sqrt(3));
 
@@ -683,7 +693,7 @@ class ProjectedPoint extends Point
             $M = $MO + $northing - ($easting ** 2 * tan($latitude) * sqrt(1 - $e2 * sin($latitude) ** 2) / (2 * $a));
             $mu = $M / ($a * $i);
             $latitude = $mu + (3 * $e1 / 2 - 27 * $e1 ** 3 / 32) * sin(2 * $mu) + (21 * $e1 ** 2 / 16 - 55 * $e1 ** 4 / 32) * sin(4 * $mu) + (151 * $e1 ** 3 / 96) * sin(6 * $mu) + (1097 * $e1 ** 4 / 512) * sin(8 * $mu);
-        } while (abs($latitude - $latitudeN) >= self::NEWTON_RAPHSON_CONVERGENCE);
+        } while (abs($latitude - $latitudeN) >= static::ITERATION_CONVERGENCE);
 
         $longitude = $longitudeOrigin + $easting * sqrt(1 - $e2 * sin($latitude) ** 2) / ($a * cos($latitude));
 
@@ -733,7 +743,7 @@ class ProjectedPoint extends Point
         do {
             $latitudeN = $latitude;
             $latitude = 2 * (atan($tO ** (-1 / $B) * tan($U / 2 + M_PI / 4) ** (1 / $B) * ((1 + $e * sin($latitude)) / (1 - $e * sin($latitude))) ** ($e / 2)) - M_PI / 4);
-        } while (abs($latitude - $latitudeN) >= self::NEWTON_RAPHSON_CONVERGENCE);
+        } while (abs($latitude - $latitudeN) >= static::ITERATION_CONVERGENCE);
 
         $longitude = $longitudeO + $longitudeOffset - $V / $B;
 
@@ -905,7 +915,7 @@ class ProjectedPoint extends Point
         do {
             $latitudeN = $latitude;
             $latitude = M_PI / 2 - 2 * atan($t * ((1 - $e * sin($latitude)) / (1 + $e * sin($latitude))) ** ($e / 2));
-        } while (abs($latitude - $latitudeN) >= self::NEWTON_RAPHSON_CONVERGENCE);
+        } while (abs($latitude - $latitudeN) >= static::ITERATION_CONVERGENCE);
 
         $longitude = $theta / $n + $longitudeOrigin;
 
@@ -913,7 +923,7 @@ class ProjectedPoint extends Point
     }
 
     /**
-     * Lambert Conic Conformal (1SP).
+     * Lambert Conic Conformal (west orientated).
      */
     public function lambertConicConformalWestOrientated(
         Geographic $to,
@@ -951,9 +961,58 @@ class ProjectedPoint extends Point
         do {
             $latitudeN = $latitude;
             $latitude = M_PI / 2 - 2 * atan($t * ((1 - $e * sin($latitude)) / (1 + $e * sin($latitude))) ** ($e / 2));
-        } while (abs($latitude - $latitudeN) >= self::NEWTON_RAPHSON_CONVERGENCE);
+        } while (abs($latitude - $latitudeN) >= static::ITERATION_CONVERGENCE);
 
         $longitude = $theta / $n + $longitudeOrigin;
+
+        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+    }
+
+    /**
+     * Lambert Conic Conformal (1SP) Variant B.
+     */
+    public function lambertConicConformal1SPVariantB(
+        Geographic $to,
+        Angle $latitudeOfNaturalOrigin,
+        Scale $scaleFactorAtNaturalOrigin,
+        Angle $latitudeOfFalseOrigin,
+        Angle $longitudeOfFalseOrigin,
+        Length $eastingAtFalseOrigin,
+        Length $northingAtFalseOrigin
+    ): GeographicPoint {
+        $easting = $this->easting->asMetres()->getValue() - $eastingAtFalseOrigin->asMetres()->getValue();
+        $northing = $this->northing->asMetres()->getValue() - $northingAtFalseOrigin->asMetres()->getValue();
+        $latitudeNaturalOrigin = $latitudeOfNaturalOrigin->asRadians()->getValue();
+        $latitudeFalseOrigin = $latitudeOfFalseOrigin->asRadians()->getValue();
+        $longitudeFalseOrigin = $longitudeOfFalseOrigin->asRadians()->getValue();
+        $scaleFactorOrigin = $scaleFactorAtNaturalOrigin->asUnity()->getValue();
+        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
+        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+
+        $mO = cos($latitudeNaturalOrigin) / sqrt(1 - $e2 * sin($latitudeNaturalOrigin) ** 2);
+        $tO = tan(M_PI / 4 - $latitudeNaturalOrigin / 2) / ((1 - $e * sin($latitudeNaturalOrigin)) / (1 + $e * sin($latitudeNaturalOrigin))) ** ($e / 2);
+        $tF = tan(M_PI / 4 - $latitudeFalseOrigin / 2) / ((1 - $e * sin($latitudeFalseOrigin)) / (1 + $e * sin($latitudeFalseOrigin))) ** ($e / 2);
+        $n = sin($latitudeNaturalOrigin);
+        $F = $mO / ($n * $tO ** $n);
+        $rF = $a * $F * $tF ** $n * $scaleFactorOrigin;
+        $r = sqrt($easting ** 2 + ($rF - $northing) ** 2);
+        if ($n >= 0) {
+            $theta = atan2($easting, $rF - $northing);
+        } else {
+            $r = -$r;
+            $theta = atan2(-$easting, -($rF - $northing));
+        }
+
+        $t = ($r / ($a * $scaleFactorOrigin * $F)) ** (1 / $n);
+
+        $latitude = M_PI / (2 - 2 * atan($t));
+        do {
+            $latitudeN = $latitude;
+            $latitude = M_PI / 2 - 2 * atan($t * ((1 - $e * sin($latitude)) / (1 + $e * sin($latitude))) ** ($e / 2));
+        } while (abs($latitude - $latitudeN) >= static::ITERATION_CONVERGENCE);
+
+        $longitude = $theta / $n + $longitudeFalseOrigin;
 
         return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
     }
@@ -1000,7 +1059,7 @@ class ProjectedPoint extends Point
         do {
             $latitudeN = $latitude;
             $latitude = M_PI / 2 - 2 * atan($t * ((1 - $e * sin($latitude)) / (1 + $e * sin($latitude))) ** ($e / 2));
-        } while (abs($latitude - $latitudeN) >= self::NEWTON_RAPHSON_CONVERGENCE);
+        } while (abs($latitude - $latitudeN) >= static::ITERATION_CONVERGENCE);
 
         $longitude = $theta / $n + $lambdaOrigin;
 
@@ -1051,7 +1110,7 @@ class ProjectedPoint extends Point
         do {
             $latitudeN = $latitude;
             $latitude = M_PI / 2 - 2 * atan($t * ((1 - $e * sin($latitude)) / (1 + $e * sin($latitude))) ** ($e / 2));
-        } while (abs($latitude - $latitudeN) >= self::NEWTON_RAPHSON_CONVERGENCE);
+        } while (abs($latitude - $latitudeN) >= static::ITERATION_CONVERGENCE);
 
         $longitude = $theta / $n + $lambdaOrigin;
 
@@ -1105,7 +1164,7 @@ class ProjectedPoint extends Point
         do {
             $latitudeN = $latitude;
             $latitude = M_PI / 2 - 2 * atan($t * ((1 - $e * sin($latitude)) / (1 + $e * sin($latitude))) ** ($e / 2));
-        } while (abs($latitude - $latitudeN) >= self::NEWTON_RAPHSON_CONVERGENCE);
+        } while (abs($latitude - $latitudeN) >= static::ITERATION_CONVERGENCE);
 
         $longitude = ($theta + (new ArcSecond(29.2985))->asRadians()->getValue()) / $n + $lambdaOrigin;
 
@@ -1154,13 +1213,13 @@ class ProjectedPoint extends Point
         do {
             $mN = $m;
             $m = $m - ($M - $scaleFactorOrigin * $m - $scaleFactorOrigin * $A * $m ** 3) / (-$scaleFactorOrigin - 3 * $scaleFactorOrigin * $A * $m ** 2);
-        } while (abs($m - $mN) >= self::NEWTON_RAPHSON_CONVERGENCE);
+        } while (abs($m - $mN) >= static::ITERATION_CONVERGENCE);
 
         $latitude = $latitudeOrigin + $m / $A;
         do {
             $latitudeN = $latitude;
             $latitude = $latitude + ($m + $sO - ($APrime * $latitude - $BPrime * sin(2 * $latitude) + $CPrime * sin(4 * $latitude) - $DPrime * sin(6 * $latitude) + $EPrime * sin(8 * $latitude))) / $APrime;
-        } while (abs($latitude - $latitudeN) >= self::NEWTON_RAPHSON_CONVERGENCE);
+        } while (abs($latitude - $latitudeN) >= static::ITERATION_CONVERGENCE);
 
         $longitude = $longitudeOrigin + $theta / sin($latitudeOrigin);
 
@@ -1283,7 +1342,7 @@ class ProjectedPoint extends Point
             $latitudeN = $latitude;
             $psiN = log((tan($latitudeN / 2 + M_PI / 4)) * ((1 - $e * sin($latitudeN)) / (1 + $e * sin($latitudeN))) ** ($e / 2));
             $latitude = $latitudeN - ($psiN - $psi) * cos($latitudeN) * (1 - $e2 * sin($latitudeN) ** 2) / (1 - $e2);
-        } while (abs($latitude - $latitudeN) >= self::NEWTON_RAPHSON_CONVERGENCE);
+        } while (abs($latitude - $latitudeN) >= static::ITERATION_CONVERGENCE);
 
         return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
     }
@@ -1614,7 +1673,7 @@ class ProjectedPoint extends Point
     }
 
     /**
-     * Hotine Oblique Mercator (variant A).
+     * Hotine Oblique Mercator (variant B).
      */
     public function obliqueMercatorHotineVariantB(
         Geographic $to,
@@ -1709,7 +1768,7 @@ class ProjectedPoint extends Point
         do {
             $HN = $H;
             $H = ($HN->pow(3)->multiply($G)->multiply(new ComplexNumber(2, 0))->add($H0))->divide($HN->pow(2)->multiply($G)->multiply(new ComplexNumber(3, 0))->add(new ComplexNumber(1, 0)));
-        } while (abs($H0->subtract($H)->subtract($H->pow(3)->multiply($G))->getReal()) >= self::NEWTON_RAPHSON_CONVERGENCE);
+        } while (abs($H0->subtract($H)->subtract($H->pow(3)->multiply($G))->getReal()) >= static::ITERATION_CONVERGENCE);
 
         $LPrime = -1 * $H->getReal();
         $PPrime = 2 * atan(M_E ** $H->getImaginary()) - M_PI / 2;
@@ -1734,7 +1793,7 @@ class ProjectedPoint extends Point
         do {
             $latitudeN = $latitude;
             $latitude = 2 * atan(((1 + $e * sin($latitude)) / (1 - $e * sin($latitude))) ** ($e / 2) * M_E ** $q) - M_PI / 2;
-        } while (abs($latitude - $latitudeN) >= self::NEWTON_RAPHSON_CONVERGENCE);
+        } while (abs($latitude - $latitudeN) >= static::ITERATION_CONVERGENCE);
 
         return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
     }
@@ -1805,7 +1864,7 @@ class ProjectedPoint extends Point
         do {
             $QN = $Q;
             $Q = $QPrime + ($e * atanh($e * tanh($Q)));
-        } while (abs($Q - $QN) >= self::NEWTON_RAPHSON_CONVERGENCE);
+        } while (abs($Q - $QN) >= static::ITERATION_CONVERGENCE);
 
         $latitude = atan(sinh($Q));
         $longitude = $longitudeOrigin + self::asin(tanh($eta0) / cos($beta));
@@ -2004,12 +2063,5 @@ class ProjectedPoint extends Point
             $to,
             $this->epoch
         );
-    }
-
-    public function asGeographicValue(): GeographicValue
-    {
-        $asGeographicPoint = $this->performOperation($this->getCRS()->getBaseCRSConversionOperation(), $this->getCRS()->getBaseCRS(), true);
-
-        return new GeographicValue($asGeographicPoint->getLatitude(), $asGeographicPoint->getLongitude(), null, $this->getCRS()->getDatum());
     }
 }

@@ -1,9 +1,9 @@
 # Auto detect text files and perform LF normalization
-* text=auto
+* text=auto eol=lf
 
-*.* text eol=lf
 *.sqlite -text
 *.pdf -text
+/docs/images -text
 
 *.php diff=php
 

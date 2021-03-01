@@ -12,8 +12,8 @@ use function abs;
 use DateTime;
 use DateTimeImmutable;
 use DateTimeInterface;
-use InvalidArgumentException;
 use PHPCoord\CoordinateOperation\AutoConversion;
+use PHPCoord\CoordinateOperation\ConvertiblePoint;
 use PHPCoord\CoordinateOperation\GeocentricValue;
 use PHPCoord\CoordinateOperation\GeographicValue;
 use PHPCoord\CoordinateReferenceSystem\Geocentric;
@@ -21,6 +21,7 @@ use PHPCoord\CoordinateReferenceSystem\Geographic;
 use PHPCoord\CoordinateReferenceSystem\Geographic3D;
 use PHPCoord\CoordinateSystem\Axis;
 use PHPCoord\Exception\InvalidCoordinateException;
+use PHPCoord\Exception\InvalidCoordinateReferenceSystemException;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPCoord\UnitOfMeasure\Angle\Radian;
 use PHPCoord\UnitOfMeasure\Length\Length;
@@ -31,12 +32,11 @@ use PHPCoord\UnitOfMeasure\Scale\Unity;
 use PHPCoord\UnitOfMeasure\Time\Time;
 use PHPCoord\UnitOfMeasure\Time\Year;
 use function sprintf;
-use function sqrt;
 
 /**
  * Coordinate representing a point in ECEF geocentric form.
  */
-class GeocentricPoint extends Point
+class GeocentricPoint extends Point implements ConvertiblePoint
 {
     use AutoConversion;
 
@@ -115,23 +115,21 @@ class GeocentricPoint extends Point
 
     /**
      * Calculate surface distance between two points.
-     * Note: this implementation is currently not accurate over long distances, it is the straight line distance, not
-     * the surface distance.
      */
     public function calculateDistance(Point $to): Length
     {
-        if ($to->getCRS()->getSRID() !== $this->crs->getSRID()) {
-            throw new InvalidArgumentException('Can only calculate distances between two points in the same CRS');
-        }
+        try {
+            if ($to instanceof ConvertiblePoint) {
+                $to = $to->convert($this->crs);
+            }
+        } finally {
+            if ($to->getCRS()->getSRID() !== $this->crs->getSRID()) {
+                throw new InvalidCoordinateReferenceSystemException('Can only calculate distances between two points in the same CRS');
+            }
 
-        /* @var GeocentricPoint $to */
-        return new Metre(
-            sqrt(
-                ($to->getX()->getValue() - $this->x->getValue()) ** 2 +
-                ($to->getY()->getValue() - $this->y->getValue()) ** 2 +
-                ($to->getZ()->getValue() - $this->z->getValue()) ** 2
-            )
-        );
+            /* @var GeocentricPoint $to */
+            return static::vincenty($this->asGeographicValue(), $to->asGeographicValue(), $this->getCRS()->getDatum()->getEllipsoid());
+        }
     }
 
     public function __toString(): string

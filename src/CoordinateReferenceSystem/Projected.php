@@ -8,16 +8,17 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateReferenceSystem;
 
-use function array_map;
 use function assert;
 use function count;
 use PHPCoord\CoordinateSystem\Cartesian;
 use PHPCoord\CoordinateSystem\CoordinateSystem;
 use PHPCoord\Datum\Datum;
 use PHPCoord\Exception\UnknownCoordinateReferenceSystemException;
+use PHPCoord\Geometry\GeographicPolygon;
 
 class Projected extends CoordinateReferenceSystem
 {
+    use ProjectedSRIDData;
     /**
      * AGD66 / ACT Standard Grid
      * Extent: Australia - Australian Capital Territory.
@@ -2192,7 +2193,7 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * DGN95 / UTM zone 47S
-     * Extent: Indonesia - south of equator and between 96°E and 102°E  - onshore and offshore.
+     * Extent: Indonesia - south of equator and between 96°E and 102°E - onshore and offshore.
      * Replaces ID74 / UTM zone 47S.
      */
     public const EPSG_DGN95_UTM_ZONE_47S = 'urn:ogc:def:crs:EPSG::23877';
@@ -4173,7 +4174,7 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * GDA2020 / MGA zone 58
-     * Extent: Australia - offshore east of 162°E.  Norfolk Island - onshore and offshore west of 168°E.
+     * Extent: Australia - offshore east of 162°E. Norfolk Island - onshore and offshore west of 168°E.
      */
     public const EPSG_GDA2020_MGA_ZONE_58 = 'urn:ogc:def:crs:EPSG::7858';
 
@@ -4327,7 +4328,7 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * GDA94 / MGA zone 58
-     * Extent: Australia - offshore east of 162°E.  Norfolk Island - onshore and offshore west of 168°E.
+     * Extent: Australia - offshore east of 162°E. Norfolk Island - onshore and offshore west of 168°E.
      */
     public const EPSG_GDA94_MGA_ZONE_58 = 'urn:ogc:def:crs:EPSG::28358';
 
@@ -4706,9 +4707,18 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * Gulshan 303 / Bangladesh Transverse Mercator
-     * Extent: Bangladesh - onshore and offshore.
+     * Extent: Bangladesh - onshore.
+     * See Gulshan 303 / TM 90 NE (CRS code 3106) for topographic mapping and offshore oil and gas activities.
      */
-    public const EPSG_GULSHAN_303_BANGLADESH_TRANSVERSE_MERCATOR = 'urn:ogc:def:crs:EPSG::3106';
+    public const EPSG_GULSHAN_303_BANGLADESH_TRANSVERSE_MERCATOR = 'urn:ogc:def:crs:EPSG::9678';
+
+    /**
+     * Gulshan 303 / TM 90 NE
+     * Extent: Bangladesh - onshore and offshore. Bangladesh - onshore.
+     * Used by Survey of Bangladesh from 1995 to 2009, after which replaced by WGS 84 / TM 90 NE (CRS code 9680). See
+     * Gulshan 303 / BTM (code 9678) for other uses including water resource management.
+     */
+    public const EPSG_GULSHAN_303_TM_90_NE = 'urn:ogc:def:crs:EPSG::3106';
 
     /**
      * Gusterberg Grid (Ferro)
@@ -5772,7 +5782,7 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * KKJ / Finland Uniform Coordinate System
-     * Extent: Finland - onshore.
+     * Extent: Finland - onshore between 25°30'E and 28°30'E. Finland - onshore.
      * Known as Uniform Coordinate System (YKJ) when used over all country and also as Basic Coordinate System zone 3
      * at larger scales.
      */
@@ -5909,8 +5919,9 @@ class Projected extends CoordinateReferenceSystem
     /**
      * Kalianpur 1937 / India zone IIb
      * Extent: Bangladesh - onshore.
-     * Used by Bangladesh since metrication. Metric conversion applies A.R.Clarke's Indian foot-British foot ratio of
-     * 0.99999566 and Benoit's 1895 British inch-metre ratio of 39.370115 rounded as Ind ft = 0.30479841m exactly.
+     * Used by Survey of Bangladesh since metrication to end of 1994. Metric conversion applies A.R.Clarke's Indian
+     * foot-British foot ratio of 0.99999566 and Benoit's 1895 British inch-metre ratio of 39.370115 rounded as Ind ft
+     * = 0.30479841m exactly.
      */
     public const EPSG_KALIANPUR_1937_INDIA_ZONE_IIB = 'urn:ogc:def:crs:EPSG::24375';
 
@@ -6532,6 +6543,12 @@ class Projected extends CoordinateReferenceSystem
     public const EPSG_LKS94_LITHUANIA_TM = 'urn:ogc:def:crs:EPSG::3346';
 
     /**
+     * LTF2004(C)
+     * Extent: France and Italy - on or related to the rail route from Lyon to Turin.
+     */
+    public const EPSG_LTF2004_C = 'urn:ogc:def:crs:EPSG::9549';
+
+    /**
      * La Canoa / UTM zone 18N
      * Extent: Venezuela - west of 72°W.
      * Sometimes referred to as PSAD56 / UTM zone 18N.
@@ -6756,7 +6773,8 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * MAGNA-SIRGAS / Colombia Bogota zone
-     * Extent: Colombia - mainland onshore.
+     * Extent: Colombia - onshore between 1°30'W and 1°30'E of Bogota (75°35'W and 72°35'W of Greenwich). Colombia
+     * - mainland onshore.
      * Replaces Bogota 1975 / Colombia Bogota zone (CRS code 21897).
      */
     public const EPSG_MAGNA_SIRGAS_COLOMBIA_BOGOTA_ZONE = 'urn:ogc:def:crs:EPSG::3116';
@@ -8785,7 +8803,7 @@ class Projected extends CoordinateReferenceSystem
      * NAD27 / UTM zone 12N
      * Extent: North America - between 114°W and 108°W. Canada - Alberta; Northwest Territories; Nunavut;
      * Saskatchewan. Mexico. United States (USA) - Arizona; Colorado; Idaho; Montana; New Mexico; Utah; Wyoming.
-     * Onshore for Mexican Pacific  and Canadian Arctic coasts.
+     * Onshore for Mexican Pacific and Canadian Arctic coasts.
      * In Mexico, replaced by Mexican Datum of 1993 / UTM zone 12N (code 4485).  In Canada and USA, replaced by NAD83 /
      * UTM zone 12N (code 26912).
      */
@@ -8949,7 +8967,7 @@ class Projected extends CoordinateReferenceSystem
     /**
      * NAD27 / UTM zone 8N
      * Extent: North America - between 138°W and 132°W - onshore. Canada - British Columbia; Northwest Territiories;
-     * Yukon. United States (USA) - Alaska.  Onshore for Canadian British Columbia & Arctic and for US Pacific coast
+     * Yukon. United States (USA) - Alaska. Onshore for Canadian British Columbia & Arctic and for US Pacific coast
      * including Alaska panhandle.
      */
     public const EPSG_NAD27_UTM_ZONE_8N = 'urn:ogc:def:crs:EPSG::26708';
@@ -8957,7 +8975,7 @@ class Projected extends CoordinateReferenceSystem
     /**
      * NAD27 / UTM zone 9N
      * Extent: North America - between 132°W and 126°W - onshore. Canada - British Columbia; Northwest Territories;
-     * Yukon. United States (USA) - Alaska.   Onshore for Canadian British Colombia & Arctic coasts and for the US
+     * Yukon. United States (USA) - Alaska. Onshore for Canadian British Colombia & Arctic coasts and for the US
      * Pacific coast including Alaska panhandle.
      */
     public const EPSG_NAD27_UTM_ZONE_9N = 'urn:ogc:def:crs:EPSG::26709';
@@ -11846,7 +11864,7 @@ class Projected extends CoordinateReferenceSystem
     /**
      * NAD83 / UTM zone 12N
      * Extent: North America - between 114°W and 108°W - onshore and offshore. Canada - Alberta; Northwest
-     * Territories; Nunavut; Saskatchewan.  United States (USA) - Arizona; Colorado; Idaho; Montana; New Mexico; Utah;
+     * Territories; Nunavut; Saskatchewan. United States (USA) - Arizona; Colorado; Idaho; Montana; New Mexico; Utah;
      * Wyoming.
      * Replaces NAD27 / UTM zone 12N. For accuracies better than 1m replaced by NAD83(CSRS) / UTM zone 12N in Canada
      * and NAD83(HARN) / UTM zone 12N in US.
@@ -20839,8 +20857,8 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * NAD83(HARN) / UTM zone 11N
-     * Extent: United States (USA) - between 120°W and 114°W - onshore - Arizona; California; Idaho; Montana;
-     * Nevada; Oregon; Utah; Washington.
+     * Extent: United States (USA) - between 120°W and 114°W - onshore - Arizona; California; Idaho; Montana; Nevada;
+     * Oregon; Utah; Washington.
      * Replaces NAD83 / UTM zone 11N for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) /
      * UTM zone 11N.
      */
@@ -26227,7 +26245,7 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * PN68 / UTM zone 28N
-     * Extent: Spain - Canary Islands onshore - El Hierro east of 18°W, Fuerteventura, Gran Canaria, La Gomera,  La
+     * Extent: Spain - Canary Islands onshore - El Hierro east of 18°W, Fuerteventura, Gran Canaria, La Gomera, La
      * Palma, Lanzarote and Tenerife.
      * Replaced by PN84 / UTM zone 28N only on western islands (El Hierro, La Gomera, La Palma and Tenerife). PN84
      * later replaced by REGCAN95. On eastern islands (Fuerteventura, Gran Canaria and Lanzarote) replaced by REGCAN95
@@ -29735,7 +29753,7 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * Qornoq 1927 / Greenland zone 8 east
-     * Extent: Greenland - onshore southwest coastal area  south of 63°N.
+     * Extent: Greenland - onshore southwest coastal area south of 63°N.
      * Historically also found with coordinate system axis abbreviations N/E (CS code 4501); second axis has
      * abbreviation E but is positive to the west.
      */
@@ -29870,6 +29888,24 @@ class Projected extends CoordinateReferenceSystem
      * purposes.
      */
     public const EPSG_RDN2008_ZONE_12_N_E = 'urn:ogc:def:crs:EPSG::6876';
+
+    /**
+     * REDGEOMIN / UTM zone 12S
+     * Extent: Chile - Easter Island onshore.
+     */
+    public const EPSG_REDGEOMIN_UTM_ZONE_12S = 'urn:ogc:def:crs:EPSG::9697';
+
+    /**
+     * REDGEOMIN / UTM zone 18S
+     * Extent: Chile - 78°W to 72°W, onshore and offshore.
+     */
+    public const EPSG_REDGEOMIN_UTM_ZONE_18S = 'urn:ogc:def:crs:EPSG::9698';
+
+    /**
+     * REDGEOMIN / UTM zone 19S
+     * Extent: Chile - 72°W to 66°W, onshore and offshore.
+     */
+    public const EPSG_REDGEOMIN_UTM_ZONE_19S = 'urn:ogc:def:crs:EPSG::9699';
 
     /**
      * REGCAN95 / LAEA Europe
@@ -30337,7 +30373,8 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * RT38 2.5 gon V
-     * Extent: Sweden - onshore.
+     * Extent: Sweden - communes between approximately 14°40'E and 16°55'E. See information source for map. Sweden -
+     * onshore.
      * Replaced by RT90 2.5 gon V (CRS code 3021).
      */
     public const EPSG_RT38_2_5_GON_V = 'urn:ogc:def:crs:EPSG::3027';
@@ -30379,7 +30416,8 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * RT90 2.5 gon V
-     * Extent: Sweden - onshore.
+     * Extent: Sweden - communes between approximately 14°40'E and 16°55'E. See information source for map. Sweden -
+     * onshore.
      * Replaces RT38 2.5 gon V (CRS code 3027) from 1990. From 2003 replaced by SWEREF systems (CRS codes 3006-3018).
      */
     public const EPSG_RT90_2_5_GON_V = 'urn:ogc:def:crs:EPSG::3021';
@@ -30853,7 +30891,7 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * SIRGAS 2000 / UTM zone 13N
-     * Extent: Latin America between 108°W and 102°W,  northern hemisphere, onshore and offshore.
+     * Extent: Latin America between 108°W and 102°W, northern hemisphere, onshore and offshore.
      */
     public const EPSG_SIRGAS_2000_UTM_ZONE_13N = 'urn:ogc:def:crs:EPSG::31967';
 
@@ -31116,7 +31154,7 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * SRGI2013 / UTM zone 47S
-     * Extent: Indonesia - south of equator and between 96°E and 102°E  - onshore and offshore.
+     * Extent: Indonesia - south of equator and between 96°E and 102°E - onshore and offshore.
      * Replaces DGN95 / UTM zone 47S.
      */
     public const EPSG_SRGI2013_UTM_ZONE_47S = 'urn:ogc:def:crs:EPSG::9487';
@@ -32384,14 +32422,14 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * VN-2000 / TM-3 zone 482
-     * Extent: Vietnam - Ha Noi city, Ha Nam, Ha Tay, Ninh Binh, Thanh Hoa and Vinh Phuc provinces; Can Tho city, Bac
-     * Lieu, Dong Thap and Hau Giang provinces.
+     * Extent: Vietnam - between 103°30'E and 106°30'E, onshore. Vietnam - Ha Noi city, Ha Nam, Ha Tay, Ninh Binh,
+     * Thanh Hoa and Vinh Phuc provinces; Can Tho city, Bac Lieu, Dong Thap and Hau Giang provinces.
      */
     public const EPSG_VN_2000_TM_3_ZONE_482 = 'urn:ogc:def:crs:EPSG::5897';
 
     /**
      * VN-2000 / TM-3 zone 491
-     * Extent: Vietnam - Quang Ngai province.
+     * Extent: Vietnam - onshore east of 106°30'E. Vietnam - Quang Ngai province.
      */
     public const EPSG_VN_2000_TM_3_ZONE_491 = 'urn:ogc:def:crs:EPSG::5898';
 
@@ -35284,6 +35322,14 @@ class Projected extends CoordinateReferenceSystem
     public const EPSG_WGS_84_TM_60_SW = 'urn:ogc:def:crs:EPSG::6703';
 
     /**
+     * WGS 84 / TM 90 NE
+     * Extent: Bangladesh - onshore and offshore.
+     * Replaced use of Gulshan 303 / TM 90 NE (CRS code 3106) in Survey of Bangladesh from 2010. Not part of the global
+     * UTM grid system (for which see CRSs 32645 and 32646).
+     */
+    public const EPSG_WGS_84_TM_90_NE = 'urn:ogc:def:crs:EPSG::9680';
+
+    /**
      * WGS 84 / TM Zone 20N (ftUS)
      * Extent: Trinidad and Tobago - offshore west of 60°W.
      * Note: this CRS uses US survet feet, not international feet.
@@ -36755,36 +36801,22 @@ class Projected extends CoordinateReferenceSystem
      */
     public const EPSG_FK89_FAROE_LAMBERT_FK89 = 'urn:ogc:def:crs:EPSG::3173';
 
-    use ProjectedSRIDData;
+    private static $cachedObjects = [];
 
-    protected $baseCRS;
-
-    protected $baseCRSConversionOperation;
+    private static $supportedCache = [];
 
     public function __construct(
         string $srid,
         CoordinateSystem $coordinateSystem,
         Datum $datum,
-        ?CoordinateReferenceSystem $baseCRS = null,
-        ?string $baseCRSConversionOperation = null
+        GeographicPolygon $boundingBox
     ) {
         $this->srid = $srid;
         $this->coordinateSystem = $coordinateSystem;
         $this->datum = $datum;
-        $this->baseCRS = $baseCRS;
-        $this->baseCRSConversionOperation = $baseCRSConversionOperation;
+        $this->boundingBox = $boundingBox;
 
         assert(count($coordinateSystem->getAxes()) === 2);
-    }
-
-    public function getBaseCRS(): ?CoordinateReferenceSystem
-    {
-        return $this->baseCRS;
-    }
-
-    public function getBaseCRSConversionOperation(): ?string
-    {
-        return $this->baseCRSConversionOperation;
     }
 
     public static function fromSRID(string $srid): self
@@ -36793,19 +36825,28 @@ class Projected extends CoordinateReferenceSystem
             throw new UnknownCoordinateReferenceSystemException($srid);
         }
 
-        $data = static::$sridData[$srid];
+        if (!isset(self::$cachedObjects[$srid])) {
+            $data = static::$sridData[$srid];
 
-        return new self(
-            $srid,
-            Cartesian::fromSRID($data['coordinate_system']),
-            Datum::fromSRID($data['datum']),
-            CoordinateReferenceSystem::fromSRID($data['base_crs']),
-            $data['conversion_operation']
-        );
+            self::$cachedObjects[$srid] = new self(
+                $srid,
+                Cartesian::fromSRID($data['coordinate_system']),
+                Datum::fromSRID($data['datum']),
+                GeographicPolygon::createFromArray($data['bounding_box'], $data['bounding_box_crosses_antimeridian']),
+            );
+        }
+
+        return self::$cachedObjects[$srid];
     }
 
     public static function getSupportedSRIDs(): array
     {
-        return array_map(function ($sridData) {return $sridData['name']; }, static::$sridData);
+        if (!self::$supportedCache) {
+            foreach (static::$sridData as $srid => $data) {
+                self::$supportedCache[$srid] = $data['name'];
+            }
+        }
+
+        return self::$supportedCache;
     }
 }

@@ -13,6 +13,7 @@ use DateTime;
 use DateTimeImmutable;
 use DateTimeInterface;
 use PHPCoord\CoordinateReferenceSystem\Vertical;
+use PHPCoord\Exception\InvalidCoordinateReferenceSystemException;
 use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPCoord\UnitOfMeasure\Scale\Scale;
@@ -78,6 +79,10 @@ class VerticalPoint extends Point
 
     public function calculateDistance(Point $to): Length
     {
+        if ($to->getCRS()->getSRID() !== $this->crs->getSRID()) {
+            throw new InvalidCoordinateReferenceSystemException('Can only calculate distances between two points in the same CRS');
+        }
+
         /* @var self $to */
         return new Metre(abs($this->height->asMetres()->getValue() - $to->height->asMetres()->getValue()));
     }

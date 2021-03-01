@@ -16,6 +16,8 @@ use PHPCoord\Exception\InvalidCoordinateException;
 use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 use function str_pad;
+use const STR_PAD_LEFT;
+use function str_replace;
 use function strlen;
 use function strpos;
 use function substr;
@@ -30,10 +32,12 @@ class BritishNationalGridPoint extends ProjectedPoint
     }
 
     /**
-     * @param string OS grid reference (e.g. "TG514131")
+     * @param string $reference OS grid reference (e.g. "TG514131")
      */
     public static function fromGridReference(string $reference, ?DateTimeInterface $epoch = null): self
     {
+        $reference = str_replace(' ', '', $reference);
+
         if (strlen($reference) % 2 !== 0) {
             throw new InvalidCoordinateException('Grid ref must be an even number of characters');
         }

@@ -8,6 +8,8 @@ declare(strict_types=1);
 
 namespace PHPCoord\UnitOfMeasure\Angle;
 
+use const M_PI;
+
 class ArcSecond extends Angle
 {
     private $angle;

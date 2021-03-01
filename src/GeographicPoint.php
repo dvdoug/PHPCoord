@@ -20,12 +20,14 @@ use DateTimeImmutable;
 use DateTimeInterface;
 use function get_class;
 use function implode;
-use InvalidArgumentException;
 use function is_nan;
 use function log;
+use const M_E;
+use const M_PI;
 use function max;
 use PHPCoord\CoordinateOperation\AutoConversion;
 use PHPCoord\CoordinateOperation\ComplexNumber;
+use PHPCoord\CoordinateOperation\ConvertiblePoint;
 use PHPCoord\CoordinateOperation\GeocentricValue;
 use PHPCoord\CoordinateOperation\GeographicValue;
 use PHPCoord\CoordinateReferenceSystem\Compound;
@@ -57,7 +59,7 @@ use TypeError;
 /**
  * Coordinate representing a point on an ellipsoid.
  */
-class GeographicPoint extends Point
+class GeographicPoint extends Point implements ConvertiblePoint
 {
     use AutoConversion;
 
@@ -102,6 +104,9 @@ class GeographicPoint extends Point
 
         $this->crs = $crs;
 
+        $latitude = $this->normaliseLatitude($latitude);
+        $longitude = $this->normaliseLongitude($longitude);
+
         $this->latitude = Angle::convert($latitude, $this->getAxisByName(Axis::GEODETIC_LATITUDE)->getUnitOfMeasureId());
         $this->longitude = Angle::convert($longitude, $this->getAxisByName(Axis::GEODETIC_LONGITUDE)->getUnitOfMeasureId());
 
@@ -122,7 +127,7 @@ class GeographicPoint extends Point
      * @param Angle   $longitude refer to CRS for preferred unit of measure, but any angle unit accepted
      * @param ?Length $height    refer to CRS for preferred unit of measure, but any length unit accepted
      */
-    public static function create(Angle $latitude, Angle $longitude, ?Length $height, Geographic $crs, ?DateTimeInterface $epoch = null): self
+    public static function create(Angle $latitude, Angle $longitude, ?Length $height = null, Geographic $crs, ?DateTimeInterface $epoch = null): self
     {
         return new static($latitude, $longitude, $height, $crs, $epoch);
     }
@@ -152,21 +157,47 @@ class GeographicPoint extends Point
         return $this->epoch;
     }
 
+    protected function normaliseLatitude(Angle $latitude): Angle
+    {
+        if ($latitude->asDegrees()->getValue() > 90) {
+            return new Degree(90);
+        }
+        if ($latitude->asDegrees()->getValue() < -90) {
+            return new Degree(-90);
+        }
+
+        return $latitude;
+    }
+
+    protected function normaliseLongitude(Angle $longitude): Angle
+    {
+        while ($longitude->asDegrees()->getValue() > 180) {
+            $longitude = $longitude->subtract(new Degree(360));
+        }
+        while ($longitude->asDegrees()->getValue() <= -180) {
+            $longitude = $longitude->add(new Degree(360));
+        }
+
+        return $longitude;
+    }
+
     /**
      * Calculate surface distance between two points.
      */
     public function calculateDistance(Point $to): Length
     {
-        if ($to->getCRS()->getSRID() !== $this->crs->getSRID()) {
-            throw new InvalidArgumentException('Can only calculate distances between two points in the same CRS');
+        try {
+            if ($to instanceof ConvertiblePoint) {
+                $to = $to->convert($this->crs);
+            }
+        } finally {
+            if ($to->getCRS()->getSRID() !== $this->crs->getSRID()) {
+                throw new InvalidCoordinateReferenceSystemException('Can only calculate distances between two points in the same CRS');
+            }
+
+            /* @var GeographicPoint $to */
+            return static::vincenty($this->asGeographicValue(), $to->asGeographicValue(), $this->getCRS()->getDatum()->getEllipsoid());
         }
-
-        //Mean radius definition taken from Wikipedia
-        /** @var Ellipsoid $ellipsoid */
-        $ellipsoid = $this->getCRS()->getDatum()->getEllipsoid();
-        $radius = ((2 * $ellipsoid->getSemiMajorAxis()->asMetres()->getValue()) + $ellipsoid->getSemiMinorAxis()->asMetres()->getValue()) / 3;
-
-        return new Metre(self::acos(sin($this->latitude->asRadians()->getValue()) * sin($to->latitude->asRadians()->getValue()) + cos($this->latitude->asRadians()->getValue()) * cos($to->latitude->asRadians()->getValue()) * cos($to->longitude->asRadians()->getValue() - $this->longitude->asRadians()->getValue())) * $radius);
     }
 
     public function __toString(): string
@@ -1013,6 +1044,44 @@ class GeographicPoint extends Point
     }
 
     /**
+     * Lambert Conic Conformal (1SP) Variant B.
+     */
+    public function lambertConicConformal1SPVariantB(
+        Projected $to,
+        Angle $latitudeOfNaturalOrigin,
+        Scale $scaleFactorAtNaturalOrigin,
+        Angle $latitudeOfFalseOrigin,
+        Angle $longitudeOfFalseOrigin,
+        Length $eastingAtFalseOrigin,
+        Length $northingAtFalseOrigin
+    ): ProjectedPoint {
+        $latitude = $this->latitude->asRadians()->getValue();
+        $longitude = $this->longitude->asRadians()->getValue();
+        $latitudeNaturalOrigin = $latitudeOfNaturalOrigin->asRadians()->getValue();
+        $latitudeFalseOrigin = $latitudeOfFalseOrigin->asRadians()->getValue();
+        $longitudeFalseOrigin = $longitudeOfFalseOrigin->asRadians()->getValue();
+        $kO = $scaleFactorAtNaturalOrigin->asUnity()->getValue();
+        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
+        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+
+        $mO = cos($latitudeNaturalOrigin) / sqrt(1 - $e2 * sin($latitudeNaturalOrigin) ** 2);
+        $tO = tan(M_PI / 4 - $latitudeNaturalOrigin / 2) / ((1 - $e * sin($latitudeNaturalOrigin)) / (1 + $e * sin($latitudeNaturalOrigin))) ** ($e / 2);
+        $tF = tan(M_PI / 4 - $latitudeFalseOrigin / 2) / ((1 - $e * sin($latitudeFalseOrigin)) / (1 + $e * sin($latitudeFalseOrigin))) ** ($e / 2);
+        $t = tan(M_PI / 4 - $latitude / 2) / ((1 - $e * sin($latitude)) / (1 + $e * sin($latitude))) ** ($e / 2);
+        $n = sin($latitudeNaturalOrigin);
+        $F = $mO / ($n * $tO ** $n);
+        $rF = $a * $F * $tF ** $n * $kO;
+        $r = $a * $F * $t ** $n * $kO;
+        $theta = $n * ($longitude - $longitudeFalseOrigin);
+
+        $easting = $eastingAtFalseOrigin->asMetres()->getValue() + $r * sin($theta);
+        $northing = $northingAtFalseOrigin->asMetres()->getValue() + $rF - $r * cos($theta);
+
+        return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+    }
+
+    /**
      * Lambert Conic Conformal (2SP Belgium)
      * In 2000 this modification was replaced through use of the regular Lambert Conic Conformal (2SP) method [9802]
      * with appropriately modified parameter values.
@@ -1559,9 +1628,6 @@ class GeographicPoint extends Point
         Angle $longitudeOffset
     ): self {
         $newLongitude = $this->longitude->add($longitudeOffset);
-        if ($newLongitude->asDegrees()->getValue() < -180) {
-            $newLongitude = $newLongitude->add(new Degree(360));
-        }
 
         return static::create($this->latitude, $newLongitude, $this->height, $to, $this->epoch);
     }
@@ -1942,7 +2008,7 @@ class GeographicPoint extends Point
     }
 
     /**
-     * General polynomial of degree.
+     * General polynomial.
      * @param Coefficient[] $powerCoefficients
      */
     public function generalPolynomial(

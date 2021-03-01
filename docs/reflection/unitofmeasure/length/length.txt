@@ -1,0 +1,216 @@
+British chain (Benoit 1895 B)
+-----------------------------
+
+
+.. code-block:: php
+
+    Length::makeUnit($measurement, Length::EPSG_BRITISH_CHAIN_BENOIT_1895_B)
+    Length::makeUnit($measurement, 'urn:ogc:def:uom:EPSG::9062')
+
+Uses Benoit's 1895 British yard-metre ratio as given by Bomford as 39.370113 inches per metre.  Used in West Malaysian mapping.
+
+British chain (Sears 1922 truncated)
+------------------------------------
+
+
+.. code-block:: php
+
+    Length::makeUnit($measurement, Length::EPSG_BRITISH_CHAIN_SEARS_1922_TRUNCATED)
+    Length::makeUnit($measurement, 'urn:ogc:def:uom:EPSG::9301')
+
+Uses Sear's 1922 British yard-metre ratio (UoM code 9040) truncated to 6 significant figures; this truncated ratio (0.914398, UoM code 9099) then converted to other imperial units. 1 chSe(T) = 22 ydSe(T). Used in metrication of Malaya RSO grid.
+
+British chain (Sears 1922)
+--------------------------
+
+
+.. code-block:: php
+
+    Length::makeUnit($measurement, Length::EPSG_BRITISH_CHAIN_SEARS_1922)
+    Length::makeUnit($measurement, 'urn:ogc:def:uom:EPSG::9042')
+
+Uses Sear's 1922 British yard-metre ratio as given by Bomford as 39.370147 inches per metre.  Used in East Malaysian and older New Zealand mapping.
+
+British foot (1936)
+-------------------
+
+
+.. code-block:: php
+
+    Length::makeUnit($measurement, Length::EPSG_BRITISH_FOOT_1936)
+    Length::makeUnit($measurement, 'urn:ogc:def:uom:EPSG::9095')
+
+For the 1936 retriangulation OSGB defines the relationship of 10 feet of 1796 to the International metre through the logarithmic relationship (10^0.48401603 exactly). 1 ft = 0.3048007491…m. Also used for metric conversions in Ireland.
+
+British foot (Sears 1922)
+-------------------------
+
+
+.. code-block:: php
+
+    Length::makeUnit($measurement, Length::EPSG_BRITISH_FOOT_SEARS_1922)
+    Length::makeUnit($measurement, 'urn:ogc:def:uom:EPSG::9041')
+
+Uses Sear's 1922 British yard-metre ratio as given by Bomford as 39.370147 inches per metre.  Used in East Malaysian and older New Zealand mapping.
+
+British yard (Sears 1922)
+-------------------------
+
+
+.. code-block:: php
+
+    Length::makeUnit($measurement, Length::EPSG_BRITISH_YARD_SEARS_1922)
+    Length::makeUnit($measurement, 'urn:ogc:def:uom:EPSG::9040')
+
+Uses Sear's 1922 British yard-metre ratio as given by Bomford as 39.370147 inches per metre.  Used in East Malaysian and older New Zealand mapping.
+
+Clarke's foot
+-------------
+
+
+.. code-block:: php
+
+    Length::makeUnit($measurement, Length::EPSG_CLARKES_FOOT)
+    Length::makeUnit($measurement, 'urn:ogc:def:uom:EPSG::9005')
+
+Assumes Clarke's 1865 ratio of 1 British foot = 0.3047972654 French legal metres applies to the international metre.   Used in older Australian, southern African & British West Indian mapping.
+
+Clarke's link
+-------------
+
+
+.. code-block:: php
+
+    Length::makeUnit($measurement, Length::EPSG_CLARKES_LINK)
+    Length::makeUnit($measurement, 'urn:ogc:def:uom:EPSG::9039')
+
+=1/100 Clarke's chain. Assumes Clarke's 1865 ratio of 1 British foot = 0.3047972654 French legal metres applies to the international metre.   Used in older Australian, southern African & British West Indian mapping.
+
+Clarke's yard
+-------------
+
+
+.. code-block:: php
+
+    Length::makeUnit($measurement, Length::EPSG_CLARKES_YARD)
+    Length::makeUnit($measurement, 'urn:ogc:def:uom:EPSG::9037')
+
+=3 Clarke's feet.  Assumes Clarke's 1865 ratio of 1 British foot = 0.3047972654 French legal metres applies to the international metre.   Used in older Australian, southern African & British West Indian mapping.
+
+German legal metre
+------------------
+
+
+.. code-block:: php
+
+    Length::makeUnit($measurement, Length::EPSG_GERMAN_LEGAL_METRE)
+    Length::makeUnit($measurement, 'urn:ogc:def:uom:EPSG::9031')
+
+Used in Namibia.
+
+Gold Coast foot
+---------------
+
+
+.. code-block:: php
+
+    Length::makeUnit($measurement, Length::EPSG_GOLD_COAST_FOOT)
+    Length::makeUnit($measurement, 'urn:ogc:def:uom:EPSG::9094')
+
+Used in Ghana and some adjacent parts of British west Africa prior to metrication, except for the metrication of projection defining parameters when British foot (Sears 1922) used.
+
+Indian foot
+-----------
+
+
+.. code-block:: php
+
+    Length::makeUnit($measurement, Length::EPSG_INDIAN_FOOT)
+    Length::makeUnit($measurement, 'urn:ogc:def:uom:EPSG::9080')
+
+Indian Foot = 0.99999566 British feet (A.R.Clarke 1865).  British yard (= 3 British feet) taken to be J.S.Clark's 1865 value of 0.9144025 metres.
+
+Indian yard
+-----------
+
+
+.. code-block:: php
+
+    Length::makeUnit($measurement, Length::EPSG_INDIAN_YARD)
+    Length::makeUnit($measurement, 'urn:ogc:def:uom:EPSG::9084')
+
+Indian Foot = 0.99999566 British feet (A.R.Clarke 1865).  British yard (= 3 British feet) taken to be J.S.Clark's 1865 value of 0.9144025 metres.
+
+US survey foot
+--------------
+
+
+.. code-block:: php
+
+    Length::makeUnit($measurement, Length::EPSG_US_SURVEY_FOOT)
+    Length::makeUnit($measurement, 'urn:ogc:def:uom:EPSG::9003')
+
+Used in USA.
+
+Centimetre
+----------
+
+
+.. code-block:: php
+
+    Length::makeUnit($measurement, Length::EPSG_CENTIMETRE)
+    Length::makeUnit($measurement, 'urn:ogc:def:uom:EPSG::1033')
+
+
+Foot
+----
+
+
+.. code-block:: php
+
+    Length::makeUnit($measurement, Length::EPSG_FOOT)
+    Length::makeUnit($measurement, 'urn:ogc:def:uom:EPSG::9002')
+
+
+Kilometre
+---------
+
+
+.. code-block:: php
+
+    Length::makeUnit($measurement, Length::EPSG_KILOMETRE)
+    Length::makeUnit($measurement, 'urn:ogc:def:uom:EPSG::9036')
+
+
+Link
+----
+
+
+.. code-block:: php
+
+    Length::makeUnit($measurement, Length::EPSG_LINK)
+    Length::makeUnit($measurement, 'urn:ogc:def:uom:EPSG::9098')
+
+=1/100 international chain.
+
+Metre
+-----
+
+
+.. code-block:: php
+
+    Length::makeUnit($measurement, Length::EPSG_METRE)
+    Length::makeUnit($measurement, 'urn:ogc:def:uom:EPSG::9001')
+
+SI base unit for length.
+
+Millimetre
+----------
+
+
+.. code-block:: php
+
+    Length::makeUnit($measurement, Length::EPSG_MILLIMETRE)
+    Length::makeUnit($measurement, 'urn:ogc:def:uom:EPSG::1025')
+
+

@@ -8,9 +8,8 @@ declare(strict_types=1);
 
 namespace PHPCoord\UnitOfMeasure\Angle;
 
-use function array_map;
+use const M_PI;
 use PHPCoord\Exception\UnknownUnitOfMeasureException;
-use PHPCoord\UnitOfMeasure\Time\Second;
 use PHPCoord\UnitOfMeasure\UnitOfMeasure;
 
 abstract class Angle implements UnitOfMeasure
@@ -265,7 +264,12 @@ abstract class Angle implements UnitOfMeasure
 
     public static function getSupportedSRIDs(): array
     {
-        return array_map(function ($sridData) {return $sridData['name']; }, static::$sridData);
+        $supported = [];
+        foreach (static::$sridData as $srid => $data) {
+            $supported[$srid] = $data['name'];
+        }
+
+        return $supported;
     }
 
     public static function convert(self $angle, string $targetSRID): self

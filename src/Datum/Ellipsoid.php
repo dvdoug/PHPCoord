@@ -8,7 +8,6 @@ declare(strict_types=1);
 
 namespace PHPCoord\Datum;
 
-use function array_map;
 use PHPCoord\Exception\UnknownEllipsoidException;
 use PHPCoord\UnitOfMeasure\Length\Length;
 use function sqrt;
@@ -656,6 +655,8 @@ class Ellipsoid
         ],
     ];
 
+    private static $cachedObjects = [];
+
     protected $semiMajorAxis;
 
     protected $semiMinorAxis;
@@ -697,16 +698,25 @@ class Ellipsoid
             throw new UnknownEllipsoidException($srid);
         }
 
-        $data = static::$sridData[$srid];
+        if (!isset(self::$cachedObjects[$srid])) {
+            $data = static::$sridData[$srid];
 
-        return new static(
-            Length::makeUnit($data['semi_major_axis'], $data['uom']),
-            Length::makeUnit($data['semi_minor_axis'], $data['uom'])
-        );
+            self::$cachedObjects[$srid] = new static(
+                Length::makeUnit($data['semi_major_axis'], $data['uom']),
+                Length::makeUnit($data['semi_minor_axis'], $data['uom'])
+            );
+        }
+
+        return self::$cachedObjects[$srid];
     }
 
     public static function getSupportedSRIDs(): array
     {
-        return array_map(function ($sridData) {return $sridData['name']; }, static::$sridData);
+        $supported = [];
+        foreach (static::$sridData as $srid => $data) {
+            $supported[$srid] = $data['name'];
+        }
+
+        return $supported;
     }
 }

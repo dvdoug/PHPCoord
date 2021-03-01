@@ -13,11 +13,15 @@ use DateTime;
 use DateTimeImmutable;
 use DateTimeInterface;
 use PHPCoord\CoordinateOperation\AutoConversion;
-use PHPCoord\CoordinateOperation\GeographicValue;
+use PHPCoord\CoordinateOperation\ConvertiblePoint;
 use PHPCoord\CoordinateReferenceSystem\Compound;
+use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
+use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Geographic3D;
+use PHPCoord\CoordinateReferenceSystem\Projected;
 use PHPCoord\CoordinateReferenceSystem\Vertical;
 use PHPCoord\Exception\InvalidCoordinateReferenceSystemException;
+use PHPCoord\Exception\UnknownConversionException;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Length\Metre;
@@ -27,9 +31,11 @@ use function sqrt;
 /**
  * Coordinate representing a point expressed in 2 different CRSs (2D horizontal + 1D Vertical).
  */
-class CompoundPoint extends Point
+class CompoundPoint extends Point implements ConvertiblePoint
 {
-    use AutoConversion;
+    use AutoConversion {
+        convert as protected autoConvert;
+    }
 
     /**
      * Horizontal point.
@@ -101,12 +107,29 @@ class CompoundPoint extends Point
      */
     public function calculateDistance(Point $to): Length
     {
-        if ($to->getCRS()->getSRID() !== $this->crs->getSRID()) {
-            throw new InvalidCoordinateReferenceSystemException('Can only calculate distances between two points in the same CRS');
-        }
+        try {
+            if ($to instanceof ConvertiblePoint) {
+                $to = $to->convert($this->crs);
+            }
+        } finally {
+            if ($to->getCRS()->getSRID() !== $this->crs->getSRID()) {
+                throw new InvalidCoordinateReferenceSystemException('Can only calculate distances between two points in the same CRS');
+            }
 
-        /* @var CompoundPoint $to */
-        return $this->horizontalPoint->calculateDistance($to->horizontalPoint);
+            /* @var CompoundPoint $to */
+            return $this->horizontalPoint->calculateDistance($to->horizontalPoint);
+        }
+    }
+
+    public function convert(CoordinateReferenceSystem $to, bool $ignoreBoundaryRestrictions = false): Point
+    {
+        try {
+            return $this->autoConvert($to, $ignoreBoundaryRestrictions);
+        } catch (UnknownConversionException $e) {
+            if (($to instanceof Geographic2D || $to instanceof Projected) && $this->getHorizontalPoint() instanceof ConvertiblePoint) {
+                return $this->getHorizontalPoint()->convert($to, $ignoreBoundaryRestrictions);
+            }
+        }
     }
 
     public function __toString(): string
@@ -143,8 +166,7 @@ class CompoundPoint extends Point
         Angle $ordinate2OfEvaluationPoint,
         Length $verticalOffset,
         Angle $inclinationInLatitude,
-        Angle $inclinationInLongitude,
-        int $horizontalCRSCode
+        Angle $inclinationInLongitude
     ): self {
         $latitude = $this->horizontalPoint->getLatitude()->asRadians()->getValue();
         $longitude = $this->horizontalPoint->getLongitude()->asRadians()->getValue();
@@ -163,10 +185,5 @@ class CompoundPoint extends Point
         $newVerticalPoint = VerticalPoint::create($newVerticalHeight, $to->getVertical());
 
         return static::create($this->horizontalPoint, $newVerticalPoint, $to);
-    }
-
-    public function asGeographicValue(): GeographicValue
-    {
-        return $this->horizontalPoint->asGeographicValue();
     }
 }

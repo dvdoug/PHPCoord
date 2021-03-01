@@ -8,7 +8,6 @@ declare(strict_types=1);
 
 namespace PHPCoord\Datum;
 
-use function array_map;
 use PHPCoord\Exception\UnknownPrimeMeridianException;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
 
@@ -170,6 +169,8 @@ class PrimeMeridian
         ],
     ];
 
+    private static $cachedObjects = [];
+
     private $name;
 
     private $greenwichLongitude;
@@ -196,13 +197,22 @@ class PrimeMeridian
             throw new UnknownPrimeMeridianException($srid);
         }
 
-        $data = static::$sridData[$srid];
+        if (!isset(self::$cachedObjects[$srid])) {
+            $data = static::$sridData[$srid];
 
-        return new static($data['name'], Angle::makeUnit($data['greenwich_longitude'], $data['uom']));
+            self::$cachedObjects[$srid] = new static($data['name'], Angle::makeUnit($data['greenwich_longitude'], $data['uom']));
+        }
+
+        return self::$cachedObjects[$srid];
     }
 
     public static function getSupportedSRIDs(): array
     {
-        return array_map(function ($sridData) {return $sridData['name']; }, static::$sridData);
+        $supported = [];
+        foreach (static::$sridData as $srid => $data) {
+            $supported[$srid] = $data['name'];
+        }
+
+        return $supported;
     }
 }

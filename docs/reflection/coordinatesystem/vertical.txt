@@ -1,0 +1,77 @@
+Axis: depth (D). Orientation: down. UoM: ft.
+--------------------------------------------
+
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_AXIS_DEPTH_D_ORIENTATION_DOWN_UOM_FT)
+    Vertical::fromSRID('urn:ogc:def:cs:EPSG::6495')
+
+Used in vertical coordinate reference systems.
+
+Axis: depth (D). Orientation: down. UoM: ftUS.
+----------------------------------------------
+
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_AXIS_DEPTH_D_ORIENTATION_DOWN_UOM_FTUS)
+    Vertical::fromSRID('urn:ogc:def:cs:EPSG::1043')
+
+Used in US vertical coordinate reference systems.
+
+Axis: depth (D). Orientation: down. UoM: m.
+-------------------------------------------
+
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_AXIS_DEPTH_D_ORIENTATION_DOWN_UOM_M)
+    Vertical::fromSRID('urn:ogc:def:cs:EPSG::6498')
+
+Used in vertical coordinate reference systems.
+
+Axis: height (H). Orientation: up. UoM: ft(Br36).
+-------------------------------------------------
+
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_AXIS_HEIGHT_H_ORIENTATION_UP_UOM_FT_BR36)
+    Vertical::fromSRID('urn:ogc:def:cs:EPSG::6496')
+
+Used in vertical coordinate reference systems.
+
+Axis: height (H). Orientation: up. UoM: ft.
+-------------------------------------------
+
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_AXIS_HEIGHT_H_ORIENTATION_UP_UOM_FT)
+    Vertical::fromSRID('urn:ogc:def:cs:EPSG::1030')
+
+Used in vertical coordinate reference systems.
+
+Axis: height (H). Orientation: up. UoM: ftUS.
+---------------------------------------------
+
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_AXIS_HEIGHT_H_ORIENTATION_UP_UOM_FTUS)
+    Vertical::fromSRID('urn:ogc:def:cs:EPSG::6497')
+
+Used in vertical coordinate reference systems.
+
+Axis: height (H). Orientation: up. UoM: m.
+------------------------------------------
+
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_AXIS_HEIGHT_H_ORIENTATION_UP_UOM_M)
+    Vertical::fromSRID('urn:ogc:def:cs:EPSG::6499')
+
+Used in vertical coordinate reference systems.
+

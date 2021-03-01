@@ -1,8 +1,9 @@
 {
     "name": "php-coord/php-coord",
-    "description": "PHPCoord is a set of PHP functions for handling various co-ordinate systems and converting between them",
-    "keywords": ["coord","geo", "wgs84", "osgb36", "latitude", "longitude", "grid ref", "utm", "itm" ,"gps"],
-    "homepage": "https://github.com/dvdoug/PHPCoord",
+    "description": "PHPCoord is a PHP library to aid in handling coordinates. It can convert coordinates for a point from one system to another and also calculate distance between points.",
+    "keywords": ["coord", "geo", "latitude", "longitude", "grid ref", "map", "projection", "wgs84", "osgb36", "utm", "nad", "nzmg", "gda", "ed50", "epsg"],
+    "type": "library",
+    "homepage": "https://www.phpcoord.net/",
     "authors": [
         {
             "name": "Doug Wright",
@@ -16,9 +17,17 @@
     },
     "require-dev": {
         "ext-sqlite3": "*",
-        "friendsofphp/php-cs-fixer": "^2.17.0",
+        "friendsofphp/php-cs-fixer": "^2.18.0",
         "phpunit/phpunit": "^9.5.0",
         "nikic/php-parser": "^4.10"
+    },
+    "config": {
+        "preferred-install": {
+            "*": "dist"
+        },
+        "sort-packages": true,
+        "bin-compat" : "full",
+        "optimize-autoloader": true
     },
     "autoload": {
         "psr-4": {

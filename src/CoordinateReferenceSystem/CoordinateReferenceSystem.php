@@ -11,7 +11,7 @@ namespace PHPCoord\CoordinateReferenceSystem;
 use function array_merge;
 use PHPCoord\CoordinateSystem\CoordinateSystem;
 use PHPCoord\Datum\Datum;
-use PHPCoord\Exception\UnknownCoordinateReferenceSystemException;
+use PHPCoord\Geometry\GeographicPolygon;
 
 abstract class CoordinateReferenceSystem
 {
@@ -47,6 +47,12 @@ abstract class CoordinateReferenceSystem
 
     protected $datum;
 
+    protected $boundingBox;
+
+    private static $cachedObjects = [];
+
+    private static $supportedCache = [];
+
     public function getSRID(): string
     {
         return $this->srid;
@@ -62,37 +68,38 @@ abstract class CoordinateReferenceSystem
         return $this->datum;
     }
 
+    public function getBoundingBox(): GeographicPolygon
+    {
+        return $this->boundingBox;
+    }
+
     public static function fromSRID(string $srid)
     {
-        if (isset(Projected::getSupportedSRIDs()[$srid])) {
-            return Projected::fromSRID($srid);
+        if (!isset(self::$cachedObjects[$srid])) {
+            if (isset(Projected::getSupportedSRIDs()[$srid])) {
+                self::$cachedObjects[$srid] = Projected::fromSRID($srid);
+            } elseif (isset(Geographic2D::getSupportedSRIDs()[$srid])) {
+                self::$cachedObjects[$srid] = Geographic2D::fromSRID($srid);
+            } elseif (isset(Geographic3D::getSupportedSRIDs()[$srid])) {
+                self::$cachedObjects[$srid] = Geographic3D::fromSRID($srid);
+            } elseif (isset(Geocentric::getSupportedSRIDs()[$srid])) {
+                self::$cachedObjects[$srid] = Geocentric::fromSRID($srid);
+            } elseif (isset(Vertical::getSupportedSRIDs()[$srid])) {
+                self::$cachedObjects[$srid] = Vertical::fromSRID($srid);
+            } elseif (isset(Compound::getSupportedSRIDs()[$srid])) {
+                self::$cachedObjects[$srid] = Compound::fromSRID($srid);
+            }
         }
 
-        if (isset(Geographic2D::getSupportedSRIDs()[$srid])) {
-            return Geographic2D::fromSRID($srid);
-        }
-
-        if (isset(Geographic3D::getSupportedSRIDs()[$srid])) {
-            return Geographic3D::fromSRID($srid);
-        }
-
-        if (isset(Geocentric::getSupportedSRIDs()[$srid])) {
-            return Geocentric::fromSRID($srid);
-        }
-
-        if (isset(Vertical::getSupportedSRIDs()[$srid])) {
-            return Vertical::fromSRID($srid);
-        }
-
-        if (isset(Compound::getSupportedSRIDs()[$srid])) {
-            return Compound::fromSRID($srid);
-        }
-
-        throw new UnknownCoordinateReferenceSystemException($srid);
+        return self::$cachedObjects[$srid];
     }
 
     public static function getSupportedSRIDs(): array
     {
-        return array_merge(Compound::getSupportedSRIDs(), Geocentric::getSupportedSRIDs(), Geographic2D::getSupportedSRIDs(), Geographic3D::getSupportedSRIDs(), Projected::getSupportedSRIDs(), Vertical::getSupportedSRIDs());
+        if (!self::$supportedCache) {
+            self::$supportedCache = array_merge(Compound::getSupportedSRIDs(), Geocentric::getSupportedSRIDs(), Geographic2D::getSupportedSRIDs(), Geographic3D::getSupportedSRIDs(), Projected::getSupportedSRIDs(), Vertical::getSupportedSRIDs());
+        }
+
+        return self::$supportedCache;
     }
 }

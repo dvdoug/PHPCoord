@@ -1,0 +1,43 @@
+Coefficient
+-----------
+
+
+.. code-block:: php
+
+    Scale::makeUnit($measurement, Scale::EPSG_COEFFICIENT)
+    Scale::makeUnit($measurement, 'urn:ogc:def:uom:EPSG::9203')
+
+Used when parameters are coefficients.  They inherently take the units which depend upon the term to which the coefficient applies.
+
+Parts per billion
+-----------------
+
+
+.. code-block:: php
+
+    Scale::makeUnit($measurement, Scale::EPSG_PARTS_PER_BILLION)
+    Scale::makeUnit($measurement, 'urn:ogc:def:uom:EPSG::1028')
+
+Billion is internationally ambiguous, in different languages being 1E+9 and 1E+12. One billion taken here to be 1E+9.
+
+Parts per million
+-----------------
+
+
+.. code-block:: php
+
+    Scale::makeUnit($measurement, Scale::EPSG_PARTS_PER_MILLION)
+    Scale::makeUnit($measurement, 'urn:ogc:def:uom:EPSG::9202')
+
+
+Unity
+-----
+
+
+.. code-block:: php
+
+    Scale::makeUnit($measurement, Scale::EPSG_UNITY)
+    Scale::makeUnit($measurement, 'urn:ogc:def:uom:EPSG::9201')
+
+EPSG standard unit for scale. SI coherent derived unit (standard unit) for dimensionless quantity, expressed by the number one but this is not explicitly shown.
+

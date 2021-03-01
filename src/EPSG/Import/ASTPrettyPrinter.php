@@ -18,7 +18,11 @@ class ASTPrettyPrinter extends Standard
 {
     protected function pExpr_Array(Array_ $node)
     {
-        return '[' . $this->pCommaSeparatedMultiline($node->items, true) . $this->nl . ']';
+        if ($node->getAttribute('printMultiline', true)) {
+            return '[' . $this->pCommaSeparatedMultiline($node->items, true) . $this->nl . ']';
+        }
+
+        return '[' . $this->pCommaSeparated($node->items) . ']';
     }
 
     protected function pStmt_ClassConst(ClassConst $node): string
