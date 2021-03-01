@@ -2008,7 +2008,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
     }
 
     /**
-     * General polynomial of degree.
+     * General polynomial.
      * @param Coefficient[] $powerCoefficients
      */
     public function generalPolynomial(

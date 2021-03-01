@@ -923,7 +923,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
     }
 
     /**
-     * Lambert Conic Conformal (1SP).
+     * Lambert Conic Conformal (west orientated).
      */
     public function lambertConicConformalWestOrientated(
         Geographic $to,
@@ -1673,7 +1673,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
     }
 
     /**
-     * Hotine Oblique Mercator (variant A).
+     * Hotine Oblique Mercator (variant B).
      */
     public function obliqueMercatorHotineVariantB(
         Geographic $to,

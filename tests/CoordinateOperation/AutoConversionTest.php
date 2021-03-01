@@ -179,4 +179,14 @@ class AutoConversionTest extends TestCase
         self::assertEqualsWithDelta(50.5, $to->getLatitude()->getValue(), 0.0001);
         self::assertEqualsWithDelta(0.5, $to->getLongitude()->getValue(), 0.0001);
     }
+
+    public function testAutoConversionBritishNationalGridToUTM(): void
+    {
+        $from = ProjectedPoint::createFromEastingNorthing(new Metre(577274.99), new Metre(69740.50), Projected::fromSRID(Projected::EPSG_OSGB_1936_BRITISH_NATIONAL_GRID));
+        $toCRS = Projected::fromSRID(Projected::EPSG_WGS_84_UTM_GRID_SYSTEM_NORTHERN_HEMISPHERE);
+        $to = $from->convert($toCRS);
+
+        self::assertEqualsWithDelta(31322594.503502, $to->getEasting()->getValue(), 0.0001);
+        self::assertEqualsWithDelta(5597286.6916335, $to->getNorthing()->getValue(), 0.0001);
+    }
 }

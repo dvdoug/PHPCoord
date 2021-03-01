@@ -15,6 +15,9 @@ use function min;
 use PHPCoord\CoordinateOperation\GeographicValue;
 use PHPCoord\UnitOfMeasure\Angle\Degree;
 
+/**
+ * @internal for now
+ */
 class GeographicPolygon
 {
     protected array $vertices;

@@ -28,8 +28,8 @@ See `license.txt`_ for full details.
     installation
     primer
     creating_points
-    distance_calculations
     coordinate_conversions
+    distance_calculations
     builtin_coordinate_reference_systems
     builtin_units
     builtin_datums
