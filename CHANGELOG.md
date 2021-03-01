@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## [4.0.0] - 2021-03-01
+### Added
+- Chaining of conversions
+- Documentation(!)
+
 ## [4.0.0beta1] - 2021-01-05
 ### Added
  - 6200 new coordinate systems.
