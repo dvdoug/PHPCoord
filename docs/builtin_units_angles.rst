@@ -2,7 +2,7 @@ Units of angle
 ==============
 
 .. tip::
-    All angle units have helper methods ``->asDegrees()``, ``->asRadians()``, ``->add()``, ``->substract()``,
+    All angle units have helper methods ``->asDegrees()``, ``->asRadians()``, ``->add()``, ``->subtract()``,
     ``->multiply()`` and ``->divide()``
 
 Degree
