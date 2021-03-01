@@ -7569,9 +7569,9 @@ class Geographic2D extends Geographic
         ],
     ];
 
-    private static array $cachedObjects = [];
+    private static $cachedObjects = [];
 
-    private static array $supportedCache = [];
+    private static $supportedCache = [];
 
     public function __construct(
         string $srid,

@@ -33,9 +33,9 @@ use function usort;
 
 trait AutoConversion
 {
-    private int $maxChainDepth = 4; // if traits could have constants...
+    private $maxChainDepth = 4; // if traits could have constants...
 
-    private static array $pathCache = [];
+    private static $pathCache = [];
 
     public function convert(CoordinateReferenceSystem $to, bool $ignoreBoundaryRestrictions = false): Point
     {

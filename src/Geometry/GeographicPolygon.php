@@ -20,9 +20,9 @@ use PHPCoord\UnitOfMeasure\Angle\Degree;
  */
 class GeographicPolygon
 {
-    protected array $vertices;
+    protected $vertices;
 
-    protected bool $crossesAntimeridian;
+    protected $crossesAntimeridian;
 
     protected function __construct(array $vertices, bool $crossesAntimeridian)
     {

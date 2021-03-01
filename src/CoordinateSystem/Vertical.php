@@ -141,7 +141,7 @@ class Vertical extends CoordinateSystem
         ],
     ];
 
-    private static array $cachedObjects = [];
+    private static $cachedObjects = [];
 
     public static function fromSRID(string $srid): self
     {

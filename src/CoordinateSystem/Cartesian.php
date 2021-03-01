@@ -1810,7 +1810,7 @@ class Cartesian extends CoordinateSystem
         ],
     ];
 
-    private static array $cachedObjects = [];
+    private static $cachedObjects = [];
 
     public static function fromSRID(string $srid): self
     {

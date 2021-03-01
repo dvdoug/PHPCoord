@@ -54145,9 +54145,9 @@ class CRSTransformations
         ],
     ];
 
-    protected static array $byCRS = [];
+    protected static $byCRS = [];
 
-    protected static array $byCRSPair = [];
+    protected static $byCRSPair = [];
 
     public static function getSupportedTransformations(): array
     {
