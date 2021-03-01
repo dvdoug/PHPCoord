@@ -147,7 +147,7 @@ Examples:
     );
 
     // also Nelson's Column
-    $point = new BritishNationalGridPoint::fromGridReference(new Metre(530017), new Metre(180419)); // CRS is implied
+    $point = new BritishNationalGridPoint(new Metre(530017), new Metre(180419)); // CRS is implied
 
     // also Nelson's Column
     $point = BritishNationalGridPoint::fromGridReference('TQ 30017 80419'); // CRS is implied
