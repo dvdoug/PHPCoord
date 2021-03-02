@@ -17646,7 +17646,7 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
             'EPSG code for Horizontal CRS' => [
-                'value' => 4258.0,
+                'value' => 'urn:ogc:def:crs:EPSG::4258',
                 'uom' => null,
                 'reverses' => false,
             ],
@@ -20146,7 +20146,7 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
             'EPSG code for Horizontal CRS' => [
-                'value' => 4258.0,
+                'value' => 'urn:ogc:def:crs:EPSG::4258',
                 'uom' => null,
                 'reverses' => false,
             ],
@@ -20178,7 +20178,7 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
             'EPSG code for Horizontal CRS' => [
-                'value' => 4258.0,
+                'value' => 'urn:ogc:def:crs:EPSG::4258',
                 'uom' => null,
                 'reverses' => false,
             ],
@@ -20210,7 +20210,7 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
             'EPSG code for Horizontal CRS' => [
-                'value' => 4258.0,
+                'value' => 'urn:ogc:def:crs:EPSG::4258',
                 'uom' => null,
                 'reverses' => false,
             ],
@@ -20242,7 +20242,7 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
             'EPSG code for Horizontal CRS' => [
-                'value' => 4258.0,
+                'value' => 'urn:ogc:def:crs:EPSG::4258',
                 'uom' => null,
                 'reverses' => false,
             ],
@@ -20274,7 +20274,7 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
             'EPSG code for Horizontal CRS' => [
-                'value' => 4258.0,
+                'value' => 'urn:ogc:def:crs:EPSG::4258',
                 'uom' => null,
                 'reverses' => false,
             ],
@@ -20306,7 +20306,7 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
             'EPSG code for Horizontal CRS' => [
-                'value' => 4258.0,
+                'value' => 'urn:ogc:def:crs:EPSG::4258',
                 'uom' => null,
                 'reverses' => false,
             ],
@@ -20338,7 +20338,7 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
             'EPSG code for Horizontal CRS' => [
-                'value' => 4258.0,
+                'value' => 'urn:ogc:def:crs:EPSG::4258',
                 'uom' => null,
                 'reverses' => false,
             ],
@@ -20370,7 +20370,7 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
             'EPSG code for Horizontal CRS' => [
-                'value' => 4258.0,
+                'value' => 'urn:ogc:def:crs:EPSG::4258',
                 'uom' => null,
                 'reverses' => false,
             ],
@@ -20402,7 +20402,7 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
             'EPSG code for Horizontal CRS' => [
-                'value' => 4258.0,
+                'value' => 'urn:ogc:def:crs:EPSG::4258',
                 'uom' => null,
                 'reverses' => false,
             ],
@@ -20434,7 +20434,7 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
             'EPSG code for Horizontal CRS' => [
-                'value' => 4258.0,
+                'value' => 'urn:ogc:def:crs:EPSG::4258',
                 'uom' => null,
                 'reverses' => false,
             ],
@@ -20466,7 +20466,7 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
             'EPSG code for Horizontal CRS' => [
-                'value' => 4258.0,
+                'value' => 'urn:ogc:def:crs:EPSG::4258',
                 'uom' => null,
                 'reverses' => false,
             ],
@@ -20498,7 +20498,7 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
             'EPSG code for Horizontal CRS' => [
-                'value' => 4258.0,
+                'value' => 'urn:ogc:def:crs:EPSG::4258',
                 'uom' => null,
                 'reverses' => false,
             ],
@@ -20530,7 +20530,7 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
             'EPSG code for Horizontal CRS' => [
-                'value' => 4258.0,
+                'value' => 'urn:ogc:def:crs:EPSG::4258',
                 'uom' => null,
                 'reverses' => false,
             ],
@@ -20562,7 +20562,7 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
             'EPSG code for Horizontal CRS' => [
-                'value' => 4258.0,
+                'value' => 'urn:ogc:def:crs:EPSG::4258',
                 'uom' => null,
                 'reverses' => false,
             ],
@@ -20594,7 +20594,7 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
             'EPSG code for Horizontal CRS' => [
-                'value' => 4258.0,
+                'value' => 'urn:ogc:def:crs:EPSG::4258',
                 'uom' => null,
                 'reverses' => false,
             ],
@@ -20626,7 +20626,7 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
             'EPSG code for Horizontal CRS' => [
-                'value' => 4258.0,
+                'value' => 'urn:ogc:def:crs:EPSG::4258',
                 'uom' => null,
                 'reverses' => false,
             ],
@@ -20658,7 +20658,7 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
             'EPSG code for Horizontal CRS' => [
-                'value' => 4258.0,
+                'value' => 'urn:ogc:def:crs:EPSG::4258',
                 'uom' => null,
                 'reverses' => false,
             ],
@@ -20690,7 +20690,7 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
             'EPSG code for Horizontal CRS' => [
-                'value' => 4258.0,
+                'value' => 'urn:ogc:def:crs:EPSG::4258',
                 'uom' => null,
                 'reverses' => false,
             ],
@@ -20722,7 +20722,7 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
             'EPSG code for Horizontal CRS' => [
-                'value' => 4258.0,
+                'value' => 'urn:ogc:def:crs:EPSG::4258',
                 'uom' => null,
                 'reverses' => false,
             ],
@@ -20754,7 +20754,7 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
             'EPSG code for Horizontal CRS' => [
-                'value' => 4258.0,
+                'value' => 'urn:ogc:def:crs:EPSG::4258',
                 'uom' => null,
                 'reverses' => false,
             ],
@@ -20786,7 +20786,7 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
             'EPSG code for Horizontal CRS' => [
-                'value' => 4258.0,
+                'value' => 'urn:ogc:def:crs:EPSG::4258',
                 'uom' => null,
                 'reverses' => false,
             ],
@@ -22438,7 +22438,7 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
             'EPSG code for Horizontal CRS' => [
-                'value' => 4258.0,
+                'value' => 'urn:ogc:def:crs:EPSG::4258',
                 'uom' => null,
                 'reverses' => false,
             ],
@@ -22470,7 +22470,7 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
             'EPSG code for Horizontal CRS' => [
-                'value' => 4258.0,
+                'value' => 'urn:ogc:def:crs:EPSG::4258',
                 'uom' => null,
                 'reverses' => false,
             ],
@@ -22502,7 +22502,7 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
             'EPSG code for Horizontal CRS' => [
-                'value' => 4258.0,
+                'value' => 'urn:ogc:def:crs:EPSG::4258',
                 'uom' => null,
                 'reverses' => false,
             ],
@@ -22541,7 +22541,7 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
             'EPSG code for Horizontal CRS' => [
-                'value' => 4258.0,
+                'value' => 'urn:ogc:def:crs:EPSG::4258',
                 'uom' => null,
                 'reverses' => false,
             ],
@@ -22573,7 +22573,7 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
             'EPSG code for Horizontal CRS' => [
-                'value' => 4258.0,
+                'value' => 'urn:ogc:def:crs:EPSG::4258',
                 'uom' => null,
                 'reverses' => false,
             ],
@@ -22605,7 +22605,7 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
             'EPSG code for Horizontal CRS' => [
-                'value' => 4258.0,
+                'value' => 'urn:ogc:def:crs:EPSG::4258',
                 'uom' => null,
                 'reverses' => false,
             ],
@@ -22637,7 +22637,7 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
             'EPSG code for Horizontal CRS' => [
-                'value' => 4258.0,
+                'value' => 'urn:ogc:def:crs:EPSG::4258',
                 'uom' => null,
                 'reverses' => false,
             ],
@@ -22676,7 +22676,7 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
             'EPSG code for Horizontal CRS' => [
-                'value' => 4258.0,
+                'value' => 'urn:ogc:def:crs:EPSG::4258',
                 'uom' => null,
                 'reverses' => false,
             ],
@@ -22715,7 +22715,7 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
             'EPSG code for Horizontal CRS' => [
-                'value' => 4258.0,
+                'value' => 'urn:ogc:def:crs:EPSG::4258',
                 'uom' => null,
                 'reverses' => false,
             ],
@@ -22747,7 +22747,7 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
             'EPSG code for Horizontal CRS' => [
-                'value' => 4258.0,
+                'value' => 'urn:ogc:def:crs:EPSG::4258',
                 'uom' => null,
                 'reverses' => false,
             ],
@@ -22779,7 +22779,7 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
             'EPSG code for Horizontal CRS' => [
-                'value' => 4258.0,
+                'value' => 'urn:ogc:def:crs:EPSG::4258',
                 'uom' => null,
                 'reverses' => false,
             ],
@@ -22811,7 +22811,7 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
             'EPSG code for Horizontal CRS' => [
-                'value' => 4258.0,
+                'value' => 'urn:ogc:def:crs:EPSG::4258',
                 'uom' => null,
                 'reverses' => false,
             ],
@@ -22850,7 +22850,7 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
             'EPSG code for Horizontal CRS' => [
-                'value' => 4258.0,
+                'value' => 'urn:ogc:def:crs:EPSG::4258',
                 'uom' => null,
                 'reverses' => false,
             ],
@@ -22882,7 +22882,7 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
             'EPSG code for Horizontal CRS' => [
-                'value' => 4258.0,
+                'value' => 'urn:ogc:def:crs:EPSG::4258',
                 'uom' => null,
                 'reverses' => false,
             ],
@@ -22914,7 +22914,7 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
             'EPSG code for Horizontal CRS' => [
-                'value' => 4258.0,
+                'value' => 'urn:ogc:def:crs:EPSG::4258',
                 'uom' => null,
                 'reverses' => false,
             ],
@@ -24136,7 +24136,7 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
             'EPSG code for Horizontal CRS' => [
-                'value' => 4258.0,
+                'value' => 'urn:ogc:def:crs:EPSG::4258',
                 'uom' => null,
                 'reverses' => false,
             ],
@@ -43675,7 +43675,7 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
             'EPSG code for Horizontal CRS' => [
-                'value' => 4258.0,
+                'value' => 'urn:ogc:def:crs:EPSG::4258',
                 'uom' => null,
                 'reverses' => false,
             ],
@@ -45728,7 +45728,7 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
             'EPSG code for Horizontal CRS' => [
-                'value' => 4258.0,
+                'value' => 'urn:ogc:def:crs:EPSG::4258',
                 'uom' => null,
                 'reverses' => false,
             ],

@@ -19,6 +19,7 @@ use PHPCoord\CoordinateReferenceSystem\Vertical;
 use PHPCoord\Exception\UnknownConversionException;
 use PHPCoord\GeocentricPoint;
 use PHPCoord\GeographicPoint;
+use PHPCoord\Geometry\GeographicPolygon;
 use PHPCoord\ProjectedPoint;
 use PHPCoord\UnitOfMeasure\Angle\Degree;
 use PHPCoord\UnitOfMeasure\Angle\Radian;
@@ -188,5 +189,23 @@ class AutoConversionTest extends TestCase
 
         self::assertEqualsWithDelta(31322594.503502, $to->getEasting()->getValue(), 0.0001);
         self::assertEqualsWithDelta(5597286.6916335, $to->getNorthing()->getValue(), 0.0001);
+    }
+
+    public function testAutoConversionETRSLN02ToETRSEVRF2000(): void
+    {
+        $fromCRS = new Compound(
+            'notANEPSGCRS',
+            Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89),
+            Vertical::fromSRID(Vertical::EPSG_LN02_HEIGHT),
+            GeographicPolygon::createWorld(),
+        );
+
+        $from = CompoundPoint::create(GeographicPoint::create(new Radian(0.826122513), new Radian(0.168715161), null, Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89)), VerticalPoint::create(new Metre(473), Vertical::fromSRID(Vertical::EPSG_LN02_HEIGHT)), $fromCRS);
+        $toCRS = Compound::fromSRID(Compound::EPSG_ETRS89_PLUS_EVRF2000_HEIGHT);
+        $to = $from->convert($toCRS);
+
+        self::assertEqualsWithDelta(0.826122513, $to->getHorizontalPoint()->getLatitude()->asRadians()->getValue(), 0.0000000001);
+        self::assertEqualsWithDelta(0.168715161, $to->getHorizontalPoint()->getLongitude()->asRadians()->getValue(), 0.0000000001);
+        self::assertEqualsWithDelta(472.69, $to->getVerticalPoint()->getHeight()->asMetres()->getValue(), 0.001);
     }
 }

@@ -8,7 +8,6 @@ declare(strict_types=1);
 
 namespace PHPCoord;
 
-use function cos;
 use DateTime;
 use DateTimeImmutable;
 use DateTimeInterface;
@@ -24,9 +23,6 @@ use PHPCoord\Exception\InvalidCoordinateReferenceSystemException;
 use PHPCoord\Exception\UnknownConversionException;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPCoord\UnitOfMeasure\Length\Length;
-use PHPCoord\UnitOfMeasure\Length\Metre;
-use function sin;
-use function sqrt;
 
 /**
  * Coordinate representing a point expressed in 2 different CRSs (2D horizontal + 1D Vertical).
@@ -126,9 +122,32 @@ class CompoundPoint extends Point implements ConvertiblePoint
         try {
             return $this->autoConvert($to, $ignoreBoundaryRestrictions);
         } catch (UnknownConversionException $e) {
-            if (($to instanceof Geographic2D || $to instanceof Projected) && $this->getHorizontalPoint() instanceof ConvertiblePoint) {
-                return $this->getHorizontalPoint()->convert($to, $ignoreBoundaryRestrictions);
+            if ($this->getHorizontalPoint() instanceof ConvertiblePoint) {
+                // if 2D target, try again with just the horizontal component
+                if (($to instanceof Geographic2D || $to instanceof Projected)) {
+                    return $this->getHorizontalPoint()->convert($to, $ignoreBoundaryRestrictions);
+                }
+
+                // try separate horizontal + vertical conversions and stitch results together
+                if ($to instanceof Compound) {
+                    $newHorizontalPoint = $this->getHorizontalPoint()->convert($to->getHorizontal());
+
+                    if ($this->getCRS()->getVertical()->getSRID() !== $to->getVertical()->getSRID()) {
+                        $path = $this->findOperationPath($this->getCRS()->getVertical(), $to->getVertical(), $ignoreBoundaryRestrictions);
+
+                        if ($path) {
+                            $newVerticalPoint = $this->getVerticalPoint();
+                            foreach ($path as $step) {
+                                $target = CoordinateReferenceSystem::fromSRID($step['in_reverse'] ? $step['source_crs'] : $step['target_crs']);
+                                $newVerticalPoint = $newVerticalPoint->performOperation($step['operation'], $target, $step['in_reverse'], ['horizontalPoint' => $newHorizontalPoint]);
+                            }
+
+                            return static::create($newHorizontalPoint, $newVerticalPoint, $to, $this->epoch);
+                        }
+                    }
+                }
             }
+            throw $e;
         }
     }
 
@@ -153,37 +172,5 @@ class CompoundPoint extends Point implements ConvertiblePoint
         $toHeight = $this->getVerticalPoint()->getHeight()->add($geoidUndulation);
 
         return GeographicPoint::create($toLatitude, $toLongitude, $toHeight, $to, $this->epoch);
-    }
-
-    /**
-     * Vertical Offset and Slope
-     * This transformation allows calculation of height in the target system by applying the parameter values to the
-     * height value of the point in the source system.
-     */
-    public function verticalOffsetAndSlope(
-        Compound $to,
-        Angle $ordinate1OfEvaluationPoint,
-        Angle $ordinate2OfEvaluationPoint,
-        Length $verticalOffset,
-        Angle $inclinationInLatitude,
-        Angle $inclinationInLongitude
-    ): self {
-        $latitude = $this->horizontalPoint->getLatitude()->asRadians()->getValue();
-        $longitude = $this->horizontalPoint->getLongitude()->asRadians()->getValue();
-        $latitudeOrigin = $ordinate1OfEvaluationPoint->asRadians()->getValue();
-        $longitudeOrigin = $ordinate2OfEvaluationPoint->asRadians()->getValue();
-        $a = $this->horizontalPoint->getCRS()->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
-        $e2 = $this->horizontalPoint->getCRS()->getDatum()->getEllipsoid()->getEccentricitySquared();
-
-        $rhoOrigin = $a * (1 - $e2) / (1 - $e2 * sin($latitudeOrigin) ** 2) ** 1.5;
-        $nuOrigin = $a / sqrt(1 - $e2 * (sin($latitudeOrigin) ** 2));
-
-        $latitudeTerm = new Metre($inclinationInLatitude->asRadians()->getValue() * $rhoOrigin * ($latitude - $latitudeOrigin));
-        $longitudeTerm = new Metre($inclinationInLongitude->asRadians()->getValue() * $nuOrigin * ($longitude - $longitudeOrigin) * cos($latitude));
-        $newVerticalHeight = $this->verticalPoint->getHeight()->add($verticalOffset)->add($latitudeTerm)->add($longitudeTerm);
-
-        $newVerticalPoint = VerticalPoint::create($newVerticalHeight, $to->getVertical());
-
-        return static::create($this->horizontalPoint, $newVerticalPoint, $to);
     }
 }

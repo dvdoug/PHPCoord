@@ -21,3 +21,19 @@ Vertical Offset
         Vertical $to,
         Length $verticalOffset
     ); // returns a new VerticalPoint
+
+Vertical Offset and Slope
+-------------------------
+
+.. code-block:: php
+
+    $point = VerticalPoint::create(...);
+    $newPoint = $point->verticalOffsetAndSlope(
+        Vertical $to,
+        Angle $ordinate1OfEvaluationPoint,
+        Angle $ordinate2OfEvaluationPoint,
+        Length $verticalOffset,
+        Angle $inclinationInLatitude,
+        Angle $inclinationInLongitude,
+        GeographicPoint $horizontalPoint
+    ); // returns a new VerticalPoint
