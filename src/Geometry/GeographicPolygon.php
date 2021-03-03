@@ -43,7 +43,7 @@ class GeographicPolygon
     }
 
     /**
-     * @param array<Degree,Degree> $vertices [[long,lat], [long,lat]...]
+     * @param array<array<int,int>> $vertices [[long,lat], [long,lat]...]
      */
     public static function createFromArray(array $vertices, bool $crossesAntimeridian): self
     {

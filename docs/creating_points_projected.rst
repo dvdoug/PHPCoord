@@ -255,3 +255,131 @@ Examples:
 
     $isITM = $point instanceof IrishTransverseMercatorPoint; //true
     $asString = (string) $point; // '(715830, 734697)'
+
+.. _utm_points:
+
+Universal Transverse Mercator (UTM)
+-----------------------------------
+Although one of the most widely used applications of the Transverse Mercator projection, UTM is not actually a map
+projection. It's a *system* of map projections, and this distinction means that it does not fit neatly into the
+standard data model. Mathematically each UTM zone/hemisphere combination is its own unique projection and
+therefore to work with the data you also need to know which zone/hemisphere the coordinates are reference to.
+Adding a further layer of complication is that although UTM is most commonly used alongside WGS84, it can be used with
+any Geographic CRS so that information needs to be known as well.
+
+PHPCoord has 3 ways to handle this issue.
+
+Treat each zone/hemisphere as a fully independent projection
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+| Pros: no confusion about what the coordinates represent
+| Cons: when converting to UTM, you need to know in advance which zone/hemisphere the points reside in
+
+For many ``Geographic`` CRSs, there are corresponding dedicated ``Projected`` CRS for each individual UTM zone and
+hemisphere. In total there are over 1000 individual such CRSs defined.
+
+Examples:
+
+.. code-block:: php
+
+    <?php
+    use PHPCoord\CoordinateReferenceSystem\Projected;
+    use PHPCoord\ProjectedPoint;
+    use PHPCoord\UnitOfMeasure\Length\Metre;
+
+    // Piazza San Marco, Venice
+    $crs = Projected::fromSRID(Projected::EPSG_WGS_84_UTM_ZONE_33N);
+    $point = ProjectedPoint::createFromEastingNorthing(
+        new Metre(291789),
+        new Metre(5034599),
+        $crs
+    );
+
+    // Piazza San Marco, Venice
+    $crs = Projected::fromSRID(Projected::EPSG_ETRS89_UTM_ZONE_33N);
+    $point = ProjectedPoint::createFromEastingNorthing(
+        new Metre(291789),
+        new Metre(5034599),
+        $crs
+    );
+
+Prefix easting with the zone
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+| Pros: you only have to know the hemisphere when converting to UTM (latitude ± 0)
+| Cons: coordinates are not distances, WGS84 only
+
+Because the previously described system has some practical difficulties in use when working with points that are not
+all from within a single zone, this alternate mechanism is sometimes used. It works by (ab)using the easting coordinate
+to store the zone number alongside the actual coordinate resulting from the projection.
+
+.. warning::
+    Normally the coordinates of a map projection represent real distances on the ground. For UTM, these would be
+    distance in metres from the origin. However when zone numbers are incorporated into the easting in this way, then
+    that is no longer true - an easting of 32500000 and an easting of 33500000 are **not** 1000000m apart.
+
+    The prefix-based mechanism is made available in PHPCoord for interoperability with other systems, but is discouraged
+    for use.
+
+Example:
+
+.. code-block:: php
+
+    <?php
+    use PHPCoord\CoordinateReferenceSystem\Projected;
+    use PHPCoord\ProjectedPoint;
+    use PHPCoord\UnitOfMeasure\Length\Metre;
+
+    // Piazza San Marco, Venice
+    $crs = Projected::fromSRID(Projected::EPSG_WGS_84_UTM_GRID_SYSTEM_NORTHERN_HEMISPHERE);
+    $point = ProjectedPoint::createFromEastingNorthing(
+        new Metre(33291789), // UTM is defined as metres, but this coordinate is actually not...
+        new Metre(5034599),
+        $crs
+    );
+
+Treat UTM as special
+^^^^^^^^^^^^^^^^^^^^
+| Pros: no pre-calculation needed to determine hemisphere or zone number when converting
+| Cons: potentially less interoperability with other systems (does not fit into the EPSG data model)
+
+PHPCoord also offers a way to work with UTM where the zone number and hemisphere are treated as first-class aspects of
+the data model rather than shoehorned into one of the coordinates or needing to be extrapolated from the name of the CRS.
+This is done via ``UTMPoint`` which is a specialised extension of ``ProjectedPoint``.
+
+.. code-block:: php
+
+    public function __construct(
+        Length $easting,
+        Length $northing,
+        int $zone,
+        string $hemisphere, //one of UTMPoint::HEMISPHERE_NORTH or UTMPoint::HEMISPHERE_SOUTH
+        Geographic $crs,
+        ?DateTimeInterface $epoch = null
+    ): UTMPoint
+
+Example:
+
+.. code-block:: php
+
+    <?php
+    use PHPCoord\CoordinateReferenceSystem\Geographic;
+    use PHPCoord\UTMPoint;
+    use PHPCoord\UnitOfMeasure\Length\Metre;
+
+    // Piazza San Marco, Venice
+    $crs = Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84);
+    $point = new UTMPoint(
+        new Metre(291789),
+        new Metre(5034599),
+        33,
+        UTMPoint::HEMISPHERE_NORTH,
+        $crs
+    );
+
+    $easting = $point->getEasting(); // Metre
+    $northing = $point->getNorthing(); // Metre
+    $zone = $point->getZone(); // int
+    $hemisphere = $point->getHemisphere(); // UTMPoint::HEMISPHERE_NORTH|UTMPoint::HEMISPHERE_SOUTH
+    $epoch = $point->getCoordinateEpoch(); // DateTimeImmutable|null
+    $baseCRS = $point->getBaseCRS(); // Geographic
+    $crs = $point->getCRS(); // Projected (synthesised at runtime, not one from the built-in EPSG set)
+    $asString = (string) $point; // '33N 291789 5034599'

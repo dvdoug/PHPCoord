@@ -24,6 +24,7 @@ use PHPCoord\ProjectedPoint;
 use PHPCoord\UnitOfMeasure\Angle\Degree;
 use PHPCoord\UnitOfMeasure\Angle\Radian;
 use PHPCoord\UnitOfMeasure\Length\Metre;
+use PHPCoord\UTMPoint;
 use PHPCoord\VerticalPoint;
 use PHPUnit\Framework\TestCase;
 
@@ -123,6 +124,16 @@ class AutoConversionTest extends TestCase
     public function testBerlinPointZone32WhenForced(): void
     {
         $from = GeographicPoint::create(new Degree(52.518590), new Degree(13.375520), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
+        $toCRS = Projected::fromSRID(Projected::EPSG_WGS_84_UTM_ZONE_32N);
+        $to = $from->convert($toCRS, true);
+
+        self::assertEqualsWithDelta(796823.561, $to->getEasting()->getValue(), 0.001);
+        self::assertEqualsWithDelta(5827721.404, $to->getNorthing()->getValue(), 0.001);
+    }
+
+    public function testUTMPointToUTMEPSG(): void
+    {
+        $from = new UTMPoint(new Metre(796823.561), new Metre(5827721.404), 32, 'N', Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
         $toCRS = Projected::fromSRID(Projected::EPSG_WGS_84_UTM_ZONE_32N);
         $to = $from->convert($toCRS, true);
 

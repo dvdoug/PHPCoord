@@ -6,7 +6,7 @@ They are listed in detail on the following pages.
 
 .. tip::
     The first parameter of every method is always a ``CoordinateReferenceSystem`` object representing the target
-    CRS. For guidance on remaining parameters, please see a textbook, explaining those is far outside the
+    CRS. For guidance on remaining parameters, please see a textbook as explaining them is far outside the
     scope of this documentation.
 
 .. toctree::
