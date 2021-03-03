@@ -28,17 +28,17 @@ class UTMPoint extends ProjectedPoint
     /**
      * Zone number.
      */
-    protected int $zone;
+    protected $zone;
 
     /**
      * Hemisphere (N or S).
      */
-    protected string $hemisphere;
+    protected $hemisphere;
 
     /**
      * Base CRS.
      */
-    protected Geographic $baseCRS;
+    protected $baseCRS;
 
     public function __construct(Length $easting, Length $northing, int $zone, string $hemisphere, Geographic $crs, ?DateTimeInterface $epoch = null)
     {
