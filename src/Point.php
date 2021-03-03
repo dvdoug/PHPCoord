@@ -51,7 +51,7 @@ abstract class Point implements Stringable
     /**
      * @internal
      */
-    public function performOperation(string $srid, CoordinateReferenceSystem $to, bool $inReverse): self
+    public function performOperation(string $srid, CoordinateReferenceSystem $to, bool $inReverse, array $additionalParams = []): self
     {
         $operations = self::resolveConcatenatedOperations($srid, $inReverse);
 
@@ -65,6 +65,10 @@ abstract class Point implements Stringable
             }
 
             $params = self::resolveParamsByOperation($operationSrid, $operation['method'], $inReverse);
+
+            if ($operation['method'] === CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_AND_SLOPE) {
+                $params['horizontalPoint'] = $additionalParams['horizontalPoint'];
+            }
 
             if (PHP_MAJOR_VERSION >= 8) {
                 $point = $point->$method($destCRS, ...$params);
@@ -81,7 +85,7 @@ abstract class Point implements Stringable
     protected static function camelCase(string $string): string
     {
         $string = str_replace([' ', '-'], '', ucwords($string, ' -'));
-        if (!preg_match('/[ABC][uv\d]/', $string)) {
+        if (!preg_match('/^(EPSG|[ABC][uv\d])/', $string)) {
             $string = lcfirst($string);
         }
 
@@ -119,7 +123,11 @@ abstract class Point implements Stringable
             if ($inReverse && $paramData['reverses']) {
                 $value *= -1;
             }
-            $param = UnitOfMeasureFactory::makeUnit($value, $paramData['uom']);
+            if ($paramData['uom']) {
+                $param = UnitOfMeasureFactory::makeUnit($value, $paramData['uom']);
+            } else {
+                $param = $paramData['value'];
+            }
             $paramName = static::camelCase($paramName);
             if (preg_match('/^(Au|Bu)/', $paramName)) {
                 $powerCoefficients[$paramName] = $param;

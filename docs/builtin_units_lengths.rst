@@ -2,7 +2,7 @@ Units of length
 ===============
 
 .. tip::
-    All length units have helper methods ``->asMetres()``, ``->add()``, ``->substract()``,
+    All length units have helper methods ``->asMetres()``, ``->add()``, ``->subtract()``,
     ``->multiply()`` and ``->divide()``
 
 Metre

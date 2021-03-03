@@ -2,7 +2,7 @@ Units of time
 =============
 
 .. tip::
-    All time units have helper methods ``->asYears()``, ``->add()``, ``->substract()``,
+    All time units have helper methods ``->asYears()``, ``->add()``, ``->subtract()``,
     ``->multiply()`` and ``->divide()``
 
 Year

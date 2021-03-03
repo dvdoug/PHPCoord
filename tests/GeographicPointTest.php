@@ -784,7 +784,7 @@ class GeographicPointTest extends TestCase
         self::assertEqualsWithDelta(2847342.74, $to->getSouthing()->asMetres()->getValue(), 0.01);
     }
 
-    public function testTransverseMercatorZonedGridNothernHemisphere(): void
+    public function testTransverseMercatorZonedGridNorthernHemisphere(): void
     {
         $from = GeographicPoint::create(new Degree(43.642567), new Degree(-79.387139), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
         $toCRS = Projected::fromSRID(Projected::EPSG_WGS_84_UTM_GRID_SYSTEM_NORTHERN_HEMISPHERE);
@@ -802,6 +802,30 @@ class GeographicPointTest extends TestCase
 
         self::assertEqualsWithDelta(56334519, $to->getEasting()->asMetres()->getValue(), 1);
         self::assertEqualsWithDelta(6251930, $to->getNorthing()->asMetres()->getValue(), 1);
+    }
+
+    public function testAsUTMPointNorthernHemisphere(): void
+    {
+        $from = GeographicPoint::create(new Degree(43.642567), new Degree(-79.387139), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
+        $to = $from->asUTMPoint();
+
+        self::assertEqualsWithDelta(630084, $to->getEasting()->asMetres()->getValue(), 1);
+        self::assertEqualsWithDelta(4833438, $to->getNorthing()->asMetres()->getValue(), 1);
+        self::assertEquals(17, $to->getZone());
+        self::assertEquals(UTMPoint::HEMISPHERE_NORTH, $to->getHemisphere());
+        self::assertEquals('17N 630084 4833438', $to->__toString());
+    }
+
+    public function testAsUTMPointSouthernHemisphere(): void
+    {
+        $from = GeographicPoint::create(new Degree(-33.859972), new Degree(151.211111), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
+        $to = $from->asUTMPoint();
+
+        self::assertEqualsWithDelta(334519, $to->getEasting()->asMetres()->getValue(), 1);
+        self::assertEqualsWithDelta(6251930, $to->getNorthing()->asMetres()->getValue(), 1);
+        self::assertEquals(56, $to->getZone());
+        self::assertEquals(UTMPoint::HEMISPHERE_SOUTH, $to->getHemisphere());
+        self::assertEquals('56S 334519 6251930', $to->__toString());
     }
 
     public function testGeneralPolynomial(): void

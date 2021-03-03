@@ -16,6 +16,7 @@ use function file_get_contents;
 use function file_put_contents;
 use function fopen;
 use function fwrite;
+use function in_array;
 use const PHP_EOL;
 use PHPCoord\CoordinateReferenceSystem\Compound;
 use PHPCoord\CoordinateReferenceSystem\Geocentric;
@@ -1242,6 +1243,7 @@ class EPSGImporter
             $paramsSql = "
                     SELECT
                         'urn:ogc:def:coordinateOperation:EPSG::' || pv.coord_op_code AS operation_code,
+                        p.parameter_code AS parameter_code,
                         p.parameter_name AS name,
                         pv.parameter_value AS value,
                         CASE WHEN pv.uom_code IS NULL THEN NULL ELSE 'urn:ogc:def:uom:EPSG::' || pv.uom_code END AS uom,
@@ -1258,6 +1260,10 @@ class EPSGImporter
             while ($paramsRow = $paramsResult->fetchArray(SQLITE3_ASSOC)) {
                 unset($paramsRow['operation_code']);
                 $paramsRow['reverses'] = (bool) $paramsRow['reverses'];
+                if (in_array($paramsRow['parameter_code'], [8659, 8660, 1037, 1048, 8661, 8662], true)) {
+                    $paramsRow['value'] = 'urn:ogc:def:crs:EPSG::' . $paramsRow['value'];
+                }
+                unset($paramsRow['parameter_code']);
                 $params[$paramsRow['name']] = $paramsRow;
                 unset($params[$paramsRow['name']]['name']);
             }

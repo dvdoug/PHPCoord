@@ -9,14 +9,18 @@ declare(strict_types=1);
 namespace PHPCoord;
 
 use function abs;
+use function cos;
 use DateTime;
 use DateTimeImmutable;
 use DateTimeInterface;
 use PHPCoord\CoordinateReferenceSystem\Vertical;
 use PHPCoord\Exception\InvalidCoordinateReferenceSystemException;
+use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPCoord\UnitOfMeasure\Scale\Scale;
+use function sin;
+use function sqrt;
 
 /**
  * Coordinate representing a vertical dimension.
@@ -102,6 +106,38 @@ class VerticalPoint extends Point
         Length $verticalOffset
     ): self {
         return static::create($this->height->add($verticalOffset), $to);
+    }
+
+    /**
+     * Vertical Offset and Slope
+     * This transformation allows calculation of height in the target system by applying the parameter values to the
+     * height value of the point in the source system.
+     */
+    public function verticalOffsetAndSlope(
+        Vertical $to,
+        Angle $ordinate1OfEvaluationPoint,
+        Angle $ordinate2OfEvaluationPoint,
+        Length $verticalOffset,
+        Angle $inclinationInLatitude,
+        Angle $inclinationInLongitude,
+        string $EPSGCodeForHorizontalCRS,
+        GeographicPoint $horizontalPoint
+    ): self {
+        $latitude = $horizontalPoint->getLatitude()->asRadians()->getValue();
+        $longitude = $horizontalPoint->getLongitude()->asRadians()->getValue();
+        $latitudeOrigin = $ordinate1OfEvaluationPoint->asRadians()->getValue();
+        $longitudeOrigin = $ordinate2OfEvaluationPoint->asRadians()->getValue();
+        $a = $horizontalPoint->getCRS()->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+        $e2 = $horizontalPoint->getCRS()->getDatum()->getEllipsoid()->getEccentricitySquared();
+
+        $rhoOrigin = $a * (1 - $e2) / (1 - $e2 * sin($latitudeOrigin) ** 2) ** 1.5;
+        $nuOrigin = $a / sqrt(1 - $e2 * (sin($latitudeOrigin) ** 2));
+
+        $latitudeTerm = new Metre($inclinationInLatitude->asRadians()->getValue() * $rhoOrigin * ($latitude - $latitudeOrigin));
+        $longitudeTerm = new Metre($inclinationInLongitude->asRadians()->getValue() * $nuOrigin * ($longitude - $longitudeOrigin) * cos($latitude));
+        $newVerticalHeight = $this->getHeight()->add($verticalOffset)->add($latitudeTerm)->add($longitudeTerm);
+
+        return self::create($newVerticalHeight, $to);
     }
 
     /**

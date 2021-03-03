@@ -31,6 +31,9 @@ use PHPCoord\UnitOfMeasure\Time\Year;
 use function strpos;
 use function usort;
 
+/**
+ * @internal
+ */
 trait AutoConversion
 {
     private $maxChainDepth = 4; // if traits could have constants...
@@ -48,7 +51,7 @@ trait AutoConversion
         }
 
         $point = $this;
-        $path = $this->findOperationPath($to, $ignoreBoundaryRestrictions);
+        $path = $this->findOperationPath($this->getCRS(), $to, $ignoreBoundaryRestrictions);
 
         foreach ($path as $step) {
             $target = CoordinateReferenceSystem::fromSRID($step['in_reverse'] ? $step['source_crs'] : $step['target_crs']);
@@ -58,9 +61,9 @@ trait AutoConversion
         return $point;
     }
 
-    protected function findOperationPath(CoordinateReferenceSystem $to, bool $ignoreBoundaryRestrictions): array
+    protected function findOperationPath(CoordinateReferenceSystem $source, CoordinateReferenceSystem $target, bool $ignoreBoundaryRestrictions): array
     {
-        $candidatePaths = $this->buildTransformationPathsToCRS($to);
+        $candidatePaths = $this->buildTransformationPathsToCRS($source, $target);
 
         usort($candidatePaths, static function (array $a, array $b) {
             return count($a['path']) <=> count($b['path']) ?: $a['accuracy'] <=> $b['accuracy'];
@@ -119,22 +122,22 @@ trait AutoConversion
     /**
      * Build the set of *all* possible paths that lead from the current CRS to the target CRS.
      */
-    protected function buildTransformationPathsToCRS(CoordinateReferenceSystem $target): array
+    protected function buildTransformationPathsToCRS(CoordinateReferenceSystem $source, CoordinateReferenceSystem $target): array
     {
-        $cacheKey = $this->getCRS()->getSRID() . '|' . $target->getSRID();
+        $cacheKey = $source->getSRID() . '|' . $target->getSRID();
         if (!isset(self::$pathCache[$cacheKey])) {
             $simplePaths = [];
 
             // Try a simple direct match before doing anything more complex!
-            if (CRSTransformations::getSupportedTransformationsForCRSPair($this->getCRS()->getSRID(), $target->getSRID())) {
-                $simplePaths[] = [$this->getCRS()->getSRID(), $target->getSRID()];
+            if (CRSTransformations::getSupportedTransformationsForCRSPair($source->getSRID(), $target->getSRID())) {
+                $simplePaths[] = [$source->getSRID(), $target->getSRID()];
             } else { // Otherwise, recursively calculate permutations of intermediate CRSs
                 $visited = [];
                 foreach (CoordinateReferenceSystem::getSupportedSRIDs() as $crs => $name) {
                     $visited[$crs] = false;
                 }
                 $currentPath = [];
-                $this->DFS($this->getCRS()->getSRID(), $target->getSRID(), $visited, $currentPath, $simplePaths);
+                $this->DFS($source->getSRID(), $target->getSRID(), $visited, $currentPath, $simplePaths);
             }
 
             // Then expand each CRS->CRS permutation with the various ways of achieving that (can be lots :/)
@@ -142,7 +145,7 @@ trait AutoConversion
             foreach ($simplePaths as $simplePath) {
                 $transformationsToMakePath = [[]];
                 $from = array_shift($simplePath);
-                assert($from === $this->getCRS()->getSRID());
+                assert($from === $source->getSRID());
                 do {
                     $to = array_shift($simplePath);
                     $wipTransformationsInPath = [];

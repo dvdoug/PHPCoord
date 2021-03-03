@@ -37,9 +37,11 @@ use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Geographic3D;
 use PHPCoord\CoordinateReferenceSystem\Projected;
 use PHPCoord\CoordinateSystem\Axis;
+use PHPCoord\CoordinateSystem\Cartesian;
 use PHPCoord\Datum\Ellipsoid;
 use PHPCoord\Exception\InvalidCoordinateReferenceSystemException;
 use PHPCoord\Exception\UnknownAxisException;
+use PHPCoord\Geometry\GeographicPolygon;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPCoord\UnitOfMeasure\Angle\ArcSecond;
 use PHPCoord\UnitOfMeasure\Angle\Degree;
@@ -2116,5 +2118,28 @@ class GeographicPoint extends Point implements ConvertiblePoint
     public function asGeographicValue(): GeographicValue
     {
         return new GeographicValue($this->latitude, $this->longitude, $this->height, $this->crs->getDatum());
+    }
+
+    public function asUTMPoint(): UTMPoint
+    {
+        $hemisphere = $this->getLatitude()->asDegrees()->getValue() >= 0 ? UTMPoint::HEMISPHERE_NORTH : UTMPoint::HEMISPHERE_SOUTH;
+        $latitudeOfNaturalOrigin = new Degree(0);
+        $initialLongitude = new Degree(-180);
+        $scaleFactorAtNaturalOrigin = new Unity(0.9996);
+        $falseEasting = new Metre(500000);
+        $falseNorthing = $hemisphere === UTMPoint::HEMISPHERE_NORTH ? new Metre(0) : new Metre(10000000);
+        $Z = ($this->longitude->subtract($initialLongitude)->asDegrees()->getValue() / 6) % (360 / 6) + 1;
+        $longitudeOrigin = $initialLongitude->add(new Degree($Z * 6 - 3));
+
+        $projectedCRS = new Projected(
+            'UTM/' . $this->crs->getSRID(),
+            Cartesian::fromSRID(Cartesian::EPSG_2D_AXES_EASTING_NORTHING_E_N_ORIENTATIONS_EAST_NORTH_UOM_M),
+            $this->crs->getDatum(),
+            GeographicPolygon::createWorld() // this is a dummy CRS for the transform only, details don't matter
+        );
+
+        $asProjected = $this->transverseMercator($projectedCRS, $latitudeOfNaturalOrigin, $longitudeOrigin, $scaleFactorAtNaturalOrigin, $falseEasting, $falseNorthing);
+
+        return new UTMPoint($asProjected->getEasting(), $asProjected->getNorthing(), $Z, $hemisphere, $this->crs, $this->epoch);
     }
 }

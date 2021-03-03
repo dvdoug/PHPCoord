@@ -590,7 +590,7 @@ class ProjectedPointTest extends TestCase
         self::assertEqualsWithDelta(0.493625066, $to->getLongitude()->asRadians()->getValue(), 0.0000001);
     }
 
-    public function testTransverseMercatorZonedGridNothernHemisphere(): void
+    public function testTransverseMercatorZonedGridNorthernHemisphere(): void
     {
         $from = ProjectedPoint::createFromEastingNorthing(new Metre(17630084), new Metre(4833439), Projected::fromSRID(Projected::EPSG_WGS_84_UTM_GRID_SYSTEM_NORTHERN_HEMISPHERE));
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84);

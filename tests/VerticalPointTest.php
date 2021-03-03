@@ -10,11 +10,12 @@ namespace PHPCoord;
 
 use DateTime;
 use DateTimeImmutable;
-use PHPCoord\CoordinateOperation\CoordinateOperationMethods;
 use PHPCoord\CoordinateOperation\CoordinateOperations;
 use PHPCoord\CoordinateOperation\CRSTransformations;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
+use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Vertical;
+use PHPCoord\UnitOfMeasure\Angle\Radian;
 use PHPCoord\UnitOfMeasure\Length\Foot;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPCoord\UnitOfMeasure\Scale\Unity;
@@ -71,6 +72,16 @@ class VerticalPointTest extends TestCase
         self::assertEqualsWithDelta(2.95, $to->getHeight()->getValue(), 0.001);
     }
 
+    public function testVerticalOffsetAndSlope(): void
+    {
+        $horizontalPoint = GeographicPoint::create(new Radian(0.826122513), new Radian(0.168715161), null, Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89));
+        $from = VerticalPoint::create(new Metre(473), Vertical::fromSRID(Vertical::EPSG_LN02_HEIGHT));
+        $toCRS = Vertical::fromSRID(Vertical::EPSG_EVRF2000_HEIGHT);
+        $to = $from->verticalOffsetAndSlope($toCRS, new Radian(0.818850307), new Radian(0.142826110), new Metre(-0.245), new Radian(-0.000001018), new Radian(-0.000000155), 'urn:ogc:def:crs:EPSG::4258', $horizontalPoint);
+
+        self::assertEqualsWithDelta(472.69, $to->getHeight()->asMetres()->getValue(), 0.001);
+    }
+
     public function testHeightDepthReversal(): void
     {
         $from = VerticalPoint::create(new Metre(2.55), Vertical::fromSRID(Vertical::EPSG_BALTIC_1977_HEIGHT));
@@ -101,12 +112,15 @@ class VerticalPointTest extends TestCase
         $epoch = new DateTime();
 
         $originalPoint = VerticalPoint::create(new Metre(0), $sourceCRS, $epoch);
-        $newPoint = $originalPoint->performOperation($operationSrid, $targetCRS, false);
+        $horizontalCentre = $sourceCRS->getBoundingBox()->getCentre();
+        $horizontalPoint = GeographicPoint::create($horizontalCentre[0], $horizontalCentre[1], null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
+
+        $newPoint = $originalPoint->performOperation($operationSrid, $targetCRS, false, ['horizontalPoint' => $horizontalPoint]);
         self::assertInstanceOf(Point::class, $newPoint);
         self::assertEquals($targetCRS, $newPoint->getCRS());
 
         if ($reversible) {
-            $reversedPoint = $newPoint->performOperation($operationSrid, $sourceCRS, true);
+            $reversedPoint = $newPoint->performOperation($operationSrid, $sourceCRS, true, ['horizontalPoint' => $horizontalPoint]);
 
             self::assertEquals($sourceCRS, $reversedPoint->getCRS());
             self::assertEqualsWithDelta($originalPoint->getHeight()->getValue(), $reversedPoint->getHeight()->getValue(), 0.0001);
@@ -128,12 +142,6 @@ class VerticalPointTest extends TestCase
                 }
             } else {
                 $operations[$transformation['operation']] = $operation;
-            }
-
-            foreach ($operations as $operation) {
-                if ($operation['method'] === CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_AND_SLOPE) { // tested as part of CompoundPoint
-                    continue 2;
-                }
             }
 
             if (isset($crss[$transformation['source_crs']])) {

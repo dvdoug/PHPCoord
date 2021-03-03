@@ -2,7 +2,7 @@ Units of scale
 ==============
 
 .. tip::
-    All scale units have helper methods ``->asUnity()``, ``->add()``, ``->substract()``,
+    All scale units have helper methods ``->asUnity()``, ``->add()``, ``->subtract()``,
     ``->multiply()`` and ``->divide()``
 
 Unity

@@ -18,9 +18,9 @@ coordinates in the target CRS.
 
 Although PHPCoord has knowledge of thousands of different conversions, this does not cover many scenarios. For example
 there is no published direct conversion between a British National Grid reference and a UTM Grid reference. In these
-scenarios PHPCoord can "chain" conversions it does know about to achieve the desired result. For that scenario, it would
+scenarios PHPCoord can "chain" conversions it does know about to achieve the desired result, for example it would
 automatically calculate British National Grid -> OSGB36 -> WGS84 -> UTM. This ability to chain means conversion
-between almost any two CRSs is possible as long as they have a common linkage.
+between almost any two CRSs is possible as long as they have a common link.
 
 .. code-block:: php
 
@@ -29,7 +29,7 @@ between almost any two CRSs is possible as long as they have a common linkage.
         new Metre(69741),
         Projected::fromSRID(Projected::EPSG_OSGB_1936_BRITISH_NATIONAL_GRID)
     );
-    $toCRS = Projected::fromSRID(Projected::EPSG_WGS_84_UTM_GRID_SYSTEM_NORTHERN_HEMISPHERE);
+    $toCRS = Projected::fromSRID(Projected::EPSG_WGS_84_UTM_ZONE_31N);
     $to = $from->convert($toCRS);
 
 .. note::
@@ -63,6 +63,45 @@ to ``true``.
 
     In practice this should not affect you as a ``VerticalPoint`` will normally be used as part of a ``CompoundPoint``.
 
+Universal Transverse Mercator (UTM)
+-----------------------------------
+PHPCoord has 3 different ways of handling UTM references (:ref:`see here for details<utm_points>`).
+
+For conversions that *do not* involve a ``UTMPoint``, use the ``->convert()`` method as described above.
+
+For conversions from a ``GeographicPoint`` to a ``UTMPoint``, call the ``->asUTMPoint()`` method.
+
+.. code-block:: php
+
+    $from = GeographicPoint::create(
+        new Degree(43.642567),
+        new Degree(-79.387139),
+        null,
+        Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84)
+    );
+    $to = $from->asUTMPoint();
+
+.. note::
+    You cannot directly convert to a ``UTMPoint`` from a different kind of ``ProjectedPoint`` or a ``GeocentricPoint``,
+    you must convert to the relevant ``GeographicPoint`` first. This is because the projection parameters are calculated
+    dynamically at runtime and are not available to take part in chain creation.
+
+For conversions from a ``UTMPoint`` back to the associated ``GeographicPoint``, call the ``->asGeographicPoint()`` method.
+
+.. code-block:: php
+
+    $from = new UTMPoint(
+        new Metre(630084),
+        new Metre(4833439),
+        17,
+        UTMPoint::HEMISPHERE_NORTH,
+        Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84)
+    );
+    $to = $from->asGeographicPoint();
+
+The ``->convert()`` method *is* present on ``UTMPoint``\s and can be used as normal to convert to any desired CRS
+(including the base CRS).
+
 .. rubric:: Footnotes
 
-.. [#f1] There are over 36 million possible combinations of source and target CRS. They have not all been tested...
+.. [#f1] There are over 36 million possible combinations of source and target CRS. They haven't *all* been tested...
