@@ -2,6 +2,13 @@
 
 ## [Unreleased]
 
+## [4.1.0] - 2021-03-03
+### Added
+- Added `UTMPoint` as a better way of handling UTM zones than the EPSG model does it
+- Improved conversion chaining for `CompoundPoint`s
+### Changed
+- moved `verticalOffsetAndSlope` method from `CompoundPoint` to `VerticalPoint`. This is technically a breaking change, but since the code is only 2 days old shouldn't affect anyone.
+
 ## [4.0.1] - 2021-03-01
 ### Fixed
 - Documentation issues
