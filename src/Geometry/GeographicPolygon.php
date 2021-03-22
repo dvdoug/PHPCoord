@@ -9,11 +9,11 @@ declare(strict_types=1);
 namespace PHPCoord\Geometry;
 
 use function count;
-use InvalidArgumentException;
-use function max;
-use function min;
+use function end;
 use PHPCoord\CoordinateOperation\GeographicValue;
+use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPCoord\UnitOfMeasure\Angle\Degree;
+use function reset;
 
 /**
  * @internal for now
@@ -26,9 +26,6 @@ class GeographicPolygon
 
     protected function __construct(array $vertices, bool $crossesAntimeridian)
     {
-        if (count($vertices) !== 4) {
-            throw new InvalidArgumentException('A bounding box must have exactly 4 vertices (be rectangular)');
-        }
         $this->vertices = $vertices;
         $this->crossesAntimeridian = $crossesAntimeridian;
 
@@ -62,30 +59,74 @@ class GeographicPolygon
             $point = new GeographicValue($point->getLatitude(), $longitude, $point->getHeight(), $point->getDatum());
         }
 
-        [$lon1, $lat1] = $this->vertices[0];
-        [$lon2, $lat2] = $this->vertices[2];
-        $west = min($lon1, $lon2);
-        $east = max($lon1, $lon2);
-        $south = min($lat1, $lat2);
-        $north = max($lat1, $lat2);
+        /*
+         * @see https://observablehq.com/@tmcw/understanding-point-in-polygon
+         */
+        $x = $point->getLongitude()->asDegrees()->getValue();
+        $y = $point->getLatitude()->asDegrees()->getValue();
 
-        $latitude = $point->getLatitude()->asDegrees()->getValue();
-        $longitude = $point->getLongitude()->asDegrees()->getValue();
+        $n = count($this->vertices);
+        $inside = false;
+        for ($i = 0, $j = $n - 1; $i < $n; $j = $i++) {
+            $xi = $this->vertices[$i][0];
+            $yi = $this->vertices[$i][1];
+            $xj = $this->vertices[$j][0];
+            $yj = $this->vertices[$j][1];
 
-        return $latitude <= $north && $latitude >= $south && $longitude >= $west && $longitude <= $east;
+            $intersect = (($yi > $y) !== ($yj > $y)) // horizontal ray from $y, intersects if vertices are on opposite sides of it
+                && ($x < ($xj - $xi) * ($y - $yi) / ($yj - $yi) + $xi);
+            if ($intersect) {
+                $inside = !$inside;
+            }
+        }
+
+        return $inside;
     }
 
+    /**
+     * Calculate the "centre" of a polygon.
+     * @return array<Angle,Angle>
+     */
     public function getCentre(): array
     {
-        [$west, $south] = $this->vertices[0];
-        [$east, $north] = $this->vertices[2];
+        $vertices = $this->vertices;
+        if (end($vertices) !== reset($vertices)) {
+            $vertices[] = $vertices[0]; // last coordinate === first coordinate
+        }
+        $n = count($vertices);
+        $area = $this->getArea();
+        $latitude = 0;
+        $longitude = 0;
 
-        $latitude = new Degree(($north + $south) / 2);
-        $longitude = new Degree(($west + $east) / 2);
+        for ($i = 0; $i < ($n - 1); ++$i) {
+            $latitude += ($vertices[$i][1] + $vertices[$i + 1][1]) * ($vertices[$i][0] * $vertices[$i + 1][1] - $vertices[$i + 1][0] * $vertices[$i][1]);
+            $longitude += ($vertices[$i][0] + $vertices[$i + 1][0]) * ($vertices[$i][0] * $vertices[$i + 1][1] - $vertices[$i + 1][0] * $vertices[$i][1]);
+        }
+        $latitude = new Degree($latitude / 6 / $area);
+        $longitude = new Degree($longitude / 6 / $area);
         if ($this->crossesAntimeridian) {
-            $longitude = $longitude->subtract(new Degree(180));
+            $longitude = $longitude->add(new Degree(180));
         }
 
         return [$latitude, $longitude];
+    }
+
+    public function getArea(): float
+    {
+        // Shoelace formula
+        $area = 0;
+        $n = count($this->vertices);
+
+        for ($i = 0; $i < ($n - 1); ++$i) {
+            $area += $this->vertices[$i][0] * $this->vertices[$i + 1][1];
+        }
+        $area += $this->vertices[$n - 1][0] * $this->vertices[0][1];
+
+        for ($i = 0; $i < ($n - 1); ++$i) {
+            $area -= $this->vertices[$i + 1][0] * $this->vertices[$i][1];
+        }
+        $area -= $this->vertices[0][0] * $this->vertices[$n - 1][1];
+
+        return $area / 2;
     }
 }
