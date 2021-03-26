@@ -41,7 +41,7 @@ use PHPCoord\CoordinateSystem\Cartesian;
 use PHPCoord\Datum\Ellipsoid;
 use PHPCoord\Exception\InvalidCoordinateReferenceSystemException;
 use PHPCoord\Exception\UnknownAxisException;
-use PHPCoord\Geometry\GeographicPolygon;
+use PHPCoord\Geometry\BoundingArea;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPCoord\UnitOfMeasure\Angle\ArcSecond;
 use PHPCoord\UnitOfMeasure\Angle\Degree;
@@ -2135,7 +2135,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
             'UTM/' . $this->crs->getSRID(),
             Cartesian::fromSRID(Cartesian::EPSG_2D_AXES_EASTING_NORTHING_E_N_ORIENTATIONS_EAST_NORTH_UOM_M),
             $this->crs->getDatum(),
-            GeographicPolygon::createWorld() // this is a dummy CRS for the transform only, details don't matter
+            BoundingArea::createWorld() // this is a dummy CRS for the transform only, details don't matter
         );
 
         $asProjected = $this->transverseMercator($projectedCRS, $latitudeOfNaturalOrigin, $longitudeOrigin, $scaleFactorAtNaturalOrigin, $falseEasting, $falseNorthing);

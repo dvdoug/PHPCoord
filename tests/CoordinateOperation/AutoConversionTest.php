@@ -19,7 +19,7 @@ use PHPCoord\CoordinateReferenceSystem\Vertical;
 use PHPCoord\Exception\UnknownConversionException;
 use PHPCoord\GeocentricPoint;
 use PHPCoord\GeographicPoint;
-use PHPCoord\Geometry\GeographicPolygon;
+use PHPCoord\Geometry\BoundingArea;
 use PHPCoord\ProjectedPoint;
 use PHPCoord\UnitOfMeasure\Angle\Degree;
 use PHPCoord\UnitOfMeasure\Angle\Radian;
@@ -208,7 +208,7 @@ class AutoConversionTest extends TestCase
             'notANEPSGCRS',
             Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89),
             Vertical::fromSRID(Vertical::EPSG_LN02_HEIGHT),
-            GeographicPolygon::createWorld(),
+            BoundingArea::createWorld(),
         );
 
         $from = CompoundPoint::create(GeographicPoint::create(new Radian(0.826122513), new Radian(0.168715161), null, Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89)), VerticalPoint::create(new Metre(473), Vertical::fromSRID(Vertical::EPSG_LN02_HEIGHT)), $fromCRS);

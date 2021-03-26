@@ -112,7 +112,7 @@ class VerticalPointTest extends TestCase
         $epoch = new DateTime();
 
         $originalPoint = VerticalPoint::create(new Metre(0), $sourceCRS, $epoch);
-        $horizontalCentre = $sourceCRS->getBoundingBox()->getCentre();
+        $horizontalCentre = $sourceCRS->getBoundingArea()->getPointInside();
         $horizontalPoint = GeographicPoint::create($horizontalCentre[0], $horizontalCentre[1], null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
 
         $newPoint = $originalPoint->performOperation($operationSrid, $targetCRS, false, ['horizontalPoint' => $horizontalPoint]);

@@ -7,4 +7,4 @@
 /.php_cs.cache
 /.phpunit.result.cache
 
-/resources/epsg/*.sql*
+/resources/epsg/

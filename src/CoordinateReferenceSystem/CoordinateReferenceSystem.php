@@ -11,7 +11,7 @@ namespace PHPCoord\CoordinateReferenceSystem;
 use function array_merge;
 use PHPCoord\CoordinateSystem\CoordinateSystem;
 use PHPCoord\Datum\Datum;
-use PHPCoord\Geometry\GeographicPolygon;
+use PHPCoord\Geometry\BoundingArea;
 
 abstract class CoordinateReferenceSystem
 {
@@ -47,7 +47,7 @@ abstract class CoordinateReferenceSystem
 
     protected Datum $datum;
 
-    protected GeographicPolygon $boundingBox;
+    protected BoundingArea $boundingArea;
 
     private static array $cachedObjects = [];
 
@@ -68,9 +68,9 @@ abstract class CoordinateReferenceSystem
         return $this->datum;
     }
 
-    public function getBoundingBox(): GeographicPolygon
+    public function getBoundingArea(): BoundingArea
     {
-        return $this->boundingBox;
+        return $this->boundingArea;
     }
 
     public static function fromSRID(string $srid): self

@@ -19,7 +19,7 @@ use PHPCoord\Datum\Datum;
 use PHPCoord\Datum\Ellipsoid;
 use PHPCoord\Exception\InvalidAxesException;
 use PHPCoord\Exception\InvalidCoordinateReferenceSystemException;
-use PHPCoord\Geometry\GeographicPolygon;
+use PHPCoord\Geometry\BoundingArea;
 use PHPCoord\UnitOfMeasure\Angle\Degree;
 use PHPCoord\UnitOfMeasure\Angle\Grad;
 use PHPCoord\UnitOfMeasure\Angle\Radian;
@@ -389,7 +389,7 @@ class ProjectedPointTest extends TestCase
                 null,
                 null,
             ),
-            GeographicPolygon::createWorld(),
+            BoundingArea::createWorld(),
         );
         $from = ProjectedPoint::createFromEastingNorthing(new Metre(-3.2339303), new Metre(6.0257775), $fromCRS);
 

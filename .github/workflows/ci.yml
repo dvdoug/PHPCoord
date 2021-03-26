@@ -66,6 +66,9 @@ jobs:
         key: "php-${{ matrix.php-version }}-deps-${{ matrix.dependencies }}-${{ hashFiles('composer.json') }}"
         restore-keys: "php-${{ matrix.php-version }}-deps-${{ matrix.dependencies }}"
 
+    - name: Remove manual import-only deps
+      run: composer remove --dev --no-update "gasparesganga/php-shapefile";
+
     - name: Remove PHP-CS-Fixer if not called
       if: matrix.php-version != '7.4' || matrix.dependencies != 'highest'
       run: composer remove --dev --no-update "friendsofphp/php-cs-fixer";

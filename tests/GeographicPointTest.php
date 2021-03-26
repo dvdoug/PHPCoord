@@ -8,6 +8,8 @@ declare(strict_types=1);
 
 namespace PHPCoord;
 
+use function array_merge;
+use function class_exists;
 use DateTime;
 use DateTimeImmutable;
 use PHPCoord\CoordinateOperation\CoordinateOperationMethods;
@@ -24,7 +26,7 @@ use PHPCoord\CoordinateSystem\Ellipsoidal;
 use PHPCoord\Datum\Datum;
 use PHPCoord\Datum\Ellipsoid;
 use PHPCoord\Exception\InvalidCoordinateReferenceSystemException;
-use PHPCoord\Geometry\GeographicPolygon;
+use PHPCoord\Geometry\BoundingArea;
 use PHPCoord\UnitOfMeasure\Angle\ArcSecond;
 use PHPCoord\UnitOfMeasure\Angle\Degree;
 use PHPCoord\UnitOfMeasure\Angle\Grad;
@@ -560,7 +562,7 @@ class GeographicPointTest extends TestCase
                 null,
                 null,
             ),
-            GeographicPolygon::createWorld()
+            BoundingArea::createWorld()
         );
         $from = GeographicPoint::create(new Degree(-20), new Degree(100), null, $fromCRS);
 
@@ -1031,8 +1033,15 @@ class GeographicPointTest extends TestCase
     public function testOperations(string $sourceCrsSrid, string $targetCrsSrid, string $operationSrid, bool $reversible): void
     {
         $operation = CoordinateOperations::getOperationData($operationSrid);
-        $boundingBox = GeographicPolygon::createFromArray($operation['bounding_box'], $operation['bounding_box_crosses_antimeridian']);
-        $centre = $boundingBox->getCentre();
+        $extents = [];
+        foreach ($operation['extent_code'] as $extentId) {
+            $fullExtent = "PHPCoord\\Geometry\\Extents\\Extent{$extentId}";
+            $basicExtent = "PHPCoord\\Geometry\\Extents\\BoundingBoxOnly\\Extent{$extentId}";
+            $extentClass = class_exists($fullExtent) ? new $fullExtent() : new $basicExtent();
+            $extents = array_merge($extents, $extentClass());
+        }
+        $boundingBox = BoundingArea::createFromArray($extents);
+        $centre = $boundingBox->getPointInside();
 
         $sourceCRS = Geographic::fromSRID($sourceCrsSrid);
         $sourceHeight = $sourceCRS instanceof Geographic3D ? new Metre(0) : null;
