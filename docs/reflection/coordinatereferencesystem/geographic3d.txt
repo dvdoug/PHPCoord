@@ -243,6 +243,22 @@ ETRF2000
 
 Replaces ETRF97 (code 7929). On the publication of ETRF2005 (code 8399),  the EUREF Technical Working Group recommended that ETRF2000 be the realization of ETRS89. ETRF2014 (code 8403) is technically superior to all earlier realizations of ETRS89.
 
+ETRF2000-PL
+-----------
+
+| Used: Poland - onshore and offshore.
+
+.. code-block:: php
+
+    Geographic3D::fromSRID(Geographic3D::EPSG_ETRF2000_PL)
+    Geographic3D::fromSRID('urn:ogc:def:crs:EPSG::9701')
+    Geographic::fromSRID(Geographic3D::EPSG_ETRF2000_PL)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::9701')
+    CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_ETRF2000_PL)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9701')
+
+Adopted from 2012-12-01.
+
 ETRF2005
 --------
 

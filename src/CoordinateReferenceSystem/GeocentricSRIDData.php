@@ -1139,5 +1139,11 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1304',
             'extent_code' => ['1066'],
         ],
+        'urn:ogc:def:crs:EPSG::9700' => [
+            'name' => 'ETRF2000-PL',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1305',
+            'extent_code' => ['1192'],
+        ],
     ];
 }

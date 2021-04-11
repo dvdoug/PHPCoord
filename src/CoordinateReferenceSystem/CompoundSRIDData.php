@@ -928,7 +928,7 @@ trait CompoundSRIDData
             'extent_code' => ['3313'],
         ],
         'urn:ogc:def:crs:EPSG::7405' => [
-            'name' => 'OSGB 1936 / British National Grid + ODN height',
+            'name' => 'OSGB36 / British National Grid + ODN height',
             'horizontal_crs' => 'urn:ogc:def:crs:EPSG::27700',
             'horizontal_crs_type' => 'projected',
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5701',
@@ -2382,6 +2382,20 @@ trait CompoundSRIDData
             'horizontal_crs_type' => 'geographic 2D',
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9245',
             'extent_code' => ['1061'],
+        ],
+        'urn:ogc:def:crs:EPSG::9656' => [
+            'name' => 'ETRF2000-PL + Baltic 1986 height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::9702',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::9650',
+            'extent_code' => ['3293'],
+        ],
+        'urn:ogc:def:crs:EPSG::9657' => [
+            'name' => 'ETRF2000-PL + EVRF2007-PL height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::9702',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::9651',
+            'extent_code' => ['3293'],
         ],
         'urn:ogc:def:crs:EPSG::9705' => [
             'name' => 'WGS 84 + MSL height',

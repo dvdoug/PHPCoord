@@ -141,6 +141,14 @@ class Vertical extends CoordinateReferenceSystem
     public const EPSG_BALTIC_1982_HEIGHT = 'urn:ogc:def:crs:EPSG::5786';
 
     /**
+     * Baltic 1986 height
+     * Extent: Poland - onshore.
+     * Initially valid until 2019-12-31, but that extended to 2023-12-31. Will be replaced by EVRF2007-PL height (CRS
+     * 9651) after 2023-12-31.
+     */
+    public const EPSG_BALTIC_1986_HEIGHT = 'urn:ogc:def:crs:EPSG::9650';
+
+    /**
      * Bandar Abbas height
      * Extent: Iran - onshore.
      * Replaces Fao height (CRS code 5751) for national map agency work in Iran. At time of record creation NIOC data
@@ -452,6 +460,13 @@ class Vertical extends CoordinateReferenceSystem
      * Uses Normal heights. Replaces EVRF2000 height (CRS code 5730). Replaced by EVRF2019 height (CRS code 9389).
      */
     public const EPSG_EVRF2007_HEIGHT = 'urn:ogc:def:crs:EPSG::5621';
+
+    /**
+     * EVRF2007-PL height
+     * Extent: Poland - onshore.
+     * Replaces Baltic 1986 height (CRS 9650) after 2023-12-31.
+     */
+    public const EPSG_EVRF2007_PL_HEIGHT = 'urn:ogc:def:crs:EPSG::9651';
 
     /**
      * EVRF2019 height

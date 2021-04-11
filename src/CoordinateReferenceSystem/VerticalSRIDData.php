@@ -1451,6 +1451,18 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1294',
             'extent_code' => ['1122'],
         ],
+        'urn:ogc:def:crs:EPSG::9650' => [
+            'name' => 'Baltic 1986 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1296',
+            'extent_code' => ['3293'],
+        ],
+        'urn:ogc:def:crs:EPSG::9651' => [
+            'name' => 'EVRF2007-PL height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1297',
+            'extent_code' => ['3293'],
+        ],
         'urn:ogc:def:crs:EPSG::9663' => [
             'name' => 'EH2000 height',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',

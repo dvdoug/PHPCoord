@@ -726,27 +726,27 @@ class CoordinateOperations
             'extent_code' => ['1543'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::1195' => [
-            'name' => 'OSGB 1936 to WGS 84 (1)',
+            'name' => 'OSGB36 to WGS 84 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['1264'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::1196' => [
-            'name' => 'OSGB 1936 to WGS 84 (2)',
+            'name' => 'OSGB36 to WGS 84 (2)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['2395'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::1197' => [
-            'name' => 'OSGB 1936 to WGS 84 (3)',
+            'name' => 'OSGB36 to WGS 84 (3)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['2396'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::1198' => [
-            'name' => 'OSGB 1936 to WGS 84 (4)',
+            'name' => 'OSGB36 to WGS 84 (4)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['2397'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::1199' => [
-            'name' => 'OSGB 1936 to WGS 84 (5)',
+            'name' => 'OSGB36 to WGS 84 (5)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['2398'],
         ],
@@ -1131,12 +1131,12 @@ class CoordinateOperations
             'extent_code' => ['2342'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::1314' => [
-            'name' => 'OSGB 1936 to WGS 84 (6)',
+            'name' => 'OSGB36 to WGS 84 (6)',
             'method' => 'urn:ogc:def:method:EPSG::9606',
             'extent_code' => ['1264'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::1315' => [
-            'name' => 'OSGB 1936 to ED50 (UKOOA)',
+            'name' => 'OSGB36 to ED50 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9606',
             'extent_code' => ['1264'],
         ],
@@ -4954,7 +4954,7 @@ class CoordinateOperations
             'extent_code' => ['3889'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::5622' => [
-            'name' => 'OSGB 1936 to WGS 84 (8)',
+            'name' => 'OSGB36 to WGS 84 (8)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['3893'],
         ],
@@ -11239,6 +11239,11 @@ class CoordinateOperations
             'name' => 'WGS 84 to GDA2020 (3)',
             'method' => 'urn:ogc:def:method:EPSG::9607',
             'extent_code' => ['4177'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9703' => [
+            'name' => 'ETRF2000-PL to ETRS89 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::9603',
+            'extent_code' => ['1192'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::10085' => [
             'name' => 'Trinidad 1903 to WGS 84 (2)',

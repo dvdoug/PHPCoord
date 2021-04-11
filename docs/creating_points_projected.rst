@@ -49,7 +49,7 @@ Examples:
     use PHPCoord\UnitOfMeasure\Length\Metre;
 
     // Nelson's Column in British National Grid (unknown date), traditional arguments
-    $crs = Projected::fromSRID(Projected::EPSG_OSGB_1936_BRITISH_NATIONAL_GRID);
+    $crs = Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID);
     $point = ProjectedPoint::createFromEastingNorthing(
         new Metre(530017),
         new Metre(180419),
@@ -57,7 +57,7 @@ Examples:
     );
 
     // Nelson's Column in British National Grid (2020-02-01), traditional arguments
-    $crs = Projected::fromSRID(Projected::EPSG_OSGB_1936_BRITISH_NATIONAL_GRID);
+    $crs = Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID);
     $point = ProjectedPoint::createFromEastingNorthing(
         new Metre(530017),
         new Metre(180419),
@@ -66,7 +66,7 @@ Examples:
     );
 
     // Nelson's Column in British National Grid (unknown date), named arguments
-    $crs = Projected::fromSRID(Projected::EPSG_OSGB_1936_BRITISH_NATIONAL_GRID);
+    $crs = Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID);
     $point = ProjectedPoint::createFromEastingNorthing(
         easting: new Metre(530017),
         northing: new Metre(180419),
@@ -74,7 +74,7 @@ Examples:
     );
 
     // Nelson's Column in British National Grid (2020-02-01), named arguments
-    $crs = Projected::fromSRID(Projected::EPSG_OSGB_1936_BRITISH_NATIONAL_GRID);
+    $crs = Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID);
     $point = ProjectedPoint::createFromEastingNorthing(
         easting: new Metre(530017),
         northing: new Metre(180419),
@@ -139,7 +139,7 @@ Examples:
     use PHPCoord\UnitOfMeasure\Length\Metre;
 
     // Nelson's Column
-    $crs = Projected::fromSRID(Projected::EPSG_OSGB_1936_BRITISH_NATIONAL_GRID);
+    $crs = Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID);
     $point = ProjectedPoint::createFromEastingNorthing(
         new Metre(530017),
         new Metre(180419),

@@ -5623,6 +5623,76 @@ ELD79 / UTM zone 35N
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::2080')
 
 
+ETRF2000-PL / CS2000/15
+-----------------------
+
+| Used: Poland - onshore and offshore west of 16°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_ETRF2000_PL_CS2000_15)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::2176')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRF2000_PL_CS2000_15)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::2176')
+
+See ETRF2000-PL / CS92 (code 2180) for smaller scale mapping.
+
+ETRF2000-PL / CS2000/18
+-----------------------
+
+| Used: Poland - onshore and offshore between 16°30'E and 19°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_ETRF2000_PL_CS2000_18)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::2177')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRF2000_PL_CS2000_18)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::2177')
+
+See ETRF2000-PL / CS92 (code 2180) for smaller scale mapping.
+
+ETRF2000-PL / CS2000/21
+-----------------------
+
+| Used: Poland - onshore and offshore between 19°30'E and 22°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_ETRF2000_PL_CS2000_21)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::2178')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRF2000_PL_CS2000_21)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::2178')
+
+See ETRF2000-PL / CS92 (code 2180) for smaller scale mapping.
+
+ETRF2000-PL / CS2000/24
+-----------------------
+
+| Used: Poland - east of 22°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_ETRF2000_PL_CS2000_24)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::2179')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRF2000_PL_CS2000_24)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::2179')
+
+See ETRF2000-PL / CS92 (code 2180) for smaller scale mapping.
+
+ETRF2000-PL / CS92
+------------------
+
+| Used: Poland - onshore and offshore.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_ETRF2000_PL_CS92)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::2180')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRF2000_PL_CS92)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::2180')
+
+See ETRF2000-PL / CS2000 zones 2000/15, 2000/18, 2000/21 and 2000/24 (codes 2176-79) for large scale purposes.
+
 ETRS89 / Albania LCC 2010
 -------------------------
 
@@ -6706,76 +6776,6 @@ ETRS89 / NTM zone 9
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5109')
 
 ETRS89 / UTM is the projected CRS for Norway recommended by the Norwegian Mapping Authority. This CRS using NTM is an alternative when UTM scale is too far from unity, in particular for construction projects.
-
-ETRS89 / Poland CS2000 zone 5
------------------------------
-
-| Used: Poland - onshore and offshore west of 16°30'E.
-
-.. code-block:: php
-
-    Projected::fromSRID(Projected::EPSG_ETRS89_POLAND_CS2000_ZONE_5)
-    Projected::fromSRID('urn:ogc:def:crs:EPSG::2176')
-    CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_POLAND_CS2000_ZONE_5)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::2176')
-
-See ETRS89 / Poland CS92 (code 2170) for smaller scale mapping.
-
-ETRS89 / Poland CS2000 zone 6
------------------------------
-
-| Used: Poland - onshore and offshore between 16°30'E and 19°30'E.
-
-.. code-block:: php
-
-    Projected::fromSRID(Projected::EPSG_ETRS89_POLAND_CS2000_ZONE_6)
-    Projected::fromSRID('urn:ogc:def:crs:EPSG::2177')
-    CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_POLAND_CS2000_ZONE_6)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::2177')
-
-See ETRS89 / Poland CS92 (code 2170) for smaller scale mapping.
-
-ETRS89 / Poland CS2000 zone 7
------------------------------
-
-| Used: Poland - onshore and offshore between 19°30'E and 22°30'E.
-
-.. code-block:: php
-
-    Projected::fromSRID(Projected::EPSG_ETRS89_POLAND_CS2000_ZONE_7)
-    Projected::fromSRID('urn:ogc:def:crs:EPSG::2178')
-    CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_POLAND_CS2000_ZONE_7)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::2178')
-
-See ETRS89 / Poland CS92 (code 2170) for smaller scale mapping.
-
-ETRS89 / Poland CS2000 zone 8
------------------------------
-
-| Used: Poland - east of 22°30'E.
-
-.. code-block:: php
-
-    Projected::fromSRID(Projected::EPSG_ETRS89_POLAND_CS2000_ZONE_8)
-    Projected::fromSRID('urn:ogc:def:crs:EPSG::2179')
-    CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_POLAND_CS2000_ZONE_8)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::2179')
-
-See ETRS89 / Poland CS92 (code 2170) for smaller scale mapping.
-
-ETRS89 / Poland CS92
---------------------
-
-| Used: Poland - onshore and offshore.
-
-.. code-block:: php
-
-    Projected::fromSRID(Projected::EPSG_ETRS89_POLAND_CS92)
-    Projected::fromSRID('urn:ogc:def:crs:EPSG::2180')
-    CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_POLAND_CS92)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::2180')
-
-See ETRS89 / Poland CS2000 zones 5- 8 (codes 2176-79) for large scale purposes.
 
 ETRS89 / Portugal TM06
 ----------------------
@@ -16685,7 +16685,7 @@ NAD27 / UTM zone 17N
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_NAD27_UTM_ZONE_17N)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::26717')
 
-In Ontario replaced by NAD27(76) / UTM zone 17N (code 2029). In Quebec replaced by NAD27(CGQ77) / UTM zone 17N (code 2031). See NAD27 / BLM 17N (feet) (code 32067) for non-metric equivalent used in US Gulf of Mexico.
+In Ontario replaced by NAD27(76) / UTM zone 17N (code 2029). In Quebec replaced by NAD27(CGQ77) / UTM zone 17N (code 2031). See NAD27 / BLM 17N (ftUS) (code 32067) for non-metric equivalent used in US Gulf of Mexico.
 
 NAD27 / UTM zone 18N
 --------------------
@@ -17981,7 +17981,7 @@ NAD83 / BLM 14N (ftUS)
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_NAD83_BLM_14N_FTUS)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::32164')
 
-See NAD27 / BLM 14N (feet) (code 32064) and NAD83 / UTM zone 14N (code 26914) for systems used in US Gulf of Mexico oil operations.
+See NAD83 / UTM zone 14N (code 26914) for metric equivalent. See NAD27 / BLM 14N (ftUS) (code 32064) for system used in US Gulf of Mexico oil operations.
 
 NAD83 / BLM 15N (ftUS)
 ----------------------
@@ -17995,7 +17995,7 @@ NAD83 / BLM 15N (ftUS)
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_NAD83_BLM_15N_FTUS)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::32165')
 
-See NAD27 / BLM 15N (feet) (code 32065) and NAD83 / UTM zone 15N (code 26915) for systems used in US Gulf of Mexico oil operations.
+See NAD83 / UTM zone 15N (code 26915) for metric equivalent. See NAD27 / BLM 14N (ftUS) (code 32065) for system used in US Gulf of Mexico oil operations.
 
 NAD83 / BLM 16N (ftUS)
 ----------------------
@@ -18009,7 +18009,7 @@ NAD83 / BLM 16N (ftUS)
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_NAD83_BLM_16N_FTUS)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::32166')
 
-See NAD27 / BLM 16N (feet) (code 32066) and NAD83 / UTM zone 16N (code 26916) for systems used in US Gulf of Mexico oil operations.
+See NAD83 / UTM zone 16N (code 26916) for metric equivalent. See NAD27 / BLM 16N (ftUS) (code 32066) for system used in US Gulf of Mexico oil operations.
 
 NAD83 / BLM 17N (ftUS)
 ----------------------
@@ -18023,7 +18023,7 @@ NAD83 / BLM 17N (ftUS)
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_NAD83_BLM_17N_FTUS)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::32167')
 
-See NAD27 / BLM 17N (feet) (code 32067) and NAD83 / UTM zone 17N (code 26917) for systems used in US Gulf of Mexico oil operations.
+See NAD83 / UTM zone 17N (code 26917) for metric equivalent. See NAD27 / BLM 17N (ftUS) (code 32067) for system used in US Gulf of Mexico oil operations.
 
 NAD83 / BLM 18N (ftUS)
 ----------------------
@@ -44095,16 +44095,16 @@ ONGD17 / UTM zone 41N
 
 Replaced ONGD14 / UTM zone 41N projCRS (code 7376) from March 2019.
 
-OSGB 1936 / British National Grid
----------------------------------
+OSGB36 / British National Grid
+------------------------------
 
 | Used: United Kingdom (UK) - offshore to boundary of UKCS within 49°45'N to 61°N and 9°W to 2°E; onshore Great Britain (England, Wales and Scotland). Isle of Man onshore.
 
 .. code-block:: php
 
-    Projected::fromSRID(Projected::EPSG_OSGB_1936_BRITISH_NATIONAL_GRID)
+    Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID)
     Projected::fromSRID('urn:ogc:def:crs:EPSG::27700')
-    CoordinateReferenceSystem::fromSRID(Projected::EPSG_OSGB_1936_BRITISH_NATIONAL_GRID)
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::27700')
 
 
@@ -59657,7 +59657,7 @@ WGS 84 / BLM 14N (ftUS)
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_WGS_84_BLM_14N_FTUS)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::32664')
 
-See NAD27 / BLM 14N (feet) (code 32064) and WGS 84 / UTM zone 14N (code 32614) for systems used in US Gulf of Mexico oil operations.
+See WGS 84 / UTM zone 14N (code 32614) for metric equivalent. See NAD27 / BLM 14N (ftUS) (code 32064) for system used in US Gulf of Mexico oil operations.
 
 WGS 84 / BLM 15N (ftUS)
 -----------------------
@@ -59671,7 +59671,7 @@ WGS 84 / BLM 15N (ftUS)
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_WGS_84_BLM_15N_FTUS)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::32665')
 
-See NAD27 / BLM 15N (feet) (code 32065) and WGS 84 / UTM zone 15N (code 32615) for systems used in US Gulf of Mexico oil operations.
+See WGS 84 / UTM zone 15N (code 32615) for metric equivalent. See NAD27 / BLM 15N (ftUS) (code 32065) for system used in US Gulf of Mexico oil operations.
 
 WGS 84 / BLM 16N (ftUS)
 -----------------------
@@ -59685,7 +59685,7 @@ WGS 84 / BLM 16N (ftUS)
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_WGS_84_BLM_16N_FTUS)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::32666')
 
-See NAD27 / BLM 16N (feet) (code 32066) and WGS 84 / UTM zone 16N (code 32616) for systems used in US Gulf of Mexico oil operations.
+See WGS 84 / UTM zone 16N (code 32616) for metric equivalent. See NAD27 / BLM 16N (ftUS) (code 32066) for system used in US Gulf of Mexico oil operations.
 
 WGS 84 / BLM 17N (ftUS)
 -----------------------
@@ -59699,7 +59699,7 @@ WGS 84 / BLM 17N (ftUS)
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_WGS_84_BLM_17N_FTUS)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::32667')
 
-See NAD27 / BLM 17N (feet) (code 32067) and WGS 84 / UTM zone 17N (code 32617) for systems used in US Gulf of Mexico oil operations.
+See WGS 84 / UTM zone 17N (code 32617) for metric equivalent. See NAD27 / BLM 17N (ftUS) (code 32067) for system used in US Gulf of Mexico oil operations.
 
 WGS 84 / Bihar
 --------------

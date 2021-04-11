@@ -10,6 +10,7 @@ namespace PHPCoord\EPSG\Import;
 
 use function array_flip;
 use function array_map;
+use function array_reverse;
 use function array_unique;
 use function assert;
 use function dirname;
@@ -116,6 +117,8 @@ class EPSGImporter
         $sqlite->exec('UPDATE epsg_coordinatereferencesystem SET base_crs_code = 9695 WHERE coord_ref_sys_code = 9696');
         $sqlite->exec('UPDATE epsg_coordinatereferencesystem SET projection_conv_code = 15593 WHERE coord_ref_sys_code = 9057');
         $sqlite->exec('UPDATE epsg_coordinatereferencesystem SET projection_conv_code = 15593 WHERE coord_ref_sys_code = 9066');
+        $sqlite->exec('UPDATE epsg_coordinatereferencesystem SET projection_conv_code = NULL WHERE coord_ref_sys_code = 4203');
+        $sqlite->exec('UPDATE epsg_coordinatereferencesystem SET projection_conv_code = NULL WHERE coord_ref_sys_code = 4277');
 
         $sqlite->exec('VACUUM');
         $sqlite->exec('PRAGMA journal_mode=DELETE'); //but WAL is not openable read-only in older SQLite
@@ -173,7 +176,7 @@ class EPSGImporter
         }
 
         $this->updateFileData($this->sourceDir . '/UnitOfMeasure/Angle/Angle.php', $data);
-        $this->updateFileConstants($this->sourceDir . '/UnitOfMeasure/Angle/Angle.php', $data, 'public');
+        $this->updateFileConstants($this->sourceDir . '/UnitOfMeasure/Angle/Angle.php', $data, 'public', []);
         $this->updateDocs(Angle::class, $data);
 
         $sql = "
@@ -204,7 +207,7 @@ class EPSGImporter
         }
 
         $this->updateFileData($this->sourceDir . '/UnitOfMeasure/Length/Length.php', $data);
-        $this->updateFileConstants($this->sourceDir . '/UnitOfMeasure/Length/Length.php', $data, 'public');
+        $this->updateFileConstants($this->sourceDir . '/UnitOfMeasure/Length/Length.php', $data, 'public', []);
         $this->updateDocs(Length::class, $data);
 
         $sql = "
@@ -235,7 +238,7 @@ class EPSGImporter
         }
 
         $this->updateFileData($this->sourceDir . '/UnitOfMeasure/Scale/Scale.php', $data);
-        $this->updateFileConstants($this->sourceDir . '/UnitOfMeasure/Scale/Scale.php', $data, 'public');
+        $this->updateFileConstants($this->sourceDir . '/UnitOfMeasure/Scale/Scale.php', $data, 'public', []);
         $this->updateDocs(Scale::class, $data);
 
         $sql = "
@@ -265,7 +268,7 @@ class EPSGImporter
         }
 
         $this->updateFileData($this->sourceDir . '/UnitOfMeasure/Time/Time.php', $data);
-        $this->updateFileConstants($this->sourceDir . '/UnitOfMeasure/Time/Time.php', $data, 'public');
+        $this->updateFileConstants($this->sourceDir . '/UnitOfMeasure/Time/Time.php', $data, 'public', []);
         $this->updateDocs(Time::class, $data);
 
         $sql = "
@@ -295,7 +298,7 @@ class EPSGImporter
         }
 
         $this->updateFileData($this->sourceDir . '/UnitOfMeasure/Rate.php', $data);
-        $this->updateFileConstants($this->sourceDir . '/UnitOfMeasure/Rate.php', $data, 'public');
+        $this->updateFileConstants($this->sourceDir . '/UnitOfMeasure/Rate.php', $data, 'public', []);
         $this->updateDocs(Rate::class, $data);
 
         $sql = "
@@ -324,7 +327,7 @@ class EPSGImporter
         }
 
         $this->updateFileData($this->sourceDir . '/UnitOfMeasure/UnitOfMeasure.php', $data);
-        $this->updateFileConstants($this->sourceDir . '/UnitOfMeasure/UnitOfMeasure.php', $data, 'public');
+        $this->updateFileConstants($this->sourceDir . '/UnitOfMeasure/UnitOfMeasure.php', $data, 'public', []);
     }
 
     public function generateDataPrimeMeridians(SQLite3 $sqlite): void
@@ -352,7 +355,7 @@ class EPSGImporter
         }
 
         $this->updateFileData($this->sourceDir . '/Datum/PrimeMeridian.php', $data);
-        $this->updateFileConstants($this->sourceDir . '/Datum/PrimeMeridian.php', $data, 'public');
+        $this->updateFileConstants($this->sourceDir . '/Datum/PrimeMeridian.php', $data, 'public', []);
         $this->updateDocs(PrimeMeridian::class, $data);
     }
 
@@ -388,7 +391,7 @@ class EPSGImporter
         }
 
         $this->updateFileData($this->sourceDir . '/Datum/Ellipsoid.php', $data);
-        $this->updateFileConstants($this->sourceDir . '/Datum/Ellipsoid.php', $data, 'public');
+        $this->updateFileConstants($this->sourceDir . '/Datum/Ellipsoid.php', $data, 'public', []);
         $this->updateDocs(Ellipsoid::class, $data);
     }
 
@@ -441,7 +444,14 @@ class EPSGImporter
         }
 
         $this->updateFileData($this->sourceDir . '/Datum/Datum.php', $data);
-        $this->updateFileConstants($this->sourceDir . '/Datum/Datum.php', $data, 'public');
+        $this->updateFileConstants(
+            $this->sourceDir . '/Datum/Datum.php',
+            $data,
+            'public',
+            [
+                Datum::EPSG_ORDNANCE_SURVEY_OF_GREAT_BRITAIN_1936 => ['OSGB 1936'],
+            ]
+        );
         $this->updateDocs(Datum::class, $data);
     }
 
@@ -493,7 +503,7 @@ class EPSGImporter
         }
 
         $this->updateFileData($this->sourceDir . '/CoordinateSystem/Cartesian.php', $data);
-        $this->updateFileConstants($this->sourceDir . '/CoordinateSystem/Cartesian.php', $data, 'public');
+        $this->updateFileConstants($this->sourceDir . '/CoordinateSystem/Cartesian.php', $data, 'public', []);
         $this->updateDocs(Cartesian::class, $data);
 
         /*
@@ -542,7 +552,7 @@ class EPSGImporter
         }
 
         $this->updateFileData($this->sourceDir . '/CoordinateSystem/Ellipsoidal.php', $data);
-        $this->updateFileConstants($this->sourceDir . '/CoordinateSystem/Ellipsoidal.php', $data, 'public');
+        $this->updateFileConstants($this->sourceDir . '/CoordinateSystem/Ellipsoidal.php', $data, 'public', []);
         $this->updateDocs(Ellipsoidal::class, $data);
 
         /*
@@ -591,7 +601,7 @@ class EPSGImporter
         }
 
         $this->updateFileData($this->sourceDir . '/CoordinateSystem/Vertical.php', $data);
-        $this->updateFileConstants($this->sourceDir . '/CoordinateSystem/Vertical.php', $data, 'public');
+        $this->updateFileConstants($this->sourceDir . '/CoordinateSystem/Vertical.php', $data, 'public', []);
         $this->updateDocs(VerticalCS::class, $data);
 
         /*
@@ -640,7 +650,7 @@ class EPSGImporter
         }
 
         $this->updateFileData($this->sourceDir . '/CoordinateSystem/CoordinateSystem.php', $data);
-        $this->updateFileConstants($this->sourceDir . '/CoordinateSystem/CoordinateSystem.php', $data, 'public');
+        $this->updateFileConstants($this->sourceDir . '/CoordinateSystem/CoordinateSystem.php', $data, 'public', []);
     }
 
     public function generateDataCoordinateReferenceSystems(SQLite3 $sqlite): void
@@ -682,7 +692,14 @@ class EPSGImporter
         }
 
         $this->updateFileData($this->sourceDir . '/CoordinateReferenceSystem/CompoundSRIDData.php', $data);
-        $this->updateFileConstants($this->sourceDir . '/CoordinateReferenceSystem/Compound.php', $data, 'public');
+        $this->updateFileConstants(
+            $this->sourceDir . '/CoordinateReferenceSystem/Compound.php',
+            $data,
+            'public',
+            [
+                Compound::EPSG_OSGB36_BRITISH_NATIONAL_GRID_PLUS_ODN_HEIGHT => ['OSGB 1936 / British National Grid + ODN height'],
+            ]
+        );
         $this->updateDocs(Compound::class, $data);
 
         /*
@@ -721,7 +738,12 @@ class EPSGImporter
         }
 
         $this->updateFileData($this->sourceDir . '/CoordinateReferenceSystem/GeocentricSRIDData.php', $data);
-        $this->updateFileConstants($this->sourceDir . '/CoordinateReferenceSystem/Geocentric.php', $data, 'public');
+        $this->updateFileConstants(
+            $this->sourceDir . '/CoordinateReferenceSystem/Geocentric.php',
+            $data,
+            'public',
+            []
+        );
         $this->updateDocs(Geocentric::class, $data);
 
         /*
@@ -760,7 +782,14 @@ class EPSGImporter
         }
 
         $this->updateFileData($this->sourceDir . '/CoordinateReferenceSystem/Geographic2DSRIDData.php', $data);
-        $this->updateFileConstants($this->sourceDir . '/CoordinateReferenceSystem/Geographic2D.php', $data, 'public');
+        $this->updateFileConstants(
+            $this->sourceDir . '/CoordinateReferenceSystem/Geographic2D.php',
+            $data,
+            'public',
+            [
+                Geographic2D::EPSG_OSGB36 => ['OSGB 1936'],
+            ]
+        );
         $this->updateDocs(Geographic2D::class, $data);
 
         /*
@@ -799,7 +828,12 @@ class EPSGImporter
         }
 
         $this->updateFileData($this->sourceDir . '/CoordinateReferenceSystem/Geographic3DSRIDData.php', $data);
-        $this->updateFileConstants($this->sourceDir . '/CoordinateReferenceSystem/Geographic3D.php', $data, 'public');
+        $this->updateFileConstants(
+            $this->sourceDir . '/CoordinateReferenceSystem/Geographic3D.php',
+            $data,
+            'public',
+            []
+        );
         $this->updateDocs(Geographic3D::class, $data);
 
         /*
@@ -838,7 +872,19 @@ class EPSGImporter
         }
 
         $this->updateFileData($this->sourceDir . '/CoordinateReferenceSystem/ProjectedSRIDData.php', $data);
-        $this->updateFileConstants($this->sourceDir . '/CoordinateReferenceSystem/Projected.php', $data, 'public');
+        $this->updateFileConstants(
+            $this->sourceDir . '/CoordinateReferenceSystem/Projected.php',
+            $data,
+            'public',
+            [
+                Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID => ['OSGB 1936 / British National Grid'],
+                Projected::EPSG_ETRF2000_PL_CS2000_15 => ['ETRS89 / Poland CS2000 zone 5'],
+                Projected::EPSG_ETRF2000_PL_CS2000_18 => ['ETRS89 / Poland CS2000 zone 6'],
+                Projected::EPSG_ETRF2000_PL_CS2000_21 => ['ETRS89 / Poland CS2000 zone 7'],
+                Projected::EPSG_ETRF2000_PL_CS2000_24 => ['ETRS89 / Poland CS2000 zone 8'],
+                Projected::EPSG_ETRF2000_PL_CS92 => ['ETRS89 / Poland CS92'],
+            ]
+        );
         $this->updateDocs(Projected::class, $data);
 
         /*
@@ -877,7 +923,12 @@ class EPSGImporter
         }
 
         $this->updateFileData($this->sourceDir . '/CoordinateReferenceSystem/VerticalSRIDData.php', $data);
-        $this->updateFileConstants($this->sourceDir . '/CoordinateReferenceSystem/Vertical.php', $data, 'public');
+        $this->updateFileConstants(
+            $this->sourceDir . '/CoordinateReferenceSystem/Vertical.php',
+            $data,
+            'public',
+            []
+        );
         $this->updateDocs(Vertical::class, $data);
 
         /*
@@ -913,7 +964,12 @@ class EPSGImporter
         }
 
         $this->updateFileData($this->sourceDir . '/CoordinateReferenceSystem/CoordinateReferenceSystem.php', $data);
-        $this->updateFileConstants($this->sourceDir . '/CoordinateReferenceSystem/CoordinateReferenceSystem.php', $data, 'public');
+        $this->updateFileConstants(
+            $this->sourceDir . '/CoordinateReferenceSystem/CoordinateReferenceSystem.php',
+            $data,
+            'public',
+            []
+        );
     }
 
     public function generateDataCoordinateOperationMethods(SQLite3 $sqlite): void
@@ -943,7 +999,12 @@ class EPSGImporter
             unset($data[$row['urn']]['urn']);
         }
 
-        $this->updateFileConstants($this->sourceDir . '/CoordinateOperation/CoordinateOperationMethods.php', $data, 'public');
+        $this->updateFileConstants(
+            $this->sourceDir . '/CoordinateOperation/CoordinateOperationMethods.php',
+            $data,
+            'public',
+            []
+        );
     }
 
     public function generateDataCoordinateOperations(SQLite3 $sqlite): void
@@ -1298,7 +1359,7 @@ class EPSGImporter
         echo 'done' . PHP_EOL;
     }
 
-    private function updateFileConstants(string $fileName, array $data, string $visibility): void
+    private function updateFileConstants(string $fileName, array $data, string $visibility, array $aliases): void
     {
         echo "Updating constants in {$fileName}...";
 
@@ -1332,7 +1393,7 @@ class EPSGImporter
          * Then add the ones wanted
          */
         $traverser = new NodeTraverser();
-        $traverser->addVisitor(new AddNewConstantsVisitor($data, $visibility));
+        $traverser->addVisitor(new AddNewConstantsVisitor($data, $visibility, $aliases));
         $newStmts = $traverser->traverse($newStmts);
 
         $prettyPrinter = new ASTPrettyPrinter();
@@ -1434,7 +1495,7 @@ class EPSGImporter
 
         $file = fopen($this->sourceDir . '/../docs/reflection/' . str_replace('phpcoord/', '', str_replace('\\', '/', strtolower($class))) . '.txt', 'wb');
         $reflectionClass = new ReflectionClass($class);
-        $constants = array_flip($reflectionClass->getConstants());
+        $constants = array_flip(array_reverse($reflectionClass->getConstants())); // make sure aliases are overridden with current
 
         foreach ($data as $urn => $row) {
             if ($urn === Angle::EPSG_DEGREE_SUPPLIER_TO_DEFINE_REPRESENTATION) {

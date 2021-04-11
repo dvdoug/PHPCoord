@@ -213,6 +213,20 @@ Baltic 1982 height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5786')
 
 
+Baltic 1986 height
+------------------
+
+| Used: Poland - onshore.
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_BALTIC_1986_HEIGHT)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::9650')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_BALTIC_1986_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9650')
+
+Initially valid until 2019-12-31, but that extended to 2023-12-31. Will be replaced by EVRF2007-PL height (CRS 9651) after 2023-12-31.
+
 Bandar Abbas height
 -------------------
 
@@ -794,6 +808,20 @@ EVRF2007 height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5621')
 
 Uses Normal heights. Replaces EVRF2000 height (CRS code 5730). Replaced by EVRF2019 height (CRS code 9389).
+
+EVRF2007-PL height
+------------------
+
+| Used: Poland - onshore.
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_EVRF2007_PL_HEIGHT)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::9651')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_EVRF2007_PL_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9651')
+
+Replaces Baltic 1986 height (CRS 9650) after 2023-12-31.
 
 EVRF2019 height
 ---------------

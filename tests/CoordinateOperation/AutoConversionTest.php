@@ -43,8 +43,8 @@ class AutoConversionTest extends TestCase
 
     public function testOSGB36ToBritishNationalGrid(): void
     {
-        $from = GeographicPoint::create(new Degree(50.5), new Degree(0.5), null, Geographic2D::fromSRID(Geographic2D::EPSG_OSGB_1936));
-        $toCRS = Projected::fromSRID(Projected::EPSG_OSGB_1936_BRITISH_NATIONAL_GRID);
+        $from = GeographicPoint::create(new Degree(50.5), new Degree(0.5), null, Geographic2D::fromSRID(Geographic2D::EPSG_OSGB36));
+        $toCRS = Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID);
         $to = $from->convert($toCRS);
 
         self::assertEqualsWithDelta(577274.99, $to->getEasting()->asMetres()->getValue(), 0.01);
@@ -184,8 +184,8 @@ class AutoConversionTest extends TestCase
 
     public function testBritishNationalGridToOSGB(): void
     {
-        $from = ProjectedPoint::createFromEastingNorthing(new Metre(577274.99), new Metre(69740.50), Projected::fromSRID(Projected::EPSG_OSGB_1936_BRITISH_NATIONAL_GRID));
-        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_OSGB_1936);
+        $from = ProjectedPoint::createFromEastingNorthing(new Metre(577274.99), new Metre(69740.50), Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID));
+        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_OSGB36);
         $to = $from->convert($toCRS);
 
         self::assertEqualsWithDelta(50.5, $to->getLatitude()->getValue(), 0.0001);
@@ -194,7 +194,7 @@ class AutoConversionTest extends TestCase
 
     public function testBritishNationalGridToUTM(): void
     {
-        $from = ProjectedPoint::createFromEastingNorthing(new Metre(577274.99), new Metre(69740.50), Projected::fromSRID(Projected::EPSG_OSGB_1936_BRITISH_NATIONAL_GRID));
+        $from = ProjectedPoint::createFromEastingNorthing(new Metre(577274.99), new Metre(69740.50), Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID));
         $toCRS = Projected::fromSRID(Projected::EPSG_WGS_84_UTM_GRID_SYSTEM_NORTHERN_HEMISPHERE);
         $to = $from->convert($toCRS);
 

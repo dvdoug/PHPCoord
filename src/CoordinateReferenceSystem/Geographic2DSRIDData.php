@@ -912,7 +912,7 @@ trait Geographic2DSRIDData
             'extent_code' => ['1262'],
         ],
         'urn:ogc:def:crs:EPSG::4277' => [
-            'name' => 'OSGB 1936',
+            'name' => 'OSGB36',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
             'datum' => 'urn:ogc:def:datum:EPSG::6277',
             'extent_code' => ['4390'],
@@ -3178,6 +3178,12 @@ trait Geographic2DSRIDData
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
             'datum' => 'urn:ogc:def:datum:EPSG::1304',
             'extent_code' => ['1066'],
+        ],
+        'urn:ogc:def:crs:EPSG::9702' => [
+            'name' => 'ETRF2000-PL',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
+            'datum' => 'urn:ogc:def:datum:EPSG::1305',
+            'extent_code' => ['1192'],
         ],
     ];
 }

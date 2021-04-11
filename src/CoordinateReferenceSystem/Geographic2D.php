@@ -30,7 +30,7 @@ class Geographic2D extends Geographic
     /**
      * AGD84
      * Extent: Australia - Queensland, South Australia, Western Australia, federal areas offshore west of 129°E.
-     * National system replacing AGD 66 but officially adopted only in Queensland, South Australia and Western
+     * National system replacing AGD66 but officially adopted only in Queensland, South Australia and Western
      * Australia. Replaced by GDA94.
      */
     public const EPSG_AGD84 = 'urn:ogc:def:crs:EPSG::4203';
@@ -696,6 +696,12 @@ class Geographic2D extends Geographic
      * earlier realizations of ETRS89.
      */
     public const EPSG_ETRF2000 = 'urn:ogc:def:crs:EPSG::9067';
+
+    /**
+     * ETRF2000-PL
+     * Extent: Poland - onshore and offshore.
+     */
+    public const EPSG_ETRF2000_PL = 'urn:ogc:def:crs:EPSG::9702';
 
     /**
      * ETRF2005
@@ -2493,16 +2499,16 @@ class Geographic2D extends Geographic
     public const EPSG_OS_SN_80 = 'urn:ogc:def:crs:EPSG::4279';
 
     /**
-     * OSGB 1936
+     * OSGB36
      * Extent: United Kingdom (UK) - offshore to boundary of UKCS within 49°45'N to 61°N and 9°W to 2°E; onshore
      * Great Britain (England, Wales and Scotland). Isle of Man onshore.
      */
-    public const EPSG_OSGB_1936 = 'urn:ogc:def:crs:EPSG::4277';
+    public const EPSG_OSGB36 = 'urn:ogc:def:crs:EPSG::4277';
 
     /**
      * OSGB70
      * Extent: United Kingdom (UK) - Great Britain - England and Wales onshore, Scotland onshore and Western Isles
-     * nearshore; Isle of Man onshore.
+     * nearshore including Sea of the Hebrides and The Minch; Isle of Man onshore.
      */
     public const EPSG_OSGB70 = 'urn:ogc:def:crs:EPSG::4278';
 
@@ -3879,6 +3885,11 @@ class Geographic2D extends Geographic
      * is also used for the dependent projected CRS - see CRS code 3173.
      */
     public const EPSG_FK89 = 'urn:ogc:def:crs:EPSG::4753';
+
+    /**
+     * @deprecated use EPSG_OSGB36 instead
+     */
+    public const EPSG_OSGB_1936 = 'urn:ogc:def:crs:EPSG::4277';
 
     private static array $cachedObjects = [];
 

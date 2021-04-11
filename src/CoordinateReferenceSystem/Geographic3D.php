@@ -134,6 +134,13 @@ class Geographic3D extends Geographic
     public const EPSG_ETRF2000 = 'urn:ogc:def:crs:EPSG::7931';
 
     /**
+     * ETRF2000-PL
+     * Extent: Poland - onshore and offshore.
+     * Adopted from 2012-12-01.
+     */
+    public const EPSG_ETRF2000_PL = 'urn:ogc:def:crs:EPSG::9701';
+
+    /**
      * ETRF2005
      * Extent: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria;
      * Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary;

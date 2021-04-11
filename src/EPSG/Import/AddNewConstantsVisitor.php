@@ -29,10 +29,13 @@ class AddNewConstantsVisitor extends NodeVisitorAbstract
 
     private string $visibility;
 
-    public function __construct(array $constants, string $visibility)
+    private array $aliases;
+
+    public function __construct(array $constants, string $visibility, array $aliases)
     {
         $this->constants = $constants;
         $this->visibility = $visibility;
+        $this->aliases = $aliases;
     }
 
     public function enterNode(Node $node)
@@ -87,6 +90,43 @@ class AddNewConstantsVisitor extends NodeVisitorAbstract
                 $constStmt = new ClassConst([$const], $flags);
                 $constStmt->setDocComment($constComment);
                 $commentNodes[] = $constStmt;
+            }
+
+            foreach ($this->aliases as $urn => $aliases) {
+                foreach ($aliases as $alias) {
+                    $canonicalName = str_replace(
+                        [' ', '-', '\'', '(', ')', '[', ']', '.', '/', '=', ',', ':', '°', '+', '&', '<>'],
+                        ['_', '_', '', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_DEG_', '_PLUS_', '_AND_', '_TO_'],
+                        $this->constants[$urn]['name']
+                    );
+                    $canonicalName = preg_replace('/_+/', '_', $canonicalName);
+                    $canonicalName = trim($canonicalName, '_');
+                    $name = str_replace(
+                        [' ', '-', '\'', '(', ')', '[', ']', '.', '/', '=', ',', ':', '°', '+', '&', '<>'],
+                        ['_', '_', '', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_DEG_', '_PLUS_', '_AND_', '_TO_'],
+                        $alias
+                    );
+                    $name = preg_replace('/_+/', '_', $name);
+                    $name = trim($name, '_');
+
+                    $comment = "/**\n";
+                    $comment .= '* @deprecated use ' . strtoupper('EPSG_' . $canonicalName) . " instead\n";
+                    $comment .= " */\n";
+
+                    $constName = strtoupper('EPSG_' . $name);
+                    $constValue = new Node\Scalar\String_($urn);
+                    $constComment = new Doc($comment);
+                    $const = new Node\Const_($constName, $constValue);
+
+                    $flags = Class_::MODIFIER_PUBLIC;
+                    if ($this->visibility === 'protected') {
+                        $flags = Class_::MODIFIER_PROTECTED;
+                    }
+
+                    $constStmt = new ClassConst([$const], $flags);
+                    $constStmt->setDocComment($constComment);
+                    $commentNodes[] = $constStmt;
+                }
             }
 
             $node->stmts = array_merge($commentNodes, $node->stmts);

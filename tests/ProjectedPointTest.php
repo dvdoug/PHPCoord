@@ -90,7 +90,7 @@ class ProjectedPointTest extends TestCase
     {
         $this->expectException(InvalidCoordinateReferenceSystemException::class);
         $from = ProjectedPoint::createFromEastingNorthing(new Metre(438700), new Metre(114800), Projected::fromSRID(Projected::EPSG_IRENET95_IRISH_TRANSVERSE_MERCATOR));
-        $to = ProjectedPoint::createFromEastingNorthing(new Metre(533600), new Metre(180500), Projected::fromSRID(Projected::EPSG_OSGB_1936_BRITISH_NATIONAL_GRID));
+        $to = ProjectedPoint::createFromEastingNorthing(new Metre(533600), new Metre(180500), Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID));
         $from->calculateDistance($to);
     }
 
@@ -121,7 +121,7 @@ class ProjectedPointTest extends TestCase
     {
         $this->expectException(InvalidCoordinateReferenceSystemException::class);
         $from = ProjectedPoint::createFromWestingNorthing(new Metre(438700), new Metre(114800), Projected::fromSRID(Projected::EPSG_ETRS89_FAROE_LAMBERT));
-        $to = ProjectedPoint::createFromEastingNorthing(new Metre(533600), new Metre(180500), Projected::fromSRID(Projected::EPSG_OSGB_1936_BRITISH_NATIONAL_GRID));
+        $to = ProjectedPoint::createFromEastingNorthing(new Metre(533600), new Metre(180500), Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID));
         $from->calculateDistance($to);
     }
 
@@ -152,7 +152,7 @@ class ProjectedPointTest extends TestCase
     {
         $this->expectException(InvalidCoordinateReferenceSystemException::class);
         $from = ProjectedPoint::createFromWestingSouthing(new Metre(438700), new Metre(114800), Projected::fromSRID(Projected::EPSG_ST_STEPHEN_GRID_FERRO));
-        $to = ProjectedPoint::createFromEastingNorthing(new Metre(533600), new Metre(180500), Projected::fromSRID(Projected::EPSG_OSGB_1936_BRITISH_NATIONAL_GRID));
+        $to = ProjectedPoint::createFromEastingNorthing(new Metre(533600), new Metre(180500), Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID));
         $from->calculateDistance($to);
     }
 
@@ -172,7 +172,7 @@ class ProjectedPointTest extends TestCase
 
     public function testCanCreateBritishNationalGridObject(): void
     {
-        $object = ProjectedPoint::createFromEastingNorthing(new Metre(100), new Metre(200), Projected::fromSRID(Projected::EPSG_OSGB_1936_BRITISH_NATIONAL_GRID));
+        $object = ProjectedPoint::createFromEastingNorthing(new Metre(100), new Metre(200), Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID));
         self::assertInstanceOf(BritishNationalGridPoint::class, $object);
     }
 
@@ -572,8 +572,8 @@ class ProjectedPointTest extends TestCase
 
     public function testTransverseMercator(): void
     {
-        $from = ProjectedPoint::createFromEastingNorthing(new Metre(577274.99), new Metre(69740.50), Projected::fromSRID(Projected::EPSG_OSGB_1936_BRITISH_NATIONAL_GRID));
-        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_OSGB_1936);
+        $from = ProjectedPoint::createFromEastingNorthing(new Metre(577274.99), new Metre(69740.50), Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID));
+        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_OSGB36);
         $to = $from->transverseMercator($toCRS, new Degree(49), new Degree(-2), new Unity(0.9996012717), new Metre(400000), new Metre(-100000));
 
         self::assertEqualsWithDelta(50.5, $to->getLatitude()->getValue(), 0.0001);

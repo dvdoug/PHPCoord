@@ -91,6 +91,18 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_DB_REF_3_DEGREE_GAUSS_KRUGER_ZONE_5_E_N_PLUS_DHHN92_HEIGHT = 'urn:ogc:def:crs:EPSG::5835';
 
     /**
+     * ETRF2000-PL + Baltic 1986 height
+     * Extent: Poland - onshore.
+     */
+    public const EPSG_ETRF2000_PL_PLUS_BALTIC_1986_HEIGHT = 'urn:ogc:def:crs:EPSG::9656';
+
+    /**
+     * ETRF2000-PL + EVRF2007-PL height
+     * Extent: Poland - onshore.
+     */
+    public const EPSG_ETRF2000_PL_PLUS_EVRF2007_PL_HEIGHT = 'urn:ogc:def:crs:EPSG::9657';
+
+    /**
      * ETRS89 + Alicante height
      * Extent: Gibraltar - onshore; Spain - mainland onshore.
      */
@@ -2098,11 +2110,11 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_NZGD2000_PLUS_NZVD2016_HEIGHT = 'urn:ogc:def:crs:EPSG::9528';
 
     /**
-     * OSGB 1936 / British National Grid + ODN height
+     * OSGB36 / British National Grid + ODN height
      * Extent: United Kingdom (UK) - Great Britain onshore - England and Wales - mainland; Scotland - mainland and
      * Inner Hebrides.
      */
-    public const EPSG_OSGB_1936_BRITISH_NATIONAL_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::7405';
+    public const EPSG_OSGB36_BRITISH_NATIONAL_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::7405';
 
     /**
      * POSGAR 2007 + SRVN16 height
@@ -2432,6 +2444,11 @@ class Compound extends CoordinateReferenceSystem
      * local projected and vertical CRSs.
      */
     public const EPSG_WGS_84_WORLD_MERCATOR_PLUS_EGM2008_HEIGHT = 'urn:ogc:def:crs:EPSG::6893';
+
+    /**
+     * @deprecated use EPSG_OSGB36_BRITISH_NATIONAL_GRID_PLUS_ODN_HEIGHT instead
+     */
+    public const EPSG_OSGB_1936_BRITISH_NATIONAL_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::7405';
 
     private static array $cachedObjects = [];
 

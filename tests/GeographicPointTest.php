@@ -222,7 +222,7 @@ class GeographicPointTest extends TestCase
 
     public function testDistanceDifferentCRSs(): void
     {
-        $from = GeographicPoint::create(new Degree(51.54105), new Degree(-0.12319), null, Geographic2D::fromSRID(Geographic2D::EPSG_OSGB_1936));
+        $from = GeographicPoint::create(new Degree(51.54105), new Degree(-0.12319), null, Geographic2D::fromSRID(Geographic2D::EPSG_OSGB36));
         $to = GeographicPoint::create(new Degree(51.507977), new Degree(-0.124588), null, Geographic2D::fromSRID(Geographic2D::EPSG_PZ_90));
         self::assertEqualsWithDelta(3735.156, $from->calculateDistance($to)->getValue(), 0.001);
     }
@@ -230,7 +230,7 @@ class GeographicPointTest extends TestCase
     public function testDistanceDifferentCRSsNoAutoconversion(): void
     {
         $this->expectException(InvalidCoordinateReferenceSystemException::class);
-        $from = GeographicPoint::create(new Degree(51.54105), new Degree(-0.12319), null, Geographic2D::fromSRID(Geographic2D::EPSG_OSGB_1936));
+        $from = GeographicPoint::create(new Degree(51.54105), new Degree(-0.12319), null, Geographic2D::fromSRID(Geographic2D::EPSG_OSGB36));
         $to = VerticalPoint::create(new Metre(10), Vertical::fromSRID(Vertical::EPSG_TENERIFE_HEIGHT));
         $from->calculateDistance($to);
     }
@@ -768,8 +768,8 @@ class GeographicPointTest extends TestCase
 
     public function testTransverseMercator(): void
     {
-        $from = GeographicPoint::create(new Degree(50.5), new Degree(0.5), null, Geographic2D::fromSRID(Geographic2D::EPSG_OSGB_1936));
-        $toCRS = Projected::fromSRID(Projected::EPSG_OSGB_1936_BRITISH_NATIONAL_GRID);
+        $from = GeographicPoint::create(new Degree(50.5), new Degree(0.5), null, Geographic2D::fromSRID(Geographic2D::EPSG_OSGB36));
+        $toCRS = Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID);
         $to = $from->transverseMercator($toCRS, new Degree(49), new Degree(-2), new Unity(0.9996012717), new Metre(400000), new Metre(-100000));
 
         self::assertEqualsWithDelta(577274.99, $to->getEasting()->asMetres()->getValue(), 0.01);
