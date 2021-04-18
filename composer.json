@@ -30,6 +30,11 @@
         "bin-compat" : "full",
         "optimize-autoloader": true
     },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "4.x-dev"
+        }
+    },
     "autoload": {
         "psr-4": {
             "PHPCoord\\": "src/"
