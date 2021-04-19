@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## [4.2.0] - 2021-04-19
+### Added
+- More accurate extent data
+### Fixed
+ - Ensure projections still work even when origin points are on the other side of the antimeridian
+### Changed
+ - Updates to data for Australia, Poland, UK and US Gulf of Mexico.
+
 ## [4.1.0] - 2021-03-03
 ### Added
 - Added `UTMPoint` as a better way of handling UTM zones than the EPSG model does it
