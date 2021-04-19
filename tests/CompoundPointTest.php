@@ -8,6 +8,8 @@ declare(strict_types=1);
 
 namespace PHPCoord;
 
+use function array_merge;
+use function class_exists;
 use DateTime;
 use DateTimeImmutable;
 use PHPCoord\CoordinateOperation\CoordinateOperations;
@@ -19,7 +21,7 @@ use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Projected;
 use PHPCoord\CoordinateReferenceSystem\Vertical;
 use PHPCoord\Exception\InvalidCoordinateReferenceSystemException;
-use PHPCoord\Geometry\GeographicPolygon;
+use PHPCoord\Geometry\BoundingArea;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPUnit\Framework\TestCase;
 
@@ -98,7 +100,7 @@ class CompoundPointTest extends TestCase
         $to = CompoundPoint::create(
             ProjectedPoint::create(new Metre(533600), new Metre(180500), null, null, Projected::fromSRID(Projected::EPSG_WGS_84_WORLD_MERCATOR)),
             VerticalPoint::create(new Metre(789), Vertical::fromSRID(Vertical::EPSG_EGM2008_HEIGHT)),
-            Compound::fromSRID(Compound::EPSG_OSGB_1936_BRITISH_NATIONAL_GRID_PLUS_ODN_HEIGHT)
+            Compound::fromSRID(Compound::EPSG_OSGB36_BRITISH_NATIONAL_GRID_PLUS_ODN_HEIGHT)
         );
         $from->calculateDistance($to);
     }
@@ -110,12 +112,19 @@ class CompoundPointTest extends TestCase
     public function testOperations(string $sourceCrsSrid, string $targetCrsSrid, string $operationSrid, bool $reversible): void
     {
         $operation = CoordinateOperations::getOperationData($operationSrid);
-        $boundingBox = GeographicPolygon::createFromArray($operation['bounding_box'], $operation['bounding_box_crosses_antimeridian']);
+        $extents = [];
+        foreach ($operation['extent_code'] as $extentId) {
+            $fullExtent = "PHPCoord\\Geometry\\Extents\\Extent{$extentId}";
+            $basicExtent = "PHPCoord\\Geometry\\Extents\\BoundingBoxOnly\\Extent{$extentId}";
+            $extentClass = class_exists($fullExtent) ? new $fullExtent() : new $basicExtent();
+            $extents = array_merge($extents, $extentClass());
+        }
+        $boundingBox = BoundingArea::createFromArray($extents);
 
         $sourceCRS = Compound::fromSRID($sourceCrsSrid);
         $sourceHorizontalCRS = $sourceCRS->getHorizontal();
         if ($sourceHorizontalCRS instanceof Geographic2D) {
-            $centre = $boundingBox->getCentre();
+            $centre = $boundingBox->getPointInside();
 
             $horizontalPoint = GeographicPoint::create($centre[0], $centre[1], null, $sourceHorizontalCRS);
         } elseif ($sourceHorizontalCRS instanceof Geographic2D) {

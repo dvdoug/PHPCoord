@@ -13,7 +13,7 @@ use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\CoordinateReferenceSystem\Geographic;
 use PHPCoord\CoordinateReferenceSystem\Projected;
 use PHPCoord\CoordinateSystem\Cartesian;
-use PHPCoord\Geometry\GeographicPolygon;
+use PHPCoord\Geometry\BoundingArea;
 use PHPCoord\UnitOfMeasure\Angle\Degree;
 use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Length\Metre;
@@ -48,16 +48,16 @@ class UTMPoint extends ProjectedPoint
 
         $longitudeOrigin = $zone * 6 - 3;
         if ($hemisphere === self::HEMISPHERE_NORTH) {
-            $boundingBox = GeographicPolygon::createFromArray([[$longitudeOrigin, 0], [$longitudeOrigin, 90], [$longitudeOrigin + 6, 90], [$longitudeOrigin + 6, 0]], false);
+            $boundingArea = BoundingArea::createFromArray([[[[$longitudeOrigin, 0], [$longitudeOrigin, 90], [$longitudeOrigin + 6, 90], [$longitudeOrigin + 6, 0]]]]);
         } else {
-            $boundingBox = GeographicPolygon::createFromArray([[$longitudeOrigin, -90], [$longitudeOrigin, 0], [$longitudeOrigin + 6, 0], [$longitudeOrigin + 6, -90]], false);
+            $boundingArea = BoundingArea::createFromArray([[[[$longitudeOrigin, -90], [$longitudeOrigin, 0], [$longitudeOrigin + 6, 0], [$longitudeOrigin + 6, -90]]]]);
         }
 
         $projectedCRS = new Projected(
             'UTM/' . $crs->getSRID(),
             Cartesian::fromSRID(Cartesian::EPSG_2D_AXES_EASTING_NORTHING_E_N_ORIENTATIONS_EAST_NORTH_UOM_M),
             $crs->getDatum(),
-            $boundingBox
+            $boundingArea
         );
 
         parent::__construct($easting, $northing, null, null, $projectedCRS, $epoch);

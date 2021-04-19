@@ -28,7 +28,7 @@ Example:
     use PHPCoord\UnitOfMeasure\Length\Metre;
 
     // Horizontal location of Ben Nevis peak using British National Grid
-    $horizontalCRS = Projected::fromSRID(Projected::EPSG_OSGB_1936_BRITISH_NATIONAL_GRID);
+    $horizontalCRS = Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID);
     $horizontalPoint = ProjectedPoint::createFromEastingNorthing(
         new Metre(216692),
         new Metre(771274),
@@ -43,7 +43,7 @@ Example:
     );
 
     // Full coordinate of Ben Nevis Peak
-    $compoundCRS = Compound::fromSRID(Compound::EPSG_OSGB_1936_BRITISH_NATIONAL_GRID_PLUS_ODN_HEIGHT);
+    $compoundCRS = Compound::fromSRID(Compound::EPSG_OSGB36_BRITISH_NATIONAL_GRID_PLUS_ODN_HEIGHT);
     $point = CompoundPoint::create(
         $horizontalPoint,
         $verticalPoint,

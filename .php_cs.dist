@@ -30,6 +30,7 @@ return $config = (new PhpCsFixer\Config())
                 'header' => "PHPCoord.\n\n@author Doug Wright",
             ],
             'phpdoc_line_span' => true,
+            'phpdoc_to_comment' => false,
         ]
     )
     ->setRiskyAllowed(true)

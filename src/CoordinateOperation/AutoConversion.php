@@ -15,6 +15,7 @@ use function array_pop;
 use function array_shift;
 use function array_sum;
 use function assert;
+use function class_exists;
 use function count;
 use DateTimeImmutable;
 use function in_array;
@@ -24,7 +25,7 @@ use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\Exception\UnknownConversionException;
 use PHPCoord\GeocentricPoint;
 use PHPCoord\GeographicPoint;
-use PHPCoord\Geometry\GeographicPolygon;
+use PHPCoord\Geometry\BoundingArea;
 use PHPCoord\Point;
 use PHPCoord\ProjectedPoint;
 use PHPCoord\UnitOfMeasure\Time\Year;
@@ -78,7 +79,14 @@ trait AutoConversion
                 $operation = CoordinateOperations::getOperationData($pathStep['operation']);
                 if ($boundaryCheckPoint) {
                     //filter out operations that only operate outside this point
-                    $polygon = GeographicPolygon::createFromArray($operation['bounding_box'], $operation['bounding_box_crosses_antimeridian']);
+                    $extents = [];
+                    foreach ($operation['extent_code'] as $extentId) {
+                        $fullExtent = "PHPCoord\\Geometry\\Extents\\Extent{$extentId}";
+                        $basicExtent = "PHPCoord\\Geometry\\Extents\\BoundingBoxOnly\\Extent{$extentId}";
+                        $extentClass = class_exists($fullExtent) ? new $fullExtent() : new $basicExtent();
+                        $extents = array_merge($extents, $extentClass());
+                    }
+                    $polygon = BoundingArea::createFromArray($extents);
                     $ok = $ok && $polygon->containsPoint($boundaryCheckPoint);
                 }
 
@@ -87,23 +95,23 @@ trait AutoConversion
                 foreach ($operations as $operation) {
                     //filter out operations that require an epoch if we don't have one
                     if (!$this->getCoordinateEpoch() && in_array($operation['method'], [
-                            CoordinateOperationMethods::EPSG_TIME_DEPENDENT_COORDINATE_FRAME_ROTATION_GEOCEN,
-                            CoordinateOperationMethods::EPSG_TIME_DEPENDENT_COORDINATE_FRAME_ROTATION_GEOG2D,
-                            CoordinateOperationMethods::EPSG_TIME_DEPENDENT_COORDINATE_FRAME_ROTATION_GEOG3D,
-                            CoordinateOperationMethods::EPSG_TIME_DEPENDENT_POSITION_VECTOR_TFM_GEOCENTRIC,
-                            CoordinateOperationMethods::EPSG_TIME_DEPENDENT_POSITION_VECTOR_TFM_GEOG2D,
-                            CoordinateOperationMethods::EPSG_TIME_DEPENDENT_POSITION_VECTOR_TFM_GEOG3D,
-                            CoordinateOperationMethods::EPSG_TIME_SPECIFIC_COORDINATE_FRAME_ROTATION_GEOCEN,
-                            CoordinateOperationMethods::EPSG_TIME_SPECIFIC_POSITION_VECTOR_TRANSFORM_GEOCEN,
-                        ], true)) {
+                        CoordinateOperationMethods::EPSG_TIME_DEPENDENT_COORDINATE_FRAME_ROTATION_GEOCEN,
+                        CoordinateOperationMethods::EPSG_TIME_DEPENDENT_COORDINATE_FRAME_ROTATION_GEOG2D,
+                        CoordinateOperationMethods::EPSG_TIME_DEPENDENT_COORDINATE_FRAME_ROTATION_GEOG3D,
+                        CoordinateOperationMethods::EPSG_TIME_DEPENDENT_POSITION_VECTOR_TFM_GEOCENTRIC,
+                        CoordinateOperationMethods::EPSG_TIME_DEPENDENT_POSITION_VECTOR_TFM_GEOG2D,
+                        CoordinateOperationMethods::EPSG_TIME_DEPENDENT_POSITION_VECTOR_TFM_GEOG3D,
+                        CoordinateOperationMethods::EPSG_TIME_SPECIFIC_COORDINATE_FRAME_ROTATION_GEOCEN,
+                        CoordinateOperationMethods::EPSG_TIME_SPECIFIC_POSITION_VECTOR_TRANSFORM_GEOCEN,
+                    ], true)) {
                         $ok = false;
                     }
 
                     //filter out operations that require a specific epoch
                     if ($this->getCoordinateEpoch() && in_array($operation['method'], [
-                            CoordinateOperationMethods::EPSG_TIME_SPECIFIC_COORDINATE_FRAME_ROTATION_GEOCEN,
-                            CoordinateOperationMethods::EPSG_TIME_SPECIFIC_POSITION_VECTOR_TRANSFORM_GEOCEN,
-                        ], true)) {
+                        CoordinateOperationMethods::EPSG_TIME_SPECIFIC_COORDINATE_FRAME_ROTATION_GEOCEN,
+                        CoordinateOperationMethods::EPSG_TIME_SPECIFIC_POSITION_VECTOR_TRANSFORM_GEOCEN,
+                    ], true)) {
                         $params = CoordinateOperationParams::getParamData($pathStep['operation']);
                         $pointEpoch = Year::fromDateTime($this->getCoordinateEpoch());
                         $ok = $ok && (abs($pointEpoch->getValue() - $params['Transformation reference epoch']['value']) <= 0.001);

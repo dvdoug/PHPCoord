@@ -8,13 +8,15 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateReferenceSystem;
 
+use function array_merge;
 use function assert;
+use function class_exists;
 use function count;
 use PHPCoord\CoordinateSystem\Cartesian;
 use PHPCoord\CoordinateSystem\CoordinateSystem;
 use PHPCoord\Datum\Datum;
 use PHPCoord\Exception\UnknownCoordinateReferenceSystemException;
-use PHPCoord\Geometry\GeographicPolygon;
+use PHPCoord\Geometry\BoundingArea;
 
 class Projected extends CoordinateReferenceSystem
 {
@@ -2889,6 +2891,41 @@ class Projected extends CoordinateReferenceSystem
     public const EPSG_ELD79_UTM_ZONE_35N = 'urn:ogc:def:crs:EPSG::2080';
 
     /**
+     * ETRF2000-PL / CS2000/15
+     * Extent: Poland - onshore and offshore west of 16°30'E.
+     * See ETRF2000-PL / CS92 (code 2180) for smaller scale mapping.
+     */
+    public const EPSG_ETRF2000_PL_CS2000_15 = 'urn:ogc:def:crs:EPSG::2176';
+
+    /**
+     * ETRF2000-PL / CS2000/18
+     * Extent: Poland - onshore and offshore between 16°30'E and 19°30'E.
+     * See ETRF2000-PL / CS92 (code 2180) for smaller scale mapping.
+     */
+    public const EPSG_ETRF2000_PL_CS2000_18 = 'urn:ogc:def:crs:EPSG::2177';
+
+    /**
+     * ETRF2000-PL / CS2000/21
+     * Extent: Poland - onshore and offshore between 19°30'E and 22°30'E.
+     * See ETRF2000-PL / CS92 (code 2180) for smaller scale mapping.
+     */
+    public const EPSG_ETRF2000_PL_CS2000_21 = 'urn:ogc:def:crs:EPSG::2178';
+
+    /**
+     * ETRF2000-PL / CS2000/24
+     * Extent: Poland - east of 22°30'E.
+     * See ETRF2000-PL / CS92 (code 2180) for smaller scale mapping.
+     */
+    public const EPSG_ETRF2000_PL_CS2000_24 = 'urn:ogc:def:crs:EPSG::2179';
+
+    /**
+     * ETRF2000-PL / CS92
+     * Extent: Poland - onshore and offshore.
+     * See ETRF2000-PL / CS2000 zones 2000/15, 2000/18, 2000/21 and 2000/24 (codes 2176-79) for large scale purposes.
+     */
+    public const EPSG_ETRF2000_PL_CS92 = 'urn:ogc:def:crs:EPSG::2180';
+
+    /**
      * ETRS89 / Albania LCC 2010
      * Extent: Albania - onshore.
      * ETRS89 / Albania TM 2010 (CRS code 6870) used for larger scales.
@@ -3501,41 +3538,6 @@ class Projected extends CoordinateReferenceSystem
      * is an alternative when UTM scale is too far from unity, in particular for construction projects.
      */
     public const EPSG_ETRS89_NTM_ZONE_9 = 'urn:ogc:def:crs:EPSG::5109';
-
-    /**
-     * ETRS89 / Poland CS2000 zone 5
-     * Extent: Poland - onshore and offshore west of 16°30'E.
-     * See ETRS89 / Poland CS92 (code 2170) for smaller scale mapping.
-     */
-    public const EPSG_ETRS89_POLAND_CS2000_ZONE_5 = 'urn:ogc:def:crs:EPSG::2176';
-
-    /**
-     * ETRS89 / Poland CS2000 zone 6
-     * Extent: Poland - onshore and offshore between 16°30'E and 19°30'E.
-     * See ETRS89 / Poland CS92 (code 2170) for smaller scale mapping.
-     */
-    public const EPSG_ETRS89_POLAND_CS2000_ZONE_6 = 'urn:ogc:def:crs:EPSG::2177';
-
-    /**
-     * ETRS89 / Poland CS2000 zone 7
-     * Extent: Poland - onshore and offshore between 19°30'E and 22°30'E.
-     * See ETRS89 / Poland CS92 (code 2170) for smaller scale mapping.
-     */
-    public const EPSG_ETRS89_POLAND_CS2000_ZONE_7 = 'urn:ogc:def:crs:EPSG::2178';
-
-    /**
-     * ETRS89 / Poland CS2000 zone 8
-     * Extent: Poland - east of 22°30'E.
-     * See ETRS89 / Poland CS92 (code 2170) for smaller scale mapping.
-     */
-    public const EPSG_ETRS89_POLAND_CS2000_ZONE_8 = 'urn:ogc:def:crs:EPSG::2179';
-
-    /**
-     * ETRS89 / Poland CS92
-     * Extent: Poland - onshore and offshore.
-     * See ETRS89 / Poland CS2000 zones 5- 8 (codes 2176-79) for large scale purposes.
-     */
-    public const EPSG_ETRS89_POLAND_CS92 = 'urn:ogc:def:crs:EPSG::2180';
 
     /**
      * ETRS89 / Portugal TM06
@@ -8864,7 +8866,7 @@ class Projected extends CoordinateReferenceSystem
      * onshore and offshore for US east coast and Cuba, with usage in Bahamas onshore plus offshore over internal
      * continental shelf only.
      * In Ontario replaced by NAD27(76) / UTM zone 17N (code 2029). In Quebec replaced by NAD27(CGQ77) / UTM zone 17N
-     * (code 2031). See NAD27 / BLM 17N (feet) (code 32067) for non-metric equivalent used in US Gulf of Mexico.
+     * (code 2031). See NAD27 / BLM 17N (ftUS) (code 32067) for non-metric equivalent used in US Gulf of Mexico.
      */
     public const EPSG_NAD27_UTM_ZONE_17N = 'urn:ogc:def:crs:EPSG::26717';
 
@@ -9562,8 +9564,8 @@ class Projected extends CoordinateReferenceSystem
      * Extent: United States (USA) - between 102°W and 96°W. Iowa; Kansas; Minnesota; Nebraska; North Dakota;
      * Oklahoma; South Dakota; Texas; Gulf of Mexico outer continental shelf (GoM OCS) west of approximately 96°W -
      * protraction areas Corpus Christi; Port Isabel.
-     * See NAD27 / BLM 14N (feet) (code 32064) and NAD83 / UTM zone 14N (code 26914) for systems used in US Gulf of
-     * Mexico oil operations.
+     * See NAD83 / UTM zone 14N (code 26914) for metric equivalent. See NAD27 / BLM 14N (ftUS) (code 32064) for system
+     * used in US Gulf of Mexico oil operations.
      */
     public const EPSG_NAD83_BLM_14N_FTUS = 'urn:ogc:def:crs:EPSG::32164';
 
@@ -9574,8 +9576,8 @@ class Projected extends CoordinateReferenceSystem
      * continental shelf (GoM OCS) between approximately 96°W and 90°W - protraction areas East Breaks; Alaminos
      * Canyon; Garden Banks; Keathley Canyon; Sigsbee Escarpment; Ewing Bank; Green Canyon; Walker Ridge; Amery
      * Terrace.
-     * See NAD27 / BLM 15N (feet) (code 32065) and NAD83 / UTM zone 15N (code 26915) for systems used in US Gulf of
-     * Mexico oil operations.
+     * See NAD83 / UTM zone 15N (code 26915) for metric equivalent. See NAD27 / BLM 14N (ftUS) (code 32065) for system
+     * used in US Gulf of Mexico oil operations.
      */
     public const EPSG_NAD83_BLM_15N_FTUS = 'urn:ogc:def:crs:EPSG::32165';
 
@@ -9587,8 +9589,8 @@ class Projected extends CoordinateReferenceSystem
      * 84°W - protraction areas Mobile; Viosca Knoll; Mississippi Canyon; Atwater Valley; Lund; Lund South; Pensacola;
      * Destin Dome; De Soto Canyon; Lloyd Ridge; Henderson; Florida Plain; Campeche Escarpment; Apalachicola; Florida
      * Middle Ground; The Elbow; Vernon Basin; Howell Hook; Rankin.
-     * See NAD27 / BLM 16N (feet) (code 32066) and NAD83 / UTM zone 16N (code 26916) for systems used in US Gulf of
-     * Mexico oil operations.
+     * See NAD83 / UTM zone 16N (code 26916) for metric equivalent. See NAD27 / BLM 16N (ftUS) (code 32066) for system
+     * used in US Gulf of Mexico oil operations.
      */
     public const EPSG_NAD83_BLM_16N_FTUS = 'urn:ogc:def:crs:EPSG::32166';
 
@@ -9598,8 +9600,8 @@ class Projected extends CoordinateReferenceSystem
      * Michigan; New York; North Carolina; Ohio; Pennsylvania; South Carolina; Tennessee; Virginia; West Virginia; Gulf
      * of Mexico outer continental shelf (GoM OCS) east of approximately 84°W - protraction areas Gainesville; Tarpon
      * Springs; St Petersburg; Charlotte Harbor; Pulley Ridge; Dry Tortugas; Tortugas Valley; Miami; Key West.
-     * See NAD27 / BLM 17N (feet) (code 32067) and NAD83 / UTM zone 17N (code 26917) for systems used in US Gulf of
-     * Mexico oil operations.
+     * See NAD83 / UTM zone 17N (code 26917) for metric equivalent. See NAD27 / BLM 17N (ftUS) (code 32067) for system
+     * used in US Gulf of Mexico oil operations.
      */
     public const EPSG_NAD83_BLM_17N_FTUS = 'urn:ogc:def:crs:EPSG::32167';
 
@@ -26109,11 +26111,11 @@ class Projected extends CoordinateReferenceSystem
     public const EPSG_ONGD17_UTM_ZONE_41N = 'urn:ogc:def:crs:EPSG::9297';
 
     /**
-     * OSGB 1936 / British National Grid
+     * OSGB36 / British National Grid
      * Extent: United Kingdom (UK) - offshore to boundary of UKCS within 49°45'N to 61°N and 9°W to 2°E; onshore
      * Great Britain (England, Wales and Scotland). Isle of Man onshore.
      */
-    public const EPSG_OSGB_1936_BRITISH_NATIONAL_GRID = 'urn:ogc:def:crs:EPSG::27700';
+    public const EPSG_OSGB36_BRITISH_NATIONAL_GRID = 'urn:ogc:def:crs:EPSG::27700';
 
     /**
      * OSNI 1952 / Irish National Grid
@@ -34023,8 +34025,8 @@ class Projected extends CoordinateReferenceSystem
      * WGS 84 / BLM 14N (ftUS)
      * Extent: United States (USA) - Gulf of Mexico outer continental shelf (GoM OCS) west of approximately 96°W -
      * protraction areas Corpus Christi; Port Isabel.
-     * See NAD27 / BLM 14N (feet) (code 32064) and WGS 84 / UTM zone 14N (code 32614) for systems used in US Gulf of
-     * Mexico oil operations.
+     * See WGS 84 / UTM zone 14N (code 32614) for metric equivalent. See NAD27 / BLM 14N (ftUS) (code 32064) for system
+     * used in US Gulf of Mexico oil operations.
      */
     public const EPSG_WGS_84_BLM_14N_FTUS = 'urn:ogc:def:crs:EPSG::32664';
 
@@ -34033,8 +34035,8 @@ class Projected extends CoordinateReferenceSystem
      * Extent: United States (USA) - Gulf of Mexico outer continental shelf (GoM OCS) between approximately 96°W and
      * 90°W - protraction areas East Breaks; Alaminos Canyon; Garden Banks; Keathley Canyon; Sigsbee Escarpment; Ewing
      * Bank; Green Canyon; Walker Ridge; Amery Terrace.
-     * See NAD27 / BLM 15N (feet) (code 32065) and WGS 84 / UTM zone 15N (code 32615) for systems used in US Gulf of
-     * Mexico oil operations.
+     * See WGS 84 / UTM zone 15N (code 32615) for metric equivalent. See NAD27 / BLM 15N (ftUS) (code 32065) for system
+     * used in US Gulf of Mexico oil operations.
      */
     public const EPSG_WGS_84_BLM_15N_FTUS = 'urn:ogc:def:crs:EPSG::32665';
 
@@ -34044,8 +34046,8 @@ class Projected extends CoordinateReferenceSystem
      * 84°W - protraction areas Mobile; Viosca Knoll; Mississippi Canyon; Atwater Valley; Lund; Lund South; Pensacola;
      * Destin Dome; De Soto Canyon; Lloyd Ridge; Henderson; Florida Plain; Campeche Escarpment; Apalachicola; Florida
      * Middle Ground; The Elbow; Vernon Basin; Howell Hook; Rankin.
-     * See NAD27 / BLM 16N (feet) (code 32066) and WGS 84 / UTM zone 16N (code 32616) for systems used in US Gulf of
-     * Mexico oil operations.
+     * See WGS 84 / UTM zone 16N (code 32616) for metric equivalent. See NAD27 / BLM 16N (ftUS) (code 32066) for system
+     * used in US Gulf of Mexico oil operations.
      */
     public const EPSG_WGS_84_BLM_16N_FTUS = 'urn:ogc:def:crs:EPSG::32666';
 
@@ -34054,8 +34056,8 @@ class Projected extends CoordinateReferenceSystem
      * Extent: United States (USA) - Gulf of Mexico outer continental shelf (GoM OCS) east of approximately 84°W -
      * protraction areas Gainesville; Tarpon Springs; St Petersburg; Charlotte Harbor; Pulley Ridge; Dry Tortugas;
      * Tortugas Valley; Miami; Key West.
-     * See NAD27 / BLM 17N (feet) (code 32067) and WGS 84 / UTM zone 17N (code 32617) for systems used in US Gulf of
-     * Mexico oil operations.
+     * See WGS 84 / UTM zone 17N (code 32617) for metric equivalent. See NAD27 / BLM 17N (ftUS) (code 32067) for system
+     * used in US Gulf of Mexico oil operations.
      */
     public const EPSG_WGS_84_BLM_17N_FTUS = 'urn:ogc:def:crs:EPSG::32667';
 
@@ -36801,6 +36803,36 @@ class Projected extends CoordinateReferenceSystem
      */
     public const EPSG_FK89_FAROE_LAMBERT_FK89 = 'urn:ogc:def:crs:EPSG::3173';
 
+    /**
+     * @deprecated use EPSG_OSGB36_BRITISH_NATIONAL_GRID instead
+     */
+    public const EPSG_OSGB_1936_BRITISH_NATIONAL_GRID = 'urn:ogc:def:crs:EPSG::27700';
+
+    /**
+     * @deprecated use EPSG_ETRF2000_PL_CS2000_15 instead
+     */
+    public const EPSG_ETRS89_POLAND_CS2000_ZONE_5 = 'urn:ogc:def:crs:EPSG::2176';
+
+    /**
+     * @deprecated use EPSG_ETRF2000_PL_CS2000_18 instead
+     */
+    public const EPSG_ETRS89_POLAND_CS2000_ZONE_6 = 'urn:ogc:def:crs:EPSG::2177';
+
+    /**
+     * @deprecated use EPSG_ETRF2000_PL_CS2000_21 instead
+     */
+    public const EPSG_ETRS89_POLAND_CS2000_ZONE_7 = 'urn:ogc:def:crs:EPSG::2178';
+
+    /**
+     * @deprecated use EPSG_ETRF2000_PL_CS2000_24 instead
+     */
+    public const EPSG_ETRS89_POLAND_CS2000_ZONE_8 = 'urn:ogc:def:crs:EPSG::2179';
+
+    /**
+     * @deprecated use EPSG_ETRF2000_PL_CS92 instead
+     */
+    public const EPSG_ETRS89_POLAND_CS92 = 'urn:ogc:def:crs:EPSG::2180';
+
     private static $cachedObjects = [];
 
     private static $supportedCache = [];
@@ -36809,12 +36841,12 @@ class Projected extends CoordinateReferenceSystem
         string $srid,
         CoordinateSystem $coordinateSystem,
         Datum $datum,
-        GeographicPolygon $boundingBox
+        BoundingArea $boundingArea
     ) {
         $this->srid = $srid;
         $this->coordinateSystem = $coordinateSystem;
         $this->datum = $datum;
-        $this->boundingBox = $boundingBox;
+        $this->boundingArea = $boundingArea;
 
         assert(count($coordinateSystem->getAxes()) === 2);
     }
@@ -36828,11 +36860,19 @@ class Projected extends CoordinateReferenceSystem
         if (!isset(self::$cachedObjects[$srid])) {
             $data = static::$sridData[$srid];
 
+            $extents = [];
+            foreach ($data['extent_code'] as $extentId) {
+                $fullExtent = "PHPCoord\\Geometry\\Extents\\Extent{$extentId}";
+                $basicExtent = "PHPCoord\\Geometry\\Extents\\BoundingBoxOnly\\Extent{$extentId}";
+                $extentClass = class_exists($fullExtent) ? new $fullExtent() : new $basicExtent();
+                $extents = array_merge($extents, $extentClass());
+            }
+
             self::$cachedObjects[$srid] = new self(
                 $srid,
                 Cartesian::fromSRID($data['coordinate_system']),
                 Datum::fromSRID($data['datum']),
-                GeographicPolygon::createFromArray($data['bounding_box'], $data['bounding_box_crosses_antimeridian']),
+                BoundingArea::createFromArray($extents),
             );
         }
 

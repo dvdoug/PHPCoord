@@ -27,7 +27,7 @@ between almost any two CRSs is possible as long as they have a common link.
     $from = ProjectedPoint::createFromEastingNorthing(
         new Metre(577275),
         new Metre(69741),
-        Projected::fromSRID(Projected::EPSG_OSGB_1936_BRITISH_NATIONAL_GRID)
+        Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID)
     );
     $toCRS = Projected::fromSRID(Projected::EPSG_WGS_84_UTM_ZONE_31N);
     $to = $from->convert($toCRS);

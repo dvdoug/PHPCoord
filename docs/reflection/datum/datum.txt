@@ -600,6 +600,23 @@ Network adjusted in 1982. Height at reference point Varna defined as 1958 value 
 
 Uses Normal heights.
 
+Baltic 1986
+-----------
+
+| Type: Vertical
+| Used: Poland - onshore.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_BALTIC_1986)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1296')
+
+Mean sea level of Baltic at Kronstadt in 1833. Network adjusted in 1982. 
+
+
+
+Uses Normal heights. Adopted in 1986.
+
 Bandar Abbas
 ------------
 
@@ -1939,6 +1956,21 @@ EPSG example wellbore vertical datum
 
 Example only. Often called Zero Depth Point (ZDP) or wellbore reference elevation point, the point of 0 offset and lowest vertical constraint in a wellbore survey.
 
+ETRF2000 Poland
+---------------
+
+| Type: Geodetic
+| Used: Poland - onshore and offshore.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_ETRF2000_POLAND)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1305')
+
+Polish densification of ETRS89 realized through adjustment of ASG-EUPOS network constrained to 35 EPN stations in ETRF2000@2011.0.
+
+Adopted as official Polish reference frame from 2012-12-01 through Ordinance of the Council of Ministers of 15th November 2012 on the state system of spatial reference system.
+
 Easter Island 1967
 ------------------
 
@@ -2345,6 +2377,23 @@ European Vertical Reference Frame 2007
 Least squares fit to 13 stations of the EVRF2000 solution. Reduced to epoch 2000.0 for Nordic countries using the NKG2005LU uplift model.
 
 Realized by geopotential numbers and Normal heights of the United European Levelling Network. Replaces EVRF2000 (datum code 5129). Replaced by EVRF2019 (datum code 1274).
+
+European Vertical Reference Frame 2007 Poland
+---------------------------------------------
+
+| Type: Vertical
+| Used: Poland - onshore.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_EUROPEAN_VERTICAL_REFERENCE_FRAME_2007_POLAND)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1297')
+
+Origin: Mean North Sea Level at Amsterdam tide gauge. Normal heights obtained from adjustment of precise leveling campaigns conducted during 1998 - 2012 reduced to epoch 2008.00.
+
+
+
+Uses Normal heights.
 
 European Vertical Reference Frame 2019
 --------------------------------------
@@ -7764,26 +7813,11 @@ OS (SN) 1980
 
 Fundamental point: Herstmonceux. Latitude: 50°51'55.271"N, longitude: 0°20'45.882"E (of Greenwich).
 
-OSGB 1936
----------
-
-| Type: Geodetic
-| Used: United Kingdom (UK) - offshore to boundary of UKCS within 49°45'N to 61°N and 9°W to 2°E; onshore Great Britain (England, Wales and Scotland). Isle of Man onshore.
-
-.. code-block:: php
-
-    Datum::fromSRID(Datum::EPSG_OSGB_1936)
-    Datum::fromSRID('urn:ogc:def:datum:EPSG::6277')
-
-Prior to 2002, fundamental point: Herstmonceux, Latitude: 50°51'55.271"N, longitude: 0°20'45.882"E (of Greenwich). From April 2002 the datum is defined through the application of the OSTN transformation from ETRS89.
-
-The average accuracy of OSTN compared to the old triangulation network (down to 3rd order) is 0.1m. With the introduction of OSTN15, the area for OGSB 1936 has effectively been extended from Britain to cover the adjacent UK Continental Shelf.
-
 OSGB 1970 (SN)
 --------------
 
 | Type: Geodetic
-| Used: United Kingdom (UK) - Great Britain - England and Wales onshore, Scotland onshore and Western Isles nearshore; Isle of Man onshore.
+| Used: United Kingdom (UK) - Great Britain - England and Wales onshore, Scotland onshore and Western Isles nearshore including Sea of the Hebrides and The Minch; Isle of Man onshore.
 
 .. code-block:: php
 
@@ -7939,6 +7973,21 @@ Ordnance Datum Newlyn (Orkney Isles)
 Connected to Newlyn datum by triangulation from the British mainland. Initially realised through levelling network adjustment, from 2002 redefined to be realised through OSGM geoid model.
 
 Considered as separate from Newlyn because the accuracy of the trigonometric connection across the Pentland Firth does not meet geodetic levelling specifications. Orthometric heights.
+
+Ordnance Survey of Great Britain 1936
+-------------------------------------
+
+| Type: Geodetic
+| Used: United Kingdom (UK) - offshore to boundary of UKCS within 49°45'N to 61°N and 9°W to 2°E; onshore Great Britain (England, Wales and Scotland). Isle of Man onshore.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_ORDNANCE_SURVEY_OF_GREAT_BRITAIN_1936)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::6277')
+
+Prior to 2002, fundamental point: Herstmonceux, Latitude: 50°51'55.271"N, longitude: 0°20'45.882"E (of Greenwich). From April 2002 the datum is defined through the application of the OSTN transformation from ETRS89.
+
+The average accuracy of OSTN compared to the old triangulation network (down to 3rd order) is 0.1m. With the introduction of OSTN15, the area for OGSB36 has effectively been extended from Britain to cover the adjacent UK Continental Shelf.
 
 Ostend
 ------

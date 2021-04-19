@@ -27,7 +27,7 @@ AGD84
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_AGD84)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4203')
 
-National system replacing AGD 66 but officially adopted only in Queensland, South Australia and Western Australia. Replaced by GDA94.
+National system replacing AGD66 but officially adopted only in Queensland, South Australia and Western Australia. Replaced by GDA94.
 
 ATF (Paris)
 -----------
@@ -1520,6 +1520,21 @@ ETRF2000
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9067')
 
 Replaces ETRF97 (code 9066). On the publication of ETRF2005 (code 9068),  the EUREF Technical Working Group recommended that ETRF2000 be the realization of ETRS89. ETRF2014 (code 9069) is technically superior to all earlier realizations of ETRS89.
+
+ETRF2000-PL
+-----------
+
+| Used: Poland - onshore and offshore.
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_ETRF2000_PL)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::9702')
+    Geographic::fromSRID(Geographic2D::EPSG_ETRF2000_PL)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::9702')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ETRF2000_PL)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9702')
+
 
 ETRF2005
 --------
@@ -5253,25 +5268,25 @@ OS(SN)80
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4279')
 
 
-OSGB 1936
----------
+OSGB36
+------
 
 | Used: United Kingdom (UK) - offshore to boundary of UKCS within 49°45'N to 61°N and 9°W to 2°E; onshore Great Britain (England, Wales and Scotland). Isle of Man onshore.
 
 .. code-block:: php
 
-    Geographic2D::fromSRID(Geographic2D::EPSG_OSGB_1936)
+    Geographic2D::fromSRID(Geographic2D::EPSG_OSGB36)
     Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::4277')
-    Geographic::fromSRID(Geographic2D::EPSG_OSGB_1936)
+    Geographic::fromSRID(Geographic2D::EPSG_OSGB36)
     Geographic::fromSRID('urn:ogc:def:crs:EPSG::4277')
-    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_OSGB_1936)
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_OSGB36)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4277')
 
 
 OSGB70
 ------
 
-| Used: United Kingdom (UK) - Great Britain - England and Wales onshore, Scotland onshore and Western Isles nearshore; Isle of Man onshore.
+| Used: United Kingdom (UK) - Great Britain - England and Wales onshore, Scotland onshore and Western Isles nearshore including Sea of the Hebrides and The Minch; Isle of Man onshore.
 
 .. code-block:: php
 

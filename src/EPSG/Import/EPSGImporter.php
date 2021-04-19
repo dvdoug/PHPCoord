@@ -9,13 +9,20 @@ declare(strict_types=1);
 namespace PHPCoord\EPSG\Import;
 
 use function array_flip;
+use function array_map;
+use function array_reverse;
+use function array_unique;
+use function assert;
 use function dirname;
+use Exception;
+use function explode;
 use function fclose;
 use function file_exists;
 use function file_get_contents;
 use function file_put_contents;
 use function fopen;
 use function fwrite;
+use function glob;
 use function in_array;
 use const PHP_EOL;
 use PHPCoord\CoordinateReferenceSystem\Compound;
@@ -45,6 +52,9 @@ use PhpParser\NodeTraverser;
 use PhpParser\NodeVisitor\CloningVisitor;
 use PhpParser\Parser\Php7;
 use ReflectionClass;
+use Shapefile\Geometry\MultiPolygon;
+use Shapefile\Shapefile;
+use Shapefile\ShapefileReader;
 use SplFileInfo;
 use SQLite3;
 use const SQLITE3_ASSOC;
@@ -107,6 +117,8 @@ class EPSGImporter
         $sqlite->exec('UPDATE epsg_coordinatereferencesystem SET base_crs_code = 9695 WHERE coord_ref_sys_code = 9696');
         $sqlite->exec('UPDATE epsg_coordinatereferencesystem SET projection_conv_code = 15593 WHERE coord_ref_sys_code = 9057');
         $sqlite->exec('UPDATE epsg_coordinatereferencesystem SET projection_conv_code = 15593 WHERE coord_ref_sys_code = 9066');
+        $sqlite->exec('UPDATE epsg_coordinatereferencesystem SET projection_conv_code = NULL WHERE coord_ref_sys_code = 4203');
+        $sqlite->exec('UPDATE epsg_coordinatereferencesystem SET projection_conv_code = NULL WHERE coord_ref_sys_code = 4277');
 
         $sqlite->exec('VACUUM');
         $sqlite->exec('PRAGMA journal_mode=DELETE'); //but WAL is not openable read-only in older SQLite
@@ -130,6 +142,7 @@ class EPSGImporter
         $this->generateDataCoordinateReferenceSystems($sqlite);
         $this->generateDataCoordinateOperationMethods($sqlite);
         $this->generateDataCoordinateOperations($sqlite);
+        $this->generateExtents($sqlite);
 
         $sqlite->close();
     }
@@ -163,7 +176,7 @@ class EPSGImporter
         }
 
         $this->updateFileData($this->sourceDir . '/UnitOfMeasure/Angle/Angle.php', $data);
-        $this->updateFileConstants($this->sourceDir . '/UnitOfMeasure/Angle/Angle.php', $data, 'public');
+        $this->updateFileConstants($this->sourceDir . '/UnitOfMeasure/Angle/Angle.php', $data, 'public', []);
         $this->updateDocs(Angle::class, $data);
 
         $sql = "
@@ -194,7 +207,7 @@ class EPSGImporter
         }
 
         $this->updateFileData($this->sourceDir . '/UnitOfMeasure/Length/Length.php', $data);
-        $this->updateFileConstants($this->sourceDir . '/UnitOfMeasure/Length/Length.php', $data, 'public');
+        $this->updateFileConstants($this->sourceDir . '/UnitOfMeasure/Length/Length.php', $data, 'public', []);
         $this->updateDocs(Length::class, $data);
 
         $sql = "
@@ -225,7 +238,7 @@ class EPSGImporter
         }
 
         $this->updateFileData($this->sourceDir . '/UnitOfMeasure/Scale/Scale.php', $data);
-        $this->updateFileConstants($this->sourceDir . '/UnitOfMeasure/Scale/Scale.php', $data, 'public');
+        $this->updateFileConstants($this->sourceDir . '/UnitOfMeasure/Scale/Scale.php', $data, 'public', []);
         $this->updateDocs(Scale::class, $data);
 
         $sql = "
@@ -255,7 +268,7 @@ class EPSGImporter
         }
 
         $this->updateFileData($this->sourceDir . '/UnitOfMeasure/Time/Time.php', $data);
-        $this->updateFileConstants($this->sourceDir . '/UnitOfMeasure/Time/Time.php', $data, 'public');
+        $this->updateFileConstants($this->sourceDir . '/UnitOfMeasure/Time/Time.php', $data, 'public', []);
         $this->updateDocs(Time::class, $data);
 
         $sql = "
@@ -285,7 +298,7 @@ class EPSGImporter
         }
 
         $this->updateFileData($this->sourceDir . '/UnitOfMeasure/Rate.php', $data);
-        $this->updateFileConstants($this->sourceDir . '/UnitOfMeasure/Rate.php', $data, 'public');
+        $this->updateFileConstants($this->sourceDir . '/UnitOfMeasure/Rate.php', $data, 'public', []);
         $this->updateDocs(Rate::class, $data);
 
         $sql = "
@@ -314,7 +327,7 @@ class EPSGImporter
         }
 
         $this->updateFileData($this->sourceDir . '/UnitOfMeasure/UnitOfMeasure.php', $data);
-        $this->updateFileConstants($this->sourceDir . '/UnitOfMeasure/UnitOfMeasure.php', $data, 'public');
+        $this->updateFileConstants($this->sourceDir . '/UnitOfMeasure/UnitOfMeasure.php', $data, 'public', []);
     }
 
     public function generateDataPrimeMeridians(SQLite3 $sqlite): void
@@ -342,7 +355,7 @@ class EPSGImporter
         }
 
         $this->updateFileData($this->sourceDir . '/Datum/PrimeMeridian.php', $data);
-        $this->updateFileConstants($this->sourceDir . '/Datum/PrimeMeridian.php', $data, 'public');
+        $this->updateFileConstants($this->sourceDir . '/Datum/PrimeMeridian.php', $data, 'public', []);
         $this->updateDocs(PrimeMeridian::class, $data);
     }
 
@@ -378,7 +391,7 @@ class EPSGImporter
         }
 
         $this->updateFileData($this->sourceDir . '/Datum/Ellipsoid.php', $data);
-        $this->updateFileConstants($this->sourceDir . '/Datum/Ellipsoid.php', $data, 'public');
+        $this->updateFileConstants($this->sourceDir . '/Datum/Ellipsoid.php', $data, 'public', []);
         $this->updateDocs(Ellipsoid::class, $data);
     }
 
@@ -431,7 +444,14 @@ class EPSGImporter
         }
 
         $this->updateFileData($this->sourceDir . '/Datum/Datum.php', $data);
-        $this->updateFileConstants($this->sourceDir . '/Datum/Datum.php', $data, 'public');
+        $this->updateFileConstants(
+            $this->sourceDir . '/Datum/Datum.php',
+            $data,
+            'public',
+            [
+                Datum::EPSG_ORDNANCE_SURVEY_OF_GREAT_BRITAIN_1936 => ['OSGB 1936'],
+            ]
+        );
         $this->updateDocs(Datum::class, $data);
     }
 
@@ -483,7 +503,7 @@ class EPSGImporter
         }
 
         $this->updateFileData($this->sourceDir . '/CoordinateSystem/Cartesian.php', $data);
-        $this->updateFileConstants($this->sourceDir . '/CoordinateSystem/Cartesian.php', $data, 'public');
+        $this->updateFileConstants($this->sourceDir . '/CoordinateSystem/Cartesian.php', $data, 'public', []);
         $this->updateDocs(Cartesian::class, $data);
 
         /*
@@ -532,7 +552,7 @@ class EPSGImporter
         }
 
         $this->updateFileData($this->sourceDir . '/CoordinateSystem/Ellipsoidal.php', $data);
-        $this->updateFileConstants($this->sourceDir . '/CoordinateSystem/Ellipsoidal.php', $data, 'public');
+        $this->updateFileConstants($this->sourceDir . '/CoordinateSystem/Ellipsoidal.php', $data, 'public', []);
         $this->updateDocs(Ellipsoidal::class, $data);
 
         /*
@@ -581,7 +601,7 @@ class EPSGImporter
         }
 
         $this->updateFileData($this->sourceDir . '/CoordinateSystem/Vertical.php', $data);
-        $this->updateFileConstants($this->sourceDir . '/CoordinateSystem/Vertical.php', $data, 'public');
+        $this->updateFileConstants($this->sourceDir . '/CoordinateSystem/Vertical.php', $data, 'public', []);
         $this->updateDocs(VerticalCS::class, $data);
 
         /*
@@ -630,7 +650,7 @@ class EPSGImporter
         }
 
         $this->updateFileData($this->sourceDir . '/CoordinateSystem/CoordinateSystem.php', $data);
-        $this->updateFileConstants($this->sourceDir . '/CoordinateSystem/CoordinateSystem.php', $data, 'public');
+        $this->updateFileConstants($this->sourceDir . '/CoordinateSystem/CoordinateSystem.php', $data, 'public', []);
     }
 
     public function generateDataCoordinateReferenceSystems(SQLite3 $sqlite): void
@@ -646,11 +666,8 @@ class EPSGImporter
                 horizontal.coord_ref_sys_kind AS horizontal_crs_type,
                 'urn:ogc:def:crs:EPSG::' || crs.cmpd_vertcrs_code AS vertical_crs,
                 crs.coord_ref_sys_name || '\n' || 'Extent: ' || GROUP_CONCAT(e.extent_description, ' ') || '\n' || crs.remarks AS constant_help,
+                GROUP_CONCAT(e.extent_code, ',') AS extent_code,
                 GROUP_CONCAT(e.extent_description, ' ') AS extent,
-                MAX(e.bbox_north_bound_lat) AS bbox_north_bound_latitude,
-                MAX(e.bbox_east_bound_lon) AS bbox_east_bound_longitude,
-                MIN(e.bbox_south_bound_lat) AS bbox_south_bound_latitude,
-                MIN(e.bbox_west_bound_lon) AS bbox_west_bound_longitude,
                 crs.remarks AS doc_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
@@ -669,23 +686,20 @@ class EPSGImporter
         $result = $sqlite->query($sql);
         $data = [];
         while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-            $row['bounding_box'] = [
-                [$row['bbox_west_bound_longitude'], $row['bbox_south_bound_latitude']],
-                [$row['bbox_west_bound_longitude'], $row['bbox_north_bound_latitude']],
-                [$row['bbox_east_bound_longitude'], $row['bbox_north_bound_latitude']],
-                [$row['bbox_east_bound_longitude'], $row['bbox_south_bound_latitude']],
-            ];
-            $row['bounding_box_crosses_antimeridian'] = $row['bbox_east_bound_longitude'] < $row['bbox_west_bound_longitude'];
+            $row['extent_code'] = array_unique(explode(',', $row['extent_code']));
             $data[$row['urn']] = $row;
             unset($data[$row['urn']]['urn']);
-            unset($data[$row['urn']]['bbox_north_bound_latitude']);
-            unset($data[$row['urn']]['bbox_east_bound_longitude']);
-            unset($data[$row['urn']]['bbox_south_bound_latitude']);
-            unset($data[$row['urn']]['bbox_west_bound_longitude']);
         }
 
-        $this->updateFileData($this->sourceDir . '/CoordinateReferenceSystem/Compound.php', $data);
-        $this->updateFileConstants($this->sourceDir . '/CoordinateReferenceSystem/Compound.php', $data, 'public');
+        $this->updateFileData($this->sourceDir . '/CoordinateReferenceSystem/CompoundSRIDData.php', $data);
+        $this->updateFileConstants(
+            $this->sourceDir . '/CoordinateReferenceSystem/Compound.php',
+            $data,
+            'public',
+            [
+                Compound::EPSG_OSGB36_BRITISH_NATIONAL_GRID_PLUS_ODN_HEIGHT => ['OSGB 1936 / British National Grid + ODN height'],
+            ]
+        );
         $this->updateDocs(Compound::class, $data);
 
         /*
@@ -698,11 +712,8 @@ class EPSGImporter
                 'urn:ogc:def:cs:EPSG::' || crs.coord_sys_code AS coordinate_system,
                 'urn:ogc:def:datum:EPSG::' || COALESCE(crs.datum_code, crs_base.datum_code) AS datum,
                 crs.coord_ref_sys_name || '\n' || 'Extent: ' || GROUP_CONCAT(e.extent_description, ' ') || '\n' || crs.remarks AS constant_help,
+                GROUP_CONCAT(e.extent_code, ',') AS extent_code,
                 GROUP_CONCAT(e.extent_description, ' ') AS extent,
-                MAX(e.bbox_north_bound_lat) AS bbox_north_bound_latitude,
-                MAX(e.bbox_east_bound_lon) AS bbox_east_bound_longitude,
-                MIN(e.bbox_south_bound_lat) AS bbox_south_bound_latitude,
-                MIN(e.bbox_west_bound_lon) AS bbox_west_bound_longitude,
                 crs.remarks AS doc_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
@@ -721,23 +732,18 @@ class EPSGImporter
         $result = $sqlite->query($sql);
         $data = [];
         while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-            $row['bounding_box'] = [
-                [$row['bbox_west_bound_longitude'], $row['bbox_south_bound_latitude']],
-                [$row['bbox_west_bound_longitude'], $row['bbox_north_bound_latitude']],
-                [$row['bbox_east_bound_longitude'], $row['bbox_north_bound_latitude']],
-                [$row['bbox_east_bound_longitude'], $row['bbox_south_bound_latitude']],
-            ];
-            $row['bounding_box_crosses_antimeridian'] = $row['bbox_east_bound_longitude'] < $row['bbox_west_bound_longitude'];
+            $row['extent_code'] = array_unique(explode(',', $row['extent_code']));
             $data[$row['urn']] = $row;
             unset($data[$row['urn']]['urn']);
-            unset($data[$row['urn']]['bbox_north_bound_latitude']);
-            unset($data[$row['urn']]['bbox_east_bound_longitude']);
-            unset($data[$row['urn']]['bbox_south_bound_latitude']);
-            unset($data[$row['urn']]['bbox_west_bound_longitude']);
         }
 
-        $this->updateFileData($this->sourceDir . '/CoordinateReferenceSystem/Geocentric.php', $data);
-        $this->updateFileConstants($this->sourceDir . '/CoordinateReferenceSystem/Geocentric.php', $data, 'public');
+        $this->updateFileData($this->sourceDir . '/CoordinateReferenceSystem/GeocentricSRIDData.php', $data);
+        $this->updateFileConstants(
+            $this->sourceDir . '/CoordinateReferenceSystem/Geocentric.php',
+            $data,
+            'public',
+            []
+        );
         $this->updateDocs(Geocentric::class, $data);
 
         /*
@@ -750,11 +756,8 @@ class EPSGImporter
                 'urn:ogc:def:cs:EPSG::' || crs.coord_sys_code AS coordinate_system,
                 'urn:ogc:def:datum:EPSG::' || COALESCE(crs.datum_code, crs_base.datum_code) AS datum,
                 crs.coord_ref_sys_name || '\n' || 'Extent: ' || GROUP_CONCAT(e.extent_description, ' ') || '\n' || crs.remarks AS constant_help,
+                GROUP_CONCAT(e.extent_code, ',') AS extent_code,
                 GROUP_CONCAT(e.extent_description, ' ') AS extent,
-                MAX(e.bbox_north_bound_lat) AS bbox_north_bound_latitude,
-                MAX(e.bbox_east_bound_lon) AS bbox_east_bound_longitude,
-                MIN(e.bbox_south_bound_lat) AS bbox_south_bound_latitude,
-                MIN(e.bbox_west_bound_lon) AS bbox_west_bound_longitude,
                 crs.remarks AS doc_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
@@ -773,23 +776,20 @@ class EPSGImporter
         $result = $sqlite->query($sql);
         $data = [];
         while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-            $row['bounding_box'] = [
-                [$row['bbox_west_bound_longitude'], $row['bbox_south_bound_latitude']],
-                [$row['bbox_west_bound_longitude'], $row['bbox_north_bound_latitude']],
-                [$row['bbox_east_bound_longitude'], $row['bbox_north_bound_latitude']],
-                [$row['bbox_east_bound_longitude'], $row['bbox_south_bound_latitude']],
-            ];
-            $row['bounding_box_crosses_antimeridian'] = $row['bbox_east_bound_longitude'] < $row['bbox_west_bound_longitude'];
+            $row['extent_code'] = array_unique(explode(',', $row['extent_code']));
             $data[$row['urn']] = $row;
             unset($data[$row['urn']]['urn']);
-            unset($data[$row['urn']]['bbox_north_bound_latitude']);
-            unset($data[$row['urn']]['bbox_east_bound_longitude']);
-            unset($data[$row['urn']]['bbox_south_bound_latitude']);
-            unset($data[$row['urn']]['bbox_west_bound_longitude']);
         }
 
-        $this->updateFileData($this->sourceDir . '/CoordinateReferenceSystem/Geographic2D.php', $data);
-        $this->updateFileConstants($this->sourceDir . '/CoordinateReferenceSystem/Geographic2D.php', $data, 'public');
+        $this->updateFileData($this->sourceDir . '/CoordinateReferenceSystem/Geographic2DSRIDData.php', $data);
+        $this->updateFileConstants(
+            $this->sourceDir . '/CoordinateReferenceSystem/Geographic2D.php',
+            $data,
+            'public',
+            [
+                Geographic2D::EPSG_OSGB36 => ['OSGB 1936'],
+            ]
+        );
         $this->updateDocs(Geographic2D::class, $data);
 
         /*
@@ -802,11 +802,8 @@ class EPSGImporter
                 'urn:ogc:def:cs:EPSG::' || crs.coord_sys_code AS coordinate_system,
                 'urn:ogc:def:datum:EPSG::' || COALESCE(crs.datum_code, crs_base.datum_code) AS datum,
                 crs.coord_ref_sys_name || '\n' || 'Extent: ' || GROUP_CONCAT(e.extent_description, ' ') || '\n' || crs.remarks AS constant_help,
+                GROUP_CONCAT(e.extent_code, ',') AS extent_code,
                 GROUP_CONCAT(e.extent_description, ' ') AS extent,
-                MAX(e.bbox_north_bound_lat) AS bbox_north_bound_latitude,
-                MAX(e.bbox_east_bound_lon) AS bbox_east_bound_longitude,
-                MIN(e.bbox_south_bound_lat) AS bbox_south_bound_latitude,
-                MIN(e.bbox_west_bound_lon) AS bbox_west_bound_longitude,
                 crs.remarks AS doc_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
@@ -825,23 +822,18 @@ class EPSGImporter
         $result = $sqlite->query($sql);
         $data = [];
         while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-            $row['bounding_box'] = [
-                [$row['bbox_west_bound_longitude'], $row['bbox_south_bound_latitude']],
-                [$row['bbox_west_bound_longitude'], $row['bbox_north_bound_latitude']],
-                [$row['bbox_east_bound_longitude'], $row['bbox_north_bound_latitude']],
-                [$row['bbox_east_bound_longitude'], $row['bbox_south_bound_latitude']],
-            ];
-            $row['bounding_box_crosses_antimeridian'] = $row['bbox_east_bound_longitude'] < $row['bbox_west_bound_longitude'];
+            $row['extent_code'] = array_unique(explode(',', $row['extent_code']));
             $data[$row['urn']] = $row;
             unset($data[$row['urn']]['urn']);
-            unset($data[$row['urn']]['bbox_north_bound_latitude']);
-            unset($data[$row['urn']]['bbox_east_bound_longitude']);
-            unset($data[$row['urn']]['bbox_south_bound_latitude']);
-            unset($data[$row['urn']]['bbox_west_bound_longitude']);
         }
 
-        $this->updateFileData($this->sourceDir . '/CoordinateReferenceSystem/Geographic3D.php', $data);
-        $this->updateFileConstants($this->sourceDir . '/CoordinateReferenceSystem/Geographic3D.php', $data, 'public');
+        $this->updateFileData($this->sourceDir . '/CoordinateReferenceSystem/Geographic3DSRIDData.php', $data);
+        $this->updateFileConstants(
+            $this->sourceDir . '/CoordinateReferenceSystem/Geographic3D.php',
+            $data,
+            'public',
+            []
+        );
         $this->updateDocs(Geographic3D::class, $data);
 
         /*
@@ -854,11 +846,8 @@ class EPSGImporter
                 'urn:ogc:def:cs:EPSG::' || crs.coord_sys_code AS coordinate_system,
                 'urn:ogc:def:datum:EPSG::' || COALESCE(crs.datum_code, crs_base.datum_code) AS datum,
                 crs.coord_ref_sys_name || '\n' || 'Extent: ' || GROUP_CONCAT(e.extent_description, ' ') || '\n' || crs.remarks AS constant_help,
+                GROUP_CONCAT(e.extent_code, ',') AS extent_code,
                 GROUP_CONCAT(e.extent_description, ' ') AS extent,
-                MAX(e.bbox_north_bound_lat) AS bbox_north_bound_latitude,
-                MAX(e.bbox_east_bound_lon) AS bbox_east_bound_longitude,
-                MIN(e.bbox_south_bound_lat) AS bbox_south_bound_latitude,
-                MIN(e.bbox_west_bound_lon) AS bbox_west_bound_longitude,
                 crs.remarks AS doc_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
@@ -877,23 +866,25 @@ class EPSGImporter
         $result = $sqlite->query($sql);
         $data = [];
         while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-            $row['bounding_box'] = [
-                [$row['bbox_west_bound_longitude'], $row['bbox_south_bound_latitude']],
-                [$row['bbox_west_bound_longitude'], $row['bbox_north_bound_latitude']],
-                [$row['bbox_east_bound_longitude'], $row['bbox_north_bound_latitude']],
-                [$row['bbox_east_bound_longitude'], $row['bbox_south_bound_latitude']],
-            ];
-            $row['bounding_box_crosses_antimeridian'] = $row['bbox_east_bound_longitude'] < $row['bbox_west_bound_longitude'];
+            $row['extent_code'] = array_unique(explode(',', $row['extent_code']));
             $data[$row['urn']] = $row;
             unset($data[$row['urn']]['urn']);
-            unset($data[$row['urn']]['bbox_north_bound_latitude']);
-            unset($data[$row['urn']]['bbox_east_bound_longitude']);
-            unset($data[$row['urn']]['bbox_south_bound_latitude']);
-            unset($data[$row['urn']]['bbox_west_bound_longitude']);
         }
 
         $this->updateFileData($this->sourceDir . '/CoordinateReferenceSystem/ProjectedSRIDData.php', $data);
-        $this->updateFileConstants($this->sourceDir . '/CoordinateReferenceSystem/Projected.php', $data, 'public');
+        $this->updateFileConstants(
+            $this->sourceDir . '/CoordinateReferenceSystem/Projected.php',
+            $data,
+            'public',
+            [
+                Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID => ['OSGB 1936 / British National Grid'],
+                Projected::EPSG_ETRF2000_PL_CS2000_15 => ['ETRS89 / Poland CS2000 zone 5'],
+                Projected::EPSG_ETRF2000_PL_CS2000_18 => ['ETRS89 / Poland CS2000 zone 6'],
+                Projected::EPSG_ETRF2000_PL_CS2000_21 => ['ETRS89 / Poland CS2000 zone 7'],
+                Projected::EPSG_ETRF2000_PL_CS2000_24 => ['ETRS89 / Poland CS2000 zone 8'],
+                Projected::EPSG_ETRF2000_PL_CS92 => ['ETRS89 / Poland CS92'],
+            ]
+        );
         $this->updateDocs(Projected::class, $data);
 
         /*
@@ -906,11 +897,8 @@ class EPSGImporter
                 'urn:ogc:def:cs:EPSG::' || crs.coord_sys_code AS coordinate_system,
                 'urn:ogc:def:datum:EPSG::' || COALESCE(crs.datum_code, crs_base.datum_code) AS datum,
                 crs.coord_ref_sys_name || '\n' || 'Extent: ' || GROUP_CONCAT(e.extent_description, ' ') || '\n' || crs.remarks AS constant_help,
+                GROUP_CONCAT(e.extent_code, ',') AS extent_code,
                 GROUP_CONCAT(e.extent_description, ' ') AS extent,
-                MAX(e.bbox_north_bound_lat) AS bbox_north_bound_latitude,
-                MAX(e.bbox_east_bound_lon) AS bbox_east_bound_longitude,
-                MIN(e.bbox_south_bound_lat) AS bbox_south_bound_latitude,
-                MIN(e.bbox_west_bound_lon) AS bbox_west_bound_longitude,
                 crs.remarks AS doc_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
@@ -929,23 +917,18 @@ class EPSGImporter
         $result = $sqlite->query($sql);
         $data = [];
         while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-            $row['bounding_box'] = [
-                [$row['bbox_west_bound_longitude'], $row['bbox_south_bound_latitude']],
-                [$row['bbox_west_bound_longitude'], $row['bbox_north_bound_latitude']],
-                [$row['bbox_east_bound_longitude'], $row['bbox_north_bound_latitude']],
-                [$row['bbox_east_bound_longitude'], $row['bbox_south_bound_latitude']],
-            ];
-            $row['bounding_box_crosses_antimeridian'] = $row['bbox_east_bound_longitude'] < $row['bbox_west_bound_longitude'];
+            $row['extent_code'] = array_unique(explode(',', $row['extent_code']));
             $data[$row['urn']] = $row;
             unset($data[$row['urn']]['urn']);
-            unset($data[$row['urn']]['bbox_north_bound_latitude']);
-            unset($data[$row['urn']]['bbox_east_bound_longitude']);
-            unset($data[$row['urn']]['bbox_south_bound_latitude']);
-            unset($data[$row['urn']]['bbox_west_bound_longitude']);
         }
 
-        $this->updateFileData($this->sourceDir . '/CoordinateReferenceSystem/Vertical.php', $data);
-        $this->updateFileConstants($this->sourceDir . '/CoordinateReferenceSystem/Vertical.php', $data, 'public');
+        $this->updateFileData($this->sourceDir . '/CoordinateReferenceSystem/VerticalSRIDData.php', $data);
+        $this->updateFileConstants(
+            $this->sourceDir . '/CoordinateReferenceSystem/Vertical.php',
+            $data,
+            'public',
+            []
+        );
         $this->updateDocs(Vertical::class, $data);
 
         /*
@@ -981,7 +964,12 @@ class EPSGImporter
         }
 
         $this->updateFileData($this->sourceDir . '/CoordinateReferenceSystem/CoordinateReferenceSystem.php', $data);
-        $this->updateFileConstants($this->sourceDir . '/CoordinateReferenceSystem/CoordinateReferenceSystem.php', $data, 'public');
+        $this->updateFileConstants(
+            $this->sourceDir . '/CoordinateReferenceSystem/CoordinateReferenceSystem.php',
+            $data,
+            'public',
+            []
+        );
     }
 
     public function generateDataCoordinateOperationMethods(SQLite3 $sqlite): void
@@ -1011,7 +999,12 @@ class EPSGImporter
             unset($data[$row['urn']]['urn']);
         }
 
-        $this->updateFileConstants($this->sourceDir . '/CoordinateOperation/CoordinateOperationMethods.php', $data, 'public');
+        $this->updateFileConstants(
+            $this->sourceDir . '/CoordinateOperation/CoordinateOperationMethods.php',
+            $data,
+            'public',
+            []
+        );
     }
 
     public function generateDataCoordinateOperations(SQLite3 $sqlite): void
@@ -1028,8 +1021,6 @@ class EPSGImporter
             JOIN epsg_coordoperationmethod m ON m.coord_op_method_code = o.coord_op_method_code
             JOIN epsg_coordinatereferencesystem sourcecrs ON sourcecrs.coord_ref_sys_code = o.source_crs_code AND sourcecrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND sourcecrs.deprecated = 0
             JOIN epsg_coordinatereferencesystem targetcrs ON targetcrs.coord_ref_sys_code = o.target_crs_code AND targetcrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND targetcrs.deprecated = 0
-            JOIN epsg_usage u ON u.object_table_name = 'epsg_coordoperation' AND u.object_code = o.coord_op_code
-            JOIN epsg_extent e ON u.extent_code = e.extent_code
             LEFT JOIN epsg_coordoperationparamvalue p ON p.coord_op_code = o.coord_op_code
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperation' AND dep.object_code = o.coord_op_code AND dep.deprecation_date <= '2020-12-14'
             WHERE o.coord_op_type != 'conversion' AND o.coord_op_name NOT LIKE '%example%' AND o.coord_op_name NOT LIKE '%mining%'
@@ -1049,8 +1040,6 @@ class EPSGImporter
             FROM epsg_coordoperation o
             JOIN epsg_coordinatereferencesystem projcrs ON projcrs.projection_conv_code = o.coord_op_code AND projcrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND projcrs.deprecated = 0
             JOIN epsg_coordoperationmethod m ON m.coord_op_method_code = o.coord_op_method_code
-            JOIN epsg_usage u ON u.object_table_name = 'epsg_coordoperation' AND u.object_code = o.coord_op_code
-            JOIN epsg_extent e ON u.extent_code = e.extent_code
             LEFT JOIN epsg_coordoperationparamvalue p ON p.coord_op_code = o.coord_op_code
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperation' AND dep.object_code = o.coord_op_code AND dep.deprecation_date <= '2020-12-14'
             WHERE o.coord_op_type = 'conversion' AND o.coord_op_name NOT LIKE '%example%' AND o.coord_op_name NOT LIKE '%mining%'
@@ -1073,8 +1062,6 @@ class EPSGImporter
             LEFT JOIN epsg_coordoperationmethod cm ON co.coord_op_method_code = cm.coord_op_method_code
             JOIN epsg_coordinatereferencesystem sourcecrs ON sourcecrs.coord_ref_sys_code = o.source_crs_code AND sourcecrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND sourcecrs.deprecated = 0
             JOIN epsg_coordinatereferencesystem targetcrs ON targetcrs.coord_ref_sys_code = o.target_crs_code AND targetcrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND targetcrs.deprecated = 0
-            JOIN epsg_usage u ON u.object_table_name = 'epsg_coordoperation' AND u.object_code = o.coord_op_code
-            JOIN epsg_extent e ON u.extent_code = e.extent_code
             LEFT JOIN epsg_coordoperationparamvalue p ON p.coord_op_code = co.coord_op_code
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperation' AND dep.object_code = o.coord_op_code AND dep.deprecation_date <= '2020-12-14'
             WHERE o.coord_op_type = 'concatenated operation' AND o.coord_op_name NOT LIKE '%example%' AND o.coord_op_name NOT LIKE '%mining%'
@@ -1100,10 +1087,7 @@ class EPSGImporter
                 o.coord_op_name AS name,
                 o.coord_op_type AS type,
                 'urn:ogc:def:method:EPSG::' || o.coord_op_method_code AS method,
-                MAX(e.bbox_north_bound_lat) AS bbox_north_bound_latitude,
-                MAX(e.bbox_east_bound_lon) AS bbox_east_bound_longitude,
-                MIN(e.bbox_south_bound_lat) AS bbox_south_bound_latitude,
-                MIN(e.bbox_west_bound_lon) AS bbox_west_bound_longitude
+                GROUP_CONCAT(e.extent_code, ',') AS extent_code
             FROM epsg_coordoperation o
             JOIN epsg_coordoperationmethod m ON m.coord_op_method_code = o.coord_op_method_code
             JOIN epsg_coordinatereferencesystem sourcecrs ON sourcecrs.coord_ref_sys_code = o.source_crs_code AND sourcecrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND sourcecrs.deprecated = 0
@@ -1124,10 +1108,7 @@ class EPSGImporter
                 o.coord_op_name AS name,
                 o.coord_op_type AS type,
                 'urn:ogc:def:method:EPSG::' || o.coord_op_method_code AS method,
-                MAX(e.bbox_north_bound_lat) AS bbox_north_bound_latitude,
-                MAX(e.bbox_east_bound_lon) AS bbox_east_bound_longitude,
-                MIN(e.bbox_south_bound_lat) AS bbox_south_bound_latitude,
-                MIN(e.bbox_west_bound_lon) AS bbox_west_bound_longitude
+                GROUP_CONCAT(e.extent_code, ',') AS extent_code
             FROM epsg_coordoperation o
             JOIN epsg_coordinatereferencesystem projcrs ON projcrs.projection_conv_code = o.coord_op_code AND projcrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND projcrs.deprecated = 0
             JOIN epsg_coordoperationmethod m ON m.coord_op_method_code = o.coord_op_method_code
@@ -1147,10 +1128,7 @@ class EPSGImporter
                 o.coord_op_name AS name,
                 o.coord_op_type AS type,
                 null AS method,
-                MAX(e.bbox_north_bound_lat) AS bbox_north_bound_latitude,
-                MAX(e.bbox_east_bound_lon) AS bbox_east_bound_longitude,
-                MIN(e.bbox_south_bound_lat) AS bbox_south_bound_latitude,
-                MIN(e.bbox_west_bound_lon) AS bbox_west_bound_longitude
+                GROUP_CONCAT(e.extent_code, ',') AS extent_code
             FROM epsg_coordoperation o
             LEFT JOIN epsg_coordoperationpath p ON p.concat_operation_code = o.coord_op_code
             LEFT JOIN epsg_coordoperation co ON p.single_operation_code = co.coord_op_code
@@ -1173,10 +1151,7 @@ class EPSGImporter
                 o.coord_op_name AS name,
                 o.coord_op_type AS type,
                 'urn:ogc:def:method:EPSG::' || o.coord_op_method_code AS method,
-                MAX(e.bbox_north_bound_lat) AS bbox_north_bound_latitude,
-                MAX(e.bbox_east_bound_lon) AS bbox_east_bound_longitude,
-                MIN(e.bbox_south_bound_lat) AS bbox_south_bound_latitude,
-                MIN(e.bbox_west_bound_lon) AS bbox_west_bound_longitude
+                GROUP_CONCAT(e.extent_code, ',') AS extent_code
             FROM epsg_coordoperation o
             JOIN epsg_coordoperationpath p ON p.single_operation_code = o.coord_op_code
             JOIN epsg_usage u ON u.object_table_name = 'epsg_coordoperation' AND u.object_code = o.coord_op_code
@@ -1212,27 +1187,17 @@ class EPSGImporter
                 $operationsResult = $sqlite->query($operationsSql);
                 while ($operationsRow = $operationsResult->fetchArray(SQLITE3_ASSOC)) {
                     $row['operations'][] = [
-                            'operation' => $operationsRow['single_code'],
-                            'source_crs' => $operationsRow['source_crs'],
-                            'target_crs' => $operationsRow['target_crs'],
+                        'operation' => $operationsRow['single_code'],
+                        'source_crs' => $operationsRow['source_crs'],
+                        'target_crs' => $operationsRow['target_crs'],
                     ];
                 }
             }
 
-            $row['bounding_box'] = [
-                [$row['bbox_west_bound_longitude'], $row['bbox_south_bound_latitude']],
-                [$row['bbox_west_bound_longitude'], $row['bbox_north_bound_latitude']],
-                [$row['bbox_east_bound_longitude'], $row['bbox_north_bound_latitude']],
-                [$row['bbox_east_bound_longitude'], $row['bbox_south_bound_latitude']],
-            ];
-            $row['bounding_box_crosses_antimeridian'] = $row['bbox_east_bound_longitude'] < $row['bbox_west_bound_longitude'];
+            $row['extent_code'] = array_unique(explode(',', $row['extent_code']));
             $data[$row['urn']] = $row;
             unset($data[$row['urn']]['urn']);
             unset($data[$row['urn']]['type']);
-            unset($data[$row['urn']]['bbox_north_bound_latitude']);
-            unset($data[$row['urn']]['bbox_east_bound_longitude']);
-            unset($data[$row['urn']]['bbox_south_bound_latitude']);
-            unset($data[$row['urn']]['bbox_west_bound_longitude']);
         }
 
         $this->updateFileData($this->sourceDir . '/CoordinateOperation/CoordinateOperations.php', $data);
@@ -1273,7 +1238,128 @@ class EPSGImporter
         $this->updateFileData($this->sourceDir . '/CoordinateOperation/CoordinateOperationParams.php', $paramData);
     }
 
-    private function updateFileConstants(string $fileName, array $data, string $visibility): void
+    public function generateExtents(SQLite3 $sqlite): void
+    {
+        echo 'Updating extents...';
+        $boundingBoxOnly = $this->sourceDir . '/Geometry/Extents/BoundingBoxOnly/';
+        $builtInFull = $this->sourceDir . '/Geometry/Extents/';
+
+        array_map('unlink', glob($boundingBoxOnly . '*.php'));
+        array_map('unlink', glob($builtInFull . '*.php'));
+
+        $sql = "
+            SELECT e.extent_code
+            FROM epsg_coordinatereferencesystem crs
+            JOIN epsg_usage u ON u.object_code = crs.coord_ref_sys_code AND u.object_table_name = 'epsg_coordinatereferencesystem'
+            JOIN epsg_extent e ON u.extent_code = e.extent_code
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2020-12-14'
+            WHERE dep.deprecation_id IS NULL
+
+            UNION
+
+            SELECT e.extent_code FROM epsg_coordoperation o
+            JOIN epsg_usage u ON u.object_code = o.coord_op_code AND u.object_table_name = 'epsg_coordoperation'
+            JOIN epsg_extent e ON u.extent_code = e.extent_code
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperation' AND dep.object_code = o.coord_op_code AND dep.deprecation_date <= '2020-12-14'
+            WHERE dep.deprecation_id IS NULL
+
+            GROUP BY e.extent_code
+        ";
+
+        $result = $sqlite->query($sql);
+        $extents = [];
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            $extents[] = $row['extent_code'];
+        }
+
+        $shapeFile = new ShapefileReader(
+            $this->resourceDir . '/epsg/EPSG_Polygons.shp',
+            [
+                Shapefile::OPTION_FORCE_MULTIPART_GEOMETRIES => true,
+            ]
+        );
+        $shapeFile->setCharset('ISO-8859-1');
+
+        // Read all the records
+        while ($geometry = $shapeFile->fetchRecord()) {
+            assert($geometry instanceof MultiPolygon);
+
+            $extentCode = (int) $geometry->getData('AREA_CODE');
+            $region = $geometry->getData('REGION');
+            $name = $geometry->getData('AREA_NAME');
+            if (!in_array($extentCode, $extents, true)) {
+                continue;
+            }
+
+            $exportSimple = "<?php\ndeclare(strict_types=1);\n\nnamespace PHPCoord\Geometry\Extents\BoundingBoxOnly;\n/**\n * {$region}/{$name}.\n * @internal\n */\nclass Extent{$extentCode}\n{\n    public function __invoke(): array\n    {\n        return\n        [\n";
+            $exportFull = "<?php\ndeclare(strict_types=1);\n\nnamespace PHPCoord\Geometry\Extents;\n/**\n * {$region}/{$name}.\n * @internal\n */\nclass Extent{$extentCode}\n{\n    public function __invoke(): array\n    {\n        return\n        [\n";
+
+            foreach ($geometry->getPolygons() as $shapeFilePolygon) {
+                $boundingBox = $shapeFilePolygon->getBoundingBox();
+                $exportSimple .= "            [\n                [\n                    ";
+                $exportSimple .= "[{$boundingBox['xmax']}, {$boundingBox['ymax']}], [{$boundingBox['xmin']}, {$boundingBox['ymax']}], [{$boundingBox['xmin']}, {$boundingBox['ymin']}], [{$boundingBox['xmax']}, {$boundingBox['ymin']}], [{$boundingBox['xmax']}, {$boundingBox['ymax']}],";
+                $exportSimple .= "\n                ],\n            ],\n";
+
+                $exportFull .= "            [\n";
+                foreach ($shapeFilePolygon->getRings() as $shapeFileRing) {
+                    $exportFull .= "                [\n                    ";
+                    foreach ($shapeFileRing->getPoints() as $shapeFilePoint) {
+                        $exportFull .= '[' . $shapeFilePoint->getX() . ', ' . $shapeFilePoint->getY() . '], ';
+                    }
+                    $exportFull .= "\n                ],\n";
+                }
+                $exportFull .= "            ],\n";
+            }
+            $exportSimple .= "        ];\n    }\n}\n";
+            $exportFull .= "        ];\n    }\n}\n";
+
+            switch ($region) {
+                case 'Global':
+                    file_put_contents($builtInFull . "Extent{$extentCode}.php", $exportFull);
+                    $this->csFixFile($builtInFull . "Extent{$extentCode}.php");
+                    break;
+                case 'Africa':
+                    file_put_contents($boundingBoxOnly . "Extent{$extentCode}.php", $exportSimple);
+                    $this->csFixFile($boundingBoxOnly . "Extent{$extentCode}.php");
+                    break;
+                case 'Antarctic':
+                    file_put_contents($boundingBoxOnly . "Extent{$extentCode}.php", $exportSimple);
+                    $this->csFixFile($boundingBoxOnly . "Extent{$extentCode}.php");
+                    break;
+                case 'Arctic':
+                    file_put_contents($boundingBoxOnly . "Extent{$extentCode}.php", $exportSimple);
+                    $this->csFixFile($boundingBoxOnly . "Extent{$extentCode}.php");
+                    break;
+                case 'Asia-ExFSU':
+                    file_put_contents($boundingBoxOnly . "Extent{$extentCode}.php", $exportSimple);
+                    $this->csFixFile($boundingBoxOnly . "Extent{$extentCode}.php");
+                    break;
+                case 'Australasia and Oceania':
+                    file_put_contents($boundingBoxOnly . "Extent{$extentCode}.php", $exportSimple);
+                    $this->csFixFile($boundingBoxOnly . "Extent{$extentCode}.php");
+                    break;
+                case 'Europe-FSU':
+                    file_put_contents($boundingBoxOnly . "Extent{$extentCode}.php", $exportSimple);
+                    $this->csFixFile($boundingBoxOnly . "Extent{$extentCode}.php");
+                    break;
+                case 'North America':
+                    file_put_contents($boundingBoxOnly . "Extent{$extentCode}.php", $exportSimple);
+                    $this->csFixFile($boundingBoxOnly . "Extent{$extentCode}.php");
+                    break;
+                case 'South America':
+                    file_put_contents($boundingBoxOnly . "Extent{$extentCode}.php", $exportSimple);
+                    $this->csFixFile($boundingBoxOnly . "Extent{$extentCode}.php");
+                    break;
+                default:
+                    throw new Exception("Unknown region: {$region}");
+            }
+        }
+        unset($shapefile);
+
+        echo 'done' . PHP_EOL;
+    }
+
+    private function updateFileConstants(string $fileName, array $data, string $visibility, array $aliases): void
     {
         echo "Updating constants in {$fileName}...";
 
@@ -1307,7 +1393,7 @@ class EPSGImporter
          * Then add the ones wanted
          */
         $traverser = new NodeTraverser();
-        $traverser->addVisitor(new AddNewConstantsVisitor($data, $visibility));
+        $traverser->addVisitor(new AddNewConstantsVisitor($data, $visibility, $aliases));
         $newStmts = $traverser->traverse($newStmts);
 
         $prettyPrinter = new ASTPrettyPrinter();
@@ -1409,7 +1495,7 @@ class EPSGImporter
 
         $file = fopen($this->sourceDir . '/../docs/reflection/' . str_replace('phpcoord/', '', str_replace('\\', '/', strtolower($class))) . '.txt', 'wb');
         $reflectionClass = new ReflectionClass($class);
-        $constants = array_flip($reflectionClass->getConstants());
+        $constants = array_flip(array_reverse($reflectionClass->getConstants())); // make sure aliases are overridden with current
 
         foreach ($data as $urn => $row) {
             if ($urn === Angle::EPSG_DEGREE_SUPPLIER_TO_DEFINE_REPRESENTATION) {
@@ -1451,5 +1537,6 @@ class EPSGImporter
         }
 
         fclose($file);
+        echo 'done' . PHP_EOL;
     }
 }

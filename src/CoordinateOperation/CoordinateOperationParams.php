@@ -60322,6 +60322,23 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9703' => [
+            'X-axis translation' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => true,
+            ],
+            'Y-axis translation' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => true,
+            ],
+            'Z-axis translation' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => true,
+            ],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::10085' => [
             'X-axis translation' => [
                 'value' => -61.0,

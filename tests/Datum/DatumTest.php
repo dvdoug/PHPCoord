@@ -43,7 +43,7 @@ class DatumTest extends TestCase
 
     public function testOSGB36(): void
     {
-        $object = Datum::fromSRID(Datum::EPSG_OSGB_1936);
+        $object = Datum::fromSRID(Datum::EPSG_ORDNANCE_SURVEY_OF_GREAT_BRITAIN_1936);
         self::assertEquals(Datum::DATUM_TYPE_GEODETIC, $object->getDatumType());
         self::assertEquals('6356256.909237285', $object->getEllipsoid()->getSemiMinorAxis()->getValue());
         self::assertInstanceOf(Metre::class, $object->getEllipsoid()->getSemiMinorAxis());

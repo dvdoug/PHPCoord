@@ -155,6 +155,32 @@ DB_REF / 3-degree Gauss-Kruger zone 5 (E-N) + DHHN92 height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5835')
 
 
+ETRF2000-PL + Baltic 1986 height
+--------------------------------
+
+| Used: Poland - onshore.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_ETRF2000_PL_PLUS_BALTIC_1986_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9656')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_ETRF2000_PL_PLUS_BALTIC_1986_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9656')
+
+
+ETRF2000-PL + EVRF2007-PL height
+--------------------------------
+
+| Used: Poland - onshore.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_ETRF2000_PL_PLUS_EVRF2007_PL_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9657')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_ETRF2000_PL_PLUS_EVRF2007_PL_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9657')
+
+
 ETRS89 + Alicante height
 ------------------------
 
@@ -3777,16 +3803,16 @@ NZGD2000 + NZVD2016 height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9528')
 
 
-OSGB 1936 / British National Grid + ODN height
-----------------------------------------------
+OSGB36 / British National Grid + ODN height
+-------------------------------------------
 
 | Used: United Kingdom (UK) - Great Britain onshore - England and Wales - mainland; Scotland - mainland and Inner Hebrides.
 
 .. code-block:: php
 
-    Compound::fromSRID(Compound::EPSG_OSGB_1936_BRITISH_NATIONAL_GRID_PLUS_ODN_HEIGHT)
+    Compound::fromSRID(Compound::EPSG_OSGB36_BRITISH_NATIONAL_GRID_PLUS_ODN_HEIGHT)
     Compound::fromSRID('urn:ogc:def:crs:EPSG::7405')
-    CoordinateReferenceSystem::fromSRID(Compound::EPSG_OSGB_1936_BRITISH_NATIONAL_GRID_PLUS_ODN_HEIGHT)
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_OSGB36_BRITISH_NATIONAL_GRID_PLUS_ODN_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::7405')
 
 

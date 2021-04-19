@@ -18,8 +18,9 @@
     "require-dev": {
         "ext-sqlite3": "*",
         "friendsofphp/php-cs-fixer": "^2.18.0",
-        "phpunit/phpunit": "^9.5.0",
-        "nikic/php-parser": "^4.10"
+        "gasparesganga/php-shapefile": "^3.4",
+        "nikic/php-parser": "^4.10",
+        "phpunit/phpunit": "^9.5.0"
     },
     "config": {
         "preferred-install": {
@@ -28,6 +29,11 @@
         "sort-packages": true,
         "bin-compat" : "full",
         "optimize-autoloader": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "4.x-dev"
+        }
     },
     "autoload": {
         "psr-4": {

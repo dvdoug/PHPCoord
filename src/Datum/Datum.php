@@ -407,6 +407,16 @@ class Datum
     public const EPSG_BALTIC_1982 = 'urn:ogc:def:datum:EPSG::5184';
 
     /**
+     * Baltic 1986
+     * Type: vertical
+     * Extent: Poland - onshore.
+     * Mean sea level of Baltic at Kronstadt in 1833. Network adjusted in 1982.
+     *
+     * Uses Normal heights. Adopted in 1986.
+     */
+    public const EPSG_BALTIC_1986 = 'urn:ogc:def:datum:EPSG::1296';
+
+    /**
      * Bandar Abbas
      * Type: vertical
      * Extent: Iran - onshore.
@@ -1274,6 +1284,17 @@ class Datum
     public const EPSG_EPSG_EXAMPLE_WELLBORE_VERTICAL_DATUM = 'urn:ogc:def:datum:EPSG::1205';
 
     /**
+     * ETRF2000 Poland
+     * Type: geodetic
+     * Extent: Poland - onshore and offshore.
+     * Polish densification of ETRS89 realized through adjustment of ASG-EUPOS network constrained to 35 EPN stations
+     * in ETRF2000@2011.0.
+     * Adopted as official Polish reference frame from 2012-12-01 through Ordinance of the Council of Ministers of 15th
+     * November 2012 on the state system of spatial reference system.
+     */
+    public const EPSG_ETRF2000_POLAND = 'urn:ogc:def:datum:EPSG::1305';
+
+    /**
      * Easter Island 1967
      * Type: geodetic
      * Extent: Chile - Easter Island onshore.
@@ -1638,6 +1659,17 @@ class Datum
      * (datum code 5129). Replaced by EVRF2019 (datum code 1274).
      */
     public const EPSG_EUROPEAN_VERTICAL_REFERENCE_FRAME_2007 = 'urn:ogc:def:datum:EPSG::5215';
+
+    /**
+     * European Vertical Reference Frame 2007 Poland
+     * Type: vertical
+     * Extent: Poland - onshore.
+     * Origin: Mean North Sea Level at Amsterdam tide gauge. Normal heights obtained from adjustment of precise
+     * leveling campaigns conducted during 1998 - 2012 reduced to epoch 2008.00.
+     *
+     * Uses Normal heights.
+     */
+    public const EPSG_EUROPEAN_VERTICAL_REFERENCE_FRAME_2007_POLAND = 'urn:ogc:def:datum:EPSG::1297';
 
     /**
      * European Vertical Reference Frame 2019
@@ -5314,23 +5346,10 @@ class Datum
     public const EPSG_OS_SN_1980 = 'urn:ogc:def:datum:EPSG::6279';
 
     /**
-     * OSGB 1936
-     * Type: geodetic
-     * Extent: United Kingdom (UK) - offshore to boundary of UKCS within 49°45'N to 61°N and 9°W to 2°E; onshore
-     * Great Britain (England, Wales and Scotland). Isle of Man onshore.
-     * Prior to 2002, fundamental point: Herstmonceux, Latitude: 50°51'55.271"N, longitude: 0°20'45.882"E (of
-     * Greenwich). From April 2002 the datum is defined through the application of the OSTN transformation from ETRS89.
-     * The average accuracy of OSTN compared to the old triangulation network (down to 3rd order) is 0.1m. With the
-     * introduction of OSTN15, the area for OGSB 1936 has effectively been extended from Britain to cover the adjacent
-     * UK Continental Shelf.
-     */
-    public const EPSG_OSGB_1936 = 'urn:ogc:def:datum:EPSG::6277';
-
-    /**
      * OSGB 1970 (SN)
      * Type: geodetic
      * Extent: United Kingdom (UK) - Great Britain - England and Wales onshore, Scotland onshore and Western Isles
-     * nearshore; Isle of Man onshore.
+     * nearshore including Sea of the Hebrides and The Minch; Isle of Man onshore.
      * Fundamental point: Herstmonceux. Latitude: 50°51'55.271"N, longitude: 0°20'45.882"E (of Greenwich).
      */
     public const EPSG_OSGB_1970_SN = 'urn:ogc:def:datum:EPSG::6278';
@@ -5432,6 +5451,19 @@ class Datum
      * Firth does not meet geodetic levelling specifications. Orthometric heights.
      */
     public const EPSG_ORDNANCE_DATUM_NEWLYN_ORKNEY_ISLES = 'urn:ogc:def:datum:EPSG::5138';
+
+    /**
+     * Ordnance Survey of Great Britain 1936
+     * Type: geodetic
+     * Extent: United Kingdom (UK) - offshore to boundary of UKCS within 49°45'N to 61°N and 9°W to 2°E; onshore
+     * Great Britain (England, Wales and Scotland). Isle of Man onshore.
+     * Prior to 2002, fundamental point: Herstmonceux, Latitude: 50°51'55.271"N, longitude: 0°20'45.882"E (of
+     * Greenwich). From April 2002 the datum is defined through the application of the OSTN transformation from ETRS89.
+     * The average accuracy of OSTN compared to the old triangulation network (down to 3rd order) is 0.1m. With the
+     * introduction of OSTN15, the area for OGSB36 has effectively been extended from Britain to cover the adjacent UK
+     * Continental Shelf.
+     */
+    public const EPSG_ORDNANCE_SURVEY_OF_GREAT_BRITAIN_1936 = 'urn:ogc:def:datum:EPSG::6277';
 
     /**
      * Ostend
@@ -7547,6 +7579,11 @@ class Datum
      * Replaces FD54 for cadastre.
      */
     public const EPSG_FK89 = 'urn:ogc:def:datum:EPSG::6753';
+
+    /**
+     * @deprecated use EPSG_ORDNANCE_SURVEY_OF_GREAT_BRITAIN_1936 instead
+     */
+    public const EPSG_OSGB_1936 = 'urn:ogc:def:datum:EPSG::6277';
 
     protected static $sridData = [
         'urn:ogc:def:datum:EPSG::1024' => [
@@ -9680,6 +9717,22 @@ class Datum
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
         ],
+        'urn:ogc:def:datum:EPSG::1296' => [
+            'name' => 'Baltic 1986',
+            'type' => 'vertical',
+            'ellipsoid' => null,
+            'prime_meridian' => null,
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
+        'urn:ogc:def:datum:EPSG::1297' => [
+            'name' => 'European Vertical Reference Frame 2007 Poland',
+            'type' => 'vertical',
+            'ellipsoid' => null,
+            'prime_meridian' => null,
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
         'urn:ogc:def:datum:EPSG::1298' => [
             'name' => 'Estonian Height System 2000',
             'type' => 'vertical',
@@ -9735,6 +9788,14 @@ class Datum
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => 2019.0,
+        ],
+        'urn:ogc:def:datum:EPSG::1305' => [
+            'name' => 'ETRF2000 Poland',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
         ],
         'urn:ogc:def:datum:EPSG::5100' => [
             'name' => 'Mean Sea Level',
@@ -12118,7 +12179,7 @@ class Datum
             'frame_reference_epoch' => null,
         ],
         'urn:ogc:def:datum:EPSG::6277' => [
-            'name' => 'OSGB 1936',
+            'name' => 'Ordnance Survey of Great Britain 1936',
             'type' => 'geodetic',
             'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7001',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
