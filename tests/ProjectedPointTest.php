@@ -14,6 +14,7 @@ use PHPCoord\CoordinateOperation\CRSTransformations;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Projected;
+use PHPCoord\CoordinateReferenceSystem\ProjectedSRIDData;
 use PHPCoord\CoordinateSystem\Cartesian;
 use PHPCoord\Datum\Datum;
 use PHPCoord\Datum\Ellipsoid;
@@ -35,6 +36,8 @@ use PHPUnit\Framework\TestCase;
 
 class ProjectedPointTest extends TestCase
 {
+    use ProjectedSRIDData;
+
     public function testEastingNorthing(): void
     {
         $object = ProjectedPoint::createFromEastingNorthing(new Metre(123), new Metre(456), Projected::fromSRID(Projected::EPSG_WGS_84_WORLD_MERCATOR));
@@ -688,9 +691,8 @@ class ProjectedPointTest extends TestCase
     public function supportedOperations(): array
     {
         $toTest = [];
-        $crss = Projected::getSupportedSRIDs();
         foreach (CRSTransformations::getSupportedTransformations() as $transformation) {
-            if (isset($crss[$transformation['source_crs']])) {
+            if (isset(static::$sridData[$transformation['source_crs']])) {
                 $toTest[] = [
                     $transformation['source_crs'],
                     $transformation['target_crs'],

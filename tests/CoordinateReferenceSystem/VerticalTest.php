@@ -14,6 +14,8 @@ use PHPUnit\Framework\TestCase;
 
 class VerticalTest extends TestCase
 {
+    use VerticalSRIDData;
+
     public function testCanGetSupported(): void
     {
         $supported = Vertical::getSupportedSRIDs();
@@ -42,11 +44,11 @@ class VerticalTest extends TestCase
 
     public function coordinateReferenceSystems(): array
     {
-        $data = [];
-        foreach (Vertical::getSupportedSRIDs() as $srid => $name) {
-            $data[$name] = [$srid];
+        $return = [];
+        foreach (static::$sridData as $srid => $data) {
+            $return[$data['name']] = [$srid];
         }
 
-        return $data;
+        return $return;
     }
 }

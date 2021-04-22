@@ -15,6 +15,7 @@ use PHPCoord\CoordinateOperation\CRSTransformations;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Vertical;
+use PHPCoord\CoordinateReferenceSystem\VerticalSRIDData;
 use PHPCoord\UnitOfMeasure\Angle\Radian;
 use PHPCoord\UnitOfMeasure\Length\Foot;
 use PHPCoord\UnitOfMeasure\Length\Metre;
@@ -23,6 +24,8 @@ use PHPUnit\Framework\TestCase;
 
 class VerticalPointTest extends TestCase
 {
+    use VerticalSRIDData;
+
     public function testVertical(): void
     {
         $object = VerticalPoint::create(new Metre(123), Vertical::fromSRID(Vertical::EPSG_EGM2008_HEIGHT));
@@ -130,7 +133,6 @@ class VerticalPointTest extends TestCase
     public function supportedOperations(): array
     {
         $toTest = [];
-        $crss = Vertical::getSupportedSRIDs();
         foreach (CRSTransformations::getSupportedTransformations() as $transformation) {
             $operation = CoordinateOperations::getOperationData($transformation['operation']);
             if (isset($operation['operations'])) {
@@ -144,7 +146,7 @@ class VerticalPointTest extends TestCase
                 $operations[$transformation['operation']] = $operation;
             }
 
-            if (isset($crss[$transformation['source_crs']])) {
+            if (isset(static::$sridData[$transformation['source_crs']])) {
                 $toTest[] = [
                     $transformation['source_crs'],
                     $transformation['target_crs'],
