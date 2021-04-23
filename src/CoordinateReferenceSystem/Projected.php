@@ -11976,7 +11976,7 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * NAD83 / UTM zone 23N
-     * Extent: Canada offshore Atlantic - east of 48°W.
+     * Extent: Canada offshore Atlantic - 48°W to 42°W.
      */
     public const EPSG_NAD83_UTM_ZONE_23N = 'urn:ogc:def:crs:EPSG::26923';
 
@@ -18767,6 +18767,12 @@ class Projected extends CoordinateReferenceSystem
      * Extent: Canada between 54°W and 48°W onshore and offshore - Newfoundland and Labrador.
      */
     public const EPSG_NAD83_CSRS_UTM_ZONE_22N = 'urn:ogc:def:crs:EPSG::3761';
+
+    /**
+     * NAD83(CSRS) / UTM zone 23N
+     * Extent: Canada offshore Atlantic - 48°W to 42°W.
+     */
+    public const EPSG_NAD83_CSRS_UTM_ZONE_23N = 'urn:ogc:def:crs:EPSG::9709';
 
     /**
      * NAD83(CSRS) / UTM zone 7N

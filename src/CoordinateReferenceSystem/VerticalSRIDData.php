@@ -81,7 +81,7 @@ trait VerticalSRIDData
             'name' => 'Black Sea depth',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6498',
             'datum' => 'urn:ogc:def:datum:EPSG::5134',
-            'extent_code' => ['3251'],
+            'extent_code' => ['1102'],
         ],
         'urn:ogc:def:crs:EPSG::5597' => [
             'name' => 'FCSVR10 height',

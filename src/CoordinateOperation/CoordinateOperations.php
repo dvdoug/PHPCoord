@@ -8500,6 +8500,16 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::1056',
             'extent_code' => ['4167'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::7812' => [
+            'name' => 'Height <> Depth Conversion',
+            'method' => 'urn:ogc:def:method:EPSG::1068',
+            'extent_code' => ['1262'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::7813' => [
+            'name' => 'Vertical Axis Unit Conversion',
+            'method' => 'urn:ogc:def:method:EPSG::1104',
+            'extent_code' => ['1262'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::7814' => [
             'name' => 'ITRF89 to ITRF2000 (1)',
             'method' => 'urn:ogc:def:method:EPSG::1053',
@@ -8730,11 +8740,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::1066',
             'extent_code' => ['1262'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::7963' => [
-            'name' => 'Poolbeg height (ft(Br36)) to Poolbeg height (m)',
-            'method' => 'urn:ogc:def:method:EPSG::1069',
-            'extent_code' => ['1305'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::7964' => [
             'name' => 'Poolbeg height (m) to Malin Head height (1)',
             'method' => 'urn:ogc:def:method:EPSG::9616',
@@ -8745,7 +8750,7 @@ class CoordinateOperations
             'extent_code' => ['1305'],
             'operations' => [
                 [
-                    'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7963',
+                    'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7813',
                     'source_crs' => null,
                     'target_crs' => null,
                 ],
@@ -8759,14 +8764,14 @@ class CoordinateOperations
         'urn:ogc:def:coordinateOperation:EPSG::7966' => [
             'name' => 'Poolbeg height (m) to Belfast height (1)',
             'method' => 'urn:ogc:def:method:EPSG::9616',
-            'extent_code' => ['1305'],
+            'extent_code' => ['2530'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::7967' => [
             'name' => 'Poolbeg height (ft(Br36)) to Belfast height (1)',
-            'extent_code' => ['1305'],
+            'extent_code' => ['2530'],
             'operations' => [
                 [
-                    'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7963',
+                    'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7813',
                     'source_crs' => null,
                     'target_crs' => null,
                 ],
@@ -8776,11 +8781,6 @@ class CoordinateOperations
                     'target_crs' => 'urn:ogc:def:crs:EPSG::5732',
                 ],
             ],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::7972' => [
-            'name' => 'NGVD29 height (ftUS) to NGVD29 height (m)',
-            'method' => 'urn:ogc:def:method:EPSG::1069',
-            'extent_code' => ['1323'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::7977' => [
             'name' => 'HKPD depth to HKCD depth (1)',
@@ -8797,17 +8797,12 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9616',
             'extent_code' => ['3267'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::7982' => [
-            'name' => 'HKPD height to HKPD depth',
-            'method' => 'urn:ogc:def:method:EPSG::1068',
-            'extent_code' => ['3334'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::7983' => [
             'name' => 'HKPD height to HKCD depth (1)',
             'extent_code' => ['3335'],
             'operations' => [
                 [
-                    'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7982',
+                    'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7812',
                     'source_crs' => null,
                     'target_crs' => null,
                 ],
@@ -8817,16 +8812,6 @@ class CoordinateOperations
                     'target_crs' => 'urn:ogc:def:crs:EPSG::5739',
                 ],
             ],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::7984' => [
-            'name' => 'KOC WD height to KOC WD depth',
-            'method' => 'urn:ogc:def:method:EPSG::1068',
-            'extent_code' => ['3267'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::7985' => [
-            'name' => 'KOC WD depth to KOC WD depth (ft)',
-            'method' => 'urn:ogc:def:method:EPSG::1069',
-            'extent_code' => ['3267'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::7986' => [
             'name' => 'KOC CD height to KOC WD depth (1)',
@@ -8838,7 +8823,7 @@ class CoordinateOperations
                     'target_crs' => 'urn:ogc:def:crs:EPSG::7979',
                 ],
                 [
-                    'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7984',
+                    'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7812',
                     'source_crs' => null,
                     'target_crs' => null,
                 ],
@@ -8854,12 +8839,12 @@ class CoordinateOperations
                     'target_crs' => 'urn:ogc:def:crs:EPSG::7979',
                 ],
                 [
-                    'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7984',
+                    'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7812',
                     'source_crs' => null,
                     'target_crs' => null,
                 ],
                 [
-                    'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7985',
+                    'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7813',
                     'source_crs' => null,
                     'target_crs' => null,
                 ],
@@ -11244,6 +11229,11 @@ class CoordinateOperations
             'name' => 'ETRF2000-PL to ETRS89 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['1192'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9743' => [
+            'name' => 'PN68 to WGS 84 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::9603',
+            'extent_code' => ['3873'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::10085' => [
             'name' => 'Trinidad 1903 to WGS 84 (2)',
@@ -14188,7 +14178,7 @@ class CoordinateOperations
         'urn:ogc:def:coordinateOperation:EPSG::15815' => [
             'name' => 'PN84 to WGS 84 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3873'],
+            'extent_code' => ['4598'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::15816' => [
             'name' => 'Tristan 1968 to WGS 84 (1)',

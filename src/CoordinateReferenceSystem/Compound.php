@@ -1948,6 +1948,13 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_NAD83_CSRS_UTM_ZONE_15N_PLUS_CGVD2013_HEIGHT = 'urn:ogc:def:crs:EPSG::6658';
 
     /**
+     * NAD83(CSRS) / UTM zone 15N + CGVD2013a height
+     * Extent: Canada between 96°W and 90°W, onshore and offshore south of 84°N - Manitoba, Nunavut, Ontario.
+     * Replaces NAD83(CSRS) / UTM zone 15N + CGVD2013 height (CCRS code 6658).
+     */
+    public const EPSG_NAD83_CSRS_UTM_ZONE_15N_PLUS_CGVD2013A_HEIGHT = 'urn:ogc:def:crs:EPSG::9715';
+
+    /**
      * NAD83(CSRS) / UTM zone 16N + CGVD2013 height
      * Extent: Canada between 90°W and 84°W, onshore and offshore south of 84°N - Manitoba, Nunavut, Ontario.
      */
@@ -1990,6 +1997,12 @@ class Compound extends CoordinateReferenceSystem
      * Extent: Canada between 54°W and 48°W onshore and offshore - Newfoundland and Labrador.
      */
     public const EPSG_NAD83_CSRS_UTM_ZONE_22N_PLUS_CGVD2013_HEIGHT = 'urn:ogc:def:crs:EPSG::6665';
+
+    /**
+     * NAD83(CSRS) / UTM zone 23N + CGVD2013 height
+     * Extent: Canada offshore Atlantic - 48°W to 42°W.
+     */
+    public const EPSG_NAD83_CSRS_UTM_ZONE_23N_PLUS_CGVD2013_HEIGHT = 'urn:ogc:def:crs:EPSG::9711';
 
     /**
      * NAD83(CSRS) / UTM zone 7N + CGVD2013 height

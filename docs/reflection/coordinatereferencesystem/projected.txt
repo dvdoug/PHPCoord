@@ -21461,7 +21461,7 @@ Replaces NAD27 / UTM zone 22N. For accuracies better than 1m replaced by NAD83(C
 NAD83 / UTM zone 23N
 --------------------
 
-| Used: Canada offshore Atlantic - east of 48°W.
+| Used: Canada offshore Atlantic - 48°W to 42°W.
 
 .. code-block:: php
 
@@ -32554,6 +32554,19 @@ NAD83(CSRS) / UTM zone 22N
     Projected::fromSRID('urn:ogc:def:crs:EPSG::3761')
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_NAD83_CSRS_UTM_ZONE_22N)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3761')
+
+
+NAD83(CSRS) / UTM zone 23N
+--------------------------
+
+| Used: Canada offshore Atlantic - 48°W to 42°W.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NAD83_CSRS_UTM_ZONE_23N)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9709')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NAD83_CSRS_UTM_ZONE_23N)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9709')
 
 
 NAD83(CSRS) / UTM zone 7N

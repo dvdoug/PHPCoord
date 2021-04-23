@@ -1851,7 +1851,7 @@ trait Geographic2DSRIDData
             'name' => 'PN84',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
             'datum' => 'urn:ogc:def:datum:EPSG::6728',
-            'extent_code' => ['3873'],
+            'extent_code' => ['4598'],
         ],
         'urn:ogc:def:crs:EPSG::4729' => [
             'name' => 'Pitcairn 1967',

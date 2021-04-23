@@ -2560,7 +2560,7 @@ class Geographic2D extends Geographic
 
     /**
      * PN84
-     * Extent: Spain - Canary Islands onshore.
+     * Extent: Spain - Canary Islands - El Hierro, La Gomera, La Palma and Tenerife - onshore.
      * Replaces PN68 (CRS code 9403) only on western islands (El Hierro, La Gomera, La Palma and Tenerife). Replaced by
      * REGCAN95 (CRS code 4081).
      */

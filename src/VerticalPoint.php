@@ -18,7 +18,6 @@ use PHPCoord\Exception\InvalidCoordinateReferenceSystemException;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Length\Metre;
-use PHPCoord\UnitOfMeasure\Scale\Scale;
 use function sin;
 use function sqrt;
 
@@ -153,8 +152,7 @@ class VerticalPoint extends Point
      * Change of Vertical Unit.
      */
     public function changeOfVerticalUnit(
-        Vertical $to,
-        Scale $unitConversionScalar
+        Vertical $to
     ) {
         // units are auto-converted, don't need to use the supplied param
         return static::create($this->height, $to, $this->epoch);
