@@ -8,21 +8,6 @@ Most such algorithms are not standalone, but require parameters to work - for in
 to be specified and these points differ across mapping systems even when they utilise the same algorithm. Knowing both
 the algorithm(s) to be used and the parameters used to tune them is essential to perform high-accuracy conversions.
 
-.. note::
-    If the Earth were actually the shape of an ellipsoid, algorithms could be devised so that conversions between systems
-    could be performed with no absolutely no loss of accuracy - systems would in effect be mathematically equivalent.
-
-    Unfortunately the Earth isn't an ellipsoid and coordinates are determined by individual humans
-    operating on the Earth's actual, irregular surface using instruments subject to observation error. That means
-    that conversions between CRSs are not just converting between mathematical ideals but often convert between
-    *sets of observations*. When this happens it means that the conversions between the CRSs can only ever be
-    an approximation (typically within a few metres) rather a precise transformation.
-
-    A corollary is that when dealing with CRSs that cover significant land area it is possible (and common) for mapping
-    agencies to derive multiple different parameter sets for use to obtain better accuracy depending on location. For
-    example when converting from ED50 to ETRS89 you would ideally use slightly different parameters for a point inside
-    Portugal than for a point inside Norway.
-
 PHPCoord offers two models of operation for coordinate conversion:
 
 * The hard way in which you can directly utilise one of the many implemented algorithms along with the parameters of your

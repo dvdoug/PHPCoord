@@ -1245,9 +1245,25 @@ class EPSGImporter
         echo 'Updating extents...';
         $boundingBoxOnly = $this->sourceDir . '/Geometry/Extents/BoundingBoxOnly/';
         $builtInFull = $this->sourceDir . '/Geometry/Extents/';
+        $africa = $this->sourceDir . '/../vendor/php-coord/php-coord-datapack-africa/src/Geometry/Extents/';
+        $antarctic = $this->sourceDir . '/../vendor/php-coord/php-coord-datapack-antarctic/src/Geometry/Extents/';
+        $arctic = $this->sourceDir . '/../vendor/php-coord/php-coord-datapack-arctic/src/Geometry/Extents/';
+        $asia = $this->sourceDir . '/../vendor/php-coord/php-coord-datapack-asia/src/Geometry/Extents/';
+        $europe = $this->sourceDir . '/../vendor/php-coord/php-coord-datapack-europe/src/Geometry/Extents/';
+        $northAmerica = $this->sourceDir . '/../vendor/php-coord/php-coord-datapack-northamerica/src/Geometry/Extents/';
+        $southAmerica = $this->sourceDir . '/../vendor/php-coord/php-coord-datapack-southamerica/src/Geometry/Extents/';
+        $oceania = $this->sourceDir . '/../vendor/php-coord/php-coord-datapack-oceania/src/Geometry/Extents/';
 
         array_map('unlink', glob($boundingBoxOnly . '*.php'));
         array_map('unlink', glob($builtInFull . '*.php'));
+        array_map('unlink', glob($africa . '*.php'));
+        array_map('unlink', glob($antarctic . '*.php'));
+        array_map('unlink', glob($arctic . '*.php'));
+        array_map('unlink', glob($asia . '*.php'));
+        array_map('unlink', glob($europe . '*.php'));
+        array_map('unlink', glob($northAmerica . '*.php'));
+        array_map('unlink', glob($southAmerica . '*.php'));
+        array_map('unlink', glob($oceania . '*.php'));
 
         $sql = "
             SELECT e.extent_code
@@ -1323,34 +1339,50 @@ class EPSGImporter
                 case 'Africa':
                     file_put_contents($boundingBoxOnly . "Extent{$extentCode}.php", $exportSimple);
                     $this->csFixFile($boundingBoxOnly . "Extent{$extentCode}.php");
+                    file_put_contents($africa . "Extent{$extentCode}.php", $exportFull);
+                    $this->csFixFile($africa . "Extent{$extentCode}.php");
                     break;
                 case 'Antarctic':
                     file_put_contents($boundingBoxOnly . "Extent{$extentCode}.php", $exportSimple);
                     $this->csFixFile($boundingBoxOnly . "Extent{$extentCode}.php");
+                    file_put_contents($antarctic . "Extent{$extentCode}.php", $exportFull);
+                    $this->csFixFile($antarctic . "Extent{$extentCode}.php");
                     break;
                 case 'Arctic':
                     file_put_contents($boundingBoxOnly . "Extent{$extentCode}.php", $exportSimple);
                     $this->csFixFile($boundingBoxOnly . "Extent{$extentCode}.php");
+                    file_put_contents($arctic . "Extent{$extentCode}.php", $exportFull);
+                    $this->csFixFile($arctic . "Extent{$extentCode}.php");
                     break;
                 case 'Asia-ExFSU':
                     file_put_contents($boundingBoxOnly . "Extent{$extentCode}.php", $exportSimple);
                     $this->csFixFile($boundingBoxOnly . "Extent{$extentCode}.php");
+                    file_put_contents($asia . "Extent{$extentCode}.php", $exportFull);
+                    $this->csFixFile($asia . "Extent{$extentCode}.php");
                     break;
                 case 'Australasia and Oceania':
                     file_put_contents($boundingBoxOnly . "Extent{$extentCode}.php", $exportSimple);
                     $this->csFixFile($boundingBoxOnly . "Extent{$extentCode}.php");
+                    file_put_contents($oceania . "Extent{$extentCode}.php", $exportFull);
+                    $this->csFixFile($oceania . "Extent{$extentCode}.php");
                     break;
                 case 'Europe-FSU':
                     file_put_contents($boundingBoxOnly . "Extent{$extentCode}.php", $exportSimple);
                     $this->csFixFile($boundingBoxOnly . "Extent{$extentCode}.php");
+                    file_put_contents($europe . "Extent{$extentCode}.php", $exportFull);
+                    $this->csFixFile($europe . "Extent{$extentCode}.php");
                     break;
                 case 'North America':
                     file_put_contents($boundingBoxOnly . "Extent{$extentCode}.php", $exportSimple);
                     $this->csFixFile($boundingBoxOnly . "Extent{$extentCode}.php");
+                    file_put_contents($northAmerica . "Extent{$extentCode}.php", $exportFull);
+                    $this->csFixFile($northAmerica . "Extent{$extentCode}.php");
                     break;
                 case 'South America':
                     file_put_contents($boundingBoxOnly . "Extent{$extentCode}.php", $exportSimple);
                     $this->csFixFile($boundingBoxOnly . "Extent{$extentCode}.php");
+                    file_put_contents($southAmerica . "Extent{$extentCode}.php", $exportFull);
+                    $this->csFixFile($southAmerica . "Extent{$extentCode}.php");
                     break;
                 default:
                     throw new Exception("Unknown region: {$region}");

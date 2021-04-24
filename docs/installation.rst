@@ -9,7 +9,18 @@ and configuring an autoloader:
 
     composer require php-coord/php-coord
 
-The code is also available to download from `GitHub`_
+For :ref:`increased accuracy<accuracy>` of conversions, you may wish to install one or more optional add-on datapacks:
+
+* ``php-coord/datapack-africa``
+* ``php-coord/datapack-antarctic``
+* ``php-coord/datapack-arctic``
+* ``php-coord/datapack-asia``
+* ``php-coord/datapack-europe``
+* ``php-coord/datapack-northamerica``
+* ``php-coord/datapack-oceania``
+* ``php-coord/datapack-southamerica``
+
+The code for the core package and the datapacks is also available to download from `GitHub`_
 
 Requirements
 ------------

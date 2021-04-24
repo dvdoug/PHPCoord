@@ -263,7 +263,7 @@ Universal Transverse Mercator (UTM)
 Although one of the most widely used applications of the Transverse Mercator projection, UTM is not actually a map
 projection. It's a *system* of map projections, and this distinction means that it does not fit neatly into the
 standard data model. Mathematically each UTM zone/hemisphere combination is its own unique projection and
-therefore to work with the data you also need to know which zone/hemisphere the coordinates are reference to.
+therefore to work with the data you also need to know which zone/hemisphere the coordinates are referenced to.
 Adding a further layer of complication is that although UTM is most commonly used alongside WGS84, it can be used with
 any Geographic CRS so that information needs to be known as well.
 
