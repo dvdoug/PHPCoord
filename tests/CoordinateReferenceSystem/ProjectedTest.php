@@ -14,6 +14,8 @@ use PHPUnit\Framework\TestCase;
 
 class ProjectedTest extends TestCase
 {
+    use ProjectedSRIDData;
+
     public function testCanGetSupported(): void
     {
         $supported = Projected::getSupportedSRIDs();
@@ -42,11 +44,11 @@ class ProjectedTest extends TestCase
 
     public function coordinateReferenceSystems(): array
     {
-        $data = [];
-        foreach (Projected::getSupportedSRIDs() as $srid => $name) {
-            $data[$name] = [$srid];
+        $return = [];
+        foreach (static::$sridData as $srid => $data) {
+            $return[$data['name']] = [$srid];
         }
 
-        return $data;
+        return $return;
     }
 }

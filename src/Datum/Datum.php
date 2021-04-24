@@ -548,7 +548,7 @@ class Datum
     /**
      * Black Sea
      * Type: vertical
-     * Extent: Georgia - onshore.
+     * Extent: Georgia - onshore and offshore.
      *
      * Black Sea datum is 0.4m below Baltic datum.
      */

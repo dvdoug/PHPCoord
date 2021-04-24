@@ -2411,5 +2411,19 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5773',
             'extent_code' => ['1262'],
         ],
+        'urn:ogc:def:crs:EPSG::9711' => [
+            'name' => 'NAD83(CSRS) / UTM zone 23N + CGVD2013 height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::9709',
+            'horizontal_crs_type' => 'projected',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::6647',
+            'extent_code' => ['2153'],
+        ],
+        'urn:ogc:def:crs:EPSG::9715' => [
+            'name' => 'NAD83(CSRS) / UTM zone 15N + CGVD2013a height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::3159',
+            'horizontal_crs_type' => 'projected',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::9245',
+            'extent_code' => ['3414'],
+        ],
     ];
 }

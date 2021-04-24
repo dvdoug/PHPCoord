@@ -78,7 +78,7 @@ class CoordinateOperationMethods
     /**
      * Change of Vertical Unit.
      */
-    public const EPSG_CHANGE_OF_VERTICAL_UNIT = 'urn:ogc:def:method:EPSG::1069';
+    public const EPSG_CHANGE_OF_VERTICAL_UNIT = 'urn:ogc:def:method:EPSG::1104';
 
     /**
      * Colombia Urban.
@@ -185,14 +185,6 @@ class CoordinateOperationMethods
      * Geocentric/topocentric conversions.
      */
     public const EPSG_GEOCENTRIC_TOPOCENTRIC_CONVERSIONS = 'urn:ogc:def:method:EPSG::9836';
-
-    /**
-     * Geog3D to Geog2D+GravityRelatedHeight (US .gtx)
-     * Transformation from a Geographic 3D CRS to a Compound CRS consisting of a Geographic 2D CRS and a Vertical CRS,
-     * or vice versa. The Geographic 3D and the Geographic 2D CRS must be based on the same Geodetic Datum.
-     * @deprecated
-     */
-    public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_US_GTX = 'urn:ogc:def:method:EPSG::9635';
 
     /**
      * Geographic/geocentric conversions

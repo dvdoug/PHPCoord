@@ -14,6 +14,8 @@ use PHPUnit\Framework\TestCase;
 
 class Geographic2DTest extends TestCase
 {
+    use Geographic2DSRIDData;
+
     public function testCanGetSupported(): void
     {
         $supported = Geographic2D::getSupportedSRIDs();
@@ -42,11 +44,11 @@ class Geographic2DTest extends TestCase
 
     public function coordinateReferenceSystems(): array
     {
-        $data = [];
-        foreach (Geographic2D::getSupportedSRIDs() as $srid => $name) {
-            $data[$name] = [$srid];
+        $return = [];
+        foreach (static::$sridData as $srid => $data) {
+            $return[$data['name']] = [$srid];
         }
 
-        return $data;
+        return $return;
     }
 }

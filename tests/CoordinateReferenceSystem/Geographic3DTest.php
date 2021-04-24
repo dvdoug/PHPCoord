@@ -14,6 +14,8 @@ use PHPUnit\Framework\TestCase;
 
 class Geographic3DTest extends TestCase
 {
+    use Geographic3DSRIDData;
+
     public function testCanGetSupported(): void
     {
         $supported = Geographic3D::getSupportedSRIDs();
@@ -42,11 +44,11 @@ class Geographic3DTest extends TestCase
 
     public function coordinateReferenceSystems(): array
     {
-        $data = [];
-        foreach (Geographic3D::getSupportedSRIDs() as $srid => $name) {
-            $data[$name] = [$srid];
+        $return = [];
+        foreach (static::$sridData as $srid => $data) {
+            $return[$data['name']] = [$srid];
         }
 
-        return $data;
+        return $return;
     }
 }

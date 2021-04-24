@@ -258,7 +258,7 @@ Malin Head height (CRS code 5731) used for medium and small scale topographic ma
 Black Sea depth
 ---------------
 
-| Used: Georgia - onshore.
+| Used: Georgia - onshore and offshore.
 
 .. code-block:: php
 
@@ -362,7 +362,7 @@ CGVD2013(CGG2013a) height
     CoordinateReferenceSystem::fromSRID(Vertical::EPSG_CGVD2013_CGG2013A_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9245')
 
-Replaces CGVD2013(CGG2013) height (CRS code 6647). CGVD2013(CGG2013a) height is realized by Canadian gravimetric geoid model CGG2013a (CT code 9247).
+Replaces CGVD2013(CGG2013) height (CRS code 6647). CGG2013a is identical to CGG2013 except in the western sector of Lake of the Woods. CGVD2013(CGG2013a) height is realized by Canadian gravimetric geoid model CGG2013a (CT code 9247).
 
 CGVD28 height
 -------------

@@ -820,7 +820,7 @@ Black Sea
 ---------
 
 | Type: Vertical
-| Used: Georgia - onshore.
+| Used: Georgia - onshore and offshore.
 
 .. code-block:: php
 

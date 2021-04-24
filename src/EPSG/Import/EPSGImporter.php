@@ -119,6 +119,7 @@ class EPSGImporter
         $sqlite->exec('UPDATE epsg_coordinatereferencesystem SET projection_conv_code = 15593 WHERE coord_ref_sys_code = 9066');
         $sqlite->exec('UPDATE epsg_coordinatereferencesystem SET projection_conv_code = NULL WHERE coord_ref_sys_code = 4203');
         $sqlite->exec('UPDATE epsg_coordinatereferencesystem SET projection_conv_code = NULL WHERE coord_ref_sys_code = 4277');
+        $sqlite->exec('UPDATE epsg_coordinatereferencesystem SET projection_conv_code = NULL WHERE coord_ref_sys_code = 4728');
 
         $sqlite->exec('VACUUM');
         $sqlite->exec('PRAGMA journal_mode=DELETE'); //but WAL is not openable read-only in older SQLite
@@ -895,7 +896,7 @@ class EPSGImporter
                 'urn:ogc:def:crs:EPSG::' || crs.coord_ref_sys_code AS urn,
                 crs.coord_ref_sys_name AS name,
                 'urn:ogc:def:cs:EPSG::' || crs.coord_sys_code AS coordinate_system,
-                'urn:ogc:def:datum:EPSG::' || COALESCE(crs.datum_code, crs_base.datum_code) AS datum,
+                'urn:ogc:def:datum:EPSG::' || COALESCE(crs.datum_code, crs_base.datum_code, crs_base2.datum_code) AS datum,
                 crs.coord_ref_sys_name || '\n' || 'Extent: ' || GROUP_CONCAT(e.extent_description, ' ') || '\n' || crs.remarks AS constant_help,
                 GROUP_CONCAT(e.extent_code, ',') AS extent_code,
                 GROUP_CONCAT(e.extent_description, ' ') AS extent,
@@ -905,6 +906,7 @@ class EPSGImporter
             JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
             JOIN epsg_extent e ON u.extent_code = e.extent_code
             LEFT JOIN epsg_coordinatereferencesystem crs_base ON crs_base.coord_ref_sys_code = crs.base_crs_code
+            LEFT JOIN epsg_coordinatereferencesystem crs_base2 ON crs_base2.coord_ref_sys_code = crs_base.base_crs_code
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2020-12-14'
             WHERE dep.deprecation_id IS NULL AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%' AND crs.coord_ref_sys_name NOT LIKE '%mining%'
             AND (crs.cmpd_horizcrs_code IS NULL OR crs.cmpd_horizcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
@@ -983,7 +985,7 @@ class EPSGImporter
             FROM epsg_coordoperationmethod m
             LEFT JOIN epsg_coordoperationparamvalue p ON p.coord_op_method_code = m.coord_op_method_code
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperationmethod' AND dep.object_code = m.coord_op_method_code AND dep.deprecation_date <= '2020-12-14'
-            WHERE dep.deprecation_id IS NULL
+            WHERE dep.deprecation_id IS NULL AND m.deprecated = 0
             AND m.coord_op_method_name NOT LIKE '%wellbore%'
             AND m.coord_op_method_name NOT LIKE '%mining%'
             AND m.coord_op_method_name NOT LIKE '%seismic%'
@@ -1243,9 +1245,25 @@ class EPSGImporter
         echo 'Updating extents...';
         $boundingBoxOnly = $this->sourceDir . '/Geometry/Extents/BoundingBoxOnly/';
         $builtInFull = $this->sourceDir . '/Geometry/Extents/';
+        $africa = $this->sourceDir . '/../vendor/php-coord/php-coord-datapack-africa/src/Geometry/Extents/';
+        $antarctic = $this->sourceDir . '/../vendor/php-coord/php-coord-datapack-antarctic/src/Geometry/Extents/';
+        $arctic = $this->sourceDir . '/../vendor/php-coord/php-coord-datapack-arctic/src/Geometry/Extents/';
+        $asia = $this->sourceDir . '/../vendor/php-coord/php-coord-datapack-asia/src/Geometry/Extents/';
+        $europe = $this->sourceDir . '/../vendor/php-coord/php-coord-datapack-europe/src/Geometry/Extents/';
+        $northAmerica = $this->sourceDir . '/../vendor/php-coord/php-coord-datapack-northamerica/src/Geometry/Extents/';
+        $southAmerica = $this->sourceDir . '/../vendor/php-coord/php-coord-datapack-southamerica/src/Geometry/Extents/';
+        $oceania = $this->sourceDir . '/../vendor/php-coord/php-coord-datapack-oceania/src/Geometry/Extents/';
 
         array_map('unlink', glob($boundingBoxOnly . '*.php'));
         array_map('unlink', glob($builtInFull . '*.php'));
+        array_map('unlink', glob($africa . '*.php'));
+        array_map('unlink', glob($antarctic . '*.php'));
+        array_map('unlink', glob($arctic . '*.php'));
+        array_map('unlink', glob($asia . '*.php'));
+        array_map('unlink', glob($europe . '*.php'));
+        array_map('unlink', glob($northAmerica . '*.php'));
+        array_map('unlink', glob($southAmerica . '*.php'));
+        array_map('unlink', glob($oceania . '*.php'));
 
         $sql = "
             SELECT e.extent_code
@@ -1321,34 +1339,50 @@ class EPSGImporter
                 case 'Africa':
                     file_put_contents($boundingBoxOnly . "Extent{$extentCode}.php", $exportSimple);
                     $this->csFixFile($boundingBoxOnly . "Extent{$extentCode}.php");
+                    file_put_contents($africa . "Extent{$extentCode}.php", $exportFull);
+                    $this->csFixFile($africa . "Extent{$extentCode}.php");
                     break;
                 case 'Antarctic':
                     file_put_contents($boundingBoxOnly . "Extent{$extentCode}.php", $exportSimple);
                     $this->csFixFile($boundingBoxOnly . "Extent{$extentCode}.php");
+                    file_put_contents($antarctic . "Extent{$extentCode}.php", $exportFull);
+                    $this->csFixFile($antarctic . "Extent{$extentCode}.php");
                     break;
                 case 'Arctic':
                     file_put_contents($boundingBoxOnly . "Extent{$extentCode}.php", $exportSimple);
                     $this->csFixFile($boundingBoxOnly . "Extent{$extentCode}.php");
+                    file_put_contents($arctic . "Extent{$extentCode}.php", $exportFull);
+                    $this->csFixFile($arctic . "Extent{$extentCode}.php");
                     break;
                 case 'Asia-ExFSU':
                     file_put_contents($boundingBoxOnly . "Extent{$extentCode}.php", $exportSimple);
                     $this->csFixFile($boundingBoxOnly . "Extent{$extentCode}.php");
+                    file_put_contents($asia . "Extent{$extentCode}.php", $exportFull);
+                    $this->csFixFile($asia . "Extent{$extentCode}.php");
                     break;
                 case 'Australasia and Oceania':
                     file_put_contents($boundingBoxOnly . "Extent{$extentCode}.php", $exportSimple);
                     $this->csFixFile($boundingBoxOnly . "Extent{$extentCode}.php");
+                    file_put_contents($oceania . "Extent{$extentCode}.php", $exportFull);
+                    $this->csFixFile($oceania . "Extent{$extentCode}.php");
                     break;
                 case 'Europe-FSU':
                     file_put_contents($boundingBoxOnly . "Extent{$extentCode}.php", $exportSimple);
                     $this->csFixFile($boundingBoxOnly . "Extent{$extentCode}.php");
+                    file_put_contents($europe . "Extent{$extentCode}.php", $exportFull);
+                    $this->csFixFile($europe . "Extent{$extentCode}.php");
                     break;
                 case 'North America':
                     file_put_contents($boundingBoxOnly . "Extent{$extentCode}.php", $exportSimple);
                     $this->csFixFile($boundingBoxOnly . "Extent{$extentCode}.php");
+                    file_put_contents($northAmerica . "Extent{$extentCode}.php", $exportFull);
+                    $this->csFixFile($northAmerica . "Extent{$extentCode}.php");
                     break;
                 case 'South America':
                     file_put_contents($boundingBoxOnly . "Extent{$extentCode}.php", $exportSimple);
                     $this->csFixFile($boundingBoxOnly . "Extent{$extentCode}.php");
+                    file_put_contents($southAmerica . "Extent{$extentCode}.php", $exportFull);
+                    $this->csFixFile($southAmerica . "Extent{$extentCode}.php");
                     break;
                 default:
                     throw new Exception("Unknown region: {$region}");

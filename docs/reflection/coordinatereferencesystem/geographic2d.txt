@@ -5397,7 +5397,7 @@ On western islands (El Hierro, La Gomera, La Palma and Tenerife) replaced by PN8
 PN84
 ----
 
-| Used: Spain - Canary Islands onshore.
+| Used: Spain - Canary Islands - El Hierro, La Gomera, La Palma and Tenerife - onshore.
 
 .. code-block:: php
 

@@ -20,7 +20,25 @@
         "friendsofphp/php-cs-fixer": "^2.18.0",
         "gasparesganga/php-shapefile": "^3.4",
         "nikic/php-parser": "^4.10",
+        "php-coord/datapack-africa": "^1.0",
+        "php-coord/datapack-antarctic": "^1.0",
+        "php-coord/datapack-arctic": "^1.0",
+        "php-coord/datapack-asia": "^1.0",
+        "php-coord/datapack-europe": "^1.0",
+        "php-coord/datapack-northamerica": "^1.0",
+        "php-coord/datapack-oceania": "^1.0",
+        "php-coord/datapack-southamerica": "^1.0",
         "phpunit/phpunit": "^9.5.0"
+    },
+    "suggest": {
+        "php-coord/datapack-africa": "High-accuracy addon datapack for Africa",
+        "php-coord/datapack-antarctic": "High-accuracy addon datapack for the Antartic",
+        "php-coord/datapack-arctic": "High-accuracy addon datapack for the Arctic",
+        "php-coord/datapack-asia": "High-accuracy addon datapack for Asia",
+        "php-coord/datapack-europe": "High-accuracy addon datapack for Europe",
+        "php-coord/datapack-northamerica": "High-accuracy addon datapack for North America",
+        "php-coord/datapack-oceania": "High-accuracy addon datapack for Oceania",
+        "php-coord/datapack-southamerica": "High-accuracy addon datapack for South America"
     },
     "config": {
         "preferred-install": {

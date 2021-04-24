@@ -20915,6 +20915,12 @@ trait ProjectedSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1304',
             'extent_code' => ['3811'],
         ],
+        'urn:ogc:def:crs:EPSG::9709' => [
+            'name' => 'NAD83(CSRS) / UTM zone 23N',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::4400',
+            'datum' => 'urn:ogc:def:datum:EPSG::6140',
+            'extent_code' => ['2153'],
+        ],
         'urn:ogc:def:crs:EPSG::20004' => [
             'name' => 'Pulkovo 1995 / Gauss-Kruger zone 4',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::4530',

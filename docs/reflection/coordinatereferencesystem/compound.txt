@@ -3491,6 +3491,20 @@ NAD83(CSRS) / UTM zone 15N + CGVD2013 height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::6658')
 
 
+NAD83(CSRS) / UTM zone 15N + CGVD2013a height
+---------------------------------------------
+
+| Used: Canada between 96°W and 90°W, onshore and offshore south of 84°N - Manitoba, Nunavut, Ontario.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_NAD83_CSRS_UTM_ZONE_15N_PLUS_CGVD2013A_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9715')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_NAD83_CSRS_UTM_ZONE_15N_PLUS_CGVD2013A_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9715')
+
+Replaces NAD83(CSRS) / UTM zone 15N + CGVD2013 height (CCRS code 6658).
+
 NAD83(CSRS) / UTM zone 16N + CGVD2013 height
 --------------------------------------------
 
@@ -3580,6 +3594,19 @@ NAD83(CSRS) / UTM zone 22N + CGVD2013 height
     Compound::fromSRID('urn:ogc:def:crs:EPSG::6665')
     CoordinateReferenceSystem::fromSRID(Compound::EPSG_NAD83_CSRS_UTM_ZONE_22N_PLUS_CGVD2013_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::6665')
+
+
+NAD83(CSRS) / UTM zone 23N + CGVD2013 height
+--------------------------------------------
+
+| Used: Canada offshore Atlantic - 48°W to 42°W.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_NAD83_CSRS_UTM_ZONE_23N_PLUS_CGVD2013_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9711')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_NAD83_CSRS_UTM_ZONE_23N_PLUS_CGVD2013_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9711')
 
 
 NAD83(CSRS) / UTM zone 7N + CGVD2013 height

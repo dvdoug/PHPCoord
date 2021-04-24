@@ -14,6 +14,8 @@ use PHPUnit\Framework\TestCase;
 
 class GeocentricTest extends TestCase
 {
+    use GeocentricSRIDData;
+
     public function testCanGetSupported(): void
     {
         $supported = Geocentric::getSupportedSRIDs();
@@ -42,11 +44,11 @@ class GeocentricTest extends TestCase
 
     public function coordinateReferenceSystems(): array
     {
-        $data = [];
-        foreach (Geocentric::getSupportedSRIDs() as $srid => $name) {
-            $data[$name] = [$srid];
+        $return = [];
+        foreach (static::$sridData as $srid => $data) {
+            $return[$data['name']] = [$srid];
         }
 
-        return $data;
+        return $return;
     }
 }

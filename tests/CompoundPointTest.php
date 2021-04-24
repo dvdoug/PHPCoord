@@ -15,6 +15,7 @@ use DateTimeImmutable;
 use PHPCoord\CoordinateOperation\CoordinateOperations;
 use PHPCoord\CoordinateOperation\CRSTransformations;
 use PHPCoord\CoordinateReferenceSystem\Compound;
+use PHPCoord\CoordinateReferenceSystem\CompoundSRIDData;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\CoordinateReferenceSystem\Geographic;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
@@ -27,6 +28,8 @@ use PHPUnit\Framework\TestCase;
 
 class CompoundPointTest extends TestCase
 {
+    use CompoundSRIDData;
+
     public function testCompound(): void
     {
         $object = CompoundPoint::create(
@@ -157,9 +160,8 @@ class CompoundPointTest extends TestCase
     public function supportedOperations(): array
     {
         $toTest = [];
-        $crss = Compound::getSupportedSRIDs();
         foreach (CRSTransformations::getSupportedTransformations() as $transformation) {
-            if (isset($crss[$transformation['source_crs']])) {
+            if (isset(static::$sridData[$transformation['source_crs']])) {
                 $toTest[] = [
                     $transformation['source_crs'],
                     $transformation['target_crs'],

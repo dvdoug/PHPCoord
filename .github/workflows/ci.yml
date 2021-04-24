@@ -23,6 +23,17 @@ jobs:
           - highest
           - lowest
 
+        datapacks:
+          - ""
+          #- "php-coord/datapack-africa" #not released yet
+          #- "php-coord/datapack-antarctic" #not released yet
+          #- "php-coord/datapack-arctic" #not released yet
+          #- "php-coord/datapack-asia" #not released yet
+          #- "php-coord/datapack-europe" #not released yet
+          #- "php-coord/datapack-northamerica" #not released yet
+          #- "php-coord/datapack-oceania" #not released yet
+          #- "php-coord/datapack-southamerica" #not released yet
+
         include:
           - php-version: "8.0"
             dependencies: "force_latest"
@@ -70,6 +81,13 @@ jobs:
     - name: Remove manual import-only deps
       run: composer remove --dev --no-update "gasparesganga/php-shapefile";
 
+    - name: Remove datapacks
+      run: composer remove --dev --no-update "php-coord/datapack*";
+
+    - name: Add back selected datapack
+      if: matrix.datapack != ''
+      run: composer require --dev --no-update "${{ matrix.datapack }}";
+
     - name: Remove PHP-CS-Fixer if not called
       if: matrix.php-version != '7.4' || matrix.dependencies != 'highest'
       run: composer remove --dev --no-update "friendsofphp/php-cs-fixer";
@@ -95,7 +113,7 @@ jobs:
     - name: PHPUnit (Unit)
       run: |
         php -dmemory_limit=-1 vendor/phpunit/phpunit/phpunit --exclude-group=integration;
-        if [ "${{ matrix.php-version }}" = "7.4" ]; then
+        if [ "${{ matrix.php-version }}" = "7.4" ] && [ "${{ matrix.dependencies }}" = "highest" ]; then
           wget https://scrutinizer-ci.com/ocular.phar;
           php ocular.phar code-coverage:upload --format=php-clover build/coverage-phpunit/clover.xml;
         fi;

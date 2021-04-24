@@ -165,7 +165,7 @@ class Vertical extends CoordinateReferenceSystem
 
     /**
      * Black Sea depth
-     * Extent: Georgia - onshore.
+     * Extent: Georgia - onshore and offshore.
      * Black Sea datum is 0.4m below Baltic datum.
      */
     public const EPSG_BLACK_SEA_DEPTH = 'urn:ogc:def:crs:EPSG::5336';
@@ -217,8 +217,9 @@ class Vertical extends CoordinateReferenceSystem
      * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
      * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
      * Yukon.
-     * Replaces CGVD2013(CGG2013) height (CRS code 6647). CGVD2013(CGG2013a) height is realized by Canadian gravimetric
-     * geoid model CGG2013a (CT code 9247).
+     * Replaces CGVD2013(CGG2013) height (CRS code 6647). CGG2013a is identical to CGG2013 except in the western sector
+     * of Lake of the Woods. CGVD2013(CGG2013a) height is realized by Canadian gravimetric geoid model CGG2013a (CT
+     * code 9247).
      */
     public const EPSG_CGVD2013_CGG2013A_HEIGHT = 'urn:ogc:def:crs:EPSG::9245';
 

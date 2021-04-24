@@ -18,6 +18,7 @@ use PHPCoord\CoordinateOperation\CoordinateOperations;
 use PHPCoord\CoordinateOperation\CRSTransformations;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\CoordinateReferenceSystem\Geocentric;
+use PHPCoord\CoordinateReferenceSystem\GeocentricSRIDData;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Geographic3D;
 use PHPCoord\Exception\InvalidCoordinateException;
@@ -32,6 +33,8 @@ use PHPUnit\Framework\TestCase;
 
 class GeocentricPointTest extends TestCase
 {
+    use GeocentricSRIDData;
+
     public function test(): void
     {
         $object = GeocentricPoint::create(new Metre(123), new Metre(456), new Metre(789), Geocentric::fromSRID(Geocentric::EPSG_WGS_84));
@@ -375,9 +378,8 @@ class GeocentricPointTest extends TestCase
     public function supportedOperations(): array
     {
         $toTest = [];
-        $crss = Geocentric::getSupportedSRIDs();
         foreach (CRSTransformations::getSupportedTransformations() as $transformation) {
-            if (isset($crss[$transformation['source_crs']])) {
+            if (isset(static::$sridData[$transformation['source_crs']])) {
                 $toTest[] = [
                     $transformation['source_crs'],
                     $transformation['target_crs'],
