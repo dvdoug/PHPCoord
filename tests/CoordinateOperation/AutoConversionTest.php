@@ -184,22 +184,22 @@ class AutoConversionTest extends TestCase
 
     public function testBritishNationalGridToOSGB(): void
     {
-        $from = ProjectedPoint::createFromEastingNorthing(new Metre(577274.99), new Metre(69740.50), Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID));
+        $from = ProjectedPoint::createFromEastingNorthing(new Metre(573502.85), new Metre(180912.71), Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID));
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_OSGB36);
         $to = $from->convert($toCRS);
 
-        self::assertEqualsWithDelta(50.5, $to->getLatitude()->getValue(), 0.0001);
+        self::assertEqualsWithDelta(51.5, $to->getLatitude()->getValue(), 0.0001);
         self::assertEqualsWithDelta(0.5, $to->getLongitude()->getValue(), 0.0001);
     }
 
     public function testBritishNationalGridToUTM(): void
     {
-        $from = ProjectedPoint::createFromEastingNorthing(new Metre(577274.99), new Metre(69740.50), Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID));
+        $from = ProjectedPoint::createFromEastingNorthing(new Metre(573502.85), new Metre(180912.71), Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID));
         $toCRS = Projected::fromSRID(Projected::EPSG_WGS_84_UTM_GRID_SYSTEM_NORTHERN_HEMISPHERE);
         $to = $from->convert($toCRS);
 
-        self::assertEqualsWithDelta(31322594.503502, $to->getEasting()->getValue(), 0.0001);
-        self::assertEqualsWithDelta(5597286.6916335, $to->getNorthing()->getValue(), 0.0001);
+        self::assertEqualsWithDelta(31326366.159092, $to->getEasting()->getValue(), 0.0001);
+        self::assertEqualsWithDelta(5708455.7715515, $to->getNorthing()->getValue(), 0.0001);
     }
 
     public function testETRSLN02ToETRSEVRF2000(): void
@@ -211,12 +211,12 @@ class AutoConversionTest extends TestCase
             BoundingArea::createWorld(),
         );
 
-        $from = CompoundPoint::create(GeographicPoint::create(new Radian(0.826122513), new Radian(0.168715161), null, Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89)), VerticalPoint::create(new Metre(473), Vertical::fromSRID(Vertical::EPSG_LN02_HEIGHT)), $fromCRS);
+        $from = CompoundPoint::create(GeographicPoint::create(new Radian(0.826122513), new Radian(0.167215161), null, Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89)), VerticalPoint::create(new Metre(473), Vertical::fromSRID(Vertical::EPSG_LN02_HEIGHT)), $fromCRS);
         $toCRS = Compound::fromSRID(Compound::EPSG_ETRS89_PLUS_EVRF2000_HEIGHT);
         $to = $from->convert($toCRS);
 
         self::assertEqualsWithDelta(0.826122513, $to->getHorizontalPoint()->getLatitude()->asRadians()->getValue(), 0.0000000001);
-        self::assertEqualsWithDelta(0.168715161, $to->getHorizontalPoint()->getLongitude()->asRadians()->getValue(), 0.0000000001);
-        self::assertEqualsWithDelta(472.69, $to->getVerticalPoint()->getHeight()->asMetres()->getValue(), 0.001);
+        self::assertEqualsWithDelta(0.167215161, $to->getHorizontalPoint()->getLongitude()->asRadians()->getValue(), 0.0000000001);
+        self::assertEqualsWithDelta(472.691, $to->getVerticalPoint()->getHeight()->asMetres()->getValue(), 0.001);
     }
 }

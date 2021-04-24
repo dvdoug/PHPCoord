@@ -761,12 +761,12 @@ class GeographicPointTest extends TestCase
 
     public function testTransverseMercator(): void
     {
-        $from = GeographicPoint::create(new Degree(50.5), new Degree(0.5), null, Geographic2D::fromSRID(Geographic2D::EPSG_OSGB36));
+        $from = GeographicPoint::create(new Degree(51.5), new Degree(0.5), null, Geographic2D::fromSRID(Geographic2D::EPSG_OSGB36));
         $toCRS = Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID);
         $to = $from->transverseMercator($toCRS, new Degree(49), new Degree(-2), new Unity(0.9996012717), new Metre(400000), new Metre(-100000));
 
-        self::assertEqualsWithDelta(577274.99, $to->getEasting()->asMetres()->getValue(), 0.01);
-        self::assertEqualsWithDelta(69740.50, $to->getNorthing()->asMetres()->getValue(), 0.01);
+        self::assertEqualsWithDelta(573502.85, $to->getEasting()->asMetres()->getValue(), 0.01);
+        self::assertEqualsWithDelta(180912.71, $to->getNorthing()->asMetres()->getValue(), 0.01);
     }
 
     public function testTransverseMercatorSouthOrientated(): void

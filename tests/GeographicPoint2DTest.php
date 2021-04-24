@@ -11,7 +11,6 @@ namespace PHPCoord;
 use function array_merge;
 use function class_exists;
 use DateTime;
-use PHPCoord\CoordinateOperation\CoordinateOperationMethods;
 use PHPCoord\CoordinateOperation\CoordinateOperations;
 use PHPCoord\CoordinateOperation\CRSTransformations;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
@@ -55,14 +54,13 @@ class GeographicPoint2DTest extends TestCase
         self::assertEquals($targetCRS, $newPoint->getCRS());
 
         if ($reversible) {
-            $delta = isset($operation['method']) && $operation['method'] === CoordinateOperationMethods::EPSG_REVERSIBLE_POLYNOMIAL_OF_DEGREE_13 ? 0.01 : 0.001;
             $reversedPoint = $newPoint->performOperation($operationSrid, $sourceCRS, true);
 
             self::assertEquals($sourceCRS, $reversedPoint->getCRS());
-            self::assertEqualsWithDelta($originalPoint->getLatitude()->getValue(), $reversedPoint->getLatitude()->getValue(), $delta);
-            self::assertEqualsWithDelta($originalPoint->getLongitude()->getValue(), $reversedPoint->getLongitude()->getValue(), $delta);
+            self::assertEqualsWithDelta($originalPoint->getLatitude()->getValue(), $reversedPoint->getLatitude()->getValue(), 0.002);
+            self::assertEqualsWithDelta($originalPoint->getLongitude()->getValue(), $reversedPoint->getLongitude()->getValue(), 0.002);
             if ($sourceHeight) {
-                self::assertEqualsWithDelta($originalPoint->getHeight()->getValue(), $reversedPoint->getHeight()->getValue(), $delta);
+                self::assertEqualsWithDelta($originalPoint->getHeight()->getValue(), $reversedPoint->getHeight()->getValue(), 0.002);
             } else {
                 self::assertNull($reversedPoint->getHeight());
             }
