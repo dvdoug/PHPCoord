@@ -24,14 +24,14 @@ jobs:
 
         datapacks:
           - ""
-          #- "php-coord/datapack-africa" #not released yet
-          #- "php-coord/datapack-antarctic" #not released yet
-          #- "php-coord/datapack-arctic" #not released yet
-          #- "php-coord/datapack-asia" #not released yet
-          #- "php-coord/datapack-europe" #not released yet
-          #- "php-coord/datapack-northamerica" #not released yet
-          #- "php-coord/datapack-oceania" #not released yet
-          #- "php-coord/datapack-southamerica" #not released yet
+          - "php-coord/datapack-africa"
+          - "php-coord/datapack-antarctic"
+          - "php-coord/datapack-arctic"
+          - "php-coord/datapack-asia"
+          - "php-coord/datapack-europe"
+          - "php-coord/datapack-northamerica"
+          - "php-coord/datapack-oceania"
+          - "php-coord/datapack-southamerica"
 
         include:
           - php-version: "8.0"
@@ -106,7 +106,7 @@ jobs:
         composer update --no-interaction --prefer-dist --ignore-platform-reqs;
 
     - name: Check code style
-      if: matrix.php-version == '7.4' && matrix.dependencies == 'highest'
+      if: matrix.php-version == '7.4' && matrix.dependencies == 'highest' && matrix.datapack == ''
       run: vendor/bin/php-cs-fixer fix --verbose --dry-run --diff --diff-format=udiff --allow-risky=yes --format=checkstyle | cs2pr
 
     - name: PHPUnit (Unit)
