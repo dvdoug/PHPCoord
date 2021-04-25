@@ -1245,14 +1245,14 @@ class EPSGImporter
         echo 'Updating extents...';
         $boundingBoxOnly = $this->sourceDir . '/Geometry/Extents/BoundingBoxOnly/';
         $builtInFull = $this->sourceDir . '/Geometry/Extents/';
-        $africa = $this->sourceDir . '/../vendor/php-coord/php-coord-datapack-africa/src/Geometry/Extents/';
-        $antarctic = $this->sourceDir . '/../vendor/php-coord/php-coord-datapack-antarctic/src/Geometry/Extents/';
-        $arctic = $this->sourceDir . '/../vendor/php-coord/php-coord-datapack-arctic/src/Geometry/Extents/';
-        $asia = $this->sourceDir . '/../vendor/php-coord/php-coord-datapack-asia/src/Geometry/Extents/';
-        $europe = $this->sourceDir . '/../vendor/php-coord/php-coord-datapack-europe/src/Geometry/Extents/';
-        $northAmerica = $this->sourceDir . '/../vendor/php-coord/php-coord-datapack-northamerica/src/Geometry/Extents/';
-        $southAmerica = $this->sourceDir . '/../vendor/php-coord/php-coord-datapack-southamerica/src/Geometry/Extents/';
-        $oceania = $this->sourceDir . '/../vendor/php-coord/php-coord-datapack-oceania/src/Geometry/Extents/';
+        $africa = $this->sourceDir . '/../vendor/php-coord/datapack-africa/src/Geometry/Extents/';
+        $antarctic = $this->sourceDir . '/../vendor/php-coord/datapack-antarctic/src/Geometry/Extents/';
+        $arctic = $this->sourceDir . '/../vendor/php-coord/datapack-arctic/src/Geometry/Extents/';
+        $asia = $this->sourceDir . '/../vendor/php-coord/datapack-asia/src/Geometry/Extents/';
+        $europe = $this->sourceDir . '/../vendor/php-coord/datapack-europe/src/Geometry/Extents/';
+        $northAmerica = $this->sourceDir . '/../vendor/php-coord/datapack-northamerica/src/Geometry/Extents/';
+        $southAmerica = $this->sourceDir . '/../vendor/php-coord/datapack-southamerica/src/Geometry/Extents/';
+        $oceania = $this->sourceDir . '/../vendor/php-coord/datapack-oceania/src/Geometry/Extents/';
 
         array_map('unlink', glob($boundingBoxOnly . '*.php'));
         array_map('unlink', glob($builtInFull . '*.php'));
