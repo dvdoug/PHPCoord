@@ -8,8 +8,6 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateReferenceSystem;
 
-use function array_merge;
-use function class_exists;
 use PHPCoord\Exception\UnknownCoordinateReferenceSystemException;
 use PHPCoord\Geometry\BoundingArea;
 
@@ -2520,19 +2518,11 @@ class Compound extends CoordinateReferenceSystem
                 $horizontalCRS = Geographic::fromSRID($data['horizontal_crs']);
             }
 
-            $extents = [];
-            foreach ($data['extent_code'] as $extentId) {
-                $fullExtent = "PHPCoord\\Geometry\\Extents\\Extent{$extentId}";
-                $basicExtent = "PHPCoord\\Geometry\\Extents\\BoundingBoxOnly\\Extent{$extentId}";
-                $extentClass = class_exists($fullExtent) ? new $fullExtent() : new $basicExtent();
-                $extents = array_merge($extents, $extentClass());
-            }
-
             self::$cachedObjects[$srid] = new self(
                 $srid,
                 $horizontalCRS,
                 Vertical::fromSRID($data['vertical_crs']),
-                BoundingArea::createFromArray($extents),
+                BoundingArea::createFromExtentCodes($data['extent_code']),
             );
         }
 

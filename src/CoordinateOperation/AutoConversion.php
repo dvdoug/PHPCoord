@@ -15,7 +15,6 @@ use function array_pop;
 use function array_shift;
 use function array_sum;
 use function assert;
-use function class_exists;
 use function count;
 use DateTimeImmutable;
 use function in_array;
@@ -79,14 +78,7 @@ trait AutoConversion
                 $operation = CoordinateOperations::getOperationData($pathStep['operation']);
                 if ($boundaryCheckPoint) {
                     //filter out operations that only operate outside this point
-                    $extents = [];
-                    foreach ($operation['extent_code'] as $extentId) {
-                        $fullExtent = "PHPCoord\\Geometry\\Extents\\Extent{$extentId}";
-                        $basicExtent = "PHPCoord\\Geometry\\Extents\\BoundingBoxOnly\\Extent{$extentId}";
-                        $extentClass = class_exists($fullExtent) ? new $fullExtent() : new $basicExtent();
-                        $extents = array_merge($extents, $extentClass());
-                    }
-                    $polygon = BoundingArea::createFromArray($extents);
+                    $polygon = BoundingArea::createFromExtentCodes($operation['extent_code']);
                     $ok = $ok && $polygon->containsPoint($boundaryCheckPoint);
                 }
 

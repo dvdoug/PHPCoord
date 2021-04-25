@@ -9,7 +9,9 @@ declare(strict_types=1);
 namespace PHPCoord\Geometry;
 
 use function array_merge;
+use function class_exists;
 use function count;
+use function implode;
 use PHPCoord\CoordinateOperation\GeographicValue;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPCoord\UnitOfMeasure\Angle\Degree;
@@ -25,6 +27,8 @@ class BoundingArea
     protected bool $longitudeExtendsFurtherThanMinus180 = false;
 
     protected bool $longitudeExtendsFurtherThanPlus180 = false;
+
+    private static array $cachedObjects = [];
 
     protected function __construct(array $vertices)
     {
@@ -54,6 +58,27 @@ class BoundingArea
     public static function createWorld(): self
     {
         return new static([[[[-180, -90], [-180, 90], [180, 90], [180, -90], [-180, -90]]]]);
+    }
+
+    /**
+     * @internal
+     */
+    public static function createFromExtentCodes(array $extentCodes): self
+    {
+        $cacheKey = implode('', $extentCodes);
+        if (!isset(self::$cachedObjects[$cacheKey])) {
+            $extents = [];
+            foreach ($extentCodes as $extentCode) {
+                $fullExtent = "PHPCoord\\Geometry\\Extents\\Extent{$extentCode}";
+                $basicExtent = "PHPCoord\\Geometry\\Extents\\BoundingBoxOnly\\Extent{$extentCode}";
+                $extentClass = class_exists($fullExtent) ? new $fullExtent() : new $basicExtent();
+                $extents = array_merge($extents, $extentClass());
+            }
+
+            self::$cachedObjects[$cacheKey] = self::createFromArray($extents);
+        }
+
+        return self::$cachedObjects[$cacheKey];
     }
 
     public function containsPoint(GeographicValue $point): bool

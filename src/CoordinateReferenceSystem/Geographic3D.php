@@ -8,9 +8,7 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateReferenceSystem;
 
-use function array_merge;
 use function assert;
-use function class_exists;
 use function count;
 use PHPCoord\CoordinateSystem\CoordinateSystem;
 use PHPCoord\CoordinateSystem\Ellipsoidal;
@@ -1585,19 +1583,11 @@ class Geographic3D extends Geographic
         if (!isset(self::$cachedObjects[$srid])) {
             $data = static::$sridData[$srid];
 
-            $extents = [];
-            foreach ($data['extent_code'] as $extentId) {
-                $fullExtent = "PHPCoord\\Geometry\\Extents\\Extent{$extentId}";
-                $basicExtent = "PHPCoord\\Geometry\\Extents\\BoundingBoxOnly\\Extent{$extentId}";
-                $extentClass = class_exists($fullExtent) ? new $fullExtent() : new $basicExtent();
-                $extents = array_merge($extents, $extentClass());
-            }
-
             self::$cachedObjects[$srid] = new self(
                 $srid,
                 Ellipsoidal::fromSRID($data['coordinate_system']),
                 Datum::fromSRID($data['datum']),
-                BoundingArea::createFromArray($extents),
+                BoundingArea::createFromExtentCodes($data['extent_code']),
             );
         }
 
