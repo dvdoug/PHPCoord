@@ -22,7 +22,7 @@ jobs:
           - highest
           - lowest
 
-        datapacks:
+        datapack:
           - ""
           - "php-coord/datapack-africa"
           - "php-coord/datapack-antarctic"
