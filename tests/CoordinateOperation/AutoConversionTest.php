@@ -211,12 +211,12 @@ class AutoConversionTest extends TestCase
             BoundingArea::createWorld(),
         );
 
-        $from = CompoundPoint::create(GeographicPoint::create(new Radian(0.826122513), new Radian(0.167215161), null, Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89)), VerticalPoint::create(new Metre(473), Vertical::fromSRID(Vertical::EPSG_LN02_HEIGHT)), $fromCRS);
+        $from = CompoundPoint::create(GeographicPoint::create(new Radian(0.826122513), new Radian(0.168715161), null, Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89)), VerticalPoint::create(new Metre(473), Vertical::fromSRID(Vertical::EPSG_LN02_HEIGHT)), $fromCRS);
         $toCRS = Compound::fromSRID(Compound::EPSG_ETRS89_PLUS_EVRF2000_HEIGHT);
         $to = $from->convert($toCRS);
 
         self::assertEqualsWithDelta(0.826122513, $to->getHorizontalPoint()->getLatitude()->asRadians()->getValue(), 0.0000000001);
-        self::assertEqualsWithDelta(0.167215161, $to->getHorizontalPoint()->getLongitude()->asRadians()->getValue(), 0.0000000001);
-        self::assertEqualsWithDelta(472.691, $to->getVerticalPoint()->getHeight()->asMetres()->getValue(), 0.001);
+        self::assertEqualsWithDelta(0.168715161, $to->getHorizontalPoint()->getLongitude()->asRadians()->getValue(), 0.0000000001);
+        self::assertEqualsWithDelta(472.69, $to->getVerticalPoint()->getHeight()->asMetres()->getValue(), 0.001);
     }
 }
