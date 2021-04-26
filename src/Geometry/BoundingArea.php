@@ -30,6 +30,10 @@ class BoundingArea
 
     private static array $cachedObjects = [];
 
+    private const BUFFER_THRESHOLD = 200; // rough guess at where map maker got bored adding vertices for complex shapes
+
+    private const BUFFER_SIZE = 0.1; // approx 10km
+
     protected function __construct(array $vertices)
     {
         $this->vertices = $vertices;
@@ -83,24 +87,27 @@ class BoundingArea
 
     public function containsPoint(GeographicValue $point): bool
     {
+        $latitude = $point->getLongitude()->asDegrees()->getValue();
+        $longitude = $point->getLatitude()->asDegrees()->getValue();
+
         $pointsToCheck = [
             [
-                $point->getLongitude()->asDegrees()->getValue(),
-                $point->getLatitude()->asDegrees()->getValue(),
+                $latitude,
+                $longitude,
             ],
         ];
 
         if ($this->longitudeExtendsFurtherThanMinus180) {
             $pointsToCheck[] = [
-                $point->getLongitude()->asDegrees()->getValue() - 360,
-                $point->getLatitude()->asDegrees()->getValue(),
+                $latitude - 360,
+                $longitude,
             ];
         }
 
         if ($this->longitudeExtendsFurtherThanPlus180) {
             $pointsToCheck[] = [
-                $point->getLongitude()->asDegrees()->getValue() + 360,
-                $point->getLatitude()->asDegrees()->getValue(),
+                $latitude + 360,
+                $longitude,
             ];
         }
 
@@ -109,9 +116,27 @@ class BoundingArea
          */
         foreach ($pointsToCheck as $pointToCheck) {
             [$x, $y] = $pointToCheck;
-            foreach ($this->vertices as $polygon) {
+            foreach ($this->vertices as $polygonId => $polygon) {
+                $centre = $this->getCentre($polygonId);
+                $centreX = $centre[1]->asDegrees()->getValue();
+                $centreY = $centre[0]->asDegrees()->getValue();
                 $vertices = [];
-                foreach ($polygon as $ring) {
+                foreach ($polygon as $ringId => $ring) {
+                    if ($ringId === 0 && count($ring) > self::BUFFER_THRESHOLD) {
+                        foreach ($ring as $vertexId => $vertex) {
+                            if ($vertex[0] > $centreX) {
+                                $ring[$vertexId][0] += self::BUFFER_SIZE;
+                            } elseif ($vertex[0] < $centreX) {
+                                $ring[$vertexId][0] -= self::BUFFER_SIZE;
+                            }
+
+                            if ($vertex[1] > $centreY) {
+                                $ring[$vertexId][1] += self::BUFFER_SIZE;
+                            } elseif ($vertex[1] < $centreY) {
+                                $ring[$vertexId][1] -= self::BUFFER_SIZE;
+                            }
+                        }
+                    }
                     $vertices = array_merge($vertices, $ring);
                 }
 
@@ -145,8 +170,17 @@ class BoundingArea
      */
     public function getPointInside(): array
     {
+        return $this->getCentre(0); // any polygon will do, use the first
+    }
+
+    /**
+     * @internal used for testing
+     * @return array<Angle,Angle>
+     */
+    protected function getCentre(int $polygonId): array
+    {
         // Calculates the "centre" (centroid) of a polygon.
-        $vertices = $this->vertices[0][0]; // first polygon, outer ring
+        $vertices = $this->vertices[$polygonId][0]; // only consider outer ring
         $n = count($vertices);
         $area = 0;
 
