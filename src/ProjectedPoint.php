@@ -28,9 +28,12 @@ use function max;
 use PHPCoord\CoordinateOperation\AutoConversion;
 use PHPCoord\CoordinateOperation\ComplexNumber;
 use PHPCoord\CoordinateOperation\ConvertiblePoint;
+use PHPCoord\CoordinateOperation\OSTNOSGM15Grid;
 use PHPCoord\CoordinateReferenceSystem\Geographic;
+use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Projected;
 use PHPCoord\CoordinateSystem\Axis;
+use PHPCoord\CoordinateSystem\Cartesian;
 use PHPCoord\Exception\InvalidAxesException;
 use PHPCoord\Exception\InvalidCoordinateReferenceSystemException;
 use PHPCoord\Exception\UnknownAxisException;
@@ -42,6 +45,7 @@ use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPCoord\UnitOfMeasure\Scale\Coefficient;
 use PHPCoord\UnitOfMeasure\Scale\Scale;
+use PHPCoord\UnitOfMeasure\Scale\Unity;
 use function sin;
 use function sinh;
 use function sqrt;
@@ -2063,5 +2067,19 @@ class ProjectedPoint extends Point implements ConvertiblePoint
             $to,
             $this->epoch
         );
+    }
+
+    /**
+     * Ordnance Survey National Transformation
+     * Geodetic transformation between ETRS89 (or WGS 84) and OSGB36 / National Grid.  Uses ETRS89 / National Grid as
+     * an intermediate coordinate system for bi-linear interpolation of gridded grid coordinate differences.
+     */
+    public function OSTN15(
+        Geographic2D $to,
+        OSTNOSGM15Grid $eastingAndNorthingDifferenceFile
+    ): GeographicPoint {
+        $asETRS89 = $eastingAndNorthingDifferenceFile->applyReverseAdjustment($this);
+
+        return $asETRS89->transverseMercator($to, new Degree(49), new Degree(-2), new Unity(0.9996012717), new Metre(400000), new Metre(-100000));
     }
 }

@@ -30,6 +30,7 @@ use PHPCoord\CoordinateOperation\ComplexNumber;
 use PHPCoord\CoordinateOperation\ConvertiblePoint;
 use PHPCoord\CoordinateOperation\GeocentricValue;
 use PHPCoord\CoordinateOperation\GeographicValue;
+use PHPCoord\CoordinateOperation\OSTNOSGM15Grid;
 use PHPCoord\CoordinateReferenceSystem\Compound;
 use PHPCoord\CoordinateReferenceSystem\Geocentric;
 use PHPCoord\CoordinateReferenceSystem\Geographic;
@@ -38,6 +39,7 @@ use PHPCoord\CoordinateReferenceSystem\Geographic3D;
 use PHPCoord\CoordinateReferenceSystem\Projected;
 use PHPCoord\CoordinateSystem\Axis;
 use PHPCoord\CoordinateSystem\Cartesian;
+use PHPCoord\Datum\Datum;
 use PHPCoord\Datum\Ellipsoid;
 use PHPCoord\Exception\InvalidCoordinateReferenceSystemException;
 use PHPCoord\Exception\UnknownAxisException;
@@ -2049,9 +2051,30 @@ class GeographicPoint extends Point implements ConvertiblePoint
      */
     public function axisReversal(
         Geographic $to
-    ) {
+    ): self {
         // axes are read in from the CRS, this is a book-keeping adjustment only
         return static::create($this->latitude, $this->longitude, $this->height, $to, $this->epoch);
+    }
+
+    /**
+     * Ordnance Survey National Transformation
+     * Geodetic transformation between ETRS89 (or WGS 84) and OSGB36 / National Grid.  Uses ETRS89 / National Grid as
+     * an intermediate coordinate system for bi-linear interpolation of gridded grid coordinate differences.
+     */
+    public function OSTN15(
+        Projected $to,
+        OSTNOSGM15Grid $eastingAndNorthingDifferenceFile
+    ): ProjectedPoint {
+        $etrs89NationalGrid = new Projected(
+            'ETRS89 / National Grid',
+            Cartesian::fromSRID(Cartesian::EPSG_2D_AXES_EASTING_NORTHING_E_N_ORIENTATIONS_EAST_NORTH_UOM_M),
+            Datum::fromSRID(Datum::EPSG_EUROPEAN_TERRESTRIAL_REFERENCE_SYSTEM_1989_ENSEMBLE),
+            $to->getBoundingArea()
+        );
+
+        $projected = $this->transverseMercator($etrs89NationalGrid, new Degree(49), new Degree(-2), new Unity(0.9996012717), new Metre(400000), new Metre(-100000));
+
+        return $eastingAndNorthingDifferenceFile->applyForwardAdjustment($projected);
     }
 
     public function asGeographicValue(): GeographicValue

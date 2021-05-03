@@ -8,9 +8,11 @@ declare(strict_types=1);
 
 namespace PHPCoord;
 
+use function class_exists;
 use DateTime;
 use DateTimeImmutable;
 use PHPCoord\CoordinateOperation\CRSTransformations;
+use PHPCoord\CoordinateOperation\OSTN15OSGM15Provider;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Projected;
@@ -661,6 +663,19 @@ class ProjectedPointTest extends TestCase
 
         self::assertEqualsWithDelta(707155.557, $to->getEasting()->asMetres()->getValue(), 0.001);
         self::assertEqualsWithDelta(5819663.128, $to->getNorthing()->asMetres()->getValue(), 0.001);
+    }
+
+    public function testOSTN15(): void
+    {
+        if (!class_exists(OSTN15OSGM15Provider::class)) {
+            self::markTestSkipped('Requires phpcoord/datapack-europe');
+        }
+        $from = ProjectedPoint::createFromEastingNorthing(new Metre(651409.80373330), new Metre(313177.44988696), Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID));
+        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89);
+        $to = $from->OSTN15($toCRS, (new OSTN15OSGM15Provider())->provideGrid());
+
+        self::assertEqualsWithDelta(52.658007833, $to->getLatitude()->asDegrees()->getValue(), 0.0001);
+        self::assertEqualsWithDelta(1.716073972, $to->getLongitude()->asDegrees()->getValue(), 0.0001);
     }
 
     /**

@@ -8,8 +8,10 @@ declare(strict_types=1);
 
 namespace PHPCoord;
 
+use function class_exists;
 use DateTime;
 use DateTimeImmutable;
+use PHPCoord\CoordinateOperation\OSTN15OSGM15Provider;
 use PHPCoord\CoordinateReferenceSystem\Geocentric;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Geographic3D;
@@ -1017,5 +1019,18 @@ class GeographicPointTest extends TestCase
 
         self::assertEqualsWithDelta(42.649117, $to->getLatitude()->getValue(), 0.000001);
         self::assertEqualsWithDelta(-0.02665833, $to->getLongitude()->getValue(), 0.000001);
+    }
+
+    public function testOSTN15(): void
+    {
+        if (!class_exists(OSTN15OSGM15Provider::class)) {
+            self::markTestSkipped('Requires phpcoord/datapack-europe');
+        }
+        $from = GeographicPoint::create(new Degree(52.658007833), new Degree(1.716073972), null, Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89));
+        $toCRS = Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID);
+        $to = $from->OSTN15($toCRS, (new OSTN15OSGM15Provider())->provideGrid());
+
+        self::assertEqualsWithDelta(651409.80373330, $to->getEasting()->asMetres()->getValue(), 0.00000001);
+        self::assertEqualsWithDelta(313177.44988696, $to->getNorthing()->asMetres()->getValue(), 0.00000001);
     }
 }
