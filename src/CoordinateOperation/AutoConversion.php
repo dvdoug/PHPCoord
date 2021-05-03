@@ -79,7 +79,10 @@ trait AutoConversion
                 if ($boundaryCheckPoint) {
                     //filter out operations that only operate outside this point
                     $polygon = BoundingArea::createFromExtentCodes($operation['extent_code']);
-                    $ok = $ok && $polygon->containsPoint($boundaryCheckPoint);
+                    if (!$polygon->containsPoint($boundaryCheckPoint)) {
+                        $ok = false;
+                        break;
+                    }
                 }
 
                 $operations = static::resolveConcatenatedOperations($pathStep['operation'], false);
@@ -97,6 +100,7 @@ trait AutoConversion
                         CoordinateOperationMethods::EPSG_TIME_SPECIFIC_POSITION_VECTOR_TRANSFORM_GEOCEN,
                     ], true)) {
                         $ok = false;
+                        break 2;
                     }
 
                     //filter out operations that require a specific epoch
@@ -106,7 +110,9 @@ trait AutoConversion
                     ], true)) {
                         $params = CoordinateOperationParams::getParamData($pathStep['operation']);
                         $pointEpoch = Year::fromDateTime($this->getCoordinateEpoch());
-                        $ok = $ok && (abs($pointEpoch->getValue() - $params['Transformation reference epoch']['value']) <= 0.001);
+                        if (!(abs($pointEpoch->getValue() - $params['Transformation reference epoch']['value']) <= 0.001)) {
+                            $ok = false;
+                            break 2;
                     }
                 }
             }
