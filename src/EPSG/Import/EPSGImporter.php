@@ -93,8 +93,8 @@ class EPSGImporter
         }
 
         $sqlite = new SQLite3(
-        $this->resourceDir . '/epsg/epsg.sqlite',
-        SQLITE3_OPEN_READWRITE | SQLITE3_OPEN_CREATE
+            $this->resourceDir . '/epsg/epsg.sqlite',
+            SQLITE3_OPEN_READWRITE | SQLITE3_OPEN_CREATE
         );
 
         $sqlite->enableExceptions(true);
@@ -129,8 +129,8 @@ class EPSGImporter
     public function doCodeGeneration(): void
     {
         $sqlite = new SQLite3(
-        $this->resourceDir . '/epsg/epsg.sqlite',
-        SQLITE3_OPEN_READONLY
+            $this->resourceDir . '/epsg/epsg.sqlite',
+            SQLITE3_OPEN_READONLY
         );
 
         $sqlite->enableExceptions(true);
@@ -1485,7 +1485,7 @@ class EPSGImporter
     private function csFixFile(string $fileName): void
     {
         /** @var Config $config */
-        $config = require __DIR__ . '/../../../.php_cs.dist';
+        $config = require __DIR__ . '/../../../.php-cs-fixer.dist.php';
 
         $resolver = new ConfigurationResolver(
             $config,

@@ -17,7 +17,7 @@
     },
     "require-dev": {
         "ext-sqlite3": "*",
-        "friendsofphp/php-cs-fixer": "^2.18.0",
+        "friendsofphp/php-cs-fixer": "^3.0",
         "gasparesganga/php-shapefile": "^3.4",
         "nikic/php-parser": "^4.10",
         "php-coord/datapack-africa": "dev-master",
