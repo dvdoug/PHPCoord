@@ -450,6 +450,13 @@ class CoordinateOperationMethods
     public const EPSG_OBLIQUE_STEREOGRAPHIC = 'urn:ogc:def:method:EPSG::9809';
 
     /**
+     * Ordnance Survey National Transformation
+     * Geodetic transformation between ETRS89 (or WGS 84) and OSGB36 / National Grid.  Uses ETRS89 / National Grid as
+     * an intermediate coordinate system for bi-linear interpolation of gridded grid coordinate differences.
+     */
+    public const EPSG_ORDNANCE_SURVEY_NATIONAL_TRANSFORMATION = 'urn:ogc:def:method:EPSG::9633';
+
+    /**
      * Orthographic
      * If the natural origin of the projection is at the topocentric origin, this is a special case of the Vertical
      * Perspective (orthographic case) (method code 9839) in which the ellipsoid height of all mapped points is zero (h
@@ -737,6 +744,7 @@ class CoordinateOperationMethods
             self::EPSG_AXIS_ORDER_REVERSAL_GEOGRAPHIC3D_HORIZONTAL => 'axisReversal',
             self::EPSG_HEIGHT_DEPTH_REVERSAL => 'heightDepthReversal',
             self::EPSG_CHANGE_OF_VERTICAL_UNIT => 'changeOfVerticalUnit',
+            self::EPSG_ORDNANCE_SURVEY_NATIONAL_TRANSFORMATION => 'OSTN15',
         ];
 
         return $lookup[$srid];

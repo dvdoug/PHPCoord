@@ -47467,6 +47467,12 @@ class CoordinateOperationParams
                 'reverses' => false,
             ],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::7953' => [
+            'Easting and northing difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\OSTN15OSGM15Provider',
+            ],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::7960' => [
             'X-axis translation' => [
                 'value' => -0.003,

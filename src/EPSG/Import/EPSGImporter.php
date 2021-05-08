@@ -23,8 +23,10 @@ use function file_put_contents;
 use function fopen;
 use function fwrite;
 use function glob;
+use function implode;
 use function in_array;
 use const PHP_EOL;
+use PHPCoord\CoordinateOperation\OSTN15OSGM15Provider;
 use PHPCoord\CoordinateReferenceSystem\Compound;
 use PHPCoord\CoordinateReferenceSystem\Geocentric;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
@@ -79,6 +81,99 @@ class EPSGImporter
 
     private const BOM = "\xEF\xBB\xBF";
 
+    private const BLACKLISTED_METHODS = [
+        // not implemented yet
+        1097, // Geog3D to Geog2D+GravityRelatedHeight (OSGM-GB)
+        9663, // Geographic3D to GravityRelatedHeight (OSGM-GB)
+        1072, // Geographic3D to GravityRelatedHeight (OSGM15-Ire)
+        1096, // Geog3D to Geog2D+GravityRelatedHeight (OSGM15-Ire)
+        1025, // Geographic3D to GravityRelatedHeight (EGM2008)
+        1030, // Geographic3D to GravityRelatedHeight (NZgeoid)
+        1047, // Geographic3D to GravityRelatedHeight (Gravsoft)
+        1048, // Geographic3D to GravityRelatedHeight (AUSGeoid v2)
+        1050, // Geographic3D to GravityRelatedHeight (CI)
+        1059, // Geographic3D to GravityRelatedHeight (PNG)
+        1060, // Geographic3D to GravityRelatedHeight (CGG2013)
+        1070, // Point motion by grid (Canada NTv2_Vel)
+        1071, // Vertical Offset by Grid Interpolation (NZLVD)
+        1073, // Geographic3D to GravityRelatedHeight (IGN2009)
+        1074, // NADCON5 (2D)
+        1075, // NADCON5 (3D)
+        1079, // New Zealand Deformation Model
+        1080, // Vertical Offset by Grid Interpolation (BEV AT)
+        1081, // Geographic3D to GravityRelatedHeight (BEV AT)
+        1082, // Geographic3D to GravityRelatedHeight (SA 2010)
+        1083, // Geog3D to Geog2D+GravityRelatedHeight (AUSGeoidv2)
+        1084, // Vertical Offset by Grid Interpolation (gtx)
+        1085, // Vertical Offset by Grid Interpolation (asc)
+        1086, // Point motion (geocen) by grid (INADEFORM)
+        1087, // Geocentric translation by Grid Interpolation (IGN)
+        1088, // Geog3D to Geog2D+GravityRelatedHeight (gtx)
+        1089, // Geog3D to Geog2D+GravityRelatedHeight (BEV AT)
+        1090, // Geog3D to Geog2D+GravityRelatedHeight (CGG 2013)
+        1091, // Geog3D to Geog2D+GravityRelatedHeight (CI)
+        1092, // Geog3D to Geog2D+GravityRelatedHeight (EGM2008)
+        1093, // Geog3D to Geog2D+GravityRelatedHeight (Gravsoft)
+        1094, // Geog3D to Geog2D+GravityRelatedHeight (IGN1997)
+        1095, // Geog3D to Geog2D+GravityRelatedHeight (IGN2009)
+        1098, // Geog3D to Geog2D+GravityRelatedHeight (SA 2010)
+        1099, // Geographic3D to GravityRelatedHeight (PL txt)
+        1100, // Geog3D to Geog2D+GravityRelatedHeight (PL txt)
+        1101, // Vertical Offset by Grid Interpolation (PL txt)
+        1103, // Geog3D to Geog2D+GravityRelatedHeight (EGM)
+        9615, // NTv2
+        9620, // Norway Offshore Interpolation
+        9634, // Maritime Provinces polynomial interpolation
+        9658, // Vertical Offset by Grid Interpolation (VERTCON)
+        9661, // Geographic3D to GravityRelatedHeight (EGM)
+        9662, // Geographic3D to GravityRelatedHeight (AUSGeoid98)
+        9664, // Geographic3D to GravityRelatedHeight (IGN1997)
+        9665, // Geographic3D to GravityRelatedHeight (gtx)
+
+        // only distributed as .dll, can't use
+        1036, // Cartesian Grid Offsets from Form Function
+        1040, // GNTRANS
+
+        //replaced with OSGM15
+        1045, // Geographic3D to GravityRelatedHeight (OSGM02-Ire)
+
+        // replaced by NTv2
+        9614, // NTv1,
+
+        // replaced by NADCON5
+        9613, // NADCON,
+    ];
+
+    private const BLACKLISTED_OPERATIONS = [
+        // replaced by OSTN15
+        7913, // OSTN97
+        7952, // OSTN02
+
+        // replaced by OSGM15
+        1039, // OSGM02
+        1040, // OSGM02
+        7952, // OSGM02
+        10021, // OSGM02
+        10022, // OSGM02
+        10023, // OSGM02
+        10024, // OSGM02
+        10025, // OSGM02
+        10026, // OSGM02
+        10027, // OSGM02
+        10028, // OSGM02
+        10029, // OSGM02
+        10030, // OSGM02
+        10031, // OSGM02
+        10032, // OSGM02
+        10033, // OSGM02
+        10034, // OSGM02
+        15956, // OSGM02
+    ];
+
+    private const FILE_CLASS_MAP = [
+        'OSTN15_OSGM15_GB.txt' => OSTN15OSGM15Provider::class,
+    ];
+
     public function __construct()
     {
         $this->resourceDir = __DIR__ . '/../../../resources';
@@ -113,6 +208,7 @@ class EPSGImporter
         $sqlite->exec($tableData);
 
         //Corrections
+        $sqlite->exec("UPDATE epsg_coordoperationparamvalue SET param_value_file_ref = NULL WHERE param_value_file_ref = ''");
         $sqlite->exec('UPDATE epsg_coordinatereferencesystem SET base_crs_code = 8817 WHERE coord_ref_sys_code = 8818');
         $sqlite->exec('UPDATE epsg_coordinatereferencesystem SET base_crs_code = 9695 WHERE coord_ref_sys_code = 9696');
         $sqlite->exec('UPDATE epsg_coordinatereferencesystem SET projection_conv_code = 15593 WHERE coord_ref_sys_code = 9057');
@@ -989,10 +1085,10 @@ class EPSGImporter
             AND m.coord_op_method_name NOT LIKE '%wellbore%'
             AND m.coord_op_method_name NOT LIKE '%mining%'
             AND m.coord_op_method_name NOT LIKE '%seismic%'
+            AND m.coord_op_method_code NOT IN (" . implode(',', self::BLACKLISTED_METHODS) . ')
             GROUP BY m.coord_op_method_code
-            HAVING (SUM(CASE WHEN p.param_value_file_ref != '' THEN 1 ELSE 0 END) = 0) -- skip anything that needs some kind of datafile
             ORDER BY name
-        ";
+        ';
 
         $result = $sqlite->query($sql);
         $data = [];
@@ -1024,11 +1120,13 @@ class EPSGImporter
             JOIN epsg_coordinatereferencesystem sourcecrs ON sourcecrs.coord_ref_sys_code = o.source_crs_code AND sourcecrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND sourcecrs.deprecated = 0
             JOIN epsg_coordinatereferencesystem targetcrs ON targetcrs.coord_ref_sys_code = o.target_crs_code AND targetcrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND targetcrs.deprecated = 0
             LEFT JOIN epsg_coordoperationparamvalue p ON p.coord_op_code = o.coord_op_code
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperation' AND dep.object_code = o.coord_op_code AND dep.deprecation_date <= '2020-12-14'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperation' AND dep.object_code = o.coord_op_code
+            LEFT JOIN epsg_supersession ss ON ss.object_table_name = 'epsg_coordoperation' AND dep.object_code = ss.object_code
             WHERE o.coord_op_type != 'conversion' AND o.coord_op_name NOT LIKE '%example%' AND o.coord_op_name NOT LIKE '%mining%'
-            AND dep.deprecation_id IS NULL
+            AND dep.deprecation_id IS NULL AND ss.supersession_id IS NULL
             GROUP BY source_crs, target_crs, o.coord_op_code
-            HAVING (SUM(CASE WHEN p.param_value_file_ref != '' THEN 1 ELSE 0 END) = 0) -- skip anything that needs some kind of datafile
+            HAVING (SUM(CASE WHEN m.coord_op_method_code IN (" . implode(',', self::BLACKLISTED_METHODS) . ') THEN 1 ELSE 0 END) = 0)
+               AND (SUM(CASE WHEN o.coord_op_code IN (' . implode(',', self::BLACKLISTED_OPERATIONS) . ") THEN 1 ELSE 0 END) = 0)
 
             UNION
 
@@ -1043,11 +1141,13 @@ class EPSGImporter
             JOIN epsg_coordinatereferencesystem projcrs ON projcrs.projection_conv_code = o.coord_op_code AND projcrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND projcrs.deprecated = 0
             JOIN epsg_coordoperationmethod m ON m.coord_op_method_code = o.coord_op_method_code
             LEFT JOIN epsg_coordoperationparamvalue p ON p.coord_op_code = o.coord_op_code
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperation' AND dep.object_code = o.coord_op_code AND dep.deprecation_date <= '2020-12-14'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperation' AND dep.object_code = o.coord_op_code
+            LEFT JOIN epsg_supersession ss ON ss.object_table_name = 'epsg_coordoperation' AND dep.object_code = ss.object_code
             WHERE o.coord_op_type = 'conversion' AND o.coord_op_name NOT LIKE '%example%' AND o.coord_op_name NOT LIKE '%mining%'
-            AND dep.deprecation_id IS NULL
+            AND dep.deprecation_id IS NULL AND ss.supersession_id IS NULL
             GROUP BY source_crs, target_crs, o.coord_op_code
-            HAVING (SUM(CASE WHEN p.param_value_file_ref != '' THEN 1 ELSE 0 END) = 0) -- skip anything that needs some kind of datafile
+            HAVING (SUM(CASE WHEN m.coord_op_method_code IN (" . implode(',', self::BLACKLISTED_METHODS) . ') THEN 1 ELSE 0 END) = 0)
+            AND (SUM(CASE WHEN o.coord_op_code IN (' . implode(',', self::BLACKLISTED_OPERATIONS) . ") THEN 1 ELSE 0 END) = 0)
 
             UNION
 
@@ -1065,14 +1165,16 @@ class EPSGImporter
             JOIN epsg_coordinatereferencesystem sourcecrs ON sourcecrs.coord_ref_sys_code = o.source_crs_code AND sourcecrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND sourcecrs.deprecated = 0
             JOIN epsg_coordinatereferencesystem targetcrs ON targetcrs.coord_ref_sys_code = o.target_crs_code AND targetcrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND targetcrs.deprecated = 0
             LEFT JOIN epsg_coordoperationparamvalue p ON p.coord_op_code = co.coord_op_code
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperation' AND dep.object_code = o.coord_op_code AND dep.deprecation_date <= '2020-12-14'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperation' AND dep.object_code = o.coord_op_code
+            LEFT JOIN epsg_supersession ss ON ss.object_table_name = 'epsg_coordoperation' AND dep.object_code = ss.object_code
             WHERE o.coord_op_type = 'concatenated operation' AND o.coord_op_name NOT LIKE '%example%' AND o.coord_op_name NOT LIKE '%mining%'
-            AND dep.deprecation_id IS NULL
+            AND dep.deprecation_id IS NULL AND ss.supersession_id IS NULL
             GROUP BY source_crs, target_crs, o.coord_op_code
-            HAVING (SUM(CASE WHEN p.param_value_file_ref != '' THEN 1 ELSE 0 END) = 0) -- skip anything that needs some kind of datafile
+            HAVING (SUM(CASE WHEN cm.coord_op_method_code IN (" . implode(',', self::BLACKLISTED_METHODS) . ') THEN 1 ELSE 0 END) = 0)
+            AND (SUM(CASE WHEN o.coord_op_code IN (' . implode(',', self::BLACKLISTED_OPERATIONS) . ') THEN 1 ELSE 0 END) = 0)
 
             ORDER BY source_crs, target_crs, operation
-            ";
+            ';
 
         $result = $sqlite->query($sql);
         $data = [];
@@ -1101,7 +1203,8 @@ class EPSGImporter
             WHERE o.coord_op_type != 'conversion' AND o.coord_op_type != 'concatenated operation' AND o.coord_op_name NOT LIKE '%example%'
             AND dep.deprecation_id IS NULL
             GROUP BY o.coord_op_code
-            HAVING (SUM(CASE WHEN p.param_value_file_ref != '' THEN 1 ELSE 0 END) = 0) -- skip anything that needs some kind of datafile
+            HAVING (SUM(CASE WHEN m.coord_op_method_code IN (" . implode(',', self::BLACKLISTED_METHODS) . ') THEN 1 ELSE 0 END) = 0)
+            AND (SUM(CASE WHEN o.coord_op_code IN (' . implode(',', self::BLACKLISTED_OPERATIONS) . ") THEN 1 ELSE 0 END) = 0)
 
             UNION
 
@@ -1121,7 +1224,8 @@ class EPSGImporter
             WHERE o.coord_op_type = 'conversion' AND o.coord_op_name NOT LIKE '%example%'
             AND dep.deprecation_id IS NULL
             GROUP BY o.coord_op_code
-            HAVING (SUM(CASE WHEN p.param_value_file_ref != '' THEN 1 ELSE 0 END) = 0) -- skip anything that needs some kind of datafile
+            HAVING (SUM(CASE WHEN m.coord_op_method_code IN (" . implode(',', self::BLACKLISTED_METHODS) . ') THEN 1 ELSE 0 END) = 0)
+            AND (SUM(CASE WHEN o.coord_op_code IN (' . implode(',', self::BLACKLISTED_OPERATIONS) . ") THEN 1 ELSE 0 END) = 0)
 
             UNION
 
@@ -1144,7 +1248,8 @@ class EPSGImporter
             WHERE o.coord_op_type = 'concatenated operation' AND o.coord_op_name NOT LIKE '%example%'
             AND dep.deprecation_id IS NULL
             GROUP BY o.coord_op_code
-            HAVING (SUM(CASE WHEN p.param_value_file_ref != '' THEN 1 ELSE 0 END) = 0) -- skip anything that needs some kind of datafile
+            HAVING (SUM(CASE WHEN cm.coord_op_method_code IN (" . implode(',', self::BLACKLISTED_METHODS) . ') THEN 1 ELSE 0 END) = 0)
+            AND (SUM(CASE WHEN o.coord_op_code IN (' . implode(',', self::BLACKLISTED_OPERATIONS) . ") THEN 1 ELSE 0 END) = 0)
 
             UNION
 
@@ -1163,10 +1268,11 @@ class EPSGImporter
             WHERE o.coord_op_name NOT LIKE '%example%'
             AND dep.deprecation_id IS NULL
             GROUP BY o.coord_op_code
-            HAVING (SUM(CASE WHEN p.param_value_file_ref != '' THEN 1 ELSE 0 END) = 0) -- skip anything that needs some kind of datafile
+            HAVING (SUM(CASE WHEN o.coord_op_method_code IN (" . implode(',', self::BLACKLISTED_METHODS) . ') THEN 1 ELSE 0 END) = 0)
+            AND (SUM(CASE WHEN o.coord_op_code IN (' . implode(',', self::BLACKLISTED_OPERATIONS) . ') THEN 1 ELSE 0 END) = 0)
 
             ORDER BY urn
-            ";
+            ';
 
         $result = $sqlite->query($sql);
         $data = [];
@@ -1212,7 +1318,7 @@ class EPSGImporter
                         'urn:ogc:def:coordinateOperation:EPSG::' || pv.coord_op_code AS operation_code,
                         p.parameter_code AS parameter_code,
                         p.parameter_name AS name,
-                        pv.parameter_value AS value,
+                        COALESCE(pv.param_value_file_ref, pv.parameter_value) AS value,
                         CASE WHEN pv.uom_code IS NULL THEN NULL ELSE 'urn:ogc:def:uom:EPSG::' || pv.uom_code END AS uom,
                         CASE WHEN pu.param_sign_reversal = 'Yes' THEN 1 ELSE 0 END AS reverses
                     FROM epsg_coordoperationparamvalue pv
@@ -1229,6 +1335,19 @@ class EPSGImporter
                 $paramsRow['reverses'] = (bool) $paramsRow['reverses'];
                 if (in_array($paramsRow['parameter_code'], [8659, 8660, 1037, 1048, 8661, 8662], true)) {
                     $paramsRow['value'] = 'urn:ogc:def:crs:EPSG::' . $paramsRow['value'];
+                }
+                if (
+                    isset(self::FILE_CLASS_MAP[$paramsRow['value']]) &&
+                    in_array(
+                        $paramsRow['name'],
+                        [
+                            'Easting and northing difference file',
+                            'Geoid (height correction) model file',
+                        ]
+                    )
+                ) {
+                    $paramsRow['fileProvider'] = self::FILE_CLASS_MAP[$paramsRow['value']];
+                    unset($paramsRow['value'], $paramsRow['uom']);
                 }
                 unset($paramsRow['parameter_code']);
                 $params[$paramsRow['name']] = $paramsRow;

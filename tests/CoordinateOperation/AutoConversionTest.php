@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateOperation;
 
+use function class_exists;
 use DateTime;
 use PHPCoord\CompoundPoint;
 use PHPCoord\CoordinateReferenceSystem\Compound;
@@ -198,8 +199,13 @@ class AutoConversionTest extends TestCase
         $toCRS = Projected::fromSRID(Projected::EPSG_WGS_84_UTM_GRID_SYSTEM_NORTHERN_HEMISPHERE);
         $to = $from->convert($toCRS);
 
-        self::assertEqualsWithDelta(31326366.159092, $to->getEasting()->getValue(), 0.0001);
-        self::assertEqualsWithDelta(5708455.7715515, $to->getNorthing()->getValue(), 0.0001);
+        if (class_exists(OSTN15OSGM15Provider::class)) {
+            self::assertEqualsWithDelta(31326368.174145, $to->getEasting()->getValue(), 0.0001);
+            self::assertEqualsWithDelta(5708455.8991285, $to->getNorthing()->getValue(), 0.0001);
+        } else {
+            self::assertEqualsWithDelta(31326366.159092, $to->getEasting()->getValue(), 0.0001);
+            self::assertEqualsWithDelta(5708455.7715515, $to->getNorthing()->getValue(), 0.0001);
+        }
     }
 
     public function testETRSLN02ToETRSEVRF2000(): void
@@ -218,5 +224,20 @@ class AutoConversionTest extends TestCase
         self::assertEqualsWithDelta(0.826122513, $to->getHorizontalPoint()->getLatitude()->asRadians()->getValue(), 0.0000000001);
         self::assertEqualsWithDelta(0.168715161, $to->getHorizontalPoint()->getLongitude()->asRadians()->getValue(), 0.0000000001);
         self::assertEqualsWithDelta(472.69, $to->getVerticalPoint()->getHeight()->asMetres()->getValue(), 0.001);
+    }
+
+    public function testETRS89ToBritishNationalGrid(): void
+    {
+        $from = GeographicPoint::create(new Degree(52.658007833), new Degree(1.716073972), null, Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89));
+        $toCRS = Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID);
+        $to = $from->convert($toCRS);
+
+        if (class_exists(OSTN15OSGM15Provider::class)) {
+            self::assertEqualsWithDelta(651409.804, $to->getEasting()->asMetres()->getValue(), 0.001);
+            self::assertEqualsWithDelta(313177.450, $to->getNorthing()->asMetres()->getValue(), 0.001);
+        } else {
+            self::assertEqualsWithDelta(651411.218, $to->getEasting()->asMetres()->getValue(), 0.001);
+            self::assertEqualsWithDelta(313180.597, $to->getNorthing()->asMetres()->getValue(), 0.001);
+        }
     }
 }

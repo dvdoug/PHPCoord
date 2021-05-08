@@ -8730,6 +8730,11 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::1053',
             'extent_code' => ['1298'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::7953' => [
+            'name' => 'ETRS89 to OSGB36 / British National Grid (3)',
+            'method' => 'urn:ogc:def:method:EPSG::9633',
+            'extent_code' => ['4390'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::7960' => [
             'name' => 'PZ-90.11 to ITRF2008 (1)',
             'method' => 'urn:ogc:def:method:EPSG::1066',

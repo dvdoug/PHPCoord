@@ -25,6 +25,7 @@ use PHPCoord\CoordinateOperation\CoordinateOperationMethods;
 use PHPCoord\CoordinateOperation\CoordinateOperationParams;
 use PHPCoord\CoordinateOperation\CoordinateOperations;
 use PHPCoord\CoordinateOperation\GeographicValue;
+use PHPCoord\CoordinateOperation\GridProvider;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\CoordinateSystem\Axis;
 use PHPCoord\Datum\Ellipsoid;
@@ -119,24 +120,31 @@ abstract class Point implements Stringable
         $params = [];
         $powerCoefficients = [];
         foreach (CoordinateOperationParams::getParamData($operationSrid) as $paramName => $paramData) {
-            $value = $paramData['value'];
-            if ($inReverse && $paramData['reverses']) {
-                $value *= -1;
-            }
-            if ($paramData['uom']) {
-                $param = UnitOfMeasureFactory::makeUnit($value, $paramData['uom']);
+            if (isset($paramData['fileProvider'])) {
+                $paramName = static::camelCase($paramName);
+                /** @var GridProvider $provider */
+                $provider = new $paramData['fileProvider']();
+                $params[$paramName] = $provider->provideGrid();
             } else {
-                $param = $paramData['value'];
+                $value = $paramData['value'];
+                if ($inReverse && $paramData['reverses']) {
+                    $value *= -1;
+                }
+                if ($paramData['uom']) {
+                    $param = UnitOfMeasureFactory::makeUnit($value, $paramData['uom']);
+                } else {
+                    $param = $paramData['value'];
+                }
+                $paramName = static::camelCase($paramName);
+                if (preg_match('/^(Au|Bu)/', $paramName)) {
+                    $powerCoefficients[$paramName] = $param;
+                } else {
+                    $params[$paramName] = $param;
+                }
             }
-            $paramName = static::camelCase($paramName);
-            if (preg_match('/^(Au|Bu)/', $paramName)) {
-                $powerCoefficients[$paramName] = $param;
-            } else {
-                $params[$paramName] = $param;
+            if ($powerCoefficients) {
+                $params['powerCoefficients'] = $powerCoefficients;
             }
-        }
-        if ($powerCoefficients) {
-            $params['powerCoefficients'] = $powerCoefficients;
         }
         if (in_array($methodSrid, [
             CoordinateOperationMethods::EPSG_SIMILARITY_TRANSFORMATION,

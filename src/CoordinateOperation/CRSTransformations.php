@@ -13888,6 +13888,14 @@ class CRSTransformations
             'reversible' => true,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7953',
+            'name' => 'ETRS89 to OSGB36 / British National Grid (3)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4258',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::27700',
+            'accuracy' => 0.0,
+            'reversible' => true,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19985',
             'name' => 'Europe Conformal 2001',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4258',

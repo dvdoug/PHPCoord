@@ -15,6 +15,7 @@ use function array_pop;
 use function array_shift;
 use function array_sum;
 use function assert;
+use function class_exists;
 use function count;
 use DateTimeImmutable;
 use function in_array;
@@ -103,16 +104,26 @@ trait AutoConversion
                         break 2;
                     }
 
+                    $params = CoordinateOperationParams::getParamData($pathStep['operation']);
+
                     //filter out operations that require a specific epoch
                     if ($this->getCoordinateEpoch() && in_array($operation['method'], [
                         CoordinateOperationMethods::EPSG_TIME_SPECIFIC_COORDINATE_FRAME_ROTATION_GEOCEN,
                         CoordinateOperationMethods::EPSG_TIME_SPECIFIC_POSITION_VECTOR_TRANSFORM_GEOCEN,
                     ], true)) {
-                        $params = CoordinateOperationParams::getParamData($pathStep['operation']);
                         $pointEpoch = Year::fromDateTime($this->getCoordinateEpoch());
                         if (!(abs($pointEpoch->getValue() - $params['Transformation reference epoch']['value']) <= 0.001)) {
                             $ok = false;
                             break 2;
+                        }
+                    }
+
+                    //filter out operations that require a grid file that we don't have
+                    foreach ($params as $param) {
+                        if (isset($param['fileProvider']) && !class_exists($param['fileProvider'])) {
+                            $ok = false;
+                            break 3;
+                        }
                     }
                 }
             }
