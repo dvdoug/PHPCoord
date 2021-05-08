@@ -68,33 +68,40 @@ trait AutoConversion
 
     protected function findOperationPath(CoordinateReferenceSystem $source, CoordinateReferenceSystem $target, bool $ignoreBoundaryRestrictions): array
     {
+        $boundaryCheckPoint = $ignoreBoundaryRestrictions ? null : $this->getPointForBoundaryCheck();
+
         $candidatePaths = $this->buildTransformationPathsToCRS($source, $target);
 
         usort($candidatePaths, static function (array $a, array $b) {
             return count($a['path']) <=> count($b['path']) ?: $a['accuracy'] <=> $b['accuracy'];
         });
 
-        $boundaryCheckPoint = $ignoreBoundaryRestrictions ? null : $this->getPointForBoundaryCheck();
-
         foreach ($candidatePaths as $candidatePath) {
-            $ok = true;
+            if ($this->validatePath($candidatePath['path'], $boundaryCheckPoint)) {
+                return $candidatePath['path'];
+            }
+        }
 
-            foreach ($candidatePath['path'] as $pathStep) {
-                $operation = CoordinateOperations::getOperationData($pathStep['operation']);
-                if ($boundaryCheckPoint) {
-                    //filter out operations that only operate outside this point
-                    $polygon = BoundingArea::createFromExtentCodes($operation['extent_code']);
-                    if (!$polygon->containsPoint($boundaryCheckPoint)) {
-                        $ok = false;
-                        break;
-                    }
+        throw new UnknownConversionException('Unable to perform conversion, please file a bug if you think this is incorrect');
+    }
+
+    protected function validatePath(array $candidatePath, ?GeographicValue $boundaryCheckPoint): bool
+    {
+        foreach ($candidatePath as $pathStep) {
+            $operation = CoordinateOperations::getOperationData($pathStep['operation']);
+            if ($boundaryCheckPoint) {
+                //filter out operations that only operate outside this point
+                $polygon = BoundingArea::createFromExtentCodes($operation['extent_code']);
+                if (!$polygon->containsPoint($boundaryCheckPoint)) {
+                    return false;
                 }
+            }
 
-                $operations = static::resolveConcatenatedOperations($pathStep['operation'], false);
+            $operations = static::resolveConcatenatedOperations($pathStep['operation'], false);
 
-                foreach ($operations as $operation) {
-                    //filter out operations that require an epoch if we don't have one
-                    if (!$this->getCoordinateEpoch() && in_array($operation['method'], [
+            foreach ($operations as $operation) {
+                //filter out operations that require an epoch if we don't have one
+                if (!$this->getCoordinateEpoch() && in_array($operation['method'], [
                         CoordinateOperationMethods::EPSG_TIME_DEPENDENT_COORDINATE_FRAME_ROTATION_GEOCEN,
                         CoordinateOperationMethods::EPSG_TIME_DEPENDENT_COORDINATE_FRAME_ROTATION_GEOG2D,
                         CoordinateOperationMethods::EPSG_TIME_DEPENDENT_COORDINATE_FRAME_ROTATION_GEOG3D,
@@ -104,40 +111,32 @@ trait AutoConversion
                         CoordinateOperationMethods::EPSG_TIME_SPECIFIC_COORDINATE_FRAME_ROTATION_GEOCEN,
                         CoordinateOperationMethods::EPSG_TIME_SPECIFIC_POSITION_VECTOR_TRANSFORM_GEOCEN,
                     ], true)) {
-                        $ok = false;
-                        break 2;
-                    }
+                    return false;
+                }
 
-                    $params = CoordinateOperationParams::getParamData($pathStep['operation']);
+                $params = CoordinateOperationParams::getParamData($pathStep['operation']);
 
-                    //filter out operations that require a specific epoch
-                    if ($this->getCoordinateEpoch() && in_array($operation['method'], [
+                //filter out operations that require a specific epoch
+                if ($this->getCoordinateEpoch() && in_array($operation['method'], [
                         CoordinateOperationMethods::EPSG_TIME_SPECIFIC_COORDINATE_FRAME_ROTATION_GEOCEN,
                         CoordinateOperationMethods::EPSG_TIME_SPECIFIC_POSITION_VECTOR_TRANSFORM_GEOCEN,
                     ], true)) {
-                        $pointEpoch = Year::fromDateTime($this->getCoordinateEpoch());
-                        if (!(abs($pointEpoch->getValue() - $params['Transformation reference epoch']['value']) <= 0.001)) {
-                            $ok = false;
-                            break 2;
-                        }
+                    $pointEpoch = Year::fromDateTime($this->getCoordinateEpoch());
+                    if (!(abs($pointEpoch->getValue() - $params['Transformation reference epoch']['value']) <= 0.001)) {
+                        return false;
                     }
+                }
 
-                    //filter out operations that require a grid file that we don't have
-                    foreach ($params as $param) {
-                        if (isset($param['fileProvider']) && !class_exists($param['fileProvider'])) {
-                            $ok = false;
-                            break 3;
-                        }
+                //filter out operations that require a grid file that we don't have
+                foreach ($params as $param) {
+                    if (isset($param['fileProvider']) && !class_exists($param['fileProvider'])) {
+                        return false;
                     }
                 }
             }
-
-            if ($ok) {
-                return $candidatePath['path'];
-            }
         }
 
-        throw new UnknownConversionException('Unable to perform conversion, please file a bug if you think this is incorrect');
+        return true;
     }
 
     /**
