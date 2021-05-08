@@ -41,6 +41,10 @@ trait AutoConversion
 
     private static array $pathCache = [];
 
+    private static array $transformationsByCRS = [];
+
+    private static array $transformationsByCRSPair = [];
+
     public function convert(CoordinateReferenceSystem $to, bool $ignoreBoundaryRestrictions = false): Point
     {
         if ($this->getCRS() == $to) {
@@ -141,12 +145,15 @@ trait AutoConversion
      */
     protected function buildTransformationPathsToCRS(CoordinateReferenceSystem $source, CoordinateReferenceSystem $target): array
     {
+        self::buildSupportedTransformationsByCRS();
+        self::buildSupportedTransformationsByCRSPair();
+
         $cacheKey = $source->getSRID() . '|' . $target->getSRID();
         if (!isset(self::$pathCache[$cacheKey])) {
             $simplePaths = [];
 
             // Try a simple direct match before doing anything more complex!
-            if (CRSTransformations::getSupportedTransformationsForCRSPair($source->getSRID(), $target->getSRID())) {
+            if (isset(static::$transformationsByCRSPair[$source->getSRID() . '|' . $target->getSRID()])) {
                 $simplePaths[] = [$source->getSRID(), $target->getSRID()];
             } else { // Otherwise, recursively calculate permutations of intermediate CRSs
                 $visited = [];
@@ -166,7 +173,7 @@ trait AutoConversion
                 do {
                     $to = array_shift($simplePath);
                     $wipTransformationsInPath = [];
-                    foreach (CRSTransformations::getSupportedTransformationsForCRSPair($from, $to) as $transformation) {
+                    foreach (static::$transformationsByCRSPair[$from . '|' . $to] ?? [] as $transformation) {
                         foreach ($transformationsToMakePath as $transformationToMakePath) {
                             $wipTransformationsInPath[] = array_merge($transformationToMakePath, [$transformation]);
                         }
@@ -176,7 +183,9 @@ trait AutoConversion
                     $from = $to;
                 } while (count($simplePath) > 0);
                 assert($to === $target->getSRID());
-                $candidatePaths = array_merge($candidatePaths, $transformationsToMakePath);
+                foreach ($transformationsToMakePath as $transformationToMakePath) {
+                    $candidatePaths[] = $transformationToMakePath;
+                }
             }
 
             $candidates = [];
@@ -198,7 +207,7 @@ trait AutoConversion
         } else {
             $visited[$u] = true;
             if (count($currentPath) <= $this->maxChainDepth) {
-                foreach (CRSTransformations::getSupportedTransformationsForCRS($u) as $nextU) {
+                foreach (static::$transformationsByCRS[$u] as $nextU) {
                     if (!$visited[$nextU]) {
                         $this->DFS($nextU, $v, $visited, $currentPath, $simplePaths);
                     }
@@ -249,6 +258,36 @@ trait AutoConversion
                 $asGeographic = $point->asGeographicValue();
 
                 return new GeographicValue($asGeographic->getLatitude(), $asGeographic->getLongitude()->subtract($asGeographic->getDatum()->getPrimeMeridian()->getGreenwichLongitude()), null, $asGeographic->getDatum());
+            }
+        }
+    }
+
+    protected static function buildSupportedTransformationsByCRS(): void
+    {
+        if (!static::$transformationsByCRS) {
+            foreach (CRSTransformations::getSupportedTransformations() as $transformation) {
+                if (!isset(static::$transformationsByCRS[$transformation['source_crs']][$transformation['target_crs']])) {
+                    static::$transformationsByCRS[$transformation['source_crs']][$transformation['target_crs']] = $transformation['target_crs'];
+                }
+                if ($transformation['reversible'] && !isset(static::$transformationsByCRS[$transformation['target_crs']][$transformation['source_crs']])) {
+                    static::$transformationsByCRS[$transformation['target_crs']][$transformation['source_crs']] = $transformation['source_crs'];
+                }
+            }
+        }
+    }
+
+    protected static function buildSupportedTransformationsByCRSPair(): void
+    {
+        if (!static::$transformationsByCRSPair) {
+            foreach (CRSTransformations::getSupportedTransformations() as $key => $transformation) {
+                if (!isset(static::$transformationsByCRSPair[$transformation['source_crs'] . '|' . $transformation['target_crs']][$key])) {
+                    static::$transformationsByCRSPair[$transformation['source_crs'] . '|' . $transformation['target_crs']][$key] = $transformation;
+                    static::$transformationsByCRSPair[$transformation['source_crs'] . '|' . $transformation['target_crs']][$key]['in_reverse'] = false;
+                }
+                if ($transformation['reversible'] && !isset(static::$transformationsByCRSPair[$transformation['target_crs'] . '|' . $transformation['source_crs']][$key])) {
+                    static::$transformationsByCRSPair[$transformation['target_crs'] . '|' . $transformation['source_crs']][$key] = $transformation;
+                    static::$transformationsByCRSPair[$transformation['target_crs'] . '|' . $transformation['source_crs']][$key]['in_reverse'] = true;
+                }
             }
         }
     }

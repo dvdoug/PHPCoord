@@ -54361,46 +54361,8 @@ class CRSTransformations
         ],
     ];
 
-    protected static array $byCRS = [];
-
-    protected static array $byCRSPair = [];
-
     public static function getSupportedTransformations(): array
     {
         return static::$sridData;
-    }
-
-    public static function getSupportedTransformationsForCRS(string $srid): array
-    {
-        if (!static::$byCRS) {
-            foreach (static::$sridData as $transformation) {
-                if (!isset(static::$byCRS[$transformation['source_crs']][$transformation['target_crs']])) {
-                    static::$byCRS[$transformation['source_crs']][$transformation['target_crs']] = $transformation['target_crs'];
-                }
-                if ($transformation['reversible'] && !isset(static::$byCRS[$transformation['target_crs']][$transformation['source_crs']])) {
-                    static::$byCRS[$transformation['target_crs']][$transformation['source_crs']] = $transformation['source_crs'];
-                }
-            }
-        }
-
-        return static::$byCRS[$srid] ?? [];
-    }
-
-    public static function getSupportedTransformationsForCRSPair(string $fromSRID, string $toSRID): array
-    {
-        if (!static::$byCRSPair) {
-            foreach (static::$sridData as $key => $transformation) {
-                if (!isset(static::$byCRSPair[$transformation['source_crs'] . '|' . $transformation['target_crs']][$key])) {
-                    static::$byCRSPair[$transformation['source_crs'] . '|' . $transformation['target_crs']][$key] = $transformation;
-                    static::$byCRSPair[$transformation['source_crs'] . '|' . $transformation['target_crs']][$key]['in_reverse'] = false;
-                }
-                if ($transformation['reversible'] && !isset(static::$byCRSPair[$transformation['target_crs'] . '|' . $transformation['source_crs']][$key])) {
-                    static::$byCRSPair[$transformation['target_crs'] . '|' . $transformation['source_crs']][$key] = $transformation;
-                    static::$byCRSPair[$transformation['target_crs'] . '|' . $transformation['source_crs']][$key]['in_reverse'] = true;
-                }
-            }
-        }
-
-        return static::$byCRSPair[$fromSRID . '|' . $toSRID] ?? [];
     }
 }
