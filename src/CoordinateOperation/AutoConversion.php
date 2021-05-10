@@ -164,35 +164,14 @@ trait AutoConversion
             }
 
             // Then expand each CRS->CRS permutation with the various ways of achieving that (can be lots :/)
-            $candidatePaths = [];
-            foreach ($simplePaths as $simplePath) {
-                $transformationsToMakePath = [[]];
-                $from = array_shift($simplePath);
-                assert($from === $source->getSRID());
-                do {
-                    $to = array_shift($simplePath);
-                    $wipTransformationsInPath = [];
-                    foreach (static::$transformationsByCRSPair[$from . '|' . $to] ?? [] as $transformation) {
-                        foreach ($transformationsToMakePath as $transformationToMakePath) {
-                            $wipTransformationsInPath[] = array_merge($transformationToMakePath, [$transformation]);
-                        }
-                    }
+            $fullPaths = $this->expandSimplePaths($simplePaths, $source->getSRID(), $target->getSRID());
 
-                    $transformationsToMakePath = $wipTransformationsInPath;
-                    $from = $to;
-                } while (count($simplePath) > 0);
-                assert($to === $target->getSRID());
-                foreach ($transformationsToMakePath as $transformationToMakePath) {
-                    $candidatePaths[] = $transformationToMakePath;
-                }
+            $paths = [];
+            foreach ($fullPaths as $fullPath) {
+                $paths[] = ['path' => $fullPath, 'accuracy' => array_sum(array_column($fullPath, 'accuracy'))];
             }
 
-            $candidates = [];
-            foreach ($candidatePaths as $candidatePath) {
-                $candidates[] = ['path' => $candidatePath, 'accuracy' => array_sum(array_column($candidatePath, 'accuracy'))];
-            }
-
-            self::$pathCache[$cacheKey] = $candidates;
+            self::$pathCache[$cacheKey] = $paths;
         }
 
         return self::$pathCache[$cacheKey];
@@ -216,6 +195,35 @@ trait AutoConversion
 
         array_pop($currentPath);
         $visited[$u] = false;
+    }
+
+    protected function expandSimplePaths(array $simplePaths, string $fromSRID, string $toSRID): array
+    {
+        $fullPaths = [];
+        foreach ($simplePaths as $simplePath) {
+            $transformationsToMakePath = [[]];
+            $from = array_shift($simplePath);
+            assert($from === $fromSRID);
+            do {
+                $to = array_shift($simplePath);
+                $wipTransformationsInPath = [];
+                foreach (static::$transformationsByCRSPair[$from . '|' . $to] ?? [] as $transformation) {
+                    foreach ($transformationsToMakePath as $transformationToMakePath) {
+                        $wipTransformationsInPath[] = array_merge($transformationToMakePath, [$transformation]);
+                    }
+                }
+
+                $transformationsToMakePath = $wipTransformationsInPath;
+                $from = $to;
+            } while (count($simplePath) > 0);
+            assert($to === $toSRID);
+
+            foreach ($transformationsToMakePath as $transformationToMakePath) {
+                $fullPaths[] = $transformationToMakePath;
+            }
+        }
+
+        return $fullPaths;
     }
 
     /**
