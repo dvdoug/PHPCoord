@@ -11,6 +11,7 @@ namespace PHPCoord\CoordinateOperation;
 use function abs;
 use function atan2;
 use function cos;
+use function hypot;
 use PHPCoord\Datum\Datum;
 use PHPCoord\UnitOfMeasure\Angle\Radian;
 use PHPCoord\UnitOfMeasure\Length\Length;
@@ -66,7 +67,7 @@ class GeocentricValue
         $z = $this->z->getValue();
 
         $longitude = atan2($y, $x);
-        $p = sqrt(($x ** 2) + ($y ** 2));
+        $p = hypot($x, $y);
 
         $latitude = atan2($z, ($p * (1 - $e2)));
 

@@ -19,6 +19,7 @@ use DateTime;
 use DateTimeImmutable;
 use DateTimeInterface;
 use function get_class;
+use function hypot;
 use function implode;
 use function is_nan;
 use function log;
@@ -1725,7 +1726,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $U = cos($P) * cos($L) * cos($latS) + sin($P) * sin($latS);
         $V = cos($P) * cos($L) * sin($latS) - sin($P) * cos($latS);
         $W = cos($P) * sin($L);
-        $d = sqrt($U ** 2 + $V ** 2);
+        $d = hypot($U, $V);
         if ($d === 0.0) {
             $LPrime = 0;
             $PPrime = static::sign($W) * M_PI / 2;

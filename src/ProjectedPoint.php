@@ -18,6 +18,7 @@ use function cosh;
 use DateTime;
 use DateTimeImmutable;
 use DateTimeInterface;
+use function hypot;
 use function implode;
 use function is_nan;
 use function log;
@@ -304,7 +305,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         $n = ($centralMeridianFirstParallel ** 2 - $centralMeridianSecondParallel ** 2) / ($alphaSecondParallel - $alphaFirstParallel);
         $C = $centralMeridianFirstParallel ** 2 + $n * $alphaFirstParallel;
         $rhoOrigin = $a * sqrt($C - $n * $alphaOrigin) / $n;
-        $rhoPrime = sqrt($easting ** 2 + ($rhoOrigin - $northing) ** 2);
+        $rhoPrime = hypot($easting, $rhoOrigin - $northing);
         $alphaPrime = ($C - $rhoPrime ** 2 * $n ** 2 / $a ** 2) / $n;
         $betaPrime = self::asin($alphaPrime / (1 - (1 - $e2) / 2 / $e * log((1 - $e) / (1 + $e))));
         if ($n > 0) {
@@ -391,7 +392,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
 
         $mO = cos($latitudeOrigin) / sqrt(1 - $e2 * sin($latitudeOrigin) ** 2);
         $MO = $a * ((1 - $e2 / 4 - 3 * $e4 / 64 - 5 * $e6 / 256) * $latitudeOrigin - (3 * $e2 / 8 + 3 * $e4 / 32 + 45 * $e6 / 1024) * sin(2 * $latitudeOrigin) + (15 * $e4 / 256 + 45 * $e6 / 1024) * sin(4 * $latitudeOrigin) - (35 * $e6 / 3072) * sin(6 * $latitudeOrigin));
-        $rho = sqrt($easting ** 2 + ($a * $mO / sin($latitudeOrigin) - $northing) ** 2) * static::sign($latitudeOrigin);
+        $rho = hypot($easting, $a * $mO / sin($latitudeOrigin) - $northing) * static::sign($latitudeOrigin);
 
         $M = $a * $mO / sin($latitudeOrigin) + $MO - $rho;
         $mu = $M / ($a * (1 - $e2 / 4 - 3 * $e4 / 64 - 5 * $e6 / 256));
@@ -433,7 +434,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
 
         $mO = cos($latitudeOrigin) / sqrt(1 - $e2 * sin($latitudeOrigin) ** 2);
         $MO = $a * ((1 - $e2 / 4 - 3 * $e4 / 64 - 5 * $e6 / 256) * $latitudeOrigin - (3 * $e2 / 8 + 3 * $e4 / 32 + 45 * $e6 / 1024) * sin(2 * $latitudeOrigin) + (15 * $e4 / 256 + 45 * $e6 / 1024) * sin(4 * $latitudeOrigin) - (35 * $e6 / 3072) * sin(6 * $latitudeOrigin));
-        $rho = sqrt($westing ** 2 + ($a * $mO / sin($latitudeOrigin) - $southing) ** 2) * static::sign($latitudeOrigin);
+        $rho = hypot($westing, $a * $mO / sin($latitudeOrigin) - $southing) * static::sign($latitudeOrigin);
 
         $M = $a * $mO / sin($latitudeOrigin) + $MO - $rho;
         $mu = $M / ($a * (1 - $e2 / 4 - 3 * $e4 / 64 - 5 * $e6 / 256));
@@ -736,7 +737,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         $n = sin($latitudeP);
         $rO = $kP * $A / tan($latitudeP);
 
-        $r = sqrt($southing ** 2 + $westing ** 2) ?: 1;
+        $r = hypot($southing, $westing) ?: 1;
         $theta = atan2($westing, $southing);
         $D = $theta / sin($latitudeP);
         $T = 2 * (atan(($rO / $r) ** (1 / $n) * tan(M_PI / 4 + $latitudeP / 2)) - M_PI / 4);
@@ -831,7 +832,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         $betaO = self::asin($qO / $qP);
         $Rq = $a * sqrt($qP / 2);
         $D = $a * (cos($latitudeOrigin) / sqrt(1 - $e2 * sin($latitudeOrigin) ** 2)) / ($Rq * cos($betaO));
-        $rho = sqrt(($easting / $D) ** 2 + ($D * $northing) ** 2) ?: 1;
+        $rho = hypot($easting / $D, $D * $northing) ?: 1;
         $C = 2 * self::asin($rho / (2 * $Rq));
         $beta = self::asin(cos($C) * sin($betaO) + ($D * $northing * sin($C) * cos($betaO)) / $rho);
 
@@ -860,7 +861,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         $longitudeOrigin = $longitudeOfNaturalOrigin->asRadians()->getValue();
         $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
 
-        $rho = sqrt($easting ** 2 + $northing ** 2) ?: 1;
+        $rho = hypot($easting, $northing) ?: 1;
         $c = 2 * self::asin($rho / (2 * $a));
 
         $latitude = self::asin(cos($c) * sin($latitudeOrigin) + ($northing * sin($c) * cos($latitudeOrigin) / $rho));
@@ -905,7 +906,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         $n = sin($latitudeOrigin);
         $F = $mO / ($n * $tO ** $n);
         $rO = $a * $F * $tO ** $n * $scaleFactorOrigin;
-        $r = sqrt($easting ** 2 + ($rO - $northing) ** 2);
+        $r = hypot($easting, $rO - $northing);
         if ($n >= 0) {
             $theta = atan2($easting, $rO - $northing);
         } else {
@@ -951,7 +952,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         $n = sin($latitudeOrigin);
         $F = $mO / ($n * $tO ** $n);
         $rO = $a * $F * $tO ** $n ** $scaleFactorOrigin;
-        $r = sqrt($westing ** 2 + ($rO - $northing) ** 2);
+        $r = hypot($westing, $rO - $northing);
         if ($n >= 0) {
             $theta = atan2($westing, $rO - $northing);
         } else {
@@ -1000,7 +1001,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         $n = sin($latitudeNaturalOrigin);
         $F = $mO / ($n * $tO ** $n);
         $rF = $a * $F * $tF ** $n * $scaleFactorOrigin;
-        $r = sqrt($easting ** 2 + ($rF - $northing) ** 2);
+        $r = hypot($easting, $rF - $northing);
         if ($n >= 0) {
             $theta = atan2($easting, $rF - $northing);
         } else {
@@ -1051,7 +1052,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         $n = (log($m1) - log($m2)) / (log($t1) - log($t2));
         $F = $m1 / ($n * $t1 ** $n);
         $rF = $a * $F * $tF ** $n;
-        $r = sqrt($easting ** 2 + ($rF - $northing) ** 2) * static::sign($n);
+        $r = hypot($easting, $rF - $northing) * static::sign($n);
         $t = ($r / ($a * $F)) ** (1 / $n);
         if ($n >= 0) {
             $theta = atan2($easting, $rF - $northing);
@@ -1156,7 +1157,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         if (is_nan($rF)) {
             $rF = 0;
         }
-        $r = sqrt($easting ** 2 + ($rF - $northing) ** 2) * static::sign($n);
+        $r = hypot($easting, $rF - $northing) * static::sign($n);
         $t = ($r / ($a * $F)) ** (1 / $n);
         if ($n >= 0) {
             $theta = atan2($easting, $rF - $northing);
@@ -1210,7 +1211,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         $sO = $APrime * $latitudeOrigin - $BPrime * sin(2 * $latitudeOrigin) + $CPrime * sin(4 * $latitudeOrigin) - $DPrime * sin(6 * $latitudeOrigin) + $EPrime * sin(8 * $latitudeOrigin);
 
         $theta = atan2($easting, $rO - $northing);
-        $r = sqrt($easting ** 2 + ($rO - $northing) ** 2) * static::sign($latitudeOrigin);
+        $r = hypot($easting, $rO - $northing) * static::sign($latitudeOrigin);
         $M = $rO - $r;
 
         $m = $M;
@@ -1281,7 +1282,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
 
         $nuO = $a / sqrt(1 - $e2 * sin($latitudeOrigin) ** 2);
-        $c = sqrt($easting ** 2 + $northing ** 2);
+        $c = hypot($easting, $northing);
         $alpha = atan2($easting, $northing);
         $A = -$e2 * cos($latitudeOrigin) ** 2 * cos($alpha) ** 2 / (1 - $e2);
         $B = 3 * $e2 * (1 - $A) * sin($latitudeOrigin) * cos($latitudeOrigin) * cos($alpha) / (1 - $e2);
@@ -1375,7 +1376,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         $e6 = $this->crs->getDatum()->getEllipsoid()->getEccentricity() ** 6;
         $e8 = $this->crs->getDatum()->getEllipsoid()->getEccentricity() ** 8;
 
-        $rho = sqrt($easting ** 2 + $northing ** 2);
+        $rho = hypot($easting, $northing);
         $t = $rho * sqrt((1 + $e) ** (1 + $e) * (1 - $e) ** (1 - $e)) / (2 * $a * $scaleFactorOrigin);
 
         if ($latitudeOrigin < 0) {
@@ -1418,7 +1419,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         $e6 = $this->crs->getDatum()->getEllipsoid()->getEccentricity() ** 6;
         $e8 = $this->crs->getDatum()->getEllipsoid()->getEccentricity() ** 8;
 
-        $rho = sqrt($easting ** 2 + $northing ** 2);
+        $rho = hypot($easting, $northing);
         if ($standardParallel < 0) {
             $tF = tan(M_PI / 4 + $standardParallel / 2) / (((1 + $e * sin($standardParallel)) / (1 - $e * sin($standardParallel))) ** ($e / 2));
         } else {
@@ -1476,11 +1477,11 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         $mF = cos($standardParallel) / sqrt(1 - $e2 * sin($standardParallel) ** 2);
         $rhoF = $a * $mF;
         if ($standardParallel < 0) {
-            $rho = sqrt($easting ** 2 + ($northing + $rhoF) ** 2);
+            $rho = hypot($easting, $northing + $rhoF);
             $t = $rho * $tF / $rhoF;
             $chi = 2 * atan($t) - M_PI / 2;
         } else {
-            $rho = sqrt($easting ** 2 + ($northing - $rhoF) ** 2);
+            $rho = hypot($easting, $northing - $rhoF);
             $t = $rho * $tF / $rhoF;
             $chi = M_PI / 2 - 2 * atan($t);
         }
@@ -1780,7 +1781,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         $V = sin($PPrime);
         $W = cos($PPrime) * cos($LPrime) * sin($latS) - cos($PPrime) * sin($LPrime) * cos($latS);
 
-        $d = sqrt($U ** 2 + $V ** 2);
+        $d = hypot($U, $V);
         if ($d === 0) {
             $L = 0;
             $P = static::sign($W) * M_PI / 2;
