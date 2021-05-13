@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\CoordinateOperation;
 
 use function abs;
+use const PHP_MAJOR_VERSION;
 use PHPCoord\CoordinateReferenceSystem\Projected;
 use PHPCoord\CoordinateSystem\Cartesian;
 use PHPCoord\Datum\Datum;
@@ -81,6 +82,12 @@ class OSTNOSGM15Grid extends SplFileObject
     public function getRecord(int $eastIndex, int $northIndex): array
     {
         $record = $northIndex * 701 + $eastIndex + 1;
+
+        // https://bugs.php.net/bug.php?id=62004
+        if (PHP_MAJOR_VERSION < 8) {
+            --$record;
+        }
+
         $this->seek($record);
 
         return $this->fgetcsv();

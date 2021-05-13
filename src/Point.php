@@ -142,9 +142,9 @@ abstract class Point implements Stringable
                     $params[$paramName] = $param;
                 }
             }
-            if ($powerCoefficients) {
-                $params['powerCoefficients'] = $powerCoefficients;
-            }
+        }
+        if ($powerCoefficients) {
+            $params['powerCoefficients'] = $powerCoefficients;
         }
         if (in_array($methodSrid, [
             CoordinateOperationMethods::EPSG_SIMILARITY_TRANSFORMATION,
