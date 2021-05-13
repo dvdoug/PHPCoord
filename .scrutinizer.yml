@@ -19,6 +19,10 @@ build:
       ini:
         memory_limit: "-1"
 
+  dependencies:
+    override:
+      - COMPOSER_ROOT_VERSION=4.x-dev composer update
+
   tests:
     override:
       - php-scrutinizer-run
