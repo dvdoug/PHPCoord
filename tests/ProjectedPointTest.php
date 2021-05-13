@@ -11,6 +11,7 @@ namespace PHPCoord;
 use function class_exists;
 use DateTime;
 use DateTimeImmutable;
+use PHPCoord\CoordinateOperation\CoordinateOperationParams;
 use PHPCoord\CoordinateOperation\CRSTransformations;
 use PHPCoord\CoordinateOperation\OSTN15OSGM15Provider;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
@@ -708,12 +709,22 @@ class ProjectedPointTest extends TestCase
         $toTest = [];
         foreach (CRSTransformations::getSupportedTransformations() as $transformation) {
             if (isset(static::$sridData[$transformation['source_crs']])) {
-                $toTest[] = [
-                    $transformation['source_crs'],
-                    $transformation['target_crs'],
-                    $transformation['operation'],
-                    $transformation['reversible'],
-                ];
+                //filter out operations that require a grid file that we don't have
+                $needsNonExistentFile = false;
+                foreach (CoordinateOperationParams::getParamData($transformation['operation']) as $param) {
+                    if (isset($param['fileProvider']) && !class_exists($param['fileProvider'])) {
+                        $needsNonExistentFile = true;
+                    }
+                }
+
+                if (!$needsNonExistentFile) {
+                    $toTest[] = [
+                        $transformation['source_crs'],
+                        $transformation['target_crs'],
+                        $transformation['operation'],
+                        $transformation['reversible'],
+                    ];
+                }
             }
         }
 

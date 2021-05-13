@@ -8,9 +8,10 @@ declare(strict_types=1);
 
 namespace PHPCoord;
 
+use function class_exists;
 use DateTime;
 use DateTimeImmutable;
-use PHPCoord\CoordinateOperation\CoordinateOperations;
+use PHPCoord\CoordinateOperation\CoordinateOperationParams;
 use PHPCoord\CoordinateOperation\CRSTransformations;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
@@ -134,25 +135,23 @@ class VerticalPointTest extends TestCase
     {
         $toTest = [];
         foreach (CRSTransformations::getSupportedTransformations() as $transformation) {
-            $operation = CoordinateOperations::getOperationData($transformation['operation']);
-            if (isset($operation['operations'])) {
-                foreach ($operation['operations'] as $subOperation) {
-                    $subOperationData = CoordinateOperations::getOperationData($subOperation['operation']);
-                    $subOperationData['source_crs'] = $subOperation['source_crs'];
-                    $subOperationData['target_crs'] = $subOperation['target_crs'];
-                    $operations[$subOperation['operation']] = $subOperationData;
-                }
-            } else {
-                $operations[$transformation['operation']] = $operation;
-            }
-
             if (isset(static::$sridData[$transformation['source_crs']])) {
-                $toTest[] = [
-                    $transformation['source_crs'],
-                    $transformation['target_crs'],
-                    $transformation['operation'],
-                    $transformation['reversible'],
-                ];
+                //filter out operations that require a grid file that we don't have
+                $needsNonExistentFile = false;
+                foreach (CoordinateOperationParams::getParamData($transformation['operation']) as $param) {
+                    if (isset($param['fileProvider']) && !class_exists($param['fileProvider'])) {
+                        $needsNonExistentFile = true;
+                    }
+                }
+
+                if (!$needsNonExistentFile) {
+                    $toTest[] = [
+                        $transformation['source_crs'],
+                        $transformation['target_crs'],
+                        $transformation['operation'],
+                        $transformation['reversible'],
+                    ];
+                }
             }
         }
 
