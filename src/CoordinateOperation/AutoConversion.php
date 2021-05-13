@@ -39,7 +39,9 @@ trait AutoConversion
 {
     private int $maxChainDepth = 4; // if traits could have constants...
 
-    private static array $pathCache = [];
+    private static array $directTransformationPathCache = [];
+
+    private static array $indirectTransformationPathCache = [];
 
     private static array $transformationsByCRS = [];
 
@@ -68,9 +70,25 @@ trait AutoConversion
 
     protected function findOperationPath(CoordinateReferenceSystem $source, CoordinateReferenceSystem $target, bool $ignoreBoundaryRestrictions): array
     {
+        self::buildSupportedTransformationsByCRS();
+        self::buildSupportedTransformationsByCRSPair();
         $boundaryCheckPoint = $ignoreBoundaryRestrictions ? null : $this->getPointForBoundaryCheck();
 
-        $candidatePaths = $this->buildTransformationPathsToCRS($source, $target);
+        // Try simple direct match before doing anything more complex!
+        $candidatePaths = $this->buildDirectTransformationPathsToCRS($source, $target);
+
+        usort($candidatePaths, static function (array $a, array $b) {
+            return count($a['path']) <=> count($b['path']) ?: $a['accuracy'] <=> $b['accuracy'];
+        });
+
+        foreach ($candidatePaths as $candidatePath) {
+            if ($this->validatePath($candidatePath['path'], $boundaryCheckPoint)) {
+                return $candidatePath['path'];
+            }
+        }
+
+        // Otherwise, recursively calculate permutations of intermediate CRSs
+        $candidatePaths = $this->buildIndirectTransformationPathsToCRS($source, $target);
 
         usort($candidatePaths, static function (array $a, array $b) {
             return count($a['path']) <=> count($b['path']) ?: $a['accuracy'] <=> $b['accuracy'];
@@ -140,28 +158,42 @@ trait AutoConversion
     }
 
     /**
-     * Build the set of *all* possible paths that lead from the current CRS to the target CRS.
+     * Build the set of possible direct paths that lead from the current CRS to the target CRS.
      */
-    protected function buildTransformationPathsToCRS(CoordinateReferenceSystem $source, CoordinateReferenceSystem $target): array
+    protected function buildDirectTransformationPathsToCRS(CoordinateReferenceSystem $source, CoordinateReferenceSystem $target): array
     {
-        self::buildSupportedTransformationsByCRS();
-        self::buildSupportedTransformationsByCRSPair();
-
         $cacheKey = $source->getSRID() . '|' . $target->getSRID();
-        if (!isset(self::$pathCache[$cacheKey])) {
-            $simplePaths = [];
+        if (!isset(self::$directTransformationPathCache[$cacheKey])) {
+            $simplePaths = [[$source->getSRID(), $target->getSRID()]];
 
-            // Try a simple direct match before doing anything more complex!
-            if (isset(static::$transformationsByCRSPair[$source->getSRID() . '|' . $target->getSRID()])) {
-                $simplePaths[] = [$source->getSRID(), $target->getSRID()];
-            } else { // Otherwise, recursively calculate permutations of intermediate CRSs
-                $visited = [];
-                foreach (CoordinateReferenceSystem::getSupportedSRIDs() as $crs => $name) {
-                    $visited[$crs] = false;
-                }
-                $currentPath = [];
-                $this->DFS($source->getSRID(), $target->getSRID(), $visited, $currentPath, $simplePaths);
+            // Expand each CRS->CRS permutation with the various ways of achieving that (can be lots :/)
+            $fullPaths = $this->expandSimplePaths($simplePaths, $source->getSRID(), $target->getSRID());
+
+            $paths = [];
+            foreach ($fullPaths as $fullPath) {
+                $paths[] = ['path' => $fullPath, 'accuracy' => array_sum(array_column($fullPath, 'accuracy'))];
             }
+
+            self::$directTransformationPathCache[$cacheKey] = $paths;
+        }
+
+        return self::$directTransformationPathCache[$cacheKey];
+    }
+
+    /**
+     * Build the set of possible indirect paths that lead from the current CRS to the target CRS.
+     */
+    protected function buildIndirectTransformationPathsToCRS(CoordinateReferenceSystem $source, CoordinateReferenceSystem $target): array
+    {
+        $cacheKey = $source->getSRID() . '|' . $target->getSRID();
+        if (!isset(self::$indirectTransformationPathCache[$cacheKey])) {
+            $simplePaths = [];
+            $visited = [];
+            foreach (CoordinateReferenceSystem::getSupportedSRIDs() as $crs => $name) {
+                $visited[$crs] = false;
+            }
+            $currentPath = [];
+            $this->DFS($source->getSRID(), $target->getSRID(), $visited, $currentPath, $simplePaths);
 
             // Then expand each CRS->CRS permutation with the various ways of achieving that (can be lots :/)
             $fullPaths = $this->expandSimplePaths($simplePaths, $source->getSRID(), $target->getSRID());
@@ -171,10 +203,10 @@ trait AutoConversion
                 $paths[] = ['path' => $fullPath, 'accuracy' => array_sum(array_column($fullPath, 'accuracy'))];
             }
 
-            self::$pathCache[$cacheKey] = $paths;
+            self::$indirectTransformationPathCache[$cacheKey] = $paths;
         }
 
-        return self::$pathCache[$cacheKey];
+        return self::$indirectTransformationPathCache[$cacheKey];
     }
 
     protected function DFS(string $u, string $v, array &$visited, array &$currentPath, array &$simplePaths): void
