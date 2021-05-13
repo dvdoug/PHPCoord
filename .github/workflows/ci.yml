@@ -61,7 +61,7 @@ jobs:
       run: echo "::add-matcher::${{ runner.tool_cache }}/phpunit.json"
 
     - name: Validate composer.json
-      run: composer validate
+      run: composer validate --strict
 
     - name: Set COMPOSER_ROOT_VERSION to allow branches to not fail build
       run: echo "COMPOSER_ROOT_VERSIONT=4.x-dev" >> $GITHUB_ENV
