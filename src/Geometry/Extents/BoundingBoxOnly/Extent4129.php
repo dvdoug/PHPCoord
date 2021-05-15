@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\Geometry\Extents\BoundingBoxOnly;
 
 /**
- * South America/Brazil - offshore between 48°W to 42°W, northern hemisphere.
+ * South America/Brazil - 48°W to 42°W and north of 0°N.
  * @internal
  */
 class Extent4129

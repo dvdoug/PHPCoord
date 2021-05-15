@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\Geometry\Extents\BoundingBoxOnly;
 
 /**
- * South America/Brazil - west of 54°W and 18°S to 27°30'S.
+ * South America/Brazil - west of 54°W and between 18°S and 27°30'S.
  * @internal
  */
 class Extent4574

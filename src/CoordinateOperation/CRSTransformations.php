@@ -6433,7 +6433,7 @@ class CRSTransformations
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1581',
-            'name' => 'SIRGAS to WGS 84 (1)',
+            'name' => 'SIRGAS 1995 to WGS 84 (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4170',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 2.0,
@@ -19608,6 +19608,14 @@ class CRSTransformations
             'reversible' => true,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16024',
+            'name' => 'UTM zone 24N',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::9712',
+            'accuracy' => 0,
+            'reversible' => true,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16039',
             'name' => 'UTM zone 39N',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4270',
@@ -31688,6 +31696,14 @@ class CRSTransformations
             'reversible' => true,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16024',
+            'name' => 'UTM zone 24N',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::9713',
+            'accuracy' => 0,
+            'reversible' => true,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19941',
             'name' => 'Brazil Polyconic',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4618',
@@ -33380,7 +33396,7 @@ class CRSTransformations
             'name' => 'IGM95 to ETRS89 (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4670',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4258',
-            'accuracy' => 0.0,
+            'accuracy' => 0.5,
             'reversible' => true,
         ],
         [
@@ -33389,6 +33405,14 @@ class CRSTransformations
             'source_crs' => 'urn:ogc:def:crs:EPSG::4670',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
+            'reversible' => true,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16034',
+            'name' => 'UTM zone 34N',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4670',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::9716',
+            'accuracy' => 0,
             'reversible' => true,
         ],
         [
@@ -41469,6 +41493,14 @@ class CRSTransformations
             'source_crs' => 'urn:ogc:def:crs:EPSG::5214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5730',
             'accuracy' => 0.1,
+            'reversible' => true,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9726',
+            'name' => 'Genoa 1942 height to Catania 1965 height (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::5214',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::9721',
+            'accuracy' => 0.01,
             'reversible' => true,
         ],
         [
@@ -54357,6 +54389,14 @@ class CRSTransformations
             'source_crs' => 'urn:ogc:def:crs:EPSG::9702',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4258',
             'accuracy' => 0.0,
+            'reversible' => true,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9738',
+            'name' => 'EOS21-TM',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::9739',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::9741',
+            'accuracy' => 0,
             'reversible' => true,
         ],
     ];

@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\Geometry\Extents\BoundingBoxOnly;
 
 /**
- * North America/USA - Montana  Milk River.
+ * North America/USA - Montana - Milk River.
  * @internal
  */
 class Extent4312

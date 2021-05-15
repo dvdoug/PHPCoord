@@ -668,6 +668,17 @@ class Geographic2D extends Geographic
     public const EPSG_ELD79 = 'urn:ogc:def:crs:EPSG::4159';
 
     /**
+     * EOS21-IRF
+     * Extent: On or related to the complex of rail routes in the East of Scotland, incorporating the route from
+     * Tweedbank through the Borders to Edinburgh; the line from Edinburgh to Aberdeen; routes via Kirkaldy and
+     * Cowdenbeath; and routes via Leuchars and Perth to Dundee.
+     * Intermediate CRS created in 2021 to assist the emulation of the ETRS89 / EOS21 SnakeGrid projected CRS through
+     * transformation ETRS89 to EOS21-IRF (1) (code 9740) used in conjunction with the EOS21-TM map projection (code
+     * 9738).
+     */
+    public const EPSG_EOS21_IRF = 'urn:ogc:def:crs:EPSG::9739';
+
+    /**
      * EST92
      * Extent: Estonia - onshore.
      * This name is also used for a projected CRS (see projCRS code 3300). Replaced by EST97 (code 4180).

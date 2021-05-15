@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\Geometry\Extents\BoundingBoxOnly;
 
 /**
- * Africa/South Africa - Marion and Prince Edward islands - onshore and offshore.
+ * Africa/South Africa - Prince Edward islands - onshore and offshore.
  * @internal
  */
 class Extent4568

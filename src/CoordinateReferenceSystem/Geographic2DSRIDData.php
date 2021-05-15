@@ -3185,5 +3185,11 @@ trait Geographic2DSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1305',
             'extent_code' => ['1192'],
         ],
+        'urn:ogc:def:crs:EPSG::9739' => [
+            'name' => 'EOS21-IRF',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
+            'datum' => 'urn:ogc:def:datum:EPSG::1308',
+            'extent_code' => ['4620'],
+        ],
     ];
 }

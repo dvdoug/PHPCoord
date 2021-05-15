@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\Geometry\Extents\BoundingBoxOnly;
 
 /**
- * North America/USA - Montana  Fort Belknap.
+ * North America/USA - Montana - Fort Belknap.
  * @internal
  */
 class Extent4313

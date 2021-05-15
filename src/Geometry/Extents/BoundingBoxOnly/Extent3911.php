@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\Geometry\Extents\BoundingBoxOnly;
 
 /**
- * Africa/Reunion - east of 54ºE.
+ * Africa/Reunion - east of 54°E.
  * @internal
  */
 class Extent3911

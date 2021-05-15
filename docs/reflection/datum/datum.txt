@@ -1012,6 +1012,21 @@ Coordinates of 1 station of Combani 1950 adjustment held fixed.
 
 Derived by adjustment of GPS-observed network which was constrained to Combani 1950 coordinates of one station.
 
+Cagliari 1956
+-------------
+
+| Type: Vertical
+| Used: Italy - Sardinia onshore.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_CAGLIARI_1956)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1307')
+
+Mean Sea Level at Cagliari 1955-1957.
+
+Orthometric heights.
+
 Cais da Figueirinha - Angra do Heroismo
 ---------------------------------------
 
@@ -1285,6 +1300,21 @@ Caspian Sea
     Datum::fromSRID('urn:ogc:def:datum:EPSG::5106')
 
 Defined as -28.0m Baltic datum
+
+Catania 1965
+------------
+
+| Type: Vertical
+| Used: Italy - Sicily onshore.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_CATANIA_1965)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1306')
+
+Mean Sea Level at Catania in 1965.
+
+Orthometric heights.
 
 Cayman Brac Vertical Datum 1961
 -------------------------------
@@ -1940,6 +1970,21 @@ EGM96 geoid
 Derived through EGM84 geoid undulation model consisting of spherical harmonic coefficients to degree and order 360 applied to the WGS 84 ellipsoid.
 
 Replaces EGM84 geoid (datum code 5203). Replaced by EGM2008 geoid (datum code 1027).
+
+EOS21 Intermediate Reference Frame
+----------------------------------
+
+| Type: Geodetic
+| Used: On or related to the complex of rail routes in the East of Scotland, incorporating the route from Tweedbank through the Borders to Edinburgh; the line from Edinburgh to Aberdeen; routes via Kirkaldy and Cowdenbeath; and routes via Leuchars and Perth to Dundee. 
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_EOS21_INTERMEDIATE_REFERENCE_FRAME)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1308')
+
+Defined through the application of the EOS21 NTv2 transformation (code 9454) to ETRS89 as realized through OSNet v2009 CORS.
+
+Created in 2021 to support intermediate CRS "EOS21-IRF" in the emulation of the EOS21 Snake map projection.
 
 EPSG example wellbore vertical datum
 ------------------------------------
@@ -2749,16 +2794,18 @@ Reference point Hutbiegl defined relative to mean sea level at Trieste in 1875.
 
 Normal-orthometric heights.
 
-Genoa
------
+Genoa 1942
+----------
 
 | Type: Vertical
 | Used: Italy - mainland (including San Marino and Vatican City State) and Sicily.
 
 .. code-block:: php
 
-    Datum::fromSRID(Datum::EPSG_GENOA)
+    Datum::fromSRID(Datum::EPSG_GENOA_1942)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1051')
+
+Mean Sea Level at Genoa (Ponte Morosini) 1937-1946.
 
 Orthometric heights.
 
@@ -4414,7 +4461,7 @@ Istituto Geografico Militaire 1995
     Datum::fromSRID(Datum::EPSG_ISTITUTO_GEOGRAFICO_MILITAIRE_1995)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::6670')
 
-Network of 1296 points observed 1992-1995 and adjusted in 1996 constrained to 9 ETRF89 points at epoch 1989.0. Densification of ETRS89 in Italy.
+Densification of ETRF89 in Italy. Network of 1296 points observed 1992-1995 adjusted in 1996 constrained to 9 ETRF89 points at epoch 1989.0. By April 2021 the framework was composed of 3104 points of the fundamental network and 3819 densification points.
 
 Replaced by RDN2008 (datum code 1132) from 2011-11-10.
 

@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\Geometry\Extents\BoundingBoxOnly;
 
 /**
- * North America/Canada - CVD28.
+ * North America/Canada - CGVD28.
  * @internal
  */
 class Extent1289

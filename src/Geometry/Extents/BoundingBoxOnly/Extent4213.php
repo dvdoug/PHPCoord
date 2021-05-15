@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\Geometry\Extents\BoundingBoxOnly;
 
 /**
- * North America/USA - Oregon - Santiam Pass.
+ * North America/USA - Oregon - Sweet Home-Sisters.
  * @internal
  */
 class Extent4213

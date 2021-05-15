@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\Geometry\Extents\BoundingBoxOnly;
 
 /**
- * South America/Colombia - Bogota D.C. city.
+ * South America/Colombia - Bogota city.
  * @internal
  */
 class Extent4135

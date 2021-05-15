@@ -89,6 +89,14 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_DB_REF_3_DEGREE_GAUSS_KRUGER_ZONE_5_E_N_PLUS_DHHN92_HEIGHT = 'urn:ogc:def:crs:EPSG::5835';
 
     /**
+     * EOS21 Grid + ODN height
+     * Extent: On or related to the complex of rail routes in the East of Scotland, incorporating the route from
+     * Tweedbank through the Borders to Edinburgh; the line from Edinburgh to Aberdeen; routes via Kirkaldy and
+     * Cowdenbeath; and routes via Leuchars and Perth to Dundee.
+     */
+    public const EPSG_EOS21_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::9742';
+
+    /**
      * ETRF2000-PL + Baltic 1986 height
      * Extent: Poland - onshore.
      */
@@ -124,6 +132,18 @@ class Compound extends CoordinateReferenceSystem
      * Extent: United Kingdom (UK) - Northern Ireland (Ulster) - onshore.
      */
     public const EPSG_ETRS89_PLUS_BELFAST_HEIGHT = 'urn:ogc:def:crs:EPSG::9450';
+
+    /**
+     * ETRS89 + Cagliari 1956 height
+     * Extent: Italy - Sardinia onshore.
+     */
+    public const EPSG_ETRS89_PLUS_CAGLIARI_1956_HEIGHT = 'urn:ogc:def:crs:EPSG::9725';
+
+    /**
+     * ETRS89 + Catania 1965 height
+     * Extent: Italy - Sicily onshore.
+     */
+    public const EPSG_ETRS89_PLUS_CATANIA_1965_HEIGHT = 'urn:ogc:def:crs:EPSG::9724';
 
     /**
      * ETRS89 + Ceuta 2 height
@@ -186,6 +206,12 @@ class Compound extends CoordinateReferenceSystem
      * See also ETRS89 + EVRF2019 (CRS code 9422).
      */
     public const EPSG_ETRS89_PLUS_EVRF2019_MEAN_TIDE_HEIGHT = 'urn:ogc:def:crs:EPSG::9423';
+
+    /**
+     * ETRS89 + Genoa 1942 height
+     * Extent: Italy - mainland (including San Marino and Vatican City State) and Sicily.
+     */
+    public const EPSG_ETRS89_PLUS_GENOA_1942_HEIGHT = 'urn:ogc:def:crs:EPSG::9723';
 
     /**
      * ETRS89 + Ibiza height
@@ -2001,6 +2027,12 @@ class Compound extends CoordinateReferenceSystem
      * Extent: Canada offshore Atlantic - 48°W to 42°W.
      */
     public const EPSG_NAD83_CSRS_UTM_ZONE_23N_PLUS_CGVD2013_HEIGHT = 'urn:ogc:def:crs:EPSG::9711';
+
+    /**
+     * NAD83(CSRS) / UTM zone 24N + CGVD2013 height
+     * Extent: Canada offshore Atlantic - east of 42°W.
+     */
+    public const EPSG_NAD83_CSRS_UTM_ZONE_24N_PLUS_CGVD2013_HEIGHT = 'urn:ogc:def:crs:EPSG::9714';
 
     /**
      * NAD83(CSRS) / UTM zone 7N + CGVD2013 height

@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\Geometry\Extents\BoundingBoxOnly;
 
 /**
- * Asia-ExFSU/Vietnam  east of 106°15'E by province - Da Nang.
+ * Asia-ExFSU/Vietnam - Quang Ninh; Da Nang, Quang Nam; Ba Ria-Vung Tau, Dong Nai, Lam Dong.
  * @internal
  */
 class Extent4218

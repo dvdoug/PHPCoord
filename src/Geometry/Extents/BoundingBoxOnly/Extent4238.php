@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\Geometry\Extents\BoundingBoxOnly;
 
 /**
- * Asia-ExFSU/Asia - Iraq and SW Iran.
+ * Asia-ExFSU/Asia - Middle East - Iraq and SW Iran.
  * @internal
  */
 class Extent4238

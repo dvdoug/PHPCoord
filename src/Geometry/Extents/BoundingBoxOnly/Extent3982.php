@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\Geometry\Extents\BoundingBoxOnly;
 
 /**
- * Asia-ExFSU/Taiwan - onshore  mainland.
+ * Asia-ExFSU/Taiwan - onshore - mainland.
  * @internal
  */
 class Extent3982

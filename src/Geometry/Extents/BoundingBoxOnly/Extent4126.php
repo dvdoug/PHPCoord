@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\Geometry\Extents\BoundingBoxOnly;
 
 /**
- * Europe-FSU/Portugal - Azores E - Santa Maria and Formigas onshore.
+ * Europe-FSU/Portugal - Azores E onshore - Santa Maria and Formigas.
  * @internal
  */
 class Extent4126

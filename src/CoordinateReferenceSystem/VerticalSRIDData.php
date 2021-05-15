@@ -60,7 +60,7 @@ trait VerticalSRIDData
             'extent_code' => ['2370'],
         ],
         'urn:ogc:def:crs:EPSG::5214' => [
-            'name' => 'Genoa height',
+            'name' => 'Genoa 1942 height',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
             'datum' => 'urn:ogc:def:datum:EPSG::1051',
             'extent_code' => ['3736'],
@@ -1498,6 +1498,18 @@ trait VerticalSRIDData
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
             'datum' => 'urn:ogc:def:datum:EPSG::1303',
             'extent_code' => ['3217'],
+        ],
+        'urn:ogc:def:crs:EPSG::9721' => [
+            'name' => 'Catania 1965 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1306',
+            'extent_code' => ['2340'],
+        ],
+        'urn:ogc:def:crs:EPSG::9722' => [
+            'name' => 'Cagliari 1956 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1307',
+            'extent_code' => ['2339'],
         ],
     ];
 }

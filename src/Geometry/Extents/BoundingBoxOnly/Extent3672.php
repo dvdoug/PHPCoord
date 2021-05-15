@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\Geometry\Extents\BoundingBoxOnly;
 
 /**
- * Europe-FSU/Norway - onshore - 27ºE to 28ºE.
+ * Europe-FSU/Norway - onshore - 27°E to 28°E.
  * @internal
  */
 class Extent3672

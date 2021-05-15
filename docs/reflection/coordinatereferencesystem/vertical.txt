@@ -378,6 +378,19 @@ CGVD28 height
 
 From November 2013 replaced by CGVD2013 height (CRS code 6647).
 
+Cagliari 1956 height
+--------------------
+
+| Used: Italy - Sardinia onshore.
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_CAGLIARI_1956_HEIGHT)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::9722')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_CAGLIARI_1956_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9722')
+
+
 Cais da Figueirinha - Angra do Heroismo height
 ----------------------------------------------
 
@@ -496,6 +509,19 @@ Caspian height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5611')
 
 Caspian Sea water levels are now offset appreciably from this datum.
+
+Catania 1965 height
+-------------------
+
+| Used: Italy - Sicily onshore.
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_CATANIA_1965_HEIGHT)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::9721')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_CATANIA_1965_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9721')
+
 
 Ceuta 2 height
 --------------
@@ -1070,16 +1096,16 @@ GVR2016 height
 
 Replaces GVR2000 height (CRS code 8266). GVR2016 is realized by gravimetric geoid model 2016 (transformation code 8269) applied to GR96 (CRS code 4909).
 
-Genoa height
-------------
+Genoa 1942 height
+-----------------
 
 | Used: Italy - mainland (including San Marino and Vatican City State) and Sicily.
 
 .. code-block:: php
 
-    Vertical::fromSRID(Vertical::EPSG_GENOA_HEIGHT)
+    Vertical::fromSRID(Vertical::EPSG_GENOA_1942_HEIGHT)
     Vertical::fromSRID('urn:ogc:def:crs:EPSG::5214')
-    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_GENOA_HEIGHT)
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_GENOA_1942_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5214')
 
 

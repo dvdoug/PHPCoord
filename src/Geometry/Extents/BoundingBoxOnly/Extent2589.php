@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\Geometry\Extents\BoundingBoxOnly;
 
 /**
- * Asia-ExFSU/Indonesia - Irian Jaya - Tangguh.
+ * Asia-ExFSU/Indonesia - West Papua - Tangguh.
  * @internal
  */
 class Extent2589

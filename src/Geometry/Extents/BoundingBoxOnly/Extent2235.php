@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\Geometry\Extents\BoundingBoxOnly;
 
 /**
- * North America/USA - New York - SPCS - Long island.
+ * North America/USA - New York - SPCS - Long Island.
  * @internal
  */
 class Extent2235

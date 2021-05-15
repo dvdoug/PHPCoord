@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\Geometry\Extents\BoundingBoxOnly;
 
 /**
- * Asia-ExFSU/United Arab Emirates (UAE) - Abu Dhabi - onshore.
+ * Asia-ExFSU/UAE - Abu Dhabi - onshore.
  * @internal
  */
 class Extent4225

@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\Geometry\Extents\BoundingBoxOnly;
 
 /**
- * Africa/DR Congo (Zaire)  offshore.
+ * Africa/DR Congo (Zaire) - offshore.
  * @internal
  */
 class Extent4447

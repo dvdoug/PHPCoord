@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\Geometry\Extents\BoundingBoxOnly;
 
 /**
- * Africa/Gabon - west of 12°E - onshore and offshore.
+ * Africa/Gabon - west of 12°E.
  * @internal
  */
 class Extent1697

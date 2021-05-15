@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\Geometry\Extents\BoundingBoxOnly;
 
 /**
- * Arctic/Arctic - 79°N to 67°N,  156°W to 66°W.
+ * Arctic/Arctic - 79°N to 67°N, 156°W to 66°W.
  * @internal
  */
 class Extent4032

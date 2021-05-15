@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\Geometry\Extents\BoundingBoxOnly;
 
 /**
- * North America/USA - conus north of 41°N, 112°W to 95°W.
+ * North America/USA - CONUS north of 41°N, 112°W to 95°W.
  * @internal
  */
 class Extent2978

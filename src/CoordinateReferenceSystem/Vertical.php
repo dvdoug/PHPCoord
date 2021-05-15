@@ -232,6 +232,12 @@ class Vertical extends CoordinateReferenceSystem
     public const EPSG_CGVD28_HEIGHT = 'urn:ogc:def:crs:EPSG::5713';
 
     /**
+     * Cagliari 1956 height
+     * Extent: Italy - Sardinia onshore.
+     */
+    public const EPSG_CAGLIARI_1956_HEIGHT = 'urn:ogc:def:crs:EPSG::9722';
+
+    /**
      * Cais da Figueirinha - Angra do Heroismo height
      * Extent: Portugal - central Azores - Terceira island onshore.
      */
@@ -286,6 +292,12 @@ class Vertical extends CoordinateReferenceSystem
      * Caspian Sea water levels are now offset appreciably from this datum.
      */
     public const EPSG_CASPIAN_HEIGHT = 'urn:ogc:def:crs:EPSG::5611';
+
+    /**
+     * Catania 1965 height
+     * Extent: Italy - Sicily onshore.
+     */
+    public const EPSG_CATANIA_1965_HEIGHT = 'urn:ogc:def:crs:EPSG::9721';
 
     /**
      * Ceuta 2 height
@@ -605,10 +617,10 @@ class Vertical extends CoordinateReferenceSystem
     public const EPSG_GVR2016_HEIGHT = 'urn:ogc:def:crs:EPSG::8267';
 
     /**
-     * Genoa height
+     * Genoa 1942 height
      * Extent: Italy - mainland (including San Marino and Vatican City State) and Sicily.
      */
-    public const EPSG_GENOA_HEIGHT = 'urn:ogc:def:crs:EPSG::5214';
+    public const EPSG_GENOA_1942_HEIGHT = 'urn:ogc:def:crs:EPSG::5214';
 
     /**
      * Gisborne 1926 height
@@ -1785,6 +1797,11 @@ class Vertical extends CoordinateReferenceSystem
      * Replaces Yellow Sea 1956 height (CRS code 5736).
      */
     public const EPSG_YELLOW_SEA_1985_HEIGHT = 'urn:ogc:def:crs:EPSG::5737';
+
+    /**
+     * @deprecated use EPSG_GENOA_1942_HEIGHT instead
+     */
+    public const EPSG_GENOA_HEIGHT = 'urn:ogc:def:crs:EPSG::5214';
 
     private static array $cachedObjects = [];
 

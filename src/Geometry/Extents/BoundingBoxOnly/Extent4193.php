@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\Geometry\Extents\BoundingBoxOnly;
 
 /**
- * Asia-ExFSU/Vietnam - west of 103.5°E onshore.
+ * Asia-ExFSU/Vietnam - west of 103°30'E onshore.
  * @internal
  */
 class Extent4193

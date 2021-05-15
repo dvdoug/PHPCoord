@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\Geometry\Extents\BoundingBoxOnly;
 
 /**
- * Africa/Angola - offshore blocks 2  3 17-18 and 31-33.
+ * Africa/Angola - offshore blocks 2 3 17-18 and 31-33.
  * @internal
  */
 class Extent2324

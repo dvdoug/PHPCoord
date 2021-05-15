@@ -8,11 +8,11 @@ declare(strict_types=1);
 
 namespace PHPCoord\EPSG\Import;
 
+use function array_column;
 use function array_flip;
-use function array_map;
 use function array_reverse;
 use function array_unique;
-use function assert;
+use function class_exists;
 use function dirname;
 use Exception;
 use function explode;
@@ -22,9 +22,12 @@ use function file_get_contents;
 use function file_put_contents;
 use function fopen;
 use function fwrite;
-use function glob;
 use function implode;
 use function in_array;
+use function json_decode;
+use const JSON_THROW_ON_ERROR;
+use function max;
+use function min;
 use const PHP_EOL;
 use PHPCoord\CoordinateOperation\OSTN15OSGM15Provider;
 use PHPCoord\CoordinateReferenceSystem\Compound;
@@ -54,9 +57,7 @@ use PhpParser\NodeTraverser;
 use PhpParser\NodeVisitor\CloningVisitor;
 use PhpParser\Parser\Php7;
 use ReflectionClass;
-use Shapefile\Geometry\MultiPolygon;
-use Shapefile\Shapefile;
-use Shapefile\ShapefileReader;
+use function sleep;
 use SplFileInfo;
 use SQLite3;
 use const SQLITE3_ASSOC;
@@ -75,6 +76,16 @@ use function unlink;
 
 class EPSGImporter
 {
+    public const REGION_GLOBAL = 'Global';
+    public const REGION_AFRICA = 'Africa';
+    public const REGION_ARCTIC = 'Arctic';
+    public const REGION_ANTARCTIC = 'Antarctic';
+    public const REGION_ASIA = 'Asia-ExFSU';
+    public const REGION_EUROPE = 'Europe-FSU';
+    public const REGION_NORTHAMERICA = 'North America';
+    public const REGION_SOUTHAMERICA = 'South America';
+    public const REGION_OCEANIA = 'Australasia and Oceania';
+
     private string $resourceDir;
 
     private string $sourceDir;
@@ -121,6 +132,8 @@ class EPSGImporter
         1100, // Geog3D to Geog2D+GravityRelatedHeight (PL txt)
         1101, // Vertical Offset by Grid Interpolation (PL txt)
         1103, // Geog3D to Geog2D+GravityRelatedHeight (EGM)
+        1105, // Geog3D to Geog2D+GravityRelatedHeight (ITAL2005)
+        1106, // Geographic3D to GravityRelatedHeight (ITAL2005)
         9615, // NTv2
         9620, // Norway Offshore Interpolation
         9634, // Maritime Provinces polynomial interpolation
@@ -216,6 +229,7 @@ class EPSGImporter
         $sqlite->exec('UPDATE epsg_coordinatereferencesystem SET projection_conv_code = NULL WHERE coord_ref_sys_code = 4203');
         $sqlite->exec('UPDATE epsg_coordinatereferencesystem SET projection_conv_code = NULL WHERE coord_ref_sys_code = 4277');
         $sqlite->exec('UPDATE epsg_coordinatereferencesystem SET projection_conv_code = NULL WHERE coord_ref_sys_code = 4728');
+        $sqlite->exec('UPDATE epsg_extent SET deprecated = 1 WHERE extent_code IN (1263, 4205, 4393)');
 
         $sqlite->exec('VACUUM');
         $sqlite->exec('PRAGMA journal_mode=DELETE'); //but WAL is not openable read-only in older SQLite
@@ -547,6 +561,7 @@ class EPSGImporter
             'public',
             [
                 Datum::EPSG_ORDNANCE_SURVEY_OF_GREAT_BRITAIN_1936 => ['OSGB 1936'],
+                Datum::EPSG_GENOA_1942 => ['Genoa'],
             ]
         );
         $this->updateDocs(Datum::class, $data);
@@ -1025,7 +1040,9 @@ class EPSGImporter
             $this->sourceDir . '/CoordinateReferenceSystem/Vertical.php',
             $data,
             'public',
-            []
+            [
+                Vertical::EPSG_GENOA_1942_HEIGHT => ['Genoa Height'],
+            ]
         );
         $this->updateDocs(Vertical::class, $data);
 
@@ -1362,6 +1379,7 @@ class EPSGImporter
     public function generateExtents(SQLite3 $sqlite): void
     {
         echo 'Updating extents...';
+
         $boundingBoxOnly = $this->sourceDir . '/Geometry/Extents/BoundingBoxOnly/';
         $builtInFull = $this->sourceDir . '/Geometry/Extents/';
         $africa = $this->sourceDir . '/../vendor/php-coord/datapack-africa/src/Geometry/Extents/';
@@ -1373,75 +1391,72 @@ class EPSGImporter
         $southAmerica = $this->sourceDir . '/../vendor/php-coord/datapack-southamerica/src/Geometry/Extents/';
         $oceania = $this->sourceDir . '/../vendor/php-coord/datapack-oceania/src/Geometry/Extents/';
 
-        array_map('unlink', glob($boundingBoxOnly . '*.php'));
-        array_map('unlink', glob($builtInFull . '*.php'));
-        array_map('unlink', glob($africa . '*.php'));
-        array_map('unlink', glob($antarctic . '*.php'));
-        array_map('unlink', glob($arctic . '*.php'));
-        array_map('unlink', glob($asia . '*.php'));
-        array_map('unlink', glob($europe . '*.php'));
-        array_map('unlink', glob($northAmerica . '*.php'));
-        array_map('unlink', glob($southAmerica . '*.php'));
-        array_map('unlink', glob($oceania . '*.php'));
+        $regionMap = require 'ExtentMap.php';
 
         $sql = "
-            SELECT e.extent_code
+            SELECT e.extent_code, e.extent_name
             FROM epsg_coordinatereferencesystem crs
             JOIN epsg_usage u ON u.object_code = crs.coord_ref_sys_code AND u.object_table_name = 'epsg_coordinatereferencesystem'
             JOIN epsg_extent e ON u.extent_code = e.extent_code
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2020-12-14'
-            WHERE dep.deprecation_id IS NULL
+            WHERE dep.deprecation_id IS NULL AND e.deprecated = 0
 
             UNION
 
-            SELECT e.extent_code FROM epsg_coordoperation o
+            SELECT e.extent_code, e.extent_name
+            FROM epsg_coordoperation o
             JOIN epsg_usage u ON u.object_code = o.coord_op_code AND u.object_table_name = 'epsg_coordoperation'
             JOIN epsg_extent e ON u.extent_code = e.extent_code
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperation' AND dep.object_code = o.coord_op_code AND dep.deprecation_date <= '2020-12-14'
-            WHERE dep.deprecation_id IS NULL
+            WHERE dep.deprecation_id IS NULL AND e.deprecated = 0
 
             GROUP BY e.extent_code
         ";
-
         $result = $sqlite->query($sql);
+
         $extents = [];
         while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-            $extents[] = $row['extent_code'];
+            $extents[$row['extent_code']] = $row['extent_name'];
+
+            if (!isset($regionMap[$row['extent_code']])) {
+                throw new Exception("Unknown region for {$row['extent_code']}:{$row['extent_name']}");
+            }
         }
 
-        $shapeFile = new ShapefileReader(
-            $this->resourceDir . '/epsg/EPSG_Polygons.shp',
-            [
-                Shapefile::OPTION_FORCE_MULTIPART_GEOMETRIES => true,
-            ]
-        );
-        $shapeFile->setCharset('ISO-8859-1');
-
-        // Read all the records
-        while ($geometry = $shapeFile->fetchRecord()) {
-            assert($geometry instanceof MultiPolygon);
-
-            $extentCode = (int) $geometry->getData('AREA_CODE');
-            $region = $geometry->getData('REGION');
-            $name = $geometry->getData('AREA_NAME');
-            if (!in_array($extentCode, $extents, true)) {
+        foreach ($extents as $extentCode => $extentName) {
+            if (class_exists("PHPCoord\\Geometry\\Extents\\Extent{$extentCode}")) {
                 continue;
             }
+
+            sleep(5);
+
+            $region = $regionMap[$extentCode];
+            $name = $extents[$extentCode];
+            $geoJson = file_get_contents("https://apps.epsg.org/api/v1/Extent/{$extentCode}/polygon/");
+            $polygons = json_decode($geoJson, true, 512, JSON_THROW_ON_ERROR);
 
             $exportSimple = "<?php\ndeclare(strict_types=1);\n\nnamespace PHPCoord\Geometry\Extents\BoundingBoxOnly;\n/**\n * {$region}/{$name}.\n * @internal\n */\nclass Extent{$extentCode}\n{\n    public function __invoke(): array\n    {\n        return\n        [\n";
             $exportFull = "<?php\ndeclare(strict_types=1);\n\nnamespace PHPCoord\Geometry\Extents;\n/**\n * {$region}/{$name}.\n * @internal\n */\nclass Extent{$extentCode}\n{\n    public function __invoke(): array\n    {\n        return\n        [\n";
 
-            foreach ($geometry->getPolygons() as $shapeFilePolygon) {
-                $boundingBox = $shapeFilePolygon->getBoundingBox();
+            if ($polygons['type'] === 'Polygon') {
+                $polygons['coordinates'] = [$polygons['coordinates']];
+            }
+
+            foreach ($polygons['coordinates'] as $polygon) {
+                $outerRingPoints = $polygon[0];
+                $xmin = min(array_column($outerRingPoints, 0));
+                $xmax = max(array_column($outerRingPoints, 0));
+                $ymin = min(array_column($outerRingPoints, 1));
+                $ymax = max(array_column($outerRingPoints, 1));
                 $exportSimple .= "            [\n                [\n                    ";
-                $exportSimple .= "[{$boundingBox['xmax']}, {$boundingBox['ymax']}], [{$boundingBox['xmin']}, {$boundingBox['ymax']}], [{$boundingBox['xmin']}, {$boundingBox['ymin']}], [{$boundingBox['xmax']}, {$boundingBox['ymin']}], [{$boundingBox['xmax']}, {$boundingBox['ymax']}],";
+                $exportSimple .= "[{$xmax}, {$ymax}], [{$xmin}, {$ymax}], [{$xmin}, {$ymin}], [{$xmax}, {$ymin}], [{$xmax}, {$ymax}],";
                 $exportSimple .= "\n                ],\n            ],\n";
 
                 $exportFull .= "            [\n";
-                foreach ($shapeFilePolygon->getRings() as $shapeFileRing) {
+                foreach ($polygon as $ring) {
                     $exportFull .= "                [\n                    ";
-                    foreach ($shapeFileRing->getPoints() as $shapeFilePoint) {
-                        $exportFull .= '[' . $shapeFilePoint->getX() . ', ' . $shapeFilePoint->getY() . '], ';
+                    foreach ($ring as $point) {
+                        $exportFull .= '[' . $point[0] . ', ' . $point[1] . '], ';
                     }
                     $exportFull .= "\n                ],\n";
                 }
@@ -1451,53 +1466,53 @@ class EPSGImporter
             $exportFull .= "        ];\n    }\n}\n";
 
             switch ($region) {
-                case 'Global':
+                case self::REGION_GLOBAL:
                     file_put_contents($builtInFull . "Extent{$extentCode}.php", $exportFull);
                     $this->csFixFile($builtInFull . "Extent{$extentCode}.php");
                     break;
-                case 'Africa':
+                case self::REGION_AFRICA:
                     file_put_contents($boundingBoxOnly . "Extent{$extentCode}.php", $exportSimple);
                     $this->csFixFile($boundingBoxOnly . "Extent{$extentCode}.php");
                     file_put_contents($africa . "Extent{$extentCode}.php", $exportFull);
                     $this->csFixFile($africa . "Extent{$extentCode}.php");
                     break;
-                case 'Antarctic':
+                case self::REGION_ANTARCTIC:
                     file_put_contents($boundingBoxOnly . "Extent{$extentCode}.php", $exportSimple);
                     $this->csFixFile($boundingBoxOnly . "Extent{$extentCode}.php");
                     file_put_contents($antarctic . "Extent{$extentCode}.php", $exportFull);
                     $this->csFixFile($antarctic . "Extent{$extentCode}.php");
                     break;
-                case 'Arctic':
+                case self::REGION_ARCTIC:
                     file_put_contents($boundingBoxOnly . "Extent{$extentCode}.php", $exportSimple);
                     $this->csFixFile($boundingBoxOnly . "Extent{$extentCode}.php");
                     file_put_contents($arctic . "Extent{$extentCode}.php", $exportFull);
                     $this->csFixFile($arctic . "Extent{$extentCode}.php");
                     break;
-                case 'Asia-ExFSU':
+                case self::REGION_ASIA:
                     file_put_contents($boundingBoxOnly . "Extent{$extentCode}.php", $exportSimple);
                     $this->csFixFile($boundingBoxOnly . "Extent{$extentCode}.php");
                     file_put_contents($asia . "Extent{$extentCode}.php", $exportFull);
                     $this->csFixFile($asia . "Extent{$extentCode}.php");
                     break;
-                case 'Australasia and Oceania':
+                case self::REGION_OCEANIA:
                     file_put_contents($boundingBoxOnly . "Extent{$extentCode}.php", $exportSimple);
                     $this->csFixFile($boundingBoxOnly . "Extent{$extentCode}.php");
                     file_put_contents($oceania . "Extent{$extentCode}.php", $exportFull);
                     $this->csFixFile($oceania . "Extent{$extentCode}.php");
                     break;
-                case 'Europe-FSU':
+                case self::REGION_EUROPE:
                     file_put_contents($boundingBoxOnly . "Extent{$extentCode}.php", $exportSimple);
                     $this->csFixFile($boundingBoxOnly . "Extent{$extentCode}.php");
                     file_put_contents($europe . "Extent{$extentCode}.php", $exportFull);
                     $this->csFixFile($europe . "Extent{$extentCode}.php");
                     break;
-                case 'North America':
+                case self::REGION_NORTHAMERICA:
                     file_put_contents($boundingBoxOnly . "Extent{$extentCode}.php", $exportSimple);
                     $this->csFixFile($boundingBoxOnly . "Extent{$extentCode}.php");
                     file_put_contents($northAmerica . "Extent{$extentCode}.php", $exportFull);
                     $this->csFixFile($northAmerica . "Extent{$extentCode}.php");
                     break;
-                case 'South America':
+                case self::REGION_SOUTHAMERICA:
                     file_put_contents($boundingBoxOnly . "Extent{$extentCode}.php", $exportSimple);
                     $this->csFixFile($boundingBoxOnly . "Extent{$extentCode}.php");
                     file_put_contents($southAmerica . "Extent{$extentCode}.php", $exportFull);
@@ -1507,7 +1522,6 @@ class EPSGImporter
                     throw new Exception("Unknown region: {$region}");
             }
         }
-        unset($shapefile);
 
         echo 'done' . PHP_EOL;
     }

@@ -1541,7 +1541,7 @@ class CoordinateOperations
             'extent_code' => ['1337'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::1581' => [
-            'name' => 'SIRGAS to WGS 84 (1)',
+            'name' => 'SIRGAS 1995 to WGS 84 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['3448'],
         ],
@@ -6062,7 +6062,7 @@ class CoordinateOperations
         'urn:ogc:def:coordinateOperation:EPSG::6710' => [
             'name' => 'RDN2008 to ETRS89 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['1127'],
+            'extent_code' => ['3343'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::6711' => [
             'name' => 'RDN2008 to WGS 84 (1)',
@@ -11234,6 +11234,16 @@ class CoordinateOperations
             'name' => 'ETRF2000-PL to ETRS89 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['1192'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9726' => [
+            'name' => 'Genoa 1942 height to Catania 1965 height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::9616',
+            'extent_code' => ['2340'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9738' => [
+            'name' => 'EOS21-TM',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['4620'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::9743' => [
             'name' => 'PN68 to WGS 84 (1)',

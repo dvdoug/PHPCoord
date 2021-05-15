@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\Geometry\Extents\BoundingBoxOnly;
 
 /**
- * Africa/Africa - Africa - Botswana, Eswatini, Lesotho and South Africa.
+ * Africa/Africa - Botswana, Eswatini, Lesotho and South Africa.
  * @internal
  */
 class Extent1290

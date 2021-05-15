@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\Geometry\Extents;
 
 /**
- * Global/World - WGS72BE to WGS84 - by country.
+ * Global/World - WGS72 BE to WGS 84 - by country.
  * @internal
  */
 class Extent2346

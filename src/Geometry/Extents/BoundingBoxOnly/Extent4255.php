@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\Geometry\Extents\BoundingBoxOnly;
 
 /**
- * North America/USA - Indiana - La Porte, Pulaski, Starke.
+ * North America/USA - Indiana - LaPorte, Pulaski, Starke.
  * @internal
  */
 class Extent4255

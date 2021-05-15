@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\Geometry\Extents\BoundingBoxOnly;
 
 /**
- * North America/USA - Montana  Three Forks.
+ * North America/USA - Montana - Three Forks.
  * @internal
  */
 class Extent4317

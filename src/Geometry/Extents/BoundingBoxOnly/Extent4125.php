@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\Geometry\Extents\BoundingBoxOnly;
 
 /**
- * Europe-FSU/Portugal - Madeira and Desertas islands - onshore.
+ * Europe-FSU/Portugal - Madeira and Desertas islands onshore.
  * @internal
  */
 class Extent4125

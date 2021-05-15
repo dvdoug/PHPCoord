@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\Geometry\Extents\BoundingBoxOnly;
 
 /**
- * Asia-ExFSU/Vietnam - Bac Giang and Thura Thien-Hue.
+ * Asia-ExFSU/Vietnam - Bac Giang and Thua Thien-Hue.
  * @internal
  */
 class Extent4554

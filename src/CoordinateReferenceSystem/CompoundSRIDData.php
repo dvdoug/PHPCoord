@@ -2418,12 +2418,47 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6647',
             'extent_code' => ['2153'],
         ],
+        'urn:ogc:def:crs:EPSG::9714' => [
+            'name' => 'NAD83(CSRS) / UTM zone 24N + CGVD2013 height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::9713',
+            'horizontal_crs_type' => 'projected',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::6647',
+            'extent_code' => ['4617'],
+        ],
         'urn:ogc:def:crs:EPSG::9715' => [
             'name' => 'NAD83(CSRS) / UTM zone 15N + CGVD2013a height',
             'horizontal_crs' => 'urn:ogc:def:crs:EPSG::3159',
             'horizontal_crs_type' => 'projected',
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9245',
             'extent_code' => ['3414'],
+        ],
+        'urn:ogc:def:crs:EPSG::9723' => [
+            'name' => 'ETRS89 + Genoa 1942 height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::4258',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::5214',
+            'extent_code' => ['3736'],
+        ],
+        'urn:ogc:def:crs:EPSG::9724' => [
+            'name' => 'ETRS89 + Catania 1965 height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::4258',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::9721',
+            'extent_code' => ['2340'],
+        ],
+        'urn:ogc:def:crs:EPSG::9725' => [
+            'name' => 'ETRS89 + Cagliari 1956 height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::4258',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::9722',
+            'extent_code' => ['2339'],
+        ],
+        'urn:ogc:def:crs:EPSG::9742' => [
+            'name' => 'EOS21 Grid + ODN height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::9741',
+            'horizontal_crs_type' => 'projected',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::5701',
+            'extent_code' => ['4620'],
         ],
     ];
 }

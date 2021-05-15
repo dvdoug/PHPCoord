@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\Geometry\Extents\BoundingBoxOnly;
 
 /**
- * Europe-FSU/Macedonia.
+ * Europe-FSU/North Macedonia.
  * @internal
  */
 class Extent1148

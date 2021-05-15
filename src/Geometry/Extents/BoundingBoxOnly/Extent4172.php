@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\Geometry\Extents\BoundingBoxOnly;
 
 /**
- * South America/Falklands - 63W to 57 W - offshore.
+ * South America/Falkland Islands - offshore 63°W to 57°W.
  * @internal
  */
 class Extent4172

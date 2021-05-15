@@ -155,6 +155,19 @@ DB_REF / 3-degree Gauss-Kruger zone 5 (E-N) + DHHN92 height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5835')
 
 
+EOS21 Grid + ODN height
+-----------------------
+
+| Used: On or related to the complex of rail routes in the East of Scotland, incorporating the route from Tweedbank through the Borders to Edinburgh; the line from Edinburgh to Aberdeen; routes via Kirkaldy and Cowdenbeath; and routes via Leuchars and Perth to Dundee. 
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_EOS21_GRID_PLUS_ODN_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9742')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_EOS21_GRID_PLUS_ODN_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9742')
+
+
 ETRF2000-PL + Baltic 1986 height
 --------------------------------
 
@@ -231,6 +244,32 @@ ETRS89 + Belfast height
     Compound::fromSRID('urn:ogc:def:crs:EPSG::9450')
     CoordinateReferenceSystem::fromSRID(Compound::EPSG_ETRS89_PLUS_BELFAST_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9450')
+
+
+ETRS89 + Cagliari 1956 height
+-----------------------------
+
+| Used: Italy - Sardinia onshore.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_ETRS89_PLUS_CAGLIARI_1956_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9725')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_ETRS89_PLUS_CAGLIARI_1956_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9725')
+
+
+ETRS89 + Catania 1965 height
+----------------------------
+
+| Used: Italy - Sicily onshore.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_ETRS89_PLUS_CATANIA_1965_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9724')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_ETRS89_PLUS_CATANIA_1965_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9724')
 
 
 ETRS89 + Ceuta 2 height
@@ -327,6 +366,19 @@ ETRS89 + EVRF2019 mean-tide height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9423')
 
 See also ETRS89 + EVRF2019 (CRS code 9422).
+
+ETRS89 + Genoa 1942 height
+--------------------------
+
+| Used: Italy - mainland (including San Marino and Vatican City State) and Sicily.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_ETRS89_PLUS_GENOA_1942_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9723')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_ETRS89_PLUS_GENOA_1942_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9723')
+
 
 ETRS89 + Ibiza height
 ---------------------
@@ -3607,6 +3659,19 @@ NAD83(CSRS) / UTM zone 23N + CGVD2013 height
     Compound::fromSRID('urn:ogc:def:crs:EPSG::9711')
     CoordinateReferenceSystem::fromSRID(Compound::EPSG_NAD83_CSRS_UTM_ZONE_23N_PLUS_CGVD2013_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9711')
+
+
+NAD83(CSRS) / UTM zone 24N + CGVD2013 height
+--------------------------------------------
+
+| Used: Canada offshore Atlantic - east of 42°W.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_NAD83_CSRS_UTM_ZONE_24N_PLUS_CGVD2013_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9714')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_NAD83_CSRS_UTM_ZONE_24N_PLUS_CGVD2013_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9714')
 
 
 NAD83(CSRS) / UTM zone 7N + CGVD2013 height

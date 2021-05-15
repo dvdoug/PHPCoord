@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\Geometry\Extents\BoundingBoxOnly;
 
 /**
- * Asia-ExFSU/Vietnam  Binh Thuan, Dak Lak, Dak Nong, Gia Lai, Phu Yen.
+ * Asia-ExFSU/Vietnam - Binh Thuan, Dak Lak, Dak Nong, Gia Lai, Phu Yen.
  * @internal
  */
 class Extent4560

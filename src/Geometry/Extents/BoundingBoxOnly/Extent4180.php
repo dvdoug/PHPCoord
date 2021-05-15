@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\Geometry\Extents\BoundingBoxOnly;
 
 /**
- * North America/USA - Oregon - Baker.
+ * North America/USA - Oregon - Baker City.
  * @internal
  */
 class Extent4180

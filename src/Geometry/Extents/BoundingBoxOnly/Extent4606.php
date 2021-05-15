@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\Geometry\Extents\BoundingBoxOnly;
 
 /**
- * Europe-FSU/Europe - British Isles - Ireland onshore, UK onshore and UKCS.
+ * Europe-FSU/Europe - British Isles - UK and Ireland onshore, UKCS.
  * @internal
  */
 class Extent4606

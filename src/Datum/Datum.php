@@ -667,6 +667,15 @@ class Datum
     public const EPSG_CADASTRE_1997 = 'urn:ogc:def:datum:EPSG::1037';
 
     /**
+     * Cagliari 1956
+     * Type: vertical
+     * Extent: Italy - Sardinia onshore.
+     * Mean Sea Level at Cagliari 1955-1957.
+     * Orthometric heights.
+     */
+    public const EPSG_CAGLIARI_1956 = 'urn:ogc:def:datum:EPSG::1307';
+
+    /**
      * Cais da Figueirinha - Angra do Heroismo
      * Type: vertical
      * Extent: Portugal - central Azores - Terceira island onshore.
@@ -841,6 +850,15 @@ class Datum
      * Defined as -28.0m Baltic datum.
      */
     public const EPSG_CASPIAN_SEA = 'urn:ogc:def:datum:EPSG::5106';
+
+    /**
+     * Catania 1965
+     * Type: vertical
+     * Extent: Italy - Sicily onshore.
+     * Mean Sea Level at Catania in 1965.
+     * Orthometric heights.
+     */
+    public const EPSG_CATANIA_1965 = 'urn:ogc:def:datum:EPSG::1306';
 
     /**
      * Cayman Brac Vertical Datum 1961
@@ -1270,6 +1288,18 @@ class Datum
      * Replaces EGM84 geoid (datum code 5203). Replaced by EGM2008 geoid (datum code 1027).
      */
     public const EPSG_EGM96_GEOID = 'urn:ogc:def:datum:EPSG::5171';
+
+    /**
+     * EOS21 Intermediate Reference Frame
+     * Type: geodetic
+     * Extent: On or related to the complex of rail routes in the East of Scotland, incorporating the route from
+     * Tweedbank through the Borders to Edinburgh; the line from Edinburgh to Aberdeen; routes via Kirkaldy and
+     * Cowdenbeath; and routes via Leuchars and Perth to Dundee.
+     * Defined through the application of the EOS21 NTv2 transformation (code 9454) to ETRS89 as realized through OSNet
+     * v2009 CORS.
+     * Created in 2021 to support intermediate CRS "EOS21-IRF" in the emulation of the EOS21 Snake map projection.
+     */
+    public const EPSG_EOS21_INTERMEDIATE_REFERENCE_FRAME = 'urn:ogc:def:datum:EPSG::1308';
 
     /**
      * EPSG example wellbore vertical datum
@@ -1917,13 +1947,13 @@ class Datum
     public const EPSG_GEBRAUCHSHOHEN_ADRIA = 'urn:ogc:def:datum:EPSG::5176';
 
     /**
-     * Genoa
+     * Genoa 1942
      * Type: vertical
      * Extent: Italy - mainland (including San Marino and Vatican City State) and Sicily.
-     *
+     * Mean Sea Level at Genoa (Ponte Morosini) 1937-1946.
      * Orthometric heights.
      */
-    public const EPSG_GENOA = 'urn:ogc:def:datum:EPSG::1051';
+    public const EPSG_GENOA_1942 = 'urn:ogc:def:datum:EPSG::1051';
 
     /**
      * Geocentric Datum Brunei Darussalam 2009
@@ -3015,8 +3045,9 @@ class Datum
      * Istituto Geografico Militaire 1995
      * Type: geodetic
      * Extent: Italy - onshore and offshore; San Marino, Vatican City State.
-     * Network of 1296 points observed 1992-1995 and adjusted in 1996 constrained to 9 ETRF89 points at epoch 1989.0.
-     * Densification of ETRS89 in Italy.
+     * Densification of ETRF89 in Italy. Network of 1296 points observed 1992-1995 adjusted in 1996 constrained to 9
+     * ETRF89 points at epoch 1989.0. By April 2021 the framework was composed of 3104 points of the fundamental
+     * network and 3819 densification points.
      * Replaced by RDN2008 (datum code 1132) from 2011-11-10.
      */
     public const EPSG_ISTITUTO_GEOGRAFICO_MILITAIRE_1995 = 'urn:ogc:def:datum:EPSG::6670';
@@ -7585,6 +7616,11 @@ class Datum
      */
     public const EPSG_OSGB_1936 = 'urn:ogc:def:datum:EPSG::6277';
 
+    /**
+     * @deprecated use EPSG_GENOA_1942 instead
+     */
+    public const EPSG_GENOA = 'urn:ogc:def:datum:EPSG::1051';
+
     protected static array $sridData = [
         'urn:ogc:def:datum:EPSG::1024' => [
             'name' => 'Hungarian Datum 1909',
@@ -7803,7 +7839,7 @@ class Datum
             'frame_reference_epoch' => null,
         ],
         'urn:ogc:def:datum:EPSG::1051' => [
-            'name' => 'Genoa',
+            'name' => 'Genoa 1942',
             'type' => 'vertical',
             'ellipsoid' => null,
             'prime_meridian' => null,
@@ -9791,6 +9827,30 @@ class Datum
         ],
         'urn:ogc:def:datum:EPSG::1305' => [
             'name' => 'ETRF2000 Poland',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
+        'urn:ogc:def:datum:EPSG::1306' => [
+            'name' => 'Catania 1965',
+            'type' => 'vertical',
+            'ellipsoid' => null,
+            'prime_meridian' => null,
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
+        'urn:ogc:def:datum:EPSG::1307' => [
+            'name' => 'Cagliari 1956',
+            'type' => 'vertical',
+            'ellipsoid' => null,
+            'prime_meridian' => null,
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
+        'urn:ogc:def:datum:EPSG::1308' => [
+            'name' => 'EOS21 Intermediate Reference Frame',
             'type' => 'geodetic',
             'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',

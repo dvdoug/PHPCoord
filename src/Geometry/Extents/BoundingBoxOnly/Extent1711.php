@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\Geometry\Extents\BoundingBoxOnly;
 
 /**
- * Europe-FSU/Europe - former Yugoslavia onshore - 19.5°E to 22.5°E.
+ * Europe-FSU/Europe - former Yugoslavia onshore 19.5°E to 22.5°E.
  * @internal
  */
 class Extent1711

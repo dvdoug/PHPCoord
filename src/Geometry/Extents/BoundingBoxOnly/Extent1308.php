@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\Geometry\Extents\BoundingBoxOnly;
 
 /**
- * Asia-ExFSU/Asia - Bangladesh; India; Myanmar; Pakistan  onshore.
+ * Asia-ExFSU/Asia - Bangladesh; India; Myanmar; Pakistan - onshore.
  * @internal
  */
 class Extent1308

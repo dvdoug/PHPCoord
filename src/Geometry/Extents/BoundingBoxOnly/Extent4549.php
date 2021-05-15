@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\Geometry\Extents\BoundingBoxOnly;
 
 /**
- * Asia-ExFSU/Vietnam - 104°15'E to 107°15'E by province - HCMC.
+ * Asia-ExFSU/Vietnam - 105°15'E to 107°50'E by province - HCMC.
  * @internal
  */
 class Extent4549

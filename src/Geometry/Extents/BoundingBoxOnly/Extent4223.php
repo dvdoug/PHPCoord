@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\Geometry\Extents\BoundingBoxOnly;
 
 /**
- * Asia-ExFSU/Asia - Malaysia (west inc SCS) and Singapore.
+ * Asia-ExFSU/Asia - Malaysia (west including SCS) and Singapore.
  * @internal
  */
 class Extent4223

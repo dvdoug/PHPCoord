@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\Geometry\Extents\BoundingBoxOnly;
 
 /**
- * Europe-FSU/Serbia - central Serbia and Vojvodinja.
+ * Europe-FSU/Serbia.
  * @internal
  */
 class Extent4543

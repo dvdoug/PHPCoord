@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\Geometry\Extents\BoundingBoxOnly;
 
 /**
- * Australasia and Oceania/American Samoa - Tutuila and Aunu'u islands.
+ * Australasia and Oceania/American Samoa - Tutuila island.
  * @internal
  */
 class Extent2288

@@ -5955,7 +5955,7 @@ trait ProjectedSRIDData
             'name' => 'IGM95 / UTM zone 33N',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::4400',
             'datum' => 'urn:ogc:def:datum:EPSG::6670',
-            'extent_code' => ['1719'],
+            'extent_code' => ['4186'],
         ],
         'urn:ogc:def:crs:EPSG::3066' => [
             'name' => 'ED50 / Jordan TM',
@@ -20920,6 +20920,30 @@ trait ProjectedSRIDData
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::4400',
             'datum' => 'urn:ogc:def:datum:EPSG::6140',
             'extent_code' => ['2153'],
+        ],
+        'urn:ogc:def:crs:EPSG::9712' => [
+            'name' => 'NAD83 / UTM zone 24N',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::4400',
+            'datum' => 'urn:ogc:def:datum:EPSG::6269',
+            'extent_code' => ['4617'],
+        ],
+        'urn:ogc:def:crs:EPSG::9713' => [
+            'name' => 'NAD83(CSRS) / UTM zone 24N',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::4400',
+            'datum' => 'urn:ogc:def:datum:EPSG::6140',
+            'extent_code' => ['4617'],
+        ],
+        'urn:ogc:def:crs:EPSG::9716' => [
+            'name' => 'IGM95 / UTM zone 34N',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::4400',
+            'datum' => 'urn:ogc:def:datum:EPSG::6670',
+            'extent_code' => ['4187'],
+        ],
+        'urn:ogc:def:crs:EPSG::9741' => [
+            'name' => 'EOS21 Grid',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::4400',
+            'datum' => 'urn:ogc:def:datum:EPSG::1308',
+            'extent_code' => ['4620'],
         ],
         'urn:ogc:def:crs:EPSG::20004' => [
             'name' => 'Pulkovo 1995 / Gauss-Kruger zone 4',

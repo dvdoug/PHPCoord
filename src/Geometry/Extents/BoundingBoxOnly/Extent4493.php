@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\Geometry\Extents\BoundingBoxOnly;
 
 /**
- * Australasia and Oceania/Australia Christmas and Cocos  onshore.
+ * Australasia and Oceania/Australia Christmas and Cocos - onshore.
  * @internal
  */
 class Extent4493

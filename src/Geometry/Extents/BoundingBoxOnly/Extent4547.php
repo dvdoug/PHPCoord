@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\Geometry\Extents\BoundingBoxOnly;
 
 /**
- * Asia-ExFSU/Vietnam - 103°30'E to 106°30'E by province - Hanoi.
+ * Asia-ExFSU/Vietnam - 104°20'E to 106°10'E by province - Hanoi.
  * @internal
  */
 class Extent4547

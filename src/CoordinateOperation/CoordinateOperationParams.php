@@ -60324,6 +60324,40 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9726' => [
+            'Vertical Offset' => [
+                'value' => 0.141,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => true,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9738' => [
+            'Latitude of natural origin' => [
+                'value' => 56.21,
+                'uom' => 'urn:ogc:def:uom:EPSG::9110',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => -2.45,
+                'uom' => 'urn:ogc:def:uom:EPSG::9110',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 74996.927,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 133508.35,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::9743' => [
             'X-axis translation' => [
                 'value' => -307.0,

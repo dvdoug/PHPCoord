@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\Geometry\Extents\BoundingBoxOnly;
 
 /**
- * Europe-FSU/Germany - Sachsen - west of 13.5°E.
+ * Europe-FSU/Germany - Saxony - west of 13.5°E.
  * @internal
  */
 class Extent3395

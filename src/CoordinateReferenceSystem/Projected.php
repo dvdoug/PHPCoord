@@ -2889,6 +2889,16 @@ class Projected extends CoordinateReferenceSystem
     public const EPSG_ELD79_UTM_ZONE_35N = 'urn:ogc:def:crs:EPSG::2080';
 
     /**
+     * EOS21 Grid
+     * Extent: On or related to the complex of rail routes in the East of Scotland, incorporating the route from
+     * Tweedbank through the Borders to Edinburgh; the line from Edinburgh to Aberdeen; routes via Kirkaldy and
+     * Cowdenbeath; and routes via Leuchars and Perth to Dundee.
+     * The CRS's definition through transformation ETRS89 to EOS21-IRF (1) (code 9740) and map projection EOS21-TM
+     * (code 9738) emulates the EOS21 Snake projection applied to ETRS89 as realised through OSNet 2009 CORS.
+     */
+    public const EPSG_EOS21_GRID = 'urn:ogc:def:crs:EPSG::9741';
+
+    /**
      * ETRF2000-PL / CS2000/15
      * Extent: Poland - onshore and offshore west of 16°30'E.
      * See ETRF2000-PL / CS92 (code 2180) for smaller scale mapping.
@@ -5135,10 +5145,17 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * IGM95 / UTM zone 33N
-     * Extent: Italy - onshore and offshore - east of 12°E including San Marino and Vatican City State.
+     * Extent: Italy - onshore and offshore - between 12°E and 18°E including San Marino and Vatican City State.
      * Replaced by RDN2008 / UTM zone 33N and RDN2008 / UTM zone 34N (CRS codes 6708-09 and 7792-93) from 2011-11-10.
      */
     public const EPSG_IGM95_UTM_ZONE_33N = 'urn:ogc:def:crs:EPSG::3065';
+
+    /**
+     * IGM95 / UTM zone 34N
+     * Extent: Italy - onshore and offshore - east of 18°E.
+     * Replaced by RDN2008 / UTM zone 34N (CRS codes 6709 and 7793) from 2011-11-10.
+     */
+    public const EPSG_IGM95_UTM_ZONE_34N = 'urn:ogc:def:crs:EPSG::9716';
 
     /**
      * IGN 1962 Kerguelen / UTM zone 42S
@@ -8301,8 +8318,8 @@ class Projected extends CoordinateReferenceSystem
      * Extent: United States (USA) - Michigan - counties of Alcona; Alpena; Antrim; Arenac; Benzie; Charlevoix;
      * Cheboygan; Clare; Crawford; Emmet; Gladwin; Grand Traverse; Iosco; Kalkaska; Lake; Leelanau; Manistee; Mason;
      * Missaukee; Montmorency; Ogemaw; Osceola; Oscoda; Otsego; Presque Isle; Roscommon; Wexford.
-     * This and NAD Michigan / Michigan South (CRS code 6202) replace NAD27 / Michigan Old Central and East zones (CRS
-     * codes 5623-24).
+     * From 1964 this Lambert Conic Conformal (LCC) zone replaces the northern parts of the Transverse Mercator (TM)
+     * NAD27 / Michigan East and Old Central zones (CRS codes 5623 and 5624).
      */
     public const EPSG_NAD27_MICHIGAN_CENTRAL = 'urn:ogc:def:crs:EPSG::6201';
 
@@ -8312,8 +8329,8 @@ class Projected extends CoordinateReferenceSystem
      * Crawford; Genesee; Gladwin; Gratiot; Hillsdale; Huron; Ingham; Iosco; Jackson; Lapeer; Lenawee; Livingston;
      * Macomb; Midland; Monroe; Montmorency; Oakland; Ogemaw; Oscoda; Otsego; Presque Isle; Roscommon; Saginaw;
      * Sanilac; Shiawassee; St Clair; Tuscola; Washtenaw; Wayne.
-     * This and NAD27 / Michigan Old Central (CRS code 5624) replaced by NAD27 / Michigan Central and South zones (CRS
-     * codes 6201 and 6202).
+     * Introduced 1934. After 1964, this Transverse Mercator (TM) zone replaced by NAD27 / Michigan Central and NAD27 /
+     * Michigan South Lambert Conic Conformal (LCC) zones (CRS codes 6201 and 6202).
      */
     public const EPSG_NAD27_MICHIGAN_EAST = 'urn:ogc:def:crs:EPSG::5623';
 
@@ -8322,7 +8339,8 @@ class Projected extends CoordinateReferenceSystem
      * Extent: United States (USA) - Michigan north of approximately 45°45'N - counties of Alger; Baraga; Chippewa;
      * Delta; Dickinson; Gogebic; Houghton; Iron; Keweenaw; Luce; Mackinac; Marquette; Menominee; Ontonagon;
      * Schoolcraft.
-     * Replaces NAD27 / Michigan West zone (CRS code 5625).
+     * From 1964 this Lambert Conic Conformal (LCC) zone replaces the NAD27 / Michigan West Transverse Mercator (TM)
+     * zone (CRS code 5625).
      */
     public const EPSG_NAD27_MICHIGAN_NORTH = 'urn:ogc:def:crs:EPSG::6966';
 
@@ -8332,8 +8350,9 @@ class Projected extends CoordinateReferenceSystem
      * Calhoun; Cass; Charlevoix; Clare; Delta; Eaton; Emmet; Grand Traverse; Ionia; Isabella; Kalamazoo; Kalkaska;
      * Kent; Lake; Leelanau; Luce; Mackinac; Manistee; Mason; Mecosta; Missaukee; Montcalm; Muskegon; Newaygo; Oceana;
      * Osceola; Ottawa; St Joseph; Schoolcraft; Van Buren; Wexford.
-     * This and NAD27 / Michigan East (CRS code 5623) largely replaced by NAD27 / Michigan Central and South zones (CRS
-     * codes 6201 and 6202). NW island areas in this zone replaced by NAD27 / Michigan North zone (CRS code 6200).
+     * Introduced 1934. After 1964, this TM zone replaced by NAD27 / Michigan North, Central and South Lambert (LCC)
+     * zones (CRS codes 6966, 6201 and 6202); the NW islands area to the North zone, remainder of this zone split
+     * between the Central and South zones.
      */
     public const EPSG_NAD27_MICHIGAN_OLD_CENTRAL = 'urn:ogc:def:crs:EPSG::5624';
 
@@ -8343,8 +8362,8 @@ class Projected extends CoordinateReferenceSystem
      * Clinton; Eaton; Genesee; Gratiot; Hillsdale; Huron; Ingham; Ionia; Isabella; Jackson; Kalamazoo; Kent; Lapeer;
      * Lenawee; Livingston; Macomb; Mecosta; Midland; Monroe; Montcalm; Muskegon; Newaygo; Oakland; Oceana; Ottawa;
      * Saginaw; Sanilac; Shiawassee; St Clair; St Joseph; Tuscola; Van Buren; Washtenaw; Wayne.
-     * This and NAD27 / Michigan Central (CRS code 6201) replace NAD27 / Michigan Old Central and East zones (CRS codes
-     * 5623-24).
+     * From 1964 this Lambert Conic Conformal (LCC) zone replaces the southern parts of the Transverse Mercator (TM)
+     * NAD27 / Michigan East and Old Central zones (CRS codes 5623 and 5624).
      */
     public const EPSG_NAD27_MICHIGAN_SOUTH = 'urn:ogc:def:crs:EPSG::6202';
 
@@ -8352,7 +8371,8 @@ class Projected extends CoordinateReferenceSystem
      * NAD27 / Michigan West
      * Extent: United States (USA) - Michigan - counties of Baraga; Dickinson; Gogebic; Houghton; Iron; Keweenaw;
      * Marquette; Menominee; Ontonagon.
-     * Replaced by NAD27 / Michigan North zone (CRS code 6200).
+     * Introduced 1934. After 1964, this Transverse Mercator (TM) zone replaced by NAD27 / Michigan North Lambert Conic
+     * Conformal (LCC) zone (CRS code 6966).
      */
     public const EPSG_NAD27_MICHIGAN_WEST = 'urn:ogc:def:crs:EPSG::5625';
 
@@ -11977,6 +11997,12 @@ class Projected extends CoordinateReferenceSystem
      * Extent: Canada offshore Atlantic - 48°W to 42°W.
      */
     public const EPSG_NAD83_UTM_ZONE_23N = 'urn:ogc:def:crs:EPSG::26923';
+
+    /**
+     * NAD83 / UTM zone 24N
+     * Extent: Canada offshore Atlantic - east of 42°W.
+     */
+    public const EPSG_NAD83_UTM_ZONE_24N = 'urn:ogc:def:crs:EPSG::9712';
 
     /**
      * NAD83 / UTM zone 2N
@@ -18771,6 +18797,12 @@ class Projected extends CoordinateReferenceSystem
      * Extent: Canada offshore Atlantic - 48°W to 42°W.
      */
     public const EPSG_NAD83_CSRS_UTM_ZONE_23N = 'urn:ogc:def:crs:EPSG::9709';
+
+    /**
+     * NAD83(CSRS) / UTM zone 24N
+     * Extent: Canada offshore Atlantic - east of 42°W.
+     */
+    public const EPSG_NAD83_CSRS_UTM_ZONE_24N = 'urn:ogc:def:crs:EPSG::9713';
 
     /**
      * NAD83(CSRS) / UTM zone 7N

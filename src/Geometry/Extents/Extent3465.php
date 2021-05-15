@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\Geometry\Extents;
 
 /**
- * Global/World - N hemisphere - 18°E to 24°E - by country and WGS72BE.
+ * Global/World - N hemisphere - 18°E to 24°E - by country and WGS 72BE.
  * @internal
  */
 class Extent3465

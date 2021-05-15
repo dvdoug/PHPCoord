@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\Geometry\Extents\BoundingBoxOnly;
 
 /**
- * North America/USA - 162°W to 156°W  onshore - HI.
+ * North America/USA - 162°W to 156°W onshore - HI.
  * @internal
  */
 class Extent3488

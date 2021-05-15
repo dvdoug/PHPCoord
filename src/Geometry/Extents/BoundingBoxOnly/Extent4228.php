@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\Geometry\Extents\BoundingBoxOnly;
 
 /**
- * North America/USA - California - San Francisco.
+ * North America/USA - California - San Francisco Bay Area.
  * @internal
  */
 class Extent4228

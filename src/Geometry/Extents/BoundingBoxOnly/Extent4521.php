@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\Geometry\Extents\BoundingBoxOnly;
 
 /**
- * Australasia and Oceania/Northern Mariana Islands  onshore.
+ * Australasia and Oceania/Northern Mariana Islands - onshore.
  * @internal
  */
 class Extent4521

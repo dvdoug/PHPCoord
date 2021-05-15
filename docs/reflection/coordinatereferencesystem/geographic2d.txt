@@ -1473,6 +1473,22 @@ ELD79
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4159')
 
 
+EOS21-IRF
+---------
+
+| Used: On or related to the complex of rail routes in the East of Scotland, incorporating the route from Tweedbank through the Borders to Edinburgh; the line from Edinburgh to Aberdeen; routes via Kirkaldy and Cowdenbeath; and routes via Leuchars and Perth to Dundee. 
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_EOS21_IRF)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::9739')
+    Geographic::fromSRID(Geographic2D::EPSG_EOS21_IRF)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::9739')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_EOS21_IRF)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9739')
+
+Intermediate CRS created in 2021 to assist the emulation of the ETRS89 / EOS21 SnakeGrid projected CRS through transformation ETRS89 to EOS21-IRF (1) (code 9740) used in conjunction with the EOS21-TM map projection (code 9738).
+
 EST92
 -----
 
