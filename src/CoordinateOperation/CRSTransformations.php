@@ -41641,7 +41641,7 @@ class CRSTransformations
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5215',
-            'name' => 'Genoa height to EVRF2007 height (1)',
+            'name' => 'Genoa 1942 height to EVRF2007 height (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::5214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5621',
             'accuracy' => 0.1,
@@ -41649,7 +41649,7 @@ class CRSTransformations
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5217',
-            'name' => 'Genoa height to EVRF2007 height (2)',
+            'name' => 'Genoa 1942 height to EVRF2007 height (2)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::5214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5621',
             'accuracy' => 0.1,
@@ -41657,7 +41657,7 @@ class CRSTransformations
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5213',
-            'name' => 'Genoa height to EVRF2000 height (1)',
+            'name' => 'Genoa 1942 height to EVRF2000 height (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::5214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5730',
             'accuracy' => 0.1,
@@ -41665,7 +41665,7 @@ class CRSTransformations
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5216',
-            'name' => 'Genoa height to EVRF2000 height (2)',
+            'name' => 'Genoa 1942 height to EVRF2000 height (2)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::5214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5730',
             'accuracy' => 0.1,

@@ -4266,22 +4266,22 @@ class CoordinateOperations
             'extent_code' => ['2326'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::5213' => [
-            'name' => 'Genoa height to EVRF2000 height (1)',
+            'name' => 'Genoa 1942 height to EVRF2000 height (1)',
             'method' => 'urn:ogc:def:method:EPSG::1046',
             'extent_code' => ['2372'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::5215' => [
-            'name' => 'Genoa height to EVRF2007 height (1)',
+            'name' => 'Genoa 1942 height to EVRF2007 height (1)',
             'method' => 'urn:ogc:def:method:EPSG::1046',
             'extent_code' => ['2372'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::5216' => [
-            'name' => 'Genoa height to EVRF2000 height (2)',
+            'name' => 'Genoa 1942 height to EVRF2000 height (2)',
             'method' => 'urn:ogc:def:method:EPSG::1046',
             'extent_code' => ['2340'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::5217' => [
-            'name' => 'Genoa height to EVRF2007 height (2)',
+            'name' => 'Genoa 1942 height to EVRF2007 height (2)',
             'method' => 'urn:ogc:def:method:EPSG::1046',
             'extent_code' => ['2340'],
         ],
@@ -10903,7 +10903,7 @@ class CoordinateOperations
         'urn:ogc:def:coordinateOperation:EPSG::9129' => [
             'name' => 'NAD83(CSRS)v6 to NAD83(2011) (1)',
             'method' => 'urn:ogc:def:method:EPSG::1065',
-            'extent_code' => ['1262'],
+            'extent_code' => ['4544'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::9142' => [
             'name' => 'MGI 1901 to KOSOVAREF01 (1)',
