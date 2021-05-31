@@ -11,6 +11,44 @@ coordinates in any given ``Point`` to be in a different system by calling the ``
         bool $ignoreBoundaryRestrictions = false
     ); // returns a new Point
 
+Examples:
+
+.. code-block:: php
+
+    <?php
+    use PHPCoord\CoordinateReferenceSystem\Geographic2D;
+    use PHPCoord\CoordinateReferenceSystem\Projected;
+    use PHPCoord\GeographicPoint;
+    use PHPCoord\UnitOfMeasure\Length\Degree;
+
+    // Converting from NAD83 to Florida State Plane
+    $from = GeographicPoint::create(
+        new Degree(28.46),
+        new Degree(-80.53),
+        null,
+        Geographic2D::fromSRID(Geographic2D::EPSG_NAD83)
+    );
+    $toCRS = Projected::fromSRID(Projected::EPSG_NAD83_FLORIDA_EAST);
+    $to = $from->convert($toCRS); // $to instanceof ProjectedPoint
+
+.. code-block:: php
+
+    <?php
+    use PHPCoord\CoordinateReferenceSystem\Geographic2D;
+    use PHPCoord\CoordinateReferenceSystem\Projected;
+    use PHPCoord\ProjectedPoint;
+    use PHPCoord\UnitOfMeasure\Length\Metre;
+
+    // Converting from Florida State Plane to NAD83
+    $from = ProjectedPoint::createFromEastingNorthing(
+        new Metre(246029.85),
+        new Metre(457274.616),
+        Projected::fromSRID(Projected::EPSG_NAD83_FLORIDA_EAST)
+    );
+    $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_NAD83);
+    $to = $from->convert($toCRS); // $to instanceof GeographicPoint
+
+
 Ignoring the second optional parameter for now, calling ``convert()`` will first look to see if the built-in
 dataset knows how to perform a direct conversion. If it can, then PHPCoord will automatically invoke the
 relevant conversion methods with the appropriate parameters and return a new ``Point`` object with the adjusted
