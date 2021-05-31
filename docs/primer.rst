@@ -127,13 +127,13 @@ within a 3D space, it is of very limited practical use on the ground since the e
 
 Coordinate reference systems (CRSs)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-A Coordinate Reference System, is the combination of a *Datum* and a *Coordinate System* which the particular set of
+A Coordinate Reference System, is the combination of a *Datum* and a *Coordinate System* which is the particular set of
 axes being used to measure distances on.
 
 It is very important to know the set of axes being used, because otherwise numbers are very prone to misintepretation -
-for example ``42.0669, 11.8128`` would be near Rome if the order is (latitude, longitude), but near
-is longitude/latitude then it's near Djibouti if the order is (longitude, latitude). That's assuming the measurement
-is in decimal degrees, and not some other unit such as gradians.
+for example ``42.0669, 11.8128`` would be near Rome if the order is (latitude, longitude), but near Djibouti if the
+order is (longitude, latitude). That's assuming the measurement is in decimal degrees, and not some other unit such as
+gradians.
 
 Most map projections use metres, but some use feet. Many use Eastings and Northings, but some are Northings and Eastings.
 Some are Southings and Westings. Some are just X and Y, but some use X to mean East and others use it means North. Some
