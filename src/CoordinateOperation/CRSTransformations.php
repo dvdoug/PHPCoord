@@ -16976,6 +16976,14 @@ class CRSTransformations
             'reversible' => true,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9104',
+            'name' => 'NAD27 to ITRF2014 (2)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::7789',
+            'accuracy' => 0.2,
+            'reversible' => true,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17710',
             'name' => 'MTM zone 10',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',

@@ -10885,6 +10885,47 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::1053',
             'extent_code' => ['1175'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9104' => [
+            'name' => 'NAD27 to ITRF2014 (2)',
+            'extent_code' => ['3357'],
+            'operations' => [
+                [
+                    'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8555',
+                    'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
+                    'target_crs' => 'urn:ogc:def:crs:EPSG::4269',
+                ],
+                [
+                    'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8556',
+                    'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
+                    'target_crs' => 'urn:ogc:def:crs:EPSG::4152',
+                ],
+                [
+                    'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8861',
+                    'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
+                    'target_crs' => 'urn:ogc:def:crs:EPSG::8860',
+                ],
+                [
+                    'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8862',
+                    'source_crs' => 'urn:ogc:def:crs:EPSG::8860',
+                    'target_crs' => 'urn:ogc:def:crs:EPSG::4759',
+                ],
+                [
+                    'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8559',
+                    'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
+                    'target_crs' => 'urn:ogc:def:crs:EPSG::6318',
+                ],
+                [
+                    'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7807',
+                    'source_crs' => 'urn:ogc:def:crs:EPSG::5332',
+                    'target_crs' => 'urn:ogc:def:crs:EPSG::6317',
+                ],
+                [
+                    'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7790',
+                    'source_crs' => 'urn:ogc:def:crs:EPSG::5332',
+                    'target_crs' => 'urn:ogc:def:crs:EPSG::7789',
+                ],
+            ],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::9126' => [
             'name' => 'NAD83(CSRS)v2 to NAD83(CORS96) (1)',
             'method' => 'urn:ogc:def:method:EPSG::1065',

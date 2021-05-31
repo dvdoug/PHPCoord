@@ -21,6 +21,7 @@ use function in_array;
 use function lcfirst;
 use const M_PI;
 use const PHP_MAJOR_VERSION;
+use PHPCoord\CoordinateOperation\ConvertiblePoint;
 use PHPCoord\CoordinateOperation\CoordinateOperationMethods;
 use PHPCoord\CoordinateOperation\CoordinateOperationParams;
 use PHPCoord\CoordinateOperation\CoordinateOperations;
@@ -61,7 +62,13 @@ abstract class Point implements Stringable
         foreach ($operations as $operationSrid => $operation) {
             $method = CoordinateOperationMethods::getFunctionName($operation['method']);
             if (isset($operation['source_crs'])) {
+                $sourceCRS = $inReverse ? $operation['target_crs'] : $operation['source_crs'];
                 $destCRS = CoordinateReferenceSystem::fromSRID($inReverse ? $operation['source_crs'] : $operation['target_crs']);
+
+                // occasionally the CRS domain switches part way through the sequence (e.g. NAD86 geog to NAD86 geocen)
+                if ($point instanceof ConvertiblePoint && $point->getCRS()->getSRID() !== $sourceCRS) {
+                    $point = $point->convert(CoordinateReferenceSystem::fromSRID($sourceCRS), true);
+                }
             } else {
                 $destCRS = $to;
             }

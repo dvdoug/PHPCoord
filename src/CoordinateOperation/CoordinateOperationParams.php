@@ -57689,6 +57689,8 @@ class CoordinateOperationParams
                 'reverses' => false,
             ],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9104' => [
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::9126' => [
             'X-axis translation' => [
                 'value' => 0.0,
