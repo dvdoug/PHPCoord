@@ -240,4 +240,19 @@ class AutoConversionTest extends TestCase
             self::assertEqualsWithDelta(313180.597, $to->getNorthing()->asMetres()->getValue(), 0.001);
         }
     }
+
+    public function testNAD27ToNAD83(): void
+    {
+        $from = GeographicPoint::create(new Degree(40.689247), new Degree(-74.044502), null, Geographic2D::fromSRID(Geographic2D::EPSG_NAD27));
+        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_NAD83);
+        $to = $from->convert($toCRS);
+
+        if (class_exists(NADCON5NAD27NAD831986CONUSLatitudeProvider::class)) {
+            self::assertEqualsWithDelta(40.6893492339, $to->getLatitude()->asDegrees()->getValue(), 0.00000001);
+            self::assertEqualsWithDelta(-74.0440875374, $to->getLongitude()->asDegrees()->getValue(), 0.00000001);
+        } else {
+            self::assertEqualsWithDelta(40.689247679943, $to->getLatitude()->asDegrees()->getValue(), 0.00000001);
+            self::assertEqualsWithDelta(-74.044072669722, $to->getLongitude()->asDegrees()->getValue(), 0.00000001);
+        }
+    }
 }

@@ -11,6 +11,11 @@ namespace PHPCoord;
 use function class_exists;
 use DateTime;
 use DateTimeImmutable;
+use PHPCoord\CoordinateOperation\NADCON5NAD27NAD831986CONUSLatitudeProvider;
+use PHPCoord\CoordinateOperation\NADCON5NAD27NAD831986CONUSLongitudeProvider;
+use PHPCoord\CoordinateOperation\NADCON5NAD83FBNNAD832007CONUSHeightProvider;
+use PHPCoord\CoordinateOperation\NADCON5NAD83FBNNAD832007CONUSLatitudeProvider;
+use PHPCoord\CoordinateOperation\NADCON5NAD83FBNNAD832007CONUSLongitudeProvider;
 use PHPCoord\CoordinateOperation\OSTN15OSGM15Provider;
 use PHPCoord\CoordinateReferenceSystem\Geocentric;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
@@ -1032,5 +1037,125 @@ class GeographicPointTest extends TestCase
 
         self::assertEqualsWithDelta(651409.80373330, $to->getEasting()->asMetres()->getValue(), 0.00000001);
         self::assertEqualsWithDelta(313177.44988696, $to->getNorthing()->asMetres()->getValue(), 0.00000001);
+    }
+
+    public function testNADCON5Forward3DTransform3DPoint(): void
+    {
+        if (!class_exists(NADCON5NAD83FBNNAD832007CONUSLatitudeProvider::class)) {
+            self::markTestSkipped('Requires phpcoord/datapack-northamerica');
+        }
+        $from = GeographicPoint::create(new Degree(43.7737469611), new Degree(-99.3189543667), new Metre(100), Geographic3D::fromSRID(Geographic3D::EPSG_NAD83_FBN));
+        $toCRS = Geographic3D::fromSRID(Geographic3D::EPSG_NAD83_NSRS2007);
+        $to = $from->NADCON5(
+            $toCRS,
+            (new NADCON5NAD83FBNNAD832007CONUSLatitudeProvider())->provideGrid(),
+            (new NADCON5NAD83FBNNAD832007CONUSLongitudeProvider())->provideGrid(),
+            (new NADCON5NAD83FBNNAD832007CONUSHeightProvider())->provideGrid(),
+            false
+        );
+
+        self::assertEqualsWithDelta(43.7737471044, $to->getLatitude()->asDegrees()->getValue(), 0.00000001);
+        self::assertEqualsWithDelta(-99.3189544237, $to->getLongitude()->asDegrees()->getValue(), 0.00000001);
+        self::assertEqualsWithDelta(100.005, $to->getHeight()->asMetres()->getValue(), 0.001);
+    }
+
+    public function testNADCON5Reverse3DTransform3DPoint(): void
+    {
+        if (!class_exists(NADCON5NAD83FBNNAD832007CONUSLatitudeProvider::class)) {
+            self::markTestSkipped('Requires phpcoord/datapack-northamerica');
+        }
+        $from = GeographicPoint::create(new Degree(43.7737471044), new Degree(-99.3189544237), new Metre(100.005), Geographic3D::fromSRID(Geographic3D::EPSG_NAD83_FBN));
+        $toCRS = Geographic3D::fromSRID(Geographic3D::EPSG_NAD83_NSRS2007);
+        $to = $from->NADCON5(
+            $toCRS,
+            (new NADCON5NAD83FBNNAD832007CONUSLatitudeProvider())->provideGrid(),
+            (new NADCON5NAD83FBNNAD832007CONUSLongitudeProvider())->provideGrid(),
+            (new NADCON5NAD83FBNNAD832007CONUSHeightProvider())->provideGrid(),
+            true
+        );
+
+        self::assertEqualsWithDelta(43.7737469611, $to->getLatitude()->asDegrees()->getValue(), 0.00000001);
+        self::assertEqualsWithDelta(-99.3189543667, $to->getLongitude()->asDegrees()->getValue(), 0.00000001);
+        self::assertEqualsWithDelta(100, $to->getHeight()->asMetres()->getValue(), 0.001);
+    }
+
+    public function testNADCON5Forward3DTransform2DPoint(): void
+    {
+        if (!class_exists(NADCON5NAD83FBNNAD832007CONUSLatitudeProvider::class)) {
+            self::markTestSkipped('Requires phpcoord/datapack-northamerica');
+        }
+        $from = GeographicPoint::create(new Degree(43.7737469611), new Degree(-99.3189543667), null, Geographic2D::fromSRID(Geographic2D::EPSG_NAD83_FBN));
+        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_NAD83_NSRS2007);
+        $to = $from->NADCON5(
+            $toCRS,
+            (new NADCON5NAD83FBNNAD832007CONUSLatitudeProvider())->provideGrid(),
+            (new NADCON5NAD83FBNNAD832007CONUSLongitudeProvider())->provideGrid(),
+            (new NADCON5NAD83FBNNAD832007CONUSHeightProvider())->provideGrid(),
+            false
+        );
+
+        self::assertEqualsWithDelta(43.7737471044, $to->getLatitude()->asDegrees()->getValue(), 0.00000001);
+        self::assertEqualsWithDelta(-99.3189544237, $to->getLongitude()->asDegrees()->getValue(), 0.00000001);
+        self::assertNull($to->getHeight());
+    }
+
+    public function testNADCON5Reverse3DTransform2DPoint(): void
+    {
+        if (!class_exists(NADCON5NAD83FBNNAD832007CONUSLatitudeProvider::class)) {
+            self::markTestSkipped('Requires phpcoord/datapack-northamerica');
+        }
+        $from = GeographicPoint::create(new Degree(43.7737471044), new Degree(-99.3189544237), null, Geographic2D::fromSRID(Geographic2D::EPSG_NAD83_FBN));
+        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_NAD83_NSRS2007);
+        $to = $from->NADCON5(
+            $toCRS,
+            (new NADCON5NAD83FBNNAD832007CONUSLatitudeProvider())->provideGrid(),
+            (new NADCON5NAD83FBNNAD832007CONUSLongitudeProvider())->provideGrid(),
+            (new NADCON5NAD83FBNNAD832007CONUSHeightProvider())->provideGrid(),
+            true
+        );
+
+        self::assertEqualsWithDelta(43.7737469611, $to->getLatitude()->asDegrees()->getValue(), 0.00000001);
+        self::assertEqualsWithDelta(-99.3189543667, $to->getLongitude()->asDegrees()->getValue(), 0.00000001);
+        self::assertNull($to->getHeight());
+    }
+
+    public function testNADCON5Forward2D(): void
+    {
+        if (!class_exists(NADCON5NAD27NAD831986CONUSLatitudeProvider::class)) {
+            self::markTestSkipped('Requires phpcoord/datapack-northamerica');
+        }
+        $from = GeographicPoint::create(new Degree(40.689247), new Degree(-74.044502), null, Geographic2D::fromSRID(Geographic2D::EPSG_NAD27));
+        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_NAD83);
+        $to = $from->NADCON5(
+            $toCRS,
+            (new NADCON5NAD27NAD831986CONUSLatitudeProvider())->provideGrid(),
+            (new NADCON5NAD27NAD831986CONUSLongitudeProvider())->provideGrid(),
+            null,
+            false
+        );
+
+        self::assertEqualsWithDelta(40.6893492339, $to->getLatitude()->asDegrees()->getValue(), 0.00000001);
+        self::assertEqualsWithDelta(-74.0440875374, $to->getLongitude()->asDegrees()->getValue(), 0.00000001);
+        self::assertNull($to->getHeight());
+    }
+
+    public function testNADCON5Reverse2D(): void
+    {
+        if (!class_exists(NADCON5NAD27NAD831986CONUSLatitudeProvider::class)) {
+            self::markTestSkipped('Requires phpcoord/datapack-northamerica');
+        }
+        $from = GeographicPoint::create(new Degree(40.6893492339), new Degree(-74.0440875374), null, Geographic2D::fromSRID(Geographic2D::EPSG_NAD27));
+        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_NAD83);
+        $to = $from->NADCON5(
+            $toCRS,
+            (new NADCON5NAD27NAD831986CONUSLatitudeProvider())->provideGrid(),
+            (new NADCON5NAD27NAD831986CONUSLongitudeProvider())->provideGrid(),
+            null,
+            true
+        );
+
+        self::assertEqualsWithDelta(40.689247, $to->getLatitude()->asDegrees()->getValue(), 0.00000001);
+        self::assertEqualsWithDelta(-74.044502, $to->getLongitude()->asDegrees()->getValue(), 0.00000001);
+        self::assertNull($to->getHeight());
     }
 }

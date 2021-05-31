@@ -48,6 +48,7 @@ use function ucwords;
 abstract class Point implements Stringable
 {
     protected const ITERATION_CONVERGENCE_FORMULA = 1e-12;
+    protected const ITERATION_CONVERGENCE_GRID = 0.0001;
 
     /**
      * @internal
@@ -149,6 +150,8 @@ abstract class Point implements Stringable
         if (in_array($methodSrid, [
             CoordinateOperationMethods::EPSG_SIMILARITY_TRANSFORMATION,
             CoordinateOperationMethods::EPSG_AFFINE_PARAMETRIC_TRANSFORMATION,
+            CoordinateOperationMethods::EPSG_NADCON5_2D,
+            CoordinateOperationMethods::EPSG_NADCON5_3D,
         ], true)) {
             $params['inReverse'] = $inReverse;
         }

@@ -52375,6 +52375,128 @@ class CoordinateOperationParams
         ],
         'urn:ogc:def:coordinateOperation:EPSG::8537' => [
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::8546' => [
+            'Latitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5SG1952NAD831986StGeorgeLatitudeProvider',
+            ],
+            'Longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5SG1952NAD831986StGeorgeLongitudeProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8547' => [
+            'Latitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5SL1952NAD831986StLawrenceLatitudeProvider',
+            ],
+            'Longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5SL1952NAD831986StLawrenceLongitudeProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8548' => [
+            'Latitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5SP1952NAD831986StPaulLatitudeProvider',
+            ],
+            'Longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5SP1952NAD831986StPaulLongitudeProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8549' => [
+            'Latitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD27NAD831986AlaskaLatitudeProvider',
+            ],
+            'Longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD27NAD831986AlaskaLongitudeProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8550' => [
+            'Latitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD831986NAD831992AlaskaLatitudeProvider',
+            ],
+            'Longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD831986NAD831992AlaskaLongitudeProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8551' => [
+            'Latitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD831992NAD832007AlaskaLatitudeProvider',
+            ],
+            'Longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD831992NAD832007AlaskaLongitudeProvider',
+            ],
+            'Ellipsoidal height difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD831992NAD832007AlaskaHeightProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8552' => [
+            'Latitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD832007NAD832011AlaskaLatitudeProvider',
+            ],
+            'Longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD832007NAD832011AlaskaLongitudeProvider',
+            ],
+            'Ellipsoidal height difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD832007NAD832011AlaskaHeightProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8555' => [
+            'Latitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD27NAD831986CONUSLatitudeProvider',
+            ],
+            'Longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD27NAD831986CONUSLongitudeProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8556' => [
+            'Latitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD831986NAD83HARNCONUSLatitudeProvider',
+            ],
+            'Longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD831986NAD83HARNCONUSLongitudeProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8559' => [
+            'Latitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD832007NAD832011CONUSLatitudeProvider',
+            ],
+            'Longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD832007NAD832011CONUSLongitudeProvider',
+            ],
+            'Ellipsoidal height difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD832007NAD832011CONUSHeightProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8561' => [
+            'Latitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5OHDNAD831986HawaiiLatitudeProvider',
+            ],
+            'Longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5OHDNAD831986HawaiiLongitudeProvider',
+            ],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::8562' => [
         ],
         'urn:ogc:def:coordinateOperation:EPSG::8568' => [
@@ -52428,6 +52550,84 @@ class CoordinateOperationParams
         'urn:ogc:def:coordinateOperation:EPSG::8657' => [
         ],
         'urn:ogc:def:coordinateOperation:EPSG::8659' => [
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8660' => [
+            'Latitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD831986NAD831993HawaiiLatitudeProvider',
+            ],
+            'Longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD831986NAD831993HawaiiLongitudeProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8661' => [
+            'Latitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD831993NAD83PA11HawaiiLatitudeProvider',
+            ],
+            'Longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD831993NAD83PA11HawaiiLongitudeProvider',
+            ],
+            'Ellipsoidal height difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD831993NAD83PA11HawaiiHeightProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8662' => [
+            'Latitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5AS62NAD831993ASLatitudeProvider',
+            ],
+            'Longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5AS62NAD831993ASLongitudeProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8665' => [
+            'Latitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5GU63NAD831993GuamCnMILatitudeProvider',
+            ],
+            'Longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5GU63NAD831993GuamCnMILongitudeProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8668' => [
+            'Latitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5PR40NAD831986PRVILatitudeProvider',
+            ],
+            'Longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5PR40NAD831986PRVILongitudeProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8669' => [
+            'Latitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD831986NAD831993PRVILatitudeProvider',
+            ],
+            'Longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD831986NAD831993PRVILongitudeProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8673' => [
+            'Latitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD832007NAD832011PRVILatitudeProvider',
+            ],
+            'Longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD832007NAD832011PRVILongitudeProvider',
+            ],
+            'Ellipsoidal height difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD832007NAD832011PRVIHeightProvider',
+            ],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::8674' => [
             'X-axis translation' => [
@@ -53592,6 +53792,118 @@ class CoordinateOperationParams
                 'value' => 0.0,
                 'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8861' => [
+            'Latitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD83HARNNAD83FBNCONUSLatitudeProvider',
+            ],
+            'Longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD83HARNNAD83FBNCONUSLongitudeProvider',
+            ],
+            'Ellipsoidal height difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD83HARNNAD83FBNCONUSHeightProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8862' => [
+            'Latitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD83FBNNAD832007CONUSLatitudeProvider',
+            ],
+            'Longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD83FBNNAD832007CONUSLongitudeProvider',
+            ],
+            'Ellipsoidal height difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD83FBNNAD832007CONUSHeightProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8863' => [
+            'Latitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD831993NAD832002ASLatitudeProvider',
+            ],
+            'Longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD831993NAD832002ASLongitudeProvider',
+            ],
+            'Ellipsoidal height difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD831993NAD832002ASHeightProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8864' => [
+            'Latitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD832002NAD83PA11ASLatitudeProvider',
+            ],
+            'Longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD832002NAD83PA11ASLongitudeProvider',
+            ],
+            'Ellipsoidal height difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD832002NAD83PA11ASHeightProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8865' => [
+            'Latitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD831993NAD832002GuamCnMILatitudeProvider',
+            ],
+            'Longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD831993NAD832002GuamCnMILongitudeProvider',
+            ],
+            'Ellipsoidal height difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD831993NAD832002GuamCnMIHeightProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8866' => [
+            'Latitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD832002NAD83MA11GuamCnMILatitudeProvider',
+            ],
+            'Longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD832002NAD83MA11GuamCnMILongitudeProvider',
+            ],
+            'Ellipsoidal height difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD832002NAD83MA11GuamCnMIHeightProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8867' => [
+            'Latitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD831997NAD832002PRVILatitudeProvider',
+            ],
+            'Longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD831997NAD832002PRVILongitudeProvider',
+            ],
+            'Ellipsoidal height difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD831997NAD832002PRVIHeightProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8868' => [
+            'Latitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD832002NAD832007PRVILatitudeProvider',
+            ],
+            'Longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD832002NAD832007PRVILongitudeProvider',
+            ],
+            'Ellipsoidal height difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD832002NAD832007PRVIHeightProvider',
             ],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::8869' => [
@@ -57839,6 +58151,20 @@ class CoordinateOperationParams
                 'value' => 2016.0,
                 'uom' => 'urn:ogc:def:uom:EPSG::1029',
                 'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9181' => [
+            'Latitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD831993NAD831997PRVILatitudeProvider',
+            ],
+            'Longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD831993NAD831997PRVILongitudeProvider',
+            ],
+            'Ellipsoidal height difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD831993NAD831997PRVIHeightProvider',
             ],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::9185' => [

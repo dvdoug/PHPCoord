@@ -31,6 +31,7 @@ use PHPCoord\CoordinateOperation\ComplexNumber;
 use PHPCoord\CoordinateOperation\ConvertiblePoint;
 use PHPCoord\CoordinateOperation\GeocentricValue;
 use PHPCoord\CoordinateOperation\GeographicValue;
+use PHPCoord\CoordinateOperation\NADCON5Grid;
 use PHPCoord\CoordinateOperation\OSTNOSGM15Grid;
 use PHPCoord\CoordinateReferenceSystem\Compound;
 use PHPCoord\CoordinateReferenceSystem\Geocentric;
@@ -2076,6 +2077,44 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $projected = $this->transverseMercator($etrs89NationalGrid, new Degree(49), new Degree(-2), new Unity(0.9996012717), new Metre(400000), new Metre(-100000));
 
         return $eastingAndNorthingDifferenceFile->applyForwardAdjustment($projected);
+    }
+
+    /**
+     * NADCON5.
+     * Geodetic transformation operating on geographic coordinate differences by bi-quadratic interpolation.  Input
+     * expects longitudes to be positive east in range 0-360° (0° = Greenwich).
+     */
+    public function NADCON5(
+        Geographic $to,
+        NADCON5Grid $latitudeDifferenceFile,
+        NADCON5Grid $longitudeDifferenceFile,
+        ?NADCON5Grid $ellipsoidalHeightDifferenceFile = null,
+        bool $inReverse
+    ): self {
+        /*
+         * Ideally most of this logic (especially reverse case) would be in the NADCON5Grid class like the other grids,
+         * but NADCON5 uses different files for latitude/longitude/height that need to be combined at runtime so that
+         * isn't possible.
+         */
+        if (!$inReverse) {
+            $latitudeAdjustment = new ArcSecond($latitudeDifferenceFile->getForwardAdjustment($this));
+            $longitudeAdjustment = new ArcSecond($longitudeDifferenceFile->getForwardAdjustment($this));
+            $heightAdjustment = $this->getHeight() && $ellipsoidalHeightDifferenceFile ? new Metre($ellipsoidalHeightDifferenceFile->getForwardAdjustment($this)) : null;
+
+            return self::create($this->latitude->add($latitudeAdjustment), $this->longitude->add($longitudeAdjustment), $heightAdjustment ? $this->height->add($heightAdjustment) : null, $to, $this->getCoordinateEpoch());
+        }
+
+        $iteration = $this;
+
+        do {
+            $prevIteration = $iteration;
+            $latitudeAdjustment = new ArcSecond($latitudeDifferenceFile->getForwardAdjustment($iteration));
+            $longitudeAdjustment = new ArcSecond($longitudeDifferenceFile->getForwardAdjustment($iteration));
+            $heightAdjustment = $this->getHeight() && $ellipsoidalHeightDifferenceFile ? new Metre($ellipsoidalHeightDifferenceFile->getForwardAdjustment($iteration)) : null;
+            $iteration = self::create($this->latitude->subtract($latitudeAdjustment), $this->longitude->subtract($longitudeAdjustment), $heightAdjustment ? $this->height->subtract($heightAdjustment) : null, $to, $this->getCoordinateEpoch());
+        } while (abs($iteration->latitude->subtract($prevIteration->latitude)->getValue()) > self::ITERATION_CONVERGENCE_GRID && abs($iteration->longitude->subtract($prevIteration->longitude)->getValue()) > self::ITERATION_CONVERGENCE_GRID && ($this->height === null || abs($iteration->height->subtract($prevIteration->height)->getValue()) > self::ITERATION_CONVERGENCE_GRID));
+
+        return $iteration;
     }
 
     public function asGeographicValue(): GeographicValue

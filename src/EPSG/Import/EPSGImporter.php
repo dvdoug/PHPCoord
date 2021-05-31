@@ -29,7 +29,7 @@ use const JSON_THROW_ON_ERROR;
 use function max;
 use function min;
 use const PHP_EOL;
-use PHPCoord\CoordinateOperation\OSTN15OSGM15Provider;
+use PHPCoord\CoordinateOperation;
 use PHPCoord\CoordinateReferenceSystem\Compound;
 use PHPCoord\CoordinateReferenceSystem\Geocentric;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
@@ -108,8 +108,6 @@ class EPSGImporter
         1070, // Point motion by grid (Canada NTv2_Vel)
         1071, // Vertical Offset by Grid Interpolation (NZLVD)
         1073, // Geographic3D to GravityRelatedHeight (IGN2009)
-        1074, // NADCON5 (2D)
-        1075, // NADCON5 (3D)
         1079, // New Zealand Deformation Model
         1080, // Vertical Offset by Grid Interpolation (BEV AT)
         1081, // Geographic3D to GravityRelatedHeight (BEV AT)
@@ -184,7 +182,83 @@ class EPSGImporter
     ];
 
     private const FILE_CLASS_MAP = [
-        'OSTN15_OSGM15_GB.txt' => OSTN15OSGM15Provider::class,
+        'OSTN15_OSGM15_GB.txt' => CoordinateOperation\OSTN15OSGM15Provider::class,
+        'OSGM15_Belfast.gri' => CoordinateOperation\OSGM15BelfastProvider::class,
+        'OSGM15_Malin.gri' => CoordinateOperation\OSGM15MalinProvider::class,
+        'nadcon5.as62.nad83_1993.as.lat.trn.20160901.b' => CoordinateOperation\NADCON5AS62NAD831993ASLatitudeProvider::class,
+        'nadcon5.as62.nad83_1993.as.lon.trn.20160901.b' => CoordinateOperation\NADCON5AS62NAD831993ASLongitudeProvider::class,
+        'nadcon5.gu63.nad83_1993.guamcnmi.lat.trn.20160901.b' => CoordinateOperation\NADCON5GU63NAD831993GuamCnMILatitudeProvider::class,
+        'nadcon5.gu63.nad83_1993.guamcnmi.lon.trn.20160901.b' => CoordinateOperation\NADCON5GU63NAD831993GuamCnMILongitudeProvider::class,
+        'nadcon5.nad27.nad83_1986.alaska.lat.trn.20160901.b' => CoordinateOperation\NADCON5NAD27NAD831986AlaskaLatitudeProvider::class,
+        'nadcon5.nad27.nad83_1986.alaska.lon.trn.20160901.b' => CoordinateOperation\NADCON5NAD27NAD831986AlaskaLongitudeProvider::class,
+        'nadcon5.nad27.nad83_1986.conus.lat.trn.20160901.b' => CoordinateOperation\NADCON5NAD27NAD831986CONUSLatitudeProvider::class,
+        'nadcon5.nad27.nad83_1986.conus.lon.trn.20160901.b' => CoordinateOperation\NADCON5NAD27NAD831986CONUSLongitudeProvider::class,
+        'nadcon5.nad83_1986.nad83_1992.alaska.lat.trn.20160901.b' => CoordinateOperation\NADCON5NAD831986NAD831992AlaskaLatitudeProvider::class,
+        'nadcon5.nad83_1986.nad83_1992.alaska.lon.trn.20160901.b' => CoordinateOperation\NADCON5NAD831986NAD831992AlaskaLongitudeProvider::class,
+        'nadcon5.nad83_1986.nad83_1993.hawaii.lat.trn.20160901.b' => CoordinateOperation\NADCON5NAD831986NAD831993HawaiiLatitudeProvider::class,
+        'nadcon5.nad83_1986.nad83_1993.hawaii.lon.trn.20160901.b' => CoordinateOperation\NADCON5NAD831986NAD831993HawaiiLongitudeProvider::class,
+        'nadcon5.nad83_1986.nad83_1993.prvi.lat.trn.20160901.b' => CoordinateOperation\NADCON5NAD831986NAD831993PRVILatitudeProvider::class,
+        'nadcon5.nad83_1986.nad83_1993.prvi.lon.trn.20160901.b' => CoordinateOperation\NADCON5NAD831986NAD831993PRVILongitudeProvider::class,
+        'nadcon5.nad83_1986.nad83_harn.conus.lat.trn.20160901.b' => CoordinateOperation\NADCON5NAD831986NAD83HARNCONUSLatitudeProvider::class,
+        'nadcon5.nad83_1986.nad83_harn.conus.lon.trn.20160901.b' => CoordinateOperation\NADCON5NAD831986NAD83HARNCONUSLongitudeProvider::class,
+        'nadcon5.nad83_1992.nad83_2007.alaska.eht.trn.20160901.b' => CoordinateOperation\NADCON5NAD831992NAD832007AlaskaHeightProvider::class,
+        'nadcon5.nad83_1992.nad83_2007.alaska.lat.trn.20160901.b' => CoordinateOperation\NADCON5NAD831992NAD832007AlaskaLatitudeProvider::class,
+        'nadcon5.nad83_1992.nad83_2007.alaska.lon.trn.20160901.b' => CoordinateOperation\NADCON5NAD831992NAD832007AlaskaLongitudeProvider::class,
+        'nadcon5.nad83_1993.nad83_1997.prvi.eht.trn.20160901.b' => CoordinateOperation\NADCON5NAD831993NAD831997PRVIHeightProvider::class,
+        'nadcon5.nad83_1993.nad83_1997.prvi.lat.trn.20160901.b' => CoordinateOperation\NADCON5NAD831993NAD831997PRVILatitudeProvider::class,
+        'nadcon5.nad83_1993.nad83_1997.prvi.lon.trn.20160901.b' => CoordinateOperation\NADCON5NAD831993NAD831997PRVILongitudeProvider::class,
+        'nadcon5.nad83_1993.nad83_2002.as.eht.trn.20160901.b' => CoordinateOperation\NADCON5NAD831993NAD832002ASHeightProvider::class,
+        'nadcon5.nad83_1993.nad83_2002.as.lat.trn.20160901.b' => CoordinateOperation\NADCON5NAD831993NAD832002ASLatitudeProvider::class,
+        'nadcon5.nad83_1993.nad83_2002.as.lon.trn.20160901.b' => CoordinateOperation\NADCON5NAD831993NAD832002ASLongitudeProvider::class,
+        'nadcon5.nad83_1993.nad83_2002.guamcnmi.eht.trn.20160901.b' => CoordinateOperation\NADCON5NAD831993NAD832002GuamCnMIHeightProvider::class,
+        'nadcon5.nad83_1993.nad83_2002.guamcnmi.lat.trn.20160901.b' => CoordinateOperation\NADCON5NAD831993NAD832002GuamCnMILatitudeProvider::class,
+        'nadcon5.nad83_1993.nad83_2002.guamcnmi.lon.trn.20160901.b' => CoordinateOperation\NADCON5NAD831993NAD832002GuamCnMILongitudeProvider::class,
+        'nadcon5.nad83_1993.nad83_pa11.hawaii.eht.trn.20160901.b' => CoordinateOperation\NADCON5NAD831993NAD83PA11HawaiiHeightProvider::class,
+        'nadcon5.nad83_1993.nad83_pa11.hawaii.lat.trn.20160901.b' => CoordinateOperation\NADCON5NAD831993NAD83PA11HawaiiLatitudeProvider::class,
+        'nadcon5.nad83_1993.nad83_pa11.hawaii.lon.trn.20160901.b' => CoordinateOperation\NADCON5NAD831993NAD83PA11HawaiiLongitudeProvider::class,
+        'nadcon5.nad83_1997.nad83_2002.prvi.eht.trn.20160901.b' => CoordinateOperation\NADCON5NAD831997NAD832002PRVIHeightProvider::class,
+        'nadcon5.nad83_1997.nad83_2002.prvi.lat.trn.20160901.b' => CoordinateOperation\NADCON5NAD831997NAD832002PRVILatitudeProvider::class,
+        'nadcon5.nad83_1997.nad83_2002.prvi.lon.trn.20160901.b' => CoordinateOperation\NADCON5NAD831997NAD832002PRVILongitudeProvider::class,
+        'nadcon5.nad83_2002.nad83_2007.prvi.eht.trn.20160901.b' => CoordinateOperation\NADCON5NAD832002NAD832007PRVIHeightProvider::class,
+        'nadcon5.nad83_2002.nad83_2007.prvi.lat.trn.20160901.b' => CoordinateOperation\NADCON5NAD832002NAD832007PRVILatitudeProvider::class,
+        'nadcon5.nad83_2002.nad83_2007.prvi.lon.trn.20160901.b' => CoordinateOperation\NADCON5NAD832002NAD832007PRVILongitudeProvider::class,
+        'nadcon5.nad83_2002.nad83_ma11.guamcnmi.eht.trn.20160901.b' => CoordinateOperation\NADCON5NAD832002NAD83MA11GuamCnMIHeightProvider::class,
+        'nadcon5.nad83_2002.nad83_ma11.guamcnmi.lat.trn.20160901.b' => CoordinateOperation\NADCON5NAD832002NAD83MA11GuamCnMILatitudeProvider::class,
+        'nadcon5.nad83_2002.nad83_ma11.guamcnmi.lon.trn.20160901.b' => CoordinateOperation\NADCON5NAD832002NAD83MA11GuamCnMILongitudeProvider::class,
+        'nadcon5.nad83_2002.nad83_pa11.as.eht.trn.20160901.b' => CoordinateOperation\NADCON5NAD832002NAD83PA11ASHeightProvider::class,
+        'nadcon5.nad83_2002.nad83_pa11.as.lat.trn.20160901.b' => CoordinateOperation\NADCON5NAD832002NAD83PA11ASLatitudeProvider::class,
+        'nadcon5.nad83_2002.nad83_pa11.as.lon.trn.20160901.b' => CoordinateOperation\NADCON5NAD832002NAD83PA11ASLongitudeProvider::class,
+        'nadcon5.nad83_2007.nad83_2011.alaska.eht.trn.20160901.b' => CoordinateOperation\NADCON5NAD832007NAD832011AlaskaHeightProvider::class,
+        'nadcon5.nad83_2007.nad83_2011.alaska.lat.trn.20160901.b' => CoordinateOperation\NADCON5NAD832007NAD832011AlaskaLatitudeProvider::class,
+        'nadcon5.nad83_2007.nad83_2011.alaska.lon.trn.20160901.b' => CoordinateOperation\NADCON5NAD832007NAD832011AlaskaLongitudeProvider::class,
+        'nadcon5.nad83_2007.nad83_2011.conus.eht.trn.20160901.b' => CoordinateOperation\NADCON5NAD832007NAD832011CONUSHeightProvider::class,
+        'nadcon5.nad83_2007.nad83_2011.conus.lat.trn.20160901.b' => CoordinateOperation\NADCON5NAD832007NAD832011CONUSLatitudeProvider::class,
+        'nadcon5.nad83_2007.nad83_2011.conus.lon.trn.20160901.b' => CoordinateOperation\NADCON5NAD832007NAD832011CONUSLongitudeProvider::class,
+        'nadcon5.nad83_2007.nad83_2011.prvi.eht.trn.20160901.b' => CoordinateOperation\NADCON5NAD832007NAD832011PRVIHeightProvider::class,
+        'nadcon5.nad83_2007.nad83_2011.prvi.lat.trn.20160901.b' => CoordinateOperation\NADCON5NAD832007NAD832011PRVILatitudeProvider::class,
+        'nadcon5.nad83_2007.nad83_2011.prvi.lon.trn.20160901.b' => CoordinateOperation\NADCON5NAD832007NAD832011PRVILongitudeProvider::class,
+        'nadcon5.nad83_fbn.nad83_2007.conus.eht.trn.20160901.b' => CoordinateOperation\NADCON5NAD83FBNNAD832007CONUSHeightProvider::class,
+        'nadcon5.nad83_fbn.nad83_2007.conus.lat.trn.20160901.b' => CoordinateOperation\NADCON5NAD83FBNNAD832007CONUSLatitudeProvider::class,
+        'nadcon5.nad83_fbn.nad83_2007.conus.lon.trn.20160901.b' => CoordinateOperation\NADCON5NAD83FBNNAD832007CONUSLongitudeProvider::class,
+        'nadcon5.nad83_harn.nad83_fbn.conus.eht.trn.20160901.b' => CoordinateOperation\NADCON5NAD83HARNNAD83FBNCONUSHeightProvider::class,
+        'nadcon5.nad83_harn.nad83_fbn.conus.lat.trn.20160901.b' => CoordinateOperation\NADCON5NAD83HARNNAD83FBNCONUSLatitudeProvider::class,
+        'nadcon5.nad83_harn.nad83_fbn.conus.lon.trn.20160901.b' => CoordinateOperation\NADCON5NAD83HARNNAD83FBNCONUSLongitudeProvider::class,
+        'nadcon5.ohd.nad83_1986.hawaii.lat.trn.20160901.b' => CoordinateOperation\NADCON5OHDNAD831986HawaiiLatitudeProvider::class,
+        'nadcon5.ohd.nad83_1986.hawaii.lon.trn.20160901.b' => CoordinateOperation\NADCON5OHDNAD831986HawaiiLongitudeProvider::class,
+        'nadcon5.pr40.nad83_1986.prvi.lat.trn.20160901.b' => CoordinateOperation\NADCON5PR40NAD831986PRVILatitudeProvider::class,
+        'nadcon5.pr40.nad83_1986.prvi.lon.trn.20160901.b' => CoordinateOperation\NADCON5PR40NAD831986PRVILongitudeProvider::class,
+        'nadcon5.sg1897.sg1952.stgeorge.lat.trn.20160901.b' => CoordinateOperation\NADCON5SG1897SG1952StGeorgeLatitudeProvider::class,
+        'nadcon5.sg1897.sg1952.stgeorge.lon.trn.20160901.b' => CoordinateOperation\NADCON5SG1897SG1952StGeorgeLongitudeProvider::class,
+        'nadcon5.sg1952.nad83_1986.stgeorge.lat.trn.20160901.b' => CoordinateOperation\NADCON5SG1952NAD831986StGeorgeLatitudeProvider::class,
+        'nadcon5.sg1952.nad83_1986.stgeorge.lon.trn.20160901.b' => CoordinateOperation\NADCON5SG1952NAD831986StGeorgeLongitudeProvider::class,
+        'nadcon5.sl1952.nad83_1986.stlawrence.lat.trn.20160901.b' => CoordinateOperation\NADCON5SL1952NAD831986StLawrenceLatitudeProvider::class,
+        'nadcon5.sl1952.nad83_1986.stlawrence.lon.trn.20160901.b' => CoordinateOperation\NADCON5SL1952NAD831986StLawrenceLongitudeProvider::class,
+        'nadcon5.sp1897.sp1952.stpaul.lat.trn.20160901.b' => CoordinateOperation\NADCON5SP1897SP1952StPaulLatitudeProvider::class,
+        'nadcon5.sp1897.sp1952.stpaul.lon.trn.20160901.b' => CoordinateOperation\NADCON5SP1897SP1952StPaulLongitudeProvider::class,
+        'nadcon5.sp1952.nad83_1986.stpaul.lat.trn.20160901.b' => CoordinateOperation\NADCON5SP1952NAD831986StPaulLatitudeProvider::class,
+        'nadcon5.sp1952.nad83_1986.stpaul.lon.trn.20160901.b' => CoordinateOperation\NADCON5SP1952NAD831986StPaulLongitudeProvider::class,
+        'nadcon5.ussd.nad27.conus.lat.trn.20160901.b' => CoordinateOperation\NADCON5USSDNAD27CONUSLatitudeProvider::class,
+        'nadcon5.ussd.nad27.conus.lon.trn.20160901.b' => CoordinateOperation\NADCON5USSDNAD27CONUSLongitudeProvider::class,
     ];
 
     public function __construct()
@@ -230,6 +304,7 @@ class EPSGImporter
         $sqlite->exec('UPDATE epsg_coordinatereferencesystem SET projection_conv_code = NULL WHERE coord_ref_sys_code = 4277');
         $sqlite->exec('UPDATE epsg_coordinatereferencesystem SET projection_conv_code = NULL WHERE coord_ref_sys_code = 4728');
         $sqlite->exec('UPDATE epsg_extent SET deprecated = 1 WHERE extent_code IN (1263, 4205, 4393)');
+        $sqlite->exec("UPDATE epsg_coordoperationparamvalue SET param_value_file_ref = 'nadcon5.nad83_2007.nad83_2011.prvi.eht.trn.20160901.b' WHERE param_value_file_ref = 'nadcon5.nad83_2007.nad83_2011.prvi.eht.trn.20160901.b01.b'");
 
         $sqlite->exec('VACUUM');
         $sqlite->exec('PRAGMA journal_mode=DELETE'); //but WAL is not openable read-only in older SQLite
@@ -1360,6 +1435,9 @@ class EPSGImporter
                         [
                             'Easting and northing difference file',
                             'Geoid (height correction) model file',
+                            'Latitude difference file',
+                            'Longitude difference file',
+                            'Ellipsoidal height difference file',
                         ]
                     )
                 ) {

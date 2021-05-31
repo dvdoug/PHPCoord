@@ -438,6 +438,20 @@ class CoordinateOperationMethods
     public const EPSG_MOLODENSKY_BADEKAS_PV_GEOG3D_DOMAIN = 'urn:ogc:def:method:EPSG::1062';
 
     /**
+     * NADCON5 (2D)
+     * Geodetic transformation operating on geographic coordinate differences by bi-quadratic interpolation.  Input
+     * expects longitudes to be positive east in range 0-360° (0° = Greenwich).
+     */
+    public const EPSG_NADCON5_2D = 'urn:ogc:def:method:EPSG::1074';
+
+    /**
+     * NADCON5 (3D)
+     * Geodetic transformation operating on geographic coordinate differences by bi-quadratic interpolation.  Input
+     * expects longitudes to be positive east in range 0-360° (0° = Greenwich).
+     */
+    public const EPSG_NADCON5_3D = 'urn:ogc:def:method:EPSG::1075';
+
+    /**
      * New Zealand Map Grid.
      */
     public const EPSG_NEW_ZEALAND_MAP_GRID = 'urn:ogc:def:method:EPSG::9811';
@@ -745,6 +759,8 @@ class CoordinateOperationMethods
             self::EPSG_HEIGHT_DEPTH_REVERSAL => 'heightDepthReversal',
             self::EPSG_CHANGE_OF_VERTICAL_UNIT => 'changeOfVerticalUnit',
             self::EPSG_ORDNANCE_SURVEY_NATIONAL_TRANSFORMATION => 'OSTN15',
+            self::EPSG_NADCON5_2D => 'NADCON5',
+            self::EPSG_NADCON5_3D => 'NADCON5',
         ];
 
         return $lookup[$srid];

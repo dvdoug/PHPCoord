@@ -9718,6 +9718,61 @@ class CoordinateOperations
                 ],
             ],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::8546' => [
+            'name' => 'St. George Island to NAD83 (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1074',
+            'extent_code' => ['1331'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8547' => [
+            'name' => 'St. Lawrence Island to NAD83 (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1074',
+            'extent_code' => ['1332'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8548' => [
+            'name' => 'St. Paul Island to NAD83 (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1074',
+            'extent_code' => ['1333'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8549' => [
+            'name' => 'NAD27 to NAD83 (8)',
+            'method' => 'urn:ogc:def:method:EPSG::1074',
+            'extent_code' => ['1330'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8550' => [
+            'name' => 'NAD83 to NAD83(HARN) (48)',
+            'method' => 'urn:ogc:def:method:EPSG::1074',
+            'extent_code' => ['2373'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8551' => [
+            'name' => 'NAD83(HARN) to NAD83(NSRS2007) (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1075',
+            'extent_code' => ['2373'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8552' => [
+            'name' => 'NAD83(NSRS2007) to NAD83(2011) (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1075',
+            'extent_code' => ['1330'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8555' => [
+            'name' => 'NAD27 to NAD83 (7)',
+            'method' => 'urn:ogc:def:method:EPSG::1074',
+            'extent_code' => ['4516'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8556' => [
+            'name' => 'NAD83 to NAD83(HARN) (47)',
+            'method' => 'urn:ogc:def:method:EPSG::1074',
+            'extent_code' => ['4516'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8559' => [
+            'name' => 'NAD83(NSRS2007) to NAD83(2011) (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1075',
+            'extent_code' => ['4516'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8561' => [
+            'name' => 'Old Hawaiian to NAD83 (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1074',
+            'extent_code' => ['1334'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::8562' => [
             'name' => 'Nord Sahara 1959 to WGS 84 (3)',
             'extent_code' => ['2393'],
@@ -10160,6 +10215,41 @@ class CoordinateOperations
                 ],
             ],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::8660' => [
+            'name' => 'NAD83 to NAD83(HARN) (49)',
+            'method' => 'urn:ogc:def:method:EPSG::1074',
+            'extent_code' => ['1334'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8661' => [
+            'name' => 'NAD83(HARN) to NAD83(PA11) (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1075',
+            'extent_code' => ['1334'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8662' => [
+            'name' => 'American Samoa 1962 to NAD83(HARN) (3)',
+            'method' => 'urn:ogc:def:method:EPSG::1074',
+            'extent_code' => ['3109'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8665' => [
+            'name' => 'Guam 1963 to NAD83(HARN) (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1074',
+            'extent_code' => ['4525'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8668' => [
+            'name' => 'Puerto Rico to NAD83 (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1074',
+            'extent_code' => ['3634'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8669' => [
+            'name' => 'NAD83 to NAD83(HARN) (50)',
+            'method' => 'urn:ogc:def:method:EPSG::1074',
+            'extent_code' => ['3634'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8673' => [
+            'name' => 'NAD83(NSRS2007) to NAD83(2011) (3)',
+            'method' => 'urn:ogc:def:method:EPSG::1075',
+            'extent_code' => ['2251'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::8674' => [
             'name' => 'La Canoa to PSAD56 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
@@ -10334,6 +10424,46 @@ class CoordinateOperations
             'name' => 'Equal Earth Asia-Pacific',
             'method' => 'urn:ogc:def:method:EPSG::1078',
             'extent_code' => ['4523'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8861' => [
+            'name' => 'NAD83(HARN) to NAD83(FBN) (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1075',
+            'extent_code' => ['4516'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8862' => [
+            'name' => 'NAD83(FBN) to NAD83(NSRS2007) (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1075',
+            'extent_code' => ['4516'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8863' => [
+            'name' => 'NAD83(HARN) to NAD83(FBN) (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1075',
+            'extent_code' => ['3110'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8864' => [
+            'name' => 'NAD83(FBN) to NAD83(PA11) (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1075',
+            'extent_code' => ['3110'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8865' => [
+            'name' => 'NAD83(HARN) to NAD83(FBN) (3)',
+            'method' => 'urn:ogc:def:method:EPSG::1075',
+            'extent_code' => ['4525'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8866' => [
+            'name' => 'NAD83(FBN) to NAD83(MA11) (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1075',
+            'extent_code' => ['4525'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8867' => [
+            'name' => 'NAD83(HARN Corrected) to NAD83(FBN) (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1075',
+            'extent_code' => ['3634'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8868' => [
+            'name' => 'NAD83(FBN) to NAD83(NSRS2007) (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1075',
+            'extent_code' => ['3634'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::8869' => [
             'name' => 'ITRF2008 to ETRF2014 (1)',
@@ -10814,6 +10944,11 @@ class CoordinateOperations
             'name' => 'SIRGAS-Chile 2016 to IGb08 (1)',
             'method' => 'urn:ogc:def:method:EPSG::1065',
             'extent_code' => ['1066'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9181' => [
+            'name' => 'NAD83(HARN) to NAD83(HARN Corrected) (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1075',
+            'extent_code' => ['3634'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::9185' => [
             'name' => 'AGD66 to GDA2020 (1)',
