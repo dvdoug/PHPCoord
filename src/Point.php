@@ -47,7 +47,7 @@ use function ucwords;
 
 abstract class Point implements Stringable
 {
-    protected const ITERATION_CONVERGENCE = 1e-12;
+    protected const ITERATION_CONVERGENCE_FORMULA = 1e-12;
 
     /**
      * @internal
@@ -201,7 +201,7 @@ abstract class Point implements Stringable
             $cos2SigmaM = $cosSqAlpha ? $cosSigma - (2 * sin($U1) * sin($U2) / $cosSqAlpha) : 0;
             $C = $f / 16 * $cosSqAlpha * (4 + $f * (4 - 3 * $cosSqAlpha));
             $lambda = $L + (1 - $C) * $f * $sinAlpha * ($sigma + $C * $sinSigma * ($cos2SigmaM + $C * $cosSigma * (-1 + 2 * $cos2SigmaM ** 2)));
-        } while (abs($lambda - $lambdaN) >= static::ITERATION_CONVERGENCE && abs($lambda) < M_PI);
+        } while (abs($lambda - $lambdaN) >= static::ITERATION_CONVERGENCE_FORMULA && abs($lambda) < M_PI);
 
         // Antipodal case
         if (abs($lambda) >= M_PI) {
@@ -229,7 +229,7 @@ abstract class Point implements Stringable
                 $lambdaPrime = self::asin($sinLambdaPrime);
                 $sinSqSigma = (cos($U2) * $sinLambdaPrime) ** 2 + (cos($U1) * sin($U2) + sin($U1) * cos($U2) * cos($lambdaPrime)) ** 2;
                 $sinSigma = sqrt($sinSqSigma);
-            } while (abs($sinAlpha - $sinAlphaN) >= static::ITERATION_CONVERGENCE);
+            } while (abs($sinAlpha - $sinAlphaN) >= static::ITERATION_CONVERGENCE_FORMULA);
         }
 
         $E = sqrt(1 + (($a ** 2 - $b ** 2) / $b ** 2) * $cosSqAlpha);
