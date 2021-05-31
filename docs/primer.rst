@@ -346,9 +346,9 @@ EPSG codes
 
 The oil and gas industry relies very heavily upon precision surveying - accurate information as to location is of
 critical importance to them, not just on a day-to-day "is this drill positioned where we think it is?" basis
-but also for legal and regulatory purposes such as obtaining the necessary licenses. Given almost country in the world
-has their own coordinate system(s) and also that oil and gas fields do not stop at national boundaries, the ability to
-convert between them is a frequent necessity.
+but also for legal and regulatory purposes such as obtaining the necessary licenses. Given that almost every country in
+the world has its own coordinate system(s) and also that oil and gas fields do not stop at national boundaries, the
+ability to convert between them is a frequent necessity.
 
 For that reason, one of their trade associations, the International Association of Oil & Gas Producers (IOGP) maintains
 a database of coordinate system definitions for use by their members known as the EPSG Geodetic Parameter Dataset.
