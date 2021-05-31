@@ -12,6 +12,7 @@ use function class_exists;
 use DateTime;
 use DateTimeImmutable;
 use PHPCoord\CoordinateOperation\CoordinateOperationParams;
+use PHPCoord\CoordinateOperation\CoordinateOperations;
 use PHPCoord\CoordinateOperation\CRSTransformations;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
@@ -135,12 +136,25 @@ class VerticalPointTest extends TestCase
     {
         $toTest = [];
         foreach (CRSTransformations::getSupportedTransformations() as $transformation) {
+            $needsNonExistentFile = false;
+            $operationsInTransformation = [];
+
+            $operation = CoordinateOperations::getOperationData($transformation['operation']);
+            if (isset($operation['operations'])) {
+                foreach ($operation['operations'] as $subOperation) {
+                    $operationsInTransformation[] = $subOperation['operation'];
+                }
+            } else {
+                $operationsInTransformation[] = $transformation['operation'];
+            }
+
             if (isset(static::$sridData[$transformation['source_crs']])) {
-                //filter out operations that require a grid file that we don't have
-                $needsNonExistentFile = false;
-                foreach (CoordinateOperationParams::getParamData($transformation['operation']) as $param) {
-                    if (isset($param['fileProvider']) && !class_exists($param['fileProvider'])) {
-                        $needsNonExistentFile = true;
+                foreach ($operationsInTransformation as $operationInTransformation) {
+                    //filter out operations that require a grid file that we don't have
+                    foreach (CoordinateOperationParams::getParamData($operationInTransformation) as $param) {
+                        if (isset($param['fileProvider']) && !class_exists($param['fileProvider'])) {
+                            $needsNonExistentFile = true;
+                        }
                     }
                 }
 
