@@ -4122,23 +4122,6 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::1234' => [
-            'X-axis translation' => [
-                'value' => -155.0,
-                'uom' => 'urn:ogc:def:uom:EPSG::9001',
-                'reverses' => true,
-            ],
-            'Y-axis translation' => [
-                'value' => 171.0,
-                'uom' => 'urn:ogc:def:uom:EPSG::9001',
-                'reverses' => true,
-            ],
-            'Z-axis translation' => [
-                'value' => 37.0,
-                'uom' => 'urn:ogc:def:uom:EPSG::9001',
-                'reverses' => true,
-            ],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::1235' => [
             'X-axis translation' => [
                 'value' => -265.0,
@@ -5421,6 +5404,12 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::1313' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2NAD27NAD83CanadaProvider',
+            ],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::1314' => [
             'X-axis translation' => [
                 'value' => 446.448,
@@ -6314,6 +6303,12 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::1463' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2NAD27MAY76NAD831986OntarioProvider',
+            ],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::1469' => [
             'X-axis translation' => [
                 'value' => -125.0,
@@ -7122,6 +7117,12 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::1568' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2NZGD1949NZGD2000NewZealandProvider',
+            ],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::1569' => [
             'X-axis translation' => [
                 'value' => -199.0,
@@ -7154,6 +7155,18 @@ class CoordinateOperationParams
                 'value' => 323.31,
                 'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 'reverses' => true,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::1573' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2NAD27NAD831986QuebecProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::1575' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2NAD27CGQ77NAD831986QuebecProvider',
             ],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::1577' => [
@@ -9232,6 +9245,12 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::1670' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2NZGD1949NZGD2000NewZealandProvider',
+            ],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::1671' => [
             'X-axis translation' => [
                 'value' => 0.0,
@@ -9670,6 +9689,54 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::1688' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2ATS77NAD83CSRS1997NewBrunswickProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::1689' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2ATS777NAD83CSRS1997PrinceEdwardProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::1690' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2NAD27MAY76NAD831986OntarioProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::1691' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2NAD27CGQ77NAD831986QuebecProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::1692' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2NAD27NAD83CSRS1997QuebecProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::1693' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2NAD27NAD83CanadaProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::1696' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2NAD831986NAD83CSRS1997QuebecProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::1697' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2NAD831986NAD83CSRS1997SaskatchewanProvider',
+            ],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::1701' => [
             'X-axis translation' => [
                 'value' => 59.47,
@@ -9705,6 +9772,18 @@ class CoordinateOperationParams
                 'value' => -4.5993,
                 'uom' => 'urn:ogc:def:uom:EPSG::9202',
                 'reverses' => true,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::1702' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2NAD831986NAD83CSRS2002AlbertaProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::1703' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2NAD27NAD83CSRS1997SaskatchewanProvider',
             ],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::1751' => [
@@ -10563,6 +10642,18 @@ class CoordinateOperationParams
                 'value' => 19.166,
                 'uom' => 'urn:ogc:def:uom:EPSG::9202',
                 'reverses' => true,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::1803' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2AGD66GDA94AustraliaProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::1804' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2AGD84GDA94AustraliaProvider',
             ],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::1805' => [
@@ -24011,6 +24102,54 @@ class CoordinateOperationParams
                 'reverses' => false,
             ],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::5525' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2CA61SIRGAS2000BrazilProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::5526' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2CA7072SIRGAS2000BrazilProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::5528' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2SAD69SIRGAS2000BrazilProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::5529' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2SAD6996SIRGAS2000BrazilProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::5540' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2CA61SIRGAS2000BrazilProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::5541' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2CA7072SIRGAS2000BrazilProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::5542' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2SAD69SIRGAS2000BrazilProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::5543' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2SAD6996SIRGAS2000BrazilProvider',
+            ],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::5547' => [
             'Latitude of natural origin' => [
                 'value' => 0.0,
@@ -24533,6 +24672,12 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::5661' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2ED50ETRS89CataloniaProvider',
+            ],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::5662' => [
             'X-axis translation' => [
                 'value' => -124.0,
@@ -24820,6 +24965,12 @@ class CoordinateOperationParams
                 'value' => 49.2814,
                 'uom' => 'urn:ogc:def:uom:EPSG::9202',
                 'reverses' => true,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::5891' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2MGIETRS89AustriaProvider',
             ],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::5892' => [
@@ -28212,6 +28363,18 @@ class CoordinateOperationParams
                 'value' => 0.0,
                 'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 'reverses' => true,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::6188' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2LisbonETRS89PortugalProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::6189' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv273ETRS89PortugalProvider',
             ],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::6191' => [
@@ -32237,6 +32400,20 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::6712' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2TokyoJGD2000JapanProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::6713' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2JGD2000JGD2011JapanProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::6714' => [
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::6716' => [
             'Latitude of natural origin' => [
                 'value' => 0.0,
@@ -32424,6 +32601,12 @@ class CoordinateOperationParams
                 'value' => 10000000.0,
                 'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::6740' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2TokyoJGD2000JapanProvider',
             ],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::6741' => [
@@ -34804,6 +34987,12 @@ class CoordinateOperationParams
                 'value' => 150.4,
                 'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 'reverses' => true,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::6948' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2RD83ETRS89SaxonyProvider',
             ],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::6949' => [
@@ -43350,6 +43539,18 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::7673' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2LV03ETRS89SwitzerlandProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::7674' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2LV03ETRS89SwitzerlandProvider',
+            ],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::7675' => [
             'X-axis translation' => [
                 'value' => 577.88891,
@@ -44916,6 +45117,12 @@ class CoordinateOperationParams
                 'value' => 1000000.0,
                 'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::7788' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2LV03ETRS89SwitzerlandProvider',
             ],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::7790' => [
@@ -51272,6 +51479,12 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::8369' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2BD79ETRS89BelgiumProvider',
+            ],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::8373' => [
             'Latitude of natural origin' => [
                 'value' => 36.15,
@@ -51716,6 +51929,24 @@ class CoordinateOperationParams
                 'value' => 800000.0,
                 'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8444' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2GDA94GDA2020ChristmasIslandProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8445' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2GDA94GDA2020CocosIslandsProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8447' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2GDA94GDA2020AustraliaProvider',
             ],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::8448' => [
@@ -52507,6 +52738,8 @@ class CoordinateOperationParams
         ],
         'urn:ogc:def:coordinateOperation:EPSG::8581' => [
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::8585' => [
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::8631' => [
         ],
         'urn:ogc:def:coordinateOperation:EPSG::8632' => [
@@ -52528,6 +52761,8 @@ class CoordinateOperationParams
         'urn:ogc:def:coordinateOperation:EPSG::8643' => [
         ],
         'urn:ogc:def:coordinateOperation:EPSG::8644' => [
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8647' => [
         ],
         'urn:ogc:def:coordinateOperation:EPSG::8648' => [
         ],
@@ -57691,6 +57926,78 @@ class CoordinateOperationParams
         ],
         'urn:ogc:def:coordinateOperation:EPSG::9104' => [
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9105' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2ATS77NAD831986NovaScotiaProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9106' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2ATS77NAD83CSRS2010NovaScotiaProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9107' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2NAD27NAD83CSRS1997OntarioProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9108' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2NAD27NAD83CSRS1997OTorontoProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9109' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2NAD27MAY76NAD83CSRS1997OntarioProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9110' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2NAD831986NAD83CSRS1997OntarioProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9111' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2NAD27NAD831986SaskatchewanProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9113' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2NAD27NAD83CSRS1997BritishColumbiaCRDProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9115' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2NAD27NAD83CSRS2002BritishColumbiaCRDProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9117' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2NAD831986NAD83CSRS1997BritishColumbiaCRDProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9118' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2NAD831986NAD83CSRS1997BritishColumbiaVancouverIslandProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9119' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2NAD831986NAD83CSRS2002BritishColumbiaCRDProvider',
+            ],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::9126' => [
             'X-axis translation' => [
                 'value' => 0.0,
@@ -58920,6 +59227,18 @@ class CoordinateOperationParams
                 'reverses' => false,
             ],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9232' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2ISN93ISN2016IcelandProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9233' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2ISN2004ISN2016IcelandProvider',
+            ],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::9234' => [
             'X-axis translation' => [
                 'value' => 230.25,
@@ -58955,6 +59274,60 @@ class CoordinateOperationParams
                 'value' => 12.584,
                 'uom' => 'urn:ogc:def:uom:EPSG::9202',
                 'reverses' => true,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9236' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2ATS777NAD83CSRS1997PrinceEdwardProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9237' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2ATS77NAD83CSRS1997NewBrunswickProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9238' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2NAD27NAD83CSRS1997NewBrunswickProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9239' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2NAD27NAD83CSRS1997QuebecProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9240' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2NAD27CGQ77NAD83CSRS1997QuebecProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9241' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2NAD831986NAD83CSRS1997QuebecProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9242' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2NAD27NAD83CSRS1997SaskatchewanProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9243' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2NAD831986NAD83CSRS1997SaskatchewanProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9244' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2NAD831986NAD83CSRS2002AlbertaProvider',
             ],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::9257' => [
@@ -59211,6 +59584,12 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9282' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2RDETRS89NetherlandsProvider',
+            ],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::9291' => [
             'X-axis translation' => [
                 'value' => 0.0,
@@ -59292,6 +59671,12 @@ class CoordinateOperationParams
                 'reverses' => false,
             ],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9310' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2DHDNETRS89SaarlandProvider',
+            ],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::9334' => [
             'X-axis translation' => [
                 'value' => 0.0,
@@ -59368,6 +59753,8 @@ class CoordinateOperationParams
                 'uom' => 'urn:ogc:def:uom:EPSG::1029',
                 'reverses' => false,
             ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9336' => [
         ],
         'urn:ogc:def:coordinateOperation:EPSG::9339' => [
             'X-axis translation' => [
@@ -59885,6 +60272,18 @@ class CoordinateOperationParams
                 'reverses' => false,
             ],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9408' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2ED50ETRS89SpainProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9409' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2ED50ETRS89BalearicIslandsProvider',
+            ],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::9455' => [
             'Latitude of natural origin' => [
                 'value' => 55.45,
@@ -60196,6 +60595,12 @@ class CoordinateOperationParams
                 'reverses' => false,
             ],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9550' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2NAD831986NAD83CSRS2010NewfoundlandProvider',
+            ],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::9551' => [
             'Vertical Offset' => [
                 'value' => -0.394,
@@ -60407,6 +60812,8 @@ class CoordinateOperationParams
                 'reverses' => false,
             ],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9683' => [
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::9684' => [
             'X-axis translation' => [
                 'value' => -61.55,
@@ -60483,6 +60890,8 @@ class CoordinateOperationParams
                 'uom' => 'urn:ogc:def:uom:EPSG::1029',
                 'reverses' => false,
             ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9685' => [
         ],
         'urn:ogc:def:coordinateOperation:EPSG::9686' => [
             'X-axis translation' => [
@@ -60561,6 +60970,8 @@ class CoordinateOperationParams
                 'reverses' => false,
             ],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9687' => [
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::9688' => [
             'X-axis translation' => [
                 'value' => 61.55,
@@ -60598,6 +61009,12 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9689' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2GDA94GDA2020AustraliaProvider',
+            ],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::9690' => [
             'X-axis translation' => [
                 'value' => 61.55,
@@ -60633,6 +61050,12 @@ class CoordinateOperationParams
                 'value' => -9.994,
                 'uom' => 'urn:ogc:def:uom:EPSG::1028',
                 'reverses' => true,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9691' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2GDA94GDA2020AustraliaProvider',
             ],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::9703' => [
@@ -72305,6 +72728,12 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::15486' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2LV03LV95SwitzerlandProvider',
+            ],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::15487' => [
             'Easting offset' => [
                 'value' => 828.5890000000001,
@@ -75998,6 +76427,18 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::15785' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2AGD84GDA94AustraliaProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::15786' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2AGD66GDA94AustraliaProvider',
+            ],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::15787' => [
             'X-axis translation' => [
                 'value' => -79.90000000000001,
@@ -78856,6 +79297,18 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::15948' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2DHDNETRS89GermanyProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::15949' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2DHDNETRS89GermanyProvider',
+            ],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::15950' => [
             'Ordinate 1 of evaluation point in source CRS' => [
                 'value' => 0.0,
@@ -79072,6 +79525,18 @@ class CoordinateOperationParams
                 'value' => 380.4,
                 'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 'reverses' => true,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::15954' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2DHDNETRS89GermanyProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::15955' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2DHDNETRS89GermanyProvider',
             ],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::15957' => [

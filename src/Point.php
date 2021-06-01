@@ -86,7 +86,11 @@ abstract class Point implements Stringable
             }
         }
 
-        $point->crs = $to; //some operations are reused across CRSses (e.g. ETRS89 and WGS84), so the $destCRS of the final suboperation might not be the intended target
+        // some operations are reused across CRSses (e.g. ETRS89 and WGS84), so the $destCRS of the final suboperation might not be the intended target
+        if ($point instanceof ConvertiblePoint && !$point->getCRS() instanceof $to) {// occasionally the CRS domain switches part way through the sequence (e.g. NAD86 geog to NAD86 geocen)
+            $point = $point->convert($to, true);
+        }
+        $point->crs = $to;
 
         return $point;
     }
@@ -159,6 +163,7 @@ abstract class Point implements Stringable
             CoordinateOperationMethods::EPSG_AFFINE_PARAMETRIC_TRANSFORMATION,
             CoordinateOperationMethods::EPSG_NADCON5_2D,
             CoordinateOperationMethods::EPSG_NADCON5_3D,
+            CoordinateOperationMethods::EPSG_NTV2,
         ], true)) {
             $params['inReverse'] = $inReverse;
         }

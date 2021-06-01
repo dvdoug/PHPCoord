@@ -16,6 +16,7 @@ use PHPCoord\CoordinateOperation\NADCON5NAD27NAD831986CONUSLongitudeProvider;
 use PHPCoord\CoordinateOperation\NADCON5NAD83FBNNAD832007CONUSHeightProvider;
 use PHPCoord\CoordinateOperation\NADCON5NAD83FBNNAD832007CONUSLatitudeProvider;
 use PHPCoord\CoordinateOperation\NADCON5NAD83FBNNAD832007CONUSLongitudeProvider;
+use PHPCoord\CoordinateOperation\NTv2NAD27NAD83CanadaProvider;
 use PHPCoord\CoordinateOperation\OSTN15OSGM15Provider;
 use PHPCoord\CoordinateReferenceSystem\Geocentric;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
@@ -1156,6 +1157,42 @@ class GeographicPointTest extends TestCase
 
         self::assertEqualsWithDelta(40.689247, $to->getLatitude()->asDegrees()->getValue(), 0.00000001);
         self::assertEqualsWithDelta(-74.044502, $to->getLongitude()->asDegrees()->getValue(), 0.00000001);
+        self::assertNull($to->getHeight());
+    }
+
+    public function testNTv2ForwardCanada(): void
+    {
+        if (!class_exists(NTv2NAD27NAD83CanadaProvider::class)) {
+            self::markTestSkipped('Requires phpcoord/datapack-northamerica');
+        }
+        $from = GeographicPoint::create(new Degree(50.8713458), new Degree(-114.2934808), null, Geographic2D::fromSRID(Geographic2D::EPSG_NAD27));
+        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_NAD83);
+        $to = $from->NTv2(
+            $toCRS,
+            (new NTv2NAD27NAD83CanadaProvider())->provideGrid(),
+            false
+        );
+
+        self::assertEqualsWithDelta(50.871401224, $to->getLatitude()->asDegrees()->getValue(), 0.00000001);
+        self::assertEqualsWithDelta(-114.294481160, $to->getLongitude()->asDegrees()->getValue(), 0.00000001);
+        self::assertNull($to->getHeight());
+    }
+
+    public function testNTv2ReverseCanada(): void
+    {
+        if (!class_exists(NTv2NAD27NAD83CanadaProvider::class)) {
+            self::markTestSkipped('Requires phpcoord/datapack-northamerica');
+        }
+        $from = GeographicPoint::create(new Degree(50.871401224), new Degree(-114.294481160), null, Geographic2D::fromSRID(Geographic2D::EPSG_NAD83));
+        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_NAD27);
+        $to = $from->NTv2(
+            $toCRS,
+            (new NTv2NAD27NAD83CanadaProvider())->provideGrid(),
+            true
+        );
+
+        self::assertEqualsWithDelta(50.8713458, $to->getLatitude()->asDegrees()->getValue(), 0.00000001);
+        self::assertEqualsWithDelta(-114.2934808, $to->getLongitude()->asDegrees()->getValue(), 0.00000001);
         self::assertNull($to->getHeight());
     }
 }

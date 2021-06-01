@@ -57,7 +57,7 @@ class OSTNOSGM15Grid extends SplFileObject
         return ProjectedPoint::createFromEastingNorthing($easting, $northing, $etrs89NationalGrid, $point->getCoordinateEpoch());
     }
 
-    public function getAdjustment(Metre $easting, Metre $northing): array
+    private function getAdjustment(Metre $easting, Metre $northing): array
     {
         $eastIndex = (int) ($easting->getValue() / self::GRID_SIZE);
         $northIndex = (int) ($northing->getValue() / self::GRID_SIZE);
@@ -79,7 +79,7 @@ class OSTNOSGM15Grid extends SplFileObject
         return [$se, $sn];
     }
 
-    public function getRecord(int $eastIndex, int $northIndex): array
+    private function getRecord(int $eastIndex, int $northIndex): array
     {
         $record = $northIndex * 701 + $eastIndex + 1;
 

@@ -132,7 +132,6 @@ class EPSGImporter
         1103, // Geog3D to Geog2D+GravityRelatedHeight (EGM)
         1105, // Geog3D to Geog2D+GravityRelatedHeight (ITAL2005)
         1106, // Geographic3D to GravityRelatedHeight (ITAL2005)
-        9615, // NTv2
         9620, // Norway Offshore Interpolation
         9634, // Maritime Provinces polynomial interpolation
         9658, // Vertical Offset by Grid Interpolation (VERTCON)
@@ -159,6 +158,10 @@ class EPSGImporter
         // replaced by OSTN15
         7913, // OSTN97
         7952, // OSTN02
+        5338, // OSTN02 (NTv2)
+        5339, // OSTN02 (NTv2)
+        7709, // OSTN15 (NTv2)
+        7710, // OSTN15 (NTv2)
 
         // replaced by OSGM15
         1039, // OSGM02
@@ -179,6 +182,61 @@ class EPSGImporter
         10033, // OSGM02
         10034, // OSGM02
         15956, // OSGM02
+
+        // replaced by RDNAPTRANS2018
+        7000, // rdtrans2008.gsb
+
+        // replaced by PENR2009.gsb
+        15932, // SPED2ETV2.gsb
+        15933, // SPED2ETV2.gsb
+
+        // replaced by all-Australia combination files
+        1234, // vic_0799.gsb
+        1464, // vic_0799.gsb
+        1506, // tas_1098.gsb
+        1507, // nt_0599.gsb
+        1593, // wa_0700.gsb
+        1596, // SEAust_21_06_00.gsb
+
+        // approximation/emulation of official transforms
+        1295, // NTv2 RGNC1991_NEA74Noumea.gsb
+        6946, // NTv2 tm75_etrs89.gsb
+        6947, // NTv2 tm75_etrs89.gsb
+        15958, // NTv2 rgf93_ntf.gsb
+        15959, // NTv2 rgf93_ntf.gsb
+        15960, // NTv2 rgf93_ntf.gsb
+        15962, // NTv2 RGNC1991_IGN72GrandeTerre.gsb
+
+        // Just the result of doing Helmert transform
+        8446, // NTv2 GDA94_GDA2020_conformal.gsb
+
+        // It's just for 1 German state and is almost 400Mb!!
+        9338, // NTv2 BWTA2017.gsb
+
+        // Construction/engineering projects, not of general use
+        9302, // NTv2 HS2TN15_NTv2.gsb
+        9365, // NTv2 TN15-ETRS89-to-TPEN11-IRF.gsb
+        9369, // NTv2 TN15-ETRS89-to-MML07-IRF.gsb
+        9386, // NTv2 TN15-ETRS89-to-AbInvA96_2020-IRF.gsb
+        9454, // NTv2 TN15-ETRS89-to-GBK19-IRF.gsb
+        9740, // NTv2 TN15-ETRS89-to-EOS21-IRF.gsb
+
+        // free, but license does not permit redistribution
+        9112, // NTv2 BC_27_98.GSB
+        9114, // NTv2 NVI27_05.GSB
+        9116, // NTv2 BC_93_98.GSB
+        9120, // NTv2 CRD98_00.GSB
+        9121, // NTv2 NVI98_05.GSB
+        9122, // NTv2 BC_98_05.GSB
+        9496, // NTv2 MGI1901_TO_SRBETRS89_NTv2.gsb
+
+        // license requires money :((
+        9732, // NTv2 35160622_47161840_R40_E50.gsb
+        9733, // NTv2 35160622_47161840_R40_F89.gsb
+        9734, // NTv2 35160622_47161840_R40_F00.gsb
+        9735, // NTv2 35160622_47161840_E50_F89.gsb
+        9736, // NTv2 35160622_47161840_E50_F00.gsb
+        9737, // NTv2 35160622_47161840_F89_F00.gsb
     ];
 
     private const FILE_CLASS_MAP = [
@@ -259,6 +317,62 @@ class EPSGImporter
         'nadcon5.sp1952.nad83_1986.stpaul.lon.trn.20160901.b' => CoordinateOperation\NADCON5SP1952NAD831986StPaulLongitudeProvider::class,
         'nadcon5.ussd.nad27.conus.lat.trn.20160901.b' => CoordinateOperation\NADCON5USSDNAD27CONUSLatitudeProvider::class,
         'nadcon5.ussd.nad27.conus.lon.trn.20160901.b' => CoordinateOperation\NADCON5USSDNAD27CONUSLongitudeProvider::class,
+        'NTv2_0.gsb' => CoordinateOperation\NTv2NAD27NAD83CanadaProvider::class,
+        'AB_CSRS.DAC' => CoordinateOperation\NTv2NAD831986NAD83CSRS2002AlbertaProvider::class,
+        'BC_27_05.GSB' => CoordinateOperation\NTv2NAD27NAD83CSRS2002BritishColumbiaCRDProvider::class,
+        'BC_93_05.GSB' => CoordinateOperation\NTv2NAD831986NAD83CSRS2002BritishColumbiaCRDProvider::class,
+        'CQ77NA83.GSB' => CoordinateOperation\NTv2NAD27CGQ77NAD831986QuebecProvider::class,
+        'CQ77SCRS.GSB' => CoordinateOperation\NTv2NAD27CGQ77NAD83CSRS1997QuebecProvider::class,
+        'CGQ77-98.gsb' => CoordinateOperation\NTv2NAD27CGQ77NAD83CSRS1997QuebecProvider::class,
+        'CRD27_00.GSB' => CoordinateOperation\NTv2NAD27NAD83CSRS1997BritishColumbiaCRDProvider::class,
+        'CRD93_00.GSB' => CoordinateOperation\NTv2NAD831986NAD83CSRS1997BritishColumbiaCRDProvider::class,
+        'GS7783.GSB' => CoordinateOperation\NTv2ATS77NAD831986NovaScotiaProvider::class,
+        'May76v20.gsb' => CoordinateOperation\NTv2NAD27MAY76NAD831986OntarioProvider::class,
+        'NA27NA83.GSB' => CoordinateOperation\NTv2NAD27NAD831986QuebecProvider::class,
+        'NA27SCRS.GSB' => CoordinateOperation\NTv2NAD27NAD83CSRS1997QuebecProvider::class,
+        'QUE27-98.gsb' => CoordinateOperation\NTv2NAD27NAD83CSRS1997QuebecProvider::class,
+        'NA83SCRS.GSB' => CoordinateOperation\NTv2NAD831986NAD83CSRS1997QuebecProvider::class,
+        'NAD83-98.gsb' => CoordinateOperation\NTv2NAD831986NAD83CSRS1997QuebecProvider::class,
+        'NB2783v2.gsb' => CoordinateOperation\NTv2NAD27NAD83CSRS1997NewBrunswickProvider::class,
+        'NB7783v2.gsb' => CoordinateOperation\NTv2ATS77NAD83CSRS1997NewBrunswickProvider::class,
+        'NLCSRSV4A.GSB' => CoordinateOperation\NTv2NAD831986NAD83CSRS2010NewfoundlandProvider::class,
+        'NS778302.gsb' => CoordinateOperation\NTv2ATS77NAD83CSRS2010NovaScotiaProvider::class,
+        'NVI93_05.GSB' => CoordinateOperation\NTv2NAD831986NAD83CSRS1997BritishColumbiaVancouverIslandProvider::class,
+        'ON27CSv1.GSB' => CoordinateOperation\NTv2NAD27NAD83CSRS1997OntarioProvider::class,
+        'ON76CSv1.GSB' => CoordinateOperation\NTv2NAD27MAY76NAD83CSRS1997OntarioProvider::class,
+        'ON83CSv1.GSB' => CoordinateOperation\NTv2NAD831986NAD83CSRS1997OntarioProvider::class,
+        'PE7783V2.gsb' => CoordinateOperation\NTv2ATS777NAD83CSRS1997PrinceEdwardProvider::class,
+        'SK27-83.gsb' => CoordinateOperation\NTv2NAD27NAD831986SaskatchewanProvider::class,
+        'SK27-98.gsb' => CoordinateOperation\NTv2NAD27NAD83CSRS1997SaskatchewanProvider::class,
+        'SK83-98.gsb' => CoordinateOperation\NTv2NAD831986NAD83CSRS1997SaskatchewanProvider::class,
+        'TOR27CSv1.GSB' => CoordinateOperation\NTv2NAD27NAD83CSRS1997OTorontoProvider::class,
+        'A66 National (13.09.01).gsb' => CoordinateOperation\NTv2AGD66GDA94AustraliaProvider::class,
+        'GDA94_GDA2020_conformal_and_distortion.gsb' => CoordinateOperation\NTv2GDA94GDA2020AustraliaProvider::class,
+        'GDA94_GDA2020_conformal_christmas_island.gsb' => CoordinateOperation\NTv2GDA94GDA2020ChristmasIslandProvider::class,
+        'GDA94_GDA2020_conformal_cocos_island.gsb' => CoordinateOperation\NTv2GDA94GDA2020CocosIslandsProvider::class,
+        'National 84 (02.07.01).gsb' => CoordinateOperation\NTv2AGD84GDA94AustraliaProvider::class,
+        'nzgd2kgrid0005.gsb' => CoordinateOperation\NTv2NZGD1949NZGD2000NewZealandProvider::class,
+        'BETA2007.gsb' => CoordinateOperation\NTv2DHDNETRS89GermanyProvider::class,
+        'BALR2009.gsb' => CoordinateOperation\NTv2ED50ETRS89BalearicIslandsProvider::class,
+        'PENR2009.gsb' => CoordinateOperation\NTv2ED50ETRS89SpainProvider::class,
+        'CHENyx06a.gsb' => CoordinateOperation\NTv2LV03LV95SwitzerlandProvider::class,
+        'CHENyx06_ETRS.gsb' => CoordinateOperation\NTv2LV03ETRS89SwitzerlandProvider::class,
+        'CA61_003.gsb' => CoordinateOperation\NTv2CA61SIRGAS2000BrazilProvider::class,
+        'CA7072_003.gsb' => CoordinateOperation\NTv2CA7072SIRGAS2000BrazilProvider::class,
+        'SAD69_003.gsb' => CoordinateOperation\NTv2SAD69SIRGAS2000BrazilProvider::class,
+        'SAD96_003.gsb' => CoordinateOperation\NTv2SAD6996SIRGAS2000BrazilProvider::class,
+        '100800401.gsb' => CoordinateOperation\NTv2ED50ETRS89CataloniaProvider::class,
+        'AT_GIS_GRID.gsb' => CoordinateOperation\NTv2MGIETRS89AustriaProvider::class,
+        'D73_ETRS89_geo.gsb' => CoordinateOperation\NTv273ETRS89PortugalProvider::class,
+        'DLx_ETRS89_geo.gsb' => CoordinateOperation\NTv2LisbonETRS89PortugalProvider::class,
+        'NTv2_SN.gsb' => CoordinateOperation\NTv2RD83ETRS89SaxonyProvider::class,
+        'bd72lb72_etrs89lb08.gsb' => CoordinateOperation\NTv2BD79ETRS89BelgiumProvider::class,
+        'ISN93_ISN2016.gsb' => CoordinateOperation\NTv2ISN93ISN2016IcelandProvider::class,
+        'ISN2004_ISN2016.gsb' => CoordinateOperation\NTv2ISN2004ISN2016IcelandProvider::class,
+        'rdtrans2018.gsb' => CoordinateOperation\NTv2RDETRS89NetherlandsProvider::class,
+        'SeTa2016.gsb' => CoordinateOperation\NTv2DHDNETRS89SaarlandProvider::class,
+        'tky2jgd.gsb' => CoordinateOperation\NTv2TokyoJGD2000JapanProvider::class,
+        'touhokutaiheiyouoki2011.gsb' => CoordinateOperation\NTv2JGD2000JGD2011JapanProvider::class,
     ];
 
     public function __construct()
@@ -305,6 +419,8 @@ class EPSGImporter
         $sqlite->exec('UPDATE epsg_coordinatereferencesystem SET projection_conv_code = NULL WHERE coord_ref_sys_code = 4728');
         $sqlite->exec('UPDATE epsg_extent SET deprecated = 1 WHERE extent_code IN (1263, 4205, 4393)');
         $sqlite->exec("UPDATE epsg_coordoperationparamvalue SET param_value_file_ref = 'nadcon5.nad83_2007.nad83_2011.prvi.eht.trn.20160901.b' WHERE param_value_file_ref = 'nadcon5.nad83_2007.nad83_2011.prvi.eht.trn.20160901.b01.b'");
+        $sqlite->exec("UPDATE epsg_coordoperationparamvalue SET param_value_file_ref = 'NLCSRSV4A.GSB' WHERE param_value_file_ref = 'NLCSRSV4A.GSB '");
+        $sqlite->exec('UPDATE epsg_coordoperation SET deprecated = 1 WHERE coord_op_code IN (1851, 9235, 15933)');
 
         $sqlite->exec('VACUUM');
         $sqlite->exec('PRAGMA journal_mode=DELETE'); //but WAL is not openable read-only in older SQLite
@@ -1213,9 +1329,8 @@ class EPSGImporter
             JOIN epsg_coordinatereferencesystem targetcrs ON targetcrs.coord_ref_sys_code = o.target_crs_code AND targetcrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND targetcrs.deprecated = 0
             LEFT JOIN epsg_coordoperationparamvalue p ON p.coord_op_code = o.coord_op_code
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperation' AND dep.object_code = o.coord_op_code
-            LEFT JOIN epsg_supersession ss ON ss.object_table_name = 'epsg_coordoperation' AND dep.object_code = ss.object_code
             WHERE o.coord_op_type != 'conversion' AND o.coord_op_name NOT LIKE '%example%' AND o.coord_op_name NOT LIKE '%mining%'
-            AND dep.deprecation_id IS NULL AND ss.supersession_id IS NULL
+            AND dep.deprecation_id IS NULL AND o.deprecated = 0
             GROUP BY source_crs, target_crs, o.coord_op_code
             HAVING (SUM(CASE WHEN m.coord_op_method_code IN (" . implode(',', self::BLACKLISTED_METHODS) . ') THEN 1 ELSE 0 END) = 0)
                AND (SUM(CASE WHEN o.coord_op_code IN (' . implode(',', self::BLACKLISTED_OPERATIONS) . ") THEN 1 ELSE 0 END) = 0)
@@ -1234,9 +1349,8 @@ class EPSGImporter
             JOIN epsg_coordoperationmethod m ON m.coord_op_method_code = o.coord_op_method_code
             LEFT JOIN epsg_coordoperationparamvalue p ON p.coord_op_code = o.coord_op_code
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperation' AND dep.object_code = o.coord_op_code
-            LEFT JOIN epsg_supersession ss ON ss.object_table_name = 'epsg_coordoperation' AND dep.object_code = ss.object_code
             WHERE o.coord_op_type = 'conversion' AND o.coord_op_name NOT LIKE '%example%' AND o.coord_op_name NOT LIKE '%mining%'
-            AND dep.deprecation_id IS NULL AND ss.supersession_id IS NULL
+            AND dep.deprecation_id IS NULL AND o.deprecated = 0
             GROUP BY source_crs, target_crs, o.coord_op_code
             HAVING (SUM(CASE WHEN m.coord_op_method_code IN (" . implode(',', self::BLACKLISTED_METHODS) . ') THEN 1 ELSE 0 END) = 0)
             AND (SUM(CASE WHEN o.coord_op_code IN (' . implode(',', self::BLACKLISTED_OPERATIONS) . ") THEN 1 ELSE 0 END) = 0)
@@ -1258,12 +1372,11 @@ class EPSGImporter
             JOIN epsg_coordinatereferencesystem targetcrs ON targetcrs.coord_ref_sys_code = o.target_crs_code AND targetcrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND targetcrs.deprecated = 0
             LEFT JOIN epsg_coordoperationparamvalue p ON p.coord_op_code = co.coord_op_code
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperation' AND dep.object_code = o.coord_op_code
-            LEFT JOIN epsg_supersession ss ON ss.object_table_name = 'epsg_coordoperation' AND dep.object_code = ss.object_code
             WHERE o.coord_op_type = 'concatenated operation' AND o.coord_op_name NOT LIKE '%example%' AND o.coord_op_name NOT LIKE '%mining%'
-            AND dep.deprecation_id IS NULL AND ss.supersession_id IS NULL
+            AND dep.deprecation_id IS NULL AND o.deprecated = 0
             GROUP BY source_crs, target_crs, o.coord_op_code
             HAVING (SUM(CASE WHEN cm.coord_op_method_code IN (" . implode(',', self::BLACKLISTED_METHODS) . ') THEN 1 ELSE 0 END) = 0)
-            AND (SUM(CASE WHEN o.coord_op_code IN (' . implode(',', self::BLACKLISTED_OPERATIONS) . ') THEN 1 ELSE 0 END) = 0)
+            AND (SUM(CASE WHEN co.coord_op_code IN (' . implode(',', self::BLACKLISTED_OPERATIONS) . ') THEN 1 ELSE 0 END) = 0)
 
             ORDER BY source_crs, target_crs, operation
             ';
@@ -1293,7 +1406,7 @@ class EPSGImporter
             LEFT JOIN epsg_coordoperationparamvalue p ON p.coord_op_code = o.coord_op_code
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperation' AND dep.object_code = o.coord_op_code AND dep.deprecation_date <= '2020-12-14'
             WHERE o.coord_op_type != 'conversion' AND o.coord_op_type != 'concatenated operation' AND o.coord_op_name NOT LIKE '%example%'
-            AND dep.deprecation_id IS NULL
+            AND dep.deprecation_id IS NULL AND o.deprecated = 0
             GROUP BY o.coord_op_code
             HAVING (SUM(CASE WHEN m.coord_op_method_code IN (" . implode(',', self::BLACKLISTED_METHODS) . ') THEN 1 ELSE 0 END) = 0)
             AND (SUM(CASE WHEN o.coord_op_code IN (' . implode(',', self::BLACKLISTED_OPERATIONS) . ") THEN 1 ELSE 0 END) = 0)
@@ -1314,7 +1427,7 @@ class EPSGImporter
             LEFT JOIN epsg_coordoperationparamvalue p ON p.coord_op_code = o.coord_op_code
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperation' AND dep.object_code = o.coord_op_code AND dep.deprecation_date <= '2020-12-14'
             WHERE o.coord_op_type = 'conversion' AND o.coord_op_name NOT LIKE '%example%'
-            AND dep.deprecation_id IS NULL
+            AND dep.deprecation_id IS NULL AND o.deprecated = 0
             GROUP BY o.coord_op_code
             HAVING (SUM(CASE WHEN m.coord_op_method_code IN (" . implode(',', self::BLACKLISTED_METHODS) . ') THEN 1 ELSE 0 END) = 0)
             AND (SUM(CASE WHEN o.coord_op_code IN (' . implode(',', self::BLACKLISTED_OPERATIONS) . ") THEN 1 ELSE 0 END) = 0)
@@ -1338,10 +1451,10 @@ class EPSGImporter
             LEFT JOIN epsg_coordoperationparamvalue p ON p.coord_op_code = co.coord_op_code
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperation' AND dep.object_code = o.coord_op_code AND dep.deprecation_date <= '2020-12-14'
             WHERE o.coord_op_type = 'concatenated operation' AND o.coord_op_name NOT LIKE '%example%'
-            AND dep.deprecation_id IS NULL
+            AND dep.deprecation_id IS NULL AND o.deprecated = 0
             GROUP BY o.coord_op_code
             HAVING (SUM(CASE WHEN cm.coord_op_method_code IN (" . implode(',', self::BLACKLISTED_METHODS) . ') THEN 1 ELSE 0 END) = 0)
-            AND (SUM(CASE WHEN o.coord_op_code IN (' . implode(',', self::BLACKLISTED_OPERATIONS) . ") THEN 1 ELSE 0 END) = 0)
+            AND (SUM(CASE WHEN co.coord_op_code IN (' . implode(',', self::BLACKLISTED_OPERATIONS) . ") THEN 1 ELSE 0 END) = 0)
 
             UNION
 
@@ -1358,7 +1471,7 @@ class EPSGImporter
             LEFT JOIN epsg_coordoperationparamvalue p ON p.coord_op_code = o.coord_op_code
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperation' AND dep.object_code = o.coord_op_code AND dep.deprecation_date <= '2020-12-14'
             WHERE o.coord_op_name NOT LIKE '%example%'
-            AND dep.deprecation_id IS NULL
+            AND dep.deprecation_id IS NULL AND o.deprecated = 0
             GROUP BY o.coord_op_code
             HAVING (SUM(CASE WHEN o.coord_op_method_code IN (" . implode(',', self::BLACKLISTED_METHODS) . ') THEN 1 ELSE 0 END) = 0)
             AND (SUM(CASE WHEN o.coord_op_code IN (' . implode(',', self::BLACKLISTED_OPERATIONS) . ') THEN 1 ELSE 0 END) = 0)
@@ -1438,6 +1551,7 @@ class EPSGImporter
                             'Latitude difference file',
                             'Longitude difference file',
                             'Ellipsoidal height difference file',
+                            'Latitude and longitude difference file',
                         ]
                     )
                 ) {

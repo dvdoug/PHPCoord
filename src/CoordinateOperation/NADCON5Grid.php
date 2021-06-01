@@ -52,7 +52,7 @@ class NADCON5Grid extends SplFileObject
     /**
      * Converted from NOAA FORTRAN.
      */
-    public function getAdjustment(float $latitude, float $longitude): float
+    private function getAdjustment(float $latitude, float $longitude): float
     {
         if ($longitude < 0) {
             $longitude += 360; // NADCON5 uses 0 = 360 = Greenwich

@@ -32,6 +32,7 @@ use PHPCoord\CoordinateOperation\ConvertiblePoint;
 use PHPCoord\CoordinateOperation\GeocentricValue;
 use PHPCoord\CoordinateOperation\GeographicValue;
 use PHPCoord\CoordinateOperation\NADCON5Grid;
+use PHPCoord\CoordinateOperation\NTv2Grid;
 use PHPCoord\CoordinateOperation\OSTNOSGM15Grid;
 use PHPCoord\CoordinateReferenceSystem\Compound;
 use PHPCoord\CoordinateReferenceSystem\Geocentric;
@@ -2115,6 +2116,23 @@ class GeographicPoint extends Point implements ConvertiblePoint
         } while (abs($iteration->latitude->subtract($prevIteration->latitude)->getValue()) > self::ITERATION_CONVERGENCE_GRID && abs($iteration->longitude->subtract($prevIteration->longitude)->getValue()) > self::ITERATION_CONVERGENCE_GRID && ($this->height === null || abs($iteration->height->subtract($prevIteration->height)->getValue()) > self::ITERATION_CONVERGENCE_GRID));
 
         return $iteration;
+    }
+
+    /**
+     * NTv2
+     * Geodetic transformation operating on geographic coordinate differences by bi-linear interpolation.  Supersedes
+     * NTv1 (transformation method code 9614).  Input expects longitudes to be positive west.
+     */
+    public function NTv2(
+        Geographic $to,
+        NTv2Grid $latitudeAndLongitudeDifferenceFile,
+        bool $inReverse
+    ): self {
+        if (!$inReverse) {
+            return $latitudeAndLongitudeDifferenceFile->applyForwardAdjustment($this, $to);
+        } else {
+            return $latitudeAndLongitudeDifferenceFile->applyReverseAdjustment($this, $to);
+        }
     }
 
     public function asGeographicValue(): GeographicValue

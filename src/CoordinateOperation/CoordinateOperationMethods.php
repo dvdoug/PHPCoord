@@ -452,6 +452,13 @@ class CoordinateOperationMethods
     public const EPSG_NADCON5_3D = 'urn:ogc:def:method:EPSG::1075';
 
     /**
+     * NTv2
+     * Geodetic transformation operating on geographic coordinate differences by bi-linear interpolation.  Supersedes
+     * NTv1 (transformation method code 9614).  Input expects longitudes to be positive west.
+     */
+    public const EPSG_NTV2 = 'urn:ogc:def:method:EPSG::9615';
+
+    /**
      * New Zealand Map Grid.
      */
     public const EPSG_NEW_ZEALAND_MAP_GRID = 'urn:ogc:def:method:EPSG::9811';
@@ -761,6 +768,7 @@ class CoordinateOperationMethods
             self::EPSG_ORDNANCE_SURVEY_NATIONAL_TRANSFORMATION => 'OSTN15',
             self::EPSG_NADCON5_2D => 'NADCON5',
             self::EPSG_NADCON5_3D => 'NADCON5',
+            self::EPSG_NTV2 => 'NTv2',
         ];
 
         return $lookup[$srid];

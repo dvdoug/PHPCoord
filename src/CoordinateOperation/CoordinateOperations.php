@@ -845,11 +845,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['2408'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::1234' => [
-            'name' => 'Yacare to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3326'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::1235' => [
             'name' => 'Zanderij to WGS 84 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
@@ -1130,6 +1125,11 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9606',
             'extent_code' => ['2342'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::1313' => [
+            'name' => 'NAD27 to NAD83 (4)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['4517'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::1314' => [
             'name' => 'OSGB36 to WGS 84 (6)',
             'method' => 'urn:ogc:def:method:EPSG::9606',
@@ -1299,6 +1299,11 @@ class CoordinateOperations
             'name' => 'AGD66 to GDA94 (4)',
             'method' => 'urn:ogc:def:method:EPSG::9607',
             'extent_code' => ['2286'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::1463' => [
+            'name' => 'NAD27(76) to NAD83 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['1367'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::1469' => [
             'name' => 'Locodjo 1965 to WGS 84 (1)',
@@ -1520,6 +1525,11 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['3285'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::1568' => [
+            'name' => 'NZGD49 to NZGD2000 (3)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['3285'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::1569' => [
             'name' => 'Accra to WGS 84 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
@@ -1529,6 +1539,16 @@ class CoordinateOperations
             'name' => 'Accra to WGS 72BE (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['1505'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::1573' => [
+            'name' => 'NAD27 to NAD83 (6)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['1368'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::1575' => [
+            'name' => 'NAD27(CGQ77) to NAD83 (2)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['1368'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::1577' => [
             'name' => 'American Samoa 1962 to WGS 84 (1)',
@@ -1870,6 +1890,11 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9607',
             'extent_code' => ['2576'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::1670' => [
+            'name' => 'NZGD49 to WGS 84 (3)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['3285'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::1671' => [
             'name' => 'RGF93 to WGS 84 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
@@ -1940,10 +1965,60 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9607',
             'extent_code' => ['2353'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::1688' => [
+            'name' => 'ATS77 to WGS 84 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['1447'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::1689' => [
+            'name' => 'ATS77 to WGS 84 (2)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['1533'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::1690' => [
+            'name' => 'NAD27(76) to WGS 84 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['1367'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::1691' => [
+            'name' => 'NAD27(CGQ77) to WGS 84 (3)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['1368'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::1692' => [
+            'name' => 'NAD27 to WGS 84 (34)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['1368'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::1693' => [
+            'name' => 'NAD27 to WGS 84 (33)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['4517'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::1696' => [
+            'name' => 'NAD83 to WGS 84 (6)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['1368'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::1697' => [
+            'name' => 'NAD83 to WGS 84 (7)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['2375'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::1701' => [
             'name' => 'NZGD49 to NZGD2000 (2)',
             'method' => 'urn:ogc:def:method:EPSG::9607',
             'extent_code' => ['3285'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::1702' => [
+            'name' => 'NAD83 to WGS 84 (8)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['2376'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::1703' => [
+            'name' => 'NAD27 to WGS 84 (32)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['2375'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::1751' => [
             'name' => 'Amersfoort to ETRS89 (1)',
@@ -2114,6 +2189,16 @@ class CoordinateOperations
             'name' => 'Pointe Noire to WGS 84 (3)',
             'method' => 'urn:ogc:def:method:EPSG::9606',
             'extent_code' => ['2574'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::1803' => [
+            'name' => 'AGD66 to GDA94 (11)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['2575'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::1804' => [
+            'name' => 'AGD84 to GDA94 (5)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['2576'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::1805' => [
             'name' => 'Garoua to WGS 72BE (1)',
@@ -4893,6 +4978,46 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9807',
             'extent_code' => ['1100'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::5525' => [
+            'name' => 'Corrego Alegre 1961 to SIRGAS 2000 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['3874'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::5526' => [
+            'name' => 'Corrego Alegre 1970-72 to SIRGAS 2000 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['1293'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::5528' => [
+            'name' => 'SAD69 to SIRGAS 2000 (2)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['3887'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::5529' => [
+            'name' => 'SAD69(96) to SIRGAS 2000 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['3887'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::5540' => [
+            'name' => 'Corrego Alegre 1961 to WGS 84 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['3874'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::5541' => [
+            'name' => 'Corrego Alegre 1970-72 to WGS 84 (2)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['1293'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::5542' => [
+            'name' => 'SAD69 to WGS 84 (15)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['3887'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::5543' => [
+            'name' => 'SAD69(96) to WGS 84 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['3887'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::5547' => [
             'name' => 'Papua New Guinea Map Grid 1994 zone 54',
             'method' => 'urn:ogc:def:method:EPSG::9807',
@@ -4998,6 +5123,11 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9606',
             'extent_code' => ['1026'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::5661' => [
+            'name' => 'ED50 to ETRS89 (14)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['3732'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::5662' => [
             'name' => 'AGD66 to PNG94 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
@@ -5068,6 +5198,11 @@ class CoordinateOperations
             'name' => 'Combani 1950 to RGM04 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9606',
             'extent_code' => ['3340'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::5891' => [
+            'name' => 'MGI to ETRS89 (5)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['1037'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::5892' => [
             'name' => 'Vietnam TM-3 zone 481',
@@ -5599,6 +5734,16 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['1063'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::6188' => [
+            'name' => 'Lisbon to ETRS89 (4)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['1294'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::6189' => [
+            'name' => 'Datum 73 to ETRS89 (6)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['1294'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::6191' => [
             'name' => 'Corrego Alegre 1970-72 to SAD69 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
@@ -6069,6 +6214,32 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['1127'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::6712' => [
+            'name' => 'Tokyo to JGD2000 (2)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['3957'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::6713' => [
+            'name' => 'JGD2000 to JGD2011 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['4170'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::6714' => [
+            'name' => 'Tokyo to JGD2011 (1)',
+            'extent_code' => ['4170'],
+            'operations' => [
+                [
+                    'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6712',
+                    'source_crs' => 'urn:ogc:def:crs:EPSG::4301',
+                    'target_crs' => 'urn:ogc:def:crs:EPSG::4612',
+                ],
+                [
+                    'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6713',
+                    'source_crs' => 'urn:ogc:def:crs:EPSG::4612',
+                    'target_crs' => 'urn:ogc:def:crs:EPSG::6668',
+                ],
+            ],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::6716' => [
             'name' => 'Christmas Island Grid 1992',
             'method' => 'urn:ogc:def:method:EPSG::9807',
@@ -6103,6 +6274,11 @@ class CoordinateOperations
             'name' => 'Map Grid of Australia zone 59',
             'method' => 'urn:ogc:def:method:EPSG::9807',
             'extent_code' => ['4179'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::6740' => [
+            'name' => 'Tokyo to JGD2011 (2)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['4194'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::6741' => [
             'name' => 'Oregon Baker zone (meters)',
@@ -6564,6 +6740,11 @@ class CoordinateOperations
             'name' => 'AGD66 to WGS 84 (23)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['4216'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::6948' => [
+            'name' => 'RD/83 to ETRS89 (2)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['2545'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::6949' => [
             'name' => 'PSAD56 to SIRGAS-Chile 2002 (1)',
@@ -8225,6 +8406,16 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::1032',
             'extent_code' => ['1262'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::7673' => [
+            'name' => 'CH1903 to CHTRF95 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['1286'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::7674' => [
+            'name' => 'CH1903 to ETRS89 (2)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['1286'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::7675' => [
             'name' => 'MGI 1901 to ETRS89 (6)',
             'method' => 'urn:ogc:def:method:EPSG::9607',
@@ -8469,6 +8660,11 @@ class CoordinateOperations
             'name' => 'West Bengal NSF TM',
             'method' => 'urn:ogc:def:method:EPSG::9807',
             'extent_code' => ['4421'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::7788' => [
+            'name' => 'CH1903 to WGS 84 (3)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['1286'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::7790' => [
             'name' => 'ITRF2008 to ITRF2014 (1)',
@@ -9490,6 +9686,11 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9607',
             'extent_code' => ['1211'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::8369' => [
+            'name' => 'BD72 to ETRS89 (3)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['1347'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::8373' => [
             'name' => 'NCRS Las Vegas zone (m)',
             'method' => 'urn:ogc:def:method:EPSG::9807',
@@ -9554,6 +9755,21 @@ class CoordinateOperations
             'name' => 'Laborde Grid (Greenwich)',
             'method' => 'urn:ogc:def:method:EPSG::9813',
             'extent_code' => ['1149'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8444' => [
+            'name' => 'GDA94 to GDA2020 (4)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['4169'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8445' => [
+            'name' => 'GDA94 to GDA2020 (5)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['1069'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8447' => [
+            'name' => 'GDA94 to GDA2020 (2)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['2575'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::8448' => [
             'name' => 'GDA2020 to WGS 84 (G1762) (1)',
@@ -9853,6 +10069,22 @@ class CoordinateOperations
                 ],
             ],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::8585' => [
+            'name' => 'NAD27 to WGS 84 (36)',
+            'extent_code' => ['2376'],
+            'operations' => [
+                [
+                    'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1313',
+                    'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
+                    'target_crs' => 'urn:ogc:def:crs:EPSG::4269',
+                ],
+                [
+                    'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1702',
+                    'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
+                    'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
+                ],
+            ],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::8631' => [
             'name' => 'Garoua to WGS 84 (1)',
             'extent_code' => ['2590'],
@@ -10030,6 +10262,27 @@ class CoordinateOperations
                 [
                     'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1272',
                     'source_crs' => 'urn:ogc:def:crs:EPSG::4121',
+                    'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
+                ],
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8647' => [
+            'name' => 'NAD27 to WGS 84 (78)',
+            'extent_code' => ['2831'],
+            'operations' => [
+                [
+                    'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1313',
+                    'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
+                    'target_crs' => 'urn:ogc:def:crs:EPSG::4269',
+                ],
+                [
+                    'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1950',
+                    'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
+                    'target_crs' => 'urn:ogc:def:crs:EPSG::4617',
+                ],
+                [
+                    'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1946',
+                    'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
                     'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
                 ],
             ],
@@ -10926,6 +11179,66 @@ class CoordinateOperations
                 ],
             ],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9105' => [
+            'name' => 'ATS77 to NAD83 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['2313'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9106' => [
+            'name' => 'ATS77 to NAD83(CSRS)v6 (4)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['2313'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9107' => [
+            'name' => 'NAD27 to NAD83(CSRS)v3 (5)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['4537'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9108' => [
+            'name' => 'NAD27 to NAD83(CSRS)v3 (6)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['4536'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9109' => [
+            'name' => 'NAD27(76) to NAD83(CSRS)v3 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['1367'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9110' => [
+            'name' => 'NAD83 to NAD83(CSRS)v3 (5)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['1367'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9111' => [
+            'name' => 'NAD27 to NAD83 (9)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['2375'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9113' => [
+            'name' => 'NAD27 to NAD83(CSRS)v3 (8)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['4533'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9115' => [
+            'name' => 'NAD27 to NAD83(CSRS)v4 (10)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['4535'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9117' => [
+            'name' => 'NAD83 to NAD83(CSRS)v3 (7)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['4533'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9118' => [
+            'name' => 'NAD83 to NAD83(CSRS)v3 (8)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['4534'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9119' => [
+            'name' => 'NAD83 to NAD83(CSRS)v4 (9)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['4535'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::9126' => [
             'name' => 'NAD83(CSRS)v2 to NAD83(CORS96) (1)',
             'method' => 'urn:ogc:def:method:EPSG::1065',
@@ -11106,10 +11419,65 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::1053',
             'extent_code' => ['1061'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9232' => [
+            'name' => 'ISN93 to ISN2016 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['1120'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9233' => [
+            'name' => 'ISN2004 to ISN2016 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['1120'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::9234' => [
             'name' => 'Kalianpur 1962 to WGS 84 (5)',
             'method' => 'urn:ogc:def:method:EPSG::9607',
             'extent_code' => ['2983'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9236' => [
+            'name' => 'ATS77 to NAD83(CSRS)v2 (2)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['1533'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9237' => [
+            'name' => 'ATS77 to NAD83(CSRS)v2 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['1447'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9238' => [
+            'name' => 'NAD27 to NAD83(CSRS)v2 (4)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['1447'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9239' => [
+            'name' => 'NAD27 to NAD83(CSRS)v2 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['1368'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9240' => [
+            'name' => 'NAD27(CGQ77) to NAD83(CSRS)v2 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['1368'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9241' => [
+            'name' => 'NAD83 to NAD83(CSRS)v2 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['1368'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9242' => [
+            'name' => 'NAD27 to NAD83(CSRS)v3 (2)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['2375'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9243' => [
+            'name' => 'NAD83 to NAD83(CSRS)v3 (2)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['2375'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9244' => [
+            'name' => 'NAD83 to NAD83(CSRS)v4 (3)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['2376'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::9257' => [
             'name' => 'Chos Malal 1914 to WGS 84 (2)',
@@ -11171,6 +11539,11 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9607',
             'extent_code' => ['1275'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9282' => [
+            'name' => 'Amersfoort to ETRS89 (9)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['1275'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::9291' => [
             'name' => 'ISN2016 to WGS 84 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
@@ -11186,10 +11559,31 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9807',
             'extent_code' => ['4582'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9310' => [
+            'name' => 'DHDN to ETRS89 (10)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['4584'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::9334' => [
             'name' => 'ITRF2014 to KSA-GRF17 (1)',
             'method' => 'urn:ogc:def:method:EPSG::1053',
             'extent_code' => ['1206'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9336' => [
+            'name' => 'NAD27 to NAD83(CSRS)v4 (3)',
+            'extent_code' => ['2376'],
+            'operations' => [
+                [
+                    'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1313',
+                    'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
+                    'target_crs' => 'urn:ogc:def:crs:EPSG::4269',
+                ],
+                [
+                    'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9244',
+                    'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
+                    'target_crs' => 'urn:ogc:def:crs:EPSG::8246',
+                ],
+            ],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::9339' => [
             'name' => 'PSAD56 to SIRGAS-Chile 2010 (1)',
@@ -11306,6 +11700,16 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9807',
             'extent_code' => ['4589'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9408' => [
+            'name' => 'ED50 to ETRS89 (16)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['4605'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9409' => [
+            'name' => 'ED50 to ETRS89 (17)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['2335'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::9455' => [
             'name' => 'GBK19-TM',
             'method' => 'urn:ogc:def:method:EPSG::9807',
@@ -11345,6 +11749,11 @@ class CoordinateOperations
             'name' => 'Lyon Turin Ferroviaire 2004 (C) ',
             'method' => 'urn:ogc:def:method:EPSG::1102',
             'extent_code' => ['4613'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9550' => [
+            'name' => 'NAD83 to NAD83(CSRS)v6 (10)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['4612'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::9551' => [
             'name' => 'Antalya height to EVRF2019 height (2)',
@@ -11386,25 +11795,83 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::1056',
             'extent_code' => ['4177'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9683' => [
+            'name' => 'ITRF2014 to GDA94 (2)',
+            'extent_code' => ['2575'],
+            'operations' => [
+                [
+                    'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8049',
+                    'source_crs' => 'urn:ogc:def:crs:EPSG::7789',
+                    'target_crs' => 'urn:ogc:def:crs:EPSG::7842',
+                ],
+                [
+                    'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8447',
+                    'source_crs' => 'urn:ogc:def:crs:EPSG::4283',
+                    'target_crs' => 'urn:ogc:def:crs:EPSG::7844',
+                ],
+            ],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::9684' => [
             'name' => 'ATRF2014 to GDA94 (1)',
             'method' => 'urn:ogc:def:method:EPSG::1056',
             'extent_code' => ['4177'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9685' => [
+            'name' => 'ATRF2014 to GDA94 (2)',
+            'extent_code' => ['2575'],
+            'operations' => [
+                [
+                    'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9459',
+                    'source_crs' => 'urn:ogc:def:crs:EPSG::9307',
+                    'target_crs' => 'urn:ogc:def:crs:EPSG::7842',
+                ],
+                [
+                    'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8447',
+                    'source_crs' => 'urn:ogc:def:crs:EPSG::4283',
+                    'target_crs' => 'urn:ogc:def:crs:EPSG::7844',
+                ],
+            ],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::9686' => [
             'name' => 'GDA94 to WGS 84 (G1762) (1)',
             'method' => 'urn:ogc:def:method:EPSG::1056',
             'extent_code' => ['4177'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9687' => [
+            'name' => 'GDA94 to WGS 84 (G1762) (2)',
+            'extent_code' => ['2575'],
+            'operations' => [
+                [
+                    'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8447',
+                    'source_crs' => 'urn:ogc:def:crs:EPSG::4283',
+                    'target_crs' => 'urn:ogc:def:crs:EPSG::7844',
+                ],
+                [
+                    'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8448',
+                    'source_crs' => 'urn:ogc:def:crs:EPSG::7842',
+                    'target_crs' => 'urn:ogc:def:crs:EPSG::7664',
+                ],
+            ],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::9688' => [
             'name' => 'GDA94 to WGS 84 (2)',
             'method' => 'urn:ogc:def:method:EPSG::9607',
             'extent_code' => ['4177'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9689' => [
+            'name' => 'GDA94 to WGS 84 (3)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['2575'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::9690' => [
             'name' => 'WGS 84 to GDA2020 (3)',
             'method' => 'urn:ogc:def:method:EPSG::9607',
             'extent_code' => ['4177'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9691' => [
+            'name' => 'WGS 84 to GDA2020 (4)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['2575'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::9703' => [
             'name' => 'ETRF2000-PL to ETRS89 (1)',
@@ -13381,6 +13848,11 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['1053'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::15486' => [
+            'name' => 'CH1903 to CH1903+ (1)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['1286'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::15487' => [
             'name' => 'TWD67 / TM2 zone 121 to TWD97 / TM2 zone 121 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9656',
@@ -14226,6 +14698,16 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['3209'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::15785' => [
+            'name' => 'AGD84 to WGS 84 (9)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['2576'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::15786' => [
+            'name' => 'AGD66 to WGS 84 (17)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['2575'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::15787' => [
             'name' => 'IGCB 1955 to WGS 84 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
@@ -14871,6 +15353,16 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9606',
             'extent_code' => ['3509'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::15948' => [
+            'name' => 'DHDN to ETRS89 (8)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['3339'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::15949' => [
+            'name' => 'DHDN to WGS 84 (4)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['3339'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::15950' => [
             'name' => 'Viti Levu 1912 / Viti Levu Grid to Fiji 1986 / Fiji Map Grid (1)',
             'method' => 'urn:ogc:def:method:EPSG::9645',
@@ -14890,6 +15382,16 @@ class CoordinateOperations
             'name' => 'Nahrwan 1967 to WGS 84 (10)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['3531'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::15954' => [
+            'name' => 'RD/83 to WGS 84 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['2545'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::15955' => [
+            'name' => 'PD/83 to WGS 84 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['2544'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::15957' => [
             'name' => 'Qornoq 1927 to GR96 (1)',
