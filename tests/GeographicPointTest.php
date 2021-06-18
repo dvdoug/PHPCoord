@@ -16,6 +16,7 @@ use PHPCoord\CoordinateOperation\NADCON5NAD27NAD831986CONUSLongitudeProvider;
 use PHPCoord\CoordinateOperation\NADCON5NAD83FBNNAD832007CONUSHeightProvider;
 use PHPCoord\CoordinateOperation\NADCON5NAD83FBNNAD832007CONUSLatitudeProvider;
 use PHPCoord\CoordinateOperation\NADCON5NAD83FBNNAD832007CONUSLongitudeProvider;
+use PHPCoord\CoordinateOperation\NTv2AGD66GDA94AustraliaProvider;
 use PHPCoord\CoordinateOperation\NTv2NAD27NAD83CanadaProvider;
 use PHPCoord\CoordinateOperation\OSTN15OSGM15Provider;
 use PHPCoord\CoordinateReferenceSystem\Geocentric;
@@ -1193,6 +1194,42 @@ class GeographicPointTest extends TestCase
 
         self::assertEqualsWithDelta(50.8713458, $to->getLatitude()->asDegrees()->getValue(), 0.00000001);
         self::assertEqualsWithDelta(-114.2934808, $to->getLongitude()->asDegrees()->getValue(), 0.00000001);
+        self::assertNull($to->getHeight());
+    }
+
+    public function testNTv2ForwardAustralia(): void
+    {
+        if (!class_exists(NTv2AGD66GDA94AustraliaProvider::class)) {
+            self::markTestSkipped('Requires phpcoord/oceania');
+        }
+        $from = GeographicPoint::create(new Degree(-29.05000000), new Degree(120.84722222), null, Geographic2D::fromSRID(Geographic2D::EPSG_AGD66));
+        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_GDA94);
+        $to = $from->NTv2(
+            $toCRS,
+            (new NTv2AGD66GDA94AustraliaProvider())->provideGrid(),
+            false
+        );
+
+        self::assertEqualsWithDelta(-29.04869025, $to->getLatitude()->asDegrees()->getValue(), 0.0000001);
+        self::assertEqualsWithDelta(120.84864381, $to->getLongitude()->asDegrees()->getValue(), 0.0000001);
+        self::assertNull($to->getHeight());
+    }
+
+    public function testNTv2ReverseAustralia(): void
+    {
+        if (!class_exists(NTv2AGD66GDA94AustraliaProvider::class)) {
+            self::markTestSkipped('Requires phpcoord/oceania');
+        }
+        $from = GeographicPoint::create(new Degree(-29.04869025), new Degree(120.84864381), null, Geographic2D::fromSRID(Geographic2D::EPSG_AGD66));
+        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_GDA94);
+        $to = $from->NTv2(
+            $toCRS,
+            (new NTv2AGD66GDA94AustraliaProvider())->provideGrid(),
+            true
+        );
+
+        self::assertEqualsWithDelta(-29.05000000, $to->getLatitude()->asDegrees()->getValue(), 0.0000001);
+        self::assertEqualsWithDelta(120.84722222, $to->getLongitude()->asDegrees()->getValue(), 0.0000001);
         self::assertNull($to->getHeight());
     }
 }
