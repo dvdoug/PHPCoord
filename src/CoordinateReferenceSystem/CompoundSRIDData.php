@@ -739,7 +739,7 @@ trait CompoundSRIDData
             'extent_code' => ['3676'],
         ],
         'urn:ogc:def:crs:EPSG::6190' => [
-            'name' => 'Belge 1972 / Belgian Lambert 72 + Ostend height',
+            'name' => 'BD72 / Belgian Lambert 72 + Ostend height',
             'horizontal_crs' => 'urn:ogc:def:crs:EPSG::31370',
             'horizontal_crs_type' => 'projected',
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5710',

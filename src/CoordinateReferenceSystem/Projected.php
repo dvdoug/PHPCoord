@@ -499,6 +499,31 @@ class Projected extends CoordinateReferenceSystem
     public const EPSG_AZORES_ORIENTAL_1995_UTM_ZONE_26N = 'urn:ogc:def:crs:EPSG::3062';
 
     /**
+     * BD50 (Brussels) / Belge Lambert 50
+     * Extent: Belgium - onshore.
+     * Replaced by BD72 / Belge Lambert 72 (code 31300) and BD72 / Belgian Lambert 72 (code 31370).
+     */
+    public const EPSG_BD50_BRUSSELS_BELGE_LAMBERT_50 = 'urn:ogc:def:crs:EPSG::21500';
+
+    /**
+     * BD72 / Belge Lambert 72
+     * Extent: Belgium - onshore.
+     * Replaces 21500 (BD50 / Belge Lambert 50). An alternative - BD72 / Belgian Lambert 72 (code 31370) - was
+     * introduced in 2000 to use the standard Lambert Conic Conformal (2SP) projection method (code 9802). EPSG
+     * recommends this alternative.
+     */
+    public const EPSG_BD72_BELGE_LAMBERT_72 = 'urn:ogc:def:crs:EPSG::31300';
+
+    /**
+     * BD72 / Belgian Lambert 72
+     * Extent: Belgium - onshore.
+     * Introduced in 2000 as an alternative to CRS code 31300 to avoid the special projection method LCC (2SP Belgium)
+     * (code 9803). If software cannot handle latitude of origin 90°N, use latitude of origin = 50°47'57.704"N with
+     * Nf = 165372.956 m.
+     */
+    public const EPSG_BD72_BELGIAN_LAMBERT_72 = 'urn:ogc:def:crs:EPSG::31370';
+
+    /**
      * BDA2000 / Bermuda 2000 National Grid
      * Extent: Bermuda - onshore and offshore.
      * Replaces Bermuda 1957 / UTM zone 20N (alias Bermuda National Grid) CRS code 3769).
@@ -1125,31 +1150,6 @@ class Projected extends CoordinateReferenceSystem
      * 1980 / Gauss-Kruger zone 23 (code 2337).
      */
     public const EPSG_BEIJING_1954_GAUSS_KRUGER_ZONE_23 = 'urn:ogc:def:crs:EPSG::21423';
-
-    /**
-     * Belge 1950 (Brussels) / Belge Lambert 50
-     * Extent: Belgium - onshore.
-     * Replaced by Belge 1972 / Belge Lambert 72 (code 31300) and Belge 1972 / Belgian Lambert 72 (code 31370).
-     */
-    public const EPSG_BELGE_1950_BRUSSELS_BELGE_LAMBERT_50 = 'urn:ogc:def:crs:EPSG::21500';
-
-    /**
-     * Belge 1972 / Belge Lambert 72
-     * Extent: Belgium - onshore.
-     * Replaces 21500 (Belge 1950 / Belge Lambert 50). An alternative - Belge 1972 / Belgian Lambert 72 (code 31370) -
-     * was introduced in 2000 to use the standard Lambert Conic Conformal (2SP) projection method (code 9802). EPSG
-     * recommends this alternative.
-     */
-    public const EPSG_BELGE_1972_BELGE_LAMBERT_72 = 'urn:ogc:def:crs:EPSG::31300';
-
-    /**
-     * Belge 1972 / Belgian Lambert 72
-     * Extent: Belgium - onshore.
-     * Introduced in 2000 as an alternative to CRS code 31300 to avoid the special projection method LCC (2SP Belgium)
-     * (code 9803). If software cannot handle latitude of origin 90°N, use latitude of origin = 50°47'57.704"N with
-     * Nf = 165372.956 m.
-     */
-    public const EPSG_BELGE_1972_BELGIAN_LAMBERT_72 = 'urn:ogc:def:crs:EPSG::31370';
 
     /**
      * Bermuda 1957 / UTM zone 20N
@@ -4670,6 +4670,441 @@ class Projected extends CoordinateReferenceSystem
      * Extent: Greenland - 12°W to 6°W, onshore and offshore south of 84°N.
      */
     public const EPSG_GR96_UTM_ZONE_29N = 'urn:ogc:def:crs:EPSG::3189';
+
+    /**
+     * GSK-2011 / Gauss-Kruger CM 105E
+     * Extent: Russian Federation - onshore between 102°E and 108°E.
+     * Truncated form of GSK-2011 / Gauss-Kruger zone 18 (code 20918).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_CM_105E = 'urn:ogc:def:crs:EPSG::21018';
+
+    /**
+     * GSK-2011 / Gauss-Kruger CM 111E
+     * Extent: Russian Federation - onshore between 108°E and 114°E.
+     * Truncated form of GSK-2011 / Gauss-Kruger zone 19 (code 20919).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_CM_111E = 'urn:ogc:def:crs:EPSG::21019';
+
+    /**
+     * GSK-2011 / Gauss-Kruger CM 117E
+     * Extent: Russian Federation - onshore between 114°E and 120°E.
+     * Truncated form of GSK-2011 / Gauss-Kruger zone 20 (code 20920).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_CM_117E = 'urn:ogc:def:crs:EPSG::21020';
+
+    /**
+     * GSK-2011 / Gauss-Kruger CM 123E
+     * Extent: Russian Federation - onshore between 120°E and 126°E.
+     * Truncated form of GSK-2011 / Gauss-Kruger zone 21 (code 20921).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_CM_123E = 'urn:ogc:def:crs:EPSG::21021';
+
+    /**
+     * GSK-2011 / Gauss-Kruger CM 129E
+     * Extent: Russian Federation - onshore between 126°E and 132°E.
+     * Truncated form of GSK-2011 / Gauss-Kruger zone 22 (code 20922).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_CM_129E = 'urn:ogc:def:crs:EPSG::21022';
+
+    /**
+     * GSK-2011 / Gauss-Kruger CM 135E
+     * Extent: Russian Federation - onshore between 132°E and 138°E.
+     * Truncated form of GSK-2011 / Gauss-Kruger zone 23 (code 20923).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_CM_135E = 'urn:ogc:def:crs:EPSG::21023';
+
+    /**
+     * GSK-2011 / Gauss-Kruger CM 141E
+     * Extent: Russian Federation - onshore between 138°E and 144°E.
+     * Truncated form of GSK-2011 / Gauss-Kruger zone 24 (code 20924).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_CM_141E = 'urn:ogc:def:crs:EPSG::21024';
+
+    /**
+     * GSK-2011 / Gauss-Kruger CM 147E
+     * Extent: Russian Federation - onshore between 144°E and 150°E.
+     * Truncated form of GSK-2011 / Gauss-Kruger zone 25 (code 20925).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_CM_147E = 'urn:ogc:def:crs:EPSG::21025';
+
+    /**
+     * GSK-2011 / Gauss-Kruger CM 153E
+     * Extent: Russian Federation - onshore between 150°E and 156°E.
+     * Truncated form of GSK-2011 / Gauss-Kruger zone 26 (code 20926).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_CM_153E = 'urn:ogc:def:crs:EPSG::21026';
+
+    /**
+     * GSK-2011 / Gauss-Kruger CM 159E
+     * Extent: Russian Federation - onshore between 156°E and 162°E.
+     * Truncated form of GSK-2011 / Gauss-Kruger zone 27 (code 20927).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_CM_159E = 'urn:ogc:def:crs:EPSG::21027';
+
+    /**
+     * GSK-2011 / Gauss-Kruger CM 165E
+     * Extent: Russian Federation - onshore between 162°E and 168°E.
+     * Truncated form of GSK-2011 / Gauss-Kruger zone 28 (code 20928).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_CM_165E = 'urn:ogc:def:crs:EPSG::21028';
+
+    /**
+     * GSK-2011 / Gauss-Kruger CM 171E
+     * Extent: Russian Federation - onshore between 168°E and 174°E.
+     * Truncated form of GSK-2011 / Gauss-Kruger zone 29 (code 20929).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_CM_171E = 'urn:ogc:def:crs:EPSG::21029';
+
+    /**
+     * GSK-2011 / Gauss-Kruger CM 171W
+     * Extent: Russian Federation - onshore east of 174°W.
+     * Truncated form of GSK-2011 / Gauss-Kruger zone 32 (code 20932).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_CM_171W = 'urn:ogc:def:crs:EPSG::21032';
+
+    /**
+     * GSK-2011 / Gauss-Kruger CM 177E
+     * Extent: Russian Federation - onshore between 174°E and 180°E .
+     * Truncated form of GSK-2011 / Gauss-Kruger zone 30 (code 20930).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_CM_177E = 'urn:ogc:def:crs:EPSG::21030';
+
+    /**
+     * GSK-2011 / Gauss-Kruger CM 177W
+     * Extent: Russian Federation - onshore between 180°E and 174°W.
+     * Truncated form of GSK-2011 / Gauss-Kruger zone 31 (code 20931).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_CM_177W = 'urn:ogc:def:crs:EPSG::21031';
+
+    /**
+     * GSK-2011 / Gauss-Kruger CM 21E
+     * Extent: Russian Federation - onshore west of 24°E - Kaliningrad.
+     * Truncated form of GSK-2011 / Gauss-Kruger zone 4 (code 20904).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_CM_21E = 'urn:ogc:def:crs:EPSG::21004';
+
+    /**
+     * GSK-2011 / Gauss-Kruger CM 27E
+     * Extent: Russian Federation - onshore between 24°E and 30°E.
+     * Truncated form of GSK-2011 / Gauss-Kruger zone 5 (code 20905).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_CM_27E = 'urn:ogc:def:crs:EPSG::21005';
+
+    /**
+     * GSK-2011 / Gauss-Kruger CM 33E
+     * Extent: Russian Federation - onshore between 30°E and 36°E.
+     * Truncated form of GSK-2011 / Gauss-Kruger zone 6 (code 20906).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_CM_33E = 'urn:ogc:def:crs:EPSG::21006';
+
+    /**
+     * GSK-2011 / Gauss-Kruger CM 39E
+     * Extent: Russian Federation - onshore between 36°E and 42°E.
+     * Truncated form of GSK-2011 / Gauss-Kruger zone 7 (code 20907).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_CM_39E = 'urn:ogc:def:crs:EPSG::21007';
+
+    /**
+     * GSK-2011 / Gauss-Kruger CM 45E
+     * Extent: Russian Federation - onshore between 42°E and 48°E.
+     * Truncated form of GSK-2011 / Gauss-Kruger zone 8 (code 20908).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_CM_45E = 'urn:ogc:def:crs:EPSG::21008';
+
+    /**
+     * GSK-2011 / Gauss-Kruger CM 51E
+     * Extent: Russian Federation - onshore between 48°E and 54°E.
+     * Truncated form of GSK-2011 / Gauss-Kruger zone 9 (code 20909).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_CM_51E = 'urn:ogc:def:crs:EPSG::21009';
+
+    /**
+     * GSK-2011 / Gauss-Kruger CM 57E
+     * Extent: Russian Federation - onshore between 54°E and 60°E.
+     * Truncated form of GSK-2011 / Gauss-Kruger zone 10 (code 20910).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_CM_57E = 'urn:ogc:def:crs:EPSG::21010';
+
+    /**
+     * GSK-2011 / Gauss-Kruger CM 63E
+     * Extent: Russian Federation - onshore between 60°E and 66°E.
+     * Truncated form of GSK-2011 / Gauss-Kruger zone 11 (code 20911).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_CM_63E = 'urn:ogc:def:crs:EPSG::21011';
+
+    /**
+     * GSK-2011 / Gauss-Kruger CM 69E
+     * Extent: Russian Federation - onshore between 66°E and 72°E .
+     * Truncated form of GSK-2011 / Gauss-Kruger zone 12 (code 20912).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_CM_69E = 'urn:ogc:def:crs:EPSG::21012';
+
+    /**
+     * GSK-2011 / Gauss-Kruger CM 75E
+     * Extent: Russian Federation - onshore between 72°E and 78°E.
+     * Truncated form of GSK-2011 / Gauss-Kruger zone 13 (code 20913).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_CM_75E = 'urn:ogc:def:crs:EPSG::21013';
+
+    /**
+     * GSK-2011 / Gauss-Kruger CM 81E
+     * Extent: Russian Federation - onshore between 78°E and 84°E.
+     * Truncated form of GSK-2011 / Gauss-Kruger zone 14 (code 20914).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_CM_81E = 'urn:ogc:def:crs:EPSG::21014';
+
+    /**
+     * GSK-2011 / Gauss-Kruger CM 87E
+     * Extent: Russian Federation - onshore between 84°E and 90°E.
+     * Truncated form of GSK-2011 / Gauss-Kruger zone 15 (code 20915).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_CM_87E = 'urn:ogc:def:crs:EPSG::21015';
+
+    /**
+     * GSK-2011 / Gauss-Kruger CM 93E
+     * Extent: Russian Federation - onshore between 90°E and 96°E.
+     * Truncated form of GSK-2011 / Gauss-Kruger zone 16 (code 20916).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_CM_93E = 'urn:ogc:def:crs:EPSG::21016';
+
+    /**
+     * GSK-2011 / Gauss-Kruger CM 99E
+     * Extent: Russian Federation - onshore between 96°E and 102°E.
+     * Truncated form of GSK-2011 / Gauss-Kruger zone 17 (code 20917).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_CM_99E = 'urn:ogc:def:crs:EPSG::21017';
+
+    /**
+     * GSK-2011 / Gauss-Kruger zone 10
+     * Extent: Russian Federation - onshore between 54°E and 60°E.
+     * Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 57E (code
+     * 21010).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_ZONE_10 = 'urn:ogc:def:crs:EPSG::20910';
+
+    /**
+     * GSK-2011 / Gauss-Kruger zone 11
+     * Extent: Russian Federation - onshore between 60°E and 66°E.
+     * Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 63E (code
+     * 21011).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_ZONE_11 = 'urn:ogc:def:crs:EPSG::20911';
+
+    /**
+     * GSK-2011 / Gauss-Kruger zone 12
+     * Extent: Russian Federation - onshore between 66°E and 72°E .
+     * Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 69E (code
+     * 21012).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_ZONE_12 = 'urn:ogc:def:crs:EPSG::20912';
+
+    /**
+     * GSK-2011 / Gauss-Kruger zone 13
+     * Extent: Russian Federation - onshore between 72°E and 78°E.
+     * Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 75E (code
+     * 21013).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_ZONE_13 = 'urn:ogc:def:crs:EPSG::20913';
+
+    /**
+     * GSK-2011 / Gauss-Kruger zone 14
+     * Extent: Russian Federation - onshore between 78°E and 84°E.
+     * Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 81E (code
+     * 21014).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_ZONE_14 = 'urn:ogc:def:crs:EPSG::20914';
+
+    /**
+     * GSK-2011 / Gauss-Kruger zone 15
+     * Extent: Russian Federation - onshore between 84°E and 90°E.
+     * Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 87E (code
+     * 21015).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_ZONE_15 = 'urn:ogc:def:crs:EPSG::20915';
+
+    /**
+     * GSK-2011 / Gauss-Kruger zone 16
+     * Extent: Russian Federation - onshore between 90°E and 96°E.
+     * Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 93E (code
+     * 21016).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_ZONE_16 = 'urn:ogc:def:crs:EPSG::20916';
+
+    /**
+     * GSK-2011 / Gauss-Kruger zone 17
+     * Extent: Russian Federation - onshore between 96°E and 102°E.
+     * Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 99E (code
+     * 21017).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_ZONE_17 = 'urn:ogc:def:crs:EPSG::20917';
+
+    /**
+     * GSK-2011 / Gauss-Kruger zone 18
+     * Extent: Russian Federation - onshore between 102°E and 108°E.
+     * Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 105E (code
+     * 21018).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_ZONE_18 = 'urn:ogc:def:crs:EPSG::20918';
+
+    /**
+     * GSK-2011 / Gauss-Kruger zone 19
+     * Extent: Russian Federation - onshore between 108°E and 114°E.
+     * Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 111E (code
+     * 21019).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_ZONE_19 = 'urn:ogc:def:crs:EPSG::20919';
+
+    /**
+     * GSK-2011 / Gauss-Kruger zone 20
+     * Extent: Russian Federation - onshore between 114°E and 120°E.
+     * Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 117E (code
+     * 21020).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_ZONE_20 = 'urn:ogc:def:crs:EPSG::20920';
+
+    /**
+     * GSK-2011 / Gauss-Kruger zone 21
+     * Extent: Russian Federation - onshore between 120°E and 126°E.
+     * Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 123E (code
+     * 21021).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_ZONE_21 = 'urn:ogc:def:crs:EPSG::20921';
+
+    /**
+     * GSK-2011 / Gauss-Kruger zone 22
+     * Extent: Russian Federation - onshore between 126°E and 132°E.
+     * Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 129E (code
+     * 21022).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_ZONE_22 = 'urn:ogc:def:crs:EPSG::20922';
+
+    /**
+     * GSK-2011 / Gauss-Kruger zone 23
+     * Extent: Russian Federation - onshore between 132°E and 138°E.
+     * Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 135E (code
+     * 21023).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_ZONE_23 = 'urn:ogc:def:crs:EPSG::20923';
+
+    /**
+     * GSK-2011 / Gauss-Kruger zone 24
+     * Extent: Russian Federation - onshore between 138°E and 144°E.
+     * Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 141E (code
+     * 21024).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_ZONE_24 = 'urn:ogc:def:crs:EPSG::20924';
+
+    /**
+     * GSK-2011 / Gauss-Kruger zone 25
+     * Extent: Russian Federation - onshore between 144°E and 150°E.
+     * Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 147E (code
+     * 21025).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_ZONE_25 = 'urn:ogc:def:crs:EPSG::20925';
+
+    /**
+     * GSK-2011 / Gauss-Kruger zone 26
+     * Extent: Russian Federation - onshore between 150°E and 156°E.
+     * Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 153E (code
+     * 21026).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_ZONE_26 = 'urn:ogc:def:crs:EPSG::20926';
+
+    /**
+     * GSK-2011 / Gauss-Kruger zone 27
+     * Extent: Russian Federation - onshore between 156°E and 162°E.
+     * Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 159E (code
+     * 21027).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_ZONE_27 = 'urn:ogc:def:crs:EPSG::20927';
+
+    /**
+     * GSK-2011 / Gauss-Kruger zone 28
+     * Extent: Russian Federation - onshore between 162°E and 168°E.
+     * Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 165E (code
+     * 21028).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_ZONE_28 = 'urn:ogc:def:crs:EPSG::20928';
+
+    /**
+     * GSK-2011 / Gauss-Kruger zone 29
+     * Extent: Russian Federation - onshore between 168°E and 174°E.
+     * Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 171E (code
+     * 21029).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_ZONE_29 = 'urn:ogc:def:crs:EPSG::20929';
+
+    /**
+     * GSK-2011 / Gauss-Kruger zone 30
+     * Extent: Russian Federation - onshore between 174°E and 180°E .
+     * Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 177E (code
+     * 21030).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_ZONE_30 = 'urn:ogc:def:crs:EPSG::20930';
+
+    /**
+     * GSK-2011 / Gauss-Kruger zone 31
+     * Extent: Russian Federation - onshore between 180°E and 174°W.
+     * Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 177W (code
+     * 21031).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_ZONE_31 = 'urn:ogc:def:crs:EPSG::20931';
+
+    /**
+     * GSK-2011 / Gauss-Kruger zone 32
+     * Extent: Russian Federation - onshore east of 174°W.
+     * Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 171W (code
+     * 21032).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_ZONE_32 = 'urn:ogc:def:crs:EPSG::20932';
+
+    /**
+     * GSK-2011 / Gauss-Kruger zone 4
+     * Extent: Russian Federation - onshore west of 24°E - Kaliningrad.
+     * Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 21E (code
+     * 21004).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_ZONE_4 = 'urn:ogc:def:crs:EPSG::20904';
+
+    /**
+     * GSK-2011 / Gauss-Kruger zone 5
+     * Extent: Russian Federation - onshore between 24°E and 30°E.
+     * Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 27E (code
+     * 21005).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_ZONE_5 = 'urn:ogc:def:crs:EPSG::20905';
+
+    /**
+     * GSK-2011 / Gauss-Kruger zone 6
+     * Extent: Russian Federation - onshore between 30°E and 36°E.
+     * Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 33E (code
+     * 21006).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_ZONE_6 = 'urn:ogc:def:crs:EPSG::20906';
+
+    /**
+     * GSK-2011 / Gauss-Kruger zone 7
+     * Extent: Russian Federation - onshore between 36°E and 42°E.
+     * Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 39E (code
+     * 21007).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_ZONE_7 = 'urn:ogc:def:crs:EPSG::20907';
+
+    /**
+     * GSK-2011 / Gauss-Kruger zone 8
+     * Extent: Russian Federation - onshore between 42°E and 48°E.
+     * Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 45E (code
+     * 21008).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_ZONE_8 = 'urn:ogc:def:crs:EPSG::20908';
+
+    /**
+     * GSK-2011 / Gauss-Kruger zone 9
+     * Extent: Russian Federation - onshore between 48°E and 54°E.
+     * Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 51E (code
+     * 21009).
+     */
+    public const EPSG_GSK_2011_GAUSS_KRUGER_ZONE_9 = 'urn:ogc:def:crs:EPSG::20909';
 
     /**
      * Garoua / UTM zone 33N
@@ -12478,6 +12913,18 @@ class Projected extends CoordinateReferenceSystem
     public const EPSG_NAD83_2011_ALABAMA_EAST = 'urn:ogc:def:crs:EPSG::6355';
 
     /**
+     * NAD83(2011) / Alabama East (ftUS)
+     * Extent: United States (USA) - Alabama east of approximately 86°37'W - counties Barbour; Bullock; Calhoun;
+     * Chambers; Cherokee; Clay; Cleburne; Coffee; Coosa; Covington; Crenshaw; Dale; De Kalb; Elmore; Etowah; Geneva;
+     * Henry; Houston; Jackson; Lee; Macon; Madison; Marshall; Montgomery; Pike; Randolph; Russell; StClair; Talladega;
+     * Tallapoosa.
+     * The Federal government does not recognise this system because the State of Alabama has no legislation defining
+     * the foot to be used for NAD83. US survey foot required by ALDOT. See NAD83(2011) / Alabama East (CRS code 6355)
+     * for official metric definition.
+     */
+    public const EPSG_NAD83_2011_ALABAMA_EAST_FTUS = 'urn:ogc:def:crs:EPSG::9748';
+
+    /**
      * NAD83(2011) / Alabama West
      * Extent: United States (USA) - Alabama west of approximately 86°37'W - counties Autauga; Baldwin; Bibb; Blount;
      * Butler; Chilton; Choctaw; Clarke; Colbert; Conecuh; Cullman; Dallas; Escambia; Fayette; Franklin; Greene; Hale;
@@ -12486,6 +12933,18 @@ class Projected extends CoordinateReferenceSystem
      * Replaces NAD83(NSRS2007) / Alabama West (CRS code 3466).
      */
     public const EPSG_NAD83_2011_ALABAMA_WEST = 'urn:ogc:def:crs:EPSG::6356';
+
+    /**
+     * NAD83(2011) / Alabama West (ftUS)
+     * Extent: United States (USA) - Alabama west of approximately 86°37'W - counties Autauga; Baldwin; Bibb; Blount;
+     * Butler; Chilton; Choctaw; Clarke; Colbert; Conecuh; Cullman; Dallas; Escambia; Fayette; Franklin; Greene; Hale;
+     * Jefferson; Lamar; Lauderdale; Lawrence; Limestone; Lowndes; Marengo; Marion; Mobile; Monroe; Morgan; Perry;
+     * Pickens; Shelby; Sumter; Tuscaloosa; Walker; Washington; Wilcox; Winston.
+     * The Federal government does not recognise this system because the State of Alabama has no legislation defining
+     * the foot to be used for NAD83. US survey foot required by ALDOT. See NAD83(2011) / Alabama West (CRS code 6356)
+     * for official metric definition.
+     */
+    public const EPSG_NAD83_2011_ALABAMA_WEST_FTUS = 'urn:ogc:def:crs:EPSG::9749';
 
     /**
      * NAD83(2011) / Alaska Albers
@@ -36868,6 +37327,21 @@ class Projected extends CoordinateReferenceSystem
      * @deprecated use EPSG_ETRF2000_PL_CS92 instead
      */
     public const EPSG_ETRS89_POLAND_CS92 = 'urn:ogc:def:crs:EPSG::2180';
+
+    /**
+     * @deprecated use EPSG_BD50_BRUSSELS_BELGE_LAMBERT_50 instead
+     */
+    public const EPSG_BELGE_1950_BRUSSELS_BELGE_LAMBERT_50 = 'urn:ogc:def:crs:EPSG::21500';
+
+    /**
+     * @deprecated use EPSG_BD72_BELGE_LAMBERT_72 instead
+     */
+    public const EPSG_BELGE_1972_BELGE_LAMBERT_72 = 'urn:ogc:def:crs:EPSG::31300';
+
+    /**
+     * @deprecated use EPSG_BD72_BELGIAN_LAMBERT_72 instead
+     */
+    public const EPSG_BELGE_1972_BELGIAN_LAMBERT_72 = 'urn:ogc:def:crs:EPSG::31370';
 
     private static array $cachedObjects = [];
 

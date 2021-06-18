@@ -75,7 +75,7 @@ abstract class Point implements Stringable
 
             $params = self::resolveParamsByOperation($operationSrid, $operation['method'], $inReverse);
 
-            if ($operation['method'] === CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_AND_SLOPE) {
+            if (in_array($operation['method'], [CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_AND_SLOPE, CoordinateOperationMethods::EPSG_ZERO_TIDE_HEIGHT_TO_MEAN_TIDE_HEIGHT_EVRF2019], true)) {
                 $params['horizontalPoint'] = $additionalParams['horizontalPoint'];
             }
 
@@ -164,6 +164,7 @@ abstract class Point implements Stringable
             CoordinateOperationMethods::EPSG_NADCON5_2D,
             CoordinateOperationMethods::EPSG_NADCON5_3D,
             CoordinateOperationMethods::EPSG_NTV2,
+            CoordinateOperationMethods::EPSG_ZERO_TIDE_HEIGHT_TO_MEAN_TIDE_HEIGHT_EVRF2019,
         ], true)) {
             $params['inReverse'] = $inReverse;
         }

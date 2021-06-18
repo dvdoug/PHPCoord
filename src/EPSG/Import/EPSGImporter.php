@@ -1001,6 +1001,7 @@ class EPSGImporter
             'public',
             [
                 Compound::EPSG_OSGB36_BRITISH_NATIONAL_GRID_PLUS_ODN_HEIGHT => ['OSGB 1936 / British National Grid + ODN height'],
+                Compound::EPSG_BD72_BELGIAN_LAMBERT_72_PLUS_OSTEND_HEIGHT => ['Belge 1972 / Belgian Lambert 72 + Ostend height'],
             ]
         );
         $this->updateDocs(Compound::class, $data);
@@ -1091,6 +1092,9 @@ class EPSGImporter
             'public',
             [
                 Geographic2D::EPSG_OSGB36 => ['OSGB 1936'],
+                Geographic2D::EPSG_BD50 => ['Belge 1950'],
+                Geographic2D::EPSG_BD50_BRUSSELS => ['Belge 1950 (Brussels)'],
+                Geographic2D::EPSG_BD72 => ['Belge 1972'],
             ]
         );
         $this->updateDocs(Geographic2D::class, $data);
@@ -1186,6 +1190,9 @@ class EPSGImporter
                 Projected::EPSG_ETRF2000_PL_CS2000_21 => ['ETRS89 / Poland CS2000 zone 7'],
                 Projected::EPSG_ETRF2000_PL_CS2000_24 => ['ETRS89 / Poland CS2000 zone 8'],
                 Projected::EPSG_ETRF2000_PL_CS92 => ['ETRS89 / Poland CS92'],
+                Projected::EPSG_BD50_BRUSSELS_BELGE_LAMBERT_50 => ['Belge 1950 (Brussels) / Belge Lambert 50'],
+                Projected::EPSG_BD72_BELGE_LAMBERT_72 => ['Belge 1972 / Belge Lambert 72'],
+                Projected::EPSG_BD72_BELGIAN_LAMBERT_72 => ['Belge 1972 / Belgian Lambert 72'],
             ]
         );
         $this->updateDocs(Projected::class, $data);

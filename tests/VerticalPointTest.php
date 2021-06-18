@@ -21,7 +21,6 @@ use PHPCoord\CoordinateReferenceSystem\VerticalSRIDData;
 use PHPCoord\UnitOfMeasure\Angle\Radian;
 use PHPCoord\UnitOfMeasure\Length\Foot;
 use PHPCoord\UnitOfMeasure\Length\Metre;
-use PHPCoord\UnitOfMeasure\Scale\Unity;
 use PHPUnit\Framework\TestCase;
 
 class VerticalPointTest extends TestCase
@@ -100,9 +99,29 @@ class VerticalPointTest extends TestCase
     {
         $from = VerticalPoint::create(new Foot(1), Vertical::fromSRID(Vertical::EPSG_POOLBEG_HEIGHT_FT_BR36));
         $toCRS = Vertical::fromSRID(Vertical::EPSG_POOLBEG_HEIGHT_M);
-        $to = $from->changeOfVerticalUnit($toCRS, new Unity(0));
+        $to = $from->changeOfVerticalUnit($toCRS);
 
         self::assertEqualsWithDelta(0.3048, $to->getHeight()->getValue(), 0.001);
+    }
+
+    public function testZeroTideHeightToMeanTideHeightEVRF2019Forward(): void
+    {
+        $horizontalPoint = GeographicPoint::create(new Radian(0.88867075), new Radian(0.168715161), null, Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89));
+        $from = VerticalPoint::create(new Metre(100.154), Vertical::fromSRID(Vertical::EPSG_EVRF2019_HEIGHT));
+        $toCRS = Vertical::fromSRID(Vertical::EPSG_EVRF2019_MEAN_TIDE_HEIGHT);
+        $to = $from->zeroTideHeightToMeanTideHeightEVRF2019($toCRS, false, $horizontalPoint);
+
+        self::assertEqualsWithDelta(100.147, $to->getHeight()->asMetres()->getValue(), 0.001);
+    }
+
+    public function testZeroTideHeightToMeanTideHeightEVRF2019Reverse(): void
+    {
+        $horizontalPoint = GeographicPoint::create(new Radian(0.88867075), new Radian(0.168715161), null, Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89));
+        $from = VerticalPoint::create(new Metre(100.147), Vertical::fromSRID(Vertical::EPSG_EVRF2019_MEAN_TIDE_HEIGHT));
+        $toCRS = Vertical::fromSRID(Vertical::EPSG_EVRF2019_HEIGHT);
+        $to = $from->zeroTideHeightToMeanTideHeightEVRF2019($toCRS, true, $horizontalPoint);
+
+        self::assertEqualsWithDelta(100.154, $to->getHeight()->asMetres()->getValue(), 0.001);
     }
 
     /**

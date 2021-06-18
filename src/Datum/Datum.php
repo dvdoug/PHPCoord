@@ -653,7 +653,7 @@ class Datum
      * Type: geodetic
      * Extent: Costa Rica - onshore and offshore.
      * ITRF2008 (IGb08) at epoch 2014.59. Network of 42 GNSS stations of the passive and active reference system.
-     * Dynamic datum (reference frame). Replaces CR05 from April 2018.
+     * Replaces CR05 from April 2018.
      */
     public const EPSG_CR_SIRGAS = 'urn:ogc:def:datum:EPSG::1225';
 
@@ -2322,7 +2322,7 @@ class Datum
      * Highest Astronomical Tide
      * Type: vertical
      * Extent: World.
-     * The highest tide level which can be predicted to occur under average meterological conditions and under any
+     * The highest tide level which can be predicted to occur under average meteorological conditions and under any
      * combination of astronomical conditions.
      * Users are advised to not use this generic vertical datum but to define explicit realizations of HAT by
      * specifying location and epoch, for instance "HAT at xxx during yyyy-yyyy".
@@ -3688,7 +3688,7 @@ class Datum
      * Lowest Astronomical Tide
      * Type: vertical
      * Extent: World.
-     * The lowest tide level which can be predicted to occur under average meterological conditions and under any
+     * The lowest tide level which can be predicted to occur under average meteorological conditions and under any
      * combination of astronomical conditions.
      * Users are advised to not use this generic vertical datum but to define explicit realizations of LAT by
      * specifying location and epoch, for instance "LAT at xxx during yyyy-yyyy".
@@ -3700,7 +3700,7 @@ class Datum
      * Type: vertical
      * Extent: Netherlands - offshore North Sea.
      * Surface defined through the nllat hydroid model applied to ETRS89.
-     * The lowest tide level which can be predicted to occur under average meterological conditions and under any
+     * The lowest tide level which can be predicted to occur under average meteorological conditions and under any
      * combination of astronomical conditions.
      */
     public const EPSG_LOWEST_ASTRONOMICAL_TIDE_NETHERLANDS = 'urn:ogc:def:datum:EPSG::1290';
@@ -5777,7 +5777,7 @@ class Datum
      * Type: geodetic
      * Extent: Argentina - onshore and offshore.
      * A geodetic network of 127 high accuracy surveyed points based on WGS 84 coordinates at time of survey that
-     * define the National Geodetic System (Sistema Geodésico Nacional). Surveyed between Feruary and April 1993 and
+     * define the National Geodetic System (Sistema Geodésico Nacional). Surveyed between February and April 1993 and
      * between March and May 1994.
      * Defined the National Geodetic Reference Network from 9th May 1997. Technically, but not legally, replaced by
      * POSGAR 98 (datum code 6190) until May 2009, when POSGAR 2007 (datum code 1062) was officially replaced POSGAR
@@ -7514,9 +7514,9 @@ class Datum
      * World Geodetic System 1984 (G873)
      * Type: dynamic geodetic
      * Extent: World.
-     * Defined through coordinates of 15 GPS tracking stations adjusted to a subset of ITRF92 stations at epoch 1997.0.
-     * The reference epoch for ITRF92 is 1988.0; the ITRF92 station coordinates were transformed to 1997.0 using the
-     * NNR-NUVEL1A plate motion model.
+     * Defined through coordinates of 13 GPS tracking stations adjusted to a subset of ITRF94 stations at epoch 1997.0.
+     * The reference epoch for the adjustment was 1994.0 and the coordinates were propagated to 1997.0 using the
+     * NNR-NUVEL-1A plate motion model.
      * Replaces World Geodetic System 1984 (G730) from 1997-01-29. Replaced by World Geodetic System 1984 (G1150) from
      * 2002-01-20.
      */

@@ -56,7 +56,7 @@ class CoordinateOperations
             'extent_code' => ['1275'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::1048' => [
-            'name' => 'Belge 72 / Lambert to ED50 / UTM zone 31N (1)',
+            'name' => 'BD72 / Lambert 72 to ED50 / UTM zone 31N (1)',
             'method' => 'urn:ogc:def:method:EPSG::9652',
             'extent_code' => ['1347'],
         ],
@@ -961,7 +961,7 @@ class CoordinateOperations
             'extent_code' => ['3343'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::1264' => [
-            'name' => 'Belge 1950 (Brussels) to Belge 1950 (1)',
+            'name' => 'BD50 (Brussels) to BD50 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9601',
             'extent_code' => ['1347'],
         ],
@@ -6095,7 +6095,7 @@ class CoordinateOperations
             'extent_code' => ['1275'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::6305' => [
-            'name' => 'ED50 / UTM zone 31N to Belge 72 / Lambert (1)',
+            'name' => 'ED50 / UTM zone 31N to BD72 / Lambert 72 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9652',
             'extent_code' => ['1347'],
         ],
@@ -10918,16 +10918,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::1065',
             'extent_code' => ['4530'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::8968' => [
-            'name' => 'CR05 to CR-SIRGAS (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9606',
-            'extent_code' => ['1074'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8969' => [
-            'name' => 'CR05 to WGS 84 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9606',
-            'extent_code' => ['1074'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::8970' => [
             'name' => 'ITRF2014 to NAD83(2011) (1)',
             'method' => 'urn:ogc:def:method:EPSG::1056',
@@ -11878,6 +11868,11 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['1192'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9710' => [
+            'name' => 'EVRF2019 height to EVRF2019 mean-tide height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1107',
+            'extent_code' => ['4608'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::9726' => [
             'name' => 'Genoa 1942 height to Catania 1965 height (1)',
             'method' => 'urn:ogc:def:method:EPSG::9616',
@@ -11892,6 +11887,36 @@ class CoordinateOperations
             'name' => 'PN68 to WGS 84 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['3873'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9744' => [
+            'name' => 'Baltic 1957 height to EVRF2019 mean-tide height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1046',
+            'extent_code' => ['1079'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9745' => [
+            'name' => 'Baltic 1957 height to EVRF2019 height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1046',
+            'extent_code' => ['1079'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9746' => [
+            'name' => 'SPCS83 Alabama East zone (US Survey feet)',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2154'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9747' => [
+            'name' => 'SPCS83 Alabama West zone (US Survey feet)',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2155'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9751' => [
+            'name' => 'CR05 to CR-SIRGAS (1)',
+            'method' => 'urn:ogc:def:method:EPSG::9607',
+            'extent_code' => ['1074'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9752' => [
+            'name' => 'CR05 to WGS 84 (2)',
+            'method' => 'urn:ogc:def:method:EPSG::9607',
+            'extent_code' => ['1074'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::10085' => [
             'name' => 'Trinidad 1903 to WGS 84 (2)',

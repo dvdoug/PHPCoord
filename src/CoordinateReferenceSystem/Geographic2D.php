@@ -229,6 +229,24 @@ class Geographic2D extends Geographic
     public const EPSG_AZORES_ORIENTAL_1995 = 'urn:ogc:def:crs:EPSG::4664';
 
     /**
+     * BD50
+     * Extent: Belgium - onshore.
+     */
+    public const EPSG_BD50 = 'urn:ogc:def:crs:EPSG::4215';
+
+    /**
+     * BD50 (Brussels)
+     * Extent: Belgium - onshore.
+     */
+    public const EPSG_BD50_BRUSSELS = 'urn:ogc:def:crs:EPSG::4809';
+
+    /**
+     * BD72
+     * Extent: Belgium - onshore.
+     */
+    public const EPSG_BD72 = 'urn:ogc:def:crs:EPSG::4313';
+
+    /**
      * BDA2000
      * Extent: Bermuda - onshore and offshore.
      * Replaces Bermuda 1957 (CRS code 4216).
@@ -279,24 +297,6 @@ class Geographic2D extends Geographic
      * Extent: Lebanon - onshore.
      */
     public const EPSG_BEKAA_VALLEY_1920 = 'urn:ogc:def:crs:EPSG::6882';
-
-    /**
-     * Belge 1950
-     * Extent: Belgium - onshore.
-     */
-    public const EPSG_BELGE_1950 = 'urn:ogc:def:crs:EPSG::4215';
-
-    /**
-     * Belge 1950 (Brussels)
-     * Extent: Belgium - onshore.
-     */
-    public const EPSG_BELGE_1950_BRUSSELS = 'urn:ogc:def:crs:EPSG::4809';
-
-    /**
-     * Belge 1972
-     * Extent: Belgium - onshore.
-     */
-    public const EPSG_BELGE_1972 = 'urn:ogc:def:crs:EPSG::4313';
 
     /**
      * Bellevue
@@ -3899,6 +3899,21 @@ class Geographic2D extends Geographic
      * @deprecated use EPSG_OSGB36 instead
      */
     public const EPSG_OSGB_1936 = 'urn:ogc:def:crs:EPSG::4277';
+
+    /**
+     * @deprecated use EPSG_BD50 instead
+     */
+    public const EPSG_BELGE_1950 = 'urn:ogc:def:crs:EPSG::4215';
+
+    /**
+     * @deprecated use EPSG_BD50_BRUSSELS instead
+     */
+    public const EPSG_BELGE_1950_BRUSSELS = 'urn:ogc:def:crs:EPSG::4809';
+
+    /**
+     * @deprecated use EPSG_BD72 instead
+     */
+    public const EPSG_BELGE_1972 = 'urn:ogc:def:crs:EPSG::4313';
 
     private static array $cachedObjects = [];
 

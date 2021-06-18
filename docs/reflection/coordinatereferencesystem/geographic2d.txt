@@ -480,6 +480,51 @@ Azores Oriental 1995
 
 Replaces 1948 system (CRS code 4184). Replaced by PTRA08 (CRS code 5013).
 
+BD50
+----
+
+| Used: Belgium - onshore.
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_BD50)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::4215')
+    Geographic::fromSRID(Geographic2D::EPSG_BD50)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::4215')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_BD50)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4215')
+
+
+BD50 (Brussels)
+---------------
+
+| Used: Belgium - onshore.
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_BD50_BRUSSELS)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::4809')
+    Geographic::fromSRID(Geographic2D::EPSG_BD50_BRUSSELS)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::4809')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_BD50_BRUSSELS)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4809')
+
+
+BD72
+----
+
+| Used: Belgium - onshore.
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_BD72)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::4313')
+    Geographic::fromSRID(Geographic2D::EPSG_BD72)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::4313')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_BD72)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4313')
+
+
 BDA2000
 -------
 
@@ -601,51 +646,6 @@ Bekaa Valley 1920
     Geographic::fromSRID('urn:ogc:def:crs:EPSG::6882')
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_BEKAA_VALLEY_1920)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::6882')
-
-
-Belge 1950
-----------
-
-| Used: Belgium - onshore.
-
-.. code-block:: php
-
-    Geographic2D::fromSRID(Geographic2D::EPSG_BELGE_1950)
-    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::4215')
-    Geographic::fromSRID(Geographic2D::EPSG_BELGE_1950)
-    Geographic::fromSRID('urn:ogc:def:crs:EPSG::4215')
-    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_BELGE_1950)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4215')
-
-
-Belge 1950 (Brussels)
----------------------
-
-| Used: Belgium - onshore.
-
-.. code-block:: php
-
-    Geographic2D::fromSRID(Geographic2D::EPSG_BELGE_1950_BRUSSELS)
-    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::4809')
-    Geographic::fromSRID(Geographic2D::EPSG_BELGE_1950_BRUSSELS)
-    Geographic::fromSRID('urn:ogc:def:crs:EPSG::4809')
-    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_BELGE_1950_BRUSSELS)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4809')
-
-
-Belge 1972
-----------
-
-| Used: Belgium - onshore.
-
-.. code-block:: php
-
-    Geographic2D::fromSRID(Geographic2D::EPSG_BELGE_1972)
-    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::4313')
-    Geographic::fromSRID(Geographic2D::EPSG_BELGE_1972)
-    Geographic::fromSRID('urn:ogc:def:crs:EPSG::4313')
-    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_BELGE_1972)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4313')
 
 
 Bellevue

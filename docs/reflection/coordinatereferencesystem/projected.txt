@@ -975,6 +975,48 @@ Azores Oriental 1995 / UTM zone 26N
 
 Replaced by PTRA08 / UTM zone 26N (CRS code 5015).
 
+BD50 (Brussels) / Belge Lambert 50
+----------------------------------
+
+| Used: Belgium - onshore.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_BD50_BRUSSELS_BELGE_LAMBERT_50)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21500')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_BD50_BRUSSELS_BELGE_LAMBERT_50)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21500')
+
+Replaced by BD72 / Belge Lambert 72 (code 31300) and BD72 / Belgian Lambert 72 (code 31370).
+
+BD72 / Belge Lambert 72
+-----------------------
+
+| Used: Belgium - onshore.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_BD72_BELGE_LAMBERT_72)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::31300')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_BD72_BELGE_LAMBERT_72)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::31300')
+
+Replaces 21500 (BD50 / Belge Lambert 50). An alternative - BD72 / Belgian Lambert 72 (code 31370) - was introduced in 2000 to use the standard Lambert Conic Conformal (2SP) projection method (code 9802). EPSG recommends this alternative.
+
+BD72 / Belgian Lambert 72
+-------------------------
+
+| Used: Belgium - onshore.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_BD72_BELGIAN_LAMBERT_72)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::31370')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_BD72_BELGIAN_LAMBERT_72)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::31370')
+
+Introduced in 2000 as an alternative to CRS code 31300 to avoid the special projection method LCC (2SP Belgium) (code 9803). If software cannot handle latitude of origin 90°N, use latitude of origin = 50°47'57.704"N with Nf = 165372.956 m.
+
 BDA2000 / Bermuda 2000 National Grid
 ------------------------------------
 
@@ -2089,48 +2131,6 @@ Beijing 1954 / Gauss-Kruger zone 23
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21423')
 
 Also found with truncated false easting - see Beijing 1954 / Gauss-Kruger CM 135E (code 24163). Replaced by Xian 1980 / Gauss-Kruger zone 23 (code 2337).
-
-Belge 1950 (Brussels) / Belge Lambert 50
-----------------------------------------
-
-| Used: Belgium - onshore.
-
-.. code-block:: php
-
-    Projected::fromSRID(Projected::EPSG_BELGE_1950_BRUSSELS_BELGE_LAMBERT_50)
-    Projected::fromSRID('urn:ogc:def:crs:EPSG::21500')
-    CoordinateReferenceSystem::fromSRID(Projected::EPSG_BELGE_1950_BRUSSELS_BELGE_LAMBERT_50)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21500')
-
-Replaced by Belge 1972 / Belge Lambert 72 (code 31300) and Belge 1972 / Belgian Lambert 72 (code 31370).
-
-Belge 1972 / Belge Lambert 72
------------------------------
-
-| Used: Belgium - onshore.
-
-.. code-block:: php
-
-    Projected::fromSRID(Projected::EPSG_BELGE_1972_BELGE_LAMBERT_72)
-    Projected::fromSRID('urn:ogc:def:crs:EPSG::31300')
-    CoordinateReferenceSystem::fromSRID(Projected::EPSG_BELGE_1972_BELGE_LAMBERT_72)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::31300')
-
-Replaces 21500 (Belge 1950 / Belge Lambert 50). An alternative - Belge 1972 / Belgian Lambert 72 (code 31370) - was introduced in 2000 to use the standard Lambert Conic Conformal (2SP) projection method (code 9802). EPSG recommends this alternative.
-
-Belge 1972 / Belgian Lambert 72
--------------------------------
-
-| Used: Belgium - onshore.
-
-.. code-block:: php
-
-    Projected::fromSRID(Projected::EPSG_BELGE_1972_BELGIAN_LAMBERT_72)
-    Projected::fromSRID('urn:ogc:def:crs:EPSG::31370')
-    CoordinateReferenceSystem::fromSRID(Projected::EPSG_BELGE_1972_BELGIAN_LAMBERT_72)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::31370')
-
-Introduced in 2000 as an alternative to CRS code 31300 to avoid the special projection method LCC (2SP Belgium) (code 9803). If software cannot handle latitude of origin 90°N, use latitude of origin = 50°47'57.704"N with Nf = 165372.956 m.
 
 Bermuda 1957 / UTM zone 20N
 ---------------------------
@@ -8896,6 +8896,818 @@ GR96 / UTM zone 29N
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_GR96_UTM_ZONE_29N)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3189')
 
+
+GSK-2011 / Gauss-Kruger CM 105E
+-------------------------------
+
+| Used: Russian Federation - onshore between 102°E and 108°E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_105E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21018')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_105E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21018')
+
+Truncated form of GSK-2011 / Gauss-Kruger zone 18 (code 20918).
+
+GSK-2011 / Gauss-Kruger CM 111E
+-------------------------------
+
+| Used: Russian Federation - onshore between 108°E and 114°E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_111E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21019')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_111E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21019')
+
+Truncated form of GSK-2011 / Gauss-Kruger zone 19 (code 20919).
+
+GSK-2011 / Gauss-Kruger CM 117E
+-------------------------------
+
+| Used: Russian Federation - onshore between 114°E and 120°E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_117E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21020')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_117E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21020')
+
+Truncated form of GSK-2011 / Gauss-Kruger zone 20 (code 20920).
+
+GSK-2011 / Gauss-Kruger CM 123E
+-------------------------------
+
+| Used: Russian Federation - onshore between 120°E and 126°E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_123E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21021')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_123E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21021')
+
+Truncated form of GSK-2011 / Gauss-Kruger zone 21 (code 20921).
+
+GSK-2011 / Gauss-Kruger CM 129E
+-------------------------------
+
+| Used: Russian Federation - onshore between 126°E and 132°E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_129E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21022')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_129E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21022')
+
+Truncated form of GSK-2011 / Gauss-Kruger zone 22 (code 20922).
+
+GSK-2011 / Gauss-Kruger CM 135E
+-------------------------------
+
+| Used: Russian Federation - onshore between 132°E and 138°E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_135E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21023')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_135E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21023')
+
+Truncated form of GSK-2011 / Gauss-Kruger zone 23 (code 20923).
+
+GSK-2011 / Gauss-Kruger CM 141E
+-------------------------------
+
+| Used: Russian Federation - onshore between 138°E and 144°E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_141E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21024')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_141E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21024')
+
+Truncated form of GSK-2011 / Gauss-Kruger zone 24 (code 20924).
+
+GSK-2011 / Gauss-Kruger CM 147E
+-------------------------------
+
+| Used: Russian Federation - onshore between 144°E and 150°E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_147E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21025')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_147E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21025')
+
+Truncated form of GSK-2011 / Gauss-Kruger zone 25 (code 20925).
+
+GSK-2011 / Gauss-Kruger CM 153E
+-------------------------------
+
+| Used: Russian Federation - onshore between 150°E and 156°E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_153E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21026')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_153E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21026')
+
+Truncated form of GSK-2011 / Gauss-Kruger zone 26 (code 20926).
+
+GSK-2011 / Gauss-Kruger CM 159E
+-------------------------------
+
+| Used: Russian Federation - onshore between 156°E and 162°E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_159E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21027')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_159E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21027')
+
+Truncated form of GSK-2011 / Gauss-Kruger zone 27 (code 20927).
+
+GSK-2011 / Gauss-Kruger CM 165E
+-------------------------------
+
+| Used: Russian Federation - onshore between 162°E and 168°E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_165E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21028')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_165E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21028')
+
+Truncated form of GSK-2011 / Gauss-Kruger zone 28 (code 20928).
+
+GSK-2011 / Gauss-Kruger CM 171E
+-------------------------------
+
+| Used: Russian Federation - onshore between 168°E and 174°E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_171E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21029')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_171E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21029')
+
+Truncated form of GSK-2011 / Gauss-Kruger zone 29 (code 20929).
+
+GSK-2011 / Gauss-Kruger CM 171W
+-------------------------------
+
+| Used: Russian Federation - onshore east of 174°W.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_171W)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21032')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_171W)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21032')
+
+Truncated form of GSK-2011 / Gauss-Kruger zone 32 (code 20932).
+
+GSK-2011 / Gauss-Kruger CM 177E
+-------------------------------
+
+| Used: Russian Federation - onshore between 174°E and 180°E .
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_177E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21030')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_177E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21030')
+
+Truncated form of GSK-2011 / Gauss-Kruger zone 30 (code 20930).
+
+GSK-2011 / Gauss-Kruger CM 177W
+-------------------------------
+
+| Used: Russian Federation - onshore between 180°E and 174°W.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_177W)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21031')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_177W)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21031')
+
+Truncated form of GSK-2011 / Gauss-Kruger zone 31 (code 20931).
+
+GSK-2011 / Gauss-Kruger CM 21E
+------------------------------
+
+| Used: Russian Federation - onshore west of 24°E - Kaliningrad.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_21E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21004')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_21E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21004')
+
+Truncated form of GSK-2011 / Gauss-Kruger zone 4 (code 20904).
+
+GSK-2011 / Gauss-Kruger CM 27E
+------------------------------
+
+| Used: Russian Federation - onshore between 24°E and 30°E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_27E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21005')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_27E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21005')
+
+Truncated form of GSK-2011 / Gauss-Kruger zone 5 (code 20905).
+
+GSK-2011 / Gauss-Kruger CM 33E
+------------------------------
+
+| Used: Russian Federation - onshore between 30°E and 36°E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_33E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21006')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_33E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21006')
+
+Truncated form of GSK-2011 / Gauss-Kruger zone 6 (code 20906).
+
+GSK-2011 / Gauss-Kruger CM 39E
+------------------------------
+
+| Used: Russian Federation - onshore between 36°E and 42°E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_39E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21007')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_39E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21007')
+
+Truncated form of GSK-2011 / Gauss-Kruger zone 7 (code 20907).
+
+GSK-2011 / Gauss-Kruger CM 45E
+------------------------------
+
+| Used: Russian Federation - onshore between 42°E and 48°E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_45E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21008')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_45E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21008')
+
+Truncated form of GSK-2011 / Gauss-Kruger zone 8 (code 20908).
+
+GSK-2011 / Gauss-Kruger CM 51E
+------------------------------
+
+| Used: Russian Federation - onshore between 48°E and 54°E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_51E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21009')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_51E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21009')
+
+Truncated form of GSK-2011 / Gauss-Kruger zone 9 (code 20909).
+
+GSK-2011 / Gauss-Kruger CM 57E
+------------------------------
+
+| Used: Russian Federation - onshore between 54°E and 60°E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_57E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21010')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_57E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21010')
+
+Truncated form of GSK-2011 / Gauss-Kruger zone 10 (code 20910).
+
+GSK-2011 / Gauss-Kruger CM 63E
+------------------------------
+
+| Used: Russian Federation - onshore between 60°E and 66°E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_63E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21011')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_63E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21011')
+
+Truncated form of GSK-2011 / Gauss-Kruger zone 11 (code 20911).
+
+GSK-2011 / Gauss-Kruger CM 69E
+------------------------------
+
+| Used: Russian Federation - onshore between 66°E and 72°E .
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_69E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21012')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_69E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21012')
+
+Truncated form of GSK-2011 / Gauss-Kruger zone 12 (code 20912).
+
+GSK-2011 / Gauss-Kruger CM 75E
+------------------------------
+
+| Used: Russian Federation - onshore between 72°E and 78°E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_75E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21013')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_75E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21013')
+
+Truncated form of GSK-2011 / Gauss-Kruger zone 13 (code 20913).
+
+GSK-2011 / Gauss-Kruger CM 81E
+------------------------------
+
+| Used: Russian Federation - onshore between 78°E and 84°E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_81E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21014')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_81E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21014')
+
+Truncated form of GSK-2011 / Gauss-Kruger zone 14 (code 20914).
+
+GSK-2011 / Gauss-Kruger CM 87E
+------------------------------
+
+| Used: Russian Federation - onshore between 84°E and 90°E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_87E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21015')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_87E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21015')
+
+Truncated form of GSK-2011 / Gauss-Kruger zone 15 (code 20915).
+
+GSK-2011 / Gauss-Kruger CM 93E
+------------------------------
+
+| Used: Russian Federation - onshore between 90°E and 96°E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_93E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21016')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_93E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21016')
+
+Truncated form of GSK-2011 / Gauss-Kruger zone 16 (code 20916).
+
+GSK-2011 / Gauss-Kruger CM 99E
+------------------------------
+
+| Used: Russian Federation - onshore between 96°E and 102°E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_99E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21017')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_CM_99E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21017')
+
+Truncated form of GSK-2011 / Gauss-Kruger zone 17 (code 20917).
+
+GSK-2011 / Gauss-Kruger zone 10
+-------------------------------
+
+| Used: Russian Federation - onshore between 54°E and 60°E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_10)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::20910')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_10)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::20910')
+
+Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 57E (code 21010).
+
+GSK-2011 / Gauss-Kruger zone 11
+-------------------------------
+
+| Used: Russian Federation - onshore between 60°E and 66°E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_11)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::20911')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_11)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::20911')
+
+Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 63E (code 21011).
+
+GSK-2011 / Gauss-Kruger zone 12
+-------------------------------
+
+| Used: Russian Federation - onshore between 66°E and 72°E .
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_12)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::20912')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_12)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::20912')
+
+Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 69E (code 21012).
+
+GSK-2011 / Gauss-Kruger zone 13
+-------------------------------
+
+| Used: Russian Federation - onshore between 72°E and 78°E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_13)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::20913')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_13)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::20913')
+
+Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 75E (code 21013).
+
+GSK-2011 / Gauss-Kruger zone 14
+-------------------------------
+
+| Used: Russian Federation - onshore between 78°E and 84°E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_14)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::20914')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_14)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::20914')
+
+Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 81E (code 21014).
+
+GSK-2011 / Gauss-Kruger zone 15
+-------------------------------
+
+| Used: Russian Federation - onshore between 84°E and 90°E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_15)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::20915')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_15)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::20915')
+
+Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 87E (code 21015).
+
+GSK-2011 / Gauss-Kruger zone 16
+-------------------------------
+
+| Used: Russian Federation - onshore between 90°E and 96°E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_16)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::20916')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_16)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::20916')
+
+Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 93E (code 21016).
+
+GSK-2011 / Gauss-Kruger zone 17
+-------------------------------
+
+| Used: Russian Federation - onshore between 96°E and 102°E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_17)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::20917')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_17)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::20917')
+
+Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 99E (code 21017).
+
+GSK-2011 / Gauss-Kruger zone 18
+-------------------------------
+
+| Used: Russian Federation - onshore between 102°E and 108°E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_18)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::20918')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_18)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::20918')
+
+Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 105E (code 21018).
+
+GSK-2011 / Gauss-Kruger zone 19
+-------------------------------
+
+| Used: Russian Federation - onshore between 108°E and 114°E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_19)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::20919')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_19)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::20919')
+
+Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 111E (code 21019).
+
+GSK-2011 / Gauss-Kruger zone 20
+-------------------------------
+
+| Used: Russian Federation - onshore between 114°E and 120°E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_20)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::20920')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_20)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::20920')
+
+Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 117E (code 21020).
+
+GSK-2011 / Gauss-Kruger zone 21
+-------------------------------
+
+| Used: Russian Federation - onshore between 120°E and 126°E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_21)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::20921')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_21)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::20921')
+
+Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 123E (code 21021).
+
+GSK-2011 / Gauss-Kruger zone 22
+-------------------------------
+
+| Used: Russian Federation - onshore between 126°E and 132°E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_22)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::20922')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_22)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::20922')
+
+Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 129E (code 21022).
+
+GSK-2011 / Gauss-Kruger zone 23
+-------------------------------
+
+| Used: Russian Federation - onshore between 132°E and 138°E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_23)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::20923')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_23)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::20923')
+
+Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 135E (code 21023).
+
+GSK-2011 / Gauss-Kruger zone 24
+-------------------------------
+
+| Used: Russian Federation - onshore between 138°E and 144°E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_24)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::20924')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_24)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::20924')
+
+Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 141E (code 21024).
+
+GSK-2011 / Gauss-Kruger zone 25
+-------------------------------
+
+| Used: Russian Federation - onshore between 144°E and 150°E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_25)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::20925')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_25)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::20925')
+
+Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 147E (code 21025).
+
+GSK-2011 / Gauss-Kruger zone 26
+-------------------------------
+
+| Used: Russian Federation - onshore between 150°E and 156°E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_26)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::20926')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_26)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::20926')
+
+Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 153E (code 21026).
+
+GSK-2011 / Gauss-Kruger zone 27
+-------------------------------
+
+| Used: Russian Federation - onshore between 156°E and 162°E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_27)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::20927')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_27)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::20927')
+
+Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 159E (code 21027).
+
+GSK-2011 / Gauss-Kruger zone 28
+-------------------------------
+
+| Used: Russian Federation - onshore between 162°E and 168°E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_28)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::20928')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_28)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::20928')
+
+Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 165E (code 21028).
+
+GSK-2011 / Gauss-Kruger zone 29
+-------------------------------
+
+| Used: Russian Federation - onshore between 168°E and 174°E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_29)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::20929')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_29)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::20929')
+
+Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 171E (code 21029).
+
+GSK-2011 / Gauss-Kruger zone 30
+-------------------------------
+
+| Used: Russian Federation - onshore between 174°E and 180°E .
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_30)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::20930')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_30)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::20930')
+
+Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 177E (code 21030).
+
+GSK-2011 / Gauss-Kruger zone 31
+-------------------------------
+
+| Used: Russian Federation - onshore between 180°E and 174°W.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_31)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::20931')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_31)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::20931')
+
+Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 177W (code 21031).
+
+GSK-2011 / Gauss-Kruger zone 32
+-------------------------------
+
+| Used: Russian Federation - onshore east of 174°W.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_32)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::20932')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_32)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::20932')
+
+Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 171W (code 21032).
+
+GSK-2011 / Gauss-Kruger zone 4
+------------------------------
+
+| Used: Russian Federation - onshore west of 24°E - Kaliningrad.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_4)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::20904')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_4)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::20904')
+
+Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 21E (code 21004).
+
+GSK-2011 / Gauss-Kruger zone 5
+------------------------------
+
+| Used: Russian Federation - onshore between 24°E and 30°E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_5)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::20905')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_5)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::20905')
+
+Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 27E (code 21005).
+
+GSK-2011 / Gauss-Kruger zone 6
+------------------------------
+
+| Used: Russian Federation - onshore between 30°E and 36°E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_6)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::20906')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_6)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::20906')
+
+Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 33E (code 21006).
+
+GSK-2011 / Gauss-Kruger zone 7
+------------------------------
+
+| Used: Russian Federation - onshore between 36°E and 42°E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_7)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::20907')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_7)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::20907')
+
+Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 39E (code 21007).
+
+GSK-2011 / Gauss-Kruger zone 8
+------------------------------
+
+| Used: Russian Federation - onshore between 42°E and 48°E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_8)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::20908')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_8)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::20908')
+
+Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 45E (code 21008).
+
+GSK-2011 / Gauss-Kruger zone 9
+------------------------------
+
+| Used: Russian Federation - onshore between 48°E and 54°E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_9)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::20909')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GAUSS_KRUGER_ZONE_9)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::20909')
+
+Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 51E (code 21009).
 
 Garoua / UTM zone 33N
 ---------------------
@@ -22226,6 +23038,20 @@ NAD83(2011) / Alabama East
 
 Replaces NAD83(NSRS2007) / Alabama East (CRS code 3465).
 
+NAD83(2011) / Alabama East (ftUS)
+---------------------------------
+
+| Used: United States (USA) - Alabama east of approximately 86°37'W - counties Barbour; Bullock; Calhoun; Chambers; Cherokee; Clay; Cleburne; Coffee; Coosa; Covington; Crenshaw; Dale; De Kalb; Elmore; Etowah; Geneva; Henry; Houston; Jackson; Lee; Macon; Madison; Marshall; Montgomery; Pike; Randolph; Russell; StClair; Talladega; Tallapoosa.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NAD83_2011_ALABAMA_EAST_FTUS)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9748')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NAD83_2011_ALABAMA_EAST_FTUS)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9748')
+
+The Federal government does not recognise this system because the State of Alabama has no legislation defining the foot to be used for NAD83. US survey foot required by ALDOT. See NAD83(2011) / Alabama East (CRS code 6355) for official metric definition.
+
 NAD83(2011) / Alabama West
 --------------------------
 
@@ -22239,6 +23065,20 @@ NAD83(2011) / Alabama West
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::6356')
 
 Replaces NAD83(NSRS2007) / Alabama West (CRS code 3466).
+
+NAD83(2011) / Alabama West (ftUS)
+---------------------------------
+
+| Used: United States (USA) - Alabama west of approximately 86°37'W - counties Autauga; Baldwin; Bibb; Blount; Butler; Chilton; Choctaw; Clarke; Colbert; Conecuh; Cullman; Dallas; Escambia; Fayette; Franklin; Greene; Hale; Jefferson; Lamar; Lauderdale; Lawrence; Limestone; Lowndes; Marengo; Marion; Mobile; Monroe; Morgan; Perry; Pickens; Shelby; Sumter; Tuscaloosa; Walker; Washington; Wilcox; Winston.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NAD83_2011_ALABAMA_WEST_FTUS)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9749')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NAD83_2011_ALABAMA_WEST_FTUS)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9749')
+
+The Federal government does not recognise this system because the State of Alabama has no legislation defining the foot to be used for NAD83. US survey foot required by ALDOT. See NAD83(2011) / Alabama West (CRS code 6356) for official metric definition.
 
 NAD83(2011) / Alaska Albers
 ---------------------------

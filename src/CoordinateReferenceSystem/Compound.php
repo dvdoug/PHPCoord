@@ -33,10 +33,10 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_ASTRO_DOS_71_UTM_ZONE_30S_PLUS_JAMESTOWN_1971_HEIGHT = 'urn:ogc:def:crs:EPSG::7954';
 
     /**
-     * Belge 1972 / Belgian Lambert 72 + Ostend height
+     * BD72 / Belgian Lambert 72 + Ostend height
      * Extent: Belgium - onshore.
      */
-    public const EPSG_BELGE_1972_BELGIAN_LAMBERT_72_PLUS_OSTEND_HEIGHT = 'urn:ogc:def:crs:EPSG::6190';
+    public const EPSG_BD72_BELGIAN_LAMBERT_72_PLUS_OSTEND_HEIGHT = 'urn:ogc:def:crs:EPSG::6190';
 
     /**
      * CIGD11 + CBVD61 height (ft)
@@ -2492,6 +2492,11 @@ class Compound extends CoordinateReferenceSystem
      * @deprecated use EPSG_OSGB36_BRITISH_NATIONAL_GRID_PLUS_ODN_HEIGHT instead
      */
     public const EPSG_OSGB_1936_BRITISH_NATIONAL_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::7405';
+
+    /**
+     * @deprecated use EPSG_BD72_BELGIAN_LAMBERT_72_PLUS_OSTEND_HEIGHT instead
+     */
+    public const EPSG_BELGE_1972_BELGIAN_LAMBERT_72_PLUS_OSTEND_HEIGHT = 'urn:ogc:def:crs:EPSG::6190';
 
     private static array $cachedObjects = [];
 

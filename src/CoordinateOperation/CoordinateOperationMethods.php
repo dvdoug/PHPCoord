@@ -690,6 +690,13 @@ class CoordinateOperationMethods
      */
     public const EPSG_VERTICAL_PERSPECTIVE_ORTHOGRAPHIC_CASE = 'urn:ogc:def:method:EPSG::9839';
 
+    /**
+     * zero-tide height to mean-tide height (EVRF2019)
+     * The offset of -0.08593 is applied to force EVRF2019 mean-tide height to be equal to EVRF2019 height at the
+     * EVRF2019 nominal origin at Amsterdams Peil.
+     */
+    public const EPSG_ZERO_TIDE_HEIGHT_TO_MEAN_TIDE_HEIGHT_EVRF2019 = 'urn:ogc:def:method:EPSG::1107';
+
     public static function getFunctionName(string $srid): string
     {
         $lookup = [
@@ -769,6 +776,7 @@ class CoordinateOperationMethods
             self::EPSG_NADCON5_2D => 'NADCON5',
             self::EPSG_NADCON5_3D => 'NADCON5',
             self::EPSG_NTV2 => 'NTv2',
+            self::EPSG_ZERO_TIDE_HEIGHT_TO_MEAN_TIDE_HEIGHT_EVRF2019 => 'zeroTideHeightToMeanTideHeightEVRF2019',
         ];
 
         return $lookup[$srid];

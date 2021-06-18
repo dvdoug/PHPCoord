@@ -594,7 +594,7 @@ trait Geographic2DSRIDData
             'extent_code' => ['1067'],
         ],
         'urn:ogc:def:crs:EPSG::4215' => [
-            'name' => 'Belge 1950',
+            'name' => 'BD50',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
             'datum' => 'urn:ogc:def:datum:EPSG::6215',
             'extent_code' => ['1347'],
@@ -1086,7 +1086,7 @@ trait Geographic2DSRIDData
             'extent_code' => ['1037'],
         ],
         'urn:ogc:def:crs:EPSG::4313' => [
-            'name' => 'Belge 1972',
+            'name' => 'BD72',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
             'datum' => 'urn:ogc:def:datum:EPSG::6313',
             'extent_code' => ['1347'],
@@ -2112,7 +2112,7 @@ trait Geographic2DSRIDData
             'extent_code' => ['3694'],
         ],
         'urn:ogc:def:crs:EPSG::4809' => [
-            'name' => 'Belge 1950 (Brussels)',
+            'name' => 'BD50 (Brussels)',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
             'datum' => 'urn:ogc:def:datum:EPSG::6809',
             'extent_code' => ['1347'],

@@ -153,8 +153,28 @@ class VerticalPoint extends Point
      */
     public function changeOfVerticalUnit(
         Vertical $to
-    ) {
+    ): self {
         // units are auto-converted, don't need to use the supplied param
         return static::create($this->height, $to, $this->epoch);
+    }
+
+    /**
+     * Zero-tide height to mean-tide height (EVRF2019)
+     * The offset of -0.08593 is applied to force EVRF2019 mean-tide height to be equal to EVRF2019 height at the
+     * EVRF2019 nominal origin at Amsterdams Peil.
+     */
+    public function zeroTideHeightToMeanTideHeightEVRF2019(
+        Vertical $to,
+        bool $inReverse,
+        GeographicPoint $horizontalPoint
+    ): self {
+        $latitude = $horizontalPoint->getLatitude()->asRadians()->getValue();
+        $delta = new Metre((0.29541 * sin($latitude) ** 2 + 0.00042 * sin($latitude) ** 4 - 0.0994) - 0.08593);
+
+        if ($inReverse) {
+            $delta = $delta->multiply(-1);
+        }
+
+        return static::create($this->height->add($delta), $to);
     }
 }

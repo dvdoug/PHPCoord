@@ -37,16 +37,16 @@ Astro DOS 71 / UTM zone 30S + Jamestown 1971 height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::7954')
 
 
-Belge 1972 / Belgian Lambert 72 + Ostend height
------------------------------------------------
+BD72 / Belgian Lambert 72 + Ostend height
+-----------------------------------------
 
 | Used: Belgium - onshore.
 
 .. code-block:: php
 
-    Compound::fromSRID(Compound::EPSG_BELGE_1972_BELGIAN_LAMBERT_72_PLUS_OSTEND_HEIGHT)
+    Compound::fromSRID(Compound::EPSG_BD72_BELGIAN_LAMBERT_72_PLUS_OSTEND_HEIGHT)
     Compound::fromSRID('urn:ogc:def:crs:EPSG::6190')
-    CoordinateReferenceSystem::fromSRID(Compound::EPSG_BELGE_1972_BELGIAN_LAMBERT_72_PLUS_OSTEND_HEIGHT)
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_BD72_BELGIAN_LAMBERT_72_PLUS_OSTEND_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::6190')
 
 
