@@ -23,7 +23,7 @@ class OSTNOSGM15Grid extends SplFileObject
 
     private const ITERATION_CONVERGENCE = 0.0001;
 
-    public function applyForwardAdjustment(ProjectedPoint $point): ProjectedPoint
+    public function applyForwardHorizontalAdjustment(ProjectedPoint $point): ProjectedPoint
     {
         $adjustment = $this->getAdjustment($point->getEasting()->asMetres(), $point->getNorthing()->asMetres());
 
@@ -33,7 +33,7 @@ class OSTNOSGM15Grid extends SplFileObject
         return ProjectedPoint::createFromEastingNorthing($easting, $northing, Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID), $point->getCoordinateEpoch());
     }
 
-    public function applyReverseAdjustment(ProjectedPoint $point): ProjectedPoint
+    public function applyReverseHorizontalAdjustment(ProjectedPoint $point): ProjectedPoint
     {
         $osgb36NationalGrid = Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID);
         $etrs89NationalGrid = new Projected(
@@ -57,6 +57,13 @@ class OSTNOSGM15Grid extends SplFileObject
         return ProjectedPoint::createFromEastingNorthing($easting, $northing, $etrs89NationalGrid, $point->getCoordinateEpoch());
     }
 
+    public function getVerticalAdjustment(ProjectedPoint $point): Metre
+    {
+        $adjustment = $this->getAdjustment($point->getEasting()->asMetres(), $point->getNorthing()->asMetres());
+
+        return new Metre($adjustment[2]);
+    }
+
     private function getAdjustment(Metre $easting, Metre $northing): array
     {
         $eastIndex = (int) ($easting->getValue() / self::GRID_SIZE);
@@ -75,8 +82,9 @@ class OSTNOSGM15Grid extends SplFileObject
 
         $se = (1 - $t) * (1 - $u) * $corner0[3] + ($t) * (1 - $u) * $corner1[3] + ($t) * ($u) * $corner2[3] + (1 - $t) * ($u) * $corner3[3];
         $sn = (1 - $t) * (1 - $u) * $corner0[4] + ($t) * (1 - $u) * $corner1[4] + ($t) * ($u) * $corner2[4] + (1 - $t) * ($u) * $corner3[4];
+        $sh = (1 - $t) * (1 - $u) * $corner0[5] + ($t) * (1 - $u) * $corner1[5] + ($t) * ($u) * $corner2[5] + (1 - $t) * ($u) * $corner3[5];
 
-        return [$se, $sn];
+        return [$se, $sn, $sh];
     }
 
     private function getRecord(int $eastIndex, int $northIndex): array

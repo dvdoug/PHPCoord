@@ -216,7 +216,7 @@ trait AutoConversion
             $simplePaths[] = $currentPath;
         } else {
             $visited[$u] = true;
-            if (count($currentPath) <= $this->maxChainDepth) {
+            if (count($currentPath) <= $this->maxChainDepth && isset(static::$transformationsByCRS[$u])) {
                 foreach (static::$transformationsByCRS[$u] as $nextU) {
                     if (!$visited[$nextU]) {
                         $this->DFS($nextU, $v, $visited, $currentPath, $simplePaths);

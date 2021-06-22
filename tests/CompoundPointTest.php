@@ -15,15 +15,18 @@ use DateTimeImmutable;
 use PHPCoord\CoordinateOperation\CoordinateOperationParams;
 use PHPCoord\CoordinateOperation\CoordinateOperations;
 use PHPCoord\CoordinateOperation\CRSTransformations;
+use PHPCoord\CoordinateOperation\OSTN15OSGM15Provider;
 use PHPCoord\CoordinateReferenceSystem\Compound;
 use PHPCoord\CoordinateReferenceSystem\CompoundSRIDData;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\CoordinateReferenceSystem\Geographic;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
+use PHPCoord\CoordinateReferenceSystem\Geographic3D;
 use PHPCoord\CoordinateReferenceSystem\Projected;
 use PHPCoord\CoordinateReferenceSystem\Vertical;
 use PHPCoord\Exception\InvalidCoordinateReferenceSystemException;
 use PHPCoord\Geometry\BoundingArea;
+use PHPCoord\UnitOfMeasure\Angle\Degree;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPUnit\Framework\TestCase;
 
@@ -107,6 +110,32 @@ class CompoundPointTest extends TestCase
             Compound::fromSRID(Compound::EPSG_OSGB36_BRITISH_NATIONAL_GRID_PLUS_ODN_HEIGHT)
         );
         $from->calculateDistance($to);
+    }
+
+    public function testGeographic3DTo2DPlusGravityHeightOSGM15(): void
+    {
+        if (!class_exists(OSTN15OSGM15Provider::class)) {
+            self::markTestSkipped('Requires phpcoord/datapack-europe');
+        }
+        $from = CompoundPoint::create(
+            GeographicPoint::create(
+                new Degree(53.77911025760),
+                new Degree(-3.04045490691),
+                null,
+                Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89)
+            ),
+            VerticalPoint::create(
+                new Metre(12.658),
+                Vertical::fromSRID(Vertical::EPSG_ODN_HEIGHT)
+            ),
+            Compound::fromSRID(Compound::EPSG_ETRS89_PLUS_ODN_HEIGHT)
+        );
+        $toCRS = Geographic3D::fromSRID(Geographic3D::EPSG_ETRS89);
+        $to = $from->geographic3DTo2DPlusGravityHeightOSGM15($toCRS, (new OSTN15OSGM15Provider())->provideGrid(), Geographic2D::EPSG_ETRS89);
+
+        self::assertEqualsWithDelta(53.77911025760, $to->getLatitude()->getValue(), 0.00000000001);
+        self::assertEqualsWithDelta(-3.04045490691, $to->getLongitude()->getValue(), 0.00000000001);
+        self::assertEqualsWithDelta(64.940, $to->getHeight()->getValue(), 0.001);
     }
 
     /**

@@ -15,17 +15,48 @@ use PHPCoord\CoordinateOperation\CoordinateOperationMethods;
 use PHPCoord\CoordinateOperation\CoordinateOperationParams;
 use PHPCoord\CoordinateOperation\CoordinateOperations;
 use PHPCoord\CoordinateOperation\CRSTransformations;
+use PHPCoord\CoordinateOperation\OSTN15OSGM15Provider;
+use PHPCoord\CoordinateReferenceSystem\Compound;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\CoordinateReferenceSystem\Geographic;
+use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Geographic3D;
 use PHPCoord\CoordinateReferenceSystem\Geographic3DSRIDData;
+use PHPCoord\CoordinateReferenceSystem\Vertical;
 use PHPCoord\Geometry\BoundingArea;
+use PHPCoord\UnitOfMeasure\Angle\Degree;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPUnit\Framework\TestCase;
 
 class GeographicPoint3DTest extends TestCase
 {
     use Geographic3DSRIDData;
+
+    public function testGeographic3DTo2DPlusGravityHeightOSGM15(): void
+    {
+        if (!class_exists(OSTN15OSGM15Provider::class)) {
+            self::markTestSkipped('Requires phpcoord/datapack-europe');
+        }
+        $from = GeographicPoint::create(new Degree(53.77911025760), new Degree(-3.04045490691), new Metre(64.940), Geographic3D::fromSRID(Geographic3D::EPSG_ETRS89));
+        $toCRS = Compound::fromSRID(Compound::EPSG_ETRS89_PLUS_ODN_HEIGHT);
+        $to = $from->geographic3DTo2DPlusGravityHeightOSGM15($toCRS, (new OSTN15OSGM15Provider())->provideGrid(), Geographic2D::EPSG_ETRS89);
+
+        self::assertEqualsWithDelta(53.77911025760, $to->getHorizontalPoint()->getLatitude()->getValue(), 0.00000000001);
+        self::assertEqualsWithDelta(-3.04045490691, $to->getHorizontalPoint()->getLongitude()->getValue(), 0.00000000001);
+        self::assertEqualsWithDelta(12.658, $to->getVerticalPoint()->getHeight()->getValue(), 0.001);
+    }
+
+    public function testGeographic3DGravityHeightOSGM15(): void
+    {
+        if (!class_exists(OSTN15OSGM15Provider::class)) {
+            self::markTestSkipped('Requires phpcoord/datapack-europe');
+        }
+        $from = GeographicPoint::create(new Degree(53.77911025760), new Degree(-3.04045490691), new Metre(64.940), Geographic3D::fromSRID(Geographic3D::EPSG_ETRS89));
+        $toCRS = Vertical::fromSRID(Vertical::EPSG_ODN_HEIGHT);
+        $to = $from->geographic3DToGravityHeightOSGM15($toCRS, (new OSTN15OSGM15Provider())->provideGrid());
+
+        self::assertEqualsWithDelta(12.658, $to->getHeight()->getValue(), 0.001);
+    }
 
     /**
      * @group integration

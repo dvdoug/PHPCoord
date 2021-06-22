@@ -94,8 +94,6 @@ class EPSGImporter
 
     private const BLACKLISTED_METHODS = [
         // not implemented yet
-        1097, // Geog3D to Geog2D+GravityRelatedHeight (OSGM-GB)
-        9663, // Geographic3D to GravityRelatedHeight (OSGM-GB)
         1072, // Geographic3D to GravityRelatedHeight (OSGM15-Ire)
         1096, // Geog3D to Geog2D+GravityRelatedHeight (OSGM15-Ire)
         1025, // Geographic3D to GravityRelatedHeight (EGM2008)

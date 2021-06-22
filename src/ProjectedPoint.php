@@ -2079,7 +2079,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         Geographic2D $to,
         OSTNOSGM15Grid $eastingAndNorthingDifferenceFile
     ): GeographicPoint {
-        $asETRS89 = $eastingAndNorthingDifferenceFile->applyReverseAdjustment($this);
+        $asETRS89 = $eastingAndNorthingDifferenceFile->applyReverseHorizontalAdjustment($this);
 
         return $asETRS89->transverseMercator($to, new Degree(49), new Degree(-2), new Unity(0.9996012717), new Metre(400000), new Metre(-100000));
     }

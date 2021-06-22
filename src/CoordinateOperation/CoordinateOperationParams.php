@@ -44044,6 +44044,48 @@ class CoordinateOperationParams
                 'reverses' => false,
             ],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::7711' => [
+            'Geoid (height correction) model file' => [
+                'reverses' => false,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\OSTN15OSGM15Provider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::7712' => [
+            'Geoid (height correction) model file' => [
+                'reverses' => false,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\OSTN15OSGM15Provider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::7713' => [
+            'Geoid (height correction) model file' => [
+                'reverses' => false,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\OSTN15OSGM15Provider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::7714' => [
+            'Geoid (height correction) model file' => [
+                'reverses' => false,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\OSTN15OSGM15Provider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::7715' => [
+            'Geoid (height correction) model file' => [
+                'reverses' => false,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\OSTN15OSGM15Provider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::7716' => [
+            'Geoid (height correction) model file' => [
+                'reverses' => false,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\OSTN15OSGM15Provider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::7717' => [
+            'Geoid (height correction) model file' => [
+                'reverses' => false,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\OSTN15OSGM15Provider',
+            ],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::7720' => [
             'X-axis translation' => [
                 'value' => 8.846,
@@ -60546,6 +60588,83 @@ class CoordinateOperationParams
                 'value' => -0.17,
                 'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 'reverses' => true,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9584' => [
+            'Geoid (height correction) model file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\OSTN15OSGM15Provider',
+            ],
+            'EPSG code for Interpolation CRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::4258',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9585' => [
+            'Geoid (height correction) model file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\OSTN15OSGM15Provider',
+            ],
+            'EPSG code for Interpolation CRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::4258',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9586' => [
+            'Geoid (height correction) model file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\OSTN15OSGM15Provider',
+            ],
+            'EPSG code for Interpolation CRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::4258',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9587' => [
+            'Geoid (height correction) model file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\OSTN15OSGM15Provider',
+            ],
+            'EPSG code for Interpolation CRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::4258',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9588' => [
+            'Geoid (height correction) model file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\OSTN15OSGM15Provider',
+            ],
+            'EPSG code for Interpolation CRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::4258',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9589' => [
+            'Geoid (height correction) model file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\OSTN15OSGM15Provider',
+            ],
+            'EPSG code for Interpolation CRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::4258',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9590' => [
+            'Geoid (height correction) model file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\OSTN15OSGM15Provider',
+            ],
+            'EPSG code for Interpolation CRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::4258',
+                'uom' => null,
+                'reverses' => false,
             ],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::9673' => [

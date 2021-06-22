@@ -40,6 +40,7 @@ use PHPCoord\CoordinateReferenceSystem\Geographic;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Geographic3D;
 use PHPCoord\CoordinateReferenceSystem\Projected;
+use PHPCoord\CoordinateReferenceSystem\Vertical;
 use PHPCoord\CoordinateSystem\Axis;
 use PHPCoord\CoordinateSystem\Cartesian;
 use PHPCoord\Datum\Datum;
@@ -2068,16 +2069,85 @@ class GeographicPoint extends Point implements ConvertiblePoint
         Projected $to,
         OSTNOSGM15Grid $eastingAndNorthingDifferenceFile
     ): ProjectedPoint {
+        $osgb36NationalGrid = Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID);
         $etrs89NationalGrid = new Projected(
             'ETRS89 / National Grid',
             Cartesian::fromSRID(Cartesian::EPSG_2D_AXES_EASTING_NORTHING_E_N_ORIENTATIONS_EAST_NORTH_UOM_M),
             Datum::fromSRID(Datum::EPSG_EUROPEAN_TERRESTRIAL_REFERENCE_SYSTEM_1989_ENSEMBLE),
-            $to->getBoundingArea()
+            $osgb36NationalGrid->getBoundingArea()
         );
 
         $projected = $this->transverseMercator($etrs89NationalGrid, new Degree(49), new Degree(-2), new Unity(0.9996012717), new Metre(400000), new Metre(-100000));
 
-        return $eastingAndNorthingDifferenceFile->applyForwardAdjustment($projected);
+        return $eastingAndNorthingDifferenceFile->applyForwardHorizontalAdjustment($projected);
+    }
+
+    /**
+     * Geog3D to Geog2D+GravityRelatedHeight (OSGM-GB).
+     * Uses ETRS89 / National Grid as an intermediate coordinate system for bi-linear interpolation of gridded grid
+     * coordinate differences.
+     */
+    public function geographic3DTo2DPlusGravityHeightOSGM15(
+        Compound $to,
+        OSTNOSGM15Grid $geoidHeightCorrectionModelFile,
+        string $EPSGCodeForInterpolationCRS
+    ): CompoundPoint {
+        $osgb36NationalGrid = Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID);
+        $etrs89NationalGrid = new Projected(
+            'ETRS89 / National Grid',
+            Cartesian::fromSRID(Cartesian::EPSG_2D_AXES_EASTING_NORTHING_E_N_ORIENTATIONS_EAST_NORTH_UOM_M),
+            Datum::fromSRID(Datum::EPSG_EUROPEAN_TERRESTRIAL_REFERENCE_SYSTEM_1989_ENSEMBLE),
+            $osgb36NationalGrid->getBoundingArea()
+        );
+
+        $projected = $this->transverseMercator($etrs89NationalGrid, new Degree(49), new Degree(-2), new Unity(0.9996012717), new Metre(400000), new Metre(-100000));
+
+        $horizontalPoint = self::create(
+            $this->latitude,
+            $this->longitude,
+            null,
+            $to->getHorizontal(),
+            $this->getCoordinateEpoch()
+        );
+
+        $verticalPoint = VerticalPoint::create(
+            $this->height->subtract($geoidHeightCorrectionModelFile->getVerticalAdjustment($projected)),
+            $to->getVertical(),
+            $this->getCoordinateEpoch()
+        );
+
+        return CompoundPoint::create(
+            $horizontalPoint,
+            $verticalPoint,
+            $to,
+            $this->getCoordinateEpoch()
+        );
+    }
+
+    /**
+     * Geographic3D to GravityRelatedHeight (OSGM-GB).
+     * Uses ETRS89 / National Grid as an intermediate coordinate system for bi-linear interpolation of gridded grid
+     * coordinate differences.
+     */
+    public function geographic3DToGravityHeightOSGM15(
+        Vertical $to,
+        OSTNOSGM15Grid $geoidHeightCorrectionModelFile
+    ): VerticalPoint {
+        $osgb36NationalGrid = Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID);
+        $etrs89NationalGrid = new Projected(
+            'ETRS89 / National Grid',
+            Cartesian::fromSRID(Cartesian::EPSG_2D_AXES_EASTING_NORTHING_E_N_ORIENTATIONS_EAST_NORTH_UOM_M),
+            Datum::fromSRID(Datum::EPSG_EUROPEAN_TERRESTRIAL_REFERENCE_SYSTEM_1989_ENSEMBLE),
+            $osgb36NationalGrid->getBoundingArea()
+        );
+
+        $projected = $this->transverseMercator($etrs89NationalGrid, new Degree(49), new Degree(-2), new Unity(0.9996012717), new Metre(400000), new Metre(-100000));
+
+        return VerticalPoint::create(
+            $this->height->subtract($geoidHeightCorrectionModelFile->getVerticalAdjustment($projected)),
+            $to,
+            $this->getCoordinateEpoch()
+        );
     }
 
     /**

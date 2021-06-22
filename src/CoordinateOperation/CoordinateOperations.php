@@ -8486,6 +8486,41 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::1066',
             'extent_code' => ['1198'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::7711' => [
+            'name' => 'ETRS89 to ODN height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::9663',
+            'extent_code' => ['2792'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::7712' => [
+            'name' => 'ETRS89 to ODN Orkney height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::9663',
+            'extent_code' => ['2793'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::7713' => [
+            'name' => 'ETRS89 to ODN (Offshore) height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::9663',
+            'extent_code' => ['4391'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::7714' => [
+            'name' => 'ETRS89 to Lerwick height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::9663',
+            'extent_code' => ['2795'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::7715' => [
+            'name' => 'ETRS89 to Stornoway height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::9663',
+            'extent_code' => ['2799'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::7716' => [
+            'name' => 'ETRS89 to St. Marys height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::9663',
+            'extent_code' => ['2802'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::7717' => [
+            'name' => 'ETRS89 to Douglas height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::9663',
+            'extent_code' => ['2803'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::7720' => [
             'name' => 'CGRS93 to ETRS89 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9607',
@@ -11759,6 +11794,41 @@ class CoordinateOperations
             'name' => 'ODN height to EVRF2019 mean-tide height (2)',
             'method' => 'urn:ogc:def:method:EPSG::9616',
             'extent_code' => ['2792'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9584' => [
+            'name' => 'ETRS89 to ETRS89 + Stornoway height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1097',
+            'extent_code' => ['2799'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9585' => [
+            'name' => 'ETRS89 to ETRS89 + St. Marys height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1097',
+            'extent_code' => ['2802'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9586' => [
+            'name' => 'ETRS89 to ETRS89 + ODN Orkney height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1097',
+            'extent_code' => ['2793'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9587' => [
+            'name' => 'ETRS89 to ETRS89 + ODN height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1097',
+            'extent_code' => ['2792'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9588' => [
+            'name' => 'ETRS89 to ETRS89 + ODN (Offshore) height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1097',
+            'extent_code' => ['4391'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9589' => [
+            'name' => 'ETRS89 to ETRS89 + Lerwick height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1097',
+            'extent_code' => ['2795'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9590' => [
+            'name' => 'ETRS89 to ETRS89 + Douglas height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1097',
+            'extent_code' => ['2803'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::9673' => [
             'name' => 'US Forest Service region 6 Albers',

@@ -97,7 +97,7 @@ abstract class Point implements Stringable
 
     protected static function camelCase(string $string): string
     {
-        $string = str_replace([' ', '-'], '', ucwords($string, ' -'));
+        $string = str_replace([' ', '-', '(', ')'], '', ucwords($string, ' -()'));
         if (!preg_match('/^(EPSG|[ABC][uv\d])/', $string)) {
             $string = lcfirst($string);
         }

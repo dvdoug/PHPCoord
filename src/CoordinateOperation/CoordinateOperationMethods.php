@@ -187,6 +187,11 @@ class CoordinateOperationMethods
     public const EPSG_GEOCENTRIC_TOPOCENTRIC_CONVERSIONS = 'urn:ogc:def:method:EPSG::9836';
 
     /**
+     * Geog3D to Geog2D+GravityRelatedHeight (OSGM-GB).
+     */
+    public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_OSGM_GB = 'urn:ogc:def:method:EPSG::1097';
+
+    /**
      * Geographic/geocentric conversions
      * In applications it is often concatenated with the 3- 7- or 10-parameter transformations 9603, 9606, 9607 or
      * 9636 to form a geographic to geographic transformation.
@@ -223,6 +228,12 @@ class CoordinateOperationMethods
      * Geographic3D to 2D conversion.
      */
     public const EPSG_GEOGRAPHIC3D_TO_2D_CONVERSION = 'urn:ogc:def:method:EPSG::9659';
+
+    /**
+     * Geographic3D to GravityRelatedHeight (OSGM-GB)
+     * Transformation of the vertical component of a Geographic 3D CRS to a Vertical CRS.
+     */
+    public const EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_OSGM_GB = 'urn:ogc:def:method:EPSG::9663';
 
     /**
      * Guam Projection
@@ -773,6 +784,8 @@ class CoordinateOperationMethods
             self::EPSG_HEIGHT_DEPTH_REVERSAL => 'heightDepthReversal',
             self::EPSG_CHANGE_OF_VERTICAL_UNIT => 'changeOfVerticalUnit',
             self::EPSG_ORDNANCE_SURVEY_NATIONAL_TRANSFORMATION => 'OSTN15',
+            self::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_OSGM_GB => 'geographic3DTo2DPlusGravityHeightOSGM15',
+            self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_OSGM_GB => 'geographic3DToGravityHeightOSGM15',
             self::EPSG_NADCON5_2D => 'NADCON5',
             self::EPSG_NADCON5_3D => 'NADCON5',
             self::EPSG_NTV2 => 'NTv2',

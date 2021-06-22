@@ -13,16 +13,22 @@ use DateTimeImmutable;
 use DateTimeInterface;
 use PHPCoord\CoordinateOperation\AutoConversion;
 use PHPCoord\CoordinateOperation\ConvertiblePoint;
+use PHPCoord\CoordinateOperation\OSTNOSGM15Grid;
 use PHPCoord\CoordinateReferenceSystem\Compound;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Geographic3D;
 use PHPCoord\CoordinateReferenceSystem\Projected;
 use PHPCoord\CoordinateReferenceSystem\Vertical;
+use PHPCoord\CoordinateSystem\Cartesian;
+use PHPCoord\Datum\Datum;
 use PHPCoord\Exception\InvalidCoordinateReferenceSystemException;
 use PHPCoord\Exception\UnknownConversionException;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
+use PHPCoord\UnitOfMeasure\Angle\Degree;
 use PHPCoord\UnitOfMeasure\Length\Length;
+use PHPCoord\UnitOfMeasure\Length\Metre;
+use PHPCoord\UnitOfMeasure\Scale\Unity;
 
 /**
  * Coordinate representing a point expressed in 2 different CRSs (2D horizontal + 1D Vertical).
@@ -172,5 +178,34 @@ class CompoundPoint extends Point implements ConvertiblePoint
         $toHeight = $this->getVerticalPoint()->getHeight()->add($geoidUndulation);
 
         return GeographicPoint::create($toLatitude, $toLongitude, $toHeight, $to, $this->epoch);
+    }
+
+    /**
+     * Geog3D to Geog2D+GravityRelatedHeight (OSGM-GB).
+     * Uses ETRS89 / National Grid as an intermediate coordinate system for bi-linear interpolation of gridded grid
+     * coordinate differences.
+     */
+    public function geographic3DTo2DPlusGravityHeightOSGM15(
+        Geographic3D $to,
+        OSTNOSGM15Grid $geoidHeightCorrectionModelFile,
+        string $EPSGCodeForInterpolationCRS
+    ): GeographicPoint {
+        $osgb36NationalGrid = Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID);
+        $etrs89NationalGrid = new Projected(
+            'ETRS89 / National Grid',
+            Cartesian::fromSRID(Cartesian::EPSG_2D_AXES_EASTING_NORTHING_E_N_ORIENTATIONS_EAST_NORTH_UOM_M),
+            Datum::fromSRID(Datum::EPSG_EUROPEAN_TERRESTRIAL_REFERENCE_SYSTEM_1989_ENSEMBLE),
+            $osgb36NationalGrid->getBoundingArea()
+        );
+
+        $projected = $this->horizontalPoint->transverseMercator($etrs89NationalGrid, new Degree(49), new Degree(-2), new Unity(0.9996012717), new Metre(400000), new Metre(-100000));
+
+        return GeographicPoint::create(
+            $this->horizontalPoint->getLatitude(),
+            $this->horizontalPoint->getLongitude(),
+            $this->verticalPoint->getHeight()->add($geoidHeightCorrectionModelFile->getVerticalAdjustment($projected)),
+            $to,
+            $this->getCoordinateEpoch()
+        );
     }
 }
