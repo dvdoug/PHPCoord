@@ -241,7 +241,7 @@ class AutoConversionTest extends TestCase
         }
     }
 
-    public function testNAD27ToNAD83(): void
+    public function testNAD27ToNAD83USA(): void
     {
         $from = GeographicPoint::create(new Degree(40.689247), new Degree(-74.044502), null, Geographic2D::fromSRID(Geographic2D::EPSG_NAD27));
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_NAD83);
@@ -253,6 +253,21 @@ class AutoConversionTest extends TestCase
         } else {
             self::assertEqualsWithDelta(40.689247679943, $to->getLatitude()->asDegrees()->getValue(), 0.00000001);
             self::assertEqualsWithDelta(-74.044072669722, $to->getLongitude()->asDegrees()->getValue(), 0.00000001);
+        }
+    }
+
+    public function testNAD27ToNAD83Canada(): void
+    {
+        $from = GeographicPoint::create(new Degree(50.8713458), new Degree(-114.2934808), null, Geographic2D::fromSRID(Geographic2D::EPSG_NAD27));
+        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_NAD83);
+        $to = $from->convert($toCRS);
+
+        if (class_exists(NTv2NAD27NAD83CanadaProvider::class)) {
+            self::assertEqualsWithDelta(50.871401224, $to->getLatitude()->asDegrees()->getValue(), 0.00000001);
+            self::assertEqualsWithDelta(-114.294481160, $to->getLongitude()->asDegrees()->getValue(), 0.00000001);
+        } else {
+            self::assertEqualsWithDelta(50.871326856, $to->getLatitude()->asDegrees()->getValue(), 0.00000001);
+            self::assertEqualsWithDelta(-114.29451650, $to->getLongitude()->asDegrees()->getValue(), 0.00000001);
         }
     }
 }
