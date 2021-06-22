@@ -117,7 +117,7 @@ trait AutoConversion
 
             $operations = static::resolveConcatenatedOperations($pathStep['operation'], false);
 
-            foreach ($operations as $operation) {
+            foreach ($operations as $operationId => $operation) {
                 //filter out operations that require an epoch if we don't have one
                 if (!$this->getCoordinateEpoch() && in_array($operation['method'], [
                         CoordinateOperationMethods::EPSG_TIME_DEPENDENT_COORDINATE_FRAME_ROTATION_GEOCEN,
@@ -132,7 +132,7 @@ trait AutoConversion
                     return false;
                 }
 
-                $params = CoordinateOperationParams::getParamData($pathStep['operation']);
+                $params = CoordinateOperationParams::getParamData($operationId);
 
                 //filter out operations that require a specific epoch
                 if ($this->getCoordinateEpoch() && in_array($operation['method'], [
