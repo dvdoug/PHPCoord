@@ -266,8 +266,8 @@ class AutoConversionTest extends TestCase
             self::assertEqualsWithDelta(50.871401224, $to->getLatitude()->asDegrees()->getValue(), 0.00000001);
             self::assertEqualsWithDelta(-114.294481160, $to->getLongitude()->asDegrees()->getValue(), 0.00000001);
         } else {
-            self::assertEqualsWithDelta(50.871326856, $to->getLatitude()->asDegrees()->getValue(), 0.00000001);
-            self::assertEqualsWithDelta(-114.29451650, $to->getLongitude()->asDegrees()->getValue(), 0.00000001);
+            self::assertEqualsWithDelta(50.871338980, $to->getLatitude()->asDegrees()->getValue(), 0.00000001);
+            self::assertEqualsWithDelta(-114.29435830, $to->getLongitude()->asDegrees()->getValue(), 0.00000001);
         }
     }
 }

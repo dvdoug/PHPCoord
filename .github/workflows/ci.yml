@@ -85,7 +85,7 @@ jobs:
 
     - name: Add back selected datapack
       if: matrix.datapack != ''
-      run: composer require --dev --no-update "${{ matrix.datapack }}";
+      run: composer require --dev --no-update "${{ matrix.datapack }}:dev-master";
 
     - name: Remove PHP-CS-Fixer if not called
       if: matrix.php-version != '7.4' || matrix.dependencies != 'highest'
