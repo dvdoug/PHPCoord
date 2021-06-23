@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## [4.4.0] - 2021-06-23
+### Added
+- Support for NTv2, OSTN15/OSGM15 and NADCON5 grid files. These require a [relevant datapack](https://www.phpcoord.net/en/stable/coordinate_conversions_easy.html#grids)
+### Changed
+- Updates to data for Argentina, Belgium, Canada, Costa Rica, Czechia, Greenland, Italy, Russia, UK and USA
+- Performance optimisations
+- Supported PHP versions changed to `^7.4||^8.0`
+
 ## [4.3.0] - 2021-04-24
 ### Added
 - Datapacks. [See docs](https://www.phpcoord.net/en/stable/coordinate_conversions_easy.html#accuracy) for more info
@@ -12,9 +20,9 @@
 ### Added
 - More accurate extent data
 ### Fixed
- - Ensure projections still work even when origin points are on the other side of the antimeridian
+- Ensure projections still work even when origin points are on the other side of the antimeridian
 ### Changed
- - Updates to data for Australia, Poland, UK and US Gulf of Mexico
+- Updates to data for Australia, Poland, UK and US Gulf of Mexico
 
 ## [4.1.0] - 2021-03-03
 ### Added
@@ -107,8 +115,9 @@ Initial release of this fork (based off of v2.3 of original)
  - Eastings and northings are rounded to 1m, and lat/long to 5dp (approx 1m) to avoid any misconceptions that precision is the same thing as accuracy.
  - When calculating surface distances, a more accurate mean radius is now used rather than that derived from historical definitions of a nautical mile
 
-[Unreleased]: https://github.com/dvdoug/PHPCoord/compare/v4.3.0...HEAD
+[Unreleased]: https://github.com/dvdoug/PHPCoord/compare/v4.4.0...HEAD
 
+[4.4.0]: https://github.com/dvdoug/PHPCoord/compare/v4.3.0...v4.4.0
 [4.3.0]: https://github.com/dvdoug/PHPCoord/compare/v4.2.0...v4.3.0
 [4.2.0]: https://github.com/dvdoug/PHPCoord/compare/v4.1.0...v4.2.0
 [4.1.0]: https://github.com/dvdoug/PHPCoord/compare/v4.0.1...v4.1.0
