@@ -535,6 +535,17 @@ Oblique Stereographic
         Length $falseNorthing
     ); // returns a new GeographicPoint
 
+OSTN15 (Ordnance Survey National Transformation)
+------------------------------------------------
+
+.. code-block:: php
+
+    $point = ProjectedPoint::createFromEastingNorthing(...);
+    $newPoint = $point->OSTN15(
+        Geographic2D $to,
+        OSTNOSGM15Grid $eastingAndNorthingDifferenceFile
+    ); // returns a new GeographicPoint
+
 Polar Stereographic (variant A)
 -------------------------------
 

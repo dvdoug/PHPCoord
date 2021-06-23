@@ -37,3 +37,15 @@ Vertical Offset and Slope
         Angle $inclinationInLongitude,
         GeographicPoint $horizontalPoint
     ); // returns a new VerticalPoint
+
+Zero-tide height to mean-tide height (EVRF2019)
+-----------------------------------------------
+
+.. code-block:: php
+
+    $point = VerticalPoint::create(...);
+    $newPoint = $point->zeroTideHeightToMeanTideHeightEVRF2019(
+        Vertical $to,
+        bool $inReverse,
+        GeographicPoint $horizontalPoint
+    ); // returns a new VerticalPoint

@@ -224,6 +224,29 @@ Geographic2D with Height Offsets
         Length $geoidUndulation
     ); // returns a new CompoundPoint
 
+Geographic3D to Geographic2D+GravityRelatedHeight (OSGM-GB)
+-----------------------------------------------------------
+
+.. code-block:: php
+
+    $point = GeographicPoint::create(...);
+    $newPoint = $point->geographic3DTo2DPlusGravityHeightOSGM15((
+        Compound $to,
+        OSTNOSGM15Grid $geoidHeightCorrectionModelFile,
+        string $EPSGCodeForInterpolationCRS
+    ); // returns a new CompoundPoint
+
+Geographic3D to GravityRelatedHeight (OSGM-GB)
+----------------------------------------------
+
+.. code-block:: php
+
+    $point = GeographicPoint::create(...);
+    $newPoint = $point->geographic3DToGravityHeightOSGM15(
+        Vertical $to,
+        OSTNOSGM15Grid $geoidHeightCorrectionModelFile
+    ); // returns a new VerticalPoint
+
 Guam Projection
 ---------------
 
@@ -628,6 +651,20 @@ Molodensky-Badekas Position Vector transformation
         Length $ordinate3OfEvaluationPoint
     ); // returns a new GeographicPoint
 
+NADCON5
+-------
+
+.. code-block:: php
+
+    $point = GeographicPoint::create(...);
+    $newPoint = $point->NADCON5(
+        Geographic $to,
+        NADCON5Grid $latitudeDifferenceFile,
+        NADCON5Grid $longitudeDifferenceFile,
+        ?NADCON5Grid $ellipsoidalHeightDifferenceFile = null,
+        bool $inReverse
+    ); // returns a new GeographicPoint
+
 New Zealand Map Grid
 --------------------
 
@@ -642,6 +679,18 @@ New Zealand Map Grid
         Length $falseNorthing
     ); // returns a new ProjectedPoint
 
+NTv2
+----
+
+.. code-block:: php
+
+    $point = GeographicPoint::create(...);
+    $newPoint = $point->NTv2(
+        Geographic $to,
+        NTv2Grid $latitudeAndLongitudeDifferenceFile,
+        bool $inReverse
+    ); // returns a new GeographicPoint
+
 Oblique Stereographic
 ---------------------
 
@@ -655,6 +704,17 @@ Oblique Stereographic
         Scale $scaleFactorAtNaturalOrigin,
         Length $falseEasting,
         Length $falseNorthing
+    ); // returns a new ProjectedPoint
+
+OSTN15 (Ordnance Survey National Transformation)
+------------------------------------------------
+
+.. code-block:: php
+
+    $point = GeographicPoint::create(...);
+    $newPoint = $point->OSTN15(
+        Projected $to,
+        OSTNOSGM15Grid $eastingAndNorthingDifferenceFile
     ); // returns a new ProjectedPoint
 
 Polar Stereographic (variant A)
