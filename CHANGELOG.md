@@ -2,7 +2,7 @@
 
 ## [Unreleased]
 
-## [4.4.0] - 2021-06-23
+## [4.4.0] - 2021-06-24
 ### Added
 - Support for NTv2, OSTN15/OSGM15 and NADCON5 grid files. These require a [relevant datapack](https://www.phpcoord.net/en/stable/coordinate_conversions_easy.html#grids)
 ### Changed
