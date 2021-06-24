@@ -30,6 +30,7 @@ use function max;
 use function min;
 use const PHP_EOL;
 use PHPCoord\CoordinateOperation;
+use PHPCoord\CoordinateOperation\CoordinateOperationMethods;
 use PHPCoord\CoordinateReferenceSystem\Compound;
 use PHPCoord\CoordinateReferenceSystem\Geocentric;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
@@ -1566,6 +1567,9 @@ class EPSGImporter
                 unset($paramsRow['parameter_code']);
                 $params[$paramsRow['name']] = $paramsRow;
                 unset($params[$paramsRow['name']]['name']);
+            }
+            if (isset($operationData['method']) && $operationData['method'] === CoordinateOperationMethods::EPSG_NADCON5_2D) { // for PHP7.4 w/out named params
+                $params['Ellipsoidal height difference file'] = ['value' => null, 'uom' => null, 'reverses' => false];
             }
             $paramData[$operation] = $params;
         }

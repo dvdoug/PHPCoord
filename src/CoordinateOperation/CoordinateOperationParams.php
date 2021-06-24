@@ -52657,6 +52657,11 @@ class CoordinateOperationParams
                 'reverses' => true,
                 'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5SG1952NAD831986StGeorgeLongitudeProvider',
             ],
+            'Ellipsoidal height difference file' => [
+                'value' => null,
+                'uom' => null,
+                'reverses' => false,
+            ],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::8547' => [
             'Latitude difference file' => [
@@ -52666,6 +52671,11 @@ class CoordinateOperationParams
             'Longitude difference file' => [
                 'reverses' => true,
                 'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5SL1952NAD831986StLawrenceLongitudeProvider',
+            ],
+            'Ellipsoidal height difference file' => [
+                'value' => null,
+                'uom' => null,
+                'reverses' => false,
             ],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::8548' => [
@@ -52677,6 +52687,11 @@ class CoordinateOperationParams
                 'reverses' => true,
                 'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5SP1952NAD831986StPaulLongitudeProvider',
             ],
+            'Ellipsoidal height difference file' => [
+                'value' => null,
+                'uom' => null,
+                'reverses' => false,
+            ],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::8549' => [
             'Latitude difference file' => [
@@ -52687,6 +52702,11 @@ class CoordinateOperationParams
                 'reverses' => true,
                 'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD27NAD831986AlaskaLongitudeProvider',
             ],
+            'Ellipsoidal height difference file' => [
+                'value' => null,
+                'uom' => null,
+                'reverses' => false,
+            ],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::8550' => [
             'Latitude difference file' => [
@@ -52696,6 +52716,11 @@ class CoordinateOperationParams
             'Longitude difference file' => [
                 'reverses' => true,
                 'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD831986NAD831992AlaskaLongitudeProvider',
+            ],
+            'Ellipsoidal height difference file' => [
+                'value' => null,
+                'uom' => null,
+                'reverses' => false,
             ],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::8551' => [
@@ -52735,6 +52760,11 @@ class CoordinateOperationParams
                 'reverses' => true,
                 'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD27NAD831986CONUSLongitudeProvider',
             ],
+            'Ellipsoidal height difference file' => [
+                'value' => null,
+                'uom' => null,
+                'reverses' => false,
+            ],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::8556' => [
             'Latitude difference file' => [
@@ -52744,6 +52774,11 @@ class CoordinateOperationParams
             'Longitude difference file' => [
                 'reverses' => true,
                 'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD831986NAD83HARNCONUSLongitudeProvider',
+            ],
+            'Ellipsoidal height difference file' => [
+                'value' => null,
+                'uom' => null,
+                'reverses' => false,
             ],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::8559' => [
@@ -52768,6 +52803,11 @@ class CoordinateOperationParams
             'Longitude difference file' => [
                 'reverses' => true,
                 'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5OHDNAD831986HawaiiLongitudeProvider',
+            ],
+            'Ellipsoidal height difference file' => [
+                'value' => null,
+                'uom' => null,
+                'reverses' => false,
             ],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::8562' => [
@@ -52837,6 +52877,11 @@ class CoordinateOperationParams
                 'reverses' => true,
                 'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD831986NAD831993HawaiiLongitudeProvider',
             ],
+            'Ellipsoidal height difference file' => [
+                'value' => null,
+                'uom' => null,
+                'reverses' => false,
+            ],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::8661' => [
             'Latitude difference file' => [
@@ -52861,6 +52906,11 @@ class CoordinateOperationParams
                 'reverses' => true,
                 'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5AS62NAD831993ASLongitudeProvider',
             ],
+            'Ellipsoidal height difference file' => [
+                'value' => null,
+                'uom' => null,
+                'reverses' => false,
+            ],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::8665' => [
             'Latitude difference file' => [
@@ -52870,6 +52920,11 @@ class CoordinateOperationParams
             'Longitude difference file' => [
                 'reverses' => true,
                 'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5GU63NAD831993GuamCnMILongitudeProvider',
+            ],
+            'Ellipsoidal height difference file' => [
+                'value' => null,
+                'uom' => null,
+                'reverses' => false,
             ],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::8668' => [
@@ -52881,6 +52936,11 @@ class CoordinateOperationParams
                 'reverses' => true,
                 'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5PR40NAD831986PRVILongitudeProvider',
             ],
+            'Ellipsoidal height difference file' => [
+                'value' => null,
+                'uom' => null,
+                'reverses' => false,
+            ],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::8669' => [
             'Latitude difference file' => [
@@ -52890,6 +52950,11 @@ class CoordinateOperationParams
             'Longitude difference file' => [
                 'reverses' => true,
                 'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD831986NAD831993PRVILongitudeProvider',
+            ],
+            'Ellipsoidal height difference file' => [
+                'value' => null,
+                'uom' => null,
+                'reverses' => false,
             ],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::8673' => [
