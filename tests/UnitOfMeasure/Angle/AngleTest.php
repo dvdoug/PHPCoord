@@ -52,9 +52,7 @@ class AngleTest extends TestCase
     {
         $data = [];
         foreach (Angle::getSupportedSRIDs() as $srid => $name) {
-            if ($srid !== Angle::EPSG_DEGREE_SUPPLIER_TO_DEFINE_REPRESENTATION) { // cannot test this, it's a nonsense unit
-                $data[$name] = [$srid];
-            }
+            $data[$name] = [$srid];
         }
 
         return $data;

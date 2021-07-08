@@ -194,7 +194,7 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * AbInvA96_2020 Grid
-     * Extent: UK - on or related to the A96 highway from Aberdeen to Inverness.
+     * Extent: United Kingdom (UK) - on or related to the A96 highway from Aberdeen to Inverness.
      * The CRS's definition through transformation ETRS89 to AbInvA96_2020-IRF (1) (code 9386) and map projection
      * AbInvA96_2020-TM (code 9385) emulates the AbInvA96_2020 Snake projection applied to ETRS89 as realised through
      * OSNet 2009 CORS.
@@ -2570,6 +2570,16 @@ class Projected extends CoordinateReferenceSystem
     public const EPSG_DOUALA_1948_AEF_WEST = 'urn:ogc:def:crs:EPSG::3119';
 
     /**
+     * ECML14_NB Grid
+     * Extent: United Kingdom (UK) - on or related to rail routes from Newcastle Central to Ashington via Benton North
+     * Junction, and the section from Bedlington to Morpeth.
+     * The CRS's definition through transformation ETRS89 to ECML14_NB-IRF (1) (code 9759) and map projection
+     * ECML14_NB-TM (code 9760) emulates the ECML14_NB Snake projection applied to ETRS89 as realised through OSNet
+     * 2009 CORS.
+     */
+    public const EPSG_ECML14_NB_GRID = 'urn:ogc:def:crs:EPSG::9761';
+
+    /**
      * ED50 / 3-degree Gauss-Kruger zone 10
      * Extent: Turkey between 28°30'E and 31°30'E, onshore.
      * Also found with truncated false easting - see ED50 / TM30 (code 2320).
@@ -2890,9 +2900,9 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * EOS21 Grid
-     * Extent: On or related to the complex of rail routes in the East of Scotland, incorporating the route from
-     * Tweedbank through the Borders to Edinburgh; the line from Edinburgh to Aberdeen; routes via Kirkaldy and
-     * Cowdenbeath; and routes via Leuchars and Perth to Dundee.
+     * Extent: United Kingdom (UK) - on or related to the complex of rail routes in the East of Scotland, incorporating
+     * the route from Tweedbank through the Borders to Edinburgh; the line from Edinburgh to Aberdeen; routes via
+     * Kirkaldy and Cowdenbeath; and routes via Leuchars and Perth to Dundee.
      * The CRS's definition through transformation ETRS89 to EOS21-IRF (1) (code 9740) and map projection EOS21-TM
      * (code 9738) emulates the EOS21 Snake projection applied to ETRS89 as realised through OSNet 2009 CORS.
      */
@@ -3850,6 +3860,15 @@ class Projected extends CoordinateReferenceSystem
     public const EPSG_ETRS89_EXTENDED_LCC_EUROPE = 'urn:ogc:def:crs:EPSG::3034';
 
     /**
+     * EWR2 Grid
+     * Extent: United Kingdom (UK) - on or related to East West Rail (Phase 2) routes from Oxford to Bicester,
+     * Bletchley and Bedford, and from Claydon Junction to Aylesbury and Princes Risborough.
+     * The CRS's definition through transformation ETRS89 to EWR2-IRF (1) (code 9764) and map projection EWR2-TM (code
+     * 9765) emulates the EWR2 Snake projection applied to ETRS89 as realised through OSNet 2009 CORS.
+     */
+    public const EPSG_EWR2_GRID = 'urn:ogc:def:crs:EPSG::9766';
+
+    /**
      * Egypt 1907 / Blue Belt
      * Extent: Egypt - east of 33°E - onshore plus offshore Gulf of Suez.
      * Also known as Egypt 1907 / Green Belt. Oil industry usually uses Egypt 1907 / Red Belt rather than this
@@ -3985,8 +4004,8 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * GBK19 Grid
-     * Extent: UK - on or related to the rail route from Glasgow via Barrhead to Kilmarnock and the branch to East
-     * Kilbride.
+     * Extent: United Kingdom (UK) - on or related to the rail route from Glasgow to Kilmarnock via Barrhead and the
+     * branch to East Kilbride.
      * The CRS's definition through transformation ETRS89 to GBK19-IRF (1) (code 9454) and map projection GBK19-TM
      * (code 9455) emulates the GBK19 Snake projection applied to ETRS89 as realised through OSNet 2009 CORS.
      */
@@ -4177,7 +4196,7 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * GDA2020 / MGA zone 57
-     * Extent: Australia including Lord Howe Island and Macquarie Islands - onshore and offshore between 156°E and
+     * Extent: Australia including Lord Howe Island and Macquarie Island - onshore and offshore between 156°E and
      * 162°E.
      */
     public const EPSG_GDA2020_MGA_ZONE_57 = 'urn:ogc:def:crs:EPSG::7857';
@@ -4331,7 +4350,7 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * GDA94 / MGA zone 57
-     * Extent: Australia including Lord Howe Island and Macquarie Islands - onshore and offshore between 156°E and
+     * Extent: Australia including Lord Howe Island and Macquarie Island - onshore and offshore between 156°E and
      * 162°E.
      */
     public const EPSG_GDA94_MGA_ZONE_57 = 'urn:ogc:def:crs:EPSG::28357';
@@ -4670,6 +4689,876 @@ class Projected extends CoordinateReferenceSystem
      * Extent: Greenland - 12°W to 6°W, onshore and offshore south of 84°N.
      */
     public const EPSG_GR96_UTM_ZONE_29N = 'urn:ogc:def:crs:EPSG::3189';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 102E
+     * Extent: Russian Federation - onshore between 100°30'E and 103°30'E.
+     * Truncated form of GSK-2011 / GSK 3GK zone 34 (code 21234). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_102E = 'urn:ogc:def:crs:EPSG::21334';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 105E
+     * Extent: Russian Federation - onshore between 103°30'E and 106°30'E.
+     * Truncated form of GSK-2011 / GSK 3GK zone 35 (code 21235). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_105E = 'urn:ogc:def:crs:EPSG::21335';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 108E
+     * Extent: Russian Federation - onshore between 106°30'E and 109°30'E.
+     * Truncated form of GSK-2011 / GSK 3GK zone 36 (code 21226). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_108E = 'urn:ogc:def:crs:EPSG::21336';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 111E
+     * Extent: Russian Federation - onshore between 109°30'E and 112°30'E.
+     * Truncated form of GSK-2011 / GSK 3GK zone 37 (code 21237). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_111E = 'urn:ogc:def:crs:EPSG::21337';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 114E
+     * Extent: Russian Federation - onshore between 112°30'E and 115°30'E.
+     * Truncated form of GSK-2011 / GSK 3GK zone 38 (code 21238). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_114E = 'urn:ogc:def:crs:EPSG::21338';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 117E
+     * Extent: Russian Federation - onshore between 115°30'E and 118°30'E.
+     * Truncated form of GSK-2011 / GSK 3GK zone 39 (code 21239). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_117E = 'urn:ogc:def:crs:EPSG::21339';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 120E
+     * Extent: Russian Federation - onshore between 118°30'E and 121°30'E.
+     * Truncated form of GSK-2011 / GSK 3GK zone 40 (code 21240). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_120E = 'urn:ogc:def:crs:EPSG::21340';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 123E
+     * Extent: Russian Federation - onshore between 121°30'E and 124°30'E.
+     * Truncated form of GSK-2011 / GSK 3GK zone 41 (code 21241). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_123E = 'urn:ogc:def:crs:EPSG::21341';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 126E
+     * Extent: Russian Federation - onshore between 124°30'E and 127°30'E.
+     * Truncated form of GSK-2011 / GSK 3GK zone 42 (code 21242). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_126E = 'urn:ogc:def:crs:EPSG::21342';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 129E
+     * Extent: Russian Federation - onshore between 127°30'E and 130°30'E.
+     * Truncated form of GSK-2011 / GSK 3GK zone 43 (code 21243). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_129E = 'urn:ogc:def:crs:EPSG::21343';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 132E
+     * Extent: Russian Federation - onshore between 130°30'E and 133°30'E.
+     * Truncated form of GSK-2011 / GSK 3GK zone 44 (code 21244). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_132E = 'urn:ogc:def:crs:EPSG::21344';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 135E
+     * Extent: Russian Federation - onshore between 133°30'E and 136°30'E.
+     * Truncated form of GSK-2011 / GSK 3GK zone 45 (code 21245). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_135E = 'urn:ogc:def:crs:EPSG::21345';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 138E
+     * Extent: Russian Federation - onshore between 136°30'E and 139°30'E.
+     * Truncated form of GSK-2011 / GSK 3GK zone 46 (code 21246). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_138E = 'urn:ogc:def:crs:EPSG::21346';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 141E
+     * Extent: Russian Federation - onshore between 139°30'E and 142°30'E.
+     * Truncated form of GSK-2011 / GSK 3GK zone 47 (code 21247). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_141E = 'urn:ogc:def:crs:EPSG::21347';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 144E
+     * Extent: Russian Federation - onshore between 142°30'E and 145°30'E.
+     * Truncated form of GSK-2011 / GSK 3GK zone 48 (code 21248). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_144E = 'urn:ogc:def:crs:EPSG::21348';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 147E
+     * Extent: Russian Federation - onshore between 145°30'E and 148°30'E.
+     * Truncated form of GSK-2011 / GSK 3GK zone 49 (code 21249). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_147E = 'urn:ogc:def:crs:EPSG::21349';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 150E
+     * Extent: Russian Federation - onshore between 148°30'E and 151°30'E.
+     * Truncated form of GSK-2011 / GSK 3GK zone 50 (code 21250). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_150E = 'urn:ogc:def:crs:EPSG::21350';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 153E
+     * Extent: Russian Federation - onshore between 151°30'E and 154°30'E.
+     * Truncated form of GSK-2011 / GSK 3GK zone 51 (code 21251). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_153E = 'urn:ogc:def:crs:EPSG::21351';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 156E
+     * Extent: Russian Federation - onshore between 154°30'E and 157°30'E.
+     * Truncated form of GSK-2011 / GSK 3GK zone 52 (code 21252). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_156E = 'urn:ogc:def:crs:EPSG::21352';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 159E
+     * Extent: Russian Federation - onshore between 157°30'E and 160°30'E.
+     * Truncated form of GSK-2011 / GSK 3GK zone 53 (code 21253). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_159E = 'urn:ogc:def:crs:EPSG::21353';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 162E
+     * Extent: Russian Federation - onshore between 160°30'E and 163°30'E.
+     * Truncated form of GSK-2011 / GSK 3GK zone 54 (code 21254). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_162E = 'urn:ogc:def:crs:EPSG::21354';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 165E
+     * Extent: Russian Federation - onshore between 163°30'E and 166°30'E.
+     * Truncated form of GSK-2011 / GSK 3GK zone 55 (code 21255). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_165E = 'urn:ogc:def:crs:EPSG::21355';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 168E
+     * Extent: Russian Federation - onshore between 166°30'E and 169°30'E.
+     * Truncated form of GSK-2011 / GSK 3GK zone 56 (code 21256). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_168E = 'urn:ogc:def:crs:EPSG::21356';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 168W
+     * Extent: Russian Federation - onshore between 169°30'W and 166°30'W.
+     * Truncated form of GSK-2011 / GSK 3GK zone 64 (code 21264). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_168W = 'urn:ogc:def:crs:EPSG::21364';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 171E
+     * Extent: Russian Federation - onshore between 169°30'E and 172°30'E.
+     * Truncated form of GSK-2011 / GSK 3GK zone 57 (code 21257). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_171E = 'urn:ogc:def:crs:EPSG::21357';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 171W
+     * Extent: Russian Federation - onshore between 172°30'W and 169°30'W.
+     * Truncated form of GSK-2011 / GSK 3GK zone 63 (code 21263). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_171W = 'urn:ogc:def:crs:EPSG::21363';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 174E
+     * Extent: Russian Federation - onshore between 172°30'E and 175°30'E.
+     * Truncated form of GSK-2011 / GSK 3GK zone 58 (code 21258). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_174E = 'urn:ogc:def:crs:EPSG::21358';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 174W
+     * Extent: Russian Federation - onshore between 175°30'W and 172°30'W.
+     * Truncated form of GSK-2011 / GSK 3GK zone 62 (code 21262). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_174W = 'urn:ogc:def:crs:EPSG::21362';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 177E
+     * Extent: Russian Federation - onshore between 175°30'E and 178°30'E.
+     * Truncated form of GSK-2011 / GSK 3GK zone 59 (code 21259). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_177E = 'urn:ogc:def:crs:EPSG::21359';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 177W
+     * Extent: Russian Federation - onshore between 178°30'W and 175°30'W.
+     * Truncated form of GSK-2011 / GSK 3GK zone 61 (code 21261). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_177W = 'urn:ogc:def:crs:EPSG::21361';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 180E
+     * Extent: Russian Federation - onshore between 178°30'E and 178°30'W.
+     * Truncated form of GSK-2011 / GSK 3GK zone 60 (code 21260). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_180E = 'urn:ogc:def:crs:EPSG::21360';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 21E
+     * Extent: Russian Federation - Kaliningrad - onshore between 19°30'E and 22°30'E.
+     * Truncated form of GSK-2011 / GSK 3GK zone 7 (code 21207). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_21E = 'urn:ogc:def:crs:EPSG::21307';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 24E
+     * Extent: Russian Federation - onshore between 22°30'E and 25°30'E - Kaliningrad.
+     * Truncated form of GSK-2011 / GSK 3GK zone 8 (code 21208). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_24E = 'urn:ogc:def:crs:EPSG::21308';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 27E
+     * Extent: Russian Federation - onshore between 25°30'E and 28°30'E.
+     * Truncated form of GSK-2011 / GSK 3GK zone 9 (code 21209). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_27E = 'urn:ogc:def:crs:EPSG::21309';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 30E
+     * Extent: Russian Federation - onshore between 28°30'E and 31°30'E.
+     * Truncated form of GSK-2011 / GSK 3GK zone 10 (code 21210). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_30E = 'urn:ogc:def:crs:EPSG::21310';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 33E
+     * Extent: Russian Federation - onshore between 31°30'E and 34°30'E.
+     * Truncated form of GSK-2011 / GSK 3GK zone 11 (code 21211). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_33E = 'urn:ogc:def:crs:EPSG::21311';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 36E
+     * Extent: Russian Federation - onshore between 34°30'E and 37°30'E.
+     * Truncated form of GSK-2011 / GSK 3GK zone 12 (code 21212). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_36E = 'urn:ogc:def:crs:EPSG::21312';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 39E
+     * Extent: Russian Federation - onshore between 37°30'E and 40°30'E.
+     * Truncated form of GSK-2011 / GSK 3GK zone 13 (code 21213). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_39E = 'urn:ogc:def:crs:EPSG::21313';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 42E
+     * Extent: Russian Federation - onshore between 40°30'E and 43°30'E.
+     * Truncated form of GSK-2011 / GSK 3GK zone 14 (code 21214). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_42E = 'urn:ogc:def:crs:EPSG::21314';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 45E
+     * Extent: Russian Federation - onshore between 43°30'E and 46°30'E.
+     * Truncated form of GSK-2011 / GSK 3GK zone 15 (code 21215). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_45E = 'urn:ogc:def:crs:EPSG::21315';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 48E
+     * Extent: Russian Federation - onshore between 46°30'E and 49°30'E.
+     * Truncated form of GSK-2011 / GSK 3GK zone 16 (code 21216). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_48E = 'urn:ogc:def:crs:EPSG::21316';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 51E
+     * Extent: Russian Federation - onshore between 49°30'E and 52°30'E.
+     * Truncated form of GSK-2011 / GSK 3GK zone 17 (code 21217). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_51E = 'urn:ogc:def:crs:EPSG::21317';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 54E
+     * Extent: Russian Federation - onshore between 52°30'E and 55°30'E.
+     * Truncated form of GSK-2011 / GSK 3GK zone 18 (code 21218). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_54E = 'urn:ogc:def:crs:EPSG::21318';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 57E
+     * Extent: Russian Federation - onshore between 55°30'E and 58°30'E.
+     * Truncated form of GSK-2011 / GSK 3GK zone 19 (code 21219). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_57E = 'urn:ogc:def:crs:EPSG::21319';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 60E
+     * Extent: Russian Federation - onshore between 58°30'E and 61°30'E.
+     * Truncated form of GSK-2011 / GSK 3GK zone 20 (code 21220). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_60E = 'urn:ogc:def:crs:EPSG::21320';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 63E
+     * Extent: Russian Federation - onshore between 61°30'E and 64°30'E.
+     * Truncated form of GSK-2011 / GSK 3GK zone 21 (code 21221). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_63E = 'urn:ogc:def:crs:EPSG::21321';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 66E
+     * Extent: Russian Federation - onshore between 64°30'E and 67°30'E.
+     * Truncated form of GSK-2011 / GSK 3GK zone 22 (code 21222). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_66E = 'urn:ogc:def:crs:EPSG::21322';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 69E
+     * Extent: Russian Federation - onshore between 67°30'E and 70°30'E.
+     * Truncated form of GSK-2011 / GSK 3GK zone 23 (code 21223). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_69E = 'urn:ogc:def:crs:EPSG::21323';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 72E
+     * Extent: Russian Federation - onshore between 70°30'E and 73°30'E.
+     * Truncated form of GSK-2011 / GSK 3GK zone 24 (code 21224). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_72E = 'urn:ogc:def:crs:EPSG::21324';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 75E
+     * Extent: Russian Federation - onshore between 73°30'E and 76°30'E.
+     * Truncated form of GSK-2011 / GSK 3GK zone 25 (code 21225). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_75E = 'urn:ogc:def:crs:EPSG::21325';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 78E
+     * Extent: Russian Federation - onshore between 76°30'E and 79°30'E.
+     * Truncated form of GSK-2011 / GSK 3GK zone 26 (code 21226). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_78E = 'urn:ogc:def:crs:EPSG::21326';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 81E
+     * Extent: Russian Federation - onshore between 79°30'E and 82°30'E.
+     * Truncated form of GSK-2011 / GSK 3GK zone 27 (code 21227). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_81E = 'urn:ogc:def:crs:EPSG::21327';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 84E
+     * Extent: Russian Federation - onshore between 82°30'E and 85°30'E.
+     * Truncated form of GSK-2011 / GSK 3GK zone 28 (code 21228). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_84E = 'urn:ogc:def:crs:EPSG::21328';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 87E
+     * Extent: Russian Federation - onshore between 85°30'E and 88°30'E.
+     * Truncated form of GSK-2011 / GSK 3GK zone 29 (code 21229). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_87E = 'urn:ogc:def:crs:EPSG::21329';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 90E
+     * Extent: Russian Federation - onshore between 88°30'E and 91°30'E.
+     * Truncated form of GSK-2011 / GSK 3GK zone 30 (code 21230). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_90E = 'urn:ogc:def:crs:EPSG::21330';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 93E
+     * Extent: Russian Federation - onshore between 91°30'E and 94°30'E.
+     * Truncated form of GSK-2011 / GSK 3GK zone 31 (code 21231). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_93E = 'urn:ogc:def:crs:EPSG::21331';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 96E
+     * Extent: Russian Federation - onshore between 94°30'E and 97°30'E.
+     * Truncated form of GSK-2011 / GSK 3GK zone 32 (code 21232). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_96E = 'urn:ogc:def:crs:EPSG::21332';
+
+    /**
+     * GSK-2011 / GSK 3GK CM 99E
+     * Extent: Russian Federation - onshore between 97°30'E and 100°30'E.
+     * Truncated form of GSK-2011 / GSK 3GK zone 33 (code 21233). Replaces Pulkovo-based CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_CM_99E = 'urn:ogc:def:crs:EPSG::21333';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 10
+     * Extent: Russian Federation - onshore between 28°30'E and 31°30'E.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 30E (code 21310). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_10 = 'urn:ogc:def:crs:EPSG::21210';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 11
+     * Extent: Russian Federation - onshore between 31°30'E and 34°30'E.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 33E (code 21311). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_11 = 'urn:ogc:def:crs:EPSG::21211';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 12
+     * Extent: Russian Federation - onshore between 34°30'E and 37°30'E.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 36E (code 21312). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_12 = 'urn:ogc:def:crs:EPSG::21212';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 13
+     * Extent: Russian Federation - onshore between 37°30'E and 40°30'E.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 39E (code 21313). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_13 = 'urn:ogc:def:crs:EPSG::21213';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 14
+     * Extent: Russian Federation - onshore between 40°30'E and 43°30'E.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 42E (code 21314). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_14 = 'urn:ogc:def:crs:EPSG::21214';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 15
+     * Extent: Russian Federation - onshore between 43°30'E and 46°30'E.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 45E (code 21315). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_15 = 'urn:ogc:def:crs:EPSG::21215';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 16
+     * Extent: Russian Federation - onshore between 46°30'E and 49°30'E.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 48E (code 21316). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_16 = 'urn:ogc:def:crs:EPSG::21216';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 17
+     * Extent: Russian Federation - onshore between 49°30'E and 52°30'E.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 51E (code 21317). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_17 = 'urn:ogc:def:crs:EPSG::21217';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 18
+     * Extent: Russian Federation - onshore between 52°30'E and 55°30'E.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 54E (code 21318). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_18 = 'urn:ogc:def:crs:EPSG::21218';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 19
+     * Extent: Russian Federation - onshore between 55°30'E and 58°30'E.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 57E (code 21319). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_19 = 'urn:ogc:def:crs:EPSG::21219';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 20
+     * Extent: Russian Federation - onshore between 58°30'E and 61°30'E.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 60E (code 21320). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_20 = 'urn:ogc:def:crs:EPSG::21220';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 21
+     * Extent: Russian Federation - onshore between 61°30'E and 64°30'E.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 63E (code 21321). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_21 = 'urn:ogc:def:crs:EPSG::21221';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 22
+     * Extent: Russian Federation - onshore between 64°30'E and 67°30'E.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 66E (code 21322). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_22 = 'urn:ogc:def:crs:EPSG::21222';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 23
+     * Extent: Russian Federation - onshore between 67°30'E and 70°30'E.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 69E (code 21323). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_23 = 'urn:ogc:def:crs:EPSG::21223';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 24
+     * Extent: Russian Federation - onshore between 70°30'E and 73°30'E.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 72E (code 21324). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_24 = 'urn:ogc:def:crs:EPSG::21224';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 25
+     * Extent: Russian Federation - onshore between 73°30'E and 76°30'E.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 75E (code 21325). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_25 = 'urn:ogc:def:crs:EPSG::21225';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 26
+     * Extent: Russian Federation - onshore between 76°30'E and 79°30'E.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 78E (code 21326). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_26 = 'urn:ogc:def:crs:EPSG::21226';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 27
+     * Extent: Russian Federation - onshore between 79°30'E and 82°30'E.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 81E (code 21327). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_27 = 'urn:ogc:def:crs:EPSG::21227';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 28
+     * Extent: Russian Federation - onshore between 82°30'E and 85°30'E.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 84E (code 21328). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_28 = 'urn:ogc:def:crs:EPSG::21228';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 29
+     * Extent: Russian Federation - onshore between 85°30'E and 88°30'E.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 87E (code 21329). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_29 = 'urn:ogc:def:crs:EPSG::21229';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 30
+     * Extent: Russian Federation - onshore between 88°30'E and 91°30'E.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 90E (code 21330). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_30 = 'urn:ogc:def:crs:EPSG::21230';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 31
+     * Extent: Russian Federation - onshore between 91°30'E and 94°30'E.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 93E (code 21331). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_31 = 'urn:ogc:def:crs:EPSG::21231';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 32
+     * Extent: Russian Federation - onshore between 94°30'E and 97°30'E.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 96E (code 21332). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_32 = 'urn:ogc:def:crs:EPSG::21232';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 33
+     * Extent: Russian Federation - onshore between 97°30'E and 100°30'E.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 99E (code 21333). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_33 = 'urn:ogc:def:crs:EPSG::21233';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 34
+     * Extent: Russian Federation - onshore between 100°30'E and 103°30'E.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 102E (code 21334). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_34 = 'urn:ogc:def:crs:EPSG::21234';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 35
+     * Extent: Russian Federation - onshore between 103°30'E and 106°30'E.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 105E (code 21335). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_35 = 'urn:ogc:def:crs:EPSG::21235';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 36
+     * Extent: Russian Federation - onshore between 106°30'E and 109°30'E.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 108E (code 21336). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_36 = 'urn:ogc:def:crs:EPSG::21236';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 37
+     * Extent: Russian Federation - onshore between 109°30'E and 112°30'E.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 111E (code 21337). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_37 = 'urn:ogc:def:crs:EPSG::21237';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 38
+     * Extent: Russian Federation - onshore between 112°30'E and 115°30'E.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 114E (code 21338). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_38 = 'urn:ogc:def:crs:EPSG::21238';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 39
+     * Extent: Russian Federation - onshore between 115°30'E and 118°30'E.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 117E (code 21339). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_39 = 'urn:ogc:def:crs:EPSG::21239';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 40
+     * Extent: Russian Federation - onshore between 118°30'E and 121°30'E.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 120E (code 21340). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_40 = 'urn:ogc:def:crs:EPSG::21240';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 41
+     * Extent: Russian Federation - onshore between 121°30'E and 124°30'E.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 123E (code 21341). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_41 = 'urn:ogc:def:crs:EPSG::21241';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 42
+     * Extent: Russian Federation - onshore between 124°30'E and 127°30'E.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 126E (code 21342). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_42 = 'urn:ogc:def:crs:EPSG::21242';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 43
+     * Extent: Russian Federation - onshore between 127°30'E and 130°30'E.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 129E (code 21343). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_43 = 'urn:ogc:def:crs:EPSG::21243';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 44
+     * Extent: Russian Federation - onshore between 130°30'E and 133°30'E.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 132E (code 21344). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_44 = 'urn:ogc:def:crs:EPSG::21244';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 45
+     * Extent: Russian Federation - onshore between 133°30'E and 136°30'E.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 135E (code 21345). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_45 = 'urn:ogc:def:crs:EPSG::21245';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 46
+     * Extent: Russian Federation - onshore between 136°30'E and 139°30'E.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 138E (code 21346). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_46 = 'urn:ogc:def:crs:EPSG::21246';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 47
+     * Extent: Russian Federation - onshore between 139°30'E and 142°30'E.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 141E (code 21347). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_47 = 'urn:ogc:def:crs:EPSG::21247';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 48
+     * Extent: Russian Federation - onshore between 142°30'E and 145°30'E.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 144E (code 21348). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_48 = 'urn:ogc:def:crs:EPSG::21248';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 49
+     * Extent: Russian Federation - onshore between 145°30'E and 148°30'E.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 147E (code 21349). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_49 = 'urn:ogc:def:crs:EPSG::21249';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 50
+     * Extent: Russian Federation - onshore between 148°30'E and 151°30'E.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 150E (code 21350). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_50 = 'urn:ogc:def:crs:EPSG::21250';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 51
+     * Extent: Russian Federation - onshore between 151°30'E and 154°30'E.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 153E (code 21351). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_51 = 'urn:ogc:def:crs:EPSG::21251';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 52
+     * Extent: Russian Federation - onshore between 154°30'E and 157°30'E.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 156E (code 21352). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_52 = 'urn:ogc:def:crs:EPSG::21252';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 53
+     * Extent: Russian Federation - onshore between 157°30'E and 160°30'E.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 159E (code 21353). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_53 = 'urn:ogc:def:crs:EPSG::21253';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 54
+     * Extent: Russian Federation - onshore between 160°30'E and 163°30'E.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 162E (code 21354). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_54 = 'urn:ogc:def:crs:EPSG::21254';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 55
+     * Extent: Russian Federation - onshore between 163°30'E and 166°30'E.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 165E (code 21355). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_55 = 'urn:ogc:def:crs:EPSG::21255';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 56
+     * Extent: Russian Federation - onshore between 166°30'E and 169°30'E.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 168E (code 21356). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_56 = 'urn:ogc:def:crs:EPSG::21256';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 57
+     * Extent: Russian Federation - onshore between 169°30'E and 172°30'E.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 171E (code 21357). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_57 = 'urn:ogc:def:crs:EPSG::21257';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 58
+     * Extent: Russian Federation - onshore between 172°30'E and 175°30'E.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 174E (code 21358). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_58 = 'urn:ogc:def:crs:EPSG::21258';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 59
+     * Extent: Russian Federation - onshore between 175°30'E and 178°30'E.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 177E (code 21359). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_59 = 'urn:ogc:def:crs:EPSG::21259';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 60
+     * Extent: Russian Federation - onshore between 178°30'E and 178°30'W.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 180E (code 21360). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_60 = 'urn:ogc:def:crs:EPSG::21260';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 61
+     * Extent: Russian Federation - onshore between 178°30'W and 175°30'W.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 177W (code 21361). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_61 = 'urn:ogc:def:crs:EPSG::21261';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 62
+     * Extent: Russian Federation - onshore between 175°30'W and 172°30'W.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 174W (code 21362). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_62 = 'urn:ogc:def:crs:EPSG::21262';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 63
+     * Extent: Russian Federation - onshore between 172°30'W and 169°30'W.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 171W (code 21363). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_63 = 'urn:ogc:def:crs:EPSG::21263';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 64
+     * Extent: Russian Federation - onshore between 169°30'W and 166°30'W.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 168W (code 21364). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_64 = 'urn:ogc:def:crs:EPSG::21264';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 7
+     * Extent: Russian Federation - Kaliningrad - onshore between 19°30'E and 22°30'E.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 21E (code 21307). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_7 = 'urn:ogc:def:crs:EPSG::21207';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 8
+     * Extent: Russian Federation - onshore between 22°30'E and 25°30'E - Kaliningrad.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 24E (code 21308). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_8 = 'urn:ogc:def:crs:EPSG::21208';
+
+    /**
+     * GSK-2011 / GSK 3GK zone 9
+     * Extent: Russian Federation - onshore between 25°30'E and 28°30'E.
+     * Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 27E (code 21309). Replaces Pulkovo-based
+     * CRSs from 2021-01-01.
+     */
+    public const EPSG_GSK_2011_GSK_3GK_ZONE_9 = 'urn:ogc:def:crs:EPSG::21209';
 
     /**
      * GSK-2011 / Gauss-Kruger CM 105E
@@ -5179,7 +6068,8 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * HS2 Survey Grid
-     * Extent: UK - HS2 phases 1 and 2a railway corridor from London to Birmingham, Lichfield and Crewe.
+     * Extent: United Kingdom (UK) - HS2 phases 1 and 2a railway corridor from London to Birmingham, Lichfield and
+     * Crewe.
      * HS2 Survey Grid is equivalent to the tailored zero-distortion ETRS89-based SnakeGrid HS2P1+14, the Snake
      * projection emulated using an NTv2 transformation (code 9302) and a Transverse Mercator map projection (code
      * 9301).
@@ -7656,7 +8546,7 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * MML07 Grid
-     * Extent: UK - on or related to the Midland Mainline rail route from Sheffield to London.
+     * Extent: United Kingdom (UK) - on or related to the Midland Mainline rail route from Sheffield to London.
      * The CRS's definition through transformation ETRS89 to MML07-IRF (1) (code 9369) as applied to ETRS89 realised
      * through OSNet 2009 and map projection MML07-TM (code 9370) emulates the MML07 Snake projection applied to ETRS89
      * as realised through OSNet 2001.
@@ -30462,64 +31352,184 @@ class Projected extends CoordinateReferenceSystem
     public const EPSG_RGAF09_UTM_ZONE_20N = 'urn:ogc:def:crs:EPSG::5490';
 
     /**
-     * RGF93 / CC42
+     * RGF93 v1 / CC42
      * Extent: France onshore - mainland south of 43°N and Corsica.
      */
-    public const EPSG_RGF93_CC42 = 'urn:ogc:def:crs:EPSG::3942';
+    public const EPSG_RGF93_V1_CC42 = 'urn:ogc:def:crs:EPSG::3942';
 
     /**
-     * RGF93 / CC43
+     * RGF93 v1 / CC43
      * Extent: France - mainland onshore south of 44°N.
      */
-    public const EPSG_RGF93_CC43 = 'urn:ogc:def:crs:EPSG::3943';
+    public const EPSG_RGF93_V1_CC43 = 'urn:ogc:def:crs:EPSG::3943';
 
     /**
-     * RGF93 / CC44
+     * RGF93 v1 / CC44
      * Extent: France - mainland onshore between 43°N and 45°N.
      */
-    public const EPSG_RGF93_CC44 = 'urn:ogc:def:crs:EPSG::3944';
+    public const EPSG_RGF93_V1_CC44 = 'urn:ogc:def:crs:EPSG::3944';
 
     /**
-     * RGF93 / CC45
+     * RGF93 v1 / CC45
      * Extent: France - mainland onshore between 44°N and 46°N.
      */
-    public const EPSG_RGF93_CC45 = 'urn:ogc:def:crs:EPSG::3945';
+    public const EPSG_RGF93_V1_CC45 = 'urn:ogc:def:crs:EPSG::3945';
 
     /**
-     * RGF93 / CC46
+     * RGF93 v1 / CC46
      * Extent: France - mainland onshore between 45°N and 47°N.
      */
-    public const EPSG_RGF93_CC46 = 'urn:ogc:def:crs:EPSG::3946';
+    public const EPSG_RGF93_V1_CC46 = 'urn:ogc:def:crs:EPSG::3946';
 
     /**
-     * RGF93 / CC47
+     * RGF93 v1 / CC47
      * Extent: France - mainland onshore between 46°N and 48°N.
      */
-    public const EPSG_RGF93_CC47 = 'urn:ogc:def:crs:EPSG::3947';
+    public const EPSG_RGF93_V1_CC47 = 'urn:ogc:def:crs:EPSG::3947';
 
     /**
-     * RGF93 / CC48
+     * RGF93 v1 / CC48
      * Extent: France - mainland onshore between 47°N and 49°N.
      */
-    public const EPSG_RGF93_CC48 = 'urn:ogc:def:crs:EPSG::3948';
+    public const EPSG_RGF93_V1_CC48 = 'urn:ogc:def:crs:EPSG::3948';
 
     /**
-     * RGF93 / CC49
+     * RGF93 v1 / CC49
      * Extent: France - mainland onshore between 48°N and 50°N.
      */
-    public const EPSG_RGF93_CC49 = 'urn:ogc:def:crs:EPSG::3949';
+    public const EPSG_RGF93_V1_CC49 = 'urn:ogc:def:crs:EPSG::3949';
 
     /**
-     * RGF93 / CC50
+     * RGF93 v1 / CC50
      * Extent: France - mainland onshore north of 49°N.
      */
-    public const EPSG_RGF93_CC50 = 'urn:ogc:def:crs:EPSG::3950';
+    public const EPSG_RGF93_V1_CC50 = 'urn:ogc:def:crs:EPSG::3950';
 
     /**
-     * RGF93 / Lambert-93
+     * RGF93 v1 / Lambert-93
      * Extent: France - onshore and offshore, mainland and Corsica.
      */
-    public const EPSG_RGF93_LAMBERT_93 = 'urn:ogc:def:crs:EPSG::2154';
+    public const EPSG_RGF93_V1_LAMBERT_93 = 'urn:ogc:def:crs:EPSG::2154';
+
+    /**
+     * RGF93 v2 / CC42
+     * Extent: France onshore - mainland south of 43°N and Corsica.
+     */
+    public const EPSG_RGF93_V2_CC42 = 'urn:ogc:def:crs:EPSG::9822';
+
+    /**
+     * RGF93 v2 / CC43
+     * Extent: France - mainland onshore south of 44°N.
+     */
+    public const EPSG_RGF93_V2_CC43 = 'urn:ogc:def:crs:EPSG::9823';
+
+    /**
+     * RGF93 v2 / CC44
+     * Extent: France - mainland onshore between 43°N and 45°N.
+     */
+    public const EPSG_RGF93_V2_CC44 = 'urn:ogc:def:crs:EPSG::9824';
+
+    /**
+     * RGF93 v2 / CC45
+     * Extent: France - mainland onshore between 44°N and 46°N.
+     */
+    public const EPSG_RGF93_V2_CC45 = 'urn:ogc:def:crs:EPSG::9825';
+
+    /**
+     * RGF93 v2 / CC46
+     * Extent: France - mainland onshore between 45°N and 47°N.
+     */
+    public const EPSG_RGF93_V2_CC46 = 'urn:ogc:def:crs:EPSG::9826';
+
+    /**
+     * RGF93 v2 / CC47
+     * Extent: France - mainland onshore between 46°N and 48°N.
+     */
+    public const EPSG_RGF93_V2_CC47 = 'urn:ogc:def:crs:EPSG::9827';
+
+    /**
+     * RGF93 v2 / CC48
+     * Extent: France - mainland onshore between 47°N and 49°N.
+     */
+    public const EPSG_RGF93_V2_CC48 = 'urn:ogc:def:crs:EPSG::9828';
+
+    /**
+     * RGF93 v2 / CC49
+     * Extent: France - mainland onshore between 48°N and 50°N.
+     */
+    public const EPSG_RGF93_V2_CC49 = 'urn:ogc:def:crs:EPSG::9829';
+
+    /**
+     * RGF93 v2 / CC50
+     * Extent: France - mainland onshore north of 49°N.
+     */
+    public const EPSG_RGF93_V2_CC50 = 'urn:ogc:def:crs:EPSG::9830';
+
+    /**
+     * RGF93 v2 / Lambert-93
+     * Extent: France - onshore and offshore, mainland and Corsica.
+     */
+    public const EPSG_RGF93_V2_LAMBERT_93 = 'urn:ogc:def:crs:EPSG::9793';
+
+    /**
+     * RGF93 v2b / CC42
+     * Extent: France onshore - mainland south of 43°N and Corsica.
+     */
+    public const EPSG_RGF93_V2B_CC42 = 'urn:ogc:def:crs:EPSG::9842';
+
+    /**
+     * RGF93 v2b / CC43
+     * Extent: France - mainland onshore south of 44°N.
+     */
+    public const EPSG_RGF93_V2B_CC43 = 'urn:ogc:def:crs:EPSG::9843';
+
+    /**
+     * RGF93 v2b / CC44
+     * Extent: France - mainland onshore between 43°N and 45°N.
+     */
+    public const EPSG_RGF93_V2B_CC44 = 'urn:ogc:def:crs:EPSG::9844';
+
+    /**
+     * RGF93 v2b / CC45
+     * Extent: France - mainland onshore between 44°N and 46°N.
+     */
+    public const EPSG_RGF93_V2B_CC45 = 'urn:ogc:def:crs:EPSG::9845';
+
+    /**
+     * RGF93 v2b / CC46
+     * Extent: France - mainland onshore between 45°N and 47°N.
+     */
+    public const EPSG_RGF93_V2B_CC46 = 'urn:ogc:def:crs:EPSG::9846';
+
+    /**
+     * RGF93 v2b / CC47
+     * Extent: France - mainland onshore between 46°N and 48°N.
+     */
+    public const EPSG_RGF93_V2B_CC47 = 'urn:ogc:def:crs:EPSG::9847';
+
+    /**
+     * RGF93 v2b / CC48
+     * Extent: France - mainland onshore between 47°N and 49°N.
+     */
+    public const EPSG_RGF93_V2B_CC48 = 'urn:ogc:def:crs:EPSG::9848';
+
+    /**
+     * RGF93 v2b / CC49
+     * Extent: France - mainland onshore between 48°N and 50°N.
+     */
+    public const EPSG_RGF93_V2B_CC49 = 'urn:ogc:def:crs:EPSG::9849';
+
+    /**
+     * RGF93 v2b / CC50
+     * Extent: France - mainland onshore north of 49°N.
+     */
+    public const EPSG_RGF93_V2B_CC50 = 'urn:ogc:def:crs:EPSG::9850';
+
+    /**
+     * RGF93 v2b / Lambert-93
+     * Extent: France - onshore and offshore, mainland and Corsica.
+     */
+    public const EPSG_RGF93_V2B_LAMBERT_93 = 'urn:ogc:def:crs:EPSG::9794';
 
     /**
      * RGFG95 / UTM zone 21N
@@ -32200,7 +33210,8 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * TPEN11 Grid
-     * Extent: UK - on or related to the Trans-Pennine rail route from Liverpool via Manchester to Bradford and Leeds.
+     * Extent: United Kingdom (UK) - on or related to the Trans-Pennine rail route from Liverpool via Manchester to
+     * Bradford and Leeds.
      * The CRS's definition through transformation ETRS89 to TPEN11-IRF (1) (code 9365) and map projection TPEN11-TM
      * (code 9366) emulates the combined TPEN11 Snake and TPEN11ext Snake projections applied to ETRS89 as realised
      * through OSNet 2009 CORS.
@@ -37342,6 +38353,56 @@ class Projected extends CoordinateReferenceSystem
      * @deprecated use EPSG_BD72_BELGIAN_LAMBERT_72 instead
      */
     public const EPSG_BELGE_1972_BELGIAN_LAMBERT_72 = 'urn:ogc:def:crs:EPSG::31370';
+
+    /**
+     * @deprecated use EPSG_RGF93_V1_CC42 instead
+     */
+    public const EPSG_RGF93_CC42 = 'urn:ogc:def:crs:EPSG::3942';
+
+    /**
+     * @deprecated use EPSG_RGF93_V1_CC43 instead
+     */
+    public const EPSG_RGF93_CC43 = 'urn:ogc:def:crs:EPSG::3943';
+
+    /**
+     * @deprecated use EPSG_RGF93_V1_CC44 instead
+     */
+    public const EPSG_RGF93_CC44 = 'urn:ogc:def:crs:EPSG::3944';
+
+    /**
+     * @deprecated use EPSG_RGF93_V1_CC45 instead
+     */
+    public const EPSG_RGF93_CC45 = 'urn:ogc:def:crs:EPSG::3945';
+
+    /**
+     * @deprecated use EPSG_RGF93_V1_CC46 instead
+     */
+    public const EPSG_RGF93_CC46 = 'urn:ogc:def:crs:EPSG::3946';
+
+    /**
+     * @deprecated use EPSG_RGF93_V1_CC47 instead
+     */
+    public const EPSG_RGF93_CC47 = 'urn:ogc:def:crs:EPSG::3947';
+
+    /**
+     * @deprecated use EPSG_RGF93_V1_CC48 instead
+     */
+    public const EPSG_RGF93_CC48 = 'urn:ogc:def:crs:EPSG::3948';
+
+    /**
+     * @deprecated use EPSG_RGF93_V1_CC49 instead
+     */
+    public const EPSG_RGF93_CC49 = 'urn:ogc:def:crs:EPSG::3949';
+
+    /**
+     * @deprecated use EPSG_RGF93_V1_CC50 instead
+     */
+    public const EPSG_RGF93_CC50 = 'urn:ogc:def:crs:EPSG::3950';
+
+    /**
+     * @deprecated use EPSG_RGF93_V1_LAMBERT_93 instead
+     */
+    public const EPSG_RGF93_LAMBERT_93 = 'urn:ogc:def:crs:EPSG::2154';
 
     private static array $cachedObjects = [];
 

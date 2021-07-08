@@ -25,7 +25,7 @@ class Datum
     /**
      * AbInvA96_2020 Intermediate Reference Frame
      * Type: geodetic
-     * Extent: UK - on or related to the A96 highway from Aberdeen to Inverness.
+     * Extent: United Kingdom (UK) - on or related to the A96 highway from Aberdeen to Inverness.
      * Defined through the application of the AbInvA96_2000 NTv2 transformation (code 9386) to ETRS89 as realized
      * through OSNet v2009 CORS.
      * Created in 2020 to support intermediate CRS "AbInvA96_2020-IRF" in the emulation of the AbInvA96_2020 Snake map
@@ -274,7 +274,7 @@ class Datum
     /**
      * Australian Terrestrial Reference Frame 2014
      * Type: dynamic geodetic
-     * Extent: Australia including Lord Howe Island, Macquarie Islands, Ashmore and Cartier Islands, Christmas Island,
+     * Extent: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island,
      * Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
      * ITRF2014 at epoch 2020.0.
      * Densification of ITRF2014 in the Australian region.
@@ -284,7 +284,7 @@ class Datum
     /**
      * Australian Vertical Working Surface
      * Type: vertical
-     * Extent: Australia including Lord Howe Island, Macquarie Islands, Ashmore and Cartier Islands, Christmas Island,
+     * Extent: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island,
      * Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
      * Realized by the Australian gravimetric quasi-geoid (AGQG).
      * Normal heights. Extends gravity-related heights to offshore. See AHD (datum code 5111) for cadastral survey or
@@ -1259,6 +1259,18 @@ class Datum
     public const EPSG_DURRES = 'urn:ogc:def:datum:EPSG::5175';
 
     /**
+     * ECML14_NB Intermediate Reference Frame
+     * Type: geodetic
+     * Extent: United Kingdom (UK) - on or related to rail routes from Newcastle Central to Ashington via Benton North
+     * Junction, and the section from Bedlington to Morpeth.
+     * Defined through the application of the ECML14_NB NTv2 transformation (code 9759) to ETRS89 as realized through
+     * OSNet v2009 CORS.
+     * Created in 2021 to support intermediate CRS "ECML14_NB-IRF" in the emulation of the ECML14_NB Snake map
+     * projection.
+     */
+    public const EPSG_ECML14_NB_INTERMEDIATE_REFERENCE_FRAME = 'urn:ogc:def:datum:EPSG::1310';
+
+    /**
      * EGM2008 geoid
      * Type: vertical
      * Extent: World.
@@ -1292,10 +1304,10 @@ class Datum
     /**
      * EOS21 Intermediate Reference Frame
      * Type: geodetic
-     * Extent: On or related to the complex of rail routes in the East of Scotland, incorporating the route from
-     * Tweedbank through the Borders to Edinburgh; the line from Edinburgh to Aberdeen; routes via Kirkaldy and
-     * Cowdenbeath; and routes via Leuchars and Perth to Dundee.
-     * Defined through the application of the EOS21 NTv2 transformation (code 9454) to ETRS89 as realized through OSNet
+     * Extent: United Kingdom (UK) - on or related to the complex of rail routes in the East of Scotland, incorporating
+     * the route from Tweedbank through the Borders to Edinburgh; the line from Edinburgh to Aberdeen; routes via
+     * Kirkaldy and Cowdenbeath; and routes via Leuchars and Perth to Dundee.
+     * Defined through the application of the EOS21 NTv2 transformation (code 9740) to ETRS89 as realized through OSNet
      * v2009 CORS.
      * Created in 2021 to support intermediate CRS "EOS21-IRF" in the emulation of the EOS21 Snake map projection.
      */
@@ -1323,6 +1335,17 @@ class Datum
      * November 2012 on the state system of spatial reference system.
      */
     public const EPSG_ETRF2000_POLAND = 'urn:ogc:def:datum:EPSG::1305';
+
+    /**
+     * EWR2 Intermediate Reference Frame
+     * Type: geodetic
+     * Extent: United Kingdom (UK) - on or related to East West Rail (Phase 2) routes from Oxford to Bicester,
+     * Bletchley and Bedford, and from Claydon Junction to Aylesbury and Princes Risborough.
+     * Defined through the application of the EWR2 NTv2 transformation (code 9763) to ETRS89 as realized through OSNet
+     * v2009 CORS.
+     * Created in 2021 to support intermediate CRS "EWR2-IRF" in the emulation of the EWR2 Snake map projection.
+     */
+    public const EPSG_EWR2_INTERMEDIATE_REFERENCE_FRAME = 'urn:ogc:def:datum:EPSG::1311';
 
     /**
      * Easter Island 1967
@@ -1903,8 +1926,8 @@ class Datum
     /**
      * GBK19 Intermediate Reference Frame
      * Type: geodetic
-     * Extent: UK - on or related to the rail route from Glasgow via Barrhead to Kilmarnock and the branch to East
-     * Kilbride.
+     * Extent: United Kingdom (UK) - on or related to the rail route from Glasgow to Kilmarnock via Barrhead and the
+     * branch to East Kilbride.
      * Defined through the application of the GBK19 NTv2 transformation (code 9454) to ETRS89 as realized through OSNet
      * v2009 CORS.
      * Created in 2020 to support intermediate CRS "GBK19-IRF" in the emulation of the combined GBK19 Snake map
@@ -1967,7 +1990,7 @@ class Datum
     /**
      * Geocentric Datum of Australia 1994
      * Type: geodetic
-     * Extent: Australia including Lord Howe Island, Macquarie Islands, Ashmore and Cartier Islands, Christmas Island,
+     * Extent: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island,
      * Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
      * ITRF92 at epoch 1994.0.
      */
@@ -1976,7 +1999,7 @@ class Datum
     /**
      * Geocentric Datum of Australia 2020
      * Type: geodetic
-     * Extent: Australia including Lord Howe Island, Macquarie Islands, Ashmore and Cartier Islands, Christmas Island,
+     * Extent: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island,
      * Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
      * ITRF2014 at epoch 2020.0.
      */
@@ -2220,7 +2243,8 @@ class Datum
     /**
      * HS2 Intermediate Reference Frame
      * Type: geodetic
-     * Extent: UK - HS2 phases 1 and 2a railway corridor from London to Birmingham, Lichfield and Crewe.
+     * Extent: United Kingdom (UK) - HS2 phases 1 and 2a railway corridor from London to Birmingham, Lichfield and
+     * Crewe.
      * Defined through application of the HS2TN02 transformation to ETRS89 as realized through OSNet v2001 CORS.
      * Subsequently realized through application of the HS2TN15 transformation to ETRS89 as realized through OSNet
      * v2009 CORS.
@@ -2231,7 +2255,8 @@ class Datum
     /**
      * HS2 Vertical Reference Frame
      * Type: vertical
-     * Extent: UK - HS2 phases 1 and 2a railway corridor from London to Birmingham, Lichfield and Crewe.
+     * Extent: United Kingdom (UK) - HS2 phases 1 and 2a railway corridor from London to Birmingham, Lichfield and
+     * Crewe.
      * Equivalent to Ordnance Datum Newlyn as realized through OSNet v2001 and OSGM02.
      * After introduction of OSNet v2009 CORS, OSTN15 and the OSGM15 geoid model, the HS2 VRF is maintained equivalent
      * to OSNet v2001 and OSGM02 through HS2GM15 (code 9304).
@@ -3761,7 +3786,7 @@ class Datum
     /**
      * MML07 Intermediate Reference Frame
      * Type: geodetic
-     * Extent: UK - on or related to the Midland Mainline rail route from Sheffield to London.
+     * Extent: United Kingdom (UK) - on or related to the Midland Mainline rail route from Sheffield to London.
      * Defined through the application of the MML07 NTv2 transformation (code 9369) to ETRS89 as realized through OSNet
      * v2009 CORS.
      * Created in 2020 to support intermediate CRS "MML07-IRF" in the emulation of the MML07 Snake map projection.
@@ -4330,9 +4355,8 @@ class Datum
      * Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma;
      * Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia;
      * Washington; West Virginia; Wisconsin; Wyoming. US Virgin Islands - onshore and offshore.
-     * Defined by time-dependent transformations from ITRF. The ITRF realisation and tfm used has been changed
-     * periodically; ITRF96 in years 1997 through 1999, ITRF97 in 2000 and 2001 and ITRF2000 from 2002 (see tfm codes
-     * 6864-6866 respectively).
+     * Defined by time-dependent transformations from ITRF (see CT codes 6864-6866). The ITRF realization used has been
+     * changed periodically; ITRF96 in years 1997 through 1999, ITRF97 in 2000 and 2001 and ITRF2000 from 2002.
      * Replaced by NAD83(2011) from 2011-09-06.
      */
     public const EPSG_NAD83_CONTINUOUSLY_OPERATING_REFERENCE_STATION_1996 = 'urn:ogc:def:datum:EPSG::1133';
@@ -4791,7 +4815,9 @@ class Datum
      * Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon;
      * Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington;
      * West Virginia; Wisconsin; Wyoming. US Virgin Islands. British Virgin Islands.
-     * Origin at geocentre.
+     * NAD83 Doppler Transit stations in NWL 9D were aligned with the BIH Conventional Terrestrial Reference Frame
+     * (BTS) at epoch 1984.0 using an internationally adopted transformation. NAD83 is now known to be non-geocentric
+     * by about 2.2 meters.
      * Although the 1986 adjustment included connections to Greenland and Mexico, it has not been adopted there. In
      * Canada and US, replaced NAD27.
      */
@@ -4871,7 +4897,8 @@ class Datum
      * Yukon.
      * Defined at reference epoch 2010.0 by a transformation from ITRF2014 (see transformation code 8265). The frame is
      * kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
-     * Adopted by the Canadian federal government from 2017-05-01. Replaces NAD83(CSRS)v6.
+     * Adopted by the Canadian federal government from 2017-05-01 and the provincial government of Alberta. Replaces
+     * NAD83(CSRS)v6.
      */
     public const EPSG_NORTH_AMERICAN_DATUM_OF_1983_CSRS_VERSION_7 = 'urn:ogc:def:datum:EPSG::1198';
 
@@ -6000,12 +6027,38 @@ class Datum
     public const EPSG_REFERENCE_SYSTEM_DE_ANGOLA_2013 = 'urn:ogc:def:datum:EPSG::1220';
 
     /**
-     * Reseau Geodesique Francais 1993
+     * Reseau Geodesique Francais 1993 v1
      * Type: geodetic
      * Extent: France - onshore and offshore, mainland and Corsica.
-     * Coincident with ETRS89 at epoch 1993.0.
+     * Coincident with ETRS89 at epoch 1993.0. Derived from long-term GNSS observations at 23 points aligned to ETRF93.
+     * @ 1993.0 through fundamental points at Grasse, Toulouse and Brest. Network supplemented in 1994 and 1995 by
+     * approx. 1000 additional stations.
+     * RGF93 v1 is a realization of ETRS89. Replaced by RGF93 v2 (datum code 1312) from 2010-06-18.
      */
-    public const EPSG_RESEAU_GEODESIQUE_FRANCAIS_1993 = 'urn:ogc:def:datum:EPSG::6171';
+    public const EPSG_RESEAU_GEODESIQUE_FRANCAIS_1993_V1 = 'urn:ogc:def:datum:EPSG::6171';
+
+    /**
+     * Reseau Geodesique Francais 1993 v2
+     * Type: geodetic
+     * Extent: France - onshore and offshore, mainland and Corsica.
+     * Aligned with ETRF2000 at epoch 2009.0. Based on the French GNSS permanent network (RGP) from 1998 to 2009, and
+     * the re-observation of the geodetic points of the French Reference Network (RRF) and French Base Network
+     * (RBF) from 2000 to 2011.
+     * RGF93 v2 is a realization of ETRS89. Replaces RGF93 v1 (datum code 6171) from 2010-06-18. Replaced by RGF93 v2b
+     * (datum code 1313) from 2021-01-05.
+     */
+    public const EPSG_RESEAU_GEODESIQUE_FRANCAIS_1993_V2 = 'urn:ogc:def:datum:EPSG::1312';
+
+    /**
+     * Reseau Geodesique Francais 1993 v2b
+     * Type: geodetic
+     * Extent: France - onshore and offshore, mainland and Corsica.
+     * Aligned with ETRF2000 at epoch 2019.0. Derived through reprocessing of the French GNSS permanent network (RGP)
+     * in IGS14.
+     * RGF93 v2b is a realization of ETRS89. Third realization of RGF93. Replaces RGF93 v2 (datum code 1312) from
+     * 2021-01-05.
+     */
+    public const EPSG_RESEAU_GEODESIQUE_FRANCAIS_1993_V2B = 'urn:ogc:def:datum:EPSG::1313';
 
     /**
      * Reseau Geodesique Francais Guyane 1995
@@ -7010,12 +7063,14 @@ class Datum
     public const EPSG_SULE_SKERRY = 'urn:ogc:def:datum:EPSG::5142';
 
     /**
-     * Swiss Terrestrial Reference Frame 1995
+     * Swiss Terrestrial Reference System 1995
      * Type: geodetic
      * Extent: Liechtenstein; Switzerland.
      * ETRF89 at epoch 1993.0.
+     * First realized through CHTRF95 and subsequently CHTRF98, 2004, 2010 and 2016 with an aim to re-measure every 6
+     * years.
      */
-    public const EPSG_SWISS_TERRESTRIAL_REFERENCE_FRAME_1995 = 'urn:ogc:def:datum:EPSG::6151';
+    public const EPSG_SWISS_TERRESTRIAL_REFERENCE_SYSTEM_1995 = 'urn:ogc:def:datum:EPSG::6151';
 
     /**
      * System of the Unified Trigonometrical Cadastral Network
@@ -7071,7 +7126,8 @@ class Datum
     /**
      * TPEN11 Intermediate Reference Frame
      * Type: geodetic
-     * Extent: UK - on or related to the Trans-Pennine rail route from Liverpool via Manchester to Bradford and Leeds.
+     * Extent: United Kingdom (UK) - on or related to the Trans-Pennine rail route from Liverpool via Manchester to
+     * Bradford and Leeds.
      * Defined through the application of the TPEN11 NTv2 transformation (code 9365) to ETRS89 as realized through
      * OSNet v2009 CORS.
      * Created in 2020 to support intermediate CRS "TPEN11-IRF" in the emulation of the combined TPEN11 Snake and
@@ -7620,6 +7676,16 @@ class Datum
      * @deprecated use EPSG_GENOA_1942 instead
      */
     public const EPSG_GENOA = 'urn:ogc:def:datum:EPSG::1051';
+
+    /**
+     * @deprecated use EPSG_SWISS_TERRESTRIAL_REFERENCE_SYSTEM_1995 instead
+     */
+    public const EPSG_SWISS_TERRESTRIAL_REFERENCE_FRAME_1995 = 'urn:ogc:def:datum:EPSG::6151';
+
+    /**
+     * @deprecated use EPSG_RESEAU_GEODESIQUE_FRANCAIS_1993_V1 instead
+     */
+    public const EPSG_RESEAU_GEODESIQUE_FRANCAIS_1993 = 'urn:ogc:def:datum:EPSG::6171';
 
     protected static array $sridData = [
         'urn:ogc:def:datum:EPSG::1024' => [
@@ -9857,6 +9923,38 @@ class Datum
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
         ],
+        'urn:ogc:def:datum:EPSG::1310' => [
+            'name' => 'ECML14_NB Intermediate Reference Frame',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
+        'urn:ogc:def:datum:EPSG::1311' => [
+            'name' => 'EWR2 Intermediate Reference Frame',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
+        'urn:ogc:def:datum:EPSG::1312' => [
+            'name' => 'Reseau Geodesique Francais 1993 v2',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
+        'urn:ogc:def:datum:EPSG::1313' => [
+            'name' => 'Reseau Geodesique Francais 1993 v2b',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
         'urn:ogc:def:datum:EPSG::5100' => [
             'name' => 'Mean Sea Level',
             'type' => 'vertical',
@@ -11330,7 +11428,7 @@ class Datum
             'frame_reference_epoch' => null,
         ],
         'urn:ogc:def:datum:EPSG::6151' => [
-            'name' => 'Swiss Terrestrial Reference Frame 1995',
+            'name' => 'Swiss Terrestrial Reference System 1995',
             'type' => 'geodetic',
             'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
@@ -11490,7 +11588,7 @@ class Datum
             'frame_reference_epoch' => null,
         ],
         'urn:ogc:def:datum:EPSG::6171' => [
-            'name' => 'Reseau Geodesique Francais 1993',
+            'name' => 'Reseau Geodesique Francais 1993 v1',
             'type' => 'geodetic',
             'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',

@@ -1,7 +1,7 @@
 AbInvA96_2020 Grid + ODN height
 -------------------------------
 
-| Used: UK - on or related to the A96 highway from Aberdeen to Inverness.
+| Used: United Kingdom (UK) - on or related to the A96 highway from Aberdeen to Inverness.
 
 .. code-block:: php
 
@@ -155,10 +155,23 @@ DB_REF / 3-degree Gauss-Kruger zone 5 (E-N) + DHHN92 height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5835')
 
 
+ECML14_NB Grid + ODN height
+---------------------------
+
+| Used: United Kingdom (UK) - on or related to rail routes from Newcastle Central to Ashington via Benton North Junction, and the section from Bedlington to Morpeth.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_ECML14_NB_GRID_PLUS_ODN_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9762')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_ECML14_NB_GRID_PLUS_ODN_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9762')
+
+
 EOS21 Grid + ODN height
 -----------------------
 
-| Used: On or related to the complex of rail routes in the East of Scotland, incorporating the route from Tweedbank through the Borders to Edinburgh; the line from Edinburgh to Aberdeen; routes via Kirkaldy and Cowdenbeath; and routes via Leuchars and Perth to Dundee. 
+| Used: United Kingdom (UK) - on or related to the complex of rail routes in the East of Scotland, incorporating the route from Tweedbank through the Borders to Edinburgh; the line from Edinburgh to Aberdeen; routes via Kirkaldy and Cowdenbeath; and routes via Leuchars and Perth to Dundee. 
 
 .. code-block:: php
 
@@ -1651,6 +1664,19 @@ ETRS89 / UTM zone 36N + NN54 height
 
 Replaced by ETRS89 / UTM zone 36N + NN2000 height (compound CRS code 5976).
 
+EWR2 Grid + ODN height
+----------------------
+
+| Used: United Kingdom (UK) - on or related to East West Rail (Phase 2) routes from Oxford to Bicester, Bletchley and Bedford, and from Claydon Junction to Aylesbury and Princes Risborough.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_EWR2_GRID_PLUS_ODN_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9767')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_EWR2_GRID_PLUS_ODN_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9767')
+
+
 FEH2010 + FCSVR10 height
 ------------------------
 
@@ -1680,7 +1706,7 @@ FEH2010 / Fehmarnbelt TM + FCSVR10 height
 GBK19 Grid + ODN height
 -----------------------
 
-| Used: UK - on or related to the rail route from Glasgow via Barrhead to Kilmarnock and the branch to East Kilbride.
+| Used: United Kingdom (UK) - on or related to the rail route from Glasgow to Kilmarnock via Barrhead and the branch to East Kilbride.
 
 .. code-block:: php
 
@@ -1706,7 +1732,7 @@ GDA2020 + AHD height
 GDA2020 + AVWS height
 ---------------------
 
-| Used: Australia including Lord Howe Island, Macquarie Islands, Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
+| Used: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
 
 .. code-block:: php
 
@@ -1760,7 +1786,7 @@ Replaces GR96 + GVR2000 height (CRS code 8349).
 HS2 Survey Grid + HS2-VRF height
 --------------------------------
 
-| Used: UK - HS2 phases 1 and 2a railway corridor from London to Birmingham, Lichfield and Crewe.
+| Used: United Kingdom (UK) - HS2 phases 1 and 2a railway corridor from London to Birmingham, Lichfield and Crewe.
 
 .. code-block:: php
 
@@ -1855,7 +1881,7 @@ MGI + EVRF2000 Austria height
 MML07 Grid + ODN height
 -----------------------
 
-| Used: UK - on or related to the Midland Mainline rail route from Sheffield to London.
+| Used: United Kingdom (UK) - on or related to the Midland Mainline rail route from Sheffield to London.
 
 .. code-block:: php
 
@@ -4116,56 +4142,69 @@ RGAF09 + Martinique 1987 height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9537')
 
 
-RGF93 + NGF-IGN69 height
-------------------------
+RGF93 v1 / Lambert-93 + NGF-IGN69 height
+----------------------------------------
 
 | Used: France - mainland onshore.
 
 .. code-block:: php
 
-    Compound::fromSRID(Compound::EPSG_RGF93_PLUS_NGF_IGN69_HEIGHT)
-    Compound::fromSRID('urn:ogc:def:crs:EPSG::9538')
-    CoordinateReferenceSystem::fromSRID(Compound::EPSG_RGF93_PLUS_NGF_IGN69_HEIGHT)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9538')
-
-
-RGF93 + NGF-IGN78 height
-------------------------
-
-| Used: France - Corsica onshore.
-
-.. code-block:: php
-
-    Compound::fromSRID(Compound::EPSG_RGF93_PLUS_NGF_IGN78_HEIGHT)
-    Compound::fromSRID('urn:ogc:def:crs:EPSG::9539')
-    CoordinateReferenceSystem::fromSRID(Compound::EPSG_RGF93_PLUS_NGF_IGN78_HEIGHT)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9539')
-
-
-RGF93 / Lambert-93 + NGF-IGN69 height
--------------------------------------
-
-| Used: France - mainland onshore.
-
-.. code-block:: php
-
-    Compound::fromSRID(Compound::EPSG_RGF93_LAMBERT_93_PLUS_NGF_IGN69_HEIGHT)
+    Compound::fromSRID(Compound::EPSG_RGF93_V1_LAMBERT_93_PLUS_NGF_IGN69_HEIGHT)
     Compound::fromSRID('urn:ogc:def:crs:EPSG::5698')
-    CoordinateReferenceSystem::fromSRID(Compound::EPSG_RGF93_LAMBERT_93_PLUS_NGF_IGN69_HEIGHT)
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_RGF93_V1_LAMBERT_93_PLUS_NGF_IGN69_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5698')
 
 
-RGF93 / Lambert-93 + NGF-IGN78 height
--------------------------------------
+RGF93 v1 / Lambert-93 + NGF-IGN78 height
+----------------------------------------
 
 | Used: France - Corsica onshore.
 
 .. code-block:: php
 
-    Compound::fromSRID(Compound::EPSG_RGF93_LAMBERT_93_PLUS_NGF_IGN78_HEIGHT)
+    Compound::fromSRID(Compound::EPSG_RGF93_V1_LAMBERT_93_PLUS_NGF_IGN78_HEIGHT)
     Compound::fromSRID('urn:ogc:def:crs:EPSG::5699')
-    CoordinateReferenceSystem::fromSRID(Compound::EPSG_RGF93_LAMBERT_93_PLUS_NGF_IGN78_HEIGHT)
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_RGF93_V1_LAMBERT_93_PLUS_NGF_IGN78_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5699')
+
+
+RGF93 v2 + NGF-IGN69 height
+---------------------------
+
+| Used: France - mainland onshore.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_RGF93_V2_PLUS_NGF_IGN69_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9538')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_RGF93_V2_PLUS_NGF_IGN69_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9538')
+
+
+RGF93 v2 + NGF-IGN78 height
+---------------------------
+
+| Used: France - Corsica onshore.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_RGF93_V2_PLUS_NGF_IGN78_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9539')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_RGF93_V2_PLUS_NGF_IGN78_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9539')
+
+
+RGF93 v2b + NGF-IGN69 height
+----------------------------
+
+| Used: France - mainland onshore.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_RGF93_V2B_PLUS_NGF_IGN69_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9785')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_RGF93_V2B_PLUS_NGF_IGN69_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9785')
 
 
 RGFG95 + NGG1977 height
@@ -4497,7 +4536,7 @@ St. Helena Tritan / UTM zone 30S + Tritan 2011 height
 TPEN11 Grid + ODN height
 ------------------------
 
-| Used: UK - on or related to the Trans-Pennine rail route from Liverpool via Manchester to Bradford and Leeds.
+| Used: United Kingdom (UK) - on or related to the Trans-Pennine rail route from Liverpool via Manchester to Bradford and Leeds.
 
 .. code-block:: php
 

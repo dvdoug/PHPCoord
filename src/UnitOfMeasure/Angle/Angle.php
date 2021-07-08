@@ -33,13 +33,6 @@ abstract class Angle implements UnitOfMeasure
     public const EPSG_DEGREE = 'urn:ogc:def:uom:EPSG::9102';
 
     /**
-     * degree (supplier to define representation)
-     * = pi/180 radians. The degree representation (e.g. decimal, DMSH, etc.) must be clarified by suppliers of data
-     * associated with this code.
-     */
-    public const EPSG_DEGREE_SUPPLIER_TO_DEFINE_REPRESENTATION = 'urn:ogc:def:uom:EPSG::9122';
-
-    /**
      * degree hemisphere
      * Degree representation. Format: degrees (real, any precision) - hemisphere abbreviation (single character N S E
      * or W). Convert to degrees using algorithm.
@@ -132,6 +125,11 @@ abstract class Angle implements UnitOfMeasure
      */
     public const EPSG_SEXAGESIMAL_DMS = 'urn:ogc:def:uom:EPSG::9110';
 
+    /**
+     * @deprecated use EPSG_DEGREE instead
+     */
+    public const EPSG_DEGREE_SUPPLIER_TO_DEFINE_REPRESENTATION = 'urn:ogc:def:uom:EPSG::9102';
+
     protected static array $sridData = [
         'urn:ogc:def:uom:EPSG::1031' => [
             'name' => 'milliarc-second',
@@ -180,9 +178,6 @@ abstract class Angle implements UnitOfMeasure
         ],
         'urn:ogc:def:uom:EPSG::9120' => [
             'name' => 'hemisphere degree minute second',
-        ],
-        'urn:ogc:def:uom:EPSG::9122' => [
-            'name' => 'degree (supplier to define representation)',
         ],
     ];
 
@@ -274,10 +269,6 @@ abstract class Angle implements UnitOfMeasure
 
     public static function convert(self $angle, string $targetSRID): self
     {
-        if ($targetSRID === self::EPSG_DEGREE_SUPPLIER_TO_DEFINE_REPRESENTATION) {
-            $targetSRID = self::EPSG_DEGREE;
-        }
-
         $conversionRatio = static::makeUnit(1, $targetSRID)->asRadians()->getValue();
 
         return self::makeUnit($angle->asRadians()->getValue() / $conversionRatio, $targetSRID);

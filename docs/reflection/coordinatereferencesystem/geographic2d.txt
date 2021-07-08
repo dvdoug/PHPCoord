@@ -48,7 +48,7 @@ ProjCRS covering all mainland France based on this datum used Bonne projection. 
 ATRF2014
 --------
 
-| Used: Australia including Lord Howe Island, Macquarie Islands, Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
+| Used: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
 
 .. code-block:: php
 
@@ -79,7 +79,7 @@ In use from 1979. To be phased out in late 1990's.
 AbInvA96_2020-IRF
 -----------------
 
-| Used: UK - on or related to the A96 highway from Aberdeen to Inverness.
+| Used: United Kingdom (UK) - on or related to the A96 highway from Aberdeen to Inverness.
 
 .. code-block:: php
 
@@ -835,18 +835,18 @@ CH1903+
 
 Replaces CH1903.
 
-CHTRF95
+CHTRS95
 -------
 
 | Used: Liechtenstein; Switzerland.
 
 .. code-block:: php
 
-    Geographic2D::fromSRID(Geographic2D::EPSG_CHTRF95)
+    Geographic2D::fromSRID(Geographic2D::EPSG_CHTRS95)
     Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::4151')
-    Geographic::fromSRID(Geographic2D::EPSG_CHTRF95)
+    Geographic::fromSRID(Geographic2D::EPSG_CHTRS95)
     Geographic::fromSRID('urn:ogc:def:crs:EPSG::4151')
-    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_CHTRF95)
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_CHTRS95)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4151')
 
 
@@ -1398,6 +1398,22 @@ Douala 1948
 
 Replaced by Manoca 1962 (code 4193).
 
+ECML14_NB-IRF
+-------------
+
+| Used: United Kingdom (UK) - on or related to rail routes from Newcastle Central to Ashington via Benton North Junction, and the section from Bedlington to Morpeth.
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_ECML14_NB_IRF)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::9758')
+    Geographic::fromSRID(Geographic2D::EPSG_ECML14_NB_IRF)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::9758')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ECML14_NB_IRF)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9758')
+
+Intermediate CRS created in 2021 to assist the emulation of the ETRS89 / ECML14_NB SnakeGrid projected CRS through transformation ETRS89 to ECML14_NB-IRF (1) (code 9759) used in conjunction with the ECML14_NB-TM map projection (code 9760).
+
 ED50
 ----
 
@@ -1476,7 +1492,7 @@ ELD79
 EOS21-IRF
 ---------
 
-| Used: On or related to the complex of rail routes in the East of Scotland, incorporating the route from Tweedbank through the Borders to Edinburgh; the line from Edinburgh to Aberdeen; routes via Kirkaldy and Cowdenbeath; and routes via Leuchars and Perth to Dundee. 
+| Used: United Kingdom (UK) - on or related to the complex of rail routes in the East of Scotland, incorporating the route from Tweedbank through the Borders to Edinburgh; the line from Edinburgh to Aberdeen; routes via Kirkaldy and Cowdenbeath; and routes via Leuchars and Perth to Dundee. 
 
 .. code-block:: php
 
@@ -1728,6 +1744,22 @@ ETRS89
 
 Has been realized through ETRF89, ETRF90, ETRF91, ETRF92, ETRF93, ETRF94, ETRF96, ETRF97, ETRF2000, ETRF2005 and ETRF2014. This 'ensemble' covers any or all of these realizations without distinction.
 
+EWR2-IRF
+--------
+
+| Used: United Kingdom (UK) - on or related to East West Rail (Phase 2) routes from Oxford to Bicester, Bletchley and Bedford, and from Claydon Junction to Aylesbury and Princes Risborough.
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_EWR2_IRF)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::9763')
+    Geographic::fromSRID(Geographic2D::EPSG_EWR2_IRF)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::9763')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_EWR2_IRF)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9763')
+
+Intermediate CRS created in 2021 to assist the emulation of the ETRS89 / EWR2 SnakeGrid projected CRS through transformation ETRS89 to EWR2-IRF (1) (code 9764) used in conjunction with the EWR2-TM map projection (code 9765).
+
 Easter Island 1967
 ------------------
 
@@ -1920,7 +1952,7 @@ Replaced by RRAF 1991 (CRS code 4558).
 GBK19-IRF
 ---------
 
-| Used: UK - on or related to the rail route from Glasgow via Barrhead to Kilmarnock and the branch to East Kilbride.
+| Used: United Kingdom (UK) - on or related to the rail route from Glasgow to Kilmarnock via Barrhead and the branch to East Kilbride.
 
 .. code-block:: php
 
@@ -1952,7 +1984,7 @@ Superseded by CIGD11 (CRS code 6135).
 GDA2020
 -------
 
-| Used: Australia including Lord Howe Island, Macquarie Islands, Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
+| Used: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
 
 .. code-block:: php
 
@@ -1967,7 +1999,7 @@ GDA2020
 GDA94
 -----
 
-| Used: Australia including Lord Howe Island, Macquarie Islands, Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
+| Used: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
 
 .. code-block:: php
 
@@ -2261,7 +2293,7 @@ Replaced HD1909 (EPSG CRS code 3819).
 HS2-IRF
 -------
 
-| Used: UK - HS2 phases 1 and 2a railway corridor from London to Birmingham, Lichfield and Crewe.
+| Used: United Kingdom (UK) - HS2 phases 1 and 2a railway corridor from London to Birmingham, Lichfield and Crewe.
 
 .. code-block:: php
 
@@ -4065,7 +4097,7 @@ Adopted in 1924 replacing MGI (Ferro) (CRS code 4805). Densified in 1948. In Slo
 MML07-IRF
 ---------
 
-| Used: UK - on or related to the Midland Mainline rail route from Sheffield to London.
+| Used: United Kingdom (UK) - on or related to the Midland Mainline rail route from Sheffield to London.
 
 .. code-block:: php
 
@@ -4811,7 +4843,7 @@ NAD83(CSRS)v7
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_NAD83_CSRS_V7)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::8255')
 
-Adopted by the Canadian federal government from 2017-05-01. Replaces NAD83(CSRS)v6. Longitudes are POSITIVE EAST.
+Adopted by the Canadian federal government from 2017-05-01 and the provincial government of Alberta. Replaces NAD83(CSRS)v6. Longitudes are POSITIVE EAST.
 
 NAD83(CSRS96)
 -------------
@@ -6072,37 +6104,101 @@ RGAF09 (lon-lat)
 
 Replaces RRAF 1991. See CRS code 5489 for system with axes in sequence lat-lon to be used for air, land and sea navigation and safety of life purposes.
 
-RGF93
------
+RGF93 v1
+--------
 
 | Used: France - onshore and offshore, mainland and Corsica.
 
 .. code-block:: php
 
-    Geographic2D::fromSRID(Geographic2D::EPSG_RGF93)
+    Geographic2D::fromSRID(Geographic2D::EPSG_RGF93_V1)
     Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::4171')
-    Geographic::fromSRID(Geographic2D::EPSG_RGF93)
+    Geographic::fromSRID(Geographic2D::EPSG_RGF93_V1)
     Geographic::fromSRID('urn:ogc:def:crs:EPSG::4171')
-    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_RGF93)
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_RGF93_V1)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4171')
 
-See CRS code 7084 for alternate system with axes reversed used by IGN for GIS purposes.
+See CRS code 7084 for alternate system with axes reversed used by IGN for GIS purposes. Replaced by RGF93 v2 (CRS code 9777) from 2010-06-18.
 
-RGF93 (lon-lat)
----------------
+RGF93 v1 (lon-lat)
+------------------
 
 | Used: France - onshore and offshore, mainland and Corsica.
 
 .. code-block:: php
 
-    Geographic2D::fromSRID(Geographic2D::EPSG_RGF93_LON_LAT)
+    Geographic2D::fromSRID(Geographic2D::EPSG_RGF93_V1_LON_LAT)
     Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::7084')
-    Geographic::fromSRID(Geographic2D::EPSG_RGF93_LON_LAT)
+    Geographic::fromSRID(Geographic2D::EPSG_RGF93_V1_LON_LAT)
     Geographic::fromSRID('urn:ogc:def:crs:EPSG::7084')
-    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_RGF93_LON_LAT)
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_RGF93_V1_LON_LAT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::7084')
 
-See CRS code 4171 for system with axes in sequence lat-lon to be used for air, land and sea navigation and safety of life purposes.
+See CRS code 4171 for system with axes in sequence lat-lon to be used for air, land and sea navigation and safety of life purposes. Replaced by RGF93 v2 (lon-lat) (CRS code 9779) from 2010-06-18.
+
+RGF93 v2
+--------
+
+| Used: France - onshore and offshore, mainland and Corsica.
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_RGF93_V2)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::9777')
+    Geographic::fromSRID(Geographic2D::EPSG_RGF93_V2)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::9777')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_RGF93_V2)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9777')
+
+Replaces RGF93 v1 (CRS code 4171) from 2010-06-18. Replaced by RGF93 v2b (CRS code 9782) from 2021-01-05. See CRS code 9779 for alternate system with axes reversed used by IGN for GIS purposes.
+
+RGF93 v2 (lon-lat)
+------------------
+
+| Used: France - onshore and offshore, mainland and Corsica.
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_RGF93_V2_LON_LAT)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::9779')
+    Geographic::fromSRID(Geographic2D::EPSG_RGF93_V2_LON_LAT)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::9779')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_RGF93_V2_LON_LAT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9779')
+
+Replaces RGF93 v1 (lon-lat) (code 7084) from 2010-06-18. Replaced by RGF93 v2b (lon-lat) (CRS code 9784) from 2021-01-05. See CRS code 9777 for system with axes in sequence lat-lon to be used for air, land and sea navigation and safety of life purposes.
+
+RGF93 v2b
+---------
+
+| Used: France - onshore and offshore, mainland and Corsica.
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_RGF93_V2B)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::9782')
+    Geographic::fromSRID(Geographic2D::EPSG_RGF93_V2B)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::9782')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_RGF93_V2B)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9782')
+
+Replaces RGF93 v2 (CRS code 9777) from 2021-01-05. See CRS code 9784 for alternate system with axes reversed used by IGN for GIS purposes.
+
+RGF93 v2b (lon-lat)
+-------------------
+
+| Used: France - onshore and offshore, mainland and Corsica.
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_RGF93_V2B_LON_LAT)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::9784')
+    Geographic::fromSRID(Geographic2D::EPSG_RGF93_V2B_LON_LAT)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::9784')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_RGF93_V2B_LON_LAT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9784')
+
+Replaces RGF93 v2 (lon-lat) (CRS code 9779) from 2021-01-05. See CRS code 9782 for system with axes in sequence lat-lon to be used for air, land and sea navigation and safety of life purposes.
 
 RGFG95
 ------
@@ -7612,7 +7708,7 @@ Uses Geodetic Datum of 1965 which should not be confused with the 1965 adjustmen
 TPEN11-IRF
 ----------
 
-| Used: UK - on or related to the Trans-Pennine rail route from Liverpool via Manchester to Bradford and Leeds.
+| Used: United Kingdom (UK) - on or related to the Trans-Pennine rail route from Liverpool via Manchester to Bradford and Leeds.
 
 .. code-block:: php
 

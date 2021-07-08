@@ -21,7 +21,7 @@ class Geocentric extends CoordinateReferenceSystem
     use GeocentricSRIDData;
     /**
      * ATRF2014
-     * Extent: Australia including Lord Howe Island, Macquarie Islands, Ashmore and Cartier Islands, Christmas Island,
+     * Extent: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island,
      * Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
      */
     public const EPSG_ATRF2014 = 'urn:ogc:def:crs:EPSG::9307';
@@ -52,12 +52,12 @@ class Geocentric extends CoordinateReferenceSystem
     public const EPSG_CGRS93 = 'urn:ogc:def:crs:EPSG::6309';
 
     /**
-     * CHTRF95
+     * CHTRS95
      * Extent: Liechtenstein; Switzerland.
      * Referenced to ETRS89 at epoch 1993.0. For CRS used for topographic and cadastral purposes see CH1903+ (CRS code
      * 4150).
      */
-    public const EPSG_CHTRF95 = 'urn:ogc:def:crs:EPSG::4932';
+    public const EPSG_CHTRS95 = 'urn:ogc:def:crs:EPSG::4932';
 
     /**
      * CIGD11
@@ -285,14 +285,14 @@ class Geocentric extends CoordinateReferenceSystem
 
     /**
      * GDA2020
-     * Extent: Australia including Lord Howe Island, Macquarie Islands, Ashmore and Cartier Islands, Christmas Island,
+     * Extent: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island,
      * Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
      */
     public const EPSG_GDA2020 = 'urn:ogc:def:crs:EPSG::7842';
 
     /**
      * GDA94
-     * Extent: Australia including Lord Howe Island, Macquarie Islands, Ashmore and Cartier Islands, Christmas Island,
+     * Extent: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island,
      * Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
      */
     public const EPSG_GDA94 = 'urn:ogc:def:crs:EPSG::4938';
@@ -867,7 +867,8 @@ class Geocentric extends CoordinateReferenceSystem
      * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
      * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
      * Yukon.
-     * Adopted by the Canadian federal government from 2017-05-01. Replaces NAD83(CSRS)v6.
+     * Adopted by the Canadian federal government from 2017-05-01 and the provincial government of Alberta. Replaces
+     * NAD83(CSRS)v6.
      */
     public const EPSG_NAD83_CSRS_V7 = 'urn:ogc:def:crs:EPSG::8253';
 
@@ -1091,10 +1092,25 @@ class Geocentric extends CoordinateReferenceSystem
     public const EPSG_RGAF09 = 'urn:ogc:def:crs:EPSG::5487';
 
     /**
-     * RGF93
+     * RGF93 v1
      * Extent: France - onshore and offshore, mainland and Corsica.
+     * Replaced by RGF93 v2 (CRS code 9775) from 2010-06-18.
      */
-    public const EPSG_RGF93 = 'urn:ogc:def:crs:EPSG::4964';
+    public const EPSG_RGF93_V1 = 'urn:ogc:def:crs:EPSG::4964';
+
+    /**
+     * RGF93 v2
+     * Extent: France - onshore and offshore, mainland and Corsica.
+     * Replaces RGF93 v1 (CRS code 4964) from 2010-06-18. Replaced by RGF93 v2b (CRS code 9780) from 2021-01-05.
+     */
+    public const EPSG_RGF93_V2 = 'urn:ogc:def:crs:EPSG::9775';
+
+    /**
+     * RGF93 v2b
+     * Extent: France - onshore and offshore, mainland and Corsica.
+     * Replaces RGF93 v2 (CRS code 9775) from 2021-01-05.
+     */
+    public const EPSG_RGF93_V2B = 'urn:ogc:def:crs:EPSG::9780';
 
     /**
      * RGFG95
@@ -1502,6 +1518,16 @@ class Geocentric extends CoordinateReferenceSystem
      * Extent: Yemen - onshore and offshore.
      */
     public const EPSG_YEMEN_NGN96 = 'urn:ogc:def:crs:EPSG::4980';
+
+    /**
+     * @deprecated use EPSG_CHTRS95 instead
+     */
+    public const EPSG_CHTRF95 = 'urn:ogc:def:crs:EPSG::4932';
+
+    /**
+     * @deprecated use EPSG_RGF93_V1 instead
+     */
+    public const EPSG_RGF93 = 'urn:ogc:def:crs:EPSG::4964';
 
     private static array $cachedObjects = [];
 

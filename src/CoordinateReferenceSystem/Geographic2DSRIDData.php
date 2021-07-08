@@ -240,7 +240,7 @@ trait Geographic2DSRIDData
             'extent_code' => ['1286'],
         ],
         'urn:ogc:def:crs:EPSG::4151' => [
-            'name' => 'CHTRF95',
+            'name' => 'CHTRS95',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
             'datum' => 'urn:ogc:def:datum:EPSG::6151',
             'extent_code' => ['1286'],
@@ -360,7 +360,7 @@ trait Geographic2DSRIDData
             'extent_code' => ['3448'],
         ],
         'urn:ogc:def:crs:EPSG::4171' => [
-            'name' => 'RGF93',
+            'name' => 'RGF93 v1',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
             'datum' => 'urn:ogc:def:datum:EPSG::6171',
             'extent_code' => ['1096'],
@@ -2508,7 +2508,7 @@ trait Geographic2DSRIDData
             'extent_code' => ['4246'],
         ],
         'urn:ogc:def:crs:EPSG::7084' => [
-            'name' => 'RGF93 (lon-lat)',
+            'name' => 'RGF93 v1 (lon-lat)',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6424',
             'datum' => 'urn:ogc:def:datum:EPSG::6171',
             'extent_code' => ['1096'],
@@ -3190,6 +3190,42 @@ trait Geographic2DSRIDData
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
             'datum' => 'urn:ogc:def:datum:EPSG::1308',
             'extent_code' => ['4620'],
+        ],
+        'urn:ogc:def:crs:EPSG::9758' => [
+            'name' => 'ECML14_NB-IRF',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
+            'datum' => 'urn:ogc:def:datum:EPSG::1310',
+            'extent_code' => ['4621'],
+        ],
+        'urn:ogc:def:crs:EPSG::9763' => [
+            'name' => 'EWR2-IRF',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
+            'datum' => 'urn:ogc:def:datum:EPSG::1311',
+            'extent_code' => ['4622'],
+        ],
+        'urn:ogc:def:crs:EPSG::9777' => [
+            'name' => 'RGF93 v2',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
+            'datum' => 'urn:ogc:def:datum:EPSG::1312',
+            'extent_code' => ['1096'],
+        ],
+        'urn:ogc:def:crs:EPSG::9779' => [
+            'name' => 'RGF93 v2 (lon-lat)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6424',
+            'datum' => 'urn:ogc:def:datum:EPSG::1312',
+            'extent_code' => ['1096'],
+        ],
+        'urn:ogc:def:crs:EPSG::9782' => [
+            'name' => 'RGF93 v2b',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
+            'datum' => 'urn:ogc:def:datum:EPSG::1313',
+            'extent_code' => ['1096'],
+        ],
+        'urn:ogc:def:crs:EPSG::9784' => [
+            'name' => 'RGF93 v2b (lon-lat)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6424',
+            'datum' => 'urn:ogc:def:datum:EPSG::1313',
+            'extent_code' => ['1096'],
         ],
     ];
 }

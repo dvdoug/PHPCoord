@@ -61430,6 +61430,290 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9760' => [
+            'Latitude of natural origin' => [
+                'value' => 55.03,
+                'uom' => 'urn:ogc:def:uom:EPSG::9110',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => -1.33,
+                'uom' => 'urn:ogc:def:uom:EPSG::9110',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 112242.8512,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 402313.7432,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9765' => [
+            'Latitude of natural origin' => [
+                'value' => 51.57,
+                'uom' => 'urn:ogc:def:uom:EPSG::9110',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => -0.54,
+                'uom' => 'urn:ogc:def:uom:EPSG::9110',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 192519.9715,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 146942.6806,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9768' => [
+            'X-axis translation' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => true,
+            ],
+            'Y-axis translation' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => true,
+            ],
+            'Z-axis translation' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => true,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9769' => [
+            'X-axis translation' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => true,
+            ],
+            'Y-axis translation' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => true,
+            ],
+            'Z-axis translation' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => true,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9770' => [
+            'X-axis translation' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => true,
+            ],
+            'Y-axis translation' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => true,
+            ],
+            'Z-axis translation' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => true,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9771' => [
+            'X-axis translation' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => true,
+            ],
+            'Y-axis translation' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => true,
+            ],
+            'Z-axis translation' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => true,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9772' => [
+            'X-axis translation' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => true,
+            ],
+            'Y-axis translation' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => true,
+            ],
+            'Z-axis translation' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => true,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9773' => [
+            'X-axis translation' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => true,
+            ],
+            'Y-axis translation' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => true,
+            ],
+            'Z-axis translation' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => true,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9774' => [
+            'X-axis translation' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => true,
+            ],
+            'Y-axis translation' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => true,
+            ],
+            'Z-axis translation' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => true,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9788' => [
+            'X-axis translation' => [
+                'value' => -0.017,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => true,
+            ],
+            'Y-axis translation' => [
+                'value' => 0.058,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => true,
+            ],
+            'Z-axis translation' => [
+                'value' => 0.008999999999999999,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => true,
+            ],
+            'X-axis rotation' => [
+                'value' => 0.001305,
+                'uom' => 'urn:ogc:def:uom:EPSG::9104',
+                'reverses' => true,
+            ],
+            'Y-axis rotation' => [
+                'value' => 0.00068,
+                'uom' => 'urn:ogc:def:uom:EPSG::9104',
+                'reverses' => true,
+            ],
+            'Z-axis rotation' => [
+                'value' => -0.001467,
+                'uom' => 'urn:ogc:def:uom:EPSG::9104',
+                'reverses' => true,
+            ],
+            'Scale difference' => [
+                'value' => -0.00072,
+                'uom' => 'urn:ogc:def:uom:EPSG::9202',
+                'reverses' => true,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9789' => [
+            'X-axis translation' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => true,
+            ],
+            'Y-axis translation' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => true,
+            ],
+            'Z-axis translation' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => true,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9790' => [
+            'X-axis translation' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => true,
+            ],
+            'Y-axis translation' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => true,
+            ],
+            'Z-axis translation' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => true,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9791' => [
+            'X-axis translation' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => true,
+            ],
+            'Y-axis translation' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => true,
+            ],
+            'Z-axis translation' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => true,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9792' => [
+            'X-axis translation' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => true,
+            ],
+            'Y-axis translation' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => true,
+            ],
+            'Z-axis translation' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => true,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9795' => [
+            'Latitude and longitude difference file' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2NAD831986NAD83CSRS2010AlbertaProvider',
+            ],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::10085' => [
             'X-axis translation' => [
                 'value' => -61.0,
@@ -88389,6 +88673,1572 @@ class CoordinateOperationParams
                 'reverses' => false,
             ],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::16907' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 21.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 7250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16908' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 24.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 8250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16909' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 27.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 9250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16910' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 30.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 10250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16911' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 33.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 11250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16912' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 36.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 12250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16913' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 39.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 13250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16914' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 42.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 14250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16915' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 45.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 15250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16916' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 48.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 16250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16917' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 51.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 17250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16918' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 54.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 18250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16919' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 57.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 19250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16920' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 60.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 20250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16921' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 63.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 21250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16922' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 66.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 22250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16923' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 69.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 23250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16924' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 72.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 24250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16925' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 75.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 25250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16926' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 78.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 26250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16927' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 81.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 27250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16928' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 84.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 28250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16929' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 87.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 29250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16930' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 90.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 30250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16931' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 93.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 31250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16932' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 96.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 32250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16933' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 99.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 33250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16934' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 102.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 34250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16935' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 105.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 35250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16936' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 108.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 36250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16937' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 111.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 37250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16938' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 114.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 38250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16939' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 117.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 39250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16940' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 120.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 40250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16941' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 123.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 41250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16942' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 126.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 42250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16943' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 129.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 43250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16944' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 132.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 44250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16945' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 135.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 45250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16946' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 138.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 46250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16947' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 141.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 47250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16948' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 144.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 48250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16949' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 147.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 49250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16950' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 150.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 50250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16951' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 153.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 51250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16952' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 156.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 52250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16953' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 159.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 53250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16954' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 162.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 54250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16955' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 165.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 55250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16956' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 168.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 56250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16957' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 171.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 57250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16958' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 174.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 58250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16959' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 177.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 59250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16960' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 180.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 60250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16961' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => -177.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 61250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16962' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => -174.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 62250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16963' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => -171.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 63250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16964' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => -168.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 64250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::17001' => [
             'Latitude of natural origin' => [
                 'value' => 0.0,
@@ -88461,6 +90311,1572 @@ class CoordinateOperationParams
             ],
             'False easting' => [
                 'value' => 500000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17107' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 21.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17108' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 24.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17109' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 27.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17110' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 30.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17111' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 33.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17112' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 36.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17113' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 39.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17114' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 42.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17115' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 45.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17116' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 48.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17117' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 51.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17118' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 54.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17119' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 57.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17120' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 60.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17121' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 63.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17122' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 66.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17123' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 69.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17124' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 72.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17125' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 75.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17126' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 78.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17127' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 81.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17128' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 84.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17129' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 87.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17130' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 90.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17131' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 93.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17132' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 96.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17133' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 99.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17134' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 102.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17135' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 105.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17136' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 108.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17137' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 111.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17138' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 114.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17139' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 117.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17140' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 120.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17141' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 123.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17142' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 126.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17143' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 129.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17144' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 132.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17145' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 135.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17146' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 138.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17147' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 141.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17148' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 144.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17149' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 147.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17150' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 150.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17151' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 153.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17152' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 156.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17153' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 159.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17154' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 162.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17155' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 165.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17156' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 168.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17157' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 171.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17158' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 174.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17159' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 177.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17160' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => 180.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17161' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => -177.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17162' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => -174.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17163' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => -171.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'False northing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17164' => [
+            'Latitude of natural origin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Longitude of natural origin' => [
+                'value' => -168.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'Scale factor at natural origin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'False easting' => [
+                'value' => 250000.0,
                 'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 'reverses' => false,
             ],

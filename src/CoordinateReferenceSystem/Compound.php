@@ -16,7 +16,7 @@ class Compound extends CoordinateReferenceSystem
     use CompoundSRIDData;
     /**
      * AbInvA96_2020 Grid + ODN height
-     * Extent: UK - on or related to the A96 highway from Aberdeen to Inverness.
+     * Extent: United Kingdom (UK) - on or related to the A96 highway from Aberdeen to Inverness.
      */
     public const EPSG_ABINVA96_2020_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::9388';
 
@@ -89,10 +89,17 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_DB_REF_3_DEGREE_GAUSS_KRUGER_ZONE_5_E_N_PLUS_DHHN92_HEIGHT = 'urn:ogc:def:crs:EPSG::5835';
 
     /**
+     * ECML14_NB Grid + ODN height
+     * Extent: United Kingdom (UK) - on or related to rail routes from Newcastle Central to Ashington via Benton North
+     * Junction, and the section from Bedlington to Morpeth.
+     */
+    public const EPSG_ECML14_NB_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::9762';
+
+    /**
      * EOS21 Grid + ODN height
-     * Extent: On or related to the complex of rail routes in the East of Scotland, incorporating the route from
-     * Tweedbank through the Borders to Edinburgh; the line from Edinburgh to Aberdeen; routes via Kirkaldy and
-     * Cowdenbeath; and routes via Leuchars and Perth to Dundee.
+     * Extent: United Kingdom (UK) - on or related to the complex of rail routes in the East of Scotland, incorporating
+     * the route from Tweedbank through the Borders to Edinburgh; the line from Edinburgh to Aberdeen; routes via
+     * Kirkaldy and Cowdenbeath; and routes via Leuchars and Perth to Dundee.
      */
     public const EPSG_EOS21_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::9742';
 
@@ -822,6 +829,13 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_ETRS89_UTM_ZONE_36N_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6176';
 
     /**
+     * EWR2 Grid + ODN height
+     * Extent: United Kingdom (UK) - on or related to East West Rail (Phase 2) routes from Oxford to Bicester,
+     * Bletchley and Bedford, and from Claydon Junction to Aylesbury and Princes Risborough.
+     */
+    public const EPSG_EWR2_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::9767';
+
+    /**
      * FEH2010 + FCSVR10 height
      * Extent: Fehmarnbelt area of Denmark and Germany.
      */
@@ -835,8 +849,8 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * GBK19 Grid + ODN height
-     * Extent: UK - on or related to the rail route from Glasgow via Barrhead to Kilmarnock and the branch to East
-     * Kilbride.
+     * Extent: United Kingdom (UK) - on or related to the rail route from Glasgow to Kilmarnock via Barrhead and the
+     * branch to East Kilbride.
      */
     public const EPSG_GBK19_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::9457';
 
@@ -850,7 +864,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * GDA2020 + AVWS height
-     * Extent: Australia including Lord Howe Island, Macquarie Islands, Ashmore and Cartier Islands, Christmas Island,
+     * Extent: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island,
      * Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
      */
     public const EPSG_GDA2020_PLUS_AVWS_HEIGHT = 'urn:ogc:def:crs:EPSG::9462';
@@ -879,7 +893,8 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * HS2 Survey Grid + HS2-VRF height
-     * Extent: UK - HS2 phases 1 and 2a railway corridor from London to Birmingham, Lichfield and Crewe.
+     * Extent: United Kingdom (UK) - HS2 phases 1 and 2a railway corridor from London to Birmingham, Lichfield and
+     * Crewe.
      * Realized by use of HS2TN15 transformation and HS2GM15 geoid model from ETRS89 OSNet v2009.
      */
     public const EPSG_HS2_SURVEY_GRID_PLUS_HS2_VRF_HEIGHT = 'urn:ogc:def:crs:EPSG::9306';
@@ -926,7 +941,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * MML07 Grid + ODN height
-     * Extent: UK - on or related to the Midland Mainline rail route from Sheffield to London.
+     * Extent: United Kingdom (UK) - on or related to the Midland Mainline rail route from Sheffield to London.
      */
     public const EPSG_MML07_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::9374';
 
@@ -2256,28 +2271,34 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_RGAF09_PLUS_MARTINIQUE_1987_HEIGHT = 'urn:ogc:def:crs:EPSG::9537';
 
     /**
-     * RGF93 + NGF-IGN69 height
+     * RGF93 v1 / Lambert-93 + NGF-IGN69 height
      * Extent: France - mainland onshore.
      */
-    public const EPSG_RGF93_PLUS_NGF_IGN69_HEIGHT = 'urn:ogc:def:crs:EPSG::9538';
+    public const EPSG_RGF93_V1_LAMBERT_93_PLUS_NGF_IGN69_HEIGHT = 'urn:ogc:def:crs:EPSG::5698';
 
     /**
-     * RGF93 + NGF-IGN78 height
+     * RGF93 v1 / Lambert-93 + NGF-IGN78 height
      * Extent: France - Corsica onshore.
      */
-    public const EPSG_RGF93_PLUS_NGF_IGN78_HEIGHT = 'urn:ogc:def:crs:EPSG::9539';
+    public const EPSG_RGF93_V1_LAMBERT_93_PLUS_NGF_IGN78_HEIGHT = 'urn:ogc:def:crs:EPSG::5699';
 
     /**
-     * RGF93 / Lambert-93 + NGF-IGN69 height
+     * RGF93 v2 + NGF-IGN69 height
      * Extent: France - mainland onshore.
      */
-    public const EPSG_RGF93_LAMBERT_93_PLUS_NGF_IGN69_HEIGHT = 'urn:ogc:def:crs:EPSG::5698';
+    public const EPSG_RGF93_V2_PLUS_NGF_IGN69_HEIGHT = 'urn:ogc:def:crs:EPSG::9538';
 
     /**
-     * RGF93 / Lambert-93 + NGF-IGN78 height
+     * RGF93 v2 + NGF-IGN78 height
      * Extent: France - Corsica onshore.
      */
-    public const EPSG_RGF93_LAMBERT_93_PLUS_NGF_IGN78_HEIGHT = 'urn:ogc:def:crs:EPSG::5699';
+    public const EPSG_RGF93_V2_PLUS_NGF_IGN78_HEIGHT = 'urn:ogc:def:crs:EPSG::9539';
+
+    /**
+     * RGF93 v2b + NGF-IGN69 height
+     * Extent: France - mainland onshore.
+     */
+    public const EPSG_RGF93_V2B_PLUS_NGF_IGN69_HEIGHT = 'urn:ogc:def:crs:EPSG::9785';
 
     /**
      * RGFG95 + NGG1977 height
@@ -2443,7 +2464,8 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * TPEN11 Grid + ODN height
-     * Extent: UK - on or related to the Trans-Pennine rail route from Liverpool via Manchester to Bradford and Leeds.
+     * Extent: United Kingdom (UK) - on or related to the Trans-Pennine rail route from Liverpool via Manchester to
+     * Bradford and Leeds.
      */
     public const EPSG_TPEN11_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::9368';
 
@@ -2497,6 +2519,26 @@ class Compound extends CoordinateReferenceSystem
      * @deprecated use EPSG_BD72_BELGIAN_LAMBERT_72_PLUS_OSTEND_HEIGHT instead
      */
     public const EPSG_BELGE_1972_BELGIAN_LAMBERT_72_PLUS_OSTEND_HEIGHT = 'urn:ogc:def:crs:EPSG::6190';
+
+    /**
+     * @deprecated use EPSG_RGF93_V1_LAMBERT_93_PLUS_NGF_IGN69_HEIGHT instead
+     */
+    public const EPSG_RGF93_LAMBERT_93_PLUS_NGF_IGN69_HEIGHT = 'urn:ogc:def:crs:EPSG::5698';
+
+    /**
+     * @deprecated use EPSG_RGF93_V1_LAMBERT_93_PLUS_NGF_IGN78_HEIGHT instead
+     */
+    public const EPSG_RGF93_LAMBERT_93_PLUS_NGF_IGN78_HEIGHT = 'urn:ogc:def:crs:EPSG::5699';
+
+    /**
+     * @deprecated use EPSG_RGF93_V2_PLUS_NGF_IGN69_HEIGHT instead
+     */
+    public const EPSG_RGF93_PLUS_NGF_IGN69_HEIGHT = 'urn:ogc:def:crs:EPSG::9538';
+
+    /**
+     * @deprecated use EPSG_RGF93_V2_PLUS_NGF_IGN78_HEIGHT instead
+     */
+    public const EPSG_RGF93_PLUS_NGF_IGN78_HEIGHT = 'urn:ogc:def:crs:EPSG::9539';
 
     private static array $cachedObjects = [];
 

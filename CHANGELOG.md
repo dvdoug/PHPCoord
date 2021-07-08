@@ -1,6 +1,8 @@
 # Changelog
 
 ## [Unreleased]
+### Changed
+- Updates to data for Canada, Costa Rica, France, French Southern Territories, Kyrgistan, Liechtenstein, Poland, Russia, Switzerland, Tonga, UK, USA, Wallis and Futuna
 
 ## [4.4.0] - 2021-06-24
 ### Added

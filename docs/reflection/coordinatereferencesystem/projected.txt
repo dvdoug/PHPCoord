@@ -359,7 +359,7 @@ In use from 1979. To be phased out in late 1990's.
 AbInvA96_2020 Grid
 ------------------
 
-| Used: UK - on or related to the A96 highway from Aberdeen to Inverness.
+| Used: United Kingdom (UK) - on or related to the A96 highway from Aberdeen to Inverness.
 
 .. code-block:: php
 
@@ -4970,6 +4970,20 @@ Douala 1948 / AEF west
 
 Replaced by Manoca 1962 / UTM zone 32N (code 2215).
 
+ECML14_NB Grid
+--------------
+
+| Used: United Kingdom (UK) - on or related to rail routes from Newcastle Central to Ashington via Benton North Junction, and the section from Bedlington to Morpeth.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_ECML14_NB_GRID)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9761')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_ECML14_NB_GRID)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9761')
+
+The CRS's definition through transformation ETRS89 to ECML14_NB-IRF (1) (code 9759) and map projection ECML14_NB-TM (code 9760) emulates the ECML14_NB Snake projection applied to ETRS89 as realised through OSNet 2009 CORS.
+
 ED50 / 3-degree Gauss-Kruger zone 10
 ------------------------------------
 
@@ -5626,7 +5640,7 @@ ELD79 / UTM zone 35N
 EOS21 Grid
 ----------
 
-| Used: On or related to the complex of rail routes in the East of Scotland, incorporating the route from Tweedbank through the Borders to Edinburgh; the line from Edinburgh to Aberdeen; routes via Kirkaldy and Cowdenbeath; and routes via Leuchars and Perth to Dundee. 
+| Used: United Kingdom (UK) - on or related to the complex of rail routes in the East of Scotland, incorporating the route from Tweedbank through the Borders to Edinburgh; the line from Edinburgh to Aberdeen; routes via Kirkaldy and Cowdenbeath; and routes via Leuchars and Perth to Dundee. 
 
 .. code-block:: php
 
@@ -7251,6 +7265,20 @@ ETRS89-extended / LCC Europe
 
 Use formally limited to ETRS89 area of continental Europe but extended for pan-European analysis at small scales. ETRS89 / UTM used for conformal mapping at scales larger than 1:500,000. ETRS89 / LAEA used for statistical applications at any scale.
 
+EWR2 Grid
+---------
+
+| Used: United Kingdom (UK) - on or related to East West Rail (Phase 2) routes from Oxford to Bicester, Bletchley and Bedford, and from Claydon Junction to Aylesbury and Princes Risborough.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_EWR2_GRID)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9766')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_EWR2_GRID)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9766')
+
+The CRS's definition through transformation ETRS89 to EWR2-IRF (1) (code 9764) and map projection EWR2-TM (code 9765) emulates the EWR2 Snake projection applied to ETRS89 as realised through OSNet 2009 CORS.
+
 Egypt 1907 / Blue Belt
 ----------------------
 
@@ -7502,7 +7530,7 @@ Replaced by RRAF 1991 / UTM zone 20N (CRS code 4559).
 GBK19 Grid
 ----------
 
-| Used: UK - on or related to the rail route from Glasgow via Barrhead to Kilmarnock and the branch to East Kilbride.
+| Used: United Kingdom (UK) - on or related to the rail route from Glasgow to Kilmarnock via Barrhead and the branch to East Kilbride.
 
 .. code-block:: php
 
@@ -7907,7 +7935,7 @@ GDA2020 / MGA zone 56
 GDA2020 / MGA zone 57
 ---------------------
 
-| Used: Australia including Lord Howe Island and Macquarie Islands - onshore and offshore between 156°E and 162°E.
+| Used: Australia including Lord Howe Island and Macquarie Island - onshore and offshore between 156°E and 162°E.
 
 .. code-block:: php
 
@@ -8223,7 +8251,7 @@ GDA94 / MGA zone 56
 GDA94 / MGA zone 57
 -------------------
 
-| Used: Australia including Lord Howe Island and Macquarie Islands - onshore and offshore between 156°E and 162°E.
+| Used: Australia including Lord Howe Island and Macquarie Island - onshore and offshore between 156°E and 162°E.
 
 .. code-block:: php
 
@@ -8896,6 +8924,1630 @@ GR96 / UTM zone 29N
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_GR96_UTM_ZONE_29N)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3189')
 
+
+GSK-2011 / GSK 3GK CM 102E
+--------------------------
+
+| Used: Russian Federation - onshore between 100°30'E and 103°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_102E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21334')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_102E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21334')
+
+Truncated form of GSK-2011 / GSK 3GK zone 34 (code 21234). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK CM 105E
+--------------------------
+
+| Used: Russian Federation - onshore between 103°30'E and 106°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_105E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21335')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_105E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21335')
+
+Truncated form of GSK-2011 / GSK 3GK zone 35 (code 21235). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK CM 108E
+--------------------------
+
+| Used: Russian Federation - onshore between 106°30'E and 109°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_108E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21336')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_108E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21336')
+
+Truncated form of GSK-2011 / GSK 3GK zone 36 (code 21226). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK CM 111E
+--------------------------
+
+| Used: Russian Federation - onshore between 109°30'E and 112°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_111E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21337')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_111E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21337')
+
+Truncated form of GSK-2011 / GSK 3GK zone 37 (code 21237). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK CM 114E
+--------------------------
+
+| Used: Russian Federation - onshore between 112°30'E and 115°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_114E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21338')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_114E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21338')
+
+Truncated form of GSK-2011 / GSK 3GK zone 38 (code 21238). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK CM 117E
+--------------------------
+
+| Used: Russian Federation - onshore between 115°30'E and 118°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_117E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21339')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_117E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21339')
+
+Truncated form of GSK-2011 / GSK 3GK zone 39 (code 21239). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK CM 120E
+--------------------------
+
+| Used: Russian Federation - onshore between 118°30'E and 121°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_120E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21340')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_120E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21340')
+
+Truncated form of GSK-2011 / GSK 3GK zone 40 (code 21240). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK CM 123E
+--------------------------
+
+| Used: Russian Federation - onshore between 121°30'E and 124°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_123E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21341')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_123E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21341')
+
+Truncated form of GSK-2011 / GSK 3GK zone 41 (code 21241). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK CM 126E
+--------------------------
+
+| Used: Russian Federation - onshore between 124°30'E and 127°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_126E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21342')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_126E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21342')
+
+Truncated form of GSK-2011 / GSK 3GK zone 42 (code 21242). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK CM 129E
+--------------------------
+
+| Used: Russian Federation - onshore between 127°30'E and 130°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_129E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21343')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_129E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21343')
+
+Truncated form of GSK-2011 / GSK 3GK zone 43 (code 21243). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK CM 132E
+--------------------------
+
+| Used: Russian Federation - onshore between 130°30'E and 133°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_132E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21344')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_132E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21344')
+
+Truncated form of GSK-2011 / GSK 3GK zone 44 (code 21244). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK CM 135E
+--------------------------
+
+| Used: Russian Federation - onshore between 133°30'E and 136°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_135E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21345')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_135E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21345')
+
+Truncated form of GSK-2011 / GSK 3GK zone 45 (code 21245). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK CM 138E
+--------------------------
+
+| Used: Russian Federation - onshore between 136°30'E and 139°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_138E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21346')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_138E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21346')
+
+Truncated form of GSK-2011 / GSK 3GK zone 46 (code 21246). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK CM 141E
+--------------------------
+
+| Used: Russian Federation - onshore between 139°30'E and 142°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_141E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21347')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_141E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21347')
+
+Truncated form of GSK-2011 / GSK 3GK zone 47 (code 21247). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK CM 144E
+--------------------------
+
+| Used: Russian Federation - onshore between 142°30'E and 145°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_144E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21348')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_144E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21348')
+
+Truncated form of GSK-2011 / GSK 3GK zone 48 (code 21248). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK CM 147E
+--------------------------
+
+| Used: Russian Federation - onshore between 145°30'E and 148°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_147E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21349')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_147E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21349')
+
+Truncated form of GSK-2011 / GSK 3GK zone 49 (code 21249). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK CM 150E
+--------------------------
+
+| Used: Russian Federation - onshore between 148°30'E and 151°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_150E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21350')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_150E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21350')
+
+Truncated form of GSK-2011 / GSK 3GK zone 50 (code 21250). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK CM 153E
+--------------------------
+
+| Used: Russian Federation - onshore between 151°30'E and 154°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_153E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21351')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_153E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21351')
+
+Truncated form of GSK-2011 / GSK 3GK zone 51 (code 21251). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK CM 156E
+--------------------------
+
+| Used: Russian Federation - onshore between 154°30'E and 157°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_156E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21352')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_156E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21352')
+
+Truncated form of GSK-2011 / GSK 3GK zone 52 (code 21252). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK CM 159E
+--------------------------
+
+| Used: Russian Federation - onshore between 157°30'E and 160°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_159E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21353')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_159E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21353')
+
+Truncated form of GSK-2011 / GSK 3GK zone 53 (code 21253). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK CM 162E
+--------------------------
+
+| Used: Russian Federation - onshore between 160°30'E and 163°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_162E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21354')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_162E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21354')
+
+Truncated form of GSK-2011 / GSK 3GK zone 54 (code 21254). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK CM 165E
+--------------------------
+
+| Used: Russian Federation - onshore between 163°30'E and 166°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_165E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21355')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_165E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21355')
+
+Truncated form of GSK-2011 / GSK 3GK zone 55 (code 21255). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK CM 168E
+--------------------------
+
+| Used: Russian Federation - onshore between 166°30'E and 169°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_168E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21356')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_168E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21356')
+
+Truncated form of GSK-2011 / GSK 3GK zone 56 (code 21256). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK CM 168W
+--------------------------
+
+| Used: Russian Federation - onshore between 169°30'W and 166°30'W.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_168W)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21364')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_168W)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21364')
+
+Truncated form of GSK-2011 / GSK 3GK zone 64 (code 21264). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK CM 171E
+--------------------------
+
+| Used: Russian Federation - onshore between 169°30'E and 172°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_171E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21357')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_171E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21357')
+
+Truncated form of GSK-2011 / GSK 3GK zone 57 (code 21257). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK CM 171W
+--------------------------
+
+| Used: Russian Federation - onshore between 172°30'W and 169°30'W.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_171W)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21363')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_171W)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21363')
+
+Truncated form of GSK-2011 / GSK 3GK zone 63 (code 21263). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK CM 174E
+--------------------------
+
+| Used: Russian Federation - onshore between 172°30'E and 175°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_174E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21358')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_174E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21358')
+
+Truncated form of GSK-2011 / GSK 3GK zone 58 (code 21258). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK CM 174W
+--------------------------
+
+| Used: Russian Federation - onshore between 175°30'W and 172°30'W.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_174W)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21362')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_174W)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21362')
+
+Truncated form of GSK-2011 / GSK 3GK zone 62 (code 21262). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK CM 177E
+--------------------------
+
+| Used: Russian Federation - onshore between 175°30'E and 178°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_177E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21359')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_177E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21359')
+
+Truncated form of GSK-2011 / GSK 3GK zone 59 (code 21259). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK CM 177W
+--------------------------
+
+| Used: Russian Federation - onshore between 178°30'W and 175°30'W.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_177W)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21361')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_177W)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21361')
+
+Truncated form of GSK-2011 / GSK 3GK zone 61 (code 21261). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK CM 180E
+--------------------------
+
+| Used: Russian Federation - onshore between 178°30'E and 178°30'W.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_180E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21360')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_180E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21360')
+
+Truncated form of GSK-2011 / GSK 3GK zone 60 (code 21260). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK CM 21E
+-------------------------
+
+| Used: Russian Federation - Kaliningrad - onshore between 19°30'E and 22°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_21E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21307')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_21E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21307')
+
+Truncated form of GSK-2011 / GSK 3GK zone 7 (code 21207). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK CM 24E
+-------------------------
+
+| Used: Russian Federation - onshore between 22°30'E and 25°30'E - Kaliningrad.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_24E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21308')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_24E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21308')
+
+Truncated form of GSK-2011 / GSK 3GK zone 8 (code 21208). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK CM 27E
+-------------------------
+
+| Used: Russian Federation - onshore between 25°30'E and 28°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_27E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21309')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_27E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21309')
+
+Truncated form of GSK-2011 / GSK 3GK zone 9 (code 21209). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK CM 30E
+-------------------------
+
+| Used: Russian Federation - onshore between 28°30'E and 31°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_30E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21310')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_30E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21310')
+
+Truncated form of GSK-2011 / GSK 3GK zone 10 (code 21210). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK CM 33E
+-------------------------
+
+| Used: Russian Federation - onshore between 31°30'E and 34°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_33E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21311')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_33E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21311')
+
+Truncated form of GSK-2011 / GSK 3GK zone 11 (code 21211). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK CM 36E
+-------------------------
+
+| Used: Russian Federation - onshore between 34°30'E and 37°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_36E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21312')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_36E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21312')
+
+Truncated form of GSK-2011 / GSK 3GK zone 12 (code 21212). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK CM 39E
+-------------------------
+
+| Used: Russian Federation - onshore between 37°30'E and 40°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_39E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21313')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_39E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21313')
+
+Truncated form of GSK-2011 / GSK 3GK zone 13 (code 21213). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK CM 42E
+-------------------------
+
+| Used: Russian Federation - onshore between 40°30'E and 43°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_42E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21314')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_42E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21314')
+
+Truncated form of GSK-2011 / GSK 3GK zone 14 (code 21214). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK CM 45E
+-------------------------
+
+| Used: Russian Federation - onshore between 43°30'E and 46°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_45E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21315')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_45E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21315')
+
+Truncated form of GSK-2011 / GSK 3GK zone 15 (code 21215). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK CM 48E
+-------------------------
+
+| Used: Russian Federation - onshore between 46°30'E and 49°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_48E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21316')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_48E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21316')
+
+Truncated form of GSK-2011 / GSK 3GK zone 16 (code 21216). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK CM 51E
+-------------------------
+
+| Used: Russian Federation - onshore between 49°30'E and 52°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_51E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21317')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_51E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21317')
+
+Truncated form of GSK-2011 / GSK 3GK zone 17 (code 21217). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK CM 54E
+-------------------------
+
+| Used: Russian Federation - onshore between 52°30'E and 55°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_54E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21318')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_54E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21318')
+
+Truncated form of GSK-2011 / GSK 3GK zone 18 (code 21218). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK CM 57E
+-------------------------
+
+| Used: Russian Federation - onshore between 55°30'E and 58°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_57E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21319')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_57E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21319')
+
+Truncated form of GSK-2011 / GSK 3GK zone 19 (code 21219). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK CM 60E
+-------------------------
+
+| Used: Russian Federation - onshore between 58°30'E and 61°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_60E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21320')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_60E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21320')
+
+Truncated form of GSK-2011 / GSK 3GK zone 20 (code 21220). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK CM 63E
+-------------------------
+
+| Used: Russian Federation - onshore between 61°30'E and 64°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_63E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21321')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_63E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21321')
+
+Truncated form of GSK-2011 / GSK 3GK zone 21 (code 21221). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK CM 66E
+-------------------------
+
+| Used: Russian Federation - onshore between 64°30'E and 67°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_66E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21322')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_66E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21322')
+
+Truncated form of GSK-2011 / GSK 3GK zone 22 (code 21222). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK CM 69E
+-------------------------
+
+| Used: Russian Federation - onshore between 67°30'E and 70°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_69E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21323')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_69E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21323')
+
+Truncated form of GSK-2011 / GSK 3GK zone 23 (code 21223). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK CM 72E
+-------------------------
+
+| Used: Russian Federation - onshore between 70°30'E and 73°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_72E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21324')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_72E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21324')
+
+Truncated form of GSK-2011 / GSK 3GK zone 24 (code 21224). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK CM 75E
+-------------------------
+
+| Used: Russian Federation - onshore between 73°30'E and 76°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_75E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21325')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_75E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21325')
+
+Truncated form of GSK-2011 / GSK 3GK zone 25 (code 21225). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK CM 78E
+-------------------------
+
+| Used: Russian Federation - onshore between 76°30'E and 79°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_78E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21326')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_78E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21326')
+
+Truncated form of GSK-2011 / GSK 3GK zone 26 (code 21226). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK CM 81E
+-------------------------
+
+| Used: Russian Federation - onshore between 79°30'E and 82°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_81E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21327')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_81E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21327')
+
+Truncated form of GSK-2011 / GSK 3GK zone 27 (code 21227). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK CM 84E
+-------------------------
+
+| Used: Russian Federation - onshore between 82°30'E and 85°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_84E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21328')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_84E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21328')
+
+Truncated form of GSK-2011 / GSK 3GK zone 28 (code 21228). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK CM 87E
+-------------------------
+
+| Used: Russian Federation - onshore between 85°30'E and 88°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_87E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21329')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_87E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21329')
+
+Truncated form of GSK-2011 / GSK 3GK zone 29 (code 21229). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK CM 90E
+-------------------------
+
+| Used: Russian Federation - onshore between 88°30'E and 91°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_90E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21330')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_90E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21330')
+
+Truncated form of GSK-2011 / GSK 3GK zone 30 (code 21230). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK CM 93E
+-------------------------
+
+| Used: Russian Federation - onshore between 91°30'E and 94°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_93E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21331')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_93E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21331')
+
+Truncated form of GSK-2011 / GSK 3GK zone 31 (code 21231). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK CM 96E
+-------------------------
+
+| Used: Russian Federation - onshore between 94°30'E and 97°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_96E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21332')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_96E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21332')
+
+Truncated form of GSK-2011 / GSK 3GK zone 32 (code 21232). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK CM 99E
+-------------------------
+
+| Used: Russian Federation - onshore between 97°30'E and 100°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_99E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21333')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_CM_99E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21333')
+
+Truncated form of GSK-2011 / GSK 3GK zone 33 (code 21233). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 10
+--------------------------
+
+| Used: Russian Federation - onshore between 28°30'E and 31°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_10)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21210')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_10)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21210')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 30E (code 21310). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 11
+--------------------------
+
+| Used: Russian Federation - onshore between 31°30'E and 34°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_11)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21211')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_11)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21211')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 33E (code 21311). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 12
+--------------------------
+
+| Used: Russian Federation - onshore between 34°30'E and 37°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_12)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21212')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_12)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21212')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 36E (code 21312). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 13
+--------------------------
+
+| Used: Russian Federation - onshore between 37°30'E and 40°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_13)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21213')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_13)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21213')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 39E (code 21313). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 14
+--------------------------
+
+| Used: Russian Federation - onshore between 40°30'E and 43°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_14)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21214')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_14)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21214')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 42E (code 21314). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 15
+--------------------------
+
+| Used: Russian Federation - onshore between 43°30'E and 46°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_15)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21215')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_15)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21215')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 45E (code 21315). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 16
+--------------------------
+
+| Used: Russian Federation - onshore between 46°30'E and 49°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_16)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21216')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_16)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21216')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 48E (code 21316). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 17
+--------------------------
+
+| Used: Russian Federation - onshore between 49°30'E and 52°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_17)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21217')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_17)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21217')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 51E (code 21317). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 18
+--------------------------
+
+| Used: Russian Federation - onshore between 52°30'E and 55°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_18)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21218')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_18)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21218')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 54E (code 21318). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 19
+--------------------------
+
+| Used: Russian Federation - onshore between 55°30'E and 58°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_19)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21219')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_19)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21219')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 57E (code 21319). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 20
+--------------------------
+
+| Used: Russian Federation - onshore between 58°30'E and 61°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_20)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21220')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_20)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21220')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 60E (code 21320). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 21
+--------------------------
+
+| Used: Russian Federation - onshore between 61°30'E and 64°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_21)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21221')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_21)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21221')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 63E (code 21321). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 22
+--------------------------
+
+| Used: Russian Federation - onshore between 64°30'E and 67°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_22)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21222')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_22)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21222')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 66E (code 21322). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 23
+--------------------------
+
+| Used: Russian Federation - onshore between 67°30'E and 70°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_23)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21223')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_23)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21223')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 69E (code 21323). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 24
+--------------------------
+
+| Used: Russian Federation - onshore between 70°30'E and 73°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_24)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21224')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_24)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21224')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 72E (code 21324). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 25
+--------------------------
+
+| Used: Russian Federation - onshore between 73°30'E and 76°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_25)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21225')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_25)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21225')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 75E (code 21325). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 26
+--------------------------
+
+| Used: Russian Federation - onshore between 76°30'E and 79°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_26)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21226')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_26)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21226')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 78E (code 21326). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 27
+--------------------------
+
+| Used: Russian Federation - onshore between 79°30'E and 82°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_27)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21227')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_27)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21227')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 81E (code 21327). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 28
+--------------------------
+
+| Used: Russian Federation - onshore between 82°30'E and 85°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_28)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21228')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_28)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21228')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 84E (code 21328). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 29
+--------------------------
+
+| Used: Russian Federation - onshore between 85°30'E and 88°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_29)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21229')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_29)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21229')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 87E (code 21329). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 30
+--------------------------
+
+| Used: Russian Federation - onshore between 88°30'E and 91°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_30)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21230')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_30)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21230')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 90E (code 21330). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 31
+--------------------------
+
+| Used: Russian Federation - onshore between 91°30'E and 94°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_31)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21231')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_31)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21231')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 93E (code 21331). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 32
+--------------------------
+
+| Used: Russian Federation - onshore between 94°30'E and 97°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_32)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21232')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_32)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21232')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 96E (code 21332). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 33
+--------------------------
+
+| Used: Russian Federation - onshore between 97°30'E and 100°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_33)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21233')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_33)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21233')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 99E (code 21333). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 34
+--------------------------
+
+| Used: Russian Federation - onshore between 100°30'E and 103°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_34)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21234')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_34)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21234')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 102E (code 21334). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 35
+--------------------------
+
+| Used: Russian Federation - onshore between 103°30'E and 106°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_35)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21235')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_35)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21235')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 105E (code 21335). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 36
+--------------------------
+
+| Used: Russian Federation - onshore between 106°30'E and 109°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_36)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21236')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_36)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21236')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 108E (code 21336). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 37
+--------------------------
+
+| Used: Russian Federation - onshore between 109°30'E and 112°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_37)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21237')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_37)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21237')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 111E (code 21337). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 38
+--------------------------
+
+| Used: Russian Federation - onshore between 112°30'E and 115°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_38)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21238')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_38)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21238')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 114E (code 21338). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 39
+--------------------------
+
+| Used: Russian Federation - onshore between 115°30'E and 118°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_39)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21239')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_39)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21239')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 117E (code 21339). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 40
+--------------------------
+
+| Used: Russian Federation - onshore between 118°30'E and 121°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_40)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21240')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_40)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21240')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 120E (code 21340). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 41
+--------------------------
+
+| Used: Russian Federation - onshore between 121°30'E and 124°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_41)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21241')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_41)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21241')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 123E (code 21341). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 42
+--------------------------
+
+| Used: Russian Federation - onshore between 124°30'E and 127°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_42)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21242')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_42)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21242')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 126E (code 21342). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 43
+--------------------------
+
+| Used: Russian Federation - onshore between 127°30'E and 130°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_43)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21243')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_43)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21243')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 129E (code 21343). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 44
+--------------------------
+
+| Used: Russian Federation - onshore between 130°30'E and 133°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_44)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21244')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_44)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21244')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 132E (code 21344). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 45
+--------------------------
+
+| Used: Russian Federation - onshore between 133°30'E and 136°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_45)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21245')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_45)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21245')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 135E (code 21345). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 46
+--------------------------
+
+| Used: Russian Federation - onshore between 136°30'E and 139°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_46)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21246')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_46)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21246')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 138E (code 21346). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 47
+--------------------------
+
+| Used: Russian Federation - onshore between 139°30'E and 142°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_47)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21247')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_47)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21247')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 141E (code 21347). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 48
+--------------------------
+
+| Used: Russian Federation - onshore between 142°30'E and 145°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_48)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21248')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_48)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21248')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 144E (code 21348). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 49
+--------------------------
+
+| Used: Russian Federation - onshore between 145°30'E and 148°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_49)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21249')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_49)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21249')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 147E (code 21349). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 50
+--------------------------
+
+| Used: Russian Federation - onshore between 148°30'E and 151°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_50)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21250')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_50)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21250')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 150E (code 21350). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 51
+--------------------------
+
+| Used: Russian Federation - onshore between 151°30'E and 154°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_51)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21251')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_51)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21251')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 153E (code 21351). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 52
+--------------------------
+
+| Used: Russian Federation - onshore between 154°30'E and 157°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_52)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21252')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_52)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21252')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 156E (code 21352). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 53
+--------------------------
+
+| Used: Russian Federation - onshore between 157°30'E and 160°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_53)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21253')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_53)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21253')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 159E (code 21353). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 54
+--------------------------
+
+| Used: Russian Federation - onshore between 160°30'E and 163°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_54)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21254')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_54)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21254')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 162E (code 21354). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 55
+--------------------------
+
+| Used: Russian Federation - onshore between 163°30'E and 166°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_55)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21255')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_55)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21255')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 165E (code 21355). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 56
+--------------------------
+
+| Used: Russian Federation - onshore between 166°30'E and 169°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_56)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21256')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_56)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21256')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 168E (code 21356). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 57
+--------------------------
+
+| Used: Russian Federation - onshore between 169°30'E and 172°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_57)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21257')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_57)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21257')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 171E (code 21357). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 58
+--------------------------
+
+| Used: Russian Federation - onshore between 172°30'E and 175°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_58)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21258')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_58)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21258')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 174E (code 21358). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 59
+--------------------------
+
+| Used: Russian Federation - onshore between 175°30'E and 178°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_59)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21259')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_59)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21259')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 177E (code 21359). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 60
+--------------------------
+
+| Used: Russian Federation - onshore between 178°30'E and 178°30'W.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_60)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21260')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_60)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21260')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 180E (code 21360). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 61
+--------------------------
+
+| Used: Russian Federation - onshore between 178°30'W and 175°30'W.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_61)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21261')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_61)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21261')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 177W (code 21361). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 62
+--------------------------
+
+| Used: Russian Federation - onshore between 175°30'W and 172°30'W.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_62)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21262')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_62)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21262')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 174W (code 21362). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 63
+--------------------------
+
+| Used: Russian Federation - onshore between 172°30'W and 169°30'W.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_63)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21263')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_63)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21263')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 171W (code 21363). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 64
+--------------------------
+
+| Used: Russian Federation - onshore between 169°30'W and 166°30'W.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_64)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21264')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_64)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21264')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 168W (code 21364). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 7
+-------------------------
+
+| Used: Russian Federation - Kaliningrad - onshore between 19°30'E and 22°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_7)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21207')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_7)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21207')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 21E (code 21307). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 8
+-------------------------
+
+| Used: Russian Federation - onshore between 22°30'E and 25°30'E - Kaliningrad.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_8)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21208')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_8)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21208')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 24E (code 21308). Replaces Pulkovo-based CRSs from 2021-01-01.
+
+GSK-2011 / GSK 3GK zone 9
+-------------------------
+
+| Used: Russian Federation - onshore between 25°30'E and 28°30'E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_9)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21209')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSK_2011_GSK_3GK_ZONE_9)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21209')
+
+Also found with truncated false easting - see GSK-2011 / GSK 3GK CM 27E (code 21309). Replaces Pulkovo-based CRSs from 2021-01-01.
 
 GSK-2011 / Gauss-Kruger CM 105E
 -------------------------------
@@ -9859,7 +11511,7 @@ HD72 / EOV
 HS2 Survey Grid
 ---------------
 
-| Used: UK - HS2 phases 1 and 2a railway corridor from London to Birmingham, Lichfield and Crewe.
+| Used: United Kingdom (UK) - HS2 phases 1 and 2a railway corridor from London to Birmingham, Lichfield and Crewe.
 
 .. code-block:: php
 
@@ -14659,7 +16311,7 @@ Truncated form of MGI 1901 / Balkans zone 5 (CRS code 8677). Replaced by D48/GK 
 MML07 Grid
 ----------
 
-| Used: UK - on or related to the Midland Mainline rail route from Sheffield to London.
+| Used: United Kingdom (UK) - on or related to the Midland Mainline rail route from Sheffield to London.
 
 .. code-block:: php
 
@@ -52475,134 +54127,394 @@ RGAF09 / UTM zone 20N
 
 Replaces RRAF 1991 / UTM zone 20N (CRS code 4559).
 
-RGF93 / CC42
-------------
+RGF93 v1 / CC42
+---------------
 
 | Used: France onshore - mainland south of 43°N and Corsica.
 
 .. code-block:: php
 
-    Projected::fromSRID(Projected::EPSG_RGF93_CC42)
+    Projected::fromSRID(Projected::EPSG_RGF93_V1_CC42)
     Projected::fromSRID('urn:ogc:def:crs:EPSG::3942')
-    CoordinateReferenceSystem::fromSRID(Projected::EPSG_RGF93_CC42)
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_RGF93_V1_CC42)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3942')
 
 
-RGF93 / CC43
-------------
+RGF93 v1 / CC43
+---------------
 
 | Used: France - mainland onshore south of 44°N.
 
 .. code-block:: php
 
-    Projected::fromSRID(Projected::EPSG_RGF93_CC43)
+    Projected::fromSRID(Projected::EPSG_RGF93_V1_CC43)
     Projected::fromSRID('urn:ogc:def:crs:EPSG::3943')
-    CoordinateReferenceSystem::fromSRID(Projected::EPSG_RGF93_CC43)
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_RGF93_V1_CC43)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3943')
 
 
-RGF93 / CC44
-------------
+RGF93 v1 / CC44
+---------------
 
 | Used: France - mainland onshore between 43°N and 45°N.
 
 .. code-block:: php
 
-    Projected::fromSRID(Projected::EPSG_RGF93_CC44)
+    Projected::fromSRID(Projected::EPSG_RGF93_V1_CC44)
     Projected::fromSRID('urn:ogc:def:crs:EPSG::3944')
-    CoordinateReferenceSystem::fromSRID(Projected::EPSG_RGF93_CC44)
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_RGF93_V1_CC44)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3944')
 
 
-RGF93 / CC45
-------------
+RGF93 v1 / CC45
+---------------
 
 | Used: France - mainland onshore between 44°N and 46°N.
 
 .. code-block:: php
 
-    Projected::fromSRID(Projected::EPSG_RGF93_CC45)
+    Projected::fromSRID(Projected::EPSG_RGF93_V1_CC45)
     Projected::fromSRID('urn:ogc:def:crs:EPSG::3945')
-    CoordinateReferenceSystem::fromSRID(Projected::EPSG_RGF93_CC45)
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_RGF93_V1_CC45)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3945')
 
 
-RGF93 / CC46
-------------
+RGF93 v1 / CC46
+---------------
 
 | Used: France - mainland onshore between 45°N and 47°N.
 
 .. code-block:: php
 
-    Projected::fromSRID(Projected::EPSG_RGF93_CC46)
+    Projected::fromSRID(Projected::EPSG_RGF93_V1_CC46)
     Projected::fromSRID('urn:ogc:def:crs:EPSG::3946')
-    CoordinateReferenceSystem::fromSRID(Projected::EPSG_RGF93_CC46)
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_RGF93_V1_CC46)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3946')
 
 
-RGF93 / CC47
-------------
+RGF93 v1 / CC47
+---------------
 
 | Used: France - mainland onshore between 46°N and 48°N.
 
 .. code-block:: php
 
-    Projected::fromSRID(Projected::EPSG_RGF93_CC47)
+    Projected::fromSRID(Projected::EPSG_RGF93_V1_CC47)
     Projected::fromSRID('urn:ogc:def:crs:EPSG::3947')
-    CoordinateReferenceSystem::fromSRID(Projected::EPSG_RGF93_CC47)
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_RGF93_V1_CC47)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3947')
 
 
-RGF93 / CC48
-------------
+RGF93 v1 / CC48
+---------------
 
 | Used: France - mainland onshore between 47°N and 49°N.
 
 .. code-block:: php
 
-    Projected::fromSRID(Projected::EPSG_RGF93_CC48)
+    Projected::fromSRID(Projected::EPSG_RGF93_V1_CC48)
     Projected::fromSRID('urn:ogc:def:crs:EPSG::3948')
-    CoordinateReferenceSystem::fromSRID(Projected::EPSG_RGF93_CC48)
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_RGF93_V1_CC48)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3948')
 
 
-RGF93 / CC49
-------------
+RGF93 v1 / CC49
+---------------
 
 | Used: France - mainland onshore between 48°N and 50°N.
 
 .. code-block:: php
 
-    Projected::fromSRID(Projected::EPSG_RGF93_CC49)
+    Projected::fromSRID(Projected::EPSG_RGF93_V1_CC49)
     Projected::fromSRID('urn:ogc:def:crs:EPSG::3949')
-    CoordinateReferenceSystem::fromSRID(Projected::EPSG_RGF93_CC49)
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_RGF93_V1_CC49)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3949')
 
 
-RGF93 / CC50
-------------
+RGF93 v1 / CC50
+---------------
 
 | Used: France - mainland onshore north of 49°N.
 
 .. code-block:: php
 
-    Projected::fromSRID(Projected::EPSG_RGF93_CC50)
+    Projected::fromSRID(Projected::EPSG_RGF93_V1_CC50)
     Projected::fromSRID('urn:ogc:def:crs:EPSG::3950')
-    CoordinateReferenceSystem::fromSRID(Projected::EPSG_RGF93_CC50)
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_RGF93_V1_CC50)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3950')
 
 
-RGF93 / Lambert-93
-------------------
+RGF93 v1 / Lambert-93
+---------------------
 
 | Used: France - onshore and offshore, mainland and Corsica.
 
 .. code-block:: php
 
-    Projected::fromSRID(Projected::EPSG_RGF93_LAMBERT_93)
+    Projected::fromSRID(Projected::EPSG_RGF93_V1_LAMBERT_93)
     Projected::fromSRID('urn:ogc:def:crs:EPSG::2154')
-    CoordinateReferenceSystem::fromSRID(Projected::EPSG_RGF93_LAMBERT_93)
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_RGF93_V1_LAMBERT_93)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::2154')
+
+
+RGF93 v2 / CC42
+---------------
+
+| Used: France onshore - mainland south of 43°N and Corsica.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_RGF93_V2_CC42)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9822')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_RGF93_V2_CC42)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9822')
+
+
+RGF93 v2 / CC43
+---------------
+
+| Used: France - mainland onshore south of 44°N.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_RGF93_V2_CC43)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9823')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_RGF93_V2_CC43)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9823')
+
+
+RGF93 v2 / CC44
+---------------
+
+| Used: France - mainland onshore between 43°N and 45°N.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_RGF93_V2_CC44)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9824')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_RGF93_V2_CC44)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9824')
+
+
+RGF93 v2 / CC45
+---------------
+
+| Used: France - mainland onshore between 44°N and 46°N.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_RGF93_V2_CC45)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9825')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_RGF93_V2_CC45)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9825')
+
+
+RGF93 v2 / CC46
+---------------
+
+| Used: France - mainland onshore between 45°N and 47°N.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_RGF93_V2_CC46)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9826')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_RGF93_V2_CC46)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9826')
+
+
+RGF93 v2 / CC47
+---------------
+
+| Used: France - mainland onshore between 46°N and 48°N.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_RGF93_V2_CC47)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9827')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_RGF93_V2_CC47)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9827')
+
+
+RGF93 v2 / CC48
+---------------
+
+| Used: France - mainland onshore between 47°N and 49°N.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_RGF93_V2_CC48)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9828')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_RGF93_V2_CC48)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9828')
+
+
+RGF93 v2 / CC49
+---------------
+
+| Used: France - mainland onshore between 48°N and 50°N.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_RGF93_V2_CC49)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9829')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_RGF93_V2_CC49)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9829')
+
+
+RGF93 v2 / CC50
+---------------
+
+| Used: France - mainland onshore north of 49°N.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_RGF93_V2_CC50)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9830')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_RGF93_V2_CC50)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9830')
+
+
+RGF93 v2 / Lambert-93
+---------------------
+
+| Used: France - onshore and offshore, mainland and Corsica.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_RGF93_V2_LAMBERT_93)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9793')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_RGF93_V2_LAMBERT_93)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9793')
+
+
+RGF93 v2b / CC42
+----------------
+
+| Used: France onshore - mainland south of 43°N and Corsica.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_RGF93_V2B_CC42)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9842')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_RGF93_V2B_CC42)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9842')
+
+
+RGF93 v2b / CC43
+----------------
+
+| Used: France - mainland onshore south of 44°N.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_RGF93_V2B_CC43)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9843')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_RGF93_V2B_CC43)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9843')
+
+
+RGF93 v2b / CC44
+----------------
+
+| Used: France - mainland onshore between 43°N and 45°N.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_RGF93_V2B_CC44)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9844')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_RGF93_V2B_CC44)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9844')
+
+
+RGF93 v2b / CC45
+----------------
+
+| Used: France - mainland onshore between 44°N and 46°N.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_RGF93_V2B_CC45)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9845')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_RGF93_V2B_CC45)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9845')
+
+
+RGF93 v2b / CC46
+----------------
+
+| Used: France - mainland onshore between 45°N and 47°N.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_RGF93_V2B_CC46)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9846')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_RGF93_V2B_CC46)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9846')
+
+
+RGF93 v2b / CC47
+----------------
+
+| Used: France - mainland onshore between 46°N and 48°N.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_RGF93_V2B_CC47)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9847')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_RGF93_V2B_CC47)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9847')
+
+
+RGF93 v2b / CC48
+----------------
+
+| Used: France - mainland onshore between 47°N and 49°N.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_RGF93_V2B_CC48)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9848')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_RGF93_V2B_CC48)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9848')
+
+
+RGF93 v2b / CC49
+----------------
+
+| Used: France - mainland onshore between 48°N and 50°N.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_RGF93_V2B_CC49)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9849')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_RGF93_V2B_CC49)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9849')
+
+
+RGF93 v2b / CC50
+----------------
+
+| Used: France - mainland onshore north of 49°N.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_RGF93_V2B_CC50)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9850')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_RGF93_V2B_CC50)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9850')
+
+
+RGF93 v2b / Lambert-93
+----------------------
+
+| Used: France - onshore and offshore, mainland and Corsica.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_RGF93_V2B_LAMBERT_93)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9794')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_RGF93_V2B_LAMBERT_93)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9794')
 
 
 RGFG95 / UTM zone 21N
@@ -55780,7 +57692,7 @@ Replaces both OSNI 1952 / Irish National Grid (code 29901) and TM65 / Irish Grid
 TPEN11 Grid
 -----------
 
-| Used: UK - on or related to the Trans-Pennine rail route from Liverpool via Manchester to Bradford and Leeds.
+| Used: United Kingdom (UK) - on or related to the Trans-Pennine rail route from Liverpool via Manchester to Bradford and Leeds.
 
 .. code-block:: php
 

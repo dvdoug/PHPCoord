@@ -192,7 +192,7 @@ trait Geographic3DSRIDData
             'extent_code' => ['1278'],
         ],
         'urn:ogc:def:crs:EPSG::4933' => [
-            'name' => 'CHTRF95',
+            'name' => 'CHTRS95',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6423',
             'datum' => 'urn:ogc:def:datum:EPSG::6151',
             'extent_code' => ['1286'],
@@ -288,7 +288,7 @@ trait Geographic3DSRIDData
             'extent_code' => ['1251'],
         ],
         'urn:ogc:def:crs:EPSG::4965' => [
-            'name' => 'RGF93',
+            'name' => 'RGF93 v1',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6423',
             'datum' => 'urn:ogc:def:datum:EPSG::6171',
             'extent_code' => ['1096'],
@@ -588,7 +588,7 @@ trait Geographic3DSRIDData
             'extent_code' => ['1097'],
         ],
         'urn:ogc:def:crs:EPSG::7042' => [
-            'name' => 'RGF93 (lon-lat)',
+            'name' => 'RGF93 v1 (lon-lat)',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6426',
             'datum' => 'urn:ogc:def:datum:EPSG::6171',
             'extent_code' => ['1096'],
@@ -1192,6 +1192,30 @@ trait Geographic3DSRIDData
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6423',
             'datum' => 'urn:ogc:def:datum:EPSG::1305',
             'extent_code' => ['1192'],
+        ],
+        'urn:ogc:def:crs:EPSG::9776' => [
+            'name' => 'RGF93 v2',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6423',
+            'datum' => 'urn:ogc:def:datum:EPSG::1312',
+            'extent_code' => ['1096'],
+        ],
+        'urn:ogc:def:crs:EPSG::9778' => [
+            'name' => 'RGF93 v2 (lon-lat)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6426',
+            'datum' => 'urn:ogc:def:datum:EPSG::1312',
+            'extent_code' => ['1096'],
+        ],
+        'urn:ogc:def:crs:EPSG::9781' => [
+            'name' => 'RGF93 v2b',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6423',
+            'datum' => 'urn:ogc:def:datum:EPSG::1313',
+            'extent_code' => ['1096'],
+        ],
+        'urn:ogc:def:crs:EPSG::9783' => [
+            'name' => 'RGF93 v2b (lon-lat)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6426',
+            'datum' => 'urn:ogc:def:datum:EPSG::1313',
+            'extent_code' => ['1096'],
         ],
     ];
 }

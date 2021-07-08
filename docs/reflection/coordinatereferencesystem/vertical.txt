@@ -70,7 +70,7 @@ Replaces Tutuila 1962 height (CRS code 6638). Replaced by Pago Pago 2020 height 
 AVWS height
 -----------
 
-| Used: Australia including Lord Howe Island, Macquarie Islands, Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
+| Used: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
 
 .. code-block:: php
 
@@ -1248,7 +1248,7 @@ HKPD height
 HS2-VRF height
 --------------
 
-| Used: UK - HS2 phases 1 and 2a railway corridor from London to Birmingham, Lichfield and Crewe.
+| Used: United Kingdom (UK) - HS2 phases 1 and 2a railway corridor from London to Birmingham, Lichfield and Crewe.
 
 .. code-block:: php
 

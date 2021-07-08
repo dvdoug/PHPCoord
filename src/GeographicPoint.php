@@ -1988,13 +1988,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         );
 
         $xtUnit = $to->getCoordinateSystem()->getAxes()[0]->getUnitOfMeasureId();
-        if ($xtUnit === Angle::EPSG_DEGREE_SUPPLIER_TO_DEFINE_REPRESENTATION) {
-            $xtUnit = Angle::EPSG_DEGREE;
-        }
         $ytUnit = $to->getCoordinateSystem()->getAxes()[1]->getUnitOfMeasureId();
-        if ($ytUnit === Angle::EPSG_DEGREE_SUPPLIER_TO_DEFINE_REPRESENTATION) {
-            $ytUnit = Angle::EPSG_DEGREE;
-        }
 
         return static::create(
             Angle::makeUnit($t['xt'], $xtUnit),
@@ -2033,13 +2027,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         );
 
         $xtUnit = $to->getCoordinateSystem()->getAxes()[0]->getUnitOfMeasureId();
-        if ($xtUnit === Angle::EPSG_DEGREE_SUPPLIER_TO_DEFINE_REPRESENTATION) {
-            $xtUnit = Angle::EPSG_DEGREE;
-        }
         $ytUnit = $to->getCoordinateSystem()->getAxes()[1]->getUnitOfMeasureId();
-        if ($ytUnit === Angle::EPSG_DEGREE_SUPPLIER_TO_DEFINE_REPRESENTATION) {
-            $ytUnit = Angle::EPSG_DEGREE;
-        }
 
         return static::create(
             Angle::makeUnit($t['xt'], $xtUnit),

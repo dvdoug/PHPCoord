@@ -219,6 +219,9 @@ class EPSGImporter
         9386, // NTv2 TN15-ETRS89-to-AbInvA96_2020-IRF.gsb
         9454, // NTv2 TN15-ETRS89-to-GBK19-IRF.gsb
         9740, // NTv2 TN15-ETRS89-to-EOS21-IRF.gsb
+        9759, // NTv2 TN15-ETRS89-to-ECML14_NB-IRF.gsb
+        9764, // NTv2 TN15-ETRS89-to-EWR2-IRF.gsb
+        9363, // IGNF ARAMCO_AAA-KSAGRF_6.tac
 
         // free, but license does not permit redistribution
         9112, // NTv2 BC_27_98.GSB
@@ -318,6 +321,7 @@ class EPSGImporter
         'nadcon5.ussd.nad27.conus.lon.trn.20160901.b' => CoordinateOperation\NADCON5USSDNAD27CONUSLongitudeProvider::class,
         'NTv2_0.gsb' => CoordinateOperation\NTv2NAD27NAD83CanadaProvider::class,
         'AB_CSRS.DAC' => CoordinateOperation\NTv2NAD831986NAD83CSRS2002AlbertaProvider::class,
+        'ABCSRSV7.GSB' => CoordinateOperation\NTv2NAD831986NAD83CSRS2010AlbertaProvider::class,
         'BC_27_05.GSB' => CoordinateOperation\NTv2NAD27NAD83CSRS2002BritishColumbiaCRDProvider::class,
         'BC_93_05.GSB' => CoordinateOperation\NTv2NAD831986NAD83CSRS2002BritishColumbiaCRDProvider::class,
         'CQ77NA83.GSB' => CoordinateOperation\NTv2NAD27CGQ77NAD831986QuebecProvider::class,
@@ -409,6 +413,7 @@ class EPSGImporter
 
         //Corrections
         $sqlite->exec("UPDATE epsg_coordoperationparamvalue SET param_value_file_ref = NULL WHERE param_value_file_ref = ''");
+        $sqlite->exec('UPDATE epsg_coordinateaxis SET uom_code = 9102 WHERE uom_code = 9122'); // supplier-defined degrees to regular degrees
         $sqlite->exec('UPDATE epsg_coordinatereferencesystem SET base_crs_code = 8817 WHERE coord_ref_sys_code = 8818');
         $sqlite->exec('UPDATE epsg_coordinatereferencesystem SET base_crs_code = 9695 WHERE coord_ref_sys_code = 9696');
         $sqlite->exec('UPDATE epsg_coordinatereferencesystem SET projection_conv_code = 15593 WHERE coord_ref_sys_code = 9057');
@@ -477,7 +482,14 @@ class EPSGImporter
         }
 
         $this->updateFileData($this->sourceDir . '/UnitOfMeasure/Angle/Angle.php', $data);
-        $this->updateFileConstants($this->sourceDir . '/UnitOfMeasure/Angle/Angle.php', $data, 'public', []);
+        $this->updateFileConstants(
+            $this->sourceDir . '/UnitOfMeasure/Angle/Angle.php',
+            $data,
+            'public',
+            [
+                Angle::EPSG_DEGREE => ['Degree (supplier to define representation)'],
+            ]
+        );
         $this->updateDocs(Angle::class, $data);
 
         $sql = "
@@ -752,6 +764,8 @@ class EPSGImporter
             [
                 Datum::EPSG_ORDNANCE_SURVEY_OF_GREAT_BRITAIN_1936 => ['OSGB 1936'],
                 Datum::EPSG_GENOA_1942 => ['Genoa'],
+                Datum::EPSG_SWISS_TERRESTRIAL_REFERENCE_SYSTEM_1995 => ['Swiss Terrestrial Reference Frame 1995'],
+                Datum::EPSG_RESEAU_GEODESIQUE_FRANCAIS_1993_V1 => ['Reseau Geodesique Francais 1993'],
             ]
         );
         $this->updateDocs(Datum::class, $data);
@@ -1001,6 +1015,10 @@ class EPSGImporter
             [
                 Compound::EPSG_OSGB36_BRITISH_NATIONAL_GRID_PLUS_ODN_HEIGHT => ['OSGB 1936 / British National Grid + ODN height'],
                 Compound::EPSG_BD72_BELGIAN_LAMBERT_72_PLUS_OSTEND_HEIGHT => ['Belge 1972 / Belgian Lambert 72 + Ostend height'],
+                Compound::EPSG_RGF93_V1_LAMBERT_93_PLUS_NGF_IGN69_HEIGHT => ['RGF93 / Lambert-93 + NGF-IGN69 height'],
+                Compound::EPSG_RGF93_V1_LAMBERT_93_PLUS_NGF_IGN78_HEIGHT => ['RGF93 / Lambert-93 + NGF-IGN78 height'],
+                Compound::EPSG_RGF93_V2_PLUS_NGF_IGN69_HEIGHT => ['RGF93 + NGF-IGN69 height'],
+                Compound::EPSG_RGF93_V2_PLUS_NGF_IGN78_HEIGHT => ['RGF93 + NGF-IGN78 height'],
             ]
         );
         $this->updateDocs(Compound::class, $data);
@@ -1045,7 +1063,10 @@ class EPSGImporter
             $this->sourceDir . '/CoordinateReferenceSystem/Geocentric.php',
             $data,
             'public',
-            []
+            [
+                Geocentric::EPSG_CHTRS95 => ['CHTRF95'],
+                Geocentric::EPSG_RGF93_V1 => ['RGF93'],
+            ]
         );
         $this->updateDocs(Geocentric::class, $data);
 
@@ -1094,6 +1115,9 @@ class EPSGImporter
                 Geographic2D::EPSG_BD50 => ['Belge 1950'],
                 Geographic2D::EPSG_BD50_BRUSSELS => ['Belge 1950 (Brussels)'],
                 Geographic2D::EPSG_BD72 => ['Belge 1972'],
+                Geographic2D::EPSG_CHTRS95 => ['CHTRF95'],
+                Geographic2D::EPSG_RGF93_V1 => ['RGF93'],
+                Geographic2D::EPSG_RGF93_V1_LON_LAT => ['RGF93 (lon-lat)'],
             ]
         );
         $this->updateDocs(Geographic2D::class, $data);
@@ -1138,7 +1162,11 @@ class EPSGImporter
             $this->sourceDir . '/CoordinateReferenceSystem/Geographic3D.php',
             $data,
             'public',
-            []
+            [
+                Geographic3D::EPSG_CHTRS95 => ['CHTRF95'],
+                Geographic3D::EPSG_RGF93_V1 => ['RGF93'],
+                Geographic3D::EPSG_RGF93_V1_LON_LAT => ['RGF93 (lon-lat)'],
+            ]
         );
         $this->updateDocs(Geographic3D::class, $data);
 
@@ -1192,6 +1220,16 @@ class EPSGImporter
                 Projected::EPSG_BD50_BRUSSELS_BELGE_LAMBERT_50 => ['Belge 1950 (Brussels) / Belge Lambert 50'],
                 Projected::EPSG_BD72_BELGE_LAMBERT_72 => ['Belge 1972 / Belge Lambert 72'],
                 Projected::EPSG_BD72_BELGIAN_LAMBERT_72 => ['Belge 1972 / Belgian Lambert 72'],
+                Projected::EPSG_RGF93_V1_CC42 => ['RGF93 / CC42'],
+                Projected::EPSG_RGF93_V1_CC43 => ['RGF93 / CC43'],
+                Projected::EPSG_RGF93_V1_CC44 => ['RGF93 / CC44'],
+                Projected::EPSG_RGF93_V1_CC45 => ['RGF93 / CC45'],
+                Projected::EPSG_RGF93_V1_CC46 => ['RGF93 / CC46'],
+                Projected::EPSG_RGF93_V1_CC47 => ['RGF93 / CC47'],
+                Projected::EPSG_RGF93_V1_CC48 => ['RGF93 / CC48'],
+                Projected::EPSG_RGF93_V1_CC49 => ['RGF93 / CC49'],
+                Projected::EPSG_RGF93_V1_CC50 => ['RGF93 / CC50'],
+                Projected::EPSG_RGF93_V1_LAMBERT_93 => ['RGF93 / Lambert-93'],
             ]
         );
         $this->updateDocs(Projected::class, $data);
@@ -1866,10 +1904,6 @@ class EPSGImporter
         $constants = array_flip(array_reverse($reflectionClass->getConstants())); // make sure aliases are overridden with current
 
         foreach ($data as $urn => $row) {
-            if ($urn === Angle::EPSG_DEGREE_SUPPLIER_TO_DEFINE_REPRESENTATION) {
-                continue;
-            }
-
             $name = ucfirst(trim($row['name']));
             $name = str_replace('_LOWERCASE', '', $name);
             fwrite($file, $name . "\n");

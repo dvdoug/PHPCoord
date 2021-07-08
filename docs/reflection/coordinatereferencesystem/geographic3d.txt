@@ -1,7 +1,7 @@
 ATRF2014
 --------
 
-| Used: Australia including Lord Howe Island, Macquarie Islands, Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
+| Used: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
 
 .. code-block:: php
 
@@ -74,18 +74,18 @@ CGRS93
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::6310')
 
 
-CHTRF95
+CHTRS95
 -------
 
 | Used: Liechtenstein; Switzerland.
 
 .. code-block:: php
 
-    Geographic3D::fromSRID(Geographic3D::EPSG_CHTRF95)
+    Geographic3D::fromSRID(Geographic3D::EPSG_CHTRS95)
     Geographic3D::fromSRID('urn:ogc:def:crs:EPSG::4933')
-    Geographic::fromSRID(Geographic3D::EPSG_CHTRF95)
+    Geographic::fromSRID(Geographic3D::EPSG_CHTRS95)
     Geographic::fromSRID('urn:ogc:def:crs:EPSG::4933')
-    CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_CHTRF95)
+    CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_CHTRS95)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4933')
 
 Referenced to ETRS89 at epoch 1993.0. For CRS used for topographic and cadastral purposes see CH1903+ (CRS code 4150).
@@ -453,7 +453,7 @@ FEH2010
 GDA2020
 -------
 
-| Used: Australia including Lord Howe Island, Macquarie Islands, Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
+| Used: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
 
 .. code-block:: php
 
@@ -468,7 +468,7 @@ GDA2020
 GDA94
 -----
 
-| Used: Australia including Lord Howe Island, Macquarie Islands, Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
+| Used: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
 
 .. code-block:: php
 
@@ -1591,7 +1591,7 @@ NAD83(CSRS)v7
     CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_NAD83_CSRS_V7)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::8254')
 
-Adopted by the Canadian federal government from 2017-05-01. Replaces NAD83(CSRS)v6. Longitudes are POSITIVE EAST.
+Adopted by the Canadian federal government from 2017-05-01 and the provincial government of Alberta. Replaces NAD83(CSRS)v6. Longitudes are POSITIVE EAST.
 
 NAD83(CSRS96)
 -------------
@@ -2034,37 +2034,101 @@ RGAF09 (lon-lat)
 
 Replaces RRAF 1991 (CRS code 4557). See CRS code 5488 for system with horizontal axes in sequence lat-lon to be used for air, land and sea navigation and safety of life purposes.
 
-RGF93
------
+RGF93 v1
+--------
 
 | Used: France - onshore and offshore, mainland and Corsica.
 
 .. code-block:: php
 
-    Geographic3D::fromSRID(Geographic3D::EPSG_RGF93)
+    Geographic3D::fromSRID(Geographic3D::EPSG_RGF93_V1)
     Geographic3D::fromSRID('urn:ogc:def:crs:EPSG::4965')
-    Geographic::fromSRID(Geographic3D::EPSG_RGF93)
+    Geographic::fromSRID(Geographic3D::EPSG_RGF93_V1)
     Geographic::fromSRID('urn:ogc:def:crs:EPSG::4965')
-    CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_RGF93)
+    CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_RGF93_V1)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4965')
 
-See CRS code 7042 for alternate system with horizontal axes reversed used by IGN for GIS purposes.
+See CRS code 7042 for alternate system with horizontal axes reversed used by IGN for GIS purposes. Replaced by RGF93 v2 (CRS code 9776) from 2010-06-18.
 
-RGF93 (lon-lat)
----------------
+RGF93 v1 (lon-lat)
+------------------
 
 | Used: France - onshore and offshore, mainland and Corsica.
 
 .. code-block:: php
 
-    Geographic3D::fromSRID(Geographic3D::EPSG_RGF93_LON_LAT)
+    Geographic3D::fromSRID(Geographic3D::EPSG_RGF93_V1_LON_LAT)
     Geographic3D::fromSRID('urn:ogc:def:crs:EPSG::7042')
-    Geographic::fromSRID(Geographic3D::EPSG_RGF93_LON_LAT)
+    Geographic::fromSRID(Geographic3D::EPSG_RGF93_V1_LON_LAT)
     Geographic::fromSRID('urn:ogc:def:crs:EPSG::7042')
-    CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_RGF93_LON_LAT)
+    CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_RGF93_V1_LON_LAT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::7042')
 
-See CRS code 4965 for system with horizontal axes in sequence lat-lon to be used for air, land and sea navigation and safety of life purposes.
+See CRS code 4965 for system with horizontal axes in sequence lat-lon to be used for air, land and sea navigation and safety of life purposes. Replaced by RGF93 v2 (lon-lat) (CRS code 9778) from 2010-06-18.
+
+RGF93 v2
+--------
+
+| Used: France - onshore and offshore, mainland and Corsica.
+
+.. code-block:: php
+
+    Geographic3D::fromSRID(Geographic3D::EPSG_RGF93_V2)
+    Geographic3D::fromSRID('urn:ogc:def:crs:EPSG::9776')
+    Geographic::fromSRID(Geographic3D::EPSG_RGF93_V2)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::9776')
+    CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_RGF93_V2)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9776')
+
+Replaces RGF93 v1 CRS code 4965) from 2010-06-18 . Replaced by RGF93 v2b (CRS code 9781) from 2021-01-05. See CRS code 9778 for alternate system with horizontal axes reversed used by IGN for GIS purposes.
+
+RGF93 v2 (lon-lat)
+------------------
+
+| Used: France - onshore and offshore, mainland and Corsica.
+
+.. code-block:: php
+
+    Geographic3D::fromSRID(Geographic3D::EPSG_RGF93_V2_LON_LAT)
+    Geographic3D::fromSRID('urn:ogc:def:crs:EPSG::9778')
+    Geographic::fromSRID(Geographic3D::EPSG_RGF93_V2_LON_LAT)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::9778')
+    CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_RGF93_V2_LON_LAT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9778')
+
+Replaces RGF93 v1 (lon-lat) from 2010-06-18. Replaced by RGF93 v2b (lon-lat) (CRS code 9783) from 2021-01-05. See CRS code 9776 for system with horizontal axes in sequence lat-lon to be used for air, land and sea navigation and safety of life purposes.
+
+RGF93 v2b
+---------
+
+| Used: France - onshore and offshore, mainland and Corsica.
+
+.. code-block:: php
+
+    Geographic3D::fromSRID(Geographic3D::EPSG_RGF93_V2B)
+    Geographic3D::fromSRID('urn:ogc:def:crs:EPSG::9781')
+    Geographic::fromSRID(Geographic3D::EPSG_RGF93_V2B)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::9781')
+    CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_RGF93_V2B)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9781')
+
+Replaces RGF93 v2 (CRS code 9776) from 2021-01-05. See CRS code 9783 for alternate system with horizontal axes reversed used by IGN for GIS purposes.
+
+RGF93 v2b (lon-lat)
+-------------------
+
+| Used: France - onshore and offshore, mainland and Corsica.
+
+.. code-block:: php
+
+    Geographic3D::fromSRID(Geographic3D::EPSG_RGF93_V2B_LON_LAT)
+    Geographic3D::fromSRID('urn:ogc:def:crs:EPSG::9783')
+    Geographic::fromSRID(Geographic3D::EPSG_RGF93_V2B_LON_LAT)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::9783')
+    CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_RGF93_V2B_LON_LAT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9783')
+
+Replaces RGF93 v2 (lon-lat) (CRS code 9778) from 2021-01-05. See CRS code 9781 for system with horizontal axes in sequence lat-lon to be used for air, land and sea navigation and safety of life purposes.
 
 RGFG95
 ------

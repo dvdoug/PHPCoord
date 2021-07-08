@@ -21,7 +21,7 @@ class Geographic3D extends Geographic
     use Geographic3DSRIDData;
     /**
      * ATRF2014
-     * Extent: Australia including Lord Howe Island, Macquarie Islands, Ashmore and Cartier Islands, Christmas Island,
+     * Extent: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island,
      * Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
      */
     public const EPSG_ATRF2014 = 'urn:ogc:def:crs:EPSG::9308';
@@ -52,12 +52,12 @@ class Geographic3D extends Geographic
     public const EPSG_CGRS93 = 'urn:ogc:def:crs:EPSG::6310';
 
     /**
-     * CHTRF95
+     * CHTRS95
      * Extent: Liechtenstein; Switzerland.
      * Referenced to ETRS89 at epoch 1993.0. For CRS used for topographic and cadastral purposes see CH1903+ (CRS code
      * 4150).
      */
-    public const EPSG_CHTRF95 = 'urn:ogc:def:crs:EPSG::4933';
+    public const EPSG_CHTRS95 = 'urn:ogc:def:crs:EPSG::4933';
 
     /**
      * CIGD11
@@ -282,14 +282,14 @@ class Geographic3D extends Geographic
 
     /**
      * GDA2020
-     * Extent: Australia including Lord Howe Island, Macquarie Islands, Ashmore and Cartier Islands, Christmas Island,
+     * Extent: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island,
      * Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
      */
     public const EPSG_GDA2020 = 'urn:ogc:def:crs:EPSG::7843';
 
     /**
      * GDA94
-     * Extent: Australia including Lord Howe Island, Macquarie Islands, Ashmore and Cartier Islands, Christmas Island,
+     * Extent: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island,
      * Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
      */
     public const EPSG_GDA94 = 'urn:ogc:def:crs:EPSG::4939';
@@ -809,8 +809,8 @@ class Geographic3D extends Geographic
      * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
      * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
      * Yukon.
-     * Adopted by the Canadian federal government from 2017-05-01. Replaces NAD83(CSRS)v6. Longitudes are POSITIVE
-     * EAST.
+     * Adopted by the Canadian federal government from 2017-05-01 and the provincial government of Alberta. Replaces
+     * NAD83(CSRS)v6. Longitudes are POSITIVE EAST.
      */
     public const EPSG_NAD83_CSRS_V7 = 'urn:ogc:def:crs:EPSG::8254';
 
@@ -1047,19 +1047,53 @@ class Geographic3D extends Geographic
     public const EPSG_RGAF09_LON_LAT = 'urn:ogc:def:crs:EPSG::7085';
 
     /**
-     * RGF93
+     * RGF93 v1
      * Extent: France - onshore and offshore, mainland and Corsica.
-     * See CRS code 7042 for alternate system with horizontal axes reversed used by IGN for GIS purposes.
+     * See CRS code 7042 for alternate system with horizontal axes reversed used by IGN for GIS purposes. Replaced by
+     * RGF93 v2 (CRS code 9776) from 2010-06-18.
      */
-    public const EPSG_RGF93 = 'urn:ogc:def:crs:EPSG::4965';
+    public const EPSG_RGF93_V1 = 'urn:ogc:def:crs:EPSG::4965';
 
     /**
-     * RGF93 (lon-lat)
+     * RGF93 v1 (lon-lat)
      * Extent: France - onshore and offshore, mainland and Corsica.
      * See CRS code 4965 for system with horizontal axes in sequence lat-lon to be used for air, land and sea
+     * navigation and safety of life purposes. Replaced by RGF93 v2 (lon-lat) (CRS code 9778) from 2010-06-18.
+     */
+    public const EPSG_RGF93_V1_LON_LAT = 'urn:ogc:def:crs:EPSG::7042';
+
+    /**
+     * RGF93 v2
+     * Extent: France - onshore and offshore, mainland and Corsica.
+     * Replaces RGF93 v1 CRS code 4965) from 2010-06-18 . Replaced by RGF93 v2b (CRS code 9781) from 2021-01-05. See
+     * CRS code 9778 for alternate system with horizontal axes reversed used by IGN for GIS purposes.
+     */
+    public const EPSG_RGF93_V2 = 'urn:ogc:def:crs:EPSG::9776';
+
+    /**
+     * RGF93 v2 (lon-lat)
+     * Extent: France - onshore and offshore, mainland and Corsica.
+     * Replaces RGF93 v1 (lon-lat) from 2010-06-18. Replaced by RGF93 v2b (lon-lat) (CRS code 9783) from 2021-01-05.
+     * See CRS code 9776 for system with horizontal axes in sequence lat-lon to be used for air, land and sea
      * navigation and safety of life purposes.
      */
-    public const EPSG_RGF93_LON_LAT = 'urn:ogc:def:crs:EPSG::7042';
+    public const EPSG_RGF93_V2_LON_LAT = 'urn:ogc:def:crs:EPSG::9778';
+
+    /**
+     * RGF93 v2b
+     * Extent: France - onshore and offshore, mainland and Corsica.
+     * Replaces RGF93 v2 (CRS code 9776) from 2021-01-05. See CRS code 9783 for alternate system with horizontal axes
+     * reversed used by IGN for GIS purposes.
+     */
+    public const EPSG_RGF93_V2B = 'urn:ogc:def:crs:EPSG::9781';
+
+    /**
+     * RGF93 v2b (lon-lat)
+     * Extent: France - onshore and offshore, mainland and Corsica.
+     * Replaces RGF93 v2 (lon-lat) (CRS code 9778) from 2021-01-05. See CRS code 9781 for system with horizontal axes
+     * in sequence lat-lon to be used for air, land and sea navigation and safety of life purposes.
+     */
+    public const EPSG_RGF93_V2B_LON_LAT = 'urn:ogc:def:crs:EPSG::9783';
 
     /**
      * RGFG95
@@ -1555,6 +1589,21 @@ class Geographic3D extends Geographic
      * Extent: Yemen - onshore and offshore.
      */
     public const EPSG_YEMEN_NGN96 = 'urn:ogc:def:crs:EPSG::4981';
+
+    /**
+     * @deprecated use EPSG_CHTRS95 instead
+     */
+    public const EPSG_CHTRF95 = 'urn:ogc:def:crs:EPSG::4933';
+
+    /**
+     * @deprecated use EPSG_RGF93_V1 instead
+     */
+    public const EPSG_RGF93 = 'urn:ogc:def:crs:EPSG::4965';
+
+    /**
+     * @deprecated use EPSG_RGF93_V1_LON_LAT instead
+     */
+    public const EPSG_RGF93_LON_LAT = 'urn:ogc:def:crs:EPSG::7042';
 
     private static array $cachedObjects = [];
 

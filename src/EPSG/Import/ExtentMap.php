@@ -3506,4 +3506,6 @@ return [
     4618 => EPSGImporter::REGION_NORTHAMERICA,
     4619 => EPSGImporter::REGION_EUROPE,
     4620 => EPSGImporter::REGION_EUROPE,
+    4621 => EPSGImporter::REGION_EUROPE,
+    4622 => EPSGImporter::REGION_EUROPE,
 ];

@@ -258,7 +258,7 @@ trait GeocentricSRIDData
             'extent_code' => ['1278'],
         ],
         'urn:ogc:def:crs:EPSG::4932' => [
-            'name' => 'CHTRF95',
+            'name' => 'CHTRS95',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
             'datum' => 'urn:ogc:def:datum:EPSG::6151',
             'extent_code' => ['1286'],
@@ -354,7 +354,7 @@ trait GeocentricSRIDData
             'extent_code' => ['1251'],
         ],
         'urn:ogc:def:crs:EPSG::4964' => [
-            'name' => 'RGF93',
+            'name' => 'RGF93 v1',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
             'datum' => 'urn:ogc:def:datum:EPSG::6171',
             'extent_code' => ['1096'],
@@ -1144,6 +1144,18 @@ trait GeocentricSRIDData
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
             'datum' => 'urn:ogc:def:datum:EPSG::1305',
             'extent_code' => ['1192'],
+        ],
+        'urn:ogc:def:crs:EPSG::9775' => [
+            'name' => 'RGF93 v2',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1312',
+            'extent_code' => ['1096'],
+        ],
+        'urn:ogc:def:crs:EPSG::9780' => [
+            'name' => 'RGF93 v2b',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1313',
+            'extent_code' => ['1096'],
         ],
     ];
 }

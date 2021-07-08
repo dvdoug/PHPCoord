@@ -43,7 +43,7 @@ class Geographic2D extends Geographic
 
     /**
      * ATRF2014
-     * Extent: Australia including Lord Howe Island, Macquarie Islands, Ashmore and Cartier Islands, Christmas Island,
+     * Extent: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island,
      * Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
      */
     public const EPSG_ATRF2014 = 'urn:ogc:def:crs:EPSG::9309';
@@ -57,7 +57,7 @@ class Geographic2D extends Geographic
 
     /**
      * AbInvA96_2020-IRF
-     * Extent: UK - on or related to the A96 highway from Aberdeen to Inverness.
+     * Extent: United Kingdom (UK) - on or related to the A96 highway from Aberdeen to Inverness.
      * Intermediate CRS created in 2020 to assist the emulation of the ETRS89 / AbInvA96_2020 SnakeGrid projected CRS
      * through transformation ETRS89 to AbInvA96_2020-IRF (1) (code 9386) used in conjunction with the AbInvA96_2020-TM
      * map projection (code 9385).
@@ -379,10 +379,10 @@ class Geographic2D extends Geographic
     public const EPSG_CH1903_PLUS = 'urn:ogc:def:crs:EPSG::4150';
 
     /**
-     * CHTRF95
+     * CHTRS95
      * Extent: Liechtenstein; Switzerland.
      */
-    public const EPSG_CHTRF95 = 'urn:ogc:def:crs:EPSG::4151';
+    public const EPSG_CHTRS95 = 'urn:ogc:def:crs:EPSG::4151';
 
     /**
      * CIGD11
@@ -633,6 +633,16 @@ class Geographic2D extends Geographic
     public const EPSG_DOUALA_1948 = 'urn:ogc:def:crs:EPSG::4192';
 
     /**
+     * ECML14_NB-IRF
+     * Extent: United Kingdom (UK) - on or related to rail routes from Newcastle Central to Ashington via Benton North
+     * Junction, and the section from Bedlington to Morpeth.
+     * Intermediate CRS created in 2021 to assist the emulation of the ETRS89 / ECML14_NB SnakeGrid projected CRS
+     * through transformation ETRS89 to ECML14_NB-IRF (1) (code 9759) used in conjunction with the ECML14_NB-TM map
+     * projection (code 9760).
+     */
+    public const EPSG_ECML14_NB_IRF = 'urn:ogc:def:crs:EPSG::9758';
+
+    /**
      * ED50
      * Extent: Europe - west: Andorra; Cyprus; Denmark - onshore and offshore; Faroe Islands - onshore; France -
      * offshore; Germany - offshore North Sea; Gibraltar; Greece - offshore; Israel - offshore; Italy including San
@@ -669,9 +679,9 @@ class Geographic2D extends Geographic
 
     /**
      * EOS21-IRF
-     * Extent: On or related to the complex of rail routes in the East of Scotland, incorporating the route from
-     * Tweedbank through the Borders to Edinburgh; the line from Edinburgh to Aberdeen; routes via Kirkaldy and
-     * Cowdenbeath; and routes via Leuchars and Perth to Dundee.
+     * Extent: United Kingdom (UK) - on or related to the complex of rail routes in the East of Scotland, incorporating
+     * the route from Tweedbank through the Borders to Edinburgh; the line from Edinburgh to Aberdeen; routes via
+     * Kirkaldy and Cowdenbeath; and routes via Leuchars and Perth to Dundee.
      * Intermediate CRS created in 2021 to assist the emulation of the ETRS89 / EOS21 SnakeGrid projected CRS through
      * transformation ETRS89 to EOS21-IRF (1) (code 9740) used in conjunction with the EOS21-TM map projection (code
      * 9738).
@@ -849,6 +859,16 @@ class Geographic2D extends Geographic
     public const EPSG_ETRS89 = 'urn:ogc:def:crs:EPSG::4258';
 
     /**
+     * EWR2-IRF
+     * Extent: United Kingdom (UK) - on or related to East West Rail (Phase 2) routes from Oxford to Bicester,
+     * Bletchley and Bedford, and from Claydon Junction to Aylesbury and Princes Risborough.
+     * Intermediate CRS created in 2021 to assist the emulation of the ETRS89 / EWR2 SnakeGrid projected CRS through
+     * transformation ETRS89 to EWR2-IRF (1) (code 9764) used in conjunction with the EWR2-TM map projection (code
+     * 9765).
+     */
+    public const EPSG_EWR2_IRF = 'urn:ogc:def:crs:EPSG::9763';
+
+    /**
      * Easter Island 1967
      * Extent: Chile - Easter Island onshore.
      */
@@ -939,8 +959,8 @@ class Geographic2D extends Geographic
 
     /**
      * GBK19-IRF
-     * Extent: UK - on or related to the rail route from Glasgow via Barrhead to Kilmarnock and the branch to East
-     * Kilbride.
+     * Extent: United Kingdom (UK) - on or related to the rail route from Glasgow to Kilmarnock via Barrhead and the
+     * branch to East Kilbride.
      * Intermediate CRS created in 2020 to assist the emulation of the ETRS89 / GBK19 SnakeGrid projected CRS through
      * transformation ETRS89 to GBK19-IRF (1) (code 9454) used in conjunction with the GBK19-TM map projection (code
      * 9455).
@@ -956,14 +976,14 @@ class Geographic2D extends Geographic
 
     /**
      * GDA2020
-     * Extent: Australia including Lord Howe Island, Macquarie Islands, Ashmore and Cartier Islands, Christmas Island,
+     * Extent: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island,
      * Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
      */
     public const EPSG_GDA2020 = 'urn:ogc:def:crs:EPSG::7844';
 
     /**
      * GDA94
-     * Extent: Australia including Lord Howe Island, Macquarie Islands, Ashmore and Cartier Islands, Christmas Island,
+     * Extent: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island,
      * Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
      */
     public const EPSG_GDA94 = 'urn:ogc:def:crs:EPSG::4283';
@@ -1089,7 +1109,8 @@ class Geographic2D extends Geographic
 
     /**
      * HS2-IRF
-     * Extent: UK - HS2 phases 1 and 2a railway corridor from London to Birmingham, Lichfield and Crewe.
+     * Extent: United Kingdom (UK) - HS2 phases 1 and 2a railway corridor from London to Birmingham, Lichfield and
+     * Crewe.
      * Intermediate CRS created to assist the emulation of the ETRS89 / HS2P1+14 SnakeGrid projected CRS through
      * transformation HS2-IRF to ETRS89 (1) (code 9302) used in conjunction with the HS2-TM map projection (code 9301).
      */
@@ -1885,7 +1906,7 @@ class Geographic2D extends Geographic
 
     /**
      * MML07-IRF
-     * Extent: UK - on or related to the Midland Mainline rail route from Sheffield to London.
+     * Extent: United Kingdom (UK) - on or related to the Midland Mainline rail route from Sheffield to London.
      * Intermediate CRS created in 2020 to assist the emulation of the ETRS89 / MML07 SnakeGrid projected CRS t(code
      * 9373) hrough transformation ETRS89 to MML07-IRF (1) (code 9369) used in conjunction with the MML07-TM map
      * projection (code 9370).
@@ -2265,8 +2286,8 @@ class Geographic2D extends Geographic
      * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
      * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
      * Yukon.
-     * Adopted by the Canadian federal government from 2017-05-01. Replaces NAD83(CSRS)v6. Longitudes are POSITIVE
-     * EAST.
+     * Adopted by the Canadian federal government from 2017-05-01 and the provincial government of Alberta. Replaces
+     * NAD83(CSRS)v6. Longitudes are POSITIVE EAST.
      */
     public const EPSG_NAD83_CSRS_V7 = 'urn:ogc:def:crs:EPSG::8255';
 
@@ -2878,19 +2899,53 @@ class Geographic2D extends Geographic
     public const EPSG_RGAF09_LON_LAT = 'urn:ogc:def:crs:EPSG::7086';
 
     /**
-     * RGF93
+     * RGF93 v1
      * Extent: France - onshore and offshore, mainland and Corsica.
-     * See CRS code 7084 for alternate system with axes reversed used by IGN for GIS purposes.
+     * See CRS code 7084 for alternate system with axes reversed used by IGN for GIS purposes. Replaced by RGF93 v2
+     * (CRS code 9777) from 2010-06-18.
      */
-    public const EPSG_RGF93 = 'urn:ogc:def:crs:EPSG::4171';
+    public const EPSG_RGF93_V1 = 'urn:ogc:def:crs:EPSG::4171';
 
     /**
-     * RGF93 (lon-lat)
+     * RGF93 v1 (lon-lat)
      * Extent: France - onshore and offshore, mainland and Corsica.
      * See CRS code 4171 for system with axes in sequence lat-lon to be used for air, land and sea navigation and
-     * safety of life purposes.
+     * safety of life purposes. Replaced by RGF93 v2 (lon-lat) (CRS code 9779) from 2010-06-18.
      */
-    public const EPSG_RGF93_LON_LAT = 'urn:ogc:def:crs:EPSG::7084';
+    public const EPSG_RGF93_V1_LON_LAT = 'urn:ogc:def:crs:EPSG::7084';
+
+    /**
+     * RGF93 v2
+     * Extent: France - onshore and offshore, mainland and Corsica.
+     * Replaces RGF93 v1 (CRS code 4171) from 2010-06-18. Replaced by RGF93 v2b (CRS code 9782) from 2021-01-05. See
+     * CRS code 9779 for alternate system with axes reversed used by IGN for GIS purposes.
+     */
+    public const EPSG_RGF93_V2 = 'urn:ogc:def:crs:EPSG::9777';
+
+    /**
+     * RGF93 v2 (lon-lat)
+     * Extent: France - onshore and offshore, mainland and Corsica.
+     * Replaces RGF93 v1 (lon-lat) (code 7084) from 2010-06-18. Replaced by RGF93 v2b (lon-lat) (CRS code 9784) from
+     * 2021-01-05. See CRS code 9777 for system with axes in sequence lat-lon to be used for air, land and sea
+     * navigation and safety of life purposes.
+     */
+    public const EPSG_RGF93_V2_LON_LAT = 'urn:ogc:def:crs:EPSG::9779';
+
+    /**
+     * RGF93 v2b
+     * Extent: France - onshore and offshore, mainland and Corsica.
+     * Replaces RGF93 v2 (CRS code 9777) from 2021-01-05. See CRS code 9784 for alternate system with axes reversed
+     * used by IGN for GIS purposes.
+     */
+    public const EPSG_RGF93_V2B = 'urn:ogc:def:crs:EPSG::9782';
+
+    /**
+     * RGF93 v2b (lon-lat)
+     * Extent: France - onshore and offshore, mainland and Corsica.
+     * Replaces RGF93 v2 (lon-lat) (CRS code 9779) from 2021-01-05. See CRS code 9782 for system with axes in sequence
+     * lat-lon to be used for air, land and sea navigation and safety of life purposes.
+     */
+    public const EPSG_RGF93_V2B_LON_LAT = 'urn:ogc:def:crs:EPSG::9784';
 
     /**
      * RGFG95
@@ -3585,7 +3640,8 @@ class Geographic2D extends Geographic
 
     /**
      * TPEN11-IRF
-     * Extent: UK - on or related to the Trans-Pennine rail route from Liverpool via Manchester to Bradford and Leeds.
+     * Extent: United Kingdom (UK) - on or related to the Trans-Pennine rail route from Liverpool via Manchester to
+     * Bradford and Leeds.
      * Intermediate CRS created in 2020 to assist the emulation of the ETRS89 / TPEN11 SnakeGrid projected CRS through
      * transformation ETRS89 to TPEN11-IRF (1) (code 9365) used in conjunction with the TPEN11-TM map projection (code
      * 9366).
@@ -3914,6 +3970,21 @@ class Geographic2D extends Geographic
      * @deprecated use EPSG_BD72 instead
      */
     public const EPSG_BELGE_1972 = 'urn:ogc:def:crs:EPSG::4313';
+
+    /**
+     * @deprecated use EPSG_CHTRS95 instead
+     */
+    public const EPSG_CHTRF95 = 'urn:ogc:def:crs:EPSG::4151';
+
+    /**
+     * @deprecated use EPSG_RGF93_V1 instead
+     */
+    public const EPSG_RGF93 = 'urn:ogc:def:crs:EPSG::4171';
+
+    /**
+     * @deprecated use EPSG_RGF93_V1_LON_LAT instead
+     */
+    public const EPSG_RGF93_LON_LAT = 'urn:ogc:def:crs:EPSG::7084';
 
     private static array $cachedObjects = [];
 
