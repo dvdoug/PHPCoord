@@ -17,7 +17,7 @@ AbInvA96_2020 Intermediate Reference Frame
 ------------------------------------------
 
 | Type: Geodetic
-| Used: UK - on or related to the A96 highway from Aberdeen to Inverness.
+| Used: United Kingdom (UK) - on or related to the A96 highway from Aberdeen to Inverness.
 
 .. code-block:: php
 
@@ -402,7 +402,7 @@ Australian Terrestrial Reference Frame 2014
 -------------------------------------------
 
 | Type: Dynamic geodetic
-| Used: Australia including Lord Howe Island, Macquarie Islands, Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
+| Used: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
 
 .. code-block:: php
 
@@ -417,7 +417,7 @@ Australian Vertical Working Surface
 -----------------------------------
 
 | Type: Vertical
-| Used: Australia including Lord Howe Island, Macquarie Islands, Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
+| Used: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
 
 .. code-block:: php
 
@@ -1975,7 +1975,7 @@ EOS21 Intermediate Reference Frame
 ----------------------------------
 
 | Type: Geodetic
-| Used: On or related to the complex of rail routes in the East of Scotland, incorporating the route from Tweedbank through the Borders to Edinburgh; the line from Edinburgh to Aberdeen; routes via Kirkaldy and Cowdenbeath; and routes via Leuchars and Perth to Dundee. 
+| Used: United Kingdom (UK) - on or related to the complex of rail routes in the East of Scotland, incorporating the route from Tweedbank through the Borders to Edinburgh; the line from Edinburgh to Aberdeen; routes via Kirkaldy and Cowdenbeath; and routes via Leuchars and Perth to Dundee. 
 
 .. code-block:: php
 
@@ -2730,7 +2730,7 @@ GBK19 Intermediate Reference Frame
 ----------------------------------
 
 | Type: Geodetic
-| Used: UK - on or related to the rail route from Glasgow via Barrhead to Kilmarnock and the branch to East Kilbride.
+| Used: United Kingdom (UK) - on or related to the rail route from Glasgow to Kilmarnock via Barrhead and the branch to East Kilbride.
 
 .. code-block:: php
 
@@ -2828,7 +2828,7 @@ Geocentric Datum of Australia 1994
 ----------------------------------
 
 | Type: Geodetic
-| Used: Australia including Lord Howe Island, Macquarie Islands, Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
+| Used: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
 
 .. code-block:: php
 
@@ -2841,7 +2841,7 @@ Geocentric Datum of Australia 2020
 ----------------------------------
 
 | Type: Geodetic
-| Used: Australia including Lord Howe Island, Macquarie Islands, Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
+| Used: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
 
 .. code-block:: php
 
@@ -3223,7 +3223,7 @@ HS2 Intermediate Reference Frame
 --------------------------------
 
 | Type: Geodetic
-| Used: UK - HS2 phases 1 and 2a railway corridor from London to Birmingham, Lichfield and Crewe.
+| Used: United Kingdom (UK) - HS2 phases 1 and 2a railway corridor from London to Birmingham, Lichfield and Crewe.
 
 .. code-block:: php
 
@@ -3238,7 +3238,7 @@ HS2 Vertical Reference Frame
 ----------------------------
 
 | Type: Vertical
-| Used: UK - HS2 phases 1 and 2a railway corridor from London to Birmingham, Lichfield and Crewe.
+| Used: United Kingdom (UK) - HS2 phases 1 and 2a railway corridor from London to Birmingham, Lichfield and Crewe.
 
 .. code-block:: php
 
@@ -5570,7 +5570,7 @@ MML07 Intermediate Reference Frame
 ----------------------------------
 
 | Type: Geodetic
-| Used: UK - on or related to the Midland Mainline rail route from Sheffield to London.
+| Used: United Kingdom (UK) - on or related to the Midland Mainline rail route from Sheffield to London.
 
 .. code-block:: php
 
@@ -10373,7 +10373,7 @@ TPEN11 Intermediate Reference Frame
 -----------------------------------
 
 | Type: Geodetic
-| Used: UK - on or related to the Trans-Pennine rail route from Liverpool via Manchester to Bradford and Leeds.
+| Used: United Kingdom (UK) - on or related to the Trans-Pennine rail route from Liverpool via Manchester to Bradford and Leeds.
 
 .. code-block:: php
 

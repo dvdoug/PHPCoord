@@ -16404,7 +16404,7 @@ class CoordinateOperations
             'extent_code' => ['2646'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::16190' => [
-            'name' => '3-degree Gauss-Kruger CM 180',
+            'name' => '3-degree Gauss-Kruger CM 180E',
             'method' => 'urn:ogc:def:method:EPSG::9807',
             'extent_code' => ['2648'],
         ],
@@ -17078,6 +17078,296 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9807',
             'extent_code' => ['2589'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::16907' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 7',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2305'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16908' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 8',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2748'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16909' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 9',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2749'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16910' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 10',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2535'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16911' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 11',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2751'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16912' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 12',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2752'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16913' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 13',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2753'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16914' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 14',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2754'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16915' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 15',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2755'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16916' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 16',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2756'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16917' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 17',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2757'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16918' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 18',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2758'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16919' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 19',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2759'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16920' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 20',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2760'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16921' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 21',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2609'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16922' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 22',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2762'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16923' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 23',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2763'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16924' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 24',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2764'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16925' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 25',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2765'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16926' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 26',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2766'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16927' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 27',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2767'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16928' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 28',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2768'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16929' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 29',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2769'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16930' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 30',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2676'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16931' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 31',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2677'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16932' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 32',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2678'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16933' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 33',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2679'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16934' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 34',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2680'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16935' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 35',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2681'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16936' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 36',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2682'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16937' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 37',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2683'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16938' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 38',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2684'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16939' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 39',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2685'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16940' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 40',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2686'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16941' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 41',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2687'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16942' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 42',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2688'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16943' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 43',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2689'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16944' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 44',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2690'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16945' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 45',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2691'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16946' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 46',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2692'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16947' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 47',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2693'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16948' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 48',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2694'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16949' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 49',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2695'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16950' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 50',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2696'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16951' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 51',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2697'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16952' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 52',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2698'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16953' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 53',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2699'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16954' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 54',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2700'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16955' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 55',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2701'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16956' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 56',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2702'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16957' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 57',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2703'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16958' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 58',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2704'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16959' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 59',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2705'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16960' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 60',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2706'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16961' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 61',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2707'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16962' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 62',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2708'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16963' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 63',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2709'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::16964' => [
+            'name' => 'GSK 3-degree Gauss-Kruger zone 64',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2710'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::17001' => [
             'name' => 'TM 1 NW',
             'method' => 'urn:ogc:def:method:EPSG::9807',
@@ -17092,6 +17382,296 @@ class CoordinateOperations
             'name' => 'TM 54 NW',
             'method' => 'urn:ogc:def:method:EPSG::9807',
             'extent_code' => ['1727'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17107' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 21E',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2305'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17108' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 24E',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2748'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17109' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 27E',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2749'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17110' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 30E',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2750'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17111' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 33E',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2751'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17112' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 36E',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2752'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17113' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 39E',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2753'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17114' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 42E',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2754'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17115' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 45E',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2755'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17116' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 48E',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2756'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17117' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 51E',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2757'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17118' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 54E',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2758'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17119' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 57E',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2759'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17120' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 60E',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2760'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17121' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 63E',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2761'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17122' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 66E',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2762'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17123' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 69E',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2763'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17124' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 72E',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2764'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17125' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 75E',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2765'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17126' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 78E',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2766'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17127' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 81E',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2767'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17128' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 84E',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2768'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17129' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 87E',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2769'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17130' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 90E',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2676'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17131' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 93E',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2677'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17132' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 96E',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2678'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17133' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 99E',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2679'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17134' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 102E',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2680'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17135' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 105E',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2681'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17136' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 108E',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2682'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17137' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 111E',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2683'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17138' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 114E',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2684'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17139' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 117E',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2685'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17140' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 120E',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2686'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17141' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 123E',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2687'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17142' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 126E',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2688'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17143' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 129E',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2689'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17144' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 132E',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2690'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17145' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 135E',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2691'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17146' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 138E',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2692'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17147' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 141E',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2693'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17148' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 144E',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2694'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17149' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 147E',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2695'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17150' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 150E',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2696'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17151' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 153E',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2697'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17152' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 156E',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2698'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17153' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 159E',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2699'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17154' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 162E',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2700'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17155' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 165E',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2701'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17156' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 168E',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2702'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17157' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 171E',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2703'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17158' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 174E',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2704'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17159' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 177E',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2705'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17160' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 180E',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2706'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17161' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 177W',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2707'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17162' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 174W',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2708'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17163' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 171W',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2709'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17164' => [
+            'name' => 'GSK 3-degree Gauss-Kruger CM 168W',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2710'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::17204' => [
             'name' => 'SCAR IMW SP19-20',

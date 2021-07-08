@@ -21,7 +21,7 @@ class Geographic3D extends Geographic
     use Geographic3DSRIDData;
     /**
      * ATRF2014
-     * Extent: Australia including Lord Howe Island, Macquarie Islands, Ashmore and Cartier Islands, Christmas Island,
+     * Extent: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island,
      * Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
      */
     public const EPSG_ATRF2014 = 'urn:ogc:def:crs:EPSG::9308';
@@ -282,14 +282,14 @@ class Geographic3D extends Geographic
 
     /**
      * GDA2020
-     * Extent: Australia including Lord Howe Island, Macquarie Islands, Ashmore and Cartier Islands, Christmas Island,
+     * Extent: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island,
      * Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
      */
     public const EPSG_GDA2020 = 'urn:ogc:def:crs:EPSG::7843';
 
     /**
      * GDA94
-     * Extent: Australia including Lord Howe Island, Macquarie Islands, Ashmore and Cartier Islands, Christmas Island,
+     * Extent: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island,
      * Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
      */
     public const EPSG_GDA94 = 'urn:ogc:def:crs:EPSG::4939';

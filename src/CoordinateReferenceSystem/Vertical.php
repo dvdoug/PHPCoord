@@ -62,7 +62,7 @@ class Vertical extends CoordinateReferenceSystem
 
     /**
      * AVWS height
-     * Extent: Australia including Lord Howe Island, Macquarie Islands, Ashmore and Cartier Islands, Christmas Island,
+     * Extent: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island,
      * Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
      * For cadastral and local engineering applications see AHD height (CRS code 5711). AVWS is more accurate than AHD
      * for applications over distances greater than 10 km.
@@ -690,7 +690,8 @@ class Vertical extends CoordinateReferenceSystem
 
     /**
      * HS2-VRF height
-     * Extent: UK - HS2 phases 1 and 2a railway corridor from London to Birmingham, Lichfield and Crewe.
+     * Extent: United Kingdom (UK) - HS2 phases 1 and 2a railway corridor from London to Birmingham, Lichfield and
+     * Crewe.
      * HS2-VRF height is equivalent to ODN height as historically realised through OSNet v2001 and OSGM02. After the
      * ODN realization was updated to be through OSNet v2009 and OSGM15, HS2-VRF height was introduced for backward
      * consistency.

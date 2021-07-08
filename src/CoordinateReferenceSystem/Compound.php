@@ -16,7 +16,7 @@ class Compound extends CoordinateReferenceSystem
     use CompoundSRIDData;
     /**
      * AbInvA96_2020 Grid + ODN height
-     * Extent: UK - on or related to the A96 highway from Aberdeen to Inverness.
+     * Extent: United Kingdom (UK) - on or related to the A96 highway from Aberdeen to Inverness.
      */
     public const EPSG_ABINVA96_2020_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::9388';
 
@@ -90,9 +90,9 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * EOS21 Grid + ODN height
-     * Extent: On or related to the complex of rail routes in the East of Scotland, incorporating the route from
-     * Tweedbank through the Borders to Edinburgh; the line from Edinburgh to Aberdeen; routes via Kirkaldy and
-     * Cowdenbeath; and routes via Leuchars and Perth to Dundee.
+     * Extent: United Kingdom (UK) - on or related to the complex of rail routes in the East of Scotland, incorporating
+     * the route from Tweedbank through the Borders to Edinburgh; the line from Edinburgh to Aberdeen; routes via
+     * Kirkaldy and Cowdenbeath; and routes via Leuchars and Perth to Dundee.
      */
     public const EPSG_EOS21_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::9742';
 
@@ -835,8 +835,8 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * GBK19 Grid + ODN height
-     * Extent: UK - on or related to the rail route from Glasgow via Barrhead to Kilmarnock and the branch to East
-     * Kilbride.
+     * Extent: United Kingdom (UK) - on or related to the rail route from Glasgow to Kilmarnock via Barrhead and the
+     * branch to East Kilbride.
      */
     public const EPSG_GBK19_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::9457';
 
@@ -850,7 +850,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * GDA2020 + AVWS height
-     * Extent: Australia including Lord Howe Island, Macquarie Islands, Ashmore and Cartier Islands, Christmas Island,
+     * Extent: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island,
      * Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
      */
     public const EPSG_GDA2020_PLUS_AVWS_HEIGHT = 'urn:ogc:def:crs:EPSG::9462';
@@ -879,7 +879,8 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * HS2 Survey Grid + HS2-VRF height
-     * Extent: UK - HS2 phases 1 and 2a railway corridor from London to Birmingham, Lichfield and Crewe.
+     * Extent: United Kingdom (UK) - HS2 phases 1 and 2a railway corridor from London to Birmingham, Lichfield and
+     * Crewe.
      * Realized by use of HS2TN15 transformation and HS2GM15 geoid model from ETRS89 OSNet v2009.
      */
     public const EPSG_HS2_SURVEY_GRID_PLUS_HS2_VRF_HEIGHT = 'urn:ogc:def:crs:EPSG::9306';
@@ -926,7 +927,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * MML07 Grid + ODN height
-     * Extent: UK - on or related to the Midland Mainline rail route from Sheffield to London.
+     * Extent: United Kingdom (UK) - on or related to the Midland Mainline rail route from Sheffield to London.
      */
     public const EPSG_MML07_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::9374';
 
@@ -2443,7 +2444,8 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * TPEN11 Grid + ODN height
-     * Extent: UK - on or related to the Trans-Pennine rail route from Liverpool via Manchester to Bradford and Leeds.
+     * Extent: United Kingdom (UK) - on or related to the Trans-Pennine rail route from Liverpool via Manchester to
+     * Bradford and Leeds.
      */
     public const EPSG_TPEN11_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::9368';
 

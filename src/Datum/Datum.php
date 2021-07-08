@@ -25,7 +25,7 @@ class Datum
     /**
      * AbInvA96_2020 Intermediate Reference Frame
      * Type: geodetic
-     * Extent: UK - on or related to the A96 highway from Aberdeen to Inverness.
+     * Extent: United Kingdom (UK) - on or related to the A96 highway from Aberdeen to Inverness.
      * Defined through the application of the AbInvA96_2000 NTv2 transformation (code 9386) to ETRS89 as realized
      * through OSNet v2009 CORS.
      * Created in 2020 to support intermediate CRS "AbInvA96_2020-IRF" in the emulation of the AbInvA96_2020 Snake map
@@ -274,7 +274,7 @@ class Datum
     /**
      * Australian Terrestrial Reference Frame 2014
      * Type: dynamic geodetic
-     * Extent: Australia including Lord Howe Island, Macquarie Islands, Ashmore and Cartier Islands, Christmas Island,
+     * Extent: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island,
      * Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
      * ITRF2014 at epoch 2020.0.
      * Densification of ITRF2014 in the Australian region.
@@ -284,7 +284,7 @@ class Datum
     /**
      * Australian Vertical Working Surface
      * Type: vertical
-     * Extent: Australia including Lord Howe Island, Macquarie Islands, Ashmore and Cartier Islands, Christmas Island,
+     * Extent: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island,
      * Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
      * Realized by the Australian gravimetric quasi-geoid (AGQG).
      * Normal heights. Extends gravity-related heights to offshore. See AHD (datum code 5111) for cadastral survey or
@@ -1292,9 +1292,9 @@ class Datum
     /**
      * EOS21 Intermediate Reference Frame
      * Type: geodetic
-     * Extent: On or related to the complex of rail routes in the East of Scotland, incorporating the route from
-     * Tweedbank through the Borders to Edinburgh; the line from Edinburgh to Aberdeen; routes via Kirkaldy and
-     * Cowdenbeath; and routes via Leuchars and Perth to Dundee.
+     * Extent: United Kingdom (UK) - on or related to the complex of rail routes in the East of Scotland, incorporating
+     * the route from Tweedbank through the Borders to Edinburgh; the line from Edinburgh to Aberdeen; routes via
+     * Kirkaldy and Cowdenbeath; and routes via Leuchars and Perth to Dundee.
      * Defined through the application of the EOS21 NTv2 transformation (code 9454) to ETRS89 as realized through OSNet
      * v2009 CORS.
      * Created in 2021 to support intermediate CRS "EOS21-IRF" in the emulation of the EOS21 Snake map projection.
@@ -1903,8 +1903,8 @@ class Datum
     /**
      * GBK19 Intermediate Reference Frame
      * Type: geodetic
-     * Extent: UK - on or related to the rail route from Glasgow via Barrhead to Kilmarnock and the branch to East
-     * Kilbride.
+     * Extent: United Kingdom (UK) - on or related to the rail route from Glasgow to Kilmarnock via Barrhead and the
+     * branch to East Kilbride.
      * Defined through the application of the GBK19 NTv2 transformation (code 9454) to ETRS89 as realized through OSNet
      * v2009 CORS.
      * Created in 2020 to support intermediate CRS "GBK19-IRF" in the emulation of the combined GBK19 Snake map
@@ -1967,7 +1967,7 @@ class Datum
     /**
      * Geocentric Datum of Australia 1994
      * Type: geodetic
-     * Extent: Australia including Lord Howe Island, Macquarie Islands, Ashmore and Cartier Islands, Christmas Island,
+     * Extent: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island,
      * Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
      * ITRF92 at epoch 1994.0.
      */
@@ -1976,7 +1976,7 @@ class Datum
     /**
      * Geocentric Datum of Australia 2020
      * Type: geodetic
-     * Extent: Australia including Lord Howe Island, Macquarie Islands, Ashmore and Cartier Islands, Christmas Island,
+     * Extent: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island,
      * Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
      * ITRF2014 at epoch 2020.0.
      */
@@ -2220,7 +2220,8 @@ class Datum
     /**
      * HS2 Intermediate Reference Frame
      * Type: geodetic
-     * Extent: UK - HS2 phases 1 and 2a railway corridor from London to Birmingham, Lichfield and Crewe.
+     * Extent: United Kingdom (UK) - HS2 phases 1 and 2a railway corridor from London to Birmingham, Lichfield and
+     * Crewe.
      * Defined through application of the HS2TN02 transformation to ETRS89 as realized through OSNet v2001 CORS.
      * Subsequently realized through application of the HS2TN15 transformation to ETRS89 as realized through OSNet
      * v2009 CORS.
@@ -2231,7 +2232,8 @@ class Datum
     /**
      * HS2 Vertical Reference Frame
      * Type: vertical
-     * Extent: UK - HS2 phases 1 and 2a railway corridor from London to Birmingham, Lichfield and Crewe.
+     * Extent: United Kingdom (UK) - HS2 phases 1 and 2a railway corridor from London to Birmingham, Lichfield and
+     * Crewe.
      * Equivalent to Ordnance Datum Newlyn as realized through OSNet v2001 and OSGM02.
      * After introduction of OSNet v2009 CORS, OSTN15 and the OSGM15 geoid model, the HS2 VRF is maintained equivalent
      * to OSNet v2001 and OSGM02 through HS2GM15 (code 9304).
@@ -3761,7 +3763,7 @@ class Datum
     /**
      * MML07 Intermediate Reference Frame
      * Type: geodetic
-     * Extent: UK - on or related to the Midland Mainline rail route from Sheffield to London.
+     * Extent: United Kingdom (UK) - on or related to the Midland Mainline rail route from Sheffield to London.
      * Defined through the application of the MML07 NTv2 transformation (code 9369) to ETRS89 as realized through OSNet
      * v2009 CORS.
      * Created in 2020 to support intermediate CRS "MML07-IRF" in the emulation of the MML07 Snake map projection.
@@ -7071,7 +7073,8 @@ class Datum
     /**
      * TPEN11 Intermediate Reference Frame
      * Type: geodetic
-     * Extent: UK - on or related to the Trans-Pennine rail route from Liverpool via Manchester to Bradford and Leeds.
+     * Extent: United Kingdom (UK) - on or related to the Trans-Pennine rail route from Liverpool via Manchester to
+     * Bradford and Leeds.
      * Defined through the application of the TPEN11 NTv2 transformation (code 9365) to ETRS89 as realized through
      * OSNet v2009 CORS.
      * Created in 2020 to support intermediate CRS "TPEN11-IRF" in the emulation of the combined TPEN11 Snake and
