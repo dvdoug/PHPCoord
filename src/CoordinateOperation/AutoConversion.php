@@ -40,9 +40,7 @@ trait AutoConversion
 {
     private int $maxChainDepth = 5; // if traits could have constants...
 
-    private static array $directTransformationPathCache = [];
-
-    private static array $indirectTransformationPathCache = [];
+    private static array $pathCache = [];
 
     private static array $transformationsByCRS = [];
 
@@ -75,21 +73,8 @@ trait AutoConversion
         self::buildSupportedTransformationsByCRSPair();
         $boundaryCheckPoint = $ignoreBoundaryRestrictions ? null : $this->getPointForBoundaryCheck();
 
-        // Try simple direct match before doing anything more complex!
-        $candidatePaths = $this->buildDirectTransformationPathsToCRS($source, $target);
-
-        usort($candidatePaths, static function (array $a, array $b) {
-            return count($a['path']) <=> count($b['path']) ?: $a['accuracy'] <=> $b['accuracy'];
-        });
-
-        foreach ($candidatePaths as $candidatePath) {
-            if ($this->validatePath($candidatePath['path'], $boundaryCheckPoint)) {
-                return $candidatePath['path'];
-            }
-        }
-
-        // Otherwise, recursively calculate permutations of intermediate CRSs
-        foreach ($this->buildIndirectTransformationPathsToCRS($source, $target) as $candidatePaths) {
+        // Iteratively calculate permutations of intermediate CRSs
+        foreach ($this->buildTransformationPathsToCRS($source, $target) as $candidatePaths) {
             usort($candidatePaths, static function (array $a, array $b) {
                 return $a['accuracy'] <=> $b['accuracy'];
             });
@@ -159,32 +144,9 @@ trait AutoConversion
     }
 
     /**
-     * Build the set of possible direct paths that lead from the current CRS to the target CRS.
+     * Build the set of possible paths that lead from the current CRS to the target CRS.
      */
-    protected function buildDirectTransformationPathsToCRS(CoordinateReferenceSystem $source, CoordinateReferenceSystem $target): array
-    {
-        $cacheKey = $source->getSRID() . '|' . $target->getSRID();
-        if (!isset(self::$directTransformationPathCache[$cacheKey])) {
-            $simplePaths = [[$source->getSRID(), $target->getSRID()]];
-
-            // Expand each CRS->CRS permutation with the various ways of achieving that (can be lots :/)
-            $fullPaths = $this->expandSimplePaths($simplePaths, $source->getSRID(), $target->getSRID());
-
-            $paths = [];
-            foreach ($fullPaths as $fullPath) {
-                $paths[] = ['path' => $fullPath, 'accuracy' => array_sum(array_column($fullPath, 'accuracy'))];
-            }
-
-            self::$directTransformationPathCache[$cacheKey] = $paths;
-        }
-
-        return self::$directTransformationPathCache[$cacheKey];
-    }
-
-    /**
-     * Build the set of possible indirect paths that lead from the current CRS to the target CRS.
-     */
-    protected function buildIndirectTransformationPathsToCRS(CoordinateReferenceSystem $source, CoordinateReferenceSystem $target): array
+    protected function buildTransformationPathsToCRS(CoordinateReferenceSystem $source, CoordinateReferenceSystem $target): Generator
     {
         $iterations = 1;
         $sourceSRID = $source->getSRID();
@@ -194,7 +156,7 @@ trait AutoConversion
         while ($iterations < $this->maxChainDepth) {
             $cacheKey = $sourceSRID . '|' . $targetSRID . '|' . $iterations;
 
-            if (!isset(self::$indirectTransformationPathCache[$cacheKey])) {
+            if (!isset(self::$pathCache[$cacheKey])) {
                 $completePaths = [];
 
                 foreach ($simplePaths as $key => $simplePath) {
@@ -219,11 +181,11 @@ trait AutoConversion
                     $paths[] = ['path' => $fullPath, 'accuracy' => array_sum(array_column($fullPath, 'accuracy'))];
                 }
 
-                self::$indirectTransformationPathCache[$cacheKey] = $paths;
+                self::$pathCache[$cacheKey] = $paths;
             }
 
             ++$iterations;
-            yield self::$indirectTransformationPathCache[$cacheKey];
+            yield self::$pathCache[$cacheKey];
         }
     }
 
