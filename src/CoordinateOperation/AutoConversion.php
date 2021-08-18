@@ -10,7 +10,6 @@ namespace PHPCoord\CoordinateOperation;
 
 use function abs;
 use function array_column;
-use function array_filter;
 use function array_merge;
 use function array_shift;
 use function array_sum;
@@ -19,6 +18,7 @@ use function class_exists;
 use function count;
 use DateTimeImmutable;
 use function end;
+use Generator;
 use function in_array;
 use PHPCoord\CompoundPoint;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
@@ -38,7 +38,7 @@ use function usort;
  */
 trait AutoConversion
 {
-    private int $maxChainDepth = 4; // if traits could have constants...
+    private int $maxChainDepth = 5; // if traits could have constants...
 
     private static array $directTransformationPathCache = [];
 
@@ -89,15 +89,15 @@ trait AutoConversion
         }
 
         // Otherwise, recursively calculate permutations of intermediate CRSs
-        $candidatePaths = $this->buildIndirectTransformationPathsToCRS($source, $target);
+        foreach ($this->buildIndirectTransformationPathsToCRS($source, $target) as $candidatePaths) {
+            usort($candidatePaths, static function (array $a, array $b) {
+                return $a['accuracy'] <=> $b['accuracy'];
+            });
 
-        usort($candidatePaths, static function (array $a, array $b) {
-            return count($a['path']) <=> count($b['path']) ?: $a['accuracy'] <=> $b['accuracy'];
-        });
-
-        foreach ($candidatePaths as $candidatePath) {
-            if ($this->validatePath($candidatePath['path'], $boundaryCheckPoint)) {
-                return $candidatePath['path'];
+            foreach ($candidatePaths as $candidatePath) {
+                if ($this->validatePath($candidatePath['path'], $boundaryCheckPoint)) {
+                    return $candidatePath['path'];
+                }
             }
         }
 
@@ -186,49 +186,45 @@ trait AutoConversion
      */
     protected function buildIndirectTransformationPathsToCRS(CoordinateReferenceSystem $source, CoordinateReferenceSystem $target): array
     {
+        $iterations = 1;
         $sourceSRID = $source->getSRID();
         $targetSRID = $target->getSRID();
-        if (!isset(static::$transformationsByCRS[$sourceSRID])) {
-            return [];
-        }
+        $simplePaths = [[$sourceSRID]];
 
-        $cacheKey = $sourceSRID . '|' . $targetSRID;
-        if (!isset(self::$indirectTransformationPathCache[$cacheKey])) {
-            $simplePaths = [[$sourceSRID]];
+        while ($iterations < $this->maxChainDepth) {
+            $cacheKey = $sourceSRID . '|' . $targetSRID . '|' . $iterations;
 
-            $iterations = 0;
-            while ($iterations < $this->maxChainDepth) {
+            if (!isset(self::$indirectTransformationPathCache[$cacheKey])) {
+                $completePaths = [];
+
                 foreach ($simplePaths as $key => $simplePath) {
                     $current = end($simplePath);
-                    if ($current !== $targetSRID && isset(static::$transformationsByCRS[$current])) {
+                    if ($current === $targetSRID) {
+                        $completePaths[] = $simplePath;
+                    } elseif (isset(static::$transformationsByCRS[$current])) {
                         foreach (static::$transformationsByCRS[$current] as $next) {
                             if (!in_array($next, $simplePath, true)) {
                                 $simplePaths[] = array_merge($simplePath, [$next]);
                             }
                         }
-                        unset($simplePaths[$key]);
                     }
+                    unset($simplePaths[$key]);
                 }
-                ++$iterations;
+
+                // Then expand each CRS->CRS permutation with the various ways of achieving that (can be lots :/)
+                $fullPaths = $this->expandSimplePaths($completePaths, $sourceSRID, $targetSRID);
+
+                $paths = [];
+                foreach ($fullPaths as $fullPath) {
+                    $paths[] = ['path' => $fullPath, 'accuracy' => array_sum(array_column($fullPath, 'accuracy'))];
+                }
+
+                self::$indirectTransformationPathCache[$cacheKey] = $paths;
             }
 
-            // Filter out any incomplete chains didn't make it to the target
-            $simplePaths = array_filter($simplePaths, static function (array $simplePath) use ($targetSRID) {
-                return end($simplePath) === $targetSRID;
-            });
-
-            // Then expand each CRS->CRS permutation with the various ways of achieving that (can be lots :/)
-            $fullPaths = $this->expandSimplePaths($simplePaths, $sourceSRID, $targetSRID);
-
-            $paths = [];
-            foreach ($fullPaths as $fullPath) {
-                $paths[] = ['path' => $fullPath, 'accuracy' => array_sum(array_column($fullPath, 'accuracy'))];
-            }
-
-            self::$indirectTransformationPathCache[$cacheKey] = $paths;
+            ++$iterations;
+            yield self::$indirectTransformationPathCache[$cacheKey];
         }
-
-        return self::$indirectTransformationPathCache[$cacheKey];
     }
 
     protected function expandSimplePaths(array $simplePaths, string $fromSRID, string $toSRID): array
