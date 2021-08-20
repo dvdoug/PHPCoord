@@ -8,7 +8,7 @@ declare(strict_types=1);
 
 namespace PHPCoord\EPSG\Import;
 
-use function array_merge;
+use function array_unshift;
 use function explode;
 use PhpParser\Comment\Doc;
 use PhpParser\Node;
@@ -129,7 +129,7 @@ class AddNewConstantsVisitor extends NodeVisitorAbstract
                 }
             }
 
-            $node->stmts = array_merge($commentNodes, $node->stmts);
+            array_unshift($node->stmts, ...$commentNodes);
 
             return NodeTraverser::STOP_TRAVERSAL;
         }
