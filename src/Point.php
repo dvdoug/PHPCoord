@@ -172,6 +172,9 @@ abstract class Point implements Stringable
         return $params;
     }
 
+    /**
+     * @deprecated
+     */
     protected function getAxisByName(string $name): ?Axis
     {
         foreach ($this->getCRS()->getCoordinateSystem()->getAxes() as $axis) {

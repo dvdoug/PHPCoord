@@ -27,12 +27,21 @@ abstract class CoordinateSystem
      */
     protected array $axes;
 
+    /**
+     * @var Axis[]
+     */
+    protected array $axesByName;
+
     public function __construct(
         string $srid,
         array $axes
     ) {
         $this->srid = $srid;
         $this->axes = $axes;
+
+        foreach ($this->axes as $axis) {
+            $this->axesByName[$axis->getName()] = $axis;
+        }
     }
 
     public function getSRID(): string
@@ -46,5 +55,10 @@ abstract class CoordinateSystem
     public function getAxes(): array
     {
         return $this->axes;
+    }
+
+    public function getAxisByName(string $name): ?Axis
+    {
+        return $this->axesByName[$name] ?? null;
     }
 }
