@@ -31,6 +31,8 @@ class BoundingArea
 
     private static array $cachedObjects = [];
 
+    private array $pointInside = [];
+
     private const BUFFER_THRESHOLD = 200; // rough guess at where map maker got bored adding vertices for complex shapes
 
     private const BUFFER_SIZE = 0.1; // approx 10km
@@ -153,7 +155,11 @@ class BoundingArea
      */
     public function getPointInside(): array
     {
-        return $this->getCentre(0); // any polygon will do, use the first
+        if (!$this->pointInside) {
+            $this->pointInside = $this->getCentre(0); // any polygon will do, use the first
+        }
+
+        return $this->pointInside;
     }
 
     /**
