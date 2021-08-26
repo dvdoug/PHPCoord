@@ -17,12 +17,14 @@ use PHPCoord\CoordinateOperation\CoordinateOperationMethods;
 use PHPCoord\CoordinateOperation\CoordinateOperationParams;
 use PHPCoord\CoordinateOperation\CoordinateOperations;
 use PHPCoord\CoordinateOperation\CRSTransformations;
+use PHPCoord\CoordinateOperation\GeographicValue;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\CoordinateReferenceSystem\Geocentric;
 use PHPCoord\CoordinateReferenceSystem\GeocentricSRIDData;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Geographic3D;
 use PHPCoord\Exception\InvalidCoordinateException;
+use PHPCoord\Geometry\BoundingArea;
 use PHPCoord\UnitOfMeasure\Angle\ArcSecond;
 use PHPCoord\UnitOfMeasure\Length\Foot;
 use PHPCoord\UnitOfMeasure\Length\Metre;
@@ -352,8 +354,11 @@ class GeocentricPointTest extends TestCase
     public function testOperations(string $sourceCrsSrid, string $targetCrsSrid, string $operationSrid, bool $reversible): void
     {
         $operation = CoordinateOperations::getOperationData($operationSrid);
+        $operationExtent = BoundingArea::createFromExtentCodes($operation['extent_code']);
+        $centre = $operationExtent->getPointInside();
 
         $sourceCRS = Geocentric::fromSRID($sourceCrsSrid);
+        $centre = (new GeographicValue($centre[0], $centre[1], new Metre(0), $sourceCRS->getDatum()))->asGeocentricValue();
         $targetCRS = CoordinateReferenceSystem::fromSRID($targetCrsSrid);
 
         $epoch = new DateTime();
@@ -362,7 +367,7 @@ class GeocentricPointTest extends TestCase
             $epoch = (new Year($params['Transformation reference epoch']['value']))->asDateTime();
         }
 
-        $originalPoint = GeocentricPoint::create(new Metre(0), new Metre(0), new Metre(0), $sourceCRS, $epoch);
+        $originalPoint = GeocentricPoint::create($centre->getX(), $centre->getY(), $centre->getZ(), $sourceCRS, $epoch);
         $newPoint = $originalPoint->performOperation($operationSrid, $targetCRS, false);
         self::assertInstanceOf(Point::class, $newPoint);
         self::assertEquals($targetCRS, $newPoint->getCRS());
