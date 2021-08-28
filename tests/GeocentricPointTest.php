@@ -395,7 +395,7 @@ class GeocentricPointTest extends TestCase
                 }
 
                 if (!$needsNonExistentFile) {
-                    $toTest[] = [
+                    $toTest[$transformation['operation'] . ' ' . $transformation['name'] . ': ' . $transformation['source_crs'] . '->' . $transformation['target_crs']] = [
                         $transformation['source_crs'],
                         $transformation['target_crs'],
                         $transformation['operation'],
