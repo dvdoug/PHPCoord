@@ -48,7 +48,7 @@ use function ucwords;
 
 abstract class Point implements Stringable
 {
-    protected const ITERATION_CONVERGENCE_FORMULA = 1e-12;
+    protected const ITERATION_CONVERGENCE_FORMULA = 1e-10;
     protected const ITERATION_CONVERGENCE_GRID = 0.0001;
 
     /**
