@@ -157,4 +157,13 @@ class Degree extends Angle
 
         return new static($degrees);
     }
+
+    public static function convert(Angle $angle, string $targetSRID): Angle
+    {
+        if ($targetSRID === self::EPSG_DEGREE) {
+            return $angle;
+        }
+
+        return parent::convert($angle, $targetSRID);
+    }
 }

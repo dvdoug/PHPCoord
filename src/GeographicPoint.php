@@ -115,11 +115,11 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $latitude = $this->normaliseLatitude($latitude);
         $longitude = $this->normaliseLongitude($longitude);
 
-        $this->latitude = Angle::convert($latitude, $this->crs->getCoordinateSystem()->getAxisByName(Axis::GEODETIC_LATITUDE)->getUnitOfMeasureId());
-        $this->longitude = Angle::convert($longitude, $this->crs->getCoordinateSystem()->getAxisByName(Axis::GEODETIC_LONGITUDE)->getUnitOfMeasureId());
+        $this->latitude = $latitude::convert($latitude, $this->crs->getCoordinateSystem()->getAxisByName(Axis::GEODETIC_LATITUDE)->getUnitOfMeasureId());
+        $this->longitude = $longitude::convert($longitude, $this->crs->getCoordinateSystem()->getAxisByName(Axis::GEODETIC_LONGITUDE)->getUnitOfMeasureId());
 
         if ($height) {
-            $this->height = Length::convert($height, $this->crs->getCoordinateSystem()->getAxisByName(Axis::ELLIPSOIDAL_HEIGHT)->getUnitOfMeasureId());
+            $this->height = $height::convert($height, $this->crs->getCoordinateSystem()->getAxisByName(Axis::ELLIPSOIDAL_HEIGHT)->getUnitOfMeasureId());
         } else {
             $this->height = null;
         }

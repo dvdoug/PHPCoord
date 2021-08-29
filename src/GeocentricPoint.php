@@ -68,9 +68,9 @@ class GeocentricPoint extends Point implements ConvertiblePoint
     protected function __construct(Length $x, Length $y, Length $z, Geocentric $crs, ?DateTimeInterface $epoch = null)
     {
         $this->crs = $crs;
-        $this->x = Length::convert($x, $this->crs->getCoordinateSystem()->getAxisByName(Axis::GEOCENTRIC_X)->getUnitOfMeasureId());
-        $this->y = Length::convert($y, $this->crs->getCoordinateSystem()->getAxisByName(Axis::GEOCENTRIC_Y)->getUnitOfMeasureId());
-        $this->z = Length::convert($z, $this->crs->getCoordinateSystem()->getAxisByName(Axis::GEOCENTRIC_Z)->getUnitOfMeasureId());
+        $this->x = $x::convert($x, $this->crs->getCoordinateSystem()->getAxisByName(Axis::GEOCENTRIC_X)->getUnitOfMeasureId());
+        $this->y = $y::convert($y, $this->crs->getCoordinateSystem()->getAxisByName(Axis::GEOCENTRIC_Y)->getUnitOfMeasureId());
+        $this->z = $z::convert($z, $this->crs->getCoordinateSystem()->getAxisByName(Axis::GEOCENTRIC_Z)->getUnitOfMeasureId());
 
         if ($epoch instanceof DateTime) {
             $epoch = DateTimeImmutable::createFromMutable($epoch);

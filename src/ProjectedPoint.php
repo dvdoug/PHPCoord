@@ -101,20 +101,20 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         $southingAxis = $this->crs->getCoordinateSystem()->getAxisByName(Axis::SOUTHING);
 
         if ($easting && $eastingAxis) {
-            $this->easting = Length::convert($easting, $eastingAxis->getUnitOfMeasureId());
+            $this->easting = $easting::convert($easting, $eastingAxis->getUnitOfMeasureId());
             $this->westing = $this->easting->multiply(-1);
         } elseif ($westing && $westingAxis) {
-            $this->westing = Length::convert($westing, $westingAxis->getUnitOfMeasureId());
+            $this->westing = $westing::convert($westing, $westingAxis->getUnitOfMeasureId());
             $this->easting = $this->westing->multiply(-1);
         } else {
             throw new InvalidAxesException($crs->getCoordinateSystem()->getAxes());
         }
 
         if ($northing && $northingAxis) {
-            $this->northing = Length::convert($northing, $northingAxis->getUnitOfMeasureId());
+            $this->northing = $northing::convert($northing, $northingAxis->getUnitOfMeasureId());
             $this->southing = $this->northing->multiply(-1);
         } elseif ($southing && $southingAxis) {
-            $this->southing = Length::convert($southing, $southingAxis->getUnitOfMeasureId());
+            $this->southing = $southing::convert($southing, $southingAxis->getUnitOfMeasureId());
             $this->northing = $this->southing->multiply(-1);
         } else {
             throw new InvalidAxesException($crs->getCoordinateSystem()->getAxes());

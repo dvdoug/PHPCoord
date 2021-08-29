@@ -31,4 +31,13 @@ class Metre extends Length
     {
         return 'metre';
     }
+
+    public static function convert(Length $length, string $targetSRID): Length
+    {
+        if ($targetSRID === self::EPSG_METRE) {
+            return $length;
+        }
+
+        return parent::convert($length, $targetSRID);
+    }
 }
