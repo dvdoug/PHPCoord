@@ -60,8 +60,9 @@ class GeocentricValue
 
     public function asGeographicValue(): GeographicValue
     {
-        $a = $this->datum->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
-        $e2 = $this->datum->getEllipsoid()->getEccentricitySquared();
+        $ellipsoid = $this->datum->getEllipsoid();
+        $a = $ellipsoid->getSemiMajorAxis()->asMetres()->getValue();
+        $e2 = $ellipsoid->getEccentricitySquared();
         $x = $this->x->getValue();
         $y = $this->y->getValue();
         $z = $this->z->getValue();

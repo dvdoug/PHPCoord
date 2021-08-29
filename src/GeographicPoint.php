@@ -427,6 +427,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         Length $differenceInSemiMajorAxis,
         Scale $differenceInFlattening
     ): self {
+        $ellipsoid = $this->crs->getDatum()->getEllipsoid();
         $latitude = $this->latitude->asRadians()->getValue();
         $longitude = $this->longitude->asRadians()->getValue();
         $fromHeight = $this->height ? $this->height->asMetres()->getValue() : 0;
@@ -436,15 +437,15 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $da = $differenceInSemiMajorAxis->asMetres()->getValue();
         $df = $differenceInFlattening->asUnity()->getValue();
 
-        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
-        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+        $a = $ellipsoid->getSemiMajorAxis()->asMetres()->getValue();
+        $e2 = $ellipsoid->getEccentricitySquared();
 
         $rho = $a * (1 - $e2) / (1 - $e2 * sin($latitude) ** 2) ** (3 / 2);
         $nu = $a / sqrt(1 - $e2 * (sin($latitude) ** 2));
 
-        $f = $this->crs->getDatum()->getEllipsoid()->getInverseFlattening();
+        $f = $ellipsoid->getInverseFlattening();
 
-        $dLatitude = ((-$tx * sin($latitude) * cos($longitude)) - ($ty * sin($latitude) * sin($longitude)) + ($tz * cos($latitude)) + ((($a * $df) + ($this->crs->getDatum()->getEllipsoid()->getInverseFlattening() * $da)) * sin(2 * $latitude))) / ($rho * sin((new ArcSecond(1))->asRadians()->getValue()));
+        $dLatitude = ((-$tx * sin($latitude) * cos($longitude)) - ($ty * sin($latitude) * sin($longitude)) + ($tz * cos($latitude)) + ((($a * $df) + ($ellipsoid->getInverseFlattening() * $da)) * sin(2 * $latitude))) / ($rho * sin((new ArcSecond(1))->asRadians()->getValue()));
         $dLongitude = (-$tx * sin($longitude) + $ty * cos($longitude)) / (($nu * cos($latitude)) * sin((new ArcSecond(1))->asRadians()->getValue()));
         $dHeight = ($tx * cos($latitude) * cos($longitude)) + ($ty * cos($latitude) * sin($longitude)) + ($tz * sin($latitude)) + (($a * $df + $f * $da) * (sin($latitude) ** 2)) - $da;
 
@@ -467,6 +468,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         Length $differenceInSemiMajorAxis,
         Scale $differenceInFlattening
     ): self {
+        $ellipsoid = $this->crs->getDatum()->getEllipsoid();
         $latitude = $this->latitude->asRadians()->getValue();
         $longitude = $this->longitude->asRadians()->getValue();
         $fromHeight = $this->height ? $this->height->asMetres()->getValue() : 0;
@@ -476,14 +478,14 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $da = $differenceInSemiMajorAxis->asMetres()->getValue();
         $df = $differenceInFlattening->asUnity()->getValue();
 
-        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
-        $b = $this->crs->getDatum()->getEllipsoid()->getSemiMinorAxis()->asMetres()->getValue();
-        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+        $a = $ellipsoid->getSemiMajorAxis()->asMetres()->getValue();
+        $b = $ellipsoid->getSemiMinorAxis()->asMetres()->getValue();
+        $e2 = $ellipsoid->getEccentricitySquared();
 
         $rho = $a * (1 - $e2) / (1 - $e2 * sin($latitude) ** 2) ** (3 / 2);
         $nu = $a / sqrt(1 - $e2 * (sin($latitude) ** 2));
 
-        $f = $this->crs->getDatum()->getEllipsoid()->getInverseFlattening();
+        $f = $ellipsoid->getInverseFlattening();
 
         $dLatitude = ((-$tx * sin($latitude) * cos($longitude)) - ($ty * sin($latitude) * sin($longitude)) + ($tz * cos($latitude)) + ($da * ($nu * $e2 * sin($latitude) * cos($latitude)) / $a + $df * ($rho * ($a / $b) + $nu * ($b / $a)) * sin($latitude) * cos($latitude))) / (($rho + $fromHeight) * sin((new ArcSecond(1))->asRadians()->getValue()));
         $dLongitude = (-$tx * sin($longitude) + $ty * cos($longitude)) / ((($nu + $fromHeight) * cos($latitude)) * sin((new ArcSecond(1))->asRadians()->getValue()));
@@ -508,14 +510,15 @@ class GeographicPoint extends Point implements ConvertiblePoint
         Length $eastingAtFalseOrigin,
         Length $northingAtFalseOrigin
     ): ProjectedPoint {
+        $ellipsoid = $this->crs->getDatum()->getEllipsoid();
         $latitude = $this->latitude->asRadians()->getValue();
         $longitude = $this->longitude->asRadians()->getValue();
         $phiOrigin = $latitudeOfFalseOrigin->asRadians()->getValue();
         $phi1 = $latitudeOf1stStandardParallel->asRadians()->getValue();
         $phi2 = $latitudeOf2ndStandardParallel->asRadians()->getValue();
-        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
-        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
-        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+        $a = $ellipsoid->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $ellipsoid->getEccentricity();
+        $e2 = $ellipsoid->getEccentricitySquared();
 
         $centralMeridianFirstParallel = cos($phi1) / sqrt(1 - ($e2 * sin($phi1) ** 2));
         $centralMeridianSecondParallel = cos($phi2) / sqrt(1 - ($e2 * sin($phi2) ** 2));
@@ -547,11 +550,12 @@ class GeographicPoint extends Point implements ConvertiblePoint
         Length $falseEasting,
         Length $falseNorthing
     ): ProjectedPoint {
+        $ellipsoid = $this->crs->getDatum()->getEllipsoid();
         $latitude = $this->latitude->asRadians()->getValue();
         $latitudeOrigin = $latitudeOfNaturalOrigin->asRadians()->getValue();
-        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
-        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
-        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+        $a = $ellipsoid->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $ellipsoid->getEccentricity();
+        $e2 = $ellipsoid->getEccentricitySquared();
         $e4 = $e ** 4;
         $e6 = $e ** 6;
 
@@ -582,11 +586,12 @@ class GeographicPoint extends Point implements ConvertiblePoint
         Length $falseEasting,
         Length $falseNorthing
     ): ProjectedPoint {
+        $ellipsoid = $this->crs->getDatum()->getEllipsoid();
         $latitude = $this->latitude->asRadians()->getValue();
         $latitudeOrigin = $latitudeOfNaturalOrigin->asRadians()->getValue();
-        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
-        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
-        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+        $a = $ellipsoid->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $ellipsoid->getEccentricity();
+        $e2 = $ellipsoid->getEccentricitySquared();
         $e4 = $e ** 4;
         $e6 = $e ** 6;
 
@@ -615,11 +620,12 @@ class GeographicPoint extends Point implements ConvertiblePoint
         Length $falseEasting,
         Length $falseNorthing
     ): ProjectedPoint {
+        $ellipsoid = $this->crs->getDatum()->getEllipsoid();
         $latitude = $this->latitude->asRadians()->getValue();
         $latitudeOrigin = $latitudeOfNaturalOrigin->asRadians()->getValue();
-        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
-        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
-        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+        $a = $ellipsoid->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $ellipsoid->getEccentricity();
+        $e2 = $ellipsoid->getEccentricitySquared();
         $e4 = $e ** 4;
         $e6 = $e ** 6;
 
@@ -648,11 +654,12 @@ class GeographicPoint extends Point implements ConvertiblePoint
         Length $falseEasting,
         Length $falseNorthing
     ): ProjectedPoint {
+        $ellipsoid = $this->crs->getDatum()->getEllipsoid();
         $latitude = $this->latitude->asRadians()->getValue();
         $latitudeOrigin = $latitudeOfNaturalOrigin->asRadians()->getValue();
-        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
-        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
-        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+        $a = $ellipsoid->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $ellipsoid->getEccentricity();
+        $e2 = $ellipsoid->getEccentricitySquared();
         $e4 = $e ** 4;
         $e6 = $e ** 6;
 
@@ -681,11 +688,12 @@ class GeographicPoint extends Point implements ConvertiblePoint
         Length $falseEasting,
         Length $falseNorthing
     ): ProjectedPoint {
+        $ellipsoid = $this->crs->getDatum()->getEllipsoid();
         $latitude = $this->latitude->asRadians()->getValue();
         $latitudeOrigin = $latitudeOfNaturalOrigin->asRadians()->getValue();
-        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
-        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
-        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+        $a = $ellipsoid->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $ellipsoid->getEccentricity();
+        $e2 = $ellipsoid->getEccentricitySquared();
         $e4 = $e ** 4;
         $e6 = $e ** 6;
 
@@ -716,11 +724,12 @@ class GeographicPoint extends Point implements ConvertiblePoint
         Length $falseNorthing,
         Length $projectionPlaneOriginHeight
     ): ProjectedPoint {
+        $ellipsoid = $this->crs->getDatum()->getEllipsoid();
         $latitude = $this->latitude->asRadians()->getValue();
         $latitudeOrigin = $latitudeOfNaturalOrigin->asRadians()->getValue();
         $heightOrigin = $projectionPlaneOriginHeight->asMetres()->getValue();
-        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
-        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+        $a = $ellipsoid->getSemiMajorAxis()->asMetres()->getValue();
+        $e2 = $ellipsoid->getEccentricitySquared();
 
         $rhoOrigin = $a * (1 - $e2) / (1 - $e2 * sin($latitudeOrigin) ** 2) ** (3 / 2);
         $rhoMid = $a * (1 - $e2) / (1 - $e2 * sin(($latitude + $latitudeOrigin) / 2) ** 2) ** (3 / 2);
@@ -747,10 +756,11 @@ class GeographicPoint extends Point implements ConvertiblePoint
         Length $falseEasting,
         Length $falseNorthing
     ): ProjectedPoint {
+        $ellipsoid = $this->crs->getDatum()->getEllipsoid();
         $latitude = $this->latitude->asRadians()->getValue();
-        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
-        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
-        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+        $a = $ellipsoid->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $ellipsoid->getEccentricity();
+        $e2 = $ellipsoid->getEccentricitySquared();
 
         $q = (1 - $e2) * ((sin($latitude) / (1 - $e2 * sin($latitude) ** 2)) - (1 / (2 * $e) * log((1 - $e * sin($latitude)) / (1 + $e * sin($latitude)))));
         $qP = (1 - $e2) * ((1 / (1 - $e2)) - (1 / (2 * $e) * log((1 - $e) / (1 + $e))));
@@ -775,11 +785,12 @@ class GeographicPoint extends Point implements ConvertiblePoint
         Length $falseEasting,
         Length $falseNorthing
     ): ProjectedPoint {
+        $ellipsoid = $this->crs->getDatum()->getEllipsoid();
         $latitude = $this->latitude->asRadians()->getValue();
         $latitudeFirstParallel = $latitudeOf1stStandardParallel->asRadians()->getValue();
-        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
-        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
-        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+        $a = $ellipsoid->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $ellipsoid->getEccentricity();
+        $e2 = $ellipsoid->getEccentricitySquared();
         $e4 = $e ** 4;
         $e6 = $e ** 6;
         $e8 = $e ** 8;
@@ -817,11 +828,12 @@ class GeographicPoint extends Point implements ConvertiblePoint
         Length $falseEasting,
         Length $falseNorthing
     ): ProjectedPoint {
+        $ellipsoid = $this->crs->getDatum()->getEllipsoid();
         $latitude = $this->latitude->asRadians()->getValue();
         $latitudeOrigin = $latitudeOfNaturalOrigin->asRadians()->getValue();
-        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
-        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
-        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+        $a = $ellipsoid->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $ellipsoid->getEccentricity();
+        $e2 = $ellipsoid->getEccentricitySquared();
         $e4 = $e ** 4;
         $e6 = $e ** 6;
 
@@ -848,6 +860,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         Length $falseEasting,
         Length $falseNorthing
     ): ProjectedPoint {
+        $ellipsoid = $this->crs->getDatum()->getEllipsoid();
         $longitudeOffset = $to->getDatum()->getPrimeMeridian()->getGreenwichLongitude()->asRadians()->getValue() - $this->getCRS()->getDatum()->getPrimeMeridian()->getGreenwichLongitude()->asRadians()->getValue();
         $latitude = $this->latitude->asRadians()->getValue();
         $longitude = $this->longitude->asRadians()->getValue() - $longitudeOffset;
@@ -856,9 +869,9 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $alphaC = $coLatitudeOfConeAxis->asRadians()->getValue();
         $latitudeP = $latitudeOfPseudoStandardParallel->asRadians()->getValue();
         $kP = $scaleFactorOnPseudoStandardParallel->asUnity()->getValue();
-        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
-        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
-        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+        $a = $ellipsoid->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $ellipsoid->getEccentricity();
+        $e2 = $ellipsoid->getEccentricitySquared();
 
         $A = $a * sqrt(1 - $e2) / (1 - $e2 * sin($latitudeC) ** 2);
         $B = sqrt(1 + $e2 * cos($latitudeC) ** 4 / (1 - $e2));
@@ -947,11 +960,12 @@ class GeographicPoint extends Point implements ConvertiblePoint
         Length $falseEasting,
         Length $falseNorthing
     ): ProjectedPoint {
+        $ellipsoid = $this->crs->getDatum()->getEllipsoid();
         $latitude = $this->latitude->asRadians()->getValue();
         $latitudeOrigin = $latitudeOfNaturalOrigin->asRadians()->getValue();
-        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
-        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
-        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+        $a = $ellipsoid->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $ellipsoid->getEccentricity();
+        $e2 = $ellipsoid->getEccentricitySquared();
 
         $q = (1 - $e2) * ((sin($latitude) / (1 - $e2 * sin($latitude) ** 2)) - ((1 / (2 * $e)) * log((1 - $e * sin($latitude)) / (1 + $e * sin($latitude)))));
         $qO = (1 - $e2) * ((sin($latitudeOrigin) / (1 - $e2 * sin($latitudeOrigin) ** 2)) - ((1 / (2 * $e)) * log((1 - $e * sin($latitudeOrigin)) / (1 + $e * sin($latitudeOrigin)))));
@@ -981,9 +995,10 @@ class GeographicPoint extends Point implements ConvertiblePoint
         Length $falseEasting,
         Length $falseNorthing
     ): ProjectedPoint {
+        $ellipsoid = $this->crs->getDatum()->getEllipsoid();
         $latitude = $this->latitude->asRadians()->getValue();
         $latitudeOrigin = $latitudeOfNaturalOrigin->asRadians()->getValue();
-        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+        $a = $ellipsoid->getSemiMajorAxis()->asMetres()->getValue();
 
         $k = sqrt(2 / (1 + sin($latitudeOrigin) * sin($latitude) + cos($latitudeOrigin) * cos($latitude) * cos($this->normaliseLongitude($this->longitude->subtract($longitudeOfNaturalOrigin))->asRadians()->getValue())));
 
@@ -1004,12 +1019,13 @@ class GeographicPoint extends Point implements ConvertiblePoint
         Length $falseEasting,
         Length $falseNorthing
     ): ProjectedPoint {
+        $ellipsoid = $this->crs->getDatum()->getEllipsoid();
         $latitude = $this->latitude->asRadians()->getValue();
         $latitudeOrigin = $latitudeOfNaturalOrigin->asRadians()->getValue();
         $kO = $scaleFactorAtNaturalOrigin->asUnity()->getValue();
-        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
-        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
-        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+        $a = $ellipsoid->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $ellipsoid->getEccentricity();
+        $e2 = $ellipsoid->getEccentricitySquared();
 
         $mO = cos($latitudeOrigin) / sqrt(1 - $e2 * sin($latitudeOrigin) ** 2);
         $tO = tan(M_PI / 4 - $latitudeOrigin / 2) / ((1 - $e * sin($latitudeOrigin)) / (1 + $e * sin($latitudeOrigin))) ** ($e / 2);
@@ -1038,13 +1054,14 @@ class GeographicPoint extends Point implements ConvertiblePoint
         Length $eastingAtFalseOrigin,
         Length $northingAtFalseOrigin
     ): ProjectedPoint {
+        $ellipsoid = $this->crs->getDatum()->getEllipsoid();
         $latitude = $this->latitude->asRadians()->getValue();
         $latitudeNaturalOrigin = $latitudeOfNaturalOrigin->asRadians()->getValue();
         $latitudeFalseOrigin = $latitudeOfFalseOrigin->asRadians()->getValue();
         $kO = $scaleFactorAtNaturalOrigin->asUnity()->getValue();
-        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
-        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
-        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+        $a = $ellipsoid->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $ellipsoid->getEccentricity();
+        $e2 = $ellipsoid->getEccentricitySquared();
 
         $mO = cos($latitudeNaturalOrigin) / sqrt(1 - $e2 * sin($latitudeNaturalOrigin) ** 2);
         $tO = tan(M_PI / 4 - $latitudeNaturalOrigin / 2) / ((1 - $e * sin($latitudeNaturalOrigin)) / (1 + $e * sin($latitudeNaturalOrigin))) ** ($e / 2);
@@ -1076,13 +1093,14 @@ class GeographicPoint extends Point implements ConvertiblePoint
         Length $eastingAtFalseOrigin,
         Length $northingAtFalseOrigin
     ): ProjectedPoint {
+        $ellipsoid = $this->crs->getDatum()->getEllipsoid();
         $latitude = $this->latitude->asRadians()->getValue();
         $phiF = $latitudeOfFalseOrigin->asRadians()->getValue();
         $phi1 = $latitudeOf1stStandardParallel->asRadians()->getValue();
         $phi2 = $latitudeOf2ndStandardParallel->asRadians()->getValue();
-        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
-        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
-        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+        $a = $ellipsoid->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $ellipsoid->getEccentricity();
+        $e2 = $ellipsoid->getEccentricitySquared();
 
         $m1 = cos($phi1) / sqrt(1 - $e2 * sin($phi1) ** 2);
         $m2 = cos($phi2) / sqrt(1 - $e2 * sin($phi2) ** 2);
@@ -1118,14 +1136,15 @@ class GeographicPoint extends Point implements ConvertiblePoint
         Length $northingAtFalseOrigin,
         Scale $ellipsoidScalingFactor
     ): ProjectedPoint {
+        $ellipsoid = $this->crs->getDatum()->getEllipsoid();
         $latitude = $this->latitude->asRadians()->getValue();
         $phiF = $latitudeOfFalseOrigin->asRadians()->getValue();
         $phi1 = $latitudeOf1stStandardParallel->asRadians()->getValue();
         $phi2 = $latitudeOf2ndStandardParallel->asRadians()->getValue();
         $K = $ellipsoidScalingFactor->asUnity()->getValue();
-        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
-        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
-        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+        $a = $ellipsoid->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $ellipsoid->getEccentricity();
+        $e2 = $ellipsoid->getEccentricitySquared();
 
         $m1 = cos($phi1) / sqrt(1 - $e2 * sin($phi1) ** 2);
         $m2 = cos($phi2) / sqrt(1 - $e2 * sin($phi2) ** 2);
@@ -1157,13 +1176,14 @@ class GeographicPoint extends Point implements ConvertiblePoint
         Length $eastingAtFalseOrigin,
         Length $northingAtFalseOrigin
     ): ProjectedPoint {
+        $ellipsoid = $this->crs->getDatum()->getEllipsoid();
         $latitude = $this->latitude->asRadians()->getValue();
         $phiF = $latitudeOfFalseOrigin->asRadians()->getValue();
         $phi1 = $latitudeOf1stStandardParallel->asRadians()->getValue();
         $phi2 = $latitudeOf2ndStandardParallel->asRadians()->getValue();
-        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
-        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
-        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+        $a = $ellipsoid->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $ellipsoid->getEccentricity();
+        $e2 = $ellipsoid->getEccentricitySquared();
 
         $m1 = cos($phi1) / sqrt(1 - $e2 * sin($phi1) ** 2);
         $m2 = cos($phi2) / sqrt(1 - $e2 * sin($phi2) ** 2);
@@ -1194,12 +1214,13 @@ class GeographicPoint extends Point implements ConvertiblePoint
         Length $falseEasting,
         Length $falseNorthing
     ): ProjectedPoint {
+        $ellipsoid = $this->crs->getDatum()->getEllipsoid();
         $latitude = $this->latitude->asRadians()->getValue();
         $latitudeOrigin = $latitudeOfNaturalOrigin->asRadians()->getValue();
         $kO = $scaleFactorAtNaturalOrigin->asUnity()->getValue();
-        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
-        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
-        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+        $a = $ellipsoid->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $ellipsoid->getEccentricity();
+        $e2 = $ellipsoid->getEccentricitySquared();
 
         $mO = cos($latitudeOrigin) / sqrt(1 - $e2 * sin($latitudeOrigin) ** 2);
         $tO = tan(M_PI / 4 - $latitudeOrigin / 2) / ((1 - $e * sin($latitudeOrigin)) / (1 + $e * sin($latitudeOrigin))) ** ($e / 2);
@@ -1229,12 +1250,13 @@ class GeographicPoint extends Point implements ConvertiblePoint
         Length $falseEasting,
         Length $falseNorthing
     ): ProjectedPoint {
+        $ellipsoid = $this->crs->getDatum()->getEllipsoid();
         $latitude = $this->latitude->asRadians()->getValue();
         $latitudeOrigin = $latitudeOfNaturalOrigin->asRadians()->getValue();
         $kO = $scaleFactorAtNaturalOrigin->asUnity()->getValue();
-        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
-        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
-        $f = $this->crs->getDatum()->getEllipsoid()->getInverseFlattening();
+        $a = $ellipsoid->getSemiMajorAxis()->asMetres()->getValue();
+        $e2 = $ellipsoid->getEccentricitySquared();
+        $f = $ellipsoid->getInverseFlattening();
 
         $n = $f / (2 - $f);
         $rhoO = $a * (1 - $e2) / (1 - $e2 * sin($latitudeOrigin) ** 2) ** (3 / 2);
@@ -1270,11 +1292,12 @@ class GeographicPoint extends Point implements ConvertiblePoint
         Length $falseEasting,
         Length $falseNorthing
     ): ProjectedPoint {
+        $ellipsoid = $this->crs->getDatum()->getEllipsoid();
         $latitude = $this->latitude->asRadians()->getValue();
         $latitudeFirstParallel = $latitudeOf1stStandardParallel->asRadians()->getValue();
-        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
-        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
-        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+        $a = $ellipsoid->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $ellipsoid->getEccentricity();
+        $e2 = $ellipsoid->getEccentricitySquared();
 
         $k = cos($latitudeFirstParallel) / sqrt(1 - $e2 * sin($latitudeFirstParallel) ** 2);
         $q = (1 - $e2) * ((sin($latitude) / (1 - $e2 * sin($latitude) ** 2)) - (1 / (2 * $e)) * log((1 - $e * sin($latitude)) / (1 + $e * sin($latitude))));
@@ -1300,11 +1323,12 @@ class GeographicPoint extends Point implements ConvertiblePoint
         Length $falseEasting,
         Length $falseNorthing
     ): ProjectedPoint {
+        $ellipsoid = $this->crs->getDatum()->getEllipsoid();
         $latitude = $this->latitude->asRadians()->getValue();
         $latitudeOrigin = $latitudeOfNaturalOrigin->asRadians()->getValue();
-        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
-        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
-        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+        $a = $ellipsoid->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $ellipsoid->getEccentricity();
+        $e2 = $ellipsoid->getEccentricitySquared();
 
         $nuO = $a / sqrt(1 - $e2 * sin($latitudeOrigin) ** 2);
         $nu = $a / sqrt(1 - $e2 * sin($latitude) ** 2);
@@ -1340,13 +1364,14 @@ class GeographicPoint extends Point implements ConvertiblePoint
         Length $falseEasting,
         Length $falseNorthing
     ): ProjectedPoint {
+        $ellipsoid = $this->crs->getDatum()->getEllipsoid();
         $latitude = $this->latitude->asRadians()->getValue();
         $latitudeOrigin = $latitudeOfNaturalOrigin->asRadians()->getValue();
         $longitudeOrigin = $longitudeOfNaturalOrigin->asRadians()->getValue();
         $kO = $scaleFactorAtNaturalOrigin->asUnity()->getValue();
-        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
-        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
-        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+        $a = $ellipsoid->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $ellipsoid->getEccentricity();
+        $e2 = $ellipsoid->getEccentricitySquared();
 
         $rhoOrigin = $a * (1 - $e2) / (1 - $e2 * sin($latitudeOrigin) ** 2) ** (3 / 2);
         $nuOrigin = $a / sqrt(1 - $e2 * (sin($latitudeOrigin) ** 2));
@@ -1387,11 +1412,12 @@ class GeographicPoint extends Point implements ConvertiblePoint
         Length $falseEasting,
         Length $falseNorthing
     ): ProjectedPoint {
+        $ellipsoid = $this->crs->getDatum()->getEllipsoid();
         $latitude = $this->latitude->asRadians()->getValue();
         $latitudeOrigin = $latitudeOfNaturalOrigin->asRadians()->getValue();
         $kO = $scaleFactorAtNaturalOrigin->asUnity()->getValue();
-        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
-        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
+        $a = $ellipsoid->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $ellipsoid->getEccentricity();
 
         if ($latitudeOrigin < 0) {
             $t = tan(M_PI / 4 + $latitude / 2) / (((1 + $e * sin($latitude)) / (1 - $e * sin($latitude))) ** ($e / 2));
@@ -1424,11 +1450,12 @@ class GeographicPoint extends Point implements ConvertiblePoint
         Length $falseEasting,
         Length $falseNorthing
     ): ProjectedPoint {
+        $ellipsoid = $this->crs->getDatum()->getEllipsoid();
         $latitude = $this->latitude->asRadians()->getValue();
         $firstStandardParallel = $latitudeOfStandardParallel->asRadians()->getValue();
-        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
-        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
-        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+        $a = $ellipsoid->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $ellipsoid->getEccentricity();
+        $e2 = $ellipsoid->getEccentricitySquared();
 
         if ($firstStandardParallel < 0) {
             $tF = tan(M_PI / 4 + $firstStandardParallel / 2) / (((1 + $e * sin($firstStandardParallel)) / (1 - $e * sin($firstStandardParallel))) ** ($e / 2));
@@ -1466,11 +1493,12 @@ class GeographicPoint extends Point implements ConvertiblePoint
         Length $eastingAtFalseOrigin,
         Length $northingAtFalseOrigin
     ): ProjectedPoint {
+        $ellipsoid = $this->crs->getDatum()->getEllipsoid();
         $latitude = $this->latitude->asRadians()->getValue();
         $firstStandardParallel = $latitudeOfStandardParallel->asRadians()->getValue();
-        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
-        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
-        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+        $a = $ellipsoid->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $ellipsoid->getEccentricity();
+        $e2 = $ellipsoid->getEccentricitySquared();
 
         if ($firstStandardParallel < 0) {
             $tF = tan(M_PI / 4 + $firstStandardParallel / 2) / (((1 + $e * sin($firstStandardParallel)) / (1 - $e * sin($firstStandardParallel))) ** ($e / 2));
@@ -1509,8 +1537,9 @@ class GeographicPoint extends Point implements ConvertiblePoint
         Length $falseEasting,
         Length $falseNorthing
     ): ProjectedPoint {
+        $ellipsoid = $this->crs->getDatum()->getEllipsoid();
         $latitude = $this->latitude->asRadians()->getValue();
-        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+        $a = $ellipsoid->getSemiMajorAxis()->asMetres()->getValue();
 
         $easting = $falseEasting->asMetres()->getValue() + $a * ($this->normaliseLongitude($this->longitude->subtract($longitudeOfNaturalOrigin))->asRadians()->getValue());
         $northing = $falseNorthing->asMetres()->getValue() + $a * log(tan(M_PI / 4 + $latitude / 2));
@@ -1532,11 +1561,12 @@ class GeographicPoint extends Point implements ConvertiblePoint
         Length $falseEasting,
         Length $falseNorthing
     ): ProjectedPoint {
+        $ellipsoid = $this->crs->getDatum()->getEllipsoid();
         $latitude = $this->latitude->asRadians()->getValue();
         $kO = $scaleFactorAtNaturalOrigin->asUnity()->getValue();
 
-        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
-        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
+        $a = $ellipsoid->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $ellipsoid->getEccentricity();
 
         $easting = $falseEasting->asMetres()->getValue() + $a * $kO * $this->normaliseLongitude($this->longitude->subtract($longitudeOfNaturalOrigin))->asRadians()->getValue();
         $northing = $falseNorthing->asMetres()->getValue() + $a * $kO * log(tan(M_PI / 4 + $latitude / 2) * ((1 - $e * sin($latitude)) / (1 + $e * sin($latitude))) ** ($e / 2));
@@ -1555,11 +1585,12 @@ class GeographicPoint extends Point implements ConvertiblePoint
         Length $falseEasting,
         Length $falseNorthing
     ): ProjectedPoint {
+        $ellipsoid = $this->crs->getDatum()->getEllipsoid();
         $latitude = $this->latitude->asRadians()->getValue();
         $firstStandardParallel = $latitudeOf1stStandardParallel->asRadians()->getValue();
-        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
-        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
-        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+        $a = $ellipsoid->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $ellipsoid->getEccentricity();
+        $e2 = $ellipsoid->getEccentricitySquared();
 
         $kO = cos($firstStandardParallel) / sqrt(1 - $e2 * sin($firstStandardParallel) ** 2);
 
@@ -1596,6 +1627,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         Length $falseEasting,
         Length $falseNorthing
     ): ProjectedPoint {
+        $ellipsoid = $this->crs->getDatum()->getEllipsoid();
         $latitude = $this->latitude->asRadians()->getValue();
         $longitude = $this->longitude->asRadians()->getValue();
         $latC = $latitudeOfProjectionCentre->asRadians()->getValue();
@@ -1603,9 +1635,9 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $alphaC = $azimuthOfInitialLine->asRadians()->getValue();
         $kC = $scaleFactorOnInitialLine->asUnity()->getValue();
         $gammaC = $angleFromRectifiedToSkewGrid->asRadians()->getValue();
-        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
-        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
-        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+        $a = $ellipsoid->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $ellipsoid->getEccentricity();
+        $e2 = $ellipsoid->getEccentricitySquared();
 
         $B = sqrt(1 + ($e2 * cos($latC) ** 4 / (1 - $e2)));
         $A = $a * $B * $kC * sqrt(1 - $e2) / (1 - $e2 * sin($latC) ** 2);
@@ -1646,6 +1678,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         Length $eastingAtProjectionCentre,
         Length $northingAtProjectionCentre
     ): ProjectedPoint {
+        $ellipsoid = $this->crs->getDatum()->getEllipsoid();
         $latitude = $this->latitude->asRadians()->getValue();
         $longitude = $this->longitude->asRadians()->getValue();
         $latC = $latitudeOfProjectionCentre->asRadians()->getValue();
@@ -1653,9 +1686,9 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $alphaC = $azimuthOfInitialLine->asRadians()->getValue();
         $kC = $scaleFactorOnInitialLine->asUnity()->getValue();
         $gammaC = $angleFromRectifiedToSkewGrid->asRadians()->getValue();
-        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
-        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
-        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+        $a = $ellipsoid->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $ellipsoid->getEccentricity();
+        $e2 = $ellipsoid->getEccentricitySquared();
 
         $B = sqrt(1 + ($e2 * cos($latC) ** 4 / (1 - $e2)));
         $A = $a * $B * $kC * sqrt(1 - $e2) / (1 - $e2 * sin($latC) ** 2);
@@ -1710,13 +1743,14 @@ class GeographicPoint extends Point implements ConvertiblePoint
         Length $falseEasting,
         Length $falseNorthing
     ): ProjectedPoint {
+        $ellipsoid = $this->crs->getDatum()->getEllipsoid();
         $latitude = $this->latitude->asRadians()->getValue();
         $latC = $latitudeOfProjectionCentre->asRadians()->getValue();
         $alphaC = $azimuthOfInitialLine->asRadians()->getValue();
         $kC = $scaleFactorOnInitialLine->asUnity()->getValue();
-        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
-        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
-        $e2 = $this->crs->getDatum()->getEllipsoid()->getEccentricitySquared();
+        $a = $ellipsoid->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $ellipsoid->getEccentricity();
+        $e2 = $ellipsoid->getEccentricitySquared();
 
         $B = sqrt(1 + ($e2 * cos($latC) ** 4 / (1 - $e2)));
         $latS = self::asin(sin($latC) / $B);
@@ -1757,12 +1791,13 @@ class GeographicPoint extends Point implements ConvertiblePoint
         Length $falseEasting,
         Length $falseNorthing
     ): ProjectedPoint {
+        $ellipsoid = $this->crs->getDatum()->getEllipsoid();
         $latitude = $this->latitude->asRadians()->getValue();
         $latitudeOrigin = $latitudeOfNaturalOrigin->asRadians()->getValue();
         $kO = $scaleFactorAtNaturalOrigin->asUnity()->getValue();
-        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
-        $e = $this->crs->getDatum()->getEllipsoid()->getEccentricity();
-        $f = $this->crs->getDatum()->getEllipsoid()->getInverseFlattening();
+        $a = $ellipsoid->getSemiMajorAxis()->asMetres()->getValue();
+        $e = $ellipsoid->getEccentricity();
+        $f = $ellipsoid->getInverseFlattening();
 
         $n = $f / (2 - $f);
         $B = ($a / (1 + $n)) * (1 + $n ** 2 / 4 + $n ** 4 / 64);
@@ -1844,7 +1879,8 @@ class GeographicPoint extends Point implements ConvertiblePoint
         Length $falseEasting,
         Length $falseNorthing
     ): ProjectedPoint {
-        $a = $this->crs->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
+        $ellipsoid = $this->crs->getDatum()->getEllipsoid();
+        $a = $ellipsoid->getSemiMajorAxis()->asMetres()->getValue();
 
         $deltaLatitudeToOrigin = Angle::convert($this->latitude->subtract($latitudeOfNaturalOrigin), Angle::EPSG_ARC_SECOND)->getValue();
         $deltaLongitudeToOrigin = $this->longitude->subtract($longitudeOfNaturalOrigin)->asRadians();

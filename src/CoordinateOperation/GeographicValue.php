@@ -63,8 +63,9 @@ class GeographicValue
 
     public function asGeocentricValue(): GeocentricValue
     {
-        $a = $this->datum->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
-        $e2 = $this->datum->getEllipsoid()->getEccentricitySquared();
+        $ellipsoid = $this->datum->getEllipsoid();
+        $a = $ellipsoid->getSemiMajorAxis()->asMetres()->getValue();
+        $e2 = $ellipsoid->getEccentricitySquared();
         $latitude = $this->latitude->getValue();
         $longitude = $this->longitude->getValue() - $this->datum->getPrimeMeridian()->getGreenwichLongitude()->asRadians()->getValue();
         $h = isset($this->height) ? $this->height->getValue() : 0;

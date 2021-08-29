@@ -122,12 +122,13 @@ class VerticalPoint extends Point
         string $EPSGCodeForHorizontalCRS,
         GeographicPoint $horizontalPoint
     ): self {
+        $ellipsoid = $horizontalPoint->getCRS()->getDatum()->getEllipsoid();
         $latitude = $horizontalPoint->getLatitude()->asRadians()->getValue();
         $longitude = $horizontalPoint->getLongitude()->asRadians()->getValue();
         $latitudeOrigin = $ordinate1OfEvaluationPoint->asRadians()->getValue();
         $longitudeOrigin = $ordinate2OfEvaluationPoint->asRadians()->getValue();
-        $a = $horizontalPoint->getCRS()->getDatum()->getEllipsoid()->getSemiMajorAxis()->asMetres()->getValue();
-        $e2 = $horizontalPoint->getCRS()->getDatum()->getEllipsoid()->getEccentricitySquared();
+        $a = $ellipsoid->getSemiMajorAxis()->asMetres()->getValue();
+        $e2 = $ellipsoid->getEccentricitySquared();
 
         $rhoOrigin = $a * (1 - $e2) / (1 - $e2 * sin($latitudeOrigin) ** 2) ** 1.5;
         $nuOrigin = $a / sqrt(1 - $e2 * (sin($latitudeOrigin) ** 2));
