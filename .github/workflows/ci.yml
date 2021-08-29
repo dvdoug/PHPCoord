@@ -78,7 +78,7 @@ jobs:
         path: |
           ${{ steps.composercache.outputs.dir }}
           "build/php-code-coverage-cache"
-          ".php_cs.cache"
+          ".php-cs-fixer.cache"
         key: "php-${{ matrix.php-version }}-deps-${{ matrix.dependencies }}-${{ hashFiles('composer.json') }}"
         restore-keys: "php-${{ matrix.php-version }}-deps-${{ matrix.dependencies }}"
 
