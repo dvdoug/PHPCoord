@@ -24,6 +24,8 @@ abstract class Time implements UnitOfMeasure
         ],
     ];
 
+    private static array $supportedCache = [];
+
     abstract public function asYears(): Year;
 
     public function add(self $unit): self
@@ -64,12 +66,13 @@ abstract class Time implements UnitOfMeasure
 
     public static function getSupportedSRIDs(): array
     {
-        $supported = [];
-        foreach (static::$sridData as $srid => $data) {
-            $supported[$srid] = $data['name'];
+        if (!self::$supportedCache) {
+            foreach (static::$sridData as $srid => $data) {
+                self::$supportedCache[$srid] = $data['name'];
+            }
         }
 
-        return $supported;
+        return self::$supportedCache;
     }
 
     public function __toString(): string

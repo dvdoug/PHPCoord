@@ -54,6 +54,8 @@ abstract class Scale implements UnitOfMeasure
         ],
     ];
 
+    private static array $supportedCache = [];
+
     abstract public function asUnity(): Unity;
 
     public function add(self $unit): self
@@ -100,12 +102,13 @@ abstract class Scale implements UnitOfMeasure
 
     public static function getSupportedSRIDs(): array
     {
-        $supported = [];
-        foreach (static::$sridData as $srid => $data) {
-            $supported[$srid] = $data['name'];
+        if (!self::$supportedCache) {
+            foreach (static::$sridData as $srid => $data) {
+                self::$supportedCache[$srid] = $data['name'];
+            }
         }
 
-        return $supported;
+        return self::$supportedCache;
     }
 
     public function __toString(): string

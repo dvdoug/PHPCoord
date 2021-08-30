@@ -181,6 +181,8 @@ abstract class Angle implements UnitOfMeasure
         ],
     ];
 
+    private static array $supportedCache = [];
+
     abstract public function asRadians(): Radian;
 
     public function asDegrees(): Degree
@@ -259,12 +261,13 @@ abstract class Angle implements UnitOfMeasure
 
     public static function getSupportedSRIDs(): array
     {
-        $supported = [];
-        foreach (static::$sridData as $srid => $data) {
-            $supported[$srid] = $data['name'];
+        if (!self::$supportedCache) {
+            foreach (static::$sridData as $srid => $data) {
+                self::$supportedCache[$srid] = $data['name'];
+            }
         }
 
-        return $supported;
+        return self::$supportedCache;
     }
 
     public static function convert(self $angle, string $targetSRID): self

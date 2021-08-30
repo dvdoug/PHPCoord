@@ -206,6 +206,8 @@ abstract class Length implements UnitOfMeasure
         ],
     ];
 
+    private static array $supportedCache = [];
+
     abstract public function asMetres(): Metre;
 
     public function add(self $unit): self
@@ -284,12 +286,13 @@ abstract class Length implements UnitOfMeasure
 
     public static function getSupportedSRIDs(): array
     {
-        $supported = [];
-        foreach (static::$sridData as $srid => $data) {
-            $supported[$srid] = $data['name'];
+        if (!self::$supportedCache) {
+            foreach (static::$sridData as $srid => $data) {
+                self::$supportedCache[$srid] = $data['name'];
+            }
         }
 
-        return $supported;
+        return self::$supportedCache;
     }
 
     public static function convert(self $length, string $targetSRID): self

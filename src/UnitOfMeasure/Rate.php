@@ -95,6 +95,8 @@ class Rate implements UnitOfMeasure
 
     private Time $time;
 
+    private static array $supportedCache = [];
+
     public function __construct(UnitOfMeasure $change, Time $time)
     {
         if ($change instanceof Time) {
@@ -163,11 +165,12 @@ class Rate implements UnitOfMeasure
 
     public static function getSupportedSRIDs(): array
     {
-        $supported = [];
-        foreach (static::$sridData as $srid => $data) {
-            $supported[$srid] = $data['name'];
+        if (!self::$supportedCache) {
+            foreach (static::$sridData as $srid => $data) {
+                self::$supportedCache[$srid] = $data['name'];
+            }
         }
 
-        return $supported;
+        return self::$supportedCache;
     }
 }
