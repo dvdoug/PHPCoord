@@ -33,6 +33,8 @@ class BoundingArea
 
     private array $pointInside = [];
 
+    private array $centre = [];
+
     private const BUFFER_THRESHOLD = 200; // rough guess at where map maker got bored adding vertices for complex shapes
 
     private const BUFFER_SIZE = 0.1; // approx 10km
@@ -168,33 +170,37 @@ class BoundingArea
      */
     protected function getCentre(int $polygonId): array
     {
-        // Calculates the "centre" (centroid) of a polygon.
-        $vertices = $this->vertices[$polygonId][0]; // only consider outer ring
-        $n = count($vertices);
-        $area = 0;
+        if (!isset($this->centre[$polygonId])) {
+            // Calculates the "centre" (centroid) of a polygon.
+            $vertices = $this->vertices[$polygonId][0]; // only consider outer ring
+            $n = count($vertices);
+            $area = 0;
 
-        for ($i = 0; $i < ($n - 1); ++$i) {
-            $area += $vertices[$i][0] * $vertices[$i + 1][1];
+            for ($i = 0; $i < ($n - 1); ++$i) {
+                $area += $vertices[$i][0] * $vertices[$i + 1][1];
+            }
+            $area += $vertices[$n - 1][0] * $vertices[0][1];
+
+            for ($i = 0; $i < ($n - 1); ++$i) {
+                $area -= $vertices[$i + 1][0] * $vertices[$i][1];
+            }
+            $area -= $vertices[0][0] * $vertices[$n - 1][1];
+            $area /= 2;
+
+            $latitude = 0;
+            $longitude = 0;
+
+            for ($i = 0; $i < ($n - 1); ++$i) {
+                $latitude += ($vertices[$i][1] + $vertices[$i + 1][1]) * ($vertices[$i][0] * $vertices[$i + 1][1] - $vertices[$i + 1][0] * $vertices[$i][1]);
+                $longitude += ($vertices[$i][0] + $vertices[$i + 1][0]) * ($vertices[$i][0] * $vertices[$i + 1][1] - $vertices[$i + 1][0] * $vertices[$i][1]);
+            }
+            $latitude = new Degree($latitude / 6 / $area);
+            $longitude = new Degree($longitude / 6 / $area);
+
+            $this->centre[$polygonId] = [$latitude, $longitude];
         }
-        $area += $vertices[$n - 1][0] * $vertices[0][1];
 
-        for ($i = 0; $i < ($n - 1); ++$i) {
-            $area -= $vertices[$i + 1][0] * $vertices[$i][1];
-        }
-        $area -= $vertices[0][0] * $vertices[$n - 1][1];
-        $area /= 2;
-
-        $latitude = 0;
-        $longitude = 0;
-
-        for ($i = 0; $i < ($n - 1); ++$i) {
-            $latitude += ($vertices[$i][1] + $vertices[$i + 1][1]) * ($vertices[$i][0] * $vertices[$i + 1][1] - $vertices[$i + 1][0] * $vertices[$i][1]);
-            $longitude += ($vertices[$i][0] + $vertices[$i + 1][0]) * ($vertices[$i][0] * $vertices[$i + 1][1] - $vertices[$i + 1][0] * $vertices[$i][1]);
-        }
-        $latitude = new Degree($latitude / 6 / $area);
-        $longitude = new Degree($longitude / 6 / $area);
-
-        return [$latitude, $longitude];
+        return $this->centre[$polygonId];
     }
 
     /**
