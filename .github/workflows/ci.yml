@@ -107,10 +107,6 @@ jobs:
         composer config minimum-stability dev;
         composer update --no-interaction --prefer-dist --ignore-platform-reqs;
 
-    - name: Check code style
-      if: matrix.php-version == '8.0' && matrix.dependencies == 'highest' && matrix.datapack == ''
-      run: vendor/bin/php-cs-fixer fix --verbose --dry-run --diff --allow-risky=yes --format=checkstyle | cs2pr
-
     - name: PHPUnit (Unit)
       run: |
         php -dmemory_limit=-1 vendor/phpunit/phpunit/phpunit --exclude-group=integration;
@@ -121,3 +117,7 @@ jobs:
 
     - name: PHPUnit (Integration)
       run: php -dmemory_limit=-1 vendor/phpunit/phpunit/phpunit --group=integration --no-coverage;
+
+    - name: Check code style
+      if: matrix.php-version == '8.0' && matrix.dependencies == 'highest' && matrix.datapack == ''
+      run: vendor/bin/php-cs-fixer fix --verbose --dry-run --diff --allow-risky=yes --format=checkstyle | cs2pr
