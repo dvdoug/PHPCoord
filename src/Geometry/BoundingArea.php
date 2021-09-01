@@ -173,24 +173,24 @@ class BoundingArea
         if (!isset($this->centre[$polygonId])) {
             // Calculates the "centre" (centroid) of a polygon.
             $vertices = $this->vertices[$polygonId][0]; // only consider outer ring
-            $n = count($vertices);
+            $n = count($vertices) - 1;
             $area = 0;
 
-            for ($i = 0; $i < ($n - 1); ++$i) {
+            for ($i = 0; $i < $n; ++$i) {
                 $area += $vertices[$i][0] * $vertices[$i + 1][1];
             }
-            $area += $vertices[$n - 1][0] * $vertices[0][1];
+            $area += $vertices[$n][0] * $vertices[0][1];
 
-            for ($i = 0; $i < ($n - 1); ++$i) {
+            for ($i = 0; $i < $n; ++$i) {
                 $area -= $vertices[$i + 1][0] * $vertices[$i][1];
             }
-            $area -= $vertices[0][0] * $vertices[$n - 1][1];
+            $area -= $vertices[0][0] * $vertices[$n][1];
             $area /= 2;
 
             $latitude = 0;
             $longitude = 0;
 
-            for ($i = 0; $i < ($n - 1); ++$i) {
+            for ($i = 0; $i < $n; ++$i) {
                 $latitude += ($vertices[$i][1] + $vertices[$i + 1][1]) * ($vertices[$i][0] * $vertices[$i + 1][1] - $vertices[$i + 1][0] * $vertices[$i][1]);
                 $longitude += ($vertices[$i][0] + $vertices[$i + 1][0]) * ($vertices[$i][0] * $vertices[$i + 1][1] - $vertices[$i + 1][0] * $vertices[$i][1]);
             }
