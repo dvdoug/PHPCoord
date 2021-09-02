@@ -2594,7 +2594,7 @@ class Compound extends CoordinateReferenceSystem
             if (isset(Projected::getSupportedSRIDs()[$data['horizontal_crs']])) {
                 $horizontalCRS = Projected::fromSRID($data['horizontal_crs']);
             } else {
-                $horizontalCRS = Geographic::fromSRID($data['horizontal_crs']);
+                $horizontalCRS = Geographic2D::fromSRID($data['horizontal_crs']);
             }
 
             self::$cachedObjects[$srid] = new self(
