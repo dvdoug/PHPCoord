@@ -17,28 +17,38 @@ use PHPCoord\UnitOfMeasure\Time\Time;
 
 class UnitOfMeasureFactory
 {
+    private static array $sridCache = [];
+
     /**
      * @param float|string $measurement
      */
     public static function makeUnit($measurement, string $srid): UnitOfMeasure
     {
-        if (isset(Angle::getSupportedSRIDs()[$srid])) {
+        if (!self::$sridCache) {
+            self::$sridCache['angle'] = Angle::getSupportedSRIDs();
+            self::$sridCache['length'] = Length::getSupportedSRIDs();
+            self::$sridCache['scale'] = Scale::getSupportedSRIDs();
+            self::$sridCache['time'] = Time::getSupportedSRIDs();
+            self::$sridCache['rate'] = Rate::getSupportedSRIDs();
+        }
+
+        if (isset(self::$sridCache['angle'][$srid])) {
             return Angle::makeUnit($measurement, $srid);
         }
 
-        if (isset(Length::getSupportedSRIDs()[$srid])) {
+        if (isset(self::$sridCache['length'][$srid])) {
             return Length::makeUnit($measurement, $srid);
         }
 
-        if (isset(Scale::getSupportedSRIDs()[$srid])) {
+        if (isset(self::$sridCache['scale'][$srid])) {
             return Scale::makeUnit($measurement, $srid);
         }
 
-        if (isset(Time::getSupportedSRIDs()[$srid])) {
+        if (isset(self::$sridCache['time'][$srid])) {
             return Time::makeUnit($measurement, $srid);
         }
 
-        if (isset(Rate::getSupportedSRIDs()[$srid])) {
+        if (isset(self::$sridCache['rate'][$srid])) {
             return Rate::makeUnit($measurement, $srid);
         }
 

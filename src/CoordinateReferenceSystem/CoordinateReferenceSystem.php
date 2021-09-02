@@ -51,7 +51,7 @@ abstract class CoordinateReferenceSystem
 
     private static array $cachedObjects = [];
 
-    private static array $supportedCache = [];
+    private static array $sridCache = [];
 
     public function getSRID(): string
     {
@@ -75,18 +75,27 @@ abstract class CoordinateReferenceSystem
 
     public static function fromSRID(string $srid): self
     {
+        if (!self::$sridCache) {
+            self::$sridCache['projected'] = Projected::getSupportedSRIDs();
+            self::$sridCache['geographic2d'] = Geographic2D::getSupportedSRIDs();
+            self::$sridCache['geographic3d'] = Geographic3D::getSupportedSRIDs();
+            self::$sridCache['geocentric'] = Geocentric::getSupportedSRIDs();
+            self::$sridCache['vertical'] = Vertical::getSupportedSRIDs();
+            self::$sridCache['compound'] = Compound::getSupportedSRIDs();
+        }
+
         if (!isset(self::$cachedObjects[$srid])) {
-            if (isset(Projected::getSupportedSRIDs()[$srid])) {
+            if (isset(self::$sridCache['projected'][$srid])) {
                 self::$cachedObjects[$srid] = Projected::fromSRID($srid);
-            } elseif (isset(Geographic2D::getSupportedSRIDs()[$srid])) {
+            } elseif (isset(self::$sridCache['geographic2d'][$srid])) {
                 self::$cachedObjects[$srid] = Geographic2D::fromSRID($srid);
-            } elseif (isset(Geographic3D::getSupportedSRIDs()[$srid])) {
+            } elseif (isset(self::$sridCache['geographic3d'][$srid])) {
                 self::$cachedObjects[$srid] = Geographic3D::fromSRID($srid);
-            } elseif (isset(Geocentric::getSupportedSRIDs()[$srid])) {
+            } elseif (isset(self::$sridCache['geocentric'][$srid])) {
                 self::$cachedObjects[$srid] = Geocentric::fromSRID($srid);
-            } elseif (isset(Vertical::getSupportedSRIDs()[$srid])) {
+            } elseif (isset(self::$sridCache['vertical'][$srid])) {
                 self::$cachedObjects[$srid] = Vertical::fromSRID($srid);
-            } elseif (isset(Compound::getSupportedSRIDs()[$srid])) {
+            } elseif (isset(self::$sridCache['compound'][$srid])) {
                 self::$cachedObjects[$srid] = Compound::fromSRID($srid);
             }
         }
@@ -96,10 +105,6 @@ abstract class CoordinateReferenceSystem
 
     public static function getSupportedSRIDs(): array
     {
-        if (!self::$supportedCache) {
-            self::$supportedCache = array_merge(Compound::getSupportedSRIDs(), Geocentric::getSupportedSRIDs(), Geographic2D::getSupportedSRIDs(), Geographic3D::getSupportedSRIDs(), Projected::getSupportedSRIDs(), Vertical::getSupportedSRIDs());
-        }
-
-        return self::$supportedCache;
+        return array_merge(Compound::getSupportedSRIDs(), Geocentric::getSupportedSRIDs(), Geographic2D::getSupportedSRIDs(), Geographic3D::getSupportedSRIDs(), Projected::getSupportedSRIDs(), Vertical::getSupportedSRIDs());
     }
 }

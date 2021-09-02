@@ -2544,6 +2544,8 @@ class Compound extends CoordinateReferenceSystem
 
     private static array $supportedCache = [];
 
+    private static array $projectedSridCache = [];
+
     /**
      * @var Geocentric|Geographic|Projected
      */
@@ -2588,10 +2590,14 @@ class Compound extends CoordinateReferenceSystem
             throw new UnknownCoordinateReferenceSystemException($srid);
         }
 
+        if (!self::$projectedSridCache) {
+            self::$projectedSridCache = Projected::getSupportedSRIDs();
+        }
+
         if (!isset(self::$cachedObjects[$srid])) {
             $data = static::$sridData[$srid];
 
-            if (isset(Projected::getSupportedSRIDs()[$data['horizontal_crs']])) {
+            if (isset(self::$projectedSridCache[$data['horizontal_crs']])) {
                 $horizontalCRS = Projected::fromSRID($data['horizontal_crs']);
             } else {
                 $horizontalCRS = Geographic2D::fromSRID($data['horizontal_crs']);
