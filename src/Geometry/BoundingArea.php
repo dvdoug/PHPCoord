@@ -25,6 +25,8 @@ class BoundingArea
      */
     protected array $vertices;
 
+    protected bool $longitudeWrapAroundChecked = false;
+
     protected bool $longitudeExtendsFurtherThanMinus180 = false;
 
     protected bool $longitudeExtendsFurtherThanPlus180 = false;
@@ -42,18 +44,6 @@ class BoundingArea
     protected function __construct(array $vertices)
     {
         $this->vertices = $vertices;
-        foreach ($this->vertices as $polygon) {
-            foreach ($polygon as $ring) {
-                foreach ($ring as $vertex) {
-                    if ($vertex[0] > 180) {
-                        $this->longitudeExtendsFurtherThanPlus180 = true;
-                    }
-                    if ($vertex[0] < -180) {
-                        $this->longitudeExtendsFurtherThanMinus180 = true;
-                    }
-                }
-            }
-        }
     }
 
     /**
@@ -95,6 +85,11 @@ class BoundingArea
 
     public function containsPoint(GeographicValue $point): bool
     {
+        if (!$this->longitudeWrapAroundChecked) {
+            $this->longitudeWrapAroundChecked = true;
+            $this->checkLongitudeWrapAround();
+        }
+
         $latitude = $point->getLongitude()->asDegrees()->getValue();
         $longitude = $point->getLatitude()->asDegrees()->getValue();
 
@@ -226,6 +221,22 @@ class BoundingArea
                         } elseif ($vertex[1] < $centreY) {
                             $this->vertices[$polygonId][$ringId][$vertexId][1] -= self::BUFFER_SIZE;
                         }
+                    }
+                }
+            }
+        }
+    }
+
+    private function checkLongitudeWrapAround(): void
+    {
+        foreach ($this->vertices as $polygon) {
+            foreach ($polygon as $ring) {
+                foreach ($ring as $vertex) {
+                    if ($vertex[0] > 180) {
+                        $this->longitudeExtendsFurtherThanPlus180 = true;
+                    }
+                    if ($vertex[0] < -180) {
+                        $this->longitudeExtendsFurtherThanMinus180 = true;
                     }
                 }
             }
