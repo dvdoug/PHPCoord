@@ -9,11 +9,14 @@ declare(strict_types=1);
 namespace PHPCoord\EPSG\Import;
 
 use function array_column;
+use function basename;
 use function class_exists;
 use function dirname;
 use Exception;
 use function file_get_contents;
 use function file_put_contents;
+use function glob;
+use function implode;
 use function json_decode;
 use const JSON_THROW_ON_ERROR;
 use function max;
@@ -23,6 +26,8 @@ use function sleep;
 use SQLite3;
 use const SQLITE3_ASSOC;
 use const SQLITE3_OPEN_READONLY;
+use function substr;
+use function unlink;
 
 class EPSGCodegenFromGeoRepository
 {
@@ -78,6 +83,7 @@ class EPSGCodegenFromGeoRepository
             JOIN epsg_extent e ON u.extent_code = e.extent_code
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2020-12-14'
             WHERE dep.deprecation_id IS NULL AND e.deprecated = 0
+            AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%' AND crs.coord_ref_sys_name NOT LIKE '%mining%'
 
             UNION
 
@@ -87,9 +93,12 @@ class EPSGCodegenFromGeoRepository
             JOIN epsg_extent e ON u.extent_code = e.extent_code
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperation' AND dep.object_code = o.coord_op_code AND dep.deprecation_date <= '2020-12-14'
             WHERE dep.deprecation_id IS NULL AND e.deprecated = 0
+            AND o.coord_op_name NOT LIKE '%example%'
+            AND o.coord_op_method_code NOT IN (" . implode(',', EPSGCodegenFromDataImport::BLACKLISTED_METHODS) . ')
+            AND o.coord_op_code NOT IN (' . implode(',', EPSGCodegenFromDataImport::BLACKLISTED_OPERATIONS) . ')
 
             GROUP BY e.extent_code
-        ";
+        ';
         $result = $this->sqlite->query($sql);
 
         $extents = [];
@@ -198,6 +207,16 @@ class EPSGCodegenFromGeoRepository
                     break;
                 default:
                     throw new Exception("Unknown region: {$region}");
+            }
+        }
+
+        // Remove unused extents
+        foreach ([$boundingBoxOnly, $builtInFull, $africa, $antarctic, $arctic, $asia, $europe, $northAmerica, $southAmerica, $oceania] as $extentType) {
+            foreach (glob($extentType . '/Extent*.php') as $filename) {
+                $code = substr(basename($filename, '.php'), 6);
+                if (!isset($extents[$code])) {
+                    unlink($filename);
+                }
             }
         }
 
