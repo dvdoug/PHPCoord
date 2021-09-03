@@ -79,8 +79,10 @@ jobs:
           ${{ steps.composercache.outputs.dir }}
           "build/php-code-coverage-cache"
           ".php-cs-fixer.cache"
-        key: "php-${{ matrix.php-version }}-deps-${{ matrix.dependencies }}-${{ hashFiles('composer.json') }}"
-        restore-keys: "php-${{ matrix.php-version }}-deps-${{ matrix.dependencies }}"
+        key: php-${{ matrix.php-version }}-deps-${{ matrix.dependencies }}-datapack-${{ matrix.datapack }}-${{ github.ref }}-${{ github.sha }}
+        restore-keys: |
+          php-${{ matrix.php-version }}-deps-${{ matrix.dependencies }}-datapack-${{ matrix.datapack }}-${{ github.ref }}
+          php-${{ matrix.php-version }}-deps-${{ matrix.dependencies }}-datapack-${{ matrix.datapack }}
 
     - name: Remove datapacks
       run: composer remove --dev --no-update "php-coord/datapack*";
