@@ -14,7 +14,7 @@ use function explode;
 use const PHP_MAJOR_VERSION;
 use PHPCoord\CoordinateReferenceSystem\Geographic;
 use PHPCoord\GeographicPoint;
-use PHPCoord\UnitOfMeasure\Angle\Angle;
+use PHPCoord\UnitOfMeasure\Angle\Degree;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 use function preg_replace;
 use SplFileObject;
@@ -23,14 +23,9 @@ use function trim;
 
 class IGNFGeocentricTranslationGrid extends SplFileObject
 {
-    private const ITERATION_CONVERGENCE = 0.0001;
+    use BilinearInterpolation;
 
-    private float $lowerLatitudeLimit;
-    private float $upperLatitudeLimit;
-    private float $lowerLongitudeLimit;
-    private float $upperLongitudeLimit;
-    private float $latitudeGridInterval;
-    private float $longitudeGridInterval;
+    private const ITERATION_CONVERGENCE = 0.0001;
 
     public function __construct($filename)
     {
@@ -41,7 +36,7 @@ class IGNFGeocentricTranslationGrid extends SplFileObject
 
     public function applyForwardAdjustment(GeographicPoint $point, Geographic $to): GeographicPoint
     {
-        [$tx, $ty, $tz] = $this->getAdjustment($point->getLatitude(), $point->getLongitude());
+        [$tx, $ty, $tz] = $this->getAdjustment($point->getLatitude()->asDegrees(), $point->getLongitude()->asDegrees());
 
         return $point->geocentricTranslation(
             $to,
@@ -59,7 +54,7 @@ class IGNFGeocentricTranslationGrid extends SplFileObject
 
         do {
             $prevAdjustment = $adjustment;
-            $adjustment = $this->getAdjustment($latitude, $longitude);
+            $adjustment = $this->getAdjustment($latitude->asDegrees(), $longitude->asDegrees());
             $newPoint = $point->geocentricTranslation(
                 $to,
                 $adjustment[0]->multiply(-1),
@@ -77,33 +72,16 @@ class IGNFGeocentricTranslationGrid extends SplFileObject
     /**
      * @return Metre[]
      */
-    private function getAdjustment(Angle $latitude, Angle $longitude): array
+    private function getAdjustment(Degree $latitude, Degree $longitude): array
     {
-        $latitudeIndex = (int) (string) (($latitude->getValue() - $this->lowerLatitudeLimit) / $this->latitudeGridInterval);
-        $longitudeIndex = (int) (string) (($longitude->getValue() - $this->lowerLongitudeLimit) / $this->longitudeGridInterval);
+        $offsets = $this->interpolateBilinear($longitude->getValue(), $latitude->getValue());
 
-        $corner0 = $this->getRecord($latitudeIndex, $longitudeIndex);
-        $corner1 = $this->getRecord($latitudeIndex + 1, $longitudeIndex);
-        $corner2 = $this->getRecord($latitudeIndex + 1, $longitudeIndex + 1);
-        $corner3 = $this->getRecord($latitudeIndex, $longitudeIndex + 1);
-
-        $dLatitude = $latitude->getValue() - $corner0[2];
-        $dLongitude = $longitude->getValue() - $corner0[1];
-
-        $t = $dLatitude / $this->latitudeGridInterval;
-        $u = $dLongitude / $this->longitudeGridInterval;
-
-        $tx = (1 - $t) * (1 - $u) * $corner0[3] + ($t) * (1 - $u) * $corner1[3] + ($t) * ($u) * $corner2[3] + (1 - $t) * ($u) * $corner3[3];
-        $ty = (1 - $t) * (1 - $u) * $corner0[4] + ($t) * (1 - $u) * $corner1[4] + ($t) * ($u) * $corner2[4] + (1 - $t) * ($u) * $corner3[4];
-        $tz = (1 - $t) * (1 - $u) * $corner0[5] + ($t) * (1 - $u) * $corner1[5] + ($t) * ($u) * $corner2[5] + (1 - $t) * ($u) * $corner3[5];
-
-        return [new Metre($tx), new Metre($ty), new Metre($tz)];
+        return [new Metre($offsets[0]), new Metre($offsets[1]), new Metre($offsets[2])];
     }
 
-    private function getRecord(int $latitudeIndex, int $longitudeIndex): array
+    private function getRecord(int $longitudeIndex, int $latitudeIndex): GridValues
     {
-        $latitudesPerLongitude = (int) (string) (($this->upperLatitudeLimit - $this->lowerLatitudeLimit) / $this->latitudeGridInterval);
-        $record = ($longitudeIndex * ($latitudesPerLongitude + 1) + $latitudeIndex + 4);
+        $record = ($longitudeIndex * ($this->numberOfRows + 1) + $latitudeIndex + 4);
 
         // https://bugs.php.net/bug.php?id=62004
         if (PHP_MAJOR_VERSION < 8) {
@@ -111,8 +89,9 @@ class IGNFGeocentricTranslationGrid extends SplFileObject
         }
 
         $this->seek($record);
+        $rawData = explode(' ', trim(preg_replace('/ +/', ' ', $this->fgets())));
 
-        return explode(' ', trim(preg_replace('/ +/', ' ', $this->fgets())));
+        return new GridValues((float) $rawData[1], (float) $rawData[2], [(float) $rawData[3], (float) $rawData[4], (float) $rawData[5]]);
     }
 
     private function readHeader(): void
@@ -126,11 +105,13 @@ class IGNFGeocentricTranslationGrid extends SplFileObject
         assert($interpolationMethod === 'INTERPOLATION BILINEAIRE');
 
         $gridDimensions = explode(' ', trim(preg_replace('/ +/', ' ', str_replace('GR3D1', '', $header1))));
-        $this->lowerLongitudeLimit = (float) $gridDimensions[0];
-        $this->upperLongitudeLimit = (float) $gridDimensions[1];
-        $this->lowerLatitudeLimit = (float) $gridDimensions[2];
-        $this->upperLatitudeLimit = (float) $gridDimensions[3];
-        $this->longitudeGridInterval = (float) $gridDimensions[4];
-        $this->latitudeGridInterval = (float) $gridDimensions[5];
+        $this->startX = (float) $gridDimensions[0];
+        $this->endX = (float) $gridDimensions[1];
+        $this->startY = (float) $gridDimensions[2];
+        $this->endY = (float) $gridDimensions[3];
+        $this->columnGridInterval = (float) $gridDimensions[4];
+        $this->rowGridInterval = (float) $gridDimensions[5];
+        $this->numberOfColumns = (int) (string) (($this->endX - $this->startX) / $this->columnGridInterval);
+        $this->numberOfRows = (int) (string) (($this->endY - $this->startY) / $this->rowGridInterval);
     }
 }

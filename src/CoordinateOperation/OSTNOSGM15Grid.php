@@ -19,9 +19,21 @@ use SplFileObject;
 
 class OSTNOSGM15Grid extends SplFileObject
 {
-    private const GRID_SIZE = 1000;
+    use BilinearInterpolation;
 
     private const ITERATION_CONVERGENCE = 0.0001;
+
+    public function __construct($filename)
+    {
+        parent::__construct($filename);
+
+        $this->startX = 0;
+        $this->startY = 0;
+        $this->columnGridInterval = 1000;
+        $this->rowGridInterval = 1000;
+        $this->numberOfColumns = 700;
+        $this->numberOfRows = 1250;
+    }
 
     public function applyForwardHorizontalAdjustment(ProjectedPoint $point): ProjectedPoint
     {
@@ -66,28 +78,12 @@ class OSTNOSGM15Grid extends SplFileObject
 
     private function getAdjustment(Metre $easting, Metre $northing): array
     {
-        $eastIndex = (int) ($easting->getValue() / self::GRID_SIZE);
-        $northIndex = (int) ($northing->getValue() / self::GRID_SIZE);
+        $offsets = $this->interpolateBilinear($easting->getValue(), $northing->getValue());
 
-        $corner0 = $this->getRecord($eastIndex, $northIndex);
-        $corner1 = $this->getRecord($eastIndex + 1, $northIndex);
-        $corner2 = $this->getRecord($eastIndex + 1, $northIndex + 1);
-        $corner3 = $this->getRecord($eastIndex, $northIndex + 1);
-
-        $dx = $easting->getValue() - $corner0[1];
-        $dy = $northing->getValue() - $corner0[2];
-
-        $t = $dx / self::GRID_SIZE;
-        $u = $dy / self::GRID_SIZE;
-
-        $se = (1 - $t) * (1 - $u) * $corner0[3] + ($t) * (1 - $u) * $corner1[3] + ($t) * ($u) * $corner2[3] + (1 - $t) * ($u) * $corner3[3];
-        $sn = (1 - $t) * (1 - $u) * $corner0[4] + ($t) * (1 - $u) * $corner1[4] + ($t) * ($u) * $corner2[4] + (1 - $t) * ($u) * $corner3[4];
-        $sh = (1 - $t) * (1 - $u) * $corner0[5] + ($t) * (1 - $u) * $corner1[5] + ($t) * ($u) * $corner2[5] + (1 - $t) * ($u) * $corner3[5];
-
-        return [$se, $sn, $sh];
+        return $offsets;
     }
 
-    private function getRecord(int $eastIndex, int $northIndex): array
+    private function getRecord(int $eastIndex, int $northIndex): GridValues
     {
         $record = $northIndex * 701 + $eastIndex + 1;
 
@@ -97,7 +93,8 @@ class OSTNOSGM15Grid extends SplFileObject
         }
 
         $this->seek($record);
+        $rawData = $this->fgetcsv();
 
-        return $this->fgetcsv();
+        return new GridValues((float) $rawData[1], (float) $rawData[2], [(float) $rawData[3], (float) $rawData[4], (float) $rawData[5]]);
     }
 }

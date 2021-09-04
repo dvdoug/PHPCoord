@@ -19,12 +19,8 @@ use function unpack;
  */
 class GTXGrid extends SplFileObject
 {
-    private float $startLatitude;
-    private float $startLongitude;
-    private float $latitudeGridInterval;
-    private float $longitudeGridInterval;
-    private int $numberLatitudes;
-    private int $numberLongitudes;
+    use BilinearInterpolation;
+
     private int $headerLength;
     private string $offsetDataType;
 
@@ -33,53 +29,39 @@ class GTXGrid extends SplFileObject
         parent::__construct($filename);
 
         $header = $this->getHeader();
-        $this->startLatitude = $header['xlatsw'];
-        $this->startLongitude = $header['xlonsw'];
-        $this->latitudeGridInterval = $header['dlat'];
-        $this->longitudeGridInterval = $header['dlon'];
-        $this->numberLatitudes = $header['nlat'];
-        $this->numberLongitudes = $header['nlon'];
+        $this->startX = $header['xlonsw'];
+        $this->startY = $header['xlatsw'];
+        $this->numberOfColumns = $header['nlon'];
+        $this->numberOfRows = $header['nlat'];
+        $this->columnGridInterval = $header['dlon'];
+        $this->rowGridInterval = $header['dlat'];
 
-        if ($this->startLongitude > 180) { // normalise if necessary
-            $this->startLongitude -= 360;
+        if ($this->startX > 180) { // normalise if necessary
+            $this->startX -= 360;
         }
     }
 
-    /**
-     * Converted from NOAA FORTRAN.
-     */
     public function getAdjustment(GeographicPoint $point): Metre
     {
         $latitude = $point->getLatitude()->getValue();
         $longitude = $point->getLongitude()->getValue();
-
-        $latitudeIndex = (int) (string) (($latitude - $this->startLatitude) / $this->latitudeGridInterval);
-        $longitudeIndex = (int) (string) (($longitude - $this->startLongitude) / $this->longitudeGridInterval);
-
-        $corner0 = $this->getRecord($latitudeIndex, $longitudeIndex);
-        $corner1 = $this->getRecord($latitudeIndex + 1, $longitudeIndex);
-        $corner2 = $this->getRecord($latitudeIndex + 1, $longitudeIndex + 1);
-        $corner3 = $this->getRecord($latitudeIndex, $longitudeIndex + 1);
-
-        $dLatitude = $latitude - ($latitudeIndex * $this->latitudeGridInterval) - $this->startLatitude;
-        $dLongitude = $longitude - ($longitudeIndex * $this->longitudeGridInterval) - $this->startLongitude;
-
-        $t = $dLatitude / $this->latitudeGridInterval;
-        $u = $dLongitude / $this->longitudeGridInterval;
-
-        $offset = (1 - $t) * (1 - $u) * $corner0 + ($t) * (1 - $u) * $corner1 + ($t) * ($u) * $corner2 + (1 - $t) * ($u) * $corner3;
+        $offset = $this->interpolateBilinear($longitude, $latitude)[0];
 
         return new Metre($offset);
     }
 
-    public function getRecord(int $latitudeIndex, int $longitudeIndex): float
+    private function getRecord(int $longitudeIndex, int $latitudeIndex): GridValues
     {
-        $offset = $this->headerLength + ($latitudeIndex * $this->numberLongitudes + $longitudeIndex) * 4;
+        $offset = $this->headerLength + ($latitudeIndex * $this->numberOfColumns + $longitudeIndex) * 4;
         $this->fseek($offset);
         $rawRow = $this->fread(4);
         $data = unpack("{$this->offsetDataType}offset", $rawRow);
 
-        return $data['offset'];
+        return new GridValues(
+            $longitudeIndex * $this->columnGridInterval + $this->startX,
+            $latitudeIndex * $this->rowGridInterval + $this->startY,
+            [$data['offset']]
+        );
     }
 
     private function getHeader(): array
