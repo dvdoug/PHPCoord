@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\CoordinateOperation;
 
 use function count;
+use function min;
 
 trait BilinearInterpolation
 {
@@ -32,10 +33,24 @@ trait BilinearInterpolation
 
         $interpolations = [];
         for ($i = 0, $count = count($corners['lowerLeft']->getValues()); $i < $count; ++$i) {
-            $interpolations[] = $corners['lowerLeft']->getValues()[$i] * (1 - $dx) * (1 - $dy) + $corners['lowerRight']->getValues()[$i] * $dx * (1 - $dy) + $corners['upperLeft']->getValues()[$i] * (1 - $dx) * $dy + $corners['upperRight']->getValues()[$i] * $dx * $dy;
+            //Interpolate value at lower row
+            $y0 = $this->interpolateLinear($dx, $corners['lowerLeft']->getValues()[$i], $corners['lowerRight']->getValues()[$i]);
+            //Interpolate value at upper row
+            $y1 = $this->interpolateLinear($dx, $corners['upperLeft']->getValues()[$i], $corners['upperRight']->getValues()[$i]);
+            //Interpolate between rows
+            $xy = $this->interpolateLinear($dy, $y0, $y1);
+            $interpolations[] = $xy;
         }
 
         return $interpolations;
+    }
+
+    /**
+     * Linear interpolation at point p, where p is between 0 and 1.
+     */
+    private function interpolateLinear(float $p, float $valueAt0, float $valueAt1): float
+    {
+        return $valueAt0 * (1 - $p) + $valueAt1 * $p;
     }
 
     /**
