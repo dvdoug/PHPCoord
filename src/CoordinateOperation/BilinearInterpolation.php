@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateOperation;
 
+use function assert;
 use function count;
 use function min;
 
@@ -50,6 +51,8 @@ trait BilinearInterpolation
      */
     private function interpolateLinear(float $p, float $valueAt0, float $valueAt1): float
     {
+        assert($p >= 0 && $p <= 1);
+
         return $valueAt0 * (1 - $p) + $valueAt1 * $p;
     }
 
@@ -58,8 +61,8 @@ trait BilinearInterpolation
      */
     private function getCornersForBilinear(float $x, float $y): array
     {
-        $xIndex = (int) (string) (($x - $this->startX) / $this->columnGridInterval);
-        $yIndex = (int) (string) (($y - $this->startY) / $this->rowGridInterval);
+        $xIndex = (int) (($x - $this->startX) / $this->columnGridInterval);
+        $yIndex = (int) (($y - $this->startY) / $this->rowGridInterval);
         $xIndexPlus1 = min($xIndex + 1, $this->numberOfColumns);
         $yIndexPlus1 = min($yIndex + 1, $this->numberOfRows);
 

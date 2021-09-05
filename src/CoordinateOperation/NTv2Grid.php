@@ -10,7 +10,6 @@ namespace PHPCoord\CoordinateOperation;
 
 use function abs;
 use function assert;
-use InvalidArgumentException;
 use PHPCoord\CoordinateReferenceSystem\Geographic;
 use PHPCoord\GeographicPoint;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
@@ -34,22 +33,6 @@ class NTv2Grid extends SplFileObject
     private string $floatFormatChar = 'g';
 
     private array $subFileMetaData = [];
-
-    private int $numberOfOverviewHeaderRecords;
-    private int $numberOfSubFileHeaderRecords;
-    private int $numberOfGridShiftSubFiles;
-
-    private float $lowerLatitudeLimit;
-    private float $upperLatitudeLimit;
-    private float $lowerLongitudeLimit;
-    private float $upperLongitudeLimit;
-    private float $latitudeGridInterval;
-    private float $longitudeGridInterval;
-    private string $gridShiftDataType;
-    private string $systemFrom;
-    private string $systemTo;
-    private float $semiMinorAxisFrom;
-    private float $semiMinorAxisTo;
 
     public function __construct($filename)
     {
@@ -94,68 +77,11 @@ class NTv2Grid extends SplFileObject
 
         $latitudeAsSeconds = Angle::convert($latitude, Angle::EPSG_ARC_SECOND)->getValue();
         $longitudeAsSeconds = Angle::convert($longitude, Angle::EPSG_ARC_SECOND)->getValue();
-        [$flag, $gridToUse] = $this->determineBestGrid($latitudeAsSeconds, $longitudeAsSeconds);
+        $gridToUse = $this->determineBestGrid($latitudeAsSeconds, $longitudeAsSeconds);
 
-        $rowIndex = (int) (($latitudeAsSeconds - $gridToUse['S_LAT']) / $gridToUse['LAT_INC']);
-        $columnIndex = (int) (($longitudeAsSeconds - $gridToUse['E_LONG']) / $gridToUse['LONG_INC']);
-        $gridPointsPerRow = (int) (($gridToUse['W_LONG'] - $gridToUse['E_LONG']) / $gridToUse['LONG_INC']) + 1;
-        $gridPointsPerColumn = (int) (($gridToUse['N_LAT'] - $gridToUse['S_LAT']) / $gridToUse['LAT_INC']) + 1;
-        $numberOfRecords = $gridPointsPerRow * $gridPointsPerColumn;
-        assert($numberOfRecords === $gridToUse['GS_COUNT']);
+        $offsets = $gridToUse->interpolateBilinear($longitudeAsSeconds, $latitudeAsSeconds);
 
-        if ($flag === self::FLAG_WITHIN_LIMITS) {
-            $recordIndexLR = $rowIndex * $gridPointsPerRow + $columnIndex;
-            $recordIndexLL = $recordIndexLR + 1;
-            $recordIndexUR = $recordIndexLR + $gridPointsPerRow;
-            $recordIndexUL = $recordIndexUR + 1;
-        } elseif ($flag === self::FLAG_ON_UPPER_LATITUDE) {
-            $recordIndexLR = $rowIndex * $gridPointsPerRow + $columnIndex;
-            $recordIndexLL = $recordIndexLR + 1;
-            $recordIndexUR = $recordIndexLR;
-            $recordIndexUL = $recordIndexUR;
-        } elseif ($flag === self::FLAG_ON_UPPER_LONGITUDE) {
-            $recordIndexLR = $rowIndex * $gridPointsPerRow + $columnIndex;
-            $recordIndexUR = $recordIndexLR + $gridPointsPerRow;
-            $recordIndexLL = $recordIndexLR;
-            $recordIndexUL = $recordIndexUR;
-        } elseif ($flag === self::FLAG_ON_UPPER_LATITUDE_AND_LONGITUDE) {
-            $recordIndexLR = $rowIndex * $gridPointsPerRow + $columnIndex;
-            $recordIndexLL = $recordIndexLR;
-            $recordIndexUR = $recordIndexLR;
-            $recordIndexUL = $recordIndexUR;
-        }
-
-        $latitudeR = $gridToUse['S_LAT'] + $rowIndex * $gridToUse['LAT_INC'];
-        $longitudeL = $gridToUse['E_LONG'] + $columnIndex * $gridToUse['LONG_INC'];
-
-        $recordLR = $this->getRecord($gridToUse['offsetStart'] + (11 + $recordIndexLR) * self::RECORD_SIZE);
-        $recordLL = $this->getRecord($gridToUse['offsetStart'] + (11 + $recordIndexLL) * self::RECORD_SIZE);
-        $recordUR = $this->getRecord($gridToUse['offsetStart'] + (11 + $recordIndexUR) * self::RECORD_SIZE);
-        $recordUL = $this->getRecord($gridToUse['offsetStart'] + (11 + $recordIndexUL) * self::RECORD_SIZE);
-
-        $x = ($latitudeAsSeconds - $latitudeR) / $gridToUse['LAT_INC'];
-        $y = ($longitudeAsSeconds - $longitudeL) / $gridToUse['LONG_INC'];
-        assert($x >= 0 && $x <= 1);
-        assert($y >= 0 && $y <= 1);
-
-        $eShiftLatitude = $recordLR['LATITUDE_SHIFT'] + ($recordLL['LATITUDE_SHIFT'] - $recordLR['LATITUDE_SHIFT']) * $y;
-        $fShiftLatitude = $recordUR['LATITUDE_SHIFT'] + ($recordUL['LATITUDE_SHIFT'] - $recordUR['LATITUDE_SHIFT']) * $y;
-        $pShiftLatitude = $eShiftLatitude + ($fShiftLatitude - $eShiftLatitude) * $x;
-
-        $eShiftLongitude = $recordLR['LONGITUDE_SHIFT'] + ($recordLL['LONGITUDE_SHIFT'] - $recordLR['LONGITUDE_SHIFT']) * $y;
-        $fShiftLongitude = $recordUR['LONGITUDE_SHIFT'] + ($recordUL['LONGITUDE_SHIFT'] - $recordUR['LONGITUDE_SHIFT']) * $y;
-        $pShiftLongitude = $eShiftLongitude + ($fShiftLongitude - $eShiftLongitude) * $x;
-
-        return [new ArcSecond($pShiftLatitude), new ArcSecond(-$pShiftLongitude)]; // NTv2 is longitude positive *west*
-    }
-
-    private function getRecord(int $recordIndex): array
-    {
-        $this->fseek($recordIndex);
-        $rawRecord = $this->fread(self::RECORD_SIZE);
-        $shifts = unpack("{$this->floatFormatChar}LATITUDE_SHIFT/{$this->floatFormatChar}LONGITUDE_SHIFT/{$this->floatFormatChar}LATITUDE_ACCURACY/{$this->floatFormatChar}LONGITUDE_ACCURACY", $rawRecord);
-
-        return $shifts;
+        return [new ArcSecond($offsets[0]), new ArcSecond(-$offsets[1])]; // NTv2 is longitude positive *west*
     }
 
     private function readHeader(): void
@@ -190,31 +116,37 @@ class NTv2Grid extends SplFileObject
         }
     }
 
-    private function determineBestGrid(float $latitude, float $longitude): array
+    private function determineBestGrid(float $latitude, float $longitude): NTv2SubGrid
     {
         $possibleGrids = [];
-        foreach ($this->subFileMetaData as $subFileName => $subFileMetaDatum) {
-            if ($latitude >= $subFileMetaDatum['S_LAT'] && $latitude <= $subFileMetaDatum['N_LAT'] && $longitude >= $subFileMetaDatum['E_LONG'] && $longitude <= $subFileMetaDatum['W_LONG']) {
-                if ($latitude === $subFileMetaDatum['N_LAT'] && $longitude === $subFileMetaDatum['W_LONG']) {
-                    $possibleGrids[] = [self::FLAG_ON_UPPER_LATITUDE_AND_LONGITUDE, $subFileMetaDatum];
-                } elseif ($longitude === $subFileMetaDatum['W_LONG']) {
-                    $possibleGrids[] = [self::FLAG_ON_UPPER_LONGITUDE, $subFileMetaDatum];
-                } elseif ($latitude === $subFileMetaDatum['N_LAT']) {
-                    $possibleGrids[] = [self::FLAG_ON_UPPER_LATITUDE, $subFileMetaDatum];
-                } else {
-                    $possibleGrids[] = [self::FLAG_WITHIN_LIMITS, $subFileMetaDatum];
-                }
+        foreach ($this->subFileMetaData as $subFileMetaDatum) {
+            if ($latitude === $subFileMetaDatum['N_LAT'] && $longitude === $subFileMetaDatum['W_LONG']) {
+                $possibleGrids[] = [self::FLAG_ON_UPPER_LATITUDE_AND_LONGITUDE, $subFileMetaDatum];
+            } elseif ($longitude === $subFileMetaDatum['W_LONG']) {
+                $possibleGrids[] = [self::FLAG_ON_UPPER_LONGITUDE, $subFileMetaDatum];
+            } elseif ($latitude === $subFileMetaDatum['N_LAT']) {
+                $possibleGrids[] = [self::FLAG_ON_UPPER_LATITUDE, $subFileMetaDatum];
+            } elseif ($latitude >= $subFileMetaDatum['S_LAT'] && $latitude <= $subFileMetaDatum['N_LAT'] && $longitude >= $subFileMetaDatum['E_LONG'] && $longitude <= $subFileMetaDatum['W_LONG']) {
+                $possibleGrids[] = [self::FLAG_WITHIN_LIMITS, $subFileMetaDatum];
             }
-        }
-
-        if (!$possibleGrids) {
-            throw new InvalidArgumentException('Specified coordinates are not within this grid file');
         }
 
         usort($possibleGrids, static function ($a, $b) {
             return $a[0] <=> $b[0] ?: $a[1]['LAT_INC'] <=> $b[1]['LAT_INC'] ?: $a[2]['LONG_INC'] <=> $b[2]['LONG_INC'];
         });
 
-        return $possibleGrids[0];
+        $gridToUse = $possibleGrids[0][1];
+
+        return new NTv2SubGrid(
+            $this->getPathname(),
+            $gridToUse['offsetStart'],
+            $gridToUse['S_LAT'],
+            $gridToUse['N_LAT'],
+            $gridToUse['E_LONG'],
+            $gridToUse['W_LONG'],
+            $gridToUse['LAT_INC'],
+            $gridToUse['LONG_INC'],
+            $this->floatFormatChar
+        );
     }
 }
