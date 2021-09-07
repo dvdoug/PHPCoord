@@ -135,9 +135,10 @@ trait AutoConversion
                     }
                 }
 
-                //filter out operations that require a grid file that we don't have
+                //filter out operations that require a grid file that we don't have, or where boundaries are not being
+                //checked (a formula-based conversion will always return *a* result, outside a grid boundary does not...
                 foreach ($params as $param) {
-                    if (isset($param['fileProvider']) && !class_exists($param['fileProvider'])) {
+                    if (isset($param['fileProvider']) && (!$boundaryCheckPoint || !class_exists($param['fileProvider']))) {
                         return false;
                     }
                 }
