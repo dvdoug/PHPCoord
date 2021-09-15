@@ -15,12 +15,14 @@ jobs:
       fail-fast: false
       matrix:
         php-version:
+          - "8.1"
           - "8.0"
           - "7.4"
 
         dependencies:
-          - highest
-          - lowest
+          - "highest"
+          - "lowest"
+          - "latest"
 
         datapack:
           - ""
@@ -32,10 +34,6 @@ jobs:
           - "php-coord/datapack-northamerica"
           - "php-coord/datapack-oceania"
           - "php-coord/datapack-southamerica"
-
-        include:
-          - php-version: "8.1"
-            dependencies: "force_latest"
 
     steps:
     - uses: actions/checkout@v2
@@ -97,17 +95,29 @@ jobs:
 
     - name: Install dependencies (low)
       if: matrix.dependencies == 'lowest'
-      run: composer update --prefer-lowest --no-interaction --prefer-dist --classmap-authoritative
+      run: |
+        composer update --prefer-lowest --no-interaction --prefer-dist --classmap-authoritative;
+        composer show;
 
     - name: Install dependencies (high)
       if: matrix.dependencies == 'highest'
-      run: composer update --no-interaction --prefer-dist --classmap-authoritative
+      run: |
+        composer update --no-interaction --prefer-dist --classmap-authoritative;
+        composer show;
+
+    - name: Install dependencies (latest)
+      if: matrix.dependencies == 'latest'
+      run: |
+        composer config minimum-stability dev;
+        composer update --no-interaction --prefer-dist --classmap-authoritative;
+        composer show
 
     - name: Install dependencies (force latest)
       if: matrix.dependencies == 'force_latest'
       run: |
         composer config minimum-stability dev;
         composer update --no-interaction --prefer-dist --classmap-authoritative --ignore-platform-reqs;
+        composer show
 
     - name: PHPUnit (Unit)
       run: |
