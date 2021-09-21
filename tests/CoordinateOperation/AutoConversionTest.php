@@ -8,11 +8,17 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateOperation;
 
+use function array_unique;
 use function class_exists;
 use DateTime;
+use function explode;
+use function fgetcsv;
+use function fopen;
 use PHPCoord\CompoundPoint;
 use PHPCoord\CoordinateReferenceSystem\Compound;
+use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\CoordinateReferenceSystem\Geocentric;
+use PHPCoord\CoordinateReferenceSystem\Geographic;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Geographic3D;
 use PHPCoord\CoordinateReferenceSystem\Projected;
@@ -21,6 +27,7 @@ use PHPCoord\Exception\UnknownConversionException;
 use PHPCoord\GeocentricPoint;
 use PHPCoord\GeographicPoint;
 use PHPCoord\Geometry\BoundingArea;
+use PHPCoord\Point;
 use PHPCoord\ProjectedPoint;
 use PHPCoord\UnitOfMeasure\Angle\Degree;
 use PHPCoord\UnitOfMeasure\Angle\Radian;
@@ -269,5 +276,81 @@ class AutoConversionTest extends TestCase
             self::assertEqualsWithDelta(50.871338980, $to->getLatitude()->asDegrees()->getValue(), 0.00000001);
             self::assertEqualsWithDelta(-114.29435830, $to->getLongitude()->asDegrees()->getValue(), 0.00000001);
         }
+    }
+
+    /**
+     * @group integration
+     * @dataProvider EPSGConcatenatedOperations
+     */
+    public function testEPSGConcatenatedOperations(string $sourceCrsSrid, string $targetCrsSrid, array $extentCodes, bool $canReverse): void
+    {
+        $extent = BoundingArea::createFromExtentCodes($extentCodes);
+
+        $sourceCRS = CoordinateReferenceSystem::fromSRID($sourceCrsSrid);
+        $epoch = new DateTime();
+
+        if ($sourceCRS instanceof Compound) {
+            $sourceCRS = Compound::fromSRID($sourceCrsSrid);
+            $sourceHorizontalCRS = $sourceCRS->getHorizontal();
+            if ($sourceHorizontalCRS instanceof Geographic2D) {
+                $centre = $extent->getPointInside();
+                $centre[1] = $centre[1]->subtract($sourceCRS->getHorizontal()->getDatum()->getPrimeMeridian()->getGreenwichLongitude()); //compensate for non-Greenwich prime meridian
+
+                $horizontalPoint = GeographicPoint::create($centre[0], $centre[1], null, $sourceHorizontalCRS);
+            } elseif ($sourceHorizontalCRS instanceof Geographic2D) {
+                $horizontalPoint = ProjectedPoint::create(new Metre(0), new Metre(0), new Metre(0), new Metre(0), $sourceHorizontalCRS);
+            }
+            $verticalCRS = $sourceCRS->getVertical();
+            $verticalPoint = VerticalPoint::create(new Metre(0), $verticalCRS);
+
+            $originalPoint = CompoundPoint::create($horizontalPoint, $verticalPoint, $sourceCRS, $epoch);
+        } elseif ($sourceCRS instanceof Geographic) {
+            $centre = $extent->getPointInside();
+            $centre[1] = $centre[1]->subtract($sourceCRS->getDatum()->getPrimeMeridian()->getGreenwichLongitude()); //compensate for non-Greenwich prime meridian
+            $height = $sourceCRS instanceof Geographic3D ? new Metre(0) : null;
+
+            $originalPoint = GeographicPoint::create($centre[0], $centre[1], $height, $sourceCRS, $epoch);
+        } elseif ($sourceCRS instanceof Geocentric) {
+            $centre = $extent->getPointInside();
+            $centre = (new GeographicValue($centre[0], $centre[1], new Metre(0), $sourceCRS->getDatum()))->asGeocentricValue();
+            $originalPoint = GeocentricPoint::create($centre->getX(), $centre->getY(), $centre->getZ(), $sourceCRS, $epoch);
+        } elseif ($sourceCRS instanceof Vertical) {
+            $originalPoint = VerticalPoint::create(new Metre(0), $sourceCRS, $epoch);
+        }
+
+        $targetCRS = CoordinateReferenceSystem::fromSRID($targetCrsSrid);
+        $newPoint = $originalPoint->convert($targetCRS);
+        self::assertInstanceOf(Point::class, $newPoint);
+        self::assertEquals($targetCRS, $newPoint->getCRS());
+
+        if ($canReverse) {
+            $reversedPoint = $newPoint->convert($sourceCRS);
+
+            self::assertEquals($sourceCRS, $reversedPoint->getCRS());
+
+            if ($sourceCRS instanceof Compound) {
+                self::assertEqualsWithDelta($originalPoint->getHorizontalPoint()->getLatitude()->getValue(), $reversedPoint->getHorizontalPoint()->getLatitude()->getValue(), 0.001);
+                self::assertEqualsWithDelta($originalPoint->getHorizontalPoint()->getLongitude()->getValue(), $reversedPoint->getHorizontalPoint()->getLongitude()->getValue(), 0.001);
+                self::assertEqualsWithDelta($originalPoint->getVerticalPoint()->getHeight()->getValue(), $reversedPoint->getVerticalPoint()->getHeight()->getValue(), 0.001);
+            } elseif ($sourceCRS instanceof Geographic) {
+                self::assertEqualsWithDelta($originalPoint->getLatitude()->getValue(), $reversedPoint->getLatitude()->getValue(), 0.001);
+                self::assertEqualsWithDelta($originalPoint->getLongitude()->getValue(), $reversedPoint->getLongitude()->getValue(), 0.001);
+                if ($sourceCRS instanceof Geographic3D) {
+                    self::assertEqualsWithDelta($originalPoint->getHeight()->getValue(), $reversedPoint->getHeight()->getValue(), 0.001);
+                }
+            }
+        }
+    }
+
+    public function EPSGConcatenatedOperations(): array
+    {
+        $toTest = [];
+
+        $dataFile = fopen(__DIR__ . '/EPSGConcatenatedOperations.csv', 'rb');
+        while ($data = fgetcsv($dataFile)) {
+            $toTest[$data[0] . ':' . $data[1]] = [$data[2], $data[3], array_unique(explode('|', $data[4])), (bool) $data[5]];
+        }
+
+        return $toTest;
     }
 }

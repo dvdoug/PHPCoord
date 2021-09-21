@@ -89,7 +89,7 @@ class GeocentricPointTest extends TestCase
     public function testDistanceDifferentCRSsNoAutoconversion(): void
     {
         $this->expectException(InvalidArgumentException::class);
-        $from = GeocentricPoint::create(new Metre(12300), new Metre(45600), new Metre(78900), Geocentric::fromSRID(Geocentric::EPSG_WGS_84));
+        $from = GeocentricPoint::create(new Metre(12300), new Metre(45600), new Metre(78900), Geocentric::fromSRID(Geocentric::EPSG_CHINA_GEODETIC_COORDINATE_SYSTEM_2000));
         $to = GeocentricPoint::create(new Metre(24600), new Metre(80200), new Metre(16800), Geocentric::fromSRID(Geocentric::EPSG_PZ_90));
         $from->calculateDistance($to);
     }

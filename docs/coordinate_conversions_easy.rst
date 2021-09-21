@@ -73,7 +73,7 @@ between almost any two CRSs is possible as long as they have a common link.
 .. note::
 
     Calculating every single possible permutation of chain between two CRSs is very computationally expensive
-    and so for practicality PHPCoord limits the chain depth to 5 (i.e. the source CRS, 3 intermediate CRSs and
+    and so for practicality PHPCoord limits the chain depth to 7 (i.e. the source CRS, 5 intermediate CRSs and
     the target CRS). If you know a transformation should be possible, but PHPCoord cannot find it you may wish
     to try an explicit 2-stage conversion (e.g. source to WGS84, WGS84 to target).
 

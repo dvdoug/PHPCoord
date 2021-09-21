@@ -185,24 +185,12 @@ class CompoundPointTest extends TestCase
         $toTest = [];
         foreach (CRSTransformations::getSupportedTransformations() as $transformation) {
             $needsNonExistentFile = false;
-            $operationsInTransformation = [];
-
-            $operation = CoordinateOperations::getOperationData($transformation['operation']);
-            if (isset($operation['operations'])) {
-                foreach ($operation['operations'] as $subOperation) {
-                    $operationsInTransformation[] = $subOperation['operation'];
-                }
-            } else {
-                $operationsInTransformation[] = $transformation['operation'];
-            }
 
             if (isset(static::$sridData[$transformation['source_crs']])) {
-                foreach ($operationsInTransformation as $operationInTransformation) {
-                    //filter out operations that require a grid file that we don't have
-                    foreach (CoordinateOperationParams::getParamData($operationInTransformation) as $param) {
-                        if (isset($param['fileProvider']) && !class_exists($param['fileProvider'])) {
-                            $needsNonExistentFile = true;
-                        }
+                //filter out operations that require a grid file that we don't have
+                foreach (CoordinateOperationParams::getParamData($transformation['operation']) as $param) {
+                    if (isset($param['fileProvider']) && !class_exists($param['fileProvider'])) {
+                        $needsNonExistentFile = true;
                     }
                 }
 

@@ -232,7 +232,7 @@ class GeographicPointTest extends TestCase
     public function testDistanceDifferentCRSsNoAutoconversion(): void
     {
         $this->expectException(InvalidCoordinateReferenceSystemException::class);
-        $from = GeographicPoint::create(new Degree(51.54105), new Degree(-0.12319), null, Geographic2D::fromSRID(Geographic2D::EPSG_OSGB36));
+        $from = GeographicPoint::create(new Degree(51.54105), new Degree(-0.12319), null, Geographic2D::fromSRID(Geographic2D::EPSG_CHINA_GEODETIC_COORDINATE_SYSTEM_2000));
         $to = VerticalPoint::create(new Metre(10), Vertical::fromSRID(Vertical::EPSG_TENERIFE_HEIGHT));
         $from->calculateDistance($to);
     }

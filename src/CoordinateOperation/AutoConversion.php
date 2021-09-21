@@ -38,7 +38,7 @@ use function usort;
  */
 trait AutoConversion
 {
-    private int $maxChainDepth = 5; // if traits could have constants...
+    private int $maxChainDepth = 7; // if traits could have constants...
 
     protected static array $methodsThatRequireCoordinateEpoch = [ // if traits could have constants...
         CoordinateOperationMethods::EPSG_TIME_DEPENDENT_COORDINATE_FRAME_ROTATION_GEOCEN => CoordinateOperationMethods::EPSG_TIME_DEPENDENT_COORDINATE_FRAME_ROTATION_GEOCEN,
@@ -56,7 +56,9 @@ trait AutoConversion
         CoordinateOperationMethods::EPSG_TIME_SPECIFIC_POSITION_VECTOR_TRANSFORM_GEOCEN => CoordinateOperationMethods::EPSG_TIME_SPECIFIC_POSITION_VECTOR_TRANSFORM_GEOCEN,
     ];
 
-    private static array $pathCache = [];
+    private static array $completePathCache = [];
+
+    private static array $incompletePathCache = [];
 
     private static array $transformationsByCRS = [];
 
@@ -117,30 +119,28 @@ trait AutoConversion
                 }
             }
 
-            $operations = static::resolveConcatenatedOperations($pathStep['operation'], false);
+            $operation = CoordinateOperations::getOperationData($pathStep['operation']);
 
-            foreach ($operations as $operationId => $operation) {
-                //filter out operations that require an epoch if we don't have one
-                if (isset(self::$methodsThatRequireCoordinateEpoch[$operation['method']]) && !$this->getCoordinateEpoch()) {
+            //filter out operations that require an epoch if we don't have one
+            if (isset(self::$methodsThatRequireCoordinateEpoch[$operation['method']]) && !$this->getCoordinateEpoch()) {
+                return false;
+            }
+
+            $params = CoordinateOperationParams::getParamData($pathStep['operation']);
+
+            //filter out operations that require a specific epoch
+            if (isset(self::$methodsThatRequireASpecificEpoch[$operation['method']]) && $this->getCoordinateEpoch()) {
+                $pointEpoch = Year::fromDateTime($this->getCoordinateEpoch());
+                if (!(abs($pointEpoch->getValue() - $params['transformationReferenceEpoch']['value']) <= 0.001)) {
                     return false;
                 }
+            }
 
-                $params = CoordinateOperationParams::getParamData($operationId);
-
-                //filter out operations that require a specific epoch
-                if (isset(self::$methodsThatRequireASpecificEpoch[$operation['method']]) && $this->getCoordinateEpoch()) {
-                    $pointEpoch = Year::fromDateTime($this->getCoordinateEpoch());
-                    if (!(abs($pointEpoch->getValue() - $params['transformationReferenceEpoch']['value']) <= 0.001)) {
-                        return false;
-                    }
-                }
-
-                //filter out operations that require a grid file that we don't have, or where boundaries are not being
-                //checked (a formula-based conversion will always return *a* result, outside a grid boundary does not...
-                foreach ($params as $param) {
-                    if (isset($param['fileProvider']) && (!$boundaryCheckPoint || !class_exists($param['fileProvider']))) {
-                        return false;
-                    }
+            //filter out operations that require a grid file that we don't have, or where boundaries are not being
+            //checked (a formula-based conversion will always return *a* result, outside a grid boundary does not...
+            foreach ($params as $param) {
+                if (isset($param['fileProvider']) && (!$boundaryCheckPoint || !class_exists($param['fileProvider']))) {
+                    return false;
                 }
             }
         }
@@ -156,13 +156,16 @@ trait AutoConversion
         $iterations = 1;
         $sourceSRID = $source->getSRID();
         $targetSRID = $target->getSRID();
-        $simplePaths = [[$sourceSRID]];
+        self::$incompletePathCache[$sourceSRID . '|' . $targetSRID . '|0'] = [[$sourceSRID]];
 
         while ($iterations < $this->maxChainDepth) {
             $cacheKey = $sourceSRID . '|' . $targetSRID . '|' . $iterations;
+            $cacheKeyMinus1 = $sourceSRID . '|' . $targetSRID . '|' . ($iterations - 1);
 
-            if (!isset(self::$pathCache[$cacheKey])) {
+            if (!isset(self::$completePathCache[$cacheKey])) {
                 $completePaths = [];
+
+                $simplePaths = self::$incompletePathCache[$cacheKeyMinus1];
 
                 foreach ($simplePaths as $key => $simplePath) {
                     $current = end($simplePath);
@@ -186,11 +189,12 @@ trait AutoConversion
                     $paths[] = ['path' => $fullPath, 'accuracy' => array_sum(array_column($fullPath, 'accuracy'))];
                 }
 
-                self::$pathCache[$cacheKey] = $paths;
+                self::$incompletePathCache[$cacheKey] = $simplePaths;
+                self::$completePathCache[$cacheKey] = $paths;
             }
 
             ++$iterations;
-            yield self::$pathCache[$cacheKey];
+            yield self::$completePathCache[$cacheKey];
         }
     }
 

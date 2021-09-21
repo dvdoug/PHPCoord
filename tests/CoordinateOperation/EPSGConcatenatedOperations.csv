@@ -1,0 +1,58 @@
+urn:ogc:def:coordinateOperation:EPSG::8643,"Greek to WGS 84 (1)",urn:ogc:def:crs:EPSG::4120,urn:ogc:def:crs:EPSG::4326,3254|3254,1
+urn:ogc:def:coordinateOperation:EPSG::8532,"Indian 1960 to WGS 84 (1)",urn:ogc:def:crs:EPSG::4131,urn:ogc:def:crs:EPSG::4326,1495|1495,1
+urn:ogc:def:coordinateOperation:EPSG::8581,"PSD93 to WGS 84 (2)",urn:ogc:def:crs:EPSG::4134,urn:ogc:def:crs:EPSG::4326,3288|3288,1
+urn:ogc:def:coordinateOperation:EPSG::8517,"Chos Malal 1914 to WGS 84 (1)",urn:ogc:def:crs:EPSG::4160,urn:ogc:def:crs:EPSG::4326,2325|2325,1
+urn:ogc:def:coordinateOperation:EPSG::8571,"Accra to WGS 84 (2)",urn:ogc:def:crs:EPSG::4168,urn:ogc:def:crs:EPSG::4326,1505|1505,1
+urn:ogc:def:coordinateOperation:EPSG::8655,"Manoca 1962 to WGS 84 (2)",urn:ogc:def:crs:EPSG::4193,urn:ogc:def:crs:EPSG::4326,2555|2555,1
+urn:ogc:def:coordinateOperation:EPSG::8631,"Garoua to WGS 84 (1)",urn:ogc:def:crs:EPSG::4197,urn:ogc:def:crs:EPSG::4326,2590|2590,1
+urn:ogc:def:coordinateOperation:EPSG::8632,"Kousseri to WGS 84 (1)",urn:ogc:def:crs:EPSG::4198,urn:ogc:def:crs:EPSG::4326,2591|2591,1
+urn:ogc:def:coordinateOperation:EPSG::8634,"Beduaram to WGS 84 (1)",urn:ogc:def:crs:EPSG::4213,urn:ogc:def:crs:EPSG::4326,2771|2771,1
+urn:ogc:def:coordinateOperation:EPSG::8568,"Deir ez Zor to WGS 84 (1)",urn:ogc:def:crs:EPSG::4227,urn:ogc:def:crs:EPSG::4326,2329|2329,1
+urn:ogc:def:coordinateOperation:EPSG::8537,"Egypt 1907 to WGS 84 (2)",urn:ogc:def:crs:EPSG::4229,urn:ogc:def:crs:EPSG::4326,1086|1086,1
+urn:ogc:def:coordinateOperation:EPSG::8654,"ED50 to ETRS89 (2)",urn:ogc:def:crs:EPSG::4230,urn:ogc:def:crs:EPSG::4258,2330|2330|2330,1
+urn:ogc:def:coordinateOperation:EPSG::8047,"ED50 to WGS 84 (15)",urn:ogc:def:crs:EPSG::4230,urn:ogc:def:crs:EPSG::4326,2332|2332,1
+urn:ogc:def:coordinateOperation:EPSG::8569,"ED50 to WGS 84 (21)",urn:ogc:def:crs:EPSG::4230,urn:ogc:def:crs:EPSG::4326,2332|2332,1
+urn:ogc:def:coordinateOperation:EPSG::8653,"ED50 to WGS 84 (14)",urn:ogc:def:crs:EPSG::4230,urn:ogc:def:crs:EPSG::4326,2330|2330,1
+urn:ogc:def:coordinateOperation:EPSG::8585,"NAD27 to WGS 84 (36)",urn:ogc:def:crs:EPSG::4267,urn:ogc:def:crs:EPSG::4326,2376|2376,1
+urn:ogc:def:coordinateOperation:EPSG::8647,"NAD27 to WGS 84 (78)",urn:ogc:def:crs:EPSG::4267,urn:ogc:def:crs:EPSG::4326,2831|2831|2831,1
+urn:ogc:def:coordinateOperation:EPSG::9104,"NAD27 to ITRF2014 (2)",urn:ogc:def:crs:EPSG::4267,urn:ogc:def:crs:EPSG::7789,3357|3357|3357|3357|3357|3357|3357,1
+urn:ogc:def:coordinateOperation:EPSG::8650,"Palestine 1923 to WGS 84 (2)",urn:ogc:def:crs:EPSG::4281,urn:ogc:def:crs:EPSG::4326,2603|2603,1
+urn:ogc:def:coordinateOperation:EPSG::9687,"GDA94 to WGS 84 (G1762) (2)",urn:ogc:def:crs:EPSG::4283,urn:ogc:def:crs:EPSG::9057,2575|2575,1
+urn:ogc:def:coordinateOperation:EPSG::4837,"Amersfoort to ED50 (1)",urn:ogc:def:crs:EPSG::4289,urn:ogc:def:crs:EPSG::4230,1275|1275,1
+urn:ogc:def:coordinateOperation:EPSG::6714,"Tokyo to JGD2011 (1)",urn:ogc:def:crs:EPSG::4301,urn:ogc:def:crs:EPSG::6668,4170|4170,1
+urn:ogc:def:coordinateOperation:EPSG::8562,"Nord Sahara 1959 to WGS 84 (3)",urn:ogc:def:crs:EPSG::4307,urn:ogc:def:crs:EPSG::4326,2393|2393,1
+urn:ogc:def:coordinateOperation:EPSG::8633,"Yoff to WGS 84 (1)",urn:ogc:def:crs:EPSG::4310,urn:ogc:def:crs:EPSG::4326,1207|1207,1
+urn:ogc:def:coordinateOperation:EPSG::8651,"Vientiane 1982 to WGS 84 (1)",urn:ogc:def:crs:EPSG::4676,urn:ogc:def:crs:EPSG::4326,1138|1138,1
+urn:ogc:def:coordinateOperation:EPSG::8652,"Lao 1993 to WGS 84 (1)",urn:ogc:def:crs:EPSG::4677,urn:ogc:def:crs:EPSG::4326,1138|1138,1
+urn:ogc:def:coordinateOperation:EPSG::8656,"Mhast (offshore) to WGS 84 (1)",urn:ogc:def:crs:EPSG::4705,urn:ogc:def:crs:EPSG::4326,3180|3180,1
+urn:ogc:def:coordinateOperation:EPSG::8657,"Egypt Gulf of Suez S-650 TL to WGS 84 (1)",urn:ogc:def:crs:EPSG::4706,urn:ogc:def:crs:EPSG::4326,2341|2341,1
+urn:ogc:def:coordinateOperation:EPSG::8659,"Kertau (RSO) to WGS 84 (1)",urn:ogc:def:crs:EPSG::4751,urn:ogc:def:crs:EPSG::4326,1309|1309,1
+urn:ogc:def:coordinateOperation:EPSG::8174,"Bogota 1975 (Bogota) to WGS 84 (1)",urn:ogc:def:crs:EPSG::4802,urn:ogc:def:crs:EPSG::4326,3229|3229,1
+urn:ogc:def:coordinateOperation:EPSG::5838,"Lisbon (Lisbon) to WGS 84 (2)",urn:ogc:def:crs:EPSG::4803,urn:ogc:def:crs:EPSG::4326,1294|1294,1
+urn:ogc:def:coordinateOperation:EPSG::8638,"Makassar (Jakarta) to WGS 84 (1)",urn:ogc:def:crs:EPSG::4804,urn:ogc:def:crs:EPSG::4326,1316|1316,1
+urn:ogc:def:coordinateOperation:EPSG::3896,"MGI (Ferro) to WGS 84 (2)",urn:ogc:def:crs:EPSG::4805,urn:ogc:def:crs:EPSG::4326,1037|1037,1
+urn:ogc:def:coordinateOperation:EPSG::3966,"MGI (Ferro) to WGS 84 (1)",urn:ogc:def:crs:EPSG::4805,urn:ogc:def:crs:EPSG::4326,2370|2370,1
+urn:ogc:def:coordinateOperation:EPSG::8175,"Monte Mario (Rome) to WGS 84 (1)",urn:ogc:def:crs:EPSG::4806,urn:ogc:def:crs:EPSG::4326,2339|2339,1
+urn:ogc:def:coordinateOperation:EPSG::9337,"NTF (Paris) to RGF93 (1)",urn:ogc:def:crs:EPSG::4807,urn:ogc:def:crs:EPSG::4171,3694|3694,1
+urn:ogc:def:coordinateOperation:EPSG::8186,"NTF (Paris) to ED50 (1)",urn:ogc:def:crs:EPSG::4807,urn:ogc:def:crs:EPSG::4230,3694|3694,1
+urn:ogc:def:coordinateOperation:EPSG::8188,"NTF (Paris) to WGS 72 (1)",urn:ogc:def:crs:EPSG::4807,urn:ogc:def:crs:EPSG::4322,3694|3694,1
+urn:ogc:def:coordinateOperation:EPSG::8094,"NTF (Paris) to WGS 84 (1)",urn:ogc:def:crs:EPSG::4807,urn:ogc:def:crs:EPSG::4326,3694|3694,1
+urn:ogc:def:coordinateOperation:EPSG::6874,"Tananarive (Paris) to WGS 84 (2)",urn:ogc:def:crs:EPSG::4810,urn:ogc:def:crs:EPSG::4326,3273|3273,1
+urn:ogc:def:coordinateOperation:EPSG::8176,"Tananarive (Paris) to WGS 84 (1)",urn:ogc:def:crs:EPSG::4810,urn:ogc:def:crs:EPSG::4326,3273|3273,1
+urn:ogc:def:coordinateOperation:EPSG::8211,"Voirol 1875 (Paris) to WGS 84 (1)",urn:ogc:def:crs:EPSG::4811,urn:ogc:def:crs:EPSG::4326,1365|1365,1
+urn:ogc:def:coordinateOperation:EPSG::8178,"Batavia (Jakarta) to WGS 84 (1)",urn:ogc:def:crs:EPSG::4813,urn:ogc:def:crs:EPSG::4326,1285|1285,1
+urn:ogc:def:coordinateOperation:EPSG::8644,"Greek (Athens) to WGS 84 (1)",urn:ogc:def:crs:EPSG::4815,urn:ogc:def:crs:EPSG::4326,3254|3254|3254,1
+urn:ogc:def:coordinateOperation:EPSG::8636,"Carthage (Paris) to WGS 84 (1)",urn:ogc:def:crs:EPSG::4816,urn:ogc:def:crs:EPSG::4326,1618|1618,1
+urn:ogc:def:coordinateOperation:EPSG::8639,"NGO 1948 (Oslo) to WGS 84 (1)",urn:ogc:def:crs:EPSG::4817,urn:ogc:def:crs:EPSG::4326,1352|1352,1
+urn:ogc:def:coordinateOperation:EPSG::5230,"S-JTSK (Ferro) to WGS 84 (2)",urn:ogc:def:crs:EPSG::4818,urn:ogc:def:crs:EPSG::4326,1211|1211,1
+urn:ogc:def:coordinateOperation:EPSG::5242,"S-JTSK (Ferro) to WGS 84 (3)",urn:ogc:def:crs:EPSG::4818,urn:ogc:def:crs:EPSG::4326,1079|1079,1
+urn:ogc:def:coordinateOperation:EPSG::8642,"S-JTSK (Ferro) to WGS 84 (1)",urn:ogc:def:crs:EPSG::4818,urn:ogc:def:crs:EPSG::4326,1079|1079,1
+urn:ogc:def:coordinateOperation:EPSG::8641,"Segara (Jakarta) to WGS 84 (1)",urn:ogc:def:crs:EPSG::4820,urn:ogc:def:crs:EPSG::4326,1360|1360,1
+urn:ogc:def:coordinateOperation:EPSG::8241,"Madrid 1870 (Madrid) to WGS 84 (1)",urn:ogc:def:crs:EPSG::4903,urn:ogc:def:crs:EPSG::4326,2366|2366,0
+urn:ogc:def:coordinateOperation:EPSG::8648,"Lisbon 1890 (Lisbon) to WGS 84 (1)",urn:ogc:def:crs:EPSG::4904,urn:ogc:def:crs:EPSG::4326,1294|1294,1
+urn:ogc:def:coordinateOperation:EPSG::8649,"Lisbon 1890 (Lisbon) to WGS 84 (2)",urn:ogc:def:crs:EPSG::4904,urn:ogc:def:crs:EPSG::4326,1294|1294,1
+urn:ogc:def:coordinateOperation:EPSG::5192,"Tokyo 1892 to WGS 84 (1)",urn:ogc:def:crs:EPSG::5132,urn:ogc:def:crs:EPSG::4326,3266|3266,1
+urn:ogc:def:coordinateOperation:EPSG::5190,"Tokyo 1892 to Korea 2000 (1)",urn:ogc:def:crs:EPSG::5132,urn:ogc:def:crs:EPSG::4737,3266|3266,1
+urn:ogc:def:coordinateOperation:EPSG::5240,"S-JTSK/05 (Ferro) to WGS 84 (1)",urn:ogc:def:crs:EPSG::5229,urn:ogc:def:crs:EPSG::4326,1079|1079,1
+urn:ogc:def:coordinateOperation:EPSG::9683,"ITRF2014 to GDA94 (2)",urn:ogc:def:crs:EPSG::9000,urn:ogc:def:crs:EPSG::4283,2575|2575,1
+urn:ogc:def:coordinateOperation:EPSG::9685,"ATRF2014 to GDA94 (2)",urn:ogc:def:crs:EPSG::9309,urn:ogc:def:crs:EPSG::4283,2575|2575,1

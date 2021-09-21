@@ -12,7 +12,6 @@ use function class_exists;
 use DateTime;
 use DateTimeImmutable;
 use PHPCoord\CoordinateOperation\CoordinateOperationParams;
-use PHPCoord\CoordinateOperation\CoordinateOperations;
 use PHPCoord\CoordinateOperation\CRSTransformations;
 use PHPCoord\CoordinateOperation\OSTN15OSGM15Provider;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
@@ -96,7 +95,7 @@ class ProjectedPointTest extends TestCase
     public function testDistanceDifferentCRSNoAutoconversion(): void
     {
         $this->expectException(InvalidCoordinateReferenceSystemException::class);
-        $from = ProjectedPoint::createFromEastingNorthing(new Metre(438700), new Metre(114800), Projected::fromSRID(Projected::EPSG_IRENET95_IRISH_TRANSVERSE_MERCATOR));
+        $from = ProjectedPoint::createFromEastingNorthing(new Metre(438700), new Metre(114800), Projected::fromSRID(Projected::EPSG_CGCS2000_3_DEGREE_GAUSS_KRUGER_CM_75E));
         $to = ProjectedPoint::createFromEastingNorthing(new Metre(533600), new Metre(180500), Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID));
         $from->calculateDistance($to);
     }
@@ -124,14 +123,6 @@ class ProjectedPointTest extends TestCase
         self::assertEqualsWithDelta(115423.134596, $from->calculateDistance($to)->getValue(), 0.000001);
     }
 
-    public function testDistanceDifferentCRSNoAutoconversionWestingNorthing(): void
-    {
-        $this->expectException(InvalidCoordinateReferenceSystemException::class);
-        $from = ProjectedPoint::createFromWestingNorthing(new Metre(438700), new Metre(114800), Projected::fromSRID(Projected::EPSG_ETRS89_FAROE_LAMBERT));
-        $to = ProjectedPoint::createFromEastingNorthing(new Metre(533600), new Metre(180500), Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID));
-        $from->calculateDistance($to);
-    }
-
     public function testWestingSouthing(): void
     {
         $object = ProjectedPoint::createFromWestingSouthing(new Metre(123), new Metre(456), Projected::fromSRID(Projected::EPSG_ST_STEPHEN_GRID_FERRO));
@@ -153,14 +144,6 @@ class ProjectedPointTest extends TestCase
         $from = ProjectedPoint::createFromWestingSouthing(new Metre(438700), new Metre(114800), Projected::fromSRID(Projected::EPSG_ST_STEPHEN_GRID_FERRO));
         $to = ProjectedPoint::createFromWestingSouthing(new Metre(533600), new Metre(180500), Projected::fromSRID(Projected::EPSG_ST_STEPHEN_GRID_FERRO));
         self::assertEqualsWithDelta(115423.134596, $from->calculateDistance($to)->getValue(), 0.000001);
-    }
-
-    public function testDistanceDifferentCRSNoAutoconversionWestingSouthing(): void
-    {
-        $this->expectException(InvalidCoordinateReferenceSystemException::class);
-        $from = ProjectedPoint::createFromWestingSouthing(new Metre(438700), new Metre(114800), Projected::fromSRID(Projected::EPSG_ST_STEPHEN_GRID_FERRO));
-        $to = ProjectedPoint::createFromEastingNorthing(new Metre(533600), new Metre(180500), Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID));
-        $from->calculateDistance($to);
     }
 
     public function testNoWestingWhenExpected(): void
@@ -710,24 +693,12 @@ class ProjectedPointTest extends TestCase
         $toTest = [];
         foreach (CRSTransformations::getSupportedTransformations() as $transformation) {
             $needsNonExistentFile = false;
-            $operationsInTransformation = [];
-
-            $operation = CoordinateOperations::getOperationData($transformation['operation']);
-            if (isset($operation['operations'])) {
-                foreach ($operation['operations'] as $subOperation) {
-                    $operationsInTransformation[] = $subOperation['operation'];
-                }
-            } else {
-                $operationsInTransformation[] = $transformation['operation'];
-            }
 
             if (isset(static::$sridData[$transformation['source_crs']])) {
-                foreach ($operationsInTransformation as $operationInTransformation) {
-                    //filter out operations that require a grid file that we don't have
-                    foreach (CoordinateOperationParams::getParamData($operationInTransformation) as $param) {
-                        if (isset($param['fileProvider']) && !class_exists($param['fileProvider'])) {
-                            $needsNonExistentFile = true;
-                        }
+                //filter out operations that require a grid file that we don't have
+                foreach (CoordinateOperationParams::getParamData($transformation['operation']) as $param) {
+                    if (isset($param['fileProvider']) && !class_exists($param['fileProvider'])) {
+                        $needsNonExistentFile = true;
                     }
                 }
 

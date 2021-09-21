@@ -14708,8 +14708,6 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::3896' => [
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::3899' => [
             'latitudeOfNaturalOrigin' => [
                 'value' => 45.0,
@@ -15966,8 +15964,6 @@ class CoordinateOperationParams
                 'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 'reverses' => true,
             ],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::3966' => [
         ],
         'urn:ogc:def:coordinateOperation:EPSG::3967' => [
             'latitudeOfFalseOrigin' => [
@@ -18060,8 +18056,6 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::4837' => [
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::4838' => [
             'latitudeOfFalseOrigin' => [
                 'value' => 51.0,
@@ -20117,8 +20111,6 @@ class CoordinateOperationParams
                 'reverses' => false,
             ],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::5190' => [
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::5191' => [
             'xAxisTranslation' => [
                 'value' => -145.907,
@@ -20170,8 +20162,6 @@ class CoordinateOperationParams
                 'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 'reverses' => false,
             ],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::5192' => [
         ],
         'urn:ogc:def:coordinateOperation:EPSG::5194' => [
             'xAxisTranslation' => [
@@ -21214,8 +21204,6 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::5230' => [
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::5231' => [
             'latitudeOfNaturalOrigin' => [
                 'value' => 7.0001729,
@@ -21351,8 +21339,6 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::5240' => [
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::5241' => [
             'latitudeOffset' => [
                 'value' => 0.0,
@@ -21364,8 +21350,6 @@ class CoordinateOperationParams
                 'uom' => 'urn:ogc:def:uom:EPSG::9104',
                 'reverses' => true,
             ],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::5242' => [
         ],
         'urn:ogc:def:coordinateOperation:EPSG::5249' => [
             'xAxisTranslation' => [
@@ -24795,8 +24779,6 @@ class CoordinateOperationParams
                 'uom' => 'urn:ogc:def:uom:EPSG::9202',
                 'reverses' => true,
             ],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::5838' => [
         ],
         'urn:ogc:def:coordinateOperation:EPSG::5840' => [
             'xAxisTranslation' => [
@@ -32412,8 +32394,6 @@ class CoordinateOperationParams
                 'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2JGD2000JGD2011JapanProvider',
             ],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::6714' => [
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::6716' => [
             'latitudeOfNaturalOrigin' => [
                 'value' => 0.0,
@@ -34020,8 +34000,6 @@ class CoordinateOperationParams
                 'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 'reverses' => true,
             ],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::6874' => [
         ],
         'urn:ogc:def:coordinateOperation:EPSG::6877' => [
             'latitudeOfNaturalOrigin' => [
@@ -47813,16 +47791,12 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::7965' => [
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::7966' => [
             'verticalOffset' => [
                 'value' => -2.7,
                 'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 'reverses' => true,
             ],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::7967' => [
         ],
         'urn:ogc:def:coordinateOperation:EPSG::7977' => [
             'verticalOffset' => [
@@ -47844,12 +47818,6 @@ class CoordinateOperationParams
                 'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 'reverses' => true,
             ],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::7983' => [
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::7986' => [
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::7987' => [
         ],
         'urn:ogc:def:coordinateOperation:EPSG::7993' => [
             'latitudeOfNaturalOrigin' => [
@@ -48488,8 +48456,6 @@ class CoordinateOperationParams
                 'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 'reverses' => false,
             ],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8047' => [
         ],
         'urn:ogc:def:coordinateOperation:EPSG::8048' => [
             'xAxisTranslation' => [
@@ -49655,24 +49621,6 @@ class CoordinateOperationParams
                 'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 'reverses' => false,
             ],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8094' => [
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8174' => [
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8175' => [
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8176' => [
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8178' => [
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8186' => [
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8188' => [
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8211' => [
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8241' => [
         ],
         'urn:ogc:def:coordinateOperation:EPSG::8256' => [
             'xAxisTranslation' => [
@@ -52642,12 +52590,6 @@ class CoordinateOperationParams
                 'reverses' => false,
             ],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::8517' => [
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8532' => [
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8537' => [
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::8546' => [
             'latitudeDifferenceFile' => [
                 'reverses' => true,
@@ -52809,64 +52751,6 @@ class CoordinateOperationParams
                 'uom' => null,
                 'reverses' => false,
             ],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8562' => [
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8568' => [
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8569' => [
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8571' => [
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8581' => [
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8585' => [
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8631' => [
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8632' => [
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8633' => [
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8634' => [
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8636' => [
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8638' => [
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8639' => [
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8641' => [
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8642' => [
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8643' => [
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8644' => [
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8647' => [
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8648' => [
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8649' => [
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8650' => [
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8651' => [
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8652' => [
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8653' => [
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8654' => [
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8655' => [
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8656' => [
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8657' => [
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8659' => [
         ],
         'urn:ogc:def:coordinateOperation:EPSG::8660' => [
             'latitudeDifferenceFile' => [
@@ -57957,8 +57841,6 @@ class CoordinateOperationParams
                 'reverses' => false,
             ],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::9104' => [
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::9105' => [
             'latitudeAndLongitudeDifferenceFile' => [
                 'reverses' => true,
@@ -59787,8 +59669,6 @@ class CoordinateOperationParams
                 'reverses' => false,
             ],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::9336' => [
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::9339' => [
             'xAxisTranslation' => [
                 'value' => -302.0,
@@ -60922,8 +60802,6 @@ class CoordinateOperationParams
                 'reverses' => false,
             ],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::9683' => [
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::9684' => [
             'xAxisTranslation' => [
                 'value' => -61.55,
@@ -61001,8 +60879,6 @@ class CoordinateOperationParams
                 'reverses' => false,
             ],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::9685' => [
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::9686' => [
             'xAxisTranslation' => [
                 'value' => 61.55,
@@ -61079,8 +60955,6 @@ class CoordinateOperationParams
                 'uom' => 'urn:ogc:def:uom:EPSG::1029',
                 'reverses' => false,
             ],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::9687' => [
         ],
         'urn:ogc:def:coordinateOperation:EPSG::9688' => [
             'xAxisTranslation' => [

@@ -1188,9 +1188,8 @@ class EPSGCodegenFromDataImport
             JOIN epsg_coordoperationmethod m ON m.coord_op_method_code = o.coord_op_method_code
             JOIN epsg_coordinatereferencesystem sourcecrs ON sourcecrs.coord_ref_sys_code = o.source_crs_code AND sourcecrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND sourcecrs.deprecated = 0
             JOIN epsg_coordinatereferencesystem targetcrs ON targetcrs.coord_ref_sys_code = o.target_crs_code AND targetcrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND targetcrs.deprecated = 0
-            LEFT JOIN epsg_coordoperationparamvalue p ON p.coord_op_code = o.coord_op_code
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperation' AND dep.object_code = o.coord_op_code
-            WHERE o.coord_op_type != 'conversion' AND o.coord_op_name NOT LIKE '%example%' AND o.coord_op_name NOT LIKE '%mining%'
+            WHERE o.coord_op_type != 'conversion' AND o.coord_op_type != 'concatenated operation' AND o.coord_op_name NOT LIKE '%example%' AND o.coord_op_name NOT LIKE '%mining%'
             AND dep.deprecation_id IS NULL AND o.deprecated = 0
             GROUP BY source_crs, target_crs, o.coord_op_code
             HAVING (SUM(CASE WHEN m.coord_op_method_code IN (" . implode(',', self::BLACKLISTED_METHODS) . ') THEN 1 ELSE 0 END) = 0)
@@ -1208,36 +1207,12 @@ class EPSGCodegenFromDataImport
             FROM epsg_coordoperation o
             JOIN epsg_coordinatereferencesystem projcrs ON projcrs.projection_conv_code = o.coord_op_code AND projcrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND projcrs.deprecated = 0
             JOIN epsg_coordoperationmethod m ON m.coord_op_method_code = o.coord_op_method_code
-            LEFT JOIN epsg_coordoperationparamvalue p ON p.coord_op_code = o.coord_op_code
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperation' AND dep.object_code = o.coord_op_code
-            WHERE o.coord_op_type = 'conversion' AND o.coord_op_name NOT LIKE '%example%' AND o.coord_op_name NOT LIKE '%mining%'
+            WHERE o.coord_op_type = 'conversion' AND o.coord_op_type != 'concatenated operation' AND o.coord_op_name NOT LIKE '%example%' AND o.coord_op_name NOT LIKE '%mining%'
             AND dep.deprecation_id IS NULL AND o.deprecated = 0
             GROUP BY source_crs, target_crs, o.coord_op_code
             HAVING (SUM(CASE WHEN m.coord_op_method_code IN (" . implode(',', self::BLACKLISTED_METHODS) . ') THEN 1 ELSE 0 END) = 0)
-            AND (SUM(CASE WHEN o.coord_op_code IN (' . implode(',', self::BLACKLISTED_OPERATIONS) . ") THEN 1 ELSE 0 END) = 0)
-
-            UNION
-
-            SELECT
-                'urn:ogc:def:coordinateOperation:EPSG::' || o.coord_op_code AS operation,
-                o.coord_op_name AS name,
-                'urn:ogc:def:crs:EPSG::' || o.source_crs_code AS source_crs,
-                'urn:ogc:def:crs:EPSG::' || o.target_crs_code AS target_crs,
-                COALESCE(o.coord_op_accuracy, 0) AS accuracy,
-                CASE WHEN SUM(CASE WHEN cm.reverse_op = 0 THEN 1 ELSE 0 END) = 0 THEN 1 ELSE 0 END AS reversible
-            FROM epsg_coordoperation o
-            LEFT JOIN epsg_coordoperationpath p ON p.concat_operation_code = o.coord_op_code
-            LEFT JOIN epsg_coordoperation co ON p.single_operation_code = co.coord_op_code
-            LEFT JOIN epsg_coordoperationmethod cm ON co.coord_op_method_code = cm.coord_op_method_code
-            JOIN epsg_coordinatereferencesystem sourcecrs ON sourcecrs.coord_ref_sys_code = o.source_crs_code AND sourcecrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND sourcecrs.deprecated = 0
-            JOIN epsg_coordinatereferencesystem targetcrs ON targetcrs.coord_ref_sys_code = o.target_crs_code AND targetcrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND targetcrs.deprecated = 0
-            LEFT JOIN epsg_coordoperationparamvalue p ON p.coord_op_code = co.coord_op_code
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperation' AND dep.object_code = o.coord_op_code
-            WHERE o.coord_op_type = 'concatenated operation' AND o.coord_op_name NOT LIKE '%example%' AND o.coord_op_name NOT LIKE '%mining%'
-            AND dep.deprecation_id IS NULL AND o.deprecated = 0
-            GROUP BY source_crs, target_crs, o.coord_op_code
-            HAVING (SUM(CASE WHEN cm.coord_op_method_code IN (" . implode(',', self::BLACKLISTED_METHODS) . ') THEN 1 ELSE 0 END) = 0)
-            AND (SUM(CASE WHEN co.coord_op_code IN (' . implode(',', self::BLACKLISTED_OPERATIONS) . ') THEN 1 ELSE 0 END) = 0)
+            AND (SUM(CASE WHEN o.coord_op_code IN (' . implode(',', self::BLACKLISTED_OPERATIONS) . ') THEN 1 ELSE 0 END) = 0)
 
             ORDER BY source_crs, target_crs, operation
             ';
@@ -1264,7 +1239,6 @@ class EPSGCodegenFromDataImport
             JOIN epsg_coordinatereferencesystem targetcrs ON targetcrs.coord_ref_sys_code = o.target_crs_code AND targetcrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND targetcrs.deprecated = 0
             JOIN epsg_usage u ON u.object_table_name = 'epsg_coordoperation' AND u.object_code = o.coord_op_code
             JOIN epsg_extent e ON u.extent_code = e.extent_code
-            LEFT JOIN epsg_coordoperationparamvalue p ON p.coord_op_code = o.coord_op_code
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperation' AND dep.object_code = o.coord_op_code AND dep.deprecation_date <= '2020-12-14'
             WHERE o.coord_op_type != 'conversion' AND o.coord_op_type != 'concatenated operation' AND o.coord_op_name NOT LIKE '%example%'
             AND dep.deprecation_id IS NULL AND o.deprecated = 0
@@ -1285,56 +1259,11 @@ class EPSGCodegenFromDataImport
             JOIN epsg_coordoperationmethod m ON m.coord_op_method_code = o.coord_op_method_code
             JOIN epsg_usage u ON u.object_table_name = 'epsg_coordoperation' AND u.object_code = o.coord_op_code
             JOIN epsg_extent e ON u.extent_code = e.extent_code
-            LEFT JOIN epsg_coordoperationparamvalue p ON p.coord_op_code = o.coord_op_code
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperation' AND dep.object_code = o.coord_op_code AND dep.deprecation_date <= '2020-12-14'
-            WHERE o.coord_op_type = 'conversion' AND o.coord_op_name NOT LIKE '%example%'
+            WHERE o.coord_op_type = 'conversion' AND o.coord_op_type != 'concatenated operation' AND o.coord_op_name NOT LIKE '%example%'
             AND dep.deprecation_id IS NULL AND o.deprecated = 0
             GROUP BY o.coord_op_code
             HAVING (SUM(CASE WHEN m.coord_op_method_code IN (" . implode(',', self::BLACKLISTED_METHODS) . ') THEN 1 ELSE 0 END) = 0)
-            AND (SUM(CASE WHEN o.coord_op_code IN (' . implode(',', self::BLACKLISTED_OPERATIONS) . ") THEN 1 ELSE 0 END) = 0)
-
-            UNION
-
-            SELECT
-                'urn:ogc:def:coordinateOperation:EPSG::' || o.coord_op_code AS urn,
-                o.coord_op_name AS name,
-                o.coord_op_type AS type,
-                null AS method,
-                GROUP_CONCAT(e.extent_code, ',') AS extent_code
-            FROM epsg_coordoperation o
-            LEFT JOIN epsg_coordoperationpath p ON p.concat_operation_code = o.coord_op_code
-            LEFT JOIN epsg_coordoperation co ON p.single_operation_code = co.coord_op_code
-            LEFT JOIN epsg_coordoperationmethod cm ON co.coord_op_method_code = cm.coord_op_method_code
-            JOIN epsg_coordinatereferencesystem sourcecrs ON sourcecrs.coord_ref_sys_code = o.source_crs_code AND sourcecrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND sourcecrs.deprecated = 0
-            JOIN epsg_coordinatereferencesystem targetcrs ON targetcrs.coord_ref_sys_code = o.target_crs_code AND targetcrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND targetcrs.deprecated = 0
-            JOIN epsg_usage u ON u.object_table_name = 'epsg_coordoperation' AND u.object_code = o.coord_op_code
-            JOIN epsg_extent e ON u.extent_code = e.extent_code
-            LEFT JOIN epsg_coordoperationparamvalue p ON p.coord_op_code = co.coord_op_code
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperation' AND dep.object_code = o.coord_op_code AND dep.deprecation_date <= '2020-12-14'
-            WHERE o.coord_op_type = 'concatenated operation' AND o.coord_op_name NOT LIKE '%example%'
-            AND dep.deprecation_id IS NULL AND o.deprecated = 0
-            GROUP BY o.coord_op_code
-            HAVING (SUM(CASE WHEN cm.coord_op_method_code IN (" . implode(',', self::BLACKLISTED_METHODS) . ') THEN 1 ELSE 0 END) = 0)
-            AND (SUM(CASE WHEN co.coord_op_code IN (' . implode(',', self::BLACKLISTED_OPERATIONS) . ") THEN 1 ELSE 0 END) = 0)
-
-            UNION
-
-            SELECT
-                'urn:ogc:def:coordinateOperation:EPSG::' || o.coord_op_code AS urn,
-                o.coord_op_name AS name,
-                o.coord_op_type AS type,
-                'urn:ogc:def:method:EPSG::' || o.coord_op_method_code AS method,
-                GROUP_CONCAT(e.extent_code, ',') AS extent_code
-            FROM epsg_coordoperation o
-            JOIN epsg_coordoperationpath p ON p.single_operation_code = o.coord_op_code
-            JOIN epsg_usage u ON u.object_table_name = 'epsg_coordoperation' AND u.object_code = o.coord_op_code
-            JOIN epsg_extent e ON u.extent_code = e.extent_code
-            LEFT JOIN epsg_coordoperationparamvalue p ON p.coord_op_code = o.coord_op_code
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperation' AND dep.object_code = o.coord_op_code AND dep.deprecation_date <= '2020-12-14'
-            WHERE o.coord_op_name NOT LIKE '%example%'
-            AND dep.deprecation_id IS NULL AND o.deprecated = 0
-            GROUP BY o.coord_op_code
-            HAVING (SUM(CASE WHEN o.coord_op_method_code IN (" . implode(',', self::BLACKLISTED_METHODS) . ') THEN 1 ELSE 0 END) = 0)
             AND (SUM(CASE WHEN o.coord_op_code IN (' . implode(',', self::BLACKLISTED_OPERATIONS) . ') THEN 1 ELSE 0 END) = 0)
 
             ORDER BY urn
@@ -1343,31 +1272,6 @@ class EPSGCodegenFromDataImport
         $result = $this->sqlite->query($sql);
         $data = [];
         while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-            if ($row['type'] === 'concatenated operation') {
-                unset($row['method']);
-                $row['operations'] = [];
-                $operationsSql = "
-                    SELECT
-                        'urn:ogc:def:coordinateOperation:EPSG::' || p.concat_operation_code AS concat_code,
-                        'urn:ogc:def:coordinateOperation:EPSG::' || p.single_operation_code AS single_code,
-                        'urn:ogc:def:crs:EPSG::' || o.source_crs_code AS source_crs,
-                        'urn:ogc:def:crs:EPSG::' || o.target_crs_code AS target_crs
-                    FROM epsg_coordoperationpath p
-                    JOIN epsg_coordoperation o ON p.single_operation_code = o.coord_op_code
-                    WHERE concat_code = '{$row['urn']}'
-                    ORDER BY p.op_path_step
-                    ";
-
-                $operationsResult = $this->sqlite->query($operationsSql);
-                while ($operationsRow = $operationsResult->fetchArray(SQLITE3_ASSOC)) {
-                    $row['operations'][] = [
-                        'operation' => $operationsRow['single_code'],
-                        'source_crs' => $operationsRow['source_crs'],
-                        'target_crs' => $operationsRow['target_crs'],
-                    ];
-                }
-            }
-
             $row['extent_code'] = array_values(array_unique(explode(',', $row['extent_code'])));
             $data[$row['urn']] = $row;
             unset($data[$row['urn']]['urn']);

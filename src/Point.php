@@ -10,7 +10,6 @@ namespace PHPCoord;
 
 use function abs;
 use function acos;
-use function array_reverse;
 use function array_values;
 use function asin;
 use function atan;
@@ -20,7 +19,6 @@ use DateTimeImmutable;
 use function lcfirst;
 use const M_PI;
 use const PHP_MAJOR_VERSION;
-use PHPCoord\CoordinateOperation\ConvertiblePoint;
 use PHPCoord\CoordinateOperation\CoordinateOperationMethods;
 use PHPCoord\CoordinateOperation\CoordinateOperationParams;
 use PHPCoord\CoordinateOperation\CoordinateOperations;
@@ -67,41 +65,21 @@ abstract class Point implements Stringable
      */
     public function performOperation(string $srid, CoordinateReferenceSystem $to, bool $inReverse, array $additionalParams = []): self
     {
-        $operations = self::resolveConcatenatedOperations($srid, $inReverse);
-
         $point = $this;
-        foreach ($operations as $operationSrid => $operation) {
-            $method = CoordinateOperationMethods::getFunctionName($operation['method']);
-            if (isset($operation['source_crs'])) {
-                $sourceCRS = $inReverse ? $operation['target_crs'] : $operation['source_crs'];
-                $destCRS = CoordinateReferenceSystem::fromSRID($inReverse ? $operation['source_crs'] : $operation['target_crs']);
 
-                // occasionally the CRS domain switches part way through the sequence (e.g. NAD86 geog to NAD86 geocen)
-                if ($point instanceof ConvertiblePoint && $point->getCRS()->getSRID() !== $sourceCRS) {
-                    $point = $point->convert(CoordinateReferenceSystem::fromSRID($sourceCRS), true);
-                }
-            } else {
-                $destCRS = $to;
-            }
+        $operation = CoordinateOperations::getOperationData($srid);
+        $method = CoordinateOperationMethods::getFunctionName($operation['method']);
+        $params = self::resolveParamsByOperation($srid, $operation['method'], $inReverse);
 
-            $params = self::resolveParamsByOperation($operationSrid, $operation['method'], $inReverse);
-
-            if (isset(self::METHODS_REQUIRING_HORIZONTAL_POINT[$operation['method']])) {
-                $params['horizontalPoint'] = $additionalParams['horizontalPoint'];
-            }
-
-            if (PHP_MAJOR_VERSION >= 8) {
-                $point = $point->$method($destCRS, ...$params);
-            } else {
-                $point = $point->$method($destCRS, ...array_values($params));
-            }
+        if (isset(self::METHODS_REQUIRING_HORIZONTAL_POINT[$operation['method']])) {
+            $params['horizontalPoint'] = $additionalParams['horizontalPoint'];
         }
 
-        // some operations are reused across CRSses (e.g. ETRS89 and WGS84), so the $destCRS of the final suboperation might not be the intended target
-        if ($point instanceof ConvertiblePoint && !$point->getCRS() instanceof $to) {// occasionally the CRS domain switches part way through the sequence (e.g. NAD86 geog to NAD86 geocen)
-            $point = $point->convert($to, true);
+        if (PHP_MAJOR_VERSION >= 8) {
+            $point = $point->$method($to, ...$params);
+        } else {
+            $point = $point->$method($to, ...array_values($params));
         }
-        $point->crs = $to;
 
         return $point;
     }
@@ -117,28 +95,6 @@ abstract class Point implements Stringable
         }
 
         return $string;
-    }
-
-    protected static function resolveConcatenatedOperations(string $operationSrid, bool $inReverse): array
-    {
-        $operations = [];
-        $operation = CoordinateOperations::getOperationData($operationSrid);
-        if (isset($operation['operations'])) {
-            foreach ($operation['operations'] as $subOperation) {
-                $subOperationData = CoordinateOperations::getOperationData($subOperation['operation']);
-                $subOperationData['source_crs'] = $subOperation['source_crs'];
-                $subOperationData['target_crs'] = $subOperation['target_crs'];
-                $operations[$subOperation['operation']] = $subOperationData;
-            }
-        } else {
-            $operations[$operationSrid] = $operation;
-        }
-
-        if ($inReverse) {
-            $operations = array_reverse($operations, true);
-        }
-
-        return $operations;
     }
 
     protected static function resolveParamsByOperation(string $operationSrid, string $methodSrid, bool $inReverse): array
