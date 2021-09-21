@@ -1826,7 +1826,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         Length $falseNorthing
     ): ProjectedPoint {
         $W = $zoneWidth->asDegrees()->getValue();
-        $Z = ($this->longitude->subtract($initialLongitude)->asDegrees()->getValue() / $W) % (360 / $W) + 1;
+        $Z = (int) ($this->longitude->subtract($initialLongitude)->asDegrees()->getValue() / $W) % (int) (360 / $W) + 1;
 
         $longitudeOrigin = $initialLongitude->add(new Degree($Z * $W - $W / 2));
         $falseEasting = $falseEasting->add(new Metre($Z * 1000000));
@@ -2206,7 +2206,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $scaleFactorAtNaturalOrigin = new Unity(0.9996);
         $falseEasting = new Metre(500000);
         $falseNorthing = $hemisphere === UTMPoint::HEMISPHERE_NORTH ? new Metre(0) : new Metre(10000000);
-        $Z = ($this->longitude->subtract($initialLongitude)->asDegrees()->getValue() / 6) % (360 / 6) + 1;
+        $Z = (int) ($this->longitude->subtract($initialLongitude)->asDegrees()->getValue() / 6) % (360 / 6) + 1;
         $longitudeOrigin = $initialLongitude->add(new Degree($Z * 6 - 3));
 
         $projectedCRS = new Projected(
