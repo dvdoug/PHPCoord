@@ -17,7 +17,6 @@ use function atan;
 use function atan2;
 use function cos;
 use DateTimeImmutable;
-use function in_array;
 use function lcfirst;
 use const M_PI;
 use const PHP_MAJOR_VERSION;
@@ -50,6 +49,18 @@ abstract class Point implements Stringable
 {
     protected const ITERATION_CONVERGENCE_FORMULA = 1e-10;
     protected const ITERATION_CONVERGENCE_GRID = 0.0001;
+    protected const METHODS_REQUIRING_HORIZONTAL_POINT = [
+        CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_AND_SLOPE => CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_AND_SLOPE,
+        CoordinateOperationMethods::EPSG_ZERO_TIDE_HEIGHT_TO_MEAN_TIDE_HEIGHT_EVRF2019 => CoordinateOperationMethods::EPSG_ZERO_TIDE_HEIGHT_TO_MEAN_TIDE_HEIGHT_EVRF2019,
+    ];
+    protected const METHODS_THAT_REQUIRE_DIRECTION = [
+        CoordinateOperationMethods::EPSG_SIMILARITY_TRANSFORMATION => CoordinateOperationMethods::EPSG_SIMILARITY_TRANSFORMATION,
+        CoordinateOperationMethods::EPSG_AFFINE_PARAMETRIC_TRANSFORMATION => CoordinateOperationMethods::EPSG_AFFINE_PARAMETRIC_TRANSFORMATION,
+        CoordinateOperationMethods::EPSG_NADCON5_2D => CoordinateOperationMethods::EPSG_NADCON5_2D,
+        CoordinateOperationMethods::EPSG_NADCON5_3D => CoordinateOperationMethods::EPSG_NADCON5_3D,
+        CoordinateOperationMethods::EPSG_NTV2 => CoordinateOperationMethods::EPSG_NTV2,
+        CoordinateOperationMethods::EPSG_ZERO_TIDE_HEIGHT_TO_MEAN_TIDE_HEIGHT_EVRF2019 => CoordinateOperationMethods::EPSG_ZERO_TIDE_HEIGHT_TO_MEAN_TIDE_HEIGHT_EVRF2019,
+    ];
 
     /**
      * @internal
@@ -75,7 +86,7 @@ abstract class Point implements Stringable
 
             $params = self::resolveParamsByOperation($operationSrid, $operation['method'], $inReverse);
 
-            if (in_array($operation['method'], [CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_AND_SLOPE, CoordinateOperationMethods::EPSG_ZERO_TIDE_HEIGHT_TO_MEAN_TIDE_HEIGHT_EVRF2019], true)) {
+            if (isset(self::METHODS_REQUIRING_HORIZONTAL_POINT[$operation['method']])) {
                 $params['horizontalPoint'] = $additionalParams['horizontalPoint'];
             }
 
@@ -156,14 +167,7 @@ abstract class Point implements Stringable
         if ($powerCoefficients) {
             $params['powerCoefficients'] = $powerCoefficients;
         }
-        if (in_array($methodSrid, [
-            CoordinateOperationMethods::EPSG_SIMILARITY_TRANSFORMATION,
-            CoordinateOperationMethods::EPSG_AFFINE_PARAMETRIC_TRANSFORMATION,
-            CoordinateOperationMethods::EPSG_NADCON5_2D,
-            CoordinateOperationMethods::EPSG_NADCON5_3D,
-            CoordinateOperationMethods::EPSG_NTV2,
-            CoordinateOperationMethods::EPSG_ZERO_TIDE_HEIGHT_TO_MEAN_TIDE_HEIGHT_EVRF2019,
-        ], true)) {
+        if (isset(self::METHODS_THAT_REQUIRE_DIRECTION[$methodSrid])) {
             $params['inReverse'] = $inReverse;
         }
 
