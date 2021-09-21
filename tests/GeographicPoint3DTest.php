@@ -8,7 +8,6 @@ declare(strict_types=1);
 
 namespace PHPCoord;
 
-use function array_merge;
 use function class_exists;
 use DateTime;
 use PHPCoord\CoordinateOperation\CoordinateOperationMethods;
@@ -65,15 +64,8 @@ class GeographicPoint3DTest extends TestCase
     public function testOperations(string $sourceCrsSrid, string $targetCrsSrid, string $operationSrid, bool $reversible): void
     {
         $operation = CoordinateOperations::getOperationData($operationSrid);
-        $extents = [];
-        foreach ($operation['extent_code'] as $extentId) {
-            $fullExtent = "PHPCoord\\Geometry\\Extents\\Extent{$extentId}";
-            $basicExtent = "PHPCoord\\Geometry\\Extents\\BoundingBoxOnly\\Extent{$extentId}";
-            $extentClass = class_exists($fullExtent) ? new $fullExtent() : new $basicExtent();
-            $extents = array_merge($extents, $extentClass());
-        }
-        $boundingBox = BoundingArea::createFromArray($extents);
-        $centre = $boundingBox->getPointInside();
+        $operationExtent = BoundingArea::createFromExtentCodes(CoordinateOperations::getOperationData($operationSrid)['extent_code']);
+        $centre = $operationExtent->getPointInside();
 
         $sourceCRS = Geographic::fromSRID($sourceCrsSrid);
         $sourceHeight = $sourceCRS instanceof Geographic3D ? new Metre(0) : null;

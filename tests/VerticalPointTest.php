@@ -18,6 +18,7 @@ use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Vertical;
 use PHPCoord\CoordinateReferenceSystem\VerticalSRIDData;
+use PHPCoord\Geometry\BoundingArea;
 use PHPCoord\UnitOfMeasure\Angle\Radian;
 use PHPCoord\UnitOfMeasure\Length\Foot;
 use PHPCoord\UnitOfMeasure\Length\Metre;
@@ -132,11 +133,12 @@ class VerticalPointTest extends TestCase
     {
         $sourceCRS = Vertical::fromSRID($sourceCrsSrid);
         $targetCRS = CoordinateReferenceSystem::fromSRID($targetCrsSrid);
+        $operationExtent = BoundingArea::createFromExtentCodes(CoordinateOperations::getOperationData($operationSrid)['extent_code']);
 
         $epoch = new DateTime();
 
         $originalPoint = VerticalPoint::create(new Metre(0), $sourceCRS, $epoch);
-        $horizontalCentre = $sourceCRS->getBoundingArea()->getPointInside();
+        $horizontalCentre = $operationExtent->getPointInside();
         $horizontalPoint = GeographicPoint::create($horizontalCentre[0], $horizontalCentre[1], null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
 
         $newPoint = $originalPoint->performOperation($operationSrid, $targetCRS, false, ['horizontalPoint' => $horizontalPoint]);

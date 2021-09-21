@@ -8,7 +8,6 @@ declare(strict_types=1);
 
 namespace PHPCoord;
 
-use function array_merge;
 use function class_exists;
 use DateTime;
 use DateTimeImmutable;
@@ -145,19 +144,13 @@ class CompoundPointTest extends TestCase
     public function testOperations(string $sourceCrsSrid, string $targetCrsSrid, string $operationSrid, bool $reversible): void
     {
         $operation = CoordinateOperations::getOperationData($operationSrid);
-        $extents = [];
-        foreach ($operation['extent_code'] as $extentId) {
-            $fullExtent = "PHPCoord\\Geometry\\Extents\\Extent{$extentId}";
-            $basicExtent = "PHPCoord\\Geometry\\Extents\\BoundingBoxOnly\\Extent{$extentId}";
-            $extentClass = class_exists($fullExtent) ? new $fullExtent() : new $basicExtent();
-            $extents = array_merge($extents, $extentClass());
-        }
-        $boundingBox = BoundingArea::createFromArray($extents);
+        $operationExtent = BoundingArea::createFromExtentCodes(CoordinateOperations::getOperationData($operationSrid)['extent_code']);
 
         $sourceCRS = Compound::fromSRID($sourceCrsSrid);
         $sourceHorizontalCRS = $sourceCRS->getHorizontal();
         if ($sourceHorizontalCRS instanceof Geographic2D) {
-            $centre = $boundingBox->getPointInside();
+            $centre = $operationExtent->getPointInside();
+            $centre[1] = $centre[1]->subtract($sourceCRS->getHorizontal()->getDatum()->getPrimeMeridian()->getGreenwichLongitude()); //compensate for non-Greenwich prime meridian
 
             $horizontalPoint = GeographicPoint::create($centre[0], $centre[1], null, $sourceHorizontalCRS);
         } elseif ($sourceHorizontalCRS instanceof Geographic2D) {
