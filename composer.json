@@ -28,7 +28,7 @@
         "php-coord/datapack-northamerica": "dev-master",
         "php-coord/datapack-oceania": "dev-master",
         "php-coord/datapack-southamerica": "dev-master",
-        "phpunit/phpunit": "^9.5.0"
+        "phpunit/phpunit": "^9.5.10"
     },
     "suggest": {
         "php-coord/datapack-africa": "High-accuracy addon datapack for Africa",
