@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\Geometry;
 
 use function array_merge;
+use function array_push;
 use function class_exists;
 use function count;
 use function implode;
@@ -69,17 +70,20 @@ class BoundingArea
      */
     public static function createFromExtentCodes(array $extentCodes): self
     {
-        $cacheKey = implode('', $extentCodes);
+        $cacheKey = implode('|', $extentCodes);
         if (!isset(self::$cachedObjects[$cacheKey])) {
             $extents = [];
             foreach ($extentCodes as $extentCode) {
                 $fullExtent = "PHPCoord\\Geometry\\Extents\\Extent{$extentCode}";
                 $basicExtent = "PHPCoord\\Geometry\\Extents\\BoundingBoxOnly\\Extent{$extentCode}";
                 $extentClass = class_exists($fullExtent) ? new $fullExtent() : new $basicExtent();
-                $extents = array_merge($extents, $extentClass());
+                array_push($extents, ...$extentClass());
             }
 
-            self::$cachedObjects[$cacheKey] = self::createFromArray($extents);
+            $extentData = self::createFromArray($extents);
+            $extentData->addBuffer();
+
+            self::$cachedObjects[$cacheKey] = $extentData;
         }
 
         return self::$cachedObjects[$cacheKey];
@@ -116,29 +120,8 @@ class BoundingArea
          */
         foreach ($pointsToCheck as $pointToCheck) {
             [$x, $y] = $pointToCheck;
-            foreach ($this->vertices as $polygonId => $polygon) {
-                $centre = $this->getCentre($polygonId);
-                $centreX = $centre[1]->asDegrees()->getValue();
-                $centreY = $centre[0]->asDegrees()->getValue();
-                $vertices = [];
-                foreach ($polygon as $ringId => $ring) {
-                    if ($ringId === 0 && count($ring) > self::BUFFER_THRESHOLD) {
-                        foreach ($ring as $vertexId => $vertex) {
-                            if ($vertex[0] > $centreX) {
-                                $ring[$vertexId][0] += self::BUFFER_SIZE;
-                            } elseif ($vertex[0] < $centreX) {
-                                $ring[$vertexId][0] -= self::BUFFER_SIZE;
-                            }
-
-                            if ($vertex[1] > $centreY) {
-                                $ring[$vertexId][1] += self::BUFFER_SIZE;
-                            } elseif ($vertex[1] < $centreY) {
-                                $ring[$vertexId][1] -= self::BUFFER_SIZE;
-                            }
-                        }
-                    }
-                    $vertices = array_merge($vertices, $ring);
-                }
+            foreach ($this->vertices as $polygon) {
+                $vertices = array_merge(...$polygon);
 
                 $n = count($vertices);
                 $inside = false;
@@ -206,5 +189,34 @@ class BoundingArea
         $longitude = new Degree($longitude / 6 / $area);
 
         return [$latitude, $longitude];
+    }
+
+    /**
+     * @internal
+     */
+    private function addBuffer(): void
+    {
+        foreach ($this->vertices as $polygonId => $polygon) {
+            $centre = $this->getCentre($polygonId);
+            $centreX = $centre[1]->asDegrees()->getValue();
+            $centreY = $centre[0]->asDegrees()->getValue();
+            foreach ($polygon as $ringId => $ring) {
+                if ($ringId === 0 && count($ring) > self::BUFFER_THRESHOLD) {
+                    foreach ($ring as $vertexId => $vertex) {
+                        if ($vertex[0] > $centreX) {
+                            $this->vertices[$polygonId][$ringId][$vertexId][0] += self::BUFFER_SIZE;
+                        } elseif ($vertex[0] < $centreX) {
+                            $this->vertices[$polygonId][$ringId][$vertexId][0] -= self::BUFFER_SIZE;
+                        }
+
+                        if ($vertex[1] > $centreY) {
+                            $this->vertices[$polygonId][$ringId][$vertexId][1] += self::BUFFER_SIZE;
+                        } elseif ($vertex[1] < $centreY) {
+                            $this->vertices[$polygonId][$ringId][$vertexId][1] -= self::BUFFER_SIZE;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
