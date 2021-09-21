@@ -10,14 +10,15 @@ namespace PHPCoord\CoordinateOperation;
 
 use function abs;
 use function array_column;
+use function array_filter;
 use function array_merge;
-use function array_pop;
 use function array_shift;
 use function array_sum;
 use function assert;
 use function class_exists;
 use function count;
 use DateTimeImmutable;
+use function end;
 use function in_array;
 use PHPCoord\CompoundPoint;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
@@ -185,18 +186,39 @@ trait AutoConversion
      */
     protected function buildIndirectTransformationPathsToCRS(CoordinateReferenceSystem $source, CoordinateReferenceSystem $target): array
     {
-        $cacheKey = $source->getSRID() . '|' . $target->getSRID();
+        $sourceSRID = $source->getSRID();
+        $targetSRID = $target->getSRID();
+        if (!isset(static::$transformationsByCRS[$sourceSRID])) {
+            return [];
+        }
+
+        $cacheKey = $sourceSRID . '|' . $targetSRID;
         if (!isset(self::$indirectTransformationPathCache[$cacheKey])) {
-            $simplePaths = [];
-            $visited = [];
-            foreach (CoordinateReferenceSystem::getSupportedSRIDs() as $crs => $name) {
-                $visited[$crs] = false;
+            $simplePaths = [[$sourceSRID]];
+
+            $iterations = 0;
+            while ($iterations < $this->maxChainDepth) {
+                foreach ($simplePaths as $key => $simplePath) {
+                    $current = end($simplePath);
+                    if ($current !== $targetSRID && isset(static::$transformationsByCRS[$current])) {
+                        foreach (static::$transformationsByCRS[$current] as $next) {
+                            if (!in_array($next, $simplePath, true)) {
+                                $simplePaths[] = array_merge($simplePath, [$next]);
+                            }
+                        }
+                        unset($simplePaths[$key]);
+                    }
+                }
+                ++$iterations;
             }
-            $currentPath = [];
-            $this->DFS($source->getSRID(), $target->getSRID(), $visited, $currentPath, $simplePaths);
+
+            // Filter out any incomplete chains didn't make it to the target
+            $simplePaths = array_filter($simplePaths, static function (array $simplePath) use ($targetSRID) {
+                return end($simplePath) === $targetSRID;
+            });
 
             // Then expand each CRS->CRS permutation with the various ways of achieving that (can be lots :/)
-            $fullPaths = $this->expandSimplePaths($simplePaths, $source->getSRID(), $target->getSRID());
+            $fullPaths = $this->expandSimplePaths($simplePaths, $sourceSRID, $targetSRID);
 
             $paths = [];
             foreach ($fullPaths as $fullPath) {
@@ -207,26 +229,6 @@ trait AutoConversion
         }
 
         return self::$indirectTransformationPathCache[$cacheKey];
-    }
-
-    protected function DFS(string $u, string $v, array &$visited, array &$currentPath, array &$simplePaths): void
-    {
-        $currentPath[] = $u;
-        if ($u === $v) {
-            $simplePaths[] = $currentPath;
-        } else {
-            $visited[$u] = true;
-            if (count($currentPath) <= $this->maxChainDepth && isset(static::$transformationsByCRS[$u])) {
-                foreach (static::$transformationsByCRS[$u] as $nextU) {
-                    if (!$visited[$nextU]) {
-                        $this->DFS($nextU, $v, $visited, $currentPath, $simplePaths);
-                    }
-                }
-            }
-        }
-
-        array_pop($currentPath);
-        $visited[$u] = false;
     }
 
     protected function expandSimplePaths(array $simplePaths, string $fromSRID, string $toSRID): array
