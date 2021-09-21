@@ -21,6 +21,7 @@ use function implode;
 use function in_array;
 use function json_decode;
 use const JSON_THROW_ON_ERROR;
+use function lcfirst;
 use function max;
 use function min;
 use const PHP_EOL;
@@ -42,10 +43,13 @@ use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Rate;
 use PHPCoord\UnitOfMeasure\Scale\Scale;
 use PHPCoord\UnitOfMeasure\Time\Time;
+use function preg_match;
 use function sleep;
 use SQLite3;
 use const SQLITE3_ASSOC;
 use const SQLITE3_OPEN_READONLY;
+use function str_replace;
+use function ucwords;
 
 class EPSGCodegenFromDataImport
 {
@@ -1394,6 +1398,7 @@ class EPSGCodegenFromDataImport
             $paramsResult = $this->sqlite->query($paramsSql);
             while ($paramsRow = $paramsResult->fetchArray(SQLITE3_ASSOC)) {
                 unset($paramsRow['operation_code']);
+                $paramsRow['name'] = self::camelCase($paramsRow['name']);
                 $paramsRow['reverses'] = (bool) $paramsRow['reverses'];
                 if (in_array($paramsRow['parameter_code'], [8659, 8660, 1037, 1048, 8661, 8662], true)) {
                     $paramsRow['value'] = 'urn:ogc:def:crs:EPSG::' . $paramsRow['value'];
@@ -1403,14 +1408,14 @@ class EPSGCodegenFromDataImport
                     in_array(
                         $paramsRow['name'],
                         [
-                            'Easting and northing difference file',
-                            'Geoid (height correction) model file',
-                            'Latitude difference file',
-                            'Longitude difference file',
-                            'Ellipsoidal height difference file',
-                            'Latitude and longitude difference file',
-                            'Geocentric translation file',
-                            'Vertical offset file',
+                            'eastingAndNorthingDifferenceFile',
+                            'geoidHeightCorrectionModelFile',
+                            'latitudeDifferenceFile',
+                            'longitudeDifferenceFile',
+                            'ellipsoidalHeightDifferenceFile',
+                            'latitudeAndLongitudeDifferenceFile',
+                            'geocentricTranslationFile',
+                            'verticalOffsetFile',
                         ],
                         true
                     )
@@ -1423,7 +1428,7 @@ class EPSGCodegenFromDataImport
                 unset($params[$paramsRow['name']]['name']);
             }
             if (isset($operationData['method']) && $operationData['method'] === CoordinateOperationMethods::EPSG_NADCON5_2D) {
-                $params['Ellipsoidal height difference file'] = ['value' => null, 'uom' => null, 'reverses' => false];
+                $params['ellipsoidalHeightDifferenceFile'] = ['value' => null, 'uom' => null, 'reverses' => false];
             }
             $paramData[$operation] = $params;
         }
@@ -1579,5 +1584,15 @@ class EPSGCodegenFromDataImport
         }
 
         echo 'done' . PHP_EOL;
+    }
+
+    protected static function camelCase(string $string): string
+    {
+        $string = str_replace([' ', '-', '(', ')'], '', ucwords($string, ' -()'));
+        if (!preg_match('/^(EPSG|[ABC][uv\d])/', $string)) {
+            $string = lcfirst($string);
+        }
+
+        return $string;
     }
 }

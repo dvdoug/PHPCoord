@@ -26,7 +26,6 @@ use PHPCoord\CoordinateOperation\CoordinateOperationMethods;
 use PHPCoord\CoordinateOperation\CoordinateOperationParams;
 use PHPCoord\CoordinateOperation\CoordinateOperations;
 use PHPCoord\CoordinateOperation\GeographicValue;
-use PHPCoord\CoordinateOperation\GridProvider;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\CoordinateSystem\Axis;
 use PHPCoord\Datum\Ellipsoid;
@@ -42,6 +41,7 @@ use function sin;
 use function sqrt;
 use function sscanf;
 use function str_replace;
+use function str_starts_with;
 use Stringable;
 use function tan;
 use function ucwords;
@@ -95,6 +95,9 @@ abstract class Point implements Stringable
         return $point;
     }
 
+    /**
+     * @deprecated
+     */
     protected static function camelCase(string $string): string
     {
         $string = str_replace([' ', '-', '(', ')'], '', ucwords($string, ' -()'));
@@ -133,22 +136,17 @@ abstract class Point implements Stringable
         $powerCoefficients = [];
         foreach (CoordinateOperationParams::getParamData($operationSrid) as $paramName => $paramData) {
             if (isset($paramData['fileProvider'])) {
-                $paramName = static::camelCase($paramName);
-                /** @var GridProvider $provider */
-                $provider = new $paramData['fileProvider']();
-                $params[$paramName] = $provider->provideGrid();
+                $params[$paramName] = (new $paramData['fileProvider']())->provideGrid();
             } else {
-                $value = $paramData['value'];
                 if ($inReverse && $paramData['reverses']) {
-                    $value *= -1;
+                    $paramData['value'] *= -1;
                 }
                 if ($paramData['uom']) {
-                    $param = UnitOfMeasureFactory::makeUnit($value, $paramData['uom']);
+                    $param = UnitOfMeasureFactory::makeUnit($paramData['value'], $paramData['uom']);
                 } else {
                     $param = $paramData['value'];
                 }
-                $paramName = static::camelCase($paramName);
-                if (preg_match('/^(Au|Bu)/', $paramName)) {
+                if (str_starts_with($paramName, 'Au') || str_starts_with($paramName, 'Bu')) {
                     $powerCoefficients[$paramName] = $param;
                 } else {
                     $params[$paramName] = $param;

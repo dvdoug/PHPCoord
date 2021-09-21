@@ -126,7 +126,7 @@ trait AutoConversion
                         CoordinateOperationMethods::EPSG_TIME_SPECIFIC_POSITION_VECTOR_TRANSFORM_GEOCEN,
                     ], true)) {
                     $pointEpoch = Year::fromDateTime($this->getCoordinateEpoch());
-                    if (!(abs($pointEpoch->getValue() - $params['Transformation reference epoch']['value']) <= 0.001)) {
+                    if (!(abs($pointEpoch->getValue() - $params['transformationReferenceEpoch']['value']) <= 0.001)) {
                         return false;
                     }
                 }

@@ -364,7 +364,7 @@ class GeocentricPointTest extends TestCase
         $epoch = new DateTime();
         if (isset($operation['method']) && in_array($operation['method'], [CoordinateOperationMethods::EPSG_TIME_SPECIFIC_COORDINATE_FRAME_ROTATION_GEOCEN, CoordinateOperationMethods::EPSG_TIME_SPECIFIC_POSITION_VECTOR_TRANSFORM_GEOCEN], true)) {
             $params = CoordinateOperationParams::getParamData($operationSrid);
-            $epoch = (new Year($params['Transformation reference epoch']['value']))->asDateTime();
+            $epoch = (new Year($params['transformationReferenceEpoch']['value']))->asDateTime();
         }
 
         $originalPoint = GeocentricPoint::create($centre->getX(), $centre->getY(), $centre->getZ(), $sourceCRS, $epoch);
