@@ -19,6 +19,4 @@ require __DIR__ . '/../../../vendor/autoload.php';
 $importer = new EPSGImporter();
 echo '--CREATING SQLITE DB--' . PHP_EOL;
 $importer->createSQLiteDB();
-echo '--PERFORMING CODEGEN--' . PHP_EOL;
-$importer->doCodeGeneration();
 echo '--IMPORT COMPLETE--' . PHP_EOL;
