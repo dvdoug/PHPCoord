@@ -3508,4 +3508,6 @@ return [
     4620 => EPSGCodegenFromGeoRepository::REGION_EUROPE,
     4621 => EPSGCodegenFromGeoRepository::REGION_EUROPE,
     4622 => EPSGCodegenFromGeoRepository::REGION_EUROPE,
+    4653 => EPSGCodegenFromGeoRepository::REGION_OCEANIA,
+    4654 => EPSGCodegenFromGeoRepository::REGION_OCEANIA,
 ];

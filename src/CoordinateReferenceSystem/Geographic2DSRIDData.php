@@ -3191,6 +3191,12 @@ trait Geographic2DSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1308',
             'extent_code' => ['4620'],
         ],
+        'urn:ogc:def:crs:EPSG::9755' => [
+            'name' => 'WGS 84 (G2139)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
+            'datum' => 'urn:ogc:def:datum:EPSG::1309',
+            'extent_code' => ['1262'],
+        ],
         'urn:ogc:def:crs:EPSG::9758' => [
             'name' => 'ECML14_NB-IRF',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',

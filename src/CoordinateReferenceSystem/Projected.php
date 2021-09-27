@@ -27673,6 +27673,18 @@ class Projected extends CoordinateReferenceSystem
     public const EPSG_PNG94_PNGMG94_ZONE_56 = 'urn:ogc:def:crs:EPSG::5552';
 
     /**
+     * PNG94 / PNGMG94 zone 57
+     * Extent: Papua New Guinea - between 156°E and 162°E, onshore and offshore.
+     */
+    public const EPSG_PNG94_PNGMG94_ZONE_57 = 'urn:ogc:def:crs:EPSG::9874';
+
+    /**
+     * PNG94 / PNGMG94 zone 58
+     * Extent: Papua New Guinea - east of 162°E to EEZ limit.
+     */
+    public const EPSG_PNG94_PNGMG94_ZONE_58 = 'urn:ogc:def:crs:EPSG::9875';
+
+    /**
      * POSGAR 2007 / Argentina 1
      * Extent: Argentina - west of 70°30'W.
      * Adopted as official replacement of POSGAR 94 / Argentina 1 in May 2009.   Also replaces de facto use of POSGAR

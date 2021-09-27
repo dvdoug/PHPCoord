@@ -1193,6 +1193,12 @@ trait Geographic3DSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1305',
             'extent_code' => ['1192'],
         ],
+        'urn:ogc:def:crs:EPSG::9754' => [
+            'name' => 'WGS 84 (G2139)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6423',
+            'datum' => 'urn:ogc:def:datum:EPSG::1309',
+            'extent_code' => ['1262'],
+        ],
         'urn:ogc:def:crs:EPSG::9776' => [
             'name' => 'RGF93 v2',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6423',

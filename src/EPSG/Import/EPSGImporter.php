@@ -60,15 +60,11 @@ class EPSGImporter
         $sqlite->exec('UPDATE epsg_coordinateaxis SET uom_code = 9102 WHERE uom_code = 9122'); // supplier-defined degrees to regular degrees
         $sqlite->exec('UPDATE epsg_coordinatereferencesystem SET base_crs_code = 8817 WHERE coord_ref_sys_code = 8818');
         $sqlite->exec('UPDATE epsg_coordinatereferencesystem SET base_crs_code = 9695 WHERE coord_ref_sys_code = 9696');
-        $sqlite->exec('UPDATE epsg_coordinatereferencesystem SET projection_conv_code = 15593 WHERE coord_ref_sys_code = 9057');
         $sqlite->exec('UPDATE epsg_coordinatereferencesystem SET projection_conv_code = 15593 WHERE coord_ref_sys_code = 9066');
-        $sqlite->exec('UPDATE epsg_coordinatereferencesystem SET projection_conv_code = NULL WHERE coord_ref_sys_code = 4203');
-        $sqlite->exec('UPDATE epsg_coordinatereferencesystem SET projection_conv_code = NULL WHERE coord_ref_sys_code = 4277');
-        $sqlite->exec('UPDATE epsg_coordinatereferencesystem SET projection_conv_code = NULL WHERE coord_ref_sys_code = 4728');
-        $sqlite->exec('UPDATE epsg_extent SET deprecated = 1 WHERE extent_code IN (1263, 4205, 4393)');
         $sqlite->exec("UPDATE epsg_coordoperationparamvalue SET param_value_file_ref = 'nadcon5.nad83_2007.nad83_2011.prvi.eht.trn.20160901.b' WHERE param_value_file_ref = 'nadcon5.nad83_2007.nad83_2011.prvi.eht.trn.20160901.b01.b'");
         $sqlite->exec("UPDATE epsg_coordoperationparamvalue SET param_value_file_ref = 'NLCSRSV4A.GSB' WHERE param_value_file_ref = 'NLCSRSV4A.GSB '");
         $sqlite->exec('UPDATE epsg_coordoperation SET deprecated = 1 WHERE coord_op_code IN (1851, 9235, 15933)');
+        $sqlite->exec("UPDATE epsg_usage SET extent_code = 3299 WHERE object_table_name = 'epsg_coordoperation' AND object_code = 9228");
 
         $sqlite->exec('VACUUM');
         $sqlite->close();

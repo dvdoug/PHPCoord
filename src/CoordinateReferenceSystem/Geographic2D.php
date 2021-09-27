@@ -3877,9 +3877,17 @@ class Geographic2D extends Geographic
     /**
      * WGS 84 (G1762)
      * Extent: World.
-     * Replaces WGS 84 (G1674) (CRS code 9056) from 2013-10-16.
+     * Replaces WGS 84 (G1674) (CRS code 9056) from 2013-10-16. Redesignated WGS 84 (G1762') in 2015 after changes to 7
+     * NGA tracking station locations and antennas. Replaced by WGS 84 (G2139) (CRS code 9755) from 2021-01-03.
      */
     public const EPSG_WGS_84_G1762 = 'urn:ogc:def:crs:EPSG::9057';
+
+    /**
+     * WGS 84 (G2139)
+     * Extent: World.
+     * Replaces WGS 84 (G1762) (CRS code 9057) from 2021-01-03.
+     */
+    public const EPSG_WGS_84_G2139 = 'urn:ogc:def:crs:EPSG::9755';
 
     /**
      * WGS 84 (G730)

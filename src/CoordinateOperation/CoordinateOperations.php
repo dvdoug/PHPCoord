@@ -10935,6 +10935,16 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9607',
             'extent_code' => ['1074'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9756' => [
+            'name' => 'WGS 84 (G1762) to WGS 84 (G2139) (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1032',
+            'extent_code' => ['1262'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9757' => [
+            'name' => 'WGS 84 (G2139) to ITRF2014 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1032',
+            'extent_code' => ['1262'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::9760' => [
             'name' => 'ECML14_NB-TM',
             'method' => 'urn:ogc:def:method:EPSG::9807',
@@ -11009,6 +11019,16 @@ class CoordinateOperations
             'name' => 'NAD83 to NAD83(CSRS)v7 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9615',
             'extent_code' => ['2376'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9872' => [
+            'name' => 'Papua New Guinea Map Grid 1994 zone 57',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['4653'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9873' => [
+            'name' => 'Papua New Guinea Map Grid 1994 zone 58',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['4654'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::10085' => [
             'name' => 'Trinidad 1903 to WGS 84 (2)',

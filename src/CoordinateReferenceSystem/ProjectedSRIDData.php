@@ -21089,6 +21089,18 @@ trait ProjectedSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1313',
             'extent_code' => ['3553'],
         ],
+        'urn:ogc:def:crs:EPSG::9874' => [
+            'name' => 'PNG94 / PNGMG94 zone 57',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::4400',
+            'datum' => 'urn:ogc:def:datum:EPSG::1076',
+            'extent_code' => ['4653'],
+        ],
+        'urn:ogc:def:crs:EPSG::9875' => [
+            'name' => 'PNG94 / PNGMG94 zone 58',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::4400',
+            'datum' => 'urn:ogc:def:datum:EPSG::1076',
+            'extent_code' => ['4654'],
+        ],
         'urn:ogc:def:crs:EPSG::20004' => [
             'name' => 'Pulkovo 1995 / Gauss-Kruger zone 4',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::4530',

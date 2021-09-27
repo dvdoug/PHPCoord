@@ -1,6 +1,9 @@
 # Changelog
 
 ## [Unreleased]
+### Changed
+- Updates to data for Papua New Guinea and WGS84
+
 
 ## [4.5.0] - 2021-09-25
 Unless a major bug is found, this will be the last release in the v4.x series. The next feature release will be v5.0.

@@ -61304,6 +61304,80 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9756' => [
+            'xAxisTranslation' => [
+                'value' => 0.0058,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => true,
+            ],
+            'yAxisTranslation' => [
+                'value' => -0.0064,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => true,
+            ],
+            'zAxisTranslation' => [
+                'value' => 0.007,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => true,
+            ],
+            'xAxisRotation' => [
+                'value' => 0.08,
+                'uom' => 'urn:ogc:def:uom:EPSG::1031',
+                'reverses' => true,
+            ],
+            'yAxisRotation' => [
+                'value' => 0.04,
+                'uom' => 'urn:ogc:def:uom:EPSG::1031',
+                'reverses' => true,
+            ],
+            'zAxisRotation' => [
+                'value' => 0.12,
+                'uom' => 'urn:ogc:def:uom:EPSG::1031',
+                'reverses' => true,
+            ],
+            'scaleDifference' => [
+                'value' => -4.4,
+                'uom' => 'urn:ogc:def:uom:EPSG::1028',
+                'reverses' => true,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9757' => [
+            'xAxisTranslation' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::1025',
+                'reverses' => true,
+            ],
+            'yAxisTranslation' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::1025',
+                'reverses' => true,
+            ],
+            'zAxisTranslation' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::1025',
+                'reverses' => true,
+            ],
+            'xAxisRotation' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::1031',
+                'reverses' => true,
+            ],
+            'yAxisRotation' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::1031',
+                'reverses' => true,
+            ],
+            'zAxisRotation' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::1031',
+                'reverses' => true,
+            ],
+            'scaleDifference' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::1028',
+                'reverses' => true,
+            ],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::9760' => [
             'latitudeOfNaturalOrigin' => [
                 'value' => 55.03,
@@ -61586,6 +61660,60 @@ class CoordinateOperationParams
             'latitudeAndLongitudeDifferenceFile' => [
                 'reverses' => true,
                 'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2NAD831986NAD83CSRS2010AlbertaProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9872' => [
+            'latitudeOfNaturalOrigin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'longitudeOfNaturalOrigin' => [
+                'value' => 159.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'scaleFactorAtNaturalOrigin' => [
+                'value' => 0.9996,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'falseEasting' => [
+                'value' => 500000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'falseNorthing' => [
+                'value' => 10000000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9873' => [
+            'latitudeOfNaturalOrigin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'longitudeOfNaturalOrigin' => [
+                'value' => 165.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'scaleFactorAtNaturalOrigin' => [
+                'value' => 0.9996,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'falseEasting' => [
+                'value' => 500000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'falseNorthing' => [
+                'value' => 10000000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
             ],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::10085' => [
@@ -78047,7 +78175,7 @@ class CoordinateOperationParams
                 'reverses' => false,
             ],
             'A1' => [
-                'value' => 1.00017216658401,
+                'value' => 1.000172166584,
                 'uom' => 'urn:ogc:def:uom:EPSG::9203',
                 'reverses' => false,
             ],
@@ -78067,7 +78195,7 @@ class CoordinateOperationParams
                 'reverses' => false,
             ],
             'B2' => [
-                'value' => 1.00017216658401,
+                'value' => 1.000172166584,
                 'uom' => 'urn:ogc:def:uom:EPSG::9203',
                 'reverses' => false,
             ],
@@ -78079,7 +78207,7 @@ class CoordinateOperationParams
                 'reverses' => false,
             ],
             'A1' => [
-                'value' => 1.00017432259949,
+                'value' => 1.0001743225995,
                 'uom' => 'urn:ogc:def:uom:EPSG::9203',
                 'reverses' => false,
             ],
@@ -78099,7 +78227,7 @@ class CoordinateOperationParams
                 'reverses' => false,
             ],
             'B2' => [
-                'value' => 1.00017432259949,
+                'value' => 1.0001743225995,
                 'uom' => 'urn:ogc:def:uom:EPSG::9203',
                 'reverses' => false,
             ],

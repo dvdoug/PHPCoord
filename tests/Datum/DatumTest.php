@@ -59,7 +59,7 @@ class DatumTest extends TestCase
     public function testGetLatestFromEnsemble(): void
     {
         $object = Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_ENSEMBLE);
-        self::assertEquals(Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_G1762), $object);
+        self::assertEquals(Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_G2139), $object);
     }
 
     public function testWithoutEllipsoid(): void

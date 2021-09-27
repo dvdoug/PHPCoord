@@ -46996,6 +46996,32 @@ PNG94 / PNGMG94 zone 56
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5552')
 
 
+PNG94 / PNGMG94 zone 57
+-----------------------
+
+| Used: Papua New Guinea - between 156°E and 162°E, onshore and offshore.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_PNG94_PNGMG94_ZONE_57)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9874')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_PNG94_PNGMG94_ZONE_57)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9874')
+
+
+PNG94 / PNGMG94 zone 58
+-----------------------
+
+| Used: Papua New Guinea - east of 162°E to EEZ limit.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_PNG94_PNGMG94_ZONE_58)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9875')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_PNG94_PNGMG94_ZONE_58)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9875')
+
+
 POSGAR 2007 / Argentina 1
 -------------------------
 

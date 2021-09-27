@@ -1145,6 +1145,12 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1305',
             'extent_code' => ['1192'],
         ],
+        'urn:ogc:def:crs:EPSG::9753' => [
+            'name' => 'WGS 84 (G2139)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1309',
+            'extent_code' => ['1262'],
+        ],
         'urn:ogc:def:crs:EPSG::9775' => [
             'name' => 'RGF93 v2',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',

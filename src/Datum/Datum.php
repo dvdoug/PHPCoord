@@ -7549,10 +7549,23 @@ class Datum
      * Type: dynamic geodetic
      * Extent: World.
      * Defined through coordinates of 19 GPS tracking stations adjusted to a subset of IGb08 stations at epoch 2005.0
-     * using observations made in May 2013. The IGb08 station coordinates are considered to be equivalent to ITRF2008.
-     * Replaces World Geodetic System 1984 (G1674) from 2013-10-16.
+     * using observations made in May 2013. The IGb08 coordinates are considered to be equivalent to ITRF2008.
+     * Replaces WGS 84 (G1674) from 2013-10-16. Frame was redesignated WGS 84 (G1762') after coordinates of 7 NGA
+     * tracking stations were changed following station moves and antenna updates 2014-08 to 2015-06. Replaced by WGS
+     * 84 (G2139) from 2021-01-03.
      */
     public const EPSG_WORLD_GEODETIC_SYSTEM_1984_G1762 = 'urn:ogc:def:datum:EPSG::1156';
+
+    /**
+     * World Geodetic System 1984 (G2139)
+     * Type: dynamic geodetic
+     * Extent: World.
+     * Defined through coordinates of 19 GPS tracking stations adjusted to a subset of IGb14 stations. The IGb14
+     * station coordinates are considered to be equivalent to ITRF2014.
+     * Replaces World Geodetic System 1984 (G1762) from 2021-01-03. Tracking station coordinate changes on 2021-03-28
+     * when NGA implemented IGS definition of antenna phase centre offset.
+     */
+    public const EPSG_WORLD_GEODETIC_SYSTEM_1984_G2139 = 'urn:ogc:def:datum:EPSG::1309';
 
     /**
      * World Geodetic System 1984 (G730)
@@ -7596,8 +7609,8 @@ class Datum
      * Extent: World.
      *
      * EPSG::6326 has been the then current realization. No distinction is made between the original and subsequent
-     * (G730, G873, G1150, G1674 and G1762) WGS 84 frames. Since 1997, WGS 84 has been maintained within 10cm of the
-     * then current ITRF.
+     * (G730, G873, G1150, G1674, G1762 and G2139) WGS 84 frames. Since 1997, WGS 84 has been maintained within 10cm of
+     * the then current ITRF.
      */
     public const EPSG_WORLD_GEODETIC_SYSTEM_1984_ENSEMBLE = 'urn:ogc:def:datum:EPSG::6326';
 
@@ -9922,6 +9935,14 @@ class Datum
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
+        ],
+        'urn:ogc:def:datum:EPSG::1309' => [
+            'name' => 'World Geodetic System 1984 (G2139)',
+            'type' => 'dynamic geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7030',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => 1024,
+            'frame_reference_epoch' => 2010.0,
         ],
         'urn:ogc:def:datum:EPSG::1310' => [
             'name' => 'ECML14_NB Intermediate Reference Frame',
@@ -12646,6 +12667,7 @@ class Datum
                 'urn:ogc:def:datum:EPSG::1154',
                 'urn:ogc:def:datum:EPSG::1155',
                 'urn:ogc:def:datum:EPSG::1156',
+                'urn:ogc:def:datum:EPSG::1309',
             ],
         ],
         'urn:ogc:def:datum:EPSG::6600' => [
