@@ -172,4 +172,7 @@ return [
     'AUSGeoid09_GDA94_V1.01_DOV_windows.gtx' => CoordinateOperation\GTXGDA94AHDProvider::class,
     'AUSGeoid2020_20180201.gtx' => CoordinateOperation\GTXGDA2020AHDProvider::class,
     'AGQG_20201120.gtx' => CoordinateOperation\GTXGDA2020AVWSProvider::class,
+    'gr3dnc01b.mnt' => CoordinateOperation\IGNFGeocentricTranslationIGN72GrandeTerreRGNC9193Provider::class,
+    'gr3dnc02b.mnt' => CoordinateOperation\IGNFGeocentricTranslationIGN72GrandeTerreRGNC9193NoumeaProvider::class,
+    'gr3dnc03a.mnt' => CoordinateOperation\IGNFGeocentricTranslationNEA74NoumeaRGNC9193Provider::class,
 ];

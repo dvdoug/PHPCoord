@@ -50132,6 +50132,54 @@ class CoordinateOperationParams
                 'reverses' => false,
             ],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9328' => [
+            'geocentricTranslationFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\IGNFGeocentricTranslationNEA74NoumeaRGNC9193Provider',
+            ],
+            'EPSGCodeForInterpolationCRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::4749',
+                'uom' => null,
+                'reverses' => false,
+            ],
+            'EPSGCodeForStandardCT' => [
+                'value' => 'urn:ogc:def:coordinateOperation:EPSG::15886',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9329' => [
+            'geocentricTranslationFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\IGNFGeocentricTranslationIGN72GrandeTerreRGNC9193Provider',
+            ],
+            'EPSGCodeForInterpolationCRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::4749',
+                'uom' => null,
+                'reverses' => false,
+            ],
+            'EPSGCodeForStandardCT' => [
+                'value' => 'urn:ogc:def:coordinateOperation:EPSG::15882',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9330' => [
+            'geocentricTranslationFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\IGNFGeocentricTranslationIGN72GrandeTerreRGNC9193NoumeaProvider',
+            ],
+            'EPSGCodeForInterpolationCRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::4749',
+                'uom' => null,
+                'reverses' => false,
+            ],
+            'EPSGCodeForStandardCT' => [
+                'value' => 'urn:ogc:def:coordinateOperation:EPSG::15882',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::9334' => [
             'xAxisTranslation' => [
                 'value' => 0.0,

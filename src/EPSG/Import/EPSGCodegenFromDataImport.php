@@ -472,9 +472,6 @@ class EPSGCodegenFromDataImport
         9121, // NTv2 NVI98_05.GSB
         9122, // NTv2 BC_98_05.GSB
         9496, // NTv2 MGI1901_TO_SRBETRS89_NTv2.gsb
-        9328, // IGNF gr3dnc03a.mnt
-        9329, // IGNF gr3dnc01b.mnt
-        9330, // IGNF gr3dnc02b.mnt
 
         // license requires money :((
         9732, // NTv2 35160622_47161840_R40_E50.gsb

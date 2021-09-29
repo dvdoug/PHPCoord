@@ -30528,6 +30528,14 @@ class CRSTransformations
             'reversible' => true,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9328',
+            'name' => 'NEA74 Noumea to RGNC91-93 (3)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4644',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::4749',
+            'accuracy' => 0.05,
+            'reversible' => true,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16138',
             'name' => 'UTM zone 38S',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4646',
@@ -30677,6 +30685,22 @@ class CRSTransformations
             'source_crs' => 'urn:ogc:def:crs:EPSG::4662',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4749',
             'accuracy' => 0.1,
+            'reversible' => true,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9329',
+            'name' => 'IGN72 Grande Terre to RGNC91-93 (4)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4662',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::4749',
+            'accuracy' => 0.1,
+            'reversible' => true,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9330',
+            'name' => 'IGN72 Grande Terre to RGNC91-93 (5)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4662',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::4749',
+            'accuracy' => 0.05,
             'reversible' => true,
         ],
         [

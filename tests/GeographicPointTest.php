@@ -11,6 +11,8 @@ namespace PHPCoord;
 use function class_exists;
 use DateTime;
 use DateTimeImmutable;
+use PHPCoord\CoordinateOperation\IGNFGeocentricTranslationIGN72GrandeTerreRGNC9193Provider;
+use PHPCoord\CoordinateOperation\IGNFGeocentricTranslationNEA74NoumeaRGNC9193Provider;
 use PHPCoord\CoordinateOperation\IGNFGeocentricTranslationNTFRGF93Provider;
 use PHPCoord\CoordinateOperation\NADCON5NAD27NAD831986CONUSLatitudeProvider;
 use PHPCoord\CoordinateOperation\NADCON5NAD27NAD831986CONUSLongitudeProvider;
@@ -1234,7 +1236,7 @@ class GeographicPointTest extends TestCase
         self::assertNull($to->getHeight());
     }
 
-    public function testIGNFGeocentricTranslationForward(): void
+    public function testIGNFGeocentricTranslationFranceForward(): void
     {
         if (!class_exists(IGNFGeocentricTranslationNTFRGF93Provider::class)) {
             self::markTestSkipped('Requires phpcoord/europe');
@@ -1254,7 +1256,7 @@ class GeographicPointTest extends TestCase
         self::assertNull($to->getHeight());
     }
 
-    public function testIGNFGeocentricTranslationReverse(): void
+    public function testIGNFGeocentricTranslationFranceReverse(): void
     {
         if (!class_exists(IGNFGeocentricTranslationNTFRGF93Provider::class)) {
             self::markTestSkipped('Requires phpcoord/europe');
@@ -1271,6 +1273,66 @@ class GeographicPointTest extends TestCase
 
         self::assertEqualsWithDelta(48.84451225, $to->getLatitude()->asDegrees()->getValue(), 0.0000001);
         self::assertEqualsWithDelta(2.42567186, $to->getLongitude()->asDegrees()->getValue(), 0.0000001);
+        self::assertNull($to->getHeight());
+    }
+
+    public function testIGNFGeocentricTranslationNoumeaForward(): void
+    {
+        if (!class_exists(IGNFGeocentricTranslationNEA74NoumeaRGNC9193Provider::class)) {
+            self::markTestSkipped('Requires phpcoord/oceania');
+        }
+        $from = GeographicPoint::create(new Degree(-22.268889), new Degree(166.419444), null, Geographic2D::fromSRID(Geographic2D::EPSG_NEA74_NOUMEA));
+        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_RGNC91_93);
+        $to = $from->geocentricTranslationByGridInterpolationIGNF(
+            $toCRS,
+            (new IGNFGeocentricTranslationNEA74NoumeaRGNC9193Provider())->provideGrid(),
+            '',
+            '',
+            false
+        );
+
+        self::assertEqualsWithDelta(-22.26612898, $to->getLatitude()->asDegrees()->getValue(), 0.000001);
+        self::assertEqualsWithDelta(166.42277652, $to->getLongitude()->asDegrees()->getValue(), 0.000001);
+        self::assertNull($to->getHeight());
+    }
+
+    public function testIGNFGeocentricTranslationNoumeaReverse(): void
+    {
+        if (!class_exists(IGNFGeocentricTranslationNEA74NoumeaRGNC9193Provider::class)) {
+            self::markTestSkipped('Requires phpcoord/oceania');
+        }
+        $from = GeographicPoint::create(new Degree(-22.26612898), new Degree(166.42277652), null, Geographic2D::fromSRID(Geographic2D::EPSG_RGNC91_93));
+        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_NEA74_NOUMEA);
+        $to = $from->geocentricTranslationByGridInterpolationIGNF(
+            $toCRS,
+            (new IGNFGeocentricTranslationNEA74NoumeaRGNC9193Provider())->provideGrid(),
+            '',
+            '',
+            true
+        );
+
+        self::assertEqualsWithDelta(-22.268889, $to->getLatitude()->asDegrees()->getValue(), 0.000001);
+        self::assertEqualsWithDelta(166.419444, $to->getLongitude()->asDegrees()->getValue(), 0.000001);
+        self::assertNull($to->getHeight());
+    }
+
+    public function testIGNFGeocentricTranslationGrandeTerreForward(): void
+    {
+        if (!class_exists(IGNFGeocentricTranslationIGN72GrandeTerreRGNC9193Provider::class)) {
+            self::markTestSkipped('Requires phpcoord/oceania');
+        }
+        $from = GeographicPoint::create(new Degree(-22.268889), new Degree(166.419444), null, Geographic2D::fromSRID(Geographic2D::EPSG_IGN72_GRANDE_TERRE));
+        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_RGNC91_93);
+        $to = $from->geocentricTranslationByGridInterpolationIGNF(
+            $toCRS,
+            (new IGNFGeocentricTranslationIGN72GrandeTerreRGNC9193Provider())->provideGrid(),
+            '',
+            '',
+            false
+        );
+
+        self::assertEqualsWithDelta(-22.26612488, $to->getLatitude()->asDegrees()->getValue(), 0.000001);
+        self::assertEqualsWithDelta(166.42277537, $to->getLongitude()->asDegrees()->getValue(), 0.000001);
         self::assertNull($to->getHeight());
     }
 }

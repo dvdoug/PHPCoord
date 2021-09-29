@@ -8985,6 +8985,21 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::1087',
             'extent_code' => ['3694'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9328' => [
+            'name' => 'NEA74 Noumea to RGNC91-93 (3)',
+            'method' => 'urn:ogc:def:method:EPSG::1087',
+            'extent_code' => ['2823'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9329' => [
+            'name' => 'IGN72 Grande Terre to RGNC91-93 (4)',
+            'method' => 'urn:ogc:def:method:EPSG::1087',
+            'extent_code' => ['2822'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9330' => [
+            'name' => 'IGN72 Grande Terre to RGNC91-93 (5)',
+            'method' => 'urn:ogc:def:method:EPSG::1087',
+            'extent_code' => ['2823'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::9334' => [
             'name' => 'ITRF2014 to KSA-GRF17 (1)',
             'method' => 'urn:ogc:def:method:EPSG::1053',
