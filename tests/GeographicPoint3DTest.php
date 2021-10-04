@@ -16,6 +16,7 @@ use PHPCoord\CoordinateOperation\CoordinateOperations;
 use PHPCoord\CoordinateOperation\CRSTransformations;
 use PHPCoord\CoordinateOperation\GTXGDA2020AHDProvider;
 use PHPCoord\CoordinateOperation\GTXNZGeoid2016Provider;
+use PHPCoord\CoordinateOperation\IGNESHeightETRS89REDNAPSpainProvider;
 use PHPCoord\CoordinateOperation\IGNFHeightRGF93v2bNGFIGN69FranceProvider;
 use PHPCoord\CoordinateOperation\OSTN15OSGM15Provider;
 use PHPCoord\CoordinateReferenceSystem\Compound;
@@ -124,6 +125,32 @@ class GeographicPoint3DTest extends TestCase
         $to = $from->geographic3DToGravityHeightIGNF($toCRS, (new IGNFHeightRGF93v2bNGFIGN69FranceProvider())->provideGrid());
 
         self::assertEqualsWithDelta(6.187, $to->getHeight()->getValue(), 0.001);
+    }
+
+    public function testGeographic3DTo2DPlusGravityHeightIGNESSpain(): void
+    {
+        if (!class_exists(IGNESHeightETRS89REDNAPSpainProvider::class)) {
+            self::markTestSkipped('Requires phpcoord/datapack-europe');
+        }
+        $from = GeographicPoint::create(new Degree(41.403611), new Degree(2.174444), new Metre(0), Geographic3D::fromSRID(Geographic3D::EPSG_ETRS89));
+        $toCRS = Compound::fromSRID(Compound::EPSG_ETRS89_PLUS_ALICANTE_HEIGHT);
+        $to = $from->geographic3DTo2DPlusGravityHeightIGNES($toCRS, (new IGNESHeightETRS89REDNAPSpainProvider())->provideGrid(), '');
+
+        self::assertEqualsWithDelta(41.403611, $to->getHorizontalPoint()->getLatitude()->getValue(), 0.00000000001);
+        self::assertEqualsWithDelta(2.174444, $to->getHorizontalPoint()->getLongitude()->getValue(), 0.00000000001);
+        self::assertEqualsWithDelta(-49.196, $to->getVerticalPoint()->getHeight()->getValue(), 0.001);
+    }
+
+    public function testGeographic3DGravityHeightIGNESSpain(): void
+    {
+        if (!class_exists(IGNESHeightETRS89REDNAPSpainProvider::class)) {
+            self::markTestSkipped('Requires phpcoord/datapack-europe');
+        }
+        $from = GeographicPoint::create(new Degree(41.403611), new Degree(2.174444), new Metre(0), Geographic3D::fromSRID(Geographic3D::EPSG_ETRS89));
+        $toCRS = Vertical::fromSRID(Vertical::EPSG_ALICANTE_HEIGHT);
+        $to = $from->geographic3DToGravityHeightIGNES($toCRS, (new IGNESHeightETRS89REDNAPSpainProvider())->provideGrid());
+
+        self::assertEqualsWithDelta(-49.196, $to->getHeight()->getValue(), 0.001);
     }
 
     /**

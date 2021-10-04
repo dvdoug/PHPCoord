@@ -197,6 +197,11 @@ class CoordinateOperationMethods
     public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_AUSGEOIDV2 = 'urn:ogc:def:method:EPSG::1083';
 
     /**
+     * Geog3D to Geog2D+GravityRelatedHeight (EGM2008).
+     */
+    public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_EGM2008 = 'urn:ogc:def:method:EPSG::1092';
+
+    /**
      * Geog3D to Geog2D+GravityRelatedHeight (IGN2009).
      */
     public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_IGN2009 = 'urn:ogc:def:method:EPSG::1095';
@@ -256,6 +261,12 @@ class CoordinateOperationMethods
      * for file format documentation.
      */
     public const EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_AUSGEOID_V2 = 'urn:ogc:def:method:EPSG::1048';
+
+    /**
+     * Geographic3D to GravityRelatedHeight (EGM2008)
+     * For earlier EGM84 and EGM96 models see Geographic3D to GravityRelatedHeight (EGM), method code 9661.
+     */
+    public const EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_EGM2008 = 'urn:ogc:def:method:EPSG::1025';
 
     /**
      * Geographic3D to GravityRelatedHeight (IGN2009)
@@ -854,6 +865,8 @@ class CoordinateOperationMethods
         self::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_GTX => 'verticalOffsetGTX',
         self::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_IGN2009 => 'geographic3DTo2DPlusGravityHeightIGNF',
         self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_IGN2009 => 'geographic3DToGravityHeightIGNF',
+        self::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_EGM2008 => 'geographic3DTo2DPlusGravityHeightIGNES',
+        self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_EGM2008 => 'geographic3DToGravityHeightIGNES',
     ];
 
     public static function getFunctionName(string $srid): string

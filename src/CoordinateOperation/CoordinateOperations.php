@@ -9185,6 +9185,66 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9615',
             'extent_code' => ['2335'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9410' => [
+            'name' => 'ETRS89 to Alicante height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1025',
+            'extent_code' => ['2366'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9411' => [
+            'name' => 'ETRS89 to Mallorca height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1025',
+            'extent_code' => ['4602'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9412' => [
+            'name' => 'ETRS89 to Menorca height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1025',
+            'extent_code' => ['4603'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9413' => [
+            'name' => 'ETRS89 to Ibiza height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1025',
+            'extent_code' => ['4604'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9414' => [
+            'name' => 'ETRS89 to Ceuta 2 height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1025',
+            'extent_code' => ['4590'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9415' => [
+            'name' => 'REGCAN95 to Lanzarote height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1025',
+            'extent_code' => ['4591'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9416' => [
+            'name' => 'REGCAN95 to Fuerteventura height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1025',
+            'extent_code' => ['4592'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9417' => [
+            'name' => 'REGCAN95 to Gran Canaria height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1025',
+            'extent_code' => ['4593'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9418' => [
+            'name' => 'REGCAN95 to Tenerife height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1025',
+            'extent_code' => ['4594'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9419' => [
+            'name' => 'REGCAN95 to La Gomera height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1025',
+            'extent_code' => ['4595'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9420' => [
+            'name' => 'REGCAN95 to La Palma height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1025',
+            'extent_code' => ['4596'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9421' => [
+            'name' => 'REGCAN95 to El Hierro height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1025',
+            'extent_code' => ['4597'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::9455' => [
             'name' => 'GBK19-TM',
             'method' => 'urn:ogc:def:method:EPSG::9807',
@@ -9319,6 +9379,66 @@ class CoordinateOperations
             'name' => 'ETRS89 to ETRS89 + NAP height (2)',
             'method' => 'urn:ogc:def:method:EPSG::1088',
             'extent_code' => ['1275'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9605' => [
+            'name' => 'ETRS89 to ETRS89 + Alicante height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1092',
+            'extent_code' => ['2366'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9606' => [
+            'name' => 'ETRS89 to ETRS89 + Ceuta 2 height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1092',
+            'extent_code' => ['4590'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9607' => [
+            'name' => 'ETRS89 to ETRS89 + Ibiza height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1092',
+            'extent_code' => ['4604'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9608' => [
+            'name' => 'ETRS89 to ETRS89 + Mallorca height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1092',
+            'extent_code' => ['4602'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9609' => [
+            'name' => 'ETRS89 to ETRS89 + Menorca height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1092',
+            'extent_code' => ['4603'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9610' => [
+            'name' => 'REGCAN95 to REGCAN95 + El Hierro height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1092',
+            'extent_code' => ['4597'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9611' => [
+            'name' => 'REGCAN95 to REGCAN95 + Fuerteventura height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1092',
+            'extent_code' => ['4592'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9612' => [
+            'name' => 'REGCAN95 to REGCAN95 + Gran Canaria height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1092',
+            'extent_code' => ['4593'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9613' => [
+            'name' => 'REGCAN95 to REGCAN95 + La Gomera height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1092',
+            'extent_code' => ['4595'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9614' => [
+            'name' => 'REGCAN95 to REGCAN95 + La Palma height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1092',
+            'extent_code' => ['4596'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9615' => [
+            'name' => 'REGCAN95 to REGCAN95 + Lanzarote height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1092',
+            'extent_code' => ['4591'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9616' => [
+            'name' => 'REGCAN95 to REGCAN95 + Tenerife height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1092',
+            'extent_code' => ['4594'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::9622' => [
             'name' => 'NAD83(2011) to NAD83(2011) + PRVD02 height (2)',

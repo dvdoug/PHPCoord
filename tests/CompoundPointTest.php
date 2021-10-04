@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace PHPCoord;
 
+use PHPCoord\CoordinateOperation\IGNESHeightETRS89REDNAPSpainProvider;
 use function class_exists;
 use DateTime;
 use DateTimeImmutable;
@@ -189,6 +190,32 @@ class CompoundPointTest extends TestCase
         self::assertEqualsWithDelta(48.858222, $to->getLatitude()->getValue(), 0.00000000001);
         self::assertEqualsWithDelta(2.2945, $to->getLongitude()->getValue(), 0.00000000001);
         self::assertEqualsWithDelta(50.000, $to->getHeight()->getValue(), 0.001);
+    }
+
+    public function testGeographic3DTo2DPlusGravityHeightIGNESSpain(): void
+    {
+        if (!class_exists(IGNESHeightETRS89REDNAPSpainProvider::class)) {
+            self::markTestSkipped('Requires phpcoord/datapack-europe');
+        }
+        $from = CompoundPoint::create(
+            GeographicPoint::create(
+                new Degree(41.403611),
+                new Degree(2.174444),
+                null,
+                Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89)
+            ),
+            VerticalPoint::create(
+                new Metre(-49.196),
+                Vertical::fromSRID(Vertical::EPSG_ALICANTE_HEIGHT)
+            ),
+            Compound::fromSRID(Compound::EPSG_ETRS89_PLUS_ALICANTE_HEIGHT)
+        );
+        $toCRS = Geographic3D::fromSRID(Geographic3D::EPSG_ETRS89);
+        $to = $from->geographic3DTo2DPlusGravityHeightIGNES($toCRS, (new IGNESHeightETRS89REDNAPSpainProvider())->provideGrid(), '');
+
+        self::assertEqualsWithDelta(41.403611, $to->getLatitude()->getValue(), 0.00000000001);
+        self::assertEqualsWithDelta(2.174444, $to->getLongitude()->getValue(), 0.00000000001);
+        self::assertEqualsWithDelta(0.000, $to->getHeight()->getValue(), 0.001);
     }
 
     /**

@@ -32,6 +32,7 @@ use PHPCoord\CoordinateOperation\ConvertiblePoint;
 use PHPCoord\CoordinateOperation\GeocentricValue;
 use PHPCoord\CoordinateOperation\GeographicValue;
 use PHPCoord\CoordinateOperation\GTXGrid;
+use PHPCoord\CoordinateOperation\IGNESHeightGrid;
 use PHPCoord\CoordinateOperation\IGNFGeocentricTranslationGrid;
 use PHPCoord\CoordinateOperation\IGNFHeightGrid;
 use PHPCoord\CoordinateOperation\NADCON5Grid;
@@ -2222,6 +2223,36 @@ class GeographicPoint extends Point implements ConvertiblePoint
     }
 
     /**
+     * Geog3D to Geog2D+GravityRelatedHeight (IGNES).
+     */
+    public function geographic3DTo2DPlusGravityHeightIGNES(
+        Compound $to,
+        IGNESHeightGrid $geoidHeightCorrectionModelFile,
+        string $EPSGCodeForInterpolationCRS
+    ): CompoundPoint {
+        $horizontalPoint = self::create(
+            $this->latitude,
+            $this->longitude,
+            null,
+            $to->getHorizontal(),
+            $this->getCoordinateEpoch()
+        );
+
+        $verticalPoint = VerticalPoint::create(
+            $this->height->subtract($geoidHeightCorrectionModelFile->getAdjustment($this)),
+            $to->getVertical(),
+            $this->getCoordinateEpoch()
+        );
+
+        return CompoundPoint::create(
+            $horizontalPoint,
+            $verticalPoint,
+            $to,
+            $this->getCoordinateEpoch()
+        );
+    }
+
+    /**
      * Geog3D to Geog2D+GravityRelatedHeight (IGNF).
      */
     public function geographic3DTo2DPlusGravityHeightIGNF(
@@ -2246,6 +2277,20 @@ class GeographicPoint extends Point implements ConvertiblePoint
         return CompoundPoint::create(
             $horizontalPoint,
             $verticalPoint,
+            $to,
+            $this->getCoordinateEpoch()
+        );
+    }
+
+    /**
+     * Geographic3D to GravityRelatedHeight (IGNES).
+     */
+    public function geographic3DToGravityHeightIGNES(
+        Vertical $to,
+        IGNESHeightGrid $geoidHeightCorrectionModelFile
+    ): VerticalPoint {
+        return VerticalPoint::create(
+            $this->height->subtract($geoidHeightCorrectionModelFile->getAdjustment($this)),
             $to,
             $this->getCoordinateEpoch()
         );

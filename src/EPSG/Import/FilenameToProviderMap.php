@@ -187,4 +187,6 @@ return [
     'gg10_sbv2.mnt' => CoordinateOperation\IGNFHeightRGAF09IGN1988SaintBarthelemyProvider::class,
     'gg10_smv2.mnt' => CoordinateOperation\IGNFHeightRGAF09IGN1988SaintMartinProvider::class,
     'Ranc08_Circe.mnt' => CoordinateOperation\IGNFHeightRGNC9193NGNC08NewCaledoniaProvider::class,
+    'EGM08_REDNAP.txt' => CoordinateOperation\IGNESHeightETRS89REDNAPSpainProvider::class,
+    'EGM08_REDNAP_Canarias.txt' => CoordinateOperation\IGNESHeightETRS89REDNAPCanaryIslandsProvider::class,
 ];

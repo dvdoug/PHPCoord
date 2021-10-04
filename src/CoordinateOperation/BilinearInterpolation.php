@@ -29,8 +29,8 @@ trait BilinearInterpolation
     ): array {
         $corners = $this->getCornersForBilinear($x, $y);
 
-        $dx = ($x - $corners['lowerLeft']->getX()) / ($corners['lowerRight']->getX() - $corners['lowerLeft']->getX());
-        $dy = ($y - $corners['lowerLeft']->getY()) / ($corners['upperLeft']->getY() - $corners['lowerLeft']->getY());
+        $dx = $corners['lowerRight']->getX() === $corners['lowerLeft']->getX() ? 0 : (($x - $corners['lowerLeft']->getX()) / ($corners['lowerRight']->getX() - $corners['lowerLeft']->getX()));
+        $dy = $corners['upperLeft']->getY() === $corners['lowerLeft']->getY() ? 0 : (($y - $corners['lowerLeft']->getY()) / ($corners['upperLeft']->getY() - $corners['lowerLeft']->getY()));
 
         $interpolations = [];
         for ($i = 0, $count = count($corners['lowerLeft']->getValues()); $i < $count; ++$i) {
@@ -63,8 +63,8 @@ trait BilinearInterpolation
     {
         $xIndex = (int) (($x - $this->startX) / $this->columnGridInterval);
         $yIndex = (int) (($y - $this->startY) / $this->rowGridInterval);
-        $xIndexPlus1 = min($xIndex + 1, $this->numberOfColumns);
-        $yIndexPlus1 = min($yIndex + 1, $this->numberOfRows);
+        $xIndexPlus1 = min($xIndex + 1, $this->numberOfColumns - 1);
+        $yIndexPlus1 = min($yIndex + 1, $this->numberOfRows - 1);
 
         return [
             'lowerLeft' => $this->getRecord($xIndex, $yIndex),

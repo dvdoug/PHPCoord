@@ -64,7 +64,6 @@ class EPSGCodegenFromDataImport
         // not implemented yet
         1072, // Geographic3D to GravityRelatedHeight (OSGM15Ire)
         1096, // Geog3D to Geog2D+GravityRelatedHeight (OSGM15Ire)
-        1025, // Geographic3D to GravityRelatedHeight (EGM2008)
         1047, // Geographic3D to GravityRelatedHeight (Gravsoft)
         1050, // Geographic3D to GravityRelatedHeight (CI)
         1059, // Geographic3D to GravityRelatedHeight (PNG)
@@ -79,19 +78,16 @@ class EPSGCodegenFromDataImport
         1089, // Geog3D to Geog2D+GravityRelatedHeight (BEV AT)
         1090, // Geog3D to Geog2D+GravityRelatedHeight (CGG 2013)
         1091, // Geog3D to Geog2D+GravityRelatedHeight (CI)
-        1092, // Geog3D to Geog2D+GravityRelatedHeight (EGM2008)
         1093, // Geog3D to Geog2D+GravityRelatedHeight (Gravsoft)
         1098, // Geog3D to Geog2D+GravityRelatedHeight (SA 2010)
         1099, // Geographic3D to GravityRelatedHeight (PL txt)
         1100, // Geog3D to Geog2D+GravityRelatedHeight (PL txt)
         1101, // Vertical Offset by Grid Interpolation (PL txt)
-        1103, // Geog3D to Geog2D+GravityRelatedHeight (EGM)
         1105, // Geog3D to Geog2D+GravityRelatedHeight (ITAL2005)
         1106, // Geographic3D to GravityRelatedHeight (ITAL2005)
         9620, // Norway Offshore Interpolation
         9634, // Maritime Provinces polynomial interpolation
         9658, // Vertical Offset by Grid Interpolation (VERTCON)
-        9661, // Geographic3D to GravityRelatedHeight (EGM)
 
         // only distributed as .dll, can't use
         1036, // Cartesian Grid Offsets from Form Function
@@ -112,6 +108,10 @@ class EPSGCodegenFromDataImport
         // Replaced by IGN2009
         1094, // Geog3D to Geog2D+GravityRelatedHeight (IGN1997)
         9664, // Geographic3D to GravityRelatedHeight (IGN1997)
+
+        // EGM files are *very* large and not of general use
+        1103, // Geog3D to Geog2D+GravityRelatedHeight (EGM)
+        9661, // Geographic3D to GravityRelatedHeight (EGM)
     ];
 
     public const BLACKLISTED_OPERATIONS = [
@@ -466,7 +466,17 @@ class EPSGCodegenFromDataImport
         // It's just for 1 German state and is almost 400Mb!!
         9338, // NTv2 BWTA2017.gsb
 
-        // Not available for public download, mostly construction/engineering projects not of general use
+        // Very large, only really of scientific use
+        3858, // EGM2008 Und_min2.5x2.5_egm2008_isw=82_WGS84_TideFree.gz
+        3859, // EGM2008 Und_min1x1_egm2008_isw=82_WGS84_TideFree.gz
+        7891, // EGM2008 Und_min2.5x2.5_egm2008_isw=82_WGS84_TideFree.gz
+        8037, // EGM2008 Und_min1x1_egm2008_isw=82_WGS84_TideFree.gz
+        9617, // EGM2008 Und_min2.5x2.5_egm2008_isw=82_WGS84_TideFree.gz
+        9618, // EGM2008 Und_min1x1_egm2008_isw=82_WGS84_TideFree.gz
+        9704, // EGM2008 Und_min2.5x2.5_egm2008_isw=82_WGS84_TideFree.gz
+        9706, // EGM2008 Und_min1x1_egm2008_isw=82_WGS84_TideFree.gz
+
+        // Not available for public download, construction/engineering/scientific projects not of general use
         9302, // NTv2 HS2TN15_NTv2.gsb
         9365, // NTv2 TN15-ETRS89-to-TPEN11-IRF.gsb
         9369, // NTv2 TN15-ETRS89-to-MML07-IRF.gsb

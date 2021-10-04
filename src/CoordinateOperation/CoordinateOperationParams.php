@@ -50851,6 +50851,78 @@ class CoordinateOperationParams
                 'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2ED50ETRS89BalearicIslandsProvider',
             ],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9410' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => false,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\IGNESHeightETRS89REDNAPSpainProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9411' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => false,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\IGNESHeightETRS89REDNAPSpainProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9412' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => false,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\IGNESHeightETRS89REDNAPSpainProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9413' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => false,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\IGNESHeightETRS89REDNAPSpainProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9414' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => false,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\IGNESHeightETRS89REDNAPSpainProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9415' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => false,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\IGNESHeightETRS89REDNAPCanaryIslandsProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9416' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => false,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\IGNESHeightETRS89REDNAPCanaryIslandsProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9417' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => false,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\IGNESHeightETRS89REDNAPCanaryIslandsProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9418' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => false,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\IGNESHeightETRS89REDNAPCanaryIslandsProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9419' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => false,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\IGNESHeightETRS89REDNAPCanaryIslandsProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9420' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => false,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\IGNESHeightETRS89REDNAPCanaryIslandsProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9421' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => false,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\IGNESHeightETRS89REDNAPCanaryIslandsProvider',
+            ],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::9455' => [
             'latitudeOfNaturalOrigin' => [
                 'value' => 55.45,
@@ -51314,6 +51386,138 @@ class CoordinateOperationParams
             ],
             'EPSGCodeForInterpolationCRS' => [
                 'value' => 'urn:ogc:def:crs:EPSG::4258',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9605' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\IGNESHeightETRS89REDNAPSpainProvider',
+            ],
+            'EPSGCodeForInterpolationCRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::4258',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9606' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\IGNESHeightETRS89REDNAPSpainProvider',
+            ],
+            'EPSGCodeForInterpolationCRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::4258',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9607' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\IGNESHeightETRS89REDNAPSpainProvider',
+            ],
+            'EPSGCodeForInterpolationCRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::4258',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9608' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\IGNESHeightETRS89REDNAPSpainProvider',
+            ],
+            'EPSGCodeForInterpolationCRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::4258',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9609' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\IGNESHeightETRS89REDNAPSpainProvider',
+            ],
+            'EPSGCodeForInterpolationCRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::4258',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9610' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\IGNESHeightETRS89REDNAPCanaryIslandsProvider',
+            ],
+            'EPSGCodeForInterpolationCRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::4081',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9611' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\IGNESHeightETRS89REDNAPCanaryIslandsProvider',
+            ],
+            'EPSGCodeForInterpolationCRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::4081',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9612' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\IGNESHeightETRS89REDNAPCanaryIslandsProvider',
+            ],
+            'EPSGCodeForInterpolationCRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::4081',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9613' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\IGNESHeightETRS89REDNAPCanaryIslandsProvider',
+            ],
+            'EPSGCodeForInterpolationCRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::4081',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9614' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\IGNESHeightETRS89REDNAPCanaryIslandsProvider',
+            ],
+            'EPSGCodeForInterpolationCRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::4081',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9615' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\IGNESHeightETRS89REDNAPCanaryIslandsProvider',
+            ],
+            'EPSGCodeForInterpolationCRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::4081',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9616' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\IGNESHeightETRS89REDNAPCanaryIslandsProvider',
+            ],
+            'EPSGCodeForInterpolationCRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::4081',
                 'uom' => null,
                 'reverses' => false,
             ],
