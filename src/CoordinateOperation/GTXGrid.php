@@ -47,6 +47,11 @@ class GTXGrid extends SplFileObject
         $longitude = $point->getLongitude()->getValue();
         $offset = $this->interpolateBilinear($longitude, $latitude)[0];
 
+        // These are in millimeters for some reason... :/
+        if (in_array($this->getBasename(), ['vertconc.gtx', 'vertcone.gtx', 'vertconw.gtx'], true)) {
+            $offset /= 1000;
+        }
+
         return new Metre($offset);
     }
 

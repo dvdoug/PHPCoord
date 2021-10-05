@@ -38865,6 +38865,24 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::7969' => [
+            'verticalOffsetFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\GTXNGVD29NAVD88CONUSWestProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::7970' => [
+            'verticalOffsetFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\GTXNGVD29NAVD88CONUSCentralProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::7971' => [
+            'verticalOffsetFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\GTXNGVD29NAVD88CONUSEastProvider',
+            ],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::7977' => [
             'verticalOffset' => [
                 'value' => -0.146,

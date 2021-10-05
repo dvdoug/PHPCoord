@@ -189,4 +189,7 @@ return [
     'Ranc08_Circe.mnt' => CoordinateOperation\IGNFHeightRGNC9193NGNC08NewCaledoniaProvider::class,
     'EGM08_REDNAP.txt' => CoordinateOperation\IGNESHeightETRS89REDNAPSpainProvider::class,
     'EGM08_REDNAP_Canarias.txt' => CoordinateOperation\IGNESHeightETRS89REDNAPCanaryIslandsProvider::class,
+    'vertconc.gtx' => CoordinateOperation\GTXNGVD29NAVD88CONUSCentralProvider::class,
+    'vertcone.gtx' => CoordinateOperation\GTXNGVD29NAVD88CONUSEastProvider::class,
+    'vertconw.gtx' => CoordinateOperation\GTXNGVD29NAVD88CONUSWestProvider::class,
 ];

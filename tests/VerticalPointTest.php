@@ -15,7 +15,7 @@ use PHPCoord\CoordinateOperation\CoordinateOperationParams;
 use PHPCoord\CoordinateOperation\CoordinateOperations;
 use PHPCoord\CoordinateOperation\CRSTransformations;
 use PHPCoord\CoordinateOperation\GTXDunedin1958NZVD2016Provider;
-use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
+use PHPCoord\CoordinateOperation\GTXNGVD29NAVD88CONUSCentralProvider;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Vertical;
 use PHPCoord\CoordinateReferenceSystem\VerticalSRIDData;
@@ -153,6 +153,19 @@ class VerticalPointTest extends TestCase
         self::assertEqualsWithDelta(50.000, $to->getHeight()->getValue(), 0.001);
     }
 
+    public function testVerticalOffsetGTXUSVERTCON(): void
+    {
+        if (!class_exists(GTXNGVD29NAVD88CONUSCentralProvider::class)) {
+            self::markTestSkipped('Requires phpcoord/datapack-northamerica');
+        }
+        $horizontalPoint = GeographicPoint::create(new Degree(29.4667897), new Degree(-98.4803739), null, Geographic2D::fromSRID(Geographic2D::EPSG_NAD83));
+        $from = VerticalPoint::create(new Metre(247.47), Vertical::fromSRID(Vertical::EPSG_NGVD29_HEIGHT_M));
+        $toCRS = Vertical::fromSRID(Vertical::EPSG_NAVD88_HEIGHT);
+        $to = $from->verticalOffsetGTX($toCRS, (new GTXNGVD29NAVD88CONUSCentralProvider())->provideGrid(), '', false, $horizontalPoint);
+
+        self::assertEqualsWithDelta(247.599, $to->getHeight()->getValue(), 0.001);
+    }
+
     /**
      * @group integration
      * @dataProvider supportedOperations
@@ -160,7 +173,7 @@ class VerticalPointTest extends TestCase
     public function testOperations(string $sourceCrsSrid, string $targetCrsSrid, string $operationSrid, bool $reversible): void
     {
         $sourceCRS = Vertical::fromSRID($sourceCrsSrid);
-        $targetCRS = CoordinateReferenceSystem::fromSRID($targetCrsSrid);
+        $targetCRS = Vertical::fromSRID($targetCrsSrid);
         $operationExtent = BoundingArea::createFromExtentCodes(CoordinateOperations::getOperationData($operationSrid)['extent_code']);
 
         $epoch = new DateTime();

@@ -7210,6 +7210,21 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9616',
             'extent_code' => ['2530'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::7969' => [
+            'name' => 'NGVD29 height (m) to NAVD88 height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1084',
+            'extent_code' => ['2950'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::7970' => [
+            'name' => 'NGVD29 height (m) to NAVD88 height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1084',
+            'extent_code' => ['2949'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::7971' => [
+            'name' => 'NGVD29 height (m) to NAVD88 height (3)',
+            'method' => 'urn:ogc:def:method:EPSG::1084',
+            'extent_code' => ['2948'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::7977' => [
             'name' => 'HKPD depth to HKCD depth (1)',
             'method' => 'urn:ogc:def:method:EPSG::9616',

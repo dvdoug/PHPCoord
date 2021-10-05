@@ -754,6 +754,13 @@ class CoordinateOperationMethods
     public const EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_NZLVD = 'urn:ogc:def:method:EPSG::1071';
 
     /**
+     * Vertical Offset by Grid Interpolation (VERTCON)
+     * Any NAD realization may be used as the Interpolation CRS; bi-linear interpolation is used. Input expects
+     * longitudes to be positive west.
+     */
+    public const EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_VERTCON = 'urn:ogc:def:method:EPSG::9658';
+
+    /**
      * Vertical Offset by Grid Interpolation (gtx).
      */
     public const EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_GTX = 'urn:ogc:def:method:EPSG::1084';

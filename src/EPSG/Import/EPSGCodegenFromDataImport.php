@@ -87,7 +87,6 @@ class EPSGCodegenFromDataImport
         1106, // Geographic3D to GravityRelatedHeight (ITAL2005)
         9620, // Norway Offshore Interpolation
         9634, // Maritime Provinces polynomial interpolation
-        9658, // Vertical Offset by Grid Interpolation (VERTCON)
 
         // only distributed as .dll, can't use
         1036, // Cartesian Grid Offsets from Form Function
