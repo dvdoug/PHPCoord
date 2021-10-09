@@ -9,10 +9,10 @@ A ``GeographicPoint`` can be constructed by calling ``GeographicPoint::create``,
 .. code-block:: php
 
     public static function create(
+        Geographic $crs,
         Angle $latitude,
         Angle $longitude,
         ?Length $height = null,
-        Geographic $crs,
         ?DateTimeInterface $epoch = null
     ): GeographicPoint
 
@@ -32,19 +32,19 @@ Examples:
     // the Statue of Liberty in WGS84 (unknown date), traditional arguments, decimal degrees
     $crs = Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84);
     $point = GeographicPoint::create(
+        $crs,
         new Degree(40.689167),
         new Degree(-74.044444),
-        null,
-        $crs
+        null
     );
 
     // the Statue of Liberty in WGS84 (2020-02-01), traditional arguments, string representation of degrees
     $crs = Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84);
     $point = GeographicPoint::create(
+        $crs,
         Degree::fromDegreeMinuteSecondHemisphere('40° 41′ 21″ N'),
         Degree::fromDegreeMinuteSecondHemisphere('74° 2′ 40″ W'),
         null,
-        $crs,
         new DateTime('2020-02-01')
     );
 

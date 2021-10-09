@@ -23,10 +23,10 @@ Examples:
 
     // Converting from NAD83 to Florida State Plane
     $from = GeographicPoint::create(
+        Geographic2D::fromSRID(Geographic2D::EPSG_NAD83),
         new Degree(28.46),
         new Degree(-80.53),
-        null,
-        Geographic2D::fromSRID(Geographic2D::EPSG_NAD83)
+        null
     );
     $toCRS = Projected::fromSRID(Projected::EPSG_NAD83_FLORIDA_EAST);
     $to = $from->convert($toCRS); // $to instanceof ProjectedPoint
@@ -41,9 +41,9 @@ Examples:
 
     // Converting from Florida State Plane to NAD83
     $from = ProjectedPoint::createFromEastingNorthing(
-        new Metre(246029.85),
-        new Metre(457274.616),
         Projected::fromSRID(Projected::EPSG_NAD83_FLORIDA_EAST)
+        new Metre(246029.85),
+        new Metre(457274.616)
     );
     $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_NAD83);
     $to = $from->convert($toCRS); // $to instanceof GeographicPoint
@@ -63,9 +63,9 @@ between almost any two CRSs is possible as long as they have a common link.
 .. code-block:: php
 
     $from = ProjectedPoint::createFromEastingNorthing(
+        Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID),
         new Metre(577275),
-        new Metre(69741),
-        Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID)
+        new Metre(69741)
     );
     $toCRS = Projected::fromSRID(Projected::EPSG_WGS_84_UTM_ZONE_31N);
     $to = $from->convert($toCRS);
@@ -116,10 +116,10 @@ For conversions from a ``GeographicPoint`` to a ``UTMPoint``, call the ``->asUTM
 .. code-block:: php
 
     $from = GeographicPoint::create(
+        Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84),
         new Degree(43.642567),
         new Degree(-79.387139),
-        null,
-        Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84)
+        null
     );
     $to = $from->asUTMPoint();
 

@@ -19,23 +19,23 @@ following signatures:
 .. code-block:: php
 
     public static function createFromEastingNorthing(
+        Projected $crs,
         Length $easting,
         Length $northing,
-        Projected $crs,
         ?DateTimeInterface $epoch = null
     ): ProjectedPoint
 
     public static function createFromWestingNorthing(
+        Projected $crs,
         Length $westing,
         Length $northing,
-        Projected $crs,
         ?DateTimeInterface $epoch = null
     ): ProjectedPoint
 
     public static function createFromWestingSouthing(
+        Projected $crs,
         Length $westing,
         Length $southing,
-        Projected $crs,
         ?DateTimeInterface $epoch = null
     ): ProjectedPoint
 
@@ -51,17 +51,17 @@ Examples:
     // Nelson's Column in British National Grid (unknown date), traditional arguments
     $crs = Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID);
     $point = ProjectedPoint::createFromEastingNorthing(
+        $crs,
         new Metre(530017),
-        new Metre(180419),
-        $crs
+        new Metre(180419)
     );
 
     // Nelson's Column in British National Grid (2020-02-01), traditional arguments
     $crs = Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID);
     $point = ProjectedPoint::createFromEastingNorthing(
+        $crs,
         new Metre(530017),
         new Metre(180419),
-        $crs,
         new DateTime('2020-02-01')
     );
 
@@ -122,7 +122,7 @@ rather than a standard ``ProjectedPoint``. Alternatively, you can construct one 
         ?DateTimeInterface $epoch = null
     ): BritishNationalGridPoint
 
-    // from  a grid reference
+    // from a grid reference
     public static function fromGridReference(
         string $reference,
         ?DateTimeInterface $epoch = null
@@ -141,9 +141,9 @@ Examples:
     // Nelson's Column
     $crs = Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID);
     $point = ProjectedPoint::createFromEastingNorthing(
+        $crs,
         new Metre(530017),
-        new Metre(180419),
-        $crs
+        new Metre(180419)
     );
 
     // also Nelson's Column
@@ -195,9 +195,9 @@ Examples:
     // Spire of Dublin
     $crs = Projected::fromSRID(Projected::EPSG_TM75_IRISH_GRID);
     $point = ProjectedPoint::createFromEastingNorthing(
+        $crs,
         new Metre(315904),
-        new Metre(234671),
-        $crs
+        new Metre(234671)
     );
 
     // also Spire of Dublin
@@ -245,9 +245,9 @@ Examples:
     // Spire of Dublin
     $crs = Projected::fromSRID(Projected::EPSG_IRENET95_IRISH_TRANSVERSE_MERCATOR);
     $point = ProjectedPoint::createFromEastingNorthing(
+        $crs,
         new Metre(715830),
         new Metre(734697),
-        $crs
     );
 
     // also Spire of Dublin
@@ -274,7 +274,7 @@ Treat each zone/hemisphere as a fully independent projection
 | Pros: no confusion about what the coordinates represent
 | Cons: when converting to UTM, you need to know in advance which zone/hemisphere the points reside in
 
-For many ``Geographic`` CRSs, there are corresponding dedicated ``Projected`` CRS for each individual UTM zone and
+For many ``Geographic2D`` CRSs, there are corresponding dedicated ``Projected`` CRS for each individual UTM zone and
 hemisphere. In total there are over 1000 individual such CRSs defined.
 
 Examples:
@@ -289,22 +289,22 @@ Examples:
     // Piazza San Marco, Venice
     $crs = Projected::fromSRID(Projected::EPSG_WGS_84_UTM_ZONE_33N);
     $point = ProjectedPoint::createFromEastingNorthing(
+        $crs,
         new Metre(291789),
         new Metre(5034599),
-        $crs
     );
 
     // Piazza San Marco, Venice
     $crs = Projected::fromSRID(Projected::EPSG_ETRS89_UTM_ZONE_33N);
     $point = ProjectedPoint::createFromEastingNorthing(
+        $crs,
         new Metre(291789),
         new Metre(5034599),
-        $crs
     );
 
 Prefix easting with the zone
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-| Pros: you only have to know the hemisphere when converting to UTM (latitude ± 0)
+| Pros: you only have to know the hemisphere when converting to UTM (i.e. is latitude ± 0)
 | Cons: coordinates are not distances, WGS84 only
 
 Because the previously described system has some practical difficulties in use when working with points that are not
@@ -331,9 +331,9 @@ Example:
     // Piazza San Marco, Venice
     $crs = Projected::fromSRID(Projected::EPSG_WGS_84_UTM_GRID_SYSTEM_NORTHERN_HEMISPHERE);
     $point = ProjectedPoint::createFromEastingNorthing(
+        $crs,
         new Metre(33291789), // UTM is defined as metres, but this coordinate is actually not...
-        new Metre(5034599),
-        $crs
+        new Metre(5034599)
     );
 
 Treat UTM as special
@@ -348,11 +348,11 @@ This is done via ``UTMPoint`` which is a specialised extension of ``ProjectedPoi
 .. code-block:: php
 
     public function __construct(
+        Geographic $crs,
         Length $easting,
         Length $northing,
         int $zone,
         string $hemisphere, //one of UTMPoint::HEMISPHERE_NORTH or UTMPoint::HEMISPHERE_SOUTH
-        Geographic $crs,
         ?DateTimeInterface $epoch = null
     ): UTMPoint
 
@@ -368,11 +368,11 @@ Example:
     // Piazza San Marco, Venice
     $crs = Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84);
     $point = new UTMPoint(
+        $crs,
         new Metre(291789),
         new Metre(5034599),
         33,
         UTMPoint::HEMISPHERE_NORTH,
-        $crs
     );
 
     $easting = $point->getEasting(); // Metre

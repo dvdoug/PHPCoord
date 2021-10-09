@@ -11,6 +11,7 @@ namespace PHPCoord;
 use DateTimeInterface;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\CoordinateReferenceSystem\Geographic;
+use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Projected;
 use PHPCoord\CoordinateSystem\Cartesian;
 use PHPCoord\Geometry\BoundingArea;
@@ -38,9 +39,9 @@ class UTMPoint extends ProjectedPoint
     /**
      * Base CRS.
      */
-    protected Geographic $baseCRS;
+    protected Geographic2D $baseCRS;
 
-    public function __construct(Length $easting, Length $northing, int $zone, string $hemisphere, Geographic $crs, ?DateTimeInterface $epoch = null)
+    public function __construct(Geographic2D $crs, Length $easting, Length $northing, int $zone, string $hemisphere, ?DateTimeInterface $epoch = null)
     {
         $this->zone = $zone;
         $this->hemisphere = $hemisphere;
@@ -60,7 +61,7 @@ class UTMPoint extends ProjectedPoint
             $boundingArea
         );
 
-        parent::__construct($easting, $northing, null, null, $projectedCRS, $epoch);
+        parent::__construct($projectedCRS, $easting, $northing, null, null, $epoch);
     }
 
     public function asGeographicPoint(): GeographicPoint

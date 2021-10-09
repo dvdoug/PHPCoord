@@ -211,10 +211,7 @@ abstract class Angle implements UnitOfMeasure
         return new static($this->getValue() / $divisor);
     }
 
-    /**
-     * @param float|string $measurement
-     */
-    public static function makeUnit($measurement, string $srid): self
+    public static function makeUnit(float|string $measurement, string $srid): self
     {
         return match ($srid) {
             self::EPSG_RADIAN => new Radian($measurement),

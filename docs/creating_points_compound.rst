@@ -8,9 +8,9 @@ A ``CompoundPoint`` can be constructed by calling ``CompoundPoint::create``, whi
 .. code-block:: php
 
     public static function create(
+        Compound $crs,
         GeographicPoint|ProjectedPoint $horizontalPoint,
         VerticalPoint $verticalPoint,
-        Compound $crs,
         ?DateTimeInterface $epoch = null
     ): CompoundPoint
 
@@ -30,24 +30,24 @@ Example:
     // Horizontal location of Ben Nevis peak using British National Grid
     $horizontalCRS = Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID);
     $horizontalPoint = ProjectedPoint::createFromEastingNorthing(
+        $horizontalCRS,
         new Metre(216692),
-        new Metre(771274),
-        $horizontalCRS
+        new Metre(771274)
     );
 
     // Height above Newlyn Sea Level of Ben Nevis peak
     $verticalCRS = Vertical::fromSRID(Vertical::EPSG_ODN_HEIGHT);
     $verticalPoint = VerticalPoint::create(
-        new Metre(1345),
-        $verticalCRS
+        $verticalCRS,
+        new Metre(1345)
     );
 
     // Full coordinate of Ben Nevis Peak
     $compoundCRS = Compound::fromSRID(Compound::EPSG_OSGB36_BRITISH_NATIONAL_GRID_PLUS_ODN_HEIGHT);
     $point = CompoundPoint::create(
+        $compoundCRS,
         $horizontalPoint,
-        $verticalPoint,
-        $compoundCRS
+        $verticalPoint
     );
 
     $horizontal = $point->getHorizontalPoint(); // GeographicPoint|ProjectedPoint

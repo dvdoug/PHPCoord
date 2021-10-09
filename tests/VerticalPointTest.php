@@ -32,7 +32,7 @@ class VerticalPointTest extends TestCase
 
     public function testVertical(): void
     {
-        $object = VerticalPoint::create(new Metre(123), Vertical::fromSRID(Vertical::EPSG_EGM2008_HEIGHT));
+        $object = VerticalPoint::create(Vertical::fromSRID(Vertical::EPSG_EGM2008_HEIGHT), new Metre(123));
         self::assertEquals(123, $object->getHeight()->getValue());
         self::assertEquals('urn:ogc:def:crs:EPSG::3855', $object->getCRS()->getSrid());
         self::assertNull($object->getCoordinateEpoch());
@@ -41,7 +41,7 @@ class VerticalPointTest extends TestCase
 
     public function testVerticalWithEpochDateTime(): void
     {
-        $object = VerticalPoint::create(new Metre(123), Vertical::fromSRID(Vertical::EPSG_EGM2008_HEIGHT), new DateTime('2003-02-01'));
+        $object = VerticalPoint::create(Vertical::fromSRID(Vertical::EPSG_EGM2008_HEIGHT), new Metre(123), new DateTime('2003-02-01'));
         self::assertEquals(123, $object->getHeight()->getValue());
         self::assertEquals('urn:ogc:def:crs:EPSG::3855', $object->getCRS()->getSrid());
         self::assertEquals('2003-02-01', $object->getCoordinateEpoch()->format('Y-m-d'));
@@ -50,7 +50,7 @@ class VerticalPointTest extends TestCase
 
     public function testVerticalWithEpochDateTimeImmutable(): void
     {
-        $object = VerticalPoint::create(new Metre(123), Vertical::fromSRID(Vertical::EPSG_EGM2008_HEIGHT), new DateTimeImmutable('2003-02-01'));
+        $object = VerticalPoint::create(Vertical::fromSRID(Vertical::EPSG_EGM2008_HEIGHT), new Metre(123), new DateTimeImmutable('2003-02-01'));
         self::assertEquals(123, $object->getHeight()->getValue());
         self::assertEquals('urn:ogc:def:crs:EPSG::3855', $object->getCRS()->getSrid());
         self::assertEquals('2003-02-01', $object->getCoordinateEpoch()->format('Y-m-d'));
@@ -59,20 +59,20 @@ class VerticalPointTest extends TestCase
 
     public function testVerticalWithFeetAsUnits(): void
     {
-        $object = VerticalPoint::create(new Foot(123), Vertical::fromSRID(Vertical::EPSG_EGM2008_HEIGHT));
+        $object = VerticalPoint::create(Vertical::fromSRID(Vertical::EPSG_EGM2008_HEIGHT), new Foot(123));
         self::assertEquals(37.4904, $object->getHeight()->getValue());
     }
 
     public function testDistanceCalculation(): void
     {
-        $from = VerticalPoint::create(new Metre(100), Vertical::fromSRID(Vertical::EPSG_EGM2008_HEIGHT));
-        $to = VerticalPoint::create(new Metre(80), Vertical::fromSRID(Vertical::EPSG_EGM2008_HEIGHT));
+        $from = VerticalPoint::create(Vertical::fromSRID(Vertical::EPSG_EGM2008_HEIGHT), new Metre(100));
+        $to = VerticalPoint::create(Vertical::fromSRID(Vertical::EPSG_EGM2008_HEIGHT), new Metre(80));
         self::assertEqualsWithDelta(20, $from->calculateDistance($to)->getValue(), 0.000001);
     }
 
     public function testVerticalOffset(): void
     {
-        $from = VerticalPoint::create(new Metre(2.55), Vertical::fromSRID(Vertical::EPSG_BALTIC_1977_HEIGHT));
+        $from = VerticalPoint::create(Vertical::fromSRID(Vertical::EPSG_BALTIC_1977_HEIGHT), new Metre(2.55));
         $toCRS = Vertical::fromSRID(Vertical::EPSG_BLACK_SEA_HEIGHT);
         $to = $from->offset($toCRS, new Metre(0.4));
 
@@ -81,8 +81,8 @@ class VerticalPointTest extends TestCase
 
     public function testVerticalOffsetAndSlope(): void
     {
-        $horizontalPoint = GeographicPoint::create(new Radian(0.826122513), new Radian(0.168715161), null, Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89));
-        $from = VerticalPoint::create(new Metre(473), Vertical::fromSRID(Vertical::EPSG_LN02_HEIGHT));
+        $horizontalPoint = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89), new Radian(0.826122513), new Radian(0.168715161), null);
+        $from = VerticalPoint::create(Vertical::fromSRID(Vertical::EPSG_LN02_HEIGHT), new Metre(473));
         $toCRS = Vertical::fromSRID(Vertical::EPSG_EVRF2000_HEIGHT);
         $to = $from->offsetAndSlope($toCRS, new Radian(0.818850307), new Radian(0.142826110), new Metre(-0.245), new Radian(-0.000001018), new Radian(-0.000000155), 'urn:ogc:def:crs:EPSG::4258', $horizontalPoint);
 
@@ -91,7 +91,7 @@ class VerticalPointTest extends TestCase
 
     public function testHeightDepthReversal(): void
     {
-        $from = VerticalPoint::create(new Metre(2.55), Vertical::fromSRID(Vertical::EPSG_BALTIC_1977_HEIGHT));
+        $from = VerticalPoint::create(Vertical::fromSRID(Vertical::EPSG_BALTIC_1977_HEIGHT), new Metre(2.55));
         $toCRS = Vertical::fromSRID(Vertical::EPSG_BALTIC_1977_HEIGHT);
         $to = $from->heightDepthReversal($toCRS);
 
@@ -100,7 +100,7 @@ class VerticalPointTest extends TestCase
 
     public function testChangeOfVerticalUnit(): void
     {
-        $from = VerticalPoint::create(new Foot(1), Vertical::fromSRID(Vertical::EPSG_POOLBEG_HEIGHT_FT_BR36));
+        $from = VerticalPoint::create(Vertical::fromSRID(Vertical::EPSG_POOLBEG_HEIGHT_FT_BR36), new Foot(1));
         $toCRS = Vertical::fromSRID(Vertical::EPSG_POOLBEG_HEIGHT_M);
         $to = $from->changeOfVerticalUnit($toCRS);
 
@@ -109,8 +109,8 @@ class VerticalPointTest extends TestCase
 
     public function testZeroTideHeightToMeanTideHeightEVRF2019Forward(): void
     {
-        $horizontalPoint = GeographicPoint::create(new Radian(0.88867075), new Radian(0.168715161), null, Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89));
-        $from = VerticalPoint::create(new Metre(100.154), Vertical::fromSRID(Vertical::EPSG_EVRF2019_HEIGHT));
+        $horizontalPoint = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89), new Radian(0.88867075), new Radian(0.168715161), null);
+        $from = VerticalPoint::create(Vertical::fromSRID(Vertical::EPSG_EVRF2019_HEIGHT), new Metre(100.154));
         $toCRS = Vertical::fromSRID(Vertical::EPSG_EVRF2019_MEAN_TIDE_HEIGHT);
         $to = $from->zeroTideHeightToMeanTideHeightEVRF2019($toCRS, false, $horizontalPoint);
 
@@ -119,8 +119,8 @@ class VerticalPointTest extends TestCase
 
     public function testZeroTideHeightToMeanTideHeightEVRF2019Reverse(): void
     {
-        $horizontalPoint = GeographicPoint::create(new Radian(0.88867075), new Radian(0.168715161), null, Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89));
-        $from = VerticalPoint::create(new Metre(100.147), Vertical::fromSRID(Vertical::EPSG_EVRF2019_MEAN_TIDE_HEIGHT));
+        $horizontalPoint = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89), new Radian(0.88867075), new Radian(0.168715161), null);
+        $from = VerticalPoint::create(Vertical::fromSRID(Vertical::EPSG_EVRF2019_MEAN_TIDE_HEIGHT), new Metre(100.147));
         $toCRS = Vertical::fromSRID(Vertical::EPSG_EVRF2019_HEIGHT);
         $to = $from->zeroTideHeightToMeanTideHeightEVRF2019($toCRS, true, $horizontalPoint);
 
@@ -132,8 +132,8 @@ class VerticalPointTest extends TestCase
         if (!class_exists(GTXDunedin1958NZVD2016Provider::class)) {
             self::markTestSkipped('Requires phpcoord/datapack-oceania');
         }
-        $horizontalPoint = GeographicPoint::create(new Degree(-44.42), new Degree(168.92), null, Geographic2D::fromSRID(Geographic2D::EPSG_NZGD2000));
-        $from = VerticalPoint::create(new Metre(50), Vertical::fromSRID(Vertical::EPSG_NZVD2016_HEIGHT));
+        $horizontalPoint = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_NZGD2000), new Degree(-44.42), new Degree(168.92), null);
+        $from = VerticalPoint::create(Vertical::fromSRID(Vertical::EPSG_NZVD2016_HEIGHT), new Metre(50));
         $toCRS = Vertical::fromSRID(Vertical::EPSG_DUNEDIN_1958_HEIGHT);
         $to = $from->offsetFromGrid($toCRS, (new GTXDunedin1958NZVD2016Provider())->provideGrid(), false, $horizontalPoint);
 
@@ -145,8 +145,8 @@ class VerticalPointTest extends TestCase
         if (!class_exists(GTXDunedin1958NZVD2016Provider::class)) {
             self::markTestSkipped('Requires phpcoord/datapack-oceania');
         }
-        $horizontalPoint = GeographicPoint::create(new Degree(-44.42), new Degree(168.92), null, Geographic2D::fromSRID(Geographic2D::EPSG_NZGD2000));
-        $from = VerticalPoint::create(new Metre(50.304), Vertical::fromSRID(Vertical::EPSG_DUNEDIN_1958_HEIGHT));
+        $horizontalPoint = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_NZGD2000), new Degree(-44.42), new Degree(168.92), null);
+        $from = VerticalPoint::create(Vertical::fromSRID(Vertical::EPSG_DUNEDIN_1958_HEIGHT), new Metre(50.304));
         $toCRS = Vertical::fromSRID(Vertical::EPSG_NZVD2016_HEIGHT);
         $to = $from->offsetFromGrid($toCRS, (new GTXDunedin1958NZVD2016Provider())->provideGrid(), true, $horizontalPoint);
 
@@ -158,8 +158,8 @@ class VerticalPointTest extends TestCase
         if (!class_exists(GTXNGVD29NAVD88CONUSCentralProvider::class)) {
             self::markTestSkipped('Requires phpcoord/datapack-northamerica');
         }
-        $horizontalPoint = GeographicPoint::create(new Degree(29.4667897), new Degree(-98.4803739), null, Geographic2D::fromSRID(Geographic2D::EPSG_NAD83));
-        $from = VerticalPoint::create(new Metre(247.47), Vertical::fromSRID(Vertical::EPSG_NGVD29_HEIGHT_M));
+        $horizontalPoint = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_NAD83), new Degree(29.4667897), new Degree(-98.4803739), null);
+        $from = VerticalPoint::create(Vertical::fromSRID(Vertical::EPSG_NGVD29_HEIGHT_M), new Metre(247.47));
         $toCRS = Vertical::fromSRID(Vertical::EPSG_NAVD88_HEIGHT);
         $to = $from->offsetFromGrid($toCRS, (new GTXNGVD29NAVD88CONUSCentralProvider())->provideGrid(), false, $horizontalPoint);
 
@@ -178,9 +178,9 @@ class VerticalPointTest extends TestCase
 
         $epoch = new DateTime();
 
-        $originalPoint = VerticalPoint::create(new Metre(0), $sourceCRS, $epoch);
+        $originalPoint = VerticalPoint::create($sourceCRS, new Metre(0), $epoch);
         $horizontalCentre = $operationExtent->getPointInside();
-        $horizontalPoint = GeographicPoint::create($horizontalCentre[0], $horizontalCentre[1], null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
+        $horizontalPoint = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), $horizontalCentre[0], $horizontalCentre[1], null);
 
         $newPoint = $originalPoint->performOperation($operationSrid, $targetCRS, false, ['horizontalPoint' => $horizontalPoint]);
         self::assertInstanceOf(Point::class, $newPoint);

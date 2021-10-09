@@ -50,7 +50,7 @@ class GeographicPointTest extends TestCase
 {
     public function test2D(): void
     {
-        $object = GeographicPoint::create(new Degree(0.123), new Degree(0.456), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
+        $object = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Degree(0.123), new Degree(0.456), null);
         self::assertEquals(0.123, $object->getLatitude()->getValue());
         self::assertEquals(0.456, $object->getLongitude()->getValue());
         self::assertNull($object->getHeight());
@@ -61,7 +61,7 @@ class GeographicPointTest extends TestCase
 
     public function test2DWithEpochDateTime(): void
     {
-        $object = GeographicPoint::create(new Degree(0.123), new Degree(0.456), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new DateTime('2003-02-01'));
+        $object = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Degree(0.123), new Degree(0.456), null, new DateTime('2003-02-01'));
         self::assertEquals(0.123, $object->getLatitude()->getValue());
         self::assertEquals(0.456, $object->getLongitude()->getValue());
         self::assertNull($object->getHeight());
@@ -72,7 +72,7 @@ class GeographicPointTest extends TestCase
 
     public function test2DWithEpochDateTimeImmutable(): void
     {
-        $object = GeographicPoint::create(new Degree(0.123), new Degree(0.456), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new DateTimeImmutable('2003-02-01'));
+        $object = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Degree(0.123), new Degree(0.456), null, new DateTimeImmutable('2003-02-01'));
         self::assertEquals(0.123, $object->getLatitude()->getValue());
         self::assertEquals(0.456, $object->getLongitude()->getValue());
         self::assertNull($object->getHeight());
@@ -83,7 +83,7 @@ class GeographicPointTest extends TestCase
 
     public function test2DWithRadianAsUnits(): void
     {
-        $object = GeographicPoint::create(new Radian(0.123), new Radian(0.123), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
+        $object = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Radian(0.123), new Radian(0.123), null);
         self::assertEquals(7.047380880109133, $object->getLatitude()->getValue());
         self::assertEquals(7.047380880109133, $object->getLongitude()->getValue());
     }
@@ -91,12 +91,12 @@ class GeographicPointTest extends TestCase
     public function test2DWithHeight(): void
     {
         $this->expectException(InvalidCoordinateReferenceSystemException::class);
-        $object = GeographicPoint::create(new Degree(0.123), new Degree(0.456), new Metre(789), Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
+        $object = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Degree(0.123), new Degree(0.456), new Metre(789));
     }
 
     public function test3D(): void
     {
-        $object = GeographicPoint::create(new Degree(0.123), new Degree(0.456), new Metre(789), Geographic3D::fromSRID(Geographic3D::EPSG_WGS_84));
+        $object = GeographicPoint::create(Geographic3D::fromSRID(Geographic3D::EPSG_WGS_84), new Degree(0.123), new Degree(0.456), new Metre(789));
         self::assertEquals(0.123, $object->getLatitude()->getValue());
         self::assertEquals(0.456, $object->getLongitude()->getValue());
         self::assertEquals(789, $object->getHeight()->getValue());
@@ -106,7 +106,7 @@ class GeographicPointTest extends TestCase
 
     public function test3DWithRadianAndFeetAsUnits(): void
     {
-        $object = GeographicPoint::create(new Radian(0.123), new Radian(0.123), new Foot(123), Geographic3D::fromSRID(Geographic3D::EPSG_WGS_84));
+        $object = GeographicPoint::create(Geographic3D::fromSRID(Geographic3D::EPSG_WGS_84), new Radian(0.123), new Radian(0.123), new Foot(123));
         self::assertEquals(7.047380880109133, $object->getLatitude()->getValue());
         self::assertEquals(7.047380880109133, $object->getLongitude()->getValue());
         self::assertEquals(37.4904, $object->getHeight()->getValue());
@@ -115,134 +115,134 @@ class GeographicPointTest extends TestCase
     public function test3DWithoutHeight(): void
     {
         $this->expectException(InvalidCoordinateReferenceSystemException::class);
-        $object = GeographicPoint::create(new Degree(0.123), new Degree(0.456), null, Geographic3D::fromSRID(Geographic3D::EPSG_WGS_84));
+        $object = GeographicPoint::create(Geographic3D::fromSRID(Geographic3D::EPSG_WGS_84), new Degree(0.123), new Degree(0.456), null);
     }
 
     public function testDistanceCalculation(): void
     {
-        $from = GeographicPoint::create(new Degree(51.54105), new Degree(-0.12319), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
-        $to = GeographicPoint::create(new Degree(51.507977), new Degree(-0.124588), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Degree(51.54105), new Degree(-0.12319), null);
+        $to = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Degree(51.507977), new Degree(-0.124588), null);
         self::assertEqualsWithDelta(3680.925, $from->calculateDistance($to)->getValue(), 0.001);
     }
 
     public function testDistanceCalculationReversedOrder(): void
     {
-        $from = GeographicPoint::create(new Degree(51.507977), new Degree(-0.124588), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
-        $to = GeographicPoint::create(new Degree(51.54105), new Degree(-0.12319), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Degree(51.507977), new Degree(-0.124588), null);
+        $to = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Degree(51.54105), new Degree(-0.12319), null);
         self::assertEqualsWithDelta(3680.925, $from->calculateDistance($to)->getValue(), 0.001);
     }
 
     public function testDistanceCalculationVincentyExample1(): void
     {
-        $from = GeographicPoint::create(Degree::fromSexagesimalDMSS('554500.00'), new Degree(0), null, Geographic2D::fromSRID(Geographic2D::EPSG_CH1903));
-        $to = GeographicPoint::create(Degree::fromSexagesimalDMSS('-332600.00'), Degree::fromSexagesimalDMSS('1081300.00'), null, Geographic2D::fromSRID(Geographic2D::EPSG_CH1903));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_CH1903), Degree::fromSexagesimalDMSS('554500.00'), new Degree(0), null);
+        $to = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_CH1903), Degree::fromSexagesimalDMSS('-332600.00'), Degree::fromSexagesimalDMSS('1081300.00'), null);
         self::assertEqualsWithDelta(14110526.170, $from->calculateDistance($to)->getValue(), 0.001);
     }
 
     public function testDistanceCalculationVincentyExample2(): void
     {
-        $from = GeographicPoint::create(Degree::fromSexagesimalDMSS('371954.95367'), new Degree(0), null, Geographic2D::fromSRID(Geographic2D::EPSG_ED50));
-        $to = GeographicPoint::create(Degree::fromSexagesimalDMSS('260742.83946'), Degree::fromSexagesimalDMSS('412835.50729'), null, Geographic2D::fromSRID(Geographic2D::EPSG_ED50));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_ED50), Degree::fromSexagesimalDMSS('371954.95367'), new Degree(0), null);
+        $to = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_ED50), Degree::fromSexagesimalDMSS('260742.83946'), Degree::fromSexagesimalDMSS('412835.50729'), null);
         self::assertEqualsWithDelta(4085966.703, $from->calculateDistance($to)->getValue(), 0.001);
     }
 
     public function testDistanceCalculationVincentyExample3(): void
     {
-        $from = GeographicPoint::create(Degree::fromSexagesimalDMSS('351611.24862'), new Degree(0), null, Geographic2D::fromSRID(Geographic2D::EPSG_ED50));
-        $to = GeographicPoint::create(Degree::fromSexagesimalDMSS('672214.77638'), Degree::fromSexagesimalDMSS('1374728.31435'), null, Geographic2D::fromSRID(Geographic2D::EPSG_ED50));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_ED50), Degree::fromSexagesimalDMSS('351611.24862'), new Degree(0), null);
+        $to = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_ED50), Degree::fromSexagesimalDMSS('672214.77638'), Degree::fromSexagesimalDMSS('1374728.31435'), null);
         self::assertEqualsWithDelta(8084823.839, $from->calculateDistance($to)->getValue(), 0.001);
     }
 
     public function testDistanceCalculationVincentyExample4(): void
     {
-        $from = GeographicPoint::create(Degree::fromSexagesimalDMSS('10000.00'), new Degree(0), null, Geographic2D::fromSRID(Geographic2D::EPSG_ED50));
-        $to = GeographicPoint::create(Degree::fromSexagesimalDMSS('-05953.83076'), Degree::fromSexagesimalDMSS('1791748.02997'), null, Geographic2D::fromSRID(Geographic2D::EPSG_ED50));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_ED50), Degree::fromSexagesimalDMSS('10000.00'), new Degree(0), null);
+        $to = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_ED50), Degree::fromSexagesimalDMSS('-05953.83076'), Degree::fromSexagesimalDMSS('1791748.02997'), null);
         self::assertEqualsWithDelta(19960000.000, $from->calculateDistance($to)->getValue(), 0.001);
     }
 
     public function testDistanceCalculationVincentyExample5(): void
     {
-        $from = GeographicPoint::create(Degree::fromSexagesimalDMSS('10000.00'), new Degree(0), null, Geographic2D::fromSRID(Geographic2D::EPSG_ED50));
-        $to = GeographicPoint::create(Degree::fromSexagesimalDMSS('10115.18952'), Degree::fromSexagesimalDMSS('1794617.84244'), null, Geographic2D::fromSRID(Geographic2D::EPSG_ED50));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_ED50), Degree::fromSexagesimalDMSS('10000.00'), new Degree(0), null);
+        $to = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_ED50), Degree::fromSexagesimalDMSS('10115.18952'), Degree::fromSexagesimalDMSS('1794617.84244'), null);
         self::assertEqualsWithDelta(19780006.558, $from->calculateDistance($to)->getValue(), 0.001);
     }
 
     public function testDistanceCalculationAntipodeWikiExample1(): void
     {
-        $from = GeographicPoint::create(new Degree(0), new Degree(0), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
-        $to = GeographicPoint::create(new Degree(0.5), new Degree(179.5), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Degree(0), new Degree(0), null);
+        $to = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Degree(0.5), new Degree(179.5), null);
         self::assertEqualsWithDelta(19936288.579, $from->calculateDistance($to)->getValue(), 0.001);
     }
 
     public function testDistanceCalculationAntipodeWikiExample2(): void
     {
         self::markTestSkipped(); // this doesn't work the rest do, think it might be rounding issues
-        $from = GeographicPoint::create(new Degree(0), new Degree(0), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
-        $to = GeographicPoint::create(new Degree(0.5), new Degree(179.7), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Degree(0), new Degree(0), null);
+        $to = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Degree(0.5), new Degree(179.7), null);
         self::assertEqualsWithDelta(19944127.421, $from->calculateDistance($to)->getValue(), 0.001);
     }
 
     public function testDistanceCalculationAntipodeVincentyExample1(): void
     {
-        $from = GeographicPoint::create(Degree::fromSexagesimalDMSS('414145.88000'), new Degree(0), null, Geographic2D::fromSRID(Geographic2D::EPSG_ED50));
-        $to = GeographicPoint::create(Degree::fromSexagesimalDMSS('-414146.20000'), Degree::fromSexagesimalDMSS('1795959.44000'), null, Geographic2D::fromSRID(Geographic2D::EPSG_ED50));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_ED50), Degree::fromSexagesimalDMSS('414145.88000'), new Degree(0), null);
+        $to = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_ED50), Degree::fromSexagesimalDMSS('-414146.20000'), Degree::fromSexagesimalDMSS('1795959.44000'), null);
         self::assertEqualsWithDelta(20004566.7228, $from->calculateDistance($to)->getValue(), 0.0001);
     }
 
     public function testDistanceCalculationAntipodeVincentyExample2(): void
     {
-        $from = GeographicPoint::create(new Degree(0), new Degree(0), null, Geographic2D::fromSRID(Geographic2D::EPSG_ED50));
-        $to = GeographicPoint::create(new Degree(0), Degree::fromSexagesimalDMSS('1794149.78063'), null, Geographic2D::fromSRID(Geographic2D::EPSG_ED50));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_ED50), new Degree(0), new Degree(0), null);
+        $to = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_ED50), new Degree(0), Degree::fromSexagesimalDMSS('1794149.78063'), null);
         self::assertEqualsWithDelta(19996147.4169, $from->calculateDistance($to)->getValue(), 0.0001);
     }
 
     public function testDistanceCalculationAntipodeVincentyExample3(): void
     {
-        $from = GeographicPoint::create(Degree::fromSexagesimalDMSS('300000.00000'), new Degree(0), null, Geographic2D::fromSRID(Geographic2D::EPSG_ED50));
-        $to = GeographicPoint::create(Degree::fromSexagesimalDMSS('-300000.00000'), Degree::fromSexagesimalDMSS('1794000.00000'), null, Geographic2D::fromSRID(Geographic2D::EPSG_ED50));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_ED50), Degree::fromSexagesimalDMSS('300000.00000'), new Degree(0), null);
+        $to = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_ED50), Degree::fromSexagesimalDMSS('-300000.00000'), Degree::fromSexagesimalDMSS('1794000.00000'), null);
         self::assertEqualsWithDelta(19994364.6069, $from->calculateDistance($to)->getValue(), 0.0001);
     }
 
     public function testDistanceCalculationAntipodeVincentyExample4(): void
     {
         self::markTestSkipped(); // this doesn't work the rest do, think it might be rounding issues
-        $from = GeographicPoint::create(Degree::fromSexagesimalDMSS('600000.00000'), new Degree(0), null, Geographic2D::fromSRID(Geographic2D::EPSG_ED50));
-        $to = GeographicPoint::create(Degree::fromSexagesimalDMSS('-595900.00000'), Degree::fromSexagesimalDMSS('1795000.00000'), null, Geographic2D::fromSRID(Geographic2D::EPSG_ED50));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_ED50), Degree::fromSexagesimalDMSS('600000.00000'), new Degree(0), null);
+        $to = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_ED50), Degree::fromSexagesimalDMSS('-595900.00000'), Degree::fromSexagesimalDMSS('1795000.00000'), null);
         self::assertEqualsWithDelta(20000433.9629, $from->calculateDistance($to)->getValue(), 0.0001);
     }
 
     public function testDistanceCalculationSmallDistance(): void
     {
-        $from = GeographicPoint::create(new Degree(45.306833), new Degree(5.887717), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
-        $to = GeographicPoint::create(new Degree(45.306833), new Degree(5.887733), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Degree(45.306833), new Degree(5.887717), null);
+        $to = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Degree(45.306833), new Degree(5.887733), null);
         self::assertEqualsWithDelta(1.255, $from->calculateDistance($to)->getValue(), 0.001);
     }
 
     public function testDistanceCalculationSmallDistance2(): void
     {
-        $from = GeographicPoint::create(new Degree(0), new Degree(0), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
-        $to = GeographicPoint::create(new Degree(0), new Degree(0.1), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Degree(0), new Degree(0), null);
+        $to = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Degree(0), new Degree(0.1), null);
         self::assertEqualsWithDelta(11131.949, $from->calculateDistance($to)->getValue(), 0.001);
     }
 
     public function testDistanceDifferentCRSs(): void
     {
-        $from = GeographicPoint::create(new Degree(51.54105), new Degree(-0.12319), null, Geographic2D::fromSRID(Geographic2D::EPSG_OSGB36));
-        $to = GeographicPoint::create(new Degree(51.507977), new Degree(-0.124588), null, Geographic2D::fromSRID(Geographic2D::EPSG_PZ_90));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_OSGB36), new Degree(51.54105), new Degree(-0.12319), null);
+        $to = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_PZ_90), new Degree(51.507977), new Degree(-0.124588), null);
         self::assertEqualsWithDelta(3735.156, $from->calculateDistance($to)->getValue(), 0.001);
     }
 
     public function testDistanceDifferentCRSsNoAutoconversion(): void
     {
         $this->expectException(InvalidCoordinateReferenceSystemException::class);
-        $from = GeographicPoint::create(new Degree(51.54105), new Degree(-0.12319), null, Geographic2D::fromSRID(Geographic2D::EPSG_CHINA_GEODETIC_COORDINATE_SYSTEM_2000));
-        $to = VerticalPoint::create(new Metre(10), Vertical::fromSRID(Vertical::EPSG_TENERIFE_HEIGHT));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_CHINA_GEODETIC_COORDINATE_SYSTEM_2000), new Degree(51.54105), new Degree(-0.12319), null);
+        $to = VerticalPoint::create(Vertical::fromSRID(Vertical::EPSG_TENERIFE_HEIGHT), new Metre(10));
         $from->calculateDistance($to);
     }
 
     public function testGeographicGeocentric(): void
     {
-        $from = GeographicPoint::create(new Degree(53.80939444), new Degree(2.12955000), new Metre(73.0), Geographic3D::fromSRID(Geographic3D::EPSG_WGS_84));
+        $from = GeographicPoint::create(Geographic3D::fromSRID(Geographic3D::EPSG_WGS_84), new Degree(53.80939444), new Degree(2.12955000), new Metre(73.0));
         $to = $from->geographicGeocentric(Geocentric::fromSRID(Geocentric::EPSG_WGS_84));
 
         self::assertEqualsWithDelta(3771793.968, $to->getX()->getValue(), 0.0001);
@@ -252,7 +252,7 @@ class GeographicPointTest extends TestCase
 
     public function test2DCoordinateFrameRotation(): void
     {
-        $from = GeographicPoint::create(new Degree(55.0), new Degree(44.0), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_72));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_72), new Degree(55.0), new Degree(44.0), null);
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84);
         $to = $from->coordinateFrameRotation($toCRS, new Metre(0), new Metre(0), new Metre(4.5), new ArcSecond(0), new ArcSecond(0), new ArcSecond(-0.554), new PartsPerMillion(0.219));
 
@@ -263,7 +263,7 @@ class GeographicPointTest extends TestCase
 
     public function test3DCoordinateFrameRotation(): void
     {
-        $from = GeographicPoint::create(new Degree(55.0), new Degree(44.0), new Metre(0), Geographic3D::fromSRID(Geographic3D::EPSG_WGS_72));
+        $from = GeographicPoint::create(Geographic3D::fromSRID(Geographic3D::EPSG_WGS_72), new Degree(55.0), new Degree(44.0), new Metre(0));
         $toCRS = Geographic3D::fromSRID(Geographic3D::EPSG_WGS_84);
         $to = $from->coordinateFrameRotation($toCRS, new Metre(0), new Metre(0), new Metre(4.5), new ArcSecond(0), new ArcSecond(0), new ArcSecond(-0.554), new PartsPerMillion(0.219));
 
@@ -274,7 +274,7 @@ class GeographicPointTest extends TestCase
 
     public function test2DPositionVectorTransformation(): void
     {
-        $from = GeographicPoint::create(new Degree(55.0), new Degree(44.0), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_72));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_72), new Degree(55.0), new Degree(44.0), null);
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84);
         $to = $from->positionVectorTransformation($toCRS, new Metre(0), new Metre(0), new Metre(4.5), new ArcSecond(0), new ArcSecond(0), new ArcSecond(0.554), new PartsPerMillion(0.219));
 
@@ -285,7 +285,7 @@ class GeographicPointTest extends TestCase
 
     public function test3DPositionVectorTransformation(): void
     {
-        $from = GeographicPoint::create(new Degree(55.0), new Degree(44.0), new Metre(0), Geographic3D::fromSRID(Geographic3D::EPSG_WGS_72));
+        $from = GeographicPoint::create(Geographic3D::fromSRID(Geographic3D::EPSG_WGS_72), new Degree(55.0), new Degree(44.0), new Metre(0));
         $toCRS = Geographic3D::fromSRID(Geographic3D::EPSG_WGS_84);
         $to = $from->positionVectorTransformation($toCRS, new Metre(0), new Metre(0), new Metre(4.5), new ArcSecond(0), new ArcSecond(0), new ArcSecond(0.554), new PartsPerMillion(0.219));
 
@@ -296,7 +296,7 @@ class GeographicPointTest extends TestCase
 
     public function test2DCoordinateFrameMolodenskyBadekas(): void
     {
-        $from = GeographicPoint::create(new Degree(9.58344056), new Degree(-66.08002528), null, Geographic2D::fromSRID(Geographic2D::EPSG_LA_CANOA));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_LA_CANOA), new Degree(9.58344056), new Degree(-66.08002528), null);
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84);
         $to = $from->coordinateFrameMolodenskyBadekas($toCRS, new Metre(-270.933), new Metre(115.599), new Metre(-360.226), new ArcSecond(-5.266), new ArcSecond(-1.238), new ArcSecond(2.381), new PartsPerMillion(-5.109), new Metre(2464351.59), new Metre(-5783466.61), new Metre(974809.81));
 
@@ -307,7 +307,7 @@ class GeographicPointTest extends TestCase
 
     public function test3DCoordinateFrameMolodenskyBadekas(): void
     {
-        $from = GeographicPoint::create(new Degree(9.58344056), new Degree(-66.08002528), new Metre(201.465), Geographic3D::fromSRID(Geographic3D::EPSG_LGD2006));
+        $from = GeographicPoint::create(Geographic3D::fromSRID(Geographic3D::EPSG_LGD2006), new Degree(9.58344056), new Degree(-66.08002528), new Metre(201.465));
         $toCRS = Geographic3D::fromSRID(Geographic3D::EPSG_REGVEN);
         $to = $from->coordinateFrameMolodenskyBadekas($toCRS, new Metre(-270.933), new Metre(115.599), new Metre(-360.226), new ArcSecond(-5.266), new ArcSecond(-1.238), new ArcSecond(2.381), new PartsPerMillion(-5.109), new Metre(2464351.59), new Metre(-5783466.61), new Metre(974809.81));
 
@@ -318,7 +318,7 @@ class GeographicPointTest extends TestCase
 
     public function test2DPositionVectorMolodenskyBadekas(): void
     {
-        $from = GeographicPoint::create(new Degree(9.58344056), new Degree(-66.08002528), null, Geographic2D::fromSRID(Geographic2D::EPSG_LA_CANOA));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_LA_CANOA), new Degree(9.58344056), new Degree(-66.08002528), null);
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84);
         $to = $from->positionVectorMolodenskyBadekas($toCRS, new Metre(-270.933), new Metre(115.599), new Metre(-360.226), new ArcSecond(5.266), new ArcSecond(1.238), new ArcSecond(-2.381), new PartsPerMillion(-5.109), new Metre(2464351.59), new Metre(-5783466.61), new Metre(974809.81));
 
@@ -329,7 +329,7 @@ class GeographicPointTest extends TestCase
 
     public function test3DPositionVectorMolodenskyBadekas(): void
     {
-        $from = GeographicPoint::create(new Degree(9.58344056), new Degree(-66.08002528), new Metre(201.465), Geographic3D::fromSRID(Geographic3D::EPSG_LGD2006));
+        $from = GeographicPoint::create(Geographic3D::fromSRID(Geographic3D::EPSG_LGD2006), new Degree(9.58344056), new Degree(-66.08002528), new Metre(201.465));
         $toCRS = Geographic3D::fromSRID(Geographic3D::EPSG_REGVEN);
         $to = $from->positionVectorMolodenskyBadekas($toCRS, new Metre(-270.933), new Metre(115.599), new Metre(-360.226), new ArcSecond(5.266), new ArcSecond(1.238), new ArcSecond(-2.381), new PartsPerMillion(-5.109), new Metre(2464351.59), new Metre(-5783466.61), new Metre(974809.81));
 
@@ -340,7 +340,7 @@ class GeographicPointTest extends TestCase
 
     public function testGeographic2DAbridgedMolodensky(): void
     {
-        $from = GeographicPoint::create(new Degree(53.80939444), new Degree(2.12955000), new Metre(73), Geographic3D::fromSRID(Geographic3D::EPSG_WGS_84));
+        $from = GeographicPoint::create(Geographic3D::fromSRID(Geographic3D::EPSG_WGS_84), new Degree(53.80939444), new Degree(2.12955000), new Metre(73));
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84);
         $to = $from->abridgedMolodensky($toCRS, new Metre(84.87), new Metre(96.49), new Metre(116.95), new Metre(251), new Unity(0.003367003 - 0.003352811));
 
@@ -351,7 +351,7 @@ class GeographicPointTest extends TestCase
 
     public function testGeographic2DMolodensky(): void
     {
-        $from = GeographicPoint::create(new Degree(53.80939444), new Degree(2.12955000), new Metre(73), Geographic3D::fromSRID(Geographic3D::EPSG_WGS_84));
+        $from = GeographicPoint::create(Geographic3D::fromSRID(Geographic3D::EPSG_WGS_84), new Degree(53.80939444), new Degree(2.12955000), new Metre(73));
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84);
         $to = $from->molodensky($toCRS, new Metre(84.87), new Metre(96.49), new Metre(116.95), new Metre(251), new Unity(0.003367003 - 0.003352811));
 
@@ -362,7 +362,7 @@ class GeographicPointTest extends TestCase
 
     public function testGeographic3DAbridgedMolodensky(): void
     {
-        $from = GeographicPoint::create(new Degree(53.80939444), new Degree(2.12955000), new Metre(73), Geographic3D::fromSRID(Geographic3D::EPSG_WGS_84));
+        $from = GeographicPoint::create(Geographic3D::fromSRID(Geographic3D::EPSG_WGS_84), new Degree(53.80939444), new Degree(2.12955000), new Metre(73));
         $toCRS = Geographic3D::fromSRID(Geographic3D::EPSG_WGS_84);
         $to = $from->abridgedMolodensky($toCRS, new Metre(84.87), new Metre(96.49), new Metre(116.95), new Metre(251), new Unity(0.003367003 - 0.003352811));
 
@@ -373,7 +373,7 @@ class GeographicPointTest extends TestCase
 
     public function testGeographic3DMolodensky(): void
     {
-        $from = GeographicPoint::create(new Degree(53.80939444), new Degree(2.12955000), new Metre(73), Geographic3D::fromSRID(Geographic3D::EPSG_WGS_84));
+        $from = GeographicPoint::create(Geographic3D::fromSRID(Geographic3D::EPSG_WGS_84), new Degree(53.80939444), new Degree(2.12955000), new Metre(73));
         $toCRS = Geographic3D::fromSRID(Geographic3D::EPSG_WGS_84);
         $to = $from->molodensky($toCRS, new Metre(84.87), new Metre(96.49), new Metre(116.95), new Metre(251), new Unity(0.003367003 - 0.003352811));
 
@@ -384,7 +384,7 @@ class GeographicPointTest extends TestCase
 
     public function testAlbersEqualAreaNorthHemisphere(): void
     {
-        $from = GeographicPoint::create(new Radian(0.746128255), new Radian(-1.374446786), null, Geographic2D::fromSRID(Geographic2D::EPSG_NAD83));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_NAD83), new Radian(0.746128255), new Radian(-1.374446786), null);
         $toCRS = Projected::fromSRID(Projected::EPSG_NAD83_GREAT_LAKES_ALBERS);
         $to = $from->albersEqualArea($toCRS, new Degree(45.568977), new Degree(-84.455955), new Degree(42.122774), new Degree(49.01518), new Metre(1000000), new Metre(1000000));
 
@@ -394,7 +394,7 @@ class GeographicPointTest extends TestCase
 
     public function testAlbersEqualAreaSouthHemisphere(): void
     {
-        $from = GeographicPoint::create(new Radian(-0.322895686), new Radian(-0.802858912), null, Geographic2D::fromSRID(Geographic2D::EPSG_TWD67));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_TWD67), new Radian(-0.322895686), new Radian(-0.802858912), null);
         $toCRS = Projected::fromSRID('urn:ogc:def:crs:EPSG::3827');
         $to = $from->albersEqualArea($toCRS, new Degree(-32), new Degree(-60), new Degree(-5), new Degree(-42), new Metre(0), new Metre(0));
 
@@ -404,7 +404,7 @@ class GeographicPointTest extends TestCase
 
     public function testAmericanPolyconic(): void
     {
-        $from = GeographicPoint::create(new Degree(40), new Degree(-75), null, Geographic2D::fromSRID(Geographic2D::EPSG_NAD27));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_NAD27), new Degree(40), new Degree(-75), null);
         $toCRS = Projected::fromSRID(Projected::EPSG_NAD27_ALABAMA_EAST);
         $to = $from->americanPolyconic($toCRS, new Degree(30), new Degree(-96), new Metre(10), new Metre(20));
 
@@ -414,7 +414,7 @@ class GeographicPointTest extends TestCase
 
     public function testBonneNorthOrientated(): void
     {
-        $from = GeographicPoint::create(new Degree(30), new Degree(-85), null, Geographic2D::fromSRID(Geographic2D::EPSG_NAD27));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_NAD27), new Degree(30), new Degree(-85), null);
         $toCRS = Projected::fromSRID(Projected::EPSG_NAD27_ALABAMA_EAST);
         $to = $from->bonne($toCRS, new Degree(40), new Degree(-75), new Metre(10), new Metre(20));
 
@@ -424,7 +424,7 @@ class GeographicPointTest extends TestCase
 
     public function testBonneSouthOrientated(): void
     {
-        $from = GeographicPoint::create(new Degree(30), new Degree(-85), null, Geographic2D::fromSRID(Geographic2D::EPSG_NAD27));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_NAD27), new Degree(30), new Degree(-85), null);
         $toCRS = Projected::fromSRID(Projected::EPSG_NAD27_ALABAMA_EAST);
         $to = $from->bonneSouthOrientated($toCRS, new Degree(40), new Degree(-75), new Metre(10), new Metre(20));
 
@@ -434,7 +434,7 @@ class GeographicPointTest extends TestCase
 
     public function testCassiniSoldner(): void
     {
-        $from = GeographicPoint::create(new Degree(10), new Degree(-62), null, Geographic2D::fromSRID(Geographic2D::EPSG_TRINIDAD_1903));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_TRINIDAD_1903), new Degree(10), new Degree(-62), null);
         $toCRS = Projected::fromSRID(Projected::EPSG_TRINIDAD_1903_TRINIDAD_GRID);
         $to = $from->cassiniSoldner($toCRS, new Radian(0.182241463), new Radian(-1.070468608), new ClarkeLink(430000), new ClarkeLink(325000));
 
@@ -444,7 +444,7 @@ class GeographicPointTest extends TestCase
 
     public function testColumbiaUrban(): void
     {
-        $from = GeographicPoint::create(new Radian(0.083775804), new Radian(-1.295906970), null, Geographic2D::fromSRID(Geographic2D::EPSG_MAGNA_SIRGAS));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_MAGNA_SIRGAS), new Radian(0.083775804), new Radian(-1.295906970), null);
         $toCRS = Projected::fromSRID(Projected::EPSG_MAGNA_SIRGAS_BOGOTA_URBAN_GRID);
         $to = $from->columbiaUrban($toCRS, new Radian(0.081689893), new Radian(-1.294102154), new Metre(92334.879), new Metre(109320.965), new Metre(2550));
 
@@ -454,7 +454,7 @@ class GeographicPointTest extends TestCase
 
     public function testEqualEarth(): void
     {
-        $from = GeographicPoint::create(new Radian(0.5944163293), new Radian(-2.0454693977), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Radian(0.5944163293), new Radian(-2.0454693977), null);
         $toCRS = Projected::fromSRID(Projected::EPSG_WGS_84_EQUAL_EARTH_AMERICAS);
         $to = $from->equalEarth($toCRS, new Degree(-90), new Metre(0), new Metre(0));
 
@@ -464,7 +464,7 @@ class GeographicPointTest extends TestCase
 
     public function testEquidistantCylindrical(): void
     {
-        $from = GeographicPoint::create(new Degree(55), new Degree(10), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Degree(55), new Degree(10), null);
         $toCRS = Projected::fromSRID(Projected::EPSG_WGS_84_WORLD_EQUIDISTANT_CYLINDRICAL);
         $to = $from->equidistantCylindrical($toCRS, new Degree(0), new Degree(0), new Metre(0), new Metre(0));
 
@@ -474,7 +474,7 @@ class GeographicPointTest extends TestCase
 
     public function testGuamProjection(): void
     {
-        $from = GeographicPoint::create(new Radian(0.232810140), new Radian(2.524362746), null, Geographic2D::fromSRID(Geographic2D::EPSG_GUAM_1963));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_GUAM_1963), new Radian(0.232810140), new Radian(2.524362746), null);
         $toCRS = Projected::fromSRID(Projected::EPSG_GUAM_1963_GUAM_SPCS);
         $to = $from->guamProjection($toCRS, new Radian(0.235138896), new Radian(2.526342288), new Metre(50000), new Metre(50000));
 
@@ -484,7 +484,7 @@ class GeographicPointTest extends TestCase
 
     public function testHyperbolicCassiniSoldner(): void
     {
-        $from = GeographicPoint::create(new Radian(-0.293938867), new Radian(3.141493807), null, Geographic2D::fromSRID(Geographic2D::EPSG_VANUA_LEVU_1915));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_VANUA_LEVU_1915), new Radian(-0.293938867), new Radian(3.141493807), null);
         $toCRS = Projected::fromSRID(Projected::EPSG_VANUA_LEVU_1915_VANUA_LEVU_GRID);
         $to = $from->hyperbolicCassiniSoldner($toCRS, new Radian(-0.283616003), new Radian(3.129957125), new Link(12513.318 * 100), new Link(16628.885 * 100));
 
@@ -494,7 +494,7 @@ class GeographicPointTest extends TestCase
 
     public function testGeocentricTranslation(): void
     {
-        $from = GeographicPoint::create(new Degree(38.14349028), new Degree(23.80450972), new Metre(12), Geographic3D::fromSRID(Geographic3D::EPSG_WGS_84));
+        $from = GeographicPoint::create(Geographic3D::fromSRID(Geographic3D::EPSG_WGS_84), new Degree(38.14349028), new Degree(23.80450972), new Metre(12));
         $toCRS = Geographic3D::fromSRID(Geographic3D::EPSG_WGS_84);
         $to = $from->geocentricTranslation($toCRS, new Metre(84.87), new Metre(96.49), new Metre(116.95));
 
@@ -505,7 +505,7 @@ class GeographicPointTest extends TestCase
 
     public function testKrovak(): void
     {
-        $from = GeographicPoint::create(new Degree(50.20901167), new Degree(16.84977194), null, Geographic2D::fromSRID(Geographic2D::EPSG_S_JTSK));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_S_JTSK), new Degree(50.20901167), new Degree(16.84977194), null);
         $toCRS = Projected::fromSRID(Projected::EPSG_S_JTSK_FERRO_KROVAK);
         $to = $from->krovak($toCRS, new Radian(0.863937979), new Radian(0.741764932), new Radian(0.528627763), new Radian(1.370083463), new Coefficient(0.9999), new Metre(0), new Metre(0));
 
@@ -515,7 +515,7 @@ class GeographicPointTest extends TestCase
 
     public function testKrovakNorthOrientated(): void
     {
-        $from = GeographicPoint::create(new Degree(50.20901167), new Degree(16.84977194), null, Geographic2D::fromSRID(Geographic2D::EPSG_S_JTSK));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_S_JTSK), new Degree(50.20901167), new Degree(16.84977194), null);
         $toCRS = Projected::fromSRID(Projected::EPSG_S_JTSK_FERRO_KROVAK_EAST_NORTH);
         $to = $from->krovak($toCRS, new Radian(0.863937979), new Radian(0.741764932), new Radian(0.528627763), new Radian(1.370083463), new Coefficient(0.9999), new Metre(0), new Metre(0));
 
@@ -525,7 +525,7 @@ class GeographicPointTest extends TestCase
 
     public function testKrovakModified(): void
     {
-        $from = GeographicPoint::create(new Degree(50.20901167), new Degree(16.84977194), null, Geographic2D::fromSRID(Geographic2D::EPSG_S_JTSK_05));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_S_JTSK_05), new Degree(50.20901167), new Degree(16.84977194), null);
         $toCRS = Projected::fromSRID(Projected::EPSG_S_JTSK_05_FERRO_MODIFIED_KROVAK);
         $to = $from->krovakModified($toCRS, new Radian(0.863937979), new Radian(0.741764932), new Radian(0.528627763), new Radian(1.370083463), new Coefficient(0.9999), new Metre(5000000), new Metre(5000000), new Metre(1089000), new Metre(654000), new Coefficient(2.946529277E-02), new Coefficient(2.515965696E-02), new Coefficient(1.193845912E-07), new Coefficient(-4.668270147E-07), new Coefficient(9.233980362E-12), new Coefficient(1.523735715E-12), new Coefficient(1.696780024E-18), new Coefficient(4.408314235E-18), new Coefficient(-8.331083518E-24), new Coefficient(-3.689471323E-24));
 
@@ -535,7 +535,7 @@ class GeographicPointTest extends TestCase
 
     public function testKrovakModifiedNorthOrientated(): void
     {
-        $from = GeographicPoint::create(new Degree(50.20901167), new Degree(16.84977194), null, Geographic2D::fromSRID(Geographic2D::EPSG_S_JTSK_05));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_S_JTSK_05), new Degree(50.20901167), new Degree(16.84977194), null);
         $toCRS = Projected::fromSRID(Projected::EPSG_S_JTSK_05_FERRO_MODIFIED_KROVAK_EAST_NORTH);
         $to = $from->krovakModified($toCRS, new Radian(0.863937979), new Radian(0.741764932), new Radian(0.528627763), new Radian(1.370083463), new Coefficient(0.9999), new Metre(5000000), new Metre(5000000), new Metre(1089000), new Metre(654000), new Coefficient(2.946529277E-02), new Coefficient(2.515965696E-02), new Coefficient(1.193845912E-07), new Coefficient(-4.668270147E-07), new Coefficient(9.233980362E-12), new Coefficient(1.523735715E-12), new Coefficient(1.696780024E-18), new Coefficient(4.408314235E-18), new Coefficient(-8.331083518E-24), new Coefficient(-3.689471323E-24));
 
@@ -545,7 +545,7 @@ class GeographicPointTest extends TestCase
 
     public function testLambertAzimuthalEqualArea(): void
     {
-        $from = GeographicPoint::create(new Degree(50), new Degree(5), null, Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89), new Degree(50), new Degree(5), null);
         $toCRS = Projected::fromSRID(Projected::EPSG_ETRS89_EXTENDED_LAEA_EUROPE);
         $to = $from->lambertAzimuthalEqualArea($toCRS, new Degree(52), new Degree(10), new Metre(4321000), new Metre(3210000));
 
@@ -569,7 +569,7 @@ class GeographicPointTest extends TestCase
             ),
             BoundingArea::createWorld()
         );
-        $from = GeographicPoint::create(new Degree(-20), new Degree(100), null, $fromCRS);
+        $from = GeographicPoint::create($fromCRS, new Degree(-20), new Degree(100), null);
 
         $toCRS = Projected::fromSRID(Projected::EPSG_ETRS89_EXTENDED_LAEA_EUROPE);
         $to = $from->lambertAzimuthalEqualAreaSpherical($toCRS, new Degree(40), new Degree(-100), new Metre(1), new Metre(2));
@@ -580,7 +580,7 @@ class GeographicPointTest extends TestCase
 
     public function testLambertConicConformal1SP(): void
     {
-        $from = GeographicPoint::create(new Radian(0.31297535), new Radian(-1.34292061), null, Geographic2D::fromSRID(Geographic2D::EPSG_JAD69));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_JAD69), new Radian(0.31297535), new Radian(-1.34292061), null);
         $toCRS = Projected::fromSRID(Projected::EPSG_JAD69_JAMAICA_NATIONAL_GRID);
         $to = $from->lambertConicConformal1SP($toCRS, new Degree(18), new Degree(-77), new Coefficient(1), new Metre(250000), new Metre(150000));
 
@@ -590,7 +590,7 @@ class GeographicPointTest extends TestCase
 
     public function testLambertConicConformal2SP(): void
     {
-        $from = GeographicPoint::create(new Radian(0.49741884), new Radian(-1.67551608), null, Geographic2D::fromSRID(Geographic2D::EPSG_NAD27));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_NAD27), new Radian(0.49741884), new Radian(-1.67551608), null);
         $toCRS = Projected::fromSRID(Projected::EPSG_NAD27_TEXAS_SOUTH_CENTRAL);
         $to = $from->lambertConicConformal2SP($toCRS, new Radian(0.48578331), new Radian(-1.72787596), new Radian(0.49538262), new Radian(0.52854388), new USSurveyFoot(2000000), new Metre(0));
 
@@ -600,7 +600,7 @@ class GeographicPointTest extends TestCase
 
     public function testLambertConicConformal2SPMichigan(): void
     {
-        $from = GeographicPoint::create(new Radian(0.763581548), new Radian(-1.451532161), null, Geographic2D::fromSRID(Geographic2D::EPSG_NAD27));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_NAD27), new Radian(0.763581548), new Radian(-1.451532161), null);
         $toCRS = Projected::fromSRID(Projected::EPSG_NAD27_MICHIGAN_CENTRAL);
         $to = $from->lambertConicConformal2SPMichigan($toCRS, new Radian(0.756018454), new Radian(-1.471894336), new Radian(0.771144641), new Radian(0.797615468), new USSurveyFoot(2000000), new Metre(0), new Coefficient(1.0000382));
 
@@ -610,7 +610,7 @@ class GeographicPointTest extends TestCase
 
     public function testLambertConicConformal2SPBelgium(): void
     {
-        $from = GeographicPoint::create(new Radian(0.88452540), new Radian(0.10135773), null, Geographic2D::fromSRID(Geographic2D::EPSG_BD72));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_BD72), new Radian(0.88452540), new Radian(0.10135773), null);
         $toCRS = Projected::fromSRID(Projected::EPSG_BD72_BELGE_LAMBERT_72);
         $to = $from->lambertConicConformal2SPBelgium($toCRS, new Radian(1.57079633), new Radian(0.07604294), new Radian(0.86975574), new Radian(0.89302680), new Metre(150000.01), new Metre(5400088.44));
 
@@ -620,7 +620,7 @@ class GeographicPointTest extends TestCase
 
     public function testLambertConicNearConformal(): void
     {
-        $from = GeographicPoint::create(new Radian(0.654874806), new Radian(0.595793792), null, Geographic2D::fromSRID(Geographic2D::EPSG_DEIR_EZ_ZOR));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_DEIR_EZ_ZOR), new Radian(0.654874806), new Radian(0.595793792), null);
         $toCRS = Projected::fromSRID(Projected::EPSG_DEIR_EZ_ZOR_LEVANT_ZONE);
         $to = $from->lambertConicNearConformal($toCRS, new Radian(0.604756586), new Radian(0.651880476), new Coefficient(0.99962560), new Metre(300000), new Metre(300000));
 
@@ -630,7 +630,7 @@ class GeographicPointTest extends TestCase
 
     public function testLambertCylindricalEqualArea(): void
     {
-        $from = GeographicPoint::create(new Degree(10), new Degree(-78), null, Geographic2D::fromSRID(Geographic2D::EPSG_NAD27));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_NAD27), new Degree(10), new Degree(-78), null);
         $toCRS = Projected::fromSRID(Projected::EPSG_NAD27_ALABAMA_EAST);
         $to = $from->lambertCylindricalEqualArea($toCRS, new Degree(5), new Degree(-75), new Metre(0), new Metre(0));
 
@@ -640,7 +640,7 @@ class GeographicPointTest extends TestCase
 
     public function testThreeDToTwoD(): void
     {
-        $from = GeographicPoint::create(new Degree(0.123), new Degree(0.456), new Metre(789), Geographic3D::fromSRID(Geographic3D::EPSG_WGS_84));
+        $from = GeographicPoint::create(Geographic3D::fromSRID(Geographic3D::EPSG_WGS_84), new Degree(0.123), new Degree(0.456), new Metre(789));
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84);
         $to = $from->threeDToTwoD($toCRS);
 
@@ -651,7 +651,7 @@ class GeographicPointTest extends TestCase
 
     public function testModifiedAzimuthalEquidistant(): void
     {
-        $from = GeographicPoint::create(new Radian(0.167490973), new Radian(2.411923377), null, Geographic2D::fromSRID(Geographic2D::EPSG_GUAM_1963));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_GUAM_1963), new Radian(0.167490973), new Radian(2.411923377), null);
         $toCRS = Projected::fromSRID(Projected::EPSG_GUAM_1963_YAP_ISLANDS);
         $to = $from->modifiedAzimuthalEquidistant($toCRS, new Radian(0.166621493), new Radian(2.411499514), new Metre(40000), new Metre(60000));
 
@@ -661,7 +661,7 @@ class GeographicPointTest extends TestCase
 
     public function testObliqueStereographic(): void
     {
-        $from = GeographicPoint::create(new Degree(53), new Degree(6), null, Geographic2D::fromSRID(Geographic2D::EPSG_AMERSFOORT));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_AMERSFOORT), new Degree(53), new Degree(6), null);
         $toCRS = Projected::fromSRID(Projected::EPSG_AMERSFOORT_RD_NEW);
         $to = $from->obliqueStereographic($toCRS, new Radian(0.910296727), new Radian(0.094032038), new Coefficient(0.9999079), new Metre(155000), new Metre(463000));
 
@@ -671,7 +671,7 @@ class GeographicPointTest extends TestCase
 
     public function testPolarStereographicVariantA(): void
     {
-        $from = GeographicPoint::create(new Degree(73), new Degree(44), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Degree(73), new Degree(44), null);
         $toCRS = Projected::fromSRID(Projected::EPSG_WGS_84_UPS_NORTH_E_N);
         $to = $from->polarStereographicVariantA($toCRS, new Degree(90), new Degree(0), new Coefficient(0.994), new Metre(2000000), new Metre(2000000));
 
@@ -681,7 +681,7 @@ class GeographicPointTest extends TestCase
 
     public function testPolarStereographicVariantB(): void
     {
-        $from = GeographicPoint::create(new Degree(-75), new Degree(120), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Degree(-75), new Degree(120), null);
         $toCRS = Projected::fromSRID(Projected::EPSG_WGS_84_AUSTRALIAN_ANTARCTIC_POLAR_STEREOGRAPHIC);
         $to = $from->polarStereographicVariantB($toCRS, new Degree(-71), new Degree(70), new Metre(6000000), new Metre(6000000));
 
@@ -691,7 +691,7 @@ class GeographicPointTest extends TestCase
 
     public function testPolarStereographicVariantC(): void
     {
-        $from = GeographicPoint::create(new Radian(-1.162480524), new Radian(2.444707118), null, Geographic2D::fromSRID(Geographic2D::EPSG_PETRELS_1972));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_PETRELS_1972), new Radian(-1.162480524), new Radian(2.444707118), null);
         $toCRS = Projected::fromSRID(Projected::EPSG_PETRELS_1972_TERRE_ADELIE_POLAR_STEREOGRAPHIC);
         $to = $from->polarStereographicVariantC($toCRS, new Degree(-67), new Degree(140), new Metre(300000), new Metre(200000));
 
@@ -701,7 +701,7 @@ class GeographicPointTest extends TestCase
 
     public function testPopularVisualisationPseudoMercator(): void
     {
-        $from = GeographicPoint::create(new Radian(0.425542460), new Radian(-1.751147016), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Radian(0.425542460), new Radian(-1.751147016), null);
         $toCRS = Projected::fromSRID(Projected::EPSG_WGS_84_PSEUDO_MERCATOR);
         $to = $from->popularVisualisationPseudoMercator($toCRS, new Degree(0), new Degree(0), new Metre(0), new Metre(0));
 
@@ -711,7 +711,7 @@ class GeographicPointTest extends TestCase
 
     public function testMercatorVariantA(): void
     {
-        $from = GeographicPoint::create(new Degree(-3), new Degree(120), null, Geographic2D::fromSRID(Geographic2D::EPSG_MAKASSAR));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_MAKASSAR), new Degree(-3), new Degree(120), null);
         $toCRS = Projected::fromSRID(Projected::EPSG_MAKASSAR_NEIEZ);
         $to = $from->mercatorVariantA($toCRS, new Degree(0), new Degree(110), new Unity(0.997), new Metre(3900000), new Metre(900000));
 
@@ -721,7 +721,7 @@ class GeographicPointTest extends TestCase
 
     public function testMercatorVariantB(): void
     {
-        $from = GeographicPoint::create(new Degree(53), new Degree(53), null, Geographic2D::fromSRID(Geographic2D::EPSG_PULKOVO_1942));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_PULKOVO_1942), new Degree(53), new Degree(53), null);
         $toCRS = Projected::fromSRID(Projected::EPSG_PULKOVO_1942_CASPIAN_SEA_MERCATOR);
         $to = $from->mercatorVariantB($toCRS, new Degree(42), new Degree(51), new Metre(0), new Metre(0));
 
@@ -731,7 +731,7 @@ class GeographicPointTest extends TestCase
 
     public function testGeographic2DOffset(): void
     {
-        $from = GeographicPoint::create(new Degree(38.14349028), new Degree(23.80450972), null, Geographic2D::fromSRID(Geographic2D::EPSG_GREEK));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_GREEK), new Degree(38.14349028), new Degree(23.80450972), null);
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_GGRS87);
         $to = $from->geographic2DOffsets($toCRS, new ArcSecond(-5.86), new ArcSecond(0.28));
 
@@ -742,7 +742,7 @@ class GeographicPointTest extends TestCase
 
     public function testLongitudeRotation(): void
     {
-        $from = GeographicPoint::create(new Degree(0), new Degree(0), new Metre(0), Geographic3D::fromSRID(Geographic3D::EPSG_WGS_84));
+        $from = GeographicPoint::create(Geographic3D::fromSRID(Geographic3D::EPSG_WGS_84), new Degree(0), new Degree(0), new Metre(0));
         $toCRS = Geographic3D::fromSRID(Geographic3D::EPSG_WGS_84);
         $to = $from->longitudeRotation($toCRS, new Degree(12.34));
 
@@ -753,7 +753,7 @@ class GeographicPointTest extends TestCase
 
     public function testObliqueMercatorHotineVariantA(): void
     {
-        $from = GeographicPoint::create(new Radian(0.094025313), new Radian(2.021187362), null, Geographic2D::fromSRID(Geographic2D::EPSG_TIMBALAI_1948));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_TIMBALAI_1948), new Radian(0.094025313), new Radian(2.021187362), null);
         $toCRS = Projected::fromSRID(Projected::EPSG_TIMBALAI_1948_RSO_BORNEO_M);
         $to = $from->obliqueMercatorHotineVariantA($toCRS, new Radian(0.069813170), new Radian(2.007128640), new Radian(0.930536611), new Radian(0.927295218), new Coefficient(0.99984), new Metre(0), new Metre(0));
 
@@ -763,7 +763,7 @@ class GeographicPointTest extends TestCase
 
     public function testObliqueMercatorHotineVariantB(): void
     {
-        $from = GeographicPoint::create(new Radian(0.094025313), new Radian(2.021187362), null, Geographic2D::fromSRID(Geographic2D::EPSG_TIMBALAI_1948));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_TIMBALAI_1948), new Radian(0.094025313), new Radian(2.021187362), null);
         $toCRS = Projected::fromSRID(Projected::EPSG_TIMBALAI_1948_RSO_BORNEO_M);
         $to = $from->obliqueMercatorHotineVariantB($toCRS, new Radian(0.069813170), new Radian(2.007128640), new Radian(0.930536611), new Radian(0.927295218), new Coefficient(0.99984), new Metre(590476.87), new Metre(442857.65));
 
@@ -773,7 +773,7 @@ class GeographicPointTest extends TestCase
 
     public function testTransverseMercator(): void
     {
-        $from = GeographicPoint::create(new Degree(51.5), new Degree(0.5), null, Geographic2D::fromSRID(Geographic2D::EPSG_OSGB36));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_OSGB36), new Degree(51.5), new Degree(0.5), null);
         $toCRS = Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID);
         $to = $from->transverseMercator($toCRS, new Degree(49), new Degree(-2), new Unity(0.9996012717), new Metre(400000), new Metre(-100000));
 
@@ -783,7 +783,7 @@ class GeographicPointTest extends TestCase
 
     public function testTransverseMercatorSouthOrientated(): void
     {
-        $from = GeographicPoint::create(new Radian(-0.449108618), new Radian(0.493625066), null, Geographic2D::fromSRID(Geographic2D::EPSG_HARTEBEESTHOEK94));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_HARTEBEESTHOEK94), new Radian(-0.449108618), new Radian(0.493625066), null);
         $toCRS = Projected::fromSRID(Projected::EPSG_HARTEBEESTHOEK94_LO29);
         $to = $from->transverseMercator($toCRS, new Degree(0), new Degree(29), new Unity(1), new Metre(0), new Metre(0));
 
@@ -793,7 +793,7 @@ class GeographicPointTest extends TestCase
 
     public function testTransverseMercatorZonedGridNorthernHemisphere(): void
     {
-        $from = GeographicPoint::create(new Degree(43.642567), new Degree(-79.387139), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Degree(43.642567), new Degree(-79.387139), null);
         $toCRS = Projected::fromSRID(Projected::EPSG_WGS_84_UTM_GRID_SYSTEM_NORTHERN_HEMISPHERE);
         $to = $from->transverseMercatorZonedGrid($toCRS, new Degree(0), new Degree(-180), new Degree(6), new Unity(0.9996), new Metre(500000), new Metre(0));
 
@@ -803,7 +803,7 @@ class GeographicPointTest extends TestCase
 
     public function testTransverseMercatorZonedGridSouthernHemisphere(): void
     {
-        $from = GeographicPoint::create(new Degree(-33.859972), new Degree(151.211111), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Degree(-33.859972), new Degree(151.211111), null);
         $toCRS = Projected::fromSRID(Projected::EPSG_WGS_84_UTM_GRID_SYSTEM_SOUTHERN_HEMISPHERE);
         $to = $from->transverseMercatorZonedGrid($toCRS, new Degree(0), new Degree(-180), new Degree(6), new Unity(0.9996), new Metre(500000), new Metre(10000000));
 
@@ -813,7 +813,7 @@ class GeographicPointTest extends TestCase
 
     public function testAsUTMPointNorthernHemisphere(): void
     {
-        $from = GeographicPoint::create(new Degree(43.642567), new Degree(-79.387139), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Degree(43.642567), new Degree(-79.387139), null);
         $to = $from->asUTMPoint();
 
         self::assertEqualsWithDelta(630084, $to->getEasting()->asMetres()->getValue(), 1);
@@ -825,7 +825,7 @@ class GeographicPointTest extends TestCase
 
     public function testAsUTMPointSouthernHemisphere(): void
     {
-        $from = GeographicPoint::create(new Degree(-33.859972), new Degree(151.211111), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Degree(-33.859972), new Degree(151.211111), null);
         $to = $from->asUTMPoint();
 
         self::assertEqualsWithDelta(334519, $to->getEasting()->asMetres()->getValue(), 1);
@@ -837,7 +837,7 @@ class GeographicPointTest extends TestCase
 
     public function testGeneralPolynomial(): void
     {
-        $from = GeographicPoint::create(new Degree(55), new Degree(-6.5), null, Geographic2D::fromSRID(Geographic2D::EPSG_TM75));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_TM75), new Degree(55), new Degree(-6.5), null);
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89);
         $to = $from->generalPolynomial(
             $toCRS,
@@ -889,7 +889,7 @@ class GeographicPointTest extends TestCase
 
     public function testReversiblePolynomialForward(): void
     {
-        $from = GeographicPoint::create(new Degree(52.508333333), new Degree(2), null, Geographic2D::fromSRID(Geographic2D::EPSG_ED50));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_ED50), new Degree(52.508333333), new Degree(2), null);
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_ED87);
         $to = $from->reversiblePolynomial(
             $toCRS,
@@ -936,7 +936,7 @@ class GeographicPointTest extends TestCase
 
     public function testReversiblePolynomialBackward(): void
     {
-        $from = GeographicPoint::create(new Degree(52.508330203), new Degree(2.000009801), null, Geographic2D::fromSRID(Geographic2D::EPSG_ED87));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_ED87), new Degree(52.508330203), new Degree(2.000009801), null);
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_ED50);
         $to = $from->reversiblePolynomial(
             $toCRS,
@@ -983,7 +983,7 @@ class GeographicPointTest extends TestCase
 
     public function testNewZealandMapGrid1(): void
     {
-        $from = GeographicPoint::create(new Degree(-34.444066), new Degree(172.739194), null, Geographic2D::fromSRID(Geographic2D::EPSG_NZGD49));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_NZGD49), new Degree(-34.444066), new Degree(172.739194), null);
         $toCRS = Projected::fromSRID(Projected::EPSG_NZGD49_NEW_ZEALAND_MAP_GRID);
         $to = $from->newZealandMapGrid($toCRS, new Degree(-41), new Degree(173), new Metre(2510000), new Metre(6023150));
 
@@ -993,7 +993,7 @@ class GeographicPointTest extends TestCase
 
     public function testNewZealandMapGrid2(): void
     {
-        $from = GeographicPoint::create(new Degree(-40.512409), new Degree(172.723106), null, Geographic2D::fromSRID(Geographic2D::EPSG_NZGD49));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_NZGD49), new Degree(-40.512409), new Degree(172.723106), null);
         $toCRS = Projected::fromSRID(Projected::EPSG_NZGD49_NEW_ZEALAND_MAP_GRID);
         $to = $from->newZealandMapGrid($toCRS, new Degree(-41), new Degree(173), new Metre(2510000), new Metre(6023150));
 
@@ -1003,7 +1003,7 @@ class GeographicPointTest extends TestCase
 
     public function testNewZealandMapGrid3(): void
     {
-        $from = GeographicPoint::create(new Degree(-46.651295), new Degree(169.172062), null, Geographic2D::fromSRID(Geographic2D::EPSG_NZGD49));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_NZGD49), new Degree(-46.651295), new Degree(169.172062), null);
         $toCRS = Projected::fromSRID(Projected::EPSG_NZGD49_NEW_ZEALAND_MAP_GRID);
         $to = $from->newZealandMapGrid($toCRS, new Degree(-41), new Degree(173), new Metre(2510000), new Metre(6023150));
 
@@ -1013,7 +1013,7 @@ class GeographicPointTest extends TestCase
 
     public function testObliqueMercatorLaborde(): void
     {
-        $from = GeographicPoint::create(new Radian(-0.282565315), new Radian(0.735138668), null, Geographic2D::fromSRID(Geographic2D::EPSG_TANANARIVE_PARIS));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_TANANARIVE_PARIS), new Radian(-0.282565315), new Radian(0.735138668), null);
         $toCRS = Projected::fromSRID(Projected::EPSG_TANANARIVE_PARIS_LABORDE_GRID);
         $to = $from->obliqueMercatorLaborde($toCRS, new Grad(-21), new Grad(49), new Grad(21), new Unity(0.9995), new Metre(400000), new Metre(800000));
 
@@ -1023,7 +1023,7 @@ class GeographicPointTest extends TestCase
 
     public function testMadridToED50Polynomial(): void
     {
-        $from = GeographicPoint::create(new Degree(42.647992), new Degree(3.659603), null, Geographic2D::fromSRID(Geographic2D::EPSG_MADRID_1870_MADRID));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_MADRID_1870_MADRID), new Degree(42.647992), new Degree(3.659603), null);
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_ED50);
         $to = $from->madridToED50Polynomial($toCRS, new Coefficient(11.328779), new Coefficient(-0.1674), new Coefficient(-0.03852), new Coefficient(0.0000379), new ArcSecond(-13276.58), new Coefficient(2.5079425), new Coefficient(0.08352), new Coefficient(-0.00864), new Coefficient(-0.0000038));
 
@@ -1036,7 +1036,7 @@ class GeographicPointTest extends TestCase
         if (!class_exists(OSTN15OSGM15Provider::class)) {
             self::markTestSkipped('Requires phpcoord/datapack-europe');
         }
-        $from = GeographicPoint::create(new Degree(52.658007833), new Degree(1.716073972), null, Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89), new Degree(52.658007833), new Degree(1.716073972), null);
         $toCRS = Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID);
         $to = $from->OSTN15($toCRS, (new OSTN15OSGM15Provider())->provideGrid());
 
@@ -1049,7 +1049,7 @@ class GeographicPointTest extends TestCase
         if (!class_exists(NADCON5NAD83FBNNAD832007CONUSLatitudeProvider::class)) {
             self::markTestSkipped('Requires phpcoord/datapack-northamerica');
         }
-        $from = GeographicPoint::create(new Degree(43.7737469611), new Degree(-99.3189543667), new Metre(100), Geographic3D::fromSRID(Geographic3D::EPSG_NAD83_FBN));
+        $from = GeographicPoint::create(Geographic3D::fromSRID(Geographic3D::EPSG_NAD83_FBN), new Degree(43.7737469611), new Degree(-99.3189543667), new Metre(100));
         $toCRS = Geographic3D::fromSRID(Geographic3D::EPSG_NAD83_NSRS2007);
         $to = $from->offsetsFromGridNADCON5(
             $toCRS,
@@ -1069,7 +1069,7 @@ class GeographicPointTest extends TestCase
         if (!class_exists(NADCON5NAD83FBNNAD832007CONUSLatitudeProvider::class)) {
             self::markTestSkipped('Requires phpcoord/datapack-northamerica');
         }
-        $from = GeographicPoint::create(new Degree(43.7737471044), new Degree(-99.3189544237), new Metre(100.005), Geographic3D::fromSRID(Geographic3D::EPSG_NAD83_FBN));
+        $from = GeographicPoint::create(Geographic3D::fromSRID(Geographic3D::EPSG_NAD83_FBN), new Degree(43.7737471044), new Degree(-99.3189544237), new Metre(100.005));
         $toCRS = Geographic3D::fromSRID(Geographic3D::EPSG_NAD83_NSRS2007);
         $to = $from->offsetsFromGridNADCON5(
             $toCRS,
@@ -1089,7 +1089,7 @@ class GeographicPointTest extends TestCase
         if (!class_exists(NADCON5NAD83FBNNAD832007CONUSLatitudeProvider::class)) {
             self::markTestSkipped('Requires phpcoord/datapack-northamerica');
         }
-        $from = GeographicPoint::create(new Degree(43.7737469611), new Degree(-99.3189543667), null, Geographic2D::fromSRID(Geographic2D::EPSG_NAD83_FBN));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_NAD83_FBN), new Degree(43.7737469611), new Degree(-99.3189543667), null);
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_NAD83_NSRS2007);
         $to = $from->offsetsFromGridNADCON5(
             $toCRS,
@@ -1109,7 +1109,7 @@ class GeographicPointTest extends TestCase
         if (!class_exists(NADCON5NAD83FBNNAD832007CONUSLatitudeProvider::class)) {
             self::markTestSkipped('Requires phpcoord/datapack-northamerica');
         }
-        $from = GeographicPoint::create(new Degree(43.7737471044), new Degree(-99.3189544237), null, Geographic2D::fromSRID(Geographic2D::EPSG_NAD83_FBN));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_NAD83_FBN), new Degree(43.7737471044), new Degree(-99.3189544237), null);
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_NAD83_NSRS2007);
         $to = $from->offsetsFromGridNADCON5(
             $toCRS,
@@ -1129,7 +1129,7 @@ class GeographicPointTest extends TestCase
         if (!class_exists(NADCON5NAD27NAD831986CONUSLatitudeProvider::class)) {
             self::markTestSkipped('Requires phpcoord/datapack-northamerica');
         }
-        $from = GeographicPoint::create(new Degree(40.689247), new Degree(-74.044502), null, Geographic2D::fromSRID(Geographic2D::EPSG_NAD27));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_NAD27), new Degree(40.689247), new Degree(-74.044502), null);
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_NAD83);
         $to = $from->offsetsFromGridNADCON5(
             $toCRS,
@@ -1149,7 +1149,7 @@ class GeographicPointTest extends TestCase
         if (!class_exists(NADCON5NAD27NAD831986CONUSLatitudeProvider::class)) {
             self::markTestSkipped('Requires phpcoord/datapack-northamerica');
         }
-        $from = GeographicPoint::create(new Degree(40.6893492339), new Degree(-74.0440875374), null, Geographic2D::fromSRID(Geographic2D::EPSG_NAD27));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_NAD27), new Degree(40.6893492339), new Degree(-74.0440875374), null);
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_NAD83);
         $to = $from->offsetsFromGridNADCON5(
             $toCRS,
@@ -1169,7 +1169,7 @@ class GeographicPointTest extends TestCase
         if (!class_exists(NTv2NAD27NAD83CanadaProvider::class)) {
             self::markTestSkipped('Requires phpcoord/datapack-northamerica');
         }
-        $from = GeographicPoint::create(new Degree(50.8713458), new Degree(-114.2934808), null, Geographic2D::fromSRID(Geographic2D::EPSG_NAD27));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_NAD27), new Degree(50.8713458), new Degree(-114.2934808), null);
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_NAD83);
         $to = $from->offsetsFromGrid(
             $toCRS,
@@ -1187,7 +1187,7 @@ class GeographicPointTest extends TestCase
         if (!class_exists(NTv2NAD27NAD83CanadaProvider::class)) {
             self::markTestSkipped('Requires phpcoord/datapack-northamerica');
         }
-        $from = GeographicPoint::create(new Degree(50.871401224), new Degree(-114.294481160), null, Geographic2D::fromSRID(Geographic2D::EPSG_NAD83));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_NAD83), new Degree(50.871401224), new Degree(-114.294481160), null);
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_NAD27);
         $to = $from->offsetsFromGrid(
             $toCRS,
@@ -1205,7 +1205,7 @@ class GeographicPointTest extends TestCase
         if (!class_exists(NTv2AGD66GDA94AustraliaProvider::class)) {
             self::markTestSkipped('Requires phpcoord/oceania');
         }
-        $from = GeographicPoint::create(new Degree(-29.05000000), new Degree(120.84722222), null, Geographic2D::fromSRID(Geographic2D::EPSG_AGD66));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_AGD66), new Degree(-29.05000000), new Degree(120.84722222), null);
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_GDA94);
         $to = $from->offsetsFromGrid(
             $toCRS,
@@ -1223,7 +1223,7 @@ class GeographicPointTest extends TestCase
         if (!class_exists(NTv2AGD66GDA94AustraliaProvider::class)) {
             self::markTestSkipped('Requires phpcoord/oceania');
         }
-        $from = GeographicPoint::create(new Degree(-29.04869025), new Degree(120.84864381), null, Geographic2D::fromSRID(Geographic2D::EPSG_AGD66));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_AGD66), new Degree(-29.04869025), new Degree(120.84864381), null);
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_GDA94);
         $to = $from->offsetsFromGrid(
             $toCRS,
@@ -1241,7 +1241,7 @@ class GeographicPointTest extends TestCase
         if (!class_exists(IGNFGeocentricTranslationNTFRGF93Provider::class)) {
             self::markTestSkipped('Requires phpcoord/europe');
         }
-        $from = GeographicPoint::create(new Degree(48.84451225), new Degree(2.42567186), null, Geographic2D::fromSRID(Geographic2D::EPSG_NTF));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_NTF), new Degree(48.84451225), new Degree(2.42567186), null);
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_RGF93_V1);
         $to = $from->offsetsFromGrid(
             $toCRS,
@@ -1259,7 +1259,7 @@ class GeographicPointTest extends TestCase
         if (!class_exists(IGNFGeocentricTranslationNTFRGF93Provider::class)) {
             self::markTestSkipped('Requires phpcoord/europe');
         }
-        $from = GeographicPoint::create(new Degree(48.844445839), new Degree(2.424971108), null, Geographic2D::fromSRID(Geographic2D::EPSG_RGF93_V1));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_RGF93_V1), new Degree(48.844445839), new Degree(2.424971108), null);
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_NTF);
         $to = $from->offsetsFromGrid(
             $toCRS,
@@ -1277,7 +1277,7 @@ class GeographicPointTest extends TestCase
         if (!class_exists(IGNFGeocentricTranslationNEA74NoumeaRGNC9193Provider::class)) {
             self::markTestSkipped('Requires phpcoord/oceania');
         }
-        $from = GeographicPoint::create(new Degree(-22.268889), new Degree(166.419444), null, Geographic2D::fromSRID(Geographic2D::EPSG_NEA74_NOUMEA));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_NEA74_NOUMEA), new Degree(-22.268889), new Degree(166.419444), null);
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_RGNC91_93);
         $to = $from->offsetsFromGrid(
             $toCRS,
@@ -1295,7 +1295,7 @@ class GeographicPointTest extends TestCase
         if (!class_exists(IGNFGeocentricTranslationNEA74NoumeaRGNC9193Provider::class)) {
             self::markTestSkipped('Requires phpcoord/oceania');
         }
-        $from = GeographicPoint::create(new Degree(-22.26612898), new Degree(166.42277652), null, Geographic2D::fromSRID(Geographic2D::EPSG_RGNC91_93));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_RGNC91_93), new Degree(-22.26612898), new Degree(166.42277652), null);
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_NEA74_NOUMEA);
         $to = $from->offsetsFromGrid(
             $toCRS,
@@ -1313,7 +1313,7 @@ class GeographicPointTest extends TestCase
         if (!class_exists(IGNFGeocentricTranslationIGN72GrandeTerreRGNC9193Provider::class)) {
             self::markTestSkipped('Requires phpcoord/oceania');
         }
-        $from = GeographicPoint::create(new Degree(-22.268889), new Degree(166.419444), null, Geographic2D::fromSRID(Geographic2D::EPSG_IGN72_GRANDE_TERRE));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_IGN72_GRANDE_TERRE), new Degree(-22.268889), new Degree(166.419444), null);
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_RGNC91_93);
         $to = $from->offsetsFromGrid(
             $toCRS,

@@ -46,7 +46,7 @@ class VerticalPoint extends Point
      * Constructor.
      * @param Length $height refer to CRS for preferred unit of measure, but any length unit accepted
      */
-    protected function __construct(Length $height, Vertical $crs, ?DateTimeInterface $epoch = null)
+    protected function __construct(Vertical $crs, Length $height, ?DateTimeInterface $epoch = null)
     {
         $this->height = $height::convert($height, $crs->getCoordinateSystem()->getAxes()[0]->getUnitOfMeasureId());
         $this->crs = $crs;
@@ -61,9 +61,9 @@ class VerticalPoint extends Point
      * Constructor.
      * @param Length $height refer to CRS for preferred unit of measure, but any length unit accepted
      */
-    public static function create(Length $height, Vertical $crs, ?DateTimeInterface $epoch = null): self
+    public static function create(Vertical $crs, Length $height, ?DateTimeInterface $epoch = null): self
     {
-        return new static($height, $crs, $epoch);
+        return new static($crs, $height, $epoch);
     }
 
     public function getHeight(): Length
@@ -105,7 +105,7 @@ class VerticalPoint extends Point
         Vertical $to,
         Length $verticalOffset
     ): self {
-        return static::create($this->height->add($verticalOffset), $to);
+        return static::create($to, $this->height->add($verticalOffset));
     }
 
     /**
@@ -138,7 +138,7 @@ class VerticalPoint extends Point
         $longitudeTerm = new Metre($inclinationInLongitude->asRadians()->getValue() * $nuOrigin * ($longitude - $longitudeOrigin) * cos($latitude));
         $newVerticalHeight = $this->getHeight()->add($verticalOffset)->add($latitudeTerm)->add($longitudeTerm);
 
-        return self::create($newVerticalHeight, $to);
+        return self::create($to, $newVerticalHeight);
     }
 
     /**
@@ -147,7 +147,7 @@ class VerticalPoint extends Point
     public function heightDepthReversal(
         Vertical $to
     ): self {
-        return static::create($this->height->multiply(-1), $to);
+        return static::create($to, $this->height->multiply(-1));
     }
 
     /**
@@ -157,7 +157,7 @@ class VerticalPoint extends Point
         Vertical $to
     ): self {
         // units are auto-converted, don't need to use the supplied param
-        return static::create($this->height, $to, $this->epoch);
+        return static::create($to, $this->height, $this->epoch);
     }
 
     /**
@@ -177,7 +177,7 @@ class VerticalPoint extends Point
             $delta = $delta->multiply(-1);
         }
 
-        return static::create($this->height->add($delta), $to);
+        return static::create($to, $this->height->add($delta));
     }
 
     /**
@@ -195,6 +195,6 @@ class VerticalPoint extends Point
             $offset = $offset->multiply(-1);
         }
 
-        return static::create($this->height->add($offset), $to);
+        return static::create($to, $this->height->add($offset));
     }
 }

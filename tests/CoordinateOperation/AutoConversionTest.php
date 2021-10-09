@@ -40,7 +40,7 @@ class AutoConversionTest extends TestCase
 {
     public function testWGS72ToWGS84(): void
     {
-        $from = GeographicPoint::create(new Degree(55.0), new Degree(44.0), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_72));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_72), new Degree(55.0), new Degree(44.0), null);
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84);
         $to = $from->convert($toCRS);
 
@@ -51,7 +51,7 @@ class AutoConversionTest extends TestCase
 
     public function testOSGB36ToBritishNationalGrid(): void
     {
-        $from = GeographicPoint::create(new Degree(50.5), new Degree(0.5), null, Geographic2D::fromSRID(Geographic2D::EPSG_OSGB36));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_OSGB36), new Degree(50.5), new Degree(0.5), null);
         $toCRS = Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID);
         $to = $from->convert($toCRS);
 
@@ -61,7 +61,7 @@ class AutoConversionTest extends TestCase
 
     public function testNoop(): void
     {
-        $from = GeographicPoint::create(new Degree(40.7127), new Degree(-74.0059), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Degree(40.7127), new Degree(-74.0059), null);
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84);
         $to = $from->convert($toCRS);
 
@@ -70,7 +70,7 @@ class AutoConversionTest extends TestCase
 
     public function testVanuaLevuGrid(): void
     {
-        $from = GeographicPoint::create(new Radian(-0.293938867), new Radian(3.141493807), null, Geographic2D::fromSRID(Geographic2D::EPSG_VANUA_LEVU_1915));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_VANUA_LEVU_1915), new Radian(-0.293938867), new Radian(3.141493807), null);
         $toCRS = Projected::fromSRID(Projected::EPSG_VANUA_LEVU_1915_VANUA_LEVU_GRID);
         $to = $from->convert($toCRS);
 
@@ -80,7 +80,7 @@ class AutoConversionTest extends TestCase
 
     public function testTM75ToETRS89(): void
     {
-        $from = GeographicPoint::create(new Degree(55), new Degree(-6.5), null, Geographic2D::fromSRID(Geographic2D::EPSG_TM75));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_TM75), new Degree(55), new Degree(-6.5), null);
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89);
         $to = $from->convert($toCRS);
 
@@ -90,7 +90,7 @@ class AutoConversionTest extends TestCase
 
     public function testED50ToED87(): void
     {
-        $from = GeographicPoint::create(new Degree(52.508333333), new Degree(2), null, Geographic2D::fromSRID(Geographic2D::EPSG_ED50));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_ED50), new Degree(52.508333333), new Degree(2), null);
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_ED87);
         $to = $from->convert($toCRS);
 
@@ -100,7 +100,7 @@ class AutoConversionTest extends TestCase
 
     public function testED87ToED50(): void
     {
-        $from = GeographicPoint::create(new Degree(52.508330203), new Degree(2.000009801), null, Geographic2D::fromSRID(Geographic2D::EPSG_ED87));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_ED87), new Degree(52.508330203), new Degree(2.000009801), null);
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_ED50);
         $to = $from->convert($toCRS);
 
@@ -111,7 +111,7 @@ class AutoConversionTest extends TestCase
     // Issue #23
     public function testBerlinPointPlacedIntoZone33WhenCalculatedAutomatically(): void
     {
-        $from = GeographicPoint::create(new Degree(52.518590), new Degree(13.375520), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Degree(52.518590), new Degree(13.375520), null);
         $toCRS = Projected::fromSRID(Projected::EPSG_WGS_84_UTM_GRID_SYSTEM_NORTHERN_HEMISPHERE);
         $to = $from->convert($toCRS);
 
@@ -123,7 +123,7 @@ class AutoConversionTest extends TestCase
     public function testBerlinPointNotZone32(): void
     {
         $this->expectException(UnknownConversionException::class);
-        $from = GeographicPoint::create(new Degree(52.518590), new Degree(13.375520), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Degree(52.518590), new Degree(13.375520), null);
         $toCRS = Projected::fromSRID(Projected::EPSG_WGS_84_UTM_ZONE_32N);
         $to = $from->convert($toCRS);
     }
@@ -131,7 +131,7 @@ class AutoConversionTest extends TestCase
     // Issue #23
     public function testBerlinPointZone32WhenForced(): void
     {
-        $from = GeographicPoint::create(new Degree(52.518590), new Degree(13.375520), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Degree(52.518590), new Degree(13.375520), null);
         $toCRS = Projected::fromSRID(Projected::EPSG_WGS_84_UTM_ZONE_32N);
         $to = $from->convert($toCRS, true);
 
@@ -141,7 +141,7 @@ class AutoConversionTest extends TestCase
 
     public function testUTMPointToUTMEPSG(): void
     {
-        $from = new UTMPoint(new Metre(796823.561), new Metre(5827721.404), 32, 'N', Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
+        $from = new UTMPoint(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Metre(796823.561), new Metre(5827721.404), 32, 'N');
         $toCRS = Projected::fromSRID(Projected::EPSG_WGS_84_UTM_ZONE_32N);
         $to = $from->convert($toCRS, true);
 
@@ -151,7 +151,7 @@ class AutoConversionTest extends TestCase
 
     public function testTokyoJSLDToWGS842D(): void
     {
-        $from = CompoundPoint::create(GeographicPoint::create(new Degree(35.689722), new Degree(139.692222), null, Geographic2D::fromSRID(Geographic2D::EPSG_TOKYO)), VerticalPoint::create(new Metre(100), Vertical::fromSRID(Vertical::EPSG_JSLD69_HEIGHT)), Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT));
+        $from = CompoundPoint::create(Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT), GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_TOKYO), new Degree(35.689722), new Degree(139.692222), null), VerticalPoint::create(Vertical::fromSRID(Vertical::EPSG_JSLD69_HEIGHT), new Metre(100)));
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84);
         $to = $from->convert($toCRS);
 
@@ -162,7 +162,7 @@ class AutoConversionTest extends TestCase
 
     public function testTokyoJSLDToWGS843D(): void
     {
-        $from = CompoundPoint::create(GeographicPoint::create(new Degree(35.689722), new Degree(139.692222), null, Geographic2D::fromSRID(Geographic2D::EPSG_TOKYO)), VerticalPoint::create(new Metre(100), Vertical::fromSRID(Vertical::EPSG_JSLD69_HEIGHT)), Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT));
+        $from = CompoundPoint::create(Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT), GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_TOKYO), new Degree(35.689722), new Degree(139.692222), null), VerticalPoint::create(Vertical::fromSRID(Vertical::EPSG_JSLD69_HEIGHT), new Metre(100)));
         $toCRS = Geographic3D::fromSRID(Geographic3D::EPSG_WGS_84);
         $to = $from->convert($toCRS);
 
@@ -173,7 +173,7 @@ class AutoConversionTest extends TestCase
 
     public function testPZ9011ToITRF2008(): void
     {
-        $from = GeocentricPoint::create(new Metre(2845455.9753), new Metre(2160954.3073), new Metre(5265993.2656), Geocentric::fromSRID(Geocentric::EPSG_PZ_90_11), new DateTime('2010-01-01'));
+        $from = GeocentricPoint::create(Geocentric::fromSRID(Geocentric::EPSG_PZ_90_11), new Metre(2845455.9753), new Metre(2160954.3073), new Metre(5265993.2656), new DateTime('2010-01-01'));
         $toCRS = Geocentric::fromSRID(Geocentric::EPSG_ITRF2008);
         $to = $from->convert($toCRS);
 
@@ -185,14 +185,14 @@ class AutoConversionTest extends TestCase
     public function testPZ9011ToITRF2008NoEpoch(): void
     {
         $this->expectException(UnknownConversionException::class);
-        $from = GeocentricPoint::create(new Metre(2845455.9753), new Metre(2160954.3073), new Metre(5265993.2656), Geocentric::fromSRID(Geocentric::EPSG_PZ_90_11));
+        $from = GeocentricPoint::create(Geocentric::fromSRID(Geocentric::EPSG_PZ_90_11), new Metre(2845455.9753), new Metre(2160954.3073), new Metre(5265993.2656));
         $toCRS = Geocentric::fromSRID(Geocentric::EPSG_ITRF2008);
         $to = $from->convert($toCRS);
     }
 
     public function testBritishNationalGridToOSGB(): void
     {
-        $from = ProjectedPoint::createFromEastingNorthing(new Metre(573502.85), new Metre(180912.71), Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID));
+        $from = ProjectedPoint::createFromEastingNorthing(Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID), new Metre(573502.85), new Metre(180912.71));
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_OSGB36);
         $to = $from->convert($toCRS);
 
@@ -202,7 +202,7 @@ class AutoConversionTest extends TestCase
 
     public function testBritishNationalGridToUTM(): void
     {
-        $from = ProjectedPoint::createFromEastingNorthing(new Metre(573502.85), new Metre(180912.71), Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID));
+        $from = ProjectedPoint::createFromEastingNorthing(Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID), new Metre(573502.85), new Metre(180912.71));
         $toCRS = Projected::fromSRID(Projected::EPSG_WGS_84_UTM_GRID_SYSTEM_NORTHERN_HEMISPHERE);
         $to = $from->convert($toCRS);
 
@@ -224,7 +224,7 @@ class AutoConversionTest extends TestCase
             BoundingArea::createWorld(),
         );
 
-        $from = CompoundPoint::create(GeographicPoint::create(new Radian(0.826122513), new Radian(0.168715161), null, Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89)), VerticalPoint::create(new Metre(473), Vertical::fromSRID(Vertical::EPSG_LN02_HEIGHT)), $fromCRS);
+        $from = CompoundPoint::create($fromCRS, GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89), new Radian(0.826122513), new Radian(0.168715161), null), VerticalPoint::create(Vertical::fromSRID(Vertical::EPSG_LN02_HEIGHT), new Metre(473)));
         $toCRS = Compound::fromSRID(Compound::EPSG_ETRS89_PLUS_EVRF2000_HEIGHT);
         $to = $from->convert($toCRS);
 
@@ -235,7 +235,7 @@ class AutoConversionTest extends TestCase
 
     public function testETRS89ToBritishNationalGrid(): void
     {
-        $from = GeographicPoint::create(new Degree(52.658007833), new Degree(1.716073972), null, Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89), new Degree(52.658007833), new Degree(1.716073972), null);
         $toCRS = Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID);
         $to = $from->convert($toCRS);
 
@@ -250,7 +250,7 @@ class AutoConversionTest extends TestCase
 
     public function testNAD27ToNAD83USA(): void
     {
-        $from = GeographicPoint::create(new Degree(40.689247), new Degree(-74.044502), null, Geographic2D::fromSRID(Geographic2D::EPSG_NAD27));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_NAD27), new Degree(40.689247), new Degree(-74.044502), null);
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_NAD83);
         $to = $from->convert($toCRS);
 
@@ -265,7 +265,7 @@ class AutoConversionTest extends TestCase
 
     public function testNAD27ToNAD83Canada(): void
     {
-        $from = GeographicPoint::create(new Degree(50.8713458), new Degree(-114.2934808), null, Geographic2D::fromSRID(Geographic2D::EPSG_NAD27));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_NAD27), new Degree(50.8713458), new Degree(-114.2934808), null);
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_NAD83);
         $to = $from->convert($toCRS);
 
@@ -280,7 +280,7 @@ class AutoConversionTest extends TestCase
 
     public function testAmersfoortRDNewToWGS84(): void
     {
-        $from = ProjectedPoint::createFromEastingNorthing(new Metre(86058.2205), new Metre(445832.8025), Projected::fromSRID(Projected::EPSG_AMERSFOORT_RD_NEW));
+        $from = ProjectedPoint::createFromEastingNorthing(Projected::fromSRID(Projected::EPSG_AMERSFOORT_RD_NEW), new Metre(86058.2205), new Metre(445832.8025));
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84);
         $to = $from->convert($toCRS);
 
@@ -290,7 +290,7 @@ class AutoConversionTest extends TestCase
 
     public function testNTFToRGF93(): void
     {
-        $from = GeographicPoint::create(new Degree(48.84451225), new Degree(2.42567186), null, Geographic2D::fromSRID(Geographic2D::EPSG_NTF));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_NTF), new Degree(48.84451225), new Degree(2.42567186), null);
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_RGF93_V1);
         $to = $from->convert($toCRS);
 
@@ -310,17 +310,17 @@ class AutoConversionTest extends TestCase
         }
 
         $from = CompoundPoint::create(
+            Compound::fromSRID(Compound::EPSG_NZGD2000_PLUS_NZVD2016_HEIGHT),
             GeographicPoint::create(
+                Geographic2D::fromSRID(Geographic2D::EPSG_NZGD2000),
                 new Degree(-36.9003),
                 new Degree(174.7794),
-                null,
-                Geographic2D::fromSRID(Geographic2D::EPSG_NZGD2000)
+                null
             ),
             VerticalPoint::create(
-                new Metre(15.715),
-                Vertical::fromSRID(Vertical::EPSG_NZVD2016_HEIGHT)
-            ),
-            Compound::fromSRID(Compound::EPSG_NZGD2000_PLUS_NZVD2016_HEIGHT)
+                Vertical::fromSRID(Vertical::EPSG_NZVD2016_HEIGHT),
+                new Metre(15.715)
+            )
         );
         $toCRS = Geographic3D::fromSRID(Geographic3D::EPSG_NZGD2000);
         $to = $from->convert($toCRS);
@@ -336,7 +336,7 @@ class AutoConversionTest extends TestCase
             self::markTestSkipped('Requires phpcoord/datapack-northamerica');
         }
 
-        $from = GeographicPoint::create(new Degree(40), new Degree(-100), new Metre(0), Geographic3D::fromSRID(Geographic3D::EPSG_NAD83_2011));
+        $from = GeographicPoint::create(Geographic3D::fromSRID(Geographic3D::EPSG_NAD83_2011), new Degree(40), new Degree(-100), new Metre(0));
         $toCRS = Vertical::fromSRID(Vertical::EPSG_NAVD88_HEIGHT);
         $to = $from->convert($toCRS);
 
@@ -349,7 +349,7 @@ class AutoConversionTest extends TestCase
             self::markTestSkipped('Requires phpcoord/datapack-europe');
         }
 
-        $from = GeographicPoint::create(new Degree(51.825323002), new Degree(5.049883673), new Metre(3.4374), Geographic3D::fromSRID(Geographic3D::EPSG_ETRS89));
+        $from = GeographicPoint::create(Geographic3D::fromSRID(Geographic3D::EPSG_ETRS89), new Degree(51.825323002), new Degree(5.049883673), new Metre(3.4374));
         $toCRS = Compound::fromSRID(Compound::EPSG_ETRS89_PLUS_NAP_HEIGHT);
         $to = $from->convert($toCRS);
 
@@ -376,26 +376,26 @@ class AutoConversionTest extends TestCase
                 $centre = $extent->getPointInside();
                 $centre[1] = $centre[1]->subtract($sourceCRS->getHorizontal()->getDatum()->getPrimeMeridian()->getGreenwichLongitude()); //compensate for non-Greenwich prime meridian
 
-                $horizontalPoint = GeographicPoint::create($centre[0], $centre[1], null, $sourceHorizontalCRS);
+                $horizontalPoint = GeographicPoint::create($sourceHorizontalCRS, $centre[0], $centre[1], null);
             } elseif ($sourceHorizontalCRS instanceof Geographic2D) {
-                $horizontalPoint = ProjectedPoint::create(new Metre(0), new Metre(0), new Metre(0), new Metre(0), $sourceHorizontalCRS);
+                $horizontalPoint = ProjectedPoint::create($sourceHorizontalCRS, new Metre(0), new Metre(0), new Metre(0), new Metre(0));
             }
             $verticalCRS = $sourceCRS->getVertical();
-            $verticalPoint = VerticalPoint::create(new Metre(0), $verticalCRS);
+            $verticalPoint = VerticalPoint::create($verticalCRS, new Metre(0));
 
-            $originalPoint = CompoundPoint::create($horizontalPoint, $verticalPoint, $sourceCRS, $epoch);
+            $originalPoint = CompoundPoint::create($sourceCRS, $horizontalPoint, $verticalPoint, $epoch);
         } elseif ($sourceCRS instanceof Geographic) {
             $centre = $extent->getPointInside();
             $centre[1] = $centre[1]->subtract($sourceCRS->getDatum()->getPrimeMeridian()->getGreenwichLongitude()); //compensate for non-Greenwich prime meridian
             $height = $sourceCRS instanceof Geographic3D ? new Metre(0) : null;
 
-            $originalPoint = GeographicPoint::create($centre[0], $centre[1], $height, $sourceCRS, $epoch);
+            $originalPoint = GeographicPoint::create($sourceCRS, $centre[0], $centre[1], $height, $epoch);
         } elseif ($sourceCRS instanceof Geocentric) {
             $centre = $extent->getPointInside();
             $centre = (new GeographicValue($centre[0], $centre[1], new Metre(0), $sourceCRS->getDatum()))->asGeocentricValue();
-            $originalPoint = GeocentricPoint::create($centre->getX(), $centre->getY(), $centre->getZ(), $sourceCRS, $epoch);
+            $originalPoint = GeocentricPoint::create($sourceCRS, $centre->getX(), $centre->getY(), $centre->getZ(), $epoch);
         } elseif ($sourceCRS instanceof Vertical) {
-            $originalPoint = VerticalPoint::create(new Metre(0), $sourceCRS, $epoch);
+            $originalPoint = VerticalPoint::create($sourceCRS, new Metre(0), $epoch);
         }
 
         $targetCRS = CoordinateReferenceSystem::fromSRID($targetCrsSrid);

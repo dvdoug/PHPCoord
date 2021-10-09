@@ -42,7 +42,7 @@ class GeographicPoint2DTest extends TestCase
 
         $epoch = new DateTime();
 
-        $originalPoint = GeographicPoint::create($centre[0], $centre[1], $sourceHeight, $sourceCRS, $epoch);
+        $originalPoint = GeographicPoint::create($sourceCRS, $centre[0], $centre[1], $sourceHeight, $epoch);
         $newPoint = $originalPoint->performOperation($operationSrid, $targetCRS, false);
         self::assertInstanceOf(Point::class, $newPoint);
         self::assertEquals($targetCRS, $newPoint->getCRS());

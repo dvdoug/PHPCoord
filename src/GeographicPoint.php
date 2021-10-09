@@ -18,7 +18,6 @@ use function cosh;
 use DateTime;
 use DateTimeImmutable;
 use DateTimeInterface;
-use function get_class;
 use function hypot;
 use function implode;
 use function is_nan;
@@ -61,10 +60,8 @@ use PHPCoord\UnitOfMeasure\Scale\Scale;
 use PHPCoord\UnitOfMeasure\Scale\Unity;
 use function sin;
 use function sinh;
-use function sprintf;
 use function sqrt;
 use function tan;
-use TypeError;
 
 /**
  * Coordinate representing a point on an ellipsoid.
@@ -91,19 +88,15 @@ class GeographicPoint extends Point implements ConvertiblePoint
     /**
      * Coordinate reference system.
      */
-    protected Geographic $crs;
+    protected Geographic2D|Geographic3D $crs;
 
     /**
      * Coordinate epoch (date for which the specified coordinates represented this point).
      */
     protected ?DateTimeImmutable $epoch;
 
-    protected function __construct(Angle $latitude, Angle $longitude, ?Length $height, Geographic $crs, ?DateTimeInterface $epoch = null)
+    protected function __construct(Geographic2D|Geographic3D $crs, Angle $latitude, Angle $longitude, ?Length $height, ?DateTimeInterface $epoch)
     {
-        if (!$crs instanceof Geographic2D && !$crs instanceof Geographic3D) {
-            throw new TypeError(sprintf("A geographic point must be associated with a geographic CRS, but a '%s' CRS was given", get_class($crs)));
-        }
-
         if ($crs instanceof Geographic2D && $height !== null) {
             throw new InvalidCoordinateReferenceSystemException('A 2D geographic point must not include a height');
         }
@@ -133,13 +126,13 @@ class GeographicPoint extends Point implements ConvertiblePoint
     }
 
     /**
+     * @param ?Length $height    refer to CRS for preferred unit of measure, but any length unit accepted
      * @param Angle   $latitude  refer to CRS for preferred unit of measure, but any angle unit accepted
      * @param Angle   $longitude refer to CRS for preferred unit of measure, but any angle unit accepted
-     * @param ?Length $height    refer to CRS for preferred unit of measure, but any length unit accepted
      */
-    public static function create(Angle $latitude, Angle $longitude, ?Length $height = null, Geographic $crs, ?DateTimeInterface $epoch = null): self
+    public static function create(Geographic2D|Geographic3D $crs, Angle $latitude, Angle $longitude, ?Length $height = null, ?DateTimeInterface $epoch = null): self
     {
-        return new static($latitude, $longitude, $height, $crs, $epoch);
+        return new static($crs, $latitude, $longitude, $height, $epoch);
     }
 
     public function getLatitude(): Angle
@@ -239,7 +232,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $geographicValue = new GeographicValue($this->latitude, $this->longitude, $this->height, $this->crs->getDatum());
         $asGeocentric = $geographicValue->asGeocentricValue();
 
-        return GeocentricPoint::create($asGeocentric->getX(), $asGeocentric->getY(), $asGeocentric->getZ(), $to, $this->epoch);
+        return GeocentricPoint::create($to, $asGeocentric->getX(), $asGeocentric->getY(), $asGeocentric->getZ(), $this->epoch);
     }
 
     /**
@@ -249,7 +242,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
      * between other CRS types.
      */
     public function coordinateFrameRotation(
-        Geographic $to,
+        Geographic2D|Geographic3D $to,
         Length $xAxisTranslation,
         Length $yAxisTranslation,
         Length $zAxisTranslation,
@@ -279,7 +272,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
      * opposite rotation convention in geographic 2D domain.
      */
     public function coordinateFrameMolodenskyBadekas(
-        Geographic $to,
+        Geographic2D|Geographic3D $to,
         Length $xAxisTranslation,
         Length $yAxisTranslation,
         Length $zAxisTranslation,
@@ -314,7 +307,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $newGeocentric = new GeocentricValue(new Metre($xt), new Metre($yt), new Metre($zt), $to->getDatum());
         $newGeographic = $newGeocentric->asGeographicValue();
 
-        return static::create($newGeographic->getLatitude(), $newGeographic->getLongitude(), $to instanceof Geographic3D ? $newGeographic->getHeight() : null, $to, $this->epoch);
+        return static::create($to, $newGeographic->getLatitude(), $newGeographic->getLongitude(), $to instanceof Geographic3D ? $newGeographic->getHeight() : null, $this->epoch);
     }
 
     /**
@@ -324,7 +317,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
      * operating between other CRS types.
      */
     public function positionVectorTransformation(
-        Geographic $to,
+        Geographic2D|Geographic3D $to,
         Length $xAxisTranslation,
         Length $yAxisTranslation,
         Length $zAxisTranslation,
@@ -354,7 +347,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
      * rotation in geographic 2D/3D domain.
      */
     public function positionVectorMolodenskyBadekas(
-        Geographic $to,
+        Geographic2D|Geographic3D $to,
         Length $xAxisTranslation,
         Length $yAxisTranslation,
         Length $zAxisTranslation,
@@ -389,7 +382,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $newGeocentric = new GeocentricValue(new Metre($xt), new Metre($yt), new Metre($zt), $to->getDatum());
         $newGeographic = $newGeocentric->asGeographicValue();
 
-        return static::create($newGeographic->getLatitude(), $newGeographic->getLongitude(), $to instanceof Geographic3D ? $newGeographic->getHeight() : null, $to, $this->epoch);
+        return static::create($to, $newGeographic->getLatitude(), $newGeographic->getLongitude(), $to instanceof Geographic3D ? $newGeographic->getHeight() : null, $this->epoch);
     }
 
     /**
@@ -399,7 +392,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
      * operating between other CRSs types.
      */
     public function geocentricTranslation(
-        Geographic $to,
+        Geographic2D|Geographic3D $to,
         Length $xAxisTranslation,
         Length $yAxisTranslation,
         Length $zAxisTranslation
@@ -422,7 +415,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
      * systems, modelled as a set of geocentric translations.
      */
     public function abridgedMolodensky(
-        Geographic $to,
+        Geographic2D|Geographic3D $to,
         Length $xAxisTranslation,
         Length $yAxisTranslation,
         Length $zAxisTranslation,
@@ -455,7 +448,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $toLongitude = $longitude + (new ArcSecond($dLongitude))->asRadians()->getValue();
         $toHeight = $fromHeight + $dHeight;
 
-        return static::create(new Radian($toLatitude), new Radian($toLongitude), $to instanceof Geographic3D ? new Metre($toHeight) : null, $to, $this->epoch);
+        return static::create($to, new Radian($toLatitude), new Radian($toLongitude), $to instanceof Geographic3D ? new Metre($toHeight) : null, $this->epoch);
     }
 
     /**
@@ -463,7 +456,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
      * See Abridged Molodensky.
      */
     public function molodensky(
-        Geographic $to,
+        Geographic2D|Geographic3D $to,
         Length $xAxisTranslation,
         Length $yAxisTranslation,
         Length $zAxisTranslation,
@@ -497,7 +490,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $toLongitude = $longitude + (new ArcSecond($dLongitude))->asRadians()->getValue();
         $toHeight = $fromHeight + $dHeight;
 
-        return static::create(new Radian($toLatitude), new Radian($toLongitude), $to instanceof Geographic3D ? new Metre($toHeight) : null, $to, $this->epoch);
+        return static::create($to, new Radian($toLatitude), new Radian($toLongitude), $to instanceof Geographic3D ? new Metre($toHeight) : null, $this->epoch);
     }
 
     /**
@@ -539,7 +532,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $easting = $eastingAtFalseOrigin->asMetres()->getValue() + ($rho * sin($theta));
         $northing = $northingAtFalseOrigin->asMetres()->getValue() + $rhoOrigin - ($rho * cos($theta));
 
-        return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+        return ProjectedPoint::create($to, new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $this->epoch);
     }
 
     /**
@@ -575,7 +568,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
             $northing = $falseNorthing->asMetres()->getValue() + $M - $MO + $nu * 1 / tan($latitude) * (1 - cos($L));
         }
 
-        return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+        return ProjectedPoint::create($to, new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $this->epoch);
     }
 
     /**
@@ -609,7 +602,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $easting = $falseEasting->asMetres()->getValue() + ($rho * sin($tau));
         $northing = $falseNorthing->asMetres()->getValue() + (($a * $mO / sin($latitudeOrigin) - $rho * cos($tau)));
 
-        return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+        return ProjectedPoint::create($to, new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $this->epoch);
     }
 
     /**
@@ -643,7 +636,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $westing = $falseEasting->asMetres()->getValue() - ($rho * sin($tau));
         $southing = $falseNorthing->asMetres()->getValue() - (($a * $mO / sin($latitudeOrigin) - $rho * cos($tau)));
 
-        return ProjectedPoint::create(new Metre(-$westing), new Metre(-$southing), new Metre($westing), new Metre($southing), $to, $this->epoch);
+        return ProjectedPoint::create($to, new Metre(-$westing), new Metre(-$southing), new Metre($westing), new Metre($southing), $this->epoch);
     }
 
     /**
@@ -677,7 +670,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $easting = $falseEasting->asMetres()->getValue() + $nu * ($A - $T * $A ** 3 / 6 - (8 - $T + 8 * $C) * $T * $A ** 5 / 120);
         $northing = $falseNorthing->asMetres()->getValue() + $X;
 
-        return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+        return ProjectedPoint::create($to, new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $this->epoch);
     }
 
     /**
@@ -712,7 +705,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $easting = $falseEasting->asMetres()->getValue() + $nu * ($A - $T * $A ** 3 / 6 - (8 - $T + 8 * $C) * $T * $A ** 5 / 120);
         $northing = $falseNorthing->asMetres()->getValue() + $X - ($X ** 3 / (6 * $rho * $nu));
 
-        return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+        return ProjectedPoint::create($to, new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $this->epoch);
     }
 
     /**
@@ -746,7 +739,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $easting = $falseEasting->asMetres()->getValue() + $A * $nu * cos($latitude) * $this->normaliseLongitude($this->longitude->subtract($longitudeOfNaturalOrigin))->asRadians()->getValue();
         $northing = $falseNorthing->asMetres()->getValue() + $G * $rhoOrigin * (($latitude - $latitudeOrigin) + ($B * $this->normaliseLongitude($this->longitude->subtract($longitudeOfNaturalOrigin))->asRadians()->getValue() ** 2 * $nu ** 2 * cos($latitude) ** 2));
 
-        return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+        return ProjectedPoint::create($to, new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $this->epoch);
     }
 
     /**
@@ -773,7 +766,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $easting = $falseEasting->asMetres()->getValue() + ($Rq * 2 * $this->normaliseLongitude($this->longitude->subtract($longitudeOfNaturalOrigin))->asRadians()->getValue() * cos($theta)) / (sqrt(3) * (1.340264 - 0.243318 * $theta ** 2 + $theta ** 6 * (0.006251 + 0.034164 * $theta ** 2)));
         $northing = $falseNorthing->asMetres()->getValue() + $Rq * $theta * (1.340264 - 0.081106 * $theta ** 2 + $theta ** 6 * (0.000893 + 0.003796 * $theta ** 2));
 
-        return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+        return ProjectedPoint::create($to, new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $this->epoch);
     }
 
     /**
@@ -816,7 +809,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $easting = $falseEasting->asMetres()->getValue() + $nu1 * cos($latitudeFirstParallel) * $this->normaliseLongitude($this->longitude->subtract($longitudeOfNaturalOrigin))->asRadians()->getValue();
         $northing = $falseNorthing->asMetres()->getValue() + $M;
 
-        return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+        return ProjectedPoint::create($to, new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $this->epoch);
     }
 
     /**
@@ -846,7 +839,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $easting = $falseEasting->asMetres()->getValue() + $x;
         $northing = $falseNorthing->asMetres()->getValue() + $M - $MO + ($x ** 2 * tan($latitude) * sqrt(1 - $e2 * sin($latitude) ** 2) / (2 * $a));
 
-        return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+        return ProjectedPoint::create($to, new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $this->epoch);
     }
 
     /**
@@ -894,7 +887,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $westing = $Y + $falseEasting->asMetres()->getValue();
         $southing = $X + $falseNorthing->asMetres()->getValue();
 
-        return ProjectedPoint::create(new Metre(-$westing), new Metre(-$southing), new Metre($westing), new Metre($southing), $to, $this->epoch);
+        return ProjectedPoint::create($to, new Metre(-$westing), new Metre(-$southing), new Metre($westing), new Metre($southing), $this->epoch);
     }
 
     /**
@@ -948,7 +941,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $westing += $falseEasting->asMetres()->getValue() - $dY;
         $southing += $falseNorthing->asMetres()->getValue() - $dX;
 
-        return ProjectedPoint::create(new Metre(-$westing), new Metre(-$southing), new Metre($westing), new Metre($southing), $to, $this->epoch);
+        return ProjectedPoint::create($to, new Metre(-$westing), new Metre(-$southing), new Metre($westing), new Metre($southing), $this->epoch);
     }
 
     /**
@@ -981,7 +974,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $easting = $falseEasting->asMetres()->getValue() + (($B * $D) * (cos($beta) * sin($this->normaliseLongitude($this->longitude->subtract($longitudeOfNaturalOrigin))->asRadians()->getValue())));
         $northing = $falseNorthing->asMetres()->getValue() + ($B / $D) * ((cos($betaO) * sin($beta)) - (sin($betaO) * cos($beta) * cos($this->normaliseLongitude($this->longitude->subtract($longitudeOfNaturalOrigin))->asRadians()->getValue())));
 
-        return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+        return ProjectedPoint::create($to, new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $this->epoch);
     }
 
     /**
@@ -1007,7 +1000,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $easting = $falseEasting->asMetres()->getValue() + ($a * $k * cos($latitude) * sin($this->normaliseLongitude($this->longitude->subtract($longitudeOfNaturalOrigin))->asRadians()->getValue()));
         $northing = $falseNorthing->asMetres()->getValue() + ($a * $k * (cos($latitudeOrigin) * sin($latitude) - sin($latitudeOrigin) * cos($latitude) * cos($this->normaliseLongitude($this->longitude->subtract($longitudeOfNaturalOrigin))->asRadians()->getValue())));
 
-        return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+        return ProjectedPoint::create($to, new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $this->epoch);
     }
 
     /**
@@ -1041,7 +1034,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $easting = $falseEasting->asMetres()->getValue() + $r * sin($theta);
         $northing = $falseNorthing->asMetres()->getValue() + $rO - $r * cos($theta);
 
-        return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+        return ProjectedPoint::create($to, new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $this->epoch);
     }
 
     /**
@@ -1078,7 +1071,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $easting = $eastingAtFalseOrigin->asMetres()->getValue() + $r * sin($theta);
         $northing = $northingAtFalseOrigin->asMetres()->getValue() + $rF - $r * cos($theta);
 
-        return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+        return ProjectedPoint::create($to, new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $this->epoch);
     }
 
     /**
@@ -1122,7 +1115,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $easting = $eastingAtFalseOrigin->asMetres()->getValue() + $r * sin($theta);
         $northing = $northingAtFalseOrigin->asMetres()->getValue() + $rF - $r * cos($theta);
 
-        return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+        return ProjectedPoint::create($to, new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $this->epoch);
     }
 
     /**
@@ -1163,7 +1156,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $easting = $eastingAtFalseOrigin->asMetres()->getValue() + $r * sin($theta);
         $northing = $northingAtFalseOrigin->asMetres()->getValue() + $rF - $r * cos($theta);
 
-        return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+        return ProjectedPoint::create($to, new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $this->epoch);
     }
 
     /**
@@ -1202,7 +1195,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $easting = $eastingAtFalseOrigin->asMetres()->getValue() + $r * sin($theta);
         $northing = $northingAtFalseOrigin->asMetres()->getValue() + $rF - $r * cos($theta);
 
-        return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+        return ProjectedPoint::create($to, new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $this->epoch);
     }
 
     /**
@@ -1236,7 +1229,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $westing = $falseEasting->asMetres()->getValue() - $r * sin($theta);
         $northing = $falseNorthing->asMetres()->getValue() + $rO - $r * cos($theta);
 
-        return ProjectedPoint::create(new Metre(-$westing), new Metre($northing), new Metre($westing), new Metre(-$northing), $to, $this->epoch);
+        return ProjectedPoint::create($to, new Metre(-$westing), new Metre($northing), new Metre($westing), new Metre(-$northing), $this->epoch);
     }
 
     /**
@@ -1280,7 +1273,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $easting = $falseEasting->asMetres()->getValue() + $r * sin($theta);
         $northing = $falseNorthing->asMetres()->getValue() + $M + $r * sin($theta) * tan($theta / 2);
 
-        return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+        return ProjectedPoint::create($to, new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $this->epoch);
     }
 
     /**
@@ -1310,7 +1303,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $easting = $falseEasting->asMetres()->getValue() + $x;
         $northing = $falseNorthing->asMetres()->getValue() + $y;
 
-        return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+        return ProjectedPoint::create($to, new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $this->epoch);
     }
 
     /**
@@ -1350,7 +1343,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $easting = $falseEasting->asMetres()->getValue() + $c * sin($alpha);
         $northing = $falseNorthing->asMetres()->getValue() + $c * cos($alpha);
 
-        return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+        return ProjectedPoint::create($to, new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $this->epoch);
     }
 
     /**
@@ -1399,7 +1392,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $easting = $falseEasting->asMetres()->getValue() + 2 * $R * $kO * cos($chi) * sin($lambda - $longitudeOrigin) / $B;
         $northing = $falseNorthing->asMetres()->getValue() + 2 * $R * $kO * (sin($chi) * cos($chiOrigin) - cos($chi) * sin($chiOrigin) * cos($lambda - $longitudeOrigin)) / $B;
 
-        return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+        return ProjectedPoint::create($to, new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $this->epoch);
     }
 
     /**
@@ -1439,7 +1432,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
             $northing = $falseNorthing->asMetres()->getValue() - $dN;
         }
 
-        return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+        return ProjectedPoint::create($to, new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $this->epoch);
     }
 
     /**
@@ -1482,7 +1475,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
             $northing = $falseNorthing->asMetres()->getValue() - $dN;
         }
 
-        return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+        return ProjectedPoint::create($to, new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $this->epoch);
     }
 
     /**
@@ -1525,7 +1518,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
             $northing = $northingAtFalseOrigin->asMetres()->getValue() + $rhoF - $dN;
         }
 
-        return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+        return ProjectedPoint::create($to, new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $this->epoch);
     }
 
     /**
@@ -1546,7 +1539,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $easting = $falseEasting->asMetres()->getValue() + $a * ($this->normaliseLongitude($this->longitude->subtract($longitudeOfNaturalOrigin))->asRadians()->getValue());
         $northing = $falseNorthing->asMetres()->getValue() + $a * log(tan(M_PI / 4 + $latitude / 2));
 
-        return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+        return ProjectedPoint::create($to, new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $this->epoch);
     }
 
     /**
@@ -1573,7 +1566,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $easting = $falseEasting->asMetres()->getValue() + $a * $kO * $this->normaliseLongitude($this->longitude->subtract($longitudeOfNaturalOrigin))->asRadians()->getValue();
         $northing = $falseNorthing->asMetres()->getValue() + $a * $kO * log(tan(M_PI / 4 + $latitude / 2) * ((1 - $e * sin($latitude)) / (1 + $e * sin($latitude))) ** ($e / 2));
 
-        return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+        return ProjectedPoint::create($to, new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $this->epoch);
     }
 
     /**
@@ -1599,7 +1592,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $easting = $falseEasting->asMetres()->getValue() + $a * $kO * $this->normaliseLongitude($this->longitude->subtract($longitudeOfNaturalOrigin))->asRadians()->getValue();
         $northing = $falseNorthing->asMetres()->getValue() + $a * $kO * log(tan(M_PI / 4 + $latitude / 2) * ((1 - $e * sin($latitude)) / (1 + $e * sin($latitude))) ** ($e / 2));
 
-        return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+        return ProjectedPoint::create($to, new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $this->epoch);
     }
 
     /**
@@ -1608,12 +1601,12 @@ class GeographicPoint extends Point implements ConvertiblePoint
      * value to the longitude value of the point in the source system.
      */
     public function longitudeRotation(
-        Geographic $to,
+        Geographic2D|Geographic3D $to,
         Angle $longitudeOffset
     ): self {
         $newLongitude = $this->longitude->add($longitudeOffset);
 
-        return static::create($this->latitude, $newLongitude, $this->height, $to, $this->epoch);
+        return static::create($to, $this->latitude, $newLongitude, $this->height, $this->epoch);
     }
 
     /**
@@ -1664,7 +1657,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $easting = $v * cos($gammaC) + $u * sin($gammaC) + $falseEasting->asMetres()->getValue();
         $northing = $u * cos($gammaC) - $v * sin($gammaC) + $falseNorthing->asMetres()->getValue();
 
-        return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+        return ProjectedPoint::create($to, new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $this->epoch);
     }
 
     /**
@@ -1730,7 +1723,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $easting = $v * cos($gammaC) + $u * sin($gammaC) + $eastingAtProjectionCentre->asMetres()->getValue();
         $northing = $u * cos($gammaC) - $v * sin($gammaC) + $northingAtProjectionCentre->asMetres()->getValue();
 
-        return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+        return ProjectedPoint::create($to, new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $this->epoch);
     }
 
     /**
@@ -1779,7 +1772,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $easting = $falseEasting->asMetres()->getValue() + $R * $H->pow(3)->multiply($G)->add($H)->getImaginary();
         $northing = $falseNorthing->asMetres()->getValue() + $R * $H->pow(3)->multiply($G)->add($H)->getReal();
 
-        return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+        return ProjectedPoint::create($to, new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $this->epoch);
     }
 
     /**
@@ -1845,7 +1838,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $easting = $falseEasting->asMetres()->getValue() + $kO * $B * $eta;
         $northing = $falseNorthing->asMetres()->getValue() + $kO * ($B * $xi - $mO);
 
-        return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+        return ProjectedPoint::create($to, new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $this->epoch);
     }
 
     /**
@@ -1918,7 +1911,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $easting = $falseEasting->asMetres()->getValue() + $z->getImaginary() * $a;
         $northing = $falseNorthing->asMetres()->getValue() + $z->getReal() * $a;
 
-        return ProjectedPoint::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+        return ProjectedPoint::create($to, new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $this->epoch);
     }
 
     /**
@@ -1939,20 +1932,20 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $dLatitude = new ArcSecond($A0->add($A1->multiply($this->latitude->getValue()))->add($A2->multiply($this->longitude->getValue()))->add($A3->multiply($this->height ? $this->height->getValue() : 0))->getValue());
         $dLongitude = $B00->add(new ArcSecond($B0->add($B1->multiply($this->latitude->getValue()))->add($B2->multiply($this->longitude->getValue()))->add($B3->multiply($this->height ? $this->height->getValue() : 0))->getValue()));
 
-        return self::create($this->latitude->add($dLatitude), $this->longitude->add($dLongitude), null, $to, $this->epoch);
+        return self::create($to, $this->latitude->add($dLatitude), $this->longitude->add($dLongitude), null, $this->epoch);
     }
 
     /**
      * Geographic3D to 2D conversion.
      */
     public function threeDToTwoD(
-        Geographic $to
+        Geographic2D|Geographic3D $to
     ): self {
         if ($to instanceof Geographic2D) {
-            return static::create($this->latitude, $this->longitude, null, $to, $this->epoch);
+            return static::create($to, $this->latitude, $this->longitude, null, $this->epoch);
         }
 
-        return static::create($this->latitude, $this->longitude, new Metre(0), $to, $this->epoch);
+        return static::create($to, $this->latitude, $this->longitude, new Metre(0), $this->epoch);
     }
 
     /**
@@ -1961,14 +1954,14 @@ class GeographicPoint extends Point implements ConvertiblePoint
      * coordinate values of the point in the source system.
      */
     public function geographic2DOffsets(
-        Geographic $to,
+        Geographic2D|Geographic3D $to,
         Angle $latitudeOffset,
         Angle $longitudeOffset
     ): self {
         $toLatitude = $this->latitude->add($latitudeOffset);
         $toLongitude = $this->longitude->add($longitudeOffset);
 
-        return static::create($toLatitude, $toLongitude, null, $to, $this->epoch);
+        return static::create($to, $toLatitude, $toLongitude, null, $this->epoch);
     }
 
     /*
@@ -1986,10 +1979,10 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $toLongitude = $this->longitude->add($longitudeOffset);
         $toHeight = $this->height->add($geoidUndulation);
 
-        $horizontal = static::create($toLatitude, $toLongitude, null, $to->getHorizontal(), $this->epoch);
-        $vertical = VerticalPoint::create($toHeight, $to->getVertical(), $this->epoch);
+        $horizontal = static::create($to->getHorizontal(), $toLatitude, $toLongitude, null, $this->epoch);
+        $vertical = VerticalPoint::create($to->getVertical(), $toHeight, $this->epoch);
 
-        return CompoundPoint::create($horizontal, $vertical, $to, $this->epoch);
+        return CompoundPoint::create($to, $horizontal, $vertical, $this->epoch);
     }
 
     /**
@@ -1997,7 +1990,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
      * @param Coefficient[] $powerCoefficients
      */
     public function generalPolynomial(
-        Geographic $to,
+        Geographic2D|Geographic3D $to,
         Angle $ordinate1OfEvaluationPointInSourceCRS,
         Angle $ordinate2OfEvaluationPointInSourceCRS,
         Angle $ordinate1OfEvaluationPointInTargetCRS,
@@ -2029,10 +2022,10 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $ytUnit = $to->getCoordinateSystem()->getAxes()[1]->getUnitOfMeasureId();
 
         return static::create(
+            $to,
             Angle::makeUnit($t['xt'], $xtUnit),
             Angle::makeUnit($t['yt'], $ytUnit),
             $this->height,
-            $to,
             $this->epoch
         );
     }
@@ -2042,7 +2035,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
      * @param Coefficient[] $powerCoefficients
      */
     public function reversiblePolynomial(
-        Geographic $to,
+        Geographic2D|Geographic3D $to,
         Angle $ordinate1OfEvaluationPoint,
         Angle $ordinate2OfEvaluationPoint,
         Scale $scalingFactorForCoordDifferences,
@@ -2068,10 +2061,10 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $ytUnit = $to->getCoordinateSystem()->getAxes()[1]->getUnitOfMeasureId();
 
         return static::create(
+            $to,
             Angle::makeUnit($t['xt'], $xtUnit),
             Angle::makeUnit($t['yt'], $ytUnit),
             $this->height,
-            $to,
             $this->epoch
         );
     }
@@ -2080,10 +2073,10 @@ class GeographicPoint extends Point implements ConvertiblePoint
      * Axis Order Reversal.
      */
     public function axisReversal(
-        Geographic $to
+        Geographic2D|Geographic3D $to
     ): self {
         // axes are read in from the CRS, this is a book-keeping adjustment only
-        return static::create($this->latitude, $this->longitude, $this->height, $to, $this->epoch);
+        return static::create($to, $this->latitude, $this->longitude, $this->height, $this->epoch);
     }
 
     /**
@@ -2128,23 +2121,23 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $projected = $this->transverseMercator($etrs89NationalGrid, new Degree(49), new Degree(-2), new Unity(0.9996012717), new Metre(400000), new Metre(-100000));
 
         $horizontalPoint = self::create(
+            $to->getHorizontal(),
             $this->latitude,
             $this->longitude,
             null,
-            $to->getHorizontal(),
             $this->getCoordinateEpoch()
         );
 
         $verticalPoint = VerticalPoint::create(
-            $this->height->subtract($geoidHeightCorrectionModelFile->getHeightAdjustment($projected)),
             $to->getVertical(),
+            $this->height->subtract($geoidHeightCorrectionModelFile->getHeightAdjustment($projected)),
             $this->getCoordinateEpoch()
         );
 
         return CompoundPoint::create(
+            $to,
             $horizontalPoint,
             $verticalPoint,
-            $to,
             $this->getCoordinateEpoch()
         );
     }
@@ -2169,8 +2162,8 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $projected = $this->transverseMercator($etrs89NationalGrid, new Degree(49), new Degree(-2), new Unity(0.9996012717), new Metre(400000), new Metre(-100000));
 
         return VerticalPoint::create(
-            $this->height->subtract($geoidHeightCorrectionModelFile->getHeightAdjustment($projected)),
             $to,
+            $this->height->subtract($geoidHeightCorrectionModelFile->getHeightAdjustment($projected)),
             $this->getCoordinateEpoch()
         );
     }
@@ -2183,23 +2176,23 @@ class GeographicPoint extends Point implements ConvertiblePoint
         GeographicGeoidHeightGrid $geoidHeightCorrectionModelFile
     ): CompoundPoint {
         $horizontalPoint = self::create(
+            $to->getHorizontal(),
             $this->latitude,
             $this->longitude,
             null,
-            $to->getHorizontal(),
             $this->getCoordinateEpoch()
         );
 
         $verticalPoint = VerticalPoint::create(
-            $this->height->subtract($geoidHeightCorrectionModelFile->getHeightAdjustment($this)),
             $to->getVertical(),
+            $this->height->subtract($geoidHeightCorrectionModelFile->getHeightAdjustment($this)),
             $this->getCoordinateEpoch()
         );
 
         return CompoundPoint::create(
+            $to,
             $horizontalPoint,
             $verticalPoint,
-            $to,
             $this->getCoordinateEpoch()
         );
     }
@@ -2212,8 +2205,8 @@ class GeographicPoint extends Point implements ConvertiblePoint
         GeographicGeoidHeightGrid $geoidHeightCorrectionModelFile
     ): VerticalPoint {
         return VerticalPoint::create(
-            $this->height->subtract($geoidHeightCorrectionModelFile->getHeightAdjustment($this)),
             $to,
+            $this->height->subtract($geoidHeightCorrectionModelFile->getHeightAdjustment($this)),
             $this->getCoordinateEpoch()
         );
     }
@@ -2223,7 +2216,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
      * @internal just a wrapper
      */
     public function offsetsFromGridNADCON5(
-        Geographic $to,
+        Geographic2D|Geographic3D $to,
         NADCON5Grid $latitudeDifferenceFile,
         NADCON5Grid $longitudeDifferenceFile,
         ?NADCON5Grid $ellipsoidalHeightDifferenceFile,
@@ -2238,7 +2231,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
      * Geographic offsets from grid.
      */
     public function offsetsFromGrid(
-        Geographic $to,
+        Geographic2D|Geographic3D $to,
         GeographicGrid $offsetsFile,
         bool $inReverse
     ): self {
@@ -2274,6 +2267,6 @@ class GeographicPoint extends Point implements ConvertiblePoint
 
         $asProjected = $this->transverseMercator($projectedCRS, $latitudeOfNaturalOrigin, $longitudeOrigin, $scaleFactorAtNaturalOrigin, $falseEasting, $falseNorthing);
 
-        return new UTMPoint($asProjected->getEasting(), $asProjected->getNorthing(), $Z, $hemisphere, $this->crs, $this->epoch);
+        return new UTMPoint($this->crs, $asProjected->getEasting(), $asProjected->getNorthing(), $Z, $hemisphere, $this->epoch);
     }
 }

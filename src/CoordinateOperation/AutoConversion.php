@@ -21,8 +21,13 @@ use function end;
 use Generator;
 use function in_array;
 use PHPCoord\CompoundPoint;
+use PHPCoord\CoordinateReferenceSystem\Compound;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
+use PHPCoord\CoordinateReferenceSystem\Geocentric;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
+use PHPCoord\CoordinateReferenceSystem\Geographic3D;
+use PHPCoord\CoordinateReferenceSystem\Projected;
+use PHPCoord\CoordinateReferenceSystem\Vertical;
 use PHPCoord\Exception\UnknownConversionException;
 use PHPCoord\GeocentricPoint;
 use PHPCoord\GeographicPoint;
@@ -85,7 +90,7 @@ trait AutoConversion
         return $point;
     }
 
-    protected function findOperationPath(CoordinateReferenceSystem $source, CoordinateReferenceSystem $target, bool $ignoreBoundaryRestrictions): array
+    protected function findOperationPath(Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $source, Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $target, bool $ignoreBoundaryRestrictions): array
     {
         self::buildSupportedTransformationsByCRS();
         self::buildSupportedTransformationsByCRSPair();
@@ -151,7 +156,7 @@ trait AutoConversion
     /**
      * Build the set of possible paths that lead from the current CRS to the target CRS.
      */
-    protected function buildTransformationPathsToCRS(CoordinateReferenceSystem $source, CoordinateReferenceSystem $target): Generator
+    protected function buildTransformationPathsToCRS(Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $source, Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $target): Generator
     {
         $iterations = 1;
         $sourceSRID = $source->getSRID();
@@ -304,5 +309,5 @@ trait AutoConversion
 
     abstract public function getCoordinateEpoch(): ?DateTimeImmutable;
 
-    abstract protected function performOperation(string $srid, CoordinateReferenceSystem $to, bool $inReverse): Point;
+    abstract protected function performOperation(string $srid, Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $to, bool $inReverse): Point;
 }

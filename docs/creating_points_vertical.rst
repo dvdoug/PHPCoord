@@ -9,8 +9,8 @@ A ``VerticalPoint`` can be constructed by calling ``VerticalPoint::create``, whi
 .. code-block:: php
 
     public static function create(
-        Length $height,
         Vertical $crs,
+        Length $height,
         ?DateTimeInterface $epoch = null
     ): VerticalPoint
 
@@ -27,15 +27,15 @@ Examples:
     // an arbitrary height in New Zealand Vertical Datum (unknown date), traditional arguments
     $crs = Vertical::fromSRID(Vertical::EPSG_NZVD2016_HEIGHT);
     $point = VerticalPoint::create(
+        $crs,
         new Metre(12.34),
-        $crs
     );
 
     // an arbitrary height in New Zealand Vertical Datum (2020-02-01), traditional arguments
     $crs = Vertical::fromSRID(Vertical::EPSG_NZVD2016_HEIGHT);
     $point = VerticalPoint::create(
-        new Metre(12.34),
         $crs,
+        new Metre(12.34),
         new DateTime('2020-02-01')
     );
 

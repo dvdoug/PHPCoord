@@ -2516,20 +2516,13 @@ class Compound extends CoordinateReferenceSystem
 
     private static array $projectedSridCache = [];
 
-    /**
-     * @var Geocentric|Geographic|Projected
-     */
-    private CoordinateReferenceSystem $horizontal;
+    private Geocentric|Geographic2D|Projected $horizontal;
 
     private Vertical $vertical;
 
-    /**
-     * Compound constructor.
-     * @param Geocentric|Geographic|Projected $horizontal
-     */
     public function __construct(
         string $srid,
-        CoordinateReferenceSystem $horizontal,
+        Geocentric|Geographic2D|Projected $horizontal,
         Vertical $vertical,
         BoundingArea $boundingArea
     ) {
@@ -2544,7 +2537,7 @@ class Compound extends CoordinateReferenceSystem
         return $this->srid;
     }
 
-    public function getHorizontal(): CoordinateReferenceSystem
+    public function getHorizontal(): Geocentric|Geographic2D|Projected
     {
         return $this->horizontal;
     }

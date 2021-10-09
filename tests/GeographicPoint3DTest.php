@@ -40,7 +40,7 @@ class GeographicPoint3DTest extends TestCase
         if (!class_exists(OSTN15OSGM15Provider::class)) {
             self::markTestSkipped('Requires phpcoord/datapack-europe');
         }
-        $from = GeographicPoint::create(new Degree(53.77911025760), new Degree(-3.04045490691), new Metre(64.940), Geographic3D::fromSRID(Geographic3D::EPSG_ETRS89));
+        $from = GeographicPoint::create(Geographic3D::fromSRID(Geographic3D::EPSG_ETRS89), new Degree(53.77911025760), new Degree(-3.04045490691), new Metre(64.940));
         $toCRS = Compound::fromSRID(Compound::EPSG_ETRS89_PLUS_ODN_HEIGHT);
         $to = $from->geographic3DTo2DPlusGravityHeightOSGM15($toCRS, (new OSTN15OSGM15Provider())->provideGrid(), Geographic2D::EPSG_ETRS89);
 
@@ -54,7 +54,7 @@ class GeographicPoint3DTest extends TestCase
         if (!class_exists(OSTN15OSGM15Provider::class)) {
             self::markTestSkipped('Requires phpcoord/datapack-europe');
         }
-        $from = GeographicPoint::create(new Degree(53.77911025760), new Degree(-3.04045490691), new Metre(64.940), Geographic3D::fromSRID(Geographic3D::EPSG_ETRS89));
+        $from = GeographicPoint::create(Geographic3D::fromSRID(Geographic3D::EPSG_ETRS89), new Degree(53.77911025760), new Degree(-3.04045490691), new Metre(64.940));
         $toCRS = Vertical::fromSRID(Vertical::EPSG_ODN_HEIGHT);
         $to = $from->geographic3DToGravityHeightOSGM15($toCRS, (new OSTN15OSGM15Provider())->provideGrid());
 
@@ -66,7 +66,7 @@ class GeographicPoint3DTest extends TestCase
         if (!class_exists(GTXNZGeoid2016Provider::class)) {
             self::markTestSkipped('Requires phpcoord/datapack-oceania');
         }
-        $from = GeographicPoint::create(new Degree(-36.9003), new Degree(174.7794), new Metre(50), Geographic3D::fromSRID(Geographic3D::EPSG_NZGD2000));
+        $from = GeographicPoint::create(Geographic3D::fromSRID(Geographic3D::EPSG_NZGD2000), new Degree(-36.9003), new Degree(174.7794), new Metre(50));
         $toCRS = Compound::fromSRID(Compound::EPSG_NZGD2000_PLUS_NZVD2016_HEIGHT);
         $to = $from->geographic3DTo2DPlusGravityHeightFromGrid($toCRS, (new GTXNZGeoid2016Provider())->provideGrid());
 
@@ -80,7 +80,7 @@ class GeographicPoint3DTest extends TestCase
         if (!class_exists(GTXNZGeoid2016Provider::class)) {
             self::markTestSkipped('Requires phpcoord/datapack-oceania');
         }
-        $from = GeographicPoint::create(new Degree(-36.9003), new Degree(174.7794), new Metre(50), Geographic3D::fromSRID(Geographic3D::EPSG_NZGD2000));
+        $from = GeographicPoint::create(Geographic3D::fromSRID(Geographic3D::EPSG_NZGD2000), new Degree(-36.9003), new Degree(174.7794), new Metre(50));
         $toCRS = Vertical::fromSRID(Vertical::EPSG_NZVD2016_HEIGHT);
         $to = $from->geographic3DToGravityHeightFromGrid($toCRS, (new GTXNZGeoid2016Provider())->provideGrid());
 
@@ -92,7 +92,7 @@ class GeographicPoint3DTest extends TestCase
         if (!class_exists(GTXGDA2020AHDProvider::class)) {
             self::markTestSkipped('Requires phpcoord/datapack-oceania');
         }
-        $from = GeographicPoint::create(new Degree(-36.9003), new Degree(144.7794), new Metre(50), Geographic3D::fromSRID(Geographic3D::EPSG_GDA2020));
+        $from = GeographicPoint::create(Geographic3D::fromSRID(Geographic3D::EPSG_GDA2020), new Degree(-36.9003), new Degree(144.7794), new Metre(50));
         $toCRS = Compound::fromSRID(Compound::EPSG_GDA2020_PLUS_AHD_HEIGHT);
         $to = $from->geographic3DTo2DPlusGravityHeightFromGrid($toCRS, (new GTXGDA2020AHDProvider())->provideGrid());
 
@@ -106,7 +106,7 @@ class GeographicPoint3DTest extends TestCase
         if (!class_exists(IGNFHeightRGF93v2bNGFIGN69FranceProvider::class)) {
             self::markTestSkipped('Requires phpcoord/datapack-europe');
         }
-        $from = GeographicPoint::create(new Degree(48.858222), new Degree(2.2945), new Metre(50), Geographic3D::fromSRID(Geographic3D::EPSG_RGF93_V2B));
+        $from = GeographicPoint::create(Geographic3D::fromSRID(Geographic3D::EPSG_RGF93_V2B), new Degree(48.858222), new Degree(2.2945), new Metre(50));
         $toCRS = Compound::fromSRID(Compound::EPSG_RGF93_V2B_PLUS_NGF_IGN69_HEIGHT);
         $to = $from->geographic3DTo2DPlusGravityHeightFromGrid($toCRS, (new IGNFHeightRGF93v2bNGFIGN69FranceProvider())->provideGrid());
 
@@ -120,7 +120,7 @@ class GeographicPoint3DTest extends TestCase
         if (!class_exists(IGNFHeightRGF93v2bNGFIGN69FranceProvider::class)) {
             self::markTestSkipped('Requires phpcoord/datapack-europe');
         }
-        $from = GeographicPoint::create(new Degree(48.858222), new Degree(2.2945), new Metre(50), Geographic3D::fromSRID(Geographic3D::EPSG_RGF93_V2B));
+        $from = GeographicPoint::create(Geographic3D::fromSRID(Geographic3D::EPSG_RGF93_V2B), new Degree(48.858222), new Degree(2.2945), new Metre(50));
         $toCRS = Vertical::fromSRID(Vertical::EPSG_NGF_IGN69_HEIGHT);
         $to = $from->geographic3DToGravityHeightFromGrid($toCRS, (new IGNFHeightRGF93v2bNGFIGN69FranceProvider())->provideGrid());
 
@@ -132,7 +132,7 @@ class GeographicPoint3DTest extends TestCase
         if (!class_exists(IGNESHeightETRS89REDNAPSpainProvider::class)) {
             self::markTestSkipped('Requires phpcoord/datapack-europe');
         }
-        $from = GeographicPoint::create(new Degree(41.403611), new Degree(2.174444), new Metre(0), Geographic3D::fromSRID(Geographic3D::EPSG_ETRS89));
+        $from = GeographicPoint::create(Geographic3D::fromSRID(Geographic3D::EPSG_ETRS89), new Degree(41.403611), new Degree(2.174444), new Metre(0));
         $toCRS = Compound::fromSRID(Compound::EPSG_ETRS89_PLUS_ALICANTE_HEIGHT);
         $to = $from->geographic3DTo2DPlusGravityHeightFromGrid($toCRS, (new IGNESHeightETRS89REDNAPSpainProvider())->provideGrid());
 
@@ -146,7 +146,7 @@ class GeographicPoint3DTest extends TestCase
         if (!class_exists(IGNESHeightETRS89REDNAPSpainProvider::class)) {
             self::markTestSkipped('Requires phpcoord/datapack-europe');
         }
-        $from = GeographicPoint::create(new Degree(41.403611), new Degree(2.174444), new Metre(0), Geographic3D::fromSRID(Geographic3D::EPSG_ETRS89));
+        $from = GeographicPoint::create(Geographic3D::fromSRID(Geographic3D::EPSG_ETRS89), new Degree(41.403611), new Degree(2.174444), new Metre(0));
         $toCRS = Vertical::fromSRID(Vertical::EPSG_ALICANTE_HEIGHT);
         $to = $from->geographic3DToGravityHeightFromGrid($toCRS, (new IGNESHeightETRS89REDNAPSpainProvider())->provideGrid());
 
@@ -170,7 +170,7 @@ class GeographicPoint3DTest extends TestCase
 
         $epoch = new DateTime();
 
-        $originalPoint = GeographicPoint::create($centre[0], $centre[1], $sourceHeight, $sourceCRS, $epoch);
+        $originalPoint = GeographicPoint::create($sourceCRS, $centre[0], $centre[1], $sourceHeight, $epoch);
         $newPoint = $originalPoint->performOperation($operationSrid, $targetCRS, false);
         self::assertInstanceOf(Point::class, $newPoint);
         self::assertEquals($targetCRS, $newPoint->getCRS());

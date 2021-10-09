@@ -41,7 +41,7 @@ class OSTNOSGM15Grid extends Grid
         $easting = $point->getEasting()->add($adjustment[0]);
         $northing = $point->getNorthing()->add($adjustment[1]);
 
-        return ProjectedPoint::createFromEastingNorthing($easting, $northing, Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID), $point->getCoordinateEpoch());
+        return ProjectedPoint::createFromEastingNorthing(Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID), $easting, $northing, $point->getCoordinateEpoch());
     }
 
     public function applyReverseHorizontalAdjustment(ProjectedPoint $point): ProjectedPoint
@@ -65,7 +65,7 @@ class OSTNOSGM15Grid extends Grid
             $northing = $point->getNorthing()->subtract($adjustment[1]);
         } while (abs($adjustment[0]->subtract($prevAdjustment[0])->getValue()) > self::ITERATION_CONVERGENCE && abs($adjustment[1]->subtract($prevAdjustment[1])->getValue()) > self::ITERATION_CONVERGENCE);
 
-        return ProjectedPoint::createFromEastingNorthing($easting, $northing, $etrs89NationalGrid, $point->getCoordinateEpoch());
+        return ProjectedPoint::createFromEastingNorthing($etrs89NationalGrid, $easting, $northing, $point->getCoordinateEpoch());
     }
 
     public function getHeightAdjustment(ProjectedPoint $point): Metre

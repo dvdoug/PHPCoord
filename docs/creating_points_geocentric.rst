@@ -8,10 +8,10 @@ A ``GeocentricPoint`` can be constructed by calling ``GeocentricPoint::create`` 
 .. code-block:: php
 
     public static function create(
+        Geocentric $crs,
         Length $x,
         Length $y,
         Length $z,
-        Geocentric $crs,
         ?DateTimeInterface $epoch = null
     ): GeocentricPoint
 
@@ -27,19 +27,19 @@ Examples:
     // Ascension Island GPS tracking station in ITRF2008 (unknown date), traditional arguments
     $crs = Geocentric::fromSRID(Geocentric::EPSG_ITRF2008);
     $point = GeocentricPoint::create(
+        $crs,
         new Metre(6121152),
         new Metre(-1563979),
-        new Metre(-872615),
-        $crs
+        new Metre(-872615)
     );
 
     // Ascension Island GPS tracking station in ITRF2008 (2020-02-01), traditional arguments
     $crs = Geocentric::fromSRID(Geocentric::EPSG_ITRF2008);
     $point = GeocentricPoint::create(
+        $crs,
         new Metre(6121152),
         new Metre(-1563979),
         new Metre(-872615),
-        $crs,
         new DateTime('2020-02-01')
     );
 

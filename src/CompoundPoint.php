@@ -42,9 +42,8 @@ class CompoundPoint extends Point implements ConvertiblePoint
 
     /**
      * Horizontal point.
-     * @var GeographicPoint|ProjectedPoint
      */
-    protected Point $horizontalPoint;
+    protected GeographicPoint|ProjectedPoint $horizontalPoint;
 
     /**
      * Vertical point.
@@ -61,11 +60,7 @@ class CompoundPoint extends Point implements ConvertiblePoint
      */
     protected ?DateTimeImmutable $epoch;
 
-    /**
-     * Constructor.
-     * @param GeographicPoint|ProjectedPoint $horizontalPoint
-     */
-    protected function __construct(Point $horizontalPoint, VerticalPoint $verticalPoint, Compound $crs, ?DateTimeInterface $epoch = null)
+    protected function __construct(Compound $crs, GeographicPoint|ProjectedPoint $horizontalPoint, VerticalPoint $verticalPoint, ?DateTimeInterface $epoch = null)
     {
         $this->horizontalPoint = $horizontalPoint;
         $this->verticalPoint = $verticalPoint;
@@ -77,12 +72,9 @@ class CompoundPoint extends Point implements ConvertiblePoint
         $this->epoch = $epoch;
     }
 
-    /**
-     * @param GeographicPoint|ProjectedPoint $horizontalPoint
-     */
-    public static function create(Point $horizontalPoint, VerticalPoint $verticalPoint, Compound $crs, ?DateTimeInterface $epoch = null)
+    public static function create(Compound $crs, GeographicPoint|ProjectedPoint $horizontalPoint, VerticalPoint $verticalPoint, ?DateTimeInterface $epoch = null): self
     {
-        return new static($horizontalPoint, $verticalPoint, $crs, $epoch);
+        return new static($crs, $horizontalPoint, $verticalPoint, $epoch);
     }
 
     public function getHorizontalPoint(): Point
@@ -149,7 +141,7 @@ class CompoundPoint extends Point implements ConvertiblePoint
                                 $newVerticalPoint = $newVerticalPoint->performOperation($step['operation'], $target, $step['in_reverse'], ['horizontalPoint' => $newHorizontalPoint]);
                             }
 
-                            return static::create($newHorizontalPoint, $newVerticalPoint, $to, $this->epoch);
+                            return static::create($to, $newHorizontalPoint, $newVerticalPoint, $this->epoch);
                         }
                     }
                 }
@@ -178,7 +170,7 @@ class CompoundPoint extends Point implements ConvertiblePoint
         $toLongitude = $this->getHorizontalPoint()->getLongitude()->add($longitudeOffset);
         $toHeight = $this->getVerticalPoint()->getHeight()->add($geoidUndulation);
 
-        return GeographicPoint::create($toLatitude, $toLongitude, $toHeight, $to, $this->epoch);
+        return GeographicPoint::create($to, $toLatitude, $toLongitude, $toHeight, $this->epoch);
     }
 
     /**
@@ -201,10 +193,10 @@ class CompoundPoint extends Point implements ConvertiblePoint
         $projected = $this->horizontalPoint->transverseMercator($etrs89NationalGrid, new Degree(49), new Degree(-2), new Unity(0.9996012717), new Metre(400000), new Metre(-100000));
 
         return GeographicPoint::create(
+            $to,
             $this->horizontalPoint->getLatitude(),
             $this->horizontalPoint->getLongitude(),
             $this->verticalPoint->getHeight()->add($geoidHeightCorrectionModelFile->getHeightAdjustment($projected)),
-            $to,
             $this->getCoordinateEpoch()
         );
     }
@@ -217,10 +209,10 @@ class CompoundPoint extends Point implements ConvertiblePoint
         GeographicGeoidHeightGrid $geoidHeightCorrectionModelFile
     ): GeographicPoint {
         return GeographicPoint::create(
+            $to,
             $this->horizontalPoint->getLatitude(),
             $this->horizontalPoint->getLongitude(),
             $this->verticalPoint->getHeight()->add($geoidHeightCorrectionModelFile->getHeightAdjustment($this->horizontalPoint)),
-            $to,
             $this->getCoordinateEpoch()
         );
     }

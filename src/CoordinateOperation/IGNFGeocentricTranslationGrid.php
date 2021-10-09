@@ -9,7 +9,8 @@ declare(strict_types=1);
 namespace PHPCoord\CoordinateOperation;
 
 use function abs;
-use PHPCoord\CoordinateReferenceSystem\Geographic;
+use PHPCoord\CoordinateReferenceSystem\Geographic2D;
+use PHPCoord\CoordinateReferenceSystem\Geographic3D;
 use PHPCoord\GeographicPoint;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 
@@ -17,7 +18,7 @@ class IGNFGeocentricTranslationGrid extends GeographicGrid
 {
     use IGNFGrid;
 
-    public function applyForwardAdjustment(GeographicPoint $point, Geographic $to): GeographicPoint
+    public function applyForwardAdjustment(GeographicPoint $point, Geographic2D|Geographic3D $to): GeographicPoint
     {
         [$tx, $ty, $tz] = $this->getValues($point->getLongitude()->asDegrees()->getValue(), $point->getLatitude()->asDegrees()->getValue());
 
@@ -29,7 +30,7 @@ class IGNFGeocentricTranslationGrid extends GeographicGrid
         );
     }
 
-    public function applyReverseAdjustment(GeographicPoint $point, Geographic $to): GeographicPoint
+    public function applyReverseAdjustment(GeographicPoint $point, Geographic2D|Geographic3D $to): GeographicPoint
     {
         $adjustment = [new Metre(0), new Metre(0), new Metre(0)];
         $latitude = $point->getLatitude();

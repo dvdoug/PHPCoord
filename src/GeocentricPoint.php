@@ -18,6 +18,7 @@ use PHPCoord\CoordinateOperation\GeocentricValue;
 use PHPCoord\CoordinateOperation\GeographicValue;
 use PHPCoord\CoordinateReferenceSystem\Geocentric;
 use PHPCoord\CoordinateReferenceSystem\Geographic;
+use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Geographic3D;
 use PHPCoord\CoordinateSystem\Axis;
 use PHPCoord\Exception\InvalidCoordinateException;
@@ -65,7 +66,7 @@ class GeocentricPoint extends Point implements ConvertiblePoint
      */
     protected ?DateTimeImmutable $epoch;
 
-    protected function __construct(Length $x, Length $y, Length $z, Geocentric $crs, ?DateTimeInterface $epoch = null)
+    protected function __construct(Geocentric $crs, Length $x, Length $y, Length $z, ?DateTimeInterface $epoch = null)
     {
         $this->crs = $crs;
         $this->x = $x::convert($x, $this->crs->getCoordinateSystem()->getAxisByName(Axis::GEOCENTRIC_X)->getUnitOfMeasureId());
@@ -83,9 +84,9 @@ class GeocentricPoint extends Point implements ConvertiblePoint
      * @param Length $y refer to CRS for preferred unit of measure, but any length unit accepted
      * @param Length $z refer to CRS for preferred unit of measure, but any length unit accepted
      */
-    public static function create(Length $x, Length $y, Length $z, Geocentric $crs, ?DateTimeInterface $epoch = null): self
+    public static function create(Geocentric $crs, Length $x, Length $y, Length $z, ?DateTimeInterface $epoch = null): self
     {
-        return new static($x, $y, $z, $crs, $epoch);
+        return new static($crs, $x, $y, $z, $epoch);
     }
 
     public function getX(): Length
@@ -143,12 +144,12 @@ class GeocentricPoint extends Point implements ConvertiblePoint
      * 9636 to form a geographic to geographic transformation.
      */
     public function geographicGeocentric(
-        Geographic $to
+        Geographic2D|Geographic3D $to
     ): GeographicPoint {
         $geocentricValue = new GeocentricValue($this->x, $this->y, $this->z, $to->getDatum());
         $asGeographic = $geocentricValue->asGeographicValue();
 
-        return GeographicPoint::create($asGeographic->getLatitude(), $asGeographic->getLongitude(), $to instanceof Geographic3D ? $asGeographic->getHeight() : null, $to, $this->epoch);
+        return GeographicPoint::create($to, $asGeographic->getLatitude(), $asGeographic->getLongitude(), $to instanceof Geographic3D ? $asGeographic->getHeight() : null, $this->epoch);
     }
 
     /**
@@ -218,7 +219,7 @@ class GeocentricPoint extends Point implements ConvertiblePoint
         $yt = $M * ((($xs - $xp) * -$rz) + (($ys - $yp) * 1) + (($zs - $zp) * $rx)) + $ty + $yp;
         $zt = $M * ((($xs - $xp) * $ry) + (($ys - $yp) * -$rx) + (($zs - $zp) * 1)) + $tz + $zp;
 
-        return static::create(new Metre($xt), new Metre($yt), new Metre($zt), $to, $this->epoch);
+        return static::create($to, new Metre($xt), new Metre($yt), new Metre($zt), $this->epoch);
     }
 
     /**
@@ -288,7 +289,7 @@ class GeocentricPoint extends Point implements ConvertiblePoint
         $yt = $M * ((($xs - $xp) * $rz) + (($ys - $yp) * 1) + (($zs - $zp) * -$rx)) + $ty + $yp;
         $zt = $M * ((($xs - $xp) * -$ry) + (($ys - $yp) * $rx) + (($zs - $zp) * 1)) + $tz + $zp;
 
-        return static::create(new Metre($xt), new Metre($yt), new Metre($zt), $to, $this->epoch);
+        return static::create($to, new Metre($xt), new Metre($yt), new Metre($zt), $this->epoch);
     }
 
     /**

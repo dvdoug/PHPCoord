@@ -30,7 +30,6 @@ use PHPCoord\CoordinateOperation\AutoConversion;
 use PHPCoord\CoordinateOperation\ComplexNumber;
 use PHPCoord\CoordinateOperation\ConvertiblePoint;
 use PHPCoord\CoordinateOperation\OSTNOSGM15Grid;
-use PHPCoord\CoordinateReferenceSystem\Geographic;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Projected;
 use PHPCoord\CoordinateSystem\Axis;
@@ -91,7 +90,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
      */
     protected ?DateTimeImmutable $epoch;
 
-    protected function __construct(?Length $easting, ?Length $northing, ?Length $westing, ?Length $southing, Projected $crs, ?DateTimeInterface $epoch = null)
+    protected function __construct(Projected $crs, ?Length $easting, ?Length $northing, ?Length $westing, ?Length $southing, ?DateTimeInterface $epoch = null)
     {
         $this->crs = $crs;
 
@@ -126,36 +125,29 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         $this->epoch = $epoch;
     }
 
-    public static function create(?Length $easting, ?Length $northing, ?Length $westing, ?Length $southing, Projected $crs, ?DateTimeInterface $epoch = null): self
+    public static function create(Projected $crs, ?Length $easting, ?Length $northing, ?Length $westing, ?Length $southing, ?DateTimeInterface $epoch = null): self
     {
-        if ($crs->getSRID() === Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID) {
-            return new BritishNationalGridPoint($easting, $northing, $epoch);
-        }
-
-        if ($crs->getSRID() === Projected::EPSG_TM75_IRISH_GRID) {
-            return new IrishGridPoint($easting, $northing, $epoch);
-        }
-
-        if ($crs->getSRID() === Projected::EPSG_IRENET95_IRISH_TRANSVERSE_MERCATOR) {
-            return new IrishTransverseMercatorPoint($easting, $northing, $epoch);
-        }
-
-        return new static($easting, $northing, $westing, $southing, $crs, $epoch);
+        return match ($crs->getSRID()) {
+            Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID => new BritishNationalGridPoint($easting, $northing, $epoch),
+            Projected::EPSG_TM75_IRISH_GRID => new IrishGridPoint($easting, $northing, $epoch),
+            Projected::EPSG_IRENET95_IRISH_TRANSVERSE_MERCATOR => new IrishTransverseMercatorPoint($easting, $northing, $epoch),
+            default => new static($crs, $easting, $northing, $westing, $southing, $epoch),
+        };
     }
 
-    public static function createFromEastingNorthing(Length $easting, Length $northing, Projected $crs, ?DateTimeInterface $epoch = null): self
+    public static function createFromEastingNorthing(Projected $crs, Length $easting, Length $northing, ?DateTimeInterface $epoch = null): self
     {
-        return static::create($easting, $northing, null, null, $crs, $epoch);
+        return static::create($crs, $easting, $northing, null, null, $epoch);
     }
 
-    public static function createFromWestingNorthing(Length $westing, Length $northing, Projected $crs, ?DateTimeInterface $epoch = null): self
+    public static function createFromWestingNorthing(Projected $crs, Length $westing, Length $northing, ?DateTimeInterface $epoch = null): self
     {
-        return static::create(null, $northing, $westing, null, $crs, $epoch);
+        return static::create($crs, null, $northing, $westing, null, $epoch);
     }
 
-    public static function createFromWestingSouthing(Length $westing, Length $southing, Projected $crs, ?DateTimeInterface $epoch = null): self
+    public static function createFromWestingSouthing(Projected $crs, Length $westing, Length $southing, ?DateTimeInterface $epoch = null): self
     {
-        return static::create(null, null, $westing, $southing, $crs, $epoch);
+        return static::create($crs, null, null, $westing, $southing, $epoch);
     }
 
     public function getEasting(): Length
@@ -269,14 +261,14 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         $xt = $a0 + ($a1 * $xs) + ($a2 * $ys);
         $yt = $b0 + ($b1 * $xs) + ($b2 * $ys);
 
-        return static::create(new Metre($xt), new Metre($yt), new Metre(-$xt), new Metre(-$yt), $to, $this->epoch);
+        return static::create($to, new Metre($xt), new Metre($yt), new Metre(-$xt), new Metre(-$yt), $this->epoch);
     }
 
     /**
      * Albers Equal Area.
      */
     public function albersEqualArea(
-        Geographic $to,
+        Geographic2D|Geographic3D $to,
         Angle $latitudeOfFalseOrigin,
         Angle $longitudeOfFalseOrigin,
         Angle $latitudeOf1stStandardParallel,
@@ -318,14 +310,14 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         $latitude = $betaPrime + (($e2 / 3 + 31 * $e4 / 180 + 517 * $e6 / 5040) * sin(2 * $betaPrime)) + ((23 * $e4 / 360 + 251 * $e6 / 3780) * sin(4 * $betaPrime)) + ((761 * $e6 / 45360) * sin(6 * $betaPrime));
         $longitude = $longitudeOfFalseOrigin->asRadians()->getValue() + ($theta / $n);
 
-        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+        return GeographicPoint::create($to, new Radian($latitude), new Radian($longitude), null, $this->epoch);
     }
 
     /**
      * American Polyconic.
      */
     public function americanPolyconic(
-        Geographic $to,
+        Geographic2D|Geographic3D $to,
         Angle $latitudeOfNaturalOrigin,
         Angle $longitudeOfNaturalOrigin,
         Length $falseEasting,
@@ -369,14 +361,14 @@ class ProjectedPoint extends Point implements ConvertiblePoint
             $longitude = $longitudeOrigin + (self::asin($easting * $C / $a)) / sin($latitude);
         }
 
-        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+        return GeographicPoint::create($to, new Radian($latitude), new Radian($longitude), null, $this->epoch);
     }
 
     /**
      * Bonne.
      */
     public function bonne(
-        Geographic $to,
+        Geographic2D|Geographic3D $to,
         Angle $latitudeOfNaturalOrigin,
         Angle $longitudeOfNaturalOrigin,
         Length $falseEasting,
@@ -412,14 +404,14 @@ class ProjectedPoint extends Point implements ConvertiblePoint
             $longitude = $longitudeOrigin + $rho * atan2(-$easting, -($a * $mO / sin($latitudeOrigin) - $northing)) / $a / $m;
         }
 
-        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+        return GeographicPoint::create($to, new Radian($latitude), new Radian($longitude), null, $this->epoch);
     }
 
     /**
      * Bonne South Orientated.
      */
     public function bonneSouthOrientated(
-        Geographic $to,
+        Geographic2D|Geographic3D $to,
         Angle $latitudeOfNaturalOrigin,
         Angle $longitudeOfNaturalOrigin,
         Length $falseEasting,
@@ -455,7 +447,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
             $longitude = $longitudeOrigin + $rho * atan2(-$westing, -($a * $mO / sin($latitudeOrigin) - $southing)) / $a / $m;
         }
 
-        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+        return GeographicPoint::create($to, new Radian($latitude), new Radian($longitude), null, $this->epoch);
     }
 
     /**
@@ -471,14 +463,14 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         $easting = $this->easting->asMetres()->getValue() + $eastingOffset->asMetres()->getValue();
         $northing = $this->northing->asMetres()->getValue() + $northingOffset->asMetres()->getValue();
 
-        return static::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+        return static::create($to, new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $this->epoch);
     }
 
     /**
      * Cassini-Soldner.
      */
     public function cassiniSoldner(
-        Geographic $to,
+        Geographic2D|Geographic3D $to,
         Angle $latitudeOfNaturalOrigin,
         Angle $longitudeOfNaturalOrigin,
         Length $falseEasting,
@@ -511,14 +503,14 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         $latitude = $latitudeCentralMeridian - ($nu * tan($latitudeCentralMeridian) / $rho) * ($D ** 2 / 2 - (1 + 3 * $T) * $D ** 4 / 24);
         $longitude = $longitudeOrigin + ($D - $T * $D ** 3 / 3 + (1 + 3 * $T) * $T * $D ** 5 / 15) / cos($latitudeCentralMeridian);
 
-        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+        return GeographicPoint::create($to, new Radian($latitude), new Radian($longitude), null, $this->epoch);
     }
 
     /**
      * Hyperbolic Cassini-Soldner.
      */
     public function hyperbolicCassiniSoldner(
-        Geographic $to,
+        Geographic2D|Geographic3D $to,
         Angle $latitudeOfNaturalOrigin,
         Angle $longitudeOfNaturalOrigin,
         Length $falseEasting,
@@ -556,14 +548,14 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         $latitude = $latitudeCentralMeridian - ($nu * tan($latitudeCentralMeridian) / $rho) * ($D ** 2 / 2 - (1 + 3 * $T) * $D ** 4 / 24);
         $longitude = $longitudeOrigin + ($D - $T * $D ** 3 / 3 + (1 + 3 * $T) * $T * $D ** 5 / 15) / cos($latitudeCentralMeridian);
 
-        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+        return GeographicPoint::create($to, new Radian($latitude), new Radian($longitude), null, $this->epoch);
     }
 
     /**
      * Colombia Urban.
      */
     public function columbiaUrban(
-        Geographic $to,
+        Geographic2D|Geographic3D $to,
         Angle $latitudeOfNaturalOrigin,
         Angle $longitudeOfNaturalOrigin,
         Length $falseEasting,
@@ -591,14 +583,14 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         $nu = $a / sqrt(1 - $e2 * (sin($latitude) ** 2));
         $longitude = $longitudeOrigin + $easting / ($C * $nu * cos($latitude));
 
-        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+        return GeographicPoint::create($to, new Radian($latitude), new Radian($longitude), null, $this->epoch);
     }
 
     /**
      * Equal Earth.
      */
     public function equalEarth(
-        Geographic $to,
+        Geographic2D|Geographic3D $to,
         Angle $longitudeOfNaturalOrigin,
         Length $falseEasting,
         Length $falseNorthing
@@ -628,7 +620,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         $latitude = $beta + (($e2 / 3 + 31 * $e4 / 180 + 517 * $e6 / 5040) * sin(2 * $beta)) + ((23 * $e4 / 360 + 251 * $e6 / 3780) * sin(4 * $beta)) + ((761 * $e6 / 45360) * sin(6 * $beta));
         $longitude = $longitudeOrigin + sqrt(3) * $easting * (1.340264 - 0.243318 * $theta ** 2 + $theta ** 6 * (0.006251 + 0.034164 * $theta ** 2)) / (2 * $Rq * cos($theta));
 
-        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+        return GeographicPoint::create($to, new Radian($latitude), new Radian($longitude), null, $this->epoch);
     }
 
     /**
@@ -636,7 +628,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
      * See method code 1029 for spherical development. See also Pseudo Plate Carree, method code 9825.
      */
     public function equidistantCylindrical(
-        Geographic $to,
+        Geographic2D|Geographic3D $to,
         Angle $latitudeOf1stStandardParallel,
         Angle $longitudeOfNaturalOrigin,
         Length $falseEasting,
@@ -676,7 +668,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
 
         $longitude = $longitudeOrigin + $easting * sqrt(1 - $e2 * sin($latitudeFirstParallel) ** 2) / ($a * cos($latitudeFirstParallel));
 
-        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+        return GeographicPoint::create($to, new Radian($latitude), new Radian($longitude), null, $this->epoch);
     }
 
     /**
@@ -684,7 +676,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
      * Simplified form of Oblique Azimuthal Equidistant projection method.
      */
     public function guamProjection(
-        Geographic $to,
+        Geographic2D|Geographic3D $to,
         Angle $latitudeOfNaturalOrigin,
         Angle $longitudeOfNaturalOrigin,
         Length $falseEasting,
@@ -715,14 +707,14 @@ class ProjectedPoint extends Point implements ConvertiblePoint
 
         $longitude = $longitudeOrigin + $easting * sqrt(1 - $e2 * sin($latitude) ** 2) / ($a * cos($latitude));
 
-        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+        return GeographicPoint::create($to, new Radian($latitude), new Radian($longitude), null, $this->epoch);
     }
 
     /**
      * Krovak.
      */
     public function krovak(
-        Geographic $to,
+        Geographic2D|Geographic3D $to,
         Angle $latitudeOfProjectionCentre,
         Angle $longitudeOfOrigin,
         Angle $coLatitudeOfConeAxis,
@@ -766,7 +758,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
 
         $longitude = $longitudeO + $longitudeOffset - $V / $B;
 
-        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+        return GeographicPoint::create($to, new Radian($latitude), new Radian($longitude), null, $this->epoch);
     }
 
     /**
@@ -775,7 +767,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
      * to be a map projection.
      */
     public function krovakModified(
-        Geographic $to,
+        Geographic2D|Geographic3D $to,
         Angle $latitudeOfProjectionCentre,
         Angle $longitudeOfOrigin,
         Angle $coLatitudeOfConeAxis,
@@ -815,7 +807,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         $Xp = $this->getSouthing()->asMetres()->getValue() - $falseNorthing->asMetres()->getValue() + $dX;
         $Yp = $this->getWesting()->asMetres()->getValue() - $falseEasting->asMetres()->getValue() + $dY;
 
-        $asKrovak = self::create(new Metre(-$Yp), new Metre(-$Xp), new Metre($Yp), new Metre($Xp), $this->crs, $this->epoch);
+        $asKrovak = self::create($this->crs, new Metre(-$Yp), new Metre(-$Xp), new Metre($Yp), new Metre($Xp), $this->epoch);
 
         return $asKrovak->krovak($to, $latitudeOfProjectionCentre, $longitudeOfOrigin, $coLatitudeOfConeAxis, $latitudeOfPseudoStandardParallel, $scaleFactorOnPseudoStandardParallel, new Metre(0), new Metre(0));
     }
@@ -825,7 +817,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
      * This is the ellipsoidal form of the projection.
      */
     public function lambertAzimuthalEqualArea(
-        Geographic $to,
+        Geographic2D|Geographic3D $to,
         Angle $latitudeOfNaturalOrigin,
         Angle $longitudeOfNaturalOrigin,
         Length $falseEasting,
@@ -854,7 +846,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         $latitude = $beta + (($e2 / 3 + 31 * $e4 / 180 + 517 * $e6 / 5040) * sin(2 * $beta)) + ((23 * $e4 / 360 + 251 * $e6 / 3780) * sin(4 * $beta)) + ((761 * $e6 / 45360) * sin(6 * $beta));
         $longitude = $longitudeOrigin + atan2($easting * sin($C), $D * $rho * cos($betaO) * cos($C) - $D ** 2 * $northing * sin($betaO) * sin($C));
 
-        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+        return GeographicPoint::create($to, new Radian($latitude), new Radian($longitude), null, $this->epoch);
     }
 
     /**
@@ -864,7 +856,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
      * methods.
      */
     public function lambertAzimuthalEqualAreaSpherical(
-        Geographic $to,
+        Geographic2D|Geographic3D $to,
         Angle $latitudeOfNaturalOrigin,
         Angle $longitudeOfNaturalOrigin,
         Length $falseEasting,
@@ -894,14 +886,14 @@ class ProjectedPoint extends Point implements ConvertiblePoint
             }
         }
 
-        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+        return GeographicPoint::create($to, new Radian($latitude), new Radian($longitude), null, $this->epoch);
     }
 
     /**
      * Lambert Conic Conformal (1SP).
      */
     public function lambertConicConformal1SP(
-        Geographic $to,
+        Geographic2D|Geographic3D $to,
         Angle $latitudeOfNaturalOrigin,
         Angle $longitudeOfNaturalOrigin,
         Scale $scaleFactorAtNaturalOrigin,
@@ -941,14 +933,14 @@ class ProjectedPoint extends Point implements ConvertiblePoint
 
         $longitude = $theta / $n + $longitudeOrigin;
 
-        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+        return GeographicPoint::create($to, new Radian($latitude), new Radian($longitude), null, $this->epoch);
     }
 
     /**
      * Lambert Conic Conformal (west orientated).
      */
     public function lambertConicConformalWestOrientated(
-        Geographic $to,
+        Geographic2D|Geographic3D $to,
         Angle $latitudeOfNaturalOrigin,
         Angle $longitudeOfNaturalOrigin,
         Scale $scaleFactorAtNaturalOrigin,
@@ -988,14 +980,14 @@ class ProjectedPoint extends Point implements ConvertiblePoint
 
         $longitude = $theta / $n + $longitudeOrigin;
 
-        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+        return GeographicPoint::create($to, new Radian($latitude), new Radian($longitude), null, $this->epoch);
     }
 
     /**
      * Lambert Conic Conformal (1SP) Variant B.
      */
     public function lambertConicConformal1SPVariantB(
-        Geographic $to,
+        Geographic2D|Geographic3D $to,
         Angle $latitudeOfNaturalOrigin,
         Scale $scaleFactorAtNaturalOrigin,
         Angle $latitudeOfFalseOrigin,
@@ -1038,14 +1030,14 @@ class ProjectedPoint extends Point implements ConvertiblePoint
 
         $longitude = $theta / $n + $longitudeFalseOrigin;
 
-        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+        return GeographicPoint::create($to, new Radian($latitude), new Radian($longitude), null, $this->epoch);
     }
 
     /**
      * Lambert Conic Conformal (2SP).
      */
     public function lambertConicConformal2SP(
-        Geographic $to,
+        Geographic2D|Geographic3D $to,
         Angle $latitudeOfFalseOrigin,
         Angle $longitudeOfFalseOrigin,
         Angle $latitudeOf1stStandardParallel,
@@ -1088,14 +1080,14 @@ class ProjectedPoint extends Point implements ConvertiblePoint
 
         $longitude = $theta / $n + $lambdaOrigin;
 
-        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+        return GeographicPoint::create($to, new Radian($latitude), new Radian($longitude), null, $this->epoch);
     }
 
     /**
      * Lambert Conic Conformal (2SP Michigan).
      */
     public function lambertConicConformal2SPMichigan(
-        Geographic $to,
+        Geographic2D|Geographic3D $to,
         Angle $latitudeOfFalseOrigin,
         Angle $longitudeOfFalseOrigin,
         Angle $latitudeOf1stStandardParallel,
@@ -1140,7 +1132,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
 
         $longitude = $theta / $n + $lambdaOrigin;
 
-        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+        return GeographicPoint::create($to, new Radian($latitude), new Radian($longitude), null, $this->epoch);
     }
 
     /**
@@ -1149,7 +1141,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
      * with appropriately modified parameter values.
      */
     public function lambertConicConformal2SPBelgium(
-        Geographic $to,
+        Geographic2D|Geographic3D $to,
         Angle $latitudeOfFalseOrigin,
         Angle $longitudeOfFalseOrigin,
         Angle $latitudeOf1stStandardParallel,
@@ -1195,7 +1187,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
 
         $longitude = ($theta + (new ArcSecond(29.2985))->asRadians()->getValue()) / $n + $lambdaOrigin;
 
-        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+        return GeographicPoint::create($to, new Radian($latitude), new Radian($longitude), null, $this->epoch);
     }
 
     /**
@@ -1204,7 +1196,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
      * series expansion of the projection formulae.
      */
     public function lambertConicNearConformal(
-        Geographic $to,
+        Geographic2D|Geographic3D $to,
         Angle $latitudeOfNaturalOrigin,
         Angle $longitudeOfNaturalOrigin,
         Scale $scaleFactorAtNaturalOrigin,
@@ -1251,7 +1243,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
 
         $longitude = $longitudeOrigin + $theta / sin($latitudeOrigin);
 
-        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+        return GeographicPoint::create($to, new Radian($latitude), new Radian($longitude), null, $this->epoch);
     }
 
     /**
@@ -1259,7 +1251,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
      * This is the ellipsoidal form of the projection.
      */
     public function lambertCylindricalEqualArea(
-        Geographic $to,
+        Geographic2D|Geographic3D $to,
         Angle $latitudeOf1stStandardParallel,
         Angle $longitudeOfNaturalOrigin,
         Length $falseEasting,
@@ -1283,7 +1275,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         $latitude = $beta + (($e2 / 3 + 31 * $e4 / 180 + 517 * $e6 / 5040) * sin(2 * $beta)) + ((23 * $e4 / 360 + 251 * $e6 / 3780) * sin(4 * $beta)) + ((761 * $e6 / 45360) * sin(6 * $beta));
         $longitude = $longitudeOrigin + $easting / ($a * $k);
 
-        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+        return GeographicPoint::create($to, new Radian($latitude), new Radian($longitude), null, $this->epoch);
     }
 
     /**
@@ -1292,7 +1284,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
      * distances over which these projections are used (under 800km) this modification introduces no significant error.
      */
     public function modifiedAzimuthalEquidistant(
-        Geographic $to,
+        Geographic2D|Geographic3D $to,
         Angle $latitudeOfNaturalOrigin,
         Angle $longitudeOfNaturalOrigin,
         Length $falseEasting,
@@ -1319,7 +1311,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         $latitude = atan((1 - $e2 * $K * sin($latitudeOrigin) / sin($psi)) * tan($psi) / (1 - $e2));
         $longitude = $longitudeOrigin + self::asin(sin($alpha) * sin($J) / cos($psi));
 
-        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+        return GeographicPoint::create($to, new Radian($latitude), new Radian($longitude), null, $this->epoch);
     }
 
     /**
@@ -1328,7 +1320,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
      * Projections - A Working Manual" by John P. Snyder.
      */
     public function obliqueStereographic(
-        Geographic $to,
+        Geographic2D|Geographic3D $to,
         Angle $latitudeOfNaturalOrigin,
         Angle $longitudeOfNaturalOrigin,
         Scale $scaleFactorAtNaturalOrigin,
@@ -1375,7 +1367,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
             $latitude = $latitudeN - ($psiN - $psi) * cos($latitudeN) * (1 - $e2 * sin($latitudeN) ** 2) / (1 - $e2);
         } while (abs($latitude - $latitudeN) >= static::ITERATION_CONVERGENCE_FORMULA);
 
-        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+        return GeographicPoint::create($to, new Radian($latitude), new Radian($longitude), null, $this->epoch);
     }
 
     /**
@@ -1383,7 +1375,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
      * Latitude of natural origin must be either 90 degrees or -90 degrees (or equivalent in alternative angle unit).
      */
     public function polarStereographicVariantA(
-        Geographic $to,
+        Geographic2D|Geographic3D $to,
         Angle $latitudeOfNaturalOrigin,
         Angle $longitudeOfNaturalOrigin,
         Scale $scaleFactorAtNaturalOrigin,
@@ -1422,14 +1414,14 @@ class ProjectedPoint extends Point implements ConvertiblePoint
             $longitude = $longitudeOrigin + atan2($easting, $falseNorthing->asMetres()->getValue() - $this->northing->asMetres()->getValue());
         }
 
-        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+        return GeographicPoint::create($to, new Radian($latitude), new Radian($longitude), null, $this->epoch);
     }
 
     /**
      * Polar Stereographic (variant B).
      */
     public function polarStereographicVariantB(
-        Geographic $to,
+        Geographic2D|Geographic3D $to,
         Angle $latitudeOfStandardParallel,
         Angle $longitudeOfOrigin,
         Length $falseEasting,
@@ -1473,14 +1465,14 @@ class ProjectedPoint extends Point implements ConvertiblePoint
             $longitude = $longitudeOrigin + atan2($easting, $falseNorthing->asMetres()->getValue() - $this->northing->asMetres()->getValue());
         }
 
-        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+        return GeographicPoint::create($to, new Radian($latitude), new Radian($longitude), null, $this->epoch);
     }
 
     /**
      * Polar Stereographic (variant C).
      */
     public function polarStereographicVariantC(
-        Geographic $to,
+        Geographic2D|Geographic3D $to,
         Angle $latitudeOfStandardParallel,
         Angle $longitudeOfOrigin,
         Length $eastingAtFalseOrigin,
@@ -1525,7 +1517,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
             $longitude = $longitudeOrigin + atan2($easting, $northingAtFalseOrigin->asMetres()->getValue() - $this->northing->asMetres()->getValue() + $rhoF);
         }
 
-        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+        return GeographicPoint::create($to, new Radian($latitude), new Radian($longitude), null, $this->epoch);
     }
 
     /**
@@ -1533,7 +1525,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
      * Applies spherical formulas to the ellipsoid. As such does not have the properties of a true Mercator projection.
      */
     public function popularVisualisationPseudoMercator(
-        Geographic $to,
+        Geographic2D|Geographic3D $to,
         Angle $latitudeOfNaturalOrigin,
         Angle $longitudeOfNaturalOrigin,
         Length $falseEasting,
@@ -1550,7 +1542,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         $latitude = M_PI / 2 - 2 * atan(M_E ** $D);
         $longitude = $easting / $a + $longitudeOrigin;
 
-        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+        return GeographicPoint::create($to, new Radian($latitude), new Radian($longitude), null, $this->epoch);
     }
 
     /**
@@ -1580,7 +1572,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
             $northing = $yo - $xs * $M * sin($theta) + $ys * $M * cos($theta);
         }
 
-        return self::create(new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $to, $this->epoch);
+        return self::create($to, new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $this->epoch);
     }
 
     /**
@@ -1590,7 +1582,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
      * completeness in CRS labelling.
      */
     public function mercatorVariantA(
-        Geographic $to,
+        Geographic2D|Geographic3D $to,
         Angle $latitudeOfNaturalOrigin,
         Angle $longitudeOfNaturalOrigin,
         Scale $scaleFactorAtNaturalOrigin,
@@ -1616,7 +1608,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         $latitude = $chi + ($e2 / 2 + 5 * $e4 / 24 + $e6 / 12 + 13 * $e8 / 360) * sin(2 * $chi) + (7 * $e4 / 48 + 29 * $e6 / 240 + 811 * $e8 / 11520) * sin(4 * $chi) + (7 * $e6 / 120 + 81 * $e8 / 1120) * sin(6 * $chi) + (4279 * $e8 / 161280) * sin(8 * $chi);
         $longitude = $easting / ($a * $scaleFactorOrigin) + $longitudeOrigin;
 
-        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+        return GeographicPoint::create($to, new Radian($latitude), new Radian($longitude), null, $this->epoch);
     }
 
     /**
@@ -1624,7 +1616,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
      * Used for most nautical charts.
      */
     public function mercatorVariantB(
-        Geographic $to,
+        Geographic2D|Geographic3D $to,
         Angle $latitudeOf1stStandardParallel,
         Angle $longitudeOfNaturalOrigin,
         Length $falseEasting,
@@ -1650,14 +1642,14 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         $latitude = $chi + ($e2 / 2 + 5 * $e4 / 24 + $e6 / 12 + 13 * $e8 / 360) * sin(2 * $chi) + (7 * $e4 / 48 + 29 * $e6 / 240 + 811 * $e8 / 11520) * sin(4 * $chi) + (7 * $e6 / 120 + 81 * $e8 / 1120) * sin(6 * $chi) + (4279 * $e8 / 161280) * sin(8 * $chi);
         $longitude = $easting / ($a * $scaleFactorOrigin) + $longitudeOrigin;
 
-        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+        return GeographicPoint::create($to, new Radian($latitude), new Radian($longitude), null, $this->epoch);
     }
 
     /**
      * Hotine Oblique Mercator (variant A).
      */
     public function obliqueMercatorHotineVariantA(
-        Geographic $to,
+        Geographic2D|Geographic3D $to,
         Angle $latitudeOfProjectionCentre,
         Angle $longitudeOfProjectionCentre,
         Angle $azimuthOfInitialLine,
@@ -1707,14 +1699,14 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         $latitude = $chi + sin(2 * $chi) * ($e2 / 2 + 5 * $e4 / 24 + $e6 / 12 + 13 * $e8 / 360) + sin(4 * $chi) * (7 * $e4 / 48 + 29 * $e6 / 240 + 811 * $e8 / 11520) + sin(6 * $chi) * (7 * $e6 / 120 + 81 * $e8 / 1120) + sin(8 * $chi) * (4279 * $e8 / 161280);
         $longitude = $lonO - atan2(($S * cos($gammaO) - $V * sin($gammaO)), cos($B * $u / $A)) / $B;
 
-        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+        return GeographicPoint::create($to, new Radian($latitude), new Radian($longitude), null, $this->epoch);
     }
 
     /**
      * Hotine Oblique Mercator (variant B).
      */
     public function obliqueMercatorHotineVariantB(
-        Geographic $to,
+        Geographic2D|Geographic3D $to,
         Angle $latitudeOfProjectionCentre,
         Angle $longitudeOfProjectionCentre,
         Angle $azimuthOfInitialLine,
@@ -1770,14 +1762,14 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         $latitude = $chi + sin(2 * $chi) * ($e2 / 2 + 5 * $e4 / 24 + $e6 / 12 + 13 * $e8 / 360) + sin(4 * $chi) * (7 * $e4 / 48 + 29 * $e6 / 240 + 811 * $e8 / 11520) + sin(6 * $chi) * (7 * $e6 / 120 + 81 * $e8 / 1120) + sin(8 * $chi) * (4279 * $e8 / 161280);
         $longitude = $lonO - atan2(($S * cos($gammaO) - $V * sin($gammaO)), cos($B * $u / $A)) / $B;
 
-        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+        return GeographicPoint::create($to, new Radian($latitude), new Radian($longitude), null, $this->epoch);
     }
 
     /**
      * Laborde Oblique Mercator.
      */
     public function obliqueMercatorLaborde(
-        Geographic $to,
+        Geographic2D|Geographic3D $to,
         Angle $latitudeOfProjectionCentre,
         Angle $longitudeOfProjectionCentre,
         Angle $azimuthOfInitialLine,
@@ -1835,14 +1827,14 @@ class ProjectedPoint extends Point implements ConvertiblePoint
             $latitude = 2 * atan(((1 + $e * sin($latitude)) / (1 - $e * sin($latitude))) ** ($e / 2) * M_E ** $q) - M_PI / 2;
         } while (abs($latitude - $latitudeN) >= static::ITERATION_CONVERGENCE_FORMULA);
 
-        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+        return GeographicPoint::create($to, new Radian($latitude), new Radian($longitude), null, $this->epoch);
     }
 
     /**
      * Transverse Mercator.
      */
     public function transverseMercator(
-        Geographic $to,
+        Geographic2D|Geographic3D $to,
         Angle $latitudeOfNaturalOrigin,
         Angle $longitudeOfNaturalOrigin,
         Scale $scaleFactorAtNaturalOrigin,
@@ -1910,7 +1902,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         $latitude = atan(sinh($Q));
         $longitude = $longitudeOrigin + self::asin(tanh($eta0) / cos($beta));
 
-        return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
+        return GeographicPoint::create($to, new Radian($latitude), new Radian($longitude), null, $this->epoch);
     }
 
     /**
@@ -1919,7 +1911,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
      * each zone.
      */
     public function transverseMercatorZonedGrid(
-        Geographic $to,
+        Geographic2D|Geographic3D $to,
         Angle $latitudeOfNaturalOrigin,
         Angle $initialLongitude,
         Angle $zoneWidth,
@@ -1973,9 +1965,9 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         $ytUnit = $to->getCoordinateSystem()->getAxes()[1]->getUnitOfMeasureId();
 
         return static::createFromEastingNorthing(
+            $to,
             Length::makeUnit($t['xt'], $xtUnit),
             Length::makeUnit($t['yt'], $ytUnit),
-            $to,
             $this->epoch
         );
     }
@@ -1984,7 +1976,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
      * New Zealand Map Grid.
      */
     public function newZealandMapGrid(
-        Geographic $to,
+        Geographic2D|Geographic3D $to,
         Angle $latitudeOfNaturalOrigin,
         Angle $longitudeOfNaturalOrigin,
         Length $falseEasting,
@@ -2052,7 +2044,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         $latitude = $latitudeOfNaturalOrigin->add(new ArcSecond($deltaLatitudeToOrigin / 0.00001));
         $longitude = $longitudeOfNaturalOrigin->add(new Radian($zeta->getImaginary()));
 
-        return GeographicPoint::create($latitude, $longitude, null, $to, $this->epoch);
+        return GeographicPoint::create($to, $latitude, $longitude, null, $this->epoch);
     }
 
     /**
@@ -2100,9 +2092,9 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         $ytUnit = $to->getCoordinateSystem()->getAxes()[1]->getUnitOfMeasureId();
 
         return static::createFromEastingNorthing(
+            $to,
             Length::makeUnit($xt, $xtUnit),
             Length::makeUnit($yt, $ytUnit),
-            $to,
             $this->epoch
         );
     }

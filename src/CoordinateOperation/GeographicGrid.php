@@ -9,7 +9,8 @@ declare(strict_types=1);
 namespace PHPCoord\CoordinateOperation;
 
 use function abs;
-use PHPCoord\CoordinateReferenceSystem\Geographic;
+use PHPCoord\CoordinateReferenceSystem\Geographic2D;
+use PHPCoord\CoordinateReferenceSystem\Geographic3D;
 use PHPCoord\GeographicPoint;
 use PHPCoord\UnitOfMeasure\Angle\ArcSecond;
 
@@ -17,7 +18,7 @@ abstract class GeographicGrid extends Grid
 {
     protected const ITERATION_CONVERGENCE = 0.0001;
 
-    public function applyForwardAdjustment(GeographicPoint $point, Geographic $to): GeographicPoint
+    public function applyForwardAdjustment(GeographicPoint $point, Geographic2D|Geographic3D $to): GeographicPoint
     {
         $shifts = $this->getValues($point->getLongitude()->getValue(), $point->getLatitude()->getValue());
 
@@ -25,10 +26,10 @@ abstract class GeographicGrid extends Grid
         $longitude = $point->getLongitude()->add($shifts[1]);
         $height = $point->getHeight() && $shifts[2] ? $point->getHeight()->add($shifts[2]) : null;
 
-        return GeographicPoint::create($latitude, $longitude, $height, $to, $point->getCoordinateEpoch());
+        return GeographicPoint::create($to, $latitude, $longitude, $height, $point->getCoordinateEpoch());
     }
 
-    public function applyReverseAdjustment(GeographicPoint $point, Geographic $to): GeographicPoint
+    public function applyReverseAdjustment(GeographicPoint $point, Geographic2D|Geographic3D $to): GeographicPoint
     {
         $shifts = [new ArcSecond(0), new ArcSecond(0)];
         $latitude = $point->getLatitude();
@@ -43,6 +44,6 @@ abstract class GeographicGrid extends Grid
 
         $height = $point->getHeight() && $shifts[2] ? $point->getHeight()->subtract($shifts[2]) : null;
 
-        return GeographicPoint::create($latitude, $longitude, $height, $to, $point->getCoordinateEpoch());
+        return GeographicPoint::create($to, $latitude, $longitude, $height, $point->getCoordinateEpoch());
     }
 }

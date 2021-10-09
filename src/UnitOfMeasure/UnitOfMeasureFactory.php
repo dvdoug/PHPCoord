@@ -19,10 +19,7 @@ class UnitOfMeasureFactory
 {
     private static array $sridCache = [];
 
-    /**
-     * @param float|string $measurement
-     */
-    public static function makeUnit($measurement, string $srid): UnitOfMeasure
+    public static function makeUnit(float|string $measurement, string $srid): UnitOfMeasure
     {
         if (!self::$sridCache) {
             self::$sridCache['angle'] = Angle::getSupportedSRIDs();

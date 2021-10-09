@@ -20,7 +20,13 @@ use PHPCoord\CoordinateOperation\CoordinateOperationMethods;
 use PHPCoord\CoordinateOperation\CoordinateOperationParams;
 use PHPCoord\CoordinateOperation\CoordinateOperations;
 use PHPCoord\CoordinateOperation\GeographicValue;
+use PHPCoord\CoordinateReferenceSystem\Compound;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
+use PHPCoord\CoordinateReferenceSystem\Geocentric;
+use PHPCoord\CoordinateReferenceSystem\Geographic2D;
+use PHPCoord\CoordinateReferenceSystem\Geographic3D;
+use PHPCoord\CoordinateReferenceSystem\Projected;
+use PHPCoord\CoordinateReferenceSystem\Vertical;
 use PHPCoord\Datum\Ellipsoid;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPCoord\UnitOfMeasure\Length\Length;
@@ -59,7 +65,7 @@ abstract class Point implements Stringable
     /**
      * @internal
      */
-    public function performOperation(string $srid, CoordinateReferenceSystem $to, bool $inReverse, array $additionalParams = []): self
+    public function performOperation(string $srid, Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $to, bool $inReverse, array $additionalParams = []): self
     {
         $operation = CoordinateOperations::getOperationData($srid);
         $method = CoordinateOperationMethods::getFunctionName($operation['method']);

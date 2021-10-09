@@ -39,9 +39,9 @@ class CompoundPointTest extends TestCase
     public function testCompound(): void
     {
         $object = CompoundPoint::create(
-            ProjectedPoint::create(new Metre(123), new Metre(456), null, null, Projected::fromSRID(Projected::EPSG_WGS_84_WORLD_MERCATOR)),
-            VerticalPoint::create(new Metre(789), Vertical::fromSRID(Vertical::EPSG_EGM2008_HEIGHT)),
-            Compound::fromSRID(Compound::EPSG_WGS_84_WORLD_MERCATOR_PLUS_EGM2008_HEIGHT)
+            Compound::fromSRID(Compound::EPSG_WGS_84_WORLD_MERCATOR_PLUS_EGM2008_HEIGHT),
+            ProjectedPoint::create(Projected::fromSRID(Projected::EPSG_WGS_84_WORLD_MERCATOR), new Metre(123), new Metre(456), null, null),
+            VerticalPoint::create(Vertical::fromSRID(Vertical::EPSG_EGM2008_HEIGHT), new Metre(789))
         );
         self::assertEquals(123, $object->getHorizontalPoint()->getEasting()->getValue());
         self::assertEquals(456, $object->getHorizontalPoint()->getNorthing()->getValue());
@@ -54,9 +54,9 @@ class CompoundPointTest extends TestCase
     public function testCompoundWithEpochDateTime(): void
     {
         $object = CompoundPoint::create(
-            ProjectedPoint::create(new Metre(123), new Metre(456), null, null, Projected::fromSRID(Projected::EPSG_WGS_84_WORLD_MERCATOR)),
-            VerticalPoint::create(new Metre(789), Vertical::fromSRID(Vertical::EPSG_EGM2008_HEIGHT)),
             Compound::fromSRID(Compound::EPSG_WGS_84_WORLD_MERCATOR_PLUS_EGM2008_HEIGHT),
+            ProjectedPoint::create(Projected::fromSRID(Projected::EPSG_WGS_84_WORLD_MERCATOR), new Metre(123), new Metre(456), null, null),
+            VerticalPoint::create(Vertical::fromSRID(Vertical::EPSG_EGM2008_HEIGHT), new Metre(789)),
             new DateTime('2003-02-01')
         );
         self::assertEquals(123, $object->getHorizontalPoint()->getEasting()->getValue());
@@ -70,9 +70,9 @@ class CompoundPointTest extends TestCase
     public function testCompoundWithEpochDateTimeImmutable(): void
     {
         $object = CompoundPoint::create(
-            ProjectedPoint::create(new Metre(123), new Metre(456), null, null, Projected::fromSRID(Projected::EPSG_WGS_84_WORLD_MERCATOR)),
-            VerticalPoint::create(new Metre(789), Vertical::fromSRID(Vertical::EPSG_EGM2008_HEIGHT)),
             Compound::fromSRID(Compound::EPSG_WGS_84_WORLD_MERCATOR_PLUS_EGM2008_HEIGHT),
+            ProjectedPoint::create(Projected::fromSRID(Projected::EPSG_WGS_84_WORLD_MERCATOR), new Metre(123), new Metre(456), null, null),
+            VerticalPoint::create(Vertical::fromSRID(Vertical::EPSG_EGM2008_HEIGHT), new Metre(789)),
             new DateTimeImmutable('2003-02-01')
         );
         self::assertEquals(123, $object->getHorizontalPoint()->getEasting()->getValue());
@@ -86,14 +86,14 @@ class CompoundPointTest extends TestCase
     public function testDistanceCalculation(): void
     {
         $from = CompoundPoint::create(
-            ProjectedPoint::create(new Metre(438700), new Metre(114800), null, null, Projected::fromSRID(Projected::EPSG_WGS_84_WORLD_MERCATOR)),
-            VerticalPoint::create(new Metre(789), Vertical::fromSRID(Vertical::EPSG_EGM2008_HEIGHT)),
-            Compound::fromSRID(Compound::EPSG_WGS_84_WORLD_MERCATOR_PLUS_EGM2008_HEIGHT)
+            Compound::fromSRID(Compound::EPSG_WGS_84_WORLD_MERCATOR_PLUS_EGM2008_HEIGHT),
+            ProjectedPoint::create(Projected::fromSRID(Projected::EPSG_WGS_84_WORLD_MERCATOR), new Metre(438700), new Metre(114800), null, null),
+            VerticalPoint::create(Vertical::fromSRID(Vertical::EPSG_EGM2008_HEIGHT), new Metre(789))
         );
         $to = CompoundPoint::create(
-            ProjectedPoint::create(new Metre(533600), new Metre(180500), null, null, Projected::fromSRID(Projected::EPSG_WGS_84_WORLD_MERCATOR)),
-            VerticalPoint::create(new Metre(789), Vertical::fromSRID(Vertical::EPSG_EGM2008_HEIGHT)),
-            Compound::fromSRID(Compound::EPSG_WGS_84_WORLD_MERCATOR_PLUS_EGM2008_HEIGHT)
+            Compound::fromSRID(Compound::EPSG_WGS_84_WORLD_MERCATOR_PLUS_EGM2008_HEIGHT),
+            ProjectedPoint::create(Projected::fromSRID(Projected::EPSG_WGS_84_WORLD_MERCATOR), new Metre(533600), new Metre(180500), null, null),
+            VerticalPoint::create(Vertical::fromSRID(Vertical::EPSG_EGM2008_HEIGHT), new Metre(789))
         );
         self::assertEqualsWithDelta(115423.134596, $from->calculateDistance($to)->getValue(), 0.000001);
     }
@@ -102,14 +102,14 @@ class CompoundPointTest extends TestCase
     {
         $this->expectException(InvalidCoordinateReferenceSystemException::class);
         $from = CompoundPoint::create(
-            ProjectedPoint::create(new Metre(438700), new Metre(114800), null, null, Projected::fromSRID(Projected::EPSG_WGS_84_WORLD_MERCATOR)),
-            VerticalPoint::create(new Metre(789), Vertical::fromSRID(Vertical::EPSG_EGM2008_HEIGHT)),
-            Compound::fromSRID(Compound::EPSG_WGS_84_WORLD_MERCATOR_PLUS_EGM2008_HEIGHT)
+            Compound::fromSRID(Compound::EPSG_WGS_84_WORLD_MERCATOR_PLUS_EGM2008_HEIGHT),
+            ProjectedPoint::create(Projected::fromSRID(Projected::EPSG_WGS_84_WORLD_MERCATOR), new Metre(438700), new Metre(114800), null, null),
+            VerticalPoint::create(Vertical::fromSRID(Vertical::EPSG_EGM2008_HEIGHT), new Metre(789))
         );
         $to = CompoundPoint::create(
-            ProjectedPoint::create(new Metre(533600), new Metre(180500), null, null, Projected::fromSRID(Projected::EPSG_WGS_84_WORLD_MERCATOR)),
-            VerticalPoint::create(new Metre(789), Vertical::fromSRID(Vertical::EPSG_EGM2008_HEIGHT)),
-            Compound::fromSRID(Compound::EPSG_OSGB36_BRITISH_NATIONAL_GRID_PLUS_ODN_HEIGHT)
+            Compound::fromSRID(Compound::EPSG_OSGB36_BRITISH_NATIONAL_GRID_PLUS_ODN_HEIGHT),
+            ProjectedPoint::create(Projected::fromSRID(Projected::EPSG_WGS_84_WORLD_MERCATOR), new Metre(533600), new Metre(180500), null, null),
+            VerticalPoint::create(Vertical::fromSRID(Vertical::EPSG_EGM2008_HEIGHT), new Metre(789))
         );
         $from->calculateDistance($to);
     }
@@ -120,17 +120,17 @@ class CompoundPointTest extends TestCase
             self::markTestSkipped('Requires phpcoord/datapack-europe');
         }
         $from = CompoundPoint::create(
+            Compound::fromSRID(Compound::EPSG_ETRS89_PLUS_ODN_HEIGHT),
             GeographicPoint::create(
+                Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89),
                 new Degree(53.77911025760),
                 new Degree(-3.04045490691),
-                null,
-                Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89)
+                null
             ),
             VerticalPoint::create(
-                new Metre(12.658),
-                Vertical::fromSRID(Vertical::EPSG_ODN_HEIGHT)
-            ),
-            Compound::fromSRID(Compound::EPSG_ETRS89_PLUS_ODN_HEIGHT)
+                Vertical::fromSRID(Vertical::EPSG_ODN_HEIGHT),
+                new Metre(12.658)
+            )
         );
         $toCRS = Geographic3D::fromSRID(Geographic3D::EPSG_ETRS89);
         $to = $from->geographic3DTo2DPlusGravityHeightOSGM15($toCRS, (new OSTN15OSGM15Provider())->provideGrid(), Geographic2D::EPSG_ETRS89);
@@ -146,17 +146,17 @@ class CompoundPointTest extends TestCase
             self::markTestSkipped('Requires phpcoord/datapack-oceania');
         }
         $from = CompoundPoint::create(
+            Compound::fromSRID(Compound::EPSG_NZGD2000_PLUS_NZVD2016_HEIGHT),
             GeographicPoint::create(
+                Geographic2D::fromSRID(Geographic2D::EPSG_NZGD2000),
                 new Degree(-36.9003),
                 new Degree(174.7794),
-                null,
-                Geographic2D::fromSRID(Geographic2D::EPSG_NZGD2000)
+                null
             ),
             VerticalPoint::create(
-                new Metre(15.715),
-                Vertical::fromSRID(Vertical::EPSG_NZVD2016_HEIGHT)
-            ),
-            Compound::fromSRID(Compound::EPSG_NZGD2000_PLUS_NZVD2016_HEIGHT)
+                Vertical::fromSRID(Vertical::EPSG_NZVD2016_HEIGHT),
+                new Metre(15.715)
+            )
         );
         $toCRS = Geographic3D::fromSRID(Geographic3D::EPSG_NZGD2000);
         $to = $from->geographic3DTo2DPlusGravityHeightFromGrid($toCRS, (new GTXNZGeoid2016Provider())->provideGrid());
@@ -172,17 +172,17 @@ class CompoundPointTest extends TestCase
             self::markTestSkipped('Requires phpcoord/datapack-europe');
         }
         $from = CompoundPoint::create(
+            Compound::fromSRID(Compound::EPSG_RGF93_V2B_PLUS_NGF_IGN69_HEIGHT),
             GeographicPoint::create(
+                Geographic2D::fromSRID(Geographic2D::EPSG_RGF93_V2B),
                 new Degree(48.858222),
                 new Degree(2.2945),
-                null,
-                Geographic2D::fromSRID(Geographic2D::EPSG_RGF93_V2B)
+                null
             ),
             VerticalPoint::create(
-                new Metre(6.187),
-                Vertical::fromSRID(Vertical::EPSG_NGF_IGN69_HEIGHT)
-            ),
-            Compound::fromSRID(Compound::EPSG_RGF93_V2B_PLUS_NGF_IGN69_HEIGHT)
+                Vertical::fromSRID(Vertical::EPSG_NGF_IGN69_HEIGHT),
+                new Metre(6.187)
+            )
         );
         $toCRS = Geographic3D::fromSRID(Geographic3D::EPSG_RGF93_V2B);
         $to = $from->geographic3DTo2DPlusGravityHeightFromGrid($toCRS, (new IGNFHeightRGF93v2bNGFIGN69FranceProvider())->provideGrid());
@@ -198,17 +198,17 @@ class CompoundPointTest extends TestCase
             self::markTestSkipped('Requires phpcoord/datapack-europe');
         }
         $from = CompoundPoint::create(
+            Compound::fromSRID(Compound::EPSG_ETRS89_PLUS_ALICANTE_HEIGHT),
             GeographicPoint::create(
+                Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89),
                 new Degree(41.403611),
                 new Degree(2.174444),
-                null,
-                Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89)
+                null
             ),
             VerticalPoint::create(
-                new Metre(-49.196),
-                Vertical::fromSRID(Vertical::EPSG_ALICANTE_HEIGHT)
-            ),
-            Compound::fromSRID(Compound::EPSG_ETRS89_PLUS_ALICANTE_HEIGHT)
+                Vertical::fromSRID(Vertical::EPSG_ALICANTE_HEIGHT),
+                new Metre(-49.196)
+            )
         );
         $toCRS = Geographic3D::fromSRID(Geographic3D::EPSG_ETRS89);
         $to = $from->geographic3DTo2DPlusGravityHeightFromGrid($toCRS, (new IGNESHeightETRS89REDNAPSpainProvider())->provideGrid());
@@ -233,17 +233,17 @@ class CompoundPointTest extends TestCase
             $centre = $operationExtent->getPointInside();
             $centre[1] = $centre[1]->subtract($sourceCRS->getHorizontal()->getDatum()->getPrimeMeridian()->getGreenwichLongitude()); //compensate for non-Greenwich prime meridian
 
-            $horizontalPoint = GeographicPoint::create($centre[0], $centre[1], null, $sourceHorizontalCRS);
+            $horizontalPoint = GeographicPoint::create($sourceHorizontalCRS, $centre[0], $centre[1], null);
         } elseif ($sourceHorizontalCRS instanceof Geographic2D) {
-            $horizontalPoint = ProjectedPoint::create(new Metre(0), new Metre(0), new Metre(0), new Metre(0), $sourceHorizontalCRS);
+            $horizontalPoint = ProjectedPoint::create($sourceHorizontalCRS, new Metre(0), new Metre(0), new Metre(0), new Metre(0));
         }
         $verticalCRS = $sourceCRS->getVertical();
-        $verticalPoint = VerticalPoint::create(new Metre(0), $verticalCRS);
+        $verticalPoint = VerticalPoint::create($verticalCRS, new Metre(0));
         $targetCRS = CoordinateReferenceSystem::fromSRID($targetCrsSrid);
 
         $epoch = new DateTime();
 
-        $originalPoint = CompoundPoint::create($horizontalPoint, $verticalPoint, $sourceCRS, $epoch);
+        $originalPoint = CompoundPoint::create($sourceCRS, $horizontalPoint, $verticalPoint, $epoch);
         $newPoint = $originalPoint->performOperation($operationSrid, $targetCRS, false);
         self::assertInstanceOf(Point::class, $newPoint);
         self::assertEquals($targetCRS, $newPoint->getCRS());
