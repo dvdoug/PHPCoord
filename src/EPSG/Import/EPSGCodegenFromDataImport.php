@@ -83,10 +83,6 @@ class EPSGCodegenFromDataImport
         1099, // Geographic3D to GravityRelatedHeight (PL txt)
         1100, // Geog3D to Geog2D+GravityRelatedHeight (PL txt)
         1101, // Vertical Offset by Grid Interpolation (PL txt)
-        1105, // Geog3D to Geog2D+GravityRelatedHeight (ITAL2005)
-        1106, // Geographic3D to GravityRelatedHeight (ITAL2005)
-        9620, // Norway Offshore Interpolation
-        9634, // Maritime Provinces polynomial interpolation
 
         // only distributed as .dll, can't use
         1036, // Cartesian Grid Offsets from Form Function
@@ -107,6 +103,12 @@ class EPSGCodegenFromDataImport
         // Replaced by IGN2009
         1094, // Geog3D to Geog2D+GravityRelatedHeight (IGN1997)
         9664, // Geographic3D to GravityRelatedHeight (IGN1997)
+
+        // Replaced with a position vector transformation
+        9620, // Norway Offshore Interpolation
+
+        // Not available for download
+        9634, // Maritime Provinces polynomial interpolation
 
         // EGM files are *very* large and not of general use
         1103, // Geog3D to Geog2D+GravityRelatedHeight (EGM)
@@ -504,6 +506,10 @@ class EPSGCodegenFromDataImport
         9735, // NTv2 35160622_47161840_E50_F89.gsb
         9736, // NTv2 35160622_47161840_E50_F00.gsb
         9737, // NTv2 35160622_47161840_F89_F00.gsb
+        9727, // GRD geo_igm_mar06.grd
+        9728, // GRD geo_igm_mar06.grd
+        9729, // GRD geo_igm_mar06.grd
+        9730, // GRD geo_igm_mar06.grd
     ];
 
     public function __construct()

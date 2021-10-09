@@ -207,6 +207,11 @@ class CoordinateOperationMethods
     public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_IGN2009 = 'urn:ogc:def:method:EPSG::1095';
 
     /**
+     * Geog3D to Geog2D+GravityRelatedHeight (ITAL2005).
+     */
+    public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_ITAL2005 = 'urn:ogc:def:method:EPSG::1105';
+
+    /**
      * Geog3D to Geog2D+GravityRelatedHeight (OSGM-GB).
      */
     public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_OSGM_GB = 'urn:ogc:def:method:EPSG::1097';
@@ -275,6 +280,11 @@ class CoordinateOperationMethods
      * file with same name as the grid.
      */
     public const EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_IGN2009 = 'urn:ogc:def:method:EPSG::1073';
+
+    /**
+     * Geographic3D to GravityRelatedHeight (ITAL2005).
+     */
+    public const EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_ITAL2005 = 'urn:ogc:def:method:EPSG::1106';
 
     /**
      * Geographic3D to GravityRelatedHeight (NZgeoid)
