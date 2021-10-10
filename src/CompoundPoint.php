@@ -77,7 +77,7 @@ class CompoundPoint extends Point implements ConvertiblePoint
         return new static($crs, $horizontalPoint, $verticalPoint, $epoch);
     }
 
-    public function getHorizontalPoint(): Point
+    public function getHorizontalPoint(): GeographicPoint|ProjectedPoint
     {
         return $this->horizontalPoint;
     }
