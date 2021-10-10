@@ -121,28 +121,26 @@ class CompoundPoint extends Point implements ConvertiblePoint
         try {
             return $this->autoConvert($to, $ignoreBoundaryRestrictions);
         } catch (UnknownConversionException $e) {
-            if ($this->getHorizontalPoint() instanceof ConvertiblePoint) {
-                // if 2D target, try again with just the horizontal component
-                if (($to instanceof Geographic2D || $to instanceof Projected)) {
-                    return $this->getHorizontalPoint()->convert($to, $ignoreBoundaryRestrictions);
-                }
+            // if 2D target, try again with just the horizontal component
+            if (($to instanceof Geographic2D || $to instanceof Projected)) {
+                return $this->getHorizontalPoint()->convert($to, $ignoreBoundaryRestrictions);
+            }
 
-                // try separate horizontal + vertical conversions and stitch results together
-                if ($to instanceof Compound) {
-                    $newHorizontalPoint = $this->getHorizontalPoint()->convert($to->getHorizontal());
+            // try separate horizontal + vertical conversions and stitch results together
+            if ($to instanceof Compound) {
+                $newHorizontalPoint = $this->getHorizontalPoint()->convert($to->getHorizontal());
 
-                    if ($this->getCRS()->getVertical()->getSRID() !== $to->getVertical()->getSRID()) {
-                        $path = $this->findOperationPath($this->getCRS()->getVertical(), $to->getVertical(), $ignoreBoundaryRestrictions);
+                if ($this->getCRS()->getVertical()->getSRID() !== $to->getVertical()->getSRID()) {
+                    $path = $this->findOperationPath($this->getCRS()->getVertical(), $to->getVertical(), $ignoreBoundaryRestrictions);
 
-                        if ($path) {
-                            $newVerticalPoint = $this->getVerticalPoint();
-                            foreach ($path as $step) {
-                                $target = CoordinateReferenceSystem::fromSRID($step['in_reverse'] ? $step['source_crs'] : $step['target_crs']);
-                                $newVerticalPoint = $newVerticalPoint->performOperation($step['operation'], $target, $step['in_reverse'], ['horizontalPoint' => $newHorizontalPoint]);
-                            }
-
-                            return static::create($to, $newHorizontalPoint, $newVerticalPoint, $this->epoch);
+                    if ($path) {
+                        $newVerticalPoint = $this->getVerticalPoint();
+                        foreach ($path as $step) {
+                            $target = CoordinateReferenceSystem::fromSRID($step['in_reverse'] ? $step['source_crs'] : $step['target_crs']);
+                            $newVerticalPoint = $newVerticalPoint->performOperation($step['operation'], $target, $step['in_reverse'], ['horizontalPoint' => $newHorizontalPoint]);
                         }
+
+                        return static::create($to, $newHorizontalPoint, $newVerticalPoint, $this->epoch);
                     }
                 }
             }
