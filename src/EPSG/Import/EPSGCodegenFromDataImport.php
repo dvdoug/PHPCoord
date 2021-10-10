@@ -13,6 +13,7 @@ use function array_merge;
 use function array_unique;
 use function array_values;
 use function class_exists;
+use function count;
 use function dirname;
 use Exception;
 use function explode;
@@ -28,6 +29,7 @@ use function min;
 use const PHP_EOL;
 use PHPCoord\CoordinateOperation\CoordinateOperationMethods;
 use PHPCoord\CoordinateReferenceSystem\Compound;
+use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\CoordinateReferenceSystem\Geocentric;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Geographic3D;
@@ -45,6 +47,7 @@ use PHPCoord\UnitOfMeasure\Rate;
 use PHPCoord\UnitOfMeasure\Scale\Scale;
 use PHPCoord\UnitOfMeasure\Time\Time;
 use function preg_match;
+use function preg_replace;
 use function sleep;
 use SQLite3;
 use const SQLITE3_ASSOC;
@@ -1348,6 +1351,10 @@ class EPSGCodegenFromDataImport
             'public',
             []
         );
+
+        $crsCount = count(CoordinateReferenceSystem::getSupportedSRIDs());
+        file_put_contents($this->sourceDir . '/../docs/reflection/numOfCRS.txt', implode("\n", ['.. |numOfCRS| replace:: ' . $crsCount]));
+        file_put_contents($this->sourceDir . '/../README.md', preg_replace('/<!-- numOfCRS -->\d+/', '<!-- numOfCRS -->' . $crsCount, file_get_contents($this->sourceDir . '/../README.md')));
     }
 
     public function generateDataCoordinateOperationMethods(): void
