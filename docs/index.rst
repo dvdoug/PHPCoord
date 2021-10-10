@@ -1,10 +1,12 @@
 Welcome to PHPCoord's documentation!
 =====================================
 
+.. include:: reflection/numOfCRS.txt
+
 PHPCoord is a PHP library to aid in handling coordinates. It can convert coordinates for a point from one system
 to another and also calculate distance between points.
 
-6000+ different coordinate systems are supported, covering the entire globe. Common systems supported include:
+|numOfCRS| different coordinate systems are supported, covering the entire globe. Common systems supported include:
  - WGS84 (GPS)
  - OSGB36 (Great Britain)
  - NAD27 and NAD83 (North America)

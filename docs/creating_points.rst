@@ -1,9 +1,11 @@
 Creating points
 ===============
 
+.. include:: reflection/numOfCRS.txt
+
 In PHPCoord, the core domain object is a ``Point``. A ``Point`` is constructed from set of coordinates (for example
 latitude and longitude), and a *Coordinate Reference System (CRS)* which encodes all of the parameters that make a
-particular system different from any other system. PHPCoord contains built-in knowledge of 6000+ different CRSs, so in
+particular system different from any other system. PHPCoord contains built-in knowledge of |numOfCRS| different CRSs, so in
 almost all cases you only need to know the CRS name rather than the individual defining parameters. A full list of
 built-in CRSs is :ref:`available here<builtincrs>`.
 
