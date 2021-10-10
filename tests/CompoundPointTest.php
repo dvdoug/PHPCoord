@@ -102,14 +102,14 @@ class CompoundPointTest extends TestCase
     {
         $this->expectException(InvalidCoordinateReferenceSystemException::class);
         $from = CompoundPoint::create(
-            Compound::fromSRID(Compound::EPSG_WGS_84_WORLD_MERCATOR_PLUS_EGM2008_HEIGHT),
-            ProjectedPoint::create(Projected::fromSRID(Projected::EPSG_WGS_84_WORLD_MERCATOR), new Metre(438700), new Metre(114800), null, null),
-            VerticalPoint::create(Vertical::fromSRID(Vertical::EPSG_EGM2008_HEIGHT), new Metre(789))
+            Compound::fromSRID(Compound::EPSG_CR_SIRGAS_CRTM05_PLUS_DACR52_HEIGHT),
+            ProjectedPoint::create(Projected::fromSRID(Projected::EPSG_CR_SIRGAS_CRTM05), new Metre(438700), new Metre(114800), null, null),
+            VerticalPoint::create(Vertical::fromSRID(Vertical::EPSG_DACR52_HEIGHT), new Metre(789))
         );
         $to = CompoundPoint::create(
             Compound::fromSRID(Compound::EPSG_OSGB36_BRITISH_NATIONAL_GRID_PLUS_ODN_HEIGHT),
-            ProjectedPoint::create(Projected::fromSRID(Projected::EPSG_WGS_84_WORLD_MERCATOR), new Metre(533600), new Metre(180500), null, null),
-            VerticalPoint::create(Vertical::fromSRID(Vertical::EPSG_EGM2008_HEIGHT), new Metre(789))
+            ProjectedPoint::create(Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID), new Metre(533600), new Metre(180500), null, null),
+            VerticalPoint::create(Vertical::fromSRID(Vertical::EPSG_ODN_HEIGHT), new Metre(789))
         );
         $from->calculateDistance($to);
     }

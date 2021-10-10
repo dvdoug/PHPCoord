@@ -104,15 +104,15 @@ class CompoundPoint extends Point implements ConvertiblePoint
     {
         try {
             if ($to instanceof ConvertiblePoint) {
-                $to = $to->convert($this->crs);
+                $to = $to->convert($this->horizontalPoint->getCRS());
             }
         } finally {
-            if ($to->getCRS()->getSRID() !== $this->crs->getSRID()) {
+            if ($to->getCRS()->getSRID() !== $this->horizontalPoint->getCRS()->getSRID()) {
                 throw new InvalidCoordinateReferenceSystemException('Can only calculate distances between two points in the same CRS');
             }
 
             /* @var CompoundPoint $to */
-            return $this->horizontalPoint->calculateDistance($to->horizontalPoint);
+            return $this->horizontalPoint->calculateDistance($to);
         }
     }
 
