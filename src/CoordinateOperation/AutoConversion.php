@@ -17,7 +17,6 @@ use function assert;
 use function class_exists;
 use function count;
 use DateTimeImmutable;
-use function end;
 use Generator;
 use function in_array;
 use PHPCoord\CompoundPoint;
@@ -164,16 +163,16 @@ trait AutoConversion
         self::$incompletePathCache[$sourceSRID . '|' . $targetSRID . '|0'] = [[$sourceSRID]];
 
         while ($iterations < $this->maxChainDepth) {
+            $iterationsMinus1 = $iterations - 1;
             $cacheKey = $sourceSRID . '|' . $targetSRID . '|' . $iterations;
-            $cacheKeyMinus1 = $sourceSRID . '|' . $targetSRID . '|' . ($iterations - 1);
+            $cacheKeyMinus1 = $sourceSRID . '|' . $targetSRID . '|' . ($iterationsMinus1);
 
             if (!isset(self::$completePathCache[$cacheKey])) {
                 $completePaths = [];
+                $simplePaths = [];
 
-                $simplePaths = self::$incompletePathCache[$cacheKeyMinus1];
-
-                foreach ($simplePaths as $key => $simplePath) {
-                    $current = end($simplePath);
+                foreach (self::$incompletePathCache[$cacheKeyMinus1] as $simplePath) {
+                    $current = $simplePath[$iterationsMinus1];
                     if ($current === $targetSRID) {
                         $completePaths[] = $simplePath;
                     } elseif (isset(static::$transformationsByCRS[$current])) {
@@ -183,7 +182,6 @@ trait AutoConversion
                             }
                         }
                     }
-                    unset($simplePaths[$key]);
                 }
 
                 // Then expand each CRS->CRS permutation with the various ways of achieving that (can be lots :/)
