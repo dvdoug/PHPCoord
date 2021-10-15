@@ -194,6 +194,7 @@ trait AutoConversion
                     $paths[] = ['path' => $fullPath, 'accuracy' => array_sum(array_column($fullPath, 'accuracy'))];
                 }
 
+                unset(self::$incompletePathCache[$cacheKeyMinus1]);
                 self::$incompletePathCache[$cacheKey] = $simplePaths;
                 self::$completePathCache[$cacheKey] = $paths;
             }
