@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\EPSG\Import;
 
 use function array_column;
+use function array_merge;
 use function array_unique;
 use function array_values;
 use function class_exists;
@@ -1178,6 +1179,15 @@ class EPSGCodegenFromDataImport
     {
         $filenameToProviderMap = require 'FilenameToProviderMap.php';
 
+        $wgs84CopiesFromETRS89 = $this->determineOperationsToWGS84CopiedFromETRS89();
+        $etrs89CopiesFromWGS84 = $this->determineOperationsToETRS89CopiedFromWGS84();
+
+        $blackListedOperations = array_merge(
+            self::BLACKLISTED_OPERATIONS,
+            $wgs84CopiesFromETRS89,
+            $etrs89CopiesFromWGS84,
+        );
+
         $sql = "
             SELECT
                 'urn:ogc:def:coordinateOperation:EPSG::' || o.coord_op_code AS operation,
@@ -1196,7 +1206,7 @@ class EPSGCodegenFromDataImport
             AND dep.deprecation_id IS NULL AND o.deprecated = 0 AND s.supersession_id IS NULL
             GROUP BY source_crs, target_crs, o.coord_op_code
             HAVING (SUM(CASE WHEN m.coord_op_method_code IN (" . implode(',', self::BLACKLISTED_METHODS) . ') THEN 1 ELSE 0 END) = 0)
-               AND (SUM(CASE WHEN o.coord_op_code IN (' . implode(',', self::BLACKLISTED_OPERATIONS) . ") THEN 1 ELSE 0 END) = 0)
+               AND (SUM(CASE WHEN o.coord_op_code IN (' . implode(',', $blackListedOperations) . ") THEN 1 ELSE 0 END) = 0)
 
             UNION
 
@@ -1216,7 +1226,7 @@ class EPSGCodegenFromDataImport
             AND dep.deprecation_id IS NULL AND o.deprecated = 0 AND s.supersession_id IS NULL
             GROUP BY source_crs, target_crs, o.coord_op_code
             HAVING (SUM(CASE WHEN m.coord_op_method_code IN (" . implode(',', self::BLACKLISTED_METHODS) . ') THEN 1 ELSE 0 END) = 0)
-            AND (SUM(CASE WHEN o.coord_op_code IN (' . implode(',', self::BLACKLISTED_OPERATIONS) . ') THEN 1 ELSE 0 END) = 0)
+            AND (SUM(CASE WHEN o.coord_op_code IN (' . implode(',', $blackListedOperations) . ') THEN 1 ELSE 0 END) = 0)
 
             ORDER BY source_crs, target_crs, operation
             ';
@@ -1249,7 +1259,7 @@ class EPSGCodegenFromDataImport
             AND dep.deprecation_id IS NULL AND o.deprecated = 0 AND s.supersession_id IS NULL
             GROUP BY o.coord_op_code
             HAVING (SUM(CASE WHEN m.coord_op_method_code IN (" . implode(',', self::BLACKLISTED_METHODS) . ') THEN 1 ELSE 0 END) = 0)
-            AND (SUM(CASE WHEN o.coord_op_code IN (' . implode(',', self::BLACKLISTED_OPERATIONS) . ") THEN 1 ELSE 0 END) = 0)
+            AND (SUM(CASE WHEN o.coord_op_code IN (' . implode(',', $blackListedOperations) . ") THEN 1 ELSE 0 END) = 0)
 
             UNION
 
@@ -1270,7 +1280,7 @@ class EPSGCodegenFromDataImport
             AND dep.deprecation_id IS NULL AND o.deprecated = 0 AND s.supersession_id IS NULL
             GROUP BY o.coord_op_code
             HAVING (SUM(CASE WHEN m.coord_op_method_code IN (" . implode(',', self::BLACKLISTED_METHODS) . ') THEN 1 ELSE 0 END) = 0)
-            AND (SUM(CASE WHEN o.coord_op_code IN (' . implode(',', self::BLACKLISTED_OPERATIONS) . ') THEN 1 ELSE 0 END) = 0)
+            AND (SUM(CASE WHEN o.coord_op_code IN (' . implode(',', $blackListedOperations) . ') THEN 1 ELSE 0 END) = 0)
 
             ORDER BY urn
             ';
@@ -1504,5 +1514,43 @@ class EPSGCodegenFromDataImport
         }
 
         return $string;
+    }
+
+    private function determineOperationsToWGS84CopiedFromETRS89(): array
+    {
+        $sql = "
+            SELECT DISTINCT wgs84.coord_op_code
+            FROM epsg_coordoperation wgs84
+            JOIN epsg_coordoperation etrs89 ON etrs89.source_crs_code = wgs84.source_crs_code AND etrs89.target_crs_code IN (4936, 4258, 4937)
+            JOIN epsg_usage u ON wgs84.coord_op_code = u.object_code AND u.object_table_name = 'epsg_coordoperation' AND u.scope_code = 1252
+            WHERE wgs84.target_crs_code IN (4978,4326,4979)
+            ";
+
+        $result = $this->sqlite->query($sql);
+        $data = [];
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            $data[] = $row['coord_op_code'];
+        }
+
+        return $data;
+    }
+
+    private function determineOperationsToETRS89CopiedFromWGS84(): array
+    {
+        $sql = "
+            SELECT DISTINCT etrs89.coord_op_code
+            FROM epsg_coordoperation etrs89
+            JOIN epsg_coordoperation wgs84 ON wgs84.source_crs_code = etrs89.source_crs_code AND wgs84.target_crs_code IN (4978,4326,4979)
+            JOIN epsg_usage u ON etrs89.coord_op_code = u.object_code AND u.object_table_name = 'epsg_coordoperation' AND u.scope_code = 1252
+            WHERE etrs89.target_crs_code IN (4936, 4258, 4937)
+            ";
+
+        $result = $this->sqlite->query($sql);
+        $data = [];
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            $data[] = $row['coord_op_code'];
+        }
+
+        return $data;
     }
 }
