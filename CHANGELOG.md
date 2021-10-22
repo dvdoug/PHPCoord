@@ -1,15 +1,20 @@
 # Changelog
 
 ## [Unreleased]
-### Changed
-- Updates to data for Papua New Guinea, Ukraine and WGS84
 
-
-## [4.5.0] - 2021-09-25
+## [4.6.0] - 2021-10-22
 Unless a major bug is found, this will be the last release in the v4.x series. The next feature release will be v5.0.
 This is because one of PHP8.1's [new deprecations](https://github.com/php/php-src/commit/afc4d67c8b4e02a985a4cd27b8e79b343eb3c0ad)
 requires a significant non-backwards compatible change to address.
 
+### Changed
+ - Updates to data for Papua New Guinea, Ukraine and WGS84
+ - Some internal simplifications and optimisations
+### Fixed
+ - Corrected the decoding of sexagesimal DMS degree fractional components
+
+
+## [4.5.0] - 2021-09-25
 ### Changed
  - Updates to data for Canada, Costa Rica, France, French Southern Territories, Kyrgistan, Liechtenstein, Poland, Russia, Switzerland, Tonga, UK, USA, Wallis and Futuna
  - Many internal simplifications and optimisations, leading to faster conversions and a corresponding update of the maximum chain depth from 5 to 7
