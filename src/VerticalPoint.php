@@ -13,6 +13,7 @@ use function cos;
 use DateTime;
 use DateTimeImmutable;
 use DateTimeInterface;
+use PHPCoord\CoordinateOperation\GTXGrid;
 use PHPCoord\CoordinateReferenceSystem\Vertical;
 use PHPCoord\Exception\InvalidCoordinateReferenceSystemException;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
@@ -171,6 +172,25 @@ class VerticalPoint extends Point
     ): self {
         $latitude = $horizontalPoint->getLatitude()->asRadians()->getValue();
         $delta = new Metre((0.29541 * sin($latitude) ** 2 + 0.00042 * sin($latitude) ** 4 - 0.0994) - 0.08593);
+
+        if ($inReverse) {
+            $delta = $delta->multiply(-1);
+        }
+
+        return static::create($this->height->add($delta), $to);
+    }
+
+    /**
+     * Vertical Offset by Grid Interpolation (gtx).
+     */
+    public function verticalOffsetGTX(
+        Vertical $to,
+        GTXGrid $verticalOffsetFile,
+        string $EPSGCodeForInterpolationCRS,
+        bool $inReverse,
+        GeographicPoint $horizontalPoint
+    ): self {
+        $delta = $verticalOffsetFile->getAdjustment($horizontalPoint);
 
         if ($inReverse) {
             $delta = $delta->multiply(-1);

@@ -23624,6 +23624,12 @@ class CoordinateOperationParams
                 'reverses' => false,
             ],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::6327' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => false,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\GTXGEOID12BAlaskaProvider',
+            ],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::6361' => [
             'latitudeOfFalseOrigin' => [
                 'value' => 12.0,
@@ -34549,6 +34555,24 @@ class CoordinateOperationParams
                 'reverses' => false,
             ],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::7648' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => false,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\GTXGEOID12BGuamMIProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::7649' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => false,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\GTXGEOID12BGuamMIProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::7650' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => false,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\GTXGEOID12BAmericaSamoaProvider',
+            ],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::7653' => [
             'verticalOffset' => [
                 'value' => -0.87,
@@ -42297,6 +42321,28 @@ class CoordinateOperationParams
                 'reverses' => false,
             ],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::8361' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\GTXETRS89Baltic1957SlovakiaProvider',
+            ],
+            'EPSGCodeForInterpolationCRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::4258',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8362' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\GTXETRS89EVRF2007SlovakiaProvider',
+            ],
+            'EPSGCodeForInterpolationCRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::4258',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::8365' => [
             'xAxisTranslation' => [
                 'value' => -485.014055,
@@ -49452,6 +49498,24 @@ class CoordinateOperationParams
                 'reverses' => false,
             ],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9229' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => false,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\GTXGEOID18CONUSProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9230' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => false,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\GTXGEOID18PRVIProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9231' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => false,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\GTXGEOID18PRVIProvider',
+            ],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::9232' => [
             'latitudeAndLongitudeDifferenceFile' => [
                 'reverses' => true,
@@ -49798,6 +49862,12 @@ class CoordinateOperationParams
                 'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2RDETRS89NetherlandsProvider',
             ],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9283' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => false,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\GTXETRS89NAPProvider',
+            ],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::9291' => [
             'xAxisTranslation' => [
                 'value' => 0.0,
@@ -49883,6 +49953,161 @@ class CoordinateOperationParams
             'latitudeAndLongitudeDifferenceFile' => [
                 'reverses' => true,
                 'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2DHDNETRS89SaarlandProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9312' => [
+            'verticalOffsetFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\GTXAuckland1946NZVD2016Provider',
+            ],
+            'EPSGCodeForInterpolationCRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::4167',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9313' => [
+            'verticalOffsetFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\GTXBluff1955NZVD2016Provider',
+            ],
+            'EPSGCodeForInterpolationCRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::4167',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9314' => [
+            'verticalOffsetFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\GTXDunedin1958NZVD2016Provider',
+            ],
+            'EPSGCodeForInterpolationCRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::4167',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9315' => [
+            'verticalOffsetFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\GTXDunedinBluff1960NZVD2016Provider',
+            ],
+            'EPSGCodeForInterpolationCRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::4167',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9316' => [
+            'verticalOffsetFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\GTXGisborne1926NZVD2016Provider',
+            ],
+            'EPSGCodeForInterpolationCRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::4167',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9317' => [
+            'verticalOffsetFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\GTXLyttelton1937NZVD2016Provider',
+            ],
+            'EPSGCodeForInterpolationCRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::4167',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9318' => [
+            'verticalOffsetFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\GTXMoturiki1953NZVD2016Provider',
+            ],
+            'EPSGCodeForInterpolationCRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::4167',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9319' => [
+            'verticalOffsetFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\GTXNapier1962NZVD2016Provider',
+            ],
+            'EPSGCodeForInterpolationCRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::4167',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9320' => [
+            'verticalOffsetFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\GTXNelson1955NZVD2016Provider',
+            ],
+            'EPSGCodeForInterpolationCRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::4167',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9321' => [
+            'verticalOffsetFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\GTXOneTreePoint1964NZVD2016Provider',
+            ],
+            'EPSGCodeForInterpolationCRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::4167',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9322' => [
+            'verticalOffsetFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\GTXStewartIsland1977NZVD2016Provider',
+            ],
+            'EPSGCodeForInterpolationCRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::4167',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9323' => [
+            'verticalOffsetFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\GTXTaranaki1970NZVD2016Provider',
+            ],
+            'EPSGCodeForInterpolationCRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::4167',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9324' => [
+            'verticalOffsetFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\GTXWellington1953NZVD2016Provider',
+            ],
+            'EPSGCodeForInterpolationCRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::4167',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9325' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => false,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\GTXNZGeoid2009Provider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9326' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => false,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\GTXNZGeoid2016Provider',
             ],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::9327' => [
@@ -50684,6 +50909,18 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9484' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => false,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\GTXETRS89NN1954Provider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9485' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => false,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\GTXETRS89NN2000Provider',
+            ],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::9495' => [
             'xAxisTranslation' => [
                 'value' => 577.84843,
@@ -50880,6 +51117,138 @@ class CoordinateOperationParams
             ],
             'EPSGCodeForInterpolationCRS' => [
                 'value' => 'urn:ogc:def:crs:EPSG::4258',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9593' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\GTXETRS89NN2000Provider',
+            ],
+            'EPSGCodeForInterpolationCRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::4258',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9594' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\GTXETRS89NN1954Provider',
+            ],
+            'EPSGCodeForInterpolationCRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::4258',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9595' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\GTXGEOID18CONUSProvider',
+            ],
+            'EPSGCodeForInterpolationCRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::6318',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9596' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\GTXGEOID12BAlaskaProvider',
+            ],
+            'EPSGCodeForInterpolationCRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::6318',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9597' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\GTXETRS89NAPProvider',
+            ],
+            'EPSGCodeForInterpolationCRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::4258',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9622' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\GTXGEOID18PRVIProvider',
+            ],
+            'EPSGCodeForInterpolationCRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::6318',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9623' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\GTXGEOID18PRVIProvider',
+            ],
+            'EPSGCodeForInterpolationCRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::6318',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9624' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\GTXGEOID12BGuamMIProvider',
+            ],
+            'EPSGCodeForInterpolationCRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::6325',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9625' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\GTXGEOID12BGuamMIProvider',
+            ],
+            'EPSGCodeForInterpolationCRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::6325',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9626' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\GTXGEOID12BAmericaSamoaProvider',
+            ],
+            'EPSGCodeForInterpolationCRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::6322',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9627' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\GTXNZGeoid2009Provider',
+            ],
+            'EPSGCodeForInterpolationCRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::4167',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9628' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\GTXNZGeoid2016Provider',
+            ],
+            'EPSGCodeForInterpolationCRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::4167',
                 'uom' => null,
                 'reverses' => false,
             ],

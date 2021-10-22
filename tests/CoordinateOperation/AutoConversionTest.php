@@ -303,6 +303,61 @@ class AutoConversionTest extends TestCase
         }
     }
 
+    public function testNZGD2000PlusNZVD2016ToNZGD2000(): void
+    {
+        if (!class_exists(GTXNZGeoid2016Provider::class)) {
+            self::markTestSkipped('Requires phpcoord/datapack-oceania');
+        }
+
+        $from = CompoundPoint::create(
+            GeographicPoint::create(
+                new Degree(-36.9003),
+                new Degree(174.7794),
+                null,
+                Geographic2D::fromSRID(Geographic2D::EPSG_NZGD2000)
+            ),
+            VerticalPoint::create(
+                new Metre(15.715),
+                Vertical::fromSRID(Vertical::EPSG_NZVD2016_HEIGHT)
+            ),
+            Compound::fromSRID(Compound::EPSG_NZGD2000_PLUS_NZVD2016_HEIGHT)
+        );
+        $toCRS = Geographic3D::fromSRID(Geographic3D::EPSG_NZGD2000);
+        $to = $from->convert($toCRS);
+
+        self::assertEqualsWithDelta(-36.9003, $to->getLatitude()->getValue(), 0.00000000001);
+        self::assertEqualsWithDelta(174.7794, $to->getLongitude()->getValue(), 0.00000000001);
+        self::assertEqualsWithDelta(50.000, $to->getHeight()->getValue(), 0.0001);
+    }
+
+    public function testNAD83ToNAVD88CONUS(): void
+    {
+        if (!class_exists(GTXGEOID18CONUSProvider::class)) {
+            self::markTestSkipped('Requires phpcoord/datapack-northamerica');
+        }
+
+        $from = GeographicPoint::create(new Degree(40), new Degree(-100), new Metre(0), Geographic3D::fromSRID(Geographic3D::EPSG_NAD83_2011));
+        $toCRS = Vertical::fromSRID(Vertical::EPSG_NAVD88_HEIGHT);
+        $to = $from->convert($toCRS);
+
+        self::assertEqualsWithDelta(24.555, $to->getHeight()->getValue(), 0.001);
+    }
+
+    public function testETRS89ToETRS89PlusNAP(): void
+    {
+        if (!class_exists(GTXETRS89NAPProvider::class)) {
+            self::markTestSkipped('Requires phpcoord/datapack-europe');
+        }
+
+        $from = GeographicPoint::create(new Degree(51.825323002), new Degree(5.049883673), new Metre(3.4374), Geographic3D::fromSRID(Geographic3D::EPSG_ETRS89));
+        $toCRS = Compound::fromSRID(Compound::EPSG_ETRS89_PLUS_NAP_HEIGHT);
+        $to = $from->convert($toCRS);
+
+        self::assertEqualsWithDelta(51.825323002, $to->getHorizontalPoint()->getLatitude()->asDegrees()->getValue(), 0.0000001);
+        self::assertEqualsWithDelta(5.049883673, $to->getHorizontalPoint()->getLongitude()->asDegrees()->getValue(), 0.0000001);
+        self::assertEqualsWithDelta(-40.1293, $to->getVerticalPoint()->getHeight()->asMetres()->getValue(), 0.00001);
+    }
+
     /**
      * @group integration
      * @dataProvider EPSGConcatenatedOperations

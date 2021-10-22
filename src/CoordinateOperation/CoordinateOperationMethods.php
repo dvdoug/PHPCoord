@@ -197,6 +197,11 @@ class CoordinateOperationMethods
     public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_OSGM_GB = 'urn:ogc:def:method:EPSG::1097';
 
     /**
+     * Geog3D to Geog2D+GravityRelatedHeight (gtx).
+     */
+    public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_GTX = 'urn:ogc:def:method:EPSG::1088';
+
+    /**
      * Geographic/geocentric conversions
      * In applications it is often concatenated with the 3- 7- or 10-parameter transformations 9603, 9606, 9607 or
      * 9636 to form a geographic to geographic transformation.
@@ -235,10 +240,24 @@ class CoordinateOperationMethods
     public const EPSG_GEOGRAPHIC3D_TO_2D_CONVERSION = 'urn:ogc:def:method:EPSG::9659';
 
     /**
+     * Geographic3D to GravityRelatedHeight (NZgeoid)
+     * EPSG initially gave this method the name "Geographic3D to GravityRelatedHeight (NZgeoid2009)". As the same file
+     * format was retained for the 2016 geoid, date removed from the method name.
+     */
+    public const EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_NZGEOID = 'urn:ogc:def:method:EPSG::1030';
+
+    /**
      * Geographic3D to GravityRelatedHeight (OSGM-GB)
      * Transformation of the vertical component of a Geographic 3D CRS to a Vertical CRS.
      */
     public const EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_OSGM_GB = 'urn:ogc:def:method:EPSG::9663';
+
+    /**
+     * Geographic3D to GravityRelatedHeight (gtx)
+     * Transformation of the vertical component of a Geographic 3D CRS to a Vertical CRS. Grid file format: US NGS .gtx
+     * (in US sometimes also referred to as 'vdatum format').
+     */
+    public const EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_GTX = 'urn:ogc:def:method:EPSG::9665';
 
     /**
      * Guam Projection
@@ -693,6 +712,16 @@ class CoordinateOperationMethods
     public const EPSG_VERTICAL_OFFSET_AND_SLOPE = 'urn:ogc:def:method:EPSG::1046';
 
     /**
+     * Vertical Offset by Grid Interpolation (NZLVD).
+     */
+    public const EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_NZLVD = 'urn:ogc:def:method:EPSG::1071';
+
+    /**
+     * Vertical Offset by Grid Interpolation (gtx).
+     */
+    public const EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_GTX = 'urn:ogc:def:method:EPSG::1084';
+
+    /**
      * Vertical Perspective
      * For a viewing point height approaching or at infinity, see the Vertical Perspective (orthographic case) (method
      * code 9839).
@@ -794,6 +823,9 @@ class CoordinateOperationMethods
         self::EPSG_NTV2 => 'NTv2',
         self::EPSG_ZERO_TIDE_HEIGHT_TO_MEAN_TIDE_HEIGHT_EVRF2019 => 'zeroTideHeightToMeanTideHeightEVRF2019',
         self::EPSG_GEOCENTRIC_TRANSLATION_BY_GRID_INTERPOLATION_IGN => 'geocentricTranslationByGridInterpolationIGNF',
+        self::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_GTX => 'geographic3DTo2DPlusGravityHeightGTX',
+        self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_GTX => 'geographic3DToGravityHeightGTX',
+        self::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_GTX => 'verticalOffsetGTX',
     ];
 
     public static function getFunctionName(string $srid): string

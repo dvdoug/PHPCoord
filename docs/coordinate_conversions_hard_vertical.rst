@@ -38,6 +38,19 @@ Vertical Offset and Slope
         GeographicPoint $horizontalPoint
     ); // returns a new VerticalPoint
 
+Vertical Offset by Grid Interpolation (GTX)
+-------------------------------------------
+
+.. code-block:: php
+
+    $point = VerticalPoint::create(...);
+    $newPoint = $point->verticalOffsetGTX(
+        Vertical $to,
+        GTXGrid $verticalOffsetFile,
+        bool $inReverse,
+        GeographicPoint $horizontalPoint
+    ); // returns a new VerticalPoint
+
 Zero-tide height to mean-tide height (EVRF2019)
 -----------------------------------------------
 

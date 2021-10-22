@@ -4500,6 +4500,11 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9807',
             'extent_code' => ['3236'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::6327' => [
+            'name' => 'NAD83(2011) to NAVD88 height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::9665',
+            'extent_code' => ['1330'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::6361' => [
             'name' => 'Mexico LCC',
             'method' => 'urn:ogc:def:method:EPSG::9802',
@@ -6610,6 +6615,21 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9801',
             'extent_code' => ['4381'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::7648' => [
+            'name' => 'NAD83(MA11) to GUVD04 height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::9665',
+            'extent_code' => ['3255'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::7649' => [
+            'name' => 'NAD83(MA11) to NMVD03 height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::9665',
+            'extent_code' => ['4171'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::7650' => [
+            'name' => 'NAD83(PA11) to ASVD02 height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::9665',
+            'extent_code' => ['2288'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::7653' => [
             'name' => 'EGM96 height to Kumul 34 height (1)',
             'method' => 'urn:ogc:def:method:EPSG::9616',
@@ -7654,6 +7674,16 @@ class CoordinateOperations
             'name' => 'Oregon Willamette Pass zone (International feet)',
             'method' => 'urn:ogc:def:method:EPSG::9807',
             'extent_code' => ['4488'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8361' => [
+            'name' => 'ETRS89 to ETRS89 + Baltic 1957 height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1088',
+            'extent_code' => ['1211'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8362' => [
+            'name' => 'ETRS89 to ETRS89 + EVRF2007 height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1088',
+            'extent_code' => ['1211'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::8365' => [
             'name' => 'ETRS89 to S-JTSK [JTSK03] (1)',
@@ -8710,6 +8740,21 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::1053',
             'extent_code' => ['1061'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9229' => [
+            'name' => 'NAD83(2011) to NAVD88 height (3)',
+            'method' => 'urn:ogc:def:method:EPSG::9665',
+            'extent_code' => ['1323'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9230' => [
+            'name' => 'NAD83(2011) to PRVD02 height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::9665',
+            'extent_code' => ['3294'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9231' => [
+            'name' => 'NAD83(2011) to VIVD09 height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::9665',
+            'extent_code' => ['3330'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::9232' => [
             'name' => 'ISN93 to ISN2016 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9615',
@@ -8830,6 +8875,11 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9615',
             'extent_code' => ['1275'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9283' => [
+            'name' => 'ETRS89 to NAP height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::9665',
+            'extent_code' => ['1275'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::9291' => [
             'name' => 'ISN2016 to WGS 84 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
@@ -8849,6 +8899,81 @@ class CoordinateOperations
             'name' => 'DHDN to ETRS89 (10)',
             'method' => 'urn:ogc:def:method:EPSG::9615',
             'extent_code' => ['4584'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9312' => [
+            'name' => 'NZVD2016 height to Auckland 1946 height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1084',
+            'extent_code' => ['3764'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9313' => [
+            'name' => 'NZVD2016 height to Bluff 1955 height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1084',
+            'extent_code' => ['3801'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9314' => [
+            'name' => 'NZVD2016 height to Dunedin 1958 height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1084',
+            'extent_code' => ['3803'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9315' => [
+            'name' => 'NZVD2016 height to Dunedin-Bluff 1960 height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1084',
+            'extent_code' => ['3806'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9316' => [
+            'name' => 'NZVD2016 height to Gisborne 1926 height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1084',
+            'extent_code' => ['3771'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9317' => [
+            'name' => 'NZVD2016 height to Lyttelton 1937 height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1084',
+            'extent_code' => ['3804'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9318' => [
+            'name' => 'NZVD2016 height to Moturiki 1953 height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1084',
+            'extent_code' => ['3768'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9319' => [
+            'name' => 'NZVD2016 height to Napier 1962 height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1084',
+            'extent_code' => ['3772'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9320' => [
+            'name' => 'NZVD2016 height to Nelson 1955 height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1084',
+            'extent_code' => ['3802'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9321' => [
+            'name' => 'NZVD2016 height to One Tree Point 1964 height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1084',
+            'extent_code' => ['3762'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9322' => [
+            'name' => 'NZVD2016 height to Stewart Island 1977 height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1084',
+            'extent_code' => ['3338'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9323' => [
+            'name' => 'NZVD2016 height to Taranaki 1970 height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1084',
+            'extent_code' => ['3769'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9324' => [
+            'name' => 'NZVD2016 height to Wellington 1953 height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1084',
+            'extent_code' => ['3773'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9325' => [
+            'name' => 'NZGD2000 to NZVD2009 height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::9665',
+            'extent_code' => ['1175'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9326' => [
+            'name' => 'NZGD2000 to NZVD2016 height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::9665',
+            'extent_code' => ['1175'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::9327' => [
             'name' => 'NTF to RGF93 v1 (1)',
@@ -9005,6 +9130,16 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9607',
             'extent_code' => ['1122'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9484' => [
+            'name' => 'ETRS89 to NN54 height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::9665',
+            'extent_code' => ['1352'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9485' => [
+            'name' => 'ETRS89 to NN2000 height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::9665',
+            'extent_code' => ['1352'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::9495' => [
             'name' => 'MGI 1901 to SRB-ETRS89 (8)',
             'method' => 'urn:ogc:def:method:EPSG::9607',
@@ -9074,6 +9209,66 @@ class CoordinateOperations
             'name' => 'ETRS89 to ETRS89 + Douglas height (2)',
             'method' => 'urn:ogc:def:method:EPSG::1097',
             'extent_code' => ['2803'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9593' => [
+            'name' => 'ETRS89 to ETRS89 + NN2000 height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1088',
+            'extent_code' => ['1352'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9594' => [
+            'name' => 'ETRS89 to ETRS89 + NN54 height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1088',
+            'extent_code' => ['1352'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9595' => [
+            'name' => 'NAD83(2011) to NAD83(2011) + NAVD88 height (3)',
+            'method' => 'urn:ogc:def:method:EPSG::1088',
+            'extent_code' => ['1323'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9596' => [
+            'name' => 'NAD83(2011) to NAD83(2011) + NAVD88 height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1088',
+            'extent_code' => ['1330'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9597' => [
+            'name' => 'ETRS89 to ETRS89 + NAP height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1088',
+            'extent_code' => ['1275'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9622' => [
+            'name' => 'NAD83(2011) to NAD83(2011) + PRVD02 height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1088',
+            'extent_code' => ['3294'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9623' => [
+            'name' => 'NAD83(2011) to NAD83(2011) + VIVD09 height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1088',
+            'extent_code' => ['3330'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9624' => [
+            'name' => 'NAD83(MA11) to NAD83(MA11) + GUVD04 height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1088',
+            'extent_code' => ['3255'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9625' => [
+            'name' => 'NAD83(MA11) to NAD83(MA11) + NMVD03 height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1088',
+            'extent_code' => ['4171'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9626' => [
+            'name' => 'NAD83(PA11) to NAD83(PA11) + ASVD02 height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1088',
+            'extent_code' => ['2288'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9627' => [
+            'name' => 'NZGD2000 to NZGD2000 + NZVD2009 height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1088',
+            'extent_code' => ['1175'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9628' => [
+            'name' => 'NZGD2000 to NZGD2000 + NZVD2016 height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1088',
+            'extent_code' => ['1175'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::9673' => [
             'name' => 'US Forest Service region 6 Albers',

@@ -65,24 +65,20 @@ class EPSGCodegenFromDataImport
         1072, // Geographic3D to GravityRelatedHeight (OSGM15Ire)
         1096, // Geog3D to Geog2D+GravityRelatedHeight (OSGM15Ire)
         1025, // Geographic3D to GravityRelatedHeight (EGM2008)
-        1030, // Geographic3D to GravityRelatedHeight (NZgeoid)
         1047, // Geographic3D to GravityRelatedHeight (Gravsoft)
         1048, // Geographic3D to GravityRelatedHeight (AUSGeoid v2)
         1050, // Geographic3D to GravityRelatedHeight (CI)
         1059, // Geographic3D to GravityRelatedHeight (PNG)
         1060, // Geographic3D to GravityRelatedHeight (CGG2013)
         1070, // Point motion by grid (Canada NTv2_Vel)
-        1071, // Vertical Offset by Grid Interpolation (NZLVD)
         1073, // Geographic3D to GravityRelatedHeight (IGN2009)
         1079, // New Zealand Deformation Model
         1080, // Vertical Offset by Grid Interpolation (BEV AT)
         1081, // Geographic3D to GravityRelatedHeight (BEV AT)
         1082, // Geographic3D to GravityRelatedHeight (SA 2010)
         1083, // Geog3D to Geog2D+GravityRelatedHeight (AUSGeoidv2)
-        1084, // Vertical Offset by Grid Interpolation (gtx)
         1085, // Vertical Offset by Grid Interpolation (asc)
         1086, // Point motion (geocen) by grid (INADEFORM)
-        1088, // Geog3D to Geog2D+GravityRelatedHeight (gtx)
         1089, // Geog3D to Geog2D+GravityRelatedHeight (BEV AT)
         1090, // Geog3D to Geog2D+GravityRelatedHeight (CGG 2013)
         1091, // Geog3D to Geog2D+GravityRelatedHeight (CI)
@@ -103,7 +99,6 @@ class EPSGCodegenFromDataImport
         9661, // Geographic3D to GravityRelatedHeight (EGM)
         9662, // Geographic3D to GravityRelatedHeight (AUSGeoid98)
         9664, // Geographic3D to GravityRelatedHeight (IGN1997)
-        9665, // Geographic3D to GravityRelatedHeight (gtx)
 
         // only distributed as .dll, can't use
         1036, // Cartesian Grid Offsets from Form Function

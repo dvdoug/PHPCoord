@@ -14,6 +14,17 @@ Geographic2D with Height Offsets
         Length $geoidUndulation
     ); // returns a new GeographicPoint
 
+Geographic3D to Geographic2D+GravityRelatedHeight (GTX)
+-------------------------------------------------------
+
+.. code-block:: php
+
+    $point = CompoundPoint::create(...);
+    $newPoint = $point->geographic3DTo2DPlusGravityHeightGTX(
+        Geographic3D $to,
+        GTXGrid $geoidHeightCorrectionModelFile
+    ); // returns a new GeographicPoint
+
 Geographic3D to Geographic2D+GravityRelatedHeight (OSGM-GB)
 -----------------------------------------------------------
 

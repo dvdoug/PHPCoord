@@ -2,6 +2,7 @@
 
 ## [Unreleased]
 ### Added
+- Support for GTX files. These require a [relevant datapack](https://www.phpcoord.net/en/stable/coordinate_conversions_easy.html#grids)
 - Support for IGN France geocentric translation by grid interpolation. This requires the [Europe datapack](https://www.phpcoord.net/en/stable/coordinate_conversions_easy.html#grids)
 
 ## [4.6.0] - 2021-10-22

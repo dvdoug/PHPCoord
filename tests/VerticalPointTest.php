@@ -14,11 +14,13 @@ use DateTimeImmutable;
 use PHPCoord\CoordinateOperation\CoordinateOperationParams;
 use PHPCoord\CoordinateOperation\CoordinateOperations;
 use PHPCoord\CoordinateOperation\CRSTransformations;
+use PHPCoord\CoordinateOperation\GTXDunedin1958NZVD2016Provider;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Vertical;
 use PHPCoord\CoordinateReferenceSystem\VerticalSRIDData;
 use PHPCoord\Geometry\BoundingArea;
+use PHPCoord\UnitOfMeasure\Angle\Degree;
 use PHPCoord\UnitOfMeasure\Angle\Radian;
 use PHPCoord\UnitOfMeasure\Length\Foot;
 use PHPCoord\UnitOfMeasure\Length\Metre;
@@ -123,6 +125,32 @@ class VerticalPointTest extends TestCase
         $to = $from->zeroTideHeightToMeanTideHeightEVRF2019($toCRS, true, $horizontalPoint);
 
         self::assertEqualsWithDelta(100.154, $to->getHeight()->asMetres()->getValue(), 0.001);
+    }
+
+    public function testVerticalOffsetGTXForward(): void
+    {
+        if (!class_exists(GTXDunedin1958NZVD2016Provider::class)) {
+            self::markTestSkipped('Requires phpcoord/datapack-oceania');
+        }
+        $horizontalPoint = GeographicPoint::create(new Degree(-44.42), new Degree(168.92), null, Geographic2D::fromSRID(Geographic2D::EPSG_NZGD2000));
+        $from = VerticalPoint::create(new Metre(50), Vertical::fromSRID(Vertical::EPSG_NZVD2016_HEIGHT));
+        $toCRS = Vertical::fromSRID(Vertical::EPSG_DUNEDIN_1958_HEIGHT);
+        $to = $from->verticalOffsetGTX($toCRS, (new GTXDunedin1958NZVD2016Provider())->provideGrid(), '', false, $horizontalPoint);
+
+        self::assertEqualsWithDelta(50.304, $to->getHeight()->getValue(), 0.001);
+    }
+
+    public function testVerticalOffsetGTXReverse(): void
+    {
+        if (!class_exists(GTXDunedin1958NZVD2016Provider::class)) {
+            self::markTestSkipped('Requires phpcoord/datapack-oceania');
+        }
+        $horizontalPoint = GeographicPoint::create(new Degree(-44.42), new Degree(168.92), null, Geographic2D::fromSRID(Geographic2D::EPSG_NZGD2000));
+        $from = VerticalPoint::create(new Metre(50.304), Vertical::fromSRID(Vertical::EPSG_DUNEDIN_1958_HEIGHT));
+        $toCRS = Vertical::fromSRID(Vertical::EPSG_NZVD2016_HEIGHT);
+        $to = $from->verticalOffsetGTX($toCRS, (new GTXDunedin1958NZVD2016Provider())->provideGrid(), '', true, $horizontalPoint);
+
+        self::assertEqualsWithDelta(50.000, $to->getHeight()->getValue(), 0.001);
     }
 
     /**

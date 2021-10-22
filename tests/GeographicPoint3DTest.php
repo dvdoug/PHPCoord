@@ -14,6 +14,7 @@ use PHPCoord\CoordinateOperation\CoordinateOperationMethods;
 use PHPCoord\CoordinateOperation\CoordinateOperationParams;
 use PHPCoord\CoordinateOperation\CoordinateOperations;
 use PHPCoord\CoordinateOperation\CRSTransformations;
+use PHPCoord\CoordinateOperation\GTXNZGeoid2016Provider;
 use PHPCoord\CoordinateOperation\OSTN15OSGM15Provider;
 use PHPCoord\CoordinateReferenceSystem\Compound;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
@@ -55,6 +56,32 @@ class GeographicPoint3DTest extends TestCase
         $to = $from->geographic3DToGravityHeightOSGM15($toCRS, (new OSTN15OSGM15Provider())->provideGrid());
 
         self::assertEqualsWithDelta(12.658, $to->getHeight()->getValue(), 0.001);
+    }
+
+    public function testGeographic3DTo2DPlusGravityHeightGTX(): void
+    {
+        if (!class_exists(GTXNZGeoid2016Provider::class)) {
+            self::markTestSkipped('Requires phpcoord/datapack-oceania');
+        }
+        $from = GeographicPoint::create(new Degree(-36.9003), new Degree(174.7794), new Metre(50), Geographic3D::fromSRID(Geographic3D::EPSG_NZGD2000));
+        $toCRS = Compound::fromSRID(Compound::EPSG_NZGD2000_PLUS_NZVD2016_HEIGHT);
+        $to = $from->geographic3DTo2DPlusGravityHeightGTX($toCRS, (new GTXNZGeoid2016Provider())->provideGrid(), '');
+
+        self::assertEqualsWithDelta(-36.9003, $to->getHorizontalPoint()->getLatitude()->getValue(), 0.00000000001);
+        self::assertEqualsWithDelta(174.7794, $to->getHorizontalPoint()->getLongitude()->getValue(), 0.00000000001);
+        self::assertEqualsWithDelta(15.715, $to->getVerticalPoint()->getHeight()->getValue(), 0.0001);
+    }
+
+    public function testGeographic3DGravityHeightGTX(): void
+    {
+        if (!class_exists(GTXNZGeoid2016Provider::class)) {
+            self::markTestSkipped('Requires phpcoord/datapack-oceania');
+        }
+        $from = GeographicPoint::create(new Degree(-36.9003), new Degree(174.7794), new Metre(50), Geographic3D::fromSRID(Geographic3D::EPSG_NZGD2000));
+        $toCRS = Vertical::fromSRID(Vertical::EPSG_NZVD2016_HEIGHT);
+        $to = $from->geographic3DToGravityHeightGTX($toCRS, (new GTXNZGeoid2016Provider())->provideGrid());
+
+        self::assertEqualsWithDelta(15.715, $to->getHeight()->getValue(), 0.0001);
     }
 
     /**

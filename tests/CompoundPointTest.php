@@ -14,6 +14,7 @@ use DateTimeImmutable;
 use PHPCoord\CoordinateOperation\CoordinateOperationParams;
 use PHPCoord\CoordinateOperation\CoordinateOperations;
 use PHPCoord\CoordinateOperation\CRSTransformations;
+use PHPCoord\CoordinateOperation\GTXNZGeoid2016Provider;
 use PHPCoord\CoordinateOperation\OSTN15OSGM15Provider;
 use PHPCoord\CoordinateReferenceSystem\Compound;
 use PHPCoord\CoordinateReferenceSystem\CompoundSRIDData;
@@ -135,6 +136,32 @@ class CompoundPointTest extends TestCase
         self::assertEqualsWithDelta(53.77911025760, $to->getLatitude()->getValue(), 0.00000000001);
         self::assertEqualsWithDelta(-3.04045490691, $to->getLongitude()->getValue(), 0.00000000001);
         self::assertEqualsWithDelta(64.940, $to->getHeight()->getValue(), 0.001);
+    }
+
+    public function testGeographic3DTo2DPlusGravityHeightGTX(): void
+    {
+        if (!class_exists(GTXNZGeoid2016Provider::class)) {
+            self::markTestSkipped('Requires phpcoord/datapack-oceania');
+        }
+        $from = CompoundPoint::create(
+            GeographicPoint::create(
+                new Degree(-36.9003),
+                new Degree(174.7794),
+                null,
+                Geographic2D::fromSRID(Geographic2D::EPSG_NZGD2000)
+            ),
+            VerticalPoint::create(
+                new Metre(15.715),
+                Vertical::fromSRID(Vertical::EPSG_NZVD2016_HEIGHT)
+            ),
+            Compound::fromSRID(Compound::EPSG_NZGD2000_PLUS_NZVD2016_HEIGHT)
+        );
+        $toCRS = Geographic3D::fromSRID(Geographic3D::EPSG_NZGD2000);
+        $to = $from->geographic3DTo2DPlusGravityHeightGTX($toCRS, (new GTXNZGeoid2016Provider())->provideGrid(), '');
+
+        self::assertEqualsWithDelta(-36.9003, $to->getLatitude()->getValue(), 0.00000000001);
+        self::assertEqualsWithDelta(174.7794, $to->getLongitude()->getValue(), 0.00000000001);
+        self::assertEqualsWithDelta(50.000, $to->getHeight()->getValue(), 0.0001);
     }
 
     /**

@@ -13,6 +13,7 @@ use DateTimeImmutable;
 use DateTimeInterface;
 use PHPCoord\CoordinateOperation\AutoConversion;
 use PHPCoord\CoordinateOperation\ConvertiblePoint;
+use PHPCoord\CoordinateOperation\GTXGrid;
 use PHPCoord\CoordinateOperation\OSTNOSGM15Grid;
 use PHPCoord\CoordinateReferenceSystem\Compound;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
@@ -204,6 +205,23 @@ class CompoundPoint extends Point implements ConvertiblePoint
             $this->horizontalPoint->getLatitude(),
             $this->horizontalPoint->getLongitude(),
             $this->verticalPoint->getHeight()->add($geoidHeightCorrectionModelFile->getVerticalAdjustment($projected)),
+            $to,
+            $this->getCoordinateEpoch()
+        );
+    }
+
+    /**
+     * Geog3D to Geog2D+GravityRelatedHeight (gtx).
+     */
+    public function geographic3DTo2DPlusGravityHeightGTX(
+        Geographic3D $to,
+        GTXGrid $geoidHeightCorrectionModelFile,
+        string $EPSGCodeForInterpolationCRS
+    ): GeographicPoint {
+        return GeographicPoint::create(
+            $this->horizontalPoint->getLatitude(),
+            $this->horizontalPoint->getLongitude(),
+            $this->verticalPoint->getHeight()->add($geoidHeightCorrectionModelFile->getAdjustment($this->horizontalPoint)),
             $to,
             $this->getCoordinateEpoch()
         );
