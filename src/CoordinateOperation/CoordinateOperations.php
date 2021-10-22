@@ -3140,11 +3140,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['1160'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::4834' => [
-            'name' => 'Chua to WGS 84 (3)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3619'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::4838' => [
             'name' => 'LCC Germany',
             'method' => 'urn:ogc:def:method:EPSG::9802',
@@ -3290,18 +3285,8 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['3700'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::5051' => [
-            'name' => 'Aratu to WGS 84 (13)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3700'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::5052' => [
             'name' => 'Aratu to SIRGAS 2000 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2963'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::5053' => [
-            'name' => 'Aratu to WGS 84 (14)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['2963'],
         ],
@@ -3310,18 +3295,8 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['2964'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::5055' => [
-            'name' => 'Aratu to WGS 84 (15)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2964'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::5056' => [
             'name' => 'Aratu to SIRGAS 2000 (4)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3699'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::5057' => [
-            'name' => 'Aratu to WGS 84 (16)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['3699'],
         ],
@@ -3330,18 +3305,8 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['3692'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::5059' => [
-            'name' => 'Aratu to WGS 84 (17)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3692'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::5060' => [
             'name' => 'Aratu to SIRGAS 2000 (6)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3693'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::5061' => [
-            'name' => 'Aratu to WGS 84 (18)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['3693'],
         ],
@@ -3350,28 +3315,13 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['3696'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::5063' => [
-            'name' => 'Aratu to WGS 84 (19)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3696'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::5064' => [
             'name' => 'Aratu to SIRGAS 2000 (8)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['3697'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::5065' => [
-            'name' => 'Aratu to WGS 84 (20)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3697'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::5066' => [
             'name' => 'Aratu to SIRGAS 2000 (9)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3698'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::5067' => [
-            'name' => 'Aratu to WGS 84 (21)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['3698'],
         ],
@@ -3910,11 +3860,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['3215'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::5351' => [
-            'name' => 'POSGAR 2007 to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['1033'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::5366' => [
             'name' => 'Costa Rica TM 2005',
             'method' => 'urn:ogc:def:method:EPSG::9807',
@@ -4265,26 +4210,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9615',
             'extent_code' => ['3887'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::5540' => [
-            'name' => 'Corrego Alegre 1961 to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9615',
-            'extent_code' => ['3874'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::5541' => [
-            'name' => 'Corrego Alegre 1970-72 to WGS 84 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9615',
-            'extent_code' => ['1293'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::5542' => [
-            'name' => 'SAD69 to WGS 84 (15)',
-            'method' => 'urn:ogc:def:method:EPSG::9615',
-            'extent_code' => ['3887'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::5543' => [
-            'name' => 'SAD69(96) to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9615',
-            'extent_code' => ['3887'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::5547' => [
             'name' => 'Papua New Guinea Map Grid 1994 zone 54',
             'method' => 'urn:ogc:def:method:EPSG::9807',
@@ -4422,11 +4347,6 @@ class CoordinateOperations
         ],
         'urn:ogc:def:coordinateOperation:EPSG::5881' => [
             'name' => 'SAD69(96) to SIRGAS 2000 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['1053'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::5882' => [
-            'name' => 'SAD69 to WGS 84 (16)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['1053'],
         ],
@@ -4997,11 +4917,6 @@ class CoordinateOperations
         ],
         'urn:ogc:def:coordinateOperation:EPSG::6193' => [
             'name' => 'Corrego Alegre 1970-72 to SIRGAS 2000 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['1293'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::6194' => [
-            'name' => 'Corrego Alegre 1970-72 to WGS 84 (4)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['1293'],
         ],
@@ -12955,18 +12870,8 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9607',
             'extent_code' => ['3082'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::15715' => [
-            'name' => 'Bogota 1975 to WGS 84 (3)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent_code' => ['3082'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::15716' => [
             'name' => 'Bogota 1975 to MAGNA-SIRGAS (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent_code' => ['3083'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::15717' => [
-            'name' => 'Bogota 1975 to WGS 84 (4)',
             'method' => 'urn:ogc:def:method:EPSG::9607',
             'extent_code' => ['3083'],
         ],
@@ -12975,18 +12880,8 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9607',
             'extent_code' => ['3084'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::15719' => [
-            'name' => 'Bogota 1975 to WGS 84 (5)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent_code' => ['3084'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::15720' => [
             'name' => 'Bogota 1975 to MAGNA-SIRGAS (4)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent_code' => ['3085'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::15721' => [
-            'name' => 'Bogota 1975 to WGS 84 (6)',
             'method' => 'urn:ogc:def:method:EPSG::9607',
             'extent_code' => ['3085'],
         ],
@@ -12995,18 +12890,8 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9607',
             'extent_code' => ['3086'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::15723' => [
-            'name' => 'Bogota 1975 to WGS 84 (7)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent_code' => ['3086'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::15724' => [
             'name' => 'Bogota 1975 to MAGNA-SIRGAS (6)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent_code' => ['3087'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::15725' => [
-            'name' => 'Bogota 1975 to WGS 84 (8)',
             'method' => 'urn:ogc:def:method:EPSG::9607',
             'extent_code' => ['3087'],
         ],
@@ -13015,18 +12900,8 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9607',
             'extent_code' => ['3088'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::15727' => [
-            'name' => 'Bogota 1975 to WGS 84 (9)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent_code' => ['3088'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::15728' => [
             'name' => 'Bogota 1975 to MAGNA-SIRGAS (8)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent_code' => ['3089'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::15729' => [
-            'name' => 'Bogota 1975 to WGS 84 (10)',
             'method' => 'urn:ogc:def:method:EPSG::9607',
             'extent_code' => ['3089'],
         ],
