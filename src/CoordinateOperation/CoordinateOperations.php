@@ -35,30 +35,10 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9653',
             'extent_code' => ['1275'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::1046' => [
-            'name' => 'Amersfoort / RD New to ED50 / UTM zone 31N (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9653',
-            'extent_code' => ['1275'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::1048' => [
             'name' => 'BD72 / Lambert 72 to ED50 / UTM zone 31N (1)',
             'method' => 'urn:ogc:def:method:EPSG::9652',
             'extent_code' => ['1347'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1050' => [
-            'name' => 'Amersfoort / RD New to ED50 / TM 5 NE (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9653',
-            'extent_code' => ['1275'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1055' => [
-            'name' => 'Ain el Abd to WGS 84 (3)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3267'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1056' => [
-            'name' => 'Ain el Abd to WGS 84 (4)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent_code' => ['3267'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::1057' => [
             'name' => 'Ain el Abd to WGS 84 (5)',
@@ -80,11 +60,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['3267'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::1061' => [
-            'name' => 'Kudams to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['1310'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::1062' => [
             'name' => 'Kudams to WGS 84 (2)',
             'method' => 'urn:ogc:def:method:EPSG::9607',
@@ -105,11 +80,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['1138'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::1067' => [
-            'name' => 'Minna to WGS 84 (11)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3817'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::1070' => [
             'name' => 'Guam 1963 to WGS 84 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
@@ -125,29 +95,14 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9656',
             'extent_code' => ['2603'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::1073' => [
-            'name' => 'Israel 1993 to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2603'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::1074' => [
             'name' => 'Palestine 1923 to WGS 84 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9606',
             'extent_code' => ['2603'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::1075' => [
-            'name' => 'ED50 to WGS 84 (38)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2896'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::1080' => [
             'name' => 'CI1971 to WGS 84 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2889'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1081' => [
-            'name' => 'CI1979 to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
             'extent_code' => ['2889'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::1082' => [
@@ -155,60 +110,10 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9607',
             'extent_code' => ['2889'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::1083' => [
-            'name' => 'JAD69 to WGS 72 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3342'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1084' => [
-            'name' => 'JAD69 to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3342'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1085' => [
-            'name' => 'JAD69 to WGS 84 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3342'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::1087' => [
             'name' => 'ED50 to WGS 84 (37)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['1130'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1088' => [
-            'name' => 'Monte Mario to WGS 84 (5)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2882'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1089' => [
-            'name' => 'Monte Mario to WGS 84 (6)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2883'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1090' => [
-            'name' => 'Monte Mario to WGS 84 (7)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2884'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1091' => [
-            'name' => 'Monte Mario to WGS 84 (8)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2885'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1092' => [
-            'name' => 'Monte Mario to WGS 84 (9)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2886'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1093' => [
-            'name' => 'Monte Mario to WGS 84 (10)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2887'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1094' => [
-            'name' => 'Monte Mario to WGS 84 (11)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2888'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::1095' => [
             'name' => 'PSAD56 to WGS 84 (13)',
@@ -265,11 +170,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['3308'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::1109' => [
-            'name' => 'AGD84 to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2576'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::1110' => [
             'name' => 'Ain el Abd to WGS 84 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
@@ -279,11 +179,6 @@ class CoordinateOperations
             'name' => 'Ain el Abd to WGS 84 (2)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['3303'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1113' => [
-            'name' => 'Arc 1950 to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2312'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::1114' => [
             'name' => 'Arc 1950 to WGS 84 (2)',
@@ -315,30 +210,10 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['2311'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::1124' => [
-            'name' => 'Bermuda 1957 to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3221'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1125' => [
-            'name' => 'Bogota 1975 to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3686'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::1126' => [
             'name' => 'Bukit Rimpah to WGS 84 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['1287'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1127' => [
-            'name' => 'Campo Inchauspe to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3843'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1128' => [
-            'name' => 'Cape to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3309'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::1129' => [
             'name' => 'Cape to WGS 84 (2)',
@@ -349,11 +224,6 @@ class CoordinateOperations
             'name' => 'Carthage to WGS 84 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['1236'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1131' => [
-            'name' => 'Chua to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3675'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::1132' => [
             'name' => 'Corrego Alegre 1970-72 to WGS 84 (1)',
@@ -435,11 +305,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9606',
             'extent_code' => ['2332'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::1148' => [
-            'name' => 'Egypt 1907 to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['1086'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::1149' => [
             'name' => 'ETRS89 to WGS 84 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
@@ -469,11 +334,6 @@ class CoordinateOperations
             'name' => 'Kalianpur 1937 to WGS 84 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['3217'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1156' => [
-            'name' => 'Kalianpur 1975 to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2411'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::1157' => [
             'name' => 'Kandawala to WGS 84 (1)',
@@ -505,11 +365,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['2365'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::1163' => [
-            'name' => 'M\'poraloko to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['1100'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::1164' => [
             'name' => 'Mahe 1971 to WGS 84 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
@@ -534,11 +389,6 @@ class CoordinateOperations
             'name' => 'Minna to WGS 84 (2)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['1178'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1169' => [
-            'name' => 'Monte Mario to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2339'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::1170' => [
             'name' => 'NAD27 to WGS 84 (1)',
@@ -635,11 +485,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['1325'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::1189' => [
-            'name' => 'Nahrwan 1967 to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2391'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::1190' => [
             'name' => 'Nahrwan 1967 to WGS 84 (2)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
@@ -650,40 +495,10 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['1243'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::1192' => [
-            'name' => 'Naparima 1972 to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['1322'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::1194' => [
             'name' => 'MGI to WGS 84 (8)',
             'method' => 'urn:ogc:def:method:EPSG::9607',
             'extent_code' => ['1543'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1195' => [
-            'name' => 'OSGB36 to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['1264'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1196' => [
-            'name' => 'OSGB36 to WGS 84 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2395'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1197' => [
-            'name' => 'OSGB36 to WGS 84 (3)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2396'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1198' => [
-            'name' => 'OSGB36 to WGS 84 (4)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2397'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1199' => [
-            'name' => 'OSGB36 to WGS 84 (5)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2398'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::1200' => [
             'name' => 'Pointe Noire to WGS 84 (1)',
@@ -735,26 +550,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['2355'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::1226' => [
-            'name' => 'Schwarzeck to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['1169'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1227' => [
-            'name' => 'Tananarive to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['1149'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1228' => [
-            'name' => 'Timbalai 1948 to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['1362'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1230' => [
-            'name' => 'Tokyo to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2409'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::1231' => [
             'name' => 'Tokyo to WGS 84 (2)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
@@ -790,11 +585,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9606',
             'extent_code' => ['2346'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::1242' => [
-            'name' => 'HD72 to WGS 84 (4)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['1119'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::1244' => [
             'name' => 'PZ-90 to WGS 84 (2)',
             'method' => 'urn:ogc:def:method:EPSG::9607',
@@ -809,16 +599,6 @@ class CoordinateOperations
             'name' => 'Herat North to WGS 84 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['1024'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1247' => [
-            'name' => 'Kalianpur 1962 to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3289'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1248' => [
-            'name' => 'ID74 to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['4020'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::1249' => [
             'name' => 'NAD27 to WGS 84 (21)',
@@ -840,20 +620,10 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['3883'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::1253' => [
-            'name' => 'Nord Sahara 1959 to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3213'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::1254' => [
             'name' => 'Pulkovo 1942 to WGS 84 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['3296'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1255' => [
-            'name' => 'Nord Sahara 1959 to WGS 84 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['1365'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::1257' => [
             'name' => 'Pulkovo 1995 to PZ-90 (1)',
@@ -914,11 +684,6 @@ class CoordinateOperations
             'name' => 'AGD66 to GDA94 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['2575'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1279' => [
-            'name' => 'AGD84 to GDA94 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2576'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::1280' => [
             'name' => 'AGD84 to GDA94 (2)',
@@ -1025,31 +790,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['1604'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::1318' => [
-            'name' => 'Camacupa 1948 to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2316'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1319' => [
-            'name' => 'Camacupa 1948 to WGS 84 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2317'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1323' => [
-            'name' => 'Camacupa 1948 to WGS 84 (6)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2319'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1326' => [
-            'name' => 'Camacupa 1948 to WGS 84 (9)',
-            'method' => 'urn:ogc:def:method:EPSG::9606',
-            'extent_code' => ['2323'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1327' => [
-            'name' => 'Camacupa 1948 to WGS 84 (10)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2324'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::1331' => [
             'name' => 'EST92 to ETRS89 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9607',
@@ -1060,20 +800,10 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9607',
             'extent_code' => ['3246'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::1333' => [
-            'name' => 'EST92 to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent_code' => ['3246'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::1334' => [
             'name' => 'Pulkovo 1942 to WGS 84 (12)',
             'method' => 'urn:ogc:def:method:EPSG::9607',
             'extent_code' => ['3246'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1438' => [
-            'name' => 'Fahud to WGS 84 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9606',
-            'extent_code' => ['4009'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::1439' => [
             'name' => 'PSD93 to WGS 84 (1)',
@@ -1109,11 +839,6 @@ class CoordinateOperations
             'name' => 'St. Kitts 1955 to WGS 84 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['3297'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1446' => [
-            'name' => 'St. Lucia 1955 to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3298'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::1447' => [
             'name' => 'Anguilla 1957 to WGS 84 (1)',
@@ -1225,21 +950,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['2361'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::1536' => [
-            'name' => 'Nahrwan 1967 to WGS 84 (5)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2406'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1537' => [
-            'name' => 'Indian 1975 to WGS 84 (3)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2358'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1538' => [
-            'name' => 'Carthage to WGS 84 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['1489'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::1539' => [
             'name' => 'South Yemen to Yemen NGN96 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
@@ -1285,11 +995,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['3143'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::1556' => [
-            'name' => 'Naparima 1955 to WGS 84 (3)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3143'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::1557' => [
             'name' => 'Malongo 1987 to WGS 84 (2)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
@@ -1304,16 +1009,6 @@ class CoordinateOperations
             'name' => 'Nord Sahara 1959 to WGS 72BE (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['2393'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1561' => [
-            'name' => 'Qatar 1974 to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['1346'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1562' => [
-            'name' => 'Qatar 1974 to WGS 84 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2406'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::1563' => [
             'name' => 'Qatar 1974 to WGS 84 (3)',
@@ -1334,11 +1029,6 @@ class CoordinateOperations
             'name' => 'NZGD49 to NZGD2000 (3)',
             'method' => 'urn:ogc:def:method:EPSG::9615',
             'extent_code' => ['3285'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1569' => [
-            'name' => 'Accra to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['1104'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::1570' => [
             'name' => 'Accra to WGS 72BE (1)',
@@ -1385,11 +1075,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['2329'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::1586' => [
-            'name' => 'Deir ez Zor to WGS 84 (3)',
-            'method' => 'urn:ogc:def:method:EPSG::9606',
-            'extent_code' => ['2327'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::1587' => [
             'name' => 'Deir ez Zor to WGS 84 (4)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
@@ -1405,11 +1090,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['1096'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::1592' => [
-            'name' => 'Timbalai 1948 to WGS 84 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['1055'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::1594' => [
             'name' => 'AGD66 to GDA94 (8)',
             'method' => 'urn:ogc:def:method:EPSG::9607',
@@ -1419,11 +1099,6 @@ class CoordinateOperations
             'name' => 'AGD66 to GDA94 (9)',
             'method' => 'urn:ogc:def:method:EPSG::9607',
             'extent_code' => ['2284'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1597' => [
-            'name' => 'Bogota 1975 to WGS 84 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2315'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::1610' => [
             'name' => 'BD72 to WGS 84 (2)',
@@ -1445,11 +1120,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['3306'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::1615' => [
-            'name' => 'Timbalai 1948 to WGS 84 (3)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2349'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::1616' => [
             'name' => 'PSD93 to WGS 72 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9606',
@@ -1464,11 +1134,6 @@ class CoordinateOperations
             'name' => 'MGI to ETRS89 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9606',
             'extent_code' => ['1037'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1622' => [
-            'name' => 'S-JTSK to ETRS89 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9606',
-            'extent_code' => ['1079'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::1626' => [
             'name' => 'ED50 to ETRS89 (4)',
@@ -1520,11 +1185,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['3694'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::1652' => [
-            'name' => 'BD72 to ETRS89 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9606',
-            'extent_code' => ['1347'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::1653' => [
             'name' => 'NGO 1948 to ETRS89 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9606',
@@ -1544,31 +1204,6 @@ class CoordinateOperations
             'name' => 'Monte Mario to ETRS89 (3)',
             'method' => 'urn:ogc:def:method:EPSG::9606',
             'extent_code' => ['2340'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1682' => [
-            'name' => 'South Yemen to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['1340'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1684' => [
-            'name' => 'Tete to WGS 84 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent_code' => ['2350'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1685' => [
-            'name' => 'Tete to WGS 84 (3)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent_code' => ['2351'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1686' => [
-            'name' => 'Tete to WGS 84 (4)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent_code' => ['2352'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1687' => [
-            'name' => 'Tete to WGS 84 (5)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent_code' => ['2353'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::1688' => [
             'name' => 'ATS77 to WGS 84 (1)',
@@ -1665,11 +1300,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9601',
             'extent_code' => ['3694'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::1764' => [
-            'name' => 'NTF (Paris) to NTF (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9601',
-            'extent_code' => ['3694'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::1765' => [
             'name' => 'Bern 1898 (Bern) to CH1903 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9601',
@@ -1710,11 +1340,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9606',
             'extent_code' => ['1343'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::1776' => [
-            'name' => 'DHDN to ETRS89 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9606',
-            'extent_code' => ['2326'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::1778' => [
             'name' => 'DHDN to ETRS89 (3)',
             'method' => 'urn:ogc:def:method:EPSG::9606',
@@ -1740,11 +1365,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['2555'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::1797' => [
-            'name' => 'Qornoq 1927 to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3362'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::1798' => [
             'name' => 'Qornoq 1927 to WGS 84 (2)',
             'method' => 'urn:ogc:def:method:EPSG::9606',
@@ -1759,11 +1379,6 @@ class CoordinateOperations
             'name' => 'Ammassalik 1958 to WGS 84 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9606',
             'extent_code' => ['2571'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1801' => [
-            'name' => 'Pointe Noire to WGS 84 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2574'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::1802' => [
             'name' => 'Pointe Noire to WGS 84 (3)',
@@ -1815,66 +1430,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9606',
             'extent_code' => ['3317'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::1813' => [
-            'name' => 'Batavia to WGS 84 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2577'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1814' => [
-            'name' => 'Batavia to WGS 84 (3)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2588'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1815' => [
-            'name' => 'Nord Sahara 1959 to WGS 84 (4)',
-            'method' => 'urn:ogc:def:method:EPSG::9606',
-            'extent_code' => ['2598'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1816' => [
-            'name' => 'Nord Sahara 1959 to WGS 84 (5)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2599'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1817' => [
-            'name' => 'Nord Sahara 1959 to WGS 84 (6)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2600'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1818' => [
-            'name' => 'Minna to WGS 84 (4)',
-            'method' => 'urn:ogc:def:method:EPSG::9606',
-            'extent_code' => ['1717'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1820' => [
-            'name' => 'Minna to WGS 84 (6)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3813'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1821' => [
-            'name' => 'Minna to WGS 84 (7)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3814'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1822' => [
-            'name' => 'Minna to WGS 84 (8)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3815'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1823' => [
-            'name' => 'Minna to WGS 84 (9)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3816'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1824' => [
-            'name' => 'Minna to WGS 84 (10)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3824'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1825' => [
-            'name' => 'Hong Kong 1980 to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9606',
-            'extent_code' => ['1118'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::1826' => [
             'name' => 'JGD2000 to WGS 84 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
@@ -1884,16 +1439,6 @@ class CoordinateOperations
             'name' => 'Yoff to WGS 72 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['1207'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1832' => [
-            'name' => 'ID74 to WGS 84 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9606',
-            'extent_code' => ['4020'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1833' => [
-            'name' => 'ID74 to WGS 84 (3)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent_code' => ['4020'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::1837' => [
             'name' => 'Makassar to WGS 84 (1)',
@@ -1919,11 +1464,6 @@ class CoordinateOperations
             'name' => 'NAD83(CSRS) to WGS 84 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['1061'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1852' => [
-            'name' => 'Timbalai 1948 to WGS 84 (4)',
-            'method' => 'urn:ogc:def:method:EPSG::9606',
-            'extent_code' => ['2780'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::1853' => [
             'name' => 'ED50 to WGS 84 (39)',
@@ -1955,29 +1495,14 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['2781'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::1859' => [
-            'name' => 'ELD79 to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2785'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::1860' => [
             'name' => 'ELD79 to WGS 84 (2)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['2785'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::1861' => [
-            'name' => 'ELD79 to WGS 84 (3)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2786'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::1862' => [
             'name' => 'ELD79 to WGS 84 (4)',
             'method' => 'urn:ogc:def:method:EPSG::9606',
-            'extent_code' => ['2786'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1863' => [
-            'name' => 'ELD79 to WGS 84 (5)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
             'extent_code' => ['2786'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::1864' => [
@@ -2080,11 +1605,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['1301'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::1887' => [
-            'name' => 'Azores Occidental 1939 to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['1344'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::1888' => [
             'name' => 'Porto Santo to WGS 84 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
@@ -2140,16 +1660,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['2555'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::1903' => [
-            'name' => 'Fort Marigot to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2828'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1904' => [
-            'name' => 'Guadeloupe 1948 to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2829'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::1905' => [
             'name' => 'Guadeloupe 1948 to WGS 84 (2)',
             'method' => 'urn:ogc:def:method:EPSG::9606',
@@ -2165,35 +1675,10 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9606',
             'extent_code' => ['3105'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::1909' => [
-            'name' => 'Martinique 1938 to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3276'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1910' => [
-            'name' => 'Martinique 1938 to WGS 84 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9606',
-            'extent_code' => ['3276'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::1912' => [
             'name' => 'RGR92 to WGS 84 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['3902'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1913' => [
-            'name' => 'Tahaa 54 to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2812'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1914' => [
-            'name' => 'IGN72 Nuku Hiva to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3129'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1916' => [
-            'name' => 'Combani 1950 to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3340'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::1921' => [
             'name' => 'Petrels 1972 to WGS 84 (1)',
@@ -2245,11 +1730,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9606',
             'extent_code' => ['2530'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::1956' => [
-            'name' => 'TM75 to WGS 84 (3)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['1305'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::1957' => [
             'name' => 'Helle 1954 to WGS 84 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9606',
@@ -2280,98 +1760,8 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9607',
             'extent_code' => ['2870'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::1968' => [
-            'name' => 'Azores Oriental 1995 to WGS 84 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2871'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1969' => [
-            'name' => 'Azores Oriental 1995 to WGS 84 (3)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent_code' => ['2871'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1970' => [
-            'name' => 'Azores Oriental 1995 to WGS 84 (4)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['1345'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1971' => [
-            'name' => 'Azores Oriental 1995 to WGS 84 (5)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent_code' => ['1345'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1972' => [
-            'name' => 'Azores Central 1995 to WGS 84 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2872'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1973' => [
-            'name' => 'Azores Central 1995 to WGS 84 (3)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent_code' => ['2872'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1974' => [
-            'name' => 'Azores Central 1995 to WGS 84 (4)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2873'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1975' => [
-            'name' => 'Azores Central 1995 to WGS 84 (5)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent_code' => ['2873'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1976' => [
-            'name' => 'Azores Central 1995 to WGS 84 (6)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2874'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1977' => [
-            'name' => 'Azores Central 1995 to WGS 84 (7)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent_code' => ['2874'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1978' => [
-            'name' => 'Azores Central 1995 to WGS 84 (8)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2875'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1979' => [
-            'name' => 'Azores Central 1995 to WGS 84 (9)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent_code' => ['2875'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1980' => [
-            'name' => 'Azores Central 1995 to WGS 84 (10)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['1301'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1981' => [
-            'name' => 'Azores Central 1995 to WGS 84 (11)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent_code' => ['1301'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1982' => [
-            'name' => 'Azores Occidental 1939 to WGS 84 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['1344'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1983' => [
-            'name' => 'Datum 73 to WGS 84 (3)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['1294'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1984' => [
-            'name' => 'Lisbon to WGS 84 (3)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['1294'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::1985' => [
             'name' => 'ED50 to WGS 84 (33)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['1294'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1986' => [
-            'name' => 'Lisbon 1890 to WGS 84 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['1294'],
         ],
@@ -2387,11 +1777,6 @@ class CoordinateOperations
         ],
         'urn:ogc:def:coordinateOperation:EPSG::1989' => [
             'name' => 'ED50 to WGS 84 (34)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent_code' => ['1294'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1990' => [
-            'name' => 'Lisbon 1890 to WGS 84 (2)',
             'method' => 'urn:ogc:def:method:EPSG::9607',
             'extent_code' => ['1294'],
         ],
@@ -2785,28 +2170,8 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9807',
             'extent_code' => ['1162'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::4064' => [
-            'name' => 'RGRDC 2005 to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3613'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::4065' => [
-            'name' => 'Katanga 1955 to RGRDC 2005 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3614'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::4066' => [
-            'name' => 'Katanga 1955 to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3614'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::4067' => [
             'name' => 'Katanga 1955 to RGRDC 2005 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9636',
-            'extent_code' => ['3614'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::4068' => [
-            'name' => 'Katanga 1955 to WGS 84 (2)',
             'method' => 'urn:ogc:def:method:EPSG::9636',
             'extent_code' => ['3614'],
         ],
@@ -2970,11 +2335,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9807',
             'extent_code' => ['3373'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::4290' => [
-            'name' => 'Cadastre 1997 to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3340'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::4305' => [
             'name' => 'Pinang Cassini Grid',
             'method' => 'urn:ogc:def:method:EPSG::9806',
@@ -3095,20 +2455,10 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['1159'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::4477' => [
-            'name' => 'RGSPM06 to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['1220'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::4478' => [
             'name' => 'Cadastre 1997 to RGM04 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['3340'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::4560' => [
-            'name' => 'RRAF 1991 to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2824'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::4648' => [
             'name' => 'UTM zone 32N with prefix',
@@ -3170,11 +2520,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['3680'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::5024' => [
-            'name' => 'Azores Oriental 1995 to PTRA08 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['1345'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::5025' => [
             'name' => 'Azores Oriental 1995 to PTRA08 (2)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
@@ -3184,11 +2529,6 @@ class CoordinateOperations
             'name' => 'Azores Oriental 1995 to PTRA08 (3)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['3683'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::5027' => [
-            'name' => 'Azores Central 1995 to PTRA08 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['1301'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::5028' => [
             'name' => 'Azores Central 1995 to PTRA08 (2)',
@@ -3215,11 +2555,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['2872'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::5033' => [
-            'name' => 'Azores Occidental 1939 to PTRA08 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['1344'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::5034' => [
             'name' => 'Azores Occidental 1939 to PTRA08 (2)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
@@ -3229,11 +2564,6 @@ class CoordinateOperations
             'name' => 'Azores Occidental 1939 to PTRA08 (3)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['3685'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::5036' => [
-            'name' => 'Datum 73 to ETRS89 (4)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['1294'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::5037' => [
             'name' => 'Datum 73 to ETRS89 (5)',
@@ -3322,11 +2652,6 @@ class CoordinateOperations
         ],
         'urn:ogc:def:coordinateOperation:EPSG::5077' => [
             'name' => 'Karbala 1979 to IGRS (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3625'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::5078' => [
-            'name' => 'Karbala 1979 to WGS 84 (2)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['3625'],
         ],
@@ -3535,16 +2860,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9636',
             'extent_code' => ['3266'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::5191' => [
-            'name' => 'Korean 1985 to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9636',
-            'extent_code' => ['3266'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::5194' => [
-            'name' => 'VN-2000 to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent_code' => ['3770'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::5196' => [
             'name' => 'HVRS71 height to EVRF2000 height (1)',
             'method' => 'urn:ogc:def:method:EPSG::1046',
@@ -3700,11 +3015,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9619',
             'extent_code' => ['1079'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::5249' => [
-            'name' => 'Timbalai 1948 to WGS 84 (5)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent_code' => ['1055'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::5260' => [
             'name' => 'TUREF to ETRS89 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9606',
@@ -3859,11 +3169,6 @@ class CoordinateOperations
             'name' => 'MARGEN to WGS 84 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['1049'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::5376' => [
-            'name' => 'CR05 to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['1074'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::5377' => [
             'name' => 'MACARIO SOLIS to WGS 84 (1)',
@@ -4065,11 +3370,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9801',
             'extent_code' => ['3290'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::5470' => [
-            'name' => 'Ocotepeque 1935 to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3232'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::5471' => [
             'name' => 'Panama Polyconic',
             'method' => 'urn:ogc:def:method:EPSG::9818',
@@ -4098,11 +3398,6 @@ class CoordinateOperations
         'urn:ogc:def:coordinateOperation:EPSG::5483' => [
             'name' => 'Luxembourg 1930 to ETRS89 (4)',
             'method' => 'urn:ogc:def:method:EPSG::9636',
-            'extent_code' => ['1146'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::5485' => [
-            'name' => 'Luxembourg 1930 to ETRS89 (3)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
             'extent_code' => ['1146'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::5491' => [
@@ -4240,11 +3535,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9809',
             'extent_code' => ['1447'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::5590' => [
-            'name' => 'UCS-2000 to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent_code' => ['1242'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::5595' => [
             'name' => 'Fehmarnbelt TM',
             'method' => 'urn:ogc:def:method:EPSG::9807',
@@ -4254,16 +3544,6 @@ class CoordinateOperations
             'name' => 'FEH2010 to WGS 84 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['3889'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::5622' => [
-            'name' => 'OSGB36 to WGS 84 (8)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3893'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::5630' => [
-            'name' => 'Nord Sahara 1959 to WGS 84 (8)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3917'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::5640' => [
             'name' => 'Petrobras Mercator',
@@ -4870,16 +4150,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9607',
             'extent_code' => ['3186'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::6142' => [
-            'name' => 'GCGD59 to WGS 84 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent_code' => ['3185'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::6143' => [
-            'name' => 'SIGD61 to WGS 84 (3)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent_code' => ['3186'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::6177' => [
             'name' => 'CIGD11 to WGS 84 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
@@ -4900,25 +4170,10 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['1293'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::6192' => [
-            'name' => 'Corrego Alegre 1970-72 to WGS 84 (3)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['1293'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::6193' => [
             'name' => 'Corrego Alegre 1970-72 to SIRGAS 2000 (2)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['1293'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::6195' => [
-            'name' => 'SAD69(96) to WGS 84 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['1053'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::6196' => [
-            'name' => 'Minna to WGS 84 (16)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['4127'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::6198' => [
             'name' => 'Michigan CS27 Central zone',
@@ -5235,20 +4490,10 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9653',
             'extent_code' => ['1275'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::6304' => [
-            'name' => 'ED50 / UTM zone 31N to Amersfoort / RD New (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9653',
-            'extent_code' => ['1275'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::6305' => [
             'name' => 'ED50 / UTM zone 31N to BD72 / Lambert 72 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9652',
             'extent_code' => ['1347'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::6306' => [
-            'name' => 'ED50 / TM 5 NE to Amersfoort / RD New (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9653',
-            'extent_code' => ['1275'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::6308' => [
             'name' => 'Cyprus Transverse Mercator',
@@ -5610,11 +4855,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9807',
             'extent_code' => ['3212'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::6872' => [
-            'name' => 'Abidjan 1987 to WGS 84 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2296'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::6873' => [
             'name' => 'Tananarive to WGS 84 (2)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
@@ -5635,20 +4875,10 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['3876'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::6889' => [
-            'name' => 'Ocotepeque 1935 to WGS 84 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::1063',
-            'extent_code' => ['3232'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::6890' => [
             'name' => 'Ocotepeque 1935 to CR05 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['3232'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::6891' => [
-            'name' => 'Ocotepeque 1935 to WGS 84 (3)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3876'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::6895' => [
             'name' => 'Viti Levu 1912 to WGS 84 (2)',
@@ -5665,11 +4895,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['3298'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::6898' => [
-            'name' => 'Lisbon to WGS 84 (5)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['1294'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::6899' => [
             'name' => 'Pulkovo 1942 to WGS 84 (21)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
@@ -5679,16 +4904,6 @@ class CoordinateOperations
             'name' => 'Observatario to WGS 84 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['1329'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::6901' => [
-            'name' => 'Tete to WGS 84 (6)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3281'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::6902' => [
-            'name' => 'Timbalai 1948 to WGS 84 (6)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2349'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::6903' => [
             'name' => 'Yoff to WGS 84 (2)',
@@ -5745,11 +4960,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['3250'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::6914' => [
-            'name' => 'South East Island 1943 to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['4183'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::6920' => [
             'name' => 'Kansas DOT Lambert (meters)',
             'method' => 'urn:ogc:def:method:EPSG::9802',
@@ -5795,29 +5005,14 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9606',
             'extent_code' => ['4214'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::6938' => [
-            'name' => 'AGD66 to PNG94 (3)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['4214'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::6939' => [
             'name' => 'AGD66 to PNG94 (4)',
             'method' => 'urn:ogc:def:method:EPSG::9606',
             'extent_code' => ['4013'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::6940' => [
-            'name' => 'AGD66 to PNG94 (5)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['4013'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::6941' => [
             'name' => 'AGD66 to PNG94 (6)',
             'method' => 'urn:ogc:def:method:EPSG::9606',
-            'extent_code' => ['4216'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::6942' => [
-            'name' => 'AGD66 to PNG94 (7)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['4216'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::6948' => [
@@ -5910,30 +5105,10 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9607',
             'extent_code' => ['2603'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::6998' => [
-            'name' => 'Nahrwan 1967 to WGS 84 (11)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent_code' => ['4226'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::6999' => [
             'name' => 'Nahrwan 1967 to WGS 84 (12)',
             'method' => 'urn:ogc:def:method:EPSG::9607',
             'extent_code' => ['4225'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::7002' => [
-            'name' => 'Nahrwan 1967 to WGS 84 (13)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent_code' => ['4229'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::7003' => [
-            'name' => 'Nahrwan 1967 to WGS 84 (14)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent_code' => ['1850'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::7004' => [
-            'name' => 'Nahrwan 1967 to WGS 84 (15)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent_code' => ['4227'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::7008' => [
             'name' => 'Nahrwan 1934 / UTM zone 37N to Karbala 1979 / UTM zone 37N (1)',
@@ -7035,16 +6210,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9801',
             'extent_code' => ['4342'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::7442' => [
-            'name' => 'Nord Sahara 1959 to WGS 84 (10)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['4382'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::7443' => [
-            'name' => 'ONGD14 to WGS 84 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['1183'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::7448' => [
             'name' => 'SAD69 to SIRGAS-Chile 2002 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
@@ -7545,11 +6710,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::1066',
             'extent_code' => ['1262'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::7704' => [
-            'name' => 'PZ-90 to PZ-90.11 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::1032',
-            'extent_code' => ['1262'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::7705' => [
             'name' => 'GSK-2011 to PZ-90.11 (1)',
             'method' => 'urn:ogc:def:method:EPSG::1066',
@@ -7890,11 +7050,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['3183'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::7893' => [
-            'name' => 'Astro DOS 71 to SHGD2015 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3183'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::7894' => [
             'name' => 'Astro DOS 71 to WGS 84 (2)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
@@ -7907,11 +7062,6 @@ class CoordinateOperations
         ],
         'urn:ogc:def:coordinateOperation:EPSG::7897' => [
             'name' => 'St. Helena Tritan to SHGD2015 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3183'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::7898' => [
-            'name' => 'St. Helena Tritan to WGS 84 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['3183'],
         ],
@@ -8059,11 +7209,6 @@ class CoordinateOperations
             'name' => 'Albany Grid 2020',
             'method' => 'urn:ogc:def:method:EPSG::9807',
             'extent_code' => ['4439'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::7994' => [
-            'name' => 'Barrow Island Grid 2020',
-            'method' => 'urn:ogc:def:method:EPSG::9807',
-            'extent_code' => ['4438'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::7995' => [
             'name' => 'Broome Grid 2020',
@@ -8820,25 +7965,10 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9607',
             'extent_code' => ['3307'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::8695' => [
-            'name' => 'Camacupa 1948 to Camacupa 2015 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent_code' => ['2324'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8696' => [
-            'name' => 'Camacupa 1948 to Camacupa 2015 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent_code' => ['2322'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::8819' => [
             'name' => 'RSAO13 to WGS 84 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['1029'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8822' => [
-            'name' => 'MTRF-2000 to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['1206'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::8824' => [
             'name' => 'Ain el Abd to MTRF-2000 (1)',
@@ -8855,18 +7985,8 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9607',
             'extent_code' => ['1029'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::8828' => [
-            'name' => 'RGPF to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9606',
-            'extent_code' => ['1098'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::8829' => [
             'name' => 'Tahiti 79 to RGPF (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9606',
-            'extent_code' => ['3124'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8830' => [
-            'name' => 'Tahiti 79 to WGS 84 (2)',
             'method' => 'urn:ogc:def:method:EPSG::9606',
             'extent_code' => ['3124'],
         ],
@@ -8875,18 +7995,8 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9606',
             'extent_code' => ['3125'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::8832' => [
-            'name' => 'Moorea 87 to WGS 84 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9606',
-            'extent_code' => ['3125'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::8833' => [
             'name' => 'Tahaa 54 to RGPF (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9606',
-            'extent_code' => ['2812'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8834' => [
-            'name' => 'Tahaa 54 to WGS 84 (3)',
             'method' => 'urn:ogc:def:method:EPSG::9606',
             'extent_code' => ['2812'],
         ],
@@ -8895,28 +8005,13 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9606',
             'extent_code' => ['3133'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::8842' => [
-            'name' => 'Fatu Iva 72 to WGS 84 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9606',
-            'extent_code' => ['3133'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::8843' => [
             'name' => 'IGN63 Hiva Oa to RGPF (1)',
             'method' => 'urn:ogc:def:method:EPSG::9606',
             'extent_code' => ['3131'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::8844' => [
-            'name' => 'IGN63 Hiva Oa to WGS 84 (3)',
-            'method' => 'urn:ogc:def:method:EPSG::9606',
-            'extent_code' => ['3131'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::8845' => [
             'name' => 'IGN63 Hiva Oa to RGPF (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9606',
-            'extent_code' => ['3132'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8846' => [
-            'name' => 'IGN63 Hiva Oa to WGS 84 (4)',
             'method' => 'urn:ogc:def:method:EPSG::9606',
             'extent_code' => ['3132'],
         ],
@@ -8935,25 +8030,10 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9606',
             'extent_code' => ['3127'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::8850' => [
-            'name' => 'IGN72 Nuku Hiva to WGS 84 (6)',
-            'method' => 'urn:ogc:def:method:EPSG::9606',
-            'extent_code' => ['3127'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::8851' => [
             'name' => 'IGN72 Nuku Hiva to RGPF (3)',
             'method' => 'urn:ogc:def:method:EPSG::9606',
             'extent_code' => ['3128'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8852' => [
-            'name' => 'IGN72 Nuku Hiva to WGS 84 (7)',
-            'method' => 'urn:ogc:def:method:EPSG::9606',
-            'extent_code' => ['3128'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8853' => [
-            'name' => 'Maupiti 83 to WGS 84 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9606',
-            'extent_code' => ['3126'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::8854' => [
             'name' => 'Equal Earth Greenwich',
@@ -9075,25 +8155,10 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9607',
             'extent_code' => ['1029'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::8883' => [
-            'name' => 'Camacupa 1948 to RSAO13 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2322'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8884' => [
-            'name' => 'Camacupa 1948 to RSAO13 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2324'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::8886' => [
             'name' => 'SVY21 to WGS 84 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['1210'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8887' => [
-            'name' => 'GDA2020 to WGS 84 (Transit) (1)',
-            'method' => 'urn:ogc:def:method:EPSG::1031',
-            'extent_code' => ['4177'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::8889' => [
             'name' => 'BGS2005 to ETRS89 (1)',
@@ -9735,11 +8800,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['2357'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::9263' => [
-            'name' => 'Hito XVIII 1963 to WGS 84 (3)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2357'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::9264' => [
             'name' => 'POSGAR 2007 to WGS 84 (2)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
@@ -10325,16 +9385,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9807',
             'extent_code' => ['4654'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::10085' => [
-            'name' => 'Trinidad 1903 to WGS 84 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['1339'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::10086' => [
-            'name' => 'JAD69 to WGS 72 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3342'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::10087' => [
             'name' => 'Jamaica 1875 / Jamaica (Old Grid) to JAD69 / Jamaica National Grid (1)',
             'method' => 'urn:ogc:def:method:EPSG::9624',
@@ -10342,11 +9392,6 @@ class CoordinateOperations
         ],
         'urn:ogc:def:coordinateOperation:EPSG::10098' => [
             'name' => 'KKJ to ETRS89 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent_code' => ['3333'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::10099' => [
-            'name' => 'KKJ to WGS 84 (2)',
             'method' => 'urn:ogc:def:method:EPSG::9607',
             'extent_code' => ['3333'],
         ],
@@ -12230,11 +11275,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['3957'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::15484' => [
-            'name' => 'Tokyo to WGS 84 (108)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3957'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::15485' => [
             'name' => 'SAD69 to SIRGAS 2000 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
@@ -12250,20 +11290,10 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9656',
             'extent_code' => ['3982'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::15493' => [
-            'name' => 'Minna to WGS 84 (15)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3590'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::15494' => [
             'name' => 'Kalianpur 1962 to WGS 84 (6)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['3589'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::15495' => [
-            'name' => 'Accra to WGS 84 (3)',
-            'method' => 'urn:ogc:def:method:EPSG::9606',
-            'extent_code' => ['1505'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::15496' => [
             'name' => 'Pulkovo 1942(58) to WGS 84 (18)',
@@ -12825,16 +11855,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['2982'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::15705' => [
-            'name' => 'Minna to WGS 84 (12)',
-            'method' => 'urn:ogc:def:method:EPSG::9606',
-            'extent_code' => ['3819'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::15706' => [
-            'name' => 'Minna to WGS 84 (13)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['1717'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::15707' => [
             'name' => 'ELD79 to WGS 84 (6)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
@@ -12854,46 +11874,6 @@ class CoordinateOperations
             'name' => 'Gan 1970 to WGS 84 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['3274'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::15714' => [
-            'name' => 'Bogota 1975 to MAGNA-SIRGAS (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent_code' => ['3082'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::15716' => [
-            'name' => 'Bogota 1975 to MAGNA-SIRGAS (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent_code' => ['3083'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::15718' => [
-            'name' => 'Bogota 1975 to MAGNA-SIRGAS (3)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent_code' => ['3084'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::15720' => [
-            'name' => 'Bogota 1975 to MAGNA-SIRGAS (4)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent_code' => ['3085'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::15722' => [
-            'name' => 'Bogota 1975 to MAGNA-SIRGAS (5)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent_code' => ['3086'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::15724' => [
-            'name' => 'Bogota 1975 to MAGNA-SIRGAS (6)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent_code' => ['3087'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::15726' => [
-            'name' => 'Bogota 1975 to MAGNA-SIRGAS (7)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent_code' => ['3088'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::15728' => [
-            'name' => 'Bogota 1975 to MAGNA-SIRGAS (8)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent_code' => ['3089'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::15730' => [
             'name' => 'Bogota 1975 to MAGNA-SIRGAS (9)',
@@ -12940,11 +11920,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['1070'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::15741' => [
-            'name' => 'Deir ez Zor to WGS 84 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2329'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::15742' => [
             'name' => 'Deir ez Zor to WGS 84 (5)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
@@ -12965,16 +11940,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['3141'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::15750' => [
-            'name' => 'St. Kitts 1955 to WGS 84 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3297'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::15751' => [
-            'name' => 'Reunion 1947 to WGS 84 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3337'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::15752' => [
             'name' => 'ED79 to WGS 84 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
@@ -12984,11 +11949,6 @@ class CoordinateOperations
             'name' => 'ED50 to ED87 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9651',
             'extent_code' => ['2330'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::15755' => [
-            'name' => 'Minna to WGS 84 (14)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3113'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::15759' => [
             'name' => 'Maupiti 83 to RGPF (1)',
@@ -13050,11 +12010,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['3182'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::15798' => [
-            'name' => 'Astro DOS 71 to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3183'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::15799' => [
             'name' => 'Marcus Island 1952 to WGS 84 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
@@ -13110,11 +12065,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['3192'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::15811' => [
-            'name' => 'Antigua 1943 to WGS 84 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['1273'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::15812' => [
             'name' => 'Deception Island to WGS 84 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
@@ -13124,11 +12074,6 @@ class CoordinateOperations
             'name' => 'South Georgia 1968 to WGS 84 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['3529'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::15814' => [
-            'name' => 'SIGD61 to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3186'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::15815' => [
             'name' => 'PN84 to WGS 84 (1)',
@@ -13190,16 +12135,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['1548'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::15829' => [
-            'name' => 'SIGD61 to WGS 84 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3186'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::15830' => [
-            'name' => 'GCGD59 to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3185'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::15831' => [
             'name' => 'Korea 2000 to WGS 84 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
@@ -13234,11 +12169,6 @@ class CoordinateOperations
             'name' => 'MOP78 to WGS 84 (2)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['2815'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::15848' => [
-            'name' => 'ST84 Ile des Pins to WGS 84 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2820'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::15849' => [
             'name' => 'Beduaram to WGS 84 (2)',
@@ -13320,11 +12250,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['2555'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::15874' => [
-            'name' => 'Nord Sahara 1959 to WGS 84 (7)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3402'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::15875' => [
             'name' => 'Fiji 1956 to WGS 84 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
@@ -13334,11 +12259,6 @@ class CoordinateOperations
             'name' => 'Fiji 1986 to WGS 84 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9606',
             'extent_code' => ['1094'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::15877' => [
-            'name' => 'Fiji 1986 to WGS 84 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent_code' => ['3398'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::15878' => [
             'name' => 'Vanua Levu 1915 to WGS 84 (1)',
@@ -13354,36 +12274,6 @@ class CoordinateOperations
             'name' => 'RGNC91-93 to WGS 84 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['1174'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::15881' => [
-            'name' => 'ST87 Ouvea to WGS 84 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2813'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::15882' => [
-            'name' => 'IGN72 Grande Terre to RGNC91-93 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2822'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::15883' => [
-            'name' => 'IGN56 Lifou to RGNC91-93 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2814'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::15884' => [
-            'name' => 'IGN53 Mare to RGNC91-93 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2819'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::15885' => [
-            'name' => 'ST87 Ouvea to RGNC91-93 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2813'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::15886' => [
-            'name' => 'NEA74 Noumea to RGNC91-93 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2823'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::15887' => [
             'name' => 'IGN72 Grande Terre to RGNC91-93 (2)',
@@ -13439,26 +12329,6 @@ class CoordinateOperations
             'name' => 'Ammassalik 1958 to GR96 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9606',
             'extent_code' => ['2571'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::15901' => [
-            'name' => 'IGN53 Mare to WGS 84 (3)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2819'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::15902' => [
-            'name' => 'IGN56 Lifou to WGS 84 (3)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2814'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::15903' => [
-            'name' => 'IGN72 Grande Terre to WGS 84 (3)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2822'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::15904' => [
-            'name' => 'NEA74 Noumea to WGS 84 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2823'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::15908' => [
             'name' => 'LGD2006 to WGS 84 (1)',
@@ -13550,11 +12420,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9607',
             'extent_code' => ['3342'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::15927' => [
-            'name' => 'JAD69 to WGS 84 (3)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent_code' => ['3342'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::15928' => [
             'name' => 'BD72 to ETRS89 (2)',
             'method' => 'urn:ogc:def:method:EPSG::9607',
@@ -13575,11 +12440,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['3466'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::15937' => [
-            'name' => 'Nahrwan 1967 to WGS 84 (7)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3509'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::15948' => [
             'name' => 'DHDN to ETRS89 (8)',
             'method' => 'urn:ogc:def:method:EPSG::9615',
@@ -13594,11 +12454,6 @@ class CoordinateOperations
             'name' => 'Vanua Levu 1915 / Vanua Levu Grid to Fiji 1986 / Fiji Map Grid (1)',
             'method' => 'urn:ogc:def:method:EPSG::9645',
             'extent_code' => ['3401'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::15952' => [
-            'name' => 'Nahrwan 1967 to WGS 84 (9)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3530'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::15953' => [
             'name' => 'Nahrwan 1967 to WGS 84 (10)',
@@ -13627,11 +12482,6 @@ class CoordinateOperations
         ],
         'urn:ogc:def:coordinateOperation:EPSG::15969' => [
             'name' => 'Bermuda 1957 to BDA2000 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent_code' => ['3221'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::15970' => [
-            'name' => 'Bermuda 1957 to WGS 84 (2)',
             'method' => 'urn:ogc:def:method:EPSG::9607',
             'extent_code' => ['3221'],
         ],
