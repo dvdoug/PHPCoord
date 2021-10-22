@@ -141,7 +141,7 @@ return [
     'SeTa2016.gsb' => CoordinateOperation\NTv2DHDNETRS89SaarlandProvider::class,
     'tky2jgd.gsb' => CoordinateOperation\NTv2TokyoJGD2000JapanProvider::class,
     'touhokutaiheiyouoki2011.gsb' => CoordinateOperation\NTv2JGD2000JGD2011JapanProvider::class,
-    'gr3df97a.txt' => CoordinateOperation\IGNGeocentricTranslationNTFRGF93Provider::class,
+    'gr3df97a.txt' => CoordinateOperation\IGNFGeocentricTranslationNTFRGF93Provider::class,
     'nzgeoid2009.gtx' => CoordinateOperation\GTXNZGeoid2009Provider::class,
     'nzgeoid2016.gtx' => CoordinateOperation\GTXNZGeoid2016Provider::class,
     'auckht1946-nzvd2016.gtx' => CoordinateOperation\GTXAuckland1946NZVD2016Provider::class,

@@ -18440,6 +18440,14 @@ class CRSTransformations
             'reversible' => true,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9327',
+            'name' => 'NTF to RGF93 v1 (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4275',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::4171',
+            'accuracy' => 1.0,
+            'reversible' => true,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1276',
             'name' => 'NTF to ED50 (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4275',

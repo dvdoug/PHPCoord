@@ -82,7 +82,6 @@ class EPSGCodegenFromDataImport
         1084, // Vertical Offset by Grid Interpolation (gtx)
         1085, // Vertical Offset by Grid Interpolation (asc)
         1086, // Point motion (geocen) by grid (INADEFORM)
-        1087, // Geocentric translation by Grid Interpolation (IGN)
         1088, // Geog3D to Geog2D+GravityRelatedHeight (gtx)
         1089, // Geog3D to Geog2D+GravityRelatedHeight (BEV AT)
         1090, // Geog3D to Geog2D+GravityRelatedHeight (CGG 2013)
@@ -1563,6 +1562,8 @@ class EPSGCodegenFromDataImport
                 $paramsRow['reverses'] = (bool) $paramsRow['reverses'];
                 if (in_array($paramsRow['parameter_code'], [8659, 8660, 1037, 1048, 8661, 8662], true)) {
                     $paramsRow['value'] = 'urn:ogc:def:crs:EPSG::' . $paramsRow['value'];
+                } elseif (in_array($paramsRow['parameter_code'], [1062], true)) {
+                    $paramsRow['value'] = 'urn:ogc:def:coordinateOperation:EPSG::' . $paramsRow['value'];
                 }
                 if (
                     isset($filenameToProviderMap[$paramsRow['value']]) &&
@@ -1749,7 +1750,7 @@ class EPSGCodegenFromDataImport
 
     protected static function camelCase(string $string): string
     {
-        $string = str_replace([' ', '-', '(', ')'], '', ucwords($string, ' -()'));
+        $string = str_replace([' ', '-', '(', ')', '"'], '', ucwords($string, ' -()"'));
         if (!preg_match('/^(EPSG|[ABC][uv\d])/', $string)) {
             $string = lcfirst($string);
         }

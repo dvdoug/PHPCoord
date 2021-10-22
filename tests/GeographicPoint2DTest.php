@@ -36,6 +36,7 @@ class GeographicPoint2DTest extends TestCase
         $centre = $operationExtent->getPointInside();
 
         $sourceCRS = Geographic::fromSRID($sourceCrsSrid);
+        $centre[1] = $centre[1]->subtract($sourceCRS->getDatum()->getPrimeMeridian()->getGreenwichLongitude()); //compensate for non-Greenwich prime meridian
         $sourceHeight = $sourceCRS instanceof Geographic3D ? new Metre(0) : null;
         $targetCRS = CoordinateReferenceSystem::fromSRID($targetCrsSrid);
 

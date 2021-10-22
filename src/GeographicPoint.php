@@ -31,6 +31,7 @@ use PHPCoord\CoordinateOperation\ComplexNumber;
 use PHPCoord\CoordinateOperation\ConvertiblePoint;
 use PHPCoord\CoordinateOperation\GeocentricValue;
 use PHPCoord\CoordinateOperation\GeographicValue;
+use PHPCoord\CoordinateOperation\IGNFGeocentricTranslationGrid;
 use PHPCoord\CoordinateOperation\NADCON5Grid;
 use PHPCoord\CoordinateOperation\NTv2Grid;
 use PHPCoord\CoordinateOperation\OSTNOSGM15Grid;
@@ -2224,9 +2225,26 @@ class GeographicPoint extends Point implements ConvertiblePoint
     ): self {
         if (!$inReverse) {
             return $latitudeAndLongitudeDifferenceFile->applyForwardAdjustment($this, $to);
-        } else {
-            return $latitudeAndLongitudeDifferenceFile->applyReverseAdjustment($this, $to);
         }
+
+        return $latitudeAndLongitudeDifferenceFile->applyReverseAdjustment($this, $to);
+    }
+
+    /**
+     * Geocentric translation by Grid Interpolation (IGN France).
+     */
+    public function geocentricTranslationByGridInterpolationIGNF(
+        Geographic $to,
+        IGNFGeocentricTranslationGrid $geocentricTranslationFile,
+        string $EPSGCodeForInterpolationCRS,
+        string $EPSGCodeForStandardCT,
+        bool $inReverse
+    ): self {
+        if (!$inReverse) {
+            return $geocentricTranslationFile->applyForwardAdjustment($this, $to);
+        }
+
+        return $geocentricTranslationFile->applyReverseAdjustment($this, $to);
     }
 
     public function asGeographicValue(): GeographicValue

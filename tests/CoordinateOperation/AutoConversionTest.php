@@ -288,6 +288,21 @@ class AutoConversionTest extends TestCase
         self::assertEqualsWithDelta(4.383328547, $to->getLongitude()->asDegrees()->getValue(), 0.0000001);
     }
 
+    public function testNTFToRGF93(): void
+    {
+        $from = GeographicPoint::create(new Degree(48.84451225), new Degree(2.42567186), null, Geographic2D::fromSRID(Geographic2D::EPSG_NTF));
+        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_RGF93);
+        $to = $from->convert($toCRS);
+
+        if (class_exists(IGNFGeocentricTranslationNTFRGF93Provider::class)) {
+            self::assertEqualsWithDelta(48.844445839, $to->getLatitude()->asDegrees()->getValue(), 0.0000001);
+            self::assertEqualsWithDelta(2.424971108, $to->getLongitude()->asDegrees()->getValue(), 0.0000001);
+        } else {
+            self::assertEqualsWithDelta(48.844443517, $to->getLatitude()->asDegrees()->getValue(), 0.0000001);
+            self::assertEqualsWithDelta(2.424952023, $to->getLongitude()->asDegrees()->getValue(), 0.0000001);
+        }
+    }
+
     /**
      * @group integration
      * @dataProvider EPSGConcatenatedOperations

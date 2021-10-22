@@ -1,6 +1,8 @@
 # Changelog
 
 ## [Unreleased]
+### Added
+- Support for IGN France geocentric translation by grid interpolation. This requires the [Europe datapack](https://www.phpcoord.net/en/stable/coordinate_conversions_easy.html#grids)
 
 ## [4.6.0] - 2021-10-22
 Unless a major bug is found, this will be the last release in the v4.x series. The next feature release will be v5.0.
@@ -12,7 +14,6 @@ requires a significant non-backwards compatible change to address.
  - Some internal simplifications and optimisations
 ### Fixed
  - Corrected the decoding of sexagesimal DMS degree fractional components
-
 
 ## [4.5.0] - 2021-09-25
 ### Changed
@@ -64,7 +65,6 @@ requires a significant non-backwards compatible change to address.
  - `Vertical::EPSG_GENOA_HEIGHT`, use `Vertical::EPSG_GENOA_1942_HEIGHT` instead
  - `Datum::EPSG_GENOA`, use `Datum::EPSG_GENOA_1942` instead
 
-
 ## [4.3.0] - 2021-04-24
 ### Added
  - Datapacks. [See docs](https://www.phpcoord.net/en/stable/coordinate_conversions_easy.html#accuracy) for more info
@@ -88,7 +88,6 @@ requires a significant non-backwards compatible change to address.
  - `Projected::EPSG_ETRS89_POLAND_CS2000_ZONE_8`, use `Projected::EPSG_ETRF2000_PL_CS2000_24` instead
  - `Projected::EPSG_ETRS89_POLAND_CS92`, use `Projected::EPSG_ETRF2000_PL_CS92` instead
  - `Datum::EPSG_OSGB_1936`, use `Datum::EPSG_ORDNANCE_SURVEY_OF_GREAT_BRITAIN_1936` instead
-
 
 ## [4.1.0] - 2021-03-03
 ### Added
@@ -181,8 +180,9 @@ Initial release of this fork (based off of v2.3 of original)
  - Eastings and northings are rounded to 1m, and lat/long to 5dp (approx 1m) to avoid any misconceptions that precision is the same thing as accuracy.
  - When calculating surface distances, a more accurate mean radius is now used rather than that derived from historical definitions of a nautical mile
 
-[Unreleased]: https://github.com/dvdoug/PHPCoord/compare/v4.5.0...HEAD
+[Unreleased]: https://github.com/dvdoug/PHPCoord/compare/v4.6.0...HEAD
 
+[4.6.0]: https://github.com/dvdoug/PHPCoord/compare/v4.5.0...v4.6.0
 [4.5.0]: https://github.com/dvdoug/PHPCoord/compare/v4.4.0...v4.5.0
 [4.4.0]: https://github.com/dvdoug/PHPCoord/compare/v4.3.0...v4.4.0
 [4.3.0]: https://github.com/dvdoug/PHPCoord/compare/v4.2.0...v4.3.0

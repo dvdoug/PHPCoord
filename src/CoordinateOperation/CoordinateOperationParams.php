@@ -49885,6 +49885,22 @@ class CoordinateOperationParams
                 'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2DHDNETRS89SaarlandProvider',
             ],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9327' => [
+            'geocentricTranslationFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\IGNFGeocentricTranslationNTFRGF93Provider',
+            ],
+            'EPSGCodeForInterpolationCRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::4171',
+                'uom' => null,
+                'reverses' => false,
+            ],
+            'EPSGCodeForStandardCT' => [
+                'value' => 'urn:ogc:def:coordinateOperation:EPSG::1651',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::9334' => [
             'xAxisTranslation' => [
                 'value' => 0.0,

@@ -58,6 +58,7 @@ abstract class Point implements Stringable
         CoordinateOperationMethods::EPSG_NADCON5_3D => CoordinateOperationMethods::EPSG_NADCON5_3D,
         CoordinateOperationMethods::EPSG_NTV2 => CoordinateOperationMethods::EPSG_NTV2,
         CoordinateOperationMethods::EPSG_ZERO_TIDE_HEIGHT_TO_MEAN_TIDE_HEIGHT_EVRF2019 => CoordinateOperationMethods::EPSG_ZERO_TIDE_HEIGHT_TO_MEAN_TIDE_HEIGHT_EVRF2019,
+        CoordinateOperationMethods::EPSG_GEOCENTRIC_TRANSLATION_BY_GRID_INTERPOLATION_IGN => CoordinateOperationMethods::EPSG_GEOCENTRIC_TRANSLATION_BY_GRID_INTERPOLATION_IGN,
     ];
 
     /**

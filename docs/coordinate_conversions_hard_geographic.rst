@@ -189,6 +189,20 @@ Geocentric translation
         Length $zAxisTranslation
     ); // returns a new GeographicPoint
 
+Geocentric translation by grid interpolation (IGNF)
+---------------------------------------------------
+
+.. code-block:: php
+
+    $point = GeographicPoint::create(...);
+    $newPoint = $point->geocentricTranslationByGridInterpolationIGNF(
+        Geographic $to,
+        IGNFGeocentricTranslationGrid $geocentricTranslationFile,
+        string $EPSGCodeForInterpolationCRS,
+        string $EPSGCodeForStandardCT,
+        bool $inReverse
+    ); // returns a new GeographicPoint
+
 Geographic <=> geocentric conversion
 ------------------------------------
 

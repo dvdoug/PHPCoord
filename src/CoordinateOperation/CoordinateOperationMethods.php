@@ -162,6 +162,11 @@ class CoordinateOperationMethods
     public const EPSG_GENERAL_POLYNOMIAL_OF_DEGREE_6 = 'urn:ogc:def:method:EPSG::9648';
 
     /**
+     * Geocentric translation by Grid Interpolation (IGN).
+     */
+    public const EPSG_GEOCENTRIC_TRANSLATION_BY_GRID_INTERPOLATION_IGN = 'urn:ogc:def:method:EPSG::1087';
+
+    /**
      * Geocentric translations (geocentric domain)
      * This method allows calculation of geocentric coords in the target system by adding the parameter values to the
      * corresponding coordinates of the point in the source system. See methods 1035 and 9603 for similar tfms
@@ -788,6 +793,7 @@ class CoordinateOperationMethods
         self::EPSG_NADCON5_3D => 'NADCON5',
         self::EPSG_NTV2 => 'NTv2',
         self::EPSG_ZERO_TIDE_HEIGHT_TO_MEAN_TIDE_HEIGHT_EVRF2019 => 'zeroTideHeightToMeanTideHeightEVRF2019',
+        self::EPSG_GEOCENTRIC_TRANSLATION_BY_GRID_INTERPOLATION_IGN => 'geocentricTranslationByGridInterpolationIGNF',
     ];
 
     public static function getFunctionName(string $srid): string
