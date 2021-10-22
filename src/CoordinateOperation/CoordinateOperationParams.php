@@ -51921,18 +51921,6 @@ class CoordinateOperationParams
                 'reverses' => false,
             ],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::8444' => [
-            'latitudeAndLongitudeDifferenceFile' => [
-                'reverses' => true,
-                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2GDA94GDA2020ChristmasIslandProvider',
-            ],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8445' => [
-            'latitudeAndLongitudeDifferenceFile' => [
-                'reverses' => true,
-                'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2GDA94GDA2020CocosIslandsProvider',
-            ],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::8447' => [
             'latitudeAndLongitudeDifferenceFile' => [
                 'reverses' => true,

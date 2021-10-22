@@ -9370,16 +9370,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9813',
             'extent_code' => ['1149'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::8444' => [
-            'name' => 'GDA94 to GDA2020 (4)',
-            'method' => 'urn:ogc:def:method:EPSG::9615',
-            'extent_code' => ['4169'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8445' => [
-            'name' => 'GDA94 to GDA2020 (5)',
-            'method' => 'urn:ogc:def:method:EPSG::9615',
-            'extent_code' => ['1069'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::8447' => [
             'name' => 'GDA94 to GDA2020 (2)',
             'method' => 'urn:ogc:def:method:EPSG::9615',

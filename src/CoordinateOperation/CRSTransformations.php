@@ -20960,22 +20960,6 @@ class CRSTransformations
             'reversible' => true,
         ],
         [
-            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8444',
-            'name' => 'GDA94 to GDA2020 (4)',
-            'source_crs' => 'urn:ogc:def:crs:EPSG::4283',
-            'target_crs' => 'urn:ogc:def:crs:EPSG::7844',
-            'accuracy' => 0.05,
-            'reversible' => true,
-        ],
-        [
-            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8445',
-            'name' => 'GDA94 to GDA2020 (5)',
-            'source_crs' => 'urn:ogc:def:crs:EPSG::4283',
-            'target_crs' => 'urn:ogc:def:crs:EPSG::7844',
-            'accuracy' => 0.05,
-            'reversible' => true,
-        ],
-        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8447',
             'name' => 'GDA94 to GDA2020 (2)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4283',

@@ -217,6 +217,8 @@ class EPSGCodegenFromDataImport
         7872, // NZ wellington-1953-to-nzvd2016-conversion.csv
 
         // Just the result of doing Helmert transform
+        8444, // NTv2 GDA94_GDA2020_conformal_christmas_island.gsb
+        8445, // NTv2 GDA94_GDA2020_conformal_cocos_island.gsb
         8446, // NTv2 GDA94_GDA2020_conformal.gsb
 
         // It's just for 1 German state and is almost 400Mb!!

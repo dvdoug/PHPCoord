@@ -118,8 +118,6 @@ return [
     'TOR27CSv1.GSB' => CoordinateOperation\NTv2NAD27NAD83CSRS1997OTorontoProvider::class,
     'A66 National (13.09.01).gsb' => CoordinateOperation\NTv2AGD66GDA94AustraliaProvider::class,
     'GDA94_GDA2020_conformal_and_distortion.gsb' => CoordinateOperation\NTv2GDA94GDA2020AustraliaProvider::class,
-    'GDA94_GDA2020_conformal_christmas_island.gsb' => CoordinateOperation\NTv2GDA94GDA2020ChristmasIslandProvider::class,
-    'GDA94_GDA2020_conformal_cocos_island.gsb' => CoordinateOperation\NTv2GDA94GDA2020CocosIslandsProvider::class,
     'National 84 (02.07.01).gsb' => CoordinateOperation\NTv2AGD84GDA94AustraliaProvider::class,
     'nzgd2kgrid0005.gsb' => CoordinateOperation\NTv2NZGD1949NZGD2000NewZealandProvider::class,
     'BETA2007.gsb' => CoordinateOperation\NTv2DHDNETRS89GermanyProvider::class,
