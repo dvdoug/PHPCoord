@@ -1320,11 +1320,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['1346'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::1564' => [
-            'name' => 'NZGD49 to WGS 84 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent_code' => ['3285'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::1565' => [
             'name' => 'NZGD2000 to WGS 84 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
@@ -1549,11 +1544,6 @@ class CoordinateOperations
             'name' => 'Monte Mario to ETRS89 (3)',
             'method' => 'urn:ogc:def:method:EPSG::9606',
             'extent_code' => ['2340'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1670' => [
-            'name' => 'NZGD49 to WGS 84 (3)',
-            'method' => 'urn:ogc:def:method:EPSG::9615',
-            'extent_code' => ['3285'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::1682' => [
             'name' => 'South Yemen to WGS 84 (1)',
@@ -13659,11 +13649,6 @@ class CoordinateOperations
             'name' => 'RSRGD2000 to WGS 84 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['3558'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::15975' => [
-            'name' => 'NZGD49 to WGS 84 (4)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3285'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::15977' => [
             'name' => 'Slovenia 1996 to ETRS89 (1)',

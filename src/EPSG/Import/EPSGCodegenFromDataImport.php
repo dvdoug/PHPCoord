@@ -1183,6 +1183,7 @@ class EPSGCodegenFromDataImport
         $etrs89CopiesFromWGS84 = $this->determineOperationsToETRS89CopiedFromWGS84();
         $wgs84CopiesFromGDA94 = $this->determineOperationsToWGS84CopiedFromGDA94();
         $wgs84CopiesFromSIRGAS = $this->determineOperationsToWGS84CopiedFromSIRGAS();
+        $wgs84CopiesFromNZGD = $this->determineOperationsToWGS84CopiedFromNZGD2000();
 
         $blackListedOperations = array_merge(
             self::BLACKLISTED_OPERATIONS,
@@ -1190,6 +1191,7 @@ class EPSGCodegenFromDataImport
             $etrs89CopiesFromWGS84,
             $wgs84CopiesFromGDA94,
             $wgs84CopiesFromSIRGAS,
+            $wgs84CopiesFromNZGD,
         );
 
         $sql = "
@@ -1583,6 +1585,25 @@ class EPSGCodegenFromDataImport
             SELECT DISTINCT wgs84.coord_op_code
             FROM epsg_coordoperation wgs84
             JOIN epsg_coordoperation sirgas ON sirgas.source_crs_code = wgs84.source_crs_code AND sirgas.target_crs_code IN (4674, 4988, 4989, 4686, 4996, 4997)
+            JOIN epsg_usage u ON wgs84.coord_op_code = u.object_code AND u.object_table_name = 'epsg_coordoperation' AND u.scope_code = 1252
+            WHERE wgs84.target_crs_code IN (4978,4326,4979)
+            ";
+
+        $result = $this->sqlite->query($sql);
+        $data = [];
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            $data[] = $row['coord_op_code'];
+        }
+
+        return $data;
+    }
+
+    private function determineOperationsToWGS84CopiedFromNZGD2000(): array
+    {
+        $sql = "
+            SELECT DISTINCT wgs84.coord_op_code
+            FROM epsg_coordoperation wgs84
+            JOIN epsg_coordoperation nzgd ON nzgd.source_crs_code = wgs84.source_crs_code AND nzgd.target_crs_code IN (4167, 4958, 4959)
             JOIN epsg_usage u ON wgs84.coord_op_code = u.object_code AND u.object_table_name = 'epsg_coordoperation' AND u.scope_code = 1252
             WHERE wgs84.target_crs_code IN (4978,4326,4979)
             ";
