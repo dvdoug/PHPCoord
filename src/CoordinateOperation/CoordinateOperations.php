@@ -1550,31 +1550,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9606',
             'extent_code' => ['2340'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::1665' => [
-            'name' => 'AGD66 to WGS 84 (12)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent_code' => ['2283'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1666' => [
-            'name' => 'AGD66 to WGS 84 (13)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent_code' => ['2286'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1667' => [
-            'name' => 'AGD66 to WGS 84 (14)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent_code' => ['1282'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1668' => [
-            'name' => 'AGD66 to WGS 84 (15)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent_code' => ['2284'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1669' => [
-            'name' => 'AGD84 to WGS 84 (7)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent_code' => ['2576'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::1670' => [
             'name' => 'NZGD49 to WGS 84 (3)',
             'method' => 'urn:ogc:def:method:EPSG::9615',
@@ -5937,21 +5912,6 @@ class CoordinateOperations
         ],
         'urn:ogc:def:coordinateOperation:EPSG::6942' => [
             'name' => 'AGD66 to PNG94 (7)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['4216'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::6943' => [
-            'name' => 'AGD66 to WGS 84 (21)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['4214'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::6944' => [
-            'name' => 'AGD66 to WGS 84 (22)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['4013'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::6945' => [
-            'name' => 'AGD66 to WGS 84 (23)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['4216'],
         ],
@@ -13185,30 +13145,10 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['3209'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::15785' => [
-            'name' => 'AGD84 to WGS 84 (9)',
-            'method' => 'urn:ogc:def:method:EPSG::9615',
-            'extent_code' => ['2576'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::15786' => [
-            'name' => 'AGD66 to WGS 84 (17)',
-            'method' => 'urn:ogc:def:method:EPSG::9615',
-            'extent_code' => ['2575'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::15787' => [
             'name' => 'IGCB 1955 to WGS 84 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['3171'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::15788' => [
-            'name' => 'AGD66 to WGS 84 (16)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2575'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::15789' => [
-            'name' => 'AGD84 to WGS 84 (8)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2576'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::15790' => [
             'name' => 'Mhast (offshore) to WGS 72BE (1)',
@@ -13862,11 +13802,6 @@ class CoordinateOperations
         ],
         'urn:ogc:def:coordinateOperation:EPSG::15979' => [
             'name' => 'AGD66 to GDA94 (12)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent_code' => ['3559'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::15980' => [
-            'name' => 'AGD66 to WGS 84 (18)',
             'method' => 'urn:ogc:def:method:EPSG::9607',
             'extent_code' => ['3559'],
         ],
