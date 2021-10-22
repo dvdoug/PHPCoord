@@ -30,13 +30,11 @@ use PHPCoord\CoordinateOperation\AutoConversion;
 use PHPCoord\CoordinateOperation\ComplexNumber;
 use PHPCoord\CoordinateOperation\ConvertiblePoint;
 use PHPCoord\CoordinateOperation\GeocentricValue;
+use PHPCoord\CoordinateOperation\GeographicGeoidHeightGrid;
+use PHPCoord\CoordinateOperation\GeographicGrid;
 use PHPCoord\CoordinateOperation\GeographicValue;
-use PHPCoord\CoordinateOperation\GTXGrid;
-use PHPCoord\CoordinateOperation\IGNESHeightGrid;
-use PHPCoord\CoordinateOperation\IGNFGeocentricTranslationGrid;
-use PHPCoord\CoordinateOperation\IGNFHeightGrid;
 use PHPCoord\CoordinateOperation\NADCON5Grid;
-use PHPCoord\CoordinateOperation\NTv2Grid;
+use PHPCoord\CoordinateOperation\NADCON5Grids;
 use PHPCoord\CoordinateOperation\OSTNOSGM15Grid;
 use PHPCoord\CoordinateReferenceSystem\Compound;
 use PHPCoord\CoordinateReferenceSystem\Geocentric;
@@ -2117,8 +2115,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
      */
     public function geographic3DTo2DPlusGravityHeightOSGM15(
         Compound $to,
-        OSTNOSGM15Grid $geoidHeightCorrectionModelFile,
-        string $EPSGCodeForInterpolationCRS
+        OSTNOSGM15Grid $geoidHeightCorrectionModelFile
     ): CompoundPoint {
         $osgb36NationalGrid = Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID);
         $etrs89NationalGrid = new Projected(
@@ -2139,7 +2136,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         );
 
         $verticalPoint = VerticalPoint::create(
-            $this->height->subtract($geoidHeightCorrectionModelFile->getVerticalAdjustment($projected)),
+            $this->height->subtract($geoidHeightCorrectionModelFile->getHeightAdjustment($projected)),
             $to->getVertical(),
             $this->getCoordinateEpoch()
         );
@@ -2172,19 +2169,18 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $projected = $this->transverseMercator($etrs89NationalGrid, new Degree(49), new Degree(-2), new Unity(0.9996012717), new Metre(400000), new Metre(-100000));
 
         return VerticalPoint::create(
-            $this->height->subtract($geoidHeightCorrectionModelFile->getVerticalAdjustment($projected)),
+            $this->height->subtract($geoidHeightCorrectionModelFile->getHeightAdjustment($projected)),
             $to,
             $this->getCoordinateEpoch()
         );
     }
 
     /**
-     * Geog3D to Geog2D+GravityRelatedHeight (gtx).
+     * Geog3D to Geog2D+GravityRelatedHeight.
      */
-    public function geographic3DTo2DPlusGravityHeightGTX(
+    public function geographic3DTo2DPlusGravityHeightFromGrid(
         Compound $to,
-        GTXGrid $geoidHeightCorrectionModelFile,
-        string $EPSGCodeForInterpolationCRS
+        GeographicGeoidHeightGrid $geoidHeightCorrectionModelFile
     ): CompoundPoint {
         $horizontalPoint = self::create(
             $this->latitude,
@@ -2195,7 +2191,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         );
 
         $verticalPoint = VerticalPoint::create(
-            $this->height->subtract($geoidHeightCorrectionModelFile->getAdjustment($this)),
+            $this->height->subtract($geoidHeightCorrectionModelFile->getHeightAdjustment($this)),
             $to->getVertical(),
             $this->getCoordinateEpoch()
         );
@@ -2209,102 +2205,14 @@ class GeographicPoint extends Point implements ConvertiblePoint
     }
 
     /**
-     * Geographic3D to GravityRelatedHeight (gtx).
+     * Geographic3D to GravityRelatedHeight.
      */
-    public function geographic3DToGravityHeightGTX(
+    public function geographic3DToGravityHeightFromGrid(
         Vertical $to,
-        GTXGrid $geoidHeightCorrectionModelFile
+        GeographicGeoidHeightGrid $geoidHeightCorrectionModelFile
     ): VerticalPoint {
         return VerticalPoint::create(
-            $this->height->subtract($geoidHeightCorrectionModelFile->getAdjustment($this)),
-            $to,
-            $this->getCoordinateEpoch()
-        );
-    }
-
-    /**
-     * Geog3D to Geog2D+GravityRelatedHeight (IGNES).
-     */
-    public function geographic3DTo2DPlusGravityHeightIGNES(
-        Compound $to,
-        IGNESHeightGrid $geoidHeightCorrectionModelFile,
-        string $EPSGCodeForInterpolationCRS
-    ): CompoundPoint {
-        $horizontalPoint = self::create(
-            $this->latitude,
-            $this->longitude,
-            null,
-            $to->getHorizontal(),
-            $this->getCoordinateEpoch()
-        );
-
-        $verticalPoint = VerticalPoint::create(
-            $this->height->subtract($geoidHeightCorrectionModelFile->getAdjustment($this)),
-            $to->getVertical(),
-            $this->getCoordinateEpoch()
-        );
-
-        return CompoundPoint::create(
-            $horizontalPoint,
-            $verticalPoint,
-            $to,
-            $this->getCoordinateEpoch()
-        );
-    }
-
-    /**
-     * Geog3D to Geog2D+GravityRelatedHeight (IGNF).
-     */
-    public function geographic3DTo2DPlusGravityHeightIGNF(
-        Compound $to,
-        IGNFHeightGrid $geoidHeightCorrectionModelFile,
-        string $EPSGCodeForInterpolationCRS
-    ): CompoundPoint {
-        $horizontalPoint = self::create(
-            $this->latitude,
-            $this->longitude,
-            null,
-            $to->getHorizontal(),
-            $this->getCoordinateEpoch()
-        );
-
-        $verticalPoint = VerticalPoint::create(
-            $this->height->subtract($geoidHeightCorrectionModelFile->getAdjustment($this)),
-            $to->getVertical(),
-            $this->getCoordinateEpoch()
-        );
-
-        return CompoundPoint::create(
-            $horizontalPoint,
-            $verticalPoint,
-            $to,
-            $this->getCoordinateEpoch()
-        );
-    }
-
-    /**
-     * Geographic3D to GravityRelatedHeight (IGNES).
-     */
-    public function geographic3DToGravityHeightIGNES(
-        Vertical $to,
-        IGNESHeightGrid $geoidHeightCorrectionModelFile
-    ): VerticalPoint {
-        return VerticalPoint::create(
-            $this->height->subtract($geoidHeightCorrectionModelFile->getAdjustment($this)),
-            $to,
-            $this->getCoordinateEpoch()
-        );
-    }
-
-    /**
-     * Geographic3D to GravityRelatedHeight (IGNF).
-     */
-    public function geographic3DToGravityHeightIGNF(
-        Vertical $to,
-        IGNFHeightGrid $geoidHeightCorrectionModelFile
-    ): VerticalPoint {
-        return VerticalPoint::create(
-            $this->height->subtract($geoidHeightCorrectionModelFile->getAdjustment($this)),
+            $this->height->subtract($geoidHeightCorrectionModelFile->getHeightAdjustment($this)),
             $to,
             $this->getCoordinateEpoch()
         );
@@ -2312,74 +2220,33 @@ class GeographicPoint extends Point implements ConvertiblePoint
 
     /**
      * NADCON5.
-     * Geodetic transformation operating on geographic coordinate differences by bi-quadratic interpolation.  Input
-     * expects longitudes to be positive east in range 0-360° (0° = Greenwich).
+     * @internal just a wrapper
      */
-    public function NADCON5(
+    public function offsetsFromGridNADCON5(
         Geographic $to,
         NADCON5Grid $latitudeDifferenceFile,
         NADCON5Grid $longitudeDifferenceFile,
         ?NADCON5Grid $ellipsoidalHeightDifferenceFile,
         bool $inReverse
     ): self {
-        /*
-         * Ideally most of this logic (especially reverse case) would be in the NADCON5Grid class like the other grids,
-         * but NADCON5 uses different files for latitude/longitude/height that need to be combined at runtime so that
-         * isn't possible.
-         */
-        if (!$inReverse) {
-            $latitudeAdjustment = new ArcSecond($latitudeDifferenceFile->getForwardAdjustment($this));
-            $longitudeAdjustment = new ArcSecond($longitudeDifferenceFile->getForwardAdjustment($this));
-            $heightAdjustment = $this->getHeight() && $ellipsoidalHeightDifferenceFile ? new Metre($ellipsoidalHeightDifferenceFile->getForwardAdjustment($this)) : null;
+        $aggregation = new NADCON5Grids($longitudeDifferenceFile, $latitudeDifferenceFile, $ellipsoidalHeightDifferenceFile);
 
-            return self::create($this->latitude->add($latitudeAdjustment), $this->longitude->add($longitudeAdjustment), $heightAdjustment ? $this->height->add($heightAdjustment) : null, $to, $this->getCoordinateEpoch());
-        }
-
-        $iteration = $this;
-
-        do {
-            $prevIteration = $iteration;
-            $latitudeAdjustment = new ArcSecond($latitudeDifferenceFile->getForwardAdjustment($iteration));
-            $longitudeAdjustment = new ArcSecond($longitudeDifferenceFile->getForwardAdjustment($iteration));
-            $heightAdjustment = $this->getHeight() && $ellipsoidalHeightDifferenceFile ? new Metre($ellipsoidalHeightDifferenceFile->getForwardAdjustment($iteration)) : null;
-            $iteration = self::create($this->latitude->subtract($latitudeAdjustment), $this->longitude->subtract($longitudeAdjustment), $heightAdjustment ? $this->height->subtract($heightAdjustment) : null, $to, $this->getCoordinateEpoch());
-        } while (abs($iteration->latitude->subtract($prevIteration->latitude)->getValue()) > self::ITERATION_CONVERGENCE_GRID && abs($iteration->longitude->subtract($prevIteration->longitude)->getValue()) > self::ITERATION_CONVERGENCE_GRID && ($this->height === null || abs($iteration->height->subtract($prevIteration->height)->getValue()) > self::ITERATION_CONVERGENCE_GRID));
-
-        return $iteration;
+        return $this->offsetsFromGrid($to, $aggregation, $inReverse);
     }
 
     /**
-     * NTv2
-     * Geodetic transformation operating on geographic coordinate differences by bi-linear interpolation.  Supersedes
-     * NTv1 (transformation method code 9614).  Input expects longitudes to be positive west.
+     * Geographic offsets from grid.
      */
-    public function NTv2(
+    public function offsetsFromGrid(
         Geographic $to,
-        NTv2Grid $latitudeAndLongitudeDifferenceFile,
+        GeographicGrid $offsetsFile,
         bool $inReverse
     ): self {
         if (!$inReverse) {
-            return $latitudeAndLongitudeDifferenceFile->applyForwardAdjustment($this, $to);
+            return $offsetsFile->applyForwardAdjustment($this, $to);
         }
 
-        return $latitudeAndLongitudeDifferenceFile->applyReverseAdjustment($this, $to);
-    }
-
-    /**
-     * Geocentric translation by Grid Interpolation (IGN France).
-     */
-    public function geocentricTranslationByGridInterpolationIGNF(
-        Geographic $to,
-        IGNFGeocentricTranslationGrid $geocentricTranslationFile,
-        string $EPSGCodeForInterpolationCRS,
-        string $EPSGCodeForStandardCT,
-        bool $inReverse
-    ): self {
-        if (!$inReverse) {
-            return $geocentricTranslationFile->applyForwardAdjustment($this, $to);
-        }
-
-        return $geocentricTranslationFile->applyReverseAdjustment($this, $to);
+        return $offsetsFile->applyReverseAdjustment($this, $to);
     }
 
     public function asGeographicValue(): GeographicValue

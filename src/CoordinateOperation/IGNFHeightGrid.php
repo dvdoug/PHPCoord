@@ -8,19 +8,19 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateOperation;
 
-use PHPCoord\GeographicPoint;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 
-class IGNFHeightGrid extends IGNFGrid
+class IGNFHeightGrid extends GeographicGeoidHeightGrid
 {
-    private const ITERATION_CONVERGENCE = 0.0001;
+    use IGNFGrid;
 
-    public function getAdjustment(GeographicPoint $point): Metre
+    /**
+     * @return Metre[]
+     */
+    public function getValues(float $x, float $y): array
     {
-        $latitude = $point->getLatitude()->getValue();
-        $longitude = $point->getLongitude()->getValue();
-        $offset = $this->interpolateBilinear($longitude, $latitude)[0];
+        $shift = $this->interpolate($x, $y)[0];
 
-        return new Metre($offset);
+        return [new Metre($shift)];
     }
 }

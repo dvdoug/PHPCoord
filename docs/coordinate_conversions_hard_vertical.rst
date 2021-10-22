@@ -11,24 +11,24 @@ Height <=> Depth reversal
         Vertical $to
     ); // returns a new VerticalPoint
 
-Vertical Offset
----------------
+Offset
+------
 
 .. code-block:: php
 
     $point = VerticalPoint::create(...);
-    $newPoint = $point->verticalOffset(
+    $newPoint = $point->offset(
         Vertical $to,
         Length $verticalOffset
     ); // returns a new VerticalPoint
 
-Vertical Offset and Slope
--------------------------
+Offset and Slope
+----------------
 
 .. code-block:: php
 
     $point = VerticalPoint::create(...);
-    $newPoint = $point->verticalOffsetAndSlope(
+    $newPoint = $point->offsetAndSlope(
         Vertical $to,
         Angle $ordinate1OfEvaluationPoint,
         Angle $ordinate2OfEvaluationPoint,
@@ -38,15 +38,15 @@ Vertical Offset and Slope
         GeographicPoint $horizontalPoint
     ); // returns a new VerticalPoint
 
-Vertical Offset by Grid Interpolation (GTX)
--------------------------------------------
+Offset From Grid File
+---------------------
 
 .. code-block:: php
 
     $point = VerticalPoint::create(...);
-    $newPoint = $point->verticalOffsetGTX(
+    $newPoint = $point->offsetFromGrid(
         Vertical $to,
-        GTXGrid $verticalOffsetFile,
+        GeographicGeoidHeightGrid $offsetsFile,
         bool $inReverse,
         GeographicPoint $horizontalPoint
     ); // returns a new VerticalPoint

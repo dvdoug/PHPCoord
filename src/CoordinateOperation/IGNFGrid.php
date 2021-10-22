@@ -24,35 +24,19 @@ use function str_replace;
 use function strlen;
 use function trim;
 
-abstract class IGNFGrid extends SplFileObject
+trait IGNFGrid
 {
     use BilinearInterpolation;
 
-    private const ITERATION_CONVERGENCE = 0.0001;
-
-    private const STORAGE_ORDER_INCREASING_LATITUDE_INCREASING_LONGITUDE = 1;
-
-    private const STORAGE_ORDER_INCREASING_LONGITUDE_DECREASING_LATIITUDE = 2;
-
-    private const STORAGE_ORDER_DECREASING_LATITUDE_INCREASING_LONGITUDE = 3;
-
-    private const STORAGE_ORDER_INCREASING_LONGITUDE_INCREASING_LATIITUDE = 4;
-
-    private bool $coordinatesIncludedInData;
-
     private int $valuesPerCoordinate;
-
-    private bool $precisionIncluded;
-
-    private int $storageOrder;
 
     private SplFixedArray $data;
 
     public function __construct($filename)
     {
-        parent::__construct($filename);
+        $this->gridFile = new SplFileObject($filename);
 
-        match ($this->getExtension()) {
+        match ($this->gridFile->getExtension()) {
             'txt' => $this->initTxt(),
             'mnt', 'tac' => $this->initMntOrTac(),
         };
@@ -77,10 +61,10 @@ abstract class IGNFGrid extends SplFileObject
     {
         $this->valuesPerCoordinate = 3;
 
-        $header0 = $this->fgets();
-        $header1 = $this->fgets();
-        $header2 = $this->fgets();
-        $header3 = $this->fgets();
+        $header0 = $this->gridFile->fgets();
+        $header1 = $this->gridFile->fgets();
+        $header2 = $this->gridFile->fgets();
+        $header3 = $this->gridFile->fgets();
 
         $interpolationMethod = trim(str_replace('GR3D2', '', $header2));
         assert($interpolationMethod === 'INTERPOLATION BILINEAIRE');
@@ -98,20 +82,20 @@ abstract class IGNFGrid extends SplFileObject
 
         $this->data = new SplFixedArray($this->numberOfColumns * $this->numberOfRows);
         for ($i = 0, $numValues = $this->numberOfColumns * $this->numberOfRows; $i < $numValues; ++$i) {
-            $rowData = explode(' ', trim(preg_replace('/ +/', ' ', $this->fgets())));
+            $rowData = explode(' ', trim(preg_replace('/ +/', ' ', $this->gridFile->fgets())));
             $wantedData = array_slice($rowData, 3, 3); // ignore weird first fixed value, coordinates, precision and map sheet
             $wantedData = array_map(static function (string $value) {return (float) ($value); }, $wantedData);
             $this->data[$i] = $wantedData;
         }
 
-        $this->fgets();
-        assert($this->eof());
+        $this->gridFile->fgets();
+        assert($this->gridFile->eof());
     }
 
     private function initMntOrTac(): void
     {
         $fixedHeaderRegexp = '^(-?[\d.]+) (-?[\d.]+) (-?[\d.]+) (-?[\d.]+) ([\d.]+) ([\d.]+) ([1-4]) ([01]) (\d) ([01]) ';
-        $header = $this->fgets();
+        $header = $this->gridFile->fgets();
 
         preg_match('/' . $fixedHeaderRegexp . '/', $header, $fixedHeaderParts);
 
@@ -124,9 +108,9 @@ abstract class IGNFGrid extends SplFileObject
         $this->numberOfColumns = (int) (string) (($this->endX - $this->startX) / $this->columnGridInterval) + 1;
         $this->numberOfRows = (int) (string) (($this->endY - $this->startY) / $this->rowGridInterval) + 1;
         $this->storageOrder = (int) $fixedHeaderParts[7];
-        $this->coordinatesIncludedInData = (bool) $fixedHeaderParts[8];
+        $coordinatesIncludedInData = (bool) $fixedHeaderParts[8];
         $this->valuesPerCoordinate = (int) $fixedHeaderParts[9];
-        $this->precisionIncluded = (bool) $fixedHeaderParts[10];
+        $precisionIncluded = (bool) $fixedHeaderParts[10];
 
         preg_match('/' . $fixedHeaderRegexp . str_repeat('(-?[\d.]+) ', $this->valuesPerCoordinate) . '(.*)$/', $header, $fullHeaderParts);
 
@@ -140,12 +124,12 @@ abstract class IGNFGrid extends SplFileObject
 
         $this->data = new SplFixedArray($this->numberOfColumns * $this->numberOfRows);
 
-        $rawData = $this->fread($this->getSize() - strlen($header));
+        $rawData = $this->gridFile->fread($this->gridFile->getSize() - strlen($header));
         $values = explode(' ', trim(preg_replace('/\s+/', ' ', $rawData)));
 
         $cursor = 0;
         for ($i = 0, $numValues = $this->numberOfColumns * $this->numberOfRows; $i < $numValues; ++$i) {
-            if ($this->coordinatesIncludedInData) {
+            if ($coordinatesIncludedInData) {
                 $cursor += 2;
             }
 
@@ -157,12 +141,12 @@ abstract class IGNFGrid extends SplFileObject
 
             $this->data[$i] = $rowData;
 
-            if ($this->precisionIncluded) {
+            if ($precisionIncluded) {
                 ++$cursor;
             }
         }
 
-        $this->fgets();
-        assert($this->eof());
+        $this->gridFile->fgets();
+        assert($this->gridFile->eof());
     }
 }

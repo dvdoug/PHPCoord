@@ -8,21 +8,16 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateOperation;
 
-use function abs;
 use function assert;
-use PHPCoord\CoordinateReferenceSystem\Geographic;
-use PHPCoord\GeographicPoint;
-use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPCoord\UnitOfMeasure\Angle\ArcSecond;
 use function round;
 use SplFileObject;
 use function unpack;
 use function usort;
 
-class NTv2Grid extends SplFileObject
+class NTv2Grid extends GeographicGrid
 {
     private const RECORD_SIZE = 16;
-    private const ITERATION_CONVERGENCE = 0.0001;
     private const FLAG_WITHIN_LIMITS = 1;
     private const FLAG_ON_UPPER_LATITUDE = 2;
     private const FLAG_ON_UPPER_LONGITUDE = 3;
@@ -36,58 +31,33 @@ class NTv2Grid extends SplFileObject
 
     public function __construct($filename)
     {
-        parent::__construct($filename);
+        $this->gridFile = new SplFileObject($filename);
+        $this->storageOrder = self::STORAGE_ORDER_INCREASING_LATITUDE_INCREASING_LONGITUDE;
 
         $this->readHeader();
-    }
-
-    public function applyForwardAdjustment(GeographicPoint $point, Geographic $to): GeographicPoint
-    {
-        $adjustment = $this->getAdjustment($point->getLatitude(), $point->getLongitude());
-
-        $latitude = $point->getLatitude()->add($adjustment[0]);
-        $longitude = $point->getLongitude()->add($adjustment[1]);
-
-        return GeographicPoint::create($latitude, $longitude, $point->getHeight(), $to, $point->getCoordinateEpoch());
-    }
-
-    public function applyReverseAdjustment(GeographicPoint $point, Geographic $to): GeographicPoint
-    {
-        $adjustment = [new ArcSecond(0), new ArcSecond(0)];
-        $latitude = $point->getLatitude();
-        $longitude = $point->getLongitude();
-
-        do {
-            $prevAdjustment = $adjustment;
-            $adjustment = $this->getAdjustment($latitude, $longitude);
-            $latitude = $point->getLatitude()->subtract($adjustment[0]);
-            $longitude = $point->getLongitude()->subtract($adjustment[1]);
-        } while (abs($adjustment[0]->subtract($prevAdjustment[0])->getValue()) > self::ITERATION_CONVERGENCE && abs($adjustment[1]->subtract($prevAdjustment[1])->getValue()) > self::ITERATION_CONVERGENCE);
-
-        return GeographicPoint::create($latitude, $longitude, $point->getHeight(), $to, $point->getCoordinateEpoch());
     }
 
     /**
      * @return ArcSecond[]
      */
-    private function getAdjustment(Angle $latitude, Angle $longitude): array
+    public function getValues(float $x, float $y): array
     {
         // NTv2 is longitude positive *west*
-        $longitude = $longitude->multiply(-1);
+        $x *= -1;
 
-        $latitudeAsSeconds = Angle::convert($latitude, Angle::EPSG_ARC_SECOND)->getValue();
-        $longitudeAsSeconds = Angle::convert($longitude, Angle::EPSG_ARC_SECOND)->getValue();
-        $gridToUse = $this->determineBestGrid($latitudeAsSeconds, $longitudeAsSeconds);
+        // NTv2 is in seconds, not degrees
+        $x *= 3600;
+        $y *= 3600;
 
-        $offsets = $gridToUse->interpolateBilinear($longitudeAsSeconds, $latitudeAsSeconds);
+        $gridToUse = $this->determineBestGrid($x, $y);
 
-        return [new ArcSecond($offsets[0]), new ArcSecond(-$offsets[1])]; // NTv2 is longitude positive *west*
+        return $gridToUse->getValues($x, $y);
     }
 
     private function readHeader(): void
     {
-        $this->fseek(0);
-        $rawData = $this->fread(11 * self::RECORD_SIZE);
+        $this->gridFile->fseek(0);
+        $rawData = $this->gridFile->fread(11 * self::RECORD_SIZE);
         if (unpack('VNUM_OREC', $rawData, 8)['NUM_OREC'] !== 11) {
             $this->integerFormatChar = 'N';
             $this->doubleFormatChar = 'E';
@@ -100,8 +70,8 @@ class NTv2Grid extends SplFileObject
 
         $subFileStart = 11 * self::RECORD_SIZE;
         for ($i = 0; $i < $data['NUM_FILE']; ++$i) {
-            $this->fseek($subFileStart);
-            $subFileRawData = $this->fread(11 * self::RECORD_SIZE);
+            $this->gridFile->fseek($subFileStart);
+            $subFileRawData = $this->gridFile->fread(11 * self::RECORD_SIZE);
             $subFileData = unpack("A8/A8SUB_NAME/A8/A8PARENT/A8/A8CREATED/A8/A8UPDATED/A8/{$this->doubleFormatChar}S_LAT/A8/{$this->doubleFormatChar}N_LAT/A8/{$this->doubleFormatChar}E_LONG/A8/{$this->doubleFormatChar}W_LONG/A8/{$this->doubleFormatChar}LAT_INC/A8/{$this->doubleFormatChar}LONG_INC/A8/{$this->integerFormatChar}GS_COUNT/x4", $subFileRawData);
             $subFileData['offsetStart'] = $subFileStart;
 
@@ -116,7 +86,7 @@ class NTv2Grid extends SplFileObject
         }
     }
 
-    private function determineBestGrid(float $latitude, float $longitude): NTv2SubGrid
+    private function determineBestGrid(float $longitude, float $latitude): NTv2SubGrid
     {
         $possibleGrids = [];
         foreach ($this->subFileMetaData as $subFileMetaDatum) {
@@ -138,7 +108,7 @@ class NTv2Grid extends SplFileObject
         $gridToUse = $possibleGrids[0][1];
 
         return new NTv2SubGrid(
-            $this->getPathname(),
+            $this->gridFile->getPathname(),
             $gridToUse['offsetStart'],
             $gridToUse['S_LAT'],
             $gridToUse['N_LAT'],

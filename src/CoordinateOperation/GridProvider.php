@@ -8,9 +8,10 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateOperation;
 
-use SplFileObject;
-
+/**
+ * @internal
+ */
 interface GridProvider
 {
-    public function provideGrid(): SplFileObject;
+    public function provideGrid(): Grid;
 }

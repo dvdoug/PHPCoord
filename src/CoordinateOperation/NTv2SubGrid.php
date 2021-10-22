@@ -8,10 +8,11 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateOperation;
 
+use PHPCoord\UnitOfMeasure\Angle\ArcSecond;
 use SplFileObject;
 use function unpack;
 
-class NTv2SubGrid extends SplFileObject
+class NTv2SubGrid extends Grid
 {
     use BilinearInterpolation;
 
@@ -31,7 +32,7 @@ class NTv2SubGrid extends SplFileObject
         float $longitudeInterval,
         string $floatFormatChar
     ) {
-        parent::__construct($filename);
+        $this->gridFile = new SplFileObject($filename);
         $this->offsetStart = $offsetStart;
         $this->startX = $minLongitude;
         $this->endX = $maxLongitude;
@@ -44,12 +45,22 @@ class NTv2SubGrid extends SplFileObject
         $this->numberOfRows = (int) (($this->endY - $this->startY) / $this->rowGridInterval);
     }
 
-    public function getRecord(int $longitudeIndex, int $latitudeIndex): GridValues
+    /**
+     * @return ArcSecond[]
+     */
+    public function getValues(float $x, float $y): array
+    {
+        $shifts = $this->interpolate($x, $y);
+
+        return [new ArcSecond($shifts[0]), new ArcSecond(-$shifts[1])]; // NTv2 is longitude positive *west*
+    }
+
+    protected function getRecord(int $longitudeIndex, int $latitudeIndex): GridValues
     {
         $recordIndex = $latitudeIndex * ($this->numberOfColumns + 1) + $longitudeIndex;
         $recordOffset = $this->offsetStart + ((11 + $recordIndex) * self::RECORD_SIZE);
-        $this->fseek($recordOffset);
-        $rawRecord = $this->fread(self::RECORD_SIZE);
+        $this->gridFile->fseek($recordOffset);
+        $rawRecord = $this->gridFile->fread(self::RECORD_SIZE);
         $shifts = unpack("{$this->floatFormatChar}LATITUDE_SHIFT/{$this->floatFormatChar}LONGITUDE_SHIFT/{$this->floatFormatChar}LATITUDE_ACCURACY/{$this->floatFormatChar}LONGITUDE_ACCURACY", $rawRecord);
 
         return new GridValues(

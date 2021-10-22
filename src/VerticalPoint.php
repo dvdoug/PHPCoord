@@ -13,7 +13,7 @@ use function cos;
 use DateTime;
 use DateTimeImmutable;
 use DateTimeInterface;
-use PHPCoord\CoordinateOperation\GTXGrid;
+use PHPCoord\CoordinateOperation\GeographicGeoidHeightGrid;
 use PHPCoord\CoordinateReferenceSystem\Vertical;
 use PHPCoord\Exception\InvalidCoordinateReferenceSystemException;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
@@ -101,7 +101,7 @@ class VerticalPoint extends Point
      * This transformation allows calculation of height (or depth) in the target system by adding the parameter value
      * to the height (or depth)-value of the point in the source system.
      */
-    public function verticalOffset(
+    public function offset(
         Vertical $to,
         Length $verticalOffset
     ): self {
@@ -113,7 +113,7 @@ class VerticalPoint extends Point
      * This transformation allows calculation of height in the target system by applying the parameter values to the
      * height value of the point in the source system.
      */
-    public function verticalOffsetAndSlope(
+    public function offsetAndSlope(
         Vertical $to,
         Angle $ordinate1OfEvaluationPoint,
         Angle $ordinate2OfEvaluationPoint,
@@ -181,21 +181,20 @@ class VerticalPoint extends Point
     }
 
     /**
-     * Vertical Offset by Grid Interpolation (gtx).
+     * Vertical Offset by Grid Interpolation.
      */
-    public function verticalOffsetGTX(
+    public function offsetFromGrid(
         Vertical $to,
-        GTXGrid $verticalOffsetFile,
-        string $EPSGCodeForInterpolationCRS,
+        GeographicGeoidHeightGrid $offsetsFile,
         bool $inReverse,
         GeographicPoint $horizontalPoint
     ): self {
-        $delta = $verticalOffsetFile->getAdjustment($horizontalPoint);
+        $offset = $offsetsFile->getHeightAdjustment($horizontalPoint);
 
         if ($inReverse) {
-            $delta = $delta->multiply(-1);
+            $offset = $offset->multiply(-1);
         }
 
-        return static::create($this->height->add($delta), $to);
+        return static::create($this->height->add($offset), $to);
     }
 }

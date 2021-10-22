@@ -68,7 +68,7 @@ class GeographicPoint3DTest extends TestCase
         }
         $from = GeographicPoint::create(new Degree(-36.9003), new Degree(174.7794), new Metre(50), Geographic3D::fromSRID(Geographic3D::EPSG_NZGD2000));
         $toCRS = Compound::fromSRID(Compound::EPSG_NZGD2000_PLUS_NZVD2016_HEIGHT);
-        $to = $from->geographic3DTo2DPlusGravityHeightGTX($toCRS, (new GTXNZGeoid2016Provider())->provideGrid(), '');
+        $to = $from->geographic3DTo2DPlusGravityHeightFromGrid($toCRS, (new GTXNZGeoid2016Provider())->provideGrid());
 
         self::assertEqualsWithDelta(-36.9003, $to->getHorizontalPoint()->getLatitude()->getValue(), 0.00000000001);
         self::assertEqualsWithDelta(174.7794, $to->getHorizontalPoint()->getLongitude()->getValue(), 0.00000000001);
@@ -82,7 +82,7 @@ class GeographicPoint3DTest extends TestCase
         }
         $from = GeographicPoint::create(new Degree(-36.9003), new Degree(174.7794), new Metre(50), Geographic3D::fromSRID(Geographic3D::EPSG_NZGD2000));
         $toCRS = Vertical::fromSRID(Vertical::EPSG_NZVD2016_HEIGHT);
-        $to = $from->geographic3DToGravityHeightGTX($toCRS, (new GTXNZGeoid2016Provider())->provideGrid());
+        $to = $from->geographic3DToGravityHeightFromGrid($toCRS, (new GTXNZGeoid2016Provider())->provideGrid());
 
         self::assertEqualsWithDelta(15.715, $to->getHeight()->getValue(), 0.0001);
     }
@@ -94,7 +94,7 @@ class GeographicPoint3DTest extends TestCase
         }
         $from = GeographicPoint::create(new Degree(-36.9003), new Degree(144.7794), new Metre(50), Geographic3D::fromSRID(Geographic3D::EPSG_GDA2020));
         $toCRS = Compound::fromSRID(Compound::EPSG_GDA2020_PLUS_AHD_HEIGHT);
-        $to = $from->geographic3DTo2DPlusGravityHeightGTX($toCRS, (new GTXGDA2020AHDProvider())->provideGrid(), '');
+        $to = $from->geographic3DTo2DPlusGravityHeightFromGrid($toCRS, (new GTXGDA2020AHDProvider())->provideGrid());
 
         self::assertEqualsWithDelta(-36.9003, $to->getHorizontalPoint()->getLatitude()->getValue(), 0.00000000001);
         self::assertEqualsWithDelta(144.7794, $to->getHorizontalPoint()->getLongitude()->getValue(), 0.00000000001);
@@ -108,7 +108,7 @@ class GeographicPoint3DTest extends TestCase
         }
         $from = GeographicPoint::create(new Degree(48.858222), new Degree(2.2945), new Metre(50), Geographic3D::fromSRID(Geographic3D::EPSG_RGF93_V2B));
         $toCRS = Compound::fromSRID(Compound::EPSG_RGF93_V2B_PLUS_NGF_IGN69_HEIGHT);
-        $to = $from->geographic3DTo2DPlusGravityHeightIGNF($toCRS, (new IGNFHeightRGF93v2bNGFIGN69FranceProvider())->provideGrid(), '');
+        $to = $from->geographic3DTo2DPlusGravityHeightFromGrid($toCRS, (new IGNFHeightRGF93v2bNGFIGN69FranceProvider())->provideGrid());
 
         self::assertEqualsWithDelta(48.858222, $to->getHorizontalPoint()->getLatitude()->getValue(), 0.00000000001);
         self::assertEqualsWithDelta(2.2945, $to->getHorizontalPoint()->getLongitude()->getValue(), 0.00000000001);
@@ -117,12 +117,12 @@ class GeographicPoint3DTest extends TestCase
 
     public function testGeographic3DGravityHeightIGNFFrance(): void
     {
-        if (!class_exists(GTXNZGeoid2016Provider::class)) {
+        if (!class_exists(IGNFHeightRGF93v2bNGFIGN69FranceProvider::class)) {
             self::markTestSkipped('Requires phpcoord/datapack-europe');
         }
         $from = GeographicPoint::create(new Degree(48.858222), new Degree(2.2945), new Metre(50), Geographic3D::fromSRID(Geographic3D::EPSG_RGF93_V2B));
         $toCRS = Vertical::fromSRID(Vertical::EPSG_NGF_IGN69_HEIGHT);
-        $to = $from->geographic3DToGravityHeightIGNF($toCRS, (new IGNFHeightRGF93v2bNGFIGN69FranceProvider())->provideGrid());
+        $to = $from->geographic3DToGravityHeightFromGrid($toCRS, (new IGNFHeightRGF93v2bNGFIGN69FranceProvider())->provideGrid());
 
         self::assertEqualsWithDelta(6.187, $to->getHeight()->getValue(), 0.001);
     }
@@ -134,7 +134,7 @@ class GeographicPoint3DTest extends TestCase
         }
         $from = GeographicPoint::create(new Degree(41.403611), new Degree(2.174444), new Metre(0), Geographic3D::fromSRID(Geographic3D::EPSG_ETRS89));
         $toCRS = Compound::fromSRID(Compound::EPSG_ETRS89_PLUS_ALICANTE_HEIGHT);
-        $to = $from->geographic3DTo2DPlusGravityHeightIGNES($toCRS, (new IGNESHeightETRS89REDNAPSpainProvider())->provideGrid(), '');
+        $to = $from->geographic3DTo2DPlusGravityHeightFromGrid($toCRS, (new IGNESHeightETRS89REDNAPSpainProvider())->provideGrid());
 
         self::assertEqualsWithDelta(41.403611, $to->getHorizontalPoint()->getLatitude()->getValue(), 0.00000000001);
         self::assertEqualsWithDelta(2.174444, $to->getHorizontalPoint()->getLongitude()->getValue(), 0.00000000001);
@@ -148,7 +148,7 @@ class GeographicPoint3DTest extends TestCase
         }
         $from = GeographicPoint::create(new Degree(41.403611), new Degree(2.174444), new Metre(0), Geographic3D::fromSRID(Geographic3D::EPSG_ETRS89));
         $toCRS = Vertical::fromSRID(Vertical::EPSG_ALICANTE_HEIGHT);
-        $to = $from->geographic3DToGravityHeightIGNES($toCRS, (new IGNESHeightETRS89REDNAPSpainProvider())->provideGrid());
+        $to = $from->geographic3DToGravityHeightFromGrid($toCRS, (new IGNESHeightETRS89REDNAPSpainProvider())->provideGrid());
 
         self::assertEqualsWithDelta(-49.196, $to->getHeight()->getValue(), 0.001);
     }

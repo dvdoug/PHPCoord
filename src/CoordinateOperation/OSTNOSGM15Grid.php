@@ -16,7 +16,7 @@ use PHPCoord\ProjectedPoint;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 use SplFileObject;
 
-class OSTNOSGM15Grid extends SplFileObject
+class OSTNOSGM15Grid extends Grid
 {
     use BilinearInterpolation;
 
@@ -24,7 +24,7 @@ class OSTNOSGM15Grid extends SplFileObject
 
     public function __construct($filename)
     {
-        parent::__construct($filename);
+        $this->gridFile = new SplFileObject($filename);
 
         $this->startX = 0;
         $this->startY = 0;
@@ -36,10 +36,10 @@ class OSTNOSGM15Grid extends SplFileObject
 
     public function applyForwardHorizontalAdjustment(ProjectedPoint $point): ProjectedPoint
     {
-        $adjustment = $this->getAdjustment($point->getEasting()->asMetres(), $point->getNorthing()->asMetres());
+        $adjustment = $this->getValues($point->getEasting()->asMetres()->getValue(), $point->getNorthing()->asMetres()->getValue());
 
-        $easting = $point->getEasting()->add(new Metre($adjustment[0]));
-        $northing = $point->getNorthing()->add(new Metre($adjustment[1]));
+        $easting = $point->getEasting()->add($adjustment[0]);
+        $northing = $point->getNorthing()->add($adjustment[1]);
 
         return ProjectedPoint::createFromEastingNorthing($easting, $northing, Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID), $point->getCoordinateEpoch());
     }
@@ -54,40 +54,43 @@ class OSTNOSGM15Grid extends SplFileObject
             $osgb36NationalGrid->getBoundingArea()
         );
 
-        $adjustment = [0, 0];
+        $adjustment = [new Metre(0), new Metre(0)];
         $easting = $point->getEasting();
         $northing = $point->getNorthing();
 
         do {
             $prevAdjustment = $adjustment;
-            $adjustment = $this->getAdjustment($easting->asMetres(), $northing->asMetres());
-            $easting = $point->getEasting()->subtract(new Metre($adjustment[0]));
-            $northing = $point->getNorthing()->subtract(new Metre($adjustment[1]));
-        } while (abs($adjustment[0] - $prevAdjustment[0]) > self::ITERATION_CONVERGENCE && abs($adjustment[1] - $prevAdjustment[1]) > self::ITERATION_CONVERGENCE);
+            $adjustment = $this->getValues($easting->asMetres()->getValue(), $northing->asMetres()->getValue());
+            $easting = $point->getEasting()->subtract($adjustment[0]);
+            $northing = $point->getNorthing()->subtract($adjustment[1]);
+        } while (abs($adjustment[0]->subtract($prevAdjustment[0])->getValue()) > self::ITERATION_CONVERGENCE && abs($adjustment[1]->subtract($prevAdjustment[1])->getValue()) > self::ITERATION_CONVERGENCE);
 
         return ProjectedPoint::createFromEastingNorthing($easting, $northing, $etrs89NationalGrid, $point->getCoordinateEpoch());
     }
 
-    public function getVerticalAdjustment(ProjectedPoint $point): Metre
+    public function getHeightAdjustment(ProjectedPoint $point): Metre
     {
-        $adjustment = $this->getAdjustment($point->getEasting()->asMetres(), $point->getNorthing()->asMetres());
+        $adjustment = $this->getValues($point->getEasting()->asMetres()->getValue(), $point->getNorthing()->asMetres()->getValue());
 
-        return new Metre($adjustment[2]);
+        return $adjustment[2];
     }
 
-    private function getAdjustment(Metre $easting, Metre $northing): array
+    /**
+     * @return Metre[]
+     */
+    public function getValues(float $x, float $y): array
     {
-        $offsets = $this->interpolateBilinear($easting->getValue(), $northing->getValue());
+        $offsets = $this->interpolate($x, $y);
 
-        return $offsets;
+        return [new Metre($offsets[0]), new Metre($offsets[1]), new Metre($offsets[2])];
     }
 
     private function getRecord(int $eastIndex, int $northIndex): GridValues
     {
         $record = $northIndex * 701 + $eastIndex + 1;
 
-        $this->seek($record);
-        $rawData = $this->fgetcsv();
+        $this->gridFile->seek($record);
+        $rawData = $this->gridFile->fgetcsv();
 
         return new GridValues((float) $rawData[1], (float) $rawData[2], [(float) $rawData[3], (float) $rawData[4], (float) $rawData[5]]);
     }

@@ -189,20 +189,6 @@ Geocentric translation
         Length $zAxisTranslation
     ); // returns a new GeographicPoint
 
-Geocentric translation by grid interpolation (IGNF)
----------------------------------------------------
-
-.. code-block:: php
-
-    $point = GeographicPoint::create(...);
-    $newPoint = $point->geocentricTranslationByGridInterpolationIGNF(
-        Geographic $to,
-        IGNFGeocentricTranslationGrid $geocentricTranslationFile,
-        string $EPSGCodeForInterpolationCRS,
-        string $EPSGCodeForStandardCT,
-        bool $inReverse
-    ); // returns a new GeographicPoint
-
 Geographic <=> geocentric conversion
 ------------------------------------
 
@@ -238,15 +224,15 @@ Geographic2D with Height Offsets
         Length $geoidUndulation
     ); // returns a new CompoundPoint
 
-Geographic3D to Geographic2D+GravityRelatedHeight (GTX)
+Geographic3D to Geographic2D+GravityRelatedHeight From Grid
 -----------------------------------------------------------
 
 .. code-block:: php
 
     $point = GeographicPoint::create(...);
-    $newPoint = $point->geographic3DTo2DPlusGravityHeightGTX(
+    $newPoint = $point->geographic3DTo2DPlusGravityHeightFromGrid(
         Compound $to,
-        GTXGrid $geoidHeightCorrectionModelFile
+        GeographicGeoidHeightGrid $geoidHeightCorrectionModelFile
     ); // returns a new CompoundPoint
 
 Geographic3D to Geographic2D+GravityRelatedHeight (OSGM-GB)
@@ -257,19 +243,18 @@ Geographic3D to Geographic2D+GravityRelatedHeight (OSGM-GB)
     $point = GeographicPoint::create(...);
     $newPoint = $point->geographic3DTo2DPlusGravityHeightOSGM15(
         Compound $to,
-        OSTNOSGM15Grid $geoidHeightCorrectionModelFile,
-        string $EPSGCodeForInterpolationCRS
+        OSTNOSGM15Grid $geoidHeightCorrectionModelFile
     ); // returns a new CompoundPoint
 
-Geographic3D to GravityRelatedHeight (GTX)
+Geographic3D to GravityRelatedHeight From Grid
 ----------------------------------------------
 
 .. code-block:: php
 
     $point = GeographicPoint::create(...);
-    $newPoint = $point->geographic3DToGravityHeightGTX(
+    $newPoint = $point->geographic3DTo2DPlusGravityHeightFromGrid((
         Vertical $to,
-        GTXGrid $geoidHeightCorrectionModelFile
+        GeographicGeoidHeightGrid $geoidHeightCorrectionModelFile
     ); // returns a new VerticalPoint
 
 Geographic3D to GravityRelatedHeight (OSGM-GB)
@@ -687,20 +672,6 @@ Molodensky-Badekas Position Vector transformation
         Length $ordinate3OfEvaluationPoint
     ); // returns a new GeographicPoint
 
-NADCON5
--------
-
-.. code-block:: php
-
-    $point = GeographicPoint::create(...);
-    $newPoint = $point->NADCON5(
-        Geographic $to,
-        NADCON5Grid $latitudeDifferenceFile,
-        NADCON5Grid $longitudeDifferenceFile,
-        ?NADCON5Grid $ellipsoidalHeightDifferenceFile,
-        bool $inReverse
-    ); // returns a new GeographicPoint
-
 New Zealand Map Grid
 --------------------
 
@@ -714,18 +685,6 @@ New Zealand Map Grid
         Length $falseEasting,
         Length $falseNorthing
     ); // returns a new ProjectedPoint
-
-NTv2
-----
-
-.. code-block:: php
-
-    $point = GeographicPoint::create(...);
-    $newPoint = $point->NTv2(
-        Geographic $to,
-        NTv2Grid $latitudeAndLongitudeDifferenceFile,
-        bool $inReverse
-    ); // returns a new GeographicPoint
 
 Oblique Stereographic
 ---------------------
@@ -741,6 +700,18 @@ Oblique Stereographic
         Length $falseEasting,
         Length $falseNorthing
     ); // returns a new ProjectedPoint
+
+Offsets From Grid
+-----------------
+
+.. code-block:: php
+
+    $point = GeographicPoint::create(...);
+    $newPoint = $point->offsetsFromGrid(
+        Geographic $to,
+        GeographicGrid $offsetsFile,
+        bool $inReverse
+    ); // returns a new GeographicPoint
 
 OSTN15 (Ordnance Survey National Transformation)
 ------------------------------------------------

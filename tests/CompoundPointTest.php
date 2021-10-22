@@ -8,7 +8,6 @@ declare(strict_types=1);
 
 namespace PHPCoord;
 
-use PHPCoord\CoordinateOperation\IGNESHeightETRS89REDNAPSpainProvider;
 use function class_exists;
 use DateTime;
 use DateTimeImmutable;
@@ -16,6 +15,7 @@ use PHPCoord\CoordinateOperation\CoordinateOperationParams;
 use PHPCoord\CoordinateOperation\CoordinateOperations;
 use PHPCoord\CoordinateOperation\CRSTransformations;
 use PHPCoord\CoordinateOperation\GTXNZGeoid2016Provider;
+use PHPCoord\CoordinateOperation\IGNESHeightETRS89REDNAPSpainProvider;
 use PHPCoord\CoordinateOperation\IGNFHeightRGF93v2bNGFIGN69FranceProvider;
 use PHPCoord\CoordinateOperation\OSTN15OSGM15Provider;
 use PHPCoord\CoordinateReferenceSystem\Compound;
@@ -159,7 +159,7 @@ class CompoundPointTest extends TestCase
             Compound::fromSRID(Compound::EPSG_NZGD2000_PLUS_NZVD2016_HEIGHT)
         );
         $toCRS = Geographic3D::fromSRID(Geographic3D::EPSG_NZGD2000);
-        $to = $from->geographic3DTo2DPlusGravityHeightGTX($toCRS, (new GTXNZGeoid2016Provider())->provideGrid(), '');
+        $to = $from->geographic3DTo2DPlusGravityHeightFromGrid($toCRS, (new GTXNZGeoid2016Provider())->provideGrid());
 
         self::assertEqualsWithDelta(-36.9003, $to->getLatitude()->getValue(), 0.00000000001);
         self::assertEqualsWithDelta(174.7794, $to->getLongitude()->getValue(), 0.00000000001);
@@ -185,7 +185,7 @@ class CompoundPointTest extends TestCase
             Compound::fromSRID(Compound::EPSG_RGF93_V2B_PLUS_NGF_IGN69_HEIGHT)
         );
         $toCRS = Geographic3D::fromSRID(Geographic3D::EPSG_RGF93_V2B);
-        $to = $from->geographic3DTo2DPlusGravityHeightIGNF($toCRS, (new IGNFHeightRGF93v2bNGFIGN69FranceProvider())->provideGrid(), '');
+        $to = $from->geographic3DTo2DPlusGravityHeightFromGrid($toCRS, (new IGNFHeightRGF93v2bNGFIGN69FranceProvider())->provideGrid());
 
         self::assertEqualsWithDelta(48.858222, $to->getLatitude()->getValue(), 0.00000000001);
         self::assertEqualsWithDelta(2.2945, $to->getLongitude()->getValue(), 0.00000000001);
@@ -211,7 +211,7 @@ class CompoundPointTest extends TestCase
             Compound::fromSRID(Compound::EPSG_ETRS89_PLUS_ALICANTE_HEIGHT)
         );
         $toCRS = Geographic3D::fromSRID(Geographic3D::EPSG_ETRS89);
-        $to = $from->geographic3DTo2DPlusGravityHeightIGNES($toCRS, (new IGNESHeightETRS89REDNAPSpainProvider())->provideGrid(), '');
+        $to = $from->geographic3DTo2DPlusGravityHeightFromGrid($toCRS, (new IGNESHeightETRS89REDNAPSpainProvider())->provideGrid());
 
         self::assertEqualsWithDelta(41.403611, $to->getLatitude()->getValue(), 0.00000000001);
         self::assertEqualsWithDelta(2.174444, $to->getLongitude()->getValue(), 0.00000000001);

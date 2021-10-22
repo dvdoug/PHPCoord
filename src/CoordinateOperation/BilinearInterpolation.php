@@ -23,14 +23,14 @@ trait BilinearInterpolation
     protected float $columnGridInterval;
     protected float $rowGridInterval;
 
-    public function interpolateBilinear(
+    public function interpolate(
         float $x,
         float $y
     ): array {
-        $corners = $this->getCornersForBilinear($x, $y);
+        $corners = $this->getCorners($x, $y);
 
-        $dx = $corners['lowerRight']->getX() === $corners['lowerLeft']->getX() ? 0 : (($x - $corners['lowerLeft']->getX()) / ($corners['lowerRight']->getX() - $corners['lowerLeft']->getX()));
-        $dy = $corners['upperLeft']->getY() === $corners['lowerLeft']->getY() ? 0 : (($y - $corners['lowerLeft']->getY()) / ($corners['upperLeft']->getY() - $corners['lowerLeft']->getY()));
+        $dx = $corners['lowerRight']->getX() === $corners['lowerLeft']->getX() ? 0 : (($x - $corners['lowerLeft']->getX()) / $this->columnGridInterval);
+        $dy = $corners['upperLeft']->getY() === $corners['lowerLeft']->getY() ? 0 : (($y - $corners['lowerLeft']->getY()) / $this->rowGridInterval);
 
         $interpolations = [];
         for ($i = 0, $count = count($corners['lowerLeft']->getValues()); $i < $count; ++$i) {
@@ -59,7 +59,7 @@ trait BilinearInterpolation
     /**
      * @return GridValues[]
      */
-    private function getCornersForBilinear(float $x, float $y): array
+    private function getCorners(float $x, float $y): array
     {
         $xIndex = (int) (($x - $this->startX) / $this->columnGridInterval);
         $yIndex = (int) (($y - $this->startY) / $this->rowGridInterval);

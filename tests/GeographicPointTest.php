@@ -1051,7 +1051,7 @@ class GeographicPointTest extends TestCase
         }
         $from = GeographicPoint::create(new Degree(43.7737469611), new Degree(-99.3189543667), new Metre(100), Geographic3D::fromSRID(Geographic3D::EPSG_NAD83_FBN));
         $toCRS = Geographic3D::fromSRID(Geographic3D::EPSG_NAD83_NSRS2007);
-        $to = $from->NADCON5(
+        $to = $from->offsetsFromGridNADCON5(
             $toCRS,
             (new NADCON5NAD83FBNNAD832007CONUSLatitudeProvider())->provideGrid(),
             (new NADCON5NAD83FBNNAD832007CONUSLongitudeProvider())->provideGrid(),
@@ -1071,7 +1071,7 @@ class GeographicPointTest extends TestCase
         }
         $from = GeographicPoint::create(new Degree(43.7737471044), new Degree(-99.3189544237), new Metre(100.005), Geographic3D::fromSRID(Geographic3D::EPSG_NAD83_FBN));
         $toCRS = Geographic3D::fromSRID(Geographic3D::EPSG_NAD83_NSRS2007);
-        $to = $from->NADCON5(
+        $to = $from->offsetsFromGridNADCON5(
             $toCRS,
             (new NADCON5NAD83FBNNAD832007CONUSLatitudeProvider())->provideGrid(),
             (new NADCON5NAD83FBNNAD832007CONUSLongitudeProvider())->provideGrid(),
@@ -1091,7 +1091,7 @@ class GeographicPointTest extends TestCase
         }
         $from = GeographicPoint::create(new Degree(43.7737469611), new Degree(-99.3189543667), null, Geographic2D::fromSRID(Geographic2D::EPSG_NAD83_FBN));
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_NAD83_NSRS2007);
-        $to = $from->NADCON5(
+        $to = $from->offsetsFromGridNADCON5(
             $toCRS,
             (new NADCON5NAD83FBNNAD832007CONUSLatitudeProvider())->provideGrid(),
             (new NADCON5NAD83FBNNAD832007CONUSLongitudeProvider())->provideGrid(),
@@ -1111,7 +1111,7 @@ class GeographicPointTest extends TestCase
         }
         $from = GeographicPoint::create(new Degree(43.7737471044), new Degree(-99.3189544237), null, Geographic2D::fromSRID(Geographic2D::EPSG_NAD83_FBN));
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_NAD83_NSRS2007);
-        $to = $from->NADCON5(
+        $to = $from->offsetsFromGridNADCON5(
             $toCRS,
             (new NADCON5NAD83FBNNAD832007CONUSLatitudeProvider())->provideGrid(),
             (new NADCON5NAD83FBNNAD832007CONUSLongitudeProvider())->provideGrid(),
@@ -1131,7 +1131,7 @@ class GeographicPointTest extends TestCase
         }
         $from = GeographicPoint::create(new Degree(40.689247), new Degree(-74.044502), null, Geographic2D::fromSRID(Geographic2D::EPSG_NAD27));
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_NAD83);
-        $to = $from->NADCON5(
+        $to = $from->offsetsFromGridNADCON5(
             $toCRS,
             (new NADCON5NAD27NAD831986CONUSLatitudeProvider())->provideGrid(),
             (new NADCON5NAD27NAD831986CONUSLongitudeProvider())->provideGrid(),
@@ -1151,7 +1151,7 @@ class GeographicPointTest extends TestCase
         }
         $from = GeographicPoint::create(new Degree(40.6893492339), new Degree(-74.0440875374), null, Geographic2D::fromSRID(Geographic2D::EPSG_NAD27));
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_NAD83);
-        $to = $from->NADCON5(
+        $to = $from->offsetsFromGridNADCON5(
             $toCRS,
             (new NADCON5NAD27NAD831986CONUSLatitudeProvider())->provideGrid(),
             (new NADCON5NAD27NAD831986CONUSLongitudeProvider())->provideGrid(),
@@ -1171,7 +1171,7 @@ class GeographicPointTest extends TestCase
         }
         $from = GeographicPoint::create(new Degree(50.8713458), new Degree(-114.2934808), null, Geographic2D::fromSRID(Geographic2D::EPSG_NAD27));
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_NAD83);
-        $to = $from->NTv2(
+        $to = $from->offsetsFromGrid(
             $toCRS,
             (new NTv2NAD27NAD83CanadaProvider())->provideGrid(),
             false
@@ -1189,7 +1189,7 @@ class GeographicPointTest extends TestCase
         }
         $from = GeographicPoint::create(new Degree(50.871401224), new Degree(-114.294481160), null, Geographic2D::fromSRID(Geographic2D::EPSG_NAD83));
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_NAD27);
-        $to = $from->NTv2(
+        $to = $from->offsetsFromGrid(
             $toCRS,
             (new NTv2NAD27NAD83CanadaProvider())->provideGrid(),
             true
@@ -1207,7 +1207,7 @@ class GeographicPointTest extends TestCase
         }
         $from = GeographicPoint::create(new Degree(-29.05000000), new Degree(120.84722222), null, Geographic2D::fromSRID(Geographic2D::EPSG_AGD66));
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_GDA94);
-        $to = $from->NTv2(
+        $to = $from->offsetsFromGrid(
             $toCRS,
             (new NTv2AGD66GDA94AustraliaProvider())->provideGrid(),
             false
@@ -1225,7 +1225,7 @@ class GeographicPointTest extends TestCase
         }
         $from = GeographicPoint::create(new Degree(-29.04869025), new Degree(120.84864381), null, Geographic2D::fromSRID(Geographic2D::EPSG_AGD66));
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_GDA94);
-        $to = $from->NTv2(
+        $to = $from->offsetsFromGrid(
             $toCRS,
             (new NTv2AGD66GDA94AustraliaProvider())->provideGrid(),
             true
@@ -1243,11 +1243,9 @@ class GeographicPointTest extends TestCase
         }
         $from = GeographicPoint::create(new Degree(48.84451225), new Degree(2.42567186), null, Geographic2D::fromSRID(Geographic2D::EPSG_NTF));
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_RGF93_V1);
-        $to = $from->geocentricTranslationByGridInterpolationIGNF(
+        $to = $from->offsetsFromGrid(
             $toCRS,
             (new IGNFGeocentricTranslationNTFRGF93Provider())->provideGrid(),
-            '',
-            '',
             false
         );
 
@@ -1263,11 +1261,9 @@ class GeographicPointTest extends TestCase
         }
         $from = GeographicPoint::create(new Degree(48.844445839), new Degree(2.424971108), null, Geographic2D::fromSRID(Geographic2D::EPSG_RGF93_V1));
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_NTF);
-        $to = $from->geocentricTranslationByGridInterpolationIGNF(
+        $to = $from->offsetsFromGrid(
             $toCRS,
             (new IGNFGeocentricTranslationNTFRGF93Provider())->provideGrid(),
-            '',
-            '',
             true
         );
 
@@ -1283,11 +1279,9 @@ class GeographicPointTest extends TestCase
         }
         $from = GeographicPoint::create(new Degree(-22.268889), new Degree(166.419444), null, Geographic2D::fromSRID(Geographic2D::EPSG_NEA74_NOUMEA));
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_RGNC91_93);
-        $to = $from->geocentricTranslationByGridInterpolationIGNF(
+        $to = $from->offsetsFromGrid(
             $toCRS,
             (new IGNFGeocentricTranslationNEA74NoumeaRGNC9193Provider())->provideGrid(),
-            '',
-            '',
             false
         );
 
@@ -1303,11 +1297,9 @@ class GeographicPointTest extends TestCase
         }
         $from = GeographicPoint::create(new Degree(-22.26612898), new Degree(166.42277652), null, Geographic2D::fromSRID(Geographic2D::EPSG_RGNC91_93));
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_NEA74_NOUMEA);
-        $to = $from->geocentricTranslationByGridInterpolationIGNF(
+        $to = $from->offsetsFromGrid(
             $toCRS,
             (new IGNFGeocentricTranslationNEA74NoumeaRGNC9193Provider())->provideGrid(),
-            '',
-            '',
             true
         );
 
@@ -1323,11 +1315,9 @@ class GeographicPointTest extends TestCase
         }
         $from = GeographicPoint::create(new Degree(-22.268889), new Degree(166.419444), null, Geographic2D::fromSRID(Geographic2D::EPSG_IGN72_GRANDE_TERRE));
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_RGNC91_93);
-        $to = $from->geocentricTranslationByGridInterpolationIGNF(
+        $to = $from->offsetsFromGrid(
             $toCRS,
             (new IGNFGeocentricTranslationIGN72GrandeTerreRGNC9193Provider())->provideGrid(),
-            '',
-            '',
             false
         );
 

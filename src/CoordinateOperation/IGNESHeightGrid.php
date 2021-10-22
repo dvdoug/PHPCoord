@@ -9,7 +9,6 @@ declare(strict_types=1);
 namespace PHPCoord\CoordinateOperation;
 
 use function explode;
-use PHPCoord\GeographicPoint;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 use function preg_match;
 use function preg_replace;
@@ -18,19 +17,11 @@ use SplFixedArray;
 use function strlen;
 use function trim;
 
-class IGNESHeightGrid extends SplFileObject
+class IGNESHeightGrid extends GeographicGeoidHeightGrid
 {
     use BilinearInterpolation;
 
     private const ITERATION_CONVERGENCE = 0.0001;
-
-    private const STORAGE_ORDER_INCREASING_LATITUDE_INCREASING_LONGITUDE = 1;
-
-    private const STORAGE_ORDER_INCREASING_LONGITUDE_DECREASING_LATIITUDE = 2;
-
-    private const STORAGE_ORDER_DECREASING_LATITUDE_INCREASING_LONGITUDE = 3;
-
-    private const STORAGE_ORDER_INCREASING_LONGITUDE_INCREASING_LATIITUDE = 4;
 
     private bool $coordinatesIncludedInData;
 
@@ -38,23 +29,22 @@ class IGNESHeightGrid extends SplFileObject
 
     private bool $precisionIncluded;
 
-    private int $storageOrder;
-
     private SplFixedArray $data;
 
     public function __construct($filename)
     {
-        parent::__construct($filename);
+        $this->gridFile = new SplFileObject($filename);
         $this->init();
     }
 
-    public function getAdjustment(GeographicPoint $point): Metre
+    /**
+     * @return Metre[]
+     */
+    public function getValues(float $x, float $y): array
     {
-        $latitude = $point->getLatitude()->getValue();
-        $longitude = $point->getLongitude()->getValue();
-        $offset = $this->interpolateBilinear($longitude, $latitude)[0];
+        $shift = $this->interpolate($x, $y)[0];
 
-        return new Metre($offset);
+        return [new Metre($shift)];
     }
 
     protected function getRecord(int $longitudeIndex, int $latitudeIndex): GridValues
@@ -72,7 +62,7 @@ class IGNESHeightGrid extends SplFileObject
     private function init(): void
     {
         $headerRegexp = '^\s+(-?[\d.]+)\s+(-?[\d.]+)\s+(-?[\d.]+)\s+(-?[\d.]+)\s+([\d.]+)\s+([\d.]+)';
-        $header = $this->fgets();
+        $header = $this->gridFile->fgets();
 
         preg_match('/' . $headerRegexp . '/', $header, $headerParts);
 
@@ -92,7 +82,7 @@ class IGNESHeightGrid extends SplFileObject
 
         $this->data = new SplFixedArray($this->numberOfColumns * $this->numberOfRows);
 
-        $rawData = $this->fread($this->getSize() - strlen($header));
+        $rawData = $this->gridFile->fread($this->gridFile->getSize() - strlen($header));
         $values = explode(' ', trim(preg_replace('/\s+/', ' ', $rawData)));
 
         $cursor = 0;

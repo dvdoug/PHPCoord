@@ -11,16 +11,15 @@ namespace PHPCoord\CoordinateOperation;
 use function abs;
 use PHPCoord\CoordinateReferenceSystem\Geographic;
 use PHPCoord\GeographicPoint;
-use PHPCoord\UnitOfMeasure\Angle\Degree;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 
-class IGNFGeocentricTranslationGrid extends IGNFGrid
+class IGNFGeocentricTranslationGrid extends GeographicGrid
 {
-    private const ITERATION_CONVERGENCE = 0.0001;
+    use IGNFGrid;
 
     public function applyForwardAdjustment(GeographicPoint $point, Geographic $to): GeographicPoint
     {
-        [$tx, $ty, $tz] = $this->getAdjustment($point->getLatitude()->asDegrees(), $point->getLongitude()->asDegrees());
+        [$tx, $ty, $tz] = $this->getValues($point->getLongitude()->asDegrees()->getValue(), $point->getLatitude()->asDegrees()->getValue());
 
         return $point->geocentricTranslation(
             $to,
@@ -38,7 +37,7 @@ class IGNFGeocentricTranslationGrid extends IGNFGrid
 
         do {
             $prevAdjustment = $adjustment;
-            $adjustment = $this->getAdjustment($latitude->asDegrees(), $longitude->asDegrees());
+            $adjustment = $this->getValues($longitude->asDegrees()->getValue(), $latitude->asDegrees()->getValue());
             $newPoint = $point->geocentricTranslation(
                 $to,
                 $adjustment[0]->multiply(-1),
@@ -56,9 +55,9 @@ class IGNFGeocentricTranslationGrid extends IGNFGrid
     /**
      * @return Metre[]
      */
-    private function getAdjustment(Degree $latitude, Degree $longitude): array
+    public function getValues(float $x, float $y): array
     {
-        $offsets = $this->interpolateBilinear($longitude->getValue(), $latitude->getValue());
+        $offsets = $this->interpolate($x, $y);
 
         return [new Metre($offsets[0]), new Metre($offsets[1]), new Metre($offsets[2])];
     }

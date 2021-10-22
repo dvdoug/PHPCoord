@@ -1519,7 +1519,7 @@ class EPSGCodegenFromDataImport
                         CASE WHEN pu.param_sign_reversal = 'Yes' THEN 1 ELSE 0 END AS reverses
                     FROM epsg_coordoperationparamvalue pv
                     JOIN epsg_coordoperationparamusage pu ON pv.coord_op_method_code = pu.coord_op_method_code AND pv.parameter_code = pu.parameter_code
-                    JOIN epsg_coordoperationparam p ON pv.parameter_code = p.parameter_code
+                    JOIN epsg_coordoperationparam p ON pv.parameter_code = p.parameter_code AND p.parameter_code NOT IN (1048, 1062)
                     WHERE operation_code = '{$operation}'
                     GROUP BY pv.coord_op_code, p.parameter_code
                     ORDER BY pu.sort_order
@@ -1528,7 +1528,7 @@ class EPSGCodegenFromDataImport
             $paramsResult = $this->sqlite->query($paramsSql);
             while ($paramsRow = $paramsResult->fetchArray(SQLITE3_ASSOC)) {
                 unset($paramsRow['operation_code']);
-                $paramsRow['name'] = self::camelCase($paramsRow['name']);
+                $paramsRow['name'] = self::makeParamName($paramsRow['name']);
                 $paramsRow['reverses'] = (bool) $paramsRow['reverses'];
                 if (in_array($paramsRow['parameter_code'], [8659, 8660, 1037, 1048, 8661, 8662], true)) {
                     $paramsRow['value'] = 'urn:ogc:def:crs:EPSG::' . $paramsRow['value'];
@@ -1545,9 +1545,7 @@ class EPSGCodegenFromDataImport
                             'latitudeDifferenceFile',
                             'longitudeDifferenceFile',
                             'ellipsoidalHeightDifferenceFile',
-                            'latitudeAndLongitudeDifferenceFile',
-                            'geocentricTranslationFile',
-                            'verticalOffsetFile',
+                            'offsetsFile',
                         ],
                         true
                     )
@@ -1718,11 +1716,15 @@ class EPSGCodegenFromDataImport
         echo 'done' . PHP_EOL;
     }
 
-    protected static function camelCase(string $string): string
+    protected static function makeParamName(string $string): string
     {
         $string = str_replace([' ', '-', '(', ')', '"'], '', ucwords($string, ' -()"'));
         if (!preg_match('/^(EPSG|[ABC][uv\d])/', $string)) {
             $string = lcfirst($string);
+        }
+
+        if (in_array($string, ['latitudeAndLongitudeDifferenceFile', 'geocentricTranslationFile', 'verticalOffsetFile'], true)) {
+            $string = 'offsetsFile';
         }
 
         return $string;
