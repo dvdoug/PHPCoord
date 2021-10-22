@@ -15,6 +15,7 @@ use PHPCoord\CoordinateOperation\CoordinateOperationParams;
 use PHPCoord\CoordinateOperation\CoordinateOperations;
 use PHPCoord\CoordinateOperation\CRSTransformations;
 use PHPCoord\CoordinateOperation\GTXNZGeoid2016Provider;
+use PHPCoord\CoordinateOperation\IGNFHeightRGF93v2bNGFIGN69FranceProvider;
 use PHPCoord\CoordinateOperation\OSTN15OSGM15Provider;
 use PHPCoord\CoordinateReferenceSystem\Compound;
 use PHPCoord\CoordinateReferenceSystem\CompoundSRIDData;
@@ -162,6 +163,32 @@ class CompoundPointTest extends TestCase
         self::assertEqualsWithDelta(-36.9003, $to->getLatitude()->getValue(), 0.00000000001);
         self::assertEqualsWithDelta(174.7794, $to->getLongitude()->getValue(), 0.00000000001);
         self::assertEqualsWithDelta(50.000, $to->getHeight()->getValue(), 0.0001);
+    }
+
+    public function testGeographic3DTo2DPlusGravityHeightIGNF(): void
+    {
+        if (!class_exists(IGNFHeightRGF93v2bNGFIGN69FranceProvider::class)) {
+            self::markTestSkipped('Requires phpcoord/datapack-europe');
+        }
+        $from = CompoundPoint::create(
+            GeographicPoint::create(
+                new Degree(48.858222),
+                new Degree(2.2945),
+                null,
+                Geographic2D::fromSRID(Geographic2D::EPSG_RGF93_V2B)
+            ),
+            VerticalPoint::create(
+                new Metre(6.187),
+                Vertical::fromSRID(Vertical::EPSG_NGF_IGN69_HEIGHT)
+            ),
+            Compound::fromSRID(Compound::EPSG_RGF93_V2B_PLUS_NGF_IGN69_HEIGHT)
+        );
+        $toCRS = Geographic3D::fromSRID(Geographic3D::EPSG_RGF93_V2B);
+        $to = $from->geographic3DTo2DPlusGravityHeightIGNF($toCRS, (new IGNFHeightRGF93v2bNGFIGN69FranceProvider())->provideGrid(), '');
+
+        self::assertEqualsWithDelta(48.858222, $to->getLatitude()->getValue(), 0.00000000001);
+        self::assertEqualsWithDelta(2.2945, $to->getLongitude()->getValue(), 0.00000000001);
+        self::assertEqualsWithDelta(50.000, $to->getHeight()->getValue(), 0.001);
     }
 
     /**

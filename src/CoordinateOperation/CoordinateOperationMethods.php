@@ -197,6 +197,11 @@ class CoordinateOperationMethods
     public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_AUSGEOIDV2 = 'urn:ogc:def:method:EPSG::1083';
 
     /**
+     * Geog3D to Geog2D+GravityRelatedHeight (IGN2009).
+     */
+    public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_IGN2009 = 'urn:ogc:def:method:EPSG::1095';
+
+    /**
      * Geog3D to Geog2D+GravityRelatedHeight (OSGM-GB).
      */
     public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_OSGM_GB = 'urn:ogc:def:method:EPSG::1097';
@@ -251,6 +256,14 @@ class CoordinateOperationMethods
      * for file format documentation.
      */
     public const EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_AUSGEOID_V2 = 'urn:ogc:def:method:EPSG::1048';
+
+    /**
+     * Geographic3D to GravityRelatedHeight (IGN2009)
+     * Transformation of the vertical component of a Geographic 3D CRS to a Vertical CRS. File header of method code
+     * 9664  (4 lines) has changed in this method (1 line);  recommended interpolation method now in a separate XML
+     * file with same name as the grid.
+     */
+    public const EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_IGN2009 = 'urn:ogc:def:method:EPSG::1073';
 
     /**
      * Geographic3D to GravityRelatedHeight (NZgeoid)
@@ -839,6 +852,8 @@ class CoordinateOperationMethods
         self::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_GTX => 'geographic3DTo2DPlusGravityHeightGTX',
         self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_GTX => 'geographic3DToGravityHeightGTX',
         self::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_GTX => 'verticalOffsetGTX',
+        self::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_IGN2009 => 'geographic3DTo2DPlusGravityHeightIGNF',
+        self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_IGN2009 => 'geographic3DToGravityHeightIGNF',
     ];
 
     public static function getFunctionName(string $srid): string

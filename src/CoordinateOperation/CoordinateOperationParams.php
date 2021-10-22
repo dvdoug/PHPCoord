@@ -42500,6 +42500,12 @@ class CoordinateOperationParams
                 'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2BD79ETRS89BelgiumProvider',
             ],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::8372' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => false,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\IGNFHeightRGF93v2NGFIGN78CorsicaProvider',
+            ],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::8373' => [
             'latitudeOfNaturalOrigin' => [
                 'value' => 36.15,
@@ -48480,6 +48486,42 @@ class CoordinateOperationParams
                 'reverses' => false,
             ],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9131' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => false,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\IGNFHeightRGAF09IGN2008LaDesiradeProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9132' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => false,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\IGNFHeightWGS84IGN2008LaDesiradeProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9133' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => false,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\IGNFHeightRGAF09Guadeloupe1988Provider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9134' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => false,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\IGNFHeightRGAF09IGN1988LesSaintesProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9135' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => false,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\IGNFHeightRGAF09IGN1988MarieGalanteProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9136' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => false,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\IGNFHeightRGAF09Martinique1987Provider',
+            ],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::9142' => [
             'xAxisTranslation' => [
                 'value' => 628.54052,
@@ -48825,6 +48867,18 @@ class CoordinateOperationParams
                 'value' => 5.4262,
                 'uom' => 'urn:ogc:def:uom:EPSG::9202',
                 'reverses' => true,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9187' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => false,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\IGNFHeightRGAF09IGN1988SaintBarthelemyProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9188' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => false,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\IGNFHeightRGAF09IGN1988SaintMartinProvider',
             ],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::9189' => [
@@ -49502,6 +49556,12 @@ class CoordinateOperationParams
                 'value' => 1997.0,
                 'uom' => 'urn:ogc:def:uom:EPSG::1029',
                 'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9228' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => false,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\IGNFHeightRGSPM06Danger1950Provider',
             ],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::9229' => [
@@ -50461,6 +50521,12 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9352' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => false,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\IGNFHeightRGNC9193NGNC08NewCaledoniaProvider',
+            ],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::9353' => [
             'latitudeOfStandardParallel' => [
                 'value' => -65.0,
@@ -51325,6 +51391,116 @@ class CoordinateOperationParams
             ],
             'EPSGCodeForInterpolationCRS' => [
                 'value' => 'urn:ogc:def:crs:EPSG::4167',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9631' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\IGNFHeightRGAF09Guadeloupe1988Provider',
+            ],
+            'EPSGCodeForInterpolationCRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::5489',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9632' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\IGNFHeightRGAF09IGN1988LesSaintesProvider',
+            ],
+            'EPSGCodeForInterpolationCRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::5489',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9633' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\IGNFHeightRGAF09IGN1988MarieGalanteProvider',
+            ],
+            'EPSGCodeForInterpolationCRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::5489',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9634' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\IGNFHeightRGAF09IGN1988SaintBarthelemyProvider',
+            ],
+            'EPSGCodeForInterpolationCRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::5489',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9635' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\IGNFHeightRGAF09IGN1988SaintMartinProvider',
+            ],
+            'EPSGCodeForInterpolationCRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::5489',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9636' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\IGNFHeightRGAF09IGN2008LaDesiradeProvider',
+            ],
+            'EPSGCodeForInterpolationCRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::5489',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9637' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\IGNFHeightRGAF09Martinique1987Provider',
+            ],
+            'EPSGCodeForInterpolationCRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::5489',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9640' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\IGNFHeightRGNC9193NGNC08NewCaledoniaProvider',
+            ],
+            'EPSGCodeForInterpolationCRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::4749',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9641' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\IGNFHeightRGSPM06Danger1950Provider',
+            ],
+            'EPSGCodeForInterpolationCRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::4463',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9642' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\IGNFHeightWGS84IGN2008LaDesiradeProvider',
+            ],
+            'EPSGCodeForInterpolationCRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::4558',
                 'uom' => null,
                 'reverses' => false,
             ],
@@ -53071,6 +53247,23 @@ class CoordinateOperationParams
             'falseNorthing' => [
                 'value' => 10000000.0,
                 'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9876' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => false,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\IGNFHeightRGF93v2bNGFIGN69FranceProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9877' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\IGNFHeightRGF93v2bNGFIGN69FranceProvider',
+            ],
+            'EPSGCodeForInterpolationCRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::9782',
+                'uom' => null,
                 'reverses' => false,
             ],
         ],

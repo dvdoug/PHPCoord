@@ -33,6 +33,7 @@ use PHPCoord\CoordinateOperation\GeocentricValue;
 use PHPCoord\CoordinateOperation\GeographicValue;
 use PHPCoord\CoordinateOperation\GTXGrid;
 use PHPCoord\CoordinateOperation\IGNFGeocentricTranslationGrid;
+use PHPCoord\CoordinateOperation\IGNFHeightGrid;
 use PHPCoord\CoordinateOperation\NADCON5Grid;
 use PHPCoord\CoordinateOperation\NTv2Grid;
 use PHPCoord\CoordinateOperation\OSTNOSGM15Grid;
@@ -2212,6 +2213,50 @@ class GeographicPoint extends Point implements ConvertiblePoint
     public function geographic3DToGravityHeightGTX(
         Vertical $to,
         GTXGrid $geoidHeightCorrectionModelFile
+    ): VerticalPoint {
+        return VerticalPoint::create(
+            $this->height->subtract($geoidHeightCorrectionModelFile->getAdjustment($this)),
+            $to,
+            $this->getCoordinateEpoch()
+        );
+    }
+
+    /**
+     * Geog3D to Geog2D+GravityRelatedHeight (IGNF).
+     */
+    public function geographic3DTo2DPlusGravityHeightIGNF(
+        Compound $to,
+        IGNFHeightGrid $geoidHeightCorrectionModelFile,
+        string $EPSGCodeForInterpolationCRS
+    ): CompoundPoint {
+        $horizontalPoint = self::create(
+            $this->latitude,
+            $this->longitude,
+            null,
+            $to->getHorizontal(),
+            $this->getCoordinateEpoch()
+        );
+
+        $verticalPoint = VerticalPoint::create(
+            $this->height->subtract($geoidHeightCorrectionModelFile->getAdjustment($this)),
+            $to->getVertical(),
+            $this->getCoordinateEpoch()
+        );
+
+        return CompoundPoint::create(
+            $horizontalPoint,
+            $verticalPoint,
+            $to,
+            $this->getCoordinateEpoch()
+        );
+    }
+
+    /**
+     * Geographic3D to GravityRelatedHeight (IGNF).
+     */
+    public function geographic3DToGravityHeightIGNF(
+        Vertical $to,
+        IGNFHeightGrid $geoidHeightCorrectionModelFile
     ): VerticalPoint {
         return VerticalPoint::create(
             $this->height->subtract($geoidHeightCorrectionModelFile->getAdjustment($this)),

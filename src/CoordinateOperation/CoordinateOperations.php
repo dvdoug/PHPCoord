@@ -7705,6 +7705,11 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9615',
             'extent_code' => ['1347'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::8372' => [
+            'name' => 'RGF93 v2 to NGF-IGN78 height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1073',
+            'extent_code' => ['1327'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::8373' => [
             'name' => 'NCRS Las Vegas zone (m)',
             'method' => 'urn:ogc:def:method:EPSG::9807',
@@ -8590,6 +8595,36 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::1065',
             'extent_code' => ['4544'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9131' => [
+            'name' => 'RGAF09 to IGN 2008 LD height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1073',
+            'extent_code' => ['2893'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9132' => [
+            'name' => 'RRAF 1991 to IGN 2008 LD height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1073',
+            'extent_code' => ['2893'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9133' => [
+            'name' => 'RGAF09 to Guadeloupe 1988 height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1073',
+            'extent_code' => ['2892'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9134' => [
+            'name' => 'RGAF09 to IGN 1988 LS height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1073',
+            'extent_code' => ['2895'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9135' => [
+            'name' => 'RGAF09 to IGN 1988 MG height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1073',
+            'extent_code' => ['2894'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9136' => [
+            'name' => 'RGAF09 to Martinique 1987 height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1073',
+            'extent_code' => ['3276'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::9142' => [
             'name' => 'MGI 1901 to KOSOVAREF01 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9606',
@@ -8639,6 +8674,16 @@ class CoordinateOperations
             'name' => 'ITRF2008 to IG05/12 Intermediate CRS',
             'method' => 'urn:ogc:def:method:EPSG::9607',
             'extent_code' => ['2603'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9187' => [
+            'name' => 'RGAF09 to IGN 1988 SB height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1073',
+            'extent_code' => ['2891'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9188' => [
+            'name' => 'RGAF09 to IGN 1988 SM height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1073',
+            'extent_code' => ['2890'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::9189' => [
             'name' => 'WGS 84 to IG05/12 Intermediate CRS',
@@ -8744,6 +8789,11 @@ class CoordinateOperations
             'name' => 'ITRF2005 to NAD83(CSRS)v5 (1)',
             'method' => 'urn:ogc:def:method:EPSG::1053',
             'extent_code' => ['1061'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9228' => [
+            'name' => 'RGSPM06 to Danger 1950 height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1073',
+            'extent_code' => ['3299'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::9229' => [
             'name' => 'NAD83(2011) to NAVD88 height (3)',
@@ -9065,6 +9115,11 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['2805'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9352' => [
+            'name' => 'RGNC91-93 to NGNC08 height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1073',
+            'extent_code' => ['3430'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::9353' => [
             'name' => 'IBCSO Polar Stereographic',
             'method' => 'urn:ogc:def:method:EPSG::9829',
@@ -9299,6 +9354,56 @@ class CoordinateOperations
             'name' => 'NZGD2000 to NZGD2000 + NZVD2016 height (2)',
             'method' => 'urn:ogc:def:method:EPSG::1088',
             'extent_code' => ['1175'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9631' => [
+            'name' => 'RGAF09 to RGAF09 + Guadeloupe 1988 height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1095',
+            'extent_code' => ['2892'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9632' => [
+            'name' => 'RGAF09 to RGAF09 + IGN 1988 LS height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1095',
+            'extent_code' => ['2895'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9633' => [
+            'name' => 'RGAF09 to RGAF09 + IGN 1988 MG height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1095',
+            'extent_code' => ['2894'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9634' => [
+            'name' => 'RGAF09 to RGAF09 + IGN 1988 SB height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1095',
+            'extent_code' => ['2891'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9635' => [
+            'name' => 'RGAF09 to RGAF09 + IGN 1988 SM height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1095',
+            'extent_code' => ['2890'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9636' => [
+            'name' => 'RGAF09 to IGN 2008 LD height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1095',
+            'extent_code' => ['2893'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9637' => [
+            'name' => 'RGAF09 to RGAF09 + Martinique 1987 height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1095',
+            'extent_code' => ['3276'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9640' => [
+            'name' => 'RGNC91-93 to RGNC91-93 + NGNC08 height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1095',
+            'extent_code' => ['3430'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9641' => [
+            'name' => 'RGSPM06 to RGSPM06 + Danger 1950 height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1095',
+            'extent_code' => ['3299'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9642' => [
+            'name' => 'RRAF 1991 to RRAF 1991 + IGN 2008 LD height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1095',
+            'extent_code' => ['2893'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::9673' => [
             'name' => 'US Forest Service region 6 Albers',
@@ -9624,6 +9729,16 @@ class CoordinateOperations
             'name' => 'Papua New Guinea Map Grid 1994 zone 58',
             'method' => 'urn:ogc:def:method:EPSG::9807',
             'extent_code' => ['4654'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9876' => [
+            'name' => 'RGF93 v2b to NGF-IGN69 height (5)',
+            'method' => 'urn:ogc:def:method:EPSG::1073',
+            'extent_code' => ['1326'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9877' => [
+            'name' => 'RGF93 v2b to RGF93 v2b + NGF-IGN69 height (5)',
+            'method' => 'urn:ogc:def:method:EPSG::1095',
+            'extent_code' => ['1326'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::10087' => [
             'name' => 'Jamaica 1875 / Jamaica (Old Grid) to JAD69 / Jamaica National Grid (1)',

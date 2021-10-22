@@ -70,7 +70,6 @@ class EPSGCodegenFromDataImport
         1059, // Geographic3D to GravityRelatedHeight (PNG)
         1060, // Geographic3D to GravityRelatedHeight (CGG2013)
         1070, // Point motion by grid (Canada NTv2_Vel)
-        1073, // Geographic3D to GravityRelatedHeight (IGN2009)
         1079, // New Zealand Deformation Model
         1080, // Vertical Offset by Grid Interpolation (BEV AT)
         1081, // Geographic3D to GravityRelatedHeight (BEV AT)
@@ -82,8 +81,6 @@ class EPSGCodegenFromDataImport
         1091, // Geog3D to Geog2D+GravityRelatedHeight (CI)
         1092, // Geog3D to Geog2D+GravityRelatedHeight (EGM2008)
         1093, // Geog3D to Geog2D+GravityRelatedHeight (Gravsoft)
-        1094, // Geog3D to Geog2D+GravityRelatedHeight (IGN1997)
-        1095, // Geog3D to Geog2D+GravityRelatedHeight (IGN2009)
         1098, // Geog3D to Geog2D+GravityRelatedHeight (SA 2010)
         1099, // Geographic3D to GravityRelatedHeight (PL txt)
         1100, // Geog3D to Geog2D+GravityRelatedHeight (PL txt)
@@ -95,7 +92,6 @@ class EPSGCodegenFromDataImport
         9634, // Maritime Provinces polynomial interpolation
         9658, // Vertical Offset by Grid Interpolation (VERTCON)
         9661, // Geographic3D to GravityRelatedHeight (EGM)
-        9664, // Geographic3D to GravityRelatedHeight (IGN1997)
 
         // only distributed as .dll, can't use
         1036, // Cartesian Grid Offsets from Form Function
@@ -112,6 +108,10 @@ class EPSGCodegenFromDataImport
 
         // replaced by AUSGeoidv2
         9662, // Geographic3D to GravityRelatedHeight (AUSGeoid98)
+
+        // Replaced by IGN2009
+        1094, // Geog3D to Geog2D+GravityRelatedHeight (IGN1997)
+        9664, // Geographic3D to GravityRelatedHeight (IGN1997)
     ];
 
     public const BLACKLISTED_OPERATIONS = [
@@ -416,6 +416,21 @@ class EPSGCodegenFromDataImport
         9172, // gtx g2009g01.bin
         9174, // gtx geoid09_ak.bin
         9169, // gtx geoid06_ak.bin
+
+        // replaced by RAF20
+        9786, // IGNF RAF18b.mnt
+        9787, // IGNF RAF18b.mnt
+
+        // replaced by RAF18b
+        8885, // IGNF RAF18.mnt
+        9638, // IGNF RAF18.mnt
+
+        // replaced by RAF18
+        8371, // IGNF RAF09.mnt
+        9639, // IGNF RAF09.mnt
+
+        // replaced by RASPM2018
+        9137, // IGNF GGSPM06v1.mnt
 
         // approximation/emulation of official transforms
         1295, // NTv2 RGNC1991_NEA74Noumea.gsb

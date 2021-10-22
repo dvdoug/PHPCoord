@@ -16,6 +16,7 @@ use PHPCoord\CoordinateOperation\CoordinateOperations;
 use PHPCoord\CoordinateOperation\CRSTransformations;
 use PHPCoord\CoordinateOperation\GTXGDA2020AHDProvider;
 use PHPCoord\CoordinateOperation\GTXNZGeoid2016Provider;
+use PHPCoord\CoordinateOperation\IGNFHeightRGF93v2bNGFIGN69FranceProvider;
 use PHPCoord\CoordinateOperation\OSTN15OSGM15Provider;
 use PHPCoord\CoordinateReferenceSystem\Compound;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
@@ -97,6 +98,32 @@ class GeographicPoint3DTest extends TestCase
         self::assertEqualsWithDelta(-36.9003, $to->getHorizontalPoint()->getLatitude()->getValue(), 0.00000000001);
         self::assertEqualsWithDelta(144.7794, $to->getHorizontalPoint()->getLongitude()->getValue(), 0.00000000001);
         self::assertEqualsWithDelta(43.504, $to->getVerticalPoint()->getHeight()->getValue(), 0.001);
+    }
+
+    public function testGeographic3DTo2DPlusGravityHeightIGNFFrance(): void
+    {
+        if (!class_exists(IGNFHeightRGF93v2bNGFIGN69FranceProvider::class)) {
+            self::markTestSkipped('Requires phpcoord/datapack-europe');
+        }
+        $from = GeographicPoint::create(new Degree(48.858222), new Degree(2.2945), new Metre(50), Geographic3D::fromSRID(Geographic3D::EPSG_RGF93_V2B));
+        $toCRS = Compound::fromSRID(Compound::EPSG_RGF93_V2B_PLUS_NGF_IGN69_HEIGHT);
+        $to = $from->geographic3DTo2DPlusGravityHeightIGNF($toCRS, (new IGNFHeightRGF93v2bNGFIGN69FranceProvider())->provideGrid(), '');
+
+        self::assertEqualsWithDelta(48.858222, $to->getHorizontalPoint()->getLatitude()->getValue(), 0.00000000001);
+        self::assertEqualsWithDelta(2.2945, $to->getHorizontalPoint()->getLongitude()->getValue(), 0.00000000001);
+        self::assertEqualsWithDelta(6.187, $to->getVerticalPoint()->getHeight()->getValue(), 0.001);
+    }
+
+    public function testGeographic3DGravityHeightIGNFFrance(): void
+    {
+        if (!class_exists(GTXNZGeoid2016Provider::class)) {
+            self::markTestSkipped('Requires phpcoord/datapack-europe');
+        }
+        $from = GeographicPoint::create(new Degree(48.858222), new Degree(2.2945), new Metre(50), Geographic3D::fromSRID(Geographic3D::EPSG_RGF93_V2B));
+        $toCRS = Vertical::fromSRID(Vertical::EPSG_NGF_IGN69_HEIGHT);
+        $to = $from->geographic3DToGravityHeightIGNF($toCRS, (new IGNFHeightRGF93v2bNGFIGN69FranceProvider())->provideGrid());
+
+        self::assertEqualsWithDelta(6.187, $to->getHeight()->getValue(), 0.001);
     }
 
     /**
