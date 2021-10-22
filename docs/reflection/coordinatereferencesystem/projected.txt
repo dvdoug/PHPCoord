@@ -58784,6 +58784,361 @@ UCS-2000 / Gauss-Kruger zone 7
 
 Adopted 1st January 2007, replacing S-42 system. Also found with truncated false easting - see UCS-2000 / Gauss-Kruger CM 39E (code CRS 5569).
 
+UCS-2000 / LCS-01 Crimea
+------------------------
+
+| Used: Ukraine - Crimea autonomous region.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_UCS_2000_LCS_01_CRIMEA)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9831')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_UCS_2000_LCS_01_CRIMEA)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9831')
+
+
+UCS-2000 / LCS-05 Vinnytsia
+---------------------------
+
+| Used: Ukraine - Vinnytsia region (oblast).
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_UCS_2000_LCS_05_VINNYTSIA)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9832')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_UCS_2000_LCS_05_VINNYTSIA)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9832')
+
+
+UCS-2000 / LCS-07 Volyn
+-----------------------
+
+| Used: Ukraine - Volyn region (oblast).
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_UCS_2000_LCS_07_VOLYN)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9833')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_UCS_2000_LCS_07_VOLYN)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9833')
+
+
+UCS-2000 / LCS-12 Dnipropetrovsk
+--------------------------------
+
+| Used: Ukraine - Dnipropetrovsk region (oblast).
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_UCS_2000_LCS_12_DNIPROPETROVSK)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9834')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_UCS_2000_LCS_12_DNIPROPETROVSK)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9834')
+
+
+UCS-2000 / LCS-14 Donetsk
+-------------------------
+
+| Used: Ukraine - Donetsk region (oblast).
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_UCS_2000_LCS_14_DONETSK)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9835')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_UCS_2000_LCS_14_DONETSK)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9835')
+
+
+UCS-2000 / LCS-18 Zhytomyr
+--------------------------
+
+| Used: Ukraine - Zhytomyr region (oblast).
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_UCS_2000_LCS_18_ZHYTOMYR)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9836')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_UCS_2000_LCS_18_ZHYTOMYR)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9836')
+
+
+UCS-2000 / LCS-21 Zakarpattia
+-----------------------------
+
+| Used: Ukraine - Zakarpattia (Zakarpatska) region (Transcarpathia oblast).
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_UCS_2000_LCS_21_ZAKARPATTIA)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9837')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_UCS_2000_LCS_21_ZAKARPATTIA)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9837')
+
+
+UCS-2000 / LCS-23 Zaporizhzhia
+------------------------------
+
+| Used: Ukraine - Zaporizhzhia region (oblast).
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_UCS_2000_LCS_23_ZAPORIZHZHIA)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9838')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_UCS_2000_LCS_23_ZAPORIZHZHIA)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9838')
+
+
+UCS-2000 / LCS-26 Ivano-Frankivsk
+---------------------------------
+
+| Used: Ukraine - Ivano-Frankivsk region (oblast).
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_UCS_2000_LCS_26_IVANO_FRANKIVSK)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9839')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_UCS_2000_LCS_26_IVANO_FRANKIVSK)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9839')
+
+
+UCS-2000 / LCS-32 Kyiv region
+-----------------------------
+
+| Used: Ukraine - Kyiv (Kiev) region (oblast).
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_UCS_2000_LCS_32_KYIV_REGION)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9821')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_UCS_2000_LCS_32_KYIV_REGION)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9821')
+
+Order #74 defines separate LCSs for Kyiv city and Kyiv oblast; they have different extents but the same map projection. For Kyiv city see CRS code 9864.
+
+UCS-2000 / LCS-35 Kirovohrad
+----------------------------
+
+| Used: Ukraine - Kirovohrad region (oblast).
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_UCS_2000_LCS_35_KIROVOHRAD)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9840')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_UCS_2000_LCS_35_KIROVOHRAD)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9840')
+
+
+UCS-2000 / LCS-44 Luhansk
+-------------------------
+
+| Used: Ukraine - Luhansk region (oblast).
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_UCS_2000_LCS_44_LUHANSK)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9841')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_UCS_2000_LCS_44_LUHANSK)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9841')
+
+
+UCS-2000 / LCS-46 Lviv
+----------------------
+
+| Used: Ukraine - Lviv region (oblast).
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_UCS_2000_LCS_46_LVIV)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9851')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_UCS_2000_LCS_46_LVIV)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9851')
+
+
+UCS-2000 / LCS-48 Mykolaiv
+--------------------------
+
+| Used: Ukraine - Mykolaiv region (oblast).
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_UCS_2000_LCS_48_MYKOLAIV)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9852')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_UCS_2000_LCS_48_MYKOLAIV)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9852')
+
+
+UCS-2000 / LCS-51 Odessa
+------------------------
+
+| Used: Ukraine - Odessa region (oblast).
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_UCS_2000_LCS_51_ODESSA)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9853')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_UCS_2000_LCS_51_ODESSA)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9853')
+
+
+UCS-2000 / LCS-53 Poltava
+-------------------------
+
+| Used: Ukraine - Poltava region (oblast).
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_UCS_2000_LCS_53_POLTAVA)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9854')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_UCS_2000_LCS_53_POLTAVA)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9854')
+
+
+UCS-2000 / LCS-56 Rivne
+-----------------------
+
+| Used: Ukraine - Rivne region (oblast).
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_UCS_2000_LCS_56_RIVNE)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9855')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_UCS_2000_LCS_56_RIVNE)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9855')
+
+Order #74 defines seperate LCSs for Rivne and Khmelnytsky oblasts; they have different extents but the same map projection. For Khmelnytsky oblast see CRS code 9855.
+
+UCS-2000 / LCS-59 Sumy
+----------------------
+
+| Used: Ukraine - Sumy region (oblast).
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_UCS_2000_LCS_59_SUMY)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9856')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_UCS_2000_LCS_59_SUMY)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9856')
+
+
+UCS-2000 / LCS-61 Ternopil
+--------------------------
+
+| Used: Ukraine - Ternopil region (oblast).
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_UCS_2000_LCS_61_TERNOPIL)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9857')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_UCS_2000_LCS_61_TERNOPIL)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9857')
+
+
+UCS-2000 / LCS-63 Kharkiv
+-------------------------
+
+| Used: Ukraine - Kharkiv region (oblast).
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_UCS_2000_LCS_63_KHARKIV)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9858')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_UCS_2000_LCS_63_KHARKIV)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9858')
+
+
+UCS-2000 / LCS-65 Kherson
+-------------------------
+
+| Used: Ukraine - Kherson region (oblast).
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_UCS_2000_LCS_65_KHERSON)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9859')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_UCS_2000_LCS_65_KHERSON)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9859')
+
+
+UCS-2000 / LCS-68 Khmelnytsky
+-----------------------------
+
+| Used: Ukraine - Khmelnytskyi region (oblast).
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_UCS_2000_LCS_68_KHMELNYTSKY)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9860')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_UCS_2000_LCS_68_KHMELNYTSKY)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9860')
+
+Order #74 defines seperate LCSs for Khmelnytsky and Rivne oblasts; they have different extents but the same map projection. For Rivne oblast see CRS code 9855.
+
+UCS-2000 / LCS-71 Cherkasy
+--------------------------
+
+| Used: Ukraine - Cherkasy region (oblast).
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_UCS_2000_LCS_71_CHERKASY)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9861')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_UCS_2000_LCS_71_CHERKASY)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9861')
+
+
+UCS-2000 / LCS-73 Chernivtsi
+----------------------------
+
+| Used: Ukraine - Chernivtsi region (oblast).
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_UCS_2000_LCS_73_CHERNIVTSI)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9862')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_UCS_2000_LCS_73_CHERNIVTSI)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9862')
+
+
+UCS-2000 / LCS-74 Chernihiv
+---------------------------
+
+| Used: Ukraine - Chernihiv region (oblast).
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_UCS_2000_LCS_74_CHERNIHIV)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9863')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_UCS_2000_LCS_74_CHERNIHIV)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9863')
+
+
+UCS-2000 / LCS-80 Kyiv city
+---------------------------
+
+| Used: Ukraine - Kyiv (Kiev) city.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_UCS_2000_LCS_80_KYIV_CITY)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9864')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_UCS_2000_LCS_80_KYIV_CITY)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9864')
+
+Order #74 defines separate LCSs for Kyiv city and Kyiv oblast; they have different extents but the same map projection. For Kyiv region see CRS code 9821.
+
+UCS-2000 / LCS-85 Sevastopol
+----------------------------
+
+| Used: Ukraine - Sevastopol (Sebastopol) city.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_UCS_2000_LCS_85_SEVASTOPOL)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9865')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_UCS_2000_LCS_85_SEVASTOPOL)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9865')
+
+
 UCS-2000 / Ukraine TM zone 10
 -----------------------------
 

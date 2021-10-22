@@ -2,7 +2,7 @@
 
 ## [Unreleased]
 ### Changed
-- Updates to data for Papua New Guinea and WGS84
+- Updates to data for Papua New Guinea, Ukraine and WGS84
 
 
 ## [4.5.0] - 2021-09-25

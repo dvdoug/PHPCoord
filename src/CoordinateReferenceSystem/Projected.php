@@ -33800,6 +33800,176 @@ class Projected extends CoordinateReferenceSystem
     public const EPSG_UCS_2000_GAUSS_KRUGER_ZONE_7 = 'urn:ogc:def:crs:EPSG::5565';
 
     /**
+     * UCS-2000 / LCS-01 Crimea
+     * Extent: Ukraine - Crimea autonomous region.
+     */
+    public const EPSG_UCS_2000_LCS_01_CRIMEA = 'urn:ogc:def:crs:EPSG::9831';
+
+    /**
+     * UCS-2000 / LCS-05 Vinnytsia
+     * Extent: Ukraine - Vinnytsia region (oblast).
+     */
+    public const EPSG_UCS_2000_LCS_05_VINNYTSIA = 'urn:ogc:def:crs:EPSG::9832';
+
+    /**
+     * UCS-2000 / LCS-07 Volyn
+     * Extent: Ukraine - Volyn region (oblast).
+     */
+    public const EPSG_UCS_2000_LCS_07_VOLYN = 'urn:ogc:def:crs:EPSG::9833';
+
+    /**
+     * UCS-2000 / LCS-12 Dnipropetrovsk
+     * Extent: Ukraine - Dnipropetrovsk region (oblast).
+     */
+    public const EPSG_UCS_2000_LCS_12_DNIPROPETROVSK = 'urn:ogc:def:crs:EPSG::9834';
+
+    /**
+     * UCS-2000 / LCS-14 Donetsk
+     * Extent: Ukraine - Donetsk region (oblast).
+     */
+    public const EPSG_UCS_2000_LCS_14_DONETSK = 'urn:ogc:def:crs:EPSG::9835';
+
+    /**
+     * UCS-2000 / LCS-18 Zhytomyr
+     * Extent: Ukraine - Zhytomyr region (oblast).
+     */
+    public const EPSG_UCS_2000_LCS_18_ZHYTOMYR = 'urn:ogc:def:crs:EPSG::9836';
+
+    /**
+     * UCS-2000 / LCS-21 Zakarpattia
+     * Extent: Ukraine - Zakarpattia (Zakarpatska) region (Transcarpathia oblast).
+     */
+    public const EPSG_UCS_2000_LCS_21_ZAKARPATTIA = 'urn:ogc:def:crs:EPSG::9837';
+
+    /**
+     * UCS-2000 / LCS-23 Zaporizhzhia
+     * Extent: Ukraine - Zaporizhzhia region (oblast).
+     */
+    public const EPSG_UCS_2000_LCS_23_ZAPORIZHZHIA = 'urn:ogc:def:crs:EPSG::9838';
+
+    /**
+     * UCS-2000 / LCS-26 Ivano-Frankivsk
+     * Extent: Ukraine - Ivano-Frankivsk region (oblast).
+     */
+    public const EPSG_UCS_2000_LCS_26_IVANO_FRANKIVSK = 'urn:ogc:def:crs:EPSG::9839';
+
+    /**
+     * UCS-2000 / LCS-32 Kyiv region
+     * Extent: Ukraine - Kyiv (Kiev) region (oblast).
+     * Order #74 defines separate LCSs for Kyiv city and Kyiv oblast; they have different extents but the same map
+     * projection. For Kyiv city see CRS code 9864.
+     */
+    public const EPSG_UCS_2000_LCS_32_KYIV_REGION = 'urn:ogc:def:crs:EPSG::9821';
+
+    /**
+     * UCS-2000 / LCS-35 Kirovohrad
+     * Extent: Ukraine - Kirovohrad region (oblast).
+     */
+    public const EPSG_UCS_2000_LCS_35_KIROVOHRAD = 'urn:ogc:def:crs:EPSG::9840';
+
+    /**
+     * UCS-2000 / LCS-44 Luhansk
+     * Extent: Ukraine - Luhansk region (oblast).
+     */
+    public const EPSG_UCS_2000_LCS_44_LUHANSK = 'urn:ogc:def:crs:EPSG::9841';
+
+    /**
+     * UCS-2000 / LCS-46 Lviv
+     * Extent: Ukraine - Lviv region (oblast).
+     */
+    public const EPSG_UCS_2000_LCS_46_LVIV = 'urn:ogc:def:crs:EPSG::9851';
+
+    /**
+     * UCS-2000 / LCS-48 Mykolaiv
+     * Extent: Ukraine - Mykolaiv region (oblast).
+     */
+    public const EPSG_UCS_2000_LCS_48_MYKOLAIV = 'urn:ogc:def:crs:EPSG::9852';
+
+    /**
+     * UCS-2000 / LCS-51 Odessa
+     * Extent: Ukraine - Odessa region (oblast).
+     */
+    public const EPSG_UCS_2000_LCS_51_ODESSA = 'urn:ogc:def:crs:EPSG::9853';
+
+    /**
+     * UCS-2000 / LCS-53 Poltava
+     * Extent: Ukraine - Poltava region (oblast).
+     */
+    public const EPSG_UCS_2000_LCS_53_POLTAVA = 'urn:ogc:def:crs:EPSG::9854';
+
+    /**
+     * UCS-2000 / LCS-56 Rivne
+     * Extent: Ukraine - Rivne region (oblast).
+     * Order #74 defines seperate LCSs for Rivne and Khmelnytsky oblasts; they have different extents but the same map
+     * projection. For Khmelnytsky oblast see CRS code 9855.
+     */
+    public const EPSG_UCS_2000_LCS_56_RIVNE = 'urn:ogc:def:crs:EPSG::9855';
+
+    /**
+     * UCS-2000 / LCS-59 Sumy
+     * Extent: Ukraine - Sumy region (oblast).
+     */
+    public const EPSG_UCS_2000_LCS_59_SUMY = 'urn:ogc:def:crs:EPSG::9856';
+
+    /**
+     * UCS-2000 / LCS-61 Ternopil
+     * Extent: Ukraine - Ternopil region (oblast).
+     */
+    public const EPSG_UCS_2000_LCS_61_TERNOPIL = 'urn:ogc:def:crs:EPSG::9857';
+
+    /**
+     * UCS-2000 / LCS-63 Kharkiv
+     * Extent: Ukraine - Kharkiv region (oblast).
+     */
+    public const EPSG_UCS_2000_LCS_63_KHARKIV = 'urn:ogc:def:crs:EPSG::9858';
+
+    /**
+     * UCS-2000 / LCS-65 Kherson
+     * Extent: Ukraine - Kherson region (oblast).
+     */
+    public const EPSG_UCS_2000_LCS_65_KHERSON = 'urn:ogc:def:crs:EPSG::9859';
+
+    /**
+     * UCS-2000 / LCS-68 Khmelnytsky
+     * Extent: Ukraine - Khmelnytskyi region (oblast).
+     * Order #74 defines seperate LCSs for Khmelnytsky and Rivne oblasts; they have different extents but the same map
+     * projection. For Rivne oblast see CRS code 9855.
+     */
+    public const EPSG_UCS_2000_LCS_68_KHMELNYTSKY = 'urn:ogc:def:crs:EPSG::9860';
+
+    /**
+     * UCS-2000 / LCS-71 Cherkasy
+     * Extent: Ukraine - Cherkasy region (oblast).
+     */
+    public const EPSG_UCS_2000_LCS_71_CHERKASY = 'urn:ogc:def:crs:EPSG::9861';
+
+    /**
+     * UCS-2000 / LCS-73 Chernivtsi
+     * Extent: Ukraine - Chernivtsi region (oblast).
+     */
+    public const EPSG_UCS_2000_LCS_73_CHERNIVTSI = 'urn:ogc:def:crs:EPSG::9862';
+
+    /**
+     * UCS-2000 / LCS-74 Chernihiv
+     * Extent: Ukraine - Chernihiv region (oblast).
+     */
+    public const EPSG_UCS_2000_LCS_74_CHERNIHIV = 'urn:ogc:def:crs:EPSG::9863';
+
+    /**
+     * UCS-2000 / LCS-80 Kyiv city
+     * Extent: Ukraine - Kyiv (Kiev) city.
+     * Order #74 defines separate LCSs for Kyiv city and Kyiv oblast; they have different extents but the same map
+     * projection. For Kyiv region see CRS code 9821.
+     */
+    public const EPSG_UCS_2000_LCS_80_KYIV_CITY = 'urn:ogc:def:crs:EPSG::9864';
+
+    /**
+     * UCS-2000 / LCS-85 Sevastopol
+     * Extent: Ukraine - Sevastopol (Sebastopol) city.
+     */
+    public const EPSG_UCS_2000_LCS_85_SEVASTOPOL = 'urn:ogc:def:crs:EPSG::9865';
+
+    /**
      * UCS-2000 / Ukraine TM zone 10
      * Extent: Ukraine - between 28°30'E and 31°30'E, onshore and offshore.
      */

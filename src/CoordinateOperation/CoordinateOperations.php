@@ -11010,6 +11010,131 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9615',
             'extent_code' => ['2376'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9796' => [
+            'name' => 'Local coordinate system of Kyiv',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['4650'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9797' => [
+            'name' => 'Local coordinate system of Crimea region',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['4648'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9798' => [
+            'name' => 'Local coordinate system of Vinnytsia region',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['4643'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9799' => [
+            'name' => 'Local coordinate system of Volyn region',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['4644'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9800' => [
+            'name' => 'Local coordinate system of Dnipropetrovsk region',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['4627'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9801' => [
+            'name' => 'Local coordinate system of Donetsk region',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['4628'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9802' => [
+            'name' => 'Local coordinate system of Zhytomyr region',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['4647'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9803' => [
+            'name' => 'Local coordinate system of Zakarpattia region',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['4645'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9804' => [
+            'name' => 'Local coordinate system of Zaporizhzhia region',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['4646'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9805' => [
+            'name' => 'Local coordinate system of Ivano-Frankivsk region',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['4629'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9806' => [
+            'name' => 'Local coordinate system of Kirovohrad region',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['4634'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9807' => [
+            'name' => 'Local coordinate system of Luhansk region',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['4635'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9808' => [
+            'name' => 'Local coordinate system of Lviv region',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['4636'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9809' => [
+            'name' => 'Local coordinate system of Mykolaiv region',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['4637'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9810' => [
+            'name' => 'Local coordinate system of Odessa region',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['4638'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9811' => [
+            'name' => 'Local coordinate system of Poltava region',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['4639'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9812' => [
+            'name' => 'Local coordinate system of Rivne and Khmelnytsky regions',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['4651'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9813' => [
+            'name' => 'Local coordinate system of Sumy region',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['4641'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9814' => [
+            'name' => 'Local coordinate system of Ternopil region',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['4642'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9815' => [
+            'name' => 'Local coordinate system of Kharkiv region',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['4630'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9816' => [
+            'name' => 'Local coordinate system of Kherson region',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['4631'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9817' => [
+            'name' => 'Local coordinate system of Cherkasy region',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['4624'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9818' => [
+            'name' => 'Local coordinate system of Chernivtsi region',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['4626'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9819' => [
+            'name' => 'Local coordinate system of Chernihiv region',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['4625'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9820' => [
+            'name' => 'Local coordinate system of Sevastopol city',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['4649'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::9872' => [
             'name' => 'Papua New Guinea Map Grid 1994 zone 57',
             'method' => 'urn:ogc:def:method:EPSG::9807',

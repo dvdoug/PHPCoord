@@ -61650,6 +61650,681 @@ class CoordinateOperationParams
                 'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2NAD831986NAD83CSRS2010AlbertaProvider',
             ],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9796' => [
+            'latitudeOfNaturalOrigin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9110',
+                'reverses' => false,
+            ],
+            'longitudeOfNaturalOrigin' => [
+                'value' => 30.3,
+                'uom' => 'urn:ogc:def:uom:EPSG::9110',
+                'reverses' => false,
+            ],
+            'scaleFactorAtNaturalOrigin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'falseEasting' => [
+                'value' => 300000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'falseNorthing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9797' => [
+            'latitudeOfNaturalOrigin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9110',
+                'reverses' => false,
+            ],
+            'longitudeOfNaturalOrigin' => [
+                'value' => 34.3,
+                'uom' => 'urn:ogc:def:uom:EPSG::9110',
+                'reverses' => false,
+            ],
+            'scaleFactorAtNaturalOrigin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'falseEasting' => [
+                'value' => 300000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'falseNorthing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9798' => [
+            'latitudeOfNaturalOrigin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9110',
+                'reverses' => false,
+            ],
+            'longitudeOfNaturalOrigin' => [
+                'value' => 28.4,
+                'uom' => 'urn:ogc:def:uom:EPSG::9110',
+                'reverses' => false,
+            ],
+            'scaleFactorAtNaturalOrigin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'falseEasting' => [
+                'value' => 300000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'falseNorthing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9799' => [
+            'latitudeOfNaturalOrigin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9110',
+                'reverses' => false,
+            ],
+            'longitudeOfNaturalOrigin' => [
+                'value' => 24.5,
+                'uom' => 'urn:ogc:def:uom:EPSG::9110',
+                'reverses' => false,
+            ],
+            'scaleFactorAtNaturalOrigin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'falseEasting' => [
+                'value' => 300000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'falseNorthing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9800' => [
+            'latitudeOfNaturalOrigin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'longitudeOfNaturalOrigin' => [
+                'value' => 35.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'scaleFactorAtNaturalOrigin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'falseEasting' => [
+                'value' => 300000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'falseNorthing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9801' => [
+            'latitudeOfNaturalOrigin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9110',
+                'reverses' => false,
+            ],
+            'longitudeOfNaturalOrigin' => [
+                'value' => 37.3,
+                'uom' => 'urn:ogc:def:uom:EPSG::9110',
+                'reverses' => false,
+            ],
+            'scaleFactorAtNaturalOrigin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'falseEasting' => [
+                'value' => 300000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'falseNorthing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9802' => [
+            'latitudeOfNaturalOrigin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9110',
+                'reverses' => false,
+            ],
+            'longitudeOfNaturalOrigin' => [
+                'value' => 28.3,
+                'uom' => 'urn:ogc:def:uom:EPSG::9110',
+                'reverses' => false,
+            ],
+            'scaleFactorAtNaturalOrigin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'falseEasting' => [
+                'value' => 300000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'falseNorthing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9803' => [
+            'latitudeOfNaturalOrigin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9110',
+                'reverses' => false,
+            ],
+            'longitudeOfNaturalOrigin' => [
+                'value' => 23.3,
+                'uom' => 'urn:ogc:def:uom:EPSG::9110',
+                'reverses' => false,
+            ],
+            'scaleFactorAtNaturalOrigin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'falseEasting' => [
+                'value' => 300000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'falseNorthing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9804' => [
+            'latitudeOfNaturalOrigin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'longitudeOfNaturalOrigin' => [
+                'value' => 36.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'scaleFactorAtNaturalOrigin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'falseEasting' => [
+                'value' => 300000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'falseNorthing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9805' => [
+            'latitudeOfNaturalOrigin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9110',
+                'reverses' => false,
+            ],
+            'longitudeOfNaturalOrigin' => [
+                'value' => 24.45,
+                'uom' => 'urn:ogc:def:uom:EPSG::9110',
+                'reverses' => false,
+            ],
+            'scaleFactorAtNaturalOrigin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'falseEasting' => [
+                'value' => 300000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'falseNorthing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9806' => [
+            'latitudeOfNaturalOrigin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'longitudeOfNaturalOrigin' => [
+                'value' => 32.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'scaleFactorAtNaturalOrigin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'falseEasting' => [
+                'value' => 300000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'falseNorthing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9807' => [
+            'latitudeOfNaturalOrigin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'longitudeOfNaturalOrigin' => [
+                'value' => 39.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'scaleFactorAtNaturalOrigin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'falseEasting' => [
+                'value' => 300000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'falseNorthing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9808' => [
+            'latitudeOfNaturalOrigin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'longitudeOfNaturalOrigin' => [
+                'value' => 24.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'scaleFactorAtNaturalOrigin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'falseEasting' => [
+                'value' => 300000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'falseNorthing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9809' => [
+            'latitudeOfNaturalOrigin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9110',
+                'reverses' => false,
+            ],
+            'longitudeOfNaturalOrigin' => [
+                'value' => 31.5,
+                'uom' => 'urn:ogc:def:uom:EPSG::9110',
+                'reverses' => false,
+            ],
+            'scaleFactorAtNaturalOrigin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'falseEasting' => [
+                'value' => 300000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'falseNorthing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9810' => [
+            'latitudeOfNaturalOrigin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'longitudeOfNaturalOrigin' => [
+                'value' => 30.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'scaleFactorAtNaturalOrigin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'falseEasting' => [
+                'value' => 300000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'falseNorthing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9811' => [
+            'latitudeOfNaturalOrigin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9110',
+                'reverses' => false,
+            ],
+            'longitudeOfNaturalOrigin' => [
+                'value' => 33.5,
+                'uom' => 'urn:ogc:def:uom:EPSG::9110',
+                'reverses' => false,
+            ],
+            'scaleFactorAtNaturalOrigin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'falseEasting' => [
+                'value' => 300000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'falseNorthing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9812' => [
+            'latitudeOfNaturalOrigin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'longitudeOfNaturalOrigin' => [
+                'value' => 27.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'scaleFactorAtNaturalOrigin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'falseEasting' => [
+                'value' => 300000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'falseNorthing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9813' => [
+            'latitudeOfNaturalOrigin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9110',
+                'reverses' => false,
+            ],
+            'longitudeOfNaturalOrigin' => [
+                'value' => 34.3,
+                'uom' => 'urn:ogc:def:uom:EPSG::9110',
+                'reverses' => false,
+            ],
+            'scaleFactorAtNaturalOrigin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'falseEasting' => [
+                'value' => 300000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'falseNorthing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9814' => [
+            'latitudeOfNaturalOrigin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9110',
+                'reverses' => false,
+            ],
+            'longitudeOfNaturalOrigin' => [
+                'value' => 25.3,
+                'uom' => 'urn:ogc:def:uom:EPSG::9110',
+                'reverses' => false,
+            ],
+            'scaleFactorAtNaturalOrigin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'falseEasting' => [
+                'value' => 300000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'falseNorthing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9815' => [
+            'latitudeOfNaturalOrigin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9110',
+                'reverses' => false,
+            ],
+            'longitudeOfNaturalOrigin' => [
+                'value' => 36.3,
+                'uom' => 'urn:ogc:def:uom:EPSG::9110',
+                'reverses' => false,
+            ],
+            'scaleFactorAtNaturalOrigin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'falseEasting' => [
+                'value' => 300000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'falseNorthing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9816' => [
+            'latitudeOfNaturalOrigin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9110',
+                'reverses' => false,
+            ],
+            'longitudeOfNaturalOrigin' => [
+                'value' => 33.3,
+                'uom' => 'urn:ogc:def:uom:EPSG::9110',
+                'reverses' => false,
+            ],
+            'scaleFactorAtNaturalOrigin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'falseEasting' => [
+                'value' => 300000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'falseNorthing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9817' => [
+            'latitudeOfNaturalOrigin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9110',
+                'reverses' => false,
+            ],
+            'longitudeOfNaturalOrigin' => [
+                'value' => 31.3,
+                'uom' => 'urn:ogc:def:uom:EPSG::9110',
+                'reverses' => false,
+            ],
+            'scaleFactorAtNaturalOrigin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'falseEasting' => [
+                'value' => 300000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'falseNorthing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9818' => [
+            'latitudeOfNaturalOrigin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'longitudeOfNaturalOrigin' => [
+                'value' => 26.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'scaleFactorAtNaturalOrigin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'falseEasting' => [
+                'value' => 300000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'falseNorthing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9819' => [
+            'latitudeOfNaturalOrigin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'longitudeOfNaturalOrigin' => [
+                'value' => 32.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'scaleFactorAtNaturalOrigin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'falseEasting' => [
+                'value' => 300000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'falseNorthing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9820' => [
+            'latitudeOfNaturalOrigin' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'longitudeOfNaturalOrigin' => [
+                'value' => 33.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9102',
+                'reverses' => false,
+            ],
+            'scaleFactorAtNaturalOrigin' => [
+                'value' => 1.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9201',
+                'reverses' => false,
+            ],
+            'falseEasting' => [
+                'value' => 300000.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+            'falseNorthing' => [
+                'value' => 0.0,
+                'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                'reverses' => false,
+            ],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::9872' => [
             'latitudeOfNaturalOrigin' => [
                 'value' => 0.0,
