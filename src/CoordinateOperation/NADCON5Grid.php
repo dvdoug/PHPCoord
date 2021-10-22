@@ -31,13 +31,10 @@ class NADCON5Grid extends SplFileObject
         $this->numberOfColumns = $header['nlon'];
         $this->numberOfRows = $header['nlat'];
 
-        switch ($header['ikind']) {
-            case 1:
-                $this->gridDataType = 'G';
-                break;
-            default:
-                throw new UnexpectedValueException("Unknown ikind: {$header['ikind']}");
-        }
+        $this->gridDataType = match ($header['ikind']) {
+            1 => 'G',
+            default => throw new UnexpectedValueException("Unknown ikind: {$header['ikind']}"),
+        };
     }
 
     public function getForwardAdjustment(GeographicPoint $point): float

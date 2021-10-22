@@ -86,18 +86,13 @@ abstract class Scale implements UnitOfMeasure
 
     public static function makeUnit(float $measurement, string $srid): self
     {
-        switch ($srid) {
-            case self::EPSG_COEFFICIENT:
-                return new Coefficient($measurement);
-            case self::EPSG_PARTS_PER_BILLION:
-                return new PartsPerBillion($measurement);
-            case self::EPSG_PARTS_PER_MILLION:
-                return new PartsPerMillion($measurement);
-            case self::EPSG_UNITY:
-                return new Unity($measurement);
-        }
-
-        throw new UnknownUnitOfMeasureException($srid);
+        return match ($srid) {
+            self::EPSG_COEFFICIENT => new Coefficient($measurement),
+            self::EPSG_PARTS_PER_BILLION => new PartsPerBillion($measurement),
+            self::EPSG_PARTS_PER_MILLION => new PartsPerMillion($measurement),
+            self::EPSG_UNITY => new Unity($measurement),
+            default => throw new UnknownUnitOfMeasureException($srid),
+        };
     }
 
     public static function getSupportedSRIDs(): array

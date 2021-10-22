@@ -1598,21 +1598,6 @@ class Geographic3D extends Geographic
      */
     public const EPSG_YEMEN_NGN96 = 'urn:ogc:def:crs:EPSG::4981';
 
-    /**
-     * @deprecated use EPSG_CHTRS95 instead
-     */
-    public const EPSG_CHTRF95 = 'urn:ogc:def:crs:EPSG::4933';
-
-    /**
-     * @deprecated use EPSG_RGF93_V1 instead
-     */
-    public const EPSG_RGF93 = 'urn:ogc:def:crs:EPSG::4965';
-
-    /**
-     * @deprecated use EPSG_RGF93_V1_LON_LAT instead
-     */
-    public const EPSG_RGF93_LON_LAT = 'urn:ogc:def:crs:EPSG::7042';
-
     private static array $cachedObjects = [];
 
     private static array $supportedCache = [];

@@ -10,21 +10,17 @@ namespace PHPCoord;
 
 use function abs;
 use function acos;
-use function array_values;
 use function asin;
 use function atan;
 use function atan2;
 use function cos;
 use DateTimeImmutable;
-use function lcfirst;
 use const M_PI;
-use const PHP_MAJOR_VERSION;
 use PHPCoord\CoordinateOperation\CoordinateOperationMethods;
 use PHPCoord\CoordinateOperation\CoordinateOperationParams;
 use PHPCoord\CoordinateOperation\CoordinateOperations;
 use PHPCoord\CoordinateOperation\GeographicValue;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
-use PHPCoord\CoordinateSystem\Axis;
 use PHPCoord\Datum\Ellipsoid;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPCoord\UnitOfMeasure\Length\Length;
@@ -33,15 +29,12 @@ use PHPCoord\UnitOfMeasure\Scale\Coefficient;
 use PHPCoord\UnitOfMeasure\Scale\Scale;
 use PHPCoord\UnitOfMeasure\UnitOfMeasure;
 use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
-use function preg_match;
 use function sin;
 use function sqrt;
 use function sscanf;
-use function str_replace;
 use function str_starts_with;
 use Stringable;
 use function tan;
-use function ucwords;
 
 abstract class Point implements Stringable
 {
@@ -68,8 +61,6 @@ abstract class Point implements Stringable
      */
     public function performOperation(string $srid, CoordinateReferenceSystem $to, bool $inReverse, array $additionalParams = []): self
     {
-        $point = $this;
-
         $operation = CoordinateOperations::getOperationData($srid);
         $method = CoordinateOperationMethods::getFunctionName($operation['method']);
         $params = self::resolveParamsByOperation($srid, $operation['method'], $inReverse);
@@ -78,26 +69,7 @@ abstract class Point implements Stringable
             $params['horizontalPoint'] = $additionalParams['horizontalPoint'];
         }
 
-        if (PHP_MAJOR_VERSION >= 8) {
-            $point = $point->$method($to, ...$params);
-        } else {
-            $point = $point->$method($to, ...array_values($params));
-        }
-
-        return $point;
-    }
-
-    /**
-     * @deprecated
-     */
-    protected static function camelCase(string $string): string
-    {
-        $string = str_replace([' ', '-', '(', ')'], '', ucwords($string, ' -()'));
-        if (!preg_match('/^(EPSG|[ABC][uv\d])/', $string)) {
-            $string = lcfirst($string);
-        }
-
-        return $string;
+        return $this->$method($to, ...$params);
     }
 
     protected static function resolveParamsByOperation(string $operationSrid, string $methodSrid, bool $inReverse): array
@@ -131,20 +103,6 @@ abstract class Point implements Stringable
         }
 
         return $params;
-    }
-
-    /**
-     * @deprecated
-     */
-    protected function getAxisByName(string $name): ?Axis
-    {
-        foreach ($this->getCRS()->getCoordinateSystem()->getAxes() as $axis) {
-            if ($axis->getName() === $name) {
-                return $axis;
-            }
-        }
-
-        return null;
     }
 
     protected static function sign(float $number): int

@@ -238,50 +238,29 @@ abstract class Length implements UnitOfMeasure
 
     public static function makeUnit(float $measurement, string $srid): self
     {
-        switch ($srid) {
-            case self::EPSG_METRE:
-                return new Metre($measurement);
-            case self::EPSG_KILOMETRE:
-                return new Kilometre($measurement);
-            case self::EPSG_CENTIMETRE:
-                return new Centimetre($measurement);
-            case self::EPSG_MILLIMETRE:
-                return new Millimetre($measurement);
-            case self::EPSG_FOOT:
-                return new Foot($measurement);
-            case self::EPSG_LINK:
-                return new Link($measurement);
-            case self::EPSG_BRITISH_CHAIN_BENOIT_1895_B:
-                return new BritishChain1895BenoitB($measurement);
-            case self::EPSG_BRITISH_FOOT_SEARS_1922:
-                return new BritishFoot1922Sears($measurement);
-            case self::EPSG_BRITISH_YARD_SEARS_1922:
-                return new BritishYard1922Sears($measurement);
-            case self::EPSG_BRITISH_CHAIN_SEARS_1922:
-                return new BritishChain1922Sears($measurement);
-            case self::EPSG_BRITISH_CHAIN_SEARS_1922_TRUNCATED:
-                return new BritishChain1922SearsTruncated($measurement);
-            case self::EPSG_BRITISH_FOOT_1936:
-                return new BritishFoot1936($measurement);
-            case self::EPSG_US_SURVEY_FOOT:
-                return new USSurveyFoot($measurement);
-            case self::EPSG_CLARKES_FOOT:
-                return new ClarkeFoot($measurement);
-            case self::EPSG_CLARKES_YARD:
-                return new ClarkeYard($measurement);
-            case self::EPSG_CLARKES_LINK:
-                return new ClarkeLink($measurement);
-            case self::EPSG_INDIAN_FOOT:
-                return new IndianFoot($measurement);
-            case self::EPSG_INDIAN_YARD:
-                return new IndianYard($measurement);
-            case self::EPSG_GOLD_COAST_FOOT:
-                return new GoldCoastFoot($measurement);
-            case self::EPSG_GERMAN_LEGAL_METRE:
-                return new GermanLegalMetre($measurement);
-        }
-
-        throw new UnknownUnitOfMeasureException($srid);
+        return match ($srid) {
+            self::EPSG_METRE => new Metre($measurement),
+            self::EPSG_KILOMETRE => new Kilometre($measurement),
+            self::EPSG_CENTIMETRE => new Centimetre($measurement),
+            self::EPSG_MILLIMETRE => new Millimetre($measurement),
+            self::EPSG_FOOT => new Foot($measurement),
+            self::EPSG_LINK => new Link($measurement),
+            self::EPSG_BRITISH_CHAIN_BENOIT_1895_B => new BritishChain1895BenoitB($measurement),
+            self::EPSG_BRITISH_FOOT_SEARS_1922 => new BritishFoot1922Sears($measurement),
+            self::EPSG_BRITISH_YARD_SEARS_1922 => new BritishYard1922Sears($measurement),
+            self::EPSG_BRITISH_CHAIN_SEARS_1922 => new BritishChain1922Sears($measurement),
+            self::EPSG_BRITISH_CHAIN_SEARS_1922_TRUNCATED => new BritishChain1922SearsTruncated($measurement),
+            self::EPSG_BRITISH_FOOT_1936 => new BritishFoot1936($measurement),
+            self::EPSG_US_SURVEY_FOOT => new USSurveyFoot($measurement),
+            self::EPSG_CLARKES_FOOT => new ClarkeFoot($measurement),
+            self::EPSG_CLARKES_YARD => new ClarkeYard($measurement),
+            self::EPSG_CLARKES_LINK => new ClarkeLink($measurement),
+            self::EPSG_INDIAN_FOOT => new IndianFoot($measurement),
+            self::EPSG_INDIAN_YARD => new IndianYard($measurement),
+            self::EPSG_GOLD_COAST_FOOT => new GoldCoastFoot($measurement),
+            self::EPSG_GERMAN_LEGAL_METRE => new GermanLegalMetre($measurement),
+            default => throw new UnknownUnitOfMeasureException($srid),
+        };
     }
 
     public static function getSupportedSRIDs(): array

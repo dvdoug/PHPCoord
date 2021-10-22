@@ -291,7 +291,7 @@ class AutoConversionTest extends TestCase
     public function testNTFToRGF93(): void
     {
         $from = GeographicPoint::create(new Degree(48.84451225), new Degree(2.42567186), null, Geographic2D::fromSRID(Geographic2D::EPSG_NTF));
-        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_RGF93);
+        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_RGF93_V1);
         $to = $from->convert($toCRS);
 
         if (class_exists(IGNFGeocentricTranslationNTFRGF93Provider::class)) {

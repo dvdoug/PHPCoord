@@ -422,8 +422,8 @@ class ProjectedPointTest extends TestCase
 
     public function testLambertConicConformal2SPBelgium(): void
     {
-        $from = ProjectedPoint::createFromEastingNorthing(new Metre(251763.20), new Metre(153034.10), Projected::fromSRID(Projected::EPSG_BELGE_1972_BELGE_LAMBERT_72));
-        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_BELGE_1972);
+        $from = ProjectedPoint::createFromEastingNorthing(new Metre(251763.20), new Metre(153034.10), Projected::fromSRID(Projected::EPSG_BD72_BELGE_LAMBERT_72));
+        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_BD72);
         $to = $from->lambertConicConformal2SPBelgium($toCRS, new Radian(1.57079633), new Radian(0.07604294), new Radian(0.86975574), new Radian(0.89302680), new Metre(150000.01), new Metre(5400088.44));
 
         self::assertEqualsWithDelta(0.88452540, $to->getLatitude()->asRadians()->getValue(), 0.0000001);

@@ -608,8 +608,8 @@ class GeographicPointTest extends TestCase
 
     public function testLambertConicConformal2SPBelgium(): void
     {
-        $from = GeographicPoint::create(new Radian(0.88452540), new Radian(0.10135773), null, Geographic2D::fromSRID(Geographic2D::EPSG_BELGE_1972));
-        $toCRS = Projected::fromSRID(Projected::EPSG_BELGE_1972_BELGE_LAMBERT_72);
+        $from = GeographicPoint::create(new Radian(0.88452540), new Radian(0.10135773), null, Geographic2D::fromSRID(Geographic2D::EPSG_BD72));
+        $toCRS = Projected::fromSRID(Projected::EPSG_BD72_BELGE_LAMBERT_72);
         $to = $from->lambertConicConformal2SPBelgium($toCRS, new Radian(1.57079633), new Radian(0.07604294), new Radian(0.86975574), new Radian(0.89302680), new Metre(150000.01), new Metre(5400088.44));
 
         self::assertEqualsWithDelta(251763.20, $to->getEasting()->getValue(), 0.01);
@@ -1240,7 +1240,7 @@ class GeographicPointTest extends TestCase
             self::markTestSkipped('Requires phpcoord/europe');
         }
         $from = GeographicPoint::create(new Degree(48.84451225), new Degree(2.42567186), null, Geographic2D::fromSRID(Geographic2D::EPSG_NTF));
-        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_RGF93);
+        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_RGF93_V1);
         $to = $from->geocentricTranslationByGridInterpolationIGNF(
             $toCRS,
             (new IGNFGeocentricTranslationNTFRGF93Provider())->provideGrid(),
@@ -1259,7 +1259,7 @@ class GeographicPointTest extends TestCase
         if (!class_exists(IGNFGeocentricTranslationNTFRGF93Provider::class)) {
             self::markTestSkipped('Requires phpcoord/europe');
         }
-        $from = GeographicPoint::create(new Degree(48.844445839), new Degree(2.424971108), null, Geographic2D::fromSRID(Geographic2D::EPSG_RGF93));
+        $from = GeographicPoint::create(new Degree(48.844445839), new Degree(2.424971108), null, Geographic2D::fromSRID(Geographic2D::EPSG_RGF93_V1));
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_NTF);
         $to = $from->geocentricTranslationByGridInterpolationIGNF(
             $toCRS,

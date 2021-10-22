@@ -1799,11 +1799,6 @@ class Vertical extends CoordinateReferenceSystem
      */
     public const EPSG_YELLOW_SEA_1985_HEIGHT = 'urn:ogc:def:crs:EPSG::5737';
 
-    /**
-     * @deprecated use EPSG_GENOA_1942_HEIGHT instead
-     */
-    public const EPSG_GENOA_HEIGHT = 'urn:ogc:def:crs:EPSG::5214';
-
     private static array $cachedObjects = [];
 
     private static array $supportedCache = [];

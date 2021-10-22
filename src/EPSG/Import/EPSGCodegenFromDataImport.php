@@ -507,7 +507,7 @@ class EPSGCodegenFromDataImport
                 m.remarks AS doc_help,
                 m.deprecated
             FROM epsg_unitofmeasure m
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_unitofmeasure' AND dep.object_code = m.uom_code AND dep.deprecation_date <= '2020-12-14'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_unitofmeasure' AND dep.object_code = m.uom_code AND dep.deprecation_date <= '2021-09-10'
             LEFT JOIN epsg_ellipsoid e ON e.uom_code = m.uom_code
             LEFT JOIN epsg_primemeridian pm ON pm.uom_code = m.uom_code
             LEFT JOIN epsg_coordinateaxis ca ON ca.uom_code = m.uom_code
@@ -531,7 +531,6 @@ class EPSGCodegenFromDataImport
             $data,
             'public',
             [
-                Angle::EPSG_DEGREE => ['Degree (supplier to define representation)'],
             ]
         );
         $this->codeGen->updateDocs(Angle::class, $data);
@@ -544,7 +543,7 @@ class EPSGCodegenFromDataImport
                 m.remarks AS doc_help,
                 m.deprecated
             FROM epsg_unitofmeasure m
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_unitofmeasure' AND dep.object_code = m.uom_code AND dep.deprecation_date <= '2020-12-14'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_unitofmeasure' AND dep.object_code = m.uom_code AND dep.deprecation_date <= '2021-09-10'
             LEFT JOIN epsg_ellipsoid e ON e.uom_code = m.uom_code
             LEFT JOIN epsg_coordinateaxis ca ON ca.uom_code = m.uom_code
             LEFT JOIN epsg_coordoperationparamvalue pv ON pv.uom_code = m.uom_code
@@ -575,7 +574,7 @@ class EPSGCodegenFromDataImport
                 m.remarks AS doc_help,
                 m.deprecated
             FROM epsg_unitofmeasure m
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_unitofmeasure' AND dep.object_code = m.uom_code AND dep.deprecation_date <= '2020-12-14'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_unitofmeasure' AND dep.object_code = m.uom_code AND dep.deprecation_date <= '2021-09-10'
             LEFT JOIN epsg_ellipsoid e ON e.uom_code = m.uom_code
             LEFT JOIN epsg_coordinateaxis ca ON ca.uom_code = m.uom_code
             LEFT JOIN epsg_coordoperationparamvalue pv ON pv.uom_code = m.uom_code
@@ -606,7 +605,7 @@ class EPSGCodegenFromDataImport
                 m.remarks AS doc_help,
                 m.deprecated
             FROM epsg_unitofmeasure m
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_unitofmeasure' AND dep.object_code = m.uom_code AND dep.deprecation_date <= '2020-12-14'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_unitofmeasure' AND dep.object_code = m.uom_code AND dep.deprecation_date <= '2021-09-10'
             LEFT JOIN epsg_ellipsoid e ON e.uom_code = m.uom_code
             LEFT JOIN epsg_coordinateaxis ca ON ca.uom_code = m.uom_code
             LEFT JOIN epsg_coordoperationparamvalue pv ON pv.uom_code = m.uom_code
@@ -636,7 +635,7 @@ class EPSGCodegenFromDataImport
                 m.remarks AS doc_help,
                 m.deprecated
             FROM epsg_unitofmeasure m
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_unitofmeasure' AND dep.object_code = m.uom_code AND dep.deprecation_date <= '2020-12-14'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_unitofmeasure' AND dep.object_code = m.uom_code AND dep.deprecation_date <= '2021-09-10'
             LEFT JOIN epsg_ellipsoid e ON e.uom_code = m.uom_code
             LEFT JOIN epsg_coordinateaxis ca ON ca.uom_code = m.uom_code
             LEFT JOIN epsg_coordoperationparamvalue pv ON pv.uom_code = m.uom_code
@@ -665,7 +664,7 @@ class EPSGCodegenFromDataImport
                 m.unit_of_meas_name || '\n' || m.remarks AS constant_help,
                 m.deprecated
             FROM epsg_unitofmeasure m
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_unitofmeasure' AND dep.object_code = m.uom_code AND dep.deprecation_date <= '2020-12-14'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_unitofmeasure' AND dep.object_code = m.uom_code AND dep.deprecation_date <= '2021-09-10'
             LEFT JOIN epsg_ellipsoid e ON e.uom_code = m.uom_code
             LEFT JOIN epsg_coordinateaxis ca ON ca.uom_code = m.uom_code
             LEFT JOIN epsg_coordoperationparamvalue pv ON pv.uom_code = m.uom_code
@@ -699,7 +698,7 @@ class EPSGCodegenFromDataImport
                 p.remarks AS doc_help,
                 p.deprecated
             FROM epsg_primemeridian p
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_primemeridian' AND dep.object_code = p.prime_meridian_code AND dep.deprecation_date <= '2020-12-14'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_primemeridian' AND dep.object_code = p.prime_meridian_code AND dep.deprecation_date <= '2021-09-10'
             WHERE dep.deprecation_id IS NULL
             ORDER BY name
             ";
@@ -730,7 +729,7 @@ class EPSGCodegenFromDataImport
                 e.remarks AS doc_help,
                 e.deprecated
             FROM epsg_ellipsoid e
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_ellipsoid' AND dep.object_code = e.ellipsoid_code AND dep.deprecation_date <= '2020-12-14'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_ellipsoid' AND dep.object_code = e.ellipsoid_code AND dep.deprecation_date <= '2021-09-10'
             WHERE dep.deprecation_id IS NULL
             ORDER BY name
         ";
@@ -770,7 +769,7 @@ class EPSGCodegenFromDataImport
             FROM epsg_datum d
             JOIN epsg_usage u ON u.object_table_name = 'epsg_datum' AND u.object_code = d.datum_code
             JOIN epsg_extent e ON u.extent_code = e.extent_code
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_datum' AND dep.object_code = d.datum_code AND dep.deprecation_date <= '2020-12-14'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_datum' AND dep.object_code = d.datum_code AND dep.deprecation_date <= '2021-09-10'
             WHERE dep.deprecation_id IS NULL AND d.datum_type != 'engineering'
             GROUP BY d.datum_code
             ORDER BY name
@@ -806,10 +805,6 @@ class EPSGCodegenFromDataImport
             $data,
             'public',
             [
-                Datum::EPSG_ORDNANCE_SURVEY_OF_GREAT_BRITAIN_1936 => ['OSGB 1936'],
-                Datum::EPSG_GENOA_1942 => ['Genoa'],
-                Datum::EPSG_SWISS_TERRESTRIAL_REFERENCE_SYSTEM_1995 => ['Swiss Terrestrial Reference Frame 1995'],
-                Datum::EPSG_RESEAU_GEODESIQUE_FRANCAIS_1993_V1 => ['Reseau Geodesique Francais 1993'],
             ]
         );
         $this->codeGen->updateDocs(Datum::class, $data);
@@ -829,7 +824,7 @@ class EPSGCodegenFromDataImport
                 cs.deprecated
             FROM epsg_coordinatesystem cs
             JOIN epsg_coordinatereferencesystem crs ON crs.coord_sys_code = cs.coord_sys_code AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatesystem' AND dep.object_code = cs.coord_sys_code AND dep.deprecation_date <= '2020-12-14'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatesystem' AND dep.object_code = cs.coord_sys_code AND dep.deprecation_date <= '2021-09-10'
             WHERE dep.deprecation_id IS NULL AND cs.coord_sys_type != 'ordinal'
             AND cs.coord_sys_type = 'Cartesian'
             GROUP BY cs.coord_sys_code
@@ -878,7 +873,7 @@ class EPSGCodegenFromDataImport
                 cs.deprecated
             FROM epsg_coordinatesystem cs
             JOIN epsg_coordinatereferencesystem crs ON crs.coord_sys_code = cs.coord_sys_code AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatesystem' AND dep.object_code = cs.coord_sys_code AND dep.deprecation_date <= '2020-12-14'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatesystem' AND dep.object_code = cs.coord_sys_code AND dep.deprecation_date <= '2021-09-10'
             WHERE dep.deprecation_id IS NULL AND cs.coord_sys_type != 'ordinal'
             AND cs.coord_sys_type = 'ellipsoidal'
             GROUP BY cs.coord_sys_code
@@ -927,7 +922,7 @@ class EPSGCodegenFromDataImport
                 cs.deprecated
             FROM epsg_coordinatesystem cs
             JOIN epsg_coordinatereferencesystem crs ON crs.coord_sys_code = cs.coord_sys_code AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatesystem' AND dep.object_code = cs.coord_sys_code AND dep.deprecation_date <= '2020-12-14'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatesystem' AND dep.object_code = cs.coord_sys_code AND dep.deprecation_date <= '2021-09-10'
             WHERE dep.deprecation_id IS NULL AND cs.coord_sys_type != 'ordinal'
             AND cs.coord_sys_type = 'vertical'
             GROUP BY cs.coord_sys_code
@@ -976,7 +971,7 @@ class EPSGCodegenFromDataImport
                 cs.deprecated
             FROM epsg_coordinatesystem cs
             JOIN epsg_coordinatereferencesystem crs ON crs.coord_sys_code = cs.coord_sys_code AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatesystem' AND dep.object_code = cs.coord_sys_code AND dep.deprecation_date <= '2020-12-14'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatesystem' AND dep.object_code = cs.coord_sys_code AND dep.deprecation_date <= '2021-09-10'
             WHERE dep.deprecation_id IS NULL AND cs.coord_sys_type != 'ordinal'
             AND cs.coord_sys_type NOT IN ('Cartesian', 'ellipsoidal', 'vertical')
             GROUP BY cs.coord_sys_code
@@ -1034,7 +1029,7 @@ class EPSGCodegenFromDataImport
             JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
             JOIN epsg_extent e ON u.extent_code = e.extent_code
             JOIN epsg_coordinatereferencesystem horizontal ON horizontal.coord_ref_sys_code = crs.cmpd_horizcrs_code
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2020-12-14'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2021-09-10'
             WHERE dep.deprecation_id IS NULL AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%' AND crs.coord_ref_sys_name NOT LIKE '%mining%'
             AND (crs.cmpd_horizcrs_code IS NULL OR crs.cmpd_horizcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
             AND (crs.cmpd_vertcrs_code IS NULL OR crs.cmpd_vertcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
@@ -1057,12 +1052,6 @@ class EPSGCodegenFromDataImport
             $data,
             'public',
             [
-                Compound::EPSG_OSGB36_BRITISH_NATIONAL_GRID_PLUS_ODN_HEIGHT => ['OSGB 1936 / British National Grid + ODN height'],
-                Compound::EPSG_BD72_BELGIAN_LAMBERT_72_PLUS_OSTEND_HEIGHT => ['Belge 1972 / Belgian Lambert 72 + Ostend height'],
-                Compound::EPSG_RGF93_V1_LAMBERT_93_PLUS_NGF_IGN69_HEIGHT => ['RGF93 / Lambert-93 + NGF-IGN69 height'],
-                Compound::EPSG_RGF93_V1_LAMBERT_93_PLUS_NGF_IGN78_HEIGHT => ['RGF93 / Lambert-93 + NGF-IGN78 height'],
-                Compound::EPSG_RGF93_V2_PLUS_NGF_IGN69_HEIGHT => ['RGF93 + NGF-IGN69 height'],
-                Compound::EPSG_RGF93_V2_PLUS_NGF_IGN78_HEIGHT => ['RGF93 + NGF-IGN78 height'],
             ]
         );
         $this->codeGen->updateDocs(Compound::class, $data);
@@ -1085,7 +1074,7 @@ class EPSGCodegenFromDataImport
             JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
             JOIN epsg_extent e ON u.extent_code = e.extent_code
             LEFT JOIN epsg_coordinatereferencesystem crs_base ON crs_base.coord_ref_sys_code = crs.base_crs_code
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2020-12-14'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2021-09-10'
             WHERE dep.deprecation_id IS NULL AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%' AND crs.coord_ref_sys_name NOT LIKE '%mining%'
             AND (crs.cmpd_horizcrs_code IS NULL OR crs.cmpd_horizcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
             AND (crs.cmpd_vertcrs_code IS NULL OR crs.cmpd_vertcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
@@ -1108,8 +1097,6 @@ class EPSGCodegenFromDataImport
             $data,
             'public',
             [
-                Geocentric::EPSG_CHTRS95 => ['CHTRF95'],
-                Geocentric::EPSG_RGF93_V1 => ['RGF93'],
             ]
         );
         $this->codeGen->updateDocs(Geocentric::class, $data);
@@ -1132,7 +1119,7 @@ class EPSGCodegenFromDataImport
             JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
             JOIN epsg_extent e ON u.extent_code = e.extent_code
             LEFT JOIN epsg_coordinatereferencesystem crs_base ON crs_base.coord_ref_sys_code = crs.base_crs_code
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2020-12-14'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2021-09-10'
             WHERE dep.deprecation_id IS NULL AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%' AND crs.coord_ref_sys_name NOT LIKE '%mining%'
             AND (crs.cmpd_horizcrs_code IS NULL OR crs.cmpd_horizcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
             AND (crs.cmpd_vertcrs_code IS NULL OR crs.cmpd_vertcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
@@ -1155,13 +1142,6 @@ class EPSGCodegenFromDataImport
             $data,
             'public',
             [
-                Geographic2D::EPSG_OSGB36 => ['OSGB 1936'],
-                Geographic2D::EPSG_BD50 => ['Belge 1950'],
-                Geographic2D::EPSG_BD50_BRUSSELS => ['Belge 1950 (Brussels)'],
-                Geographic2D::EPSG_BD72 => ['Belge 1972'],
-                Geographic2D::EPSG_CHTRS95 => ['CHTRF95'],
-                Geographic2D::EPSG_RGF93_V1 => ['RGF93'],
-                Geographic2D::EPSG_RGF93_V1_LON_LAT => ['RGF93 (lon-lat)'],
             ]
         );
         $this->codeGen->updateDocs(Geographic2D::class, $data);
@@ -1184,7 +1164,7 @@ class EPSGCodegenFromDataImport
             JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
             JOIN epsg_extent e ON u.extent_code = e.extent_code
             LEFT JOIN epsg_coordinatereferencesystem crs_base ON crs_base.coord_ref_sys_code = crs.base_crs_code
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2020-12-14'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2021-09-10'
             WHERE dep.deprecation_id IS NULL AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%' AND crs.coord_ref_sys_name NOT LIKE '%mining%'
             AND (crs.cmpd_horizcrs_code IS NULL OR crs.cmpd_horizcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
             AND (crs.cmpd_vertcrs_code IS NULL OR crs.cmpd_vertcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
@@ -1207,9 +1187,6 @@ class EPSGCodegenFromDataImport
             $data,
             'public',
             [
-                Geographic3D::EPSG_CHTRS95 => ['CHTRF95'],
-                Geographic3D::EPSG_RGF93_V1 => ['RGF93'],
-                Geographic3D::EPSG_RGF93_V1_LON_LAT => ['RGF93 (lon-lat)'],
             ]
         );
         $this->codeGen->updateDocs(Geographic3D::class, $data);
@@ -1232,7 +1209,7 @@ class EPSGCodegenFromDataImport
             JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
             JOIN epsg_extent e ON u.extent_code = e.extent_code
             LEFT JOIN epsg_coordinatereferencesystem crs_base ON crs_base.coord_ref_sys_code = crs.base_crs_code
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2020-12-14'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2021-09-10'
             WHERE dep.deprecation_id IS NULL AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%' AND crs.coord_ref_sys_name NOT LIKE '%mining%'
             AND (crs.cmpd_horizcrs_code IS NULL OR crs.cmpd_horizcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
             AND (crs.cmpd_vertcrs_code IS NULL OR crs.cmpd_vertcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
@@ -1255,25 +1232,6 @@ class EPSGCodegenFromDataImport
             $data,
             'public',
             [
-                Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID => ['OSGB 1936 / British National Grid'],
-                Projected::EPSG_ETRF2000_PL_CS2000_15 => ['ETRS89 / Poland CS2000 zone 5'],
-                Projected::EPSG_ETRF2000_PL_CS2000_18 => ['ETRS89 / Poland CS2000 zone 6'],
-                Projected::EPSG_ETRF2000_PL_CS2000_21 => ['ETRS89 / Poland CS2000 zone 7'],
-                Projected::EPSG_ETRF2000_PL_CS2000_24 => ['ETRS89 / Poland CS2000 zone 8'],
-                Projected::EPSG_ETRF2000_PL_CS92 => ['ETRS89 / Poland CS92'],
-                Projected::EPSG_BD50_BRUSSELS_BELGE_LAMBERT_50 => ['Belge 1950 (Brussels) / Belge Lambert 50'],
-                Projected::EPSG_BD72_BELGE_LAMBERT_72 => ['Belge 1972 / Belge Lambert 72'],
-                Projected::EPSG_BD72_BELGIAN_LAMBERT_72 => ['Belge 1972 / Belgian Lambert 72'],
-                Projected::EPSG_RGF93_V1_CC42 => ['RGF93 / CC42'],
-                Projected::EPSG_RGF93_V1_CC43 => ['RGF93 / CC43'],
-                Projected::EPSG_RGF93_V1_CC44 => ['RGF93 / CC44'],
-                Projected::EPSG_RGF93_V1_CC45 => ['RGF93 / CC45'],
-                Projected::EPSG_RGF93_V1_CC46 => ['RGF93 / CC46'],
-                Projected::EPSG_RGF93_V1_CC47 => ['RGF93 / CC47'],
-                Projected::EPSG_RGF93_V1_CC48 => ['RGF93 / CC48'],
-                Projected::EPSG_RGF93_V1_CC49 => ['RGF93 / CC49'],
-                Projected::EPSG_RGF93_V1_CC50 => ['RGF93 / CC50'],
-                Projected::EPSG_RGF93_V1_LAMBERT_93 => ['RGF93 / Lambert-93'],
             ]
         );
         $this->codeGen->updateDocs(Projected::class, $data);
@@ -1297,7 +1255,7 @@ class EPSGCodegenFromDataImport
             JOIN epsg_extent e ON u.extent_code = e.extent_code
             LEFT JOIN epsg_coordinatereferencesystem crs_base ON crs_base.coord_ref_sys_code = crs.base_crs_code
             LEFT JOIN epsg_coordinatereferencesystem crs_base2 ON crs_base2.coord_ref_sys_code = crs_base.base_crs_code
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2020-12-14'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2021-09-10'
             WHERE dep.deprecation_id IS NULL AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%' AND crs.coord_ref_sys_name NOT LIKE '%mining%'
             AND (crs.cmpd_horizcrs_code IS NULL OR crs.cmpd_horizcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
             AND (crs.cmpd_vertcrs_code IS NULL OR crs.cmpd_vertcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
@@ -1320,7 +1278,6 @@ class EPSGCodegenFromDataImport
             $data,
             'public',
             [
-                Vertical::EPSG_GENOA_1942_HEIGHT => ['Genoa Height'],
             ]
         );
         $this->codeGen->updateDocs(Vertical::class, $data);
@@ -1341,7 +1298,7 @@ class EPSGCodegenFromDataImport
             JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
             JOIN epsg_extent e ON u.extent_code = e.extent_code
             LEFT JOIN epsg_coordinatereferencesystem crs_base ON crs_base.coord_ref_sys_code = crs.base_crs_code
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2020-12-14'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2021-09-10'
             WHERE dep.deprecation_id IS NULL AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%' AND crs.coord_ref_sys_name NOT LIKE '%mining%'
             AND (crs.cmpd_horizcrs_code IS NULL OR crs.cmpd_horizcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
             AND (crs.cmpd_vertcrs_code IS NULL OR crs.cmpd_vertcrs_code NOT IN (SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_kind = 'engineering'))
@@ -1376,7 +1333,7 @@ class EPSGCodegenFromDataImport
                 m.deprecated
             FROM epsg_coordoperationmethod m
             LEFT JOIN epsg_coordoperationparamvalue p ON p.coord_op_method_code = m.coord_op_method_code
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperationmethod' AND dep.object_code = m.coord_op_method_code AND dep.deprecation_date <= '2020-12-14'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperationmethod' AND dep.object_code = m.coord_op_method_code AND dep.deprecation_date <= '2021-09-10'
             WHERE dep.deprecation_id IS NULL AND m.deprecated = 0
             AND m.coord_op_method_name NOT LIKE '%wellbore%'
             AND m.coord_op_method_name NOT LIKE '%mining%'
@@ -1485,7 +1442,7 @@ class EPSGCodegenFromDataImport
             JOIN epsg_coordinatereferencesystem targetcrs ON targetcrs.coord_ref_sys_code = o.target_crs_code AND targetcrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND targetcrs.deprecated = 0
             JOIN epsg_usage u ON u.object_table_name = 'epsg_coordoperation' AND u.object_code = o.coord_op_code
             JOIN epsg_extent e ON u.extent_code = e.extent_code
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperation' AND dep.object_code = o.coord_op_code AND dep.deprecation_date <= '2020-12-14'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperation' AND dep.object_code = o.coord_op_code AND dep.deprecation_date <= '2021-09-10'
             LEFT JOIN epsg_supersession s ON s.object_table_name = 'epsg_coordoperation' AND s.object_code = o.coord_op_code
             WHERE o.coord_op_type != 'conversion' AND o.coord_op_type != 'concatenated operation' AND o.coord_op_name NOT LIKE '%example%'
             AND dep.deprecation_id IS NULL AND o.deprecated = 0 AND s.supersession_id IS NULL
@@ -1506,7 +1463,7 @@ class EPSGCodegenFromDataImport
             JOIN epsg_coordoperationmethod m ON m.coord_op_method_code = o.coord_op_method_code
             JOIN epsg_usage u ON u.object_table_name = 'epsg_coordoperation' AND u.object_code = o.coord_op_code
             JOIN epsg_extent e ON u.extent_code = e.extent_code
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperation' AND dep.object_code = o.coord_op_code AND dep.deprecation_date <= '2020-12-14'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperation' AND dep.object_code = o.coord_op_code AND dep.deprecation_date <= '2021-09-10'
             LEFT JOIN epsg_supersession s ON s.object_table_name = 'epsg_coordoperation' AND s.object_code = o.coord_op_code
             WHERE o.coord_op_type = 'conversion' AND o.coord_op_type != 'concatenated operation' AND o.coord_op_name NOT LIKE '%example%'
             AND dep.deprecation_id IS NULL AND o.deprecated = 0 AND s.supersession_id IS NULL
@@ -1612,7 +1569,7 @@ class EPSGCodegenFromDataImport
             FROM epsg_coordinatereferencesystem crs
             JOIN epsg_usage u ON u.object_code = crs.coord_ref_sys_code AND u.object_table_name = 'epsg_coordinatereferencesystem'
             JOIN epsg_extent e ON u.extent_code = e.extent_code
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2020-12-14'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2021-09-10'
             WHERE dep.deprecation_id IS NULL AND e.deprecated = 0
 
             UNION
@@ -1621,7 +1578,7 @@ class EPSGCodegenFromDataImport
             FROM epsg_coordoperation o
             JOIN epsg_usage u ON u.object_code = o.coord_op_code AND u.object_table_name = 'epsg_coordoperation'
             JOIN epsg_extent e ON u.extent_code = e.extent_code
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperation' AND dep.object_code = o.coord_op_code AND dep.deprecation_date <= '2020-12-14'
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperation' AND dep.object_code = o.coord_op_code AND dep.deprecation_date <= '2021-09-10'
             WHERE dep.deprecation_id IS NULL AND e.deprecated = 0
 
             GROUP BY e.extent_code

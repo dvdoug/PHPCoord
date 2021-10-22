@@ -7680,26 +7680,6 @@ class Datum
      */
     public const EPSG_FK89 = 'urn:ogc:def:datum:EPSG::6753';
 
-    /**
-     * @deprecated use EPSG_ORDNANCE_SURVEY_OF_GREAT_BRITAIN_1936 instead
-     */
-    public const EPSG_OSGB_1936 = 'urn:ogc:def:datum:EPSG::6277';
-
-    /**
-     * @deprecated use EPSG_GENOA_1942 instead
-     */
-    public const EPSG_GENOA = 'urn:ogc:def:datum:EPSG::1051';
-
-    /**
-     * @deprecated use EPSG_SWISS_TERRESTRIAL_REFERENCE_SYSTEM_1995 instead
-     */
-    public const EPSG_SWISS_TERRESTRIAL_REFERENCE_FRAME_1995 = 'urn:ogc:def:datum:EPSG::6151';
-
-    /**
-     * @deprecated use EPSG_RESEAU_GEODESIQUE_FRANCAIS_1993_V1 instead
-     */
-    public const EPSG_RESEAU_GEODESIQUE_FRANCAIS_1993 = 'urn:ogc:def:datum:EPSG::6171';
-
     protected static array $sridData = [
         'urn:ogc:def:datum:EPSG::1024' => [
             'name' => 'Hungarian Datum 1909',

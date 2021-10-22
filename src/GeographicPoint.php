@@ -2229,7 +2229,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         Geographic $to,
         NADCON5Grid $latitudeDifferenceFile,
         NADCON5Grid $longitudeDifferenceFile,
-        ?NADCON5Grid $ellipsoidalHeightDifferenceFile = null,
+        ?NADCON5Grid $ellipsoidalHeightDifferenceFile,
         bool $inReverse
     ): self {
         /*

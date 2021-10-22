@@ -11,7 +11,6 @@ namespace PHPCoord\CoordinateOperation;
 use function abs;
 use function assert;
 use function explode;
-use const PHP_MAJOR_VERSION;
 use PHPCoord\CoordinateReferenceSystem\Geographic;
 use PHPCoord\GeographicPoint;
 use PHPCoord\UnitOfMeasure\Angle\Degree;
@@ -82,11 +81,6 @@ class IGNFGeocentricTranslationGrid extends SplFileObject
     private function getRecord(int $longitudeIndex, int $latitudeIndex): GridValues
     {
         $record = ($longitudeIndex * ($this->numberOfRows + 1) + $latitudeIndex + 4);
-
-        // https://bugs.php.net/bug.php?id=62004
-        if (PHP_MAJOR_VERSION < 8) {
-            --$record;
-        }
 
         $this->seek($record);
         $rawData = explode(' ', trim(preg_replace('/ +/', ' ', $this->fgets())));

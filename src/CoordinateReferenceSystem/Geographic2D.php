@@ -3959,41 +3959,6 @@ class Geographic2D extends Geographic
      */
     public const EPSG_FK89 = 'urn:ogc:def:crs:EPSG::4753';
 
-    /**
-     * @deprecated use EPSG_OSGB36 instead
-     */
-    public const EPSG_OSGB_1936 = 'urn:ogc:def:crs:EPSG::4277';
-
-    /**
-     * @deprecated use EPSG_BD50 instead
-     */
-    public const EPSG_BELGE_1950 = 'urn:ogc:def:crs:EPSG::4215';
-
-    /**
-     * @deprecated use EPSG_BD50_BRUSSELS instead
-     */
-    public const EPSG_BELGE_1950_BRUSSELS = 'urn:ogc:def:crs:EPSG::4809';
-
-    /**
-     * @deprecated use EPSG_BD72 instead
-     */
-    public const EPSG_BELGE_1972 = 'urn:ogc:def:crs:EPSG::4313';
-
-    /**
-     * @deprecated use EPSG_CHTRS95 instead
-     */
-    public const EPSG_CHTRF95 = 'urn:ogc:def:crs:EPSG::4151';
-
-    /**
-     * @deprecated use EPSG_RGF93_V1 instead
-     */
-    public const EPSG_RGF93 = 'urn:ogc:def:crs:EPSG::4171';
-
-    /**
-     * @deprecated use EPSG_RGF93_V1_LON_LAT instead
-     */
-    public const EPSG_RGF93_LON_LAT = 'urn:ogc:def:crs:EPSG::7084';
-
     private static array $cachedObjects = [];
 
     private static array $supportedCache = [];

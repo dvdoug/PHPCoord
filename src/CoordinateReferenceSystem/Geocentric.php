@@ -1527,16 +1527,6 @@ class Geocentric extends CoordinateReferenceSystem
      */
     public const EPSG_YEMEN_NGN96 = 'urn:ogc:def:crs:EPSG::4980';
 
-    /**
-     * @deprecated use EPSG_CHTRS95 instead
-     */
-    public const EPSG_CHTRF95 = 'urn:ogc:def:crs:EPSG::4932';
-
-    /**
-     * @deprecated use EPSG_RGF93_V1 instead
-     */
-    public const EPSG_RGF93 = 'urn:ogc:def:crs:EPSG::4964';
-
     private static array $cachedObjects = [];
 
     private static array $supportedCache = [];

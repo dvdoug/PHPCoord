@@ -143,24 +143,16 @@ class Rate implements UnitOfMeasure
             throw new UnknownUnitOfMeasureException($srid);
         }
 
-        switch ($srid) {
-            case self::EPSG_ARC_SECONDS_PER_YEAR:
-                return new self(new ArcSecond($measurement), new Year(1));
-            case self::EPSG_MILLIARC_SECONDS_PER_YEAR:
-                return new self(Angle::makeUnit($measurement, Angle::EPSG_MILLIARC_SECOND), new Year(1));
-            case self::EPSG_METRES_PER_YEAR:
-                return new self(new Metre($measurement), new Year(1));
-            case self::EPSG_MILLIMETRES_PER_YEAR:
-                return new self(new Millimetre($measurement), new Year(1));
-            case self::EPSG_CENTIMETRES_PER_YEAR:
-                return new self(new Centimetre($measurement), new Year(1));
-            case self::EPSG_PARTS_PER_BILLION_PER_YEAR:
-                return new self(new PartsPerBillion($measurement), new Year(1));
-            case self::EPSG_PARTS_PER_MILLION_PER_YEAR:
-                return new self(new PartsPerMillion($measurement), new Year(1));
-        }
-
-        throw new UnknownUnitOfMeasureException($srid); //@codeCoverageIgnore
+        return match ($srid) {
+            self::EPSG_ARC_SECONDS_PER_YEAR => new self(new ArcSecond($measurement), new Year(1)),
+            self::EPSG_MILLIARC_SECONDS_PER_YEAR => new self(Angle::makeUnit($measurement, Angle::EPSG_MILLIARC_SECOND), new Year(1)),
+            self::EPSG_METRES_PER_YEAR => new self(new Metre($measurement), new Year(1)),
+            self::EPSG_MILLIMETRES_PER_YEAR => new self(new Millimetre($measurement), new Year(1)),
+            self::EPSG_CENTIMETRES_PER_YEAR => new self(new Centimetre($measurement), new Year(1)),
+            self::EPSG_PARTS_PER_BILLION_PER_YEAR => new self(new PartsPerBillion($measurement), new Year(1)),
+            self::EPSG_PARTS_PER_MILLION_PER_YEAR => new self(new PartsPerMillion($measurement), new Year(1)),
+            default => throw new UnknownUnitOfMeasureException($srid),
+        };
     }
 
     public static function getSupportedSRIDs(): array

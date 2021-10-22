@@ -30,7 +30,7 @@ use PHPCoord\Geometry\BoundingArea;
 use PHPCoord\Point;
 use PHPCoord\ProjectedPoint;
 use PHPCoord\UnitOfMeasure\Time\Year;
-use function strpos;
+use function str_starts_with;
 use function usort;
 
 /**
@@ -70,7 +70,7 @@ trait AutoConversion
             return $this;
         }
 
-        if (strpos($this->getCRS()->getSRID(), CoordinateReferenceSystem::CRS_SRID_PREFIX_EPSG) !== 0 || strpos($to->getSRID(), CoordinateReferenceSystem::CRS_SRID_PREFIX_EPSG) !== 0) {
+        if (!str_starts_with($to->getSRID(), CoordinateReferenceSystem::CRS_SRID_PREFIX_EPSG) || !str_starts_with($this->getCRS()->getSRID(), CoordinateReferenceSystem::CRS_SRID_PREFIX_EPSG)) {
             throw new UnknownConversionException('Automatic conversions are only supported for EPSG CRSs');
         }
 
@@ -244,7 +244,7 @@ trait AutoConversion
         try {
             // try converting to WGS84 if possible...
             return $point->convert(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), true)->asGeographicValue();
-        } catch (UnknownConversionException $e) {
+        } catch (UnknownConversionException) {
             /*
              * If Projected then either the point is inside the boundary by definition
              * or the user is deliberately exceeding the safe zone so safe to make a no-op either way.

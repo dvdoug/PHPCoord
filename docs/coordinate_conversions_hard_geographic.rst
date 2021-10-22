@@ -697,7 +697,7 @@ NADCON5
         Geographic $to,
         NADCON5Grid $latitudeDifferenceFile,
         NADCON5Grid $longitudeDifferenceFile,
-        ?NADCON5Grid $ellipsoidalHeightDifferenceFile = null,
+        ?NADCON5Grid $ellipsoidalHeightDifferenceFile,
         bool $inReverse
     ); // returns a new GeographicPoint
 

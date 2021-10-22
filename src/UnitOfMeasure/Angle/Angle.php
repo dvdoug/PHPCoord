@@ -125,11 +125,6 @@ abstract class Angle implements UnitOfMeasure
      */
     public const EPSG_SEXAGESIMAL_DMS = 'urn:ogc:def:uom:EPSG::9110';
 
-    /**
-     * @deprecated use EPSG_DEGREE instead
-     */
-    public const EPSG_DEGREE_SUPPLIER_TO_DEFINE_REPRESENTATION = 'urn:ogc:def:uom:EPSG::9102';
-
     protected static array $sridData = [
         'urn:ogc:def:uom:EPSG::1031' => [
             'name' => 'milliarc-second',
@@ -221,42 +216,25 @@ abstract class Angle implements UnitOfMeasure
      */
     public static function makeUnit($measurement, string $srid): self
     {
-        switch ($srid) {
-            case self::EPSG_RADIAN:
-                return new Radian($measurement);
-            case self::EPSG_MICRORADIAN:
-                return new Radian($measurement / 1000000);
-            case self::EPSG_DEGREE:
-                return new Degree($measurement);
-            case self::EPSG_ARC_SECOND:
-                return new ArcSecond($measurement);
-            case self::EPSG_MILLIARC_SECOND:
-                return new ArcSecond($measurement / 1000);
-            case self::EPSG_GRAD:
-                return new Grad($measurement);
-            case self::EPSG_CENTESIMAL_SECOND:
-                return new Radian($measurement * M_PI / 2000000);
-            case self::EPSG_DEGREE_MINUTE_SECOND:
-                return Degree::fromDegreeMinuteSecond((string) $measurement);
-            case self::EPSG_DEGREE_MINUTE_SECOND_HEMISPHERE:
-                return Degree::fromDegreeMinuteSecondHemisphere((string) $measurement);
-            case self::EPSG_HEMISPHERE_DEGREE_MINUTE_SECOND:
-                return Degree::fromHemisphereDegreeMinuteSecond((string) $measurement);
-            case self::EPSG_DEGREE_MINUTE:
-                return Degree::fromDegreeMinute((string) $measurement);
-            case self::EPSG_DEGREE_MINUTE_HEMISPHERE:
-                return Degree::fromDegreeMinuteHemisphere((string) $measurement);
-            case self::EPSG_HEMISPHERE_DEGREE_MINUTE:
-                return Degree::fromHemisphereDegreeMinute((string) $measurement);
-            case self::EPSG_DEGREE_HEMISPHERE:
-                return Degree::fromDegreeHemisphere((string) $measurement);
-            case self::EPSG_HEMISPHERE_DEGREE:
-                return Degree::fromHemisphereDegree((string) $measurement);
-            case self::EPSG_SEXAGESIMAL_DMS:
-                return Degree::fromSexagesimalDMS((string) $measurement);
-        }
-
-        throw new UnknownUnitOfMeasureException($srid);
+        return match ($srid) {
+            self::EPSG_RADIAN => new Radian($measurement),
+            self::EPSG_MICRORADIAN => new Radian($measurement / 1000000),
+            self::EPSG_DEGREE => new Degree($measurement),
+            self::EPSG_ARC_SECOND => new ArcSecond($measurement),
+            self::EPSG_MILLIARC_SECOND => new ArcSecond($measurement / 1000),
+            self::EPSG_GRAD => new Grad($measurement),
+            self::EPSG_CENTESIMAL_SECOND => new Radian($measurement * M_PI / 2000000),
+            self::EPSG_DEGREE_MINUTE_SECOND => Degree::fromDegreeMinuteSecond((string) $measurement),
+            self::EPSG_DEGREE_MINUTE_SECOND_HEMISPHERE => Degree::fromDegreeMinuteSecondHemisphere((string) $measurement),
+            self::EPSG_HEMISPHERE_DEGREE_MINUTE_SECOND => Degree::fromHemisphereDegreeMinuteSecond((string) $measurement),
+            self::EPSG_DEGREE_MINUTE => Degree::fromDegreeMinute((string) $measurement),
+            self::EPSG_DEGREE_MINUTE_HEMISPHERE => Degree::fromDegreeMinuteHemisphere((string) $measurement),
+            self::EPSG_HEMISPHERE_DEGREE_MINUTE => Degree::fromHemisphereDegreeMinute((string) $measurement),
+            self::EPSG_DEGREE_HEMISPHERE => Degree::fromDegreeHemisphere((string) $measurement),
+            self::EPSG_HEMISPHERE_DEGREE => Degree::fromHemisphereDegree((string) $measurement),
+            self::EPSG_SEXAGESIMAL_DMS => Degree::fromSexagesimalDMS((string) $measurement),
+            default => throw new UnknownUnitOfMeasureException($srid),
+        };
     }
 
     public static function getSupportedSRIDs(): array

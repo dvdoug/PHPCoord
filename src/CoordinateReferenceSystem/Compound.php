@@ -2510,36 +2510,6 @@ class Compound extends CoordinateReferenceSystem
      */
     public const EPSG_WGS_84_WORLD_MERCATOR_PLUS_EGM2008_HEIGHT = 'urn:ogc:def:crs:EPSG::6893';
 
-    /**
-     * @deprecated use EPSG_OSGB36_BRITISH_NATIONAL_GRID_PLUS_ODN_HEIGHT instead
-     */
-    public const EPSG_OSGB_1936_BRITISH_NATIONAL_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::7405';
-
-    /**
-     * @deprecated use EPSG_BD72_BELGIAN_LAMBERT_72_PLUS_OSTEND_HEIGHT instead
-     */
-    public const EPSG_BELGE_1972_BELGIAN_LAMBERT_72_PLUS_OSTEND_HEIGHT = 'urn:ogc:def:crs:EPSG::6190';
-
-    /**
-     * @deprecated use EPSG_RGF93_V1_LAMBERT_93_PLUS_NGF_IGN69_HEIGHT instead
-     */
-    public const EPSG_RGF93_LAMBERT_93_PLUS_NGF_IGN69_HEIGHT = 'urn:ogc:def:crs:EPSG::5698';
-
-    /**
-     * @deprecated use EPSG_RGF93_V1_LAMBERT_93_PLUS_NGF_IGN78_HEIGHT instead
-     */
-    public const EPSG_RGF93_LAMBERT_93_PLUS_NGF_IGN78_HEIGHT = 'urn:ogc:def:crs:EPSG::5699';
-
-    /**
-     * @deprecated use EPSG_RGF93_V2_PLUS_NGF_IGN69_HEIGHT instead
-     */
-    public const EPSG_RGF93_PLUS_NGF_IGN69_HEIGHT = 'urn:ogc:def:crs:EPSG::9538';
-
-    /**
-     * @deprecated use EPSG_RGF93_V2_PLUS_NGF_IGN78_HEIGHT instead
-     */
-    public const EPSG_RGF93_PLUS_NGF_IGN78_HEIGHT = 'urn:ogc:def:crs:EPSG::9539';
-
     private static array $cachedObjects = [];
 
     private static array $supportedCache = [];

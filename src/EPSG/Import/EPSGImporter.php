@@ -13,7 +13,7 @@ use function file_get_contents;
 use SQLite3;
 use const SQLITE3_OPEN_CREATE;
 use const SQLITE3_OPEN_READWRITE;
-use function strpos;
+use function str_starts_with;
 use function substr;
 use function unlink;
 
@@ -44,13 +44,13 @@ class EPSGImporter
         $sqlite->exec('PRAGMA journal_mode=WAL'); //WAL is faster
 
         $tableSchema = file_get_contents($this->resourceDir . '/epsg/PostgreSQL_Table_Script.sql');
-        if (strpos($tableSchema, self::BOM) === 0) {
+        if (str_starts_with($tableSchema, self::BOM)) {
             $tableSchema = substr($tableSchema, 3);
         }
         $sqlite->exec($tableSchema);
 
         $tableData = file_get_contents($this->resourceDir . '/epsg/PostgreSQL_Data_Script.sql');
-        if (strpos($tableData, self::BOM) === 0) {
+        if (str_starts_with($tableData, self::BOM)) {
             $tableData = substr($tableData, 3);
         }
         $sqlite->exec($tableData);

@@ -12,8 +12,7 @@
     ],
     "license": "(MIT and proprietary)",
     "require": {
-        "php": "^7.4||^8.0",
-        "symfony/polyfill-php80": "^1.18"
+        "php": "^8.0"
     },
     "require-dev": {
         "ext-json": "*",

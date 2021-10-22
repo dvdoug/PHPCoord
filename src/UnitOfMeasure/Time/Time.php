@@ -56,12 +56,10 @@ abstract class Time implements UnitOfMeasure
 
     public static function makeUnit(float $measurement, string $srid): self
     {
-        switch ($srid) {
-            case self::EPSG_YEAR:
-                return new Year($measurement);
-        }
-
-        throw new UnknownUnitOfMeasureException($srid);
+        return match ($srid) {
+            self::EPSG_YEAR => new Year($measurement),
+            default => throw new UnknownUnitOfMeasureException($srid),
+        };
     }
 
     public static function getSupportedSRIDs(): array
