@@ -278,6 +278,16 @@ class AutoConversionTest extends TestCase
         }
     }
 
+    public function testAmersfoortRDNewToWGS84(): void
+    {
+        $from = ProjectedPoint::createFromEastingNorthing(new Metre(86058.2205), new Metre(445832.8025), Projected::fromSRID(Projected::EPSG_AMERSFOORT_RD_NEW));
+        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84);
+        $to = $from->convert($toCRS);
+
+        self::assertEqualsWithDelta(51.996591992, $to->getLatitude()->asDegrees()->getValue(), 0.0000001);
+        self::assertEqualsWithDelta(4.383328547, $to->getLongitude()->asDegrees()->getValue(), 0.0000001);
+    }
+
     /**
      * @group integration
      * @dataProvider EPSGConcatenatedOperations

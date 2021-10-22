@@ -327,6 +327,12 @@ class DegreeTest extends TestCase
         self::assertEquals(35.5, $original->getValue());
     }
 
+    public function testSexagesimalDMSFractionalSeconds(): void
+    {
+        $original = Degree::fromSexagesimalDMS('52.0922178');
+        self::assertEqualsWithDelta(0.910296727, $original->asRadians()->getValue(), 0.000000001);
+    }
+
     public function testSexagesimalDMSNegative(): void
     {
         $original = Degree::fromSexagesimalDMS('-35.3');
