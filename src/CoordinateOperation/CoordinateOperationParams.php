@@ -43046,6 +43046,12 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::8451' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => false,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\GTXGDA2020AHDProvider',
+            ],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::8452' => [
             'xAxisTranslation' => [
                 'value' => -377.0,
@@ -50872,6 +50878,28 @@ class CoordinateOperationParams
                 'reverses' => true,
             ],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9466' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\GTXGDA2020AHDProvider',
+            ],
+            'EPSGCodeForInterpolationCRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::7844',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9467' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\GTXGDA94AHDProvider',
+            ],
+            'EPSGCodeForInterpolationCRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::4283',
+                'uom' => null,
+                'reverses' => false,
+            ],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::9472' => [
             'xAxisTranslation' => [
                 'value' => -0.2773,
@@ -51681,6 +51709,23 @@ class CoordinateOperationParams
             'latitudeAndLongitudeDifferenceFile' => [
                 'reverses' => true,
                 'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2GDA94GDA2020AustraliaProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9692' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => false,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\GTXGDA2020AVWSProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9693' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\GTXGDA2020AVWSProvider',
+            ],
+            'EPSGCodeForInterpolationCRS' => [
+                'value' => 'urn:ogc:def:crs:EPSG::7844',
+                'uom' => null,
+                'reverses' => false,
             ],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::9703' => [

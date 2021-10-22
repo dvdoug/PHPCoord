@@ -7785,6 +7785,11 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['4177'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::8451' => [
+            'name' => 'GDA2020 to AHD height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::9665',
+            'extent_code' => ['4493'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::8452' => [
             'name' => 'Batavia to WGS 84 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
@@ -9125,6 +9130,16 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::1032',
             'extent_code' => ['4177'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9466' => [
+            'name' => 'GDA2020 to GDA2020 + AHD height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1088',
+            'extent_code' => ['4493'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9467' => [
+            'name' => 'GDA94 to GDA94 + AHD height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1088',
+            'extent_code' => ['4493'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::9472' => [
             'name' => 'DGN95 to SRGI2013 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9607',
@@ -9324,6 +9339,16 @@ class CoordinateOperations
             'name' => 'WGS 84 to GDA2020 (4)',
             'method' => 'urn:ogc:def:method:EPSG::9615',
             'extent_code' => ['2575'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9692' => [
+            'name' => 'GDA2020 to AVWS height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::9665',
+            'extent_code' => ['4177'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9693' => [
+            'name' => 'GDA2020 to GDA2020 + AVWS height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1088',
+            'extent_code' => ['4177'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::9703' => [
             'name' => 'ETRF2000-PL to ETRS89 (1)',

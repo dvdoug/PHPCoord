@@ -14,6 +14,7 @@ use PHPCoord\CoordinateOperation\CoordinateOperationMethods;
 use PHPCoord\CoordinateOperation\CoordinateOperationParams;
 use PHPCoord\CoordinateOperation\CoordinateOperations;
 use PHPCoord\CoordinateOperation\CRSTransformations;
+use PHPCoord\CoordinateOperation\GTXGDA2020AHDProvider;
 use PHPCoord\CoordinateOperation\GTXNZGeoid2016Provider;
 use PHPCoord\CoordinateOperation\OSTN15OSGM15Provider;
 use PHPCoord\CoordinateReferenceSystem\Compound;
@@ -58,7 +59,7 @@ class GeographicPoint3DTest extends TestCase
         self::assertEqualsWithDelta(12.658, $to->getHeight()->getValue(), 0.001);
     }
 
-    public function testGeographic3DTo2DPlusGravityHeightGTX(): void
+    public function testGeographic3DTo2DPlusGravityHeightGTXNZ(): void
     {
         if (!class_exists(GTXNZGeoid2016Provider::class)) {
             self::markTestSkipped('Requires phpcoord/datapack-oceania');
@@ -72,7 +73,7 @@ class GeographicPoint3DTest extends TestCase
         self::assertEqualsWithDelta(15.715, $to->getVerticalPoint()->getHeight()->getValue(), 0.0001);
     }
 
-    public function testGeographic3DGravityHeightGTX(): void
+    public function testGeographic3DGravityHeightGTXNZ(): void
     {
         if (!class_exists(GTXNZGeoid2016Provider::class)) {
             self::markTestSkipped('Requires phpcoord/datapack-oceania');
@@ -82,6 +83,20 @@ class GeographicPoint3DTest extends TestCase
         $to = $from->geographic3DToGravityHeightGTX($toCRS, (new GTXNZGeoid2016Provider())->provideGrid());
 
         self::assertEqualsWithDelta(15.715, $to->getHeight()->getValue(), 0.0001);
+    }
+
+    public function testGeographic3DTo2DPlusGravityHeightGTXAustralia(): void
+    {
+        if (!class_exists(GTXGDA2020AHDProvider::class)) {
+            self::markTestSkipped('Requires phpcoord/datapack-oceania');
+        }
+        $from = GeographicPoint::create(new Degree(-36.9003), new Degree(144.7794), new Metre(50), Geographic3D::fromSRID(Geographic3D::EPSG_GDA2020));
+        $toCRS = Compound::fromSRID(Compound::EPSG_GDA2020_PLUS_AHD_HEIGHT);
+        $to = $from->geographic3DTo2DPlusGravityHeightGTX($toCRS, (new GTXGDA2020AHDProvider())->provideGrid(), '');
+
+        self::assertEqualsWithDelta(-36.9003, $to->getHorizontalPoint()->getLatitude()->getValue(), 0.00000000001);
+        self::assertEqualsWithDelta(144.7794, $to->getHorizontalPoint()->getLongitude()->getValue(), 0.00000000001);
+        self::assertEqualsWithDelta(43.504, $to->getVerticalPoint()->getHeight()->getValue(), 0.001);
     }
 
     /**

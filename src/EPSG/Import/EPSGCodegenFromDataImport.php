@@ -66,7 +66,6 @@ class EPSGCodegenFromDataImport
         1096, // Geog3D to Geog2D+GravityRelatedHeight (OSGM15Ire)
         1025, // Geographic3D to GravityRelatedHeight (EGM2008)
         1047, // Geographic3D to GravityRelatedHeight (Gravsoft)
-        1048, // Geographic3D to GravityRelatedHeight (AUSGeoid v2)
         1050, // Geographic3D to GravityRelatedHeight (CI)
         1059, // Geographic3D to GravityRelatedHeight (PNG)
         1060, // Geographic3D to GravityRelatedHeight (CGG2013)
@@ -76,7 +75,6 @@ class EPSGCodegenFromDataImport
         1080, // Vertical Offset by Grid Interpolation (BEV AT)
         1081, // Geographic3D to GravityRelatedHeight (BEV AT)
         1082, // Geographic3D to GravityRelatedHeight (SA 2010)
-        1083, // Geog3D to Geog2D+GravityRelatedHeight (AUSGeoidv2)
         1085, // Vertical Offset by Grid Interpolation (asc)
         1086, // Point motion (geocen) by grid (INADEFORM)
         1089, // Geog3D to Geog2D+GravityRelatedHeight (BEV AT)
@@ -97,7 +95,6 @@ class EPSGCodegenFromDataImport
         9634, // Maritime Provinces polynomial interpolation
         9658, // Vertical Offset by Grid Interpolation (VERTCON)
         9661, // Geographic3D to GravityRelatedHeight (EGM)
-        9662, // Geographic3D to GravityRelatedHeight (AUSGeoid98)
         9664, // Geographic3D to GravityRelatedHeight (IGN1997)
 
         // only distributed as .dll, can't use

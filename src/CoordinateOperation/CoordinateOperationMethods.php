@@ -192,6 +192,11 @@ class CoordinateOperationMethods
     public const EPSG_GEOCENTRIC_TOPOCENTRIC_CONVERSIONS = 'urn:ogc:def:method:EPSG::9836';
 
     /**
+     * Geog3D to Geog2D+GravityRelatedHeight (AUSGeoidv2).
+     */
+    public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_AUSGEOIDV2 = 'urn:ogc:def:method:EPSG::1083';
+
+    /**
      * Geog3D to Geog2D+GravityRelatedHeight (OSGM-GB).
      */
     public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_OSGM_GB = 'urn:ogc:def:method:EPSG::1097';
@@ -238,6 +243,14 @@ class CoordinateOperationMethods
      * Geographic3D to 2D conversion.
      */
     public const EPSG_GEOGRAPHIC3D_TO_2D_CONVERSION = 'urn:ogc:def:method:EPSG::9659';
+
+    /**
+     * Geographic3D to GravityRelatedHeight (AUSGeoid v2)
+     * The Information Source references software which offers both bi-cubic and bi-linear interpolation methods.
+     * Unlike earlier AUSGeoid98 method which used bi-linear interpolation, Ausgeoid v2 uses bi-cubic. See Info Source
+     * for file format documentation.
+     */
+    public const EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_AUSGEOID_V2 = 'urn:ogc:def:method:EPSG::1048';
 
     /**
      * Geographic3D to GravityRelatedHeight (NZgeoid)

@@ -168,4 +168,8 @@ return [
     'Slovakia_ETRS89h_to_EVRF2007.gtx' => CoordinateOperation\GTXETRS89EVRF2007SlovakiaProvider::class,
     'Slovakia_ETRS89h_to_Baltic1957.gtx' => CoordinateOperation\GTXETRS89Baltic1957SlovakiaProvider::class,
     'nlgeo2018.gtx' => CoordinateOperation\GTXETRS89NAPProvider::class,
+    'AUSGeoid09_V1.01.gtx' => CoordinateOperation\GTXGDA94AHDProvider::class,
+    'AUSGeoid09_GDA94_V1.01_DOV_windows.gtx' => CoordinateOperation\GTXGDA94AHDProvider::class,
+    'AUSGeoid2020_20180201.gtx' => CoordinateOperation\GTXGDA2020AHDProvider::class,
+    'AGQG_20201120.gtx' => CoordinateOperation\GTXGDA2020AVWSProvider::class,
 ];
