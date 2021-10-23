@@ -9540,6 +9540,11 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::1095',
             'extent_code' => ['2893'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9662' => [
+            'name' => 'Baltic 1986 height to EVRF2007-PL height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1101',
+            'extent_code' => ['3293'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::9673' => [
             'name' => 'US Forest Service region 6 Albers',
             'method' => 'urn:ogc:def:method:EPSG::9822',
@@ -9614,6 +9619,26 @@ class CoordinateOperations
             'name' => 'EVRF2019 height to EVRF2019 mean-tide height (1)',
             'method' => 'urn:ogc:def:method:EPSG::1107',
             'extent_code' => ['4608'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9717' => [
+            'name' => 'ETRF2000-PL to Baltic 1986 height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1099',
+            'extent_code' => ['3293'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9718' => [
+            'name' => 'ETRF2000-PL to ETRF2000-PL + Baltic 1986 height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1100',
+            'extent_code' => ['3293'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9719' => [
+            'name' => 'ETRF2000-PL to EVRF2007-PL height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1099',
+            'extent_code' => ['3293'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9720' => [
+            'name' => 'ETRF2000-PL to ETRF2000-PL + EVRF2007-PL height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1100',
+            'extent_code' => ['3293'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::9726' => [
             'name' => 'Genoa 1942 height to Catania 1965 height (1)',

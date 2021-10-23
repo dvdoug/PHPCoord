@@ -192,4 +192,7 @@ return [
     'vertconc.gtx' => CoordinateOperation\GTXNGVD29NAVD88CONUSCentralProvider::class,
     'vertcone.gtx' => CoordinateOperation\GTXNGVD29NAVD88CONUSEastProvider::class,
     'vertconw.gtx' => CoordinateOperation\GTXNGVD29NAVD88CONUSWestProvider::class,
+    'gugik-geoid2011-PL-EVRF2007-NH.txt' => CoordinateOperation\GUGiKHeightETRF2000EVRF2007PolandProvider::class,
+    'gugik-geoid2011-PL-KRON86-NH.txt' => CoordinateOperation\GUGiKHeightETRF2000Baltic1986PolandProvider::class,
+    'gugik-evrf2007.txt' => CoordinateOperation\GUGiKHeightEVRF2007Baltic1986PolandProvider::class,
 ];

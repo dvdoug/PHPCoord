@@ -15,6 +15,7 @@ use PHPCoord\CoordinateOperation\CoordinateOperationParams;
 use PHPCoord\CoordinateOperation\CoordinateOperations;
 use PHPCoord\CoordinateOperation\CRSTransformations;
 use PHPCoord\CoordinateOperation\GTXNZGeoid2016Provider;
+use PHPCoord\CoordinateOperation\GUGiKHeightETRF2000Baltic1986PolandProvider;
 use PHPCoord\CoordinateOperation\IGNESHeightETRS89REDNAPSpainProvider;
 use PHPCoord\CoordinateOperation\IGNFHeightRGF93v2bNGFIGN69FranceProvider;
 use PHPCoord\CoordinateOperation\OSTN15OSGM15Provider;
@@ -215,6 +216,32 @@ class CompoundPointTest extends TestCase
 
         self::assertEqualsWithDelta(41.403611, $to->getLatitude()->getValue(), 0.00000000001);
         self::assertEqualsWithDelta(2.174444, $to->getLongitude()->getValue(), 0.00000000001);
+        self::assertEqualsWithDelta(0.000, $to->getHeight()->getValue(), 0.001);
+    }
+
+    public function testGeographic3DTo2DPlusGravityHeightGUGiKPoland(): void
+    {
+        if (!class_exists(GUGiKHeightETRF2000Baltic1986PolandProvider::class)) {
+            self::markTestSkipped('Requires phpcoord/datapack-europe');
+        }
+        $from = CompoundPoint::create(
+            Compound::fromSRID(Compound::EPSG_ETRF2000_PL_PLUS_BALTIC_1986_HEIGHT),
+            GeographicPoint::create(
+                Geographic2D::fromSRID(Geographic2D::EPSG_ETRF2000_PL),
+                new Degree(50.053889),
+                new Degree(19.934722),
+                null
+            ),
+            VerticalPoint::create(
+                Vertical::fromSRID(Vertical::EPSG_BALTIC_1986_HEIGHT),
+                new Metre(-39.8409)
+            )
+        );
+        $toCRS = Geographic3D::fromSRID(Geographic3D::EPSG_ETRS89);
+        $to = $from->geographic3DTo2DPlusGravityHeightFromGrid($toCRS, (new GUGiKHeightETRF2000Baltic1986PolandProvider())->provideGrid());
+
+        self::assertEqualsWithDelta(50.053889, $to->getLatitude()->getValue(), 0.00000000001);
+        self::assertEqualsWithDelta(19.934722, $to->getLongitude()->getValue(), 0.00000000001);
         self::assertEqualsWithDelta(0.000, $to->getHeight()->getValue(), 0.001);
     }
 

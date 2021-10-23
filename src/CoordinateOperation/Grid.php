@@ -15,6 +15,8 @@ use SplFileObject;
  */
 abstract class Grid
 {
+    protected const BOM = "\xEF\xBB\xBF";
+
     protected const STORAGE_ORDER_INCREASING_LATITUDE_INCREASING_LONGITUDE = 1;
 
     protected const STORAGE_ORDER_INCREASING_LONGITUDE_DECREASING_LATIITUDE = 2;

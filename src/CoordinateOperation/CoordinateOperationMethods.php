@@ -217,6 +217,11 @@ class CoordinateOperationMethods
     public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_OSGM_GB = 'urn:ogc:def:method:EPSG::1097';
 
     /**
+     * Geog3D to Geog2D+GravityRelatedHeight (PL txt).
+     */
+    public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_PL_TXT = 'urn:ogc:def:method:EPSG::1100';
+
+    /**
      * Geog3D to Geog2D+GravityRelatedHeight (gtx).
      */
     public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_GTX = 'urn:ogc:def:method:EPSG::1088';
@@ -298,6 +303,11 @@ class CoordinateOperationMethods
      * Transformation of the vertical component of a Geographic 3D CRS to a Vertical CRS.
      */
     public const EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_OSGM_GB = 'urn:ogc:def:method:EPSG::9663';
+
+    /**
+     * Geographic3D to GravityRelatedHeight (PL txt).
+     */
+    public const EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_PL_TXT = 'urn:ogc:def:method:EPSG::1099';
 
     /**
      * Geographic3D to GravityRelatedHeight (gtx)
@@ -764,6 +774,11 @@ class CoordinateOperationMethods
     public const EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_NZLVD = 'urn:ogc:def:method:EPSG::1071';
 
     /**
+     * Vertical Offset by Grid Interpolation (PL txt).
+     */
+    public const EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_PL_TXT = 'urn:ogc:def:method:EPSG::1101';
+
+    /**
      * Vertical Offset by Grid Interpolation (VERTCON)
      * Any NAD realization may be used as the Interpolation CRS; bi-linear interpolation is used. Input expects
      * longitudes to be positive west.
@@ -884,6 +899,9 @@ class CoordinateOperationMethods
         self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_IGN2009 => 'geographic3DToGravityHeightFromGrid',
         self::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_EGM2008 => 'geographic3DTo2DPlusGravityHeightFromGrid',
         self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_EGM2008 => 'geographic3DToGravityHeightFromGrid',
+        self::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_PL_TXT => 'geographic3DTo2DPlusGravityHeightFromGrid',
+        self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_PL_TXT => 'geographic3DToGravityHeightFromGrid',
+        self::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_PL_TXT => 'offsetFromGrid',
     ];
 
     public static function getFunctionName(string $srid): string

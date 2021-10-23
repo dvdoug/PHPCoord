@@ -83,9 +83,6 @@ class EPSGCodegenFromDataImport
         1091, // Geog3D to Geog2D+GravityRelatedHeight (CI)
         1093, // Geog3D to Geog2D+GravityRelatedHeight (Gravsoft)
         1098, // Geog3D to Geog2D+GravityRelatedHeight (SA 2010)
-        1099, // Geographic3D to GravityRelatedHeight (PL txt)
-        1100, // Geog3D to Geog2D+GravityRelatedHeight (PL txt)
-        1101, // Vertical Offset by Grid Interpolation (PL txt)
 
         // only distributed as .dll, can't use
         1036, // Cartesian Grid Offsets from Form Function

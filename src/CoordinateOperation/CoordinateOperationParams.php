@@ -51397,6 +51397,12 @@ class CoordinateOperationParams
                 'fileProvider' => 'PHPCoord\\CoordinateOperation\\IGNFHeightWGS84IGN2008LaDesiradeProvider',
             ],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9662' => [
+            'offsetsFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\GUGiKHeightEVRF2007Baltic1986PolandProvider',
+            ],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::9673' => [
             'latitudeOfFalseOrigin' => [
                 'value' => 34.0,
@@ -51857,6 +51863,30 @@ class CoordinateOperationParams
             ],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::9710' => [
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9717' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => false,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\GUGiKHeightETRF2000Baltic1986PolandProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9718' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\GUGiKHeightETRF2000Baltic1986PolandProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9719' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => false,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\GUGiKHeightETRF2000EVRF2007PolandProvider',
+            ],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9720' => [
+            'geoidHeightCorrectionModelFile' => [
+                'reverses' => true,
+                'fileProvider' => 'PHPCoord\\CoordinateOperation\\GUGiKHeightETRF2000EVRF2007PolandProvider',
+            ],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::9726' => [
             'verticalOffset' => [

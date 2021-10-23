@@ -50,6 +50,7 @@ abstract class Point implements Stringable
         CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_AND_SLOPE => CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_AND_SLOPE,
         CoordinateOperationMethods::EPSG_ZERO_TIDE_HEIGHT_TO_MEAN_TIDE_HEIGHT_EVRF2019 => CoordinateOperationMethods::EPSG_ZERO_TIDE_HEIGHT_TO_MEAN_TIDE_HEIGHT_EVRF2019,
         CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_GTX => CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_GTX,
+        CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_PL_TXT => CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_PL_TXT,
     ];
     protected const METHODS_THAT_REQUIRE_DIRECTION = [
         CoordinateOperationMethods::EPSG_SIMILARITY_TRANSFORMATION => CoordinateOperationMethods::EPSG_SIMILARITY_TRANSFORMATION,
@@ -60,6 +61,7 @@ abstract class Point implements Stringable
         CoordinateOperationMethods::EPSG_ZERO_TIDE_HEIGHT_TO_MEAN_TIDE_HEIGHT_EVRF2019 => CoordinateOperationMethods::EPSG_ZERO_TIDE_HEIGHT_TO_MEAN_TIDE_HEIGHT_EVRF2019,
         CoordinateOperationMethods::EPSG_GEOCENTRIC_TRANSLATION_BY_GRID_INTERPOLATION_IGN => CoordinateOperationMethods::EPSG_GEOCENTRIC_TRANSLATION_BY_GRID_INTERPOLATION_IGN,
         CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_GTX => CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_GTX,
+        CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_PL_TXT => CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_PL_TXT,
     ];
 
     /**
