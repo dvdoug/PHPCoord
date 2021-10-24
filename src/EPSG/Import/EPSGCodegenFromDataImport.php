@@ -19,6 +19,7 @@ use Exception;
 use function explode;
 use function file_get_contents;
 use function file_put_contents;
+use function glob;
 use function implode;
 use function in_array;
 use function json_decode;
@@ -54,6 +55,8 @@ use const SQLITE3_ASSOC;
 use const SQLITE3_OPEN_READONLY;
 use function str_replace;
 use function ucwords;
+use function unlink;
+use function var_export;
 
 class EPSGCodegenFromDataImport
 {
@@ -1518,7 +1521,7 @@ class EPSGCodegenFromDataImport
 
         $this->codeGen->updateFileData($this->sourceDir . '/CoordinateOperation/CoordinateOperations.php', $data);
 
-        $paramData = [];
+        $paramsSeen = [];
         foreach ($data as $operation => $operationData) {
             $params = [];
             $paramsSql = "
@@ -1572,10 +1575,19 @@ class EPSGCodegenFromDataImport
             if (isset($operationData['method']) && $operationData['method'] === CoordinateOperationMethods::EPSG_NADCON5_2D) {
                 $params['ellipsoidalHeightDifferenceFile'] = ['value' => null, 'uom' => null, 'reverses' => false];
             }
-            $paramData[$operation] = $params;
+
+            $paramFilename = $this->sourceDir . '/CoordinateOperation/Params/' . str_replace(':', '', str_replace('urn:ogc:def:coordinateOperation:', '', $operation)) . '.php';
+            file_put_contents($paramFilename, '<?php /** @internal */ return ' . var_export($params, true) . ';');
+            $this->codeGen->csFixFile($paramFilename);
+            $paramsSeen[$paramFilename] = $paramFilename;
         }
 
-        $this->codeGen->updateFileData($this->sourceDir . '/CoordinateOperation/CoordinateOperationParams.php', $paramData);
+        // Remove unused param files
+        foreach (glob($this->sourceDir . '/CoordinateOperation/Params/EPSG*.php') as $filename) {
+            if (!isset($paramsSeen[$filename])) {
+                unlink($filename);
+            }
+        }
     }
 
     public function generateExtents(): void

@@ -14,7 +14,6 @@ use DateTimeImmutable;
 use function in_array;
 use InvalidArgumentException;
 use PHPCoord\CoordinateOperation\CoordinateOperationMethods;
-use PHPCoord\CoordinateOperation\CoordinateOperationParams;
 use PHPCoord\CoordinateOperation\CoordinateOperations;
 use PHPCoord\CoordinateOperation\CRSTransformations;
 use PHPCoord\CoordinateOperation\GeographicValue;
@@ -363,7 +362,7 @@ class GeocentricPointTest extends TestCase
 
         $epoch = new DateTime();
         if (isset($operation['method']) && in_array($operation['method'], [CoordinateOperationMethods::EPSG_TIME_SPECIFIC_COORDINATE_FRAME_ROTATION_GEOCEN, CoordinateOperationMethods::EPSG_TIME_SPECIFIC_POSITION_VECTOR_TRANSFORM_GEOCEN], true)) {
-            $params = CoordinateOperationParams::getParamData($operationSrid);
+            $params = CoordinateOperations::getParamData($operationSrid);
             $epoch = (new Year($params['transformationReferenceEpoch']['value']))->asDateTime();
         }
 
@@ -388,7 +387,7 @@ class GeocentricPointTest extends TestCase
             if (isset(static::$sridData[$transformation['source_crs']])) {
                 //filter out operations that require a grid file that we don't have
                 $needsNonExistentFile = false;
-                foreach (CoordinateOperationParams::getParamData($transformation['operation']) as $param) {
+                foreach (CoordinateOperations::getParamData($transformation['operation']) as $param) {
                     if (isset($param['fileProvider']) && !class_exists($param['fileProvider'])) {
                         $needsNonExistentFile = true;
                     }

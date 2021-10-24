@@ -9,6 +9,8 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateOperation;
 
+use function str_replace;
+
 /**
  * @internal
  */
@@ -18292,8 +18294,13 @@ class CoordinateOperations
         ],
     ];
 
-    public static function getOperationData(string $srid): array
+    public static function getOperationData(string $operationSrid): array
     {
-        return static::$sridData[$srid];
+        return static::$sridData[$operationSrid];
+    }
+
+    public static function getParamData(string $operationSrid): array
+    {
+        return require 'Params/' . str_replace(':', '', str_replace('urn:ogc:def:coordinateOperation:', '', $operationSrid)) . '.php';
     }
 }

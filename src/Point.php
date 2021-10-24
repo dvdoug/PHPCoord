@@ -17,7 +17,6 @@ use function cos;
 use DateTimeImmutable;
 use const M_PI;
 use PHPCoord\CoordinateOperation\CoordinateOperationMethods;
-use PHPCoord\CoordinateOperation\CoordinateOperationParams;
 use PHPCoord\CoordinateOperation\CoordinateOperations;
 use PHPCoord\CoordinateOperation\GeographicValue;
 use PHPCoord\CoordinateReferenceSystem\Compound;
@@ -84,7 +83,7 @@ abstract class Point implements Stringable
     {
         $params = [];
         $powerCoefficients = [];
-        foreach (CoordinateOperationParams::getParamData($operationSrid) as $paramName => $paramData) {
+        foreach (CoordinateOperations::getParamData($operationSrid) as $paramName => $paramData) {
             if (isset($paramData['fileProvider'])) {
                 $params[$paramName] = (new $paramData['fileProvider']())->provideGrid();
             } else {
