@@ -21,9 +21,7 @@ class InvalidAxesException extends UnexpectedValueException
      */
     public function __construct(array $allowedAxes)
     {
-        $axisNames = array_map(static function ($allowedAxis) {
-            return $allowedAxis->getName();
-        }, $allowedAxes);
+        $axisNames = array_map(static fn ($allowedAxis) => $allowedAxis->getName(), $allowedAxes);
 
         parent::__construct('This CRS has axes: ' . implode(', ', $axisNames));
     }

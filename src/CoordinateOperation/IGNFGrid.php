@@ -84,7 +84,7 @@ trait IGNFGrid
         for ($i = 0, $numValues = $this->numberOfColumns * $this->numberOfRows; $i < $numValues; ++$i) {
             $rowData = explode(' ', trim(preg_replace('/ +/', ' ', $this->gridFile->fgets())));
             $wantedData = array_slice($rowData, 3, 3); // ignore weird first fixed value, coordinates, precision and map sheet
-            $wantedData = array_map(static function (string $value) {return (float) ($value); }, $wantedData);
+            $wantedData = array_map(static fn (string $value) => (float) ($value), $wantedData);
             $this->data[$i] = $wantedData;
         }
 

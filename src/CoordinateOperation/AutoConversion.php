@@ -97,9 +97,7 @@ trait AutoConversion
 
         // Iteratively calculate permutations of intermediate CRSs
         foreach ($this->buildTransformationPathsToCRS($source, $target) as $candidatePaths) {
-            usort($candidatePaths, static function (array $a, array $b) {
-                return $a['accuracy'] <=> $b['accuracy'];
-            });
+            usort($candidatePaths, static fn (array $a, array $b) => $a['accuracy'] <=> $b['accuracy']);
 
             foreach ($candidatePaths as $candidatePath) {
                 if ($this->validatePath($candidatePath['path'], $boundaryCheckPoint)) {

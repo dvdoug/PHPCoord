@@ -101,9 +101,7 @@ class NTv2Grid extends GeographicGrid
             }
         }
 
-        usort($possibleGrids, static function ($a, $b) {
-            return $a[0] <=> $b[0] ?: $a[1]['LAT_INC'] <=> $b[1]['LAT_INC'] ?: $a[2]['LONG_INC'] <=> $b[2]['LONG_INC'];
-        });
+        usort($possibleGrids, static fn ($a, $b) => $a[0] <=> $b[0] ?: $a[1]['LAT_INC'] <=> $b[1]['LAT_INC'] ?: $a[2]['LONG_INC'] <=> $b[2]['LONG_INC']);
 
         $gridToUse = $possibleGrids[0][1];
 
