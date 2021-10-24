@@ -9,7 +9,6 @@ declare(strict_types=1);
 namespace PHPCoord\EPSG\Import;
 
 use function array_column;
-use function array_merge;
 use function array_unique;
 use function array_values;
 use function class_exists;
@@ -1404,14 +1403,14 @@ class EPSGCodegenFromDataImport
         $wgs84CopiesFromSIRGAS = $this->determineOperationsToWGS84CopiedFromSIRGAS();
         $wgs84CopiesFromNZGD = $this->determineOperationsToWGS84CopiedFromNZGD2000();
 
-        $blackListedOperations = array_merge(
-            self::BLACKLISTED_OPERATIONS,
-            $wgs84CopiesFromETRS89,
-            $etrs89CopiesFromWGS84,
-            $wgs84CopiesFromGDA94,
-            $wgs84CopiesFromSIRGAS,
-            $wgs84CopiesFromNZGD,
-        );
+        $blackListedOperations = [
+            ...self::BLACKLISTED_OPERATIONS,
+            ...$wgs84CopiesFromETRS89,
+            ...$etrs89CopiesFromWGS84,
+            ...$wgs84CopiesFromGDA94,
+            ...$wgs84CopiesFromSIRGAS,
+            ...$wgs84CopiesFromNZGD,
+        ];
 
         $sql = "
             SELECT

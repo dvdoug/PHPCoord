@@ -10,7 +10,6 @@ namespace PHPCoord\CoordinateOperation;
 
 use function abs;
 use function array_column;
-use function array_merge;
 use function array_shift;
 use function array_sum;
 use function assert;
@@ -176,7 +175,7 @@ trait AutoConversion
                     } elseif (isset(static::$transformationsByCRS[$current])) {
                         foreach (static::$transformationsByCRS[$current] as $next) {
                             if (!in_array($next, $simplePath, true)) {
-                                $simplePaths[] = array_merge($simplePath, [$next]);
+                                $simplePaths[] = [...$simplePath, $next];
                             }
                         }
                     }
@@ -212,7 +211,7 @@ trait AutoConversion
                 $wipTransformationsInPath = [];
                 foreach (static::$transformationsByCRSPair[$from . '|' . $to] ?? [] as $transformation) {
                     foreach ($transformationsToMakePath as $transformationToMakePath) {
-                        $wipTransformationsInPath[] = array_merge($transformationToMakePath, [$transformation]);
+                        $wipTransformationsInPath[] = [...$transformationToMakePath, $transformation];
                     }
                 }
 

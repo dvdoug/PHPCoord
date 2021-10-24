@@ -9,7 +9,6 @@ declare(strict_types=1);
 namespace PHPCoord\Geometry;
 
 use function array_merge;
-use function array_push;
 use function class_exists;
 use function count;
 use function implode;
@@ -71,7 +70,7 @@ class BoundingArea
                 $fullExtent = "PHPCoord\\Geometry\\Extents\\Extent{$extentCode}";
                 $basicExtent = "PHPCoord\\Geometry\\Extents\\BoundingBoxOnly\\Extent{$extentCode}";
                 $extentClass = class_exists($fullExtent) ? new $fullExtent() : new $basicExtent();
-                array_push($extents, ...$extentClass());
+                $extents = [...$extents, ...$extentClass()];
             }
 
             $extentData = self::createFromArray($extents);
