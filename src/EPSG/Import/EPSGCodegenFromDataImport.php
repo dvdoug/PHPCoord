@@ -68,7 +68,6 @@ class EPSGCodegenFromDataImport
         1072, // Geographic3D to GravityRelatedHeight (OSGM15Ire)
         1096, // Geog3D to Geog2D+GravityRelatedHeight (OSGM15Ire)
         1047, // Geographic3D to GravityRelatedHeight (Gravsoft)
-        1050, // Geographic3D to GravityRelatedHeight (CI)
         1059, // Geographic3D to GravityRelatedHeight (PNG)
         1060, // Geographic3D to GravityRelatedHeight (CGG2013)
         1070, // Point motion by grid (Canada NTv2_Vel)
@@ -80,7 +79,6 @@ class EPSGCodegenFromDataImport
         1086, // Point motion (geocen) by grid (INADEFORM)
         1089, // Geog3D to Geog2D+GravityRelatedHeight (BEV AT)
         1090, // Geog3D to Geog2D+GravityRelatedHeight (CGG 2013)
-        1091, // Geog3D to Geog2D+GravityRelatedHeight (CI)
         1093, // Geog3D to Geog2D+GravityRelatedHeight (Gravsoft)
         1098, // Geog3D to Geog2D+GravityRelatedHeight (SA 2010)
 
@@ -109,6 +107,10 @@ class EPSGCodegenFromDataImport
 
         // Not available for download
         9634, // Maritime Provinces polynomial interpolation
+
+        // free, but license does not permit redistribution
+        1050, // Geographic3D to GravityRelatedHeight (CI)
+        1091, // Geog3D to Geog2D+GravityRelatedHeight (CI)
 
         // EGM files are *very* large and not of general use
         1103, // Geog3D to Geog2D+GravityRelatedHeight (EGM)
