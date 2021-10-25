@@ -63,6 +63,8 @@ abstract class Point implements Stringable
         CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_PL_TXT => CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_PL_TXT,
     ];
 
+    private static array $gridCache = [];
+
     /**
      * @internal
      */
@@ -85,7 +87,7 @@ abstract class Point implements Stringable
         $powerCoefficients = [];
         foreach (CoordinateOperations::getParamData($operationSrid) as $paramName => $paramData) {
             if (isset($paramData['fileProvider'])) {
-                $params[$paramName] = (new $paramData['fileProvider']())->provideGrid();
+                $params[$paramName] = static::$gridCache[$paramData['fileProvider']] ??= (new $paramData['fileProvider']())->provideGrid();
             } else {
                 if ($inReverse && $paramData['reverses']) {
                     $paramData['value'] *= -1;
