@@ -36,10 +36,6 @@ class BoundingArea
 
     private array $centre = [];
 
-    private const BUFFER_THRESHOLD = 200; // rough guess at where map maker got bored adding vertices for complex shapes
-
-    private const BUFFER_SIZE = 0.1; // approx 10km
-
     protected function __construct(array $vertices)
     {
         $this->vertices = $vertices;
@@ -74,7 +70,6 @@ class BoundingArea
             }
 
             $extentData = self::createFromArray($extents);
-            $extentData->addBuffer();
 
             self::$cachedObjects[$cacheKey] = $extentData;
         }
@@ -195,35 +190,6 @@ class BoundingArea
         }
 
         return $this->centre[$polygonId];
-    }
-
-    /**
-     * @internal
-     */
-    private function addBuffer(): void
-    {
-        foreach ($this->vertices as $polygonId => $polygon) {
-            $centre = $this->getCentre($polygonId);
-            $centreX = $centre[1]->asDegrees()->getValue();
-            $centreY = $centre[0]->asDegrees()->getValue();
-            foreach ($polygon as $ringId => $ring) {
-                if ($ringId === 0 && count($ring) > self::BUFFER_THRESHOLD) {
-                    foreach ($ring as $vertexId => $vertex) {
-                        if ($vertex[0] > $centreX) {
-                            $this->vertices[$polygonId][$ringId][$vertexId][0] += self::BUFFER_SIZE;
-                        } elseif ($vertex[0] < $centreX) {
-                            $this->vertices[$polygonId][$ringId][$vertexId][0] -= self::BUFFER_SIZE;
-                        }
-
-                        if ($vertex[1] > $centreY) {
-                            $this->vertices[$polygonId][$ringId][$vertexId][1] += self::BUFFER_SIZE;
-                        } elseif ($vertex[1] < $centreY) {
-                            $this->vertices[$polygonId][$ringId][$vertexId][1] -= self::BUFFER_SIZE;
-                        }
-                    }
-                }
-            }
-        }
     }
 
     private function checkLongitudeWrapAround(): void

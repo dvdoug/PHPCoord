@@ -11,12 +11,14 @@ namespace PHPCoord\EPSG\Import;
 use function array_column;
 use function basename;
 use function class_exists;
+use function count;
 use function dirname;
 use Exception;
 use function file_get_contents;
 use function file_put_contents;
 use function glob;
 use function implode;
+use function in_array;
 use function json_decode;
 use const JSON_THROW_ON_ERROR;
 use function max;
@@ -40,6 +42,9 @@ class EPSGCodegenFromGeoRepository
     public const REGION_NORTHAMERICA = 'North America';
     public const REGION_SOUTHAMERICA = 'South America';
     public const REGION_OCEANIA = 'Australasia and Oceania';
+
+    private const BUFFER_THRESHOLD = 200; // rough guess at where map maker got bored adding vertices for complex shapes
+    private const BUFFER_SIZE = 0.1; // approx 10km
 
     private string $sourceDir;
 
@@ -129,6 +134,10 @@ class EPSGCodegenFromGeoRepository
                 $polygons['coordinates'] = [$polygons['coordinates']];
             }
 
+            if (in_array($extentCode, [1262, 2346, 2830, 4520, 4523], true)) {
+                $polygons['coordinates'] = [[[[-180, -90], [-180, 90], [180, 90], [180, -90], [-180, -90]]]]; // don't overcomplicate it!
+            }
+
             foreach ($polygons['coordinates'] as $polygon) {
                 $outerRingPoints = $polygon[0];
                 $xmin = min(array_column($outerRingPoints, 0));
@@ -140,6 +149,8 @@ class EPSGCodegenFromGeoRepository
                 $exportSimple .= "\n                ],\n            ],\n";
 
                 $exportFull .= "            [\n";
+
+                $polygon = $this->addBuffer($polygon);
                 foreach ($polygon as $ring) {
                     $exportFull .= "                [\n                    ";
                     foreach ($ring as $point) {
@@ -221,5 +232,59 @@ class EPSGCodegenFromGeoRepository
         }
 
         echo 'done' . PHP_EOL;
+    }
+
+    private function getCentre(array $vertices): array
+    {
+        // Calculates the "centre" (centroid) of a polygon.
+        $n = count($vertices) - 1;
+        $area = 0;
+
+        for ($i = 0; $i < $n; ++$i) {
+            $area += $vertices[$i][0] * $vertices[$i + 1][1];
+        }
+        $area += $vertices[$n][0] * $vertices[0][1];
+
+        for ($i = 0; $i < $n; ++$i) {
+            $area -= $vertices[$i + 1][0] * $vertices[$i][1];
+        }
+        $area -= $vertices[0][0] * $vertices[$n][1];
+        $area /= 2;
+
+        $latitude = 0;
+        $longitude = 0;
+
+        for ($i = 0; $i < $n; ++$i) {
+            $latitude += ($vertices[$i][1] + $vertices[$i + 1][1]) * ($vertices[$i][0] * $vertices[$i + 1][1] - $vertices[$i + 1][0] * $vertices[$i][1]);
+            $longitude += ($vertices[$i][0] + $vertices[$i + 1][0]) * ($vertices[$i][0] * $vertices[$i + 1][1] - $vertices[$i + 1][0] * $vertices[$i][1]);
+        }
+        $latitude = $latitude / 6 / $area;
+        $longitude = $longitude / 6 / $area;
+
+        return [$longitude, $latitude];
+    }
+
+    private function addBuffer(array $polygon): array
+    {
+        [$centreX, $centreY] = $this->getCentre($polygon[0]);
+        foreach ($polygon as $ringId => $ring) {
+            if ($ringId === 0 && count($ring) > self::BUFFER_THRESHOLD) {
+                foreach ($ring as $vertexId => $vertex) {
+                    if ($vertex[0] > $centreX) {
+                        $polygon[$ringId][$vertexId][0] += self::BUFFER_SIZE;
+                    } elseif ($vertex[0] < $centreX) {
+                        $polygon[$ringId][$vertexId][0] -= self::BUFFER_SIZE;
+                    }
+
+                    if ($vertex[1] > $centreY) {
+                        $polygon[$ringId][$vertexId][1] += self::BUFFER_SIZE;
+                    } elseif ($vertex[1] < $centreY) {
+                        $polygon[$ringId][$vertexId][1] -= self::BUFFER_SIZE;
+                    }
+                }
+            }
+        }
+
+        return $polygon;
     }
 }
