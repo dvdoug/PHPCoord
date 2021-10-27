@@ -12,6 +12,7 @@ use function abs;
 use function array_column;
 use function array_shift;
 use function array_sum;
+use function array_unique;
 use function assert;
 use function class_exists;
 use function count;
@@ -30,6 +31,7 @@ use PHPCoord\Exception\UnknownConversionException;
 use PHPCoord\GeocentricPoint;
 use PHPCoord\GeographicPoint;
 use PHPCoord\Geometry\BoundingArea;
+use PHPCoord\Geometry\Extents\RegionMap;
 use PHPCoord\Point;
 use PHPCoord\ProjectedPoint;
 use PHPCoord\UnitOfMeasure\Time\Year;
@@ -63,10 +65,6 @@ trait AutoConversion
 
     private static array $incompletePathCache = [];
 
-    private static array $transformationsByCRS = [];
-
-    private static array $transformationsByCRSPair = [];
-
     public function convert(CoordinateReferenceSystem $to, bool $ignoreBoundaryRestrictions = false): Point
     {
         if ($this->getCRS() == $to) {
@@ -75,6 +73,10 @@ trait AutoConversion
 
         if (!str_starts_with($to->getSRID(), CoordinateReferenceSystem::CRS_SRID_PREFIX_EPSG) || !str_starts_with($this->getCRS()->getSRID(), CoordinateReferenceSystem::CRS_SRID_PREFIX_EPSG)) {
             throw new UnknownConversionException('Automatic conversions are only supported for EPSG CRSs');
+        }
+
+        if ($this->getCRS()->getBoundingArea()->getRegion() !== $to->getBoundingArea()->getRegion() && $this->getCRS()->getBoundingArea()->getRegion() !== RegionMap::REGION_GLOBAL && $to->getBoundingArea()->getRegion() !== RegionMap::REGION_GLOBAL) {
+            throw new UnknownConversionException('Automatic conversions are not supported between different global regions');
         }
 
         $point = $this;
@@ -90,8 +92,6 @@ trait AutoConversion
 
     protected function findOperationPath(Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $source, Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $target, bool $ignoreBoundaryRestrictions): array
     {
-        self::buildSupportedTransformationsByCRS();
-        self::buildSupportedTransformationsByCRSPair();
         $boundaryCheckPoint = $ignoreBoundaryRestrictions ? null : $this->getPointForBoundaryCheck();
 
         // Iteratively calculate permutations of intermediate CRSs
@@ -165,6 +165,8 @@ trait AutoConversion
             $cacheKeyMinus1 = $sourceSRID . '|' . $targetSRID . '|' . ($iterationsMinus1);
 
             if (!isset(self::$completePathCache[$cacheKey])) {
+                $transformationsByCRS = self::buildSupportedTransformationsByCRS($source, $target);
+                $transformationsByCRSPair = self::buildSupportedTransformationsByCRSPair($source, $target);
                 $completePaths = [];
                 $simplePaths = [];
 
@@ -172,8 +174,8 @@ trait AutoConversion
                     $current = $simplePath[$iterationsMinus1];
                     if ($current === $targetSRID) {
                         $completePaths[] = $simplePath;
-                    } elseif (isset(static::$transformationsByCRS[$current])) {
-                        foreach (static::$transformationsByCRS[$current] as $next) {
+                    } elseif (isset($transformationsByCRS[$current])) {
+                        foreach ($transformationsByCRS[$current] as $next) {
                             if (!in_array($next, $simplePath, true)) {
                                 $simplePaths[] = [...$simplePath, $next];
                             }
@@ -182,7 +184,7 @@ trait AutoConversion
                 }
 
                 // Then expand each CRS->CRS permutation with the various ways of achieving that (can be lots :/)
-                $fullPaths = $this->expandSimplePaths($completePaths, $sourceSRID, $targetSRID);
+                $fullPaths = $this->expandSimplePaths($transformationsByCRSPair, $completePaths, $sourceSRID, $targetSRID);
 
                 $paths = [];
                 foreach ($fullPaths as $fullPath) {
@@ -199,7 +201,7 @@ trait AutoConversion
         }
     }
 
-    protected function expandSimplePaths(array $simplePaths, string $fromSRID, string $toSRID): array
+    protected function expandSimplePaths(array $transformationsByCRSPair, array $simplePaths, string $fromSRID, string $toSRID): array
     {
         $fullPaths = [];
         foreach ($simplePaths as $simplePath) {
@@ -209,7 +211,7 @@ trait AutoConversion
             do {
                 $to = array_shift($simplePath);
                 $wipTransformationsInPath = [];
-                foreach (static::$transformationsByCRSPair[$from . '|' . $to] ?? [] as $transformation) {
+                foreach ($transformationsByCRSPair[$from . '|' . $to] ?? [] as $transformation) {
                     foreach ($transformationsToMakePath as $transformationToMakePath) {
                         $wipTransformationsInPath[] = [...$transformationToMakePath, $transformation];
                     }
@@ -271,34 +273,101 @@ trait AutoConversion
         }
     }
 
-    protected static function buildSupportedTransformationsByCRS(): void
+    protected static function buildSupportedTransformationsByCRS(Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $source, Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $target): array
     {
-        if (!static::$transformationsByCRS) {
-            foreach (CRSTransformations::getSupportedTransformations() as $transformation) {
-                if (!isset(static::$transformationsByCRS[$transformation['source_crs']][$transformation['target_crs']])) {
-                    static::$transformationsByCRS[$transformation['source_crs']][$transformation['target_crs']] = $transformation['target_crs'];
-                }
-                if ($transformation['reversible'] && !isset(static::$transformationsByCRS[$transformation['target_crs']][$transformation['source_crs']])) {
-                    static::$transformationsByCRS[$transformation['target_crs']][$transformation['source_crs']] = $transformation['source_crs'];
-                }
+        $regions = array_unique([$source->getBoundingArea()->getRegion(), $target->getBoundingArea()->getRegion(), RegionMap::REGION_GLOBAL]);
+        $relevantRegionData = [];
+        foreach ($regions as $region) {
+            $regionData = match ($region) {
+                RegionMap::REGION_GLOBAL => CRSTransformationsGlobal::getSupportedTransformations(),
+                RegionMap::REGION_AFRICA => CRSTransformationsAfrica::getSupportedTransformations(),
+                RegionMap::REGION_ANTARCTIC => CRSTransformationsAntarctic::getSupportedTransformations(),
+                RegionMap::REGION_ARCTIC => CRSTransformationsArctic::getSupportedTransformations(),
+                RegionMap::REGION_ASIA => CRSTransformationsAsia::getSupportedTransformations(),
+                RegionMap::REGION_EUROPE => CRSTransformationsEurope::getSupportedTransformations(),
+                RegionMap::REGION_NORTHAMERICA => CRSTransformationsNorthAmerica::getSupportedTransformations(),
+                RegionMap::REGION_OCEANIA => CRSTransformationsOceania::getSupportedTransformations(),
+                RegionMap::REGION_SOUTHAMERICA => CRSTransformationsSouthAmerica::getSupportedTransformations(),
+            };
+            $relevantRegionData = [...$relevantRegionData, ...$regionData];
+        }
+
+        $transformationsByCRS = [];
+        foreach ($relevantRegionData as $transformation) {
+            if (!isset($transformationsByCRS[$transformation['source_crs']][$transformation['target_crs']])) {
+                $transformationsByCRS[$transformation['source_crs']][$transformation['target_crs']] = $transformation['target_crs'];
+            }
+            if ($transformation['reversible'] && !isset($transformationsByCRS[$transformation['target_crs']][$transformation['source_crs']])) {
+                $transformationsByCRS[$transformation['target_crs']][$transformation['source_crs']] = $transformation['source_crs'];
             }
         }
+
+        return $transformationsByCRS;
     }
 
-    protected static function buildSupportedTransformationsByCRSPair(): void
+    protected static function buildSupportedTransformationsByCRSPair(Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $source, Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $target): array
     {
-        if (!static::$transformationsByCRSPair) {
-            foreach (CRSTransformations::getSupportedTransformations() as $key => $transformation) {
-                if (!isset(static::$transformationsByCRSPair[$transformation['source_crs'] . '|' . $transformation['target_crs']][$key])) {
-                    static::$transformationsByCRSPair[$transformation['source_crs'] . '|' . $transformation['target_crs']][$key] = $transformation;
-                    static::$transformationsByCRSPair[$transformation['source_crs'] . '|' . $transformation['target_crs']][$key]['in_reverse'] = false;
-                }
-                if ($transformation['reversible'] && !isset(static::$transformationsByCRSPair[$transformation['target_crs'] . '|' . $transformation['source_crs']][$key])) {
-                    static::$transformationsByCRSPair[$transformation['target_crs'] . '|' . $transformation['source_crs']][$key] = $transformation;
-                    static::$transformationsByCRSPair[$transformation['target_crs'] . '|' . $transformation['source_crs']][$key]['in_reverse'] = true;
-                }
+        $regions = array_unique([$source->getBoundingArea()->getRegion(), $target->getBoundingArea()->getRegion(), RegionMap::REGION_GLOBAL]);
+        $relevantRegionData = [];
+        foreach ($regions as $region) {
+            $regionData = match ($region) {
+                RegionMap::REGION_GLOBAL => CRSTransformationsGlobal::getSupportedTransformations(),
+                RegionMap::REGION_AFRICA => CRSTransformationsAfrica::getSupportedTransformations(),
+                RegionMap::REGION_ANTARCTIC => CRSTransformationsAntarctic::getSupportedTransformations(),
+                RegionMap::REGION_ARCTIC => CRSTransformationsArctic::getSupportedTransformations(),
+                RegionMap::REGION_ASIA => CRSTransformationsAsia::getSupportedTransformations(),
+                RegionMap::REGION_EUROPE => CRSTransformationsEurope::getSupportedTransformations(),
+                RegionMap::REGION_NORTHAMERICA => CRSTransformationsNorthAmerica::getSupportedTransformations(),
+                RegionMap::REGION_OCEANIA => CRSTransformationsOceania::getSupportedTransformations(),
+                RegionMap::REGION_SOUTHAMERICA => CRSTransformationsSouthAmerica::getSupportedTransformations(),
+            };
+            $relevantRegionData = [...$relevantRegionData, ...$regionData];
+        }
+
+        $transformationsByCRSPair = [];
+        foreach ($relevantRegionData as $key => $transformation) {
+            $transformationsByCRSPair[$transformation['source_crs'] . '|' . $transformation['target_crs']][$key] = $transformation;
+            $transformationsByCRSPair[$transformation['source_crs'] . '|' . $transformation['target_crs']][$key]['in_reverse'] = false;
+            if ($transformation['reversible']) {
+                $transformationsByCRSPair[$transformation['target_crs'] . '|' . $transformation['source_crs']][$key] = $transformation;
+                $transformationsByCRSPair[$transformation['target_crs'] . '|' . $transformation['source_crs']][$key]['in_reverse'] = true;
             }
         }
+
+        return $transformationsByCRSPair;
+        //additional help for ETRS89->WGS84
+            /*if (in_array($from, [Geocentric::EPSG_WGS_84, Geographic2D::EPSG_WGS_84, Geographic3D::EPSG_WGS_84], true) && in_array($to, [Geocentric::EPSG_ETRS89, Geographic2D::EPSG_ETRS89, Geographic3D::EPSG_ETRS89], true)) {
+                $inserts = self::$OPERATIONS_ETRF2014_TO_WGS84_G2139;
+            } elseif (in_array($to, [Geocentric::EPSG_WGS_84, Geographic2D::EPSG_WGS_84, Geographic3D::EPSG_WGS_84], true) && in_array($from, [Geocentric::EPSG_ETRS89, Geographic2D::EPSG_ETRS89, Geographic3D::EPSG_ETRS89], true)) {
+                $inserts = array_reverse(self::$OPERATIONS_ETRF2014_TO_WGS84_G2139);
+            }
+            if (in_array($from, [Geographic2D::EPSG_WGS_84, Geographic3D::EPSG_WGS_84], true) && in_array($to, [Geographic2D::EPSG_ETRS89, Geographic3D::EPSG_ETRS89], true)) {
+                $inserts = [self::$OPERATION_GEOCENTRIC_TO_GEOGRAPHIC3D, ...$inserts, self::$OPERATION_GEOCENTRIC_TO_GEOGRAPHIC3D];
+            } elseif (in_array($to, [Geographic2D::EPSG_WGS_84, Geographic3D::EPSG_WGS_84], true) && in_array($from, [Geographic2D::EPSG_ETRS89, Geographic3D::EPSG_ETRS89], true)) {
+                $inserts = [self::$OPERATION_GEOCENTRIC_TO_GEOGRAPHIC3D, ...$inserts, self::$OPERATION_GEOCENTRIC_TO_GEOGRAPHIC3D];
+            }
+            if (in_array($from, [Geographic2D::EPSG_WGS_84], true) && in_array($to, [Geographic2D::EPSG_ETRS89], true)) {
+                $inserts = [self::$OPERATION_GEOGRAPHIC3D_TO_GEOGRAPHIC2D, ...$inserts, self::$OPERATION_GEOGRAPHIC3D_TO_GEOGRAPHIC2D];
+            } elseif (in_array($to, [Geographic2D::EPSG_WGS_84], true) && in_array($from, [Geographic2D::EPSG_ETRS89], true)) {
+                $inserts = [self::$OPERATION_GEOGRAPHIC3D_TO_GEOGRAPHIC2D, ...$inserts, self::$OPERATION_GEOGRAPHIC3D_TO_GEOGRAPHIC2D];
+            }*/
+
+            /*
+ITRF2000 to NAD83(CORS96) (1)
+ITRF2000 to NAD83(CSRS)v4 (1)
+ITRF2000 to NAD83(MARP00) (1)
+ITRF2000 to NAD83(PACP00) (1)
+ITRF2005 to NAD83(CSRS)v5 (1)
+ITRF2008 to NAD83(2011) (1)
+ITRF2008 to NAD83(CSRS)v6 (1)
+ITRF2008 to NAD83(MA11) (1)
+ITRF2008 to NAD83(PA11) (1)
+ITRF2014 to GDA2020 (1)
+ITRF2014 to ETRF2014 (1)
+ITRF2014 to NAD83(2011) (1)
+ITRF2014 to NAD83(CSRS)v7 (1)
+
+*/
     }
 
     abstract public function getCRS(): CoordinateReferenceSystem;

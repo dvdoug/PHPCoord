@@ -12,7 +12,15 @@ use function class_exists;
 use DateTime;
 use DateTimeImmutable;
 use PHPCoord\CoordinateOperation\CoordinateOperations;
-use PHPCoord\CoordinateOperation\CRSTransformations;
+use PHPCoord\CoordinateOperation\CRSTransformationsAfrica;
+use PHPCoord\CoordinateOperation\CRSTransformationsAntarctic;
+use PHPCoord\CoordinateOperation\CRSTransformationsArctic;
+use PHPCoord\CoordinateOperation\CRSTransformationsAsia;
+use PHPCoord\CoordinateOperation\CRSTransformationsEurope;
+use PHPCoord\CoordinateOperation\CRSTransformationsGlobal;
+use PHPCoord\CoordinateOperation\CRSTransformationsNorthAmerica;
+use PHPCoord\CoordinateOperation\CRSTransformationsOceania;
+use PHPCoord\CoordinateOperation\CRSTransformationsSouthAmerica;
 use PHPCoord\CoordinateOperation\GTXDunedin1958NZVD2016Provider;
 use PHPCoord\CoordinateOperation\GTXNGVD29NAVD88CONUSCentralProvider;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
@@ -196,7 +204,7 @@ class VerticalPointTest extends TestCase
     public function supportedOperations(): array
     {
         $toTest = [];
-        foreach (CRSTransformations::getSupportedTransformations() as $transformation) {
+        foreach ([...CRSTransformationsGlobal::getSupportedTransformations(), ...CRSTransformationsAfrica::getSupportedTransformations(), ...CRSTransformationsAntarctic::getSupportedTransformations(), ...CRSTransformationsArctic::getSupportedTransformations(), ...CRSTransformationsAsia::getSupportedTransformations(), ...CRSTransformationsEurope::getSupportedTransformations(), ...CRSTransformationsNorthAmerica::getSupportedTransformations(), ...CRSTransformationsOceania::getSupportedTransformations(), ...CRSTransformationsSouthAmerica::getSupportedTransformations()] as $transformation) {
             $needsNonExistentFile = false;
 
             if (isset(static::$sridData[$transformation['source_crs']])) {

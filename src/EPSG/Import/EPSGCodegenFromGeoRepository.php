@@ -24,6 +24,7 @@ use const JSON_THROW_ON_ERROR;
 use function max;
 use function min;
 use const PHP_EOL;
+use PHPCoord\Geometry\Extents\RegionMap;
 use function sleep;
 use SQLite3;
 use const SQLITE3_ASSOC;
@@ -33,16 +34,6 @@ use function unlink;
 
 class EPSGCodegenFromGeoRepository
 {
-    public const REGION_GLOBAL = 'Global';
-    public const REGION_AFRICA = 'Africa';
-    public const REGION_ARCTIC = 'Arctic';
-    public const REGION_ANTARCTIC = 'Antarctic';
-    public const REGION_ASIA = 'Asia-ExFSU';
-    public const REGION_EUROPE = 'Europe-FSU';
-    public const REGION_NORTHAMERICA = 'North America';
-    public const REGION_SOUTHAMERICA = 'South America';
-    public const REGION_OCEANIA = 'Australasia and Oceania';
-
     private const BUFFER_THRESHOLD = 200; // rough guess at where map maker got bored adding vertices for complex shapes
     private const BUFFER_SIZE = 0.1; // approx 10km
 
@@ -79,7 +70,7 @@ class EPSGCodegenFromGeoRepository
         $southAmerica = $this->sourceDir . '/../vendor/php-coord/datapack-southamerica/src/Geometry/Extents/';
         $oceania = $this->sourceDir . '/../vendor/php-coord/datapack-oceania/src/Geometry/Extents/';
 
-        $regionMap = require 'ExtentMap.php';
+        $regionMap = (new RegionMap())();
 
         $sql = "
             SELECT e.extent_code, e.extent_name
@@ -164,53 +155,53 @@ class EPSGCodegenFromGeoRepository
             $exportFull .= "        ];\n    }\n}\n";
 
             switch ($region) {
-                case self::REGION_GLOBAL:
+                case RegionMap::REGION_GLOBAL:
                     file_put_contents($builtInFull . "Extent{$extentCode}.php", $exportFull);
                     $this->codeGen->csFixFile($builtInFull . "Extent{$extentCode}.php");
                     break;
-                case self::REGION_AFRICA:
+                case RegionMap::REGION_AFRICA:
                     file_put_contents($boundingBoxOnly . "Extent{$extentCode}.php", $exportSimple);
                     $this->codeGen->csFixFile($boundingBoxOnly . "Extent{$extentCode}.php");
                     file_put_contents($africa . "Extent{$extentCode}.php", $exportFull);
                     $this->codeGen->csFixFile($africa . "Extent{$extentCode}.php");
                     break;
-                case self::REGION_ANTARCTIC:
+                case RegionMap::REGION_ANTARCTIC:
                     file_put_contents($boundingBoxOnly . "Extent{$extentCode}.php", $exportSimple);
                     $this->codeGen->csFixFile($boundingBoxOnly . "Extent{$extentCode}.php");
                     file_put_contents($antarctic . "Extent{$extentCode}.php", $exportFull);
                     $this->codeGen->csFixFile($antarctic . "Extent{$extentCode}.php");
                     break;
-                case self::REGION_ARCTIC:
+                case RegionMap::REGION_ARCTIC:
                     file_put_contents($boundingBoxOnly . "Extent{$extentCode}.php", $exportSimple);
                     $this->codeGen->csFixFile($boundingBoxOnly . "Extent{$extentCode}.php");
                     file_put_contents($arctic . "Extent{$extentCode}.php", $exportFull);
                     $this->codeGen->csFixFile($arctic . "Extent{$extentCode}.php");
                     break;
-                case self::REGION_ASIA:
+                case RegionMap::REGION_ASIA:
                     file_put_contents($boundingBoxOnly . "Extent{$extentCode}.php", $exportSimple);
                     $this->codeGen->csFixFile($boundingBoxOnly . "Extent{$extentCode}.php");
                     file_put_contents($asia . "Extent{$extentCode}.php", $exportFull);
                     $this->codeGen->csFixFile($asia . "Extent{$extentCode}.php");
                     break;
-                case self::REGION_OCEANIA:
+                case RegionMap::REGION_OCEANIA:
                     file_put_contents($boundingBoxOnly . "Extent{$extentCode}.php", $exportSimple);
                     $this->codeGen->csFixFile($boundingBoxOnly . "Extent{$extentCode}.php");
                     file_put_contents($oceania . "Extent{$extentCode}.php", $exportFull);
                     $this->codeGen->csFixFile($oceania . "Extent{$extentCode}.php");
                     break;
-                case self::REGION_EUROPE:
+                case RegionMap::REGION_EUROPE:
                     file_put_contents($boundingBoxOnly . "Extent{$extentCode}.php", $exportSimple);
                     $this->codeGen->csFixFile($boundingBoxOnly . "Extent{$extentCode}.php");
                     file_put_contents($europe . "Extent{$extentCode}.php", $exportFull);
                     $this->codeGen->csFixFile($europe . "Extent{$extentCode}.php");
                     break;
-                case self::REGION_NORTHAMERICA:
+                case RegionMap::REGION_NORTHAMERICA:
                     file_put_contents($boundingBoxOnly . "Extent{$extentCode}.php", $exportSimple);
                     $this->codeGen->csFixFile($boundingBoxOnly . "Extent{$extentCode}.php");
                     file_put_contents($northAmerica . "Extent{$extentCode}.php", $exportFull);
                     $this->codeGen->csFixFile($northAmerica . "Extent{$extentCode}.php");
                     break;
-                case self::REGION_SOUTHAMERICA:
+                case RegionMap::REGION_SOUTHAMERICA:
                     file_put_contents($boundingBoxOnly . "Extent{$extentCode}.php", $exportSimple);
                     $this->codeGen->csFixFile($boundingBoxOnly . "Extent{$extentCode}.php");
                     file_put_contents($southAmerica . "Extent{$extentCode}.php", $exportFull);

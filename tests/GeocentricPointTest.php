@@ -15,7 +15,15 @@ use function in_array;
 use InvalidArgumentException;
 use PHPCoord\CoordinateOperation\CoordinateOperationMethods;
 use PHPCoord\CoordinateOperation\CoordinateOperations;
-use PHPCoord\CoordinateOperation\CRSTransformations;
+use PHPCoord\CoordinateOperation\CRSTransformationsAfrica;
+use PHPCoord\CoordinateOperation\CRSTransformationsAntarctic;
+use PHPCoord\CoordinateOperation\CRSTransformationsArctic;
+use PHPCoord\CoordinateOperation\CRSTransformationsAsia;
+use PHPCoord\CoordinateOperation\CRSTransformationsEurope;
+use PHPCoord\CoordinateOperation\CRSTransformationsGlobal;
+use PHPCoord\CoordinateOperation\CRSTransformationsNorthAmerica;
+use PHPCoord\CoordinateOperation\CRSTransformationsOceania;
+use PHPCoord\CoordinateOperation\CRSTransformationsSouthAmerica;
 use PHPCoord\CoordinateOperation\GeographicValue;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\CoordinateReferenceSystem\Geocentric;
@@ -383,7 +391,7 @@ class GeocentricPointTest extends TestCase
     public function supportedOperations(): array
     {
         $toTest = [];
-        foreach (CRSTransformations::getSupportedTransformations() as $transformation) {
+        foreach ([...CRSTransformationsGlobal::getSupportedTransformations(), ...CRSTransformationsAfrica::getSupportedTransformations(), ...CRSTransformationsAntarctic::getSupportedTransformations(), ...CRSTransformationsArctic::getSupportedTransformations(), ...CRSTransformationsAsia::getSupportedTransformations(), ...CRSTransformationsEurope::getSupportedTransformations(), ...CRSTransformationsNorthAmerica::getSupportedTransformations(), ...CRSTransformationsOceania::getSupportedTransformations(), ...CRSTransformationsSouthAmerica::getSupportedTransformations()] as $transformation) {
             if (isset(static::$sridData[$transformation['source_crs']])) {
                 //filter out operations that require a grid file that we don't have
                 $needsNonExistentFile = false;

@@ -13,6 +13,7 @@ use PHPCoord\Datum\Datum;
 use PHPCoord\Geometry\Extents\BoundingBoxOnly\Extent2157;
 use PHPCoord\Geometry\Extents\BoundingBoxOnly\Extent2706;
 use PHPCoord\Geometry\Extents\Extent3914;
+use PHPCoord\Geometry\Extents\RegionMap;
 use PHPCoord\UnitOfMeasure\Angle\Degree;
 use PHPUnit\Framework\TestCase;
 
@@ -41,7 +42,8 @@ class BoundingAreaTest extends TestCase
                         [-9, 49.75],
                     ],
                 ],
-          ]
+          ],
+            RegionMap::REGION_EUROPE
         );
         [$latitude, $longitude] = $polygon->getPointInside();
 
@@ -64,7 +66,8 @@ class BoundingAreaTest extends TestCase
                         [160.6, -55.95],
                     ],
                 ],
-            ]
+            ],
+            RegionMap::REGION_OCEANIA
         );
         [$latitude, $longitude] = $polygon->getPointInside();
 
@@ -76,7 +79,7 @@ class BoundingAreaTest extends TestCase
 
     public function testPolygonWithHole(): void
     {
-        $polygon = BoundingArea::createFromArray((new Extent3914())());
+        $polygon = BoundingArea::createFromArray((new Extent3914())(), RegionMap::REGION_GLOBAL);
         self::assertFalse($polygon->containsPoint(new GeographicValue(new Degree(41), new Degree(8.4), null, Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_ENSEMBLE))));
         self::assertTrue($polygon->containsPoint(new GeographicValue(new Degree(42), new Degree(8.4), null, Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_ENSEMBLE))));
         self::assertFalse($polygon->containsPoint(new GeographicValue(new Degree(42), new Degree(8.6), null, Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_ENSEMBLE))));
@@ -85,14 +88,14 @@ class BoundingAreaTest extends TestCase
 
     public function testAreaCrossesNegativeAntimeridian(): void
     {
-        $polygon = BoundingArea::createFromArray((new Extent2157())());
+        $polygon = BoundingArea::createFromArray((new Extent2157())(), RegionMap::REGION_NORTHAMERICA);
         self::assertTrue($polygon->containsPoint(new GeographicValue(new Degree(52.5), new Degree(-186.5), null, Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_ENSEMBLE))));
         self::assertTrue($polygon->containsPoint(new GeographicValue(new Degree(52.5), new Degree(173.5), null, Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_ENSEMBLE))));
     }
 
     public function testAreaCrossesPositiveAntimeridian(): void
     {
-        $polygon = BoundingArea::createFromArray((new Extent2706())());
+        $polygon = BoundingArea::createFromArray((new Extent2706())(), RegionMap::REGION_EUROPE);
         self::assertTrue($polygon->containsPoint(new GeographicValue(new Degree(65), new Degree(181), null, Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_ENSEMBLE))));
         self::assertTrue($polygon->containsPoint(new GeographicValue(new Degree(65), new Degree(-179), null, Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_ENSEMBLE))));
     }

@@ -8,25 +8,19 @@ declare(strict_types=1);
 
 namespace PHPCoord\EPSG\Import;
 
-use function array_column;
+use function array_map;
 use function array_unique;
 use function array_values;
-use function class_exists;
+use function assert;
 use function count;
 use function dirname;
-use Exception;
 use function explode;
 use function file_get_contents;
 use function file_put_contents;
 use function glob;
 use function implode;
 use function in_array;
-use function json_decode;
-use const JSON_THROW_ON_ERROR;
 use function lcfirst;
-use function max;
-use function min;
-use const PHP_EOL;
 use PHPCoord\CoordinateOperation\CoordinateOperationMethods;
 use PHPCoord\CoordinateReferenceSystem\Compound;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
@@ -41,6 +35,7 @@ use PHPCoord\CoordinateSystem\Vertical as VerticalCS;
 use PHPCoord\Datum\Datum;
 use PHPCoord\Datum\Ellipsoid;
 use PHPCoord\Datum\PrimeMeridian;
+use PHPCoord\Geometry\Extents\RegionMap;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Rate;
@@ -48,7 +43,6 @@ use PHPCoord\UnitOfMeasure\Scale\Scale;
 use PHPCoord\UnitOfMeasure\Time\Time;
 use function preg_match;
 use function preg_replace;
-use function sleep;
 use SQLite3;
 use const SQLITE3_ASSOC;
 use const SQLITE3_OPEN_READONLY;
@@ -1396,6 +1390,7 @@ class EPSGCodegenFromDataImport
     public function generateDataCoordinateOperations(): void
     {
         $filenameToProviderMap = require 'FilenameToProviderMap.php';
+        $regionMap = (new RegionMap())();
 
         $wgs84CopiesFromETRS89 = $this->determineOperationsToWGS84CopiedFromETRS89();
         $etrs89CopiesFromWGS84 = $this->determineOperationsToETRS89CopiedFromWGS84();
@@ -1419,11 +1414,14 @@ class EPSGCodegenFromDataImport
                 'urn:ogc:def:crs:EPSG::' || o.source_crs_code AS source_crs,
                 'urn:ogc:def:crs:EPSG::' || o.target_crs_code AS target_crs,
                 COALESCE(o.coord_op_accuracy, 0) AS accuracy,
+                GROUP_CONCAT(e.extent_code, ',') AS extent_code,
                 m.reverse_op AS reversible
             FROM epsg_coordoperation o
             JOIN epsg_coordoperationmethod m ON m.coord_op_method_code = o.coord_op_method_code
             JOIN epsg_coordinatereferencesystem sourcecrs ON sourcecrs.coord_ref_sys_code = o.source_crs_code AND sourcecrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND sourcecrs.deprecated = 0
             JOIN epsg_coordinatereferencesystem targetcrs ON targetcrs.coord_ref_sys_code = o.target_crs_code AND targetcrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND targetcrs.deprecated = 0
+            JOIN epsg_usage u ON u.object_table_name = 'epsg_coordoperation' AND u.object_code = o.coord_op_code
+            JOIN epsg_extent e ON u.extent_code = e.extent_code
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperation' AND dep.object_code = o.coord_op_code
             LEFT JOIN epsg_supersession s ON s.object_table_name = 'epsg_coordoperation' AND s.object_code = o.coord_op_code
             WHERE o.coord_op_type != 'conversion' AND o.coord_op_type != 'concatenated operation' AND o.coord_op_name NOT LIKE '%example%' AND o.coord_op_name NOT LIKE '%mining%'
@@ -1440,10 +1438,13 @@ class EPSGCodegenFromDataImport
                 'urn:ogc:def:crs:EPSG::' || projcrs.base_crs_code AS source_crs,
                 'urn:ogc:def:crs:EPSG::' || projcrs.coord_ref_sys_code AS target_crs,
                 COALESCE(o.coord_op_accuracy, 0) AS accuracy,
+                GROUP_CONCAT(e.extent_code, ',') AS extent_code,
                 m.reverse_op AS reversible
             FROM epsg_coordoperation o
             JOIN epsg_coordinatereferencesystem projcrs ON projcrs.projection_conv_code = o.coord_op_code AND projcrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND projcrs.deprecated = 0
             JOIN epsg_coordoperationmethod m ON m.coord_op_method_code = o.coord_op_method_code
+            JOIN epsg_usage u ON u.object_table_name = 'epsg_coordoperation' AND u.object_code = o.coord_op_code
+            JOIN epsg_extent e ON u.extent_code = e.extent_code
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperation' AND dep.object_code = o.coord_op_code
             LEFT JOIN epsg_supersession s ON s.object_table_name = 'epsg_coordoperation' AND s.object_code = o.coord_op_code
             WHERE o.coord_op_type = 'conversion' AND o.coord_op_type != 'concatenated operation' AND o.coord_op_name NOT LIKE '%example%' AND o.coord_op_name NOT LIKE '%mining%'
@@ -1456,13 +1457,25 @@ class EPSGCodegenFromDataImport
             ';
 
         $result = $this->sqlite->query($sql);
-        $data = [];
+        $byRegion = [];
         while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            $extents = explode(',', $row['extent_code']);
+            $regions = array_unique(array_map(static fn ($extent) => $regionMap[$extent], $extents));
+            assert(count($regions) === 1);
+            unset($row['extent_code']);
             $row['reversible'] = (bool) $row['reversible'];
-            $data[] = $row;
+            $byRegion[$regions[0]][] = $row;
         }
 
-        $this->codeGen->updateFileData($this->sourceDir . '/CoordinateOperation/CRSTransformations.php', $data);
+        $this->codeGen->updateFileData($this->sourceDir . '/CoordinateOperation/CRSTransformationsGlobal.php', $byRegion[RegionMap::REGION_GLOBAL]);
+        $this->codeGen->updateFileData($this->sourceDir . '/CoordinateOperation/CRSTransformationsAfrica.php', $byRegion[RegionMap::REGION_AFRICA]);
+        $this->codeGen->updateFileData($this->sourceDir . '/CoordinateOperation/CRSTransformationsAntarctic.php', $byRegion[RegionMap::REGION_ANTARCTIC]);
+        $this->codeGen->updateFileData($this->sourceDir . '/CoordinateOperation/CRSTransformationsArctic.php', $byRegion[RegionMap::REGION_ARCTIC]);
+        $this->codeGen->updateFileData($this->sourceDir . '/CoordinateOperation/CRSTransformationsAsia.php', $byRegion[RegionMap::REGION_ASIA]);
+        $this->codeGen->updateFileData($this->sourceDir . '/CoordinateOperation/CRSTransformationsEurope.php', $byRegion[RegionMap::REGION_EUROPE]);
+        $this->codeGen->updateFileData($this->sourceDir . '/CoordinateOperation/CRSTransformationsNorthAmerica.php', $byRegion[RegionMap::REGION_NORTHAMERICA]);
+        $this->codeGen->updateFileData($this->sourceDir . '/CoordinateOperation/CRSTransformationsOceania.php', $byRegion[RegionMap::REGION_OCEANIA]);
+        $this->codeGen->updateFileData($this->sourceDir . '/CoordinateOperation/CRSTransformationsSouthAmerica.php', $byRegion[RegionMap::REGION_SOUTHAMERICA]);
 
         $sql = "
             SELECT
@@ -1587,156 +1600,6 @@ class EPSGCodegenFromDataImport
                 unlink($filename);
             }
         }
-    }
-
-    public function generateExtents(): void
-    {
-        echo 'Updating extents...';
-
-        $boundingBoxOnly = $this->sourceDir . '/Geometry/Extents/BoundingBoxOnly/';
-        $builtInFull = $this->sourceDir . '/Geometry/Extents/';
-        $africa = $this->sourceDir . '/../vendor/php-coord/datapack-africa/src/Geometry/Extents/';
-        $antarctic = $this->sourceDir . '/../vendor/php-coord/datapack-antarctic/src/Geometry/Extents/';
-        $arctic = $this->sourceDir . '/../vendor/php-coord/datapack-arctic/src/Geometry/Extents/';
-        $asia = $this->sourceDir . '/../vendor/php-coord/datapack-asia/src/Geometry/Extents/';
-        $europe = $this->sourceDir . '/../vendor/php-coord/datapack-europe/src/Geometry/Extents/';
-        $northAmerica = $this->sourceDir . '/../vendor/php-coord/datapack-northamerica/src/Geometry/Extents/';
-        $southAmerica = $this->sourceDir . '/../vendor/php-coord/datapack-southamerica/src/Geometry/Extents/';
-        $oceania = $this->sourceDir . '/../vendor/php-coord/datapack-oceania/src/Geometry/Extents/';
-
-        $regionMap = require 'ExtentMap.php';
-
-        $sql = "
-            SELECT e.extent_code, e.extent_name
-            FROM epsg_coordinatereferencesystem crs
-            JOIN epsg_usage u ON u.object_code = crs.coord_ref_sys_code AND u.object_table_name = 'epsg_coordinatereferencesystem'
-            JOIN epsg_extent e ON u.extent_code = e.extent_code
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2021-09-10'
-            WHERE dep.deprecation_id IS NULL AND e.deprecated = 0
-
-            UNION
-
-            SELECT e.extent_code, e.extent_name
-            FROM epsg_coordoperation o
-            JOIN epsg_usage u ON u.object_code = o.coord_op_code AND u.object_table_name = 'epsg_coordoperation'
-            JOIN epsg_extent e ON u.extent_code = e.extent_code
-            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperation' AND dep.object_code = o.coord_op_code AND dep.deprecation_date <= '2021-09-10'
-            WHERE dep.deprecation_id IS NULL AND e.deprecated = 0
-
-            GROUP BY e.extent_code
-        ";
-        $result = $this->sqlite->query($sql);
-
-        $extents = [];
-        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-            $extents[$row['extent_code']] = $row['extent_name'];
-
-            if (!isset($regionMap[$row['extent_code']])) {
-                throw new Exception("Unknown region for {$row['extent_code']}:{$row['extent_name']}");
-            }
-        }
-
-        foreach ($extents as $extentCode => $extentName) {
-            if (class_exists("PHPCoord\\Geometry\\Extents\\Extent{$extentCode}")) {
-                continue;
-            }
-
-            sleep(2);
-
-            $region = $regionMap[$extentCode];
-            $name = $extents[$extentCode];
-            $geoJson = file_get_contents("https://apps.epsg.org/api/v1/Extent/{$extentCode}/polygon/");
-            $polygons = json_decode($geoJson, true, 512, JSON_THROW_ON_ERROR);
-
-            $exportSimple = "<?php\ndeclare(strict_types=1);\n\nnamespace PHPCoord\Geometry\Extents\BoundingBoxOnly;\n/**\n * {$region}/{$name}.\n * @internal\n */\nclass Extent{$extentCode}\n{\n    public function __invoke(): array\n    {\n        return\n        [\n";
-            $exportFull = "<?php\ndeclare(strict_types=1);\n\nnamespace PHPCoord\Geometry\Extents;\n/**\n * {$region}/{$name}.\n * @internal\n */\nclass Extent{$extentCode}\n{\n    public function __invoke(): array\n    {\n        return\n        [\n";
-
-            if ($polygons['type'] === 'Polygon') {
-                $polygons['coordinates'] = [$polygons['coordinates']];
-            }
-
-            foreach ($polygons['coordinates'] as $polygon) {
-                $outerRingPoints = $polygon[0];
-                $xmin = min(array_column($outerRingPoints, 0));
-                $xmax = max(array_column($outerRingPoints, 0));
-                $ymin = min(array_column($outerRingPoints, 1));
-                $ymax = max(array_column($outerRingPoints, 1));
-                $exportSimple .= "            [\n                [\n                    ";
-                $exportSimple .= "[{$xmax}, {$ymax}], [{$xmin}, {$ymax}], [{$xmin}, {$ymin}], [{$xmax}, {$ymin}], [{$xmax}, {$ymax}],";
-                $exportSimple .= "\n                ],\n            ],\n";
-
-                $exportFull .= "            [\n";
-                foreach ($polygon as $ring) {
-                    $exportFull .= "                [\n                    ";
-                    foreach ($ring as $point) {
-                        $exportFull .= '[' . $point[0] . ', ' . $point[1] . '], ';
-                    }
-                    $exportFull .= "\n                ],\n";
-                }
-                $exportFull .= "            ],\n";
-            }
-            $exportSimple .= "        ];\n    }\n}\n";
-            $exportFull .= "        ];\n    }\n}\n";
-
-            switch ($region) {
-                case self::REGION_GLOBAL:
-                    file_put_contents($builtInFull . "Extent{$extentCode}.php", $exportFull);
-                    $this->codeGen->csFixFile($builtInFull . "Extent{$extentCode}.php");
-                    break;
-                case self::REGION_AFRICA:
-                    file_put_contents($boundingBoxOnly . "Extent{$extentCode}.php", $exportSimple);
-                    $this->codeGen->csFixFile($boundingBoxOnly . "Extent{$extentCode}.php");
-                    file_put_contents($africa . "Extent{$extentCode}.php", $exportFull);
-                    $this->codeGen->csFixFile($africa . "Extent{$extentCode}.php");
-                    break;
-                case self::REGION_ANTARCTIC:
-                    file_put_contents($boundingBoxOnly . "Extent{$extentCode}.php", $exportSimple);
-                    $this->codeGen->csFixFile($boundingBoxOnly . "Extent{$extentCode}.php");
-                    file_put_contents($antarctic . "Extent{$extentCode}.php", $exportFull);
-                    $this->codeGen->csFixFile($antarctic . "Extent{$extentCode}.php");
-                    break;
-                case self::REGION_ARCTIC:
-                    file_put_contents($boundingBoxOnly . "Extent{$extentCode}.php", $exportSimple);
-                    $this->codeGen->csFixFile($boundingBoxOnly . "Extent{$extentCode}.php");
-                    file_put_contents($arctic . "Extent{$extentCode}.php", $exportFull);
-                    $this->codeGen->csFixFile($arctic . "Extent{$extentCode}.php");
-                    break;
-                case self::REGION_ASIA:
-                    file_put_contents($boundingBoxOnly . "Extent{$extentCode}.php", $exportSimple);
-                    $this->codeGen->csFixFile($boundingBoxOnly . "Extent{$extentCode}.php");
-                    file_put_contents($asia . "Extent{$extentCode}.php", $exportFull);
-                    $this->codeGen->csFixFile($asia . "Extent{$extentCode}.php");
-                    break;
-                case self::REGION_OCEANIA:
-                    file_put_contents($boundingBoxOnly . "Extent{$extentCode}.php", $exportSimple);
-                    $this->codeGen->csFixFile($boundingBoxOnly . "Extent{$extentCode}.php");
-                    file_put_contents($oceania . "Extent{$extentCode}.php", $exportFull);
-                    $this->codeGen->csFixFile($oceania . "Extent{$extentCode}.php");
-                    break;
-                case self::REGION_EUROPE:
-                    file_put_contents($boundingBoxOnly . "Extent{$extentCode}.php", $exportSimple);
-                    $this->codeGen->csFixFile($boundingBoxOnly . "Extent{$extentCode}.php");
-                    file_put_contents($europe . "Extent{$extentCode}.php", $exportFull);
-                    $this->codeGen->csFixFile($europe . "Extent{$extentCode}.php");
-                    break;
-                case self::REGION_NORTHAMERICA:
-                    file_put_contents($boundingBoxOnly . "Extent{$extentCode}.php", $exportSimple);
-                    $this->codeGen->csFixFile($boundingBoxOnly . "Extent{$extentCode}.php");
-                    file_put_contents($northAmerica . "Extent{$extentCode}.php", $exportFull);
-                    $this->codeGen->csFixFile($northAmerica . "Extent{$extentCode}.php");
-                    break;
-                case self::REGION_SOUTHAMERICA:
-                    file_put_contents($boundingBoxOnly . "Extent{$extentCode}.php", $exportSimple);
-                    $this->codeGen->csFixFile($boundingBoxOnly . "Extent{$extentCode}.php");
-                    file_put_contents($southAmerica . "Extent{$extentCode}.php", $exportFull);
-                    $this->codeGen->csFixFile($southAmerica . "Extent{$extentCode}.php");
-                    break;
-                default:
-                    throw new Exception("Unknown region: {$region}");
-            }
-        }
-
-        echo 'done' . PHP_EOL;
     }
 
     protected static function makeParamName(string $string): string

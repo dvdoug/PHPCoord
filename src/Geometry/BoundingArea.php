@@ -8,11 +8,15 @@ declare(strict_types=1);
 
 namespace PHPCoord\Geometry;
 
+use function array_map;
 use function array_merge;
+use function array_unique;
+use function assert;
 use function class_exists;
 use function count;
 use function implode;
 use PHPCoord\CoordinateOperation\GeographicValue;
+use PHPCoord\Geometry\Extents\RegionMap;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPCoord\UnitOfMeasure\Angle\Degree;
 
@@ -23,6 +27,8 @@ class BoundingArea
      * @var array<array<array<array<float, float>>>
      */
     protected array $vertices;
+
+    protected string $region;
 
     protected bool $longitudeWrapAroundChecked = false;
 
@@ -36,22 +42,28 @@ class BoundingArea
 
     private array $centre = [];
 
-    protected function __construct(array $vertices)
+    protected function __construct(array $vertices, string $region)
     {
         $this->vertices = $vertices;
+        $this->region = $region;
+    }
+
+    public function getRegion(): string
+    {
+        return $this->region;
     }
 
     /**
      * @param array<array<array<array<float, float>>> $vertices [[[long,lat], [long,lat]...]]
      */
-    public static function createFromArray(array $vertices): self
+    public static function createFromArray(array $vertices, string $region): self
     {
-        return new static($vertices);
+        return new static($vertices, $region);
     }
 
     public static function createWorld(): self
     {
-        return new static([[[[-180, -90], [-180, 90], [180, 90], [180, -90], [-180, -90]]]]);
+        return new static([[[[-180, -90], [-180, 90], [180, 90], [180, -90], [-180, -90]]]], RegionMap::REGION_GLOBAL);
     }
 
     /**
@@ -69,7 +81,11 @@ class BoundingArea
                 $extents = [...$extents, ...$extentClass()];
             }
 
-            $extentData = self::createFromArray($extents);
+            $regionMap = (new RegionMap())();
+            $regions = array_unique(array_map(static fn ($extent) => $regionMap[$extent], $extentCodes));
+            assert(count($regions) === 1);
+
+            $extentData = self::createFromArray($extents, $regions[0]);
 
             self::$cachedObjects[$cacheKey] = $extentData;
         }

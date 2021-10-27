@@ -85,7 +85,7 @@ operation. For instance taking a point located in Tokyo and trying to obtain the
 is a nonsensical operation - theoretically you could find a chain of conversions (e.g. perhaps through WGS84) that would
 would produce *a* coordinate, but it would not be in the expected spot when plotting it onto an actual map.
 
-By default therefore PHPCoord will not allow such conversions to take place.
+PHPCoord will not normally allow such conversions to take place.
 
 There are occasions however where the formal definitions of the CRS and real-life conflict - for example in Germany
 (which is partially in UTM zone 32 and partially in zone 33), coordinates are sometimes requested as zone 32-based
@@ -93,7 +93,8 @@ even for points that are in zone 33. The administrative convenience is considere
 accuracy of extending the zone.
 
 If you are sure that you know what you're doing, you can set the optional parameter ``$ignoreBoundaryRestrictions``
-to ``true``.
+to ``true`` to remove these boundary checks. Conversions between coordinate systems located in different regions
+(e.g. USA to UK, or Japan to NZ) will still be disallowed.
 
 .. note::
     For more on how PHPCoord implements boundaries/extents, :ref:`see below<accuracy>`.
