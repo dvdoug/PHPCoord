@@ -9,7 +9,6 @@ declare(strict_types=1);
 namespace PHPCoord\CoordinateReferenceSystem;
 
 use function count;
-use PHPCoord\CoordinateOperation\CRSTransformations;
 use PHPCoord\Exception\UnknownCoordinateReferenceSystemException;
 use PHPUnit\Framework\TestCase;
 
@@ -45,18 +44,9 @@ class VerticalTest extends TestCase
 
     public function coordinateReferenceSystems(): array
     {
-        $crsThatWillBeCreatedViaOperationTesting = [];
-
-        foreach (CRSTransformations::getSupportedTransformations() as $transformation) {
-            $crsThatWillBeCreatedViaOperationTesting[$transformation['source_crs']] = $transformation['source_crs'];
-            $crsThatWillBeCreatedViaOperationTesting[$transformation['target_crs']] = $transformation['target_crs'];
-        }
-
         $return = [];
         foreach (static::$sridData as $srid => $data) {
-            if (!isset($crsThatWillBeCreatedViaOperationTesting[$srid])) {
-                $return[$data['name']] = [$srid];
-            }
+            $return[$data['name']] = [$srid];
         }
 
         return $return;
