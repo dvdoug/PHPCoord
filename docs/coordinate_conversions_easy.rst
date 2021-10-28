@@ -49,10 +49,9 @@ Examples:
     $to = $from->convert($toCRS); // $to instanceof GeographicPoint
 
 
-Ignoring the second optional parameter for now, calling ``convert()`` will first look to see if the built-in
-dataset knows how to perform a direct conversion. If it can, then PHPCoord will automatically invoke the
-relevant conversion methods with the appropriate parameters and return a new ``Point`` object with the adjusted
-coordinates in the target CRS.
+Ignoring the second optional parameter for now, calling ``convert()`` will consult the built-in dataset and if a
+conversion is found, then PHPCoord will automatically invoke the relevant conversion method with the appropriate
+parameters (see the "hard" section), returning a new ``Point`` object with the adjusted coordinates.
 
 Although PHPCoord has knowledge of thousands of different conversions, this does not cover many scenarios. For example
 there is no published direct conversion between a British National Grid reference and a WGS84 UTM Grid reference. In these
