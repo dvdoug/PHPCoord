@@ -229,7 +229,12 @@ class GeographicPointTest extends TestCase
     {
         $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_OSGB36), new Degree(51.54105), new Degree(-0.12319), null);
         $to = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_PZ_90), new Degree(51.507977), new Degree(-0.124588), null);
-        self::assertEqualsWithDelta(3735.156, $from->calculateDistance($to)->getValue(), 0.001);
+
+        if (class_exists(OSTN15OSGM15Provider::class)) {
+            self::assertEqualsWithDelta(3734.135, $from->calculateDistance($to)->getValue(), 0.001);
+        } else {
+            self::assertEqualsWithDelta(3735.156, $from->calculateDistance($to)->getValue(), 0.001);
+        }
     }
 
     public function testDistanceDifferentCRSsNoAutoconversion(): void

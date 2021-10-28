@@ -17,7 +17,6 @@ use function assert;
 use function class_exists;
 use function count;
 use DateTimeImmutable;
-use Generator;
 use function in_array;
 use PHPCoord\CompoundPoint;
 use PHPCoord\CoordinateReferenceSystem\Compound;
@@ -63,8 +62,6 @@ trait AutoConversion
 
     private static array $completePathCache = [];
 
-    private static array $incompletePathCache = [];
-
     public function convert(CoordinateReferenceSystem $to, bool $ignoreBoundaryRestrictions = false): Point
     {
         if ($this->getCRS() == $to) {
@@ -95,13 +92,12 @@ trait AutoConversion
         $boundaryCheckPoint = $ignoreBoundaryRestrictions ? null : $this->getPointForBoundaryCheck();
 
         // Iteratively calculate permutations of intermediate CRSs
-        foreach ($this->buildTransformationPathsToCRS($source, $target) as $candidatePaths) {
-            usort($candidatePaths, static fn (array $a, array $b) => $a['accuracy'] <=> $b['accuracy']);
+        $candidatePaths = $this->buildTransformationPathsToCRS($source, $target);
+        usort($candidatePaths, static fn (array $a, array $b) => $a['accuracy'] <=> $b['accuracy']);
 
-            foreach ($candidatePaths as $candidatePath) {
-                if ($this->validatePath($candidatePath['path'], $boundaryCheckPoint)) {
-                    return $candidatePath['path'];
-                }
+        foreach ($candidatePaths as $candidatePath) {
+            if ($this->validatePath($candidatePath['path'], $boundaryCheckPoint)) {
+                return $candidatePath['path'];
             }
         }
 
@@ -152,26 +148,25 @@ trait AutoConversion
     /**
      * Build the set of possible paths that lead from the current CRS to the target CRS.
      */
-    protected function buildTransformationPathsToCRS(Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $source, Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $target): Generator
+    protected function buildTransformationPathsToCRS(Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $source, Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $target): array
     {
-        $iterations = 1;
+        $iterations = 0;
         $sourceSRID = $source->getSRID();
         $targetSRID = $target->getSRID();
-        self::$incompletePathCache[$sourceSRID . '|' . $targetSRID . '|0'] = [[$sourceSRID]];
+        $previousSimplePaths = [[$sourceSRID]];
+        $cacheKey = $sourceSRID . '|' . $targetSRID;
 
-        while ($iterations < $this->maxChainDepth) {
-            $iterationsMinus1 = $iterations - 1;
-            $cacheKey = $sourceSRID . '|' . $targetSRID . '|' . $iterations;
-            $cacheKeyMinus1 = $sourceSRID . '|' . $targetSRID . '|' . ($iterationsMinus1);
+        if (!isset(self::$completePathCache[$cacheKey])) {
+            $transformationsByCRS = self::buildSupportedTransformationsByCRS($source, $target);
+            $transformationsByCRSPair = self::buildSupportedTransformationsByCRSPair($source, $target);
+            self::$completePathCache[$cacheKey] = [];
 
-            if (!isset(self::$completePathCache[$cacheKey])) {
-                $transformationsByCRS = self::buildSupportedTransformationsByCRS($source, $target);
-                $transformationsByCRSPair = self::buildSupportedTransformationsByCRSPair($source, $target);
+            while ($iterations <= $this->maxChainDepth) {
                 $completePaths = [];
                 $simplePaths = [];
 
-                foreach (self::$incompletePathCache[$cacheKeyMinus1] as $simplePath) {
-                    $current = $simplePath[$iterationsMinus1];
+                foreach ($previousSimplePaths as $simplePath) {
+                    $current = $simplePath[$iterations];
                     if ($current === $targetSRID) {
                         $completePaths[] = $simplePath;
                     } elseif (isset($transformationsByCRS[$current])) {
@@ -191,14 +186,13 @@ trait AutoConversion
                     $paths[] = ['path' => $fullPath, 'accuracy' => array_sum(array_column($fullPath, 'accuracy'))];
                 }
 
-                unset(self::$incompletePathCache[$cacheKeyMinus1]);
-                self::$incompletePathCache[$cacheKey] = $simplePaths;
-                self::$completePathCache[$cacheKey] = $paths;
+                $previousSimplePaths = $simplePaths;
+                self::$completePathCache[$cacheKey] = [...self::$completePathCache[$cacheKey], ...$paths];
+                ++$iterations;
             }
-
-            ++$iterations;
-            yield self::$completePathCache[$cacheKey];
         }
+
+        return self::$completePathCache[$cacheKey];
     }
 
     protected function expandSimplePaths(array $transformationsByCRSPair, array $simplePaths, string $fromSRID, string $toSRID): array
