@@ -16,14 +16,6 @@ class CRSTransformationsNorthAmerica
 {
     protected static array $sridData = [
         [
-            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10087',
-            'name' => 'Jamaica 1875 / Jamaica (Old Grid) to JAD69 / Jamaica National Grid (1)',
-            'source_crs' => 'urn:ogc:def:crs:EPSG::24100',
-            'target_crs' => 'urn:ogc:def:crs:EPSG::24200',
-            'accuracy' => 1.5,
-            'reversible' => true,
-        ],
-        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19945',
             'name' => 'New Brunswick Stereographic (ATS77)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4122',

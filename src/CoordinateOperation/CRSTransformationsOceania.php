@@ -16,22 +16,6 @@ class CRSTransformationsOceania
 {
     protected static array $sridData = [
         [
-            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15951',
-            'name' => 'Vanua Levu 1915 / Vanua Levu Grid to Fiji 1986 / Fiji Map Grid (1)',
-            'source_crs' => 'urn:ogc:def:crs:EPSG::3139',
-            'target_crs' => 'urn:ogc:def:crs:EPSG::3460',
-            'accuracy' => 1.0,
-            'reversible' => false,
-        ],
-        [
-            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15950',
-            'name' => 'Viti Levu 1912 / Viti Levu Grid to Fiji 1986 / Fiji Map Grid (1)',
-            'source_crs' => 'urn:ogc:def:crs:EPSG::3140',
-            'target_crs' => 'urn:ogc:def:crs:EPSG::3460',
-            'accuracy' => 1.0,
-            'reversible' => false,
-        ],
-        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7654',
             'name' => 'EGM2008 height to Kiunga height (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::3855',

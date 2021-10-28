@@ -32,16 +32,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9648',
             'extent_code' => ['1305'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::1044' => [
-            'name' => 'Amersfoort / RD New to ED50 / UTM zone 31N (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9653',
-            'extent_code' => ['1275'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1048' => [
-            'name' => 'BD72 / Lambert 72 to ED50 / UTM zone 31N (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9652',
-            'extent_code' => ['1347'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::1057' => [
             'name' => 'Ain el Abd to WGS 84 (5)',
             'method' => 'urn:ogc:def:method:EPSG::9607',
@@ -90,11 +80,6 @@ class CoordinateOperations
         'urn:ogc:def:coordinateOperation:EPSG::1071' => [
             'name' => 'Palestine 1923 to Israel 1993 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['2603'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1072' => [
-            'name' => 'Palestine 1923 / Israeli CS to Israel 1993 / Israeli TM (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9656',
             'extent_code' => ['2603'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::1074' => [
@@ -1987,126 +1972,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9607',
             'extent_code' => ['3573'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::3929' => [
-            'name' => 'D48/GK to D96/TM (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9621',
-            'extent_code' => ['2578'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::3930' => [
-            'name' => 'D48/GK to D96/TM (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9621',
-            'extent_code' => ['2579'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::3931' => [
-            'name' => 'D48/GK to D96/TM (3)',
-            'method' => 'urn:ogc:def:method:EPSG::9621',
-            'extent_code' => ['2582'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::3932' => [
-            'name' => 'D48/GK to D96/TM (4)',
-            'method' => 'urn:ogc:def:method:EPSG::9621',
-            'extent_code' => ['2583'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::3933' => [
-            'name' => 'D48/GK to D96/TM (5)',
-            'method' => 'urn:ogc:def:method:EPSG::9621',
-            'extent_code' => ['3348'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::3934' => [
-            'name' => 'D48/GK to D96/TM (6)',
-            'method' => 'urn:ogc:def:method:EPSG::9621',
-            'extent_code' => ['2422'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::3935' => [
-            'name' => 'D48/GK to D96/TM (7)',
-            'method' => 'urn:ogc:def:method:EPSG::9621',
-            'extent_code' => ['3349'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::3936' => [
-            'name' => 'D48/GK to D96/TM (8)',
-            'method' => 'urn:ogc:def:method:EPSG::9621',
-            'extent_code' => ['3350'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::3937' => [
-            'name' => 'D48/GK to D96/TM (9)',
-            'method' => 'urn:ogc:def:method:EPSG::9621',
-            'extent_code' => ['2580'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::3938' => [
-            'name' => 'D48/GK to D96/TM (10)',
-            'method' => 'urn:ogc:def:method:EPSG::9621',
-            'extent_code' => ['3345'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::3939' => [
-            'name' => 'D48/GK to D96/TM (11)',
-            'method' => 'urn:ogc:def:method:EPSG::9621',
-            'extent_code' => ['2581'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::3940' => [
-            'name' => 'D48/GK to D96/TM (12)',
-            'method' => 'urn:ogc:def:method:EPSG::9621',
-            'extent_code' => ['3351'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::3941' => [
-            'name' => 'D48/GK to D96/TM (13)',
-            'method' => 'urn:ogc:def:method:EPSG::9621',
-            'extent_code' => ['3352'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::3951' => [
-            'name' => 'D48/GK to D96/TM (14)',
-            'method' => 'urn:ogc:def:method:EPSG::9621',
-            'extent_code' => ['3353'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::3952' => [
-            'name' => 'D48/GK to D96/TM (15)',
-            'method' => 'urn:ogc:def:method:EPSG::9621',
-            'extent_code' => ['3354'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::3953' => [
-            'name' => 'D48/GK to D96/TM (16)',
-            'method' => 'urn:ogc:def:method:EPSG::9621',
-            'extent_code' => ['3560'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::3954' => [
-            'name' => 'D48/GK to D96/TM (17)',
-            'method' => 'urn:ogc:def:method:EPSG::9621',
-            'extent_code' => ['3347'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::3955' => [
-            'name' => 'D48/GK to D96/TM (18)',
-            'method' => 'urn:ogc:def:method:EPSG::9621',
-            'extent_code' => ['2584'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::3956' => [
-            'name' => 'D48/GK to D96/TM (19)',
-            'method' => 'urn:ogc:def:method:EPSG::9621',
-            'extent_code' => ['2585'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::3957' => [
-            'name' => 'D48/GK to D96/TM (20)',
-            'method' => 'urn:ogc:def:method:EPSG::9621',
-            'extent_code' => ['2877'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::3958' => [
-            'name' => 'D48/GK to D96/TM (21)',
-            'method' => 'urn:ogc:def:method:EPSG::9621',
-            'extent_code' => ['2586'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::3959' => [
-            'name' => 'D48/GK to D96/TM (22)',
-            'method' => 'urn:ogc:def:method:EPSG::9621',
-            'extent_code' => ['2587'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::3960' => [
-            'name' => 'D48/GK to D96/TM (23)',
-            'method' => 'urn:ogc:def:method:EPSG::9621',
-            'extent_code' => ['2878'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::3961' => [
-            'name' => 'D48/GK to D96/TM (24)',
-            'method' => 'urn:ogc:def:method:EPSG::9621',
-            'extent_code' => ['3346'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::3962' => [
             'name' => 'MGI 1901 to WGS 84 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
@@ -2181,11 +2046,6 @@ class CoordinateOperations
             'name' => 'Chua to SIRGAS 2000 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['3619'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::4072' => [
-            'name' => 'Karbala 1979 / UTM zone 38N to IGRS / UTM zone 38N (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9656',
-            'extent_code' => ['3702'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::4076' => [
             'name' => 'SREF98 to ETRS89 (1)',
@@ -2851,11 +2711,6 @@ class CoordinateOperations
             'name' => 'Korea Modified East Sea Belt',
             'method' => 'urn:ogc:def:method:EPSG::9807',
             'extent_code' => ['3720'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::5166' => [
-            'name' => 'ED50 / UTM zone 31N to ETRS89 / UTM zone 31N (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9621',
-            'extent_code' => ['3732'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::5189' => [
             'name' => 'Korean 1985 to Korea 2000 (1)',
@@ -4487,16 +4342,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::1053',
             'extent_code' => ['1262'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::6303' => [
-            'name' => 'ED50 / UTM zone 31N to Amersfoort / RD New (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9653',
-            'extent_code' => ['1275'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::6305' => [
-            'name' => 'ED50 / UTM zone 31N to BD72 / Lambert 72 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9652',
-            'extent_code' => ['1347'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::6308' => [
             'name' => 'Cyprus Transverse Mercator',
             'method' => 'urn:ogc:def:method:EPSG::9807',
@@ -5116,131 +4961,6 @@ class CoordinateOperations
             'name' => 'Nahrwan 1967 to WGS 84 (12)',
             'method' => 'urn:ogc:def:method:EPSG::9607',
             'extent_code' => ['4225'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::7008' => [
-            'name' => 'Nahrwan 1934 / UTM zone 37N to Karbala 1979 / UTM zone 37N (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9656',
-            'extent_code' => ['3714'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::7009' => [
-            'name' => 'Nahrwan 1934 / UTM zone 38N to Karbala 1979 / UTM zone 38N (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9656',
-            'extent_code' => ['3717'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::7010' => [
-            'name' => 'Nahrwan 1934 / UTM zone 38N to Karbala 1979 / UTM zone 38N (3)',
-            'method' => 'urn:ogc:def:method:EPSG::9656',
-            'extent_code' => ['3719'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::7011' => [
-            'name' => 'Nahrwan 1934 / UTM zone 38N to Karbala 1979 / UTM zone 38N (4)',
-            'method' => 'urn:ogc:def:method:EPSG::9656',
-            'extent_code' => ['3719'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::7012' => [
-            'name' => 'Nahrwan 1934 / UTM zone 38N to Karbala 1979 / UTM zone 38N (5)',
-            'method' => 'urn:ogc:def:method:EPSG::9656',
-            'extent_code' => ['3701'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::7013' => [
-            'name' => 'Nahrwan 1934 / UTM zone 38N to Karbala 1979 / UTM zone 38N (6)',
-            'method' => 'urn:ogc:def:method:EPSG::9656',
-            'extent_code' => ['3715'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::7014' => [
-            'name' => 'Nahrwan 1934 / UTM zone 38N to Karbala 1979 / UTM zone 38N (7)',
-            'method' => 'urn:ogc:def:method:EPSG::9656',
-            'extent_code' => ['3718'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::7015' => [
-            'name' => 'Nahrwan 1934 / UTM zone 37N to Karbala 1979 / UTM zone 37N (8)',
-            'method' => 'urn:ogc:def:method:EPSG::9656',
-            'extent_code' => ['3722'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::7016' => [
-            'name' => 'Nahrwan 1934 / UTM zone 37N to Karbala 1979 / UTM zone 37N (9)',
-            'method' => 'urn:ogc:def:method:EPSG::9656',
-            'extent_code' => ['3723'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::7017' => [
-            'name' => 'Nahrwan 1934 / UTM zone 38N to Karbala 1979 / UTM zone 38N (10)',
-            'method' => 'urn:ogc:def:method:EPSG::9656',
-            'extent_code' => ['3724'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::7018' => [
-            'name' => 'Nahrwan 1934 / UTM zone 38N to Karbala 1979 / UTM zone 38N (11)',
-            'method' => 'urn:ogc:def:method:EPSG::9656',
-            'extent_code' => ['3725'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::7019' => [
-            'name' => 'Nahrwan 1934 / UTM zone 37N to Karbala 1979 / UTM zone 37N (12)',
-            'method' => 'urn:ogc:def:method:EPSG::9656',
-            'extent_code' => ['3728'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::7020' => [
-            'name' => 'Nahrwan 1934 / UTM zone 37N to Karbala 1979 / UTM zone 37N (13)',
-            'method' => 'urn:ogc:def:method:EPSG::9656',
-            'extent_code' => ['3729'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::7021' => [
-            'name' => 'Nahrwan 1934 / UTM zone 37N to Karbala 1979 / UTM zone 37N (14)',
-            'method' => 'urn:ogc:def:method:EPSG::9656',
-            'extent_code' => ['3728'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::7022' => [
-            'name' => 'Nahrwan 1934 / UTM zone 38N to Karbala 1979 / UTM zone 38N (15)',
-            'method' => 'urn:ogc:def:method:EPSG::9656',
-            'extent_code' => ['3709'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::7023' => [
-            'name' => 'Nahrwan 1934 / UTM zone 38N to Karbala 1979 / UTM zone 38N (16)',
-            'method' => 'urn:ogc:def:method:EPSG::9656',
-            'extent_code' => ['3695'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::7024' => [
-            'name' => 'Nahrwan 1934 / UTM zone 38N to Karbala 1979 / UTM zone 38N (17)',
-            'method' => 'urn:ogc:def:method:EPSG::9656',
-            'extent_code' => ['3704'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::7025' => [
-            'name' => 'Nahrwan 1934 / UTM zone 38N to Karbala 1979 / UTM zone 38N (18)',
-            'method' => 'urn:ogc:def:method:EPSG::9656',
-            'extent_code' => ['3704'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::7026' => [
-            'name' => 'Nahrwan 1934 / UTM zone 38N to Karbala 1979 / UTM zone 38N (19)',
-            'method' => 'urn:ogc:def:method:EPSG::9656',
-            'extent_code' => ['3706'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::7027' => [
-            'name' => 'Nahrwan 1934 / UTM zone 38N to Karbala 1979 / UTM zone 38N (20)',
-            'method' => 'urn:ogc:def:method:EPSG::9656',
-            'extent_code' => ['3708'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::7028' => [
-            'name' => 'Nahrwan 1934 / UTM zone 38N to Karbala 1979 / UTM zone 38N (21)',
-            'method' => 'urn:ogc:def:method:EPSG::9656',
-            'extent_code' => ['3710'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::7029' => [
-            'name' => 'Nahrwan 1934 / UTM zone 38N to Karbala 1979 / UTM zone 38N (22)',
-            'method' => 'urn:ogc:def:method:EPSG::9656',
-            'extent_code' => ['3706'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::7030' => [
-            'name' => 'Nahrwan 1934 / UTM zone 38N to Karbala 1979 / UTM zone 38N (23)',
-            'method' => 'urn:ogc:def:method:EPSG::9656',
-            'extent_code' => ['3708'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::7031' => [
-            'name' => 'Nahrwan 1934 / UTM zone 38N to Karbala 1979 / UTM zone 38N (24)',
-            'method' => 'urn:ogc:def:method:EPSG::9656',
-            'extent_code' => ['3711'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::7032' => [
-            'name' => 'Nahrwan 1934 / UTM zone 38N to Karbala 1979 / UTM zone 38N (25)',
-            'method' => 'urn:ogc:def:method:EPSG::9656',
-            'extent_code' => ['3712'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::7033' => [
             'name' => 'Nahrwan 1934 to WGS 84 (6)',
@@ -8427,56 +8147,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::1053',
             'extent_code' => ['1262'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::9041' => [
-            'name' => 'ISN2004 / LAEA Europe to ETRS89-extended / LAEA Europe (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9656',
-            'extent_code' => ['1120'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::9042' => [
-            'name' => 'ISN2004 / LCC Europe to ETRS89-extended / LCC Europe (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9656',
-            'extent_code' => ['1120'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::9043' => [
-            'name' => 'ISN2016 / LAEA Europe to ETRS89-extended / LAEA Europe (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9656',
-            'extent_code' => ['1120'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::9044' => [
-            'name' => 'ISN2016 / LCC Europe to ETRS89-extended / LCC Europe (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9656',
-            'extent_code' => ['1120'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::9045' => [
-            'name' => 'PTRA08 / LAEA Europe to ETRS89-extended / LAEA Europe (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9656',
-            'extent_code' => ['3670'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::9046' => [
-            'name' => 'PTRA08 / LCC Europe to ETRS89 / LCC Europe (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9656',
-            'extent_code' => ['3670'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::9047' => [
-            'name' => 'REGCAN95 / LAEA Europe to ETRS89-extended / LAEA Europe (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9656',
-            'extent_code' => ['3199'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::9048' => [
-            'name' => 'REGCAN95 / LCC Europe to ETRS89-extended / LCC Europe (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9656',
-            'extent_code' => ['3199'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::9049' => [
-            'name' => 'TUREF / LAEA Europe to ETRS89-extended / LAEA Europe (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9656',
-            'extent_code' => ['1237'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::9050' => [
-            'name' => 'TUREF / LCC Europe to ETRS89-extended / LCC Europe (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9656',
-            'extent_code' => ['1237'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::9051' => [
             'name' => 'ITRF94 to SIRGAS 1995 (1)',
             'method' => 'urn:ogc:def:method:EPSG::1065',
@@ -9901,11 +9571,6 @@ class CoordinateOperations
             'name' => 'RGF93 v2b to RGF93 v2b + NGF-IGN69 height (5)',
             'method' => 'urn:ogc:def:method:EPSG::1095',
             'extent_code' => ['1326'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::10087' => [
-            'name' => 'Jamaica 1875 / Jamaica (Old Grid) to JAD69 / Jamaica National Grid (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9624',
-            'extent_code' => ['3342'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::10098' => [
             'name' => 'KKJ to ETRS89 (2)',
@@ -11802,11 +11467,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9615',
             'extent_code' => ['1286'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::15487' => [
-            'name' => 'TWD67 / TM2 zone 121 to TWD97 / TM2 zone 121 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9656',
-            'extent_code' => ['3982'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::15494' => [
             'name' => 'Kalianpur 1962 to WGS 84 (6)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
@@ -12702,40 +12362,10 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['3361'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::15857' => [
-            'name' => 'IGN Astro 1960 / UTM zone 28N to Mauritania 1999 / UTM zone 28N (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9624',
-            'extent_code' => ['2971'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::15858' => [
-            'name' => 'IGN Astro 1960 / UTM zone 29N to Mauritania 1999 / UTM zone 29N (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9624',
-            'extent_code' => ['2970'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::15859' => [
-            'name' => 'IGN Astro 1960 / UTM zone 30N to Mauritania 1999 / UTM zone 30N (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9624',
-            'extent_code' => ['2969'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::15860' => [
             'name' => 'Mauritania 1999 to WGS 84 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['1157'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::15861' => [
-            'name' => 'IGN Astro 1960 / UTM zone 28N to WGS 84 / UTM zone 28N (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9624',
-            'extent_code' => ['2971'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::15862' => [
-            'name' => 'IGN Astro 1960 / UTM zone 29N to WGS 84 / UTM zone 29N (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9624',
-            'extent_code' => ['2970'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::15863' => [
-            'name' => 'IGN Astro 1960 / UTM zone 30N to WGS 84 / UTM zone 30N (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9624',
-            'extent_code' => ['2969'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::15865' => [
             'name' => 'Pulkovo 1942 to WGS 84 (16)',
@@ -12912,11 +12542,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['3507'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::15922' => [
-            'name' => 'Kertau 1968 / Singapore Grid to SVY21 / Singapore TM (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9656',
-            'extent_code' => ['1210'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::15923' => [
             'name' => 'ELD79 to WGS 84 (9)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
@@ -12961,16 +12586,6 @@ class CoordinateOperations
             'name' => 'DHDN to ETRS89 (8)',
             'method' => 'urn:ogc:def:method:EPSG::9615',
             'extent_code' => ['3339'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::15950' => [
-            'name' => 'Viti Levu 1912 / Viti Levu Grid to Fiji 1986 / Fiji Map Grid (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9645',
-            'extent_code' => ['3195'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::15951' => [
-            'name' => 'Vanua Levu 1915 / Vanua Levu Grid to Fiji 1986 / Fiji Map Grid (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9645',
-            'extent_code' => ['3401'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::15953' => [
             'name' => 'Nahrwan 1967 to WGS 84 (10)',
