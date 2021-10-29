@@ -6842,61 +6842,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::1053',
             'extent_code' => ['1298'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::7941' => [
-            'name' => 'ITRF2000 to ETRF2000 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::1053',
-            'extent_code' => ['1298'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::7942' => [
-            'name' => 'ITRF89 to ETRF2000 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::1053',
-            'extent_code' => ['1298'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::7943' => [
-            'name' => 'ITRF90 to ETRF2000 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::1053',
-            'extent_code' => ['1298'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::7944' => [
-            'name' => 'ITRF91 to ETRF2000 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::1053',
-            'extent_code' => ['1298'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::7945' => [
-            'name' => 'ITRF92 to ETRF2000 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::1053',
-            'extent_code' => ['1298'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::7946' => [
-            'name' => 'ITRF93 to ETRF2000 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::1053',
-            'extent_code' => ['1298'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::7947' => [
-            'name' => 'ITRF94 to ETRF2000 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::1053',
-            'extent_code' => ['1298'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::7948' => [
-            'name' => 'ITRF96 to ETRF2000 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::1053',
-            'extent_code' => ['1298'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::7949' => [
-            'name' => 'ITRF97 to ETRF2000 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::1053',
-            'extent_code' => ['1298'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::7950' => [
-            'name' => 'ITRF2005 to ETRF2000 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::1053',
-            'extent_code' => ['1298'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::7951' => [
-            'name' => 'ITRF2008 to ETRF2000 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::1053',
-            'extent_code' => ['1298'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::7953' => [
             'name' => 'ETRS89 to OSGB36 / British National Grid (3)',
             'method' => 'urn:ogc:def:method:EPSG::9633',
@@ -7462,11 +7407,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9807',
             'extent_code' => ['4491'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::8405' => [
-            'name' => 'ITRF2014 to ETRF2000 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::1053',
-            'extent_code' => ['1298'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::8432' => [
             'name' => 'Macau Grid',
             'method' => 'urn:ogc:def:method:EPSG::9807',
@@ -7856,66 +7796,6 @@ class CoordinateOperations
             'name' => 'NAD83(FBN) to NAD83(NSRS2007) (2)',
             'method' => 'urn:ogc:def:method:EPSG::1075',
             'extent_code' => ['3634'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8869' => [
-            'name' => 'ITRF2008 to ETRF2014 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::1053',
-            'extent_code' => ['1298'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8870' => [
-            'name' => 'ITRF2005 to ETRF2014 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::1053',
-            'extent_code' => ['1298'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8871' => [
-            'name' => 'ITRF2000 to ETRF2014 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::1053',
-            'extent_code' => ['1298'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8872' => [
-            'name' => 'ITRF97 to ETRF2014 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::1053',
-            'extent_code' => ['1298'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8873' => [
-            'name' => 'ITRF96 to ETRF2014 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::1053',
-            'extent_code' => ['1298'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8874' => [
-            'name' => 'ITRF94 to ETRF2014 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::1053',
-            'extent_code' => ['1298'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8875' => [
-            'name' => 'ITRF93 to ETRF2014 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::1053',
-            'extent_code' => ['1298'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8876' => [
-            'name' => 'ITRF92 to ETRF2014 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::1053',
-            'extent_code' => ['1298'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8877' => [
-            'name' => 'ITRF91 to ETRF2014 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::1053',
-            'extent_code' => ['1298'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8878' => [
-            'name' => 'ITRF90 to ETRF2014 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::1053',
-            'extent_code' => ['1298'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8879' => [
-            'name' => 'ITRF89 to ETRF2014 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::1053',
-            'extent_code' => ['1298'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8880' => [
-            'name' => 'ITRF2014 to ETRF2014 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::1053',
-            'extent_code' => ['1298'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::8882' => [
             'name' => 'Camacupa 2015 to WGS 84 (11)',
