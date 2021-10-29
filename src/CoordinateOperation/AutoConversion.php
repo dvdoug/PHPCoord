@@ -42,7 +42,7 @@ use function usort;
  */
 trait AutoConversion
 {
-    private int $maxChainDepth = 8; // if traits could have constants...
+    private int $maxChainDepth = 6; // if traits could have constants...
 
     protected static array $methodsThatRequireCoordinateEpoch = [ // if traits could have constants...
         CoordinateOperationMethods::EPSG_TIME_DEPENDENT_COORDINATE_FRAME_ROTATION_GEOCEN => CoordinateOperationMethods::EPSG_TIME_DEPENDENT_COORDINATE_FRAME_ROTATION_GEOCEN,
@@ -93,7 +93,7 @@ trait AutoConversion
 
         // Iteratively calculate permutations of intermediate CRSs
         $candidatePaths = $this->buildTransformationPathsToCRS($source, $target);
-        usort($candidatePaths, static fn (array $a, array $b) => $a['accuracy'] <=> $b['accuracy']);
+        usort($candidatePaths, static fn (array $a, array $b) => $a['accuracy'] <=> $b['accuracy'] ?: count($a['path']) <=> count($b['path']));
 
         foreach ($candidatePaths as $candidatePath) {
             if ($this->validatePath($candidatePath['path'], $boundaryCheckPoint)) {

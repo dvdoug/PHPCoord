@@ -2048,6 +2048,14 @@ class CRSTransformationsEurope
             'reversible' => true,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::32769',
+            'name' => 'ETRS89 to ETRF2014 (geog2D to geocen)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4258',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::8401',
+            'accuracy' => 0.0,
+            'reversible' => true,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18121',
             'name' => 'Italy zone 1',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4265',
@@ -2160,27 +2168,11 @@ class CRSTransformationsEurope
             'reversible' => true,
         ],
         [
-            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1277',
-            'name' => 'NTF to WGS 72 (1)',
-            'source_crs' => 'urn:ogc:def:crs:EPSG::4275',
-            'target_crs' => 'urn:ogc:def:crs:EPSG::4322',
-            'accuracy' => 2.0,
-            'reversible' => true,
-        ],
-        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19916',
             'name' => 'British National Grid',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4277',
             'target_crs' => 'urn:ogc:def:crs:EPSG::27700',
             'accuracy' => 0,
-            'reversible' => true,
-        ],
-        [
-            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1315',
-            'name' => 'OSGB36 to ED50 (1)',
-            'source_crs' => 'urn:ogc:def:crs:EPSG::4277',
-            'target_crs' => 'urn:ogc:def:crs:EPSG::4230',
-            'accuracy' => 2.0,
             'reversible' => true,
         ],
         [
@@ -3944,6 +3936,14 @@ class CRSTransformationsEurope
             'reversible' => true,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::32768',
+            'name' => 'ETRS89 to ETRF2014 (geocen)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4936',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::8401',
+            'accuracy' => 0.0,
+            'reversible' => true,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7711',
             'name' => 'ETRS89 to ODN height (2)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4937',
@@ -4061,6 +4061,14 @@ class CRSTransformationsEurope
             'source_crs' => 'urn:ogc:def:crs:EPSG::4937',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8360',
             'accuracy' => 0.03,
+            'reversible' => true,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::32770',
+            'name' => 'ETRS89 to ETRF2014 (geog3D to geocen)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4937',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::8401',
+            'accuracy' => 0.0,
             'reversible' => true,
         ],
         [

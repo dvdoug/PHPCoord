@@ -9504,6 +9504,14 @@ class CRSTransformationsGlobal
             'reversible' => true,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::32772',
+            'name' => 'WGS 84 to WGS 84 (G2139) (geog2D to geocen)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::9753',
+            'accuracy' => 0.0,
+            'reversible' => true,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16021',
             'name' => 'UTM zone 21N',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4463',
@@ -14032,11 +14040,27 @@ class CRSTransformationsGlobal
             'reversible' => true,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::32771',
+            'name' => 'WGS 84 to WGS 84 (G2139) (geocen)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4978',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::9753',
+            'accuracy' => 0.0,
+            'reversible' => true,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
             'name' => 'geographic3D to geographic2D',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 0,
+            'reversible' => true,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::32773',
+            'name' => 'WGS 84 to WGS 84 (G2139) (geog3D to geocen)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4979',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::9753',
+            'accuracy' => 0.0,
             'reversible' => true,
         ],
         [

@@ -71,14 +71,22 @@ abstract class Point implements Stringable
     public function performOperation(string $srid, Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $to, bool $inReverse, array $additionalParams = []): self
     {
         $operation = CoordinateOperations::getOperationData($srid);
-        $method = CoordinateOperationMethods::getFunctionName($operation['method']);
-        $params = self::resolveParamsByOperation($srid, $operation['method'], $inReverse);
 
-        if (isset(self::METHODS_REQUIRING_HORIZONTAL_POINT[$operation['method']])) {
-            $params['horizontalPoint'] = $additionalParams['horizontalPoint'];
+        if ($operation['method'] === CoordinateOperationMethods::EPSG_ALIAS) {
+            $point = clone $this;
+            $point->crs = $to;
+
+            return $point;
+        } else {
+            $method = CoordinateOperationMethods::getFunctionName($operation['method']);
+            $params = self::resolveParamsByOperation($srid, $operation['method'], $inReverse);
+
+            if (isset(self::METHODS_REQUIRING_HORIZONTAL_POINT[$operation['method']])) {
+                $params['horizontalPoint'] = $additionalParams['horizontalPoint'];
+            }
+
+            return $this->$method($to, ...$params);
         }
-
-        return $this->$method($to, ...$params);
     }
 
     protected static function resolveParamsByOperation(string $operationSrid, string $methodSrid, bool $inReverse): array

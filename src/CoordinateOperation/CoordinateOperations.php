@@ -662,11 +662,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['3694'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::1277' => [
-            'name' => 'NTF to WGS 72 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['3694'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::1278' => [
             'name' => 'AGD66 to GDA94 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
@@ -764,11 +759,6 @@ class CoordinateOperations
         ],
         'urn:ogc:def:coordinateOperation:EPSG::1314' => [
             'name' => 'OSGB36 to WGS 84 (6)',
-            'method' => 'urn:ogc:def:method:EPSG::9606',
-            'extent_code' => ['1264'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::1315' => [
-            'name' => 'OSGB36 to ED50 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9606',
             'extent_code' => ['1264'],
         ],
@@ -17906,6 +17896,36 @@ class CoordinateOperations
             'name' => 'Jersey Transverse Mercator',
             'method' => 'urn:ogc:def:method:EPSG::9807',
             'extent_code' => ['2988'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::32768' => [
+            'name' => 'ETRS89 to ETRF2014 (geocen)',
+            'method' => 'urn:ogc:def:method:EPSG::32768',
+            'extent_code' => ['1298'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::32769' => [
+            'name' => 'ETRS89 to ETRF2014 (geog2D to geocen)',
+            'method' => 'urn:ogc:def:method:EPSG::9602',
+            'extent_code' => ['1298'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::32770' => [
+            'name' => 'ETRS89 to ETRF2014 (geog3D to geocen)',
+            'method' => 'urn:ogc:def:method:EPSG::9602',
+            'extent_code' => ['1298'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::32771' => [
+            'name' => 'WGS 84 to WGS 84 (G2139) (geocen)',
+            'method' => 'urn:ogc:def:method:EPSG::32768',
+            'extent_code' => ['1262'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::32772' => [
+            'name' => 'WGS 84 to WGS 84 (G2139) (geog2D to geocen)',
+            'method' => 'urn:ogc:def:method:EPSG::9602',
+            'extent_code' => ['1262'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::32773' => [
+            'name' => 'WGS 84 to WGS 84 (G2139) (geog3D to geocen)',
+            'method' => 'urn:ogc:def:method:EPSG::9602',
+            'extent_code' => ['1262'],
         ],
     ];
 

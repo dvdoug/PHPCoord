@@ -36,6 +36,8 @@ class CoordinateOperationMethods
      */
     public const EPSG_ALBERS_EQUAL_AREA = 'urn:ogc:def:method:EPSG::9822';
 
+    public const EPSG_ALIAS = 'urn:ogc:def:method:EPSG::32768';
+
     /**
      * American Polyconic.
      */

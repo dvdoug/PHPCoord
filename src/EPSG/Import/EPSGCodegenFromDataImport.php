@@ -190,6 +190,8 @@ class EPSGCodegenFromDataImport
         1230,
         1253,
         1255,
+        1277,
+        1315,
         1318,
         1319,
         1323,

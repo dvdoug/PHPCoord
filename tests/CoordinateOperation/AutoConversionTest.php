@@ -278,14 +278,24 @@ class AutoConversionTest extends TestCase
         }
     }
 
-    public function testAmersfoortRDNewToWGS84(): void
+    public function testAmersfoortRDNewToWGS84NoEpoch(): void
     {
-        $from = ProjectedPoint::createFromEastingNorthing(Projected::fromSRID(Projected::EPSG_AMERSFOORT_RD_NEW), new Metre(86058.2205), new Metre(445832.8025));
+        $from = ProjectedPoint::createFromEastingNorthing(Projected::fromSRID(Projected::EPSG_AMERSFOORT_RD_NEW), new Metre(250810.449), new Metre(608823.625));
+        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84); // equivalent to ETRS89
+        $to = $from->convert($toCRS);
+
+        self::assertEqualsWithDelta(53.456987025, $to->getLatitude()->asDegrees()->getValue(), 0.000001);
+        self::assertEqualsWithDelta(6.829580112, $to->getLongitude()->asDegrees()->getValue(), 0.000001);
+    }
+
+    public function testAmersfoortRDNewToWGS84WithEpoch(): void
+    {
+        $from = ProjectedPoint::createFromEastingNorthing(Projected::fromSRID(Projected::EPSG_AMERSFOORT_RD_NEW), new Metre(250810.449), new Metre(608823.625), new DateTime('2021-10-26'));
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84);
         $to = $from->convert($toCRS);
 
-        self::assertEqualsWithDelta(51.996591992, $to->getLatitude()->asDegrees()->getValue(), 0.0000001);
-        self::assertEqualsWithDelta(4.383328547, $to->getLongitude()->asDegrees()->getValue(), 0.0000001);
+        self::assertEqualsWithDelta(53.45699172851, $to->getLatitude()->asDegrees()->getValue(), 0.000001);
+        self::assertEqualsWithDelta(6.8295889345101, $to->getLongitude()->asDegrees()->getValue(), 0.000001);
     }
 
     public function testNTFToRGF93(): void
