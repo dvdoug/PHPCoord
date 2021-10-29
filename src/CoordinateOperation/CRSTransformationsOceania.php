@@ -1776,14 +1776,6 @@ class CRSTransformationsOceania
             'reversible' => true,
         ],
         [
-            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9081',
-            'name' => 'ITRF2005 to ITRF96 (1)',
-            'source_crs' => 'urn:ogc:def:crs:EPSG::4896',
-            'target_crs' => 'urn:ogc:def:crs:EPSG::4917',
-            'accuracy' => 0.01,
-            'reversible' => true,
-        ],
-        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6277',
             'name' => 'ITRF2005 to GDA94 (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4896',
@@ -1816,27 +1808,11 @@ class CRSTransformationsOceania
             'reversible' => true,
         ],
         [
-            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9079',
-            'name' => 'ITRF97 to ITRF96 (2)',
-            'source_crs' => 'urn:ogc:def:crs:EPSG::4918',
-            'target_crs' => 'urn:ogc:def:crs:EPSG::4917',
-            'accuracy' => 0.01,
-            'reversible' => true,
-        ],
-        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6279',
             'name' => 'ITRF97 to GDA94 (2)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4918',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4938',
             'accuracy' => 0.18,
-            'reversible' => true,
-        ],
-        [
-            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9080',
-            'name' => 'ITRF2000 to ITRF96 (2)',
-            'source_crs' => 'urn:ogc:def:crs:EPSG::4919',
-            'target_crs' => 'urn:ogc:def:crs:EPSG::4917',
-            'accuracy' => 0.01,
             'reversible' => true,
         ],
         [
@@ -1893,14 +1869,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4959',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9528',
             'accuracy' => 0.1,
-            'reversible' => true,
-        ],
-        [
-            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9082',
-            'name' => 'ITRF2008 to ITRF96 (2)',
-            'source_crs' => 'urn:ogc:def:crs:EPSG::5332',
-            'target_crs' => 'urn:ogc:def:crs:EPSG::4917',
-            'accuracy' => 0.01,
             'reversible' => true,
         ],
         [
@@ -2045,14 +2013,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::6325',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6637',
             'accuracy' => 0,
-            'reversible' => true,
-        ],
-        [
-            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9083',
-            'name' => 'ITRF2014 to ITRF96 (2)',
-            'source_crs' => 'urn:ogc:def:crs:EPSG::7789',
-            'target_crs' => 'urn:ogc:def:crs:EPSG::4917',
-            'accuracy' => 0.01,
             'reversible' => true,
         ],
         [
