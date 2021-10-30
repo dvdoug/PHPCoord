@@ -67,7 +67,6 @@ class EPSGCodegenFromDataImport
         1059, // Geographic3D to GravityRelatedHeight (PNG)
         1060, // Geographic3D to GravityRelatedHeight (CGG2013)
         1070, // Point motion by grid (Canada NTv2_Vel)
-        1079, // New Zealand Deformation Model
         1082, // Geographic3D to GravityRelatedHeight (SA 2010)
         1085, // Vertical Offset by Grid Interpolation (asc)
         1090, // Geog3D to Geog2D+GravityRelatedHeight (CGG 2013)
@@ -107,6 +106,9 @@ class EPSGCodegenFromDataImport
         // EGM files are *very* large and not of general use
         1103, // Geog3D to Geog2D+GravityRelatedHeight (EGM)
         9661, // Geographic3D to GravityRelatedHeight (EGM)
+
+        // Complex, very little accuracy improvement
+        1079, // New Zealand Deformation Model
     ];
 
     public const BLACKLISTED_OPERATIONS = [
