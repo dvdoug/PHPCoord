@@ -331,11 +331,11 @@ portion of a coordinate is called an *epoch*.
 
     An operator of 2 oil platforms located near each other wanted to install a bridge between them.
     The first platform was installed in the 1990s, the second was installed in the 2010s. Both platforms had accurate
-    locations recorded at time of installation, and so the corresponding distance between them was calculated and a
-    bridge was pre-fabricated on-shore and brought to sea.
+    locations recorded at time of installation, and so the corresponding distance and angle between them were calculated
+    and a bridge was pre-fabricated on-shore and brought to sea.
 
-    It didn't fit. The distance was wrong because the coordinates of the two platforms were taken 20 years apart.
-    This mistake cost **millions** to fix.
+    It didn't fit. The calculated gap between them was wrong because the coordinates of the two platforms were taken 20
+    years apart. This mistake cost **millions** to fix.
 
 .. tip::
     Geodesy tends to use decimal years for epochs, e.g. 2000.40, or 2021.00. For ease of use PHPCoord deviates from this
