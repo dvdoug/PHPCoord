@@ -63,7 +63,7 @@ jobs:
       run: composer validate --strict
 
     - name: Set COMPOSER_ROOT_VERSION to allow branches to not fail build
-      run: echo "COMPOSER_ROOT_VERSION=4.x-dev" >> $GITHUB_ENV
+      run: echo "COMPOSER_ROOT_VERSION=5.x-dev" >> $GITHUB_ENV
 
     - name: Get composer cache directory
       id: composercache

@@ -21,7 +21,7 @@ build:
 
   dependencies:
     override:
-      - COMPOSER_ROOT_VERSION=4.x-dev composer update
+      - COMPOSER_ROOT_VERSION=5.x-dev composer update
 
   tests:
     override:
