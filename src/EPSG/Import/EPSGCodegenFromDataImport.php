@@ -68,12 +68,9 @@ class EPSGCodegenFromDataImport
         1060, // Geographic3D to GravityRelatedHeight (CGG2013)
         1070, // Point motion by grid (Canada NTv2_Vel)
         1079, // New Zealand Deformation Model
-        1080, // Vertical Offset by Grid Interpolation (BEV AT)
-        1081, // Geographic3D to GravityRelatedHeight (BEV AT)
         1082, // Geographic3D to GravityRelatedHeight (SA 2010)
         1085, // Vertical Offset by Grid Interpolation (asc)
         1086, // Point motion (geocen) by grid (INADEFORM)
-        1089, // Geog3D to Geog2D+GravityRelatedHeight (BEV AT)
         1090, // Geog3D to Geog2D+GravityRelatedHeight (CGG 2013)
         1093, // Geog3D to Geog2D+GravityRelatedHeight (Gravsoft)
         1098, // Geog3D to Geog2D+GravityRelatedHeight (SA 2010)

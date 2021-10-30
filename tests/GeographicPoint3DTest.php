@@ -10,6 +10,7 @@ namespace PHPCoord;
 
 use function class_exists;
 use DateTime;
+use PHPCoord\CoordinateOperation\BEVHeightETRS89EVRF2000AustriaProvider;
 use PHPCoord\CoordinateOperation\CoordinateOperationMethods;
 use PHPCoord\CoordinateOperation\CoordinateOperations;
 use PHPCoord\CoordinateOperation\CRSTransformationsAfrica;
@@ -185,6 +186,32 @@ class GeographicPoint3DTest extends TestCase
         $to = $from->geographic3DToGravityHeightFromGrid($toCRS, (new GUGiKHeightETRF2000Baltic1986PolandProvider())->provideGrid());
 
         self::assertEqualsWithDelta(-39.8409, $to->getHeight()->getValue(), 0.001);
+    }
+
+    public function testGeographic3DTo2DPlusGravityHeightBEVAustria(): void
+    {
+        if (!class_exists(BEVHeightETRS89EVRF2000AustriaProvider::class)) {
+            self::markTestSkipped('Requires phpcoord/datapack-europe');
+        }
+        $from = GeographicPoint::create(Geographic3D::fromSRID(Geographic3D::EPSG_ETRS89), new Degree(48.27091391), new Degree(16.29473899), new Metre(0));
+        $toCRS = Compound::fromSRID(Compound::EPSG_ETRS89_PLUS_EVRF2000_AUSTRIA_HEIGHT);
+        $to = $from->geographic3DTo2DPlusGravityHeightFromGrid($toCRS, (new BEVHeightETRS89EVRF2000AustriaProvider())->provideGrid());
+
+        self::assertEqualsWithDelta(48.27091391, $to->getHorizontalPoint()->getLatitude()->getValue(), 0.00000000001);
+        self::assertEqualsWithDelta(16.29473899, $to->getHorizontalPoint()->getLongitude()->getValue(), 0.00000000001);
+        self::assertEqualsWithDelta(-44.8984, $to->getVerticalPoint()->getHeight()->getValue(), 0.001);
+    }
+
+    public function testGeographic3DGravityHeightBEVAustria(): void
+    {
+        if (!class_exists(BEVHeightETRS89EVRF2000AustriaProvider::class)) {
+            self::markTestSkipped('Requires phpcoord/datapack-europe');
+        }
+        $from = GeographicPoint::create(Geographic3D::fromSRID(Geographic3D::EPSG_ETRS89), new Degree(48.27091391), new Degree(16.29473899), new Metre(0));
+        $toCRS = Vertical::fromSRID(Vertical::EPSG_EVRF2000_AUSTRIA_HEIGHT);
+        $to = $from->geographic3DToGravityHeightFromGrid($toCRS, (new BEVHeightETRS89EVRF2000AustriaProvider())->provideGrid());
+
+        self::assertEqualsWithDelta(-44.8984, $to->getHeight()->getValue(), 0.001);
     }
 
     /**

@@ -3912,6 +3912,14 @@ class CRSTransformationsEurope
             'reversible' => true,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9276',
+            'name' => 'ETRS89 to EVRF2000 Austria height (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4937',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::9274',
+            'accuracy' => 0.05,
+            'reversible' => false,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9597',
             'name' => 'ETRS89 to ETRS89 + NAP height (2)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4937',
@@ -4005,6 +4013,14 @@ class CRSTransformationsEurope
             'source_crs' => 'urn:ogc:def:crs:EPSG::4937',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9430',
             'accuracy' => 0.01,
+            'reversible' => true,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9600',
+            'name' => 'ETRS89 to ETRS89 + EVRF2000 Austria height (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4937',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::9500',
+            'accuracy' => 0.05,
             'reversible' => true,
         ],
         [
@@ -4797,6 +4813,14 @@ class CRSTransformationsEurope
             'source_crs' => 'urn:ogc:def:crs:EPSG::5778',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5730',
             'accuracy' => 0.1,
+            'reversible' => true,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9275',
+            'name' => 'GHA height to EVRF2000 Austria height (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::5778',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::9274',
+            'accuracy' => 0.05,
             'reversible' => true,
         ],
         [
@@ -6117,6 +6141,22 @@ class CRSTransformationsEurope
             'source_crs' => 'urn:ogc:def:crs:EPSG::9140',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9141',
             'accuracy' => 0,
+            'reversible' => true,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9277',
+            'name' => 'MGI to EVRF2000 Austria height (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::9267',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::9274',
+            'accuracy' => 0.05,
+            'reversible' => false,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9601',
+            'name' => 'MGI to MGI + EVRF2000 Austria height (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::9267',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::9501',
+            'accuracy' => 0.05,
             'reversible' => true,
         ],
         [

@@ -195,4 +195,7 @@ return [
     'gugik-geoid2011-PL-EVRF2007-NH.txt' => CoordinateOperation\GUGiKHeightETRF2000EVRF2007PolandProvider::class,
     'gugik-geoid2011-PL-KRON86-NH.txt' => CoordinateOperation\GUGiKHeightETRF2000Baltic1986PolandProvider::class,
     'gugik-evrf2007.txt' => CoordinateOperation\GUGiKHeightEVRF2007Baltic1986PolandProvider::class,
+    'GEOID_BESSEL_Oesterreich.csv' => CoordinateOperation\BEVHeightMGIEVRF2000AustriaProvider::class,
+    'GEOID_GRS80_Oesterreich.csv' => CoordinateOperation\BEVHeightETRS89EVRF2000AustriaProvider::class,
+    'GV_HoehenGrid_V1.csv' => CoordinateOperation\BEVHeightGHAEVRF2000AustriaProvider::class,
 ];

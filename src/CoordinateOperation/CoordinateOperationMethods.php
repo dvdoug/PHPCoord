@@ -199,6 +199,11 @@ class CoordinateOperationMethods
     public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_AUSGEOIDV2 = 'urn:ogc:def:method:EPSG::1083';
 
     /**
+     * Geog3D to Geog2D+GravityRelatedHeight (BEV AT).
+     */
+    public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_BEV_AT = 'urn:ogc:def:method:EPSG::1089';
+
+    /**
      * Geog3D to Geog2D+GravityRelatedHeight (EGM2008).
      */
     public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_EGM2008 = 'urn:ogc:def:method:EPSG::1092';
@@ -273,6 +278,11 @@ class CoordinateOperationMethods
      * for file format documentation.
      */
     public const EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_AUSGEOID_V2 = 'urn:ogc:def:method:EPSG::1048';
+
+    /**
+     * Geographic3D to GravityRelatedHeight (BEV AT).
+     */
+    public const EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_BEV_AT = 'urn:ogc:def:method:EPSG::1081';
 
     /**
      * Geographic3D to GravityRelatedHeight (EGM2008)
@@ -771,6 +781,11 @@ class CoordinateOperationMethods
     public const EPSG_VERTICAL_OFFSET_AND_SLOPE = 'urn:ogc:def:method:EPSG::1046';
 
     /**
+     * Vertical Offset by Grid Interpolation (BEV AT).
+     */
+    public const EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_BEV_AT = 'urn:ogc:def:method:EPSG::1080';
+
+    /**
      * Vertical Offset by Grid Interpolation (NZLVD).
      */
     public const EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_NZLVD = 'urn:ogc:def:method:EPSG::1071';
@@ -904,6 +919,9 @@ class CoordinateOperationMethods
         self::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_PL_TXT => 'geographic3DTo2DPlusGravityHeightFromGrid',
         self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_PL_TXT => 'geographic3DToGravityHeightFromGrid',
         self::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_PL_TXT => 'offsetFromGrid',
+        self::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_BEV_AT => 'geographic3DTo2DPlusGravityHeightFromGrid',
+        self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_BEV_AT => 'geographic3DToGravityHeightFromGrid',
+        self::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_BEV_AT => 'offsetFromGrid',
     ];
 
     public static function getFunctionName(string $srid): string

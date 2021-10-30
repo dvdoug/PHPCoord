@@ -8307,6 +8307,21 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9807',
             'extent_code' => ['1708'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9275' => [
+            'name' => 'GHA height to EVRF2000 Austria height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1080',
+            'extent_code' => ['1037'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9276' => [
+            'name' => 'ETRS89 to EVRF2000 Austria height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1081',
+            'extent_code' => ['1037'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9277' => [
+            'name' => 'MGI to EVRF2000 Austria height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1081',
+            'extent_code' => ['1037'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::9281' => [
             'name' => 'Amersfoort to ETRS89 (8)',
             'method' => 'urn:ogc:def:method:EPSG::9607',
@@ -8766,6 +8781,16 @@ class CoordinateOperations
             'name' => 'ETRS89 to ETRS89 + NAP height (2)',
             'method' => 'urn:ogc:def:method:EPSG::1088',
             'extent_code' => ['1275'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9600' => [
+            'name' => 'ETRS89 to ETRS89 + EVRF2000 Austria height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1089',
+            'extent_code' => ['1037'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9601' => [
+            'name' => 'MGI to MGI + EVRF2000 Austria height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1089',
+            'extent_code' => ['1037'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::9605' => [
             'name' => 'ETRS89 to ETRS89 + Alicante height (1)',
