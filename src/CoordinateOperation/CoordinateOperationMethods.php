@@ -595,6 +595,11 @@ class CoordinateOperationMethods
     public const EPSG_POINT_MOTION_ELLIPSOIDAL = 'urn:ogc:def:method:EPSG::1067';
 
     /**
+     * Point motion (geocen) by grid (INADEFORM).
+     */
+    public const EPSG_POINT_MOTION_GEOCEN_BY_GRID_INADEFORM = 'urn:ogc:def:method:EPSG::1086';
+
+    /**
      * Point motion (geocentric Cartesian).
      */
     public const EPSG_POINT_MOTION_GEOCENTRIC_CARTESIAN = 'urn:ogc:def:method:EPSG::1064';

@@ -70,7 +70,6 @@ class EPSGCodegenFromDataImport
         1079, // New Zealand Deformation Model
         1082, // Geographic3D to GravityRelatedHeight (SA 2010)
         1085, // Vertical Offset by Grid Interpolation (asc)
-        1086, // Point motion (geocen) by grid (INADEFORM)
         1090, // Geog3D to Geog2D+GravityRelatedHeight (CGG 2013)
         1093, // Geog3D to Geog2D+GravityRelatedHeight (Gravsoft)
         1098, // Geog3D to Geog2D+GravityRelatedHeight (SA 2010)
@@ -536,7 +535,12 @@ class EPSGCodegenFromDataImport
         9704, // EGM2008 Und_min2.5x2.5_egm2008_isw=82_WGS84_TideFree.gz
         9706, // EGM2008 Und_min1x1_egm2008_isw=82_WGS84_TideFree.gz
 
-        // Not available for public download, construction/engineering/scientific projects not of general use
+        // Not available for public download
+        9305, // GTX INAGEOID20.gtx
+        9375, // INADEFORM v3_dm_grd01_xyz.dat
+        9629, // GTX INAGEOID20.gtx
+
+        // Construction/engineering/scientific projects not of general use
         9302, // NTv2 HS2TN15_NTv2.gsb
         9365, // NTv2 TN15-ETRS89-to-TPEN11-IRF.gsb
         9369, // NTv2 TN15-ETRS89-to-MML07-IRF.gsb
@@ -546,8 +550,6 @@ class EPSGCodegenFromDataImport
         9759, // NTv2 TN15-ETRS89-to-ECML14_NB-IRF.gsb
         9764, // NTv2 TN15-ETRS89-to-EWR2-IRF.gsb
         9363, // IGNF ARAMCO_AAA-KSAGRF_6.tac
-        9305, // GTX INAGEOID20.gtx
-        9629, // GTX INAGEOID20.gtx
 
         // free, but license does not permit redistribution
         9112, // NTv2 BC_27_98.GSB
