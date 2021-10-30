@@ -297,11 +297,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['1298'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::1150' => [
-            'name' => 'GDA94 to WGS 84 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['4177'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::1151' => [
             'name' => 'NZGD49 to WGS 84 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
@@ -8971,21 +8966,6 @@ class CoordinateOperations
             'name' => 'ATRF2014 to GDA94 (1)',
             'method' => 'urn:ogc:def:method:EPSG::1056',
             'extent_code' => ['4177'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::9686' => [
-            'name' => 'GDA94 to WGS 84 (G1762) (1)',
-            'method' => 'urn:ogc:def:method:EPSG::1056',
-            'extent_code' => ['4177'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::9688' => [
-            'name' => 'GDA94 to WGS 84 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent_code' => ['4177'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::9689' => [
-            'name' => 'GDA94 to WGS 84 (3)',
-            'method' => 'urn:ogc:def:method:EPSG::9615',
-            'extent_code' => ['2575'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::9690' => [
             'name' => 'WGS 84 to GDA2020 (3)',
