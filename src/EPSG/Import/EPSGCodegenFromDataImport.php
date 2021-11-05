@@ -65,11 +65,9 @@ class EPSGCodegenFromDataImport
         1096, // Geog3D to Geog2D+GravityRelatedHeight (OSGM15Ire)
         1047, // Geographic3D to GravityRelatedHeight (Gravsoft)
         1059, // Geographic3D to GravityRelatedHeight (PNG)
-        1060, // Geographic3D to GravityRelatedHeight (CGG2013)
         1070, // Point motion by grid (Canada NTv2_Vel)
         1082, // Geographic3D to GravityRelatedHeight (SA 2010)
         1085, // Vertical Offset by Grid Interpolation (asc)
-        1090, // Geog3D to Geog2D+GravityRelatedHeight (CGG 2013)
         1093, // Geog3D to Geog2D+GravityRelatedHeight (Gravsoft)
         1098, // Geog3D to Geog2D+GravityRelatedHeight (SA 2010)
 

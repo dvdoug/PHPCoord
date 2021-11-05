@@ -11,6 +11,7 @@ namespace PHPCoord;
 use function class_exists;
 use DateTime;
 use PHPCoord\CoordinateOperation\BEVHeightETRS89EVRF2000AustriaProvider;
+use PHPCoord\CoordinateOperation\BYNNAD83CSRSCGG2013aProvider;
 use PHPCoord\CoordinateOperation\CoordinateOperationMethods;
 use PHPCoord\CoordinateOperation\CoordinateOperations;
 use PHPCoord\CoordinateOperation\CRSTransformationsAfrica;
@@ -212,6 +213,32 @@ class GeographicPoint3DTest extends TestCase
         $to = $from->geographic3DToGravityHeightFromGrid($toCRS, (new BEVHeightETRS89EVRF2000AustriaProvider())->provideGrid());
 
         self::assertEqualsWithDelta(-44.8984, $to->getHeight()->getValue(), 0.001);
+    }
+
+    public function testGeographic3DTo2DPlusGravityHeightBYNCanada(): void
+    {
+        if (!class_exists(BYNNAD83CSRSCGG2013aProvider::class)) {
+            self::markTestSkipped('Requires phpcoord/datapack-northamerica');
+        }
+        $from = GeographicPoint::create(Geographic3D::fromSRID(Geographic3D::EPSG_NAD83_CSRS), new Degree(43.6426), new Degree(-79.3871), new Metre(0));
+        $toCRS = Compound::fromSRID(Compound::EPSG_NAD83_CSRS_PLUS_CGVD2013_HEIGHT);
+        $to = $from->geographic3DTo2DPlusGravityHeightFromGrid($toCRS, (new BYNNAD83CSRSCGG2013aProvider())->provideGrid());
+
+        self::assertEqualsWithDelta(43.6426, $to->getHorizontalPoint()->getLatitude()->getValue(), 0.00000000001);
+        self::assertEqualsWithDelta(-79.3871, $to->getHorizontalPoint()->getLongitude()->getValue(), 0.00000000001);
+        self::assertEqualsWithDelta(36.072, $to->getVerticalPoint()->getHeight()->getValue(), 0.01);
+    }
+
+    public function testGeographic3DToGravityHeightBYNCanada(): void
+    {
+        if (!class_exists(BYNNAD83CSRSCGG2013aProvider::class)) {
+            self::markTestSkipped('Requires phpcoord/datapack-northamerica');
+        }
+        $from = GeographicPoint::create(Geographic3D::fromSRID(Geographic3D::EPSG_NAD83_CSRS), new Degree(43.6426), new Degree(-79.3871), new Metre(0));
+        $toCRS = Vertical::fromSRID(Vertical::EPSG_CGVD2013_CGG2013A_HEIGHT);
+        $to = $from->geographic3DToGravityHeightFromGrid($toCRS, (new BYNNAD83CSRSCGG2013aProvider())->provideGrid());
+
+        self::assertEqualsWithDelta(36.072, $to->getHeight()->getValue(), 0.01);
     }
 
     /**

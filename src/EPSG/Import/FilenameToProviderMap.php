@@ -198,4 +198,7 @@ return [
     'GEOID_BESSEL_Oesterreich.csv' => CoordinateOperation\BEVHeightMGIEVRF2000AustriaProvider::class,
     'GEOID_GRS80_Oesterreich.csv' => CoordinateOperation\BEVHeightETRS89EVRF2000AustriaProvider::class,
     'GV_HoehenGrid_V1.csv' => CoordinateOperation\BEVHeightGHAEVRF2000AustriaProvider::class,
+    'HT2_0.byn' => CoordinateOperation\BYNNAD83CSRSCGVD28Provider::class,
+    'CGG2013n83a.byn' => CoordinateOperation\BYNNAD83CSRSCGG2013aProvider::class,
+    'CGG2013i08a.byn' => CoordinateOperation\BYNITRF2008CGG2013aProvider::class,
 ];

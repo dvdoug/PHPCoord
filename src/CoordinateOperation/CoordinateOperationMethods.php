@@ -204,6 +204,11 @@ class CoordinateOperationMethods
     public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_BEV_AT = 'urn:ogc:def:method:EPSG::1089';
 
     /**
+     * Geog3D to Geog2D+GravityRelatedHeight (CGG 2013).
+     */
+    public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_CGG_2013 = 'urn:ogc:def:method:EPSG::1090';
+
+    /**
      * Geog3D to Geog2D+GravityRelatedHeight (EGM2008).
      */
     public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_EGM2008 = 'urn:ogc:def:method:EPSG::1092';
@@ -283,6 +288,14 @@ class CoordinateOperationMethods
      * Geographic3D to GravityRelatedHeight (BEV AT).
      */
     public const EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_BEV_AT = 'urn:ogc:def:method:EPSG::1081';
+
+    /**
+     * Geographic3D to GravityRelatedHeight (CGG2013)
+     * For consistency with earlier models the Information Source references software which uses bi-quadratic
+     * interpolation. Because of denser node spacing in CGG2013 bi-linear interpolation will be sufficient for most
+     * uses. See Info Source for file format doc.
+     */
+    public const EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_CGG2013 = 'urn:ogc:def:method:EPSG::1060';
 
     /**
      * Geographic3D to GravityRelatedHeight (EGM2008)
@@ -927,6 +940,8 @@ class CoordinateOperationMethods
         self::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_BEV_AT => 'geographic3DTo2DPlusGravityHeightFromGrid',
         self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_BEV_AT => 'geographic3DToGravityHeightFromGrid',
         self::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_BEV_AT => 'offsetFromGrid',
+        self::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_CGG_2013 => 'geographic3DTo2DPlusGravityHeightFromGrid',
+        self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_CGG2013 => 'geographic3DToGravityHeightFromGrid',
     ];
 
     public static function getFunctionName(string $srid): string

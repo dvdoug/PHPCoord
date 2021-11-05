@@ -7957,6 +7957,16 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9615',
             'extent_code' => ['4535'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9123' => [
+            'name' => 'NAD83(CSRS) to CGVD28 height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1060',
+            'extent_code' => ['1289'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9125' => [
+            'name' => 'ITRF2008 to CGVD2013(CGG2013a) height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1060',
+            'extent_code' => ['1061'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::9126' => [
             'name' => 'NAD83(CSRS)v2 to NAD83(CORS96) (1)',
             'method' => 'urn:ogc:def:method:EPSG::1065',
@@ -8251,6 +8261,11 @@ class CoordinateOperations
             'name' => 'NAD83 to NAD83(CSRS)v4 (3)',
             'method' => 'urn:ogc:def:method:EPSG::9615',
             'extent_code' => ['2376'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9247' => [
+            'name' => 'NAD83(CSRS)v6 to CGVD2013(CGG2013a) height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1060',
+            'extent_code' => ['1061'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::9257' => [
             'name' => 'Chos Malal 1914 to WGS 84 (2)',
@@ -8931,6 +8946,11 @@ class CoordinateOperations
             'name' => 'RRAF 1991 to RRAF 1991 + IGN 2008 LD height (1)',
             'method' => 'urn:ogc:def:method:EPSG::1095',
             'extent_code' => ['2893'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9644' => [
+            'name' => 'NAD83(CSRS)v6 to NAD83(CSRS)v6 + CGVD2013(CGG2013a) height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1090',
+            'extent_code' => ['1061'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::9662' => [
             'name' => 'Baltic 1986 height to EVRF2007-PL height (1)',

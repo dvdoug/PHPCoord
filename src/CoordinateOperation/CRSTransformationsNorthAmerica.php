@@ -10424,6 +10424,14 @@ class CRSTransformationsNorthAmerica
             'reversible' => true,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9123',
+            'name' => 'NAD83(CSRS) to CGVD28 height (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4955',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::5713',
+            'accuracy' => 0.05,
+            'reversible' => false,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7807',
             'name' => 'ITRF2008 to NAD83(2011) (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::5332',
@@ -16160,6 +16168,14 @@ class CRSTransformationsNorthAmerica
             'reversible' => true,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9125',
+            'name' => 'ITRF2008 to CGVD2013(CGG2013a) height (2)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::7911',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::9245',
+            'accuracy' => 0.03,
+            'reversible' => false,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7969',
             'name' => 'NGVD29 height (m) to NAVD88 height (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::7968',
@@ -16213,6 +16229,22 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8250',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6317',
             'accuracy' => 0.0,
+            'reversible' => true,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9247',
+            'name' => 'NAD83(CSRS)v6 to CGVD2013(CGG2013a) height (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::8251',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::9245',
+            'accuracy' => 0.03,
+            'reversible' => false,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9644',
+            'name' => 'NAD83(CSRS)v6 to NAD83(CSRS)v6 + CGVD2013(CGG2013a) height (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::8251',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::9544',
+            'accuracy' => 0.03,
             'reversible' => true,
         ],
         [

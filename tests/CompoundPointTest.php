@@ -12,6 +12,7 @@ use function class_exists;
 use DateTime;
 use DateTimeImmutable;
 use PHPCoord\CoordinateOperation\BEVHeightETRS89EVRF2000AustriaProvider;
+use PHPCoord\CoordinateOperation\BYNNAD83CSRSCGG2013aProvider;
 use PHPCoord\CoordinateOperation\CoordinateOperations;
 use PHPCoord\CoordinateOperation\CRSTransformationsAfrica;
 use PHPCoord\CoordinateOperation\CRSTransformationsAntarctic;
@@ -277,6 +278,32 @@ class CompoundPointTest extends TestCase
         self::assertEqualsWithDelta(48.27091391, $to->getLatitude()->getValue(), 0.00000000001);
         self::assertEqualsWithDelta(16.29473899, $to->getLongitude()->getValue(), 0.00000000001);
         self::assertEqualsWithDelta(0.000, $to->getHeight()->getValue(), 0.001);
+    }
+
+    public function testGeographic3DTo2DPlusGravityHeightBYNCanada(): void
+    {
+        if (!class_exists(BYNNAD83CSRSCGG2013aProvider::class)) {
+            self::markTestSkipped('Requires phpcoord/datapack-northamerica');
+        }
+        $from = CompoundPoint::create(
+            Compound::fromSRID(Compound::EPSG_NAD83_CSRS_PLUS_CGVD2013_HEIGHT),
+            GeographicPoint::create(
+                Geographic2D::fromSRID(Geographic2D::EPSG_NAD83_CSRS),
+                new Degree(43.6426),
+                new Degree(-79.3871),
+                null
+            ),
+            VerticalPoint::create(
+                Vertical::fromSRID(Vertical::EPSG_CGVD2013_CGG2013A_HEIGHT),
+                new Metre(36.072)
+            )
+        );
+        $toCRS = Geographic3D::fromSRID(Geographic3D::EPSG_NAD83_CSRS);
+        $to = $from->geographic3DTo2DPlusGravityHeightFromGrid($toCRS, (new BYNNAD83CSRSCGG2013aProvider())->provideGrid());
+
+        self::assertEqualsWithDelta(43.6426, $to->getLatitude()->getValue(), 0.00000000001);
+        self::assertEqualsWithDelta(-79.3871, $to->getLongitude()->getValue(), 0.00000000001);
+        self::assertEqualsWithDelta(0.000, $to->getHeight()->getValue(), 0.01);
     }
 
     /**
