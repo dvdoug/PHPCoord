@@ -5611,6 +5611,21 @@ Defined through the application of the MML07 NTv2 transformation (code 9369) to 
 
 Created in 2020 to support intermediate CRS "MML07-IRF" in the emulation of the MML07 Snake map projection.
 
+MOLDOR11 Intermediate Reference Frame
+-------------------------------------
+
+| Type: Geodetic
+| Used: United Kingdom (UK) - on or related to the rail route from Manchester via Ordsall Lane and the Hope Valley to Dore Junction.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_MOLDOR11_INTERMEDIATE_REFERENCE_FRAME)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1315')
+
+Defined through the application of the MOLDOR11 NTv2 transformation (code 9878) to ETRS89 as realized through OSNet v2009 CORS.
+
+Created in 2021 to support intermediate CRS "MOLDOR11-IRF" in the emulation of the MOLDOR11 Snake map projection.
+
 MOLDREF99
 ---------
 
@@ -5663,6 +5678,21 @@ MOP78
     Datum::fromSRID(Datum::EPSG_MOP78)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::6639')
 
+
+MRH21 Intermediate Reference Frame
+----------------------------------
+
+| Type: Geodetic
+| Used: United Kingdom (UK) - on or related to Midland Rail Hub, covering routes through Cardiff, Bristol, Gloucester, Derby, Birmingham, Leicester, and Lincoln.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_MRH21_INTERMEDIATE_REFERENCE_FRAME)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1314')
+
+Defined through the application of the MRH21 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
+
+Created in 2021 to support intermediate CRS "MRH21-IRF" in the emulation of the MRH21 Snake map projection.
 
 Macao 1920
 ----------
@@ -7106,7 +7136,7 @@ North American Datum of 1983 (CSRS) version 2
 
 Defined at reference epoch 1997.0 by a transformation from ITRF96 (see transformation code 8259). The frame is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
 
-Adopted by the Canadian federal government from 1998-01-01 and by the provincial governments of British Columbia, New Brunswick, Prince Edward Island and Quebec. Replaces NAD83(CSRS96). Replaced by NAD83(CSRS)v3.
+Published 1998-01-01; adopted by the Canadian federal government and the provincial governments of British Columbia, Alberta, Saskatchewan, Manitoba, Quebec, New Brunswick and Prince Edward Island. Replaces NAD83(CSRS96). Replaced by NAD83(CSRS)v3.
 
 North American Datum of 1983 (CSRS) version 3
 ---------------------------------------------
@@ -7121,7 +7151,7 @@ North American Datum of 1983 (CSRS) version 3
 
 Defined at reference epoch 1997.0 by a transformation from ITRF97 (see transformation code 8260). The frame is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
 
-Adopted by the Canadian federal government from 1999-01-01 and by the provincial governments of Alberta, British Columbia, Manitoba, Newfoundland and Labrador, Nova Scotia, Ontario and Saskatchewan. Replaces NAD83(CSRS)v2. Replaced by NAD83(CSRS)v4.
+Published 1999-01-01; adopted by the Canadian federal government (2000) and the provincial governments of British Columbia (CRD in 2000, all Victoria Island 2005), Ontario (2008) and Nova Scotia (2000). Replaces NAD83(CSRS)v2. Replaced by NAD83(CSRS)v4.
 
 North American Datum of 1983 (CSRS) version 4
 ---------------------------------------------
@@ -7136,7 +7166,7 @@ North American Datum of 1983 (CSRS) version 4
 
 Defined at reference epoch 2002.0 by a transformation from ITRF2000 (see transformation code 8261). The frame is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
 
-Adopted by the Canadian federal government from 2002-01-01 and by the provincial governments of Alberta and British Columbia. Replaces NAD83(CSRS)v3. Replaced by NAD83(CSRS)v5.
+Published 2002-01-01; adopted by the Canadian federal government (2002) and the provincial governments of British Columbia (for mainland) (2005) and Alberta (2004). Replaces NAD83(CSRS)v3. Replaced by NAD83(CSRS)v5.
 
 North American Datum of 1983 (CSRS) version 5
 ---------------------------------------------
@@ -7149,9 +7179,9 @@ North American Datum of 1983 (CSRS) version 5
     Datum::fromSRID(Datum::EPSG_NORTH_AMERICAN_DATUM_OF_1983_CSRS_VERSION_5)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1196')
 
-Defined at reference epoch 2005.0 by a transformation from ITRF2005 (see transformation code 8262). The frame is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
+Defined at reference epoch 2006.0 by a transformation from ITRF2005 (see transformation code 9227). The frame is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
 
-Adopted by the Canadian federal government from 2006-01-01. Replaces NAD83(CSRS)v4. Replaced by NAD83(CSRS)v6.
+Published 2007-01-01; adopted by the Canadian federal government in 2007. Replaces NAD83(CSRS)v4. Replaced by NAD83(CSRS)v6.
 
 North American Datum of 1983 (CSRS) version 6
 ---------------------------------------------
@@ -7166,7 +7196,7 @@ North American Datum of 1983 (CSRS) version 6
 
 Defined at reference epoch 2010.0 by a transformation from ITRF2008 (see transformation code 8264). The frame is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
 
-Adopted by the Canadian federal government from 2010-01-01 and the provincial governments of Alberta, British Columbia, Manitoba, Newfoundland and Labrador, Nova Scotia, Ontario and Prince Edward Island. Replaces NAD83(CSRS)v5. Replaced by NAD83(CSRS)v7.
+Published 2010-01-01; adopted by the Canadian government (2012) and the provincial governments of Manitoba (2014), Ontario (2013), Prince Edward Island (2014), Nova Scotia (2014) and Newfoundland (2012). Replaces NAD83(CSRSv5). Replaced by NAD83(CSRS)v7.
 
 North American Datum of 1983 (CSRS) version 7
 ---------------------------------------------
@@ -7181,7 +7211,7 @@ North American Datum of 1983 (CSRS) version 7
 
 Defined at reference epoch 2010.0 by a transformation from ITRF2014 (see transformation code 8265). The frame is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
 
-Adopted by the Canadian federal government from 2017-05-01 and the provincial government of Alberta. Replaces NAD83(CSRS)v6.
+Published 2017-05-01; adopted by the Canadian federal government (2017) and the provincial government of Alberta (2021). Replaces NAD83(CSRS)v6.
 
 North American Datum of 1983 (CSRS96)
 -------------------------------------
@@ -8974,7 +9004,7 @@ Reseau Geodesique des Antilles Francaises 2009
 ----------------------------------------------
 
 | Type: Geodetic
-| Used: French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante, Les Saintes, Iles de la Petite Terre, La Desirade, St Barthélemy, and northern St Martin) and Martinique.
+| Used: French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante, Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; St Martin.
 
 .. code-block:: php
 
@@ -9043,7 +9073,7 @@ Reseau de Reference des Antilles Francaises 1991
 ------------------------------------------------
 
 | Type: Geodetic
-| Used: French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante, Les Saintes, Iles de la Petite Terre, La Desirade, St Barthélemy, and northern St Martin) and Martinique.
+| Used: French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante, Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; St Martin.
 
 .. code-block:: php
 
@@ -11098,7 +11128,7 @@ World Geodetic System 1984 (G2139)
     Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_G2139)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1309')
 
-Defined through coordinates of 19 GPS tracking stations adjusted to a subset of IGb14 stations. The IGb14 station coordinates are considered to be equivalent to ITRF2014.
+Defined through coordinates of 19 GPS tracking stations aligned with a subset of IGb14 stations at epoch 2016.0. The IGb14 station coordinates are considered to be equivalent to ITRF2014.
 
 Replaces World Geodetic System 1984 (G1762) from 2021-01-03. Tracking station coordinate changes on 2021-03-28 when NGA implemented IGS definition of antenna phase centre offset.
 

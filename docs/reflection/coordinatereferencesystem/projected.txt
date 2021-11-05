@@ -16308,6 +16308,20 @@ MGI 1901 / Slovenia Grid
 
 Truncated form of MGI 1901 / Balkans zone 5 (CRS code 8677). Replaced by D48/GK (CRS code 3912) soon after Slovenian independence.
 
+MHR21 Grid
+----------
+
+| Used: United Kingdom (UK) - on or related to Midland Rail Hub, covering routes through Cardiff, Bristol, Gloucester, Derby, Birmingham, Leicester, and Lincoln.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_MHR21_GRID)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9869')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_MHR21_GRID)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9869')
+
+Defined through transformation ETRS89 to MRH21-IRF (1) (code 9867) and map projection MRH21-TM (code 9868). Emulates the MRH21 Snake projection applied to ETRS89 as realized through OSNet 2009. Consistent with CCWGDB09 as realized through OSNet 2001.
+
 MML07 Grid
 ----------
 
@@ -16347,6 +16361,20 @@ MMS / Argentina 2
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_MMS_ARGENTINA_2)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9254')
 
+
+MOLDOR11 Grid
+-------------
+
+| Used: United Kingdom (UK) - on or related to the rail route from Manchester via Ordsall Lane and the Hope Valley to Dore Junction.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_MOLDOR11_GRID)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9880')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_MOLDOR11_GRID)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9880')
+
+The CRS's definition through transformation ETRS89 to MOLDOR11-IRF (1) (code 9878) and map projection MOLDOR11-TM (code 9879) emulates the MOLDOR11 Snake projection applied to ETRS89 as realized through OSNet 2009 CORS.
 
 MOLDREF99 / Moldova TM
 ----------------------
@@ -54142,7 +54170,7 @@ REGVEN / UTM zone 20N
 RGAF09 / UTM zone 20N
 ---------------------
 
-| Used: French Antilles onshore and offshore west of 60°W - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante, Les Saintes, Iles de la Petite Terre, La Desirade, St Barthélemy, and northern St Martin) and Martinique.
+| Used: French Antilles onshore and offshore west of 60°W - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante, Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; northern St Martin.
 
 .. code-block:: php
 
@@ -55057,7 +55085,7 @@ On Wallis island, replaces MOP78 / UTM zone 1S (CRS code 2988).
 RRAF 1991 / UTM zone 20N
 ------------------------
 
-| Used: French Antilles onshore and offshore west of 60°W - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante, Les Saintes, Iles de la Petite Terre, La Desirade, St Barthélemy, and northern St Martin) and Martinique.
+| Used: French Antilles onshore and offshore west of 60°W - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante, Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; northern St Martin.
 
 .. code-block:: php
 
@@ -65955,7 +65983,7 @@ WGS 84 / UTM zone 1S
 WGS 84 / UTM zone 20N
 ---------------------
 
-| Used: Between 66°W and 60°W, northern hemisphere between equator and 84°N, onshore and offshore. Anguilla. Antigua and Barbuda. Bermuda. Brazil. British Virgin Islands. Canada - New Brunswick; Labrador; Nova Scotia; Nunavut; Prince Edward Island; Quebec. Dominica. Greenland. Grenada. Guadeloupe. Guyana. Martinique. Montserrat. Puerto Rico. St Kitts and Nevis. St Lucia. St Vncent and the Grenadines. Trinidad and Tobago. Venezuela. US Virgin Islands.
+| Used: Between 66°W and 60°W, northern hemisphere between equator and 84°N, onshore and offshore. Anguilla. Antigua and Barbuda. Bermuda. Brazil. British Virgin Islands. Canada - New Brunswick; Labrador; Nova Scotia; Nunavut; Prince Edward Island; Quebec. Dominica. Greenland. Grenada. Guadeloupe. Guyana. Martinique. Montserrat. Puerto Rico. St Kitts and Nevis. St Barthelemy. St Lucia. St Maarten, St Martin. St Vincent and the Grenadines. Trinidad and Tobago. Venezuela. US Virgin Islands.
 
 .. code-block:: php
 

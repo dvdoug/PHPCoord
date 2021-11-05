@@ -3233,5 +3233,17 @@ trait Geographic2DSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1313',
             'extent_code' => ['1096'],
         ],
+        'urn:ogc:def:crs:EPSG::9866' => [
+            'name' => 'MRH21-IRF',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
+            'datum' => 'urn:ogc:def:datum:EPSG::1314',
+            'extent_code' => ['4652'],
+        ],
+        'urn:ogc:def:crs:EPSG::9871' => [
+            'name' => 'MOLDOR11-IRF',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
+            'datum' => 'urn:ogc:def:datum:EPSG::1315',
+            'extent_code' => ['4655'],
+        ],
     ];
 }

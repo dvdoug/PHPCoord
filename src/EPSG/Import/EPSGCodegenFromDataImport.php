@@ -549,6 +549,8 @@ class EPSGCodegenFromDataImport
         9740, // NTv2 TN15-ETRS89-to-EOS21-IRF.gsb
         9759, // NTv2 TN15-ETRS89-to-ECML14_NB-IRF.gsb
         9764, // NTv2 TN15-ETRS89-to-EWR2-IRF.gsb
+        9867, // NTv2 TN15-ETRS89-to-MRH21-IRF.gsb
+        9878, // NTv2 TN15-ETRS89-to-MOLDOR11-IRF.gsb
         9363, // IGNF ARAMCO_AAA-KSAGRF_6.tac
 
         // free, but license does not permit redistribution

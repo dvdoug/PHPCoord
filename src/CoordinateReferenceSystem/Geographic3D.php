@@ -1031,7 +1031,7 @@ class Geographic3D extends Geographic
     /**
      * RGAF09
      * Extent: French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante,
-     * Les Saintes, Iles de la Petite Terre, La Desirade, St Barthélemy, and northern St Martin) and Martinique.
+     * Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; St Martin.
      * Replaces RRAF 1991 (CRS code 4557). See CRS code 7085 for alternate system with horizontal axes reversed used by
      * IGN for GIS purposes.
      */
@@ -1040,7 +1040,7 @@ class Geographic3D extends Geographic
     /**
      * RGAF09 (lon-lat)
      * Extent: French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante,
-     * Les Saintes, Iles de la Petite Terre, La Desirade, St Barthélemy, and northern St Martin) and Martinique.
+     * Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; St Martin.
      * Replaces RRAF 1991 (CRS code 4557). See CRS code 5488 for system with horizontal axes in sequence lat-lon to be
      * used for air, land and sea navigation and safety of life purposes.
      */
@@ -1213,7 +1213,7 @@ class Geographic3D extends Geographic
     /**
      * RRAF 1991
      * Extent: French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante,
-     * Les Saintes, Iles de la Petite Terre, La Desirade, St Barthélemy, and northern St Martin) and Martinique.
+     * Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; St Martin.
      * Replaces older local 2D systems Fort Marigot and Sainte Anne CRS (codes 4621-22) in Guadeloupe and Fort Desaix
      * (CRS code 4625) in Martinique. Replaced by RGAF09 (CRS code 5488).
      */
@@ -1525,16 +1525,16 @@ class Geographic3D extends Geographic
      * Montserrat, Morocco, Mozambique, Myanmar (Burma), Namibia, Nauru, Nepal, Netherlands, New Caledonia, New
      * Zealand, Nicaragua, Niger, Nigeria, Niue, Norfolk Island, North Macedonia, Northern Mariana Islands, Norway,
      * Oman, Pakistan, Palau, Panama, Papua New Guinea (PNG), Paraguay, Peru, Philippines, Pitcairn, Poland, Portugal,
-     * Puerto Rico, Qatar, Reunion, Romania, Russian Federation, Rwanda, Saint Kitts and Nevis, Saint Helena, Ascension
-     * and Tristan da Cunha, Saint Lucia, Saint Pierre and Miquelon, Saint Vincent and the Grenadines, Samoa, San
-     * Marino, Sao Tome and Principe, Saudi Arabia, Senegal, Serbia, Seychelles, Sierra Leone, Singapore, Slovakia
-     * (Slovak Republic), Slovenia, Sint Maarten, Solomon Islands, Somalia, South Africa, South Georgia and the South
-     * Sandwich Islands, South Sudan, Spain, Sri Lanka, Sudan, Suriname, Svalbard and Jan Mayen, Sweden, Switzerland,
-     * Syrian Arab Republic, Taiwan, Tajikistan, United Republic of Tanzania, Thailand, The Democratic Republic of the
-     * Congo (Zaire), Togo, Tokelau, Tonga, Trinidad and Tobago, Tunisia, Turkey, Turkmenistan, Turks and Caicos
-     * Islands, Tuvalu, Uganda, Ukraine, United Arab Emirates (UAE), United Kingdom (UK), United States (USA), United
-     * States Minor Outlying Islands, Uruguay, Uzbekistan, Vanuatu, Venezuela, Vietnam, US Virgin Islands, Wallis and
-     * Futuna, Western Sahara, Yemen, Zambia, Zimbabwe.
+     * Puerto Rico, Qatar, Reunion, Romania, Russian Federation, Rwanda, St Barthelemy, St Kitts and Nevis, St Helena,
+     * Ascension and Tristan da Cunha, St Lucia, St Martin, St Pierre and Miquelon, Saint Vincent and the Grenadines,
+     * Samoa, San Marino, Sao Tome and Principe, Saudi Arabia, Senegal, Serbia, Seychelles, Sierra Leone, Singapore,
+     * Slovakia (Slovak Republic), Slovenia, St Maarten, Solomon Islands, Somalia, South Africa, South Georgia and the
+     * South Sandwich Islands, South Sudan, Spain, Sri Lanka, Sudan, Suriname, Svalbard and Jan Mayen, Sweden,
+     * Switzerland, Syrian Arab Republic, Taiwan, Tajikistan, United Republic of Tanzania, Thailand, The Democratic
+     * Republic of the Congo (Zaire), Togo, Tokelau, Tonga, Trinidad and Tobago, Tunisia, Turkey, Turkmenistan, Turks
+     * and Caicos Islands, Tuvalu, Uganda, Ukraine, United Arab Emirates (UAE), United Kingdom (UK), United States
+     * (USA), United States Minor Outlying Islands, Uruguay, Uzbekistan, Vanuatu, Venezuela, Vietnam, US Virgin
+     * Islands, Wallis and Futuna, Western Sahara, Yemen, Zambia, Zimbabwe.
      */
     public const EPSG_WGS_84 = 'urn:ogc:def:crs:EPSG::4979';
 

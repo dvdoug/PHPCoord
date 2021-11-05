@@ -259,6 +259,19 @@ ETRS89 + Belfast height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9450')
 
 
+ETRS89 + CD Norway depth
+------------------------
+
+| Used: Norway - inshore and nearshore.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_ETRS89_PLUS_CD_NORWAY_DEPTH)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9883')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_ETRS89_PLUS_CD_NORWAY_DEPTH)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9883')
+
+
 ETRS89 + Cagliari 1956 height
 -----------------------------
 
@@ -1889,6 +1902,32 @@ MML07 Grid + ODN height
     Compound::fromSRID('urn:ogc:def:crs:EPSG::9374')
     CoordinateReferenceSystem::fromSRID(Compound::EPSG_MML07_GRID_PLUS_ODN_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9374')
+
+
+MOLDOR11 Grid + ODN height
+--------------------------
+
+| Used: United Kingdom (UK) - on or related to the rail route from Manchester via Ordsall Lane and the Hope Valley to Dore Junction.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_MOLDOR11_GRID_PLUS_ODN_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9881')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_MOLDOR11_GRID_PLUS_ODN_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9881')
+
+
+MRH21 Grid + ODN height
+-----------------------
+
+| Used: United Kingdom (UK) - on or related to Midland Rail Hub, covering routes through Cardiff, Bristol, Gloucester, Derby, Birmingham, Leicester, and Lincoln.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_MRH21_GRID_PLUS_ODN_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9870')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_MRH21_GRID_PLUS_ODN_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9870')
 
 
 NAD27 + NGVD29 height (ftUS)

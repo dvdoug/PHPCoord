@@ -8247,16 +8247,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9615',
             'extent_code' => ['1368'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::9242' => [
-            'name' => 'NAD27 to NAD83(CSRS)v3 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9615',
-            'extent_code' => ['2375'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::9243' => [
-            'name' => 'NAD83 to NAD83(CSRS)v3 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9615',
-            'extent_code' => ['2375'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::9244' => [
             'name' => 'NAD83 to NAD83(CSRS)v4 (3)',
             'method' => 'urn:ogc:def:method:EPSG::9615',
@@ -9277,6 +9267,11 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9807',
             'extent_code' => ['4649'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9868' => [
+            'name' => 'MRH21-TM',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['4652'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::9872' => [
             'name' => 'Papua New Guinea Map Grid 1994 zone 57',
             'method' => 'urn:ogc:def:method:EPSG::9807',
@@ -9296,6 +9291,26 @@ class CoordinateOperations
             'name' => 'RGF93 v2b to RGF93 v2b + NGF-IGN69 height (5)',
             'method' => 'urn:ogc:def:method:EPSG::1095',
             'extent_code' => ['1326'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9879' => [
+            'name' => 'MOLDOR11-TM',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['4655'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9882' => [
+            'name' => 'RGF93 v1 to RGF93 v2 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::9603',
+            'extent_code' => ['1096'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9886' => [
+            'name' => 'NAD27 to NAD83(CSRS)v2 (2)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['2375'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9887' => [
+            'name' => 'NAD83 to NAD83(CSRS)v2 (2)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['2375'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::10098' => [
             'name' => 'KKJ to ETRS89 (2)',

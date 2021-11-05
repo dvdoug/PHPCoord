@@ -8545,6 +8545,16 @@ class Projected extends CoordinateReferenceSystem
     public const EPSG_MGI_1901_SLOVENIA_GRID = 'urn:ogc:def:crs:EPSG::8686';
 
     /**
+     * MHR21 Grid
+     * Extent: United Kingdom (UK) - on or related to Midland Rail Hub, covering routes through Cardiff, Bristol,
+     * Gloucester, Derby, Birmingham, Leicester, and Lincoln.
+     * Defined through transformation ETRS89 to MRH21-IRF (1) (code 9867) and map projection MRH21-TM (code 9868).
+     * Emulates the MRH21 Snake projection applied to ETRS89 as realized through OSNet 2009. Consistent with CCWGDB09
+     * as realized through OSNet 2001.
+     */
+    public const EPSG_MHR21_GRID = 'urn:ogc:def:crs:EPSG::9869';
+
+    /**
      * MML07 Grid
      * Extent: United Kingdom (UK) - on or related to the Midland Mainline rail route from Sheffield to London.
      * The CRS's definition through transformation ETRS89 to MML07-IRF (1) (code 9369) as applied to ETRS89 realised
@@ -8564,6 +8574,16 @@ class Projected extends CoordinateReferenceSystem
      * Extent: Argentina - Tierra del Fuego onshore.
      */
     public const EPSG_MMS_ARGENTINA_2 = 'urn:ogc:def:crs:EPSG::9254';
+
+    /**
+     * MOLDOR11 Grid
+     * Extent: United Kingdom (UK) - on or related to the rail route from Manchester via Ordsall Lane and the Hope
+     * Valley to Dore Junction.
+     * The CRS's definition through transformation ETRS89 to MOLDOR11-IRF (1) (code 9878) and map projection
+     * MOLDOR11-TM (code 9879) emulates the MOLDOR11 Snake projection applied to ETRS89 as realized through OSNet 2009
+     * CORS.
+     */
+    public const EPSG_MOLDOR11_GRID = 'urn:ogc:def:crs:EPSG::9880';
 
     /**
      * MOLDREF99 / Moldova TM
@@ -31357,8 +31377,8 @@ class Projected extends CoordinateReferenceSystem
     /**
      * RGAF09 / UTM zone 20N
      * Extent: French Antilles onshore and offshore west of 60°W - Guadeloupe (including Grande Terre, Basse Terre,
-     * Marie Galante, Les Saintes, Iles de la Petite Terre, La Desirade, St Barthélemy, and northern St Martin) and
-     * Martinique.
+     * Marie Galante, Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; northern St
+     * Martin.
      * Replaces RRAF 1991 / UTM zone 20N (CRS code 4559).
      */
     public const EPSG_RGAF09_UTM_ZONE_20N = 'urn:ogc:def:crs:EPSG::5490';
@@ -31810,8 +31830,8 @@ class Projected extends CoordinateReferenceSystem
     /**
      * RRAF 1991 / UTM zone 20N
      * Extent: French Antilles onshore and offshore west of 60°W - Guadeloupe (including Grande Terre, Basse Terre,
-     * Marie Galante, Les Saintes, Iles de la Petite Terre, La Desirade, St Barthélemy, and northern St Martin) and
-     * Martinique.
+     * Marie Galante, Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; northern St
+     * Martin.
      * Replaces Sainte Anne / UTM zone 20N and Fort Marigot / UTM zone 20N (CRS codes 2969-70) in Guadeloupe and Fort
      * Desaix / UTM zone 20N (CRS code 2973) in Martinique. Replaced by RGAF09 / UTM zone 20N (CRS code 5490).
      */
@@ -37266,8 +37286,8 @@ class Projected extends CoordinateReferenceSystem
      * Extent: Between 66°W and 60°W, northern hemisphere between equator and 84°N, onshore and offshore. Anguilla.
      * Antigua and Barbuda. Bermuda. Brazil. British Virgin Islands. Canada - New Brunswick; Labrador; Nova Scotia;
      * Nunavut; Prince Edward Island; Quebec. Dominica. Greenland. Grenada. Guadeloupe. Guyana. Martinique. Montserrat.
-     * Puerto Rico. St Kitts and Nevis. St Lucia. St Vncent and the Grenadines. Trinidad and Tobago. Venezuela. US
-     * Virgin Islands.
+     * Puerto Rico. St Kitts and Nevis. St Barthelemy. St Lucia. St Maarten, St Martin. St Vincent and the Grenadines.
+     * Trinidad and Tobago. Venezuela. US Virgin Islands.
      */
     public const EPSG_WGS_84_UTM_ZONE_20N = 'urn:ogc:def:crs:EPSG::32620';
 

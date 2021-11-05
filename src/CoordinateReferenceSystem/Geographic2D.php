@@ -1926,6 +1926,16 @@ class Geographic2D extends Geographic
     public const EPSG_MMS = 'urn:ogc:def:crs:EPSG::9253';
 
     /**
+     * MOLDOR11-IRF
+     * Extent: United Kingdom (UK) - on or related to the rail route from Manchester via Ordsall Lane and the Hope
+     * Valley to Dore Junction.
+     * Intermediate CRS created in 2021 to assist the emulation of the ETRS89 / MOLDOR11 SnakeGrid projected CRS
+     * through transformation ETRS89 to MOLDOR11-IRF (1) (code 9878) used in conjunction with the MOLDOR11-TM map
+     * projection (code 9879).
+     */
+    public const EPSG_MOLDOR11_IRF = 'urn:ogc:def:crs:EPSG::9871';
+
+    /**
      * MOLDREF99
      * Extent: Moldova.
      */
@@ -1937,6 +1947,16 @@ class Geographic2D extends Geographic
      * Replaced by RGWF96 (CRS code 8900) for geodetic survey and RGWF96 (lon-lat) (CRS code 8902) for GIS.
      */
     public const EPSG_MOP78 = 'urn:ogc:def:crs:EPSG::4639';
+
+    /**
+     * MRH21-IRF
+     * Extent: United Kingdom (UK) - on or related to Midland Rail Hub, covering routes through Cardiff, Bristol,
+     * Gloucester, Derby, Birmingham, Leicester, and Lincoln.
+     * Intermediate CRS created in 2021 to assist the emulation of the ETRS89 / MRH21 SnakeGrid projected CRS through
+     * transformation ETRS89 to MRH21-IRF (1) (code 9867) used in conjunction with the MRH21-TM map projection (code
+     * 9868).
+     */
+    public const EPSG_MRH21_IRF = 'urn:ogc:def:crs:EPSG::9866';
 
     /**
      * MTRF-2000
@@ -2884,7 +2904,7 @@ class Geographic2D extends Geographic
     /**
      * RGAF09
      * Extent: French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante,
-     * Les Saintes, Iles de la Petite Terre, La Desirade, St Barthélemy, and northern St Martin) and Martinique.
+     * Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; St Martin.
      * Replaces RRAF 1991. See CRS code 7086 for alternate system with axes reversed used by IGN for GIS purposes.
      */
     public const EPSG_RGAF09 = 'urn:ogc:def:crs:EPSG::5489';
@@ -2892,7 +2912,7 @@ class Geographic2D extends Geographic
     /**
      * RGAF09 (lon-lat)
      * Extent: French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante,
-     * Les Saintes, Iles de la Petite Terre, La Desirade, St Barthélemy, and northern St Martin) and Martinique.
+     * Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; St Martin.
      * Replaces RRAF 1991. See CRS code 5489 for system with axes in sequence lat-lon to be used for air, land and sea
      * navigation and safety of life purposes.
      */
@@ -3073,7 +3093,7 @@ class Geographic2D extends Geographic
     /**
      * RRAF 1991
      * Extent: French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante,
-     * Les Saintes, Iles de la Petite Terre, La Desirade, St Barthélemy, and northern St Martin) and Martinique.
+     * Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; St Martin.
      * Replaces older local systems Fort Marigot and Sainte Anne CRS (codes 4621-22) in Guadeloupe and Fort Desaix (CRS
      * code 4625) in Martinique. Replaced by RGAF09 (CRS code 5489).
      */

@@ -4888,6 +4888,14 @@ class CRSTransformationsNorthAmerica
             'reversible' => true,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9886',
+            'name' => 'NAD27 to NAD83(CSRS)v2 (2)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::8237',
+            'accuracy' => 1.5,
+            'reversible' => true,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9107',
             'name' => 'NAD27 to NAD83(CSRS)v3 (5)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
@@ -4906,14 +4914,6 @@ class CRSTransformationsNorthAmerica
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9113',
             'name' => 'NAD27 to NAD83(CSRS)v3 (8)',
-            'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
-            'target_crs' => 'urn:ogc:def:crs:EPSG::8240',
-            'accuracy' => 1.5,
-            'reversible' => true,
-        ],
-        [
-            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9242',
-            'name' => 'NAD27 to NAD83(CSRS)v3 (2)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8240',
             'accuracy' => 1.5,
@@ -7456,6 +7456,14 @@ class CRSTransformationsNorthAmerica
             'reversible' => true,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9887',
+            'name' => 'NAD83 to NAD83(CSRS)v2 (2)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::8237',
+            'accuracy' => 1.5,
+            'reversible' => true,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9110',
             'name' => 'NAD83 to NAD83(CSRS)v3 (5)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
@@ -7477,14 +7485,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8240',
             'accuracy' => 0.1,
-            'reversible' => true,
-        ],
-        [
-            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9243',
-            'name' => 'NAD83 to NAD83(CSRS)v3 (2)',
-            'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
-            'target_crs' => 'urn:ogc:def:crs:EPSG::8240',
-            'accuracy' => 1.5,
             'reversible' => true,
         ],
         [

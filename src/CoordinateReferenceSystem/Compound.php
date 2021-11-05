@@ -141,6 +141,12 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_ETRS89_PLUS_BELFAST_HEIGHT = 'urn:ogc:def:crs:EPSG::9450';
 
     /**
+     * ETRS89 + CD Norway depth
+     * Extent: Norway - inshore and nearshore.
+     */
+    public const EPSG_ETRS89_PLUS_CD_NORWAY_DEPTH = 'urn:ogc:def:crs:EPSG::9883';
+
+    /**
      * ETRS89 + Cagliari 1956 height
      * Extent: Italy - Sardinia onshore.
      */
@@ -944,6 +950,20 @@ class Compound extends CoordinateReferenceSystem
      * Extent: United Kingdom (UK) - on or related to the Midland Mainline rail route from Sheffield to London.
      */
     public const EPSG_MML07_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::9374';
+
+    /**
+     * MOLDOR11 Grid + ODN height
+     * Extent: United Kingdom (UK) - on or related to the rail route from Manchester via Ordsall Lane and the Hope
+     * Valley to Dore Junction.
+     */
+    public const EPSG_MOLDOR11_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::9881';
+
+    /**
+     * MRH21 Grid + ODN height
+     * Extent: United Kingdom (UK) - on or related to Midland Rail Hub, covering routes through Cardiff, Bristol,
+     * Gloucester, Derby, Birmingham, Leicester, and Lincoln.
+     */
+    public const EPSG_MRH21_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::9870';
 
     /**
      * NAD27 + NGVD29 height (ftUS)

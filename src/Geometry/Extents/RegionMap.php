@@ -3551,8 +3551,11 @@ class RegionMap
             4649 => self::REGION_EUROPE,
             4650 => self::REGION_EUROPE,
             4651 => self::REGION_EUROPE,
+            4652 => self::REGION_EUROPE,
             4653 => self::REGION_OCEANIA,
             4654 => self::REGION_OCEANIA,
+            4655 => self::REGION_EUROPE,
+            4656 => self::REGION_EUROPE,
         ];
     }
 }

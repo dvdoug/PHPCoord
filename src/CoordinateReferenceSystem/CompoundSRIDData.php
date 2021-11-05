@@ -2481,5 +2481,26 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5720',
             'extent_code' => ['1326'],
         ],
+        'urn:ogc:def:crs:EPSG::9870' => [
+            'name' => 'MRH21 Grid + ODN height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::9869',
+            'horizontal_crs_type' => 'projected',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::5701',
+            'extent_code' => ['4652'],
+        ],
+        'urn:ogc:def:crs:EPSG::9881' => [
+            'name' => 'MOLDOR11 Grid + ODN height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::9880',
+            'horizontal_crs_type' => 'projected',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::5701',
+            'extent_code' => ['4655'],
+        ],
+        'urn:ogc:def:crs:EPSG::9883' => [
+            'name' => 'ETRS89 + CD Norway depth',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::4258',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::9672',
+            'extent_code' => ['4656'],
+        ],
     ];
 }

@@ -497,7 +497,7 @@ class CoordinateOperationMethods
     /**
      * Mercator (variant C).
      */
-    public const EPSG_MERCATOR_VARIANT_C = 'urn:ogc:def:method:EPSG::1044';
+    public const EPSG_MERCATOR_VARIANT_C = 'urn:ogc:def:method:EPSG::1108';
 
     /**
      * Modified Azimuthal Equidistant

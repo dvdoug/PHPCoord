@@ -3794,6 +3794,18 @@ class Datum
     public const EPSG_MML07_INTERMEDIATE_REFERENCE_FRAME = 'urn:ogc:def:datum:EPSG::1271';
 
     /**
+     * MOLDOR11 Intermediate Reference Frame
+     * Type: geodetic
+     * Extent: United Kingdom (UK) - on or related to the rail route from Manchester via Ordsall Lane and the Hope
+     * Valley to Dore Junction.
+     * Defined through the application of the MOLDOR11 NTv2 transformation (code 9878) to ETRS89 as realized through
+     * OSNet v2009 CORS.
+     * Created in 2021 to support intermediate CRS "MOLDOR11-IRF" in the emulation of the MOLDOR11 Snake map
+     * projection.
+     */
+    public const EPSG_MOLDOR11_INTERMEDIATE_REFERENCE_FRAME = 'urn:ogc:def:datum:EPSG::1315';
+
+    /**
      * MOLDREF99
      * Type: geodetic
      * Extent: Moldova.
@@ -3824,6 +3836,16 @@ class Datum
      * Extent: Wallis and Futuna - Wallis.
      */
     public const EPSG_MOP78 = 'urn:ogc:def:datum:EPSG::6639';
+
+    /**
+     * MRH21 Intermediate Reference Frame
+     * Type: geodetic
+     * Extent: United Kingdom (UK) - on or related to Midland Rail Hub, covering routes through Cardiff, Bristol,
+     * Gloucester, Derby, Birmingham, Leicester, and Lincoln.
+     * Defined through the application of the MRH21 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
+     * Created in 2021 to support intermediate CRS "MRH21-IRF" in the emulation of the MRH21 Snake map projection.
+     */
+    public const EPSG_MRH21_INTERMEDIATE_REFERENCE_FRAME = 'urn:ogc:def:datum:EPSG::1314';
 
     /**
      * Macao 1920
@@ -4831,8 +4853,9 @@ class Datum
      * Yukon.
      * Defined at reference epoch 1997.0 by a transformation from ITRF96 (see transformation code 8259). The frame is
      * kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
-     * Adopted by the Canadian federal government from 1998-01-01 and by the provincial governments of British
-     * Columbia, New Brunswick, Prince Edward Island and Quebec. Replaces NAD83(CSRS96). Replaced by NAD83(CSRS)v3.
+     * Published 1998-01-01; adopted by the Canadian federal government and the provincial governments of British
+     * Columbia, Alberta, Saskatchewan, Manitoba, Quebec, New Brunswick and Prince Edward Island. Replaces
+     * NAD83(CSRS96). Replaced by NAD83(CSRS)v3.
      */
     public const EPSG_NORTH_AMERICAN_DATUM_OF_1983_CSRS_VERSION_2 = 'urn:ogc:def:datum:EPSG::1193';
 
@@ -4844,9 +4867,9 @@ class Datum
      * Yukon.
      * Defined at reference epoch 1997.0 by a transformation from ITRF97 (see transformation code 8260). The frame is
      * kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
-     * Adopted by the Canadian federal government from 1999-01-01 and by the provincial governments of Alberta, British
-     * Columbia, Manitoba, Newfoundland and Labrador, Nova Scotia, Ontario and Saskatchewan. Replaces NAD83(CSRS)v2.
-     * Replaced by NAD83(CSRS)v4.
+     * Published 1999-01-01; adopted by the Canadian federal government (2000) and the provincial governments of
+     * British Columbia (CRD in 2000, all Victoria Island 2005), Ontario (2008) and Nova Scotia (2000). Replaces
+     * NAD83(CSRS)v2. Replaced by NAD83(CSRS)v4.
      */
     public const EPSG_NORTH_AMERICAN_DATUM_OF_1983_CSRS_VERSION_3 = 'urn:ogc:def:datum:EPSG::1194';
 
@@ -4858,8 +4881,8 @@ class Datum
      * Yukon.
      * Defined at reference epoch 2002.0 by a transformation from ITRF2000 (see transformation code 8261). The frame is
      * kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
-     * Adopted by the Canadian federal government from 2002-01-01 and by the provincial governments of Alberta and
-     * British Columbia. Replaces NAD83(CSRS)v3. Replaced by NAD83(CSRS)v5.
+     * Published 2002-01-01; adopted by the Canadian federal government (2002) and the provincial governments of
+     * British Columbia (for mainland) (2005) and Alberta (2004). Replaces NAD83(CSRS)v3. Replaced by NAD83(CSRS)v5.
      */
     public const EPSG_NORTH_AMERICAN_DATUM_OF_1983_CSRS_VERSION_4 = 'urn:ogc:def:datum:EPSG::1195';
 
@@ -4869,9 +4892,10 @@ class Datum
      * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
      * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
      * Yukon.
-     * Defined at reference epoch 2005.0 by a transformation from ITRF2005 (see transformation code 8262). The frame is
+     * Defined at reference epoch 2006.0 by a transformation from ITRF2005 (see transformation code 9227). The frame is
      * kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
-     * Adopted by the Canadian federal government from 2006-01-01. Replaces NAD83(CSRS)v4. Replaced by NAD83(CSRS)v6.
+     * Published 2007-01-01; adopted by the Canadian federal government in 2007. Replaces NAD83(CSRS)v4. Replaced by
+     * NAD83(CSRS)v6.
      */
     public const EPSG_NORTH_AMERICAN_DATUM_OF_1983_CSRS_VERSION_5 = 'urn:ogc:def:datum:EPSG::1196';
 
@@ -4883,9 +4907,9 @@ class Datum
      * Yukon.
      * Defined at reference epoch 2010.0 by a transformation from ITRF2008 (see transformation code 8264). The frame is
      * kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
-     * Adopted by the Canadian federal government from 2010-01-01 and the provincial governments of Alberta, British
-     * Columbia, Manitoba, Newfoundland and Labrador, Nova Scotia, Ontario and Prince Edward Island. Replaces
-     * NAD83(CSRS)v5. Replaced by NAD83(CSRS)v7.
+     * Published 2010-01-01; adopted by the Canadian government (2012) and the provincial governments of Manitoba
+     * (2014), Ontario (2013), Prince Edward Island (2014), Nova Scotia (2014) and Newfoundland (2012). Replaces
+     * NAD83(CSRSv5). Replaced by NAD83(CSRS)v7.
      */
     public const EPSG_NORTH_AMERICAN_DATUM_OF_1983_CSRS_VERSION_6 = 'urn:ogc:def:datum:EPSG::1197';
 
@@ -4897,8 +4921,8 @@ class Datum
      * Yukon.
      * Defined at reference epoch 2010.0 by a transformation from ITRF2014 (see transformation code 8265). The frame is
      * kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
-     * Adopted by the Canadian federal government from 2017-05-01 and the provincial government of Alberta. Replaces
-     * NAD83(CSRS)v6.
+     * Published 2017-05-01; adopted by the Canadian federal government (2017) and the provincial government of Alberta
+     * (2021). Replaces NAD83(CSRS)v6.
      */
     public const EPSG_NORTH_AMERICAN_DATUM_OF_1983_CSRS_VERSION_7 = 'urn:ogc:def:datum:EPSG::1198';
 
@@ -6139,7 +6163,7 @@ class Datum
      * Reseau Geodesique des Antilles Francaises 2009
      * Type: geodetic
      * Extent: French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante,
-     * Les Saintes, Iles de la Petite Terre, La Desirade, St Barthélemy, and northern St Martin) and Martinique.
+     * Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; St Martin.
      * ITRF2005 at epoch 2009.0
      * Replaces RRAF91 in Martinique and Guadeloupe.
      */
@@ -6184,7 +6208,7 @@ class Datum
      * Reseau de Reference des Antilles Francaises 1991
      * Type: geodetic
      * Extent: French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante,
-     * Les Saintes, Iles de la Petite Terre, La Desirade, St Barthélemy, and northern St Martin) and Martinique.
+     * Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; St Martin.
      * WGS 84 coordinates of a single station determined during the 1988 Tango mission.
      * Replaces Fort Marigot and Sainte Anne (datum codes 6621-22) in Guadeloupe and Fort Desaix (datum code 6625) in
      * Martinique. Replaced by Reseau Geodesique des Antilles Francaises 2009 (datum code 1073).
@@ -7560,8 +7584,8 @@ class Datum
      * World Geodetic System 1984 (G2139)
      * Type: dynamic geodetic
      * Extent: World.
-     * Defined through coordinates of 19 GPS tracking stations adjusted to a subset of IGb14 stations. The IGb14
-     * station coordinates are considered to be equivalent to ITRF2014.
+     * Defined through coordinates of 19 GPS tracking stations aligned with a subset of IGb14 stations at epoch 2016.0.
+     * The IGb14 station coordinates are considered to be equivalent to ITRF2014.
      * Replaces World Geodetic System 1984 (G1762) from 2021-01-03. Tracking station coordinate changes on 2021-03-28
      * when NGA implemented IGS definition of antenna phase centre offset.
      */
@@ -9922,7 +9946,7 @@ class Datum
             'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7030',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => 1024,
-            'frame_reference_epoch' => 2010.0,
+            'frame_reference_epoch' => 2016.0,
         ],
         'urn:ogc:def:datum:EPSG::1310' => [
             'name' => 'ECML14_NB Intermediate Reference Frame',
@@ -9950,6 +9974,22 @@ class Datum
         ],
         'urn:ogc:def:datum:EPSG::1313' => [
             'name' => 'Reseau Geodesique Francais 1993 v2b',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
+        'urn:ogc:def:datum:EPSG::1314' => [
+            'name' => 'MRH21 Intermediate Reference Frame',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
+        'urn:ogc:def:datum:EPSG::1315' => [
+            'name' => 'MOLDOR11 Intermediate Reference Frame',
             'type' => 'geodetic',
             'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',

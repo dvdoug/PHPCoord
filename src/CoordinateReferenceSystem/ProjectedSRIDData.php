@@ -21251,6 +21251,12 @@ trait ProjectedSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1077',
             'extent_code' => ['4649'],
         ],
+        'urn:ogc:def:crs:EPSG::9869' => [
+            'name' => 'MHR21 Grid',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::4400',
+            'datum' => 'urn:ogc:def:datum:EPSG::1314',
+            'extent_code' => ['4652'],
+        ],
         'urn:ogc:def:crs:EPSG::9874' => [
             'name' => 'PNG94 / PNGMG94 zone 57',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::4400',
@@ -21262,6 +21268,12 @@ trait ProjectedSRIDData
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::4400',
             'datum' => 'urn:ogc:def:datum:EPSG::1076',
             'extent_code' => ['4654'],
+        ],
+        'urn:ogc:def:crs:EPSG::9880' => [
+            'name' => 'MOLDOR11 Grid',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::4400',
+            'datum' => 'urn:ogc:def:datum:EPSG::1315',
+            'extent_code' => ['4655'],
         ],
         'urn:ogc:def:crs:EPSG::20004' => [
             'name' => 'Pulkovo 1995 / Gauss-Kruger zone 4',

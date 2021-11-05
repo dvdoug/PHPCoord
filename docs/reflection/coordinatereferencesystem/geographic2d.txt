@@ -4140,6 +4140,22 @@ MMS
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9253')
 
 
+MOLDOR11-IRF
+------------
+
+| Used: United Kingdom (UK) - on or related to the rail route from Manchester via Ordsall Lane and the Hope Valley to Dore Junction.
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_MOLDOR11_IRF)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::9871')
+    Geographic::fromSRID(Geographic2D::EPSG_MOLDOR11_IRF)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::9871')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_MOLDOR11_IRF)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9871')
+
+Intermediate CRS created in 2021 to assist the emulation of the ETRS89 / MOLDOR11 SnakeGrid projected CRS through transformation ETRS89 to MOLDOR11-IRF (1) (code 9878) used in conjunction with the MOLDOR11-TM map projection (code 9879).
+
 MOLDREF99
 ---------
 
@@ -4170,6 +4186,22 @@ MOP78
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4639')
 
 Replaced by RGWF96 (CRS code 8900) for geodetic survey and RGWF96 (lon-lat) (CRS code 8902) for GIS.
+
+MRH21-IRF
+---------
+
+| Used: United Kingdom (UK) - on or related to Midland Rail Hub, covering routes through Cardiff, Bristol, Gloucester, Derby, Birmingham, Leicester, and Lincoln.
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_MRH21_IRF)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::9866')
+    Geographic::fromSRID(Geographic2D::EPSG_MRH21_IRF)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::9866')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_MRH21_IRF)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9866')
+
+Intermediate CRS created in 2021 to assist the emulation of the ETRS89 / MRH21 SnakeGrid projected CRS through transformation ETRS89 to MRH21-IRF (1) (code 9867) used in conjunction with the MRH21-TM map projection (code 9868).
 
 MTRF-2000
 ---------
@@ -6075,7 +6107,7 @@ Densification in Venezuela of SIRGAS.
 RGAF09
 ------
 
-| Used: French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante, Les Saintes, Iles de la Petite Terre, La Desirade, St Barthélemy, and northern St Martin) and Martinique.
+| Used: French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante, Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; St Martin.
 
 .. code-block:: php
 
@@ -6091,7 +6123,7 @@ Replaces RRAF 1991. See CRS code 7086 for alternate system with axes reversed us
 RGAF09 (lon-lat)
 ----------------
 
-| Used: French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante, Les Saintes, Iles de la Petite Terre, La Desirade, St Barthélemy, and northern St Martin) and Martinique.
+| Used: French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante, Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; St Martin.
 
 .. code-block:: php
 
@@ -6442,7 +6474,7 @@ See CRS code 8900 for system with axes in sequence lat-lon to be used for air, l
 RRAF 1991
 ---------
 
-| Used: French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante, Les Saintes, Iles de la Petite Terre, La Desirade, St Barthélemy, and northern St Martin) and Martinique.
+| Used: French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante, Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; St Martin.
 
 .. code-block:: php
 
