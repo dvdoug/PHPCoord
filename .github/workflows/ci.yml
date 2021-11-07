@@ -109,14 +109,14 @@ jobs:
       run: |
         composer config minimum-stability dev;
         composer update --no-interaction --prefer-dist --classmap-authoritative;
-        composer show
+        composer show;
 
     - name: Install dependencies (force latest)
       if: matrix.dependencies == 'force_latest'
       run: |
         composer config minimum-stability dev;
         composer update --no-interaction --prefer-dist --classmap-authoritative --ignore-platform-reqs;
-        composer show
+        composer show;
 
     - name: PHPUnit (Unit)
       run: |
