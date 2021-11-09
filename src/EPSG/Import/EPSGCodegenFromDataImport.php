@@ -63,12 +63,10 @@ class EPSGCodegenFromDataImport
         // not implemented yet
         1072, // Geographic3D to GravityRelatedHeight (OSGM15Ire)
         1096, // Geog3D to Geog2D+GravityRelatedHeight (OSGM15Ire)
-        1047, // Geographic3D to GravityRelatedHeight (Gravsoft)
         1059, // Geographic3D to GravityRelatedHeight (PNG)
         1070, // Point motion by grid (Canada NTv2_Vel)
         1082, // Geographic3D to GravityRelatedHeight (SA 2010)
         1085, // Vertical Offset by Grid Interpolation (asc)
-        1093, // Geog3D to Geog2D+GravityRelatedHeight (Gravsoft)
         1098, // Geog3D to Geog2D+GravityRelatedHeight (SA 2010)
 
         // only distributed as .dll, can't use
@@ -525,6 +523,10 @@ class EPSGCodegenFromDataImport
         // It's just for 1 German state and is almost 400Mb!!
         9338, // NTv2 BWTA2017.gsb
 
+        // 33Mb, exclusively marine
+        9884, // KMS ChartDatum_above_Ellipsoid_EUREF89_v2021a.bin
+        9885, // KMS ChartDatum_above_Ellipsoid_EUREF89_v2021a.bin
+
         // Very large, only really of scientific use
         3858, // EGM2008 Und_min2.5x2.5_egm2008_isw=82_WGS84_TideFree.gz
         3859, // EGM2008 Und_min1x1_egm2008_isw=82_WGS84_TideFree.gz
@@ -539,6 +541,11 @@ class EPSGCodegenFromDataImport
         9305, // GTX INAGEOID20.gtx
         9375, // INADEFORM v3_dm_grd01_xyz.dat
         9629, // GTX INAGEOID20.gtx
+        5626, // KMS fehmarn_geoid10.gri
+        9619, // KMS fehmarn_geoid10.gri
+        9598, // KMS gr2000g.gri
+        9355, // KMS KSA-GEOID17.gra
+        9620, // KMS KSA-GEOID17.gra
 
         // Construction/engineering/scientific projects not of general use
         9302, // NTv2 HS2TN15_NTv2.gsb
@@ -561,6 +568,8 @@ class EPSGCodegenFromDataImport
         9121, // NTv2 NVI98_05.GSB
         9122, // NTv2 BC_98_05.GSB
         9496, // NTv2 MGI1901_TO_SRBETRS89_NTv2.gsb
+        8269, // KMS ggeoid16.gri
+        9599, // KMS ggeoid16.gri
 
         // license requires money :((
         9732, // NTv2 35160622_47161840_R40_E50.gsb

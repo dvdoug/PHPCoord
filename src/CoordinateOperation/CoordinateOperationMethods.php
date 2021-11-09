@@ -194,6 +194,11 @@ class CoordinateOperationMethods
     public const EPSG_GEOCENTRIC_TOPOCENTRIC_CONVERSIONS = 'urn:ogc:def:method:EPSG::9836';
 
     /**
+     * Geog3D to Geog2D+Depth (Gravsoft).
+     */
+    public const EPSG_GEOG3D_TO_GEOG2D_PLUS_DEPTH_GRAVSOFT = 'urn:ogc:def:method:EPSG::1110';
+
+    /**
      * Geog3D to Geog2D+GravityRelatedHeight (AUSGeoidv2).
      */
     public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_AUSGEOIDV2 = 'urn:ogc:def:method:EPSG::1083';
@@ -212,6 +217,11 @@ class CoordinateOperationMethods
      * Geog3D to Geog2D+GravityRelatedHeight (EGM2008).
      */
     public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_EGM2008 = 'urn:ogc:def:method:EPSG::1092';
+
+    /**
+     * Geog3D to Geog2D+GravityRelatedHeight (Gravsoft).
+     */
+    public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_GRAVSOFT = 'urn:ogc:def:method:EPSG::1093';
 
     /**
      * Geog3D to Geog2D+GravityRelatedHeight (IGN2009).
@@ -277,6 +287,12 @@ class CoordinateOperationMethods
     public const EPSG_GEOGRAPHIC3D_TO_2D_CONVERSION = 'urn:ogc:def:method:EPSG::9659';
 
     /**
+     * Geographic3D to Depth (Gravsoft)
+     * Transformation of the vertical component of a Geographic 3D CRS to a Vertical CRS.
+     */
+    public const EPSG_GEOGRAPHIC3D_TO_DEPTH_GRAVSOFT = 'urn:ogc:def:method:EPSG::1109';
+
+    /**
      * Geographic3D to GravityRelatedHeight (AUSGeoid v2)
      * The Information Source references software which offers both bi-cubic and bi-linear interpolation methods.
      * Unlike earlier AUSGeoid98 method which used bi-linear interpolation, Ausgeoid v2 uses bi-cubic. See Info Source
@@ -302,6 +318,11 @@ class CoordinateOperationMethods
      * For earlier EGM84 and EGM96 models see Geographic3D to GravityRelatedHeight (EGM), method code 9661.
      */
     public const EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_EGM2008 = 'urn:ogc:def:method:EPSG::1025';
+
+    /**
+     * Geographic3D to GravityRelatedHeight (Gravsoft).
+     */
+    public const EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_GRAVSOFT = 'urn:ogc:def:method:EPSG::1047';
 
     /**
      * Geographic3D to GravityRelatedHeight (IGN2009)
@@ -942,6 +963,8 @@ class CoordinateOperationMethods
         self::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_BEV_AT => 'offsetFromGrid',
         self::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_CGG_2013 => 'geographic3DTo2DPlusGravityHeightFromGrid',
         self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_CGG2013 => 'geographic3DToGravityHeightFromGrid',
+        self::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_GRAVSOFT => 'geographic3DTo2DPlusGravityHeightFromGrid',
+        self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_GRAVSOFT => 'geographic3DToGravityHeightFromGrid',
     ];
 
     public static function getFunctionName(string $srid): string

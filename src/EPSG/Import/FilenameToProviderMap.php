@@ -163,8 +163,8 @@ return [
     'g2012bh0.bin' => CoordinateOperation\GTXGEOID12BHawaiiProvider::class,
     'g2012bg0.bin' => CoordinateOperation\GTXGEOID12BGuamMIProvider::class,
     'g2012bs0.bin' => CoordinateOperation\GTXGEOID12BAmericaSamoaProvider::class,
-    'href2008a.gtx' => CoordinateOperation\GTXETRS89NN1954Provider::class,
-    'HREF2018B_NN2000_EUREF89.gtx' => CoordinateOperation\GTXETRS89NN2000Provider::class,
+    'href2008a.bin' => CoordinateOperation\KMSETRS89NN1954Provider::class,
+    'HREF2018B_NN2000_EUREF89.bin' => CoordinateOperation\KMSETRS89NN2000Provider::class,
     'Slovakia_ETRS89h_to_EVRF2007.gtx' => CoordinateOperation\GTXETRS89EVRF2007SlovakiaProvider::class,
     'Slovakia_ETRS89h_to_Baltic1957.gtx' => CoordinateOperation\GTXETRS89Baltic1957SlovakiaProvider::class,
     'nlgeo2018.gtx' => CoordinateOperation\GTXETRS89NAPProvider::class,
@@ -201,4 +201,5 @@ return [
     'HT2_0.byn' => CoordinateOperation\BYNNAD83CSRSCGVD28Provider::class,
     'CGG2013n83a.byn' => CoordinateOperation\BYNNAD83CSRSCGG2013aProvider::class,
     'CGG2013i08a.byn' => CoordinateOperation\BYNITRF2008CGG2013aProvider::class,
+    'GEOIDE-Ar16.gri' => CoordinateOperation\KMSPOSGAR2007SRVN16Provider::class,
 ];

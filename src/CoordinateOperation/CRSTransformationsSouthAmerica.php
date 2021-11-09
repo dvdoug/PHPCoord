@@ -1768,6 +1768,22 @@ class CRSTransformationsSouthAmerica
             'reversible' => true,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9256',
+            'name' => 'POSGAR 2007 to SRVN16 height (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::5342',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::9255',
+            'accuracy' => 0.05,
+            'reversible' => false,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9621',
+            'name' => 'POSGAR 2007 to POSGAR 2007 + SRVN16 height (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::5342',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::9521',
+            'accuracy' => 0.05,
+            'reversible' => true,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5374',
             'name' => 'MARGEN to WGS 84 (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::5354',

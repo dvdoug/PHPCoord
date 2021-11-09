@@ -28,6 +28,8 @@ use PHPCoord\CoordinateOperation\GTXNZGeoid2016Provider;
 use PHPCoord\CoordinateOperation\GUGiKHeightETRF2000Baltic1986PolandProvider;
 use PHPCoord\CoordinateOperation\IGNESHeightETRS89REDNAPSpainProvider;
 use PHPCoord\CoordinateOperation\IGNFHeightRGF93v2bNGFIGN69FranceProvider;
+use PHPCoord\CoordinateOperation\KMSETRS89NN2000Provider;
+use PHPCoord\CoordinateOperation\KMSPOSGAR2007SRVN16Provider;
 use PHPCoord\CoordinateOperation\OSTN15OSGM15Provider;
 use PHPCoord\CoordinateReferenceSystem\Compound;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
@@ -239,6 +241,46 @@ class GeographicPoint3DTest extends TestCase
         $to = $from->geographic3DToGravityHeightFromGrid($toCRS, (new BYNNAD83CSRSCGG2013aProvider())->provideGrid());
 
         self::assertEqualsWithDelta(36.072, $to->getHeight()->getValue(), 0.01);
+    }
+
+    public function testGeographic3DTo2DPlusGravityHeightKMSNorway(): void
+    {
+        if (!class_exists(KMSETRS89NN2000Provider::class)) {
+            self::markTestSkipped('Requires phpcoord/datapack-europe');
+        }
+        $from = GeographicPoint::create(Geographic3D::fromSRID(Geographic3D::EPSG_ETRS89), new Degree(59.964611), new Degree(10.666611), new Metre(0));
+        $toCRS = Compound::fromSRID(Compound::EPSG_ETRS89_PLUS_NN2000_HEIGHT);
+        $to = $from->geographic3DTo2DPlusGravityHeightFromGrid($toCRS, (new KMSETRS89NN2000Provider())->provideGrid());
+
+        self::assertEqualsWithDelta(59.964611, $to->getHorizontalPoint()->getLatitude()->getValue(), 0.00000000001);
+        self::assertEqualsWithDelta(10.666611, $to->getHorizontalPoint()->getLongitude()->getValue(), 0.00000000001);
+        self::assertEqualsWithDelta(-39.3902, $to->getVerticalPoint()->getHeight()->getValue(), 0.001);
+    }
+
+    public function testGeographic3DToGravityHeightKMSNorway(): void
+    {
+        if (!class_exists(KMSETRS89NN2000Provider::class)) {
+            self::markTestSkipped('Requires phpcoord/datapack-europe');
+        }
+        $from = GeographicPoint::create(Geographic3D::fromSRID(Geographic3D::EPSG_ETRS89), new Degree(59.964611), new Degree(10.666611), new Metre(0));
+        $toCRS = Vertical::fromSRID(Vertical::EPSG_NN2000_HEIGHT);
+        $to = $from->geographic3DToGravityHeightFromGrid($toCRS, (new KMSETRS89NN2000Provider())->provideGrid());
+
+        self::assertEqualsWithDelta(-39.3902, $to->getHeight()->getValue(), 0.001);
+    }
+
+    public function testGeographic3DTo2DPlusGravityHeightKMSArgentina(): void
+    {
+        if (!class_exists(KMSPOSGAR2007SRVN16Provider::class)) {
+            self::markTestSkipped('Requires phpcoord/datapack-southamerica');
+        }
+        $from = GeographicPoint::create(Geographic3D::fromSRID(Geographic3D::EPSG_POSGAR_2007), new Degree(-34.431955), new Degree(-61.075266), new Metre(0));
+        $toCRS = Compound::fromSRID(Compound::EPSG_POSGAR_2007_PLUS_SRVN16_HEIGHT);
+        $to = $from->geographic3DTo2DPlusGravityHeightFromGrid($toCRS, (new KMSPOSGAR2007SRVN16Provider())->provideGrid());
+
+        self::assertEqualsWithDelta(-34.431955, $to->getHorizontalPoint()->getLatitude()->getValue(), 0.00000000001);
+        self::assertEqualsWithDelta(-61.075266, $to->getHorizontalPoint()->getLongitude()->getValue(), 0.00000000001);
+        self::assertEqualsWithDelta(-18.048, $to->getVerticalPoint()->getHeight()->getValue(), 0.001);
     }
 
     /**

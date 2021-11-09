@@ -8257,6 +8257,11 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::1060',
             'extent_code' => ['1061'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9256' => [
+            'name' => 'POSGAR 2007 to SRVN16 height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1047',
+            'extent_code' => ['4573'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::9257' => [
             'name' => 'Chos Malal 1914 to WGS 84 (2)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
@@ -8679,12 +8684,12 @@ class CoordinateOperations
         ],
         'urn:ogc:def:coordinateOperation:EPSG::9484' => [
             'name' => 'ETRS89 to NN54 height (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9665',
+            'method' => 'urn:ogc:def:method:EPSG::1047',
             'extent_code' => ['1352'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::9485' => [
             'name' => 'ETRS89 to NN2000 height (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9665',
+            'method' => 'urn:ogc:def:method:EPSG::1047',
             'extent_code' => ['1352'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::9495' => [
@@ -8759,12 +8764,12 @@ class CoordinateOperations
         ],
         'urn:ogc:def:coordinateOperation:EPSG::9593' => [
             'name' => 'ETRS89 to ETRS89 + NN2000 height (1)',
-            'method' => 'urn:ogc:def:method:EPSG::1088',
+            'method' => 'urn:ogc:def:method:EPSG::1093',
             'extent_code' => ['1352'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::9594' => [
             'name' => 'ETRS89 to ETRS89 + NN54 height (1)',
-            'method' => 'urn:ogc:def:method:EPSG::1088',
+            'method' => 'urn:ogc:def:method:EPSG::1093',
             'extent_code' => ['1352'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::9595' => [
@@ -8851,6 +8856,11 @@ class CoordinateOperations
             'name' => 'REGCAN95 to REGCAN95 + Tenerife height (1)',
             'method' => 'urn:ogc:def:method:EPSG::1092',
             'extent_code' => ['4594'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9621' => [
+            'name' => 'POSGAR 2007 to POSGAR 2007 + SRVN16 height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1093',
+            'extent_code' => ['4573'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::9622' => [
             'name' => 'NAD83(2011) to NAD83(2011) + PRVD02 height (2)',
