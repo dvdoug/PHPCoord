@@ -66,7 +66,6 @@ class EPSGCodegenFromDataImport
         1059, // Geographic3D to GravityRelatedHeight (PNG)
         1070, // Point motion by grid (Canada NTv2_Vel)
         1082, // Geographic3D to GravityRelatedHeight (SA 2010)
-        1085, // Vertical Offset by Grid Interpolation (asc)
         1098, // Geog3D to Geog2D+GravityRelatedHeight (SA 2010)
 
         // only distributed as .dll, can't use
@@ -570,6 +569,51 @@ class EPSGCodegenFromDataImport
         9496, // NTv2 MGI1901_TO_SRBETRS89_NTv2.gsb
         8269, // KMS ggeoid16.gri
         9599, // KMS ggeoid16.gri
+        9553, // ASC pt_2019z.asc
+        9554, // ASC pt_2019m.asc
+        9555, // ASC de_2019z.asc
+        9556, // ASC de_2019m.asc
+        9557, // ASC at_2019z.asc
+        9558, // ASC at_2019m.asc
+        9559, // ASC ch_2019z.asc
+        9560, // ASC ch_2019m.asc
+        9561, // ASC gb_2019z.asc
+        9563, // ASC be_2019z.asc
+        9564, // ASC be_2019m.asc
+        9565, // ASC si_2019z.asc
+        9566, // ASC si_2019m.asc
+        9567, // ASC mk_2019z.asc
+        9568, // ASC mk_2019m.asc
+        9569, // ASC ba_2019z.asc
+        9570, // ASC ba_2019m.asc
+        9571, // ASC bgalt_2019z.asc
+        9572, // ASC bgalt_2019m.asc
+        9573, // ASC fi_2019z.asc
+        9574, // ASC fi_2019m.asc
+        9575, // ASC fr_2019z.asc
+        9576, // ASC fr_2019m.asc
+        9577, // ASC hu_2019z.asc
+        9578, // ASC hu_2019m.asc
+        9579, // ASC lv_2019z.asc
+        9580, // ASC lv_2019m.asc
+        9581, // ASC nl_2019z.asc
+        9582, // ASC nl_2019m.asc
+        9583, // ASC ro_2019z.asc
+        9645, // ASC ro_2019m.asc
+        9646, // ASC es_2019z.asc
+        9647, // ASC es_2019m.asc
+        9648, // ASC se_2019z.asc
+        9649, // ASC se_2019m.asc
+        9652, // ASC pl86_2019z.asc
+        9653, // ASC pl86_2019m.asc
+        9654, // ASC pl07_2019z.asc
+        9655, // ASC pl07_2019m.asc
+        9664, // ASC ee_2019z.asc
+        9665, // ASC ee_2019m.asc
+        9667, // ASC lt_2019z.asc
+        9668, // ASC lt_2019m.asc
+        9670, // ASC bgneu_2019z.asc
+        9671, // ASC bgneu_2019m.asc
 
         // license requires money :((
         9732, // NTv2 35160622_47161840_R40_E50.gsb

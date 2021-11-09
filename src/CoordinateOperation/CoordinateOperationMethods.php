@@ -842,6 +842,11 @@ class CoordinateOperationMethods
     public const EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_VERTCON = 'urn:ogc:def:method:EPSG::9658';
 
     /**
+     * Vertical Offset by Grid Interpolation (asc).
+     */
+    public const EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_ASC = 'urn:ogc:def:method:EPSG::1085';
+
+    /**
      * Vertical Offset by Grid Interpolation (gtx).
      */
     public const EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_GTX = 'urn:ogc:def:method:EPSG::1084';
