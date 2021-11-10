@@ -361,6 +361,12 @@ class CoordinateOperationMethods
     public const EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_PL_TXT = 'urn:ogc:def:method:EPSG::1099';
 
     /**
+     * Geographic3D to GravityRelatedHeight (PNG)
+     * Transformation of the vertical component of a Geographic 3D CRS to a Vertical CRS.
+     */
+    public const EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_PNG = 'urn:ogc:def:method:EPSG::1059';
+
+    /**
      * Geographic3D to GravityRelatedHeight (SA 2010)
      * File format: space-separated ascii file, no header, columns: latitude, longitude, separation.
      */

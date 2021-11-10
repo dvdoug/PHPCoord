@@ -63,7 +63,6 @@ class EPSGCodegenFromDataImport
         // not implemented yet
         1072, // Geographic3D to GravityRelatedHeight (OSGM15Ire)
         1096, // Geog3D to Geog2D+GravityRelatedHeight (OSGM15Ire)
-        1059, // Geographic3D to GravityRelatedHeight (PNG)
         1070, // Point motion by grid (Canada NTv2_Vel)
 
         // only distributed as .dll, can't use
@@ -612,6 +611,7 @@ class EPSGCodegenFromDataImport
         9668, // ASC lt_2019m.asc
         9670, // ASC bgneu_2019z.asc
         9671, // ASC bgneu_2019m.asc
+        7655, // PNG08.DAT
 
         // license requires money :((
         9732, // NTv2 35160622_47161840_R40_E50.gsb
