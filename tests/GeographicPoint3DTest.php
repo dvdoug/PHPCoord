@@ -31,6 +31,7 @@ use PHPCoord\CoordinateOperation\IGNESHeightETRS89REDNAPSpainProvider;
 use PHPCoord\CoordinateOperation\IGNFHeightRGF93v2bNGFIGN69FranceProvider;
 use PHPCoord\CoordinateOperation\KMSETRS89NN2000Provider;
 use PHPCoord\CoordinateOperation\KMSPOSGAR2007SRVN16Provider;
+use PHPCoord\CoordinateOperation\OSGM15BelfastProvider;
 use PHPCoord\CoordinateOperation\OSTN15OSGM15Provider;
 use PHPCoord\CoordinateReferenceSystem\Compound;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
@@ -296,6 +297,20 @@ class GeographicPoint3DTest extends TestCase
         self::assertEqualsWithDelta(-30.237, $to->getHorizontalPoint()->getLatitude()->getValue(), 0.00000000001);
         self::assertEqualsWithDelta(22.455, $to->getHorizontalPoint()->getLongitude()->getValue(), 0.00000000001);
         self::assertEqualsWithDelta(-32.783, $to->getVerticalPoint()->getHeight()->getValue(), 0.001);
+    }
+
+    public function testGeographic3DTo2DPlusGravityHeightIreland(): void
+    {
+        if (!class_exists(OSGM15BelfastProvider::class)) {
+            self::markTestSkipped('Requires phpcoord/datapack-europe');
+        }
+        $from = GeographicPoint::create(Geographic3D::fromSRID(Geographic3D::EPSG_ETRS89), new Degree(54.91386860), new Degree(-6.12946233), new Metre(192.1404));
+        $toCRS = Compound::fromSRID(Compound::EPSG_ETRS89_PLUS_BELFAST_HEIGHT);
+        $to = $from->geographic3DTo2DPlusGravityHeightFromGrid($toCRS, (new OSGM15BelfastProvider())->provideGrid());
+
+        self::assertEqualsWithDelta(54.91386860, $to->getHorizontalPoint()->getLatitude()->getValue(), 0.00000000001);
+        self::assertEqualsWithDelta(-6.12946233, $to->getHorizontalPoint()->getLongitude()->getValue(), 0.00000000001);
+        self::assertEqualsWithDelta(135.8810, $to->getVerticalPoint()->getHeight()->getValue(), 0.001);
     }
 
     /**

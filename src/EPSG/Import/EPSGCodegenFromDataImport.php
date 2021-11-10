@@ -61,8 +61,6 @@ class EPSGCodegenFromDataImport
 
     public const BLACKLISTED_METHODS = [
         // not implemented yet
-        1072, // Geographic3D to GravityRelatedHeight (OSGM15Ire)
-        1096, // Geog3D to Geog2D+GravityRelatedHeight (OSGM15Ire)
         1070, // Point motion by grid (Canada NTv2_Vel)
 
         // only distributed as .dll, can't use

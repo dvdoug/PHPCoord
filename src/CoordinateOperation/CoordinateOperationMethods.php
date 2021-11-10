@@ -239,6 +239,11 @@ class CoordinateOperationMethods
     public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_OSGM_GB = 'urn:ogc:def:method:EPSG::1097';
 
     /**
+     * Geog3D to Geog2D+GravityRelatedHeight (OSGM15-Ire).
+     */
+    public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_OSGM15_IRE = 'urn:ogc:def:method:EPSG::1096';
+
+    /**
      * Geog3D to Geog2D+GravityRelatedHeight (PL txt).
      */
     public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_PL_TXT = 'urn:ogc:def:method:EPSG::1100';
@@ -354,6 +359,12 @@ class CoordinateOperationMethods
      * Transformation of the vertical component of a Geographic 3D CRS to a Vertical CRS.
      */
     public const EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_OSGM_GB = 'urn:ogc:def:method:EPSG::9663';
+
+    /**
+     * Geographic3D to GravityRelatedHeight (OSGM15-Ire)
+     * Transformation of the vertical component of a Geographic 3D CRS to a Vertical CRS.
+     */
+    public const EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_OSGM15_IRE = 'urn:ogc:def:method:EPSG::1072';
 
     /**
      * Geographic3D to GravityRelatedHeight (PL txt).
@@ -989,6 +1000,8 @@ class CoordinateOperationMethods
         self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_GRAVSOFT => 'geographic3DToGravityHeightFromGrid',
         self::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_SA_2010 => 'geographic3DTo2DPlusGravityHeightFromGrid',
         self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_SA_2010 => 'geographic3DToGravityHeightFromGrid',
+        self::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_OSGM15_IRE => 'geographic3DTo2DPlusGravityHeightFromGrid',
+        self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_OSGM15_IRE => 'geographic3DToGravityHeightFromGrid',
     ];
 
     public static function getFunctionName(string $srid): string

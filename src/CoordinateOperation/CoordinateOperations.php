@@ -6737,6 +6737,16 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9633',
             'extent_code' => ['4390'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::7958' => [
+            'name' => 'ETRS89 to Belfast height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1072',
+            'extent_code' => ['2530'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::7959' => [
+            'name' => 'ETRS89 to Malin Head height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1072',
+            'extent_code' => ['1305'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::7960' => [
             'name' => 'PZ-90.11 to ITRF2008 (1)',
             'method' => 'urn:ogc:def:method:EPSG::1066',
@@ -8766,6 +8776,16 @@ class CoordinateOperations
             'name' => 'ETRS89 to ETRS89 + Douglas height (2)',
             'method' => 'urn:ogc:def:method:EPSG::1097',
             'extent_code' => ['2803'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9591' => [
+            'name' => 'ETRS89 to ETRS89 + Malin Head height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1096',
+            'extent_code' => ['1305'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9592' => [
+            'name' => 'ETRS89 to ETRS89 + Belfast height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1096',
+            'extent_code' => ['2530'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::9593' => [
             'name' => 'ETRS89 to ETRS89 + NN2000 height (1)',
