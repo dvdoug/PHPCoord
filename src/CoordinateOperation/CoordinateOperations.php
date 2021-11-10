@@ -7257,6 +7257,11 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::1088',
             'extent_code' => ['1211'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::8364' => [
+            'name' => 'S-JTSK [JTSK03] to S-JTSK (1)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['1211'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::8365' => [
             'name' => 'ETRS89 to S-JTSK [JTSK03] (1)',
             'method' => 'urn:ogc:def:method:EPSG::9607',

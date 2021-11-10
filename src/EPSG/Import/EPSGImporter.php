@@ -81,6 +81,14 @@ class EPSGImporter
         $sqlite->exec('UPDATE epsg_coordoperationparamvalue SET coord_op_method_code = 1084 WHERE coord_op_code IN (7969, 7970, 7971)');
 
         /*
+         * Transformation from S-JTSK [JTSK03] to S-JTSK is listed as NADCON even though there's an official NTv2 file.
+         * EPSG have declined to add it as an alternate to the DB, so override that here.
+         */
+        $sqlite->exec('UPDATE epsg_coordoperation SET coord_op_method_code = 9615 WHERE coord_op_code = 8364');
+        $sqlite->exec('DELETE FROM epsg_coordoperationparamvalue WHERE coord_op_code = 8364');
+        $sqlite->exec("INSERT INTO epsg_coordoperationparamvalue (coord_op_code, coord_op_method_code, parameter_code, param_value_file_ref) VALUES (8364, 9615, 8656, 'Slovakia_JTSK03_to_JTSK.gsb')");
+
+        /*
          * Time-dependent transformations from/to ETRS89/WGS84 are only present in transforms involving specific realisations
          * so add transforms to/from the generic ensemble codes to the most recent version.
          */

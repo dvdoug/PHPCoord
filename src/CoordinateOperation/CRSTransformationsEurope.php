@@ -6088,6 +6088,14 @@ class CRSTransformationsEurope
             'reversible' => true,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8364',
+            'name' => 'S-JTSK [JTSK03] to S-JTSK (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::8351',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::4156',
+            'accuracy' => 0.05,
+            'reversible' => true,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8367',
             'name' => 'S-JTSK [JTSK03] to ETRS89 (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::8351',
