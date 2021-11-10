@@ -8327,6 +8327,11 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::1081',
             'extent_code' => ['1037'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9280' => [
+            'name' => 'ITRF2005 to SA LLD height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1082',
+            'extent_code' => ['3309'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::9281' => [
             'name' => 'Amersfoort to ETRS89 (8)',
             'method' => 'urn:ogc:def:method:EPSG::9607',
@@ -8946,6 +8951,11 @@ class CoordinateOperations
             'name' => 'RRAF 1991 to RRAF 1991 + IGN 2008 LD height (1)',
             'method' => 'urn:ogc:def:method:EPSG::1095',
             'extent_code' => ['2893'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9643' => [
+            'name' => 'ITRF2005 to ITRF2005 + SA LLD height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1098',
+            'extent_code' => ['3309'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::9644' => [
             'name' => 'NAD83(CSRS)v6 to NAD83(CSRS)v6 + CGVD2013(CGG2013a) height (1)',

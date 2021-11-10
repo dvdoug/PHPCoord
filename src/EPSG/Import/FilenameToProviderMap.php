@@ -202,4 +202,5 @@ return [
     'CGG2013n83a.byn' => CoordinateOperation\BYNNAD83CSRSCGG2013aProvider::class,
     'CGG2013i08a.byn' => CoordinateOperation\BYNITRF2008CGG2013aProvider::class,
     'GEOIDE-Ar16.gri' => CoordinateOperation\KMSPOSGAR2007SRVN16Provider::class,
+    'SAGEOID2010.dat' => CoordinateOperation\DATITRF2005SALLDProvider::class,
 ];

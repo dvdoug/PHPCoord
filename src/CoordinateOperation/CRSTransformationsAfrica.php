@@ -1888,6 +1888,22 @@ class CRSTransformationsAfrica
             'reversible' => true,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9280',
+            'name' => 'ITRF2005 to SA LLD height (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::7910',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::9279',
+            'accuracy' => 0.07000000000000001,
+            'reversible' => false,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9643',
+            'name' => 'ITRF2005 to ITRF2005 + SA LLD height (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::7910',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::9543',
+            'accuracy' => 0.07000000000000001,
+            'reversible' => true,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8882',
             'name' => 'Camacupa 2015 to WGS 84 (11)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::8694',

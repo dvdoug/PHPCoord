@@ -244,6 +244,11 @@ class CoordinateOperationMethods
     public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_PL_TXT = 'urn:ogc:def:method:EPSG::1100';
 
     /**
+     * Geog3D to Geog2D+GravityRelatedHeight (SA 2010).
+     */
+    public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_SA_2010 = 'urn:ogc:def:method:EPSG::1098';
+
+    /**
      * Geog3D to Geog2D+GravityRelatedHeight (gtx).
      */
     public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_GTX = 'urn:ogc:def:method:EPSG::1088';
@@ -354,6 +359,12 @@ class CoordinateOperationMethods
      * Geographic3D to GravityRelatedHeight (PL txt).
      */
     public const EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_PL_TXT = 'urn:ogc:def:method:EPSG::1099';
+
+    /**
+     * Geographic3D to GravityRelatedHeight (SA 2010)
+     * File format: space-separated ascii file, no header, columns: latitude, longitude, separation.
+     */
+    public const EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_SA_2010 = 'urn:ogc:def:method:EPSG::1082';
 
     /**
      * Geographic3D to GravityRelatedHeight (gtx)
@@ -970,6 +981,8 @@ class CoordinateOperationMethods
         self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_CGG2013 => 'geographic3DToGravityHeightFromGrid',
         self::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_GRAVSOFT => 'geographic3DTo2DPlusGravityHeightFromGrid',
         self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_GRAVSOFT => 'geographic3DToGravityHeightFromGrid',
+        self::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_SA_2010 => 'geographic3DTo2DPlusGravityHeightFromGrid',
+        self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_SA_2010 => 'geographic3DToGravityHeightFromGrid',
     ];
 
     public static function getFunctionName(string $srid): string

@@ -23,6 +23,7 @@ use PHPCoord\CoordinateOperation\CRSTransformationsGlobal;
 use PHPCoord\CoordinateOperation\CRSTransformationsNorthAmerica;
 use PHPCoord\CoordinateOperation\CRSTransformationsOceania;
 use PHPCoord\CoordinateOperation\CRSTransformationsSouthAmerica;
+use PHPCoord\CoordinateOperation\DATITRF2005SALLDProvider;
 use PHPCoord\CoordinateOperation\GTXGDA2020AHDProvider;
 use PHPCoord\CoordinateOperation\GTXNZGeoid2016Provider;
 use PHPCoord\CoordinateOperation\GUGiKHeightETRF2000Baltic1986PolandProvider;
@@ -281,6 +282,20 @@ class GeographicPoint3DTest extends TestCase
         self::assertEqualsWithDelta(-34.431955, $to->getHorizontalPoint()->getLatitude()->getValue(), 0.00000000001);
         self::assertEqualsWithDelta(-61.075266, $to->getHorizontalPoint()->getLongitude()->getValue(), 0.00000000001);
         self::assertEqualsWithDelta(-18.048, $to->getVerticalPoint()->getHeight()->getValue(), 0.001);
+    }
+
+    public function testGeographic3DTo2DPlusGravityHeightSouthAfrica(): void
+    {
+        if (!class_exists(DATITRF2005SALLDProvider::class)) {
+            self::markTestSkipped('Requires phpcoord/datapack-africa');
+        }
+        $from = GeographicPoint::create(Geographic3D::fromSRID(Geographic3D::EPSG_ITRF2005), new Degree(-30.237), new Degree(22.455), new Metre(0));
+        $toCRS = Compound::fromSRID(Compound::EPSG_ITRF2005_PLUS_SA_LLD_HEIGHT);
+        $to = $from->geographic3DTo2DPlusGravityHeightFromGrid($toCRS, (new DATITRF2005SALLDProvider())->provideGrid());
+
+        self::assertEqualsWithDelta(-30.237, $to->getHorizontalPoint()->getLatitude()->getValue(), 0.00000000001);
+        self::assertEqualsWithDelta(22.455, $to->getHorizontalPoint()->getLongitude()->getValue(), 0.00000000001);
+        self::assertEqualsWithDelta(-32.783, $to->getVerticalPoint()->getHeight()->getValue(), 0.001);
     }
 
     /**

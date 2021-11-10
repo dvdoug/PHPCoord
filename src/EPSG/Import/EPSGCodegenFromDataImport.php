@@ -65,8 +65,6 @@ class EPSGCodegenFromDataImport
         1096, // Geog3D to Geog2D+GravityRelatedHeight (OSGM15Ire)
         1059, // Geographic3D to GravityRelatedHeight (PNG)
         1070, // Point motion by grid (Canada NTv2_Vel)
-        1082, // Geographic3D to GravityRelatedHeight (SA 2010)
-        1098, // Geog3D to Geog2D+GravityRelatedHeight (SA 2010)
 
         // only distributed as .dll, can't use
         1036, // Cartesian Grid Offsets from Form Function
