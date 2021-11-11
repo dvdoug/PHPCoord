@@ -1,9 +1,40 @@
 # Changelog
 
 ## [Unreleased]
+
+## [5.0.0] - 2021-11-12
 ### Added
-- Support for GTX files. These require a [relevant datapack](https://www.phpcoord.net/en/stable/coordinate_conversions_easy.html#grids)
 - Support for IGN France geocentric translation by grid interpolation. This requires the [Europe datapack](https://www.phpcoord.net/en/stable/coordinate_conversions_easy.html#grids)
+- Support for vertical grid files. These require a [relevant datapack](https://www.phpcoord.net/en/stable/coordinate_conversions_easy.html#grids)
+### Changed
+- The signatures of all `*Point::create*()` methods have been changed to put the CRS *first*. Previously the distance/direction values came first. This is to ensure that all optional parameters are at the end of the signature, addressing a PHP8.1 deprecation.
+
+  Example:
+
+  ```
+  // in v4
+  GeographicPoint::create(
+      Angle $latitude,
+      Angle $longitude,
+      ?Length $height = null,
+      Geographic $crs, // was after distance/direction
+      ?DateTimeInterface $epoch = null
+  ): GeographicPoint
+
+  // in v5
+  GeographicPoint::create(
+      Geographic $crs, // now goes first
+      Angle $latitude,
+      Angle $longitude,
+      ?Length $height = null,
+      ?DateTimeInterface $epoch = null
+  ): GeographicPoint
+   ```
+
+
+- Updates to data for Canada, Norway, UK
+- Some internal simplifications and optimisations
+- Supported PHP versions changed to `^8.0`
 
 ## [4.6.0] - 2021-10-22
 Unless a major bug is found, this will be the last release in the v4.x series. The next feature release will be v5.0.
@@ -181,8 +212,9 @@ Initial release of this fork (based off of v2.3 of original)
  - Eastings and northings are rounded to 1m, and lat/long to 5dp (approx 1m) to avoid any misconceptions that precision is the same thing as accuracy.
  - When calculating surface distances, a more accurate mean radius is now used rather than that derived from historical definitions of a nautical mile
 
-[Unreleased]: https://github.com/dvdoug/PHPCoord/compare/v4.6.0...HEAD
+[Unreleased]: https://github.com/dvdoug/PHPCoord/compare/v5.0.0...HEAD
 
+[5.0.0]: https://github.com/dvdoug/PHPCoord/compare/v4.6.0...v5.0.0
 [4.6.0]: https://github.com/dvdoug/PHPCoord/compare/v4.5.0...v4.6.0
 [4.5.0]: https://github.com/dvdoug/PHPCoord/compare/v4.4.0...v4.5.0
 [4.4.0]: https://github.com/dvdoug/PHPCoord/compare/v4.3.0...v4.4.0
