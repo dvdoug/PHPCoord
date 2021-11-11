@@ -9,6 +9,8 @@ tools:
 filter:
   excluded_paths:
     - 'tests/'
+    - 'src/CoordinateOperation/Params'
+    - 'src/Geometry/Extents'
     - 'src/EPSG/Import/'
 
 build:
