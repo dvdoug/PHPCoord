@@ -26,7 +26,6 @@ use PHPCoord\CoordinateOperation\CRSTransformationsSouthAmerica;
 use PHPCoord\CoordinateOperation\GTXNZGeoid2016Provider;
 use PHPCoord\CoordinateOperation\GUGiKHeightETRF2000Baltic1986PolandProvider;
 use PHPCoord\CoordinateOperation\IGNESHeightETRS89REDNAPSpainProvider;
-use PHPCoord\CoordinateOperation\IGNFHeightRGF93v2bNGFIGN69FranceProvider;
 use PHPCoord\CoordinateOperation\OSTN15OSGM15Provider;
 use PHPCoord\CoordinateReferenceSystem\Compound;
 use PHPCoord\CoordinateReferenceSystem\CompoundSRIDData;
@@ -174,32 +173,6 @@ class CompoundPointTest extends TestCase
         self::assertEqualsWithDelta(-36.9003, $to->getLatitude()->getValue(), 0.00000000001);
         self::assertEqualsWithDelta(174.7794, $to->getLongitude()->getValue(), 0.00000000001);
         self::assertEqualsWithDelta(50.000, $to->getHeight()->getValue(), 0.0001);
-    }
-
-    public function testGeographic3DTo2DPlusGravityHeightIGNF(): void
-    {
-        if (!class_exists(IGNFHeightRGF93v2bNGFIGN69FranceProvider::class)) {
-            self::markTestSkipped('Requires phpcoord/datapack-europe');
-        }
-        $from = CompoundPoint::create(
-            Compound::fromSRID(Compound::EPSG_RGF93_V2B_PLUS_NGF_IGN69_HEIGHT),
-            GeographicPoint::create(
-                Geographic2D::fromSRID(Geographic2D::EPSG_RGF93_V2B),
-                new Degree(48.858222),
-                new Degree(2.2945),
-                null
-            ),
-            VerticalPoint::create(
-                Vertical::fromSRID(Vertical::EPSG_NGF_IGN69_HEIGHT),
-                new Metre(6.187)
-            )
-        );
-        $toCRS = Geographic3D::fromSRID(Geographic3D::EPSG_RGF93_V2B);
-        $to = $from->geographic3DTo2DPlusGravityHeightFromGrid($toCRS, (new IGNFHeightRGF93v2bNGFIGN69FranceProvider())->provideGrid());
-
-        self::assertEqualsWithDelta(48.858222, $to->getLatitude()->getValue(), 0.00000000001);
-        self::assertEqualsWithDelta(2.2945, $to->getLongitude()->getValue(), 0.00000000001);
-        self::assertEqualsWithDelta(50.000, $to->getHeight()->getValue(), 0.001);
     }
 
     public function testGeographic3DTo2DPlusGravityHeightIGNESSpain(): void
