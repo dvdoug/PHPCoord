@@ -1506,22 +1506,7 @@ class EPSGCodegenFromDataImport
         $filenameToProviderMap = require 'FilenameToProviderMap.php';
         $regionMap = (new RegionMap())();
 
-        $wgs84CopiesFromETRS89 = $this->determineOperationsToWGS84CopiedFromETRS89();
-        $etrs89CopiesFromWGS84 = $this->determineOperationsToETRS89CopiedFromWGS84();
-        $wgs84CopiesFromGDA94 = $this->determineOperationsToWGS84CopiedFromGDA94();
-        $wgs84CopiesFromSIRGAS = $this->determineOperationsToWGS84CopiedFromSIRGAS();
-        $wgs84CopiesFromNZGD = $this->determineOperationsToWGS84CopiedFromNZGD2000();
-        $projectedToProjected = $this->determineOperationsProjectedToProjected();
-
-        $blackListedOperations = [
-            ...self::BLACKLISTED_OPERATIONS,
-            ...$wgs84CopiesFromETRS89,
-            ...$etrs89CopiesFromWGS84,
-            ...$wgs84CopiesFromGDA94,
-            ...$wgs84CopiesFromSIRGAS,
-            ...$wgs84CopiesFromNZGD,
-            ...$projectedToProjected,
-        ];
+        $blackListedOperations = $this->getBlackedListedOperations();
 
         $sql = "
             SELECT
@@ -1730,6 +1715,26 @@ class EPSGCodegenFromDataImport
         }
 
         return $string;
+    }
+
+    public function getBlacklistedOperations(): array
+    {
+        $wgs84CopiesFromETRS89 = $this->determineOperationsToWGS84CopiedFromETRS89();
+        $etrs89CopiesFromWGS84 = $this->determineOperationsToETRS89CopiedFromWGS84();
+        $wgs84CopiesFromGDA94 = $this->determineOperationsToWGS84CopiedFromGDA94();
+        $wgs84CopiesFromSIRGAS = $this->determineOperationsToWGS84CopiedFromSIRGAS();
+        $wgs84CopiesFromNZGD = $this->determineOperationsToWGS84CopiedFromNZGD2000();
+        $projectedToProjected = $this->determineOperationsProjectedToProjected();
+
+        return [
+            ...self::BLACKLISTED_OPERATIONS,
+            ...$wgs84CopiesFromETRS89,
+            ...$etrs89CopiesFromWGS84,
+            ...$wgs84CopiesFromGDA94,
+            ...$wgs84CopiesFromSIRGAS,
+            ...$wgs84CopiesFromNZGD,
+            ...$projectedToProjected,
+        ];
     }
 
     private function determineOperationsToWGS84CopiedFromETRS89(): array

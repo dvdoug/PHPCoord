@@ -15,7 +15,7 @@ use PHPCoord\EPSG\Import\EPSGCodegenFromGeoRepository;
 require __DIR__ . '/../../../vendor/autoload.php';
 
 $fileImporter = new EPSGCodegenFromDataImport();
-$webImporter = new EPSGCodegenFromGeoRepository();
+$webImporter = new EPSGCodegenFromGeoRepository($fileImporter->getBlacklistedOperations());
 echo '--PERFORMING CODEGEN--' . PHP_EOL;
 
 $fileImporter->generateDataUnitsOfMeasure();

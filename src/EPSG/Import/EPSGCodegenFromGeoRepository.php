@@ -43,7 +43,7 @@ class EPSGCodegenFromGeoRepository
 
     private Codegen $codeGen;
 
-    public function __construct()
+    public function __construct(private array $blackListedOperations)
     {
         $this->sourceDir = dirname(__DIR__, 2);
         $this->codeGen = new Codegen();
@@ -85,13 +85,29 @@ class EPSGCodegenFromGeoRepository
 
             SELECT e.extent_code, e.extent_name
             FROM epsg_coordoperation o
+            JOIN epsg_coordinatereferencesystem sourcecrs ON sourcecrs.coord_ref_sys_code = o.source_crs_code AND sourcecrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND sourcecrs.deprecated = 0
             JOIN epsg_usage u ON u.object_code = o.coord_op_code AND u.object_table_name = 'epsg_coordoperation'
             JOIN epsg_extent e ON u.extent_code = e.extent_code
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperation' AND dep.object_code = o.coord_op_code AND dep.deprecation_date <= '2020-12-14'
-            WHERE dep.deprecation_id IS NULL AND e.deprecated = 0
-            AND o.coord_op_name NOT LIKE '%example%'
+            LEFT JOIN epsg_supersession s ON s.object_table_name = 'epsg_coordoperation' AND s.object_code = o.coord_op_code
+            WHERE dep.deprecation_id IS NULL AND e.deprecated = 0 AND s.supersession_id IS NULL
+            AND o.coord_op_type != 'conversion' AND o.coord_op_type != 'concatenated operation' AND o.coord_op_name NOT LIKE '%example%' AND o.coord_op_name NOT LIKE '%mining%'
             AND o.coord_op_method_code NOT IN (" . implode(',', EPSGCodegenFromDataImport::BLACKLISTED_METHODS) . ')
-            AND o.coord_op_code NOT IN (' . implode(',', EPSGCodegenFromDataImport::BLACKLISTED_OPERATIONS) . ')
+            AND o.coord_op_code NOT IN (' . implode(',', $this->blackListedOperations) . ")
+
+            UNION
+
+            SELECT e.extent_code, e.extent_name
+            FROM epsg_coordoperation o
+            JOIN epsg_coordinatereferencesystem projcrs ON projcrs.projection_conv_code = o.coord_op_code AND projcrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND projcrs.deprecated = 0
+            JOIN epsg_usage u ON u.object_code = o.coord_op_code AND u.object_table_name = 'epsg_coordoperation'
+            JOIN epsg_extent e ON u.extent_code = e.extent_code
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperation' AND dep.object_code = o.coord_op_code AND dep.deprecation_date <= '2020-12-14'
+            LEFT JOIN epsg_supersession s ON s.object_table_name = 'epsg_coordoperation' AND s.object_code = o.coord_op_code
+            WHERE dep.deprecation_id IS NULL AND e.deprecated = 0 AND s.supersession_id IS NULL
+            AND o.coord_op_type = 'conversion' AND o.coord_op_type != 'concatenated operation' AND o.coord_op_name NOT LIKE '%example%' AND o.coord_op_name NOT LIKE '%mining%'
+            AND o.coord_op_method_code NOT IN (" . implode(',', EPSGCodegenFromDataImport::BLACKLISTED_METHODS) . ')
+            AND o.coord_op_code NOT IN (' . implode(',', $this->blackListedOperations) . ')
 
             GROUP BY e.extent_code
         ';
