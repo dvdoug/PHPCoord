@@ -26,6 +26,7 @@ use PHPCoord\CoordinateOperation\GTXNGVD29NAVD88CONUSCentralProvider;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Vertical;
 use PHPCoord\CoordinateReferenceSystem\VerticalSRIDData;
+use PHPCoord\Exception\InvalidCoordinateReferenceSystemException;
 use PHPCoord\Geometry\BoundingArea;
 use PHPCoord\UnitOfMeasure\Angle\Degree;
 use PHPCoord\UnitOfMeasure\Angle\Radian;
@@ -70,11 +71,25 @@ class VerticalPointTest extends TestCase
         self::assertEquals(37.4904, $object->getHeight()->getValue());
     }
 
+    /**
+     * @group distance
+     */
     public function testDistanceCalculation(): void
     {
         $from = VerticalPoint::create(Vertical::fromSRID(Vertical::EPSG_EGM2008_HEIGHT), new Metre(100));
         $to = VerticalPoint::create(Vertical::fromSRID(Vertical::EPSG_EGM2008_HEIGHT), new Metre(80));
         self::assertEqualsWithDelta(20, $from->calculateDistance($to)->getValue(), 0.000001);
+    }
+
+    /**
+     * @group distance
+     */
+    public function testDistanceCalculationDifferentCRS(): void
+    {
+        $this->expectException(InvalidCoordinateReferenceSystemException::class);
+        $from = VerticalPoint::create(Vertical::fromSRID(Vertical::EPSG_EGM2008_HEIGHT), new Metre(100));
+        $to = VerticalPoint::create(Vertical::fromSRID(Vertical::EPSG_NAVD88_HEIGHT), new Metre(80));
+        $from->calculateDistance($to);
     }
 
     public function testVerticalOffset(): void
