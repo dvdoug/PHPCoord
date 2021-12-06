@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateReferenceSystem;
 
+use function array_merge;
 use PHPCoord\CoordinateSystem\CoordinateSystem;
 use PHPCoord\Datum\Datum;
 use PHPCoord\Geometry\BoundingArea;
@@ -100,5 +101,10 @@ abstract class CoordinateReferenceSystem
         }
 
         return self::$cachedObjects[$srid];
+    }
+
+    public static function getSupportedSRIDs(): array
+    {
+        return array_merge(Compound::getSupportedSRIDs(), Geocentric::getSupportedSRIDs(), Geographic2D::getSupportedSRIDs(), Geographic3D::getSupportedSRIDs(), Projected::getSupportedSRIDs(), Vertical::getSupportedSRIDs());
     }
 }
