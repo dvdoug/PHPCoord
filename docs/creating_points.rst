@@ -16,7 +16,8 @@ Each CRS contains within its definition the units of measurement to be used - fo
 uses metres, but the Arkansas State Plane Coordinate System uses US Survey Feet. To avoid any confusion about
 representation, all numbers in PHPCoord are strongly typed as value objects with conversions automatically performed
 between them as needed. All outputs are in the defined units of the relevant CRS, even if the inputs were given in
-different units.
+different units. You may of course convert these units into other units if desired, but using units that are different
+from those defined in the CRS itself may lead to confusion later on.
 
 .. toctree::
     :maxdepth: 1
