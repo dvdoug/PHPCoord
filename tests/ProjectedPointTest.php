@@ -78,6 +78,9 @@ class ProjectedPointTest extends TestCase
         self::assertEquals(37.4904, $object->getNorthing()->getValue());
     }
 
+    /**
+     * @group distance
+     */
     public function testDistanceCalculationEastingNorthing(): void
     {
         $from = ProjectedPoint::createFromEastingNorthing(new Metre(438700), new Metre(114800), Projected::fromSRID(Projected::EPSG_WGS_84_WORLD_MERCATOR));
@@ -85,6 +88,9 @@ class ProjectedPointTest extends TestCase
         self::assertEqualsWithDelta(115423.134596, $from->calculateDistance($to)->getValue(), 0.000001);
     }
 
+    /**
+     * @group distance
+     */
     public function testDistanceDifferentCRSEastingNorthing(): void
     {
         $from = ProjectedPoint::createFromEastingNorthing(new Metre(438700), new Metre(114800), Projected::fromSRID(Projected::EPSG_WGS_84_WORLD_MERCATOR));
@@ -92,6 +98,9 @@ class ProjectedPointTest extends TestCase
         self::assertEqualsWithDelta(114739.81913, $from->calculateDistance($to)->getValue(), 0.000001);
     }
 
+    /**
+     * @group distance
+     */
     public function testDistanceDifferentCRSNoAutoconversion(): void
     {
         $this->expectException(InvalidCoordinateReferenceSystemException::class);
@@ -116,6 +125,9 @@ class ProjectedPointTest extends TestCase
         self::assertEquals(37.4904, $object->getNorthing()->getValue());
     }
 
+    /**
+     * @group distance
+     */
     public function testDistanceCalculationWestingNorthing(): void
     {
         $from = ProjectedPoint::createFromWestingNorthing(new Metre(438700), new Metre(114800), Projected::fromSRID(Projected::EPSG_ETRS89_FAROE_LAMBERT));
@@ -139,6 +151,9 @@ class ProjectedPointTest extends TestCase
         self::assertEquals(37.4904, $object->getSouthing()->getValue());
     }
 
+    /**
+     * @group distance
+     */
     public function testDistanceCalculationWestingSouthing(): void
     {
         $from = ProjectedPoint::createFromWestingSouthing(new Metre(438700), new Metre(114800), Projected::fromSRID(Projected::EPSG_ST_STEPHEN_GRID_FERRO));

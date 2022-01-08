@@ -80,6 +80,9 @@ class CompoundPointTest extends TestCase
         self::assertEquals('((123, 456), (789))', $object->__toString());
     }
 
+    /**
+     * @group distance
+     */
     public function testDistanceCalculation(): void
     {
         $from = CompoundPoint::create(
@@ -95,6 +98,9 @@ class CompoundPointTest extends TestCase
         self::assertEqualsWithDelta(115423.134596, $from->calculateDistance($to)->getValue(), 0.000001);
     }
 
+    /**
+     * @group distance
+     */
     public function testDistanceDifferentCRS(): void
     {
         $this->expectException(InvalidCoordinateReferenceSystemException::class);
