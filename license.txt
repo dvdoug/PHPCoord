@@ -41,6 +41,23 @@ provider and not on a value ascribed to the EPSG Dataset which is made available
 Please see https://epsg.org/terms-of-use.html for full terms of use if you wish to reuse the dataset files outside of
 PHPCoord.
 
+Test suite
+----------
+
+GIGS (Geospatial Integrity of Geoscience Software) test dataset (C) 2007-2021 IOGP
+
+DATA AND INFORMATION PROVIDED IN THE GIGS SOFTWARE ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR
+PURPOSE.
+
+The GIGS Test Series and GIGS Test Dataset may be implemented in any commercial package provided that any commerciality
+is based on value added by the provider and not on a value ascribed to the GIGS Software which is made available at no
+charge.
+
+Please see https://gigs.iogp.org/TermsOfUse for full terms of use if you wish to reuse the dataset files outside of
+PHPCoord.
+
+
 Papers
 ------
 

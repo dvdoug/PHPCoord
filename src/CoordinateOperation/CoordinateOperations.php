@@ -9,6 +9,7 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateOperation;
 
+use PHPCoord\Exception\UnknownCoordinateOperationException;
 use function str_replace;
 
 /**
@@ -17781,6 +17782,10 @@ class CoordinateOperations
 
     public static function getOperationData(string $operationSrid): array
     {
+        if (!isset(static::$sridData[$operationSrid])) {
+            throw new UnknownCoordinateOperationException($operationSrid);
+        }
+
         return static::$sridData[$operationSrid];
     }
 

@@ -1,0 +1,43 @@
+# File: GIGS_dep_7001					
+# GIGS Test Procedures: 7001					
+# GIGS Test Dataset Version: 2.0					
+# EPSG Dataset Version: 10.019					
+# GIGS Test Dataset Issue Date: 2021-05-03					
+#					
+# Fields:					
+# [0]: EPSG Object Code					
+# [1]: Entity Type					
+# [2]: Deprecated Entity Name					
+# [3]: EPSG Code for replacement					
+# [4]: Deprecation Reason					
+# [5]: Deprecation Date					
+#					
+# [0]	# [1]	# [2]	# [3]	# [4]	# [5]
+1788	Coordinate_Operation	RT90 to WGS 84 (2)	1896	Error in signs of rotations	2002-09-19
+1920	Coordinate_Operation	RGNC 1991 to WGS 84 (1)	15880	Source CRS was associated with incorrect ellipsoid	2006-07-21
+1961	Coordinate_Operation	ED50 to WGS 84 (32)	3904	Replaced by 1999 due to error in rZ parameter value. 1999 replaced by 3904 due to error in scale factor value	2004-01-07 
+2063	Coordinate Reference System	Dabola 1981 / UTM zone 28N	3461	Associated with incorrect base geogCRS	2007-02-06
+2152	Coordinate Reference System	NAD83(CSRS98) / UTM zone 12N	2956	Change of base geogCRS name to accord with revised Geomatics Canada practice	2002-07-13
+3073	Coordinate Reference System	NAD83 / Maine CS2000 Central	3463	Error in projection parameter for projection used by this CRS	2007-02-06
+3104	Coordinate Reference System	Mauritania 1999 / UTM zone 29N	3344	Base geogCRS deprecated because associated with incorrect ellipsoid	2006-03-16
+3104	Coordinate Reference System	Mauritania 1999 / UTM zone 29N	3368	Base geogCRS deprecated because associated with incorrect ellipsoid	2006-03-16
+4172	Coordinate Reference System	POSGAR	4694	Original name POSGAR is ambiguous given 1994 and 1998 adjustments	2005-09-12
+4172	Coordinate Reference System	POSGAR	4190	Original name POSGAR is ambiguous given 1994 and 1998 adjustments	2001-11-06
+4226	Coordinate Reference System	Cote d'Ivoire	4142	Does not exist except as an alias of 4142 and 4143	2001-06-05
+4226	Coordinate Reference System	Cote d'Ivoire	4143	Does not exist except as an alias of 4142 and 4143	2001-06-05
+4291	Coordinate Reference System	SAD69	4618	Deprecation of geodetic datum following correction of ellipsoid 1/f to 2 decimal places exactly	2002-09-13
+4329	Coordinate Reference System	WGS 84 (3D)	4979	Name changed to omit CRS subtype and thereby reflect that in common usage	2004-01-05
+5704	Coordinate Reference System	Yellow Sea	5736	Change of name following readjustment	2002-06-22
+10407	Coordinate_Operation	California CS27 zone VII	10408	Error in value of false northing	2005-07-05
+14100	Coordinate_Operation	Tennessee CS27	15302	Error in parameter values for easting and northing at grid origin	2001-10-04
+15300	Coordinate_Operation	American Samoa Lambert	15301	Longitude of natural origin has incorrect value (wrong hemisphere)	2001-08-28
+15910	Coordinate_Operation	ELD79 to LGD2006 (1)	15924	Parameter values have incorrect signs	2007-01-18
+16090	Coordinate_Operation	3-degree Gauss-Kruger zone 60	16099	Error in false easting value	2006-06-02
+18133	Coordinate_Operation	Sahara	18134	Error in scale factor value	2002-09-19
+18281	Coordinate_Operation	Poland zone I	18280	Error in false northing value	2005-10-29
+21481	Coordinate Reference System	Beijing 1954 / Gauss-Kruger 21N	21461	Change of CRS name to indicate longitude of origin	2002-06-22
+21892	Coordinate Reference System	Bogota 1975 / Colombia Bogota zone	21897	Erroneous coordinate system axis direction	2005-02-03
+22832	Coordinate Reference System	Douala / UTM zone 32N	2214	Base geogCRS 4228 deprecated due to datum error	2002-01-18
+29183	Coordinate Reference System	SAD69 / UTM zone 23S	29193	Deprecation of base geogCRS following correction of ellipsoid 1/f to 2 decimal places exactly	2002-09-13
+31295	Coordinate Reference System	MGI / M31	31285	ProjCRS related to inappropriate coordinate system resulting in incorrect axes	2001-06-05
+63266405	Coordinate Reference System	WGS 84 (deg)	4326	EPSG no longer supports this system	2004-01-07

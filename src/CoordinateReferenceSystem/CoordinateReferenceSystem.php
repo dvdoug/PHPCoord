@@ -11,6 +11,7 @@ namespace PHPCoord\CoordinateReferenceSystem;
 use function array_merge;
 use PHPCoord\CoordinateSystem\CoordinateSystem;
 use PHPCoord\Datum\Datum;
+use PHPCoord\Exception\UnknownCoordinateReferenceSystemException;
 use PHPCoord\Geometry\BoundingArea;
 
 abstract class CoordinateReferenceSystem
@@ -97,6 +98,8 @@ abstract class CoordinateReferenceSystem
                 self::$cachedObjects[$srid] = Vertical::fromSRID($srid);
             } elseif (isset(self::$sridCache['compound'][$srid])) {
                 self::$cachedObjects[$srid] = Compound::fromSRID($srid);
+            } else {
+                throw new UnknownCoordinateReferenceSystemException($srid);
             }
         }
 
