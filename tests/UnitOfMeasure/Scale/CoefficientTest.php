@@ -29,6 +29,6 @@ class CoefficientTest extends TestCase
     public function testGetUnitName(): void
     {
         $original = new Coefficient(0.12);
-        self::assertEquals('', $original->getUnitName());
+        self::assertEquals('coefficient', $original->getUnitName());
     }
 }

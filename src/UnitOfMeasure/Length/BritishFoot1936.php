@@ -29,6 +29,6 @@ class BritishFoot1936 extends Length
 
     public function getUnitName(): string
     {
-        return 'British(1936) feet';
+        return 'British foot (1936)';
     }
 }

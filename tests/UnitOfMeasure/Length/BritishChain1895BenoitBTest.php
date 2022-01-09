@@ -29,7 +29,7 @@ class BritishChain1895BenoitBTest extends TestCase
     public function testGetUnitName(): void
     {
         $original = new BritishChain1895BenoitB(0.12);
-        self::assertEquals('British(1895 Benoit B) chain', $original->getUnitName());
+        self::assertEquals('British chain (Benoit B 1895)', $original->getUnitName());
     }
 
     public function testAdd(): void

@@ -29,6 +29,6 @@ class ArcSecondTest extends TestCase
     public function testGetUnitName(): void
     {
         $original = new ArcSecond(3600);
-        self::assertEquals('arcsecond', $original->getUnitName());
+        self::assertEquals('arc-second', $original->getUnitName());
     }
 }

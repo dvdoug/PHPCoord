@@ -29,7 +29,7 @@ class USSurveyFootTest extends TestCase
     public function testGetUnitName(): void
     {
         $original = new USSurveyFoot(0.12);
-        self::assertEquals('US survey feet', $original->getUnitName());
+        self::assertEquals('US survey foot', $original->getUnitName());
     }
 
     public function testAdd(): void

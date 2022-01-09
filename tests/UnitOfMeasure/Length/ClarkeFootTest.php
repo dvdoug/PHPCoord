@@ -29,7 +29,7 @@ class ClarkeFootTest extends TestCase
     public function testGetUnitName(): void
     {
         $original = new ClarkeFoot(0.12);
-        self::assertEquals('Clarke feet', $original->getUnitName());
+        self::assertEquals("Clarke's foot", $original->getUnitName());
     }
 
     public function testAdd(): void

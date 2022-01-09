@@ -29,6 +29,6 @@ class IndianFoot extends Length
 
     public function getUnitName(): string
     {
-        return 'Indian feet';
+        return 'Indian foot';
     }
 }

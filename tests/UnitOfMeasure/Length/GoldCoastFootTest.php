@@ -29,7 +29,7 @@ class GoldCoastFootTest extends TestCase
     public function testGetUnitName(): void
     {
         $original = new GoldCoastFoot(0.12);
-        self::assertEquals('Gold Coast feet', $original->getUnitName());
+        self::assertEquals('Gold Coast foot', $original->getUnitName());
     }
 
     public function testAdd(): void

@@ -215,12 +215,12 @@ abstract class Angle implements UnitOfMeasure
     {
         return match ($srid) {
             self::EPSG_RADIAN => new Radian($measurement),
-            self::EPSG_MICRORADIAN => new Radian($measurement / 1000000),
+            self::EPSG_MICRORADIAN => new MicroRadian($measurement),
             self::EPSG_DEGREE => new Degree($measurement),
             self::EPSG_ARC_SECOND => new ArcSecond($measurement),
             self::EPSG_MILLIARC_SECOND => new ArcSecond($measurement / 1000),
             self::EPSG_GRAD => new Grad($measurement),
-            self::EPSG_CENTESIMAL_SECOND => new Radian($measurement * M_PI / 2000000),
+            self::EPSG_CENTESIMAL_SECOND => new CentesimalSecond($measurement),
             self::EPSG_DEGREE_MINUTE_SECOND => Degree::fromDegreeMinuteSecond((string) $measurement),
             self::EPSG_DEGREE_MINUTE_SECOND_HEMISPHERE => Degree::fromDegreeMinuteSecondHemisphere((string) $measurement),
             self::EPSG_HEMISPHERE_DEGREE_MINUTE_SECOND => Degree::fromHemisphereDegreeMinuteSecond((string) $measurement),

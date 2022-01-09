@@ -29,7 +29,7 @@ class BritishChain1922SearsTest extends TestCase
     public function testGetUnitName(): void
     {
         $original = new BritishChain1922Sears(0.12);
-        self::assertEquals('British(1922 Sears) chain', $original->getUnitName());
+        self::assertEquals('British chain (Sears 1922)', $original->getUnitName());
     }
 
     public function testAdd(): void

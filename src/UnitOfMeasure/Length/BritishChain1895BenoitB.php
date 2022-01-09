@@ -29,6 +29,6 @@ class BritishChain1895BenoitB extends Length
 
     public function getUnitName(): string
     {
-        return 'British(1895 Benoit B) chain';
+        return 'British chain (Benoit B 1895)';
     }
 }

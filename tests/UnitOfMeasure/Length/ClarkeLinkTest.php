@@ -29,7 +29,7 @@ class ClarkeLinkTest extends TestCase
     public function testGetUnitName(): void
     {
         $original = new ClarkeLink(0.12);
-        self::assertEquals('Clarke link', $original->getUnitName());
+        self::assertEquals("Clarke's link", $original->getUnitName());
     }
 
     public function testAdd(): void

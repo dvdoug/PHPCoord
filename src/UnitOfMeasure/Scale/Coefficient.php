@@ -29,6 +29,6 @@ class Coefficient extends Scale
 
     public function getUnitName(): string
     {
-        return '';
+        return 'coefficient';
     }
 }

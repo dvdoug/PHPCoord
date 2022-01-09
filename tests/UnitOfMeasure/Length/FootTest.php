@@ -29,7 +29,7 @@ class FootTest extends TestCase
     public function testGetUnitName(): void
     {
         $original = new Foot(0.12);
-        self::assertEquals('feet', $original->getUnitName());
+        self::assertEquals('foot', $original->getUnitName());
     }
 
     public function testAdd(): void

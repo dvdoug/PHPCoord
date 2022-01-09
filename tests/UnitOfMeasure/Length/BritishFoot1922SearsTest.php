@@ -29,7 +29,7 @@ class BritishFoot1922SearsTest extends TestCase
     public function testGetUnitName(): void
     {
         $original = new BritishFoot1922Sears(0.12);
-        self::assertEquals('British(1922 Sears) feet', $original->getUnitName());
+        self::assertEquals('British foot (Sears 1922)', $original->getUnitName());
     }
 
     public function testAdd(): void

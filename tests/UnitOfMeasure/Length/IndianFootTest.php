@@ -29,7 +29,7 @@ class IndianFootTest extends TestCase
     public function testGetUnitName(): void
     {
         $original = new IndianFoot(0.12);
-        self::assertEquals('Indian feet', $original->getUnitName());
+        self::assertEquals('Indian foot', $original->getUnitName());
     }
 
     public function testAdd(): void

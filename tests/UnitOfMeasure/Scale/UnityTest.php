@@ -30,7 +30,7 @@ class UnityTest extends TestCase
     public function testGetUnitName(): void
     {
         $original = new Unity(0.12);
-        self::assertEquals('', $original->getUnitName());
+        self::assertEquals('unity', $original->getUnitName());
     }
 
     public function testAdd(): void

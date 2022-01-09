@@ -29,6 +29,6 @@ class BritishChain1922SearsTruncated extends Length
 
     public function getUnitName(): string
     {
-        return 'British(1922 Sears truncated) chain';
+        return 'British chain (Sears 1922 truncated)';
     }
 }
