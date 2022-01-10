@@ -14195,16 +14195,24 @@ class Datum
 
     protected ?float $frameReferenceEpoch;
 
+    protected string $name;
+
+    protected string $srid;
+
     public function __construct(
         string $datumType,
         ?Ellipsoid $ellipsoid,
         ?PrimeMeridian $primeMeridian,
-        ?float $frameReferenceEpoch
+        ?float $frameReferenceEpoch,
+        string $name = '',
+        string $srid = ''
     ) {
         $this->datumType = $datumType;
         $this->ellipsoid = $ellipsoid;
         $this->primeMeridian = $primeMeridian;
         $this->frameReferenceEpoch = $frameReferenceEpoch;
+        $this->name = $name;
+        $this->srid = $srid;
     }
 
     public function getDatumType(): string
@@ -14227,6 +14235,16 @@ class Datum
         return $this->frameReferenceEpoch;
     }
 
+    public function getName(): string
+    {
+        return $this->name;
+    }
+
+    public function getSRID(): string
+    {
+        return $this->srid;
+    }
+
     public static function fromSRID(string $srid): self
     {
         if (!isset(static::$sridData[$srid])) {
@@ -14241,20 +14259,24 @@ class Datum
             }
 
             if ($data['ellipsoid']) {
-                return new static(
+                self::$cachedObjects[$srid] = new static(
                     $data['type'],
                     Ellipsoid::fromSRID($data['ellipsoid']),
                     PrimeMeridian::fromSRID($data['prime_meridian']),
                     $data['frame_reference_epoch'],
+                    $data['name'],
+                    $srid,
+                );
+            } else {
+                self::$cachedObjects[$srid] = new static(
+                    $data['type'],
+                    null,
+                    null,
+                    $data['frame_reference_epoch'],
+                    $data['name'],
+                    $srid,
                 );
             }
-
-            self::$cachedObjects[$srid] = new static(
-                $data['type'],
-                null,
-                null,
-                $data['frame_reference_epoch'],
-            );
         }
 
         return self::$cachedObjects[$srid];

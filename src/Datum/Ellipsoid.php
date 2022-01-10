@@ -663,11 +663,14 @@ class Ellipsoid
 
     protected string $name;
 
-    public function __construct(Length $semiMajorAxis, Length $semiMinorAxis, string $name = '')
+    protected string $srid;
+
+    public function __construct(Length $semiMajorAxis, Length $semiMinorAxis, string $name = '', string $srid = '')
     {
         $this->semiMajorAxis = $semiMajorAxis;
         $this->semiMinorAxis = $semiMinorAxis;
         $this->name = $name;
+        $this->srid = $srid;
     }
 
     public function getSemiMajorAxis(): Length
@@ -705,6 +708,11 @@ class Ellipsoid
         return $this->name;
     }
 
+    public function getSRID(): string
+    {
+        return $this->srid;
+    }
+
     public static function fromSRID(string $srid): self
     {
         if (!isset(static::$sridData[$srid])) {
@@ -718,6 +726,7 @@ class Ellipsoid
                 Length::makeUnit($data['semi_major_axis'], $data['uom']),
                 Length::makeUnit($data['semi_minor_axis'], $data['uom']),
                 $data['name'],
+                $srid,
             );
         }
 

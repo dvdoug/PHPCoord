@@ -1,0 +1,367 @@
+# File: GIGS_lib_2204_GeodeticDatum
+# GIGS Test Procedure: 2204
+# GIGS Test Dataset Version: 2.0
+# EPSG Dataset Version: 10.047
+# GIGS Test Dataset Issue Date: 2021-05-03
+#
+# Fields:
+# [0]: EPSG Datum Code
+# [1]: EPSG Datum Name
+# [2]: Alias(es)
+# [3]: Ellipsoid Name
+# [4]: Prime Meridian Name
+# [5]: EPSG Usage Extent
+# [6]: GIGS Remarks
+#
+# [0]	# [1]	# [2]	# [3]	# [4]	# [5]	# [6]
+1024	Hungarian Datum 1909	HD1909	Bessel 1841	Greenwich	Hungary
+1025	Taiwan Datum 1967	TWD67	GRS 1967 Modified	Greenwich	Taiwan - onshore - mainland and Penghu
+1026	Taiwan Datum 1997	TWD97	GRS 1980	Greenwich	Taiwan
+1047	Reseau de Reference des Antilles Francaises 1991	RRAF91	GRS 1980	Greenwich	Caribbean - French Antilles
+6120	Greek		Bessel 1841	Greenwich	Greece - onshore
+6121	Greek Geodetic Reference System 1987	GGRS87	GRS 1980	Greenwich	Greece - onshore
+6122	Average Terrestrial System 1977	ATS77	Average Terrestrial System 1977	Greenwich	Canada - Maritime Provinces
+6123	Kartastokoordinaattijarjestelma (1966)	KKJ; Kartastokoordinaattijärjestelmä (1966)	International 1924	Greenwich	Finland - onshore
+6124	Rikets koordinatsystem 1990	RT90	Bessel 1841	Greenwich	Sweden
+6126	Lithuania 1994 (ETRS89)	LKS94 (ETRS89)	GRS 1980	Greenwich	Lithuania
+6127	Tete	Tete 1960	Clarke 1866	Greenwich	Mozambique - onshore
+6128	Madzansua		Clarke 1866	Greenwich	Mozambique - west - Tete province
+6129	Observatario		Clarke 1866	Greenwich	Mozambique - south
+6130	Moznet (ITRF94)	Moznet	WGS 84	Greenwich	Mozambique
+6131	Indian 1960	Indian (DMA Reduced)	Everest 1830 (1937 Adjustment)	Greenwich	Asia - Cambodia and Vietnam - onshore & Cuu Long basin
+6132	Final Datum 1958	FD58	Clarke 1880 (RGS)	Greenwich	Iran - FD58
+6133	Estonia 1992	EST92	GRS 1980	Greenwich	Estonia - onshore
+6134	PDO Survey Datum 1993	PSD93	Clarke 1880 (RGS)	Greenwich	Oman - onshore
+6135	Old Hawaiian		Clarke 1866	Greenwich	USA - Hawaii - onshore
+6136	St. Lawrence Island		Clarke 1866	Greenwich	USA - Alaska - St. Lawrence Island
+6137	St. Paul Island		Clarke 1866	Greenwich	USA - Alaska - St. Paul Island
+6138	St. George Island		Clarke 1866	Greenwich	USA - Alaska - St. George Island
+6139	Puerto Rico		Clarke 1866	Greenwich	Caribbean - Puerto Rico and Virgin Islands - onshore
+6140	NAD83 Canadian Spatial Reference System	NAD83(CSRS)	GRS 1980	Greenwich	Canada
+6141	Israel 1993		GRS 1980	Greenwich	Asia - Middle East - Israel and Palestine Territory onshore
+6142	Locodjo 1965	Côte d'Ivoire (Ivory Coast)	Clarke 1880 (RGS)	Greenwich	Cote d'Ivoire (Ivory Coast)
+6143	Abidjan 1987	Côte d'Ivoire (Ivory Coast)	Clarke 1880 (RGS)	Greenwich	Cote d'Ivoire (Ivory Coast)
+6144	Kalianpur 1937		Everest 1830 (1937 Adjustment)	Greenwich	Asia - Bangladesh; India; Myanmar; Pakistan - onshore
+6145	Kalianpur 1962		Everest 1830 (1962 Definition)	Greenwich	Pakistan
+6146	Kalianpur 1975		Everest 1830 (1975 Definition)	Greenwich	India - mainland
+6147	Hanoi 1972		Krassowsky 1940	Greenwich	Vietnam - onshore
+6148	Hartebeesthoek94		WGS 84	Greenwich	Africa - South Africa; Lesotho and Eswatini.
+6149	CH1903		Bessel 1841	Greenwich	Europe - Liechtenstein and Switzerland
+6150	CH1903+		Bessel 1841	Greenwich	Europe - Liechtenstein and Switzerland
+6151	Swiss Terrestrial Reference System 1995	CHTRF95	GRS 1980	Greenwich	Europe - Liechtenstein and Switzerland
+6152	NAD83 (High Accuracy Reference Network)	NAD83(HARN); NAD83 (High Precision Geodetic Network); NAD83(HPGN); Guam Geodetic Network 1993; NAD83	GRS 1980	Greenwich	USA - HARN
+6153	Rassadiran		International 1924	Greenwich	Iran - Taheri refinery
+6154	European Datum 1950(1977)	ED50(ED77)	International 1924	Greenwich	Iran
+6155	Dabola 1981		Clarke 1880 (IGN)	Greenwich	Guinea - onshore
+6156	System of the Unified Trigonometrical Cadastral Network	S-JTSK; Systém Jednotné trigonometrické sít? katastrální; Systém Jednotnej trigonometrickej siete katastrálnej	Bessel 1841	Greenwich	Europe - Czechoslovakia
+6157	Mount Dillon		Clarke 1858	Greenwich	Trinidad and Tobago - Tobago - onshore
+6158	Naparima 1955		International 1924	Greenwich	Trinidad and Tobago - Trinidad - onshore
+6159	European Libyan Datum 1979	ELD79	International 1924	Greenwich	Libya
+6160	Chos Malal 1914	Quini-Huao; Quiñi-Huao	International 1924	Greenwich	Argentina - Mendoza and Neuquen
+6161	Pampa del Castillo		International 1924	Greenwich	Argentina - 42.5°S to 50.3°S
+6162	Korean Datum 1985		Bessel 1841	Greenwich	Korea; Republic of (South Korea) - onshore
+6163	Yemen National Geodetic Network 1996	YNGN96	WGS 84	Greenwich	Yemen
+6164	South Yemen		Krassowsky 1940	Greenwich	Yemen - South Yemen - mainland
+6165	Bissau		International 1924	Greenwich	Guinea-Bissau - onshore
+6166	Korean Datum 1995		WGS 84	Greenwich	Korea; Republic of (South Korea) - onshore
+6167	New Zealand Geodetic Datum 2000	NZGD2000	GRS 1980	Greenwich	New Zealand
+6168	Accra		War Office	Greenwich	Ghana
+6169	American Samoa 1962		Clarke 1866	Greenwich	American Samoa - 2 main island groups
+6170	Sistema de Referencia Geocentrico para America del Sur 1995	SIRGAS 1995	GRS 1980	Greenwich	South America - SIRGAS 1995 by country
+6171	Reseau Geodesique Francais 1993 v1	RGF93; Réseau Géodésique Français 1993	GRS 1980	Greenwich	France
+6173	IRENET95	ETRS89	GRS 1980	Greenwich	Europe - Ireland (Republic and Ulster) - onshore
+6174	Sierra Leone Colony 1924	Sierra Leone Peninsular 1924	War Office	Greenwich	Sierra Leone - Freetown Peninsula
+6175	Sierra Leone 1968		Clarke 1880 (RGS)	Greenwich	Sierra Leone - onshore
+6176	Australian Antarctic Datum 1998	AAD98	GRS 1980	Greenwich	Antarctica - Australian sector
+6178	Pulkovo 1942(83)	42/83	Krassowsky 1940	Greenwich	Europe - onshore - eastern - S-42(83)
+6179	Pulkovo 1942(58)	42/58	Krassowsky 1940	Greenwich	Europe - onshore - eastern - S-42(58)
+6180	Estonia 1997	EST97	GRS 1980	Greenwich	Estonia
+6181	Luxembourg Reference Frame	LUREF	International 1924	Greenwich	Luxembourg
+6182	Azores Occidental Islands 1939	Observatario Flores; Azores Occidental 1939; Observatorio Meteorologico 1939; Observatorio 1966	International 1924	Greenwich	Portugal - Azores W - onshore
+6183	Azores Central Islands 1948	Graciosa; Azores Central 1948; Base SW	International 1924	Greenwich	Portugal - Azores C - onshore
+6184	Azores Oriental Islands 1940	Sao Bras; Azores Oriental 1940	International 1924	Greenwich	Portugal - Azores E - onshore
+6188	OSNI 1952		Airy 1830	Greenwich	UK - Northern Ireland - onshore
+6189	Red Geodesica Venezolana	SIRGAS-REGVEN; REGVEN	GRS 1980	Greenwich	Venezuela
+6190	Posiciones Geodesicas Argentinas 1998	POSGAR 98; Posiciones Geodésicas Argentinas 1998; POSGAR	GRS 1980	Greenwich	Argentina
+6191	Albanian 1987	ALB86	Krassowsky 1940	Greenwich	Albania - onshore
+6192	Douala 1948		International 1924	Greenwich	Cameroon - coastal area
+6193	Manoca 1962		Clarke 1880 (IGN)	Greenwich	Cameroon - coastal area
+6194	Qornoq 1927		International 1924	Greenwich	Greenland - west coast
+6195	Scoresbysund 1952		International 1924	Greenwich	Greenland - Scoresbysund area
+6196	Ammassalik 1958		International 1924	Greenwich	Greenland - Ammassalik area
+6197	Garoua		Clarke 1880 (RGS)	Greenwich	Cameroon - Garoua area
+6198	Kousseri		Clarke 1880 (RGS)	Greenwich	Cameroon - N'Djamena area
+6199	Egypt 1930	New Egyptian	International 1924	Greenwich	Egypt - onshore
+6200	Pulkovo 1995		Krassowsky 1940	Greenwich	Russia
+6201	Adindan	Blue Nile 1958	Clarke 1880 (RGS)	Greenwich	Africa - Eritrea; Ethiopia; South Sudan and Sudan
+6202	Australian Geodetic Datum 1966	AGD66	Australian National Spheroid	Greenwich	Australasia - Australia and PNG - AGD66
+6203	Australian Geodetic Datum 1984	AGD84	Australian National Spheroid	Greenwich	Australia - AGD84
+6204	Ain el Abd 1970	Ain el Abd	International 1924	Greenwich	Asia - Middle East - Bahrain; Kuwait and Saudi Arabia
+6205	Afgooye		Krassowsky 1940	Greenwich	Somalia - onshore
+6206	Agadez		Clarke 1880 (IGN)	Greenwich	Niger
+6207	Lisbon 1937		International 1924	Greenwich	Portugal - mainland - onshore
+6208	Aratu		International 1924	Greenwich	Brazil - Aratu
+6209	Arc 1950		Clarke 1880 (Arc)	Greenwich	Africa - Botswana; Malawi; Zambia; Zimbabwe
+6210	Arc 1960		Clarke 1880 (RGS)	Greenwich	Africa - Burundi; Kenya; Rwanda; Tanzania and Uganda
+6211	Batavia	Genuk	Bessel 1841	Greenwich	Indonesia - Java; Java Sea and western Sumatra
+6212	Barbados 1938		Clarke 1880 (RGS)	Greenwich	Barbados - onshore
+6213	Beduaram		Clarke 1880 (IGN)	Greenwich	Niger - southeast
+6214	Beijing 1954		Krassowsky 1940	Greenwich	China
+6215	Reseau National Belge 1950	Belge 1950	International 1924	Greenwich	Belgium - onshore
+6216	Bermuda 1957		Clarke 1866	Greenwich	Bermuda - onshore
+6218	Bogota 1975	Bogota	International 1924	Greenwich	Colombia - mainland and offshore Caribbean
+6219	Bukit Rimpah		Bessel 1841	Greenwich	Indonesia - Banga & Belitung Islands
+6220	Camacupa 1948	Camacupa	Clarke 1880 (RGS)	Greenwich	Angola - Angola proper
+6221	Campo Inchauspe		International 1924	Greenwich	Argentina - mainland onshore and offshore TdF
+6222	Cape	South Africa	Clarke 1880 (Arc)	Greenwich	Africa - Botswana; Eswatini; Lesotho and South Africa
+6223	Carthage		Clarke 1880 (IGN)	Greenwich	Tunisia
+6224	Chua		International 1924	Greenwich	South America - Brazil - south of 18°S and west of 54°W + DF; N Paraguay
+6225	Corrego Alegre 1970-72	Corrego Alegre	International 1924	Greenwich	Brazil - Corrego Alegre 1970-1972
+6227	Deir ez Zor	Levant	Clarke 1880 (IGN)	Greenwich	Asia - Middle East - Lebanon and Syria onshore
+6229	Egypt 1907	Old Egyptian	Helmert 1906	Greenwich	Egypt
+6230	European Datum 1950	ED50	International 1924	Greenwich	Europe - ED50 by country
+6231	European Datum 1987	ED87	International 1924	Greenwich	Europe - west
+6232	Fahud		Clarke 1880 (RGS)	Greenwich	Oman - mainland
+6236	Hu Tzu Shan 1950	Hu Tzu Shan	International 1924	Greenwich	Taiwan - onshore - mainland and Penghu
+6237	Hungarian Datum 1972	HD72	GRS 1967	Greenwich	Hungary
+6238	Indonesian Datum 1974	ID74	Indonesian National Spheroid	Greenwich	Indonesia - onshore
+6239	Indian 1954		Everest 1830 (1937 Adjustment)	Greenwich	Asia - Myanmar and Thailand onshore
+6240	Indian 1975		Everest 1830 (1937 Adjustment)	Greenwich	Thailand - onshore and Gulf of Thailand
+6241	Jamaica 1875		Clarke 1880	Greenwich	Jamaica - onshore
+6242	Jamaica 1969	JAD69	Clarke 1866	Greenwich	Jamaica - onshore
+6243	Kalianpur 1880		Everest (1830 Definition)	Greenwich	Asia - Bangladesh; India; Myanmar; Pakistan - onshore
+6244	Kandawala		Everest 1830 (1937 Adjustment)	Greenwich	Sri Lanka - onshore
+6245	Kertau 1968	Malaysia Revised Triangulation 1968; MRT68	Everest 1830 Modified	Greenwich	Asia - Malaysia (west including SCS) and Singapore
+6246	Kuwait Oil Company	KOC	Clarke 1880 (RGS)	Greenwich	Kuwait - onshore
+6247	La Canoa		International 1924	Greenwich	Venezuela - onshore
+6248	Provisional South American Datum 1956	PSAD56	International 1924	Greenwich	South America - PSAD56 by country
+6249	Lake		International 1924	Greenwich	Venezuela - Lake Maracaibo
+6250	Leigon		Clarke 1880 (RGS)	Greenwich	Ghana
+6251	Liberia 1964		Clarke 1880 (RGS)	Greenwich	Liberia - onshore
+6252	Lome		Clarke 1880 (IGN)	Greenwich	Togo
+6253	Luzon 1911		Clarke 1866	Greenwich	Philippines - onshore
+6254	Hito XVIII 1963		International 1924	Greenwich	South America - Tierra del Fuego
+6255	Herat North		International 1924	Greenwich	Afghanistan
+6256	Mahe 1971		Clarke 1880 (RGS)	Greenwich	Seychelles - Mahe Island
+6257	Makassar		Bessel 1841	Greenwich	Indonesia - Sulawesi SW
+6258	European Terrestrial Reference System 1989 ensemble	ETRS89; European Terrestrial Reference System 1989	GRS 1980	Greenwich	Europe - ETRF by country
+6259	Malongo 1987	Mhast	International 1924	Greenwich	Africa - Angola (Cabinda) and DR Congo (Zaire) - offshore
+6261	Merchich		Clarke 1880 (IGN)	Greenwich	Africa - Morocco and Western Sahara - onshore
+6262	Massawa		Bessel 1841	Greenwich	Eritrea
+6263	Minna		Clarke 1880 (RGS)	Greenwich	Nigeria
+6265	Monte Mario	Rome 1940	International 1924	Greenwich	Italy - including San Marino and Vatican
+6266	M'poraloko		Clarke 1880 (IGN)	Greenwich	Gabon
+6267	North American Datum 1927	NAD27	Clarke 1866	Greenwich	North America - NAD27
+6269	North American Datum 1983	NAD83(1986); NAD83; NAD83(Original)	GRS 1980	Greenwich	North America - NAD83
+6270	Nahrwan 1967		Clarke 1880 (RGS)	Greenwich	Asia - Middle East - Qatar offshore and UAE
+6271	Naparima 1972		International 1924	Greenwich	Trinidad and Tobago - Tobago - onshore
+6272	New Zealand Geodetic Datum 1949	GD49; NZGD49	International 1924	Greenwich	New Zealand - onshore and nearshore
+6273	NGO 1948		Bessel Modified	Greenwich	Norway - onshore
+6274	Datum 73		International 1924	Greenwich	Portugal - mainland - onshore
+6275	Nouvelle Triangulation Francaise	NTF	Clarke 1880 (IGN)	Greenwich	France - onshore - mainland and Corsica
+6276	NSWC 9Z-2		NWL 9D	Greenwich	World
+6277	Ordnance Survey of Great Britain 1936		Airy 1830	Greenwich	UK - Britain and UKCS 49°45'N to 61°N; 9°W to 2°E
+6278	OSGB 1970 (SN)	OSGB70	Airy 1830	Greenwich	UK - Great Britain; Isle of Man
+6279	OS (SN) 1980	OS(SN)80	Airy 1830	Greenwich	Europe - British Isles - UK and Ireland onshore
+6281	Palestine 1923	Old Israeli Datum; OID	Clarke 1880 (Benoit)	Greenwich	Asia - Middle East - Israel; Jordan and Palestine onshore
+6282	Congo 1960 Pointe Noire		Clarke 1880 (IGN)	Greenwich	Congo
+6283	Geocentric Datum of Australia 1994	GDA94	GRS 1980	Greenwich	Australia - GDA
+6284	Pulkovo 1942		Krassowsky 1940	Greenwich	Europe - FSU onshore
+6285	Qatar 1974		International 1924	Greenwich	Qatar
+6286	Qatar 1948		Helmert 1906	Greenwich	Qatar - onshore
+6288	Loma Quintana		International 1924	Greenwich	Venezuela - north of 7°45'N
+6289	Amersfoort		Bessel 1841	Greenwich	Netherlands - onshore
+6292	Sapper Hill 1943		International 1924	Greenwich	Falkland Islands - onshore
+6293	Schwarzeck		Bessel Namibia (GLM)	Greenwich	Namibia
+6295	Serindung		Bessel 1841	Greenwich	Indonesia - Kalimantan W - coastal
+6297	Tananarive 1925	Tananarive	International 1924	Greenwich	Madagascar - onshore and nearshore
+6298	Timbalai 1948	Timbalai 1968; Borneo Triangulation of 1968; BT68	Everest 1830 (1967 Definition)	Greenwich	Asia - Brunei and East Malaysia
+6299	TM65		Airy Modified 1849	Greenwich	Europe - Ireland (Republic and Ulster) - onshore
+6300	Geodetic Datum of 1965	TM75; 1975 Mapping Adjustment	Airy Modified 1849	Greenwich	Europe - Ireland (Republic and Ulster) - onshore
+6301	Tokyo	Tokyo 1918	Bessel 1841	Greenwich	Asia - Japan and Korea
+6302	Trinidad 1903		Clarke 1858	Greenwich	Trinidad and Tobago - Trinidad
+6303	Trucial Coast 1948	TC(1948)	Helmert 1906	Greenwich	UAE - Abu Dhabi and Dubai - onshore
+6304	Voirol 1875		Clarke 1880 (IGN)	Greenwich	Algeria - north of 32°N
+6306	Bern 1938		Bessel 1841	Greenwich	Europe - Liechtenstein and Switzerland
+6307	Nord Sahara 1959		Clarke 1880 (RGS)	Greenwich	Algeria
+6308	Stockholm 1938	Rikets koordinatsystem 1938; RT38	Bessel 1841	Greenwich	Sweden - onshore
+6309	Yacare	ROU-USAMS	International 1924	Greenwich	Uruguay - onshore
+6310	Yoff		Clarke 1880 (IGN)	Greenwich	Senegal
+6311	Zanderij		International 1924	Greenwich	Suriname
+6312	Militar-Geographische Institut	MGI	Bessel 1841	Greenwich	Austria
+6313	Reseau National Belge 1972	Belge 1972	International 1924	Greenwich	Belgium - onshore
+6314	Deutsches Hauptdreiecksnetz	DHDN	Bessel 1841	Greenwich	Germany - West Germany all states
+6315	Conakry 1905		Clarke 1880 (IGN)	Greenwich	Guinea - onshore
+6316	Dealul Piscului 1930	Dealul Piscului 1933	International 1924	Greenwich	Romania - onshore
+6318	National Geodetic Network	NGN	WGS 84	Greenwich	Kuwait - onshore
+6319	Kuwait Utility	KUDAMS	GRS 1980	Greenwich	Kuwait - Kuwait City
+6322	World Geodetic System 1972	WGS 72	WGS 72	Greenwich	World
+6324	WGS 72 Transit Broadcast Ephemeris	WGS 72BE	WGS 72	Greenwich	World
+6326	World Geodetic System 1984 ensemble	WGS 84; World Geodetic System 1984	WGS 84	Greenwich	World
+6600	Anguilla 1957		Clarke 1880 (RGS)	Greenwich	Anguilla - onshore
+6601	Antigua 1943		Clarke 1880 (RGS)	Greenwich	Antigua - onshore
+6602	Dominica 1945		Clarke 1880 (RGS)	Greenwich	Dominica - onshore
+6603	Grenada 1953		Clarke 1880 (RGS)	Greenwich	Grenada and southern Grenadines - onshore
+6604	Montserrat 1958		Clarke 1880 (RGS)	Greenwich	Montserrat - onshore
+6605	St. Kitts 1955		Clarke 1880 (RGS)	Greenwich	St Kitts and Nevis - onshore
+6606	St. Lucia 1955		Clarke 1880 (RGS)	Greenwich	St Lucia - onshore
+6607	St. Vincent 1945		Clarke 1880 (RGS)	Greenwich	St Vincent and the Grenadines - onshore
+6608	North American Datum 1927 (1976)	NAD27(76)	Clarke 1866	Greenwich	Canada - Ontario
+6609	North American Datum 1927 (CGQ77)	CGQ77	Clarke 1866	Greenwich	Canada - Quebec
+6610	Xian 1980		IAG 1975	Greenwich	China - onshore
+6611	Hong Kong 1980	HK80	International 1924	Greenwich	China - Hong Kong
+6612	Japanese Geodetic Datum 2000	JGD2000	GRS 1980	Greenwich	Japan
+6613	Gunung Segara	Segara; Samboja; P2 Exc; P2 Exc-T9	Bessel 1841	Greenwich	Indonesia - Kalimantan E
+6614	Qatar National Datum 1995	QND95	International 1924	Greenwich	Qatar - onshore
+6615	Porto Santo 1936	Madeira SE Base; Base SE; Porto Santo	International 1924	Greenwich	Portugal - Madeira archipelago onshore
+6616	Selvagem Grande	Selvagem Grande 1938; Marco Astro	International 1924	Greenwich	Portugal - Selvagens onshore
+6618	South American Datum 1969		GRS 1967 Modified	Greenwich	South America - SAD69 by country
+6619	SWEREF99		GRS 1980	Greenwich	Sweden
+6620	Point 58	12th Parallel traverse	Clarke 1880 (RGS)	Greenwich	Africa - 12th parallel N
+6621	Fort Marigot		International 1924	Greenwich	Guadeloupe - St Martin and St Barthelemy - onshore
+6622	Guadeloupe 1948	Sainte Anne	International 1924	Greenwich	Guadeloupe - Grande-Terre and surrounding islands - onshore
+6623	Centre Spatial Guyanais 1967	CSG67; Guyane Francaise	International 1924	Greenwich	French Guiana - coastal area
+6624	Reseau Geodesique Francais Guyane 1995	RGFG95	GRS 1980	Greenwich	French Guiana
+6625	Martinique 1938	Fort Desaix	International 1924	Greenwich	Martinique - onshore
+6626	Reunion 1947	Piton des Neiges	International 1924	Greenwich	Reunion - onshore
+6627	Reseau Geodesique de la Reunion 1992	RGR92	GRS 1980	Greenwich	Reunion
+6628	Tahiti 52	IGN 1952; Tahiti	International 1924	Greenwich	French Polynesia - Society Islands - Moorea and Tahiti
+6629	Tahaa 54	Tahaa	International 1924	Greenwich	French Polynesia - Society Islands - Bora Bora; Huahine; Raiatea; Tahaa
+6630	IGN72 Nuku Hiva		International 1924	Greenwich	French Polynesia - Marquesas Islands - Nuku Hiva; Ua Huka and Ua Pou
+6632	Combani 1950		International 1924	Greenwich	Mayotte - onshore
+6633	IGN56 Lifou		International 1924	Greenwich	New Caledonia - Lifou
+6634	IGN72 Grande Terre	MHNC72	International 1924	Greenwich	New Caledonia - Grande Terre
+6636	Petrels 1972		International 1924	Greenwich	Antarctica - Adelie Land - Petrels island
+6637	Pointe Geologie Perroud 1950	Perroud 1950	International 1924	Greenwich	Antarctica - Adelie Land coastal area
+6638	Saint Pierre et Miquelon 1950	St. Pierre et Miquelon 1950	Clarke 1866	Greenwich	St Pierre and Miquelon - onshore
+6639	MOP78	Uvea SHOM 1978	International 1924	Greenwich	Wallis and Futuna - Wallis
+6641	IGN53 Mare		International 1924	Greenwich	New Caledonia - Mare
+6642	ST84 Ile des Pins		International 1924	Greenwich	New Caledonia - Ile des Pins
+6643	ST71 Belep		International 1924	Greenwich	New Caledonia - Belep
+6644	NEA74 Noumea		International 1924	Greenwich	New Caledonia - Grande Terre - Noumea
+6646	Grand Comoros		International 1924	Greenwich	Comoros - Njazidja (Grande Comore)
+6657	Reykjavik 1900		Danish 1876	Greenwich	Iceland - onshore
+6658	Hjorsey 1955		International 1924	Greenwich	Iceland - onshore
+6659	Islands Net 1993	ISN93	GRS 1980	Greenwich	Iceland
+6660	Helle 1954		International 1924	Greenwich	Jan Mayen - onshore
+6661	Latvia 1992	LKS92	GRS 1980	Greenwich	Latvia
+6663	Porto Santo 1995	Base SE; Madeira SE Base 1995	International 1924	Greenwich	Portugal - Madeira archipelago onshore
+6664	Azores Oriental Islands 1995	Sao Bras; Azores Oriental 1995	International 1924	Greenwich	Portugal - Azores E - onshore
+6665	Azores Central Islands 1995	Graciosa; Azores Central 1995; Base SW	International 1924	Greenwich	Portugal - Azores C - onshore
+6666	Lisbon 1890		Bessel 1841	Greenwich	Portugal - mainland - onshore
+6667	Iraq-Kuwait Boundary Datum 1992	IKBD-92	WGS 84	Greenwich	Asia - Middle East - Iraq-Kuwait boundary
+6668	European Datum 1979	ED79	International 1924	Greenwich	Europe - west
+6670	Istituto Geografico Militaire 1995	IGM95	GRS 1980	Greenwich	Italy - including San Marino and Vatican
+6671	Voirol 1879		Clarke 1880 (IGN)	Greenwich	Algeria - north of 32°N
+6672	Chatham Islands Datum 1971		International 1924	Greenwich	New Zealand - Chatham Islands group
+6673	Chatham Islands Datum 1979	CI1979	International 1924	Greenwich	New Zealand - Chatham Islands group
+6674	Sistema de Referencia Geocentrico para las AmericaS 2000	SIRGAS 2000; Sistema de Referencia Geocentrico para America del Sur 2000; SIRGAS2000	GRS 1980	Greenwich	Latin America - SIRGAS 2000 by country
+6675	Guam 1963		Clarke 1866	Greenwich	Pacific - Guam and NMI - onshore
+6676	Vientiane 1982		Krassowsky 1940	Greenwich	Laos
+6677	Lao 1993		Krassowsky 1940	Greenwich	Laos
+6678	Lao National Datum 1997	Lao 1997	Krassowsky 1940	Greenwich	Laos
+6679	Jouik 1961		Clarke 1880 (RGS)	Greenwich	Mauritania - north coast
+6680	Nouakchott 1965		Clarke 1880 (RGS)	Greenwich	Mauritania - central coast
+6682	Gulshan 303		Everest 1830 (1937 Adjustment)	Greenwich	Bangladesh
+6683	Philippine Reference System 1992	PRS92; Modified Luzon Datum	Clarke 1866	Greenwich	Philippines
+6684	Gan 1970		International 1924	Greenwich	Maldives - onshore
+6686	Marco Geocentrico Nacional de Referencia	MAGNA-SIRGAS	GRS 1980	Greenwich	Colombia
+6687	Reseau Geodesique de la Polynesie Francaise	RGPF	GRS 1980	Greenwich	French Polynesia
+6688	Fatu Iva 72	MHEFO 55	International 1924	Greenwich	French Polynesia - Marquesas Islands - Fatu Hiva
+6689	IGN63 Hiva Oa		International 1924	Greenwich	French Polynesia - Marquesas Islands - Hiva Oa and Tahuata
+6690	Tahiti 79	IGN79 Tahiti	International 1924	Greenwich	French Polynesia - Society Islands - Tahiti
+6691	Moorea 87		International 1924	Greenwich	French Polynesia - Society Islands - Moorea
+6692	Maupiti 83	MOP 1983	International 1924	Greenwich	French Polynesia - Society Islands - Maupiti
+6693	Nakhl-e Ghanem		WGS 84	Greenwich	Iran - Kangan district
+6694	Posiciones Geodesicas Argentinas 1994	POSGAR 94; POSGAR; Posiciones Geodésicas Argentinas 1994	WGS 84	Greenwich	Argentina
+6695	Katanga 1955		Clarke 1866	Greenwich	Congo DR (Zaire) - Katanga
+6696	Kasai 1953		Clarke 1880 (RGS)	Greenwich	Congo DR (Zaire) - Kasai - SE
+6697	IGC 1962 Arc of the 6th Parallel South	IGC 1962 6th Parallel South	Clarke 1880 (RGS)	Greenwich	Congo DR (Zaire) - 6th parallel south
+6698	IGN 1962 Kerguelen		International 1924	Greenwich	French Southern Territories - Kerguelen onshore
+6699	Le Pouce 1934	Le Pouce (Mauritius 94); Le Pouce (Mauritius PN 94)	Clarke 1880 (RGS)	Greenwich	Mauritius - mainland
+6700	IGN Astro 1960		Clarke 1880 (RGS)	Greenwich	Mauritania - onshore
+6701	Institut Geographique du Congo Belge 1955	IGCB 1955; Bas Congo 1955	Clarke 1880 (RGS)	Greenwich	Congo DR (Zaire) - Bas Congo
+6702	Mauritania 1999		GRS 1980	Greenwich	Mauritania
+6703	Missao Hidrografico Angola y Sao Tome 1951	Mhast 1951	Clarke 1880 (RGS)	Greenwich	Angola - Cabinda
+6704	Mhast (onshore)	Mhast	International 1924	Greenwich	Africa - Angola (Cabinda) and DR Congo (Zaire) - coastal
+6705	Mhast (offshore)	Mhast	International 1924	Greenwich	Africa - Angola (Cabinda) and DR Congo (Zaire) - offshore
+6706	Egypt Gulf of Suez S-650 TL	S-650 TL	Helmert 1906	Greenwich	Egypt - Gulf of Suez
+6707	Tern Island 1961		International 1924	Greenwich	USA - Hawaii - Tern Island and Sorel Atoll
+6708	Cocos Islands 1965		Australian National Spheroid	Greenwich	Cocos (Keeling) Islands - onshore
+6709	Iwo Jima 1945		International 1924	Greenwich	Japan - Iwo Jima
+6710	Astro DOS 71	ASTRO DOS 71/4; St. Helena 1971	International 1924	Greenwich	St Helena - St Helena Island
+6711	Marcus Island 1952		International 1924	Greenwich	Japan - Minamitori-shima (Marcus Island) - onshore
+6712	Ascension Island 1958		International 1924	Greenwich	St Helena - Ascension Island
+6713	Ayabelle Lighthouse		Clarke 1880 (RGS)	Greenwich	Djibouti
+6714	Bellevue	Bellevue (IGN)	International 1924	Greenwich	Vanuatu - southern islands
+6715	Camp Area Astro		International 1924	Greenwich	Antarctica - Camp McMurdo area
+6716	Phoenix Islands 1966		International 1924	Greenwich	Kiribati - Phoenix Islands
+6717	Cape Canaveral		Clarke 1866	Greenwich	North America - Bahamas and USA - Florida - onshore
+6718	Solomon 1968		International 1924	Greenwich	Solomon Islands - onshore main islands
+6719	Easter Island 1967		International 1924	Greenwich	Chile - Easter Island onshore
+6720	Fiji Geodetic Datum 1986	FGD 1986; Fiji 1986	WGS 72	Greenwich	Fiji - onshore
+6721	Fiji 1956		International 1924	Greenwich	Fiji - main islands
+6722	South Georgia 1968		International 1924	Greenwich	South Georgia - onshore
+6723	Grand Cayman Geodetic Datum 1959	GCGD59; Grand Cayman 1959	Clarke 1866	Greenwich	Cayman Islands - Grand Cayman
+6724	Diego Garcia 1969		International 1924	Greenwich	British Indian Ocean Territory - Diego Garcia
+6725	Johnston Island 1961	Johnston Atoll 1961	International 1924	Greenwich	Johnston Island
+6726	Sister Islands Geodetic Datum 1961	SIGD61; Little Cayman Geodetic Datum 1961	Clarke 1866	Greenwich	Cayman Islands - Little Cayman and Cayman Brac
+6727	Midway 1961		International 1924	Greenwich	Midway Islands - Sand and Eastern Islands
+6728	Pico de las Nieves 1984	PN84	International 1924	Greenwich	Spain - Canary Islands western
+6729	Pitcairn 1967		International 1924	Greenwich	Pitcairn - Pitcairn Island
+6730	Santo 1965	Santo (DOS)	International 1924	Greenwich	Vanuatu - northern islands
+6732	Marshall Islands 1960		Hough 1960	Greenwich	Pacific - Marshall Islands; Wake - onshore
+6733	Wake Island 1952		International 1924	Greenwich	Wake - onshore
+6734	Tristan 1968		International 1924	Greenwich	St Helena - Tristan da Cunha
+6735	Kusaie 1951		International 1924	Greenwich	Micronesia - Kosrae (Kusaie)
+6736	Deception Island		Clarke 1880 (RGS)	Greenwich	Antarctica - Deception Island
+6737	Geocentric datum of Korea	Korea 2000	GRS 1980	Greenwich	Korea; Republic of (South Korea)
+6738	Hong Kong 1963	HK63	Clarke 1858	Greenwich	China - Hong Kong
+6739	Hong Kong 1963(67)	HK63(67)	International 1924	Greenwich	China - Hong Kong
+6740	Parametry Zemli 1990	PZ-90	PZ-90	Greenwich	World
+6741	Faroe Datum 1954	FD54	International 1924	Greenwich	Faroe Islands - onshore
+6742	Geodetic Datum of Malaysia 2000	GDM2000	GRS 1980	Greenwich	Malaysia
+6743	Karbala 1979	Karbala 1979 (Polservice)	Clarke 1880 (RGS)	Greenwich	Iraq - onshore
+6744	Nahrwan 1934		Clarke 1880 (RGS)	Greenwich	Asia - Middle East - Iraq and SW Iran
+6745	Rauenberg Datum/83	RD/83	Bessel 1841	Greenwich	Germany - Saxony
+6746	Potsdam Datum/83	PD/83	Bessel 1841	Greenwich	Germany - Thuringen
+6747	Greenland 1996	GR96	GRS 1980	Greenwich	Greenland
+6748	Vanua Levu 1915	Vanua Levu 1917	Clarke 1880 (international foot)	Greenwich	Fiji - Vanua Levu and Taveuni
+6749	Reseau Geodesique de Nouvelle Caledonie 91-93	RGNC91-93; RGNC	GRS 1980	Greenwich	New Caledonia
+6750	ST87 Ouvea		WGS 84	Greenwich	New Caledonia - Ouvea
+6751	Kertau (RSO)		Everest 1830 (RSO 1969)	Greenwich	Asia - Malaysia (west) and Singapore
+6752	Viti Levu 1912	Viti Levu 1916	Clarke 1880 (international foot)	Greenwich	Fiji - Viti Levu
+6753	fk89	FD54a	International 1924	Greenwich	Faroe Islands - onshore
+6754	Libyan Geodetic Datum 2006	LGD2006	International 1924	Greenwich	Libya
+6755	Datum Geodesi Nasional 1995	DGN95; Indonesian Geodetic Datum 1995; IGD95	WGS 84	Greenwich	Indonesia
+6756	Vietnam 2000	VN-2000	WGS 84	Greenwich	Vietnam - onshore
+6757	SVY21		WGS 84	Greenwich	Singapore
+6758	Jamaica 2001	JAD2001	WGS 84	Greenwich	Jamaica
+6759	NAD83 (National Spatial Reference System 2007)		GRS 1980	Greenwich	USA - CONUS and Alaska; PRVI
+6760	World Geodetic System 1966	WGS 66	NWL 9D	Greenwich	World
+6761	Croatian Terrestrial Reference System	HTRS96	GRS 1980	Greenwich	Croatia
+6762	Bermuda 2000	BDA2000	WGS 84	Greenwich	Bermuda
+6763	Pitcairn 2006		WGS 84	Greenwich	Pitcairn - Pitcairn Island
+6764	Ross Sea Region Geodetic Datum 2000	RSRGD2000	GRS 1980	Greenwich	Antarctica - Ross Sea Region
+6765	Slovenia Geodetic Datum 1996	D96; Slovenia 1996	GRS 1980	Greenwich	Slovenia
+6801	CH1903 (Bern)		Bessel 1841	Bern	Europe - Liechtenstein and Switzerland
+6802	Bogota 1975 (Bogota)		International 1924	Bogota	Colombia - mainland
+6803	Lisbon 1937 (Lisbon)		International 1924	Lisbon	Portugal - mainland - onshore
+6804	Makassar (Jakarta)		Bessel 1841	Jakarta	Indonesia - Sulawesi SW
+6805	Militar-Geographische Institut (Ferro)	MGI (Ferro)	Bessel 1841	Ferro	Europe - Austria and former Yugoslavia onshore
+6806	Monte Mario (Rome)	Rome 1940 (Rome)	International 1924	Rome	Italy - including San Marino and Vatican
+6807	Nouvelle Triangulation Francaise (Paris)		Clarke 1880 (IGN)	Paris	France - onshore - mainland and Corsica
+6809	Reseau National Belge 1950 (Brussels)		International 1924	Brussels	Belgium - onshore
+6810	Tananarive 1925 (Paris)		International 1924	Paris	Madagascar - onshore
+6811	Voirol 1875 (Paris)		Clarke 1880 (IGN)	Paris	Algeria - north of 32°N
+6813	Batavia (Jakarta)		Bessel 1841	Jakarta	Indonesia - Bali; Java and western Sumatra onshore
+6814	Stockholm 1938 (Stockholm)		Bessel 1841	Stockholm	Sweden - onshore
+6815	Greek (Athens)		Bessel 1841	Athens	Greece - onshore
+6816	Carthage (Paris)		Clarke 1880 (IGN)	Paris	Tunisia - onshore
+6817	NGO 1948 (Oslo)		Bessel Modified	Oslo	Norway - onshore
+6818	System of the Unified Trigonometrical Cadastral Network (Ferro)	Systém Jednotné trigonometrické sít? katastrální (Ferro); Systém Jednotnej trigonometrickej siete katastrálnej (Ferro); S-JTSK (Ferro)	Bessel 1841	Ferro	Europe - Czechoslovakia
+6820	Gunung Segara (Jakarta)	Segara (Jakarta)	Bessel 1841	Jakarta	Indonesia - Kalimantan E
+6821	Voirol 1879 (Paris)		Clarke 1880 (IGN)	Paris	Algeria - north of 32°N
+6901	Ancienne Triangulation Francaise (Paris)	ATF (Paris)	Plessis 1817	Paris RGS	France - mainland onshore
+6903	Madrid 1870 (Madrid)	Madrid	Struve 1860	Madrid	Spain - mainland onshore
+6904	Lisbon 1890 (Lisbon)		Bessel 1841	Lisbon	Portugal - mainland - onshore

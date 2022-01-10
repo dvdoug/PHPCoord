@@ -175,10 +175,13 @@ class PrimeMeridian
 
     private Angle $greenwichLongitude;
 
-    public function __construct(string $name, Angle $greenwichLongitude)
+    private string $srid;
+
+    public function __construct(string $name, Angle $greenwichLongitude, string $srid = '')
     {
         $this->name = $name;
         $this->greenwichLongitude = $greenwichLongitude;
+        $this->srid = $srid;
     }
 
     public function getName(): string
@@ -191,6 +194,11 @@ class PrimeMeridian
         return $this->greenwichLongitude;
     }
 
+    public function getSRID(): string
+    {
+        return $this->srid;
+    }
+
     public static function fromSRID(string $srid): self
     {
         if (!isset(static::$sridData[$srid])) {
@@ -200,7 +208,7 @@ class PrimeMeridian
         if (!isset(self::$cachedObjects[$srid])) {
             $data = static::$sridData[$srid];
 
-            self::$cachedObjects[$srid] = new static($data['name'], Angle::makeUnit($data['greenwich_longitude'], $data['uom']));
+            self::$cachedObjects[$srid] = new static($data['name'], Angle::makeUnit($data['greenwich_longitude'], $data['uom']), $srid);
         }
 
         return self::$cachedObjects[$srid];

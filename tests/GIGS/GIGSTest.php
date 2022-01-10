@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace PHPCoord\GIGS;
 
+use PHPCoord\Datum\Datum;
 use function explode;
 use Generator;
 use function min;
@@ -93,7 +94,7 @@ class GIGSTest extends TestCase
     /**
      * @dataProvider series2200PrimeMeridianData
      */
-    public function testSeries2200PrimeMeridians(string $epsgCode, string $name, $longitudeFromGreenwich, $longitudeFromGreenwichDegrees): void
+    public function testSeries2200PrimeMeridians(string $epsgCode, string $name, string $longitudeFromGreenwich, string $longitudeFromGreenwichDegrees): void
     {
         $meridian = PrimeMeridian::fromSRID('urn:ogc:def:meridian:EPSG::' . $epsgCode);
         $this->assertEquals($name, $meridian->getName());
@@ -111,6 +112,27 @@ class GIGSTest extends TestCase
 
         foreach ($body as $row) {
             yield '#' . $row[0] => [$row[0], $row[1], $row[3], $row[5]];
+        }
+    }
+
+    /**
+     * @dataProvider series2200DatumData
+     */
+    public function testSeries2200Datums(string $epsgCode, string $name, string $ellipsoidName, string $primeMeridianName): void
+    {
+        $datum = Datum::fromSRID('urn:ogc:def:datum:EPSG::' . $epsgCode);
+        $this->assertEquals($name, Datum::getSupportedSRIDs()['urn:ogc:def:datum:EPSG::' . $epsgCode]);
+        $this->assertEquals($ellipsoidName, $datum->getEllipsoid()->getName());
+        $this->assertEquals($primeMeridianName, $datum->getPrimeMeridian()->getName());
+
+    }
+
+    public function series2200DatumData(): Generator
+    {
+        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 2200 Predefined Geodetic Data Objects test data/ASCII/GIGS_lib_2204_GeodeticDatum.txt');
+
+        foreach ($body as $row) {
+            yield '#' . $row[0] => [$row[0], $row[1], $row[3], $row[4]];
         }
     }
 
