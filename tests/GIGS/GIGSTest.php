@@ -14,8 +14,10 @@ use function min;
 use PHPCoord\CoordinateOperation\CoordinateOperations;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\Datum\Ellipsoid;
+use PHPCoord\Datum\PrimeMeridian;
 use PHPCoord\Exception\UnknownSRIDException;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
+use PHPCoord\UnitOfMeasure\Angle\Degree;
 use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Scale\Scale;
 use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
@@ -85,6 +87,30 @@ class GIGSTest extends TestCase
 
         foreach ($body as $row) {
             yield '#' . $row[0] => [$row[0], $row[1], $row[3], $row[4], $row[6], $row[7], $row[8]];
+        }
+    }
+
+    /**
+     * @dataProvider series2200PrimeMeridianData
+     */
+    public function testSeries2200PrimeMeridians(string $epsgCode, string $name, $longitudeFromGreenwich, $longitudeFromGreenwichDegrees): void
+    {
+        $meridian = PrimeMeridian::fromSRID('urn:ogc:def:meridian:EPSG::' . $epsgCode);
+        $this->assertEquals($name, $meridian->getName());
+
+        if ($meridian->getGreenwichLongitude() instanceof Degree) {
+            $this->assertEqualsWithDelta($longitudeFromGreenwichDegrees, $meridian->getGreenwichLongitude()->getValue(), 0.0000001);
+        } else {
+            $this->assertEqualsWithDelta($longitudeFromGreenwich, $meridian->getGreenwichLongitude()->getValue(), 0.0000001);
+        }
+    }
+
+    public function series2200PrimeMeridianData(): Generator
+    {
+        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 2200 Predefined Geodetic Data Objects test data/ASCII/GIGS_lib_2203_PrimeMeridian.txt');
+
+        foreach ($body as $row) {
+            yield '#' . $row[0] => [$row[0], $row[1], $row[3], $row[5]];
         }
     }
 
