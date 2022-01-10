@@ -439,9 +439,9 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $rho = $a * (1 - $e2) / (1 - $e2 * sin($latitude) ** 2) ** (3 / 2);
         $nu = $a / sqrt(1 - $e2 * (sin($latitude) ** 2));
 
-        $f = $ellipsoid->getInverseFlattening();
+        $f = $ellipsoid->getFlattening();
 
-        $dLatitude = ((-$tx * sin($latitude) * cos($longitude)) - ($ty * sin($latitude) * sin($longitude)) + ($tz * cos($latitude)) + ((($a * $df) + ($ellipsoid->getInverseFlattening() * $da)) * sin(2 * $latitude))) / ($rho * sin((new ArcSecond(1))->asRadians()->getValue()));
+        $dLatitude = ((-$tx * sin($latitude) * cos($longitude)) - ($ty * sin($latitude) * sin($longitude)) + ($tz * cos($latitude)) + ((($a * $df) + ($ellipsoid->getFlattening() * $da)) * sin(2 * $latitude))) / ($rho * sin((new ArcSecond(1))->asRadians()->getValue()));
         $dLongitude = (-$tx * sin($longitude) + $ty * cos($longitude)) / (($nu * cos($latitude)) * sin((new ArcSecond(1))->asRadians()->getValue()));
         $dHeight = ($tx * cos($latitude) * cos($longitude)) + ($ty * cos($latitude) * sin($longitude)) + ($tz * sin($latitude)) + (($a * $df + $f * $da) * (sin($latitude) ** 2)) - $da;
 
@@ -481,7 +481,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $rho = $a * (1 - $e2) / (1 - $e2 * sin($latitude) ** 2) ** (3 / 2);
         $nu = $a / sqrt(1 - $e2 * (sin($latitude) ** 2));
 
-        $f = $ellipsoid->getInverseFlattening();
+        $f = $ellipsoid->getFlattening();
 
         $dLatitude = ((-$tx * sin($latitude) * cos($longitude)) - ($ty * sin($latitude) * sin($longitude)) + ($tz * cos($latitude)) + ($da * ($nu * $e2 * sin($latitude) * cos($latitude)) / $a + $df * ($rho * ($a / $b) + $nu * ($b / $a)) * sin($latitude) * cos($latitude))) / (($rho + $fromHeight) * sin((new ArcSecond(1))->asRadians()->getValue()));
         $dLongitude = (-$tx * sin($longitude) + $ty * cos($longitude)) / ((($nu + $fromHeight) * cos($latitude)) * sin((new ArcSecond(1))->asRadians()->getValue()));
@@ -1252,7 +1252,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $kO = $scaleFactorAtNaturalOrigin->asUnity()->getValue();
         $a = $ellipsoid->getSemiMajorAxis()->asMetres()->getValue();
         $e2 = $ellipsoid->getEccentricitySquared();
-        $f = $ellipsoid->getInverseFlattening();
+        $f = $ellipsoid->getFlattening();
 
         $n = $f / (2 - $f);
         $rhoO = $a * (1 - $e2) / (1 - $e2 * sin($latitudeOrigin) ** 2) ** (3 / 2);
@@ -1793,7 +1793,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $kO = $scaleFactorAtNaturalOrigin->asUnity()->getValue();
         $a = $ellipsoid->getSemiMajorAxis()->asMetres()->getValue();
         $e = $ellipsoid->getEccentricity();
-        $f = $ellipsoid->getInverseFlattening();
+        $f = $ellipsoid->getFlattening();
 
         $n = $f / (2 - $f);
         $B = ($a / (1 + $n)) * (1 + $n ** 2 / 4 + $n ** 4 / 64);

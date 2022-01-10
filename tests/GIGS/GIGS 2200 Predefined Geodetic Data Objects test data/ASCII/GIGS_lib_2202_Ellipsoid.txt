@@ -1,0 +1,68 @@
+# File: GIGS_lib_2202_Ellipsoid											
+# GIGS Test Procedure: 2202											
+# GIGS Test Dataset Version: 2.0											
+# EPSG Dataset Version: 10.019 											
+# GIGS Test Dataset Issue Date: 2021-05-03											
+#											
+# Fields:											
+# [0]: EPSG Ellipsoid Code											
+# [1]: EPSG Ellipsoid Name											
+# [2]: Alias(es)											
+# [3]: Semi-major axis (a)											
+# [4]: Unit Name											
+# [5]: Unit Conversion Factor											
+# [6]: Semi-major axis (a) in metres											
+# [7]: Second defining parameter: Inverse flattening (1/f)											
+# [8]: Second defining parameter: Semi-minor axis (b)											
+# [9]: Spherical											
+# [10]: EPSG Usage Extent											
+# [11]: GIGS Remarks											
+#											
+# [0]	# [1]	# [2]	# [3]	# [4]	# [5]	# [6]	# [7]	# [8]	# [9]	# [10]	# [11]
+7001	Airy 1830		6377563.396	metre	NULL	NULL	299.3249646	NULL	FALSE	United Kingdom	Original definition is a=20923713; b=20853810 feet of 1796; 1/f is given to 7 decimal places; For the 1936 retriangulation OSGB defines the relationship of 10 feet of 1796 to the International metre through ([10^0.48401603]/10) exactly = 0.3048007491
+7002	Airy Modified 1849		6377340.189	metre	NULL	NULL	299.3249646	NULL	FALSE	Ireland	OSGB Airy 1830 figure (ellipsoid code 7001) rescaled by 0.999965 to best fit the scale of the 19th century primary triangulation of Ireland
+7003	Australian National Spheroid	ANS	6378160	metre	NULL	NULL	298.25	NULL	FALSE	Australia	Based on the GRS 1967 figure but with 1/f taken to 2 decimal places exactly;  The dimensions are also used as the GRS 1967 Modified ellipsoid (see code 7050)
+7004	Bessel 1841		6377397.155	metre	NULL	NULL	299.1528128	NULL	FALSE	Numerous	Original Bessel definition is a=3272077.14 and b=3261139.33 toise; This used a weighted mean of values from several authors but did not account for differences in the length of the various toise: the Bessel toise is therefore of uncertain length
+7005	Bessel Modified		6377492.018	metre	NULL	NULL	299.1528128	NULL	FALSE	Norway; Sweden	1mm increase in semi-major axis
+7007	Clarke 1858		20926348	Clarke's foot	0.3047972654	6378293.64520876	NULL	20855233	FALSE	Numerous	Clarke's 1858/II solution. Derived parameters: a = 6378293.645m using his 1865 ratio of 0.3047972654 feet per metre; 1/f = 294.26068; In Australia and Amoco Trinidad 1/f taken to two decimal places (294.26 exactly); elsewhere a and b used to derive 1/f
+7008	Clarke 1866		6378206.4	metre	NULL	NULL	NULL	6356583.8	FALSE	Numerous	Original definition a=20926062 and b=20855121 (British) feet; Uses Clarke's 1865 inch-metre ratio of 39.370432 to obtain metres; (Metric value then converted to US survey feet for use in the US and international feet for use in Cayman Islands)
+7010	Clarke 1880 (Benoit)		6378300.789	metre	NULL	NULL	NULL	6356566.435	FALSE	Numerous	Adopts Clarke's values for a and b; Uses Benoit's 1895 ratio of 0.9143992 metres per yard to convert to metres
+7011	Clarke 1880 (IGN)		6378249.2	metre	NULL	NULL	NULL	6356515	FALSE	Numerous	Adopts Clarke's values for a and b using his 1865 ratio of 39.370432 inches per metre to convert axes to metres
+7012	Clarke 1880 (RGS)	Clarke Modified 1880	6378249.145	metre	NULL	NULL	293.465	NULL	FALSE	Numerous	Adopts Clarke's values for a and 1/f; Adopts his 1865 ratio of 39.370432 inches per metre to convert semi-major axis to metres
+7013	Clarke 1880 (Arc)	Modified Clarke 1880 (South Africa);Clarke 1880 (Cape)	6378249.145	metre	NULL	NULL	293.4663077	NULL	FALSE	South Africa	Adopts Clarke's value for a with derived 1/f;  Uses his 1865 ratio of 39.370432 inch per metre to convert semi-major axis to metres
+7014	Clarke 1880 (SGA 1922)		6378249.2	metre	NULL	NULL	293.46598	NULL	FALSE	France	Used in Old French Triangulation (ATF); Uses Clarke's 1865 inch-metre ratio of 39.370432 to convert axes to metres
+7015	Everest 1830 (1937 Adjustment)		6377276.345	metre	NULL	NULL	300.8017	NULL	FALSE	India	Used for the 1937 readjustment of Indian triangulation;  Clarke's 1865 Indian-British foot ratio (0.99999566) and Benoit's 1898 British inch-metre ratio (39.370113) rounded as 0.30479841 exactly and applied to Everest's 1830 definition taken as a and 1/f
+7016	Everest 1830 (1967 Definition)		6377298.556	metre	NULL	NULL	300.8017	NULL	FALSE	East Malaysia	Applies Sears 1922 inch-metre ratio of 39.370147 to Everest 1830 original definition of a and 1/f but with a taken to be in British rather than Indian feet
+7018	Everest 1830 Modified		6377304.063	metre	NULL	NULL	300.8017	NULL	FALSE	West Malaysia	Applies Benoit 1898 inch-metre ratio of 39.370113 to Everest 1830 original definition of a and 1/f but with a taken to be in British rather than Indian feet
+7019	GRS 1980	International 1979	6378137	metre	NULL	NULL	298.257222101	NULL	FALSE	Numerous	Adopted by IUGG 1979 Canberra
+7020	Helmert 1906		6378200	metre	NULL	NULL	298.3	NULL	FALSE	Egypt	Helmert 1906/III solution
+7021	Indonesian National Spheroid		6378160	metre	NULL	NULL	298.247	NULL	FALSE	Indonesia	Based on the GRS 1967 figure but with 1/f taken to 3 decimal places exactly
+7022	International 1924	Hayford 1909	6378388	metre	NULL	NULL	297	NULL	FALSE	Numerous	Adopted by IUGG 1924 in Madrid. Based on Hayford 1909/1910 figures
+7024	Krassowsky 1940		6378245	metre	NULL	NULL	298.3	NULL	FALSE	Russia; Asia	
+7025	NWL 9D	WGS 66	6378145	metre	NULL	NULL	298.25	NULL	FALSE	Numerous	
+7027	Plessis 1817		6376523	metre	NULL	NULL	308.64	NULL	FALSE	Numerous	Rescaling of Delambre 1810 figure (a=6376985 m) to make meridional arc from equator to pole equal to 10000000 metres exactly
+7028	Struve 1860		6378298.3	metre	NULL	NULL	294.73	NULL	FALSE	Numerous	Original definition of semi-major axis given as 3272539 toise
+7029	War Office	McCaw 1924	6378300	metre	NULL	NULL	296	NULL	FALSE	Ghana	In non-metric form; a=20926201 Gold Coast feet; DMA Technical Manual 8358.1 and data derived from this quotes value for semi-major axis as 6378300.58m: IOGP recommends use of defined value 6378300m exactly
+7030	WGS 84	WGS84	6378137	metre	NULL	NULL	298.257223563	NULL	FALSE	Numerous	
+7031	GEM 10C		6378137	metre	NULL	NULL	298.257223563	NULL	FALSE	Numerous	Used for  GEM 10C Gravity Potential Model
+7032	OSU86F		6378136.2	metre	NULL	NULL	298.257223563	NULL	FALSE	Numerous	Used for OSU86 gravity potential (geoidal) model
+7033	OSU91A		6378136.3	metre	NULL	NULL	298.257223563	NULL	FALSE	Numerous	Used for OSU91 gravity potential (geoidal) model
+7034	Clarke 1880		20926202	Clarke's foot	0.3047972654	6378249.14480801	NULL	20854895	FALSE	Numerous	Clarke gave a and b and also 1/f=293.465 (to 3 decimal places exactly)
+7036	GRS 1967	International 1967	6378160	metre	NULL	NULL	298.247167427	NULL	FALSE	Australia	
+7041	Average Terrestrial System 1977		6378135	metre	NULL	NULL	298.257	NULL	FALSE	Canada	
+7042	Everest (1830 Definition)		20922931.8	Indian foot	0.304799510248147	6377299.36559538	NULL	20853374.58	FALSE	Asia	Everest gave a and b to 2 decimal places and also 1/f=300.8017 (to 4 decimal places exactly).
+7043	WGS 72	NWL 10D	6378135	metre	NULL	NULL	298.26	NULL	FALSE	Numerous	
+7044	Everest 1830 (1962 Definition)		6377301.243	metre	NULL	NULL	300.8017255	NULL	FALSE	Asia	Used by Pakistan since metrication; Clarke's 1865 Indian foot-British foot ratio (0.99999566) and his 1865 British inch-metre ratio (39.369971) rounded with slight error as 1 Ind ft = 0.3047995m exactly and applied to Everest's 1830 definition of a & b
+7045	Everest 1830 (1975 Definition)		6377299.151	metre	NULL	NULL	300.8017255	NULL	FALSE	Asia	Used by India since metrication; Clarke's 1865 Indian foot-British foot ratio (0.99999566) and his 1865 British inch-metre ratio (39.369971) rounded as 1 Ind ft = 0.3047995m exactly applied to Everest's 1830 original definition taken as a and b
+7046	Bessel Namibia (GLM)		6377397.155	German legal metre	1.0000135965	6377483.86528042	299.1528128	NULL	FALSE	Namibia	The semi-major axis has the same value as the Bessel 1841 ellipsoid (code 7004) but is in different units - German Legal Metres rather than International metres - hence a different size;  a = 6377483.865 International metres
+7048	GRS 1980 Authalic Sphere		6371007	metre	NULL	NULL	NULL	6371007	TRUE	Australia	Authalic sphere derived from GRS 1980 ellipsoid (code 7019); 1/f is infinite
+7049	IAG 1975	Xian 1980	6378140	metre	NULL	NULL	298.257	NULL	FALSE	China	
+7050	GRS 1967 Modified	GRS 1967	6378160	metre	NULL	NULL	298.25	NULL	FALSE	Australia	Based on the GRS 1967 figure (code 7036) but with 1/f taken to 2 decimal places exactly; used with SAD69 and TWD67 datums; The dimensions are also used as the Australian National Spheroid (code 7003)
+7051	Danish 1876		6377019.27	metre	NULL	NULL	300	NULL	FALSE	Denmark	Semi-major axis originally given as 3271883.25 toise; Uses toise to French metre ratio of 1.94903631 to two decimal place precision
+7052	Clarke 1866 Authalic Sphere		6370997	metre	NULL	NULL	NULL	6370997	TRUE	Numerous	Authalic sphere derived from Clarke 1866 ellipsoid (code 7008)
+7053	Hough 1960		6378270	metre	NULL	NULL	297	NULL	FALSE	USA	
+7054	PZ-90		6378136	metre	NULL	NULL	298.257839303	NULL	FALSE	Russia	
+7055	Clarke 1880 (international foot)		20926202	foot	0.3048	6378306.3696	NULL	20854895	FALSE	Numerous	Clarke's 1880 definition in feet assumed for the purposes of metric conversion to be international foot; a = 6378306.370 metres; 1/f derived from a and b = 293.4663077
+7056	Everest 1830 (RSO 1969)		6377295.664	metre	NULL	NULL	300.8017	NULL	FALSE	Malaysia	Adopted for 1969 metrication of peninsula Malaysia RSO grid; Uses Sears 1922 yard-metre ratio truncated to 6 significant figures applied to Everest 1830 original definition of a and 1/f but with a taken to be in British rather than Indian feet
+7057	International 1924 Authalic Sphere		6371228	metre	NULL	NULL	NULL	6371228	TRUE	Numerous	Authalic sphere derived from International 1924 ellipsoid (code 7022)
+7058	Hughes 1980		6378273	metre	NULL	NULL	NULL	6356889.449	FALSE	Polar	Semi-minor axis derived from eccentricity = 0.081816153; Semi-major axis (a) sometimes given as 3443.992nm which OGP suspects is a derived approximation; IOGP conversion assumes 1nm=1852m exactly

@@ -140,7 +140,7 @@ abstract class Point implements Stringable
     {
         $a = $ellipsoid->getSemiMajorAxis()->asMetres()->getValue();
         $b = $ellipsoid->getSemiMinorAxis()->asMetres()->getValue();
-        $f = $ellipsoid->getInverseFlattening();
+        $f = $ellipsoid->getFlattening();
         $U1 = atan((1 - $f) * tan($from->getLatitude()->asRadians()->getValue()));
         $U2 = atan((1 - $f) * tan($to->getLatitude()->asRadians()->getValue()));
         $L = $to->getLongitude()->subtract($from->getLongitude())->asRadians()->getValue();

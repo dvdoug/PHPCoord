@@ -661,10 +661,13 @@ class Ellipsoid
 
     protected Length $semiMinorAxis;
 
-    public function __construct(Length $semiMajorAxis, Length $semiMinorAxis)
+    protected string $name;
+
+    public function __construct(Length $semiMajorAxis, Length $semiMinorAxis, string $name = '')
     {
         $this->semiMajorAxis = $semiMajorAxis;
         $this->semiMinorAxis = $semiMinorAxis;
+        $this->name = $name;
     }
 
     public function getSemiMajorAxis(): Length
@@ -677,9 +680,14 @@ class Ellipsoid
         return $this->semiMinorAxis;
     }
 
-    public function getInverseFlattening(): float
+    public function getFlattening(): float
     {
         return ($this->semiMajorAxis->getValue() - $this->semiMinorAxis->getValue()) / $this->semiMajorAxis->getValue();
+    }
+
+    public function getInverseFlattening(): float
+    {
+        return 1 / $this->getFlattening();
     }
 
     public function getEccentricity(): float
@@ -689,7 +697,12 @@ class Ellipsoid
 
     public function getEccentricitySquared(): float
     {
-        return (2 * $this->getInverseFlattening()) - $this->getInverseFlattening() ** 2;
+        return (2 * $this->getFlattening()) - $this->getFlattening() ** 2;
+    }
+
+    public function getName(): string
+    {
+        return $this->name;
     }
 
     public static function fromSRID(string $srid): self
@@ -703,7 +716,8 @@ class Ellipsoid
 
             self::$cachedObjects[$srid] = new static(
                 Length::makeUnit($data['semi_major_axis'], $data['uom']),
-                Length::makeUnit($data['semi_minor_axis'], $data['uom'])
+                Length::makeUnit($data['semi_minor_axis'], $data['uom']),
+                $data['name'],
             );
         }
 

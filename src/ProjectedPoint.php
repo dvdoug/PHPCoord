@@ -1235,7 +1235,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         $scaleFactorOrigin = $scaleFactorAtNaturalOrigin->asUnity()->getValue();
         $a = $ellipsoid->getSemiMajorAxis()->asMetres()->getValue();
         $e2 = $ellipsoid->getEccentricitySquared();
-        $f = $ellipsoid->getInverseFlattening();
+        $f = $ellipsoid->getFlattening();
 
         $n = $f / (2 - $f);
         $rhoO = $a * (1 - $e2) / (1 - $e2 * sin($latitudeOrigin) ** 2) ** (3 / 2);
@@ -1873,7 +1873,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         $kO = $scaleFactorAtNaturalOrigin->asUnity()->getValue();
         $a = $ellipsoid->getSemiMajorAxis()->asMetres()->getValue();
         $e = $ellipsoid->getEccentricity();
-        $f = $ellipsoid->getInverseFlattening();
+        $f = $ellipsoid->getFlattening();
 
         $n = $f / (2 - $f);
         $B = ($a / (1 + $n)) * (1 + $n ** 2 / 4 + $n ** 4 / 64);

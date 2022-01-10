@@ -13,6 +13,7 @@ use Generator;
 use function min;
 use PHPCoord\CoordinateOperation\CoordinateOperations;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
+use PHPCoord\Datum\Ellipsoid;
 use PHPCoord\Exception\UnknownSRIDException;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPCoord\UnitOfMeasure\Length\Length;
@@ -42,8 +43,8 @@ class GIGSTest extends TestCase
                 $unit instanceof Scale => $unit->asUnity(),
             };
 
-            $decimalPlaces = min(10, strlen(substr($baseUnitsPerUnit, strpos($baseUnitsPerUnit, '.') + 1)));
-            $this->assertEqualsWithDelta($baseUnitsPerUnit, $actualBaseUnitsPerUnit->getValue(), 1 / 10 ** $decimalPlaces);
+            $delta = 1 / 10 ** min(10, strlen(substr($baseUnitsPerUnit, strpos($baseUnitsPerUnit, '.') + 1)));
+            $this->assertEqualsWithDelta($baseUnitsPerUnit, $actualBaseUnitsPerUnit->getValue(), $delta);
         }
     }
 
@@ -53,6 +54,37 @@ class GIGSTest extends TestCase
 
         foreach ($body as $row) {
             yield '#' . $row[0] => [$row[0], $row[1], $row[2], $row[4]];
+        }
+    }
+
+    /**
+     * @dataProvider series2200EllipsoidData
+     */
+    public function testSeries2200Ellipsoids(string $epsgCode, string $name, string $semiMajorAxis, string $semiMajorAxisUnitName, string $semiMajorAxisAsMetres, string $inverseFlattening, string $semiMinorAxis): void
+    {
+        $ellipsoid = Ellipsoid::fromSRID('urn:ogc:def:ellipsoid:EPSG::' . $epsgCode);
+        $this->assertEquals($name, $ellipsoid->getName());
+        $this->assertEquals($semiMajorAxis, $ellipsoid->getSemiMajorAxis()->getValue());
+        $this->assertEquals($semiMajorAxisUnitName, $ellipsoid->getSemiMajorAxis()->getUnitName());
+
+        if ($semiMinorAxis !== 'NULL') {
+            $this->assertEquals($semiMinorAxis, $ellipsoid->getSemiMinorAxis()->getValue());
+        } else {
+            $this->assertEquals($inverseFlattening, $ellipsoid->getInverseFlattening());
+        }
+
+        if ($semiMajorAxisUnitName !== 'metre') {
+            $delta = 1 / 10 ** min(10, strlen(substr($semiMajorAxisAsMetres, strpos($semiMajorAxisAsMetres, '.') + 1)));
+            $this->assertEqualsWithDelta($semiMajorAxisAsMetres, $ellipsoid->getSemiMajorAxis()->asMetres()->getValue(), $delta);
+        }
+    }
+
+    public function series2200EllipsoidData(): Generator
+    {
+        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 2200 Predefined Geodetic Data Objects test data/ASCII/GIGS_lib_2202_Ellipsoid.txt');
+
+        foreach ($body as $row) {
+            yield '#' . $row[0] => [$row[0], $row[1], $row[3], $row[4], $row[6], $row[7], $row[8]];
         }
     }
 
