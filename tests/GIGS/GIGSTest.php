@@ -120,9 +120,9 @@ class GIGSTest extends TestCase
     }
 
     /**
-     * @dataProvider series2200DatumData
+     * @dataProvider series2200GeodeticDatumData
      */
-    public function testSeries2200Datums(string $epsgCode, string $name, string $ellipsoidName, string $primeMeridianName): void
+    public function testSeries2200GeodeticDatums(string $epsgCode, string $name, string $ellipsoidName, string $primeMeridianName): void
     {
         $datum = Datum::fromSRID('urn:ogc:def:datum:EPSG::' . $epsgCode);
         $this->assertEquals($name, Datum::getSupportedSRIDs()['urn:ogc:def:datum:EPSG::' . $epsgCode]);
@@ -130,7 +130,7 @@ class GIGSTest extends TestCase
         $this->assertEquals($primeMeridianName, $datum->getPrimeMeridian()->getName());
     }
 
-    public function series2200DatumData(): Generator
+    public function series2200GeodeticDatumData(): Generator
     {
         [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 2200 Predefined Geodetic Data Objects test data/ASCII/GIGS_lib_2204_GeodeticDatum.txt');
 
@@ -201,6 +201,24 @@ class GIGSTest extends TestCase
 
         foreach ($body as $row) {
             yield '#' . $row[0] => [$row[0], $row[1], $row[3]];
+        }
+    }
+
+    /**
+     * @dataProvider series2200VerticalDatumData
+     */
+    public function testSeries2200VerticalDatums(string $epsgCode, string $name): void
+    {
+        $datum = Datum::fromSRID('urn:ogc:def:datum:EPSG::' . $epsgCode);
+        $this->assertEquals($name, Datum::getSupportedSRIDs()['urn:ogc:def:datum:EPSG::' . $epsgCode]);
+    }
+
+    public function series2200VerticalDatumData(): Generator
+    {
+        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 2200 Predefined Geodetic Data Objects test data/ASCII/GIGS_lib_2209_VerticalDatum.txt');
+
+        foreach ($body as $row) {
+            yield '#' . $row[0] => [$row[0], $row[1]];
         }
     }
 

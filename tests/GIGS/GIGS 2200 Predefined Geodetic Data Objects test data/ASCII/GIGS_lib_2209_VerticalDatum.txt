@@ -1,0 +1,43 @@
+# File: GIGS_lib_2209_VerticalDatum
+# GIGS Test Procedure: 2209
+# GIGS Test Dataset Version: 2.0
+# EPSG Dataset Version: 10.047
+# GIGS Test Dataset Issue Date: 2021-05-03
+#
+# Fields:
+# [0]: EPSG Datum Code
+# [1]: EPSG Datum Name
+# [2]: Alias(es)
+# [3]: EPSG Usage Extent
+# [4]: GIGS Remarks
+#
+# [0]	# [1]	# [2]	# [3]	# [4]
+5100	Mean Sea Level	MSL	World
+5101	Ordnance Datum Newlyn	ODN; Newlyn	UK - Great Britain mainland onshore
+5102	National Geodetic Vertical Datum 1929	NGVD29	USA - CONUS - onshore
+5103	North American Vertical Datum 1988	NAVD88	North America - Mexico and USA - onshore
+5104	Yellow Sea 1956	Huang Hai 1956; Yellow Sea	China - onshore
+5105	Baltic 1977	Baltic; Baltic Sea	Europe - FSU onshore
+5106	Caspian Sea	Caspian	Asia - FSU - Caspian Sea
+5109	Normaal Amsterdams Peil	NAP	Netherlands
+5111	Australian Height Datum	AHD; AHD71; AHD-TAS83	Australia Christmas and Cocos - onshore
+5112	Australian Height Datum (Tasmania)	AHD (Tasmania)	Australia - Tasmania mainland onshore
+5114	Canadian Geodetic Vertical Datum of 1928	CVD28; Canadian Vertical Datum of 1928; CGVD28	Canada
+5118	Nivellement General de la France - Lallemand	NGF - Lallemand; NGF; Nivellement general de la France	France - mainland onshore
+5119	Nivellement General de la France - IGN69	NGF-IGN69; Nivellement general de la France; NGF	France - mainland onshore
+5123	PDO Height Datum 1993	PHD93	Oman - onshore
+5124	Fahud Height Datum	Fahud HD	Oman - mainland
+5129	European Vertical Reference Frame 2000	EVRF2000	Europe
+5133	AIOC 1995	AIOC95	Azerbaijan - offshore and Sangachal
+5137	Yellow Sea 1985	Huang Hai 1985	China - onshore
+5149	Fao	British Vertical Datum	Asia - Middle East -SE Iraq and SW Iran
+5150	Bandar Abbas		Iran - onshore
+5171	EGM96 geoid	EGM96	World
+5181	Deutsches Haupthoehennetz 1992	DHHN92; Deutsches Haupth√∂hennetz 1992	Germany - onshore
+5182	Deutsches Haupthoehennetz 1985	DHHN85; Deutsches Haupth√∂hennetz 1985	Germany - West Germany all states
+5184	Baltic 1982		Bulgaria - onshore
+5186	Kuwait PWD	PWD	Kuwait - onshore
+5187	KOC Well Datum	WD	Kuwait - onshore
+5188	KOC Construction Datum	CD	Kuwait - onshore
+5194	Lagos 1955		Nigeria - onshore
+5215	European Vertical Reference Frame 2007	EVRF2007	Europe
