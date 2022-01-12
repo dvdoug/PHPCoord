@@ -2650,11 +2650,6 @@ class Compound extends CoordinateReferenceSystem
         $this->name = $name;
     }
 
-    public function getSRID(): string
-    {
-        return $this->srid;
-    }
-
     public function getHorizontal(): Geocentric|Geographic2D|Projected
     {
         return $this->horizontal;
