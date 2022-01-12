@@ -1,0 +1,18 @@
+# File: GIGS_lib_2211_VertTfm
+# GIGS Test Procedure: 2211
+# GIGS Test Dataset Version: 2.0
+# EPSG Dataset Version: 10.047
+# GIGS Test Dataset Issue Date: 2021-05-03
+#
+# Fields:
+# [0]: EPSG Coordinate Operation Code
+# [1]: EPSG Transformation Name
+# [2]: Alias(es)
+# [3]: Transformation Version
+# [4]: Coordinate Operation Method
+# [5]: EPSG Usage Extent
+# [6]: GIGS Remarks
+#
+# [0]	# [1]	# [2]	# [3]	# [4]	# [5]	# [6]
+5443	Baltic 1977 height to AIOC95 height (1)		AIOC95-Aze	Vertical Offset	Azerbaijan - offshore and Sangachal¬†Open
+5445	Baltic 1977 depth to AIOC95 depth (1)		AIOC95-Aze	Vertical Offset	Azerbaijan - offshore and Sangachal¬†Open

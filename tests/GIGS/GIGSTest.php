@@ -243,6 +243,39 @@ class GIGSTest extends TestCase
     }
 
     /**
+     * @dataProvider series2200OperationData
+     */
+    public function testSeries2200Operations(string $epsgCode, string $name, string $method): void
+    {
+        $operation = CoordinateOperations::getOperationData('urn:ogc:def:coordinateOperation:EPSG::' . $epsgCode);
+        $this->assertEquals($name, $operation['name']);
+        //$this->assertEquals('urn:ogc:def:datum:EPSG::' . $datumCode, $crs->getDatum()->getSRID());
+    }
+
+    public function series2200OperationData(): Generator
+    {
+        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 2200 Predefined Geodetic Data Objects test data/ASCII/GIGS_lib_2206_Conversion.txt');
+
+        foreach ($body as $row) {
+            yield '#' . $row[0] => [$row[0], $row[1], $row[3]];
+        }
+
+        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 2200 Predefined Geodetic Data Objects test data/ASCII/GIGS_lib_2208_CoordTfm.txt');
+
+        foreach ($body as $row) {
+            if ($row[4] !== 'NADCON') {
+                yield '#' . $row[0] => [$row[0], $row[1], $row[4]];
+            }
+        }
+
+        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 2200 Predefined Geodetic Data Objects test data/ASCII/GIGS_lib_2211_VertTfm.txt');
+
+        foreach ($body as $row) {
+            yield '#' . $row[0] => [$row[0], $row[1], $row[3]];
+        }
+    }
+
+    /**
      * @dataProvider series7000DeprecationData
      */
     public function testSeries7000Deprecation(string $epsgCode, string $entityType): void

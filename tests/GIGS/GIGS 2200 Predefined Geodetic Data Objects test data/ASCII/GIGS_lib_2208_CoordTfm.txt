@@ -1,0 +1,31 @@
+# File: GIGS_lib_2208_CoordTfm
+# GIGS Test Procedure: 2208
+# GIGS Test Dataset Version: 2.0
+# EPSG Dataset Version: 10.047
+# GIGS Test Dataset Issue Date: 2021-05-03
+#
+# Fields:
+# [0]: EPSG Coordinate Operation Code
+# [1]: EPSG Transformation Name
+# [2]: Alias(es)
+# [3]: Transformation Version
+# [4]: Coordinate Operation Method
+# [5]: EPSG Usage Extent
+# [6]: GIGS Remarks
+#
+# [0]	# [1]	# [2]	# [3]	# [4]	# [5]	# [6]
+1095	PSAD56 to WGS 84 (13)		EPSG-Ven	Molodensky-Badekas 10-parameter transformation	Venezuela - onshore	Identify whether 1095 or 1096 or both are given
+1096	La Canoa to WGS 84 (13)		EPSG-Ven	Molodensky-Badekas 10-parameter transformation	Venezuela - onshore	Identify whether 1095 or 1096 or both are given
+1241	NAD27 to NAD83 (1)		NGS-Usa Conus	NADCON	USA - CONUS including EEZ
+1243	NAD27 to NAD83 (2)		NGS-Usa AK	NADCON	USA - Alaska including EEZ
+1311	ED50 to WGS 84 (18)	ED50 to WGS 84 (Common Offshore)	UKOOA-CO	Position Vector 7-param. transformation	Europe - common offshore
+1313	NAD27 to NAD83 (4)	NAD27 to NAD83(Original) [CAv1]	GC-Can NT2	NTv2	Canada
+1613	ED50 to WGS 84 (24)		EPSG-Nor S62 2001	Position Vector 7-param. transformation	Norway - North Sea - offshore south of 62°N
+1693	NAD27 to WGS 84 (33)		EPSG-Can	NTv2	Canada	EPSG copy of 1313
+1763	NTF (Paris) to NTF (1)		IGN-Fra	Longitude rotation	France - onshore - mainland and Corsica	Uses unusual unit (grad) as rotation unit
+1803	AGD66 to GDA94 (11)	AGD66 to GDA94 [GA v2]	ICSM-Aus 0.1m	NTv2	Australia - onshore
+1804	AGD84 to GDA94 (5)	AGD84 to GDA94 [GA v2]	Auslig-Aus 0.1m	NTv2	Australia
+1998	ED50 to WGS 84 (36)		EPSG-Ger Nsea	Position Vector 7-param. transformation	Germany - offshore North Sea
+15730	Bogota 1975 to MAGNA-SIRGAS (9)		IGAC-Col MB reg 1	Molodensky-Badekas 10-parameter transformation	Colombia region 1	Uses unusual unit (radian) as rotation unit
+15851	NAD27 to WGS 84 (79)		OGP-Usa Conus	NADCON	USA - CONUS including EEZ	EPSG copy of 1241
+15864	NAD27 to WGS 84 (85)		OGP-Usa AK	NADCON	USA - Alaska including EEZ	EPSG copy of 1243

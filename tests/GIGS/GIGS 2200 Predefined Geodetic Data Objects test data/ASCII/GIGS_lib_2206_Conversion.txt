@@ -1,0 +1,470 @@
+# File: GIGS_lib_2206_Conversion
+# GIGS Test Procedure: 2206
+# GIGS Test Dataset Version: 2.0
+# EPSG Dataset Version: 10.047
+# GIGS Test Dataset Issue Date: 2021-05-03
+# Note: Entities are all map projections; a type of coordinate conversion
+#
+# Fields:
+# [0]: EPSG Conversion Code
+# [1]: EPSG Conversion Name
+# [2]: Alias(es)
+# [3]: Conversion Method
+# [4]: EPSG Usage Extent
+# [5]: GIGS Remarks
+#
+# [0]	# [1]	# [2]	# [3]	# [4]	# [5]
+10404	California CS27 zone IV	California zone IV	Lambert Conic Conformal (2SP)	USA - California - SPCS - 4
+10405	California CS27 zone V	California zone V	Lambert Conic Conformal (2SP)	USA - California - SPCS27 - 5
+10406	California CS27 zone VI	California zone VI	Lambert Conic Conformal (2SP)	USA - California - SPCS - 6
+10408	California CS27 zone VII		Lambert Conic Conformal (2SP)	USA - California - SPCS27 - 7
+10434	SPCS83 California zone 4 (meters)	California zone 4; California CS83 zone 4	Lambert Conic Conformal (2SP)	USA - California - SPCS - 4
+10435	SPCS83 California zone 5 (meters)	California zone 5; California CS83 zone 5	Lambert Conic Conformal (2SP)	USA - California - SPCS83 - 5
+10436	SPCS83 California zone 6 (meters)	California zone 6; California CS83 zone 6	Lambert Conic Conformal (2SP)	USA - California - SPCS - 6
+11701	Louisiana CS27 North zone	Louisiana North	Lambert Conic Conformal (2SP)	USA - Louisiana - SPCS - N
+11702	Louisiana CS27 South zone	Louisiana South	Lambert Conic Conformal (2SP)	USA - Louisiana - SPCS27 - S
+11731	SPCS83 Louisiana North zone (meters)	Louisiana North; Louisiana CS83 North zone	Lambert Conic Conformal (2SP)	USA - Louisiana - SPCS - N
+11732	SPCS83 Louisiana South zone (meters)	Louisiana South; Louisiana CS83 South zone	Lambert Conic Conformal (2SP)	USA - Louisiana - SPCS83 - S
+12142	SPCS83 Michigan Central zone (meters)	Michigan Central; Michigan CS83 Central zone	Lambert Conic Conformal (2SP)	USA - Michigan - SPCS - C
+12143	SPCS83 Michigan South zone (meters)	Michigan South; Michigan CS83 South zone	Lambert Conic Conformal (2SP)	USA - Michigan - SPCS - S
+13001	New Mexico CS27 East zone	New Mexico East	Transverse Mercator	USA - New Mexico - SPCS - E
+13031	SPCS83 New Mexico East zone (meters)	New Mexico East; New Mexico CS83 East zone	Transverse Mercator	USA - New Mexico - SPCS - E
+13501	Oklahoma CS27 North zone	Oklahoma North	Lambert Conic Conformal (2SP)	USA - Oklahoma - SPCS - N
+13502	Oklahoma CS27 South zone	Oklahoma South	Lambert Conic Conformal (2SP)	USA - Oklahoma - SPCS - S
+13531	SPCS83 Oklahoma North zone (meters)	Oklahoma North; Oklahoma CS83 North zone	Lambert Conic Conformal (2SP)	USA - Oklahoma - SPCS - N
+13532	SPCS83 Oklahoma South zone (meters)	Oklahoma South; Oklahoma CS83 South zone	Lambert Conic Conformal (2SP)	USA - Oklahoma - SPCS - S
+14201	Texas CS27 North zone	Texas North	Lambert Conic Conformal (2SP)	USA - Texas - SPCS - N
+14203	Texas CS27 Central zone	Texas Central	Lambert Conic Conformal (2SP)	USA - Texas - SPCS - C
+14204	Texas CS27 South Central zone	Texas South Central	Lambert Conic Conformal (2SP)	USA - Texas - SPCS27 - SC
+14205	Texas CS27 South zone	Texas South	Lambert Conic Conformal (2SP)	USA - Texas - SPCS27 - S
+14231	SPCS83 Texas North zone (meters)	Texas North; Texas CS83 North zone	Lambert Conic Conformal (2SP)	USA - Texas - SPCS - N
+14232	SPCS83 Texas North Central zone (meters)	Texas North Central; Texas CS83 North Central zone	Lambert Conic Conformal (2SP)	USA - Texas - SPCS - NC
+14233	SPCS83 Texas Central zone (meters)	Texas Central; Texas CS83 Central zone	Lambert Conic Conformal (2SP)	USA - Texas - SPCS - C
+14234	SPCS83 Texas South Central zone (meters)	Texas South Central; Texas CS83 South Central zone	Lambert Conic Conformal (2SP)	USA - Texas - SPCS83 - SC
+14235	SPCS83 Texas South zone (meters)	Texas South; Texas CS83 South zone	Lambert Conic Conformal (2SP)	USA - Texas - SPCS83 - S
+14903	Wyoming CS27 West Central zone	Wyoming West Central	Transverse Mercator	USA - Wyoming - SPCS - WC
+14933	SPCS83 Wyoming West Central zone (meters)	Wyoming West Central; Wyoming CS83 West Central zone	Transverse Mercator	USA - Wyoming - SPCS - WC
+14937	SPCS83 Wyoming West Central zone (US Survey feet)	Wyoming CS83 West Central zone (ftUS)	Transverse Mercator	USA - Wyoming - SPCS - WC
+15002	Alaska CS27 zone 2	Alaska zone 2	Transverse Mercator	USA - Alaska - 144°W to 141°W
+15003	Alaska CS27 zone 3	Alaska zone 3	Transverse Mercator	USA - Alaska - 148°W to 144°W
+15004	Alaska CS27 zone 4	Alaska zone 4	Transverse Mercator	USA - Alaska - 152°W to 148°W
+15005	Alaska CS27 zone 5	Alaska zone 5	Transverse Mercator	USA - Alaska - 156°W to 152°W
+15006	Alaska CS27 zone 6	Alaska zone 6	Transverse Mercator	USA - Alaska - 160°W to 156°W
+15007	Alaska CS27 zone 7	Alaska zone 7	Transverse Mercator	USA - Alaska - 164°W to 160°W
+15008	Alaska CS27 zone 8	Alaska zone 8	Transverse Mercator	USA - Alaska - north of 54.5°N; 168°W to 164°W
+15009	Alaska CS27 zone 9	Alaska zone 9	Transverse Mercator	USA - Alaska - north of 54.5°N; west of 168°W
+15032	SPCS83 Alaska zone 2 (meters)	Alaska zone 2; Alaska CS83 zone 2	Transverse Mercator	USA - Alaska - 144°W to 141°W
+15034	SPCS83 Alaska zone 4 (meters)	Alaska zone 4; Alaska CS83 zone 4	Transverse Mercator	USA - Alaska - 152°W to 148°W
+15035	SPCS83 Alaska zone 5 (meters)	Alaska zone 5; Alaska CS83 zone 5	Transverse Mercator	USA - Alaska - 156°W to 152°W
+15036	SPCS83 Alaska zone 6 (meters)	Alaska zone 6; Alaska CS83 zone 6	Transverse Mercator	USA - Alaska - 160°W to 156°W
+15037	SPCS83 Alaska zone 7 (meters)	Alaska zone 7; Alaska CS83 zone 7	Transverse Mercator	USA - Alaska - 164°W to 160°W
+15038	SPCS83 Alaska zone 8 (meters)	Alaska zone 8; Alaska CS83 zone 8	Transverse Mercator	USA - Alaska - north of 54.5°N; 168°W to 164°W
+15039	SPCS83 Alaska zone 9 (meters)	Alaska zone 9; Alaska CS83 zone 9	Transverse Mercator	USA - Alaska - north of 54.5°N; west of 168°W
+15310	SPCS83 California zone 4 (US Survey feet)	California zone 4 (ftUS)	Lambert Conic Conformal (2SP)	USA - California - SPCS - 4
+15311	SPCS83 California zone 5 (US Survey feet)	California zone 5 (ftUS)	Lambert Conic Conformal (2SP)	USA - California - SPCS83 - 5
+15312	SPCS83 California zone 6 (US Survey feet)	California zone 6 (ftUS)	Lambert Conic Conformal (2SP)	USA - California - SPCS - 6
+15334	SPCS83 Michigan Central zone (International feet)	Michigan Central (ft)	Lambert Conic Conformal (2SP)	USA - Michigan - SPCS - C
+15335	SPCS83 Michigan South zone (International feet)	Michigan South (ft)	Lambert Conic Conformal (2SP)	USA - Michigan - SPCS - S
+15339	SPCS83 New Mexico East zone (US Survey feet)	New Mexico East (ftUS)	Transverse Mercator	USA - New Mexico - SPCS - E
+15349	SPCS83 Oklahoma North zone (US Survey feet)	Oklahoma North (ftUS)	Lambert Conic Conformal (2SP)	USA - Oklahoma - SPCS - N
+15350	SPCS83 Oklahoma South zone (US Survey feet)	Oklahoma South (ftUS)	Lambert Conic Conformal (2SP)	USA - Oklahoma - SPCS - S
+15357	SPCS83 Texas North zone (US Survey feet)	Texas North (ftUS)	Lambert Conic Conformal (2SP)	USA - Texas - SPCS - N
+15358	SPCS83 Texas North Central zone (US Survey feet)	Texas North Central (ftUS)	Lambert Conic Conformal (2SP)	USA - Texas - SPCS - NC
+15359	SPCS83 Texas Central zone (US Survey feet)	Texas Central (ftUS)	Lambert Conic Conformal (2SP)	USA - Texas - SPCS - C
+15360	SPCS83 Texas South Central zone (US Survey feet)	Texas South Central (ftUS)	Lambert Conic Conformal (2SP)	USA - Texas - SPCS83 - SC
+15361	SPCS83 Texas South zone (US Survey feet)	Texas South (ftUS)	Lambert Conic Conformal (2SP)	USA - Texas - SPCS83 - S
+15391	SPCS83 Louisiana North zone (US Survey feet)	Louisiana CS83 North zone (ftUS)	Lambert Conic Conformal (2SP)	USA - Louisiana - SPCS - N
+15392	SPCS83 Louisiana South zone (US Survey feet)	Louisiana CS83 South zone (ftUS)	Lambert Conic Conformal (2SP)	USA - Louisiana - SPCS83 - S
+15914	BLM zone 14N (US survey feet)	BLM 14N (ftUS); BLM zone 14N in feet	Transverse Mercator	USA - 102°W to 96°W and GoM OCS	UTM in ftUS
+15915	BLM zone 15N (US survey feet)	BLM 15N (ftUS); BLM zone 15N in feet	Transverse Mercator	USA - 96°W to 90°W and GoM OCS	UTM in ftUS
+15916	BLM zone 16N (US survey feet)	BLM 16N (ftUS); BLM zone 16N in feet	Transverse Mercator	USA - 90°W to 84°W and GoM OCS	UTM in ftUS
+15917	BLM zone 17N (US survey feet)	BLM 17N (ftUS); BLM zone 17N in feet	Transverse Mercator	USA - 84°W to 78°W and GoM OCS	UTM in ftUS
+16001	UTM zone 1N		Transverse Mercator	World - N hemisphere - 180°W to 174°W
+16002	UTM zone 2N		Transverse Mercator	World - N hemisphere - 174°W to 168°W
+16003	UTM zone 3N		Transverse Mercator	World - N hemisphere - 168°W to 162°W
+16004	UTM zone 4N		Transverse Mercator	World - N hemisphere - 162°W to 156°W
+16005	UTM zone 5N		Transverse Mercator	World - N hemisphere - 156°W to 150°W
+16006	UTM zone 6N		Transverse Mercator	World - N hemisphere - 150°W to 144°W
+16007	UTM zone 7N		Transverse Mercator	World - N hemisphere - 144°W to 138°W
+16008	UTM zone 8N		Transverse Mercator	World - N hemisphere - 138°W to 132°W
+16009	UTM zone 9N		Transverse Mercator	World - N hemisphere - 132°W to 126°W
+16010	UTM zone 10N		Transverse Mercator	World - N hemisphere - 126°W to 120°W
+16011	UTM zone 11N		Transverse Mercator	World - N hemisphere - 120°W to 114°W
+16012	UTM zone 12N		Transverse Mercator	World - N hemisphere - 114°W to 108°W
+16013	UTM zone 13N		Transverse Mercator	World - N hemisphere - 108°W to 102°W
+16014	UTM zone 14N		Transverse Mercator	World - N hemisphere - 102°W to 96°W
+16015	UTM zone 15N		Transverse Mercator	World - N hemisphere - 96°W to 90°W
+16016	UTM zone 16N		Transverse Mercator	World - N hemisphere - 90°W to 84°W
+16017	UTM zone 17N		Transverse Mercator	World - N hemisphere - 84°W to 78°W
+16018	UTM zone 18N		Transverse Mercator	World - N hemisphere - 78°W to 72°W
+16019	UTM zone 19N		Transverse Mercator	World - N hemisphere - 72°W to 66°W
+16020	UTM zone 20N		Transverse Mercator	World - N hemisphere - 66°W to 60°W
+16021	UTM zone 21N		Transverse Mercator	World - N hemisphere - 60°W to 54°W
+16022	UTM zone 22N		Transverse Mercator	World - N hemisphere - 54°W to 48°W
+16023	UTM zone 23N		Transverse Mercator	World - N hemisphere - 48°W to 42°W
+16024	UTM zone 24N		Transverse Mercator	World - N hemisphere - 42°W to 36°W
+16025	UTM zone 25N		Transverse Mercator	World - N hemisphere - 36°W to 30°W
+16026	UTM zone 26N		Transverse Mercator	World - N hemisphere - 30°W to 24°W
+16027	UTM zone 27N		Transverse Mercator	World - N hemisphere - 24°W to 18°W
+16028	UTM zone 28N		Transverse Mercator	World - N hemisphere - 18°W to 12°W
+16029	UTM zone 29N		Transverse Mercator	World - N hemisphere - 12°W to 6°W
+16030	UTM zone 30N		Transverse Mercator	World - N hemisphere - 6°W to 0°W
+16031	UTM zone 31N		Transverse Mercator	World - N hemisphere - 0°E to 6°E
+16032	UTM zone 32N		Transverse Mercator	World - N hemisphere - 6°E to 12°E
+16033	UTM zone 33N		Transverse Mercator	World - N hemisphere - 12°E to 18°E
+16034	UTM zone 34N		Transverse Mercator	World - N hemisphere - 18°E to 24°E
+16035	UTM zone 35N		Transverse Mercator	World - N hemisphere - 24°E to 30°E
+16036	UTM zone 36N		Transverse Mercator	World - N hemisphere - 30°E to 36°E
+16037	UTM zone 37N		Transverse Mercator	World - N hemisphere - 36°E to 42°E
+16038	UTM zone 38N		Transverse Mercator	World - N hemisphere - 42°E to 48°E
+16039	UTM zone 39N		Transverse Mercator	World - N hemisphere - 48°E to 54°E
+16040	UTM zone 40N		Transverse Mercator	World - N hemisphere - 54°E to 60°E
+16041	UTM zone 41N		Transverse Mercator	World - N hemisphere - 60°E to 66°E
+16042	UTM zone 42N		Transverse Mercator	World - N hemisphere - 66°E to 72°E
+16043	UTM zone 43N		Transverse Mercator	World - N hemisphere - 72°E to 78°E
+16044	UTM zone 44N		Transverse Mercator	World - N hemisphere - 78°E to 84°E
+16045	UTM zone 45N		Transverse Mercator	World - N hemisphere - 84°E to 90°E
+16046	UTM zone 46N		Transverse Mercator	World - N hemisphere - 90°E to 96°E
+16047	UTM zone 47N		Transverse Mercator	World - N hemisphere - 96°E to 102°E
+16048	UTM zone 48N		Transverse Mercator	World - N hemisphere - 102°E to 108°E
+16049	UTM zone 49N		Transverse Mercator	World - N hemisphere - 108°E to 114°E
+16050	UTM zone 50N		Transverse Mercator	World - N hemisphere - 114°E to 120°E
+16051	UTM zone 51N		Transverse Mercator	World - N hemisphere - 120°E to 126°E
+16052	UTM zone 52N		Transverse Mercator	World - N hemisphere - 126°E to 132°E
+16053	UTM zone 53N		Transverse Mercator	World - N hemisphere - 132°E to 138°E
+16054	UTM zone 54N		Transverse Mercator	World - N hemisphere - 138°E to 144°E
+16055	UTM zone 55N		Transverse Mercator	World - N hemisphere - 144°E to 150°E
+16056	UTM zone 56N		Transverse Mercator	World - N hemisphere - 150°E to 156°E
+16057	UTM zone 57N		Transverse Mercator	World - N hemisphere - 156°E to 162°E
+16058	UTM zone 58N		Transverse Mercator	World - N hemisphere - 162°E to 168°E
+16059	UTM zone 59N		Transverse Mercator	World - N hemisphere - 168°E to 174°E
+16060	UTM zone 60N		Transverse Mercator	World - N hemisphere - 174°E to 180°E
+16070	3-degree Gauss-Kruger zone 40		Transverse Mercator	World - N hemisphere - 3-degree CM 120°E	With zone prefix in easting
+16071	3-degree Gauss-Kruger zone 41		Transverse Mercator	World - N hemisphere - 3-degree CM 123°E	With zone prefix in easting
+16072	3-degree Gauss-Kruger zone 42		Transverse Mercator	World - N hemisphere - 3-degree CM 126°E	With zone prefix in easting
+16073	3-degree Gauss-Kruger zone 43		Transverse Mercator	World - N hemisphere - 3-degree CM 129°E	With zone prefix in easting
+16074	3-degree Gauss-Kruger zone 44		Transverse Mercator	World - N hemisphere - 3-degree CM 132°E	With zone prefix in easting
+16075	3-degree Gauss-Kruger zone 45		Transverse Mercator	World - N hemisphere - 3-degree CM 135°E	With zone prefix in easting
+16076	3-degree Gauss-Kruger zone 46		Transverse Mercator	World - N hemisphere - 3-degree CM 138°E	With zone prefix in easting
+16077	3-degree Gauss-Kruger zone 47		Transverse Mercator	World - N hemisphere - 3-degree CM 141°E	With zone prefix in easting
+16078	3-degree Gauss-Kruger zone 48		Transverse Mercator	World - N hemisphere - 3-degree CM 144°E	With zone prefix in easting
+16079	3-degree Gauss-Kruger zone 49		Transverse Mercator	World - N hemisphere - 3-degree CM 147°E	With zone prefix in easting
+16080	3-degree Gauss-Kruger zone 50		Transverse Mercator	World - N hemisphere - 3-degree CM 150°E	With zone prefix in easting
+16081	3-degree Gauss-Kruger zone 51		Transverse Mercator	World - N hemisphere - 3-degree CM 153°E	With zone prefix in easting
+16082	3-degree Gauss-Kruger zone 52		Transverse Mercator	World - N hemisphere - 3-degree CM 156°E	With zone prefix in easting
+16083	3-degree Gauss-Kruger zone 53		Transverse Mercator	World - N hemisphere - 3-degree CM 159°E	With zone prefix in easting
+16084	3-degree Gauss-Kruger zone 54		Transverse Mercator	World - N hemisphere - 3-degree CM 162°E	With zone prefix in easting
+16085	3-degree Gauss-Kruger zone 55		Transverse Mercator	World - N hemisphere - 3-degree CM 165°E	With zone prefix in easting
+16086	3-degree Gauss-Kruger zone 56		Transverse Mercator	World - N hemisphere - 3-degree CM 168°E	With zone prefix in easting
+16087	3-degree Gauss-Kruger zone 57		Transverse Mercator	World - N hemisphere - 3-degree CM 171°E	With zone prefix in easting
+16088	3-degree Gauss-Kruger zone 58		Transverse Mercator	World - N hemisphere - 3-degree CM 174°E	With zone prefix in easting
+16089	3-degree Gauss-Kruger zone 59		Transverse Mercator	World - N hemisphere - 3-degree CM 177°E	With zone prefix in easting
+16091	3-degree Gauss-Kruger zone 61		Transverse Mercator	World - N hemisphere - 3-degree CM 177°W	With zone prefix in easting
+16092	3-degree Gauss-Kruger zone 62		Transverse Mercator	World - N hemisphere - 3-degree CM 174°W	With zone prefix in easting
+16093	3-degree Gauss-Kruger zone 63		Transverse Mercator	World - N hemisphere - 3-degree CM 171°W	With zone prefix in easting
+16094	3-degree Gauss-Kruger zone 64		Transverse Mercator	World - N hemisphere - 3-degree CM 168°W	With zone prefix in easting
+16099	3-degree Gauss-Kruger zone 60		Transverse Mercator	World - N hemisphere - 3-degree CM 180°E	With zone prefix in easting
+16101	UTM zone 1S		Transverse Mercator	World - S hemisphere - 180°W to 174°W
+16102	UTM zone 2S		Transverse Mercator	World - S hemisphere - 174°W to 168°W
+16103	UTM zone 3S		Transverse Mercator	World - S hemisphere - 168°W to 162°W
+16104	UTM zone 4S		Transverse Mercator	World - S hemisphere - 162°W to 156°W
+16105	UTM zone 5S		Transverse Mercator	World - S hemisphere - 156°W to 150°W
+16106	UTM zone 6S		Transverse Mercator	World - S hemisphere - 150°W to 144°W
+16107	UTM zone 7S		Transverse Mercator	World - S hemisphere - 144°W to 138°W
+16108	UTM zone 8S		Transverse Mercator	World - S hemisphere - 138°W to 132°W
+16109	UTM zone 9S		Transverse Mercator	World - S hemisphere - 132°W to 126°W
+16110	UTM zone 10S		Transverse Mercator	World - S hemisphere - 126°W to 120°W
+16111	UTM zone 11S		Transverse Mercator	World - S hemisphere - 120°W to 114°W
+16112	UTM zone 12S		Transverse Mercator	World - S hemisphere - 114°W to 108°W
+16113	UTM zone 13S		Transverse Mercator	World - S hemisphere - 108°W to 102°W
+16114	UTM zone 14S		Transverse Mercator	World - S hemisphere - 102°W to 96°W
+16115	UTM zone 15S		Transverse Mercator	World - S hemisphere - 96°W to 90°W
+16116	UTM zone 16S		Transverse Mercator	World - S hemisphere - 90°W to 84°W
+16117	UTM zone 17S		Transverse Mercator	World - S hemisphere - 84°W to 78°W
+16118	UTM zone 18S		Transverse Mercator	World - S hemisphere - 78°W to 72°W
+16119	UTM zone 19S		Transverse Mercator	World - S hemisphere - 72°W to 66°W
+16120	UTM zone 20S		Transverse Mercator	World - S hemisphere - 66°W to 60°W
+16121	UTM zone 21S		Transverse Mercator	World - S hemisphere - 60°W to 54°W
+16122	UTM zone 22S		Transverse Mercator	World - S hemisphere - 54°W to 48°W
+16123	UTM zone 23S		Transverse Mercator	World - S hemisphere - 48°W to 42°W
+16124	UTM zone 24S		Transverse Mercator	World - S hemisphere - 42°W to 36°W
+16125	UTM zone 25S		Transverse Mercator	World - S hemisphere - 36°W to 30°W
+16126	UTM zone 26S		Transverse Mercator	World - S hemisphere - 30°W to 24°W
+16127	UTM zone 27S		Transverse Mercator	World - S hemisphere - 24°W to 18°W
+16128	UTM zone 28S		Transverse Mercator	World - S hemisphere - 18°W to 12°W
+16129	UTM zone 29S		Transverse Mercator	World - S hemisphere - 12°W to 6°W
+16130	UTM zone 30S		Transverse Mercator	World - S hemisphere - 6°W to 0°W
+16131	UTM zone 31S		Transverse Mercator	World - S hemisphere - 0°E to 6°E
+16132	UTM zone 32S		Transverse Mercator	World - S hemisphere - 6°E to 12°E
+16133	UTM zone 33S		Transverse Mercator	World - S hemisphere - 12°E to 18°E
+16134	UTM zone 34S		Transverse Mercator	World - S hemisphere - 18°E to 24°E
+16135	UTM zone 35S		Transverse Mercator	World - S hemisphere - 24°E to 30°E
+16136	UTM zone 36S		Transverse Mercator	World - S hemisphere - 30°E to 36°E
+16137	UTM zone 37S		Transverse Mercator	World - S hemisphere - 36°E to 42°E
+16138	UTM zone 38S		Transverse Mercator	World - S hemisphere - 42°E to 48°E
+16139	UTM zone 39S		Transverse Mercator	World - S hemisphere - 48°E to 54°E
+16140	UTM zone 40S		Transverse Mercator	World - S hemisphere - 54°E to 60°E
+16141	UTM zone 41S		Transverse Mercator	World - S hemisphere - 60°E to 66°E
+16142	UTM zone 42S		Transverse Mercator	World - S hemisphere - 66°E to 72°E
+16143	UTM zone 43S		Transverse Mercator	World - S hemisphere - 72°E to 78°E
+16144	UTM zone 44S		Transverse Mercator	World - S hemisphere - 78°E to 84°E
+16145	UTM zone 45S		Transverse Mercator	World - S hemisphere - 84°E to 90°E
+16146	UTM zone 46S		Transverse Mercator	World - S hemisphere - 90°E to 96°E
+16147	UTM zone 47S		Transverse Mercator	World - S hemisphere - 96°E to 102°E
+16148	UTM zone 48S		Transverse Mercator	World - S hemisphere - 102°E to 108°E
+16149	UTM zone 49S		Transverse Mercator	World - S hemisphere - 108°E to 114°E
+16150	UTM zone 50S		Transverse Mercator	World - S hemisphere - 114°E to 120°E
+16151	UTM zone 51S		Transverse Mercator	World - S hemisphere - 120°E to 126°E
+16152	UTM zone 52S		Transverse Mercator	World - S hemisphere - 126°E to 132°E
+16153	UTM zone 53S		Transverse Mercator	World - S hemisphere - 132°E to 138°E
+16154	UTM zone 54S		Transverse Mercator	World - S hemisphere - 138°E to 144°E
+16155	UTM zone 55S		Transverse Mercator	World - S hemisphere - 144°E to 150°E
+16156	UTM zone 56S		Transverse Mercator	World - S hemisphere - 150°E to 156°E
+16157	UTM zone 57S		Transverse Mercator	World - S hemisphere - 156°E to 162°E
+16158	UTM zone 58S		Transverse Mercator	World - S hemisphere - 162°E to 168°E
+16159	UTM zone 59S		Transverse Mercator	World - S hemisphere - 168°E to 174°E
+16160	UTM zone 60S		Transverse Mercator	World - S hemisphere - 174°E to 180°E
+16170	3-degree Gauss-Kruger CM 120E		Transverse Mercator	World - N hemisphere - 3-degree CM 120°E	Without zone prefix in easting
+16172	3-degree Gauss-Kruger CM 126E		Transverse Mercator	World - N hemisphere - 3-degree CM 126°E	Without zone prefix in easting
+16174	3-degree Gauss-Kruger CM 132E		Transverse Mercator	World - N hemisphere - 3-degree CM 132°E	Without zone prefix in easting
+16176	3-degree Gauss-Kruger CM 138E		Transverse Mercator	World - N hemisphere - 3-degree CM 138°E	Without zone prefix in easting
+16178	3-degree Gauss-Kruger CM 144E		Transverse Mercator	World - N hemisphere - 3-degree CM 144°E	Without zone prefix in easting
+16180	3-degree Gauss-Kruger CM 150E		Transverse Mercator	World - N hemisphere - 3-degree CM 150°E	Without zone prefix in easting
+16182	3-degree Gauss-Kruger CM 156E		Transverse Mercator	World - N hemisphere - 3-degree CM 156°E	Without zone prefix in easting
+16184	3-degree Gauss-Kruger CM 162E		Transverse Mercator	World - N hemisphere - 3-degree CM 162°E	Without zone prefix in easting
+16186	3-degree Gauss-Kruger CM 168E		Transverse Mercator	World - N hemisphere - 3-degree CM 168°E	Without zone prefix in easting
+16188	3-degree Gauss-Kruger CM 174E		Transverse Mercator	World - N hemisphere - 3-degree CM 174°E	Without zone prefix in easting
+16190	3-degree Gauss-Kruger CM 180E		Transverse Mercator	World - N hemisphere - 3-degree CM 180°E	Without zone prefix in easting
+16192	3-degree Gauss-Kruger CM 174W		Transverse Mercator	World - N hemisphere - 3-degree CM 174°W	Without zone prefix in easting
+16194	3-degree Gauss-Kruger CM 168W		Transverse Mercator	World - N hemisphere - 3-degree CM 168°W	Without zone prefix in easting
+16202	6-degree Gauss-Kruger zone 2		Transverse Mercator	World - 6-degree CM 009°E	With zone prefix in easting
+16203	6-degree Gauss-Kruger zone 3		Transverse Mercator	World - 6-degree CM 015°E	With zone prefix in easting
+16204	6-degree Gauss-Kruger zone 4		Transverse Mercator	World - 6-degree CM 021°E	With zone prefix in easting
+16205	6-degree Gauss-Kruger zone 5		Transverse Mercator	World - 6-degree CM 027°E	With zone prefix in easting
+16206	6-degree Gauss-Kruger zone 6		Transverse Mercator	World - 6-degree CM 033°E	With zone prefix in easting
+16207	6-degree Gauss-Kruger zone 7		Transverse Mercator	World - 6-degree CM 039°E	With zone prefix in easting
+16208	6-degree Gauss-Kruger zone 8		Transverse Mercator	World - N hemisphere - 42°E to 48°E	With zone prefix in easting
+16209	6-degree Gauss-Kruger zone 9		Transverse Mercator	World - N hemisphere - 48°E to 54°E	With zone prefix in easting
+16210	6-degree Gauss-Kruger zone 10		Transverse Mercator	World - N hemisphere - 54°E to 60°E	With zone prefix in easting
+16211	6-degree Gauss-Kruger zone 11		Transverse Mercator	World - N hemisphere - 60°E to 66°E	With zone prefix in easting
+16212	6-degree Gauss-Kruger zone 12		Transverse Mercator	World - N hemisphere - 66°E to 72°E	With zone prefix in easting
+16213	6-degree Gauss-Kruger zone 13		Transverse Mercator	World - N hemisphere - 72°E to 78°E	With zone prefix in easting
+16214	6-degree Gauss-Kruger zone 14		Transverse Mercator	World - N hemisphere - 78°E to 84°E	With zone prefix in easting
+16215	6-degree Gauss-Kruger zone 15		Transverse Mercator	World - N hemisphere - 84°E to 90°E	With zone prefix in easting
+16216	6-degree Gauss-Kruger zone 16		Transverse Mercator	World - N hemisphere - 90°E to 96°E	With zone prefix in easting
+16217	6-degree Gauss-Kruger zone 17		Transverse Mercator	World - N hemisphere - 96°E to 102°E	With zone prefix in easting
+16218	6-degree Gauss-Kruger zone 18		Transverse Mercator	World - N hemisphere - 102°E to 108°E	With zone prefix in easting
+16219	6-degree Gauss-Kruger zone 19		Transverse Mercator	World - N hemisphere - 108°E to 114°E	With zone prefix in easting
+16220	6-degree Gauss-Kruger zone 20		Transverse Mercator	World - N hemisphere - 114°E to 120°E	With zone prefix in easting
+16221	6-degree Gauss-Kruger zone 21		Transverse Mercator	World - N hemisphere - 120°E to 126°E	With zone prefix in easting
+16222	6-degree Gauss-Kruger zone 22		Transverse Mercator	World - N hemisphere - 126°E to 132°E	With zone prefix in easting
+16223	6-degree Gauss-Kruger zone 23		Transverse Mercator	World - N hemisphere - 132°E to 138°E	With zone prefix in easting
+16224	6-degree Gauss-Kruger zone 24		Transverse Mercator	World - N hemisphere - 138°E to 144°E	With zone prefix in easting
+16225	6-degree Gauss-Kruger zone 25		Transverse Mercator	World - N hemisphere - 144°E to 150°E	With zone prefix in easting
+16226	6-degree Gauss-Kruger zone 26		Transverse Mercator	World - N hemisphere - 150°E to 156°E	With zone prefix in easting
+16227	6-degree Gauss-Kruger zone 27		Transverse Mercator	World - N hemisphere - 156°E to 162°E	With zone prefix in easting
+16228	6-degree Gauss-Kruger zone 28		Transverse Mercator	World - N hemisphere - 162°E to 168°E	With zone prefix in easting
+16229	6-degree Gauss-Kruger zone 29		Transverse Mercator	World - N hemisphere - 168°E to 174°E	With zone prefix in easting
+16230	6-degree Gauss-Kruger zone 30		Transverse Mercator	World - N hemisphere - 174°E to 180°E	With zone prefix in easting
+16231	6-degree Gauss-Kruger zone 31		Transverse Mercator	World - N hemisphere - 180°W to 174°W	With zone prefix in easting
+16232	6-degree Gauss-Kruger zone 32		Transverse Mercator	World - N hemisphere - 174°W to 168°W	With zone prefix in easting
+16261	3-degree Gauss-Kruger zone 1	3-degree Gauss zone 1	Transverse Mercator	World - N hemisphere - 3-degree CM 003°E	With zone prefix in easting
+16262	3-degree Gauss-Kruger zone 2	3-degree Gauss zone 2	Transverse Mercator	World - N hemisphere - 3-degree CM 006°E	With zone prefix in easting
+16263	3-degree Gauss-Kruger zone 3	3-degree Gauss zone 3	Transverse Mercator	World - N hemisphere - 3-degree CM 009°E	With zone prefix in easting
+16264	3-degree Gauss-Kruger zone 4	3-degree Gauss zone 4	Transverse Mercator	World - N hemisphere - 3-degree CM 012°E	With zone prefix in easting
+16265	3-degree Gauss-Kruger zone 5	3-degree Gauss zone 5	Transverse Mercator	World - N hemisphere - 3-degree CM 015°E	With zone prefix in easting
+16266	3-degree Gauss-Kruger zone 6	3-degree Gauss zone 6	Transverse Mercator	World - N hemisphere - 3-degree CM 018°E	With zone prefix in easting
+16267	3-degree Gauss-Kruger zone 7	3-degree Gauss zone 7	Transverse Mercator	World - N hemisphere - 3-degree CM 021°E	With zone prefix in easting
+16268	3-degree Gauss-Kruger zone 8	3-degree Gauss zone 8	Transverse Mercator	World - N hemisphere - 3-degree CM 024°E	With zone prefix in easting
+16269	3-degree Gauss-Kruger zone 9	3-degree Gauss zone 9	Transverse Mercator	World - N hemisphere - 3-degree CM 027°E	With zone prefix in easting
+16270	3-degree Gauss-Kruger zone 10	3-degree Gauss zone 10	Transverse Mercator	World - N hemisphere - 3-degree CM 030°E	With zone prefix in easting
+16271	3-degree Gauss-Kruger zone 11	3-degree Gauss zone 11	Transverse Mercator	World - N hemisphere - 3-degree CM 033°E	With zone prefix in easting
+16272	3-degree Gauss-Kruger zone 12	3-degree Gauss zone 12	Transverse Mercator	World - N hemisphere - 3-degree CM 036°E	With zone prefix in easting
+16273	3-degree Gauss-Kruger zone 13	3-degree Gauss zone 13	Transverse Mercator	World - N hemisphere - 3-degree CM 039°E	With zone prefix in easting
+16274	3-degree Gauss-Kruger zone 14	3-degree Gauss zone 14	Transverse Mercator	World - N hemisphere - 3-degree CM 042°E	With zone prefix in easting
+16275	3-degree Gauss-Kruger zone 15	3-degree Gauss zone 15	Transverse Mercator	World - N hemisphere - 3-degree CM 045°E	With zone prefix in easting
+16276	3-degree Gauss-Kruger zone 16		Transverse Mercator	World - N hemisphere - 3-degree CM 048°E	With zone prefix in easting
+16277	3-degree Gauss-Kruger zone 17		Transverse Mercator	World - N hemisphere - 3-degree CM 051°E	With zone prefix in easting
+16278	3-degree Gauss-Kruger zone 18		Transverse Mercator	World - N hemisphere - 3-degree CM 054°E	With zone prefix in easting
+16279	3-degree Gauss-Kruger zone 19		Transverse Mercator	World - N hemisphere - 3-degree CM 057°E	With zone prefix in easting
+16280	3-degree Gauss-Kruger zone 20		Transverse Mercator	World - N hemisphere - 3-degree CM 060°E	With zone prefix in easting
+16281	3-degree Gauss-Kruger zone 21		Transverse Mercator	World - N hemisphere - 3-degree CM 063°E	With zone prefix in easting
+16282	3-degree Gauss-Kruger zone 22		Transverse Mercator	World - N hemisphere - 3-degree CM 066°E	With zone prefix in easting
+16283	3-degree Gauss-Kruger zone 23		Transverse Mercator	World - N hemisphere - 3-degree CM 069°E	With zone prefix in easting
+16284	3-degree Gauss-Kruger zone 24		Transverse Mercator	World - N hemisphere - 3-degree CM 072°E	With zone prefix in easting
+16285	3-degree Gauss-Kruger zone 25		Transverse Mercator	World - N hemisphere - 3-degree CM 075°E	With zone prefix in easting
+16286	3-degree Gauss-Kruger zone 26		Transverse Mercator	World - N hemisphere - 3-degree CM 078°E	With zone prefix in easting
+16287	3-degree Gauss-Kruger zone 27		Transverse Mercator	World - N hemisphere - 3-degree CM 081°E	With zone prefix in easting
+16288	3-degree Gauss-Kruger zone 28		Transverse Mercator	World - N hemisphere - 3-degree CM 084°E	With zone prefix in easting
+16289	3-degree Gauss-Kruger zone 29		Transverse Mercator	World - N hemisphere - 3-degree CM 087°E	With zone prefix in easting
+16290	3-degree Gauss-Kruger zone 30		Transverse Mercator	World - N hemisphere - 3-degree CM 090°E	With zone prefix in easting
+16291	3-degree Gauss-Kruger zone 31		Transverse Mercator	World - N hemisphere - 3-degree CM 093°E	With zone prefix in easting
+16292	3-degree Gauss-Kruger zone 32		Transverse Mercator	World - N hemisphere - 3-degree CM 096°E	With zone prefix in easting
+16293	3-degree Gauss-Kruger zone 33		Transverse Mercator	World - N hemisphere - 3-degree CM 099°E	With zone prefix in easting
+16294	3-degree Gauss-Kruger zone 34		Transverse Mercator	World - N hemisphere - 3-degree CM 102°E	With zone prefix in easting
+16295	3-degree Gauss-Kruger zone 35		Transverse Mercator	World - N hemisphere - 3-degree CM 105°E	With zone prefix in easting
+16296	3-degree Gauss-Kruger zone 36		Transverse Mercator	World - N hemisphere - 3-degree CM 108°E	With zone prefix in easting
+16297	3-degree Gauss-Kruger zone 37		Transverse Mercator	World - N hemisphere - 3-degree CM 111°E	With zone prefix in easting
+16298	3-degree Gauss-Kruger zone 38		Transverse Mercator	World - N hemisphere - 3-degree CM 114°E	With zone prefix in easting
+16299	3-degree Gauss-Kruger zone 39		Transverse Mercator	World - N hemisphere - 3-degree CM 117°E	With zone prefix in easting
+16302	Gauss-Kruger CM 9E	6-degree Gauss-Kruger CM 9E	Transverse Mercator	World - N hemisphere - 6°E to 12°E	Without zone prefix in easting
+16304	Gauss-Kruger CM 21E	6-degree Gauss-Kruger CM 21E	Transverse Mercator	World - N hemisphere - 18°E to 24°E	Without zone prefix in easting
+16305	Gauss-Kruger CM 27E	6-degree Gauss-Kruger CM 27E	Transverse Mercator	World - N hemisphere - 24°E to 30°E	Without zone prefix in easting
+16306	Gauss-Kruger CM 33E	6-degree Gauss-Kruger CM 33E	Transverse Mercator	World - N hemisphere - 30°E to 36°E	Without zone prefix in easting
+16307	Gauss-Kruger CM 39E	6-degree Gauss-Kruger CM 39E	Transverse Mercator	World - N hemisphere - 36°E to 42°E	Without zone prefix in easting
+16308	Gauss-Kruger CM 45E	6-degree Gauss-Kruger CM 45E	Transverse Mercator	World - N hemisphere - 42°E to 48°E	Without zone prefix in easting
+16309	Gauss-Kruger CM 51E	6-degree Gauss-Kruger CM 51E	Transverse Mercator	World - N hemisphere - 48°E to 54°E	Without zone prefix in easting
+16310	Gauss-Kruger CM 57E	6-degree Gauss-Kruger CM 57E	Transverse Mercator	World - N hemisphere - 54°E to 60°E	Without zone prefix in easting
+16311	Gauss-Kruger CM 63E	6-degree Gauss-Kruger CM 63E	Transverse Mercator	World - N hemisphere - 60°E to 66°E	Without zone prefix in easting
+16312	Gauss-Kruger CM 69E	6-degree Gauss-Kruger CM 69E	Transverse Mercator	World - N hemisphere - 66°E to 72°E	Without zone prefix in easting
+16313	Gauss-Kruger CM 75E	6-degree Gauss-Kruger CM 75E	Transverse Mercator	World - N hemisphere - 72°E to 78°E	Without zone prefix in easting
+16314	Gauss-Kruger CM 81E	6-degree Gauss-Kruger CM 81E	Transverse Mercator	World - N hemisphere - 78°E to 84°E	Without zone prefix in easting
+16315	Gauss-Kruger CM 87E	6-degree Gauss-Kruger CM 87E	Transverse Mercator	World - N hemisphere - 84°E to 90°E	Without zone prefix in easting
+16316	Gauss-Kruger CM 93E	6-degree Gauss-Kruger CM 93E	Transverse Mercator	World - N hemisphere - 90°E to 96°E	Without zone prefix in easting
+16317	Gauss-Kruger CM 99E	6-degree Gauss-Kruger CM 99E	Transverse Mercator	World - N hemisphere - 96°E to 102°E	Without zone prefix in easting
+16318	Gauss-Kruger CM 105E	6-degree Gauss-Kruger CM 105E	Transverse Mercator	World - N hemisphere - 102°E to 108°E	Without zone prefix in easting
+16319	Gauss-Kruger CM 111E	6-degree Gauss-Kruger CM 111E	Transverse Mercator	World - N hemisphere - 108°E to 114°E	Without zone prefix in easting
+16320	Gauss-Kruger CM 117E	6-degree Gauss-Kruger CM 117E	Transverse Mercator	World - N hemisphere - 114°E to 120°E	Without zone prefix in easting
+16321	Gauss-Kruger CM 123E	6-degree Gauss-Kruger CM 123E	Transverse Mercator	World - N hemisphere - 120°E to 126°E	Without zone prefix in easting
+16322	Gauss-Kruger CM 129E	6-degree Gauss-Kruger CM 129E	Transverse Mercator	World - N hemisphere - 126°E to 132°E	Without zone prefix in easting
+16323	Gauss-Kruger CM 135E	6-degree Gauss-Kruger CM 135E	Transverse Mercator	World - N hemisphere - 132°E to 138°E	Without zone prefix in easting
+16324	Gauss-Kruger CM 141E	6-degree Gauss-Kruger CM 141E	Transverse Mercator	World - N hemisphere - 138°E to 144°E	Without zone prefix in easting
+16325	Gauss-Kruger CM 147E	6-degree Gauss-Kruger CM 147E	Transverse Mercator	World - N hemisphere - 144°E to 150°E	Without zone prefix in easting
+16326	Gauss-Kruger CM 153E	6-degree Gauss-Kruger CM 153E	Transverse Mercator	World - N hemisphere - 150°E to 156°E	Without zone prefix in easting
+16327	Gauss-Kruger CM 159E	6-degree Gauss-Kruger CM 159E	Transverse Mercator	World - N hemisphere - 156°E to 162°E	Without zone prefix in easting
+16328	Gauss-Kruger CM 165E	6-degree Gauss-Kruger CM 165E	Transverse Mercator	World - N hemisphere - 162°E to 168°E	Without zone prefix in easting
+16329	Gauss-Kruger CM 171E	6-degree Gauss-Kruger CM 171E	Transverse Mercator	World - N hemisphere - 168°E to 174°E	Without zone prefix in easting
+16330	Gauss-Kruger CM 177E	6-degree Gauss-Kruger CM 177E	Transverse Mercator	World - N hemisphere - 174°E to 180°E	Without zone prefix in easting
+16331	Gauss-Kruger CM 177W	6-degree Gauss-Kruger CM 177W	Transverse Mercator	World - N hemisphere - 180°W to 174°W	Without zone prefix in easting
+16332	Gauss-Kruger CM 171W	6-degree Gauss-Kruger CM 171W	Transverse Mercator	World - N hemisphere - 174°W to 168°W	Without zone prefix in easting
+16368	3-degree Gauss-Kruger CM 24E	3-deg Gauss-Kruger 24E	Transverse Mercator	World - N hemisphere - 3-degree CM 024°E	Without zone prefix in easting
+16370	3-degree Gauss-Kruger CM 30E		Transverse Mercator	World - N hemisphere - 3-degree CM 030°E	Without zone prefix in easting
+16372	3-degree Gauss-Kruger CM 36E		Transverse Mercator	World - N hemisphere - 3-degree CM 036°E	Without zone prefix in easting
+16374	3-degree Gauss-Kruger CM 42E		Transverse Mercator	World - N hemisphere - 3-degree CM 042°E	Without zone prefix in easting
+16376	3-degree Gauss-Kruger CM 48E		Transverse Mercator	World - N hemisphere - 3-degree CM 048°E	Without zone prefix in easting
+16378	3-degree Gauss-Kruger CM 54E		Transverse Mercator	World - N hemisphere - 3-degree CM 054°E	Without zone prefix in easting
+16380	3-degree Gauss-Kruger CM 60E		Transverse Mercator	World - N hemisphere - 3-degree CM 060°E	Without zone prefix in easting
+16382	3-degree Gauss-Kruger CM 66E		Transverse Mercator	World - N hemisphere - 3-degree CM 066°E	Without zone prefix in easting
+16384	3-degree Gauss-Kruger CM 72E		Transverse Mercator	World - N hemisphere - 3-degree CM 072°E	Without zone prefix in easting
+16386	3-degree Gauss-Kruger CM 78E		Transverse Mercator	World - N hemisphere - 3-degree CM 078°E	Without zone prefix in easting
+16388	3-degree Gauss-Kruger CM 84E		Transverse Mercator	World - N hemisphere - 3-degree CM 084°E	Without zone prefix in easting
+16390	3-degree Gauss-Kruger CM 90E		Transverse Mercator	World - N hemisphere - 3-degree CM 090°E	Without zone prefix in easting
+16392	3-degree Gauss-Kruger CM 96E		Transverse Mercator	World - N hemisphere - 3-degree CM 096°E	Without zone prefix in easting
+16394	3-degree Gauss-Kruger CM 102E		Transverse Mercator	World - N hemisphere - 3-degree CM 102°E	Without zone prefix in easting
+16396	3-degree Gauss-Kruger CM 108E		Transverse Mercator	World - N hemisphere - 3-degree CM 108°E	Without zone prefix in easting
+16398	3-degree Gauss-Kruger CM 114E		Transverse Mercator	World - N hemisphere - 3-degree CM 114°E	Without zone prefix in easting
+16400	TM 0 N		Transverse Mercator	UK - offshore - North Sea
+16405	TM 5 NE		Transverse Mercator	Netherlands - offshore
+16611	TM 11.30 SE		Transverse Mercator	Angola - offshore block 15
+16612	TM 12 SE		Transverse Mercator	Angola - Angola proper - offshore
+16709	TM 109 SE		Transverse Mercator	Indonesia - Java Sea - offshore northwest Java
+17001	TM 1 NW	Ghana TM	Transverse Mercator	Ghana - offshore
+17005	TM 5 NW		Transverse Mercator	Cote d'Ivoire (Ivory Coast) - offshore
+17449	Australian Map Grid zone 49	AMG zone 49	Transverse Mercator	Australia - 108°E to 114°E (EEZ)
+17450	Australian Map Grid zone 50	AMG zone 50	Transverse Mercator	Australia - 114°E to 120°E (EEZ)
+17451	Australian Map Grid zone 51	AMG zone 51	Transverse Mercator	Australia - 120°E to 126°E
+17452	Australian Map Grid zone 52	AMG zone 52	Transverse Mercator	Australia - 126°E to 132°E
+17453	Australian Map Grid zone 53	AMG zone 53	Transverse Mercator	Australia - 132°E to 138°E
+17454	Australian Map Grid zone 54	AMG zone 54	Transverse Mercator	Australasia - Australia and PNG - 138°E to 144°E
+17455	Australian Map Grid zone 55	AMG zone 55	Transverse Mercator	Australasia - Australia and PNG - 144°E to 150°E
+17456	Australian Map Grid zone 56	AMG zone 56	Transverse Mercator	Australasia - Australia and PNG - 150°E to 156°E
+17457	Australian Map Grid zone 57	AMG zone 57	Transverse Mercator	Australia - 156°E to 162°E
+17458	Australian Map Grid zone 58	AMG zone 58	Transverse Mercator	Australia - EEZ east of 162°E
+17611	South West African Survey Grid zone 11	SW African Grid zone 11; Lo22/11	Transverse Mercator (South Orientated)	Namibia - west of 12°E
+18021	Nord Algerie		Lambert Conic Conformal (1SP)	Algeria - north of 34°39'N	Check not old parameters
+18022	Sud Algerie		Lambert Conic Conformal (1SP)	Algeria - 31°30'N to 34°39'N	Check not old parameters
+18031	Argentina zone 1	Argentina 1; Gauss-Kruger zone 1	Transverse Mercator	Argentina - west of 70.5°W
+18032	Argentina zone 2	Argentina 2; Gauss-Kruger zone 2	Transverse Mercator	Argentina - 70.5°W to 67.5°W onshore
+18033	Argentina zone 3	Argentina 3; Gauss-Kruger zone 3	Transverse Mercator	Argentina - 67.5°W to 64.5°W onshore
+18034	Argentina zone 4	Argentina 4; Gauss-Kruger zone 4	Transverse Mercator	Argentina - 64.5°W to 61.5°W onshore
+18035	Argentina zone 5	Argentina 5; Gauss-Kruger zone 5	Transverse Mercator	Argentina - 61.5°W to 58.5°W onshore
+18036	Argentina zone 6	Argentina 6; Gauss-Kruger zone 6	Transverse Mercator	Argentina - 58.5°W to 55.5°W onshore
+18037	Argentina zone 7	Argentina 7; Gauss-Kruger zone 7	Transverse Mercator	Argentina - east of 55.5°W onshore
+18051	Colombia West zone	Colombia 3W	Transverse Mercator	Colombia - west of 75°35'W
+18052	Colombia Bogota zone	Colombia Bogota	Transverse Mercator	Colombia - 75°35'W to 72°35'W
+18053	Colombia East Central zone	Colombia 3E	Transverse Mercator	Colombia - 72°35'W to 69°35'W
+18054	Colombia East zone	Colombia 6E	Transverse Mercator	Colombia - east of 69°35'W
+18055	Colombia MAGNA Far West zone		Transverse Mercator	Colombia - west of 78°35'W
+18056	Colombia MAGNA West zone		Transverse Mercator	Colombia - 78°35'W to 75°35'W
+18057	Colombia MAGNA Bogota zone		Transverse Mercator	Colombia - 75°35'W to 72°35'W
+18058	Colombia MAGNA East Central zone		Transverse Mercator	Colombia - 72°35'W to 69°35'W
+18059	Colombia MAGNA East zone		Transverse Mercator	Colombia - east of 69°35'W
+18071	Egypt Blue Belt	Blue Belt; Green Belt	Transverse Mercator	Egypt - east of 33°E onshore
+18072	Egypt Red Belt	Red Belt	Transverse Mercator	Egypt - 29°E to 33°E
+18073	Egypt Purple Belt	Purple Belt	Transverse Mercator	Egypt - west of 29°E; north of 28°11'N
+18074	Egypt Extended Purple Belt	Extended Purple Belt	Transverse Mercator	Egypt - west of 29°E; south of 28°11'N
+18081	Lambert zone I	France zone I	Lambert Conic Conformal (1SP)	France - mainland north of 48.15°N	Use grads
+18082	Lambert zone II	France zone II	Lambert Conic Conformal (1SP)	France - mainland 45.45°N to 48.15°N. Also all mainland.	Use grads
+18083	Lambert zone III	France zone III	Lambert Conic Conformal (1SP)	France - mainland south of 45.45°N	Use grads
+18085	Lambert-93		Lambert Conic Conformal (2SP)	France - mainland onshore	Use grads
+18121	Italy zone 1		Transverse Mercator	Italy - west of 12°E
+18122	Italy zone 2		Transverse Mercator	Italy - east of 12°E
+18141	New Zealand North Island National Grid	North Island Grid	Transverse Mercator	New Zealand - North Island
+18142	New Zealand South Island National Grid	South Island Grid	Transverse Mercator	New Zealand - South and Stewart Islands
+18151	Nigeria West Belt		Transverse Mercator	Nigeria - west of 6.5°E
+18152	Nigeria Mid Belt		Transverse Mercator	Nigeria - 6.5°E to 10.5°E
+18153	Nigeria East Belt		Transverse Mercator	Nigeria - east of 10.5°E
+18161	Peru west zone		Transverse Mercator	Peru - west of 79°W
+18162	Peru central zone		Transverse Mercator	Peru - 79°W to 73°W
+18163	Peru east zone		Transverse Mercator	Peru - east of 73°W
+18171	Philippines zone I		Transverse Mercator	Philippines - zone I
+18172	Philippines zone II		Transverse Mercator	Philippines - zone II
+18173	Philippines zone III		Transverse Mercator	Philippines - zone III
+18174	Philippines zone IV		Transverse Mercator	Philippines - zone IV
+18175	Philippines zone V		Transverse Mercator	Philippines - zone V
+18181	Nord Tunisie		Lambert Conic Conformal (1SP)	Tunisia - north of 34°39'N
+18182	Sud Tunisie		Lambert Conic Conformal (1SP)	Tunisia - south of 34°39'N
+18231	India zone I (1975 metres)	India zone I	Lambert Conic Conformal (1SP)	India - north of 28°N
+18232	India zone IIa (1975 metres)	India zone IIa	Lambert Conic Conformal (1SP)	India - onshore 21°N to 28°N and west of 82°E
+18233	India zone IIIa (1975 metres)	India zone IIIa	Lambert Conic Conformal (1SP)	India - onshore 15°N to 21°N
+18234	India zone IVa (1975 metres)	India zone IVa	Lambert Conic Conformal (1SP)	India - mainland south of 15°N
+18235	India zone IIb (1975 metres)	India zone IIb	Lambert Conic Conformal (1SP)	India - onshore north of 21°N and east of 82°E
+18236	India zone I (1962 metres)	India zone I	Lambert Conic Conformal (1SP)	Pakistan - 28°N to 35°35'N
+18237	India zone IIa (1962 metres)	India zone IIa	Lambert Conic Conformal (1SP)	Pakistan - onshore south of 28°N
+18238	India zone IIb (1937 metres)	India zone IIb	Lambert Conic Conformal (1SP)	Bangladesh - onshore
+18240	Libya zone 5		Transverse Mercator	Libya - west of 10°E
+18241	Libya zone 6		Transverse Mercator	Libya - 10°E to 12°E onshore
+18242	Libya zone 7		Transverse Mercator	Libya - 12°E to 14°E onshore
+18243	Libya zone 8		Transverse Mercator	Libya - 14°E to 16°E onshore
+18244	Libya zone 9		Transverse Mercator	Libya - 16°E to 18°E onshore
+18245	Libya zone 10		Transverse Mercator	Libya - 18°E to 20°E onshore
+18246	Libya zone 11		Transverse Mercator	Libya - 20°E to 22°E onshore
+18247	Libya zone 12		Transverse Mercator	Libya - 22°E to 24°E onshore
+18248	Libya zone 13		Transverse Mercator	Libya - east of 24°E onshore
+18310	Libya TM zone 5		Transverse Mercator	Libya - west of 10°E
+18311	Libya TM zone 6		Transverse Mercator	Libya - 10°E to 12°E onshore
+18312	Libya TM zone 7		Transverse Mercator	Libya - 12°E to 14°E onshore
+18313	Libya TM zone 8		Transverse Mercator	Libya - 14°E to 16°E onshore
+18314	Libya TM zone 9		Transverse Mercator	Libya - 16°E to 18°E onshore
+18315	Libya TM zone 10		Transverse Mercator	Libya - 18°E to 20°E onshore
+18316	Libya TM zone 11		Transverse Mercator	Libya - 20°E to 22°E onshore
+18317	Libya TM zone 12		Transverse Mercator	Libya - 22°E to 24°E onshore
+18318	Libya TM zone 13		Transverse Mercator	Libya - east of 24°E onshore
+18319	Libya TM		Transverse Mercator	Libya
+19861	Laborde Grid		Laborde Oblique Mercator	Madagascar - onshore and nearshore
+19871	Rectified Skew Orthomorphic Malaya Grid (chains)	RSO Malaya (m)	Hotine Oblique Mercator (variant A)	Malaysia - West Malaysia - onshore
+19872	Rectified Skew Orthomorphic Malaya Grid (metres)	RSO Malaya (m)	Hotine Oblique Mercator (variant A)	Malaysia - West Malaysia - onshore
+19894	Borneo RSO	East Malaysia BRSO; Brunei BRSO	Hotine Oblique Mercator (variant A)	Asia - Brunei and East Malaysia
+19895	Peninsular RSO		Hotine Oblique Mercator (variant A)	Malaysia - West Malaysia
+19905	Netherlands East Indies Equatorial Zone	NEIEZ	Mercator (variant A)	Indonesia - onshore
+19906	Iraq zone	IOEPC Lambert	Lambert Conic Conformal (1SP)	Asia - Middle East - Iraq zone
+19911	Laborde Grid approximation	Laborde Grid	Hotine Oblique Mercator (variant B)	Madagascar - onshore and nearshore
+19914	RD New		Oblique Stereographic	Netherlands - onshore
+19916	British National Grid		Transverse Mercator	UK - Britain and UKCS 49°45'N to 61°N; 9°W to 2°E
+19917	New Zealand Map Grid	NZMG	New Zealand Map Grid	New Zealand - onshore
+19919	Qatar National Grid		Transverse Mercator	Qatar
+19925	Trinidad Grid		Cassini-Soldner	Trinidad and Tobago - Trinidad
+19926	Stereo 70		Oblique Stereographic	Romania
+19927	Stereo 33		Oblique Stereographic	Romania
+19931	Egyseges Orszagos Vetuleti	EOV	Hotine Oblique Mercator (variant B)	Hungary
+19940	Levant Zone		Lambert Conic Near-Conformal	Asia - Middle East - Lebanon and Syria onshore
+19941	Brazil Polyconic		American Polyconic	Brazil
+19948	Syria Lambert		Lambert Conic Conformal (1SP)	Asia - Middle East - Lebanon and Syria onshore
+19953	Qatar Grid		Cassini-Soldner	Qatar - onshore
+19956	Rectified Skew Orthomorphic Borneo Grid (chains)	RSO Borneo (chSe)	Hotine Oblique Mercator (variant B)	Asia - Brunei and East Malaysia
+19957	Rectified Skew Orthomorphic Borneo Grid (feet)	RSO Borneo (ftSe)	Hotine Oblique Mercator (variant B)	Malaysia - East Malaysia
+19958	Rectified Skew Orthomorphic Borneo Grid (metres)	RSO Borneo (m)	Hotine Oblique Mercator (variant B)	Asia - Brunei and East Malaysia
+19959	Ghana National Grid	Gold Coast Grid	Transverse Mercator	Ghana
+19971	New Zealand Transverse Mercator 2000	NZTM; New Zealand Transverse Mercator; NZTM2000	Transverse Mercator	New Zealand - onshore
+19975	Trinidad Grid (Clarke's feet)		Cassini-Soldner	Trinidad and Tobago - Trinidad
+19977	Aramco Lambert		Lambert Conic Conformal (2SP)	Saudi Arabia - onshore
