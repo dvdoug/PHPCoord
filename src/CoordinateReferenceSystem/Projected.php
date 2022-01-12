@@ -38533,12 +38533,14 @@ class Projected extends CoordinateReferenceSystem
         string $srid,
         CoordinateSystem $coordinateSystem,
         Datum $datum,
-        BoundingArea $boundingArea
+        BoundingArea $boundingArea,
+        string $name = ''
     ) {
         $this->srid = $srid;
         $this->coordinateSystem = $coordinateSystem;
         $this->datum = $datum;
         $this->boundingArea = $boundingArea;
+        $this->name = $name;
 
         assert(count($coordinateSystem->getAxes()) === 2 || count($coordinateSystem->getAxes()) === 3);
     }
@@ -38557,6 +38559,7 @@ class Projected extends CoordinateReferenceSystem
                 Cartesian::fromSRID($data['coordinate_system']),
                 Datum::fromSRID($data['datum']),
                 BoundingArea::createFromExtentCodes($data['extent_code']),
+                $data['name']
             );
         }
 

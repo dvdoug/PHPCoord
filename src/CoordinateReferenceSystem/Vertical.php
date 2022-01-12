@@ -1834,12 +1834,14 @@ class Vertical extends CoordinateReferenceSystem
         string $srid,
         CoordinateSystem $coordinateSystem,
         Datum $datum,
-        BoundingArea $boundingArea
+        BoundingArea $boundingArea,
+        string $name = ''
     ) {
         $this->srid = $srid;
         $this->coordinateSystem = $coordinateSystem;
         $this->datum = $datum;
         $this->boundingArea = $boundingArea;
+        $this->name = $name;
 
         assert(count($coordinateSystem->getAxes()) === 1);
     }
@@ -1857,6 +1859,7 @@ class Vertical extends CoordinateReferenceSystem
                 VerticalCS::fromSRID($data['coordinate_system']),
                 Datum::fromSRID($data['datum']),
                 BoundingArea::createFromExtentCodes($data['extent_code']),
+                $data['name']
             );
         }
 

@@ -1,0 +1,466 @@
+# File: GIGS_lib_2205_GeodeticCRS
+# GIGS Test Procedure: 2205
+# GIGS Test Dataset Version: 2.0
+# EPSG Dataset Version: 10.047
+# GIGS Test Dataset Issue Date: 2021-05-03
+#
+# Fields:
+# [0]: EPSG Geodetic CRS Code
+# [1]: Geodetic CRS Type
+# [2]: EPSG Geodetic CRS Name
+# [3]: Alias(es)
+# [4]: Associated Geodetic Datum
+# [5]: EPSG Usage Extent
+# [6]: GIGS Remarks
+#
+# [0]	# [1]	# [2]	# [3]	# [4]	# [5]	# [6]
+3819	Geographic 2D	HD1909		1024	Hungary
+3821	Geographic 2D	TWD67		1025	Taiwan - onshore - mainland and Penghu
+3824	Geographic 2D	TWD97		1026	Taiwan
+3823	Geographic 3D	TWD97		1026	Taiwan
+3822	Geocentric	TWD97		1026	Taiwan
+4558	Geographic 2D	RRAF 1991		1047	Caribbean - French Antilles
+4120	Geographic 2D	Greek		6120	Greece - onshore
+4121	Geographic 2D	GGRS87		6121	Greece - onshore
+4122	Geographic 2D	ATS77		6122	Canada - Maritime Provinces
+4123	Geographic 2D	KKJ		6123	Finland - onshore
+4124	Geographic 2D	RT90		6124	Sweden
+4669	Geographic 2D	LKS94	LKS94 (ETRS89)	6126	Lithuania
+4951	Geographic 3D	LKS94	LKS94 (ETRS89)	6126	Lithuania
+4950	Geocentric	LKS94	LKS94 (ETRS89)	6126	Lithuania
+4127	Geographic 2D	Tete		6127	Mozambique - onshore
+4128	Geographic 2D	Madzansua		6128	Mozambique - west - Tete province
+4129	Geographic 2D	Observatario	Observatario Campos Rodrigues 1907	6129	Mozambique - south
+4130	Geographic 2D	Moznet		6130	Mozambique
+4953	Geographic 3D	Moznet		6130	Mozambique
+4952	Geocentric	Moznet		6130	Mozambique
+4131	Geographic 2D	Indian 1960	Indian (DMA Reduced)	6131	Asia - Cambodia and Vietnam - onshore & Cuu Long basin
+4132	Geographic 2D	FD58	Final Datum 1958 (Iran)	6132	Iran - FD58
+4133	Geographic 2D	EST92		6133	Estonia - onshore
+4134	Geographic 2D	PSD93	PDO Survey Datum 1993	6134	Oman - onshore
+4135	Geographic 2D	Old Hawaiian		6135	USA - Hawaii - onshore
+4136	Geographic 2D	St. Lawrence Island		6136	USA - Alaska - St. Lawrence Island
+4137	Geographic 2D	St. Paul Island		6137	USA - Alaska - St. Paul Island
+4138	Geographic 2D	St. George Island		6138	USA - Alaska - St. George Island
+4139	Geographic 2D	Puerto Rico		6139	Caribbean - Puerto Rico and Virgin Islands - onshore
+4617	Geographic 2D	NAD83(CSRS)		6140	Canada
+4955	Geographic 3D	NAD83(CSRS)		6140	Canada
+4954	Geocentric	NAD83(CSRS)		6140	Canada
+4141	Geographic 2D	Israel 1993	Israel	6141	Asia - Middle East - Israel and Palestine Territory onshore
+4142	Geographic 2D	Locodjo 1965	Port Bouet	6142	Cote d'Ivoire (Ivory Coast)
+4143	Geographic 2D	Abidjan 1987	Côte d'Ivoire	6143	Cote d'Ivoire (Ivory Coast)
+4144	Geographic 2D	Kalianpur 1937		6144	Asia - Bangladesh; India; Myanmar; Pakistan - onshore
+4145	Geographic 2D	Kalianpur 1962		6145	Pakistan
+4146	Geographic 2D	Kalianpur 1975		6146	India - mainland
+4147	Geographic 2D	Hanoi 1972		6147	Vietnam - onshore
+4148	Geographic 2D	Hartebeesthoek94		6148	Africa - South Africa; Lesotho and Eswatini.
+4941	Geographic 3D	Hartebeesthoek94		6148	Africa - South Africa; Lesotho and Eswatini.
+4940	Geocentric	Hartebeesthoek94		6148	Africa - South Africa; Lesotho and Eswatini.
+4149	Geographic 2D	CH1903		6149	Europe - Liechtenstein and Switzerland
+4150	Geographic 2D	CH1903+		6150	Europe - Liechtenstein and Switzerland
+4151	Geographic 2D	CHTRS95		6151	Europe - Liechtenstein and Switzerland
+4933	Geographic 3D	CHTRS95		6151	Europe - Liechtenstein and Switzerland
+4932	Geocentric	CHTRS95		6151	Europe - Liechtenstein and Switzerland
+4152	Geographic 2D	NAD83(HARN)	NAD83(HPGN)	6152	USA - HARN
+4957	Geographic 3D	NAD83(HARN)	NAD83(HPGN)	6152	USA - HARN
+4956	Geocentric	NAD83(HARN)	NAD83(HPGN)	6152	USA - HARN
+4153	Geographic 2D	Rassadiran		6153	Iran - Taheri refinery
+4154	Geographic 2D	ED50(ED77)		6154	Iran
+4155	Geographic 2D	Dabola 1981		6155	Guinea - onshore
+4156	Geographic 2D	S-JTSK		6156	Europe - Czechoslovakia
+4157	Geographic 2D	Mount Dillon		6157	Trinidad and Tobago - Tobago - onshore
+4158	Geographic 2D	Naparima 1955		6158	Trinidad and Tobago - Trinidad - onshore
+4159	Geographic 2D	ELD79		6159	Libya
+4160	Geographic 2D	Chos Malal 1914	Quini-Huao	6160	Argentina - Mendoza and Neuquen
+4161	Geographic 2D	Pampa del Castillo	Pampa Cas	6161	Argentina - 42.5°S to 50.3°S
+4162	Geographic 2D	Korean 1985		6162	Korea; Republic of (South Korea) - onshore
+4163	Geographic 2D	Yemen NGN96		6163	Yemen
+4981	Geographic 3D	Yemen NGN96		6163	Yemen
+4980	Geocentric	Yemen NGN96		6163	Yemen
+4164	Geographic 2D	South Yemen		6164	Yemen - South Yemen - mainland
+4165	Geographic 2D	Bissau		6165	Guinea-Bissau - onshore
+4166	Geographic 2D	Korean 1995		6166	Korea; Republic of (South Korea) - onshore
+4167	Geographic 2D	NZGD2000		6167	New Zealand
+4959	Geographic 3D	NZGD2000		6167	New Zealand
+4958	Geocentric	NZGD2000		6167	New Zealand
+4168	Geographic 2D	Accra		6168	Ghana
+4169	Geographic 2D	American Samoa 1962		6169	American Samoa - 2 main island groups
+4170	Geographic 2D	SIRGAS 1995	SIRGAS	6170	South America - SIRGAS 1995 by country
+4975	Geographic 3D	SIRGAS 1995	SIRGAS	6170	South America - SIRGAS 1995 by country
+4974	Geocentric	SIRGAS 1995	SIRGAS	6170	South America - SIRGAS 1995 by country
+4171	Geographic 2D	RGF93 v1	RGF93 (lat-lon)	6171	France
+4965	Geographic 3D	RGF93 v1	RGF93 (lat-lon)	6171	France
+4964	Geocentric	RGF93 v1		6171	France
+4173	Geographic 2D	IRENET95	ETRS89	6173	Europe - Ireland (Republic and Ulster) - onshore
+4943	Geographic 3D	IRENET95	ETRS89	6173	Europe - Ireland (Republic and Ulster) - onshore
+4942	Geocentric	IRENET95	ETRS89	6173	Europe - Ireland (Republic and Ulster) - onshore
+4174	Geographic 2D	Sierra Leone 1924		6174	Sierra Leone - Freetown Peninsula
+4175	Geographic 2D	Sierra Leone 1968		6175	Sierra Leone - onshore
+4176	Geographic 2D	Australian Antarctic	AAD98	6176	Antarctica - Australian sector
+4931	Geographic 3D	Australian Antarctic	AAD98	6176	Antarctica - Australian sector
+4930	Geocentric	Australian Antarctic	AAD98	6176	Antarctica - Australian sector
+4178	Geographic 2D	Pulkovo 1942(83)	42/83	6178	Europe - onshore - eastern - S-42(83)
+4179	Geographic 2D	Pulkovo 1942(58)	Pulkovo 1942(56)	6179	Europe - onshore - eastern - S-42(58)
+4180	Geographic 2D	EST97		6180	Estonia
+4935	Geographic 3D	EST97		6180	Estonia
+4181	Geographic 2D	LUREF	LUREF	6181	Luxembourg
+4182	Geographic 2D	Azores Occidental 1939		6182	Portugal - Azores W - onshore
+4183	Geographic 2D	Azores Central 1948	Graciosa	6183	Portugal - Azores C - onshore
+4184	Geographic 2D	Azores Oriental 1940	Sao Braz	6184	Portugal - Azores E - onshore
+4188	Geographic 2D	OSNI 1952		6188	UK - Northern Ireland - onshore
+4189	Geographic 2D	REGVEN		6189	Venezuela
+4963	Geographic 3D	REGVEN		6189	Venezuela
+4962	Geocentric	REGVEN		6189	Venezuela
+4190	Geographic 2D	POSGAR 98	National Geodetic System [Argentina]	6190	Argentina
+4961	Geographic 3D	POSGAR 98		6190	Argentina
+4960	Geocentric	POSGAR 98		6190	Argentina
+4191	Geographic 2D	Albanian 1987	ALB86	6191	Albania - onshore
+4192	Geographic 2D	Douala 1948		6192	Cameroon - coastal area
+4193	Geographic 2D	Manoca 1962		6193	Cameroon - coastal area
+4194	Geographic 2D	Qornoq 1927		6194	Greenland - west coast
+4195	Geographic 2D	Scoresbysund 1952		6195	Greenland - Scoresbysund area
+4196	Geographic 2D	Ammassalik 1958		6196	Greenland - Ammassalik area
+4197	Geographic 2D	Garoua		6197	Cameroon - Garoua area
+4198	Geographic 2D	Kousseri		6198	Cameroon - N'Djamena area
+4199	Geographic 2D	Egypt 1930	New Egyptian	6199	Egypt - onshore
+4200	Geographic 2D	Pulkovo 1995	S-95	6200	Russia
+4201	Geographic 2D	Adindan	Blue Nile 1958	6201	Africa - Eritrea; Ethiopia; South Sudan and Sudan
+4202	Geographic 2D	AGD66		6202	Australasia - Australia and PNG - AGD66
+4203	Geographic 2D	AGD84		6203	Australia - AGD84
+4204	Geographic 2D	Ain el Abd		6204	Asia - Middle East - Bahrain; Kuwait and Saudi Arabia
+4205	Geographic 2D	Afgooye		6205	Somalia - onshore
+4206	Geographic 2D	Agadez		6206	Niger
+4207	Geographic 2D	Lisbon	Lisbon 1937	6207	Portugal - mainland - onshore
+4208	Geographic 2D	Aratu		6208	Brazil - Aratu
+4209	Geographic 2D	Arc 1950		6209	Africa - Botswana; Malawi; Zambia; Zimbabwe
+4210	Geographic 2D	Arc 1960		6210	Africa - Burundi; Kenya; Rwanda; Tanzania and Uganda
+4211	Geographic 2D	Batavia	Genuk	6211	Indonesia - Java; Java Sea and western Sumatra
+4212	Geographic 2D	Barbados 1938		6212	Barbados - onshore
+4213	Geographic 2D	Beduaram		6213	Niger - southeast
+4214	Geographic 2D	Beijing 1954		6214	China
+4215	Geographic 2D	BD50	BD 50	6215	Belgium - onshore
+4216	Geographic 2D	Bermuda 1957		6216	Bermuda - onshore
+4218	Geographic 2D	Bogota 1975	Bogota	6218	Colombia - mainland and offshore Caribbean
+4219	Geographic 2D	Bukit Rimpah		6219	Indonesia - Banga & Belitung Islands
+4220	Geographic 2D	Camacupa 1948	Camacupa	6220	Angola - Angola proper
+4221	Geographic 2D	Campo Inchauspe		6221	Argentina - mainland onshore and offshore TdF
+4222	Geographic 2D	Cape		6222	Africa - Botswana; Eswatini; Lesotho and South Africa
+4223	Geographic 2D	Carthage		6223	Tunisia
+4224	Geographic 2D	Chua		6224	South America - Brazil - south of 18°S and west of 54°W + DF; N Paraguay
+4225	Geographic 2D	Corrego Alegre 1970-72	Corrego Alegre	6225	Brazil - Corrego Alegre 1970-1972
+4227	Geographic 2D	Deir ez Zor	Levant	6227	Asia - Middle East - Lebanon and Syria onshore
+4229	Geographic 2D	Egypt 1907	Old Egyptian	6229	Egypt
+4230	Geographic 2D	ED50		6230	Europe - ED50 by country
+4231	Geographic 2D	ED87		6231	Europe - west
+4232	Geographic 2D	Fahud		6232	Oman - mainland
+4236	Geographic 2D	Hu Tzu Shan 1950	Hu Tzu Shan	6236	Taiwan - onshore - mainland and Penghu
+4237	Geographic 2D	HD72		6237	Hungary
+4238	Geographic 2D	ID74		6238	Indonesia - onshore
+4239	Geographic 2D	Indian 1954		6239	Asia - Myanmar and Thailand onshore
+4240	Geographic 2D	Indian 1975		6240	Thailand - onshore and Gulf of Thailand
+4241	Geographic 2D	Jamaica 1875		6241	Jamaica - onshore
+4242	Geographic 2D	JAD69		6242	Jamaica - onshore
+4243	Geographic 2D	Kalianpur 1880		6243	Asia - Bangladesh; India; Myanmar; Pakistan - onshore
+4244	Geographic 2D	Kandawala		6244	Sri Lanka - onshore
+4245	Geographic 2D	Kertau 1968	MRT68	6245	Asia - Malaysia (west including SCS) and Singapore
+4246	Geographic 2D	KOC		6246	Kuwait - onshore
+4247	Geographic 2D	La Canoa		6247	Venezuela - onshore
+4248	Geographic 2D	PSAD56	La Canoa	6248	South America - PSAD56 by country	Incorporates La Canoa (CRS code 4247) and within Venezuela (but not beyond) the names La Canoa and PSAD56 are synonymous
+4249	Geographic 2D	Lake		6249	Venezuela - Lake Maracaibo
+4250	Geographic 2D	Leigon		6250	Ghana
+4251	Geographic 2D	Liberia 1964		6251	Liberia - onshore
+4252	Geographic 2D	Lome		6252	Togo
+4253	Geographic 2D	Luzon 1911		6253	Philippines - onshore
+4254	Geographic 2D	Hito XVIII 1963	Hito XVIII	6254	South America - Tierra del Fuego
+4255	Geographic 2D	Herat North		6255	Afghanistan
+4256	Geographic 2D	Mahe 1971		6256	Seychelles - Mahe Island
+4257	Geographic 2D	Makassar		6257	Indonesia - Sulawesi SW
+4258	Geographic 2D	ETRS89	ETRS89-GRS80	6258	Europe - ETRF by country
+4937	Geographic 3D	ETRS89	ETRS89	6258	Europe - ETRF by country
+4936	Geocentric	ETRS89	ETRS89 / (X Y Z)	6258	Europe - ETRF by country
+4259	Geographic 2D	Malongo 1987	Mhast	6259	Africa - Angola (Cabinda) and DR Congo (Zaire) - offshore
+4261	Geographic 2D	Merchich		6261	Africa - Morocco and Western Sahara - onshore
+4262	Geographic 2D	Massawa		6262	Eritrea
+4263	Geographic 2D	Minna		6263	Nigeria
+4265	Geographic 2D	Monte Mario	Rome 1940	6265	Italy - including San Marino and Vatican
+4266	Geographic 2D	M'poraloko		6266	Gabon
+4267	Geographic 2D	NAD27		6267	North America - NAD27
+4269	Geographic 2D	NAD83	NAD83(1986)	6269	North America - NAD83
+4270	Geographic 2D	Nahrwan 1967		6270	Asia - Middle East - Qatar offshore and UAE
+4271	Geographic 2D	Naparima 1972		6271	Trinidad and Tobago - Tobago - onshore	Often confused with Naparima 1955
+4272	Geographic 2D	NZGD49	GD49	6272	New Zealand - onshore and nearshore
+4273	Geographic 2D	NGO 1948		6273	Norway - onshore
+4274	Geographic 2D	Datum 73	D73	6274	Portugal - mainland - onshore
+4275	Geographic 2D	NTF		6275	France - onshore - mainland and Corsica
+4276	Geographic 2D	NSWC 9Z-2		6276	World
+4277	Geographic 2D	OSGB36		6277	UK - Britain and UKCS 49°45'N to 61°N; 9°W to 2°E
+4278	Geographic 2D	OSGB70		6278	UK - Great Britain; Isle of Man
+4279	Geographic 2D	OS(SN)80		6279	Europe - British Isles - UK and Ireland onshore
+4281	Geographic 2D	Palestine 1923		6281	Asia - Middle East - Israel; Jordan and Palestine onshore
+4282	Geographic 2D	Pointe Noire	Congo 1960 Pointe Noire	6282	Congo
+4283	Geographic 2D	GDA94		6283	Australia - GDA
+4939	Geographic 3D	GDA94		6283	Australia - GDA
+4938	Geocentric	GDA94		6283	Australia - GDA
+4284	Geographic 2D	Pulkovo 1942	S-42	6284	Europe - FSU onshore
+4285	Geographic 2D	Qatar 1974		6285	Qatar
+4286	Geographic 2D	Qatar 1948		6286	Qatar - onshore
+4288	Geographic 2D	Loma Quintana		6288	Venezuela - north of 7°45'N
+4289	Geographic 2D	Amersfoort	RD Bessel	6289	Netherlands - onshore
+4292	Geographic 2D	Sapper Hill 1943		6292	Falkland Islands - onshore
+4293	Geographic 2D	Schwarzeck		6293	Namibia
+4295	Geographic 2D	Serindung		6295	Indonesia - Kalimantan W - coastal
+4297	Geographic 2D	Tananarive		6297	Madagascar - onshore and nearshore
+4298	Geographic 2D	Timbalai 1948	Timbalai 1968	6298	Asia - Brunei and East Malaysia
+4299	Geographic 2D	TM65		6299	Europe - Ireland (Republic and Ulster) - onshore
+4300	Geographic 2D	TM75	1975 Mapping Adjustment	6300	Europe - Ireland (Republic and Ulster) - onshore
+4301	Geographic 2D	Tokyo	Tokyo 1918	6301	Asia - Japan and Korea
+4302	Geographic 2D	Trinidad 1903		6302	Trinidad and Tobago - Trinidad
+4303	Geographic 2D	TC(1948)		6303	UAE - Abu Dhabi and Dubai - onshore
+4304	Geographic 2D	Voirol 1875		6304	Algeria - north of 32°N
+4306	Geographic 2D	Bern 1938		6306	Europe - Liechtenstein and Switzerland
+4307	Geographic 2D	Nord Sahara 1959		6307	Algeria
+4308	Geographic 2D	RT38		6308	Sweden - onshore
+4309	Geographic 2D	Yacare	ROU-USAMS	6309	Uruguay - onshore
+4310	Geographic 2D	Yoff		6310	Senegal
+4311	Geographic 2D	Zanderij		6311	Suriname
+4312	Geographic 2D	MGI		6312	Austria
+4313	Geographic 2D	BD72	BD 72	6313	Belgium - onshore
+4314	Geographic 2D	DHDN		6314	Germany - West Germany all states
+4315	Geographic 2D	Conakry 1905		6315	Guinea - onshore
+4316	Geographic 2D	Dealul Piscului 1930	Dealul Piscului 1933	6316	Romania - onshore
+4318	Geographic 2D	NGN		6318	Kuwait - onshore
+4319	Geographic 2D	KUDAMS		6319	Kuwait - Kuwait City
+4322	Geographic 2D	WGS 72		6322	World	Used by GPS before 1987
+4985	Geographic 3D	WGS 72		6322	World
+4984	Geocentric	WGS 72		6322	World
+4324	Geographic 2D	WGS 72BE		6324	World
+4987	Geographic 3D	WGS 72BE		6324	World
+4986	Geocentric	WGS 72BE		6324	World
+4326	Geographic 2D	WGS 84		6326	World
+4979	Geographic 3D	WGS 84		6326	World
+4978	Geocentric	WGS 84		6326	World
+4600	Geographic 2D	Anguilla 1957		6600	Anguilla - onshore
+4601	Geographic 2D	Antigua 1943		6601	Antigua - onshore
+4602	Geographic 2D	Dominica 1945		6602	Dominica - onshore
+4603	Geographic 2D	Grenada 1953		6603	Grenada and southern Grenadines - onshore
+4604	Geographic 2D	Montserrat 1958	Montserrat 58	6604	Montserrat - onshore
+4605	Geographic 2D	St. Kitts 1955		6605	St Kitts and Nevis - onshore
+4606	Geographic 2D	St. Lucia 1955		6606	St Lucia - onshore
+4607	Geographic 2D	St. Vincent 1945		6607	St Vincent and the Grenadines - onshore
+4608	Geographic 2D	NAD27(76)		6608	Canada - Ontario
+4609	Geographic 2D	NAD27(CGQ77)	CGQ77	6609	Canada - Quebec
+4610	Geographic 2D	Xian 1980		6610	China - onshore
+4611	Geographic 2D	Hong Kong 1980	HK1980	6611	China - Hong Kong
+4612	Geographic 2D	JGD2000		6612	Japan
+4947	Geographic 3D	JGD2000		6612	Japan
+4946	Geocentric	JGD2000		6612	Japan
+4613	Geographic 2D	Segara	Samboja	6613	Indonesia - Kalimantan E
+4614	Geographic 2D	QND95		6614	Qatar - onshore
+4615	Geographic 2D	Porto Santo	Porto Santo 1936	6615	Portugal - Madeira archipelago onshore
+4616	Geographic 2D	Selvagem Grande	Marco Astro	6616	Portugal - Selvagens onshore
+4618	Geographic 2D	SAD69		6618	South America - SAD69 by country
+4619	Geographic 2D	SWEREF99		6619	Sweden
+4977	Geographic 3D	SWEREF99		6619	Sweden
+4976	Geocentric	SWEREF99		6619	Sweden
+4620	Geographic 2D	Point 58	12th Parallel traverse	6620	Africa - 12th parallel N
+4621	Geographic 2D	Fort Marigot		6621	Guadeloupe - St Martin and St Barthelemy - onshore
+4622	Geographic 2D	Guadeloupe 1948	Sainte Anne	6622	Guadeloupe - Grande-Terre and surrounding islands - onshore
+4623	Geographic 2D	CSG67		6623	French Guiana - coastal area
+4624	Geographic 2D	RGFG95	RGFG95 (lat-lon)	6624	French Guiana
+4967	Geographic 3D	RGFG95	RGFG95 (lat-lon)	6624	French Guiana
+4966	Geocentric	RGFG95		6624	French Guiana
+4625	Geographic 2D	Martinique 1938	Fort Desaix	6625	Martinique - onshore
+4626	Geographic 2D	Reunion 1947	Piton des Neiges	6626	Reunion - onshore
+4627	Geographic 2D	RGR92	RGR92 (lat-lon)	6627	Reunion
+4971	Geographic 3D	RGR92	RGR92 (lat-lon)	6627	Reunion
+4970	Geocentric	RGR92		6627	Reunion
+4628	Geographic 2D	Tahiti 52	Tahiti	6628	French Polynesia - Society Islands - Moorea and Tahiti
+4629	Geographic 2D	Tahaa 54	Tahaa	6629	French Polynesia - Society Islands - Bora Bora; Huahine; Raiatea; Tahaa
+4630	Geographic 2D	IGN72 Nuku Hiva		6630	French Polynesia - Marquesas Islands - Nuku Hiva; Ua Huka and Ua Pou
+4632	Geographic 2D	Combani 1950		6632	Mayotte - onshore
+4633	Geographic 2D	IGN56 Lifou		6633	New Caledonia - Lifou
+4662	Geographic 2D	IGN72 Grande Terre		6634	New Caledonia - Grande Terre
+4636	Geographic 2D	Petrels 1972		6636	Antarctica - Adelie Land - Petrels island
+4637	Geographic 2D	Perroud 1950		6637	Antarctica - Adelie Land coastal area
+4638	Geographic 2D	Saint Pierre et Miquelon 1950	St Pierre Miquelon 1950	6638	St Pierre and Miquelon - onshore
+4639	Geographic 2D	MOP78	Uvea SHOM 1978	6639	Wallis and Futuna - Wallis
+4641	Geographic 2D	IGN53 Mare		6641	New Caledonia - Mare
+4642	Geographic 2D	ST84 Ile des Pins		6642	New Caledonia - Ile des Pins
+4643	Geographic 2D	ST71 Belep		6643	New Caledonia - Belep
+4644	Geographic 2D	NEA74 Noumea		6644	New Caledonia - Grande Terre - Noumea
+4646	Geographic 2D	Grand Comoros	IGN50	6646	Comoros - Njazidja (Grande Comore)
+4657	Geographic 2D	Reykjavik 1900		6657	Iceland - onshore
+4658	Geographic 2D	Hjorsey 1955		6658	Iceland - onshore
+4659	Geographic 2D	ISN93		6659	Iceland
+4945	Geographic 3D	ISN93		6659	Iceland
+4944	Geocentric	ISN93		6659	Iceland
+4660	Geographic 2D	Helle 1954		6660	Jan Mayen - onshore
+4661	Geographic 2D	LKS92		6661	Latvia
+4949	Geographic 3D	LKS92		6661	Latvia
+4948	Geocentric	LKS92		6661	Latvia
+4663	Geographic 2D	Porto Santo 1995	Base SE	6663	Portugal - Madeira archipelago onshore
+4664	Geographic 2D	Azores Oriental 1995	Sao Braz	6664	Portugal - Azores E - onshore
+4665	Geographic 2D	Azores Central 1995	Base SW	6665	Portugal - Azores C - onshore
+4666	Geographic 2D	Lisbon 1890		6666	Portugal - mainland - onshore
+4667	Geographic 2D	IKBD-92		6667	Asia - Middle East - Iraq-Kuwait boundary
+4668	Geographic 2D	ED79		6668	Europe - west
+4670	Geographic 2D	IGM95		6670	Italy - including San Marino and Vatican
+4983	Geographic 3D	IGM95		6670	Italy - including San Marino and Vatican
+4982	Geocentric	IGM95		6670	Italy - including San Marino and Vatican
+4671	Geographic 2D	Voirol 1879		6671	Algeria - north of 32°N
+4672	Geographic 2D	Chatham Islands 1971	CI1971	6672	New Zealand - Chatham Islands group
+4673	Geographic 2D	Chatham Islands 1979	CI1979	6673	New Zealand - Chatham Islands group
+4674	Geographic 2D	SIRGAS 2000		6674	Latin America - SIRGAS 2000 by country
+4989	Geographic 3D	SIRGAS 2000		6674	Latin America - SIRGAS 2000 by country
+4988	Geocentric	SIRGAS 2000		6674	Latin America - SIRGAS 2000 by country
+4675	Geographic 2D	Guam 1963		6675	Pacific - Guam and NMI - onshore
+4676	Geographic 2D	Vientiane 1982		6676	Laos
+4677	Geographic 2D	Lao 1993		6677	Laos
+4991	Geographic 3D	Lao 1993		6677	Laos
+4990	Geocentric	Lao 1993		6677	Laos
+4678	Geographic 2D	Lao 1997		6678	Laos
+4993	Geographic 3D	Lao 1997		6678	Laos
+4992	Geocentric	Lao 1997		6678	Laos
+4679	Geographic 2D	Jouik 1961		6679	Mauritania - north coast
+4680	Geographic 2D	Nouakchott 1965		6680	Mauritania - central coast
+4682	Geographic 2D	Gulshan 303		6682	Bangladesh
+4683	Geographic 2D	PRS92	New Luzon	6683	Philippines
+4995	Geographic 3D	PRS92	New Luzon	6683	Philippines
+4994	Geocentric	PRS92	New Luzon	6683	Philippines
+4684	Geographic 2D	Gan 1970		6684	Maldives - onshore	In some references incorrectly named Gandajika 1970
+4686	Geographic 2D	MAGNA-SIRGAS		6686	Colombia
+4997	Geographic 3D	MAGNA-SIRGAS		6686	Colombia
+4996	Geocentric	MAGNA-SIRGAS		6686	Colombia
+4687	Geographic 2D	RGPF		6687	French Polynesia
+4999	Geographic 3D	RGPF		6687	French Polynesia
+4998	Geocentric	RGPF		6687	French Polynesia
+4688	Geographic 2D	Fatu Iva 72	MHEFO 55	6688	French Polynesia - Marquesas Islands - Fatu Hiva
+4689	Geographic 2D	IGN63 Hiva Oa		6689	French Polynesia - Marquesas Islands - Hiva Oa and Tahuata
+4690	Geographic 2D	Tahiti 79	IGN79 Tahiti	6690	French Polynesia - Society Islands - Tahiti
+4691	Geographic 2D	Moorea 87		6691	French Polynesia - Society Islands - Moorea
+4692	Geographic 2D	Maupiti 83	MOP 1983	6692	French Polynesia - Society Islands - Maupiti
+4693	Geographic 2D	Nakhl-e Ghanem		6693	Iran - Kangan district
+4694	Geographic 2D	POSGAR 94		6694	Argentina
+4929	Geographic 3D	POSGAR 94		6694	Argentina
+4928	Geocentric	POSGAR 94		6694	Argentina
+4695	Geographic 2D	Katanga 1955		6695	Congo DR (Zaire) - Katanga
+4696	Geographic 2D	Kasai 1953		6696	Congo DR (Zaire) - Kasai - SE
+4697	Geographic 2D	IGC 1962 6th Parallel South	IGC 1962	6697	Congo DR (Zaire) - 6th parallel south
+4698	Geographic 2D	IGN 1962 Kerguelen		6698	French Southern Territories - Kerguelen onshore
+4699	Geographic 2D	Le Pouce 1934	Le Pouce (Mauritius 94)	6699	Mauritius - mainland
+4700	Geographic 2D	IGN Astro 1960	Mauritanian Mining Cadastre 1999	6700	Mauritania - onshore
+4701	Geographic 2D	IGCB 1955	Bas Congo 1955	6701	Congo DR (Zaire) - Bas Congo
+4702	Geographic 2D	Mauritania 1999		6702	Mauritania
+4925	Geographic 3D	Mauritania 1999		6702	Mauritania
+4924	Geocentric	Mauritania 1999		6702	Mauritania
+4703	Geographic 2D	Mhast 1951		6703	Angola - Cabinda
+4704	Geographic 2D	Mhast (onshore)	Mhast	6704	Africa - Angola (Cabinda) and DR Congo (Zaire) - coastal
+4705	Geographic 2D	Mhast (offshore)	Mhast	6705	Africa - Angola (Cabinda) and DR Congo (Zaire) - offshore
+4706	Geographic 2D	Egypt Gulf of Suez S-650 TL	S-650 TL	6706	Egypt - Gulf of Suez
+4707	Geographic 2D	Tern Island 1961		6707	USA - Hawaii - Tern Island and Sorel Atoll
+4708	Geographic 2D	Cocos Islands 1965		6708	Cocos (Keeling) Islands - onshore
+4709	Geographic 2D	Iwo Jima 1945		6709	Japan - Iwo Jima
+4710	Geographic 2D	Astro DOS 71	ASTRO DOS 71/4	6710	St Helena - St Helena Island
+4711	Geographic 2D	Marcus Island 1952		6711	Japan - Minamitori-shima (Marcus Island) - onshore
+4712	Geographic 2D	Ascension Island 1958		6712	St Helena - Ascension Island
+4713	Geographic 2D	Ayabelle Lighthouse		6713	Djibouti
+4714	Geographic 2D	Bellevue	Bellevue (IGN)	6714	Vanuatu - southern islands
+4715	Geographic 2D	Camp Area Astro		6715	Antarctica - Camp McMurdo area
+4716	Geographic 2D	Phoenix Islands 1966		6716	Kiribati - Phoenix Islands
+4717	Geographic 2D	Cape Canaveral		6717	North America - Bahamas and USA - Florida - onshore
+4718	Geographic 2D	Solomon 1968		6718	Solomon Islands - onshore main islands
+4719	Geographic 2D	Easter Island 1967		6719	Chile - Easter Island onshore
+4720	Geographic 2D	Fiji 1986	FGD 1986	6720	Fiji - onshore
+4721	Geographic 2D	Fiji 1956		6721	Fiji - main islands
+4722	Geographic 2D	South Georgia 1968		6722	South Georgia - onshore
+4723	Geographic 2D	GCGD59	Grand Cayman 1959	6723	Cayman Islands - Grand Cayman
+4724	Geographic 2D	Diego Garcia 1969		6724	British Indian Ocean Territory - Diego Garcia
+4725	Geographic 2D	Johnston Island 1961	Johnston Atoll 1961	6725	Johnston Island
+4726	Geographic 2D	SIGD61	Little Cayman 1961	6726	Cayman Islands - Little Cayman and Cayman Brac
+4727	Geographic 2D	Midway 1961		6727	Midway Islands - Sand and Eastern Islands
+4728	Geographic 2D	PN84	Pico de las Nieves 1984	6728	Spain - Canary Islands western
+4729	Geographic 2D	Pitcairn 1967		6729	Pitcairn - Pitcairn Island
+4730	Geographic 2D	Santo 1965	Santo (DOS)	6730	Vanuatu - northern islands
+4732	Geographic 2D	Marshall Islands 1960		6732	Pacific - Marshall Islands; Wake - onshore
+4733	Geographic 2D	Wake Island 1952		6733	Wake - onshore
+4734	Geographic 2D	Tristan 1968		6734	St Helena - Tristan da Cunha
+4735	Geographic 2D	Kusaie 1951		6735	Micronesia - Kosrae (Kusaie)
+4736	Geographic 2D	Deception Island		6736	Antarctica - Deception Island
+4737	Geographic 2D	Korea 2000		6737	Korea; Republic of (South Korea)
+4927	Geographic 3D	Korea 2000		6737	Korea; Republic of (South Korea)
+4926	Geocentric	Korea 2000		6737	Korea; Republic of (South Korea)
+4738	Geographic 2D	Hong Kong 1963	HK63	6738	China - Hong Kong
+4739	Geographic 2D	Hong Kong 1963(67)	HK63(67)	6739	China - Hong Kong
+4740	Geographic 2D	PZ-90		6740	World
+4923	Geographic 3D	PZ-90		6740	World
+4922	Geocentric	PZ-90		6740	World
+4741	Geographic 2D	FD54		6741	Faroe Islands - onshore
+4742	Geographic 2D	GDM2000		6742	Malaysia
+4921	Geographic 3D	GDM2000		6742	Malaysia
+4920	Geocentric	GDM2000		6742	Malaysia
+4743	Geographic 2D	Karbala 1979	Karbala 1979 (Polservice)	6743	Iraq - onshore
+4744	Geographic 2D	Nahrwan 1934		6744	Asia - Middle East - Iraq and SW Iran
+4745	Geographic 2D	RD/83	DHDN	6745	Germany - Saxony
+4746	Geographic 2D	PD/83	DHDN	6746	Germany - Thuringen
+4747	Geographic 2D	GR96		6747	Greenland
+4909	Geographic 3D	GR96		6747	Greenland
+4908	Geocentric	GR96		6747	Greenland
+4748	Geographic 2D	Vanua Levu 1915	Vanua Levu 1917	6748	Fiji - Vanua Levu and Taveuni
+4749	Geographic 2D	RGNC91-93		6749	New Caledonia
+4907	Geographic 3D	RGNC91-93		6749	New Caledonia
+4906	Geocentric	RGNC91-93		6749	New Caledonia
+4750	Geographic 2D	ST87 Ouvea		6750	New Caledonia - Ouvea
+4751	Geographic 2D	Kertau (RSO)		6751	Asia - Malaysia (west) and Singapore
+4752	Geographic 2D	Viti Levu 1912	Viti Levu 1916	6752	Fiji - Viti Levu
+4753	Geographic 2D	fk89	FD54a	6753	Faroe Islands - onshore
+4754	Geographic 2D	LGD2006		6754	Libya
+4900	Geographic 3D	LGD2006		6754	Libya
+4899	Geocentric	LGD2006		6754	Libya
+4755	Geographic 2D	DGN95	IGD95	6755	Indonesia
+4898	Geographic 3D	DGN95	IGD95	6755	Indonesia
+4897	Geocentric	DGN95	IGD95	6755	Indonesia
+4756	Geographic 2D	VN-2000		6756	Vietnam - onshore
+4757	Geographic 2D	SVY21		6757	Singapore
+4758	Geographic 2D	JAD2001		6758	Jamaica
+4895	Geographic 3D	JAD2001		6758	Jamaica
+4894	Geocentric	JAD2001		6758	Jamaica
+4759	Geographic 2D	NAD83(NSRS2007)		6759	USA - CONUS and Alaska; PRVI
+4893	Geographic 3D	NAD83(NSRS2007)		6759	USA - CONUS and Alaska; PRVI
+4892	Geocentric	NAD83(NSRS2007)		6759	USA - CONUS and Alaska; PRVI
+4760	Geographic 2D	WGS 66		6760	World
+4891	Geographic 3D	WGS 66		6760	World
+4890	Geocentric	WGS 66		6760	World
+4761	Geographic 2D	HTRS96		6761	Croatia
+4889	Geographic 3D	HTRS96		6761	Croatia
+4888	Geocentric	HTRS96		6761	Croatia
+4762	Geographic 2D	BDA2000		6762	Bermuda
+4887	Geographic 3D	BDA2000		6762	Bermuda
+4886	Geocentric	BDA2000		6762	Bermuda
+4763	Geographic 2D	Pitcairn 2006		6763	Pitcairn - Pitcairn Island
+4764	Geographic 2D	RSRGD2000		6764	Antarctica - Ross Sea Region
+4885	Geographic 3D	RSRGD2000		6764	Antarctica - Ross Sea Region
+4884	Geocentric	RSRGD2000		6764	Antarctica - Ross Sea Region
+4765	Geographic 2D	Slovenia 1996	D96	6765	Slovenia
+4883	Geographic 3D	Slovenia 1996	D96	6765	Slovenia
+4882	Geocentric	Slovenia 1996	D96	6765	Slovenia
+4801	Geographic 2D	Bern 1898 (Bern)		6801	Europe - Liechtenstein and Switzerland
+4802	Geographic 2D	Bogota 1975 (Bogota)		6802	Colombia - mainland
+4803	Geographic 2D	Lisbon (Lisbon)	Lisbon 1937 (Lisbon)	6803	Portugal - mainland - onshore
+4804	Geographic 2D	Makassar (Jakarta)		6804	Indonesia - Sulawesi SW
+4805	Geographic 2D	MGI (Ferro)		6805	Europe - Austria and former Yugoslavia onshore
+4806	Geographic 2D	Monte Mario (Rome)	Rome 1940 (Rome)	6806	Italy - including San Marino and Vatican
+4807	Geographic 2D	NTF (Paris)		6807	France - onshore - mainland and Corsica
+4809	Geographic 2D	BD50 (Brussels)	BD 50 (Brussels)	6809	Belgium - onshore
+4810	Geographic 2D	Tananarive (Paris)		6810	Madagascar - onshore
+4811	Geographic 2D	Voirol 1875 (Paris)		6811	Algeria - north of 32°N
+4813	Geographic 2D	Batavia (Jakarta)	Genuk (Jakarta)	6813	Indonesia - Bali; Java and western Sumatra onshore
+4814	Geographic 2D	RT38 (Stockholm)		6814	Sweden - onshore
+4815	Geographic 2D	Greek (Athens)		6815	Greece - onshore
+4816	Geographic 2D	Carthage (Paris)		6816	Tunisia - onshore
+4817	Geographic 2D	NGO 1948 (Oslo)		6817	Norway - onshore
+4818	Geographic 2D	S-JTSK (Ferro)		6818	Europe - Czechoslovakia
+4820	Geographic 2D	Segara (Jakarta)	Samboja (Jakarta)	6820	Indonesia - Kalimantan E
+4821	Geographic 2D	Voirol 1879 (Paris)		6821	Algeria - north of 32°N
+4901	Geographic 2D	ATF (Paris)		6901	France - mainland onshore
+4903	Geographic 2D	Madrid 1870 (Madrid)	Madrid	6903	Spain - mainland onshore
+4904	Geographic 2D	Lisbon 1890 (Lisbon)		6904	Portugal - mainland - onshore

@@ -2640,12 +2640,14 @@ class Compound extends CoordinateReferenceSystem
         string $srid,
         Geocentric|Geographic2D|Projected $horizontal,
         Vertical $vertical,
-        BoundingArea $boundingArea
+        BoundingArea $boundingArea,
+        string $name = ''
     ) {
         $this->srid = $srid;
         $this->horizontal = $horizontal;
         $this->vertical = $vertical;
         $this->boundingArea = $boundingArea;
+        $this->name = $name;
     }
 
     public function getSRID(): string
@@ -2687,6 +2689,7 @@ class Compound extends CoordinateReferenceSystem
                 $horizontalCRS,
                 Vertical::fromSRID($data['vertical_crs']),
                 BoundingArea::createFromExtentCodes($data['extent_code']),
+                $data['name']
             );
         }
 

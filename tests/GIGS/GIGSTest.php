@@ -8,12 +8,15 @@ declare(strict_types=1);
 
 namespace PHPCoord\GIGS;
 
-use PHPCoord\Datum\Datum;
 use function explode;
 use Generator;
 use function min;
 use PHPCoord\CoordinateOperation\CoordinateOperations;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
+use PHPCoord\CoordinateReferenceSystem\Geocentric;
+use PHPCoord\CoordinateReferenceSystem\Geographic2D;
+use PHPCoord\CoordinateReferenceSystem\Geographic3D;
+use PHPCoord\Datum\Datum;
 use PHPCoord\Datum\Ellipsoid;
 use PHPCoord\Datum\PrimeMeridian;
 use PHPCoord\Exception\UnknownSRIDException;
@@ -124,7 +127,6 @@ class GIGSTest extends TestCase
         $this->assertEquals($name, Datum::getSupportedSRIDs()['urn:ogc:def:datum:EPSG::' . $epsgCode]);
         $this->assertEquals($ellipsoidName, $datum->getEllipsoid()->getName());
         $this->assertEquals($primeMeridianName, $datum->getPrimeMeridian()->getName());
-
     }
 
     public function series2200DatumData(): Generator
@@ -133,6 +135,45 @@ class GIGSTest extends TestCase
 
         foreach ($body as $row) {
             yield '#' . $row[0] => [$row[0], $row[1], $row[3], $row[4]];
+        }
+    }
+
+    /**
+     * @dataProvider series2200GeodeticCRSData
+     */
+    public function testSeries2200GeodeticCRSs(string $epsgCode, string $type, string $name, string $datumCode): void
+    {
+        $crs = CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::' . $epsgCode);
+        $this->assertEquals($name, $crs->getName());
+
+        if ($datumCode === '6258') { // treat ensemble as latest as code does
+            $datumCode = '1206';
+        } elseif ($datumCode === '6326') { // treat ensemble as latest as code does
+            $datumCode = '1309';
+        }
+
+        $this->assertEquals('urn:ogc:def:datum:EPSG::' . $datumCode, $crs->getDatum()->getSRID());
+
+        if ($crs instanceof Geocentric) {
+            $this->assertEquals('X', $crs->getCoordinateSystem()->getAxes()[0]->getAbbreviation());
+            $this->assertEquals('Y', $crs->getCoordinateSystem()->getAxes()[1]->getAbbreviation());
+            $this->assertEquals('Z', $crs->getCoordinateSystem()->getAxes()[2]->getAbbreviation());
+        } elseif ($crs instanceof Geographic2D) {
+            $this->assertEquals('Lat', $crs->getCoordinateSystem()->getAxes()[0]->getAbbreviation());
+            $this->assertEquals('Lon', $crs->getCoordinateSystem()->getAxes()[1]->getAbbreviation());
+        } elseif ($crs instanceof Geographic3D) {
+            $this->assertEquals('Lat', $crs->getCoordinateSystem()->getAxes()[0]->getAbbreviation());
+            $this->assertEquals('Lon', $crs->getCoordinateSystem()->getAxes()[1]->getAbbreviation());
+            $this->assertEquals('h', $crs->getCoordinateSystem()->getAxes()[2]->getAbbreviation());
+        }
+    }
+
+    public function series2200GeodeticCRSData(): Generator
+    {
+        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 2200 Predefined Geodetic Data Objects test data/ASCII/GIGS_lib_2205_GeodeticCRS.txt');
+
+        foreach ($body as $row) {
+            yield '#' . $row[0] => [$row[0], $row[1], $row[2], $row[4]];
         }
     }
 

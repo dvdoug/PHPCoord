@@ -44,6 +44,8 @@ abstract class CoordinateReferenceSystem
 
     protected string $srid;
 
+    protected string $name;
+
     protected CoordinateSystem $coordinateSystem;
 
     protected Datum $datum;
@@ -57,6 +59,11 @@ abstract class CoordinateReferenceSystem
     public function getSRID(): string
     {
         return $this->srid;
+    }
+
+    public function getName(): string
+    {
+        return $this->name;
     }
 
     public function getCoordinateSystem(): CoordinateSystem
