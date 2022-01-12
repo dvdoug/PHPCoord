@@ -14255,10 +14255,8 @@ class Datum
             $data = static::$sridData[$srid];
 
             if ($data['type'] === self::DATUM_TYPE_ENSEMBLE) { // if ensemble, use latest realisation
-                return static::fromSRID(end(static::$sridData[$srid]['ensemble']));
-            }
-
-            if ($data['ellipsoid']) {
+                self::$cachedObjects[$srid] = static::fromSRID(end(static::$sridData[$srid]['ensemble']));
+            } elseif ($data['ellipsoid']) {
                 self::$cachedObjects[$srid] = new static(
                     $data['type'],
                     Ellipsoid::fromSRID($data['ellipsoid']),
