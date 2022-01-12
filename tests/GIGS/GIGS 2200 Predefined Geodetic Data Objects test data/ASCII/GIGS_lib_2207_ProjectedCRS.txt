@@ -1,0 +1,452 @@
+# File: GIGS_lib_2207_ProjectedCRS
+# GIGS Test Procedure: 2207
+# GIGS Test Dataset Version: 2.0
+# EPSG Dataset Version: 10.047
+# GIGS Test Dataset Issue Date: 2021-05-03
+#
+# Fields:
+# [0]: EPSG Projected CRS Code
+# [1]: EPSG Datum Code
+# [2]: Geographic CRS Name
+# [3]: Projected CRS Name
+# [4]: Alias(es)
+# [5]: EPSG Usage Extent
+# [6]: GIGS Remarks
+#
+# [0]	# [1]	# [2]	# [3]	# [4]	# [5]	# [6]
+2041	6143	Abidjan 1987	Abidjan 1987 / UTM zone 30N	Abidjan 87 / UTM 30N; Port Bouet / UTM zone 30N; Côte d'Ivoire / UTM zone 30N	Cote d'Ivoire (Ivory Coast) - east of 6°W
+2043	6143	Abidjan 1987	Abidjan 1987 / UTM zone 29N	Abidjan 87 / UTM 29N; Port Bouet / UTM zone 29N; Côte d'Ivoire / UTM zone 29N	Cote d'Ivoire (Ivory Coast) - west of 6°W
+2058	6154	ED50(ED77)	ED50(ED77) / UTM zone 38N	ED50(ED77) / UTM 38N	Iran - west of 48°E
+2059	6154	ED50(ED77)	ED50(ED77) / UTM zone 39N	ED50(ED77) / UTM 39N	Iran - 48°E to 54°E
+2060	6154	ED50(ED77)	ED50(ED77) / UTM zone 40N	ED50(ED77) / UTM 40N	Iran - 54°E to 60°E
+2067	6158	Naparima 1955	Naparima 1955 / UTM zone 20N	Naparima 1955 / UTM 20N	Trinidad and Tobago - Trinidad - onshore
+2068	6159	ELD79	ELD79 / Libya zone 5		Libya - west of 10°E
+2069	6159	ELD79	ELD79 / Libya zone 6		Libya - 10°E to 12°E onshore
+2070	6159	ELD79	ELD79 / Libya zone 7		Libya - 12°E to 14°E onshore
+2071	6159	ELD79	ELD79 / Libya zone 8		Libya - 14°E to 16°E onshore
+2072	6159	ELD79	ELD79 / Libya zone 9		Libya - 16°E to 18°E onshore
+2073	6159	ELD79	ELD79 / Libya zone 10		Libya - 18°E to 20°E onshore
+2074	6159	ELD79	ELD79 / Libya zone 11		Libya - 20°E to 22°E onshore
+2075	6159	ELD79	ELD79 / Libya zone 12		Libya - 22°E to 24°E onshore
+2076	6159	ELD79	ELD79 / Libya zone 13		Libya - east of 24°E onshore
+2077	6159	ELD79	ELD79 / UTM zone 32N		Libya - west of 12°E onshore
+2078	6159	ELD79	ELD79 / UTM zone 33N		Libya - 12°E to 18°E onshore
+2079	6159	ELD79	ELD79 / UTM zone 34N		Libya - 18°E to 24°E onshore
+2080	6159	ELD79	ELD79 / UTM zone 35N		Libya - east of 24°E onshore
+2089	6163	Yemen NGN96	Yemen NGN96 / UTM zone 38N	Yemen NGN96 / UTM 38N	Yemen - 42°E to 48°E
+2090	6163	Yemen NGN96	Yemen NGN96 / UTM zone 39N	Yemen NGN96 / UTM 39N	Yemen - 48°E to 54°E
+2099	6286	Qatar 1948	Qatar 1948 / Qatar Grid	Qatar Plane CS	Qatar - onshore
+2133	6167	NZGD2000	NZGD2000 / UTM zone 58S		New Zealand - offshore 162°E to168°E
+2134	6167	NZGD2000	NZGD2000 / UTM zone 59S		New Zealand - offshore 168°E to 174°E
+2135	6167	NZGD2000	NZGD2000 / UTM zone 60S		New Zealand - offshore 174°E to 180°E
+2136	6168	Accra	Accra / Ghana National Grid	Accra / Gold Coast Grid; Accra / Ghana Nat. Grid	Ghana - onshore
+2137	6168	Accra	Accra / TM 1 NW	Accra / Ghana TM	Ghana - offshore
+2154	6171	RGF93 v1	RGF93 v1 / Lambert-93		France
+2165	6143	Abidjan 1987	Abidjan 1987 / TM 5 NW	Cote d'Ivoire / TM 5 NW; Port Bouet / TM 5 NW	Cote d'Ivoire (Ivory Coast) - offshore
+2193	6167	NZGD2000	NZGD2000 / New Zealand Transverse Mercator 2000	NZGD2000 / NZTM; NZGD2000 / New Zealand Transverse Mercator; NZGD2000 / NZTM2000	New Zealand - onshore
+2201	6189	REGVEN	REGVEN / UTM zone 18N		Venezuela - west of 72°W
+2202	6189	REGVEN	REGVEN / UTM zone 19N		Venezuela - 72°W and 66°W
+2203	6189	REGVEN	REGVEN / UTM zone 20N		Venezuela - east of 66°W
+2215	6193	Manoca 1962	Manoca 1962 / UTM zone 32N	Manoca 1962 / UTM 32N	Cameroon - coastal area
+2253	6269	NAD83	NAD83 / Michigan South (ft)	NAD83 / Michigan S (ft)	USA - Michigan - SPCS - S	Check UoM
+2278	6269	NAD83	NAD83 / Texas South Central (ftUS)	NAD83 / Texas SC (ftUS)	USA - Texas - SPCS83 - SC	Check UoM
+2308	6211	Batavia	Batavia / TM 109 SE	Genuk / TM 109 SE	Indonesia - Java Sea - offshore northwest Java
+2314	6302	Trinidad 1903	Trinidad 1903 / Trinidad Grid (ftCla)	Trinidad 03 Grid (ftCla)	Trinidad and Tobago - Trinidad
+2315	6221	Campo Inchauspe	Campo Inchauspe / UTM zone 19S	C Inchauspe / UTM 19S; Campo Inchauspe /UTM 19S	Argentina - Tierra del Fuego offshore west of 66°W
+2316	6221	Campo Inchauspe	Campo Inchauspe / UTM zone 20S	C Inchauspe / UTM 20S; Campo Inchauspe /UTM 20S	Argentina - Tierra del Fuego offshore east of 66°W
+2318	6204	Ain el Abd	Ain el Abd / Aramco Lambert	Ain el Abd / Aramco Lamb	Saudi Arabia - onshore
+2338	6610	Xian 1980	Xian 1980 / Gauss-Kruger CM 75E	Xian 1980 / 6-degree Gauss-Kruger CM 75E; Xian 1980 / G-K CM 75E	China - west of 78°E
+2339	6610	Xian 1980	Xian 1980 / Gauss-Kruger CM 81E	Xian 1980 / 6-degree Gauss-Kruger CM 81E; Xian 1980 / G-K CM 81E	China - 78°E to 84°E
+2340	6610	Xian 1980	Xian 1980 / Gauss-Kruger CM 87E	Xian 1980 / 6-degree Gauss-Kruger CM 87E; Xian 1980 / G-K CM 87E	China - 84°E to 90°E
+2341	6610	Xian 1980	Xian 1980 / Gauss-Kruger CM 93E	Xian 1980 / 6-degree Gauss-Kruger CM 93E; Xian 1980 / G-K CM 93E	China - 90°E to 96°E
+2342	6610	Xian 1980	Xian 1980 / Gauss-Kruger CM 99E	Xian 1980 / 6-degree Gauss-Kruger CM 99E; Xian 1980 / G-K CM 99E	China - 96°E to 102°E
+2343	6610	Xian 1980	Xian 1980 / Gauss-Kruger CM 105E	Xian 1980 / 6-degree Gauss-Kruger CM 105E; Xian 1980 / G-K CM 105E	China - 102°E to 108°E onshore
+2344	6610	Xian 1980	Xian 1980 / Gauss-Kruger CM 111E	Xian 1980 / 6-degree Gauss-Kruger CM 111E; Xian 1980 / G-K CM 111E	China - 108°E to 114°E onshore
+2345	6610	Xian 1980	Xian 1980 / Gauss-Kruger CM 117E	Xian 1980 / 6-degree Gauss-Kruger CM 117E; Xian 1980 / G-K CM 117E	China - 114°E to 120°E onshore
+2346	6610	Xian 1980	Xian 1980 / Gauss-Kruger CM 123E	Xian 1980 / 6-degree Gauss-Kruger CM 123E; Xian 1980 / G-K CM 123E	China - 120°E to 126°E onshore
+2347	6610	Xian 1980	Xian 1980 / Gauss-Kruger CM 129E	Xian 1980 / 6-degree Gauss-Kruger CM 129E; Xian 1980 / G-K CM 129E	China - 126°E to 132°E onshore
+2348	6610	Xian 1980	Xian 1980 / Gauss-Kruger CM 135E	Xian 1980 / 6-degree Gauss-Kruger CM 135E; Xian 1980 / G-K CM 135E	China - east of 132°E
+2809	6152	NAD83(HARN)	NAD83(HARN) / Michigan South	NAD83(HPGN) / Michigan South; NAD83(HARN) / Michigan South (m); NAD83(HARN) / MI S (m)	USA - Michigan - SPCS - S
+2845	6152	NAD83(HARN)	NAD83(HARN) / Texas North Central	NAD83(HPGN) / Texas North Central; NAD83(HARN) / Texas North Central (m); NAD83(HARN) / TX NC (m)	USA - Texas - SPCS - NC
+2898	6152	NAD83(HARN)	NAD83(HARN) / Michigan South (ft)	NAD83(HPGN) / Michigan South (ft); NAD83(HARN) / MI S (ft)	USA - Michigan - SPCS - S
+2917	6152	NAD83(HARN)	NAD83(HARN) / Texas North Central (ftUS)	NAD83(HPGN) / Texas North Central (ftUS); NAD83(HARN) / TX NC (ftUS)	USA - Texas - SPCS - NC
+2932	6614	QND95	QND95 / Qatar National Grid	QND95 / Qatar Nat Grid	Qatar - onshore
+2955	6140	NAD83(CSRS)	NAD83(CSRS) / UTM zone 11N	NAD83(CSRS) / UTM 11N	Canada - 120°W to 114°W
+2956	6140	NAD83(CSRS)	NAD83(CSRS) / UTM zone 12N	NAD83(CSRS) / UTM 12N	Canada - 114°W to 108°W
+3001	6211	Batavia	Batavia / NEIEZ		Indonesia - Bali; Java and western Sumatra onshore
+3003	6265	Monte Mario	Monte Mario / Italy zone 1	Rome 1940 / Italy zone 1	Italy - west of 12°E
+3004	6265	Monte Mario	Monte Mario / Italy zone 2	Rome 1940 / Italy zone 2	Italy - east of 12°E
+3114	6686	MAGNA-SIRGAS	MAGNA-SIRGAS / Colombia Far West zone	MAGNA-SIRGAS / Col FW	Colombia - west of 78°35'W
+3115	6686	MAGNA-SIRGAS	MAGNA-SIRGAS / Colombia West zone	MAGNA-SIRGAS / Col W	Colombia - 78°35'W to 75°35'W
+3116	6686	MAGNA-SIRGAS	MAGNA-SIRGAS / Colombia Bogota zone	MAGNA-SIRGAS / Col Bog	Colombia - 75°35'W to 72°35'W
+3117	6686	MAGNA-SIRGAS	MAGNA-SIRGAS / Colombia East Central zone	MAGNA-SIRGAS / Col EC	Colombia - 72°35'W to 69°35'W
+3118	6686	MAGNA-SIRGAS	MAGNA-SIRGAS / Colombia East zone	MAGNA-SIRGAS / Col E	Colombia - east of 69°35'W
+3121	6683	PRS92	PRS92 / Philippines zone 1	New Luzon / Philippines zone 1; PRS92 / Philippines 1	Philippines - zone I
+3122	6683	PRS92	PRS92 / Philippines zone 2	New Luzon / Philippines zone 2; PRS92 / Philippines 2	Philippines - zone II
+3123	6683	PRS92	PRS92 / Philippines zone 3	New Luzon / Philippines zone 3; PRS92 / Philippines 3	Philippines - zone III
+3124	6683	PRS92	PRS92 / Philippines zone 4	New Luzon / Philippines zone 4; PRS92 / Philippines 4	Philippines - zone IV
+3125	6683	PRS92	PRS92 / Philippines zone 5	New Luzon / Philippines zone 5; PRS92 / Philippines 5	Philippines - zone V
+3148	6131	Indian 1960	Indian 1960 / UTM zone 48N	Indian (DMA Reduced) / UTM zone 48N; Indian 1960 / UTM 48N	Asia - Cambodia and Vietnam - west of 108°E
+3149	6131	Indian 1960	Indian 1960 / UTM zone 49N	Indian (DMA Reduced) / UTM zone 49N; Indian 1960 / UTM 49N	Vietnam - east of 108°E onshore
+3167	6751	Kertau (RSO)	Kertau (RSO) / RSO Malaya (ch)	Kertau (RSO) / RSO (ch)	Malaysia - West Malaysia - onshore	Check UoM
+3168	6751	Kertau (RSO)	Kertau (RSO) / RSO Malaya (m)	Kertau (RSO) / RSO (m)	Malaysia - West Malaysia - onshore	Check UoM
+3190	6754	LGD2006	LGD2006 / Libya TM zone 5	LGD2006 / Libya TM 5	Libya - west of 10°E
+3191	6754	LGD2006	LGD2006 / Libya TM zone 6	LGD2006 / Libya TM 6	Libya - 10°E to 12°E onshore
+3192	6754	LGD2006	LGD2006 / Libya TM zone 7	LGD2006 / Libya TM 7	Libya - 12°E to 14°E onshore
+3193	6754	LGD2006	LGD2006 / Libya TM zone 8	LGD2006 / Libya TM 8	Libya - 14°E to 16°E onshore
+3194	6754	LGD2006	LGD2006 / Libya TM zone 9	LGD2006 / Libya TM 9	Libya - 16°E to 18°E onshore
+3195	6754	LGD2006	LGD2006 / Libya TM zone 10	LGD2006 / Libya TM 10	Libya - 18°E to 20°E onshore
+3196	6754	LGD2006	LGD2006 / Libya TM zone 11	LGD2006 / Libya TM 11	Libya - 20°E to 22°E onshore
+3197	6754	LGD2006	LGD2006 / Libya TM zone 12	LGD2006 / Libya TM 12	Libya - 22°E to 24°E onshore
+3198	6754	LGD2006	LGD2006 / Libya TM zone 13	LGD2006 / Libya TM 13	Libya - east of 24°E onshore
+3199	6754	LGD2006	LGD2006 / UTM zone 32N		Libya - west of 12°E
+3200	6132	FD58	FD58 / Iraq zone	Final Datum 1958 / Iraq zone	Iran - FD58
+3201	6754	LGD2006	LGD2006 / UTM zone 33N		Libya - 12°E to 18°E
+3202	6754	LGD2006	LGD2006 / UTM zone 34N		Libya - 18°E to 24°E
+3203	6754	LGD2006	LGD2006 / UTM zone 35N		Libya - east of 24°E
+3334	6179	Pulkovo 1942(58)	Pulkovo 1942(58) / Gauss-Kruger zone 4	System 1942/21 (6); S-42 zone 4; S-42 zone 34; Pulkovo 1942(58) / 6-degree Gauss-Kruger zone 4; Pulkovo 42(58) / GK zn 4	Europe - 18°E to 24°E onshore and S-42(58) by country
+3335	6179	Pulkovo 1942(58)	Pulkovo 1942(58) / Gauss-Kruger zone 5	System 1942/27 (6); S-42 zone 5; S-42 zone 35; Pulkovo 1942(58) / 6-degree Gauss-Kruger zone 5; Pulkovo 42(58) / GK zn 5	Europe - 24°E to 30°E onshore and S-42(58) by country
+3343	6702	Mauritania 1999	Mauritania 1999 / UTM zone 28N	Mauritania 99 / UTM 28N	Mauritania - 18°W to 12°W
+3344	6702	Mauritania 1999	Mauritania 1999 / UTM zone 29N	Mauritania 99 / UTM 29N	Mauritania - 12°W to 6°W
+3345	6702	Mauritania 1999	Mauritania 1999 / UTM zone 30N	Mauritania 99 / UTM 30N	Mauritania - east of 6°W
+3353	6704	Mhast (onshore)	Mhast (onshore) / UTM zone 32S	Mhast / UTM zone 32S; Mhast onshore / UTM 32S	Africa - Angola (Cabinda) and DR Congo (Zaire) - coastal
+3354	6705	Mhast (offshore)	Mhast (offshore) / UTM zone 32S	Mhast / UTM zone 32S; Mhast offshore / UTM 32S	Africa - Angola (Cabinda) and DR Congo (Zaire) - offshore
+3355	6706	Egypt Gulf of Suez S-650 TL	Egypt Gulf of Suez S-650 TL / Red Belt	S-650 TL / Red Belt	Egypt - Gulf of Suez
+3367	6700	IGN Astro 1960	IGN Astro 1960 / UTM zone 28N	Mauritanian Mining Cadastre 1999 / UTM zone 28N; IGN Astro 1960 / UTM 28N	Mauritania - west of 12°W onshore
+3368	6700	IGN Astro 1960	IGN Astro 1960 / UTM zone 29N	Mauritanian Mining Cadastre 1999 / UTM zone 29N; IGN Astro 1960 / UTM 29N	Mauritania - 12°W to 6°W
+3369	6700	IGN Astro 1960	IGN Astro 1960 / UTM zone 30N	Mauritanian Mining Cadastre 1999 / UTM zone 30N; IGN Astro 1960 / UTM 30N	Mauritania - east of 6°W
+3375	6742	GDM2000	GDM2000 / Peninsula RSO		Malaysia - West Malaysia
+3376	6742	GDM2000	GDM2000 / East Malaysia BRSO	GDM2000 / E Malaysia RSO	Malaysia - East Malaysia
+3440	6134	PSD93	PSD93 / UTM zone 40N		Oman - onshore east of 54°E
+3736	6269	NAD83	NAD83 / Wyoming East (ftUS)	NAD83 / Wyoming E (ftUS)	USA - Wyoming - SPCS - E	Check UoM
+3836	6178	Pulkovo 1942(83)	Pulkovo 1942(83) / Gauss-Kruger zone 4	Pulkovo 1942(83) / 6-degree Gauss-Kruger zone 4; S-42 zone 4; Pulkovo 42(83) / GK zn 4	Europe - 18°E to 24°E onshore and S-42(83) by country	Check axes order and abbreviations
+3844	6179	Pulkovo 1942(58)	Pulkovo 1942(58) / Stereo70	Stereo 70; S-42 / Stereo 70; Dealul Piscului 1970/ Stereo 70	Romania
+20249	6202	AGD66	AGD66 / AMG zone 49		Australia - 108°E to 114°E (EEZ)
+20250	6202	AGD66	AGD66 / AMG zone 50		Australia - 114°E to 120°E (EEZ)
+20251	6202	AGD66	AGD66 / AMG zone 51		Australia - 120°E to 126°E
+20252	6202	AGD66	AGD66 / AMG zone 52		Australia - 126°E to 132°E
+20253	6202	AGD66	AGD66 / AMG zone 53		Australia - 132°E to 138°E
+20254	6202	AGD66	AGD66 / AMG zone 54		Australasia - Australia and PNG - 138°E to 144°E
+20255	6202	AGD66	AGD66 / AMG zone 55		Australasia - Australia and PNG - 144°E to 150°E
+20256	6202	AGD66	AGD66 / AMG zone 56		Australasia - Australia and PNG - 150°E to 156°E
+20349	6203	AGD84	AGD84 / AMG zone 49		Australia - 108°E to 114°E (EEZ)
+20350	6203	AGD84	AGD84 / AMG zone 50		Australia - 114°E to 120°E (EEZ)
+20351	6203	AGD84	AGD84 / AMG zone 51		Australia - 120°E to 126°E
+20352	6203	AGD84	AGD84 / AMG zone 52		Australia - SA and WA 126°E to 132°E
+20353	6203	AGD84	AGD84 / AMG zone 53		Australia - SA 132°E to 138°E
+20354	6203	AGD84	AGD84 / AMG zone 54		Australia - SA and Qld 138°E to 144°E
+20355	6203	AGD84	AGD84 / AMG zone 55		Australia - Qld 144°E to 150°E
+20356	6203	AGD84	AGD84 / AMG zone 56		Australia - Qld east of 150°E
+20436	6204	Ain el Abd	Ain el Abd / UTM zone 36N	Ain el Abd / UTM 36N	Saudi Arabia - onshore west of 36°E
+20437	6204	Ain el Abd	Ain el Abd / UTM zone 37N	Ain el Abd / UTM 37N	Saudi Arabia - onshore 36°E to 42°E
+20822	6208	Aratu	Aratu / UTM zone 22S		Brazil - 54°W to 48°W and Aratu
+20823	6208	Aratu	Aratu / UTM zone 23S		Brazil - 48°W to 42°W and Aratu
+20824	6208	Aratu	Aratu / UTM zone 24S		Brazil - 42°W to 36°W and Aratu
+21148	6211	Batavia	Batavia / UTM zone 48S	Genuk / UTM zone 48S	Indonesia - Java and Java Sea - west of 108°E
+21149	6211	Batavia	Batavia / UTM zone 49S	Genuk / UTM zone 49S	Indonesia - Java and Java Sea - 108°E to 114°E
+21150	6211	Batavia	Batavia / UTM zone 50S	Genuk / UTM zone 50S	Indonesia - Java and Java Sea - east of 114°E
+21413	6214	Beijing 1954	Beijing 1954 / Gauss-Kruger zone 13	Beijing / GK zone 13; Beijing 1954 / 6-degree Gauss-Kruger zone 13	China - west of 78°E	Check axes order and abbreviations
+21414	6214	Beijing 1954	Beijing 1954 / Gauss-Kruger zone 14	Beijing / GK zone 14; Beijing 1954 / 6-degree Gauss-Kruger zone 14	China - 78°E to 84°E	Check axes order and abbreviations
+21415	6214	Beijing 1954	Beijing 1954 / Gauss-Kruger zone 15	Beijing / GK zone 15; Beijing 1954 / 6-degree Gauss-Kruger zone 15	China - 84°E to 90°E	Check axes order and abbreviations
+21416	6214	Beijing 1954	Beijing 1954 / Gauss-Kruger zone 16	Beijing / GK zone 16; Beijing 1954 / 6-degree Gauss-Kruger zone 16	China - 90°E to 96°E	Check axes order and abbreviations
+21417	6214	Beijing 1954	Beijing 1954 / Gauss-Kruger zone 17	Beijing / GK zone 17; Beijing 1954 / 6-degree Gauss-Kruger zone 17	China - 96°E to 102°E	Check axes order and abbreviations
+21418	6214	Beijing 1954	Beijing 1954 / Gauss-Kruger zone 18	Beijing / GK zone 18; Beijing 1954 / 6-degree Gauss-Kruger zone 18	China - 102°E to 108°E onshore	Check axes order and abbreviations
+21419	6214	Beijing 1954	Beijing 1954 / Gauss-Kruger zone 19	Beijing / GK zone 19; Beijing 1954 / 6-degree Gauss-Kruger zone 19	China - 108°E to 114°E onshore	Check axes order and abbreviations
+21420	6214	Beijing 1954	Beijing 1954 / Gauss-Kruger zone 20	Beijing / GK zone 20; Beijing 1954 / 6-degree Gauss-Kruger zone 20	China - 114°E to 120°E onshore	Check axes order and abbreviations
+21421	6214	Beijing 1954	Beijing 1954 / Gauss-Kruger zone 21	Beijing / GK zone 21; Beijing 1954 / 6-degree Gauss-Kruger zone 21	China - 120°E to 126°E onshore	Check axes order and abbreviations
+21422	6214	Beijing 1954	Beijing 1954 / Gauss-Kruger zone 22	Beijing / GK zone 22; Beijing 1954 / 6-degree Gauss-Kruger zone 22	China - 126°E to 132°E onshore	Check axes order and abbreviations
+21423	6214	Beijing 1954	Beijing 1954 / Gauss-Kruger zone 23	Beijing / GK zone 23; Beijing 1954 / 6-degree Gauss-Kruger zone 23	China - east of 132°E	Check axes order and abbreviations
+21896	6218	Bogota 1975	Bogota 1975 / Colombia West zone	Bogota / Colombia 3W	Colombia - west of 75°35'W
+21897	6218	Bogota 1975	Bogota 1975 / Colombia Bogota zone	Bogota / Colombia Bogota	Colombia - 75°35'W to 72°35'W
+21898	6218	Bogota 1975	Bogota 1975 / Colombia East Central zone	Bogota / Colombia 3E	Colombia - 72°35'W to 69°35'W
+21899	6218	Bogota 1975	Bogota 1975 / Colombia East zone	Bogota / Colombia 6E	Colombia - east of 69°35'W
+22032	6220	Camacupa	Camacupa 1948 / UTM zone 32S	Camacupa / UTM zone 32S	Angola - Angola proper - offshore - west of 12°E
+22033	6220	Camacupa	Camacupa 1948 / UTM zone 33S	Camacupa / UTM zone 33S	Angola - Angola proper - 12°E to 18°E
+22091	6220	Camacupa	Camacupa 1948 / TM 11.30 SE	Camacupa / TM 11.30 SE	Angola - offshore block 15
+22092	6220	Camacupa	Camacupa 1948 / TM 12 SE	Camacupa / TM 12 SE	Angola - Angola proper - offshore
+22171	6190	POSGAR 98	POSGAR 98 / Argentina 1	POSGAR 98 / Gauss-Kruger zone 1	Argentina - west of 70.5°W
+22172	6190	POSGAR 98	POSGAR 98 / Argentina 2	POSGAR 98 / Gauss-Kruger zone 2	Argentina - 70.5°W to 67.5°W onshore
+22173	6190	POSGAR 98	POSGAR 98 / Argentina 3	POSGAR 98 / Gauss-Kruger zone 3	Argentina - 67.5°W to 64.5°W onshore
+22174	6190	POSGAR 98	POSGAR 98 / Argentina 4	POSGAR 98 / Gauss-Kruger zone 4	Argentina - 64.5°W to 61.5°W onshore
+22175	6190	POSGAR 98	POSGAR 98 / Argentina 5	POSGAR 98 / Gauss-Kruger zone 5	Argentina - 61.5°W to 58.5°W onshore
+22176	6190	POSGAR 98	POSGAR 98 / Argentina 6	POSGAR 98 / Gauss-Kruger zone 6	Argentina - 58.5°W to 55.5°W onshore
+22177	6190	POSGAR 98	POSGAR 98 / Argentina 7	POSGAR 98 / Gauss-Kruger zone 7	Argentina - east of 55.5°W onshore
+22181	6694	POSGAR 94	POSGAR 94 / Argentina 1	POSGAR 94 / Gauss-Kruger zone 1	Argentina - west of 70.5°W
+22182	6694	POSGAR 94	POSGAR 94 / Argentina 2	POSGAR 94 / Gauss-Kruger zone 2	Argentina - 70.5°W to 67.5°W onshore
+22183	6694	POSGAR 94	POSGAR 94 / Argentina 3	POSGAR 94 / Gauss-Kruger zone 3	Argentina - 67.5°W to 64.5°W onshore
+22184	6694	POSGAR 94	POSGAR 94 / Argentina 4	POSGAR 94 / Gauss-Kruger zone 4	Argentina - 64.5°W to 61.5°W onshore
+22185	6694	POSGAR 94	POSGAR 94 / Argentina 5	POSGAR 94 / Gauss-Kruger zone 5	Argentina - 61.5°W to 58.5°W onshore
+22186	6694	POSGAR 94	POSGAR 94 / Argentina 6	POSGAR 94 / Gauss-Kruger zone 6	Argentina - 58.5°W to 55.5°W onshore
+22187	6694	POSGAR 94	POSGAR 94 / Argentina 7	POSGAR 94 / Gauss-Kruger zone 7	Argentina - east of 55.5°W onshore
+22191	6221	Campo Inchauspe	Campo Inchauspe / Argentina 1	C Inchauspe / Argentina 1; Campo Inchauspe / Gauss-Kruger zone 1; C Inchauspe /Argentina 1	Argentina - west of 70.5°W
+22192	6221	Campo Inchauspe	Campo Inchauspe / Argentina 2	C Inchauspe / Argentina 2; Campo Inchauspe / Gauss-Kruger zone 2; C Inchauspe /Argentina 2	Argentina - 70.5°W to 67.5°W mainland onshore
+22193	6221	Campo Inchauspe	Campo Inchauspe / Argentina 3	C Inchauspe / Argentina 3; Campo Inchauspe / Gauss-Kruger zone 3; C Inchauspe /Argentina 3	Argentina - 67.5°W to 64.5°W mainland onshore
+22194	6221	Campo Inchauspe	Campo Inchauspe / Argentina 4	C Inchauspe / Argentina 4; Campo Inchauspe / Gauss-Kruger zone 4; C Inchauspe /Argentina 4	Argentina - 64.5°W to 61.5°W mainland onshore
+22195	6221	Campo Inchauspe	Campo Inchauspe / Argentina 5	C Inchauspe / Argentina 5; Campo Inchauspe / Gauss-Kruger zone 5; C Inchauspe /Argentina 5	Argentina - 61.5°W to 58.5°W onshore
+22196	6221	Campo Inchauspe	Campo Inchauspe / Argentina 6	C Inchauspe / Argentina 6; Campo Inchauspe / Gauss-Kruger zone 6; C Inchauspe /Argentina 6	Argentina - 58.5°W to 55.5°W onshore
+22197	6221	Campo Inchauspe	Campo Inchauspe / Argentina 7	C Inchauspe / Argentina 7; Campo Inchauspe / Gauss-Kruger zone 7; C Inchauspe /Argentina 7	Argentina - east of 55.5°W onshore
+22391	6223	Carthage	Carthage / Nord Tunisie		Tunisia - north of 34°39'N
+22392	6223	Carthage	Carthage / Sud Tunisie		Tunisia - south of 34°39'N
+22700	6227	Deir ez Zor	Deir ez Zor / Levant Zone	Levant / Levant Zone	Asia - Middle East - Lebanon and Syria onshore
+22770	6227	Deir ez Zor	Deir ez Zor / Syria Lambert	Levant / Syria Lambert	Asia - Middle East - Lebanon and Syria onshore
+22991	6229	Egypt 1907	Egypt 1907 / Blue Belt	Egypt 1907 / Green Belt	Egypt - east of 33°E onshore
+22992	6229	Egypt 1907	Egypt 1907 / Red Belt		Egypt - 29°E to 33°E
+22993	6229	Egypt 1907	Egypt 1907 / Purple Belt		Egypt - west of 29°E; north of 28°11'N
+22994	6229	Egypt 1907	Egypt 1907 / Extended Purple Belt	Egypt 1907 / Ext. Purple	Egypt - west of 29°E; south of 28°11'N
+23028	6230	ED50	ED50 / UTM zone 28N	(ES_ED50 / UTM - see alias remarks)	Europe - 18°W to 12°W and ED50 by country
+23029	6230	ED50	ED50 / UTM zone 29N	(ES_ED50 / UTM - see alias remarks)	Europe - 12°W to 6°W and ED50 by country
+23030	6230	ED50	ED50 / UTM zone 30N	(GI_ED50 / UTM - see alias remarks)	Europe - 6°W to 0°W and ED50 by country
+23031	6230	ED50	ED50 / UTM zone 31N	(ES_ED50 / UTM - see alias remarks)	Europe - 0°E to 6°E and ED50 by country
+23032	6230	ED50	ED50 / UTM zone 32N	(DK_ED50 / UTM - see alias remarks)	Europe - 6°E to 12°E and ED50 by country
+23033	6230	ED50	ED50 / UTM zone 33N	(DK_ED50 / UTM - see alias remarks)	Europe - 12°E to 18°E and ED50 by country
+23034	6230	ED50	ED50 / UTM zone 34N		Europe - 18°E to 24°E and ED50 by country
+23035	6230	ED50	ED50 / UTM zone 35N	(TR_ED50 / UTM - see alias remarks)	Europe - 24°E to 30°E and ED50 by country
+23090	6230	ED50	ED50 / TM 0 N		UK - offshore - North Sea
+23095	6230	ED50	ED50 / TM 5 NE		Netherlands - offshore
+23239	6232	Fahud	Fahud / UTM zone 39N		Oman - onshore west of 54°E
+23240	6232	Fahud	Fahud / UTM zone 40N		Oman - mainland east of 54°E
+23700	6237	HD72	HD72 / EOV		Hungary
+23866	6755	DGN95	DGN95 / UTM zone 46N	IGD95 / UTM zone 46N	Indonesia - west of 96°E; N hemisphere
+23867	6755	DGN95	DGN95 / UTM zone 47N	IGD95 / UTM zone 47N	Indonesia - 96°E to 102°E; N hemisphere
+23868	6755	DGN95	DGN95 / UTM zone 48N	IGD95 / UTM zone 48N	Indonesia - 102°E to 108°E; N hemisphere
+23869	6755	DGN95	DGN95 / UTM zone 49N	IGD95 / UTM zone 49N	Indonesia - 108°E to 114°E; N hemisphere
+23870	6755	DGN95	DGN95 / UTM zone 50N	IGD95 / UTM zone 50N	Indonesia - 114°E to 120°E; N hemisphere
+23871	6755	DGN95	DGN95 / UTM zone 51N	IGD95 / UTM zone 51N	Indonesia - 120°E to 126°E; N hemisphere
+23872	6755	DGN95	DGN95 / UTM zone 52N	IGD95 / UTM zone 52N	Indonesia - 126°E to 132°E; N hemisphere
+23877	6755	DGN95	DGN95 / UTM zone 47S	IGD95 / UTM zone 47S	Indonesia - 96°E to 102°E; S hemisphere
+23878	6755	DGN95	DGN95 / UTM zone 48S	IGD95 / UTM zone 48S	Indonesia - 102°E to 108°E; S hemisphere
+23879	6755	DGN95	DGN95 / UTM zone 49S	IGD95 / UTM zone 49S	Indonesia - 108°E to 114°E; S hemisphere
+23880	6755	DGN95	DGN95 / UTM zone 50S	IGD95 / UTM zone 50S	Indonesia - 114°E to 120°E; S hemisphere
+23881	6755	DGN95	DGN95 / UTM zone 51S	IGD95 / UTM zone 51S	Indonesia - 120°E to 126°E; S hemisphere
+23882	6755	DGN95	DGN95 / UTM zone 52S	IGD95 / UTM zone 52S	Indonesia - 126°E to 132°E; S hemisphere
+23883	6755	DGN95	DGN95 / UTM zone 53S	IGD95 / UTM zone 53S	Indonesia - 132°E to 138°E; S hemisphere
+23884	6755	DGN95	DGN95 / UTM zone 54S	IGD95 / UTM zone 54S	Indonesia - east of 138°E; S hemisphere
+23946	6239	Indian 1954	Indian 1954 / UTM zone 46N	Indian 1954 / UTM 46N	Myanmar (Burma) - onshore west of 96°E
+23947	6239	Indian 1954	Indian 1954 / UTM zone 47N	Indian 1954 / UTM 47N	Asia - Myanmar and Thailand - 96°E to 102°E
+23948	6239	Indian 1954	Indian 1954 / UTM zone 48N	Indian 1954 / UTM 48N	Thailand - onshore east of 102°E
+24047	6240	Indian 1975	Indian 1975 / UTM zone 47N	Indian 1975 / UTM 47N	Thailand - onshore and GoT 96°E to102°E
+24048	6240	Indian 1975	Indian 1975 / UTM zone 48N	Indian 1975 / UTM 48N	Thailand - east of 102°E
+24305	6144	Kalianpur 1937	Kalianpur 1937 / UTM zone 45N	Kalianpur 37 / UTM 45N	Bangladesh - onshore west of 90°E
+24306	6144	Kalianpur 1937	Kalianpur 1937 / UTM zone 46N	Kalianpur 37 / UTM 46N	Bangladesh - onshore east of 90°E
+24312	6145	Kalianpur 1962	Kalianpur 1962 / UTM zone 42N	Kalianpur 62 / UTM 42N	Pakistan - onshore 66°E to 72°E
+24313	6145	Kalianpur 1962	Kalianpur 1962 / UTM zone 43N	Kalianpur 62 / UTM 43N	Pakistan - east of 72°E
+24342	6146	Kalianpur 1975	Kalianpur 1975 / UTM zone 42N	Kalianpur 75 / UTM 42N	India - onshore west of 72°E
+24343	6146	Kalianpur 1975	Kalianpur 1975 / UTM zone 43N	Kalianpur 75 / UTM 43N	India - mainland 72°E to 78°E
+24375	6144	Kalianpur 1937	Kalianpur 1937 / India zone IIb	Kalianpur 37 / India IIb	Bangladesh - onshore
+24376	6145	Kalianpur 1962	Kalianpur 1962 / India zone I	Kalianpur 62 / India I	Pakistan - 28°N to 35°35'N
+24377	6145	Kalianpur 1962	Kalianpur 1962 / India zone IIa	Kalianpur 62 / India IIa	Pakistan - onshore south of 28°N
+24379	6146	Kalianpur 1975	Kalianpur 1975 / India zone IIa	Kalianpur 75 / India IIa	India - onshore 21°N to 28°N and west of 82°E
+24380	6146	Kalianpur 1975	Kalianpur 1975 / India zone IIb	Kalianpur 75 / India IIb	India - onshore north of 21°N and east of 82°E
+24547	6245	Kertau 1968	Kertau 1968 / UTM zone 47N	MRT68 / UTM zone 47N	Malaysia - West Malaysia - onshore west of 102°E
+24548	6245	Kertau 1968	Kertau 1968 / UTM zone 48N	MRT68 / UTM zone 48N	Malaysia - West Malaysia - east of 102°E
+24600	6246	KOC	KOC Lambert		Kuwait - onshore
+24817	6248	PSAD56	PSAD56 / UTM zone 17N		South America - 84°W to 78°W; N hemisphere and PSAD56 by country
+24818	6248	PSAD56	PSAD56 / UTM zone 18N		South America - 78°W to 72°W; N hemisphere and PSAD56 by country
+24819	6248	PSAD56	PSAD56 / UTM zone 19N		South America - 72°W to 66°W; N hemisphere and PSAD56 by country
+24820	6248	PSAD56	PSAD56 / UTM zone 20N		South America - 66°W to 60°W; N hemisphere and PSAD56 by country
+24877	6248	PSAD56	PSAD56 / UTM zone 17S		South America - 84°W to 78°W; S hemisphere and PSAD56 by country
+24878	6248	PSAD56	PSAD56 / UTM zone 18S		South America - 78°W to 72°W; S hemisphere and PSAD56 by country
+24879	6248	PSAD56	PSAD56 / UTM zone 19S		South America - 72°W to 66°W; S hemisphere and PSAD56 by country
+24891	6248	PSAD56	PSAD56 / Peru west zone		Peru - west of 79°W
+24892	6248	PSAD56	PSAD56 / Peru central zone	PSAD56 / Peru central	Peru - 79°W to 73°W
+24893	6248	PSAD56	PSAD56 / Peru east zone		Peru - east of 73°W
+25391	6253	Luzon 1911	Luzon 1911 / Philippines zone I	Luzon / Philippines I	Philippines - zone I onshore
+25392	6253	Luzon 1911	Luzon 1911 / Philippines zone II	Luzon / Philippines II	Philippines - zone II onshore
+25393	6253	Luzon 1911	Luzon 1911 / Philippines zone III	Luzon / Philippines III	Philippines - zone III onshore
+25394	6253	Luzon 1911	Luzon 1911 / Philippines zone IV	Luzon / Philippines IV	Philippines - zone IV onshore
+25395	6253	Luzon 1911	Luzon 1911 / Philippines zone V	Luzon / Philippines V	Philippines - zone V onshore
+25828	6258	ETRS89	ETRS89 / UTM zone 28N		Europe - 18°W to 12°W and ETRS89 by country
+25829	6258	ETRS89	ETRS89 / UTM zone 29N		Europe - 12°W to 6°W and ETRS89 by country
+25830	6258	ETRS89	ETRS89 / UTM zone 30N		Europe - 6°W to 0°W and ETRS89 by country
+25831	6258	ETRS89	ETRS89 / UTM zone 31N		Europe - 0°E to 6°E and ETRS89 by country
+25832	6258	ETRS89	ETRS89 / UTM zone 32N		Europe - 6°E to 12°E and ETRS89 by country
+25833	6258	ETRS89	ETRS89 / UTM zone 33N		Europe - 12°E to 18°E and ETRS89 by country
+25834	6258	ETRS89	ETRS89 / UTM zone 34N		Europe - 18°E to 24°E and ETRS89 by country
+25835	6258	ETRS89	ETRS89 / UTM zone 35N		Europe - 24°E to 30°E and ETRS89 by country
+25932	6259	Malongo 1987	Malongo 1987 / UTM zone 32S	Malongo 1987 / UTM 32S; Mhast / UTM zone 32S	Africa - Angola (Cabinda) and DR Congo (Zaire) - offshore
+26331	6263	Minna	Minna / UTM zone 31N		Nigeria - offshore deep water - west of 6°E
+26332	6263	Minna	Minna / UTM zone 32N		Nigeria - offshore deep water - east of 6°E
+26391	6263	Minna	Minna / Nigeria West Belt	Minna / Nigeria West	Nigeria - west of 6.5°E
+26392	6263	Minna	Minna / Nigeria Mid Belt		Nigeria - 6.5°E to 10.5°E
+26393	6263	Minna	Minna / Nigeria East Belt	Minna / Nigeria East	Nigeria - east of 10.5°E
+26711	6267	NAD27	NAD27 / UTM zone 11N		North America - 120°W to 114°W and NAD27 by country - onshore
+26712	6267	NAD27	NAD27 / UTM zone 12N		North America - 114°W to 108°W and NAD27 by country
+26911	6269	NAD83	NAD83 / UTM zone 11N		North America - 120°W to 114°W and NAD83 by country	Check UoM
+26912	6269	NAD83	NAD83 / UTM zone 12N		North America - 114°W to 108°W and NAD83 by country	Check UoM
+26990	6269	NAD83	NAD83 / Michigan South	NAD83 / Michigan South (m)	USA - Michigan - SPCS - S	Check UoM
+27039	6270	Nahrwan 1967	Nahrwan 1967 / UTM zone 39N	Nahrwan 1967 / UTM 39N	Asia - Middle East - Qatar offshore and UAE west of 54°E
+27040	6270	Nahrwan 1967	Nahrwan 1967 / UTM zone 40N	Nahrwan 1967 / UTM 40N	UAE - east of 54°E
+27200	6272	NZGD49	NZGD49 / New Zealand Map Grid	NZGD49 / NZ Map Grid	New Zealand - onshore
+27291	6272	NZGD49	NZGD49 / North Island Grid	GD49 / North Island Grid	New Zealand - North Island
+27292	6272	NZGD49	NZGD49 / South Island Grid	GD49 / South Island Grid	New Zealand - South and Stewart Islands
+27571	6807	NTF (Paris)	NTF (Paris) / Lambert zone I	NTF (Paris) / France I	France - mainland north of 48.15°N
+27572	6807	NTF (Paris)	NTF (Paris) / Lambert zone II	NTF (Paris) / France II; NTF (Paris) / Lambert zone II etendu	France - mainland 45.45°N to 48.15°N. Also all mainland.
+27573	6807	NTF (Paris)	NTF (Paris) / Lambert zone III	NTF (Paris) / France III	France - mainland south of 45.45°N
+27700	6277	OSGB36	OSGB36 / British National Grid	British National Grid	UK - Britain and UKCS 49°45'N to 61°N; 9°W to 2°E
+28232	6282	Pointe Noire	Pointe Noire / UTM zone 32S	Point Noire / UTM 32S; Congo 1960 Pointe Noire / UTM zone 32S	Congo
+28349	6283	GDA94	GDA94 / MGA zone 49		Australasia - Australia and Christmas Island - 108°E to 114°E
+28350	6283	GDA94	GDA94 / MGA zone 50		Australia - 114°E to 120°E
+28351	6283	GDA94	GDA94 / MGA zone 51		Australia - 120°E to 126°E
+28352	6283	GDA94	GDA94 / MGA zone 52		Australia - 126°E to 132°E
+28353	6283	GDA94	GDA94 / MGA zone 53		Australia - 132°E to 138°E
+28354	6283	GDA94	GDA94 / MGA zone 54		Australia - 138°E to 144°E
+28355	6283	GDA94	GDA94 / MGA zone 55		Australia - 144°E to 150°E
+28356	6283	GDA94	GDA94 / MGA zone 56		Australia - 150°E to 156°E
+28409	6284	Pulkovo 1942	Pulkovo 1942 / Gauss-Kruger zone 9	S-42 zone 9; Pulkovo 1942 / 6-degree Gauss-Kruger zone 9	Asia - FSU onshore 48°E to 54°E
+28416	6284	Pulkovo 1942	Pulkovo 1942 / Gauss-Kruger zone 16	S-42 zone 16; Pulkovo 1942 / 6-degree Gauss-Kruger zone 16	Russia - 90°E to 96°E onshore
+28424	6284	Pulkovo 1942	Pulkovo 1942 / Gauss-Kruger zone 24	S-42 zone 24; Pulkovo 1942 / 6-degree Gauss-Kruger zone 24	Russia - 138°E to 144°E onshore
+28600	6285	Qatar 1974	Qatar 1974 / Qatar National Grid	Qatar National Grid	Qatar - onshore
+28992	6289	Amersfoort	Amersfoort / RD New	Stelsel van de Rijksdriehoeksmeting	Netherlands - onshore
+29101	6618	SAD69	SAD69 / Brazil Polyconic		Brazil
+29194	6618	SAD69	SAD69 / UTM zone 24S		Brazil - 42°W to 36°W
+29333	6293	Schwarzeck	Schwarzeck / UTM zone 33S	Schwarzeck / UTM 33S	Namibia - offshore
+29371	6293	Schwarzeck	Schwarzeck / Lo22/11	SW African CS zone 11; South West African Coord. System zone 11	Namibia - west of 12°E
+29701	6810	Tananarive (Paris)	Tananarive (Paris) / Laborde Grid		Madagascar - onshore
+29702	6810	Tananarive (Paris)	Tananarive (Paris) / Laborde Grid approximation	Tananarive / Laborde app	Madagascar - onshore
+29738	6297	Tananarive	Tananarive / UTM zone 38S	Tananarive / UTM 38S	Madagascar - nearshore - west of 48°E
+29850	6298	Timbalai 1948	Timbalai 1948 / UTM zone 50N	Timbalai 1948 / UTM 50N; BT68 / UTM zone 50N; Timbalai 1968 / UTM zone 50N	Asia - Brunei and East Malaysia - 114°E to 120°E
+29871	6298	Timbalai 1948	Timbalai 1948 / RSO Borneo (ch)	Timbalai / Borneo (ch)	Asia - Brunei and East Malaysia
+29872	6298	Timbalai 1948	Timbalai 1948 / RSO Borneo (ftSe)	Timbalai / Borneo (ftSe)	Malaysia - East Malaysia
+29873	6298	Timbalai 1948	Timbalai 1948 / RSO Borneo (m)	Timbalai / Borneo (m); BT68 / RSO Borneo (m); Timbalai 1968 / RSO Borneo (m)	Asia - Brunei and East Malaysia
+30200	6302	Trinidad 1903	Trinidad 1903 / Trinidad Grid	Trinidad 1903 / Cassini	Trinidad and Tobago - Trinidad
+30339	6303	TC(1948)	TC(1948) / UTM zone 39N		UAE - Abu Dhabi - onshore west of 54°E
+30730	6307	Nord Sahara 1959	Nord Sahara 1959 / UTM zone 30N	Nord Sahara / UTM 30N	Algeria - 6°W to 0°W	Check old Voirol
+30731	6307	Nord Sahara 1959	Nord Sahara 1959 / UTM zone 31N	Nord Sahara / UTM 31N	Algeria - 0°E to 6°E	Check old Voirol
+30732	6307	Nord Sahara 1959	Nord Sahara 1959 / UTM zone 32N	Nord Sahara / UTM 32N	Algeria - east of 6°E	Check old Voirol
+30791	6307	Nord Sahara 1959	Nord Sahara 1959 / Nord Algerie	Nord Sahara 1959 / Lambert Nord Voirol Unifie 1960; Nord Sahara / N Algerie; Nord Sahara 1959 / Lambert Algerie Nord; Nord Sahara 1959 / LAN; Nord Sahara 1959 / Voirol Unifie Nord	Algeria - north of 34°39'N	Check old Voirol
+30792	6307	Nord Sahara 1959	Nord Sahara 1959 / Sud Algerie	Nord Sahara 1959 / Lambert Sud Voirol Unifie 1960; Nord Sahara / S Algerie; Nord Sahara 1959 / Lambert Algerie Sud; Nord Sahara 1959 / LAS; Nord Sahara 1959 / Voirol Unifie Sud	Algeria - 31°30'N to 34°39'N	Check old Voirol
+31466	6314	DHDN	DHDN / 3-degree Gauss-Kruger zone 2	DHDN / Gauss-Kruger zone 2; DE_DHDN / GK_3; DHDN / 3GK zone 2	Germany - West Germany - west of 7.5°E	Check axes order and abbreviations
+31467	6314	DHDN	DHDN / 3-degree Gauss-Kruger zone 3	DHDN / Gauss-Kruger zone 3; DE_DHDN / GK_3; DHDN / 3GK zone 3	Germany - West-Germany - 7.5°E to 10.5°E	Check axes order and abbreviations
+31468	6314	DHDN	DHDN / 3-degree Gauss-Kruger zone 4	DHDN / Gauss-Kruger zone 4; DE_DHDN / GK_3; DHDN / 3GK zone 4	Germany - West Germany - 10.5°E to 13.5°E	Check axes order and abbreviations
+31469	6314	DHDN	DHDN / 3-degree Gauss-Kruger zone 5	DHDN / Gauss-Kruger zone 5; DE_DHDN / GK_3; DHDN / 3GK zone 5	Germany - West Germany - east of 13.5°E	Check axes order and abbreviations
+31600	6316	Dealul Piscului 1930	Dealul Piscului 1930 / Stereo 33	Stereo 33; Dealul Piscului 1933/ Stereo 33; Stereo 30	Romania - onshore	Check axes order and abbreviations
+31982	6674	SIRGAS 2000	SIRGAS 2000 / UTM zone 22S	SIRGAS 2000 / UTM 22S; SIRGAS2000 / UTM zone 22S	South America - 54°W to 48°W; S hemisphere and SIRGAS 2000 by country
+31997	6170	SIRGAS 1995	SIRGAS 1995 / UTM zone 22S	SIRGAS / UTM zone 22S	South America - 54°W to 48°W; S hemisphere
+32012	6267	NAD27	NAD27 / New Mexico East		USA - New Mexico - SPCS - E
+32040	6267	NAD27	NAD27 / Texas South Central	NAD27 / Texas South Cen.	USA - Texas - SPCS27 - SC
+32064	6267	NAD27	NAD27 / BLM 14N (ftUS)	NAD27 / UTM zone 14N (ftUS)	USA - 102°W to 96°W and GoM OCS
+32065	6267	NAD27	NAD27 / BLM 15N (ftUS)	NAD27 / UTM zone 15N (ftUS)	USA - 96°W to 90°W and GoM OCS
+32066	6267	NAD27	NAD27 / BLM 16N (ftUS)	NAD27 / UTM zone 16N (ftUS)	USA - 90°W to 84°W and GoM OCS
+32140	6269	NAD83	NAD83 / Texas South Central	NAD83 / Texas South Cen.; NAD83 / Texas South Central (m)	USA - Texas - SPCS83 - SC	Check UoM
+32156	6269	NAD83	NAD83 / Wyoming East Central	NAD83 / Wyoming E. Cen.; NAD83 / Wyoming East Central (m)	USA - Wyoming - SPCS - EC	Check UoM
+32448	6324	WGS 72BE	WGS 72BE / UTM zone 48N		World - N hemisphere - 102°E to 108°E - by country and WGS 72BE
+32601	6326	WGS 84	WGS 84 / UTM zone 1N		World - N hemisphere - 180°W to 174°W - by country
+32602	6326	WGS 84	WGS 84 / UTM zone 2N		World - N hemisphere - 174°W to 168°W - by country
+32603	6326	WGS 84	WGS 84 / UTM zone 3N		World - N hemisphere - 168°W to 162°W - by country
+32604	6326	WGS 84	WGS 84 / UTM zone 4N		World - N hemisphere - 162°W to 156°W - by country
+32605	6326	WGS 84	WGS 84 / UTM zone 5N		World - N hemisphere - 156°W to 150°W - by country
+32606	6326	WGS 84	WGS 84 / UTM zone 6N		World - N hemisphere - 150°W to 144°W - by country
+32607	6326	WGS 84	WGS 84 / UTM zone 7N		World - N hemisphere - 144°W to 138°W - by country
+32608	6326	WGS 84	WGS 84 / UTM zone 8N		World - N hemisphere - 138°W to 132°W - by country
+32609	6326	WGS 84	WGS 84 / UTM zone 9N		World - N hemisphere - 132°W to 126°W - by country
+32610	6326	WGS 84	WGS 84 / UTM zone 10N		World - N hemisphere - 126°W to 120°W - by country
+32611	6326	WGS 84	WGS 84 / UTM zone 11N		World - N hemisphere - 120°W to 114°W - by country
+32612	6326	WGS 84	WGS 84 / UTM zone 12N		World - N hemisphere - 114°W to 108°W - by country
+32613	6326	WGS 84	WGS 84 / UTM zone 13N		World - N hemisphere - 108°W to 102°W - by country
+32614	6326	WGS 84	WGS 84 / UTM zone 14N		World - N hemisphere - 102°W to 96°W - by country
+32615	6326	WGS 84	WGS 84 / UTM zone 15N		World - N hemisphere - 96°W to 90°W - by country
+32616	6326	WGS 84	WGS 84 / UTM zone 16N		World - N hemisphere - 90°W to 84°W - by country
+32617	6326	WGS 84	WGS 84 / UTM zone 17N		World - N hemisphere - 84°W to 78°W - by country
+32618	6326	WGS 84	WGS 84 / UTM zone 18N		World - N hemisphere - 78°W to 72°W - by country
+32619	6326	WGS 84	WGS 84 / UTM zone 19N		World - N hemisphere - 72°W to 66°W - by country
+32620	6326	WGS 84	WGS 84 / UTM zone 20N		World - N hemisphere - 66°W to 60°W - by country
+32621	6326	WGS 84	WGS 84 / UTM zone 21N		World - N hemisphere - 60°W to 54°W - by country
+32622	6326	WGS 84	WGS 84 / UTM zone 22N		World - N hemisphere - 54°W to 48°W - by country
+32623	6326	WGS 84	WGS 84 / UTM zone 23N		World - N hemisphere - 48°W to 42°W - by country
+32624	6326	WGS 84	WGS 84 / UTM zone 24N		World - N hemisphere - 42°W to 36°W - by country
+32625	6326	WGS 84	WGS 84 / UTM zone 25N		World - N hemisphere - 36°W to 30°W - by country
+32626	6326	WGS 84	WGS 84 / UTM zone 26N		World - N hemisphere - 30°W to 24°W - by country
+32627	6326	WGS 84	WGS 84 / UTM zone 27N		World - N hemisphere - 24°W to 18°W - by country
+32628	6326	WGS 84	WGS 84 / UTM zone 28N		World - N hemisphere - 18°W to 12°W - by country
+32629	6326	WGS 84	WGS 84 / UTM zone 29N		World - N hemisphere - 12°W to 6°W - by country
+32630	6326	WGS 84	WGS 84 / UTM zone 30N		World - N hemisphere - 6°W to 0°W - by country
+32631	6326	WGS 84	WGS 84 / UTM zone 31N		World - N hemisphere - 0°E to 6°E - by country
+32632	6326	WGS 84	WGS 84 / UTM zone 32N		World - N hemisphere - 6°E to 12°E - by country
+32633	6326	WGS 84	WGS 84 / UTM zone 33N		World - N hemisphere - 12°E to 18°E - by country
+32634	6326	WGS 84	WGS 84 / UTM zone 34N		World - N hemisphere - 18°E to 24°E - by country
+32635	6326	WGS 84	WGS 84 / UTM zone 35N		World - N hemisphere - 24°E to 30°E - by country
+32636	6326	WGS 84	WGS 84 / UTM zone 36N		World - N hemisphere - 30°E to 36°E - by country
+32637	6326	WGS 84	WGS 84 / UTM zone 37N		World - N hemisphere - 36°E to 42°E - by country
+32638	6326	WGS 84	WGS 84 / UTM zone 38N		World - N hemisphere - 42°E to 48°E - by country
+32639	6326	WGS 84	WGS 84 / UTM zone 39N		World - N hemisphere - 48°E to 54°E - by country
+32640	6326	WGS 84	WGS 84 / UTM zone 40N		World - N hemisphere - 54°E to 60°E - by country
+32641	6326	WGS 84	WGS 84 / UTM zone 41N		World - N hemisphere - 60°E to 66°E - by country
+32642	6326	WGS 84	WGS 84 / UTM zone 42N		World - N hemisphere - 66°E to 72°E - by country
+32643	6326	WGS 84	WGS 84 / UTM zone 43N		World - N hemisphere - 72°E to 78°E - by country
+32644	6326	WGS 84	WGS 84 / UTM zone 44N		World - N hemisphere - 78°E to 84°E - by country
+32645	6326	WGS 84	WGS 84 / UTM zone 45N		World - N hemisphere - 84°E to 90°E - by country
+32646	6326	WGS 84	WGS 84 / UTM zone 46N		World - N hemisphere - 90°E to 96°E - by country
+32647	6326	WGS 84	WGS 84 / UTM zone 47N		World - N hemisphere - 96°E to 102°E - by country
+32648	6326	WGS 84	WGS 84 / UTM zone 48N		World - N hemisphere - 102°E to 108°E - by country
+32649	6326	WGS 84	WGS 84 / UTM zone 49N		World - N hemisphere - 108°E to 114°E - by country
+32650	6326	WGS 84	WGS 84 / UTM zone 50N		World - N hemisphere - 114°E to 120°E - by country
+32651	6326	WGS 84	WGS 84 / UTM zone 51N		World - N hemisphere - 120°E to 126°E - by country
+32652	6326	WGS 84	WGS 84 / UTM zone 52N		World - N hemisphere - 126°E to 132°E - by country
+32653	6326	WGS 84	WGS 84 / UTM zone 53N		World - N hemisphere - 132°E to 138°E - by country
+32654	6326	WGS 84	WGS 84 / UTM zone 54N		World - N hemisphere - 138°E to 144°E - by country
+32655	6326	WGS 84	WGS 84 / UTM zone 55N		World - N hemisphere - 144°E to 150°E - by country
+32656	6326	WGS 84	WGS 84 / UTM zone 56N		World - N hemisphere - 150°E to 156°E - by country
+32657	6326	WGS 84	WGS 84 / UTM zone 57N		World - N hemisphere - 156°E to 162°E - by country
+32658	6326	WGS 84	WGS 84 / UTM zone 58N		World - N hemisphere - 162°E to 168°E - by country
+32659	6326	WGS 84	WGS 84 / UTM zone 59N		World - N hemisphere - 168°E to 174°E - by country
+32660	6326	WGS 84	WGS 84 / UTM zone 60N		World - N hemisphere - 174°E to 180°E - by country
+32701	6326	WGS 84	WGS 84 / UTM zone 1S		World - S hemisphere - 180°W to 174°W - by country
+32702	6326	WGS 84	WGS 84 / UTM zone 2S		World - S hemisphere - 174°W to 168°W - by country
+32703	6326	WGS 84	WGS 84 / UTM zone 3S		World - S hemisphere - 168°W to 162°W - by country
+32704	6326	WGS 84	WGS 84 / UTM zone 4S		World - S hemisphere - 162°W to 156°W - by country
+32705	6326	WGS 84	WGS 84 / UTM zone 5S		World - S hemisphere - 156°W to 150°W - by country
+32706	6326	WGS 84	WGS 84 / UTM zone 6S		World - S hemisphere - 150°W to 144°W - by country
+32707	6326	WGS 84	WGS 84 / UTM zone 7S		World - S hemisphere - 144°W to 138°W - by country
+32708	6326	WGS 84	WGS 84 / UTM zone 8S		World - S hemisphere - 138°W to 132°W - by country
+32709	6326	WGS 84	WGS 84 / UTM zone 9S		World - S hemisphere - 132°W to 126°W - by country
+32710	6326	WGS 84	WGS 84 / UTM zone 10S		World - S hemisphere - 126°W to 120°W - by country
+32711	6326	WGS 84	WGS 84 / UTM zone 11S		World - S hemisphere - 120°W to 114°W - by country
+32712	6326	WGS 84	WGS 84 / UTM zone 12S		World - S hemisphere - 114°W to 108°W - by country
+32713	6326	WGS 84	WGS 84 / UTM zone 13S		World - S hemisphere - 108°W to 102°W - by country
+32714	6326	WGS 84	WGS 84 / UTM zone 14S		World - S hemisphere - 102°W to 96°W - by country
+32715	6326	WGS 84	WGS 84 / UTM zone 15S		World - S hemisphere - 96°W to 90°W - by country
+32716	6326	WGS 84	WGS 84 / UTM zone 16S		World - S hemisphere - 90°W to 84°W - by country
+32717	6326	WGS 84	WGS 84 / UTM zone 17S		World - S hemisphere - 84°W to 78°W - by country
+32718	6326	WGS 84	WGS 84 / UTM zone 18S		World - S hemisphere - 78°W to 72°W - by country
+32719	6326	WGS 84	WGS 84 / UTM zone 19S		World - S hemisphere - 72°W to 66°W - by country
+32720	6326	WGS 84	WGS 84 / UTM zone 20S		World - S hemisphere - 66°W to 60°W - by country
+32721	6326	WGS 84	WGS 84 / UTM zone 21S		World - S hemisphere - 60°W to 54°W - by country
+32722	6326	WGS 84	WGS 84 / UTM zone 22S		World - S hemisphere - 54°W to 48°W - by country
+32723	6326	WGS 84	WGS 84 / UTM zone 23S		World - S hemisphere - 48°W to 42°W - by country
+32724	6326	WGS 84	WGS 84 / UTM zone 24S		World - S hemisphere - 42°W to 36°W - by country
+32725	6326	WGS 84	WGS 84 / UTM zone 25S		World - S hemisphere - 36°W to 30°W - by country
+32726	6326	WGS 84	WGS 84 / UTM zone 26S		World - S hemisphere - 30°W to 24°W - by country
+32727	6326	WGS 84	WGS 84 / UTM zone 27S		World - S hemisphere - 24°W to 18°W - by country
+32728	6326	WGS 84	WGS 84 / UTM zone 28S		World - S hemisphere - 18°W to 12°W - by country
+32729	6326	WGS 84	WGS 84 / UTM zone 29S		World - S hemisphere - 12°W to 6°W - by country
+32730	6326	WGS 84	WGS 84 / UTM zone 30S		World - S hemisphere - 6°W to 0°W - by country
+32731	6326	WGS 84	WGS 84 / UTM zone 31S		World - S hemisphere - 0°E to 6°E - by country
+32732	6326	WGS 84	WGS 84 / UTM zone 32S		World - S hemisphere - 6°E to 12°E - by country
+32733	6326	WGS 84	WGS 84 / UTM zone 33S		World - S hemisphere - 12°E to 18°E - by country
+32734	6326	WGS 84	WGS 84 / UTM zone 34S		World - S hemisphere - 18°E to 24°E - by country
+32735	6326	WGS 84	WGS 84 / UTM zone 35S		World - S hemisphere - 24°E to 30°E - by country
+32736	6326	WGS 84	WGS 84 / UTM zone 36S		World - S hemisphere - 30°E to 36°E - by country
+32737	6326	WGS 84	WGS 84 / UTM zone 37S		World - S hemisphere - 36°E to 42°E - by country
+32738	6326	WGS 84	WGS 84 / UTM zone 38S		World - S hemisphere - 42°E to 48°E - by country
+32739	6326	WGS 84	WGS 84 / UTM zone 39S		World - S hemisphere - 48°E to 54°E - by country
+32740	6326	WGS 84	WGS 84 / UTM zone 40S		World - S hemisphere - 54°E to 60°E - by country
+32741	6326	WGS 84	WGS 84 / UTM zone 41S		World - S hemisphere - 60°E to 66°E - by country
+32742	6326	WGS 84	WGS 84 / UTM zone 42S		World - S hemisphere - 66°E to 72°E - by country
+32743	6326	WGS 84	WGS 84 / UTM zone 43S		World - S hemisphere - 72°E to 78°E - by country
+32744	6326	WGS 84	WGS 84 / UTM zone 44S		World - S hemisphere - 78°E to 84°E - by country
+32745	6326	WGS 84	WGS 84 / UTM zone 45S		World - S hemisphere - 84°E to 90°E - by country
+32746	6326	WGS 84	WGS 84 / UTM zone 46S		World - S hemisphere - 90°E to 96°E - by country
+32747	6326	WGS 84	WGS 84 / UTM zone 47S		World - S hemisphere - 96°E to 102°E - by country
+32748	6326	WGS 84	WGS 84 / UTM zone 48S		World - S hemisphere - 102°E to 108°E - by country
+32749	6326	WGS 84	WGS 84 / UTM zone 49S		World - S hemisphere - 108°E to 114°E - by country
+32750	6326	WGS 84	WGS 84 / UTM zone 50S		World - S hemisphere - 114°E to 120°E - by country
+32751	6326	WGS 84	WGS 84 / UTM zone 51S		World - S hemisphere - 120°E to 126°E - by country
+32752	6326	WGS 84	WGS 84 / UTM zone 52S		World - S hemisphere - 126°E to 132°E - by country
+32753	6326	WGS 84	WGS 84 / UTM zone 53S		World - S hemisphere - 132°E to 138°E - by country
+32754	6326	WGS 84	WGS 84 / UTM zone 54S		World - S hemisphere - 138°E to 144°E - by country
+32755	6326	WGS 84	WGS 84 / UTM zone 55S		World - S hemisphere - 144°E to 150°E - by country
+32756	6326	WGS 84	WGS 84 / UTM zone 56S		World - S hemisphere - 150°E to 156°E - by country
+32757	6326	WGS 84	WGS 84 / UTM zone 57S		World - S hemisphere - 156°E to 162°E - by country
+32758	6326	WGS 84	WGS 84 / UTM zone 58S		World - S hemisphere - 162°E to 168°E - by country
+32759	6326	WGS 84	WGS 84 / UTM zone 59S		World - S hemisphere - 168°E to 174°E - by country
+32760	6326	WGS 84	WGS 84 / UTM zone 60S		World - S hemisphere - 174°E to 180°E - by country

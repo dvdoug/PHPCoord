@@ -16,6 +16,7 @@ use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\CoordinateReferenceSystem\Geocentric;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Geographic3D;
+use PHPCoord\CoordinateReferenceSystem\Projected;
 use PHPCoord\Datum\Datum;
 use PHPCoord\Datum\Ellipsoid;
 use PHPCoord\Datum\PrimeMeridian;
@@ -174,6 +175,32 @@ class GIGSTest extends TestCase
 
         foreach ($body as $row) {
             yield '#' . $row[0] => [$row[0], $row[1], $row[2], $row[4]];
+        }
+    }
+
+    /**
+     * @dataProvider series2200ProjectedCRSData
+     */
+    public function testSeries2200ProjectedCRSs(string $epsgCode, string $datumCode, string $name): void
+    {
+        $crs = Projected::fromSRID('urn:ogc:def:crs:EPSG::' . $epsgCode);
+        $this->assertEquals($name, $crs->getName());
+
+        if ($datumCode === '6258') { // treat ensemble as latest as code does
+            $datumCode = '1206';
+        } elseif ($datumCode === '6326') { // treat ensemble as latest as code does
+            $datumCode = '1309';
+        }
+
+        $this->assertEquals('urn:ogc:def:datum:EPSG::' . $datumCode, $crs->getDatum()->getSRID());
+    }
+
+    public function series2200ProjectedCRSData(): Generator
+    {
+        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 2200 Predefined Geodetic Data Objects test data/ASCII/GIGS_lib_2207_ProjectedCRS.txt');
+
+        foreach ($body as $row) {
+            yield '#' . $row[0] => [$row[0], $row[1], $row[3]];
         }
     }
 
