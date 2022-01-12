@@ -17,6 +17,7 @@ use PHPCoord\CoordinateReferenceSystem\Geocentric;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Geographic3D;
 use PHPCoord\CoordinateReferenceSystem\Projected;
+use PHPCoord\CoordinateReferenceSystem\Vertical;
 use PHPCoord\Datum\Datum;
 use PHPCoord\Datum\Ellipsoid;
 use PHPCoord\Datum\PrimeMeridian;
@@ -219,6 +220,25 @@ class GIGSTest extends TestCase
 
         foreach ($body as $row) {
             yield '#' . $row[0] => [$row[0], $row[1]];
+        }
+    }
+
+    /**
+     * @dataProvider series2200VerticalCRSData
+     */
+    public function testSeries2200VerticalCRSs(string $epsgCode, string $name, string $datumCode): void
+    {
+        $crs = Vertical::fromSRID('urn:ogc:def:crs:EPSG::' . $epsgCode);
+        $this->assertEquals($name, $crs->getName());
+        $this->assertEquals('urn:ogc:def:datum:EPSG::' . $datumCode, $crs->getDatum()->getSRID());
+    }
+
+    public function series2200VerticalCRSData(): Generator
+    {
+        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 2200 Predefined Geodetic Data Objects test data/ASCII/GIGS_lib_2210_VerticalCRS.txt');
+
+        foreach ($body as $row) {
+            yield '#' . $row[0] => [$row[0], $row[1], $row[3]];
         }
     }
 

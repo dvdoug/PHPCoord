@@ -1,0 +1,48 @@
+# File: GIGS_lib_2210_VerticalCRS
+# GIGS Test Procedure: 2210
+# GIGS Test Dataset Version: 2.0
+# EPSG Dataset Version: 10.047
+# GIGS Test Dataset Issue Date: 2021-05-03
+#
+# Fields:
+# [0]: EPSG CRS Code
+# [1]: EPSG CRS Name
+# [2]: Alias(es)
+# [3]: Associated Vertical Datum
+# [4]: EPSG Usage Extent
+# [5]: GIGS Remarks
+#
+# [0]	# [1]	# [2]	# [3]	# [4]	# [5]
+5612	Baltic 1977 depth	Kronstadt 1977 height	5105	Europe - FSU onshore
+5614	KOC WD depth (ft)	PWD height	5187	Kuwait - onshore
+5621	EVRF2007 height	Fahud Height Datum height	5215	Europe
+5701	ODN height	PDO Height Datum 1993 height	5101	UK - Great Britain mainland onshore
+5702	NGVD29 height (ftUS)	Newlyn height	5102	USA - CONUS - onshore
+5703	NAVD88 height		5103	North America - Mexico and USA - onshore
+5705	Baltic 1977 height		5105	Europe - FSU onshore
+5706	Caspian depth	Canadian Geodetic Vertical Datum of 1928 height	5106	Asia - FSU - Caspian Sea
+5709	NAP height	North American Vertical Datum of 1988 height (m)	5109	Netherlands
+5711	AHD height		5111	Australia Christmas and Cocos - onshore
+5712	AHD (Tasmania) height	Australian Height Datum height	5112	Australia - Tasmania mainland onshore
+5713	CGVD28 height		5114	Canada
+5714	MSL height	Normaal Amsterdams Peil height	5100	World
+5715	MSL depth	mean sea level height	5100	World
+5719	NGF Lallemand height	National Geodetic Vertical Datum of 1929 height (ftUS)	5118	France - mainland onshore
+5720	NGF-IGN69 height		5119	France - mainland onshore
+5724	PHD93 height	Huang Hai 1956 height	5123	Oman - onshore
+5725	Fahud HD height		5124	Oman - mainland
+5730	EVRF2000 height		5129	Europe
+5734	AIOC95 depth	Australian Height Datum height	5133	Azerbaijan - offshore and Sangachal
+5736	Yellow Sea 1956 height	Huang Hai 1985 height	5104	China - onshore
+5737	Yellow Sea 1985 height		5137	China - onshore
+5751	Fao height		5149	Asia - Middle East -SE Iraq and SW Iran
+5752	Bandar Abbas height		5150	Iran - onshore
+5773	EGM96 height		5171	World
+5783	DHHN92 height		5181	Germany - onshore
+5784	DHHN85 height		5182	Germany - West Germany all states
+5786	Baltic 1982 height	Baltic 1982	5184	Bulgaria - onshore
+5788	Kuwait PWD height		5186	Kuwait - onshore
+5789	KOC WD depth		5187	Kuwait - onshore
+5790	KOC CD height		5188	Kuwait - onshore
+5796	Lagos 1955 height	mean sea level depth	5194	Nigeria - onshore
+5797	AIOC95 height		5133	Azerbaijan - offshore and Sangachal
