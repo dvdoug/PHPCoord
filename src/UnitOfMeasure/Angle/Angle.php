@@ -176,6 +176,8 @@ abstract class Angle implements UnitOfMeasure
         ],
     ];
 
+    protected static array $customSridData = [];
+
     private static array $supportedCache = [];
 
     abstract public function asRadians(): Radian;
@@ -213,6 +215,10 @@ abstract class Angle implements UnitOfMeasure
 
     public static function makeUnit(float|string $measurement, string $srid): self
     {
+        if (isset(self::$customSridData[$srid])) {
+            return new self::$customSridData[$srid]['fqcn']($measurement);
+        }
+
         return match ($srid) {
             self::EPSG_RADIAN => new Radian($measurement),
             self::EPSG_MICRORADIAN => new MicroRadian($measurement),
@@ -243,6 +249,13 @@ abstract class Angle implements UnitOfMeasure
         }
 
         return self::$supportedCache;
+    }
+
+    public static function registerCustomUnit(string $srid, string $name, string $implementingClassFQCN): void
+    {
+        self::$customSridData[$srid] = ['name' => $name, 'fqcn' => $implementingClassFQCN];
+        self::getSupportedSRIDs(); // init cache if not already
+        self::$supportedCache[$srid] = $name; //update cache
     }
 
     public static function convert(self $angle, string $targetSRID): self

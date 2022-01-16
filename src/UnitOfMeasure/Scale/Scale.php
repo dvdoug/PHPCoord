@@ -54,6 +54,8 @@ abstract class Scale implements UnitOfMeasure
         ],
     ];
 
+    protected static array $customSridData = [];
+
     private static array $supportedCache = [];
 
     abstract public function asUnity(): Unity;
@@ -86,6 +88,10 @@ abstract class Scale implements UnitOfMeasure
 
     public static function makeUnit(float $measurement, string $srid): self
     {
+        if (isset(self::$customSridData[$srid])) {
+            return new self::$customSridData[$srid]['fqcn']($measurement);
+        }
+
         return match ($srid) {
             self::EPSG_COEFFICIENT => new Coefficient($measurement),
             self::EPSG_PARTS_PER_BILLION => new PartsPerBillion($measurement),
@@ -104,6 +110,13 @@ abstract class Scale implements UnitOfMeasure
         }
 
         return self::$supportedCache;
+    }
+
+    public static function registerCustomUnit(string $srid, string $name, string $implementingClassFQCN): void
+    {
+        self::$customSridData[$srid] = ['name' => $name, 'fqcn' => $implementingClassFQCN];
+        self::getSupportedSRIDs(); // init cache if not already
+        self::$supportedCache[$srid] = $name; //update cache
     }
 
     public function __toString(): string

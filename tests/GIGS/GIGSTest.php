@@ -276,6 +276,127 @@ class GIGSTest extends TestCase
     }
 
     /**
+     * @dataProvider series3200UnitData
+     */
+    public function testSeries3200Units(string $gigsCode, string $unitType, string $unitName, string $baseUnitsPerUnit, string $epsgCode): void
+    {
+        if ($unitType === 'Angle') {
+            $gigsUnitClassName = "GIGSUnit{$gigsCode}";
+            $gigsUnitClass = <<<ENDOFCLASS
+                namespace PHPCoord\UnitOfMeasure\Angle;
+                class {$gigsUnitClassName} extends Angle {
+
+                    public function __construct(private float \$angle)
+                    {
+                    }
+
+                    public function asRadians(): Radian
+                    {
+                        return new Radian(\$this->angle * {$baseUnitsPerUnit});
+                    }
+
+                    public function getValue(): float
+                    {
+                        return \$this->angle;
+                    }
+
+                    public function getUnitName(): string
+                    {
+                        return '{$unitName}';
+                    }
+                }
+                ENDOFCLASS;
+            eval($gigsUnitClass);
+            Angle::registerCustomUnit('urn:ogc:def:uom:GIGS::' . $gigsCode, $unitName, 'PHPCoord\UnitOfMeasure\Angle\\' . $gigsUnitClassName);
+            $gigsUnit = Angle::makeUnit(1, 'urn:ogc:def:uom:GIGS::' . $gigsCode);
+            $actualBaseUnitsPerGigsUnit = $gigsUnit->asRadians();
+
+            $epsgUnit = Angle::makeUnit(1, 'urn:ogc:def:uom:EPSG::' . $epsgCode);
+            $actualBaseUnitsPerEPSGUnit = $epsgUnit->asRadians();
+        } elseif ($unitType === 'Linear') {
+            $gigsUnitClassName = "GIGSUnit{$gigsCode}";
+            $gigsUnitClass = <<<ENDOFCLASS
+                namespace PHPCoord\UnitOfMeasure\Length;
+                class {$gigsUnitClassName} extends Length {
+
+                    public function __construct(private float \$length)
+                    {
+                    }
+
+                    public function asMetres(): Metre
+                    {
+                        return new Metre(\$this->length * {$baseUnitsPerUnit});
+                    }
+
+                    public function getValue(): float
+                    {
+                        return \$this->length;
+                    }
+
+                    public function getUnitName(): string
+                    {
+                        return '{$unitName}';
+                    }
+                }
+                ENDOFCLASS;
+            eval($gigsUnitClass);
+            Length::registerCustomUnit('urn:ogc:def:uom:GIGS::' . $gigsCode, $unitName, 'PHPCoord\UnitOfMeasure\Length\\' . $gigsUnitClassName);
+            $gigsUnit = Length::makeUnit(1, 'urn:ogc:def:uom:GIGS::' . $gigsCode);
+            $actualBaseUnitsPerGigsUnit = $gigsUnit->asMetres();
+
+            $epsgUnit = Length::makeUnit(1, 'urn:ogc:def:uom:EPSG::' . $epsgCode);
+            $actualBaseUnitsPerEPSGUnit = $epsgUnit->asMetres();
+        } elseif ($unitType === 'Scale') {
+            $gigsUnitClassName = "GIGSUnit{$gigsCode}";
+            $gigsUnitClass = <<<ENDOFCLASS
+                namespace PHPCoord\UnitOfMeasure\Scale;
+                class {$gigsUnitClassName} extends Scale {
+
+                    public function __construct(private float \$scale)
+                    {
+                    }
+
+                    public function asUnity(): Unity
+                    {
+                        return new Unity(\$this->scale * {$baseUnitsPerUnit});
+                    }
+
+                    public function getValue(): float
+                    {
+                        return \$this->scale;
+                    }
+
+                    public function getUnitName(): string
+                    {
+                        return '{$unitName}';
+                    }
+                }
+                ENDOFCLASS;
+            eval($gigsUnitClass);
+            Scale::registerCustomUnit('urn:ogc:def:uom:GIGS::' . $gigsCode, $unitName, 'PHPCoord\UnitOfMeasure\Scale\\' . $gigsUnitClassName);
+            $gigsUnit = Scale::makeUnit(1, 'urn:ogc:def:uom:GIGS::' . $gigsCode);
+            $actualBaseUnitsPerGigsUnit = $gigsUnit->asUnity();
+
+            $epsgUnit = Scale::makeUnit(1, 'urn:ogc:def:uom:EPSG::' . $epsgCode);
+            $actualBaseUnitsPerEPSGUnit = $epsgUnit->asUnity();
+        }
+
+        $delta = 1 / 10 ** min(10, strlen(substr($baseUnitsPerUnit, strpos($baseUnitsPerUnit, '.') + 1)));
+        $this->assertEqualsWithDelta($baseUnitsPerUnit, $actualBaseUnitsPerGigsUnit->getValue(), $delta);
+        $this->assertEqualsWithDelta($baseUnitsPerUnit, $actualBaseUnitsPerEPSGUnit->getValue(), $delta);
+        $this->assertSame($unitName, $gigsUnit->getUnitName());
+    }
+
+    public function series3200UnitData(): Generator
+    {
+        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 3200 User-defined Geodetic Data Objects test data/ASCII/GIGS_user_3201_Unit.txt');
+
+        foreach ($body as $row) {
+            yield '#' . $row[0] => [$row[0], $row[1], $row[2], $row[3], $row[5]];
+        }
+    }
+
+    /**
      * @dataProvider series7000DeprecationData
      */
     public function testSeries7000Deprecation(string $epsgCode, string $entityType): void

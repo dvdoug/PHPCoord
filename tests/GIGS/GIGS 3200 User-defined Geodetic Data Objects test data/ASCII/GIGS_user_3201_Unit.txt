@@ -1,0 +1,39 @@
+# File: GIGS_user_3201_Unit
+# GIGS Test Procedure: 3201
+# GIGS Test Dataset Version: 2.0
+# EPSG Dataset Version: 10.019
+# GIGS Test Dataset Issue Date: 2021-05-03
+#
+# Fields:
+# [0]: GIGS Unit of Measure Code
+# [1]: Unit Type
+# [2]: GIGS Unit of Measure Name
+# [3]: Base Units per Unit
+# [4]: Base Units per Unit Description
+# [5]: Equivalent EPSG Unit of Measure Code
+# [6]: Equivalent EPSG Unit of Measure Name
+# [7]: GIGS Remarks
+#
+# [0]	# [1]	# [2]	# [3]	# [4]	# [5]	# [6]	# [7]
+69001	Linear	GIGS unit L0	1	metres per unit	9001	metre	ISO/EPSG length base unit
+69002	Linear	GIGS unit L2	0.3048	metres per unit	9002	foot
+69003	Linear	GIGS unit L3	0.30480061	metres per unit	9003	US survey foot
+69005	Linear	GIGS unit L5	0.304797265	metres per unit	9005	Clarke's foot
+69031	Linear	GIGS unit L4	1.000013597	metres per unit	9031	German legal metre
+69036	Linear	GIGS unit L1	1000	metres per unit	9036	kilometre
+69039	Linear	GIGS unit L6	0.201166195	metres per unit	9039	Clarke's link
+69040	Linear	GIGS unit L9	0.914398415	metres per unit	9040	British yard (Sears 1922)
+69041	Linear	GIGS unit L8	0.304799472	metres per unit	9041	British foot (Sears 1922)
+69042	Linear	GIGS unit L7	20.11676512	metres per unit	9042	British chain (Sears 1922)
+69084	Linear	GIGS unit L11	0.914398531	metres per unit	9084	Indian yard
+69094	Linear	GIGS unit L12	0.30479971	metres per unit	9094	Gold Coast foot
+69098	Linear	GIGS unit L13	0.201168	metres per unit	9098	link
+69101	Angle	GIGS unit A0	1	radians per unit	9101	radian	ISO/EPSG angle base unit
+69102	Angle	GIGS unit A2	0.017453293	radians per unit	9102	degree
+69104	Angle	GIGS unit A3	0.00000484814	radians per unit	9104	arc-second
+69105	Angle	GIGS unit A4	0.015707963	radians per unit	9105	grad
+69109	Angle	GIGS unit A1	0.000001	radians per unit	9109	microradian
+69113	Angle	GIGS unit A5	0.0000015708	radians per unit	9113	centesimal second
+69201	Scale	GIGS unit U0	1	parts per unit	9201	unity	ISO/EPSG scale base unit
+69202	Scale	GIGS unit U1	0.000001	parts per unit	9202	parts per million
+69301	Linear	GIGS unit L10 (parts per million)	20.116756	metres per unit	9301	parts per million
