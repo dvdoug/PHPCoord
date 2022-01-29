@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+## [5.0.1] - 2022-01-29
+### Fixed
+- Guard against divide by zero issues when calculating distance between two points
+
 ## [5.0.0] - 2021-11-12
 ### Added
 - Support for IGN France geocentric translation by grid interpolation. This requires the [Europe datapack](https://www.phpcoord.net/en/stable/coordinate_conversions_easy.html#grids)
