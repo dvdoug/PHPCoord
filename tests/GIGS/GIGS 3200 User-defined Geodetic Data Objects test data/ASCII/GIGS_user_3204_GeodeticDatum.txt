@@ -1,0 +1,50 @@
+# File: GIGS_user_3204_GeodeticDatum
+# GIGS Test Procedure: 3204
+# GIGS Test Dataset Version: 2.0
+# EPSG Dataset Version: 10.019
+# GIGS Test Dataset Issue Date: 2021-05-03
+#
+# Fields:
+# [0]: GIGS Datum Code
+# [1]: Datum Definition Source
+# [2]: GIGS Datum Name
+# [3]: GIGS/EPSG Ellipsoid Name (see GIGS Test Procedure 3202 or 2202)
+# [4]: GIGS/EPSG Prime Meridian Name (see GIGS Test Procedure 3203 or 2203)
+# [5]: GIGS Datum Origin
+# [6]: Early-binding Transformation Code (see GIGS Test Procedure 3208 or 2208)
+# [7]: Equivalent EPSG Datum Code
+# [8]: Equivalent EPSG Datum Name
+# [9]: GIGS Remarks
+#
+# [0]	# [1]	# [2]	# [3]	# [4]	# [5]	# [6]	# [7]	# [8]	# [9]
+66001	User	GIGS geodetic datum A	GIGS ellipsoid A	GIGS PM A			6326	World Geodetic System 1984 ensemble
+66002	User	GIGS geodetic datum B	GIGS ellipsoid B	GIGS PM A			6277	Ordnance Survey of Great Britain 1936
+66003	User	GIGS geodetic datum C	GIGS ellipsoid C	GIGS PM A			6289	Amersfoort
+66004	User	GIGS geodetic datum D	GIGS ellipsoid C	GIGS PM D			6813	Batavia (Jakarta)
+66005	User	GIGS geodetic datum E	GIGS ellipsoid E	GIGS PM A			6313	Reseau National Belge 1972
+66006	User	GIGS geodetic datum F	GIGS ellipsoid F	GIGS PM A	Origin F		6283	Geocentric Datum of Australia 1994
+66007	User	GIGS geodetic datum G	GIGS ellipsoid F	GIGS PM A	Origin(s) G		6258; 6742; 6152; 6190; 6674	European Terrestrial Reference System 1989 ensemble; Geodetic Datum of Malaysia 2000; NAD83 (High Accuracy Reference Network); Posiciones Geodesicas Argentinas 1998; Sistema de Referencia Geocentrico para las AmericaS 2000	This GIGS Datum is functionally equivalent to any static datum defined as part of a geodetic CRS that uses the GRS 1980 ellipsoid
+66008	User	GIGS geodetic datum H	GIGS ellipsoid H	GIGS PM H			6807	Nouvelle Triangulation Francaise (Paris)
+66009	User	GIGS geodetic datum J	GIGS ellipsoid J	GIGS PM A			6267	North American Datum 1927
+66010	User	GIGS geodetic datum T	GIGS ellipsoid H	GIGS PM A			6275	Nouvelle Triangulation Francaise
+66011	User	GIGS geodetic datum L	GIGS ellipsoid C	GIGS PM A	Origin L		6211	Batavia
+66012	User	GIGS geodetic datum K	GIGS ellipsoid K	GIGS PM A			6237	Hungarian Datum 1972
+66013	User	GIGS geodetic datum X	GIGS ellipsoid X	GIGS PM A			6202	Australian Geodetic Datum 1966
+66014	User	GIGS geodetic datum Y	GIGS ellipsoid Y	GIGS PM A			6284	Pulkovo 1942
+66015	User	GIGS geodetic datum Z	GIGS ellipsoid F	GIGS PM A	Origin Z		6269	North American Datum 1983
+66016	User	GIGS geodetic datum M	GIGS ellipsoid E	GIGS PM A			6230	European Datum 1950
+66269	Library	GIGS geodetic datum ZZ	GRS 1980	Greenwich			6269	North American Datum 1983
+66277	Library	GIGS geodetic datum BB	Airy 1830	Greenwich			6277	Ordnance Survey of Great Britain 1936
+66283	Library	GIGS geodetic datum FF	GRS 1980	Greenwich			6283	Geocentric Datum of Australia 1994
+66289	Library	GIGS geodetic datum CC	Bessel 1841	Greenwich			6289	Amersfoort
+66313	Library	GIGS geodetic datum EE	International 1924	Greenwich			6313	Reseau National Belge 1972
+66326	Library	GIGS geodetic datum AA	WGS 84	Greenwich			6326	World Geodetic System 1984 ensemble
+66807	Library	GIGS geodetic datum HH	Clarke 1880 (IGN)	Paris			6807	Nouvelle Triangulation Francaise (Paris)
+66813	Library	GIGS geodetic datum DD	Bessel 1841	Jakarta			6813	Batavia (Jakarta)
+66017	User Early-Bound	GIGS geodetic datum B'	GIGS ellipsoid B	GIGS PM A		61314
+66018	User Early-Bound	GIGS geodetic datum C'	GIGS ellipsoid C	GIGS PM A	Origin C	61003
+66019	User Early-Bound	GIGS geodetic datum J''	GIGS ellipsoid J	GIGS PM A		1243
+66020	User Early-Bound	GIGS geodetic datum J'''	GIGS ellipsoid J	GIGS PM A		1241
+66021	User Early-Bound	GIGS geodetic datum J'	GIGS ellipsoid J	GIGS PM A		1693
+66022	User Early-Bound	GIGS geodetic datum X'	GIGS ellipsoid X	GIGS PM A		15786
+66023	User Early-Bound	GIGS geodetic datum E'	GIGS ellipsoid E	GIGS PM A		15929

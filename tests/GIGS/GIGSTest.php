@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace PHPCoord\GIGS;
 
+use function array_flip;
 use function explode;
 use Generator;
 use function min;
@@ -397,6 +398,7 @@ class GIGSTest extends TestCase
     }
 
     /**
+     * @depends testSeries3200Units
      * @dataProvider series3200EllipsoidData
      */
     public function testSeries3200Ellipsoids(string $gigsCode, string $gigsName, string $semiMajorAxis, $unitName, string $inverseFlattening, string $semiMinorAxis): void
@@ -427,6 +429,7 @@ class GIGSTest extends TestCase
     }
 
     /**
+     * @depends testSeries3200Units
      * @dataProvider series3200PrimeMeridianData
      */
     public function testSeries3200PrimeMeridians(string $gigsCode, string $gigsName, string $longitudeFromGreenwich, string $unitName): void
@@ -451,6 +454,29 @@ class GIGSTest extends TestCase
 
         foreach ($body as $row) {
             yield '#' . $row[0] => [$row[0], $row[1], $row[2], $row[3]];
+        }
+    }
+
+    /**
+     * @depends testSeries3200Ellipsoids
+     * @depends testSeries3200PrimeMeridians
+     * @dataProvider series3200GeodeticDatumData
+     */
+    public function testSeries3200GeodeticDatums(string $gigsCode, string $name, string $ellipsoidName, string $primeMeridianName): void
+    {
+        $ellipsoid = array_flip(Ellipsoid::getSupportedSRIDs())[$ellipsoidName];
+        $primeMeridian = array_flip(PrimeMeridian::getSupportedSRIDs())[$primeMeridianName];
+        Datum::registerCustomDatum('urn:ogc:def:datum:GIGS::' . $gigsCode, $name, Datum::DATUM_TYPE_GEODETIC, $ellipsoid, $primeMeridian, null);
+
+        $this->assertInstanceOf(Datum::class, Datum::fromSRID('urn:ogc:def:datum:GIGS::' . $gigsCode));
+    }
+
+    public function series3200GeodeticDatumData(): Generator
+    {
+        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 3200 User-defined Geodetic Data Objects test data/ASCII/GIGS_user_3204_GeodeticDatum.txt');
+
+        foreach ($body as $row) {
+            yield '#' . $row[0] => [$row[0], $row[2], $row[3], $row[4]];
         }
     }
 

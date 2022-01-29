@@ -14289,4 +14289,9 @@ class Datum
 
         return $supported;
     }
+
+    public static function registerCustomDatum(string $srid, string $name, string $type, ?string $ellipsoidSrid, ?string $primeMeridianSrid, ?float $frameReferenceEpoch): void
+    {
+        self::$sridData[$srid] = ['name' => $name, 'type' => $type, 'ellipsoid' => $ellipsoidSrid, 'prime_meridian' => $primeMeridianSrid, 'frame_reference_epoch' => $frameReferenceEpoch];
+    }
 }
