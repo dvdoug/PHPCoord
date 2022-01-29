@@ -118,6 +118,9 @@ class GeographicPointTest extends TestCase
         $object = GeographicPoint::create(Geographic3D::fromSRID(Geographic3D::EPSG_WGS_84), new Degree(0.123), new Degree(0.456), null);
     }
 
+    /**
+     * @group distance
+     */
     public function testDistanceCalculation(): void
     {
         $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Degree(51.54105), new Degree(-0.12319), null);
@@ -125,6 +128,9 @@ class GeographicPointTest extends TestCase
         self::assertEqualsWithDelta(3680.925, $from->calculateDistance($to)->getValue(), 0.001);
     }
 
+    /**
+     * @group distance
+     */
     public function testDistanceCalculationReversedOrder(): void
     {
         $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Degree(51.507977), new Degree(-0.124588), null);
@@ -132,6 +138,9 @@ class GeographicPointTest extends TestCase
         self::assertEqualsWithDelta(3680.925, $from->calculateDistance($to)->getValue(), 0.001);
     }
 
+    /**
+     * @group distance
+     */
     public function testDistanceCalculationVincentyExample1(): void
     {
         $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_CH1903), Degree::fromSexagesimalDMSS('554500.00'), new Degree(0), null);
@@ -139,6 +148,9 @@ class GeographicPointTest extends TestCase
         self::assertEqualsWithDelta(14110526.170, $from->calculateDistance($to)->getValue(), 0.001);
     }
 
+    /**
+     * @group distance
+     */
     public function testDistanceCalculationVincentyExample2(): void
     {
         $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_ED50), Degree::fromSexagesimalDMSS('371954.95367'), new Degree(0), null);
@@ -146,6 +158,9 @@ class GeographicPointTest extends TestCase
         self::assertEqualsWithDelta(4085966.703, $from->calculateDistance($to)->getValue(), 0.001);
     }
 
+    /**
+     * @group distance
+     */
     public function testDistanceCalculationVincentyExample3(): void
     {
         $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_ED50), Degree::fromSexagesimalDMSS('351611.24862'), new Degree(0), null);
@@ -153,6 +168,9 @@ class GeographicPointTest extends TestCase
         self::assertEqualsWithDelta(8084823.839, $from->calculateDistance($to)->getValue(), 0.001);
     }
 
+    /**
+     * @group distance
+     */
     public function testDistanceCalculationVincentyExample4(): void
     {
         $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_ED50), Degree::fromSexagesimalDMSS('10000.00'), new Degree(0), null);
@@ -160,6 +178,9 @@ class GeographicPointTest extends TestCase
         self::assertEqualsWithDelta(19960000.000, $from->calculateDistance($to)->getValue(), 0.001);
     }
 
+    /**
+     * @group distance
+     */
     public function testDistanceCalculationVincentyExample5(): void
     {
         $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_ED50), Degree::fromSexagesimalDMSS('10000.00'), new Degree(0), null);
@@ -167,6 +188,9 @@ class GeographicPointTest extends TestCase
         self::assertEqualsWithDelta(19780006.558, $from->calculateDistance($to)->getValue(), 0.001);
     }
 
+    /**
+     * @group distance
+     */
     public function testDistanceCalculationAntipodeWikiExample1(): void
     {
         $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Degree(0), new Degree(0), null);
@@ -174,6 +198,9 @@ class GeographicPointTest extends TestCase
         self::assertEqualsWithDelta(19936288.579, $from->calculateDistance($to)->getValue(), 0.001);
     }
 
+    /**
+     * @group distance
+     */
     public function testDistanceCalculationAntipodeWikiExample2(): void
     {
         self::markTestSkipped(); // this doesn't work the rest do, think it might be rounding issues
@@ -182,6 +209,9 @@ class GeographicPointTest extends TestCase
         self::assertEqualsWithDelta(19944127.421, $from->calculateDistance($to)->getValue(), 0.001);
     }
 
+    /**
+     * @group distance
+     */
     public function testDistanceCalculationAntipodeVincentyExample1(): void
     {
         $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_ED50), Degree::fromSexagesimalDMSS('414145.88000'), new Degree(0), null);
@@ -189,6 +219,9 @@ class GeographicPointTest extends TestCase
         self::assertEqualsWithDelta(20004566.7228, $from->calculateDistance($to)->getValue(), 0.0001);
     }
 
+    /**
+     * @group distance
+     */
     public function testDistanceCalculationAntipodeVincentyExample2(): void
     {
         $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_ED50), new Degree(0), new Degree(0), null);
@@ -196,6 +229,9 @@ class GeographicPointTest extends TestCase
         self::assertEqualsWithDelta(19996147.4169, $from->calculateDistance($to)->getValue(), 0.0001);
     }
 
+    /**
+     * @group distance
+     */
     public function testDistanceCalculationAntipodeVincentyExample3(): void
     {
         $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_ED50), Degree::fromSexagesimalDMSS('300000.00000'), new Degree(0), null);
@@ -203,6 +239,9 @@ class GeographicPointTest extends TestCase
         self::assertEqualsWithDelta(19994364.6069, $from->calculateDistance($to)->getValue(), 0.0001);
     }
 
+    /**
+     * @group distance
+     */
     public function testDistanceCalculationAntipodeVincentyExample4(): void
     {
         self::markTestSkipped(); // this doesn't work the rest do, think it might be rounding issues
@@ -211,6 +250,9 @@ class GeographicPointTest extends TestCase
         self::assertEqualsWithDelta(20000433.9629, $from->calculateDistance($to)->getValue(), 0.0001);
     }
 
+    /**
+     * @group distance
+     */
     public function testDistanceCalculationSmallDistance(): void
     {
         $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Degree(45.306833), new Degree(5.887717), null);
@@ -218,6 +260,9 @@ class GeographicPointTest extends TestCase
         self::assertEqualsWithDelta(1.255, $from->calculateDistance($to)->getValue(), 0.001);
     }
 
+    /**
+     * @group distance
+     */
     public function testDistanceCalculationSmallDistance2(): void
     {
         $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Degree(0), new Degree(0), null);
@@ -225,6 +270,19 @@ class GeographicPointTest extends TestCase
         self::assertEqualsWithDelta(11131.949, $from->calculateDistance($to)->getValue(), 0.001);
     }
 
+    /**
+     * @group distance
+     */
+    public function testDistanceCalculationSmallDistance3(): void
+    {
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Degree(37.774929), new Degree(-122.419416), null);
+        $to = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Degree(37.774929), new Degree(-122.419416), null);
+        self::assertEqualsWithDelta(0, $from->calculateDistance($to)->getValue(), 0.001);
+    }
+
+    /**
+     * @group distance
+     */
     public function testDistanceDifferentCRSs(): void
     {
         $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_OSGB36), new Degree(51.54105), new Degree(-0.12319), null);
@@ -237,6 +295,9 @@ class GeographicPointTest extends TestCase
         }
     }
 
+    /**
+     * @group distance
+     */
     public function testDistanceDifferentCRSsNoAutoconversion(): void
     {
         $this->expectException(InvalidCoordinateReferenceSystemException::class);

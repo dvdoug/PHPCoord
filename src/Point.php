@@ -153,7 +153,7 @@ abstract class Point implements Stringable
             $cosSigma = sin($U1) * sin($U2) + cos($U1) * cos($U2) * cos($lambda);
             $sigma = atan2($sinSigma, $cosSigma);
 
-            $sinAlpha = cos($U1) * cos($U2) * sin($lambda) / $sinSigma;
+            $sinAlpha = $sinSigma ? (cos($U1) * cos($U2) * sin($lambda) / $sinSigma) : 0;
             $cosSqAlpha = (1 - $sinAlpha ** 2);
             $cos2SigmaM = $cosSqAlpha ? $cosSigma - (2 * sin($U1) * sin($U2) / $cosSqAlpha) : 0;
             $C = $f / 16 * $cosSqAlpha * (4 + $f * (4 - 3 * $cosSqAlpha));
@@ -178,7 +178,7 @@ abstract class Point implements Stringable
                 $sinAlphaN = $sinAlpha;
 
                 $C = $f / 16 * $cosSqAlpha * (4 + $f * (4 - 3 * $cosSqAlpha));
-                $cos2SigmaM = cos($sigma) - 2 * sin($U1) * sin($U2) / $cosSqAlpha;
+                $cos2SigmaM = $cosSqAlpha ? cos($sigma) - 2 * sin($U1) * sin($U2) / $cosSqAlpha : 0;
                 $D = (1 - $C) * $f * ($sigma + $C * $sinSigma * ($cos2SigmaM + $C * cos($sigma) * (-1 + 2 * $cos2SigmaM ** 2)));
                 $sinAlpha = ($LPrime - $lambdaPrime) / $D;
                 $cosSqAlpha = (1 - $sinAlpha ** 2);

@@ -86,6 +86,9 @@ class GeocentricPointTest extends TestCase
         self::assertEquals(37.4904, $object->getZ()->getValue());
     }
 
+    /**
+     * @group distance
+     */
     public function testDistanceCalculation(): void
     {
         $from = GeocentricPoint::create(Geocentric::fromSRID(Geocentric::EPSG_WGS_84), new Metre(6121151.5493), new Metre(-1563978.9235), new Metre(-872615.3556));
@@ -93,6 +96,9 @@ class GeocentricPointTest extends TestCase
         self::assertEqualsWithDelta(6824225.464, $from->calculateDistance($to)->getValue(), 0.001);
     }
 
+    /**
+     * @group distance
+     */
     public function testDistanceDifferentCRSsNoAutoconversion(): void
     {
         $this->expectException(InvalidArgumentException::class);
