@@ -427,6 +427,34 @@ class GIGSTest extends TestCase
     }
 
     /**
+     * @dataProvider series3200PrimeMeridianData
+     */
+    public function testSeries3200PrimeMeridians(string $gigsCode, string $gigsName, string $longitudeFromGreenwich, string $unitName): void
+    {
+        if ($unitName !== 'sexagesimal DMS') {
+            $longitudeFromGreenwich = (float) $longitudeFromGreenwich;
+        }
+
+        foreach (Angle::getSupportedSRIDs() as $srid => $name) {
+            if ($name === $unitName) {
+                PrimeMeridian::registerCustomMeridian('urn:ogc:def:meridian:GIGS::' . $gigsCode, $gigsName, $longitudeFromGreenwich, $srid);
+                break;
+            }
+        }
+
+        $this->assertInstanceOf(PrimeMeridian::class, PrimeMeridian::fromSRID('urn:ogc:def:meridian:GIGS::' . $gigsCode));
+    }
+
+    public function series3200PrimeMeridianData(): Generator
+    {
+        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 3200 User-defined Geodetic Data Objects test data/ASCII/GIGS_user_3203_PrimeMeridian.txt');
+
+        foreach ($body as $row) {
+            yield '#' . $row[0] => [$row[0], $row[1], $row[2], $row[3]];
+        }
+    }
+
+    /**
      * @dataProvider series7000DeprecationData
      */
     public function testSeries7000Deprecation(string $epsgCode, string $entityType): void

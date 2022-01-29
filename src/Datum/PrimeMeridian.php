@@ -223,4 +223,9 @@ class PrimeMeridian
 
         return $supported;
     }
+
+    public static function registerCustomMeridian(string $srid, string $name, float|string $longitudeFromGreenwich, string $uomSrid): void
+    {
+        self::$sridData[$srid] = ['name' => $name, 'greenwich_longitude' => $longitudeFromGreenwich, 'uom' => $uomSrid];
+    }
 }
