@@ -34,6 +34,7 @@ use function str_replace;
 use function strlen;
 use function strpos;
 use function substr;
+use function trim;
 
 class GIGSTest extends TestCase
 {
@@ -481,6 +482,35 @@ class GIGSTest extends TestCase
     }
 
     /**
+     * @depends testSeries3200GeodeticDatums
+     * @dataProvider series3200GeodeticCRSData
+     */
+    public function testSeries3200GeodeticCRSs(string $gigsCode, string $name, string $type, string $datumCode, string $epsgCSCode): void
+    {
+        if ($type === 'Geocentric') {
+            Geocentric::registerCustomCRS('urn:ogc:def:crs:GIGS::' . $gigsCode, $name, 'urn:ogc:def:cs:EPSG::' . $epsgCSCode, 'urn:ogc:def:datum:GIGS::' . $datumCode, [1262]);
+            $crs = Geocentric::fromSRID('urn:ogc:def:crs:GIGS::' . $gigsCode);
+        } elseif ($type === 'Geographic 2D') {
+            Geographic2D::registerCustomCRS('urn:ogc:def:crs:GIGS::' . $gigsCode, $name, 'urn:ogc:def:cs:EPSG::' . $epsgCSCode, 'urn:ogc:def:datum:GIGS::' . $datumCode, [1262]);
+            $crs = Geographic2D::fromSRID('urn:ogc:def:crs:GIGS::' . $gigsCode);
+        } elseif ($type === 'Geographic 3D') {
+            Geographic3D::registerCustomCRS('urn:ogc:def:crs:GIGS::' . $gigsCode, $name, 'urn:ogc:def:cs:EPSG::' . $epsgCSCode, 'urn:ogc:def:datum:GIGS::' . $datumCode, [1262]);
+            $crs = Geographic3D::fromSRID('urn:ogc:def:crs:GIGS::' . $gigsCode);
+        }
+
+        $this->assertEquals($name, $crs->getName());
+    }
+
+    public function series3200GeodeticCRSData(): Generator
+    {
+        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 3200 User-defined Geodetic Data Objects test data/ASCII/GIGS_user_3205_GeodeticCRS.txt');
+
+        foreach ($body as $row) {
+            yield '#' . $row[0] => [$row[0], $row[2], $row[3], $row[4], $row[5]];
+        }
+    }
+
+    /**
      * @dataProvider series7000DeprecationData
      */
     public function testSeries7000Deprecation(string $epsgCode, string $entityType): void
@@ -509,7 +539,7 @@ class GIGSTest extends TestCase
         $header = [];
         $body = [];
         while (!$file->eof()) {
-            $line = $file->fgets();
+            $line = trim($file->fgets());
             if ($line !== '') {
                 if ($line[0] === '#') {
                     $header[] = $line;

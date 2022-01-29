@@ -1,0 +1,64 @@
+# File: GIGS_user_3205_GeodeticCRS
+# GIGS Test Procedure: 3205
+# GIGS Test Dataset Version: 2.0
+# EPSG Dataset Version: 10.019
+# GIGS Test Dataset Issue Date: 2021-05-03
+#
+# Fields:
+# [0]: GIGS Geodetic CRS Code
+# [1]: Geodetic CRS Definition Source
+# [2]: GIGS Geodetic CRS Name
+# [3]: Geodetic CRS type
+# [4]: GIGS Datum Code (see GIGS Test Procedure 3204)
+# [5]: EPSG Coordinate System Code
+# [6]: Equivalent EPSG CRS Code
+# [7]: Equivalent EPSG CRS Name(s)
+# [8]: Early-binding Transformation Code (see GIGS Test Procedure 3208 or 2208)
+# [9]: GIGS Remarks
+#
+# [0]	# [1]	# [2]	# [3]	# [4]	# [5]	# [6]	# [7]	# [8]	# [9]
+64001	User	GIGS geocenCRS A	Geocentric	66001	6500	4978	WGS 84	61001
+64002	User	GIGS geog3DCRS A	Geographic 3D	66001	6423	4979	WGS 84	61001
+64003	User	GIGS geogCRS A	Geographic 2D	66001	6422	4326	WGS 84	61001
+64004	User	GIGS geogCRS Alonlat	Geographic 2D	66001	6424			61001	No direct EPSG equivalent; WGS 84 with CS axes changed
+64033	User	GIGS geogCRS Agr	Geographic 2D	66001	6403				No direct EPSG equivalent; WGS 84 in grads
+64019	User	GIGS geog3DCRS B	Geographic 3D	66002	6423			61196	No direct EPSG equivalent
+64005	User	GIGS geogCRS B	Geographic 2D	66002	6422	4277	OSGB36	61196
+64021	User	GIGS geog3DCRS C	Geographic 3D	66003	6423			61002	No direct EPSG equivalent
+64006	User	GIGS geogCRS C	Geographic 2D	66003	6422	4289	Amersfoort	61002
+64007	User	GIGS geogCRS D	Geographic 2D	66004	6422	4813	Batavia (Jakarta)	68178
+64022	User	GIGS geog3DCRS E	Geographic 3D	66005	6423			61610	No direct EPSG equivalent
+64008	User	GIGS geogCRS E	Geographic 2D	66005	6422	4313	Belge 1972	61610
+64009	User	GIGS geogCRS F	Geographic 2D	66006	6422	4283	GDA94	61150
+64010	User	GIGS geogCRS G	Geographic 2D	66007	6422	4258; 4742; 4152; 4190; 4674; 4148	ETRS89; GDM2000; NAD83(HARN); POSGAR98; SIRGAS 2000; Hartebeesthoek94	61005	This GIGS CRS is functionally equivalent to any geodetic CRS with a static datum using the GRS 1980 ellipsoid
+64011	User	GIGS geogCRS H	Geographic 2D	66008	6403	4807	NTF (Paris)	68094
+64012	User	GIGS geogCRS J	Geographic 2D	66009	6422	4267	NAD27	61173
+64013	User	GIGS geogCRS T	Geographic 2D	66010	6403	4275	NTF	61193
+64014	User	GIGS geogCRS L	Geographic 2D	66011	6422	4211	Batavia	61123
+64015	User	GIGS geogCRS K	Geographic 2D	66012	6422	4237	HD72	61242
+64016	User	GIGS geogCRS X	Geographic 2D	66013	6422	4202	AGD66	15788
+64017	User	GIGS geogCRS Y	Geographic 2D	66014	6422	4284	Pulkovo 1942	61254
+64018	User	GIGS geogCRS Z	Geographic 2D	66015	6422	4269	NAD83	61188
+64020	User	GIGS geogCRS M	Geographic 2D	66016	6422	4230	ED50	61275
+64269	Library	GIGS geogCRS ZZ	Geographic 2D	66269	6422	4269	NAD83	1188
+64277	Library	GIGS geogCRS BB	Geographic 2D	66277	6422	4277	OSGB36	61196
+64283	Library	GIGS geogCRS FF	Geographic 2D	66283	6422	4283	GDA94	1150
+64289	Library	GIGS geogCRS CC	Geographic 2D	66289	6422	4289	Amersfoort	61002
+64313	Library	GIGS geogCRS EE	Geographic 2D	66313	6422	4313	Belge 1972	1610
+64326	Library	GIGS geogCRS AA	Geographic 2D	66326	6422	4326	WGS 84	61001
+64807	Library	GIGS geogCRS HH	Geographic 2D	66807	6422	4807	NTF(Paris)	8094
+64813	Library	GIGS geogCRS DD	Geographic 2D	66813	6422	4813	Batavia (Jakarta)	8178
+64023	User Early-Bound	GIGS geogCRS B'	Geographic 2D	66017	6422			61314
+64024	User Early-Bound	GIGS geog3DCRS B'	Geographic 3D	66017	6423			61314
+64025	User Early-Bound	GIGS geogCRS C'	Geographic 2D	66018	6422			61003
+64026	User Early-Bound	GIGS geog3DCRS C'	Geographic 3D	66023	6423			61003
+64027	User Early-Bound	GIGS geogCRS E'	Geographic 2D	66023	6422			15929
+64028	User Early-Bound	GIGS geog3DCRS E'	Geographic 3D	66021	6423			15929
+64029	User Early-Bound	GIGS geogCRS J'	Geographic 2D	66021	6422			1243
+64030	User Early-Bound	GIGS geogCRS J''	Geographic 2D	66019	6422			1241
+64031	User Early-Bound	GIGS geogCRS J'''	Geographic 2D	66020	6422			1693
+64032	User Early-Bound	GIGS geogCRS X'	Geographic 2D	66022	6422			15786
+
+
+
+

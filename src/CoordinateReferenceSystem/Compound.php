@@ -2701,4 +2701,11 @@ class Compound extends CoordinateReferenceSystem
 
         return self::$supportedCache;
     }
+
+    public static function registerCustomCRS(string $srid, string $name, string $coordinateSystem, $datum, $extent): void
+    {
+        self::$sridData[$srid] = ['name' => $name, 'coordinate_system' => $coordinateSystem, 'datum' => $datum, 'extent_code' => $extent];
+        self::getSupportedSRIDs(); // init cache if not already
+        self::$supportedCache[$srid] = $name; //update cache
+    }
 }
