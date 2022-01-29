@@ -181,6 +181,7 @@ DB_REF
     CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_DB_REF)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5830')
 
+Geometric component of both DB_REF2003 and DB_REF2016 systems.
 
 DGN95
 -----
@@ -1246,6 +1247,22 @@ LTF2004(G)
     CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_LTF2004_G)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9546')
 
+
+LUREF
+-----
+
+| Used: Luxembourg.
+
+.. code-block:: php
+
+    Geographic3D::fromSRID(Geographic3D::EPSG_LUREF)
+    Geographic3D::fromSRID('urn:ogc:def:crs:EPSG::9893')
+    Geographic::fromSRID(Geographic3D::EPSG_LUREF)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::9893')
+    CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_LUREF)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9893')
+
+Ellipsoidal height approximates to NG95 gravity-related heights to within 5-15cm. For accurate heighting use compound CRS LUREF / Luxembourg TM + NG95 height (code 9897).
 
 Lao 1993
 --------

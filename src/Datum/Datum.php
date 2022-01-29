@@ -1135,8 +1135,8 @@ class Datum
      * Extent: Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen,
      * Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt,
      * Schleswig-Holstein, Thuringen.
-     * Defined by transformation from ETRS89 (transformation code 5826) to be an average of DHDN across all states of
-     * Germany.
+     * Defined by transformation from ETRS89 (transformation code 5826) to be an average of DHDN realizations across
+     * all German states.
      */
     public const EPSG_DEUTSCHE_BAHN_REFERENCE_SYSTEM = 'urn:ogc:def:datum:EPSG::1081';
 
@@ -1936,6 +1936,32 @@ class Datum
     public const EPSG_GBK19_INTERMEDIATE_REFERENCE_FRAME = 'urn:ogc:def:datum:EPSG::1289';
 
     /**
+     * GNTRANS
+     * Type: vertical
+     * Extent: Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen,
+     * Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt,
+     * Schleswig-Holstein, Thuringen.
+     * Surface defined by the EGG97 quasi-geoid model modified in GNTRANS to achieve absolute position optimised for
+     * use with DB_REF.
+     * Implemented in GNTRANS. The GNTRANS height surface is available only through the GNTRANS application. Replaced
+     * by the GNTRANS2016 height surface (datum code 1318).
+     */
+    public const EPSG_GNTRANS = 'urn:ogc:def:datum:EPSG::1316';
+
+    /**
+     * GNTRANS2016
+     * Type: vertical
+     * Extent: Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen,
+     * Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt,
+     * Schleswig-Holstein, Thuringen.
+     * Surface defined by the GCG2016 quasi-geoid model applied to ETRS89.
+     * Approximates the national DHHN2016 levelling surface to around 1cm in lowlands and 2cm in high mountains, but
+     * unlike DHHN2016 it is defined by the GCG2016 geoid model. Like DHHN2016, uses Normal heights in the mean tide
+     * system.
+     */
+    public const EPSG_GNTRANS2016 = 'urn:ogc:def:datum:EPSG::1318';
+
+    /**
      * Gambia
      * Type: geodetic
      * Extent: Gambia - onshore.
@@ -2424,9 +2450,9 @@ class Datum
      * Hong Kong Geodetic
      * Type: geodetic
      * Extent: China - Hong Kong - onshore and offshore.
-     * ITRF96 at epoch 1998.33
+     * ITRF96 at epoch 1998.121
      * Locally sometimes referred to as ITRF96 or WGS 84, these are not strictly correct as it applies only at epoch
-     * 1998.33 and ignores subsequent tectonic plate motion.
+     * 1998.121 and ignores subsequent tectonic plate motion.
      */
     public const EPSG_HONG_KONG_GEODETIC = 'urn:ogc:def:datum:EPSG::1209';
 
@@ -3731,13 +3757,15 @@ class Datum
     public const EPSG_LOWEST_ASTRONOMICAL_TIDE_NETHERLANDS = 'urn:ogc:def:datum:EPSG::1290';
 
     /**
-     * Luxembourg 1930
+     * Luxembourg Reference Frame
      * Type: geodetic
      * Extent: Luxembourg.
-     * Fundamental point: northern station of Habay-la-Neuve baseline in Belgium. Latitude: 49°43'24.408"N, longitude:
-     * 5°38'22.470"E (of Greenwich).
+     * Fundamental point of 1930 triangulation: northern station of Habay-la-Neuve baseline in Belgium. Latitude:
+     * 49°43'24.408"N, longitude: 5°38'22.470"E (of Greenwich). Since 2006 LUREF has been realized by GNSS station
+     * positions and transformation from ETRF.
+     * The transformation from ETRF 2000 first defining LUREF in 2006 has been recomputed in 2014 and 2020.
      */
-    public const EPSG_LUXEMBOURG_1930 = 'urn:ogc:def:datum:EPSG::6181';
+    public const EPSG_LUXEMBOURG_REFERENCE_FRAME = 'urn:ogc:def:datum:EPSG::6181';
 
     /**
      * Luzon 1911
@@ -4069,7 +4097,10 @@ class Datum
      * Mayotte 1950
      * Type: vertical
      * Extent: Mayotte - onshore.
-     * Marker on Issoufali jetty at Dzaoudzi. Height is 2.18m above zero of tide gauge.
+     * IGN 1950 marker (height 0.0m) on southwest jetty at Dzaoudzi (Petite-Terre) is 2.18m above zero of tide gauge.
+     * SHOM 1953 marker on east (Issoufali) jetty at Dzaoudzi (height 4.74m) is the base for Mayotte heights.
+     * Datum transferred to benchmark RN0 with height of 2.774m above tide gauge on eastern jetty at Mamoudzou
+     * (Grand-Terre) in 1979.
      */
     public const EPSG_MAYOTTE_1950 = 'urn:ogc:def:datum:EPSG::5191';
 
@@ -4754,14 +4785,14 @@ class Datum
     public const EPSG_NIVELLEMENT_GENERAL_DE_LA_FRANCE_LALLEMAND = 'urn:ogc:def:datum:EPSG::5118';
 
     /**
-     * Nivellement General du Luxembourg
+     * Nivellement General du Luxembourg 1995
      * Type: vertical
      * Extent: Luxembourg.
      * Reference point Wemperhardt defined as 528.030m above Normaal Amsterdams Peil (NAP). Datum at NAP is mean high
      * tide in 1684. Network adjusted in 1995.
-     * Orthometric heights.
+     * Pseudo-orthometric heights.
      */
-    public const EPSG_NIVELLEMENT_GENERAL_DU_LUXEMBOURG = 'urn:ogc:def:datum:EPSG::5172';
+    public const EPSG_NIVELLEMENT_GENERAL_DU_LUXEMBOURG_1995 = 'urn:ogc:def:datum:EPSG::5172';
 
     /**
      * Nord Sahara 1959
@@ -7704,6 +7735,16 @@ class Datum
      */
     public const EPSG_FK89 = 'urn:ogc:def:datum:EPSG::6753';
 
+    /**
+     * @deprecated use EPSG_LUXEMBOURG_REFERENCE_FRAME instead
+     */
+    public const EPSG_LUXEMBOURG_1930 = 'urn:ogc:def:datum:EPSG::6181';
+
+    /**
+     * @deprecated use EPSG_NIVELLEMENT_GENERAL_DU_LUXEMBOURG_1995 instead
+     */
+    public const EPSG_NIVELLEMENT_GENERAL_DU_LUXEMBOURG = 'urn:ogc:def:datum:EPSG::5172';
+
     protected static array $sridData = [
         'urn:ogc:def:datum:EPSG::1024' => [
             'name' => 'Hungarian Datum 1909',
@@ -9996,6 +10037,22 @@ class Datum
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
         ],
+        'urn:ogc:def:datum:EPSG::1316' => [
+            'name' => 'GNTRANS',
+            'type' => 'vertical',
+            'ellipsoid' => null,
+            'prime_meridian' => null,
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
+        'urn:ogc:def:datum:EPSG::1318' => [
+            'name' => 'GNTRANS2016',
+            'type' => 'vertical',
+            'ellipsoid' => null,
+            'prime_meridian' => null,
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
         'urn:ogc:def:datum:EPSG::5100' => [
             'name' => 'Mean Sea Level',
             'type' => 'vertical',
@@ -10557,7 +10614,7 @@ class Datum
             'frame_reference_epoch' => null,
         ],
         'urn:ogc:def:datum:EPSG::5172' => [
-            'name' => 'Nivellement General du Luxembourg',
+            'name' => 'Nivellement General du Luxembourg 1995',
             'type' => 'vertical',
             'ellipsoid' => null,
             'prime_meridian' => null,
@@ -11693,7 +11750,7 @@ class Datum
             'frame_reference_epoch' => null,
         ],
         'urn:ogc:def:datum:EPSG::6181' => [
-            'name' => 'Luxembourg 1930',
+            'name' => 'Luxembourg Reference Frame',
             'type' => 'geodetic',
             'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7022',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',

@@ -249,14 +249,16 @@ class CoordinateOperationMethods
     public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_PL_TXT = 'urn:ogc:def:method:EPSG::1100';
 
     /**
-     * Geog3D to Geog2D+GravityRelatedHeight (SA 2010).
-     */
-    public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_SA_2010 = 'urn:ogc:def:method:EPSG::1098';
-
-    /**
      * Geog3D to Geog2D+GravityRelatedHeight (gtx).
      */
     public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_GTX = 'urn:ogc:def:method:EPSG::1088';
+
+    /**
+     * Geog3D to Geog2D+GravityRelatedHeight (txt)
+     * File format: space-separated ascii file, no header, one record per line, each record with 3 columns: latitude,
+     * longitude, separation.
+     */
+    public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_TXT = 'urn:ogc:def:method:EPSG::1098';
 
     /**
      * Geographic/geocentric conversions
@@ -378,17 +380,18 @@ class CoordinateOperationMethods
     public const EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_PNG = 'urn:ogc:def:method:EPSG::1059';
 
     /**
-     * Geographic3D to GravityRelatedHeight (SA 2010)
-     * File format: space-separated ascii file, no header, columns: latitude, longitude, separation.
-     */
-    public const EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_SA_2010 = 'urn:ogc:def:method:EPSG::1082';
-
-    /**
      * Geographic3D to GravityRelatedHeight (gtx)
      * Transformation of the vertical component of a Geographic 3D CRS to a Vertical CRS. Grid file format: US NGS .gtx
      * (in US sometimes also referred to as 'vdatum format').
      */
     public const EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_GTX = 'urn:ogc:def:method:EPSG::9665';
+
+    /**
+     * Geographic3D to GravityRelatedHeight (txt)
+     * File format: space-separated ascii file, no header, one record per line, each record with 3 columns: latitude,
+     * longitude, separation.
+     */
+    public const EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_TXT = 'urn:ogc:def:method:EPSG::1082';
 
     /**
      * Guam Projection
@@ -827,6 +830,11 @@ class CoordinateOperationMethods
     public const EPSG_TRANSVERSE_MERCATOR_SOUTH_ORIENTATED = 'urn:ogc:def:method:EPSG::9808';
 
     /**
+     * Transverse Mercator 3D.
+     */
+    public const EPSG_TRANSVERSE_MERCATOR_3D = 'urn:ogc:def:method:EPSG::1111';
+
+    /**
      * Transverse Mercator Zoned Grid System
      * If locations fall outwith the fixed zones the general Transverse Mercator method (code 9807) must be used for
      * each zone.
@@ -957,6 +965,7 @@ class CoordinateOperationMethods
         self::EPSG_HOTINE_OBLIQUE_MERCATOR_VARIANT_B => 'obliqueMercatorHotineVariantB',
         self::EPSG_TRANSVERSE_MERCATOR => 'transverseMercator',
         self::EPSG_TRANSVERSE_MERCATOR_SOUTH_ORIENTATED => 'transverseMercator',
+        self::EPSG_TRANSVERSE_MERCATOR_3D => 'transverseMercator',
         self::EPSG_TRANSVERSE_MERCATOR_ZONED_GRID_SYSTEM => 'transverseMercatorZonedGrid',
         self::EPSG_VERTICAL_OFFSET => 'offset',
         self::EPSG_VERTICAL_OFFSET_AND_SLOPE => 'offsetAndSlope',
@@ -998,8 +1007,8 @@ class CoordinateOperationMethods
         self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_CGG2013 => 'geographic3DToGravityHeightFromGrid',
         self::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_GRAVSOFT => 'geographic3DTo2DPlusGravityHeightFromGrid',
         self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_GRAVSOFT => 'geographic3DToGravityHeightFromGrid',
-        self::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_SA_2010 => 'geographic3DTo2DPlusGravityHeightFromGrid',
-        self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_SA_2010 => 'geographic3DToGravityHeightFromGrid',
+        self::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_TXT => 'geographic3DTo2DPlusGravityHeightFromGrid',
+        self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_TXT => 'geographic3DToGravityHeightFromGrid',
         self::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_OSGM15_IRE => 'geographic3DTo2DPlusGravityHeightFromGrid',
         self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_OSGM15_IRE => 'geographic3DToGravityHeightFromGrid',
     ];

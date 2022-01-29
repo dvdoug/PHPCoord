@@ -15015,6 +15015,33 @@ LTF2004(C)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9549')
 
 
+LUREF / Luxembourg TM
+---------------------
+
+| Used: Luxembourg.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_LUREF_LUXEMBOURG_TM)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::2169')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_LUREF_LUXEMBOURG_TM)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::2169')
+
+
+LUREF / Luxembourg TM (3D)
+--------------------------
+
+| Used: Luxembourg.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_LUREF_LUXEMBOURG_TM_3D)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9895')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_LUREF_LUXEMBOURG_TM_3D)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9895')
+
+The height error in assuming that the CS is Cartesian never exceeds 2mm per 100m height in Luxembourg. The ellipsoidal height approximates NG95 height to 5-15cm. For engineering and other applications requiring physical height use compound CRS code 9897.
+
 La Canoa / UTM zone 18N
 -----------------------
 
@@ -15263,19 +15290,6 @@ Lome / UTM zone 31N
     Projected::fromSRID('urn:ogc:def:crs:EPSG::25231')
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_LOME_UTM_ZONE_31N)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::25231')
-
-
-Luxembourg 1930 / Gauss
------------------------
-
-| Used: Luxembourg.
-
-.. code-block:: php
-
-    Projected::fromSRID(Projected::EPSG_LUXEMBOURG_1930_GAUSS)
-    Projected::fromSRID('urn:ogc:def:crs:EPSG::2169')
-    CoordinateReferenceSystem::fromSRID(Projected::EPSG_LUXEMBOURG_1930_GAUSS)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::2169')
 
 
 Luzon 1911 / Philippines zone I

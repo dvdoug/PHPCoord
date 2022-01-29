@@ -96,7 +96,8 @@ class Geocentric extends CoordinateReferenceSystem
      * Extent: Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen,
      * Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt,
      * Schleswig-Holstein, Thuringen.
-     * Derived from ETRS89 through transformation code 5826.
+     * Geometric component of both DB_REF2003 and DB_REF2016 systems. Derived from ETRS89 through transformation code
+     * 5826.
      */
     public const EPSG_DB_REF = 'urn:ogc:def:crs:EPSG::5828';
 
@@ -689,6 +690,12 @@ class Geocentric extends CoordinateReferenceSystem
      * Extent: France and Italy - on or related to the rail route from Lyon to Turin.
      */
     public const EPSG_LTF2004_G = 'urn:ogc:def:crs:EPSG::9545';
+
+    /**
+     * LUREF
+     * Extent: Luxembourg.
+     */
+    public const EPSG_LUREF = 'urn:ogc:def:crs:EPSG::9892';
 
     /**
      * Lao 1993

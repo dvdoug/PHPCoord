@@ -555,7 +555,8 @@ class Geographic2D extends Geographic
      * Extent: Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen,
      * Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt,
      * Schleswig-Holstein, Thuringen.
-     * Differs from DHDN by 0.5-1m in former West Germany and by a maximum of 3m in former East Germany.
+     * Geometric component of both DB_REF2003 and DB_REF2016 systems. Differs from DHDN by 0.5-1m in former West
+     * Germany and by a maximum of 3m in former East Germany.
      */
     public const EPSG_DB_REF = 'urn:ogc:def:crs:EPSG::5681';
 
@@ -1742,6 +1743,12 @@ class Geographic2D extends Geographic
     public const EPSG_LTF2004_G = 'urn:ogc:def:crs:EPSG::9547';
 
     /**
+     * LUREF
+     * Extent: Luxembourg.
+     */
+    public const EPSG_LUREF = 'urn:ogc:def:crs:EPSG::4181';
+
+    /**
      * La Canoa
      * Extent: Venezuela - onshore.
      * This CRS is incorporated within PSAD56. See CRS code 4248.
@@ -1838,12 +1845,6 @@ class Geographic2D extends Geographic
      * Extent: Togo - onshore and offshore.
      */
     public const EPSG_LOME = 'urn:ogc:def:crs:EPSG::4252';
-
-    /**
-     * Luxembourg 1930
-     * Extent: Luxembourg.
-     */
-    public const EPSG_LUXEMBOURG_1930 = 'urn:ogc:def:crs:EPSG::4181';
 
     /**
      * Luzon 1911
@@ -3978,6 +3979,11 @@ class Geographic2D extends Geographic
      * is also used for the dependent projected CRS - see CRS code 3173.
      */
     public const EPSG_FK89 = 'urn:ogc:def:crs:EPSG::4753';
+
+    /**
+     * @deprecated use EPSG_LUREF instead
+     */
+    public const EPSG_LUXEMBOURG_1930 = 'urn:ogc:def:crs:EPSG::4181';
 
     private static array $cachedObjects = [];
 

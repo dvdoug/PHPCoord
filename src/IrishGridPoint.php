@@ -31,7 +31,7 @@ class IrishGridPoint extends ProjectedPoint
 
     public function __construct(Length $easting, Length $northing, ?DateTimeInterface $epoch = null)
     {
-        parent::__construct(Projected::fromSRID(Projected::EPSG_TM75_IRISH_GRID), $easting, $northing, null, null, $epoch);
+        parent::__construct(Projected::fromSRID(Projected::EPSG_TM75_IRISH_GRID), $easting, $northing, null, null, $epoch, null);
     }
 
     /**

@@ -642,7 +642,7 @@ trait VerticalSRIDData
             'extent_code' => ['1262'],
         ],
         'urn:ogc:def:crs:EPSG::5774' => [
-            'name' => 'NG-L height',
+            'name' => 'NG95 height',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
             'datum' => 'urn:ogc:def:datum:EPSG::5172',
             'extent_code' => ['1146'],
@@ -1510,6 +1510,18 @@ trait VerticalSRIDData
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
             'datum' => 'urn:ogc:def:datum:EPSG::1307',
             'extent_code' => ['2339'],
+        ],
+        'urn:ogc:def:crs:EPSG::9923' => [
+            'name' => 'GNTRANS height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1316',
+            'extent_code' => ['3339'],
+        ],
+        'urn:ogc:def:crs:EPSG::9927' => [
+            'name' => 'GNTRANS2016 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1318',
+            'extent_code' => ['3339'],
         ],
     ];
 }

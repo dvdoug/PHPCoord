@@ -560,6 +560,14 @@ class Cartesian extends CoordinateSystem
      */
     public const EPSG_3D_CS_GEOCENTRIC_AXES_GEOCENTRIC_X_Y_Z_ORIENTATIONS_X_AND_Y_IN_EQUATORIAL_PLANE_X_POSITIVE_THROUGH_INTERSECTION_WITH_PRIME_MERIDIAN_Y_THROUGH_0_DEG_N_90_DEG_E_Z_AXIS_PARALLEL_TO_MEAN_EARTH_ROTATION_AXIS_AND_POSITIVE_TOWARDS_NORTH_POLE_UOM_M = 'urn:ogc:def:cs:EPSG::6500';
 
+    /**
+     * Affine 3D CS. Axes: northing, easting, ellipsoidal height (X,Y,h). Orientations: north, east, up. UoM: m.
+     * Type: Cartesian
+     * Used in projected 3D CRSs. Away from the projection origin the ellipsoidal height is not exactly orthogonal to
+     * the projection plane and strictly the coordinate system is not Cartesian.
+     */
+    public const EPSG_AFFINE_3D_AXES_NORTHING_EASTING_ELLIPSOIDAL_HEIGHT_X_Y_H_ORIENTATIONS_NORTH_EAST_UP_UOM_M = 'urn:ogc:def:cs:EPSG::1046';
+
     protected static array $sridData = [
         'urn:ogc:def:cs:EPSG::1024' => [
             'name' => '2D Axes: easting, northing (M,P). Orientations east, north. UoM: m.',
@@ -778,6 +786,29 @@ class Cartesian extends CoordinateSystem
                     'orientation' => 'North along 90°W',
                     'abbreviation' => 'E',
                     'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::1046' => [
+            'name' => 'Affine 3D Axes: northing, easting, ellipsoidal height (X,Y,h). Orientations: north, east, up. UoM: m.',
+            'axes' => [
+                [
+                    'orientation' => 'north',
+                    'abbreviation' => 'X',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'east',
+                    'abbreviation' => 'Y',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'up',
+                    'abbreviation' => 'h',
+                    'name' => 'Ellipsoidal height',
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],

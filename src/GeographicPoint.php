@@ -15,6 +15,7 @@ use function atan2;
 use function atanh;
 use function cos;
 use function cosh;
+use function count;
 use DateTime;
 use DateTimeImmutable;
 use DateTimeInterface;
@@ -1838,7 +1839,9 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $easting = $falseEasting->asMetres()->getValue() + $kO * $B * $eta;
         $northing = $falseNorthing->asMetres()->getValue() + $kO * ($B * $xi - $mO);
 
-        return ProjectedPoint::create($to, new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $this->epoch);
+        $height = count($to->getCoordinateSystem()->getAxes()) === 3 ? $this->height : null;
+
+        return ProjectedPoint::create($to, new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $this->epoch, $height);
     }
 
     /**

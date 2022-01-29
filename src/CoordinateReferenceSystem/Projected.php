@@ -7891,6 +7891,21 @@ class Projected extends CoordinateReferenceSystem
     public const EPSG_LTF2004_C = 'urn:ogc:def:crs:EPSG::9549';
 
     /**
+     * LUREF / Luxembourg TM
+     * Extent: Luxembourg.
+     */
+    public const EPSG_LUREF_LUXEMBOURG_TM = 'urn:ogc:def:crs:EPSG::2169';
+
+    /**
+     * LUREF / Luxembourg TM (3D)
+     * Extent: Luxembourg.
+     * The height error in assuming that the CS is Cartesian never exceeds 2mm per 100m height in Luxembourg. The
+     * ellipsoidal height approximates NG95 height to 5-15cm. For engineering and other applications requiring physical
+     * height use compound CRS code 9897.
+     */
+    public const EPSG_LUREF_LUXEMBOURG_TM_3D = 'urn:ogc:def:crs:EPSG::9895';
+
+    /**
      * La Canoa / UTM zone 18N
      * Extent: Venezuela - west of 72°W.
      * Sometimes referred to as PSAD56 / UTM zone 18N.
@@ -8015,12 +8030,6 @@ class Projected extends CoordinateReferenceSystem
      * Extent: Togo - onshore and offshore.
      */
     public const EPSG_LOME_UTM_ZONE_31N = 'urn:ogc:def:crs:EPSG::25231';
-
-    /**
-     * Luxembourg 1930 / Gauss
-     * Extent: Luxembourg.
-     */
-    public const EPSG_LUXEMBOURG_1930_GAUSS = 'urn:ogc:def:crs:EPSG::2169';
 
     /**
      * Luzon 1911 / Philippines zone I
@@ -38511,6 +38520,11 @@ class Projected extends CoordinateReferenceSystem
      */
     public const EPSG_FK89_FAROE_LAMBERT_FK89 = 'urn:ogc:def:crs:EPSG::3173';
 
+    /**
+     * @deprecated use EPSG_LUREF_LUXEMBOURG_TM instead
+     */
+    public const EPSG_LUXEMBOURG_1930_GAUSS = 'urn:ogc:def:crs:EPSG::2169';
+
     private static array $cachedObjects = [];
 
     private static array $supportedCache = [];
@@ -38526,7 +38540,7 @@ class Projected extends CoordinateReferenceSystem
         $this->datum = $datum;
         $this->boundingArea = $boundingArea;
 
-        assert(count($coordinateSystem->getAxes()) === 2);
+        assert(count($coordinateSystem->getAxes()) === 2 || count($coordinateSystem->getAxes()) === 3);
     }
 
     public static function fromSRID(string $srid): self

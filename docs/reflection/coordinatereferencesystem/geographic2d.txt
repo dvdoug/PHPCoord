@@ -1226,7 +1226,7 @@ DB_REF
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_DB_REF)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5681')
 
-Differs from DHDN by 0.5-1m in former West Germany and by a maximum of 3m in former East Germany.
+Geometric component of both DB_REF2003 and DB_REF2016 systems. Differs from DHDN by 0.5-1m in former West Germany and by a maximum of 3m in former East Germany.
 
 DGN95
 -----
@@ -3732,6 +3732,21 @@ LTF2004(G)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9547')
 
 
+LUREF
+-----
+
+| Used: Luxembourg.
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_LUREF)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::4181')
+    Geographic::fromSRID(Geographic2D::EPSG_LUREF)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::4181')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_LUREF)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4181')
+
+
 La Canoa
 --------
 
@@ -3951,21 +3966,6 @@ Lome
     Geographic::fromSRID('urn:ogc:def:crs:EPSG::4252')
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_LOME)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4252')
-
-
-Luxembourg 1930
----------------
-
-| Used: Luxembourg.
-
-.. code-block:: php
-
-    Geographic2D::fromSRID(Geographic2D::EPSG_LUXEMBOURG_1930)
-    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::4181')
-    Geographic::fromSRID(Geographic2D::EPSG_LUXEMBOURG_1930)
-    Geographic::fromSRID('urn:ogc:def:crs:EPSG::4181')
-    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_LUXEMBOURG_1930)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4181')
 
 
 Luzon 1911

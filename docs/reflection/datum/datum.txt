@@ -1754,7 +1754,7 @@ Deutsche Bahn Reference System
     Datum::fromSRID(Datum::EPSG_DEUTSCHE_BAHN_REFERENCE_SYSTEM)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1081')
 
-Defined by transformation from ETRS89 (transformation code 5826) to be an average of DHDN across all states of Germany.
+Defined by transformation from ETRS89 (transformation code 5826) to be an average of DHDN realizations across all German states.
 
 Deutsches Hauptdreiecksnetz
 ---------------------------
@@ -2771,6 +2771,36 @@ Defined through the application of the GBK19 NTv2 transformation (code 9454) to 
 
 Created in 2020 to support intermediate CRS "GBK19-IRF" in the emulation of the combined GBK19 Snake map projection.
 
+GNTRANS
+-------
+
+| Type: Vertical
+| Used: Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt, Schleswig-Holstein, Thuringen.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_GNTRANS)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1316')
+
+Surface defined by the EGG97 quasi-geoid model modified in GNTRANS to achieve absolute position optimised for use with DB_REF.
+
+Implemented in GNTRANS. The GNTRANS height surface is available only through the GNTRANS application. Replaced by the GNTRANS2016 height surface (datum code 1318).
+
+GNTRANS2016
+-----------
+
+| Type: Vertical
+| Used: Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt, Schleswig-Holstein, Thuringen.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_GNTRANS2016)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1318')
+
+Surface defined by the GCG2016 quasi-geoid model applied to ETRS89.
+
+Approximates the national DHHN2016 levelling surface to around 1cm in lowlands and 2cm in high mountains, but unlike DHHN2016 it is defined by the GCG2016 geoid model. Like DHHN2016, uses Normal heights in the mean tide system.
+
 Gambia
 ------
 
@@ -3531,9 +3561,9 @@ Hong Kong Geodetic
     Datum::fromSRID(Datum::EPSG_HONG_KONG_GEODETIC)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1209')
 
-ITRF96 at epoch 1998.33
+ITRF96 at epoch 1998.121
 
-Locally sometimes referred to as ITRF96 or WGS 84, these are not strictly correct as it applies only at epoch 1998.33 and ignores subsequent tectonic plate motion.
+Locally sometimes referred to as ITRF96 or WGS 84, these are not strictly correct as it applies only at epoch 1998.121 and ignores subsequent tectonic plate motion.
 
 Hong Kong Principal Datum
 -------------------------
@@ -5515,18 +5545,20 @@ Surface defined through the nllat hydroid model applied to ETRS89.
 
 The lowest tide level which can be predicted to occur under average meteorological conditions and under any combination of astronomical conditions.
 
-Luxembourg 1930
----------------
+Luxembourg Reference Frame
+--------------------------
 
 | Type: Geodetic
 | Used: Luxembourg.
 
 .. code-block:: php
 
-    Datum::fromSRID(Datum::EPSG_LUXEMBOURG_1930)
+    Datum::fromSRID(Datum::EPSG_LUXEMBOURG_REFERENCE_FRAME)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::6181')
 
-Fundamental point: northern station of Habay-la-Neuve baseline in Belgium. Latitude: 49°43'24.408"N, longitude: 5°38'22.470"E (of Greenwich).
+Fundamental point of 1930 triangulation: northern station of Habay-la-Neuve baseline in Belgium. Latitude: 49°43'24.408"N, longitude: 5°38'22.470"E (of Greenwich). Since 2006 LUREF has been realized by GNSS station positions and transformation from ETRF.
+
+The transformation from ETRF 2000 first defining LUREF in 2006 has been recomputed in 2014 and 2020.
 
 Luzon 1911
 ----------
@@ -6049,7 +6081,9 @@ Mayotte 1950
     Datum::fromSRID(Datum::EPSG_MAYOTTE_1950)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::5191')
 
-Marker on Issoufali jetty at Dzaoudzi. Height is 2.18m above zero of tide gauge.
+IGN 1950 marker (height 0.0m) on southwest jetty at Dzaoudzi (Petite-Terre) is 2.18m above zero of tide gauge. SHOM 1953 marker on east (Issoufali) jetty at Dzaoudzi (height 4.74m) is the base for Mayotte heights.
+
+Datum transferred to benchmark RN0 with height of 2.774m above tide gauge on eastern jetty at Mamoudzou (Grand-Terre) in 1979.
 
 Mean High Water
 ---------------
@@ -7018,20 +7052,20 @@ Rivet number M.ac O-VIII on the Marseille tide gauge site, with the height fixed
 
 Orthometric heights.
 
-Nivellement General du Luxembourg
----------------------------------
+Nivellement General du Luxembourg 1995
+--------------------------------------
 
 | Type: Vertical
 | Used: Luxembourg.
 
 .. code-block:: php
 
-    Datum::fromSRID(Datum::EPSG_NIVELLEMENT_GENERAL_DU_LUXEMBOURG)
+    Datum::fromSRID(Datum::EPSG_NIVELLEMENT_GENERAL_DU_LUXEMBOURG_1995)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::5172')
 
 Reference point Wemperhardt defined as 528.030m above Normaal Amsterdams Peil (NAP). Datum at NAP is mean high tide in 1684. Network adjusted in 1995.
 
-Orthometric heights.
+Pseudo-orthometric heights.
 
 Nord Sahara 1959
 ----------------

@@ -15,6 +15,7 @@ use function atan2;
 use function atanh;
 use function cos;
 use function cosh;
+use function count;
 use DateTime;
 use DateTimeImmutable;
 use DateTimeInterface;
@@ -31,6 +32,7 @@ use PHPCoord\CoordinateOperation\ComplexNumber;
 use PHPCoord\CoordinateOperation\ConvertiblePoint;
 use PHPCoord\CoordinateOperation\OSTNOSGM15Grid;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
+use PHPCoord\CoordinateReferenceSystem\Geographic3D;
 use PHPCoord\CoordinateReferenceSystem\Projected;
 use PHPCoord\CoordinateSystem\Axis;
 use PHPCoord\CoordinateSystem\Cartesian;
@@ -81,6 +83,11 @@ class ProjectedPoint extends Point implements ConvertiblePoint
     protected Length $southing;
 
     /**
+     * Height.
+     */
+    protected ?Length $height;
+
+    /**
      * Coordinate reference system.
      */
     protected Projected $crs;
@@ -90,8 +97,16 @@ class ProjectedPoint extends Point implements ConvertiblePoint
      */
     protected ?DateTimeImmutable $epoch;
 
-    protected function __construct(Projected $crs, ?Length $easting, ?Length $northing, ?Length $westing, ?Length $southing, ?DateTimeInterface $epoch = null)
+    protected function __construct(Projected $crs, ?Length $easting, ?Length $northing, ?Length $westing, ?Length $southing, ?DateTimeInterface $epoch, ?Length $height)
     {
+        if (count($crs->getCoordinateSystem()->getAxes()) === 2 && $height !== null) {
+            throw new InvalidCoordinateReferenceSystemException('A 2D projected point must not include a height');
+        }
+
+        if (count($crs->getCoordinateSystem()->getAxes()) === 3 && $height === null) {
+            throw new InvalidCoordinateReferenceSystemException('A 3D projected point must include a height, none given');
+        }
+
         $this->crs = $crs;
 
         $eastingAxis = $this->crs->getCoordinateSystem()->getAxisByName(Axis::EASTING);
@@ -123,31 +138,33 @@ class ProjectedPoint extends Point implements ConvertiblePoint
             $epoch = DateTimeImmutable::createFromMutable($epoch);
         }
         $this->epoch = $epoch;
+
+        $this->height = $height;
     }
 
-    public static function create(Projected $crs, ?Length $easting, ?Length $northing, ?Length $westing, ?Length $southing, ?DateTimeInterface $epoch = null): self
+    public static function create(Projected $crs, ?Length $easting, ?Length $northing, ?Length $westing, ?Length $southing, ?DateTimeInterface $epoch = null, ?Length $height = null): self
     {
         return match ($crs->getSRID()) {
             Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID => new BritishNationalGridPoint($easting, $northing, $epoch),
             Projected::EPSG_TM75_IRISH_GRID => new IrishGridPoint($easting, $northing, $epoch),
             Projected::EPSG_IRENET95_IRISH_TRANSVERSE_MERCATOR => new IrishTransverseMercatorPoint($easting, $northing, $epoch),
-            default => new static($crs, $easting, $northing, $westing, $southing, $epoch),
+            default => new static($crs, $easting, $northing, $westing, $southing, $epoch, $height),
         };
     }
 
-    public static function createFromEastingNorthing(Projected $crs, Length $easting, Length $northing, ?DateTimeInterface $epoch = null): self
+    public static function createFromEastingNorthing(Projected $crs, Length $easting, Length $northing, ?DateTimeInterface $epoch = null, ?Length $height = null): self
     {
-        return static::create($crs, $easting, $northing, null, null, $epoch);
+        return static::create($crs, $easting, $northing, null, null, $epoch, $height);
     }
 
-    public static function createFromWestingNorthing(Projected $crs, Length $westing, Length $northing, ?DateTimeInterface $epoch = null): self
+    public static function createFromWestingNorthing(Projected $crs, Length $westing, Length $northing, ?DateTimeInterface $epoch = null, ?Length $height = null): self
     {
-        return static::create($crs, null, $northing, $westing, null, $epoch);
+        return static::create($crs, null, $northing, $westing, null, $epoch, $height);
     }
 
-    public static function createFromWestingSouthing(Projected $crs, Length $westing, Length $southing, ?DateTimeInterface $epoch = null): self
+    public static function createFromWestingSouthing(Projected $crs, Length $westing, Length $southing, ?DateTimeInterface $epoch = null, ?Length $height = null): self
     {
-        return static::create($crs, null, null, $westing, $southing, $epoch);
+        return static::create($crs, null, null, $westing, $southing, $epoch, $height);
     }
 
     public function getEasting(): Length
@@ -168,6 +185,11 @@ class ProjectedPoint extends Point implements ConvertiblePoint
     public function getSouthing(): Length
     {
         return $this->southing;
+    }
+
+    public function getHeight(): ?Length
+    {
+        return $this->height;
     }
 
     public function getCRS(): Projected
@@ -217,6 +239,8 @@ class ProjectedPoint extends Point implements ConvertiblePoint
                 $values[] = $this->westing;
             } elseif ($axis->getName() === Axis::SOUTHING) {
                 $values[] = $this->southing;
+            } elseif ($axis->getName() === Axis::ELLIPSOIDAL_HEIGHT) {
+                $values[] = $this->height;
             } else {
                 throw new UnknownAxisException(); // @codeCoverageIgnore
             }
@@ -1902,7 +1926,9 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         $latitude = atan(sinh($Q));
         $longitude = $longitudeOrigin + self::asin(tanh($eta0) / cos($beta));
 
-        return GeographicPoint::create($to, new Radian($latitude), new Radian($longitude), null, $this->epoch);
+        $height = $this->height && $to instanceof Geographic3D ? $this->height : null;
+
+        return GeographicPoint::create($to, new Radian($latitude), new Radian($longitude), $height, $this->epoch);
     }
 
     /**

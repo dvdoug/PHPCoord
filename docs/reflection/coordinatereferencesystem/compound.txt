@@ -155,6 +155,118 @@ DB_REF / 3-degree Gauss-Kruger zone 5 (E-N) + DHHN92 height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5835')
 
 
+DB_REF2003 zone 2
+-----------------
+
+| Used: Germany - former West Germany onshore west of 7°30'E - states of Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_DB_REF2003_ZONE_2)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9928')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_DB_REF2003_ZONE_2)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9928')
+
+On the introduction of DB_REF2016 height,  this compound CRS replaced by DB_REF2016 zone 2 (CRS code 9932).
+
+DB_REF2003 zone 3
+-----------------
+
+| Used: Germany - onshore between 7°30'E and 10°30'E.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_DB_REF2003_ZONE_3)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9929')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_DB_REF2003_ZONE_3)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9929')
+
+On the introduction of DB_REF2016 height,  this compound CRS replaced by DB_REF2016 zone 3 (CRS code 9933).
+
+DB_REF2003 zone 4
+-----------------
+
+| Used: Germany - onshore between 10°30'E and 13°30'E.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_DB_REF2003_ZONE_4)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9930')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_DB_REF2003_ZONE_4)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9930')
+
+On the introduction of DB_REF2016 height,  this compound CRS replaced by DB_REF2016 zone 4 (CRS code 9934).
+
+DB_REF2003 zone 5
+-----------------
+
+| Used: Germany - onshore east of 13°30'E.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_DB_REF2003_ZONE_5)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9931')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_DB_REF2003_ZONE_5)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9931')
+
+On the introduction of DB_REF2016 height,  this compound CRS replaced by DB_REF2016 zone 5 (CRS code 9935).
+
+DB_REF2016 zone 2
+-----------------
+
+| Used: Germany - former West Germany onshore west of 7°30'E - states of Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_DB_REF2016_ZONE_2)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9932')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_DB_REF2016_ZONE_2)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9932')
+
+Replaces DB_REF2003 zone 2 (compound CRS code 9928).
+
+DB_REF2016 zone 3
+-----------------
+
+| Used: Germany - onshore between 7°30'E and 10°30'E.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_DB_REF2016_ZONE_3)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9933')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_DB_REF2016_ZONE_3)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9933')
+
+Replaces DB_REF2003 zone 3 (compound CRS code 9929).
+
+DB_REF2016 zone 4
+-----------------
+
+| Used: Germany - onshore between 10°30'E and 13°30'E.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_DB_REF2016_ZONE_4)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9934')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_DB_REF2016_ZONE_4)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9934')
+
+Replaces DB_REF2003 zone 4 (compound CRS code 9930).
+
+DB_REF2016 zone 5
+-----------------
+
+| Used: Germany - onshore east of 13°30'E.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_DB_REF2016_ZONE_5)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9935')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_DB_REF2016_ZONE_5)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9935')
+
+Replaces DB_REF2003 zone 5 (compound CRS code 9931).
+
 ECML14_NB Grid + ODN height
 ---------------------------
 
@@ -309,6 +421,19 @@ ETRS89 + Ceuta 2 height
     Compound::fromSRID('urn:ogc:def:crs:EPSG::9506')
     CoordinateReferenceSystem::fromSRID(Compound::EPSG_ETRS89_PLUS_CEUTA_2_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9506')
+
+
+ETRS89 + DHHN2016 height
+------------------------
+
+| Used: Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt, Schleswig-Holstein, Thuringen.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_ETRS89_PLUS_DHHN2016_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9924')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_ETRS89_PLUS_DHHN2016_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9924')
 
 
 ETRS89 + Douglas height
@@ -680,6 +805,19 @@ ETRS89 / Faroe TM + FVR09 height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5318')
 
 Introduced in 2010.
+
+ETRS89 / ITM + BI height
+------------------------
+
+| Used: Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_ETRS89_ITM_PLUS_BI_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9922')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_ETRS89_ITM_PLUS_BI_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9922')
+
 
 ETRS89 / Kp2000 Bornholm + DVR90 height
 ---------------------------------------
@@ -1877,6 +2015,20 @@ KSA-GRF17 + KSA-VRF14 height
     CoordinateReferenceSystem::fromSRID(Compound::EPSG_KSA_GRF17_PLUS_KSA_VRF14_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9520')
 
+
+LUREF / Luxembourg TM + NG95 height
+-----------------------------------
+
+| Used: Luxembourg.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_LUREF_LUXEMBOURG_TM_PLUS_NG95_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9897')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_LUREF_LUXEMBOURG_TM_PLUS_NG95_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9897')
+
+For purposes with lower height accuracy requirements, may be approximated (to 5-15cm in height) by projected 3D CRS code 9895.
 
 MGI + EVRF2000 Austria height
 -----------------------------
@@ -3959,6 +4111,20 @@ NZGD2000 + NZVD2016 height
     CoordinateReferenceSystem::fromSRID(Compound::EPSG_NZGD2000_PLUS_NZVD2016_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9528')
 
+
+OSGB36 / British National Grid + BI height
+------------------------------------------
+
+| Used: United Kingdom (UK) - offshore to boundary of UKCS within 49°45'N to 61°N and 9°W to 2°E; onshore Great Britain (England, Wales and Scotland). Isle of Man onshore.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_OSGB36_BRITISH_NATIONAL_GRID_PLUS_BI_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9920')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_OSGB36_BRITISH_NATIONAL_GRID_PLUS_BI_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9920')
+
+BI height is based on an ensemble including ODN, ODN (Offshore) and island vertical datums.
 
 OSGB36 / British National Grid + ODN height
 -------------------------------------------

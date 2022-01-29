@@ -67,26 +67,92 @@ class Compound extends CoordinateReferenceSystem
      * DB_REF / 3-degree Gauss-Kruger zone 2 (E-N) + DHHN92 height
      * Extent: Germany - former West Germany onshore west of 7°30'E - states of Niedersachsen, Nordrhein-Westfalen,
      * Rheinland-Pfalz, Saarland.
+     *
+     * @deprecated
      */
     public const EPSG_DB_REF_3_DEGREE_GAUSS_KRUGER_ZONE_2_E_N_PLUS_DHHN92_HEIGHT = 'urn:ogc:def:crs:EPSG::5832';
 
     /**
      * DB_REF / 3-degree Gauss-Kruger zone 3 (E-N) + DHHN92 height
      * Extent: Germany - onshore between 7°30'E and 10°30'E.
+     *
+     * @deprecated
      */
     public const EPSG_DB_REF_3_DEGREE_GAUSS_KRUGER_ZONE_3_E_N_PLUS_DHHN92_HEIGHT = 'urn:ogc:def:crs:EPSG::5833';
 
     /**
      * DB_REF / 3-degree Gauss-Kruger zone 4 (E-N) + DHHN92 height
      * Extent: Germany - onshore between 10°30'E and 13°30'E.
+     *
+     * @deprecated
      */
     public const EPSG_DB_REF_3_DEGREE_GAUSS_KRUGER_ZONE_4_E_N_PLUS_DHHN92_HEIGHT = 'urn:ogc:def:crs:EPSG::5834';
 
     /**
      * DB_REF / 3-degree Gauss-Kruger zone 5 (E-N) + DHHN92 height
      * Extent: Germany - onshore east of 13°30'E.
+     *
+     * @deprecated
      */
     public const EPSG_DB_REF_3_DEGREE_GAUSS_KRUGER_ZONE_5_E_N_PLUS_DHHN92_HEIGHT = 'urn:ogc:def:crs:EPSG::5835';
+
+    /**
+     * DB_REF2003 zone 2
+     * Extent: Germany - former West Germany onshore west of 7°30'E - states of Niedersachsen, Nordrhein-Westfalen,
+     * Rheinland-Pfalz, Saarland.
+     * On the introduction of DB_REF2016 height,  this compound CRS replaced by DB_REF2016 zone 2 (CRS code 9932).
+     */
+    public const EPSG_DB_REF2003_ZONE_2 = 'urn:ogc:def:crs:EPSG::9928';
+
+    /**
+     * DB_REF2003 zone 3
+     * Extent: Germany - onshore between 7°30'E and 10°30'E.
+     * On the introduction of DB_REF2016 height,  this compound CRS replaced by DB_REF2016 zone 3 (CRS code 9933).
+     */
+    public const EPSG_DB_REF2003_ZONE_3 = 'urn:ogc:def:crs:EPSG::9929';
+
+    /**
+     * DB_REF2003 zone 4
+     * Extent: Germany - onshore between 10°30'E and 13°30'E.
+     * On the introduction of DB_REF2016 height,  this compound CRS replaced by DB_REF2016 zone 4 (CRS code 9934).
+     */
+    public const EPSG_DB_REF2003_ZONE_4 = 'urn:ogc:def:crs:EPSG::9930';
+
+    /**
+     * DB_REF2003 zone 5
+     * Extent: Germany - onshore east of 13°30'E.
+     * On the introduction of DB_REF2016 height,  this compound CRS replaced by DB_REF2016 zone 5 (CRS code 9935).
+     */
+    public const EPSG_DB_REF2003_ZONE_5 = 'urn:ogc:def:crs:EPSG::9931';
+
+    /**
+     * DB_REF2016 zone 2
+     * Extent: Germany - former West Germany onshore west of 7°30'E - states of Niedersachsen, Nordrhein-Westfalen,
+     * Rheinland-Pfalz, Saarland.
+     * Replaces DB_REF2003 zone 2 (compound CRS code 9928).
+     */
+    public const EPSG_DB_REF2016_ZONE_2 = 'urn:ogc:def:crs:EPSG::9932';
+
+    /**
+     * DB_REF2016 zone 3
+     * Extent: Germany - onshore between 7°30'E and 10°30'E.
+     * Replaces DB_REF2003 zone 3 (compound CRS code 9929).
+     */
+    public const EPSG_DB_REF2016_ZONE_3 = 'urn:ogc:def:crs:EPSG::9933';
+
+    /**
+     * DB_REF2016 zone 4
+     * Extent: Germany - onshore between 10°30'E and 13°30'E.
+     * Replaces DB_REF2003 zone 4 (compound CRS code 9930).
+     */
+    public const EPSG_DB_REF2016_ZONE_4 = 'urn:ogc:def:crs:EPSG::9934';
+
+    /**
+     * DB_REF2016 zone 5
+     * Extent: Germany - onshore east of 13°30'E.
+     * Replaces DB_REF2003 zone 5 (compound CRS code 9931).
+     */
+    public const EPSG_DB_REF2016_ZONE_5 = 'urn:ogc:def:crs:EPSG::9935';
 
     /**
      * ECML14_NB Grid + ODN height
@@ -163,6 +229,14 @@ class Compound extends CoordinateReferenceSystem
      * Extent: Spain - Ceuta onshore.
      */
     public const EPSG_ETRS89_PLUS_CEUTA_2_HEIGHT = 'urn:ogc:def:crs:EPSG::9506';
+
+    /**
+     * ETRS89 + DHHN2016 height
+     * Extent: Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen,
+     * Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt,
+     * Schleswig-Holstein, Thuringen.
+     */
+    public const EPSG_ETRS89_PLUS_DHHN2016_HEIGHT = 'urn:ogc:def:crs:EPSG::9924';
 
     /**
      * ETRS89 + Douglas height
@@ -355,6 +429,12 @@ class Compound extends CoordinateReferenceSystem
      * Introduced in 2010.
      */
     public const EPSG_ETRS89_FAROE_TM_PLUS_FVR09_HEIGHT = 'urn:ogc:def:crs:EPSG::5318';
+
+    /**
+     * ETRS89 / ITM + BI height
+     * Extent: Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore.
+     */
+    public const EPSG_ETRS89_ITM_PLUS_BI_HEIGHT = 'urn:ogc:def:crs:EPSG::9922';
 
     /**
      * ETRS89 / Kp2000 Bornholm + DVR90 height
@@ -938,6 +1018,14 @@ class Compound extends CoordinateReferenceSystem
      * Extent: Saudi Arabia - onshore.
      */
     public const EPSG_KSA_GRF17_PLUS_KSA_VRF14_HEIGHT = 'urn:ogc:def:crs:EPSG::9520';
+
+    /**
+     * LUREF / Luxembourg TM + NG95 height
+     * Extent: Luxembourg.
+     * For purposes with lower height accuracy requirements, may be approximated (to 5-15cm in height) by projected 3D
+     * CRS code 9895.
+     */
+    public const EPSG_LUREF_LUXEMBOURG_TM_PLUS_NG95_HEIGHT = 'urn:ogc:def:crs:EPSG::9897';
 
     /**
      * MGI + EVRF2000 Austria height
@@ -2186,6 +2274,14 @@ class Compound extends CoordinateReferenceSystem
      * Chatham Islands, Cambell Island, Kermadec Islands, Raoul Island and Snares Islands.
      */
     public const EPSG_NZGD2000_PLUS_NZVD2016_HEIGHT = 'urn:ogc:def:crs:EPSG::9528';
+
+    /**
+     * OSGB36 / British National Grid + BI height
+     * Extent: United Kingdom (UK) - offshore to boundary of UKCS within 49°45'N to 61°N and 9°W to 2°E; onshore
+     * Great Britain (England, Wales and Scotland). Isle of Man onshore.
+     * BI height is based on an ensemble including ODN, ODN (Offshore) and island vertical datums.
+     */
+    public const EPSG_OSGB36_BRITISH_NATIONAL_GRID_PLUS_BI_HEIGHT = 'urn:ogc:def:crs:EPSG::9920';
 
     /**
      * OSGB36 / British National Grid + ODN height

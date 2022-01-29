@@ -96,6 +96,7 @@ class Geographic3D extends Geographic
      * Extent: Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen,
      * Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt,
      * Schleswig-Holstein, Thuringen.
+     * Geometric component of both DB_REF2003 and DB_REF2016 systems.
      */
     public const EPSG_DB_REF = 'urn:ogc:def:crs:EPSG::5830';
 
@@ -628,6 +629,14 @@ class Geographic3D extends Geographic
      * Extent: France and Italy - on or related to the rail route from Lyon to Turin.
      */
     public const EPSG_LTF2004_G = 'urn:ogc:def:crs:EPSG::9546';
+
+    /**
+     * LUREF
+     * Extent: Luxembourg.
+     * Ellipsoidal height approximates to NG95 gravity-related heights to within 5-15cm. For accurate heighting use
+     * compound CRS LUREF / Luxembourg TM + NG95 height (code 9897).
+     */
+    public const EPSG_LUREF = 'urn:ogc:def:crs:EPSG::9893';
 
     /**
      * Lao 1993

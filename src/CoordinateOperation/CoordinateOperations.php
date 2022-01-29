@@ -1405,7 +1405,7 @@ class CoordinateOperations
         'urn:ogc:def:coordinateOperation:EPSG::1826' => [
             'name' => 'JGD2000 to WGS 84 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['1129'],
+            'extent_code' => ['4163'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::1828' => [
             'name' => 'Yoff to WGS 72 (1)',
@@ -3237,11 +3237,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9810',
             'extent_code' => ['3856'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::5483' => [
-            'name' => 'Luxembourg 1930 to ETRS89 (4)',
-            'method' => 'urn:ogc:def:method:EPSG::9636',
-            'extent_code' => ['1146'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::5491' => [
             'name' => 'Martinique 1938 to RGAF09 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9606',
@@ -3441,11 +3436,6 @@ class CoordinateOperations
             'name' => 'AGD66 to GDA94 (19)',
             'method' => 'urn:ogc:def:method:EPSG::9607',
             'extent_code' => ['2283'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::5840' => [
-            'name' => 'UCS-2000 to WGS 84 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['1242'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::5841' => [
             'name' => 'AGD66 to WGS 84 (19)',
@@ -7327,11 +7317,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['1147'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::8437' => [
-            'name' => 'Hong Kong 1980 to Hong Kong Geodetic CS (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent_code' => ['1118'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::8438' => [
             'name' => 'Macao 1920 to WGS 84 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9636',
@@ -9356,6 +9341,76 @@ class CoordinateOperations
             'name' => 'NAD83 to NAD83(CSRS)v2 (2)',
             'method' => 'urn:ogc:def:method:EPSG::9615',
             'extent_code' => ['2375'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9888' => [
+            'name' => 'NTF to RGF93 v2 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1087',
+            'extent_code' => ['3694'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9889' => [
+            'name' => 'NTF to RGF93 v2b (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1087',
+            'extent_code' => ['3694'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9894' => [
+            'name' => 'Luxembourg TM (3D)',
+            'method' => 'urn:ogc:def:method:EPSG::1111',
+            'extent_code' => ['1146'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9896' => [
+            'name' => 'JGD2000 to WGS 84 (2)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['4170'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9913' => [
+            'name' => 'Hong Kong 1980 to Hong Kong Geodetic CS (1)',
+            'method' => 'urn:ogc:def:method:EPSG::9607',
+            'extent_code' => ['1118'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9914' => [
+            'name' => 'ETRS89 to BI height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::9663',
+            'extent_code' => ['4390'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9915' => [
+            'name' => 'ETRS89 to ETRS89 + BI height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1097',
+            'extent_code' => ['4390'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9916' => [
+            'name' => 'ETRS89 to BI height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1072',
+            'extent_code' => ['2530'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9917' => [
+            'name' => 'ETRS89 to ETRS89 + BI height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1096',
+            'extent_code' => ['2530'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9918' => [
+            'name' => 'ETRS89 to BI height (3)',
+            'method' => 'urn:ogc:def:method:EPSG::1072',
+            'extent_code' => ['1305'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9919' => [
+            'name' => 'ETRS89 to ETRS89 + BI height (3)',
+            'method' => 'urn:ogc:def:method:EPSG::1096',
+            'extent_code' => ['1305'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9936' => [
+            'name' => 'JGD2011 to WGS 84 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::9603',
+            'extent_code' => ['1129'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9937' => [
+            'name' => 'LUREF to ETRS89 (7)',
+            'method' => 'urn:ogc:def:method:EPSG::9636',
+            'extent_code' => ['1146'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9938' => [
+            'name' => 'LUREF to ETRS89 (8)',
+            'method' => 'urn:ogc:def:method:EPSG::9607',
+            'extent_code' => ['1146'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::10098' => [
             'name' => 'KKJ to ETRS89 (2)',
@@ -17543,7 +17598,7 @@ class CoordinateOperations
             'extent_code' => ['1342'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::19966' => [
-            'name' => 'Luxembourg Gauss',
+            'name' => 'Luxembourg TM',
             'method' => 'urn:ogc:def:method:EPSG::9807',
             'extent_code' => ['1146'],
         ],

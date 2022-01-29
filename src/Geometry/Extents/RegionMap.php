@@ -3556,6 +3556,8 @@ class RegionMap
             4654 => self::REGION_OCEANIA,
             4655 => self::REGION_EUROPE,
             4656 => self::REGION_EUROPE,
+            4659 => self::REGION_EUROPE,
+            4660 => self::REGION_EUROPE,
         ];
     }
 }

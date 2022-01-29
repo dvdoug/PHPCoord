@@ -846,7 +846,7 @@ trait ProjectedSRIDData
             'extent_code' => ['2296'],
         ],
         'urn:ogc:def:crs:EPSG::2169' => [
-            'name' => 'Luxembourg 1930 / Gauss',
+            'name' => 'LUREF / Luxembourg TM',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::4530',
             'datum' => 'urn:ogc:def:datum:EPSG::6181',
             'extent_code' => ['1146'],
@@ -21274,6 +21274,12 @@ trait ProjectedSRIDData
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::4400',
             'datum' => 'urn:ogc:def:datum:EPSG::1315',
             'extent_code' => ['4655'],
+        ],
+        'urn:ogc:def:crs:EPSG::9895' => [
+            'name' => 'LUREF / Luxembourg TM (3D)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::1046',
+            'datum' => 'urn:ogc:def:datum:EPSG::6181',
+            'extent_code' => ['1146'],
         ],
         'urn:ogc:def:crs:EPSG::20004' => [
             'name' => 'Pulkovo 1995 / Gauss-Kruger zone 4',

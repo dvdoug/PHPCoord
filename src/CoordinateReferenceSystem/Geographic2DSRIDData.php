@@ -408,7 +408,7 @@ trait Geographic2DSRIDData
             'extent_code' => ['1090'],
         ],
         'urn:ogc:def:crs:EPSG::4181' => [
-            'name' => 'Luxembourg 1930',
+            'name' => 'LUREF',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
             'datum' => 'urn:ogc:def:datum:EPSG::6181',
             'extent_code' => ['1146'],

@@ -801,3 +801,14 @@ Used for South Pole tangential and secant projections.
 
 Earth-centred, Earth-fixed (ECEF) right-handed Cartesian 3D CS, used in geocentric coordinate reference systems.
 
+Affine 3D Axes: northing, easting, ellipsoidal height (X,Y,h). Orientations: north, east, up. UoM: m.
+-----------------------------------------------------------------------------------------------------
+
+
+.. code-block:: php
+
+    Cartesian::fromSRID(Cartesian::EPSG_AFFINE_3D_AXES_NORTHING_EASTING_ELLIPSOIDAL_HEIGHT_X_Y_H_ORIENTATIONS_NORTH_EAST_UP_UOM_M)
+    Cartesian::fromSRID('urn:ogc:def:cs:EPSG::1046')
+
+Used in projected 3D CRSs. Away from the projection origin the ellipsoidal height is not exactly orthogonal to the projection plane and strictly the coordinate system is not Cartesian.
+

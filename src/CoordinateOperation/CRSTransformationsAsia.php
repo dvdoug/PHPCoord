@@ -1720,7 +1720,7 @@ class CRSTransformationsAsia
             'reversible' => true,
         ],
         [
-            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8437',
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9913',
             'name' => 'Hong Kong 1980 to Hong Kong Geodetic CS (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4611',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8427',
@@ -1882,6 +1882,14 @@ class CRSTransformationsAsia
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1826',
             'name' => 'JGD2000 to WGS 84 (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4612',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'accuracy' => 1.0,
+            'reversible' => true,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9896',
+            'name' => 'JGD2000 to WGS 84 (2)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4612',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
@@ -2997,6 +3005,14 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::6207',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 0.3,
+            'reversible' => true,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9936',
+            'name' => 'JGD2011 to WGS 84 (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::6668',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'accuracy' => 1.0,
             'reversible' => true,
         ],
         [

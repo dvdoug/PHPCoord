@@ -5,8 +5,12 @@ A projected point is one that has an *east-west* distance and a *north-south* di
 directional naming and use just *x* and *y* instead, the meaning of which varies. PHPCoord's input always uses the
 directional naming system.
 
-If you have coordinates ``(x,y,h)``, then you will need a both a ``ProjectedPoint`` and a ``VerticalPoint`` and then to tie
-them together with a ``CompoundPoint``.
+If you have coordinates ``(x,y,h)``, then you *may* need a 3D projected point, but you *probably* need a 2D
+``ProjectedPoint`` plus a ``VerticalPoint``, and then to tie them together with a ``CompoundPoint``. Only if ``h``
+represents ellipsoidal height should ``h`` be used as a third dimension when constructing a ``ProjectedPoint``.
+
+.. note::
+    Within the built-in PHPCoord systems, only ``Projected::EPSG_LUREF_LUXEMBOURG_TM_3D`` is a 3D system, all others are 2D.
 
 .. caution::
     Do not confuse ``(x,y,h)`` with ``(x,y,z)``. ``(x,y,z)`` is used by Geocentric coordinate systems.
@@ -22,21 +26,24 @@ following signatures:
         Projected $crs,
         Length $easting,
         Length $northing,
-        ?DateTimeInterface $epoch = null
+        ?DateTimeInterface $epoch = null,
+        ?Length $height
     ): ProjectedPoint
 
     public static function createFromWestingNorthing(
         Projected $crs,
         Length $westing,
         Length $northing,
-        ?DateTimeInterface $epoch = null
+        ?DateTimeInterface $epoch = null,
+        ?Length $height
     ): ProjectedPoint
 
     public static function createFromWestingSouthing(
         Projected $crs,
         Length $westing,
         Length $southing,
-        ?DateTimeInterface $epoch = null
+        ?DateTimeInterface $epoch = null,
+        ?Length $height
     ): ProjectedPoint
 
 Examples:

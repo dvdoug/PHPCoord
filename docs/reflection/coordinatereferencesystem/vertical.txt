@@ -1054,6 +1054,34 @@ GHA height
 
 For scientific purposes see EVRF2000 Austria height (CRS code 9274).
 
+GNTRANS height
+--------------
+
+| Used: Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt, Schleswig-Holstein, Thuringen.
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_GNTRANS_HEIGHT)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::9923')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_GNTRANS_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9923')
+
+Introduced in 2003. Replaces DB Netz use of DHHN12, SNN76, DHHN85 and DHHN92 as variously adopted by German states but which DB Netz used with smoothing across boundary discontinuity. Replaced by GNTRANS2016 height (CRS code 9927).
+
+GNTRANS2016 height
+------------------
+
+| Used: Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt, Schleswig-Holstein, Thuringen.
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_GNTRANS2016_HEIGHT)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::9927')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_GNTRANS2016_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9927')
+
+Replaces GNTRANS height [also called GNTRANS2003 height] (CRS code 9923). Approximates national DHHN2016 height system (CRS code 7837) to around 1cm in lowlands and 2cm in high mountains.
+
 GUVD04 height
 -------------
 
@@ -2257,6 +2285,7 @@ Mayotte 1950 height
     CoordinateReferenceSystem::fromSRID(Vertical::EPSG_MAYOTTE_1950_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5793')
 
+Referred to as 'SHOM 1953' in government regulations but confirmed by IGN as being the Mayotte 1950 system.
 
 Menorca height
 --------------
@@ -2422,16 +2451,16 @@ NAVD88 height (ftUS)
 
 Replaces NGVD29 height (ftUS) (CRS code 5702).
 
-NG-L height
+NG95 height
 -----------
 
 | Used: Luxembourg.
 
 .. code-block:: php
 
-    Vertical::fromSRID(Vertical::EPSG_NG_L_HEIGHT)
+    Vertical::fromSRID(Vertical::EPSG_NG95_HEIGHT)
     Vertical::fromSRID('urn:ogc:def:crs:EPSG::5774')
-    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_NG_L_HEIGHT)
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_NG95_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5774')
 
 

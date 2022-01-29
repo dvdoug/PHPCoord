@@ -2,9 +2,16 @@
 
 ## [Unreleased]
 
+## [5.1.0] - 2021-xx-xx
+### Added
+- Support for 3D projected coordinates
+### Changed
+- Updates to data for France, Germany, Hong Kong, Italy, Luxembourg, Japan and UK
+
 ## [5.0.1] - 2022-01-29
 ### Fixed
 - Guard against divide by zero issues when calculating distance between two points
+
 
 ## [5.0.0] - 2021-11-12
 ### Added

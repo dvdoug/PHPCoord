@@ -877,6 +877,17 @@ class GeographicPointTest extends TestCase
         self::assertEqualsWithDelta(6251930, $to->getNorthing()->asMetres()->getValue(), 1);
     }
 
+    public function testTransverseMercator3D(): void
+    {
+        $from = GeographicPoint::create(Geographic3D::fromSRID(Geographic3D::EPSG_LUREF), Degree::fromDegreeMinuteSecondHemisphere("49°34'00.7381\"N"), Degree::fromDegreeMinuteSecondHemisphere("5°56'16.1460\"E"), new Metre(328.061));
+        $toCRS = Projected::fromSRID(Projected::EPSG_LUREF_LUXEMBOURG_TM_3D);
+        $to = $from->transverseMercator($toCRS, Degree::fromDegreeMinuteSecondHemisphere("49°50'00\"N"), Degree::fromDegreeMinuteSecondHemisphere("6°10'00\"E"), new Unity(1), new Metre(80000), new Metre(100000));
+
+        self::assertEqualsWithDelta(63444.834, $to->getEasting()->asMetres()->getValue(), 0.001);
+        self::assertEqualsWithDelta(70387.372, $to->getNorthing()->asMetres()->getValue(), 0.001);
+        self::assertEqualsWithDelta(328.061, $to->getHeight()->asMetres()->getValue(), 0.001);
+    }
+
     public function testAsUTMPointNorthernHemisphere(): void
     {
         $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Degree(43.642567), new Degree(-79.387139), null);

@@ -24,6 +24,7 @@ use PHPCoord\CoordinateOperation\CRSTransformationsSouthAmerica;
 use PHPCoord\CoordinateOperation\OSTN15OSGM15Provider;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
+use PHPCoord\CoordinateReferenceSystem\Geographic3D;
 use PHPCoord\CoordinateReferenceSystem\Projected;
 use PHPCoord\CoordinateReferenceSystem\ProjectedSRIDData;
 use PHPCoord\CoordinateSystem\Cartesian;
@@ -621,6 +622,17 @@ class ProjectedPointTest extends TestCase
 
         self::assertEqualsWithDelta(-33.859972, $to->getLatitude()->getValue(), 0.00001);
         self::assertEqualsWithDelta(151.211111, $to->getLongitude()->getValue(), 0.00001);
+    }
+
+    public function testTransverseMercator3D(): void
+    {
+        $from = ProjectedPoint::createFromEastingNorthing(Projected::fromSRID(Projected::EPSG_LUREF_LUXEMBOURG_TM_3D), new Metre(63444.834), new Metre(70387.372), null, new Metre(328.061));
+        $toCRS = Geographic3D::fromSRID(Geographic3D::EPSG_LUREF);
+        $to = $from->transverseMercator($toCRS, Degree::fromDegreeMinuteSecondHemisphere("49°50'00\"N"), Degree::fromDegreeMinuteSecondHemisphere("6°10'00\"E"), new Unity(1), new Metre(80000), new Metre(100000));
+
+        self::assertEqualsWithDelta(Degree::fromDegreeMinuteSecondHemisphere("49°34'00.7381\"N")->getValue(), $to->getLatitude()->getValue(), 0.0001);
+        self::assertEqualsWithDelta(Degree::fromDegreeMinuteSecondHemisphere("5°56'16.1460\"E")->getValue(), $to->getLongitude()->getValue(), 0.0001);
+        self::assertEqualsWithDelta(328.061, $to->getHeight()->asMetres()->getValue(), 0.001);
     }
 
     public function testNewZealandMapGrid1(): void

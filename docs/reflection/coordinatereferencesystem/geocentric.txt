@@ -157,7 +157,7 @@ DB_REF
     CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_DB_REF)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5828')
 
-Derived from ETRS89 through transformation code 5826.
+Geometric component of both DB_REF2003 and DB_REF2016 systems. Derived from ETRS89 through transformation code 5826.
 
 DGN95
 -----
@@ -1087,6 +1087,19 @@ LTF2004(G)
     Geocentric::fromSRID('urn:ogc:def:crs:EPSG::9545')
     CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_LTF2004_G)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9545')
+
+
+LUREF
+-----
+
+| Used: Luxembourg.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_LUREF)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::9892')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_LUREF)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9892')
 
 
 Lao 1993

@@ -9,7 +9,7 @@ PHPCoord
 PHPCoord is a PHP library to aid in handling coordinates. It can convert coordinates for a point from one system
 to another and also calculate distance between points.
 
-<!-- numOfCRS -->6522 different coordinate systems are supported, covering the entire globe. Some common systems supported include:
+<!-- numOfCRS -->6539 different coordinate systems are supported, covering the entire globe. Some common systems supported include:
  - WGS84 (GPS)
  - OSGB36 (Great Britain)
  - NAD27 and NAD83 (North America)

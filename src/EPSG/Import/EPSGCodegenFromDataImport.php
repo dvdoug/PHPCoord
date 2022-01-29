@@ -487,6 +487,8 @@ class EPSGCodegenFromDataImport
         1295, // NTv2 RGNC1991_NEA74Noumea.gsb
         6946, // NTv2 tm75_etrs89.gsb
         6947, // NTv2 tm75_etrs89.gsb
+        9890, // NTv2 rgf93_ntf.gsb
+        9891, // NTv2 rgf93_ntf.gsb
         15958, // NTv2 rgf93_ntf.gsb
         15959, // NTv2 rgf93_ntf.gsb
         15960, // NTv2 rgf93_ntf.gsb
@@ -609,6 +611,10 @@ class EPSGCodegenFromDataImport
         9668, // ASC lt_2019m.asc
         9670, // ASC bgneu_2019z.asc
         9671, // ASC bgneu_2019m.asc
+        9902, // ASC ua_2019z.asc
+        9903, // ASC ua_2019m.asc
+        9900, // ASC it_2019z.asc
+        9921, // ASC it_2019m.asc
         7655, // PNG08.DAT
 
         // license requires money :((
@@ -622,6 +628,8 @@ class EPSGCodegenFromDataImport
         9728, // GRD geo_igm_mar06.grd
         9729, // GRD geo_igm_mar06.grd
         9730, // GRD geo_igm_mar06.grd
+        9925, // TXT GCG2016.txt
+        9926, // TXT GCG2016.txt
     ];
 
     public function __construct()
@@ -944,6 +952,8 @@ class EPSGCodegenFromDataImport
             $data,
             'public',
             [
+                Datum::EPSG_LUXEMBOURG_REFERENCE_FRAME => ['Luxembourg 1930'],
+                Datum::EPSG_NIVELLEMENT_GENERAL_DU_LUXEMBOURG_1995 => ['Nivellement General du Luxembourg'],
             ]
         );
         $this->codeGen->updateDocs(Datum::class, $data);
@@ -1281,6 +1291,7 @@ class EPSGCodegenFromDataImport
             $data,
             'public',
             [
+                Geographic2D::EPSG_LUREF => ['Luxembourg 1930'],
             ]
         );
         $this->codeGen->updateDocs(Geographic2D::class, $data);
@@ -1371,6 +1382,7 @@ class EPSGCodegenFromDataImport
             $data,
             'public',
             [
+                Projected::EPSG_LUREF_LUXEMBOURG_TM => ['Luxembourg 1930 / Gauss'],
             ]
         );
         $this->codeGen->updateDocs(Projected::class, $data);
@@ -1417,6 +1429,7 @@ class EPSGCodegenFromDataImport
             $data,
             'public',
             [
+                Vertical::EPSG_NG95_HEIGHT => ['NG-L height'],
             ]
         );
         $this->codeGen->updateDocs(Vertical::class, $data);
@@ -1506,7 +1519,7 @@ class EPSGCodegenFromDataImport
         $filenameToProviderMap = require 'FilenameToProviderMap.php';
         $regionMap = (new RegionMap())();
 
-        $blackListedOperations = $this->getBlackedListedOperations();
+        $blackListedOperations = $this->getBlacklistedOperations();
 
         $sql = "
             SELECT
@@ -1664,7 +1677,7 @@ class EPSGCodegenFromDataImport
                     $paramsRow['value'] = 'urn:ogc:def:coordinateOperation:EPSG::' . $paramsRow['value'];
                 }
                 if (
-                    isset($filenameToProviderMap[$paramsRow['value']]) &&
+                    isset($filenameToProviderMap[(string) $paramsRow['value']]) &&
                     in_array(
                         $paramsRow['name'],
                         [

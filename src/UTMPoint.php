@@ -62,7 +62,7 @@ class UTMPoint extends ProjectedPoint
             $boundingArea
         );
 
-        parent::__construct($projectedCRS, $easting, $northing, null, null, $epoch);
+        parent::__construct($projectedCRS, $easting, $northing, null, null, $epoch, null);
     }
 
     public function asGeographicPoint(): GeographicPoint
