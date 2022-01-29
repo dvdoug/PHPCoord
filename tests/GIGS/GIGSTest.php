@@ -397,6 +397,36 @@ class GIGSTest extends TestCase
     }
 
     /**
+     * @dataProvider series3200EllipsoidData
+     */
+    public function testSeries3200Ellipsoids(string $gigsCode, string $gigsName, string $semiMajorAxis, $unitName, string $inverseFlattening, string $semiMinorAxis): void
+    {
+        if ($semiMinorAxis === '0' && $inverseFlattening === '0') {
+            $semiMinorAxis = $semiMajorAxis;
+        } elseif ($semiMinorAxis === '0') {
+            $semiMinorAxis = $semiMajorAxis - ($semiMajorAxis / $inverseFlattening);
+        }
+
+        foreach (Length::getSupportedSRIDs() as $srid => $name) {
+            if ($name === $unitName) {
+                Ellipsoid::registerCustomEllipsoid('urn:ogc:def:ellipsoid:GIGS::' . $gigsCode, $gigsName, (float) $semiMajorAxis, (float) $semiMinorAxis, $srid);
+                break;
+            }
+        }
+
+        $this->assertInstanceOf(Ellipsoid::class, Ellipsoid::fromSRID('urn:ogc:def:ellipsoid:GIGS::' . $gigsCode));
+    }
+
+    public function series3200EllipsoidData(): Generator
+    {
+        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 3200 User-defined Geodetic Data Objects test data/ASCII/GIGS_user_3202_Ellipsoid.txt');
+
+        foreach ($body as $row) {
+            yield '#' . $row[0] => [$row[0], $row[1], $row[2], $row[3], $row[4], $row[5]];
+        }
+    }
+
+    /**
      * @dataProvider series7000DeprecationData
      */
     public function testSeries7000Deprecation(string $epsgCode, string $entityType): void

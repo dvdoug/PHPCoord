@@ -1,0 +1,32 @@
+# File: GIGS_user_3202_Ellipsoid											
+# GIGS Test Procedure: 3202											
+# GIGS Test Dataset Version: 2.0											
+# EPSG Dataset Version: 10.019 											
+# GIGS Test Dataset Issue Date: 2021-05-03											
+#											
+# Fields:											
+# [0]: GIGS Ellipsoid Code											
+# [1]: GIGS Ellipsoid Name											
+# [2]: Semi-major axis (a)											
+# [3]: Unit Name											
+# [4]: Second Defining Parameter: Inverse flattening (1/f)											
+# [5]: Second Defining Parameter: Semi-minor axis (b)											
+# [6]: Spherical											
+# [7]: Unit Conversion Factor											
+# [8]: Semi-major axis (a) in metres											
+# [9]: Equivalent EPSG Ellipsoid Code											
+# [10]: Equivalent EPSG Ellipsoid Name											
+# [11]: GIGS Remarks											
+#											
+# [0]	# [1]	# [2]	# [3]	# [4]	# [5]	# [6]	# [7]	# [8]	# [9]	# [10]	# [11]
+67030	GIGS ellipsoid A	6378137	metre	298.257223563	0	FALSE	0	6378137	7030	WGS 84	Defined using a and 1/f
+67001	GIGS ellipsoid B	6377563.396	metre	299.3249646	0	FALSE	0	6377563.396	7001	Airy 1830	Defined using a and 1/f
+67004	GIGS ellipsoid C	6377397.155	metre	299.1528128	0	FALSE	0	6377397.155	7004	Bessel 1841	Defined using a and 1/f
+67022	GIGS ellipsoid E	6378388	metre	297	0	FALSE	0	6378388	7022	International 1924	Defined using a and 1/f
+67019	GIGS ellipsoid F	6378.137	kilometre	298.257222101	0	FALSE	1000	6378137	7019	GRS 1980	CAUTION defined in kilometre; not metre as per EPSG entity
+67011	GIGS ellipsoid H	6378249.2	metre	0	6356515	FALSE	0	6378249.2	7011	Clarke 1880 (IGN)	Defined using a and b; Calculated 1/f = 293.4660213
+67052	GIGS ellipsoid I	6370997	metre	0	0	TRUE	0	6370997	7052	Clarke 1866 Authalic Sphere	Sphere
+67008	GIGS ellipsoid J	20925832.164	US survey foot	294.978698214	0	FALSE	0.304800609601219	6378206.4	7008	Clarke 1866	Not metres
+67036	GIGS ellipsoid K	6378160	metre	298.247167427	0	FALSE	0	6378160	7036	GRS 1967	Defined using a and 1/f
+67003	GIGS ellipsoid X	6378160	metre	298.25	0	FALSE	0	6378160	7003	Australian National Spheroid	Defined using a and 1/f
+67024	GIGS ellipsoid Y	6378245	metre	298.3	0	FALSE	0	6378245	7024	Krassowsky 1940	Defined using a and 1/f

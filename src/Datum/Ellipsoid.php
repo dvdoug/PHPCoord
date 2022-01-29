@@ -742,4 +742,9 @@ class Ellipsoid
 
         return $supported;
     }
+
+    public static function registerCustomEllipsoid(string $srid, string $name, float $semiMajorAxis, float $semiMinorAxis, string $uomSrid): void
+    {
+        self::$sridData[$srid] = ['name' => $name, 'semi_major_axis' => $semiMajorAxis, 'semi_minor_axis' => $semiMinorAxis, 'uom' => $uomSrid];
+    }
 }
