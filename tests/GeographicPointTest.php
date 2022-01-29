@@ -270,6 +270,16 @@ class GeographicPointTest extends TestCase
     /**
      * @group distance
      */
+    public function testDistanceCalculationSmallDistance3(): void
+    {
+        $from = GeographicPoint::create(new Degree(37.774929), new Degree(-122.419416), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
+        $to = GeographicPoint::create(new Degree(37.774929), new Degree(-122.419416), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
+        self::assertEqualsWithDelta(0, $from->calculateDistance($to)->getValue(), 0.001);
+    }
+
+    /**
+     * @group distance
+     */
     public function testDistanceDifferentCRSs(): void
     {
         $from = GeographicPoint::create(new Degree(51.54105), new Degree(-0.12319), null, Geographic2D::fromSRID(Geographic2D::EPSG_OSGB36));
