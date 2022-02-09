@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\CoordinateReferenceSystem;
 
 use function count;
+use PHPCoord\CoordinateOperation\CoordinateOperations;
 use PHPCoord\Exception\UnknownCoordinateReferenceSystemException;
 use PHPUnit\Framework\TestCase;
 
@@ -34,6 +35,7 @@ class ProjectedTest extends TestCase
     {
         $object = Projected::fromSRID($srid);
         self::assertInstanceOf(Projected::class, $object);
+        self::assertIsArray(CoordinateOperations::getOperationData($object->getDerivingConversion()));
     }
 
     public function testExceptionOnUnknownSRIDCode(): void

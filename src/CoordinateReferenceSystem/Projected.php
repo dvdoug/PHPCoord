@@ -4301,6 +4301,12 @@ class Projected extends CoordinateReferenceSystem
     public const EPSG_GDA94_MGA_ZONE_47 = 'urn:ogc:def:crs:EPSG::6737';
 
     /**
+     * GDA94 / MGA zone 48
+     * Extent: Australia - offshore west of 108°E. Christmas Island - onshore and offshore west of 108°E.
+     */
+    public const EPSG_GDA94_MGA_ZONE_48 = 'urn:ogc:def:crs:EPSG::28348';
+
+    /**
      * GDA94 / MGA zone 49
      * Extent: Australia - onshore and offshore west of 114°E. Christmas Island - offshore east of 108°E.
      */
@@ -38525,6 +38531,10 @@ class Projected extends CoordinateReferenceSystem
      */
     public const EPSG_LUXEMBOURG_1930_GAUSS = 'urn:ogc:def:crs:EPSG::2169';
 
+    protected ?Geographic $baseCRS;
+
+    protected ?string $derivingConversion;
+
     private static array $cachedObjects = [];
 
     private static array $supportedCache = [];
@@ -38534,15 +38544,29 @@ class Projected extends CoordinateReferenceSystem
         CoordinateSystem $coordinateSystem,
         Datum $datum,
         BoundingArea $boundingArea,
-        string $name = ''
+        string $name = '',
+        Geographic2D|Geographic3D $baseCRS = null,
+        ?string $derivingConversion = null
     ) {
         $this->srid = $srid;
         $this->coordinateSystem = $coordinateSystem;
         $this->datum = $datum;
         $this->boundingArea = $boundingArea;
         $this->name = $name;
+        $this->baseCRS = $baseCRS;
+        $this->derivingConversion = $derivingConversion;
 
         assert(count($coordinateSystem->getAxes()) === 2 || count($coordinateSystem->getAxes()) === 3);
+    }
+
+    public function getBaseCRS(): Geographic2D|Geographic3D
+    {
+        return $this->baseCRS;
+    }
+
+    public function getDerivingConversion(): string
+    {
+        return $this->derivingConversion;
     }
 
     public static function fromSRID(string $srid): self
@@ -38554,12 +38578,16 @@ class Projected extends CoordinateReferenceSystem
         if (!isset(self::$cachedObjects[$srid])) {
             $data = static::$sridData[$srid];
 
+            $baseCRS = Geographic::fromSRID($data['base_crs']);
+
             self::$cachedObjects[$srid] = new self(
                 $srid,
                 Cartesian::fromSRID($data['coordinate_system']),
-                Datum::fromSRID($data['datum']),
+                $baseCRS->getDatum(),
                 BoundingArea::createFromExtentCodes($data['extent_code']),
-                $data['name']
+                $data['name'],
+                $baseCRS,
+                $data['deriving_conversion'],
             );
         }
 

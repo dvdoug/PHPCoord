@@ -16,10 +16,8 @@ use PHPCoord\CoordinateReferenceSystem\Projected;
 use PHPCoord\CoordinateSystem\Cartesian;
 use PHPCoord\Geometry\BoundingArea;
 use PHPCoord\Geometry\Extents\RegionMap;
-use PHPCoord\UnitOfMeasure\Angle\Degree;
 use PHPCoord\UnitOfMeasure\Length\Length;
-use PHPCoord\UnitOfMeasure\Length\Metre;
-use PHPCoord\UnitOfMeasure\Scale\Unity;
+use function str_replace;
 
 class UTMPoint extends ProjectedPoint
 {
@@ -39,6 +37,7 @@ class UTMPoint extends ProjectedPoint
 
     /**
      * Base CRS.
+     * @deprecated use $this->crs->getBaseCRS()
      */
     protected Geographic2D $baseCRS;
 
@@ -51,30 +50,25 @@ class UTMPoint extends ProjectedPoint
         $longitudeOrigin = $zone * 6 - 3;
         if ($hemisphere === self::HEMISPHERE_NORTH) {
             $boundingArea = BoundingArea::createFromArray([[[[$longitudeOrigin, 0], [$longitudeOrigin, 90], [$longitudeOrigin + 6, 90], [$longitudeOrigin + 6, 0]]]], RegionMap::REGION_GLOBAL);
+            $derivingConversion = 'urn:ogc:def:coordinateOperation:EPSG::' . ($zone + 16000);
         } else {
             $boundingArea = BoundingArea::createFromArray([[[[$longitudeOrigin, -90], [$longitudeOrigin, 0], [$longitudeOrigin + 6, 0], [$longitudeOrigin + 6, -90]]]], RegionMap::REGION_GLOBAL);
+            $derivingConversion = 'urn:ogc:def:coordinateOperation:EPSG::' . ($zone + 16100);
         }
 
+        $srid = 'urn:ogc:def:crs,' . str_replace('urn:ogc:def:', '', $crs->getSRID()) . ',' . str_replace('urn:ogc:def:', '', Cartesian::EPSG_2D_AXES_EASTING_NORTHING_E_N_ORIENTATIONS_EAST_NORTH_UOM_M) . ',' . str_replace('urn:ogc:def:', '', $derivingConversion);
+
         $projectedCRS = new Projected(
-            'UTM/' . $crs->getSRID(),
+            $srid,
             Cartesian::fromSRID(Cartesian::EPSG_2D_AXES_EASTING_NORTHING_E_N_ORIENTATIONS_EAST_NORTH_UOM_M),
             $crs->getDatum(),
-            $boundingArea
+            $boundingArea,
+            "{$crs->getName()} / UTM zone {$zone}{$hemisphere}",
+            $crs,
+            $derivingConversion
         );
 
         parent::__construct($projectedCRS, $easting, $northing, null, null, $epoch, null);
-    }
-
-    public function asGeographicPoint(): GeographicPoint
-    {
-        $latitudeOfNaturalOrigin = new Degree(0);
-        $initialLongitude = new Degree(-180);
-        $scaleFactorAtNaturalOrigin = new Unity(0.9996);
-        $falseEasting = new Metre(500000);
-        $falseNorthing = $this->hemisphere === self::HEMISPHERE_NORTH ? new Metre(0) : new Metre(10000000);
-        $longitudeOrigin = $initialLongitude->add(new Degree($this->zone * 6 - 3));
-
-        return $this->transverseMercator($this->getBaseCRS(), $latitudeOfNaturalOrigin, $longitudeOrigin, $scaleFactorAtNaturalOrigin, $falseEasting, $falseNorthing);
     }
 
     public function getZone(): int
@@ -89,7 +83,7 @@ class UTMPoint extends ProjectedPoint
 
     public function getBaseCRS(): Geographic
     {
-        return $this->baseCRS;
+        return $this->crs->getBaseCRS();
     }
 
     public function convert(CoordinateReferenceSystem $to, bool $ignoreBoundaryRestrictions = false): Point

@@ -62,6 +62,7 @@ use PHPCoord\UnitOfMeasure\Scale\Unity;
 use function sin;
 use function sinh;
 use function sqrt;
+use function str_replace;
 use function tan;
 
 /**
@@ -2253,23 +2254,27 @@ class GeographicPoint extends Point implements ConvertiblePoint
     public function asUTMPoint(): UTMPoint
     {
         $hemisphere = $this->getLatitude()->asDegrees()->getValue() >= 0 ? UTMPoint::HEMISPHERE_NORTH : UTMPoint::HEMISPHERE_SOUTH;
-        $latitudeOfNaturalOrigin = new Degree(0);
+
         $initialLongitude = new Degree(-180);
-        $scaleFactorAtNaturalOrigin = new Unity(0.9996);
-        $falseEasting = new Metre(500000);
-        $falseNorthing = $hemisphere === UTMPoint::HEMISPHERE_NORTH ? new Metre(0) : new Metre(10000000);
-        $Z = (int) ($this->longitude->subtract($initialLongitude)->asDegrees()->getValue() / 6) % (360 / 6) + 1;
-        $longitudeOrigin = $initialLongitude->add(new Degree($Z * 6 - 3));
+        $zone = (int) ($this->longitude->subtract($initialLongitude)->asDegrees()->getValue() / 6) % (360 / 6) + 1;
+
+        if ($hemisphere === UTMPoint::HEMISPHERE_NORTH) {
+            $derivingConversion = 'urn:ogc:def:coordinateOperation:EPSG::' . ($zone + 16000);
+        } else {
+            $derivingConversion = 'urn:ogc:def:coordinateOperation:EPSG::' . ($zone + 16100);
+        }
+
+        $srid = 'urn:ogc:def:crs,' . str_replace('urn:ogc:def:', '', $this->crs->getSRID()) . ',' . str_replace('urn:ogc:def:', '', Cartesian::EPSG_2D_AXES_EASTING_NORTHING_E_N_ORIENTATIONS_EAST_NORTH_UOM_M) . ',' . str_replace('urn:ogc:def:', '', $derivingConversion);
 
         $projectedCRS = new Projected(
-            'UTM/' . $this->crs->getSRID(),
+            $srid,
             Cartesian::fromSRID(Cartesian::EPSG_2D_AXES_EASTING_NORTHING_E_N_ORIENTATIONS_EAST_NORTH_UOM_M),
             $this->crs->getDatum(),
-            BoundingArea::createWorld() // this is a dummy CRS for the transform only, details don't matter
+            BoundingArea::createWorld() // this is a dummy CRS for the transform only, details don't matter (UTMPoint creates own)
         );
 
-        $asProjected = $this->transverseMercator($projectedCRS, $latitudeOfNaturalOrigin, $longitudeOrigin, $scaleFactorAtNaturalOrigin, $falseEasting, $falseNorthing);
+        $asProjected = $this->performOperation($derivingConversion, $projectedCRS, false);
 
-        return new UTMPoint($this->crs, $asProjected->getEasting(), $asProjected->getNorthing(), $Z, $hemisphere, $this->epoch);
+        return new UTMPoint($this->crs, $asProjected->getEasting(), $asProjected->getNorthing(), $zone, $hemisphere, $this->epoch);
     }
 }

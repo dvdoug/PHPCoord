@@ -31,6 +31,7 @@ use PHPCoord\CoordinateOperation\AutoConversion;
 use PHPCoord\CoordinateOperation\ComplexNumber;
 use PHPCoord\CoordinateOperation\ConvertiblePoint;
 use PHPCoord\CoordinateOperation\OSTNOSGM15Grid;
+use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Geographic3D;
 use PHPCoord\CoordinateReferenceSystem\Projected;
@@ -60,7 +61,9 @@ use function tanh;
  */
 class ProjectedPoint extends Point implements ConvertiblePoint
 {
-    use AutoConversion;
+    use AutoConversion {
+        convert as protected autoConvert;
+    }
 
     /**
      * Easting.
@@ -225,6 +228,20 @@ class ProjectedPoint extends Point implements ConvertiblePoint
                 )
             );
         }
+    }
+
+    public function asGeographicPoint(): GeographicPoint
+    {
+        return $this->performOperation($this->crs->getDerivingConversion(), $this->crs->getBaseCRS(), true);
+    }
+
+    public function convert(CoordinateReferenceSystem $to, bool $ignoreBoundaryRestrictions = false): Point
+    {
+        if ($to->getSRID() === $this->crs->getBaseCRS()->getSRID()) {
+            return $this->performOperation($this->crs->getDerivingConversion(), $this->crs->getBaseCRS(), true);
+        }
+
+        return $this->autoConvert($to, $ignoreBoundaryRestrictions);
     }
 
     public function __toString(): string

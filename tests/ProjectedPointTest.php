@@ -11,18 +11,7 @@ namespace PHPCoord;
 use function class_exists;
 use DateTime;
 use DateTimeImmutable;
-use PHPCoord\CoordinateOperation\CoordinateOperations;
-use PHPCoord\CoordinateOperation\CRSTransformationsAfrica;
-use PHPCoord\CoordinateOperation\CRSTransformationsAntarctic;
-use PHPCoord\CoordinateOperation\CRSTransformationsArctic;
-use PHPCoord\CoordinateOperation\CRSTransformationsAsia;
-use PHPCoord\CoordinateOperation\CRSTransformationsEurope;
-use PHPCoord\CoordinateOperation\CRSTransformationsGlobal;
-use PHPCoord\CoordinateOperation\CRSTransformationsNorthAmerica;
-use PHPCoord\CoordinateOperation\CRSTransformationsOceania;
-use PHPCoord\CoordinateOperation\CRSTransformationsSouthAmerica;
 use PHPCoord\CoordinateOperation\OSTN15OSGM15Provider;
-use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Geographic3D;
 use PHPCoord\CoordinateReferenceSystem\Projected;
@@ -696,58 +685,5 @@ class ProjectedPointTest extends TestCase
 
         self::assertEqualsWithDelta(52.658007833, $to->getLatitude()->asDegrees()->getValue(), 0.0001);
         self::assertEqualsWithDelta(1.716073972, $to->getLongitude()->asDegrees()->getValue(), 0.0001);
-    }
-
-    /**
-     * @group integration
-     * @dataProvider supportedOperations
-     */
-    public function testOperations(string $sourceCrsSrid, string $targetCrsSrid, string $operationSrid, bool $reversible): void
-    {
-        $sourceCRS = Projected::fromSRID($sourceCrsSrid);
-        $targetCRS = CoordinateReferenceSystem::fromSRID($targetCrsSrid);
-
-        $epoch = new DateTime();
-
-        $originalPoint = ProjectedPoint::create($sourceCRS, new Metre(0), new Metre(0), new Metre(0), new Metre(0), $epoch);
-        $newPoint = $originalPoint->performOperation($operationSrid, $targetCRS, false);
-        self::assertInstanceOf(Point::class, $newPoint);
-        self::assertEquals($targetCRS, $newPoint->getCRS());
-
-        if ($reversible) {
-            $reversedPoint = $newPoint->performOperation($operationSrid, $sourceCRS, true);
-
-            self::assertEquals($sourceCRS, $reversedPoint->getCRS());
-            self::assertEqualsWithDelta($originalPoint->getEasting()->getValue(), $reversedPoint->getEasting()->getValue(), 0.00001);
-            self::assertEqualsWithDelta($originalPoint->getNorthing()->getValue(), $reversedPoint->getNorthing()->getValue(), 0.00001);
-        }
-    }
-
-    public function supportedOperations(): array
-    {
-        $toTest = [];
-        foreach ([...CRSTransformationsGlobal::getSupportedTransformations(), ...CRSTransformationsAfrica::getSupportedTransformations(), ...CRSTransformationsAntarctic::getSupportedTransformations(), ...CRSTransformationsArctic::getSupportedTransformations(), ...CRSTransformationsAsia::getSupportedTransformations(), ...CRSTransformationsEurope::getSupportedTransformations(), ...CRSTransformationsNorthAmerica::getSupportedTransformations(), ...CRSTransformationsOceania::getSupportedTransformations(), ...CRSTransformationsSouthAmerica::getSupportedTransformations()] as $transformation) {
-            $needsNonExistentFile = false;
-
-            if (isset(static::$sridData[$transformation['source_crs']])) {
-                //filter out operations that require a grid file that we don't have
-                foreach (CoordinateOperations::getParamData($transformation['operation']) as $param) {
-                    if (isset($param['fileProvider']) && !class_exists($param['fileProvider'])) {
-                        $needsNonExistentFile = true;
-                    }
-                }
-
-                if (!$needsNonExistentFile) {
-                    $toTest[$transformation['operation'] . ' ' . $transformation['name'] . ': ' . $transformation['source_crs'] . '->' . $transformation['target_crs']] = [
-                        $transformation['source_crs'],
-                        $transformation['target_crs'],
-                        $transformation['operation'],
-                        $transformation['reversible'],
-                    ];
-                }
-            }
-        }
-
-        return $toTest;
     }
 }

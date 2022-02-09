@@ -6793,6 +6793,11 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9807',
             'extent_code' => ['4439'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::7994' => [
+            'name' => 'Barrow Island Grid 2020',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['4438'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::7995' => [
             'name' => 'Broome Grid 2020',
             'method' => 'urn:ogc:def:method:EPSG::9807',
@@ -11113,6 +11118,21 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9802',
             'extent_code' => ['2528'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::15362' => [
+            'name' => 'SPCS83 Utah North zone (International feet)',
+            'method' => 'urn:ogc:def:method:EPSG::9802',
+            'extent_code' => ['2258'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::15363' => [
+            'name' => 'SPCS83 Utah Central zone (International feet)',
+            'method' => 'urn:ogc:def:method:EPSG::9802',
+            'extent_code' => ['2257'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::15364' => [
+            'name' => 'SPCS83 Utah South zone (International feet)',
+            'method' => 'urn:ogc:def:method:EPSG::9802',
+            'extent_code' => ['2259'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::15365' => [
             'name' => 'SPCS83 Virginia North zone (US Survey feet)',
             'method' => 'urn:ogc:def:method:EPSG::9802',
@@ -15188,6 +15208,11 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9807',
             'extent_code' => ['2850'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::17348' => [
+            'name' => 'Map Grid of Australia zone 48',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['4191'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::17349' => [
             'name' => 'Map Grid of Australia zone 49',
             'method' => 'urn:ogc:def:method:EPSG::9807',
@@ -16032,6 +16057,11 @@ class CoordinateOperations
             'name' => 'Bluff 2000',
             'method' => 'urn:ogc:def:method:EPSG::9807',
             'extent_code' => ['3800'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::17959' => [
+            'name' => 'Chatham Island Circuit 2000',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['2889'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::17960' => [
             'name' => 'Auckland Islands Transverse Mercator 2000',

@@ -8144,6 +8144,19 @@ GDA94 / MGA zone 47
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::6737')
 
 
+GDA94 / MGA zone 48
+-------------------
+
+| Used: Australia - offshore west of 108°E. Christmas Island - onshore and offshore west of 108°E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GDA94_MGA_ZONE_48)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::28348')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GDA94_MGA_ZONE_48)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::28348')
+
+
 GDA94 / MGA zone 49
 -------------------
 
