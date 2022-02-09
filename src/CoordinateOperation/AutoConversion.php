@@ -329,39 +329,6 @@ trait AutoConversion
         }
 
         return $transformationsByCRSPair;
-        //additional help for ETRS89->WGS84
-            /*if (in_array($from, [Geocentric::EPSG_WGS_84, Geographic2D::EPSG_WGS_84, Geographic3D::EPSG_WGS_84], true) && in_array($to, [Geocentric::EPSG_ETRS89, Geographic2D::EPSG_ETRS89, Geographic3D::EPSG_ETRS89], true)) {
-                $inserts = self::$OPERATIONS_ETRF2014_TO_WGS84_G2139;
-            } elseif (in_array($to, [Geocentric::EPSG_WGS_84, Geographic2D::EPSG_WGS_84, Geographic3D::EPSG_WGS_84], true) && in_array($from, [Geocentric::EPSG_ETRS89, Geographic2D::EPSG_ETRS89, Geographic3D::EPSG_ETRS89], true)) {
-                $inserts = array_reverse(self::$OPERATIONS_ETRF2014_TO_WGS84_G2139);
-            }
-            if (in_array($from, [Geographic2D::EPSG_WGS_84, Geographic3D::EPSG_WGS_84], true) && in_array($to, [Geographic2D::EPSG_ETRS89, Geographic3D::EPSG_ETRS89], true)) {
-                $inserts = [self::$OPERATION_GEOCENTRIC_TO_GEOGRAPHIC3D, ...$inserts, self::$OPERATION_GEOCENTRIC_TO_GEOGRAPHIC3D];
-            } elseif (in_array($to, [Geographic2D::EPSG_WGS_84, Geographic3D::EPSG_WGS_84], true) && in_array($from, [Geographic2D::EPSG_ETRS89, Geographic3D::EPSG_ETRS89], true)) {
-                $inserts = [self::$OPERATION_GEOCENTRIC_TO_GEOGRAPHIC3D, ...$inserts, self::$OPERATION_GEOCENTRIC_TO_GEOGRAPHIC3D];
-            }
-            if (in_array($from, [Geographic2D::EPSG_WGS_84], true) && in_array($to, [Geographic2D::EPSG_ETRS89], true)) {
-                $inserts = [self::$OPERATION_GEOGRAPHIC3D_TO_GEOGRAPHIC2D, ...$inserts, self::$OPERATION_GEOGRAPHIC3D_TO_GEOGRAPHIC2D];
-            } elseif (in_array($to, [Geographic2D::EPSG_WGS_84], true) && in_array($from, [Geographic2D::EPSG_ETRS89], true)) {
-                $inserts = [self::$OPERATION_GEOGRAPHIC3D_TO_GEOGRAPHIC2D, ...$inserts, self::$OPERATION_GEOGRAPHIC3D_TO_GEOGRAPHIC2D];
-            }*/
-
-            /*
-ITRF2000 to NAD83(CORS96) (1)
-ITRF2000 to NAD83(CSRS)v4 (1)
-ITRF2000 to NAD83(MARP00) (1)
-ITRF2000 to NAD83(PACP00) (1)
-ITRF2005 to NAD83(CSRS)v5 (1)
-ITRF2008 to NAD83(2011) (1)
-ITRF2008 to NAD83(CSRS)v6 (1)
-ITRF2008 to NAD83(MA11) (1)
-ITRF2008 to NAD83(PA11) (1)
-ITRF2014 to GDA2020 (1)
-ITRF2014 to ETRF2014 (1)
-ITRF2014 to NAD83(2011) (1)
-ITRF2014 to NAD83(CSRS)v7 (1)
-
-*/
     }
 
     abstract public function getCRS(): CoordinateReferenceSystem;
