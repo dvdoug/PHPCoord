@@ -216,10 +216,10 @@ requires a significant non-backwards compatible change to address.
 ### Changed
  - Updated Composer to use PSR-4
 
-## [1.1] - 2014-01-23
+## [1.1] - 2013-08-01
 Just cleanup
 
-## 1.0.0 - 2014-01-23
+## 1.0.0 - 2013-02-13
 Initial release of this fork (based off of v2.3 of original)
 ### Fixed
  - When converting Latitude and Longitude between WGS84 and OSGB36 or vice-versa, a wrong constant for the y translation has been corrected (was off by 1 metre)
