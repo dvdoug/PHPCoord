@@ -8,10 +8,15 @@ declare(strict_types=1);
 
 namespace PHPCoord\GIGS;
 
+use function array_filter;
 use function array_flip;
+use function array_map;
 use function explode;
 use Generator;
+use function in_array;
+use function lcfirst;
 use function min;
+use PHPCoord\CoordinateOperation\CoordinateOperationMethods;
 use PHPCoord\CoordinateOperation\CoordinateOperations;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\CoordinateReferenceSystem\Geocentric;
@@ -29,12 +34,14 @@ use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Scale\Scale;
 use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
 use PHPUnit\Framework\TestCase;
+use function preg_match;
 use SplFileObject;
 use function str_replace;
 use function strlen;
 use function strpos;
 use function substr;
 use function trim;
+use function ucwords;
 
 class GIGSTest extends TestCase
 {
@@ -511,6 +518,111 @@ class GIGSTest extends TestCase
     }
 
     /**
+     * @dataProvider series3200ConversionData
+     */
+    public function testSeries3200Conversions(string $gigsCode, string $name, string $methodName, string $param1Name, string $param1Value, string $param1Unit, string $param2Name, string $param2Value, string $param2Unit, string $param3Name, string $param3Value, string $param3Unit, string $param4Name, string $param4Value, string $param4Unit, string $param5Name, string $param5Value, string $param5Unit, string $param6Name, string $param6Value, string $param6Unit, string $param7Name, string $param7Value, string $param7Unit, string $epsgOperationCode, string $epsgOperationName): void
+    {
+        $uoms = [
+            'NULL' => '',
+            'degree' => Angle::EPSG_DEGREE,
+            'grad' => Angle::EPSG_GRAD,
+            'sexagesimal DMS' => Angle::EPSG_SEXAGESIMAL_DMS,
+            'metre' => Length::EPSG_METRE,
+            'foot' => Length::EPSG_FOOT,
+            'US survey foot' => Length::EPSG_US_SURVEY_FOOT,
+            'Unity' => Scale::EPSG_UNITY,
+        ];
+
+        $params = [
+            $this->makeParamName($param1Name) => [
+                'value' => $param1Value !== 'NULL' ? $param1Value : null,
+                'uom' => $uoms[$param1Unit],
+                'reverses' => false,
+            ],
+            $this->makeParamName($param2Name) => [
+                'value' => $param2Value !== 'NULL' ? $param2Value : null,
+                'uom' => $uoms[$param2Unit],
+                'reverses' => false,
+            ],
+            $this->makeParamName($param3Name) => [
+                'value' => $param3Value !== 'NULL' ? $param3Value : null,
+                'uom' => $uoms[$param3Unit],
+                'reverses' => false,
+            ],
+            $this->makeParamName($param4Name) => [
+                'value' => $param4Value !== 'NULL' ? $param4Value : null,
+                'uom' => $uoms[$param4Unit],
+                'reverses' => false,
+            ],
+            $this->makeParamName($param5Name) => [
+                'value' => $param5Value !== 'NULL' ? $param5Value : null,
+                'uom' => $uoms[$param5Unit],
+                'reverses' => false,
+            ],
+            $this->makeParamName($param6Name) => [
+                'value' => $param6Value !== 'NULL' ? $param6Value : null,
+                'uom' => $uoms[$param6Unit],
+                'reverses' => false,
+            ],
+            $this->makeParamName($param7Name) => [
+                'value' => $param7Value !== 'NULL' ? $param7Value : null,
+                'uom' => $uoms[$param7Unit],
+                'reverses' => false,
+            ],
+        ];
+
+        $params = array_filter($params, fn ($param) => $param['value'] !== null);
+        $params = array_map(
+            static function ($param) {
+                $param['value'] = $param['uom'] === Angle::EPSG_SEXAGESIMAL_DMS ? $param['value'] : (float) $param['value'];
+
+                return $param;
+            },
+            $params
+        );
+
+        $method = match ($methodName) {
+            'Transverse Mercator' => CoordinateOperationMethods::EPSG_TRANSVERSE_MERCATOR,
+            'Transverse Mercator (South Orientated)' => CoordinateOperationMethods::EPSG_TRANSVERSE_MERCATOR_SOUTH_ORIENTATED,
+            'Oblique Stereographic' => CoordinateOperationMethods::EPSG_OBLIQUE_STEREOGRAPHIC,
+            'Mercator (variant A)' => CoordinateOperationMethods::EPSG_MERCATOR_VARIANT_A,
+            'Mercator (variant B)' => CoordinateOperationMethods::EPSG_MERCATOR_VARIANT_B,
+            'Lambert Conic Conformal (1SP)' => CoordinateOperationMethods::EPSG_LAMBERT_CONIC_CONFORMAL_1SP,
+            'Lambert Conic Conformal (2SP)' => CoordinateOperationMethods::EPSG_LAMBERT_CONIC_CONFORMAL_2SP,
+            'Albers Equal Area' => CoordinateOperationMethods::EPSG_ALBERS_EQUAL_AREA,
+            'American Polyconic' => CoordinateOperationMethods::EPSG_AMERICAN_POLYCONIC,
+            'Hotine Oblique Mercator (variant A)' => CoordinateOperationMethods::EPSG_HOTINE_OBLIQUE_MERCATOR_VARIANT_A,
+            'Hotine Oblique Mercator (variant B)' => CoordinateOperationMethods::EPSG_HOTINE_OBLIQUE_MERCATOR_VARIANT_B,
+            'Cassini-Soldner' => CoordinateOperationMethods::EPSG_CASSINI_SOLDNER,
+            'Lambert Azimuthal Equal Area' => CoordinateOperationMethods::EPSG_LAMBERT_AZIMUTHAL_EQUAL_AREA,
+        };
+
+        CoordinateOperations::registerCustomOperation('urn:ogc:def:coordinateOperation:GIGS::' . $gigsCode, $name, $method, [1262], $params);
+
+        if ($epsgOperationCode) {
+            $originalOperation = CoordinateOperations::getOperationData('urn:ogc:def:coordinateOperation:EPSG::' . $epsgOperationCode);
+            $originalParams = CoordinateOperations::getParamData('urn:ogc:def:coordinateOperation:EPSG::' . $epsgOperationCode);
+
+            $gigsOperation = CoordinateOperations::getOperationData('urn:ogc:def:coordinateOperation:GIGS::' . $gigsCode);
+            $gigsParams = CoordinateOperations::getParamData('urn:ogc:def:coordinateOperation:GIGS::' . $gigsCode);
+
+            $this->assertEquals($originalOperation['method'], $gigsOperation['method']);
+            $this->assertEquals($originalParams, $gigsParams);
+        } else {
+            $this->expectNotToPerformAssertions();
+        }
+    }
+
+    public function series3200ConversionData(): Generator
+    {
+        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 3200 User-defined Geodetic Data Objects test data/ASCII/GIGS_user_3206_Conversion.txt');
+
+        foreach ($body as $row) {
+            yield '#' . $row[0] => [$row[0], $row[1], $row[2], $row[3], $row[4], $row[5], $row[7], $row[8], $row[9], $row[11], $row[12], $row[13], $row[15], $row[16], $row[17], $row[19], $row[20], $row[21], $row[22], $row[23], $row[24], $row[25], $row[26], $row[27], $row[28], $row[29]];
+        }
+    }
+
+    /**
      * @dataProvider series7000DeprecationData
      */
     public function testSeries7000Deprecation(string $epsgCode, string $entityType): void
@@ -550,5 +662,19 @@ class GIGSTest extends TestCase
         }
 
         return [$header, $body];
+    }
+
+    private function makeParamName(string $string): string
+    {
+        $string = str_replace([' ', '-', '(', ')', '"'], '', ucwords($string, ' -()"'));
+        if (!preg_match('/^(EPSG|[ABC][uv\d])/', $string)) {
+            $string = lcfirst($string);
+        }
+
+        if (in_array($string, ['latitudeAndLongitudeDifferenceFile', 'geocentricTranslationFile', 'verticalOffsetFile'], true)) {
+            $string = 'offsetsFile';
+        }
+
+        return $string;
     }
 }

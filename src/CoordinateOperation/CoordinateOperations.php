@@ -17810,17 +17810,29 @@ class CoordinateOperations
         ],
     ];
 
+    protected static array $customSridParamData = [];
+
     public static function getOperationData(string $operationSrid): array
     {
-        if (!isset(static::$sridData[$operationSrid])) {
+        if (!isset(self::$sridData[$operationSrid])) {
             throw new UnknownCoordinateOperationException($operationSrid);
         }
 
-        return static::$sridData[$operationSrid];
+        return self::$sridData[$operationSrid];
     }
 
     public static function getParamData(string $operationSrid): array
     {
+        if (isset(self::$customSridParamData[$operationSrid])) {
+            return self::$customSridParamData[$operationSrid];
+        }
+
         return require 'Params/' . str_replace(':', '', str_replace('urn:ogc:def:coordinateOperation:', '', $operationSrid)) . '.php';
+    }
+
+    public static function registerCustomOperation(string $srid, string $name, string $method, array $extent, array $params): void
+    {
+        self::$sridData[$srid] = ['name' => $name, 'method' => $method, 'extent_code' => $extent, 'params' => $params];
+        self::$customSridParamData[$srid] = $params;
     }
 }
