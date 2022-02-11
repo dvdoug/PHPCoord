@@ -1,0 +1,72 @@
+# File: GIGS_user_3208_CoordTfm
+# GIGS Test Procedure: 3208
+# GIGS Test Dataset Version: 2.0
+# EPSG Dataset Version: 10.019
+# GIGS Test Dataset Issue Date: 2021-05-03
+#
+# Fields:
+# [0]: GIGS Transformation Code
+# [1]: GIGS Transformation Name
+# [2]: GIGS Source CRS Code (see GIGS Test Procedure 3205)
+# [3]: GIGS Source CRS Name
+# [4]: GIGS Target CRS Code (see GIGS Test Procedure 3205)
+# [5]: GIGS Target CRS Name
+# [6]: GIGS Transformation Variant
+# [7]: EPSG Transformation Method Name
+# [8]: Parameter 1 Name
+# [9]: Parameter 1 Value
+# [10]: Parameter 1 Unit
+# [11]: Parameter 1 Value in decimal degrees
+# [12]: Parameter 2 Name
+# [13]: Parameter 2 Value
+# [14]: Parameter 2 Unit
+# [15]: Parameter 3 Name
+# [16]: Parameter 3 Value
+# [17]: Parameter 3 Unit
+# [18]: Parameter 4 Name
+# [19]: Parameter 4 Value
+# [20]: Parameter 4 Unit
+# [21]: Parameter 5 Name
+# [22]: Parameter 5 Value
+# [23]: Parameter 5 Unit
+# [24]: Parameter 6 Name
+# [25]: Parameter 6 Value
+# [26]: Parameter 6 Unit
+# [27]: Parameter 7 Name
+# [28]: Parameter 7 Value
+# [29]: Parameter 7 Unit
+# [30]: Parameter 8 Name
+# [31]: Parameter 8 Value
+# [32]: Parameter 8 Unit
+# [33]: Parameter 9 Name
+# [34]: Parameter 9 Value
+# [35]: Parameter 9 Unit
+# [36]: Parameter 10 Name
+# [37]: Parameter 10 Value
+# [38]: Parameter 10 Unit
+# [39]: Equivalent EPSG Transformation Code
+# [40]: Equivalent EPSG Transformation Name
+# [41]: GIGS Remarks
+#
+# [0]	# [1]	# [2]	# [3]	# [4]	# [5]	# [6]	# [7]	# [8]	# [9]	# [10]	# [11]	# [12]	# [13]	# [14]	# [15]	# [16]	# [17]	# [18]	# [19]	# [20]	# [21]	# [22]	# [23]	# [24]	# [25]	# [26]	# [27]	# [28]	# [29]	# [30]	# [31]	# [32]	# [33]	# [34]	# [35]	# [36]	# [37]	# [38]	# [39]	# [40]	# [41]
+61001	GIGS geogCRS A to WGS 84 (1)	64003	GIGS geogCRS A	4326	WGS 84	1	Geocentric translations	X-axis translation	0	metre	NULL	Y-axis translation	0	metre	Z-axis translation	0	metre	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL			No direct EPSG equivalent
+61196	GIGS geogCRS B to GIGS geogCRS A (1)	64005	GIGS geogCRS B	64003	GIGS geogCRS A	1	Geocentric translations	X-axis translation	371	metre	NULL	Y-axis translation	-112	metre	Z-axis translation	434	metre	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	1196	OSGB36 to WGS 84 (2)
+61314	GIGS geogCRS B to GIGS geogCRS A (2)	64005	GIGS geogCRS B	64003	GIGS geogCRS A	2	Position Vector 7-param. transformation	X-axis translation	446.448	metre	NULL	Y-axis translation	-125.157	metre	Z-axis translation	542.06	metre	X-axis rotation	0.15	arc-second	Y-axis rotation	0.247	arc-second	Z-axis rotation	0.842	arc-second	Scale difference	-20.489	parts per million	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	1314	OSGB36 to WGS 84 (6)
+61002	GIGS geogCRS C to GIGS geogCRS A (1)	64006	GIGS geogCRS C	64003	GIGS geogCRS A	1	Geocentric translations	X-axis translation	593	metre	NULL	Y-axis translation	26	metre	Z-axis translation	479	metre	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL			No direct EPSG equivalent
+15934	GIGS geogCRS C to GIGS geogCRS A (2)	64006	GIGS geogCRS C	64003	GIGS geogCRS A	2	Coordinate Frame rotation	X-axis translation	565.2369	metre	NULL	Y-axis translation	50.0087	metre	Z-axis translation	465.658	metre	X-axis rotation	1.9725	microradian	Y-axis rotation	-1.7004	microradian	Z-axis rotation	9.0677	microradian	Scale difference	4.0812	parts per million	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	15934	Amersfoort to WGS 84 (3)
+61003	GIGS geogCRS C to GIGS geogCRS A (3)	64006	GIGS geogCRS C	64003	GIGS geogCRS A	3	Molodensky-Badekas 10-parameter transformation	X-axis translation	593.0297	metre	NULL	Y-axis translation	26.0038	metre	Z-axis translation	478.7534	metre	X-axis rotation	0.4069	arc-second	Y-axis rotation	-0.3507	arc-second	Z-axis rotation	1.8703	arc-second	Scale difference	4.0812	parts per million	Ordinate 1 of evaluation point	3903453.1482	metre	Ordinate 2 of evaluation point	368135.3134	metre	Ordinate 3 of evaluation point	5012970.3051	metre			No direct EPSG equivalent; parameter values taken from 15740 Amersfoort to ETRS89 (4)
+61759	GIGS geogCRS D to GIGS geogCRS L (1)	64007	GIGS geogCRS D	64014	GIGS geogCRS L	1	Longitude rotation	Longitude offset	106.482779	sexagesimal degree	106.8077194	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	1759	Batavia (Jakarta) to Batavia (1)
+61610	GIGS geogCRS E to GIGS geogCRS A (1)	64008	GIGS geogCRS E	64003	GIGS geogCRS A	1	Geocentric translations	X-axis translation	-125.8	metre	NULL	Y-axis translation	79.9	metre	Z-axis translation	-100.5	metre	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	1610	BD72 to WGS 84 (2)
+15929	GIGS geogCRS E to GIGS geogCRS A (2)	64008	GIGS geogCRS E	64003	GIGS geogCRS A	2	Coordinate Frame rotation	X-axis translation	-106.8686	metre	NULL	Y-axis translation	52.2978	metre	Z-axis translation	-103.7239	metre	X-axis rotation	-0.3366	arc-second	Y-axis rotation	0.457	arc-second	Z-axis rotation	-1.8422	arc-second	Scale difference	-1.2747	parts per million	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	15929	BD72 to WGS 84 (3)
+61150	GIGS geogCRS F to GIGS geogCRS A (1)	64009	GIGS geogCRS F	64003	GIGS geogCRS A	1	Geocentric translations	X-axis translation	0	metre	NULL	Y-axis translation	0	metre	Z-axis translation	0	metre	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	1150	GDA94 to WGS 84 (1)
+61763	GIGS geogCRS H to GIGS geogCRS T (1)	64011	GIGS geogCRS H	64013	GIGS geogCRS T	1	Longitude rotation	Longitude offset	2.5969213	grad	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	1763	NTF (Paris) to NTF (1)
+61173	GIGS geogCRS J to GIGS geogCRS A (1)	64012	GIGS geogCRS J	64003	GIGS geogCRS A	1	Geocentric translations	X-axis translation	-8	metre	NULL	Y-axis translation	160	metre	Z-axis translation	176	metre	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	1173	NAD27 to WGS 84 (4)
+61004	GIGS geogCRS J to GIGS geogCRS A (2)	64012	GIGS geogCRS J	64003	GIGS geogCRS A	2	NADCON	Latitude difference file	n_slope.las	NULL	NULL	Longitude difference file	n_slope.los	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL			No direct EPSG equivalent; files included with GIGS Test Procedure dataset
+61692	GIGS geogCRS J to GIGS geogCRS A (3)	64012	GIGS geogCRS J	64003	GIGS geogCRS A	3	NTv2	Latitude and longitude difference file	QUE27-98.gsb	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	1692	NAD27 to WGS 84 (34)	File included with GIGS Test Procedure dataset
+61242	GIGS geogCRS K to GIGS geogCRS A (1)	64015	GIGS geogCRS K	64003	GIGS geogCRS A	1	Geocentric translations	X-axis translation	52.17	metre	NULL	Y-axis translation	-71.82	metre	Z-axis translation	-14.9	metre	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	1242	HD72 to WGS 84 (4)
+61123	GIGS geogCRS L to GIGS geogCRS A (1)	64014	GIGS geogCRS L	64003	GIGS geogCRS A	1	Geocentric translations	X-axis translation	-377	metre	NULL	Y-axis translation	681	metre	Z-axis translation	-50	metre	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	8452	Batavia to WGS 84 (1)	EPSG tfm 1123 deprecated due to change in area of applicability; values remain unchanged; GIGS tfm code maintained for continuity
+61275	GIGS geogCRS M to GIGS geogCRS A (1)	64020	GIGS geogCRS M	64003	GIGS geogCRS A	1	Geocentric translations	X-axis translation	-84	metre	NULL	Y-axis translation	-97	metre	Z-axis translation	-117	metre	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	1275	ED50 to WGS 84 (17)
+61193	GIGS geogCRS T to GIGS geogCRS A (1)	64013	GIGS geogCRS T	64003	GIGS geogCRS A	1	Geocentric translations	X-axis translation	-168	metre	NULL	Y-axis translation	-60	metre	Z-axis translation	320	metre	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	1193	NTF to WGS 84 (1)
+15788	GIGS geogCRS X to GIGS geogCRS A (1)	64016	GIGS geogCRS X	64003	GIGS geogCRS A	1	Geocentric translations	X-axis translation	-127.8	metre	NULL	Y-axis translation	-52.3	metre	Z-axis translation	152.9	metre	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	15788	AGD66 to WGS 84 (16)
+61254	GIGS geogCRS Y to GIGS geogCRS A (1)	64017	GIGS geogCRS Y	64003	GIGS geogCRS A	1	Geocentric translations	X-axis translation	28	metre	NULL	Y-axis translation	-130	metre	Z-axis translation	-95	metre	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	1254	Pulkovo 1942 to WGS 84 (1)
+61188	GIGS geogCRS Z to GIGS geogCRS A (1)	64018	GIGS geogCRS Z	64003	GIGS geogCRS A	1	Geocentric translations	X-axis translation	0	metre	NULL	Y-axis translation	0	metre	Z-axis translation	0	metre	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	1188	NAD83 to WGS 84 (1)

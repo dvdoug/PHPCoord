@@ -17812,6 +17812,8 @@ class CoordinateOperations
 
     protected static array $customSridParamData = [];
 
+    protected static array $customTransformationData = [];
+
     public static function getOperationData(string $operationSrid): array
     {
         if (!isset(self::$sridData[$operationSrid])) {
@@ -17834,5 +17836,15 @@ class CoordinateOperations
     {
         self::$sridData[$srid] = ['name' => $name, 'method' => $method, 'extent_code' => $extent, 'params' => $params];
         self::$customSridParamData[$srid] = $params;
+    }
+
+    public static function registerCustomTransformation(string $operation, string $name, string $sourceCRS, string $targetCRS, float $accuracy, bool $reversible): void
+    {
+        self::$customTransformationData[] = ['operation' => $operation, 'name' => $name, 'source_crs' => $sourceCRS, 'target_crs' => $targetCRS, 'accuracy' => $accuracy, 'reversible' => $reversible];
+    }
+
+    public static function getCustomTransformations(): array
+    {
+        return static::$customTransformationData;
     }
 }

@@ -273,7 +273,7 @@ trait AutoConversion
         $relevantRegionData = [];
         foreach ($regions as $region) {
             $regionData = match ($region) {
-                RegionMap::REGION_GLOBAL => CRSTransformationsGlobal::getSupportedTransformations(),
+                RegionMap::REGION_GLOBAL => [...CRSTransformationsGlobal::getSupportedTransformations(), ...CoordinateOperations::getCustomTransformations()],
                 RegionMap::REGION_AFRICA => CRSTransformationsAfrica::getSupportedTransformations(),
                 RegionMap::REGION_ANTARCTIC => CRSTransformationsAntarctic::getSupportedTransformations(),
                 RegionMap::REGION_ARCTIC => CRSTransformationsArctic::getSupportedTransformations(),
@@ -305,7 +305,7 @@ trait AutoConversion
         $relevantRegionData = [];
         foreach ($regions as $region) {
             $regionData = match ($region) {
-                RegionMap::REGION_GLOBAL => CRSTransformationsGlobal::getSupportedTransformations(),
+                RegionMap::REGION_GLOBAL => [...CRSTransformationsGlobal::getSupportedTransformations(), ...CoordinateOperations::getCustomTransformations()],
                 RegionMap::REGION_AFRICA => CRSTransformationsAfrica::getSupportedTransformations(),
                 RegionMap::REGION_ANTARCTIC => CRSTransformationsAntarctic::getSupportedTransformations(),
                 RegionMap::REGION_ARCTIC => CRSTransformationsArctic::getSupportedTransformations(),
