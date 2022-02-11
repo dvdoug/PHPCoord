@@ -38545,7 +38545,7 @@ class Projected extends CoordinateReferenceSystem
         Datum $datum,
         BoundingArea $boundingArea,
         string $name = '',
-        Geographic2D|Geographic3D $baseCRS = null,
+        Geographic $baseCRS = null,
         ?string $derivingConversion = null
     ) {
         $this->srid = $srid;
@@ -38605,9 +38605,9 @@ class Projected extends CoordinateReferenceSystem
         return self::$supportedCache;
     }
 
-    public static function registerCustomCRS(string $srid, string $name, string $coordinateSystem, string $datum, array $extent): void
+    public static function registerCustomCRS(string $srid, string $name, string $baseCRS, string $derivingConversion, string $coordinateSystem, array $extent): void
     {
-        self::$sridData[$srid] = ['name' => $name, 'coordinate_system' => $coordinateSystem, 'datum' => $datum, 'extent_code' => $extent];
+        self::$sridData[$srid] = ['name' => $name, 'coordinate_system' => $coordinateSystem, 'base_crs' => $baseCRS, 'deriving_conversion' => $derivingConversion, 'extent_code' => $extent];
         self::getSupportedSRIDs(); // init cache if not already
         self::$supportedCache[$srid] = $name; //update cache
     }

@@ -623,6 +623,25 @@ class GIGSTest extends TestCase
     }
 
     /**
+     * @depends testSeries3200GeodeticCRSs
+     * @dataProvider series3200ProjectionData
+     */
+    public function testSeries3200Projections(string $gigsCode, string $name, string $baseCRSCode, string $derivingConversion, string $csEPSGCode, string $epsgCode): void
+    {
+        Projected::registerCustomCRS('urn:ogc:def:crs:GIGS::' . $gigsCode, $name, 'urn:ogc:def:crs:GIGS::' . $baseCRSCode, 'urn:ogc:def:operation:GIGS::' . $derivingConversion, 'urn:ogc:def:cs:EPSG::' . $csEPSGCode, [1262]);
+        $this->assertInstanceOf(Projected::class, Projected::fromSRID('urn:ogc:def:crs:GIGS::' . $gigsCode));
+    }
+
+    public function series3200ProjectionData(): Generator
+    {
+        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 3200 User-defined Geodetic Data Objects test data/ASCII/GIGS_user_3207_ProjectedCRS.txt');
+
+        foreach ($body as $row) {
+            yield '#' . $row[0] => [$row[0], $row[2], $row[3], $row[5], $row[7], $row[16]];
+        }
+    }
+
+    /**
      * @dataProvider series7000DeprecationData
      */
     public function testSeries7000Deprecation(string $epsgCode, string $entityType): void
