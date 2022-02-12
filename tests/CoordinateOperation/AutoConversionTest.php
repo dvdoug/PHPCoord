@@ -31,6 +31,7 @@ use PHPCoord\Point;
 use PHPCoord\ProjectedPoint;
 use PHPCoord\UnitOfMeasure\Angle\Degree;
 use PHPCoord\UnitOfMeasure\Angle\Radian;
+use PHPCoord\UnitOfMeasure\Length\Foot;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPCoord\UTMPoint;
 use PHPCoord\VerticalPoint;
@@ -366,6 +367,20 @@ class AutoConversionTest extends TestCase
         self::assertEqualsWithDelta(51.825323002, $to->getHorizontalPoint()->getLatitude()->asDegrees()->getValue(), 0.0000001);
         self::assertEqualsWithDelta(5.049883673, $to->getHorizontalPoint()->getLongitude()->asDegrees()->getValue(), 0.0000001);
         self::assertEqualsWithDelta(-40.1293, $to->getVerticalPoint()->getHeight()->asMetres()->getValue(), 0.00001);
+    }
+
+    public function testNAD83NAD27SouthCarolina(): void
+    {
+        if (!class_exists(NADCON5NAD832007NAD832011CONUSLatitudeProvider::class)) {
+            self::markTestSkipped('Requires phpcoord/datapack-northamerica');
+        }
+
+        $from = ProjectedPoint::createFromEastingNorthing(Projected::fromSRID(Projected::EPSG_NAD83_2011_SOUTH_CAROLINA_FT), new Foot(2320610.000), new Foot(353815.000));
+        $toCRS = Projected::fromSRID(Projected::EPSG_NAD27_SOUTH_CAROLINA_SOUTH);
+        $to = $from->convert($toCRS);
+
+        self::assertEqualsWithDelta(2320568.869, $to->getEasting()->getValue(), 0.1);
+        self::assertEqualsWithDelta(353687.842, $to->getNorthing()->getValue(), 0.1);
     }
 
     /**
