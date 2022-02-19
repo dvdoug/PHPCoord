@@ -58,10 +58,12 @@ class AddNewConstantsVisitor extends NodeVisitorAbstract
                         [
                             'See information source for formula and example.',
                             'This is a parameter-less conversion.',
+                            "\r\n",
                         ],
                         [
                             '',
                             '',
+                            "\n",
                         ],
                         $data['constant_help']
                     );

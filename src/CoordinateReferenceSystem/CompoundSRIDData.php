@@ -2509,6 +2509,13 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5774',
             'extent_code' => ['1146'],
         ],
+        'urn:ogc:def:crs:EPSG::9907' => [
+            'name' => 'ETRS89 + Ostend height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::4258',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::5710',
+            'extent_code' => ['1347'],
+        ],
         'urn:ogc:def:crs:EPSG::9920' => [
             'name' => 'OSGB36 / British National Grid + BI height',
             'horizontal_crs' => 'urn:ogc:def:crs:EPSG::27700',
@@ -2585,6 +2592,13 @@ trait CompoundSRIDData
             'horizontal_crs_type' => 'projected',
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9927',
             'extent_code' => ['3998'],
+        ],
+        'urn:ogc:def:crs:EPSG::9944' => [
+            'name' => 'EBBWV14 Grid + ODN height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::9943',
+            'horizontal_crs_type' => 'projected',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::5701',
+            'extent_code' => ['4661'],
         ],
     ];
 }

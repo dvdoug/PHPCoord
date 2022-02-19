@@ -2570,6 +2570,14 @@ class Projected extends CoordinateReferenceSystem
     public const EPSG_DOUALA_1948_AEF_WEST = 'urn:ogc:def:crs:EPSG::3119';
 
     /**
+     * EBBWV14 Grid
+     * Extent: United Kingdom (UK) - on or related to the rail route from Newport (Park Junction) to Ebbw Vale.
+     * Defined through transformation ETRS89 to EBBWV14-IRF (1) (code 9941) and map projection EBBWV14-TM (code 9942).
+     * Emulates the EBBWV14 Snake projection applied to ETRS89 as realized through OSNet 2009.
+     */
+    public const EPSG_EBBWV14_GRID = 'urn:ogc:def:crs:EPSG::9943';
+
+    /**
      * ECML14_NB Grid
      * Extent: United Kingdom (UK) - on or related to rail routes from Newcastle Central to Ashington via Benton North
      * Junction, and the section from Bedlington to Morpeth.
@@ -4303,6 +4311,9 @@ class Projected extends CoordinateReferenceSystem
     /**
      * GDA94 / MGA zone 48
      * Extent: Australia - offshore west of 108°E. Christmas Island - onshore and offshore west of 108°E.
+     * Note: For Dataset releases from 2012-01 to 2014-02 (v7.9.4 to v8.3.3) status of this record status was shown as
+     * deprecated as area is outside the EEZ. Reinstated to valid after ratification of extensions of limit of
+     * Australian continental shelf.
      */
     public const EPSG_GDA94_MGA_ZONE_48 = 'urn:ogc:def:crs:EPSG::28348';
 
@@ -8560,16 +8571,6 @@ class Projected extends CoordinateReferenceSystem
     public const EPSG_MGI_1901_SLOVENIA_GRID = 'urn:ogc:def:crs:EPSG::8686';
 
     /**
-     * MHR21 Grid
-     * Extent: United Kingdom (UK) - on or related to Midland Rail Hub, covering routes through Cardiff, Bristol,
-     * Gloucester, Derby, Birmingham, Leicester, and Lincoln.
-     * Defined through transformation ETRS89 to MRH21-IRF (1) (code 9867) and map projection MRH21-TM (code 9868).
-     * Emulates the MRH21 Snake projection applied to ETRS89 as realized through OSNet 2009. Consistent with CCWGDB09
-     * as realized through OSNet 2001.
-     */
-    public const EPSG_MHR21_GRID = 'urn:ogc:def:crs:EPSG::9869';
-
-    /**
      * MML07 Grid
      * Extent: United Kingdom (UK) - on or related to the Midland Mainline rail route from Sheffield to London.
      * The CRS's definition through transformation ETRS89 to MML07-IRF (1) (code 9369) as applied to ETRS89 realised
@@ -8613,6 +8614,16 @@ class Projected extends CoordinateReferenceSystem
      * Replaced by RGWF96 / UTM zone 1S (CRS code 8903).
      */
     public const EPSG_MOP78_UTM_ZONE_1S = 'urn:ogc:def:crs:EPSG::2988';
+
+    /**
+     * MRH21 Grid
+     * Extent: United Kingdom (UK) - on or related to Midland Rail Hub, covering routes through Cardiff, Bristol,
+     * Gloucester, Derby, Birmingham, Leicester, and Lincoln.
+     * Defined through transformation ETRS89 to MRH21-IRF (1) (code 9867) and map projection MRH21-TM (code 9868).
+     * Emulates the MRH21 Snake projection applied to ETRS89 as realized through OSNet 2009. Consistent with CCWGDB09
+     * as realized through OSNet 2001.
+     */
+    public const EPSG_MRH21_GRID = 'urn:ogc:def:crs:EPSG::9869';
 
     /**
      * MTRF-2000 / UTM zone 36N
@@ -13787,6 +13798,12 @@ class Projected extends CoordinateReferenceSystem
      * / SPCS for applications with an accuracy of better than 3 feet.
      */
     public const EPSG_NAD83_WYOMING_EAST_CENTRAL_FTUS = 'urn:ogc:def:crs:EPSG::3737';
+
+    /**
+     * NAD83 / Wyoming Lambert
+     * Extent: United States (USA) - Wyoming.
+     */
+    public const EPSG_NAD83_WYOMING_LAMBERT = 'urn:ogc:def:crs:EPSG::32159';
 
     /**
      * NAD83 / Wyoming West
@@ -37256,7 +37273,7 @@ class Projected extends CoordinateReferenceSystem
     /**
      * WGS 84 / UTM zone 18N
      * Extent: Between 78°W and 72°W, northern hemisphere between equator and 84°N, onshore and offshore. Bahamas.
-     * Canada - Nunavut; Ontario; Quebec. Colombia. Cuba. Ecuador. Greenland. Haiti. Jamica. Panama. Turks and Caicos
+     * Canada - Nunavut; Ontario; Quebec. Colombia. Cuba. Ecuador. Greenland. Haiti. Jamaica. Panama. Turks and Caicos
      * Islands. United States (USA). Venezuela.
      */
     public const EPSG_WGS_84_UTM_ZONE_18N = 'urn:ogc:def:crs:EPSG::32618';

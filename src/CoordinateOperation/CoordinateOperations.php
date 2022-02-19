@@ -2714,12 +2714,12 @@ class CoordinateOperations
             'extent_code' => ['3234'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::5198' => [
-            'name' => 'Oostende height to EVRF2000 height (1)',
+            'name' => 'Ostend height to EVRF2000 height (1)',
             'method' => 'urn:ogc:def:method:EPSG::1046',
             'extent_code' => ['1347'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::5199' => [
-            'name' => 'Oostende height to EVRF2007 height (1)',
+            'name' => 'Ostend height to EVRF2007 height (1)',
             'method' => 'urn:ogc:def:method:EPSG::1046',
             'extent_code' => ['1347'],
         ],
@@ -9368,6 +9368,16 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9615',
             'extent_code' => ['4170'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9908' => [
+            'name' => 'ETRS89 to Ostend height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1082',
+            'extent_code' => ['1347'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9909' => [
+            'name' => 'ETRS89 to ETRS89 + Ostend height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1098',
+            'extent_code' => ['1347'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::9913' => [
             'name' => 'Hong Kong 1980 to Hong Kong Geodetic CS (1)',
             'method' => 'urn:ogc:def:method:EPSG::9607',
@@ -9417,6 +9427,11 @@ class CoordinateOperations
             'name' => 'LUREF to ETRS89 (8)',
             'method' => 'urn:ogc:def:method:EPSG::9607',
             'extent_code' => ['1146'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9942' => [
+            'name' => 'EBBWV14-TM',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['4661'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::10098' => [
             'name' => 'KKJ to ETRS89 (2)',
@@ -10592,6 +10607,11 @@ class CoordinateOperations
             'name' => 'Wyoming CS27 West zone',
             'method' => 'urn:ogc:def:method:EPSG::9807',
             'extent_code' => ['2271'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::14930' => [
+            'name' => 'Wyoming Lambert',
+            'method' => 'urn:ogc:def:method:EPSG::9802',
+            'extent_code' => ['1419'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::14931' => [
             'name' => 'SPCS83 Wyoming East zone (meters)',

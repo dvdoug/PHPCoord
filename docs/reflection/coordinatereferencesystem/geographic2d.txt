@@ -1398,6 +1398,22 @@ Douala 1948
 
 Replaced by Manoca 1962 (code 4193).
 
+EBBWV14-IRF
+-----------
+
+| Used: United Kingdom (UK) - on or related to the rail route from Newport (Park Junction) to Ebbw Vale.
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_EBBWV14_IRF)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::9939')
+    Geographic::fromSRID(Geographic2D::EPSG_EBBWV14_IRF)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::9939')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_EBBWV14_IRF)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9939')
+
+Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / EBBWV14 SnakeGrid projected CRS through transformation ETRS89 to EBBWV14-IRF (1) (code 9941) used in conjunction with the EBBWV14-TM map projection (code 9942).
+
 ECML14_NB-IRF
 -------------
 

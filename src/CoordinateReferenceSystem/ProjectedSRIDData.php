@@ -24791,7 +24791,7 @@ trait ProjectedSRIDData
             'extent_code' => ['4649'],
         ],
         'urn:ogc:def:crs:EPSG::9869' => [
-            'name' => 'MHR21 Grid',
+            'name' => 'MRH21 Grid',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::4400',
             'base_crs' => 'urn:ogc:def:crs:EPSG::9866',
             'deriving_conversion' => 'urn:ogc:def:coordinateOperation:EPSG::9868',
@@ -24824,6 +24824,13 @@ trait ProjectedSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::9893',
             'deriving_conversion' => 'urn:ogc:def:coordinateOperation:EPSG::9894',
             'extent_code' => ['1146'],
+        ],
+        'urn:ogc:def:crs:EPSG::9943' => [
+            'name' => 'EBBWV14 Grid',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::4400',
+            'base_crs' => 'urn:ogc:def:crs:EPSG::9939',
+            'deriving_conversion' => 'urn:ogc:def:coordinateOperation:EPSG::9942',
+            'extent_code' => ['4661'],
         ],
         'urn:ogc:def:crs:EPSG::20004' => [
             'name' => 'Pulkovo 1995 / Gauss-Kruger zone 4',
@@ -32195,6 +32202,13 @@ trait ProjectedSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'deriving_conversion' => 'urn:ogc:def:coordinateOperation:EPSG::14934',
             'extent_code' => ['2271'],
+        ],
+        'urn:ogc:def:crs:EPSG::32159' => [
+            'name' => 'NAD83 / Wyoming Lambert',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::4499',
+            'base_crs' => 'urn:ogc:def:crs:EPSG::4269',
+            'deriving_conversion' => 'urn:ogc:def:coordinateOperation:EPSG::14930',
+            'extent_code' => ['1419'],
         ],
         'urn:ogc:def:crs:EPSG::32161' => [
             'name' => 'NAD83 / Puerto Rico & Virgin Is.',

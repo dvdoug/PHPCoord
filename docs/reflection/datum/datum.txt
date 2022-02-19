@@ -1926,6 +1926,21 @@ Mean Sea Level at Durres.
 
 Normal-orthometric heights.
 
+EBBWV14 Intermediate Reference Frame
+------------------------------------
+
+| Type: Geodetic
+| Used: United Kingdom (UK) - on or related to the rail route from Newport (Park Junction) to Ebbw Vale.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_EBBWV14_INTERMEDIATE_REFERENCE_FRAME)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1319')
+
+Defined through the application of the EBBWV14 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
+
+Created in 2022 to support intermediate CRS "EBBWV14-IRF" in the emulation of the EBBWV14 Snake map projection.
+
 ECML14_NB Intermediate Reference Frame
 --------------------------------------
 

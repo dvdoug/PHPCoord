@@ -3245,5 +3245,11 @@ trait Geographic2DSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1315',
             'extent_code' => ['4655'],
         ],
+        'urn:ogc:def:crs:EPSG::9939' => [
+            'name' => 'EBBWV14-IRF',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
+            'datum' => 'urn:ogc:def:datum:EPSG::1319',
+            'extent_code' => ['4661'],
+        ],
     ];
 }

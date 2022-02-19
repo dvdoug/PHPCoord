@@ -634,6 +634,15 @@ class Geographic2D extends Geographic
     public const EPSG_DOUALA_1948 = 'urn:ogc:def:crs:EPSG::4192';
 
     /**
+     * EBBWV14-IRF
+     * Extent: United Kingdom (UK) - on or related to the rail route from Newport (Park Junction) to Ebbw Vale.
+     * Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / EBBWV14 SnakeGrid projected CRS through
+     * transformation ETRS89 to EBBWV14-IRF (1) (code 9941) used in conjunction with the EBBWV14-TM map projection
+     * (code 9942).
+     */
+    public const EPSG_EBBWV14_IRF = 'urn:ogc:def:crs:EPSG::9939';
+
+    /**
      * ECML14_NB-IRF
      * Extent: United Kingdom (UK) - on or related to rail routes from Newcastle Central to Ashington via Benton North
      * Junction, and the section from Bedlington to Morpeth.

@@ -3832,6 +3832,14 @@ class CRSTransformationsEurope
             'reversible' => false,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9908',
+            'name' => 'ETRS89 to Ostend height (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4937',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::5710',
+            'accuracy' => 0.02,
+            'reversible' => false,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7959',
             'name' => 'ETRS89 to Malin Head height (2)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4937',
@@ -4173,6 +4181,14 @@ class CRSTransformationsEurope
             'source_crs' => 'urn:ogc:def:crs:EPSG::4937',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9509',
             'accuracy' => 0.05,
+            'reversible' => true,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9909',
+            'name' => 'ETRS89 to ETRS89 + Ostend height (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4937',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::9907',
+            'accuracy' => 0.02,
             'reversible' => true,
         ],
         [
@@ -4801,7 +4817,7 @@ class CRSTransformationsEurope
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5199',
-            'name' => 'Oostende height to EVRF2007 height (1)',
+            'name' => 'Ostend height to EVRF2007 height (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::5710',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5621',
             'accuracy' => 0.1,
@@ -4809,7 +4825,7 @@ class CRSTransformationsEurope
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5198',
-            'name' => 'Oostende height to EVRF2000 height (1)',
+            'name' => 'Ostend height to EVRF2000 height (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::5710',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5730',
             'accuracy' => 0.1,
@@ -6676,6 +6692,14 @@ class CRSTransformationsEurope
             'name' => 'Luxembourg TM (3D)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::9893',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9895',
+            'accuracy' => 0,
+            'reversible' => true,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9942',
+            'name' => 'EBBWV14-TM',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::9939',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::9943',
             'accuracy' => 0,
             'reversible' => true,
         ],

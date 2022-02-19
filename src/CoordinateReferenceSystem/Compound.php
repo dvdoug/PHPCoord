@@ -155,6 +155,12 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_DB_REF2016_ZONE_5 = 'urn:ogc:def:crs:EPSG::9935';
 
     /**
+     * EBBWV14 Grid + ODN height
+     * Extent: United Kingdom (UK) - on or related to the rail route from Newport (Park Junction) to Ebbw Vale.
+     */
+    public const EPSG_EBBWV14_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::9944';
+
+    /**
      * ECML14_NB Grid + ODN height
      * Extent: United Kingdom (UK) - on or related to rail routes from Newcastle Central to Ashington via Benton North
      * Junction, and the section from Bedlington to Morpeth.
@@ -380,6 +386,12 @@ class Compound extends CoordinateReferenceSystem
      * Inner Hebrides.
      */
     public const EPSG_ETRS89_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::9424';
+
+    /**
+     * ETRS89 + Ostend height
+     * Extent: Belgium - onshore.
+     */
+    public const EPSG_ETRS89_PLUS_OSTEND_HEIGHT = 'urn:ogc:def:crs:EPSG::9907';
 
     /**
      * ETRS89 + St. Marys height

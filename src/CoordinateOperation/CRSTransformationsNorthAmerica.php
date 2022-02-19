@@ -6664,6 +6664,14 @@ class CRSTransformationsNorthAmerica
             'reversible' => true,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14930',
+            'name' => 'Wyoming Lambert',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::32159',
+            'accuracy' => 0,
+            'reversible' => true,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15230',
             'name' => 'SPCS83 Puerto Rico & Virgin Islands zone (meters)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',

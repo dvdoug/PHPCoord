@@ -267,6 +267,19 @@ DB_REF2016 zone 5
 
 Replaces DB_REF2003 zone 5 (compound CRS code 9931).
 
+EBBWV14 Grid + ODN height
+-------------------------
+
+| Used: United Kingdom (UK) - on or related to the rail route from Newport (Park Junction) to Ebbw Vale.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_EBBWV14_GRID_PLUS_ODN_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9944')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_EBBWV14_GRID_PLUS_ODN_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9944')
+
+
 ECML14_NB Grid + ODN height
 ---------------------------
 
@@ -699,6 +712,19 @@ ETRS89 + ODN height
     Compound::fromSRID('urn:ogc:def:crs:EPSG::9424')
     CoordinateReferenceSystem::fromSRID(Compound::EPSG_ETRS89_PLUS_ODN_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9424')
+
+
+ETRS89 + Ostend height
+----------------------
+
+| Used: Belgium - onshore.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_ETRS89_PLUS_OSTEND_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9907')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_ETRS89_PLUS_OSTEND_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9907')
 
 
 ETRS89 + St. Marys height

@@ -204,4 +204,5 @@ return [
     'GEOIDE-Ar16.gri' => CoordinateOperation\KMSPOSGAR2007SRVN16Provider::class,
     'SAGEOID2010.dat' => CoordinateOperation\DATITRF2005SALLDProvider::class,
     'Slovakia_JTSK03_to_JTSK.gsb' => CoordinateOperation\NTv2JTSK03JTSKSlovakiaProvider::class,
+    'hBG18.dat' => CoordinateOperation\DATETRS89OstendBelgiumProvider::class,
 ];

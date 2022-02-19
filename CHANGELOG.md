@@ -2,11 +2,11 @@
 
 ## [Unreleased]
 
-## [5.1.0] - 2021-xx-xx
+## [5.1.0] - 2022-xx-xx
 ### Added
 - Support for 3D projected coordinates
 ### Changed
-- Updates to data for France, Germany, Hong Kong, Italy, Luxembourg, Japan and UK
+- Updates to data for France, Germany, Hong Kong, Italy, Luxembourg, Japan, UK and USA
 
 ## [5.0.1] - 2022-01-29
 ### Fixed

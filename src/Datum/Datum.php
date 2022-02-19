@@ -1259,6 +1259,16 @@ class Datum
     public const EPSG_DURRES = 'urn:ogc:def:datum:EPSG::5175';
 
     /**
+     * EBBWV14 Intermediate Reference Frame
+     * Type: geodetic
+     * Extent: United Kingdom (UK) - on or related to the rail route from Newport (Park Junction) to Ebbw Vale.
+     * Defined through the application of the EBBWV14 NTv2 transformation to ETRS89 as realized through OSNet v2009
+     * CORS.
+     * Created in 2022 to support intermediate CRS "EBBWV14-IRF" in the emulation of the EBBWV14 Snake map projection.
+     */
+    public const EPSG_EBBWV14_INTERMEDIATE_REFERENCE_FRAME = 'urn:ogc:def:datum:EPSG::1319';
+
+    /**
      * ECML14_NB Intermediate Reference Frame
      * Type: geodetic
      * Extent: United Kingdom (UK) - on or related to rail routes from Newcastle Central to Ashington via Benton North
@@ -10050,6 +10060,14 @@ class Datum
             'type' => 'vertical',
             'ellipsoid' => null,
             'prime_meridian' => null,
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
+        'urn:ogc:def:datum:EPSG::1319' => [
+            'name' => 'EBBWV14 Intermediate Reference Frame',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
         ],

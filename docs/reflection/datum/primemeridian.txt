@@ -114,7 +114,7 @@ Paris
     PrimeMeridian::fromSRID(PrimeMeridian::EPSG_PARIS)
     PrimeMeridian::fromSRID('urn:ogc:def:meridian:EPSG::8903')
 
-Value adopted by IGN (Paris) in 1936. Equivalent to 2°20'14.025". Preferred by EPSG to earlier value of 2°20'13.95" (2.596898 grads) used by RGS London.
+Conventional value of 0h 9m 20.935s = 2°20'14.025" adopted by IGN (Paris) in 1936 converted to grads. Preferred by EPSG to earlier value of 2°20'13.95" (2.596898 grads) used by RGS London (prime meridian code 8914).
 
 Paris RGS
 ---------
