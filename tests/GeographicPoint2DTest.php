@@ -43,7 +43,7 @@ class GeographicPoint2DTest extends TestCase
         $centre = $operationExtent->getPointInside();
 
         $sourceCRS = Geographic::fromSRID($sourceCrsSrid);
-        $centre[1] = $centre[1]->subtract($sourceCRS->getDatum()->getPrimeMeridian()->getGreenwichLongitude()); //compensate for non-Greenwich prime meridian
+        $centre[1] = $centre[1]->subtract($sourceCRS->getDatum()->getPrimeMeridian()->getGreenwichLongitude()); // compensate for non-Greenwich prime meridian
         $sourceHeight = $sourceCRS instanceof Geographic3D ? new Metre(0) : null;
         $targetCRS = CoordinateReferenceSystem::fromSRID($targetCrsSrid);
 
@@ -75,7 +75,7 @@ class GeographicPoint2DTest extends TestCase
             $needsNonExistentFile = false;
 
             if (isset(static::$sridData[$transformation['source_crs']])) {
-                //filter out operations that require a grid file that we don't have
+                // filter out operations that require a grid file that we don't have
                 foreach (CoordinateOperations::getParamData($transformation['operation']) as $param) {
                     if (isset($param['fileProvider']) && !class_exists($param['fileProvider'])) {
                         $needsNonExistentFile = true;

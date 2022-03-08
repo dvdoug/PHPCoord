@@ -83,7 +83,7 @@ abstract class Time implements UnitOfMeasure
     {
         self::$customSridData[$srid] = ['name' => $name, 'fqcn' => $implementingClassFQCN];
         self::getSupportedSRIDs(); // init cache if not already
-        self::$supportedCache[$srid] = $name; //update cache
+        self::$supportedCache[$srid] = $name; // update cache
     }
 
     public function __toString(): string

@@ -262,7 +262,7 @@ class GIGSTest extends TestCase
     {
         $operation = CoordinateOperations::getOperationData('urn:ogc:def:coordinateOperation:EPSG::' . $epsgCode);
         $this->assertEquals($name, $operation['name']);
-        //$this->assertEquals('urn:ogc:def:datum:EPSG::' . $datumCode, $crs->getDatum()->getSRID());
+        // $this->assertEquals('urn:ogc:def:datum:EPSG::' . $datumCode, $crs->getDatum()->getSRID());
     }
 
     public function series2200OperationData(): Generator

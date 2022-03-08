@@ -67,7 +67,7 @@ class EPSGCodegenFromDataImport
         1036, // Cartesian Grid Offsets from Form Function
         1040, // GNTRANS
 
-        //replaced with OSGM15
+        // replaced with OSGM15
         1045, // Geographic3D to GravityRelatedHeight (OSGM02-Ire)
 
         // replaced by NTv2

@@ -42,15 +42,15 @@ class BritishNationalGridPoint extends ProjectedPoint
             throw new InvalidCoordinateException('Grid ref must be an even number of characters');
         }
 
-        //first (major) letter is the 500km grid sq, origin at -1000000, -500000
+        // first (major) letter is the 500km grid sq, origin at -1000000, -500000
         $majorEasting = strpos(static::GRID_LETTERS, $reference[0]) % 5 * 500000 - 1000000;
         $majorNorthing = (floor(strpos(static::GRID_LETTERS, $reference[0]) / 5)) * 500000 - 500000;
 
-        //second (minor) letter is 100km grid sq, origin at 0,0 of this square
+        // second (minor) letter is 100km grid sq, origin at 0,0 of this square
         $minorEasting = strpos(static::GRID_LETTERS, $reference[1]) % 5 * 100000;
         $minorNorthing = (floor(strpos(static::GRID_LETTERS, $reference[1]) / 5)) * 100000;
 
-        //numbers are a division of that square into smaller and smaller pieces
+        // numbers are a division of that square into smaller and smaller pieces
         $numericPortion = substr($reference, 2);
         $numericPortionSize = strlen($numericPortion) / 2;
         $gridSizeInMetres = 1 * (10 ** (5 - $numericPortionSize));
@@ -104,7 +104,7 @@ class BritishNationalGridPoint extends ProjectedPoint
         $majorLetterIndex = (int) (5 * $majorSquaresNorth + $majorSquaresEast);
         $majorLetter = substr(self::GRID_LETTERS, $majorLetterIndex, 1);
 
-        //second (minor) letter is 100km grid sq, origin at 0,0 of this square
+        // second (minor) letter is 100km grid sq, origin at 0,0 of this square
         $minorSquaresEast = $easting[0] % 5;
         $minorSquaresNorth = $northing[0] % 5;
         $minorLetterIndex = (5 * $minorSquaresNorth + $minorSquaresEast);

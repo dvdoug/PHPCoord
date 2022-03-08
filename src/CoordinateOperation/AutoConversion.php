@@ -109,7 +109,7 @@ trait AutoConversion
         foreach ($candidatePath as $pathStep) {
             $operation = CoordinateOperations::getOperationData($pathStep['operation']);
             if ($boundaryCheckPoint) {
-                //filter out operations that only operate outside this point
+                // filter out operations that only operate outside this point
                 $polygon = BoundingArea::createFromExtentCodes($operation['extent_code']);
                 if (!$polygon->containsPoint($boundaryCheckPoint)) {
                     return false;
@@ -118,14 +118,14 @@ trait AutoConversion
 
             $operation = CoordinateOperations::getOperationData($pathStep['operation']);
 
-            //filter out operations that require an epoch if we don't have one
+            // filter out operations that require an epoch if we don't have one
             if (isset(self::$methodsThatRequireCoordinateEpoch[$operation['method']]) && !$this->getCoordinateEpoch()) {
                 return false;
             }
 
             $params = CoordinateOperations::getParamData($pathStep['operation']);
 
-            //filter out operations that require a specific epoch
+            // filter out operations that require a specific epoch
             if (isset(self::$methodsThatRequireASpecificEpoch[$operation['method']]) && $this->getCoordinateEpoch()) {
                 $pointEpoch = Year::fromDateTime($this->getCoordinateEpoch());
                 if (!(abs($pointEpoch->getValue() - $params['transformationReferenceEpoch']['value']) <= 0.001)) {
@@ -133,8 +133,8 @@ trait AutoConversion
                 }
             }
 
-            //filter out operations that require a grid file that we don't have, or where boundaries are not being
-            //checked (a formula-based conversion will always return *a* result, outside a grid boundary does not...
+            // filter out operations that require a grid file that we don't have, or where boundaries are not being
+            // checked (a formula-based conversion will always return *a* result, outside a grid boundary does not...
             foreach ($params as $param) {
                 if (isset($param['fileProvider']) && (!$boundaryCheckPoint || !class_exists($param['fileProvider']))) {
                     return false;

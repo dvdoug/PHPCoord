@@ -38626,6 +38626,6 @@ class Projected extends CoordinateReferenceSystem
     {
         self::$sridData[$srid] = ['name' => $name, 'coordinate_system' => $coordinateSystem, 'base_crs' => $baseCRS, 'deriving_conversion' => $derivingConversion, 'extent_code' => $extent];
         self::getSupportedSRIDs(); // init cache if not already
-        self::$supportedCache[$srid] = $name; //update cache
+        self::$supportedCache[$srid] = $name; // update cache
     }
 }

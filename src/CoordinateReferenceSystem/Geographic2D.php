@@ -4050,6 +4050,6 @@ class Geographic2D extends Geographic
     {
         self::$sridData[$srid] = ['name' => $name, 'coordinate_system' => $coordinateSystem, 'datum' => $datum, 'extent_code' => $extent];
         self::getSupportedSRIDs(); // init cache if not already
-        self::$supportedCache[$srid] = $name; //update cache
+        self::$supportedCache[$srid] = $name; // update cache
     }
 }

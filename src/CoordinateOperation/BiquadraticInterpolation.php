@@ -35,14 +35,14 @@ trait BiquadraticInterpolation
 
         $interpolations = [];
         for ($i = 0, $count = count($corners['lowerLeft']->getValues()); $i < $count; ++$i) {
-            //Interpolate value at lower row
+            // Interpolate value at lower row
             $y0 = $this->interpolateQuadratic($dx, $corners['lowerLeft']->getValues()[$i], $corners['lowerCentre']->getValues()[$i], $corners['lowerRight']->getValues()[$i]);
-            //Interpolate value at middle row
+            // Interpolate value at middle row
             $y1 = $this->interpolateQuadratic($dx, $corners['middleLeft']->getValues()[$i], $corners['middleCentre']->getValues()[$i], $corners['middleRight']->getValues()[$i]);
-            //Interpolate value at upper row
+            // Interpolate value at upper row
             $y2 = $this->interpolateQuadratic($dx, $corners['upperLeft']->getValues()[$i], $corners['upperCentre']->getValues()[$i], $corners['upperRight']->getValues()[$i]);
 
-            //Interpolate between rows
+            // Interpolate between rows
             $xy = $this->interpolateQuadratic($dy, $y0, $y1, $y2);
             $interpolations[] = $xy;
         }

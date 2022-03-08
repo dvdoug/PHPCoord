@@ -57,13 +57,13 @@ class GUGiKHeightGrid extends GeographicGeoidHeightGrid
         $this->numberOfColumns = (int) (string) (($endX - $startX) / $this->columnGridInterval) + 1;
         $this->numberOfRows = (int) (string) (($endY - $startY) / $this->rowGridInterval) + 1;
 
-        //init with 0
+        // init with 0
         $this->data = new SplFixedArray($this->numberOfColumns * $this->numberOfRows);
         for ($i = 0, $numValues = $this->numberOfColumns * $this->numberOfRows; $i < $numValues; ++$i) {
             $this->data[$i] = 0;
         }
 
-        //fill in with actual values
+        // fill in with actual values
         $this->gridFile->seek($firstDataRowIndex);
         while ($row = $this->gridFile->fgets()) {
             $rowData = explode("\t", trim($row));

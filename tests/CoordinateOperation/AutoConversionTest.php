@@ -399,7 +399,7 @@ class AutoConversionTest extends TestCase
             $sourceHorizontalCRS = $sourceCRS->getHorizontal();
             if ($sourceHorizontalCRS instanceof Geographic2D) {
                 $centre = $extent->getPointInside();
-                $centre[1] = $centre[1]->subtract($sourceCRS->getHorizontal()->getDatum()->getPrimeMeridian()->getGreenwichLongitude()); //compensate for non-Greenwich prime meridian
+                $centre[1] = $centre[1]->subtract($sourceCRS->getHorizontal()->getDatum()->getPrimeMeridian()->getGreenwichLongitude()); // compensate for non-Greenwich prime meridian
 
                 $horizontalPoint = GeographicPoint::create($sourceHorizontalCRS, $centre[0], $centre[1], null);
             } elseif ($sourceHorizontalCRS instanceof Geographic2D) {
@@ -411,7 +411,7 @@ class AutoConversionTest extends TestCase
             $originalPoint = CompoundPoint::create($sourceCRS, $horizontalPoint, $verticalPoint, $epoch);
         } elseif ($sourceCRS instanceof Geographic) {
             $centre = $extent->getPointInside();
-            $centre[1] = $centre[1]->subtract($sourceCRS->getDatum()->getPrimeMeridian()->getGreenwichLongitude()); //compensate for non-Greenwich prime meridian
+            $centre[1] = $centre[1]->subtract($sourceCRS->getDatum()->getPrimeMeridian()->getGreenwichLongitude()); // compensate for non-Greenwich prime meridian
             $height = $sourceCRS instanceof Geographic3D ? new Metre(0) : null;
 
             $originalPoint = GeographicPoint::create($sourceCRS, $centre[0], $centre[1], $height, $epoch);

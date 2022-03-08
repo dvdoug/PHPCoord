@@ -75,7 +75,7 @@ class NTv2Grid extends GeographicGrid
             $subFileData = unpack("A8/A8SUB_NAME/A8/A8PARENT/A8/A8CREATED/A8/A8UPDATED/A8/{$this->doubleFormatChar}S_LAT/A8/{$this->doubleFormatChar}N_LAT/A8/{$this->doubleFormatChar}E_LONG/A8/{$this->doubleFormatChar}W_LONG/A8/{$this->doubleFormatChar}LAT_INC/A8/{$this->doubleFormatChar}LONG_INC/A8/{$this->integerFormatChar}GS_COUNT/x4", $subFileRawData);
             $subFileData['offsetStart'] = $subFileStart;
 
-            //apply rounding to eliminate fp issues when being deserialized
+            // apply rounding to eliminate fp issues when being deserialized
             $subFileData['S_LAT'] = round($subFileData['S_LAT'], 5);
             $subFileData['N_LAT'] = round($subFileData['N_LAT'], 5);
             $subFileData['E_LONG'] = round($subFileData['E_LONG'], 5);

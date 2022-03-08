@@ -34,11 +34,11 @@ trait BilinearInterpolation
 
         $interpolations = [];
         for ($i = 0, $count = count($corners['lowerLeft']->getValues()); $i < $count; ++$i) {
-            //Interpolate value at lower row
+            // Interpolate value at lower row
             $y0 = $this->interpolateLinear($dx, $corners['lowerLeft']->getValues()[$i], $corners['lowerRight']->getValues()[$i]);
-            //Interpolate value at upper row
+            // Interpolate value at upper row
             $y1 = $this->interpolateLinear($dx, $corners['upperLeft']->getValues()[$i], $corners['upperRight']->getValues()[$i]);
-            //Interpolate between rows
+            // Interpolate between rows
             $xy = $this->interpolateLinear($dy, $y0, $y1);
             $interpolations[] = $xy;
         }
