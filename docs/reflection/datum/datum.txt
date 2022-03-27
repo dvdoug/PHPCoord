@@ -3483,7 +3483,7 @@ Hjorsey 1955
 ------------
 
 | Type: Geodetic
-| Used: Iceland - onshore.
+| Used: Iceland - mainland.
 
 .. code-block:: php
 
@@ -4463,7 +4463,7 @@ Islands Net 2004
 
 ITRF2000 at epoch 2004.6.
 
-Replaces ISN93 (datum code 6659).
+Replaces ISN93 (datum code 6659). Replaced by ISN2016 (datum code 1087).
 
 Islands Net 2016
 ----------------
@@ -8141,7 +8141,7 @@ Ordnance Survey of Great Britain 1936
     Datum::fromSRID(Datum::EPSG_ORDNANCE_SURVEY_OF_GREAT_BRITAIN_1936)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::6277')
 
-Prior to 2002, fundamental point: Herstmonceux, Latitude: 50°51'55.271"N, longitude: 0°20'45.882"E (of Greenwich). From April 2002 the datum is defined through the application of the OSTN transformation from ETRS89.
+Prior to 2002 fundamental point: Herstmonceux, Latitude: 50°51'55.271"N, longitude: 0°20'45.882"E, triangulation adjustment started 1936, completed 1962. From April 2002 the datum is defined through the application of the OSTN transformation from ETRS89.
 
 The average accuracy of OSTN compared to the old triangulation network (down to 3rd order) is 0.1m. With the introduction of OSTN15, the area for OGSB36 has effectively been extended from Britain to cover the adjacent UK Continental Shelf.
 
@@ -9182,7 +9182,7 @@ Reykjavik 1900
 --------------
 
 | Type: Geodetic
-| Used: Iceland - onshore.
+| Used: Iceland - mainland.
 
 .. code-block:: php
 

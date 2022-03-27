@@ -3463,11 +3463,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9606',
             'extent_code' => ['3340'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::5891' => [
-            'name' => 'MGI to ETRS89 (5)',
-            'method' => 'urn:ogc:def:method:EPSG::9615',
-            'extent_code' => ['1037'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::5892' => [
             'name' => 'Vietnam TM-3 zone 481',
             'method' => 'urn:ogc:def:method:EPSG::9807',
@@ -9378,6 +9373,16 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::1098',
             'extent_code' => ['1347'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9910' => [
+            'name' => 'MGI to ETRS89 (8)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['1037'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9911' => [
+            'name' => 'Macedonia Gauss-Kruger truncated',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['1148'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::9913' => [
             'name' => 'Hong Kong 1980 to Hong Kong Geodetic CS (1)',
             'method' => 'urn:ogc:def:method:EPSG::9607',
@@ -9432,6 +9437,21 @@ class CoordinateOperations
             'name' => 'EBBWV14-TM',
             'method' => 'urn:ogc:def:method:EPSG::9807',
             'extent_code' => ['4661'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9946' => [
+            'name' => 'Iceland Lambert Azimuthal Equal Area',
+            'method' => 'urn:ogc:def:method:EPSG::9820',
+            'extent_code' => ['1120'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9958' => [
+            'name' => 'ISN2016 to ISH2004 height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1047',
+            'extent_code' => ['4662'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9959' => [
+            'name' => 'ISN2016 to ISN2016 + ISH2004 height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1093',
+            'extent_code' => ['4662'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::10098' => [
             'name' => 'KKJ to ETRS89 (2)',
@@ -16861,7 +16881,7 @@ class CoordinateOperations
         'urn:ogc:def:coordinateOperation:EPSG::18277' => [
             'name' => 'Balkans zone 7',
             'method' => 'urn:ogc:def:method:EPSG::9807',
-            'extent_code' => ['1711'],
+            'extent_code' => ['1148', '1711'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::18278' => [
             'name' => 'Balkans zone 8',

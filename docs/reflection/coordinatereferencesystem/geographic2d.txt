@@ -2417,7 +2417,7 @@ Hito XVIII 1963
 Hjorsey 1955
 ------------
 
-| Used: Iceland - onshore.
+| Used: Iceland - mainland.
 
 .. code-block:: php
 
@@ -2934,7 +2934,7 @@ ISN2004
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ISN2004)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5324')
 
-Replaces ISN93 (CRS code 4659).
+Replaces ISN93 (CRS code 4659). Replaced by ISN2016 (CRS code 8086).
 
 ISN2016
 -------
@@ -6613,7 +6613,7 @@ Replaced by RGR92 (code 4627).
 Reykjavik 1900
 --------------
 
-| Used: Iceland - onshore.
+| Used: Iceland - mainland.
 
 .. code-block:: php
 

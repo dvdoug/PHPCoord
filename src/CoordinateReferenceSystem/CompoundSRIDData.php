@@ -2600,5 +2600,47 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5701',
             'extent_code' => ['4661'],
         ],
+        'urn:ogc:def:crs:EPSG::9948' => [
+            'name' => 'ISN93 + ISH2004 height ',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::4659',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::8089',
+            'extent_code' => ['4662'],
+        ],
+        'urn:ogc:def:crs:EPSG::9949' => [
+            'name' => 'ISN2004 + ISH2004 height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::5324',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::8089',
+            'extent_code' => ['4662'],
+        ],
+        'urn:ogc:def:crs:EPSG::9950' => [
+            'name' => 'ISN2016 + ISH2004 height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::8086',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::8089',
+            'extent_code' => ['4662'],
+        ],
+        'urn:ogc:def:crs:EPSG::9951' => [
+            'name' => 'ISN93 / Lambert 1993 + ISH2004 height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::3057',
+            'horizontal_crs_type' => 'projected',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::8089',
+            'extent_code' => ['4662'],
+        ],
+        'urn:ogc:def:crs:EPSG::9952' => [
+            'name' => 'ISN2004 / Lambert 2004 + ISH2004 height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::5325',
+            'horizontal_crs_type' => 'projected',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::8089',
+            'extent_code' => ['4662'],
+        ],
+        'urn:ogc:def:crs:EPSG::9953' => [
+            'name' => 'ISN2016 / Lambert 2016 + ISH2004 height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::8088',
+            'horizontal_crs_type' => 'projected',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::8089',
+            'extent_code' => ['4662'],
+        ],
     ];
 }

@@ -6,7 +6,7 @@
 ### Added
 - Support for 3D projected coordinates
 ### Changed
-- Updates to data for France, Germany, Hong Kong, Italy, Luxembourg, Japan, UK and USA
+- Updates to data for France, Germany, Hong Kong, Iceland, Italy, Luxembourg, Japan, North Macedonia, UK and USA
 
 ## [5.0.1] - 2022-01-29
 ### Fixed

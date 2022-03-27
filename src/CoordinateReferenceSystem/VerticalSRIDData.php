@@ -1215,7 +1215,7 @@ trait VerticalSRIDData
             'name' => 'ISH2004 height',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
             'datum' => 'urn:ogc:def:datum:EPSG::1190',
-            'extent_code' => ['3262'],
+            'extent_code' => ['4662'],
         ],
         'urn:ogc:def:crs:EPSG::8228' => [
             'name' => 'NAVD88 height (ft)',

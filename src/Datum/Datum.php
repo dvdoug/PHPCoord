@@ -2403,7 +2403,7 @@ class Datum
     /**
      * Hjorsey 1955
      * Type: geodetic
-     * Extent: Iceland - onshore.
+     * Extent: Iceland - mainland.
      * Fundamental point:  Latitude: 64°31'29.26"N, longitude: 22°22'05.84"W (of Greenwich).
      */
     public const EPSG_HJORSEY_1955 = 'urn:ogc:def:datum:EPSG::6658';
@@ -3060,7 +3060,7 @@ class Datum
      * Type: geodetic
      * Extent: Iceland - onshore and offshore.
      * ITRF2000 at epoch 2004.6.
-     * Replaces ISN93 (datum code 6659).
+     * Replaces ISN93 (datum code 6659). Replaced by ISN2016 (datum code 1087).
      */
     public const EPSG_ISLANDS_NET_2004 = 'urn:ogc:def:datum:EPSG::1060';
 
@@ -5580,8 +5580,9 @@ class Datum
      * Type: geodetic
      * Extent: United Kingdom (UK) - offshore to boundary of UKCS within 49°45'N to 61°N and 9°W to 2°E; onshore
      * Great Britain (England, Wales and Scotland). Isle of Man onshore.
-     * Prior to 2002, fundamental point: Herstmonceux, Latitude: 50°51'55.271"N, longitude: 0°20'45.882"E (of
-     * Greenwich). From April 2002 the datum is defined through the application of the OSTN transformation from ETRS89.
+     * Prior to 2002 fundamental point: Herstmonceux, Latitude: 50°51'55.271"N, longitude: 0°20'45.882"E,
+     * triangulation adjustment started 1936, completed 1962. From April 2002 the datum is defined through the
+     * application of the OSTN transformation from ETRS89.
      * The average accuracy of OSTN compared to the old triangulation network (down to 3rd order) is 0.1m. With the
      * introduction of OSTN15, the area for OGSB36 has effectively been extended from Britain to cover the adjacent UK
      * Continental Shelf.
@@ -6288,7 +6289,7 @@ class Datum
     /**
      * Reykjavik 1900
      * Type: geodetic
-     * Extent: Iceland - onshore.
+     * Extent: Iceland - mainland.
      * Fundamental point:  Latitude: 64°08'31.88"N, longitude: 21°55'51.15"W (of Greenwich).
      */
     public const EPSG_REYKJAVIK_1900 = 'urn:ogc:def:datum:EPSG::6657';

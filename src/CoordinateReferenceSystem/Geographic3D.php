@@ -453,7 +453,7 @@ class Geographic3D extends Geographic
     /**
      * ISN2004
      * Extent: Iceland - onshore and offshore.
-     * Replaces ISN93 (CRS code 4945).
+     * Replaces ISN93 (CRS code 4945). Replaced by ISN2016 (CRS code 8085).
      */
     public const EPSG_ISN2004 = 'urn:ogc:def:crs:EPSG::5323';
 

@@ -485,7 +485,7 @@ class Geocentric extends CoordinateReferenceSystem
     /**
      * ISN2004
      * Extent: Iceland - onshore and offshore.
-     * Replaces ISN93 (CRS code 4944).
+     * Replaces ISN93 (CRS code 4944). Replaced by ISN2016 (CRS code 8084).
      */
     public const EPSG_ISN2004 = 'urn:ogc:def:crs:EPSG::5322';
 

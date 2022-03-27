@@ -1167,7 +1167,7 @@ class Geographic2D extends Geographic
 
     /**
      * Hjorsey 1955
-     * Extent: Iceland - onshore.
+     * Extent: Iceland - mainland.
      */
     public const EPSG_HJORSEY_1955 = 'urn:ogc:def:crs:EPSG::4658';
 
@@ -1400,7 +1400,7 @@ class Geographic2D extends Geographic
     /**
      * ISN2004
      * Extent: Iceland - onshore and offshore.
-     * Replaces ISN93 (CRS code 4659).
+     * Replaces ISN93 (CRS code 4659). Replaced by ISN2016 (CRS code 8086).
      */
     public const EPSG_ISN2004 = 'urn:ogc:def:crs:EPSG::5324';
 
@@ -3157,7 +3157,7 @@ class Geographic2D extends Geographic
 
     /**
      * Reykjavik 1900
-     * Extent: Iceland - onshore.
+     * Extent: Iceland - mainland.
      * See ellipsoid remarks.
      */
     public const EPSG_REYKJAVIK_1900 = 'urn:ogc:def:crs:EPSG::4657';

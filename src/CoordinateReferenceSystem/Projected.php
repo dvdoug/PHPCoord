@@ -6232,28 +6232,28 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * Hjorsey 1955 / Lambert 1955
-     * Extent: Iceland - onshore.
+     * Extent: Iceland - mainland.
      * Replaces Reykjavik 1900 / Lambert 1900 (CRS code 3052). Replaced by ISN93 / Lambert 1993 (CRS code 3057).
      */
     public const EPSG_HJORSEY_1955_LAMBERT_1955 = 'urn:ogc:def:crs:EPSG::3053';
 
     /**
      * Hjorsey 1955 / UTM zone 26N
-     * Extent: Iceland - onshore west of 24°W.
+     * Extent: Iceland - mainland west of 24°W.
      * Replaced by ISN93 / Lambert 1993 (CRS code 3057).
      */
     public const EPSG_HJORSEY_1955_UTM_ZONE_26N = 'urn:ogc:def:crs:EPSG::3054';
 
     /**
      * Hjorsey 1955 / UTM zone 27N
-     * Extent: Iceland - onshore between 24°W and 18°W.
+     * Extent: Iceland - mainland between 24°W and 18°W.
      * Replaced by ISN93 / Lambert 1993 (CRS code 3057).
      */
     public const EPSG_HJORSEY_1955_UTM_ZONE_27N = 'urn:ogc:def:crs:EPSG::3055';
 
     /**
      * Hjorsey 1955 / UTM zone 28N
-     * Extent: Iceland - onshore east of 18°W.
+     * Extent: Iceland - mainland east of 18°W.
      * Replaced by ISN93 / Lambert 1993 (CRS code 3057).
      */
     public const EPSG_HJORSEY_1955_UTM_ZONE_28N = 'urn:ogc:def:crs:EPSG::3056';
@@ -6613,6 +6613,12 @@ class Projected extends CoordinateReferenceSystem
      * 3035): see CT 9041. Replaced by ISN2016 / LAEA Europe (CRS code 9039).
      */
     public const EPSG_ISN2004_LAEA_EUROPE = 'urn:ogc:def:crs:EPSG::5638';
+
+    /**
+     * ISN2004 / LAEA Iceland
+     * Extent: Iceland - onshore and offshore.
+     */
+    public const EPSG_ISN2004_LAEA_ICELAND = 'urn:ogc:def:crs:EPSG::9947';
 
     /**
      * ISN2004 / LCC Europe
@@ -8540,8 +8546,8 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * MGI 1901 / Balkans zone 7
-     * Extent: Bosnia and Herzegovina - east of 19°30'E; Kosovo; Montenegro - east of 19°30'E; North Macedonia - west
-     * of 22°30'E; Serbia - between 19°30'E and 22°30'E.
+     * Extent: North Macedonia. Bosnia and Herzegovina - east of 19°30'E; Kosovo; Montenegro - east of 19°30'E;
+     * Serbia - between 19°30'E and 22°30'E.
      * Introduced in 1924. In Macedonia replaced by MSCS (CRS code 6204) from 2008 but from 2013 this CRS used for AREC
      * electronic cadastral database (E-kat) across whole country.
      */
@@ -8669,10 +8675,19 @@ class Projected extends CoordinateReferenceSystem
     /**
      * Macedonia State Coordinate System
      * Extent: North Macedonia.
-     * Truncated form of MGI 1901 / Balkans zones 7, CRS code 6316. Introduced in 2008, replacing both MGI 1901 /
-     * Balkans zones 7 and 8 (CRS codes 6316 and 8679) for use across whole country. CRS code 6316 used for cadastre.
+     * Truncated form of MGI 1901 / Balkans zones 7, CRS code 6316. Introduced in 2008, replacing MGI 1901 / Balkans
+     * zones 7 and 8 (CRS codes 6316 and 8679) for use across whole country. Further truncated in CRS 9945 which with
+     * CRS code 6316 used for cadastre.
      */
     public const EPSG_MACEDONIA_STATE_COORDINATE_SYSTEM = 'urn:ogc:def:crs:EPSG::6204';
+
+    /**
+     * Macedonia State Coordinate System truncated
+     * Extent: North Macedonia.
+     * Macedonia State Coordinate System (CRS code 6204) with northing reduced by 4 million. Cadastral data from AREC
+     * may be delivered in this CRS.
+     */
+    public const EPSG_MACEDONIA_STATE_COORDINATE_SYSTEM_TRUNCATED = 'urn:ogc:def:crs:EPSG::9945';
 
     /**
      * Madrid 1870 (Madrid) / Spain LCC
@@ -32031,7 +32046,7 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * Reykjavik 1900 / Lambert 1900
-     * Extent: Iceland - onshore.
+     * Extent: Iceland - mainland.
      * Replaced by Hjorsey 1955 / Lambert 1955 (CRS code 3053). See ellipsoid remarks.
      */
     public const EPSG_REYKJAVIK_1900_LAMBERT_1900 = 'urn:ogc:def:crs:EPSG::3052';

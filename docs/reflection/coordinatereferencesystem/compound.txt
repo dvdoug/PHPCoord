@@ -1974,6 +1974,90 @@ HS2 Survey Grid + HS2-VRF height
 
 Realized by use of HS2TN15 transformation and HS2GM15 geoid model from ETRS89 OSNet v2009.
 
+ISN2004 + ISH2004 height
+------------------------
+
+| Used: Iceland - onshore.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_ISN2004_PLUS_ISH2004_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9949')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_ISN2004_PLUS_ISH2004_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9949')
+
+Replaces ISN93 + ISH2004 height (CRS code 9948). Replaced by ISN2016 + ISH2004 height (CRS code 9950).
+
+ISN2004 / Lambert 2004 + ISH2004 height
+---------------------------------------
+
+| Used: Iceland - onshore.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_ISN2004_LAMBERT_2004_PLUS_ISH2004_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9952')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_ISN2004_LAMBERT_2004_PLUS_ISH2004_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9952')
+
+Replaces ISN93 / Lambert 1993 + ISH2004 height (CRS code 9951). Replaced by ISN2016 / Lambert 2016 + ISH2004 height (CRS code 9953).
+
+ISN2016 + ISH2004 height
+------------------------
+
+| Used: Iceland - onshore.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_ISN2016_PLUS_ISH2004_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9950')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_ISN2016_PLUS_ISH2004_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9950')
+
+Replaces ISN2004 + ISH2004 height (CRS code 9949).
+
+ISN2016 / Lambert 2016 + ISH2004 height
+---------------------------------------
+
+| Used: Iceland - onshore.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_ISN2016_LAMBERT_2016_PLUS_ISH2004_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9953')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_ISN2016_LAMBERT_2016_PLUS_ISH2004_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9953')
+
+Replaces ISN2004 / Lambert 2004 + ISH2004 height (CRS code 9952).
+
+ISN93 + ISH2004 height
+----------------------
+
+| Used: Iceland - onshore.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_ISN93_PLUS_ISH2004_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9948')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_ISN93_PLUS_ISH2004_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9948')
+
+Replaced by ISN2004 + ISH2004 height (CRS code 9949).
+
+ISN93 / Lambert 1993 + ISH2004 height
+-------------------------------------
+
+| Used: Iceland - onshore.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_ISN93_LAMBERT_1993_PLUS_ISH2004_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9951')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_ISN93_LAMBERT_1993_PLUS_ISH2004_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9951')
+
+Replaced by ISN2004 / Lambert 2004 + ISH2004 height (CRS code 9952).
+
 ITRF2005 + SA LLD height
 ------------------------
 

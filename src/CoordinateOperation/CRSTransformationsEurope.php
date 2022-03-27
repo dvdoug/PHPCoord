@@ -232,6 +232,14 @@ class CRSTransformationsEurope
             'reversible' => true,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9911',
+            'name' => 'Macedonia Gauss-Kruger truncated',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::3906',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::9945',
+            'accuracy' => 0,
+            'reversible' => true,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::3999',
             'name' => 'Moldova Transverse Mercator',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4023',
@@ -2672,11 +2680,11 @@ class CRSTransformationsEurope
             'reversible' => true,
         ],
         [
-            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5891',
-            'name' => 'MGI to ETRS89 (5)',
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9910',
+            'name' => 'MGI to ETRS89 (8)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4312',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4258',
-            'accuracy' => 0.15,
+            'accuracy' => 0.14,
             'reversible' => true,
         ],
         [
@@ -4373,6 +4381,14 @@ class CRSTransformationsEurope
             'source_crs' => 'urn:ogc:def:crs:EPSG::5324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8086',
             'accuracy' => 0.05,
+            'reversible' => true,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9946',
+            'name' => 'Iceland Lambert Azimuthal Equal Area',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::5324',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::9947',
+            'accuracy' => 0,
             'reversible' => true,
         ],
         [
@@ -6133,6 +6149,22 @@ class CRSTransformationsEurope
             'source_crs' => 'urn:ogc:def:crs:EPSG::8043',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8045',
             'accuracy' => 0,
+            'reversible' => true,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9958',
+            'name' => 'ISN2016 to ISH2004 height (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::8085',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::8089',
+            'accuracy' => 0.05,
+            'reversible' => false,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9959',
+            'name' => 'ISN2016 to ISN2016 + ISH2004 height (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::8085',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::9950',
+            'accuracy' => 0.05,
             'reversible' => true,
         ],
         [

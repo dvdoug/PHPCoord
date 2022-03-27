@@ -998,6 +998,49 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_HS2_SURVEY_GRID_PLUS_HS2_VRF_HEIGHT = 'urn:ogc:def:crs:EPSG::9306';
 
     /**
+     * ISN2004 + ISH2004 height
+     * Extent: Iceland - onshore.
+     * Replaces ISN93 + ISH2004 height (CRS code 9948). Replaced by ISN2016 + ISH2004 height (CRS code 9950).
+     */
+    public const EPSG_ISN2004_PLUS_ISH2004_HEIGHT = 'urn:ogc:def:crs:EPSG::9949';
+
+    /**
+     * ISN2004 / Lambert 2004 + ISH2004 height
+     * Extent: Iceland - onshore.
+     * Replaces ISN93 / Lambert 1993 + ISH2004 height (CRS code 9951). Replaced by ISN2016 / Lambert 2016 + ISH2004
+     * height (CRS code 9953).
+     */
+    public const EPSG_ISN2004_LAMBERT_2004_PLUS_ISH2004_HEIGHT = 'urn:ogc:def:crs:EPSG::9952';
+
+    /**
+     * ISN2016 + ISH2004 height
+     * Extent: Iceland - onshore.
+     * Replaces ISN2004 + ISH2004 height (CRS code 9949).
+     */
+    public const EPSG_ISN2016_PLUS_ISH2004_HEIGHT = 'urn:ogc:def:crs:EPSG::9950';
+
+    /**
+     * ISN2016 / Lambert 2016 + ISH2004 height
+     * Extent: Iceland - onshore.
+     * Replaces ISN2004 / Lambert 2004 + ISH2004 height (CRS code 9952).
+     */
+    public const EPSG_ISN2016_LAMBERT_2016_PLUS_ISH2004_HEIGHT = 'urn:ogc:def:crs:EPSG::9953';
+
+    /**
+     * ISN93 + ISH2004 height
+     * Extent: Iceland - onshore.
+     * Replaced by ISN2004 + ISH2004 height (CRS code 9949).
+     */
+    public const EPSG_ISN93_PLUS_ISH2004_HEIGHT = 'urn:ogc:def:crs:EPSG::9948';
+
+    /**
+     * ISN93 / Lambert 1993 + ISH2004 height
+     * Extent: Iceland - onshore.
+     * Replaced by ISN2004 / Lambert 2004 + ISH2004 height (CRS code 9952).
+     */
+    public const EPSG_ISN93_LAMBERT_1993_PLUS_ISH2004_HEIGHT = 'urn:ogc:def:crs:EPSG::9951';
+
+    /**
      * ITRF2005 + SA LLD height
      * Extent: South Africa - mainland onshore.
      */

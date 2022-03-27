@@ -11842,7 +11842,7 @@ Hito XVIII 1963 / UTM zone 19S
 Hjorsey 1955 / Lambert 1955
 ---------------------------
 
-| Used: Iceland - onshore.
+| Used: Iceland - mainland.
 
 .. code-block:: php
 
@@ -11856,7 +11856,7 @@ Replaces Reykjavik 1900 / Lambert 1900 (CRS code 3052). Replaced by ISN93 / Lamb
 Hjorsey 1955 / UTM zone 26N
 ---------------------------
 
-| Used: Iceland - onshore west of 24°W.
+| Used: Iceland - mainland west of 24°W.
 
 .. code-block:: php
 
@@ -11870,7 +11870,7 @@ Replaced by ISN93 / Lambert 1993 (CRS code 3057).
 Hjorsey 1955 / UTM zone 27N
 ---------------------------
 
-| Used: Iceland - onshore between 24°W and 18°W.
+| Used: Iceland - mainland between 24°W and 18°W.
 
 .. code-block:: php
 
@@ -11884,7 +11884,7 @@ Replaced by ISN93 / Lambert 1993 (CRS code 3057).
 Hjorsey 1955 / UTM zone 28N
 ---------------------------
 
-| Used: Iceland - onshore east of 18°W.
+| Used: Iceland - mainland east of 18°W.
 
 .. code-block:: php
 
@@ -12592,6 +12592,19 @@ ISN2004 / LAEA Europe
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5638')
 
 At applicable scales and usages, may be considered consistent with ETRS89-extended / LAEA Europe (CRS code 3035): see CT 9041. Replaced by ISN2016 / LAEA Europe (CRS code 9039).
+
+ISN2004 / LAEA Iceland
+----------------------
+
+| Used: Iceland - onshore and offshore.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_ISN2004_LAEA_ICELAND)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9947')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_ISN2004_LAEA_ICELAND)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9947')
+
 
 ISN2004 / LCC Europe
 --------------------
@@ -16297,7 +16310,7 @@ Introduced in 1924. In Croatia replaced by HTRS96 / Croatia TM (CRS code 3765).
 MGI 1901 / Balkans zone 7
 -------------------------
 
-| Used: Bosnia and Herzegovina - east of 19°30'E; Kosovo; Montenegro - east of 19°30'E; North Macedonia - west of 22°30'E; Serbia - between 19°30'E and 22°30'E.
+| Used: North Macedonia. Bosnia and Herzegovina - east of 19°30'E; Kosovo; Montenegro - east of 19°30'E; Serbia - between 19°30'E and 22°30'E.
 
 .. code-block:: php
 
@@ -16541,7 +16554,21 @@ Macedonia State Coordinate System
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_MACEDONIA_STATE_COORDINATE_SYSTEM)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::6204')
 
-Truncated form of MGI 1901 / Balkans zones 7, CRS code 6316. Introduced in 2008, replacing both MGI 1901 / Balkans zones 7 and 8 (CRS codes 6316 and 8679) for use across whole country. CRS code 6316 used for cadastre.
+Truncated form of MGI 1901 / Balkans zones 7, CRS code 6316. Introduced in 2008, replacing MGI 1901 / Balkans zones 7 and 8 (CRS codes 6316 and 8679) for use across whole country. Further truncated in CRS 9945 which with CRS code 6316 used for cadastre.
+
+Macedonia State Coordinate System truncated
+-------------------------------------------
+
+| Used: North Macedonia.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_MACEDONIA_STATE_COORDINATE_SYSTEM_TRUNCATED)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9945')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_MACEDONIA_STATE_COORDINATE_SYSTEM_TRUNCATED)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9945')
+
+Macedonia State Coordinate System (CRS code 6204) with northing reduced by 4 million. Cadastral data from AREC may be delivered in this CRS.
 
 Madrid 1870 (Madrid) / Spain LCC
 --------------------------------
@@ -24683,9 +24710,9 @@ NAD83 / Wyoming Lambert
 
 .. code-block:: php
 
-    Projected::fromSRID(Projected::)
+    Projected::fromSRID(Projected::EPSG_NAD83_WYOMING_LAMBERT)
     Projected::fromSRID('urn:ogc:def:crs:EPSG::32159')
-    CoordinateReferenceSystem::fromSRID(Projected::)
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NAD83_WYOMING_LAMBERT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::32159')
 
 
@@ -55470,7 +55497,7 @@ Replaces Reunion 1947 / Gauss Laborde Reunion (alias Piton des Neiges / Gauss La
 Reykjavik 1900 / Lambert 1900
 -----------------------------
 
-| Used: Iceland - onshore.
+| Used: Iceland - mainland.
 
 .. code-block:: php
 

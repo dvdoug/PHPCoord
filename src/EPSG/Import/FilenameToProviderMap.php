@@ -130,7 +130,7 @@ return [
     'SAD69_003.gsb' => CoordinateOperation\NTv2SAD69SIRGAS2000BrazilProvider::class,
     'SAD96_003.gsb' => CoordinateOperation\NTv2SAD6996SIRGAS2000BrazilProvider::class,
     '100800401.gsb' => CoordinateOperation\NTv2ED50ETRS89CataloniaProvider::class,
-    'AT_GIS_GRID.gsb' => CoordinateOperation\NTv2MGIETRS89AustriaProvider::class,
+    'AT_GIS_GRID_2021_09_28.gsb' => CoordinateOperation\NTv2MGIETRS89AustriaProvider::class,
     'D73_ETRS89_geo.gsb' => CoordinateOperation\NTv273ETRS89PortugalProvider::class,
     'DLx_ETRS89_geo.gsb' => CoordinateOperation\NTv2LisbonETRS89PortugalProvider::class,
     'NTv2_SN.gsb' => CoordinateOperation\NTv2RD83ETRS89SaxonyProvider::class,
@@ -205,4 +205,5 @@ return [
     'SAGEOID2010.dat' => CoordinateOperation\DATITRF2005SALLDProvider::class,
     'Slovakia_JTSK03_to_JTSK.gsb' => CoordinateOperation\NTv2JTSK03JTSKSlovakiaProvider::class,
     'hBG18.dat' => CoordinateOperation\DATETRS89OstendBelgiumProvider::class,
+    'Icegeoid_ISN2016.gri' => CoordinateOperation\GTXISN2016ISH2004IcelandProvider::class,
 ];

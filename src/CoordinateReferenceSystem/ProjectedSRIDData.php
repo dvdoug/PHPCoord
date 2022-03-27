@@ -16570,7 +16570,7 @@ trait ProjectedSRIDData
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::4498',
             'base_crs' => 'urn:ogc:def:crs:EPSG::3906',
             'deriving_conversion' => 'urn:ogc:def:coordinateOperation:EPSG::18277',
-            'extent_code' => ['1711'],
+            'extent_code' => ['1148', '1711'],
         ],
         'urn:ogc:def:crs:EPSG::6328' => [
             'name' => 'NAD83(2011) / UTM zone 59N',
@@ -24831,6 +24831,20 @@ trait ProjectedSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::9939',
             'deriving_conversion' => 'urn:ogc:def:coordinateOperation:EPSG::9942',
             'extent_code' => ['4661'],
+        ],
+        'urn:ogc:def:crs:EPSG::9945' => [
+            'name' => 'Macedonia State Coordinate System truncated',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::4498',
+            'base_crs' => 'urn:ogc:def:crs:EPSG::3906',
+            'deriving_conversion' => 'urn:ogc:def:coordinateOperation:EPSG::9911',
+            'extent_code' => ['1148'],
+        ],
+        'urn:ogc:def:crs:EPSG::9947' => [
+            'name' => 'ISN2004 / LAEA Iceland',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::4400',
+            'base_crs' => 'urn:ogc:def:crs:EPSG::5324',
+            'deriving_conversion' => 'urn:ogc:def:coordinateOperation:EPSG::9946',
+            'extent_code' => ['1120'],
         ],
         'urn:ogc:def:crs:EPSG::20004' => [
             'name' => 'Pulkovo 1995 / Gauss-Kruger zone 4',
