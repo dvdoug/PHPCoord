@@ -771,6 +771,25 @@ class GIGSTest extends TestCase
     }
 
     /**
+     * @dataProvider series3200VerticalDatumData
+     */
+    public function testSeries3200VerticalDatums(string $gigsCode, string $name): void
+    {
+        Datum::registerCustomDatum('urn:ogc:def:datum:GIGS::' . $gigsCode, $name, Datum::DATUM_TYPE_VERTICAL, null, null, null);
+
+        $this->assertInstanceOf(Datum::class, Datum::fromSRID('urn:ogc:def:datum:GIGS::' . $gigsCode));
+    }
+
+    public function series3200VerticalDatumData(): Generator
+    {
+        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 3200 User-defined Geodetic Data Objects test data/ASCII/GIGS_user_3209_VerticalDatum.txt');
+
+        foreach ($body as $row) {
+            yield '#' . $row[0] => [$row[0], $row[1]];
+        }
+    }
+
+    /**
      * @dataProvider series7000DeprecationData
      */
     public function testSeries7000Deprecation(string $epsgCode, string $entityType): void
