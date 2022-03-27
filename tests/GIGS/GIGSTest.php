@@ -790,6 +790,27 @@ class GIGSTest extends TestCase
     }
 
     /**
+     * @depends testSeries3200VerticalDatums
+     * @dataProvider series3200VerticalCRSData
+     */
+    public function testSeries3200VerticalCRSs(string $gigsCode, string $name, string $datumCode, string $epsgCSCode): void
+    {
+        Vertical::registerCustomCRS('urn:ogc:def:crs:GIGS::' . $gigsCode, $name, 'urn:ogc:def:cs:EPSG::' . $epsgCSCode, 'urn:ogc:def:datum:GIGS::' . $datumCode, [1262]);
+        $crs = Vertical::fromSRID('urn:ogc:def:crs:GIGS::' . $gigsCode);
+
+        $this->assertEquals($name, $crs->getName());
+    }
+
+    public function series3200VerticalCRSData(): Generator
+    {
+        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 3200 User-defined Geodetic Data Objects test data/ASCII/GIGS_user_3210_VerticalCRS.txt');
+
+        foreach ($body as $row) {
+            yield '#' . $row[0] => [$row[0], $row[1], $row[2], $row[3]];
+        }
+    }
+
+    /**
      * @dataProvider series7000DeprecationData
      */
     public function testSeries7000Deprecation(string $epsgCode, string $entityType): void

@@ -1,0 +1,35 @@
+# File: GIGS_user_3210_VerticalCRS
+# GIGS Test Procedure: 3210
+# GIGS Test Dataset Version: 2.0
+# EPSG Dataset Version: 10.019
+# GIGS Test Dataset Issue Date: 2021-05-03
+#
+# Fields:
+# [0]: GIGS Vertical CRS Code
+# [1]: GIGS Vertical CRS Name
+# [2]: GIGS Vertical Datum Code (see GIGS Test Procedure 3209)
+# [3]: EPSG Coordinate System Code
+# [4]: Coordinate System Axis 1 Name
+# [5]: Coordinate System Axis 1 Abbreviation
+# [6]: Coordinate System Axis 1 Orientation
+# [7]: Coordinate System Axis 1 Unit
+# [8]: Equivalent EPSG CRS Code
+# [9]: Equivalent EPSG CRS Name
+# [10]: Early Binding Transformation Code (see GIGS Test Procedure 3208)
+# [11]: GIGS Remarks
+#
+# [0]	# [1]	# [2]	# [3]	# [4]	# [5]	# [6]	# [7]	# [8]	# [9]	# [10]	# [11]
+64501	GIGS vertCRS U1 height	66601	6499	Gravity-related height	H	up	metre	5735	Black Sea height	65447
+64502	GIGS vertCRS U1 depth	66601	6498	Gravity-related depth	D	down	metre	5336	Black Sea depth	65447
+64503	GIGS vertCRS U2 height	66601	1030	Gravity-related height	H	up	foot			65447	No direct EPSG equivalent; but would be Black Sea height (ft)
+64504	GIGS vertCRS U2 depth	66601	6495	Gravity-related depth	D	down	foot			65447	No direct EPSG equivalent; but would be Black Sea depth (ft)
+64505	GIGS vertCRS V1 height	66602	6499	Gravity-related height	H	up	metre	5705	Baltic 1977 height	61501
+64506	GIGS vertCRS V1 depth	66602	6498	Gravity-related depth	D	down	metre	5612	Baltic 1977 depth	61502
+64509	GIGS vertCRS V2 height	66602	6497	Gravity-related height	H	up	ftUS				No direct EPSG equivalent; but would be Baltic 1977 height (ftUS)
+64507	GIGS vertCRS W1 height	66603	6499	Gravity-related height	H	up	metre	5611	Caspian height	65438
+64508	GIGS vertCRS W1 depth	66603	6498	Gravity-related depth	D	down	metre	5706	Caspian depth	65440
+
+
+
+
+
