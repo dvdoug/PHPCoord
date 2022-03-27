@@ -811,6 +811,79 @@ class GIGSTest extends TestCase
     }
 
     /**
+     * @dataProvider series3200VerticalTransformationData
+     */
+    public function testSeries3200VerticalTransformations(string $gigsCode, string $name, string $gigsSourceCRS, string $gigsTargetCRS, string $methodName, string $param1Name, string $param1Value, string $param1Unit, string $param2Name, string $param2Value, string $param2Unit, string $param3Name, string $param3Value, string $param3Unit, string $param4Name, string $param4Value, string $param4Unit, string $param5Name, string $param5Value, string $param5Unit, string $epsgOperationCode): void
+    {
+        if ($epsgOperationCode) {
+            $originalOperation = CoordinateOperations::getOperationData('urn:ogc:def:coordinateOperation:EPSG::' . $epsgOperationCode);
+            $originalParams = CoordinateOperations::getParamData('urn:ogc:def:coordinateOperation:EPSG::' . $epsgOperationCode);
+
+            $uoms = [
+                'NULL' => '',
+                'metre' => Length::EPSG_METRE,
+            ];
+
+            $params = [
+                $this->makeParamName($param1Name) => [
+                    'value' => $param1Value !== 'NULL' ? $param1Value : null,
+                    'uom' => $uoms[$param1Unit],
+                    'reverses' => true,
+                ],
+                $this->makeParamName($param2Name) => [
+                    'value' => $param2Value !== 'NULL' ? $param2Value : null,
+                    'uom' => $uoms[$param2Unit],
+                    'reverses' => true,
+                ],
+                $this->makeParamName($param3Name) => [
+                    'value' => $param3Value !== 'NULL' ? $param3Value : null,
+                    'uom' => $uoms[$param3Unit],
+                    'reverses' => true,
+                ],
+                $this->makeParamName($param4Name) => [
+                    'value' => $param4Value !== 'NULL' ? $param4Value : null,
+                    'uom' => $uoms[$param4Unit],
+                    'reverses' => true,
+                ],
+                $this->makeParamName($param5Name) => [
+                    'value' => $param5Value !== 'NULL' ? $param5Value : null,
+                    'uom' => $uoms[$param5Unit],
+                    'reverses' => true,
+                ],
+            ];
+
+            $params = array_filter($params, fn ($param) => $param['value'] !== null);
+            foreach ($params as $name => $param) {
+                $param[$name]['value'] = $param['uom'] === Angle::EPSG_SEXAGESIMAL_DMS ? $param['value'] : (float) $param['value'];
+            }
+
+            $method = match ($methodName) {
+                'Vertical offset' => CoordinateOperationMethods::EPSG_VERTICAL_OFFSET,
+            };
+
+            CoordinateOperations::registerCustomOperation('urn:ogc:def:coordinateOperation:GIGS::' . $gigsCode, $name, $method, [1262], $params);
+            CoordinateOperations::registerCustomTransformation('urn:ogc:def:coordinateOperation:GIGS::' . $gigsCode, $name, 'urn:ogc:def:crs:GIGS::' . $gigsSourceCRS, 'urn:ogc:def:crs:GIGS::' . $gigsTargetCRS, 0, true);
+
+            $gigsOperation = CoordinateOperations::getOperationData('urn:ogc:def:coordinateOperation:GIGS::' . $gigsCode);
+            $gigsParams = CoordinateOperations::getParamData('urn:ogc:def:coordinateOperation:GIGS::' . $gigsCode);
+
+            $this->assertEquals($originalOperation['method'], $gigsOperation['method']);
+            $this->assertEquals($originalParams, $gigsParams);
+        } else {
+            $this->expectNotToPerformAssertions();
+        }
+    }
+
+    public function series3200VerticalTransformationData(): Generator
+    {
+        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 3200 User-defined Geodetic Data Objects test data/ASCII/GIGS_user_3211_VertTfm.txt');
+
+        foreach ($body as $row) {
+            yield '#' . $row[0] => [$row[0], $row[5], $row[1], $row[3], $row[6], $row[7], $row[8], $row[9], $row[10], $row[11], $row[12], $row[13], $row[14], $row[15], $row[16], $row[17], $row[18], $row[19], $row[20], $row[21], $row[22], $row[23]];
+        }
+    }
+
+    /**
      * @dataProvider series7000DeprecationData
      */
     public function testSeries7000Deprecation(string $epsgCode, string $entityType): void

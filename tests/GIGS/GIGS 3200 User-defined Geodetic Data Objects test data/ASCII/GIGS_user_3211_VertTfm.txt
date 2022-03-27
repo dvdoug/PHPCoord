@@ -1,0 +1,43 @@
+# File: GIGS_user_3211_VertTfm																								
+# GIGS Test Procedure: 3211																								
+# GIGS Test Dataset Version: 2.0																								
+# EPSG Dataset Version: 10.019 																								
+# GIGS Test Dataset Issue Date: 2021-05-03																								
+# Note: All transformations are reversible; reverse sign of parameter value to apply in opposite direction																								
+#																								
+# Fields:																								
+# [0]: GIGS Transformation Code																								
+# [1]: GIGS Source CRS Code (see GIGS Test Procedure 3210)																								
+# [2]: GIGS Source CRS Name																								
+# [3]: GIGS Target CRS Code (see GIGS Test Procedure 3210)																								
+# [4]: GIGS Target CRS Name																								
+# [5]: GIGS Transformation Version																								
+# [6]: EPSG Transformation Method Name																								
+# [7]: Parameter 1 Name																								
+# [8]: Parameter 1 Value																								
+# [9]: Parameter 1 Unit																								
+# [10]: Parameter 2 Name																								
+# [11]: Parameter 2 Value																								
+# [12]: Parameter 2 Unit																								
+# [13]: Parameter 3 Name																								
+# [14]: Parameter 3 Value																								
+# [15]: Parameter 3 Unit																								
+# [16]: Parameter 4 Name																								
+# [17]: Parameter 4 Value																								
+# [18]: Parameter 4 Unit																								
+# [19]: Parameter 5 Name																								
+# [20]: Parameter 5 Value																								
+# [21]: Parameter 5 Unit																								
+# [22]: Equivalent EPSG Transformation Code																								
+# [23]: Equivalent EPSG Transformation Name																								
+# [24]: GIGS Remarks																								
+#																								
+# [0]	# [1]	# [2]	# [3]	# [4]	# [5]	# [6]	# [7]	# [8]	# [9]	# [10]	# [11]	# [12]	# [13]	# [14]	# [15]	# [16]	# [17]	# [18]	# [19]	# [20]	# [21]	# [22]	# [23]	# [24]
+61501	64505	GIGS vertCRS V1 height	5714	MSL height	1	Vertical offset	Vertical offset	0	metre	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL			No direct EPSG equivalent
+61502	64506	GIGS vertCRS V1 depth	5715	MSL depth	1	Vertical offset	Vertical offset	0	metre	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL			No direct EPSG equivalent
+65447	64505	GIGS vertCRS V1 height	64501	GIGS vertCRS U1 height	1	Vertical offset	Vertical offset	0.4	metre	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	5447	Baltic 1977 height to Black Sea height (1)	
+61503	64501	GIGS vertCRS U1 height	64505	GIGS vertCRS V1 height	2	Vertical Offset and Slope	Ordinate 1 of evaluation point	52	degree	Ordinate 2 of evaluation point	3	degree	Vertical offset	-0.486	metre	Inclination in latitude	-0.003	arc-second	Inclination in longitude	0.006	arc-second			No direct EPSG equivalent; extracted subset of 1503 NAD83 to NAD83(HARN) (30)
+65440	64506	GIGS vertCRS V1 depth	64508	GIGS vertCRS W1 depth	1	Vertical offset	Vertical offset	-28	metre	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	5440	Baltic 1977 depth to Caspian depth (1)	
+65441	64506	GIGS vertCRS V1 depth	64507	GIGS vertCRS W1 height	1	Vertical offset	Vertical offset	28	metre	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL			EPSG equivalent deprecated but remains relevant; previous equivalent 5441 Baltic depth to Caspian height (1)
+65400	64505	GIGS vertCRS V1 height	64508	GIGS vertCRS W1 depth	1	Vertical offset	Vertical offset	-28	metre	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL			EPSG equivalent deprecated but remains relevant; previous equivalent 5400 Baltic height to Caspian depth (1)
+65438	64505	GIGS vertCRS V1 height	64507	GIGS vertCRS W1 height	1	Vertical offset	Vertical offset	28	metre	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	5438	Baltic 1977 height to Caspian height (1)	
