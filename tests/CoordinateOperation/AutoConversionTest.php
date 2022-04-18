@@ -208,11 +208,11 @@ class AutoConversionTest extends TestCase
         $to = $from->convert($toCRS);
 
         if (class_exists(OSTN15OSGM15Provider::class)) {
-            self::assertEqualsWithDelta(31326368.174145, $to->getEasting()->getValue(), 0.0001);
-            self::assertEqualsWithDelta(5708455.8991285, $to->getNorthing()->getValue(), 0.0001);
+            self::assertEqualsWithDelta(31326368.093447, $to->getEasting()->getValue(), 0.0001);
+            self::assertEqualsWithDelta(5708454.7196684, $to->getNorthing()->getValue(), 0.0001);
         } else {
-            self::assertEqualsWithDelta(31326366.159092, $to->getEasting()->getValue(), 0.0001);
-            self::assertEqualsWithDelta(5708455.7715515, $to->getNorthing()->getValue(), 0.0001);
+            self::assertEqualsWithDelta(31326366.078970, $to->getEasting()->getValue(), 0.0001);
+            self::assertEqualsWithDelta(5708454.600444621, $to->getNorthing()->getValue(), 0.0001);
         }
     }
 

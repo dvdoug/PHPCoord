@@ -1797,12 +1797,16 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $f = $ellipsoid->getFlattening();
 
         $n = $f / (2 - $f);
-        $B = ($a / (1 + $n)) * (1 + $n ** 2 / 4 + $n ** 4 / 64);
+        $B = ($a / (1 + $n)) * (1 + $n ** 2 / 4 + $n ** 4 / 64 + $n ** 6 / 256 + (25 / 16384) * $n ** 8);
 
-        $h1 = $n / 2 - (2 / 3) * $n ** 2 + (5 / 16) * $n ** 3 + (41 / 180) * $n ** 4;
-        $h2 = (13 / 48) * $n ** 2 - (3 / 5) * $n ** 3 + (557 / 1440) * $n ** 4;
-        $h3 = (61 / 240) * $n ** 3 - (103 / 140) * $n ** 4;
-        $h4 = (49561 / 161280) * $n ** 4;
+        $h1 = $n / 2 - (2 / 3) * $n ** 2 + (5 / 16) * $n ** 3 + (41 / 180) * $n ** 4 - (127 / 288) * $n ** 5 + (7891 / 37800) * $n ** 6 + (72161 / 387072) * $n ** 7 - (18975107 / 50803200) * $n ** 8;
+        $h2 = (13 / 48) * $n ** 2 - (3 / 5) * $n ** 3 + (557 / 1440) * $n ** 4 + (281 / 630) * $n ** 5 - (1983433 / 1935360) * $n ** 6 + (13769 / 28800) * $n ** 7 + (148003883 / 174182400) * $n ** 8;
+        $h3 = (61 / 240) * $n ** 3 - (103 / 140) * $n ** 4 + (15061 / 26880) * $n ** 5 + (167603 / 181440) * $n ** 6 - (67102379 / 29030400) * $n ** 7 + (79682431 / 79833600) * $n ** 8;
+        $h4 = (49561 / 161280) * $n ** 4 - (179 / 168) * $n ** 5 + (6601661 / 7257600) * $n ** 6 + (97445 / 49896) * $n ** 7 - (40176129013 / 7664025600) * $n ** 8;
+        $h5 = (34729 / 80640) * $n ** 5 - (3418889 / 1995840) * $n ** 6 + (14644087 / 9123840) * $n ** 7 + (2605413599 / 622702080) * $n ** 8;
+        $h6 = (212378941 / 319334400) * $n ** 6 - (30705481 / 10378368) * $n ** 7 + (175214326799 / 58118860800) * $n ** 8;
+        $h7 = (1522256789 / 1383782400) * $n ** 7 - (16759934899 / 3113510400) * $n ** 8;
+        $h8 = (1424729850961 / 743921418240) * $n ** 8;
 
         if ($latitudeOrigin === 0.0) {
             $mO = 0;
@@ -1818,7 +1822,11 @@ class GeographicPoint extends Point implements ConvertiblePoint
             $xiO2 = $h2 * sin(4 * $xiO0);
             $xiO3 = $h3 * sin(6 * $xiO0);
             $xiO4 = $h4 * sin(8 * $xiO0);
-            $xiO = $xiO0 + $xiO1 + $xiO2 + $xiO3 + $xiO4;
+            $xiO5 = $h5 * sin(10 * $xiO0);
+            $xiO6 = $h6 * sin(12 * $xiO0);
+            $xiO7 = $h7 * sin(14 * $xiO0);
+            $xiO8 = $h8 * sin(16 * $xiO0);
+            $xiO = $xiO0 + $xiO1 + $xiO2 + $xiO3 + $xiO4 + $xiO5 + $xiO6 + $xiO7 + $xiO8;
             $mO = $B * $xiO;
         }
 
@@ -1834,8 +1842,16 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $eta3 = $h3 * cos(6 * $xi0) * sinh(6 * $eta0);
         $xi4 = $h4 * sin(8 * $xi0) * cosh(8 * $eta0);
         $eta4 = $h4 * cos(8 * $xi0) * sinh(8 * $eta0);
-        $xi = $xi0 + $xi1 + $xi2 + $xi3 + $xi4;
-        $eta = $eta0 + $eta1 + $eta2 + $eta3 + $eta4;
+        $xi5 = $h5 * sin(10 * $xi0) * cosh(10 * $eta0);
+        $eta5 = $h5 * cos(10 * $xi0) * sinh(10 * $eta0);
+        $xi6 = $h6 * sin(12 * $xi0) * cosh(12 * $eta0);
+        $eta6 = $h6 * cos(12 * $xi0) * sinh(12 * $eta0);
+        $xi7 = $h7 * sin(14 * $xi0) * cosh(14 * $eta0);
+        $eta7 = $h7 * cos(14 * $xi0) * sinh(14 * $eta0);
+        $xi8 = $h8 * sin(16 * $xi0) * cosh(16 * $eta0);
+        $eta8 = $h8 * cos(16 * $xi0) * sinh(16 * $eta0);
+        $xi = $xi0 + $xi1 + $xi2 + $xi3 + $xi4 + $xi5 + $xi6 + $xi7 + $xi8;
+        $eta = $eta0 + $eta1 + $eta2 + $eta3 + $eta4 + $eta5 + $eta6 + $eta7 + $eta8;
 
         $easting = $falseEasting->asMetres()->getValue() + $kO * $B * $eta;
         $northing = $falseNorthing->asMetres()->getValue() + $kO * ($B * $xi - $mO);

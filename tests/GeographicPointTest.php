@@ -289,7 +289,7 @@ class GeographicPointTest extends TestCase
         $to = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_PZ_90), new Degree(51.507977), new Degree(-0.124588), null);
 
         if (class_exists(OSTN15OSGM15Provider::class)) {
-            self::assertEqualsWithDelta(3734.135, $from->calculateDistance($to)->getValue(), 0.001);
+            self::assertEqualsWithDelta(3735.308, $from->calculateDistance($to)->getValue(), 0.001);
         } else {
             self::assertEqualsWithDelta(3735.156, $from->calculateDistance($to)->getValue(), 0.001);
         }
@@ -1117,8 +1117,8 @@ class GeographicPointTest extends TestCase
         $toCRS = Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID);
         $to = $from->OSTN15($toCRS, (new OSTN15OSGM15Provider())->provideGrid());
 
-        self::assertEqualsWithDelta(651409.80373330, $to->getEasting()->asMetres()->getValue(), 0.00000001);
-        self::assertEqualsWithDelta(313177.44988696, $to->getNorthing()->asMetres()->getValue(), 0.00000001);
+        self::assertEqualsWithDelta(651409.804, $to->getEasting()->asMetres()->getValue(), 0.001);
+        self::assertEqualsWithDelta(313177.450, $to->getNorthing()->asMetres()->getValue(), 0.001);
     }
 
     public function testNADCON5Forward3DTransform3DPoint(): void
