@@ -45,7 +45,6 @@ jobs:
         php-version: ${{ matrix.php-version }}
         ini-values: "zend.assertions=1, assert.exception=1, error_reporting=E_ALL, display_errors=On"
         coverage: "xdebug"
-        tools: cs2pr
       env:
         COMPOSER_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -131,4 +130,4 @@ jobs:
 
     - name: Check code style
       if: matrix.php-version == '8.0' && matrix.dependencies == 'highest' && matrix.datapack == ''
-      run: vendor/bin/php-cs-fixer fix --verbose --dry-run --diff --allow-risky=yes --format=checkstyle | cs2pr
+      run: vendor/bin/php-cs-fixer fix --verbose --dry-run --diff --allow-risky=yes
