@@ -34,7 +34,6 @@ use PHPCoord\Geometry\Extents\RegionMap;
 use PHPCoord\Point;
 use PHPCoord\ProjectedPoint;
 use PHPCoord\UnitOfMeasure\Time\Year;
-use function str_starts_with;
 use function usort;
 
 /**
@@ -66,14 +65,6 @@ trait AutoConversion
     {
         if ($this->getCRS() == $to) {
             return $this;
-        }
-
-        if (!str_starts_with($to->getSRID(), CoordinateReferenceSystem::CRS_SRID_PREFIX_EPSG) || !str_starts_with($this->getCRS()->getSRID(), CoordinateReferenceSystem::CRS_SRID_PREFIX_EPSG)) {
-            throw new UnknownConversionException('Automatic conversions are only supported for EPSG CRSs');
-        }
-
-        if ($this->getCRS()->getBoundingArea()->getRegion() !== $to->getBoundingArea()->getRegion() && $this->getCRS()->getBoundingArea()->getRegion() !== RegionMap::REGION_GLOBAL && $to->getBoundingArea()->getRegion() !== RegionMap::REGION_GLOBAL) {
-            throw new UnknownConversionException('Automatic conversions are not supported between different global regions');
         }
 
         $point = $this;
@@ -270,10 +261,10 @@ trait AutoConversion
     protected static function buildSupportedTransformationsByCRS(Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $source, Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $target): array
     {
         $regions = array_unique([$source->getBoundingArea()->getRegion(), $target->getBoundingArea()->getRegion(), RegionMap::REGION_GLOBAL]);
-        $relevantRegionData = [];
+        $relevantRegionData = CoordinateOperations::getCustomTransformations();
         foreach ($regions as $region) {
             $regionData = match ($region) {
-                RegionMap::REGION_GLOBAL => [...CRSTransformationsGlobal::getSupportedTransformations(), ...CoordinateOperations::getCustomTransformations()],
+                RegionMap::REGION_GLOBAL => CRSTransformationsGlobal::getSupportedTransformations(),
                 RegionMap::REGION_AFRICA => CRSTransformationsAfrica::getSupportedTransformations(),
                 RegionMap::REGION_ANTARCTIC => CRSTransformationsAntarctic::getSupportedTransformations(),
                 RegionMap::REGION_ARCTIC => CRSTransformationsArctic::getSupportedTransformations(),

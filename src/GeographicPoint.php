@@ -46,7 +46,6 @@ use PHPCoord\CoordinateReferenceSystem\Vertical;
 use PHPCoord\CoordinateSystem\Axis;
 use PHPCoord\CoordinateSystem\Cartesian;
 use PHPCoord\Datum\Datum;
-use PHPCoord\Datum\Ellipsoid;
 use PHPCoord\Exception\InvalidCoordinateReferenceSystemException;
 use PHPCoord\Exception\UnknownAxisException;
 use PHPCoord\Geometry\BoundingArea;
