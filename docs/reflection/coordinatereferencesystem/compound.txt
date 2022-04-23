@@ -1880,6 +1880,19 @@ FEH2010 / Fehmarnbelt TM + FCSVR10 height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5598')
 
 
+FNL22 Grid + ODN height
+-----------------------
+
+| Used: United Kingdom (UK) - on or related to the rail route from Inverness to Thurso and Wick.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_FNL22_GRID_PLUS_ODN_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9978')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_FNL22_GRID_PLUS_ODN_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9978')
+
+
 GBK19 Grid + ODN height
 -----------------------
 
@@ -1973,6 +1986,19 @@ HS2 Survey Grid + HS2-VRF height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9306')
 
 Realized by use of HS2TN15 transformation and HS2GM15 geoid model from ETRS89 OSNet v2009.
+
+HULLEE13 Grid + ODN height
+--------------------------
+
+| Used: United Kingdom (UK) - on or related to the rail route from the Morley tunnel through Leeds to Hull.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_HULLEE13_GRID_PLUS_ODN_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9968')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_HULLEE13_GRID_PLUS_ODN_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9968')
+
 
 ISN2004 + ISH2004 height
 ------------------------
@@ -4587,6 +4613,19 @@ RT90 + RH70 height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::7404')
 
 When combined with geoid model RN92 forms geographic 3D CRS RR92.
+
+SCM22 Grid + ODN height
+-----------------------
+
+| Used: United Kingdom (UK) - on or related to the Scottish central mainline rail route from Motherwell through Perth and Pitlochry to Inverness.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_SCM22_GRID_PLUS_ODN_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::9973')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_SCM22_GRID_PLUS_ODN_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9973')
+
 
 SHGD2015 + SHVD2015 height
 --------------------------

@@ -1766,6 +1766,15 @@ class Datum
     public const EPSG_EUROPEAN_VERTICAL_REFERENCE_FRAME_2019_MEAN_TIDE = 'urn:ogc:def:datum:EPSG::1287';
 
     /**
+     * FNL22 Intermediate Reference Frame
+     * Type: geodetic
+     * Extent: United Kingdom (UK) - on or related to the rail route from Inverness to Thurso and Wick.
+     * Defined through the application of the FNL22 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
+     * Created in 2022 to support intermediate CRS "FNL22" in the emulation of the FNL22 Snake map projection.
+     */
+    public const EPSG_FNL22_INTERMEDIATE_REFERENCE_FRAME = 'urn:ogc:def:datum:EPSG::1321';
+
+    /**
      * Fahud
      * Type: geodetic
      * Extent: Oman - mainland onshore.
@@ -2298,6 +2307,17 @@ class Datum
      * to OSNet v2001 and OSGM02 through HS2GM15 (code 9304).
      */
     public const EPSG_HS2_VERTICAL_REFERENCE_FRAME = 'urn:ogc:def:datum:EPSG::1265';
+
+    /**
+     * HULLEE13 Intermediate Reference Frame
+     * Type: geodetic
+     * Extent: United Kingdom (UK) - on or related to the rail route from the Morley tunnel through Leeds to Hull.
+     * Defined through the application of the HULLEE13 NTv2 transformation to ETRS89 as realized through OSNet v2009
+     * CORS.
+     * Created in 2022 to support intermediate CRS "HULLEE13-IRF" in the emulation of the HULLEE13 Snake map
+     * projection.
+     */
+    public const EPSG_HULLEE13_INTERMEDIATE_REFERENCE_FRAME = 'urn:ogc:def:datum:EPSG::1317';
 
     /**
      * Ha Tien 1960
@@ -6346,6 +6366,16 @@ class Datum
     public const EPSG_ROSS_SEA_REGION_GEODETIC_DATUM_2000 = 'urn:ogc:def:datum:EPSG::6764';
 
     /**
+     * SCM22 Intermediate Reference Frame
+     * Type: geodetic
+     * Extent: United Kingdom (UK) - on or related to the Scottish central mainline rail route from Motherwell through
+     * Perth and Pitlochry to Inverness.
+     * Defined through the application of the SCM22 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
+     * Created in 2022 to support intermediate CRS "SCM22-IRF" in the emulation of the SCM22 Snake map projection.
+     */
+    public const EPSG_SCM22_INTERMEDIATE_REFERENCE_FRAME = 'urn:ogc:def:datum:EPSG::1320';
+
+    /**
      * SIRGAS Continuously Operating Network DGF00P01
      * Type: dynamic geodetic
      * Extent: Latin America - Central America and South America, onshore and offshore.
@@ -10056,6 +10086,14 @@ class Datum
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
         ],
+        'urn:ogc:def:datum:EPSG::1317' => [
+            'name' => 'HULLEE13 Intermediate Reference Frame',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
         'urn:ogc:def:datum:EPSG::1318' => [
             'name' => 'GNTRANS2016',
             'type' => 'vertical',
@@ -10066,6 +10104,22 @@ class Datum
         ],
         'urn:ogc:def:datum:EPSG::1319' => [
             'name' => 'EBBWV14 Intermediate Reference Frame',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
+        'urn:ogc:def:datum:EPSG::1320' => [
+            'name' => 'SCM22 Intermediate Reference Frame',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
+        'urn:ogc:def:datum:EPSG::1321' => [
+            'name' => 'FNL22 Intermediate Reference Frame',
             'type' => 'geodetic',
             'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',

@@ -3251,5 +3251,23 @@ trait Geographic2DSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1319',
             'extent_code' => ['4661'],
         ],
+        'urn:ogc:def:crs:EPSG::9964' => [
+            'name' => 'HULLEE13-IRF',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
+            'datum' => 'urn:ogc:def:datum:EPSG::1317',
+            'extent_code' => ['4663'],
+        ],
+        'urn:ogc:def:crs:EPSG::9969' => [
+            'name' => 'SCM22-IRF',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
+            'datum' => 'urn:ogc:def:datum:EPSG::1320',
+            'extent_code' => ['4665'],
+        ],
+        'urn:ogc:def:crs:EPSG::9974' => [
+            'name' => 'FNL22-IRF',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
+            'datum' => 'urn:ogc:def:datum:EPSG::1321',
+            'extent_code' => ['4664'],
+        ],
     ];
 }

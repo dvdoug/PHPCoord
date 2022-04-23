@@ -2642,5 +2642,26 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::8089',
             'extent_code' => ['4662'],
         ],
+        'urn:ogc:def:crs:EPSG::9968' => [
+            'name' => 'HULLEE13 Grid + ODN height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::9967',
+            'horizontal_crs_type' => 'projected',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::5701',
+            'extent_code' => ['4663'],
+        ],
+        'urn:ogc:def:crs:EPSG::9973' => [
+            'name' => 'SCM22 Grid + ODN height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::9972',
+            'horizontal_crs_type' => 'projected',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::5701',
+            'extent_code' => ['4665'],
+        ],
+        'urn:ogc:def:crs:EPSG::9978' => [
+            'name' => 'FNL22 Grid + ODN height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::9977',
+            'horizontal_crs_type' => 'projected',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::5701',
+            'extent_code' => ['4664'],
+        ],
     ];
 }

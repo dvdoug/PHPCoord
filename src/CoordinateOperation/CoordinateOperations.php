@@ -9453,6 +9453,21 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::1093',
             'extent_code' => ['4662'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9966' => [
+            'name' => 'HULLEE13-TM',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['4663'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9971' => [
+            'name' => 'SCM22-TM',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['4665'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9976' => [
+            'name' => 'FNL22-TM',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['4664'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::10098' => [
             'name' => 'KKJ to ETRS89 (2)',
             'method' => 'urn:ogc:def:method:EPSG::9607',

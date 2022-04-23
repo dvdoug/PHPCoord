@@ -1885,6 +1885,22 @@ FEH2010
 
 Created for engineering survey and construction of Fehmarnbelt tunnel.
 
+FNL22-IRF
+---------
+
+| Used: United Kingdom (UK) - on or related to the rail route from Inverness to Thurso and Wick.
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_FNL22_IRF)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::9974')
+    Geographic::fromSRID(Geographic2D::EPSG_FNL22_IRF)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::9974')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_FNL22_IRF)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9974')
+
+Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / FNL22 SnakeGrid projected CRS through transformation ETRS89 to FNL22-IRF (1) (code 9975) used in conjunction with the FNL22-TM map projection (code 9976).
+
 Fahud
 -----
 
@@ -2336,6 +2352,22 @@ HTRS96
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_HTRS96)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4761')
 
+
+HULLEE13-IRF
+------------
+
+| Used: United Kingdom (UK) - on or related to the rail route from the Morley tunnel through Leeds to Hull.
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_HULLEE13_IRF)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::9964')
+    Geographic::fromSRID(Geographic2D::EPSG_HULLEE13_IRF)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::9964')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_HULLEE13_IRF)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9964')
+
+Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / HULLEE13 SnakeGrid projected CRS through transformation ETRS89 to HULLEE13-IRF (1) (code 9965) used in conjunction with the HULLEE13-TM map projection (code 9966).
 
 Hanoi 1972
 ----------
@@ -6737,6 +6769,22 @@ SAD69(96)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5527')
 
 Uses GRS 1967 ellipsoid with 1/f to exactly 2 decimal places. Replaces SAD69 original adjustment (CRS code 4618) only in Brazil.
+
+SCM22-IRF
+---------
+
+| Used: United Kingdom (UK) - on or related to the Scottish central mainline rail route from Motherwell through Perth and Pitlochry to Inverness.
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_SCM22_IRF)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::9969')
+    Geographic::fromSRID(Geographic2D::EPSG_SCM22_IRF)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::9969')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_SCM22_IRF)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9969')
+
+Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / SCM22 SnakeGrid projected CRS through transformation ETRS89 to SCM22-IRF (1) (code 9969) used in conjunction with the SCM22-TM map projection (code 9971).
 
 SHGD2015
 --------

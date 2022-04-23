@@ -2515,6 +2515,21 @@ Derived from 2020-09 zero-tide EVRF2019 adjustment by Cmean = Czero + (0.28841*s
 
 Mean-tide surface, describing how water flows. See EVRF2019 (datum code 1274) for zero-tide surface which is consistent with ETRS conventions.
 
+FNL22 Intermediate Reference Frame
+----------------------------------
+
+| Type: Geodetic
+| Used: United Kingdom (UK) - on or related to the rail route from Inverness to Thurso and Wick.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_FNL22_INTERMEDIATE_REFERENCE_FRAME)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1321')
+
+Defined through the application of the FNL22 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
+
+Created in 2022 to support intermediate CRS "FNL22" in the emulation of the FNL22 Snake map projection.
+
 Fahud
 -----
 
@@ -3323,6 +3338,21 @@ HS2 Vertical Reference Frame
 Equivalent to Ordnance Datum Newlyn as realized through OSNet v2001 and OSGM02.
 
 After introduction of OSNet v2009 CORS, OSTN15 and the OSGM15 geoid model, the HS2 VRF is maintained equivalent to OSNet v2001 and OSGM02 through HS2GM15 (code 9304).
+
+HULLEE13 Intermediate Reference Frame
+-------------------------------------
+
+| Type: Geodetic
+| Used: United Kingdom (UK) - on or related to the rail route from the Morley tunnel through Leeds to Hull.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_HULLEE13_INTERMEDIATE_REFERENCE_FRAME)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1317')
+
+Defined through the application of the HULLEE13 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
+
+Created in 2022 to support intermediate CRS "HULLEE13-IRF" in the emulation of the HULLEE13 Snake map projection.
 
 Ha Tien 1960
 ------------
@@ -9261,6 +9291,21 @@ Ross Sea Region Geodetic Datum 2000
     Datum::fromSRID('urn:ogc:def:datum:EPSG::6764')
 
 Based on ITRF96 at epoch 2000.0
+
+SCM22 Intermediate Reference Frame
+----------------------------------
+
+| Type: Geodetic
+| Used: United Kingdom (UK) - on or related to the Scottish central mainline rail route from Motherwell through Perth and Pitlochry to Inverness.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_SCM22_INTERMEDIATE_REFERENCE_FRAME)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1320')
+
+Defined through the application of the SCM22 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
+
+Created in 2022 to support intermediate CRS "SCM22-IRF" in the emulation of the SCM22 Snake map projection.
 
 SIRGAS Continuously Operating Network DGF00P01
 ----------------------------------------------

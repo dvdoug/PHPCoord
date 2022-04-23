@@ -7443,6 +7443,20 @@ FEH2010 / Fehmarnbelt TM
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5596')
 
 
+FNL22 Grid
+----------
+
+| Used: United Kingdom (UK) - on or related to the rail route from Inverness to Thurso and Wick.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_FNL22_GRID)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9977')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_FNL22_GRID)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9977')
+
+Defined through transformation ETRS89 to FNL22-IRF (1) (code 9975) and map projection FNL22-TM (code 9976). Emulates the FNL22 Snake projection applied to ETRS89 as realized through OSNet 2009.
+
 Fahud / UTM zone 39N
 --------------------
 
@@ -11601,6 +11615,20 @@ HTRS96 / UTM zone 34N
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_HTRS96_UTM_ZONE_34N)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3768')
 
+
+HULLEE13 Grid
+-------------
+
+| Used: United Kingdom (UK) - on or related to the rail route from the Morley tunnel through Leeds to Hull.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_HULLEE13_GRID)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9967')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_HULLEE13_GRID)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9967')
+
+Defined through transformation ETRS89 to HULLEE13-IRF (1) (code 9965) and map projection HULLEE13-TM (code 9966). Emulates the HULLEE13 Snake projection applied to ETRS89 as realized through OSNet 2009.
 
 Hanoi 1972 / GK 106 NE
 ----------------------
@@ -55997,6 +56025,20 @@ SAD69(96) / UTM zone 25S
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5535')
 
 Uses GRS 1967 ellipsoid with 1/f to exactly 2 decimal places. Replaces SAD69 / UTM zone 25S (CRS code 29195). Replaced by SIRGAS 2000 / UTM zone 25S (CRS code 31985).
+
+SCM22 Grid
+----------
+
+| Used: United Kingdom (UK) - on or related to the Scottish central mainline rail route from Motherwell through Perth and Pitlochry to Inverness.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_SCM22_GRID)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::9972')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_SCM22_GRID)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9972')
+
+Defined through transformation ETRS89 to SCM22-IRF (1) (code 9970) and map projection SCM22-TM (code 9971). Emulates the SCM22 Snake projection applied to ETRS89 as realized through OSNet 2009.
 
 SHMG2015
 --------

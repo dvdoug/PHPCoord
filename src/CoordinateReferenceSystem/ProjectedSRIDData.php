@@ -24846,6 +24846,27 @@ trait ProjectedSRIDData
             'deriving_conversion' => 'urn:ogc:def:coordinateOperation:EPSG::9946',
             'extent_code' => ['1120'],
         ],
+        'urn:ogc:def:crs:EPSG::9967' => [
+            'name' => 'HULLEE13 Grid',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::4400',
+            'base_crs' => 'urn:ogc:def:crs:EPSG::9964',
+            'deriving_conversion' => 'urn:ogc:def:coordinateOperation:EPSG::9966',
+            'extent_code' => ['4663'],
+        ],
+        'urn:ogc:def:crs:EPSG::9972' => [
+            'name' => 'SCM22 Grid',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::4400',
+            'base_crs' => 'urn:ogc:def:crs:EPSG::9969',
+            'deriving_conversion' => 'urn:ogc:def:coordinateOperation:EPSG::9971',
+            'extent_code' => ['4665'],
+        ],
+        'urn:ogc:def:crs:EPSG::9977' => [
+            'name' => 'FNL22 Grid',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::4400',
+            'base_crs' => 'urn:ogc:def:crs:EPSG::9974',
+            'deriving_conversion' => 'urn:ogc:def:coordinateOperation:EPSG::9976',
+            'extent_code' => ['4664'],
+        ],
         'urn:ogc:def:crs:EPSG::20004' => [
             'name' => 'Pulkovo 1995 / Gauss-Kruger zone 4',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::4530',

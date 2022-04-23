@@ -6735,6 +6735,30 @@ class CRSTransformationsEurope
             'accuracy' => 0,
             'reversible' => true,
         ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9966',
+            'name' => 'HULLEE13-TM',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::9964',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::9967',
+            'accuracy' => 0,
+            'reversible' => true,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9971',
+            'name' => 'SCM22-TM',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::9969',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::9972',
+            'accuracy' => 0,
+            'reversible' => true,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9976',
+            'name' => 'FNL22-TM',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::9974',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::9977',
+            'accuracy' => 0,
+            'reversible' => true,
+        ],
     ];
 
     public static function getSupportedTransformations(): array

@@ -929,6 +929,15 @@ class Geographic2D extends Geographic
     public const EPSG_FEH2010 = 'urn:ogc:def:crs:EPSG::5593';
 
     /**
+     * FNL22-IRF
+     * Extent: United Kingdom (UK) - on or related to the rail route from Inverness to Thurso and Wick.
+     * Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / FNL22 SnakeGrid projected CRS through
+     * transformation ETRS89 to FNL22-IRF (1) (code 9975) used in conjunction with the FNL22-TM map projection (code
+     * 9976).
+     */
+    public const EPSG_FNL22_IRF = 'urn:ogc:def:crs:EPSG::9974';
+
+    /**
      * Fahud
      * Extent: Oman - mainland onshore.
      * Since 1993 replaced by PSD93 geogCRS (code 4134). Maximum differences to Fahud adjustment are 20 metres.
@@ -1131,6 +1140,15 @@ class Geographic2D extends Geographic
      * Extent: Croatia - onshore and offshore.
      */
     public const EPSG_HTRS96 = 'urn:ogc:def:crs:EPSG::4761';
+
+    /**
+     * HULLEE13-IRF
+     * Extent: United Kingdom (UK) - on or related to the rail route from the Morley tunnel through Leeds to Hull.
+     * Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / HULLEE13 SnakeGrid projected CRS
+     * through transformation ETRS89 to HULLEE13-IRF (1) (code 9965) used in conjunction with the HULLEE13-TM map
+     * projection (code 9966).
+     */
+    public const EPSG_HULLEE13_IRF = 'urn:ogc:def:crs:EPSG::9964';
 
     /**
      * Hanoi 1972
@@ -3220,6 +3238,16 @@ class Geographic2D extends Geographic
      * only in Brazil.
      */
     public const EPSG_SAD69_96 = 'urn:ogc:def:crs:EPSG::5527';
+
+    /**
+     * SCM22-IRF
+     * Extent: United Kingdom (UK) - on or related to the Scottish central mainline rail route from Motherwell through
+     * Perth and Pitlochry to Inverness.
+     * Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / SCM22 SnakeGrid projected CRS through
+     * transformation ETRS89 to SCM22-IRF (1) (code 9969) used in conjunction with the SCM22-TM map projection (code
+     * 9971).
+     */
+    public const EPSG_SCM22_IRF = 'urn:ogc:def:crs:EPSG::9969';
 
     /**
      * SHGD2015

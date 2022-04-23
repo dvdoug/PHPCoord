@@ -3560,6 +3560,9 @@ class RegionMap
             4660 => self::REGION_EUROPE,
             4661 => self::REGION_EUROPE,
             4662 => self::REGION_EUROPE,
+            4663 => self::REGION_EUROPE,
+            4664 => self::REGION_EUROPE,
+            4665 => self::REGION_EUROPE,
         ];
     }
 }

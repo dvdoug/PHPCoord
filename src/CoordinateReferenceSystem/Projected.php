@@ -3955,6 +3955,14 @@ class Projected extends CoordinateReferenceSystem
     public const EPSG_FEH2010_FEHMARNBELT_TM = 'urn:ogc:def:crs:EPSG::5596';
 
     /**
+     * FNL22 Grid
+     * Extent: United Kingdom (UK) - on or related to the rail route from Inverness to Thurso and Wick.
+     * Defined through transformation ETRS89 to FNL22-IRF (1) (code 9975) and map projection FNL22-TM (code 9976).
+     * Emulates the FNL22 Snake projection applied to ETRS89 as realized through OSNet 2009.
+     */
+    public const EPSG_FNL22_GRID = 'urn:ogc:def:crs:EPSG::9977';
+
+    /**
      * Fahud / UTM zone 39N
      * Extent: Oman - onshore west of 54°E.
      * Since 1993 replaced by PSD93 / UTM zone 39N projCRS (code 3439). Maximum differences to Fahud adjustment are 20
@@ -6116,6 +6124,14 @@ class Projected extends CoordinateReferenceSystem
      * Extent: Croatia - east of 18°E, onshore and offshore.
      */
     public const EPSG_HTRS96_UTM_ZONE_34N = 'urn:ogc:def:crs:EPSG::3768';
+
+    /**
+     * HULLEE13 Grid
+     * Extent: United Kingdom (UK) - on or related to the rail route from the Morley tunnel through Leeds to Hull.
+     * Defined through transformation ETRS89 to HULLEE13-IRF (1) (code 9965) and map projection HULLEE13-TM (code
+     * 9966). Emulates the HULLEE13 Snake projection applied to ETRS89 as realized through OSNet 2009.
+     */
+    public const EPSG_HULLEE13_GRID = 'urn:ogc:def:crs:EPSG::9967';
 
     /**
      * Hanoi 1972 / GK 106 NE
@@ -32335,6 +32351,15 @@ class Projected extends CoordinateReferenceSystem
      * Replaced by SIRGAS 2000 / UTM zone 25S (CRS code 31985).
      */
     public const EPSG_SAD69_96_UTM_ZONE_25S = 'urn:ogc:def:crs:EPSG::5535';
+
+    /**
+     * SCM22 Grid
+     * Extent: United Kingdom (UK) - on or related to the Scottish central mainline rail route from Motherwell through
+     * Perth and Pitlochry to Inverness.
+     * Defined through transformation ETRS89 to SCM22-IRF (1) (code 9970) and map projection SCM22-TM (code 9971).
+     * Emulates the SCM22 Snake projection applied to ETRS89 as realized through OSNet 2009.
+     */
+    public const EPSG_SCM22_GRID = 'urn:ogc:def:crs:EPSG::9972';
 
     /**
      * SHMG2015

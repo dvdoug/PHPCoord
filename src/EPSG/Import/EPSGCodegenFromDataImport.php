@@ -542,6 +542,8 @@ class EPSGCodegenFromDataImport
         9355, // KMS KSA-GEOID17.gra
         9620, // KMS KSA-GEOID17.gra
         9940, // NTv2 HeTa2010.gsb
+        9979, // NTv2 SIRGAS1995-to-SIRGAS2000.gsb
+        9980, // NTv2 SIRGAS2000-to-SIRGAS-CONSIR17P01.gsb
 
         // Construction/engineering/scientific projects not of general use
         9302, // NTv2 HS2TN15_NTv2.gsb
@@ -555,6 +557,9 @@ class EPSGCodegenFromDataImport
         9867, // NTv2 TN15-ETRS89-to-MRH21-IRF.gsb
         9878, // NTv2 TN15-ETRS89-to-MOLDOR11-IRF.gsb
         9941, // NTv2 TN15-ETRS89-to-EBBWV14-IRF.gsb
+        9965, // NTv2 TN15-ETRS89-to-HULLEE13-IRF.gsb
+        9970, // NTv2 TN15-ETRS89-to-SCM22-IRF.gsb
+        9975, // NTv2 TN15-ETRS89-to-FNL22-IRF.gsb
         9363, // IGNF ARAMCO_AAA-KSAGRF_6.tac
 
         // free, but license does not permit redistribution

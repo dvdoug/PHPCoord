@@ -946,6 +946,12 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_FEH2010_FEHMARNBELT_TM_PLUS_FCSVR10_HEIGHT = 'urn:ogc:def:crs:EPSG::5598';
 
     /**
+     * FNL22 Grid + ODN height
+     * Extent: United Kingdom (UK) - on or related to the rail route from Inverness to Thurso and Wick.
+     */
+    public const EPSG_FNL22_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::9978';
+
+    /**
      * GBK19 Grid + ODN height
      * Extent: United Kingdom (UK) - on or related to the rail route from Glasgow to Kilmarnock via Barrhead and the
      * branch to East Kilbride.
@@ -996,6 +1002,12 @@ class Compound extends CoordinateReferenceSystem
      * Realized by use of HS2TN15 transformation and HS2GM15 geoid model from ETRS89 OSNet v2009.
      */
     public const EPSG_HS2_SURVEY_GRID_PLUS_HS2_VRF_HEIGHT = 'urn:ogc:def:crs:EPSG::9306';
+
+    /**
+     * HULLEE13 Grid + ODN height
+     * Extent: United Kingdom (UK) - on or related to the rail route from the Morley tunnel through Leeds to Hull.
+     */
+    public const EPSG_HULLEE13_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::9968';
 
     /**
      * ISN2004 + ISH2004 height
@@ -2501,6 +2513,13 @@ class Compound extends CoordinateReferenceSystem
      * When combined with geoid model RN92 forms geographic 3D CRS RR92.
      */
     public const EPSG_RT90_PLUS_RH70_HEIGHT = 'urn:ogc:def:crs:EPSG::7404';
+
+    /**
+     * SCM22 Grid + ODN height
+     * Extent: United Kingdom (UK) - on or related to the Scottish central mainline rail route from Motherwell through
+     * Perth and Pitlochry to Inverness.
+     */
+    public const EPSG_SCM22_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::9973';
 
     /**
      * SHGD2015 + SHVD2015 height
