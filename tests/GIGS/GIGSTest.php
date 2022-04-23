@@ -35,6 +35,7 @@ use PHPCoord\GeographicPoint;
 use PHPCoord\ProjectedPoint;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPCoord\UnitOfMeasure\Angle\Degree;
+use PHPCoord\UnitOfMeasure\Angle\Grad;
 use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPCoord\UnitOfMeasure\Scale\Scale;
@@ -633,8 +634,11 @@ class GIGSTest extends TestCase
      * @depends testSeries3200GeodeticCRSs
      * @dataProvider series3200ProjectionData
      */
-    public function testSeries3200Projections(string $gigsCode, string $name, string $baseCRSCode, string $derivingConversionCode, string $derivingConversionName, string $csEPSGCode, string $epsgCode): void
+    public function testSeries3200Projections(string $gigsCode, string $name, string $baseCRSCode, string $baseCRSName, string $derivingConversionCode, string $derivingConversionName, string $csEPSGCode, string $epsgCode): void
     {
+        $baseCRS = Geographic2D::fromSRID('urn:ogc:def:crs:GIGS::' . $baseCRSCode);
+        $this->assertSame($baseCRSName, $baseCRS->getName());
+
         Projected::registerCustomCRS('urn:ogc:def:crs:GIGS::' . $gigsCode, $name, 'urn:ogc:def:crs:GIGS::' . $baseCRSCode, 'urn:ogc:def:coordinateOperation:GIGS::' . $derivingConversionCode, 'urn:ogc:def:cs:EPSG::' . $csEPSGCode, [1262]);
         CoordinateOperations::registerCustomTransformation('urn:ogc:def:coordinateOperation:GIGS::' . $derivingConversionCode, $derivingConversionName, 'urn:ogc:def:crs:GIGS::' . $baseCRSCode, 'urn:ogc:def:crs:GIGS::' . $gigsCode, 0, true);
 
@@ -646,7 +650,7 @@ class GIGSTest extends TestCase
         [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 3200 User-defined Geodetic Data Objects test data/ASCII/GIGS_user_3207_ProjectedCRS.txt');
 
         foreach ($body as $row) {
-            yield '#' . $row[0] => [$row[0], $row[2], $row[3], $row[5], $row[6], $row[7], $row[16]];
+            yield '#' . $row[0] => [$row[0], $row[2], $row[3], $row[4], $row[5], $row[6], $row[7], $row[16]];
         }
     }
 
@@ -896,39 +900,41 @@ class GIGSTest extends TestCase
      * @dataProvider series5100TransverseMercatorPart2Data
      * @dataProvider series5100TransverseMercatorPart3Data
      * @dataProvider series5100TransverseMercatorPart4Data
+     * @dataProvider series5100LCC1Part1Data
+     * @dataProvider series5100LCC1Part2Data
      */
-    public function testSeries5100TransverseMercator(float $latitude, float $longitude, float $easting, float $northing, bool $inReverse, string $geographicCRSSrid, string $projectedCRSSrid): void
+    public function testSeries5100Projections(Angle $latitude, Angle $longitude, Length $easting, Length $northing, bool $inReverse, string $geographicCRSSrid, string $projectedCRSSrid): void
     {
         $geographicCRS = Geographic2D::fromSRID($geographicCRSSrid);
         $projectedCRS = Projected::fromSRID($projectedCRSSrid);
 
         $geographicPoint = GeographicPoint::create(
             $geographicCRS,
-            new Degree($latitude),
-            new Degree($longitude),
+            $latitude,
+            $longitude,
         );
         $projectedPoint = ProjectedPoint::createFromEastingNorthing(
             $projectedCRS,
-            new Metre($easting),
-            new Metre($northing),
+            $easting,
+            $northing,
         );
 
         if (!$inReverse) {
             $convertedProjectedPoint = $geographicPoint->convert($projectedCRS);
-            $this->assertEqualsWithDelta($projectedPoint->getEasting()->asMetres()->getValue(), $convertedProjectedPoint->getEasting()->asMetres()->getValue(), 0.006);
-            $this->assertEqualsWithDelta($projectedPoint->getNorthing()->asMetres()->getValue(), $convertedProjectedPoint->getNorthing()->asMetres()->getValue(), 0.006);
+            $this->assertEqualsWithDelta($projectedPoint->getEasting()->getValue(), $convertedProjectedPoint->getEasting()->getValue(), 0.006);
+            $this->assertEqualsWithDelta($projectedPoint->getNorthing()->getValue(), $convertedProjectedPoint->getNorthing()->getValue(), 0.006);
 
             $convertedGeographicPoint = $convertedProjectedPoint->convert($geographicCRS);
-            $this->assertEqualsWithDelta($geographicPoint->getLatitude()->asDegrees()->getValue(), $convertedGeographicPoint->getLatitude()->asDegrees()->getValue(), 0.00000006);
-            $this->assertEqualsWithDelta($geographicPoint->getLongitude()->asDegrees()->getValue(), $convertedGeographicPoint->getLongitude()->asDegrees()->getValue(), 0.00000006);
+            $this->assertEqualsWithDelta($geographicPoint->getLatitude()->getValue(), $convertedGeographicPoint->getLatitude()->getValue(), 0.00000006);
+            $this->assertEqualsWithDelta($geographicPoint->getLongitude()->getValue(), $convertedGeographicPoint->getLongitude()->getValue(), 0.00000006);
         } else {
             $convertedGeographicPoint = $projectedPoint->convert($geographicCRS);
-            $this->assertEqualsWithDelta($geographicPoint->getLatitude()->asDegrees()->getValue(), $convertedGeographicPoint->getLatitude()->asDegrees()->getValue(), 0.00000006);
-            $this->assertEqualsWithDelta($geographicPoint->getLongitude()->asDegrees()->getValue(), $convertedGeographicPoint->getLongitude()->asDegrees()->getValue(), 0.00000006);
+            $this->assertEqualsWithDelta($geographicPoint->getLatitude()->getValue(), $convertedGeographicPoint->getLatitude()->getValue(), 0.00000006);
+            $this->assertEqualsWithDelta($geographicPoint->getLongitude()->getValue(), $convertedGeographicPoint->getLongitude()->getValue(), 0.00000006);
 
             $convertedProjectedPoint = $convertedGeographicPoint->convert($projectedCRS);
-            $this->assertEqualsWithDelta($projectedPoint->getEasting()->asMetres()->getValue(), $convertedProjectedPoint->getEasting()->asMetres()->getValue(), 0.006);
-            $this->assertEqualsWithDelta($projectedPoint->getNorthing()->asMetres()->getValue(), $convertedProjectedPoint->getNorthing()->asMetres()->getValue(), 0.006);
+            $this->assertEqualsWithDelta($projectedPoint->getEasting()->getValue(), $convertedProjectedPoint->getEasting()->getValue(), 0.006);
+            $this->assertEqualsWithDelta($projectedPoint->getNorthing()->getValue(), $convertedProjectedPoint->getNorthing()->getValue(), 0.006);
         }
     }
 
@@ -945,7 +951,7 @@ class GIGSTest extends TestCase
                 'REVERSE' => true,
             };
 
-            yield '#' . $row[0] => [(float) $row[1], (float) $row[2], (float) $row[3], (float) $row[4], $direction, $geographicCRSSrid, $projectedCRSSrid];
+            yield '#' . $row[0] => [new Degree((float) $row[1]), new Degree((float) $row[2]), new Metre((float) $row[3]), new Metre((float) $row[4]), $direction, $geographicCRSSrid, $projectedCRSSrid];
         }
     }
 
@@ -962,7 +968,7 @@ class GIGSTest extends TestCase
                 'REVERSE' => true,
             };
 
-            yield '#' . $row[0] => [(float) $row[1], (float) $row[2], (float) $row[3], (float) $row[4], $direction, $geographicCRSSrid, $projectedCRSSrid];
+            yield '#' . $row[0] => [new Degree((float) $row[1]), new Degree((float) $row[2]), new Metre((float) $row[3]), new Metre((float) $row[4]), $direction, $geographicCRSSrid, $projectedCRSSrid];
         }
     }
 
@@ -979,7 +985,7 @@ class GIGSTest extends TestCase
                 'REVERSE' => true,
             };
 
-            yield '#' . $row[0] => [(float) $row[1], (float) $row[2], (float) $row[3], (float) $row[4], $direction, $geographicCRSSrid, $projectedCRSSrid];
+            yield '#' . $row[0] => [new Degree((float) $row[1]), new Degree((float) $row[2]), new Metre((float) $row[3]), new Metre((float) $row[4]), $direction, $geographicCRSSrid, $projectedCRSSrid];
         }
     }
 
@@ -996,7 +1002,41 @@ class GIGSTest extends TestCase
                 'REVERSE' => true,
             };
 
-            yield '#' . $row[0] => [(float) $row[1], (float) $row[2], (float) $row[3], (float) $row[4], $direction, $geographicCRSSrid, $projectedCRSSrid];
+            yield '#' . $row[0] => [new Degree((float) $row[1]), new Degree((float) $row[2]), new Metre((float) $row[3]), new Metre((float) $row[4]), $direction, $geographicCRSSrid, $projectedCRSSrid];
+        }
+    }
+
+    public function series5100LCC1Part1Data(): Generator
+    {
+        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 5100 Conversion test data/ASCII/GIGS_conv_5102_LCC1_output_part1.txt');
+
+        $geographicCRSSrid = 'urn:ogc:def:crs:GIGS::64020';
+        $projectedCRSSrid = 'urn:ogc:def:crs:GIGS::62035';
+
+        foreach ($body as $row) {
+            $direction = match ($row['6']) {
+                'FORWARD' => false,
+                'REVERSE' => true,
+            };
+
+            yield '#' . $row[0] => [new Degree((float) $row[1]), new Degree((float) $row[2]), new Metre((float) $row[3]), new Metre((float) $row[4]), $direction, $geographicCRSSrid, $projectedCRSSrid];
+        }
+    }
+
+    public function series5100LCC1Part2Data(): Generator
+    {
+        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 5100 Conversion test data/ASCII/GIGS_conv_5102_LCC1_output_part2.txt');
+
+        $geographicCRSSrid = 'urn:ogc:def:crs:GIGS::64011';
+        $projectedCRSSrid = 'urn:ogc:def:crs:GIGS::62026';
+
+        foreach ($body as $row) {
+            $direction = match ($row['6']) {
+                'FORWARD' => false,
+                'REVERSE' => true,
+            };
+
+            yield '#' . $row[0] => [new Grad((float) $row[1]), new Grad((float) $row[2]), new Metre((float) $row[3]), new Metre((float) $row[4]), $direction, $geographicCRSSrid, $projectedCRSSrid];
         }
     }
 

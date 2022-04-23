@@ -1,32 +1,32 @@
-# File: GIGS_user_3207_ProjectedCRS																		
-# GIGS Test Procedure: 3207																		
-# GIGS Test Dataset Version: 2.0																		
-# EPSG Dataset Version: 10.019 																		
-# GIGS Test Dataset Issue Date: 2021-05-03																		
-#																		
-# Fields:																		
-# [0]: GIGS Projected CRS Code																		
-# [1]: Projected CRS Definition Source																		
-# [2]: GIGS Projected CRS Name																		
-# [3]: Base CRS Code (see GIGS Test Procedure 3205)																		
-# [4]: Base CRS Name (see GIGS Test Procedure 3205)																		
-# [5]: Conversion Code (see GIGS Test Procedure 3206)																		
-# [6]: Conversion Name (see GIGS Test Procedure 3206)																		
-# [7]: EPSG Coordinate System Code																		
-# [8]: Coordinate System Axis 1 Name																		
-# [9]: Coordinate System Axis 1 Abbreviation																		
-# [10]: Coordinate System Axis 1 Orientation																		
-# [11]: Coordinate System Axis 1 Unit																		
-# [12]: Coordinate System Axis 2 Name																		
-# [13]: Coordinate System Axis 2 Abbreviation																		
-# [14]: Coordinate System Axis 2 Orientation																		
-# [15]: Coordinate System Axis 2 Unit																		
-# [16]: Equivalent EPSG CRS Code																		
-# [17]: Equivalent EPSG CRS Name																		
-# [18]: GIGS Remarks																		
-#																		
+# File: GIGS_user_3207_ProjectedCRS
+# GIGS Test Procedure: 3207
+# GIGS Test Dataset Version: 2.0
+# EPSG Dataset Version: 10.019
+# GIGS Test Dataset Issue Date: 2021-05-03
+#
+# Fields:
+# [0]: GIGS Projected CRS Code
+# [1]: Projected CRS Definition Source
+# [2]: GIGS Projected CRS Name
+# [3]: Base CRS Code (see GIGS Test Procedure 3205)
+# [4]: Base CRS Name (see GIGS Test Procedure 3205)
+# [5]: Conversion Code (see GIGS Test Procedure 3206)
+# [6]: Conversion Name (see GIGS Test Procedure 3206)
+# [7]: EPSG Coordinate System Code
+# [8]: Coordinate System Axis 1 Name
+# [9]: Coordinate System Axis 1 Abbreviation
+# [10]: Coordinate System Axis 1 Orientation
+# [11]: Coordinate System Axis 1 Unit
+# [12]: Coordinate System Axis 2 Name
+# [13]: Coordinate System Axis 2 Abbreviation
+# [14]: Coordinate System Axis 2 Orientation
+# [15]: Coordinate System Axis 2 Unit
+# [16]: Equivalent EPSG CRS Code
+# [17]: Equivalent EPSG CRS Name
+# [18]: GIGS Remarks
+#
 # [0]	# [1]	# [2]	# [3]	# [4]	# [5]	# [6]	# [7]	# [8]	# [9]	# [10]	# [11]	# [12]	# [13]	# [14]	# [15]	# [16]	# [17]	# [18]
-62001	User	GIGS projCRS A1	64003	GIGS geogCRS A	65001	GIGS conversion 1	4400	Easting	E	east	metre	Northing	N	north	metre	32631	WGS 84 / UTM zone 31N	
+62001	User	GIGS projCRS A1	64003	GIGS geogCRS A	65001	GIGS conversion 1	4400	Easting	E	east	metre	Northing	N	north	metre	32631	WGS 84 / UTM zone 31N
 62002	User	GIGS projCRS A1-2	64003	GIGS geogCRS A	65001	GIGS conversion 1	4500	Northing	N	north	metre	Easting	E	east	metre			No direct EPSG equivalent; similar to WGS 84 / UTM zone 31N but with different Coordinate System
 62003	User	GIGS projCRS A1-3	64003	GIGS geogCRS A	65001	GIGS conversion 1	4499	Easting	X	east	metre	Northing	Y	north	metre			No direct EPSG equivalent; similar to WGS 84 / UTM zone 31N but with different Coordinate System
 62004	User	GIGS projCRS A1-4	64003	GIGS geogCRS A	65001	GIGS conversion 1	4532	Northing	Y	north	metre	Easting	X	east	metre			No direct EPSG equivalent; similar to WGS 84 / UTM zone 31N but with different Coordinate System
@@ -34,39 +34,39 @@
 62006	User	GIGS projCRS A1-6	64003	GIGS geogCRS A	65001	GIGS conversion 1	4530	Northing	X	north	metre	Easting	Y	east	metre			No direct EPSG equivalent; similar to WGS 84 / UTM zone 31N but with different Coordinate System
 62007	User	GIGS projCRS A2	64003	GIGS geogCRS A	65002	GIGS conversion 2	4400	Easting	E	east	metre	Northing	N	north	metre			No direct EPSG equivalent; would be equivalent to WGS 84 / British National Grid
 62008	User	GIGS projCRS A21	64003	GIGS geogCRS A	65021	GIGS conversion 2 alt A	4400	Easting	E	east	metre	Northing	N	north	metre			No direct EPSG equivalent; Use as alternative to CRS 62007 only if in test 3005 it has not been possible to define proj code 61002 (The CRS A2 is required for Data Operations tests)
-62009	User	GIGS projCRS B2	64005	GIGS geogCRS B	61002	GIGS conversion 2	4400	Easting	E	east	metre	Northing	N	north	metre	27700	OSGB36 / British National Grid	
+62009	User	GIGS projCRS B2	64005	GIGS geogCRS B	61002	GIGS conversion 2	4400	Easting	E	east	metre	Northing	N	north	metre	27700	OSGB36 / British National Grid
 62010	User	GIGS projCRS B22	64005	GIGS geogCRS B	61022	GIGS conversion 2 alt B	4400	Easting	E	east	metre	Northing	N	north	metre			No direct EPSG equivalent; Use as alternative to CRS 62009 only if in test 3005 it has not been possible to define proj code 61002 (The CRS B1 is required for Data Operations tests)
-62011	User	GIGS projCRS C4	64006	GIGS geogCRS C	65004	GIGS conversion 4	4499	Easting	X	east	metre	Northing	Y	north	metre	28992	Amersfoort / RD New	
+62011	User	GIGS projCRS C4	64006	GIGS geogCRS C	65004	GIGS conversion 4	4499	Easting	X	east	metre	Northing	Y	north	metre	28992	Amersfoort / RD New
 62012	User	GIGS projCRS D5	64007	GIGS geogCRS D	65005	GIGS conversion 5	4499	Easting	X	east	metre	Northing	Y	north	metre	5330	Batavia (Jakarta) / NEIEZ	Equivalent to Batavia / NEIEZ (code 3001) except that its definition is with respect to the Jakarta meridian; See GIGS projCRS L27 (62037)
-62013	User	GIGS projCRS E6	64008	GIGS geogCRS E	65006	GIGS conversion 6	4499	Easting	X	east	metre	Northing	Y	north	metre	31370	Belge 1972 / Belgian Lambert 72	
-62014	User	GIGS projCRS F7	64009	GIGS geogCRS F	65007	GIGS conversion 7	4400	Easting	E	east	metre	Northing	N	north	metre	28354	GDA94 / MGA zone 54	
-62015	User	GIGS projCRS F8	64009	GIGS geogCRS F	65008	GIGS conversion 8	4400	Easting	E	east	metre	Northing	N	north	metre	28355	GDA94 / MGA zone 55	
-62016	User	GIGS projCRS F9	64009	GIGS geogCRS F	65009	GIGS conversion 9	4400	Easting	E	east	metre	Northing	N	north	metre	3577	GDA94 / Australian Albers	
+62013	User	GIGS projCRS E6	64008	GIGS geogCRS E	65006	GIGS conversion 6	4499	Easting	X	east	metre	Northing	Y	north	metre	31370	Belge 1972 / Belgian Lambert 72
+62014	User	GIGS projCRS F7	64009	GIGS geogCRS F	65007	GIGS conversion 7	4400	Easting	E	east	metre	Northing	N	north	metre	28354	GDA94 / MGA zone 54
+62015	User	GIGS projCRS F8	64009	GIGS geogCRS F	65008	GIGS conversion 8	4400	Easting	E	east	metre	Northing	N	north	metre	28355	GDA94 / MGA zone 55
+62016	User	GIGS projCRS F9	64009	GIGS geogCRS F	65009	GIGS conversion 9	4400	Easting	E	east	metre	Northing	N	north	metre	3577	GDA94 / Australian Albers
 62017	User	GIGS projCRS G10	64010	GIGS geogCRS G	65010	GIGS conversion 10	6503	Westing	Y	west	metre	Southing	X	south	metre	2049	Hartebeesthoek94 / Lo21	Equivalence applies only to late-binding applications
 62018	User	GIGS projCRS G11	64010	GIGS geogCRS G	65011	GIGS conversion 11	4530	Northing	X	north	metre	Easting	Y	east	metre	22175	POSGAR 98 / Argentina 5	Equivalence applies only to late-binding applications
-62019	User	GIGS projCRS G12	64010	GIGS geogCRS G	65012	GIGS conversion 12	4499	Easting	X	east	metre	Northing	Y	north	metre	5880	SIRGAS2000 / Brazil Polyconic	
+62019	User	GIGS projCRS G12	64010	GIGS geogCRS G	65012	GIGS conversion 12	4499	Easting	X	east	metre	Northing	Y	north	metre	5880	SIRGAS2000 / Brazil Polyconic
 62020	User	GIGS projCRS G13	64010	GIGS geogCRS G	65013	GIGS conversion 13	4400	Easting	E	east	metre	Northing	N	north	metre			No direct EPSG equivalent; Functionally equivalent to GDM2000 / East Malaysia BRSO; utilising different projection
 62021	User	GIGS projCRS G14	64010	GIGS geogCRS G	65014	GIGS conversion 14	4400	Easting	E	east	metre	Northing	N	north	metre	3376	GDM2000 / East Malaysia BRSO	Equivalence applies only to late-binding applications
 62022	User	GIGS projCRS G15	64010	GIGS geogCRS G	65015	GIGS conversion 15	4499	Easting	X	east	metre	Northing	Y	north	metre	3377	GDM2000 / Johor Grid	Equivalence applies only to late-binding applications
 62023	User	GIGS projCRS G16	64010	GIGS geogCRS G	65016	GIGS conversion 16	4532	Northing	Y	north	metre	Easting	X	east	metre	3035	ETRS89-extended / LAEA Europe	Equivalence applies only to late-binding applications
 62024	User	GIGS projCRS G17	64010	GIGS geogCRS G	65017	GIGS conversion 17	4495	Easting	X	east	foot	Northing	Y	north	foot	2921	NAD83(HARN) / Utah North (ft)	Equivalence applies only to late-binding applications
 62025	User	GIGS projCRS G18	64010	GIGS geogCRS G	65018	GIGS conversion 18	4497	Easting	X	east	US survey foot	Northing	Y	north	US survey foot	3568	NAD83(HARN) / Utah North (ftUS)	Equivalence applies only to late-binding applications
-62026	User	GIGS projCRS H19	64011	GIGS geogCRS H	65019	GIGS conversion 19	4499	Easting	X	east	metre	Northing	Y	north	metre	27572	NTF (Paris) / Lambert zone II	
+62026	User	GIGS projCRS H19	64011	GIGS geogCRS H	65019	GIGS conversion 19	4499	Easting	X	east	metre	Northing	Y	north	metre	27572	NTF (Paris) / Lambert zone II
 62027	User	GIGS projCRS A23	64003	GIGS geogCRS A	65023	GIGS conversion 23	4497	Easting	X	east	US survey foot	Northing	Y	north	US survey foot			No direct EPSG equivalent; would be equivalent to WGS 84 / BLM 31N (ftUS)
-62034	User	GIGS projCRS Y24	64003	GIGS geogCRS Y	65024	GIGS conversion 24	4534	Northing	none	north	metre	Easting	none	east	metre	3388	Pulkovo 1942 / Caspian Sea Mercator	
-62035	User	GIGS projCRS M25	64003	GIGS geogCRS M	65025	GIGS conversion 25	4499	Easting	X	east	metre	Northing	Y	north	metre			No direct EPSG equivalent; Deprecated EPSG projCRS 2192 ED50 / France EuroLambert; remains relevant as represents LCC 1SP; not to be confused with replacement EPSG projCRS 2154 RGF93 / Lambert-93 (LCC 2SP)
-62036	User	GIGS projCRS K26	64015	GIGS geogCRS K	65026	GIGS conversion 26	4498	Easting	Y	east	metre	Northing	X	north	metre	23700	HD72 / EOV	
-62037	User	GIGS projCRS L27	64014	GIGS geogCRS L	65027	GIGS conversion 27	4499	Easting	X	east	metre	Northing	Y	north	metre	3001	Batavia / NEIEZ	
-62038	User	GIGS projCRS J28	64012	GIGS geogCRS J	65028	GIGS conversion 28	4400	Easting	E	east	metre	Northing	N	north	metre	26708	NAD27 / UTM zone 8N	
-62039	User	GIGS projCRS Z28	64012	GIGS geogCRS Z	65028	GIGS conversion 28	4400	Easting	E	east	metre	Northing	N	north	metre	26908	NAD83 / UTM zone 8N	
-62028	Library	GIGS projCRS AA1	64326	GIGS geogCRS AA	16031	UTM zone 31 N	4400	Easting	E	east	metre	Northing	N	north	metre	32631	WGS 84 / UTM zone 31N	
-62029	Library	GIGS projCRS BB2	64277	GIGS geogCRS BB	19916	British National Grid	4400	Easting	E	east	metre	Northing	N	north	metre	27700	OSGB36 / British National Grid	
-62030	Library	GIGS projCRS CC4	64289	GIGS geogCRS CC	19914	RD New	4499	Easting	X	east	metre	Northing	Y	north	metre	28992	Amersfoort / RD New	
-62031	Library	GIGS projCRS EE6	64313	GIGS geogCRS EE	19961	Belgian Lambert 72	4499	Easting	X	east	metre	Northing	Y	north	metre	31370	Belge 1972 / Belgian Lambert 72	
-62032	Library	GIGS projCRS FF8	64283	GIGS geogCRS FF	17354	Map Grid of Australia zone 54	4400	Easting	E	east	metre	Northing	N	north	metre	28354	GDA94 / MGA zone 54	
-62033	Library	GIGS projCRS HH19	64807	GIGS geogCRS HH	18082	Lambert zone II	4499	Easting	X	east	metre	Northing	Y	north	metre	27572	NTF (Paris) / Lambert zone II	
-																		
-																		
-																		
-																		
-																		
+62034	User	GIGS projCRS Y24	64017	GIGS geogCRS Y	65024	GIGS conversion 24	4534	Northing	none	north	metre	Easting	none	east	metre	3388	Pulkovo 1942 / Caspian Sea Mercator
+62035	User	GIGS projCRS M25	64020	GIGS geogCRS M	65025	GIGS conversion 25	4499	Easting	X	east	metre	Northing	Y	north	metre			No direct EPSG equivalent; Deprecated EPSG projCRS 2192 ED50 / France EuroLambert; remains relevant as represents LCC 1SP; not to be confused with replacement EPSG projCRS 2154 RGF93 / Lambert-93 (LCC 2SP)
+62036	User	GIGS projCRS K26	64015	GIGS geogCRS K	65026	GIGS conversion 26	4498	Easting	Y	east	metre	Northing	X	north	metre	23700	HD72 / EOV
+62037	User	GIGS projCRS L27	64014	GIGS geogCRS L	65027	GIGS conversion 27	4499	Easting	X	east	metre	Northing	Y	north	metre	3001	Batavia / NEIEZ
+62038	User	GIGS projCRS J28	64012	GIGS geogCRS J	65028	GIGS conversion 28	4400	Easting	E	east	metre	Northing	N	north	metre	26708	NAD27 / UTM zone 8N
+62039	User	GIGS projCRS Z28	64018	GIGS geogCRS Z	65028	GIGS conversion 28	4400	Easting	E	east	metre	Northing	N	north	metre	26908	NAD83 / UTM zone 8N
+62028	Library	GIGS projCRS AA1	64326	GIGS geogCRS AA	16031	UTM zone 31 N	4400	Easting	E	east	metre	Northing	N	north	metre	32631	WGS 84 / UTM zone 31N
+62029	Library	GIGS projCRS BB2	64277	GIGS geogCRS BB	19916	British National Grid	4400	Easting	E	east	metre	Northing	N	north	metre	27700	OSGB36 / British National Grid
+62030	Library	GIGS projCRS CC4	64289	GIGS geogCRS CC	19914	RD New	4499	Easting	X	east	metre	Northing	Y	north	metre	28992	Amersfoort / RD New
+62031	Library	GIGS projCRS EE6	64313	GIGS geogCRS EE	19961	Belgian Lambert 72	4499	Easting	X	east	metre	Northing	Y	north	metre	31370	Belge 1972 / Belgian Lambert 72
+62032	Library	GIGS projCRS FF8	64283	GIGS geogCRS FF	17354	Map Grid of Australia zone 54	4400	Easting	E	east	metre	Northing	N	north	metre	28354	GDA94 / MGA zone 54
+62033	Library	GIGS projCRS HH19	64807	GIGS geogCRS HH	18082	Lambert zone II	4499	Easting	X	east	metre	Northing	Y	north	metre	27572	NTF (Paris) / Lambert zone II
+
+
+
+
+
