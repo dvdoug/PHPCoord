@@ -1,0 +1,33 @@
+# File: GIGS_conv_5103_LCC2_output_part3
+# GIGS Test Procedure: 5103
+# GIGS Test Dataset Version: 2.0
+# EPSG Dataset Version: 10.019
+# GIGS Test Dataset Issue Date: 2021-05-03
+# Note 1: Test for Lambert Conic Conformal (2SP)
+# Note 2: Output file 3 of 3
+# Cartesian Tolerance: 0.1 US survey foot
+# Geographic Tolerance: 0.0000003 degree
+# Round Trip Cartesian Tolerance: 0.02 US survey foot
+# Round Trip Geographic Tolerance: 0.00000006 degree
+#
+# Fields:
+# [0]: Point
+# [1]: Latitude (GIGS CRS Code 64010; GIGS geogCRS G; NAD83(HARN); decimal degree; EPSG CRS code 4152)
+# [2]: Longitude (GIGS CRS Code 64010; GIGS geogCRS G; NAD83(HARN); decimal degree; EPSG CRS code 4152)
+# [3]: Easting (GIGS CRS Code 62025; GIGS projCRS G18; NAD83(HARN) / Utah North (ftUS); US survey foot; EPSG CRS code 3568)
+# [4]: Northing (GIGS CRS Code 62025; GIGS projCRS G18; NAD83(HARN) / Utah North (ftUS); US survey foot; EPSG CRS code 3568)
+# [5]: Transect
+# [6]: Conversion Direction
+# [7]: GIGS Remarks
+#
+# [0]	# [1]	# [2]	# [3]	# [4]	# [5]	# [6]	# [7]
+GIGS-5103-31	49	-110	2003933.266	6452478.797	A	REVERSE
+GIGS-5103-32	47	-110	2016617.897	5717717.179	A	FORWARD
+GIGS-5103-33	45	-110	2029251.514	4985910.592	A	REVERSE
+GIGS-5103-34	43	-110	2041850.997	4256081.225	A	FORWARD
+GIGS-5103-35	41	-110	2054432.46	3527295.672	A	REVERSE
+GIGS-5103-36	41	-110	2054432.46	3527295.672	B	FORWARD
+GIGS-5103-37	41	-108	2606240.302	3543175.461	B	REVERSE
+GIGS-5103-38	41	-106	3157536.542	3571750.248	B	FORWARD
+GIGS-5103-39	41	-104	3708029.155	3613004.897	B	REVERSE
+GIGS-5103-40	41	-102	4257426.541	3666917.555	B	FORWARD

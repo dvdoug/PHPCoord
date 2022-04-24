@@ -36,8 +36,10 @@ use PHPCoord\ProjectedPoint;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPCoord\UnitOfMeasure\Angle\Degree;
 use PHPCoord\UnitOfMeasure\Angle\Grad;
+use PHPCoord\UnitOfMeasure\Length\Foot;
 use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Length\Metre;
+use PHPCoord\UnitOfMeasure\Length\USSurveyFoot;
 use PHPCoord\UnitOfMeasure\Scale\Scale;
 use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
 use PHPUnit\Framework\TestCase;
@@ -902,6 +904,9 @@ class GIGSTest extends TestCase
      * @dataProvider series5100TransverseMercatorPart4Data
      * @dataProvider series5100LCC1Part1Data
      * @dataProvider series5100LCC1Part2Data
+     * @dataProvider series5100LCC2Part1Data
+     * @dataProvider series5100LCC2Part2Data
+     * @dataProvider series5100LCC2Part3Data
      */
     public function testSeries5100Projections(Angle $latitude, Angle $longitude, Length $easting, Length $northing, bool $inReverse, string $geographicCRSSrid, string $projectedCRSSrid): void
     {
@@ -1037,6 +1042,57 @@ class GIGSTest extends TestCase
             };
 
             yield '#' . $row[0] => [new Grad((float) $row[1]), new Grad((float) $row[2]), new Metre((float) $row[3]), new Metre((float) $row[4]), $direction, $geographicCRSSrid, $projectedCRSSrid];
+        }
+    }
+
+    public function series5100LCC2Part1Data(): Generator
+    {
+        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 5100 Conversion test data/ASCII/GIGS_conv_5103_LCC2_output_part1.txt');
+
+        $geographicCRSSrid = 'urn:ogc:def:crs:GIGS::64008';
+        $projectedCRSSrid = 'urn:ogc:def:crs:GIGS::62013';
+
+        foreach ($body as $row) {
+            $direction = match ($row['6']) {
+                'FORWARD' => false,
+                'REVERSE' => true,
+            };
+
+            yield '#' . $row[0] => [new Degree((float) $row[1]), new Degree((float) $row[2]), new Metre((float) $row[3]), new Metre((float) $row[4]), $direction, $geographicCRSSrid, $projectedCRSSrid];
+        }
+    }
+
+    public function series5100LCC2Part2Data(): Generator
+    {
+        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 5100 Conversion test data/ASCII/GIGS_conv_5103_LCC2_output_part2.txt');
+
+        $geographicCRSSrid = 'urn:ogc:def:crs:GIGS::64010';
+        $projectedCRSSrid = 'urn:ogc:def:crs:GIGS::62024';
+
+        foreach ($body as $row) {
+            $direction = match ($row['6']) {
+                'FORWARD' => false,
+                'REVERSE' => true,
+            };
+
+            yield '#' . $row[0] => [new Degree((float) $row[1]), new Degree((float) $row[2]), new Foot((float) $row[3]), new Foot((float) $row[4]), $direction, $geographicCRSSrid, $projectedCRSSrid];
+        }
+    }
+
+    public function series5100LCC2Part3Data(): Generator
+    {
+        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 5100 Conversion test data/ASCII/GIGS_conv_5103_LCC2_output_part3.txt');
+
+        $geographicCRSSrid = 'urn:ogc:def:crs:GIGS::64010';
+        $projectedCRSSrid = 'urn:ogc:def:crs:GIGS::62024';
+
+        foreach ($body as $row) {
+            $direction = match ($row['6']) {
+                'FORWARD' => false,
+                'REVERSE' => true,
+            };
+
+            yield '#' . $row[0] => [new Degree((float) $row[1]), new Degree((float) $row[2]), new USSurveyFoot((float) $row[3]), new USSurveyFoot((float) $row[4]), $direction, $geographicCRSSrid, $projectedCRSSrid];
         }
     }
 
