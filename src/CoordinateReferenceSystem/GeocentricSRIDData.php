@@ -1169,5 +1169,11 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6181',
             'extent_code' => ['1146'],
         ],
+        'urn:ogc:def:crs:EPSG::9988' => [
+            'name' => 'ITRF2020',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1322',
+            'extent_code' => ['2830'],
+        ],
     ];
 }

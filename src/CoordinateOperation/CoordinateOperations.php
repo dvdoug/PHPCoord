@@ -9468,10 +9468,60 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9807',
             'extent_code' => ['4664'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9991' => [
+            'name' => 'ITRF2014 to ITRF2020 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1053',
+            'extent_code' => ['1262'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9992' => [
+            'name' => 'ITRF2008 to ITRF2020 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1053',
+            'extent_code' => ['1262'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9993' => [
+            'name' => 'ITRF2005 to ITRF2020 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1053',
+            'extent_code' => ['1262'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9994' => [
+            'name' => 'ITRF2000 to ITRF2020 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1053',
+            'extent_code' => ['1262'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9995' => [
+            'name' => 'ITRF97 to ITRF2020 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1053',
+            'extent_code' => ['1262'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9996' => [
+            'name' => 'ITRF96 to ITRF2020 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1053',
+            'extent_code' => ['1262'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9997' => [
+            'name' => 'ITRF94 to ITRF2020 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1053',
+            'extent_code' => ['1262'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9998' => [
+            'name' => 'ITRF93 to ITRF2020 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1053',
+            'extent_code' => ['1262'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9999' => [
+            'name' => 'ITRF92 to ITRF2020 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1053',
+            'extent_code' => ['1262'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::10098' => [
             'name' => 'KKJ to ETRS89 (2)',
             'method' => 'urn:ogc:def:method:EPSG::9607',
             'extent_code' => ['3333'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10100' => [
+            'name' => 'ITRF91 to ITRF2020 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1053',
+            'extent_code' => ['1262'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::10101' => [
             'name' => 'Alabama CS27 East zone',
@@ -9482,6 +9532,21 @@ class CoordinateOperations
             'name' => 'Alabama CS27 West zone',
             'method' => 'urn:ogc:def:method:EPSG::9807',
             'extent_code' => ['2155'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10103' => [
+            'name' => 'ITRF90 to ITRF2020 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1053',
+            'extent_code' => ['1262'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10104' => [
+            'name' => 'ITRF89 to ITRF2020 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1053',
+            'extent_code' => ['1262'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10105' => [
+            'name' => 'ITRF88 to ITRF2020 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1053',
+            'extent_code' => ['1262'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::10131' => [
             'name' => 'SPCS83 Alabama East zone (meters)',

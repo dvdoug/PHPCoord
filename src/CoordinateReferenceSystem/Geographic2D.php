@@ -1460,9 +1460,16 @@ class Geographic2D extends Geographic
     /**
      * ITRF2014
      * Extent: World.
-     * Replaces ITRF2008 (code 8999).
+     * Replaces ITRF2008 (code 8999). Replaced by ITRF2020 (CRS code 9990).
      */
     public const EPSG_ITRF2014 = 'urn:ogc:def:crs:EPSG::9000';
+
+    /**
+     * ITRF2020
+     * Extent: World.
+     * Replaces ITRF2014 (code 9000).
+     */
+    public const EPSG_ITRF2020 = 'urn:ogc:def:crs:EPSG::9990';
 
     /**
      * ITRF88

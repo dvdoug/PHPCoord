@@ -3046,9 +3046,21 @@ class Datum
      * ITRF2014 and the average of VLBI and SLR scales/rates. Orientation = ITRF2008@ 2010.0 with zero rotation rates
      * between the ITRF2014 and ITRF2008.
      * Realization of the IERS Terrestrial Reference System (ITRS). Replaces ITRF2008 (datum code 1061) from January
-     * 2016.
+     * 2016. Replaced by ITRF2020 (datum code 1322) from April 2022.
      */
     public const EPSG_INTERNATIONAL_TERRESTRIAL_REFERENCE_FRAME_2014 = 'urn:ogc:def:datum:EPSG::1165';
+
+    /**
+     * International Terrestrial Reference Frame 2020
+     * Type: dynamic geodetic
+     * Extent: World.
+     * Origin at geocentre. Origin = ILRS SLR long-term solution at epoch 2015.0. Zero scale and scale rate between
+     * ITRF2020 and the average of VLBI and SLR scales/rates. Orientation = ITRF2014@ 2015.0 with zero rotation rates
+     * between the ITRF2020 and ITRF2014.
+     * Realization of the IERS Terrestrial Reference System (ITRS). Replaces ITRF2014 (datum code 1165) from April
+     * 2022.
+     */
+    public const EPSG_INTERNATIONAL_TERRESTRIAL_REFERENCE_FRAME_2020 = 'urn:ogc:def:datum:EPSG::1322';
 
     /**
      * Iraq-Kuwait Boundary Datum 1992
@@ -10125,6 +10137,14 @@ class Datum
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
+        ],
+        'urn:ogc:def:datum:EPSG::1322' => [
+            'name' => 'International Terrestrial Reference Frame 2020',
+            'type' => 'dynamic geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => 2015.0,
         ],
         'urn:ogc:def:datum:EPSG::5100' => [
             'name' => 'Mean Sea Level',

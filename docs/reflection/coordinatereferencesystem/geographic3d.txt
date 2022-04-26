@@ -935,7 +935,23 @@ ITRF2014
     CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_ITRF2014)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::7912')
 
-Replaces ITRF2008 (code 7911).
+Replaces ITRF2008 (code 7911). Replaced by ITRF2020 (CRS code 9989).
+
+ITRF2020
+--------
+
+| Used: World.
+
+.. code-block:: php
+
+    Geographic3D::fromSRID(Geographic3D::EPSG_ITRF2020)
+    Geographic3D::fromSRID('urn:ogc:def:crs:EPSG::9989')
+    Geographic::fromSRID(Geographic3D::EPSG_ITRF2020)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::9989')
+    CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_ITRF2020)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9989')
+
+Replaces ITRF2014 (code 7912).
 
 ITRF88
 ------

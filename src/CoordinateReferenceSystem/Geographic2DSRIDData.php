@@ -3269,5 +3269,11 @@ trait Geographic2DSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1321',
             'extent_code' => ['4664'],
         ],
+        'urn:ogc:def:crs:EPSG::9990' => [
+            'name' => 'ITRF2020',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
+            'datum' => 'urn:ogc:def:datum:EPSG::1322',
+            'extent_code' => ['1262'],
+        ],
     ];
 }

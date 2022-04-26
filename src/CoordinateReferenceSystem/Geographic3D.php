@@ -495,9 +495,16 @@ class Geographic3D extends Geographic
     /**
      * ITRF2014
      * Extent: World.
-     * Replaces ITRF2008 (code 7911).
+     * Replaces ITRF2008 (code 7911). Replaced by ITRF2020 (CRS code 9989).
      */
     public const EPSG_ITRF2014 = 'urn:ogc:def:crs:EPSG::7912';
+
+    /**
+     * ITRF2020
+     * Extent: World.
+     * Replaces ITRF2014 (code 7912).
+     */
+    public const EPSG_ITRF2020 = 'urn:ogc:def:crs:EPSG::9989';
 
     /**
      * ITRF88

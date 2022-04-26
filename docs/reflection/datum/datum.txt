@@ -4437,7 +4437,22 @@ International Terrestrial Reference Frame 2014
 
 Origin at geocentre. Origin = ILRS SLR long-term solution at epoch 2010.0. Zero scale and scale rate between ITRF2014 and the average of VLBI and SLR scales/rates. Orientation = ITRF2008@ 2010.0 with zero rotation rates between the ITRF2014 and ITRF2008.
 
-Realization of the IERS Terrestrial Reference System (ITRS). Replaces ITRF2008 (datum code 1061) from January 2016.
+Realization of the IERS Terrestrial Reference System (ITRS). Replaces ITRF2008 (datum code 1061) from January 2016. Replaced by ITRF2020 (datum code 1322) from April 2022.
+
+International Terrestrial Reference Frame 2020
+----------------------------------------------
+
+| Type: Dynamic geodetic
+| Used: World.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1322')
+
+Origin at geocentre. Origin = ILRS SLR long-term solution at epoch 2015.0. Zero scale and scale rate between ITRF2020 and the average of VLBI and SLR scales/rates. Orientation = ITRF2014@ 2015.0 with zero rotation rates between the ITRF2020 and ITRF2014.
+
+Realization of the IERS Terrestrial Reference System (ITRS). Replaces ITRF2014 (datum code 1165) from April 2022.
 
 Iraq-Kuwait Boundary Datum 1992
 -------------------------------
