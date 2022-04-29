@@ -1,31 +1,31 @@
-# File: GIGS_lib_2203_PrimeMeridian							
-# GIGS Test Procedure: 2203							
-# GIGS Test Dataset Version: 2.0							
-# EPSG Dataset Version: 10.019 							
-# GIGS Test Dataset Issue Date: 2021-05-03							
-#							
-# Fields:							
-# [0]: EPSG Prime Meridian Code							
-# [1]: EPSG Prime Meridian Name							
-# [2]: Alias(es)							
-# [3]: Longitude from Greenwich							
-# [4]: Unit Name							
-# [5]: Longitude from Greenwich (decimal degrees)							
-# [6]: EPSG Usage Extent							
-# [7]: GIGS Remarks							
-#							
+# File: GIGS_lib_2203_PrimeMeridian
+# GIGS Test Procedure: 2203
+# GIGS Test Dataset Version: 2.1.0
+# EPSG Dataset Version: 10.019
+# GIGS Test Dataset Issue Date: 2022-04-29
+#
+# Fields:
+# [0]: EPSG Prime Meridian Code
+# [1]: EPSG Prime Meridian Name
+# [2]: Alias(es)
+# [3]: Longitude from Greenwich
+# [4]: Unit Name
+# [5]: Longitude from Greenwich (decimal degrees)
+# [6]: EPSG Usage Extent
+# [7]: GIGS Remarks
+#
 # [0]	# [1]	# [2]	# [3]	# [4]	# [5]	# [6]	# [7]
 8901	Greenwich		0	degree	0	Numerous	International reference meridian as defined by IERS
-8902	Lisbon		-9.0754862	sexagesimal DMS	-9.1319061	Europe	
+8902	Lisbon		-9.0754862	sexagesimal DMS	-9.1319061	Europe
 8903	Paris		2.5969213	grad	2.3372292	Europe	Value adopted by IGN (Paris) in 1936; Equivalent to 2 20 14.025; Preferred by EPSG to earlier value of 2 20 13.95 (2.596898 grads) used by RGS London
-8904	Bogota		-74.04513	sexagesimal DMS	-74.0809167	South America	
+8904	Bogota		-74.04513	sexagesimal DMS	-74.0809167	South America
 8905	Madrid		-3.411455	sexagesimal DMS	-3.687375	Spain	Longitude has had various determinations
-8906	Rome		12.27084	sexagesimal DMS	12.4523333	Europe	
+8906	Rome		12.27084	sexagesimal DMS	12.4523333	Europe
 8907	Bern		7.26225	sexagesimal DMS	7.4395833	Europe	1895 value; Newer value of 7 26 22.335 determined in 1938
 8908	Jakarta		106.482779	sexagesimal DMS	106.8077194	Southeast Asia	1924 determination; Supersedes 1910 value of 106 48 37.05 E of Greenwich
-8909	Ferro	El Hierro	-17.4	sexagesimal DMS	-17.6666667	Western Europe	
-8910	Brussels		4.220471	sexagesimal DMS	4.367975	Europe	
-8911	Stockholm		18.03298	sexagesimal DMS	18.0582778	Europe	
+8909	Ferro	El Hierro	-17.4	sexagesimal DMS	-17.6666667	Western Europe
+8910	Brussels		4.220471	sexagesimal DMS	4.367975	Europe
+8911	Stockholm		18.03298	sexagesimal DMS	18.0582778	Europe
 8912	Athens		23.4258815	sexagesimal DMS	23.7163375	Greece	Used in Greece for older mapping based on Hatt projection
-8913	Oslo	Kristiania; Christiana	10.43225	sexagesimal DMS	10.7229167	Scandinavia	
+8913	Oslo	Kristiania; Christiana	10.43225	sexagesimal DMS	10.7229167	Scandinavia
 8914	Paris RGS		2.201395	sexagesimal DMS	2.3372083	Europe	Equivalent to 2.596898 grads

@@ -1,8 +1,8 @@
 # File: GIGS_conv_5102_LCC1_output_part2
 # GIGS Test Procedure: 5102
-# GIGS Test Dataset Version: 2.0
+# GIGS Test Dataset Version: 2.1.0
 # EPSG Dataset Version: 10.019
-# GIGS Test Dataset Issue Date: 2021-05-03
+# GIGS Test Dataset Issue Date: 2022-04-29
 # Note 1: Test for Lambert Conic Conformal (1SP)
 # Note 2: Output file 2 of 2
 # Cartesian Tolerance: 0.03 metre

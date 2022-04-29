@@ -1,8 +1,8 @@
 # File: GIGS_lib_2210_VerticalCRS
 # GIGS Test Procedure: 2210
-# GIGS Test Dataset Version: 2.0
 # EPSG Dataset Version: 10.047
-# GIGS Test Dataset Issue Date: 2021-05-03
+# GIGS Test Dataset Version: 2.1.1
+# GIGS Test Dataset Issue Date: 2022-04-29
 #
 # Fields:
 # [0]: EPSG CRS Code

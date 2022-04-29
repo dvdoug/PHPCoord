@@ -1007,7 +1007,7 @@ class GIGSTest extends TestCase
                 'REVERSE' => true,
             };
 
-            yield '#' . $row[0] => [new Degree((float) $row[1]), new Degree((float) $row[2]), new Metre((float) $row[3]), new Metre((float) $row[4]), $direction, $geographicCRSSrid, $projectedCRSSrid];
+            yield '#' . $row[0] => [new Degree((float) $row[1]), new Degree((float) $row[2]), new Metre((float) $row[4]), new Metre((float) $row[3]), $direction, $geographicCRSSrid, $projectedCRSSrid];
         }
     }
 

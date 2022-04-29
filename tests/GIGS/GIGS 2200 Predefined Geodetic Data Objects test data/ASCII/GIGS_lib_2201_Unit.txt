@@ -1,41 +1,43 @@
-# File: GIGS_lib_2201_Unit							
-# GIGS Test Procedure: 2201							
-# GIGS Test Dataset Version: 2.0							
-# EPSG Dataset Version: 10.019 							
-# GIGS Test Dataset Issue Date: 2021-05-03							
-#							
-# Fields:							
-# [0]: EPSG Unit of Measure Code							
-# [1]: Unit Type							
-# [2]: EPSG Unit of Measure Name							
-# [3]: Alias(es)							
-# [4]: Base units per unit							
-# [5]: Base units per unit description							
-# [6]: EPSG Usage Extent							
-# [7]: GIGS Remarks							
-#							
-# [0]	# [1]	# [2]	# [3]	# [4]	# [5]	# [6]	# [7]
-9001	Linear	metre	meter; International metre; m	1	metres per unit	Numerous	SI base unit for length
-9002	Linear	foot	international foot; ft	0.3048	metres per unit	Numerous	
-9003	Linear	US survey foot	American foot; ftUS; ft(US)	0.30480061	metres per unit	USA	
-9005	Linear	Clarke's foot	South African geodetic foot; ftCla; Clarke foot	0.304797265	metres per unit	Australia; South Africa; British West Indies	Assumes Clarke's 1865 ratio of 1 British foot equal to 0.3047972654 French legal metres applies to the international metre
-9031	Linear	German legal metre	GLM	1.000013597	metres per unit	Namibia	
-9036	Linear	kilometre	kilometer; km	1000	metres per unit	Numerous	
-9039	Linear	Clarke's link	link (Clarke's ratio); lkCla; Clarke link	0.201166195	metres per unit	Australia; South Africa; British West Indies	Equal to 1/100 Clarke's chain; assumes Clarke's 1865 ratio of 1 British foot equal to 0.3047972654 French legal metres applies to the international metre
-9040	Linear	British yard (Sears 1922)	yard; ydSe	0.914398415	metres per unit	East Malaysia; New Zealand	Uses Sear's 1922 British yard-metre ratio as given by Bomford as 39.370147 inches per metre
-9041	Linear	British foot (Sears 1922)	foot; ftSe	0.304799472	metres per unit	East Malaysia; New Zealand	Uses Sear's 1922 British yard-metre ratio as given by Bomford as 39.370147 inches per metre
-9042	Linear	British chain (Sears 1922)	chain; chSe	20.11676512	metres per unit	East Malaysia; New Zealand	Uses Sear's 1922 British yard-metre ratio as given by Bomford as 39.370147 inches per metre
-9084	Linear	Indian yard	yard; ydInd	0.914398531	metres per unit	South Asia	Indian Foot equal to 0.99999566 British feet (A.R.Clarke 1865); British yard (equal to 3 British feet) taken to be J.S.Clark's 1865 value of 0.9144025 metres
-9094	Linear	Gold Coast foot	foot; ftGC	0.30479971	metres per unit	Ghana	Used in Ghana and some adjacent parts of British west Africa prior to metrication; except for the metrication of projection defining parameters when British foot (Sears 1922) used
-9098	Linear	link	international link; lk	0.201168	metres per unit	Fiji	Equal to 1/100 international chain
-9101	Angle	radian	rad	1	radians per unit	Colombia; USA; Canada	SI coherent derived unit (standard unit) for plane angle; used in some geocentric 7- and 10-parameter transformations
-9102	Angle	degree	deg; angular degree	0.017453293	radians per unit	Numerous	Equal to pi/180 radians. Finite or fractional representation e.g. DDD.dddddddd referred to as decimal degree
-9104	Angle	arc-second	sec; angular second	0.00000485	radians per unit	Numerous	1/60th arc-minute equal to ((pi/180) / 3600) radians
-9105	Angle	grad	gr; gon	0.015707963	radians per unit	France	Equal to pi/200 radians
-9109	Angle	microradian	µrad	0.000001	radians per unit	Netherlands; Norway	Some 7- and 10-parameter transformations
-9110	Angle	sexagesimal DMS	DDD.MMSSsss; sexagesimal degree DDD.MMSSsss	NULL		Numerous	Special EPSG construct for storing sexagesimal degree values as a single real number; applications do not necessarily have to adopt this approach but should somehow exactly honour sexagesimal value; Sexagesimal degree (123 45 67.8 [H]) should be used for display at human interface; Pseudo unit; Format: signed degrees - period - minutes (2 digits) - integer seconds (2 digits) - fraction of seconds (any precision); Must include leading zero in minutes and seconds and exclude decimal point for seconds; Convert to deg using algorithm
-9113	Angle	centesimal second	cc; centesimal-second	0.00000157	radians per unit	Switzerland	1/100 of a centesimal minute or 1/10000th of a grad and gon equal to ((pi/200) / 10000) radians; Used in one geocentric 7-parameter transformation
-9201	Scale	unity	euclid	1	parts per unit	Numerous	EPSG standard unit for scale; SI coherent derived unit (standard unit) for dimensionless quantity; expressed by the number one but this is not explicitly shown
-9202	Scale	parts per million	ppm; µm/m	0.000001	parts per unit	Numerous	
-9203	Scale	coefficient		NULL		Numerous	Used when parameters are coefficients; they inherently take the units which depend upon the term to which the coefficient applies
-9301	Linear	British chain (Sears 1922 truncated)	chain; chSe(T)	20.116756	metres per unit	Malaysia	Uses Sear's 1922 British yard-metre ratio (UoM code 9040) truncated to 6 significant figures; this truncated ratio (0.914398 UoM code 9099) then converted to other imperial units; 1 chSe(T) equal to 22 ydSe(T); Used in metrication of Malaya RSO grid.
+# File: GIGS_lib_2201_Unit
+# GIGS Test Procedure: 2201
+# GIGS Test Dataset Version: 2.1.1
+# EPSG Dataset Version: 10.019
+# GIGS Test Dataset Issue Date: 2022-04-29
+#
+# Fields:
+# [0]: EPSG Unit of Measure Code
+# [1]: Unit Type
+# [2]: EPSG Unit of Measure Name
+# [3]: Alias(es)
+# [4]: Base units per unit
+# [5]: Base units per unit description
+# [6]: Factor b
+# [7]: Factor c
+# [8]: EPSG Usage Extent
+# [9]: GIGS Remarks
+#
+# [0]	# [1]	# [2]	# [3]	# [4]	# [5]	# [6]	# [7]	# [8]	# [9]
+9001	Linear	metre	meter; International metre; m	1	metres per unit	1	1	Numerous	SI base unit for length
+9002	Linear	foot	international foot; ft	0.3048	metres per unit	0.3048	1	Numerous
+9003	Linear	US survey foot	American foot; ftUS; ft(US)	0.304800609601219	metres per unit	12	39.37	USA
+9005	Linear	Clarke's foot	South African geodetic foot; ftCla; Clarke foot	0.3047972654	metres per unit	0.3047972654	1	Australia; South Africa; British West Indies	Assumes Clarke's 1865 ratio of 1 British foot equal to 0.3047972654 French legal metres applies to the international metre
+9031	Linear	German legal metre	GLM	1.0000135965	metres per unit	1.0000135965	1	Namibia
+9036	Linear	kilometre	kilometer; km	1000	metres per unit	1000	1	Numerous
+9039	Linear	Clarke's link	link (Clarke's ratio); lkCla; Clarke link	0.201166195164	metres per unit	0.201166195164	1	Australia; South Africa; British West Indies	Equal to 1/100 Clarke's chain; assumes Clarke's 1865 ratio of 1 British foot equal to 0.3047972654 French legal metres applies to the international metre
+9040	Linear	British yard (Sears 1922)	yard; ydSe	0.914398414616029	metres per unit	36	39.370147	East Malaysia; New Zealand	Uses Sear's 1922 British yard-metre ratio as given by Bomford as 39.370147 inches per metre
+9041	Linear	British foot (Sears 1922)	foot; ftSe	0.304799471538676	metres per unit	12	39.370147	East Malaysia; New Zealand	Uses Sear's 1922 British yard-metre ratio as given by Bomford as 39.370147 inches per metre
+9042	Linear	British chain (Sears 1922)	chain; chSe	20.1167651215526	metres per unit	792	39.370147	East Malaysia; New Zealand	Uses Sear's 1922 British yard-metre ratio as given by Bomford as 39.370147 inches per metre
+9084	Linear	Indian yard	yard; ydInd	0.914398530744441	metres per unit	36	39.370142	South Asia	Indian Foot equal to 0.99999566 British feet (A.R.Clarke 1865); British yard (equal to 3 British feet) taken to be J.S.Clark's 1865 value of 0.9144025 metres
+9094	Linear	Gold Coast foot	foot; ftGC	0.304799710181509	metres per unit	6378300	20926201	Ghana	Used in Ghana and some adjacent parts of British west Africa prior to metrication; except for the metrication of projection defining parameters when British foot (Sears 1922) used
+9098	Linear	link	international link; lk	0.201168	metres per unit	20.1168	100	Fiji	Equal to 1/100 international chain
+9101	Angle	radian	rad	1	radians per unit	1	1	Colombia; USA; Canada	SI coherent derived unit (standard unit) for plane angle; used in some geocentric 7- and 10-parameter transformations
+9102	Angle	degree	deg; angular degree	0.017453293	radians per unit	3.14159265358979	180	Numerous	Equal to pi/180 radians. Finite or fractional representation e.g. DDD.dddddddd referred to as decimal degree
+9104	Angle	arc-second	sec; angular second	0.0000048481368111	radians per unit	3.14159265358979	648000	Numerous	1/60th arc-minute equal to ((pi/180) / 3600) radians
+9105	Angle	grad	gr; gon	0.0157079632679489	radians per unit	3.14159265358979	200	France	Equal to pi/200 radians
+9109	Angle	microradian	µrad	0.000001	radians per unit	1	1000000	Netherlands; Norway	Some 7- and 10-parameter transformations
+9110	Angle	sexagesimal DMS	DDD.MMSSsss; sexagesimal degree DDD.MMSSsss	NULL		NULL	NULL	Numerous	Special EPSG construct for storing sexagesimal degree values as a single real number; applications do not necessarily have to adopt this approach but should somehow exactly honour sexagesimal value; Sexagesimal degree (123 45 67.8 [H]) should be used for display at human interface; Pseudo unit; Format: signed degrees - period - minutes (2 digits) - integer seconds (2 digits) - fraction of seconds (any precision); Must include leading zero in minutes and seconds and exclude decimal point for seconds; Convert to deg using algorithm
+9113	Angle	centesimal second	cc; centesimal-second	0.0000015707963268	radians per unit	3.14159265358979	2000000	Switzerland	1/100 of a centesimal minute or 1/10000th of a grad and gon equal to ((pi/200) / 10000) radians; Used in one geocentric 7-parameter transformation
+9201	Scale	unity	euclid	1	parts per unit	1	1	Numerous	EPSG standard unit for scale; SI coherent derived unit (standard unit) for dimensionless quantity; expressed by the number one but this is not explicitly shown
+9202	Scale	parts per million	ppm; µm/m	0.000001	parts per unit	1	1000000	Numerous
+9203	Scale	coefficient		NULL		NULL	NULL	Numerous	Used when parameters are coefficients; they inherently take the units which depend upon the term to which the coefficient applies
+9301	Linear	British chain (Sears 1922 truncated)	chain; chSe(T)	20.116756	metres per unit	20.116756	1	Malaysia	Uses Sear's 1922 British yard-metre ratio (UoM code 9040) truncated to 6 significant figures; this truncated ratio (0.914398 UoM code 9099) then converted to other imperial units; 1 chSe(T) equal to 22 ydSe(T); Used in metrication of Malaya RSO grid.

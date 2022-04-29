@@ -1,8 +1,8 @@
 # File: GIGS_user_3205_GeodeticCRS
 # GIGS Test Procedure: 3205
-# GIGS Test Dataset Version: 2.0
+# GIGS Test Dataset Version: 2.1.0
 # EPSG Dataset Version: 10.019
-# GIGS Test Dataset Issue Date: 2021-05-03
+# GIGS Test Dataset Issue Date: 2022-04-29
 #
 # Fields:
 # [0]: GIGS Geodetic CRS Code

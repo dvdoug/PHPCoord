@@ -1,8 +1,8 @@
 # File: GIGS_user_3206_Conversion
 # GIGS Test Procedure: 3206
-# GIGS Test Dataset Version: 2.0
 # EPSG Dataset Version: 10.051
-# GIGS Test Dataset Issue Date: 2021-05-03
+# GIGS Test Dataset Version: 2.1.0
+# GIGS Test Dataset Issue Date: 2022-04-29
 # Note: Entities are all map projections; a type of coordinate conversion
 #
 # Fields:

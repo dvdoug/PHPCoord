@@ -1,21 +1,21 @@
-# File: GIGS_dep_7001					
-# GIGS Test Procedures: 7001					
-# GIGS Test Dataset Version: 2.0					
-# EPSG Dataset Version: 10.019					
-# GIGS Test Dataset Issue Date: 2021-05-03					
-#					
-# Fields:					
-# [0]: EPSG Object Code					
-# [1]: Entity Type					
-# [2]: Deprecated Entity Name					
-# [3]: EPSG Code for replacement					
-# [4]: Deprecation Reason					
-# [5]: Deprecation Date					
-#					
+# File: GIGS_dep_7001
+# GIGS Test Procedures: 7001
+# GIGS Test Dataset Version: 2.1.0
+# EPSG Dataset Version: 10.019
+# GIGS Test Dataset Issue Date: 2022-04-29
+#
+# Fields:
+# [0]: EPSG Object Code
+# [1]: Entity Type
+# [2]: Deprecated Entity Name
+# [3]: EPSG Code for replacement
+# [4]: Deprecation Reason
+# [5]: Deprecation Date
+#
 # [0]	# [1]	# [2]	# [3]	# [4]	# [5]
 1788	Coordinate_Operation	RT90 to WGS 84 (2)	1896	Error in signs of rotations	2002-09-19
 1920	Coordinate_Operation	RGNC 1991 to WGS 84 (1)	15880	Source CRS was associated with incorrect ellipsoid	2006-07-21
-1961	Coordinate_Operation	ED50 to WGS 84 (32)	3904	Replaced by 1999 due to error in rZ parameter value. 1999 replaced by 3904 due to error in scale factor value	2004-01-07 
+1961	Coordinate_Operation	ED50 to WGS 84 (32)	3904	Replaced by 1999 due to error in rZ parameter value. 1999 replaced by 3904 due to error in scale factor value	2004-01-07
 2063	Coordinate Reference System	Dabola 1981 / UTM zone 28N	3461	Associated with incorrect base geogCRS	2007-02-06
 2152	Coordinate Reference System	NAD83(CSRS98) / UTM zone 12N	2956	Change of base geogCRS name to accord with revised Geomatics Canada practice	2002-07-13
 3073	Coordinate Reference System	NAD83 / Maine CS2000 Central	3463	Error in projection parameter for projection used by this CRS	2007-02-06

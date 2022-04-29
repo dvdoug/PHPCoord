@@ -1,8 +1,8 @@
 # File: GIGS_conv_5101_TM_output_part3_JHS
 # GIGS Test Procedure: 5101
-# GIGS Test Dataset Version: 2.0
+# GIGS Test Dataset Version: 2.1.0
 # EPSG Dataset Version: 10.019
-# GIGS Test Dataset Issue Date: 2021-05-03
+# GIGS Test Dataset Issue Date: 2022-04-29
 # Note 1: Test for Transverse Mercator calculation outputs based on JHS formulas see separate file for USGS formulas
 # Note 2: Output file 3 of 4
 # Cartesian Tolerance: 0.03 metre

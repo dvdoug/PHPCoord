@@ -1,23 +1,23 @@
-# File: GIGS_user_3202_Ellipsoid											
-# GIGS Test Procedure: 3202											
-# GIGS Test Dataset Version: 2.0											
-# EPSG Dataset Version: 10.019 											
-# GIGS Test Dataset Issue Date: 2021-05-03											
-#											
-# Fields:											
-# [0]: GIGS Ellipsoid Code											
-# [1]: GIGS Ellipsoid Name											
-# [2]: Semi-major axis (a)											
-# [3]: Unit Name											
-# [4]: Second Defining Parameter: Inverse flattening (1/f)											
-# [5]: Second Defining Parameter: Semi-minor axis (b)											
-# [6]: Spherical											
-# [7]: Unit Conversion Factor											
-# [8]: Semi-major axis (a) in metres											
-# [9]: Equivalent EPSG Ellipsoid Code											
-# [10]: Equivalent EPSG Ellipsoid Name											
-# [11]: GIGS Remarks											
-#											
+# File: GIGS_user_3202_Ellipsoid
+# GIGS Test Procedure: 3202
+# GIGS Test Dataset Version: 2.1.0
+# EPSG Dataset Version: 10.019
+# GIGS Test Dataset Issue Date: 2022-04-29
+#
+# Fields:
+# [0]: GIGS Ellipsoid Code
+# [1]: GIGS Ellipsoid Name
+# [2]: Semi-major axis (a)
+# [3]: Unit Name
+# [4]: Second Defining Parameter: Inverse flattening (1/f)
+# [5]: Second Defining Parameter: Semi-minor axis (b)
+# [6]: Spherical
+# [7]: Unit Conversion Factor
+# [8]: Semi-major axis (a) in metres
+# [9]: Equivalent EPSG Ellipsoid Code
+# [10]: Equivalent EPSG Ellipsoid Name
+# [11]: GIGS Remarks
+#
 # [0]	# [1]	# [2]	# [3]	# [4]	# [5]	# [6]	# [7]	# [8]	# [9]	# [10]	# [11]
 67030	GIGS ellipsoid A	6378137	metre	298.257223563	0	FALSE	0	6378137	7030	WGS 84	Defined using a and 1/f
 67001	GIGS ellipsoid B	6377563.396	metre	299.3249646	0	FALSE	0	6377563.396	7001	Airy 1830	Defined using a and 1/f

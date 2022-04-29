@@ -1,8 +1,8 @@
 # File: GIGS_lib_2208_CoordTfm
 # GIGS Test Procedure: 2208
-# GIGS Test Dataset Version: 2.0
 # EPSG Dataset Version: 10.047
-# GIGS Test Dataset Issue Date: 2021-05-03
+# GIGS Test Dataset Version: 2.1.0
+# GIGS Test Dataset Issue Date: 2022-04-29
 #
 # Fields:
 # [0]: EPSG Coordinate Operation Code

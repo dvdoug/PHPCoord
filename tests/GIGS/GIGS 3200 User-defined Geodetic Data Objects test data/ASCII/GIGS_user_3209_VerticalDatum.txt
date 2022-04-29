@@ -1,23 +1,18 @@
-# File: GIGS_user_3209_VerticalDatum												
-# GIGS Test Procedure: 3209												
-# GIGS Test Dataset Version: 2.0												
-# EPSG Dataset Version: 10.019 												
-# GIGS Test Dataset Issue Date: 2021-05-03												
-#												
-# Fields:												
-# [0]: GIGS Vertical Datum Code												
-# [1]: GIGS Vertical Datum Name												
-# [2]: Datum Origin (see associated entity in EPSG Dataset)												
-# [3]: Equivalent EPSG Datum Code												
-# [4]: Equivalent EPSG Datum Name												
-# [5]: GIGS Remarks												
-#												
-# [0]	# [1]	# [2]	# [3]	# [4]	# [5]							
-66601	GIGS vertical datum U	Origin U	5134	Black Sea	 							
-66602	GIGS vertical datum V	Origin V	5105	Baltic 1977	 							
-66603	GIGS vertical datum W	Origin W	5106	Caspian Sea	 							
-												
-												
-												
-												
-												
+# File: GIGS_user_3209_VerticalDatum
+# GIGS Test Procedure: 3209
+# GIGS Test Dataset Version: 2.1.0
+# EPSG Dataset Version: 10.019
+# GIGS Test Dataset Issue Date: 2022-04-29
+#
+# Fields:
+# [0]: GIGS Vertical Datum Code
+# [1]: GIGS Vertical Datum Name
+# [2]: Datum Origin (see associated entity in EPSG Dataset)
+# [3]: Equivalent EPSG Datum Code
+# [4]: Equivalent EPSG Datum Name
+# [5]: GIGS Remarks
+#
+# [0]	# [1]	# [2]	# [3]	# [4]	# [5]
+66601	GIGS vertical datum U	Origin U	5134	Black Sea
+66602	GIGS vertical datum V	Origin V	5105	Baltic 1977
+66603	GIGS vertical datum W	Origin W	5106	Caspian Sea
