@@ -907,6 +907,7 @@ class GIGSTest extends TestCase
      * @dataProvider series5100LCC2Part1Data
      * @dataProvider series5100LCC2Part2Data
      * @dataProvider series5100LCC2Part3Data
+     * @dataProvider series5100OblStereoData
      */
     public function testSeries5100Projections(Angle $latitude, Angle $longitude, Length $easting, Length $northing, bool $inReverse, string $geographicCRSSrid, string $projectedCRSSrid): void
     {
@@ -1093,6 +1094,23 @@ class GIGSTest extends TestCase
             };
 
             yield '#' . $row[0] => [new Degree((float) $row[1]), new Degree((float) $row[2]), new USSurveyFoot((float) $row[3]), new USSurveyFoot((float) $row[4]), $direction, $geographicCRSSrid, $projectedCRSSrid];
+        }
+    }
+
+    public function series5100OblStereoData(): Generator
+    {
+        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 5100 Conversion test data/ASCII/GIGS_conv_5104_OblStereo_output.txt');
+
+        $geographicCRSSrid = 'urn:ogc:def:crs:GIGS::64006';
+        $projectedCRSSrid = 'urn:ogc:def:crs:GIGS::62011';
+
+        foreach ($body as $row) {
+            $direction = match ($row['6']) {
+                'FORWARD' => false,
+                'REVERSE' => true,
+            };
+
+            yield '#' . $row[0] => [new Degree((float) $row[1]), new Degree((float) $row[2]), new Metre((float) $row[3]), new Metre((float) $row[4]), $direction, $geographicCRSSrid, $projectedCRSSrid];
         }
     }
 
