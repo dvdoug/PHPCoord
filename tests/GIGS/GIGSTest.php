@@ -166,13 +166,6 @@ class GIGSTest extends TestCase
     {
         $crs = CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::' . $epsgCode);
         $this->assertEquals($name, $crs->getName());
-
-        if ($datumCode === '6258') { // treat ensemble as latest as code does
-            $datumCode = '1206';
-        } elseif ($datumCode === '6326') { // treat ensemble as latest as code does
-            $datumCode = '1309';
-        }
-
         $this->assertEquals('urn:ogc:def:datum:EPSG::' . $datumCode, $crs->getDatum()->getSRID());
 
         if ($crs instanceof Geocentric) {
@@ -205,13 +198,6 @@ class GIGSTest extends TestCase
     {
         $crs = Projected::fromSRID('urn:ogc:def:crs:EPSG::' . $epsgCode);
         $this->assertEquals($name, $crs->getName());
-
-        if ($datumCode === '6258') { // treat ensemble as latest as code does
-            $datumCode = '1206';
-        } elseif ($datumCode === '6326') { // treat ensemble as latest as code does
-            $datumCode = '1309';
-        }
-
         $this->assertEquals('urn:ogc:def:datum:EPSG::' . $datumCode, $crs->getDatum()->getSRID());
     }
 

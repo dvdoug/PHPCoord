@@ -56,10 +56,10 @@ class DatumTest extends TestCase
         self::assertEquals(2005, $object->getFrameReferenceEpoch());
     }
 
-    public function testGetLatestFromEnsemble(): void
+    public function testGetFromEnsemble(): void
     {
         $object = Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_ENSEMBLE);
-        self::assertEquals(Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_G2139), $object);
+        self::assertEquals(Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_ENSEMBLE), $object);
     }
 
     public function testWithoutEllipsoid(): void
