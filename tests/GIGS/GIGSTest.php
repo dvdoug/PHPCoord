@@ -895,7 +895,7 @@ class GIGSTest extends TestCase
      * @dataProvider series5100LCC2Part3Data
      * @dataProvider series5100OblStereoData
      */
-    public function testSeries5100Projections(Angle $latitude, Angle $longitude, Length $easting, Length $northing, bool $inReverse, string $geographicCRSSrid, string $projectedCRSSrid): void
+    public function testSeries5100Projections(Angle $latitude, Angle $longitude, Length $easting, Length $northing, bool $inReverse, string $geographicCRSSrid, string $projectedCRSSrid, float $cartesianTolerance, float $geographicTolerance, float $roundTripCartesianTolerance, float $roundTripGeographicTolerance): void
     {
         $geographicCRS = Geographic2D::fromSRID($geographicCRSSrid);
         $projectedCRS = Projected::fromSRID($projectedCRSSrid);
@@ -913,20 +913,20 @@ class GIGSTest extends TestCase
 
         if (!$inReverse) {
             $convertedProjectedPoint = $geographicPoint->convert($projectedCRS);
-            $this->assertEqualsWithDelta($projectedPoint->getEasting()->getValue(), $convertedProjectedPoint->getEasting()->getValue(), 0.006);
-            $this->assertEqualsWithDelta($projectedPoint->getNorthing()->getValue(), $convertedProjectedPoint->getNorthing()->getValue(), 0.006);
+            $this->assertEqualsWithDelta($projectedPoint->getEasting()->getValue(), $convertedProjectedPoint->getEasting()->getValue(), $cartesianTolerance);
+            $this->assertEqualsWithDelta($projectedPoint->getNorthing()->getValue(), $convertedProjectedPoint->getNorthing()->getValue(), $cartesianTolerance);
 
             $convertedGeographicPoint = $convertedProjectedPoint->convert($geographicCRS);
-            $this->assertEqualsWithDelta($geographicPoint->getLatitude()->getValue(), $convertedGeographicPoint->getLatitude()->getValue(), 0.00000006);
-            $this->assertEqualsWithDelta($geographicPoint->getLongitude()->getValue(), $convertedGeographicPoint->getLongitude()->getValue(), 0.00000006);
+            $this->assertEqualsWithDelta($geographicPoint->getLatitude()->getValue(), $convertedGeographicPoint->getLatitude()->getValue(), $roundTripGeographicTolerance);
+            $this->assertEqualsWithDelta($geographicPoint->getLongitude()->getValue(), $convertedGeographicPoint->getLongitude()->getValue(), $roundTripGeographicTolerance);
         } else {
             $convertedGeographicPoint = $projectedPoint->convert($geographicCRS);
-            $this->assertEqualsWithDelta($geographicPoint->getLatitude()->getValue(), $convertedGeographicPoint->getLatitude()->getValue(), 0.00000006);
-            $this->assertEqualsWithDelta($geographicPoint->getLongitude()->getValue(), $convertedGeographicPoint->getLongitude()->getValue(), 0.00000006);
+            $this->assertEqualsWithDelta($geographicPoint->getLatitude()->getValue(), $convertedGeographicPoint->getLatitude()->getValue(), $geographicTolerance);
+            $this->assertEqualsWithDelta($geographicPoint->getLongitude()->getValue(), $convertedGeographicPoint->getLongitude()->getValue(), $geographicTolerance);
 
             $convertedProjectedPoint = $convertedGeographicPoint->convert($projectedCRS);
-            $this->assertEqualsWithDelta($projectedPoint->getEasting()->getValue(), $convertedProjectedPoint->getEasting()->getValue(), 0.006);
-            $this->assertEqualsWithDelta($projectedPoint->getNorthing()->getValue(), $convertedProjectedPoint->getNorthing()->getValue(), 0.006);
+            $this->assertEqualsWithDelta($projectedPoint->getEasting()->getValue(), $convertedProjectedPoint->getEasting()->getValue(), $roundTripCartesianTolerance);
+            $this->assertEqualsWithDelta($projectedPoint->getNorthing()->getValue(), $convertedProjectedPoint->getNorthing()->getValue(), $roundTripCartesianTolerance);
         }
     }
 
@@ -943,7 +943,7 @@ class GIGSTest extends TestCase
                 'REVERSE' => true,
             };
 
-            yield '#' . $row[0] => [new Degree((float) $row[1]), new Degree((float) $row[2]), new Metre((float) $row[3]), new Metre((float) $row[4]), $direction, $geographicCRSSrid, $projectedCRSSrid];
+            yield '#' . $row[0] => [new Degree((float) $row[1]), new Degree((float) $row[2]), new Metre((float) $row[3]), new Metre((float) $row[4]), $direction, $geographicCRSSrid, $projectedCRSSrid, (float)$header['Cartesian Tolerance'], (float)$header['Geographic Tolerance'], (float)$header['Round Trip Cartesian Tolerance'], (float)$header['Round Trip Geographic Tolerance']];
         }
     }
 
@@ -960,7 +960,7 @@ class GIGSTest extends TestCase
                 'REVERSE' => true,
             };
 
-            yield '#' . $row[0] => [new Degree((float) $row[1]), new Degree((float) $row[2]), new Metre((float) $row[3]), new Metre((float) $row[4]), $direction, $geographicCRSSrid, $projectedCRSSrid];
+            yield '#' . $row[0] => [new Degree((float) $row[1]), new Degree((float) $row[2]), new Metre((float) $row[3]), new Metre((float) $row[4]), $direction, $geographicCRSSrid, $projectedCRSSrid, (float)$header['Cartesian Tolerance'], (float)$header['Geographic Tolerance'], (float)$header['Round Trip Cartesian Tolerance'], (float)$header['Round Trip Geographic Tolerance']];
         }
     }
 
@@ -977,7 +977,7 @@ class GIGSTest extends TestCase
                 'REVERSE' => true,
             };
 
-            yield '#' . $row[0] => [new Degree((float) $row[1]), new Degree((float) $row[2]), new Metre((float) $row[3]), new Metre((float) $row[4]), $direction, $geographicCRSSrid, $projectedCRSSrid];
+            yield '#' . $row[0] => [new Degree((float) $row[1]), new Degree((float) $row[2]), new Metre((float) $row[3]), new Metre((float) $row[4]), $direction, $geographicCRSSrid, $projectedCRSSrid, (float)$header['Cartesian Tolerance'], (float)$header['Geographic Tolerance'], (float)$header['Round Trip Cartesian Tolerance'], (float)$header['Round Trip Geographic Tolerance']];
         }
     }
 
@@ -994,7 +994,7 @@ class GIGSTest extends TestCase
                 'REVERSE' => true,
             };
 
-            yield '#' . $row[0] => [new Degree((float) $row[1]), new Degree((float) $row[2]), new Metre((float) $row[4]), new Metre((float) $row[3]), $direction, $geographicCRSSrid, $projectedCRSSrid];
+            yield '#' . $row[0] => [new Degree((float) $row[1]), new Degree((float) $row[2]), new Metre((float) $row[4]), new Metre((float) $row[3]), $direction, $geographicCRSSrid, $projectedCRSSrid, (float)$header['Cartesian Tolerance'], (float)$header['Geographic Tolerance'], (float)$header['Round Trip Cartesian Tolerance'], (float)$header['Round Trip Geographic Tolerance']];
         }
     }
 
@@ -1011,7 +1011,7 @@ class GIGSTest extends TestCase
                 'REVERSE' => true,
             };
 
-            yield '#' . $row[0] => [new Degree((float) $row[1]), new Degree((float) $row[2]), new Metre((float) $row[3]), new Metre((float) $row[4]), $direction, $geographicCRSSrid, $projectedCRSSrid];
+            yield '#' . $row[0] => [new Degree((float) $row[1]), new Degree((float) $row[2]), new Metre((float) $row[3]), new Metre((float) $row[4]), $direction, $geographicCRSSrid, $projectedCRSSrid, (float)$header['Cartesian Tolerance'], (float)$header['Geographic Tolerance'], (float)$header['Round Trip Cartesian Tolerance'], (float)$header['Round Trip Geographic Tolerance']];
         }
     }
 
@@ -1028,7 +1028,7 @@ class GIGSTest extends TestCase
                 'REVERSE' => true,
             };
 
-            yield '#' . $row[0] => [new Grad((float) $row[1]), new Grad((float) $row[2]), new Metre((float) $row[3]), new Metre((float) $row[4]), $direction, $geographicCRSSrid, $projectedCRSSrid];
+            yield '#' . $row[0] => [new Grad((float) $row[1]), new Grad((float) $row[2]), new Metre((float) $row[3]), new Metre((float) $row[4]), $direction, $geographicCRSSrid, $projectedCRSSrid, (float)$header['Cartesian Tolerance'], (float)$header['Geographic Tolerance'], (float)$header['Round Trip Cartesian Tolerance'], (float)$header['Round Trip Geographic Tolerance']];
         }
     }
 
@@ -1045,7 +1045,7 @@ class GIGSTest extends TestCase
                 'REVERSE' => true,
             };
 
-            yield '#' . $row[0] => [new Degree((float) $row[1]), new Degree((float) $row[2]), new Metre((float) $row[3]), new Metre((float) $row[4]), $direction, $geographicCRSSrid, $projectedCRSSrid];
+            yield '#' . $row[0] => [new Degree((float) $row[1]), new Degree((float) $row[2]), new Metre((float) $row[3]), new Metre((float) $row[4]), $direction, $geographicCRSSrid, $projectedCRSSrid, (float)$header['Cartesian Tolerance'], (float)$header['Geographic Tolerance'], (float)$header['Round Trip Cartesian Tolerance'], (float)$header['Round Trip Geographic Tolerance']];
         }
     }
 
@@ -1062,7 +1062,7 @@ class GIGSTest extends TestCase
                 'REVERSE' => true,
             };
 
-            yield '#' . $row[0] => [new Degree((float) $row[1]), new Degree((float) $row[2]), new Foot((float) $row[3]), new Foot((float) $row[4]), $direction, $geographicCRSSrid, $projectedCRSSrid];
+            yield '#' . $row[0] => [new Degree((float) $row[1]), new Degree((float) $row[2]), new Foot((float) $row[3]), new Foot((float) $row[4]), $direction, $geographicCRSSrid, $projectedCRSSrid, (float)$header['Cartesian Tolerance'], (float)$header['Geographic Tolerance'], (float)$header['Round Trip Cartesian Tolerance'], (float)$header['Round Trip Geographic Tolerance']];
         }
     }
 
@@ -1079,7 +1079,7 @@ class GIGSTest extends TestCase
                 'REVERSE' => true,
             };
 
-            yield '#' . $row[0] => [new Degree((float) $row[1]), new Degree((float) $row[2]), new USSurveyFoot((float) $row[3]), new USSurveyFoot((float) $row[4]), $direction, $geographicCRSSrid, $projectedCRSSrid];
+            yield '#' . $row[0] => [new Degree((float) $row[1]), new Degree((float) $row[2]), new USSurveyFoot((float) $row[3]), new USSurveyFoot((float) $row[4]), $direction, $geographicCRSSrid, $projectedCRSSrid, (float)$header['Cartesian Tolerance'], (float)$header['Geographic Tolerance'], (float)$header['Round Trip Cartesian Tolerance'], (float)$header['Round Trip Geographic Tolerance']];
         }
     }
 
@@ -1096,7 +1096,7 @@ class GIGSTest extends TestCase
                 'REVERSE' => true,
             };
 
-            yield '#' . $row[0] => [new Degree((float) $row[1]), new Degree((float) $row[2]), new Metre((float) $row[3]), new Metre((float) $row[4]), $direction, $geographicCRSSrid, $projectedCRSSrid];
+            yield '#' . $row[0] => [new Degree((float) $row[1]), new Degree((float) $row[2]), new Metre((float) $row[3]), new Metre((float) $row[4]), $direction, $geographicCRSSrid, $projectedCRSSrid, (float)$header['Cartesian Tolerance'], (float)$header['Geographic Tolerance'], (float)$header['Round Trip Cartesian Tolerance'], (float)$header['Round Trip Geographic Tolerance']];
         }
     }
 
@@ -1139,7 +1139,17 @@ class GIGSTest extends TestCase
             }
         }
 
-        return [$header, $body];
+        $processedHeader = [];
+        foreach ($header as $headerRow) {
+            $headerRow = trim($headerRow, ' #');
+            if (!$headerRow) {
+                break;
+            }
+            $parts = explode(':', $headerRow);
+            $processedHeader[trim($parts[0])] = trim($parts[1]);
+        }
+
+        return [$processedHeader, $body];
     }
 
     private function makeParamName(string $string): string
