@@ -6989,12 +6989,12 @@ class CoordinateOperations
             'extent_code' => ['1262'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::8080' => [
-            'name' => 'MTM Nova Scotia zone 4 v2',
+            'name' => 'MTM Nova Scotia 2010 zone 4',
             'method' => 'urn:ogc:def:method:EPSG::9807',
             'extent_code' => ['1534'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::8081' => [
-            'name' => 'MTM Nova Scotia zone 5 v2',
+            'name' => 'MTM Nova Scotia 2010 zone 5',
             'method' => 'urn:ogc:def:method:EPSG::9807',
             'extent_code' => ['1535'],
         ],
@@ -9453,6 +9453,26 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::1093',
             'extent_code' => ['4662'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9960' => [
+            'name' => 'WGS 84 (Transit) to WGS 84 (G730) (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1032',
+            'extent_code' => ['1262'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9961' => [
+            'name' => 'WGS 84 (G730) to WGS 84 (G873) (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1032',
+            'extent_code' => ['1262'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9962' => [
+            'name' => 'WGS 84 (G873) to WGS 84 (G1150) (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1056',
+            'extent_code' => ['1262'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9963' => [
+            'name' => 'WGS 84 (G1150) to WGS 84 (G1674) (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1056',
+            'extent_code' => ['1262'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::9966' => [
             'name' => 'HULLEE13-TM',
             'method' => 'urn:ogc:def:method:EPSG::9807',
@@ -9467,6 +9487,16 @@ class CoordinateOperations
             'name' => 'FNL22-TM',
             'method' => 'urn:ogc:def:method:EPSG::9807',
             'extent_code' => ['4664'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9981' => [
+            'name' => 'MTM Nova Scotia 1997 zone 4',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['1534'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9982' => [
+            'name' => 'MTM Nova Scotia 1997 zone 5',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['1535'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::9991' => [
             'name' => 'ITRF2014 to ITRF2020 (1)',

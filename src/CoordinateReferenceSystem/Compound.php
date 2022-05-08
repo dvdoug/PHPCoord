@@ -394,6 +394,12 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_ETRS89_PLUS_OSTEND_HEIGHT = 'urn:ogc:def:crs:EPSG::9907';
 
     /**
+     * ETRS89 + SVD2006 height
+     * Extent: Arctic (Norway (Svalbard) onshore and offshore) - between 81°10'N and 76°10'N.
+     */
+    public const EPSG_ETRS89_PLUS_SVD2006_HEIGHT = 'urn:ogc:def:crs:EPSG::20001';
+
+    /**
      * ETRS89 + St. Marys height
      * Extent: United Kingdom (UK) - Great Britain - England - Isles of Scilly onshore.
      */

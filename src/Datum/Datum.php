@@ -4926,9 +4926,9 @@ class Datum
      * Yukon.
      * Defined at reference epoch 1997.0 by a transformation from ITRF96 (see transformation code 8259). The frame is
      * kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
-     * Published 1998-01-01; adopted by the Canadian federal government and the provincial governments of British
-     * Columbia, Alberta, Saskatchewan, Manitoba, Quebec, New Brunswick and Prince Edward Island. Replaces
-     * NAD83(CSRS96). Replaced by NAD83(CSRS)v3.
+     * Published 1998-01-01; adopted by the Canadian federal government and the provincial governments of Alberta,
+     * Saskatchewan, Manitoba, Quebec, New Brunswick and Prince Edward Island. Replaces NAD83(CSRS96). Replaced by
+     * NAD83(CSRS)v3.
      */
     public const EPSG_NORTH_AMERICAN_DATUM_OF_1983_CSRS_VERSION_2 = 'urn:ogc:def:datum:EPSG::1193';
 
@@ -4955,7 +4955,8 @@ class Datum
      * Defined at reference epoch 2002.0 by a transformation from ITRF2000 (see transformation code 8261). The frame is
      * kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
      * Published 2002-01-01; adopted by the Canadian federal government (2002) and the provincial governments of
-     * British Columbia (for mainland) (2005) and Alberta (2004). Replaces NAD83(CSRS)v3. Replaced by NAD83(CSRS)v5.
+     * British Columbia (for mainland only, not Victoria Island) (2005) and Alberta (2004). Replaces NAD83(CSRS)v3.
+     * Replaced by NAD83(CSRS)v5.
      */
     public const EPSG_NORTH_AMERICAN_DATUM_OF_1983_CSRS_VERSION_4 = 'urn:ogc:def:datum:EPSG::1195';
 
@@ -4994,8 +4995,8 @@ class Datum
      * Yukon.
      * Defined at reference epoch 2010.0 by a transformation from ITRF2014 (see transformation code 8265). The frame is
      * kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
-     * Published 2017-05-01; adopted by the Canadian federal government (2017) and the provincial government of Alberta
-     * (2021). Replaces NAD83(CSRS)v6.
+     * Published 2017-05-01; adopted by the Canadian federal government (2017) and the provincial governments of
+     * Alberta (2021) and Prince Edward Island (2020). Replaces NAD83(CSRS)v6.
      */
     public const EPSG_NORTH_AMERICAN_DATUM_OF_1983_CSRS_VERSION_7 = 'urn:ogc:def:datum:EPSG::1198';
 
@@ -7169,6 +7170,16 @@ class Datum
      * Orthometric heights.
      */
     public const EPSG_SULE_SKERRY = 'urn:ogc:def:datum:EPSG::5142';
+
+    /**
+     * Svalbard vertical datum 2006
+     * Type: vertical
+     * Extent: Arctic (Norway (Svalbard) onshore and offshore) - between 81°10'N and 76°10'N.
+     * Mean Sea Level (MSL) at Ny-Ålesund. The SVD2006 surface (arcgp-2006-sk) is the Arctic Gravity Project 2006
+     * (arcgp-2006) surface adjusted to two benchmarks tied to the Ny-Ålesund tide gauge. arcgp-2006-sk=arcgp-2006 -
+     * 0.8986m.
+     */
+    public const EPSG_SVALBARD_VERTICAL_DATUM_2006 = 'urn:ogc:def:datum:EPSG::1323';
 
     /**
      * Swiss Terrestrial Reference System 1995
@@ -10145,6 +10156,14 @@ class Datum
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => 2015.0,
+        ],
+        'urn:ogc:def:datum:EPSG::1323' => [
+            'name' => 'Svalbard vertical datum 2006',
+            'type' => 'vertical',
+            'ellipsoid' => null,
+            'prime_meridian' => null,
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
         ],
         'urn:ogc:def:datum:EPSG::5100' => [
             'name' => 'Mean Sea Level',

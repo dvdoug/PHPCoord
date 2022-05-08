@@ -1523,5 +1523,11 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1318',
             'extent_code' => ['3339'],
         ],
+        'urn:ogc:def:crs:EPSG::20000' => [
+            'name' => 'SVD2006 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1323',
+            'extent_code' => ['4058'],
+        ],
     ];
 }

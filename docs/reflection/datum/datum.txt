@@ -4447,7 +4447,7 @@ International Terrestrial Reference Frame 2020
 
 .. code-block:: php
 
-    Datum::fromSRID(Datum::)
+    Datum::fromSRID(Datum::EPSG_INTERNATIONAL_TERRESTRIAL_REFERENCE_FRAME_2020)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1322')
 
 Origin at geocentre. Origin = ILRS SLR long-term solution at epoch 2015.0. Zero scale and scale rate between ITRF2020 and the average of VLBI and SLR scales/rates. Orientation = ITRF2014@ 2015.0 with zero rotation rates between the ITRF2020 and ITRF2014.
@@ -7230,7 +7230,7 @@ North American Datum of 1983 (CSRS) version 2
 
 Defined at reference epoch 1997.0 by a transformation from ITRF96 (see transformation code 8259). The frame is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
 
-Published 1998-01-01; adopted by the Canadian federal government and the provincial governments of British Columbia, Alberta, Saskatchewan, Manitoba, Quebec, New Brunswick and Prince Edward Island. Replaces NAD83(CSRS96). Replaced by NAD83(CSRS)v3.
+Published 1998-01-01; adopted by the Canadian federal government and the provincial governments of Alberta, Saskatchewan, Manitoba, Quebec, New Brunswick and Prince Edward Island. Replaces NAD83(CSRS96). Replaced by NAD83(CSRS)v3.
 
 North American Datum of 1983 (CSRS) version 3
 ---------------------------------------------
@@ -7260,7 +7260,7 @@ North American Datum of 1983 (CSRS) version 4
 
 Defined at reference epoch 2002.0 by a transformation from ITRF2000 (see transformation code 8261). The frame is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
 
-Published 2002-01-01; adopted by the Canadian federal government (2002) and the provincial governments of British Columbia (for mainland) (2005) and Alberta (2004). Replaces NAD83(CSRS)v3. Replaced by NAD83(CSRS)v5.
+Published 2002-01-01; adopted by the Canadian federal government (2002) and the provincial governments of British Columbia (for mainland only, not Victoria Island) (2005) and Alberta (2004). Replaces NAD83(CSRS)v3. Replaced by NAD83(CSRS)v5.
 
 North American Datum of 1983 (CSRS) version 5
 ---------------------------------------------
@@ -7305,7 +7305,7 @@ North American Datum of 1983 (CSRS) version 7
 
 Defined at reference epoch 2010.0 by a transformation from ITRF2014 (see transformation code 8265). The frame is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
 
-Published 2017-05-01; adopted by the Canadian federal government (2017) and the provincial government of Alberta (2021). Replaces NAD83(CSRS)v6.
+Published 2017-05-01; adopted by the Canadian federal government (2017) and the provincial governments of Alberta (2021) and Prince Edward Island (2020). Replaces NAD83(CSRS)v6.
 
 North American Datum of 1983 (CSRS96)
 -------------------------------------
@@ -10477,6 +10477,19 @@ Sule Skerry
     Datum::fromSRID('urn:ogc:def:datum:EPSG::5142')
 
 Orthometric heights.
+
+Svalbard vertical datum 2006
+----------------------------
+
+| Type: Vertical
+| Used: Arctic (Norway (Svalbard) onshore and offshore) - between 81°10'N and 76°10'N.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_SVALBARD_VERTICAL_DATUM_2006)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1323')
+
+Mean Sea Level (MSL) at Ny-Ålesund. The SVD2006 surface (arcgp-2006-sk) is the Arctic Gravity Project 2006 (arcgp-2006) surface adjusted to two benchmarks tied to the Ny-Ålesund tide gauge. arcgp-2006-sk=arcgp-2006 - 0.8986m.
 
 Swiss Terrestrial Reference System 1995
 ---------------------------------------

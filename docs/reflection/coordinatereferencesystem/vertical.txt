@@ -3123,6 +3123,20 @@ SRVN16 height
 
 Orthometric heights. Replaces SRVN71.
 
+SVD2006 height
+--------------
+
+| Used: Arctic (Norway (Svalbard) onshore and offshore) - between 81°10'N and 76°10'N.
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_SVD2006_HEIGHT)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::20000')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_SVD2006_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::20000')
+
+Defined through the arcgp-2006-sk geoid model.
+
 SVS2000 height
 --------------
 

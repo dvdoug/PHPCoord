@@ -3071,11 +3071,11 @@ ITRF2020
 
 .. code-block:: php
 
-    Geographic2D::fromSRID(Geographic2D::)
+    Geographic2D::fromSRID(Geographic2D::EPSG_ITRF2020)
     Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::9990')
-    Geographic::fromSRID(Geographic2D::)
+    Geographic::fromSRID(Geographic2D::EPSG_ITRF2020)
     Geographic::fromSRID('urn:ogc:def:crs:EPSG::9990')
-    CoordinateReferenceSystem::fromSRID(Geographic2D::)
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ITRF2020)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9990')
 
 Replaces ITRF2014 (code 9000).

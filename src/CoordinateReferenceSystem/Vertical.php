@@ -1675,6 +1675,13 @@ class Vertical extends CoordinateReferenceSystem
     public const EPSG_SRVN16_HEIGHT = 'urn:ogc:def:crs:EPSG::9255';
 
     /**
+     * SVD2006 height
+     * Extent: Arctic (Norway (Svalbard) onshore and offshore) - between 81°10'N and 76°10'N.
+     * Defined through the arcgp-2006-sk geoid model.
+     */
+    public const EPSG_SVD2006_HEIGHT = 'urn:ogc:def:crs:EPSG::20000';
+
+    /**
      * SVS2000 height
      * Extent: Slovenia - onshore.
      * Replaces Trieste height (CRS code 5195) in Slovenia from 2000. Replaced by SVS2010 (CRS code 8690) from 2019-01.

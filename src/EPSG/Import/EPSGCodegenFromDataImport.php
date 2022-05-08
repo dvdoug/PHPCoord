@@ -544,6 +544,8 @@ class EPSGCodegenFromDataImport
         9940, // NTv2 HeTa2010.gsb
         9979, // NTv2 SIRGAS1995-to-SIRGAS2000.gsb
         9980, // NTv2 SIRGAS2000-to-SIRGAS-CONSIR17P01.gsb
+        10106, // BIN arcgp-2006-sk.bin
+        10107, // BIN arcgp-2006-sk.bin
 
         // Construction/engineering/scientific projects not of general use
         9302, // NTv2 HS2TN15_NTv2.gsb
@@ -1390,6 +1392,8 @@ class EPSGCodegenFromDataImport
             'public',
             [
                 Projected::EPSG_LUREF_LUXEMBOURG_TM => ['Luxembourg 1930 / Gauss'],
+                Projected::EPSG_NAD83_CSRS_V6_MTM_NS_2010_ZONE_4 => ['NAD83(CSRS)v6 / MTM Nova Scotia zone 4'],
+                Projected::EPSG_NAD83_CSRS_V6_MTM_NS_2010_ZONE_5 => ['NAD83(CSRS)v6 / MTM Nova Scotia zone 5'],
             ]
         );
         $this->codeGen->updateDocs(Projected::class, $data);
