@@ -1,0 +1,35 @@
+# File: GIGS_conv_5107_AmPolyC_output
+# GIGS Test Procedure: 5107
+# GIGS Test Dataset Version: 2.1.0
+# EPSG Dataset Version: 10.019
+# GIGS Test Dataset Issue Date: 2022-04-29
+# Note: Test for American Polyconic
+# Cartesian Tolerance: 0.05 metre
+# Geographic Tolerance: 0.0000006 degree
+# Round Trip Cartesian Tolerance: 0.006 metre
+# Round Trip Geographic Tolerance: 0.00000006 degree
+#
+# Fields:
+# [0]: Point
+# [1]: Latitude (GIGS CRS Code 64010; GIGS geogCRS G; SIRGAS 2000; decimal degree; EPSG CRS code 4674)
+# [2]: Longitude (GIGS CRS Code 64010; GIGS geogCRS G; SIRGAS 2000; decimal degree; EPSG CRS code 4674)
+# [3]: Easting (GIGS CRS Code 62019; GIGS projCRS G12; SIRGAS 2000 / Brazil Polyconic; metre; EPSG CRS code 5880)
+# [4]: Northing (GIGS CRS Code 62019; GIGS projCRS G12; SIRGAS 2000 / Brazil Polyconic; metre; EPSG CRS code 5880)
+# [5]: Transect
+# [6]: Conversion Direction
+# [7]: GIGS Remarks
+#
+# [0]	# [1]	# [2]	# [3]	# [4]	# [5]	# [6]	# [7]
+GIGS-5107-01	0	-54	5000000	10000000	A	FORWARD
+GIGS-5107-02	6	-45	5996378.71	10671650.056	A	REVERSE
+GIGS-5107-03	0	-45	6001875.417	10000000	A	REVERSE
+GIGS-5107-04	-6	-45	5996378.71	9328349.944	A	FORWARD
+GIGS-5107-05	-13	-41	6409689.587	8526306.262	A	FORWARD
+GIGS-5107-06	-20	-38	6671808.92	7707735.73	A	REVERSE
+GIGS-5107-07	-24	-37	6725584.492	7240461.996	A	FORWARD
+GIGS-5107-08	-30	-36	6729619.74	6543762.576	A	REVERSE
+GIGS-5107-09	-30	-57	4710574.223	6676097.811	B	FORWARD
+GIGS-5107-10	-29.36747667	-54	5000000	6750000	B	REVERSE
+GIGS-5107-11	-27.5	-47	5691318.147	6937461.051	B	FORWARD
+GIGS-5107-12	-24	-37	6725584.492	7240461.996	B	REVERSE
+GIGS-5107-13	-22.5	-30	7458947.701	7313327.317	B	FORWARD	Round Trip calculation point
