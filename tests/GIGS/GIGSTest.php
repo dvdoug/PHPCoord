@@ -896,6 +896,7 @@ class GIGSTest extends TestCase
      * @dataProvider series5100OblStereoData
      * @dataProvider series5100HOMBPart1Data
      * @dataProvider series5100HOMBPart2Data
+     * @dataProvider series5100HOMAData
      */
     public function testSeries5100Projections(Angle $latitude, Angle $longitude, Length $easting, Length $northing, bool $inReverse, string $geographicCRSSrid, string $projectedCRSSrid, float $cartesianTolerance, float $geographicTolerance, float $roundTripCartesianTolerance, float $roundTripGeographicTolerance): void
     {
@@ -1125,6 +1126,23 @@ class GIGSTest extends TestCase
 
         $geographicCRSSrid = 'urn:ogc:def:crs:GIGS::64015';
         $projectedCRSSrid = 'urn:ogc:def:crs:GIGS::62036';
+
+        foreach ($body as $row) {
+            $direction = match ($row['6']) {
+                'FORWARD' => false,
+                'REVERSE' => true,
+            };
+
+            yield '#' . $row[0] => [new Degree((float) $row[1]), new Degree((float) $row[2]), new Metre((float) $row[3]), new Metre((float) $row[4]), $direction, $geographicCRSSrid, $projectedCRSSrid, (float) $header['Cartesian Tolerance'], (float) $header['Geographic Tolerance'], (float) $header['Round Trip Cartesian Tolerance'], (float) $header['Round Trip Geographic Tolerance']];
+        }
+    }
+
+    public function series5100HOMAData(): Generator
+    {
+        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 5100 Conversion test data/ASCII/GIGS_conv_5106_HOM-A_output.txt');
+
+        $geographicCRSSrid = 'urn:ogc:def:crs:GIGS::64010';
+        $projectedCRSSrid = 'urn:ogc:def:crs:GIGS::62021';
 
         foreach ($body as $row) {
             $direction = match ($row['6']) {
