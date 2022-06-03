@@ -1,0 +1,35 @@
+# File: GIGS_conv_5105_HOM-B_output_part2
+# GIGS Test Procedure: 5105
+# GIGS Test Dataset Version: 2.1.0
+# EPSG Dataset Version: 10.019
+# GIGS Test Dataset Issue Date: 2022-04-29
+# Note 1: Test for Hotine Oblique Mercator (variant B)
+# Note 2: Output file 2 of 2
+# Cartesian Tolerance: 0.05 metre
+# Geographic Tolerance: 0.0000006 degree
+# Round Trip Cartesian Tolerance: 0.006 metre
+# Round Trip Geographic Tolerance: 0.00000006 degree
+#
+# Fields:
+# [0]: Point
+# [1]: Latitude (GIGS CRS Code 64015; GIGS geogCRS K; HD72; decimal degree; EPSG CRS code 4237)
+# [2]: Longitude (GIGS CRS Code 64015; GIGS geogCRS K; HD72; decimal degree; EPSG CRS code 4237)
+# [3]: Easting (GIGS CRS Code 62036; GIGS projCRS K26; HD72 / EOV; metre; EPSG CRS code 23700)
+# [4]: Northing (GIGS CRS Code 62036; GIGS projCRS K26; HD72 / EOV; metre; EPSG CRS code 23700)
+# [5]: Transect
+# [6]: Conversion Direction
+# [7]: GIGS Remarks
+#
+# [0]	# [1]	# [2]	# [3]	# [4]	# [5]	# [6]	# [7]
+GIGS-5105-24	48.5	16	424714.235	355124.6	A	FORWARD	Outside modern boundary of Hungary
+GIGS-5105-25	48	17.2	512056.188	296756.716	A	REVERSE
+GIGS-5105-26	47.63613472	17.58265056	539847.765	255701.086	A	FORWARD
+GIGS-5105-27	47.14439361	19.04857167	650000	200000	A	REVERSE
+GIGS-5105-28	46.87566833	19.22342944	663329.053	170142.318	A	FORWARD
+GIGS-5105-29	46.37030111	20.13574056	733651.455	114532.099	A	REVERSE
+GIGS-5105-30	45.7	21.4	833148.855	42191.482	A	FORWARD	Outside modern boundary of Hungary
+GIGS-5105-31	49.3	22.3	886565.935	444656.613	B	REVERSE	Outside modern boundary of Hungary
+GIGS-5105-32	48.48997472	21.29419861	815999.993	351999.998	B	FORWARD
+GIGS-5105-33	46.87566833	19.22342944	663329.053	170142.318	B	REVERSE
+GIGS-5105-34	46.06874639	17.61915361	539403.958	81440.103	B	FORWARD
+GIGS-5105-35	45.5	16.36	439836.709	20816.456	B	REVERSE	Outside modern boundary of Hungary

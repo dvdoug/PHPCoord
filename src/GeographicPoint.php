@@ -1690,9 +1690,8 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $A = $a * $B * $kC * sqrt(1 - $e2) / (1 - $e2 * sin($latC) ** 2);
         $tO = tan(M_PI / 4 - $latC / 2) / ((1 - $e * sin($latC)) / (1 + $e * sin($latC))) ** ($e / 2);
         $D = $B * sqrt((1 - $e2)) / (cos($latC) * sqrt(1 - $e2 * sin($latC) ** 2));
-        $DD = max(1, $D ** 2);
-        $F = $D + sqrt($DD - 1) * static::sign($latC);
-        $H = $F * ($tO) ** $B;
+        $F = $D + sqrt(max($D ** 2, 1) - 1) * static::sign($latC);
+        $H = $F * $tO ** $B;
         $G = ($F - 1 / $F) / 2;
         $gammaO = self::asin(sin($alphaC) / $D);
         $lonO = $lonC - (self::asin($G * tan($gammaO))) / $B;
@@ -1700,7 +1699,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         if ($alphaC === M_PI / 2) {
             $uC = $A * ($lonC - $lonO);
         } else {
-            $uC = ($A / $B) * atan2(sqrt($DD - 1), cos($alphaC)) * static::sign($latC);
+            $uC = ($A / $B) * atan2(sqrt(max($D ** 2, 1) - 1), cos($alphaC)) * static::sign($latC);
         }
 
         $t = tan(M_PI / 4 - $latitude / 2) / ((1 - $e * sin($latitude)) / (1 + $e * sin($latitude))) ** ($e / 2);
@@ -1710,16 +1709,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $V = sin($B * ($longitude - $lonO));
         $U = (-$V * cos($gammaO) + $S * sin($gammaO)) / $T;
         $v = $A * log((1 - $U) / (1 + $U)) / (2 * $B);
-
-        if ($alphaC === M_PI / 2) {
-            if ($longitude === $lonC) {
-                $u = 0;
-            } else {
-                $u = ($A * atan(($S * cos($gammaO) + $V * sin($gammaO)) / cos($B * ($longitude - $lonO))) / $B) - (abs($uC) * static::sign($latC) * static::sign($lonC - $longitude));
-            }
-        } else {
-            $u = ($A * atan2(($S * cos($gammaO) + $V * sin($gammaO)), cos($B * ($longitude - $lonO))) / $B) - (abs($uC) * static::sign($latC));
-        }
+        $u = ($A * atan2(($S * cos($gammaO) + $V * sin($gammaO)), cos($B * ($longitude - $lonO))) / $B) - (abs($uC) * static::sign($latC));
 
         $easting = $v * cos($gammaC) + $u * sin($gammaC) + $eastingAtProjectionCentre->asMetres()->getValue();
         $northing = $u * cos($gammaC) - $v * sin($gammaC) + $northingAtProjectionCentre->asMetres()->getValue();
