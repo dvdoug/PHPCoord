@@ -1,0 +1,35 @@
+# File: GIGS_conv_5109_Albers_output
+# GIGS Test Procedure: 5109
+# GIGS Test Dataset Version: 2.1.0
+# EPSG Dataset Version: 10.019
+# GIGS Test Dataset Issue Date: 2022-04-29
+# Note: Test for Albers Equal Area
+# Cartesian Tolerance: 0.05 metre
+# Geographic Tolerance: 0.0000006 degree
+# Round Trip Cartesian Tolerance: 0.006 metre
+# Round Trip Geographic Tolerance: 0.00000006 degree
+#
+# Fields:
+# [0]: Point
+# [1]: Latitude (GIGS CRS Code 64009; GIGS geogCRS F; GDA94; decimal degree; EPSG CRS code 4283)
+# [2]: Longitude (GIGS CRS Code 64009; GIGS geogCRS F; GDA94; decimal degree; EPSG CRS code 4283)
+# [3]: Easting (GIGS CRS Code 62016; GIGS projCRS F9; GDA94 / Australian Albers; metre; EPSG CRS code 3577)
+# [4]: Northing (GIGS CRS Code 62016; GIGS projCRS F9; GDA94 / Australian Albers; metre; EPSG CRS code 3577)
+# [5]: Transect
+# [6]: Conversion Direction
+# [7]: GIGS Remarks
+#
+# [0]	# [1]	# [2]	# [3]	# [4]	# [5]	# [6]	# [7]
+GIGS-5109-01	0	132	0	0	A	REVERSE
+GIGS-5109-02	-27	132	0	-2926820.89	A	FORWARD
+GIGS-5109-03	0	140	966973.979	-30285.601	B	REVERSE
+GIGS-5109-04	-20	140	832799.36	-2170181.926	B	FORWARD
+GIGS-5109-05	-40	140	693250.209	-4395794.489	B	REVERSE
+GIGS-5109-06	-60	140	567313.287	-6404311.163	B	FORWARD
+GIGS-5109-07	-80	140	486878.674	-7687130.029	B	REVERSE
+GIGS-5109-08	-60	120	-850274.747	-6426505.132	C	REVERSE
+GIGS-5109-09	-60	130	-141915.257	-6387653.78	C	FORWARD
+GIGS-5109-10	-60	140	567313.287	-6404311.163	C	REVERSE
+GIGS-5109-11	-60	150	1273067.747	-6476375.276	C	FORWARD
+GIGS-5109-12	-60	160	1971026.264	-6603404.818	C	REVERSE
+GIGS-5109-13	-60	170	2656914.716	-6784621.89	C	FORWARD	Round Trip calculation point
