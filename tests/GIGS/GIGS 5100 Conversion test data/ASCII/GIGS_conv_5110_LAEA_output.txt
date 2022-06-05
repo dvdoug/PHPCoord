@@ -1,0 +1,33 @@
+# File: GIGS_conv_5110_LAEA_output
+# GIGS Test Procedure: 5110
+# GIGS Test Dataset Version: 2.1.0
+# EPSG Dataset Version: 10.019
+# GIGS Test Dataset Issue Date: 2022-04-29
+# Note: Test for Lambert Azimuthal Equal Area
+# Cartesian Tolerance: 0.05 metre
+# Geographic Tolerance: 0.0000006 degree
+# Round Trip Cartesian Tolerance: 0.006 metre
+# Round Trip Geographic Tolerance: 0.00000006 degree
+#
+# Fields:
+# [0]: Point
+# [1]: Latitude (GIGS CRS Code 64010; GIGS geogCRS G; ETRS89; decimal degree; EPSG CRS code 4258)
+# [2]: Longitude (GIGS CRS Code 64010; GIGS geogCRS G; ETRS89; decimal degree; EPSG CRS code 4258)
+# [3]: Northing (GIGS CRS Code 62023; GIGS projCRS G16; ETRS89-extended / LAEA Europe; metre; EPSG CRS code 3035)
+# [4]: Easting (GIGS CRS Code 62023; GIGS projCRS G16; ETRS89-extended / LAEA Europe; metre; EPSG CRS code 3035)
+# [5]: Transect
+# [6]: Conversion Direction
+# [7]: GIGS Remarks
+#
+# [0]	# [1]	# [2]	# [3]	# [4]	# [5]	# [6]	# [7]
+GIGS-5110-01	70	5	5214090.649	4127824.658	A	FORWARD
+GIGS-5110-02	60	5	4109791.66	4041548.125	A	REVERSE
+GIGS-5110-03	50	5	2999718.853	3962799.451	A	FORWARD
+GIGS-5110-04	40	5	1892578.962	3892127.02	A	REVERSE
+GIGS-5110-05	30	5	796781.677	3830117.902	A	FORWARD
+GIGS-5110-06	52	10	3210000	4321000	B	FORWARD
+GIGS-5110-07	50	0	3036305.967	3606514.431	C	REVERSE
+GIGS-5110-08	50	3	3011432.894	3819948.288	C	FORWARD
+GIGS-5110-09	50	5	2999718.853	3962799.451	C	REVERSE
+GIGS-5110-10	50	8	2989464.315	4177612.521	C	FORWARD
+GIGS-5110-11	50	10	2987510.567	4321000	C	REVERSE	Round Trip calculation point
