@@ -1,0 +1,27 @@
+# File: GIGS_conv_5112_MercB_output
+# GIGS Test Procedure: 5112
+# GIGS Test Dataset Version: 2.1.0
+# EPSG Dataset Version: 10.019
+# GIGS Test Dataset Issue Date: 2022-04-29
+# Note: Test for Mercator (variant B)
+# Cartesian Tolerance: 0.05 metre
+# Geographic Tolerance: 0.0000006 degree
+# Round Trip Cartesian Tolerance: 0.006 metre
+# Round Trip Geographic Tolerance: 0.00000006 degree
+#
+# Fields:
+# [0]: Point
+# [1]: Latitude (GIGS CRS Code 64017; GIGS geogCRS Y; Pulkovo 1942; decimal degree; EPSG CRS code 4284)
+# [2]: Longitude (GIGS CRS Code 64017; GIGS geogCRS Y; Pulkovo 1942; decimal degree; EPSG CRS code 4284)
+# [3]: Northing (GIGS CRS Code 62034; GIGS projCRS Y24; Pulkovo 1942 / Caspian Sea Mercator; metre; EPSG CRS code 3388)
+# [4]: Easting (GIGS CRS Code 62034; GIGS projCRS Y24; Pulkovo 1942 / Caspian Sea Mercator; metre; EPSG CRS code 3388)
+# [5]: Transect
+# [6]: Conversion Direction
+# [7]: GIGS Remarks
+#
+# [0]	# [1]	# [2]	# [3]	# [4]	# [5]	# [6]	# [7]
+GIGS-5112-01	42	51	3819897.852	0	A	REVERSE
+GIGS-5112-02	0	51	0	0	A	FORWARD
+GIGS-5112-03	0	57	0	497112.88	A	REVERSE
+GIGS-5112-04	20.5	54	1724781.5	248556.44	A	FORWARD
+GIGS-5112-05	-41	67	-3709687.255	1325634.346	A	FORWARD	Round Trip calculation point
