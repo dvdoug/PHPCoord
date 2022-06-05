@@ -1,0 +1,27 @@
+# File: GIGS_conv_5113_TMSO_output
+# GIGS Test Procedure: 5113
+# GIGS Test Dataset Version: 2.1.0
+# EPSG Dataset Version: 10.019
+# GIGS Test Dataset Issue Date: 2022-04-29
+# Note: Test for Transverse Mercator (South Oriented)
+# Cartesian Tolerance: 0.03 metre
+# Geographic Tolerance: 0.0000003 degree
+# Round Trip Cartesian Tolerance: 0.006 metre
+# Round Trip Geographic Tolerance: 0.00000006 degree
+#
+# Fields:
+# [0]: Point
+# [1]: Latitude (GIGS CRS Code 64010; GIGS geogCRS G; Hartebeesthoek94; decimal degree; EPSG CRS code 4148)
+# [2]: Longitude (GIGS CRS Code 64010; GIGS geogCRS G; Hartebeesthoek94; decimal degree; EPSG CRS code 4148)
+# [3]: Westing (GIGS CRS Code 62017; GIGS projCRS G10; Hartebeesthoek94 / Lo21; metre; EPSG CRS code 2049)
+# [4]: Southing (GIGS CRS Code 62017; GIGS projCRS G10; Hartebeesthoek94 / Lo21; metre; EPSG CRS code 2049)
+# [5]: Transect
+# [6]: Conversion Direction
+# [7]: GIGS Remarks
+#
+# [0]	# [1]	# [2]	# [3]	# [4]	# [5]	# [6]	# [7]
+GIGS-5513-01	0	22.5	-166998.442	0	A	FORWARD
+GIGS-5513-02	-25	21.5	-50475.46	2766147.248	A	REVERSE
+GIGS-5513-03	-30	20.5	48243.449	3320218.65	A	FORWARD
+GIGS-5513-04	-35	19.5	136937.651	3875621.182	A	REVERSE
+GIGS-5513-05	-35	19.5	136937.651	3875621.182	A	FORWARD	Round Trip calculation point
