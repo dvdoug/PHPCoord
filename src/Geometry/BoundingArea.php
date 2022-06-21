@@ -213,10 +213,10 @@ class BoundingArea
         foreach ($this->vertices as $polygon) {
             foreach ($polygon as $ring) {
                 foreach ($ring as $vertex) {
-                    if ($vertex[0] > 180) {
+                    if ($vertex[0] >= 180) {
                         $this->longitudeExtendsFurtherThanPlus180 = true;
                     }
-                    if ($vertex[0] < -180) {
+                    if ($vertex[0] <= -180) {
                         $this->longitudeExtendsFurtherThanMinus180 = true;
                     }
                 }
