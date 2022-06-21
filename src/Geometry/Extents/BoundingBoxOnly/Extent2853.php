@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\Geometry\Extents\BoundingBoxOnly;
 
 /**
- * Europe-FSU/Iceland - onshore east of 18°W.
+ * Europe-FSU/Iceland - mainland east of 18°W.
  * @internal
  */
 class Extent2853

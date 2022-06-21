@@ -1792,7 +1792,7 @@ Replaces RRAF 1991 (CRS code 4556).
 RGF93 v1
 --------
 
-| Used: France - onshore and offshore, mainland and Corsica.
+| Used: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
 
 .. code-block:: php
 
@@ -1806,7 +1806,7 @@ Replaced by RGF93 v2 (CRS code 9775) from 2010-06-18.
 RGF93 v2
 --------
 
-| Used: France - onshore and offshore, mainland and Corsica.
+| Used: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
 
 .. code-block:: php
 
@@ -1820,7 +1820,7 @@ Replaces RGF93 v1 (CRS code 4964) from 2010-06-18. Replaced by RGF93 v2b (CRS co
 RGF93 v2b
 ---------
 
-| Used: France - onshore and offshore, mainland and Corsica.
+| Used: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
 
 .. code-block:: php
 

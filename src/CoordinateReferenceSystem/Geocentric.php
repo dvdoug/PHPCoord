@@ -1136,21 +1136,21 @@ class Geocentric extends CoordinateReferenceSystem
 
     /**
      * RGF93 v1
-     * Extent: France - onshore and offshore, mainland and Corsica.
+     * Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
      * Replaced by RGF93 v2 (CRS code 9775) from 2010-06-18.
      */
     public const EPSG_RGF93_V1 = 'urn:ogc:def:crs:EPSG::4964';
 
     /**
      * RGF93 v2
-     * Extent: France - onshore and offshore, mainland and Corsica.
+     * Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
      * Replaces RGF93 v1 (CRS code 4964) from 2010-06-18. Replaced by RGF93 v2b (CRS code 9780) from 2021-01-05.
      */
     public const EPSG_RGF93_V2 = 'urn:ogc:def:crs:EPSG::9775';
 
     /**
      * RGF93 v2b
-     * Extent: France - onshore and offshore, mainland and Corsica.
+     * Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
      * Replaces RGF93 v2 (CRS code 9775) from 2021-01-05.
      */
     public const EPSG_RGF93_V2B = 'urn:ogc:def:crs:EPSG::9780';

@@ -2955,7 +2955,7 @@ class Geographic2D extends Geographic
 
     /**
      * RGF93 v1
-     * Extent: France - onshore and offshore, mainland and Corsica.
+     * Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
      * See CRS code 7084 for alternate system with axes reversed used by IGN for GIS purposes. Replaced by RGF93 v2
      * (CRS code 9777) from 2010-06-18.
      */
@@ -2963,7 +2963,7 @@ class Geographic2D extends Geographic
 
     /**
      * RGF93 v1 (lon-lat)
-     * Extent: France - onshore and offshore, mainland and Corsica.
+     * Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
      * See CRS code 4171 for system with axes in sequence lat-lon to be used for air, land and sea navigation and
      * safety of life purposes. Replaced by RGF93 v2 (lon-lat) (CRS code 9779) from 2010-06-18.
      */
@@ -2971,7 +2971,7 @@ class Geographic2D extends Geographic
 
     /**
      * RGF93 v2
-     * Extent: France - onshore and offshore, mainland and Corsica.
+     * Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
      * Replaces RGF93 v1 (CRS code 4171) from 2010-06-18. Replaced by RGF93 v2b (CRS code 9782) from 2021-01-05. See
      * CRS code 9779 for alternate system with axes reversed used by IGN for GIS purposes.
      */
@@ -2979,7 +2979,7 @@ class Geographic2D extends Geographic
 
     /**
      * RGF93 v2 (lon-lat)
-     * Extent: France - onshore and offshore, mainland and Corsica.
+     * Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
      * Replaces RGF93 v1 (lon-lat) (code 7084) from 2010-06-18. Replaced by RGF93 v2b (lon-lat) (CRS code 9784) from
      * 2021-01-05. See CRS code 9777 for system with axes in sequence lat-lon to be used for air, land and sea
      * navigation and safety of life purposes.
@@ -2988,7 +2988,7 @@ class Geographic2D extends Geographic
 
     /**
      * RGF93 v2b
-     * Extent: France - onshore and offshore, mainland and Corsica.
+     * Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
      * Replaces RGF93 v2 (CRS code 9777) from 2021-01-05. See CRS code 9784 for alternate system with axes reversed
      * used by IGN for GIS purposes.
      */
@@ -2996,7 +2996,7 @@ class Geographic2D extends Geographic
 
     /**
      * RGF93 v2b (lon-lat)
-     * Extent: France - onshore and offshore, mainland and Corsica.
+     * Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
      * Replaces RGF93 v2 (lon-lat) (CRS code 9779) from 2021-01-05. See CRS code 9782 for system with axes in sequence
      * lat-lon to be used for air, land and sea navigation and safety of life purposes.
      */

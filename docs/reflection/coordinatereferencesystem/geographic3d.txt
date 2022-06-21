@@ -2070,7 +2070,7 @@ Replaces RRAF 1991 (CRS code 4557). See CRS code 5488 for system with horizontal
 RGF93 v1
 --------
 
-| Used: France - onshore and offshore, mainland and Corsica.
+| Used: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
 
 .. code-block:: php
 
@@ -2086,7 +2086,7 @@ See CRS code 7042 for alternate system with horizontal axes reversed used by IGN
 RGF93 v1 (lon-lat)
 ------------------
 
-| Used: France - onshore and offshore, mainland and Corsica.
+| Used: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
 
 .. code-block:: php
 
@@ -2102,7 +2102,7 @@ See CRS code 4965 for system with horizontal axes in sequence lat-lon to be used
 RGF93 v2
 --------
 
-| Used: France - onshore and offshore, mainland and Corsica.
+| Used: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
 
 .. code-block:: php
 
@@ -2118,7 +2118,7 @@ Replaces RGF93 v1 CRS code 4965) from 2010-06-18 . Replaced by RGF93 v2b (CRS co
 RGF93 v2 (lon-lat)
 ------------------
 
-| Used: France - onshore and offshore, mainland and Corsica.
+| Used: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
 
 .. code-block:: php
 
@@ -2134,7 +2134,7 @@ Replaces RGF93 v1 (lon-lat) from 2010-06-18. Replaced by RGF93 v2b (lon-lat) (CR
 RGF93 v2b
 ---------
 
-| Used: France - onshore and offshore, mainland and Corsica.
+| Used: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
 
 .. code-block:: php
 
@@ -2150,7 +2150,7 @@ Replaces RGF93 v2 (CRS code 9776) from 2021-01-05. See CRS code 9783 for alterna
 RGF93 v2b (lon-lat)
 -------------------
 
-| Used: France - onshore and offshore, mainland and Corsica.
+| Used: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
 
 .. code-block:: php
 

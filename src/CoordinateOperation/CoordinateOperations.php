@@ -16491,7 +16491,7 @@ class CoordinateOperations
         'urn:ogc:def:coordinateOperation:EPSG::18085' => [
             'name' => 'Lambert-93',
             'method' => 'urn:ogc:def:method:EPSG::9802',
-            'extent_code' => ['1326'],
+            'extent_code' => ['1096'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::18091' => [
             'name' => 'Lambert Nord France',

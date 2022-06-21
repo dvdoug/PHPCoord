@@ -56222,7 +56222,7 @@ RGF93 v1 / CC50
 RGF93 v1 / Lambert-93
 ---------------------
 
-| Used: France - onshore and offshore, mainland and Corsica.
+| Used: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
 
 .. code-block:: php
 
@@ -56352,7 +56352,7 @@ RGF93 v2 / CC50
 RGF93 v2 / Lambert-93
 ---------------------
 
-| Used: France - onshore and offshore, mainland and Corsica.
+| Used: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
 
 .. code-block:: php
 
@@ -56482,7 +56482,7 @@ RGF93 v2b / CC50
 RGF93 v2b / Lambert-93
 ----------------------
 
-| Used: France - onshore and offshore, mainland and Corsica.
+| Used: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
 
 .. code-block:: php
 

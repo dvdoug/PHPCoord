@@ -6128,7 +6128,7 @@ class Datum
     /**
      * Reseau Geodesique Francais 1993 v1
      * Type: geodetic
-     * Extent: France - onshore and offshore, mainland and Corsica.
+     * Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
      * Coincident with ETRS89 at epoch 1993.0. Derived from long-term GNSS observations at 23 points aligned to ETRF93.
      * @ 1993.0 through fundamental points at Grasse, Toulouse and Brest. Network supplemented in 1994 and 1995 by
      * approx. 1000 additional stations.
@@ -6139,7 +6139,7 @@ class Datum
     /**
      * Reseau Geodesique Francais 1993 v2
      * Type: geodetic
-     * Extent: France - onshore and offshore, mainland and Corsica.
+     * Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
      * Aligned with ETRF2000 at epoch 2009.0. Based on the French GNSS permanent network (RGP) from 1998 to 2009, and
      * the re-observation of the geodetic points of the French Reference Network (RRF) and French Base Network
      * (RBF) from 2000 to 2011.
@@ -6151,7 +6151,7 @@ class Datum
     /**
      * Reseau Geodesique Francais 1993 v2b
      * Type: geodetic
-     * Extent: France - onshore and offshore, mainland and Corsica.
+     * Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
      * Aligned with ETRF2000 at epoch 2019.0. Derived through reprocessing of the French GNSS permanent network (RGP)
      * in IGS14.
      * RGF93 v2b is a realization of ETRS89. Third realization of RGF93. Replaces RGF93 v2 (datum code 1312) from

@@ -32459,7 +32459,7 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * RGF93 v1 / Lambert-93
-     * Extent: France - onshore and offshore, mainland and Corsica.
+     * Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
      */
     public const EPSG_RGF93_V1_LAMBERT_93 = 'urn:ogc:def:crs:EPSG::2154';
 
@@ -32519,7 +32519,7 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * RGF93 v2 / Lambert-93
-     * Extent: France - onshore and offshore, mainland and Corsica.
+     * Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
      */
     public const EPSG_RGF93_V2_LAMBERT_93 = 'urn:ogc:def:crs:EPSG::9793';
 
@@ -32579,7 +32579,7 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * RGF93 v2b / Lambert-93
-     * Extent: France - onshore and offshore, mainland and Corsica.
+     * Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
      */
     public const EPSG_RGF93_V2B_LAMBERT_93 = 'urn:ogc:def:crs:EPSG::9794';
 

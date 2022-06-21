@@ -8939,7 +8939,7 @@ Reseau Geodesique Francais 1993 v1
 ----------------------------------
 
 | Type: Geodetic
-| Used: France - onshore and offshore, mainland and Corsica.
+| Used: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
 
 .. code-block:: php
 
@@ -8954,7 +8954,7 @@ Reseau Geodesique Francais 1993 v2
 ----------------------------------
 
 | Type: Geodetic
-| Used: France - onshore and offshore, mainland and Corsica.
+| Used: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
 
 .. code-block:: php
 
@@ -8969,7 +8969,7 @@ Reseau Geodesique Francais 1993 v2b
 -----------------------------------
 
 | Type: Geodetic
-| Used: France - onshore and offshore, mainland and Corsica.
+| Used: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
 
 .. code-block:: php
 
