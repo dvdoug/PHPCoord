@@ -383,11 +383,21 @@ class AutoConversionTest extends TestCase
         self::assertEqualsWithDelta(353687.842, $to->getNorthing()->getValue(), 0.1);
     }
 
+    public function testRGF2BLambert93Corsica(): void
+    {
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_RGF93_V2B), new Degree(41.596016636), new Degree(9.274852923));
+        $toCRS = Projected::fromSRID(Projected::EPSG_RGF93_V2B_LAMBERT_93);
+        $to = $from->convert($toCRS);
+
+        self::assertEqualsWithDelta(1223977.1, $to->getEasting()->getValue(), 0.1);
+        self::assertEqualsWithDelta(6075793.1, $to->getNorthing()->getValue(), 0.1);
+    }
+
     public function testLambert93RGF2BCorsica(): void
     {
         $from = ProjectedPoint::createFromEastingNorthing(Projected::fromSRID(Projected::EPSG_RGF93_V2B_LAMBERT_93), new Metre(1223977.1), new Metre(6075793.1));
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_RGF93_V2B);
-        $to = $from->convert($toCRS, true);
+        $to = $from->convert($toCRS);
 
         self::assertEqualsWithDelta(41.596016636, $to->getLatitude()->asDegrees()->getValue(), 0.0000001);
         self::assertEqualsWithDelta(9.274852923, $to->getLongitude()->asDegrees()->getValue(), 0.0000001);
