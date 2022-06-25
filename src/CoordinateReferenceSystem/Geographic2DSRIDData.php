@@ -408,7 +408,7 @@ trait Geographic2DSRIDData
             'extent_code' => ['1090'],
         ],
         'urn:ogc:def:crs:EPSG::4181' => [
-            'name' => 'Luxembourg 1930',
+            'name' => 'LUREF',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
             'datum' => 'urn:ogc:def:datum:EPSG::6181',
             'extent_code' => ['1146'],
@@ -3232,6 +3232,48 @@ trait Geographic2DSRIDData
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6424',
             'datum' => 'urn:ogc:def:datum:EPSG::1313',
             'extent_code' => ['1096'],
+        ],
+        'urn:ogc:def:crs:EPSG::9866' => [
+            'name' => 'MRH21-IRF',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
+            'datum' => 'urn:ogc:def:datum:EPSG::1314',
+            'extent_code' => ['4652'],
+        ],
+        'urn:ogc:def:crs:EPSG::9871' => [
+            'name' => 'MOLDOR11-IRF',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
+            'datum' => 'urn:ogc:def:datum:EPSG::1315',
+            'extent_code' => ['4655'],
+        ],
+        'urn:ogc:def:crs:EPSG::9939' => [
+            'name' => 'EBBWV14-IRF',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
+            'datum' => 'urn:ogc:def:datum:EPSG::1319',
+            'extent_code' => ['4661'],
+        ],
+        'urn:ogc:def:crs:EPSG::9964' => [
+            'name' => 'HULLEE13-IRF',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
+            'datum' => 'urn:ogc:def:datum:EPSG::1317',
+            'extent_code' => ['4663'],
+        ],
+        'urn:ogc:def:crs:EPSG::9969' => [
+            'name' => 'SCM22-IRF',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
+            'datum' => 'urn:ogc:def:datum:EPSG::1320',
+            'extent_code' => ['4665'],
+        ],
+        'urn:ogc:def:crs:EPSG::9974' => [
+            'name' => 'FNL22-IRF',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
+            'datum' => 'urn:ogc:def:datum:EPSG::1321',
+            'extent_code' => ['4664'],
+        ],
+        'urn:ogc:def:crs:EPSG::9990' => [
+            'name' => 'ITRF2020',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
+            'datum' => 'urn:ogc:def:datum:EPSG::1322',
+            'extent_code' => ['1262'],
         ],
     ];
 }

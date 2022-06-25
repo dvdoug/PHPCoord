@@ -9,6 +9,8 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateOperation;
 
+use function str_replace;
+
 /**
  * @internal
  */
@@ -1433,7 +1435,7 @@ class CoordinateOperations
         'urn:ogc:def:coordinateOperation:EPSG::1826' => [
             'name' => 'JGD2000 to WGS 84 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['1129'],
+            'extent_code' => ['4163'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::1828' => [
             'name' => 'Yoff to WGS 72 (1)',
@@ -2871,12 +2873,12 @@ class CoordinateOperations
             'extent_code' => ['3234'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::5198' => [
-            'name' => 'Oostende height to EVRF2000 height (1)',
+            'name' => 'Ostend height to EVRF2000 height (1)',
             'method' => 'urn:ogc:def:method:EPSG::1046',
             'extent_code' => ['1347'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::5199' => [
-            'name' => 'Oostende height to EVRF2007 height (1)',
+            'name' => 'Ostend height to EVRF2007 height (1)',
             'method' => 'urn:ogc:def:method:EPSG::1046',
             'extent_code' => ['1347'],
         ],
@@ -3395,11 +3397,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9810',
             'extent_code' => ['3856'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::5483' => [
-            'name' => 'Luxembourg 1930 to ETRS89 (4)',
-            'method' => 'urn:ogc:def:method:EPSG::9636',
-            'extent_code' => ['1146'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::5491' => [
             'name' => 'Martinique 1938 to RGAF09 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9606',
@@ -3600,11 +3597,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9607',
             'extent_code' => ['2283'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::5840' => [
-            'name' => 'UCS-2000 to WGS 84 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9603',
-            'extent_code' => ['1242'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::5841' => [
             'name' => 'AGD66 to WGS 84 (19)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
@@ -3629,11 +3621,6 @@ class CoordinateOperations
             'name' => 'Combani 1950 to RGM04 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9606',
             'extent_code' => ['3340'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::5891' => [
-            'name' => 'MGI to ETRS89 (5)',
-            'method' => 'urn:ogc:def:method:EPSG::9615',
-            'extent_code' => ['1037'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::5892' => [
             'name' => 'Vietnam TM-3 zone 481',
@@ -7406,12 +7393,12 @@ class CoordinateOperations
             'extent_code' => ['1262'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::8080' => [
-            'name' => 'MTM Nova Scotia zone 4 v2',
+            'name' => 'MTM Nova Scotia 2010 zone 4',
             'method' => 'urn:ogc:def:method:EPSG::9807',
             'extent_code' => ['1534'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::8081' => [
-            'name' => 'MTM Nova Scotia zone 5 v2',
+            'name' => 'MTM Nova Scotia 2010 zone 5',
             'method' => 'urn:ogc:def:method:EPSG::9807',
             'extent_code' => ['1535'],
         ],
@@ -7655,6 +7642,11 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9807',
             'extent_code' => ['4488'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::8364' => [
+            'name' => 'S-JTSK [JTSK03] to S-JTSK (1)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['1211'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::8365' => [
             'name' => 'ETRS89 to S-JTSK [JTSK03] (1)',
             'method' => 'urn:ogc:def:method:EPSG::9607',
@@ -7719,11 +7711,6 @@ class CoordinateOperations
             'name' => 'Macao 2008 to WGS 84 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent_code' => ['1147'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::8437' => [
-            'name' => 'Hong Kong 1980 to Hong Kong Geodetic CS (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent_code' => ['1118'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::8438' => [
             'name' => 'Macao 1920 to WGS 84 (1)',
@@ -8755,16 +8742,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9615',
             'extent_code' => ['1368'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::9242' => [
-            'name' => 'NAD27 to NAD83(CSRS)v3 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9615',
-            'extent_code' => ['2375'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::9243' => [
-            'name' => 'NAD83 to NAD83(CSRS)v3 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9615',
-            'extent_code' => ['2375'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::9244' => [
             'name' => 'NAD83 to NAD83(CSRS)v4 (3)',
             'method' => 'urn:ogc:def:method:EPSG::9615',
@@ -9375,6 +9352,11 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9807',
             'extent_code' => ['4649'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9868' => [
+            'name' => 'MRH21-TM',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['4652'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::9872' => [
             'name' => 'Papua New Guinea Map Grid 1994 zone 57',
             'method' => 'urn:ogc:def:method:EPSG::9807',
@@ -9384,6 +9366,171 @@ class CoordinateOperations
             'name' => 'Papua New Guinea Map Grid 1994 zone 58',
             'method' => 'urn:ogc:def:method:EPSG::9807',
             'extent_code' => ['4654'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9879' => [
+            'name' => 'MOLDOR11-TM',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['4655'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9882' => [
+            'name' => 'RGF93 v1 to RGF93 v2 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::9603',
+            'extent_code' => ['1096'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9886' => [
+            'name' => 'NAD27 to NAD83(CSRS)v2 (2)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['2375'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9887' => [
+            'name' => 'NAD83 to NAD83(CSRS)v2 (2)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['2375'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9896' => [
+            'name' => 'JGD2000 to WGS 84 (2)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['4170'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9910' => [
+            'name' => 'MGI to ETRS89 (8)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent_code' => ['1037'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9911' => [
+            'name' => 'Macedonia Gauss-Kruger truncated',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['1148'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9913' => [
+            'name' => 'Hong Kong 1980 to Hong Kong Geodetic CS (1)',
+            'method' => 'urn:ogc:def:method:EPSG::9607',
+            'extent_code' => ['1118'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9914' => [
+            'name' => 'ETRS89 to BI height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::9663',
+            'extent_code' => ['4390'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9915' => [
+            'name' => 'ETRS89 to ETRS89 + BI height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1097',
+            'extent_code' => ['4390'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9936' => [
+            'name' => 'JGD2011 to WGS 84 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::9603',
+            'extent_code' => ['1129'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9937' => [
+            'name' => 'LUREF to ETRS89 (7)',
+            'method' => 'urn:ogc:def:method:EPSG::9636',
+            'extent_code' => ['1146'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9938' => [
+            'name' => 'LUREF to ETRS89 (8)',
+            'method' => 'urn:ogc:def:method:EPSG::9607',
+            'extent_code' => ['1146'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9942' => [
+            'name' => 'EBBWV14-TM',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['4661'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9946' => [
+            'name' => 'Iceland Lambert Azimuthal Equal Area',
+            'method' => 'urn:ogc:def:method:EPSG::9820',
+            'extent_code' => ['1120'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9960' => [
+            'name' => 'WGS 84 (Transit) to WGS 84 (G730) (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1032',
+            'extent_code' => ['1262'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9961' => [
+            'name' => 'WGS 84 (G730) to WGS 84 (G873) (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1032',
+            'extent_code' => ['1262'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9962' => [
+            'name' => 'WGS 84 (G873) to WGS 84 (G1150) (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1056',
+            'extent_code' => ['1262'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9963' => [
+            'name' => 'WGS 84 (G1150) to WGS 84 (G1674) (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1056',
+            'extent_code' => ['1262'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9966' => [
+            'name' => 'HULLEE13-TM',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['4663'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9971' => [
+            'name' => 'SCM22-TM',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['4665'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9976' => [
+            'name' => 'FNL22-TM',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['4664'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9981' => [
+            'name' => 'MTM Nova Scotia 1997 zone 4',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['1534'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9982' => [
+            'name' => 'MTM Nova Scotia 1997 zone 5',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['1535'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9991' => [
+            'name' => 'ITRF2014 to ITRF2020 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1053',
+            'extent_code' => ['1262'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9992' => [
+            'name' => 'ITRF2008 to ITRF2020 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1053',
+            'extent_code' => ['1262'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9993' => [
+            'name' => 'ITRF2005 to ITRF2020 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1053',
+            'extent_code' => ['1262'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9994' => [
+            'name' => 'ITRF2000 to ITRF2020 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1053',
+            'extent_code' => ['1262'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9995' => [
+            'name' => 'ITRF97 to ITRF2020 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1053',
+            'extent_code' => ['1262'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9996' => [
+            'name' => 'ITRF96 to ITRF2020 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1053',
+            'extent_code' => ['1262'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9997' => [
+            'name' => 'ITRF94 to ITRF2020 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1053',
+            'extent_code' => ['1262'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9998' => [
+            'name' => 'ITRF93 to ITRF2020 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1053',
+            'extent_code' => ['1262'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9999' => [
+            'name' => 'ITRF92 to ITRF2020 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1053',
+            'extent_code' => ['1262'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::10087' => [
             'name' => 'Jamaica 1875 / Jamaica (Old Grid) to JAD69 / Jamaica National Grid (1)',
@@ -9395,6 +9542,11 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9607',
             'extent_code' => ['3333'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::10100' => [
+            'name' => 'ITRF91 to ITRF2020 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1053',
+            'extent_code' => ['1262'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::10101' => [
             'name' => 'Alabama CS27 East zone',
             'method' => 'urn:ogc:def:method:EPSG::9807',
@@ -9404,6 +9556,21 @@ class CoordinateOperations
             'name' => 'Alabama CS27 West zone',
             'method' => 'urn:ogc:def:method:EPSG::9807',
             'extent_code' => ['2155'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10103' => [
+            'name' => 'ITRF90 to ITRF2020 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1053',
+            'extent_code' => ['1262'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10104' => [
+            'name' => 'ITRF89 to ITRF2020 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1053',
+            'extent_code' => ['1262'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10105' => [
+            'name' => 'ITRF88 to ITRF2020 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1053',
+            'extent_code' => ['1262'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::10131' => [
             'name' => 'SPCS83 Alabama East zone (meters)',
@@ -10564,6 +10731,11 @@ class CoordinateOperations
             'name' => 'Wyoming CS27 West zone',
             'method' => 'urn:ogc:def:method:EPSG::9807',
             'extent_code' => ['2271'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::14930' => [
+            'name' => 'Wyoming Lambert',
+            'method' => 'urn:ogc:def:method:EPSG::9802',
+            'extent_code' => ['1419'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::14931' => [
             'name' => 'SPCS83 Wyoming East zone (meters)',
@@ -15215,6 +15387,11 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9807',
             'extent_code' => ['2850'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::17348' => [
+            'name' => 'Map Grid of Australia zone 48',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['4191'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::17349' => [
             'name' => 'Map Grid of Australia zone 49',
             'method' => 'urn:ogc:def:method:EPSG::9807',
@@ -16338,7 +16515,7 @@ class CoordinateOperations
         'urn:ogc:def:coordinateOperation:EPSG::18085' => [
             'name' => 'Lambert-93',
             'method' => 'urn:ogc:def:method:EPSG::9802',
-            'extent_code' => ['1326'],
+            'extent_code' => ['1096'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::18091' => [
             'name' => 'Lambert Nord France',
@@ -16838,7 +17015,7 @@ class CoordinateOperations
         'urn:ogc:def:coordinateOperation:EPSG::18277' => [
             'name' => 'Balkans zone 7',
             'method' => 'urn:ogc:def:method:EPSG::9807',
-            'extent_code' => ['1711'],
+            'extent_code' => ['1148', '1711'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::18278' => [
             'name' => 'Balkans zone 8',
@@ -17626,7 +17803,7 @@ class CoordinateOperations
             'extent_code' => ['1342'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::19966' => [
-            'name' => 'Luxembourg Gauss',
+            'name' => 'Luxembourg TM',
             'method' => 'urn:ogc:def:method:EPSG::9807',
             'extent_code' => ['1146'],
         ],
@@ -17777,8 +17954,13 @@ class CoordinateOperations
         ],
     ];
 
-    public static function getOperationData(string $srid): array
+    public static function getOperationData(string $operationSrid): array
     {
-        return static::$sridData[$srid];
+        return static::$sridData[$operationSrid];
+    }
+
+    public static function getParamData(string $operationSrid): array
+    {
+        return require 'Params/' . str_replace(':', '', str_replace('urn:ogc:def:coordinateOperation:', '', $operationSrid)) . '.php';
     }
 }

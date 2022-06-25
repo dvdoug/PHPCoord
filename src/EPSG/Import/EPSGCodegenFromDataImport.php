@@ -101,6 +101,9 @@ class EPSGCodegenFromDataImport
         1103, // Geog3D to Geog2D+GravityRelatedHeight (EGM)
         1105, // Geog3D to Geog2D+GravityRelatedHeight (ITAL2005)
         1106, // Geographic3D to GravityRelatedHeight (ITAL2005)
+        1109, // Geographic3D to Depth (Gravsoft)
+        1110, // Geog3D to Geog2D+Depth (Gravsoft)
+        1111, // Transverse Mercator 3D
         9620, // Norway Offshore Interpolation
         9634, // Maritime Provinces polynomial interpolation
         9658, // Vertical Offset by Grid Interpolation (VERTCON)
@@ -429,10 +432,27 @@ class EPSGCodegenFromDataImport
         9174, // gtx geoid09_ak.bin
         9169, // gtx geoid06_ak.bin
 
+        // replaced by RAF20
+        9786, // IGNF RAF18b.mnt
+        9787, // IGNF RAF18b.mnt
+
+        // replaced by RAF18b
+        8885, // IGNF RAF18.mnt
+        9638, // IGNF RAF18.mnt
+
+        // replaced by RAF18
+        8371, // IGNF RAF09.mnt
+        9639, // IGNF RAF09.mnt
+
+        // replaced by RASPM2018
+        9137, // IGNF GGSPM06v1.mnt
+
         // approximation/emulation of official transforms
         1295, // NTv2 RGNC1991_NEA74Noumea.gsb
         6946, // NTv2 tm75_etrs89.gsb
         6947, // NTv2 tm75_etrs89.gsb
+        9890, // NTv2 rgf93_ntf.gsb
+        9891, // NTv2 rgf93_ntf.gsb
         15958, // NTv2 rgf93_ntf.gsb
         15959, // NTv2 rgf93_ntf.gsb
         15960, // NTv2 rgf93_ntf.gsb
@@ -463,7 +483,36 @@ class EPSGCodegenFromDataImport
         // It's just for 1 German state and is almost 400Mb!!
         9338, // NTv2 BWTA2017.gsb
 
-        // Not available for public download, mostly construction/engineering projects not of general use
+        // 33Mb, exclusively marine
+        9884, // KMS ChartDatum_above_Ellipsoid_EUREF89_v2021a.bin
+        9885, // KMS ChartDatum_above_Ellipsoid_EUREF89_v2021a.bin
+
+        // Very large, only really of scientific use
+        3858, // EGM2008 Und_min2.5x2.5_egm2008_isw=82_WGS84_TideFree.gz
+        3859, // EGM2008 Und_min1x1_egm2008_isw=82_WGS84_TideFree.gz
+        7891, // EGM2008 Und_min2.5x2.5_egm2008_isw=82_WGS84_TideFree.gz
+        8037, // EGM2008 Und_min1x1_egm2008_isw=82_WGS84_TideFree.gz
+        9617, // EGM2008 Und_min2.5x2.5_egm2008_isw=82_WGS84_TideFree.gz
+        9618, // EGM2008 Und_min1x1_egm2008_isw=82_WGS84_TideFree.gz
+        9704, // EGM2008 Und_min2.5x2.5_egm2008_isw=82_WGS84_TideFree.gz
+        9706, // EGM2008 Und_min1x1_egm2008_isw=82_WGS84_TideFree.gz
+
+        // Not available for public download
+        9305, // GTX INAGEOID20.gtx
+        9375, // INADEFORM v3_dm_grd01_xyz.dat
+        9629, // GTX INAGEOID20.gtx
+        5626, // KMS fehmarn_geoid10.gri
+        9619, // KMS fehmarn_geoid10.gri
+        9598, // KMS gr2000g.gri
+        9355, // KMS KSA-GEOID17.gra
+        9620, // KMS KSA-GEOID17.gra
+        9940, // NTv2 HeTa2010.gsb
+        9979, // NTv2 SIRGAS1995-to-SIRGAS2000.gsb
+        9980, // NTv2 SIRGAS2000-to-SIRGAS-CONSIR17P01.gsb
+        10106, // BIN arcgp-2006-sk.bin
+        10107, // BIN arcgp-2006-sk.bin
+
+        // Construction/engineering/scientific projects not of general use
         9302, // NTv2 HS2TN15_NTv2.gsb
         9365, // NTv2 TN15-ETRS89-to-TPEN11-IRF.gsb
         9369, // NTv2 TN15-ETRS89-to-MML07-IRF.gsb
@@ -472,9 +521,13 @@ class EPSGCodegenFromDataImport
         9740, // NTv2 TN15-ETRS89-to-EOS21-IRF.gsb
         9759, // NTv2 TN15-ETRS89-to-ECML14_NB-IRF.gsb
         9764, // NTv2 TN15-ETRS89-to-EWR2-IRF.gsb
+        9867, // NTv2 TN15-ETRS89-to-MRH21-IRF.gsb
+        9878, // NTv2 TN15-ETRS89-to-MOLDOR11-IRF.gsb
+        9941, // NTv2 TN15-ETRS89-to-EBBWV14-IRF.gsb
+        9965, // NTv2 TN15-ETRS89-to-HULLEE13-IRF.gsb
+        9970, // NTv2 TN15-ETRS89-to-SCM22-IRF.gsb
+        9975, // NTv2 TN15-ETRS89-to-FNL22-IRF.gsb
         9363, // IGNF ARAMCO_AAA-KSAGRF_6.tac
-        9305, // GTX INAGEOID20.gtx
-        9629, // GTX INAGEOID20.gtx
 
         // free, but license does not permit redistribution
         9112, // NTv2 BC_27_98.GSB
@@ -484,9 +537,58 @@ class EPSGCodegenFromDataImport
         9121, // NTv2 NVI98_05.GSB
         9122, // NTv2 BC_98_05.GSB
         9496, // NTv2 MGI1901_TO_SRBETRS89_NTv2.gsb
-        9328, // IGNF gr3dnc03a.mnt
-        9329, // IGNF gr3dnc01b.mnt
-        9330, // IGNF gr3dnc02b.mnt
+        8269, // KMS ggeoid16.gri
+        9599, // KMS ggeoid16.gri
+        9553, // ASC pt_2019z.asc
+        9554, // ASC pt_2019m.asc
+        9555, // ASC de_2019z.asc
+        9556, // ASC de_2019m.asc
+        9557, // ASC at_2019z.asc
+        9558, // ASC at_2019m.asc
+        9559, // ASC ch_2019z.asc
+        9560, // ASC ch_2019m.asc
+        9561, // ASC gb_2019z.asc
+        9563, // ASC be_2019z.asc
+        9564, // ASC be_2019m.asc
+        9565, // ASC si_2019z.asc
+        9566, // ASC si_2019m.asc
+        9567, // ASC mk_2019z.asc
+        9568, // ASC mk_2019m.asc
+        9569, // ASC ba_2019z.asc
+        9570, // ASC ba_2019m.asc
+        9571, // ASC bgalt_2019z.asc
+        9572, // ASC bgalt_2019m.asc
+        9573, // ASC fi_2019z.asc
+        9574, // ASC fi_2019m.asc
+        9575, // ASC fr_2019z.asc
+        9576, // ASC fr_2019m.asc
+        9577, // ASC hu_2019z.asc
+        9578, // ASC hu_2019m.asc
+        9579, // ASC lv_2019z.asc
+        9580, // ASC lv_2019m.asc
+        9581, // ASC nl_2019z.asc
+        9582, // ASC nl_2019m.asc
+        9583, // ASC ro_2019z.asc
+        9645, // ASC ro_2019m.asc
+        9646, // ASC es_2019z.asc
+        9647, // ASC es_2019m.asc
+        9648, // ASC se_2019z.asc
+        9649, // ASC se_2019m.asc
+        9652, // ASC pl86_2019z.asc
+        9653, // ASC pl86_2019m.asc
+        9654, // ASC pl07_2019z.asc
+        9655, // ASC pl07_2019m.asc
+        9664, // ASC ee_2019z.asc
+        9665, // ASC ee_2019m.asc
+        9667, // ASC lt_2019z.asc
+        9668, // ASC lt_2019m.asc
+        9670, // ASC bgneu_2019z.asc
+        9671, // ASC bgneu_2019m.asc
+        9902, // ASC ua_2019z.asc
+        9903, // ASC ua_2019m.asc
+        9900, // ASC it_2019z.asc
+        9921, // ASC it_2019m.asc
+        7655, // PNG08.DAT
 
         // license requires money :((
         9732, // NTv2 35160622_47161840_R40_E50.gsb
@@ -495,6 +597,12 @@ class EPSGCodegenFromDataImport
         9735, // NTv2 35160622_47161840_E50_F89.gsb
         9736, // NTv2 35160622_47161840_E50_F00.gsb
         9737, // NTv2 35160622_47161840_F89_F00.gsb
+        9727, // GRD geo_igm_mar06.grd
+        9728, // GRD geo_igm_mar06.grd
+        9729, // GRD geo_igm_mar06.grd
+        9730, // GRD geo_igm_mar06.grd
+        9925, // TXT GCG2016.txt
+        9926, // TXT GCG2016.txt
     ];
 
     public function __construct()
@@ -1174,6 +1282,7 @@ class EPSGCodegenFromDataImport
                 Geographic2D::EPSG_CHTRS95 => ['CHTRF95'],
                 Geographic2D::EPSG_RGF93_V1 => ['RGF93'],
                 Geographic2D::EPSG_RGF93_V1_LON_LAT => ['RGF93 (lon-lat)'],
+                Geographic2D::EPSG_LUREF => ['Luxembourg 1930'],
             ]
         );
         $this->codeGen->updateDocs(Geographic2D::class, $data);
@@ -1286,6 +1395,9 @@ class EPSGCodegenFromDataImport
                 Projected::EPSG_RGF93_V1_CC49 => ['RGF93 / CC49'],
                 Projected::EPSG_RGF93_V1_CC50 => ['RGF93 / CC50'],
                 Projected::EPSG_RGF93_V1_LAMBERT_93 => ['RGF93 / Lambert-93'],
+                Projected::EPSG_LUREF_LUXEMBOURG_TM => ['Luxembourg 1930 / Gauss'],
+                Projected::EPSG_NAD83_CSRS_V6_MTM_NS_2010_ZONE_4 => ['NAD83(CSRS)v6 / MTM Nova Scotia zone 4'],
+                Projected::EPSG_NAD83_CSRS_V6_MTM_NS_2010_ZONE_5 => ['NAD83(CSRS)v6 / MTM Nova Scotia zone 5'],
             ]
         );
         $this->codeGen->updateDocs(Projected::class, $data);
@@ -1333,6 +1445,7 @@ class EPSGCodegenFromDataImport
             'public',
             [
                 Vertical::EPSG_GENOA_1942_HEIGHT => ['Genoa Height'],
+                Vertical::EPSG_NG95_HEIGHT => ['NG-L height'],
             ]
         );
         $this->codeGen->updateDocs(Vertical::class, $data);
@@ -1572,7 +1685,7 @@ class EPSGCodegenFromDataImport
                     $paramsRow['value'] = 'urn:ogc:def:crs:EPSG::' . $paramsRow['value'];
                 }
                 if (
-                    isset($filenameToProviderMap[$paramsRow['value']]) &&
+                    isset($filenameToProviderMap[(string) $paramsRow['value']]) &&
                     in_array(
                         $paramsRow['name'],
                         [

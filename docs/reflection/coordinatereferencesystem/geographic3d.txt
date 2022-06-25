@@ -181,6 +181,7 @@ DB_REF
     CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_DB_REF)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5830')
 
+Geometric component of both DB_REF2003 and DB_REF2016 systems.
 
 DGN95
 -----
@@ -838,7 +839,7 @@ ISN2004
     CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_ISN2004)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5323')
 
-Replaces ISN93 (CRS code 4945).
+Replaces ISN93 (CRS code 4945). Replaced by ISN2016 (CRS code 8085).
 
 ISN2016
 -------
@@ -934,7 +935,23 @@ ITRF2014
     CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_ITRF2014)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::7912')
 
-Replaces ITRF2008 (code 7911).
+Replaces ITRF2008 (code 7911). Replaced by ITRF2020 (CRS code 9989).
+
+ITRF2020
+--------
+
+| Used: World.
+
+.. code-block:: php
+
+    Geographic3D::fromSRID(Geographic3D::EPSG_ITRF2020)
+    Geographic3D::fromSRID('urn:ogc:def:crs:EPSG::9989')
+    Geographic::fromSRID(Geographic3D::EPSG_ITRF2020)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::9989')
+    CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_ITRF2020)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9989')
+
+Replaces ITRF2014 (code 7912).
 
 ITRF88
 ------
@@ -1246,6 +1263,22 @@ LTF2004(G)
     CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_LTF2004_G)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9546')
 
+
+LUREF
+-----
+
+| Used: Luxembourg.
+
+.. code-block:: php
+
+    Geographic3D::fromSRID(Geographic3D::EPSG_LUREF)
+    Geographic3D::fromSRID('urn:ogc:def:crs:EPSG::9893')
+    Geographic::fromSRID(Geographic3D::EPSG_LUREF)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::9893')
+    CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_LUREF)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9893')
+
+Ellipsoidal height approximates to NG95 gravity-related heights to within 5-15cm. For accurate heighting use compound CRS LUREF / Luxembourg TM + NG95 height (code 9897).
 
 Lao 1993
 --------
@@ -2005,7 +2038,7 @@ Densification in Venezuela of SIRGAS.
 RGAF09
 ------
 
-| Used: French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante, Les Saintes, Iles de la Petite Terre, La Desirade, St Barthélemy, and northern St Martin) and Martinique.
+| Used: French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante, Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; St Martin.
 
 .. code-block:: php
 
@@ -2021,7 +2054,7 @@ Replaces RRAF 1991 (CRS code 4557). See CRS code 7085 for alternate system with 
 RGAF09 (lon-lat)
 ----------------
 
-| Used: French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante, Les Saintes, Iles de la Petite Terre, La Desirade, St Barthélemy, and northern St Martin) and Martinique.
+| Used: French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante, Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; St Martin.
 
 .. code-block:: php
 
@@ -2037,7 +2070,7 @@ Replaces RRAF 1991 (CRS code 4557). See CRS code 5488 for system with horizontal
 RGF93 v1
 --------
 
-| Used: France - onshore and offshore, mainland and Corsica.
+| Used: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
 
 .. code-block:: php
 
@@ -2053,7 +2086,7 @@ See CRS code 7042 for alternate system with horizontal axes reversed used by IGN
 RGF93 v1 (lon-lat)
 ------------------
 
-| Used: France - onshore and offshore, mainland and Corsica.
+| Used: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
 
 .. code-block:: php
 
@@ -2069,7 +2102,7 @@ See CRS code 4965 for system with horizontal axes in sequence lat-lon to be used
 RGF93 v2
 --------
 
-| Used: France - onshore and offshore, mainland and Corsica.
+| Used: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
 
 .. code-block:: php
 
@@ -2085,7 +2118,7 @@ Replaces RGF93 v1 CRS code 4965) from 2010-06-18 . Replaced by RGF93 v2b (CRS co
 RGF93 v2 (lon-lat)
 ------------------
 
-| Used: France - onshore and offshore, mainland and Corsica.
+| Used: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
 
 .. code-block:: php
 
@@ -2101,7 +2134,7 @@ Replaces RGF93 v1 (lon-lat) from 2010-06-18. Replaced by RGF93 v2b (lon-lat) (CR
 RGF93 v2b
 ---------
 
-| Used: France - onshore and offshore, mainland and Corsica.
+| Used: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
 
 .. code-block:: php
 
@@ -2117,7 +2150,7 @@ Replaces RGF93 v2 (CRS code 9776) from 2021-01-05. See CRS code 9783 for alterna
 RGF93 v2b (lon-lat)
 -------------------
 
-| Used: France - onshore and offshore, mainland and Corsica.
+| Used: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
 
 .. code-block:: php
 
@@ -2371,7 +2404,7 @@ See CRS code 8899 for system with horizontal axes in sequence lat-lon to be used
 RRAF 1991
 ---------
 
-| Used: French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante, Les Saintes, Iles de la Petite Terre, La Desirade, St Barthélemy, and northern St Martin) and Martinique.
+| Used: French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante, Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; St Martin.
 
 .. code-block:: php
 
@@ -3020,7 +3053,7 @@ Broadcast ephemeris. Replaced by WGS 84.
 WGS 84
 ------
 
-| Used: World: Afghanistan, Albania, Algeria, American Samoa, Andorra, Angola, Anguilla, Antarctica, Antigua and Barbuda, Argentina, Armenia, Aruba, Australia, Austria, Azerbaijan, Bahamas, Bahrain, Bangladesh, Barbados, Belgium, Belgium, Belize, Benin, Bermuda, Bhutan, Bolivia, Bonaire, Saint Eustasius and Saba, Bosnia and Herzegovina, Botswana, Bouvet Island, Brazil, British Indian Ocean Territory, British Virgin Islands, Brunei Darussalam, Bulgaria, Burkina Faso, Burundi, Cambodia, Cameroon, Canada, Cape Verde, Cayman Islands, Central African Republic, Chad, Chile, China, Christmas Island, Cocos (Keeling) Islands, Comoros, Congo, Cook Islands, Costa Rica, Côte d'Ivoire (Ivory Coast), Croatia, Cuba, Curacao, Cyprus, Czechia, Denmark, Djibouti, Dominica, Dominican Republic, East Timor, Ecuador, Egypt, El Salvador, Equatorial Guinea, Eritrea, Estonia, Eswatini (Swaziland), Ethiopia, Falkland Islands (Malvinas), Faroe Islands, Fiji, Finland, France, French Guiana, French Polynesia, French Southern Territories, Gabon, Gambia, Georgia, Germany, Ghana, Gibraltar, Greece, Greenland, Grenada, Guadeloupe, Guam, Guatemala, Guinea, Guinea-Bissau, Guyana, Haiti, Heard Island and McDonald Islands, Holy See (Vatican City State), Honduras, China - Hong Kong, Hungary, Iceland, India, Indonesia, Islamic Republic of Iran, Iraq, Ireland, Israel, Italy, Jamaica, Japan, Jordan, Kazakhstan, Kenya, Kiribati, Democratic People's Republic of Korea (North Korea), Republic of Korea (South Korea), Kosovo, Kuwait, Kyrgyzstan, Lao People's Democratic Republic (Laos), Latvia, Lebanon, Lesotho, Liberia, Libyan Arab Jamahiriya, Liechtenstein, Lithuania, Luxembourg, China - Macao, Madagascar, Malawi, Malaysia, Maldives, Mali, Malta, Marshall Islands, Martinique, Mauritania, Mauritius, Mayotte, Mexico, Federated States of Micronesia, Monaco, Mongolia, Montenegro, Montserrat, Morocco, Mozambique, Myanmar (Burma), Namibia, Nauru, Nepal, Netherlands, New Caledonia, New Zealand, Nicaragua, Niger, Nigeria, Niue, Norfolk Island, North Macedonia, Northern Mariana Islands, Norway, Oman, Pakistan, Palau, Panama, Papua New Guinea (PNG), Paraguay, Peru, Philippines, Pitcairn, Poland, Portugal, Puerto Rico, Qatar, Reunion, Romania, Russian Federation, Rwanda, Saint Kitts and Nevis, Saint Helena, Ascension and Tristan da Cunha, Saint Lucia, Saint Pierre and Miquelon, Saint Vincent and the Grenadines, Samoa, San Marino, Sao Tome and Principe, Saudi Arabia, Senegal, Serbia, Seychelles, Sierra Leone, Singapore, Slovakia (Slovak Republic), Slovenia, Sint Maarten, Solomon Islands, Somalia, South Africa, South Georgia and the South Sandwich Islands, South Sudan, Spain, Sri Lanka, Sudan, Suriname, Svalbard and Jan Mayen, Sweden, Switzerland, Syrian Arab Republic, Taiwan, Tajikistan, United Republic of Tanzania, Thailand, The Democratic Republic of the Congo (Zaire), Togo, Tokelau, Tonga, Trinidad and Tobago, Tunisia, Turkey, Turkmenistan, Turks and Caicos Islands, Tuvalu, Uganda, Ukraine, United Arab Emirates (UAE), United Kingdom (UK), United States (USA), United States Minor Outlying Islands, Uruguay, Uzbekistan, Vanuatu, Venezuela, Vietnam, US Virgin Islands, Wallis and Futuna, Western Sahara, Yemen, Zambia, Zimbabwe.
+| Used: World: Afghanistan, Albania, Algeria, American Samoa, Andorra, Angola, Anguilla, Antarctica, Antigua and Barbuda, Argentina, Armenia, Aruba, Australia, Austria, Azerbaijan, Bahamas, Bahrain, Bangladesh, Barbados, Belgium, Belgium, Belize, Benin, Bermuda, Bhutan, Bolivia, Bonaire, Saint Eustasius and Saba, Bosnia and Herzegovina, Botswana, Bouvet Island, Brazil, British Indian Ocean Territory, British Virgin Islands, Brunei Darussalam, Bulgaria, Burkina Faso, Burundi, Cambodia, Cameroon, Canada, Cape Verde, Cayman Islands, Central African Republic, Chad, Chile, China, Christmas Island, Cocos (Keeling) Islands, Comoros, Congo, Cook Islands, Costa Rica, Côte d'Ivoire (Ivory Coast), Croatia, Cuba, Curacao, Cyprus, Czechia, Denmark, Djibouti, Dominica, Dominican Republic, East Timor, Ecuador, Egypt, El Salvador, Equatorial Guinea, Eritrea, Estonia, Eswatini (Swaziland), Ethiopia, Falkland Islands (Malvinas), Faroe Islands, Fiji, Finland, France, French Guiana, French Polynesia, French Southern Territories, Gabon, Gambia, Georgia, Germany, Ghana, Gibraltar, Greece, Greenland, Grenada, Guadeloupe, Guam, Guatemala, Guinea, Guinea-Bissau, Guyana, Haiti, Heard Island and McDonald Islands, Holy See (Vatican City State), Honduras, China - Hong Kong, Hungary, Iceland, India, Indonesia, Islamic Republic of Iran, Iraq, Ireland, Israel, Italy, Jamaica, Japan, Jordan, Kazakhstan, Kenya, Kiribati, Democratic People's Republic of Korea (North Korea), Republic of Korea (South Korea), Kosovo, Kuwait, Kyrgyzstan, Lao People's Democratic Republic (Laos), Latvia, Lebanon, Lesotho, Liberia, Libyan Arab Jamahiriya, Liechtenstein, Lithuania, Luxembourg, China - Macao, Madagascar, Malawi, Malaysia, Maldives, Mali, Malta, Marshall Islands, Martinique, Mauritania, Mauritius, Mayotte, Mexico, Federated States of Micronesia, Monaco, Mongolia, Montenegro, Montserrat, Morocco, Mozambique, Myanmar (Burma), Namibia, Nauru, Nepal, Netherlands, New Caledonia, New Zealand, Nicaragua, Niger, Nigeria, Niue, Norfolk Island, North Macedonia, Northern Mariana Islands, Norway, Oman, Pakistan, Palau, Panama, Papua New Guinea (PNG), Paraguay, Peru, Philippines, Pitcairn, Poland, Portugal, Puerto Rico, Qatar, Reunion, Romania, Russian Federation, Rwanda, St Barthelemy, St Kitts and Nevis, St Helena, Ascension and Tristan da Cunha, St Lucia, St Martin, St Pierre and Miquelon, Saint Vincent and the Grenadines, Samoa, San Marino, Sao Tome and Principe, Saudi Arabia, Senegal, Serbia, Seychelles, Sierra Leone, Singapore, Slovakia (Slovak Republic), Slovenia, St Maarten, Solomon Islands, Somalia, South Africa, South Georgia and the South Sandwich Islands, South Sudan, Spain, Sri Lanka, Sudan, Suriname, Svalbard and Jan Mayen, Sweden, Switzerland, Syrian Arab Republic, Taiwan, Tajikistan, United Republic of Tanzania, Thailand, The Democratic Republic of the Congo (Zaire), Togo, Tokelau, Tonga, Trinidad and Tobago, Tunisia, Turkey, Turkmenistan, Turks and Caicos Islands, Tuvalu, Uganda, Ukraine, United Arab Emirates (UAE), United Kingdom (UK), United States (USA), United States Minor Outlying Islands, Uruguay, Uzbekistan, Vanuatu, Venezuela, Vietnam, US Virgin Islands, Wallis and Futuna, Western Sahara, Yemen, Zambia, Zimbabwe.
 
 .. code-block:: php
 

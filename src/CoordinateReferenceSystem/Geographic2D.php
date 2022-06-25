@@ -555,7 +555,8 @@ class Geographic2D extends Geographic
      * Extent: Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen,
      * Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt,
      * Schleswig-Holstein, Thuringen.
-     * Differs from DHDN by 0.5-1m in former West Germany and by a maximum of 3m in former East Germany.
+     * Geometric component of both DB_REF2003 and DB_REF2016 systems. Differs from DHDN by 0.5-1m in former West
+     * Germany and by a maximum of 3m in former East Germany.
      */
     public const EPSG_DB_REF = 'urn:ogc:def:crs:EPSG::5681';
 
@@ -631,6 +632,15 @@ class Geographic2D extends Geographic
      * Replaced by Manoca 1962 (code 4193).
      */
     public const EPSG_DOUALA_1948 = 'urn:ogc:def:crs:EPSG::4192';
+
+    /**
+     * EBBWV14-IRF
+     * Extent: United Kingdom (UK) - on or related to the rail route from Newport (Park Junction) to Ebbw Vale.
+     * Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / EBBWV14 SnakeGrid projected CRS through
+     * transformation ETRS89 to EBBWV14-IRF (1) (code 9941) used in conjunction with the EBBWV14-TM map projection
+     * (code 9942).
+     */
+    public const EPSG_EBBWV14_IRF = 'urn:ogc:def:crs:EPSG::9939';
 
     /**
      * ECML14_NB-IRF
@@ -919,6 +929,15 @@ class Geographic2D extends Geographic
     public const EPSG_FEH2010 = 'urn:ogc:def:crs:EPSG::5593';
 
     /**
+     * FNL22-IRF
+     * Extent: United Kingdom (UK) - on or related to the rail route from Inverness to Thurso and Wick.
+     * Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / FNL22 SnakeGrid projected CRS through
+     * transformation ETRS89 to FNL22-IRF (1) (code 9975) used in conjunction with the FNL22-TM map projection (code
+     * 9976).
+     */
+    public const EPSG_FNL22_IRF = 'urn:ogc:def:crs:EPSG::9974';
+
+    /**
      * Fahud
      * Extent: Oman - mainland onshore.
      * Since 1993 replaced by PSD93 geogCRS (code 4134). Maximum differences to Fahud adjustment are 20 metres.
@@ -1123,6 +1142,15 @@ class Geographic2D extends Geographic
     public const EPSG_HTRS96 = 'urn:ogc:def:crs:EPSG::4761';
 
     /**
+     * HULLEE13-IRF
+     * Extent: United Kingdom (UK) - on or related to the rail route from the Morley tunnel through Leeds to Hull.
+     * Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / HULLEE13 SnakeGrid projected CRS
+     * through transformation ETRS89 to HULLEE13-IRF (1) (code 9965) used in conjunction with the HULLEE13-TM map
+     * projection (code 9966).
+     */
+    public const EPSG_HULLEE13_IRF = 'urn:ogc:def:crs:EPSG::9964';
+
+    /**
      * Hanoi 1972
      * Extent: Vietnam - onshore.
      * Replaces use of Indian 1960. Replaced by VN-2000 (CRS code 4756).
@@ -1157,7 +1185,7 @@ class Geographic2D extends Geographic
 
     /**
      * Hjorsey 1955
-     * Extent: Iceland - onshore.
+     * Extent: Iceland - mainland.
      */
     public const EPSG_HJORSEY_1955 = 'urn:ogc:def:crs:EPSG::4658';
 
@@ -1390,7 +1418,7 @@ class Geographic2D extends Geographic
     /**
      * ISN2004
      * Extent: Iceland - onshore and offshore.
-     * Replaces ISN93 (CRS code 4659).
+     * Replaces ISN93 (CRS code 4659). Replaced by ISN2016 (CRS code 8086).
      */
     public const EPSG_ISN2004 = 'urn:ogc:def:crs:EPSG::5324';
 
@@ -1432,9 +1460,16 @@ class Geographic2D extends Geographic
     /**
      * ITRF2014
      * Extent: World.
-     * Replaces ITRF2008 (code 8999).
+     * Replaces ITRF2008 (code 8999). Replaced by ITRF2020 (CRS code 9990).
      */
     public const EPSG_ITRF2014 = 'urn:ogc:def:crs:EPSG::9000';
+
+    /**
+     * ITRF2020
+     * Extent: World.
+     * Replaces ITRF2014 (code 9000).
+     */
+    public const EPSG_ITRF2020 = 'urn:ogc:def:crs:EPSG::9990';
 
     /**
      * ITRF88
@@ -1742,6 +1777,12 @@ class Geographic2D extends Geographic
     public const EPSG_LTF2004_G = 'urn:ogc:def:crs:EPSG::9547';
 
     /**
+     * LUREF
+     * Extent: Luxembourg.
+     */
+    public const EPSG_LUREF = 'urn:ogc:def:crs:EPSG::4181';
+
+    /**
      * La Canoa
      * Extent: Venezuela - onshore.
      * This CRS is incorporated within PSAD56. See CRS code 4248.
@@ -1840,12 +1881,6 @@ class Geographic2D extends Geographic
     public const EPSG_LOME = 'urn:ogc:def:crs:EPSG::4252';
 
     /**
-     * Luxembourg 1930
-     * Extent: Luxembourg.
-     */
-    public const EPSG_LUXEMBOURG_1930 = 'urn:ogc:def:crs:EPSG::4181';
-
-    /**
      * Luzon 1911
      * Extent: Philippines - onshore.
      * Replaced by PRS92 (CRS code 4683).
@@ -1926,6 +1961,16 @@ class Geographic2D extends Geographic
     public const EPSG_MMS = 'urn:ogc:def:crs:EPSG::9253';
 
     /**
+     * MOLDOR11-IRF
+     * Extent: United Kingdom (UK) - on or related to the rail route from Manchester via Ordsall Lane and the Hope
+     * Valley to Dore Junction.
+     * Intermediate CRS created in 2021 to assist the emulation of the ETRS89 / MOLDOR11 SnakeGrid projected CRS
+     * through transformation ETRS89 to MOLDOR11-IRF (1) (code 9878) used in conjunction with the MOLDOR11-TM map
+     * projection (code 9879).
+     */
+    public const EPSG_MOLDOR11_IRF = 'urn:ogc:def:crs:EPSG::9871';
+
+    /**
      * MOLDREF99
      * Extent: Moldova.
      */
@@ -1937,6 +1982,16 @@ class Geographic2D extends Geographic
      * Replaced by RGWF96 (CRS code 8900) for geodetic survey and RGWF96 (lon-lat) (CRS code 8902) for GIS.
      */
     public const EPSG_MOP78 = 'urn:ogc:def:crs:EPSG::4639';
+
+    /**
+     * MRH21-IRF
+     * Extent: United Kingdom (UK) - on or related to Midland Rail Hub, covering routes through Cardiff, Bristol,
+     * Gloucester, Derby, Birmingham, Leicester, and Lincoln.
+     * Intermediate CRS created in 2021 to assist the emulation of the ETRS89 / MRH21 SnakeGrid projected CRS through
+     * transformation ETRS89 to MRH21-IRF (1) (code 9867) used in conjunction with the MRH21-TM map projection (code
+     * 9868).
+     */
+    public const EPSG_MRH21_IRF = 'urn:ogc:def:crs:EPSG::9866';
 
     /**
      * MTRF-2000
@@ -2884,7 +2939,7 @@ class Geographic2D extends Geographic
     /**
      * RGAF09
      * Extent: French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante,
-     * Les Saintes, Iles de la Petite Terre, La Desirade, St Barthélemy, and northern St Martin) and Martinique.
+     * Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; St Martin.
      * Replaces RRAF 1991. See CRS code 7086 for alternate system with axes reversed used by IGN for GIS purposes.
      */
     public const EPSG_RGAF09 = 'urn:ogc:def:crs:EPSG::5489';
@@ -2892,7 +2947,7 @@ class Geographic2D extends Geographic
     /**
      * RGAF09 (lon-lat)
      * Extent: French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante,
-     * Les Saintes, Iles de la Petite Terre, La Desirade, St Barthélemy, and northern St Martin) and Martinique.
+     * Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; St Martin.
      * Replaces RRAF 1991. See CRS code 5489 for system with axes in sequence lat-lon to be used for air, land and sea
      * navigation and safety of life purposes.
      */
@@ -2900,7 +2955,7 @@ class Geographic2D extends Geographic
 
     /**
      * RGF93 v1
-     * Extent: France - onshore and offshore, mainland and Corsica.
+     * Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
      * See CRS code 7084 for alternate system with axes reversed used by IGN for GIS purposes. Replaced by RGF93 v2
      * (CRS code 9777) from 2010-06-18.
      */
@@ -2908,7 +2963,7 @@ class Geographic2D extends Geographic
 
     /**
      * RGF93 v1 (lon-lat)
-     * Extent: France - onshore and offshore, mainland and Corsica.
+     * Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
      * See CRS code 4171 for system with axes in sequence lat-lon to be used for air, land and sea navigation and
      * safety of life purposes. Replaced by RGF93 v2 (lon-lat) (CRS code 9779) from 2010-06-18.
      */
@@ -2916,7 +2971,7 @@ class Geographic2D extends Geographic
 
     /**
      * RGF93 v2
-     * Extent: France - onshore and offshore, mainland and Corsica.
+     * Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
      * Replaces RGF93 v1 (CRS code 4171) from 2010-06-18. Replaced by RGF93 v2b (CRS code 9782) from 2021-01-05. See
      * CRS code 9779 for alternate system with axes reversed used by IGN for GIS purposes.
      */
@@ -2924,7 +2979,7 @@ class Geographic2D extends Geographic
 
     /**
      * RGF93 v2 (lon-lat)
-     * Extent: France - onshore and offshore, mainland and Corsica.
+     * Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
      * Replaces RGF93 v1 (lon-lat) (code 7084) from 2010-06-18. Replaced by RGF93 v2b (lon-lat) (CRS code 9784) from
      * 2021-01-05. See CRS code 9777 for system with axes in sequence lat-lon to be used for air, land and sea
      * navigation and safety of life purposes.
@@ -2933,7 +2988,7 @@ class Geographic2D extends Geographic
 
     /**
      * RGF93 v2b
-     * Extent: France - onshore and offshore, mainland and Corsica.
+     * Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
      * Replaces RGF93 v2 (CRS code 9777) from 2021-01-05. See CRS code 9784 for alternate system with axes reversed
      * used by IGN for GIS purposes.
      */
@@ -2941,7 +2996,7 @@ class Geographic2D extends Geographic
 
     /**
      * RGF93 v2b (lon-lat)
-     * Extent: France - onshore and offshore, mainland and Corsica.
+     * Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
      * Replaces RGF93 v2 (lon-lat) (CRS code 9779) from 2021-01-05. See CRS code 9782 for system with axes in sequence
      * lat-lon to be used for air, land and sea navigation and safety of life purposes.
      */
@@ -3073,7 +3128,7 @@ class Geographic2D extends Geographic
     /**
      * RRAF 1991
      * Extent: French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante,
-     * Les Saintes, Iles de la Petite Terre, La Desirade, St Barthélemy, and northern St Martin) and Martinique.
+     * Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; St Martin.
      * Replaces older local systems Fort Marigot and Sainte Anne CRS (codes 4621-22) in Guadeloupe and Fort Desaix (CRS
      * code 4625) in Martinique. Replaced by RGAF09 (CRS code 5489).
      */
@@ -3127,7 +3182,7 @@ class Geographic2D extends Geographic
 
     /**
      * Reykjavik 1900
-     * Extent: Iceland - onshore.
+     * Extent: Iceland - mainland.
      * See ellipsoid remarks.
      */
     public const EPSG_REYKJAVIK_1900 = 'urn:ogc:def:crs:EPSG::4657';
@@ -3190,6 +3245,16 @@ class Geographic2D extends Geographic
      * only in Brazil.
      */
     public const EPSG_SAD69_96 = 'urn:ogc:def:crs:EPSG::5527';
+
+    /**
+     * SCM22-IRF
+     * Extent: United Kingdom (UK) - on or related to the Scottish central mainline rail route from Motherwell through
+     * Perth and Pitlochry to Inverness.
+     * Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / SCM22 SnakeGrid projected CRS through
+     * transformation ETRS89 to SCM22-IRF (1) (code 9969) used in conjunction with the SCM22-TM map projection (code
+     * 9971).
+     */
+    public const EPSG_SCM22_IRF = 'urn:ogc:def:crs:EPSG::9969';
 
     /**
      * SHGD2015
@@ -3993,6 +4058,11 @@ class Geographic2D extends Geographic
      * @deprecated use EPSG_RGF93_V1_LON_LAT instead
      */
     public const EPSG_RGF93_LON_LAT = 'urn:ogc:def:crs:EPSG::7084';
+
+    /**
+     * @deprecated use EPSG_LUREF instead
+     */
+    public const EPSG_LUXEMBOURG_1930 = 'urn:ogc:def:crs:EPSG::4181';
 
     private static array $cachedObjects = [];
 

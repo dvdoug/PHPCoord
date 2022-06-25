@@ -2570,6 +2570,14 @@ class Projected extends CoordinateReferenceSystem
     public const EPSG_DOUALA_1948_AEF_WEST = 'urn:ogc:def:crs:EPSG::3119';
 
     /**
+     * EBBWV14 Grid
+     * Extent: United Kingdom (UK) - on or related to the rail route from Newport (Park Junction) to Ebbw Vale.
+     * Defined through transformation ETRS89 to EBBWV14-IRF (1) (code 9941) and map projection EBBWV14-TM (code 9942).
+     * Emulates the EBBWV14 Snake projection applied to ETRS89 as realized through OSNet 2009.
+     */
+    public const EPSG_EBBWV14_GRID = 'urn:ogc:def:crs:EPSG::9943';
+
+    /**
      * ECML14_NB Grid
      * Extent: United Kingdom (UK) - on or related to rail routes from Newcastle Central to Ashington via Benton North
      * Junction, and the section from Bedlington to Morpeth.
@@ -3947,6 +3955,14 @@ class Projected extends CoordinateReferenceSystem
     public const EPSG_FEH2010_FEHMARNBELT_TM = 'urn:ogc:def:crs:EPSG::5596';
 
     /**
+     * FNL22 Grid
+     * Extent: United Kingdom (UK) - on or related to the rail route from Inverness to Thurso and Wick.
+     * Defined through transformation ETRS89 to FNL22-IRF (1) (code 9975) and map projection FNL22-TM (code 9976).
+     * Emulates the FNL22 Snake projection applied to ETRS89 as realized through OSNet 2009.
+     */
+    public const EPSG_FNL22_GRID = 'urn:ogc:def:crs:EPSG::9977';
+
+    /**
      * Fahud / UTM zone 39N
      * Extent: Oman - onshore west of 54°E.
      * Since 1993 replaced by PSD93 / UTM zone 39N projCRS (code 3439). Maximum differences to Fahud adjustment are 20
@@ -4299,6 +4315,15 @@ class Projected extends CoordinateReferenceSystem
      * Extent: Cocos (Keeling) Islands - onshore and offshore east of 96°E.
      */
     public const EPSG_GDA94_MGA_ZONE_47 = 'urn:ogc:def:crs:EPSG::6737';
+
+    /**
+     * GDA94 / MGA zone 48
+     * Extent: Australia - offshore west of 108°E. Christmas Island - onshore and offshore west of 108°E.
+     * Note: For Dataset releases from 2012-01 to 2014-02 (v7.9.4 to v8.3.3) status of this record status was shown as
+     * deprecated as area is outside the EEZ. Reinstated to valid after ratification of extensions of limit of
+     * Australian continental shelf.
+     */
+    public const EPSG_GDA94_MGA_ZONE_48 = 'urn:ogc:def:crs:EPSG::28348';
 
     /**
      * GDA94 / MGA zone 49
@@ -6101,6 +6126,14 @@ class Projected extends CoordinateReferenceSystem
     public const EPSG_HTRS96_UTM_ZONE_34N = 'urn:ogc:def:crs:EPSG::3768';
 
     /**
+     * HULLEE13 Grid
+     * Extent: United Kingdom (UK) - on or related to the rail route from the Morley tunnel through Leeds to Hull.
+     * Defined through transformation ETRS89 to HULLEE13-IRF (1) (code 9965) and map projection HULLEE13-TM (code
+     * 9966). Emulates the HULLEE13 Snake projection applied to ETRS89 as realized through OSNet 2009.
+     */
+    public const EPSG_HULLEE13_GRID = 'urn:ogc:def:crs:EPSG::9967';
+
+    /**
      * Hanoi 1972 / GK 106 NE
      * Extent: Vietnam - onshore Vung Tau area.
      */
@@ -6215,28 +6248,28 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * Hjorsey 1955 / Lambert 1955
-     * Extent: Iceland - onshore.
+     * Extent: Iceland - mainland.
      * Replaces Reykjavik 1900 / Lambert 1900 (CRS code 3052). Replaced by ISN93 / Lambert 1993 (CRS code 3057).
      */
     public const EPSG_HJORSEY_1955_LAMBERT_1955 = 'urn:ogc:def:crs:EPSG::3053';
 
     /**
      * Hjorsey 1955 / UTM zone 26N
-     * Extent: Iceland - onshore west of 24°W.
+     * Extent: Iceland - mainland west of 24°W.
      * Replaced by ISN93 / Lambert 1993 (CRS code 3057).
      */
     public const EPSG_HJORSEY_1955_UTM_ZONE_26N = 'urn:ogc:def:crs:EPSG::3054';
 
     /**
      * Hjorsey 1955 / UTM zone 27N
-     * Extent: Iceland - onshore between 24°W and 18°W.
+     * Extent: Iceland - mainland between 24°W and 18°W.
      * Replaced by ISN93 / Lambert 1993 (CRS code 3057).
      */
     public const EPSG_HJORSEY_1955_UTM_ZONE_27N = 'urn:ogc:def:crs:EPSG::3055';
 
     /**
      * Hjorsey 1955 / UTM zone 28N
-     * Extent: Iceland - onshore east of 18°W.
+     * Extent: Iceland - mainland east of 18°W.
      * Replaced by ISN93 / Lambert 1993 (CRS code 3057).
      */
     public const EPSG_HJORSEY_1955_UTM_ZONE_28N = 'urn:ogc:def:crs:EPSG::3056';
@@ -6596,6 +6629,12 @@ class Projected extends CoordinateReferenceSystem
      * 3035): see CT 9041. Replaced by ISN2016 / LAEA Europe (CRS code 9039).
      */
     public const EPSG_ISN2004_LAEA_EUROPE = 'urn:ogc:def:crs:EPSG::5638';
+
+    /**
+     * ISN2004 / LAEA Iceland
+     * Extent: Iceland - onshore and offshore.
+     */
+    public const EPSG_ISN2004_LAEA_ICELAND = 'urn:ogc:def:crs:EPSG::9947';
 
     /**
      * ISN2004 / LCC Europe
@@ -7891,6 +7930,21 @@ class Projected extends CoordinateReferenceSystem
     public const EPSG_LTF2004_C = 'urn:ogc:def:crs:EPSG::9549';
 
     /**
+     * LUREF / Luxembourg TM
+     * Extent: Luxembourg.
+     */
+    public const EPSG_LUREF_LUXEMBOURG_TM = 'urn:ogc:def:crs:EPSG::2169';
+
+    /**
+     * LUREF / Luxembourg TM (3D)
+     * Extent: Luxembourg.
+     * The height error in assuming that the CS is Cartesian never exceeds 2mm per 100m height in Luxembourg. The
+     * ellipsoidal height approximates NG95 height to 5-15cm. For engineering and other applications requiring physical
+     * height use compound CRS code 9897.
+     */
+    public const EPSG_LUREF_LUXEMBOURG_TM_3D = 'urn:ogc:def:crs:EPSG::9895';
+
+    /**
      * La Canoa / UTM zone 18N
      * Extent: Venezuela - west of 72°W.
      * Sometimes referred to as PSAD56 / UTM zone 18N.
@@ -8015,12 +8069,6 @@ class Projected extends CoordinateReferenceSystem
      * Extent: Togo - onshore and offshore.
      */
     public const EPSG_LOME_UTM_ZONE_31N = 'urn:ogc:def:crs:EPSG::25231';
-
-    /**
-     * Luxembourg 1930 / Gauss
-     * Extent: Luxembourg.
-     */
-    public const EPSG_LUXEMBOURG_1930_GAUSS = 'urn:ogc:def:crs:EPSG::2169';
 
     /**
      * Luzon 1911 / Philippines zone I
@@ -8514,8 +8562,8 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * MGI 1901 / Balkans zone 7
-     * Extent: Bosnia and Herzegovina - east of 19°30'E; Kosovo; Montenegro - east of 19°30'E; North Macedonia - west
-     * of 22°30'E; Serbia - between 19°30'E and 22°30'E.
+     * Extent: North Macedonia. Bosnia and Herzegovina - east of 19°30'E; Kosovo; Montenegro - east of 19°30'E;
+     * Serbia - between 19°30'E and 22°30'E.
      * Introduced in 1924. In Macedonia replaced by MSCS (CRS code 6204) from 2008 but from 2013 this CRS used for AREC
      * electronic cadastral database (E-kat) across whole country.
      */
@@ -8566,6 +8614,16 @@ class Projected extends CoordinateReferenceSystem
     public const EPSG_MMS_ARGENTINA_2 = 'urn:ogc:def:crs:EPSG::9254';
 
     /**
+     * MOLDOR11 Grid
+     * Extent: United Kingdom (UK) - on or related to the rail route from Manchester via Ordsall Lane and the Hope
+     * Valley to Dore Junction.
+     * The CRS's definition through transformation ETRS89 to MOLDOR11-IRF (1) (code 9878) and map projection
+     * MOLDOR11-TM (code 9879) emulates the MOLDOR11 Snake projection applied to ETRS89 as realized through OSNet 2009
+     * CORS.
+     */
+    public const EPSG_MOLDOR11_GRID = 'urn:ogc:def:crs:EPSG::9880';
+
+    /**
      * MOLDREF99 / Moldova TM
      * Extent: Moldova.
      * For mapping at 1:25,000 scale and smaller use WGS 84 / UTM (CRS codes 4037-38).
@@ -8578,6 +8636,16 @@ class Projected extends CoordinateReferenceSystem
      * Replaced by RGWF96 / UTM zone 1S (CRS code 8903).
      */
     public const EPSG_MOP78_UTM_ZONE_1S = 'urn:ogc:def:crs:EPSG::2988';
+
+    /**
+     * MRH21 Grid
+     * Extent: United Kingdom (UK) - on or related to Midland Rail Hub, covering routes through Cardiff, Bristol,
+     * Gloucester, Derby, Birmingham, Leicester, and Lincoln.
+     * Defined through transformation ETRS89 to MRH21-IRF (1) (code 9867) and map projection MRH21-TM (code 9868).
+     * Emulates the MRH21 Snake projection applied to ETRS89 as realized through OSNet 2009. Consistent with CCWGDB09
+     * as realized through OSNet 2001.
+     */
+    public const EPSG_MRH21_GRID = 'urn:ogc:def:crs:EPSG::9869';
 
     /**
      * MTRF-2000 / UTM zone 36N
@@ -8623,10 +8691,19 @@ class Projected extends CoordinateReferenceSystem
     /**
      * Macedonia State Coordinate System
      * Extent: North Macedonia.
-     * Truncated form of MGI 1901 / Balkans zones 7, CRS code 6316. Introduced in 2008, replacing both MGI 1901 /
-     * Balkans zones 7 and 8 (CRS codes 6316 and 8679) for use across whole country. CRS code 6316 used for cadastre.
+     * Truncated form of MGI 1901 / Balkans zones 7, CRS code 6316. Introduced in 2008, replacing MGI 1901 / Balkans
+     * zones 7 and 8 (CRS codes 6316 and 8679) for use across whole country. Further truncated in CRS 9945 which with
+     * CRS code 6316 used for cadastre.
      */
     public const EPSG_MACEDONIA_STATE_COORDINATE_SYSTEM = 'urn:ogc:def:crs:EPSG::6204';
+
+    /**
+     * Macedonia State Coordinate System truncated
+     * Extent: North Macedonia.
+     * Macedonia State Coordinate System (CRS code 6204) with northing reduced by 4 million. Cadastral data from AREC
+     * may be delivered in this CRS.
+     */
+    public const EPSG_MACEDONIA_STATE_COORDINATE_SYSTEM_TRUNCATED = 'urn:ogc:def:crs:EPSG::9945';
 
     /**
      * Madrid 1870 (Madrid) / Spain LCC
@@ -13752,6 +13829,12 @@ class Projected extends CoordinateReferenceSystem
      * / SPCS for applications with an accuracy of better than 3 feet.
      */
     public const EPSG_NAD83_WYOMING_EAST_CENTRAL_FTUS = 'urn:ogc:def:crs:EPSG::3737';
+
+    /**
+     * NAD83 / Wyoming Lambert
+     * Extent: United States (USA) - Wyoming.
+     */
+    public const EPSG_NAD83_WYOMING_LAMBERT = 'urn:ogc:def:crs:EPSG::32159';
 
     /**
      * NAD83 / Wyoming West
@@ -20182,18 +20265,975 @@ class Projected extends CoordinateReferenceSystem
     public const EPSG_NAD83_CSRS_YUKON_ALBERS = 'urn:ogc:def:crs:EPSG::3579';
 
     /**
-     * NAD83(CSRS)v6 / MTM Nova Scotia zone 4
+     * NAD83(CSRS)v2 / Alberta 3TM ref merid 111 W
+     * Extent: Canada - Alberta - east of 112°30'W.
+     * If used for rural area control markers, area of use is amended to east of 112°W; however use of NAD83(CSRS)v2 /
+     * UTM zone 12N (CRS code 22212) is encouraged in these rural areas.
+     */
+    public const EPSG_NAD83_CSRS_V2_ALBERTA_3TM_REF_MERID_111_W = 'urn:ogc:def:crs:EPSG::22262';
+
+    /**
+     * NAD83(CSRS)v2 / Alberta 3TM ref merid 114 W
+     * Extent: Canada - Alberta - between 115°30'W and 112°30'W.
+     * If used for rural area control markers, area of use is amended to between 116°W and 112°W; however use of
+     * NAD83(CSRS)v2 / UTM zones 11N and 12N (CRS codes 22211 and 22212) is encouraged in these rural areas.
+     */
+    public const EPSG_NAD83_CSRS_V2_ALBERTA_3TM_REF_MERID_114_W = 'urn:ogc:def:crs:EPSG::22263';
+
+    /**
+     * NAD83(CSRS)v2 / Alberta 3TM ref merid 117 W
+     * Extent: Canada - Alberta - between 118°30'W and 115°30' W.
+     * If used for rural area control markers, area of use is amended to between 118°W and 116°W; however use of
+     * NAD83(CSRS)v2 / UTM zone 11N (CRS code 22211) is encouraged in these rural areas.
+     */
+    public const EPSG_NAD83_CSRS_V2_ALBERTA_3TM_REF_MERID_117_W = 'urn:ogc:def:crs:EPSG::22264';
+
+    /**
+     * NAD83(CSRS)v2 / Alberta 3TM ref merid 120 W
+     * Extent: Canada - Alberta - west of 118°30' W.
+     * If used for rural area control markers, area of use is amended to west of 118°W; however use of NAD83(CSRS)v2 /
+     * UTM zone 11N (CRS code 22211) is encouraged in these rural areas.
+     */
+    public const EPSG_NAD83_CSRS_V2_ALBERTA_3TM_REF_MERID_120_W = 'urn:ogc:def:crs:EPSG::22265';
+
+    /**
+     * NAD83(CSRS)v2 / NB Stereographic
+     * Extent: Canada - New Brunswick.
+     * In use from 1999.
+     */
+    public const EPSG_NAD83_CSRS_V2_NB_STEREOGRAPHIC = 'urn:ogc:def:crs:EPSG::22240';
+
+    /**
+     * NAD83(CSRS)v2 / PEI Stereographic
+     * Extent: Canada - Prince Edward Island.
+     */
+    public const EPSG_NAD83_CSRS_V2_PEI_STEREOGRAPHIC = 'urn:ogc:def:crs:EPSG::22239';
+
+    /**
+     * NAD83(CSRS)v2 / SCoPQ zone 10
+     * Extent: Canada - Quebec - west of 78°W.
+     */
+    public const EPSG_NAD83_CSRS_V2_SCOPQ_ZONE_10 = 'urn:ogc:def:crs:EPSG::22250';
+
+    /**
+     * NAD83(CSRS)v2 / SCoPQ zone 3
+     * Extent: Canada - Quebec - east of 60°W.
+     */
+    public const EPSG_NAD83_CSRS_V2_SCOPQ_ZONE_3 = 'urn:ogc:def:crs:EPSG::22243';
+
+    /**
+     * NAD83(CSRS)v2 / SCoPQ zone 4
+     * Extent: Canada - Quebec - between 63°W and 60°W.
+     */
+    public const EPSG_NAD83_CSRS_V2_SCOPQ_ZONE_4 = 'urn:ogc:def:crs:EPSG::22244';
+
+    /**
+     * NAD83(CSRS)v2 / SCoPQ zone 5
+     * Extent: Canada - Quebec - between 66°W and 63°W.
+     */
+    public const EPSG_NAD83_CSRS_V2_SCOPQ_ZONE_5 = 'urn:ogc:def:crs:EPSG::22245';
+
+    /**
+     * NAD83(CSRS)v2 / SCoPQ zone 6
+     * Extent: Canada - Quebec - between 69°W and 66°W.
+     */
+    public const EPSG_NAD83_CSRS_V2_SCOPQ_ZONE_6 = 'urn:ogc:def:crs:EPSG::22246';
+
+    /**
+     * NAD83(CSRS)v2 / SCoPQ zone 7
+     * Extent: Canada - Quebec - between 72°W and 69°W.
+     */
+    public const EPSG_NAD83_CSRS_V2_SCOPQ_ZONE_7 = 'urn:ogc:def:crs:EPSG::22247';
+
+    /**
+     * NAD83(CSRS)v2 / SCoPQ zone 8
+     * Extent: Canada - Quebec - between 75°W and 72°W.
+     */
+    public const EPSG_NAD83_CSRS_V2_SCOPQ_ZONE_8 = 'urn:ogc:def:crs:EPSG::22248';
+
+    /**
+     * NAD83(CSRS)v2 / SCoPQ zone 9
+     * Extent: Canada - Quebec - between 78°W and 75°W.
+     */
+    public const EPSG_NAD83_CSRS_V2_SCOPQ_ZONE_9 = 'urn:ogc:def:crs:EPSG::22249';
+
+    /**
+     * NAD83(CSRS)v2 / UTM zone 10N
+     * Extent: Canada between 126°W and 120°W, onshore and offshore south of 84°N - British Columbia, Northwest
+     * Territories, Yukon.
+     * Adopted by the Canadian federal government in 1998.
+     */
+    public const EPSG_NAD83_CSRS_V2_UTM_ZONE_10N = 'urn:ogc:def:crs:EPSG::22210';
+
+    /**
+     * NAD83(CSRS)v2 / UTM zone 11N
+     * Extent: Canada between 120°W and 114°W onshore and offshore - Alberta, British Columbia, Northwest
+     * Territories, Nunavut.
+     * Adopted by the Canadian federal government in 1998 and the provincial government of Alberta in 1999.
+     */
+    public const EPSG_NAD83_CSRS_V2_UTM_ZONE_11N = 'urn:ogc:def:crs:EPSG::22211';
+
+    /**
+     * NAD83(CSRS)v2 / UTM zone 12N
+     * Extent: Canada between 114°W and 108°W onshore and offshore - Alberta, Northwest Territories, Nunavut,
+     * Saskatchewan.
+     * Adopted by the Canadian federal government in 1998 and the provincial governments of Alberta in 1999 and
+     * Saskatchewan in 2000. Note: SK uses zone 13 (CRS code 22213) for province-wide mapping and spatial referencing.
+     */
+    public const EPSG_NAD83_CSRS_V2_UTM_ZONE_12N = 'urn:ogc:def:crs:EPSG::22212';
+
+    /**
+     * NAD83(CSRS)v2 / UTM zone 13N
+     * Extent: Canada - Saskatchewan. Canada between 108°W and 102°W onshore and offshore - Northwest Territories,
+     * Nunavut, Saskatchewan.
+     * Adopted by the Canadian federal government in 1998 and the provincial government of Saskatchewan in 2000. This
+     * zone used throughout all SK for province-wide mapping and spatial referencing.
+     */
+    public const EPSG_NAD83_CSRS_V2_UTM_ZONE_13N = 'urn:ogc:def:crs:EPSG::22213';
+
+    /**
+     * NAD83(CSRS)v2 / UTM zone 14N
+     * Extent: Canada between 102°W and 96°W, onshore and offshore south of 84°N - Manitoba, Nunavut, Saskatchewan.
+     * Adopted by the Canadian federal government in 1998 and the provincial governments of Saskatchewan in 2000 and
+     * Manitoba in 2001. Note: SK uses zone 13 (CRS code 22213) for province-wide mapping and spatial referencing.
+     */
+    public const EPSG_NAD83_CSRS_V2_UTM_ZONE_14N = 'urn:ogc:def:crs:EPSG::22214';
+
+    /**
+     * NAD83(CSRS)v2 / UTM zone 15N
+     * Extent: Canada between 96°W and 90°W, onshore and offshore south of 84°N - Manitoba, Nunavut, Ontario.
+     * Adopted by the Canadian federal government in 1998 and the provincial government of Manitoba in 2001.
+     */
+    public const EPSG_NAD83_CSRS_V2_UTM_ZONE_15N = 'urn:ogc:def:crs:EPSG::22215';
+
+    /**
+     * NAD83(CSRS)v2 / UTM zone 16N
+     * Extent: Canada between 90°W and 84°W, onshore and offshore south of 84°N - Manitoba, Nunavut, Ontario.
+     * Adopted by the Canadian federal government in 1998 and the provincial government of Manitoba in 2001.
+     */
+    public const EPSG_NAD83_CSRS_V2_UTM_ZONE_16N = 'urn:ogc:def:crs:EPSG::22216';
+
+    /**
+     * NAD83(CSRS)v2 / UTM zone 17N
+     * Extent: Canada between 84°W and 78°W, onshore and offshore south of 84°N - Nunavut, Ontario and Quebec.
+     * Adopted by the Canadian federal government in 1998 and the provincial government of Quebec in 2004.
+     */
+    public const EPSG_NAD83_CSRS_V2_UTM_ZONE_17N = 'urn:ogc:def:crs:EPSG::22217';
+
+    /**
+     * NAD83(CSRS)v2 / UTM zone 18N
+     * Extent: Canada between 78°W and 72°W, onshore and offshore south of 84°N - Nunavut, Ontario and Quebec.
+     * Adopted by the Canadian federal government in 1998 and the provincial government of Quebec in 2004.
+     */
+    public const EPSG_NAD83_CSRS_V2_UTM_ZONE_18N = 'urn:ogc:def:crs:EPSG::22218';
+
+    /**
+     * NAD83(CSRS)v2 / UTM zone 19N
+     * Extent: Canada between 72°W and 66°W onshore and offshore - New Brunswick, Labrador, Nova Scotia, Nunavut,
+     * Quebec.
+     * Adopted by the Canadian federal government in 1998 and the provincial governments of Quebec in 2004 and New
+     * Brunswick in 1999.
+     */
+    public const EPSG_NAD83_CSRS_V2_UTM_ZONE_19N = 'urn:ogc:def:crs:EPSG::22219';
+
+    /**
+     * NAD83(CSRS)v2 / UTM zone 20N
+     * Extent: Canada between 66°W and 60°W onshore and offshore - New Brunswick, Labrador, Nova Scotia, Nunavut,
+     * Prince Edward Island, Quebec.
+     * Adopted by the Canadian federal government in 1998 and the provincial governments of Quebec in 2004, New
+     * Brunswick in 1999 and Prince Edward Island in 2000.
+     */
+    public const EPSG_NAD83_CSRS_V2_UTM_ZONE_20N = 'urn:ogc:def:crs:EPSG::22220';
+
+    /**
+     * NAD83(CSRS)v2 / UTM zone 21N
+     * Extent: Canada between 60°W and 54°W - Newfoundland and Labrador; Nunavut; Quebec.
+     * Adopted by the Canadian federal government in 1998 and the provincial government of Quebec in 2004.
+     */
+    public const EPSG_NAD83_CSRS_V2_UTM_ZONE_21N = 'urn:ogc:def:crs:EPSG::22221';
+
+    /**
+     * NAD83(CSRS)v2 / UTM zone 22N
+     * Extent: Canada between 54°W and 48°W onshore and offshore - Newfoundland and Labrador.
+     * Adopted by the Canadian federal government in 1998.
+     */
+    public const EPSG_NAD83_CSRS_V2_UTM_ZONE_22N = 'urn:ogc:def:crs:EPSG::22222';
+
+    /**
+     * NAD83(CSRS)v2 / UTM zone 7N
+     * Extent: Canada west of 138°W, onshore and offshore south of 84°N - British Columbia, Yukon.
+     * Adopted by the Canadian federal government in 1998.
+     */
+    public const EPSG_NAD83_CSRS_V2_UTM_ZONE_7N = 'urn:ogc:def:crs:EPSG::22207';
+
+    /**
+     * NAD83(CSRS)v2 / UTM zone 8N
+     * Extent: Canada between 138°W and 132°W, onshore and offshore south of 84°N - British Columbia, Northwest
+     * Territories, Yukon.
+     * Adopted by the Canadian federal government in 1998.
+     */
+    public const EPSG_NAD83_CSRS_V2_UTM_ZONE_8N = 'urn:ogc:def:crs:EPSG::22208';
+
+    /**
+     * NAD83(CSRS)v2 / UTM zone 9N
+     * Extent: Canada - between 132°W and 126°W, onshore and offshore south of 84°N - British Columbia, Northwest
+     * Territories, Yukon.
+     * Adopted by the Canadian federal government in 1998.
+     */
+    public const EPSG_NAD83_CSRS_V2_UTM_ZONE_9N = 'urn:ogc:def:crs:EPSG::22209';
+
+    /**
+     * NAD83(CSRS)v3 / MTM NS 1997 zone 4
+     * Extent: Canada - Nova Scotia - east of 63°W.
+     * Replaced by NAD83(CSRS)v6 / MTM NS 2010 zone 4 (code 8082) from 2015.
+     */
+    public const EPSG_NAD83_CSRS_V3_MTM_NS_1997_ZONE_4 = 'urn:ogc:def:crs:EPSG::22338';
+
+    /**
+     * NAD83(CSRS)v3 / MTM NS 1997 zone 5
+     * Extent: Canada - Nova Scotia - west of 63°W.
+     * Replaced by NAD83(CSRS)v6 / MTM NS 2010 zone 5 (code 8083) from 2015.
+     */
+    public const EPSG_NAD83_CSRS_V3_MTM_NS_1997_ZONE_5 = 'urn:ogc:def:crs:EPSG::22337';
+
+    /**
+     * NAD83(CSRS)v3 / MTM zone 10
+     * Extent: Canada - Ontario - between 81°W and 78°W: south of 46°N in area to west of 80°15'W, south of 47°N
+     * in area between 80°15'W and 79°30'W, entire province between 79°30'W and 78°W.
+     */
+    public const EPSG_NAD83_CSRS_V3_MTM_ZONE_10 = 'urn:ogc:def:crs:EPSG::22350';
+
+    /**
+     * NAD83(CSRS)v3 / MTM zone 11
+     * Extent: Canada - Ontario - south of 46°N and west of 81°W.
+     */
+    public const EPSG_NAD83_CSRS_V3_MTM_ZONE_11 = 'urn:ogc:def:crs:EPSG::22351';
+
+    /**
+     * NAD83(CSRS)v3 / MTM zone 12
+     * Extent: Canada - Ontario - between 82°30'W and 79°30'W: north of 46°N in area between 82°30'W and 80°15'W,
+     * north of 47°N in area between 80°15'W and 79°30'W.
+     */
+    public const EPSG_NAD83_CSRS_V3_MTM_ZONE_12 = 'urn:ogc:def:crs:EPSG::22352';
+
+    /**
+     * NAD83(CSRS)v3 / MTM zone 13
+     * Extent: Canada - Ontario - between 85°30'W and 82°30'W and north of 46°N.
+     */
+    public const EPSG_NAD83_CSRS_V3_MTM_ZONE_13 = 'urn:ogc:def:crs:EPSG::22353';
+
+    /**
+     * NAD83(CSRS)v3 / MTM zone 14
+     * Extent: Canada - Ontario - between 88°30'W and 85°30'W.
+     */
+    public const EPSG_NAD83_CSRS_V3_MTM_ZONE_14 = 'urn:ogc:def:crs:EPSG::22354';
+
+    /**
+     * NAD83(CSRS)v3 / MTM zone 15
+     * Extent: Canada - Ontario - between 91°30'W and 88°30'W.
+     */
+    public const EPSG_NAD83_CSRS_V3_MTM_ZONE_15 = 'urn:ogc:def:crs:EPSG::22355';
+
+    /**
+     * NAD83(CSRS)v3 / MTM zone 16
+     * Extent: Canada - Ontario - between 94°30'W and 91°30'W.
+     */
+    public const EPSG_NAD83_CSRS_V3_MTM_ZONE_16 = 'urn:ogc:def:crs:EPSG::22356';
+
+    /**
+     * NAD83(CSRS)v3 / MTM zone 17
+     * Extent: Canada - Ontario - west of 94°30'W.
+     */
+    public const EPSG_NAD83_CSRS_V3_MTM_ZONE_17 = 'urn:ogc:def:crs:EPSG::22357';
+
+    /**
+     * NAD83(CSRS)v3 / MTM zone 8
+     * Extent: Canada - Ontario - east of 75°W.
+     */
+    public const EPSG_NAD83_CSRS_V3_MTM_ZONE_8 = 'urn:ogc:def:crs:EPSG::22348';
+
+    /**
+     * NAD83(CSRS)v3 / MTM zone 9
+     * Extent: Canada - Ontario - between 78°W and 75°W.
+     */
+    public const EPSG_NAD83_CSRS_V3_MTM_ZONE_9 = 'urn:ogc:def:crs:EPSG::22349';
+
+    /**
+     * NAD83(CSRS)v3 / UTM zone 10N
+     * Extent: Canada between 126°W and 120°W, onshore and offshore south of 84°N - British Columbia, Northwest
+     * Territories, Yukon.
+     * Adopted by the Canadian federal government in 2000 and the provincial government of British Columbia for CRD
+     * only in 2000 and all Victoria Island in 2005.
+     */
+    public const EPSG_NAD83_CSRS_V3_UTM_ZONE_10N = 'urn:ogc:def:crs:EPSG::22310';
+
+    /**
+     * NAD83(CSRS)v3 / UTM zone 11N
+     * Extent: Canada between 120°W and 114°W onshore and offshore - Alberta, British Columbia, Northwest
+     * Territories, Nunavut.
+     * Adopted by the Canadian federal government in 2000.
+     */
+    public const EPSG_NAD83_CSRS_V3_UTM_ZONE_11N = 'urn:ogc:def:crs:EPSG::22311';
+
+    /**
+     * NAD83(CSRS)v3 / UTM zone 12N
+     * Extent: Canada between 114°W and 108°W onshore and offshore - Alberta, Northwest Territories, Nunavut,
+     * Saskatchewan.
+     * Adopted by the Canadian federal government in 2000.
+     */
+    public const EPSG_NAD83_CSRS_V3_UTM_ZONE_12N = 'urn:ogc:def:crs:EPSG::22312';
+
+    /**
+     * NAD83(CSRS)v3 / UTM zone 13N
+     * Extent: Canada between 108°W and 102°W onshore and offshore - Northwest Territories, Nunavut, Saskatchewan.
+     * Adopted by the Canadian federal government in 2000.
+     */
+    public const EPSG_NAD83_CSRS_V3_UTM_ZONE_13N = 'urn:ogc:def:crs:EPSG::22313';
+
+    /**
+     * NAD83(CSRS)v3 / UTM zone 14N
+     * Extent: Canada between 102°W and 96°W, onshore and offshore south of 84°N - Manitoba, Nunavut, Saskatchewan.
+     * Adopted by the Canadian federal government in 2000.
+     */
+    public const EPSG_NAD83_CSRS_V3_UTM_ZONE_14N = 'urn:ogc:def:crs:EPSG::22314';
+
+    /**
+     * NAD83(CSRS)v3 / UTM zone 15N
+     * Extent: Canada between 96°W and 90°W, onshore and offshore south of 84°N - Manitoba, Nunavut, Ontario.
+     * Adopted by the Canadian federal government in 2000 and the provincial government of Ontario in 2008.
+     */
+    public const EPSG_NAD83_CSRS_V3_UTM_ZONE_15N = 'urn:ogc:def:crs:EPSG::22315';
+
+    /**
+     * NAD83(CSRS)v3 / UTM zone 16N
+     * Extent: Canada between 90°W and 84°W, onshore and offshore south of 84°N - Manitoba, Nunavut, Ontario.
+     * Adopted by the Canadian federal government in 2000 and the provincial government of Ontario in 2008.
+     */
+    public const EPSG_NAD83_CSRS_V3_UTM_ZONE_16N = 'urn:ogc:def:crs:EPSG::22316';
+
+    /**
+     * NAD83(CSRS)v3 / UTM zone 17N
+     * Extent: Canada between 84°W and 78°W, onshore and offshore south of 84°N - Nunavut, Ontario and Quebec.
+     * Adopted by the Canadian federal government in 2000 and the provincial government of Ontario in 2008.
+     */
+    public const EPSG_NAD83_CSRS_V3_UTM_ZONE_17N = 'urn:ogc:def:crs:EPSG::22317';
+
+    /**
+     * NAD83(CSRS)v3 / UTM zone 18N
+     * Extent: Canada between 78°W and 72°W, onshore and offshore south of 84°N - Nunavut, Ontario and Quebec.
+     * Adopted by the Canadian federal government in 2000 and the provincial government of Ontario in 2008.
+     */
+    public const EPSG_NAD83_CSRS_V3_UTM_ZONE_18N = 'urn:ogc:def:crs:EPSG::22318';
+
+    /**
+     * NAD83(CSRS)v3 / UTM zone 19N
+     * Extent: Canada between 72°W and 66°W onshore and offshore - New Brunswick, Labrador, Nova Scotia, Nunavut,
+     * Quebec.
+     * Adopted by the Canadian federal government in 2000 and the provincial government of Nova Scotia in 2000.
+     */
+    public const EPSG_NAD83_CSRS_V3_UTM_ZONE_19N = 'urn:ogc:def:crs:EPSG::22319';
+
+    /**
+     * NAD83(CSRS)v3 / UTM zone 20N
+     * Extent: Canada between 66°W and 60°W onshore and offshore - New Brunswick, Labrador, Nova Scotia, Nunavut,
+     * Prince Edward Island, Quebec.
+     * Adopted by the Canadian federal government in 1998 and the provincial government of Nova Scotia in 2000.
+     */
+    public const EPSG_NAD83_CSRS_V3_UTM_ZONE_20N = 'urn:ogc:def:crs:EPSG::22320';
+
+    /**
+     * NAD83(CSRS)v3 / UTM zone 21N
+     * Extent: Canada between 60°W and 54°W - Newfoundland and Labrador; Nunavut; Quebec.
+     * Adopted by the Canadian federal government in 2000 and the provincial government of Nova Scotia in 2000.
+     */
+    public const EPSG_NAD83_CSRS_V3_UTM_ZONE_21N = 'urn:ogc:def:crs:EPSG::22321';
+
+    /**
+     * NAD83(CSRS)v3 / UTM zone 22N
+     * Extent: Canada between 54°W and 48°W onshore and offshore - Newfoundland and Labrador.
+     * Adopted by the Canadian federal government in 2000.
+     */
+    public const EPSG_NAD83_CSRS_V3_UTM_ZONE_22N = 'urn:ogc:def:crs:EPSG::22322';
+
+    /**
+     * NAD83(CSRS)v3 / UTM zone 7N
+     * Extent: Canada west of 138°W, onshore and offshore south of 84°N - British Columbia, Yukon.
+     * Adopted by the Canadian federal government in 2000.
+     */
+    public const EPSG_NAD83_CSRS_V3_UTM_ZONE_7N = 'urn:ogc:def:crs:EPSG::22307';
+
+    /**
+     * NAD83(CSRS)v3 / UTM zone 8N
+     * Extent: Canada between 138°W and 132°W, onshore and offshore south of 84°N - British Columbia, Northwest
+     * Territories, Yukon.
+     * Adopted by the Canadian federal government in 2000.
+     */
+    public const EPSG_NAD83_CSRS_V3_UTM_ZONE_8N = 'urn:ogc:def:crs:EPSG::22308';
+
+    /**
+     * NAD83(CSRS)v3 / UTM zone 9N
+     * Extent: Canada - between 132°W and 126°W, onshore and offshore south of 84°N - British Columbia, Northwest
+     * Territories, Yukon.
+     * Adopted by the Canadian federal government in 2000 and the provincial government of British Columbia for
+     * Victoria Island (but not mainland) in 2005.
+     */
+    public const EPSG_NAD83_CSRS_V3_UTM_ZONE_9N = 'urn:ogc:def:crs:EPSG::22309';
+
+    /**
+     * NAD83(CSRS)v4 / Alberta 3TM ref merid 111 W
+     * Extent: Canada - Alberta - east of 112°30'W.
+     * If used for rural area control markers, area of use is amended to east of 112°W; however use of NAD83(CSRS)v4 /
+     * UTM zone 12N (CRS code 22412) is encouraged in these rural areas.
+     */
+    public const EPSG_NAD83_CSRS_V4_ALBERTA_3TM_REF_MERID_111_W = 'urn:ogc:def:crs:EPSG::22462';
+
+    /**
+     * NAD83(CSRS)v4 / Alberta 3TM ref merid 114 W
+     * Extent: Canada - Alberta - between 115°30'W and 112°30'W.
+     * If used for rural area control markers, area of use is amended to between 116°W and 112°W; however use of
+     * NAD83(CSRS)v4 / UTM zones 11N and 12N (CRS codes 22411 and 22412) is encouraged in these rural areas.
+     */
+    public const EPSG_NAD83_CSRS_V4_ALBERTA_3TM_REF_MERID_114_W = 'urn:ogc:def:crs:EPSG::22463';
+
+    /**
+     * NAD83(CSRS)v4 / Alberta 3TM ref merid 117 W
+     * Extent: Canada - Alberta - between 118°30'W and 115°30' W.
+     * If used for rural area control markers, area of use is amended to between 118°W and 116°W; however use of
+     * NAD83(CSRS)v4 / UTM zone 11N (CRS code 22411) is encouraged in these rural areas.
+     */
+    public const EPSG_NAD83_CSRS_V4_ALBERTA_3TM_REF_MERID_117_W = 'urn:ogc:def:crs:EPSG::22464';
+
+    /**
+     * NAD83(CSRS)v4 / Alberta 3TM ref merid 120 W
+     * Extent: Canada - Alberta - west of 118°30' W.
+     * If used for rural area control markers, area of use is amended to west of 118°W; however use of NAD83(CSRS)v4 /
+     * UTM zone 11N (CRS code 22411) is encouraged in these rural areas.
+     */
+    public const EPSG_NAD83_CSRS_V4_ALBERTA_3TM_REF_MERID_120_W = 'urn:ogc:def:crs:EPSG::22465';
+
+    /**
+     * NAD83(CSRS)v4 / UTM zone 10N
+     * Extent: Canada between 126°W and 120°W, onshore and offshore south of 84°N - British Columbia, Northwest
+     * Territories, Yukon.
+     * Adopted by the Canadian federal government in 2002 and the provincial government of British Columbia for
+     * mainland only (not Victoria Island) in 2005.
+     */
+    public const EPSG_NAD83_CSRS_V4_UTM_ZONE_10N = 'urn:ogc:def:crs:EPSG::22410';
+
+    /**
+     * NAD83(CSRS)v4 / UTM zone 11N
+     * Extent: Canada between 120°W and 114°W onshore and offshore - Alberta, British Columbia, Northwest
+     * Territories, Nunavut.
+     * Adopted by the Canadian federal government in 2002 and the provincial governments of British Columbia (for
+     * mainland only, not Victoria Island) in 2005 and Alberta in 2004.
+     */
+    public const EPSG_NAD83_CSRS_V4_UTM_ZONE_11N = 'urn:ogc:def:crs:EPSG::22411';
+
+    /**
+     * NAD83(CSRS)v4 / UTM zone 12N
+     * Extent: Canada between 114°W and 108°W onshore and offshore - Alberta, Northwest Territories, Nunavut,
+     * Saskatchewan.
+     * Adopted by the Canadian federal government in 2002 and the provincial government of Alberta in 2004.
+     */
+    public const EPSG_NAD83_CSRS_V4_UTM_ZONE_12N = 'urn:ogc:def:crs:EPSG::22412';
+
+    /**
+     * NAD83(CSRS)v4 / UTM zone 13N
+     * Extent: Canada between 108°W and 102°W onshore and offshore - Northwest Territories, Nunavut, Saskatchewan.
+     * Adopted by the Canadian federal government in 2002.
+     */
+    public const EPSG_NAD83_CSRS_V4_UTM_ZONE_13N = 'urn:ogc:def:crs:EPSG::22413';
+
+    /**
+     * NAD83(CSRS)v4 / UTM zone 14N
+     * Extent: Canada between 102°W and 96°W, onshore and offshore south of 84°N - Manitoba, Nunavut, Saskatchewan.
+     * Adopted by the Canadian federal government in 2002.
+     */
+    public const EPSG_NAD83_CSRS_V4_UTM_ZONE_14N = 'urn:ogc:def:crs:EPSG::22414';
+
+    /**
+     * NAD83(CSRS)v4 / UTM zone 15N
+     * Extent: Canada between 96°W and 90°W, onshore and offshore south of 84°N - Manitoba, Nunavut, Ontario.
+     * Adopted by the Canadian federal government in 2002.
+     */
+    public const EPSG_NAD83_CSRS_V4_UTM_ZONE_15N = 'urn:ogc:def:crs:EPSG::22415';
+
+    /**
+     * NAD83(CSRS)v4 / UTM zone 16N
+     * Extent: Canada between 90°W and 84°W, onshore and offshore south of 84°N - Manitoba, Nunavut, Ontario.
+     * Adopted by the Canadian federal government in 2002.
+     */
+    public const EPSG_NAD83_CSRS_V4_UTM_ZONE_16N = 'urn:ogc:def:crs:EPSG::22416';
+
+    /**
+     * NAD83(CSRS)v4 / UTM zone 17N
+     * Extent: Canada between 84°W and 78°W, onshore and offshore south of 84°N - Nunavut, Ontario and Quebec.
+     * Adopted by the Canadian federal government in 2002.
+     */
+    public const EPSG_NAD83_CSRS_V4_UTM_ZONE_17N = 'urn:ogc:def:crs:EPSG::22417';
+
+    /**
+     * NAD83(CSRS)v4 / UTM zone 18N
+     * Extent: Canada between 78°W and 72°W, onshore and offshore south of 84°N - Nunavut, Ontario and Quebec.
+     * Adopted by the Canadian federal government in 2002.
+     */
+    public const EPSG_NAD83_CSRS_V4_UTM_ZONE_18N = 'urn:ogc:def:crs:EPSG::22418';
+
+    /**
+     * NAD83(CSRS)v4 / UTM zone 19N
+     * Extent: Canada between 72°W and 66°W onshore and offshore - New Brunswick, Labrador, Nova Scotia, Nunavut,
+     * Quebec.
+     * Adopted by the Canadian federal government in 2002.
+     */
+    public const EPSG_NAD83_CSRS_V4_UTM_ZONE_19N = 'urn:ogc:def:crs:EPSG::22419';
+
+    /**
+     * NAD83(CSRS)v4 / UTM zone 20N
+     * Extent: Canada between 66°W and 60°W onshore and offshore - New Brunswick, Labrador, Nova Scotia, Nunavut,
+     * Prince Edward Island, Quebec.
+     * Adopted by the Canadian federal government in 2002.
+     */
+    public const EPSG_NAD83_CSRS_V4_UTM_ZONE_20N = 'urn:ogc:def:crs:EPSG::22420';
+
+    /**
+     * NAD83(CSRS)v4 / UTM zone 21N
+     * Extent: Canada between 60°W and 54°W - Newfoundland and Labrador; Nunavut; Quebec.
+     * Adopted by the Canadian federal government in 2002.
+     */
+    public const EPSG_NAD83_CSRS_V4_UTM_ZONE_21N = 'urn:ogc:def:crs:EPSG::22421';
+
+    /**
+     * NAD83(CSRS)v4 / UTM zone 22N
+     * Extent: Canada between 54°W and 48°W onshore and offshore - Newfoundland and Labrador.
+     * Adopted by the Canadian federal government in 2002.
+     */
+    public const EPSG_NAD83_CSRS_V4_UTM_ZONE_22N = 'urn:ogc:def:crs:EPSG::22422';
+
+    /**
+     * NAD83(CSRS)v4 / UTM zone 7N
+     * Extent: Canada west of 138°W, onshore and offshore south of 84°N - British Columbia, Yukon.
+     * Adopted by the Canadian federal government in 2002 and the provincial government of British Columbia for
+     * mainland only (not Victoria Island) in 2005.
+     */
+    public const EPSG_NAD83_CSRS_V4_UTM_ZONE_7N = 'urn:ogc:def:crs:EPSG::22407';
+
+    /**
+     * NAD83(CSRS)v4 / UTM zone 8N
+     * Extent: Canada between 138°W and 132°W, onshore and offshore south of 84°N - British Columbia, Northwest
+     * Territories, Yukon.
+     * Adopted by the Canadian federal government in 2002 and the provincial government of British Columbia for
+     * mainland only (not Victoria Island) in 2005.
+     */
+    public const EPSG_NAD83_CSRS_V4_UTM_ZONE_8N = 'urn:ogc:def:crs:EPSG::22408';
+
+    /**
+     * NAD83(CSRS)v4 / UTM zone 9N
+     * Extent: Canada - between 132°W and 126°W, onshore and offshore south of 84°N - British Columbia, Northwest
+     * Territories, Yukon.
+     * Adopted by the Canadian federal government in 2002 and the provincial government of British Columbia for
+     * mainland only (not Victoria Island) in 2005.
+     */
+    public const EPSG_NAD83_CSRS_V4_UTM_ZONE_9N = 'urn:ogc:def:crs:EPSG::22409';
+
+    /**
+     * NAD83(CSRS)v6 / MTM NS 2010 zone 4
      * Extent: Canada - Nova Scotia - east of 63°W.
      * In use from 2015.
      */
-    public const EPSG_NAD83_CSRS_V6_MTM_NOVA_SCOTIA_ZONE_4 = 'urn:ogc:def:crs:EPSG::8082';
+    public const EPSG_NAD83_CSRS_V6_MTM_NS_2010_ZONE_4 = 'urn:ogc:def:crs:EPSG::8082';
 
     /**
-     * NAD83(CSRS)v6 / MTM Nova Scotia zone 5
+     * NAD83(CSRS)v6 / MTM NS 2010 zone 5
      * Extent: Canada - Nova Scotia - west of 63°W.
      * In use from 2015.
      */
-    public const EPSG_NAD83_CSRS_V6_MTM_NOVA_SCOTIA_ZONE_5 = 'urn:ogc:def:crs:EPSG::8083';
+    public const EPSG_NAD83_CSRS_V6_MTM_NS_2010_ZONE_5 = 'urn:ogc:def:crs:EPSG::8083';
+
+    /**
+     * NAD83(CSRS)v6 / MTM zone 1
+     * Extent: Canada - Newfoundland - onshore east of 54°30'W.
+     */
+    public const EPSG_NAD83_CSRS_V6_MTM_ZONE_1 = 'urn:ogc:def:crs:EPSG::22641';
+
+    /**
+     * NAD83(CSRS)v6 / MTM zone 10
+     * Extent: Canada - Ontario - between 81°W and 78°W: south of 46°N in area to west of 80°15'W, south of 47°N
+     * in area between 80°15'W and 79°30'W, entire province between 79°30'W and 78°W.
+     */
+    public const EPSG_NAD83_CSRS_V6_MTM_ZONE_10 = 'urn:ogc:def:crs:EPSG::22650';
+
+    /**
+     * NAD83(CSRS)v6 / MTM zone 11
+     * Extent: Canada - Ontario - south of 46°N and west of 81°W.
+     */
+    public const EPSG_NAD83_CSRS_V6_MTM_ZONE_11 = 'urn:ogc:def:crs:EPSG::22651';
+
+    /**
+     * NAD83(CSRS)v6 / MTM zone 12
+     * Extent: Canada - Ontario - between 82°30'W and 79°30'W: north of 46°N in area between 82°30'W and 80°15'W,
+     * north of 47°N in area between 80°15'W and 79°30'W.
+     */
+    public const EPSG_NAD83_CSRS_V6_MTM_ZONE_12 = 'urn:ogc:def:crs:EPSG::22652';
+
+    /**
+     * NAD83(CSRS)v6 / MTM zone 13
+     * Extent: Canada - Ontario - between 85°30'W and 82°30'W and north of 46°N.
+     */
+    public const EPSG_NAD83_CSRS_V6_MTM_ZONE_13 = 'urn:ogc:def:crs:EPSG::22653';
+
+    /**
+     * NAD83(CSRS)v6 / MTM zone 14
+     * Extent: Canada - Ontario - between 88°30'W and 85°30'W.
+     */
+    public const EPSG_NAD83_CSRS_V6_MTM_ZONE_14 = 'urn:ogc:def:crs:EPSG::22654';
+
+    /**
+     * NAD83(CSRS)v6 / MTM zone 15
+     * Extent: Canada - Ontario - between 91°30'W and 88°30'W.
+     */
+    public const EPSG_NAD83_CSRS_V6_MTM_ZONE_15 = 'urn:ogc:def:crs:EPSG::22655';
+
+    /**
+     * NAD83(CSRS)v6 / MTM zone 16
+     * Extent: Canada - Ontario - between 94°30'W and 91°30'W.
+     */
+    public const EPSG_NAD83_CSRS_V6_MTM_ZONE_16 = 'urn:ogc:def:crs:EPSG::22656';
+
+    /**
+     * NAD83(CSRS)v6 / MTM zone 17
+     * Extent: Canada - Ontario - west of 94°30'W.
+     */
+    public const EPSG_NAD83_CSRS_V6_MTM_ZONE_17 = 'urn:ogc:def:crs:EPSG::22657';
+
+    /**
+     * NAD83(CSRS)v6 / MTM zone 2
+     * Extent: Canada - Newfoundland and Labrador between 57°30'W and 54°30'W.
+     */
+    public const EPSG_NAD83_CSRS_V6_MTM_ZONE_2 = 'urn:ogc:def:crs:EPSG::22642';
+
+    /**
+     * NAD83(CSRS)v6 / MTM zone 3
+     * Extent: Canada - Newfoundland west of 57°30'W.
+     */
+    public const EPSG_NAD83_CSRS_V6_MTM_ZONE_3 = 'urn:ogc:def:crs:EPSG::22643';
+
+    /**
+     * NAD83(CSRS)v6 / MTM zone 4
+     * Extent: Canada - Labrador between 63°W and 60°W.
+     */
+    public const EPSG_NAD83_CSRS_V6_MTM_ZONE_4 = 'urn:ogc:def:crs:EPSG::22644';
+
+    /**
+     * NAD83(CSRS)v6 / MTM zone 5
+     * Extent: Canada - Labrador - 66°W to 63°W.
+     */
+    public const EPSG_NAD83_CSRS_V6_MTM_ZONE_5 = 'urn:ogc:def:crs:EPSG::22645';
+
+    /**
+     * NAD83(CSRS)v6 / MTM zone 6
+     * Extent: Canada - Labrador - west of 66°W.
+     */
+    public const EPSG_NAD83_CSRS_V6_MTM_ZONE_6 = 'urn:ogc:def:crs:EPSG::22646';
+
+    /**
+     * NAD83(CSRS)v6 / MTM zone 8
+     * Extent: Canada - Ontario - east of 75°W.
+     */
+    public const EPSG_NAD83_CSRS_V6_MTM_ZONE_8 = 'urn:ogc:def:crs:EPSG::22648';
+
+    /**
+     * NAD83(CSRS)v6 / MTM zone 9
+     * Extent: Canada - Ontario - between 78°W and 75°W.
+     */
+    public const EPSG_NAD83_CSRS_V6_MTM_ZONE_9 = 'urn:ogc:def:crs:EPSG::22649';
+
+    /**
+     * NAD83(CSRS)v6 / PEI Stereographic
+     * Extent: Canada - Prince Edward Island.
+     */
+    public const EPSG_NAD83_CSRS_V6_PEI_STEREOGRAPHIC = 'urn:ogc:def:crs:EPSG::22639';
+
+    /**
+     * NAD83(CSRS)v6 / UTM zone 10N
+     * Extent: Canada between 126°W and 120°W, onshore and offshore south of 84°N - British Columbia, Northwest
+     * Territories, Yukon.
+     * Adopted by the Canadian federal government in 2012.
+     */
+    public const EPSG_NAD83_CSRS_V6_UTM_ZONE_10N = 'urn:ogc:def:crs:EPSG::22610';
+
+    /**
+     * NAD83(CSRS)v6 / UTM zone 11N
+     * Extent: Canada between 120°W and 114°W onshore and offshore - Alberta, British Columbia, Northwest
+     * Territories, Nunavut.
+     * Adopted by the Canadian federal government in 2012.
+     */
+    public const EPSG_NAD83_CSRS_V6_UTM_ZONE_11N = 'urn:ogc:def:crs:EPSG::22611';
+
+    /**
+     * NAD83(CSRS)v6 / UTM zone 12N
+     * Extent: Canada between 114°W and 108°W onshore and offshore - Alberta, Northwest Territories, Nunavut,
+     * Saskatchewan.
+     * Adopted by the Canadian federal government in 2012.
+     */
+    public const EPSG_NAD83_CSRS_V6_UTM_ZONE_12N = 'urn:ogc:def:crs:EPSG::22612';
+
+    /**
+     * NAD83(CSRS)v6 / UTM zone 13N
+     * Extent: Canada between 108°W and 102°W onshore and offshore - Northwest Territories, Nunavut, Saskatchewan.
+     * Adopted by the Canadian federal government in 2012.
+     */
+    public const EPSG_NAD83_CSRS_V6_UTM_ZONE_13N = 'urn:ogc:def:crs:EPSG::22613';
+
+    /**
+     * NAD83(CSRS)v6 / UTM zone 14N
+     * Extent: Canada between 102°W and 96°W, onshore and offshore south of 84°N - Manitoba, Nunavut, Saskatchewan.
+     * Adopted by the Canadian federal government in 2012 and the provincial government of Manitoba in 2014.
+     */
+    public const EPSG_NAD83_CSRS_V6_UTM_ZONE_14N = 'urn:ogc:def:crs:EPSG::22614';
+
+    /**
+     * NAD83(CSRS)v6 / UTM zone 15N
+     * Extent: Canada between 96°W and 90°W, onshore and offshore south of 84°N - Manitoba, Nunavut, Ontario.
+     * Adopted by the Canadian federal government in 2012 and the provincial governments of Manitoba in 2014 and
+     * Ontario in 2013.
+     */
+    public const EPSG_NAD83_CSRS_V6_UTM_ZONE_15N = 'urn:ogc:def:crs:EPSG::22615';
+
+    /**
+     * NAD83(CSRS)v6 / UTM zone 16N
+     * Extent: Canada between 90°W and 84°W, onshore and offshore south of 84°N - Manitoba, Nunavut, Ontario.
+     * Adopted by the Canadian federal government in 2012 and the provincial governments of Manitoba in 2014 and
+     * Ontario in 2013.
+     */
+    public const EPSG_NAD83_CSRS_V6_UTM_ZONE_16N = 'urn:ogc:def:crs:EPSG::22616';
+
+    /**
+     * NAD83(CSRS)v6 / UTM zone 17N
+     * Extent: Canada between 84°W and 78°W, onshore and offshore south of 84°N - Nunavut, Ontario and Quebec.
+     * Adopted by the Canadian federal government in 2012 and the provincial government of Ontario in 2013.
+     */
+    public const EPSG_NAD83_CSRS_V6_UTM_ZONE_17N = 'urn:ogc:def:crs:EPSG::22617';
+
+    /**
+     * NAD83(CSRS)v6 / UTM zone 18N
+     * Extent: Canada between 78°W and 72°W, onshore and offshore south of 84°N - Nunavut, Ontario and Quebec.
+     * Adopted by the Canadian federal government in 2012 and the provincial government of Ontario in 2013.
+     */
+    public const EPSG_NAD83_CSRS_V6_UTM_ZONE_18N = 'urn:ogc:def:crs:EPSG::22618';
+
+    /**
+     * NAD83(CSRS)v6 / UTM zone 19N
+     * Extent: Canada between 72°W and 66°W onshore and offshore - New Brunswick, Labrador, Nova Scotia, Nunavut,
+     * Quebec.
+     * Adopted by the Canadian federal government in 2012 and the provincial governments of Nova Scotia in 2014 and
+     * Newfoundland in 2012.
+     */
+    public const EPSG_NAD83_CSRS_V6_UTM_ZONE_19N = 'urn:ogc:def:crs:EPSG::22619';
+
+    /**
+     * NAD83(CSRS)v6 / UTM zone 20N
+     * Extent: Canada between 66°W and 60°W onshore and offshore - New Brunswick, Labrador, Nova Scotia, Nunavut,
+     * Prince Edward Island, Quebec.
+     * Adopted by the Canadian federal government in 2012 and the provincial governments of Prince Edward Island in
+     * 2014, Nova Scotia in 2014 and Newfoundland in 2012.
+     */
+    public const EPSG_NAD83_CSRS_V6_UTM_ZONE_20N = 'urn:ogc:def:crs:EPSG::22620';
+
+    /**
+     * NAD83(CSRS)v6 / UTM zone 21N
+     * Extent: Canada between 60°W and 54°W - Newfoundland and Labrador; Nunavut; Quebec.
+     * Adopted by the Canadian federal government in 2012 and the provincial governments of Nova Scotia in 2014 and
+     * Newfoundland in 2012.
+     */
+    public const EPSG_NAD83_CSRS_V6_UTM_ZONE_21N = 'urn:ogc:def:crs:EPSG::22621';
+
+    /**
+     * NAD83(CSRS)v6 / UTM zone 22N
+     * Extent: Canada between 54°W and 48°W onshore and offshore - Newfoundland and Labrador.
+     * Adopted by the Canadian federal government in 2012 and the provincial government of Newfoundland in 2012.
+     */
+    public const EPSG_NAD83_CSRS_V6_UTM_ZONE_22N = 'urn:ogc:def:crs:EPSG::22622';
+
+    /**
+     * NAD83(CSRS)v6 / UTM zone 7N
+     * Extent: Canada west of 138°W, onshore and offshore south of 84°N - British Columbia, Yukon.
+     * Adopted by the Canadian federal government in 2012.
+     */
+    public const EPSG_NAD83_CSRS_V6_UTM_ZONE_7N = 'urn:ogc:def:crs:EPSG::22607';
+
+    /**
+     * NAD83(CSRS)v6 / UTM zone 8N
+     * Extent: Canada between 138°W and 132°W, onshore and offshore south of 84°N - British Columbia, Northwest
+     * Territories, Yukon.
+     * Adopted by the Canadian federal government in 2012.
+     */
+    public const EPSG_NAD83_CSRS_V6_UTM_ZONE_8N = 'urn:ogc:def:crs:EPSG::22608';
+
+    /**
+     * NAD83(CSRS)v6 / UTM zone 9N
+     * Extent: Canada - between 132°W and 126°W, onshore and offshore south of 84°N - British Columbia, Northwest
+     * Territories, Yukon.
+     * Adopted by the Canadian federal government in 2012.
+     */
+    public const EPSG_NAD83_CSRS_V6_UTM_ZONE_9N = 'urn:ogc:def:crs:EPSG::22609';
+
+    /**
+     * NAD83(CSRS)v7 / Alberta 3TM ref merid 111 W
+     * Extent: Canada - Alberta - east of 112°30'W.
+     * If used for rural area control markers, area of use is amended to east of 112°W; however use of NAD83(CSRS)v7 /
+     * UTM zone 12N (CRS code 22712) is encouraged in these rural areas.
+     */
+    public const EPSG_NAD83_CSRS_V7_ALBERTA_3TM_REF_MERID_111_W = 'urn:ogc:def:crs:EPSG::22762';
+
+    /**
+     * NAD83(CSRS)v7 / Alberta 3TM ref merid 114 W
+     * Extent: Canada - Alberta - between 115°30'W and 112°30'W.
+     * If used for rural area control markers, area of use is amended to between 116°W and 112°W; however use of
+     * NAD83(CSRS)v7 / UTM zones 11N and 12N (CRS codes 22711 and 22712) is encouraged in these rural areas.
+     */
+    public const EPSG_NAD83_CSRS_V7_ALBERTA_3TM_REF_MERID_114_W = 'urn:ogc:def:crs:EPSG::22763';
+
+    /**
+     * NAD83(CSRS)v7 / Alberta 3TM ref merid 117 W
+     * Extent: Canada - Alberta - between 118°30'W and 115°30' W.
+     * If used for rural area control markers, area of use is amended to between 118°W and 116°W; however use of
+     * NAD83(CSRS)v7 / UTM zone 11N (CRS code 22711) is encouraged in these rural areas.
+     */
+    public const EPSG_NAD83_CSRS_V7_ALBERTA_3TM_REF_MERID_117_W = 'urn:ogc:def:crs:EPSG::22764';
+
+    /**
+     * NAD83(CSRS)v7 / Alberta 3TM ref merid 120 W
+     * Extent: Canada - Alberta - west of 118°30' W.
+     * If used for rural area control markers, area of use is amended to west of 118°W; however use of NAD83(CSRS)v7 /
+     * UTM zone 11N (CRS code 22711) is encouraged in these rural areas.
+     */
+    public const EPSG_NAD83_CSRS_V7_ALBERTA_3TM_REF_MERID_120_W = 'urn:ogc:def:crs:EPSG::22765';
+
+    /**
+     * NAD83(CSRS)v7 / PEI Stereographic
+     * Extent: Canada - Prince Edward Island.
+     */
+    public const EPSG_NAD83_CSRS_V7_PEI_STEREOGRAPHIC = 'urn:ogc:def:crs:EPSG::22739';
+
+    /**
+     * NAD83(CSRS)v7 / UTM zone 10N
+     * Extent: Canada between 126°W and 120°W, onshore and offshore south of 84°N - British Columbia, Northwest
+     * Territories, Yukon.
+     * Adopted by the Canadian federal government in 2017.
+     */
+    public const EPSG_NAD83_CSRS_V7_UTM_ZONE_10N = 'urn:ogc:def:crs:EPSG::22710';
+
+    /**
+     * NAD83(CSRS)v7 / UTM zone 11N
+     * Extent: Canada between 120°W and 114°W onshore and offshore - Alberta, British Columbia, Northwest
+     * Territories, Nunavut.
+     * Adopted by the Canadian federal government in 2017 and the provincial government of Alberta in 2021.
+     */
+    public const EPSG_NAD83_CSRS_V7_UTM_ZONE_11N = 'urn:ogc:def:crs:EPSG::22711';
+
+    /**
+     * NAD83(CSRS)v7 / UTM zone 12N
+     * Extent: Canada between 114°W and 108°W onshore and offshore - Alberta, Northwest Territories, Nunavut,
+     * Saskatchewan.
+     * Adopted by the Canadian federal government in 2017 and the provincial government of Alberta in 2021.
+     */
+    public const EPSG_NAD83_CSRS_V7_UTM_ZONE_12N = 'urn:ogc:def:crs:EPSG::22712';
+
+    /**
+     * NAD83(CSRS)v7 / UTM zone 13N
+     * Extent: Canada between 108°W and 102°W onshore and offshore - Northwest Territories, Nunavut, Saskatchewan.
+     * Adopted by the Canadian federal government in 2017.
+     */
+    public const EPSG_NAD83_CSRS_V7_UTM_ZONE_13N = 'urn:ogc:def:crs:EPSG::22713';
+
+    /**
+     * NAD83(CSRS)v7 / UTM zone 14N
+     * Extent: Canada between 102°W and 96°W, onshore and offshore south of 84°N - Manitoba, Nunavut, Saskatchewan.
+     * Adopted by the Canadian federal government in 2017.
+     */
+    public const EPSG_NAD83_CSRS_V7_UTM_ZONE_14N = 'urn:ogc:def:crs:EPSG::22714';
+
+    /**
+     * NAD83(CSRS)v7 / UTM zone 15N
+     * Extent: Canada between 96°W and 90°W, onshore and offshore south of 84°N - Manitoba, Nunavut, Ontario.
+     * Adopted by the Canadian federal government in 2017.
+     */
+    public const EPSG_NAD83_CSRS_V7_UTM_ZONE_15N = 'urn:ogc:def:crs:EPSG::22715';
+
+    /**
+     * NAD83(CSRS)v7 / UTM zone 16N
+     * Extent: Canada between 90°W and 84°W, onshore and offshore south of 84°N - Manitoba, Nunavut, Ontario.
+     * Adopted by the Canadian federal government in 2017.
+     */
+    public const EPSG_NAD83_CSRS_V7_UTM_ZONE_16N = 'urn:ogc:def:crs:EPSG::22716';
+
+    /**
+     * NAD83(CSRS)v7 / UTM zone 17N
+     * Extent: Canada between 84°W and 78°W, onshore and offshore south of 84°N - Nunavut, Ontario and Quebec.
+     * Adopted by the Canadian federal government in 2017.
+     */
+    public const EPSG_NAD83_CSRS_V7_UTM_ZONE_17N = 'urn:ogc:def:crs:EPSG::22717';
+
+    /**
+     * NAD83(CSRS)v7 / UTM zone 18N
+     * Extent: Canada between 78°W and 72°W, onshore and offshore south of 84°N - Nunavut, Ontario and Quebec.
+     * Adopted by the Canadian federal government in 2017.
+     */
+    public const EPSG_NAD83_CSRS_V7_UTM_ZONE_18N = 'urn:ogc:def:crs:EPSG::22718';
+
+    /**
+     * NAD83(CSRS)v7 / UTM zone 19N
+     * Extent: Canada between 72°W and 66°W onshore and offshore - New Brunswick, Labrador, Nova Scotia, Nunavut,
+     * Quebec.
+     * Adopted by the Canadian federal government in 2017.
+     */
+    public const EPSG_NAD83_CSRS_V7_UTM_ZONE_19N = 'urn:ogc:def:crs:EPSG::22719';
+
+    /**
+     * NAD83(CSRS)v7 / UTM zone 20N
+     * Extent: Canada between 66°W and 60°W onshore and offshore - New Brunswick, Labrador, Nova Scotia, Nunavut,
+     * Prince Edward Island, Quebec.
+     * Adopted by the Canadian federal government in 2017 and the provincial government of Prince Edward Island in
+     * 2020.
+     */
+    public const EPSG_NAD83_CSRS_V7_UTM_ZONE_20N = 'urn:ogc:def:crs:EPSG::22720';
+
+    /**
+     * NAD83(CSRS)v7 / UTM zone 21N
+     * Extent: Canada between 60°W and 54°W - Newfoundland and Labrador; Nunavut; Quebec.
+     * Adopted by the Canadian federal government in 2017.
+     */
+    public const EPSG_NAD83_CSRS_V7_UTM_ZONE_21N = 'urn:ogc:def:crs:EPSG::22721';
+
+    /**
+     * NAD83(CSRS)v7 / UTM zone 22N
+     * Extent: Canada between 54°W and 48°W onshore and offshore - Newfoundland and Labrador.
+     * Adopted by the Canadian federal government in 2017.
+     */
+    public const EPSG_NAD83_CSRS_V7_UTM_ZONE_22N = 'urn:ogc:def:crs:EPSG::22722';
+
+    /**
+     * NAD83(CSRS)v7 / UTM zone 7N
+     * Extent: Canada west of 138°W, onshore and offshore south of 84°N - British Columbia, Yukon.
+     * Adopted by the Canadian federal government in 2017.
+     */
+    public const EPSG_NAD83_CSRS_V7_UTM_ZONE_7N = 'urn:ogc:def:crs:EPSG::22707';
+
+    /**
+     * NAD83(CSRS)v7 / UTM zone 8N
+     * Extent: Canada between 138°W and 132°W, onshore and offshore south of 84°N - British Columbia, Northwest
+     * Territories, Yukon.
+     * Adopted by the Canadian federal government in 2017.
+     */
+    public const EPSG_NAD83_CSRS_V7_UTM_ZONE_8N = 'urn:ogc:def:crs:EPSG::22708';
+
+    /**
+     * NAD83(CSRS)v7 / UTM zone 9N
+     * Extent: Canada - between 132°W and 126°W, onshore and offshore south of 84°N - British Columbia, Northwest
+     * Territories, Yukon.
+     * Adopted by the Canadian federal government in 2017.
+     */
+    public const EPSG_NAD83_CSRS_V7_UTM_ZONE_9N = 'urn:ogc:def:crs:EPSG::22709';
 
     /**
      * NAD83(HARN) / Alabama East
@@ -31357,8 +32397,8 @@ class Projected extends CoordinateReferenceSystem
     /**
      * RGAF09 / UTM zone 20N
      * Extent: French Antilles onshore and offshore west of 60°W - Guadeloupe (including Grande Terre, Basse Terre,
-     * Marie Galante, Les Saintes, Iles de la Petite Terre, La Desirade, St Barthélemy, and northern St Martin) and
-     * Martinique.
+     * Marie Galante, Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; northern St
+     * Martin.
      * Replaces RRAF 1991 / UTM zone 20N (CRS code 4559).
      */
     public const EPSG_RGAF09_UTM_ZONE_20N = 'urn:ogc:def:crs:EPSG::5490';
@@ -31419,7 +32459,7 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * RGF93 v1 / Lambert-93
-     * Extent: France - onshore and offshore, mainland and Corsica.
+     * Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
      */
     public const EPSG_RGF93_V1_LAMBERT_93 = 'urn:ogc:def:crs:EPSG::2154';
 
@@ -31479,7 +32519,7 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * RGF93 v2 / Lambert-93
-     * Extent: France - onshore and offshore, mainland and Corsica.
+     * Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
      */
     public const EPSG_RGF93_V2_LAMBERT_93 = 'urn:ogc:def:crs:EPSG::9793';
 
@@ -31539,7 +32579,7 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * RGF93 v2b / Lambert-93
-     * Extent: France - onshore and offshore, mainland and Corsica.
+     * Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
      */
     public const EPSG_RGF93_V2B_LAMBERT_93 = 'urn:ogc:def:crs:EPSG::9794';
 
@@ -31810,8 +32850,8 @@ class Projected extends CoordinateReferenceSystem
     /**
      * RRAF 1991 / UTM zone 20N
      * Extent: French Antilles onshore and offshore west of 60°W - Guadeloupe (including Grande Terre, Basse Terre,
-     * Marie Galante, Les Saintes, Iles de la Petite Terre, La Desirade, St Barthélemy, and northern St Martin) and
-     * Martinique.
+     * Marie Galante, Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; northern St
+     * Martin.
      * Replaces Sainte Anne / UTM zone 20N and Fort Marigot / UTM zone 20N (CRS codes 2969-70) in Guadeloupe and Fort
      * Desaix / UTM zone 20N (CRS code 2973) in Martinique. Replaced by RGAF09 / UTM zone 20N (CRS code 5490).
      */
@@ -31979,7 +33019,7 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * Reykjavik 1900 / Lambert 1900
-     * Extent: Iceland - onshore.
+     * Extent: Iceland - mainland.
      * Replaced by Hjorsey 1955 / Lambert 1955 (CRS code 3053). See ellipsoid remarks.
      */
     public const EPSG_REYKJAVIK_1900_LAMBERT_1900 = 'urn:ogc:def:crs:EPSG::3052';
@@ -32268,6 +33308,15 @@ class Projected extends CoordinateReferenceSystem
      * Replaced by SIRGAS 2000 / UTM zone 25S (CRS code 31985).
      */
     public const EPSG_SAD69_96_UTM_ZONE_25S = 'urn:ogc:def:crs:EPSG::5535';
+
+    /**
+     * SCM22 Grid
+     * Extent: United Kingdom (UK) - on or related to the Scottish central mainline rail route from Motherwell through
+     * Perth and Pitlochry to Inverness.
+     * Defined through transformation ETRS89 to SCM22-IRF (1) (code 9970) and map projection SCM22-TM (code 9971).
+     * Emulates the SCM22 Snake projection applied to ETRS89 as realized through OSNet 2009.
+     */
+    public const EPSG_SCM22_GRID = 'urn:ogc:def:crs:EPSG::9972';
 
     /**
      * SHMG2015
@@ -37221,7 +38270,7 @@ class Projected extends CoordinateReferenceSystem
     /**
      * WGS 84 / UTM zone 18N
      * Extent: Between 78°W and 72°W, northern hemisphere between equator and 84°N, onshore and offshore. Bahamas.
-     * Canada - Nunavut; Ontario; Quebec. Colombia. Cuba. Ecuador. Greenland. Haiti. Jamica. Panama. Turks and Caicos
+     * Canada - Nunavut; Ontario; Quebec. Colombia. Cuba. Ecuador. Greenland. Haiti. Jamaica. Panama. Turks and Caicos
      * Islands. United States (USA). Venezuela.
      */
     public const EPSG_WGS_84_UTM_ZONE_18N = 'urn:ogc:def:crs:EPSG::32618';
@@ -37266,8 +38315,8 @@ class Projected extends CoordinateReferenceSystem
      * Extent: Between 66°W and 60°W, northern hemisphere between equator and 84°N, onshore and offshore. Anguilla.
      * Antigua and Barbuda. Bermuda. Brazil. British Virgin Islands. Canada - New Brunswick; Labrador; Nova Scotia;
      * Nunavut; Prince Edward Island; Quebec. Dominica. Greenland. Grenada. Guadeloupe. Guyana. Martinique. Montserrat.
-     * Puerto Rico. St Kitts and Nevis. St Lucia. St Vncent and the Grenadines. Trinidad and Tobago. Venezuela. US
-     * Virgin Islands.
+     * Puerto Rico. St Kitts and Nevis. St Barthelemy. St Lucia. St Maarten, St Martin. St Vincent and the Grenadines.
+     * Trinidad and Tobago. Venezuela. US Virgin Islands.
      */
     public const EPSG_WGS_84_UTM_ZONE_20N = 'urn:ogc:def:crs:EPSG::32620';
 
@@ -38586,6 +39635,20 @@ class Projected extends CoordinateReferenceSystem
      */
     public const EPSG_RGF93_LAMBERT_93 = 'urn:ogc:def:crs:EPSG::2154';
 
+    /**
+     * @deprecated use EPSG_LUREF_LUXEMBOURG_TM instead
+     */
+    public const EPSG_LUXEMBOURG_1930_GAUSS = 'urn:ogc:def:crs:EPSG::2169';
+
+    /**
+     * @deprecated use EPSG_NAD83_CSRS_V6_MTM_NS_2010_ZONE_4 instead
+     */
+    public const EPSG_NAD83_CSRS_V6_MTM_NOVA_SCOTIA_ZONE_4 = 'urn:ogc:def:crs:EPSG::8082';
+
+    /**
+     * @deprecated use EPSG_NAD83_CSRS_V6_MTM_NS_2010_ZONE_5 instead
+     */
+    public const EPSG_NAD83_CSRS_V6_MTM_NOVA_SCOTIA_ZONE_5 = 'urn:ogc:def:crs:EPSG::8083';
     private static array $cachedObjects = [];
 
     private static array $supportedCache = [];
@@ -38601,7 +39664,7 @@ class Projected extends CoordinateReferenceSystem
         $this->datum = $datum;
         $this->boundingArea = $boundingArea;
 
-        assert(count($coordinateSystem->getAxes()) === 2);
+        assert(count($coordinateSystem->getAxes()) === 2 || count($coordinateSystem->getAxes()) === 3);
     }
 
     public static function fromSRID(string $srid): self

@@ -160,7 +160,7 @@ class Rate implements UnitOfMeasure
                 return new self(new PartsPerMillion($measurement), new Year(1));
         }
 
-        throw new UnknownUnitOfMeasureException($srid); //@codeCoverageIgnore
+        throw new UnknownUnitOfMeasureException($srid); // @codeCoverageIgnore
     }
 
     public static function getSupportedSRIDs(): array

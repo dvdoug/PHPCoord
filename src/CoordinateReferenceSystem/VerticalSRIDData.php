@@ -642,7 +642,7 @@ trait VerticalSRIDData
             'extent_code' => ['1262'],
         ],
         'urn:ogc:def:crs:EPSG::5774' => [
-            'name' => 'NG-L height',
+            'name' => 'NG95 height',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
             'datum' => 'urn:ogc:def:datum:EPSG::5172',
             'extent_code' => ['1146'],
@@ -1215,7 +1215,7 @@ trait VerticalSRIDData
             'name' => 'ISH2004 height',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
             'datum' => 'urn:ogc:def:datum:EPSG::1190',
-            'extent_code' => ['3262'],
+            'extent_code' => ['4662'],
         ],
         'urn:ogc:def:crs:EPSG::8228' => [
             'name' => 'NAVD88 height (ft)',
@@ -1510,6 +1510,24 @@ trait VerticalSRIDData
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
             'datum' => 'urn:ogc:def:datum:EPSG::1307',
             'extent_code' => ['2339'],
+        ],
+        'urn:ogc:def:crs:EPSG::9923' => [
+            'name' => 'GNTRANS height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1316',
+            'extent_code' => ['3339'],
+        ],
+        'urn:ogc:def:crs:EPSG::9927' => [
+            'name' => 'GNTRANS2016 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1318',
+            'extent_code' => ['3339'],
+        ],
+        'urn:ogc:def:crs:EPSG::20000' => [
+            'name' => 'SVD2006 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1323',
+            'extent_code' => ['4058'],
         ],
     ];
 }

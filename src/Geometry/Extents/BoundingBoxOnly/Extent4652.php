@@ -9,10 +9,10 @@ declare(strict_types=1);
 namespace PHPCoord\Geometry\Extents\BoundingBoxOnly;
 
 /**
- * Europe-FSU/Iceland - mainland.
+ * Europe-FSU/UK - Cardiff to Lincoln.
  * @internal
  */
-class Extent3262
+class Extent4652
 {
     public function __invoke(): array
     {
@@ -20,7 +20,7 @@ class Extent3262
         [
             [
                 [
-                    [-13.381984495641, 66.580108967227], [-24.658475988579, 66.580108967227], [-24.658475988579, 63.345832665457], [-13.381984495641, 63.345832665457], [-13.381984495641, 66.580108967227],
+                    [-0.36249999999995, 53.25416667], [-3.2666666669999, 53.25416667], [-3.2666666669999, 51.35833333], [-0.36249999999995, 51.35833333], [-0.36249999999995, 53.25416667],
                 ],
             ],
         ];

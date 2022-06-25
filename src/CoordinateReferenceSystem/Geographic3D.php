@@ -96,6 +96,7 @@ class Geographic3D extends Geographic
      * Extent: Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen,
      * Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt,
      * Schleswig-Holstein, Thuringen.
+     * Geometric component of both DB_REF2003 and DB_REF2016 systems.
      */
     public const EPSG_DB_REF = 'urn:ogc:def:crs:EPSG::5830';
 
@@ -452,7 +453,7 @@ class Geographic3D extends Geographic
     /**
      * ISN2004
      * Extent: Iceland - onshore and offshore.
-     * Replaces ISN93 (CRS code 4945).
+     * Replaces ISN93 (CRS code 4945). Replaced by ISN2016 (CRS code 8085).
      */
     public const EPSG_ISN2004 = 'urn:ogc:def:crs:EPSG::5323';
 
@@ -494,9 +495,16 @@ class Geographic3D extends Geographic
     /**
      * ITRF2014
      * Extent: World.
-     * Replaces ITRF2008 (code 7911).
+     * Replaces ITRF2008 (code 7911). Replaced by ITRF2020 (CRS code 9989).
      */
     public const EPSG_ITRF2014 = 'urn:ogc:def:crs:EPSG::7912';
+
+    /**
+     * ITRF2020
+     * Extent: World.
+     * Replaces ITRF2014 (code 7912).
+     */
+    public const EPSG_ITRF2020 = 'urn:ogc:def:crs:EPSG::9989';
 
     /**
      * ITRF88
@@ -628,6 +636,14 @@ class Geographic3D extends Geographic
      * Extent: France and Italy - on or related to the rail route from Lyon to Turin.
      */
     public const EPSG_LTF2004_G = 'urn:ogc:def:crs:EPSG::9546';
+
+    /**
+     * LUREF
+     * Extent: Luxembourg.
+     * Ellipsoidal height approximates to NG95 gravity-related heights to within 5-15cm. For accurate heighting use
+     * compound CRS LUREF / Luxembourg TM + NG95 height (code 9897).
+     */
+    public const EPSG_LUREF = 'urn:ogc:def:crs:EPSG::9893';
 
     /**
      * Lao 1993
@@ -1031,7 +1047,7 @@ class Geographic3D extends Geographic
     /**
      * RGAF09
      * Extent: French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante,
-     * Les Saintes, Iles de la Petite Terre, La Desirade, St Barthélemy, and northern St Martin) and Martinique.
+     * Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; St Martin.
      * Replaces RRAF 1991 (CRS code 4557). See CRS code 7085 for alternate system with horizontal axes reversed used by
      * IGN for GIS purposes.
      */
@@ -1040,7 +1056,7 @@ class Geographic3D extends Geographic
     /**
      * RGAF09 (lon-lat)
      * Extent: French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante,
-     * Les Saintes, Iles de la Petite Terre, La Desirade, St Barthélemy, and northern St Martin) and Martinique.
+     * Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; St Martin.
      * Replaces RRAF 1991 (CRS code 4557). See CRS code 5488 for system with horizontal axes in sequence lat-lon to be
      * used for air, land and sea navigation and safety of life purposes.
      */
@@ -1048,7 +1064,7 @@ class Geographic3D extends Geographic
 
     /**
      * RGF93 v1
-     * Extent: France - onshore and offshore, mainland and Corsica.
+     * Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
      * See CRS code 7042 for alternate system with horizontal axes reversed used by IGN for GIS purposes. Replaced by
      * RGF93 v2 (CRS code 9776) from 2010-06-18.
      */
@@ -1056,7 +1072,7 @@ class Geographic3D extends Geographic
 
     /**
      * RGF93 v1 (lon-lat)
-     * Extent: France - onshore and offshore, mainland and Corsica.
+     * Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
      * See CRS code 4965 for system with horizontal axes in sequence lat-lon to be used for air, land and sea
      * navigation and safety of life purposes. Replaced by RGF93 v2 (lon-lat) (CRS code 9778) from 2010-06-18.
      */
@@ -1064,7 +1080,7 @@ class Geographic3D extends Geographic
 
     /**
      * RGF93 v2
-     * Extent: France - onshore and offshore, mainland and Corsica.
+     * Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
      * Replaces RGF93 v1 CRS code 4965) from 2010-06-18 . Replaced by RGF93 v2b (CRS code 9781) from 2021-01-05. See
      * CRS code 9778 for alternate system with horizontal axes reversed used by IGN for GIS purposes.
      */
@@ -1072,7 +1088,7 @@ class Geographic3D extends Geographic
 
     /**
      * RGF93 v2 (lon-lat)
-     * Extent: France - onshore and offshore, mainland and Corsica.
+     * Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
      * Replaces RGF93 v1 (lon-lat) from 2010-06-18. Replaced by RGF93 v2b (lon-lat) (CRS code 9783) from 2021-01-05.
      * See CRS code 9776 for system with horizontal axes in sequence lat-lon to be used for air, land and sea
      * navigation and safety of life purposes.
@@ -1081,7 +1097,7 @@ class Geographic3D extends Geographic
 
     /**
      * RGF93 v2b
-     * Extent: France - onshore and offshore, mainland and Corsica.
+     * Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
      * Replaces RGF93 v2 (CRS code 9776) from 2021-01-05. See CRS code 9783 for alternate system with horizontal axes
      * reversed used by IGN for GIS purposes.
      */
@@ -1089,7 +1105,7 @@ class Geographic3D extends Geographic
 
     /**
      * RGF93 v2b (lon-lat)
-     * Extent: France - onshore and offshore, mainland and Corsica.
+     * Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
      * Replaces RGF93 v2 (lon-lat) (CRS code 9778) from 2021-01-05. See CRS code 9781 for system with horizontal axes
      * in sequence lat-lon to be used for air, land and sea navigation and safety of life purposes.
      */
@@ -1213,7 +1229,7 @@ class Geographic3D extends Geographic
     /**
      * RRAF 1991
      * Extent: French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante,
-     * Les Saintes, Iles de la Petite Terre, La Desirade, St Barthélemy, and northern St Martin) and Martinique.
+     * Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; St Martin.
      * Replaces older local 2D systems Fort Marigot and Sainte Anne CRS (codes 4621-22) in Guadeloupe and Fort Desaix
      * (CRS code 4625) in Martinique. Replaced by RGAF09 (CRS code 5488).
      */
@@ -1525,16 +1541,16 @@ class Geographic3D extends Geographic
      * Montserrat, Morocco, Mozambique, Myanmar (Burma), Namibia, Nauru, Nepal, Netherlands, New Caledonia, New
      * Zealand, Nicaragua, Niger, Nigeria, Niue, Norfolk Island, North Macedonia, Northern Mariana Islands, Norway,
      * Oman, Pakistan, Palau, Panama, Papua New Guinea (PNG), Paraguay, Peru, Philippines, Pitcairn, Poland, Portugal,
-     * Puerto Rico, Qatar, Reunion, Romania, Russian Federation, Rwanda, Saint Kitts and Nevis, Saint Helena, Ascension
-     * and Tristan da Cunha, Saint Lucia, Saint Pierre and Miquelon, Saint Vincent and the Grenadines, Samoa, San
-     * Marino, Sao Tome and Principe, Saudi Arabia, Senegal, Serbia, Seychelles, Sierra Leone, Singapore, Slovakia
-     * (Slovak Republic), Slovenia, Sint Maarten, Solomon Islands, Somalia, South Africa, South Georgia and the South
-     * Sandwich Islands, South Sudan, Spain, Sri Lanka, Sudan, Suriname, Svalbard and Jan Mayen, Sweden, Switzerland,
-     * Syrian Arab Republic, Taiwan, Tajikistan, United Republic of Tanzania, Thailand, The Democratic Republic of the
-     * Congo (Zaire), Togo, Tokelau, Tonga, Trinidad and Tobago, Tunisia, Turkey, Turkmenistan, Turks and Caicos
-     * Islands, Tuvalu, Uganda, Ukraine, United Arab Emirates (UAE), United Kingdom (UK), United States (USA), United
-     * States Minor Outlying Islands, Uruguay, Uzbekistan, Vanuatu, Venezuela, Vietnam, US Virgin Islands, Wallis and
-     * Futuna, Western Sahara, Yemen, Zambia, Zimbabwe.
+     * Puerto Rico, Qatar, Reunion, Romania, Russian Federation, Rwanda, St Barthelemy, St Kitts and Nevis, St Helena,
+     * Ascension and Tristan da Cunha, St Lucia, St Martin, St Pierre and Miquelon, Saint Vincent and the Grenadines,
+     * Samoa, San Marino, Sao Tome and Principe, Saudi Arabia, Senegal, Serbia, Seychelles, Sierra Leone, Singapore,
+     * Slovakia (Slovak Republic), Slovenia, St Maarten, Solomon Islands, Somalia, South Africa, South Georgia and the
+     * South Sandwich Islands, South Sudan, Spain, Sri Lanka, Sudan, Suriname, Svalbard and Jan Mayen, Sweden,
+     * Switzerland, Syrian Arab Republic, Taiwan, Tajikistan, United Republic of Tanzania, Thailand, The Democratic
+     * Republic of the Congo (Zaire), Togo, Tokelau, Tonga, Trinidad and Tobago, Tunisia, Turkey, Turkmenistan, Turks
+     * and Caicos Islands, Tuvalu, Uganda, Ukraine, United Arab Emirates (UAE), United Kingdom (UK), United States
+     * (USA), United States Minor Outlying Islands, Uruguay, Uzbekistan, Vanuatu, Venezuela, Vietnam, US Virgin
+     * Islands, Wallis and Futuna, Western Sahara, Yemen, Zambia, Zimbabwe.
      */
     public const EPSG_WGS_84 = 'urn:ogc:def:crs:EPSG::4979';
 

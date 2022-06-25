@@ -594,6 +594,27 @@ class Vertical extends CoordinateReferenceSystem
     public const EPSG_GHA_HEIGHT = 'urn:ogc:def:crs:EPSG::5778';
 
     /**
+     * GNTRANS height
+     * Extent: Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen,
+     * Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt,
+     * Schleswig-Holstein, Thuringen.
+     * Introduced in 2003. Replaces DB Netz use of DHHN12, SNN76, DHHN85 and DHHN92 as variously adopted by German
+     * states but which DB Netz used with smoothing across boundary discontinuity. Replaced by GNTRANS2016 height (CRS
+     * code 9927).
+     */
+    public const EPSG_GNTRANS_HEIGHT = 'urn:ogc:def:crs:EPSG::9923';
+
+    /**
+     * GNTRANS2016 height
+     * Extent: Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen,
+     * Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt,
+     * Schleswig-Holstein, Thuringen.
+     * Replaces GNTRANS height [also called GNTRANS2003 height] (CRS code 9923). Approximates national DHHN2016 height
+     * system (CRS code 7837) to around 1cm in lowlands and 2cm in high mountains.
+     */
+    public const EPSG_GNTRANS2016_HEIGHT = 'urn:ogc:def:crs:EPSG::9927';
+
+    /**
      * GUVD04 height
      * Extent: Guam - onshore.
      * Replaces Guam 1963 height (CRS code 6639).
@@ -1187,6 +1208,7 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * Mayotte 1950 height
      * Extent: Mayotte - onshore.
+     * Referred to as 'SHOM 1953' in government regulations but confirmed by IGN as being the Mayotte 1950 system.
      */
     public const EPSG_MAYOTTE_1950_HEIGHT = 'urn:ogc:def:crs:EPSG::5793';
 
@@ -1293,10 +1315,10 @@ class Vertical extends CoordinateReferenceSystem
     public const EPSG_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::6360';
 
     /**
-     * NG-L height
+     * NG95 height
      * Extent: Luxembourg.
      */
-    public const EPSG_NG_L_HEIGHT = 'urn:ogc:def:crs:EPSG::5774';
+    public const EPSG_NG95_HEIGHT = 'urn:ogc:def:crs:EPSG::5774';
 
     /**
      * NGC 1948 height
@@ -1653,6 +1675,13 @@ class Vertical extends CoordinateReferenceSystem
     public const EPSG_SRVN16_HEIGHT = 'urn:ogc:def:crs:EPSG::9255';
 
     /**
+     * SVD2006 height
+     * Extent: Arctic (Norway (Svalbard) onshore and offshore) - between 81°10'N and 76°10'N.
+     * Defined through the arcgp-2006-sk geoid model.
+     */
+    public const EPSG_SVD2006_HEIGHT = 'urn:ogc:def:crs:EPSG::20000';
+
+    /**
      * SVS2000 height
      * Extent: Slovenia - onshore.
      * Replaces Trieste height (CRS code 5195) in Slovenia from 2000. Replaced by SVS2010 (CRS code 8690) from 2019-01.
@@ -1803,6 +1832,11 @@ class Vertical extends CoordinateReferenceSystem
      * @deprecated use EPSG_GENOA_1942_HEIGHT instead
      */
     public const EPSG_GENOA_HEIGHT = 'urn:ogc:def:crs:EPSG::5214';
+
+    /**
+     * @deprecated use EPSG_NG95_HEIGHT instead
+     */
+    public const EPSG_NG_L_HEIGHT = 'urn:ogc:def:crs:EPSG::5774';
 
     private static array $cachedObjects = [];
 

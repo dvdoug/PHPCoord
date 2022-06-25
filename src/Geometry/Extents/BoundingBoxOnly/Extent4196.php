@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\Geometry\Extents\BoundingBoxOnly;
 
 /**
- * Australasia and Oceania/Australia and Macquarie - 156°E to 162°E.
+ * Australasia and Oceania/Australia - 156°E to 162°E including Macquarie.
  * @internal
  */
 class Extent4196

@@ -1754,7 +1754,7 @@ Deutsche Bahn Reference System
     Datum::fromSRID(Datum::EPSG_DEUTSCHE_BAHN_REFERENCE_SYSTEM)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1081')
 
-Defined by transformation from ETRS89 (transformation code 5826) to be an average of DHDN across all states of Germany.
+Defined by transformation from ETRS89 (transformation code 5826) to be an average of DHDN realizations across all German states.
 
 Deutsches Hauptdreiecksnetz
 ---------------------------
@@ -1925,6 +1925,21 @@ Durres
 Mean Sea Level at Durres.
 
 Normal-orthometric heights.
+
+EBBWV14 Intermediate Reference Frame
+------------------------------------
+
+| Type: Geodetic
+| Used: United Kingdom (UK) - on or related to the rail route from Newport (Park Junction) to Ebbw Vale.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_EBBWV14_INTERMEDIATE_REFERENCE_FRAME)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1319')
+
+Defined through the application of the EBBWV14 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
+
+Created in 2022 to support intermediate CRS "EBBWV14-IRF" in the emulation of the EBBWV14 Snake map projection.
 
 ECML14_NB Intermediate Reference Frame
 --------------------------------------
@@ -2500,6 +2515,21 @@ Derived from 2020-09 zero-tide EVRF2019 adjustment by Cmean = Czero + (0.28841*s
 
 Mean-tide surface, describing how water flows. See EVRF2019 (datum code 1274) for zero-tide surface which is consistent with ETRS conventions.
 
+FNL22 Intermediate Reference Frame
+----------------------------------
+
+| Type: Geodetic
+| Used: United Kingdom (UK) - on or related to the rail route from Inverness to Thurso and Wick.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_FNL22_INTERMEDIATE_REFERENCE_FRAME)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1321')
+
+Defined through the application of the FNL22 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
+
+Created in 2022 to support intermediate CRS "FNL22" in the emulation of the FNL22 Snake map projection.
+
 Fahud
 -----
 
@@ -2770,6 +2800,36 @@ GBK19 Intermediate Reference Frame
 Defined through the application of the GBK19 NTv2 transformation (code 9454) to ETRS89 as realized through OSNet v2009 CORS.
 
 Created in 2020 to support intermediate CRS "GBK19-IRF" in the emulation of the combined GBK19 Snake map projection.
+
+GNTRANS
+-------
+
+| Type: Vertical
+| Used: Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt, Schleswig-Holstein, Thuringen.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_GNTRANS)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1316')
+
+Surface defined by the EGG97 quasi-geoid model modified in GNTRANS to achieve absolute position optimised for use with DB_REF.
+
+Implemented in GNTRANS. The GNTRANS height surface is available only through the GNTRANS application. Replaced by the GNTRANS2016 height surface (datum code 1318).
+
+GNTRANS2016
+-----------
+
+| Type: Vertical
+| Used: Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt, Schleswig-Holstein, Thuringen.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_GNTRANS2016)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1318')
+
+Surface defined by the GCG2016 quasi-geoid model applied to ETRS89.
+
+Approximates the national DHHN2016 levelling surface to around 1cm in lowlands and 2cm in high mountains, but unlike DHHN2016 it is defined by the GCG2016 geoid model. Like DHHN2016, uses Normal heights in the mean tide system.
 
 Gambia
 ------
@@ -3279,6 +3339,21 @@ Equivalent to Ordnance Datum Newlyn as realized through OSNet v2001 and OSGM02.
 
 After introduction of OSNet v2009 CORS, OSTN15 and the OSGM15 geoid model, the HS2 VRF is maintained equivalent to OSNet v2001 and OSGM02 through HS2GM15 (code 9304).
 
+HULLEE13 Intermediate Reference Frame
+-------------------------------------
+
+| Type: Geodetic
+| Used: United Kingdom (UK) - on or related to the rail route from the Morley tunnel through Leeds to Hull.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_HULLEE13_INTERMEDIATE_REFERENCE_FRAME)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1317')
+
+Defined through the application of the HULLEE13 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
+
+Created in 2022 to support intermediate CRS "HULLEE13-IRF" in the emulation of the HULLEE13 Snake map projection.
+
 Ha Tien 1960
 ------------
 
@@ -3438,7 +3513,7 @@ Hjorsey 1955
 ------------
 
 | Type: Geodetic
-| Used: Iceland - onshore.
+| Used: Iceland - mainland.
 
 .. code-block:: php
 
@@ -3531,9 +3606,9 @@ Hong Kong Geodetic
     Datum::fromSRID(Datum::EPSG_HONG_KONG_GEODETIC)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1209')
 
-ITRF96 at epoch 1998.33
+ITRF96 at epoch 1998.121
 
-Locally sometimes referred to as ITRF96 or WGS 84, these are not strictly correct as it applies only at epoch 1998.33 and ignores subsequent tectonic plate motion.
+Locally sometimes referred to as ITRF96 or WGS 84, these are not strictly correct as it applies only at epoch 1998.121 and ignores subsequent tectonic plate motion.
 
 Hong Kong Principal Datum
 -------------------------
@@ -4362,7 +4437,22 @@ International Terrestrial Reference Frame 2014
 
 Origin at geocentre. Origin = ILRS SLR long-term solution at epoch 2010.0. Zero scale and scale rate between ITRF2014 and the average of VLBI and SLR scales/rates. Orientation = ITRF2008@ 2010.0 with zero rotation rates between the ITRF2014 and ITRF2008.
 
-Realization of the IERS Terrestrial Reference System (ITRS). Replaces ITRF2008 (datum code 1061) from January 2016.
+Realization of the IERS Terrestrial Reference System (ITRS). Replaces ITRF2008 (datum code 1061) from January 2016. Replaced by ITRF2020 (datum code 1322) from April 2022.
+
+International Terrestrial Reference Frame 2020
+----------------------------------------------
+
+| Type: Dynamic geodetic
+| Used: World.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_INTERNATIONAL_TERRESTRIAL_REFERENCE_FRAME_2020)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1322')
+
+Origin at geocentre. Origin = ILRS SLR long-term solution at epoch 2015.0. Zero scale and scale rate between ITRF2020 and the average of VLBI and SLR scales/rates. Orientation = ITRF2014@ 2015.0 with zero rotation rates between the ITRF2020 and ITRF2014.
+
+Realization of the IERS Terrestrial Reference System (ITRS). Replaces ITRF2014 (datum code 1165) from April 2022.
 
 Iraq-Kuwait Boundary Datum 1992
 -------------------------------
@@ -4418,7 +4508,7 @@ Islands Net 2004
 
 ITRF2000 at epoch 2004.6.
 
-Replaces ISN93 (datum code 6659).
+Replaces ISN93 (datum code 6659). Replaced by ISN2016 (datum code 1087).
 
 Islands Net 2016
 ----------------
@@ -5515,18 +5605,20 @@ Surface defined through the nllat hydroid model applied to ETRS89.
 
 The lowest tide level which can be predicted to occur under average meteorological conditions and under any combination of astronomical conditions.
 
-Luxembourg 1930
----------------
+Luxembourg Reference Frame
+--------------------------
 
 | Type: Geodetic
 | Used: Luxembourg.
 
 .. code-block:: php
 
-    Datum::fromSRID(Datum::EPSG_LUXEMBOURG_1930)
+    Datum::fromSRID(Datum::EPSG_LUXEMBOURG_REFERENCE_FRAME)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::6181')
 
-Fundamental point: northern station of Habay-la-Neuve baseline in Belgium. Latitude: 49°43'24.408"N, longitude: 5°38'22.470"E (of Greenwich).
+Fundamental point of 1930 triangulation: northern station of Habay-la-Neuve baseline in Belgium. Latitude: 49°43'24.408"N, longitude: 5°38'22.470"E (of Greenwich). Since 2006 LUREF has been realized by GNSS station positions and transformation from ETRF.
+
+The transformation from ETRF 2000 first defining LUREF in 2006 has been recomputed in 2014 and 2020.
 
 Luzon 1911
 ----------
@@ -5611,6 +5703,21 @@ Defined through the application of the MML07 NTv2 transformation (code 9369) to 
 
 Created in 2020 to support intermediate CRS "MML07-IRF" in the emulation of the MML07 Snake map projection.
 
+MOLDOR11 Intermediate Reference Frame
+-------------------------------------
+
+| Type: Geodetic
+| Used: United Kingdom (UK) - on or related to the rail route from Manchester via Ordsall Lane and the Hope Valley to Dore Junction.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_MOLDOR11_INTERMEDIATE_REFERENCE_FRAME)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1315')
+
+Defined through the application of the MOLDOR11 NTv2 transformation (code 9878) to ETRS89 as realized through OSNet v2009 CORS.
+
+Created in 2021 to support intermediate CRS "MOLDOR11-IRF" in the emulation of the MOLDOR11 Snake map projection.
+
 MOLDREF99
 ---------
 
@@ -5663,6 +5770,21 @@ MOP78
     Datum::fromSRID(Datum::EPSG_MOP78)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::6639')
 
+
+MRH21 Intermediate Reference Frame
+----------------------------------
+
+| Type: Geodetic
+| Used: United Kingdom (UK) - on or related to Midland Rail Hub, covering routes through Cardiff, Bristol, Gloucester, Derby, Birmingham, Leicester, and Lincoln.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_MRH21_INTERMEDIATE_REFERENCE_FRAME)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1314')
+
+Defined through the application of the MRH21 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
+
+Created in 2021 to support intermediate CRS "MRH21-IRF" in the emulation of the MRH21 Snake map projection.
 
 Macao 1920
 ----------
@@ -6019,7 +6141,9 @@ Mayotte 1950
     Datum::fromSRID(Datum::EPSG_MAYOTTE_1950)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::5191')
 
-Marker on Issoufali jetty at Dzaoudzi. Height is 2.18m above zero of tide gauge.
+IGN 1950 marker (height 0.0m) on southwest jetty at Dzaoudzi (Petite-Terre) is 2.18m above zero of tide gauge. SHOM 1953 marker on east (Issoufali) jetty at Dzaoudzi (height 4.74m) is the base for Mayotte heights.
+
+Datum transferred to benchmark RN0 with height of 2.774m above tide gauge on eastern jetty at Mamoudzou (Grand-Terre) in 1979.
 
 Mean High Water
 ---------------
@@ -6988,20 +7112,20 @@ Rivet number M.ac O-VIII on the Marseille tide gauge site, with the height fixed
 
 Orthometric heights.
 
-Nivellement General du Luxembourg
----------------------------------
+Nivellement General du Luxembourg 1995
+--------------------------------------
 
 | Type: Vertical
 | Used: Luxembourg.
 
 .. code-block:: php
 
-    Datum::fromSRID(Datum::EPSG_NIVELLEMENT_GENERAL_DU_LUXEMBOURG)
+    Datum::fromSRID(Datum::EPSG_NIVELLEMENT_GENERAL_DU_LUXEMBOURG_1995)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::5172')
 
 Reference point Wemperhardt defined as 528.030m above Normaal Amsterdams Peil (NAP). Datum at NAP is mean high tide in 1684. Network adjusted in 1995.
 
-Orthometric heights.
+Pseudo-orthometric heights.
 
 Nord Sahara 1959
 ----------------
@@ -7106,7 +7230,7 @@ North American Datum of 1983 (CSRS) version 2
 
 Defined at reference epoch 1997.0 by a transformation from ITRF96 (see transformation code 8259). The frame is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
 
-Adopted by the Canadian federal government from 1998-01-01 and by the provincial governments of British Columbia, New Brunswick, Prince Edward Island and Quebec. Replaces NAD83(CSRS96). Replaced by NAD83(CSRS)v3.
+Published 1998-01-01; adopted by the Canadian federal government and the provincial governments of Alberta, Saskatchewan, Manitoba, Quebec, New Brunswick and Prince Edward Island. Replaces NAD83(CSRS96). Replaced by NAD83(CSRS)v3.
 
 North American Datum of 1983 (CSRS) version 3
 ---------------------------------------------
@@ -7121,7 +7245,7 @@ North American Datum of 1983 (CSRS) version 3
 
 Defined at reference epoch 1997.0 by a transformation from ITRF97 (see transformation code 8260). The frame is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
 
-Adopted by the Canadian federal government from 1999-01-01 and by the provincial governments of Alberta, British Columbia, Manitoba, Newfoundland and Labrador, Nova Scotia, Ontario and Saskatchewan. Replaces NAD83(CSRS)v2. Replaced by NAD83(CSRS)v4.
+Published 1999-01-01; adopted by the Canadian federal government (2000) and the provincial governments of British Columbia (CRD in 2000, all Victoria Island 2005), Ontario (2008) and Nova Scotia (2000). Replaces NAD83(CSRS)v2. Replaced by NAD83(CSRS)v4.
 
 North American Datum of 1983 (CSRS) version 4
 ---------------------------------------------
@@ -7136,7 +7260,7 @@ North American Datum of 1983 (CSRS) version 4
 
 Defined at reference epoch 2002.0 by a transformation from ITRF2000 (see transformation code 8261). The frame is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
 
-Adopted by the Canadian federal government from 2002-01-01 and by the provincial governments of Alberta and British Columbia. Replaces NAD83(CSRS)v3. Replaced by NAD83(CSRS)v5.
+Published 2002-01-01; adopted by the Canadian federal government (2002) and the provincial governments of British Columbia (for mainland only, not Victoria Island) (2005) and Alberta (2004). Replaces NAD83(CSRS)v3. Replaced by NAD83(CSRS)v5.
 
 North American Datum of 1983 (CSRS) version 5
 ---------------------------------------------
@@ -7149,9 +7273,9 @@ North American Datum of 1983 (CSRS) version 5
     Datum::fromSRID(Datum::EPSG_NORTH_AMERICAN_DATUM_OF_1983_CSRS_VERSION_5)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1196')
 
-Defined at reference epoch 2005.0 by a transformation from ITRF2005 (see transformation code 8262). The frame is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
+Defined at reference epoch 2006.0 by a transformation from ITRF2005 (see transformation code 9227). The frame is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
 
-Adopted by the Canadian federal government from 2006-01-01. Replaces NAD83(CSRS)v4. Replaced by NAD83(CSRS)v6.
+Published 2007-01-01; adopted by the Canadian federal government in 2007. Replaces NAD83(CSRS)v4. Replaced by NAD83(CSRS)v6.
 
 North American Datum of 1983 (CSRS) version 6
 ---------------------------------------------
@@ -7166,7 +7290,7 @@ North American Datum of 1983 (CSRS) version 6
 
 Defined at reference epoch 2010.0 by a transformation from ITRF2008 (see transformation code 8264). The frame is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
 
-Adopted by the Canadian federal government from 2010-01-01 and the provincial governments of Alberta, British Columbia, Manitoba, Newfoundland and Labrador, Nova Scotia, Ontario and Prince Edward Island. Replaces NAD83(CSRS)v5. Replaced by NAD83(CSRS)v7.
+Published 2010-01-01; adopted by the Canadian government (2012) and the provincial governments of Manitoba (2014), Ontario (2013), Prince Edward Island (2014), Nova Scotia (2014) and Newfoundland (2012). Replaces NAD83(CSRSv5). Replaced by NAD83(CSRS)v7.
 
 North American Datum of 1983 (CSRS) version 7
 ---------------------------------------------
@@ -7181,7 +7305,7 @@ North American Datum of 1983 (CSRS) version 7
 
 Defined at reference epoch 2010.0 by a transformation from ITRF2014 (see transformation code 8265). The frame is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
 
-Adopted by the Canadian federal government from 2017-05-01 and the provincial government of Alberta. Replaces NAD83(CSRS)v6.
+Published 2017-05-01; adopted by the Canadian federal government (2017) and the provincial governments of Alberta (2021) and Prince Edward Island (2020). Replaces NAD83(CSRS)v6.
 
 North American Datum of 1983 (CSRS96)
 -------------------------------------
@@ -8062,7 +8186,7 @@ Ordnance Survey of Great Britain 1936
     Datum::fromSRID(Datum::EPSG_ORDNANCE_SURVEY_OF_GREAT_BRITAIN_1936)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::6277')
 
-Prior to 2002, fundamental point: Herstmonceux, Latitude: 50°51'55.271"N, longitude: 0°20'45.882"E (of Greenwich). From April 2002 the datum is defined through the application of the OSTN transformation from ETRS89.
+Prior to 2002 fundamental point: Herstmonceux, Latitude: 50°51'55.271"N, longitude: 0°20'45.882"E, triangulation adjustment started 1936, completed 1962. From April 2002 the datum is defined through the application of the OSTN transformation from ETRS89.
 
 The average accuracy of OSTN compared to the old triangulation network (down to 3rd order) is 0.1m. With the introduction of OSTN15, the area for OGSB36 has effectively been extended from Britain to cover the adjacent UK Continental Shelf.
 
@@ -8815,7 +8939,7 @@ Reseau Geodesique Francais 1993 v1
 ----------------------------------
 
 | Type: Geodetic
-| Used: France - onshore and offshore, mainland and Corsica.
+| Used: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
 
 .. code-block:: php
 
@@ -8830,7 +8954,7 @@ Reseau Geodesique Francais 1993 v2
 ----------------------------------
 
 | Type: Geodetic
-| Used: France - onshore and offshore, mainland and Corsica.
+| Used: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
 
 .. code-block:: php
 
@@ -8845,7 +8969,7 @@ Reseau Geodesique Francais 1993 v2b
 -----------------------------------
 
 | Type: Geodetic
-| Used: France - onshore and offshore, mainland and Corsica.
+| Used: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
 
 .. code-block:: php
 
@@ -8974,7 +9098,7 @@ Reseau Geodesique des Antilles Francaises 2009
 ----------------------------------------------
 
 | Type: Geodetic
-| Used: French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante, Les Saintes, Iles de la Petite Terre, La Desirade, St Barthélemy, and northern St Martin) and Martinique.
+| Used: French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante, Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; St Martin.
 
 .. code-block:: php
 
@@ -9043,7 +9167,7 @@ Reseau de Reference des Antilles Francaises 1991
 ------------------------------------------------
 
 | Type: Geodetic
-| Used: French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante, Les Saintes, Iles de la Petite Terre, La Desirade, St Barthélemy, and northern St Martin) and Martinique.
+| Used: French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante, Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; St Martin.
 
 .. code-block:: php
 
@@ -9103,7 +9227,7 @@ Reykjavik 1900
 --------------
 
 | Type: Geodetic
-| Used: Iceland - onshore.
+| Used: Iceland - mainland.
 
 .. code-block:: php
 
@@ -9182,6 +9306,21 @@ Ross Sea Region Geodetic Datum 2000
     Datum::fromSRID('urn:ogc:def:datum:EPSG::6764')
 
 Based on ITRF96 at epoch 2000.0
+
+SCM22 Intermediate Reference Frame
+----------------------------------
+
+| Type: Geodetic
+| Used: United Kingdom (UK) - on or related to the Scottish central mainline rail route from Motherwell through Perth and Pitlochry to Inverness.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_SCM22_INTERMEDIATE_REFERENCE_FRAME)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1320')
+
+Defined through the application of the SCM22 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
+
+Created in 2022 to support intermediate CRS "SCM22-IRF" in the emulation of the SCM22 Snake map projection.
 
 SIRGAS Continuously Operating Network DGF00P01
 ----------------------------------------------
@@ -10339,6 +10478,19 @@ Sule Skerry
 
 Orthometric heights.
 
+Svalbard vertical datum 2006
+----------------------------
+
+| Type: Vertical
+| Used: Arctic (Norway (Svalbard) onshore and offshore) - between 81°10'N and 76°10'N.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_SVALBARD_VERTICAL_DATUM_2006)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1323')
+
+Mean Sea Level (MSL) at Ny-Ålesund. The SVD2006 surface (arcgp-2006-sk) is the Arctic Gravity Project 2006 (arcgp-2006) surface adjusted to two benchmarks tied to the Ny-Ålesund tide gauge. arcgp-2006-sk=arcgp-2006 - 0.8986m.
+
 Swiss Terrestrial Reference System 1995
 ---------------------------------------
 
@@ -11098,7 +11250,7 @@ World Geodetic System 1984 (G2139)
     Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_G2139)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1309')
 
-Defined through coordinates of 19 GPS tracking stations adjusted to a subset of IGb14 stations. The IGb14 station coordinates are considered to be equivalent to ITRF2014.
+Defined through coordinates of 19 GPS tracking stations aligned with a subset of IGb14 stations at epoch 2016.0. The IGb14 station coordinates are considered to be equivalent to ITRF2014.
 
 Replaces World Geodetic System 1984 (G1762) from 2021-01-03. Tracking station coordinate changes on 2021-03-28 when NGA implemented IGS definition of antenna phase centre offset.
 

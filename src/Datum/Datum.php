@@ -1135,8 +1135,8 @@ class Datum
      * Extent: Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen,
      * Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt,
      * Schleswig-Holstein, Thuringen.
-     * Defined by transformation from ETRS89 (transformation code 5826) to be an average of DHDN across all states of
-     * Germany.
+     * Defined by transformation from ETRS89 (transformation code 5826) to be an average of DHDN realizations across
+     * all German states.
      */
     public const EPSG_DEUTSCHE_BAHN_REFERENCE_SYSTEM = 'urn:ogc:def:datum:EPSG::1081';
 
@@ -1257,6 +1257,16 @@ class Datum
      * Normal-orthometric heights.
      */
     public const EPSG_DURRES = 'urn:ogc:def:datum:EPSG::5175';
+
+    /**
+     * EBBWV14 Intermediate Reference Frame
+     * Type: geodetic
+     * Extent: United Kingdom (UK) - on or related to the rail route from Newport (Park Junction) to Ebbw Vale.
+     * Defined through the application of the EBBWV14 NTv2 transformation to ETRS89 as realized through OSNet v2009
+     * CORS.
+     * Created in 2022 to support intermediate CRS "EBBWV14-IRF" in the emulation of the EBBWV14 Snake map projection.
+     */
+    public const EPSG_EBBWV14_INTERMEDIATE_REFERENCE_FRAME = 'urn:ogc:def:datum:EPSG::1319';
 
     /**
      * ECML14_NB Intermediate Reference Frame
@@ -1756,6 +1766,15 @@ class Datum
     public const EPSG_EUROPEAN_VERTICAL_REFERENCE_FRAME_2019_MEAN_TIDE = 'urn:ogc:def:datum:EPSG::1287';
 
     /**
+     * FNL22 Intermediate Reference Frame
+     * Type: geodetic
+     * Extent: United Kingdom (UK) - on or related to the rail route from Inverness to Thurso and Wick.
+     * Defined through the application of the FNL22 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
+     * Created in 2022 to support intermediate CRS "FNL22" in the emulation of the FNL22 Snake map projection.
+     */
+    public const EPSG_FNL22_INTERMEDIATE_REFERENCE_FRAME = 'urn:ogc:def:datum:EPSG::1321';
+
+    /**
      * Fahud
      * Type: geodetic
      * Extent: Oman - mainland onshore.
@@ -1934,6 +1953,32 @@ class Datum
      * projection.
      */
     public const EPSG_GBK19_INTERMEDIATE_REFERENCE_FRAME = 'urn:ogc:def:datum:EPSG::1289';
+
+    /**
+     * GNTRANS
+     * Type: vertical
+     * Extent: Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen,
+     * Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt,
+     * Schleswig-Holstein, Thuringen.
+     * Surface defined by the EGG97 quasi-geoid model modified in GNTRANS to achieve absolute position optimised for
+     * use with DB_REF.
+     * Implemented in GNTRANS. The GNTRANS height surface is available only through the GNTRANS application. Replaced
+     * by the GNTRANS2016 height surface (datum code 1318).
+     */
+    public const EPSG_GNTRANS = 'urn:ogc:def:datum:EPSG::1316';
+
+    /**
+     * GNTRANS2016
+     * Type: vertical
+     * Extent: Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen,
+     * Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt,
+     * Schleswig-Holstein, Thuringen.
+     * Surface defined by the GCG2016 quasi-geoid model applied to ETRS89.
+     * Approximates the national DHHN2016 levelling surface to around 1cm in lowlands and 2cm in high mountains, but
+     * unlike DHHN2016 it is defined by the GCG2016 geoid model. Like DHHN2016, uses Normal heights in the mean tide
+     * system.
+     */
+    public const EPSG_GNTRANS2016 = 'urn:ogc:def:datum:EPSG::1318';
 
     /**
      * Gambia
@@ -2264,6 +2309,17 @@ class Datum
     public const EPSG_HS2_VERTICAL_REFERENCE_FRAME = 'urn:ogc:def:datum:EPSG::1265';
 
     /**
+     * HULLEE13 Intermediate Reference Frame
+     * Type: geodetic
+     * Extent: United Kingdom (UK) - on or related to the rail route from the Morley tunnel through Leeds to Hull.
+     * Defined through the application of the HULLEE13 NTv2 transformation to ETRS89 as realized through OSNet v2009
+     * CORS.
+     * Created in 2022 to support intermediate CRS "HULLEE13-IRF" in the emulation of the HULLEE13 Snake map
+     * projection.
+     */
+    public const EPSG_HULLEE13_INTERMEDIATE_REFERENCE_FRAME = 'urn:ogc:def:datum:EPSG::1317';
+
+    /**
      * Ha Tien 1960
      * Type: vertical
      * Extent: Cambodia - mainland onshore; Vietnam - mainland onshore.
@@ -2367,7 +2423,7 @@ class Datum
     /**
      * Hjorsey 1955
      * Type: geodetic
-     * Extent: Iceland - onshore.
+     * Extent: Iceland - mainland.
      * Fundamental point:  Latitude: 64°31'29.26"N, longitude: 22°22'05.84"W (of Greenwich).
      */
     public const EPSG_HJORSEY_1955 = 'urn:ogc:def:datum:EPSG::6658';
@@ -2424,9 +2480,9 @@ class Datum
      * Hong Kong Geodetic
      * Type: geodetic
      * Extent: China - Hong Kong - onshore and offshore.
-     * ITRF96 at epoch 1998.33
+     * ITRF96 at epoch 1998.121
      * Locally sometimes referred to as ITRF96 or WGS 84, these are not strictly correct as it applies only at epoch
-     * 1998.33 and ignores subsequent tectonic plate motion.
+     * 1998.121 and ignores subsequent tectonic plate motion.
      */
     public const EPSG_HONG_KONG_GEODETIC = 'urn:ogc:def:datum:EPSG::1209';
 
@@ -2990,9 +3046,21 @@ class Datum
      * ITRF2014 and the average of VLBI and SLR scales/rates. Orientation = ITRF2008@ 2010.0 with zero rotation rates
      * between the ITRF2014 and ITRF2008.
      * Realization of the IERS Terrestrial Reference System (ITRS). Replaces ITRF2008 (datum code 1061) from January
-     * 2016.
+     * 2016. Replaced by ITRF2020 (datum code 1322) from April 2022.
      */
     public const EPSG_INTERNATIONAL_TERRESTRIAL_REFERENCE_FRAME_2014 = 'urn:ogc:def:datum:EPSG::1165';
+
+    /**
+     * International Terrestrial Reference Frame 2020
+     * Type: dynamic geodetic
+     * Extent: World.
+     * Origin at geocentre. Origin = ILRS SLR long-term solution at epoch 2015.0. Zero scale and scale rate between
+     * ITRF2020 and the average of VLBI and SLR scales/rates. Orientation = ITRF2014@ 2015.0 with zero rotation rates
+     * between the ITRF2020 and ITRF2014.
+     * Realization of the IERS Terrestrial Reference System (ITRS). Replaces ITRF2014 (datum code 1165) from April
+     * 2022.
+     */
+    public const EPSG_INTERNATIONAL_TERRESTRIAL_REFERENCE_FRAME_2020 = 'urn:ogc:def:datum:EPSG::1322';
 
     /**
      * Iraq-Kuwait Boundary Datum 1992
@@ -3024,7 +3092,7 @@ class Datum
      * Type: geodetic
      * Extent: Iceland - onshore and offshore.
      * ITRF2000 at epoch 2004.6.
-     * Replaces ISN93 (datum code 6659).
+     * Replaces ISN93 (datum code 6659). Replaced by ISN2016 (datum code 1087).
      */
     public const EPSG_ISLANDS_NET_2004 = 'urn:ogc:def:datum:EPSG::1060';
 
@@ -3731,13 +3799,15 @@ class Datum
     public const EPSG_LOWEST_ASTRONOMICAL_TIDE_NETHERLANDS = 'urn:ogc:def:datum:EPSG::1290';
 
     /**
-     * Luxembourg 1930
+     * Luxembourg Reference Frame
      * Type: geodetic
      * Extent: Luxembourg.
-     * Fundamental point: northern station of Habay-la-Neuve baseline in Belgium. Latitude: 49°43'24.408"N, longitude:
-     * 5°38'22.470"E (of Greenwich).
+     * Fundamental point of 1930 triangulation: northern station of Habay-la-Neuve baseline in Belgium. Latitude:
+     * 49°43'24.408"N, longitude: 5°38'22.470"E (of Greenwich). Since 2006 LUREF has been realized by GNSS station
+     * positions and transformation from ETRF.
+     * The transformation from ETRF 2000 first defining LUREF in 2006 has been recomputed in 2014 and 2020.
      */
-    public const EPSG_LUXEMBOURG_1930 = 'urn:ogc:def:datum:EPSG::6181';
+    public const EPSG_LUXEMBOURG_REFERENCE_FRAME = 'urn:ogc:def:datum:EPSG::6181';
 
     /**
      * Luzon 1911
@@ -3794,6 +3864,18 @@ class Datum
     public const EPSG_MML07_INTERMEDIATE_REFERENCE_FRAME = 'urn:ogc:def:datum:EPSG::1271';
 
     /**
+     * MOLDOR11 Intermediate Reference Frame
+     * Type: geodetic
+     * Extent: United Kingdom (UK) - on or related to the rail route from Manchester via Ordsall Lane and the Hope
+     * Valley to Dore Junction.
+     * Defined through the application of the MOLDOR11 NTv2 transformation (code 9878) to ETRS89 as realized through
+     * OSNet v2009 CORS.
+     * Created in 2021 to support intermediate CRS "MOLDOR11-IRF" in the emulation of the MOLDOR11 Snake map
+     * projection.
+     */
+    public const EPSG_MOLDOR11_INTERMEDIATE_REFERENCE_FRAME = 'urn:ogc:def:datum:EPSG::1315';
+
+    /**
      * MOLDREF99
      * Type: geodetic
      * Extent: Moldova.
@@ -3824,6 +3906,16 @@ class Datum
      * Extent: Wallis and Futuna - Wallis.
      */
     public const EPSG_MOP78 = 'urn:ogc:def:datum:EPSG::6639';
+
+    /**
+     * MRH21 Intermediate Reference Frame
+     * Type: geodetic
+     * Extent: United Kingdom (UK) - on or related to Midland Rail Hub, covering routes through Cardiff, Bristol,
+     * Gloucester, Derby, Birmingham, Leicester, and Lincoln.
+     * Defined through the application of the MRH21 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
+     * Created in 2021 to support intermediate CRS "MRH21-IRF" in the emulation of the MRH21 Snake map projection.
+     */
+    public const EPSG_MRH21_INTERMEDIATE_REFERENCE_FRAME = 'urn:ogc:def:datum:EPSG::1314';
 
     /**
      * Macao 1920
@@ -4047,7 +4139,10 @@ class Datum
      * Mayotte 1950
      * Type: vertical
      * Extent: Mayotte - onshore.
-     * Marker on Issoufali jetty at Dzaoudzi. Height is 2.18m above zero of tide gauge.
+     * IGN 1950 marker (height 0.0m) on southwest jetty at Dzaoudzi (Petite-Terre) is 2.18m above zero of tide gauge.
+     * SHOM 1953 marker on east (Issoufali) jetty at Dzaoudzi (height 4.74m) is the base for Mayotte heights.
+     * Datum transferred to benchmark RN0 with height of 2.774m above tide gauge on eastern jetty at Mamoudzou
+     * (Grand-Terre) in 1979.
      */
     public const EPSG_MAYOTTE_1950 = 'urn:ogc:def:datum:EPSG::5191';
 
@@ -4732,14 +4827,14 @@ class Datum
     public const EPSG_NIVELLEMENT_GENERAL_DE_LA_FRANCE_LALLEMAND = 'urn:ogc:def:datum:EPSG::5118';
 
     /**
-     * Nivellement General du Luxembourg
+     * Nivellement General du Luxembourg 1995
      * Type: vertical
      * Extent: Luxembourg.
      * Reference point Wemperhardt defined as 528.030m above Normaal Amsterdams Peil (NAP). Datum at NAP is mean high
      * tide in 1684. Network adjusted in 1995.
-     * Orthometric heights.
+     * Pseudo-orthometric heights.
      */
-    public const EPSG_NIVELLEMENT_GENERAL_DU_LUXEMBOURG = 'urn:ogc:def:datum:EPSG::5172';
+    public const EPSG_NIVELLEMENT_GENERAL_DU_LUXEMBOURG_1995 = 'urn:ogc:def:datum:EPSG::5172';
 
     /**
      * Nord Sahara 1959
@@ -4831,8 +4926,9 @@ class Datum
      * Yukon.
      * Defined at reference epoch 1997.0 by a transformation from ITRF96 (see transformation code 8259). The frame is
      * kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
-     * Adopted by the Canadian federal government from 1998-01-01 and by the provincial governments of British
-     * Columbia, New Brunswick, Prince Edward Island and Quebec. Replaces NAD83(CSRS96). Replaced by NAD83(CSRS)v3.
+     * Published 1998-01-01; adopted by the Canadian federal government and the provincial governments of Alberta,
+     * Saskatchewan, Manitoba, Quebec, New Brunswick and Prince Edward Island. Replaces NAD83(CSRS96). Replaced by
+     * NAD83(CSRS)v3.
      */
     public const EPSG_NORTH_AMERICAN_DATUM_OF_1983_CSRS_VERSION_2 = 'urn:ogc:def:datum:EPSG::1193';
 
@@ -4844,9 +4940,9 @@ class Datum
      * Yukon.
      * Defined at reference epoch 1997.0 by a transformation from ITRF97 (see transformation code 8260). The frame is
      * kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
-     * Adopted by the Canadian federal government from 1999-01-01 and by the provincial governments of Alberta, British
-     * Columbia, Manitoba, Newfoundland and Labrador, Nova Scotia, Ontario and Saskatchewan. Replaces NAD83(CSRS)v2.
-     * Replaced by NAD83(CSRS)v4.
+     * Published 1999-01-01; adopted by the Canadian federal government (2000) and the provincial governments of
+     * British Columbia (CRD in 2000, all Victoria Island 2005), Ontario (2008) and Nova Scotia (2000). Replaces
+     * NAD83(CSRS)v2. Replaced by NAD83(CSRS)v4.
      */
     public const EPSG_NORTH_AMERICAN_DATUM_OF_1983_CSRS_VERSION_3 = 'urn:ogc:def:datum:EPSG::1194';
 
@@ -4858,8 +4954,9 @@ class Datum
      * Yukon.
      * Defined at reference epoch 2002.0 by a transformation from ITRF2000 (see transformation code 8261). The frame is
      * kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
-     * Adopted by the Canadian federal government from 2002-01-01 and by the provincial governments of Alberta and
-     * British Columbia. Replaces NAD83(CSRS)v3. Replaced by NAD83(CSRS)v5.
+     * Published 2002-01-01; adopted by the Canadian federal government (2002) and the provincial governments of
+     * British Columbia (for mainland only, not Victoria Island) (2005) and Alberta (2004). Replaces NAD83(CSRS)v3.
+     * Replaced by NAD83(CSRS)v5.
      */
     public const EPSG_NORTH_AMERICAN_DATUM_OF_1983_CSRS_VERSION_4 = 'urn:ogc:def:datum:EPSG::1195';
 
@@ -4869,9 +4966,10 @@ class Datum
      * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
      * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
      * Yukon.
-     * Defined at reference epoch 2005.0 by a transformation from ITRF2005 (see transformation code 8262). The frame is
+     * Defined at reference epoch 2006.0 by a transformation from ITRF2005 (see transformation code 9227). The frame is
      * kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
-     * Adopted by the Canadian federal government from 2006-01-01. Replaces NAD83(CSRS)v4. Replaced by NAD83(CSRS)v6.
+     * Published 2007-01-01; adopted by the Canadian federal government in 2007. Replaces NAD83(CSRS)v4. Replaced by
+     * NAD83(CSRS)v6.
      */
     public const EPSG_NORTH_AMERICAN_DATUM_OF_1983_CSRS_VERSION_5 = 'urn:ogc:def:datum:EPSG::1196';
 
@@ -4883,9 +4981,9 @@ class Datum
      * Yukon.
      * Defined at reference epoch 2010.0 by a transformation from ITRF2008 (see transformation code 8264). The frame is
      * kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
-     * Adopted by the Canadian federal government from 2010-01-01 and the provincial governments of Alberta, British
-     * Columbia, Manitoba, Newfoundland and Labrador, Nova Scotia, Ontario and Prince Edward Island. Replaces
-     * NAD83(CSRS)v5. Replaced by NAD83(CSRS)v7.
+     * Published 2010-01-01; adopted by the Canadian government (2012) and the provincial governments of Manitoba
+     * (2014), Ontario (2013), Prince Edward Island (2014), Nova Scotia (2014) and Newfoundland (2012). Replaces
+     * NAD83(CSRSv5). Replaced by NAD83(CSRS)v7.
      */
     public const EPSG_NORTH_AMERICAN_DATUM_OF_1983_CSRS_VERSION_6 = 'urn:ogc:def:datum:EPSG::1197';
 
@@ -4897,8 +4995,8 @@ class Datum
      * Yukon.
      * Defined at reference epoch 2010.0 by a transformation from ITRF2014 (see transformation code 8265). The frame is
      * kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
-     * Adopted by the Canadian federal government from 2017-05-01 and the provincial government of Alberta. Replaces
-     * NAD83(CSRS)v6.
+     * Published 2017-05-01; adopted by the Canadian federal government (2017) and the provincial governments of
+     * Alberta (2021) and Prince Edward Island (2020). Replaces NAD83(CSRS)v6.
      */
     public const EPSG_NORTH_AMERICAN_DATUM_OF_1983_CSRS_VERSION_7 = 'urn:ogc:def:datum:EPSG::1198';
 
@@ -5515,8 +5613,9 @@ class Datum
      * Type: geodetic
      * Extent: United Kingdom (UK) - offshore to boundary of UKCS within 49°45'N to 61°N and 9°W to 2°E; onshore
      * Great Britain (England, Wales and Scotland). Isle of Man onshore.
-     * Prior to 2002, fundamental point: Herstmonceux, Latitude: 50°51'55.271"N, longitude: 0°20'45.882"E (of
-     * Greenwich). From April 2002 the datum is defined through the application of the OSTN transformation from ETRS89.
+     * Prior to 2002 fundamental point: Herstmonceux, Latitude: 50°51'55.271"N, longitude: 0°20'45.882"E,
+     * triangulation adjustment started 1936, completed 1962. From April 2002 the datum is defined through the
+     * application of the OSTN transformation from ETRS89.
      * The average accuracy of OSTN compared to the old triangulation network (down to 3rd order) is 0.1m. With the
      * introduction of OSTN15, the area for OGSB36 has effectively been extended from Britain to cover the adjacent UK
      * Continental Shelf.
@@ -6029,7 +6128,7 @@ class Datum
     /**
      * Reseau Geodesique Francais 1993 v1
      * Type: geodetic
-     * Extent: France - onshore and offshore, mainland and Corsica.
+     * Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
      * Coincident with ETRS89 at epoch 1993.0. Derived from long-term GNSS observations at 23 points aligned to ETRF93.
      * @ 1993.0 through fundamental points at Grasse, Toulouse and Brest. Network supplemented in 1994 and 1995 by
      * approx. 1000 additional stations.
@@ -6040,7 +6139,7 @@ class Datum
     /**
      * Reseau Geodesique Francais 1993 v2
      * Type: geodetic
-     * Extent: France - onshore and offshore, mainland and Corsica.
+     * Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
      * Aligned with ETRF2000 at epoch 2009.0. Based on the French GNSS permanent network (RGP) from 1998 to 2009, and
      * the re-observation of the geodetic points of the French Reference Network (RRF) and French Base Network
      * (RBF) from 2000 to 2011.
@@ -6052,7 +6151,7 @@ class Datum
     /**
      * Reseau Geodesique Francais 1993 v2b
      * Type: geodetic
-     * Extent: France - onshore and offshore, mainland and Corsica.
+     * Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
      * Aligned with ETRF2000 at epoch 2019.0. Derived through reprocessing of the French GNSS permanent network (RGP)
      * in IGS14.
      * RGF93 v2b is a realization of ETRS89. Third realization of RGF93. Replaces RGF93 v2 (datum code 1312) from
@@ -6139,7 +6238,7 @@ class Datum
      * Reseau Geodesique des Antilles Francaises 2009
      * Type: geodetic
      * Extent: French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante,
-     * Les Saintes, Iles de la Petite Terre, La Desirade, St Barthélemy, and northern St Martin) and Martinique.
+     * Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; St Martin.
      * ITRF2005 at epoch 2009.0
      * Replaces RRAF91 in Martinique and Guadeloupe.
      */
@@ -6184,7 +6283,7 @@ class Datum
      * Reseau de Reference des Antilles Francaises 1991
      * Type: geodetic
      * Extent: French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante,
-     * Les Saintes, Iles de la Petite Terre, La Desirade, St Barthélemy, and northern St Martin) and Martinique.
+     * Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; St Martin.
      * WGS 84 coordinates of a single station determined during the 1988 Tango mission.
      * Replaces Fort Marigot and Sainte Anne (datum codes 6621-22) in Guadeloupe and Fort Desaix (datum code 6625) in
      * Martinique. Replaced by Reseau Geodesique des Antilles Francaises 2009 (datum code 1073).
@@ -6223,7 +6322,7 @@ class Datum
     /**
      * Reykjavik 1900
      * Type: geodetic
-     * Extent: Iceland - onshore.
+     * Extent: Iceland - mainland.
      * Fundamental point:  Latitude: 64°08'31.88"N, longitude: 21°55'51.15"W (of Greenwich).
      */
     public const EPSG_REYKJAVIK_1900 = 'urn:ogc:def:datum:EPSG::6657';
@@ -6278,6 +6377,16 @@ class Datum
      * Based on ITRF96 at epoch 2000.0.
      */
     public const EPSG_ROSS_SEA_REGION_GEODETIC_DATUM_2000 = 'urn:ogc:def:datum:EPSG::6764';
+
+    /**
+     * SCM22 Intermediate Reference Frame
+     * Type: geodetic
+     * Extent: United Kingdom (UK) - on or related to the Scottish central mainline rail route from Motherwell through
+     * Perth and Pitlochry to Inverness.
+     * Defined through the application of the SCM22 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
+     * Created in 2022 to support intermediate CRS "SCM22-IRF" in the emulation of the SCM22 Snake map projection.
+     */
+    public const EPSG_SCM22_INTERMEDIATE_REFERENCE_FRAME = 'urn:ogc:def:datum:EPSG::1320';
 
     /**
      * SIRGAS Continuously Operating Network DGF00P01
@@ -7063,6 +7172,16 @@ class Datum
     public const EPSG_SULE_SKERRY = 'urn:ogc:def:datum:EPSG::5142';
 
     /**
+     * Svalbard vertical datum 2006
+     * Type: vertical
+     * Extent: Arctic (Norway (Svalbard) onshore and offshore) - between 81°10'N and 76°10'N.
+     * Mean Sea Level (MSL) at Ny-Ålesund. The SVD2006 surface (arcgp-2006-sk) is the Arctic Gravity Project 2006
+     * (arcgp-2006) surface adjusted to two benchmarks tied to the Ny-Ålesund tide gauge. arcgp-2006-sk=arcgp-2006 -
+     * 0.8986m.
+     */
+    public const EPSG_SVALBARD_VERTICAL_DATUM_2006 = 'urn:ogc:def:datum:EPSG::1323';
+
+    /**
      * Swiss Terrestrial Reference System 1995
      * Type: geodetic
      * Extent: Liechtenstein; Switzerland.
@@ -7560,8 +7679,8 @@ class Datum
      * World Geodetic System 1984 (G2139)
      * Type: dynamic geodetic
      * Extent: World.
-     * Defined through coordinates of 19 GPS tracking stations adjusted to a subset of IGb14 stations. The IGb14
-     * station coordinates are considered to be equivalent to ITRF2014.
+     * Defined through coordinates of 19 GPS tracking stations aligned with a subset of IGb14 stations at epoch 2016.0.
+     * The IGb14 station coordinates are considered to be equivalent to ITRF2014.
      * Replaces World Geodetic System 1984 (G1762) from 2021-01-03. Tracking station coordinate changes on 2021-03-28
      * when NGA implemented IGS definition of antenna phase centre offset.
      */
@@ -9942,7 +10061,7 @@ class Datum
             'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7030',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => 1024,
-            'frame_reference_epoch' => 2010.0,
+            'frame_reference_epoch' => 2016.0,
         ],
         'urn:ogc:def:datum:EPSG::1310' => [
             'name' => 'ECML14_NB Intermediate Reference Frame',
@@ -9973,6 +10092,86 @@ class Datum
             'type' => 'geodetic',
             'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
+        'urn:ogc:def:datum:EPSG::1314' => [
+            'name' => 'MRH21 Intermediate Reference Frame',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
+        'urn:ogc:def:datum:EPSG::1315' => [
+            'name' => 'MOLDOR11 Intermediate Reference Frame',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
+        'urn:ogc:def:datum:EPSG::1316' => [
+            'name' => 'GNTRANS',
+            'type' => 'vertical',
+            'ellipsoid' => null,
+            'prime_meridian' => null,
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
+        'urn:ogc:def:datum:EPSG::1317' => [
+            'name' => 'HULLEE13 Intermediate Reference Frame',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
+        'urn:ogc:def:datum:EPSG::1318' => [
+            'name' => 'GNTRANS2016',
+            'type' => 'vertical',
+            'ellipsoid' => null,
+            'prime_meridian' => null,
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
+        'urn:ogc:def:datum:EPSG::1319' => [
+            'name' => 'EBBWV14 Intermediate Reference Frame',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
+        'urn:ogc:def:datum:EPSG::1320' => [
+            'name' => 'SCM22 Intermediate Reference Frame',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
+        'urn:ogc:def:datum:EPSG::1321' => [
+            'name' => 'FNL22 Intermediate Reference Frame',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
+        'urn:ogc:def:datum:EPSG::1322' => [
+            'name' => 'International Terrestrial Reference Frame 2020',
+            'type' => 'dynamic geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => 2015.0,
+        ],
+        'urn:ogc:def:datum:EPSG::1323' => [
+            'name' => 'Svalbard vertical datum 2006',
+            'type' => 'vertical',
+            'ellipsoid' => null,
+            'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
         ],
@@ -10537,7 +10736,7 @@ class Datum
             'frame_reference_epoch' => null,
         ],
         'urn:ogc:def:datum:EPSG::5172' => [
-            'name' => 'Nivellement General du Luxembourg',
+            'name' => 'Nivellement General du Luxembourg 1995',
             'type' => 'vertical',
             'ellipsoid' => null,
             'prime_meridian' => null,
@@ -11673,7 +11872,7 @@ class Datum
             'frame_reference_epoch' => null,
         ],
         'urn:ogc:def:datum:EPSG::6181' => [
-            'name' => 'Luxembourg 1930',
+            'name' => 'Luxembourg Reference Frame',
             'type' => 'geodetic',
             'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7022',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
