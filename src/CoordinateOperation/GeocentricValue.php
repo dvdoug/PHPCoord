@@ -68,6 +68,7 @@ class GeocentricValue
         $z = $this->z->getValue();
 
         $longitude = atan2($y, $x);
+        $longitude += $this->datum->getPrimeMeridian()->getGreenwichLongitude()->asRadians()->getValue();
         $p = hypot($x, $y);
 
         $latitude = atan2($z, ($p * (1 - $e2)));
@@ -78,7 +79,6 @@ class GeocentricValue
             $latitude = atan2($z + ($e2 * $v * sin($latitude)), $p);
         } while (abs($latitude - $phi1) >= static::ITERATION_CONVERGENCE);
 
-        $latitude += $this->datum->getPrimeMeridian()->getGreenwichLongitude()->asRadians()->getValue();
         $h = $p / cos($latitude) - $v;
 
         return new GeographicValue(new Radian($latitude), new Radian($longitude), new Metre($h), $this->datum);
