@@ -22,6 +22,7 @@ use PHPCoord\CoordinateOperation\CoordinateOperations;
 use PHPCoord\CoordinateOperation\NTv2NAD27NAD83CSRS1997QuebecProvider;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\CoordinateReferenceSystem\Geocentric;
+use PHPCoord\CoordinateReferenceSystem\Geographic;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Geographic3D;
 use PHPCoord\CoordinateReferenceSystem\Projected;
@@ -648,107 +649,107 @@ class GIGSTest extends TestCase
      */
     public function testSeries3200Transformations(string $gigsCode, string $name, string $gigsSourceCRS, string $gigsTargetCRS, string $methodName, string $param1Name, string $param1Value, string $param1Unit, string $param2Name, string $param2Value, string $param2Unit, string $param3Name, string $param3Value, string $param3Unit, string $param4Name, string $param4Value, string $param4Unit, string $param5Name, string $param5Value, string $param5Unit, string $param6Name, string $param6Value, string $param6Unit, string $param7Name, string $param7Value, string $param7Unit, string $param8Name, string $param8Value, string $param8Unit, string $param9Name, string $param9Value, string $param9Unit, string $param10Name, string $param10Value, string $param10Unit, string $epsgOperationCode): void
     {
+        $uoms = [
+            'NULL' => '',
+            'degree' => Angle::EPSG_DEGREE,
+            'sexagesimal degree' => Angle::EPSG_SEXAGESIMAL_DMS,
+            'arc-second' => Angle::EPSG_ARC_SECOND,
+            'microradian' => Angle::EPSG_MICRORADIAN,
+            'grad' => Angle::EPSG_GRAD,
+            'metre' => Length::EPSG_METRE,
+            'parts per million' => Scale::EPSG_PARTS_PER_MILLION,
+        ];
+
+        $params = [
+            $this->makeParamName($param1Name) => [
+                'value' => $param1Value !== 'NULL' ? $param1Value : null,
+                'uom' => $uoms[$param1Unit],
+                'reverses' => true,
+            ],
+            $this->makeParamName($param2Name) => [
+                'value' => $param2Value !== 'NULL' ? $param2Value : null,
+                'uom' => $uoms[$param2Unit],
+                'reverses' => true,
+            ],
+            $this->makeParamName($param3Name) => [
+                'value' => $param3Value !== 'NULL' ? $param3Value : null,
+                'uom' => $uoms[$param3Unit],
+                'reverses' => true,
+            ],
+            $this->makeParamName($param4Name) => [
+                'value' => $param4Value !== 'NULL' ? $param4Value : null,
+                'uom' => $uoms[$param4Unit],
+                'reverses' => true,
+            ],
+            $this->makeParamName($param5Name) => [
+                'value' => $param5Value !== 'NULL' ? $param5Value : null,
+                'uom' => $uoms[$param5Unit],
+                'reverses' => true,
+            ],
+            $this->makeParamName($param6Name) => [
+                'value' => $param6Value !== 'NULL' ? $param6Value : null,
+                'uom' => $uoms[$param6Unit],
+                'reverses' => true,
+            ],
+            $this->makeParamName($param7Name) => [
+                'value' => $param7Value !== 'NULL' ? $param7Value : null,
+                'uom' => $uoms[$param7Unit],
+                'reverses' => true,
+            ],
+            $this->makeParamName($param8Name) => [
+                'value' => $param8Value !== 'NULL' ? $param8Value : null,
+                'uom' => $uoms[$param8Unit],
+                'reverses' => true,
+            ],
+            $this->makeParamName($param9Name) => [
+                'value' => $param9Value !== 'NULL' ? $param9Value : null,
+                'uom' => $uoms[$param9Unit],
+                'reverses' => true,
+            ],
+            $this->makeParamName($param10Name) => [
+                'value' => $param10Value !== 'NULL' ? $param10Value : null,
+                'uom' => $uoms[$param10Unit],
+                'reverses' => true,
+            ],
+        ];
+
+        $params = array_filter($params, fn ($param) => $param['value'] !== null);
+        foreach ($params as $paramName => $param) {
+            if (str_contains($paramName, 'File')) {
+                $params[$paramName]['fileProvider'] = match ($param['value']) {
+                    'QUE27-98.gsb' => NTv2NAD27NAD83CSRS1997QuebecProvider::class,
+                    default => 'Unsupported',
+                };
+                if (!class_exists($params[$paramName]['fileProvider'])) {
+                    $this->markTestSkipped('Unsupported file');
+                }
+                unset($params[$paramName]['value']);
+                unset($params[$paramName]['uom']);
+            } else {
+                $params[$paramName]['value'] = $param['uom'] === Angle::EPSG_SEXAGESIMAL_DMS ? $param['value'] : (float) $param['value'];
+            }
+        }
+
+        $method = match ($methodName) {
+            'Geocentric translations' => CoordinateOperationMethods::EPSG_GEOCENTRIC_TRANSLATIONS_GEOG2D_DOMAIN,
+            'Position Vector 7-param. transformation' => CoordinateOperationMethods::EPSG_POSITION_VECTOR_TRANSFORMATION_GEOG2D_DOMAIN,
+            'Coordinate Frame rotation' => CoordinateOperationMethods::EPSG_COORDINATE_FRAME_ROTATION_GEOG2D_DOMAIN,
+            'Molodensky-Badekas 10-parameter transformation' => CoordinateOperationMethods::EPSG_MOLODENSKY_BADEKAS_PV_GEOG2D_DOMAIN,
+            'Longitude rotation' => CoordinateOperationMethods::EPSG_LONGITUDE_ROTATION,
+            'NTv2' => CoordinateOperationMethods::EPSG_NTV2,
+            'NADCON' => CoordinateOperationMethods::EPSG_NADCON5_2D,
+        };
+
+        CoordinateOperations::registerCustomOperation('urn:ogc:def:coordinateOperation:GIGS::' . $gigsCode, $name, $method, [1262], $params);
+        CoordinateOperations::registerCustomTransformation('urn:ogc:def:coordinateOperation:GIGS::' . $gigsCode, $name, 'urn:ogc:def:crs:GIGS::' . $gigsSourceCRS, 'urn:ogc:def:crs:GIGS::' . $gigsTargetCRS, 0, true);
+
+        $gigsOperation = CoordinateOperations::getOperationData('urn:ogc:def:coordinateOperation:GIGS::' . $gigsCode);
+        $gigsParams = CoordinateOperations::getParamData('urn:ogc:def:coordinateOperation:GIGS::' . $gigsCode);
+
         if ($epsgOperationCode) {
             try {
                 $originalOperation = CoordinateOperations::getOperationData('urn:ogc:def:coordinateOperation:EPSG::' . $epsgOperationCode);
                 $originalParams = CoordinateOperations::getParamData('urn:ogc:def:coordinateOperation:EPSG::' . $epsgOperationCode);
-
-                $uoms = [
-                    'NULL' => '',
-                    'degree' => Angle::EPSG_DEGREE,
-                    'sexagesimal degree' => Angle::EPSG_SEXAGESIMAL_DMS,
-                    'arc-second' => Angle::EPSG_ARC_SECOND,
-                    'microradian' => Angle::EPSG_MICRORADIAN,
-                    'grad' => Angle::EPSG_GRAD,
-                    'metre' => Length::EPSG_METRE,
-                    'parts per million' => Scale::EPSG_PARTS_PER_MILLION,
-                ];
-
-                $params = [
-                    $this->makeParamName($param1Name) => [
-                        'value' => $param1Value !== 'NULL' ? $param1Value : null,
-                        'uom' => $uoms[$param1Unit],
-                        'reverses' => true,
-                    ],
-                    $this->makeParamName($param2Name) => [
-                        'value' => $param2Value !== 'NULL' ? $param2Value : null,
-                        'uom' => $uoms[$param2Unit],
-                        'reverses' => true,
-                    ],
-                    $this->makeParamName($param3Name) => [
-                        'value' => $param3Value !== 'NULL' ? $param3Value : null,
-                        'uom' => $uoms[$param3Unit],
-                        'reverses' => true,
-                    ],
-                    $this->makeParamName($param4Name) => [
-                        'value' => $param4Value !== 'NULL' ? $param4Value : null,
-                        'uom' => $uoms[$param4Unit],
-                        'reverses' => true,
-                    ],
-                    $this->makeParamName($param5Name) => [
-                        'value' => $param5Value !== 'NULL' ? $param5Value : null,
-                        'uom' => $uoms[$param5Unit],
-                        'reverses' => true,
-                    ],
-                    $this->makeParamName($param6Name) => [
-                        'value' => $param6Value !== 'NULL' ? $param6Value : null,
-                        'uom' => $uoms[$param6Unit],
-                        'reverses' => true,
-                    ],
-                    $this->makeParamName($param7Name) => [
-                        'value' => $param7Value !== 'NULL' ? $param7Value : null,
-                        'uom' => $uoms[$param7Unit],
-                        'reverses' => true,
-                    ],
-                    $this->makeParamName($param8Name) => [
-                        'value' => $param8Value !== 'NULL' ? $param8Value : null,
-                        'uom' => $uoms[$param8Unit],
-                        'reverses' => true,
-                    ],
-                    $this->makeParamName($param9Name) => [
-                        'value' => $param9Value !== 'NULL' ? $param9Value : null,
-                        'uom' => $uoms[$param9Unit],
-                        'reverses' => true,
-                    ],
-                    $this->makeParamName($param10Name) => [
-                        'value' => $param10Value !== 'NULL' ? $param10Value : null,
-                        'uom' => $uoms[$param10Unit],
-                        'reverses' => true,
-                    ],
-                ];
-
-                $params = array_filter($params, fn ($param) => $param['value'] !== null);
-                foreach ($params as $name => $param) {
-                    if (str_contains($name, 'File')) {
-                        $params[$name]['fileProvider'] = match ($param['value']) {
-                            'QUE27-98.gsb' => NTv2NAD27NAD83CSRS1997QuebecProvider::class,
-                        };
-                        if (!class_exists($params[$name]['fileProvider'])) {
-                            $this->markTestSkipped();
-                        }
-                        unset($params[$name]['value']);
-                        unset($params[$name]['uom']);
-                    } else {
-                        $param[$name]['value'] = $param['uom'] === Angle::EPSG_SEXAGESIMAL_DMS ? $param['value'] : (float) $param['value'];
-                    }
-                }
-
-                $method = match ($methodName) {
-                    'Geocentric translations' => CoordinateOperationMethods::EPSG_GEOCENTRIC_TRANSLATIONS_GEOG2D_DOMAIN,
-                    'Position Vector 7-param. transformation' => CoordinateOperationMethods::EPSG_POSITION_VECTOR_TRANSFORMATION_GEOG2D_DOMAIN,
-                    'Coordinate Frame rotation' => CoordinateOperationMethods::EPSG_COORDINATE_FRAME_ROTATION_GEOG2D_DOMAIN,
-                    'Molodensky-Badekas 10-parameter transformation' => CoordinateOperationMethods::EPSG_MOLODENSKY_BADEKAS_PV_GEOG2D_DOMAIN,
-                    'Longitude rotation' => CoordinateOperationMethods::EPSG_LONGITUDE_ROTATION,
-                    'NTv2' => CoordinateOperationMethods::EPSG_NTV2,
-                    'NADCON' => CoordinateOperationMethods::EPSG_NADCON5_2D,
-                };
-
-                CoordinateOperations::registerCustomOperation('urn:ogc:def:coordinateOperation:GIGS::' . $gigsCode, $name, $method, [1262], $params);
-                CoordinateOperations::registerCustomTransformation('urn:ogc:def:coordinateOperation:GIGS::' . $gigsCode, $name, 'urn:ogc:def:crs:GIGS::' . $gigsSourceCRS, 'urn:ogc:def:crs:GIGS::' . $gigsTargetCRS, 0, true);
-
-                $gigsOperation = CoordinateOperations::getOperationData('urn:ogc:def:coordinateOperation:GIGS::' . $gigsCode);
-                $gigsParams = CoordinateOperations::getParamData('urn:ogc:def:coordinateOperation:GIGS::' . $gigsCode);
-
                 $this->assertEquals($originalOperation['method'], $gigsOperation['method']);
                 $this->assertEquals($originalParams, $gigsParams);
             } catch (UnknownCoordinateOperationException) {
@@ -1368,6 +1369,103 @@ class GIGSTest extends TestCase
             };
 
             yield '#' . $row[0] => [new Metre((float) $row[1]), new Metre((float) $row[2]), new Metre((float) $row[3]), new Degree((float) $row[4]), new Degree((float) $row[5]), new Metre((float) $row[6]), $direction, $geocentricCRSSrid, $geographicCRSSrid, (float) $header['Cartesian Tolerance'], (float) $header['Geographic Tolerance'], (float) $header['Round Trip Cartesian Tolerance'], (float) $header['Round Trip Geographic Tolerance'], isset($row[9]) && $row[9] === 'Round Trip calculation point'];
+        }
+    }
+
+    /**
+     * @depends testSeries3200GeodeticCRSs
+     * @depends testSeries3200Transformations
+     * @dataProvider series5200PosVecPart1Data
+     * @dataProvider series5200PosVecPart2Data
+     */
+    public function testSeries5200Transformations(Angle $latitude1, Angle $longitude1, ?Length $height1, Angle $latitude2, Angle $longitude2, ?Length $height2, bool $inReverse, string $geographicCRSSrid1, string $geographicCRSSrid2, float $cartesianTolerance, float $geographicTolerance, float $roundTripCartesianTolerance, float $roundTripGeographicTolerance, bool $roundTripPoint, string $operation): void
+    {
+        $geographicCRS1 = Geographic::fromSRID($geographicCRSSrid1);
+        $geographicCRS2 = Geographic::fromSRID($geographicCRSSrid2);
+
+        $geographicPoint1 = GeographicPoint::create(
+            $geographicCRS1,
+            $latitude1,
+            $longitude1,
+            $height1,
+        );
+        $geographicPoint2 = GeographicPoint::create(
+            $geographicCRS2,
+            $latitude2,
+            $longitude2,
+            $height2,
+        );
+
+        if (!$inReverse) {
+            $convertedGeographicPoint2 = $geographicPoint1->performOperation($operation, $geographicCRS2, false);
+            $this->assertEqualsWithDelta($geographicPoint2->getLatitude()->getValue(), $convertedGeographicPoint2->getLatitude()->getValue(), $geographicTolerance);
+            $this->assertEqualsWithDelta($geographicPoint2->getLongitude()->getValue(), $convertedGeographicPoint2->getLongitude()->getValue(), $geographicTolerance);
+            if ($height1) {
+                $this->assertEqualsWithDelta($geographicPoint2->getHeight()->getValue(), $convertedGeographicPoint2->getHeight()->getValue(), $cartesianTolerance);
+            }
+
+            if ($roundTripPoint) {
+                $originalConvertedGeographicPoint2 = $convertedGeographicPoint2;
+                for ($i = 0; $i < 500; ++$i) {
+                    $convertedGeographicPoint1 = $convertedGeographicPoint2->performOperation($operation, $geographicCRS1, true);
+                    $convertedGeographicPoint2 = $geographicPoint1->performOperation($operation, $geographicCRS2, false);
+                }
+                $this->assertEqualsWithDelta($originalConvertedGeographicPoint2->getLatitude()->getValue(), $convertedGeographicPoint2->getLatitude()->getValue(), $roundTripGeographicTolerance);
+                $this->assertEqualsWithDelta($originalConvertedGeographicPoint2->getLongitude()->getValue(), $convertedGeographicPoint2->getLongitude()->getValue(), $roundTripGeographicTolerance);
+                if ($height1) {
+                    $this->assertEqualsWithDelta($geographicPoint1->getHeight()->getValue(), $convertedGeographicPoint1->getHeight()->getValue(), $roundTripCartesianTolerance);
+                }
+            }
+        } else {
+            $convertedGeographicPoint1 = $geographicPoint2->performOperation($operation, $geographicCRS1, true);
+            $this->assertEqualsWithDelta($geographicPoint1->getLatitude()->getValue(), $convertedGeographicPoint1->getLatitude()->getValue(), $geographicTolerance);
+            $this->assertEqualsWithDelta($geographicPoint1->getLongitude()->getValue(), $convertedGeographicPoint1->getLongitude()->getValue(), $geographicTolerance);
+            if ($height1) {
+                $this->assertEqualsWithDelta($geographicPoint1->getHeight()->getValue(), $convertedGeographicPoint1->getHeight()->getValue(), $cartesianTolerance);
+            }
+
+            if ($roundTripPoint) {
+                $convertedGeographicPoint2 = $convertedGeographicPoint1->performOperation($operation, $geographicCRS2, false);
+                $this->assertEqualsWithDelta($geographicPoint2->getLatitude()->getValue(), $convertedGeographicPoint2->getLatitude()->getValue(), $roundTripGeographicTolerance);
+                $this->assertEqualsWithDelta($geographicPoint2->getLongitude()->getValue(), $convertedGeographicPoint2->getLongitude()->getValue(), $roundTripGeographicTolerance);
+                if ($height1) {
+                    $this->assertEqualsWithDelta($geographicPoint2->getHeight()->getValue(), $convertedGeographicPoint2->getHeight()->getValue(), $cartesianTolerance);
+                }
+            }
+        }
+    }
+
+    public function series5200PosVecPart1Data(): Generator
+    {
+        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 5200 Coordinate transformation test data/ASCII/GIGS_tfm_5203_PosVec_output_part1.txt');
+
+        $geographicCRSSrid1 = 'urn:ogc:def:crs:GIGS::64005';
+        $geographicCRSSrid2 = 'urn:ogc:def:crs:GIGS::64003';
+
+        foreach ($body as $row) {
+            $direction = match ($row['6']) {
+                'FORWARD' => false,
+                'REVERSE' => true,
+            };
+
+            yield '#' . $row[0] => [new Degree((float) $row[1]), new Degree((float) $row[2]), null,  new Degree((float) $row[3]), new Degree((float) $row[4]), null, $direction, $geographicCRSSrid1, $geographicCRSSrid2, (float) $header['Cartesian Tolerance'], (float) $header['Geographic Tolerance'], (float) $header['Round Trip Cartesian Tolerance'], (float) $header['Round Trip Geographic Tolerance'], isset($row[7]) && $row[7] === 'Round Trip calculation point', 'urn:ogc:def:coordinateOperation:GIGS::61314'];
+        }
+    }
+
+    public function series5200PosVecPart2Data(): Generator
+    {
+        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 5200 Coordinate transformation test data/ASCII/GIGS_tfm_5203_PosVec_output_part2.txt');
+
+        $geographicCRSSrid1 = 'urn:ogc:def:crs:GIGS::64019';
+        $geographicCRSSrid2 = 'urn:ogc:def:crs:GIGS::64002';
+
+        foreach ($body as $row) {
+            $direction = match ($row['8']) {
+                'FORWARD' => false,
+                'REVERSE' => true,
+            };
+
+            yield '#' . $row[0] => [new Degree((float) $row[1]), new Degree((float) $row[2]), new Metre((float) $row[3]), new Degree((float) $row[4]), new Degree((float) $row[5]), new Metre((float) $row[6]), $direction, $geographicCRSSrid1, $geographicCRSSrid2, (float) $header['Cartesian Tolerance'], (float) $header['Geographic Tolerance'], (float) $header['Round Trip Cartesian Tolerance'], (float) $header['Round Trip Geographic Tolerance'], isset($row[9]) && $row[9] === 'Round Trip calculation point', 'urn:ogc:def:coordinateOperation:GIGS::61314'];
         }
     }
 

@@ -1,0 +1,31 @@
+# File: GIGS_tfm_5203_PosVec_output_part1
+# GIGS Test Procedure: 5203
+# GIGS Test Dataset Version: 2.1.0
+# EPSG Dataset Version: 10.019
+# GIGS Test Dataset Issue Date: 2022-04-29
+# Note 1: Test for Position Vector 7-parameter transformation utilising EPSG Coordinate Operation Method 9606
+# Note 2: CAUTION if application requires early-binding use GIGS geogCRS B' (GIGS code 64023) instead of GIGS geogCRS B
+# Note 3: Output file 1 of 2
+# Cartesian Tolerance: 0.03 metre
+# Geographic Tolerance: 0.0000003 degree
+# Round Trip Cartesian Tolerance: 0.006 metre
+# Round Trip Geographic Tolerance: 0.00000006 degree
+#
+# Fields:
+# [0]: Point
+# [1]: Latitude (GIGS CRS Code 64005; GIGS geogCRS B; OSGB36; decimal degree; EPSG CRS code 4277)
+# [2]: Longitude (GIGS CRS Code 64005; GIGS geogCRS B; OSGB36; decimal degree; EPSG CRS code 4277)
+# [3]: Latitude (GIGS CRS Code 64003; GIGS geogCRS A; WGS 84; decimal degree; EPSG CRS code 4326)
+# [4]: Longitude (GIGS CRS Code 64003; GIGS geogCRS A; WGS 84; decimal degree; EPSG CRS code 4326)
+# [5]: Transect
+# [6]: Transformation Direction
+# [7]: GIGS Remarks
+#
+# [0]	# [1]	# [2]	# [3]	# [4]	# [5]	# [6]	# [7]
+GIGS-5203-08	70	-180	70.005945	-179.9963736	B	FORWARD
+GIGS-5203-09	49.99458694	-135.0059633	50	-135	B	REVERSE
+GIGS-5203-10	25	-90	25.00445833	-89.99531139	B	FORWARD
+GIGS-5203-11	-0.00483333	0.00089056	0	0	B	REVERSE
+GIGS-5203-12	-37.6532236	143.9279419	-37.65235306	143.9263481	B	FORWARD
+GIGS-5203-13	-49.99973028	135.0029119	-50	135	B	REVERSE
+GIGS-5203-14	-70	180	-70.002485	-179.9966014	B	FORWARD
