@@ -126,7 +126,7 @@ trait AutoConversion
                 return false;
             }
 
-            $params = CoordinateOperationParams::getParamData($pathStep['operation']);
+            $params = CoordinateOperations::getParamData($pathStep['operation']);
 
             //filter out operations that require a specific epoch
             if (isset(self::$methodsThatRequireASpecificEpoch[$operation['method']]) && $this->getCoordinateEpoch()) {

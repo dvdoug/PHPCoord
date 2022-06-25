@@ -20,7 +20,6 @@ use function lcfirst;
 use const M_PI;
 use const PHP_MAJOR_VERSION;
 use PHPCoord\CoordinateOperation\CoordinateOperationMethods;
-use PHPCoord\CoordinateOperation\CoordinateOperationParams;
 use PHPCoord\CoordinateOperation\CoordinateOperations;
 use PHPCoord\CoordinateOperation\GeographicValue;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
@@ -101,7 +100,7 @@ abstract class Point implements Stringable
     {
         $params = [];
         $powerCoefficients = [];
-        foreach (CoordinateOperationParams::getParamData($operationSrid) as $paramName => $paramData) {
+        foreach (CoordinateOperations::getParamData($operationSrid) as $paramName => $paramData) {
             if (isset($paramData['fileProvider'])) {
                 $params[$paramName] = (new $paramData['fileProvider']())->provideGrid();
             } else {
