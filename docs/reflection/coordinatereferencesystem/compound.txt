@@ -2231,6 +2231,19 @@ MRH21 Grid + ODN height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9870')
 
 
+MWC18 Grid + ODN height
+-----------------------
+
+| Used: United Kingdom (UK) - on or related to the rail route from Manchester via Wigan and Liverpool to Chester.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_MWC18_GRID_PLUS_ODN_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::20003')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_MWC18_GRID_PLUS_ODN_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::20003')
+
+
 NAD27 + NGVD29 height (ftUS)
 ----------------------------
 
@@ -3818,16 +3831,16 @@ NAD83(2011) + VIVD09 height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9523')
 
 
-NAD83(CSRS) + CGVD2013 height
------------------------------
+NAD83(CSRS) + CGVD2013(CGG2013) height
+--------------------------------------
 
 | Used: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.
 
 .. code-block:: php
 
-    Compound::fromSRID(Compound::EPSG_NAD83_CSRS_PLUS_CGVD2013_HEIGHT)
+    Compound::fromSRID(Compound::EPSG_NAD83_CSRS_PLUS_CGVD2013_CGG2013_HEIGHT)
     Compound::fromSRID('urn:ogc:def:crs:EPSG::6649')
-    CoordinateReferenceSystem::fromSRID(Compound::EPSG_NAD83_CSRS_PLUS_CGVD2013_HEIGHT)
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_NAD83_CSRS_PLUS_CGVD2013_CGG2013_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::6649')
 
 
@@ -3909,16 +3922,16 @@ NAD83(CSRS) / UTM zone 15N + CGVD2013 height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::6658')
 
 
-NAD83(CSRS) / UTM zone 15N + CGVD2013a height
----------------------------------------------
+NAD83(CSRS) / UTM zone 15N + CGVD2013a(2010) height
+---------------------------------------------------
 
 | Used: Canada between 96°W and 90°W, onshore and offshore south of 84°N - Manitoba, Nunavut, Ontario.
 
 .. code-block:: php
 
-    Compound::fromSRID(Compound::EPSG_NAD83_CSRS_UTM_ZONE_15N_PLUS_CGVD2013A_HEIGHT)
+    Compound::fromSRID(Compound::EPSG_NAD83_CSRS_UTM_ZONE_15N_PLUS_CGVD2013A_2010_HEIGHT)
     Compound::fromSRID('urn:ogc:def:crs:EPSG::9715')
-    CoordinateReferenceSystem::fromSRID(Compound::EPSG_NAD83_CSRS_UTM_ZONE_15N_PLUS_CGVD2013A_HEIGHT)
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_NAD83_CSRS_UTM_ZONE_15N_PLUS_CGVD2013A_2010_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9715')
 
 Replaces NAD83(CSRS) / UTM zone 15N + CGVD2013 height (CCRS code 6658).
@@ -4079,16 +4092,42 @@ NAD83(CSRS) / UTM zone 9N + CGVD2013 height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::6652')
 
 
-NAD83(CSRS)v6 + CGVD2013(CGG2013a) height
------------------------------------------
+NAD83(CSRS)v3 + CGVD2013a(1997) height
+--------------------------------------
 
 | Used: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.
 
 .. code-block:: php
 
-    Compound::fromSRID(Compound::EPSG_NAD83_CSRS_V6_PLUS_CGVD2013_CGG2013A_HEIGHT)
+    Compound::fromSRID(Compound::EPSG_NAD83_CSRS_V3_PLUS_CGVD2013A_1997_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::20038')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_NAD83_CSRS_V3_PLUS_CGVD2013A_1997_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::20038')
+
+
+NAD83(CSRS)v4 + CGVD2013a(2002) height
+--------------------------------------
+
+| Used: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_NAD83_CSRS_V4_PLUS_CGVD2013A_2002_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::20037')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_NAD83_CSRS_V4_PLUS_CGVD2013A_2002_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::20037')
+
+
+NAD83(CSRS)v6 + CGVD2013a(2010) height
+--------------------------------------
+
+| Used: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_NAD83_CSRS_V6_PLUS_CGVD2013A_2010_HEIGHT)
     Compound::fromSRID('urn:ogc:def:crs:EPSG::9544')
-    CoordinateReferenceSystem::fromSRID(Compound::EPSG_NAD83_CSRS_V6_PLUS_CGVD2013_CGG2013A_HEIGHT)
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_NAD83_CSRS_V6_PLUS_CGVD2013A_2010_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9544')
 
 

@@ -3275,5 +3275,11 @@ trait Geographic2DSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1322',
             'extent_code' => ['1262'],
         ],
+        'urn:ogc:def:crs:EPSG::20033' => [
+            'name' => 'MWC18-IRF',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
+            'datum' => 'urn:ogc:def:datum:EPSG::1324',
+            'extent_code' => ['4666'],
+        ],
     ];
 }

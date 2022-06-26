@@ -8,6 +8,6 @@ declare(strict_types=1);
 /** @internal */ return [
   'geoidHeightCorrectionModelFile' => [
     'reverses' => false,
-    'fileProvider' => 'PHPCoord\\CoordinateOperation\\BYNNAD83CSRSCGVD28Provider',
+    'fileProvider' => 'PHPCoord\\CoordinateOperation\\BYNNAD83CSRSCGG2013aProvider',
   ],
 ];

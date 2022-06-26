@@ -24867,6 +24867,13 @@ trait ProjectedSRIDData
             'deriving_conversion' => 'urn:ogc:def:coordinateOperation:EPSG::9976',
             'extent_code' => ['4664'],
         ],
+        'urn:ogc:def:crs:EPSG::20002' => [
+            'name' => 'MWC18 Grid',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::4400',
+            'base_crs' => 'urn:ogc:def:crs:EPSG::20033',
+            'deriving_conversion' => 'urn:ogc:def:coordinateOperation:EPSG::10127',
+            'extent_code' => ['4666'],
+        ],
         'urn:ogc:def:crs:EPSG::20004' => [
             'name' => 'Pulkovo 1995 / Gauss-Kruger zone 4',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::4530',

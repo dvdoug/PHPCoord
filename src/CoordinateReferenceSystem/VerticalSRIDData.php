@@ -1302,7 +1302,7 @@ trait VerticalSRIDData
             'extent_code' => ['2893'],
         ],
         'urn:ogc:def:crs:EPSG::9245' => [
-            'name' => 'CGVD2013(CGG2013a) height',
+            'name' => 'CGVD2013a(2010) height',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
             'datum' => 'urn:ogc:def:datum:EPSG::1256',
             'extent_code' => ['1061'],
@@ -1528,6 +1528,18 @@ trait VerticalSRIDData
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
             'datum' => 'urn:ogc:def:datum:EPSG::1323',
             'extent_code' => ['4058'],
+        ],
+        'urn:ogc:def:crs:EPSG::20034' => [
+            'name' => 'CGVD2013a(2002) height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1325',
+            'extent_code' => ['1061'],
+        ],
+        'urn:ogc:def:crs:EPSG::20035' => [
+            'name' => 'CGVD2013a(1997) height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1326',
+            'extent_code' => ['1061'],
         ],
     ];
 }

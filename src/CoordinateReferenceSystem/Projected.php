@@ -8683,6 +8683,15 @@ class Projected extends CoordinateReferenceSystem
     public const EPSG_MTRF_2000_UTM_ZONE_40N = 'urn:ogc:def:crs:EPSG::8840';
 
     /**
+     * MWC18 Grid
+     * Extent: United Kingdom (UK) - on or related to the rail route from Manchester via Wigan and Liverpool to
+     * Chester.
+     * Defined through transformation ETRS89 to MWC18-IRF (1) (code 20033) and map projection MWC18-TM (code 10127).
+     * Emulates the MWC18 Snake projection applied to ETRS89 as realized through OSNet 2009.
+     */
+    public const EPSG_MWC18_GRID = 'urn:ogc:def:crs:EPSG::20002';
+
+    /**
      * Macao 1920 / Macao Grid
      * Extent: China - Macao - onshore and offshore.
      */

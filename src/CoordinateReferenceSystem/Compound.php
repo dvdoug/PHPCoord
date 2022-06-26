@@ -1127,6 +1127,13 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_MRH21_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::9870';
 
     /**
+     * MWC18 Grid + ODN height
+     * Extent: United Kingdom (UK) - on or related to the rail route from Manchester via Wigan and Liverpool to
+     * Chester.
+     */
+    public const EPSG_MWC18_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::20003';
+
+    /**
      * NAD27 + NGVD29 height (ftUS)
      * Extent: United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut;
      * Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland;
@@ -2121,12 +2128,12 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_NAD83_2011_PLUS_VIVD09_HEIGHT = 'urn:ogc:def:crs:EPSG::9523';
 
     /**
-     * NAD83(CSRS) + CGVD2013 height
+     * NAD83(CSRS) + CGVD2013(CGG2013) height
      * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
      * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
      * Yukon.
      */
-    public const EPSG_NAD83_CSRS_PLUS_CGVD2013_HEIGHT = 'urn:ogc:def:crs:EPSG::6649';
+    public const EPSG_NAD83_CSRS_PLUS_CGVD2013_CGG2013_HEIGHT = 'urn:ogc:def:crs:EPSG::6649';
 
     /**
      * NAD83(CSRS) / UTM zone 10N + CGVD2013 height
@@ -2168,11 +2175,11 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_NAD83_CSRS_UTM_ZONE_15N_PLUS_CGVD2013_HEIGHT = 'urn:ogc:def:crs:EPSG::6658';
 
     /**
-     * NAD83(CSRS) / UTM zone 15N + CGVD2013a height
+     * NAD83(CSRS) / UTM zone 15N + CGVD2013a(2010) height
      * Extent: Canada between 96°W and 90°W, onshore and offshore south of 84°N - Manitoba, Nunavut, Ontario.
      * Replaces NAD83(CSRS) / UTM zone 15N + CGVD2013 height (CCRS code 6658).
      */
-    public const EPSG_NAD83_CSRS_UTM_ZONE_15N_PLUS_CGVD2013A_HEIGHT = 'urn:ogc:def:crs:EPSG::9715';
+    public const EPSG_NAD83_CSRS_UTM_ZONE_15N_PLUS_CGVD2013A_2010_HEIGHT = 'urn:ogc:def:crs:EPSG::9715';
 
     /**
      * NAD83(CSRS) / UTM zone 16N + CGVD2013 height
@@ -2251,12 +2258,28 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_NAD83_CSRS_UTM_ZONE_9N_PLUS_CGVD2013_HEIGHT = 'urn:ogc:def:crs:EPSG::6652';
 
     /**
-     * NAD83(CSRS)v6 + CGVD2013(CGG2013a) height
+     * NAD83(CSRS)v3 + CGVD2013a(1997) height
      * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
      * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
      * Yukon.
      */
-    public const EPSG_NAD83_CSRS_V6_PLUS_CGVD2013_CGG2013A_HEIGHT = 'urn:ogc:def:crs:EPSG::9544';
+    public const EPSG_NAD83_CSRS_V3_PLUS_CGVD2013A_1997_HEIGHT = 'urn:ogc:def:crs:EPSG::20038';
+
+    /**
+     * NAD83(CSRS)v4 + CGVD2013a(2002) height
+     * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
+     * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
+     * Yukon.
+     */
+    public const EPSG_NAD83_CSRS_V4_PLUS_CGVD2013A_2002_HEIGHT = 'urn:ogc:def:crs:EPSG::20037';
+
+    /**
+     * NAD83(CSRS)v6 + CGVD2013a(2010) height
+     * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
+     * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
+     * Yukon.
+     */
+    public const EPSG_NAD83_CSRS_V6_PLUS_CGVD2013A_2010_HEIGHT = 'urn:ogc:def:crs:EPSG::9544';
 
     /**
      * NAD83(HARN) + NAVD88 height
@@ -2705,6 +2728,21 @@ class Compound extends CoordinateReferenceSystem
      * local projected and vertical CRSs.
      */
     public const EPSG_WGS_84_WORLD_MERCATOR_PLUS_EGM2008_HEIGHT = 'urn:ogc:def:crs:EPSG::6893';
+
+    /**
+     * @deprecated use EPSG_NAD83_CSRS_PLUS_CGVD2013_CGG2013_HEIGHT instead
+     */
+    public const EPSG_NAD83_CSRS_PLUS_CGVD2013_HEIGHT = 'urn:ogc:def:crs:EPSG::6649';
+
+    /**
+     * @deprecated use EPSG_NAD83_CSRS_UTM_ZONE_15N_PLUS_CGVD2013A_2010_HEIGHT instead
+     */
+    public const EPSG_NAD83_CSRS_UTM_ZONE_15N_PLUS_CGVD2013A_HEIGHT = 'urn:ogc:def:crs:EPSG::9715';
+
+    /**
+     * @deprecated use EPSG_NAD83_CSRS_V6_PLUS_CGVD2013A_2010_HEIGHT instead
+     */
+    public const EPSG_NAD83_CSRS_V6_PLUS_CGVD2013_CGG2013A_HEIGHT = 'urn:ogc:def:crs:EPSG::9544';
 
     private static array $cachedObjects = [];
 

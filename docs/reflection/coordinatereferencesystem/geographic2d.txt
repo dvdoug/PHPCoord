@@ -4283,6 +4283,22 @@ MTRF-2000
 
 Replaces Ain el Abd (CRS 4204) in Saudi Arabia.
 
+MWC18-IRF
+---------
+
+| Used: United Kingdom (UK) - on or related to the rail route from Manchester via Wigan and Liverpool to Chester.
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_MWC18_IRF)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::20033')
+    Geographic::fromSRID(Geographic2D::EPSG_MWC18_IRF)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::20033')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_MWC18_IRF)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::20033')
+
+Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / MWC18 SnakeGrid projected CRS through transformation ETRS89 to MWC18 (1) (code 10108) used in conjunction with the MWC18-TM map projection (code 10127).
+
 Macao 1920
 ----------
 

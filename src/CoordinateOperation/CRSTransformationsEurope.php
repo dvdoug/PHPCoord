@@ -16,6 +16,14 @@ class CRSTransformationsEurope
 {
     protected static array $sridData = [
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10127',
+            'name' => 'MWC18-TM',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::20033',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::20002',
+            'accuracy' => 0,
+            'reversible' => true,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::3817',
             'name' => 'HD1909 to WGS 84 (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::3819',

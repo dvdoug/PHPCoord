@@ -62,6 +62,8 @@ class EPSGCodegenFromDataImport
     public const BLACKLISTED_METHODS = [
         // not implemented yet
         1070, // Point motion by grid (Canada NTv2_Vel)
+        1113, // Vertical Offset by velocity grid (NRCan byn)
+        1114, // Geographic3D Offset by velocity grid (NRCan byn)
 
         // only distributed as .dll, can't use
         1036, // Cartesian Grid Offsets from Form Function
@@ -518,9 +520,9 @@ class EPSGCodegenFromDataImport
         // It's just for 1 German state and is almost 400Mb!!
         9338, // NTv2 BWTA2017.gsb
 
-        // 33Mb, exclusively marine
-        9884, // KMS ChartDatum_above_Ellipsoid_EUREF89_v2021a.bin
-        9885, // KMS ChartDatum_above_Ellipsoid_EUREF89_v2021a.bin
+        // exclusively marine
+        10130, // KMS ChartDatum_above_Ellipsoid_EUREF89_v2021b.bin
+        10133, // KMS ChartDatum_above_Ellipsoid_EUREF89_v2021b.bin
 
         // Very large, only really of scientific use
         3858, // EGM2008 Und_min2.5x2.5_egm2008_isw=82_WGS84_TideFree.gz
@@ -562,6 +564,7 @@ class EPSGCodegenFromDataImport
         9965, // NTv2 TN15-ETRS89-to-HULLEE13-IRF.gsb
         9970, // NTv2 TN15-ETRS89-to-SCM22-IRF.gsb
         9975, // NTv2 TN15-ETRS89-to-FNL22-IRF.gsb
+        10108, // NTv2 TN15-ETRS89-to-MWC18-IRF.gsb
         9363, // IGNF ARAMCO_AAA-KSAGRF_6.tac
 
         // free, but license does not permit redistribution
@@ -962,6 +965,7 @@ class EPSGCodegenFromDataImport
             [
                 Datum::EPSG_LUXEMBOURG_REFERENCE_FRAME => ['Luxembourg 1930'],
                 Datum::EPSG_NIVELLEMENT_GENERAL_DU_LUXEMBOURG_1995 => ['Nivellement General du Luxembourg'],
+                Datum::EPSG_CANADIAN_GEODETIC_VERTICAL_DATUM_OF_2013_CGG2013A_EPOCH_2010 => ['Canadian Geodetic Vertical Datum of 2013 (CGG2013a)'],
             ]
         );
         $this->codeGen->updateDocs(Datum::class, $data);
@@ -1209,6 +1213,9 @@ class EPSGCodegenFromDataImport
             $data,
             'public',
             [
+                Compound::EPSG_NAD83_CSRS_PLUS_CGVD2013_CGG2013_HEIGHT => ['NAD83(CSRS) + CGVD2013 height'],
+                Compound::EPSG_NAD83_CSRS_UTM_ZONE_15N_PLUS_CGVD2013A_2010_HEIGHT => ['NAD83(CSRS) / UTM zone 15N + CGVD2013a height'],
+                Compound::EPSG_NAD83_CSRS_V6_PLUS_CGVD2013A_2010_HEIGHT => ['NAD83(CSRS)v6 + CGVD2013(CGG2013a) height'],
             ]
         );
         $this->codeGen->updateDocs(Compound::class, $data);
@@ -1441,6 +1448,7 @@ class EPSGCodegenFromDataImport
             'public',
             [
                 Vertical::EPSG_NG95_HEIGHT => ['NG-L height'],
+                Vertical::EPSG_CGVD2013A_2010_HEIGHT => ['CGVD2013(CGG2013a) height'],
             ]
         );
         $this->codeGen->updateDocs(Vertical::class, $data);

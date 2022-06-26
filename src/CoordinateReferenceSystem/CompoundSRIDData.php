@@ -753,7 +753,7 @@ trait CompoundSRIDData
             'extent_code' => ['3664'],
         ],
         'urn:ogc:def:crs:EPSG::6649' => [
-            'name' => 'NAD83(CSRS) + CGVD2013 height',
+            'name' => 'NAD83(CSRS) + CGVD2013(CGG2013) height',
             'horizontal_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'horizontal_crs_type' => 'geographic 2D',
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6647',
@@ -2377,7 +2377,7 @@ trait CompoundSRIDData
             'extent_code' => ['3309'],
         ],
         'urn:ogc:def:crs:EPSG::9544' => [
-            'name' => 'NAD83(CSRS)v6 + CGVD2013(CGG2013a) height',
+            'name' => 'NAD83(CSRS)v6 + CGVD2013a(2010) height',
             'horizontal_crs' => 'urn:ogc:def:crs:EPSG::8252',
             'horizontal_crs_type' => 'geographic 2D',
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9245',
@@ -2426,7 +2426,7 @@ trait CompoundSRIDData
             'extent_code' => ['4617'],
         ],
         'urn:ogc:def:crs:EPSG::9715' => [
-            'name' => 'NAD83(CSRS) / UTM zone 15N + CGVD2013a height',
+            'name' => 'NAD83(CSRS) / UTM zone 15N + CGVD2013a(2010) height',
             'horizontal_crs' => 'urn:ogc:def:crs:EPSG::3159',
             'horizontal_crs_type' => 'projected',
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9245',
@@ -2669,6 +2669,27 @@ trait CompoundSRIDData
             'horizontal_crs_type' => 'geographic 2D',
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::20000',
             'extent_code' => ['4058'],
+        ],
+        'urn:ogc:def:crs:EPSG::20003' => [
+            'name' => 'MWC18 Grid + ODN height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::20002',
+            'horizontal_crs_type' => 'projected',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::5701',
+            'extent_code' => ['4666'],
+        ],
+        'urn:ogc:def:crs:EPSG::20037' => [
+            'name' => 'NAD83(CSRS)v4 + CGVD2013a(2002) height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::8246',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::20034',
+            'extent_code' => ['1061'],
+        ],
+        'urn:ogc:def:crs:EPSG::20038' => [
+            'name' => 'NAD83(CSRS)v3 + CGVD2013a(1997) height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::8240',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::20035',
+            'extent_code' => ['1061'],
         ],
     ];
 }

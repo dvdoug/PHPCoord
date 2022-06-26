@@ -781,23 +781,55 @@ class Datum
      * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
      * Yukon.
      * Defined by the equipotential surface W0 = 62,636,856.0 m^2s^-2, which by convention represents the coastal mean
-     * sea level for North America.
-     * Replaces CGVD28 (datum code 5114) from November 2013. Replaced by CGVD2013 (CGG2013a) (datum code 1256) from
-     * December 2015.
+     * sea level for North America, realized through the Canadian gravimetric geoid (CGG) 2013 at epoch 2010.0.
+     * Replaces CGVD28 from November 2013. Replaced by CGVD2013(CGG2013a) epoch 2010 from December 2015, supplemented
+     * from February 2021 by snapshots of CGVD2013(CGG2013a) at epochs 1997.0 and 2002.0 (aligned with NAD83(CSRS)
+     * realization epochs).
      */
     public const EPSG_CANADIAN_GEODETIC_VERTICAL_DATUM_OF_2013_CGG2013 = 'urn:ogc:def:datum:EPSG::1127';
 
     /**
-     * Canadian Geodetic Vertical Datum of 2013 (CGG2013a)
+     * Canadian Geodetic Vertical Datum of 2013 (CGG2013a) epoch 1997
      * Type: vertical
      * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
      * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
      * Yukon.
      * Defined by the equipotential surface W0 = 62,636,856.0 m^2s^-2, which by convention represents the coastal mean
-     * sea level for North America, realized through the Canadian gravimetric geoid 2013a.
-     * Replaces CGVD2013 (CGG2013) in December 2015.
+     * sea level for North America, realized through the Canadian gravimetric geoid 2013a applied at epoch 1997.0.
+     * CGVD2013(CGG2013a) is a static datum; however, heights referenced to it change with time, primarily due to
+     * glacial isostasy. This datum supports CGVD2013(CGG2013a) heights at epoch 1997.0. Other snapshots are at epochs
+     * 2002.0 and 2010.0.
      */
-    public const EPSG_CANADIAN_GEODETIC_VERTICAL_DATUM_OF_2013_CGG2013A = 'urn:ogc:def:datum:EPSG::1256';
+    public const EPSG_CANADIAN_GEODETIC_VERTICAL_DATUM_OF_2013_CGG2013A_EPOCH_1997 = 'urn:ogc:def:datum:EPSG::1326';
+
+    /**
+     * Canadian Geodetic Vertical Datum of 2013 (CGG2013a) epoch 2002
+     * Type: vertical
+     * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
+     * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
+     * Yukon.
+     * Defined by the equipotential surface W0 = 62,636,856.0 m^2s^-2, which by convention represents the coastal mean
+     * sea level for North America, realized through the Canadian gravimetric geoid 2013a applied at epoch 2002.
+     * CGVD2013(CGG2013a) is a static datum; however, heights referenced to it change with time, primarily due to
+     * glacial isostasy. This datum supports CGVD2013(CGG2013a) heights at epoch 2002.0. Other snapshots are at epochs
+     * 1997.0 and 2010.0.
+     */
+    public const EPSG_CANADIAN_GEODETIC_VERTICAL_DATUM_OF_2013_CGG2013A_EPOCH_2002 = 'urn:ogc:def:datum:EPSG::1325';
+
+    /**
+     * Canadian Geodetic Vertical Datum of 2013 (CGG2013a) epoch 2010
+     * Type: vertical
+     * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
+     * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
+     * Yukon.
+     * Defined by the equipotential surface W0 = 62,636,856.0 m^2s^-2, which by convention represents the coastal mean
+     * sea level for North America, realized through CGG2013a at epoch 2010.0. Geoid velocity defined as zero with
+     * respect to NAD83(CSRS).
+     * Replaces CGVD2013(CGG2013). CGVD2013(CGG2013a) is a static datum. However heights referenced to it change with
+     * time, primarily due to glacial isostasy. In practice static snapshots are used at epochs 2010.0 (this datum),
+     * 2002.0 and 1997.0.
+     */
+    public const EPSG_CANADIAN_GEODETIC_VERTICAL_DATUM_OF_2013_CGG2013A_EPOCH_2010 = 'urn:ogc:def:datum:EPSG::1256';
 
     /**
      * Cape
@@ -3916,6 +3948,16 @@ class Datum
      * Created in 2021 to support intermediate CRS "MRH21-IRF" in the emulation of the MRH21 Snake map projection.
      */
     public const EPSG_MRH21_INTERMEDIATE_REFERENCE_FRAME = 'urn:ogc:def:datum:EPSG::1314';
+
+    /**
+     * MWC18 Intermediate Reference Frame
+     * Type: geodetic
+     * Extent: United Kingdom (UK) - on or related to the rail route from Manchester via Wigan and Liverpool to
+     * Chester.
+     * Defined through the application of the MWC18 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
+     * Created in 2022 to support intermediate CRS "MWC18" in the emulation of the MWC18 Snake map projection.
+     */
+    public const EPSG_MWC18_INTERMEDIATE_REFERENCE_FRAME = 'urn:ogc:def:datum:EPSG::1324';
 
     /**
      * Macao 1920
@@ -7809,6 +7851,11 @@ class Datum
      */
     public const EPSG_NIVELLEMENT_GENERAL_DU_LUXEMBOURG = 'urn:ogc:def:datum:EPSG::5172';
 
+    /**
+     * @deprecated use EPSG_CANADIAN_GEODETIC_VERTICAL_DATUM_OF_2013_CGG2013A_EPOCH_2010 instead
+     */
+    public const EPSG_CANADIAN_GEODETIC_VERTICAL_DATUM_OF_2013_CGG2013A = 'urn:ogc:def:datum:EPSG::1256';
+
     protected static array $sridData = [
         'urn:ogc:def:datum:EPSG::1024' => [
             'name' => 'Hungarian Datum 1909',
@@ -9611,7 +9658,7 @@ class Datum
             'frame_reference_epoch' => null,
         ],
         'urn:ogc:def:datum:EPSG::1256' => [
-            'name' => 'Canadian Geodetic Vertical Datum of 2013 (CGG2013a)',
+            'name' => 'Canadian Geodetic Vertical Datum of 2013 (CGG2013a) epoch 2010',
             'type' => 'vertical',
             'ellipsoid' => null,
             'prime_meridian' => null,
@@ -10159,6 +10206,30 @@ class Datum
         ],
         'urn:ogc:def:datum:EPSG::1323' => [
             'name' => 'Svalbard vertical datum 2006',
+            'type' => 'vertical',
+            'ellipsoid' => null,
+            'prime_meridian' => null,
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
+        'urn:ogc:def:datum:EPSG::1324' => [
+            'name' => 'MWC18 Intermediate Reference Frame',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
+        'urn:ogc:def:datum:EPSG::1325' => [
+            'name' => 'Canadian Geodetic Vertical Datum of 2013 (CGG2013a) epoch 2002',
+            'type' => 'vertical',
+            'ellipsoid' => null,
+            'prime_meridian' => null,
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
+        'urn:ogc:def:datum:EPSG::1326' => [
+            'name' => 'Canadian Geodetic Vertical Datum of 2013 (CGG2013a) epoch 1997',
             'type' => 'vertical',
             'ellipsoid' => null,
             'prime_meridian' => null,

@@ -16557,6 +16557,20 @@ MTRF-2000 / UTM zone 40N
 
 Replaces Ain el Abd / UTM zone 40N (CRS code 20440).
 
+MWC18 Grid
+----------
+
+| Used: United Kingdom (UK) - on or related to the rail route from Manchester via Wigan and Liverpool to Chester.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_MWC18_GRID)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::20002')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_MWC18_GRID)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::20002')
+
+Defined through transformation ETRS89 to MWC18-IRF (1) (code 20033) and map projection MWC18-TM (code 10127). Emulates the MWC18 Snake projection applied to ETRS89 as realized through OSNet 2009.
+
 Macao 1920 / Macao Grid
 -----------------------
 

@@ -2001,6 +2001,16 @@ class Geographic2D extends Geographic
     public const EPSG_MTRF_2000 = 'urn:ogc:def:crs:EPSG::8818';
 
     /**
+     * MWC18-IRF
+     * Extent: United Kingdom (UK) - on or related to the rail route from Manchester via Wigan and Liverpool to
+     * Chester.
+     * Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / MWC18 SnakeGrid projected CRS through
+     * transformation ETRS89 to MWC18 (1) (code 10108) used in conjunction with the MWC18-TM map projection (code
+     * 10127).
+     */
+    public const EPSG_MWC18_IRF = 'urn:ogc:def:crs:EPSG::20033';
+
+    /**
      * Macao 1920
      * Extent: China - Macao - onshore and offshore.
      */

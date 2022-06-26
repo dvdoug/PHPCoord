@@ -6,12 +6,11 @@
 ### Added
 - Support for 3D projected coordinates
 ### Changed
-- Updates to data for ITRF, Canada, France, Germany, Hong Kong, Iceland, Italy, Luxembourg, Japan, North Macedonia, Norway, UK and USA
+- Updates to data for ITRF, WGS84, Australia, Belgium, Canada, France, Germany, Iceland, Ireland, Japan, Luxembourg, Norway, North Macedonia, UK and USA
 
 ## [5.0.1] - 2022-01-29
 ### Fixed
 - Guard against divide by zero issues when calculating distance between two points
-
 
 ## [5.0.0] - 2021-11-12
 ### Added
@@ -47,11 +46,22 @@
 - Some internal simplifications and optimisations
 - Supported PHP versions changed to `^8.0`
 
-## [4.6.1] - 2022-01-29
-Unless a major bug is found, this will be the last release in the v4.x series. All future releases will be v5.x.
+## [4.7.0] - 2022-06-26
+The v4.x series is receiving basic maintenance only. All feature development takes place in v5.x.
 This is because one of PHP8.1's [new deprecations](https://github.com/php/php-src/commit/afc4d67c8b4e02a985a4cd27b8e79b343eb3c0ad)
-requires a significant non-backwards compatible change to address.
+required a significant non-backwards compatible change to address.
 
+### Added
+- Support for defining 3D projected coordinates
+
+### Fixed
+- Improved handling of longitudes greater than 180 degrees
+- Corrected conversion of geocentric coordinates to geographic coordinates when using a non-Greenwich prime meridian
+
+### Changed
+- Updates to data for ITRF, WGS84, Australia, Belgium, Canada, France, Germany, Iceland, Ireland, Japan, Luxembourg, Norway, North Macedonia, UK and USA
+
+## [4.6.1] - 2022-01-29
 ### Fixed
 - Guard against divide by zero issues when calculating distance between two points
 

@@ -209,11 +209,6 @@ class CoordinateOperationMethods
     public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_BEV_AT = 'urn:ogc:def:method:EPSG::1089';
 
     /**
-     * Geog3D to Geog2D+GravityRelatedHeight (CGG 2013).
-     */
-    public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_CGG_2013 = 'urn:ogc:def:method:EPSG::1090';
-
-    /**
      * Geog3D to Geog2D+GravityRelatedHeight (EGM2008).
      */
     public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_EGM2008 = 'urn:ogc:def:method:EPSG::1092';
@@ -232,6 +227,14 @@ class CoordinateOperationMethods
      * Geog3D to Geog2D+GravityRelatedHeight (ITAL2005).
      */
     public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_ITAL2005 = 'urn:ogc:def:method:EPSG::1105';
+
+    /**
+     * Geog3D to Geog2D+GravityRelatedHeight (NRCan byn)
+     * For consistency with earlier models the Information Source references software which uses bi-quadratic
+     * interpolation of the grid. Bi-linear interpolation will give results agreeing to within 1cm 99.97% of the time.
+     * See Info Source for file format doc.
+     */
+    public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_NRCAN_BYN = 'urn:ogc:def:method:EPSG::1090';
 
     /**
      * Geog3D to Geog2D+GravityRelatedHeight (OSGM-GB).
@@ -318,14 +321,6 @@ class CoordinateOperationMethods
     public const EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_BEV_AT = 'urn:ogc:def:method:EPSG::1081';
 
     /**
-     * Geographic3D to GravityRelatedHeight (CGG2013)
-     * For consistency with earlier models the Information Source references software which uses bi-quadratic
-     * interpolation. Because of denser node spacing in CGG2013 bi-linear interpolation will be sufficient for most
-     * uses. See Info Source for file format doc.
-     */
-    public const EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_CGG2013 = 'urn:ogc:def:method:EPSG::1060';
-
-    /**
      * Geographic3D to GravityRelatedHeight (EGM2008)
      * For earlier EGM84 and EGM96 models see Geographic3D to GravityRelatedHeight (EGM), method code 9661.
      */
@@ -348,6 +343,14 @@ class CoordinateOperationMethods
      * Geographic3D to GravityRelatedHeight (ITAL2005).
      */
     public const EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_ITAL2005 = 'urn:ogc:def:method:EPSG::1106';
+
+    /**
+     * Geographic3D to GravityRelatedHeight (NRCan byn)
+     * For consistency with earlier models the Information Source references software which uses bi-quadratic
+     * interpolation of the grid. Bi-linear interpolation will give results agreeing to within 1cm 99.97% of the time.
+     * See Info Source for file format doc.
+     */
+    public const EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_NRCAN_BYN = 'urn:ogc:def:method:EPSG::1060';
 
     /**
      * Geographic3D to GravityRelatedHeight (NZgeoid)
@@ -861,6 +864,11 @@ class CoordinateOperationMethods
     public const EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_BEV_AT = 'urn:ogc:def:method:EPSG::1080';
 
     /**
+     * Vertical Offset by Grid Interpolation (NRCan byn).
+     */
+    public const EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_NRCAN_BYN = 'urn:ogc:def:method:EPSG::1112';
+
+    /**
      * Vertical Offset by Grid Interpolation (NZLVD).
      */
     public const EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_NZLVD = 'urn:ogc:def:method:EPSG::1071';
@@ -1003,8 +1011,9 @@ class CoordinateOperationMethods
         self::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_BEV_AT => 'geographic3DTo2DPlusGravityHeightFromGrid',
         self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_BEV_AT => 'geographic3DToGravityHeightFromGrid',
         self::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_BEV_AT => 'offsetFromGrid',
-        self::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_CGG_2013 => 'geographic3DTo2DPlusGravityHeightFromGrid',
-        self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_CGG2013 => 'geographic3DToGravityHeightFromGrid',
+        self::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_NRCAN_BYN => 'geographic3DTo2DPlusGravityHeightFromGrid',
+        self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_NRCAN_BYN => 'geographic3DToGravityHeightFromGrid',
+        self::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_NRCAN_BYN => 'offsetFromGrid',
         self::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_GRAVSOFT => 'geographic3DTo2DPlusGravityHeightFromGrid',
         self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_GRAVSOFT => 'geographic3DToGravityHeightFromGrid',
         self::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_TXT => 'geographic3DTo2DPlusGravityHeightFromGrid',

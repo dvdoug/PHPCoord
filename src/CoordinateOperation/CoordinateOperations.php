@@ -7958,13 +7958,8 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9615',
             'extent_code' => ['4535'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::9123' => [
-            'name' => 'NAD83(CSRS) to CGVD28 height (1)',
-            'method' => 'urn:ogc:def:method:EPSG::1060',
-            'extent_code' => ['1289'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::9125' => [
-            'name' => 'ITRF2008 to CGVD2013(CGG2013a) height (2)',
+            'name' => 'ITRF2008 to CGVD2013a(2010) height (2)',
             'method' => 'urn:ogc:def:method:EPSG::1060',
             'extent_code' => ['1061'],
         ],
@@ -8254,7 +8249,7 @@ class CoordinateOperations
             'extent_code' => ['2376'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::9247' => [
-            'name' => 'NAD83(CSRS)v6 to CGVD2013(CGG2013a) height (1)',
+            'name' => 'NAD83(CSRS)v6 to CGVD2013a(2010) height (1)',
             'method' => 'urn:ogc:def:method:EPSG::1060',
             'extent_code' => ['1061'],
         ],
@@ -8969,7 +8964,7 @@ class CoordinateOperations
             'extent_code' => ['3309'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::9644' => [
-            'name' => 'NAD83(CSRS)v6 to NAD83(CSRS)v6 + CGVD2013(CGG2013a) height (1)',
+            'name' => 'NAD83(CSRS)v6 to NAD83(CSRS)v6 + CGVD2013a(2010) height (1)',
             'method' => 'urn:ogc:def:method:EPSG::1090',
             'extent_code' => ['1061'],
         ],
@@ -9363,6 +9358,21 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9615',
             'extent_code' => ['4170'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9904' => [
+            'name' => 'Camacupa 1948 to RSAO13 (3)',
+            'method' => 'urn:ogc:def:method:EPSG::9603',
+            'extent_code' => ['2319'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9905' => [
+            'name' => 'Camacupa 1948 to RSAO13 (4)',
+            'method' => 'urn:ogc:def:method:EPSG::9606',
+            'extent_code' => ['2323'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9906' => [
+            'name' => 'Malongo 1987 to RSAO13 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::9603',
+            'extent_code' => ['3180'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::9908' => [
             'name' => 'ETRS89 to Ostend height (1)',
             'method' => 'urn:ogc:def:method:EPSG::1082',
@@ -9498,6 +9508,31 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9807',
             'extent_code' => ['1535'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::9983' => [
+            'name' => 'NAD83(CSRS)v3 to CGVD28 height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1060',
+            'extent_code' => ['1289'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9984' => [
+            'name' => 'NAD83(CSRS)v2 to CGVD28 height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1060',
+            'extent_code' => ['1289'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9985' => [
+            'name' => 'NAD83(CSRS)v4 to CGVD28 height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1060',
+            'extent_code' => ['1289'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9986' => [
+            'name' => 'NAD83(CSRS)v6 to CGVD28 height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1060',
+            'extent_code' => ['1289'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::9987' => [
+            'name' => 'NAD83(CSRS)v7 to CGVD28 height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1060',
+            'extent_code' => ['1289'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::9991' => [
             'name' => 'ITRF2014 to ITRF2020 (1)',
             'method' => 'urn:ogc:def:method:EPSG::1053',
@@ -9577,6 +9612,56 @@ class CoordinateOperations
             'name' => 'ITRF88 to ITRF2020 (1)',
             'method' => 'urn:ogc:def:method:EPSG::1053',
             'extent_code' => ['1262'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10109' => [
+            'name' => 'NAD83(CSRS)v7 to CGVD2013a(2010) height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1060',
+            'extent_code' => ['1061'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10110' => [
+            'name' => 'NAD83(CSRS)v4 to CGVD2013a(2002) height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1060',
+            'extent_code' => ['1061'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10111' => [
+            'name' => 'NAD83(CSRS)v3 to CGVD2013a(1997) height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1060',
+            'extent_code' => ['1061'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10112' => [
+            'name' => 'NAD83(CSRS)v2 to CGVD2013a(1997) height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1060',
+            'extent_code' => ['1061'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10113' => [
+            'name' => 'CGVD28 height to CGVD2013a(1997) height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1112',
+            'extent_code' => ['1061'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10114' => [
+            'name' => 'CGVD28 height to CGVD2013a(2002) height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1112',
+            'extent_code' => ['1061'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10115' => [
+            'name' => 'CGVD28 height to CGVD2013a(2010) height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1112',
+            'extent_code' => ['1061'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10127' => [
+            'name' => 'MWC18-TM',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent_code' => ['4666'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10128' => [
+            'name' => 'NAD83(CSRS)v4 to NAD83(CSRS)v4 + CGVD2013a(2002) height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1090',
+            'extent_code' => ['1061'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10129' => [
+            'name' => 'NAD83(CSRS)v3 to NAD83(CSRS)v3 + CGVD2013a(1997) height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1090',
+            'extent_code' => ['1061'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::10131' => [
             'name' => 'SPCS83 Alabama East zone (meters)',

@@ -206,20 +206,43 @@ class Vertical extends CoordinateReferenceSystem
      * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
      * Yukon.
      * Replaces CGVD28 height (CRS code 5713). CGVD2013(CGG2013) height is realized by geoid model CGG2013 (CT code
-     * 9246). Replaced by CGVD2013(CGG2013a) height (CRS code 9245).
+     * 9246). Replaced by CGVD2013a(1997 / 2002 / 2010) height. CGG2013a is identical to CGG2013 except in the western
+     * sector of Lake of the Woods.
      */
     public const EPSG_CGVD2013_CGG2013_HEIGHT = 'urn:ogc:def:crs:EPSG::6647';
 
     /**
-     * CGVD2013(CGG2013a) height
+     * CGVD2013a(1997) height
      * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
      * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
      * Yukon.
-     * Replaces CGVD2013(CGG2013) height (CRS code 6647). CGG2013a is identical to CGG2013 except in the western sector
-     * of Lake of the Woods. CGVD2013(CGG2013a) height is realized by Canadian gravimetric geoid model CGG2013a (CT
-     * code 9247).
+     * Replaces CGVD2013(CGG2013) height. Although its datum is static CGVD2013a heights change with time, primarily
+     * due to glacial isostasy. This CRS is a static snapshot at epoch 1997.0 for use with NAD83(CSRS)v2 and 3. For
+     * other epochs see CRSs 9245 & 20034.
      */
-    public const EPSG_CGVD2013_CGG2013A_HEIGHT = 'urn:ogc:def:crs:EPSG::9245';
+    public const EPSG_CGVD2013A_1997_HEIGHT = 'urn:ogc:def:crs:EPSG::20035';
+
+    /**
+     * CGVD2013a(2002) height
+     * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
+     * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
+     * Yukon.
+     * Replaces CGVD2013(CGG2013) height. Although its datum is static CGVD2013a heights change with time, primarily
+     * due to glacial isostasy. This CRS is a static snapshot at epoch 2002.0 for use with NAD83(CSRS)v4. For other
+     * epochs see CRSs 9245 & 20035.
+     */
+    public const EPSG_CGVD2013A_2002_HEIGHT = 'urn:ogc:def:crs:EPSG::20034';
+
+    /**
+     * CGVD2013a(2010) height
+     * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
+     * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
+     * Yukon.
+     * Replaces CGVD2013(CGG2013) height. Although its datum is static CGVD2013a heights change with time, primarily
+     * due to glacial isostasy. This CRS is a static snapshot at epoch 2010.0 for use with NAD83(CSRS)v6 and v7. For
+     * other epochs see CRSs 20034/20035.
+     */
+    public const EPSG_CGVD2013A_2010_HEIGHT = 'urn:ogc:def:crs:EPSG::9245';
 
     /**
      * CGVD28 height
@@ -1832,6 +1855,11 @@ class Vertical extends CoordinateReferenceSystem
      * @deprecated use EPSG_NG95_HEIGHT instead
      */
     public const EPSG_NG_L_HEIGHT = 'urn:ogc:def:crs:EPSG::5774';
+
+    /**
+     * @deprecated use EPSG_CGVD2013A_2010_HEIGHT instead
+     */
+    public const EPSG_CGVD2013_CGG2013A_HEIGHT = 'urn:ogc:def:crs:EPSG::9245';
 
     private static array $cachedObjects = [];
 

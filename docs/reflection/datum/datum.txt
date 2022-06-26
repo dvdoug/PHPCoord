@@ -1198,24 +1198,54 @@ Canadian Geodetic Vertical Datum of 2013 (CGG2013)
     Datum::fromSRID(Datum::EPSG_CANADIAN_GEODETIC_VERTICAL_DATUM_OF_2013_CGG2013)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1127')
 
-Defined by the equipotential surface W0 = 62,636,856.0 m^2s^-2, which by convention represents the coastal mean sea level for North America.
+Defined by the equipotential surface W0 = 62,636,856.0 m^2s^-2, which by convention represents the coastal mean sea level for North America, realized through the Canadian gravimetric geoid (CGG) 2013 at epoch 2010.0.
 
-Replaces CGVD28 (datum code 5114) from November 2013. Replaced by CGVD2013 (CGG2013a) (datum code 1256) from December 2015.
+Replaces CGVD28 from November 2013. Replaced by CGVD2013(CGG2013a) epoch 2010 from December 2015, supplemented from February 2021 by snapshots of CGVD2013(CGG2013a) at epochs 1997.0 and 2002.0 (aligned with NAD83(CSRS) realization epochs).
 
-Canadian Geodetic Vertical Datum of 2013 (CGG2013a)
----------------------------------------------------
+Canadian Geodetic Vertical Datum of 2013 (CGG2013a) epoch 1997
+--------------------------------------------------------------
 
 | Type: Vertical
 | Used: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.
 
 .. code-block:: php
 
-    Datum::fromSRID(Datum::EPSG_CANADIAN_GEODETIC_VERTICAL_DATUM_OF_2013_CGG2013A)
+    Datum::fromSRID(Datum::EPSG_CANADIAN_GEODETIC_VERTICAL_DATUM_OF_2013_CGG2013A_EPOCH_1997)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1326')
+
+Defined by the equipotential surface W0 = 62,636,856.0 m^2s^-2, which by convention represents the coastal mean sea level for North America, realized through the Canadian gravimetric geoid 2013a applied at epoch 1997.0.
+
+CGVD2013(CGG2013a) is a static datum; however, heights referenced to it change with time, primarily due to glacial isostasy. This datum supports CGVD2013(CGG2013a) heights at epoch 1997.0. Other snapshots are at epochs 2002.0 and 2010.0.
+
+Canadian Geodetic Vertical Datum of 2013 (CGG2013a) epoch 2002
+--------------------------------------------------------------
+
+| Type: Vertical
+| Used: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_CANADIAN_GEODETIC_VERTICAL_DATUM_OF_2013_CGG2013A_EPOCH_2002)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1325')
+
+Defined by the equipotential surface W0 = 62,636,856.0 m^2s^-2, which by convention represents the coastal mean sea level for North America, realized through the Canadian gravimetric geoid 2013a applied at epoch 2002.
+
+CGVD2013(CGG2013a) is a static datum; however, heights referenced to it change with time, primarily due to glacial isostasy. This datum supports CGVD2013(CGG2013a) heights at epoch 2002.0. Other snapshots are at epochs 1997.0 and 2010.0.
+
+Canadian Geodetic Vertical Datum of 2013 (CGG2013a) epoch 2010
+--------------------------------------------------------------
+
+| Type: Vertical
+| Used: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_CANADIAN_GEODETIC_VERTICAL_DATUM_OF_2013_CGG2013A_EPOCH_2010)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1256')
 
-Defined by the equipotential surface W0 = 62,636,856.0 m^2s^-2, which by convention represents the coastal mean sea level for North America, realized through the Canadian gravimetric geoid 2013a.
+Defined by the equipotential surface W0 = 62,636,856.0 m^2s^-2, which by convention represents the coastal mean sea level for North America, realized through CGG2013a at epoch 2010.0. Geoid velocity defined as zero with respect to NAD83(CSRS). 
 
-Replaces CGVD2013 (CGG2013) in December 2015.
+Replaces CGVD2013(CGG2013). CGVD2013(CGG2013a) is a static datum. However heights referenced to it change with time, primarily due to glacial isostasy. In practice static snapshots are used at epochs 2010.0 (this datum), 2002.0 and 1997.0.
 
 Cape
 ----
@@ -5785,6 +5815,21 @@ MRH21 Intermediate Reference Frame
 Defined through the application of the MRH21 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
 
 Created in 2021 to support intermediate CRS "MRH21-IRF" in the emulation of the MRH21 Snake map projection.
+
+MWC18 Intermediate Reference Frame
+----------------------------------
+
+| Type: Geodetic
+| Used: United Kingdom (UK) - on or related to the rail route from Manchester via Wigan and Liverpool to Chester.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_MWC18_INTERMEDIATE_REFERENCE_FRAME)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1324')
+
+Defined through the application of the MWC18 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
+
+Created in 2022 to support intermediate CRS "MWC18" in the emulation of the MWC18 Snake map projection.
 
 Macao 1920
 ----------
