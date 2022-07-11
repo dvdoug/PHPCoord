@@ -34,14 +34,14 @@ class BritishChain1895BenoitBTest extends TestCase
 
     public function testAdd(): void
     {
-        $result = (new BritishChain1895BenoitB(1))->add((new BritishChain1895BenoitB(2)));
+        $result = (new BritishChain1895BenoitB(1))->add(new BritishChain1895BenoitB(2));
         self::assertInstanceOf(BritishChain1895BenoitB::class, $result);
         self::assertEquals(3, $result->getValue());
     }
 
     public function testSubtract(): void
     {
-        $result = (new BritishChain1895BenoitB(4))->subtract((new BritishChain1895BenoitB(3)));
+        $result = (new BritishChain1895BenoitB(4))->subtract(new BritishChain1895BenoitB(3));
         self::assertInstanceOf(BritishChain1895BenoitB::class, $result);
         self::assertEquals(1, $result->getValue());
     }

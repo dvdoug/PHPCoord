@@ -10,9 +10,12 @@ namespace PHPCoord\EPSG\Import;
 
 use function file_exists;
 use function file_get_contents;
+
 use SQLite3;
+
 use const SQLITE3_OPEN_CREATE;
 use const SQLITE3_OPEN_READWRITE;
+
 use function str_starts_with;
 use function substr;
 use function unlink;

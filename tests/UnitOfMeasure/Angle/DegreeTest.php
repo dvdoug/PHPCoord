@@ -365,28 +365,28 @@ class DegreeTest extends TestCase
 
     public function testAdd(): void
     {
-        $result = (new Degree(20))->add((new Degree(24)));
+        $result = (new Degree(20))->add(new Degree(24));
         self::assertInstanceOf(Degree::class, $result);
         self::assertEquals(44, $result->getValue());
     }
 
     public function testAddMixedUnit(): void
     {
-        $result = (new Degree(20))->add((new ArcSecond(3600)));
+        $result = (new Degree(20))->add(new ArcSecond(3600));
         self::assertInstanceOf(Degree::class, $result);
         self::assertEquals(21, $result->getValue());
     }
 
     public function testSubtract(): void
     {
-        $result = (new Degree(20))->subtract((new Degree(24)));
+        $result = (new Degree(20))->subtract(new Degree(24));
         self::assertInstanceOf(Degree::class, $result);
         self::assertEquals(-4, $result->getValue());
     }
 
     public function testSubtractMixedUnit(): void
     {
-        $result = (new Degree(20))->subtract((new ArcSecond(3600)));
+        $result = (new Degree(20))->subtract(new ArcSecond(3600));
         self::assertInstanceOf(Degree::class, $result);
         self::assertEquals(19, $result->getValue());
     }

@@ -17,8 +17,10 @@ use function max;
 use function min;
 use function preg_match;
 use function preg_replace;
+
 use SplFileObject;
 use SplFixedArray;
+
 use function str_repeat;
 use function str_replace;
 use function strlen;
@@ -45,7 +47,7 @@ trait IGNFGrid
     protected function getRecord(int $longitudeIndex, int $latitudeIndex): GridValues
     {
         $recordId = match ($this->storageOrder) {
-            self::STORAGE_ORDER_INCREASING_LATITUDE_INCREASING_LONGITUDE => ($longitudeIndex * ($this->numberOfRows) + $latitudeIndex),
+            self::STORAGE_ORDER_INCREASING_LATITUDE_INCREASING_LONGITUDE => ($longitudeIndex * $this->numberOfRows + $latitudeIndex),
             self::STORAGE_ORDER_INCREASING_LONGITUDE_DECREASING_LATIITUDE => ($this->numberOfRows - $latitudeIndex - 1) * $this->numberOfColumns + $longitudeIndex,
         };
 
@@ -84,7 +86,7 @@ trait IGNFGrid
         for ($i = 0, $numValues = $this->numberOfColumns * $this->numberOfRows; $i < $numValues; ++$i) {
             $rowData = explode(' ', trim(preg_replace('/ +/', ' ', $this->gridFile->fgets())));
             $wantedData = array_slice($rowData, 3, 3); // ignore weird first fixed value, coordinates, precision and map sheet
-            $wantedData = array_map(static fn (string $value) => (float) ($value), $wantedData);
+            $wantedData = array_map(static fn (string $value) => (float) $value, $wantedData);
             $this->data[$i] = $wantedData;
         }
 

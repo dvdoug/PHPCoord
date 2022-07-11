@@ -34,14 +34,14 @@ class IndianFootTest extends TestCase
 
     public function testAdd(): void
     {
-        $result = (new IndianFoot(1))->add((new IndianFoot(2)));
+        $result = (new IndianFoot(1))->add(new IndianFoot(2));
         self::assertInstanceOf(IndianFoot::class, $result);
         self::assertEquals(3, $result->getValue());
     }
 
     public function testSubtract(): void
     {
-        $result = (new IndianFoot(4))->subtract((new IndianFoot(3)));
+        $result = (new IndianFoot(4))->subtract(new IndianFoot(3));
         self::assertInstanceOf(IndianFoot::class, $result);
         self::assertEquals(1, $result->getValue());
     }

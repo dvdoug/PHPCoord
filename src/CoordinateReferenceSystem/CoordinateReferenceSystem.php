@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\CoordinateReferenceSystem;
 
 use function array_merge;
+
 use PHPCoord\CoordinateSystem\CoordinateSystem;
 use PHPCoord\Datum\Datum;
 use PHPCoord\Exception\UnknownCoordinateReferenceSystemException;

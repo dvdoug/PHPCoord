@@ -12,10 +12,12 @@ use function abs;
 use function atan2;
 use function cos;
 use function hypot;
+
 use PHPCoord\Datum\Datum;
 use PHPCoord\UnitOfMeasure\Angle\Radian;
 use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Length\Metre;
+
 use function sin;
 use function sqrt;
 
@@ -71,7 +73,7 @@ class GeocentricValue
         $longitude += $this->datum->getPrimeMeridian()->getGreenwichLongitude()->asRadians()->getValue();
         $p = hypot($x, $y);
 
-        $latitude = atan2($z, ($p * (1 - $e2)));
+        $latitude = atan2($z, $p * (1 - $e2));
 
         do {
             $phi1 = $latitude;

@@ -17,8 +17,8 @@
     "require-dev": {
         "ext-json": "*",
         "ext-sqlite3": "*",
-        "friendsofphp/php-cs-fixer": "^3.7",
-        "nikic/php-parser": "^4.13",
+        "friendsofphp/php-cs-fixer": "^3.9.2",
+        "nikic/php-parser": "^4.14",
         "php-coord/datapack-africa": "dev-master",
         "php-coord/datapack-antarctic": "dev-master",
         "php-coord/datapack-arctic": "dev-master",
@@ -27,11 +27,11 @@
         "php-coord/datapack-northamerica": "dev-master",
         "php-coord/datapack-oceania": "dev-master",
         "php-coord/datapack-southamerica": "dev-master",
-        "phpunit/phpunit": "^9.5.10"
+        "phpunit/phpunit": "^9.5.21"
     },
     "suggest": {
         "php-coord/datapack-africa": "High-accuracy addon datapack for Africa",
-        "php-coord/datapack-antarctic": "High-accuracy addon datapack for the Antartic",
+        "php-coord/datapack-antarctic": "High-accuracy addon datapack for the Antarctic",
         "php-coord/datapack-arctic": "High-accuracy addon datapack for the Arctic",
         "php-coord/datapack-asia": "High-accuracy addon datapack for Asia",
         "php-coord/datapack-europe": "High-accuracy addon datapack for Europe",

@@ -9,12 +9,19 @@ declare(strict_types=1);
 namespace PHPCoord\UnitOfMeasure\Angle;
 
 use function in_array;
+
 use InvalidArgumentException;
+
 use const M_PI;
+
 use function preg_match;
+
 use const PREG_UNMATCHED_AS_NULL;
+
 use function str_pad;
+
 use const STR_PAD_RIGHT;
+
 use function str_replace;
 use function strlen;
 use function strpos;
@@ -148,9 +155,9 @@ class Degree extends Angle
 
         $degrees = ($angleParts['degrees'] * 1);
         $degrees += (($angleParts['arcminutes'] ?? 0) / 60);
-        $degrees += isset($angleParts['fractionarcminutes']) ? ($angleParts['fractionarcminutes'] / 60 / 10 ** (strlen($angleParts['fractionarcminutes']))) : 0;
+        $degrees += isset($angleParts['fractionarcminutes']) ? ($angleParts['fractionarcminutes'] / 60 / 10 ** strlen($angleParts['fractionarcminutes'])) : 0;
         $degrees += (($angleParts['arcseconds'] ?? 0) / 3600);
-        $degrees += isset($angleParts['fractionarcseconds']) ? ($angleParts['fractionarcseconds'] / 3600 / 10 ** (strlen($angleParts['fractionarcseconds']))) : 0;
+        $degrees += isset($angleParts['fractionarcseconds']) ? ($angleParts['fractionarcseconds'] / 3600 / 10 ** strlen($angleParts['fractionarcseconds'])) : 0;
 
         if ($angleParts['negative'] ?? '' || in_array($angleParts['hemisphere'] ?? [], ['S', 'W'], true)) {
             $degrees *= -1;

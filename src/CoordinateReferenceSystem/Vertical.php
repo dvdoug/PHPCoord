@@ -10,6 +10,7 @@ namespace PHPCoord\CoordinateReferenceSystem;
 
 use function assert;
 use function count;
+
 use PHPCoord\CoordinateSystem\CoordinateSystem;
 use PHPCoord\CoordinateSystem\Vertical as VerticalCS;
 use PHPCoord\Datum\Datum;

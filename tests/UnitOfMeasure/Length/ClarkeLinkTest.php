@@ -34,14 +34,14 @@ class ClarkeLinkTest extends TestCase
 
     public function testAdd(): void
     {
-        $result = (new ClarkeLink(1))->add((new ClarkeLink(2)));
+        $result = (new ClarkeLink(1))->add(new ClarkeLink(2));
         self::assertInstanceOf(ClarkeLink::class, $result);
         self::assertEquals(3, $result->getValue());
     }
 
     public function testSubtract(): void
     {
-        $result = (new ClarkeLink(4))->subtract((new ClarkeLink(3)));
+        $result = (new ClarkeLink(4))->subtract(new ClarkeLink(3));
         self::assertInstanceOf(ClarkeLink::class, $result);
         self::assertEquals(1, $result->getValue());
     }

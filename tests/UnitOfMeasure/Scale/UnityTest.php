@@ -35,14 +35,14 @@ class UnityTest extends TestCase
 
     public function testAdd(): void
     {
-        $result = (new Unity(1))->add((new Unity(2)));
+        $result = (new Unity(1))->add(new Unity(2));
         self::assertInstanceOf(Unity::class, $result);
         self::assertEquals(3, $result->getValue());
     }
 
     public function testSubtract(): void
     {
-        $result = (new Unity(4))->subtract((new Unity(3)));
+        $result = (new Unity(4))->subtract(new Unity(3));
         self::assertInstanceOf(Unity::class, $result);
         self::assertEquals(1, $result->getValue());
     }

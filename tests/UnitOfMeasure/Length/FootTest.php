@@ -34,14 +34,14 @@ class FootTest extends TestCase
 
     public function testAdd(): void
     {
-        $result = (new Foot(1))->add((new Foot(2)));
+        $result = (new Foot(1))->add(new Foot(2));
         self::assertInstanceOf(Foot::class, $result);
         self::assertEquals(3, $result->getValue());
     }
 
     public function testSubtract(): void
     {
-        $result = (new Foot(4))->subtract((new Foot(3)));
+        $result = (new Foot(4))->subtract(new Foot(3));
         self::assertInstanceOf(Foot::class, $result);
         self::assertEquals(1, $result->getValue());
     }

@@ -34,14 +34,14 @@ class CentimetreTest extends TestCase
 
     public function testAdd(): void
     {
-        $result = (new Centimetre(1))->add((new Centimetre(2)));
+        $result = (new Centimetre(1))->add(new Centimetre(2));
         self::assertInstanceOf(Centimetre::class, $result);
         self::assertEquals(3, $result->getValue());
     }
 
     public function testSubtract(): void
     {
-        $result = (new Centimetre(4))->subtract((new Centimetre(3)));
+        $result = (new Centimetre(4))->subtract(new Centimetre(3));
         self::assertInstanceOf(Centimetre::class, $result);
         self::assertEquals(1, $result->getValue());
     }

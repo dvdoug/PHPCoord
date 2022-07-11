@@ -122,7 +122,7 @@ class CompoundPoint extends Point implements ConvertiblePoint
             return $this->autoConvert($to, $ignoreBoundaryRestrictions);
         } catch (UnknownConversionException $e) {
             // if 2D target, try again with just the horizontal component
-            if (($to instanceof Geographic2D || $to instanceof Projected)) {
+            if ($to instanceof Geographic2D || $to instanceof Projected) {
                 return $this->getHorizontalPoint()->convert($to, $ignoreBoundaryRestrictions);
             }
 

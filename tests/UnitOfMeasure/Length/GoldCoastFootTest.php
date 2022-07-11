@@ -34,14 +34,14 @@ class GoldCoastFootTest extends TestCase
 
     public function testAdd(): void
     {
-        $result = (new GoldCoastFoot(1))->add((new GoldCoastFoot(2)));
+        $result = (new GoldCoastFoot(1))->add(new GoldCoastFoot(2));
         self::assertInstanceOf(GoldCoastFoot::class, $result);
         self::assertEquals(3, $result->getValue());
     }
 
     public function testSubtract(): void
     {
-        $result = (new GoldCoastFoot(4))->subtract((new GoldCoastFoot(3)));
+        $result = (new GoldCoastFoot(4))->subtract(new GoldCoastFoot(3));
         self::assertInstanceOf(GoldCoastFoot::class, $result);
         self::assertEquals(1, $result->getValue());
     }

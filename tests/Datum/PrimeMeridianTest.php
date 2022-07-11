@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\Datum;
 
 use function count;
+
 use PHPCoord\Exception\UnknownPrimeMeridianException;
 use PHPCoord\UnitOfMeasure\Angle\Degree;
 use PHPUnit\Framework\TestCase;

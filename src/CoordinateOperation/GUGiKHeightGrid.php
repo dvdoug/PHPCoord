@@ -11,12 +11,17 @@ namespace PHPCoord\CoordinateOperation;
 use function explode;
 use function max;
 use function min;
+
 use const PHP_FLOAT_MAX;
 use const PHP_FLOAT_MIN;
+
 use PHPCoord\UnitOfMeasure\Length\Metre;
+
 use function round;
+
 use SplFileObject;
 use SplFixedArray;
+
 use function str_replace;
 use function trim;
 

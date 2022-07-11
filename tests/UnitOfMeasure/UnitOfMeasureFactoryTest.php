@@ -10,6 +10,7 @@ namespace PHPCoord\UnitOfMeasure;
 
 use function count;
 use function in_array;
+
 use PHPCoord\Exception\UnknownUnitOfMeasureException;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPUnit\Framework\TestCase;

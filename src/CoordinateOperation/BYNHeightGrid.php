@@ -10,9 +10,11 @@ namespace PHPCoord\CoordinateOperation;
 
 use function assert;
 use function in_array;
+
 use PHPCoord\UnitOfMeasure\Angle\ArcSecond;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 use SplFileObject;
+
 use function unpack;
 
 class BYNHeightGrid extends GeographicGeoidHeightGrid

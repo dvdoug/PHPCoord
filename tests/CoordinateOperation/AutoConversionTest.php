@@ -10,10 +10,13 @@ namespace PHPCoord\CoordinateOperation;
 
 use function array_unique;
 use function class_exists;
+
 use DateTime;
+
 use function explode;
 use function fgetcsv;
 use function fopen;
+
 use PHPCoord\CompoundPoint;
 use PHPCoord\CoordinateReferenceSystem\Compound;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;

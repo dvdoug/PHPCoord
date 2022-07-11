@@ -10,6 +10,7 @@ namespace PHPCoord\CoordinateOperation;
 
 use SplFileObject;
 use UnexpectedValueException;
+
 use function unpack;
 
 class NADCON5Grid extends Grid

@@ -11,11 +11,15 @@ namespace PHPCoord\CoordinateOperation;
 use function assert;
 use function explode;
 use function intdiv;
+
 use PHPCoord\UnitOfMeasure\Length\Metre;
+
 use function preg_replace;
 use function preg_split;
+
 use SplFileObject;
 use SplFixedArray;
+
 use function trim;
 use function unpack;
 

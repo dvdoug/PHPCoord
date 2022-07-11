@@ -9,9 +9,12 @@ declare(strict_types=1);
 namespace PHPCoord;
 
 use function class_exists;
+
 use DateTime;
 use DateTimeImmutable;
+
 use function in_array;
+
 use InvalidArgumentException;
 use PHPCoord\CoordinateOperation\CoordinateOperationMethods;
 use PHPCoord\CoordinateOperation\CoordinateOperations;

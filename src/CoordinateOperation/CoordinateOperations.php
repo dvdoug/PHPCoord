@@ -10,6 +10,7 @@ declare(strict_types=1);
 namespace PHPCoord\CoordinateOperation;
 
 use PHPCoord\Exception\UnknownCoordinateOperationException;
+
 use function str_replace;
 
 /**

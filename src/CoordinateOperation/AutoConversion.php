@@ -16,8 +16,11 @@ use function array_unique;
 use function assert;
 use function class_exists;
 use function count;
+
 use DateTimeImmutable;
+
 use function in_array;
+
 use PHPCoord\CompoundPoint;
 use PHPCoord\CoordinateReferenceSystem\Compound;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
@@ -34,6 +37,7 @@ use PHPCoord\Geometry\Extents\RegionMap;
 use PHPCoord\Point;
 use PHPCoord\ProjectedPoint;
 use PHPCoord\UnitOfMeasure\Time\Year;
+
 use function usort;
 
 /**

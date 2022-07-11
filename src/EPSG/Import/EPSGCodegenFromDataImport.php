@@ -21,6 +21,7 @@ use function glob;
 use function implode;
 use function in_array;
 use function lcfirst;
+
 use PHPCoord\CoordinateOperation\CoordinateOperationMethods;
 use PHPCoord\CoordinateReferenceSystem\Compound;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
@@ -41,11 +42,15 @@ use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Rate;
 use PHPCoord\UnitOfMeasure\Scale\Scale;
 use PHPCoord\UnitOfMeasure\Time\Time;
+
 use function preg_match;
 use function preg_replace;
+
 use SQLite3;
+
 use const SQLITE3_ASSOC;
 use const SQLITE3_OPEN_READONLY;
+
 use function str_replace;
 use function ucwords;
 use function unlink;

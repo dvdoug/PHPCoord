@@ -13,22 +13,32 @@ use function basename;
 use function class_exists;
 use function count;
 use function dirname;
+
 use Exception;
+
 use function file_get_contents;
 use function file_put_contents;
 use function glob;
 use function implode;
 use function in_array;
 use function json_decode;
+
 use const JSON_THROW_ON_ERROR;
+
 use function max;
 use function min;
+
 use const PHP_EOL;
+
 use PHPCoord\Geometry\Extents\RegionMap;
+
 use function sleep;
+
 use SQLite3;
+
 use const SQLITE3_ASSOC;
 use const SQLITE3_OPEN_READONLY;
+
 use function substr;
 use function unlink;
 

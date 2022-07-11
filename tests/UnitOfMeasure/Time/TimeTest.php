@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\UnitOfMeasure\Time;
 
 use function count;
+
 use PHPCoord\Exception\UnknownUnitOfMeasureException;
 use PHPUnit\Framework\TestCase;
 

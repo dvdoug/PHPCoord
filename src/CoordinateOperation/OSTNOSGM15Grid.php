@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\CoordinateOperation;
 
 use function abs;
+
 use PHPCoord\CoordinateReferenceSystem\Projected;
 use PHPCoord\CoordinateSystem\Cartesian;
 use PHPCoord\Datum\Datum;

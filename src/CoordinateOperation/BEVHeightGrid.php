@@ -11,11 +11,15 @@ namespace PHPCoord\CoordinateOperation;
 use function array_unique;
 use function end;
 use function explode;
+
 use PHPCoord\UnitOfMeasure\Length\Metre;
+
 use function round;
 use function sort;
+
 use SplFileObject;
 use SplFixedArray;
+
 use function trim;
 
 class BEVHeightGrid extends GeographicGeoidHeightGrid

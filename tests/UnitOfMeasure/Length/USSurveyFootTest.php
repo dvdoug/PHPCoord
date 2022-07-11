@@ -34,14 +34,14 @@ class USSurveyFootTest extends TestCase
 
     public function testAdd(): void
     {
-        $result = (new USSurveyFoot(1))->add((new USSurveyFoot(2)));
+        $result = (new USSurveyFoot(1))->add(new USSurveyFoot(2));
         self::assertInstanceOf(USSurveyFoot::class, $result);
         self::assertEquals(3, $result->getValue());
     }
 
     public function testSubtract(): void
     {
-        $result = (new USSurveyFoot(4))->subtract((new USSurveyFoot(3)));
+        $result = (new USSurveyFoot(4))->subtract(new USSurveyFoot(3));
         self::assertInstanceOf(USSurveyFoot::class, $result);
         self::assertEquals(1, $result->getValue());
     }

@@ -34,14 +34,14 @@ class BritishChain1922SearsTruncatedTest extends TestCase
 
     public function testAdd(): void
     {
-        $result = (new BritishChain1922SearsTruncated(1))->add((new BritishChain1922SearsTruncated(2)));
+        $result = (new BritishChain1922SearsTruncated(1))->add(new BritishChain1922SearsTruncated(2));
         self::assertInstanceOf(BritishChain1922SearsTruncated::class, $result);
         self::assertEquals(3, $result->getValue());
     }
 
     public function testSubtract(): void
     {
-        $result = (new BritishChain1922SearsTruncated(4))->subtract((new BritishChain1922SearsTruncated(3)));
+        $result = (new BritishChain1922SearsTruncated(4))->subtract(new BritishChain1922SearsTruncated(3));
         self::assertInstanceOf(BritishChain1922SearsTruncated::class, $result);
         self::assertEquals(1, $result->getValue());
     }

@@ -16,7 +16,9 @@ use function file_get_contents;
 use function file_put_contents;
 use function fopen;
 use function fwrite;
+
 use const PHP_EOL;
+
 use PhpCsFixer\AbstractFixer;
 use PhpCsFixer\Config;
 use PhpCsFixer\Console\ConfigurationResolver;
@@ -28,6 +30,7 @@ use PhpParser\NodeVisitor\CloningVisitor;
 use PhpParser\Parser\Php7;
 use ReflectionClass;
 use SplFileInfo;
+
 use function str_repeat;
 use function str_replace;
 use function strlen;

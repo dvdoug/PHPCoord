@@ -11,6 +11,7 @@ namespace PHPCoord\CoordinateOperation;
 use PHPCoord\CoordinateReferenceSystem\Geocentric;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPUnit\Framework\TestCase;
+
 use function rad2deg;
 
 class GeocentricValueTest extends TestCase

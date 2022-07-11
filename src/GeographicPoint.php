@@ -16,16 +16,21 @@ use function atanh;
 use function cos;
 use function cosh;
 use function count;
+
 use DateTime;
 use DateTimeImmutable;
 use DateTimeInterface;
+
 use function hypot;
 use function implode;
 use function is_nan;
 use function log;
+
 use const M_E;
 use const M_PI;
+
 use function max;
+
 use PHPCoord\CoordinateOperation\AutoConversion;
 use PHPCoord\CoordinateOperation\ComplexNumber;
 use PHPCoord\CoordinateOperation\ConvertiblePoint;
@@ -58,6 +63,7 @@ use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPCoord\UnitOfMeasure\Scale\Coefficient;
 use PHPCoord\UnitOfMeasure\Scale\Scale;
 use PHPCoord\UnitOfMeasure\Scale\Unity;
+
 use function sin;
 use function sinh;
 use function sqrt;
@@ -601,7 +607,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $tau = $a * $m * $this->normaliseLongitude($this->longitude->subtract($longitudeOfNaturalOrigin))->asRadians()->getValue() / $rho;
 
         $easting = $falseEasting->asMetres()->getValue() + ($rho * sin($tau));
-        $northing = $falseNorthing->asMetres()->getValue() + (($a * $mO / sin($latitudeOrigin) - $rho * cos($tau)));
+        $northing = $falseNorthing->asMetres()->getValue() + ($a * $mO / sin($latitudeOrigin) - $rho * cos($tau));
 
         return ProjectedPoint::create($to, new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $this->epoch);
     }
@@ -635,7 +641,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $tau = $a * $m * $this->normaliseLongitude($this->longitude->subtract($longitudeOfNaturalOrigin))->asRadians()->getValue() / $rho;
 
         $westing = $falseEasting->asMetres()->getValue() - ($rho * sin($tau));
-        $southing = $falseNorthing->asMetres()->getValue() - (($a * $mO / sin($latitudeOrigin) - $rho * cos($tau)));
+        $southing = $falseNorthing->asMetres()->getValue() - ($a * $mO / sin($latitudeOrigin) - $rho * cos($tau));
 
         return ProjectedPoint::create($to, new Metre(-$westing), new Metre(-$southing), new Metre($westing), new Metre($southing), $this->epoch);
     }
@@ -879,7 +885,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $U = 2 * (atan($tO * tan($latitude / 2 + M_PI / 4) ** $B / ((1 + $e * sin($latitude)) / (1 - $e * sin($latitude))) ** ($e * $B / 2)) - M_PI / 4);
         $V = $B * ($longitudeO - $longitude);
         $T = self::asin(cos($alphaC) * sin($U) + sin($alphaC) * cos($U) * cos($V));
-        $D = atan2(cos($U) * sin($V) / cos($T), ((cos($alphaC) * sin($T) - sin($U)) / (sin($alphaC) * cos($T))));
+        $D = atan2(cos($U) * sin($V) / cos($T), (cos($alphaC) * sin($T) - sin($U)) / (sin($alphaC) * cos($T)));
         $theta = $n * $D;
         $r = $rO * tan(M_PI / 4 + $latitudeP / 2) ** $n / tan($T / 2 + M_PI / 4) ** $n;
         $X = $r * cos($theta);
@@ -1329,7 +1335,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $nuO = $a / sqrt(1 - $e2 * sin($latitudeOrigin) ** 2);
         $nu = $a / sqrt(1 - $e2 * sin($latitude) ** 2);
         $psi = atan((1 - $e2) * tan($latitude) + ($e2 * $nuO * sin($latitudeOrigin)) / ($nu * cos($latitude)));
-        $alpha = atan2(sin($this->normaliseLongitude($this->longitude->subtract($longitudeOfNaturalOrigin))->asRadians()->getValue()), (cos($latitudeOrigin) * tan($psi) - sin($latitudeOrigin) * cos($this->normaliseLongitude($this->longitude->subtract($longitudeOfNaturalOrigin))->asRadians()->getValue())));
+        $alpha = atan2(sin($this->normaliseLongitude($this->longitude->subtract($longitudeOfNaturalOrigin))->asRadians()->getValue()), cos($latitudeOrigin) * tan($psi) - sin($latitudeOrigin) * cos($this->normaliseLongitude($this->longitude->subtract($longitudeOfNaturalOrigin))->asRadians()->getValue()));
         $G = $e * sin($latitudeOrigin) / sqrt(1 - $e2);
         $H = $e * cos($latitudeOrigin) * cos($alpha) / sqrt(1 - $e2);
 
@@ -1537,7 +1543,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $latitude = $this->latitude->asRadians()->getValue();
         $a = $ellipsoid->getSemiMajorAxis()->asMetres()->getValue();
 
-        $easting = $falseEasting->asMetres()->getValue() + $a * ($this->normaliseLongitude($this->longitude->subtract($longitudeOfNaturalOrigin))->asRadians()->getValue());
+        $easting = $falseEasting->asMetres()->getValue() + $a * $this->normaliseLongitude($this->longitude->subtract($longitudeOfNaturalOrigin))->asRadians()->getValue();
         $northing = $falseNorthing->asMetres()->getValue() + $a * log(tan(M_PI / 4 + $latitude / 2));
 
         return ProjectedPoint::create($to, new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $this->epoch);
@@ -1638,13 +1644,13 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $B = sqrt(1 + ($e2 * cos($latC) ** 4 / (1 - $e2)));
         $A = $a * $B * $kC * sqrt(1 - $e2) / (1 - $e2 * sin($latC) ** 2);
         $tO = tan(M_PI / 4 - $latC / 2) / ((1 - $e * sin($latC)) / (1 + $e * sin($latC))) ** ($e / 2);
-        $D = $B * sqrt((1 - $e2)) / (cos($latC) * sqrt(1 - $e2 * sin($latC) ** 2));
+        $D = $B * sqrt(1 - $e2) / (cos($latC) * sqrt(1 - $e2 * sin($latC) ** 2));
         $DD = max(1, $D ** 2);
         $F = $D + sqrt($DD - 1) * static::sign($latC);
-        $H = $F * ($tO) ** $B;
+        $H = $F * $tO ** $B;
         $G = ($F - 1 / $F) / 2;
         $gammaO = self::asin(sin($alphaC) / $D);
-        $lonO = $lonC - (self::asin($G * tan($gammaO))) / $B;
+        $lonO = $lonC - self::asin($G * tan($gammaO)) / $B;
 
         $t = tan(M_PI / 4 - $latitude / 2) / ((1 - $e * sin($latitude)) / (1 + $e * sin($latitude))) ** ($e / 2);
         $Q = $H / $t ** $B;
@@ -1653,7 +1659,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $V = sin($B * ($longitude - $lonO));
         $U = (-$V * cos($gammaO) + $S * sin($gammaO)) / $T;
         $v = $A * log((1 - $U) / (1 + $U)) / (2 * $B);
-        $u = $A * atan2(($S * cos($gammaO) + $V * sin($gammaO)), cos($B * ($longitude - $lonO))) / $B;
+        $u = $A * atan2($S * cos($gammaO) + $V * sin($gammaO), cos($B * ($longitude - $lonO))) / $B;
 
         $easting = $v * cos($gammaC) + $u * sin($gammaC) + $falseEasting->asMetres()->getValue();
         $northing = $u * cos($gammaC) - $v * sin($gammaC) + $falseNorthing->asMetres()->getValue();
@@ -1689,12 +1695,12 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $B = sqrt(1 + ($e2 * cos($latC) ** 4 / (1 - $e2)));
         $A = $a * $B * $kC * sqrt(1 - $e2) / (1 - $e2 * sin($latC) ** 2);
         $tO = tan(M_PI / 4 - $latC / 2) / ((1 - $e * sin($latC)) / (1 + $e * sin($latC))) ** ($e / 2);
-        $D = $B * sqrt((1 - $e2)) / (cos($latC) * sqrt(1 - $e2 * sin($latC) ** 2));
+        $D = $B * sqrt(1 - $e2) / (cos($latC) * sqrt(1 - $e2 * sin($latC) ** 2));
         $F = $D + sqrt(max($D ** 2, 1) - 1) * static::sign($latC);
         $H = $F * $tO ** $B;
         $G = ($F - 1 / $F) / 2;
         $gammaO = self::asin(sin($alphaC) / $D);
-        $lonO = $lonC - (self::asin($G * tan($gammaO))) / $B;
+        $lonO = $lonC - self::asin($G * tan($gammaO)) / $B;
         $vC = 0;
         if ($alphaC === M_PI / 2) {
             $uC = $A * ($lonC - $lonO);
@@ -1709,7 +1715,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $V = sin($B * ($longitude - $lonO));
         $U = (-$V * cos($gammaO) + $S * sin($gammaO)) / $T;
         $v = $A * log((1 - $U) / (1 + $U)) / (2 * $B);
-        $u = ($A * atan2(($S * cos($gammaO) + $V * sin($gammaO)), cos($B * ($longitude - $lonO))) / $B) - (abs($uC) * static::sign($latC));
+        $u = ($A * atan2($S * cos($gammaO) + $V * sin($gammaO), cos($B * ($longitude - $lonO))) / $B) - (abs($uC) * static::sign($latC));
 
         $easting = $v * cos($gammaC) + $u * sin($gammaC) + $eastingAtProjectionCentre->asMetres()->getValue();
         $northing = $u * cos($gammaC) - $v * sin($gammaC) + $northingAtProjectionCentre->asMetres()->getValue();

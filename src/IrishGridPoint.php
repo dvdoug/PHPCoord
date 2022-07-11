@@ -9,14 +9,19 @@ declare(strict_types=1);
 namespace PHPCoord;
 
 use DateTimeInterface;
+
 use function floor;
 use function implode;
+
 use PHPCoord\CoordinateReferenceSystem\Projected;
 use PHPCoord\Exception\InvalidCoordinateException;
 use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Length\Metre;
+
 use function str_pad;
+
 use const STR_PAD_LEFT;
+
 use function str_replace;
 use function strlen;
 use function strpos;
@@ -47,7 +52,7 @@ class IrishGridPoint extends ProjectedPoint
 
         // Letter is 100km grid sq, origin at 0,0 of this square
         $minorEasting = strpos(static::GRID_LETTERS, $reference[0]) % 5 * 100000;
-        $minorNorthing = (floor(strpos(static::GRID_LETTERS, $reference[0]) / 5)) * 100000;
+        $minorNorthing = floor(strpos(static::GRID_LETTERS, $reference[0]) / 5) * 100000;
 
         // numbers are a division of that square into smaller and smaller pieces
         $numericPortion = substr($reference, 1);

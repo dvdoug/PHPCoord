@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord;
 
 use function abs;
+
 use DateTime;
 use DateTimeImmutable;
 use DateTimeInterface;
@@ -32,6 +33,7 @@ use PHPCoord\UnitOfMeasure\Scale\Scale;
 use PHPCoord\UnitOfMeasure\Scale\Unity;
 use PHPCoord\UnitOfMeasure\Time\Time;
 use PHPCoord\UnitOfMeasure\Time\Year;
+
 use function sprintf;
 
 /**

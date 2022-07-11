@@ -34,14 +34,14 @@ class BritishFoot1922SearsTest extends TestCase
 
     public function testAdd(): void
     {
-        $result = (new BritishFoot1922Sears(1))->add((new BritishFoot1922Sears(2)));
+        $result = (new BritishFoot1922Sears(1))->add(new BritishFoot1922Sears(2));
         self::assertInstanceOf(BritishFoot1922Sears::class, $result);
         self::assertEquals(3, $result->getValue());
     }
 
     public function testSubtract(): void
     {
-        $result = (new BritishFoot1922Sears(4))->subtract((new BritishFoot1922Sears(3)));
+        $result = (new BritishFoot1922Sears(4))->subtract(new BritishFoot1922Sears(3));
         self::assertInstanceOf(BritishFoot1922Sears::class, $result);
         self::assertEquals(1, $result->getValue());
     }

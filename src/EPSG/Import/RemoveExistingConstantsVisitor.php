@@ -12,6 +12,7 @@ use PhpParser\Node;
 use PhpParser\Node\Stmt\ClassConst;
 use PhpParser\NodeTraverser;
 use PhpParser\NodeVisitorAbstract;
+
 use function str_starts_with;
 
 class RemoveExistingConstantsVisitor extends NodeVisitorAbstract

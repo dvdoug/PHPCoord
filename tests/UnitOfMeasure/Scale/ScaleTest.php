@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\UnitOfMeasure\Scale;
 
 use function count;
+
 use PHPCoord\Exception\UnknownUnitOfMeasureException;
 use PHPUnit\Framework\TestCase;
 

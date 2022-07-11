@@ -9,11 +9,15 @@ declare(strict_types=1);
 namespace PHPCoord\CoordinateOperation;
 
 use function explode;
+
 use PHPCoord\UnitOfMeasure\Length\Metre;
+
 use function preg_match;
 use function preg_replace;
+
 use SplFileObject;
 use SplFixedArray;
+
 use function strlen;
 use function trim;
 

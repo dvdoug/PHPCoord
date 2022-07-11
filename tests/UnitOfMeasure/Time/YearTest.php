@@ -35,14 +35,14 @@ class YearTest extends TestCase
 
     public function testAdd(): void
     {
-        $result = (new Year(1))->add((new Year(2)));
+        $result = (new Year(1))->add(new Year(2));
         self::assertInstanceOf(Year::class, $result);
         self::assertEquals(3, $result->getValue());
     }
 
     public function testSubtract(): void
     {
-        $result = (new Year(4))->subtract((new Year(3)));
+        $result = (new Year(4))->subtract(new Year(3));
         self::assertInstanceOf(Year::class, $result);
         self::assertEquals(1, $result->getValue());
     }

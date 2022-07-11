@@ -34,14 +34,14 @@ class LinkTest extends TestCase
 
     public function testAdd(): void
     {
-        $result = (new Link(1))->add((new Link(2)));
+        $result = (new Link(1))->add(new Link(2));
         self::assertInstanceOf(Link::class, $result);
         self::assertEquals(3, $result->getValue());
     }
 
     public function testSubtract(): void
     {
-        $result = (new Link(4))->subtract((new Link(3)));
+        $result = (new Link(4))->subtract(new Link(3));
         self::assertInstanceOf(Link::class, $result);
         self::assertEquals(1, $result->getValue());
     }
