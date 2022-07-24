@@ -9674,6 +9674,31 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9807',
             'extent_code' => ['2155'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::10139' => [
+            'name' => 'ITRF88 to ITRF89 (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1033',
+            'extent_code' => ['1262'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10140' => [
+            'name' => 'ITRF89 to ITRF90 (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1033',
+            'extent_code' => ['1262'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10141' => [
+            'name' => 'ITRF90 to ITRF91 (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1033',
+            'extent_code' => ['1262'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10142' => [
+            'name' => 'ITRF91 to ITRF92 (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1033',
+            'extent_code' => ['1262'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10143' => [
+            'name' => 'ITRF93 to ITRF94 (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1053',
+            'extent_code' => ['1262'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::10201' => [
             'name' => 'Arizona Coordinate System East zone',
             'method' => 'urn:ogc:def:method:EPSG::9807',

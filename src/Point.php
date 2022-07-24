@@ -57,6 +57,7 @@ abstract class Point implements Stringable
         CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_GTX => CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_GTX,
         CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_PL_TXT => CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_PL_TXT,
         CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_BEV_AT => CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_BEV_AT,
+        CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_NRCAN_BYN => CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_NRCAN_BYN,
     ];
     protected const METHODS_THAT_REQUIRE_DIRECTION = [
         CoordinateOperationMethods::EPSG_SIMILARITY_TRANSFORMATION => CoordinateOperationMethods::EPSG_SIMILARITY_TRANSFORMATION,
@@ -69,6 +70,7 @@ abstract class Point implements Stringable
         CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_GTX => CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_GTX,
         CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_PL_TXT => CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_PL_TXT,
         CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_BEV_AT => CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_BEV_AT,
+        CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_NRCAN_BYN => CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_NRCAN_BYN,
     ];
 
     private static array $gridCache = [];

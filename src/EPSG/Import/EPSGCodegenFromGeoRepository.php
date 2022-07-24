@@ -133,6 +133,7 @@ class EPSGCodegenFromGeoRepository
         }
 
         foreach ($extents as $extentCode => $extentName) {
+            echo $extentCode . ' ' . $extentName . PHP_EOL;
             if (class_exists("PHPCoord\\Geometry\\Extents\\Extent{$extentCode}")) {
                 continue;
             }
