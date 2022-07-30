@@ -740,7 +740,7 @@ class GIGSTest extends TestCase
             'Geocentric translations' => CoordinateOperationMethods::EPSG_GEOCENTRIC_TRANSLATIONS_GEOG2D_DOMAIN,
             'Position Vector 7-param. transformation' => CoordinateOperationMethods::EPSG_POSITION_VECTOR_TRANSFORMATION_GEOG2D_DOMAIN,
             'Coordinate Frame rotation' => CoordinateOperationMethods::EPSG_COORDINATE_FRAME_ROTATION_GEOG2D_DOMAIN,
-            'Molodensky-Badekas 10-parameter transformation' => CoordinateOperationMethods::EPSG_MOLODENSKY_BADEKAS_PV_GEOG2D_DOMAIN,
+            'Molodensky-Badekas 10-parameter transformation' => CoordinateOperationMethods::EPSG_MOLODENSKY_BADEKAS_CF_GEOG2D_DOMAIN,
             'Longitude rotation' => CoordinateOperationMethods::EPSG_LONGITUDE_ROTATION,
             'NTv2' => CoordinateOperationMethods::EPSG_NTV2,
             'NADCON' => CoordinateOperationMethods::EPSG_NADCON5_2D,
@@ -1383,8 +1383,14 @@ class GIGSTest extends TestCase
      * @depends testSeries3200Transformations
      * @dataProvider series5200PosVecPart1Data
      * @dataProvider series5200PosVecPart2Data
+     * @dataProvider series5200CoordFramePart1Data
+     * @dataProvider series5200CoordFramePart2Data
+     * @dataProvider series5200MolBadPart1Data
+     * @dataProvider series5200MolBadPart2Data
+     * @dataProvider series5200Geog3DGeoCenData
+     * @dataProvider series5200Geog2DGeoCenData
      */
-    public function testSeries5200Transformations(Angle $latitude1, Angle $longitude1, ?Length $height1, Angle $latitude2, Angle $longitude2, ?Length $height2, bool $inReverse, string $geographicCRSSrid1, string $geographicCRSSrid2, float $cartesianTolerance, float $geographicTolerance, float $roundTripCartesianTolerance, float $roundTripGeographicTolerance, bool $roundTripPoint, string $operation): void
+    public function testSeries5200GeographicTransformations(Angle $latitude1, Angle $longitude1, ?Length $height1, Angle $latitude2, Angle $longitude2, ?Length $height2, bool $inReverse, string $geographicCRSSrid1, string $geographicCRSSrid2, float $cartesianTolerance, float $geographicTolerance, float $roundTripCartesianTolerance, float $roundTripGeographicTolerance, bool $roundTripPoint, string $operation): void
     {
         $geographicCRS1 = Geographic::fromSRID($geographicCRSSrid1);
         $geographicCRS2 = Geographic::fromSRID($geographicCRSSrid2);
@@ -1472,6 +1478,108 @@ class GIGSTest extends TestCase
             };
 
             yield '#' . $row[0] => [new Degree((float) $row[1]), new Degree((float) $row[2]), new Metre((float) $row[3]), new Degree((float) $row[4]), new Degree((float) $row[5]), new Metre((float) $row[6]), $direction, $geographicCRSSrid1, $geographicCRSSrid2, (float) $header['Cartesian Tolerance'], (float) $header['Geographic Tolerance'], (float) $header['Round Trip Cartesian Tolerance'], (float) $header['Round Trip Geographic Tolerance'], isset($row[9]) && $row[9] === 'Round Trip calculation point', 'urn:ogc:def:coordinateOperation:GIGS::61314'];
+        }
+    }
+
+    public function series5200CoordFramePart1Data(): Generator
+    {
+        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 5200 Coordinate transformation test data/ASCII/GIGS_tfm_5204_CoordFrame_output_part1.txt');
+
+        $geographicCRSSrid1 = 'urn:ogc:def:crs:GIGS::64008';
+        $geographicCRSSrid2 = 'urn:ogc:def:crs:GIGS::64003';
+
+        foreach ($body as $row) {
+            $direction = match ($row['6']) {
+                'FORWARD' => false,
+                'REVERSE' => true,
+            };
+
+            yield '#' . $row[0] => [new Degree((float) $row[1]), new Degree((float) $row[2]), null,  new Degree((float) $row[3]), new Degree((float) $row[4]), null, $direction, $geographicCRSSrid1, $geographicCRSSrid2, (float) $header['Cartesian Tolerance'], (float) $header['Geographic Tolerance'], (float) $header['Round Trip Cartesian Tolerance'], (float) $header['Round Trip Geographic Tolerance'], isset($row[7]) && $row[7] === 'Round Trip calculation point', 'urn:ogc:def:coordinateOperation:GIGS::15929'];
+        }
+    }
+
+    public function series5200CoordFramePart2Data(): Generator
+    {
+        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 5200 Coordinate transformation test data/ASCII/GIGS_tfm_5204_CoordFrame_output_part2.txt');
+
+        $geographicCRSSrid1 = 'urn:ogc:def:crs:GIGS::64022';
+        $geographicCRSSrid2 = 'urn:ogc:def:crs:GIGS::64002';
+
+        foreach ($body as $row) {
+            $direction = match ($row['8']) {
+                'FORWARD' => false,
+                'REVERSE' => true,
+            };
+
+            yield '#' . $row[0] => [new Degree((float) $row[1]), new Degree((float) $row[2]), new Metre((float) $row[3]), new Degree((float) $row[4]), new Degree((float) $row[5]), new Metre((float) $row[6]), $direction, $geographicCRSSrid1, $geographicCRSSrid2, (float) $header['Cartesian Tolerance'], (float) $header['Geographic Tolerance'], (float) $header['Round Trip Cartesian Tolerance'], (float) $header['Round Trip Geographic Tolerance'], isset($row[9]) && $row[9] === 'Round Trip calculation point', 'urn:ogc:def:coordinateOperation:GIGS::15929'];
+        }
+    }
+
+    public function series5200MolBadPart1Data(): Generator
+    {
+        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 5200 Coordinate transformation test data/ASCII/GIGS_tfm_5205_MolBad_output_part1.txt');
+
+        $geographicCRSSrid1 = 'urn:ogc:def:crs:GIGS::64006';
+        $geographicCRSSrid2 = 'urn:ogc:def:crs:GIGS::64003';
+
+        foreach ($body as $row) {
+            $direction = match ($row['6']) {
+                'FORWARD' => false,
+                'REVERSE' => true,
+            };
+
+            yield '#' . $row[0] => [new Degree((float) $row[1]), new Degree((float) $row[2]), null,  new Degree((float) $row[3]), new Degree((float) $row[4]), null, $direction, $geographicCRSSrid1, $geographicCRSSrid2, (float) $header['Cartesian Tolerance'], (float) $header['Geographic Tolerance'], (float) $header['Round Trip Cartesian Tolerance'], (float) $header['Round Trip Geographic Tolerance'], isset($row[7]) && $row[7] === 'Round Trip calculation point', 'urn:ogc:def:coordinateOperation:GIGS::61003'];
+        }
+    }
+
+    public function series5200MolBadPart2Data(): Generator
+    {
+        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 5200 Coordinate transformation test data/ASCII/GIGS_tfm_5205_MolBad_output_part2.txt');
+
+        $geographicCRSSrid1 = 'urn:ogc:def:crs:GIGS::64021';
+        $geographicCRSSrid2 = 'urn:ogc:def:crs:GIGS::64002';
+
+        foreach ($body as $row) {
+            $direction = match ($row['8']) {
+                'FORWARD' => false,
+                'REVERSE' => true,
+            };
+
+            yield '#' . $row[0] => [new Degree((float) $row[1]), new Degree((float) $row[2]), new Metre((float) $row[3]), new Degree((float) $row[4]), new Degree((float) $row[5]), new Metre((float) $row[6]), $direction, $geographicCRSSrid1, $geographicCRSSrid2, (float) $header['Cartesian Tolerance'], (float) $header['Geographic Tolerance'], (float) $header['Round Trip Cartesian Tolerance'], (float) $header['Round Trip Geographic Tolerance'], isset($row[9]) && $row[9] === 'Round Trip calculation point', 'urn:ogc:def:coordinateOperation:GIGS::61003'];
+        }
+    }
+
+    public function series5200Geog3DGeoCenData(): Generator
+    {
+        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 5200 Coordinate transformation test data/ASCII/GIGS_tfm_5212_3trnslt_Geog3D_output_EPSGconcat.txt');
+
+        $geographicCRSSrid1 = 'urn:ogc:def:crs:GIGS::64019';
+        $geographicCRSSrid2 = 'urn:ogc:def:crs:GIGS::64002';
+
+        foreach ($body as $row) {
+            $direction = match ($row['8']) {
+                'FORWARD' => false,
+                'REVERSE' => true,
+            };
+
+            yield '#' . $row[0] => [new Degree((float) $row[1]), new Degree((float) $row[2]), new Metre((float) $row[3]), new Degree((float) $row[4]), new Degree((float) $row[5]), new Metre((float) $row[6]), $direction, $geographicCRSSrid1, $geographicCRSSrid2, (float) $header['Vertical Cartesian Tolerance'], (float) $header['Horizontal Geographic Tolerance'], (float) $header['Round Trip Cartesian Tolerance'], (float) $header['Round Trip Geographic Tolerance'], isset($row[9]) && $row[9] === 'Round Trip calculation point', 'urn:ogc:def:coordinateOperation:GIGS::61196'];
+        }
+    }
+
+    public function series5200Geog2DGeoCenData(): Generator
+    {
+        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 5200 Coordinate transformation test data/ASCII/GIGS_tfm_5213_3trnslt_Geog2D_output_EPSGconcat.txt');
+
+        $geographicCRSSrid1 = 'urn:ogc:def:crs:GIGS::64005';
+        $geographicCRSSrid2 = 'urn:ogc:def:crs:GIGS::64003';
+
+        foreach ($body as $row) {
+            $direction = match ($row['6']) {
+                'FORWARD' => false,
+                'REVERSE' => true,
+            };
+
+            yield '#' . $row[0] => [new Degree((float) $row[1]), new Degree((float) $row[2]), null, new Degree((float) $row[3]), new Degree((float) $row[4]), null, $direction, $geographicCRSSrid1, $geographicCRSSrid2, (float) $header['Cartesian Tolerance'], (float) $header['Geographic Tolerance'], (float) $header['Round Trip Cartesian Tolerance'], (float) $header['Round Trip Geographic Tolerance'], isset($row[7]) && $row[7] === 'Round Trip calculation point', 'urn:ogc:def:coordinateOperation:GIGS::61196'];
         }
     }
 

@@ -1,0 +1,40 @@
+# File: GIGS_tfm_5205_MolBad_output_part2
+# GIGS Test Procedure: 5205
+# GIGS Test Dataset Version: 2.1.0
+# EPSG Dataset Version: 10.019
+# GIGS Test Dataset Issue Date: 2022-04-29
+# Note 1: Test for Molodensky-Badekas 10-parameter transformation utilising EPSG Coordinate Operation Method 1039
+# Note 2: CAUTION if application requires early-binding use GIGS geog3DCRS C' (GIGS code 64026) instead of GIGS geog3DCRS C
+# Note 3: Output file 2 of 2
+# Cartesian Tolerance: 0.03 metre
+# Geographic Tolerance: 0.0000003 degree
+# Round Trip Cartesian Tolerance: 0.006 metre
+# Round Trip Geographic Tolerance: 0.00000006 degree
+#
+# Fields:
+# [0]: Point
+# [1]: Latitude (GIGS CRS Code 64021; GIGS geog3DCRS C; Amersfoort; decimal degree; No direct EPSG equivalent)
+# [2]: Longitude (GIGS CRS Code 64021; GIGS geog3DCRS C; Amersfoort; decimal degree; No direct EPSG equivalent)
+# [3]: Ellipsoidal height (GIGS CRS Code 64021; GIGS geog3DCRS C; Amersfoort; metre; No direct EPSG equivalent)
+# [4]: Latitude (GIGS CRS Code 64002; GIGS geog3DCRS A; WGS 84; decimal degree; EPSG CRS code 4979)
+# [5]: Longitude (GIGS CRS Code 64002; GIGS geog3DCRS A; WGS 84; decimal degree; EPSG CRS code 4979)
+# [6]: Ellipsoidal height (GIGS CRS Code 64002; GIGS geog3DCRS A; WGS 84; metre; EPSG CRS code 4979)
+# [7]: Transect
+# [8]: Transformation Direction
+# [9]: GIGS Remarks
+#
+# [0]	# [1]	# [2]	# [3]	# [4]	# [5]	# [6]	# [7]	# [8]	# [9]
+GIGS-5205-17	60	120	900	60.00441729	119.9900169	519.593	A	FORWARD
+GIGS-5205-18	60	120	0	60.00441792	119.9900156	-380.411	A	FORWARD
+GIGS-5205-21	0	0	0	0.0041133	-0.00007025	-148.564	A	FORWARD
+GIGS-5205-22	0	0	-3000	0.00411529	-0.00007004	-3148.576	A	FORWARD
+GIGS-5205-23	0	0	-10000	0.00411996	-0.00006955	-10148.604	A	FORWARD
+GIGS-5205-27	-60	-120	0	-60.00081456	-119.9922412	-1230.32	A	FORWARD
+GIGS-5205-28	-60	-120	-900	-60.0008147	-119.99224	-2130.324	A	FORWARD
+GIGS-5205-32	70	-180	0	70.00666951	179.9978617	-410.882	B	FORWARD
+GIGS-5205-34	25	-90	0	25.00457271	-89.99487454	-550.442	B	FORWARD
+GIGS-5205-36	-37.6532236	143.9279419	1836.947	-37.65282045	143.9233072	525.013	B	FORWARD
+GIGS-5205-37	-37.6532236	143.9279419	0	-37.65282034	143.923306	-1311.941	B	FORWARD
+GIGS-5205-38	-37.6532236	143.9279419	-3000	-37.65282015	143.923304	-4311.954	B	FORWARD
+GIGS-5205-39	-37.6532236	143.9279419	-10000	-37.65281972	143.9232994	-11311.982	B	FORWARD
+GIGS-5205-41	-70	180	0	-70.00362084	179.9984789	-1286.11	B	FORWARD

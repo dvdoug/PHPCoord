@@ -1,0 +1,31 @@
+# File: GIGS_tfm_5205_MolBad_output_part1
+# GIGS Test Procedure: 5205
+# GIGS Test Dataset Version: 2.1.0
+# EPSG Dataset Version: 10.019
+# GIGS Test Dataset Issue Date: 2022-04-29
+# Note 1: Test for Molodensky-Badekas 10-parameter transformation utilising EPSG Coordinate Operation Method 9636
+# Note 2: CAUTION if application requires early-binding use GIGS geogCRS C' (GIGS code 64025) instead of GIGS geogCRS C
+# Note 3: Output file 1 of 2
+# Cartesian Tolerance: 0.03 metre
+# Geographic Tolerance: 0.0000003 degree
+# Round Trip Cartesian Tolerance: 0.006 metre
+# Round Trip Geographic Tolerance: 0.00000006 degree
+#
+# Fields:
+# [0]: Point
+# [1]: Latitude (GIGS CRS Code 64006; GIGS geogCRS C; Amersfoort; decimal degree; EPSG CRS code 4289)
+# [2]: Longitude (GIGS CRS Code 64006; GIGS geogCRS C; Amersfoort; decimal degree; EPSG CRS code 4289)
+# [3]: Latitude (GIGS CRS Code 64003; GIGS geogCRS A; WGS 84; decimal degree; EPSG CRS code 4326)
+# [4]: Longitude (GIGS CRS Code 64003; GIGS geogCRS A; WGS 84; decimal degree; EPSG CRS code 4326)
+# [5]: Transect
+# [6]: Transformation Direction
+# [7]: GIGS Remarks
+#
+# [0]	# [1]	# [2]	# [3]	# [4]	# [5]	# [6]	# [7]
+GIGS-5205-02	60	120	60.00441792	119.9900156	A	FORWARD
+GIGS-5205-04	0	0	0.0041133	-0.00007025	A	FORWARD
+GIGS-5205-06	-60	-120	-60.00081456	-119.9922412	A	FORWARD
+GIGS-5205-08	70	-180	70.00666951	179.9978617	B	FORWARD
+GIGS-5205-10	25	-90	25.00457271	-89.99487454	B	FORWARD
+GIGS-5205-12	-37.6532236	143.9279419	-37.65282034	143.923306	B	FORWARD
+GIGS-5205-14	-70	180	-70.00362084	179.9984789	B	FORWARD

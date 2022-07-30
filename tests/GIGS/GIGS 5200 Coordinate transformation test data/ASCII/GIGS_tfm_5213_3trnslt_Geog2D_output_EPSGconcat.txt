@@ -1,0 +1,37 @@
+# File: GIGS_tfm_5213_3trnslt_Geog2D_output_EPSGconcat
+# GIGS Test Procedure: 5213
+# GIGS Test Dataset Version: 2.1.0
+# EPSG Dataset Version: 10.019
+# GIGS Test Dataset Issue Date: 2022-04-29
+# Note 1: Test for Geocentric translation (geog2D domain) calculation outputs based on EPSG concatenated transformation method (EPSG code 9603)
+# Note 2: See separate file for Abridged Molodensky (EPSG code 9605)
+# Cartesian Tolerance: 0.03 metre
+# Geographic Tolerance: 0.0000003 degree
+# Round Trip Cartesian Tolerance: 0.006 metre
+# Round Trip Geographic Tolerance: 0.0000001 degree
+#
+# Fields:
+# [0]: Point
+# [1]: Latitude (GIGS CRS Code 64005; GIGS geogCRS B; OSGB36; decimal degree; EPSG CRS code 4277)
+# [2]: Longitude (GIGS CRS Code 64005; GIGS geogCRS B; OSGB36; decimal degree; EPSG CRS code 4277)
+# [3]: Latitude (GIGS CRS Code 64003; GIGS geogCRS A; WGS 84; decimal degree; EPSG CRS code 4326)
+# [4]: Longitude (GIGS CRS Code 64003; GIGS geogCRS A; WGS 84; decimal degree; EPSG CRS code 4326)
+# [5]: Transect
+# [6]: Transformation Direction
+# [7]: GIGS Remarks
+#
+# [0]	# [1]	# [2]	# [3]	# [4]	# [5]	# [6]	# [7]
+GIGS-5213-01	79.99575679	150.0045621	80	150	A	REVERSE	Round Trip calculation point
+GIGS-5213-02	60	120	60.00475258	119.9952447	A	FORWARD
+GIGS-5213-03	29.99639852	60.00391042	30	60	A	REVERSE
+GIGS-5213-04	0	0	0.00392509	-0.00100615	A	FORWARD
+GIGS-5213-05	-30.00405481	-60.00274971	-30	-60	A	REVERSE
+GIGS-5213-06	-60	-120	-59.99934884	-119.9932376	A	FORWARD
+GIGS-5213-07	-79.99809461	-150.014563	-80	-150	A	REVERSE
+GIGS-5213-08	70	-180	70.00490733	-179.9970662	B	FORWARD
+GIGS-5213-09	49.9955376	-135.0047634	50	-135	B	REVERSE
+GIGS-5213-10	25	-90	25.00366329	-89.99632465	B	FORWARD
+GIGS-5213-11	-0.0039251	0.00100617	0	0	B	REVERSE
+GIGS-5213-12	-37.6532236	143.9279419	-37.65282206	143.9264921	B	FORWARD
+GIGS-5213-13	-49.99946316	135.0025542	-50	135	B	REVERSE
+GIGS-5213-14	-70	180	-70.00224647	-179.9970662	B	FORWARD
