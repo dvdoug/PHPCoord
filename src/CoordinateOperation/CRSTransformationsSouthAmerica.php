@@ -16,6 +16,14 @@ class CRSTransformationsSouthAmerica
 {
     protected static array $sridData = [
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10134',
+            'name' => 'SIRGAS-Chile 2021 to ITRF2014 (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::20039',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::7789',
+            'accuracy' => 0.1,
+            'reversible' => true,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19924',
             'name' => 'Tobago Grid',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4157',
@@ -512,6 +520,30 @@ class CRSTransformationsSouthAmerica
             'reversible' => true,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10135',
+            'name' => 'PSAD56 to SIRGAS-Chile 2021 (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4248',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::20041',
+            'accuracy' => 5.0,
+            'reversible' => true,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10136',
+            'name' => 'PSAD56 to SIRGAS-Chile 2021 (2)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4248',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::20041',
+            'accuracy' => 5.0,
+            'reversible' => true,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10137',
+            'name' => 'PSAD56 to SIRGAS-Chile 2021 (3)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4248',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::20041',
+            'accuracy' => 5.0,
+            'reversible' => true,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19976',
             'name' => 'ICN Regional',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4248',
@@ -941,6 +973,14 @@ class CRSTransformationsSouthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8036',
             'accuracy' => 0,
+            'reversible' => true,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10138',
+            'name' => 'SAD69 to SIRGAS-Chile 2021 (4)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4618',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::20041',
+            'accuracy' => 5.0,
             'reversible' => true,
         ],
         [

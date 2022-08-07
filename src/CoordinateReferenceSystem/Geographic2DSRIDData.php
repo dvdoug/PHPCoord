@@ -3281,5 +3281,11 @@ trait Geographic2DSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1324',
             'extent_code' => ['4666'],
         ],
+        'urn:ogc:def:crs:EPSG::20041' => [
+            'name' => 'SIRGAS-Chile 2021',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
+            'datum' => 'urn:ogc:def:datum:EPSG::1327',
+            'extent_code' => ['1066'],
+        ],
     ];
 }

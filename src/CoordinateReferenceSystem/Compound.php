@@ -2563,10 +2563,16 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_SHMG2015_PLUS_SHVD2015_HEIGHT = 'urn:ogc:def:crs:EPSG::7956';
 
     /**
-     * SRGI2013 + INAGeoid2020 height
+     * SRGI2013 + INAGeoid2020 v1 height
      * Extent: Indonesia - onshore and offshore.
      */
-    public const EPSG_SRGI2013_PLUS_INAGEOID2020_HEIGHT = 'urn:ogc:def:crs:EPSG::9529';
+    public const EPSG_SRGI2013_PLUS_INAGEOID2020_V1_HEIGHT = 'urn:ogc:def:crs:EPSG::9529';
+
+    /**
+     * SRGI2013 + INAGeoid2020 v2 height
+     * Extent: Indonesia - onshore and offshore.
+     */
+    public const EPSG_SRGI2013_PLUS_INAGEOID2020_V2_HEIGHT = 'urn:ogc:def:crs:EPSG::20043';
 
     /**
      * SVY21 + SHD height
@@ -2743,6 +2749,11 @@ class Compound extends CoordinateReferenceSystem
      * @deprecated use EPSG_NAD83_CSRS_V6_PLUS_CGVD2013A_2010_HEIGHT instead
      */
     public const EPSG_NAD83_CSRS_V6_PLUS_CGVD2013_CGG2013A_HEIGHT = 'urn:ogc:def:crs:EPSG::9544';
+
+    /**
+     * @deprecated use EPSG_SRGI2013_PLUS_INAGEOID2020_V1_HEIGHT instead
+     */
+    public const EPSG_SRGI2013_PLUS_INAGEOID2020_HEIGHT = 'urn:ogc:def:crs:EPSG::9529';
 
     private static array $cachedObjects = [];
 

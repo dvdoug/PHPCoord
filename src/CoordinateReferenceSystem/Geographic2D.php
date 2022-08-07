@@ -3438,10 +3438,19 @@ class Geographic2D extends Geographic
      * SIRGAS-Chile 2016
      * Extent: Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y
      * Gomez.
-     * Densification within Chile of SIRGAS-CON at epoch 2016.00. Replaces SIRGAS-Chile 2013 (CRS code 9148) due to
-     * significant tectonic deformation.
+     * Densification within Chile of SIRGAS-CON at epoch 2016.00. Replaces SIRGAS-Chile 2013 (CRS code 9148), replaced
+     * by SIRGAS-Chile 2021 (CRS code 20041) due to significant tectonic deformation.
      */
     public const EPSG_SIRGAS_CHILE_2016 = 'urn:ogc:def:crs:EPSG::9153';
+
+    /**
+     * SIRGAS-Chile 2021
+     * Extent: Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y
+     * Gomez.
+     * Densification within Chile of SIRGAS-CON at epoch 2021.00. Replaces SIRGAS-Chile 2016 (CRS code 9153) due to
+     * significant tectonic deformation.
+     */
+    public const EPSG_SIRGAS_CHILE_2021 = 'urn:ogc:def:crs:EPSG::20041';
 
     /**
      * SIRGAS-ROU98

@@ -2813,7 +2813,23 @@ SIRGAS-Chile 2016
     CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_SIRGAS_CHILE_2016)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9152')
 
-Densification of SIRGAS-CON within Chile at epoch 2016.00. Replaces SIRGAS-Chile 2013 (CRS code 9147) due to significant tectonic deformation.
+Densification of SIRGAS-CON within Chile at epoch 2016.00. Replaces SIRGAS-Chile 2013 (CRS code 9147), replaced by SIRGAS-Chile 2021 (CRS code 20040) due to significant tectonic deformation.
+
+SIRGAS-Chile 2021
+-----------------
+
+| Used: Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez.
+
+.. code-block:: php
+
+    Geographic3D::fromSRID(Geographic3D::EPSG_SIRGAS_CHILE_2021)
+    Geographic3D::fromSRID('urn:ogc:def:crs:EPSG::20040')
+    Geographic::fromSRID(Geographic3D::EPSG_SIRGAS_CHILE_2021)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::20040')
+    CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_SIRGAS_CHILE_2021)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::20040')
+
+Densification of SIRGAS-CON within Chile at epoch 2021.00. Replaces SIRGAS-Chile 2016 (CRS code 9152) due to significant tectonic deformation.
 
 SIRGAS-ROU98
 ------------

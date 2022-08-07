@@ -1520,19 +1520,33 @@ IGN 2008 LD height
 
 Replaces IGN 1992 LD height (CRS code 5618).
 
-INAGeoid2020 height
--------------------
+INAGeoid2020 v1 height
+----------------------
 
 | Used: Indonesia - onshore and offshore.
 
 .. code-block:: php
 
-    Vertical::fromSRID(Vertical::EPSG_INAGEOID2020_HEIGHT)
+    Vertical::fromSRID(Vertical::EPSG_INAGEOID2020_V1_HEIGHT)
     Vertical::fromSRID('urn:ogc:def:crs:EPSG::9471')
-    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_INAGEOID2020_HEIGHT)
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_INAGEOID2020_V1_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9471')
 
-Physical height component of national vertical control network (JKVN). Orthometric heights.
+Physical height component of national vertical control network (JKVN). Orthometric heights. Replaced by INAGeoid2020 v2 height (code 20036).
+
+INAGeoid2020 v2 height
+----------------------
+
+| Used: Indonesia - onshore and offshore.
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_INAGEOID2020_V2_HEIGHT)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::20036')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_INAGEOID2020_V2_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::20036')
+
+Physical height component of national vertical control network (JKVN). Orthometric heights. Replaces INAGeoid2020 v1 height (CRS code 9471).
 
 ISH2004 height
 --------------

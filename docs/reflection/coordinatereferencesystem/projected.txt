@@ -58557,6 +58557,47 @@ SIRGAS-Chile 2016 / UTM zone 19S
 
 Replaces SIRGAS-Chile 2013 / UTM zone 19S (CRS code 9150).
 
+SIRGAS-Chile 2021 / UTM zone 12S
+--------------------------------
+
+| Used: Chile - Easter Island onshore and offshore - west of 108°W.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_SIRGAS_CHILE_2021_UTM_ZONE_12S)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::20042')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_SIRGAS_CHILE_2021_UTM_ZONE_12S)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::20042')
+
+
+SIRGAS-Chile 2021 / UTM zone 18S
+--------------------------------
+
+| Used: Chile - 78°W to 72°W, onshore and offshore.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_SIRGAS_CHILE_2021_UTM_ZONE_18S)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::20048')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_SIRGAS_CHILE_2021_UTM_ZONE_18S)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::20048')
+
+Replaces SIRGAS-Chile 2021 / UTM zone 18S (CRS code 9154).
+
+SIRGAS-Chile 2021 / UTM zone 19S
+--------------------------------
+
+| Used: Chile - 72°W to 66°W, onshore and offshore.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_SIRGAS_CHILE_2021_UTM_ZONE_19S)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::20049')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_SIRGAS_CHILE_2021_UTM_ZONE_19S)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::20049')
+
+Replaces SIRGAS-Chile 2016 / UTM zone 19S (CRS code 9155).
+
 SIRGAS-ROU98 / UTM zone 21S
 ---------------------------
 

@@ -4705,17 +4705,30 @@ SHMG2015 + SHVD2015 height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::7956')
 
 
-SRGI2013 + INAGeoid2020 height
-------------------------------
+SRGI2013 + INAGeoid2020 v1 height
+---------------------------------
 
 | Used: Indonesia - onshore and offshore.
 
 .. code-block:: php
 
-    Compound::fromSRID(Compound::EPSG_SRGI2013_PLUS_INAGEOID2020_HEIGHT)
+    Compound::fromSRID(Compound::EPSG_SRGI2013_PLUS_INAGEOID2020_V1_HEIGHT)
     Compound::fromSRID('urn:ogc:def:crs:EPSG::9529')
-    CoordinateReferenceSystem::fromSRID(Compound::EPSG_SRGI2013_PLUS_INAGEOID2020_HEIGHT)
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_SRGI2013_PLUS_INAGEOID2020_V1_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9529')
+
+
+SRGI2013 + INAGeoid2020 v2 height
+---------------------------------
+
+| Used: Indonesia - onshore and offshore.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_SRGI2013_PLUS_INAGEOID2020_V2_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::20043')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_SRGI2013_PLUS_INAGEOID2020_V2_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::20043')
 
 
 SVY21 + SHD height

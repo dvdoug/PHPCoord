@@ -6,7 +6,7 @@
 ### Added
 - Support for 3D projected coordinates
 ### Changed
-- Updates to data for ITRF, WGS84, Australia, Belgium, Canada, France, Germany, Iceland, Ireland, Japan, Luxembourg, Norway, North Macedonia, UK and USA
+- Updates to data for ITRF, WGS84, Australia, Belgium, Canada, France, Germany, Iceland, Indonesia, Ireland, Japan, Luxembourg, Norway, North Macedonia, UK and USA
 
 ## [5.0.1] - 2022-01-29
 ### Fixed

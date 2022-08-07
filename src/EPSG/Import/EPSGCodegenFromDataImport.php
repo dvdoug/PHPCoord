@@ -543,6 +543,8 @@ class EPSGCodegenFromDataImport
         9305, // GTX INAGEOID20.gtx
         9375, // INADEFORM v3_dm_grd01_xyz.dat
         9629, // GTX INAGEOID20.gtx
+        10144, // GTX INAGEOID2020v2.gtx
+        10145, // GTX INAGEOID2020v2.gtx
         5626, // KMS fehmarn_geoid10.gri
         9619, // KMS fehmarn_geoid10.gri
         9598, // KMS gr2000g.gri
@@ -971,6 +973,7 @@ class EPSGCodegenFromDataImport
                 Datum::EPSG_LUXEMBOURG_REFERENCE_FRAME => ['Luxembourg 1930'],
                 Datum::EPSG_NIVELLEMENT_GENERAL_DU_LUXEMBOURG_1995 => ['Nivellement General du Luxembourg'],
                 Datum::EPSG_CANADIAN_GEODETIC_VERTICAL_DATUM_OF_2013_CGG2013A_EPOCH_2010 => ['Canadian Geodetic Vertical Datum of 2013 (CGG2013a)'],
+                Datum::EPSG_INDONESIAN_GEOID_2020_VERSION_1 => ['Indonesian Geoid 2020'],
             ]
         );
         $this->codeGen->updateDocs(Datum::class, $data);
@@ -1221,6 +1224,7 @@ class EPSGCodegenFromDataImport
                 Compound::EPSG_NAD83_CSRS_PLUS_CGVD2013_CGG2013_HEIGHT => ['NAD83(CSRS) + CGVD2013 height'],
                 Compound::EPSG_NAD83_CSRS_UTM_ZONE_15N_PLUS_CGVD2013A_2010_HEIGHT => ['NAD83(CSRS) / UTM zone 15N + CGVD2013a height'],
                 Compound::EPSG_NAD83_CSRS_V6_PLUS_CGVD2013A_2010_HEIGHT => ['NAD83(CSRS)v6 + CGVD2013(CGG2013a) height'],
+                Compound::EPSG_SRGI2013_PLUS_INAGEOID2020_V1_HEIGHT => ['SRGI2013 + INAGeoid2020 height'],
             ]
         );
         $this->codeGen->updateDocs(Compound::class, $data);
@@ -1454,6 +1458,7 @@ class EPSGCodegenFromDataImport
             [
                 Vertical::EPSG_NG95_HEIGHT => ['NG-L height'],
                 Vertical::EPSG_CGVD2013A_2010_HEIGHT => ['CGVD2013(CGG2013a) height'],
+                Vertical::EPSG_INAGEOID2020_V1_HEIGHT => ['INAGeoid2020 height'],
             ]
         );
         $this->codeGen->updateDocs(Vertical::class, $data);

@@ -9674,6 +9674,31 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9807',
             'extent_code' => ['2155'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::10134' => [
+            'name' => 'SIRGAS-Chile 2021 to ITRF2014 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1065',
+            'extent_code' => ['1066'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10135' => [
+            'name' => 'PSAD56 to SIRGAS-Chile 2021 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::9603',
+            'extent_code' => ['4231'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10136' => [
+            'name' => 'PSAD56 to SIRGAS-Chile 2021 (2)',
+            'method' => 'urn:ogc:def:method:EPSG::9603',
+            'extent_code' => ['4222'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10137' => [
+            'name' => 'PSAD56 to SIRGAS-Chile 2021 (3)',
+            'method' => 'urn:ogc:def:method:EPSG::9603',
+            'extent_code' => ['4221'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10138' => [
+            'name' => 'SAD69 to SIRGAS-Chile 2021 (4)',
+            'method' => 'urn:ogc:def:method:EPSG::9603',
+            'extent_code' => ['2805'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::10139' => [
             'name' => 'ITRF88 to ITRF89 (2)',
             'method' => 'urn:ogc:def:method:EPSG::1033',

@@ -1446,7 +1446,7 @@ trait VerticalSRIDData
             'extent_code' => ['4177'],
         ],
         'urn:ogc:def:crs:EPSG::9471' => [
-            'name' => 'INAGeoid2020 height',
+            'name' => 'INAGeoid2020 v1 height',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
             'datum' => 'urn:ogc:def:datum:EPSG::1294',
             'extent_code' => ['1122'],
@@ -1540,6 +1540,12 @@ trait VerticalSRIDData
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
             'datum' => 'urn:ogc:def:datum:EPSG::1326',
             'extent_code' => ['1061'],
+        ],
+        'urn:ogc:def:crs:EPSG::20036' => [
+            'name' => 'INAGeoid2020 v2 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1328',
+            'extent_code' => ['1122'],
         ],
     ];
 }

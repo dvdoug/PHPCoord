@@ -2896,12 +2896,22 @@ class Datum
     public const EPSG_INDONESIAN_DATUM_1974 = 'urn:ogc:def:datum:EPSG::6238';
 
     /**
-     * Indonesian Geoid 2020
+     * Indonesian Geoid 2020 version 1
      * Type: vertical
      * Extent: Indonesia - onshore and offshore.
-     * Defined by INAGeoid20 gravimetric geoid model applied to SRGI2013.
+     * Defined by INAGeoid2020 gravimetric geoid model v1 applied to SRGI2013.
+     * Uses gravity data observed to 2019 fitted to control points on Java and Bali.
      */
-    public const EPSG_INDONESIAN_GEOID_2020 = 'urn:ogc:def:datum:EPSG::1294';
+    public const EPSG_INDONESIAN_GEOID_2020_VERSION_1 = 'urn:ogc:def:datum:EPSG::1294';
+
+    /**
+     * Indonesian Geoid 2020 version 2
+     * Type: vertical
+     * Extent: Indonesia - onshore and offshore.
+     * Defined by INAGeoid2020 gravimetric geoid model v2 applied to SRGI2013.
+     * Uses gravity data observed to 2021 fitted to tide gauge benchmarks across Indonesia.
+     */
+    public const EPSG_INDONESIAN_GEOID_2020_VERSION_2 = 'urn:ogc:def:datum:EPSG::1328';
 
     /**
      * Instantaneous Water Level
@@ -6650,9 +6660,23 @@ class Datum
      * Extent: Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y
      * Gomez.
      * IGb08 at epoch 2016.00. Densification of SIRGAS-CON network in Chile, consisting of 200 monumented stations.
-     * Replaces SIRGAS-Chile realization 3 epoch 2013, following significant tectonic deformation.
+     * Replaces SIRGAS-Chile realization 3 epoch 2013. Replaced by SIRGAS-Chile realization 5 epoch 2021 due to
+     * significant tectonic deformation.
      */
     public const EPSG_SIRGAS_CHILE_REALIZATION_4_EPOCH_2016 = 'urn:ogc:def:datum:EPSG::1253';
+
+    /**
+     * SIRGAS-Chile realization 5 epoch 2021
+     * Type: geodetic
+     * Extent: Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y
+     * Gomez.
+     * Densification of SIRGAS-CON network in Chile, consisting of 97 stations forming the active CORS network (RGN)
+     * referenced to IGb2014 (ITRF2014) at epoch 2021.00. Passive stations used in previous realizations have been
+     * removed from this solution.
+     * Replaces SIRGAS-Chile realization 4 epoch 2016 from August 2021 due to significant tectonic deformation. 24
+     * additional active CORS used in this realization compared to that of 2016.
+     */
+    public const EPSG_SIRGAS_CHILE_REALIZATION_5_EPOCH_2021 = 'urn:ogc:def:datum:EPSG::1327';
 
     /**
      * SIRGAS-ROU98
@@ -7856,6 +7880,11 @@ class Datum
      * @deprecated use EPSG_CANADIAN_GEODETIC_VERTICAL_DATUM_OF_2013_CGG2013A_EPOCH_2010 instead
      */
     public const EPSG_CANADIAN_GEODETIC_VERTICAL_DATUM_OF_2013_CGG2013A = 'urn:ogc:def:datum:EPSG::1256';
+
+    /**
+     * @deprecated use EPSG_INDONESIAN_GEOID_2020_VERSION_1 instead
+     */
+    public const EPSG_INDONESIAN_GEOID_2020 = 'urn:ogc:def:datum:EPSG::1294';
 
     protected static array $sridData = [
         'urn:ogc:def:datum:EPSG::1024' => [
@@ -9974,7 +10003,7 @@ class Datum
             'frame_reference_epoch' => 2012.0,
         ],
         'urn:ogc:def:datum:EPSG::1294' => [
-            'name' => 'Indonesian Geoid 2020',
+            'name' => 'Indonesian Geoid 2020 version 1',
             'type' => 'vertical',
             'ellipsoid' => null,
             'prime_meridian' => null,
@@ -10231,6 +10260,22 @@ class Datum
         ],
         'urn:ogc:def:datum:EPSG::1326' => [
             'name' => 'Canadian Geodetic Vertical Datum of 2013 (CGG2013a) epoch 1997',
+            'type' => 'vertical',
+            'ellipsoid' => null,
+            'prime_meridian' => null,
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
+        'urn:ogc:def:datum:EPSG::1327' => [
+            'name' => 'SIRGAS-Chile realization 5 epoch 2021',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
+        'urn:ogc:def:datum:EPSG::1328' => [
+            'name' => 'Indonesian Geoid 2020 version 2',
             'type' => 'vertical',
             'ellipsoid' => null,
             'prime_meridian' => null,

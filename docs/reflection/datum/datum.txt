@@ -4201,18 +4201,35 @@ Fundamental point: Padang. Latitude: 0°56'38.414"S, longitude: 100°22' 8.804"E
 
 Replaced by DGN95.
 
-Indonesian Geoid 2020
----------------------
+Indonesian Geoid 2020 version 1
+-------------------------------
 
 | Type: Vertical
 | Used: Indonesia - onshore and offshore.
 
 .. code-block:: php
 
-    Datum::fromSRID(Datum::EPSG_INDONESIAN_GEOID_2020)
+    Datum::fromSRID(Datum::EPSG_INDONESIAN_GEOID_2020_VERSION_1)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1294')
 
-Defined by INAGeoid20 gravimetric geoid model applied to SRGI2013.
+Defined by INAGeoid2020 gravimetric geoid model v1 applied to SRGI2013.
+
+Uses gravity data observed to 2019 fitted to control points on Java and Bali.
+
+Indonesian Geoid 2020 version 2
+-------------------------------
+
+| Type: Vertical
+| Used: Indonesia - onshore and offshore.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_INDONESIAN_GEOID_2020_VERSION_2)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1328')
+
+Defined by INAGeoid2020 gravimetric geoid model v2 applied to SRGI2013.
+
+Uses gravity data observed to 2021 fitted to tide gauge benchmarks across Indonesia.
 
 Instantaneous Water Level
 -------------------------
@@ -9665,7 +9682,22 @@ SIRGAS-Chile realization 4 epoch 2016
 
 IGb08 at epoch 2016.00. Densification of SIRGAS-CON network in Chile, consisting of 200 monumented stations.
 
-Replaces SIRGAS-Chile realization 3 epoch 2013, following significant tectonic deformation.
+Replaces SIRGAS-Chile realization 3 epoch 2013. Replaced by SIRGAS-Chile realization 5 epoch 2021 due to significant tectonic deformation.
+
+SIRGAS-Chile realization 5 epoch 2021
+-------------------------------------
+
+| Type: Geodetic
+| Used: Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_SIRGAS_CHILE_REALIZATION_5_EPOCH_2021)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1327')
+
+Densification of SIRGAS-CON network in Chile, consisting of 97 stations forming the active CORS network (RGN) referenced to IGb2014 (ITRF2014) at epoch 2021.00. Passive stations used in previous realizations have been removed from this solution.
+
+Replaces SIRGAS-Chile realization 4 epoch 2016 from August 2021 due to significant tectonic deformation. 24 additional active CORS used in this realization compared to that of 2016.
 
 SIRGAS-ROU98
 ------------

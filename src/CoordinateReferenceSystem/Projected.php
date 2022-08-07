@@ -33691,6 +33691,26 @@ class Projected extends CoordinateReferenceSystem
     public const EPSG_SIRGAS_CHILE_2016_UTM_ZONE_19S = 'urn:ogc:def:crs:EPSG::9155';
 
     /**
+     * SIRGAS-Chile 2021 / UTM zone 12S
+     * Extent: Chile - Easter Island onshore and offshore - west of 108°W.
+     */
+    public const EPSG_SIRGAS_CHILE_2021_UTM_ZONE_12S = 'urn:ogc:def:crs:EPSG::20042';
+
+    /**
+     * SIRGAS-Chile 2021 / UTM zone 18S
+     * Extent: Chile - 78°W to 72°W, onshore and offshore.
+     * Replaces SIRGAS-Chile 2021 / UTM zone 18S (CRS code 9154).
+     */
+    public const EPSG_SIRGAS_CHILE_2021_UTM_ZONE_18S = 'urn:ogc:def:crs:EPSG::20048';
+
+    /**
+     * SIRGAS-Chile 2021 / UTM zone 19S
+     * Extent: Chile - 72°W to 66°W, onshore and offshore.
+     * Replaces SIRGAS-Chile 2016 / UTM zone 19S (CRS code 9155).
+     */
+    public const EPSG_SIRGAS_CHILE_2021_UTM_ZONE_19S = 'urn:ogc:def:crs:EPSG::20049';
+
+    /**
      * SIRGAS-ROU98 / UTM zone 21S
      * Extent: Uruguay - west of 54°W, onshore and offshore.
      */

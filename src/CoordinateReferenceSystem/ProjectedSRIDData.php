@@ -25077,6 +25077,27 @@ trait ProjectedSRIDData
             'deriving_conversion' => 'urn:ogc:def:coordinateOperation:EPSG::16232',
             'extent_code' => ['1791'],
         ],
+        'urn:ogc:def:crs:EPSG::20042' => [
+            'name' => 'SIRGAS-Chile 2021 / UTM zone 12S',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::4400',
+            'base_crs' => 'urn:ogc:def:crs:EPSG::20041',
+            'deriving_conversion' => 'urn:ogc:def:coordinateOperation:EPSG::16112',
+            'extent_code' => ['4667'],
+        ],
+        'urn:ogc:def:crs:EPSG::20048' => [
+            'name' => 'SIRGAS-Chile 2021 / UTM zone 18S',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::4400',
+            'base_crs' => 'urn:ogc:def:crs:EPSG::20041',
+            'deriving_conversion' => 'urn:ogc:def:coordinateOperation:EPSG::16118',
+            'extent_code' => ['3829'],
+        ],
+        'urn:ogc:def:crs:EPSG::20049' => [
+            'name' => 'SIRGAS-Chile 2021 / UTM zone 19S',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::4400',
+            'base_crs' => 'urn:ogc:def:crs:EPSG::20041',
+            'deriving_conversion' => 'urn:ogc:def:coordinateOperation:EPSG::16119',
+            'extent_code' => ['3811'],
+        ],
         'urn:ogc:def:crs:EPSG::20135' => [
             'name' => 'Adindan / UTM zone 35N',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::4400',

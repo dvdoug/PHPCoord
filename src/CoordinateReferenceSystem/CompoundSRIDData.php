@@ -2272,7 +2272,7 @@ trait CompoundSRIDData
             'extent_code' => ['1175'],
         ],
         'urn:ogc:def:crs:EPSG::9529' => [
-            'name' => 'SRGI2013 + INAGeoid2020 height',
+            'name' => 'SRGI2013 + INAGeoid2020 v1 height',
             'horizontal_crs' => 'urn:ogc:def:crs:EPSG::9470',
             'horizontal_crs_type' => 'geographic 2D',
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9471',
@@ -2690,6 +2690,13 @@ trait CompoundSRIDData
             'horizontal_crs_type' => 'geographic 2D',
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::20035',
             'extent_code' => ['1061'],
+        ],
+        'urn:ogc:def:crs:EPSG::20043' => [
+            'name' => 'SRGI2013 + INAGeoid2020 v2 height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::9470',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::20036',
+            'extent_code' => ['1122'],
         ],
     ];
 }

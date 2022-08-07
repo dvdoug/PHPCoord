@@ -844,11 +844,20 @@ class Vertical extends CoordinateReferenceSystem
     public const EPSG_IGN_2008_LD_HEIGHT = 'urn:ogc:def:crs:EPSG::9130';
 
     /**
-     * INAGeoid2020 height
+     * INAGeoid2020 v1 height
      * Extent: Indonesia - onshore and offshore.
-     * Physical height component of national vertical control network (JKVN). Orthometric heights.
+     * Physical height component of national vertical control network (JKVN). Orthometric heights. Replaced by
+     * INAGeoid2020 v2 height (code 20036).
      */
-    public const EPSG_INAGEOID2020_HEIGHT = 'urn:ogc:def:crs:EPSG::9471';
+    public const EPSG_INAGEOID2020_V1_HEIGHT = 'urn:ogc:def:crs:EPSG::9471';
+
+    /**
+     * INAGeoid2020 v2 height
+     * Extent: Indonesia - onshore and offshore.
+     * Physical height component of national vertical control network (JKVN). Orthometric heights. Replaces
+     * INAGeoid2020 v1 height (CRS code 9471).
+     */
+    public const EPSG_INAGEOID2020_V2_HEIGHT = 'urn:ogc:def:crs:EPSG::20036';
 
     /**
      * ISH2004 height
@@ -1861,6 +1870,11 @@ class Vertical extends CoordinateReferenceSystem
      * @deprecated use EPSG_CGVD2013A_2010_HEIGHT instead
      */
     public const EPSG_CGVD2013_CGG2013A_HEIGHT = 'urn:ogc:def:crs:EPSG::9245';
+
+    /**
+     * @deprecated use EPSG_INAGEOID2020_V1_HEIGHT instead
+     */
+    public const EPSG_INAGEOID2020_HEIGHT = 'urn:ogc:def:crs:EPSG::9471';
 
     private static array $cachedObjects = [];
 
