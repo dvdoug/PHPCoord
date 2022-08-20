@@ -423,7 +423,7 @@ class GIGSTest extends TestCase
 
         foreach (Length::getSupportedSRIDs() as $srid => $name) {
             if ($name === $unitName) {
-                Ellipsoid::registerCustomEllipsoid('urn:ogc:def:ellipsoid:GIGS::' . $gigsCode, $gigsName, (float) $semiMajorAxis, (float) $semiMinorAxis, $srid);
+                Ellipsoid::registerCustomEllipsoid('urn:ogc:def:ellipsoid:GIGS::' . $gigsCode, $gigsName, Length::makeUnit((float) $semiMajorAxis, $srid), Length::makeUnit((float) $semiMinorAxis, $srid));
                 break;
             }
         }

@@ -723,9 +723,12 @@ class Ellipsoid
         if (!isset(self::$cachedObjects[$srid])) {
             $data = static::$sridData[$srid];
 
+            $semiMajorAxis = $data['semi_major_axis'] instanceof Length ? $data['semi_major_axis'] : Length::makeUnit($data['semi_major_axis'], $data['uom']);
+            $semiMinorAxis = $data['semi_minor_axis'] instanceof Length ? $data['semi_minor_axis'] : Length::makeUnit($data['semi_minor_axis'], $data['uom']);
+
             self::$cachedObjects[$srid] = new static(
-                Length::makeUnit($data['semi_major_axis'], $data['uom']),
-                Length::makeUnit($data['semi_minor_axis'], $data['uom']),
+                $semiMajorAxis,
+                $semiMinorAxis,
                 $data['name'],
                 $srid,
             );
@@ -744,8 +747,8 @@ class Ellipsoid
         return $supported;
     }
 
-    public static function registerCustomEllipsoid(string $srid, string $name, float $semiMajorAxis, float $semiMinorAxis, string $uomSrid): void
+    public static function registerCustomEllipsoid(string $srid, string $name, Length $semiMajorAxis, Length $semiMinorAxis): void
     {
-        self::$sridData[$srid] = ['name' => $name, 'semi_major_axis' => $semiMajorAxis, 'semi_minor_axis' => $semiMinorAxis, 'uom' => $uomSrid];
+        self::$sridData[$srid] = ['name' => $name, 'semi_major_axis' => $semiMajorAxis, 'semi_minor_axis' => $semiMinorAxis];
     }
 }
