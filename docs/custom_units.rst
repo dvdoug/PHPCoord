@@ -29,7 +29,7 @@ Then register it, by calling the appropriate registration function:
  - ``PHPCoord\UnitOfMeasure\Scale\Scale::registerCustomUnit(string $srid, string $name, string $implementingClassFQCN)``
  - ``PHPCoord\UnitOfMeasure\Time\Time::registerCustomUnit(string $srid, string $name, string $implementingClassFQCN)``
 
-Once registered, your custom unit can be used exactly like any other unit built into PHPCoord.
+Once registered, your custom unit can be used exactly like any other built into PHPCoord.
 
 .. tip::
     A SRID (spatial reference identifier), is a just a unique string that can be used to identify the specific unit

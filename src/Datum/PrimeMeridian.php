@@ -208,7 +208,11 @@ class PrimeMeridian
         if (!isset(self::$cachedObjects[$srid])) {
             $data = static::$sridData[$srid];
 
-            self::$cachedObjects[$srid] = new static($data['name'], Angle::makeUnit($data['greenwich_longitude'], $data['uom']), $srid);
+            if ($data['greenwich_longitude'] instanceof Angle) {
+                self::$cachedObjects[$srid] = new static($data['name'], $data['greenwich_longitude'], $srid);
+            } else {
+                self::$cachedObjects[$srid] = new static($data['name'], Angle::makeUnit($data['greenwich_longitude'], $data['uom']), $srid);
+            }
         }
 
         return self::$cachedObjects[$srid];
@@ -224,8 +228,8 @@ class PrimeMeridian
         return $supported;
     }
 
-    public static function registerCustomMeridian(string $srid, string $name, float|string $longitudeFromGreenwich, string $uomSrid): void
+    public static function registerCustomMeridian(string $srid, string $name, Angle $longitudeFromGreenwich): void
     {
-        self::$sridData[$srid] = ['name' => $name, 'greenwich_longitude' => $longitudeFromGreenwich, 'uom' => $uomSrid];
+        self::$sridData[$srid] = ['name' => $name, 'greenwich_longitude' => $longitudeFromGreenwich];
     }
 }

@@ -452,7 +452,7 @@ class GIGSTest extends TestCase
 
         foreach (Angle::getSupportedSRIDs() as $srid => $name) {
             if ($name === $unitName) {
-                PrimeMeridian::registerCustomMeridian('urn:ogc:def:meridian:GIGS::' . $gigsCode, $gigsName, $longitudeFromGreenwich, $srid);
+                PrimeMeridian::registerCustomMeridian('urn:ogc:def:meridian:GIGS::' . $gigsCode, $gigsName, Angle::makeUnit($longitudeFromGreenwich, $srid));
                 break;
             }
         }

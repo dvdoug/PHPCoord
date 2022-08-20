@@ -48,4 +48,5 @@ See `license.txt`_ for full details.
     :maxdepth: 1
     :caption: Custom
 
+    custom_prime_meridians
     custom_units
