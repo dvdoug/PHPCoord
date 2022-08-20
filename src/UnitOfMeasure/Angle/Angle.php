@@ -181,6 +181,8 @@ abstract class Angle implements UnitOfMeasure
 
     private static array $supportedCache = [];
 
+    abstract public function __construct(float $angle);
+
     abstract public function asRadians(): Radian;
 
     public function asDegrees(): Degree

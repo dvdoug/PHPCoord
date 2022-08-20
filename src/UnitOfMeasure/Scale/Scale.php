@@ -58,6 +58,8 @@ abstract class Scale implements UnitOfMeasure
 
     private static array $supportedCache = [];
 
+    abstract public function __construct(float $scale);
+
     abstract public function asUnity(): Unity;
 
     public function add(self $unit): self

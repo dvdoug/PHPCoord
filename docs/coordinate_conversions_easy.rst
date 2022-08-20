@@ -19,7 +19,7 @@ Examples:
     use PHPCoord\CoordinateReferenceSystem\Geographic2D;
     use PHPCoord\CoordinateReferenceSystem\Projected;
     use PHPCoord\GeographicPoint;
-    use PHPCoord\UnitOfMeasure\Length\Degree;
+    use PHPCoord\UnitOfMeasure\Angle\Degree;
 
     // Converting from NAD83 to Florida State Plane
     $from = GeographicPoint::create(

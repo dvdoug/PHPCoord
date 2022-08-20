@@ -148,7 +148,7 @@ exists.
 
 .. warning::
     When taking in coordinates from an external system, always, always, always check the **unit**, and the **order** of
-    a numbers if they are not already clearly labelled.
+    the numbers if they are not already clearly labelled.
 
 Geographic
 """"""""""

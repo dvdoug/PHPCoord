@@ -210,6 +210,8 @@ abstract class Length implements UnitOfMeasure
 
     private static array $supportedCache = [];
 
+    abstract public function __construct(float $length);
+
     abstract public function asMetres(): Metre;
 
     public function add(self $unit): self

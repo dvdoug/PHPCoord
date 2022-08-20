@@ -25,16 +25,27 @@ See `license.txt`_ for full details.
 
 .. toctree::
     :maxdepth: 1
-    :caption: Contents
+    :caption: Getting started
 
     installation
     primer
     creating_points
     coordinate_conversions
     distance_calculations
+
+.. toctree::
+    :maxdepth: 1
+    :caption: Built-in
+
     builtin_coordinate_reference_systems
     builtin_units
     builtin_datums
     builtin_ellipsoids
     builtin_prime_meridians
     builtin_coordinate_systems
+
+.. toctree::
+    :maxdepth: 1
+    :caption: Custom
+
+    custom_units

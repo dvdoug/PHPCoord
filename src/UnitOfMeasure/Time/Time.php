@@ -28,6 +28,8 @@ abstract class Time implements UnitOfMeasure
 
     private static array $supportedCache = [];
 
+    abstract public function __construct(float $time);
+
     abstract public function asYears(): Year;
 
     public function add(self $unit): self
