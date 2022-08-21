@@ -2,7 +2,9 @@ Custom prime meridians
 ======================
 
 To make use of a custom prime meridian, all you need to do is register it. Once registered, your custom meridian can be
-used exactly like any other built into PHPCoord.
+used exactly like any other built into PHPCoord. To register, call:
+
+``PHPCoord\Datum\PrimeMeridian::registerCustomMeridian(string $srid, string $name, Angle $longitudeFromGreenwich)``
 
 .. code-block:: php
 

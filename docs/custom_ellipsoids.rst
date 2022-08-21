@@ -2,7 +2,9 @@ Custom ellipsoids
 =================
 
 To make use of a custom ellipsoid, all you need to do is register it. Once registered, your custom ellipsoid can be
-used exactly like any other built into PHPCoord.
+used exactly like any other built into PHPCoord. To register, call:
+
+``PHPCoord\Datum\Ellipsoid::registerCustomEllipsoid(string $srid, string $name, Length $semiMajorAxis, Length $semiMinorAxis)``
 
 .. code-block:: php
 

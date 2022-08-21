@@ -8,6 +8,8 @@ declare(strict_types=1);
 
 namespace PHPCoord\Datum;
 
+use DateTimeInterface;
+use PHPCoord\UnitOfMeasure\Time\Year;
 use function end;
 
 use PHPCoord\Exception\UnknownDatumException;
@@ -14422,7 +14424,7 @@ class Datum
 
     protected ?PrimeMeridian $primeMeridian;
 
-    protected ?float $frameReferenceEpoch;
+    protected ?DateTimeInterface $frameReferenceEpoch;
 
     protected string $name;
 
@@ -14432,7 +14434,7 @@ class Datum
         string $datumType,
         ?Ellipsoid $ellipsoid,
         ?PrimeMeridian $primeMeridian,
-        ?float $frameReferenceEpoch,
+        ?DateTimeInterface $frameReferenceEpoch,
         string $name = '',
         string $srid = ''
     ) {
@@ -14459,7 +14461,7 @@ class Datum
         return $this->primeMeridian;
     }
 
-    public function getFrameReferenceEpoch(): ?float
+    public function getFrameReferenceEpoch(): ?DateTimeInterface
     {
         return $this->frameReferenceEpoch;
     }
@@ -14482,6 +14484,12 @@ class Datum
 
         if (!isset(self::$cachedObjects[$srid])) {
             $data = static::$sridData[$srid];
+            $frameReferenceEpoch = null;
+            if ($data['frame_reference_epoch'] instanceof DateTimeInterface) {
+                $frameReferenceEpoch = $data['frame_reference_epoch'];
+            } elseif ($data['frame_reference_epoch']) {
+                $frameReferenceEpoch = (new Year($data['frame_reference_epoch']))->asDateTime();
+            }
 
             if ($data['type'] === self::DATUM_TYPE_ENSEMBLE) { // if ensemble, use latest realisation for data
                 $latest = static::$sridData[end(static::$sridData[$srid]['ensemble'])];
@@ -14489,7 +14497,7 @@ class Datum
                     $data['type'],
                     $latest['ellipsoid'] ? Ellipsoid::fromSRID($latest['ellipsoid']) : null,
                     $latest['prime_meridian'] ? PrimeMeridian::fromSRID($latest['prime_meridian']) : null,
-                    $data['frame_reference_epoch'],
+                    $frameReferenceEpoch,
                     $data['name'],
                     $srid,
                 );
@@ -14498,7 +14506,7 @@ class Datum
                     $data['type'],
                     Ellipsoid::fromSRID($data['ellipsoid']),
                     PrimeMeridian::fromSRID($data['prime_meridian']),
-                    $data['frame_reference_epoch'],
+                    $frameReferenceEpoch,
                     $data['name'],
                     $srid,
                 );
@@ -14507,7 +14515,7 @@ class Datum
                     $data['type'],
                     null,
                     null,
-                    $data['frame_reference_epoch'],
+                    $frameReferenceEpoch,
                     $data['name'],
                     $srid,
                 );
@@ -14527,7 +14535,7 @@ class Datum
         return $supported;
     }
 
-    public static function registerCustomDatum(string $srid, string $name, string $type, ?string $ellipsoidSrid, ?string $primeMeridianSrid, ?float $frameReferenceEpoch): void
+    public static function registerCustomDatum(string $srid, string $name, string $type, ?string $ellipsoidSrid, ?string $primeMeridianSrid, ?DateTimeInterface $frameReferenceEpoch): void
     {
         self::$sridData[$srid] = ['name' => $name, 'type' => $type, 'ellipsoid' => $ellipsoidSrid, 'prime_meridian' => $primeMeridianSrid, 'frame_reference_epoch' => $frameReferenceEpoch];
     }

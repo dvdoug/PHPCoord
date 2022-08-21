@@ -54,7 +54,7 @@ class DatumTest extends TestCase
     public function testWGS84G1762(): void
     {
         $object = Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_G1762);
-        self::assertEquals(2005, $object->getFrameReferenceEpoch());
+        self::assertEquals('2005-01-01', $object->getFrameReferenceEpoch()->format('Y-m-d'));
     }
 
     public function testGetFromEnsemble(): void
