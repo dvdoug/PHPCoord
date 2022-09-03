@@ -28,7 +28,6 @@ use PHPCoord\UnitOfMeasure\Time\Year;
 
 use function abs;
 use function array_column;
-use function array_map;
 use function array_shift;
 use function array_sum;
 use function array_unique;
@@ -36,7 +35,6 @@ use function assert;
 use function class_exists;
 use function count;
 use function in_array;
-use function sqrt;
 use function usort;
 
 /**
@@ -177,18 +175,7 @@ trait AutoConversion
 
                 $paths = [];
                 foreach ($fullPaths as $fullPath) {
-                    // EPSG calculate concat transform accuracy as the square root of the sum of the squares, keep same
-                    $paths[] = [
-                        'path' => $fullPath,
-                        'accuracy' => sqrt(
-                            array_sum(
-                                array_map(
-                                    fn ($accuracy) => $accuracy ** 2,
-                                    array_column($fullPath, 'accuracy')
-                                )
-                            )
-                        ),
-                    ];
+                    $paths[] = ['path' => $fullPath, 'accuracy' => array_sum(array_column($fullPath, 'accuracy'))];
                 }
 
                 $previousSimplePaths = $simplePaths;
