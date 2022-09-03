@@ -8,20 +8,7 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateOperation;
 
-use function abs;
-use function array_column;
-use function array_map;
-use function array_shift;
-use function array_sum;
-use function array_unique;
-use function assert;
-use function class_exists;
-use function count;
-
 use DateTimeImmutable;
-
-use function in_array;
-
 use PHPCoord\CompoundPoint;
 use PHPCoord\CoordinateReferenceSystem\Compound;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
@@ -39,6 +26,16 @@ use PHPCoord\Point;
 use PHPCoord\ProjectedPoint;
 use PHPCoord\UnitOfMeasure\Time\Year;
 
+use function abs;
+use function array_column;
+use function array_map;
+use function array_shift;
+use function array_sum;
+use function array_unique;
+use function assert;
+use function class_exists;
+use function count;
+use function in_array;
 use function sqrt;
 use function usort;
 

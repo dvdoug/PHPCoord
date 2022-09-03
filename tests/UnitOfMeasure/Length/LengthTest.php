@@ -8,10 +8,10 @@ declare(strict_types=1);
 
 namespace PHPCoord\UnitOfMeasure\Length;
 
-use function count;
-
 use PHPCoord\Exception\UnknownUnitOfMeasureException;
 use PHPUnit\Framework\TestCase;
+
+use function count;
 
 class LengthTest extends TestCase
 {

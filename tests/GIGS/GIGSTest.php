@@ -8,18 +8,7 @@ declare(strict_types=1);
 
 namespace PHPCoord\GIGS;
 
-use function array_filter;
-use function array_flip;
-use function array_map;
-use function class_exists;
-use function explode;
-
 use Generator;
-
-use function in_array;
-use function lcfirst;
-use function min;
-
 use PHPCoord\CoordinateOperation\CoordinateOperationMethods;
 use PHPCoord\CoordinateOperation\CoordinateOperations;
 use PHPCoord\CoordinateOperation\NTv2NAD27NAD83CSRS1997QuebecProvider;
@@ -48,11 +37,17 @@ use PHPCoord\UnitOfMeasure\Length\USSurveyFoot;
 use PHPCoord\UnitOfMeasure\Scale\Scale;
 use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
 use PHPUnit\Framework\TestCase;
-
-use function preg_match;
-
 use SplFileObject;
 
+use function array_filter;
+use function array_flip;
+use function array_map;
+use function class_exists;
+use function explode;
+use function in_array;
+use function lcfirst;
+use function min;
+use function preg_match;
 use function str_contains;
 use function str_replace;
 use function strlen;

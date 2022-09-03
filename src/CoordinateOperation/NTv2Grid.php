@@ -8,14 +8,11 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateOperation;
 
-use function assert;
-
 use PHPCoord\UnitOfMeasure\Angle\ArcSecond;
-
-use function round;
-
 use SplFileObject;
 
+use function assert;
+use function round;
 use function unpack;
 use function usort;
 

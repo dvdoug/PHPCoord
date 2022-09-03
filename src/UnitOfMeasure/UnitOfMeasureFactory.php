@@ -8,13 +8,13 @@ declare(strict_types=1);
 
 namespace PHPCoord\UnitOfMeasure;
 
-use function array_merge;
-
 use PHPCoord\Exception\UnknownUnitOfMeasureException;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Scale\Scale;
 use PHPCoord\UnitOfMeasure\Time\Time;
+
+use function array_merge;
 
 class UnitOfMeasureFactory
 {

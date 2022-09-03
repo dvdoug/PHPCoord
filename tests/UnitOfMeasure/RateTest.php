@@ -8,13 +8,13 @@ declare(strict_types=1);
 
 namespace PHPCoord\UnitOfMeasure;
 
-use function count;
-
 use PHPCoord\Exception\UnknownUnitOfMeasureException;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPCoord\UnitOfMeasure\Time\Time;
 use PHPCoord\UnitOfMeasure\Time\Year;
 use PHPUnit\Framework\TestCase;
+
+use function count;
 
 class RateTest extends TestCase
 {

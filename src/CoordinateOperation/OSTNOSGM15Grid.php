@@ -8,14 +8,14 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateOperation;
 
-use function abs;
-
 use PHPCoord\CoordinateReferenceSystem\Projected;
 use PHPCoord\CoordinateSystem\Cartesian;
 use PHPCoord\Datum\Datum;
 use PHPCoord\ProjectedPoint;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 use SplFileObject;
+
+use function abs;
 
 class OSTNOSGM15Grid extends Grid
 {

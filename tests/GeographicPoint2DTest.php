@@ -8,8 +8,6 @@ declare(strict_types=1);
 
 namespace PHPCoord;
 
-use function class_exists;
-
 use DateTime;
 use PHPCoord\CoordinateOperation\CoordinateOperations;
 use PHPCoord\CoordinateOperation\CRSTransformationsAfrica;
@@ -28,6 +26,8 @@ use PHPCoord\CoordinateReferenceSystem\Geographic3D;
 use PHPCoord\Geometry\BoundingArea;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPUnit\Framework\TestCase;
+
+use function class_exists;
 
 class GeographicPoint2DTest extends TestCase
 {

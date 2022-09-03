@@ -8,10 +8,10 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateSystem;
 
-use function count;
-
 use PHPCoord\Exception\UnknownCoordinateSystemException;
 use PHPUnit\Framework\TestCase;
+
+use function count;
 
 class CartesianTest extends TestCase
 {

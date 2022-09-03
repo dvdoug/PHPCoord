@@ -27,15 +27,16 @@ return $config->setRules(
         'yoda_style' => false,
         'phpdoc_trim_consecutive_blank_line_separation' => true,
         'no_superfluous_phpdoc_tags' => ['allow_mixed' => false],
-            'header_comment' => [
-                'location' => 'after_open',
-                'comment_type' => 'PHPDoc',
-                'separate' => 'none',
-                'header' => "PHPCoord.\n\n@author Doug Wright",
-            ],
-            'phpdoc_line_span' => true,
-            'phpdoc_to_comment' => false,
-        ]
+        'header_comment' => [
+            'location' => 'after_open',
+            'comment_type' => 'PHPDoc',
+            'separate' => 'none',
+            'header' => "PHPCoord.\n\n@author Doug Wright",
+        ],
+        'phpdoc_line_span' => true,
+        'phpdoc_to_comment' => false,
+        'ordered_imports' => ['imports_order' => ['class', 'function', 'const'], 'sort_algorithm' => 'none'],
+    ]
 )
     ->setRiskyAllowed(true)
     ->setFinder(

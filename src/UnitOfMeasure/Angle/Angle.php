@@ -8,10 +8,10 @@ declare(strict_types=1);
 
 namespace PHPCoord\UnitOfMeasure\Angle;
 
-use const M_PI;
-
 use PHPCoord\Exception\UnknownUnitOfMeasureException;
 use PHPCoord\UnitOfMeasure\UnitOfMeasure;
+
+use const M_PI;
 
 abstract class Angle implements UnitOfMeasure
 {

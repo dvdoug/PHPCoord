@@ -8,17 +8,6 @@ declare(strict_types=1);
 
 namespace PHPCoord\EPSG\Import;
 
-use function array_flip;
-use function array_reverse;
-use function dirname;
-use function fclose;
-use function file_get_contents;
-use function file_put_contents;
-use function fopen;
-use function fwrite;
-
-use const PHP_EOL;
-
 use PhpCsFixer\AbstractFixer;
 use PhpCsFixer\Config;
 use PhpCsFixer\Console\ConfigurationResolver;
@@ -31,12 +20,22 @@ use PhpParser\Parser\Php7;
 use ReflectionClass;
 use SplFileInfo;
 
+use function array_flip;
+use function array_reverse;
+use function dirname;
+use function fclose;
+use function file_get_contents;
+use function file_put_contents;
+use function fopen;
+use function fwrite;
 use function str_repeat;
 use function str_replace;
 use function strlen;
 use function strtolower;
 use function trim;
 use function ucfirst;
+
+use const PHP_EOL;
 
 class Codegen
 {

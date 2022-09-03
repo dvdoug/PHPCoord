@@ -8,23 +8,18 @@ declare(strict_types=1);
 
 namespace PHPCoord\UnitOfMeasure\Angle;
 
-use function in_array;
-
 use InvalidArgumentException;
 
-use const M_PI;
-
+use function in_array;
 use function preg_match;
-
-use const PREG_UNMATCHED_AS_NULL;
-
 use function str_pad;
-
-use const STR_PAD_RIGHT;
-
 use function str_replace;
 use function strlen;
 use function strpos;
+
+use const M_PI;
+use const PREG_UNMATCHED_AS_NULL;
+use const STR_PAD_RIGHT;
 
 class Degree extends Angle
 {

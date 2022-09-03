@@ -8,16 +8,15 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateOperation;
 
-use function abs;
-use function atan2;
-use function cos;
-use function hypot;
-
 use PHPCoord\Datum\Datum;
 use PHPCoord\UnitOfMeasure\Angle\Radian;
 use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 
+use function abs;
+use function atan2;
+use function cos;
+use function hypot;
 use function sin;
 use function sqrt;
 

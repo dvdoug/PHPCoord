@@ -9,23 +9,20 @@ declare(strict_types=1);
 namespace PHPCoord;
 
 use DateTimeInterface;
-
-use function floor;
-use function implode;
-
 use PHPCoord\CoordinateReferenceSystem\Projected;
 use PHPCoord\Exception\InvalidCoordinateException;
 use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 
+use function floor;
+use function implode;
 use function str_pad;
-
-use const STR_PAD_LEFT;
-
 use function str_replace;
 use function strlen;
 use function strpos;
 use function substr;
+
+use const STR_PAD_LEFT;
 
 /**
  * N.B. This is the older 1975 system, not the current ITM system for which @see IrishTransverseMercatorPoint.

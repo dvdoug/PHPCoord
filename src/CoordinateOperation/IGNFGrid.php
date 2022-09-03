@@ -8,6 +8,9 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateOperation;
 
+use SplFileObject;
+use SplFixedArray;
+
 use function array_map;
 use function array_slice;
 use function assert;
@@ -17,10 +20,6 @@ use function max;
 use function min;
 use function preg_match;
 use function preg_replace;
-
-use SplFileObject;
-use SplFixedArray;
-
 use function str_repeat;
 use function str_replace;
 use function strlen;

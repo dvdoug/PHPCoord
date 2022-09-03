@@ -8,17 +8,15 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateOperation;
 
-use const PHP_INT_MAX;
-
 use PHPCoord\UnitOfMeasure\Length\Metre;
-
-use function preg_split;
-use function round;
-
 use SplFileObject;
 use SplFixedArray;
 
+use function preg_split;
+use function round;
 use function trim;
+
+use const PHP_INT_MAX;
 
 class DATHeightGrid extends GeographicGeoidHeightGrid
 {

@@ -8,8 +8,6 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateOperation;
 
-use function cos;
-
 use PHPCoord\Datum\Datum;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPCoord\UnitOfMeasure\Angle\Degree;
@@ -17,6 +15,7 @@ use PHPCoord\UnitOfMeasure\Angle\Radian;
 use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 
+use function cos;
 use function sin;
 use function sqrt;
 

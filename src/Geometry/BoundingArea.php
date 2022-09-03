@@ -8,6 +8,11 @@ declare(strict_types=1);
 
 namespace PHPCoord\Geometry;
 
+use PHPCoord\CoordinateOperation\GeographicValue;
+use PHPCoord\Geometry\Extents\RegionMap;
+use PHPCoord\UnitOfMeasure\Angle\Angle;
+use PHPCoord\UnitOfMeasure\Angle\Degree;
+
 use function array_map;
 use function array_merge;
 use function array_unique;
@@ -15,11 +20,6 @@ use function assert;
 use function class_exists;
 use function count;
 use function implode;
-
-use PHPCoord\CoordinateOperation\GeographicValue;
-use PHPCoord\Geometry\Extents\RegionMap;
-use PHPCoord\UnitOfMeasure\Angle\Angle;
-use PHPCoord\UnitOfMeasure\Angle\Degree;
 
 class BoundingArea
 {

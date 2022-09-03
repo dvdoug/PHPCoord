@@ -8,30 +8,9 @@ declare(strict_types=1);
 
 namespace PHPCoord;
 
-use function abs;
-use function asinh;
-use function atan;
-use function atan2;
-use function atanh;
-use function cos;
-use function cosh;
-use function count;
-
 use DateTime;
 use DateTimeImmutable;
 use DateTimeInterface;
-
-use function hypot;
-use function implode;
-use function is_nan;
-use function log;
-
-use const M_E;
-use const M_PI;
-use const M_PI_2;
-
-use function max;
-
 use PHPCoord\CoordinateOperation\AutoConversion;
 use PHPCoord\CoordinateOperation\ComplexNumber;
 use PHPCoord\CoordinateOperation\ConvertiblePoint;
@@ -55,12 +34,29 @@ use PHPCoord\UnitOfMeasure\Scale\Coefficient;
 use PHPCoord\UnitOfMeasure\Scale\Scale;
 use PHPCoord\UnitOfMeasure\Scale\Unity;
 
+use function abs;
+use function asinh;
+use function atan;
+use function atan2;
+use function atanh;
+use function cos;
+use function cosh;
+use function count;
+use function hypot;
+use function implode;
+use function is_nan;
+use function log;
+use function max;
 use function sin;
 use function sinh;
 use function sqrt;
 use function substr;
 use function tan;
 use function tanh;
+
+use const M_E;
+use const M_PI;
+use const M_PI_2;
 
 /**
  * Coordinate representing a point on a map projection.

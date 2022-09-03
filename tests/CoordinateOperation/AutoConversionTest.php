@@ -8,15 +8,7 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateOperation;
 
-use function array_unique;
-use function class_exists;
-
 use DateTime;
-
-use function explode;
-use function fgetcsv;
-use function fopen;
-
 use PHPCoord\CompoundPoint;
 use PHPCoord\CoordinateReferenceSystem\Compound;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
@@ -39,6 +31,12 @@ use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPCoord\UTMPoint;
 use PHPCoord\VerticalPoint;
 use PHPUnit\Framework\TestCase;
+
+use function array_unique;
+use function class_exists;
+use function explode;
+use function fgetcsv;
+use function fopen;
 
 class AutoConversionTest extends TestCase
 {

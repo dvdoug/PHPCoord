@@ -8,11 +8,10 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateOperation;
 
-use function in_array;
-
 use PHPCoord\UnitOfMeasure\Length\Metre;
 use SplFileObject;
 
+use function in_array;
 use function substr;
 use function unpack;
 

@@ -8,10 +8,10 @@ declare(strict_types=1);
 
 namespace PHPCoord\Datum;
 
-use function count;
-
 use PHPCoord\Exception\UnknownEllipsoidException;
 use PHPUnit\Framework\TestCase;
+
+use function count;
 
 class EllipsoidTest extends TestCase
 {

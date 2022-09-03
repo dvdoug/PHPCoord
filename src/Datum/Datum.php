@@ -9,10 +9,10 @@ declare(strict_types=1);
 namespace PHPCoord\Datum;
 
 use DateTimeInterface;
-use PHPCoord\UnitOfMeasure\Time\Year;
-use function end;
-
 use PHPCoord\Exception\UnknownDatumException;
+use PHPCoord\UnitOfMeasure\Time\Year;
+
+use function end;
 
 class Datum
 {

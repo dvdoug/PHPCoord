@@ -8,10 +8,10 @@ declare(strict_types=1);
 
 namespace PHPCoord;
 
-use const PHP_EOL;
-
 use PHPCoord\EPSG\Import\EPSGCodegenFromDataImport;
 use PHPCoord\EPSG\Import\EPSGCodegenFromGeoRepository;
+
+use const PHP_EOL;
 
 require __DIR__ . '/../../../vendor/autoload.php';
 
