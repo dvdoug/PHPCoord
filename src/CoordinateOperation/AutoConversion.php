@@ -21,11 +21,10 @@ use PHPCoord\Exception\UnknownConversionException;
 use PHPCoord\GeocentricPoint;
 use PHPCoord\GeographicPoint;
 use PHPCoord\Geometry\BoundingArea;
-use PHPCoord\Geometry\Extents\RegionMap;
+use PHPCoord\Geometry\RegionMap;
 use PHPCoord\Point;
 use PHPCoord\ProjectedPoint;
 use PHPCoord\UnitOfMeasure\Time\Year;
-
 use function abs;
 use function array_column;
 use function array_shift;
@@ -102,7 +101,7 @@ trait AutoConversion
             $operation = CoordinateOperations::getOperationData($pathStep['operation']);
             if ($boundaryCheckPoint) {
                 // filter out operations that only operate outside this point
-                $polygon = BoundingArea::createFromExtentCodes($operation['extent_code']);
+                $polygon = BoundingArea::createFromExtentCodes($operation['extent']);
                 if (!$polygon->containsPoint($boundaryCheckPoint)) {
                     return false;
                 }

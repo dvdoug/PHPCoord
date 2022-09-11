@@ -13,7 +13,6 @@ use PHPCoord\Datum\Datum;
 use PHPCoord\Geometry\Extents\BoundingBoxOnly\Extent2157;
 use PHPCoord\Geometry\Extents\BoundingBoxOnly\Extent2706;
 use PHPCoord\Geometry\Extents\Extent3914;
-use PHPCoord\Geometry\Extents\RegionMap;
 use PHPCoord\UnitOfMeasure\Angle\Degree;
 use PHPUnit\Framework\TestCase;
 

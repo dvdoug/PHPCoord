@@ -22,14 +22,13 @@ use PHPCoord\CoordinateSystem\Vertical as VerticalCS;
 use PHPCoord\Datum\Datum;
 use PHPCoord\Datum\Ellipsoid;
 use PHPCoord\Datum\PrimeMeridian;
-use PHPCoord\Geometry\Extents\RegionMap;
+use PHPCoord\Geometry\RegionMap;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Rate;
 use PHPCoord\UnitOfMeasure\Scale\Scale;
 use PHPCoord\UnitOfMeasure\Time\Time;
 use SQLite3;
-
 use function array_map;
 use function array_unique;
 use function array_values;
@@ -49,7 +48,6 @@ use function str_replace;
 use function ucwords;
 use function unlink;
 use function var_export;
-
 use const SQLITE3_ASSOC;
 use const SQLITE3_OPEN_READONLY;
 
@@ -925,7 +923,7 @@ class EPSGCodegenFromDataImport
                 d.conventional_rs_code AS conventional_rs,
                 d.frame_reference_epoch,
                 d.datum_name || '\n' || 'Type: ' || d.datum_type || '\n' || 'Extent: ' || GROUP_CONCAT(e.extent_description, ' ') || '\n' || d.origin_description || '\n' || d.remarks AS constant_help,
-                GROUP_CONCAT(e.extent_description, ' ') AS extent,
+                GROUP_CONCAT(e.extent_description, ' ') AS extent_description,
                 d.origin_description || '\n' || d.remarks AS doc_help,
                 d.deprecated
             FROM epsg_datum d
@@ -1187,8 +1185,8 @@ class EPSGCodegenFromDataImport
                 horizontal.coord_ref_sys_kind AS horizontal_crs_type,
                 'urn:ogc:def:crs:EPSG::' || crs.cmpd_vertcrs_code AS vertical_crs,
                 crs.coord_ref_sys_name || '\n' || 'Extent: ' || GROUP_CONCAT(e.extent_description, ' ') || '\n' || crs.remarks AS constant_help,
-                GROUP_CONCAT(e.extent_code, ',') AS extent_code,
-                GROUP_CONCAT(e.extent_description, ' ') AS extent,
+                GROUP_CONCAT(e.extent_code, ',') AS extent,
+                GROUP_CONCAT(e.extent_description, ' ') AS extent_description,
                 crs.remarks AS doc_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
@@ -1207,7 +1205,7 @@ class EPSGCodegenFromDataImport
         $result = $this->sqlite->query($sql);
         $data = [];
         while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-            $row['extent_code'] = array_values(array_unique(explode(',', $row['extent_code'])));
+            $row['extent'] = array_values(array_unique(explode(',', $row['extent'])));
             $data[$row['urn']] = $row;
             unset($data[$row['urn']]['urn']);
         }
@@ -1236,8 +1234,8 @@ class EPSGCodegenFromDataImport
                 'urn:ogc:def:cs:EPSG::' || crs.coord_sys_code AS coordinate_system,
                 'urn:ogc:def:datum:EPSG::' || COALESCE(crs.datum_code, crs_base.datum_code) AS datum,
                 crs.coord_ref_sys_name || '\n' || 'Extent: ' || GROUP_CONCAT(e.extent_description, ' ') || '\n' || crs.remarks AS constant_help,
-                GROUP_CONCAT(e.extent_code, ',') AS extent_code,
-                GROUP_CONCAT(e.extent_description, ' ') AS extent,
+                GROUP_CONCAT(e.extent_code, ',') AS extent,
+                GROUP_CONCAT(e.extent_description, ' ') AS extent_description,
                 crs.remarks AS doc_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
@@ -1256,7 +1254,7 @@ class EPSGCodegenFromDataImport
         $result = $this->sqlite->query($sql);
         $data = [];
         while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-            $row['extent_code'] = array_values(array_unique(explode(',', $row['extent_code'])));
+            $row['extent'] = array_values(array_unique(explode(',', $row['extent'])));
             $data[$row['urn']] = $row;
             unset($data[$row['urn']]['urn']);
         }
@@ -1281,8 +1279,8 @@ class EPSGCodegenFromDataImport
                 'urn:ogc:def:cs:EPSG::' || crs.coord_sys_code AS coordinate_system,
                 'urn:ogc:def:datum:EPSG::' || COALESCE(crs.datum_code, crs_base.datum_code) AS datum,
                 crs.coord_ref_sys_name || '\n' || 'Extent: ' || GROUP_CONCAT(e.extent_description, ' ') || '\n' || crs.remarks AS constant_help,
-                GROUP_CONCAT(e.extent_code, ',') AS extent_code,
-                GROUP_CONCAT(e.extent_description, ' ') AS extent,
+                GROUP_CONCAT(e.extent_code, ',') AS extent,
+                GROUP_CONCAT(e.extent_description, ' ') AS extent_description,
                 crs.remarks AS doc_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
@@ -1301,7 +1299,7 @@ class EPSGCodegenFromDataImport
         $result = $this->sqlite->query($sql);
         $data = [];
         while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-            $row['extent_code'] = array_values(array_unique(explode(',', $row['extent_code'])));
+            $row['extent'] = array_values(array_unique(explode(',', $row['extent'])));
             $data[$row['urn']] = $row;
             unset($data[$row['urn']]['urn']);
         }
@@ -1327,8 +1325,8 @@ class EPSGCodegenFromDataImport
                 'urn:ogc:def:cs:EPSG::' || crs.coord_sys_code AS coordinate_system,
                 'urn:ogc:def:datum:EPSG::' || COALESCE(crs.datum_code, crs_base.datum_code) AS datum,
                 crs.coord_ref_sys_name || '\n' || 'Extent: ' || GROUP_CONCAT(e.extent_description, ' ') || '\n' || crs.remarks AS constant_help,
-                GROUP_CONCAT(e.extent_code, ',') AS extent_code,
-                GROUP_CONCAT(e.extent_description, ' ') AS extent,
+                GROUP_CONCAT(e.extent_code, ',') AS extent,
+                GROUP_CONCAT(e.extent_description, ' ') AS extent_description,
                 crs.remarks AS doc_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
@@ -1347,7 +1345,7 @@ class EPSGCodegenFromDataImport
         $result = $this->sqlite->query($sql);
         $data = [];
         while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-            $row['extent_code'] = array_values(array_unique(explode(',', $row['extent_code'])));
+            $row['extent'] = array_values(array_unique(explode(',', $row['extent'])));
             $data[$row['urn']] = $row;
             unset($data[$row['urn']]['urn']);
         }
@@ -1373,8 +1371,8 @@ class EPSGCodegenFromDataImport
                 'urn:ogc:def:crs:EPSG::' || crs.base_crs_code AS base_crs,
                 'urn:ogc:def:coordinateOperation:EPSG::' || crs.projection_conv_code AS deriving_conversion,
                 crs.coord_ref_sys_name || '\n' || 'Extent: ' || GROUP_CONCAT(e.extent_description, ' ') || '\n' || crs.remarks AS constant_help,
-                GROUP_CONCAT(e.extent_code, ',') AS extent_code,
-                GROUP_CONCAT(e.extent_description, ' ') AS extent,
+                GROUP_CONCAT(e.extent_code, ',') AS extent,
+                GROUP_CONCAT(e.extent_description, ' ') AS extent_description,
                 crs.remarks AS doc_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
@@ -1393,7 +1391,7 @@ class EPSGCodegenFromDataImport
         $result = $this->sqlite->query($sql);
         $data = [];
         while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-            $row['extent_code'] = array_values(array_unique(explode(',', $row['extent_code'])));
+            $row['extent'] = array_values(array_unique(explode(',', $row['extent'])));
             $data[$row['urn']] = $row;
             unset($data[$row['urn']]['urn']);
         }
@@ -1421,8 +1419,8 @@ class EPSGCodegenFromDataImport
                 'urn:ogc:def:cs:EPSG::' || crs.coord_sys_code AS coordinate_system,
                 'urn:ogc:def:datum:EPSG::' || COALESCE(crs.datum_code, crs_base.datum_code, crs_base2.datum_code) AS datum,
                 crs.coord_ref_sys_name || '\n' || 'Extent: ' || GROUP_CONCAT(e.extent_description, ' ') || '\n' || crs.remarks AS constant_help,
-                GROUP_CONCAT(e.extent_code, ',') AS extent_code,
-                GROUP_CONCAT(e.extent_description, ' ') AS extent,
+                GROUP_CONCAT(e.extent_code, ',') AS extent,
+                GROUP_CONCAT(e.extent_description, ' ') AS extent_description,
                 crs.remarks AS doc_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
@@ -1442,7 +1440,7 @@ class EPSGCodegenFromDataImport
         $result = $this->sqlite->query($sql);
         $data = [];
         while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-            $row['extent_code'] = array_values(array_unique(explode(',', $row['extent_code'])));
+            $row['extent'] = array_values(array_unique(explode(',', $row['extent'])));
             $data[$row['urn']] = $row;
             unset($data[$row['urn']]['urn']);
         }
@@ -1554,7 +1552,7 @@ class EPSGCodegenFromDataImport
                 'urn:ogc:def:crs:EPSG::' || o.source_crs_code AS source_crs,
                 'urn:ogc:def:crs:EPSG::' || o.target_crs_code AS target_crs,
                 COALESCE(o.coord_op_accuracy, 0) AS accuracy,
-                GROUP_CONCAT(e.extent_code, ',') AS extent_code,
+                GROUP_CONCAT(e.extent_code, ',') AS extent,
                 m.reverse_op AS reversible
             FROM epsg_coordoperation o
             JOIN epsg_coordoperationmethod m ON m.coord_op_method_code = o.coord_op_method_code
@@ -1578,7 +1576,7 @@ class EPSGCodegenFromDataImport
                 'urn:ogc:def:crs:EPSG::' || projcrs.base_crs_code AS source_crs,
                 'urn:ogc:def:crs:EPSG::' || projcrs.coord_ref_sys_code AS target_crs,
                 COALESCE(o.coord_op_accuracy, 0) AS accuracy,
-                GROUP_CONCAT(e.extent_code, ',') AS extent_code,
+                GROUP_CONCAT(e.extent_code, ',') AS extent,
                 m.reverse_op AS reversible
             FROM epsg_coordoperation o
             JOIN epsg_coordinatereferencesystem projcrs ON projcrs.projection_conv_code = o.coord_op_code AND projcrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND projcrs.deprecated = 0
@@ -1598,10 +1596,10 @@ class EPSGCodegenFromDataImport
         $result = $this->sqlite->query($sql);
         $byRegion = [];
         while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-            $extents = explode(',', $row['extent_code']);
+            $extents = explode(',', $row['extent']);
             $regions = array_unique(array_map(static fn ($extent) => $regionMap[$extent], $extents));
             assert(count($regions) === 1);
-            unset($row['extent_code']);
+            unset($row['extent']);
             $row['reversible'] = (bool) $row['reversible'];
             $byRegion[$regions[0]][] = $row;
         }
@@ -1622,7 +1620,7 @@ class EPSGCodegenFromDataImport
                 o.coord_op_name AS name,
                 o.coord_op_type AS type,
                 'urn:ogc:def:method:EPSG::' || o.coord_op_method_code AS method,
-                GROUP_CONCAT(e.extent_code, ',') AS extent_code
+                GROUP_CONCAT(e.extent_code, ',') AS extent
             FROM epsg_coordoperation o
             JOIN epsg_coordoperationmethod m ON m.coord_op_method_code = o.coord_op_method_code
             JOIN epsg_coordinatereferencesystem sourcecrs ON sourcecrs.coord_ref_sys_code = o.source_crs_code AND sourcecrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND sourcecrs.deprecated = 0
@@ -1644,7 +1642,7 @@ class EPSGCodegenFromDataImport
                 o.coord_op_name AS name,
                 o.coord_op_type AS type,
                 'urn:ogc:def:method:EPSG::' || o.coord_op_method_code AS method,
-                GROUP_CONCAT(e.extent_code, ',') AS extent_code
+                GROUP_CONCAT(e.extent_code, ',') AS extent
             FROM epsg_coordoperation o
             JOIN epsg_coordinatereferencesystem projcrs ON projcrs.projection_conv_code = o.coord_op_code AND projcrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND projcrs.deprecated = 0
             JOIN epsg_coordoperationmethod m ON m.coord_op_method_code = o.coord_op_method_code
@@ -1663,7 +1661,7 @@ class EPSGCodegenFromDataImport
         $result = $this->sqlite->query($sql);
         $data = [];
         while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-            $row['extent_code'] = array_values(array_unique(explode(',', $row['extent_code'])));
+            $row['extent'] = array_values(array_unique(explode(',', $row['extent'])));
             $data[$row['urn']] = $row;
             unset($data[$row['urn']]['urn']);
             unset($data[$row['urn']]['type']);

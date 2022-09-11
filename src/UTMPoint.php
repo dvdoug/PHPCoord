@@ -15,9 +15,8 @@ use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Projected;
 use PHPCoord\CoordinateSystem\Cartesian;
 use PHPCoord\Geometry\BoundingArea;
-use PHPCoord\Geometry\Extents\RegionMap;
+use PHPCoord\Geometry\RegionMap;
 use PHPCoord\UnitOfMeasure\Length\Length;
-
 use function str_replace;
 
 class UTMPoint extends ProjectedPoint

@@ -193,8 +193,8 @@ class Codegen
             if (isset($row['type']) && $row['type']) {
                 fwrite($file, '| Type: ' . ucfirst($row['type']) . "\n");
             }
-            if (isset($row['extent']) && $row['extent']) {
-                fwrite($file, "| Used: {$row['extent']}" . "\n");
+            if (isset($row['extent_description']) && $row['extent_description']) {
+                fwrite($file, "| Used: {$row['extent_description']}" . "\n");
             }
 
             fwrite($file, "\n.. code-block:: php\n\n");

@@ -39633,12 +39633,13 @@ class Projected extends CoordinateReferenceSystem
             $data = static::$sridData[$srid];
 
             $baseCRS = Geographic::fromSRID($data['base_crs']);
+            $extent = $data['extent'] instanceof BoundingArea ? $data['extent'] : BoundingArea::createFromExtentCodes($data['extent']);
 
             self::$cachedObjects[$srid] = new self(
                 $srid,
                 Cartesian::fromSRID($data['coordinate_system']),
                 $baseCRS->getDatum(),
-                BoundingArea::createFromExtentCodes($data['extent_code']),
+                $extent,
                 $data['name'],
                 $baseCRS,
                 $data['deriving_conversion'],
@@ -39659,9 +39660,9 @@ class Projected extends CoordinateReferenceSystem
         return self::$supportedCache;
     }
 
-    public static function registerCustomCRS(string $srid, string $name, string $baseCRS, string $derivingConversion, string $coordinateSystem, array $extent): void
+    public static function registerCustomCRS(string $srid, string $name, string $baseCRSSrid, string $derivingConversionSrid, string $coordinateSystemSrid, BoundingArea $extent): void
     {
-        self::$sridData[$srid] = ['name' => $name, 'coordinate_system' => $coordinateSystem, 'base_crs' => $baseCRS, 'deriving_conversion' => $derivingConversion, 'extent_code' => $extent];
+        self::$sridData[$srid] = ['name' => $name, 'coordinate_system' => $coordinateSystemSrid, 'base_crs' => $baseCRSSrid, 'deriving_conversion' => $derivingConversionSrid, 'extent' => $extent];
         self::getSupportedSRIDs(); // init cache if not already
         self::$supportedCache[$srid] = $name; // update cache
     }

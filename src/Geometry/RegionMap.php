@@ -6,7 +6,7 @@
  */
 declare(strict_types=1);
 
-namespace PHPCoord\Geometry\Extents;
+namespace PHPCoord\Geometry;
 
 class RegionMap
 {
@@ -20,6 +20,7 @@ class RegionMap
     public const REGION_SOUTHAMERICA = 'South America';
     public const REGION_OCEANIA = 'Australasia and Oceania';
 
+    /** @internal */
     public function __invoke(): array
     {
         return [

@@ -1904,11 +1904,13 @@ class Vertical extends CoordinateReferenceSystem
         if (!isset(self::$cachedObjects[$srid])) {
             $data = static::$sridData[$srid];
 
+            $extent = $data['extent'] instanceof BoundingArea ? $data['extent'] : BoundingArea::createFromExtentCodes($data['extent']);
+
             self::$cachedObjects[$srid] = new self(
                 $srid,
                 VerticalCS::fromSRID($data['coordinate_system']),
                 Datum::fromSRID($data['datum']),
-                BoundingArea::createFromExtentCodes($data['extent_code']),
+                $extent,
                 $data['name']
             );
         }
@@ -1927,9 +1929,9 @@ class Vertical extends CoordinateReferenceSystem
         return self::$supportedCache;
     }
 
-    public static function registerCustomCRS(string $srid, string $name, string $coordinateSystem, string $datum, array $extent): void
+    public static function registerCustomCRS(string $srid, string $name, string $coordinateSystemSrid, string $datumSrid, BoundingArea $extent): void
     {
-        self::$sridData[$srid] = ['name' => $name, 'coordinate_system' => $coordinateSystem, 'datum' => $datum, 'extent_code' => $extent];
+        self::$sridData[$srid] = ['name' => $name, 'coordinate_system' => $coordinateSystemSrid, 'datum' => $datumSrid, 'extent' => $extent];
         self::getSupportedSRIDs(); // init cache if not already
         self::$supportedCache[$srid] = $name; // update cache
     }

@@ -24,10 +24,31 @@ implementation class for your unit that extends one of the following base classe
 
 Then register it, by calling the appropriate registration function:
 
- - ``PHPCoord\UnitOfMeasure\Angle\Angle::registerCustomUnit(string $srid, string $name, string $implementingClassFQCN)``
- - ``PHPCoord\UnitOfMeasure\Length\Length::registerCustomUnit(string $srid, string $name, string $implementingClassFQCN)``
- - ``PHPCoord\UnitOfMeasure\Scale\Scale::registerCustomUnit(string $srid, string $name, string $implementingClassFQCN)``
- - ``PHPCoord\UnitOfMeasure\Time\Time::registerCustomUnit(string $srid, string $name, string $implementingClassFQCN)``
+.. code-block:: php
+
+    PHPCoord\UnitOfMeasure\Angle\Angle::registerCustomUnit(
+        string $srid,
+        string $name,
+        string $implementingClassFQCN
+    );
+
+    PHPCoord\UnitOfMeasure\Length\Length::registerCustomUnit(
+        string $srid,
+        string $name,
+        string $implementingClassFQCN
+    );
+
+    PHPCoord\UnitOfMeasure\Scale\Scale::registerCustomUnit(
+        string $srid,
+        string $name,
+        string $implementingClassFQCN
+    );
+
+    PHPCoord\UnitOfMeasure\Time\Time::registerCustomUnit(
+        string $srid,
+        string $name,
+        string $implementingClassFQCN
+    );
 
 Once registered, your custom unit can be used exactly like any other built into PHPCoord.
 

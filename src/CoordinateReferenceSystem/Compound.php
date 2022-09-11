@@ -2812,7 +2812,7 @@ class Compound extends CoordinateReferenceSystem
                 $srid,
                 $horizontalCRS,
                 Vertical::fromSRID($data['vertical_crs']),
-                BoundingArea::createFromExtentCodes($data['extent_code']),
+                BoundingArea::createFromExtentCodes($data['extent']),
                 $data['name']
             );
         }
@@ -2833,7 +2833,7 @@ class Compound extends CoordinateReferenceSystem
 
     public static function registerCustomCRS(string $srid, string $name, string $coordinateSystem, string $datum, array $extent): void
     {
-        self::$sridData[$srid] = ['name' => $name, 'coordinate_system' => $coordinateSystem, 'datum' => $datum, 'extent_code' => $extent];
+        self::$sridData[$srid] = ['name' => $name, 'coordinate_system' => $coordinateSystem, 'datum' => $datum, 'extent' => $extent];
         self::getSupportedSRIDs(); // init cache if not already
         self::$supportedCache[$srid] = $name; // update cache
     }

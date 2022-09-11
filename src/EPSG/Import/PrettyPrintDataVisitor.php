@@ -17,7 +17,7 @@ class PrettyPrintDataVisitor extends NodeVisitorAbstract
 {
     protected $multiLine = true;
 
-    protected $singleLineKeys = ['extent_code'];
+    protected $singleLineKeys = ['extent'];
 
     public function enterNode(Node $node)
     {
