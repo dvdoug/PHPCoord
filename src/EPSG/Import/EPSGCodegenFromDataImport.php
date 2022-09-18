@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord\EPSG\Import;
 
 use PHPCoord\CoordinateOperation\CoordinateOperationMethods;
+use PHPCoord\CoordinateOperation\CoordinateOperations;
 use PHPCoord\CoordinateReferenceSystem\Compound;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\CoordinateReferenceSystem\Geocentric;
@@ -29,6 +30,7 @@ use PHPCoord\UnitOfMeasure\Rate;
 use PHPCoord\UnitOfMeasure\Scale\Scale;
 use PHPCoord\UnitOfMeasure\Time\Time;
 use SQLite3;
+
 use function array_map;
 use function array_unique;
 use function array_values;
@@ -48,6 +50,7 @@ use function str_replace;
 use function ucwords;
 use function unlink;
 use function var_export;
+
 use const SQLITE3_ASSOC;
 use const SQLITE3_OPEN_READONLY;
 
@@ -663,7 +666,7 @@ class EPSGCodegenFromDataImport
             SELECT
                 'urn:ogc:def:uom:EPSG::' || m.uom_code AS urn,
                 m.unit_of_meas_name AS name,
-                m.unit_of_meas_name || '\n' || m.remarks AS constant_help,
+                m.remarks AS constant_help,
                 m.remarks AS doc_help,
                 m.deprecated
             FROM epsg_unitofmeasure m
@@ -699,7 +702,7 @@ class EPSGCodegenFromDataImport
             SELECT
                 'urn:ogc:def:uom:EPSG::' || m.uom_code AS urn,
                 m.unit_of_meas_name AS name,
-                m.unit_of_meas_name || '\n' || m.remarks AS constant_help,
+                m.remarks AS constant_help,
                 m.remarks AS doc_help,
                 m.deprecated
             FROM epsg_unitofmeasure m
@@ -730,7 +733,7 @@ class EPSGCodegenFromDataImport
             SELECT
                 'urn:ogc:def:uom:EPSG::' || m.uom_code AS urn,
                 m.unit_of_meas_name AS name,
-                m.unit_of_meas_name || '\n' || m.remarks AS constant_help,
+                m.remarks AS constant_help,
                 m.remarks AS doc_help,
                 m.deprecated
             FROM epsg_unitofmeasure m
@@ -761,7 +764,7 @@ class EPSGCodegenFromDataImport
             SELECT
                 'urn:ogc:def:uom:EPSG::' || m.uom_code AS urn,
                 m.unit_of_meas_name AS name,
-                m.unit_of_meas_name || '\n' || m.remarks AS constant_help,
+                m.remarks AS constant_help,
                 m.remarks AS doc_help,
                 m.deprecated
             FROM epsg_unitofmeasure m
@@ -791,7 +794,7 @@ class EPSGCodegenFromDataImport
             SELECT
                 'urn:ogc:def:uom:EPSG::' || m.uom_code AS urn,
                 m.unit_of_meas_name AS name,
-                m.unit_of_meas_name || '\n' || m.remarks AS constant_help,
+                m.remarks AS constant_help,
                 m.remarks AS doc_help,
                 m.deprecated
             FROM epsg_unitofmeasure m
@@ -821,7 +824,7 @@ class EPSGCodegenFromDataImport
             SELECT
                 'urn:ogc:def:uom:EPSG::' || m.uom_code AS urn,
                 m.unit_of_meas_type || '_' || m.unit_of_meas_name AS name,
-                m.unit_of_meas_name || '\n' || m.remarks AS constant_help,
+                m.remarks AS constant_help,
                 m.deprecated
             FROM epsg_unitofmeasure m
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_unitofmeasure' AND dep.object_code = m.uom_code AND dep.deprecation_date <= '2021-09-10'
@@ -852,7 +855,7 @@ class EPSGCodegenFromDataImport
             SELECT
                 'urn:ogc:def:meridian:EPSG::' || p.prime_meridian_code AS urn,
                 p.prime_meridian_name AS name,
-                p.prime_meridian_name || '\n' || p.remarks AS constant_help,
+                p.remarks AS constant_help,
                 p.greenwich_longitude,
                 'urn:ogc:def:uom:EPSG::' || p.uom_code AS uom,
                 p.remarks AS doc_help,
@@ -885,7 +888,7 @@ class EPSGCodegenFromDataImport
                 e.semi_minor_axis,
                 e.inv_flattening,
                 'urn:ogc:def:uom:EPSG::' || e.uom_code AS uom,
-                e.ellipsoid_name || '\n' || e.remarks AS constant_help,
+                e.remarks AS constant_help,
                 e.remarks AS doc_help,
                 e.deprecated
             FROM epsg_ellipsoid e
@@ -922,8 +925,9 @@ class EPSGCodegenFromDataImport
                 'urn:ogc:def:meridian:EPSG::' || d.prime_meridian_code AS prime_meridian,
                 d.conventional_rs_code AS conventional_rs,
                 d.frame_reference_epoch,
-                d.datum_name || '\n' || 'Type: ' || d.datum_type || '\n' || 'Extent: ' || GROUP_CONCAT(e.extent_description, ' ') || '\n' || d.origin_description || '\n' || d.remarks AS constant_help,
-                GROUP_CONCAT(e.extent_description, ' ') AS extent_description,
+                d.origin_description || '\n' || d.remarks AS constant_help,
+                d.datum_type AS type,
+                REPLACE(GROUP_CONCAT(DISTINCT e.extent_description), '.,', ', ') AS extent_description,
                 d.origin_description || '\n' || d.remarks AS doc_help,
                 d.deprecated
             FROM epsg_datum d
@@ -983,7 +987,7 @@ class EPSGCodegenFromDataImport
             SELECT
                 'urn:ogc:def:cs:EPSG::' || cs.coord_sys_code AS urn,
                 REPLACE(REPLACE(cs.coord_sys_name, 'Cartesian ', ''), 'CS. ', '') || CASE cs.coord_sys_code WHEN 4531 THEN '_LOWERCASE' ELSE '' END AS name,
-                cs.coord_sys_name || '\n' || 'Type: ' || cs.coord_sys_type || '\n' || cs.remarks AS constant_help,
+                cs.remarks AS constant_help,
                 cs.remarks AS doc_help,
                 cs.deprecated
             FROM epsg_coordinatesystem cs
@@ -1032,7 +1036,7 @@ class EPSGCodegenFromDataImport
             SELECT
                 'urn:ogc:def:cs:EPSG::' || cs.coord_sys_code AS urn,
                 REPLACE(REPLACE(cs.coord_sys_name, 'Ellipsoidal ', ''), 'CS. ', '') AS name,
-                cs.coord_sys_name || '\n' || 'Type: ' || cs.coord_sys_type || '\n' || cs.remarks AS constant_help,
+                cs.remarks AS constant_help,
                 cs.remarks AS doc_help,
                 cs.deprecated
             FROM epsg_coordinatesystem cs
@@ -1081,7 +1085,7 @@ class EPSGCodegenFromDataImport
             SELECT
                 'urn:ogc:def:cs:EPSG::' || cs.coord_sys_code AS urn,
                 REPLACE(REPLACE(cs.coord_sys_name, 'Vertical ', ''), 'CS. ', '') AS name,
-                cs.coord_sys_name || '\n' || 'Type: ' || cs.coord_sys_type || '\n' || cs.remarks AS constant_help,
+                cs.remarks AS constant_help,
                 cs.remarks AS doc_help,
                 cs.deprecated
             FROM epsg_coordinatesystem cs
@@ -1131,7 +1135,7 @@ class EPSGCodegenFromDataImport
                 'urn:ogc:def:cs:EPSG::' || cs.coord_sys_code AS urn,
                 cs.coord_sys_name AS name,
                 cs.coord_sys_type AS type,
-                cs.coord_sys_name || '\n' || 'Type: ' || cs.coord_sys_type || '\n' || cs.remarks AS constant_help,
+                cs.coord_sys_name || '\n' || cs.remarks AS constant_help,
                 cs.deprecated
             FROM epsg_coordinatesystem cs
             JOIN epsg_coordinatereferencesystem crs ON crs.coord_sys_code = cs.coord_sys_code AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%'
@@ -1184,9 +1188,9 @@ class EPSGCodegenFromDataImport
                 'urn:ogc:def:crs:EPSG::' || crs.cmpd_horizcrs_code AS horizontal_crs,
                 horizontal.coord_ref_sys_kind AS horizontal_crs_type,
                 'urn:ogc:def:crs:EPSG::' || crs.cmpd_vertcrs_code AS vertical_crs,
-                crs.coord_ref_sys_name || '\n' || 'Extent: ' || GROUP_CONCAT(e.extent_description, ' ') || '\n' || crs.remarks AS constant_help,
-                GROUP_CONCAT(e.extent_code, ',') AS extent,
-                GROUP_CONCAT(e.extent_description, ' ') AS extent_description,
+                crs.remarks AS constant_help,
+                GROUP_CONCAT(DISTINCT e.extent_code) AS extent,
+                REPLACE(GROUP_CONCAT(DISTINCT e.extent_description), '.,', ', ') AS extent_description,
                 crs.remarks AS doc_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
@@ -1233,9 +1237,9 @@ class EPSGCodegenFromDataImport
                 crs.coord_ref_sys_name AS name,
                 'urn:ogc:def:cs:EPSG::' || crs.coord_sys_code AS coordinate_system,
                 'urn:ogc:def:datum:EPSG::' || COALESCE(crs.datum_code, crs_base.datum_code) AS datum,
-                crs.coord_ref_sys_name || '\n' || 'Extent: ' || GROUP_CONCAT(e.extent_description, ' ') || '\n' || crs.remarks AS constant_help,
-                GROUP_CONCAT(e.extent_code, ',') AS extent,
-                GROUP_CONCAT(e.extent_description, ' ') AS extent_description,
+                crs.remarks AS constant_help,
+                GROUP_CONCAT(DISTINCT e.extent_code) AS extent,
+                REPLACE(GROUP_CONCAT(DISTINCT e.extent_description), '.,', ', ') AS extent_description,
                 crs.remarks AS doc_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
@@ -1278,9 +1282,9 @@ class EPSGCodegenFromDataImport
                 crs.coord_ref_sys_name AS name,
                 'urn:ogc:def:cs:EPSG::' || crs.coord_sys_code AS coordinate_system,
                 'urn:ogc:def:datum:EPSG::' || COALESCE(crs.datum_code, crs_base.datum_code) AS datum,
-                crs.coord_ref_sys_name || '\n' || 'Extent: ' || GROUP_CONCAT(e.extent_description, ' ') || '\n' || crs.remarks AS constant_help,
-                GROUP_CONCAT(e.extent_code, ',') AS extent,
-                GROUP_CONCAT(e.extent_description, ' ') AS extent_description,
+                crs.remarks AS constant_help,
+                GROUP_CONCAT(DISTINCT e.extent_code) AS extent,
+                REPLACE(GROUP_CONCAT(DISTINCT e.extent_description), '.,', ', ') AS extent_description,
                 crs.remarks AS doc_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
@@ -1324,9 +1328,9 @@ class EPSGCodegenFromDataImport
                 crs.coord_ref_sys_name AS name,
                 'urn:ogc:def:cs:EPSG::' || crs.coord_sys_code AS coordinate_system,
                 'urn:ogc:def:datum:EPSG::' || COALESCE(crs.datum_code, crs_base.datum_code) AS datum,
-                crs.coord_ref_sys_name || '\n' || 'Extent: ' || GROUP_CONCAT(e.extent_description, ' ') || '\n' || crs.remarks AS constant_help,
-                GROUP_CONCAT(e.extent_code, ',') AS extent,
-                GROUP_CONCAT(e.extent_description, ' ') AS extent_description,
+                crs.remarks AS constant_help,
+                GROUP_CONCAT(DISTINCT e.extent_code) AS extent,
+                REPLACE(GROUP_CONCAT(DISTINCT e.extent_description), '.,', ', ') AS extent_description,
                 crs.remarks AS doc_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
@@ -1370,9 +1374,9 @@ class EPSGCodegenFromDataImport
                 'urn:ogc:def:cs:EPSG::' || crs.coord_sys_code AS coordinate_system,
                 'urn:ogc:def:crs:EPSG::' || crs.base_crs_code AS base_crs,
                 'urn:ogc:def:coordinateOperation:EPSG::' || crs.projection_conv_code AS deriving_conversion,
-                crs.coord_ref_sys_name || '\n' || 'Extent: ' || GROUP_CONCAT(e.extent_description, ' ') || '\n' || crs.remarks AS constant_help,
-                GROUP_CONCAT(e.extent_code, ',') AS extent,
-                GROUP_CONCAT(e.extent_description, ' ') AS extent_description,
+                crs.remarks AS constant_help,
+                GROUP_CONCAT(DISTINCT e.extent_code) AS extent,
+                REPLACE(GROUP_CONCAT(DISTINCT e.extent_description), '.,', ', ') AS extent_description,
                 crs.remarks AS doc_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
@@ -1418,9 +1422,9 @@ class EPSGCodegenFromDataImport
                 crs.coord_ref_sys_name AS name,
                 'urn:ogc:def:cs:EPSG::' || crs.coord_sys_code AS coordinate_system,
                 'urn:ogc:def:datum:EPSG::' || COALESCE(crs.datum_code, crs_base.datum_code, crs_base2.datum_code) AS datum,
-                crs.coord_ref_sys_name || '\n' || 'Extent: ' || GROUP_CONCAT(e.extent_description, ' ') || '\n' || crs.remarks AS constant_help,
-                GROUP_CONCAT(e.extent_code, ',') AS extent,
-                GROUP_CONCAT(e.extent_description, ' ') AS extent_description,
+                crs.remarks AS constant_help,
+                GROUP_CONCAT(DISTINCT e.extent_code) AS extent,
+                REPLACE(GROUP_CONCAT(DISTINCT e.extent_description), '.,', ', ') AS extent_description,
                 crs.remarks AS doc_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
@@ -1468,7 +1472,8 @@ class EPSGCodegenFromDataImport
                 crs.coord_ref_sys_name AS name,
                 'urn:ogc:def:cs:EPSG::' || crs.coord_sys_code AS coordinate_system,
                 'urn:ogc:def:datum:EPSG::' || COALESCE(crs.datum_code, crs_base.datum_code) AS datum,
-                crs.coord_ref_sys_name || '\n' || 'Extent: ' || GROUP_CONCAT(e.extent_description, ' ') || '\n' || crs.remarks AS constant_help,
+                crs.remarks AS constant_help,
+                REPLACE(GROUP_CONCAT(DISTINCT e.extent_description), '.,', ', ') AS extent_description,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
             JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
@@ -1509,7 +1514,8 @@ class EPSGCodegenFromDataImport
             SELECT
                 'urn:ogc:def:method:EPSG::' || m.coord_op_method_code AS urn,
                 m.coord_op_method_name AS name,
-                m.coord_op_method_name || '\n' || m.remarks AS constant_help,
+                m.remarks AS constant_help,
+                m.remarks AS doc_help,
                 m.deprecated
             FROM epsg_coordoperationmethod m
             LEFT JOIN epsg_coordoperationparamvalue p ON p.coord_op_method_code = m.coord_op_method_code
@@ -1536,6 +1542,7 @@ class EPSGCodegenFromDataImport
             'public',
             []
         );
+        $this->codeGen->updateDocs(CoordinateOperationMethods::class, $data);
     }
 
     public function generateDataCoordinateOperations(): void
@@ -1552,8 +1559,9 @@ class EPSGCodegenFromDataImport
                 'urn:ogc:def:crs:EPSG::' || o.source_crs_code AS source_crs,
                 'urn:ogc:def:crs:EPSG::' || o.target_crs_code AS target_crs,
                 COALESCE(o.coord_op_accuracy, 0) AS accuracy,
-                GROUP_CONCAT(e.extent_code, ',') AS extent,
-                m.reverse_op AS reversible
+                GROUP_CONCAT(DISTINCT e.extent_code) AS extent,
+                m.reverse_op AS reversible,
+                '' AS doc_help
             FROM epsg_coordoperation o
             JOIN epsg_coordoperationmethod m ON m.coord_op_method_code = o.coord_op_method_code
             JOIN epsg_coordinatereferencesystem sourcecrs ON sourcecrs.coord_ref_sys_code = o.source_crs_code AND sourcecrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND sourcecrs.deprecated = 0
@@ -1576,8 +1584,9 @@ class EPSGCodegenFromDataImport
                 'urn:ogc:def:crs:EPSG::' || projcrs.base_crs_code AS source_crs,
                 'urn:ogc:def:crs:EPSG::' || projcrs.coord_ref_sys_code AS target_crs,
                 COALESCE(o.coord_op_accuracy, 0) AS accuracy,
-                GROUP_CONCAT(e.extent_code, ',') AS extent,
-                m.reverse_op AS reversible
+                GROUP_CONCAT(DISTINCT e.extent_code) AS extent,
+                m.reverse_op AS reversible,
+                '' AS doc_help
             FROM epsg_coordoperation o
             JOIN epsg_coordinatereferencesystem projcrs ON projcrs.projection_conv_code = o.coord_op_code AND projcrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND projcrs.deprecated = 0
             JOIN epsg_coordoperationmethod m ON m.coord_op_method_code = o.coord_op_method_code
@@ -1620,7 +1629,10 @@ class EPSGCodegenFromDataImport
                 o.coord_op_name AS name,
                 o.coord_op_type AS type,
                 'urn:ogc:def:method:EPSG::' || o.coord_op_method_code AS method,
-                GROUP_CONCAT(e.extent_code, ',') AS extent
+                m.coord_op_method_name AS method_name,
+                GROUP_CONCAT(DISTINCT e.extent_code) AS extent,
+                REPLACE(GROUP_CONCAT(DISTINCT e.extent_description), '.,', ', ') AS extent_description,
+                o.remarks AS doc_help
             FROM epsg_coordoperation o
             JOIN epsg_coordoperationmethod m ON m.coord_op_method_code = o.coord_op_method_code
             JOIN epsg_coordinatereferencesystem sourcecrs ON sourcecrs.coord_ref_sys_code = o.source_crs_code AND sourcecrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND sourcecrs.deprecated = 0
@@ -1642,7 +1654,10 @@ class EPSGCodegenFromDataImport
                 o.coord_op_name AS name,
                 o.coord_op_type AS type,
                 'urn:ogc:def:method:EPSG::' || o.coord_op_method_code AS method,
-                GROUP_CONCAT(e.extent_code, ',') AS extent
+                m.coord_op_method_name AS method_name,
+                GROUP_CONCAT(DISTINCT e.extent_code) AS extent,
+                REPLACE(GROUP_CONCAT(DISTINCT e.extent_description), '.,', ', ') AS extent_description,
+                o.remarks AS doc_help
             FROM epsg_coordoperation o
             JOIN epsg_coordinatereferencesystem projcrs ON projcrs.projection_conv_code = o.coord_op_code AND projcrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND projcrs.deprecated = 0
             JOIN epsg_coordoperationmethod m ON m.coord_op_method_code = o.coord_op_method_code
@@ -1668,6 +1683,7 @@ class EPSGCodegenFromDataImport
         }
 
         $this->codeGen->updateFileData($this->sourceDir . '/CoordinateOperation/CoordinateOperations.php', $data);
+        $this->codeGen->updateDocs(CoordinateOperations::class, $data);
 
         $paramsSeen = [];
         foreach ($data as $operation => $operationData) {

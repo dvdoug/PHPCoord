@@ -43,6 +43,8 @@ See `license.txt`_ for full details.
     builtin_ellipsoids
     builtin_prime_meridians
     builtin_coordinate_systems
+    builtin_operations
+    builtin_operation_methods
 
 .. toctree::
     :maxdepth: 1

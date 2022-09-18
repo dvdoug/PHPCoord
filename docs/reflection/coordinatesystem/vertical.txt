@@ -1,7 +1,5 @@
-Axis: depth (D). Orientation: down. UoM: ft.
---------------------------------------------
-
-
+Axis: depth (D). Orientation: down. Units: foot.
+------------------------------------------------
 .. code-block:: php
 
     Vertical::fromSRID(Vertical::EPSG_AXIS_DEPTH_D_ORIENTATION_DOWN_UOM_FT)
@@ -9,10 +7,8 @@ Axis: depth (D). Orientation: down. UoM: ft.
 
 Used in vertical coordinate reference systems.
 
-Axis: depth (D). Orientation: down. UoM: ftUS.
-----------------------------------------------
-
-
+Axis: depth (D). Orientation: down. Units: foot (US).
+-----------------------------------------------------
 .. code-block:: php
 
     Vertical::fromSRID(Vertical::EPSG_AXIS_DEPTH_D_ORIENTATION_DOWN_UOM_FTUS)
@@ -20,10 +16,8 @@ Axis: depth (D). Orientation: down. UoM: ftUS.
 
 Used in US vertical coordinate reference systems.
 
-Axis: depth (D). Orientation: down. UoM: m.
--------------------------------------------
-
-
+Axis: depth (D). Orientation: down. Units: metre
+------------------------------------------------
 .. code-block:: php
 
     Vertical::fromSRID(Vertical::EPSG_AXIS_DEPTH_D_ORIENTATION_DOWN_UOM_M)
@@ -31,10 +25,8 @@ Axis: depth (D). Orientation: down. UoM: m.
 
 Used in vertical coordinate reference systems.
 
-Axis: height (H). Orientation: up. UoM: ft(Br36).
--------------------------------------------------
-
-
+Axis: height (H). Orientation: up. Units: British foot (1936).
+--------------------------------------------------------------
 .. code-block:: php
 
     Vertical::fromSRID(Vertical::EPSG_AXIS_HEIGHT_H_ORIENTATION_UP_UOM_FT_BR36)
@@ -42,10 +34,8 @@ Axis: height (H). Orientation: up. UoM: ft(Br36).
 
 Used in vertical coordinate reference systems.
 
-Axis: height (H). Orientation: up. UoM: ft.
--------------------------------------------
-
-
+Axis: height (H). Orientation: up. Units: foot.
+-----------------------------------------------
 .. code-block:: php
 
     Vertical::fromSRID(Vertical::EPSG_AXIS_HEIGHT_H_ORIENTATION_UP_UOM_FT)
@@ -53,10 +43,8 @@ Axis: height (H). Orientation: up. UoM: ft.
 
 Used in vertical coordinate reference systems.
 
-Axis: height (H). Orientation: up. UoM: ftUS.
----------------------------------------------
-
-
+Axis: height (H). Orientation: up. Units: foot (US).
+----------------------------------------------------
 .. code-block:: php
 
     Vertical::fromSRID(Vertical::EPSG_AXIS_HEIGHT_H_ORIENTATION_UP_UOM_FTUS)
@@ -64,10 +52,8 @@ Axis: height (H). Orientation: up. UoM: ftUS.
 
 Used in vertical coordinate reference systems.
 
-Axis: height (H). Orientation: up. UoM: m.
-------------------------------------------
-
-
+Axis: height (H). Orientation: up. Units: metre
+-----------------------------------------------
 .. code-block:: php
 
     Vertical::fromSRID(Vertical::EPSG_AXIS_HEIGHT_H_ORIENTATION_UP_UOM_M)

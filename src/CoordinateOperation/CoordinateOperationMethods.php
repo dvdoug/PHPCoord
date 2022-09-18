@@ -9,9 +9,6 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateOperation;
 
-/**
- * @internal
- */
 class CoordinateOperationMethods
 {
     /**
@@ -36,6 +33,9 @@ class CoordinateOperationMethods
      */
     public const EPSG_ALBERS_EQUAL_AREA = 'urn:ogc:def:method:EPSG::9822';
 
+    /**
+     * Alias.
+     */
     public const EPSG_ALIAS = 'urn:ogc:def:method:EPSG::32768';
 
     /**
@@ -265,8 +265,8 @@ class CoordinateOperationMethods
 
     /**
      * Geographic/geocentric conversions
-     * In applications it is often concatenated with the 3- 7- or 10-parameter transformations 9603, 9606, 9607 or
-     * 9636 to form a geographic to geographic transformation.
+     * In applications it is often concatenated with the 3- 7- or 10-parameter transformations 9603, 9606, 9607 or 9636
+     * to form a geographic to geographic transformation.
      */
     public const EPSG_GEOGRAPHIC_GEOCENTRIC_CONVERSIONS = 'urn:ogc:def:method:EPSG::9602';
 
@@ -910,7 +910,7 @@ class CoordinateOperationMethods
     public const EPSG_VERTICAL_PERSPECTIVE_ORTHOGRAPHIC_CASE = 'urn:ogc:def:method:EPSG::9839';
 
     /**
-     * zero-tide height to mean-tide height (EVRF2019)
+     * Zero-tide height to mean-tide height (EVRF2019)
      * The offset of -0.08593 is applied to force EVRF2019 mean-tide height to be equal to EVRF2019 height at the
      * EVRF2019 nominal origin at Amsterdams Peil.
      */

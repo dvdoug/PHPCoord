@@ -1,7 +1,5 @@
 Athens
 ------
-
-
 .. code-block:: php
 
     PrimeMeridian::fromSRID(PrimeMeridian::EPSG_ATHENS)
@@ -11,8 +9,6 @@ Used in Greece for older mapping based on Hatt projection.
 
 Bern
 ----
-
-
 .. code-block:: php
 
     PrimeMeridian::fromSRID(PrimeMeridian::EPSG_BERN)
@@ -22,8 +18,6 @@ Bern
 
 Bogota
 ------
-
-
 .. code-block:: php
 
     PrimeMeridian::fromSRID(PrimeMeridian::EPSG_BOGOTA)
@@ -32,8 +26,6 @@ Bogota
 
 Brussels
 --------
-
-
 .. code-block:: php
 
     PrimeMeridian::fromSRID(PrimeMeridian::EPSG_BRUSSELS)
@@ -42,8 +34,6 @@ Brussels
 
 Ferro
 -----
-
-
 .. code-block:: php
 
     PrimeMeridian::fromSRID(PrimeMeridian::EPSG_FERRO)
@@ -53,8 +43,6 @@ El Hierro island, Canary islands, considered the most westerly point in Europe. 
 
 Greenwich
 ---------
-
-
 .. code-block:: php
 
     PrimeMeridian::fromSRID(PrimeMeridian::EPSG_GREENWICH)
@@ -64,8 +52,6 @@ The international reference meridian as defined first by the 1884 International 
 
 Jakarta
 -------
-
-
 .. code-block:: php
 
     PrimeMeridian::fromSRID(PrimeMeridian::EPSG_JAKARTA)
@@ -75,8 +61,6 @@ Jakarta
 
 Lisbon
 ------
-
-
 .. code-block:: php
 
     PrimeMeridian::fromSRID(PrimeMeridian::EPSG_LISBON)
@@ -85,8 +69,6 @@ Lisbon
 
 Madrid
 ------
-
-
 .. code-block:: php
 
     PrimeMeridian::fromSRID(PrimeMeridian::EPSG_MADRID)
@@ -96,8 +78,6 @@ Longitude has had various determinations. 3°41'14.55"W of Greenwich adopted for
 
 Oslo
 ----
-
-
 .. code-block:: php
 
     PrimeMeridian::fromSRID(PrimeMeridian::EPSG_OSLO)
@@ -107,8 +87,6 @@ Formerly known as Kristiania or Christiania.
 
 Paris
 -----
-
-
 .. code-block:: php
 
     PrimeMeridian::fromSRID(PrimeMeridian::EPSG_PARIS)
@@ -118,8 +96,6 @@ Conventional value of 0h 9m 20.935s = 2°20'14.025" adopted by IGN (Paris) in 19
 
 Paris RGS
 ---------
-
-
 .. code-block:: php
 
     PrimeMeridian::fromSRID(PrimeMeridian::EPSG_PARIS_RGS)
@@ -129,8 +105,6 @@ Value replaced by IGN (France) in 1936 - see code 8903. Equivalent to 2.596898 g
 
 Rome
 ----
-
-
 .. code-block:: php
 
     PrimeMeridian::fromSRID(PrimeMeridian::EPSG_ROME)
@@ -139,8 +113,6 @@ Rome
 
 Stockholm
 ---------
-
-
 .. code-block:: php
 
     PrimeMeridian::fromSRID(PrimeMeridian::EPSG_STOCKHOLM)

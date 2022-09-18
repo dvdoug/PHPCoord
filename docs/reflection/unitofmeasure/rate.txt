@@ -1,7 +1,5 @@
 Arc-seconds per year
 --------------------
-
-
 .. code-block:: php
 
     Rate::makeUnit($measurement, Rate::EPSG_ARC_SECONDS_PER_YEAR)
@@ -11,8 +9,6 @@ Arc-seconds per year
 
 Centimetres per year
 --------------------
-
-
 .. code-block:: php
 
     Rate::makeUnit($measurement, Rate::EPSG_CENTIMETRES_PER_YEAR)
@@ -22,8 +18,6 @@ Year taken to be IUGS definition of 31556925.445 seconds; see UoM code 1029.
 
 Metres per year
 ---------------
-
-
 .. code-block:: php
 
     Rate::makeUnit($measurement, Rate::EPSG_METRES_PER_YEAR)
@@ -33,8 +27,6 @@ Year taken to be IUGS definition of 31556925.445 seconds; see UoM code 1029.
 
 Milliarc-seconds per year
 -------------------------
-
-
 .. code-block:: php
 
     Rate::makeUnit($measurement, Rate::EPSG_MILLIARC_SECONDS_PER_YEAR)
@@ -44,8 +36,6 @@ Milliarc-seconds per year
 
 Millimetres per year
 --------------------
-
-
 .. code-block:: php
 
     Rate::makeUnit($measurement, Rate::EPSG_MILLIMETRES_PER_YEAR)
@@ -55,8 +45,6 @@ Year taken to be IUGS definition of 31556925.445 seconds; see UoM code 1029.
 
 Parts per billion per year
 --------------------------
-
-
 .. code-block:: php
 
     Rate::makeUnit($measurement, Rate::EPSG_PARTS_PER_BILLION_PER_YEAR)
@@ -66,8 +54,6 @@ Year taken to be IUGS definition of 31556925.445 seconds; see UoM code 1029. Bil
 
 Parts per million per year
 --------------------------
-
-
 .. code-block:: php
 
     Rate::makeUnit($measurement, Rate::EPSG_PARTS_PER_MILLION_PER_YEAR)

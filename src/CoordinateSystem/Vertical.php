@@ -13,50 +13,43 @@ use PHPCoord\Exception\UnknownCoordinateSystemException;
 class Vertical extends CoordinateSystem
 {
     /**
-     * Vertical CS. Axis: depth (D). Orientation: down. UoM: ft.
-     * Type: vertical
+     * Axis: depth (D). Orientation: down. Units: foot.
      * Used in vertical coordinate reference systems.
      */
     public const EPSG_AXIS_DEPTH_D_ORIENTATION_DOWN_UOM_FT = 'urn:ogc:def:cs:EPSG::6495';
 
     /**
-     * Vertical CS. Axis: depth (D). Orientation: down. UoM: ftUS.
-     * Type: vertical
+     * Axis: depth (D). Orientation: down. Units: foot (US).
      * Used in US vertical coordinate reference systems.
      */
     public const EPSG_AXIS_DEPTH_D_ORIENTATION_DOWN_UOM_FTUS = 'urn:ogc:def:cs:EPSG::1043';
 
     /**
-     * Vertical CS. Axis: depth (D). Orientation: down. UoM: m.
-     * Type: vertical
+     * Axis: depth (D). Orientation: down. Units: metre
      * Used in vertical coordinate reference systems.
      */
     public const EPSG_AXIS_DEPTH_D_ORIENTATION_DOWN_UOM_M = 'urn:ogc:def:cs:EPSG::6498';
 
     /**
-     * Vertical CS. Axis: height (H). Orientation: up. UoM: ft(Br36).
-     * Type: vertical
+     * Axis: height (H). Orientation: up. Units: British foot (1936).
      * Used in vertical coordinate reference systems.
      */
     public const EPSG_AXIS_HEIGHT_H_ORIENTATION_UP_UOM_FT_BR36 = 'urn:ogc:def:cs:EPSG::6496';
 
     /**
-     * Vertical CS. Axis: height (H). Orientation: up. UoM: ft.
-     * Type: vertical
+     * Axis: height (H). Orientation: up. Units: foot.
      * Used in vertical coordinate reference systems.
      */
     public const EPSG_AXIS_HEIGHT_H_ORIENTATION_UP_UOM_FT = 'urn:ogc:def:cs:EPSG::1030';
 
     /**
-     * Vertical CS. Axis: height (H). Orientation: up. UoM: ftUS.
-     * Type: vertical
+     * Axis: height (H). Orientation: up. Units: foot (US).
      * Used in vertical coordinate reference systems.
      */
     public const EPSG_AXIS_HEIGHT_H_ORIENTATION_UP_UOM_FTUS = 'urn:ogc:def:cs:EPSG::6497';
 
     /**
-     * Vertical CS. Axis: height (H). Orientation: up. UoM: m.
-     * Type: vertical
+     * Axis: height (H). Orientation: up. Units: metre
      * Used in vertical coordinate reference systems.
      */
     public const EPSG_AXIS_HEIGHT_H_ORIENTATION_UP_UOM_M = 'urn:ogc:def:cs:EPSG::6499';

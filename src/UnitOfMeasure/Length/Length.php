@@ -112,34 +112,34 @@ abstract class Length implements UnitOfMeasure
     public const EPSG_US_SURVEY_FOOT = 'urn:ogc:def:uom:EPSG::9003';
 
     /**
-     * centimetre.
+     * Centimetre.
      */
     public const EPSG_CENTIMETRE = 'urn:ogc:def:uom:EPSG::1033';
 
     /**
-     * foot.
+     * Foot.
      */
     public const EPSG_FOOT = 'urn:ogc:def:uom:EPSG::9002';
 
     /**
-     * kilometre.
+     * Kilometre.
      */
     public const EPSG_KILOMETRE = 'urn:ogc:def:uom:EPSG::9036';
 
     /**
-     * link
+     * Link
      * =1/100 international chain.
      */
     public const EPSG_LINK = 'urn:ogc:def:uom:EPSG::9098';
 
     /**
-     * metre
+     * Metre
      * SI base unit for length.
      */
     public const EPSG_METRE = 'urn:ogc:def:uom:EPSG::9001';
 
     /**
-     * millimetre.
+     * Millimetre.
      */
     public const EPSG_MILLIMETRE = 'urn:ogc:def:uom:EPSG::1025';
 

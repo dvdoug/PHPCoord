@@ -23,46 +23,46 @@ use PHPCoord\UnitOfMeasure\Time\Year;
 class Rate implements UnitOfMeasure
 {
     /**
-     * arc-seconds per year
+     * Arc-seconds per year
      * =((pi/180) / 3600) radians per year. Year taken to be IUGS definition of 31556925.445 seconds; see UoM code
      * 1029.
      */
     public const EPSG_ARC_SECONDS_PER_YEAR = 'urn:ogc:def:uom:EPSG::1043';
 
     /**
-     * centimetres per year
+     * Centimetres per year
      * Year taken to be IUGS definition of 31556925.445 seconds; see UoM code 1029.
      */
     public const EPSG_CENTIMETRES_PER_YEAR = 'urn:ogc:def:uom:EPSG::1034';
 
     /**
-     * metres per year
+     * Metres per year
      * Year taken to be IUGS definition of 31556925.445 seconds; see UoM code 1029.
      */
     public const EPSG_METRES_PER_YEAR = 'urn:ogc:def:uom:EPSG::1042';
 
     /**
-     * milliarc-seconds per year
+     * Milliarc-seconds per year
      * = ((pi/180) / 3600 / 1000) radians per year. Year taken to be IUGS definition of 31556925.445 seconds; see UoM
      * code 1029.
      */
     public const EPSG_MILLIARC_SECONDS_PER_YEAR = 'urn:ogc:def:uom:EPSG::1032';
 
     /**
-     * millimetres per year
+     * Millimetres per year
      * Year taken to be IUGS definition of 31556925.445 seconds; see UoM code 1029.
      */
     public const EPSG_MILLIMETRES_PER_YEAR = 'urn:ogc:def:uom:EPSG::1027';
 
     /**
-     * parts per billion per year
+     * Parts per billion per year
      * Year taken to be IUGS definition of 31556925.445 seconds; see UoM code 1029. Billion is internationally
      * ambiguous, in different languages being 1E+9 and 1E+12. One billion taken here to be 1E+9.
      */
     public const EPSG_PARTS_PER_BILLION_PER_YEAR = 'urn:ogc:def:uom:EPSG::1030';
 
     /**
-     * parts per million per year
+     * Parts per million per year
      * Year taken to be IUGS definition of 31556925.445 seconds; see UoM code 1029.
      */
     public const EPSG_PARTS_PER_MILLION_PER_YEAR = 'urn:ogc:def:uom:EPSG::1041';

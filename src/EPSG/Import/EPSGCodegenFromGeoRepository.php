@@ -11,6 +11,7 @@ namespace PHPCoord\EPSG\Import;
 use Exception;
 use PHPCoord\Geometry\RegionMap;
 use SQLite3;
+
 use function array_column;
 use function basename;
 use function class_exists;
@@ -27,6 +28,7 @@ use function min;
 use function sleep;
 use function substr;
 use function unlink;
+
 use const JSON_THROW_ON_ERROR;
 use const PHP_EOL;
 use const SQLITE3_ASSOC;

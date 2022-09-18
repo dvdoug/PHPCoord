@@ -1,3 +1,5 @@
+.. _coordinate_conversions:
+
 Coordinate conversions
 ======================
 PHPCoord can convert coordinates representing a point from one *Coordinate Reference System (CRS)* to another one. In

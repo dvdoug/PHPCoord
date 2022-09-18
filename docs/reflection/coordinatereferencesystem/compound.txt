@@ -1,7 +1,6 @@
 AbInvA96_2020 Grid + ODN height
 -------------------------------
-
-| Used: United Kingdom (UK) - on or related to the A96 highway from Aberdeen to Inverness.
+| Extent: United Kingdom (UK) - on or related to the A96 highway from Aberdeen to Inverness.
 
 .. code-block:: php
 
@@ -13,8 +12,7 @@ AbInvA96_2020 Grid + ODN height
 
 Amersfoort / RD New + NAP height
 --------------------------------
-
-| Used: Netherlands - onshore, including Waddenzee, Dutch Wadden Islands and 12-mile offshore coastal zone.
+| Extent: Netherlands - onshore, including Waddenzee, Dutch Wadden Islands and 12-mile offshore coastal zone.
 
 .. code-block:: php
 
@@ -26,8 +24,7 @@ Amersfoort / RD New + NAP height
 
 Astro DOS 71 / UTM zone 30S + Jamestown 1971 height
 ---------------------------------------------------
-
-| Used: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore.
+| Extent: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore.
 
 .. code-block:: php
 
@@ -39,8 +36,7 @@ Astro DOS 71 / UTM zone 30S + Jamestown 1971 height
 
 BD72 / Belgian Lambert 72 + Ostend height
 -----------------------------------------
-
-| Used: Belgium - onshore.
+| Extent: Belgium - onshore.
 
 .. code-block:: php
 
@@ -52,8 +48,7 @@ BD72 / Belgian Lambert 72 + Ostend height
 
 CIGD11 + CBVD61 height (ft)
 ---------------------------
-
-| Used: Cayman Islands - Cayman Brac.
+| Extent: Cayman Islands - Cayman Brac.
 
 .. code-block:: php
 
@@ -65,8 +60,7 @@ CIGD11 + CBVD61 height (ft)
 
 CIGD11 + GCVD54 height (ft)
 ---------------------------
-
-| Used: Cayman Islands - Grand Cayman.
+| Extent: Cayman Islands - Grand Cayman.
 
 .. code-block:: php
 
@@ -78,8 +72,7 @@ CIGD11 + GCVD54 height (ft)
 
 CIGD11 + LCVD61 height (ft)
 ---------------------------
-
-| Used: Cayman Islands - Little Cayman.
+| Extent: Cayman Islands - Little Cayman.
 
 .. code-block:: php
 
@@ -91,8 +84,7 @@ CIGD11 + LCVD61 height (ft)
 
 CR-SIRGAS / CRTM05 + DACR52 height
 ----------------------------------
-
-| Used: Costa Rica - onshore.
+| Extent: Costa Rica - onshore.
 
 .. code-block:: php
 
@@ -105,8 +97,7 @@ With geoid model and gravity, part of official national dynamic geodetic framewo
 
 DB_REF / 3-degree Gauss-Kruger zone 2 (E-N) + DHHN92 height
 -----------------------------------------------------------
-
-| Used: Germany - former West Germany onshore west of 7°30'E - states of Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland.
+| Extent: Germany - former West Germany onshore west of 7°30'E - states of Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland.
 
 .. code-block:: php
 
@@ -118,8 +109,7 @@ DB_REF / 3-degree Gauss-Kruger zone 2 (E-N) + DHHN92 height
 
 DB_REF / 3-degree Gauss-Kruger zone 3 (E-N) + DHHN92 height
 -----------------------------------------------------------
-
-| Used: Germany - onshore between 7°30'E and 10°30'E.
+| Extent: Germany - onshore between 7°30'E and 10°30'E.
 
 .. code-block:: php
 
@@ -131,8 +121,7 @@ DB_REF / 3-degree Gauss-Kruger zone 3 (E-N) + DHHN92 height
 
 DB_REF / 3-degree Gauss-Kruger zone 4 (E-N) + DHHN92 height
 -----------------------------------------------------------
-
-| Used: Germany - onshore between 10°30'E and 13°30'E.
+| Extent: Germany - onshore between 10°30'E and 13°30'E.
 
 .. code-block:: php
 
@@ -144,8 +133,7 @@ DB_REF / 3-degree Gauss-Kruger zone 4 (E-N) + DHHN92 height
 
 DB_REF / 3-degree Gauss-Kruger zone 5 (E-N) + DHHN92 height
 -----------------------------------------------------------
-
-| Used: Germany - onshore east of 13°30'E.
+| Extent: Germany - onshore east of 13°30'E.
 
 .. code-block:: php
 
@@ -157,8 +145,7 @@ DB_REF / 3-degree Gauss-Kruger zone 5 (E-N) + DHHN92 height
 
 DB_REF2003 zone 2
 -----------------
-
-| Used: Germany - former West Germany onshore west of 7°30'E - states of Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland.
+| Extent: Germany - former West Germany onshore west of 7°30'E - states of Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland.
 
 .. code-block:: php
 
@@ -171,8 +158,7 @@ On the introduction of DB_REF2016 height,  this compound CRS replaced by DB_REF2
 
 DB_REF2003 zone 3
 -----------------
-
-| Used: Germany - onshore between 7°30'E and 10°30'E.
+| Extent: Germany - onshore between 7°30'E and 10°30'E.
 
 .. code-block:: php
 
@@ -185,8 +171,7 @@ On the introduction of DB_REF2016 height,  this compound CRS replaced by DB_REF2
 
 DB_REF2003 zone 4
 -----------------
-
-| Used: Germany - onshore between 10°30'E and 13°30'E.
+| Extent: Germany - onshore between 10°30'E and 13°30'E.
 
 .. code-block:: php
 
@@ -199,8 +184,7 @@ On the introduction of DB_REF2016 height,  this compound CRS replaced by DB_REF2
 
 DB_REF2003 zone 5
 -----------------
-
-| Used: Germany - onshore east of 13°30'E.
+| Extent: Germany - onshore east of 13°30'E.
 
 .. code-block:: php
 
@@ -213,8 +197,7 @@ On the introduction of DB_REF2016 height,  this compound CRS replaced by DB_REF2
 
 DB_REF2016 zone 2
 -----------------
-
-| Used: Germany - former West Germany onshore west of 7°30'E - states of Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland.
+| Extent: Germany - former West Germany onshore west of 7°30'E - states of Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland.
 
 .. code-block:: php
 
@@ -227,8 +210,7 @@ Replaces DB_REF2003 zone 2 (compound CRS code 9928).
 
 DB_REF2016 zone 3
 -----------------
-
-| Used: Germany - onshore between 7°30'E and 10°30'E.
+| Extent: Germany - onshore between 7°30'E and 10°30'E.
 
 .. code-block:: php
 
@@ -241,8 +223,7 @@ Replaces DB_REF2003 zone 3 (compound CRS code 9929).
 
 DB_REF2016 zone 4
 -----------------
-
-| Used: Germany - onshore between 10°30'E and 13°30'E.
+| Extent: Germany - onshore between 10°30'E and 13°30'E.
 
 .. code-block:: php
 
@@ -255,8 +236,7 @@ Replaces DB_REF2003 zone 4 (compound CRS code 9930).
 
 DB_REF2016 zone 5
 -----------------
-
-| Used: Germany - onshore east of 13°30'E.
+| Extent: Germany - onshore east of 13°30'E.
 
 .. code-block:: php
 
@@ -269,8 +249,7 @@ Replaces DB_REF2003 zone 5 (compound CRS code 9931).
 
 EBBWV14 Grid + ODN height
 -------------------------
-
-| Used: United Kingdom (UK) - on or related to the rail route from Newport (Park Junction) to Ebbw Vale.
+| Extent: United Kingdom (UK) - on or related to the rail route from Newport (Park Junction) to Ebbw Vale.
 
 .. code-block:: php
 
@@ -282,8 +261,7 @@ EBBWV14 Grid + ODN height
 
 ECML14_NB Grid + ODN height
 ---------------------------
-
-| Used: United Kingdom (UK) - on or related to rail routes from Newcastle Central to Ashington via Benton North Junction, and the section from Bedlington to Morpeth.
+| Extent: United Kingdom (UK) - on or related to rail routes from Newcastle Central to Ashington via Benton North Junction, and the section from Bedlington to Morpeth.
 
 .. code-block:: php
 
@@ -295,8 +273,7 @@ ECML14_NB Grid + ODN height
 
 EOS21 Grid + ODN height
 -----------------------
-
-| Used: United Kingdom (UK) - on or related to the complex of rail routes in the East of Scotland, incorporating the route from Tweedbank through the Borders to Edinburgh; the line from Edinburgh to Aberdeen; routes via Kirkaldy and Cowdenbeath; and routes via Leuchars and Perth to Dundee. 
+| Extent: United Kingdom (UK) - on or related to the complex of rail routes in the East of Scotland, incorporating the route from Tweedbank through the Borders to Edinburgh; the line from Edinburgh to Aberdeen; routes via Kirkaldy and Cowdenbeath; and routes via Leuchars and Perth to Dundee.
 
 .. code-block:: php
 
@@ -308,8 +285,7 @@ EOS21 Grid + ODN height
 
 ETRF2000-PL + Baltic 1986 height
 --------------------------------
-
-| Used: Poland - onshore.
+| Extent: Poland - onshore.
 
 .. code-block:: php
 
@@ -321,8 +297,7 @@ ETRF2000-PL + Baltic 1986 height
 
 ETRF2000-PL + EVRF2007-PL height
 --------------------------------
-
-| Used: Poland - onshore.
+| Extent: Poland - onshore.
 
 .. code-block:: php
 
@@ -334,8 +309,7 @@ ETRF2000-PL + EVRF2007-PL height
 
 ETRS89 + Alicante height
 ------------------------
-
-| Used: Gibraltar - onshore; Spain - mainland onshore.
+| Extent: Gibraltar - onshore; Spain - mainland onshore.
 
 .. code-block:: php
 
@@ -347,8 +321,7 @@ ETRS89 + Alicante height
 
 ETRS89 + BI height
 ------------------
-
-| Used: United Kingdom (UK) - offshore to boundary of UKCS within 49°45'N to 61°N and 9°W to 2°E; onshore Great Britain (England, Wales and Scotland) and Northern Ireland. Ireland onshore. Isle of Man onshore.
+| Extent: United Kingdom (UK) - offshore to boundary of UKCS within 49°45'N to 61°N and 9°W to 2°E; onshore Great Britain (England, Wales and Scotland) and Northern Ireland. Ireland onshore. Isle of Man onshore.
 
 .. code-block:: php
 
@@ -360,8 +333,7 @@ ETRS89 + BI height
 
 ETRS89 + Baltic 1957 height
 ---------------------------
-
-| Used: Czechia; Slovakia.
+| Extent: Czechia; Slovakia.
 
 .. code-block:: php
 
@@ -373,8 +345,7 @@ ETRS89 + Baltic 1957 height
 
 ETRS89 + Belfast height
 -----------------------
-
-| Used: United Kingdom (UK) - Northern Ireland (Ulster) - onshore.
+| Extent: United Kingdom (UK) - Northern Ireland (Ulster) - onshore.
 
 .. code-block:: php
 
@@ -386,8 +357,7 @@ ETRS89 + Belfast height
 
 ETRS89 + CD Norway depth
 ------------------------
-
-| Used: Norway - inshore and nearshore.
+| Extent: Norway - inshore and nearshore.
 
 .. code-block:: php
 
@@ -399,8 +369,7 @@ ETRS89 + CD Norway depth
 
 ETRS89 + Cagliari 1956 height
 -----------------------------
-
-| Used: Italy - Sardinia onshore.
+| Extent: Italy - Sardinia onshore.
 
 .. code-block:: php
 
@@ -412,8 +381,7 @@ ETRS89 + Cagliari 1956 height
 
 ETRS89 + Catania 1965 height
 ----------------------------
-
-| Used: Italy - Sicily onshore.
+| Extent: Italy - Sicily onshore.
 
 .. code-block:: php
 
@@ -425,8 +393,7 @@ ETRS89 + Catania 1965 height
 
 ETRS89 + Ceuta 2 height
 -----------------------
-
-| Used: Spain - Ceuta onshore.
+| Extent: Spain - Ceuta onshore.
 
 .. code-block:: php
 
@@ -438,8 +405,7 @@ ETRS89 + Ceuta 2 height
 
 ETRS89 + DHHN2016 height
 ------------------------
-
-| Used: Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt, Schleswig-Holstein, Thuringen.
+| Extent: Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt, Schleswig-Holstein, Thuringen.
 
 .. code-block:: php
 
@@ -451,8 +417,7 @@ ETRS89 + DHHN2016 height
 
 ETRS89 + Douglas height
 -----------------------
-
-| Used: Isle of Man - onshore.
+| Extent: Isle of Man - onshore.
 
 .. code-block:: php
 
@@ -464,8 +429,7 @@ ETRS89 + Douglas height
 
 ETRS89 + EVRF2000 Austria height
 --------------------------------
-
-| Used: Austria.
+| Extent: Austria.
 
 .. code-block:: php
 
@@ -477,8 +441,7 @@ ETRS89 + EVRF2000 Austria height
 
 ETRS89 + EVRF2000 height
 ------------------------
-
-| Used: Europe - onshore - Andorra; Austria; Belgium; Bosnia and Herzegovina; Croatia; Czechia; Denmark; Estonia; Finland; France - mainland; Germany; Gibraltar; Hungary; Italy - mainland and Sicily; Latvia; Liechtenstein; Lithuania; Luxembourg; Netherlands; Norway; Poland; Portugal - mainland; Romania; San Marino; Slovakia; Slovenia; Spain - mainland; Sweden; Switzerland; United Kingdom (UK) - Great Britain mainland; Vatican City State.
+| Extent: Europe - onshore - Andorra; Austria; Belgium; Bosnia and Herzegovina; Croatia; Czechia; Denmark; Estonia; Finland; France - mainland; Germany; Gibraltar; Hungary; Italy - mainland and Sicily; Latvia; Liechtenstein; Lithuania; Luxembourg; Netherlands; Norway; Poland; Portugal - mainland; Romania; San Marino; Slovakia; Slovenia; Spain - mainland; Sweden; Switzerland; United Kingdom (UK) - Great Britain mainland; Vatican City State.
 
 .. code-block:: php
 
@@ -491,8 +454,7 @@ Replaced by ETRS89 + EVRF2007 height (CRS code 7423).
 
 ETRS89 + EVRF2007 height
 ------------------------
-
-| Used: Europe - onshore - Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Czechia; Denmark; Estonia; Finland; France - mainland; Germany; Gibraltar, Hungary; Italy - mainland and Sicily; Latvia; Liechtenstein; Lithuania; Luxembourg; Netherlands; Norway; Poland; Portugal - mainland; Romania; San Marino; Slovakia; Slovenia; Spain - mainland; Sweden; Switzerland; United Kingdom (UK) - Great Britain mainland; Vatican City State.
+| Extent: Europe - onshore - Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Czechia; Denmark; Estonia; Finland; France - mainland; Germany; Gibraltar, Hungary; Italy - mainland and Sicily; Latvia; Liechtenstein; Lithuania; Luxembourg; Netherlands; Norway; Poland; Portugal - mainland; Romania; San Marino; Slovakia; Slovenia; Spain - mainland; Sweden; Switzerland; United Kingdom (UK) - Great Britain mainland; Vatican City State.
 
 .. code-block:: php
 
@@ -505,8 +467,7 @@ Replaces ETRS89 + EVRF2000 height (CRS code 7409).
 
 ETRS89 + EVRF2019 height
 ------------------------
-
-| Used: Europe - onshore - Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Czechia; Denmark; Estonia; Finland; France - mainland; Germany; Gibraltar, Hungary; Italy - mainland and Sicily; Latvia; Liechtenstein; Lithuania; Luxembourg; Netherlands; North Macedonia; Norway; Poland; Portugal - mainland; Romania; San Marino; Slovakia; Slovenia; Spain - mainland; Sweden; Switzerland; United Kingdom (UK) - Great Britain mainland; Vatican City State.
+| Extent: Europe - onshore - Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Czechia; Denmark; Estonia; Finland; France - mainland; Germany; Gibraltar, Hungary; Italy - mainland and Sicily; Latvia; Liechtenstein; Lithuania; Luxembourg; Netherlands; North Macedonia; Norway; Poland; Portugal - mainland; Romania; San Marino; Slovakia; Slovenia; Spain - mainland; Sweden; Switzerland; United Kingdom (UK) - Great Britain mainland; Vatican City State.
 
 .. code-block:: php
 
@@ -519,8 +480,7 @@ Replaces ETRS89 + EVRF2007 height (CRS code 7423). See also ETRS89 + EVRF2019 me
 
 ETRS89 + EVRF2019 mean-tide height
 ----------------------------------
-
-| Used: Europe - onshore - Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Czechia; Denmark; Estonia; Finland; France - mainland; Germany; Gibraltar, Hungary; Italy - mainland and Sicily; Latvia; Liechtenstein; Lithuania; Luxembourg; Netherlands; North Macedonia; Norway; Poland; Portugal - mainland; Romania; San Marino; Slovakia; Slovenia; Spain - mainland; Sweden; Switzerland; United Kingdom (UK) - Great Britain mainland; Vatican City State.
+| Extent: Europe - onshore - Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Czechia; Denmark; Estonia; Finland; France - mainland; Germany; Gibraltar, Hungary; Italy - mainland and Sicily; Latvia; Liechtenstein; Lithuania; Luxembourg; Netherlands; North Macedonia; Norway; Poland; Portugal - mainland; Romania; San Marino; Slovakia; Slovenia; Spain - mainland; Sweden; Switzerland; United Kingdom (UK) - Great Britain mainland; Vatican City State.
 
 .. code-block:: php
 
@@ -533,8 +493,7 @@ See also ETRS89 + EVRF2019 (CRS code 9422).
 
 ETRS89 + Genoa 1942 height
 --------------------------
-
-| Used: Italy - mainland (including San Marino and Vatican City State) and Sicily.
+| Extent: Italy - mainland (including San Marino and Vatican City State) and Sicily.
 
 .. code-block:: php
 
@@ -546,8 +505,7 @@ ETRS89 + Genoa 1942 height
 
 ETRS89 + Ibiza height
 ---------------------
-
-| Used: Spain - Balearic Islands - Ibiza and Formentera - onshore.
+| Extent: Spain - Balearic Islands - Ibiza and Formentera - onshore.
 
 .. code-block:: php
 
@@ -559,8 +517,7 @@ ETRS89 + Ibiza height
 
 ETRS89 + LAT NL depth
 ---------------------
-
-| Used: Netherlands - offshore North Sea.
+| Extent: Netherlands - offshore North Sea.
 
 .. code-block:: php
 
@@ -572,8 +529,7 @@ ETRS89 + LAT NL depth
 
 ETRS89 + Lerwick height
 -----------------------
-
-| Used: United Kingdom (UK) - Great Britain - Scotland - Shetland Islands onshore.
+| Extent: United Kingdom (UK) - Great Britain - Scotland - Shetland Islands onshore.
 
 .. code-block:: php
 
@@ -585,8 +541,7 @@ ETRS89 + Lerwick height
 
 ETRS89 + MSL NL depth
 ---------------------
-
-| Used: Netherlands - offshore North Sea.
+| Extent: Netherlands - offshore North Sea.
 
 .. code-block:: php
 
@@ -598,8 +553,7 @@ ETRS89 + MSL NL depth
 
 ETRS89 + Malin Head height
 --------------------------
-
-| Used: Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore.
+| Extent: Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore.
 
 .. code-block:: php
 
@@ -611,8 +565,7 @@ ETRS89 + Malin Head height
 
 ETRS89 + Mallorca height
 ------------------------
-
-| Used: Spain - Balearic Islands - Mallorca onshore.
+| Extent: Spain - Balearic Islands - Mallorca onshore.
 
 .. code-block:: php
 
@@ -624,8 +577,7 @@ ETRS89 + Mallorca height
 
 ETRS89 + Menorca height
 -----------------------
-
-| Used: Spain - Balearic Islands - Menorca onshore.
+| Extent: Spain - Balearic Islands - Menorca onshore.
 
 .. code-block:: php
 
@@ -637,8 +589,7 @@ ETRS89 + Menorca height
 
 ETRS89 + NAP height
 -------------------
-
-| Used: Netherlands - onshore and offshore.
+| Extent: Netherlands - onshore and offshore.
 
 .. code-block:: php
 
@@ -650,8 +601,7 @@ ETRS89 + NAP height
 
 ETRS89 + NN2000 height
 ----------------------
-
-| Used: Norway - onshore.
+| Extent: Norway - onshore.
 
 .. code-block:: php
 
@@ -663,8 +613,7 @@ ETRS89 + NN2000 height
 
 ETRS89 + NN54 height
 --------------------
-
-| Used: Norway - onshore.
+| Extent: Norway - onshore.
 
 .. code-block:: php
 
@@ -677,8 +626,7 @@ Replaced by ETRS89 + NN2000 height (compound CRS code 5942).
 
 ETRS89 + ODN (Offshore) height
 ------------------------------
-
-| Used: United Kingdom (UK) - offshore between 2km from shore and boundary of UKCS within 49°46'N to 61°01'N and 7°33'W to 3°33'E.
+| Extent: United Kingdom (UK) - offshore between 2km from shore and boundary of UKCS within 49°46'N to 61°01'N and 7°33'W to 3°33'E.
 
 .. code-block:: php
 
@@ -690,8 +638,7 @@ ETRS89 + ODN (Offshore) height
 
 ETRS89 + ODN Orkney height
 --------------------------
-
-| Used: United Kingdom (UK) - Great Britain - Scotland - Orkney Islands onshore.
+| Extent: United Kingdom (UK) - Great Britain - Scotland - Orkney Islands onshore.
 
 .. code-block:: php
 
@@ -703,8 +650,7 @@ ETRS89 + ODN Orkney height
 
 ETRS89 + ODN height
 -------------------
-
-| Used: United Kingdom (UK) - Great Britain onshore - England and Wales - mainland; Scotland - mainland and Inner Hebrides.
+| Extent: United Kingdom (UK) - Great Britain onshore - England and Wales - mainland; Scotland - mainland and Inner Hebrides.
 
 .. code-block:: php
 
@@ -716,8 +662,7 @@ ETRS89 + ODN height
 
 ETRS89 + Ostend height
 ----------------------
-
-| Used: Belgium - onshore.
+| Extent: Belgium - onshore.
 
 .. code-block:: php
 
@@ -729,8 +674,7 @@ ETRS89 + Ostend height
 
 ETRS89 + SVD2006 height
 -----------------------
-
-| Used: Arctic (Norway (Svalbard) onshore and offshore) - between 81°10'N and 76°10'N.
+| Extent: Arctic (Norway (Svalbard) onshore and offshore) - between 81°10'N and 76°10'N.
 
 .. code-block:: php
 
@@ -742,8 +686,7 @@ ETRS89 + SVD2006 height
 
 ETRS89 + St. Marys height
 -------------------------
-
-| Used: United Kingdom (UK) - Great Britain - England - Isles of Scilly onshore.
+| Extent: United Kingdom (UK) - Great Britain - England - Isles of Scilly onshore.
 
 .. code-block:: php
 
@@ -755,8 +698,7 @@ ETRS89 + St. Marys height
 
 ETRS89 + Stornoway height
 -------------------------
-
-| Used: United Kingdom (UK) - Great Britain - Scotland - Outer Hebrides onshore.
+| Extent: United Kingdom (UK) - Great Britain - Scotland - Outer Hebrides onshore.
 
 .. code-block:: php
 
@@ -768,8 +710,7 @@ ETRS89 + Stornoway height
 
 ETRS89 / Belgian Lambert 2008 + Ostend height
 ---------------------------------------------
-
-| Used: Belgium - onshore.
+| Extent: Belgium - onshore.
 
 .. code-block:: php
 
@@ -781,8 +722,7 @@ ETRS89 / Belgian Lambert 2008 + Ostend height
 
 ETRS89 / DKTM1 + DVR90 height
 -----------------------------
-
-| Used: Denmark - Jutland onshore west of 10°E.
+| Extent: Denmark - Jutland onshore west of 10°E.
 
 .. code-block:: php
 
@@ -794,8 +734,7 @@ ETRS89 / DKTM1 + DVR90 height
 
 ETRS89 / DKTM2 + DVR90 height
 -----------------------------
-
-| Used: Denmark - onshore - Jutland east of 9°E and Funen.
+| Extent: Denmark - onshore - Jutland east of 9°E and Funen.
 
 .. code-block:: php
 
@@ -807,8 +746,7 @@ ETRS89 / DKTM2 + DVR90 height
 
 ETRS89 / DKTM3 + DVR90 height
 -----------------------------
-
-| Used: Denmark - Zealand and Lolland (onshore).
+| Extent: Denmark - Zealand and Lolland (onshore).
 
 .. code-block:: php
 
@@ -820,8 +758,7 @@ ETRS89 / DKTM3 + DVR90 height
 
 ETRS89 / DKTM4 + DVR90 height
 -----------------------------
-
-| Used: Denmark - Bornholm onshore.
+| Extent: Denmark - Bornholm onshore.
 
 .. code-block:: php
 
@@ -833,8 +770,7 @@ ETRS89 / DKTM4 + DVR90 height
 
 ETRS89 / Faroe TM + FVR09 height
 --------------------------------
-
-| Used: Faroe Islands - onshore.
+| Extent: Faroe Islands - onshore.
 
 .. code-block:: php
 
@@ -847,8 +783,7 @@ Introduced in 2010.
 
 ETRS89 / ITM + BI height
 ------------------------
-
-| Used: Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore.
+| Extent: Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore.
 
 .. code-block:: php
 
@@ -860,8 +795,7 @@ ETRS89 / ITM + BI height
 
 ETRS89 / Kp2000 Bornholm + DVR90 height
 ---------------------------------------
-
-| Used: Denmark - Bornholm onshore.
+| Extent: Denmark - Bornholm onshore.
 
 .. code-block:: php
 
@@ -873,8 +807,7 @@ ETRS89 / Kp2000 Bornholm + DVR90 height
 
 ETRS89 / Kp2000 Jutland + DVR90 height
 --------------------------------------
-
-| Used: Denmark - Jutland and Funen - onshore.
+| Extent: Denmark - Jutland and Funen - onshore.
 
 .. code-block:: php
 
@@ -886,8 +819,7 @@ ETRS89 / Kp2000 Jutland + DVR90 height
 
 ETRS89 / Kp2000 Zealand + DVR90 height
 --------------------------------------
-
-| Used: Denmark - Zealand and Lolland (onshore).
+| Extent: Denmark - Zealand and Lolland (onshore).
 
 .. code-block:: php
 
@@ -899,8 +831,7 @@ ETRS89 / Kp2000 Zealand + DVR90 height
 
 ETRS89 / NTM zone 10 + NN2000 height
 ------------------------------------
-
-| Used: Norway - onshore - between 10°E and 11°E.
+| Extent: Norway - onshore - between 10°E and 11°E.
 
 .. code-block:: php
 
@@ -912,8 +843,7 @@ ETRS89 / NTM zone 10 + NN2000 height
 
 ETRS89 / NTM zone 10 + NN54 height
 ----------------------------------
-
-| Used: Norway - onshore - between 10°E and 11°E.
+| Extent: Norway - onshore - between 10°E and 11°E.
 
 .. code-block:: php
 
@@ -926,8 +856,7 @@ Replaced by ETRS89 / NTM zone 10 + NN2000 height (compound CRS code 5950).
 
 ETRS89 / NTM zone 11 + NN2000 height
 ------------------------------------
-
-| Used: Norway - onshore - between 11°E and 12°E.
+| Extent: Norway - onshore - between 11°E and 12°E.
 
 .. code-block:: php
 
@@ -939,8 +868,7 @@ ETRS89 / NTM zone 11 + NN2000 height
 
 ETRS89 / NTM zone 11 + NN54 height
 ----------------------------------
-
-| Used: Norway - onshore - between 11°E and 12°E.
+| Extent: Norway - onshore - between 11°E and 12°E.
 
 .. code-block:: php
 
@@ -953,8 +881,7 @@ Replaced by ETRS89 / NTM zone 11 + NN2000 height (compound CRS code 5951).
 
 ETRS89 / NTM zone 12 + NN2000 height
 ------------------------------------
-
-| Used: Norway - onshore - between 12°E and 13°E.
+| Extent: Norway - onshore - between 12°E and 13°E.
 
 .. code-block:: php
 
@@ -966,8 +893,7 @@ ETRS89 / NTM zone 12 + NN2000 height
 
 ETRS89 / NTM zone 12 + NN54 height
 ----------------------------------
-
-| Used: Norway - onshore - between 12°E and 13°E.
+| Extent: Norway - onshore - between 12°E and 13°E.
 
 .. code-block:: php
 
@@ -980,8 +906,7 @@ Replaced by ETRS89 / NTM zone 12 + NN2000 height (compound CRS code 5952).
 
 ETRS89 / NTM zone 13 + NN2000 height
 ------------------------------------
-
-| Used: Norway - onshore - between 13°E and 14°E.
+| Extent: Norway - onshore - between 13°E and 14°E.
 
 .. code-block:: php
 
@@ -993,8 +918,7 @@ ETRS89 / NTM zone 13 + NN2000 height
 
 ETRS89 / NTM zone 13 + NN54 height
 ----------------------------------
-
-| Used: Norway - onshore - between 13°E and 14°E.
+| Extent: Norway - onshore - between 13°E and 14°E.
 
 .. code-block:: php
 
@@ -1007,8 +931,7 @@ Replaced by ETRS89 / NTM zone 13 + NN2000 height (compound CRS code 5953).
 
 ETRS89 / NTM zone 14 + NN2000 height
 ------------------------------------
-
-| Used: Norway - onshore - between 14°E and 15°E.
+| Extent: Norway - onshore - between 14°E and 15°E.
 
 .. code-block:: php
 
@@ -1020,8 +943,7 @@ ETRS89 / NTM zone 14 + NN2000 height
 
 ETRS89 / NTM zone 14 + NN54 height
 ----------------------------------
-
-| Used: Norway - onshore - between 14°E and 15°E.
+| Extent: Norway - onshore - between 14°E and 15°E.
 
 .. code-block:: php
 
@@ -1034,8 +956,7 @@ Replaced by ETRS89 / NTM zone 14 + NN2000 height (compound CRS code 5954).
 
 ETRS89 / NTM zone 15 + NN2000 height
 ------------------------------------
-
-| Used: Norway - onshore - between 15°E and 16°E.
+| Extent: Norway - onshore - between 15°E and 16°E.
 
 .. code-block:: php
 
@@ -1047,8 +968,7 @@ ETRS89 / NTM zone 15 + NN2000 height
 
 ETRS89 / NTM zone 15 + NN54 height
 ----------------------------------
-
-| Used: Norway - onshore - between 15°E and 16°E.
+| Extent: Norway - onshore - between 15°E and 16°E.
 
 .. code-block:: php
 
@@ -1061,8 +981,7 @@ Replaced by ETRS89 / NTM zone 15 + NN2000 height (compound CRS code 5955).
 
 ETRS89 / NTM zone 16 + NN2000 height
 ------------------------------------
-
-| Used: Norway - onshore - between 16°E and 17°E.
+| Extent: Norway - onshore - between 16°E and 17°E.
 
 .. code-block:: php
 
@@ -1074,8 +993,7 @@ ETRS89 / NTM zone 16 + NN2000 height
 
 ETRS89 / NTM zone 16 + NN54 height
 ----------------------------------
-
-| Used: Norway - onshore - between 16°E and 17°E.
+| Extent: Norway - onshore - between 16°E and 17°E.
 
 .. code-block:: php
 
@@ -1088,8 +1006,7 @@ Replaced by ETRS89 / NTM zone 16 + NN2000 height (compound CRS code 5956).
 
 ETRS89 / NTM zone 17 + NN2000 height
 ------------------------------------
-
-| Used: Norway - onshore - between 17°E and 18°E.
+| Extent: Norway - onshore - between 17°E and 18°E.
 
 .. code-block:: php
 
@@ -1101,8 +1018,7 @@ ETRS89 / NTM zone 17 + NN2000 height
 
 ETRS89 / NTM zone 17 + NN54 height
 ----------------------------------
-
-| Used: Norway - onshore - between 17°E and 18°E.
+| Extent: Norway - onshore - between 17°E and 18°E.
 
 .. code-block:: php
 
@@ -1115,8 +1031,7 @@ Replaced by ETRS89 / NTM zone 17 + NN2000 height (compound CRS code 5957).
 
 ETRS89 / NTM zone 18 + NN2000 height
 ------------------------------------
-
-| Used: Norway - onshore - between 18°E and 19°E.
+| Extent: Norway - onshore - between 18°E and 19°E.
 
 .. code-block:: php
 
@@ -1128,8 +1043,7 @@ ETRS89 / NTM zone 18 + NN2000 height
 
 ETRS89 / NTM zone 18 + NN54 height
 ----------------------------------
-
-| Used: Norway - onshore - between 18°E and 19°E.
+| Extent: Norway - onshore - between 18°E and 19°E.
 
 .. code-block:: php
 
@@ -1142,8 +1056,7 @@ Replaced by ETRS89 / NTM zone 18 + NN2000 height (compound CRS code 5958).
 
 ETRS89 / NTM zone 19 + NN2000 height
 ------------------------------------
-
-| Used: Norway - onshore - between 19°E and 20°E.
+| Extent: Norway - onshore - between 19°E and 20°E.
 
 .. code-block:: php
 
@@ -1155,8 +1068,7 @@ ETRS89 / NTM zone 19 + NN2000 height
 
 ETRS89 / NTM zone 19 + NN54 height
 ----------------------------------
-
-| Used: Norway - onshore - between 19°E and 20°E.
+| Extent: Norway - onshore - between 19°E and 20°E.
 
 .. code-block:: php
 
@@ -1169,8 +1081,7 @@ Replaced by ETRS89 / NTM zone 19 + NN2000 height (compound CRS code 5959).
 
 ETRS89 / NTM zone 20 + NN2000 height
 ------------------------------------
-
-| Used: Norway - onshore - between 20°E and 21°E.
+| Extent: Norway - onshore - between 20°E and 21°E.
 
 .. code-block:: php
 
@@ -1182,8 +1093,7 @@ ETRS89 / NTM zone 20 + NN2000 height
 
 ETRS89 / NTM zone 20 + NN54 height
 ----------------------------------
-
-| Used: Norway - onshore - between 20°E and 21°E.
+| Extent: Norway - onshore - between 20°E and 21°E.
 
 .. code-block:: php
 
@@ -1196,8 +1106,7 @@ Replaced by ETRS89 / NTM zone 20 + NN2000 height (compound CRS code 5960).
 
 ETRS89 / NTM zone 21 + NN2000 height
 ------------------------------------
-
-| Used: Norway - onshore - between 21°E and 22°E.
+| Extent: Norway - onshore - between 21°E and 22°E.
 
 .. code-block:: php
 
@@ -1209,8 +1118,7 @@ ETRS89 / NTM zone 21 + NN2000 height
 
 ETRS89 / NTM zone 21 + NN54 height
 ----------------------------------
-
-| Used: Norway - onshore - between 21°E and 22°E.
+| Extent: Norway - onshore - between 21°E and 22°E.
 
 .. code-block:: php
 
@@ -1223,8 +1131,7 @@ Replaced by ETRS89 / NTM zone 21 + NN2000 height (compound CRS code 5961).
 
 ETRS89 / NTM zone 22 + NN2000 height
 ------------------------------------
-
-| Used: Norway - onshore - between 22°E and 23°E.
+| Extent: Norway - onshore - between 22°E and 23°E.
 
 .. code-block:: php
 
@@ -1236,8 +1143,7 @@ ETRS89 / NTM zone 22 + NN2000 height
 
 ETRS89 / NTM zone 22 + NN54 height
 ----------------------------------
-
-| Used: Norway - onshore - between 22°E and 23°E.
+| Extent: Norway - onshore - between 22°E and 23°E.
 
 .. code-block:: php
 
@@ -1250,8 +1156,7 @@ Replaced by ETRS89 / NTM zone 22 + NN2000 height (compound CRS code 5962).
 
 ETRS89 / NTM zone 23 + NN2000 height
 ------------------------------------
-
-| Used: Norway - onshore - between 23°E and 24°E.
+| Extent: Norway - onshore - between 23°E and 24°E.
 
 .. code-block:: php
 
@@ -1263,8 +1168,7 @@ ETRS89 / NTM zone 23 + NN2000 height
 
 ETRS89 / NTM zone 23 + NN54 height
 ----------------------------------
-
-| Used: Norway - onshore - between 23°E and 24°E.
+| Extent: Norway - onshore - between 23°E and 24°E.
 
 .. code-block:: php
 
@@ -1277,8 +1181,7 @@ Replaced by ETRS89 / NTM zone 23 + NN2000 height (compound CRS code 5963).
 
 ETRS89 / NTM zone 24 + NN2000 height
 ------------------------------------
-
-| Used: Norway - onshore - between 24°E and 25°E.
+| Extent: Norway - onshore - between 24°E and 25°E.
 
 .. code-block:: php
 
@@ -1290,8 +1193,7 @@ ETRS89 / NTM zone 24 + NN2000 height
 
 ETRS89 / NTM zone 24 + NN54 height
 ----------------------------------
-
-| Used: Norway - onshore - between 24°E and 25°E.
+| Extent: Norway - onshore - between 24°E and 25°E.
 
 .. code-block:: php
 
@@ -1304,8 +1206,7 @@ Replaced by ETRS89 / NTM zone 24 + NN2000 height (compound CRS code 5964).
 
 ETRS89 / NTM zone 25 + NN2000 height
 ------------------------------------
-
-| Used: Norway - onshore - between 25°E and 26°E.
+| Extent: Norway - onshore - between 25°E and 26°E.
 
 .. code-block:: php
 
@@ -1317,8 +1218,7 @@ ETRS89 / NTM zone 25 + NN2000 height
 
 ETRS89 / NTM zone 25 + NN54 height
 ----------------------------------
-
-| Used: Norway - onshore - between 25°E and 26°E.
+| Extent: Norway - onshore - between 25°E and 26°E.
 
 .. code-block:: php
 
@@ -1331,8 +1231,7 @@ Replaced by ETRS89 / NTM zone 25 + NN2000 height (compound CRS code 5965).
 
 ETRS89 / NTM zone 26 + NN2000 height
 ------------------------------------
-
-| Used: Norway - onshore - between 26°E and 27°E.
+| Extent: Norway - onshore - between 26°E and 27°E.
 
 .. code-block:: php
 
@@ -1344,8 +1243,7 @@ ETRS89 / NTM zone 26 + NN2000 height
 
 ETRS89 / NTM zone 26 + NN54 height
 ----------------------------------
-
-| Used: Norway - onshore - between 26°E and 27°E.
+| Extent: Norway - onshore - between 26°E and 27°E.
 
 .. code-block:: php
 
@@ -1358,8 +1256,7 @@ Replaced by ETRS89 / NTM zone 26 + NN2000 height (compound CRS code 5966).
 
 ETRS89 / NTM zone 27 + NN2000 height
 ------------------------------------
-
-| Used: Norway - onshore - between 27°E and 28°E.
+| Extent: Norway - onshore - between 27°E and 28°E.
 
 .. code-block:: php
 
@@ -1371,8 +1268,7 @@ ETRS89 / NTM zone 27 + NN2000 height
 
 ETRS89 / NTM zone 27 + NN54 height
 ----------------------------------
-
-| Used: Norway - onshore - between 27°E and 28°E.
+| Extent: Norway - onshore - between 27°E and 28°E.
 
 .. code-block:: php
 
@@ -1385,8 +1281,7 @@ Replaced by ETRS89 / NTM zone 27 + NN2000 height (compound CRS code 5967).
 
 ETRS89 / NTM zone 28 + NN2000 height
 ------------------------------------
-
-| Used: Norway - onshore - between 28°E and 29°E.
+| Extent: Norway - onshore - between 28°E and 29°E.
 
 .. code-block:: php
 
@@ -1398,8 +1293,7 @@ ETRS89 / NTM zone 28 + NN2000 height
 
 ETRS89 / NTM zone 28 + NN54 height
 ----------------------------------
-
-| Used: Norway - onshore - between 28°E and 29°E.
+| Extent: Norway - onshore - between 28°E and 29°E.
 
 .. code-block:: php
 
@@ -1412,8 +1306,7 @@ Replaced by ETRS89 / NTM zone 28 + NN2000 height (compound CRS code 5968).
 
 ETRS89 / NTM zone 29 + NN2000 height
 ------------------------------------
-
-| Used: Norway - onshore - between 29°E and 30°E.
+| Extent: Norway - onshore - between 29°E and 30°E.
 
 .. code-block:: php
 
@@ -1425,8 +1318,7 @@ ETRS89 / NTM zone 29 + NN2000 height
 
 ETRS89 / NTM zone 29 + NN54 height
 ----------------------------------
-
-| Used: Norway - onshore - between 29°E and 30°E.
+| Extent: Norway - onshore - between 29°E and 30°E.
 
 .. code-block:: php
 
@@ -1439,8 +1331,7 @@ Replaced by ETRS89 / NTM zone 29 + NN2000 height (compound CRS code 5969).
 
 ETRS89 / NTM zone 30 + NN2000 height
 ------------------------------------
-
-| Used: Norway - onshore - east of 30°E.
+| Extent: Norway - onshore - east of 30°E.
 
 .. code-block:: php
 
@@ -1452,8 +1343,7 @@ ETRS89 / NTM zone 30 + NN2000 height
 
 ETRS89 / NTM zone 30 + NN54 height
 ----------------------------------
-
-| Used: Norway - onshore - east of 30°E.
+| Extent: Norway - onshore - east of 30°E.
 
 .. code-block:: php
 
@@ -1466,8 +1356,7 @@ Replaced by ETRS89 / NTM zone 30 + NN2000 height (compound CRS code 5970).
 
 ETRS89 / NTM zone 5 + NN2000 height
 -----------------------------------
-
-| Used: Norway - onshore - west of 6°E.
+| Extent: Norway - onshore - west of 6°E.
 
 .. code-block:: php
 
@@ -1479,8 +1368,7 @@ ETRS89 / NTM zone 5 + NN2000 height
 
 ETRS89 / NTM zone 5 + NN54 height
 ---------------------------------
-
-| Used: Norway - onshore - west of 6°E.
+| Extent: Norway - onshore - west of 6°E.
 
 .. code-block:: php
 
@@ -1493,8 +1381,7 @@ Replaced by ETRS89 / NTM zone 5 + NN2000 height (compound CRS code 5945).
 
 ETRS89 / NTM zone 6 + NN2000 height
 -----------------------------------
-
-| Used: Norway - onshore - between 6°E and 7°E.
+| Extent: Norway - onshore - between 6°E and 7°E.
 
 .. code-block:: php
 
@@ -1506,8 +1393,7 @@ ETRS89 / NTM zone 6 + NN2000 height
 
 ETRS89 / NTM zone 6 + NN54 height
 ---------------------------------
-
-| Used: Norway - onshore - between 6°E and 7°E.
+| Extent: Norway - onshore - between 6°E and 7°E.
 
 .. code-block:: php
 
@@ -1520,8 +1406,7 @@ Replaced by ETRS89 / NTM zone 6 + NN2000 height (compound CRS code 5946).
 
 ETRS89 / NTM zone 7 + NN2000 height
 -----------------------------------
-
-| Used: Norway - onshore - between 7°E and 8°E.
+| Extent: Norway - onshore - between 7°E and 8°E.
 
 .. code-block:: php
 
@@ -1533,8 +1418,7 @@ ETRS89 / NTM zone 7 + NN2000 height
 
 ETRS89 / NTM zone 7 + NN54 height
 ---------------------------------
-
-| Used: Norway - onshore - between 7°E and 8°E.
+| Extent: Norway - onshore - between 7°E and 8°E.
 
 .. code-block:: php
 
@@ -1547,8 +1431,7 @@ Replaced by ETRS89 / NTM zone 7 + NN2000 height (compound CRS code 5947).
 
 ETRS89 / NTM zone 8 + NN2000 height
 -----------------------------------
-
-| Used: Norway - onshore - between 8°E and 9°E.
+| Extent: Norway - onshore - between 8°E and 9°E.
 
 .. code-block:: php
 
@@ -1560,8 +1443,7 @@ ETRS89 / NTM zone 8 + NN2000 height
 
 ETRS89 / NTM zone 8 + NN54 height
 ---------------------------------
-
-| Used: Norway - onshore - between 8°E and 9°E.
+| Extent: Norway - onshore - between 8°E and 9°E.
 
 .. code-block:: php
 
@@ -1574,8 +1456,7 @@ Replaced by ETRS89 / NTM zone 8 + NN2000 height (compound CRS code 5948).
 
 ETRS89 / NTM zone 9 + NN2000 height
 -----------------------------------
-
-| Used: Norway - onshore - between 9°E and 10°E.
+| Extent: Norway - onshore - between 9°E and 10°E.
 
 .. code-block:: php
 
@@ -1587,8 +1468,7 @@ ETRS89 / NTM zone 9 + NN2000 height
 
 ETRS89 / NTM zone 9 + NN54 height
 ---------------------------------
-
-| Used: Norway - onshore - between 9°E and 10°E.
+| Extent: Norway - onshore - between 9°E and 10°E.
 
 .. code-block:: php
 
@@ -1601,8 +1481,7 @@ Replaced by ETRS89 / NTM zone 9 + NN2000 height (compound CRS code 5949).
 
 ETRS89 / TM35FIN(N,E) + N2000 height
 ------------------------------------
-
-| Used: Finland - onshore.
+| Extent: Finland - onshore.
 
 .. code-block:: php
 
@@ -1615,8 +1494,7 @@ Replaces ETRS89 / TM35FIN(N,E) + N60 height (CRS code 3902).
 
 ETRS89 / TM35FIN(N,E) + N60 height
 ----------------------------------
-
-| Used: Finland - onshore.
+| Extent: Finland - onshore.
 
 .. code-block:: php
 
@@ -1629,8 +1507,7 @@ Replaces YKJ/N60 (CRS code 3901). Replaced by ETRS89-TM35FIN(N,E)/N2000 (CRS cod
 
 ETRS89 / UTM zone 31N + DHHN92 height
 -------------------------------------
-
-| Used: Germany - onshore west of 6°E.
+| Extent: Germany - onshore west of 6°E.
 
 .. code-block:: php
 
@@ -1642,8 +1519,7 @@ ETRS89 / UTM zone 31N + DHHN92 height
 
 ETRS89 / UTM zone 31N + NN2000 height
 -------------------------------------
-
-| Used: Norway - onshore - west of 6°E.
+| Extent: Norway - onshore - west of 6°E.
 
 .. code-block:: php
 
@@ -1655,8 +1531,7 @@ ETRS89 / UTM zone 31N + NN2000 height
 
 ETRS89 / UTM zone 31N + NN54 height
 -----------------------------------
-
-| Used: Norway - onshore - west of 6°E.
+| Extent: Norway - onshore - west of 6°E.
 
 .. code-block:: php
 
@@ -1669,8 +1544,7 @@ Replaced by ETRS89 / UTM zone 31N + NN2000 height (compound CRS code 5971).
 
 ETRS89 / UTM zone 32N + DHHN92 height
 -------------------------------------
-
-| Used: Germany - onshore between 6°E and 12°E.
+| Extent: Germany - onshore between 6°E and 12°E.
 
 .. code-block:: php
 
@@ -1682,8 +1556,7 @@ ETRS89 / UTM zone 32N + DHHN92 height
 
 ETRS89 / UTM zone 32N + DVR90 height
 ------------------------------------
-
-| Used: Denmark - onshore west of 12°E - Zealand, Jutland, Fuen and Lolland.
+| Extent: Denmark - onshore west of 12°E - Zealand, Jutland, Fuen and Lolland.
 
 .. code-block:: php
 
@@ -1695,8 +1568,7 @@ ETRS89 / UTM zone 32N + DVR90 height
 
 ETRS89 / UTM zone 32N + NN2000 height
 -------------------------------------
-
-| Used: Norway - onshore - between 6°E and 12°E.
+| Extent: Norway - onshore - between 6°E and 12°E.
 
 .. code-block:: php
 
@@ -1708,8 +1580,7 @@ ETRS89 / UTM zone 32N + NN2000 height
 
 ETRS89 / UTM zone 32N + NN54 height
 -----------------------------------
-
-| Used: Norway - onshore - between 6°E and 12°E.
+| Extent: Norway - onshore - between 6°E and 12°E.
 
 .. code-block:: php
 
@@ -1722,8 +1593,7 @@ Replaced by ETRS89 / UTM zone 32N + NN2000 height (compound CRS code 5972).
 
 ETRS89 / UTM zone 33N + DHHN92 height
 -------------------------------------
-
-| Used: Germany - onshore east of 12°E.
+| Extent: Germany - onshore east of 12°E.
 
 .. code-block:: php
 
@@ -1735,8 +1605,7 @@ ETRS89 / UTM zone 33N + DHHN92 height
 
 ETRS89 / UTM zone 33N + DVR90 height
 ------------------------------------
-
-| Used: Denmark - onshore east of 12°E - Zealand and Falster, Bornholm.
+| Extent: Denmark - onshore east of 12°E - Zealand and Falster, Bornholm.
 
 .. code-block:: php
 
@@ -1748,8 +1617,7 @@ ETRS89 / UTM zone 33N + DVR90 height
 
 ETRS89 / UTM zone 33N + NN2000 height
 -------------------------------------
-
-| Used: Norway - onshore - between 12°E and 18°E.
+| Extent: Norway - onshore - between 12°E and 18°E.
 
 .. code-block:: php
 
@@ -1761,8 +1629,7 @@ ETRS89 / UTM zone 33N + NN2000 height
 
 ETRS89 / UTM zone 33N + NN54 height
 -----------------------------------
-
-| Used: Norway - onshore - between 12°E and 18°E.
+| Extent: Norway - onshore - between 12°E and 18°E.
 
 .. code-block:: php
 
@@ -1775,8 +1642,7 @@ Replaced by ETRS89 / UTM zone 33N + NN2000 height (compound CRS code 5973).
 
 ETRS89 / UTM zone 34N + NN2000 height
 -------------------------------------
-
-| Used: Norway - onshore - between 18°E and 24°E.
+| Extent: Norway - onshore - between 18°E and 24°E.
 
 .. code-block:: php
 
@@ -1788,8 +1654,7 @@ ETRS89 / UTM zone 34N + NN2000 height
 
 ETRS89 / UTM zone 34N + NN54 height
 -----------------------------------
-
-| Used: Norway - onshore - between 18°E and 24°E.
+| Extent: Norway - onshore - between 18°E and 24°E.
 
 .. code-block:: php
 
@@ -1802,8 +1667,7 @@ Replaced by ETRS89 / UTM zone 34N + NN2000 height (compound CRS code 5974).
 
 ETRS89 / UTM zone 35N + NN2000 height
 -------------------------------------
-
-| Used: Norway - onshore - between 24°E and 30°E.
+| Extent: Norway - onshore - between 24°E and 30°E.
 
 .. code-block:: php
 
@@ -1815,8 +1679,7 @@ ETRS89 / UTM zone 35N + NN2000 height
 
 ETRS89 / UTM zone 35N + NN54 height
 -----------------------------------
-
-| Used: Norway - onshore - between 24°E and 30°E.
+| Extent: Norway - onshore - between 24°E and 30°E.
 
 .. code-block:: php
 
@@ -1829,8 +1692,7 @@ Replaced by ETRS89 / UTM zone 35N + NN2000 height (compound CRS code 5975).
 
 ETRS89 / UTM zone 36N + NN2000 height
 -------------------------------------
-
-| Used: Norway - onshore - east of 30°E.
+| Extent: Norway - onshore - east of 30°E.
 
 .. code-block:: php
 
@@ -1842,8 +1704,7 @@ ETRS89 / UTM zone 36N + NN2000 height
 
 ETRS89 / UTM zone 36N + NN54 height
 -----------------------------------
-
-| Used: Norway - onshore - east of 30°E.
+| Extent: Norway - onshore - east of 30°E.
 
 .. code-block:: php
 
@@ -1856,8 +1717,7 @@ Replaced by ETRS89 / UTM zone 36N + NN2000 height (compound CRS code 5976).
 
 EWR2 Grid + ODN height
 ----------------------
-
-| Used: United Kingdom (UK) - on or related to East West Rail (Phase 2) routes from Oxford to Bicester, Bletchley and Bedford, and from Claydon Junction to Aylesbury and Princes Risborough.
+| Extent: United Kingdom (UK) - on or related to East West Rail (Phase 2) routes from Oxford to Bicester, Bletchley and Bedford, and from Claydon Junction to Aylesbury and Princes Risborough.
 
 .. code-block:: php
 
@@ -1869,8 +1729,7 @@ EWR2 Grid + ODN height
 
 FEH2010 + FCSVR10 height
 ------------------------
-
-| Used: Fehmarnbelt area of Denmark and Germany.
+| Extent: Fehmarnbelt area of Denmark and Germany.
 
 .. code-block:: php
 
@@ -1882,8 +1741,7 @@ FEH2010 + FCSVR10 height
 
 FEH2010 / Fehmarnbelt TM + FCSVR10 height
 -----------------------------------------
-
-| Used: Fehmarnbelt area of Denmark and Germany.
+| Extent: Fehmarnbelt area of Denmark and Germany.
 
 .. code-block:: php
 
@@ -1895,8 +1753,7 @@ FEH2010 / Fehmarnbelt TM + FCSVR10 height
 
 FNL22 Grid + ODN height
 -----------------------
-
-| Used: United Kingdom (UK) - on or related to the rail route from Inverness to Thurso and Wick.
+| Extent: United Kingdom (UK) - on or related to the rail route from Inverness to Thurso and Wick.
 
 .. code-block:: php
 
@@ -1908,8 +1765,7 @@ FNL22 Grid + ODN height
 
 GBK19 Grid + ODN height
 -----------------------
-
-| Used: United Kingdom (UK) - on or related to the rail route from Glasgow to Kilmarnock via Barrhead and the branch to East Kilbride.
+| Extent: United Kingdom (UK) - on or related to the rail route from Glasgow to Kilmarnock via Barrhead and the branch to East Kilbride.
 
 .. code-block:: php
 
@@ -1921,8 +1777,7 @@ GBK19 Grid + ODN height
 
 GDA2020 + AHD height
 --------------------
-
-| Used: Australia - Australian Capital Territory, New South Wales, Northern Territory, Queensland, South Australia, Tasmania, Western Australia and Victoria - onshore. Christmas Island - onshore. Cocos and Keeling Islands - onshore.
+| Extent: Australia - Australian Capital Territory, New South Wales, Northern Territory, Queensland, South Australia, Tasmania, Western Australia and Victoria - onshore. Christmas Island - onshore. Cocos and Keeling Islands - onshore.
 
 .. code-block:: php
 
@@ -1934,8 +1789,7 @@ GDA2020 + AHD height
 
 GDA2020 + AVWS height
 ---------------------
-
-| Used: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
+| Extent: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
 
 .. code-block:: php
 
@@ -1947,8 +1801,7 @@ GDA2020 + AVWS height
 
 GDA94 + AHD height
 ------------------
-
-| Used: Australia - Australian Capital Territory, New South Wales, Northern Territory, Queensland, South Australia, Tasmania, Western Australia and Victoria - onshore. Christmas Island - onshore. Cocos and Keeling Islands - onshore.
+| Extent: Australia - Australian Capital Territory, New South Wales, Northern Territory, Queensland, South Australia, Tasmania, Western Australia and Victoria - onshore. Christmas Island - onshore. Cocos and Keeling Islands - onshore.
 
 .. code-block:: php
 
@@ -1960,8 +1813,7 @@ GDA94 + AHD height
 
 GR96 + GVR2000 height
 ---------------------
-
-| Used: Greenland - onshore and offshore between 59°N and 84°N and west of 10°W.
+| Extent: Greenland - onshore and offshore between 59°N and 84°N and west of 10°W.
 
 .. code-block:: php
 
@@ -1974,8 +1826,7 @@ Replaced by GR96 + GVR2016 height (CRS code 8350).
 
 GR96 + GVR2016 height
 ---------------------
-
-| Used: Greenland - onshore and offshore between 58°N and 85°N and west of 7°W.
+| Extent: Greenland - onshore and offshore between 58°N and 85°N and west of 7°W.
 
 .. code-block:: php
 
@@ -1988,8 +1839,7 @@ Replaces GR96 + GVR2000 height (CRS code 8349).
 
 HS2 Survey Grid + HS2-VRF height
 --------------------------------
-
-| Used: United Kingdom (UK) - HS2 phases 1 and 2a railway corridor from London to Birmingham, Lichfield and Crewe.
+| Extent: United Kingdom (UK) - HS2 phases 1 and 2a railway corridor from London to Birmingham, Lichfield and Crewe.
 
 .. code-block:: php
 
@@ -2002,8 +1852,7 @@ Realized by use of HS2TN15 transformation and HS2GM15 geoid model from ETRS89 OS
 
 HULLEE13 Grid + ODN height
 --------------------------
-
-| Used: United Kingdom (UK) - on or related to the rail route from the Morley tunnel through Leeds to Hull.
+| Extent: United Kingdom (UK) - on or related to the rail route from the Morley tunnel through Leeds to Hull.
 
 .. code-block:: php
 
@@ -2015,8 +1864,7 @@ HULLEE13 Grid + ODN height
 
 ISN2004 + ISH2004 height
 ------------------------
-
-| Used: Iceland - onshore.
+| Extent: Iceland - onshore.
 
 .. code-block:: php
 
@@ -2029,8 +1877,7 @@ Replaces ISN93 + ISH2004 height (CRS code 9948). Replaced by ISN2016 + ISH2004 h
 
 ISN2004 / Lambert 2004 + ISH2004 height
 ---------------------------------------
-
-| Used: Iceland - onshore.
+| Extent: Iceland - onshore.
 
 .. code-block:: php
 
@@ -2043,8 +1890,7 @@ Replaces ISN93 / Lambert 1993 + ISH2004 height (CRS code 9951). Replaced by ISN2
 
 ISN2016 + ISH2004 height
 ------------------------
-
-| Used: Iceland - onshore.
+| Extent: Iceland - onshore.
 
 .. code-block:: php
 
@@ -2057,8 +1903,7 @@ Replaces ISN2004 + ISH2004 height (CRS code 9949).
 
 ISN2016 / Lambert 2016 + ISH2004 height
 ---------------------------------------
-
-| Used: Iceland - onshore.
+| Extent: Iceland - onshore.
 
 .. code-block:: php
 
@@ -2071,8 +1916,7 @@ Replaces ISN2004 / Lambert 2004 + ISH2004 height (CRS code 9952).
 
 ISN93 + ISH2004 height
 ----------------------
-
-| Used: Iceland - onshore.
+| Extent: Iceland - onshore.
 
 .. code-block:: php
 
@@ -2085,8 +1929,7 @@ Replaced by ISN2004 + ISH2004 height (CRS code 9949).
 
 ISN93 / Lambert 1993 + ISH2004 height
 -------------------------------------
-
-| Used: Iceland - onshore.
+| Extent: Iceland - onshore.
 
 .. code-block:: php
 
@@ -2099,8 +1942,7 @@ Replaced by ISN2004 / Lambert 2004 + ISH2004 height (CRS code 9952).
 
 ITRF2005 + SA LLD height
 ------------------------
-
-| Used: South Africa - mainland onshore.
+| Extent: South Africa - mainland onshore.
 
 .. code-block:: php
 
@@ -2112,8 +1954,7 @@ ITRF2005 + SA LLD height
 
 JGD2000 + JGD2000 (vertical) height
 -----------------------------------
-
-| Used: Japan - onshore mainland - Hokkaido, Honshu, Shikoku, Kyushu.
+| Extent: Japan - onshore mainland - Hokkaido, Honshu, Shikoku, Kyushu.
 
 .. code-block:: php
 
@@ -2126,8 +1967,7 @@ Replaces Tokyo + JSLD69 height and Tokyo + JSLD72 height (CRS codes 7414 and 670
 
 JGD2011 + JGD2011 (vertical) height
 -----------------------------------
-
-| Used: Japan - onshore mainland - Hokkaido, Honshu, Shikoku, Kyushu.
+| Extent: Japan - onshore mainland - Hokkaido, Honshu, Shikoku, Kyushu.
 
 .. code-block:: php
 
@@ -2140,8 +1980,7 @@ Replaces JGD2000 + JGD2000 (vertical) height (CRS code 6696) with effect from 21
 
 KKJ / Finland Uniform Coordinate System + N60 height
 ----------------------------------------------------
-
-| Used: Finland - onshore.
+| Extent: Finland - onshore.
 
 .. code-block:: php
 
@@ -2154,8 +1993,7 @@ Replaced by ETRS89 / TM35FIN(N,E) + N60 height (CRS code 3902).
 
 KSA-GRF17 + KSA-VRF14 height
 ----------------------------
-
-| Used: Saudi Arabia - onshore.
+| Extent: Saudi Arabia - onshore.
 
 .. code-block:: php
 
@@ -2167,8 +2005,7 @@ KSA-GRF17 + KSA-VRF14 height
 
 LUREF / Luxembourg TM + NG95 height
 -----------------------------------
-
-| Used: Luxembourg.
+| Extent: Luxembourg.
 
 .. code-block:: php
 
@@ -2181,8 +2018,7 @@ For purposes with lower height accuracy requirements, may be approximated (to 5-
 
 MGI + EVRF2000 Austria height
 -----------------------------
-
-| Used: Austria.
+| Extent: Austria.
 
 .. code-block:: php
 
@@ -2194,8 +2030,7 @@ MGI + EVRF2000 Austria height
 
 MML07 Grid + ODN height
 -----------------------
-
-| Used: United Kingdom (UK) - on or related to the Midland Mainline rail route from Sheffield to London.
+| Extent: United Kingdom (UK) - on or related to the Midland Mainline rail route from Sheffield to London.
 
 .. code-block:: php
 
@@ -2207,8 +2042,7 @@ MML07 Grid + ODN height
 
 MOLDOR11 Grid + ODN height
 --------------------------
-
-| Used: United Kingdom (UK) - on or related to the rail route from Manchester via Ordsall Lane and the Hope Valley to Dore Junction.
+| Extent: United Kingdom (UK) - on or related to the rail route from Manchester via Ordsall Lane and the Hope Valley to Dore Junction.
 
 .. code-block:: php
 
@@ -2220,8 +2054,7 @@ MOLDOR11 Grid + ODN height
 
 MRH21 Grid + ODN height
 -----------------------
-
-| Used: United Kingdom (UK) - on or related to Midland Rail Hub, covering routes through Cardiff, Bristol, Gloucester, Derby, Birmingham, Leicester, and Lincoln.
+| Extent: United Kingdom (UK) - on or related to Midland Rail Hub, covering routes through Cardiff, Bristol, Gloucester, Derby, Birmingham, Leicester, and Lincoln.
 
 .. code-block:: php
 
@@ -2233,8 +2066,7 @@ MRH21 Grid + ODN height
 
 MWC18 Grid + ODN height
 -----------------------
-
-| Used: United Kingdom (UK) - on or related to the rail route from Manchester via Wigan and Liverpool to Chester.
+| Extent: United Kingdom (UK) - on or related to the rail route from Manchester via Wigan and Liverpool to Chester.
 
 .. code-block:: php
 
@@ -2246,8 +2078,7 @@ MWC18 Grid + ODN height
 
 NAD27 + NGVD29 height (ftUS)
 ----------------------------
-
-| Used: United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.
+| Extent: United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.
 
 .. code-block:: php
 
@@ -2259,8 +2090,7 @@ NAD27 + NGVD29 height (ftUS)
 
 NAD27 / Texas North + NGVD29 height (ftUS)
 ------------------------------------------
-
-| Used: United States (USA) - Texas - counties of: Armstrong; Briscoe; Carson; Castro; Childress; Collingsworth; Dallam; Deaf Smith; Donley; Gray; Hall; Hansford; Hartley; Hemphill; Hutchinson; Lipscomb; Moore; Ochiltree; Oldham; Parmer; Potter; Randall; Roberts; Sherman; Swisher; Wheeler.
+| Extent: United States (USA) - Texas - counties of: Armstrong; Briscoe; Carson; Castro; Childress; Collingsworth; Dallam; Deaf Smith; Donley; Gray; Hall; Hansford; Hartley; Hemphill; Hutchinson; Lipscomb; Moore; Ochiltree; Oldham; Parmer; Potter; Randall; Roberts; Sherman; Swisher; Wheeler.
 
 .. code-block:: php
 
@@ -2272,8 +2102,7 @@ NAD27 / Texas North + NGVD29 height (ftUS)
 
 NAD83 + NAVD88 height
 ---------------------
-
-| Used: United States (USA) - CONUS and Alaska - onshore - Alabama; Alaska mainland; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.
+| Extent: United States (USA) - CONUS and Alaska - onshore - Alabama; Alaska mainland; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.
 
 .. code-block:: php
 
@@ -2285,8 +2114,7 @@ NAD83 + NAVD88 height
 
 NAD83 / Alabama East + NAVD88 height
 ------------------------------------
-
-| Used: United States (USA) - Alabama east of approximately 86°37'W - counties Barbour; Bullock; Calhoun; Chambers; Cherokee; Clay; Cleburne; Coffee; Coosa; Covington; Crenshaw; Dale; De Kalb; Elmore; Etowah; Geneva; Henry; Houston; Jackson; Lee; Macon; Madison; Marshall; Montgomery; Pike; Randolph; Russell; StClair; Talladega; Tallapoosa.
+| Extent: United States (USA) - Alabama east of approximately 86°37'W - counties Barbour; Bullock; Calhoun; Chambers; Cherokee; Clay; Cleburne; Coffee; Coosa; Covington; Crenshaw; Dale; De Kalb; Elmore; Etowah; Geneva; Henry; Houston; Jackson; Lee; Macon; Madison; Marshall; Montgomery; Pike; Randolph; Russell; StClair; Talladega; Tallapoosa.
 
 .. code-block:: php
 
@@ -2298,8 +2126,7 @@ NAD83 / Alabama East + NAVD88 height
 
 NAD83 / Alabama West + NAVD88 height
 ------------------------------------
-
-| Used: United States (USA) - Alabama west of approximately 86°37'W - counties Autauga; Baldwin; Bibb; Blount; Butler; Chilton; Choctaw; Clarke; Colbert; Conecuh; Cullman; Dallas; Escambia; Fayette; Franklin; Greene; Hale; Jefferson; Lamar; Lauderdale; Lawrence; Limestone; Lowndes; Marengo; Marion; Mobile; Monroe; Morgan; Perry; Pickens; Shelby; Sumter; Tuscaloosa; Walker; Washington; Wilcox; Winston.
+| Extent: United States (USA) - Alabama west of approximately 86°37'W - counties Autauga; Baldwin; Bibb; Blount; Butler; Chilton; Choctaw; Clarke; Colbert; Conecuh; Cullman; Dallas; Escambia; Fayette; Franklin; Greene; Hale; Jefferson; Lamar; Lauderdale; Lawrence; Limestone; Lowndes; Marengo; Marion; Mobile; Monroe; Morgan; Perry; Pickens; Shelby; Sumter; Tuscaloosa; Walker; Washington; Wilcox; Winston.
 
 .. code-block:: php
 
@@ -2311,8 +2138,7 @@ NAD83 / Alabama West + NAVD88 height
 
 NAD83 / Alaska zone 1 + NAVD88 height
 -------------------------------------
-
-| Used: United States (USA) - Alaska - east of 141°W; i.e. Panhandle.
+| Extent: United States (USA) - Alaska - east of 141°W; i.e. Panhandle.
 
 .. code-block:: php
 
@@ -2324,8 +2150,7 @@ NAD83 / Alaska zone 1 + NAVD88 height
 
 NAD83 / Alaska zone 10 + NAVD88 height
 --------------------------------------
-
-| Used: United States (USA) - Alaska - Aleutian Islands onshore.
+| Extent: United States (USA) - Alaska - Aleutian Islands onshore.
 
 .. code-block:: php
 
@@ -2337,8 +2162,7 @@ NAD83 / Alaska zone 10 + NAVD88 height
 
 NAD83 / Alaska zone 2 + NAVD88 height
 -------------------------------------
-
-| Used: United States (USA) - Alaska - between 144°W and 141°W, onshore.
+| Extent: United States (USA) - Alaska - between 144°W and 141°W, onshore.
 
 .. code-block:: php
 
@@ -2350,8 +2174,7 @@ NAD83 / Alaska zone 2 + NAVD88 height
 
 NAD83 / Alaska zone 3 + NAVD88 height
 -------------------------------------
-
-| Used: United States (USA) - Alaska - between 148°W and 144°W.
+| Extent: United States (USA) - Alaska - between 148°W and 144°W.
 
 .. code-block:: php
 
@@ -2363,8 +2186,7 @@ NAD83 / Alaska zone 3 + NAVD88 height
 
 NAD83 / Alaska zone 4 + NAVD88 height
 -------------------------------------
-
-| Used: United States (USA) - Alaska - between 152°W and 148°W, onshore.
+| Extent: United States (USA) - Alaska - between 152°W and 148°W, onshore.
 
 .. code-block:: php
 
@@ -2376,8 +2198,7 @@ NAD83 / Alaska zone 4 + NAVD88 height
 
 NAD83 / Alaska zone 5 + NAVD88 height
 -------------------------------------
-
-| Used: United States (USA) - Alaska - between 156°W and 152°W.
+| Extent: United States (USA) - Alaska - between 156°W and 152°W.
 
 .. code-block:: php
 
@@ -2389,8 +2210,7 @@ NAD83 / Alaska zone 5 + NAVD88 height
 
 NAD83 / Alaska zone 6 + NAVD88 height
 -------------------------------------
-
-| Used: United States (USA) - Alaska - between 160°W and 156°W, onshore.
+| Extent: United States (USA) - Alaska - between 160°W and 156°W, onshore.
 
 .. code-block:: php
 
@@ -2402,8 +2222,7 @@ NAD83 / Alaska zone 6 + NAVD88 height
 
 NAD83 / Alaska zone 7 + NAVD88 height
 -------------------------------------
-
-| Used: United States (USA) - Alaska - between 164°W and 160°W, onshore.
+| Extent: United States (USA) - Alaska - between 164°W and 160°W, onshore.
 
 .. code-block:: php
 
@@ -2415,8 +2234,7 @@ NAD83 / Alaska zone 7 + NAVD88 height
 
 NAD83 / Alaska zone 8 + NAVD88 height
 -------------------------------------
-
-| Used: United States (USA) - Alaska onshore north of 54°30'N and between 168°W and 164°W.
+| Extent: United States (USA) - Alaska onshore north of 54°30'N and between 168°W and 164°W.
 
 .. code-block:: php
 
@@ -2428,8 +2246,7 @@ NAD83 / Alaska zone 8 + NAVD88 height
 
 NAD83 / Alaska zone 9 + NAVD88 height
 -------------------------------------
-
-| Used: United States (USA) - Alaska onshore north of 54°30'N and west of 168°W.
+| Extent: United States (USA) - Alaska onshore north of 54°30'N and west of 168°W.
 
 .. code-block:: php
 
@@ -2441,8 +2258,7 @@ NAD83 / Alaska zone 9 + NAVD88 height
 
 NAD83 / Arizona Central (ft) + NAVD88 height (ft)
 -------------------------------------------------
-
-| Used: United States (USA) - Arizona - counties Coconino; Maricopa; Pima; Pinal; Santa Cruz; Yavapai.
+| Extent: United States (USA) - Arizona - counties Coconino; Maricopa; Pima; Pinal; Santa Cruz; Yavapai.
 
 .. code-block:: php
 
@@ -2454,8 +2270,7 @@ NAD83 / Arizona Central (ft) + NAVD88 height (ft)
 
 NAD83 / Arizona East (ft) + NAVD88 height (ft)
 ----------------------------------------------
-
-| Used: United States (USA) - Arizona - counties Apache; Cochise; Gila; Graham; Greenlee; Navajo.
+| Extent: United States (USA) - Arizona - counties Apache; Cochise; Gila; Graham; Greenlee; Navajo.
 
 .. code-block:: php
 
@@ -2467,8 +2282,7 @@ NAD83 / Arizona East (ft) + NAVD88 height (ft)
 
 NAD83 / Arizona West (ft) + NAVD88 height (ft)
 ----------------------------------------------
-
-| Used: United States (USA) - Arizona - counties of La Paz; Mohave; Yuma.
+| Extent: United States (USA) - Arizona - counties of La Paz; Mohave; Yuma.
 
 .. code-block:: php
 
@@ -2480,8 +2294,7 @@ NAD83 / Arizona West (ft) + NAVD88 height (ft)
 
 NAD83 / Arkansas North (ftUS) + NAVD88 height (ftUS)
 ----------------------------------------------------
-
-| Used: United States (USA) - Arkansas - counties of Baxter; Benton; Boone; Carroll; Clay; Cleburne; Conway; Craighead; Crawford; Crittenden; Cross; Faulkner; Franklin; Fulton; Greene; Independence; Izard; Jackson; Johnson; Lawrence; Logan; Madison; Marion; Mississippi; Newton; Perry; Poinsett; Pope; Randolph; Scott; Searcy; Sebastian; Sharp; St Francis; Stone; Van Buren; Washington; White; Woodruff; Yell.
+| Extent: United States (USA) - Arkansas - counties of Baxter; Benton; Boone; Carroll; Clay; Cleburne; Conway; Craighead; Crawford; Crittenden; Cross; Faulkner; Franklin; Fulton; Greene; Independence; Izard; Jackson; Johnson; Lawrence; Logan; Madison; Marion; Mississippi; Newton; Perry; Poinsett; Pope; Randolph; Scott; Searcy; Sebastian; Sharp; St Francis; Stone; Van Buren; Washington; White; Woodruff; Yell.
 
 .. code-block:: php
 
@@ -2493,8 +2306,7 @@ NAD83 / Arkansas North (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Arkansas South (ftUS) + NAVD88 height (ftUS)
 ----------------------------------------------------
-
-| Used: United States (USA) - Arkansas - counties Arkansas; Ashley; Bradley; Calhoun; Chicot; Clark; Cleveland; Columbia; Dallas; Desha; Drew; Garland; Grant; Hempstead; Hot Spring; Howard; Jefferson; Lafayette; Lee; Lincoln; Little River; Lonoke; Miller; Monroe; Montgomery; Nevada; Ouachita; Phillips; Pike; Polk; Prairie; Pulaski; Saline; Sevier; Union.
+| Extent: United States (USA) - Arkansas - counties Arkansas; Ashley; Bradley; Calhoun; Chicot; Clark; Cleveland; Columbia; Dallas; Desha; Drew; Garland; Grant; Hempstead; Hot Spring; Howard; Jefferson; Lafayette; Lee; Lincoln; Little River; Lonoke; Miller; Monroe; Montgomery; Nevada; Ouachita; Phillips; Pike; Polk; Prairie; Pulaski; Saline; Sevier; Union.
 
 .. code-block:: php
 
@@ -2506,8 +2318,7 @@ NAD83 / Arkansas South (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / California zone 1 (ftUS) + NAVD88 height (ftUS)
 -------------------------------------------------------
-
-| Used: United States (USA) - California - counties Del Norte; Humboldt; Lassen; Modoc; Plumas; Shasta; Siskiyou; Tehama; Trinity.
+| Extent: United States (USA) - California - counties Del Norte; Humboldt; Lassen; Modoc; Plumas; Shasta; Siskiyou; Tehama; Trinity.
 
 .. code-block:: php
 
@@ -2519,8 +2330,7 @@ NAD83 / California zone 1 (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / California zone 2 (ftUS) + NAVD88 height (ftUS)
 -------------------------------------------------------
-
-| Used: United States (USA) - California - counties of Alpine; Amador; Butte; Colusa; El Dorado; Glenn; Lake; Mendocino; Napa; Nevada; Placer; Sacramento; Sierra; Solano; Sonoma; Sutter; Yolo; Yuba.
+| Extent: United States (USA) - California - counties of Alpine; Amador; Butte; Colusa; El Dorado; Glenn; Lake; Mendocino; Napa; Nevada; Placer; Sacramento; Sierra; Solano; Sonoma; Sutter; Yolo; Yuba.
 
 .. code-block:: php
 
@@ -2532,8 +2342,7 @@ NAD83 / California zone 2 (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / California zone 3 (ftUS) + NAVD88 height (ftUS)
 -------------------------------------------------------
-
-| Used: United States (USA) - California - counties Alameda; Calaveras; Contra Costa; Madera; Marin; Mariposa; Merced; Mono; San Francisco; San Joaquin; San Mateo; Santa Clara; Santa Cruz; Stanislaus; Tuolumne.
+| Extent: United States (USA) - California - counties Alameda; Calaveras; Contra Costa; Madera; Marin; Mariposa; Merced; Mono; San Francisco; San Joaquin; San Mateo; Santa Clara; Santa Cruz; Stanislaus; Tuolumne.
 
 .. code-block:: php
 
@@ -2545,8 +2354,7 @@ NAD83 / California zone 3 (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / California zone 4 (ftUS) + NAVD88 height (ftUS)
 -------------------------------------------------------
-
-| Used: United States (USA) - California - counties Fresno; Inyo; Kings; Monterey; San Benito; Tulare.
+| Extent: United States (USA) - California - counties Fresno; Inyo; Kings; Monterey; San Benito; Tulare.
 
 .. code-block:: php
 
@@ -2558,8 +2366,7 @@ NAD83 / California zone 4 (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / California zone 5 (ftUS) + NAVD88 height (ftUS)
 -------------------------------------------------------
-
-| Used: United States (USA) - California - counties Kern; Los Angeles; San Bernardino; San Luis Obispo; Santa Barbara; Ventura.
+| Extent: United States (USA) - California - counties Kern; Los Angeles; San Bernardino; San Luis Obispo; Santa Barbara; Ventura.
 
 .. code-block:: php
 
@@ -2571,8 +2378,7 @@ NAD83 / California zone 5 (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / California zone 6 (ftUS) + NAVD88 height (ftUS)
 -------------------------------------------------------
-
-| Used: United States (USA) - California - counties Imperial; Orange; Riverside; San Diego.
+| Extent: United States (USA) - California - counties Imperial; Orange; Riverside; San Diego.
 
 .. code-block:: php
 
@@ -2584,8 +2390,7 @@ NAD83 / California zone 6 (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Colorado Central (ftUS) + NAVD88 height (ftUS)
 ------------------------------------------------------
-
-| Used: United States (USA) - Colorado - counties Arapahoe; Chaffee; Cheyenne; Clear Creek; Delta; Denver; Douglas; Eagle; El Paso; Elbert; Fremont; Garfield; Gunnison; Jefferson; Kit Carson; Lake; Lincoln; Mesa; Park; Pitkin; Summit; Teller.
+| Extent: United States (USA) - Colorado - counties Arapahoe; Chaffee; Cheyenne; Clear Creek; Delta; Denver; Douglas; Eagle; El Paso; Elbert; Fremont; Garfield; Gunnison; Jefferson; Kit Carson; Lake; Lincoln; Mesa; Park; Pitkin; Summit; Teller.
 
 .. code-block:: php
 
@@ -2597,8 +2402,7 @@ NAD83 / Colorado Central (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Colorado North (ftUS) + NAVD88 height (ftUS)
 ----------------------------------------------------
-
-| Used: United States (USA) - Colorado - counties Adams; Boulder; Gilpin; Grand; Jackson; Larimer; Logan; Moffat; Morgan; Phillips; Rio Blanco; Routt; Sedgwick; Washington; Weld; Yuma.
+| Extent: United States (USA) - Colorado - counties Adams; Boulder; Gilpin; Grand; Jackson; Larimer; Logan; Moffat; Morgan; Phillips; Rio Blanco; Routt; Sedgwick; Washington; Weld; Yuma.
 
 .. code-block:: php
 
@@ -2610,8 +2414,7 @@ NAD83 / Colorado North (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Colorado South (ftUS) + NAVD88 height (ftUS)
 ----------------------------------------------------
-
-| Used: United States (USA) - Colorado - counties Alamosa; Archuleta; Baca; Bent; Conejos; Costilla; Crowley; Custer; Dolores; Hinsdale; Huerfano; Kiowa; La Plata; Las Animas; Mineral; Montezuma; Montrose; Otero; Ouray; Prowers; Pueblo; Rio Grande; Saguache; San Juan; San Miguel.
+| Extent: United States (USA) - Colorado - counties Alamosa; Archuleta; Baca; Bent; Conejos; Costilla; Crowley; Custer; Dolores; Hinsdale; Huerfano; Kiowa; La Plata; Las Animas; Mineral; Montezuma; Montrose; Otero; Ouray; Prowers; Pueblo; Rio Grande; Saguache; San Juan; San Miguel.
 
 .. code-block:: php
 
@@ -2623,8 +2426,7 @@ NAD83 / Colorado South (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Connecticut (ftUS) + NAVD88 height (ftUS)
 -------------------------------------------------
-
-| Used: United States (USA) - Connecticut - counties of Fairfield; Hartford; Litchfield; Middlesex; New Haven; New London; Tolland; Windham.
+| Extent: United States (USA) - Connecticut - counties of Fairfield; Hartford; Litchfield; Middlesex; New Haven; New London; Tolland; Windham.
 
 .. code-block:: php
 
@@ -2636,8 +2438,7 @@ NAD83 / Connecticut (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Delaware (ftUS) + NAVD88 height (ftUS)
 ----------------------------------------------
-
-| Used: United States (USA) - Delaware - counties of Kent; New Castle; Sussex.
+| Extent: United States (USA) - Delaware - counties of Kent; New Castle; Sussex.
 
 .. code-block:: php
 
@@ -2649,8 +2450,7 @@ NAD83 / Delaware (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Florida East (ftUS) + NAVD88 height (ftUS)
 --------------------------------------------------
-
-| Used: United States (USA) - Florida - counties of Brevard; Broward; Clay; Collier; Dade; Duval; Flagler; Glades; Hendry; Highlands; Indian River; Lake; Martin; Monroe; Nassau; Okeechobee; Orange; Osceola; Palm Beach; Putnam; Seminole; St Johns; St Lucie; Volusia.
+| Extent: United States (USA) - Florida - counties of Brevard; Broward; Clay; Collier; Dade; Duval; Flagler; Glades; Hendry; Highlands; Indian River; Lake; Martin; Monroe; Nassau; Okeechobee; Orange; Osceola; Palm Beach; Putnam; Seminole; St Johns; St Lucie; Volusia.
 
 .. code-block:: php
 
@@ -2662,8 +2462,7 @@ NAD83 / Florida East (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Florida North (ftUS) + NAVD88 height (ftUS)
 ---------------------------------------------------
-
-| Used: United States (USA) - Florida - counties of Alachua; Baker; Bay; Bradford; Calhoun; Columbia; Dixie; Escambia; Franklin; Gadsden; Gilchrist; Gulf; Hamilton; Holmes; Jackson; Jefferson; Lafayette; Leon; Liberty; Madison; Okaloosa; Santa Rosa; Suwannee; Taylor; Union; Wakulla; Walton; Washington.
+| Extent: United States (USA) - Florida - counties of Alachua; Baker; Bay; Bradford; Calhoun; Columbia; Dixie; Escambia; Franklin; Gadsden; Gilchrist; Gulf; Hamilton; Holmes; Jackson; Jefferson; Lafayette; Leon; Liberty; Madison; Okaloosa; Santa Rosa; Suwannee; Taylor; Union; Wakulla; Walton; Washington.
 
 .. code-block:: php
 
@@ -2675,8 +2474,7 @@ NAD83 / Florida North (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Florida West (ftUS) + NAVD88 height (ftUS)
 --------------------------------------------------
-
-| Used: United States (USA) - Florida - counties of Charlotte; Citrus; De Soto; Hardee; Hernando; Hillsborough; Lee; Levy; Manatee; Marion; Pasco; Pinellas; Polk; Sarasota; Sumter.
+| Extent: United States (USA) - Florida - counties of Charlotte; Citrus; De Soto; Hardee; Hernando; Hillsborough; Lee; Levy; Manatee; Marion; Pasco; Pinellas; Polk; Sarasota; Sumter.
 
 .. code-block:: php
 
@@ -2688,8 +2486,7 @@ NAD83 / Florida West (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Georgia East (ftUS) + NAVD88 height (ftUS)
 --------------------------------------------------
-
-| Used: United States (USA) - Georgia - counties of Appling; Atkinson; Bacon; Baldwin; Brantley; Bryan; Bulloch; Burke; Camden; Candler; Charlton; Chatham; Clinch; Coffee; Columbia; Dodge; Echols; Effingham; Elbert; Emanuel; Evans; Franklin; Glascock; Glynn; Greene; Hancock; Hart; Jeff Davis; Jefferson; Jenkins; Johnson; Lanier; Laurens; Liberty; Lincoln; Long; Madison; McDuffie; McIntosh; Montgomery; Oglethorpe; Pierce; Richmond; Screven; Stephens; Taliaferro; Tattnall; Telfair; Toombs; Treutlen; Ware; Warren; Washington; Wayne; Wheeler; Wilkes; Wilkinson.
+| Extent: United States (USA) - Georgia - counties of Appling; Atkinson; Bacon; Baldwin; Brantley; Bryan; Bulloch; Burke; Camden; Candler; Charlton; Chatham; Clinch; Coffee; Columbia; Dodge; Echols; Effingham; Elbert; Emanuel; Evans; Franklin; Glascock; Glynn; Greene; Hancock; Hart; Jeff Davis; Jefferson; Jenkins; Johnson; Lanier; Laurens; Liberty; Lincoln; Long; Madison; McDuffie; McIntosh; Montgomery; Oglethorpe; Pierce; Richmond; Screven; Stephens; Taliaferro; Tattnall; Telfair; Toombs; Treutlen; Ware; Warren; Washington; Wayne; Wheeler; Wilkes; Wilkinson.
 
 .. code-block:: php
 
@@ -2701,8 +2498,7 @@ NAD83 / Georgia East (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Georgia West (ftUS) + NAVD88 height (ftUS)
 --------------------------------------------------
-
-| Used: United States (USA) - Georgia - counties of Baker; Banks; Barrow; Bartow; Ben Hill; Berrien; Bibb; Bleckley; Brooks; Butts; Calhoun; Carroll; Catoosa; Chattahoochee; Chattooga; Cherokee; Clarke; Clay; Clayton; Cobb; Colquitt; Cook; Coweta; Crawford; Crisp; Dade; Dawson; De Kalb; Decatur; Dooly; Dougherty; Douglas; Early; Fannin; Fayette; Floyd; Forsyth; Fulton; Gilmer; Gordon; Grady; Gwinnett; Habersham; Hall; Haralson; Harris; Heard; Henry; Houston; Irwin; Jackson; Jasper; Jones; Lamar; Lee; Lowndes; Lumpkin; Macon; Marion; Meriwether; Miller; Mitchell; Monroe; Morgan; Murray; Muscogee; Newton; Oconee; Paulding; Peach; Pickens; Pike; Polk; Pulaski; Putnam; Quitman; Rabun; Randolph; Rockdale; Schley; Seminole; Spalding; Stewart; Sumter; Talbot; Taylor; Terrell; Thomas; Tift; Towns; Troup; Turner; Twiggs; Union; Upson; Walker; Walton; Webster; White; Whitfield; Wilcox; Worth.
+| Extent: United States (USA) - Georgia - counties of Baker; Banks; Barrow; Bartow; Ben Hill; Berrien; Bibb; Bleckley; Brooks; Butts; Calhoun; Carroll; Catoosa; Chattahoochee; Chattooga; Cherokee; Clarke; Clay; Clayton; Cobb; Colquitt; Cook; Coweta; Crawford; Crisp; Dade; Dawson; De Kalb; Decatur; Dooly; Dougherty; Douglas; Early; Fannin; Fayette; Floyd; Forsyth; Fulton; Gilmer; Gordon; Grady; Gwinnett; Habersham; Hall; Haralson; Harris; Heard; Henry; Houston; Irwin; Jackson; Jasper; Jones; Lamar; Lee; Lowndes; Lumpkin; Macon; Marion; Meriwether; Miller; Mitchell; Monroe; Morgan; Murray; Muscogee; Newton; Oconee; Paulding; Peach; Pickens; Pike; Polk; Pulaski; Putnam; Quitman; Rabun; Randolph; Rockdale; Schley; Seminole; Spalding; Stewart; Sumter; Talbot; Taylor; Terrell; Thomas; Tift; Towns; Troup; Turner; Twiggs; Union; Upson; Walker; Walton; Webster; White; Whitfield; Wilcox; Worth.
 
 .. code-block:: php
 
@@ -2714,8 +2510,7 @@ NAD83 / Georgia West (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Idaho Central (ftUS) + NAVD88 height (ftUS)
 ---------------------------------------------------
-
-| Used: United States (USA) - Idaho - counties of Blaine; Butte; Camas; Cassia; Custer; Gooding; Jerome; Lemhi; Lincoln; Minidoka; Twin Falls.
+| Extent: United States (USA) - Idaho - counties of Blaine; Butte; Camas; Cassia; Custer; Gooding; Jerome; Lemhi; Lincoln; Minidoka; Twin Falls.
 
 .. code-block:: php
 
@@ -2727,8 +2522,7 @@ NAD83 / Idaho Central (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Idaho East (ftUS) + NAVD88 height (ftUS)
 ------------------------------------------------
-
-| Used: United States (USA) - Idaho - counties of Bannock; Bear Lake; Bingham; Bonneville; Caribou; Clark; Franklin; Fremont; Jefferson; Madison; Oneida; Power; Teton.
+| Extent: United States (USA) - Idaho - counties of Bannock; Bear Lake; Bingham; Bonneville; Caribou; Clark; Franklin; Fremont; Jefferson; Madison; Oneida; Power; Teton.
 
 .. code-block:: php
 
@@ -2740,8 +2534,7 @@ NAD83 / Idaho East (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Idaho West (ftUS) + NAVD88 height (ftUS)
 ------------------------------------------------
-
-| Used: United States (USA) - Idaho - counties of Ada; Adams; Benewah; Boise; Bonner; Boundary; Canyon; Clearwater; Elmore; Gem; Idaho; Kootenai; Latah; Lewis; Nez Perce; Owyhee; Payette; Shoshone; Valley; Washington.
+| Extent: United States (USA) - Idaho - counties of Ada; Adams; Benewah; Boise; Bonner; Boundary; Canyon; Clearwater; Elmore; Gem; Idaho; Kootenai; Latah; Lewis; Nez Perce; Owyhee; Payette; Shoshone; Valley; Washington.
 
 .. code-block:: php
 
@@ -2753,8 +2546,7 @@ NAD83 / Idaho West (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Illinois East (ftUS) + NAVD88 height (ftUS)
 ---------------------------------------------------
-
-| Used: United States (USA) - Illinois - counties of Boone; Champaign; Clark; Clay; Coles; Cook; Crawford; Cumberland; De Kalb; De Witt; Douglas; Du Page; Edgar; Edwards; Effingham; Fayette; Ford; Franklin; Gallatin; Grundy; Hamilton; Hardin; Iroquois; Jasper; Jefferson; Johnson; Kane; Kankakee; Kendall; La Salle; Lake; Lawrence; Livingston; Macon; Marion; Massac; McHenry; McLean; Moultrie; Piatt; Pope; Richland; Saline; Shelby; Vermilion; Wabash; Wayne; White; Will; Williamson.
+| Extent: United States (USA) - Illinois - counties of Boone; Champaign; Clark; Clay; Coles; Cook; Crawford; Cumberland; De Kalb; De Witt; Douglas; Du Page; Edgar; Edwards; Effingham; Fayette; Ford; Franklin; Gallatin; Grundy; Hamilton; Hardin; Iroquois; Jasper; Jefferson; Johnson; Kane; Kankakee; Kendall; La Salle; Lake; Lawrence; Livingston; Macon; Marion; Massac; McHenry; McLean; Moultrie; Piatt; Pope; Richland; Saline; Shelby; Vermilion; Wabash; Wayne; White; Will; Williamson.
 
 .. code-block:: php
 
@@ -2766,8 +2558,7 @@ NAD83 / Illinois East (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Illinois West (ftUS) + NAVD88 height (ftUS)
 ---------------------------------------------------
-
-| Used: United States (USA) - Illinois - counties of Adams; Alexander; Bond; Brown; Bureau; Calhoun; Carroll; Cass; Christian; Clinton; Fulton; Greene; Hancock; Henderson; Henry; Jackson; Jersey; Jo Daviess; Knox; Lee; Logan; Macoupin; Madison; Marshall; Mason; McDonough; Menard; Mercer; Monroe; Montgomery; Morgan; Ogle; Peoria; Perry; Pike; Pulaski; Putnam; Randolph; Rock Island; Sangamon; Schuyler; Scott; St Clair; Stark; Stephenson; Tazewell; Union; Warren; Washington; Whiteside; Winnebago; Woodford.
+| Extent: United States (USA) - Illinois - counties of Adams; Alexander; Bond; Brown; Bureau; Calhoun; Carroll; Cass; Christian; Clinton; Fulton; Greene; Hancock; Henderson; Henry; Jackson; Jersey; Jo Daviess; Knox; Lee; Logan; Macoupin; Madison; Marshall; Mason; McDonough; Menard; Mercer; Monroe; Montgomery; Morgan; Ogle; Peoria; Perry; Pike; Pulaski; Putnam; Randolph; Rock Island; Sangamon; Schuyler; Scott; St Clair; Stark; Stephenson; Tazewell; Union; Warren; Washington; Whiteside; Winnebago; Woodford.
 
 .. code-block:: php
 
@@ -2779,8 +2570,7 @@ NAD83 / Illinois West (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Indiana East (ftUS) + NAVD88 height (ftUS)
 --------------------------------------------------
-
-| Used: United States (USA) - Indiana - counties of Adams; Allen; Bartholomew; Blackford; Brown; Cass; Clark; De Kalb; Dearborn; Decatur; Delaware; Elkhart; Fayette; Floyd; Franklin; Fulton; Grant; Hamilton; Hancock; Harrison; Henry; Howard; Huntington; Jackson; Jay; Jefferson; Jennings; Johnson; Kosciusko; Lagrange; Madison; Marion; Marshall; Miami; Noble; Ohio; Randolph; Ripley; Rush; Scott; Shelby; St Joseph; Steuben; Switzerland; Tipton; Union; Wabash; Washington; Wayne; Wells; Whitley.
+| Extent: United States (USA) - Indiana - counties of Adams; Allen; Bartholomew; Blackford; Brown; Cass; Clark; De Kalb; Dearborn; Decatur; Delaware; Elkhart; Fayette; Floyd; Franklin; Fulton; Grant; Hamilton; Hancock; Harrison; Henry; Howard; Huntington; Jackson; Jay; Jefferson; Jennings; Johnson; Kosciusko; Lagrange; Madison; Marion; Marshall; Miami; Noble; Ohio; Randolph; Ripley; Rush; Scott; Shelby; St Joseph; Steuben; Switzerland; Tipton; Union; Wabash; Washington; Wayne; Wells; Whitley.
 
 .. code-block:: php
 
@@ -2792,8 +2582,7 @@ NAD83 / Indiana East (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Indiana West (ftUS) + NAVD88 height (ftUS)
 --------------------------------------------------
-
-| Used: United States (USA) - Indiana - counties of Benton; Boone; Carroll; Clay; Clinton; Crawford; Daviess; Dubois; Fountain; Gibson; Greene; Hendricks; Jasper; Knox; La Porte; Lake; Lawrence; Martin; Monroe; Montgomery; Morgan; Newton; Orange; Owen; Parke; Perry; Pike; Porter; Posey; Pulaski; Putnam; Spencer; Starke; Sullivan; Tippecanoe; Vanderburgh; Vermillion; Vigo; Warren; Warrick; White.
+| Extent: United States (USA) - Indiana - counties of Benton; Boone; Carroll; Clay; Clinton; Crawford; Daviess; Dubois; Fountain; Gibson; Greene; Hendricks; Jasper; Knox; La Porte; Lake; Lawrence; Martin; Monroe; Montgomery; Morgan; Newton; Orange; Owen; Parke; Perry; Pike; Porter; Posey; Pulaski; Putnam; Spencer; Starke; Sullivan; Tippecanoe; Vanderburgh; Vermillion; Vigo; Warren; Warrick; White.
 
 .. code-block:: php
 
@@ -2805,8 +2594,7 @@ NAD83 / Indiana West (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Iowa North (ftUS) + NAVD88 height (ftUS)
 ------------------------------------------------
-
-| Used: United States (USA) - Iowa - counties of Allamakee; Benton; Black Hawk; Boone; Bremer; Buchanan; Buena Vista; Butler; Calhoun; Carroll; Cerro Gordo; Cherokee; Chickasaw; Clay; Clayton; Crawford; Delaware; Dickinson; Dubuque; Emmet; Fayette; Floyd; Franklin; Greene; Grundy; Hamilton; Hancock; Hardin; Howard; Humboldt; Ida; Jackson; Jones; Kossuth; Linn; Lyon; Marshall; Mitchell; Monona; O'Brien; Osceola; Palo Alto; Plymouth; Pocahontas; Sac; Sioux; Story; Tama; Webster; Winnebago; Winneshiek; Woodbury; Worth; Wright.
+| Extent: United States (USA) - Iowa - counties of Allamakee; Benton; Black Hawk; Boone; Bremer; Buchanan; Buena Vista; Butler; Calhoun; Carroll; Cerro Gordo; Cherokee; Chickasaw; Clay; Clayton; Crawford; Delaware; Dickinson; Dubuque; Emmet; Fayette; Floyd; Franklin; Greene; Grundy; Hamilton; Hancock; Hardin; Howard; Humboldt; Ida; Jackson; Jones; Kossuth; Linn; Lyon; Marshall; Mitchell; Monona; O'Brien; Osceola; Palo Alto; Plymouth; Pocahontas; Sac; Sioux; Story; Tama; Webster; Winnebago; Winneshiek; Woodbury; Worth; Wright.
 
 .. code-block:: php
 
@@ -2818,8 +2606,7 @@ NAD83 / Iowa North (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Iowa South (ftUS) + NAVD88 height (ftUS)
 ------------------------------------------------
-
-| Used: United States (USA) - Iowa - counties of Adair; Adams; Appanoose; Audubon; Cass; Cedar; Clarke; Clinton; Dallas; Davis; Decatur; Des Moines; Fremont; Guthrie; Harrison; Henry; Iowa; Jasper; Jefferson; Johnson; Keokuk; Lee; Louisa; Lucas; Madison; Mahaska; Marion; Mills; Monroe; Montgomery; Muscatine; Page; Polk; Pottawattamie; Poweshiek; Ringgold; Scott; Shelby; Taylor; Union; Van Buren; Wapello; Warren; Washington; Wayne.
+| Extent: United States (USA) - Iowa - counties of Adair; Adams; Appanoose; Audubon; Cass; Cedar; Clarke; Clinton; Dallas; Davis; Decatur; Des Moines; Fremont; Guthrie; Harrison; Henry; Iowa; Jasper; Jefferson; Johnson; Keokuk; Lee; Louisa; Lucas; Madison; Mahaska; Marion; Mills; Monroe; Montgomery; Muscatine; Page; Polk; Pottawattamie; Poweshiek; Ringgold; Scott; Shelby; Taylor; Union; Van Buren; Wapello; Warren; Washington; Wayne.
 
 .. code-block:: php
 
@@ -2831,8 +2618,7 @@ NAD83 / Iowa South (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Kansas North (ftUS) + NAVD88 height (ftUS)
 --------------------------------------------------
-
-| Used: United States (USA) - Kansas - counties of Atchison; Brown; Cheyenne; Clay; Cloud; Decatur; Dickinson; Doniphan; Douglas; Ellis; Ellsworth; Geary; Gove; Graham; Jackson; Jefferson; Jewell; Johnson; Leavenworth; Lincoln; Logan; Marshall; Mitchell; Morris; Nemaha; Norton; Osborne; Ottawa; Phillips; Pottawatomie; Rawlins; Republic; Riley; Rooks; Russell; Saline; Shawnee; Sheridan; Sherman; Smith; Thomas; Trego; Wabaunsee; Wallace; Washington; Wyandotte.
+| Extent: United States (USA) - Kansas - counties of Atchison; Brown; Cheyenne; Clay; Cloud; Decatur; Dickinson; Doniphan; Douglas; Ellis; Ellsworth; Geary; Gove; Graham; Jackson; Jefferson; Jewell; Johnson; Leavenworth; Lincoln; Logan; Marshall; Mitchell; Morris; Nemaha; Norton; Osborne; Ottawa; Phillips; Pottawatomie; Rawlins; Republic; Riley; Rooks; Russell; Saline; Shawnee; Sheridan; Sherman; Smith; Thomas; Trego; Wabaunsee; Wallace; Washington; Wyandotte.
 
 .. code-block:: php
 
@@ -2844,8 +2630,7 @@ NAD83 / Kansas North (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Kansas South (ftUS) + NAVD88 height (ftUS)
 --------------------------------------------------
-
-| Used: United States (USA) - Kansas - counties of Allen; Anderson; Barber; Barton; Bourbon; Butler; Chase; Chautauqua; Cherokee; Clark; Coffey; Comanche; Cowley; Crawford; Edwards; Elk; Finney; Ford; Franklin; Grant; Gray; Greeley; Greenwood; Hamilton; Harper; Harvey; Haskell; Hodgeman; Kearny; Kingman; Kiowa; Labette; Lane; Linn; Lyon; Marion; McPherson; Meade; Miami; Montgomery; Morton; Neosho; Ness; Osage; Pawnee; Pratt; Reno; Rice; Rush; Scott; Sedgwick; Seward; Stafford; Stanton; Stevens; Sumner; Wichita; Wilson; Woodson.
+| Extent: United States (USA) - Kansas - counties of Allen; Anderson; Barber; Barton; Bourbon; Butler; Chase; Chautauqua; Cherokee; Clark; Coffey; Comanche; Cowley; Crawford; Edwards; Elk; Finney; Ford; Franklin; Grant; Gray; Greeley; Greenwood; Hamilton; Harper; Harvey; Haskell; Hodgeman; Kearny; Kingman; Kiowa; Labette; Lane; Linn; Lyon; Marion; McPherson; Meade; Miami; Montgomery; Morton; Neosho; Ness; Osage; Pawnee; Pratt; Reno; Rice; Rush; Scott; Sedgwick; Seward; Stafford; Stanton; Stevens; Sumner; Wichita; Wilson; Woodson.
 
 .. code-block:: php
 
@@ -2857,8 +2642,7 @@ NAD83 / Kansas South (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Kentucky North (ftUS) + NAVD88 height (ftUS)
 ----------------------------------------------------
-
-| Used: United States (USA) - Kentucky - counties of Anderson; Bath; Boone; Bourbon; Boyd; Bracken; Bullitt; Campbell; Carroll; Carter; Clark; Elliott; Fayette; Fleming; Franklin; Gallatin; Grant; Greenup; Harrison; Henry; Jefferson; Jessamine; Kenton; Lawrence; Lewis; Mason; Menifee; Montgomery; Morgan; Nicholas; Oldham; Owen; Pendleton; Robertson; Rowan; Scott; Shelby; Spencer; Trimble; Woodford.
+| Extent: United States (USA) - Kentucky - counties of Anderson; Bath; Boone; Bourbon; Boyd; Bracken; Bullitt; Campbell; Carroll; Carter; Clark; Elliott; Fayette; Fleming; Franklin; Gallatin; Grant; Greenup; Harrison; Henry; Jefferson; Jessamine; Kenton; Lawrence; Lewis; Mason; Menifee; Montgomery; Morgan; Nicholas; Oldham; Owen; Pendleton; Robertson; Rowan; Scott; Shelby; Spencer; Trimble; Woodford.
 
 .. code-block:: php
 
@@ -2870,8 +2654,7 @@ NAD83 / Kentucky North (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Kentucky South (ftUS) + NAVD88 height (ftUS)
 ----------------------------------------------------
-
-| Used: United States (USA) - Kentucky - counties of Adair; Allen; Ballard; Barren; Bell; Boyle; Breathitt; Breckinridge; Butler; Caldwell; Calloway; Carlisle; Casey; Christian; Clay; Clinton; Crittenden; Cumberland; Daviess; Edmonson; Estill; Floyd; Fulton; Garrard; Graves; Grayson; Green; Hancock; Hardin; Harlan; Hart; Henderson; Hickman; Hopkins; Jackson; Johnson; Knott; Knox; Larue; Laurel; Lee; Leslie; Letcher; Lincoln; Livingston; Logan; Lyon; Madison; Magoffin; Marion; Marshall; Martin; McCracken; McCreary; McLean; Meade; Mercer; Metcalfe; Monroe; Muhlenberg; Nelson; Ohio; Owsley; Perry; Pike; Powell; Pulaski; Rockcastle; Russell; Simpson; Taylor; Todd; Trigg; Union; Warren; Washington; Wayne; Webster; Whitley; Wolfe.
+| Extent: United States (USA) - Kentucky - counties of Adair; Allen; Ballard; Barren; Bell; Boyle; Breathitt; Breckinridge; Butler; Caldwell; Calloway; Carlisle; Casey; Christian; Clay; Clinton; Crittenden; Cumberland; Daviess; Edmonson; Estill; Floyd; Fulton; Garrard; Graves; Grayson; Green; Hancock; Hardin; Harlan; Hart; Henderson; Hickman; Hopkins; Jackson; Johnson; Knott; Knox; Larue; Laurel; Lee; Leslie; Letcher; Lincoln; Livingston; Logan; Lyon; Madison; Magoffin; Marion; Marshall; Martin; McCracken; McCreary; McLean; Meade; Mercer; Metcalfe; Monroe; Muhlenberg; Nelson; Ohio; Owsley; Perry; Pike; Powell; Pulaski; Rockcastle; Russell; Simpson; Taylor; Todd; Trigg; Union; Warren; Washington; Wayne; Webster; Whitley; Wolfe.
 
 .. code-block:: php
 
@@ -2883,8 +2666,7 @@ NAD83 / Kentucky South (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Louisiana North (ftUS) + NAVD88 height (ftUS)
 -----------------------------------------------------
-
-| Used: United States (USA) - Louisiana - counties of Avoyelles; Bienville; Bossier; Caddo; Caldwell; Catahoula; Claiborne; Concordia; De Soto; East Carroll; Franklin; Grant; Jackson; La Salle; Lincoln; Madison; Morehouse; Natchitoches; Ouachita; Rapides; Red River; Richland; Sabine; Tensas; Union; Vernon; Webster; West Carroll; Winn.
+| Extent: United States (USA) - Louisiana - counties of Avoyelles; Bienville; Bossier; Caddo; Caldwell; Catahoula; Claiborne; Concordia; De Soto; East Carroll; Franklin; Grant; Jackson; La Salle; Lincoln; Madison; Morehouse; Natchitoches; Ouachita; Rapides; Red River; Richland; Sabine; Tensas; Union; Vernon; Webster; West Carroll; Winn.
 
 .. code-block:: php
 
@@ -2896,8 +2678,7 @@ NAD83 / Louisiana North (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Louisiana South (ftUS) + NAVD88 height (ftUS)
 -----------------------------------------------------
-
-| Used: United States (USA) - Louisiana - counties of Acadia; Allen; Ascension; Assumption; Beauregard; Calcasieu; Cameron; East Baton Rouge; East Feliciana; Evangeline; Iberia; Iberville; Jefferson; Jefferson Davis; Lafayette; LaFourche; Livingston; Orleans; Plaquemines; Pointe Coupee; St Bernard; St Charles; St Helena; St James; St John the Baptist; St Landry; St Martin; St Mary; St Tammany; Tangipahoa; Terrebonne; Vermilion; Washington; West Baton Rouge; West Feliciana.
+| Extent: United States (USA) - Louisiana - counties of Acadia; Allen; Ascension; Assumption; Beauregard; Calcasieu; Cameron; East Baton Rouge; East Feliciana; Evangeline; Iberia; Iberville; Jefferson; Jefferson Davis; Lafayette; LaFourche; Livingston; Orleans; Plaquemines; Pointe Coupee; St Bernard; St Charles; St Helena; St James; St John the Baptist; St Landry; St Martin; St Mary; St Tammany; Tangipahoa; Terrebonne; Vermilion; Washington; West Baton Rouge; West Feliciana.
 
 .. code-block:: php
 
@@ -2909,8 +2690,7 @@ NAD83 / Louisiana South (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Maine East (ftUS) + NAVD88 height (ftUS)
 ------------------------------------------------
-
-| Used: United States (USA) - Maine - counties of Aroostook; Hancock; Knox; Penobscot; Piscataquis; Waldo; Washington.
+| Extent: United States (USA) - Maine - counties of Aroostook; Hancock; Knox; Penobscot; Piscataquis; Waldo; Washington.
 
 .. code-block:: php
 
@@ -2922,8 +2702,7 @@ NAD83 / Maine East (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Maine West (ftUS) + NAVD88 height (ftUS)
 ------------------------------------------------
-
-| Used: United States (USA) - Maine - counties of Androscoggin; Cumberland; Franklin; Kennebec; Lincoln; Oxford; Sagadahoc; Somerset; York.
+| Extent: United States (USA) - Maine - counties of Androscoggin; Cumberland; Franklin; Kennebec; Lincoln; Oxford; Sagadahoc; Somerset; York.
 
 .. code-block:: php
 
@@ -2935,8 +2714,7 @@ NAD83 / Maine West (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Maryland (ftUS) + NAVD88 height (ftUS)
 ----------------------------------------------
-
-| Used: United States (USA) - Maryland - counties of Allegany; Anne Arundel; Baltimore; Calvert; Caroline; Carroll; Cecil; Charles; Dorchester; Frederick; Garrett; Harford; Howard; Kent; Montgomery; Prince Georges; Queen Annes; Somerset; St Marys; Talbot; Washington; Wicomico; Worcester.
+| Extent: United States (USA) - Maryland - counties of Allegany; Anne Arundel; Baltimore; Calvert; Caroline; Carroll; Cecil; Charles; Dorchester; Frederick; Garrett; Harford; Howard; Kent; Montgomery; Prince Georges; Queen Annes; Somerset; St Marys; Talbot; Washington; Wicomico; Worcester.
 
 .. code-block:: php
 
@@ -2948,8 +2726,7 @@ NAD83 / Maryland (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Massachusetts Island (ftUS) + NAVD88 height (ftUS)
 ----------------------------------------------------------
-
-| Used: United States (USA) - Massachusetts offshore - counties of Dukes; Nantucket.
+| Extent: United States (USA) - Massachusetts offshore - counties of Dukes; Nantucket.
 
 .. code-block:: php
 
@@ -2961,8 +2738,7 @@ NAD83 / Massachusetts Island (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Massachusetts Mainland (ftUS) + NAVD88 height (ftUS)
 ------------------------------------------------------------
-
-| Used: United States (USA) - Massachusetts onshore - counties of Barnstable; Berkshire; Bristol; Essex; Franklin; Hampden; Hampshire; Middlesex; Norfolk; Plymouth; Suffolk; Worcester.
+| Extent: United States (USA) - Massachusetts onshore - counties of Barnstable; Berkshire; Bristol; Essex; Franklin; Hampden; Hampshire; Middlesex; Norfolk; Plymouth; Suffolk; Worcester.
 
 .. code-block:: php
 
@@ -2974,8 +2750,7 @@ NAD83 / Massachusetts Mainland (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Michigan Central (ft) + NAVD88 height (ft)
 --------------------------------------------------
-
-| Used: United States (USA) - Michigan - counties of Alcona; Alpena; Antrim; Arenac; Benzie; Charlevoix; Cheboygan; Clare; Crawford; Emmet; Gladwin; Grand Traverse; Iosco; Kalkaska; Lake; Leelanau; Manistee; Mason; Missaukee; Montmorency; Ogemaw; Osceola; Oscoda; Otsego; Presque Isle; Roscommon; Wexford.
+| Extent: United States (USA) - Michigan - counties of Alcona; Alpena; Antrim; Arenac; Benzie; Charlevoix; Cheboygan; Clare; Crawford; Emmet; Gladwin; Grand Traverse; Iosco; Kalkaska; Lake; Leelanau; Manistee; Mason; Missaukee; Montmorency; Ogemaw; Osceola; Oscoda; Otsego; Presque Isle; Roscommon; Wexford.
 
 .. code-block:: php
 
@@ -2987,8 +2762,7 @@ NAD83 / Michigan Central (ft) + NAVD88 height (ft)
 
 NAD83 / Michigan North (ft) + NAVD88 height (ft)
 ------------------------------------------------
-
-| Used: United States (USA) - Michigan north of approximately 45°45'N - counties of Alger; Baraga; Chippewa; Delta; Dickinson; Gogebic; Houghton; Iron; Keweenaw; Luce; Mackinac; Marquette; Menominee; Ontonagon; Schoolcraft.
+| Extent: United States (USA) - Michigan north of approximately 45°45'N - counties of Alger; Baraga; Chippewa; Delta; Dickinson; Gogebic; Houghton; Iron; Keweenaw; Luce; Mackinac; Marquette; Menominee; Ontonagon; Schoolcraft.
 
 .. code-block:: php
 
@@ -3000,8 +2774,7 @@ NAD83 / Michigan North (ft) + NAVD88 height (ft)
 
 NAD83 / Michigan South (ft) + NAVD88 height (ft)
 ------------------------------------------------
-
-| Used: United States (USA) - Michigan - counties of Allegan; Barry; Bay; Berrien; Branch; Calhoun; Cass; Clinton; Eaton; Genesee; Gratiot; Hillsdale; Huron; Ingham; Ionia; Isabella; Jackson; Kalamazoo; Kent; Lapeer; Lenawee; Livingston; Macomb; Mecosta; Midland; Monroe; Montcalm; Muskegon; Newaygo; Oakland; Oceana; Ottawa; Saginaw; Sanilac; Shiawassee; St Clair; St Joseph; Tuscola; Van Buren; Washtenaw; Wayne.
+| Extent: United States (USA) - Michigan - counties of Allegan; Barry; Bay; Berrien; Branch; Calhoun; Cass; Clinton; Eaton; Genesee; Gratiot; Hillsdale; Huron; Ingham; Ionia; Isabella; Jackson; Kalamazoo; Kent; Lapeer; Lenawee; Livingston; Macomb; Mecosta; Midland; Monroe; Montcalm; Muskegon; Newaygo; Oakland; Oceana; Ottawa; Saginaw; Sanilac; Shiawassee; St Clair; St Joseph; Tuscola; Van Buren; Washtenaw; Wayne.
 
 .. code-block:: php
 
@@ -3013,8 +2786,7 @@ NAD83 / Michigan South (ft) + NAVD88 height (ft)
 
 NAD83 / Minnesota Central (ftUS) + NAVD88 height (ftUS)
 -------------------------------------------------------
-
-| Used: United States (USA) - Minnesota - counties of Aitkin; Becker; Benton; Carlton; Cass; Chisago; Clay; Crow Wing; Douglas; Grant; Hubbard; Isanti; Kanabec; Mille Lacs; Morrison; Otter Tail; Pine; Pope; Stearns; Stevens; Todd; Traverse; Wadena; Wilkin.
+| Extent: United States (USA) - Minnesota - counties of Aitkin; Becker; Benton; Carlton; Cass; Chisago; Clay; Crow Wing; Douglas; Grant; Hubbard; Isanti; Kanabec; Mille Lacs; Morrison; Otter Tail; Pine; Pope; Stearns; Stevens; Todd; Traverse; Wadena; Wilkin.
 
 .. code-block:: php
 
@@ -3026,8 +2798,7 @@ NAD83 / Minnesota Central (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Minnesota North (ftUS) + NAVD88 height (ftUS)
 -----------------------------------------------------
-
-| Used: United States (USA) - Minnesota - counties of Beltrami; Clearwater; Cook; Itasca; Kittson; Koochiching; Lake; Lake of the Woods; Mahnomen; Marshall; Norman; Pennington; Polk; Red Lake; Roseau; St Louis.
+| Extent: United States (USA) - Minnesota - counties of Beltrami; Clearwater; Cook; Itasca; Kittson; Koochiching; Lake; Lake of the Woods; Mahnomen; Marshall; Norman; Pennington; Polk; Red Lake; Roseau; St Louis.
 
 .. code-block:: php
 
@@ -3039,8 +2810,7 @@ NAD83 / Minnesota North (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Minnesota South (ftUS) + NAVD88 height (ftUS)
 -----------------------------------------------------
-
-| Used: United States (USA) - Minnesota - counties of Anoka; Big Stone; Blue Earth; Brown; Carver; Chippewa; Cottonwood; Dakota; Dodge; Faribault; Fillmore; Freeborn; Goodhue; Hennepin; Houston; Jackson; Kandiyohi; Lac Qui Parle; Le Sueur; Lincoln; Lyon; Martin; McLeod; Meeker; Mower; Murray; Nicollet; Nobles; Olmsted; Pipestone; Ramsey; Redwood; Renville; Rice; Rock; Scott; Sherburne; Sibley; Steele; Swift; Wabasha; Waseca; Washington; Watonwan; Winona; Wright; Yellow Medicine.
+| Extent: United States (USA) - Minnesota - counties of Anoka; Big Stone; Blue Earth; Brown; Carver; Chippewa; Cottonwood; Dakota; Dodge; Faribault; Fillmore; Freeborn; Goodhue; Hennepin; Houston; Jackson; Kandiyohi; Lac Qui Parle; Le Sueur; Lincoln; Lyon; Martin; McLeod; Meeker; Mower; Murray; Nicollet; Nobles; Olmsted; Pipestone; Ramsey; Redwood; Renville; Rice; Rock; Scott; Sherburne; Sibley; Steele; Swift; Wabasha; Waseca; Washington; Watonwan; Winona; Wright; Yellow Medicine.
 
 .. code-block:: php
 
@@ -3052,8 +2822,7 @@ NAD83 / Minnesota South (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Mississippi East (ftUS) + NAVD88 height (ftUS)
 ------------------------------------------------------
-
-| Used: United States (USA) - Mississippi - counties of Alcorn; Attala; Benton; Calhoun; Chickasaw; Choctaw; Clarke; Clay; Covington; Forrest; George; Greene; Hancock; Harrison; Itawamba; Jackson; Jasper; Jones; Kemper; Lafayette; Lamar; Lauderdale; Leake; Lee; Lowndes; Marshall; Monroe; Neshoba; Newton; Noxubee; Oktibbeha; Pearl River; Perry; Pontotoc; Prentiss; Scott; Smith; Stone; Tippah; Tishomingo; Union; Wayne; Webster; Winston.
+| Extent: United States (USA) - Mississippi - counties of Alcorn; Attala; Benton; Calhoun; Chickasaw; Choctaw; Clarke; Clay; Covington; Forrest; George; Greene; Hancock; Harrison; Itawamba; Jackson; Jasper; Jones; Kemper; Lafayette; Lamar; Lauderdale; Leake; Lee; Lowndes; Marshall; Monroe; Neshoba; Newton; Noxubee; Oktibbeha; Pearl River; Perry; Pontotoc; Prentiss; Scott; Smith; Stone; Tippah; Tishomingo; Union; Wayne; Webster; Winston.
 
 .. code-block:: php
 
@@ -3065,8 +2834,7 @@ NAD83 / Mississippi East (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Mississippi West (ftUS) + NAVD88 height (ftUS)
 ------------------------------------------------------
-
-| Used: United States (USA) - Mississippi - counties of Adams; Amite; Bolivar; Carroll; Claiborne; Coahoma; Copiah; De Soto; Franklin; Grenada; Hinds; Holmes; Humphreys; Issaquena; Jefferson; Jefferson Davis; Lawrence; Leflore; Lincoln; Madison; Marion; Montgomery; Panola; Pike; Quitman; Rankin; Sharkey; Simpson; Sunflower; Tallahatchie; Tate; Tunica; Walthall; Warren; Washington; Wilkinson; Yalobusha; Yazoo.
+| Extent: United States (USA) - Mississippi - counties of Adams; Amite; Bolivar; Carroll; Claiborne; Coahoma; Copiah; De Soto; Franklin; Grenada; Hinds; Holmes; Humphreys; Issaquena; Jefferson; Jefferson Davis; Lawrence; Leflore; Lincoln; Madison; Marion; Montgomery; Panola; Pike; Quitman; Rankin; Sharkey; Simpson; Sunflower; Tallahatchie; Tate; Tunica; Walthall; Warren; Washington; Wilkinson; Yalobusha; Yazoo.
 
 .. code-block:: php
 
@@ -3078,8 +2846,7 @@ NAD83 / Mississippi West (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Missouri Central + NAVD88 height
 ----------------------------------------
-
-| Used: United States (USA) - Missouri - counties of Adair; Audrain; Benton; Boone; Callaway; Camden; Carroll; Chariton; Christian; Cole; Cooper; Dallas; Douglas; Greene; Grundy; Hickory; Howard; Howell; Knox; Laclede; Linn; Livingston; Macon; Maries; Mercer; Miller; Moniteau; Monroe; Morgan; Osage; Ozark; Pettis; Phelps; Polk; Pulaski; Putnam; Randolph; Saline; Schuyler; Scotland; Shelby; Stone; Sullivan; Taney; Texas; Webster; Wright.
+| Extent: United States (USA) - Missouri - counties of Adair; Audrain; Benton; Boone; Callaway; Camden; Carroll; Chariton; Christian; Cole; Cooper; Dallas; Douglas; Greene; Grundy; Hickory; Howard; Howell; Knox; Laclede; Linn; Livingston; Macon; Maries; Mercer; Miller; Moniteau; Monroe; Morgan; Osage; Ozark; Pettis; Phelps; Polk; Pulaski; Putnam; Randolph; Saline; Schuyler; Scotland; Shelby; Stone; Sullivan; Taney; Texas; Webster; Wright.
 
 .. code-block:: php
 
@@ -3091,8 +2858,7 @@ NAD83 / Missouri Central + NAVD88 height
 
 NAD83 / Missouri East + NAVD88 height
 -------------------------------------
-
-| Used: United States (USA) - Missouri - counties of Bollinger; Butler; Cape Girardeau; Carter; Clark; Crawford; Dent; Dunklin; Franklin; Gasconade; Iron; Jefferson; Lewis; Lincoln; Madison; Marion; Mississippi; Montgomery; New Madrid; Oregon; Pemiscot; Perry; Pike; Ralls; Reynolds; Ripley; Scott; Shannon; St Charles; St Francois; St Louis; Ste. Genevieve; Stoddard; Warren; Washington; Wayne.
+| Extent: United States (USA) - Missouri - counties of Bollinger; Butler; Cape Girardeau; Carter; Clark; Crawford; Dent; Dunklin; Franklin; Gasconade; Iron; Jefferson; Lewis; Lincoln; Madison; Marion; Mississippi; Montgomery; New Madrid; Oregon; Pemiscot; Perry; Pike; Ralls; Reynolds; Ripley; Scott; Shannon; St Charles; St Francois; St Louis; Ste. Genevieve; Stoddard; Warren; Washington; Wayne.
 
 .. code-block:: php
 
@@ -3104,8 +2870,7 @@ NAD83 / Missouri East + NAVD88 height
 
 NAD83 / Missouri West + NAVD88 height
 -------------------------------------
-
-| Used: United States (USA) - Missouri - counties of Andrew; Atchison; Barry; Barton; Bates; Buchanan; Caldwell; Cass; Cedar; Clay; Clinton; Dade; Daviess; De Kalb; Gentry; Harrison; Henry; Holt; Jackson; Jasper; Johnson; Lafayette; Lawrence; McDonald; Newton; Nodaway; Platte; Ray; St Clair; Vernon; Worth.
+| Extent: United States (USA) - Missouri - counties of Andrew; Atchison; Barry; Barton; Bates; Buchanan; Caldwell; Cass; Cedar; Clay; Clinton; Dade; Daviess; De Kalb; Gentry; Harrison; Henry; Holt; Jackson; Jasper; Johnson; Lafayette; Lawrence; McDonald; Newton; Nodaway; Platte; Ray; St Clair; Vernon; Worth.
 
 .. code-block:: php
 
@@ -3117,8 +2882,7 @@ NAD83 / Missouri West + NAVD88 height
 
 NAD83 / Montana (ft) + NAVD88 height (ft)
 -----------------------------------------
-
-| Used: United States (USA) - Montana - counties of Beaverhead; Big Horn; Blaine; Broadwater; Carbon; Carter; Cascade; Chouteau; Custer; Daniels; Dawson; Deer Lodge; Fallon; Fergus; Flathead; Gallatin; Garfield; Glacier; Golden Valley; Granite; Hill; Jefferson; Judith Basin; Lake; Lewis and Clark; Liberty; Lincoln; Madison; McCone; Meagher; Mineral; Missoula; Musselshell; Park; Petroleum; Phillips; Pondera; Powder River; Powell; Prairie; Ravalli; Richland; Roosevelt; Rosebud; Sanders; Sheridan; Silver Bow; Stillwater; Sweet Grass; Teton; Toole; Treasure; Valley; Wheatland; Wibaux; Yellowstone.
+| Extent: United States (USA) - Montana - counties of Beaverhead; Big Horn; Blaine; Broadwater; Carbon; Carter; Cascade; Chouteau; Custer; Daniels; Dawson; Deer Lodge; Fallon; Fergus; Flathead; Gallatin; Garfield; Glacier; Golden Valley; Granite; Hill; Jefferson; Judith Basin; Lake; Lewis and Clark; Liberty; Lincoln; Madison; McCone; Meagher; Mineral; Missoula; Musselshell; Park; Petroleum; Phillips; Pondera; Powder River; Powell; Prairie; Ravalli; Richland; Roosevelt; Rosebud; Sanders; Sheridan; Silver Bow; Stillwater; Sweet Grass; Teton; Toole; Treasure; Valley; Wheatland; Wibaux; Yellowstone.
 
 .. code-block:: php
 
@@ -3130,8 +2894,7 @@ NAD83 / Montana (ft) + NAVD88 height (ft)
 
 NAD83 / Nebraska (ftUS) + NAVD88 height (ftUS)
 ----------------------------------------------
-
-| Used: United States (USA) - Nebraska - counties of Adams; Antelope; Arthur; Banner; Blaine; Boone; Box Butte; Boyd; Brown; Buffalo; Burt; Butler; Cass; Cedar; Chase; Cherry; Cheyenne; Clay; Colfax; Cuming; Custer; Dakota; Dawes; Dawson; Deuel; Dixon; Dodge; Douglas; Dundy; Fillmore; Franklin; Frontier; Furnas; Gage; Garden; Garfield; Gosper; Grant; Greeley; Hall; Hamilton; Harlan; Hayes; Hitchcock; Holt; Hooker; Howard; Jefferson; Johnson; Kearney; Keith; Keya Paha; Kimball; Knox; Lancaster; Lincoln; Logan; Loup; Madison; McPherson; Merrick; Morrill; Nance; Nemaha; Nuckolls; Otoe; Pawnee; Perkins; Phelps; Pierce; Platte; Polk; Red Willow; Richardson; Rock; Saline; Sarpy; Saunders; Scotts Bluff; Seward; Sheridan; Sherman; Sioux; Stanton; Thayer; Thomas; Thurston; Valley; Washington; Wayne; Webster; Wheeler; York.
+| Extent: United States (USA) - Nebraska - counties of Adams; Antelope; Arthur; Banner; Blaine; Boone; Box Butte; Boyd; Brown; Buffalo; Burt; Butler; Cass; Cedar; Chase; Cherry; Cheyenne; Clay; Colfax; Cuming; Custer; Dakota; Dawes; Dawson; Deuel; Dixon; Dodge; Douglas; Dundy; Fillmore; Franklin; Frontier; Furnas; Gage; Garden; Garfield; Gosper; Grant; Greeley; Hall; Hamilton; Harlan; Hayes; Hitchcock; Holt; Hooker; Howard; Jefferson; Johnson; Kearney; Keith; Keya Paha; Kimball; Knox; Lancaster; Lincoln; Logan; Loup; Madison; McPherson; Merrick; Morrill; Nance; Nemaha; Nuckolls; Otoe; Pawnee; Perkins; Phelps; Pierce; Platte; Polk; Red Willow; Richardson; Rock; Saline; Sarpy; Saunders; Scotts Bluff; Seward; Sheridan; Sherman; Sioux; Stanton; Thayer; Thomas; Thurston; Valley; Washington; Wayne; Webster; Wheeler; York.
 
 .. code-block:: php
 
@@ -3143,8 +2906,7 @@ NAD83 / Nebraska (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Nevada Central (ftUS) + NAVD88 height (ftUS)
 ----------------------------------------------------
-
-| Used: United States (USA) - Nevada - counties of Lander; Nye.
+| Extent: United States (USA) - Nevada - counties of Lander; Nye.
 
 .. code-block:: php
 
@@ -3156,8 +2918,7 @@ NAD83 / Nevada Central (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Nevada East (ftUS) + NAVD88 height (ftUS)
 -------------------------------------------------
-
-| Used: United States (USA) - Nevada - counties of Clark; Elko; Eureka; Lincoln; White Pine.
+| Extent: United States (USA) - Nevada - counties of Clark; Elko; Eureka; Lincoln; White Pine.
 
 .. code-block:: php
 
@@ -3169,8 +2930,7 @@ NAD83 / Nevada East (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Nevada West (ftUS) + NAVD88 height (ftUS)
 -------------------------------------------------
-
-| Used: United States (USA) - Nevada - counties of Churchill; Douglas; Esmeralda; Humboldt; Lyon; Mineral; Pershing; Storey; Washoe.
+| Extent: United States (USA) - Nevada - counties of Churchill; Douglas; Esmeralda; Humboldt; Lyon; Mineral; Pershing; Storey; Washoe.
 
 .. code-block:: php
 
@@ -3182,8 +2942,7 @@ NAD83 / Nevada West (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / New Hampshire (ftUS) + NAVD88 height (ftUS)
 ---------------------------------------------------
-
-| Used: United States (USA) - New Hampshire - counties of Belknap; Carroll; Cheshire; Coos; Grafton; Hillsborough; Merrimack; Rockingham; Strafford; Sullivan.
+| Extent: United States (USA) - New Hampshire - counties of Belknap; Carroll; Cheshire; Coos; Grafton; Hillsborough; Merrimack; Rockingham; Strafford; Sullivan.
 
 .. code-block:: php
 
@@ -3195,8 +2954,7 @@ NAD83 / New Hampshire (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / New Jersey (ftUS) + NAVD88 height (ftUS)
 ------------------------------------------------
-
-| Used: United States (USA) - New Jersey - counties of Atlantic; Bergen; Burlington; Camden; Cape May; Cumberland; Essex; Gloucester; Hudson; Hunterdon; Mercer; Middlesex; Monmouth; Morris; Ocean; Passaic; Salem; Somerset; Sussex; Union; Warren.
+| Extent: United States (USA) - New Jersey - counties of Atlantic; Bergen; Burlington; Camden; Cape May; Cumberland; Essex; Gloucester; Hudson; Hunterdon; Mercer; Middlesex; Monmouth; Morris; Ocean; Passaic; Salem; Somerset; Sussex; Union; Warren.
 
 .. code-block:: php
 
@@ -3208,8 +2966,7 @@ NAD83 / New Jersey (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / New Mexico Central (ftUS) + NAVD88 height (ftUS)
 --------------------------------------------------------
-
-| Used: United States (USA) - New Mexico - counties of Bernalillo; Dona Ana; Lincoln; Los Alamos; Otero; Rio Arriba; Sandoval; Santa Fe; Socorro; Taos; Torrance; Valencia.
+| Extent: United States (USA) - New Mexico - counties of Bernalillo; Dona Ana; Lincoln; Los Alamos; Otero; Rio Arriba; Sandoval; Santa Fe; Socorro; Taos; Torrance; Valencia.
 
 .. code-block:: php
 
@@ -3221,8 +2978,7 @@ NAD83 / New Mexico Central (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / New Mexico East (ftUS) + NAVD88 height (ftUS)
 -----------------------------------------------------
-
-| Used: United States (USA) - New Mexico - counties of Chaves; Colfax; Curry; De Baca; Eddy; Guadalupe; Harding; Lea; Mora; Quay; Roosevelt; San Miguel; Union.
+| Extent: United States (USA) - New Mexico - counties of Chaves; Colfax; Curry; De Baca; Eddy; Guadalupe; Harding; Lea; Mora; Quay; Roosevelt; San Miguel; Union.
 
 .. code-block:: php
 
@@ -3234,8 +2990,7 @@ NAD83 / New Mexico East (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / New Mexico West (ftUS) + NAVD88 height (ftUS)
 -----------------------------------------------------
-
-| Used: United States (USA) - New Mexico - counties of Catron; Cibola; Grant; Hidalgo; Luna; McKinley; San Juan; Sierra.
+| Extent: United States (USA) - New Mexico - counties of Catron; Cibola; Grant; Hidalgo; Luna; McKinley; San Juan; Sierra.
 
 .. code-block:: php
 
@@ -3247,8 +3002,7 @@ NAD83 / New Mexico West (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / New York Central (ftUS) + NAVD88 height (ftUS)
 ------------------------------------------------------
-
-| Used: United States (USA) - New York - counties of Broome; Cayuga; Chemung; Chenango; Cortland; Jefferson; Lewis; Madison; Oneida; Onondaga; Ontario; Oswego; Schuyler; Seneca; Steuben; Tioga; Tompkins; Wayne; Yates.
+| Extent: United States (USA) - New York - counties of Broome; Cayuga; Chemung; Chenango; Cortland; Jefferson; Lewis; Madison; Oneida; Onondaga; Ontario; Oswego; Schuyler; Seneca; Steuben; Tioga; Tompkins; Wayne; Yates.
 
 .. code-block:: php
 
@@ -3260,8 +3014,7 @@ NAD83 / New York Central (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / New York East (ftUS) + NAVD88 height (ftUS)
 ---------------------------------------------------
-
-| Used: United States (USA) - New York mainland - counties of Albany; Clinton; Columbia; Delaware; Dutchess; Essex; Franklin; Fulton; Greene; Hamilton; Herkimer; Montgomery; Orange; Otsego; Putnam; Rensselaer; Rockland; Saratoga; Schenectady; Schoharie; St Lawrence; Sullivan; Ulster; Warren; Washington; Westchester.
+| Extent: United States (USA) - New York mainland - counties of Albany; Clinton; Columbia; Delaware; Dutchess; Essex; Franklin; Fulton; Greene; Hamilton; Herkimer; Montgomery; Orange; Otsego; Putnam; Rensselaer; Rockland; Saratoga; Schenectady; Schoharie; St Lawrence; Sullivan; Ulster; Warren; Washington; Westchester.
 
 .. code-block:: php
 
@@ -3273,8 +3026,7 @@ NAD83 / New York East (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / New York Long Island (ftUS) + NAVD88 height (ftUS)
 ----------------------------------------------------------
-
-| Used: United States (USA) - New York - counties of Bronx; Kings; Nassau; New York; Queens; Richmond; Suffolk.
+| Extent: United States (USA) - New York - counties of Bronx; Kings; Nassau; New York; Queens; Richmond; Suffolk.
 
 .. code-block:: php
 
@@ -3286,8 +3038,7 @@ NAD83 / New York Long Island (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / New York West (ftUS) + NAVD88 height (ftUS)
 ---------------------------------------------------
-
-| Used: United States (USA) - New York - counties of Allegany; Cattaraugus; Chautauqua; Erie; Genesee; Livingston; Monroe; Niagara; Orleans; Wyoming.
+| Extent: United States (USA) - New York - counties of Allegany; Cattaraugus; Chautauqua; Erie; Genesee; Livingston; Monroe; Niagara; Orleans; Wyoming.
 
 .. code-block:: php
 
@@ -3299,8 +3050,7 @@ NAD83 / New York West (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / North Carolina (ftUS) + NAVD88 height (ftUS)
 ----------------------------------------------------
-
-| Used: United States (USA) - North Carolina - counties of Alamance; Alexander; Alleghany; Anson; Ashe; Avery; Beaufort; Bertie; Bladen; Brunswick; Buncombe; Burke; Cabarrus; Caldwell; Camden; Carteret; Caswell; Catawba; Chatham; Cherokee; Chowan; Clay; Cleveland; Columbus; Craven; Cumberland; Currituck; Dare; Davidson; Davie; Duplin; Durham; Edgecombe; Forsyth; Franklin; Gaston; Gates; Graham; Granville; Greene; Guilford; Halifax; Harnett; Haywood; Henderson; Hertford; Hoke; Hyde; Iredell; Jackson; Johnston; Jones; Lee; Lenoir; Lincoln; Macon; Madison; Martin; McDowell; Mecklenburg; Mitchell; Montgomery; Moore; Nash; New Hanover; Northampton; Onslow; Orange; Pamlico; Pasquotank; Pender; Perquimans; Person; Pitt; Polk; Randolph; Richmond; Robeson; Rockingham; Rowan; Rutherford; Sampson; Scotland; Stanly; Stokes; Surry; Swain; Transylvania; Tyrrell; Union; Vance; Wake; Warren; Washington; Watauga; Wayne; Wilkes; Wilson; Yadkin; Yancey.
+| Extent: United States (USA) - North Carolina - counties of Alamance; Alexander; Alleghany; Anson; Ashe; Avery; Beaufort; Bertie; Bladen; Brunswick; Buncombe; Burke; Cabarrus; Caldwell; Camden; Carteret; Caswell; Catawba; Chatham; Cherokee; Chowan; Clay; Cleveland; Columbus; Craven; Cumberland; Currituck; Dare; Davidson; Davie; Duplin; Durham; Edgecombe; Forsyth; Franklin; Gaston; Gates; Graham; Granville; Greene; Guilford; Halifax; Harnett; Haywood; Henderson; Hertford; Hoke; Hyde; Iredell; Jackson; Johnston; Jones; Lee; Lenoir; Lincoln; Macon; Madison; Martin; McDowell; Mecklenburg; Mitchell; Montgomery; Moore; Nash; New Hanover; Northampton; Onslow; Orange; Pamlico; Pasquotank; Pender; Perquimans; Person; Pitt; Polk; Randolph; Richmond; Robeson; Rockingham; Rowan; Rutherford; Sampson; Scotland; Stanly; Stokes; Surry; Swain; Transylvania; Tyrrell; Union; Vance; Wake; Warren; Washington; Watauga; Wayne; Wilkes; Wilson; Yadkin; Yancey.
 
 .. code-block:: php
 
@@ -3312,8 +3062,7 @@ NAD83 / North Carolina (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / North Dakota North (ft) + NAVD88 height (ft)
 ----------------------------------------------------
-
-| Used: United States (USA) - North Dakota - counties of Benson; Bottineau; Burke; Cavalier; Divide; Eddy; Foster; Grand Forks; Griggs; McHenry; McKenzie; McLean; Mountrial; Nelson; Pembina; Pierce; Ramsey; Renville; Rolette; Sheridan; Steele; Towner; Traill; Walsh; Ward; Wells; Williams.
+| Extent: United States (USA) - North Dakota - counties of Benson; Bottineau; Burke; Cavalier; Divide; Eddy; Foster; Grand Forks; Griggs; McHenry; McKenzie; McLean; Mountrial; Nelson; Pembina; Pierce; Ramsey; Renville; Rolette; Sheridan; Steele; Towner; Traill; Walsh; Ward; Wells; Williams.
 
 .. code-block:: php
 
@@ -3325,8 +3074,7 @@ NAD83 / North Dakota North (ft) + NAVD88 height (ft)
 
 NAD83 / North Dakota South (ft) + NAVD88 height (ft)
 ----------------------------------------------------
-
-| Used: United States (USA) - North Dakota - counties of Adams; Barnes; Billings; Bowman; Burleigh; Cass; Dickey; Dunn; Emmons; Golden Valley; Grant; Hettinger; Kidder; La Moure; Logan; McIntosh; Mercer; Morton; Oliver; Ransom; Richland; Sargent; Sioux; Slope; Stark; Stutsman.
+| Extent: United States (USA) - North Dakota - counties of Adams; Barnes; Billings; Bowman; Burleigh; Cass; Dickey; Dunn; Emmons; Golden Valley; Grant; Hettinger; Kidder; La Moure; Logan; McIntosh; Mercer; Morton; Oliver; Ransom; Richland; Sargent; Sioux; Slope; Stark; Stutsman.
 
 .. code-block:: php
 
@@ -3338,8 +3086,7 @@ NAD83 / North Dakota South (ft) + NAVD88 height (ft)
 
 NAD83 / Ohio North (ftUS) + NAVD88 height (ftUS)
 ------------------------------------------------
-
-| Used: United States (USA) - Ohio - counties of Allen;Ashland; Ashtabula; Auglaize; Carroll; Columbiana; Coshocton; Crawford; Cuyahoga; Defiance; Delaware; Erie; Fulton; Geauga; Hancock; Hardin; Harrison; Henry; Holmes; Huron; Jefferson; Knox; Lake; Logan; Lorain; Lucas; Mahoning; Marion; Medina; Mercer; Morrow; Ottawa; Paulding; Portage; Putnam; Richland; Sandusky; Seneca; Shelby; Stark; Summit; Trumbull; Tuscarawas; Union; Van Wert; Wayne; Williams; Wood; Wyandot.
+| Extent: United States (USA) - Ohio - counties of Allen;Ashland; Ashtabula; Auglaize; Carroll; Columbiana; Coshocton; Crawford; Cuyahoga; Defiance; Delaware; Erie; Fulton; Geauga; Hancock; Hardin; Harrison; Henry; Holmes; Huron; Jefferson; Knox; Lake; Logan; Lorain; Lucas; Mahoning; Marion; Medina; Mercer; Morrow; Ottawa; Paulding; Portage; Putnam; Richland; Sandusky; Seneca; Shelby; Stark; Summit; Trumbull; Tuscarawas; Union; Van Wert; Wayne; Williams; Wood; Wyandot.
 
 .. code-block:: php
 
@@ -3351,8 +3098,7 @@ NAD83 / Ohio North (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Ohio South (ftUS) + NAVD88 height (ftUS)
 ------------------------------------------------
-
-| Used: United States (USA) - Ohio - counties of Adams; Athens; Belmont; Brown; Butler; Champaign; Clark; Clermont; Clinton; Darke; Fairfield; Fayette; Franklin; Gallia; Greene; Guernsey; Hamilton; Highland; Hocking; Jackson; Lawrence; Licking; Madison; Meigs; Miami; Monroe; Montgomery; Morgan; Muskingum; Noble; Perry; Pickaway; Pike; Preble; Ross; Scioto; Vinton; Warren; Washington.
+| Extent: United States (USA) - Ohio - counties of Adams; Athens; Belmont; Brown; Butler; Champaign; Clark; Clermont; Clinton; Darke; Fairfield; Fayette; Franklin; Gallia; Greene; Guernsey; Hamilton; Highland; Hocking; Jackson; Lawrence; Licking; Madison; Meigs; Miami; Monroe; Montgomery; Morgan; Muskingum; Noble; Perry; Pickaway; Pike; Preble; Ross; Scioto; Vinton; Warren; Washington.
 
 .. code-block:: php
 
@@ -3364,8 +3110,7 @@ NAD83 / Ohio South (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Oklahoma North (ftUS) + NAVD88 height (ftUS)
 ----------------------------------------------------
-
-| Used: United States (USA) - Oklahoma - counties of Adair; Alfalfa; Beaver; Blaine; Canadian; Cherokee; Cimarron; Craig; Creek; Custer; Delaware; Dewey; Ellis; Garfield; Grant; Harper; Kay; Kingfisher; Lincoln; Logan; Major; Mayes; Muskogee; Noble; Nowata; Okfuskee; Oklahoma; Okmulgee; Osage; Ottawa; Pawnee; Payne; Roger Mills; Rogers; Sequoyah; Texas; Tulsa; Wagoner; Washington; Woods; Woodward.
+| Extent: United States (USA) - Oklahoma - counties of Adair; Alfalfa; Beaver; Blaine; Canadian; Cherokee; Cimarron; Craig; Creek; Custer; Delaware; Dewey; Ellis; Garfield; Grant; Harper; Kay; Kingfisher; Lincoln; Logan; Major; Mayes; Muskogee; Noble; Nowata; Okfuskee; Oklahoma; Okmulgee; Osage; Ottawa; Pawnee; Payne; Roger Mills; Rogers; Sequoyah; Texas; Tulsa; Wagoner; Washington; Woods; Woodward.
 
 .. code-block:: php
 
@@ -3377,8 +3122,7 @@ NAD83 / Oklahoma North (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Oklahoma South (ftUS) + NAVD88 height (ftUS)
 ----------------------------------------------------
-
-| Used: United States (USA) - Oklahoma - counties of Atoka; Beckham; Bryan; Caddo; Carter; Choctaw; Cleveland; Coal; Comanche; Cotton; Garvin; Grady; Greer; Harmon; Haskell; Hughes; Jackson; Jefferson; Johnston; Kiowa; Latimer; Le Flore; Love; Marshall; McClain; McCurtain; McIntosh; Murray; Pittsburg; Pontotoc; Pottawatomie; Pushmataha; Seminole; Stephens; Tillman; Washita.
+| Extent: United States (USA) - Oklahoma - counties of Atoka; Beckham; Bryan; Caddo; Carter; Choctaw; Cleveland; Coal; Comanche; Cotton; Garvin; Grady; Greer; Harmon; Haskell; Hughes; Jackson; Jefferson; Johnston; Kiowa; Latimer; Le Flore; Love; Marshall; McClain; McCurtain; McIntosh; Murray; Pittsburg; Pontotoc; Pottawatomie; Pushmataha; Seminole; Stephens; Tillman; Washita.
 
 .. code-block:: php
 
@@ -3390,8 +3134,7 @@ NAD83 / Oklahoma South (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Oregon North (ft) + NAVD88 height (ft)
 ----------------------------------------------
-
-| Used: United States (USA) - Oregon - counties of Baker; Benton; Clackamas; Clatsop; Columbia; Gilliam; Grant; Hood River; Jefferson; Lincoln; Linn; Marion; Morrow; Multnomah; Polk; Sherman; Tillamook; Umatilla; Union; Wallowa; Wasco; Washington; Wheeler; Yamhill.
+| Extent: United States (USA) - Oregon - counties of Baker; Benton; Clackamas; Clatsop; Columbia; Gilliam; Grant; Hood River; Jefferson; Lincoln; Linn; Marion; Morrow; Multnomah; Polk; Sherman; Tillamook; Umatilla; Union; Wallowa; Wasco; Washington; Wheeler; Yamhill.
 
 .. code-block:: php
 
@@ -3403,8 +3146,7 @@ NAD83 / Oregon North (ft) + NAVD88 height (ft)
 
 NAD83 / Oregon South (ft) + NAVD88 height (ft)
 ----------------------------------------------
-
-| Used: United States (USA) - Oregon - counties of Coos; Crook; Curry; Deschutes; Douglas; Harney; Jackson; Josephine; Klamath; Lake; Lane; Malheur.
+| Extent: United States (USA) - Oregon - counties of Coos; Crook; Curry; Deschutes; Douglas; Harney; Jackson; Josephine; Klamath; Lake; Lane; Malheur.
 
 .. code-block:: php
 
@@ -3416,8 +3158,7 @@ NAD83 / Oregon South (ft) + NAVD88 height (ft)
 
 NAD83 / Pennsylvania North (ftUS) + NAVD88 height (ftUS)
 --------------------------------------------------------
-
-| Used: United States (USA) - Pennsylvania - counties of Bradford; Cameron; Carbon; Centre; Clarion; Clearfield; Clinton; Columbia; Crawford; Elk; Erie; Forest; Jefferson; Lackawanna; Luzerne; Lycoming; McKean; Mercer; Monroe; Montour; Northumberland; Pike; Potter; Sullivan; Susquehanna; Tioga; Union; Venango; Warren; Wayne; Wyoming.
+| Extent: United States (USA) - Pennsylvania - counties of Bradford; Cameron; Carbon; Centre; Clarion; Clearfield; Clinton; Columbia; Crawford; Elk; Erie; Forest; Jefferson; Lackawanna; Luzerne; Lycoming; McKean; Mercer; Monroe; Montour; Northumberland; Pike; Potter; Sullivan; Susquehanna; Tioga; Union; Venango; Warren; Wayne; Wyoming.
 
 .. code-block:: php
 
@@ -3429,8 +3170,7 @@ NAD83 / Pennsylvania North (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Pennsylvania South (ftUS) + NAVD88 height (ftUS)
 --------------------------------------------------------
-
-| Used: United States (USA) - Pennsylvania - counties of Adams; Allegheny; Armstrong; Beaver; Bedford; Berks; Blair; Bucks; Butler; Cambria; Chester; Cumberland; Dauphin; Delaware; Fayette; Franklin; Fulton; Greene; Huntingdon; Indiana; Juniata; Lancaster; Lawrence; Lebanon; Lehigh; Mifflin; Montgomery; Northampton; Perry; Philadelphia; Schuylkill; Snyder; Somerset; Washington; Westmoreland; York.
+| Extent: United States (USA) - Pennsylvania - counties of Adams; Allegheny; Armstrong; Beaver; Bedford; Berks; Blair; Bucks; Butler; Cambria; Chester; Cumberland; Dauphin; Delaware; Fayette; Franklin; Fulton; Greene; Huntingdon; Indiana; Juniata; Lancaster; Lawrence; Lebanon; Lehigh; Mifflin; Montgomery; Northampton; Perry; Philadelphia; Schuylkill; Snyder; Somerset; Washington; Westmoreland; York.
 
 .. code-block:: php
 
@@ -3442,8 +3182,7 @@ NAD83 / Pennsylvania South (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Rhode Island (ftUS) + NAVD88 height (ftUS)
 --------------------------------------------------
-
-| Used: United States (USA) - Rhode Island - counties of Bristol; Kent; Newport; Providence; Washington.
+| Extent: United States (USA) - Rhode Island - counties of Bristol; Kent; Newport; Providence; Washington.
 
 .. code-block:: php
 
@@ -3455,8 +3194,7 @@ NAD83 / Rhode Island (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / South Carolina (ft) + NAVD88 height (ft)
 ------------------------------------------------
-
-| Used: United States (USA) - South Carolina - counties of Abbeville; Aiken; Allendale; Anderson; Bamberg; Barnwell; Beaufort; Berkeley; Calhoun; Charleston; Cherokee; Chester; Chesterfield; Clarendon; Colleton; Darlington; Dillon; Dorchester; Edgefield; Fairfield; Florence; Georgetown; Greenville; Greenwood; Hampton; Horry; Jasper; Kershaw; Lancaster; Laurens; Lee; Lexington; Marion; Marlboro; McCormick; Newberry; Oconee; Orangeburg; Pickens; Richland; Saluda; Spartanburg; Sumter; Union; Williamsburg; York.
+| Extent: United States (USA) - South Carolina - counties of Abbeville; Aiken; Allendale; Anderson; Bamberg; Barnwell; Beaufort; Berkeley; Calhoun; Charleston; Cherokee; Chester; Chesterfield; Clarendon; Colleton; Darlington; Dillon; Dorchester; Edgefield; Fairfield; Florence; Georgetown; Greenville; Greenwood; Hampton; Horry; Jasper; Kershaw; Lancaster; Laurens; Lee; Lexington; Marion; Marlboro; McCormick; Newberry; Oconee; Orangeburg; Pickens; Richland; Saluda; Spartanburg; Sumter; Union; Williamsburg; York.
 
 .. code-block:: php
 
@@ -3468,8 +3206,7 @@ NAD83 / South Carolina (ft) + NAVD88 height (ft)
 
 NAD83 / South Dakota North (ftUS) + NAVD88 height (ftUS)
 --------------------------------------------------------
-
-| Used: United States (USA) - South Dakota - counties of Beadle; Brookings; Brown; Butte; Campbell; Clark; Codington; Corson; Day; Deuel; Dewey; Edmunds; Faulk; Grant; Hamlin; Hand; Harding; Hyde; Kingsbury; Lawrence; Marshall; McPherson; Meade; Perkins; Potter; Roberts; Spink; Sully; Walworth; Ziebach.
+| Extent: United States (USA) - South Dakota - counties of Beadle; Brookings; Brown; Butte; Campbell; Clark; Codington; Corson; Day; Deuel; Dewey; Edmunds; Faulk; Grant; Hamlin; Hand; Harding; Hyde; Kingsbury; Lawrence; Marshall; McPherson; Meade; Perkins; Potter; Roberts; Spink; Sully; Walworth; Ziebach.
 
 .. code-block:: php
 
@@ -3481,8 +3218,7 @@ NAD83 / South Dakota North (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / South Dakota South (ftUS) + NAVD88 height (ftUS)
 --------------------------------------------------------
-
-| Used: United States (USA) - South Dakota - counties of Aurora; Bennett; Bon Homme; Brule; Buffalo; Charles Mix; Clay; Custer; Davison; Douglas; Fall River; Gregory; Haakon; Hanson; Hughes; Hutchinson; Jackson; Jerauld; Jones; Lake; Lincoln; Lyman; McCook; Mellette; Miner; Minnehaha; Moody; Pennington; Sanborn; Shannon; Stanley; Todd; Tripp; Turner; Union; Yankton.
+| Extent: United States (USA) - South Dakota - counties of Aurora; Bennett; Bon Homme; Brule; Buffalo; Charles Mix; Clay; Custer; Davison; Douglas; Fall River; Gregory; Haakon; Hanson; Hughes; Hutchinson; Jackson; Jerauld; Jones; Lake; Lincoln; Lyman; McCook; Mellette; Miner; Minnehaha; Moody; Pennington; Sanborn; Shannon; Stanley; Todd; Tripp; Turner; Union; Yankton.
 
 .. code-block:: php
 
@@ -3494,8 +3230,7 @@ NAD83 / South Dakota South (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Tennessee (ftUS) + NAVD88 height (ftUS)
 -----------------------------------------------
-
-| Used: United States (USA) - Tennessee - counties of Anderson; Bedford; Benton; Bledsoe; Blount; Bradley; Campbell; Cannon; Carroll; Carter; Cheatham; Chester; Claiborne; Clay; Cocke; Coffee; Crockett; Cumberland; Davidson; De Kalb; Decatur; Dickson; Dyer; Fayette; Fentress; Franklin; Gibson; Giles; Grainger; Greene; Grundy; Hamblen; Hamilton; Hancock; Hardeman; Hardin; Hawkins; Haywood; Henderson; Henry; Hickman; Houston; Humphreys; Jackson; Jefferson; Johnson; Knox; Lake; Lauderdale; Lawrence; Lewis; Lincoln; Loudon; Macon; Madison; Marion; Marshall; Maury; McMinn; McNairy; Meigs; Monroe; Montgomery; Moore; Morgan; Obion; Overton; Perry; Pickett; Polk; Putnam; Rhea; Roane; Robertson; Rutherford; Scott; Sequatchie; Sevier; Shelby; Smith; Stewart; Sullivan; Sumner; Tipton; Trousdale; Unicoi; Union; Van Buren; Warren; Washington; Wayne; Weakley; White; Williamson; Wilson.
+| Extent: United States (USA) - Tennessee - counties of Anderson; Bedford; Benton; Bledsoe; Blount; Bradley; Campbell; Cannon; Carroll; Carter; Cheatham; Chester; Claiborne; Clay; Cocke; Coffee; Crockett; Cumberland; Davidson; De Kalb; Decatur; Dickson; Dyer; Fayette; Fentress; Franklin; Gibson; Giles; Grainger; Greene; Grundy; Hamblen; Hamilton; Hancock; Hardeman; Hardin; Hawkins; Haywood; Henderson; Henry; Hickman; Houston; Humphreys; Jackson; Jefferson; Johnson; Knox; Lake; Lauderdale; Lawrence; Lewis; Lincoln; Loudon; Macon; Madison; Marion; Marshall; Maury; McMinn; McNairy; Meigs; Monroe; Montgomery; Moore; Morgan; Obion; Overton; Perry; Pickett; Polk; Putnam; Rhea; Roane; Robertson; Rutherford; Scott; Sequatchie; Sevier; Shelby; Smith; Stewart; Sullivan; Sumner; Tipton; Trousdale; Unicoi; Union; Van Buren; Warren; Washington; Wayne; Weakley; White; Williamson; Wilson.
 
 .. code-block:: php
 
@@ -3507,8 +3242,7 @@ NAD83 / Tennessee (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Texas Central (ftUS) + NAVD88 height (ftUS)
 ---------------------------------------------------
-
-| Used: United States (USA) - Texas - counties of Anderson; Angelina; Bastrop; Bell; Blanco; Bosque; Brazos; Brown; Burleson; Burnet; Cherokee; Coke; Coleman; Comanche; Concho; Coryell; Crane; Crockett; Culberson; Ector; El Paso; Falls; Freestone; Gillespie; Glasscock; Grimes; Hamilton; Hardin; Houston; Hudspeth; Irion; Jasper; Jeff Davis; Kimble; Lampasas; Lee; Leon; Liberty; Limestone; Llano; Loving; Madison; Mason; McCulloch; McLennan; Menard; Midland; Milam; Mills; Montgomery; Nacogdoches; Newton; Orange; Pecos; Polk; Reagan; Reeves; Robertson; Runnels; Sabine; San Augustine; San Jacinto; San Saba; Schleicher; Shelby; Sterling; Sutton; Tom Green; Travis; Trinity; Tyler; Upton; Walker; Ward; Washington; Williamson; Winkler.
+| Extent: United States (USA) - Texas - counties of Anderson; Angelina; Bastrop; Bell; Blanco; Bosque; Brazos; Brown; Burleson; Burnet; Cherokee; Coke; Coleman; Comanche; Concho; Coryell; Crane; Crockett; Culberson; Ector; El Paso; Falls; Freestone; Gillespie; Glasscock; Grimes; Hamilton; Hardin; Houston; Hudspeth; Irion; Jasper; Jeff Davis; Kimble; Lampasas; Lee; Leon; Liberty; Limestone; Llano; Loving; Madison; Mason; McCulloch; McLennan; Menard; Midland; Milam; Mills; Montgomery; Nacogdoches; Newton; Orange; Pecos; Polk; Reagan; Reeves; Robertson; Runnels; Sabine; San Augustine; San Jacinto; San Saba; Schleicher; Shelby; Sterling; Sutton; Tom Green; Travis; Trinity; Tyler; Upton; Walker; Ward; Washington; Williamson; Winkler.
 
 .. code-block:: php
 
@@ -3520,8 +3254,7 @@ NAD83 / Texas Central (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Texas North (ftUS) + NAVD88 height (ftUS)
 -------------------------------------------------
-
-| Used: United States (USA) - Texas - counties of: Armstrong; Briscoe; Carson; Castro; Childress; Collingsworth; Dallam; Deaf Smith; Donley; Gray; Hall; Hansford; Hartley; Hemphill; Hutchinson; Lipscomb; Moore; Ochiltree; Oldham; Parmer; Potter; Randall; Roberts; Sherman; Swisher; Wheeler.
+| Extent: United States (USA) - Texas - counties of: Armstrong; Briscoe; Carson; Castro; Childress; Collingsworth; Dallam; Deaf Smith; Donley; Gray; Hall; Hansford; Hartley; Hemphill; Hutchinson; Lipscomb; Moore; Ochiltree; Oldham; Parmer; Potter; Randall; Roberts; Sherman; Swisher; Wheeler.
 
 .. code-block:: php
 
@@ -3533,8 +3266,7 @@ NAD83 / Texas North (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Texas North Central (ftUS) + NAVD88 height (ftUS)
 ---------------------------------------------------------
-
-| Used: United States (USA) - Texas - counties of: Andrews; Archer; Bailey; Baylor; Borden; Bowie; Callahan; Camp; Cass; Clay; Cochran; Collin; Cooke; Cottle; Crosby; Dallas; Dawson; Delta; Denton; Dickens; Eastland; Ellis; Erath; Fannin; Fisher; Floyd; Foard; Franklin; Gaines; Garza; Grayson; Gregg; Hale; Hardeman; Harrison; Haskell; Henderson; Hill; Hockley; Hood; Hopkins; Howard; Hunt; Jack; Johnson; Jones; Kaufman; Kent; King; Knox; Lamar; Lamb; Lubbock; Lynn; Marion; Martin; Mitchell; Montague; Morris; Motley; Navarro; Nolan; Palo Pinto; Panola; Parker; Rains; Red River; Rockwall; Rusk; Scurry; Shackelford; Smith; Somervell; Stephens; Stonewall; Tarrant; Taylor; Terry; Throckmorton; Titus; Upshur; Van Zandt; Wichita; Wilbarger; Wise; Wood; Yoakum; Young.
+| Extent: United States (USA) - Texas - counties of: Andrews; Archer; Bailey; Baylor; Borden; Bowie; Callahan; Camp; Cass; Clay; Cochran; Collin; Cooke; Cottle; Crosby; Dallas; Dawson; Delta; Denton; Dickens; Eastland; Ellis; Erath; Fannin; Fisher; Floyd; Foard; Franklin; Gaines; Garza; Grayson; Gregg; Hale; Hardeman; Harrison; Haskell; Henderson; Hill; Hockley; Hood; Hopkins; Howard; Hunt; Jack; Johnson; Jones; Kaufman; Kent; King; Knox; Lamar; Lamb; Lubbock; Lynn; Marion; Martin; Mitchell; Montague; Morris; Motley; Navarro; Nolan; Palo Pinto; Panola; Parker; Rains; Red River; Rockwall; Rusk; Scurry; Shackelford; Smith; Somervell; Stephens; Stonewall; Tarrant; Taylor; Terry; Throckmorton; Titus; Upshur; Van Zandt; Wichita; Wilbarger; Wise; Wood; Yoakum; Young.
 
 .. code-block:: php
 
@@ -3546,8 +3278,7 @@ NAD83 / Texas North Central (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Texas South (ftUS) + NAVD88 height (ftUS)
 -------------------------------------------------
-
-| Used: United States (USA) - Texas - counties of Brooks; Cameron; Duval; Hidalgo; Jim Hogg; Jim Wells; Kenedy; Kleberg; Nueces; San Patricio; Starr; Webb; Willacy; Zapata.
+| Extent: United States (USA) - Texas - counties of Brooks; Cameron; Duval; Hidalgo; Jim Hogg; Jim Wells; Kenedy; Kleberg; Nueces; San Patricio; Starr; Webb; Willacy; Zapata.
 
 .. code-block:: php
 
@@ -3559,8 +3290,7 @@ NAD83 / Texas South (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Texas South Central (ftUS) + NAVD88 height (ftUS)
 ---------------------------------------------------------
-
-| Used: United States (USA) - Texas - counties of Aransas; Atascosa; Austin; Bandera; Bee; Bexar; Brazoria; Brewster; Caldwell; Calhoun; Chambers; Colorado; Comal; De Witt; Dimmit; Edwards; Fayette; Fort Bend; Frio; Galveston; Goliad; Gonzales; Guadalupe; Harris; Hays; Jackson; Jefferson; Karnes; Kendall; Kerr; Kinney; La Salle; Lavaca; Live Oak; Matagorda; Maverick; McMullen; Medina; Presidio; Real; Refugio; Terrell; Uvalde; Val Verde; Victoria; Waller; Wharton; Wilson; Zavala.
+| Extent: United States (USA) - Texas - counties of Aransas; Atascosa; Austin; Bandera; Bee; Bexar; Brazoria; Brewster; Caldwell; Calhoun; Chambers; Colorado; Comal; De Witt; Dimmit; Edwards; Fayette; Fort Bend; Frio; Galveston; Goliad; Gonzales; Guadalupe; Harris; Hays; Jackson; Jefferson; Karnes; Kendall; Kerr; Kinney; La Salle; Lavaca; Live Oak; Matagorda; Maverick; McMullen; Medina; Presidio; Real; Refugio; Terrell; Uvalde; Val Verde; Victoria; Waller; Wharton; Wilson; Zavala.
 
 .. code-block:: php
 
@@ -3572,8 +3302,7 @@ NAD83 / Texas South Central (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Utah Central (ftUS) + NAVD88 height (ftUS)
 --------------------------------------------------
-
-| Used: United States (USA) - Utah - counties of Carbon; Duchesne; Emery; Grand; Juab; Millard; Salt Lake; Sanpete; Sevier; Tooele; Uintah; Utah; Wasatch.
+| Extent: United States (USA) - Utah - counties of Carbon; Duchesne; Emery; Grand; Juab; Millard; Salt Lake; Sanpete; Sevier; Tooele; Uintah; Utah; Wasatch.
 
 .. code-block:: php
 
@@ -3585,8 +3314,7 @@ NAD83 / Utah Central (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Utah North (ftUS) + NAVD88 height (ftUS)
 ------------------------------------------------
-
-| Used: United States (USA) - Utah - counties of Box Elder; Cache; Daggett; Davis; Morgan; Rich; Summit; Weber.
+| Extent: United States (USA) - Utah - counties of Box Elder; Cache; Daggett; Davis; Morgan; Rich; Summit; Weber.
 
 .. code-block:: php
 
@@ -3598,8 +3326,7 @@ NAD83 / Utah North (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Utah South (ftUS) + NAVD88 height (ftUS)
 ------------------------------------------------
-
-| Used: United States (USA) - Utah - counties of Beaver; Garfield; Iron; Kane; Piute; San Juan; Washington; Wayne.
+| Extent: United States (USA) - Utah - counties of Beaver; Garfield; Iron; Kane; Piute; San Juan; Washington; Wayne.
 
 .. code-block:: php
 
@@ -3611,8 +3338,7 @@ NAD83 / Utah South (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Vermont (ftUS) + NAVD88 height (ftUS)
 ---------------------------------------------
-
-| Used: United States (USA) - Vermont - counties of Addison; Bennington; Caledonia; Chittenden; Essex; Franklin; Grand Isle; Lamoille; Orange; Orleans; Rutland; Washington; Windham; Windsor.
+| Extent: United States (USA) - Vermont - counties of Addison; Bennington; Caledonia; Chittenden; Essex; Franklin; Grand Isle; Lamoille; Orange; Orleans; Rutland; Washington; Windham; Windsor.
 
 .. code-block:: php
 
@@ -3624,8 +3350,7 @@ NAD83 / Vermont (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Virginia North (ftUS) + NAVD88 height (ftUS)
 ----------------------------------------------------
-
-| Used: United States (USA) - Virginia - counties of Arlington; Augusta; Bath; Caroline; Clarke; Culpeper; Fairfax; Fauquier; Frederick; Greene; Highland; King George; Loudoun; Madison; Orange; Page; Prince William; Rappahannock; Rockingham; Shenandoah; Spotsylvania; Stafford; Warren; Westmoreland.
+| Extent: United States (USA) - Virginia - counties of Arlington; Augusta; Bath; Caroline; Clarke; Culpeper; Fairfax; Fauquier; Frederick; Greene; Highland; King George; Loudoun; Madison; Orange; Page; Prince William; Rappahannock; Rockingham; Shenandoah; Spotsylvania; Stafford; Warren; Westmoreland.
 
 .. code-block:: php
 
@@ -3637,8 +3362,7 @@ NAD83 / Virginia North (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Virginia South (ftUS) + NAVD88 height (ftUS)
 ----------------------------------------------------
-
-| Used: United States (USA) - Virginia - counties of Accomack; Albemarle; Alleghany; Amelia; Amherst; Appomattox; Bedford; Bland; Botetourt; Bristol; Brunswick; Buchanan; Buckingham; Campbell; Carroll; Charles City; Charlotte; Chesapeake; Chesterfield; Colonial Heights; Craig; Cumberland; Dickenson; Dinwiddie; Essex; Floyd; Fluvanna; Franklin; Giles; Gloucester; Goochland; Grayson; Greensville; Halifax; Hampton; Hanover; Henrico; Henry; Isle of Wight; James City; King and Queen; King William; Lancaster; Lee; Louisa; Lunenburg; Lynchburg; Mathews; Mecklenburg; Middlesex; Montgomery; Nelson; New Kent; Newport News; Norfolk; Northampton; Northumberland; Norton; Nottoway; Patrick; Petersburg; Pittsylvania; Portsmouth; Powhatan; Prince Edward; Prince George; Pulaski; Richmond; Roanoke; Rockbridge; Russell; Scott; Smyth; Southampton; Suffolk; Surry; Sussex; Tazewell; Washington; Wise; Wythe; York.
+| Extent: United States (USA) - Virginia - counties of Accomack; Albemarle; Alleghany; Amelia; Amherst; Appomattox; Bedford; Bland; Botetourt; Bristol; Brunswick; Buchanan; Buckingham; Campbell; Carroll; Charles City; Charlotte; Chesapeake; Chesterfield; Colonial Heights; Craig; Cumberland; Dickenson; Dinwiddie; Essex; Floyd; Fluvanna; Franklin; Giles; Gloucester; Goochland; Grayson; Greensville; Halifax; Hampton; Hanover; Henrico; Henry; Isle of Wight; James City; King and Queen; King William; Lancaster; Lee; Louisa; Lunenburg; Lynchburg; Mathews; Mecklenburg; Middlesex; Montgomery; Nelson; New Kent; Newport News; Norfolk; Northampton; Northumberland; Norton; Nottoway; Patrick; Petersburg; Pittsylvania; Portsmouth; Powhatan; Prince Edward; Prince George; Pulaski; Richmond; Roanoke; Rockbridge; Russell; Scott; Smyth; Southampton; Suffolk; Surry; Sussex; Tazewell; Washington; Wise; Wythe; York.
 
 .. code-block:: php
 
@@ -3650,8 +3374,7 @@ NAD83 / Virginia South (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Washington North (ftUS) + NAVD88 height (ftUS)
 ------------------------------------------------------
-
-| Used: United States (USA) - Washington - counties of Chelan; Clallam; Douglas; Ferry; Grant north of approximately 47°30'N; Island; Jefferson; King; Kitsap; Lincoln; Okanogan; Pend Oreille; San Juan; Skagit; Snohomish; Spokane; Stevens; Whatcom.
+| Extent: United States (USA) - Washington - counties of Chelan; Clallam; Douglas; Ferry; Grant north of approximately 47°30'N; Island; Jefferson; King; Kitsap; Lincoln; Okanogan; Pend Oreille; San Juan; Skagit; Snohomish; Spokane; Stevens; Whatcom.
 
 .. code-block:: php
 
@@ -3663,8 +3386,7 @@ NAD83 / Washington North (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Washington South (ftUS) + NAVD88 height (ftUS)
 ------------------------------------------------------
-
-| Used: United States (USA) - Washington - counties of Adams; Asotin; Benton; Clark; Columbia; Cowlitz; Franklin; Garfield; Grant south of approximately 47°30'N; Grays Harbor; Kittitas; Klickitat; Lewis; Mason; Pacific; Pierce; Skamania; Thurston; Wahkiakum; Walla Walla; Whitman; Yakima.
+| Extent: United States (USA) - Washington - counties of Adams; Asotin; Benton; Clark; Columbia; Cowlitz; Franklin; Garfield; Grant south of approximately 47°30'N; Grays Harbor; Kittitas; Klickitat; Lewis; Mason; Pacific; Pierce; Skamania; Thurston; Wahkiakum; Walla Walla; Whitman; Yakima.
 
 .. code-block:: php
 
@@ -3676,8 +3398,7 @@ NAD83 / Washington South (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / West Virginia North (ftUS) + NAVD88 height (ftUS)
 ---------------------------------------------------------
-
-| Used: United States (USA) - West Virginia - counties of Barbour; Berkeley; Brooke; Doddridge; Grant; Hampshire; Hancock; Hardy; Harrison; Jefferson; Marion; Marshall; Mineral; Monongalia; Morgan; Ohio; Pleasants; Preston; Ritchie; Taylor; Tucker; Tyler; Wetzel; Wirt; Wood.
+| Extent: United States (USA) - West Virginia - counties of Barbour; Berkeley; Brooke; Doddridge; Grant; Hampshire; Hancock; Hardy; Harrison; Jefferson; Marion; Marshall; Mineral; Monongalia; Morgan; Ohio; Pleasants; Preston; Ritchie; Taylor; Tucker; Tyler; Wetzel; Wirt; Wood.
 
 .. code-block:: php
 
@@ -3689,8 +3410,7 @@ NAD83 / West Virginia North (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / West Virginia South (ftUS) + NAVD88 height (ftUS)
 ---------------------------------------------------------
-
-| Used: United States (USA) - West Virginia - counties of Boone; Braxton; Cabell; Calhoun; Clay; Fayette; Gilmer; Greenbrier; Jackson; Kanawha; Lewis; Lincoln; Logan; Mason; McDowell; Mercer; Mingo; Monroe; Nicholas; Pendleton; Pocahontas; Putnam; Raleigh; Randolph; Roane; Summers; Upshur; Wayne; Webster; Wyoming.
+| Extent: United States (USA) - West Virginia - counties of Boone; Braxton; Cabell; Calhoun; Clay; Fayette; Gilmer; Greenbrier; Jackson; Kanawha; Lewis; Lincoln; Logan; Mason; McDowell; Mercer; Mingo; Monroe; Nicholas; Pendleton; Pocahontas; Putnam; Raleigh; Randolph; Roane; Summers; Upshur; Wayne; Webster; Wyoming.
 
 .. code-block:: php
 
@@ -3702,8 +3422,7 @@ NAD83 / West Virginia South (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Wisconsin Central (ftUS) + NAVD88 height (ftUS)
 -------------------------------------------------------
-
-| Used: United States (USA) - Wisconsin - counties of Barron; Brown; Buffalo; Chippewa; Clark; Door; Dunn; Eau Claire; Jackson; Kewaunee; Langlade; Lincoln; Marathon; Marinette; Menominee; Oconto; Outagamie; Pepin; Pierce; Polk; Portage; Rusk; Shawano; St Croix; Taylor; Trempealeau; Waupaca; Wood.
+| Extent: United States (USA) - Wisconsin - counties of Barron; Brown; Buffalo; Chippewa; Clark; Door; Dunn; Eau Claire; Jackson; Kewaunee; Langlade; Lincoln; Marathon; Marinette; Menominee; Oconto; Outagamie; Pepin; Pierce; Polk; Portage; Rusk; Shawano; St Croix; Taylor; Trempealeau; Waupaca; Wood.
 
 .. code-block:: php
 
@@ -3715,8 +3434,7 @@ NAD83 / Wisconsin Central (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Wisconsin North (ftUS) + NAVD88 height (ftUS)
 -----------------------------------------------------
-
-| Used: United States (USA) - Wisconsin - counties of Ashland; Bayfield; Burnett; Douglas; Florence; Forest; Iron; Oneida; Price; Sawyer; Vilas; Washburn.
+| Extent: United States (USA) - Wisconsin - counties of Ashland; Bayfield; Burnett; Douglas; Florence; Forest; Iron; Oneida; Price; Sawyer; Vilas; Washburn.
 
 .. code-block:: php
 
@@ -3728,8 +3446,7 @@ NAD83 / Wisconsin North (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Wisconsin South (ftUS) + NAVD88 height (ftUS)
 -----------------------------------------------------
-
-| Used: United States (USA) - Wisconsin - counties of Adams; Calumet; Columbia; Crawford; Dane; Dodge; Fond Du Lac; Grant; Green; Green Lake; Iowa; Jefferson; Juneau; Kenosha; La Crosse; Lafayette; Manitowoc; Marquette; Milwaukee; Monroe; Ozaukee; Racine; Richland; Rock; Sauk; Sheboygan; Vernon; Walworth; Washington; Waukesha; Waushara; Winnebago.
+| Extent: United States (USA) - Wisconsin - counties of Adams; Calumet; Columbia; Crawford; Dane; Dodge; Fond Du Lac; Grant; Green; Green Lake; Iowa; Jefferson; Juneau; Kenosha; La Crosse; Lafayette; Manitowoc; Marquette; Milwaukee; Monroe; Ozaukee; Racine; Richland; Rock; Sauk; Sheboygan; Vernon; Walworth; Washington; Waukesha; Waushara; Winnebago.
 
 .. code-block:: php
 
@@ -3741,8 +3458,7 @@ NAD83 / Wisconsin South (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Wyoming East (ftUS) + NAVD88 height (ftUS)
 --------------------------------------------------
-
-| Used: United States (USA) - Wyoming - counties of Albany; Campbell; Converse; Crook; Goshen; Laramie; Niobrara; Platte; Weston.
+| Extent: United States (USA) - Wyoming - counties of Albany; Campbell; Converse; Crook; Goshen; Laramie; Niobrara; Platte; Weston.
 
 .. code-block:: php
 
@@ -3754,8 +3470,7 @@ NAD83 / Wyoming East (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Wyoming East Central (ftUS) + NAVD88 height (ftUS)
 ----------------------------------------------------------
-
-| Used: United States (USA) - Wyoming - counties of Big Horn; Carbon; Johnson; Natrona; Sheridan; Washakie.
+| Extent: United States (USA) - Wyoming - counties of Big Horn; Carbon; Johnson; Natrona; Sheridan; Washakie.
 
 .. code-block:: php
 
@@ -3767,8 +3482,7 @@ NAD83 / Wyoming East Central (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Wyoming West (ftUS) + NAVD88 height (ftUS)
 --------------------------------------------------
-
-| Used: United States (USA) - Wyoming - counties of Lincoln; Sublette; Teton; Uinta.
+| Extent: United States (USA) - Wyoming - counties of Lincoln; Sublette; Teton; Uinta.
 
 .. code-block:: php
 
@@ -3780,8 +3494,7 @@ NAD83 / Wyoming West (ftUS) + NAVD88 height (ftUS)
 
 NAD83 / Wyoming West Central (ftUS) + NAVD88 height (ftUS)
 ----------------------------------------------------------
-
-| Used: United States (USA) - Wyoming - counties of Fremont; Hot Springs; Park; Sweetwater.
+| Extent: United States (USA) - Wyoming - counties of Fremont; Hot Springs; Park; Sweetwater.
 
 .. code-block:: php
 
@@ -3793,8 +3506,7 @@ NAD83 / Wyoming West Central (ftUS) + NAVD88 height (ftUS)
 
 NAD83(2011) + NAVD88 height
 ---------------------------
-
-| Used: United States (USA) - CONUS and Alaska - onshore - Alabama; Alaska mainland; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.
+| Extent: United States (USA) - CONUS and Alaska - onshore - Alabama; Alaska mainland; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.
 
 .. code-block:: php
 
@@ -3807,8 +3519,7 @@ Replaces NAD83(NSRS2007) + NAVD88 height
 
 NAD83(2011) + PRVD02 height
 ---------------------------
-
-| Used: Puerto Rico - onshore.
+| Extent: Puerto Rico - onshore.
 
 .. code-block:: php
 
@@ -3820,8 +3531,7 @@ NAD83(2011) + PRVD02 height
 
 NAD83(2011) + VIVD09 height
 ---------------------------
-
-| Used: US Virgin Islands - onshore - St Croix, St John, and St Thomas.
+| Extent: US Virgin Islands - onshore - St Croix, St John, and St Thomas.
 
 .. code-block:: php
 
@@ -3833,8 +3543,7 @@ NAD83(2011) + VIVD09 height
 
 NAD83(CSRS) + CGVD2013(CGG2013) height
 --------------------------------------
-
-| Used: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.
+| Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.
 
 .. code-block:: php
 
@@ -3846,8 +3555,7 @@ NAD83(CSRS) + CGVD2013(CGG2013) height
 
 NAD83(CSRS) / UTM zone 10N + CGVD2013 height
 --------------------------------------------
-
-| Used: Canada between 126°W and 120°W, onshore and offshore south of 84°N - British Columbia, Northwest Territories, Yukon.
+| Extent: Canada between 126°W and 120°W, onshore and offshore south of 84°N - British Columbia, Northwest Territories, Yukon.
 
 .. code-block:: php
 
@@ -3859,8 +3567,7 @@ NAD83(CSRS) / UTM zone 10N + CGVD2013 height
 
 NAD83(CSRS) / UTM zone 11N + CGVD2013 height
 --------------------------------------------
-
-| Used: Canada between 120°W and 114°W onshore and offshore - Alberta, British Columbia, Northwest Territories, Nunavut.
+| Extent: Canada between 120°W and 114°W onshore and offshore - Alberta, British Columbia, Northwest Territories, Nunavut.
 
 .. code-block:: php
 
@@ -3872,8 +3579,7 @@ NAD83(CSRS) / UTM zone 11N + CGVD2013 height
 
 NAD83(CSRS) / UTM zone 12N + CGVD2013 height
 --------------------------------------------
-
-| Used: Canada between 114°W and 108°W onshore and offshore - Alberta, Northwest Territories, Nunavut, Saskatchewan.
+| Extent: Canada between 114°W and 108°W onshore and offshore - Alberta, Northwest Territories, Nunavut, Saskatchewan.
 
 .. code-block:: php
 
@@ -3885,8 +3591,7 @@ NAD83(CSRS) / UTM zone 12N + CGVD2013 height
 
 NAD83(CSRS) / UTM zone 13N + CGVD2013 height
 --------------------------------------------
-
-| Used: Canada between 108°W and 102°W onshore and offshore - Northwest Territories, Nunavut, Saskatchewan.
+| Extent: Canada between 108°W and 102°W onshore and offshore - Northwest Territories, Nunavut, Saskatchewan.
 
 .. code-block:: php
 
@@ -3898,8 +3603,7 @@ NAD83(CSRS) / UTM zone 13N + CGVD2013 height
 
 NAD83(CSRS) / UTM zone 14N + CGVD2013 height
 --------------------------------------------
-
-| Used: Canada between 102°W and 96°W, onshore and offshore south of 84°N - Manitoba, Nunavut, Saskatchewan.
+| Extent: Canada between 102°W and 96°W, onshore and offshore south of 84°N - Manitoba, Nunavut, Saskatchewan.
 
 .. code-block:: php
 
@@ -3911,8 +3615,7 @@ NAD83(CSRS) / UTM zone 14N + CGVD2013 height
 
 NAD83(CSRS) / UTM zone 15N + CGVD2013 height
 --------------------------------------------
-
-| Used: Canada between 96°W and 90°W, onshore and offshore south of 84°N - Manitoba, Nunavut, Ontario.
+| Extent: Canada between 96°W and 90°W, onshore and offshore south of 84°N - Manitoba, Nunavut, Ontario.
 
 .. code-block:: php
 
@@ -3924,8 +3627,7 @@ NAD83(CSRS) / UTM zone 15N + CGVD2013 height
 
 NAD83(CSRS) / UTM zone 15N + CGVD2013a(2010) height
 ---------------------------------------------------
-
-| Used: Canada between 96°W and 90°W, onshore and offshore south of 84°N - Manitoba, Nunavut, Ontario.
+| Extent: Canada between 96°W and 90°W, onshore and offshore south of 84°N - Manitoba, Nunavut, Ontario.
 
 .. code-block:: php
 
@@ -3938,8 +3640,7 @@ Replaces NAD83(CSRS) / UTM zone 15N + CGVD2013 height (CCRS code 6658).
 
 NAD83(CSRS) / UTM zone 16N + CGVD2013 height
 --------------------------------------------
-
-| Used: Canada between 90°W and 84°W, onshore and offshore south of 84°N - Manitoba, Nunavut, Ontario.
+| Extent: Canada between 90°W and 84°W, onshore and offshore south of 84°N - Manitoba, Nunavut, Ontario.
 
 .. code-block:: php
 
@@ -3951,8 +3652,7 @@ NAD83(CSRS) / UTM zone 16N + CGVD2013 height
 
 NAD83(CSRS) / UTM zone 17N + CGVD2013 height
 --------------------------------------------
-
-| Used: Canada between 84°W and 78°W, onshore and offshore south of 84°N - Nunavut, Ontario and Quebec.
+| Extent: Canada between 84°W and 78°W, onshore and offshore south of 84°N - Nunavut, Ontario and Quebec.
 
 .. code-block:: php
 
@@ -3964,8 +3664,7 @@ NAD83(CSRS) / UTM zone 17N + CGVD2013 height
 
 NAD83(CSRS) / UTM zone 18N + CGVD2013 height
 --------------------------------------------
-
-| Used: Canada between 78°W and 72°W, onshore and offshore south of 84°N - Nunavut, Ontario and Quebec.
+| Extent: Canada between 78°W and 72°W, onshore and offshore south of 84°N - Nunavut, Ontario and Quebec.
 
 .. code-block:: php
 
@@ -3977,8 +3676,7 @@ NAD83(CSRS) / UTM zone 18N + CGVD2013 height
 
 NAD83(CSRS) / UTM zone 19N + CGVD2013 height
 --------------------------------------------
-
-| Used: Canada between 72°W and 66°W onshore and offshore - New Brunswick, Labrador, Nova Scotia, Nunavut, Quebec.
+| Extent: Canada between 72°W and 66°W onshore and offshore - New Brunswick, Labrador, Nova Scotia, Nunavut, Quebec.
 
 .. code-block:: php
 
@@ -3990,8 +3688,7 @@ NAD83(CSRS) / UTM zone 19N + CGVD2013 height
 
 NAD83(CSRS) / UTM zone 20N + CGVD2013 height
 --------------------------------------------
-
-| Used: Canada between 66°W and 60°W onshore and offshore - New Brunswick, Labrador, Nova Scotia, Nunavut, Prince Edward Island, Quebec.
+| Extent: Canada between 66°W and 60°W onshore and offshore - New Brunswick, Labrador, Nova Scotia, Nunavut, Prince Edward Island, Quebec.
 
 .. code-block:: php
 
@@ -4003,8 +3700,7 @@ NAD83(CSRS) / UTM zone 20N + CGVD2013 height
 
 NAD83(CSRS) / UTM zone 21N + CGVD2013 height
 --------------------------------------------
-
-| Used: Canada between 60°W and 54°W - Newfoundland and Labrador; Nunavut; Quebec.
+| Extent: Canada between 60°W and 54°W - Newfoundland and Labrador; Nunavut; Quebec.
 
 .. code-block:: php
 
@@ -4016,8 +3712,7 @@ NAD83(CSRS) / UTM zone 21N + CGVD2013 height
 
 NAD83(CSRS) / UTM zone 22N + CGVD2013 height
 --------------------------------------------
-
-| Used: Canada between 54°W and 48°W onshore and offshore - Newfoundland and Labrador.
+| Extent: Canada between 54°W and 48°W onshore and offshore - Newfoundland and Labrador.
 
 .. code-block:: php
 
@@ -4029,8 +3724,7 @@ NAD83(CSRS) / UTM zone 22N + CGVD2013 height
 
 NAD83(CSRS) / UTM zone 23N + CGVD2013 height
 --------------------------------------------
-
-| Used: Canada offshore Atlantic - 48°W to 42°W.
+| Extent: Canada offshore Atlantic - 48°W to 42°W.
 
 .. code-block:: php
 
@@ -4042,8 +3736,7 @@ NAD83(CSRS) / UTM zone 23N + CGVD2013 height
 
 NAD83(CSRS) / UTM zone 24N + CGVD2013 height
 --------------------------------------------
-
-| Used: Canada offshore Atlantic - east of 42°W.
+| Extent: Canada offshore Atlantic - east of 42°W.
 
 .. code-block:: php
 
@@ -4055,8 +3748,7 @@ NAD83(CSRS) / UTM zone 24N + CGVD2013 height
 
 NAD83(CSRS) / UTM zone 7N + CGVD2013 height
 -------------------------------------------
-
-| Used: Canada west of 138°W, onshore and offshore south of 84°N - British Columbia, Yukon.
+| Extent: Canada west of 138°W, onshore and offshore south of 84°N - British Columbia, Yukon.
 
 .. code-block:: php
 
@@ -4068,8 +3760,7 @@ NAD83(CSRS) / UTM zone 7N + CGVD2013 height
 
 NAD83(CSRS) / UTM zone 8N + CGVD2013 height
 -------------------------------------------
-
-| Used: Canada between 138°W and 132°W, onshore and offshore south of 84°N - British Columbia, Northwest Territories, Yukon.
+| Extent: Canada between 138°W and 132°W, onshore and offshore south of 84°N - British Columbia, Northwest Territories, Yukon.
 
 .. code-block:: php
 
@@ -4081,8 +3772,7 @@ NAD83(CSRS) / UTM zone 8N + CGVD2013 height
 
 NAD83(CSRS) / UTM zone 9N + CGVD2013 height
 -------------------------------------------
-
-| Used: Canada - between 132°W and 126°W, onshore and offshore south of 84°N - British Columbia, Northwest Territories, Yukon.
+| Extent: Canada - between 132°W and 126°W, onshore and offshore south of 84°N - British Columbia, Northwest Territories, Yukon.
 
 .. code-block:: php
 
@@ -4094,8 +3784,7 @@ NAD83(CSRS) / UTM zone 9N + CGVD2013 height
 
 NAD83(CSRS)v3 + CGVD2013a(1997) height
 --------------------------------------
-
-| Used: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.
+| Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.
 
 .. code-block:: php
 
@@ -4107,8 +3796,7 @@ NAD83(CSRS)v3 + CGVD2013a(1997) height
 
 NAD83(CSRS)v4 + CGVD2013a(2002) height
 --------------------------------------
-
-| Used: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.
+| Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.
 
 .. code-block:: php
 
@@ -4120,8 +3808,7 @@ NAD83(CSRS)v4 + CGVD2013a(2002) height
 
 NAD83(CSRS)v6 + CGVD2013a(2010) height
 --------------------------------------
-
-| Used: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.
+| Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.
 
 .. code-block:: php
 
@@ -4133,8 +3820,7 @@ NAD83(CSRS)v6 + CGVD2013a(2010) height
 
 NAD83(HARN) + NAVD88 height
 ---------------------------
-
-| Used: United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.
+| Extent: United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.
 
 .. code-block:: php
 
@@ -4146,8 +3832,7 @@ NAD83(HARN) + NAVD88 height
 
 NAD83(MA11) + GUVD04 height
 ---------------------------
-
-| Used: Guam - onshore.
+| Extent: Guam - onshore.
 
 .. code-block:: php
 
@@ -4159,8 +3844,7 @@ NAD83(MA11) + GUVD04 height
 
 NAD83(MA11) + NMVD03 height
 ---------------------------
-
-| Used: Northern Mariana Islands - onshore.
+| Extent: Northern Mariana Islands - onshore.
 
 .. code-block:: php
 
@@ -4172,8 +3856,7 @@ NAD83(MA11) + NMVD03 height
 
 NAD83(NSRS2007) + NAVD88 height
 -------------------------------
-
-| Used: United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.
+| Extent: United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.
 
 .. code-block:: php
 
@@ -4185,8 +3868,7 @@ NAD83(NSRS2007) + NAVD88 height
 
 NAD83(PA11) + ASVD02 height
 ---------------------------
-
-| Used: American Samoa - Tutuila island.
+| Extent: American Samoa - Tutuila island.
 
 .. code-block:: php
 
@@ -4198,8 +3880,7 @@ NAD83(PA11) + ASVD02 height
 
 NTF (Paris) + NGF IGN69 height
 ------------------------------
-
-| Used: France - mainland onshore.
+| Extent: France - mainland onshore.
 
 .. code-block:: php
 
@@ -4211,8 +3892,7 @@ NTF (Paris) + NGF IGN69 height
 
 NTF (Paris) / Lambert zone I + NGF-IGN69 height
 -----------------------------------------------
-
-| Used: France mainland onshore north of 53.5 grads North (48°09'N).
+| Extent: France mainland onshore north of 53.5 grads North (48°09'N).
 
 .. code-block:: php
 
@@ -4224,8 +3904,7 @@ NTF (Paris) / Lambert zone I + NGF-IGN69 height
 
 NTF (Paris) / Lambert zone II + NGF Lallemand height
 ----------------------------------------------------
-
-| Used: France - mainland onshore.
+| Extent: France - mainland onshore.
 
 .. code-block:: php
 
@@ -4237,8 +3916,7 @@ NTF (Paris) / Lambert zone II + NGF Lallemand height
 
 NTF (Paris) / Lambert zone II + NGF-IGN69 height
 ------------------------------------------------
-
-| Used: France - mainland onshore.
+| Extent: France - mainland onshore.
 
 .. code-block:: php
 
@@ -4250,8 +3928,7 @@ NTF (Paris) / Lambert zone II + NGF-IGN69 height
 
 NTF (Paris) / Lambert zone III + NGF-IGN69 height
 -------------------------------------------------
-
-| Used: France - mainland onshore south of 50.5 grads North (45°27'N).
+| Extent: France - mainland onshore south of 50.5 grads North (45°27'N).
 
 .. code-block:: php
 
@@ -4263,8 +3940,7 @@ NTF (Paris) / Lambert zone III + NGF-IGN69 height
 
 NTF (Paris) / Lambert zone IV + NGF-IGN78 height
 ------------------------------------------------
-
-| Used: France - Corsica onshore.
+| Extent: France - Corsica onshore.
 
 .. code-block:: php
 
@@ -4276,8 +3952,7 @@ NTF (Paris) / Lambert zone IV + NGF-IGN78 height
 
 NZGD2000 + NZVD2009 height
 --------------------------
-
-| Used: New Zealand - onshore and offshore. Includes Antipodes Islands, Auckland Islands, Bounty Islands, Chatham Islands, Cambell Island, Kermadec Islands, Raoul Island and Snares Islands.
+| Extent: New Zealand - onshore and offshore. Includes Antipodes Islands, Auckland Islands, Bounty Islands, Chatham Islands, Cambell Island, Kermadec Islands, Raoul Island and Snares Islands.
 
 .. code-block:: php
 
@@ -4289,8 +3964,7 @@ NZGD2000 + NZVD2009 height
 
 NZGD2000 + NZVD2016 height
 --------------------------
-
-| Used: New Zealand - onshore and offshore. Includes Antipodes Islands, Auckland Islands, Bounty Islands, Chatham Islands, Cambell Island, Kermadec Islands, Raoul Island and Snares Islands.
+| Extent: New Zealand - onshore and offshore. Includes Antipodes Islands, Auckland Islands, Bounty Islands, Chatham Islands, Cambell Island, Kermadec Islands, Raoul Island and Snares Islands.
 
 .. code-block:: php
 
@@ -4302,8 +3976,7 @@ NZGD2000 + NZVD2016 height
 
 OSGB36 / British National Grid + BI height
 ------------------------------------------
-
-| Used: United Kingdom (UK) - offshore to boundary of UKCS within 49°45'N to 61°N and 9°W to 2°E; onshore Great Britain (England, Wales and Scotland). Isle of Man onshore.
+| Extent: United Kingdom (UK) - offshore to boundary of UKCS within 49°45'N to 61°N and 9°W to 2°E; onshore Great Britain (England, Wales and Scotland). Isle of Man onshore.
 
 .. code-block:: php
 
@@ -4316,8 +3989,7 @@ BI height is based on an ensemble including ODN, ODN (Offshore) and island verti
 
 OSGB36 / British National Grid + ODN height
 -------------------------------------------
-
-| Used: United Kingdom (UK) - Great Britain onshore - England and Wales - mainland; Scotland - mainland and Inner Hebrides.
+| Extent: United Kingdom (UK) - Great Britain onshore - England and Wales - mainland; Scotland - mainland and Inner Hebrides.
 
 .. code-block:: php
 
@@ -4329,8 +4001,7 @@ OSGB36 / British National Grid + ODN height
 
 POSGAR 2007 + SRVN16 height
 ---------------------------
-
-| Used: Argentina - onshore.
+| Extent: Argentina - onshore.
 
 .. code-block:: php
 
@@ -4342,8 +4013,7 @@ POSGAR 2007 + SRVN16 height
 
 PSHD93
 ------
-
-| Used: Oman - onshore. Includes Musandam and the Kuria Muria (Al Hallaniyah) islands.
+| Extent: Oman - onshore. Includes Musandam and the Kuria Muria (Al Hallaniyah) islands.
 
 .. code-block:: php
 
@@ -4355,8 +4025,7 @@ PSHD93
 
 REGCAN95 + El Hierro height
 ---------------------------
-
-| Used: Spain - Canary Islands - El Hierro onshore.
+| Extent: Spain - Canary Islands - El Hierro onshore.
 
 .. code-block:: php
 
@@ -4368,8 +4037,7 @@ REGCAN95 + El Hierro height
 
 REGCAN95 + Fuerteventura height
 -------------------------------
-
-| Used: Spain - Canary Islands - Fuerteventura onshore.
+| Extent: Spain - Canary Islands - Fuerteventura onshore.
 
 .. code-block:: php
 
@@ -4381,8 +4049,7 @@ REGCAN95 + Fuerteventura height
 
 REGCAN95 + Gran Canaria height
 ------------------------------
-
-| Used: Spain - Canary Islands - Gran Canaria onshore.
+| Extent: Spain - Canary Islands - Gran Canaria onshore.
 
 .. code-block:: php
 
@@ -4394,8 +4061,7 @@ REGCAN95 + Gran Canaria height
 
 REGCAN95 + La Gomera height
 ---------------------------
-
-| Used: Spain - Canary Islands - La Gomera onshore.
+| Extent: Spain - Canary Islands - La Gomera onshore.
 
 .. code-block:: php
 
@@ -4407,8 +4073,7 @@ REGCAN95 + La Gomera height
 
 REGCAN95 + La Palma height
 --------------------------
-
-| Used: Spain - Canary Islands - La Palma onshore.
+| Extent: Spain - Canary Islands - La Palma onshore.
 
 .. code-block:: php
 
@@ -4420,8 +4085,7 @@ REGCAN95 + La Palma height
 
 REGCAN95 + Lanzarote height
 ---------------------------
-
-| Used: Spain - Canary Islands - Lanzarote onshore.
+| Extent: Spain - Canary Islands - Lanzarote onshore.
 
 .. code-block:: php
 
@@ -4433,8 +4097,7 @@ REGCAN95 + Lanzarote height
 
 REGCAN95 + Tenerife height
 --------------------------
-
-| Used: Spain - Canary Islands - Tenerife onshore.
+| Extent: Spain - Canary Islands - Tenerife onshore.
 
 .. code-block:: php
 
@@ -4446,8 +4109,7 @@ REGCAN95 + Tenerife height
 
 RGAF09 + Guadeloupe 1988 height
 -------------------------------
-
-| Used: Guadeloupe - onshore - Basse-Terre and Grande-Terre.
+| Extent: Guadeloupe - onshore - Basse-Terre and Grande-Terre.
 
 .. code-block:: php
 
@@ -4459,8 +4121,7 @@ RGAF09 + Guadeloupe 1988 height
 
 RGAF09 + IGN 1988 LS height
 ---------------------------
-
-| Used: Guadeloupe - onshore - Les Saintes.
+| Extent: Guadeloupe - onshore - Les Saintes.
 
 .. code-block:: php
 
@@ -4472,8 +4133,7 @@ RGAF09 + IGN 1988 LS height
 
 RGAF09 + IGN 1988 MG height
 ---------------------------
-
-| Used: Guadeloupe - onshore - Marie-Galante.
+| Extent: Guadeloupe - onshore - Marie-Galante.
 
 .. code-block:: php
 
@@ -4485,8 +4145,7 @@ RGAF09 + IGN 1988 MG height
 
 RGAF09 + IGN 1988 SB height
 ---------------------------
-
-| Used: Guadeloupe - onshore - St Barthelemy island.
+| Extent: Guadeloupe - onshore - St Barthelemy island.
 
 .. code-block:: php
 
@@ -4498,8 +4157,7 @@ RGAF09 + IGN 1988 SB height
 
 RGAF09 + IGN 1988 SM height
 ---------------------------
-
-| Used: Guadeloupe - onshore - St Martin island.
+| Extent: Guadeloupe - onshore - St Martin island.
 
 .. code-block:: php
 
@@ -4511,8 +4169,7 @@ RGAF09 + IGN 1988 SM height
 
 RGAF09 + IGN 2008 LD height
 ---------------------------
-
-| Used: Guadeloupe - onshore - La Desirade.
+| Extent: Guadeloupe - onshore - La Desirade.
 
 .. code-block:: php
 
@@ -4524,8 +4181,7 @@ RGAF09 + IGN 2008 LD height
 
 RGAF09 + Martinique 1987 height
 -------------------------------
-
-| Used: Martinique - onshore.
+| Extent: Martinique - onshore.
 
 .. code-block:: php
 
@@ -4537,8 +4193,7 @@ RGAF09 + Martinique 1987 height
 
 RGF93 v1 / Lambert-93 + NGF-IGN69 height
 ----------------------------------------
-
-| Used: France - mainland onshore.
+| Extent: France - mainland onshore.
 
 .. code-block:: php
 
@@ -4550,8 +4205,7 @@ RGF93 v1 / Lambert-93 + NGF-IGN69 height
 
 RGF93 v1 / Lambert-93 + NGF-IGN78 height
 ----------------------------------------
-
-| Used: France - Corsica onshore.
+| Extent: France - Corsica onshore.
 
 .. code-block:: php
 
@@ -4563,8 +4217,7 @@ RGF93 v1 / Lambert-93 + NGF-IGN78 height
 
 RGF93 v2 + NGF-IGN69 height
 ---------------------------
-
-| Used: France - mainland onshore.
+| Extent: France - mainland onshore.
 
 .. code-block:: php
 
@@ -4576,8 +4229,7 @@ RGF93 v2 + NGF-IGN69 height
 
 RGF93 v2 + NGF-IGN78 height
 ---------------------------
-
-| Used: France - Corsica onshore.
+| Extent: France - Corsica onshore.
 
 .. code-block:: php
 
@@ -4589,8 +4241,7 @@ RGF93 v2 + NGF-IGN78 height
 
 RGF93 v2b + NGF-IGN69 height
 ----------------------------
-
-| Used: France - mainland onshore.
+| Extent: France - mainland onshore.
 
 .. code-block:: php
 
@@ -4602,8 +4253,7 @@ RGF93 v2b + NGF-IGN69 height
 
 RGFG95 + NGG1977 height
 -----------------------
-
-| Used: French Guiana - onshore.
+| Extent: French Guiana - onshore.
 
 .. code-block:: php
 
@@ -4615,8 +4265,7 @@ RGFG95 + NGG1977 height
 
 RGNC91-93 + NGNC08 height
 -------------------------
-
-| Used: New Caledonia - Belep, Grande Terre, Ile des Pins, Loyalty Islands (Lifou, Mare, Ouvea).
+| Extent: New Caledonia - Belep, Grande Terre, Ile des Pins, Loyalty Islands (Lifou, Mare, Ouvea).
 
 .. code-block:: php
 
@@ -4628,8 +4277,7 @@ RGNC91-93 + NGNC08 height
 
 RGSPM06 + Danger 1950 height
 ----------------------------
-
-| Used: St Pierre and Miquelon - onshore.
+| Extent: St Pierre and Miquelon - onshore.
 
 .. code-block:: php
 
@@ -4641,8 +4289,7 @@ RGSPM06 + Danger 1950 height
 
 RRAF 1991 + IGN 2008 LD height
 ------------------------------
-
-| Used: Guadeloupe - onshore - La Desirade.
+| Extent: Guadeloupe - onshore - La Desirade.
 
 .. code-block:: php
 
@@ -4654,8 +4301,7 @@ RRAF 1991 + IGN 2008 LD height
 
 RT90 + RH70 height
 ------------------
-
-| Used: Sweden - onshore.
+| Extent: Sweden - onshore.
 
 .. code-block:: php
 
@@ -4668,8 +4314,7 @@ When combined with geoid model RN92 forms geographic 3D CRS RR92.
 
 SCM22 Grid + ODN height
 -----------------------
-
-| Used: United Kingdom (UK) - on or related to the Scottish central mainline rail route from Motherwell through Perth and Pitlochry to Inverness.
+| Extent: United Kingdom (UK) - on or related to the Scottish central mainline rail route from Motherwell through Perth and Pitlochry to Inverness.
 
 .. code-block:: php
 
@@ -4681,8 +4326,7 @@ SCM22 Grid + ODN height
 
 SHGD2015 + SHVD2015 height
 --------------------------
-
-| Used: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore.
+| Extent: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore.
 
 .. code-block:: php
 
@@ -4694,8 +4338,7 @@ SHGD2015 + SHVD2015 height
 
 SHMG2015 + SHVD2015 height
 --------------------------
-
-| Used: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore.
+| Extent: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore.
 
 .. code-block:: php
 
@@ -4707,8 +4350,7 @@ SHMG2015 + SHVD2015 height
 
 SRGI2013 + INAGeoid2020 v1 height
 ---------------------------------
-
-| Used: Indonesia - onshore and offshore.
+| Extent: Indonesia - onshore and offshore.
 
 .. code-block:: php
 
@@ -4720,8 +4362,7 @@ SRGI2013 + INAGeoid2020 v1 height
 
 SRGI2013 + INAGeoid2020 v2 height
 ---------------------------------
-
-| Used: Indonesia - onshore and offshore.
+| Extent: Indonesia - onshore and offshore.
 
 .. code-block:: php
 
@@ -4733,8 +4374,7 @@ SRGI2013 + INAGeoid2020 v2 height
 
 SVY21 + SHD height
 ------------------
-
-| Used: Singapore - onshore and offshore.
+| Extent: Singapore - onshore and offshore.
 
 .. code-block:: php
 
@@ -4746,8 +4386,7 @@ SVY21 + SHD height
 
 SVY21 / Singapore TM + SHD height
 ---------------------------------
-
-| Used: Singapore - onshore and offshore.
+| Extent: Singapore - onshore and offshore.
 
 .. code-block:: php
 
@@ -4759,8 +4398,7 @@ SVY21 / Singapore TM + SHD height
 
 SWEREF99 + RH2000 height
 ------------------------
-
-| Used: Sweden - onshore.
+| Extent: Sweden - onshore.
 
 .. code-block:: php
 
@@ -4772,8 +4410,7 @@ SWEREF99 + RH2000 height
 
 SWEREF99 12 00 + RH2000 height
 ------------------------------
-
-| Used: Sweden - communes west of approximately 12°45'E and south of approximately 60°N. See information source for map.
+| Extent: Sweden - communes west of approximately 12°45'E and south of approximately 60°N. See information source for map.
 
 .. code-block:: php
 
@@ -4785,8 +4422,7 @@ SWEREF99 12 00 + RH2000 height
 
 SWEREF99 13 30 + RH2000 height
 ------------------------------
-
-| Used: Sweden - communes between approximately 12°45'E and 14°15'E and south of approximately 62°10'N. See information source for map.
+| Extent: Sweden - communes between approximately 12°45'E and 14°15'E and south of approximately 62°10'N. See information source for map.
 
 .. code-block:: php
 
@@ -4798,8 +4434,7 @@ SWEREF99 13 30 + RH2000 height
 
 SWEREF99 14 15 + RH2000 height
 ------------------------------
-
-| Used: Sweden - communes west of approximately 15°E and between approximately 61°35'N and 64°25'N. See information source for map.
+| Extent: Sweden - communes west of approximately 15°E and between approximately 61°35'N and 64°25'N. See information source for map.
 
 .. code-block:: php
 
@@ -4811,8 +4446,7 @@ SWEREF99 14 15 + RH2000 height
 
 SWEREF99 15 00 + RH2000 height
 ------------------------------
-
-| Used: Sweden - communes between approximately 14°15'E and 15°45'E and south of approximately 61°30'N. See information source for map.
+| Extent: Sweden - communes between approximately 14°15'E and 15°45'E and south of approximately 61°30'N. See information source for map.
 
 .. code-block:: php
 
@@ -4824,8 +4458,7 @@ SWEREF99 15 00 + RH2000 height
 
 SWEREF99 15 45 + RH2000 height
 ------------------------------
-
-| Used: Sweden - communes between approximately 15°E and 16°30'E and between approximately 60°30'N and 65°N. See information source for map.
+| Extent: Sweden - communes between approximately 15°E and 16°30'E and between approximately 60°30'N and 65°N. See information source for map.
 
 .. code-block:: php
 
@@ -4837,8 +4470,7 @@ SWEREF99 15 45 + RH2000 height
 
 SWEREF99 16 30 + RH2000 height
 ------------------------------
-
-| Used: Sweden - communes between approximately 15°45'E and 17°15'E and south of approximately 62°20'N. See information source for map.
+| Extent: Sweden - communes between approximately 15°45'E and 17°15'E and south of approximately 62°20'N. See information source for map.
 
 .. code-block:: php
 
@@ -4850,8 +4482,7 @@ SWEREF99 16 30 + RH2000 height
 
 SWEREF99 17 15 + RH2000 height
 ------------------------------
-
-| Used: Sweden - communes between approximately 14°20'E and 18°50'E and between approximately 67°10'N and 62°05'N. See information source for map.
+| Extent: Sweden - communes between approximately 14°20'E and 18°50'E and between approximately 67°10'N and 62°05'N. See information source for map.
 
 .. code-block:: php
 
@@ -4863,8 +4494,7 @@ SWEREF99 17 15 + RH2000 height
 
 SWEREF99 18 00 + RH2000 height
 ------------------------------
-
-| Used: Sweden - communes east of approximately 17°15'E between approximately 60°40'N and 58°50'N. See information source for map.
+| Extent: Sweden - communes east of approximately 17°15'E between approximately 60°40'N and 58°50'N. See information source for map.
 
 .. code-block:: php
 
@@ -4876,8 +4506,7 @@ SWEREF99 18 00 + RH2000 height
 
 SWEREF99 18 45 + RH2000 height
 ------------------------------
-
-| Used: Sweden - mainland communes between approximately 18°E and 19°30'E and between approximately 62°50'N and 66°N. Also Gotland. See information source for map.
+| Extent: Sweden - mainland communes between approximately 18°E and 19°30'E and between approximately 62°50'N and 66°N. Also Gotland. See information source for map.
 
 .. code-block:: php
 
@@ -4889,8 +4518,7 @@ SWEREF99 18 45 + RH2000 height
 
 SWEREF99 20 15 + RH2000 height
 ------------------------------
-
-| Used: Sweden - communes in Vaasterbotten east of approximately 19°30'E and (i) north of 63°30'N and (ii) south of approximately 65°05'N. Also Norbotten west of approximately 23°20'E. See information source for map.
+| Extent: Sweden - communes in Vaasterbotten east of approximately 19°30'E and (i) north of 63°30'N and (ii) south of approximately 65°05'N. Also Norbotten west of approximately 23°20'E. See information source for map.
 
 .. code-block:: php
 
@@ -4902,8 +4530,7 @@ SWEREF99 20 15 + RH2000 height
 
 SWEREF99 21 45 + RH2000 height
 ------------------------------
-
-| Used: Sweden - communes in Norbotten east of approximately 19°30'E and south of approximately 65°50'N. See information source for map.
+| Extent: Sweden - communes in Norbotten east of approximately 19°30'E and south of approximately 65°50'N. See information source for map.
 
 .. code-block:: php
 
@@ -4915,8 +4542,7 @@ SWEREF99 21 45 + RH2000 height
 
 SWEREF99 23 15 + RH2000 height
 ------------------------------
-
-| Used: Sweden - communes east of approximately 21°50'E. See information source for map.
+| Extent: Sweden - communes east of approximately 21°50'E. See information source for map.
 
 .. code-block:: php
 
@@ -4928,8 +4554,7 @@ SWEREF99 23 15 + RH2000 height
 
 SWEREF99 TM + RH2000 height
 ---------------------------
-
-| Used: Sweden - onshore.
+| Extent: Sweden - onshore.
 
 .. code-block:: php
 
@@ -4941,8 +4566,7 @@ SWEREF99 TM + RH2000 height
 
 St. Helena Tritan / UTM zone 30S + Tritan 2011 height
 -----------------------------------------------------
-
-| Used: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore.
+| Extent: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore.
 
 .. code-block:: php
 
@@ -4954,8 +4578,7 @@ St. Helena Tritan / UTM zone 30S + Tritan 2011 height
 
 TPEN11 Grid + ODN height
 ------------------------
-
-| Used: United Kingdom (UK) - on or related to the Trans-Pennine rail route from Liverpool via Manchester to Bradford and Leeds.
+| Extent: United Kingdom (UK) - on or related to the Trans-Pennine rail route from Liverpool via Manchester to Bradford and Leeds.
 
 .. code-block:: php
 
@@ -4967,8 +4590,7 @@ TPEN11 Grid + ODN height
 
 Tokyo + JSLD69 height
 ---------------------
-
-| Used: Japan - onshore mainland - Honshu, Shikoku, Kyushu.
+| Extent: Japan - onshore mainland - Honshu, Shikoku, Kyushu.
 
 .. code-block:: php
 
@@ -4981,8 +4603,7 @@ Replaced by JGD2000 + JGD2000 (vertical) (CRS code 6696) from April 2002).
 
 Tokyo + JSLD72 height
 ---------------------
-
-| Used: Japan - onshore mainland - Hokkaido.
+| Extent: Japan - onshore mainland - Hokkaido.
 
 .. code-block:: php
 
@@ -4995,8 +4616,7 @@ Replaced by JGD2000 + JGD2000 (vertical) (CRS code 6696) from April 2002).
 
 WGS 84 + EGM2008 height
 -----------------------
-
-| Used: World.
+| Extent: World.
 
 .. code-block:: php
 
@@ -5008,8 +4628,7 @@ WGS 84 + EGM2008 height
 
 WGS 84 + EGM96 height
 ---------------------
-
-| Used: World.
+| Extent: World.
 
 .. code-block:: php
 
@@ -5021,8 +4640,7 @@ WGS 84 + EGM96 height
 
 WGS 84 + MSL height
 -------------------
-
-| Used: World.
+| Extent: World.
 
 .. code-block:: php
 
@@ -5035,8 +4653,7 @@ Component vertical CRS is not specific to any location or epoch.
 
 WGS 84 / World Mercator + EGM2008 height
 ----------------------------------------
-
-| Used: World.
+| Extent: World.
 
 .. code-block:: php
 

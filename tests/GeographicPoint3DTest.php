@@ -309,7 +309,7 @@ class GeographicPoint3DTest extends TestCase
     public function testOperations(string $sourceCrsSrid, string $targetCrsSrid, string $operationSrid, bool $reversible): void
     {
         $operation = CoordinateOperations::getOperationData($operationSrid);
-        $operationExtent = BoundingArea::createFromExtentCodes($operation['extent_code']);
+        $operationExtent = BoundingArea::createFromExtentCodes($operation['extent']);
         $centre = $operationExtent->getPointInside();
 
         $sourceCRS = Geographic::fromSRID($sourceCrsSrid);

@@ -31,6 +31,7 @@ class AddNewDataVisitor extends NodeVisitorAbstract
             unset($dataRow['deprecated']);
             unset($dataRow['doc_help']);
             unset($dataRow['extent_description']);
+            unset($dataRow['method_name']);
             if (isset($dataRow['name'])) {
                 $dataRow['name'] = str_replace('_LOWERCASE', '', $dataRow['name']);
             }

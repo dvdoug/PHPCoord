@@ -1,7 +1,5 @@
-2D Axes: easting, northing (E,N). Orientations: east, north. UoM: chBnB.
-------------------------------------------------------------------------
-
-
+2D Axes: easting, northing (E,N). Orientations: east, north. Units: British chain (Benoit 1895 B).
+--------------------------------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_AXES_EASTING_NORTHING_E_N_ORIENTATIONS_EAST_NORTH_UOM_CHBNB)
@@ -9,10 +7,8 @@
 
 Used in projected and engineering coordinate reference systems.
 
-2D Axes: easting, northing (E,N). Orientations: east, north. UoM: chSe(T).
---------------------------------------------------------------------------
-
-
+2D Axes: easting, northing (E,N). Orientations: east, north. Units: British chain (Sears 1922 truncated).
+---------------------------------------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_AXES_EASTING_NORTHING_E_N_ORIENTATIONS_EAST_NORTH_UOM_CHSE_T)
@@ -20,10 +16,8 @@ Used in projected and engineering coordinate reference systems.
 
 Used in projected and engineering coordinate reference systems.
 
-2D Axes: easting, northing (E,N). Orientations: east, north. UoM: chSe.
------------------------------------------------------------------------
-
-
+2D Axes: easting, northing (E,N). Orientations: east, north. Units: British chain (Sears 1922).
+-----------------------------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_AXES_EASTING_NORTHING_E_N_ORIENTATIONS_EAST_NORTH_UOM_CHSE)
@@ -31,10 +25,8 @@ Used in projected and engineering coordinate reference systems.
 
 Used in projected and engineering coordinate reference systems.
 
-2D Axes: easting, northing (E,N). Orientations: east, north. UoM: ft.
----------------------------------------------------------------------
-
-
+2D Axes: easting, northing (E,N). Orientations: east, north. Units: foot.
+-------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_AXES_EASTING_NORTHING_E_N_ORIENTATIONS_EAST_NORTH_UOM_FT)
@@ -42,10 +34,8 @@ Used in projected and engineering coordinate reference systems.
 
 Used in projected and engineering coordinate reference systems.
 
-2D Axes: easting, northing (E,N). Orientations: east, north. UoM: ftCla.
-------------------------------------------------------------------------
-
-
+2D Axes: easting, northing (E,N). Orientations: east, north. Units: Clarke's foot.
+----------------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_AXES_EASTING_NORTHING_E_N_ORIENTATIONS_EAST_NORTH_UOM_FTCLA)
@@ -53,10 +43,8 @@ Used in projected and engineering coordinate reference systems.
 
 Used in projected and engineering coordinate reference systems.
 
-2D Axes: easting, northing (E,N). Orientations: east, north. UoM: ftGC.
------------------------------------------------------------------------
-
-
+2D Axes: easting, northing (E,N). Orientations: east, north. Units: Gold Coast foot.
+------------------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_AXES_EASTING_NORTHING_E_N_ORIENTATIONS_EAST_NORTH_UOM_FTGC)
@@ -64,10 +52,8 @@ Used in projected and engineering coordinate reference systems.
 
 Used in projected and engineering coordinate reference systems.
 
-2D Axes: easting, northing (E,N). Orientations: east, north. UoM: ftSe.
------------------------------------------------------------------------
-
-
+2D Axes: easting, northing (E,N). Orientations: east, north. Units: British foot (Sears 1922).
+----------------------------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_AXES_EASTING_NORTHING_E_N_ORIENTATIONS_EAST_NORTH_UOM_FTSE)
@@ -75,10 +61,8 @@ Used in projected and engineering coordinate reference systems.
 
 Used in projected and engineering coordinate reference systems.
 
-2D Axes: easting, northing (E,N). Orientations: east, north. UoM: km.
----------------------------------------------------------------------
-
-
+2D Axes: easting, northing (E,N). Orientations: east, north. Units: kilometre.
+------------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_AXES_EASTING_NORTHING_E_N_ORIENTATIONS_EAST_NORTH_UOM_KM)
@@ -86,10 +70,8 @@ Used in projected and engineering coordinate reference systems.
 
 Used in projected and engineering coordinate reference systems.
 
-2D Axes: easting, northing (E,N). Orientations: east, north. UoM: lkCla.
-------------------------------------------------------------------------
-
-
+2D Axes: easting, northing (E,N). Orientations: east, north. Units: Clarke's link.
+----------------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_AXES_EASTING_NORTHING_E_N_ORIENTATIONS_EAST_NORTH_UOM_LKCLA)
@@ -97,10 +79,8 @@ Used in projected and engineering coordinate reference systems.
 
 Used in projected and engineering coordinate reference systems.
 
-2D Axes: easting, northing (E,N). Orientations: east, north. UoM: m.
---------------------------------------------------------------------
-
-
+2D Axes: easting, northing (E,N). Orientations: east, north. Units: metre
+-------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_AXES_EASTING_NORTHING_E_N_ORIENTATIONS_EAST_NORTH_UOM_M)
@@ -108,10 +88,8 @@ Used in projected and engineering coordinate reference systems.
 
 Used in projected and engineering coordinate reference systems.
 
-2D Axes: easting, northing (E,N). Orientations: east, north. UoM: ydCl.
------------------------------------------------------------------------
-
-
+2D Axes: easting, northing (E,N). Orientations: east, north. Units: Clarke's yard.
+----------------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_AXES_EASTING_NORTHING_E_N_ORIENTATIONS_EAST_NORTH_UOM_YDCL)
@@ -119,10 +97,8 @@ Used in projected and engineering coordinate reference systems.
 
 Used in projected and engineering coordinate reference systems.
 
-2D Axes: easting, northing (E,N). Orientations: east, north. UoM: ydInd.
-------------------------------------------------------------------------
-
-
+2D Axes: easting, northing (E,N). Orientations: east, north. Units: Indian yard.
+--------------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_AXES_EASTING_NORTHING_E_N_ORIENTATIONS_EAST_NORTH_UOM_YDIND)
@@ -130,10 +106,8 @@ Used in projected and engineering coordinate reference systems.
 
 Used in projected and engineering coordinate reference systems.
 
-2D Axes: easting, northing (E,N). Orientations: east, north. UoM: ydSe.
------------------------------------------------------------------------
-
-
+2D Axes: easting, northing (E,N). Orientations: east, north. Units: British yard (Sears 1922).
+----------------------------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_AXES_EASTING_NORTHING_E_N_ORIENTATIONS_EAST_NORTH_UOM_YDSE)
@@ -141,10 +115,8 @@ Used in projected and engineering coordinate reference systems.
 
 Used in projected and engineering coordinate reference systems.
 
-2D Axes: easting, northing (M,P). Orientations east, north. UoM: m.
--------------------------------------------------------------------
-
-
+2D Axes: easting, northing (M,P). Orientations east, north. Units: metre
+------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_AXES_EASTING_NORTHING_M_P_ORIENTATIONS_EAST_NORTH_UOM_M)
@@ -152,10 +124,8 @@ Used in projected and engineering coordinate reference systems.
 
 Used in projected and engineering coordinate reference systems in Portuguese territories.
 
-2D Axes: easting, northing (X,Y). Orientations: east, north. UoM: ft.
----------------------------------------------------------------------
-
-
+2D Axes: easting, northing (X,Y). Orientations: east, north. Units: foot.
+-------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_AXES_EASTING_NORTHING_X_Y_ORIENTATIONS_EAST_NORTH_UOM_FT)
@@ -163,10 +133,8 @@ Used in projected and engineering coordinate reference systems in Portuguese ter
 
 Used in projected and engineering coordinate reference systems.
 
-2D Axes: easting, northing (X,Y). Orientations: east, north. UoM: ftUS.
------------------------------------------------------------------------
-
-
+2D Axes: easting, northing (X,Y). Orientations: east, north. Units: foot (US).
+------------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_AXES_EASTING_NORTHING_X_Y_ORIENTATIONS_EAST_NORTH_UOM_FTUS)
@@ -174,10 +142,8 @@ Used in projected and engineering coordinate reference systems.
 
 Used in projected and engineering coordinate reference systems.
 
-2D Axes: easting, northing (X,Y). Orientations: east, north. UoM: m.
---------------------------------------------------------------------
-
-
+2D Axes: easting, northing (X,Y). Orientations: east, north. Units: metre
+-------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_AXES_EASTING_NORTHING_X_Y_ORIENTATIONS_EAST_NORTH_UOM_M)
@@ -185,10 +151,8 @@ Used in projected and engineering coordinate reference systems.
 
 Used in projected and engineering coordinate reference systems.
 
-2D Axes: easting, northing (Y,X). Orientations: east, north. UoM: m.
---------------------------------------------------------------------
-
-
+2D Axes: easting, northing (Y,X). Orientations: east, north. Units: metre
+-------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_AXES_EASTING_NORTHING_Y_X_ORIENTATIONS_EAST_NORTH_UOM_M)
@@ -196,10 +160,8 @@ Used in projected and engineering coordinate reference systems.
 
 Used in projected and engineering coordinate reference systems.
 
-2D Axes: easting, northing [E(X),N(Y)]. Orientations: east, north. UoM: m.
---------------------------------------------------------------------------
-
-
+2D Axes: easting, northing [E(X),N(Y)]. Orientations: east, north. Units: metre
+-------------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_AXES_EASTING_NORTHING_E_X_N_Y_ORIENTATIONS_EAST_NORTH_UOM_M)
@@ -207,10 +169,8 @@ Used in projected and engineering coordinate reference systems.
 
 Used in projected and engineering coordinate reference systems.
 
-2D Axes: northing, easting (N,E). Orientations: north, east. UoM: ft.
----------------------------------------------------------------------
-
-
+2D Axes: northing, easting (N,E). Orientations: north, east. Units: foot.
+-------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_AXES_NORTHING_EASTING_N_E_ORIENTATIONS_NORTH_EAST_UOM_FT)
@@ -218,10 +178,8 @@ Used in projected and engineering coordinate reference systems.
 
 Used in projected and engineering coordinate reference systems.
 
-2D Axes: northing, easting (N,E). Orientations: north, east. UoM: ftCla.
-------------------------------------------------------------------------
-
-
+2D Axes: northing, easting (N,E). Orientations: north, east. Units: Clarke's foot.
+----------------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_AXES_NORTHING_EASTING_N_E_ORIENTATIONS_NORTH_EAST_UOM_FTCLA)
@@ -229,10 +187,8 @@ Used in projected and engineering coordinate reference systems.
 
 Used in projected and engineering coordinate reference systems.
 
-2D Axes: northing, easting (N,E). Orientations: north, east. UoM: m.
---------------------------------------------------------------------
-
-
+2D Axes: northing, easting (N,E). Orientations: north, east. Units: metre
+-------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_AXES_NORTHING_EASTING_N_E_ORIENTATIONS_NORTH_EAST_UOM_M)
@@ -240,10 +196,8 @@ Used in projected and engineering coordinate reference systems.
 
 Used in projected and engineering coordinate reference systems.
 
-2D Axes: northing, easting (X,Y). Orientations: north, east. UoM: lk.
----------------------------------------------------------------------
-
-
+2D Axes: northing, easting (X,Y). Orientations: north, east. Units: link.
+-------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_AXES_NORTHING_EASTING_X_Y_ORIENTATIONS_NORTH_EAST_UOM_LK)
@@ -251,10 +205,8 @@ Used in projected and engineering coordinate reference systems.
 
 Used in projected and engineering coordinate reference systems.
 
-2D Axes: northing, easting (X,Y). Orientations: north, east. UoM: m.
---------------------------------------------------------------------
-
-
+2D Axes: northing, easting (X,Y). Orientations: north, east. Units: metre
+-------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_AXES_NORTHING_EASTING_X_Y_ORIENTATIONS_NORTH_EAST_UOM_M)
@@ -262,10 +214,8 @@ Used in projected and engineering coordinate reference systems.
 
 Used in projected and engineering coordinate reference systems.
 
-2D Axes: northing, easting (Y,X). Orientations: north, east. UoM: m.
---------------------------------------------------------------------
-
-
+2D Axes: northing, easting (Y,X). Orientations: north, east. Units: metre
+-------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_AXES_NORTHING_EASTING_Y_X_ORIENTATIONS_NORTH_EAST_UOM_M)
@@ -273,10 +223,8 @@ Used in projected and engineering coordinate reference systems.
 
 Used in projected and engineering coordinate reference systems.
 
-2D Axes: northing, easting (no abbrev). Orientations: north, east. UoM: m.
---------------------------------------------------------------------------
-
-
+2D Axes: northing, easting (no abbrev). Orientations: north, east. Units: metre
+-------------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_AXES_NORTHING_EASTING_NO_ABBREV_ORIENTATIONS_NORTH_EAST_UOM_M)
@@ -284,10 +232,8 @@ Used in projected and engineering coordinate reference systems.
 
 Used in projected coordinate reference systems for nautical charting.
 
-2D Axes: northing, easting (x,y). Orientations: north, east. UoM: m.
---------------------------------------------------------------------
-
-
+2D Axes: northing, easting (x,y). Orientations: north, east. Units: metre
+-------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_AXES_NORTHING_EASTING_X_Y_ORIENTATIONS_NORTH_EAST_UOM_M_LOWERCASE)
@@ -295,10 +241,8 @@ Used in projected coordinate reference systems for nautical charting.
 
 Used in projected and engineering coordinate reference systems.
 
-2D Axes: northing, westing (N,E). Orientations: north, west. UoM: m.
---------------------------------------------------------------------
-
-
+2D Axes: northing, westing (N,E). Orientations: north, west. Units: metre
+-------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_AXES_NORTHING_WESTING_N_E_ORIENTATIONS_NORTH_WEST_UOM_M)
@@ -306,10 +250,8 @@ Used in projected and engineering coordinate reference systems.
 
 Used in Danish projected coordinate reference systems. Note that second axis has abbreviation E but is positive west.
 
-2D Axes: northing, westing (Y,X). Orientations: north, west. UoM: m.
---------------------------------------------------------------------
-
-
+2D Axes: northing, westing (Y,X). Orientations: north, west. Units: metre
+-------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_AXES_NORTHING_WESTING_Y_X_ORIENTATIONS_NORTH_WEST_UOM_M)
@@ -317,10 +259,8 @@ Used in Danish projected coordinate reference systems. Note that second axis has
 
 Used in Danish projected coordinate reference systems.
 
-2D Axes: southing, westing (P,M). Orientations: south, west. UoM: m.
---------------------------------------------------------------------
-
-
+2D Axes: southing, westing (P,M). Orientations: south, west. Units: metre
+-------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_AXES_SOUTHING_WESTING_P_M_ORIENTATIONS_SOUTH_WEST_UOM_M)
@@ -328,10 +268,8 @@ Used in Danish projected coordinate reference systems.
 
 Used in old projected coordinate reference systems in Portugal.
 
-2D Axes: southing, westing (X,Y). Orientations: south, west. UoM: m.
---------------------------------------------------------------------
-
-
+2D Axes: southing, westing (X,Y). Orientations: south, west. Units: metre
+-------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_AXES_SOUTHING_WESTING_X_Y_ORIENTATIONS_SOUTH_WEST_UOM_M)
@@ -339,10 +277,8 @@ Used in old projected coordinate reference systems in Portugal.
 
 Used in projected and engineering coordinate reference systems.
 
-2D Axes: westing, northing (W,N). Orientations: west, north. UoM: m.
---------------------------------------------------------------------
-
-
+2D Axes: westing, northing (W,N). Orientations: west, north. Units: metre
+-------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_AXES_WESTING_NORTHING_W_N_ORIENTATIONS_WEST_NORTH_UOM_M)
@@ -350,10 +286,8 @@ Used in projected and engineering coordinate reference systems.
 
 Used in old Danish coordinate reference systems.
 
-2D Axes: westing, southing (Y,X). Orientations: west, south. UoM: GLM.
-----------------------------------------------------------------------
-
-
+2D Axes: westing, southing (Y,X). Orientations: west, south. Units: German legal metre.
+---------------------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_AXES_WESTING_SOUTHING_Y_X_ORIENTATIONS_WEST_SOUTH_UOM_GLM)
@@ -361,10 +295,8 @@ Used in old Danish coordinate reference systems.
 
 Used in projected and engineering coordinate reference systems.
 
-2D Axes: westing, southing (Y,X). Orientations: west, south. UoM: m.
---------------------------------------------------------------------
-
-
+2D Axes: westing, southing (Y,X). Orientations: west, south. Units: metre
+-------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_AXES_WESTING_SOUTHING_Y_X_ORIENTATIONS_WEST_SOUTH_UOM_M)
@@ -372,10 +304,8 @@ Used in projected and engineering coordinate reference systems.
 
 Used in projected and engineering coordinate reference systems.
 
-2D CS for UPS north. Axes: E,N. Orientations: E along 90°E meridian, N along 180°E meridian. UoM: m.
-------------------------------------------------------------------------------------------------------
-
-
+2D CS for UPS north. Axes: E,N. Orientations: E along 90°E meridian, N along 180°E meridian. Units: metre
+-----------------------------------------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_CS_FOR_UPS_NORTH_AXES_E_N_ORIENTATIONS_E_ALONG_90_DEG_E_MERIDIAN_N_ALONG_180_DEG_E_MERIDIAN_UOM_M)
@@ -383,10 +313,8 @@ Used in projected and engineering coordinate reference systems.
 
 Used for North Pole tangential and secant projections.
 
-2D CS for UPS north. Axes: N,E. Orientations: N along 180°E meridian, E along 90°E meridian. UoM: m.
-------------------------------------------------------------------------------------------------------
-
-
+2D CS for UPS north. Axes: N,E. Orientations: N along 180°E meridian, E along 90°E meridian. Units: metre
+-----------------------------------------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_CS_FOR_UPS_NORTH_AXES_N_E_ORIENTATIONS_N_ALONG_180_DEG_E_MERIDIAN_E_ALONG_90_DEG_E_MERIDIAN_UOM_M)
@@ -394,10 +322,8 @@ Used for North Pole tangential and secant projections.
 
 Used for North Pole tangential and secant projections.
 
-2D CS for UPS south. Axes: E,N. Orientations: E along 90°E, N along 0°E meridians. UoM: m.
---------------------------------------------------------------------------------------------
-
-
+2D CS for UPS south. Axes: E,N. Orientations: E along 90°E, N along 0°E meridians. Units: metre
+-------------------------------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_CS_FOR_UPS_SOUTH_AXES_E_N_ORIENTATIONS_E_ALONG_90_DEG_E_N_ALONG_0_DEG_E_MERIDIANS_UOM_M)
@@ -405,10 +331,8 @@ Used for North Pole tangential and secant projections.
 
 Used for South Pole tangential and secant projections.
 
-2D CS for UPS south. Axes: N,E. Orientations: N along 0°E, E along 90°E meridians. UoM: m.
---------------------------------------------------------------------------------------------
-
-
+2D CS for UPS south. Axes: N,E. Orientations: N along 0°E, E along 90°E meridians. Units: metre
+-------------------------------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_CS_FOR_UPS_SOUTH_AXES_N_E_ORIENTATIONS_N_ALONG_0_DEG_E_E_ALONG_90_DEG_E_MERIDIANS_UOM_M)
@@ -416,10 +340,8 @@ Used for South Pole tangential and secant projections.
 
 Used for South Pole tangential and secant projections.
 
-2D CS for north polar azimuthal lonO 0°E. Axes: X,Y. Orientations: X along 90°E, Y along 180°E meridians. UoM: m.
---------------------------------------------------------------------------------------------------------------------
-
-
+2D CS for north polar azimuthal lonO 0°E. Axes: X,Y. Orientations: X along 90°E, Y along 180°E meridians. Units: metre
+-------------------------------------------------------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_CS_FOR_NORTH_POLAR_AZIMUTHAL_LONO_0_DEG_E_AXES_X_Y_ORIENTATIONS_X_ALONG_90_DEG_E_Y_ALONG_180_DEG_E_MERIDIANS_UOM_M)
@@ -427,10 +349,8 @@ Used for South Pole tangential and secant projections.
 
 Used for North Pole tangential and secant projections.
 
-2D CS for north polar azimuthal lonO 100°W. Axes: X,Y. Orientations: X along 10°W, Y along 80°E meridians. UoM: m.
----------------------------------------------------------------------------------------------------------------------
-
-
+2D CS for north polar azimuthal lonO 100°W. Axes: X,Y. Orientations: X along 10°W, Y along 80°E meridians. Units: metre
+--------------------------------------------------------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_CS_FOR_NORTH_POLAR_AZIMUTHAL_LONO_100_DEG_W_AXES_X_Y_ORIENTATIONS_X_ALONG_10_DEG_W_Y_ALONG_80_DEG_E_MERIDIANS_UOM_M)
@@ -438,10 +358,8 @@ Used for North Pole tangential and secant projections.
 
 Used for North Pole tangential and secant projections.
 
-2D CS for north polar azimuthal lonO 105°E. Axes: X,Y. Orientations: X along 165°W, Y along 75°W meridians. UoM: m.
-----------------------------------------------------------------------------------------------------------------------
-
-
+2D CS for north polar azimuthal lonO 105°E. Axes: X,Y. Orientations: X along 165°W, Y along 75°W meridians. Units: metre
+---------------------------------------------------------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_CS_FOR_NORTH_POLAR_AZIMUTHAL_LONO_105_DEG_E_AXES_X_Y_ORIENTATIONS_X_ALONG_165_DEG_W_Y_ALONG_75_DEG_W_MERIDIANS_UOM_M)
@@ -449,10 +367,8 @@ Used for North Pole tangential and secant projections.
 
 Used for North Pole tangential and secant projections.
 
-2D CS for north polar azimuthal lonO 10°E. Axes: X,Y. Orientations: X along 100°E, Y along 170°W meridians. UoM: m.
-----------------------------------------------------------------------------------------------------------------------
-
-
+2D CS for north polar azimuthal lonO 10°E. Axes: X,Y. Orientations: X along 100°E, Y along 170°W meridians. Units: metre
+---------------------------------------------------------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_CS_FOR_NORTH_POLAR_AZIMUTHAL_LONO_10_DEG_E_AXES_X_Y_ORIENTATIONS_X_ALONG_100_DEG_E_Y_ALONG_170_DEG_W_MERIDIANS_UOM_M)
@@ -460,10 +376,8 @@ Used for North Pole tangential and secant projections.
 
 Used for North Pole tangential and secant projections.
 
-2D CS for north polar azimuthal lonO 150°W. Axes: X,Y. Orientations: X along 60°W, Y along 30°E meridians. UoM: m.
----------------------------------------------------------------------------------------------------------------------
-
-
+2D CS for north polar azimuthal lonO 150°W. Axes: X,Y. Orientations: X along 60°W, Y along 30°E meridians. Units: metre
+--------------------------------------------------------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_CS_FOR_NORTH_POLAR_AZIMUTHAL_LONO_150_DEG_W_AXES_X_Y_ORIENTATIONS_X_ALONG_60_DEG_W_Y_ALONG_30_DEG_E_MERIDIANS_UOM_M)
@@ -471,10 +385,8 @@ Used for North Pole tangential and secant projections.
 
 Used for North Pole tangential and secant projections.
 
-2D CS for north polar azimuthal lonO 180°E. Axes: X,Y. Orientations: X along 90°W, Y along 0°E meridians. UoM: m.
---------------------------------------------------------------------------------------------------------------------
-
-
+2D CS for north polar azimuthal lonO 180°E. Axes: X,Y. Orientations: X along 90°W, Y along 0°E meridians. Units: metre
+-------------------------------------------------------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_CS_FOR_NORTH_POLAR_AZIMUTHAL_LONO_180_DEG_E_AXES_X_Y_ORIENTATIONS_X_ALONG_90_DEG_W_Y_ALONG_0_DEG_E_MERIDIANS_UOM_M)
@@ -482,10 +394,8 @@ Used for North Pole tangential and secant projections.
 
 Used for North Pole tangential and secant projections.
 
-2D CS for north polar azimuthal lonO 18°E. Axes: X,Y. Orientations: X along 108°E, Y along 162°W meridians. UoM: m.
-----------------------------------------------------------------------------------------------------------------------
-
-
+2D CS for north polar azimuthal lonO 18°E. Axes: X,Y. Orientations: X along 108°E, Y along 162°W meridians. Units: metre
+---------------------------------------------------------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_CS_FOR_NORTH_POLAR_AZIMUTHAL_LONO_18_DEG_E_AXES_X_Y_ORIENTATIONS_X_ALONG_108_DEG_E_Y_ALONG_162_DEG_W_MERIDIANS_UOM_M)
@@ -493,10 +403,8 @@ Used for North Pole tangential and secant projections.
 
 Used for North Pole tangential and secant projections.
 
-2D CS for north polar azimuthal lonO 33°W. Axes: X,Y. Orientations: X along 57°E, Y along 147°E meridians. UoM: m.
----------------------------------------------------------------------------------------------------------------------
-
-
+2D CS for north polar azimuthal lonO 33°W. Axes: X,Y. Orientations: X along 57°E, Y along 147°E meridians. Units: metre
+--------------------------------------------------------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_CS_FOR_NORTH_POLAR_AZIMUTHAL_LONO_33_DEG_W_AXES_X_Y_ORIENTATIONS_X_ALONG_57_DEG_E_Y_ALONG_147_DEG_E_MERIDIANS_UOM_M)
@@ -504,10 +412,8 @@ Used for North Pole tangential and secant projections.
 
 Used for North Pole tangential and secant projections.
 
-2D CS for north polar azimuthal lonO 40°W. Axes: X,Y. Orientations: X along 50°E, Y along 140°E meridians. UoM: m.
----------------------------------------------------------------------------------------------------------------------
-
-
+2D CS for north polar azimuthal lonO 40°W. Axes: X,Y. Orientations: X along 50°E, Y along 140°E meridians. Units: metre
+--------------------------------------------------------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_CS_FOR_NORTH_POLAR_AZIMUTHAL_LONO_40_DEG_W_AXES_X_Y_ORIENTATIONS_X_ALONG_50_DEG_E_Y_ALONG_140_DEG_E_MERIDIANS_UOM_M)
@@ -515,10 +421,8 @@ Used for North Pole tangential and secant projections.
 
 Used for North Pole tangential and secant projections.
 
-2D CS for north polar azimuthal lonO 45°W. Axes: X,Y. Orientations: X along 45°E, Y along 135°E meridians. UoM: m.
----------------------------------------------------------------------------------------------------------------------
-
-
+2D CS for north polar azimuthal lonO 45°W. Axes: X,Y. Orientations: X along 45°E, Y along 135°E meridians. Units: metre
+--------------------------------------------------------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_CS_FOR_NORTH_POLAR_AZIMUTHAL_LONO_45_DEG_W_AXES_X_Y_ORIENTATIONS_X_ALONG_45_DEG_E_Y_ALONG_135_DEG_E_MERIDIANS_UOM_M)
@@ -526,10 +430,8 @@ Used for North Pole tangential and secant projections.
 
 Used for North Pole tangential and secant projections.
 
-2D CS for north polar azimuthal lonO 90°E. Axes: X,Y. Orientations: X along 180°E, Y along 90°W meridians. UoM: m.
----------------------------------------------------------------------------------------------------------------------
-
-
+2D CS for north polar azimuthal lonO 90°E. Axes: X,Y. Orientations: X along 180°E, Y along 90°W meridians. Units: metre
+--------------------------------------------------------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_CS_FOR_NORTH_POLAR_AZIMUTHAL_LONO_90_DEG_E_AXES_X_Y_ORIENTATIONS_X_ALONG_180_DEG_E_Y_ALONG_90_DEG_W_MERIDIANS_UOM_M)
@@ -537,10 +439,8 @@ Used for North Pole tangential and secant projections.
 
 Used for North Pole tangential and secant projections.
 
-2D CS for south polar azimuthal lonO 0°E. Axes: E,N. Orientations: E along 90°E, N along 0°E meridians. UoM: m.
-------------------------------------------------------------------------------------------------------------------
-
-
+2D CS for south polar azimuthal lonO 0°E. Axes: E,N. Orientations: E along 90°E, N along 0°E meridians. Units: metre
+-----------------------------------------------------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_CS_FOR_SOUTH_POLAR_AZIMUTHAL_LONO_0_DEG_E_AXES_E_N_ORIENTATIONS_E_ALONG_90_DEG_E_N_ALONG_0_DEG_E_MERIDIANS_UOM_M)
@@ -548,10 +448,8 @@ Used for North Pole tangential and secant projections.
 
 Used for South Pole tangential and secant projections.
 
-2D CS for south polar azimuthal lonO 0°E. Axes: X,Y. Orientations: X along 90°E, Y along 0°E meridians. UoM: m.
-------------------------------------------------------------------------------------------------------------------
-
-
+2D CS for south polar azimuthal lonO 0°E. Axes: X,Y. Orientations: X along 90°E, Y along 0°E meridians. Units: metre
+-----------------------------------------------------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_CS_FOR_SOUTH_POLAR_AZIMUTHAL_LONO_0_DEG_E_AXES_X_Y_ORIENTATIONS_X_ALONG_90_DEG_E_Y_ALONG_0_DEG_E_MERIDIANS_UOM_M)
@@ -559,10 +457,8 @@ Used for South Pole tangential and secant projections.
 
 Used for South Pole tangential and secant projections.
 
-2D CS for south polar azimuthal lonO 105°E. Axes: E,N. Orientations: E along 165°W, N along 105°E meridians. UoM: m.
------------------------------------------------------------------------------------------------------------------------
-
-
+2D CS for south polar azimuthal lonO 105°E. Axes: E,N. Orientations: E along 165°W, N along 105°E meridians. Units: metre
+----------------------------------------------------------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_CS_FOR_SOUTH_POLAR_AZIMUTHAL_LONO_105_DEG_E_AXES_E_N_ORIENTATIONS_E_ALONG_165_DEG_W_N_ALONG_105_DEG_E_MERIDIANS_UOM_M)
@@ -570,10 +466,8 @@ Used for South Pole tangential and secant projections.
 
 Used for South Pole tangential and secant projections.
 
-2D CS for south polar azimuthal lonO 105°W. Axes: E,N. Orientations: E along 15°W, N along 105°W meridians. UoM: m.
-----------------------------------------------------------------------------------------------------------------------
-
-
+2D CS for south polar azimuthal lonO 105°W. Axes: E,N. Orientations: E along 15°W, N along 105°W meridians. Units: metre
+---------------------------------------------------------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_CS_FOR_SOUTH_POLAR_AZIMUTHAL_LONO_105_DEG_W_AXES_E_N_ORIENTATIONS_E_ALONG_15_DEG_W_N_ALONG_105_DEG_W_MERIDIANS_UOM_M)
@@ -581,10 +475,8 @@ Used for South Pole tangential and secant projections.
 
 Used for South Pole tangential and secant projections.
 
-2D CS for south polar azimuthal lonO 135°E. Axes: E,N. Orientations: E along 135°W, N along 135°E meridians. UoM: m.
------------------------------------------------------------------------------------------------------------------------
-
-
+2D CS for south polar azimuthal lonO 135°E. Axes: E,N. Orientations: E along 135°W, N along 135°E meridians. Units: metre
+----------------------------------------------------------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_CS_FOR_SOUTH_POLAR_AZIMUTHAL_LONO_135_DEG_E_AXES_E_N_ORIENTATIONS_E_ALONG_135_DEG_W_N_ALONG_135_DEG_E_MERIDIANS_UOM_M)
@@ -592,10 +484,8 @@ Used for South Pole tangential and secant projections.
 
 Used for South Pole tangential and secant projections.
 
-2D CS for south polar azimuthal lonO 135°W. Axes: E,N. Orientations: E along 45°W, N along 135°W meridians. UoM: m.
-----------------------------------------------------------------------------------------------------------------------
-
-
+2D CS for south polar azimuthal lonO 135°W. Axes: E,N. Orientations: E along 45°W, N along 135°W meridians. Units: metre
+---------------------------------------------------------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_CS_FOR_SOUTH_POLAR_AZIMUTHAL_LONO_135_DEG_W_AXES_E_N_ORIENTATIONS_E_ALONG_45_DEG_W_N_ALONG_135_DEG_W_MERIDIANS_UOM_M)
@@ -603,10 +493,8 @@ Used for South Pole tangential and secant projections.
 
 Used for South Pole tangential and secant projections.
 
-2D CS for south polar azimuthal lonO 140°E. Axes: X,Y. Orientations: X along 130°W, Y along 140°E meridians. UoM: m.
------------------------------------------------------------------------------------------------------------------------
-
-
+2D CS for south polar azimuthal lonO 140°E. Axes: X,Y. Orientations: X along 130°W, Y along 140°E meridians. Units: metre
+----------------------------------------------------------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_CS_FOR_SOUTH_POLAR_AZIMUTHAL_LONO_140_DEG_E_AXES_X_Y_ORIENTATIONS_X_ALONG_130_DEG_W_Y_ALONG_140_DEG_E_MERIDIANS_UOM_M)
@@ -614,10 +502,8 @@ Used for South Pole tangential and secant projections.
 
 Used for South Pole tangential and secant projections.
 
-2D CS for south polar azimuthal lonO 150°E. Axes: E,N. Orientations: E along 120°W, N along 150°E meridians. UoM: m.
------------------------------------------------------------------------------------------------------------------------
-
-
+2D CS for south polar azimuthal lonO 150°E. Axes: E,N. Orientations: E along 120°W, N along 150°E meridians. Units: metre
+----------------------------------------------------------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_CS_FOR_SOUTH_POLAR_AZIMUTHAL_LONO_150_DEG_E_AXES_E_N_ORIENTATIONS_E_ALONG_120_DEG_W_N_ALONG_150_DEG_E_MERIDIANS_UOM_M)
@@ -625,10 +511,8 @@ Used for South Pole tangential and secant projections.
 
 Used for South Pole tangential and secant projections.
 
-2D CS for south polar azimuthal lonO 150°W. Axes: E,N. Orientations: E along 60°W, N along 150°W meridians. UoM: m.
-----------------------------------------------------------------------------------------------------------------------
-
-
+2D CS for south polar azimuthal lonO 150°W. Axes: E,N. Orientations: E along 60°W, N along 150°W meridians. Units: metre
+---------------------------------------------------------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_CS_FOR_SOUTH_POLAR_AZIMUTHAL_LONO_150_DEG_W_AXES_E_N_ORIENTATIONS_E_ALONG_60_DEG_W_N_ALONG_150_DEG_W_MERIDIANS_UOM_M)
@@ -636,10 +520,8 @@ Used for South Pole tangential and secant projections.
 
 Used for South Pole tangential and secant projections.
 
-2D CS for south polar azimuthal lonO 15°E. Axes: E,N. Orientations: E along 105°E, N along 15°E meridians. UoM: m.
----------------------------------------------------------------------------------------------------------------------
-
-
+2D CS for south polar azimuthal lonO 15°E. Axes: E,N. Orientations: E along 105°E, N along 15°E meridians. Units: metre
+--------------------------------------------------------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_CS_FOR_SOUTH_POLAR_AZIMUTHAL_LONO_15_DEG_E_AXES_E_N_ORIENTATIONS_E_ALONG_105_DEG_E_N_ALONG_15_DEG_E_MERIDIANS_UOM_M)
@@ -647,10 +529,8 @@ Used for South Pole tangential and secant projections.
 
 Used for South Pole tangential and secant projections.
 
-2D CS for south polar azimuthal lonO 15°W. Axes: E,N. Orientations: E along 75°E, N along 15°W meridians. UoM: m.
---------------------------------------------------------------------------------------------------------------------
-
-
+2D CS for south polar azimuthal lonO 15°W. Axes: E,N. Orientations: E along 75°E, N along 15°W meridians. Units: metre
+-------------------------------------------------------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_CS_FOR_SOUTH_POLAR_AZIMUTHAL_LONO_15_DEG_W_AXES_E_N_ORIENTATIONS_E_ALONG_75_DEG_E_N_ALONG_15_DEG_W_MERIDIANS_UOM_M)
@@ -658,10 +538,8 @@ Used for South Pole tangential and secant projections.
 
 Used for South Pole tangential and secant projections.
 
-2D CS for south polar azimuthal lonO 165°E. Axes: E,N. Orientations: E along 105°W, N along 165°E meridians. UoM: m.
------------------------------------------------------------------------------------------------------------------------
-
-
+2D CS for south polar azimuthal lonO 165°E. Axes: E,N. Orientations: E along 105°W, N along 165°E meridians. Units: metre
+----------------------------------------------------------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_CS_FOR_SOUTH_POLAR_AZIMUTHAL_LONO_165_DEG_E_AXES_E_N_ORIENTATIONS_E_ALONG_105_DEG_W_N_ALONG_165_DEG_E_MERIDIANS_UOM_M)
@@ -669,10 +547,8 @@ Used for South Pole tangential and secant projections.
 
 Used for South Pole tangential and secant projections.
 
-2D CS for south polar azimuthal lonO 165°W. Axes: E,N. Orientations: E along 75°W, N along 165°W meridians. UoM: m.
-----------------------------------------------------------------------------------------------------------------------
-
-
+2D CS for south polar azimuthal lonO 165°W. Axes: E,N. Orientations: E along 75°W, N along 165°W meridians. Units: metre
+---------------------------------------------------------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_CS_FOR_SOUTH_POLAR_AZIMUTHAL_LONO_165_DEG_W_AXES_E_N_ORIENTATIONS_E_ALONG_75_DEG_W_N_ALONG_165_DEG_W_MERIDIANS_UOM_M)
@@ -680,10 +556,8 @@ Used for South Pole tangential and secant projections.
 
 Used for South Pole tangential and secant projections.
 
-2D CS for south polar azimuthal lonO 180°E. Axes: N,E. Orientations: N along 180°E, E along 90°W meridians. UoM: m.
-----------------------------------------------------------------------------------------------------------------------
-
-
+2D CS for south polar azimuthal lonO 180°E. Axes: N,E. Orientations: N along 180°E, E along 90°W meridians. Units: metre
+---------------------------------------------------------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_CS_FOR_SOUTH_POLAR_AZIMUTHAL_LONO_180_DEG_E_AXES_N_E_ORIENTATIONS_N_ALONG_180_DEG_E_E_ALONG_90_DEG_W_MERIDIANS_UOM_M)
@@ -691,10 +565,8 @@ Used for South Pole tangential and secant projections.
 
 Used for South Pole tangential and secant projections.
 
-2D CS for south polar azimuthal lonO 30°E. Axes: E,N. Orientations: E along 120°E, N along 30°Emeridians. UoM: m.
---------------------------------------------------------------------------------------------------------------------
-
-
+2D CS for south polar azimuthal lonO 30°E. Axes: E,N. Orientations: E along 120°E, N along 30°Emeridians. Units: metre
+-------------------------------------------------------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_CS_FOR_SOUTH_POLAR_AZIMUTHAL_LONO_30_DEG_E_AXES_E_N_ORIENTATIONS_E_ALONG_120_DEG_E_N_ALONG_30_DEG_EMERIDIANS_UOM_M)
@@ -702,10 +574,8 @@ Used for South Pole tangential and secant projections.
 
 Used for South Pole tangential and secant projections.
 
-2D CS for south polar azimuthal lonO 30°W. Axes: E,N. Orientations: E along 60°E, N along 30°W meridians. UoM: m.
---------------------------------------------------------------------------------------------------------------------
-
-
+2D CS for south polar azimuthal lonO 30°W. Axes: E,N. Orientations: E along 60°E, N along 30°W meridians. Units: metre
+-------------------------------------------------------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_CS_FOR_SOUTH_POLAR_AZIMUTHAL_LONO_30_DEG_W_AXES_E_N_ORIENTATIONS_E_ALONG_60_DEG_E_N_ALONG_30_DEG_W_MERIDIANS_UOM_M)
@@ -713,10 +583,8 @@ Used for South Pole tangential and secant projections.
 
 Used for South Pole tangential and secant projections.
 
-2D CS for south polar azimuthal lonO 45°E. Axes: E,N. Orientations: E along 135°E, N along 45°E meridians. UoM: m.
----------------------------------------------------------------------------------------------------------------------
-
-
+2D CS for south polar azimuthal lonO 45°E. Axes: E,N. Orientations: E along 135°E, N along 45°E meridians. Units: metre
+--------------------------------------------------------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_CS_FOR_SOUTH_POLAR_AZIMUTHAL_LONO_45_DEG_E_AXES_E_N_ORIENTATIONS_E_ALONG_135_DEG_E_N_ALONG_45_DEG_E_MERIDIANS_UOM_M)
@@ -724,10 +592,8 @@ Used for South Pole tangential and secant projections.
 
 Used for South Pole tangential and secant projections.
 
-2D CS for south polar azimuthal lonO 45°W. Axes: E,N. Orientations: E along 45°E, N along 45°W meridians. UoM: m.
---------------------------------------------------------------------------------------------------------------------
-
-
+2D CS for south polar azimuthal lonO 45°W. Axes: E,N. Orientations: E along 45°E, N along 45°W meridians. Units: metre
+-------------------------------------------------------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_CS_FOR_SOUTH_POLAR_AZIMUTHAL_LONO_45_DEG_W_AXES_E_N_ORIENTATIONS_E_ALONG_45_DEG_E_N_ALONG_45_DEG_W_MERIDIANS_UOM_M)
@@ -735,10 +601,8 @@ Used for South Pole tangential and secant projections.
 
 Used for South Pole tangential and secant projections.
 
-2D CS for south polar azimuthal lonO 70°E. Axes: E,N. Orientations: E along 160°E, N along 70°E meridians. UoM: m.
----------------------------------------------------------------------------------------------------------------------
-
-
+2D CS for south polar azimuthal lonO 70°E. Axes: E,N. Orientations: E along 160°E, N along 70°E meridians. Units: metre
+--------------------------------------------------------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_CS_FOR_SOUTH_POLAR_AZIMUTHAL_LONO_70_DEG_E_AXES_E_N_ORIENTATIONS_E_ALONG_160_DEG_E_N_ALONG_70_DEG_E_MERIDIANS_UOM_M)
@@ -746,10 +610,8 @@ Used for South Pole tangential and secant projections.
 
 Used for South Pole tangential and secant projections.
 
-2D CS for south polar azimuthal lonO 75°E. Axes: E,N. Orientations: E along 165°E, N along 75°E meridians. UoM: m.
----------------------------------------------------------------------------------------------------------------------
-
-
+2D CS for south polar azimuthal lonO 75°E. Axes: E,N. Orientations: E along 165°E, N along 75°E meridians. Units: metre
+--------------------------------------------------------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_CS_FOR_SOUTH_POLAR_AZIMUTHAL_LONO_75_DEG_E_AXES_E_N_ORIENTATIONS_E_ALONG_165_DEG_E_N_ALONG_75_DEG_E_MERIDIANS_UOM_M)
@@ -757,10 +619,8 @@ Used for South Pole tangential and secant projections.
 
 Used for South Pole tangential and secant projections.
 
-2D CS for south polar azimuthal lonO 75°W. Axes: E,N. Orientations: E along 15°E, N along 75°W meridians. UoM: m.
---------------------------------------------------------------------------------------------------------------------
-
-
+2D CS for south polar azimuthal lonO 75°W. Axes: E,N. Orientations: E along 15°E, N along 75°W meridians. Units: metre
+-------------------------------------------------------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_CS_FOR_SOUTH_POLAR_AZIMUTHAL_LONO_75_DEG_W_AXES_E_N_ORIENTATIONS_E_ALONG_15_DEG_E_N_ALONG_75_DEG_W_MERIDIANS_UOM_M)
@@ -768,10 +628,8 @@ Used for South Pole tangential and secant projections.
 
 Used for South Pole tangential and secant projections.
 
-2D CS for south polar azimuthal lonO 90°E. Axes: E,N. Orientations: E along 180°E, N along 90°E meridians. UoM: m.
----------------------------------------------------------------------------------------------------------------------
-
-
+2D CS for south polar azimuthal lonO 90°E. Axes: E,N. Orientations: E along 180°E, N along 90°E meridians. Units: metre
+--------------------------------------------------------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_CS_FOR_SOUTH_POLAR_AZIMUTHAL_LONO_90_DEG_E_AXES_E_N_ORIENTATIONS_E_ALONG_180_DEG_E_N_ALONG_90_DEG_E_MERIDIANS_UOM_M)
@@ -779,10 +637,8 @@ Used for South Pole tangential and secant projections.
 
 Used for South Pole tangential and secant projections.
 
-2D CS for south polar azimuthal lonO 90°W. Axes: E,N. Orientations: E along 0°E, N along 90°W meridians. UoM: m.
--------------------------------------------------------------------------------------------------------------------
-
-
+2D CS for south polar azimuthal lonO 90°W. Axes: E,N. Orientations: E along 0°E, N along 90°W meridians. Units: metre
+------------------------------------------------------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_2D_CS_FOR_SOUTH_POLAR_AZIMUTHAL_LONO_90_DEG_W_AXES_E_N_ORIENTATIONS_E_ALONG_0_DEG_E_N_ALONG_90_DEG_W_MERIDIANS_UOM_M)
@@ -790,10 +646,8 @@ Used for South Pole tangential and secant projections.
 
 Used for South Pole tangential and secant projections.
 
-3D CS (geocentric). Axes: geocentric X Y Z. Orientations: X and Y in equatorial plane, X positive through intersection with prime meridian, Y through 0°N 90°E. Z axis parallel to mean earth rotation axis and positive towards North Pole. UoM: m.
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
+3D CS (geocentric). Axes: geocentric X Y Z. Orientations: X and Y in equatorial plane, X positive through intersection with prime meridian, Y through 0°N 90°E. Z axis parallel to mean earth rotation axis and positive towards North Pole. Units: metre
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_3D_CS_GEOCENTRIC_AXES_GEOCENTRIC_X_Y_Z_ORIENTATIONS_X_AND_Y_IN_EQUATORIAL_PLANE_X_POSITIVE_THROUGH_INTERSECTION_WITH_PRIME_MERIDIAN_Y_THROUGH_0_DEG_N_90_DEG_E_Z_AXIS_PARALLEL_TO_MEAN_EARTH_ROTATION_AXIS_AND_POSITIVE_TOWARDS_NORTH_POLE_UOM_M)
@@ -801,10 +655,8 @@ Used for South Pole tangential and secant projections.
 
 Earth-centred, Earth-fixed (ECEF) right-handed Cartesian 3D CS, used in geocentric coordinate reference systems.
 
-Affine 3D Axes: northing, easting, ellipsoidal height (X,Y,h). Orientations: north, east, up. UoM: m.
------------------------------------------------------------------------------------------------------
-
-
+Affine 3D Axes: northing, easting, ellipsoidal height (X,Y,h). Orientations: north, east, up. Units: metre
+----------------------------------------------------------------------------------------------------------
 .. code-block:: php
 
     Cartesian::fromSRID(Cartesian::EPSG_AFFINE_3D_AXES_NORTHING_EASTING_ELLIPSOIDAL_HEIGHT_X_Y_H_ORIENTATIONS_NORTH_EAST_UP_UOM_M)

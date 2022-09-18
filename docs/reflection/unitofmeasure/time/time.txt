@@ -1,7 +1,5 @@
 Year
 ----
-
-
 .. code-block:: php
 
     Time::makeUnit($measurement, Time::EPSG_YEAR)

@@ -1,0 +1,1270 @@
+Abridged Molodensky
+-------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_ABRIDGED_MOLODENSKY
+    'urn:ogc:def:method:EPSG::9605'
+
+This transformation is a truncated Taylor series expansion of a transformation between two geographic coordinate systems, modelled as a set of geocentric translations.
+
+Affine geometric transformation
+-------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_AFFINE_GEOMETRIC_TRANSFORMATION
+    'urn:ogc:def:method:EPSG::9623'
+
+
+Affine parametric transformation
+--------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_AFFINE_PARAMETRIC_TRANSFORMATION
+    'urn:ogc:def:method:EPSG::9624'
+
+
+Albers Equal Area
+-----------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_ALBERS_EQUAL_AREA
+    'urn:ogc:def:method:EPSG::9822'
+
+
+Alias
+-----
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_ALIAS
+    'urn:ogc:def:method:EPSG::32768'
+
+
+American Polyconic
+------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_AMERICAN_POLYCONIC
+    'urn:ogc:def:method:EPSG::9818'
+
+See information source for formula and example.
+
+Axis Order Reversal (2D)
+------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_AXIS_ORDER_REVERSAL_2D
+    'urn:ogc:def:method:EPSG::9843'
+
+This is a parameter-less conversion to reverse the order of the axes of a 2D CRS.
+
+Axis Order Reversal (Geographic3D horizontal)
+---------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_AXIS_ORDER_REVERSAL_GEOGRAPHIC3D_HORIZONTAL
+    'urn:ogc:def:method:EPSG::9844'
+
+This is a parameter-less conversion to change the order of horizontal coordinates of a geographic 3D CRS.
+
+Bonne
+-----
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_BONNE
+    'urn:ogc:def:method:EPSG::9827'
+
+
+Bonne (South Orientated)
+------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_BONNE_SOUTH_ORIENTATED
+    'urn:ogc:def:method:EPSG::9828'
+
+
+Cartesian Grid Offsets
+----------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_CARTESIAN_GRID_OFFSETS
+    'urn:ogc:def:method:EPSG::9656'
+
+This transformation allows calculation of coordinates in the target system by adding the parameter value to the coordinate values of the point in the source system.
+
+Cassini-Soldner
+---------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_CASSINI_SOLDNER
+    'urn:ogc:def:method:EPSG::9806'
+
+
+Change of Vertical Unit
+-----------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_CHANGE_OF_VERTICAL_UNIT
+    'urn:ogc:def:method:EPSG::1104'
+
+
+Colombia Urban
+--------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_COLOMBIA_URBAN
+    'urn:ogc:def:method:EPSG::1052'
+
+
+Complex polynomial of degree 3
+------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_COMPLEX_POLYNOMIAL_OF_DEGREE_3
+    'urn:ogc:def:method:EPSG::9652'
+
+Coordinate pairs treated as complex numbers.  This exploits the correlation between the polynomial coefficients and leads to a smaller number of coefficients than the general polynomial of degree 3.
+
+Complex polynomial of degree 4
+------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_COMPLEX_POLYNOMIAL_OF_DEGREE_4
+    'urn:ogc:def:method:EPSG::9653'
+
+Coordinate pairs treated as complex numbers.  This exploits the correlation between the polynomial coefficients and leads to a smaller number of coefficients than the general polynomial of degree 4.
+
+Coordinate Frame rotation (geocentric domain)
+---------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_COORDINATE_FRAME_ROTATION_GEOCENTRIC_DOMAIN
+    'urn:ogc:def:method:EPSG::1032'
+
+This method is a specific case of the Molodensky-Badekas (CF) method (code 1034) in which the evaluation point is at the geocentre with coordinate values of zero. Note the analogy with the Position Vector method (code 1033) but beware of the differences!
+
+Coordinate Frame rotation (geog2D domain)
+-----------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_COORDINATE_FRAME_ROTATION_GEOG2D_DOMAIN
+    'urn:ogc:def:method:EPSG::9607'
+
+Note the analogy with the Position Vector tfm (code 9606) but beware of the differences!  The Position Vector convention is used by IAG and recommended by ISO 19111. See methods 1032 and 1038 for similar tfms operating between other CRS types.
+
+Coordinate Frame rotation (geog3D domain)
+-----------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_COORDINATE_FRAME_ROTATION_GEOG3D_DOMAIN
+    'urn:ogc:def:method:EPSG::1038'
+
+Note the analogy with the Position Vector tfm (code 1037) but beware of the differences!  The Position Vector convention is used by IAG and recommended by ISO 19111. See methods 1032 and 9607 for similar tfms operating between other CRS types.
+
+Equal Earth
+-----------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_EQUAL_EARTH
+    'urn:ogc:def:method:EPSG::1078'
+
+
+Equidistant Cylindrical
+-----------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_EQUIDISTANT_CYLINDRICAL
+    'urn:ogc:def:method:EPSG::1028'
+
+See method code 1029 for spherical development. See also Pseudo Plate Carree, method code 9825.
+
+Equidistant Cylindrical (Spherical)
+-----------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_EQUIDISTANT_CYLINDRICAL_SPHERICAL
+    'urn:ogc:def:method:EPSG::1029'
+
+See method code 1028 for ellipsoidal development. If the latitude of natural origin is at the equator, also known as Plate Carrée. See also Pseudo Plate Carree, method code 9825.
+
+General polynomial of degree 2
+------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GENERAL_POLYNOMIAL_OF_DEGREE_2
+    'urn:ogc:def:method:EPSG::9645'
+
+
+General polynomial of degree 3
+------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GENERAL_POLYNOMIAL_OF_DEGREE_3
+    'urn:ogc:def:method:EPSG::9646'
+
+
+General polynomial of degree 4
+------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GENERAL_POLYNOMIAL_OF_DEGREE_4
+    'urn:ogc:def:method:EPSG::9647'
+
+
+General polynomial of degree 6
+------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GENERAL_POLYNOMIAL_OF_DEGREE_6
+    'urn:ogc:def:method:EPSG::9648'
+
+
+Geocentric translation by Grid Interpolation (IGN)
+--------------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOCENTRIC_TRANSLATION_BY_GRID_INTERPOLATION_IGN
+    'urn:ogc:def:method:EPSG::1087'
+
+
+Geocentric translations (geocentric domain)
+-------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOCENTRIC_TRANSLATIONS_GEOCENTRIC_DOMAIN
+    'urn:ogc:def:method:EPSG::1031'
+
+This method allows calculation of geocentric coords in the target system by adding the parameter values to the corresponding coordinates of the point in the source system. See methods 1035 and 9603 for similar tfms operating between other CRSs types.
+
+Geocentric translations (geog2D domain)
+---------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOCENTRIC_TRANSLATIONS_GEOG2D_DOMAIN
+    'urn:ogc:def:method:EPSG::9603'
+
+See methods 1031 and 1035 for similar tfms operating between other CRSs types.
+
+Geocentric translations (geog3D domain)
+---------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOCENTRIC_TRANSLATIONS_GEOG3D_DOMAIN
+    'urn:ogc:def:method:EPSG::1035'
+
+See methods 1031 and 9603 for similar tfms operating between other CRSs types.
+
+Geocentric/topocentric conversions
+----------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOCENTRIC_TOPOCENTRIC_CONVERSIONS
+    'urn:ogc:def:method:EPSG::9836'
+
+
+Geog3D to Geog2D+Depth (Gravsoft)
+---------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOG3D_TO_GEOG2D_PLUS_DEPTH_GRAVSOFT
+    'urn:ogc:def:method:EPSG::1110'
+
+
+Geog3D to Geog2D+GravityRelatedHeight (AUSGeoidv2)
+--------------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_AUSGEOIDV2
+    'urn:ogc:def:method:EPSG::1083'
+
+
+Geog3D to Geog2D+GravityRelatedHeight (BEV AT)
+----------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_BEV_AT
+    'urn:ogc:def:method:EPSG::1089'
+
+
+Geog3D to Geog2D+GravityRelatedHeight (EGM2008)
+-----------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_EGM2008
+    'urn:ogc:def:method:EPSG::1092'
+
+
+Geog3D to Geog2D+GravityRelatedHeight (Gravsoft)
+------------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_GRAVSOFT
+    'urn:ogc:def:method:EPSG::1093'
+
+
+Geog3D to Geog2D+GravityRelatedHeight (IGN2009)
+-----------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_IGN2009
+    'urn:ogc:def:method:EPSG::1095'
+
+
+Geog3D to Geog2D+GravityRelatedHeight (ITAL2005)
+------------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_ITAL2005
+    'urn:ogc:def:method:EPSG::1105'
+
+
+Geog3D to Geog2D+GravityRelatedHeight (NRCan byn)
+-------------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_NRCAN_BYN
+    'urn:ogc:def:method:EPSG::1090'
+
+For consistency with earlier models the Information Source references software which uses bi-quadratic interpolation of the grid. Bi-linear interpolation will give results agreeing to within 1cm 99.97% of the time. See Info Source for file format doc.
+
+Geog3D to Geog2D+GravityRelatedHeight (OSGM-GB)
+-----------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_OSGM_GB
+    'urn:ogc:def:method:EPSG::1097'
+
+
+Geog3D to Geog2D+GravityRelatedHeight (OSGM15-Ire)
+--------------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_OSGM15_IRE
+    'urn:ogc:def:method:EPSG::1096'
+
+
+Geog3D to Geog2D+GravityRelatedHeight (PL txt)
+----------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_PL_TXT
+    'urn:ogc:def:method:EPSG::1100'
+
+
+Geog3D to Geog2D+GravityRelatedHeight (gtx)
+-------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_GTX
+    'urn:ogc:def:method:EPSG::1088'
+
+
+Geog3D to Geog2D+GravityRelatedHeight (txt)
+-------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_TXT
+    'urn:ogc:def:method:EPSG::1098'
+
+File format: space-separated ascii file, no header, one record per line, each record with 3 columns: latitude, longitude, separation.
+
+Geographic/geocentric conversions
+---------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOGRAPHIC_GEOCENTRIC_CONVERSIONS
+    'urn:ogc:def:method:EPSG::9602'
+
+This is a parameter-less conversion. In applications it is often concatenated with the 3- 7- or 10-parameter transformations 9603, 9606, 9607 or 9636 to form a geographic to geographic transformation.
+
+Geographic/topocentric conversions
+----------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOGRAPHIC_TOPOCENTRIC_CONVERSIONS
+    'urn:ogc:def:method:EPSG::9837'
+
+
+Geographic2D offsets
+--------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOGRAPHIC2D_OFFSETS
+    'urn:ogc:def:method:EPSG::9619'
+
+This transformation allows calculation of coordinates in the target system by adding the parameter value to the coordinate values of the point in the source system.
+
+Geographic2D with Height Offsets
+--------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOGRAPHIC2D_WITH_HEIGHT_OFFSETS
+    'urn:ogc:def:method:EPSG::9618'
+
+This transformation allows calculation of coordinates in the target system by adding the parameter value to the coordinate values of the point in the source system.
+
+Geographic3D offsets
+--------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOGRAPHIC3D_OFFSETS
+    'urn:ogc:def:method:EPSG::9660'
+
+This transformation allows calculation of coordinates in the target system by adding the parameter value to the coordinate values of the point in the source system.
+
+Geographic3D to 2D conversion
+-----------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOGRAPHIC3D_TO_2D_CONVERSION
+    'urn:ogc:def:method:EPSG::9659'
+
+This is a parameter-less conversion.
+
+Geographic3D to Depth (Gravsoft)
+--------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOGRAPHIC3D_TO_DEPTH_GRAVSOFT
+    'urn:ogc:def:method:EPSG::1109'
+
+Transformation of the vertical component of a Geographic 3D CRS to a Vertical CRS.
+
+Geographic3D to GravityRelatedHeight (AUSGeoid v2)
+--------------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_AUSGEOID_V2
+    'urn:ogc:def:method:EPSG::1048'
+
+The Information Source references software which offers both bi-cubic and bi-linear interpolation methods. Unlike earlier AUSGeoid98 method which used bi-linear interpolation, Ausgeoid v2 uses bi-cubic. See Info Source for file format documentation.
+
+Geographic3D to GravityRelatedHeight (BEV AT)
+---------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_BEV_AT
+    'urn:ogc:def:method:EPSG::1081'
+
+
+Geographic3D to GravityRelatedHeight (EGM2008)
+----------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_EGM2008
+    'urn:ogc:def:method:EPSG::1025'
+
+For earlier EGM84 and EGM96 models see Geographic3D to GravityRelatedHeight (EGM), method code 9661.
+
+Geographic3D to GravityRelatedHeight (Gravsoft)
+-----------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_GRAVSOFT
+    'urn:ogc:def:method:EPSG::1047'
+
+
+Geographic3D to GravityRelatedHeight (IGN2009)
+----------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_IGN2009
+    'urn:ogc:def:method:EPSG::1073'
+
+Transformation of the vertical component of a Geographic 3D CRS to a Vertical CRS. File header of method code 9664  (4 lines) has changed in this method (1 line);  recommended interpolation method now in a separate XML file with same name as the grid.
+
+Geographic3D to GravityRelatedHeight (ITAL2005)
+-----------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_ITAL2005
+    'urn:ogc:def:method:EPSG::1106'
+
+
+Geographic3D to GravityRelatedHeight (NRCan byn)
+------------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_NRCAN_BYN
+    'urn:ogc:def:method:EPSG::1060'
+
+For consistency with earlier models the Information Source references software which uses bi-quadratic interpolation of the grid. Bi-linear interpolation will give results agreeing to within 1cm 99.97% of the time. See Info Source for file format doc.
+
+Geographic3D to GravityRelatedHeight (NZgeoid)
+----------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_NZGEOID
+    'urn:ogc:def:method:EPSG::1030'
+
+EPSG initially gave this method the name "Geographic3D to GravityRelatedHeight (NZgeoid2009)". As the same file format was retained for the 2016 geoid, date removed from the method name.
+
+Geographic3D to GravityRelatedHeight (OSGM-GB)
+----------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_OSGM_GB
+    'urn:ogc:def:method:EPSG::9663'
+
+Transformation of the vertical component of a Geographic 3D CRS to a Vertical CRS.
+
+Geographic3D to GravityRelatedHeight (OSGM15-Ire)
+-------------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_OSGM15_IRE
+    'urn:ogc:def:method:EPSG::1072'
+
+Transformation of the vertical component of a Geographic 3D CRS to a Vertical CRS.
+
+Geographic3D to GravityRelatedHeight (PL txt)
+---------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_PL_TXT
+    'urn:ogc:def:method:EPSG::1099'
+
+
+Geographic3D to GravityRelatedHeight (PNG)
+------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_PNG
+    'urn:ogc:def:method:EPSG::1059'
+
+Transformation of the vertical component of a Geographic 3D CRS to a Vertical CRS.
+
+Geographic3D to GravityRelatedHeight (gtx)
+------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_GTX
+    'urn:ogc:def:method:EPSG::9665'
+
+Transformation of the vertical component of a Geographic 3D CRS to a Vertical CRS. Grid file format: US NGS .gtx (in US sometimes also referred to as 'vdatum format').
+
+Geographic3D to GravityRelatedHeight (txt)
+------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_TXT
+    'urn:ogc:def:method:EPSG::1082'
+
+File format: space-separated ascii file, no header, one record per line, each record with 3 columns: latitude, longitude, separation.
+
+Guam Projection
+---------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GUAM_PROJECTION
+    'urn:ogc:def:method:EPSG::9831'
+
+Simplified form of Oblique Azimuthal Equidistant projection method.
+
+Height Depth Reversal
+---------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_HEIGHT_DEPTH_REVERSAL
+    'urn:ogc:def:method:EPSG::1068'
+
+This is a parameter-less conversion.
+
+Hotine Oblique Mercator (variant A)
+-----------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_HOTINE_OBLIQUE_MERCATOR_VARIANT_A
+    'urn:ogc:def:method:EPSG::9812'
+
+
+Hotine Oblique Mercator (variant B)
+-----------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_HOTINE_OBLIQUE_MERCATOR_VARIANT_B
+    'urn:ogc:def:method:EPSG::9815'
+
+
+Hyperbolic Cassini-Soldner
+--------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_HYPERBOLIC_CASSINI_SOLDNER
+    'urn:ogc:def:method:EPSG::9833'
+
+
+Krovak
+------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_KROVAK
+    'urn:ogc:def:method:EPSG::9819'
+
+
+Krovak (North Orientated)
+-------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_KROVAK_NORTH_ORIENTATED
+    'urn:ogc:def:method:EPSG::1041'
+
+
+Krovak Modified
+---------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_KROVAK_MODIFIED
+    'urn:ogc:def:method:EPSG::1042'
+
+Incorporates a polynomial transformation which is defined to be exact and for practical purposes is considered to be a map projection.
+
+Krovak Modified (North Orientated)
+----------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_KROVAK_MODIFIED_NORTH_ORIENTATED
+    'urn:ogc:def:method:EPSG::1043'
+
+Incorporates a polynomial transformation which is defined to be exact and for practical purposes is considered to be a map projection.
+
+Laborde Oblique Mercator
+------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_LABORDE_OBLIQUE_MERCATOR
+    'urn:ogc:def:method:EPSG::9813'
+
+
+Lambert Azimuthal Equal Area
+----------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_LAMBERT_AZIMUTHAL_EQUAL_AREA
+    'urn:ogc:def:method:EPSG::9820'
+
+This is the ellipsoidal form of the projection.
+
+Lambert Azimuthal Equal Area (Spherical)
+----------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_LAMBERT_AZIMUTHAL_EQUAL_AREA_SPHERICAL
+    'urn:ogc:def:method:EPSG::1027'
+
+This is the spherical form of the projection.  See coordinate operation method Lambert Azimuthal Equal Area (code 9820) for ellipsoidal form.  Differences of several tens of metres result from comparison of the two methods.
+
+Lambert Conic Conformal (1SP variant B)
+---------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_LAMBERT_CONIC_CONFORMAL_1SP_VARIANT_B
+    'urn:ogc:def:method:EPSG::1102'
+
+
+Lambert Conic Conformal (1SP)
+-----------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_LAMBERT_CONIC_CONFORMAL_1SP
+    'urn:ogc:def:method:EPSG::9801'
+
+
+Lambert Conic Conformal (2SP Belgium)
+-------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_LAMBERT_CONIC_CONFORMAL_2SP_BELGIUM
+    'urn:ogc:def:method:EPSG::9803'
+
+In 2000 this modification was replaced through use of the regular Lambert Conic Conformal (2SP) method [9802] with appropriately modified parameter values.
+
+Lambert Conic Conformal (2SP Michigan)
+--------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_LAMBERT_CONIC_CONFORMAL_2SP_MICHIGAN
+    'urn:ogc:def:method:EPSG::1051'
+
+
+Lambert Conic Conformal (2SP)
+-----------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_LAMBERT_CONIC_CONFORMAL_2SP
+    'urn:ogc:def:method:EPSG::9802'
+
+
+Lambert Conic Conformal (West Orientated)
+-----------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_LAMBERT_CONIC_CONFORMAL_WEST_ORIENTATED
+    'urn:ogc:def:method:EPSG::9826'
+
+
+Lambert Conic Near-Conformal
+----------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_LAMBERT_CONIC_NEAR_CONFORMAL
+    'urn:ogc:def:method:EPSG::9817'
+
+The Lambert Near-Conformal projection is derived from the Lambert Conformal Conic projection by truncating the series expansion of the projection formulae.
+
+Lambert Cylindrical Equal Area
+------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_LAMBERT_CYLINDRICAL_EQUAL_AREA
+    'urn:ogc:def:method:EPSG::9835'
+
+This is the ellipsoidal form of the projection.
+
+Lambert Cylindrical Equal Area (Spherical)
+------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_LAMBERT_CYLINDRICAL_EQUAL_AREA_SPHERICAL
+    'urn:ogc:def:method:EPSG::9834'
+
+This is the spherical form of the projection.  See coordinate operation method Lambert Cylindrical Equal Area (code 9835) for ellipsoidal form.  Differences of several tens of metres result from comparison of the two methods.
+
+Longitude rotation
+------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_LONGITUDE_ROTATION
+    'urn:ogc:def:method:EPSG::9601'
+
+This transformation allows calculation of the longitude of a point in the target system by adding the parameter value to the longitude value of the point in the source system.
+
+Madrid to ED50 polynomial
+-------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_MADRID_TO_ED50_POLYNOMIAL
+    'urn:ogc:def:method:EPSG::9617'
+
+
+Mercator (Spherical)
+--------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_MERCATOR_SPHERICAL
+    'urn:ogc:def:method:EPSG::1026'
+
+
+Mercator (variant A)
+--------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_MERCATOR_VARIANT_A
+    'urn:ogc:def:method:EPSG::9804'
+
+Note that in these formulas the parameter latitude of natural origin (latO) is not used. However for this Mercator (variant A) method the EPSG dataset includes this parameter, which must have a value of zero, for completeness in CRS labelling.
+
+Mercator (variant B)
+--------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_MERCATOR_VARIANT_B
+    'urn:ogc:def:method:EPSG::9805'
+
+Used for most nautical charts.
+
+Mercator (variant C)
+--------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_MERCATOR_VARIANT_C
+    'urn:ogc:def:method:EPSG::1108'
+
+
+Modified Azimuthal Equidistant
+------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_MODIFIED_AZIMUTHAL_EQUIDISTANT
+    'urn:ogc:def:method:EPSG::9832'
+
+Modified form of Oblique Azimuthal Equidistant projection method developed for Polynesian islands. For the distances over which these projections are used (under 800km) this modification introduces no significant error.
+
+Molodensky
+----------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_MOLODENSKY
+    'urn:ogc:def:method:EPSG::9604'
+
+See Abridged Molodensky.
+
+Molodensky-Badekas (CF geocentric domain)
+-----------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_MOLODENSKY_BADEKAS_CF_GEOCENTRIC_DOMAIN
+    'urn:ogc:def:method:EPSG::1034'
+
+See method codes 1039 and 9636 for this operation in other coordinate domains and method code 1061 for opposite rotation convention in geocentric domain.
+
+Molodensky-Badekas (CF geog2D domain)
+-------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_MOLODENSKY_BADEKAS_CF_GEOG2D_DOMAIN
+    'urn:ogc:def:method:EPSG::9636'
+
+See method codes 1034 and 1039 for this operation in other coordinate domains and method code 1063 for the opposite rotation convention in geographic 2D domain.
+
+Molodensky-Badekas (CF geog3D domain)
+-------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_MOLODENSKY_BADEKAS_CF_GEOG3D_DOMAIN
+    'urn:ogc:def:method:EPSG::1039'
+
+See method codes 1034 and 9636 for this operation in other coordinate domains and method code 1062 for opposite rotation convention in geographic 3D domain.
+
+Molodensky-Badekas (PV geocentric domain)
+-----------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_MOLODENSKY_BADEKAS_PV_GEOCENTRIC_DOMAIN
+    'urn:ogc:def:method:EPSG::1061'
+
+See method codes 1062 and 1063 for this operation in other coordinate domains and method code 1034 for opposite rotation convention in geocentric domain.
+
+Molodensky-Badekas (PV geog2D domain)
+-------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_MOLODENSKY_BADEKAS_PV_GEOG2D_DOMAIN
+    'urn:ogc:def:method:EPSG::1063'
+
+See method codes 1061 and 1062 for this operation in other coordinate domains and method code 9636 for opposite rotation in geographic 2D domain.
+
+Molodensky-Badekas (PV geog3D domain)
+-------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_MOLODENSKY_BADEKAS_PV_GEOG3D_DOMAIN
+    'urn:ogc:def:method:EPSG::1062'
+
+See method codes 1061 and 1063 for this operation in other coordinate domains and method code 1039 for opposite rotation convention in geographic 3D domain.
+
+NADCON5 (2D)
+------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_NADCON5_2D
+    'urn:ogc:def:method:EPSG::1074'
+
+Geodetic transformation operating on geographic coordinate differences by bi-quadratic interpolation.  Input expects longitudes to be positive east in range 0-360° (0° = Greenwich).
+
+NADCON5 (3D)
+------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_NADCON5_3D
+    'urn:ogc:def:method:EPSG::1075'
+
+Geodetic transformation operating on geographic coordinate differences by bi-quadratic interpolation.  Input expects longitudes to be positive east in range 0-360° (0° = Greenwich).
+
+NTv2
+----
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_NTV2
+    'urn:ogc:def:method:EPSG::9615'
+
+Geodetic transformation operating on geographic coordinate differences by bi-linear interpolation.  Supersedes  NTv1 (transformation method code 9614).  Input expects longitudes to be positive west.
+
+New Zealand Map Grid
+--------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_NEW_ZEALAND_MAP_GRID
+    'urn:ogc:def:method:EPSG::9811'
+
+
+Oblique Stereographic
+---------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_OBLIQUE_STEREOGRAPHIC
+    'urn:ogc:def:method:EPSG::9809'
+
+This is not the same as the projection method of the same name in USGS Professional Paper no. 1395, "Map Projections - A Working Manual" by John P. Snyder.
+
+Ordnance Survey National Transformation
+---------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_ORDNANCE_SURVEY_NATIONAL_TRANSFORMATION
+    'urn:ogc:def:method:EPSG::9633'
+
+Geodetic transformation between ETRS89 (or WGS 84) and OSGB36 / National Grid.  Uses ETRS89 / National Grid as an intermediate coordinate system for bi-linear interpolation of gridded grid coordinate differences.
+
+Orthographic
+------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_ORTHOGRAPHIC
+    'urn:ogc:def:method:EPSG::9840'
+
+If the natural origin of the projection is at the topocentric origin, this is a special case of the Vertical Perspective (orthographic case) (method code 9839) in which the ellipsoid height of all mapped points is zero (h = 0).
+
+Point motion (ellipsoidal)
+--------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_POINT_MOTION_ELLIPSOIDAL
+    'urn:ogc:def:method:EPSG::1067'
+
+
+Point motion (geocen) by grid (INADEFORM)
+-----------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_POINT_MOTION_GEOCEN_BY_GRID_INADEFORM
+    'urn:ogc:def:method:EPSG::1086'
+
+
+Point motion (geocentric Cartesian)
+-----------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_POINT_MOTION_GEOCENTRIC_CARTESIAN
+    'urn:ogc:def:method:EPSG::1064'
+
+
+Polar Stereographic (variant A)
+-------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_POLAR_STEREOGRAPHIC_VARIANT_A
+    'urn:ogc:def:method:EPSG::9810'
+
+Latitude of natural origin must be either 90 degrees or -90 degrees (or equivalent in alternative angle unit).
+
+Polar Stereographic (variant B)
+-------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_POLAR_STEREOGRAPHIC_VARIANT_B
+    'urn:ogc:def:method:EPSG::9829'
+
+
+Polar Stereographic (variant C)
+-------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_POLAR_STEREOGRAPHIC_VARIANT_C
+    'urn:ogc:def:method:EPSG::9830'
+
+
+Popular Visualisation Pseudo Mercator
+-------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_POPULAR_VISUALISATION_PSEUDO_MERCATOR
+    'urn:ogc:def:method:EPSG::1024'
+
+Applies spherical formulas to the ellipsoid. As such does not have the properties of a true Mercator projection.
+
+Position Vector transformation (geocentric domain)
+--------------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_POSITION_VECTOR_TRANSFORMATION_GEOCENTRIC_DOMAIN
+    'urn:ogc:def:method:EPSG::1033'
+
+This method is a specific case of the Molodensky-Badekas (PV) method (code 1061) in which the evaluation point is the geocentre with coordinate values of zero. Note the analogy with the Coordinate Frame method (code 1032) but beware of the differences!
+
+Position Vector transformation (geog2D domain)
+----------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_POSITION_VECTOR_TRANSFORMATION_GEOG2D_DOMAIN
+    'urn:ogc:def:method:EPSG::9606'
+
+Note the analogy with the Coordinate Frame rotation (code 9607) but beware of the differences!  The Position Vector convention is used by IAG and recommended by ISO 19111. See methods 1033 and 1037 for similar tfms operating between other CRS types.
+
+Position Vector transformation (geog3D domain)
+----------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_POSITION_VECTOR_TRANSFORMATION_GEOG3D_DOMAIN
+    'urn:ogc:def:method:EPSG::1037'
+
+Note the analogy with the Coordinate Frame rotation (code 1038) but beware of the differences!  The Position Vector convention is used by IAG and recommended by ISO 19111. See methods 1033 and 9606 for similar tfms operating between other CRS types.
+
+Pseudo Plate Carree
+-------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_PSEUDO_PLATE_CARREE
+    'urn:ogc:def:method:EPSG::9825'
+
+Used only for depiction of graticule (latitude/longitude) coordinates on a computer display. The axes units are decimal degrees and of variable scale. The origin is at Lat = 0, Long = 0. See Equidistant Cylindrical, code 1029, for proper Plate Carrée.
+
+Reversible polynomial of degree 13
+----------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_REVERSIBLE_POLYNOMIAL_OF_DEGREE_13
+    'urn:ogc:def:method:EPSG::9654'
+
+
+Reversible polynomial of degree 2
+---------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_REVERSIBLE_POLYNOMIAL_OF_DEGREE_2
+    'urn:ogc:def:method:EPSG::9649'
+
+Reversibility is subject to constraints.  See Guidance Note 7 for conditions and clarification.
+
+Reversible polynomial of degree 3
+---------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_REVERSIBLE_POLYNOMIAL_OF_DEGREE_3
+    'urn:ogc:def:method:EPSG::9650'
+
+Reversibility is subject to constraints.  See Guidance Note 7 for conditions and clarification.
+
+Reversible polynomial of degree 4
+---------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_REVERSIBLE_POLYNOMIAL_OF_DEGREE_4
+    'urn:ogc:def:method:EPSG::9651'
+
+Reversibility is subject to constraints.  See Guidance Note 7 for conditions and clarification.
+
+Similarity transformation
+-------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_SIMILARITY_TRANSFORMATION
+    'urn:ogc:def:method:EPSG::9621'
+
+Defined for two-dimensional coordinate systems.
+
+Swiss Oblique Cylindrical
+-------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_SWISS_OBLIQUE_CYLINDRICAL
+    'urn:ogc:def:method:EPSG::9814'
+
+Can be accommodated by Oblique Mercator method (code 9815), for which this method is an approximation (see BfL document swissprojectionen.pdf at www.swisstopo.com).
+
+Time-dependent Coordinate Frame rotation (geocen)
+-------------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_TIME_DEPENDENT_COORDINATE_FRAME_ROTATION_GEOCEN
+    'urn:ogc:def:method:EPSG::1056'
+
+Note the analogy with the Time-dependent Position Vector transformation (code 1053) but beware of the differences!  The Position Vector convention is used by IAG. See method codes 1057 and 1058 for similar methods operating between other CRS types.
+
+Time-dependent Coordinate Frame rotation (geog2D)
+-------------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_TIME_DEPENDENT_COORDINATE_FRAME_ROTATION_GEOG2D
+    'urn:ogc:def:method:EPSG::1057'
+
+Note the analogy with the Time-dependent Position Vector transformation (code 1054) but beware of the differences!  The Position Vector convention is used by IAG. See methods 1056 and 1058 for similar tfms operating between other CRS types.
+
+Time-dependent Coordinate Frame rotation (geog3D)
+-------------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_TIME_DEPENDENT_COORDINATE_FRAME_ROTATION_GEOG3D
+    'urn:ogc:def:method:EPSG::1058'
+
+Note the analogy with the Time-dependent Position Vector transformation (code 1055) but beware of the differences!  The Position Vector convention is used by IAG. See method codes 1056 and 1057 for similar methods operating between other CRS types.
+
+Time-dependent Position Vector tfm (geocentric)
+-----------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_TIME_DEPENDENT_POSITION_VECTOR_TFM_GEOCENTRIC
+    'urn:ogc:def:method:EPSG::1053'
+
+Note the analogy with the Time-dependent Coordinate Frame rotation (code 1056) but beware of the differences!  The Position Vector convention is used by IAG. See method codes 1054 and 1055 for similar methods operating between other CRS types.
+
+Time-dependent Position Vector tfm (geog2D)
+-------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_TIME_DEPENDENT_POSITION_VECTOR_TFM_GEOG2D
+    'urn:ogc:def:method:EPSG::1054'
+
+Note the analogy with the Time-dependent Coordinate Frame rotation (code 1057) but beware of the differences!  The Position Vector convention is used by IAG. See method codes 1053 and 1055 for similar methods operating between other CRS types.
+
+Time-dependent Position Vector tfm (geog3D)
+-------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_TIME_DEPENDENT_POSITION_VECTOR_TFM_GEOG3D
+    'urn:ogc:def:method:EPSG::1055'
+
+Note the analogy with the Coordinate Frame rotation (code 1058) but beware of the differences!  The Position Vector convention is used by IAG. See method codes 1053 and 1054 for similar methods operating between other CRS types.
+
+Time-specific Coordinate Frame rotation (geocen)
+------------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_TIME_SPECIFIC_COORDINATE_FRAME_ROTATION_GEOCEN
+    'urn:ogc:def:method:EPSG::1066'
+
+Note the analogy with the Time-specific Position Vector method (code 1065) but beware of the differences!
+
+Time-specific Position Vector transform (geocen)
+------------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_TIME_SPECIFIC_POSITION_VECTOR_TRANSFORM_GEOCEN
+    'urn:ogc:def:method:EPSG::1065'
+
+Note the analogy with the Time-specifc Coordinate Frame method (code 1066) but beware of the differences!
+
+Transverse Mercator
+-------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_TRANSVERSE_MERCATOR
+    'urn:ogc:def:method:EPSG::9807'
+
+
+Transverse Mercator (South Orientated)
+--------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_TRANSVERSE_MERCATOR_SOUTH_ORIENTATED
+    'urn:ogc:def:method:EPSG::9808'
+
+
+Transverse Mercator 3D
+----------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_TRANSVERSE_MERCATOR_3D
+    'urn:ogc:def:method:EPSG::1111'
+
+
+Transverse Mercator Zoned Grid System
+-------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_TRANSVERSE_MERCATOR_ZONED_GRID_SYSTEM
+    'urn:ogc:def:method:EPSG::9824'
+
+If locations fall outwith the fixed zones the general Transverse Mercator method (code 9807) must be used for each zone.
+
+Vertical Offset
+---------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_VERTICAL_OFFSET
+    'urn:ogc:def:method:EPSG::9616'
+
+This transformation allows calculation of height (or depth) in the target system by adding the parameter value to the height (or depth)-value of the point in the source system.
+
+Vertical Offset and Slope
+-------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_AND_SLOPE
+    'urn:ogc:def:method:EPSG::1046'
+
+This transformation allows calculation of height in the target system by applying the parameter values to the height value of the point in the source system.
+
+Vertical Offset by Grid Interpolation (BEV AT)
+----------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_BEV_AT
+    'urn:ogc:def:method:EPSG::1080'
+
+
+Vertical Offset by Grid Interpolation (NRCan byn)
+-------------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_NRCAN_BYN
+    'urn:ogc:def:method:EPSG::1112'
+
+
+Vertical Offset by Grid Interpolation (NZLVD)
+---------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_NZLVD
+    'urn:ogc:def:method:EPSG::1071'
+
+
+Vertical Offset by Grid Interpolation (PL txt)
+----------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_PL_TXT
+    'urn:ogc:def:method:EPSG::1101'
+
+
+Vertical Offset by Grid Interpolation (VERTCON)
+-----------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_VERTCON
+    'urn:ogc:def:method:EPSG::9658'
+
+Any NAD realization may be used as the Interpolation CRS; bi-linear interpolation is used. Input expects longitudes to be positive west.
+
+Vertical Offset by Grid Interpolation (asc)
+-------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_ASC
+    'urn:ogc:def:method:EPSG::1085'
+
+
+Vertical Offset by Grid Interpolation (gtx)
+-------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_GTX
+    'urn:ogc:def:method:EPSG::1084'
+
+
+Vertical Perspective
+--------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_VERTICAL_PERSPECTIVE
+    'urn:ogc:def:method:EPSG::9838'
+
+For a viewing point height approaching or at infinity, see the Vertical Perspective (orthographic case) (method code 9839).
+
+Vertical Perspective (Orthographic case)
+----------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_VERTICAL_PERSPECTIVE_ORTHOGRAPHIC_CASE
+    'urn:ogc:def:method:EPSG::9839'
+
+This is a special case of the general Vertical Perspective (method code 9838) in which the viewing point at infinity.
+
+Zero-tide height to mean-tide height (EVRF2019)
+-----------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_ZERO_TIDE_HEIGHT_TO_MEAN_TIDE_HEIGHT_EVRF2019
+    'urn:ogc:def:method:EPSG::1107'
+
+The offset of -0.08593 is applied to force EVRF2019 mean-tide height to be equal to EVRF2019 height at the EVRF2019 nominal origin at Amsterdams Peil.
+

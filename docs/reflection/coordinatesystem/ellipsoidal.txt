@@ -1,7 +1,5 @@
-2D Axes: latitude, longitude. Orientations: north, east. UoM: degree
---------------------------------------------------------------------
-
-
+2D Axes: latitude, longitude. Orientations: north, east. Units: degree
+----------------------------------------------------------------------
 .. code-block:: php
 
     Ellipsoidal::fromSRID(Ellipsoidal::EPSG_2D_AXES_LATITUDE_LONGITUDE_ORIENTATIONS_NORTH_EAST_UOM_DEGREE)
@@ -9,10 +7,8 @@
 
 Coordinates referenced to this CS are in degrees. Any degree representation (e.g. DMSH, decimal, etc.) may be used but that used must be declared for the user by the supplier of data. Used in geographic 2D coordinate reference systems.
 
-2D Axes: latitude, longitude. Orientations: north, east. UoM: grads.
---------------------------------------------------------------------
-
-
+2D Axes: latitude, longitude. Orientations: north, east. Units: grads.
+----------------------------------------------------------------------
 .. code-block:: php
 
     Ellipsoidal::fromSRID(Ellipsoidal::EPSG_2D_AXES_LATITUDE_LONGITUDE_ORIENTATIONS_NORTH_EAST_UOM_GRADS)
@@ -20,10 +16,8 @@ Coordinates referenced to this CS are in degrees. Any degree representation (e.g
 
 Used in geographic 2D coordinate reference systems.
 
-2D Axes: longitude, latitude. Orientations: east, north. UoM: degree
---------------------------------------------------------------------
-
-
+2D Axes: longitude, latitude. Orientations: east, north. Units: degree
+----------------------------------------------------------------------
 .. code-block:: php
 
     Ellipsoidal::fromSRID(Ellipsoidal::EPSG_2D_AXES_LONGITUDE_LATITUDE_ORIENTATIONS_EAST_NORTH_UOM_DEGREE)
@@ -31,10 +25,8 @@ Used in geographic 2D coordinate reference systems.
 
 Used in geog2D CRSs for some web mapping: CS code 6422 recommended. Coordinates referenced to this CS are in degrees. Any degree representation (e.g. DMSH, decimal, etc.) may be used but that used must be declared for the user by the supplier of data.
 
-3D Axes: latitude, longitude, ellipsoidal height. Orientations: north, east, up. UoM: degree, degree, metre.
-------------------------------------------------------------------------------------------------------------
-
-
+3D Axes: latitude, longitude, ellipsoidal height. Orientations: north, east, up. Units: degree, degree, metre.
+--------------------------------------------------------------------------------------------------------------
 .. code-block:: php
 
     Ellipsoidal::fromSRID(Ellipsoidal::EPSG_3D_AXES_LATITUDE_LONGITUDE_ELLIPSOIDAL_HEIGHT_ORIENTATIONS_NORTH_EAST_UP_UOM_DEGREE_DEGREE_METRE)
@@ -42,10 +34,8 @@ Used in geog2D CRSs for some web mapping: CS code 6422 recommended. Coordinates 
 
 Horizontal coordinates referenced to this CS are in degrees. Any degree representation (e.g. DMSH, decimal, etc.) may be used but that used must be declared for the user. Used in geographic 3D coordinate reference systems.
 
-3D Axes: longitude, latitude, ellipsoidal height. Orientations: east, north, up. UoM: degree, degree, metre.
-------------------------------------------------------------------------------------------------------------
-
-
+3D Axes: longitude, latitude, ellipsoidal height. Orientations: east, north, up. Units: degree, degree, metre.
+--------------------------------------------------------------------------------------------------------------
 .. code-block:: php
 
     Ellipsoidal::fromSRID(Ellipsoidal::EPSG_3D_AXES_LONGITUDE_LATITUDE_ELLIPSOIDAL_HEIGHT_ORIENTATIONS_EAST_NORTH_UP_UOM_DEGREE_DEGREE_METRE)

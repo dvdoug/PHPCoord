@@ -1,7 +1,5 @@
 Arc-second
 ----------
-
-
 .. code-block:: php
 
     Angle::makeUnit($measurement, Angle::EPSG_ARC_SECOND)
@@ -11,8 +9,6 @@ Arc-second
 
 Centesimal second
 -----------------
-
-
 .. code-block:: php
 
     Angle::makeUnit($measurement, Angle::EPSG_CENTESIMAL_SECOND)
@@ -22,8 +18,6 @@ Centesimal second
 
 Degree
 ------
-
-
 .. code-block:: php
 
     Angle::makeUnit($measurement, Angle::EPSG_DEGREE)
@@ -33,8 +27,6 @@ Degree
 
 Degree hemisphere
 -----------------
-
-
 .. code-block:: php
 
     Angle::makeUnit($measurement, Angle::EPSG_DEGREE_HEMISPHERE)
@@ -44,8 +36,6 @@ Degree representation. Format: degrees (real, any precision) - hemisphere abbrev
 
 Degree minute
 -------------
-
-
 .. code-block:: php
 
     Angle::makeUnit($measurement, Angle::EPSG_DEGREE_MINUTE)
@@ -55,8 +45,6 @@ Degree representation. Format: signed degrees (integer)  - arc-minutes (real, an
 
 Degree minute hemisphere
 ------------------------
-
-
 .. code-block:: php
 
     Angle::makeUnit($measurement, Angle::EPSG_DEGREE_MINUTE_HEMISPHERE)
@@ -66,8 +54,6 @@ Degree representation. Format: degrees (integer) - arc-minutes (real, any precis
 
 Degree minute second
 --------------------
-
-
 .. code-block:: php
 
     Angle::makeUnit($measurement, Angle::EPSG_DEGREE_MINUTE_SECOND)
@@ -77,8 +63,6 @@ Degree representation. Format: signed degrees (integer) - arc-minutes (integer) 
 
 Degree minute second hemisphere
 -------------------------------
-
-
 .. code-block:: php
 
     Angle::makeUnit($measurement, Angle::EPSG_DEGREE_MINUTE_SECOND_HEMISPHERE)
@@ -88,8 +72,6 @@ Degree representation. Format: degrees (integer) - arc-minutes (integer) - arc-s
 
 Grad
 ----
-
-
 .. code-block:: php
 
     Angle::makeUnit($measurement, Angle::EPSG_GRAD)
@@ -99,8 +81,6 @@ Grad
 
 Hemisphere degree
 -----------------
-
-
 .. code-block:: php
 
     Angle::makeUnit($measurement, Angle::EPSG_HEMISPHERE_DEGREE)
@@ -110,8 +90,6 @@ Degree representation. Format: hemisphere abbreviation (single character N S E o
 
 Hemisphere degree minute
 ------------------------
-
-
 .. code-block:: php
 
     Angle::makeUnit($measurement, Angle::EPSG_HEMISPHERE_DEGREE_MINUTE)
@@ -121,8 +99,6 @@ Degree representation. Format:  hemisphere abbreviation (single character N S E 
 
 Hemisphere degree minute second
 -------------------------------
-
-
 .. code-block:: php
 
     Angle::makeUnit($measurement, Angle::EPSG_HEMISPHERE_DEGREE_MINUTE_SECOND)
@@ -132,8 +108,6 @@ Degree representation. Format: hemisphere abbreviation (single character N S E o
 
 Microradian
 -----------
-
-
 .. code-block:: php
 
     Angle::makeUnit($measurement, Angle::EPSG_MICRORADIAN)
@@ -143,8 +117,6 @@ rad * 10E-6
 
 Milliarc-second
 ---------------
-
-
 .. code-block:: php
 
     Angle::makeUnit($measurement, Angle::EPSG_MILLIARC_SECOND)
@@ -154,8 +126,6 @@ Milliarc-second
 
 Radian
 ------
-
-
 .. code-block:: php
 
     Angle::makeUnit($measurement, Angle::EPSG_RADIAN)
@@ -165,8 +135,6 @@ SI coherent derived unit (standard unit) for plane angle.
 
 Sexagesimal DMS
 ---------------
-
-
 .. code-block:: php
 
     Angle::makeUnit($measurement, Angle::EPSG_SEXAGESIMAL_DMS)

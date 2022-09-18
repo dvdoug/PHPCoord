@@ -1,7 +1,6 @@
 AHD (Tasmania) height
 ---------------------
-
-| Used: Australia - Tasmania mainland - onshore.
+| Extent: Australia - Tasmania mainland - onshore.
 
 .. code-block:: php
 
@@ -13,8 +12,7 @@ AHD (Tasmania) height
 
 AHD height
 ----------
-
-| Used: Australia - Australian Capital Territory, New South Wales, Northern Territory, Queensland, South Australia, Tasmania, Western Australia and Victoria - onshore. Christmas Island - onshore. Cocos and Keeling Islands - onshore.
+| Extent: Australia - Australian Capital Territory, New South Wales, Northern Territory, Queensland, South Australia, Tasmania, Western Australia and Victoria - onshore. Christmas Island - onshore. Cocos and Keeling Islands - onshore.
 
 .. code-block:: php
 
@@ -27,8 +25,7 @@ Appropriate for cadastral and local engineering survey including construction or
 
 AIOC95 depth
 ------------
-
-| Used: Azerbaijan - Caspian offshore and onshore Sangachal terminal.
+| Extent: Azerbaijan - Caspian offshore and onshore Sangachal terminal.
 
 .. code-block:: php
 
@@ -41,8 +38,7 @@ Also used by AIOC and BP as a height system for engineering survey at Sangachal 
 
 AIOC95 height
 -------------
-
-| Used: Azerbaijan - Caspian offshore and onshore Sangachal terminal.
+| Extent: Azerbaijan - Caspian offshore and onshore Sangachal terminal.
 
 .. code-block:: php
 
@@ -55,8 +51,7 @@ AIOC95 datum is 1.7m above Caspian datum and 26.3m below Baltic datum. Also used
 
 ASVD02 height
 -------------
-
-| Used: American Samoa - Tutuila island.
+| Extent: American Samoa - Tutuila island.
 
 .. code-block:: php
 
@@ -69,8 +64,7 @@ Replaces Tutuila 1962 height (CRS code 6638). Replaced by Pago Pago 2020 height 
 
 AVWS height
 -----------
-
-| Used: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
+| Extent: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
 
 .. code-block:: php
 
@@ -83,8 +77,7 @@ For cadastral and local engineering applications see AHD height (CRS code 5711).
 
 Alicante height
 ---------------
-
-| Used: Gibraltar - onshore; Spain - mainland onshore.
+| Extent: Gibraltar - onshore; Spain - mainland onshore.
 
 .. code-block:: php
 
@@ -96,8 +89,7 @@ Alicante height
 
 Antalya height
 --------------
-
-| Used: Turkey - onshore.
+| Extent: Turkey - onshore.
 
 .. code-block:: php
 
@@ -109,8 +101,7 @@ Antalya height
 
 Auckland 1946 height
 --------------------
-
-| Used: New Zealand - North Island - Auckland vertical CRS area.
+| Extent: New Zealand - North Island - Auckland vertical CRS area.
 
 .. code-block:: php
 
@@ -122,8 +113,7 @@ Auckland 1946 height
 
 BGS2005 height
 --------------
-
-| Used: Bulgaria - onshore.
+| Extent: Bulgaria - onshore.
 
 .. code-block:: php
 
@@ -136,8 +126,7 @@ Adopted 2010-07-29 as official Bulgarian reference datum through decree 153, rep
 
 BI height
 ---------
-
-| Used: United Kingdom (UK) - offshore to boundary of UKCS within 49°45'N to 61°N and 9°W to 2°E; onshore Great Britain (England, Wales and Scotland) and Northern Ireland. Ireland onshore. Isle of Man onshore.
+| Extent: United Kingdom (UK) - offshore to boundary of UKCS within 49°45'N to 61°N and 9°W to 2°E; onshore Great Britain (England, Wales and Scotland) and Northern Ireland. Ireland onshore. Isle of Man onshore.
 
 .. code-block:: php
 
@@ -149,8 +138,7 @@ BI height
 
 Baltic 1957 depth
 -----------------
-
-| Used: Czechia; Slovakia.
+| Extent: Czechia; Slovakia.
 
 .. code-block:: php
 
@@ -162,8 +150,7 @@ Baltic 1957 depth
 
 Baltic 1957 height
 ------------------
-
-| Used: Czechia; Slovakia.
+| Extent: Czechia; Slovakia.
 
 .. code-block:: php
 
@@ -175,8 +162,7 @@ Baltic 1957 height
 
 Baltic 1977 depth
 -----------------
-
-| Used: Armenia; Azerbaijan; Belarus; Estonia - onshore; Georgia - onshore; Kazakhstan; Kyrgyzstan; Latvia - onshore; Lithuania - onshore; Moldova; Russian Federation - onshore; Tajikistan; Turkmenistan; Ukraine - onshore; Uzbekistan.
+| Extent: Armenia; Azerbaijan; Belarus; Estonia - onshore; Georgia - onshore; Kazakhstan; Kyrgyzstan; Latvia - onshore; Lithuania - onshore; Moldova; Russian Federation - onshore; Tajikistan; Turkmenistan; Ukraine - onshore; Uzbekistan.
 
 .. code-block:: php
 
@@ -188,8 +174,7 @@ Baltic 1977 depth
 
 Baltic 1977 height
 ------------------
-
-| Used: Armenia; Azerbaijan; Belarus; Estonia - onshore; Georgia - onshore; Kazakhstan; Kyrgyzstan; Latvia - onshore; Lithuania - onshore; Moldova; Russian Federation - onshore; Tajikistan; Turkmenistan; Ukraine - onshore; Uzbekistan.
+| Extent: Armenia; Azerbaijan; Belarus; Estonia - onshore; Georgia - onshore; Kazakhstan; Kyrgyzstan; Latvia - onshore; Lithuania - onshore; Moldova; Russian Federation - onshore; Tajikistan; Turkmenistan; Ukraine - onshore; Uzbekistan.
 
 .. code-block:: php
 
@@ -202,8 +187,7 @@ The adjustment also included the Czech and Slovak Republics but not adopted ther
 
 Baltic 1982 height
 ------------------
-
-| Used: Bulgaria - onshore.
+| Extent: Bulgaria - onshore.
 
 .. code-block:: php
 
@@ -215,8 +199,7 @@ Baltic 1982 height
 
 Baltic 1986 height
 ------------------
-
-| Used: Poland - onshore.
+| Extent: Poland - onshore.
 
 .. code-block:: php
 
@@ -229,8 +212,7 @@ Initially valid until 2019-12-31, but that extended to 2023-12-31. Will be repla
 
 Bandar Abbas height
 -------------------
-
-| Used: Iran - onshore.
+| Extent: Iran - onshore.
 
 .. code-block:: php
 
@@ -243,8 +225,7 @@ Replaces Fao height (CRS code 5751) for national map agency work in Iran. At tim
 
 Belfast height
 --------------
-
-| Used: United Kingdom (UK) - Northern Ireland (Ulster) - onshore.
+| Extent: United Kingdom (UK) - Northern Ireland (Ulster) - onshore.
 
 .. code-block:: php
 
@@ -257,8 +238,7 @@ Malin Head height (CRS code 5731) used for medium and small scale topographic ma
 
 Black Sea depth
 ---------------
-
-| Used: Georgia - onshore and offshore.
+| Extent: Georgia - onshore and offshore.
 
 .. code-block:: php
 
@@ -271,8 +251,7 @@ Black Sea datum is 0.4m below Baltic datum.
 
 Black Sea height
 ----------------
-
-| Used: Georgia - onshore.
+| Extent: Georgia - onshore.
 
 .. code-block:: php
 
@@ -285,8 +264,7 @@ Black Sea datum is 0.4m below Baltic datum.
 
 Bluff 1955 height
 -----------------
-
-| Used: New Zealand - South Island - Bluff vertical CRS area.
+| Extent: New Zealand - South Island - Bluff vertical CRS area.
 
 .. code-block:: php
 
@@ -298,8 +276,7 @@ Bluff 1955 height
 
 Bora Bora SAU 2001 height
 -------------------------
-
-| Used: French Polynesia - Society Islands - Bora Bora.
+| Extent: French Polynesia - Society Islands - Bora Bora.
 
 .. code-block:: php
 
@@ -312,8 +289,7 @@ Part of NGPF (CRS code 5600).
 
 CBVD61 height (ft)
 ------------------
-
-| Used: Cayman Islands - Cayman Brac.
+| Extent: Cayman Islands - Cayman Brac.
 
 .. code-block:: php
 
@@ -325,8 +301,7 @@ CBVD61 height (ft)
 
 CD Norway depth
 ---------------
-
-| Used: Norway (offshore) and Svalbard and Jan Mayen (offshore).
+| Extent: Norway (offshore) and Svalbard and Jan Mayen (offshore).
 
 .. code-block:: php
 
@@ -338,8 +313,7 @@ CD Norway depth
 
 CGVD2013(CGG2013) height
 ------------------------
-
-| Used: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.
+| Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.
 
 .. code-block:: php
 
@@ -352,8 +326,7 @@ Replaces CGVD28 height (CRS code 5713). CGVD2013(CGG2013) height is realized by 
 
 CGVD2013a(1997) height
 ----------------------
-
-| Used: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.
+| Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.
 
 .. code-block:: php
 
@@ -366,8 +339,7 @@ Replaces CGVD2013(CGG2013) height. Although its datum is static CGVD2013a height
 
 CGVD2013a(2002) height
 ----------------------
-
-| Used: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.
+| Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.
 
 .. code-block:: php
 
@@ -380,8 +352,7 @@ Replaces CGVD2013(CGG2013) height. Although its datum is static CGVD2013a height
 
 CGVD2013a(2010) height
 ----------------------
-
-| Used: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.
+| Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.
 
 .. code-block:: php
 
@@ -394,8 +365,7 @@ Replaces CGVD2013(CGG2013) height. Although its datum is static CGVD2013a height
 
 CGVD28 height
 -------------
-
-| Used: Canada - onshore - Alberta; British Columbia; Manitoba south of 57°N; New Brunswick; Northwest Territories south west of a line between 60°N, 110°W and the coast at 132°W; Nova Scotia; Ontario south of 52°N; Prince Edward Island; Quebec - mainland west of 66°W and south of 55°N; Saskatchewan south of 55°N; Yukon.
+| Extent: Canada - onshore - Alberta; British Columbia; Manitoba south of 57°N; New Brunswick; Northwest Territories south west of a line between 60°N, 110°W and the coast at 132°W; Nova Scotia; Ontario south of 52°N; Prince Edward Island; Quebec - mainland west of 66°W and south of 55°N; Saskatchewan south of 55°N; Yukon.
 
 .. code-block:: php
 
@@ -408,8 +378,7 @@ From November 2013 replaced by CGVD2013 height (CRS code 6647).
 
 Cagliari 1956 height
 --------------------
-
-| Used: Italy - Sardinia onshore.
+| Extent: Italy - Sardinia onshore.
 
 .. code-block:: php
 
@@ -421,8 +390,7 @@ Cagliari 1956 height
 
 Cais da Figueirinha - Angra do Heroismo height
 ----------------------------------------------
-
-| Used: Portugal - central Azores - Terceira island onshore.
+| Extent: Portugal - central Azores - Terceira island onshore.
 
 .. code-block:: php
 
@@ -434,8 +402,7 @@ Cais da Figueirinha - Angra do Heroismo height
 
 Cais da Madalena height
 -----------------------
-
-| Used: Portugal - central Azores - Pico island onshore.
+| Extent: Portugal - central Azores - Pico island onshore.
 
 .. code-block:: php
 
@@ -447,8 +414,7 @@ Cais da Madalena height
 
 Cais da Pontinha - Funchal height
 ---------------------------------
-
-| Used: Portugal - Madeira and Desertas islands - onshore.
+| Extent: Portugal - Madeira and Desertas islands - onshore.
 
 .. code-block:: php
 
@@ -460,8 +426,7 @@ Cais da Pontinha - Funchal height
 
 Cais da Vila - Porto Santo height
 ---------------------------------
-
-| Used: Portugal - Porto Santo island (Madeira archipelago) onshore.
+| Extent: Portugal - Porto Santo island (Madeira archipelago) onshore.
 
 .. code-block:: php
 
@@ -473,8 +438,7 @@ Cais da Vila - Porto Santo height
 
 Cais da Vila do Porto height
 ----------------------------
-
-| Used: Portugal - eastern Azores onshore - Santa Maria, Formigas.
+| Extent: Portugal - eastern Azores onshore - Santa Maria, Formigas.
 
 .. code-block:: php
 
@@ -486,8 +450,7 @@ Cais da Vila do Porto height
 
 Cais das Velas height
 ---------------------
-
-| Used: Portugal - central Azores - Sao Jorge island onshore.
+| Extent: Portugal - central Azores - Sao Jorge island onshore.
 
 .. code-block:: php
 
@@ -499,8 +462,7 @@ Cais das Velas height
 
 Cascais height
 --------------
-
-| Used: Portugal - mainland - onshore.
+| Extent: Portugal - mainland - onshore.
 
 .. code-block:: php
 
@@ -512,8 +474,7 @@ Cascais height
 
 Caspian depth
 -------------
-
-| Used: Azerbaijan - offshore; Kazakhstan - offshore; Russian Federation - Caspian Sea; Turkmenistan - offshore.
+| Extent: Azerbaijan - offshore; Kazakhstan - offshore; Russian Federation - Caspian Sea; Turkmenistan - offshore.
 
 .. code-block:: php
 
@@ -526,8 +487,7 @@ Caspian Sea water levels are now offset appreciably from this datum.
 
 Caspian height
 --------------
-
-| Used: Azerbaijan - offshore; Kazakhstan - offshore; Russian Federation - Caspian Sea; Turkmenistan - offshore.
+| Extent: Azerbaijan - offshore; Kazakhstan - offshore; Russian Federation - Caspian Sea; Turkmenistan - offshore.
 
 .. code-block:: php
 
@@ -540,8 +500,7 @@ Caspian Sea water levels are now offset appreciably from this datum.
 
 Catania 1965 height
 -------------------
-
-| Used: Italy - Sicily onshore.
+| Extent: Italy - Sicily onshore.
 
 .. code-block:: php
 
@@ -553,8 +512,7 @@ Catania 1965 height
 
 Ceuta 2 height
 --------------
-
-| Used: Spain - Ceuta onshore.
+| Extent: Spain - Ceuta onshore.
 
 .. code-block:: php
 
@@ -566,8 +524,7 @@ Ceuta 2 height
 
 Chatham Island 1959 height
 --------------------------
-
-| Used: New Zealand - Chatham Island - onshore.
+| Extent: New Zealand - Chatham Island - onshore.
 
 .. code-block:: php
 
@@ -579,8 +536,7 @@ Chatham Island 1959 height
 
 Constanta height
 ----------------
-
-| Used: Romania - onshore.
+| Extent: Romania - onshore.
 
 .. code-block:: php
 
@@ -592,8 +548,7 @@ Constanta height
 
 DACR52 height
 -------------
-
-| Used: Costa Rica - onshore.
+| Extent: Costa Rica - onshore.
 
 .. code-block:: php
 
@@ -605,8 +560,7 @@ DACR52 height
 
 DHHN12 height
 -------------
-
-| Used: Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt, Schleswig-Holstein, Thuringen.
+| Extent: Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt, Schleswig-Holstein, Thuringen.
 
 .. code-block:: php
 
@@ -619,8 +573,7 @@ Replaced by SNN56 and then SNN76 in East Germany and by DHHN85 in West Germany.
 
 DHHN2016 height
 ---------------
-
-| Used: Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt, Schleswig-Holstein, Thuringen.
+| Extent: Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt, Schleswig-Holstein, Thuringen.
 
 .. code-block:: php
 
@@ -633,8 +586,7 @@ Replaces DHHN92 height (CRS code 5783).
 
 DHHN85 height
 -------------
-
-| Used: Germany - states of former West Germany onshore - Baden-Wurtemberg, Bayern, Bremen, Hamburg, Hessen, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Schleswig-Holstein.
+| Extent: Germany - states of former West Germany onshore - Baden-Wurtemberg, Bayern, Bremen, Hamburg, Hessen, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Schleswig-Holstein.
 
 .. code-block:: php
 
@@ -647,8 +599,7 @@ Replaced by DNNH92 height (CRS code 5783).
 
 DHHN92 height
 -------------
-
-| Used: Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt, Schleswig-Holstein, Thuringen.
+| Extent: Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt, Schleswig-Holstein, Thuringen.
 
 .. code-block:: php
 
@@ -661,8 +612,7 @@ Replaces SNN76 height (CRS code 5785) and DHHN85 height (CRS code 5784). Replace
 
 DNN height
 ----------
-
-| Used: Denmark - onshore.
+| Extent: Denmark - onshore.
 
 .. code-block:: php
 
@@ -675,8 +625,7 @@ Replaced by DVR90 height (CRS code 5799).
 
 DVR90 height
 ------------
-
-| Used: Denmark - onshore.
+| Extent: Denmark - onshore.
 
 .. code-block:: php
 
@@ -689,8 +638,7 @@ Replaces Dansk Normal Null height (CRS code 5733).
 
 Danger 1950 height
 ------------------
-
-| Used: St Pierre and Miquelon - onshore.
+| Extent: St Pierre and Miquelon - onshore.
 
 .. code-block:: php
 
@@ -702,8 +650,7 @@ Danger 1950 height
 
 Douglas height
 --------------
-
-| Used: Isle of Man - onshore.
+| Extent: Isle of Man - onshore.
 
 .. code-block:: php
 
@@ -715,8 +662,7 @@ Douglas height
 
 Dunedin 1958 height
 -------------------
-
-| Used: New Zealand - South Island - between approximately 44°S and 46°S - Dunedin vertical CRS area.
+| Extent: New Zealand - South Island - between approximately 44°S and 46°S - Dunedin vertical CRS area.
 
 .. code-block:: php
 
@@ -728,8 +674,7 @@ Dunedin 1958 height
 
 Dunedin-Bluff 1960 height
 -------------------------
-
-| Used: New Zealand - South Island - Dunedin-Bluff vertical CRS area.
+| Extent: New Zealand - South Island - Dunedin-Bluff vertical CRS area.
 
 .. code-block:: php
 
@@ -741,8 +686,7 @@ Dunedin-Bluff 1960 height
 
 Durres height
 -------------
-
-| Used: Albania - onshore.
+| Extent: Albania - onshore.
 
 .. code-block:: php
 
@@ -754,8 +698,7 @@ Durres height
 
 EGM2008 height
 --------------
-
-| Used: World.
+| Extent: World.
 
 .. code-block:: php
 
@@ -768,8 +711,7 @@ Zero-height surface resulting from the application of the EGM2008 geoid model to
 
 EGM84 height
 ------------
-
-| Used: World.
+| Extent: World.
 
 .. code-block:: php
 
@@ -782,8 +724,7 @@ Zero-height surface resulting from the application of the EGM84 geoid model to t
 
 EGM96 height
 ------------
-
-| Used: World.
+| Extent: World.
 
 .. code-block:: php
 
@@ -796,8 +737,7 @@ Zero-height surface resulting from the application of the EGM96 geoid model to t
 
 EH2000 height
 -------------
-
-| Used: Estonia - onshore.
+| Extent: Estonia - onshore.
 
 .. code-block:: php
 
@@ -810,8 +750,7 @@ In Estonia replaces Baltic 1977 system (CRS code 5705) from January 2018.
 
 EOMA 1980 height
 ----------------
-
-| Used: Hungary.
+| Extent: Hungary.
 
 .. code-block:: php
 
@@ -823,8 +762,7 @@ EOMA 1980 height
 
 EVRF2000 Austria height
 -----------------------
-
-| Used: Austria.
+| Extent: Austria.
 
 .. code-block:: php
 
@@ -837,8 +775,7 @@ Austria-specific version of EVRF using orthometric heights instead of the Normal
 
 EVRF2000 height
 ---------------
-
-| Used: Europe - onshore - Andorra; Austria; Belgium; Bosnia and Herzegovina; Croatia; Czechia; Denmark; Estonia; Finland; France - mainland; Germany; Gibraltar; Hungary; Italy - mainland and Sicily; Latvia; Liechtenstein; Lithuania; Luxembourg; Netherlands; Norway; Poland; Portugal - mainland; Romania; San Marino; Slovakia; Slovenia; Spain - mainland; Sweden; Switzerland; United Kingdom (UK) - Great Britain mainland; Vatican City State.
+| Extent: Europe - onshore - Andorra; Austria; Belgium; Bosnia and Herzegovina; Croatia; Czechia; Denmark; Estonia; Finland; France - mainland; Germany; Gibraltar; Hungary; Italy - mainland and Sicily; Latvia; Liechtenstein; Lithuania; Luxembourg; Netherlands; Norway; Poland; Portugal - mainland; Romania; San Marino; Slovakia; Slovenia; Spain - mainland; Sweden; Switzerland; United Kingdom (UK) - Great Britain mainland; Vatican City State.
 
 .. code-block:: php
 
@@ -851,8 +788,7 @@ Uses Normal heights. Replaced by EVRF2007 height (CRS code 5621). In Austria, or
 
 EVRF2007 height
 ---------------
-
-| Used: Europe - onshore - Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Czechia; Denmark; Estonia; Finland; France - mainland; Germany; Gibraltar, Hungary; Italy - mainland and Sicily; Latvia; Liechtenstein; Lithuania; Luxembourg; Netherlands; Norway; Poland; Portugal - mainland; Romania; San Marino; Slovakia; Slovenia; Spain - mainland; Sweden; Switzerland; United Kingdom (UK) - Great Britain mainland; Vatican City State.
+| Extent: Europe - onshore - Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Czechia; Denmark; Estonia; Finland; France - mainland; Germany; Gibraltar, Hungary; Italy - mainland and Sicily; Latvia; Liechtenstein; Lithuania; Luxembourg; Netherlands; Norway; Poland; Portugal - mainland; Romania; San Marino; Slovakia; Slovenia; Spain - mainland; Sweden; Switzerland; United Kingdom (UK) - Great Britain mainland; Vatican City State.
 
 .. code-block:: php
 
@@ -865,8 +801,7 @@ Uses Normal heights. Replaces EVRF2000 height (CRS code 5730). Replaced by EVRF2
 
 EVRF2007-PL height
 ------------------
-
-| Used: Poland - onshore.
+| Extent: Poland - onshore.
 
 .. code-block:: php
 
@@ -879,8 +814,7 @@ Replaces Baltic 1986 height (CRS 9650) after 2023-12-31.
 
 EVRF2019 height
 ---------------
-
-| Used: Europe - onshore - Andorra; Austria; Belarus; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Czechia; Denmark; Estonia; Finland; France - mainland; Germany; Gibraltar, Hungary; Italy - mainland and Sicily; Latvia; Liechtenstein; Lithuania; Luxembourg; Netherlands; North Macedonia; Norway; Poland; Portugal - mainland; Romania; Russia – west of approximately 60°E; San Marino; Slovakia; Slovenia; Spain - mainland; Sweden; Switzerland; United Kingdom (UK) - Great Britain mainland; Ukraine; Vatican City State.
+| Extent: Europe - onshore - Andorra; Austria; Belarus; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Czechia; Denmark; Estonia; Finland; France - mainland; Germany; Gibraltar, Hungary; Italy - mainland and Sicily; Latvia; Liechtenstein; Lithuania; Luxembourg; Netherlands; North Macedonia; Norway; Poland; Portugal - mainland; Romania; Russia – west of approximately 60°E; San Marino; Slovakia; Slovenia; Spain - mainland; Sweden; Switzerland; United Kingdom (UK) - Great Britain mainland; Ukraine; Vatican City State.
 
 .. code-block:: php
 
@@ -893,8 +827,7 @@ September 2020 adjustment. Replaces 2019 adjustment and EVRF2007 height (CRS cod
 
 EVRF2019 mean-tide height
 -------------------------
-
-| Used: Europe - onshore - Andorra; Austria; Belarus; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Czechia; Denmark; Estonia; Finland; France - mainland; Germany; Gibraltar, Hungary; Italy - mainland and Sicily; Latvia; Liechtenstein; Lithuania; Luxembourg; Netherlands; North Macedonia; Norway; Poland; Portugal - mainland; Romania; Russia – west of approximately 60°E; San Marino; Slovakia; Slovenia; Spain - mainland; Sweden; Switzerland; United Kingdom (UK) - Great Britain mainland; Ukraine; Vatican City State.
+| Extent: Europe - onshore - Andorra; Austria; Belarus; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Czechia; Denmark; Estonia; Finland; France - mainland; Germany; Gibraltar, Hungary; Italy - mainland and Sicily; Latvia; Liechtenstein; Lithuania; Luxembourg; Netherlands; North Macedonia; Norway; Poland; Portugal - mainland; Romania; Russia – west of approximately 60°E; San Marino; Slovakia; Slovenia; Spain - mainland; Sweden; Switzerland; United Kingdom (UK) - Great Britain mainland; Ukraine; Vatican City State.
 
 .. code-block:: php
 
@@ -907,8 +840,7 @@ September 2020 adjustment. Replaces 2019 adjustment. Uses Normal heights. Mean-t
 
 El Hierro height
 ----------------
-
-| Used: Spain - Canary Islands - El Hierro onshore.
+| Extent: Spain - Canary Islands - El Hierro onshore.
 
 .. code-block:: php
 
@@ -920,8 +852,7 @@ El Hierro height
 
 FCSVR10 height
 --------------
-
-| Used: Fehmarnbelt area of Denmark and Germany.
+| Extent: Fehmarnbelt area of Denmark and Germany.
 
 .. code-block:: php
 
@@ -933,8 +864,7 @@ FCSVR10 height
 
 FVR09 height
 ------------
-
-| Used: Faroe Islands - onshore.
+| Extent: Faroe Islands - onshore.
 
 .. code-block:: php
 
@@ -947,8 +877,7 @@ Introduced in 2010.
 
 Fahud HD height
 ---------------
-
-| Used: Oman - mainland onshore.
+| Extent: Oman - mainland onshore.
 
 .. code-block:: php
 
@@ -961,8 +890,7 @@ Replaced by PHD93 height (CRS code 5724) from 1993.
 
 Fair Isle height
 ----------------
-
-| Used: United Kingdom (UK) - Great Britain - Scotland - Fair Isle onshore.
+| Extent: United Kingdom (UK) - Great Britain - Scotland - Fair Isle onshore.
 
 .. code-block:: php
 
@@ -975,8 +903,7 @@ Replaced by ODN (Offshore) height (CRS code 7707) in 2016.
 
 Famagusta 1960 height
 ---------------------
-
-| Used: Cyprus - onshore.
+| Extent: Cyprus - onshore.
 
 .. code-block:: php
 
@@ -988,8 +915,7 @@ Famagusta 1960 height
 
 Fao 1979 height
 ---------------
-
-| Used: Iraq - onshore.
+| Extent: Iraq - onshore.
 
 .. code-block:: php
 
@@ -1002,8 +928,7 @@ Replaces Fao height (CRS code 5751) for national map agency work in Iraq. At tim
 
 Fao height
 ----------
-
-| Used: Iraq - onshore southeast; Iran - onshore northern Gulf coast and west bordering southeast Iraq.
+| Extent: Iraq - onshore southeast; Iran - onshore northern Gulf coast and west bordering southeast Iraq.
 
 .. code-block:: php
 
@@ -1016,8 +941,7 @@ Replaced by Bandar Abbas (CRS code 5752) in Iran and Fao 1979 (code 3886) in Ira
 
 Flannan Isles height
 --------------------
-
-| Used: United Kingdom (UK) - Great Britain - Scotland - Flannan Isles onshore.
+| Extent: United Kingdom (UK) - Great Britain - Scotland - Flannan Isles onshore.
 
 .. code-block:: php
 
@@ -1030,8 +954,7 @@ Replaced by ODN (Offshore) height (CRS code 7707) in 2016.
 
 Foula height
 ------------
-
-| Used: United Kingdom (UK) - Great Britain - Scotland - Foula onshore.
+| Extent: United Kingdom (UK) - Great Britain - Scotland - Foula onshore.
 
 .. code-block:: php
 
@@ -1044,8 +967,7 @@ Replaced by ODN (Offshore) height (CRS code 7707) in 2016.
 
 Fuerteventura height
 --------------------
-
-| Used: Spain - Canary Islands - Fuerteventura onshore.
+| Extent: Spain - Canary Islands - Fuerteventura onshore.
 
 .. code-block:: php
 
@@ -1057,8 +979,7 @@ Fuerteventura height
 
 GCVD54 height (ft)
 ------------------
-
-| Used: Cayman Islands - Grand Cayman.
+| Extent: Cayman Islands - Grand Cayman.
 
 .. code-block:: php
 
@@ -1070,8 +991,7 @@ GCVD54 height (ft)
 
 GHA height
 ----------
-
-| Used: Austria.
+| Extent: Austria.
 
 .. code-block:: php
 
@@ -1084,8 +1004,7 @@ For scientific purposes see EVRF2000 Austria height (CRS code 9274).
 
 GNTRANS height
 --------------
-
-| Used: Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt, Schleswig-Holstein, Thuringen.
+| Extent: Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt, Schleswig-Holstein, Thuringen.
 
 .. code-block:: php
 
@@ -1098,8 +1017,7 @@ Introduced in 2003. Replaces DB Netz use of DHHN12, SNN76, DHHN85 and DHHN92 as 
 
 GNTRANS2016 height
 ------------------
-
-| Used: Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt, Schleswig-Holstein, Thuringen.
+| Extent: Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt, Schleswig-Holstein, Thuringen.
 
 .. code-block:: php
 
@@ -1112,8 +1030,7 @@ Replaces GNTRANS height [also called GNTRANS2003 height] (CRS code 9923). Approx
 
 GUVD04 height
 -------------
-
-| Used: Guam - onshore.
+| Extent: Guam - onshore.
 
 .. code-block:: php
 
@@ -1126,8 +1043,7 @@ Replaces Guam 1963 height (CRS code 6639).
 
 GVR2000 height
 --------------
-
-| Used: Greenland - onshore and offshore between 59°N and 84°N and west of 10°W.
+| Extent: Greenland - onshore and offshore between 59°N and 84°N and west of 10°W.
 
 .. code-block:: php
 
@@ -1140,8 +1056,7 @@ Replaced by GVR2016 height (CRS code 8267). GVR2000 is realized by gravimetric g
 
 GVR2016 height
 --------------
-
-| Used: Greenland - onshore and offshore between 58°N and 85°N and west of 7°W.
+| Extent: Greenland - onshore and offshore between 58°N and 85°N and west of 7°W.
 
 .. code-block:: php
 
@@ -1154,8 +1069,7 @@ Replaces GVR2000 height (CRS code 8266). GVR2016 is realized by gravimetric geoi
 
 Genoa 1942 height
 -----------------
-
-| Used: Italy - mainland (including San Marino and Vatican City State) and Sicily.
+| Extent: Italy - mainland (including San Marino and Vatican City State) and Sicily.
 
 .. code-block:: php
 
@@ -1167,8 +1081,7 @@ Genoa 1942 height
 
 Gisborne 1926 height
 --------------------
-
-| Used: New Zealand - North Island - Gisborne vertical CRS area.
+| Extent: New Zealand - North Island - Gisborne vertical CRS area.
 
 .. code-block:: php
 
@@ -1180,8 +1093,7 @@ Gisborne 1926 height
 
 Gran Canaria height
 -------------------
-
-| Used: Spain - Canary Islands - Gran Canaria onshore.
+| Extent: Spain - Canary Islands - Gran Canaria onshore.
 
 .. code-block:: php
 
@@ -1193,8 +1105,7 @@ Gran Canaria height
 
 Guadeloupe 1951 height
 ----------------------
-
-| Used: Guadeloupe - onshore - Basse-Terre and Grande-Terre.
+| Extent: Guadeloupe - onshore - Basse-Terre and Grande-Terre.
 
 .. code-block:: php
 
@@ -1207,8 +1118,7 @@ Replaced by Guadeloupe 1988 height (CRS code 5757).
 
 Guadeloupe 1988 height
 ----------------------
-
-| Used: Guadeloupe - onshore - Basse-Terre and Grande-Terre.
+| Extent: Guadeloupe - onshore - Basse-Terre and Grande-Terre.
 
 .. code-block:: php
 
@@ -1221,8 +1131,7 @@ Replaces Guadeloupe 1951 height (CRS code 5795).
 
 Guam 1963 height
 ----------------
-
-| Used: Guam - onshore.
+| Extent: Guam - onshore.
 
 .. code-block:: php
 
@@ -1235,8 +1144,7 @@ Replaced by GUVD04 height (CRS code 6644).
 
 HAT height
 ----------
-
-| Used: World.
+| Extent: World.
 
 .. code-block:: php
 
@@ -1249,8 +1157,7 @@ Not specific to any location or epoch.
 
 HHWLT height
 ------------
-
-| Used: World.
+| Extent: World.
 
 .. code-block:: php
 
@@ -1263,8 +1170,7 @@ Not specific to any location or epoch.
 
 HKCD depth
 ----------
-
-| Used: China - Hong Kong - offshore.
+| Extent: China - Hong Kong - offshore.
 
 .. code-block:: php
 
@@ -1277,8 +1183,7 @@ Chart datum is 0.15 metres below Hong Kong Principal Datum (CRS code 5738) and 1
 
 HKPD depth
 ----------
-
-| Used: China - Hong Kong - onshore.
+| Extent: China - Hong Kong - onshore.
 
 .. code-block:: php
 
@@ -1290,8 +1195,7 @@ HKPD depth
 
 HKPD height
 -----------
-
-| Used: China - Hong Kong - onshore.
+| Extent: China - Hong Kong - onshore.
 
 .. code-block:: php
 
@@ -1303,8 +1207,7 @@ HKPD height
 
 HS2-VRF height
 --------------
-
-| Used: United Kingdom (UK) - HS2 phases 1 and 2a railway corridor from London to Birmingham, Lichfield and Crewe.
+| Extent: United Kingdom (UK) - HS2 phases 1 and 2a railway corridor from London to Birmingham, Lichfield and Crewe.
 
 .. code-block:: php
 
@@ -1317,8 +1220,7 @@ HS2-VRF height is equivalent to ODN height as historically realised through OSNe
 
 HVRS71 height
 -------------
-
-| Used: Croatia - onshore.
+| Extent: Croatia - onshore.
 
 .. code-block:: php
 
@@ -1331,8 +1233,7 @@ Replaces Trieste height (CRS code 5195).
 
 Ha Tien 1960 height
 -------------------
-
-| Used: Cambodia - mainland onshore; Vietnam - mainland onshore.
+| Extent: Cambodia - mainland onshore; Vietnam - mainland onshore.
 
 .. code-block:: php
 
@@ -1345,8 +1246,7 @@ In Vietnam replaced by Hon Dau height (CRS code 5727) from 1992.
 
 High Water height
 -----------------
-
-| Used: World.
+| Extent: World.
 
 .. code-block:: php
 
@@ -1359,8 +1259,7 @@ Not specific to any location or epoch.
 
 Hon Dau 1992 height
 -------------------
-
-| Used: Vietnam - mainland onshore.
+| Extent: Vietnam - mainland onshore.
 
 .. code-block:: php
 
@@ -1373,8 +1272,7 @@ In Vietnam replaces Ha Tien height (CRS code 5726) from 1992.
 
 Horta height
 ------------
-
-| Used: Portugal - central Azores - Faial island onshore.
+| Extent: Portugal - central Azores - Faial island onshore.
 
 .. code-block:: php
 
@@ -1386,8 +1284,7 @@ Horta height
 
 Huahine SAU 2001 height
 -----------------------
-
-| Used: French Polynesia - Society Islands - Huahine.
+| Extent: French Polynesia - Society Islands - Huahine.
 
 .. code-block:: php
 
@@ -1400,8 +1297,7 @@ Part of NGPF (CRS code 5600).
 
 IGLD 1955 height
 ----------------
-
-| Used: Canada and United States (USA) - Great Lakes basin and St Lawrence Seaway.
+| Extent: Canada and United States (USA) - Great Lakes basin and St Lawrence Seaway.
 
 .. code-block:: php
 
@@ -1414,8 +1310,7 @@ Replaces several earlier systems. Replaced by IGLD 1985 (CRS code 5609).
 
 IGLD 1985 height
 ----------------
-
-| Used: Canada and United States (USA) - Great Lakes basin and St Lawrence Seaway.
+| Extent: Canada and United States (USA) - Great Lakes basin and St Lawrence Seaway.
 
 .. code-block:: php
 
@@ -1428,8 +1323,7 @@ Replaces IGLD 1955 (CRS code 5608).
 
 IGN 1966 height
 ---------------
-
-| Used: French Polynesia - Society Islands - Tahiti.
+| Extent: French Polynesia - Society Islands - Tahiti.
 
 .. code-block:: php
 
@@ -1442,8 +1336,7 @@ Part of NGPF (CRS code 5600).
 
 IGN 1988 LS height
 ------------------
-
-| Used: Guadeloupe - onshore - Les Saintes.
+| Extent: Guadeloupe - onshore - Les Saintes.
 
 .. code-block:: php
 
@@ -1455,8 +1348,7 @@ IGN 1988 LS height
 
 IGN 1988 MG height
 ------------------
-
-| Used: Guadeloupe - onshore - Marie-Galante.
+| Extent: Guadeloupe - onshore - Marie-Galante.
 
 .. code-block:: php
 
@@ -1468,8 +1360,7 @@ IGN 1988 MG height
 
 IGN 1988 SB height
 ------------------
-
-| Used: Guadeloupe - onshore - St Barthelemy island.
+| Extent: Guadeloupe - onshore - St Barthelemy island.
 
 .. code-block:: php
 
@@ -1481,8 +1372,7 @@ IGN 1988 SB height
 
 IGN 1988 SM height
 ------------------
-
-| Used: Guadeloupe - onshore - St Martin island.
+| Extent: Guadeloupe - onshore - St Martin island.
 
 .. code-block:: php
 
@@ -1494,8 +1384,7 @@ IGN 1988 SM height
 
 IGN 1992 LD height
 ------------------
-
-| Used: Guadeloupe - onshore - La Desirade.
+| Extent: Guadeloupe - onshore - La Desirade.
 
 .. code-block:: php
 
@@ -1508,8 +1397,7 @@ Replaced by IGN 2008 LD height (CRS code 9130).
 
 IGN 2008 LD height
 ------------------
-
-| Used: Guadeloupe - onshore - La Desirade.
+| Extent: Guadeloupe - onshore - La Desirade.
 
 .. code-block:: php
 
@@ -1522,8 +1410,7 @@ Replaces IGN 1992 LD height (CRS code 5618).
 
 INAGeoid2020 v1 height
 ----------------------
-
-| Used: Indonesia - onshore and offshore.
+| Extent: Indonesia - onshore and offshore.
 
 .. code-block:: php
 
@@ -1536,8 +1423,7 @@ Physical height component of national vertical control network (JKVN). Orthometr
 
 INAGeoid2020 v2 height
 ----------------------
-
-| Used: Indonesia - onshore and offshore.
+| Extent: Indonesia - onshore and offshore.
 
 .. code-block:: php
 
@@ -1550,8 +1436,7 @@ Physical height component of national vertical control network (JKVN). Orthometr
 
 ISH2004 height
 --------------
-
-| Used: Iceland - onshore.
+| Extent: Iceland - onshore.
 
 .. code-block:: php
 
@@ -1564,8 +1449,7 @@ National system replacing older local systems from March 2011.
 
 ISLW depth
 ----------
-
-| Used: World.
+| Extent: World.
 
 .. code-block:: php
 
@@ -1578,8 +1462,7 @@ Not specific to any location or epoch.
 
 Ibiza height
 ------------
-
-| Used: Spain - Balearic Islands - Ibiza and Formentera - onshore.
+| Extent: Spain - Balearic Islands - Ibiza and Formentera - onshore.
 
 .. code-block:: php
 
@@ -1591,8 +1474,7 @@ Ibiza height
 
 Incheon height
 --------------
-
-| Used: Republic of Korea (South Korea) - mainland onshore.
+| Extent: Republic of Korea (South Korea) - mainland onshore.
 
 .. code-block:: php
 
@@ -1604,8 +1486,7 @@ Incheon height
 
 Instantaneous Water Level depth
 -------------------------------
-
-| Used: World.
+| Extent: World.
 
 .. code-block:: php
 
@@ -1618,8 +1499,7 @@ Depth relative to instantaneous water level uncorrected for tide. Not specific t
 
 Instantaneous Water Level height
 --------------------------------
-
-| Used: World.
+| Extent: World.
 
 .. code-block:: php
 
@@ -1632,8 +1512,7 @@ Height relative to instantaneous water level uncorrected for tide. Not specific 
 
 JGD2000 (vertical) height
 -------------------------
-
-| Used: Japan - onshore mainland - Hokkaido, Honshu, Shikoku, Kyushu.
+| Extent: Japan - onshore mainland - Hokkaido, Honshu, Shikoku, Kyushu.
 
 .. code-block:: php
 
@@ -1646,8 +1525,7 @@ Replaced JSLD69 and JSLD72 (CRS codes 5723 and 6693) from April 2002. Replaced b
 
 JGD2011 (vertical) height
 -------------------------
-
-| Used: Japan - onshore mainland - Hokkaido, Honshu, Shikoku, Kyushu.
+| Extent: Japan - onshore mainland - Hokkaido, Honshu, Shikoku, Kyushu.
 
 .. code-block:: php
 
@@ -1660,8 +1538,7 @@ Replaces JGD2000 (vertical) (CRS code 6694) with effect from 21st October 2011.
 
 JSLD69 height
 -------------
-
-| Used: Japan - onshore mainland - Honshu, Shikoku, Kyushu.
+| Extent: Japan - onshore mainland - Honshu, Shikoku, Kyushu.
 
 .. code-block:: php
 
@@ -1674,8 +1551,7 @@ Replaces JSLD49. Replaced by JGD2000 (vertical) (CRS code 6694) with effect from
 
 JSLD72 height
 -------------
-
-| Used: Japan - onshore mainland - Hokkaido.
+| Extent: Japan - onshore mainland - Hokkaido.
 
 .. code-block:: php
 
@@ -1688,8 +1564,7 @@ Replaced by JGD2000 (vertical) (CRS code 6694) with effect from April 2002.
 
 Jamestown 1971 height
 ---------------------
-
-| Used: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore.
+| Extent: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore.
 
 .. code-block:: php
 
@@ -1702,8 +1577,7 @@ Replaced by SHVD2016 (CRS code 7890) from 2016.
 
 KOC CD height
 -------------
-
-| Used: Kuwait - onshore.
+| Extent: Kuwait - onshore.
 
 .. code-block:: php
 
@@ -1715,8 +1589,7 @@ KOC CD height
 
 KOC WD depth
 ------------
-
-| Used: Kuwait - onshore.
+| Extent: Kuwait - onshore.
 
 .. code-block:: php
 
@@ -1729,8 +1602,7 @@ See CRS code 5614 for equivalent system in feet.
 
 KOC WD depth (ft)
 -----------------
-
-| Used: Kuwait - onshore.
+| Extent: Kuwait - onshore.
 
 .. code-block:: php
 
@@ -1743,8 +1615,7 @@ See CRS code 5789 for equivalent system in feet.
 
 KOC WD height
 -------------
-
-| Used: Kuwait - onshore.
+| Extent: Kuwait - onshore.
 
 .. code-block:: php
 
@@ -1757,8 +1628,7 @@ See CRS code 5789 for equivalent depth system.
 
 KSA-VRF14 height
 ----------------
-
-| Used: Saudi Arabia - onshore.
+| Extent: Saudi Arabia - onshore.
 
 .. code-block:: php
 
@@ -1771,8 +1641,7 @@ Orthometric heights.
 
 Kiunga height
 -------------
-
-| Used: Papua New Guinea - onshore south of 5°S and west of 144°E.
+| Extent: Papua New Guinea - onshore south of 5°S and west of 144°E.
 
 .. code-block:: php
 
@@ -1785,8 +1654,7 @@ Kiunga height = WGS 84 ellipsoid height - value of geoid undulation derived by b
 
 Kumul 34 height
 ---------------
-
-| Used: Papua New Guinea - Papuan fold and thrust belt.
+| Extent: Papua New Guinea - Papuan fold and thrust belt.
 
 .. code-block:: php
 
@@ -1799,8 +1667,7 @@ Kumul 34 height = WGS 84 ellipsoid height - value of geoid undulation derived by
 
 Kuwait PWD height
 -----------------
-
-| Used: Kuwait - onshore.
+| Extent: Kuwait - onshore.
 
 .. code-block:: php
 
@@ -1812,8 +1679,7 @@ Kuwait PWD height
 
 LAS07 height
 ------------
-
-| Used: Lithuania - onshore.
+| Extent: Lithuania - onshore.
 
 .. code-block:: php
 
@@ -1826,8 +1692,7 @@ In Lithuania replaces Baltic 1977 system (CRS code 5705) from January 2016.
 
 LAT NL depth
 ------------
-
-| Used: Netherlands - offshore North Sea.
+| Extent: Netherlands - offshore North Sea.
 
 .. code-block:: php
 
@@ -1839,8 +1704,7 @@ LAT NL depth
 
 LAT depth
 ---------
-
-| Used: World.
+| Extent: World.
 
 .. code-block:: php
 
@@ -1853,8 +1717,7 @@ Not specific to any location or epoch.
 
 LCVD61 height (ft)
 ------------------
-
-| Used: Cayman Islands - Little Cayman.
+| Extent: Cayman Islands - Little Cayman.
 
 .. code-block:: php
 
@@ -1866,8 +1729,7 @@ LCVD61 height (ft)
 
 LHN95 height
 ------------
-
-| Used: Liechtenstein; Switzerland.
+| Extent: Liechtenstein; Switzerland.
 
 .. code-block:: php
 
@@ -1880,8 +1742,7 @@ Replaces LN02 height (CRS code 5728).
 
 LLWLT depth
 -----------
-
-| Used: World.
+| Extent: World.
 
 .. code-block:: php
 
@@ -1894,8 +1755,7 @@ Not specific to any location or epoch.
 
 LN02 height
 -----------
-
-| Used: Liechtenstein; Switzerland.
+| Extent: Liechtenstein; Switzerland.
 
 .. code-block:: php
 
@@ -1908,8 +1768,7 @@ Replaced by LHN95 height (CRS code 5729).
 
 La Gomera height
 ----------------
-
-| Used: Spain - Canary Islands - La Gomera onshore.
+| Extent: Spain - Canary Islands - La Gomera onshore.
 
 .. code-block:: php
 
@@ -1921,8 +1780,7 @@ La Gomera height
 
 La Palma height
 ---------------
-
-| Used: Spain - Canary Islands - La Palma onshore.
+| Extent: Spain - Canary Islands - La Palma onshore.
 
 .. code-block:: php
 
@@ -1934,8 +1792,7 @@ La Palma height
 
 Lagos 1955 height
 -----------------
-
-| Used: Nigeria - onshore.
+| Extent: Nigeria - onshore.
 
 .. code-block:: php
 
@@ -1947,8 +1804,7 @@ Lagos 1955 height
 
 Lanzarote height
 ----------------
-
-| Used: Spain - Canary Islands - Lanzarote onshore.
+| Extent: Spain - Canary Islands - Lanzarote onshore.
 
 .. code-block:: php
 
@@ -1960,8 +1816,7 @@ Lanzarote height
 
 Latvia 2000 height
 ------------------
-
-| Used: Latvia - onshore.
+| Extent: Latvia - onshore.
 
 .. code-block:: php
 
@@ -1974,8 +1829,7 @@ In Latvia replaces Baltic 1977 system (CRS code 5705) from December 2014.
 
 Lerwick height
 --------------
-
-| Used: United Kingdom (UK) - Great Britain - Scotland - Shetland Islands onshore.
+| Extent: United Kingdom (UK) - Great Britain - Scotland - Shetland Islands onshore.
 
 .. code-block:: php
 
@@ -1987,8 +1841,7 @@ Lerwick height
 
 Low Water depth
 ---------------
-
-| Used: World.
+| Extent: World.
 
 .. code-block:: php
 
@@ -2001,8 +1854,7 @@ Not specific to any location or epoch.
 
 Lyttelton 1937 height
 ---------------------
-
-| Used: New Zealand - South Island - between approximately 41°20'S and 45°S - Lyttleton vertical CRS area.
+| Extent: New Zealand - South Island - between approximately 41°20'S and 45°S - Lyttleton vertical CRS area.
 
 .. code-block:: php
 
@@ -2014,8 +1866,7 @@ Lyttelton 1937 height
 
 MHHW height
 -----------
-
-| Used: World.
+| Extent: World.
 
 .. code-block:: php
 
@@ -2028,8 +1879,7 @@ Not specific to any location or epoch.
 
 MHW height
 ----------
-
-| Used: World.
+| Extent: World.
 
 .. code-block:: php
 
@@ -2042,8 +1892,7 @@ Not specific to any location or epoch.
 
 MHWS height
 -----------
-
-| Used: World.
+| Extent: World.
 
 .. code-block:: php
 
@@ -2056,8 +1905,7 @@ Not specific to any location or epoch.
 
 MLLW depth
 ----------
-
-| Used: World.
+| Extent: World.
 
 .. code-block:: php
 
@@ -2070,8 +1918,7 @@ Not specific to any location or epoch.
 
 MLLWS depth
 -----------
-
-| Used: World.
+| Extent: World.
 
 .. code-block:: php
 
@@ -2084,8 +1931,7 @@ Not specific to any location or epoch.
 
 MLW depth
 ---------
-
-| Used: World.
+| Extent: World.
 
 .. code-block:: php
 
@@ -2098,8 +1944,7 @@ Not specific to any location or epoch.
 
 MLWS depth
 ----------
-
-| Used: World.
+| Extent: World.
 
 .. code-block:: php
 
@@ -2112,8 +1957,7 @@ Not specific to any location or epoch.
 
 MSL NL depth
 ------------
-
-| Used: Netherlands - offshore North Sea.
+| Extent: Netherlands - offshore North Sea.
 
 .. code-block:: php
 
@@ -2125,8 +1969,7 @@ MSL NL depth
 
 MSL depth
 ---------
-
-| Used: World.
+| Extent: World.
 
 .. code-block:: php
 
@@ -2139,8 +1982,7 @@ Not specific to any location or epoch.
 
 MSL depth (ft)
 --------------
-
-| Used: World.
+| Extent: World.
 
 .. code-block:: php
 
@@ -2153,8 +1995,7 @@ Not specific to any location or epoch.
 
 MSL depth (ftUS)
 ----------------
-
-| Used: United States (USA) - onshore and offshore.
+| Extent: United States (USA) - onshore and offshore.
 
 .. code-block:: php
 
@@ -2167,8 +2008,7 @@ Not specific to any location or epoch.
 
 MSL height
 ----------
-
-| Used: World.
+| Extent: World.
 
 .. code-block:: php
 
@@ -2181,8 +2021,7 @@ Not specific to any location or epoch.
 
 MSL height (ft)
 ---------------
-
-| Used: World.
+| Extent: World.
 
 .. code-block:: php
 
@@ -2195,8 +2034,7 @@ Not specific to any location or epoch.
 
 MSL height (ftUS)
 -----------------
-
-| Used: United States (USA) - onshore and offshore.
+| Extent: United States (USA) - onshore and offshore.
 
 .. code-block:: php
 
@@ -2209,8 +2047,7 @@ Not specific to any location or epoch.
 
 MVGC height
 -----------
-
-| Used: Saudi Arabia - onshore.
+| Extent: Saudi Arabia - onshore.
 
 .. code-block:: php
 
@@ -2222,8 +2059,7 @@ MVGC height
 
 Macao height
 ------------
-
-| Used: China - Macao - onshore and offshore.
+| Extent: China - Macao - onshore and offshore.
 
 .. code-block:: php
 
@@ -2235,8 +2071,7 @@ Macao height
 
 Malin Head height
 -----------------
-
-| Used: Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore.
+| Extent: Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore.
 
 .. code-block:: php
 
@@ -2249,8 +2084,7 @@ Topographic mapping at all scales in Republic and medium and small scales in Nor
 
 Mallorca height
 ---------------
-
-| Used: Spain - Balearic Islands - Mallorca onshore.
+| Extent: Spain - Balearic Islands - Mallorca onshore.
 
 .. code-block:: php
 
@@ -2262,8 +2096,7 @@ Mallorca height
 
 Maputo height
 -------------
-
-| Used: Mozambique - onshore.
+| Extent: Mozambique - onshore.
 
 .. code-block:: php
 
@@ -2275,8 +2108,7 @@ Maputo height
 
 Martinique 1955 height
 ----------------------
-
-| Used: Martinique - onshore.
+| Extent: Martinique - onshore.
 
 .. code-block:: php
 
@@ -2289,8 +2121,7 @@ Replaced by Martinique 1987 height (CRS code 5756)
 
 Martinique 1987 height
 ----------------------
-
-| Used: Martinique - onshore.
+| Extent: Martinique - onshore.
 
 .. code-block:: php
 
@@ -2303,8 +2134,7 @@ Replaces Martinique 1955 height (CRS code 5794)
 
 Maupiti SAU 2001 height
 -----------------------
-
-| Used: French Polynesia - Society Islands - Maupiti.
+| Extent: French Polynesia - Society Islands - Maupiti.
 
 .. code-block:: php
 
@@ -2317,8 +2147,7 @@ Part of NGPF (CRS code 5600).
 
 Mayotte 1950 height
 -------------------
-
-| Used: Mayotte - onshore.
+| Extent: Mayotte - onshore.
 
 .. code-block:: php
 
@@ -2331,8 +2160,7 @@ Referred to as 'SHOM 1953' in government regulations but confirmed by IGN as bei
 
 Menorca height
 --------------
-
-| Used: Spain - Balearic Islands - Menorca onshore.
+| Extent: Spain - Balearic Islands - Menorca onshore.
 
 .. code-block:: php
 
@@ -2344,8 +2172,7 @@ Menorca height
 
 Moorea SAU 1981 height
 ----------------------
-
-| Used: French Polynesia - Society Islands - Moorea.
+| Extent: French Polynesia - Society Islands - Moorea.
 
 .. code-block:: php
 
@@ -2358,8 +2185,7 @@ Part of NGPF (CRS code 5600).
 
 Moturiki 1953 height
 --------------------
-
-| Used: New Zealand - North Island - Moturiki vertical CRS area.
+| Extent: New Zealand - North Island - Moturiki vertical CRS area.
 
 .. code-block:: php
 
@@ -2371,8 +2197,7 @@ Moturiki 1953 height
 
 N2000 height
 ------------
-
-| Used: Finland - onshore.
+| Extent: Finland - onshore.
 
 .. code-block:: php
 
@@ -2385,8 +2210,7 @@ Replaces N43 height and N60 height (CRS codes 8675 and 5717).
 
 N43 height
 ----------
-
-| Used: Finland - onshore mainland south of approximately 66°N.
+| Extent: Finland - onshore mainland south of approximately 66°N.
 
 .. code-block:: php
 
@@ -2399,8 +2223,7 @@ Introduced during second national precise levelling as a temporary height system
 
 N60 height
 ----------
-
-| Used: Finland - onshore.
+| Extent: Finland - onshore.
 
 .. code-block:: php
 
@@ -2413,8 +2236,7 @@ In use since 1968. Replaced by N2000 height (CRS code 3900).
 
 NAP height
 ----------
-
-| Used: Netherlands - onshore and offshore.
+| Extent: Netherlands - onshore and offshore.
 
 .. code-block:: php
 
@@ -2427,8 +2249,7 @@ Use has been extended from Netherlands onshore to Netherlands onshore and offsho
 
 NAVD88 depth
 ------------
-
-| Used: Mexico - onshore. United States (USA) - CONUS and Alaska - onshore - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.
+| Extent: Mexico - onshore. United States (USA) - CONUS and Alaska - onshore - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.
 
 .. code-block:: php
 
@@ -2440,8 +2261,7 @@ NAVD88 depth
 
 NAVD88 depth (ftUS)
 -------------------
-
-| Used: United States (USA) - CONUS and Alaska - onshore - Alabama; Alaska mainland; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.
+| Extent: United States (USA) - CONUS and Alaska - onshore - Alabama; Alaska mainland; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.
 
 .. code-block:: php
 
@@ -2454,8 +2274,7 @@ Replaces NGVD29 depth (ftUS) (CRS code 6359).
 
 NAVD88 height
 -------------
-
-| Used: Mexico - onshore. United States (USA) - CONUS and Alaska - onshore - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.
+| Extent: Mexico - onshore. United States (USA) - CONUS and Alaska - onshore - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.
 
 .. code-block:: php
 
@@ -2467,8 +2286,7 @@ NAVD88 height
 
 NAVD88 height (ft)
 ------------------
-
-| Used: United States (USA) - onshore - Arizona; Michigan; Montana; North Dakota; Oregon; South Carolina.
+| Extent: United States (USA) - onshore - Arizona; Michigan; Montana; North Dakota; Oregon; South Carolina.
 
 .. code-block:: php
 
@@ -2481,8 +2299,7 @@ Care: only for use as part of a compound CRS in conjunction with State Plane CS 
 
 NAVD88 height (ftUS)
 --------------------
-
-| Used: United States (USA) - CONUS and Alaska - onshore - Alabama; Alaska mainland; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.
+| Extent: United States (USA) - CONUS and Alaska - onshore - Alabama; Alaska mainland; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.
 
 .. code-block:: php
 
@@ -2495,8 +2312,7 @@ Replaces NGVD29 height (ftUS) (CRS code 5702).
 
 NG95 height
 -----------
-
-| Used: Luxembourg.
+| Extent: Luxembourg.
 
 .. code-block:: php
 
@@ -2508,8 +2324,7 @@ NG95 height
 
 NGC 1948 height
 ---------------
-
-| Used: France - Corsica onshore.
+| Extent: France - Corsica onshore.
 
 .. code-block:: php
 
@@ -2522,8 +2337,7 @@ Replaced by IGN78 height (CRS code 5721)
 
 NGF Lallemand height
 --------------------
-
-| Used: France - mainland onshore.
+| Extent: France - mainland onshore.
 
 .. code-block:: php
 
@@ -2536,8 +2350,7 @@ Generally but not entirely replaced by NGF IGN69 height (CRS code 5720).
 
 NGF-IGN69 height
 ----------------
-
-| Used: France - mainland onshore.
+| Extent: France - mainland onshore.
 
 .. code-block:: php
 
@@ -2550,8 +2363,7 @@ Generally but not entirely replaces NGF Lallemand height (CRS code 5719).
 
 NGF-IGN78 height
 ----------------
-
-| Used: France - Corsica onshore.
+| Extent: France - Corsica onshore.
 
 .. code-block:: php
 
@@ -2564,8 +2376,7 @@ Replaces NGC 1948 height (CRS code 5791).
 
 NGG1977 height
 --------------
-
-| Used: French Guiana - onshore.
+| Extent: French Guiana - onshore.
 
 .. code-block:: php
 
@@ -2577,8 +2388,7 @@ NGG1977 height
 
 NGNC08 height
 -------------
-
-| Used: New Caledonia - Belep, Grande Terre, Ile des Pins, Loyalty Islands (Lifou, Mare, Ouvea).
+| Extent: New Caledonia - Belep, Grande Terre, Ile des Pins, Loyalty Islands (Lifou, Mare, Ouvea).
 
 .. code-block:: php
 
@@ -2591,8 +2401,7 @@ On Grande Terre replaces NGNC69 (CRS code 5753).
 
 NGNC69 height
 -------------
-
-| Used: New Caledonia - Grande Terre.
+| Extent: New Caledonia - Grande Terre.
 
 .. code-block:: php
 
@@ -2605,8 +2414,7 @@ Replaced by NGNC08 height (CRS code 9351).
 
 NGPF height
 -----------
-
-| Used: French Polynesia - Society Islands - Bora Bora, Huahine, Maupiti, Moorea, Raiatea, Tahaa and Tahiti.
+| Extent: French Polynesia - Society Islands - Bora Bora, Huahine, Maupiti, Moorea, Raiatea, Tahaa and Tahiti.
 
 .. code-block:: php
 
@@ -2619,8 +2427,7 @@ The collection of heterogeneous vertical coordinate reference systems throughout
 
 NGVD29 depth (ftUS)
 -------------------
-
-| Used: United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.
+| Extent: United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.
 
 .. code-block:: php
 
@@ -2633,8 +2440,7 @@ Replaced by NAVD88 depth (ftUS) (CRS code 6358).
 
 NGVD29 height (ftUS)
 --------------------
-
-| Used: United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.
+| Extent: United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.
 
 .. code-block:: php
 
@@ -2647,8 +2453,7 @@ Replaced by NAVD88 height (ftUS) (CRS code 6360).
 
 NGVD29 height (m)
 -----------------
-
-| Used: United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.
+| Extent: United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.
 
 .. code-block:: php
 
@@ -2661,8 +2466,7 @@ System defined by IOGP to allow transformation of heights to and from NGVD29. Se
 
 NMVD03 height
 -------------
-
-| Used: Northern Mariana Islands - onshore - Rota, Saipan and Tinian.
+| Extent: Northern Mariana Islands - onshore - Rota, Saipan and Tinian.
 
 .. code-block:: php
 
@@ -2675,8 +2479,7 @@ Replaces all earlier vertical CRSs on these islands.
 
 NN2000 height
 -------------
-
-| Used: Norway - onshore.
+| Extent: Norway - onshore.
 
 .. code-block:: php
 
@@ -2689,8 +2492,7 @@ Replaces NN54 height (CRS code 5776).
 
 NN54 height
 -----------
-
-| Used: Norway - onshore.
+| Extent: Norway - onshore.
 
 .. code-block:: php
 
@@ -2703,8 +2505,7 @@ Replaced by NN2000 height (CRS code 5941).
 
 NVD 1992 height
 ---------------
-
-| Used: Bangladesh - onshore.
+| Extent: Bangladesh - onshore.
 
 .. code-block:: php
 
@@ -2717,8 +2518,7 @@ Replaces PWD Datum.
 
 NZVD2009 height
 ---------------
-
-| Used: New Zealand - onshore and offshore. Includes Antipodes Islands, Auckland Islands, Bounty Islands, Chatham Islands, Cambell Island, Kermadec Islands, Raoul Island and Snares Islands.
+| Extent: New Zealand - onshore and offshore. Includes Antipodes Islands, Auckland Islands, Bounty Islands, Chatham Islands, Cambell Island, Kermadec Islands, Raoul Island and Snares Islands.
 
 .. code-block:: php
 
@@ -2731,8 +2531,7 @@ Replaced by NZVD2016 from 2016-06-27.
 
 NZVD2016 height
 ---------------
-
-| Used: New Zealand - onshore and offshore. Includes Antipodes Islands, Auckland Islands, Bounty Islands, Chatham Islands, Cambell Island, Kermadec Islands, Raoul Island and Snares Islands.
+| Extent: New Zealand - onshore and offshore. Includes Antipodes Islands, Auckland Islands, Bounty Islands, Chatham Islands, Cambell Island, Kermadec Islands, Raoul Island and Snares Islands.
 
 .. code-block:: php
 
@@ -2745,8 +2544,7 @@ Normal-orthometric heights. Replaces NZVD2009 height (CRS code 4440).
 
 Napier 1962 height
 ------------------
-
-| Used: New Zealand - North Island - Hawkes Bay meridional circuit and Napier vertical crs area.
+| Extent: New Zealand - North Island - Hawkes Bay meridional circuit and Napier vertical crs area.
 
 .. code-block:: php
 
@@ -2758,8 +2556,7 @@ Napier 1962 height
 
 Nelson 1955 height
 ------------------
-
-| Used: New Zealand - South Island - north of approximately 42°20'S - Nelson vertical CRS area.
+| Extent: New Zealand - South Island - north of approximately 42°20'S - Nelson vertical CRS area.
 
 .. code-block:: php
 
@@ -2771,8 +2568,7 @@ Nelson 1955 height
 
 North Rona height
 -----------------
-
-| Used: United Kingdom (UK) - Great Britain - Scotland - North Rona onshore.
+| Extent: United Kingdom (UK) - Great Britain - Scotland - North Rona onshore.
 
 .. code-block:: php
 
@@ -2785,8 +2581,7 @@ Replaced by ODN (Offshore) height (CRS code 7707) in 2016.
 
 ODN (Offshore) height
 ---------------------
-
-| Used: United Kingdom (UK) - offshore between 2km from shore and boundary of UKCS within 49°46'N to 61°01'N and 7°33'W to 3°33'E.
+| Extent: United Kingdom (UK) - offshore between 2km from shore and boundary of UKCS within 49°46'N to 61°01'N and 7°33'W to 3°33'E.
 
 .. code-block:: php
 
@@ -2799,8 +2594,7 @@ Defined through OSGM geoid model (transformation code 7713). Replaces Fair Isle 
 
 ODN Orkney height
 -----------------
-
-| Used: United Kingdom (UK) - Great Britain - Scotland - Orkney Islands onshore.
+| Extent: United Kingdom (UK) - Great Britain - Scotland - Orkney Islands onshore.
 
 .. code-block:: php
 
@@ -2812,8 +2606,7 @@ ODN Orkney height
 
 ODN height
 ----------
-
-| Used: United Kingdom (UK) - Great Britain onshore - England and Wales - mainland; Scotland - mainland and Inner Hebrides.
+| Extent: United Kingdom (UK) - Great Britain onshore - England and Wales - mainland; Scotland - mainland and Inner Hebrides.
 
 .. code-block:: php
 
@@ -2825,8 +2618,7 @@ ODN height
 
 One Tree Point 1964 height
 --------------------------
-
-| Used: New Zealand - North Island - One Tree Point vertical CRS area.
+| Extent: New Zealand - North Island - One Tree Point vertical CRS area.
 
 .. code-block:: php
 
@@ -2838,8 +2630,7 @@ One Tree Point 1964 height
 
 Ostend height
 -------------
-
-| Used: Belgium - onshore.
+| Extent: Belgium - onshore.
 
 .. code-block:: php
 
@@ -2852,8 +2643,7 @@ No gravity corrections applied.
 
 PHD93 height
 ------------
-
-| Used: Oman - onshore. Includes Musandam and the Kuria Muria (Al Hallaniyah) islands.
+| Extent: Oman - onshore. Includes Musandam and the Kuria Muria (Al Hallaniyah) islands.
 
 .. code-block:: php
 
@@ -2866,8 +2656,7 @@ Replaces Fahud Height Datum height (CRS code 5725) from 1993.
 
 PNG08 height
 ------------
-
-| Used: Papua New Guinea - between 0°N and 12°S and 140°E and 158°E - onshore and offshore.
+| Extent: Papua New Guinea - between 0°N and 12°S and 140°E and 158°E - onshore and offshore.
 
 .. code-block:: php
 
@@ -2880,8 +2669,7 @@ PNG08 height = PNG94 ellipsoidal height - value of geoid undulation derived by b
 
 POM08 height
 ------------
-
-| Used: Papua New Guinea - onshore - Gulf province east of 144°24'E, Central province and National Capital District.
+| Extent: Papua New Guinea - onshore - Gulf province east of 144°24'E, Central province and National Capital District.
 
 .. code-block:: php
 
@@ -2894,8 +2682,7 @@ POM08 height = WGS 84 ellipsoid height - value of geoid undulation derived by bi
 
 POM96 height
 ------------
-
-| Used: Papua New Guinea - onshore - Gulf province east of 144°24'E, Central province and National Capital District.
+| Extent: Papua New Guinea - onshore - Gulf province east of 144°24'E, Central province and National Capital District.
 
 .. code-block:: php
 
@@ -2908,8 +2695,7 @@ POM96 height = WGS 84 ellipsoid height - value of geoid undulation derived by bi
 
 PRVD02 height
 -------------
-
-| Used: Puerto Rico - onshore.
+| Extent: Puerto Rico - onshore.
 
 .. code-block:: php
 
@@ -2922,8 +2708,7 @@ Replaces all earlier vertical CRSs for Puerto Rico.
 
 Pago Pago 2020 height
 ---------------------
-
-| Used: American Samoa - Tutuila island.
+| Extent: American Samoa - Tutuila island.
 
 .. code-block:: php
 
@@ -2936,8 +2721,7 @@ Replaces ASVD02 height (CRS 6643) from March 2020.
 
 Piraeus height
 --------------
-
-| Used: Greece - onshore.
+| Extent: Greece - onshore.
 
 .. code-block:: php
 
@@ -2949,8 +2733,7 @@ Piraeus height
 
 Ponta Delgada height
 --------------------
-
-| Used: Portugal - eastern Azores - Sao Miguel island onshore.
+| Extent: Portugal - eastern Azores - Sao Miguel island onshore.
 
 .. code-block:: php
 
@@ -2962,8 +2745,7 @@ Ponta Delgada height
 
 Poolbeg height (ft(Br36))
 -------------------------
-
-| Used: Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore.
+| Extent: Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore.
 
 .. code-block:: php
 
@@ -2976,8 +2758,7 @@ Topographic mapping before 1956 in Northern Ireland and 1970 in the Republic of 
 
 Poolbeg height (m)
 ------------------
-
-| Used: Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore.
+| Extent: Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore.
 
 .. code-block:: php
 
@@ -2990,8 +2771,7 @@ CRS in metres used only for transformation of heights referenced to Poolbeg heig
 
 RH00 height
 -----------
-
-| Used: Sweden - onshore.
+| Extent: Sweden - onshore.
 
 .. code-block:: php
 
@@ -3004,8 +2784,7 @@ Replaced by RH70 (CRS code 5718).
 
 RH2000 height
 -------------
-
-| Used: Sweden - onshore.
+| Extent: Sweden - onshore.
 
 .. code-block:: php
 
@@ -3018,8 +2797,7 @@ Replaces RH70 (CRS code 5718) from 2005.
 
 RH70 height
 -----------
-
-| Used: Sweden - onshore.
+| Extent: Sweden - onshore.
 
 .. code-block:: php
 
@@ -3032,8 +2810,7 @@ Replaces RH00 (CRS code 5615). Replaced by RH2000 (CRS code 5613) from 2005.
 
 Raiatea SAU 2001 height
 -----------------------
-
-| Used: French Polynesia - Society Islands - Raiatea.
+| Extent: French Polynesia - Society Islands - Raiatea.
 
 .. code-block:: php
 
@@ -3046,8 +2823,7 @@ Part of NGPF (CRS code 5600).
 
 Ras Ghumays height
 ------------------
-
-| Used: United Arab Emirates (UAE) - Abu Dhabi onshore.
+| Extent: United Arab Emirates (UAE) - Abu Dhabi onshore.
 
 .. code-block:: php
 
@@ -3059,8 +2835,7 @@ Ras Ghumays height
 
 Reunion 1989 height
 -------------------
-
-| Used: Reunion - onshore.
+| Extent: Reunion - onshore.
 
 .. code-block:: php
 
@@ -3072,8 +2847,7 @@ Reunion 1989 height
 
 SA LLD height
 -------------
-
-| Used: South Africa - mainland onshore.
+| Extent: South Africa - mainland onshore.
 
 .. code-block:: php
 
@@ -3085,8 +2859,7 @@ SA LLD height
 
 SHD height
 ----------
-
-| Used: Singapore - onshore and offshore.
+| Extent: Singapore - onshore and offshore.
 
 .. code-block:: php
 
@@ -3098,8 +2871,7 @@ SHD height
 
 SHVD2015 height
 ---------------
-
-| Used: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore.
+| Extent: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore.
 
 .. code-block:: php
 
@@ -3112,8 +2884,7 @@ Replaces Jamestown 1971 height and Tritan 2011 height (CRS codes 7888-89) from 2
 
 SLVD height
 -----------
-
-| Used: Sri Lanka - onshore.
+| Extent: Sri Lanka - onshore.
 
 .. code-block:: php
 
@@ -3125,8 +2896,7 @@ SLVD height
 
 SNN76 height
 ------------
-
-| Used: Germany - states of former East Germany - Berlin, Brandenburg; Mecklenburg-Vorpommern; Sachsen; Sachsen-Anhalt; Thuringen.
+| Extent: Germany - states of former East Germany - Berlin, Brandenburg; Mecklenburg-Vorpommern; Sachsen; Sachsen-Anhalt; Thuringen.
 
 .. code-block:: php
 
@@ -3139,8 +2909,7 @@ Replaced by DNNH92 height (CRS code 5783).
 
 SRB_VRS12 height
 ----------------
-
-| Used: Serbia including Vojvodina.
+| Extent: Serbia including Vojvodina.
 
 .. code-block:: php
 
@@ -3153,8 +2922,7 @@ Replaces Trieste height (CRS code 5195) in Serbia from 2012-03.
 
 SRVN16 height
 -------------
-
-| Used: Argentina - onshore.
+| Extent: Argentina - onshore.
 
 .. code-block:: php
 
@@ -3167,8 +2935,7 @@ Orthometric heights. Replaces SRVN71.
 
 SVD2006 height
 --------------
-
-| Used: Arctic (Norway (Svalbard) onshore and offshore) - between 81°10'N and 76°10'N.
+| Extent: Arctic (Norway (Svalbard) onshore and offshore) - between 81°10'N and 76°10'N.
 
 .. code-block:: php
 
@@ -3181,8 +2948,7 @@ Defined through the arcgp-2006-sk geoid model.
 
 SVS2000 height
 --------------
-
-| Used: Slovenia - onshore.
+| Extent: Slovenia - onshore.
 
 .. code-block:: php
 
@@ -3195,8 +2961,7 @@ Replaces Trieste height (CRS code 5195) in Slovenia from 2000. Replaced by SVS20
 
 SVS2010 height
 --------------
-
-| Used: Slovenia - onshore.
+| Extent: Slovenia - onshore.
 
 .. code-block:: php
 
@@ -3209,8 +2974,7 @@ Replaces SVS2000 height (CRS code 5779) from 2019-01.
 
 Santa Cruz da Graciosa height
 -----------------------------
-
-| Used: Portugal - central Azores - Graciosa island onshore.
+| Extent: Portugal - central Azores - Graciosa island onshore.
 
 .. code-block:: php
 
@@ -3222,8 +2986,7 @@ Santa Cruz da Graciosa height
 
 Santa Cruz das Flores height
 ----------------------------
-
-| Used: Portugal - western Azores onshore - Flores, Corvo.
+| Extent: Portugal - western Azores onshore - Flores, Corvo.
 
 .. code-block:: php
 
@@ -3235,8 +2998,7 @@ Santa Cruz das Flores height
 
 St. Helena Tritan 2011 height
 -----------------------------
-
-| Used: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore.
+| Extent: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore.
 
 .. code-block:: php
 
@@ -3249,8 +3011,7 @@ Replaced by SHVD2016 (CRS code 7890) from 2016.
 
 St. Kilda height
 ----------------
-
-| Used: United Kingdom (UK) - Great Britain - Scotland - St Kilda onshore.
+| Extent: United Kingdom (UK) - Great Britain - Scotland - St Kilda onshore.
 
 .. code-block:: php
 
@@ -3263,8 +3024,7 @@ Replaced by ODN (Offshore) height (CRS code 7707) in 2016.
 
 St. Marys height
 ----------------
-
-| Used: United Kingdom (UK) - Great Britain - England - Isles of Scilly onshore.
+| Extent: United Kingdom (UK) - Great Britain - England - Isles of Scilly onshore.
 
 .. code-block:: php
 
@@ -3276,8 +3036,7 @@ St. Marys height
 
 Stewart Island 1977 height
 --------------------------
-
-| Used: New Zealand - Stewart Island.
+| Extent: New Zealand - Stewart Island.
 
 .. code-block:: php
 
@@ -3289,8 +3048,7 @@ Stewart Island 1977 height
 
 Stornoway height
 ----------------
-
-| Used: United Kingdom (UK) - Great Britain - Scotland - Outer Hebrides onshore.
+| Extent: United Kingdom (UK) - Great Britain - Scotland - Outer Hebrides onshore.
 
 .. code-block:: php
 
@@ -3302,8 +3060,7 @@ Stornoway height
 
 Sule Skerry height
 ------------------
-
-| Used: United Kingdom (UK) - Great Britain - Scotland - Sule Skerry onshore.
+| Extent: United Kingdom (UK) - Great Britain - Scotland - Sule Skerry onshore.
 
 .. code-block:: php
 
@@ -3316,8 +3073,7 @@ Replaced by ODN (Offshore) height (CRS code 7707) in 2016.
 
 TWVD 2001 height
 ----------------
-
-| Used: Taiwan, Republic of China - onshore - Taiwan Island.
+| Extent: Taiwan, Republic of China - onshore - Taiwan Island.
 
 .. code-block:: php
 
@@ -3330,8 +3086,7 @@ Replaces TWVD79.
 
 Tahaa SAU 2001 height
 ---------------------
-
-| Used: French Polynesia - Society Islands - Tahaa.
+| Extent: French Polynesia - Society Islands - Tahaa.
 
 .. code-block:: php
 
@@ -3344,8 +3099,7 @@ Part of NGPF (CRS code 5600).
 
 Taranaki 1970 height
 --------------------
-
-| Used: New Zealand - North Island - Taranaki vertical CRS area.
+| Extent: New Zealand - North Island - Taranaki vertical CRS area.
 
 .. code-block:: php
 
@@ -3357,8 +3111,7 @@ Taranaki 1970 height
 
 Tararu 1952 height
 ------------------
-
-| Used: New Zealand - North Island - Tararu vertical CRS area.
+| Extent: New Zealand - North Island - Tararu vertical CRS area.
 
 .. code-block:: php
 
@@ -3370,8 +3123,7 @@ Tararu 1952 height
 
 Tenerife height
 ---------------
-
-| Used: Spain - Canary Islands - Tenerife onshore.
+| Extent: Spain - Canary Islands - Tenerife onshore.
 
 .. code-block:: php
 
@@ -3383,8 +3135,7 @@ Tenerife height
 
 Trieste height
 --------------
-
-| Used: Bosnia and Herzegovina; Croatia - onshore; Kosovo; Montenegro - onshore; North Macedonia; Serbia; Slovenia - onshore.
+| Extent: Bosnia and Herzegovina; Croatia - onshore; Kosovo; Montenegro - onshore; North Macedonia; Serbia; Slovenia - onshore.
 
 .. code-block:: php
 
@@ -3397,8 +3148,7 @@ In Croatia replaced by HVRS71 height (CRS code 5610). In Serbia replaced by SRB_
 
 Tutuila 1962 height
 -------------------
-
-| Used: American Samoa - Tutuila island.
+| Extent: American Samoa - Tutuila island.
 
 .. code-block:: php
 
@@ -3411,8 +3161,7 @@ Replaced by ASVD02 height (CRS code 6643).
 
 VIVD09 height
 -------------
-
-| Used: US Virgin Islands - onshore - St Croix, St John, and St Thomas.
+| Extent: US Virgin Islands - onshore - St Croix, St John, and St Thomas.
 
 .. code-block:: php
 
@@ -3425,8 +3174,7 @@ Replaces all earlier vertical CRSs on these islands.
 
 Vienna height
 -------------
-
-| Used: Austria - Vienna city state.
+| Extent: Austria - Vienna city state.
 
 .. code-block:: php
 
@@ -3439,8 +3187,7 @@ Defined from GHA height (EPSG:5778) using a vertical offset (Wiener Null is 156.
 
 Wellington 1953 height
 ----------------------
-
-| Used: New Zealand - North Island - Wellington vertical CRS area.
+| Extent: New Zealand - North Island - Wellington vertical CRS area.
 
 .. code-block:: php
 
@@ -3452,8 +3199,7 @@ Wellington 1953 height
 
 Yellow Sea 1956 height
 ----------------------
-
-| Used: China - onshore.
+| Extent: China - onshore.
 
 .. code-block:: php
 
@@ -3466,8 +3212,7 @@ Replaced by Yellow Sea 1985 height (CRS code 5737).
 
 Yellow Sea 1985 height
 ----------------------
-
-| Used: China - onshore.
+| Extent: China - onshore.
 
 .. code-block:: php
 

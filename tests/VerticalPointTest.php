@@ -197,7 +197,7 @@ class VerticalPointTest extends TestCase
     {
         $sourceCRS = Vertical::fromSRID($sourceCrsSrid);
         $targetCRS = Vertical::fromSRID($targetCrsSrid);
-        $operationExtent = BoundingArea::createFromExtentCodes(CoordinateOperations::getOperationData($operationSrid)['extent_code']);
+        $operationExtent = BoundingArea::createFromExtentCodes(CoordinateOperations::getOperationData($operationSrid)['extent']);
 
         $epoch = new DateTime();
 

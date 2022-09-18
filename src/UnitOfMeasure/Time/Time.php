@@ -14,7 +14,7 @@ use PHPCoord\UnitOfMeasure\UnitOfMeasure;
 abstract class Time implements UnitOfMeasure
 {
     /**
-     * year.
+     * Year.
      */
     public const EPSG_YEAR = 'urn:ogc:def:uom:EPSG::1029';
 

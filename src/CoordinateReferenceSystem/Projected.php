@@ -6074,7 +6074,7 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * Gulshan 303 / TM 90 NE
-     * Extent: Bangladesh - onshore and offshore. Bangladesh - onshore.
+     * Extent: Bangladesh - onshore and offshore, Bangladesh - onshore.
      * Used by Survey of Bangladesh from 1995 to 2009, after which replaced by WGS 84 / TM 90 NE (CRS code 9680). See
      * Gulshan 303 / BTM (code 9678) for other uses including water resource management.
      */
@@ -7164,7 +7164,7 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * KKJ / Finland Uniform Coordinate System
-     * Extent: Finland - onshore between 25°30'E and 28°30'E. Finland - onshore.
+     * Extent: Finland - onshore between 25°30'E and 28°30'E, Finland - onshore.
      * Known as Uniform Coordinate System (YKJ) when used over all country and also as Basic Coordinate System zone 3
      * at larger scales.
      */
@@ -8164,7 +8164,7 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * MAGNA-SIRGAS / Colombia Bogota zone
-     * Extent: Colombia - onshore between 1°30'W and 1°30'E of Bogota (75°35'W and 72°35'W of Greenwich). Colombia
+     * Extent: Colombia - onshore between 1°30'W and 1°30'E of Bogota (75°35'W and 72°35'W of Greenwich), Colombia
      * - mainland onshore.
      * Replaces Bogota 1975 / Colombia Bogota zone (CRS code 21897).
      */
@@ -8563,7 +8563,7 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * MGI 1901 / Balkans zone 7
-     * Extent: North Macedonia. Bosnia and Herzegovina - east of 19°30'E; Kosovo; Montenegro - east of 19°30'E;
+     * Extent: North Macedonia, Bosnia and Herzegovina - east of 19°30'E; Kosovo; Montenegro - east of 19°30'E;
      * Serbia - between 19°30'E and 22°30'E.
      * Introduced in 1924. In Macedonia replaced by MSCS (CRS code 6204) from 2008 but from 2013 this CRS used for AREC
      * electronic cadastral database (E-kat) across whole country.
@@ -20394,7 +20394,7 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * NAD83(CSRS)v2 / UTM zone 13N
-     * Extent: Canada - Saskatchewan. Canada between 108°W and 102°W onshore and offshore - Northwest Territories,
+     * Extent: Canada - Saskatchewan, Canada between 108°W and 102°W onshore and offshore - Northwest Territories,
      * Nunavut, Saskatchewan.
      * Adopted by the Canadian federal government in 1998 and the provincial government of Saskatchewan in 2000. This
      * zone used throughout all SK for province-wide mapping and spatial referencing.
@@ -32942,7 +32942,7 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * RT38 2.5 gon V
-     * Extent: Sweden - communes between approximately 14°40'E and 16°55'E. See information source for map. Sweden -
+     * Extent: Sweden - communes between approximately 14°40'E and 16°55'E. See information source for map, Sweden -
      * onshore.
      * Replaced by RT90 2.5 gon V (CRS code 3021).
      */
@@ -32985,7 +32985,7 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * RT90 2.5 gon V
-     * Extent: Sweden - communes between approximately 14°40'E and 16°55'E. See information source for map. Sweden -
+     * Extent: Sweden - communes between approximately 14°40'E and 16°55'E. See information source for map, Sweden -
      * onshore.
      * Replaces RT38 2.5 gon V (CRS code 3027) from 1990. From 2003 replaced by SWEREF systems (CRS codes 3006-3018).
      */
@@ -35191,14 +35191,14 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * VN-2000 / TM-3 zone 482
-     * Extent: Vietnam - between 103°30'E and 106°30'E, onshore. Vietnam - Ha Noi city, Ha Nam, Ha Tay, Ninh Binh,
+     * Extent: Vietnam - between 103°30'E and 106°30'E, onshore, Vietnam - Ha Noi city, Ha Nam, Ha Tay, Ninh Binh,
      * Thanh Hoa and Vinh Phuc provinces; Can Tho city, Bac Lieu, Dong Thap and Hau Giang provinces.
      */
     public const EPSG_VN_2000_TM_3_ZONE_482 = 'urn:ogc:def:crs:EPSG::5897';
 
     /**
      * VN-2000 / TM-3 zone 491
-     * Extent: Vietnam - onshore east of 106°30'E. Vietnam - Quang Ngai province.
+     * Extent: Vietnam - onshore east of 106°30'E, Vietnam - Quang Ngai province.
      */
     public const EPSG_VN_2000_TM_3_ZONE_491 = 'urn:ogc:def:crs:EPSG::5898';
 
@@ -39564,7 +39564,7 @@ class Projected extends CoordinateReferenceSystem
     public const EPSG_ZANDERIJ_UTM_ZONE_21N = 'urn:ogc:def:crs:EPSG::31121';
 
     /**
-     * fk89 / Faroe Lambert FK89
+     * Fk89 / Faroe Lambert FK89
      * Extent: Faroe Islands - onshore.
      * Replaces FD54 / Faroe Lambert (fk54) (CRS code 3144) for cadastral survey.
      */

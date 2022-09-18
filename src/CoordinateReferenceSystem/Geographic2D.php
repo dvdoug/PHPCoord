@@ -4037,7 +4037,7 @@ class Geographic2D extends Geographic
     public const EPSG_ZANDERIJ = 'urn:ogc:def:crs:EPSG::4311';
 
     /**
-     * fk89
+     * Fk89
      * Extent: Faroe Islands - onshore.
      * Replaces FD54 (CRS code 4741). Coordinate differences are less than 0.05 seconds (2m). The name of this system
      * is also used for the dependent projected CRS - see CRS code 3173.

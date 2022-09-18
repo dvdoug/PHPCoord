@@ -14,26 +14,26 @@ use PHPCoord\UnitOfMeasure\UnitOfMeasure;
 abstract class Scale implements UnitOfMeasure
 {
     /**
-     * coefficient
+     * Coefficient
      * Used when parameters are coefficients.  They inherently take the units which depend upon the term to which the
      * coefficient applies.
      */
     public const EPSG_COEFFICIENT = 'urn:ogc:def:uom:EPSG::9203';
 
     /**
-     * parts per billion
+     * Parts per billion
      * Billion is internationally ambiguous, in different languages being 1E+9 and 1E+12. One billion taken here to be
      * 1E+9.
      */
     public const EPSG_PARTS_PER_BILLION = 'urn:ogc:def:uom:EPSG::1028';
 
     /**
-     * parts per million.
+     * Parts per million.
      */
     public const EPSG_PARTS_PER_MILLION = 'urn:ogc:def:uom:EPSG::9202';
 
     /**
-     * unity
+     * Unity
      * EPSG standard unit for scale. SI coherent derived unit (standard unit) for dimensionless quantity, expressed by
      * the number one but this is not explicitly shown.
      */

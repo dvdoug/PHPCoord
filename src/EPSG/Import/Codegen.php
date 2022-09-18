@@ -19,6 +19,7 @@ use PhpParser\NodeVisitor\CloningVisitor;
 use PhpParser\Parser\Php7;
 use ReflectionClass;
 use SplFileInfo;
+use ReflectionClassConstant;
 
 use function array_flip;
 use function array_reverse;
@@ -34,6 +35,7 @@ use function strlen;
 use function strtolower;
 use function trim;
 use function ucfirst;
+use function uasort;
 
 use const PHP_EOL;
 
@@ -182,36 +184,103 @@ class Codegen
 
         $file = fopen($this->sourceDir . '/../docs/reflection/' . str_replace('phpcoord/', '', str_replace('\\', '/', strtolower($class))) . '.txt', 'wb');
         $reflectionClass = new ReflectionClass($class);
-        $constants = array_flip(array_reverse($reflectionClass->getConstants())); // make sure aliases are overridden with current
+        $constants = array_flip(array_reverse($reflectionClass->getConstants(ReflectionClassConstant::IS_PUBLIC))); // make sure aliases are overridden with current
+
+        uasort($data, fn ($a, $b) => $a['name'] <=> $b['name']);
 
         foreach ($data as $urn => $row) {
             $name = ucfirst(trim($row['name']));
             $name = str_replace('_LOWERCASE', '', $name);
-            fwrite($file, $name . "\n");
-            fwrite($file, str_repeat('-', strlen($name)) . "\n\n");
+            $name = str_replace(
+                [
+                    'UoM: degree',
+                    'UoM: grads',
+                    'UoM: ft(Br36)',
+                    'UoM: ftSe',
+                    'UoM: ftGC',
+                    'UoM: ftCla',
+                    'UoM: ftUS',
+                    'UoM: ft',
+                    'UoM: km',
+                    'UoM: m.',
+                    'UoM: chBnB',
+                    'UoM: chSe(T)',
+                    'UoM: chSe',
+                    'UoM: lkCla',
+                    'UoM: lk',
+                    'UoM: ydCl',
+                    'UoM: ydInd',
+                    'UoM: ydSe',
+                    'UoM: GLM',
+                ],
+                [
+                    'Units: degree',
+                    'Units: grads',
+                    'Units: British foot (1936)',
+                    'Units: British foot (Sears 1922)',
+                    'Units: Gold Coast foot',
+                    'Units: Clarke\'s foot',
+                    'Units: foot (US)',
+                    'Units: foot',
+                    'Units: kilometre',
+                    'Units: metre',
+                    'Units: British chain (Benoit 1895 B)',
+                    'Units: British chain (Sears 1922 truncated)',
+                    'Units: British chain (Sears 1922)',
+                    'Units: Clarke\'s link',
+                    'Units: link',
+                    'Units: Clarke\'s yard',
+                    'Units: Indian yard',
+                    'Units: British yard (Sears 1922)',
+                    'Units: German legal metre',
+                ],
+                $name
+            );
 
+            fwrite($file, $name . "\n");
+            fwrite($file, str_repeat('-', strlen($name)) . "\n");
+
+            $subhead = '';
             if (isset($row['type']) && $row['type']) {
-                fwrite($file, '| Type: ' . ucfirst($row['type']) . "\n");
+                $subhead .= '| Type: ' . ucfirst(trim($row['type'])) . "\n";
+            }
+            if (isset($row['method_name']) && $row['method_name']) {
+                $subhead .= '| Method: ' . ucfirst(trim($row['method_name'])) . "\n";
             }
             if (isset($row['extent_description']) && $row['extent_description']) {
-                fwrite($file, "| Used: {$row['extent_description']}" . "\n");
+                $subhead .= '| Extent: ' . trim($row['extent_description']) . "\n";
+            }
+            if ($subhead) {
+                fwrite($file, $subhead . "\n");
             }
 
-            fwrite($file, "\n.. code-block:: php\n\n");
             $invokeClass = $reflectionClass;
-            do {
-                if ($invokeClass->hasMethod('fromSRID')) {
-                    fwrite($file, "    {$invokeClass->getShortName()}::fromSRID({$reflectionClass->getShortName()}::{$constants[$urn]})" . "\n");
-                    fwrite($file, "    {$invokeClass->getShortName()}::fromSRID('{$urn}')" . "\n");
-                } elseif ($invokeClass->hasMethod('makeUnit')) {
-                    fwrite($file, "    {$invokeClass->getShortName()}::makeUnit(\$measurement, {$reflectionClass->getShortName()}::{$constants[$urn]})" . "\n");
-                    fwrite($file, "    {$invokeClass->getShortName()}::makeUnit(\$measurement, '{$urn}')" . "\n");
-                }
-            } while ($invokeClass = $invokeClass->getParentClass());
-            fwrite($file, "\n");
+            if ($invokeClass->hasMethod('fromSRID') || $invokeClass->hasMethod('makeUnit')) {
+                fwrite($file, ".. code-block:: php\n\n");
+                do {
+                    if ($invokeClass->hasMethod('fromSRID')) {
+                        fwrite($file, "    {$invokeClass->getShortName()}::fromSRID({$reflectionClass->getShortName()}::{$constants[$urn]})" . "\n");
+                        fwrite($file, "    {$invokeClass->getShortName()}::fromSRID('{$urn}')" . "\n");
+                    } elseif ($invokeClass->hasMethod('makeUnit')) {
+                        fwrite($file, "    {$invokeClass->getShortName()}::makeUnit(\$measurement, {$reflectionClass->getShortName()}::{$constants[$urn]})" . "\n");
+                        fwrite($file, "    {$invokeClass->getShortName()}::makeUnit(\$measurement, '{$urn}')" . "\n");
+                    }
+                } while ($invokeClass = $invokeClass->getParentClass());
+                fwrite($file, "\n");
+            } elseif (isset($constants[$urn])) {
+                fwrite($file, ".. code-block:: php\n\n");
+                fwrite($file, "    {$reflectionClass->getShortName()}::{$constants[$urn]}" . "\n");
+                fwrite($file, "    '{$urn}'" . "\n");
+                fwrite($file, "\n");
+            } elseif ($invokeClass->hasMethod('getOperationData')) {
+                fwrite($file, ".. code-block:: php\n\n");
+                fwrite($file, "    '{$urn}'" . "\n");
+                fwrite($file, "\n");
+            }
 
             if (trim($row['doc_help'])) {
-                $help = str_replace("\n", "\n\n", trim($row['doc_help']));
+                $help = str_replace("\r\n", "\n", trim($row['doc_help']));
+                $help = str_replace("\n", "\n\n", trim($help));
                 $help = str_replace('Convert to degrees using algorithm.', '', $help);
                 $help = str_replace('Convert to deg using algorithm.', '', $help);
                 fwrite($file, "{$help}" . "\n");

@@ -16,39 +16,39 @@ use const M_PI;
 abstract class Angle implements UnitOfMeasure
 {
     /**
-     * arc-second
+     * Arc-second
      * 1/60th arc-minute = ((pi/180) / 3600) radians.
      */
     public const EPSG_ARC_SECOND = 'urn:ogc:def:uom:EPSG::9104';
 
     /**
-     * centesimal second
+     * Centesimal second
      * 1/100 of a centesimal minute or 1/10,000th of a grad and gon = ((pi/200) / 10000) radians.
      */
     public const EPSG_CENTESIMAL_SECOND = 'urn:ogc:def:uom:EPSG::9113';
 
     /**
-     * degree
+     * Degree
      * = pi/180 radians.
      */
     public const EPSG_DEGREE = 'urn:ogc:def:uom:EPSG::9102';
 
     /**
-     * degree hemisphere
+     * Degree hemisphere
      * Degree representation. Format: degrees (real, any precision) - hemisphere abbreviation (single character N S E
      * or W). Convert to degrees using algorithm.
      */
     public const EPSG_DEGREE_HEMISPHERE = 'urn:ogc:def:uom:EPSG::9116';
 
     /**
-     * degree minute
+     * Degree minute
      * Degree representation. Format: signed degrees (integer)  - arc-minutes (real, any precision). Different symbol
      * sets are in use as field separators, for example º '. Convert to degrees using algorithm.
      */
     public const EPSG_DEGREE_MINUTE = 'urn:ogc:def:uom:EPSG::9115';
 
     /**
-     * degree minute hemisphere
+     * Degree minute hemisphere
      * Degree representation. Format: degrees (integer) - arc-minutes (real, any precision) - hemisphere abbreviation
      * (single character N S E or W). Different symbol sets are in use as field separators, for example º '. Convert
      * to degrees using algorithm.
@@ -56,7 +56,7 @@ abstract class Angle implements UnitOfMeasure
     public const EPSG_DEGREE_MINUTE_HEMISPHERE = 'urn:ogc:def:uom:EPSG::9118';
 
     /**
-     * degree minute second
+     * Degree minute second
      * Degree representation. Format: signed degrees (integer) - arc-minutes (integer) - arc-seconds (real, any
      * precision). Different symbol sets are in use as field separators, for example º ' ". Convert to degrees using
      * algorithm.
@@ -64,7 +64,7 @@ abstract class Angle implements UnitOfMeasure
     public const EPSG_DEGREE_MINUTE_SECOND = 'urn:ogc:def:uom:EPSG::9107';
 
     /**
-     * degree minute second hemisphere
+     * Degree minute second hemisphere
      * Degree representation. Format: degrees (integer) - arc-minutes (integer) - arc-seconds (real) - hemisphere
      * abbreviation (single character N S E or W). Different symbol sets are in use as field separators for example º
      * ' ". Convert to deg using algorithm.
@@ -72,20 +72,20 @@ abstract class Angle implements UnitOfMeasure
     public const EPSG_DEGREE_MINUTE_SECOND_HEMISPHERE = 'urn:ogc:def:uom:EPSG::9108';
 
     /**
-     * grad
+     * Grad
      * =pi/200 radians.
      */
     public const EPSG_GRAD = 'urn:ogc:def:uom:EPSG::9105';
 
     /**
-     * hemisphere degree
+     * Hemisphere degree
      * Degree representation. Format: hemisphere abbreviation (single character N S E or W) - degrees (real, any
      * precision). Convert to degrees using algorithm.
      */
     public const EPSG_HEMISPHERE_DEGREE = 'urn:ogc:def:uom:EPSG::9117';
 
     /**
-     * hemisphere degree minute
+     * Hemisphere degree minute
      * Degree representation. Format:  hemisphere abbreviation (single character N S E or W) - degrees (integer) -
      * arc-minutes (real, any precision). Different symbol sets are in use as field separators, for example º '.
      * Convert to degrees using algorithm.
@@ -93,7 +93,7 @@ abstract class Angle implements UnitOfMeasure
     public const EPSG_HEMISPHERE_DEGREE_MINUTE = 'urn:ogc:def:uom:EPSG::9119';
 
     /**
-     * hemisphere degree minute second
+     * Hemisphere degree minute second
      * Degree representation. Format: hemisphere abbreviation (single character N S E or W) - degrees (integer) -
      * arc-minutes (integer) - arc-seconds (real). Different symbol sets are in use as field separators for example º
      * ' ". Convert to deg using algorithm.
@@ -101,25 +101,25 @@ abstract class Angle implements UnitOfMeasure
     public const EPSG_HEMISPHERE_DEGREE_MINUTE_SECOND = 'urn:ogc:def:uom:EPSG::9120';
 
     /**
-     * microradian
+     * Microradian
      * rad * 10E-6.
      */
     public const EPSG_MICRORADIAN = 'urn:ogc:def:uom:EPSG::9109';
 
     /**
-     * milliarc-second
+     * Milliarc-second
      * = ((pi/180) / 3600 / 1000) radians.
      */
     public const EPSG_MILLIARC_SECOND = 'urn:ogc:def:uom:EPSG::1031';
 
     /**
-     * radian
+     * Radian
      * SI coherent derived unit (standard unit) for plane angle.
      */
     public const EPSG_RADIAN = 'urn:ogc:def:uom:EPSG::9101';
 
     /**
-     * sexagesimal DMS
+     * Sexagesimal DMS
      * Pseudo unit. Format: signed degrees - period - minutes (2 digits) - integer seconds (2 digits) - fraction of
      * seconds (any precision). Must include leading zero in minutes and seconds and exclude decimal point for seconds.
      * Convert to deg using algorithm.

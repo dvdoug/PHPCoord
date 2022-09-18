@@ -11,6 +11,7 @@ namespace PHPCoord\Geometry;
 use PHPCoord\CoordinateOperation\GeographicValue;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPCoord\UnitOfMeasure\Angle\Degree;
+
 use function array_map;
 use function array_merge;
 use function array_unique;

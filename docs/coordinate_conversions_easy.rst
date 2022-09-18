@@ -1,3 +1,5 @@
+.. _coordinate_conversions_easy:
+
 The easy way
 ============
 

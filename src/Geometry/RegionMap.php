@@ -20,7 +20,9 @@ class RegionMap
     public const REGION_SOUTHAMERICA = 'South America';
     public const REGION_OCEANIA = 'Australasia and Oceania';
 
-    /** @internal */
+    /**
+     * @internal
+     */
     public function __invoke(): array
     {
         return [
