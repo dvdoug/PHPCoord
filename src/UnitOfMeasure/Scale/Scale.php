@@ -64,6 +64,9 @@ abstract class Scale implements UnitOfMeasure
 
     public function add(self $unit): self
     {
+        if ($this::class === $unit::class) {
+            return new static($this->getValue() + $unit->getValue());
+        }
         $resultAsUnity = new Unity($this->asUnity()->getValue() + $unit->asUnity()->getValue());
         $conversionRatio = (new static(1))->asUnity()->getValue();
 
@@ -72,6 +75,9 @@ abstract class Scale implements UnitOfMeasure
 
     public function subtract(self $unit): self
     {
+        if ($this::class === $unit::class) {
+            return new static($this->getValue() - $unit->getValue());
+        }
         $resultAsUnity = new Unity($this->asUnity()->getValue() - $unit->asUnity()->getValue());
         $conversionRatio = (new static(1))->asUnity()->getValue();
 

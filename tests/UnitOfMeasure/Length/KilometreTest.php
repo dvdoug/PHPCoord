@@ -17,7 +17,7 @@ class KilometreTest extends TestCase
         $original = new Kilometre(0.00012);
         $asMetre = $original->asMetres();
         self::assertInstanceOf(Metre::class, $asMetre);
-        self::assertEquals(0.12, $asMetre->getValue());
+        self::assertEqualsWithDelta(0.12, $asMetre->getValue(), 0.00000000000001);
     }
 
     public function testGetValue(): void

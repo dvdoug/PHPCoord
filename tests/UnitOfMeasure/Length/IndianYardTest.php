@@ -17,7 +17,7 @@ class IndianYardTest extends TestCase
         $original = new IndianYard(0.13123380666666665);
         $asMetre = $original->asMetres();
         self::assertInstanceOf(Metre::class, $asMetre);
-        self::assertEquals(0.12, $asMetre->getValue());
+        self::assertEqualsWithDelta(0.12, $asMetre->getValue(), 0.00000000000001);
     }
 
     public function testGetValue(): void

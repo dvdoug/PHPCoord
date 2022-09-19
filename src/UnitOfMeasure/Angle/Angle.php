@@ -192,6 +192,9 @@ abstract class Angle implements UnitOfMeasure
 
     public function add(self $unit): self
     {
+        if ($this::class === $unit::class) {
+            return new static($this->getValue() + $unit->getValue());
+        }
         $resultAsRadians = new Radian($this->asRadians()->getValue() + $unit->asRadians()->getValue());
         $conversionRatio = (new static(1))->asRadians()->getValue();
 
@@ -200,6 +203,9 @@ abstract class Angle implements UnitOfMeasure
 
     public function subtract(self $unit): self
     {
+        if ($this::class === $unit::class) {
+            return new static($this->getValue() - $unit->getValue());
+        }
         $resultAsRadians = new Radian($this->asRadians()->getValue() - $unit->asRadians()->getValue());
         $conversionRatio = (new static(1))->asRadians()->getValue();
 

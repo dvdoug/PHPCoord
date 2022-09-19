@@ -34,6 +34,9 @@ abstract class Time implements UnitOfMeasure
 
     public function add(self $unit): self
     {
+        if ($this::class === $unit::class) {
+            return new static($this->getValue() + $unit->getValue());
+        }
         $resultAsYears = new Year($this->asYears()->getValue() + $unit->asYears()->getValue());
         $conversionRatio = (new static(1))->asYears()->getValue();
 
@@ -42,6 +45,9 @@ abstract class Time implements UnitOfMeasure
 
     public function subtract(self $unit): self
     {
+        if ($this::class === $unit::class) {
+            return new static($this->getValue() - $unit->getValue());
+        }
         $resultAsYears = new Year($this->asYears()->getValue() - $unit->asYears()->getValue());
         $conversionRatio = (new static(1))->asYears()->getValue();
 

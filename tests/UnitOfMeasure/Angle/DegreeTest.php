@@ -18,7 +18,7 @@ class DegreeTest extends TestCase
         $original = new Degree(1);
         $asRadian = $original->asRadians();
         self::assertInstanceOf(Radian::class, $asRadian);
-        self::assertEquals(0.017453292519943, $asRadian->getValue());
+        self::assertEqualsWithDelta(0.017453292519943, $asRadian->getValue(), 0.00000000000001);
     }
 
     public function testGetValue(): void
@@ -388,7 +388,7 @@ class DegreeTest extends TestCase
     {
         $result = (new Degree(20))->subtract(new ArcSecond(3600));
         self::assertInstanceOf(Degree::class, $result);
-        self::assertEquals(19, $result->getValue());
+        self::assertEqualsWithDelta(19, $result->getValue(), 0.00000000000001);
     }
 
     public function testMultiply(): void

@@ -17,7 +17,7 @@ class GoldCoastFootTest extends TestCase
         $original = new GoldCoastFoot(0.3937011617515639);
         $asMetre = $original->asMetres();
         self::assertInstanceOf(Metre::class, $asMetre);
-        self::assertEquals(0.12, $asMetre->getValue());
+        self::assertEqualsWithDelta(0.12, $asMetre->getValue(), 0.00000000000001);
     }
 
     public function testGetValue(): void

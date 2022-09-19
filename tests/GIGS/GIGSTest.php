@@ -101,7 +101,7 @@ class GIGSTest extends TestCase
         if ($semiMinorAxis !== 'NULL') {
             $this->assertEquals($semiMinorAxis, $ellipsoid->getSemiMinorAxis()->getValue());
         } else {
-            $this->assertEquals($inverseFlattening, $ellipsoid->getInverseFlattening());
+            $this->assertEqualsWithDelta($inverseFlattening, $ellipsoid->getInverseFlattening(), 0.00000000001);
         }
 
         if ($semiMajorAxisUnitName !== 'metre') {

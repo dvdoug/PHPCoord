@@ -17,7 +17,7 @@ class ArcSecondTest extends TestCase
         $original = new ArcSecond(3600);
         $asRadian = $original->asRadians();
         self::assertInstanceOf(Radian::class, $asRadian);
-        self::assertEquals(0.017453292519943, $asRadian->getValue());
+        self::assertEqualsWithDelta(0.017453292519943, $asRadian->getValue(), 0.00000000000001);
     }
 
     public function testGetValue(): void

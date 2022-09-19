@@ -17,7 +17,7 @@ class BritishFoot1936Test extends TestCase
         $original = new BritishFoot1936(0.3936998198145177);
         $asMetre = $original->asMetres();
         self::assertInstanceOf(Metre::class, $asMetre);
-        self::assertEquals(0.12, $asMetre->getValue());
+        self::assertEqualsWithDelta(0.12, $asMetre->getValue(), 0.00000000000001);
     }
 
     public function testGetValue(): void

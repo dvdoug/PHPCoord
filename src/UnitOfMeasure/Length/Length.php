@@ -216,6 +216,9 @@ abstract class Length implements UnitOfMeasure
 
     public function add(self $unit): self
     {
+        if ($this::class === $unit::class) {
+            return new static($this->getValue() + $unit->getValue());
+        }
         $resultAsMetres = new Metre($this->asMetres()->getValue() + $unit->asMetres()->getValue());
         $conversionRatio = (new static(1))->asMetres()->getValue();
 
@@ -224,6 +227,9 @@ abstract class Length implements UnitOfMeasure
 
     public function subtract(self $unit): self
     {
+        if ($this::class === $unit::class) {
+            return new static($this->getValue() - $unit->getValue());
+        }
         $resultAsMetres = new Metre($this->asMetres()->getValue() - $unit->asMetres()->getValue());
         $conversionRatio = (new static(1))->asMetres()->getValue();
 

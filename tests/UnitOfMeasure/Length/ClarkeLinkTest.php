@@ -17,7 +17,7 @@ class ClarkeLinkTest extends TestCase
         $original = new ClarkeLink(0.5965216964121155);
         $asMetre = $original->asMetres();
         self::assertInstanceOf(Metre::class, $asMetre);
-        self::assertEquals(0.12, $asMetre->getValue());
+        self::assertEqualsWithDelta(0.12, $asMetre->getValue(), 0.00000000000001);
     }
 
     public function testGetValue(): void
