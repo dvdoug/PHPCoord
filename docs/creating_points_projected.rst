@@ -27,7 +27,7 @@ following signatures:
         Length $easting,
         Length $northing,
         ?DateTimeInterface $epoch = null,
-        ?Length $height
+        ?Length $height = null
     ): ProjectedPoint
 
     public static function createFromWestingNorthing(
@@ -35,7 +35,7 @@ following signatures:
         Length $westing,
         Length $northing,
         ?DateTimeInterface $epoch = null,
-        ?Length $height
+        ?Length $height = null
     ): ProjectedPoint
 
     public static function createFromWestingSouthing(
@@ -43,7 +43,7 @@ following signatures:
         Length $westing,
         Length $southing,
         ?DateTimeInterface $epoch = null,
-        ?Length $height
+        ?Length $height = null
     ): ProjectedPoint
 
 Examples:
