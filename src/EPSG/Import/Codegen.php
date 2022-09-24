@@ -8,6 +8,25 @@ declare(strict_types=1);
 
 namespace PHPCoord\EPSG\Import;
 
+use PHPCoord\CoordinateOperation\CoordinateOperationMethods;
+use PHPCoord\CoordinateOperation\CoordinateOperations;
+use PHPCoord\CoordinateOperation\CRSTransformationsAfrica;
+use PHPCoord\CoordinateOperation\CRSTransformationsAntarctic;
+use PHPCoord\CoordinateOperation\CRSTransformationsArctic;
+use PHPCoord\CoordinateOperation\CRSTransformationsAsia;
+use PHPCoord\CoordinateOperation\CRSTransformationsEurope;
+use PHPCoord\CoordinateOperation\CRSTransformationsGlobal;
+use PHPCoord\CoordinateOperation\CRSTransformationsNorthAmerica;
+use PHPCoord\CoordinateOperation\CRSTransformationsOceania;
+use PHPCoord\CoordinateOperation\CRSTransformationsSouthAmerica;
+use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
+use PHPCoord\Geometry\Extents\ExtentMap;
+use PHPCoord\Geometry\RegionMap;
+use PHPCoord\UnitOfMeasure\Angle\Angle;
+use PHPCoord\UnitOfMeasure\Length\Length;
+use PHPCoord\UnitOfMeasure\Rate;
+use PHPCoord\UnitOfMeasure\Scale\Scale;
+use PHPCoord\UnitOfMeasure\Time\Time;
 use PhpCsFixer\AbstractFixer;
 use PhpCsFixer\Config;
 use PhpCsFixer\Console\ConfigurationResolver;
@@ -36,6 +55,8 @@ use function strtolower;
 use function trim;
 use function ucfirst;
 use function uasort;
+use function implode;
+use function asort;
 
 use const PHP_EOL;
 
@@ -289,6 +310,140 @@ class Codegen
         }
 
         fclose($file);
+        echo 'done' . PHP_EOL;
+    }
+
+    public function generateSupportedOperations(): void
+    {
+        echo 'Updating coordinate conversion list...';
+
+        $extentMap = (new ExtentMap())();
+        $transformations = [
+            ...CRSTransformationsGlobal::getSupportedTransformations(),
+            ...CRSTransformationsAfrica::getSupportedTransformations(),
+            ...CRSTransformationsAntarctic::getSupportedTransformations(),
+            ...CRSTransformationsArctic::getSupportedTransformations(),
+            ...CRSTransformationsAsia::getSupportedTransformations(),
+            ...CRSTransformationsEurope::getSupportedTransformations(),
+            ...CRSTransformationsNorthAmerica::getSupportedTransformations(),
+            ...CRSTransformationsOceania::getSupportedTransformations(),
+            ...CRSTransformationsSouthAmerica::getSupportedTransformations(),
+        ];
+
+        $docs = [];
+        foreach ($transformations as $transformation) {
+            $source = CoordinateReferenceSystem::fromSRID($transformation['source_crs']);
+            $target = CoordinateReferenceSystem::fromSRID($transformation['target_crs']);
+            $docs[$source::class][$source->getSRID()][$target->getSRID()][] = [$transformation['operation'], false];
+            if ($transformation['reversible']) {
+                $docs[$target::class][$target->getSRID()][$source->getSRID()][] = [$transformation['operation'], true];
+            }
+        }
+
+        foreach ($docs as $sourceCRSType => $crsList) {
+            $file = fopen($this->sourceDir . '/../docs/reflection/coordinateoperation/' . str_replace('phpcoord/coordinatereferencesystem/', '', str_replace('\\', '/', strtolower($sourceCRSType))) . '.txt', 'wb');
+            $toWriteSourceList = [];
+            foreach ($crsList as $sourceCRSSrid => $targetCRSSrids) {
+                $sourceCRS = CoordinateReferenceSystem::fromSRID($sourceCRSSrid);
+                $sourceCRSReflection = new ReflectionClass($sourceCRS);
+                $sourceCRSConstants = array_flip(array_reverse($sourceCRSReflection->getConstants(ReflectionClassConstant::IS_PUBLIC)));
+                $toWriteSourceList[$sourceCRS->getName()] = $sourceCRS->getName() . "\n";
+                $toWriteSourceList[$sourceCRS->getName()] .= str_repeat('-', strlen($sourceCRS->getName())) . "\n";
+                $toWriteSourceList[$sourceCRS->getName()] .= '``' . "{$sourceCRSReflection->getShortName()}::fromSRID({$sourceCRSReflection->getShortName()}::{$sourceCRSConstants[$sourceCRSSrid]})" . '``' . "\n\n";
+
+                $toWriteTargetList = [];
+                foreach ($targetCRSSrids as $targetCRSSrid => $operations) {
+                    $targetCRS = CoordinateReferenceSystem::fromSRID($targetCRSSrid);
+                    $targetCRSReflection = new ReflectionClass($targetCRS);
+                    $targetCRSConstants = array_flip(array_reverse($targetCRSReflection->getConstants(ReflectionClassConstant::IS_PUBLIC)));
+                    $subHead = 'to ' . $targetCRS->getName() . ' (' . $targetCRSReflection->getShortName() . ')';
+                    $toWriteTargetList[$targetCRS->getName()] = $subHead . "\n";
+                    $toWriteTargetList[$targetCRS->getName()] .= str_repeat('^', strlen($subHead)) . "\n";
+
+                    $opTable = '.. csv-table::' . "\n";
+                    $opTable .= '    :header: "EPSG", "PHPCoord"' . "\n";
+                    $opTable .= '    :widths: 40, 60' . "\n\n";
+                    foreach ($operations as $operation) {
+                        [$operationSrid, $reverse] = $operation;
+                        $operation = CoordinateOperations::getOperationData($operationSrid);
+                        if ($operation['method'] == CoordinateOperationMethods::EPSG_ALIAS) {
+                            continue 2;
+                        }
+                        $methodName = CoordinateOperationMethods::getFunctionName($operation['method']);
+                        $params = CoordinateOperations::getParamData($operationSrid);
+                        $extentName = str_replace('"', '″', implode(', ', array_map(fn($extent) => $extentMap[$extent]['name'], $operation['extent'])));
+                        $opTable .= '    "| Name: ' . $operation['name'] . "\n    | Code: ``{$operationSrid}``\n    | Extent: {$extentName}\",";
+                        $opTable .= "\".. code-block:: php\n\n        \$point->" . $methodName . '(' . "\n";
+                        $docParams = [
+                            "to: {$targetCRSReflection->getShortName()}::fromSRID({$targetCRSReflection->getShortName()}::{$targetCRSConstants[$targetCRSSrid]})",
+                        ];
+                        foreach ($params as $name => $value) {
+                            if (isset($value['fileProvider'])) {
+                                $provider = new ReflectionClass($value['fileProvider']);
+                                $docParams[] = "{$name}: {$provider->getShortName()}->provideGrid()";
+                            } else {
+                                if ($value['value'] === null) {
+                                    continue;
+                                }
+
+                                if ($reverse && $value['reverses'] && isset($value['value'])) {
+                                    $value['value'] *= -1;
+                                }
+                                $docParams[] = match ($value['uom']) {
+                                    Angle::EPSG_ARC_SECOND => "{$name}: new ArcSecond({$value['value']})",
+                                    Angle::EPSG_MILLIARC_SECOND => "{$name}: new ArcSecond({$value['value']} / 1000)",
+                                    Angle::EPSG_DEGREE => "{$name}: new Degree({$value['value']})",
+                                    Angle::EPSG_GRAD => "{$name}: new Grad({$value['value']})",
+                                    Angle::EPSG_MICRORADIAN => "{$name}: new MicroRadian({$value['value']})",
+                                    Angle::EPSG_RADIAN => "{$name}: new Radian({$value['value']})",
+                                    Angle::EPSG_SEXAGESIMAL_DMS => "{$name}: Degree::fromSexagesimalDMS('{$value['value']}')",
+                                    Length::EPSG_BRITISH_CHAIN_SEARS_1922 => "{$name}: new BritishChain1922Sears({$value['value']})",
+                                    Length::EPSG_BRITISH_CHAIN_SEARS_1922_TRUNCATED => "{$name}: new BritishChain1922SearsTruncated({$value['value']})",
+                                    Length::EPSG_BRITISH_FOOT_SEARS_1922 => "{$name}: new BritishFoot1922Sears({$value['value']})",
+                                    Length::EPSG_BRITISH_YARD_SEARS_1922 => "{$name}: new BritishYard1922Sears({$value['value']})",
+                                    Length::EPSG_CENTIMETRE => "{$name}: new Centimetre({$value['value']})",
+                                    Length::EPSG_CLARKES_FOOT => "{$name}: new ClarkeFoot({$value['value']})",
+                                    Length::EPSG_CLARKES_LINK => "{$name}: new ClarkeLink({$value['value']})",
+                                    Length::EPSG_CLARKES_YARD => "{$name}: new ClarkeYard({$value['value']})",
+                                    Length::EPSG_FOOT => "{$name}: new Foot({$value['value']})",
+                                    Length::EPSG_GERMAN_LEGAL_METRE => "{$name}: new GermanLegalMetre({$value['value']})",
+                                    Length::EPSG_GOLD_COAST_FOOT => "{$name}: new GoldCoastFoot({$value['value']})",
+                                    Length::EPSG_INDIAN_YARD => "{$name}: new IndianYard({$value['value']})",
+                                    Length::EPSG_LINK => "{$name}: new Link({$value['value']})",
+                                    Length::EPSG_METRE => "{$name}: new Metre({$value['value']})",
+                                    Length::EPSG_MILLIMETRE => "{$name}: new Millimetre({$value['value']})",
+                                    Length::EPSG_US_SURVEY_FOOT => "{$name}: new USSurveyFoot({$value['value']})",
+                                    Rate::EPSG_CENTIMETRES_PER_YEAR => "{$name}: new Rate(new Centimetre({$value['value']}), new Year(1))",
+                                    Rate::EPSG_MILLIARC_SECONDS_PER_YEAR => "{$name}: new Rate(new ArcSecond({$value['value']} / 1000), new Year(1))",
+                                    Rate::EPSG_METRES_PER_YEAR => "{$name}: new Rate(new Metre({$value['value']}), new Year(1))",
+                                    Rate::EPSG_MILLIMETRES_PER_YEAR => "{$name}: new Rate(new Millimetre({$value['value']}), new Year(1))",
+                                    Rate::EPSG_PARTS_PER_BILLION_PER_YEAR => "{$name}: new Rate(new PartsPerBillion({$value['value']}), new Year(1))",
+                                    Scale::EPSG_COEFFICIENT => "{$name}: new Coefficient({$value['value']})",
+                                    Scale::EPSG_PARTS_PER_BILLION => "{$name}: new PartsPerBillion({$value['value']})",
+                                    Scale::EPSG_PARTS_PER_MILLION => "{$name}: new PartsPerMillion({$value['value']})",
+                                    Scale::EPSG_UNITY => "{$name}: new Unity({$value['value']})",
+                                    Time::EPSG_YEAR => "{$name}: new Year({$value['value']})",
+                                    null => "{$name}: '{$value['value']}'",
+                                };
+                            }
+                        }
+                        $opTable .= '            ' . implode(",\n            ", $docParams);
+                        $opTable .= "\n        )\n\n    \"\n";
+                    }
+                    $toWriteTargetList[$targetCRS->getName()] .= $opTable . "\n";
+                }
+                asort($toWriteTargetList);
+                $toWriteSourceList[$sourceCRS->getName()] .= implode("\n", $toWriteTargetList);
+            }
+
+            asort($toWriteSourceList);
+            foreach ($toWriteSourceList as $toWrite) {
+                fwrite($file, $toWrite);
+            }
+
+            fclose($file);
+        }
+
         echo 'done' . PHP_EOL;
     }
 }

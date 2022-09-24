@@ -1353,18 +1353,6 @@ class Datum
     public const EPSG_EOS21_INTERMEDIATE_REFERENCE_FRAME = 'urn:ogc:def:datum:EPSG::1308';
 
     /**
-     * EPSG example wellbore vertical datum
-     * Type: Vertical
-     * Extent: Description of the extent of the CRS.
-     * (a) Description of the ZDP, e.g. "derrick floor" or "rig [name] kelly bushing". (b) To interpret local depths
-     * the height or depth of the ZDP must be specified with reference to a vertical CRS, e.g. "ZDP is 3.5m above MSL
-     * (EPSG CRS code 5714)".
-     * Example only. Often called Zero Depth Point (ZDP) or wellbore reference elevation point, the point of 0 offset
-     * and lowest vertical constraint in a wellbore survey.
-     */
-    public const EPSG_EPSG_EXAMPLE_WELLBORE_VERTICAL_DATUM = 'urn:ogc:def:datum:EPSG::1205';
-
-    /**
      * ETRF2000 Poland
      * Type: Geodetic
      * Extent: Poland - onshore and offshore.
@@ -5133,7 +5121,7 @@ class Datum
     /**
      * Not specified (based on Airy 1830 ellipsoid)
      * Type: Geodetic
-     * Extent: Not specified.
+     * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_AIRY_1830_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6001';
@@ -5141,7 +5129,7 @@ class Datum
     /**
      * Not specified (based on Airy Modified 1849 ellipsoid)
      * Type: Geodetic
-     * Extent: Not specified.
+     * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_AIRY_MODIFIED_1849_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6002';
@@ -5149,7 +5137,7 @@ class Datum
     /**
      * Not specified (based on Australian National Spheroid)
      * Type: Geodetic
-     * Extent: Not specified.
+     * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_AUSTRALIAN_NATIONAL_SPHEROID = 'urn:ogc:def:datum:EPSG::6003';
@@ -5157,7 +5145,7 @@ class Datum
     /**
      * Not specified (based on Average Terrestrial System 1977 ellipsoid)
      * Type: Geodetic
-     * Extent: Not specified.
+     * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_AVERAGE_TERRESTRIAL_SYSTEM_1977_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6041';
@@ -5165,7 +5153,7 @@ class Datum
     /**
      * Not specified (based on Bessel 1841 ellipsoid)
      * Type: Geodetic
-     * Extent: Not specified.
+     * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_BESSEL_1841_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6004';
@@ -5173,7 +5161,7 @@ class Datum
     /**
      * Not specified (based on Bessel Modified ellipsoid)
      * Type: Geodetic
-     * Extent: Not specified.
+     * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_BESSEL_MODIFIED_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6005';
@@ -5181,7 +5169,7 @@ class Datum
     /**
      * Not specified (based on Bessel Namibia ellipsoid)
      * Type: Geodetic
-     * Extent: Not specified.
+     * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_BESSEL_NAMIBIA_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6006';
@@ -5189,7 +5177,7 @@ class Datum
     /**
      * Not specified (based on Clarke 1858 ellipsoid)
      * Type: Geodetic
-     * Extent: Not specified.
+     * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_CLARKE_1858_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6007';
@@ -5197,7 +5185,7 @@ class Datum
     /**
      * Not specified (based on Clarke 1866 Authalic Sphere)
      * Type: Geodetic
-     * Extent: Not specified.
+     * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_CLARKE_1866_AUTHALIC_SPHERE = 'urn:ogc:def:datum:EPSG::6052';
@@ -5205,7 +5193,7 @@ class Datum
     /**
      * Not specified (based on Clarke 1866 ellipsoid)
      * Type: Geodetic
-     * Extent: Not specified.
+     * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_CLARKE_1866_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6008';
@@ -5213,7 +5201,7 @@ class Datum
     /**
      * Not specified (based on Clarke 1880 (Arc) ellipsoid)
      * Type: Geodetic
-     * Extent: Not specified.
+     * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_CLARKE_1880_ARC_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6013';
@@ -5221,7 +5209,7 @@ class Datum
     /**
      * Not specified (based on Clarke 1880 (Benoit) ellipsoid)
      * Type: Geodetic
-     * Extent: Not specified.
+     * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_CLARKE_1880_BENOIT_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6010';
@@ -5229,7 +5217,7 @@ class Datum
     /**
      * Not specified (based on Clarke 1880 (IGN) ellipsoid)
      * Type: Geodetic
-     * Extent: Not specified.
+     * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_CLARKE_1880_IGN_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6011';
@@ -5237,7 +5225,7 @@ class Datum
     /**
      * Not specified (based on Clarke 1880 (RGS) ellipsoid)
      * Type: Geodetic
-     * Extent: Not specified.
+     * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_CLARKE_1880_RGS_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6012';
@@ -5245,7 +5233,7 @@ class Datum
     /**
      * Not specified (based on Clarke 1880 (SGA 1922) ellipsoid)
      * Type: Geodetic
-     * Extent: Not specified.
+     * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_CLARKE_1880_SGA_1922_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6014';
@@ -5253,7 +5241,7 @@ class Datum
     /**
      * Not specified (based on Clarke 1880 ellipsoid)
      * Type: Geodetic
-     * Extent: Not specified.
+     * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_CLARKE_1880_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6034';
@@ -5261,7 +5249,7 @@ class Datum
     /**
      * Not specified (based on Everest (1830 Definition) ellipsoid)
      * Type: Geodetic
-     * Extent: Not specified.
+     * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_EVEREST_1830_DEFINITION_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6042';
@@ -5269,7 +5257,7 @@ class Datum
     /**
      * Not specified (based on Everest 1830 (1937 Adjustment) ellipsoid)
      * Type: Geodetic
-     * Extent: Not specified.
+     * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_EVEREST_1830_1937_ADJUSTMENT_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6015';
@@ -5277,7 +5265,7 @@ class Datum
     /**
      * Not specified (based on Everest 1830 (1962 Definition) ellipsoid)
      * Type: Geodetic
-     * Extent: Not specified.
+     * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_EVEREST_1830_1962_DEFINITION_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6044';
@@ -5285,7 +5273,7 @@ class Datum
     /**
      * Not specified (based on Everest 1830 (1967 Definition) ellipsoid)
      * Type: Geodetic
-     * Extent: Not specified.
+     * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_EVEREST_1830_1967_DEFINITION_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6016';
@@ -5293,7 +5281,7 @@ class Datum
     /**
      * Not specified (based on Everest 1830 (1975 Definition) ellipsoid)
      * Type: Geodetic
-     * Extent: Not specified.
+     * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_EVEREST_1830_1975_DEFINITION_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6045';
@@ -5301,7 +5289,7 @@ class Datum
     /**
      * Not specified (based on Everest 1830 Modified ellipsoid)
      * Type: Geodetic
-     * Extent: Not specified.
+     * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_EVEREST_1830_MODIFIED_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6018';
@@ -5309,7 +5297,7 @@ class Datum
     /**
      * Not specified (based on GEM 10C ellipsoid)
      * Type: Geodetic
-     * Extent: Not specified.
+     * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_GEM_10C_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6031';
@@ -5317,7 +5305,7 @@ class Datum
     /**
      * Not specified (based on GRS 1967 ellipsoid)
      * Type: Geodetic
-     * Extent: Not specified.
+     * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_GRS_1967_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6036';
@@ -5325,7 +5313,7 @@ class Datum
     /**
      * Not specified (based on GRS 1980 Authalic Sphere)
      * Type: Geodetic
-     * Extent: Not specified.
+     * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_GRS_1980_AUTHALIC_SPHERE = 'urn:ogc:def:datum:EPSG::6047';
@@ -5333,7 +5321,7 @@ class Datum
     /**
      * Not specified (based on GRS 1980 ellipsoid)
      * Type: Geodetic
-     * Extent: Not specified.
+     * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_GRS_1980_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6019';
@@ -5341,7 +5329,7 @@ class Datum
     /**
      * Not specified (based on Helmert 1906 ellipsoid)
      * Type: Geodetic
-     * Extent: Not specified.
+     * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_HELMERT_1906_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6020';
@@ -5349,7 +5337,7 @@ class Datum
     /**
      * Not specified (based on Hughes 1980 ellipsoid)
      * Type: Geodetic
-     * Extent: Not specified.
+     * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_HUGHES_1980_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6054';
@@ -5357,7 +5345,7 @@ class Datum
     /**
      * Not specified (based on Indonesian National Spheroid)
      * Type: Geodetic
-     * Extent: Not specified.
+     * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_INDONESIAN_NATIONAL_SPHEROID = 'urn:ogc:def:datum:EPSG::6021';
@@ -5365,7 +5353,7 @@ class Datum
     /**
      * Not specified (based on International 1924 Authalic Sphere)
      * Type: Geodetic
-     * Extent: Not specified.
+     * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_INTERNATIONAL_1924_AUTHALIC_SPHERE = 'urn:ogc:def:datum:EPSG::6053';
@@ -5373,7 +5361,7 @@ class Datum
     /**
      * Not specified (based on International 1924 ellipsoid)
      * Type: Geodetic
-     * Extent: Not specified.
+     * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_INTERNATIONAL_1924_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6022';
@@ -5381,7 +5369,7 @@ class Datum
     /**
      * Not specified (based on Krassowsky 1940 ellipsoid)
      * Type: Geodetic
-     * Extent: Not specified.
+     * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_KRASSOWSKY_1940_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6024';
@@ -5389,7 +5377,7 @@ class Datum
     /**
      * Not specified (based on NWL 9D ellipsoid)
      * Type: Geodetic
-     * Extent: Not specified.
+     * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_NWL_9D_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6025';
@@ -5397,7 +5385,7 @@ class Datum
     /**
      * Not specified (based on OSU86F ellipsoid)
      * Type: Geodetic
-     * Extent: Not specified.
+     * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_OSU86F_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6032';
@@ -5405,7 +5393,7 @@ class Datum
     /**
      * Not specified (based on OSU91A ellipsoid)
      * Type: Geodetic
-     * Extent: Not specified.
+     * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_OSU91A_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6033';
@@ -5413,7 +5401,7 @@ class Datum
     /**
      * Not specified (based on Plessis 1817 ellipsoid)
      * Type: Geodetic
-     * Extent: Not specified.
+     * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_PLESSIS_1817_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6027';
@@ -5421,7 +5409,7 @@ class Datum
     /**
      * Not specified (based on Struve 1860 ellipsoid)
      * Type: Geodetic
-     * Extent: Not specified.
+     * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_STRUVE_1860_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6028';
@@ -5429,7 +5417,7 @@ class Datum
     /**
      * Not specified (based on WGS 72 ellipsoid)
      * Type: Geodetic
-     * Extent: Not specified.
+     * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_WGS_72_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6043';
@@ -5437,7 +5425,7 @@ class Datum
     /**
      * Not specified (based on WGS 84 ellipsoid)
      * Type: Geodetic
-     * Extent: Not specified.
+     * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_WGS_84_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6030';
@@ -5445,7 +5433,7 @@ class Datum
     /**
      * Not specified (based on War Office ellipsoid)
      * Type: Geodetic
-     * Extent: Not specified.
+     * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_WAR_OFFICE_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6029';
@@ -9213,14 +9201,6 @@ class Datum
             'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => 1025,
-            'frame_reference_epoch' => null,
-        ],
-        'urn:ogc:def:datum:EPSG::1205' => [
-            'name' => 'EPSG example wellbore vertical datum',
-            'type' => 'vertical',
-            'ellipsoid' => null,
-            'prime_meridian' => null,
-            'conventional_rs' => null,
             'frame_reference_epoch' => null,
         ],
         'urn:ogc:def:datum:EPSG::1206' => [

@@ -109,6 +109,11 @@ class EPSGImporter
         $sqlite->exec("INSERT INTO epsg_coordoperation (coord_op_code, coord_op_name, coord_op_type, source_crs_code, target_crs_code, coord_op_method_code, coord_op_accuracy, data_source, revision_date, deprecated, show_operation, remarks) VALUES (32773, 'WGS 84 to WGS 84 (G2139) (geog3D to geocen)', 'transformation', 4979, 9753, 9602, 0, 'PHPCoord', '2021-10-28', 0, 1, '')");
         $sqlite->exec("INSERT INTO epsg_usage (object_table_name, object_code, extent_code, scope_code) VALUES ('epsg_coordoperation', 32773, 1262, 1203)");
 
+        /*
+         * Too many "world" extents with confusing descriptions, unify
+         */
+        $sqlite->exec("UPDATE epsg_usage SET extent_code = 1262 WHERE extent_code IN (1263, 2346, 2830, 4393, 4520, 4523)");
+
         $sqlite->exec('VACUUM');
         $sqlite->close();
     }

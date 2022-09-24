@@ -321,7 +321,7 @@ trait Geographic3DSRIDData
             'name' => 'WGS 84',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6423',
             'datum' => 'urn:ogc:def:datum:EPSG::6326',
-            'extent' => ['2830'],
+            'extent' => ['1262'],
         ],
         'urn:ogc:def:crs:EPSG::4981' => [
             'name' => 'Yemen NGN96',

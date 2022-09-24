@@ -567,7 +567,7 @@ class CoordinateOperations
         'urn:ogc:def:coordinateOperation:EPSG::1240' => [
             'name' => 'WGS 72BE to WGS 84 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9606',
-            'extent' => ['2346'],
+            'extent' => ['1262'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::1244' => [
             'name' => 'PZ-90 to WGS 84 (2)',
@@ -7642,12 +7642,12 @@ class CoordinateOperations
         'urn:ogc:def:coordinateOperation:EPSG::8855' => [
             'name' => 'Equal Earth Americas',
             'method' => 'urn:ogc:def:method:EPSG::1078',
-            'extent' => ['4520'],
+            'extent' => ['1262'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::8856' => [
             'name' => 'Equal Earth Asia-Pacific',
             'method' => 'urn:ogc:def:method:EPSG::1078',
-            'extent' => ['4523'],
+            'extent' => ['1262'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::8861' => [
             'name' => 'NAD83(HARN) to NAD83(FBN) (1)',

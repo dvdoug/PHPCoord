@@ -23766,14 +23766,14 @@ trait ProjectedSRIDData
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::4400',
             'base_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'deriving_conversion' => 'urn:ogc:def:coordinateOperation:EPSG::8855',
-            'extent' => ['4520'],
+            'extent' => ['1262'],
         ],
         'urn:ogc:def:crs:EPSG::8859' => [
             'name' => 'WGS 84 / Equal Earth Asia-Pacific',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::4400',
             'base_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'deriving_conversion' => 'urn:ogc:def:coordinateOperation:EPSG::8856',
-            'extent' => ['4523'],
+            'extent' => ['1262'],
         ],
         'urn:ogc:def:crs:EPSG::8903' => [
             'name' => 'RGWF96 / UTM zone 1S',

@@ -37214,13 +37214,13 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * WGS 84 / Equal Earth Americas
-     * Extent: World centred on the Americas.
+     * Extent: World.
      */
     public const EPSG_WGS_84_EQUAL_EARTH_AMERICAS = 'urn:ogc:def:crs:EPSG::8858';
 
     /**
      * WGS 84 / Equal Earth Asia-Pacific
-     * Extent: World centred on Asia-Pacific.
+     * Extent: World.
      */
     public const EPSG_WGS_84_EQUAL_EARTH_ASIA_PACIFIC = 'urn:ogc:def:crs:EPSG::8859';
 

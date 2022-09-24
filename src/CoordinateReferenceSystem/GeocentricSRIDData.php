@@ -723,7 +723,7 @@ trait GeocentricSRIDData
             'name' => 'ITRF2014',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
             'datum' => 'urn:ogc:def:datum:EPSG::1165',
-            'extent' => ['2830'],
+            'extent' => ['1262'],
         ],
         'urn:ogc:def:crs:EPSG::7796' => [
             'name' => 'BGS2005',
@@ -1119,7 +1119,7 @@ trait GeocentricSRIDData
             'name' => 'IGb14',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
             'datum' => 'urn:ogc:def:datum:EPSG::1272',
-            'extent' => ['2830'],
+            'extent' => ['1262'],
         ],
         'urn:ogc:def:crs:EPSG::9468' => [
             'name' => 'SRGI2013',
@@ -1173,7 +1173,7 @@ trait GeocentricSRIDData
             'name' => 'ITRF2020',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
             'datum' => 'urn:ogc:def:datum:EPSG::1322',
-            'extent' => ['2830'],
+            'extent' => ['1262'],
         ],
         'urn:ogc:def:crs:EPSG::20039' => [
             'name' => 'SIRGAS-Chile 2021',

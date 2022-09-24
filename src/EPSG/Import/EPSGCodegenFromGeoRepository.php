@@ -28,6 +28,7 @@ use function min;
 use function sleep;
 use function substr;
 use function unlink;
+use function array_map;
 
 use const JSON_THROW_ON_ERROR;
 use const PHP_EOL;
@@ -123,6 +124,8 @@ class EPSGCodegenFromGeoRepository
                 throw new Exception("Unknown region for {$row['extent_code']}:{$row['extent_name']}");
             }
         }
+
+        $this->codeGen->updateFileData($this->sourceDir . '/Geometry/Extents/ExtentMap.php', array_map(fn ($extentName) => ['name' => $extentName], $extents));
 
         foreach ($extents as $extentCode => $extentName) {
             echo $extentCode . ' ' . $extentName . PHP_EOL;
@@ -233,7 +236,7 @@ class EPSGCodegenFromGeoRepository
 
         // Remove unused extents
         foreach ([$boundingBoxOnly, $builtInFull, $africa, $antarctic, $arctic, $asia, $europe, $northAmerica, $southAmerica, $oceania] as $extentType) {
-            foreach (glob($extentType . '/Extent*.php') as $filename) {
+            foreach (glob($extentType . '/Extent[0-9]*.php') as $filename) {
                 $code = substr(basename($filename, '.php'), 6);
                 if (!isset($extents[$code])) {
                     unlink($filename);

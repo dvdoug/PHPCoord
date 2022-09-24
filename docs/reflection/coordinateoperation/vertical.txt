@@ -1,0 +1,5029 @@
+AIOC95 depth
+------------
+``Vertical::fromSRID(Vertical::EPSG_AIOC95_DEPTH)``
+
+to AIOC95 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Height <> Depth Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7812``
+    | Extent: World",".. code-block:: php
+
+        $point->heightDepthReversal(
+            to: Vertical::fromSRID(Vertical::EPSG_AIOC95_HEIGHT)
+        )
+
+    "
+
+
+to Baltic 1977 depth (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Baltic 1977 depth to AIOC95 depth (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5445``
+    | Extent: Azerbaijan - offshore and Sangachal",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_BALTIC_1977_DEPTH),
+            verticalOffset: new Metre(26.3)
+        )
+
+    "
+
+
+to Caspian depth (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: AIOC95 depth to Caspian depth (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5403``
+    | Extent: Azerbaijan - offshore and Sangachal",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_CASPIAN_DEPTH),
+            verticalOffset: new Metre(-1.7)
+        )
+
+    "
+
+AIOC95 height
+-------------
+``Vertical::fromSRID(Vertical::EPSG_AIOC95_HEIGHT)``
+
+to AIOC95 depth (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Height <> Depth Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7812``
+    | Extent: World",".. code-block:: php
+
+        $point->heightDepthReversal(
+            to: Vertical::fromSRID(Vertical::EPSG_AIOC95_DEPTH)
+        )
+
+    "
+
+
+to Baltic 1977 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Baltic 1977 height to AIOC95 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5443``
+    | Extent: Azerbaijan - offshore and Sangachal",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_BALTIC_1977_HEIGHT),
+            verticalOffset: new Metre(-26.3)
+        )
+
+    "
+
+Alicante height
+---------------
+``Vertical::fromSRID(Vertical::EPSG_ALICANTE_HEIGHT)``
+
+to EVRF2000 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Alicante height to EVRF2000 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5429``
+    | Extent: Spain and Gibraltar - onshore",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_EVRF2000_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('40.462'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('-3.3935'),
+            verticalOffset: new Metre(-0.486),
+            inclinationInLatitude: new ArcSecond(-0.003),
+            inclinationInLongitude: new ArcSecond(0.006),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+Antalya height
+--------------
+``Vertical::fromSRID(Vertical::EPSG_ANTALYA_HEIGHT)``
+
+to EVRF2019 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Antalya height to EVRF2019 height (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::9551``
+    | Extent: Turkey - onshore",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_EVRF2019_HEIGHT),
+            verticalOffset: new Metre(-0.394)
+        )
+
+    "
+
+
+to EVRF2019 mean-tide height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Antalya height to EVRF2019 mean-tide height (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::9552``
+    | Extent: Turkey - onshore",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_EVRF2019_MEAN_TIDE_HEIGHT),
+            verticalOffset: new Metre(-0.448)
+        )
+
+    "
+
+Auckland 1946 height
+--------------------
+``Vertical::fromSRID(Vertical::EPSG_AUCKLAND_1946_HEIGHT)``
+
+to NZVD2009 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NZVD2009 height to Auckland 1946 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::4442``
+    | Extent: New Zealand - North Island - Auckland vcrs",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_NZVD2009_HEIGHT),
+            verticalOffset: new Metre(-0.34)
+        )
+
+    "
+
+
+to NZVD2016 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NZVD2016 height to Auckland 1946 height (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::9312``
+    | Extent: New Zealand - North Island - Auckland vcrs",".. code-block:: php
+
+        $point->offsetFromGrid(
+            to: Vertical::fromSRID(Vertical::EPSG_NZVD2016_HEIGHT),
+            offsetsFile: GTXAuckland1946NZVD2016Provider->provideGrid()
+        )
+
+    "
+
+Baltic 1957 depth
+-----------------
+``Vertical::fromSRID(Vertical::EPSG_BALTIC_1957_DEPTH)``
+
+to Baltic 1957 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Height <> Depth Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7812``
+    | Extent: World",".. code-block:: php
+
+        $point->heightDepthReversal(
+            to: Vertical::fromSRID(Vertical::EPSG_BALTIC_1957_HEIGHT)
+        )
+
+    "
+
+Baltic 1957 height
+------------------
+``Vertical::fromSRID(Vertical::EPSG_BALTIC_1957_HEIGHT)``
+
+to Baltic 1957 depth (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Height <> Depth Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7812``
+    | Extent: World",".. code-block:: php
+
+        $point->heightDepthReversal(
+            to: Vertical::fromSRID(Vertical::EPSG_BALTIC_1957_DEPTH)
+        )
+
+    "
+
+
+to EVRF2000 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Baltic 1957 height to EVRF2000 height (4)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5201``
+    | Extent: Czechia",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_EVRF2000_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('49.55'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('15.15'),
+            verticalOffset: new Metre(0.116),
+            inclinationInLatitude: new ArcSecond(0.036),
+            inclinationInLongitude: new ArcSecond(0),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+    "| Name: Baltic 1957 height to EVRF2000 height (3)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5435``
+    | Extent: Slovakia",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_EVRF2000_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('48.38'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('19.15'),
+            verticalOffset: new Metre(0.122),
+            inclinationInLatitude: new ArcSecond(0.02),
+            inclinationInLongitude: new ArcSecond(0),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+
+to EVRF2007 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Baltic 1957 height to EVRF2007 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5202``
+    | Extent: Czechia",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_EVRF2007_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('49.55'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('15.15'),
+            verticalOffset: new Metre(0.13),
+            inclinationInLatitude: new ArcSecond(0.026),
+            inclinationInLongitude: new ArcSecond(0),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+
+to EVRF2019 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Baltic 1957 height to EVRF2019 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::9745``
+    | Extent: Czechia",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_EVRF2019_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('49.55'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('15.15'),
+            verticalOffset: new Metre(0.142),
+            inclinationInLatitude: new ArcSecond(0.026),
+            inclinationInLongitude: new ArcSecond(0.006),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+
+to EVRF2019 mean-tide height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Baltic 1957 height to EVRF2019 mean-tide height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::9744``
+    | Extent: Czechia",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_EVRF2019_MEAN_TIDE_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('49.55'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('15.15'),
+            verticalOffset: new Metre(0.13),
+            inclinationInLatitude: new ArcSecond(0.036),
+            inclinationInLongitude: new ArcSecond(0.006),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+Baltic 1977 depth
+-----------------
+``Vertical::fromSRID(Vertical::EPSG_BALTIC_1977_DEPTH)``
+
+to AIOC95 depth (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Baltic 1977 depth to AIOC95 depth (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5445``
+    | Extent: Azerbaijan - offshore and Sangachal",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_AIOC95_DEPTH),
+            verticalOffset: new Metre(-26.3)
+        )
+
+    "
+
+
+to Baltic 1977 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Height <> Depth Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7812``
+    | Extent: World",".. code-block:: php
+
+        $point->heightDepthReversal(
+            to: Vertical::fromSRID(Vertical::EPSG_BALTIC_1977_HEIGHT)
+        )
+
+    "
+
+
+to Caspian depth (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Baltic 1977 depth to Caspian depth (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5440``
+    | Extent: Asia - FSU - Caspian Sea",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_CASPIAN_DEPTH),
+            verticalOffset: new Metre(-28)
+        )
+
+    "
+
+Baltic 1977 height
+------------------
+``Vertical::fromSRID(Vertical::EPSG_BALTIC_1977_HEIGHT)``
+
+to AIOC95 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Baltic 1977 height to AIOC95 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5443``
+    | Extent: Azerbaijan - offshore and Sangachal",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_AIOC95_HEIGHT),
+            verticalOffset: new Metre(26.3)
+        )
+
+    "
+
+
+to Baltic 1977 depth (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Height <> Depth Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7812``
+    | Extent: World",".. code-block:: php
+
+        $point->heightDepthReversal(
+            to: Vertical::fromSRID(Vertical::EPSG_BALTIC_1977_DEPTH)
+        )
+
+    "
+
+
+to Black Sea height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Baltic 1977 height to Black Sea height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5447``
+    | Extent: Georgia - onshore",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_BLACK_SEA_HEIGHT),
+            verticalOffset: new Metre(0.4)
+        )
+
+    "
+
+
+to Caspian height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Baltic 1977 height to Caspian height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5438``
+    | Extent: Asia - FSU - Caspian Sea",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_CASPIAN_HEIGHT),
+            verticalOffset: new Metre(28)
+        )
+
+    "
+
+
+to EVRF2000 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Baltic 1977 height to EVRF2000 height (5)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5209``
+    | Extent: Latvia - onshore",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_EVRF2000_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('56.58'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('24.53'),
+            verticalOffset: new Metre(0.105),
+            inclinationInLatitude: new ArcSecond(0),
+            inclinationInLongitude: new ArcSecond(0.004),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+    "| Name: Baltic 1977 height to EVRF2000 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5436``
+    | Extent: Estonia - onshore",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_EVRF2000_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('58.42'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('25.52'),
+            verticalOffset: new Metre(0.133),
+            inclinationInLatitude: new ArcSecond(-0.014),
+            inclinationInLongitude: new ArcSecond(0.005),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+    "| Name: Baltic 1977 height to EVRF2000 height (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5437``
+    | Extent: Lithuania - onshore",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_EVRF2000_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('55.18'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('24.01'),
+            verticalOffset: new Metre(0.102),
+            inclinationInLatitude: new ArcSecond(0),
+            inclinationInLongitude: new ArcSecond(0.002),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+
+to EVRF2007 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Baltic 1977 height to EVRF2007 height (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5203``
+    | Extent: Estonia - onshore",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_EVRF2007_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('58.42'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('25.52'),
+            verticalOffset: new Metre(0.195),
+            inclinationInLatitude: new ArcSecond(0.009),
+            inclinationInLongitude: new ArcSecond(-0.013),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+    "| Name: Baltic 1977 height to EVRF2007 height (3)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5204``
+    | Extent: Lithuania - onshore",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_EVRF2007_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('55.18'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('24.01'),
+            verticalOffset: new Metre(0.121),
+            inclinationInLatitude: new ArcSecond(0.053),
+            inclinationInLongitude: new ArcSecond(0),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+    "| Name: Baltic 1977 height to EVRF2007 height (4)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5210``
+    | Extent: Latvia - onshore",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_EVRF2007_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('56.58'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('24.53'),
+            verticalOffset: new Metre(0.154),
+            inclinationInLatitude: new ArcSecond(0.016),
+            inclinationInLongitude: new ArcSecond(-0.012),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+Baltic 1982 height
+------------------
+``Vertical::fromSRID(Vertical::EPSG_BALTIC_1982_HEIGHT)``
+
+to EVRF2000 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Baltic 1982 height to EVRF2000 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5416``
+    | Extent: Bulgaria - onshore",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_EVRF2000_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('42.373'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('25.2236'),
+            verticalOffset: new Metre(0.182),
+            inclinationInLatitude: new ArcSecond(0.001),
+            inclinationInLongitude: new ArcSecond(-0.004),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+
+to EVRF2007 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Baltic 1982 height to EVRF2007 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5200``
+    | Extent: Bulgaria - onshore",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_EVRF2007_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('42.373'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('25.2236'),
+            verticalOffset: new Metre(0.228),
+            inclinationInLatitude: new ArcSecond(-0.009),
+            inclinationInLongitude: new ArcSecond(-0.003),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+Baltic 1986 height
+------------------
+``Vertical::fromSRID(Vertical::EPSG_BALTIC_1986_HEIGHT)``
+
+to EVRF2007-PL height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Baltic 1986 height to EVRF2007-PL height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::9662``
+    | Extent: Poland - onshore",".. code-block:: php
+
+        $point->offsetFromGrid(
+            to: Vertical::fromSRID(Vertical::EPSG_EVRF2007_PL_HEIGHT),
+            offsetsFile: GUGiKHeightEVRF2007Baltic1986PolandProvider->provideGrid()
+        )
+
+    "
+
+Belfast height
+--------------
+``Vertical::fromSRID(Vertical::EPSG_BELFAST_HEIGHT)``
+
+to Malin Head height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Belfast height to Malin Head height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5452``
+    | Extent: UK - Northern Ireland - onshore",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_MALIN_HEAD_HEIGHT),
+            verticalOffset: new Metre(-0.037)
+        )
+
+    "
+
+
+to Poolbeg height (m) (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Poolbeg height (m) to Belfast height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7966``
+    | Extent: UK - Northern Ireland - onshore",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_POOLBEG_HEIGHT_M),
+            verticalOffset: new Metre(2.7)
+        )
+
+    "
+
+Black Sea depth
+---------------
+``Vertical::fromSRID(Vertical::EPSG_BLACK_SEA_DEPTH)``
+
+to Black Sea height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Height <> Depth Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7812``
+    | Extent: World",".. code-block:: php
+
+        $point->heightDepthReversal(
+            to: Vertical::fromSRID(Vertical::EPSG_BLACK_SEA_HEIGHT)
+        )
+
+    "
+
+Black Sea height
+----------------
+``Vertical::fromSRID(Vertical::EPSG_BLACK_SEA_HEIGHT)``
+
+to Baltic 1977 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Baltic 1977 height to Black Sea height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5447``
+    | Extent: Georgia - onshore",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_BALTIC_1977_HEIGHT),
+            verticalOffset: new Metre(-0.4)
+        )
+
+    "
+
+
+to Black Sea depth (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Height <> Depth Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7812``
+    | Extent: World",".. code-block:: php
+
+        $point->heightDepthReversal(
+            to: Vertical::fromSRID(Vertical::EPSG_BLACK_SEA_DEPTH)
+        )
+
+    "
+
+Bluff 1955 height
+-----------------
+``Vertical::fromSRID(Vertical::EPSG_BLUFF_1955_HEIGHT)``
+
+to NZVD2009 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NZVD2009 height to Bluff 1955 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::4451``
+    | Extent: New Zealand - South Island - Bluff vcrs",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_NZVD2009_HEIGHT),
+            verticalOffset: new Metre(-0.36)
+        )
+
+    "
+
+
+to NZVD2016 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NZVD2016 height to Bluff 1955 height (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::9313``
+    | Extent: New Zealand - South Island - Bluff vcrs",".. code-block:: php
+
+        $point->offsetFromGrid(
+            to: Vertical::fromSRID(Vertical::EPSG_NZVD2016_HEIGHT),
+            offsetsFile: GTXBluff1955NZVD2016Provider->provideGrid()
+        )
+
+    "
+
+CGVD2013a(1997) height
+----------------------
+``Vertical::fromSRID(Vertical::EPSG_CGVD2013A_1997_HEIGHT)``
+
+to CGVD28 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: CGVD28 height to CGVD2013a(1997) height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10113``
+    | Extent: Canada",".. code-block:: php
+
+        $point->offsetFromGrid(
+            to: Vertical::fromSRID(Vertical::EPSG_CGVD28_HEIGHT),
+            offsetsFile: BYNCGVD28CGG2013a1997Provider->provideGrid()
+        )
+
+    "
+
+CGVD2013a(2002) height
+----------------------
+``Vertical::fromSRID(Vertical::EPSG_CGVD2013A_2002_HEIGHT)``
+
+to CGVD28 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: CGVD28 height to CGVD2013a(2002) height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10114``
+    | Extent: Canada",".. code-block:: php
+
+        $point->offsetFromGrid(
+            to: Vertical::fromSRID(Vertical::EPSG_CGVD28_HEIGHT),
+            offsetsFile: BYNCGVD28CGG2013a2002Provider->provideGrid()
+        )
+
+    "
+
+CGVD2013a(2010) height
+----------------------
+``Vertical::fromSRID(Vertical::EPSG_CGVD2013A_2010_HEIGHT)``
+
+to CGVD28 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: CGVD28 height to CGVD2013a(2010) height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10115``
+    | Extent: Canada",".. code-block:: php
+
+        $point->offsetFromGrid(
+            to: Vertical::fromSRID(Vertical::EPSG_CGVD28_HEIGHT),
+            offsetsFile: BYNCGVD28CGG2013a2010Provider->provideGrid()
+        )
+
+    "
+
+CGVD28 height
+-------------
+``Vertical::fromSRID(Vertical::EPSG_CGVD28_HEIGHT)``
+
+to CGVD2013a(1997) height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: CGVD28 height to CGVD2013a(1997) height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10113``
+    | Extent: Canada",".. code-block:: php
+
+        $point->offsetFromGrid(
+            to: Vertical::fromSRID(Vertical::EPSG_CGVD2013A_1997_HEIGHT),
+            offsetsFile: BYNCGVD28CGG2013a1997Provider->provideGrid()
+        )
+
+    "
+
+
+to CGVD2013a(2002) height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: CGVD28 height to CGVD2013a(2002) height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10114``
+    | Extent: Canada",".. code-block:: php
+
+        $point->offsetFromGrid(
+            to: Vertical::fromSRID(Vertical::EPSG_CGVD2013A_2002_HEIGHT),
+            offsetsFile: BYNCGVD28CGG2013a2002Provider->provideGrid()
+        )
+
+    "
+
+
+to CGVD2013a(2010) height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: CGVD28 height to CGVD2013a(2010) height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10115``
+    | Extent: Canada",".. code-block:: php
+
+        $point->offsetFromGrid(
+            to: Vertical::fromSRID(Vertical::EPSG_CGVD2013A_2010_HEIGHT),
+            offsetsFile: BYNCGVD28CGG2013a2010Provider->provideGrid()
+        )
+
+    "
+
+Cascais height
+--------------
+``Vertical::fromSRID(Vertical::EPSG_CASCAIS_HEIGHT)``
+
+to EVRF2000 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Cascais height to EVRF2000 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5427``
+    | Extent: Portugal - mainland - onshore",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_EVRF2000_HEIGHT),
+            verticalOffset: new Metre(-0.315)
+        )
+
+    "
+
+Caspian depth
+-------------
+``Vertical::fromSRID(Vertical::EPSG_CASPIAN_DEPTH)``
+
+to AIOC95 depth (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: AIOC95 depth to Caspian depth (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5403``
+    | Extent: Azerbaijan - offshore and Sangachal",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_AIOC95_DEPTH),
+            verticalOffset: new Metre(1.7)
+        )
+
+    "
+
+
+to Baltic 1977 depth (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Baltic 1977 depth to Caspian depth (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5440``
+    | Extent: Asia - FSU - Caspian Sea",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_BALTIC_1977_DEPTH),
+            verticalOffset: new Metre(28)
+        )
+
+    "
+
+
+to Caspian height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Height <> Depth Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7812``
+    | Extent: World",".. code-block:: php
+
+        $point->heightDepthReversal(
+            to: Vertical::fromSRID(Vertical::EPSG_CASPIAN_HEIGHT)
+        )
+
+    "
+
+Caspian height
+--------------
+``Vertical::fromSRID(Vertical::EPSG_CASPIAN_HEIGHT)``
+
+to Baltic 1977 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Baltic 1977 height to Caspian height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5438``
+    | Extent: Asia - FSU - Caspian Sea",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_BALTIC_1977_HEIGHT),
+            verticalOffset: new Metre(-28)
+        )
+
+    "
+
+
+to Caspian depth (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Height <> Depth Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7812``
+    | Extent: World",".. code-block:: php
+
+        $point->heightDepthReversal(
+            to: Vertical::fromSRID(Vertical::EPSG_CASPIAN_DEPTH)
+        )
+
+    "
+
+Catania 1965 height
+-------------------
+``Vertical::fromSRID(Vertical::EPSG_CATANIA_1965_HEIGHT)``
+
+to Genoa 1942 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Genoa 1942 height to Catania 1965 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::9726``
+    | Extent: Italy - Sicily onshore",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_GENOA_1942_HEIGHT),
+            verticalOffset: new Metre(-0.141)
+        )
+
+    "
+
+Constanta height
+----------------
+``Vertical::fromSRID(Vertical::EPSG_CONSTANTA_HEIGHT)``
+
+to EVRF2000 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Constanta height to EVRF2000 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5205``
+    | Extent: Romania - onshore",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_EVRF2000_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('46.01'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('24.49'),
+            verticalOffset: new Metre(0.028),
+            inclinationInLatitude: new ArcSecond(0.002),
+            inclinationInLongitude: new ArcSecond(0.002),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+
+to EVRF2007 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Constanta height to EVRF2007 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5206``
+    | Extent: Romania - onshore",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_EVRF2007_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('46.01'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('24.49'),
+            verticalOffset: new Metre(0.062),
+            inclinationInLatitude: new ArcSecond(-0.005),
+            inclinationInLongitude: new ArcSecond(0.008),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+DHHN2016 height
+---------------
+``Vertical::fromSRID(Vertical::EPSG_DHHN2016_HEIGHT)``
+
+to EVRF2007 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: DHHN2016 height to EVRF2007 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7838``
+    | Extent: Germany - onshore",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_EVRF2007_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('51.03'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('10.13'),
+            verticalOffset: new Metre(0.014),
+            inclinationInLatitude: new ArcSecond(-0.01),
+            inclinationInLongitude: new ArcSecond(0),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+DHHN85 height
+-------------
+``Vertical::fromSRID(Vertical::EPSG_DHHN85_HEIGHT)``
+
+to EVRF2000 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: DHHN85 height to EVRF2000 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5421``
+    | Extent: Germany - West Germany all states",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_EVRF2000_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('51.03'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('8.4'),
+            verticalOffset: new Metre(0.017),
+            inclinationInLatitude: new ArcSecond(-0.002),
+            inclinationInLongitude: new ArcSecond(0.003),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+
+to EVRF2007 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: DHHN85 height to EVRF2007 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5212``
+    | Extent: Germany - West Germany all states",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_EVRF2007_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('51.03'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('8.4'),
+            verticalOffset: new Metre(0.017),
+            inclinationInLatitude: new ArcSecond(-0.011),
+            inclinationInLongitude: new ArcSecond(0.005),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+DHHN92 height
+-------------
+``Vertical::fromSRID(Vertical::EPSG_DHHN92_HEIGHT)``
+
+to EVRF2000 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: DHHN92 height to EVRF2000 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5420``
+    | Extent: Germany - onshore",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_EVRF2000_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('51.03'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('10.13'),
+            verticalOffset: new Metre(0.014),
+            inclinationInLatitude: new ArcSecond(-0.001),
+            inclinationInLongitude: new ArcSecond(0),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+
+to EVRF2007 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: DHHN92 height to EVRF2007 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5211``
+    | Extent: Germany - onshore",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_EVRF2007_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('51.03'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('10.13'),
+            verticalOffset: new Metre(0.015),
+            inclinationInLatitude: new ArcSecond(-0.01),
+            inclinationInLongitude: new ArcSecond(0.002),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+DNN height
+----------
+``Vertical::fromSRID(Vertical::EPSG_DNN_HEIGHT)``
+
+to EVRF2000 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: DNN height to EVRF2000 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5417``
+    | Extent: Denmark - onshore",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_EVRF2000_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('56.02'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('9.14'),
+            verticalOffset: new Metre(0.011),
+            inclinationInLatitude: new ArcSecond(0.003),
+            inclinationInLongitude: new ArcSecond(0.011),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+Dunedin 1958 height
+-------------------
+``Vertical::fromSRID(Vertical::EPSG_DUNEDIN_1958_HEIGHT)``
+
+to NZVD2009 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NZVD2009 height to Dunedin 1958 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::4450``
+    | Extent: New Zealand - South Island - Dunedin vcrs",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_NZVD2009_HEIGHT),
+            verticalOffset: new Metre(-0.49)
+        )
+
+    "
+
+
+to NZVD2016 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NZVD2016 height to Dunedin 1958 height (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::9314``
+    | Extent: New Zealand - South Island - Dunedin vcrs",".. code-block:: php
+
+        $point->offsetFromGrid(
+            to: Vertical::fromSRID(Vertical::EPSG_NZVD2016_HEIGHT),
+            offsetsFile: GTXDunedin1958NZVD2016Provider->provideGrid()
+        )
+
+    "
+
+Dunedin-Bluff 1960 height
+-------------------------
+``Vertical::fromSRID(Vertical::EPSG_DUNEDIN_BLUFF_1960_HEIGHT)``
+
+to NZVD2009 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NZVD2009 height to Dunedin-Bluff 1960 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::4453``
+    | Extent: New Zealand - South Island - Dunedin-Bluff vcrs",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_NZVD2009_HEIGHT),
+            verticalOffset: new Metre(-0.38)
+        )
+
+    "
+
+
+to NZVD2016 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NZVD2016 height to Dunedin-Bluff 1960 height (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::9315``
+    | Extent: New Zealand - South Island - Dunedin-Bluff vcrs",".. code-block:: php
+
+        $point->offsetFromGrid(
+            to: Vertical::fromSRID(Vertical::EPSG_NZVD2016_HEIGHT),
+            offsetsFile: GTXDunedinBluff1960NZVD2016Provider->provideGrid()
+        )
+
+    "
+
+EGM2008 height
+--------------
+``Vertical::fromSRID(Vertical::EPSG_EGM2008_HEIGHT)``
+
+to Kiunga height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: EGM2008 height to Kiunga height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7654``
+    | Extent: Papua New Guinea - onshore south of 5°S and west of 144°E",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_KIUNGA_HEIGHT),
+            verticalOffset: new Metre(-3)
+        )
+
+    "
+
+
+to POM08 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: EGM2008 height to POM08 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7874``
+    | Extent: Papua New Guinea - onshore - Central province and Gulf province east of 144°E",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_POM08_HEIGHT),
+            verticalOffset: new Metre(-0.93)
+        )
+
+    "
+
+EGM96 height
+------------
+``Vertical::fromSRID(Vertical::EPSG_EGM96_HEIGHT)``
+
+to Kumul 34 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: EGM96 height to Kumul 34 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7653``
+    | Extent: Papua New Guinea - PFTB",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_KUMUL_34_HEIGHT),
+            verticalOffset: new Metre(-0.87)
+        )
+
+    "
+
+
+to POM96 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: EGM96 height to POM96 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7873``
+    | Extent: Papua New Guinea - onshore - Central province and Gulf province east of 144°E",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_POM96_HEIGHT),
+            verticalOffset: new Metre(-1.58)
+        )
+
+    "
+
+EOMA 1980 height
+----------------
+``Vertical::fromSRID(Vertical::EPSG_EOMA_1980_HEIGHT)``
+
+to EVRF2000 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: EOMA height 1980 to EVRF2000 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5424``
+    | Extent: Hungary",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_EVRF2000_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('46.59'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('19.35'),
+            verticalOffset: new Metre(0.14),
+            inclinationInLatitude: new ArcSecond(0.008),
+            inclinationInLongitude: new ArcSecond(-0.002),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+EVRF2000 Austria height
+-----------------------
+``Vertical::fromSRID(Vertical::EPSG_EVRF2000_AUSTRIA_HEIGHT)``
+
+to GHA height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: GHA height to EVRF2000 Austria height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::9275``
+    | Extent: Austria",".. code-block:: php
+
+        $point->offsetFromGrid(
+            to: Vertical::fromSRID(Vertical::EPSG_GHA_HEIGHT),
+            offsetsFile: BEVHeightGHAEVRF2000AustriaProvider->provideGrid()
+        )
+
+    "
+
+EVRF2000 height
+---------------
+``Vertical::fromSRID(Vertical::EPSG_EVRF2000_HEIGHT)``
+
+to Alicante height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Alicante height to EVRF2000 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5429``
+    | Extent: Spain and Gibraltar - onshore",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_ALICANTE_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('40.462'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('-3.3935'),
+            verticalOffset: new Metre(0.486),
+            inclinationInLatitude: new ArcSecond(0.003),
+            inclinationInLongitude: new ArcSecond(-0.006),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+
+to Baltic 1957 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Baltic 1957 height to EVRF2000 height (4)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5201``
+    | Extent: Czechia",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_BALTIC_1957_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('49.55'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('15.15'),
+            verticalOffset: new Metre(-0.116),
+            inclinationInLatitude: new ArcSecond(-0.036),
+            inclinationInLongitude: new ArcSecond(-0),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+    "| Name: Baltic 1957 height to EVRF2000 height (3)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5435``
+    | Extent: Slovakia",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_BALTIC_1957_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('48.38'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('19.15'),
+            verticalOffset: new Metre(-0.122),
+            inclinationInLatitude: new ArcSecond(-0.02),
+            inclinationInLongitude: new ArcSecond(-0),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+
+to Baltic 1977 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Baltic 1977 height to EVRF2000 height (5)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5209``
+    | Extent: Latvia - onshore",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_BALTIC_1977_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('56.58'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('24.53'),
+            verticalOffset: new Metre(-0.105),
+            inclinationInLatitude: new ArcSecond(-0),
+            inclinationInLongitude: new ArcSecond(-0.004),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+    "| Name: Baltic 1977 height to EVRF2000 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5436``
+    | Extent: Estonia - onshore",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_BALTIC_1977_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('58.42'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('25.52'),
+            verticalOffset: new Metre(-0.133),
+            inclinationInLatitude: new ArcSecond(0.014),
+            inclinationInLongitude: new ArcSecond(-0.005),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+    "| Name: Baltic 1977 height to EVRF2000 height (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5437``
+    | Extent: Lithuania - onshore",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_BALTIC_1977_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('55.18'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('24.01'),
+            verticalOffset: new Metre(-0.102),
+            inclinationInLatitude: new ArcSecond(-0),
+            inclinationInLongitude: new ArcSecond(-0.002),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+
+to Baltic 1982 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Baltic 1982 height to EVRF2000 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5416``
+    | Extent: Bulgaria - onshore",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_BALTIC_1982_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('42.373'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('25.2236'),
+            verticalOffset: new Metre(-0.182),
+            inclinationInLatitude: new ArcSecond(-0.001),
+            inclinationInLongitude: new ArcSecond(0.004),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+
+to Cascais height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Cascais height to EVRF2000 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5427``
+    | Extent: Portugal - mainland - onshore",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_CASCAIS_HEIGHT),
+            verticalOffset: new Metre(0.315)
+        )
+
+    "
+
+
+to Constanta height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Constanta height to EVRF2000 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5205``
+    | Extent: Romania - onshore",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_CONSTANTA_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('46.01'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('24.49'),
+            verticalOffset: new Metre(-0.028),
+            inclinationInLatitude: new ArcSecond(-0.002),
+            inclinationInLongitude: new ArcSecond(-0.002),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+
+to DHHN85 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: DHHN85 height to EVRF2000 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5421``
+    | Extent: Germany - West Germany all states",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_DHHN85_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('51.03'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('8.4'),
+            verticalOffset: new Metre(-0.017),
+            inclinationInLatitude: new ArcSecond(0.002),
+            inclinationInLongitude: new ArcSecond(-0.003),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+
+to DHHN92 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: DHHN92 height to EVRF2000 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5420``
+    | Extent: Germany - onshore",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_DHHN92_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('51.03'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('10.13'),
+            verticalOffset: new Metre(-0.014),
+            inclinationInLatitude: new ArcSecond(0.001),
+            inclinationInLongitude: new ArcSecond(-0),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+
+to DNN height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: DNN height to EVRF2000 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5417``
+    | Extent: Denmark - onshore",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_DNN_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('56.02'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('9.14'),
+            verticalOffset: new Metre(-0.011),
+            inclinationInLatitude: new ArcSecond(-0.003),
+            inclinationInLongitude: new ArcSecond(-0.011),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+
+to EOMA 1980 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: EOMA height 1980 to EVRF2000 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5424``
+    | Extent: Hungary",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_EOMA_1980_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('46.59'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('19.35'),
+            verticalOffset: new Metre(-0.14),
+            inclinationInLatitude: new ArcSecond(-0.008),
+            inclinationInLongitude: new ArcSecond(0.002),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+
+to GHA height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: GHA height to EVRF2000 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5415``
+    | Extent: Austria",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_GHA_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('47.32'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('14.27'),
+            verticalOffset: new Metre(0.356),
+            inclinationInLatitude: new ArcSecond(0.057),
+            inclinationInLongitude: new ArcSecond(0.058),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+
+to Genoa 1942 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Genoa 1942 height to EVRF2000 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5213``
+    | Extent: Italy - mainland",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_GENOA_1942_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('42.35'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('12.58'),
+            verticalOffset: new Metre(0.309),
+            inclinationInLatitude: new ArcSecond(0.03),
+            inclinationInLongitude: new ArcSecond(-0),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+    "| Name: Genoa 1942 height to EVRF2000 height (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5216``
+    | Extent: Italy - Sicily onshore",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_GENOA_1942_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('37.3'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('14.18'),
+            verticalOffset: new Metre(0.402),
+            inclinationInLatitude: new ArcSecond(0.079),
+            inclinationInLongitude: new ArcSecond(-0),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+
+to HVRS71 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: HVRS71 height to EVRF2000 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5196``
+    | Extent: Croatia - onshore",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_HVRS71_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('45.21'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('16.22'),
+            verticalOffset: new Metre(0.343),
+            inclinationInLatitude: new ArcSecond(0.007),
+            inclinationInLongitude: new ArcSecond(0.016),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+
+to LN02 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: LN02 height to EVRF2000 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5431``
+    | Extent: Europe - Liechtenstein and Switzerland",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_LN02_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('46.55'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('8.11'),
+            verticalOffset: new Metre(0.245),
+            inclinationInLatitude: new ArcSecond(0.21),
+            inclinationInLongitude: new ArcSecond(0.032),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+
+to N60 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: N60 height to EVRF2000 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5432``
+    | Extent: Finland - onshore",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_N60_HEIGHT),
+            verticalOffset: new Metre(-0.213)
+        )
+
+    "
+
+
+to NAP height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NAP height to EVRF2000 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5425``
+    | Extent: Netherlands - onshore",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_NAP_HEIGHT),
+            verticalOffset: new Metre(0.005)
+        )
+
+    "
+
+
+to NGF-IGN69 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NGF IGN69 height to EVRF2000 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5419``
+    | Extent: France - mainland onshore",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_NGF_IGN69_HEIGHT),
+            verticalOffset: new Metre(0.486)
+        )
+
+    "
+
+
+to NN54 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NN54 height to EVRF2000 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5426``
+    | Extent: Norway - onshore",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_NN54_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('62.56'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('11.1'),
+            verticalOffset: new Metre(0.001),
+            inclinationInLatitude: new ArcSecond(0.01),
+            inclinationInLongitude: new ArcSecond(-0.034),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+
+to ODN height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: ODN height to EVRF2000 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::4651``
+    | Extent: UK - Great Britain mainland onshore",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_ODN_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('54.35'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('-2.15'),
+            verticalOffset: new Metre(-0.07),
+            inclinationInLatitude: new ArcSecond(-0.044),
+            inclinationInLongitude: new ArcSecond(-0),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+
+to Ostend height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Ostend height to EVRF2000 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5198``
+    | Extent: Belgium - onshore",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_OSTEND_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('50.43'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('4.46'),
+            verticalOffset: new Metre(2.311),
+            inclinationInLatitude: new ArcSecond(0.016),
+            inclinationInLongitude: new ArcSecond(-0),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+
+to RH70 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: RH70 height to EVRF2000 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5430``
+    | Extent: Sweden - onshore",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_RH70_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('64'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('16.14'),
+            verticalOffset: new Metre(-0.005),
+            inclinationInLatitude: new ArcSecond(0.012),
+            inclinationInLongitude: new ArcSecond(-0),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+
+to SNN76 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: SNN76 height to EVRF2000 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5422``
+    | Extent: Germany - East Germany all states",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_SNN76_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('52.32'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('13.1'),
+            verticalOffset: new Metre(-0.157),
+            inclinationInLatitude: new ArcSecond(-0.007),
+            inclinationInLongitude: new ArcSecond(-0.005),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+
+to SVS2000 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NVN99 height to EVRF2000 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5428``
+    | Extent: Slovenia - onshore",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_SVS2000_HEIGHT),
+            ordinate1OfEvaluationPoint: new Degree(46),
+            ordinate2OfEvaluationPoint: new Degree(15),
+            verticalOffset: new Metre(0.411),
+            inclinationInLatitude: new ArcSecond(0.033),
+            inclinationInLongitude: new ArcSecond(-0.008),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+EVRF2007 height
+---------------
+``Vertical::fromSRID(Vertical::EPSG_EVRF2007_HEIGHT)``
+
+to Baltic 1957 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Baltic 1957 height to EVRF2007 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5202``
+    | Extent: Czechia",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_BALTIC_1957_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('49.55'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('15.15'),
+            verticalOffset: new Metre(-0.13),
+            inclinationInLatitude: new ArcSecond(-0.026),
+            inclinationInLongitude: new ArcSecond(-0),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+
+to Baltic 1977 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Baltic 1977 height to EVRF2007 height (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5203``
+    | Extent: Estonia - onshore",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_BALTIC_1977_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('58.42'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('25.52'),
+            verticalOffset: new Metre(-0.195),
+            inclinationInLatitude: new ArcSecond(-0.009),
+            inclinationInLongitude: new ArcSecond(0.013),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+    "| Name: Baltic 1977 height to EVRF2007 height (3)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5204``
+    | Extent: Lithuania - onshore",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_BALTIC_1977_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('55.18'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('24.01'),
+            verticalOffset: new Metre(-0.121),
+            inclinationInLatitude: new ArcSecond(-0.053),
+            inclinationInLongitude: new ArcSecond(-0),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+    "| Name: Baltic 1977 height to EVRF2007 height (4)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5210``
+    | Extent: Latvia - onshore",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_BALTIC_1977_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('56.58'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('24.53'),
+            verticalOffset: new Metre(-0.154),
+            inclinationInLatitude: new ArcSecond(-0.016),
+            inclinationInLongitude: new ArcSecond(0.012),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+
+to Baltic 1982 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Baltic 1982 height to EVRF2007 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5200``
+    | Extent: Bulgaria - onshore",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_BALTIC_1982_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('42.373'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('25.2236'),
+            verticalOffset: new Metre(-0.228),
+            inclinationInLatitude: new ArcSecond(0.009),
+            inclinationInLongitude: new ArcSecond(0.003),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+
+to Constanta height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Constanta height to EVRF2007 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5206``
+    | Extent: Romania - onshore",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_CONSTANTA_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('46.01'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('24.49'),
+            verticalOffset: new Metre(-0.062),
+            inclinationInLatitude: new ArcSecond(0.005),
+            inclinationInLongitude: new ArcSecond(-0.008),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+
+to DHHN2016 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: DHHN2016 height to EVRF2007 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7838``
+    | Extent: Germany - onshore",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_DHHN2016_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('51.03'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('10.13'),
+            verticalOffset: new Metre(-0.014),
+            inclinationInLatitude: new ArcSecond(0.01),
+            inclinationInLongitude: new ArcSecond(-0),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+
+to DHHN85 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: DHHN85 height to EVRF2007 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5212``
+    | Extent: Germany - West Germany all states",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_DHHN85_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('51.03'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('8.4'),
+            verticalOffset: new Metre(-0.017),
+            inclinationInLatitude: new ArcSecond(0.011),
+            inclinationInLongitude: new ArcSecond(-0.005),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+
+to DHHN92 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: DHHN92 height to EVRF2007 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5211``
+    | Extent: Germany - onshore",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_DHHN92_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('51.03'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('10.13'),
+            verticalOffset: new Metre(-0.015),
+            inclinationInLatitude: new ArcSecond(0.01),
+            inclinationInLongitude: new ArcSecond(-0.002),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+
+to GHA height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: GHA height to EVRF2007 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5557``
+    | Extent: Austria",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_GHA_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('47.32'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('14.27'),
+            verticalOffset: new Metre(0.335),
+            inclinationInLatitude: new ArcSecond(0.065),
+            inclinationInLongitude: new ArcSecond(0.06),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+
+to Genoa 1942 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Genoa 1942 height to EVRF2007 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5215``
+    | Extent: Italy - mainland",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_GENOA_1942_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('42.35'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('12.58'),
+            verticalOffset: new Metre(0.259),
+            inclinationInLatitude: new ArcSecond(0.036),
+            inclinationInLongitude: new ArcSecond(-0),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+    "| Name: Genoa 1942 height to EVRF2007 height (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5217``
+    | Extent: Italy - Sicily onshore",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_GENOA_1942_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('37.3'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('14.18'),
+            verticalOffset: new Metre(0.333),
+            inclinationInLatitude: new ArcSecond(0.051),
+            inclinationInLongitude: new ArcSecond(-0),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+
+to HVRS71 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: HVRS71 height to EVRF2007 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5197``
+    | Extent: Croatia - onshore",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_HVRS71_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('45.21'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('16.22'),
+            verticalOffset: new Metre(0.313),
+            inclinationInLatitude: new ArcSecond(0.016),
+            inclinationInLongitude: new ArcSecond(0.018),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+
+to LN02 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: LN02 height to EVRF2007 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5207``
+    | Extent: Europe - Liechtenstein and Switzerland",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_LN02_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('46.55'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('8.11'),
+            verticalOffset: new Metre(0.225),
+            inclinationInLatitude: new ArcSecond(0.221),
+            inclinationInLongitude: new ArcSecond(0.033),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+
+to Latvia 2000 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Latvia 2000 height to EVRF2007 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7701``
+    | Extent: Latvia - onshore",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_LATVIA_2000_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('56.58'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('24.53'),
+            verticalOffset: new Metre(-0.003),
+            inclinationInLatitude: new ArcSecond(-0),
+            inclinationInLongitude: new ArcSecond(-0.0074),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+
+to Ostend height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Ostend height to EVRF2007 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5199``
+    | Extent: Belgium - onshore",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_OSTEND_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('50.43'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('4.46'),
+            verticalOffset: new Metre(2.317),
+            inclinationInLatitude: new ArcSecond(0.031),
+            inclinationInLongitude: new ArcSecond(-0),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+
+to RH2000 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: RH2000 height to EVRF2007 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5208``
+    | Extent: Sweden - onshore",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_RH2000_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('61.54'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('15.48'),
+            verticalOffset: new Metre(0.008),
+            inclinationInLatitude: new ArcSecond(0.0006),
+            inclinationInLongitude: new ArcSecond(0.0003),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+EVRF2007-PL height
+------------------
+``Vertical::fromSRID(Vertical::EPSG_EVRF2007_PL_HEIGHT)``
+
+to Baltic 1986 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Baltic 1986 height to EVRF2007-PL height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::9662``
+    | Extent: Poland - onshore",".. code-block:: php
+
+        $point->offsetFromGrid(
+            to: Vertical::fromSRID(Vertical::EPSG_BALTIC_1986_HEIGHT),
+            offsetsFile: GUGiKHeightEVRF2007Baltic1986PolandProvider->provideGrid()
+        )
+
+    "
+
+EVRF2019 height
+---------------
+``Vertical::fromSRID(Vertical::EPSG_EVRF2019_HEIGHT)``
+
+to Antalya height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Antalya height to EVRF2019 height (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::9551``
+    | Extent: Turkey - onshore",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_ANTALYA_HEIGHT),
+            verticalOffset: new Metre(0.394)
+        )
+
+    "
+
+
+to Baltic 1957 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Baltic 1957 height to EVRF2019 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::9745``
+    | Extent: Czechia",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_BALTIC_1957_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('49.55'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('15.15'),
+            verticalOffset: new Metre(-0.142),
+            inclinationInLatitude: new ArcSecond(-0.026),
+            inclinationInLongitude: new ArcSecond(-0.006),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+
+to EVRF2019 mean-tide height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: EVRF2019 height to EVRF2019 mean-tide height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::9710``
+    | Extent: Europe - EVRF2019",".. code-block:: php
+
+        $point->zeroTideHeightToMeanTideHeightEVRF2019(
+            to: Vertical::fromSRID(Vertical::EPSG_EVRF2019_MEAN_TIDE_HEIGHT)
+        )
+
+    "
+
+EVRF2019 mean-tide height
+-------------------------
+``Vertical::fromSRID(Vertical::EPSG_EVRF2019_MEAN_TIDE_HEIGHT)``
+
+to Antalya height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Antalya height to EVRF2019 mean-tide height (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::9552``
+    | Extent: Turkey - onshore",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_ANTALYA_HEIGHT),
+            verticalOffset: new Metre(0.448)
+        )
+
+    "
+
+
+to Baltic 1957 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Baltic 1957 height to EVRF2019 mean-tide height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::9744``
+    | Extent: Czechia",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_BALTIC_1957_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('49.55'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('15.15'),
+            verticalOffset: new Metre(-0.13),
+            inclinationInLatitude: new ArcSecond(-0.036),
+            inclinationInLongitude: new ArcSecond(-0.006),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+
+to EVRF2019 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: EVRF2019 height to EVRF2019 mean-tide height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::9710``
+    | Extent: Europe - EVRF2019",".. code-block:: php
+
+        $point->zeroTideHeightToMeanTideHeightEVRF2019(
+            to: Vertical::fromSRID(Vertical::EPSG_EVRF2019_HEIGHT)
+        )
+
+    "
+
+
+to ODN height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: ODN height to EVRF2019 mean-tide height (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::9562``
+    | Extent: UK - Great Britain mainland onshore",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_ODN_HEIGHT),
+            verticalOffset: new Metre(0.17)
+        )
+
+    "
+
+GHA height
+----------
+``Vertical::fromSRID(Vertical::EPSG_GHA_HEIGHT)``
+
+to EVRF2000 Austria height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: GHA height to EVRF2000 Austria height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::9275``
+    | Extent: Austria",".. code-block:: php
+
+        $point->offsetFromGrid(
+            to: Vertical::fromSRID(Vertical::EPSG_EVRF2000_AUSTRIA_HEIGHT),
+            offsetsFile: BEVHeightGHAEVRF2000AustriaProvider->provideGrid()
+        )
+
+    "
+
+
+to EVRF2000 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: GHA height to EVRF2000 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5415``
+    | Extent: Austria",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_EVRF2000_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('47.32'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('14.27'),
+            verticalOffset: new Metre(-0.356),
+            inclinationInLatitude: new ArcSecond(-0.057),
+            inclinationInLongitude: new ArcSecond(-0.058),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+
+to EVRF2007 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: GHA height to EVRF2007 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5557``
+    | Extent: Austria",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_EVRF2007_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('47.32'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('14.27'),
+            verticalOffset: new Metre(-0.335),
+            inclinationInLatitude: new ArcSecond(-0.065),
+            inclinationInLongitude: new ArcSecond(-0.06),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+
+to Vienna height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Vienna height to GHA height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::9371``
+    | Extent: Austria - Vienna",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_VIENNA_HEIGHT),
+            verticalOffset: new Metre(-156.68)
+        )
+
+    "
+
+Genoa 1942 height
+-----------------
+``Vertical::fromSRID(Vertical::EPSG_GENOA_1942_HEIGHT)``
+
+to Catania 1965 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Genoa 1942 height to Catania 1965 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::9726``
+    | Extent: Italy - Sicily onshore",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_CATANIA_1965_HEIGHT),
+            verticalOffset: new Metre(0.141)
+        )
+
+    "
+
+
+to EVRF2000 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Genoa 1942 height to EVRF2000 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5213``
+    | Extent: Italy - mainland",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_EVRF2000_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('42.35'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('12.58'),
+            verticalOffset: new Metre(-0.309),
+            inclinationInLatitude: new ArcSecond(-0.03),
+            inclinationInLongitude: new ArcSecond(0),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+    "| Name: Genoa 1942 height to EVRF2000 height (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5216``
+    | Extent: Italy - Sicily onshore",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_EVRF2000_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('37.3'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('14.18'),
+            verticalOffset: new Metre(-0.402),
+            inclinationInLatitude: new ArcSecond(-0.079),
+            inclinationInLongitude: new ArcSecond(0),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+
+to EVRF2007 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Genoa 1942 height to EVRF2007 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5215``
+    | Extent: Italy - mainland",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_EVRF2007_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('42.35'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('12.58'),
+            verticalOffset: new Metre(-0.259),
+            inclinationInLatitude: new ArcSecond(-0.036),
+            inclinationInLongitude: new ArcSecond(0),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+    "| Name: Genoa 1942 height to EVRF2007 height (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5217``
+    | Extent: Italy - Sicily onshore",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_EVRF2007_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('37.3'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('14.18'),
+            verticalOffset: new Metre(-0.333),
+            inclinationInLatitude: new ArcSecond(-0.051),
+            inclinationInLongitude: new ArcSecond(0),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+Gisborne 1926 height
+--------------------
+``Vertical::fromSRID(Vertical::EPSG_GISBORNE_1926_HEIGHT)``
+
+to NZVD2009 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NZVD2009 height to Gisborne 1926 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::4445``
+    | Extent: New Zealand - North Island - Gisborne vcrs",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_NZVD2009_HEIGHT),
+            verticalOffset: new Metre(-0.34)
+        )
+
+    "
+
+
+to NZVD2016 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NZVD2016 height to Gisborne 1926 height (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::9316``
+    | Extent: New Zealand - North Island - Gisborne vcrs",".. code-block:: php
+
+        $point->offsetFromGrid(
+            to: Vertical::fromSRID(Vertical::EPSG_NZVD2016_HEIGHT),
+            offsetsFile: GTXGisborne1926NZVD2016Provider->provideGrid()
+        )
+
+    "
+
+HKCD depth
+----------
+``Vertical::fromSRID(Vertical::EPSG_HKCD_DEPTH)``
+
+to HKPD depth (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: HKPD depth to HKCD depth (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7977``
+    | Extent: China - Hong Kong - offshore",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_HKPD_DEPTH),
+            verticalOffset: new Metre(0.146)
+        )
+
+    "
+
+HKPD depth
+----------
+``Vertical::fromSRID(Vertical::EPSG_HKPD_DEPTH)``
+
+to HKCD depth (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: HKPD depth to HKCD depth (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7977``
+    | Extent: China - Hong Kong - offshore",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_HKCD_DEPTH),
+            verticalOffset: new Metre(-0.146)
+        )
+
+    "
+
+
+to HKPD height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Height <> Depth Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7812``
+    | Extent: World",".. code-block:: php
+
+        $point->heightDepthReversal(
+            to: Vertical::fromSRID(Vertical::EPSG_HKPD_HEIGHT)
+        )
+
+    "
+
+HKPD height
+-----------
+``Vertical::fromSRID(Vertical::EPSG_HKPD_HEIGHT)``
+
+to HKPD depth (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Height <> Depth Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7812``
+    | Extent: World",".. code-block:: php
+
+        $point->heightDepthReversal(
+            to: Vertical::fromSRID(Vertical::EPSG_HKPD_DEPTH)
+        )
+
+    "
+
+HVRS71 height
+-------------
+``Vertical::fromSRID(Vertical::EPSG_HVRS71_HEIGHT)``
+
+to EVRF2000 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: HVRS71 height to EVRF2000 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5196``
+    | Extent: Croatia - onshore",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_EVRF2000_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('45.21'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('16.22'),
+            verticalOffset: new Metre(-0.343),
+            inclinationInLatitude: new ArcSecond(-0.007),
+            inclinationInLongitude: new ArcSecond(-0.016),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+
+to EVRF2007 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: HVRS71 height to EVRF2007 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5197``
+    | Extent: Croatia - onshore",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_EVRF2007_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('45.21'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('16.22'),
+            verticalOffset: new Metre(-0.313),
+            inclinationInLatitude: new ArcSecond(-0.016),
+            inclinationInLongitude: new ArcSecond(-0.018),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+Instantaneous Water Level depth
+-------------------------------
+``Vertical::fromSRID(Vertical::EPSG_INSTANTANEOUS_WATER_LEVEL_DEPTH)``
+
+to Instantaneous Water Level height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Height <> Depth Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7812``
+    | Extent: World",".. code-block:: php
+
+        $point->heightDepthReversal(
+            to: Vertical::fromSRID(Vertical::EPSG_INSTANTANEOUS_WATER_LEVEL_HEIGHT)
+        )
+
+    "
+
+Instantaneous Water Level height
+--------------------------------
+``Vertical::fromSRID(Vertical::EPSG_INSTANTANEOUS_WATER_LEVEL_HEIGHT)``
+
+to Instantaneous Water Level depth (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Height <> Depth Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7812``
+    | Extent: World",".. code-block:: php
+
+        $point->heightDepthReversal(
+            to: Vertical::fromSRID(Vertical::EPSG_INSTANTANEOUS_WATER_LEVEL_DEPTH)
+        )
+
+    "
+
+JGD2000 (vertical) height
+-------------------------
+``Vertical::fromSRID(Vertical::EPSG_JGD2000_VERTICAL_HEIGHT)``
+
+to JGD2011 (vertical) height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: JGD2000 (vertical) height to JGD2011 (vertical) height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::6699``
+    | Extent: Japan - onshore mainland excluding eastern main province",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_JGD2011_VERTICAL_HEIGHT),
+            verticalOffset: new Metre(0)
+        )
+
+    "
+
+JGD2011 (vertical) height
+-------------------------
+``Vertical::fromSRID(Vertical::EPSG_JGD2011_VERTICAL_HEIGHT)``
+
+to JGD2000 (vertical) height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: JGD2000 (vertical) height to JGD2011 (vertical) height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::6699``
+    | Extent: Japan - onshore mainland excluding eastern main province",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_JGD2000_VERTICAL_HEIGHT),
+            verticalOffset: new Metre(-0)
+        )
+
+    "
+
+KOC CD height
+-------------
+``Vertical::fromSRID(Vertical::EPSG_KOC_CD_HEIGHT)``
+
+to KOC WD height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: KOC CD height to KOC WD height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7980``
+    | Extent: Kuwait - onshore",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_KOC_WD_HEIGHT),
+            verticalOffset: new Metre(-4.74)
+        )
+
+    "
+
+
+to Kuwait PWD height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: KOC CD height to Kuwait PWD height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5450``
+    | Extent: Kuwait - onshore",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_KUWAIT_PWD_HEIGHT),
+            verticalOffset: new Metre(-0.49)
+        )
+
+    "
+
+KOC WD depth
+------------
+``Vertical::fromSRID(Vertical::EPSG_KOC_WD_DEPTH)``
+
+to KOC WD depth (ft) (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Vertical Axis Unit Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7813``
+    | Extent: World",".. code-block:: php
+
+        $point->changeOfVerticalUnit(
+            to: Vertical::fromSRID(Vertical::EPSG_KOC_WD_DEPTH_FT)
+        )
+
+    "
+
+
+to KOC WD height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Height <> Depth Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7812``
+    | Extent: World",".. code-block:: php
+
+        $point->heightDepthReversal(
+            to: Vertical::fromSRID(Vertical::EPSG_KOC_WD_HEIGHT)
+        )
+
+    "
+
+KOC WD depth (ft)
+-----------------
+``Vertical::fromSRID(Vertical::EPSG_KOC_WD_DEPTH_FT)``
+
+to KOC WD depth (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Vertical Axis Unit Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7813``
+    | Extent: World",".. code-block:: php
+
+        $point->changeOfVerticalUnit(
+            to: Vertical::fromSRID(Vertical::EPSG_KOC_WD_DEPTH)
+        )
+
+    "
+
+KOC WD height
+-------------
+``Vertical::fromSRID(Vertical::EPSG_KOC_WD_HEIGHT)``
+
+to KOC CD height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: KOC CD height to KOC WD height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7980``
+    | Extent: Kuwait - onshore",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_KOC_CD_HEIGHT),
+            verticalOffset: new Metre(4.74)
+        )
+
+    "
+
+
+to KOC WD depth (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Height <> Depth Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7812``
+    | Extent: World",".. code-block:: php
+
+        $point->heightDepthReversal(
+            to: Vertical::fromSRID(Vertical::EPSG_KOC_WD_DEPTH)
+        )
+
+    "
+
+
+to Kuwait PWD height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Kuwait PWD height to KOC WD height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7981``
+    | Extent: Kuwait - onshore",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_KUWAIT_PWD_HEIGHT),
+            verticalOffset: new Metre(4.25)
+        )
+
+    "
+
+Kiunga height
+-------------
+``Vertical::fromSRID(Vertical::EPSG_KIUNGA_HEIGHT)``
+
+to EGM2008 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: EGM2008 height to Kiunga height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7654``
+    | Extent: Papua New Guinea - onshore south of 5°S and west of 144°E",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_EGM2008_HEIGHT),
+            verticalOffset: new Metre(3)
+        )
+
+    "
+
+Kumul 34 height
+---------------
+``Vertical::fromSRID(Vertical::EPSG_KUMUL_34_HEIGHT)``
+
+to EGM96 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: EGM96 height to Kumul 34 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7653``
+    | Extent: Papua New Guinea - PFTB",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_EGM96_HEIGHT),
+            verticalOffset: new Metre(0.87)
+        )
+
+    "
+
+Kuwait PWD height
+-----------------
+``Vertical::fromSRID(Vertical::EPSG_KUWAIT_PWD_HEIGHT)``
+
+to KOC CD height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: KOC CD height to Kuwait PWD height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5450``
+    | Extent: Kuwait - onshore",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_KOC_CD_HEIGHT),
+            verticalOffset: new Metre(0.49)
+        )
+
+    "
+
+
+to KOC WD height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Kuwait PWD height to KOC WD height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7981``
+    | Extent: Kuwait - onshore",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_KOC_WD_HEIGHT),
+            verticalOffset: new Metre(-4.25)
+        )
+
+    "
+
+LN02 height
+-----------
+``Vertical::fromSRID(Vertical::EPSG_LN02_HEIGHT)``
+
+to EVRF2000 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: LN02 height to EVRF2000 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5431``
+    | Extent: Europe - Liechtenstein and Switzerland",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_EVRF2000_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('46.55'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('8.11'),
+            verticalOffset: new Metre(-0.245),
+            inclinationInLatitude: new ArcSecond(-0.21),
+            inclinationInLongitude: new ArcSecond(-0.032),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+
+to EVRF2007 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: LN02 height to EVRF2007 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5207``
+    | Extent: Europe - Liechtenstein and Switzerland",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_EVRF2007_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('46.55'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('8.11'),
+            verticalOffset: new Metre(-0.225),
+            inclinationInLatitude: new ArcSecond(-0.221),
+            inclinationInLongitude: new ArcSecond(-0.033),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+Latvia 2000 height
+------------------
+``Vertical::fromSRID(Vertical::EPSG_LATVIA_2000_HEIGHT)``
+
+to EVRF2007 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Latvia 2000 height to EVRF2007 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7701``
+    | Extent: Latvia - onshore",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_EVRF2007_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('56.58'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('24.53'),
+            verticalOffset: new Metre(0.003),
+            inclinationInLatitude: new ArcSecond(0),
+            inclinationInLongitude: new ArcSecond(0.0074),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+Lyttelton 1937 height
+---------------------
+``Vertical::fromSRID(Vertical::EPSG_LYTTELTON_1937_HEIGHT)``
+
+to NZVD2009 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NZVD2009 height to Lyttelton 1937 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::4449``
+    | Extent: New Zealand - South Island - Lyttleton vcrs",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_NZVD2009_HEIGHT),
+            verticalOffset: new Metre(-0.47)
+        )
+
+    "
+
+
+to NZVD2016 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NZVD2016 height to Lyttelton 1937 height (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::9317``
+    | Extent: New Zealand - South Island - Lyttleton vcrs",".. code-block:: php
+
+        $point->offsetFromGrid(
+            to: Vertical::fromSRID(Vertical::EPSG_NZVD2016_HEIGHT),
+            offsetsFile: GTXLyttelton1937NZVD2016Provider->provideGrid()
+        )
+
+    "
+
+MSL depth
+---------
+``Vertical::fromSRID(Vertical::EPSG_MSL_DEPTH)``
+
+to MSL depth (ft) (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Vertical Axis Unit Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7813``
+    | Extent: World",".. code-block:: php
+
+        $point->changeOfVerticalUnit(
+            to: Vertical::fromSRID(Vertical::EPSG_MSL_DEPTH_FT)
+        )
+
+    "
+
+
+to MSL depth (ftUS) (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Vertical Axis Unit Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7813``
+    | Extent: World",".. code-block:: php
+
+        $point->changeOfVerticalUnit(
+            to: Vertical::fromSRID(Vertical::EPSG_MSL_DEPTH_FTUS)
+        )
+
+    "
+
+
+to MSL height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Height <> Depth Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7812``
+    | Extent: World",".. code-block:: php
+
+        $point->heightDepthReversal(
+            to: Vertical::fromSRID(Vertical::EPSG_MSL_HEIGHT)
+        )
+
+    "
+
+MSL depth (ft)
+--------------
+``Vertical::fromSRID(Vertical::EPSG_MSL_DEPTH_FT)``
+
+to MSL depth (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Vertical Axis Unit Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7813``
+    | Extent: World",".. code-block:: php
+
+        $point->changeOfVerticalUnit(
+            to: Vertical::fromSRID(Vertical::EPSG_MSL_DEPTH)
+        )
+
+    "
+
+MSL depth (ftUS)
+----------------
+``Vertical::fromSRID(Vertical::EPSG_MSL_DEPTH_FTUS)``
+
+to MSL depth (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Vertical Axis Unit Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7813``
+    | Extent: World",".. code-block:: php
+
+        $point->changeOfVerticalUnit(
+            to: Vertical::fromSRID(Vertical::EPSG_MSL_DEPTH)
+        )
+
+    "
+
+MSL height
+----------
+``Vertical::fromSRID(Vertical::EPSG_MSL_HEIGHT)``
+
+to MSL depth (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Height <> Depth Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7812``
+    | Extent: World",".. code-block:: php
+
+        $point->heightDepthReversal(
+            to: Vertical::fromSRID(Vertical::EPSG_MSL_DEPTH)
+        )
+
+    "
+
+
+to MSL height (ft) (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Vertical Axis Unit Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7813``
+    | Extent: World",".. code-block:: php
+
+        $point->changeOfVerticalUnit(
+            to: Vertical::fromSRID(Vertical::EPSG_MSL_HEIGHT_FT)
+        )
+
+    "
+
+
+to MSL height (ftUS) (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Vertical Axis Unit Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7813``
+    | Extent: World",".. code-block:: php
+
+        $point->changeOfVerticalUnit(
+            to: Vertical::fromSRID(Vertical::EPSG_MSL_HEIGHT_FTUS)
+        )
+
+    "
+
+MSL height (ft)
+---------------
+``Vertical::fromSRID(Vertical::EPSG_MSL_HEIGHT_FT)``
+
+to MSL height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Vertical Axis Unit Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7813``
+    | Extent: World",".. code-block:: php
+
+        $point->changeOfVerticalUnit(
+            to: Vertical::fromSRID(Vertical::EPSG_MSL_HEIGHT)
+        )
+
+    "
+
+MSL height (ftUS)
+-----------------
+``Vertical::fromSRID(Vertical::EPSG_MSL_HEIGHT_FTUS)``
+
+to MSL height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Vertical Axis Unit Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7813``
+    | Extent: World",".. code-block:: php
+
+        $point->changeOfVerticalUnit(
+            to: Vertical::fromSRID(Vertical::EPSG_MSL_HEIGHT)
+        )
+
+    "
+
+Malin Head height
+-----------------
+``Vertical::fromSRID(Vertical::EPSG_MALIN_HEAD_HEIGHT)``
+
+to Belfast height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Belfast height to Malin Head height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5452``
+    | Extent: UK - Northern Ireland - onshore",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_BELFAST_HEIGHT),
+            verticalOffset: new Metre(0.037)
+        )
+
+    "
+
+
+to Poolbeg height (m) (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Poolbeg height (m) to Malin Head height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7964``
+    | Extent: Europe - Ireland (Republic and Ulster) - onshore",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_POOLBEG_HEIGHT_M),
+            verticalOffset: new Metre(2.7)
+        )
+
+    "
+
+Moturiki 1953 height
+--------------------
+``Vertical::fromSRID(Vertical::EPSG_MOTURIKI_1953_HEIGHT)``
+
+to NZVD2009 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NZVD2009 height to Moturiki 1953 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::4443``
+    | Extent: New Zealand - North Island - Moturiki vcrs",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_NZVD2009_HEIGHT),
+            verticalOffset: new Metre(-0.24)
+        )
+
+    "
+
+
+to NZVD2016 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NZVD2016 height to Moturiki 1953 height (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::9318``
+    | Extent: New Zealand - North Island - Moturiki vcrs",".. code-block:: php
+
+        $point->offsetFromGrid(
+            to: Vertical::fromSRID(Vertical::EPSG_NZVD2016_HEIGHT),
+            offsetsFile: GTXMoturiki1953NZVD2016Provider->provideGrid()
+        )
+
+    "
+
+N60 height
+----------
+``Vertical::fromSRID(Vertical::EPSG_N60_HEIGHT)``
+
+to EVRF2000 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: N60 height to EVRF2000 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5432``
+    | Extent: Finland - onshore",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_EVRF2000_HEIGHT),
+            verticalOffset: new Metre(0.213)
+        )
+
+    "
+
+NAP height
+----------
+``Vertical::fromSRID(Vertical::EPSG_NAP_HEIGHT)``
+
+to EVRF2000 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NAP height to EVRF2000 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5425``
+    | Extent: Netherlands - onshore",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_EVRF2000_HEIGHT),
+            verticalOffset: new Metre(-0.005)
+        )
+
+    "
+
+NAVD88 depth
+------------
+``Vertical::fromSRID(Vertical::EPSG_NAVD88_DEPTH)``
+
+to NAVD88 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Height <> Depth Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7812``
+    | Extent: World",".. code-block:: php
+
+        $point->heightDepthReversal(
+            to: Vertical::fromSRID(Vertical::EPSG_NAVD88_HEIGHT)
+        )
+
+    "
+
+NAVD88 depth (ftUS)
+-------------------
+``Vertical::fromSRID(Vertical::EPSG_NAVD88_DEPTH_FTUS)``
+
+to NAVD88 height (ftUS) (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Height <> Depth Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7812``
+    | Extent: World",".. code-block:: php
+
+        $point->heightDepthReversal(
+            to: Vertical::fromSRID(Vertical::EPSG_NAVD88_HEIGHT_FTUS)
+        )
+
+    "
+
+NAVD88 height
+-------------
+``Vertical::fromSRID(Vertical::EPSG_NAVD88_HEIGHT)``
+
+to NAVD88 depth (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Height <> Depth Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7812``
+    | Extent: World",".. code-block:: php
+
+        $point->heightDepthReversal(
+            to: Vertical::fromSRID(Vertical::EPSG_NAVD88_DEPTH)
+        )
+
+    "
+
+
+to NAVD88 height (ft) (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Vertical Axis Unit Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7813``
+    | Extent: World",".. code-block:: php
+
+        $point->changeOfVerticalUnit(
+            to: Vertical::fromSRID(Vertical::EPSG_NAVD88_HEIGHT_FT)
+        )
+
+    "
+
+
+to NAVD88 height (ftUS) (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Vertical Axis Unit Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7813``
+    | Extent: World",".. code-block:: php
+
+        $point->changeOfVerticalUnit(
+            to: Vertical::fromSRID(Vertical::EPSG_NAVD88_HEIGHT_FTUS)
+        )
+
+    "
+
+
+to NGVD29 height (m) (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NGVD29 height (m) to NAVD88 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7969``
+    | Extent: USA - CONUS west of 107°W - onshore",".. code-block:: php
+
+        $point->offsetFromGrid(
+            to: Vertical::fromSRID(Vertical::EPSG_NGVD29_HEIGHT_M),
+            offsetsFile: GTXNGVD29NAVD88CONUSWestProvider->provideGrid()
+        )
+
+    "
+    "| Name: NGVD29 height (m) to NAVD88 height (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7970``
+    | Extent: USA - CONUS 89°W-107°W - onshore",".. code-block:: php
+
+        $point->offsetFromGrid(
+            to: Vertical::fromSRID(Vertical::EPSG_NGVD29_HEIGHT_M),
+            offsetsFile: GTXNGVD29NAVD88CONUSCentralProvider->provideGrid()
+        )
+
+    "
+    "| Name: NGVD29 height (m) to NAVD88 height (3)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7971``
+    | Extent: USA - CONUS east of 89°W - onshore",".. code-block:: php
+
+        $point->offsetFromGrid(
+            to: Vertical::fromSRID(Vertical::EPSG_NGVD29_HEIGHT_M),
+            offsetsFile: GTXNGVD29NAVD88CONUSEastProvider->provideGrid()
+        )
+
+    "
+
+NAVD88 height (ft)
+------------------
+``Vertical::fromSRID(Vertical::EPSG_NAVD88_HEIGHT_FT)``
+
+to NAVD88 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Vertical Axis Unit Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7813``
+    | Extent: World",".. code-block:: php
+
+        $point->changeOfVerticalUnit(
+            to: Vertical::fromSRID(Vertical::EPSG_NAVD88_HEIGHT)
+        )
+
+    "
+
+NAVD88 height (ftUS)
+--------------------
+``Vertical::fromSRID(Vertical::EPSG_NAVD88_HEIGHT_FTUS)``
+
+to NAVD88 depth (ftUS) (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Height <> Depth Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7812``
+    | Extent: World",".. code-block:: php
+
+        $point->heightDepthReversal(
+            to: Vertical::fromSRID(Vertical::EPSG_NAVD88_DEPTH_FTUS)
+        )
+
+    "
+
+
+to NAVD88 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Vertical Axis Unit Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7813``
+    | Extent: World",".. code-block:: php
+
+        $point->changeOfVerticalUnit(
+            to: Vertical::fromSRID(Vertical::EPSG_NAVD88_HEIGHT)
+        )
+
+    "
+
+NGF-IGN69 height
+----------------
+``Vertical::fromSRID(Vertical::EPSG_NGF_IGN69_HEIGHT)``
+
+to EVRF2000 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NGF IGN69 height to EVRF2000 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5419``
+    | Extent: France - mainland onshore",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_EVRF2000_HEIGHT),
+            verticalOffset: new Metre(-0.486)
+        )
+
+    "
+
+NGVD29 depth (ftUS)
+-------------------
+``Vertical::fromSRID(Vertical::EPSG_NGVD29_DEPTH_FTUS)``
+
+to NGVD29 height (ftUS) (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Height <> Depth Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7812``
+    | Extent: World",".. code-block:: php
+
+        $point->heightDepthReversal(
+            to: Vertical::fromSRID(Vertical::EPSG_NGVD29_HEIGHT_FTUS)
+        )
+
+    "
+
+NGVD29 height (ftUS)
+--------------------
+``Vertical::fromSRID(Vertical::EPSG_NGVD29_HEIGHT_FTUS)``
+
+to NGVD29 depth (ftUS) (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Height <> Depth Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7812``
+    | Extent: World",".. code-block:: php
+
+        $point->heightDepthReversal(
+            to: Vertical::fromSRID(Vertical::EPSG_NGVD29_DEPTH_FTUS)
+        )
+
+    "
+
+
+to NGVD29 height (m) (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Vertical Axis Unit Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7813``
+    | Extent: World",".. code-block:: php
+
+        $point->changeOfVerticalUnit(
+            to: Vertical::fromSRID(Vertical::EPSG_NGVD29_HEIGHT_M)
+        )
+
+    "
+
+NGVD29 height (m)
+-----------------
+``Vertical::fromSRID(Vertical::EPSG_NGVD29_HEIGHT_M)``
+
+to NAVD88 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NGVD29 height (m) to NAVD88 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7969``
+    | Extent: USA - CONUS west of 107°W - onshore",".. code-block:: php
+
+        $point->offsetFromGrid(
+            to: Vertical::fromSRID(Vertical::EPSG_NAVD88_HEIGHT),
+            offsetsFile: GTXNGVD29NAVD88CONUSWestProvider->provideGrid()
+        )
+
+    "
+    "| Name: NGVD29 height (m) to NAVD88 height (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7970``
+    | Extent: USA - CONUS 89°W-107°W - onshore",".. code-block:: php
+
+        $point->offsetFromGrid(
+            to: Vertical::fromSRID(Vertical::EPSG_NAVD88_HEIGHT),
+            offsetsFile: GTXNGVD29NAVD88CONUSCentralProvider->provideGrid()
+        )
+
+    "
+    "| Name: NGVD29 height (m) to NAVD88 height (3)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7971``
+    | Extent: USA - CONUS east of 89°W - onshore",".. code-block:: php
+
+        $point->offsetFromGrid(
+            to: Vertical::fromSRID(Vertical::EPSG_NAVD88_HEIGHT),
+            offsetsFile: GTXNGVD29NAVD88CONUSEastProvider->provideGrid()
+        )
+
+    "
+
+
+to NGVD29 height (ftUS) (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Vertical Axis Unit Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7813``
+    | Extent: World",".. code-block:: php
+
+        $point->changeOfVerticalUnit(
+            to: Vertical::fromSRID(Vertical::EPSG_NGVD29_HEIGHT_FTUS)
+        )
+
+    "
+
+NN54 height
+-----------
+``Vertical::fromSRID(Vertical::EPSG_NN54_HEIGHT)``
+
+to EVRF2000 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NN54 height to EVRF2000 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5426``
+    | Extent: Norway - onshore",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_EVRF2000_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('62.56'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('11.1'),
+            verticalOffset: new Metre(-0.001),
+            inclinationInLatitude: new ArcSecond(-0.01),
+            inclinationInLongitude: new ArcSecond(0.034),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+NZVD2009 height
+---------------
+``Vertical::fromSRID(Vertical::EPSG_NZVD2009_HEIGHT)``
+
+to Auckland 1946 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NZVD2009 height to Auckland 1946 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::4442``
+    | Extent: New Zealand - North Island - Auckland vcrs",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_AUCKLAND_1946_HEIGHT),
+            verticalOffset: new Metre(0.34)
+        )
+
+    "
+
+
+to Bluff 1955 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NZVD2009 height to Bluff 1955 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::4451``
+    | Extent: New Zealand - South Island - Bluff vcrs",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_BLUFF_1955_HEIGHT),
+            verticalOffset: new Metre(0.36)
+        )
+
+    "
+
+
+to Dunedin 1958 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NZVD2009 height to Dunedin 1958 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::4450``
+    | Extent: New Zealand - South Island - Dunedin vcrs",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_DUNEDIN_1958_HEIGHT),
+            verticalOffset: new Metre(0.49)
+        )
+
+    "
+
+
+to Dunedin-Bluff 1960 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NZVD2009 height to Dunedin-Bluff 1960 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::4453``
+    | Extent: New Zealand - South Island - Dunedin-Bluff vcrs",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_DUNEDIN_BLUFF_1960_HEIGHT),
+            verticalOffset: new Metre(0.38)
+        )
+
+    "
+
+
+to Gisborne 1926 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NZVD2009 height to Gisborne 1926 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::4445``
+    | Extent: New Zealand - North Island - Gisborne vcrs",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_GISBORNE_1926_HEIGHT),
+            verticalOffset: new Metre(0.34)
+        )
+
+    "
+
+
+to Lyttelton 1937 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NZVD2009 height to Lyttelton 1937 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::4449``
+    | Extent: New Zealand - South Island - Lyttleton vcrs",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_LYTTELTON_1937_HEIGHT),
+            verticalOffset: new Metre(0.47)
+        )
+
+    "
+
+
+to Moturiki 1953 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NZVD2009 height to Moturiki 1953 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::4443``
+    | Extent: New Zealand - North Island - Moturiki vcrs",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_MOTURIKI_1953_HEIGHT),
+            verticalOffset: new Metre(0.24)
+        )
+
+    "
+
+
+to Napier 1962 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NZVD2009 height to Napier 1962 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::4446``
+    | Extent: New Zealand - North Island - Hawkes Bay mc Napier vcrs",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_NAPIER_1962_HEIGHT),
+            verticalOffset: new Metre(0.2)
+        )
+
+    "
+
+
+to Nelson 1955 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NZVD2009 height to Nelson 1955 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::4444``
+    | Extent: New Zealand - South Island - Nelson vcrs",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_NELSON_1955_HEIGHT),
+            verticalOffset: new Metre(0.29)
+        )
+
+    "
+
+
+to One Tree Point 1964 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NZVD2009 height to One Tree Point 1964 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::4441``
+    | Extent: New Zealand - North Island - One Tree vcrs",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_ONE_TREE_POINT_1964_HEIGHT),
+            verticalOffset: new Metre(0.06)
+        )
+
+    "
+
+
+to Stewart Island 1977 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NZVD2009 height to Stewart Island 1977 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::4452``
+    | Extent: New Zealand - Stewart Island",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_STEWART_ISLAND_1977_HEIGHT),
+            verticalOffset: new Metre(0.39)
+        )
+
+    "
+
+
+to Taranaki 1970 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NZVD2009 height to Taranaki 1970 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::4447``
+    | Extent: New Zealand - North Island - Taranaki vcrs",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_TARANAKI_1970_HEIGHT),
+            verticalOffset: new Metre(0.32)
+        )
+
+    "
+
+
+to Wellington 1953 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NZVD2009 height to Wellington 1953 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::4448``
+    | Extent: New Zealand - North Island - Wellington vcrs",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_WELLINGTON_1953_HEIGHT),
+            verticalOffset: new Metre(0.44)
+        )
+
+    "
+
+NZVD2016 height
+---------------
+``Vertical::fromSRID(Vertical::EPSG_NZVD2016_HEIGHT)``
+
+to Auckland 1946 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NZVD2016 height to Auckland 1946 height (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::9312``
+    | Extent: New Zealand - North Island - Auckland vcrs",".. code-block:: php
+
+        $point->offsetFromGrid(
+            to: Vertical::fromSRID(Vertical::EPSG_AUCKLAND_1946_HEIGHT),
+            offsetsFile: GTXAuckland1946NZVD2016Provider->provideGrid()
+        )
+
+    "
+
+
+to Bluff 1955 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NZVD2016 height to Bluff 1955 height (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::9313``
+    | Extent: New Zealand - South Island - Bluff vcrs",".. code-block:: php
+
+        $point->offsetFromGrid(
+            to: Vertical::fromSRID(Vertical::EPSG_BLUFF_1955_HEIGHT),
+            offsetsFile: GTXBluff1955NZVD2016Provider->provideGrid()
+        )
+
+    "
+
+
+to Dunedin 1958 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NZVD2016 height to Dunedin 1958 height (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::9314``
+    | Extent: New Zealand - South Island - Dunedin vcrs",".. code-block:: php
+
+        $point->offsetFromGrid(
+            to: Vertical::fromSRID(Vertical::EPSG_DUNEDIN_1958_HEIGHT),
+            offsetsFile: GTXDunedin1958NZVD2016Provider->provideGrid()
+        )
+
+    "
+
+
+to Dunedin-Bluff 1960 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NZVD2016 height to Dunedin-Bluff 1960 height (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::9315``
+    | Extent: New Zealand - South Island - Dunedin-Bluff vcrs",".. code-block:: php
+
+        $point->offsetFromGrid(
+            to: Vertical::fromSRID(Vertical::EPSG_DUNEDIN_BLUFF_1960_HEIGHT),
+            offsetsFile: GTXDunedinBluff1960NZVD2016Provider->provideGrid()
+        )
+
+    "
+
+
+to Gisborne 1926 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NZVD2016 height to Gisborne 1926 height (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::9316``
+    | Extent: New Zealand - North Island - Gisborne vcrs",".. code-block:: php
+
+        $point->offsetFromGrid(
+            to: Vertical::fromSRID(Vertical::EPSG_GISBORNE_1926_HEIGHT),
+            offsetsFile: GTXGisborne1926NZVD2016Provider->provideGrid()
+        )
+
+    "
+
+
+to Lyttelton 1937 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NZVD2016 height to Lyttelton 1937 height (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::9317``
+    | Extent: New Zealand - South Island - Lyttleton vcrs",".. code-block:: php
+
+        $point->offsetFromGrid(
+            to: Vertical::fromSRID(Vertical::EPSG_LYTTELTON_1937_HEIGHT),
+            offsetsFile: GTXLyttelton1937NZVD2016Provider->provideGrid()
+        )
+
+    "
+
+
+to Moturiki 1953 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NZVD2016 height to Moturiki 1953 height (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::9318``
+    | Extent: New Zealand - North Island - Moturiki vcrs",".. code-block:: php
+
+        $point->offsetFromGrid(
+            to: Vertical::fromSRID(Vertical::EPSG_MOTURIKI_1953_HEIGHT),
+            offsetsFile: GTXMoturiki1953NZVD2016Provider->provideGrid()
+        )
+
+    "
+
+
+to Napier 1962 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NZVD2016 height to Napier 1962 height (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::9319``
+    | Extent: New Zealand - North Island - Hawkes Bay mc Napier vcrs",".. code-block:: php
+
+        $point->offsetFromGrid(
+            to: Vertical::fromSRID(Vertical::EPSG_NAPIER_1962_HEIGHT),
+            offsetsFile: GTXNapier1962NZVD2016Provider->provideGrid()
+        )
+
+    "
+
+
+to Nelson 1955 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NZVD2016 height to Nelson 1955 height (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::9320``
+    | Extent: New Zealand - South Island - Nelson vcrs",".. code-block:: php
+
+        $point->offsetFromGrid(
+            to: Vertical::fromSRID(Vertical::EPSG_NELSON_1955_HEIGHT),
+            offsetsFile: GTXNelson1955NZVD2016Provider->provideGrid()
+        )
+
+    "
+
+
+to One Tree Point 1964 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NZVD2016 height to One Tree Point 1964 height (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::9321``
+    | Extent: New Zealand - North Island - One Tree vcrs",".. code-block:: php
+
+        $point->offsetFromGrid(
+            to: Vertical::fromSRID(Vertical::EPSG_ONE_TREE_POINT_1964_HEIGHT),
+            offsetsFile: GTXOneTreePoint1964NZVD2016Provider->provideGrid()
+        )
+
+    "
+
+
+to Stewart Island 1977 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NZVD2016 height to Stewart Island 1977 height (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::9322``
+    | Extent: New Zealand - Stewart Island",".. code-block:: php
+
+        $point->offsetFromGrid(
+            to: Vertical::fromSRID(Vertical::EPSG_STEWART_ISLAND_1977_HEIGHT),
+            offsetsFile: GTXStewartIsland1977NZVD2016Provider->provideGrid()
+        )
+
+    "
+
+
+to Taranaki 1970 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NZVD2016 height to Taranaki 1970 height (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::9323``
+    | Extent: New Zealand - North Island - Taranaki vcrs",".. code-block:: php
+
+        $point->offsetFromGrid(
+            to: Vertical::fromSRID(Vertical::EPSG_TARANAKI_1970_HEIGHT),
+            offsetsFile: GTXTaranaki1970NZVD2016Provider->provideGrid()
+        )
+
+    "
+
+
+to Wellington 1953 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NZVD2016 height to Wellington 1953 height (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::9324``
+    | Extent: New Zealand - North Island - Wellington vcrs",".. code-block:: php
+
+        $point->offsetFromGrid(
+            to: Vertical::fromSRID(Vertical::EPSG_WELLINGTON_1953_HEIGHT),
+            offsetsFile: GTXWellington1953NZVD2016Provider->provideGrid()
+        )
+
+    "
+
+Napier 1962 height
+------------------
+``Vertical::fromSRID(Vertical::EPSG_NAPIER_1962_HEIGHT)``
+
+to NZVD2009 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NZVD2009 height to Napier 1962 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::4446``
+    | Extent: New Zealand - North Island - Hawkes Bay mc Napier vcrs",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_NZVD2009_HEIGHT),
+            verticalOffset: new Metre(-0.2)
+        )
+
+    "
+
+
+to NZVD2016 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NZVD2016 height to Napier 1962 height (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::9319``
+    | Extent: New Zealand - North Island - Hawkes Bay mc Napier vcrs",".. code-block:: php
+
+        $point->offsetFromGrid(
+            to: Vertical::fromSRID(Vertical::EPSG_NZVD2016_HEIGHT),
+            offsetsFile: GTXNapier1962NZVD2016Provider->provideGrid()
+        )
+
+    "
+
+Nelson 1955 height
+------------------
+``Vertical::fromSRID(Vertical::EPSG_NELSON_1955_HEIGHT)``
+
+to NZVD2009 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NZVD2009 height to Nelson 1955 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::4444``
+    | Extent: New Zealand - South Island - Nelson vcrs",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_NZVD2009_HEIGHT),
+            verticalOffset: new Metre(-0.29)
+        )
+
+    "
+
+
+to NZVD2016 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NZVD2016 height to Nelson 1955 height (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::9320``
+    | Extent: New Zealand - South Island - Nelson vcrs",".. code-block:: php
+
+        $point->offsetFromGrid(
+            to: Vertical::fromSRID(Vertical::EPSG_NZVD2016_HEIGHT),
+            offsetsFile: GTXNelson1955NZVD2016Provider->provideGrid()
+        )
+
+    "
+
+ODN height
+----------
+``Vertical::fromSRID(Vertical::EPSG_ODN_HEIGHT)``
+
+to EVRF2000 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: ODN height to EVRF2000 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::4651``
+    | Extent: UK - Great Britain mainland onshore",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_EVRF2000_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('54.35'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('-2.15'),
+            verticalOffset: new Metre(0.07),
+            inclinationInLatitude: new ArcSecond(0.044),
+            inclinationInLongitude: new ArcSecond(0),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+
+to EVRF2019 mean-tide height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: ODN height to EVRF2019 mean-tide height (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::9562``
+    | Extent: UK - Great Britain mainland onshore",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_EVRF2019_MEAN_TIDE_HEIGHT),
+            verticalOffset: new Metre(-0.17)
+        )
+
+    "
+
+One Tree Point 1964 height
+--------------------------
+``Vertical::fromSRID(Vertical::EPSG_ONE_TREE_POINT_1964_HEIGHT)``
+
+to NZVD2009 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NZVD2009 height to One Tree Point 1964 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::4441``
+    | Extent: New Zealand - North Island - One Tree vcrs",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_NZVD2009_HEIGHT),
+            verticalOffset: new Metre(-0.06)
+        )
+
+    "
+
+
+to NZVD2016 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NZVD2016 height to One Tree Point 1964 height (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::9321``
+    | Extent: New Zealand - North Island - One Tree vcrs",".. code-block:: php
+
+        $point->offsetFromGrid(
+            to: Vertical::fromSRID(Vertical::EPSG_NZVD2016_HEIGHT),
+            offsetsFile: GTXOneTreePoint1964NZVD2016Provider->provideGrid()
+        )
+
+    "
+
+Ostend height
+-------------
+``Vertical::fromSRID(Vertical::EPSG_OSTEND_HEIGHT)``
+
+to EVRF2000 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Ostend height to EVRF2000 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5198``
+    | Extent: Belgium - onshore",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_EVRF2000_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('50.43'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('4.46'),
+            verticalOffset: new Metre(-2.311),
+            inclinationInLatitude: new ArcSecond(-0.016),
+            inclinationInLongitude: new ArcSecond(0),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+
+to EVRF2007 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Ostend height to EVRF2007 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5199``
+    | Extent: Belgium - onshore",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_EVRF2007_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('50.43'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('4.46'),
+            verticalOffset: new Metre(-2.317),
+            inclinationInLatitude: new ArcSecond(-0.031),
+            inclinationInLongitude: new ArcSecond(0),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+POM08 height
+------------
+``Vertical::fromSRID(Vertical::EPSG_POM08_HEIGHT)``
+
+to EGM2008 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: EGM2008 height to POM08 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7874``
+    | Extent: Papua New Guinea - onshore - Central province and Gulf province east of 144°E",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_EGM2008_HEIGHT),
+            verticalOffset: new Metre(0.93)
+        )
+
+    "
+
+POM96 height
+------------
+``Vertical::fromSRID(Vertical::EPSG_POM96_HEIGHT)``
+
+to EGM96 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: EGM96 height to POM96 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7873``
+    | Extent: Papua New Guinea - onshore - Central province and Gulf province east of 144°E",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_EGM96_HEIGHT),
+            verticalOffset: new Metre(1.58)
+        )
+
+    "
+
+Poolbeg height (ft(Br36))
+-------------------------
+``Vertical::fromSRID(Vertical::EPSG_POOLBEG_HEIGHT_FT_BR36)``
+
+to Poolbeg height (m) (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Vertical Axis Unit Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7813``
+    | Extent: World",".. code-block:: php
+
+        $point->changeOfVerticalUnit(
+            to: Vertical::fromSRID(Vertical::EPSG_POOLBEG_HEIGHT_M)
+        )
+
+    "
+
+Poolbeg height (m)
+------------------
+``Vertical::fromSRID(Vertical::EPSG_POOLBEG_HEIGHT_M)``
+
+to Belfast height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Poolbeg height (m) to Belfast height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7966``
+    | Extent: UK - Northern Ireland - onshore",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_BELFAST_HEIGHT),
+            verticalOffset: new Metre(-2.7)
+        )
+
+    "
+
+
+to Malin Head height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Poolbeg height (m) to Malin Head height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7964``
+    | Extent: Europe - Ireland (Republic and Ulster) - onshore",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_MALIN_HEAD_HEIGHT),
+            verticalOffset: new Metre(-2.7)
+        )
+
+    "
+
+
+to Poolbeg height (ft(Br36)) (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Vertical Axis Unit Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7813``
+    | Extent: World",".. code-block:: php
+
+        $point->changeOfVerticalUnit(
+            to: Vertical::fromSRID(Vertical::EPSG_POOLBEG_HEIGHT_FT_BR36)
+        )
+
+    "
+
+RH2000 height
+-------------
+``Vertical::fromSRID(Vertical::EPSG_RH2000_HEIGHT)``
+
+to EVRF2007 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: RH2000 height to EVRF2007 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5208``
+    | Extent: Sweden - onshore",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_EVRF2007_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('61.54'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('15.48'),
+            verticalOffset: new Metre(-0.008),
+            inclinationInLatitude: new ArcSecond(-0.0006),
+            inclinationInLongitude: new ArcSecond(-0.0003),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+RH70 height
+-----------
+``Vertical::fromSRID(Vertical::EPSG_RH70_HEIGHT)``
+
+to EVRF2000 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: RH70 height to EVRF2000 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5430``
+    | Extent: Sweden - onshore",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_EVRF2000_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('64'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('16.14'),
+            verticalOffset: new Metre(0.005),
+            inclinationInLatitude: new ArcSecond(-0.012),
+            inclinationInLongitude: new ArcSecond(0),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+SNN76 height
+------------
+``Vertical::fromSRID(Vertical::EPSG_SNN76_HEIGHT)``
+
+to EVRF2000 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: SNN76 height to EVRF2000 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5422``
+    | Extent: Germany - East Germany all states",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_EVRF2000_HEIGHT),
+            ordinate1OfEvaluationPoint: Degree::fromSexagesimalDMS('52.32'),
+            ordinate2OfEvaluationPoint: Degree::fromSexagesimalDMS('13.1'),
+            verticalOffset: new Metre(0.157),
+            inclinationInLatitude: new ArcSecond(0.007),
+            inclinationInLongitude: new ArcSecond(0.005),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+SVS2000 height
+--------------
+``Vertical::fromSRID(Vertical::EPSG_SVS2000_HEIGHT)``
+
+to EVRF2000 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NVN99 height to EVRF2000 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::5428``
+    | Extent: Slovenia - onshore",".. code-block:: php
+
+        $point->offsetAndSlope(
+            to: Vertical::fromSRID(Vertical::EPSG_EVRF2000_HEIGHT),
+            ordinate1OfEvaluationPoint: new Degree(46),
+            ordinate2OfEvaluationPoint: new Degree(15),
+            verticalOffset: new Metre(-0.411),
+            inclinationInLatitude: new ArcSecond(-0.033),
+            inclinationInLongitude: new ArcSecond(0.008),
+            EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
+        )
+
+    "
+
+Stewart Island 1977 height
+--------------------------
+``Vertical::fromSRID(Vertical::EPSG_STEWART_ISLAND_1977_HEIGHT)``
+
+to NZVD2009 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NZVD2009 height to Stewart Island 1977 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::4452``
+    | Extent: New Zealand - Stewart Island",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_NZVD2009_HEIGHT),
+            verticalOffset: new Metre(-0.39)
+        )
+
+    "
+
+
+to NZVD2016 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NZVD2016 height to Stewart Island 1977 height (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::9322``
+    | Extent: New Zealand - Stewart Island",".. code-block:: php
+
+        $point->offsetFromGrid(
+            to: Vertical::fromSRID(Vertical::EPSG_NZVD2016_HEIGHT),
+            offsetsFile: GTXStewartIsland1977NZVD2016Provider->provideGrid()
+        )
+
+    "
+
+Taranaki 1970 height
+--------------------
+``Vertical::fromSRID(Vertical::EPSG_TARANAKI_1970_HEIGHT)``
+
+to NZVD2009 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NZVD2009 height to Taranaki 1970 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::4447``
+    | Extent: New Zealand - North Island - Taranaki vcrs",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_NZVD2009_HEIGHT),
+            verticalOffset: new Metre(-0.32)
+        )
+
+    "
+
+
+to NZVD2016 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NZVD2016 height to Taranaki 1970 height (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::9323``
+    | Extent: New Zealand - North Island - Taranaki vcrs",".. code-block:: php
+
+        $point->offsetFromGrid(
+            to: Vertical::fromSRID(Vertical::EPSG_NZVD2016_HEIGHT),
+            offsetsFile: GTXTaranaki1970NZVD2016Provider->provideGrid()
+        )
+
+    "
+
+Vienna height
+-------------
+``Vertical::fromSRID(Vertical::EPSG_VIENNA_HEIGHT)``
+
+to GHA height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Vienna height to GHA height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::9371``
+    | Extent: Austria - Vienna",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_GHA_HEIGHT),
+            verticalOffset: new Metre(156.68)
+        )
+
+    "
+
+Wellington 1953 height
+----------------------
+``Vertical::fromSRID(Vertical::EPSG_WELLINGTON_1953_HEIGHT)``
+
+to NZVD2009 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NZVD2009 height to Wellington 1953 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::4448``
+    | Extent: New Zealand - North Island - Wellington vcrs",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_NZVD2009_HEIGHT),
+            verticalOffset: new Metre(-0.44)
+        )
+
+    "
+
+
+to NZVD2016 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NZVD2016 height to Wellington 1953 height (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::9324``
+    | Extent: New Zealand - North Island - Wellington vcrs",".. code-block:: php
+
+        $point->offsetFromGrid(
+            to: Vertical::fromSRID(Vertical::EPSG_NZVD2016_HEIGHT),
+            offsetsFile: GTXWellington1953NZVD2016Provider->provideGrid()
+        )
+
+    "
+

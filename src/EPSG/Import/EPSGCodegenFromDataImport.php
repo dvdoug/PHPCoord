@@ -934,7 +934,7 @@ class EPSGCodegenFromDataImport
             JOIN epsg_usage u ON u.object_table_name = 'epsg_datum' AND u.object_code = d.datum_code
             JOIN epsg_extent e ON u.extent_code = e.extent_code
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_datum' AND dep.object_code = d.datum_code AND dep.deprecation_date <= '2021-09-10'
-            WHERE dep.deprecation_id IS NULL AND d.datum_type != 'engineering'
+            WHERE dep.deprecation_id IS NULL AND d.datum_type != 'engineering' AND d.datum_name NOT LIKE '%example%'
             GROUP BY d.datum_code
             ORDER BY name
         ";
@@ -1683,7 +1683,6 @@ class EPSGCodegenFromDataImport
         }
 
         $this->codeGen->updateFileData($this->sourceDir . '/CoordinateOperation/CoordinateOperations.php', $data);
-        $this->codeGen->updateDocs(CoordinateOperations::class, $data);
 
         $paramsSeen = [];
         foreach ($data as $operation => $operationData) {
@@ -1752,6 +1751,7 @@ class EPSGCodegenFromDataImport
                 unlink($filename);
             }
         }
+        $this->codeGen->generateSupportedOperations();
     }
 
     protected static function makeParamName(string $string): string

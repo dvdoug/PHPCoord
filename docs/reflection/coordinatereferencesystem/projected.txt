@@ -60872,7 +60872,7 @@ WGS 84 / EPSG Russia Polar Stereographic
 
 WGS 84 / Equal Earth Americas
 -----------------------------
-| Extent: World centred on the Americas.
+| Extent: World.
 
 .. code-block:: php
 
@@ -60884,7 +60884,7 @@ WGS 84 / Equal Earth Americas
 
 WGS 84 / Equal Earth Asia-Pacific
 ---------------------------------
-| Extent: World centred on Asia-Pacific.
+| Extent: World.
 
 .. code-block:: php
 
