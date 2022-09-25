@@ -112,7 +112,7 @@ class EPSGImporter
         /*
          * Too many "world" extents with confusing descriptions, unify
          */
-        $sqlite->exec("UPDATE epsg_usage SET extent_code = 1262 WHERE extent_code IN (1263, 2346, 2830, 4393, 4520, 4523)");
+        $sqlite->exec('UPDATE epsg_usage SET extent_code = 1262 WHERE extent_code IN (1263, 2346, 2830, 4393, 4520, 4523)');
 
         $sqlite->exec('VACUUM');
         $sqlite->close();

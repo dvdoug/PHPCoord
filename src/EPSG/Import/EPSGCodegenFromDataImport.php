@@ -9,7 +9,6 @@ declare(strict_types=1);
 namespace PHPCoord\EPSG\Import;
 
 use PHPCoord\CoordinateOperation\CoordinateOperationMethods;
-use PHPCoord\CoordinateOperation\CoordinateOperations;
 use PHPCoord\CoordinateReferenceSystem\Compound;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\CoordinateReferenceSystem\Geocentric;

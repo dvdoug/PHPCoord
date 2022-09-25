@@ -21,7 +21,6 @@ use PHPCoord\CoordinateOperation\CRSTransformationsOceania;
 use PHPCoord\CoordinateOperation\CRSTransformationsSouthAmerica;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\Geometry\Extents\ExtentMap;
-use PHPCoord\Geometry\RegionMap;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Rate;
@@ -57,6 +56,7 @@ use function ucfirst;
 use function uasort;
 use function implode;
 use function asort;
+use function array_map;
 
 use const PHP_EOL;
 
@@ -371,7 +371,7 @@ class Codegen
                         }
                         $methodName = CoordinateOperationMethods::getFunctionName($operation['method']);
                         $params = CoordinateOperations::getParamData($operationSrid);
-                        $extentName = str_replace('"', '″', implode(', ', array_map(fn($extent) => $extentMap[$extent]['name'], $operation['extent'])));
+                        $extentName = str_replace('"', '″', implode(', ', array_map(fn ($extent) => $extentMap[$extent]['name'], $operation['extent'])));
                         $opTable .= '    "| Name: ' . $operation['name'] . "\n    | Code: ``{$operationSrid}``\n    | Extent: {$extentName}\",";
                         $opTable .= "\".. code-block:: php\n\n        \$point->" . $methodName . '(' . "\n";
                         $docParams = [
