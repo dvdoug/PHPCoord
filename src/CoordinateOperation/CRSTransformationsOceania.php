@@ -2168,6 +2168,14 @@ class CRSTransformationsOceania
             'reversible' => true,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10147',
+            'name' => 'Brisbane City Survey Grid 2020',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::7844',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::20047',
+            'accuracy' => 0,
+            'reversible' => true,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8450',
             'name' => 'GDA2020 to WGS 84 (2)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::7844',

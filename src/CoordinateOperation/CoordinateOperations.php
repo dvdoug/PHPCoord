@@ -9724,6 +9724,16 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::1053',
             'extent' => ['1262'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::10147' => [
+            'name' => 'Brisbane City Survey Grid 2020',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent' => ['2990'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10148' => [
+            'name' => 'Amtrak North East Corridor Coordinate System 2021 (International feet)',
+            'method' => 'urn:ogc:def:method:EPSG::9815',
+            'extent' => ['4669'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::10201' => [
             'name' => 'Arizona Coordinate System East zone',
             'method' => 'urn:ogc:def:method:EPSG::9807',

@@ -1491,7 +1491,7 @@ class Geographic3D extends Geographic
 
     /**
      * TUREF
-     * Extent: Turkey - onshore and offshore.
+     * Extent: Türkiye (Turkey) - onshore and offshore.
      */
     public const EPSG_TUREF = 'urn:ogc:def:crs:EPSG::5251';
 

@@ -9240,6 +9240,9 @@ class ExtentMap
         4667 => [
             'name' => 'Chile - west of 108°W',
         ],
+        4669 => [
+            'name' => 'USA - Amtrak NE corridor',
+        ],
     ];
 
     public function __invoke(): array

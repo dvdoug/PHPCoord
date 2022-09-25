@@ -1340,7 +1340,7 @@ Intermediate CRS created in 2021 to assist the emulation of the ETRS89 / ECML14_
 
 ED50
 ----
-| Extent: Europe - west: Andorra; Cyprus; Denmark - onshore and offshore; Faroe Islands - onshore; France - offshore; Germany - offshore North Sea; Gibraltar; Greece - offshore; Israel - offshore; Italy including San Marino and Vatican City State; Ireland offshore; Malta; Netherlands - offshore; North Sea; Norway including Svalbard - onshore and offshore; Portugal - mainland - offshore; Spain - onshore; Turkey - onshore and offshore; United Kingdom UKCS offshore east of 6°W including Channel Islands (Guernsey and Jersey). Egypt - Western Desert; Iraq - onshore; Jordan.
+| Extent: Europe - west: Andorra; Cyprus; Denmark - onshore and offshore; Faroe Islands - onshore; France - offshore; Germany - offshore North Sea; Gibraltar; Greece - offshore; Israel - offshore; Italy including San Marino and Vatican City State; Ireland offshore; Malta; Netherlands - offshore; North Sea; Norway including Svalbard - onshore and offshore; Portugal - mainland - offshore; Spain - onshore; Türkiye (Turkey) - onshore and offshore; United Kingdom - UKCS offshore east of 6°W including Channel Islands (Guernsey and Jersey). Egypt - Western Desert; Iraq - onshore; Jordan.
 
 .. code-block:: php
 
@@ -7365,7 +7365,7 @@ Intermediate CRS created in 2020 to assist the emulation of the ETRS89 / TPEN11 
 
 TUREF
 -----
-| Extent: Turkey - onshore and offshore.
+| Extent: Türkiye (Turkey) - onshore and offshore.
 
 .. code-block:: php
 

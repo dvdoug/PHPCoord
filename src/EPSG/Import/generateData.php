@@ -19,6 +19,8 @@ $fileImporter = new EPSGCodegenFromDataImport();
 $webImporter = new EPSGCodegenFromGeoRepository($fileImporter->getBlacklistedOperations());
 echo '--PERFORMING CODEGEN--' . PHP_EOL;
 
+$webImporter->generateExtents();
+
 $fileImporter->generateDataUnitsOfMeasure();
 $fileImporter->generateDataPrimeMeridians();
 $fileImporter->generateDataEllipsoids();
@@ -27,7 +29,5 @@ $fileImporter->generateDataCoordinateSystems();
 $fileImporter->generateDataCoordinateReferenceSystems();
 $fileImporter->generateDataCoordinateOperationMethods();
 $fileImporter->generateDataCoordinateOperations();
-
-$webImporter->generateExtents();
 
 echo '--CODEGEN COMPLETE--' . PHP_EOL;

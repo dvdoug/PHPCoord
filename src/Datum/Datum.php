@@ -165,7 +165,7 @@ class Datum
     /**
      * Antalya
      * Type: Vertical
-     * Extent: Turkey - onshore.
+     * Extent: Türkiye (Turkey) - onshore.
      * Mean sea Level at Antalya 1936-71.
      * Orthometric heights.
      */
@@ -1455,9 +1455,9 @@ class Datum
      * Extent: Europe - west: Andorra; Cyprus; Denmark - onshore and offshore; Faroe Islands - onshore; France -
      * offshore; Germany - offshore North Sea; Gibraltar; Greece - offshore; Israel - offshore; Italy including San
      * Marino and Vatican City State; Ireland offshore; Malta; Netherlands - offshore; North Sea; Norway including
-     * Svalbard - onshore and offshore; Portugal - mainland - offshore; Spain - onshore; Turkey - onshore and offshore;
-     * United Kingdom UKCS offshore east of 6°W including Channel Islands (Guernsey and Jersey). Egypt - Western
-     * Desert; Iraq - onshore; Jordan.
+     * Svalbard - onshore and offshore; Portugal - mainland - offshore; Spain - onshore; Türkiye (Turkey) - onshore
+     * and offshore; United Kingdom - UKCS offshore east of 6°W including Channel Islands (Guernsey and Jersey). Egypt
+     * - Western Desert; Iraq - onshore; Jordan.
      * Fundamental point: Potsdam (Helmert Tower). Latitude: 52°22'51.4456"N, longitude: 13°03'58.9283"E (of
      * Greenwich).
      */
@@ -7444,7 +7444,7 @@ class Datum
     /**
      * Turkish National Reference Frame
      * Type: Geodetic
-     * Extent: Turkey - onshore and offshore.
+     * Extent: Türkiye (Turkey) - onshore and offshore.
      * ITRF96 at epoch 2005.0.
      */
     public const EPSG_TURKISH_NATIONAL_REFERENCE_FRAME = 'urn:ogc:def:datum:EPSG::1057';

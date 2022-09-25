@@ -10832,6 +10832,14 @@ class CRSTransformationsNorthAmerica
             'reversible' => true,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10148',
+            'name' => 'Amtrak North East Corridor Coordinate System 2021 (International feet)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::20050',
+            'accuracy' => 0,
+            'reversible' => true,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9774',
             'name' => 'NAD83(2011) to WGS 84 (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',

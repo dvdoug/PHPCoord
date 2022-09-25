@@ -2785,7 +2785,7 @@ TGD2005
 
 TUREF
 -----
-| Extent: Turkey - onshore and offshore.
+| Extent: Türkiye (Turkey) - onshore and offshore.
 
 .. code-block:: php
 

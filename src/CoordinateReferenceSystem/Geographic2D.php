@@ -658,9 +658,9 @@ class Geographic2D extends Geographic
      * Extent: Europe - west: Andorra; Cyprus; Denmark - onshore and offshore; Faroe Islands - onshore; France -
      * offshore; Germany - offshore North Sea; Gibraltar; Greece - offshore; Israel - offshore; Italy including San
      * Marino and Vatican City State; Ireland offshore; Malta; Netherlands - offshore; North Sea; Norway including
-     * Svalbard - onshore and offshore; Portugal - mainland - offshore; Spain - onshore; Turkey - onshore and offshore;
-     * United Kingdom UKCS offshore east of 6°W including Channel Islands (Guernsey and Jersey). Egypt - Western
-     * Desert; Iraq - onshore; Jordan.
+     * Svalbard - onshore and offshore; Portugal - mainland - offshore; Spain - onshore; Türkiye (Turkey) - onshore
+     * and offshore; United Kingdom - UKCS offshore east of 6°W including Channel Islands (Guernsey and Jersey). Egypt
+     * - Western Desert; Iraq - onshore; Jordan.
      */
     public const EPSG_ED50 = 'urn:ogc:def:crs:EPSG::4230';
 
@@ -3735,7 +3735,7 @@ class Geographic2D extends Geographic
 
     /**
      * TUREF
-     * Extent: Turkey - onshore and offshore.
+     * Extent: Türkiye (Turkey) - onshore and offshore.
      */
     public const EPSG_TUREF = 'urn:ogc:def:crs:EPSG::5252';
 

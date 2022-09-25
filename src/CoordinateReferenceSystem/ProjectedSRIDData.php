@@ -25084,6 +25084,13 @@ trait ProjectedSRIDData
             'deriving_conversion' => 'urn:ogc:def:coordinateOperation:EPSG::16112',
             'extent' => ['4667'],
         ],
+        'urn:ogc:def:crs:EPSG::20047' => [
+            'name' => 'GDA2020 / BCSG2020',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::4400',
+            'base_crs' => 'urn:ogc:def:crs:EPSG::7844',
+            'deriving_conversion' => 'urn:ogc:def:coordinateOperation:EPSG::10147',
+            'extent' => ['2990'],
+        ],
         'urn:ogc:def:crs:EPSG::20048' => [
             'name' => 'SIRGAS-Chile 2021 / UTM zone 18S',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::4400',
@@ -25097,6 +25104,13 @@ trait ProjectedSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::20041',
             'deriving_conversion' => 'urn:ogc:def:coordinateOperation:EPSG::16119',
             'extent' => ['3811'],
+        ],
+        'urn:ogc:def:crs:EPSG::20050' => [
+            'name' => 'NAD83(2011) / Amtrak NECCS21 (ft)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::4495',
+            'base_crs' => 'urn:ogc:def:crs:EPSG::6318',
+            'deriving_conversion' => 'urn:ogc:def:coordinateOperation:EPSG::10148',
+            'extent' => ['4669'],
         ],
         'urn:ogc:def:crs:EPSG::20135' => [
             'name' => 'Adindan / UTM zone 35N',

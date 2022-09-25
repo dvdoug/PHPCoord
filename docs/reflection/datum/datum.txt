@@ -212,7 +212,7 @@ Fundamental point: station A4, Police.
 Antalya
 -------
 | Type: Vertical
-| Extent: Turkey - onshore.
+| Extent: Türkiye (Turkey) - onshore.
 
 .. code-block:: php
 
@@ -2038,7 +2038,7 @@ Uses Normal heights.
 European Datum 1950
 -------------------
 | Type: Geodetic
-| Extent: Europe - west: Andorra; Cyprus; Denmark - onshore and offshore; Faroe Islands - onshore; France - offshore; Germany - offshore North Sea; Gibraltar; Greece - offshore; Israel - offshore; Italy including San Marino and Vatican City State; Ireland offshore; Malta; Netherlands - offshore; North Sea; Norway including Svalbard - onshore and offshore; Portugal - mainland - offshore; Spain - onshore; Turkey - onshore and offshore; United Kingdom UKCS offshore east of 6°W including Channel Islands (Guernsey and Jersey). Egypt - Western Desert; Iraq - onshore; Jordan.
+| Extent: Europe - west: Andorra; Cyprus; Denmark - onshore and offshore; Faroe Islands - onshore; France - offshore; Germany - offshore North Sea; Gibraltar; Greece - offshore; Israel - offshore; Italy including San Marino and Vatican City State; Ireland offshore; Malta; Netherlands - offshore; North Sea; Norway including Svalbard - onshore and offshore; Portugal - mainland - offshore; Spain - onshore; Türkiye (Turkey) - onshore and offshore; United Kingdom - UKCS offshore east of 6°W including Channel Islands (Guernsey and Jersey). Egypt - Western Desert; Iraq - onshore; Jordan.
 
 .. code-block:: php
 
@@ -10217,7 +10217,7 @@ Fundamental point: TC1. Latitude: 25°23'50.190"N, longitude: 55°26'43.950"E (o
 Turkish National Reference Frame
 --------------------------------
 | Type: Geodetic
-| Extent: Turkey - onshore and offshore.
+| Extent: Türkiye (Turkey) - onshore and offshore.
 
 .. code-block:: php
 

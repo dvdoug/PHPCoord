@@ -78,7 +78,7 @@ class Vertical extends CoordinateReferenceSystem
 
     /**
      * Antalya height
-     * Extent: Turkey - onshore.
+     * Extent: Türkiye (Turkey) - onshore.
      */
     public const EPSG_ANTALYA_HEIGHT = 'urn:ogc:def:crs:EPSG::5775';
 

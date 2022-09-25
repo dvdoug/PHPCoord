@@ -2590,49 +2590,49 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * ED50 / 3-degree Gauss-Kruger zone 10
-     * Extent: Turkey between 28°30'E and 31°30'E, onshore.
+     * Extent: Türkiye (Turkey) - between 28°30'E and 31°30'E, onshore.
      * Also found with truncated false easting - see ED50 / TM30 (code 2320).
      */
     public const EPSG_ED50_3_DEGREE_GAUSS_KRUGER_ZONE_10 = 'urn:ogc:def:crs:EPSG::2207';
 
     /**
      * ED50 / 3-degree Gauss-Kruger zone 11
-     * Extent: Turkey between 31°30'E and 34°30'E, onshore.
+     * Extent: Türkiye (Turkey) - between 31°30'E and 34°30'E, onshore.
      * Also found with truncated false easting - see ED50 / TM33 (code 2321).
      */
     public const EPSG_ED50_3_DEGREE_GAUSS_KRUGER_ZONE_11 = 'urn:ogc:def:crs:EPSG::2208';
 
     /**
      * ED50 / 3-degree Gauss-Kruger zone 12
-     * Extent: Turkey between 34°30'E and 37°30'E, onshore.
+     * Extent: Türkiye (Turkey) - between 34°30'E and 37°30'E, onshore.
      * Also found with truncated false easting - see ED50 / TM36 (code 2322).
      */
     public const EPSG_ED50_3_DEGREE_GAUSS_KRUGER_ZONE_12 = 'urn:ogc:def:crs:EPSG::2209';
 
     /**
      * ED50 / 3-degree Gauss-Kruger zone 13
-     * Extent: Turkey between 37°30'E and 40°30'E, onshore.
+     * Extent: Türkiye (Turkey) - between 37°30'E and 40°30'E, onshore.
      * Also found with truncated false easting - see ED50 / TM39 (code 2323).
      */
     public const EPSG_ED50_3_DEGREE_GAUSS_KRUGER_ZONE_13 = 'urn:ogc:def:crs:EPSG::2210';
 
     /**
      * ED50 / 3-degree Gauss-Kruger zone 14
-     * Extent: Turkey between 40°30'E and 43°30'E, onshore.
+     * Extent: Türkiye (Turkey) - between 40°30'E and 43°30'E, onshore.
      * Also found with truncated false easting - see ED50 / TM42 (code 2324).
      */
     public const EPSG_ED50_3_DEGREE_GAUSS_KRUGER_ZONE_14 = 'urn:ogc:def:crs:EPSG::2211';
 
     /**
      * ED50 / 3-degree Gauss-Kruger zone 15
-     * Extent: Turkey east of 43°30'E.
+     * Extent: Türkiye (Turkey) - east of 43°30'E.
      * Also found with truncated false easting - see ED50 / TM45 (code 2325).
      */
     public const EPSG_ED50_3_DEGREE_GAUSS_KRUGER_ZONE_15 = 'urn:ogc:def:crs:EPSG::2212';
 
     /**
      * ED50 / 3-degree Gauss-Kruger zone 9
-     * Extent: Turkey west of 28°30'E, onshore.
+     * Extent: Türkiye (Turkey) - west of 28°30'E, onshore.
      * Also found with truncated false easting - see ED50 / TM27 (code 2319).
      */
     public const EPSG_ED50_3_DEGREE_GAUSS_KRUGER_ZONE_9 = 'urn:ogc:def:crs:EPSG::2206';
@@ -2677,49 +2677,49 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * ED50 / TM27
-     * Extent: Turkey west of 28°30'E, onshore.
+     * Extent: Türkiye (Turkey) - west of 28°30'E, onshore.
      * Also found with zone number prefix to false easting - see ED50 / 3-degree Gauss-Kruger zone 9 (code 2206).
      */
     public const EPSG_ED50_TM27 = 'urn:ogc:def:crs:EPSG::2319';
 
     /**
      * ED50 / TM30
-     * Extent: Turkey between 28°30'E and 31°30'E, onshore.
+     * Extent: Türkiye (Turkey) - between 28°30'E and 31°30'E, onshore.
      * Also found with zone number prefix to false easting - see ED50 / 3-degree Gauss-Kruger zone 10 (code 2207).
      */
     public const EPSG_ED50_TM30 = 'urn:ogc:def:crs:EPSG::2320';
 
     /**
      * ED50 / TM33
-     * Extent: Turkey between 31°30'E and 34°30'E, onshore.
+     * Extent: Türkiye (Turkey) - between 31°30'E and 34°30'E, onshore.
      * Also found with zone number prefix to false easting - see ED50 / 3-degree Gauss-Kruger zone 11 (code 2208).
      */
     public const EPSG_ED50_TM33 = 'urn:ogc:def:crs:EPSG::2321';
 
     /**
      * ED50 / TM36
-     * Extent: Turkey between 34°30'E and 37°30'E, onshore.
+     * Extent: Türkiye (Turkey) - between 34°30'E and 37°30'E, onshore.
      * Also found with zone number prefix to false easting - see ED50 / 3-degree Gauss-Kruger zone 12 (code 2209).
      */
     public const EPSG_ED50_TM36 = 'urn:ogc:def:crs:EPSG::2322';
 
     /**
      * ED50 / TM39
-     * Extent: Turkey between 37°30'E and 40°30'E, onshore.
+     * Extent: Türkiye (Turkey) - between 37°30'E and 40°30'E, onshore.
      * Also found with zone number prefix to false easting - see ED50 / 3-degree Gauss-Kruger zone 13 (code 2210).
      */
     public const EPSG_ED50_TM39 = 'urn:ogc:def:crs:EPSG::2323';
 
     /**
      * ED50 / TM42
-     * Extent: Turkey between 40°30'E and 43°30'E, onshore.
+     * Extent: Türkiye (Turkey) - between 40°30'E and 43°30'E, onshore.
      * Also found with zone number prefix to false easting - see ED50 / 3-degree Gauss-Kruger zone 14 (code 2211).
      */
     public const EPSG_ED50_TM42 = 'urn:ogc:def:crs:EPSG::2324';
 
     /**
      * ED50 / TM45
-     * Extent: Turkey east of 43°30'E.
+     * Extent: Türkiye (Turkey) - east of 43°30'E.
      * Also found with zone number prefix to false easting - see ED50 / 3-degree Gauss-Kruger zone 15 (code 2212).
      */
     public const EPSG_ED50_TM45 = 'urn:ogc:def:crs:EPSG::2325';
@@ -2775,27 +2775,27 @@ class Projected extends CoordinateReferenceSystem
     /**
      * ED50 / UTM zone 35N
      * Extent: Europe - between 24°E and 30°E - Greece - offshore; Norway including Svalbard - onshore and offshore;
-     * Turkey - onshore and offshore. Egypt - Western Desert.
+     * Türkiye (Turkey) - onshore and offshore. Egypt - Western Desert.
      */
     public const EPSG_ED50_UTM_ZONE_35N = 'urn:ogc:def:crs:EPSG::23035';
 
     /**
      * ED50 / UTM zone 36N
      * Extent: Europe - between 30°E and 36°E - Israel - offshore; Jordan; Norway including Svalbard - onshore and
-     * offshore; Turkey - onshore and offshore.
+     * offshore; Türkiye (Turkey) - onshore and offshore.
      */
     public const EPSG_ED50_UTM_ZONE_36N = 'urn:ogc:def:crs:EPSG::23036';
 
     /**
      * ED50 / UTM zone 37N
-     * Extent: Europe - between 36°E and 42°E - Jordan; Norway including Svalbard - offshore; Turkey onshore and
-     * offshore.
+     * Extent: Europe - between 36°E and 42°E - Jordan; Norway including Svalbard - offshore; Türkiye (Turkey) -
+     * onshore and offshore.
      */
     public const EPSG_ED50_UTM_ZONE_37N = 'urn:ogc:def:crs:EPSG::23037';
 
     /**
      * ED50 / UTM zone 38N
-     * Extent: Europe - between 42°E and 48°E - Turkey.
+     * Extent: Europe - between 42°E and 48°E - Türkiye (Turkey).
      */
     public const EPSG_ED50_UTM_ZONE_38N = 'urn:ogc:def:crs:EPSG::23038';
 
@@ -3845,8 +3845,8 @@ class Projected extends CoordinateReferenceSystem
      * Finland; France; Germany; Gibraltar; Greece; Hungary; Iceland; Ireland; Italy; Kosovo; Latvia; Liechtenstein;
      * Lithuania; Luxembourg; Malta; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and
      * Jan Mayen; Poland; Portugal including Madeira and Azores; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain
-     * including Canary Islands; Sweden; Switzerland; Turkey; United Kingdom (UK) including Channel Islands and Isle of
-     * Man; Vatican City State.
+     * including Canary Islands; Sweden; Switzerland; Türkiye (Turkey); United Kingdom (UK) including Channel Islands
+     * and Isle of Man; Vatican City State.
      * Use ETRS89 / LCC for conformal mapping at 1:500,000 scale or smaller or ETRS89 / UTM for conformal mapping at
      * scales larger than 1:500,000. Use formally limited to ETRS89 area of continental Europe but extended for
      * pan-European analysis at small scales.
@@ -3860,8 +3860,8 @@ class Projected extends CoordinateReferenceSystem
      * Finland; France; Germany; Gibraltar; Greece; Hungary; Iceland; Ireland; Italy; Kosovo; Latvia; Liechtenstein;
      * Lithuania; Luxembourg; Malta; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and
      * Jan Mayen; Poland; Portugal including Madeira and Azores; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain
-     * including Canary Islands; Sweden; Switzerland; Turkey; United Kingdom (UK) including Channel Islands and Isle of
-     * Man; Vatican City State.
+     * including Canary Islands; Sweden; Switzerland; Türkiye (Turkey); United Kingdom (UK) including Channel Islands
+     * and Isle of Man; Vatican City State.
      * Use formally limited to ETRS89 area of continental Europe but extended for pan-European analysis at small
      * scales. ETRS89 / UTM used for conformal mapping at scales larger than 1:500,000. ETRS89 / LAEA used for
      * statistical applications at any scale.
@@ -4046,6 +4046,16 @@ class Projected extends CoordinateReferenceSystem
      * Extent: Australia - Western Australia - Busselton area onshore below 250m AHD.
      */
     public const EPSG_GDA2020_BCG2020 = 'urn:ogc:def:crs:EPSG::8016';
+
+    /**
+     * GDA2020 / BCSG2020
+     * Extent: Australia - Brisbane and surrounding area. Also applicable in other local authorities in south-east
+     * Queensland (Gold Coast, Logan, Ipswich, Scenic Rim, Redland, Moreton Bay, Sunshine Coast, Noosa, eastern part of
+     * Gympie, eastern part of Fraser Coast) and north-east New South Wales (Tweed, Byron, Lismore, Kyogle, Ballina and
+     * Richmond Valley).
+     * Adopted 2022-07-01, replacing GDA94 / BCSG02 (CRS code 3113).
+     */
+    public const EPSG_GDA2020_BCSG2020 = 'urn:ogc:def:crs:EPSG::20047';
 
     /**
      * GDA2020 / BIO2020
@@ -4276,9 +4286,11 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * GDA94 / BCSG02
-     * Extent: Australia - Brisbane area. Local authorities in south-east Queensland: Gold Coast, Logan, Beaudesert,
-     * Redcliffe, Redlands, Pine Rivers, Caboolture, Caloundra, Maroochy, Noosa, Maryborough; local authorities in
-     * north-east New South Wales: Tweed, Byron, Lismore, Ballina and Richmond Valley.
+     * Extent: Australia - Brisbane and surrounding area. Also applicable in other local authorities in south-east
+     * Queensland (Gold Coast, Logan, Ipswich, Scenic Rim, Redland, Moreton Bay, Sunshine Coast, Noosa, eastern part of
+     * Gympie, eastern part of Fraser Coast) and north-east New South Wales (Tweed, Byron, Lismore, Kyogle, Ballina and
+     * Richmond Valley).
+     * Replaced by GDA2020 / BCSG2020 (CRS code 20047) from 2022-07-01.
      */
     public const EPSG_GDA94_BCSG02 = 'urn:ogc:def:crs:EPSG::3113';
 
@@ -14005,6 +14017,14 @@ class Projected extends CoordinateReferenceSystem
      * Replaces NAD83(NSRS2007) / Alaska zone 9 (CRS code 3476).
      */
     public const EPSG_NAD83_2011_ALASKA_ZONE_9 = 'urn:ogc:def:crs:EPSG::6402';
+
+    /**
+     * NAD83(2011) / Amtrak NECCS21 (ft)
+     * Extent: United States (USA) - parts of Connecticut, Delaware, District of Columbia, Maryland, Massachusetts, New
+     * Jersey, New York, Pennsylvania, Rhode Island and Virginia on or related to the Amtrak northeast corridor rail
+     * route from Boston to Washington DC via New York and Philadelphia.
+     */
+    public const EPSG_NAD83_2011_AMTRAK_NECCS21_FT = 'urn:ogc:def:crs:EPSG::20050';
 
     /**
      * NAD83(2011) / Arizona Central
@@ -34311,56 +34331,56 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * TUREF / 3-degree Gauss-Kruger zone 10
-     * Extent: Turkey between 28°30'E and 31°30'E, onshore.
+     * Extent: Türkiye (Turkey) - between 28°30'E and 31°30'E, onshore.
      * Also found with truncated false easting - see TUREF / TM30 (code 5254).
      */
     public const EPSG_TUREF_3_DEGREE_GAUSS_KRUGER_ZONE_10 = 'urn:ogc:def:crs:EPSG::5270';
 
     /**
      * TUREF / 3-degree Gauss-Kruger zone 11
-     * Extent: Turkey between 31°30'E and 34°30'E, onshore.
+     * Extent: Türkiye (Turkey) - between 31°30'E and 34°30'E, onshore.
      * Also found with truncated false easting - see TUREF / TM33 (code 5255).
      */
     public const EPSG_TUREF_3_DEGREE_GAUSS_KRUGER_ZONE_11 = 'urn:ogc:def:crs:EPSG::5271';
 
     /**
      * TUREF / 3-degree Gauss-Kruger zone 12
-     * Extent: Turkey between 34°30'E and 37°30'E, onshore.
+     * Extent: Türkiye (Turkey) - between 34°30'E and 37°30'E, onshore.
      * Also found with truncated false easting - see TUREF / TM36 (code 5256).
      */
     public const EPSG_TUREF_3_DEGREE_GAUSS_KRUGER_ZONE_12 = 'urn:ogc:def:crs:EPSG::5272';
 
     /**
      * TUREF / 3-degree Gauss-Kruger zone 13
-     * Extent: Turkey between 37°30'E and 40°30'E, onshore.
+     * Extent: Türkiye (Turkey) - between 37°30'E and 40°30'E, onshore.
      * Also found with truncated false easting - see TUREF / TM39 (code 5257).
      */
     public const EPSG_TUREF_3_DEGREE_GAUSS_KRUGER_ZONE_13 = 'urn:ogc:def:crs:EPSG::5273';
 
     /**
      * TUREF / 3-degree Gauss-Kruger zone 14
-     * Extent: Turkey between 40°30'E and 43°30'E, onshore.
+     * Extent: Türkiye (Turkey) - between 40°30'E and 43°30'E, onshore.
      * Also found with truncated false easting - see TUREF / TM42 (code 5258).
      */
     public const EPSG_TUREF_3_DEGREE_GAUSS_KRUGER_ZONE_14 = 'urn:ogc:def:crs:EPSG::5274';
 
     /**
      * TUREF / 3-degree Gauss-Kruger zone 15
-     * Extent: Turkey east of 43°30'E.
+     * Extent: Türkiye (Turkey) - east of 43°30'E.
      * Also found with truncated false easting - see TUREF / TM45 (code 5259).
      */
     public const EPSG_TUREF_3_DEGREE_GAUSS_KRUGER_ZONE_15 = 'urn:ogc:def:crs:EPSG::5275';
 
     /**
      * TUREF / 3-degree Gauss-Kruger zone 9
-     * Extent: Turkey west of 28°30'E, onshore.
+     * Extent: Türkiye (Turkey) - west of 28°30'E, onshore.
      * Also found with truncated false easting - see TUREF / TM27 (code 5253).
      */
     public const EPSG_TUREF_3_DEGREE_GAUSS_KRUGER_ZONE_9 = 'urn:ogc:def:crs:EPSG::5269';
 
     /**
      * TUREF / LAEA Europe
-     * Extent: Turkey - onshore and offshore.
+     * Extent: Türkiye (Turkey) - onshore and offshore.
      * At applicable scales and usages, may be considered consistent with ETRS89-extended / LAEA Europe (CRS code
      * 3035): see CT 9049.
      */
@@ -34368,7 +34388,7 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * TUREF / LCC Europe
-     * Extent: Turkey - onshore and offshore.
+     * Extent: Türkiye (Turkey) - onshore and offshore.
      * At applicable scales (1:500,000 and smaller) may be considered consistent with ETRS89-extended / LCC Europe (CRS
      * code 3034): see CT 9050.
      */
@@ -34376,49 +34396,49 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * TUREF / TM27
-     * Extent: Turkey west of 28°30'E, onshore.
+     * Extent: Türkiye (Turkey) - west of 28°30'E, onshore.
      * Also found with zone number prefix to false easting - see TUREF / 3-degree Gauss-Kruger zone 9 (code 5269).
      */
     public const EPSG_TUREF_TM27 = 'urn:ogc:def:crs:EPSG::5253';
 
     /**
      * TUREF / TM30
-     * Extent: Turkey between 28°30'E and 31°30'E, onshore.
+     * Extent: Türkiye (Turkey) - between 28°30'E and 31°30'E, onshore.
      * Also found with zone number prefix to false easting - see TUREF / 3-degree Gauss-Kruger zone 10 (code 5270).
      */
     public const EPSG_TUREF_TM30 = 'urn:ogc:def:crs:EPSG::5254';
 
     /**
      * TUREF / TM33
-     * Extent: Turkey between 31°30'E and 34°30'E, onshore.
+     * Extent: Türkiye (Turkey) - between 31°30'E and 34°30'E, onshore.
      * Also found with zone number prefix to false easting - see TUREF / 3-degree Gauss-Kruger zone 11 (code 5271).
      */
     public const EPSG_TUREF_TM33 = 'urn:ogc:def:crs:EPSG::5255';
 
     /**
      * TUREF / TM36
-     * Extent: Turkey between 34°30'E and 37°30'E, onshore.
+     * Extent: Türkiye (Turkey) - between 34°30'E and 37°30'E, onshore.
      * Also found with zone number prefix to false easting - see TUREF / 3-degree Gauss-Kruger zone 12 (code 5272).
      */
     public const EPSG_TUREF_TM36 = 'urn:ogc:def:crs:EPSG::5256';
 
     /**
      * TUREF / TM39
-     * Extent: Turkey between 37°30'E and 40°30'E, onshore.
+     * Extent: Türkiye (Turkey) - between 37°30'E and 40°30'E, onshore.
      * Also found with zone number prefix to false easting - see TUREF / 3-degree Gauss-Kruger zone 13 (code 5273).
      */
     public const EPSG_TUREF_TM39 = 'urn:ogc:def:crs:EPSG::5257';
 
     /**
      * TUREF / TM42
-     * Extent: Turkey between 40°30'E and 43°30'E, onshore.
+     * Extent: Türkiye (Turkey) - between 40°30'E and 43°30'E, onshore.
      * Also found with zone number prefix to false easting - see TUREF / 3-degree Gauss-Kruger zone 14 (code 5274).
      */
     public const EPSG_TUREF_TM42 = 'urn:ogc:def:crs:EPSG::5258';
 
     /**
      * TUREF / TM45
-     * Extent: Turkey east of 43°30'E.
+     * Extent: Türkiye (Turkey) - east of 43°30'E.
      * Also found with zone number prefix to false easting - see TUREF / 3-degree Gauss-Kruger zone 15 (code 5275).
      */
     public const EPSG_TUREF_TM45 = 'urn:ogc:def:crs:EPSG::5259';
@@ -38572,7 +38592,7 @@ class Projected extends CoordinateReferenceSystem
      * Extent: Between 24°E and 30°E, northern hemisphere between equator and 84°N, onshore and offshore. Belarus.
      * Bulgaria. Central African Republic. Democratic Republic of the Congo (Zaire). Egypt. Estonia. Finland. Greece.
      * Latvia. Lesotho. Libya. Lithuania. Moldova. Norway. Poland. Romania. Russian Federation. Sudan. Svalbard.
-     * Turkey. Uganda. Ukraine.
+     * Türkiye (Turkey). Uganda. Ukraine.
      * In Moldova used with axes reversed - use CRS code 4037.
      */
     public const EPSG_WGS_84_UTM_ZONE_35N = 'urn:ogc:def:crs:EPSG::32635';
@@ -38588,7 +38608,7 @@ class Projected extends CoordinateReferenceSystem
      * WGS 84 / UTM zone 36N
      * Extent: Between 30°E and 36°E, northern hemisphere between equator and 84°N, onshore and offshore. Belarus.
      * Cyprus. Egypt. Ethiopia. Finland. Israel. Jordan. Kenya. Lebanon. Moldova. Norway. Russian Federation. Saudi
-     * Arabia. Sudan. Syria. Turkey. Uganda. Ukraine.
+     * Arabia. Sudan. Syria. Türkiye (Turkey). Uganda. Ukraine.
      * In Moldova used with axes reversed - use CRS code 4038.
      */
     public const EPSG_WGS_84_UTM_ZONE_36N = 'urn:ogc:def:crs:EPSG::32636';
@@ -38604,7 +38624,7 @@ class Projected extends CoordinateReferenceSystem
      * WGS 84 / UTM zone 37N
      * Extent: Between 36°E and 42°E, northern hemisphere between equator and 84°N, onshore and offshore. Djibouti.
      * Egypt. Eritrea. Ethiopia. Georgia. Iraq. Jordan. Kenya. Lebanon. Russian Federation. Saudi Arabia. Somalia.
-     * Sudan. Syria. Turkey. Ukraine.
+     * Sudan. Syria. Türkiye (Turkey). Ukraine.
      */
     public const EPSG_WGS_84_UTM_ZONE_37N = 'urn:ogc:def:crs:EPSG::32637';
 
@@ -38619,7 +38639,7 @@ class Projected extends CoordinateReferenceSystem
      * WGS 84 / UTM zone 38N
      * Extent: Between 42°E and 48°E, northern hemisphere between equator and 84°N, onshore and offshore. Armenia.
      * Azerbaijan. Djibouti. Eritrea. Ethiopia. Georgia. Islamic Republic of Iran. Iraq. kazakhstan. Kuwait. Russian
-     * Federation. Saudi Arabia. Somalia. Turkey. Yemen.
+     * Federation. Saudi Arabia. Somalia. Türkiye (Turkey). Yemen.
      */
     public const EPSG_WGS_84_UTM_ZONE_38N = 'urn:ogc:def:crs:EPSG::32638';
 

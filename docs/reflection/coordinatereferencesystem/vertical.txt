@@ -89,7 +89,7 @@ Alicante height
 
 Antalya height
 --------------
-| Extent: Turkey - onshore.
+| Extent: Türkiye (Turkey) - onshore.
 
 .. code-block:: php
 
