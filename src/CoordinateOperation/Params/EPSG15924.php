@@ -5,20 +5,19 @@
  * @author Doug Wright
  */
 declare(strict_types=1);
+use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
+
 /** @internal */ return [
   'xAxisTranslation' => [
-    'value' => 92.5515,
-    'uom' => 'urn:ogc:def:uom:EPSG::9001',
     'reverses' => true,
+    'value' => UnitOfMeasureFactory::makeUnit(92.5515, 'urn:ogc:def:uom:EPSG::9001'),
   ],
   'yAxisTranslation' => [
-    'value' => 10.8194,
-    'uom' => 'urn:ogc:def:uom:EPSG::9001',
     'reverses' => true,
+    'value' => UnitOfMeasureFactory::makeUnit(10.8194, 'urn:ogc:def:uom:EPSG::9001'),
   ],
   'zAxisTranslation' => [
-    'value' => -149.8852,
-    'uom' => 'urn:ogc:def:uom:EPSG::9001',
     'reverses' => true,
+    'value' => UnitOfMeasureFactory::makeUnit(-149.8852, 'urn:ogc:def:uom:EPSG::9001'),
   ],
 ];

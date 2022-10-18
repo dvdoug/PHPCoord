@@ -5,55 +5,47 @@
  * @author Doug Wright
  */
 declare(strict_types=1);
+use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
+
 /** @internal */ return [
   'xAxisTranslation' => [
-    'value' => -202.865,
-    'uom' => 'urn:ogc:def:uom:EPSG::9001',
     'reverses' => true,
+    'value' => UnitOfMeasureFactory::makeUnit(-202.865, 'urn:ogc:def:uom:EPSG::9001'),
   ],
   'yAxisTranslation' => [
-    'value' => -303.99,
-    'uom' => 'urn:ogc:def:uom:EPSG::9001',
     'reverses' => true,
+    'value' => UnitOfMeasureFactory::makeUnit(-303.99, 'urn:ogc:def:uom:EPSG::9001'),
   ],
   'zAxisTranslation' => [
-    'value' => -155.873,
-    'uom' => 'urn:ogc:def:uom:EPSG::9001',
     'reverses' => true,
+    'value' => UnitOfMeasureFactory::makeUnit(-155.873, 'urn:ogc:def:uom:EPSG::9001'),
   ],
   'xAxisRotation' => [
-    'value' => -34.079,
-    'uom' => 'urn:ogc:def:uom:EPSG::9104',
     'reverses' => true,
+    'value' => UnitOfMeasureFactory::makeUnit(-34.079, 'urn:ogc:def:uom:EPSG::9104'),
   ],
   'yAxisRotation' => [
-    'value' => 76.126,
-    'uom' => 'urn:ogc:def:uom:EPSG::9104',
     'reverses' => true,
+    'value' => UnitOfMeasureFactory::makeUnit(76.126, 'urn:ogc:def:uom:EPSG::9104'),
   ],
   'zAxisRotation' => [
-    'value' => 32.66,
-    'uom' => 'urn:ogc:def:uom:EPSG::9104',
     'reverses' => true,
+    'value' => UnitOfMeasureFactory::makeUnit(32.66, 'urn:ogc:def:uom:EPSG::9104'),
   ],
   'scaleDifference' => [
-    'value' => 6.096,
-    'uom' => 'urn:ogc:def:uom:EPSG::9202',
     'reverses' => true,
+    'value' => UnitOfMeasureFactory::makeUnit(6.096, 'urn:ogc:def:uom:EPSG::9202'),
   ],
   'ordinate1OfEvaluationPoint' => [
-    'value' => -2361554.788,
-    'uom' => 'urn:ogc:def:uom:EPSG::9001',
     'reverses' => false,
+    'value' => UnitOfMeasureFactory::makeUnit(-2361554.788, 'urn:ogc:def:uom:EPSG::9001'),
   ],
   'ordinate2OfEvaluationPoint' => [
-    'value' => 5417536.177,
-    'uom' => 'urn:ogc:def:uom:EPSG::9001',
     'reverses' => false,
+    'value' => UnitOfMeasureFactory::makeUnit(5417536.177, 'urn:ogc:def:uom:EPSG::9001'),
   ],
   'ordinate3OfEvaluationPoint' => [
-    'value' => 2391608.926,
-    'uom' => 'urn:ogc:def:uom:EPSG::9001',
     'reverses' => false,
+    'value' => UnitOfMeasureFactory::makeUnit(2391608.926, 'urn:ogc:def:uom:EPSG::9001'),
   ],
 ];

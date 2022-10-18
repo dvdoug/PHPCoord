@@ -10,6 +10,7 @@ declare(strict_types=1);
 namespace PHPCoord\CoordinateOperation;
 
 use PHPCoord\Exception\UnknownCoordinateOperationException;
+use PHPCoord\Geometry\BoundingArea;
 
 use function str_replace;
 
@@ -18128,15 +18129,15 @@ class CoordinateOperations
         return require 'Params/' . str_replace(':', '', str_replace('urn:ogc:def:coordinateOperation:', '', $operationSrid)) . '.php';
     }
 
-    public static function registerCustomOperation(string $srid, string $name, string $method, array $extent, array $params): void
+    public static function registerCustomOperation(string $srid, string $name, string $methodSrid, BoundingArea $extent, array $params): void
     {
-        self::$sridData[$srid] = ['name' => $name, 'method' => $method, 'extent' => $extent, 'params' => $params];
+        self::$sridData[$srid] = ['name' => $name, 'method' => $methodSrid, 'extent' => $extent, 'params' => $params];
         self::$customSridParamData[$srid] = $params;
     }
 
-    public static function registerCustomTransformation(string $operation, string $name, string $sourceCRS, string $targetCRS, float $accuracy, bool $reversible): void
+    public static function registerCustomTransformation(string $operationSrid, string $name, string $sourceCRSSrid, string $targetCRSSrid, float $accuracy, bool $reversible): void
     {
-        self::$customTransformationData[] = ['operation' => $operation, 'name' => $name, 'source_crs' => $sourceCRS, 'target_crs' => $targetCRS, 'accuracy' => $accuracy, 'reversible' => $reversible];
+        self::$customTransformationData[] = ['operation' => $operationSrid, 'name' => $name, 'source_crs' => $sourceCRSSrid, 'target_crs' => $targetCRSSrid, 'accuracy' => $accuracy, 'reversible' => $reversible];
     }
 
     public static function getCustomTransformations(): array

@@ -5,20 +5,19 @@
  * @author Doug Wright
  */
 declare(strict_types=1);
+use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
+
 /** @internal */ return [
   'latitudeOffset' => [
-    'value' => 12.23,
-    'uom' => 'urn:ogc:def:uom:EPSG::9104',
     'reverses' => true,
+    'value' => UnitOfMeasureFactory::makeUnit(12.23, 'urn:ogc:def:uom:EPSG::9104'),
   ],
   'longitudeOffset' => [
-    'value' => -8.99,
-    'uom' => 'urn:ogc:def:uom:EPSG::9104',
     'reverses' => true,
+    'value' => UnitOfMeasureFactory::makeUnit(-8.99, 'urn:ogc:def:uom:EPSG::9104'),
   ],
   'geoidUndulation' => [
-    'value' => 31.7,
-    'uom' => 'urn:ogc:def:uom:EPSG::9001',
     'reverses' => true,
+    'value' => UnitOfMeasureFactory::makeUnit(31.7, 'urn:ogc:def:uom:EPSG::9001'),
   ],
 ];

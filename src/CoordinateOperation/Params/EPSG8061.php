@@ -5,40 +5,35 @@
  * @author Doug Wright
  */
 declare(strict_types=1);
+use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
+
 /** @internal */ return [
   'latitudeOfProjectionCentre' => [
-    'value' => 32.15,
-    'uom' => 'urn:ogc:def:uom:EPSG::9110',
     'reverses' => false,
+    'value' => UnitOfMeasureFactory::makeUnit(32.15, 'urn:ogc:def:uom:EPSG::9110'),
   ],
   'longitudeOfProjectionCentre' => [
-    'value' => -111.24,
-    'uom' => 'urn:ogc:def:uom:EPSG::9110',
     'reverses' => false,
+    'value' => UnitOfMeasureFactory::makeUnit(-111.24, 'urn:ogc:def:uom:EPSG::9110'),
   ],
   'azimuthOfInitialLine' => [
-    'value' => 45.0,
-    'uom' => 'urn:ogc:def:uom:EPSG::9102',
     'reverses' => false,
+    'value' => UnitOfMeasureFactory::makeUnit(45.0, 'urn:ogc:def:uom:EPSG::9102'),
   ],
   'angleFromRectifiedToSkewGrid' => [
-    'value' => 45.0,
-    'uom' => 'urn:ogc:def:uom:EPSG::9102',
     'reverses' => false,
+    'value' => UnitOfMeasureFactory::makeUnit(45.0, 'urn:ogc:def:uom:EPSG::9102'),
   ],
   'scaleFactorOnInitialLine' => [
-    'value' => 1.00011,
-    'uom' => 'urn:ogc:def:uom:EPSG::9201',
     'reverses' => false,
+    'value' => UnitOfMeasureFactory::makeUnit(1.00011, 'urn:ogc:def:uom:EPSG::9201'),
   ],
   'eastingAtProjectionCentre' => [
-    'value' => 160000.0,
-    'uom' => 'urn:ogc:def:uom:EPSG::9002',
     'reverses' => false,
+    'value' => UnitOfMeasureFactory::makeUnit(160000.0, 'urn:ogc:def:uom:EPSG::9002'),
   ],
   'northingAtProjectionCentre' => [
-    'value' => 800000.0,
-    'uom' => 'urn:ogc:def:uom:EPSG::9002',
     'reverses' => false,
+    'value' => UnitOfMeasureFactory::makeUnit(800000.0, 'urn:ogc:def:uom:EPSG::9002'),
   ],
 ];

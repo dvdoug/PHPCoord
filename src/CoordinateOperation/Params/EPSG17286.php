@@ -5,25 +5,23 @@
  * @author Doug Wright
  */
 declare(strict_types=1);
+use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
+
 /** @internal */ return [
   'latitudeOfStandardParallel' => [
-    'value' => -80.1419,
-    'uom' => 'urn:ogc:def:uom:EPSG::9110',
     'reverses' => false,
+    'value' => UnitOfMeasureFactory::makeUnit(-80.1419, 'urn:ogc:def:uom:EPSG::9110'),
   ],
   'longitudeOfOrigin' => [
-    'value' => 165.0,
-    'uom' => 'urn:ogc:def:uom:EPSG::9102',
     'reverses' => false,
+    'value' => UnitOfMeasureFactory::makeUnit(165.0, 'urn:ogc:def:uom:EPSG::9102'),
   ],
   'falseEasting' => [
-    'value' => 0.0,
-    'uom' => 'urn:ogc:def:uom:EPSG::9001',
     'reverses' => false,
+    'value' => UnitOfMeasureFactory::makeUnit(0.0, 'urn:ogc:def:uom:EPSG::9001'),
   ],
   'falseNorthing' => [
-    'value' => 0.0,
-    'uom' => 'urn:ogc:def:uom:EPSG::9001',
     'reverses' => false,
+    'value' => UnitOfMeasureFactory::makeUnit(0.0, 'urn:ogc:def:uom:EPSG::9001'),
   ],
 ];

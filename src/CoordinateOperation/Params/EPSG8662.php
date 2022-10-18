@@ -15,8 +15,7 @@ declare(strict_types=1);
     'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5AS62NAD831993ASLongitudeProvider',
   ],
   'ellipsoidalHeightDifferenceFile' => [
-    'value' => null,
-    'uom' => null,
     'reverses' => false,
+    'value' => null,
   ],
 ];

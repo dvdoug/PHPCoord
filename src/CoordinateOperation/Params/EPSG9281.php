@@ -5,40 +5,35 @@
  * @author Doug Wright
  */
 declare(strict_types=1);
+use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
+
 /** @internal */ return [
   'xAxisTranslation' => [
-    'value' => 565.7381,
-    'uom' => 'urn:ogc:def:uom:EPSG::9001',
     'reverses' => true,
+    'value' => UnitOfMeasureFactory::makeUnit(565.7381, 'urn:ogc:def:uom:EPSG::9001'),
   ],
   'yAxisTranslation' => [
-    'value' => 50.4018,
-    'uom' => 'urn:ogc:def:uom:EPSG::9001',
     'reverses' => true,
+    'value' => UnitOfMeasureFactory::makeUnit(50.4018, 'urn:ogc:def:uom:EPSG::9001'),
   ],
   'zAxisTranslation' => [
-    'value' => 465.2904,
-    'uom' => 'urn:ogc:def:uom:EPSG::9001',
     'reverses' => true,
+    'value' => UnitOfMeasureFactory::makeUnit(465.2904, 'urn:ogc:def:uom:EPSG::9001'),
   ],
   'xAxisRotation' => [
-    'value' => 1.91514,
-    'uom' => 'urn:ogc:def:uom:EPSG::9109',
     'reverses' => true,
+    'value' => UnitOfMeasureFactory::makeUnit(1.91514, 'urn:ogc:def:uom:EPSG::9109'),
   ],
   'yAxisRotation' => [
-    'value' => -1.60363,
-    'uom' => 'urn:ogc:def:uom:EPSG::9109',
     'reverses' => true,
+    'value' => UnitOfMeasureFactory::makeUnit(-1.60363, 'urn:ogc:def:uom:EPSG::9109'),
   ],
   'zAxisRotation' => [
-    'value' => 9.09546,
-    'uom' => 'urn:ogc:def:uom:EPSG::9109',
     'reverses' => true,
+    'value' => UnitOfMeasureFactory::makeUnit(9.09546, 'urn:ogc:def:uom:EPSG::9109'),
   ],
   'scaleDifference' => [
-    'value' => 4.07244,
-    'uom' => 'urn:ogc:def:uom:EPSG::9202',
     'reverses' => true,
+    'value' => UnitOfMeasureFactory::makeUnit(4.07244, 'urn:ogc:def:uom:EPSG::9202'),
   ],
 ];

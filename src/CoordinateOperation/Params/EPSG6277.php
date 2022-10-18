@@ -5,80 +5,67 @@
  * @author Doug Wright
  */
 declare(strict_types=1);
+use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
+
 /** @internal */ return [
   'xAxisTranslation' => [
-    'value' => -79.73,
-    'uom' => 'urn:ogc:def:uom:EPSG::1025',
     'reverses' => true,
+    'value' => UnitOfMeasureFactory::makeUnit(-79.73, 'urn:ogc:def:uom:EPSG::1025'),
   ],
   'yAxisTranslation' => [
-    'value' => -6.86,
-    'uom' => 'urn:ogc:def:uom:EPSG::1025',
     'reverses' => true,
+    'value' => UnitOfMeasureFactory::makeUnit(-6.86, 'urn:ogc:def:uom:EPSG::1025'),
   ],
   'zAxisTranslation' => [
-    'value' => 38.03,
-    'uom' => 'urn:ogc:def:uom:EPSG::1025',
     'reverses' => true,
+    'value' => UnitOfMeasureFactory::makeUnit(38.03, 'urn:ogc:def:uom:EPSG::1025'),
   ],
   'xAxisRotation' => [
-    'value' => -0.0351,
-    'uom' => 'urn:ogc:def:uom:EPSG::1031',
     'reverses' => true,
+    'value' => UnitOfMeasureFactory::makeUnit(-0.0351, 'urn:ogc:def:uom:EPSG::1031'),
   ],
   'yAxisRotation' => [
-    'value' => 2.1211,
-    'uom' => 'urn:ogc:def:uom:EPSG::1031',
     'reverses' => true,
+    'value' => UnitOfMeasureFactory::makeUnit(2.1211, 'urn:ogc:def:uom:EPSG::1031'),
   ],
   'zAxisRotation' => [
-    'value' => 2.1411,
-    'uom' => 'urn:ogc:def:uom:EPSG::1031',
     'reverses' => true,
+    'value' => UnitOfMeasureFactory::makeUnit(2.1411, 'urn:ogc:def:uom:EPSG::1031'),
   ],
   'scaleDifference' => [
-    'value' => 6.636,
-    'uom' => 'urn:ogc:def:uom:EPSG::1028',
     'reverses' => true,
+    'value' => UnitOfMeasureFactory::makeUnit(6.636, 'urn:ogc:def:uom:EPSG::1028'),
   ],
   'rateOfChangeOfXAxisTranslation' => [
-    'value' => 2.25,
-    'uom' => 'urn:ogc:def:uom:EPSG::1027',
     'reverses' => true,
+    'value' => UnitOfMeasureFactory::makeUnit(2.25, 'urn:ogc:def:uom:EPSG::1027'),
   ],
   'rateOfChangeOfYAxisTranslation' => [
-    'value' => -0.62,
-    'uom' => 'urn:ogc:def:uom:EPSG::1027',
     'reverses' => true,
+    'value' => UnitOfMeasureFactory::makeUnit(-0.62, 'urn:ogc:def:uom:EPSG::1027'),
   ],
   'rateOfChangeOfZAxisTranslation' => [
-    'value' => -0.56,
-    'uom' => 'urn:ogc:def:uom:EPSG::1027',
     'reverses' => true,
+    'value' => UnitOfMeasureFactory::makeUnit(-0.56, 'urn:ogc:def:uom:EPSG::1027'),
   ],
   'rateOfChangeOfXAxisRotation' => [
-    'value' => 1.4707,
-    'uom' => 'urn:ogc:def:uom:EPSG::1032',
     'reverses' => true,
+    'value' => UnitOfMeasureFactory::makeUnit(1.4707, 'urn:ogc:def:uom:EPSG::1032'),
   ],
   'rateOfChangeOfYAxisRotation' => [
-    'value' => 1.1443,
-    'uom' => 'urn:ogc:def:uom:EPSG::1032',
     'reverses' => true,
+    'value' => UnitOfMeasureFactory::makeUnit(1.1443, 'urn:ogc:def:uom:EPSG::1032'),
   ],
   'rateOfChangeOfZAxisRotation' => [
-    'value' => 1.1701,
-    'uom' => 'urn:ogc:def:uom:EPSG::1032',
     'reverses' => true,
+    'value' => UnitOfMeasureFactory::makeUnit(1.1701, 'urn:ogc:def:uom:EPSG::1032'),
   ],
   'rateOfChangeOfScaleDifference' => [
-    'value' => 0.294,
-    'uom' => 'urn:ogc:def:uom:EPSG::1030',
     'reverses' => true,
+    'value' => UnitOfMeasureFactory::makeUnit(0.294, 'urn:ogc:def:uom:EPSG::1030'),
   ],
   'parameterReferenceEpoch' => [
-    'value' => 1994.0,
-    'uom' => 'urn:ogc:def:uom:EPSG::1029',
     'reverses' => false,
+    'value' => UnitOfMeasureFactory::makeUnit(1994.0, 'urn:ogc:def:uom:EPSG::1029'),
   ],
 ];

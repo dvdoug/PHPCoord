@@ -21,11 +21,8 @@ use PHPCoord\CoordinateOperation\CRSTransformationsOceania;
 use PHPCoord\CoordinateOperation\CRSTransformationsSouthAmerica;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\Geometry\Extents\ExtentMap;
-use PHPCoord\UnitOfMeasure\Angle\Angle;
-use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Rate;
-use PHPCoord\UnitOfMeasure\Scale\Scale;
-use PHPCoord\UnitOfMeasure\Time\Time;
+use PHPCoord\UnitOfMeasure\UnitOfMeasure;
 use PhpCsFixer\AbstractFixer;
 use PhpCsFixer\Config;
 use PhpCsFixer\Console\ConfigurationResolver;
@@ -381,50 +378,19 @@ class Codegen
                             if (isset($value['fileProvider'])) {
                                 $provider = new ReflectionClass($value['fileProvider']);
                                 $docParams[] = "{$name}: {$provider->getShortName()}->provideGrid()";
-                            } else {
-                                if ($value['value'] === null) {
-                                    continue;
+                            } elseif (isset($value['value']) && $value['value']) {
+                                if ($reverse && $value['reverses'] instanceof UnitOfMeasure) {
+                                    $value['value'] = $value['value']->multiply(-1);
                                 }
-
-                                if ($reverse && $value['reverses'] && isset($value['value'])) {
-                                    $value['value'] *= -1;
+                                if ($value['value'] instanceof Rate) {
+                                    $unitClass = new ReflectionClass($value['value']->getChange());
+                                    $docParams[] = "{$name}: new Rate(new " . $unitClass->getShortName() . '(' . $value['value']->getValue() . '), new Year(1))';
+                                } elseif ($value['value'] instanceof UnitOfMeasure) {
+                                    $unitClass = new ReflectionClass($value['value']);
+                                    $docParams[] = "{$name}: new " . $unitClass->getShortName() . '(' . $value['value']->getValue() . ')';
+                                } else {
+                                    $docParams[] = "{$name}: '{$value['value']}'";
                                 }
-                                $docParams[] = match ($value['uom']) {
-                                    Angle::EPSG_ARC_SECOND => "{$name}: new ArcSecond({$value['value']})",
-                                    Angle::EPSG_MILLIARC_SECOND => "{$name}: new ArcSecond({$value['value']} / 1000)",
-                                    Angle::EPSG_DEGREE => "{$name}: new Degree({$value['value']})",
-                                    Angle::EPSG_GRAD => "{$name}: new Grad({$value['value']})",
-                                    Angle::EPSG_MICRORADIAN => "{$name}: new MicroRadian({$value['value']})",
-                                    Angle::EPSG_RADIAN => "{$name}: new Radian({$value['value']})",
-                                    Angle::EPSG_SEXAGESIMAL_DMS => "{$name}: Degree::fromSexagesimalDMS('{$value['value']}')",
-                                    Length::EPSG_BRITISH_CHAIN_SEARS_1922 => "{$name}: new BritishChain1922Sears({$value['value']})",
-                                    Length::EPSG_BRITISH_CHAIN_SEARS_1922_TRUNCATED => "{$name}: new BritishChain1922SearsTruncated({$value['value']})",
-                                    Length::EPSG_BRITISH_FOOT_SEARS_1922 => "{$name}: new BritishFoot1922Sears({$value['value']})",
-                                    Length::EPSG_BRITISH_YARD_SEARS_1922 => "{$name}: new BritishYard1922Sears({$value['value']})",
-                                    Length::EPSG_CENTIMETRE => "{$name}: new Centimetre({$value['value']})",
-                                    Length::EPSG_CLARKES_FOOT => "{$name}: new ClarkeFoot({$value['value']})",
-                                    Length::EPSG_CLARKES_LINK => "{$name}: new ClarkeLink({$value['value']})",
-                                    Length::EPSG_CLARKES_YARD => "{$name}: new ClarkeYard({$value['value']})",
-                                    Length::EPSG_FOOT => "{$name}: new Foot({$value['value']})",
-                                    Length::EPSG_GERMAN_LEGAL_METRE => "{$name}: new GermanLegalMetre({$value['value']})",
-                                    Length::EPSG_GOLD_COAST_FOOT => "{$name}: new GoldCoastFoot({$value['value']})",
-                                    Length::EPSG_INDIAN_YARD => "{$name}: new IndianYard({$value['value']})",
-                                    Length::EPSG_LINK => "{$name}: new Link({$value['value']})",
-                                    Length::EPSG_METRE => "{$name}: new Metre({$value['value']})",
-                                    Length::EPSG_MILLIMETRE => "{$name}: new Millimetre({$value['value']})",
-                                    Length::EPSG_US_SURVEY_FOOT => "{$name}: new USSurveyFoot({$value['value']})",
-                                    Rate::EPSG_CENTIMETRES_PER_YEAR => "{$name}: new Rate(new Centimetre({$value['value']}), new Year(1))",
-                                    Rate::EPSG_MILLIARC_SECONDS_PER_YEAR => "{$name}: new Rate(new ArcSecond({$value['value']} / 1000), new Year(1))",
-                                    Rate::EPSG_METRES_PER_YEAR => "{$name}: new Rate(new Metre({$value['value']}), new Year(1))",
-                                    Rate::EPSG_MILLIMETRES_PER_YEAR => "{$name}: new Rate(new Millimetre({$value['value']}), new Year(1))",
-                                    Rate::EPSG_PARTS_PER_BILLION_PER_YEAR => "{$name}: new Rate(new PartsPerBillion({$value['value']}), new Year(1))",
-                                    Scale::EPSG_COEFFICIENT => "{$name}: new Coefficient({$value['value']})",
-                                    Scale::EPSG_PARTS_PER_BILLION => "{$name}: new PartsPerBillion({$value['value']})",
-                                    Scale::EPSG_PARTS_PER_MILLION => "{$name}: new PartsPerMillion({$value['value']})",
-                                    Scale::EPSG_UNITY => "{$name}: new Unity({$value['value']})",
-                                    Time::EPSG_YEAR => "{$name}: new Year({$value['value']})",
-                                    null => "{$name}: '{$value['value']}'",
-                                };
                             }
                         }
                         $opTable .= '            ' . implode(",\n            ", $docParams);

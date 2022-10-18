@@ -5,25 +5,23 @@
  * @author Doug Wright
  */
 declare(strict_types=1);
+use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
+
 /** @internal */ return [
   'latitudeOfNaturalOrigin' => [
-    'value' => 10.263,
-    'uom' => 'urn:ogc:def:uom:EPSG::9110',
     'reverses' => false,
+    'value' => UnitOfMeasureFactory::makeUnit(10.263, 'urn:ogc:def:uom:EPSG::9110'),
   ],
   'longitudeOfNaturalOrigin' => [
-    'value' => -61.2,
-    'uom' => 'urn:ogc:def:uom:EPSG::9110',
     'reverses' => false,
+    'value' => UnitOfMeasureFactory::makeUnit(-61.2, 'urn:ogc:def:uom:EPSG::9110'),
   ],
   'falseEasting' => [
-    'value' => 283800.0,
-    'uom' => 'urn:ogc:def:uom:EPSG::9005',
     'reverses' => false,
+    'value' => UnitOfMeasureFactory::makeUnit(283800.0, 'urn:ogc:def:uom:EPSG::9005'),
   ],
   'falseNorthing' => [
-    'value' => 214500.0,
-    'uom' => 'urn:ogc:def:uom:EPSG::9005',
     'reverses' => false,
+    'value' => UnitOfMeasureFactory::makeUnit(214500.0, 'urn:ogc:def:uom:EPSG::9005'),
   ],
 ];

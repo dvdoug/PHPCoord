@@ -26,7 +26,6 @@ use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPCoord\UnitOfMeasure\Scale\Coefficient;
 use PHPCoord\UnitOfMeasure\Scale\Scale;
 use PHPCoord\UnitOfMeasure\UnitOfMeasure;
-use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
 use Stringable;
 
 use function abs;
@@ -103,13 +102,9 @@ abstract class Point implements Stringable
             if (isset($paramData['fileProvider'])) {
                 $params[$paramName] = static::$gridCache[$paramData['fileProvider']] ??= (new $paramData['fileProvider']())->provideGrid();
             } else {
+                $param = $paramData['value'];
                 if ($inReverse && $paramData['reverses']) {
-                    $paramData['value'] *= -1;
-                }
-                if ($paramData['uom']) {
-                    $param = UnitOfMeasureFactory::makeUnit($paramData['value'], $paramData['uom']);
-                } else {
-                    $param = $paramData['value'];
+                    $param = $param->multiply(-1);
                 }
                 if (str_starts_with($paramName, 'Au') || str_starts_with($paramName, 'Bu')) {
                     $powerCoefficients[$paramName] = $param;

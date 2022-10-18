@@ -5,10 +5,11 @@
  * @author Doug Wright
  */
 declare(strict_types=1);
+use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
+
 /** @internal */ return [
   'verticalOffset' => [
-    'value' => 0.49,
-    'uom' => 'urn:ogc:def:uom:EPSG::9001',
     'reverses' => true,
+    'value' => UnitOfMeasureFactory::makeUnit(0.49, 'urn:ogc:def:uom:EPSG::9001'),
   ],
 ];

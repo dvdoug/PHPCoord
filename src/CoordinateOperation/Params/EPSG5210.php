@@ -5,35 +5,31 @@
  * @author Doug Wright
  */
 declare(strict_types=1);
+use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
+
 /** @internal */ return [
   'ordinate1OfEvaluationPoint' => [
-    'value' => 56.58,
-    'uom' => 'urn:ogc:def:uom:EPSG::9110',
     'reverses' => false,
+    'value' => UnitOfMeasureFactory::makeUnit(56.58, 'urn:ogc:def:uom:EPSG::9110'),
   ],
   'ordinate2OfEvaluationPoint' => [
-    'value' => 24.53,
-    'uom' => 'urn:ogc:def:uom:EPSG::9110',
     'reverses' => false,
+    'value' => UnitOfMeasureFactory::makeUnit(24.53, 'urn:ogc:def:uom:EPSG::9110'),
   ],
   'verticalOffset' => [
-    'value' => 0.154,
-    'uom' => 'urn:ogc:def:uom:EPSG::9001',
     'reverses' => true,
+    'value' => UnitOfMeasureFactory::makeUnit(0.154, 'urn:ogc:def:uom:EPSG::9001'),
   ],
   'inclinationInLatitude' => [
-    'value' => 0.016,
-    'uom' => 'urn:ogc:def:uom:EPSG::9104',
     'reverses' => true,
+    'value' => UnitOfMeasureFactory::makeUnit(0.016, 'urn:ogc:def:uom:EPSG::9104'),
   ],
   'inclinationInLongitude' => [
-    'value' => -0.012,
-    'uom' => 'urn:ogc:def:uom:EPSG::9104',
     'reverses' => true,
+    'value' => UnitOfMeasureFactory::makeUnit(-0.012, 'urn:ogc:def:uom:EPSG::9104'),
   ],
   'EPSGCodeForHorizontalCRS' => [
-    'value' => 'urn:ogc:def:crs:EPSG::4258',
-    'uom' => null,
     'reverses' => false,
+    'value' => 'urn:ogc:def:crs:EPSG::4258',
   ],
 ];

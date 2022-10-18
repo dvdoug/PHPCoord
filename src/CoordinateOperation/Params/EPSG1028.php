@@ -5,50 +5,43 @@
  * @author Doug Wright
  */
 declare(strict_types=1);
+use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
+
 /** @internal */ return [
   'A0' => [
-    'value' => 6.2280987,
-    'uom' => 'urn:ogc:def:uom:EPSG::9203',
     'reverses' => false,
+    'value' => UnitOfMeasureFactory::makeUnit(6.2280987, 'urn:ogc:def:uom:EPSG::9203'),
   ],
   'A1' => [
-    'value' => -0.03924,
-    'uom' => 'urn:ogc:def:uom:EPSG::9203',
     'reverses' => false,
+    'value' => UnitOfMeasureFactory::makeUnit(-0.03924, 'urn:ogc:def:uom:EPSG::9203'),
   ],
   'A2' => [
-    'value' => -0.03276,
-    'uom' => 'urn:ogc:def:uom:EPSG::9203',
     'reverses' => false,
+    'value' => UnitOfMeasureFactory::makeUnit(-0.03276, 'urn:ogc:def:uom:EPSG::9203'),
   ],
   'A3' => [
-    'value' => 2.84E-5,
-    'uom' => 'urn:ogc:def:uom:EPSG::9203',
     'reverses' => false,
+    'value' => UnitOfMeasureFactory::makeUnit(2.84E-5, 'urn:ogc:def:uom:EPSG::9203'),
   ],
   'B00' => [
-    'value' => -13276.58,
-    'uom' => 'urn:ogc:def:uom:EPSG::9104',
     'reverses' => false,
+    'value' => UnitOfMeasureFactory::makeUnit(-13276.58, 'urn:ogc:def:uom:EPSG::9104'),
   ],
   'B0' => [
-    'value' => 2.9368989,
-    'uom' => 'urn:ogc:def:uom:EPSG::9203',
     'reverses' => false,
+    'value' => UnitOfMeasureFactory::makeUnit(2.9368989, 'urn:ogc:def:uom:EPSG::9203'),
   ],
   'B1' => [
-    'value' => 0.07272,
-    'uom' => 'urn:ogc:def:uom:EPSG::9203',
     'reverses' => false,
+    'value' => UnitOfMeasureFactory::makeUnit(0.07272, 'urn:ogc:def:uom:EPSG::9203'),
   ],
   'B2' => [
-    'value' => 0.00216,
-    'uom' => 'urn:ogc:def:uom:EPSG::9203',
     'reverses' => false,
+    'value' => UnitOfMeasureFactory::makeUnit(0.00216, 'urn:ogc:def:uom:EPSG::9203'),
   ],
   'B3' => [
-    'value' => -1.79E-5,
-    'uom' => 'urn:ogc:def:uom:EPSG::9203',
     'reverses' => false,
+    'value' => UnitOfMeasureFactory::makeUnit(-1.79E-5, 'urn:ogc:def:uom:EPSG::9203'),
   ],
 ];

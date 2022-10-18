@@ -5,10 +5,11 @@
  * @author Doug Wright
  */
 declare(strict_types=1);
+use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
+
 /** @internal */ return [
   'longitudeOffset' => [
-    'value' => 10.405,
-    'uom' => 'urn:ogc:def:uom:EPSG::9104',
     'reverses' => true,
+    'value' => UnitOfMeasureFactory::makeUnit(10.405, 'urn:ogc:def:uom:EPSG::9104'),
   ],
 ];

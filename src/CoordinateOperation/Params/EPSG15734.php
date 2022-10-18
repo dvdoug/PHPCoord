@@ -5,55 +5,47 @@
  * @author Doug Wright
  */
 declare(strict_types=1);
+use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
+
 /** @internal */ return [
   'xAxisTranslation' => [
-    'value' => 307.871,
-    'uom' => 'urn:ogc:def:uom:EPSG::9001',
     'reverses' => true,
+    'value' => UnitOfMeasureFactory::makeUnit(307.871, 'urn:ogc:def:uom:EPSG::9001'),
   ],
   'yAxisTranslation' => [
-    'value' => 305.803,
-    'uom' => 'urn:ogc:def:uom:EPSG::9001',
     'reverses' => true,
+    'value' => UnitOfMeasureFactory::makeUnit(305.803, 'urn:ogc:def:uom:EPSG::9001'),
   ],
   'zAxisTranslation' => [
-    'value' => -311.992,
-    'uom' => 'urn:ogc:def:uom:EPSG::9001',
     'reverses' => true,
+    'value' => UnitOfMeasureFactory::makeUnit(-311.992, 'urn:ogc:def:uom:EPSG::9001'),
   ],
   'xAxisRotation' => [
-    'value' => -4.216368E-5,
-    'uom' => 'urn:ogc:def:uom:EPSG::9101',
     'reverses' => true,
+    'value' => UnitOfMeasureFactory::makeUnit(-4.216368E-5, 'urn:ogc:def:uom:EPSG::9101'),
   ],
   'yAxisRotation' => [
-    'value' => -2.030416E-5,
-    'uom' => 'urn:ogc:def:uom:EPSG::9101',
     'reverses' => true,
+    'value' => UnitOfMeasureFactory::makeUnit(-2.030416E-5, 'urn:ogc:def:uom:EPSG::9101'),
   ],
   'zAxisRotation' => [
-    'value' => -6.209624E-5,
-    'uom' => 'urn:ogc:def:uom:EPSG::9101',
     'reverses' => true,
+    'value' => UnitOfMeasureFactory::makeUnit(-6.209624E-5, 'urn:ogc:def:uom:EPSG::9101'),
   ],
   'scaleDifference' => [
-    'value' => 2.181655,
-    'uom' => 'urn:ogc:def:uom:EPSG::9202',
     'reverses' => true,
+    'value' => UnitOfMeasureFactory::makeUnit(2.181655, 'urn:ogc:def:uom:EPSG::9202'),
   ],
   'ordinate1OfEvaluationPoint' => [
-    'value' => 1594396.206,
-    'uom' => 'urn:ogc:def:uom:EPSG::9001',
     'reverses' => false,
+    'value' => UnitOfMeasureFactory::makeUnit(1594396.206, 'urn:ogc:def:uom:EPSG::9001'),
   ],
   'ordinate2OfEvaluationPoint' => [
-    'value' => -6143812.398,
-    'uom' => 'urn:ogc:def:uom:EPSG::9001',
     'reverses' => false,
+    'value' => UnitOfMeasureFactory::makeUnit(-6143812.398, 'urn:ogc:def:uom:EPSG::9001'),
   ],
   'ordinate3OfEvaluationPoint' => [
-    'value' => 648855.829,
-    'uom' => 'urn:ogc:def:uom:EPSG::9001',
     'reverses' => false,
+    'value' => UnitOfMeasureFactory::makeUnit(648855.829, 'urn:ogc:def:uom:EPSG::9001'),
   ],
 ];

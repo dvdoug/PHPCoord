@@ -495,13 +495,13 @@ class GIGSTest extends TestCase
     public function testSeries3200GeodeticCRSs(string $gigsCode, string $name, string $type, string $datumCode, string $epsgCSCode): void
     {
         if ($type === 'Geocentric') {
-            Geocentric::registerCustomCRS('urn:ogc:def:crs:GIGS::' . $gigsCode, $name, 'urn:ogc:def:cs:EPSG::' . $epsgCSCode, 'urn:ogc:def:datum:GIGS::' . $datumCode, BoundingArea::createFromExtentCodes([1262]));
+            Geocentric::registerCustomCRS('urn:ogc:def:crs:GIGS::' . $gigsCode, $name, 'urn:ogc:def:cs:EPSG::' . $epsgCSCode, 'urn:ogc:def:datum:GIGS::' . $datumCode, BoundingArea::createWorld());
             $crs = Geocentric::fromSRID('urn:ogc:def:crs:GIGS::' . $gigsCode);
         } elseif ($type === 'Geographic 2D') {
-            Geographic2D::registerCustomCRS('urn:ogc:def:crs:GIGS::' . $gigsCode, $name, 'urn:ogc:def:cs:EPSG::' . $epsgCSCode, 'urn:ogc:def:datum:GIGS::' . $datumCode, BoundingArea::createFromExtentCodes([1262]));
+            Geographic2D::registerCustomCRS('urn:ogc:def:crs:GIGS::' . $gigsCode, $name, 'urn:ogc:def:cs:EPSG::' . $epsgCSCode, 'urn:ogc:def:datum:GIGS::' . $datumCode, BoundingArea::createWorld());
             $crs = Geographic2D::fromSRID('urn:ogc:def:crs:GIGS::' . $gigsCode);
         } elseif ($type === 'Geographic 3D') {
-            Geographic3D::registerCustomCRS('urn:ogc:def:crs:GIGS::' . $gigsCode, $name, 'urn:ogc:def:cs:EPSG::' . $epsgCSCode, 'urn:ogc:def:datum:GIGS::' . $datumCode, BoundingArea::createFromExtentCodes([1262]));
+            Geographic3D::registerCustomCRS('urn:ogc:def:crs:GIGS::' . $gigsCode, $name, 'urn:ogc:def:cs:EPSG::' . $epsgCSCode, 'urn:ogc:def:datum:GIGS::' . $datumCode, BoundingArea::createWorld());
             $crs = Geographic3D::fromSRID('urn:ogc:def:crs:GIGS::' . $gigsCode);
         }
 
@@ -574,7 +574,11 @@ class GIGSTest extends TestCase
         $params = array_filter($params, fn ($param) => $param['value'] !== null);
         $params = array_map(
             static function ($param) {
-                $param['value'] = $param['uom'] === Angle::EPSG_SEXAGESIMAL_DMS ? $param['value'] : (float) $param['value'];
+                $param['value'] = UnitOfMeasureFactory::makeUnit(
+                    $param['uom'] === Angle::EPSG_SEXAGESIMAL_DMS ? $param['value'] : (float) $param['value'],
+                    $param['uom']
+                );
+                unset($param['uom']);
 
                 return $param;
             },
@@ -597,7 +601,7 @@ class GIGSTest extends TestCase
             'Lambert Azimuthal Equal Area' => CoordinateOperationMethods::EPSG_LAMBERT_AZIMUTHAL_EQUAL_AREA,
         };
 
-        CoordinateOperations::registerCustomOperation('urn:ogc:def:coordinateOperation:GIGS::' . $gigsCode, $name, $method, [1262], $params);
+        CoordinateOperations::registerCustomOperation('urn:ogc:def:coordinateOperation:GIGS::' . $gigsCode, $name, $method, BoundingArea::createWorld(), $params);
 
         if ($epsgOperationCode) {
             $originalOperation = CoordinateOperations::getOperationData('urn:ogc:def:coordinateOperation:EPSG::' . $epsgOperationCode);
@@ -631,7 +635,7 @@ class GIGSTest extends TestCase
         $baseCRS = Geographic2D::fromSRID('urn:ogc:def:crs:GIGS::' . $baseCRSCode);
         $this->assertSame($baseCRSName, $baseCRS->getName());
 
-        Projected::registerCustomCRS('urn:ogc:def:crs:GIGS::' . $gigsCode, $name, 'urn:ogc:def:crs:GIGS::' . $baseCRSCode, 'urn:ogc:def:coordinateOperation:GIGS::' . $derivingConversionCode, 'urn:ogc:def:cs:EPSG::' . $csEPSGCode, BoundingArea::createFromExtentCodes([1262]));
+        Projected::registerCustomCRS('urn:ogc:def:crs:GIGS::' . $gigsCode, $name, 'urn:ogc:def:crs:GIGS::' . $baseCRSCode, 'urn:ogc:def:coordinateOperation:GIGS::' . $derivingConversionCode, 'urn:ogc:def:cs:EPSG::' . $csEPSGCode, BoundingArea::createWorld());
         CoordinateOperations::registerCustomTransformation('urn:ogc:def:coordinateOperation:GIGS::' . $derivingConversionCode, $derivingConversionName, 'urn:ogc:def:crs:GIGS::' . $baseCRSCode, 'urn:ogc:def:crs:GIGS::' . $gigsCode, 0, true);
 
         $this->assertInstanceOf(Projected::class, Projected::fromSRID('urn:ogc:def:crs:GIGS::' . $gigsCode));
@@ -728,7 +732,11 @@ class GIGSTest extends TestCase
                 unset($params[$paramName]['value']);
                 unset($params[$paramName]['uom']);
             } else {
-                $params[$paramName]['value'] = $param['uom'] === Angle::EPSG_SEXAGESIMAL_DMS ? $param['value'] : (float) $param['value'];
+                $params[$paramName]['value'] = UnitOfMeasureFactory::makeUnit(
+                    $param['uom'] === Angle::EPSG_SEXAGESIMAL_DMS ? $param['value'] : (float) $param['value'],
+                    $param['uom']
+                );
+                unset($params[$paramName]['uom']);
             }
         }
 
@@ -742,7 +750,7 @@ class GIGSTest extends TestCase
             'NADCON' => CoordinateOperationMethods::EPSG_NADCON5_2D,
         };
 
-        CoordinateOperations::registerCustomOperation('urn:ogc:def:coordinateOperation:GIGS::' . $gigsCode, $name, $method, [1262], $params);
+        CoordinateOperations::registerCustomOperation('urn:ogc:def:coordinateOperation:GIGS::' . $gigsCode, $name, $method, BoundingArea::createWorld(), $params);
         CoordinateOperations::registerCustomTransformation('urn:ogc:def:coordinateOperation:GIGS::' . $gigsCode, $name, 'urn:ogc:def:crs:GIGS::' . $gigsSourceCRS, 'urn:ogc:def:crs:GIGS::' . $gigsTargetCRS, 0, true);
 
         $gigsOperation = CoordinateOperations::getOperationData('urn:ogc:def:coordinateOperation:GIGS::' . $gigsCode);
@@ -796,7 +804,7 @@ class GIGSTest extends TestCase
      */
     public function testSeries3200VerticalCRSs(string $gigsCode, string $name, string $datumCode, string $epsgCSCode): void
     {
-        Vertical::registerCustomCRS('urn:ogc:def:crs:GIGS::' . $gigsCode, $name, 'urn:ogc:def:cs:EPSG::' . $epsgCSCode, 'urn:ogc:def:datum:GIGS::' . $datumCode, BoundingArea::createFromExtentCodes([1262]));
+        Vertical::registerCustomCRS('urn:ogc:def:crs:GIGS::' . $gigsCode, $name, 'urn:ogc:def:cs:EPSG::' . $epsgCSCode, 'urn:ogc:def:datum:GIGS::' . $datumCode, BoundingArea::createWorld());
         $crs = Vertical::fromSRID('urn:ogc:def:crs:GIGS::' . $gigsCode);
 
         $this->assertEquals($name, $crs->getName());
@@ -855,14 +863,18 @@ class GIGSTest extends TestCase
 
             $params = array_filter($params, fn ($param) => $param['value'] !== null);
             foreach ($params as $name => $param) {
-                $param[$name]['value'] = $param['uom'] === Angle::EPSG_SEXAGESIMAL_DMS ? $param['value'] : (float) $param['value'];
+                $params[$name]['value'] = UnitOfMeasureFactory::makeUnit(
+                    $param['uom'] === Angle::EPSG_SEXAGESIMAL_DMS ? $param['value'] : (float) $param['value'],
+                    $param['uom']
+                );
+                unset($params[$name]['uom']);
             }
 
             $method = match ($methodName) {
                 'Vertical offset' => CoordinateOperationMethods::EPSG_VERTICAL_OFFSET,
             };
 
-            CoordinateOperations::registerCustomOperation('urn:ogc:def:coordinateOperation:GIGS::' . $gigsCode, $name, $method, [1262], $params);
+            CoordinateOperations::registerCustomOperation('urn:ogc:def:coordinateOperation:GIGS::' . $gigsCode, $name, $method, BoundingArea::createWorld(), $params);
             CoordinateOperations::registerCustomTransformation('urn:ogc:def:coordinateOperation:GIGS::' . $gigsCode, $name, 'urn:ogc:def:crs:GIGS::' . $gigsSourceCRS, 'urn:ogc:def:crs:GIGS::' . $gigsTargetCRS, 0, true);
 
             $gigsOperation = CoordinateOperations::getOperationData('urn:ogc:def:coordinateOperation:GIGS::' . $gigsCode);

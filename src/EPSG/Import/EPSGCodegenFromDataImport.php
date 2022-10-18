@@ -1735,11 +1735,26 @@ class EPSGCodegenFromDataImport
                 unset($params[$paramsRow['name']]['name']);
             }
             if (isset($operationData['method']) && $operationData['method'] === CoordinateOperationMethods::EPSG_NADCON5_2D) {
-                $params['ellipsoidalHeightDifferenceFile'] = ['value' => null, 'uom' => null, 'reverses' => false];
+                $params['ellipsoidalHeightDifferenceFile'] = ['value' => null, 'reverses' => false];
             }
 
+            $output = "<?php use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;\n/** @internal */ return [\n";
+            foreach ($params as $paramName => $paramData) {
+                $output .= "  '{$paramName}' => [\n";
+                $output .= "    'reverses' => " . ($paramData['reverses'] ? 'true' : 'false') . ",\n";
+                if (isset($paramData['uom']) && $paramData['uom']) {
+                    $output .= "    'value' => UnitOfMeasureFactory::makeUnit(" . var_export($paramData['value'], true) . ', ' . var_export($paramData['uom'], true) . "),\n";
+                } elseif (isset($paramData['fileProvider'])) {
+                    $output .= "    'fileProvider' => " . var_export($paramData['fileProvider'], true) . ",\n";
+                } else {
+                    $output .= "    'value' => " . var_export($paramData['value'], true) . ",\n";
+                }
+                $output .= "  ],\n";
+            }
+            $output .= '];';
+
             $paramFilename = $this->sourceDir . '/CoordinateOperation/Params/' . str_replace(':', '', str_replace('urn:ogc:def:coordinateOperation:', '', $operation)) . '.php';
-            file_put_contents($paramFilename, '<?php /** @internal */ return ' . var_export($params, true) . ';');
+            file_put_contents($paramFilename, $output);
             $this->codeGen->csFixFile($paramFilename);
             $paramsSeen[$paramFilename] = $paramFilename;
         }

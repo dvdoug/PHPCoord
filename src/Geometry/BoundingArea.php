@@ -23,7 +23,6 @@ use function implode;
 class BoundingArea
 {
     /**
-     * Vertices in GeoJSON-type format (an array of polygons, which is an array of rings which is an array of long,lat points).
      * @var array<array<array<array<float, float>>>
      */
     protected array $vertices;
@@ -54,7 +53,9 @@ class BoundingArea
     }
 
     /**
+     * Vertices in GeoJSON-type format (an array of polygons, which is an array of rings which is an array of long,lat points).
      * @param array<array<array<array<float, float>>> $vertices [[[long,lat], [long,lat]...]]
+     * @param RegionMap::REGION_*
      */
     public static function createFromArray(array $vertices, string $region): self
     {

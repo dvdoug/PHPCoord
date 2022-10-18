@@ -102,7 +102,7 @@ trait AutoConversion
             $operation = CoordinateOperations::getOperationData($pathStep['operation']);
             if ($boundaryCheckPoint) {
                 // filter out operations that only operate outside this point
-                $polygon = BoundingArea::createFromExtentCodes($operation['extent']);
+                $polygon = $operation['extent'] = $operation['extent'] instanceof BoundingArea ? $operation['extent'] : BoundingArea::createFromExtentCodes($operation['extent']);
                 if (!$polygon->containsPoint($boundaryCheckPoint)) {
                     return false;
                 }
@@ -120,7 +120,7 @@ trait AutoConversion
             // filter out operations that require a specific epoch
             if (isset(self::$methodsThatRequireASpecificEpoch[$operation['method']]) && $this->getCoordinateEpoch()) {
                 $pointEpoch = Year::fromDateTime($this->getCoordinateEpoch());
-                if (!(abs($pointEpoch->getValue() - $params['transformationReferenceEpoch']['value']) <= 0.001)) {
+                if (!(abs($pointEpoch->subtract($params['transformationReferenceEpoch']['value'])->getValue()) <= 0.001)) {
                     return false;
                 }
             }
