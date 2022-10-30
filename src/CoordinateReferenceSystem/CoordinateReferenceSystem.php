@@ -80,7 +80,7 @@ abstract class CoordinateReferenceSystem
         return $this->boundingArea;
     }
 
-    public static function fromSRID(string $srid): self
+    public static function fromSRID(string $srid): Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical
     {
         if (!isset(self::$cachedObjects[$srid])) {
             if (isset(Projected::getSupportedSRIDs()[$srid])) {

@@ -12,6 +12,7 @@ use DateTimeImmutable;
 use PHPCoord\CoordinateOperation\CoordinateOperationMethods;
 use PHPCoord\CoordinateOperation\CoordinateOperations;
 use PHPCoord\CoordinateOperation\GeographicValue;
+use PHPCoord\CoordinateOperation\GridProvider;
 use PHPCoord\CoordinateReferenceSystem\Compound;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\CoordinateReferenceSystem\Geocentric;
@@ -39,6 +40,8 @@ use function sqrt;
 use function sscanf;
 use function str_starts_with;
 use function tan;
+use function str_ends_with;
+use function class_exists;
 
 use const M_PI;
 
@@ -96,20 +99,21 @@ abstract class Point implements Stringable
 
     protected static function resolveParamsByOperation(string $operationSrid, string $methodSrid, bool $inReverse): array
     {
+        $methodData = CoordinateOperationMethods::getMethodData($methodSrid);
+
         $params = [];
         $powerCoefficients = [];
-        foreach (CoordinateOperations::getParamData($operationSrid) as $paramName => $paramData) {
-            if (isset($paramData['fileProvider'])) {
-                $params[$paramName] = static::$gridCache[$paramData['fileProvider']] ??= (new $paramData['fileProvider']())->provideGrid();
+        foreach (CoordinateOperations::getParamData($operationSrid) as $paramName => $paramValue) {
+            if (str_ends_with($paramName, 'File') && $paramValue !== null && class_exists($paramValue) && new $paramValue() instanceof GridProvider) {
+                $params[$paramName] = static::$gridCache[$paramValue] ??= (new $paramValue())->provideGrid();
             } else {
-                $param = $paramData['value'];
-                if ($inReverse && $paramData['reverses']) {
-                    $param = $param->multiply(-1);
+                if ($inReverse && isset($methodData['paramData'][$paramName]) && $methodData['paramData'][$paramName]['reverses']) {
+                    $paramValue = $paramValue->multiply(-1);
                 }
                 if (str_starts_with($paramName, 'Au') || str_starts_with($paramName, 'Bu')) {
-                    $powerCoefficients[$paramName] = $param;
+                    $powerCoefficients[$paramName] = $paramValue;
                 } else {
-                    $params[$paramName] = $param;
+                    $params[$paramName] = $paramValue;
                 }
             }
         }

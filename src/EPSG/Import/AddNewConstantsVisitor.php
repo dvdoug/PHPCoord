@@ -119,7 +119,7 @@ class AddNewConstantsVisitor extends NodeVisitorAbstract
                 $comment .= "/**\n";
                 $comment .= '* ' . ucfirst(trim($name)) . "\n";
                 if (isset($data['type']) && $data['type']) {
-                    $comment .= '* ' . 'Type: ' . ucfirst(trim($data['type'])) . "\n";
+                    $comment .= '* Type: ' . ucfirst(trim($data['type'])) . "\n";
                 }
                 if (isset($data['extent_description']) && $data['extent_description']) {
                     $extentLines = explode("\n", wordwrap('Extent: ' . $data['extent_description'], 112));

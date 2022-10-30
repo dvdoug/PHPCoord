@@ -6,8 +6,5 @@
  */
 declare(strict_types=1);
 /** @internal */ return [
-  'offsetsFile' => [
-    'reverses' => true,
-    'fileProvider' => 'PHPCoord\\CoordinateOperation\\GTXDunedin1958NZVD2016Provider',
-  ],
+  'offsetsFile' => 'PHPCoord\\CoordinateOperation\\GTXDunedin1958NZVD2016Provider',
 ];

@@ -6,8 +6,5 @@
  */
 declare(strict_types=1);
 /** @internal */ return [
-  'offsetsFile' => [
-    'reverses' => true,
-    'fileProvider' => 'PHPCoord\\CoordinateOperation\\NTv2ED50ETRS89BalearicIslandsProvider',
-  ],
+  'offsetsFile' => 'PHPCoord\\CoordinateOperation\\NTv2ED50ETRS89BalearicIslandsProvider',
 ];

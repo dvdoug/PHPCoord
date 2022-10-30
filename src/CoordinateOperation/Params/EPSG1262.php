@@ -8,8 +8,5 @@ declare(strict_types=1);
 use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
 
 /** @internal */ return [
-  'longitudeOffset' => [
-    'reverses' => true,
-    'value' => UnitOfMeasureFactory::makeUnit(12.27084, 'urn:ogc:def:uom:EPSG::9110'),
-  ],
+  'longitudeOffset' => UnitOfMeasureFactory::makeUnit(12.27084, 'urn:ogc:def:uom:EPSG::9110'),
 ];

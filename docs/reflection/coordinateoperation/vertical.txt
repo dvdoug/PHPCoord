@@ -31,7 +31,7 @@ to Baltic 1977 depth (Vertical)
 
         $point->offset(
             to: Vertical::fromSRID(Vertical::EPSG_BALTIC_1977_DEPTH),
-            verticalOffset: new Metre(-26.3)
+            verticalOffset: new Metre(26.3)
         )
 
     "
@@ -87,7 +87,7 @@ to Baltic 1977 height (Vertical)
 
         $point->offset(
             to: Vertical::fromSRID(Vertical::EPSG_BALTIC_1977_HEIGHT),
-            verticalOffset: new Metre(26.3)
+            verticalOffset: new Metre(-26.3)
         )
 
     "
@@ -173,7 +173,7 @@ to NZVD2009 height (Vertical)
 
         $point->offset(
             to: Vertical::fromSRID(Vertical::EPSG_NZVD2009_HEIGHT),
-            verticalOffset: new Metre(0.34)
+            verticalOffset: new Metre(-0.34)
         )
 
     "
@@ -683,7 +683,7 @@ to Poolbeg height (m) (Vertical)
 
         $point->offset(
             to: Vertical::fromSRID(Vertical::EPSG_POOLBEG_HEIGHT_M),
-            verticalOffset: new Metre(-2.7)
+            verticalOffset: new Metre(2.7)
         )
 
     "
@@ -724,7 +724,7 @@ to Baltic 1977 height (Vertical)
 
         $point->offset(
             to: Vertical::fromSRID(Vertical::EPSG_BALTIC_1977_HEIGHT),
-            verticalOffset: new Metre(0.4)
+            verticalOffset: new Metre(-0.4)
         )
 
     "
@@ -762,7 +762,7 @@ to NZVD2009 height (Vertical)
 
         $point->offset(
             to: Vertical::fromSRID(Vertical::EPSG_NZVD2009_HEIGHT),
-            verticalOffset: new Metre(0.36)
+            verticalOffset: new Metre(-0.36)
         )
 
     "
@@ -942,7 +942,7 @@ to AIOC95 depth (Vertical)
 
         $point->offset(
             to: Vertical::fromSRID(Vertical::EPSG_AIOC95_DEPTH),
-            verticalOffset: new Metre(-1.7)
+            verticalOffset: new Metre(1.7)
         )
 
     "
@@ -960,7 +960,7 @@ to Baltic 1977 depth (Vertical)
 
         $point->offset(
             to: Vertical::fromSRID(Vertical::EPSG_BALTIC_1977_DEPTH),
-            verticalOffset: new Metre(-28)
+            verticalOffset: new Metre(28)
         )
 
     "
@@ -998,7 +998,7 @@ to Baltic 1977 height (Vertical)
 
         $point->offset(
             to: Vertical::fromSRID(Vertical::EPSG_BALTIC_1977_HEIGHT),
-            verticalOffset: new Metre(28)
+            verticalOffset: new Metre(-28)
         )
 
     "
@@ -1036,7 +1036,7 @@ to Genoa 1942 height (Vertical)
 
         $point->offset(
             to: Vertical::fromSRID(Vertical::EPSG_GENOA_1942_HEIGHT),
-            verticalOffset: new Metre(0.141)
+            verticalOffset: new Metre(-0.141)
         )
 
     "
@@ -1256,7 +1256,7 @@ to NZVD2009 height (Vertical)
 
         $point->offset(
             to: Vertical::fromSRID(Vertical::EPSG_NZVD2009_HEIGHT),
-            verticalOffset: new Metre(0.49)
+            verticalOffset: new Metre(-0.49)
         )
 
     "
@@ -1295,7 +1295,7 @@ to NZVD2009 height (Vertical)
 
         $point->offset(
             to: Vertical::fromSRID(Vertical::EPSG_NZVD2009_HEIGHT),
-            verticalOffset: new Metre(0.38)
+            verticalOffset: new Metre(-0.38)
         )
 
     "
@@ -1461,9 +1461,9 @@ to Alicante height (Vertical)
             to: Vertical::fromSRID(Vertical::EPSG_ALICANTE_HEIGHT),
             ordinate1OfEvaluationPoint: new Degree(40.772222222222),
             ordinate2OfEvaluationPoint: new Degree(-3.6597222222222),
-            verticalOffset: new Metre(-0.486),
-            inclinationInLatitude: new ArcSecond(-0.003),
-            inclinationInLongitude: new ArcSecond(0.006),
+            verticalOffset: new Metre(0.486),
+            inclinationInLatitude: new ArcSecond(0.003),
+            inclinationInLongitude: new ArcSecond(-0.006),
             EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
         )
 
@@ -1484,9 +1484,9 @@ to Baltic 1957 height (Vertical)
             to: Vertical::fromSRID(Vertical::EPSG_BALTIC_1957_HEIGHT),
             ordinate1OfEvaluationPoint: new Degree(49.916666666667),
             ordinate2OfEvaluationPoint: new Degree(15.25),
-            verticalOffset: new Metre(0.116),
-            inclinationInLatitude: new ArcSecond(0.036),
-            inclinationInLongitude: new ArcSecond(0),
+            verticalOffset: new Metre(-0.116),
+            inclinationInLatitude: new ArcSecond(-0.036),
+            inclinationInLongitude: new ArcSecond(-0),
             EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
         )
 
@@ -1499,9 +1499,9 @@ to Baltic 1957 height (Vertical)
             to: Vertical::fromSRID(Vertical::EPSG_BALTIC_1957_HEIGHT),
             ordinate1OfEvaluationPoint: new Degree(48.633333333333),
             ordinate2OfEvaluationPoint: new Degree(19.25),
-            verticalOffset: new Metre(0.122),
-            inclinationInLatitude: new ArcSecond(0.02),
-            inclinationInLongitude: new ArcSecond(0),
+            verticalOffset: new Metre(-0.122),
+            inclinationInLatitude: new ArcSecond(-0.02),
+            inclinationInLongitude: new ArcSecond(-0),
             EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
         )
 
@@ -1522,9 +1522,9 @@ to Baltic 1977 height (Vertical)
             to: Vertical::fromSRID(Vertical::EPSG_BALTIC_1977_HEIGHT),
             ordinate1OfEvaluationPoint: new Degree(56.966666666667),
             ordinate2OfEvaluationPoint: new Degree(24.883333333333),
-            verticalOffset: new Metre(0.105),
-            inclinationInLatitude: new ArcSecond(0),
-            inclinationInLongitude: new ArcSecond(0.004),
+            verticalOffset: new Metre(-0.105),
+            inclinationInLatitude: new ArcSecond(-0),
+            inclinationInLongitude: new ArcSecond(-0.004),
             EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
         )
 
@@ -1537,9 +1537,9 @@ to Baltic 1977 height (Vertical)
             to: Vertical::fromSRID(Vertical::EPSG_BALTIC_1977_HEIGHT),
             ordinate1OfEvaluationPoint: new Degree(58.7),
             ordinate2OfEvaluationPoint: new Degree(25.866666666667),
-            verticalOffset: new Metre(0.133),
-            inclinationInLatitude: new ArcSecond(-0.014),
-            inclinationInLongitude: new ArcSecond(0.005),
+            verticalOffset: new Metre(-0.133),
+            inclinationInLatitude: new ArcSecond(0.014),
+            inclinationInLongitude: new ArcSecond(-0.005),
             EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
         )
 
@@ -1552,9 +1552,9 @@ to Baltic 1977 height (Vertical)
             to: Vertical::fromSRID(Vertical::EPSG_BALTIC_1977_HEIGHT),
             ordinate1OfEvaluationPoint: new Degree(55.3),
             ordinate2OfEvaluationPoint: new Degree(24.016666666667),
-            verticalOffset: new Metre(0.102),
-            inclinationInLatitude: new ArcSecond(0),
-            inclinationInLongitude: new ArcSecond(0.002),
+            verticalOffset: new Metre(-0.102),
+            inclinationInLatitude: new ArcSecond(-0),
+            inclinationInLongitude: new ArcSecond(-0.002),
             EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
         )
 
@@ -1575,9 +1575,9 @@ to Baltic 1982 height (Vertical)
             to: Vertical::fromSRID(Vertical::EPSG_BALTIC_1982_HEIGHT),
             ordinate1OfEvaluationPoint: new Degree(42.625),
             ordinate2OfEvaluationPoint: new Degree(25.376666666667),
-            verticalOffset: new Metre(0.182),
-            inclinationInLatitude: new ArcSecond(0.001),
-            inclinationInLongitude: new ArcSecond(-0.004),
+            verticalOffset: new Metre(-0.182),
+            inclinationInLatitude: new ArcSecond(-0.001),
+            inclinationInLongitude: new ArcSecond(0.004),
             EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
         )
 
@@ -1596,7 +1596,7 @@ to Cascais height (Vertical)
 
         $point->offset(
             to: Vertical::fromSRID(Vertical::EPSG_CASCAIS_HEIGHT),
-            verticalOffset: new Metre(-0.315)
+            verticalOffset: new Metre(0.315)
         )
 
     "
@@ -1616,9 +1616,9 @@ to Constanta height (Vertical)
             to: Vertical::fromSRID(Vertical::EPSG_CONSTANTA_HEIGHT),
             ordinate1OfEvaluationPoint: new Degree(46.016666666667),
             ordinate2OfEvaluationPoint: new Degree(24.816666666667),
-            verticalOffset: new Metre(0.028),
-            inclinationInLatitude: new ArcSecond(0.002),
-            inclinationInLongitude: new ArcSecond(0.002),
+            verticalOffset: new Metre(-0.028),
+            inclinationInLatitude: new ArcSecond(-0.002),
+            inclinationInLongitude: new ArcSecond(-0.002),
             EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
         )
 
@@ -1639,9 +1639,9 @@ to DHHN85 height (Vertical)
             to: Vertical::fromSRID(Vertical::EPSG_DHHN85_HEIGHT),
             ordinate1OfEvaluationPoint: new Degree(51.05),
             ordinate2OfEvaluationPoint: new Degree(8.6666666666667),
-            verticalOffset: new Metre(0.017),
-            inclinationInLatitude: new ArcSecond(-0.002),
-            inclinationInLongitude: new ArcSecond(0.003),
+            verticalOffset: new Metre(-0.017),
+            inclinationInLatitude: new ArcSecond(0.002),
+            inclinationInLongitude: new ArcSecond(-0.003),
             EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
         )
 
@@ -1662,9 +1662,9 @@ to DHHN92 height (Vertical)
             to: Vertical::fromSRID(Vertical::EPSG_DHHN92_HEIGHT),
             ordinate1OfEvaluationPoint: new Degree(51.05),
             ordinate2OfEvaluationPoint: new Degree(10.216666666667),
-            verticalOffset: new Metre(0.014),
-            inclinationInLatitude: new ArcSecond(-0.001),
-            inclinationInLongitude: new ArcSecond(0),
+            verticalOffset: new Metre(-0.014),
+            inclinationInLatitude: new ArcSecond(0.001),
+            inclinationInLongitude: new ArcSecond(-0),
             EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
         )
 
@@ -1685,9 +1685,9 @@ to DNN height (Vertical)
             to: Vertical::fromSRID(Vertical::EPSG_DNN_HEIGHT),
             ordinate1OfEvaluationPoint: new Degree(56.033333333333),
             ordinate2OfEvaluationPoint: new Degree(9.2333333333333),
-            verticalOffset: new Metre(0.011),
-            inclinationInLatitude: new ArcSecond(0.003),
-            inclinationInLongitude: new ArcSecond(0.011),
+            verticalOffset: new Metre(-0.011),
+            inclinationInLatitude: new ArcSecond(-0.003),
+            inclinationInLongitude: new ArcSecond(-0.011),
             EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
         )
 
@@ -1708,9 +1708,9 @@ to EOMA 1980 height (Vertical)
             to: Vertical::fromSRID(Vertical::EPSG_EOMA_1980_HEIGHT),
             ordinate1OfEvaluationPoint: new Degree(46.983333333333),
             ordinate2OfEvaluationPoint: new Degree(19.583333333333),
-            verticalOffset: new Metre(0.14),
-            inclinationInLatitude: new ArcSecond(0.008),
-            inclinationInLongitude: new ArcSecond(-0.002),
+            verticalOffset: new Metre(-0.14),
+            inclinationInLatitude: new ArcSecond(-0.008),
+            inclinationInLongitude: new ArcSecond(0.002),
             EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
         )
 
@@ -1731,9 +1731,9 @@ to GHA height (Vertical)
             to: Vertical::fromSRID(Vertical::EPSG_GHA_HEIGHT),
             ordinate1OfEvaluationPoint: new Degree(47.533333333333),
             ordinate2OfEvaluationPoint: new Degree(14.45),
-            verticalOffset: new Metre(-0.356),
-            inclinationInLatitude: new ArcSecond(-0.057),
-            inclinationInLongitude: new ArcSecond(-0.058),
+            verticalOffset: new Metre(0.356),
+            inclinationInLatitude: new ArcSecond(0.057),
+            inclinationInLongitude: new ArcSecond(0.058),
             EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
         )
 
@@ -1754,9 +1754,9 @@ to Genoa 1942 height (Vertical)
             to: Vertical::fromSRID(Vertical::EPSG_GENOA_1942_HEIGHT),
             ordinate1OfEvaluationPoint: new Degree(42.583333333333),
             ordinate2OfEvaluationPoint: new Degree(12.966666666667),
-            verticalOffset: new Metre(-0.309),
-            inclinationInLatitude: new ArcSecond(-0.03),
-            inclinationInLongitude: new ArcSecond(0),
+            verticalOffset: new Metre(0.309),
+            inclinationInLatitude: new ArcSecond(0.03),
+            inclinationInLongitude: new ArcSecond(-0),
             EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
         )
 
@@ -1769,9 +1769,9 @@ to Genoa 1942 height (Vertical)
             to: Vertical::fromSRID(Vertical::EPSG_GENOA_1942_HEIGHT),
             ordinate1OfEvaluationPoint: new Degree(37.5),
             ordinate2OfEvaluationPoint: new Degree(14.3),
-            verticalOffset: new Metre(-0.402),
-            inclinationInLatitude: new ArcSecond(-0.079),
-            inclinationInLongitude: new ArcSecond(0),
+            verticalOffset: new Metre(0.402),
+            inclinationInLatitude: new ArcSecond(0.079),
+            inclinationInLongitude: new ArcSecond(-0),
             EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
         )
 
@@ -1792,9 +1792,9 @@ to HVRS71 height (Vertical)
             to: Vertical::fromSRID(Vertical::EPSG_HVRS71_HEIGHT),
             ordinate1OfEvaluationPoint: new Degree(45.35),
             ordinate2OfEvaluationPoint: new Degree(16.366666666667),
-            verticalOffset: new Metre(-0.343),
-            inclinationInLatitude: new ArcSecond(-0.007),
-            inclinationInLongitude: new ArcSecond(-0.016),
+            verticalOffset: new Metre(0.343),
+            inclinationInLatitude: new ArcSecond(0.007),
+            inclinationInLongitude: new ArcSecond(0.016),
             EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
         )
 
@@ -1815,9 +1815,9 @@ to LN02 height (Vertical)
             to: Vertical::fromSRID(Vertical::EPSG_LN02_HEIGHT),
             ordinate1OfEvaluationPoint: new Degree(46.916666666667),
             ordinate2OfEvaluationPoint: new Degree(8.1833333333333),
-            verticalOffset: new Metre(-0.245),
-            inclinationInLatitude: new ArcSecond(-0.21),
-            inclinationInLongitude: new ArcSecond(-0.032),
+            verticalOffset: new Metre(0.245),
+            inclinationInLatitude: new ArcSecond(0.21),
+            inclinationInLongitude: new ArcSecond(0.032),
             EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
         )
 
@@ -1836,7 +1836,7 @@ to N60 height (Vertical)
 
         $point->offset(
             to: Vertical::fromSRID(Vertical::EPSG_N60_HEIGHT),
-            verticalOffset: new Metre(0.213)
+            verticalOffset: new Metre(-0.213)
         )
 
     "
@@ -1854,7 +1854,7 @@ to NAP height (Vertical)
 
         $point->offset(
             to: Vertical::fromSRID(Vertical::EPSG_NAP_HEIGHT),
-            verticalOffset: new Metre(-0.005)
+            verticalOffset: new Metre(0.005)
         )
 
     "
@@ -1872,7 +1872,7 @@ to NGF-IGN69 height (Vertical)
 
         $point->offset(
             to: Vertical::fromSRID(Vertical::EPSG_NGF_IGN69_HEIGHT),
-            verticalOffset: new Metre(-0.486)
+            verticalOffset: new Metre(0.486)
         )
 
     "
@@ -1892,9 +1892,9 @@ to NN54 height (Vertical)
             to: Vertical::fromSRID(Vertical::EPSG_NN54_HEIGHT),
             ordinate1OfEvaluationPoint: new Degree(62.933333333333),
             ordinate2OfEvaluationPoint: new Degree(11.166666666667),
-            verticalOffset: new Metre(-0.001),
-            inclinationInLatitude: new ArcSecond(-0.01),
-            inclinationInLongitude: new ArcSecond(0.034),
+            verticalOffset: new Metre(0.001),
+            inclinationInLatitude: new ArcSecond(0.01),
+            inclinationInLongitude: new ArcSecond(-0.034),
             EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
         )
 
@@ -1915,9 +1915,9 @@ to ODN height (Vertical)
             to: Vertical::fromSRID(Vertical::EPSG_ODN_HEIGHT),
             ordinate1OfEvaluationPoint: new Degree(54.583333333333),
             ordinate2OfEvaluationPoint: new Degree(-2.25),
-            verticalOffset: new Metre(0.07),
-            inclinationInLatitude: new ArcSecond(0.044),
-            inclinationInLongitude: new ArcSecond(0),
+            verticalOffset: new Metre(-0.07),
+            inclinationInLatitude: new ArcSecond(-0.044),
+            inclinationInLongitude: new ArcSecond(-0),
             EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
         )
 
@@ -1938,9 +1938,9 @@ to Ostend height (Vertical)
             to: Vertical::fromSRID(Vertical::EPSG_OSTEND_HEIGHT),
             ordinate1OfEvaluationPoint: new Degree(50.716666666667),
             ordinate2OfEvaluationPoint: new Degree(4.7666666666667),
-            verticalOffset: new Metre(-2.311),
-            inclinationInLatitude: new ArcSecond(-0.016),
-            inclinationInLongitude: new ArcSecond(0),
+            verticalOffset: new Metre(2.311),
+            inclinationInLatitude: new ArcSecond(0.016),
+            inclinationInLongitude: new ArcSecond(-0),
             EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
         )
 
@@ -1961,9 +1961,9 @@ to RH70 height (Vertical)
             to: Vertical::fromSRID(Vertical::EPSG_RH70_HEIGHT),
             ordinate1OfEvaluationPoint: new Degree(64),
             ordinate2OfEvaluationPoint: new Degree(16.233333333333),
-            verticalOffset: new Metre(0.005),
-            inclinationInLatitude: new ArcSecond(-0.012),
-            inclinationInLongitude: new ArcSecond(0),
+            verticalOffset: new Metre(-0.005),
+            inclinationInLatitude: new ArcSecond(0.012),
+            inclinationInLongitude: new ArcSecond(-0),
             EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
         )
 
@@ -1984,9 +1984,9 @@ to SNN76 height (Vertical)
             to: Vertical::fromSRID(Vertical::EPSG_SNN76_HEIGHT),
             ordinate1OfEvaluationPoint: new Degree(52.533333333333),
             ordinate2OfEvaluationPoint: new Degree(13.166666666667),
-            verticalOffset: new Metre(0.157),
-            inclinationInLatitude: new ArcSecond(0.007),
-            inclinationInLongitude: new ArcSecond(0.005),
+            verticalOffset: new Metre(-0.157),
+            inclinationInLatitude: new ArcSecond(-0.007),
+            inclinationInLongitude: new ArcSecond(-0.005),
             EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
         )
 
@@ -2007,9 +2007,9 @@ to SVS2000 height (Vertical)
             to: Vertical::fromSRID(Vertical::EPSG_SVS2000_HEIGHT),
             ordinate1OfEvaluationPoint: new Degree(46),
             ordinate2OfEvaluationPoint: new Degree(15),
-            verticalOffset: new Metre(-0.411),
-            inclinationInLatitude: new ArcSecond(-0.033),
-            inclinationInLongitude: new ArcSecond(0.008),
+            verticalOffset: new Metre(0.411),
+            inclinationInLatitude: new ArcSecond(0.033),
+            inclinationInLongitude: new ArcSecond(-0.008),
             EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
         )
 
@@ -2033,9 +2033,9 @@ to Baltic 1957 height (Vertical)
             to: Vertical::fromSRID(Vertical::EPSG_BALTIC_1957_HEIGHT),
             ordinate1OfEvaluationPoint: new Degree(49.916666666667),
             ordinate2OfEvaluationPoint: new Degree(15.25),
-            verticalOffset: new Metre(0.13),
-            inclinationInLatitude: new ArcSecond(0.026),
-            inclinationInLongitude: new ArcSecond(0),
+            verticalOffset: new Metre(-0.13),
+            inclinationInLatitude: new ArcSecond(-0.026),
+            inclinationInLongitude: new ArcSecond(-0),
             EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
         )
 
@@ -2056,9 +2056,9 @@ to Baltic 1977 height (Vertical)
             to: Vertical::fromSRID(Vertical::EPSG_BALTIC_1977_HEIGHT),
             ordinate1OfEvaluationPoint: new Degree(58.7),
             ordinate2OfEvaluationPoint: new Degree(25.866666666667),
-            verticalOffset: new Metre(0.195),
-            inclinationInLatitude: new ArcSecond(0.009),
-            inclinationInLongitude: new ArcSecond(-0.013),
+            verticalOffset: new Metre(-0.195),
+            inclinationInLatitude: new ArcSecond(-0.009),
+            inclinationInLongitude: new ArcSecond(0.013),
             EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
         )
 
@@ -2071,9 +2071,9 @@ to Baltic 1977 height (Vertical)
             to: Vertical::fromSRID(Vertical::EPSG_BALTIC_1977_HEIGHT),
             ordinate1OfEvaluationPoint: new Degree(55.3),
             ordinate2OfEvaluationPoint: new Degree(24.016666666667),
-            verticalOffset: new Metre(0.121),
-            inclinationInLatitude: new ArcSecond(0.053),
-            inclinationInLongitude: new ArcSecond(0),
+            verticalOffset: new Metre(-0.121),
+            inclinationInLatitude: new ArcSecond(-0.053),
+            inclinationInLongitude: new ArcSecond(-0),
             EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
         )
 
@@ -2086,9 +2086,9 @@ to Baltic 1977 height (Vertical)
             to: Vertical::fromSRID(Vertical::EPSG_BALTIC_1977_HEIGHT),
             ordinate1OfEvaluationPoint: new Degree(56.966666666667),
             ordinate2OfEvaluationPoint: new Degree(24.883333333333),
-            verticalOffset: new Metre(0.154),
-            inclinationInLatitude: new ArcSecond(0.016),
-            inclinationInLongitude: new ArcSecond(-0.012),
+            verticalOffset: new Metre(-0.154),
+            inclinationInLatitude: new ArcSecond(-0.016),
+            inclinationInLongitude: new ArcSecond(0.012),
             EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
         )
 
@@ -2109,9 +2109,9 @@ to Baltic 1982 height (Vertical)
             to: Vertical::fromSRID(Vertical::EPSG_BALTIC_1982_HEIGHT),
             ordinate1OfEvaluationPoint: new Degree(42.625),
             ordinate2OfEvaluationPoint: new Degree(25.376666666667),
-            verticalOffset: new Metre(0.228),
-            inclinationInLatitude: new ArcSecond(-0.009),
-            inclinationInLongitude: new ArcSecond(-0.003),
+            verticalOffset: new Metre(-0.228),
+            inclinationInLatitude: new ArcSecond(0.009),
+            inclinationInLongitude: new ArcSecond(0.003),
             EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
         )
 
@@ -2132,9 +2132,9 @@ to Constanta height (Vertical)
             to: Vertical::fromSRID(Vertical::EPSG_CONSTANTA_HEIGHT),
             ordinate1OfEvaluationPoint: new Degree(46.016666666667),
             ordinate2OfEvaluationPoint: new Degree(24.816666666667),
-            verticalOffset: new Metre(0.062),
-            inclinationInLatitude: new ArcSecond(-0.005),
-            inclinationInLongitude: new ArcSecond(0.008),
+            verticalOffset: new Metre(-0.062),
+            inclinationInLatitude: new ArcSecond(0.005),
+            inclinationInLongitude: new ArcSecond(-0.008),
             EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
         )
 
@@ -2155,9 +2155,9 @@ to DHHN2016 height (Vertical)
             to: Vertical::fromSRID(Vertical::EPSG_DHHN2016_HEIGHT),
             ordinate1OfEvaluationPoint: new Degree(51.05),
             ordinate2OfEvaluationPoint: new Degree(10.216666666667),
-            verticalOffset: new Metre(0.014),
-            inclinationInLatitude: new ArcSecond(-0.01),
-            inclinationInLongitude: new ArcSecond(0),
+            verticalOffset: new Metre(-0.014),
+            inclinationInLatitude: new ArcSecond(0.01),
+            inclinationInLongitude: new ArcSecond(-0),
             EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
         )
 
@@ -2178,9 +2178,9 @@ to DHHN85 height (Vertical)
             to: Vertical::fromSRID(Vertical::EPSG_DHHN85_HEIGHT),
             ordinate1OfEvaluationPoint: new Degree(51.05),
             ordinate2OfEvaluationPoint: new Degree(8.6666666666667),
-            verticalOffset: new Metre(0.017),
-            inclinationInLatitude: new ArcSecond(-0.011),
-            inclinationInLongitude: new ArcSecond(0.005),
+            verticalOffset: new Metre(-0.017),
+            inclinationInLatitude: new ArcSecond(0.011),
+            inclinationInLongitude: new ArcSecond(-0.005),
             EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
         )
 
@@ -2201,9 +2201,9 @@ to DHHN92 height (Vertical)
             to: Vertical::fromSRID(Vertical::EPSG_DHHN92_HEIGHT),
             ordinate1OfEvaluationPoint: new Degree(51.05),
             ordinate2OfEvaluationPoint: new Degree(10.216666666667),
-            verticalOffset: new Metre(0.015),
-            inclinationInLatitude: new ArcSecond(-0.01),
-            inclinationInLongitude: new ArcSecond(0.002),
+            verticalOffset: new Metre(-0.015),
+            inclinationInLatitude: new ArcSecond(0.01),
+            inclinationInLongitude: new ArcSecond(-0.002),
             EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
         )
 
@@ -2224,9 +2224,9 @@ to GHA height (Vertical)
             to: Vertical::fromSRID(Vertical::EPSG_GHA_HEIGHT),
             ordinate1OfEvaluationPoint: new Degree(47.533333333333),
             ordinate2OfEvaluationPoint: new Degree(14.45),
-            verticalOffset: new Metre(-0.335),
-            inclinationInLatitude: new ArcSecond(-0.065),
-            inclinationInLongitude: new ArcSecond(-0.06),
+            verticalOffset: new Metre(0.335),
+            inclinationInLatitude: new ArcSecond(0.065),
+            inclinationInLongitude: new ArcSecond(0.06),
             EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
         )
 
@@ -2247,9 +2247,9 @@ to Genoa 1942 height (Vertical)
             to: Vertical::fromSRID(Vertical::EPSG_GENOA_1942_HEIGHT),
             ordinate1OfEvaluationPoint: new Degree(42.583333333333),
             ordinate2OfEvaluationPoint: new Degree(12.966666666667),
-            verticalOffset: new Metre(-0.259),
-            inclinationInLatitude: new ArcSecond(-0.036),
-            inclinationInLongitude: new ArcSecond(0),
+            verticalOffset: new Metre(0.259),
+            inclinationInLatitude: new ArcSecond(0.036),
+            inclinationInLongitude: new ArcSecond(-0),
             EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
         )
 
@@ -2262,9 +2262,9 @@ to Genoa 1942 height (Vertical)
             to: Vertical::fromSRID(Vertical::EPSG_GENOA_1942_HEIGHT),
             ordinate1OfEvaluationPoint: new Degree(37.5),
             ordinate2OfEvaluationPoint: new Degree(14.3),
-            verticalOffset: new Metre(-0.333),
-            inclinationInLatitude: new ArcSecond(-0.051),
-            inclinationInLongitude: new ArcSecond(0),
+            verticalOffset: new Metre(0.333),
+            inclinationInLatitude: new ArcSecond(0.051),
+            inclinationInLongitude: new ArcSecond(-0),
             EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
         )
 
@@ -2285,9 +2285,9 @@ to HVRS71 height (Vertical)
             to: Vertical::fromSRID(Vertical::EPSG_HVRS71_HEIGHT),
             ordinate1OfEvaluationPoint: new Degree(45.35),
             ordinate2OfEvaluationPoint: new Degree(16.366666666667),
-            verticalOffset: new Metre(-0.313),
-            inclinationInLatitude: new ArcSecond(-0.016),
-            inclinationInLongitude: new ArcSecond(-0.018),
+            verticalOffset: new Metre(0.313),
+            inclinationInLatitude: new ArcSecond(0.016),
+            inclinationInLongitude: new ArcSecond(0.018),
             EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
         )
 
@@ -2308,9 +2308,9 @@ to LN02 height (Vertical)
             to: Vertical::fromSRID(Vertical::EPSG_LN02_HEIGHT),
             ordinate1OfEvaluationPoint: new Degree(46.916666666667),
             ordinate2OfEvaluationPoint: new Degree(8.1833333333333),
-            verticalOffset: new Metre(-0.225),
-            inclinationInLatitude: new ArcSecond(-0.221),
-            inclinationInLongitude: new ArcSecond(-0.033),
+            verticalOffset: new Metre(0.225),
+            inclinationInLatitude: new ArcSecond(0.221),
+            inclinationInLongitude: new ArcSecond(0.033),
             EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
         )
 
@@ -2331,9 +2331,9 @@ to Latvia 2000 height (Vertical)
             to: Vertical::fromSRID(Vertical::EPSG_LATVIA_2000_HEIGHT),
             ordinate1OfEvaluationPoint: new Degree(56.966666666667),
             ordinate2OfEvaluationPoint: new Degree(24.883333333333),
-            verticalOffset: new Metre(0.003),
-            inclinationInLatitude: new ArcSecond(0),
-            inclinationInLongitude: new ArcSecond(0.0074),
+            verticalOffset: new Metre(-0.003),
+            inclinationInLatitude: new ArcSecond(-0),
+            inclinationInLongitude: new ArcSecond(-0.0074),
             EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
         )
 
@@ -2354,9 +2354,9 @@ to Ostend height (Vertical)
             to: Vertical::fromSRID(Vertical::EPSG_OSTEND_HEIGHT),
             ordinate1OfEvaluationPoint: new Degree(50.716666666667),
             ordinate2OfEvaluationPoint: new Degree(4.7666666666667),
-            verticalOffset: new Metre(-2.317),
-            inclinationInLatitude: new ArcSecond(-0.031),
-            inclinationInLongitude: new ArcSecond(0),
+            verticalOffset: new Metre(2.317),
+            inclinationInLatitude: new ArcSecond(0.031),
+            inclinationInLongitude: new ArcSecond(-0),
             EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
         )
 
@@ -2377,9 +2377,9 @@ to RH2000 height (Vertical)
             to: Vertical::fromSRID(Vertical::EPSG_RH2000_HEIGHT),
             ordinate1OfEvaluationPoint: new Degree(61.9),
             ordinate2OfEvaluationPoint: new Degree(15.8),
-            verticalOffset: new Metre(-0.008),
-            inclinationInLatitude: new ArcSecond(-0.0006),
-            inclinationInLongitude: new ArcSecond(-0.0003),
+            verticalOffset: new Metre(0.008),
+            inclinationInLatitude: new ArcSecond(0.0006),
+            inclinationInLongitude: new ArcSecond(0.0003),
             EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
         )
 
@@ -2422,7 +2422,7 @@ to Antalya height (Vertical)
 
         $point->offset(
             to: Vertical::fromSRID(Vertical::EPSG_ANTALYA_HEIGHT),
-            verticalOffset: new Metre(-0.394)
+            verticalOffset: new Metre(0.394)
         )
 
     "
@@ -2442,9 +2442,9 @@ to Baltic 1957 height (Vertical)
             to: Vertical::fromSRID(Vertical::EPSG_BALTIC_1957_HEIGHT),
             ordinate1OfEvaluationPoint: new Degree(49.916666666667),
             ordinate2OfEvaluationPoint: new Degree(15.25),
-            verticalOffset: new Metre(0.142),
-            inclinationInLatitude: new ArcSecond(0.026),
-            inclinationInLongitude: new ArcSecond(0.006),
+            verticalOffset: new Metre(-0.142),
+            inclinationInLatitude: new ArcSecond(-0.026),
+            inclinationInLongitude: new ArcSecond(-0.006),
             EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
         )
 
@@ -2483,7 +2483,7 @@ to Antalya height (Vertical)
 
         $point->offset(
             to: Vertical::fromSRID(Vertical::EPSG_ANTALYA_HEIGHT),
-            verticalOffset: new Metre(-0.448)
+            verticalOffset: new Metre(0.448)
         )
 
     "
@@ -2503,9 +2503,9 @@ to Baltic 1957 height (Vertical)
             to: Vertical::fromSRID(Vertical::EPSG_BALTIC_1957_HEIGHT),
             ordinate1OfEvaluationPoint: new Degree(49.916666666667),
             ordinate2OfEvaluationPoint: new Degree(15.25),
-            verticalOffset: new Metre(0.13),
-            inclinationInLatitude: new ArcSecond(0.036),
-            inclinationInLongitude: new ArcSecond(0.006),
+            verticalOffset: new Metre(-0.13),
+            inclinationInLatitude: new ArcSecond(-0.036),
+            inclinationInLongitude: new ArcSecond(-0.006),
             EPSGCodeForHorizontalCRS: 'urn:ogc:def:crs:EPSG::4258'
         )
 
@@ -2541,7 +2541,7 @@ to ODN height (Vertical)
 
         $point->offset(
             to: Vertical::fromSRID(Vertical::EPSG_ODN_HEIGHT),
-            verticalOffset: new Metre(-0.17)
+            verticalOffset: new Metre(0.17)
         )
 
     "
@@ -2626,7 +2626,7 @@ to Vienna height (Vertical)
 
         $point->offset(
             to: Vertical::fromSRID(Vertical::EPSG_VIENNA_HEIGHT),
-            verticalOffset: new Metre(156.68)
+            verticalOffset: new Metre(-156.68)
         )
 
     "
@@ -2744,7 +2744,7 @@ to NZVD2009 height (Vertical)
 
         $point->offset(
             to: Vertical::fromSRID(Vertical::EPSG_NZVD2009_HEIGHT),
-            verticalOffset: new Metre(0.34)
+            verticalOffset: new Metre(-0.34)
         )
 
     "
@@ -2783,7 +2783,7 @@ to HKPD depth (Vertical)
 
         $point->offset(
             to: Vertical::fromSRID(Vertical::EPSG_HKPD_DEPTH),
-            verticalOffset: new Metre(-0.146)
+            verticalOffset: new Metre(0.146)
         )
 
     "
@@ -2972,7 +2972,7 @@ to JGD2000 (vertical) height (Vertical)
 
         $point->offset(
             to: Vertical::fromSRID(Vertical::EPSG_JGD2000_VERTICAL_HEIGHT),
-            verticalOffset: new Metre(0)
+            verticalOffset: new Metre(-0)
         )
 
     "
@@ -3089,7 +3089,7 @@ to KOC CD height (Vertical)
 
         $point->offset(
             to: Vertical::fromSRID(Vertical::EPSG_KOC_CD_HEIGHT),
-            verticalOffset: new Metre(-4.74)
+            verticalOffset: new Metre(4.74)
         )
 
     "
@@ -3124,7 +3124,7 @@ to Kuwait PWD height (Vertical)
 
         $point->offset(
             to: Vertical::fromSRID(Vertical::EPSG_KUWAIT_PWD_HEIGHT),
-            verticalOffset: new Metre(-4.25)
+            verticalOffset: new Metre(4.25)
         )
 
     "
@@ -3145,7 +3145,7 @@ to EGM2008 height (Vertical)
 
         $point->offset(
             to: Vertical::fromSRID(Vertical::EPSG_EGM2008_HEIGHT),
-            verticalOffset: new Metre(-3)
+            verticalOffset: new Metre(3)
         )
 
     "
@@ -3166,7 +3166,7 @@ to EGM96 height (Vertical)
 
         $point->offset(
             to: Vertical::fromSRID(Vertical::EPSG_EGM96_HEIGHT),
-            verticalOffset: new Metre(-0.87)
+            verticalOffset: new Metre(0.87)
         )
 
     "
@@ -3187,7 +3187,7 @@ to KOC CD height (Vertical)
 
         $point->offset(
             to: Vertical::fromSRID(Vertical::EPSG_KOC_CD_HEIGHT),
-            verticalOffset: new Metre(-0.49)
+            verticalOffset: new Metre(0.49)
         )
 
     "
@@ -3301,7 +3301,7 @@ to NZVD2009 height (Vertical)
 
         $point->offset(
             to: Vertical::fromSRID(Vertical::EPSG_NZVD2009_HEIGHT),
-            verticalOffset: new Metre(0.47)
+            verticalOffset: new Metre(-0.47)
         )
 
     "
@@ -3528,7 +3528,7 @@ to Belfast height (Vertical)
 
         $point->offset(
             to: Vertical::fromSRID(Vertical::EPSG_BELFAST_HEIGHT),
-            verticalOffset: new Metre(-0.037)
+            verticalOffset: new Metre(0.037)
         )
 
     "
@@ -3546,7 +3546,7 @@ to Poolbeg height (m) (Vertical)
 
         $point->offset(
             to: Vertical::fromSRID(Vertical::EPSG_POOLBEG_HEIGHT_M),
-            verticalOffset: new Metre(-2.7)
+            verticalOffset: new Metre(2.7)
         )
 
     "
@@ -3567,7 +3567,7 @@ to NZVD2009 height (Vertical)
 
         $point->offset(
             to: Vertical::fromSRID(Vertical::EPSG_NZVD2009_HEIGHT),
-            verticalOffset: new Metre(0.24)
+            verticalOffset: new Metre(-0.24)
         )
 
     "
@@ -4473,7 +4473,7 @@ to NZVD2009 height (Vertical)
 
         $point->offset(
             to: Vertical::fromSRID(Vertical::EPSG_NZVD2009_HEIGHT),
-            verticalOffset: new Metre(0.2)
+            verticalOffset: new Metre(-0.2)
         )
 
     "
@@ -4512,7 +4512,7 @@ to NZVD2009 height (Vertical)
 
         $point->offset(
             to: Vertical::fromSRID(Vertical::EPSG_NZVD2009_HEIGHT),
-            verticalOffset: new Metre(0.29)
+            verticalOffset: new Metre(-0.29)
         )
 
     "
@@ -4595,7 +4595,7 @@ to NZVD2009 height (Vertical)
 
         $point->offset(
             to: Vertical::fromSRID(Vertical::EPSG_NZVD2009_HEIGHT),
-            verticalOffset: new Metre(0.06)
+            verticalOffset: new Metre(-0.06)
         )
 
     "
@@ -4683,7 +4683,7 @@ to EGM2008 height (Vertical)
 
         $point->offset(
             to: Vertical::fromSRID(Vertical::EPSG_EGM2008_HEIGHT),
-            verticalOffset: new Metre(-0.93)
+            verticalOffset: new Metre(0.93)
         )
 
     "
@@ -4704,7 +4704,7 @@ to EGM96 height (Vertical)
 
         $point->offset(
             to: Vertical::fromSRID(Vertical::EPSG_EGM96_HEIGHT),
-            verticalOffset: new Metre(-1.58)
+            verticalOffset: new Metre(1.58)
         )
 
     "
@@ -4905,7 +4905,7 @@ to NZVD2009 height (Vertical)
 
         $point->offset(
             to: Vertical::fromSRID(Vertical::EPSG_NZVD2009_HEIGHT),
-            verticalOffset: new Metre(0.39)
+            verticalOffset: new Metre(-0.39)
         )
 
     "
@@ -4944,7 +4944,7 @@ to NZVD2009 height (Vertical)
 
         $point->offset(
             to: Vertical::fromSRID(Vertical::EPSG_NZVD2009_HEIGHT),
-            verticalOffset: new Metre(0.32)
+            verticalOffset: new Metre(-0.32)
         )
 
     "
@@ -5004,7 +5004,7 @@ to NZVD2009 height (Vertical)
 
         $point->offset(
             to: Vertical::fromSRID(Vertical::EPSG_NZVD2009_HEIGHT),
-            verticalOffset: new Metre(0.44)
+            verticalOffset: new Metre(-0.44)
         )
 
     "

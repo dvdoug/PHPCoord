@@ -1512,12 +1512,12 @@ class EPSGCodegenFromDataImport
         $sql = "
             SELECT
                 'urn:ogc:def:method:EPSG::' || m.coord_op_method_code AS urn,
+                m.coord_op_method_code AS method_code,
                 m.coord_op_method_name AS name,
                 m.remarks AS constant_help,
                 m.remarks AS doc_help,
                 m.deprecated
             FROM epsg_coordoperationmethod m
-            LEFT JOIN epsg_coordoperationparamvalue p ON p.coord_op_method_code = m.coord_op_method_code
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperationmethod' AND dep.object_code = m.coord_op_method_code AND dep.deprecation_date <= '2021-09-10'
             WHERE dep.deprecation_id IS NULL AND m.deprecated = 0
             AND m.coord_op_method_name NOT LIKE '%wellbore%'
@@ -1532,7 +1532,26 @@ class EPSGCodegenFromDataImport
         $data = [];
         while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
             $data[$row['urn']] = $row;
-            unset($data[$row['urn']]['urn']);
+            $data[$row['urn']]['paramData'] = [];
+            unset($data[$row['urn']]['urn'], $data[$row['urn']]['method_code']);
+
+            $sql = "
+            SELECT
+                p.parameter_name,
+                CASE WHEN u.param_sign_reversal = 'Yes' THEN 1 ELSE 0 END AS reverses
+            FROM epsg_coordoperationparamusage u
+            JOIN epsg_coordoperationparam p ON u.parameter_code = p.parameter_code
+            WHERE u.coord_op_method_code = {$row['method_code']}
+            ORDER BY u.sort_order ASC
+        ";
+
+            $paramResult = $this->sqlite->query($sql);
+            while ($paramRow = $paramResult->fetchArray(SQLITE3_ASSOC)) {
+                $paramName = self::makeParamName($paramRow['parameter_name']);
+                $data[$row['urn']]['paramData'][$paramName] = [
+                    'reverses' => (bool) $paramRow['reverses'],
+                ];
+            }
         }
 
         $this->codeGen->updateFileConstants(
@@ -1541,6 +1560,7 @@ class EPSGCodegenFromDataImport
             'public',
             []
         );
+        $this->codeGen->updateFileData($this->sourceDir . '/CoordinateOperation/CoordinateOperationMethods.php', $data);
         $this->codeGen->updateDocs(CoordinateOperationMethods::class, $data);
     }
 
@@ -1727,29 +1747,25 @@ class EPSGCodegenFromDataImport
                         true
                     )
                 ) {
-                    $paramsRow['fileProvider'] = $filenameToProviderMap[$paramsRow['value']];
-                    unset($paramsRow['value'], $paramsRow['uom']);
+                    $paramsRow['value'] = $filenameToProviderMap[$paramsRow['value']];
+                    unset($paramsRow['uom']);
                 }
                 unset($paramsRow['parameter_code']);
                 $params[$paramsRow['name']] = $paramsRow;
                 unset($params[$paramsRow['name']]['name']);
             }
             if (isset($operationData['method']) && $operationData['method'] === CoordinateOperationMethods::EPSG_NADCON5_2D) {
-                $params['ellipsoidalHeightDifferenceFile'] = ['value' => null, 'reverses' => false];
+                $params['ellipsoidalHeightDifferenceFile'] = ['value' => null];
             }
 
             $output = "<?php use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;\n/** @internal */ return [\n";
             foreach ($params as $paramName => $paramData) {
-                $output .= "  '{$paramName}' => [\n";
-                $output .= "    'reverses' => " . ($paramData['reverses'] ? 'true' : 'false') . ",\n";
+                $output .= "  '{$paramName}' => ";
                 if (isset($paramData['uom']) && $paramData['uom']) {
-                    $output .= "    'value' => UnitOfMeasureFactory::makeUnit(" . var_export($paramData['value'], true) . ', ' . var_export($paramData['uom'], true) . "),\n";
-                } elseif (isset($paramData['fileProvider'])) {
-                    $output .= "    'fileProvider' => " . var_export($paramData['fileProvider'], true) . ",\n";
+                    $output .= 'UnitOfMeasureFactory::makeUnit(' . var_export($paramData['value'], true) . ', ' . var_export($paramData['uom'], true) . "),\n";
                 } else {
-                    $output .= "    'value' => " . var_export($paramData['value'], true) . ",\n";
+                    $output .= var_export($paramData['value'], true) . ",\n";
                 }
-                $output .= "  ],\n";
             }
             $output .= '];';
 

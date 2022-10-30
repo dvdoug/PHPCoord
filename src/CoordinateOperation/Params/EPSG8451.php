@@ -6,8 +6,5 @@
  */
 declare(strict_types=1);
 /** @internal */ return [
-  'geoidHeightCorrectionModelFile' => [
-    'reverses' => false,
-    'fileProvider' => 'PHPCoord\\CoordinateOperation\\GTXGDA2020AHDProvider',
-  ],
+  'geoidHeightCorrectionModelFile' => 'PHPCoord\\CoordinateOperation\\GTXGDA2020AHDProvider',
 ];

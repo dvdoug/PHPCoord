@@ -45,6 +45,7 @@ use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPUnit\Framework\TestCase;
 
 use function class_exists;
+use function str_ends_with;
 
 class GeographicPoint3DTest extends TestCase
 {
@@ -347,8 +348,8 @@ class GeographicPoint3DTest extends TestCase
 
             if (isset(static::$sridData[$transformation['source_crs']])) {
                 // filter out operations that require a grid file that we don't have
-                foreach (CoordinateOperations::getParamData($transformation['operation']) as $param) {
-                    if (isset($param['fileProvider']) && !class_exists($param['fileProvider'])) {
+                foreach (CoordinateOperations::getParamData($transformation['operation']) as $paramName => $paramValue) {
+                    if (str_ends_with($paramName, 'File') && $paramValue !== null && !class_exists($paramValue)) {
                         $needsNonExistentFile = true;
                     }
                 }

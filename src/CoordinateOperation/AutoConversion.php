@@ -36,6 +36,7 @@ use function class_exists;
 use function count;
 use function in_array;
 use function usort;
+use function str_ends_with;
 
 /**
  * @internal
@@ -44,25 +45,9 @@ trait AutoConversion
 {
     private int $maxChainDepth = 6; // if traits could have constants...
 
-    protected static array $methodsThatRequireCoordinateEpoch = [ // if traits could have constants...
-        CoordinateOperationMethods::EPSG_TIME_DEPENDENT_COORDINATE_FRAME_ROTATION_GEOCEN => CoordinateOperationMethods::EPSG_TIME_DEPENDENT_COORDINATE_FRAME_ROTATION_GEOCEN,
-        CoordinateOperationMethods::EPSG_TIME_DEPENDENT_COORDINATE_FRAME_ROTATION_GEOG2D => CoordinateOperationMethods::EPSG_TIME_DEPENDENT_COORDINATE_FRAME_ROTATION_GEOG2D,
-        CoordinateOperationMethods::EPSG_TIME_DEPENDENT_COORDINATE_FRAME_ROTATION_GEOG3D => CoordinateOperationMethods::EPSG_TIME_DEPENDENT_COORDINATE_FRAME_ROTATION_GEOG3D,
-        CoordinateOperationMethods::EPSG_TIME_DEPENDENT_POSITION_VECTOR_TFM_GEOCENTRIC => CoordinateOperationMethods::EPSG_TIME_DEPENDENT_POSITION_VECTOR_TFM_GEOCENTRIC,
-        CoordinateOperationMethods::EPSG_TIME_DEPENDENT_POSITION_VECTOR_TFM_GEOG2D => CoordinateOperationMethods::EPSG_TIME_DEPENDENT_POSITION_VECTOR_TFM_GEOG2D,
-        CoordinateOperationMethods::EPSG_TIME_DEPENDENT_POSITION_VECTOR_TFM_GEOG3D => CoordinateOperationMethods::EPSG_TIME_DEPENDENT_POSITION_VECTOR_TFM_GEOG3D,
-        CoordinateOperationMethods::EPSG_TIME_SPECIFIC_COORDINATE_FRAME_ROTATION_GEOCEN => CoordinateOperationMethods::EPSG_TIME_SPECIFIC_COORDINATE_FRAME_ROTATION_GEOCEN,
-        CoordinateOperationMethods::EPSG_TIME_SPECIFIC_POSITION_VECTOR_TRANSFORM_GEOCEN => CoordinateOperationMethods::EPSG_TIME_SPECIFIC_POSITION_VECTOR_TRANSFORM_GEOCEN,
-    ];
-
-    protected static array $methodsThatRequireASpecificEpoch = [ // if traits could have constants...
-        CoordinateOperationMethods::EPSG_TIME_SPECIFIC_COORDINATE_FRAME_ROTATION_GEOCEN => CoordinateOperationMethods::EPSG_TIME_SPECIFIC_COORDINATE_FRAME_ROTATION_GEOCEN,
-        CoordinateOperationMethods::EPSG_TIME_SPECIFIC_POSITION_VECTOR_TRANSFORM_GEOCEN => CoordinateOperationMethods::EPSG_TIME_SPECIFIC_POSITION_VECTOR_TRANSFORM_GEOCEN,
-    ];
-
     private static array $completePathCache = [];
 
-    public function convert(CoordinateReferenceSystem $to, bool $ignoreBoundaryRestrictions = false): Point
+    public function convert(Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $to, bool $ignoreBoundaryRestrictions = false): Point
     {
         if ($this->getCRS() == $to) {
             return $this;
@@ -109,26 +94,27 @@ trait AutoConversion
             }
 
             $operation = CoordinateOperations::getOperationData($pathStep['operation']);
+            $methodParams = CoordinateOperationMethods::getMethodData($operation['method'])['paramData'];
 
             // filter out operations that require an epoch if we don't have one
-            if (isset(self::$methodsThatRequireCoordinateEpoch[$operation['method']]) && !$this->getCoordinateEpoch()) {
+            if ((isset($methodParams['transformationReferenceEpoch']) || isset($methodParams['parameterReferenceEpoch'])) && !$this->getCoordinateEpoch()) {
                 return false;
             }
 
-            $params = CoordinateOperations::getParamData($pathStep['operation']);
+            $operationParams = CoordinateOperations::getParamData($pathStep['operation']);
 
             // filter out operations that require a specific epoch
-            if (isset(self::$methodsThatRequireASpecificEpoch[$operation['method']]) && $this->getCoordinateEpoch()) {
+            if (isset($methodParams['transformationReferenceEpoch'])) {
                 $pointEpoch = Year::fromDateTime($this->getCoordinateEpoch());
-                if (!(abs($pointEpoch->subtract($params['transformationReferenceEpoch']['value'])->getValue()) <= 0.001)) {
+                if (!(abs($pointEpoch->subtract($operationParams['transformationReferenceEpoch'])->getValue()) <= 0.001)) {
                     return false;
                 }
             }
 
             // filter out operations that require a grid file that we don't have, or where boundaries are not being
-            // checked (a formula-based conversion will always return *a* result, outside a grid boundary does not...
-            foreach ($params as $param) {
-                if (isset($param['fileProvider']) && (!$boundaryCheckPoint || !class_exists($param['fileProvider']))) {
+            // checked (a formula-based conversion will always return *a* result, outside a grid boundary does not...)
+            foreach ($operationParams as $paramName => $paramValue) {
+                if (str_ends_with($paramName, 'File') && $paramValue !== null && (!$boundaryCheckPoint || !class_exists($paramValue))) {
                     return false;
                 }
             }

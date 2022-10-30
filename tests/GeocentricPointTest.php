@@ -41,6 +41,7 @@ use PHPUnit\Framework\TestCase;
 
 use function class_exists;
 use function in_array;
+use function str_ends_with;
 
 class GeocentricPointTest extends TestCase
 {
@@ -378,7 +379,7 @@ class GeocentricPointTest extends TestCase
         $epoch = new DateTime();
         if (isset($operation['method']) && in_array($operation['method'], [CoordinateOperationMethods::EPSG_TIME_SPECIFIC_COORDINATE_FRAME_ROTATION_GEOCEN, CoordinateOperationMethods::EPSG_TIME_SPECIFIC_POSITION_VECTOR_TRANSFORM_GEOCEN], true)) {
             $params = CoordinateOperations::getParamData($operationSrid);
-            $epoch = $params['transformationReferenceEpoch']['value']->asDateTime();
+            $epoch = $params['transformationReferenceEpoch']->asDateTime();
         }
 
         $originalPoint = GeocentricPoint::create($sourceCRS, $centre->getX(), $centre->getY(), $centre->getZ(), $epoch);
@@ -402,8 +403,8 @@ class GeocentricPointTest extends TestCase
             if (isset(static::$sridData[$transformation['source_crs']])) {
                 // filter out operations that require a grid file that we don't have
                 $needsNonExistentFile = false;
-                foreach (CoordinateOperations::getParamData($transformation['operation']) as $param) {
-                    if (isset($param['fileProvider']) && !class_exists($param['fileProvider'])) {
+                foreach (CoordinateOperations::getParamData($transformation['operation']) as $paramName => $paramValue) {
+                    if (str_ends_with($paramName, 'File') && $paramValue !== null && !class_exists($paramValue)) {
                         $needsNonExistentFile = true;
                     }
                 }

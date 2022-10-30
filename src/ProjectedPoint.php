@@ -15,10 +15,12 @@ use PHPCoord\CoordinateOperation\AutoConversion;
 use PHPCoord\CoordinateOperation\ComplexNumber;
 use PHPCoord\CoordinateOperation\ConvertiblePoint;
 use PHPCoord\CoordinateOperation\OSTNOSGM15Grid;
-use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
+use PHPCoord\CoordinateReferenceSystem\Compound;
+use PHPCoord\CoordinateReferenceSystem\Geocentric;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Geographic3D;
 use PHPCoord\CoordinateReferenceSystem\Projected;
+use PHPCoord\CoordinateReferenceSystem\Vertical;
 use PHPCoord\CoordinateSystem\Axis;
 use PHPCoord\CoordinateSystem\Cartesian;
 use PHPCoord\Exception\InvalidAxesException;
@@ -237,7 +239,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         return $this->performOperation($this->crs->getDerivingConversion(), $this->crs->getBaseCRS(), true);
     }
 
-    public function convert(CoordinateReferenceSystem $to, bool $ignoreBoundaryRestrictions = false): Point
+    public function convert(Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $to, bool $ignoreBoundaryRestrictions = false): Point
     {
         if ($to->getSRID() === $this->crs->getBaseCRS()->getSRID()) {
             return $this->performOperation($this->crs->getDerivingConversion(), $this->crs->getBaseCRS(), true);

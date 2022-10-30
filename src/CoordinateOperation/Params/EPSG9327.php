@@ -6,8 +6,5 @@
  */
 declare(strict_types=1);
 /** @internal */ return [
-  'offsetsFile' => [
-    'reverses' => true,
-    'fileProvider' => 'PHPCoord\\CoordinateOperation\\IGNFGeocentricTranslationNTFRGF93Provider',
-  ],
+  'offsetsFile' => 'PHPCoord\\CoordinateOperation\\IGNFGeocentricTranslationNTFRGF93Provider',
 ];

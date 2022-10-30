@@ -6,8 +6,5 @@
  */
 declare(strict_types=1);
 /** @internal */ return [
-  'geoidHeightCorrectionModelFile' => [
-    'reverses' => false,
-    'fileProvider' => 'PHPCoord\\CoordinateOperation\\IGNESHeightETRS89REDNAPCanaryIslandsProvider',
-  ],
+  'geoidHeightCorrectionModelFile' => 'PHPCoord\\CoordinateOperation\\IGNESHeightETRS89REDNAPCanaryIslandsProvider',
 ];

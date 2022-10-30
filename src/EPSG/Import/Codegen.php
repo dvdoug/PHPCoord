@@ -19,6 +19,7 @@ use PHPCoord\CoordinateOperation\CRSTransformationsGlobal;
 use PHPCoord\CoordinateOperation\CRSTransformationsNorthAmerica;
 use PHPCoord\CoordinateOperation\CRSTransformationsOceania;
 use PHPCoord\CoordinateOperation\CRSTransformationsSouthAmerica;
+use PHPCoord\CoordinateOperation\GridProvider;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\Geometry\Extents\ExtentMap;
 use PHPCoord\UnitOfMeasure\Rate;
@@ -54,6 +55,7 @@ use function uasort;
 use function implode;
 use function asort;
 use function array_map;
+use function class_exists;
 
 use const PHP_EOL;
 
@@ -277,22 +279,22 @@ class Codegen
                 fwrite($file, ".. code-block:: php\n\n");
                 do {
                     if ($invokeClass->hasMethod('fromSRID')) {
-                        fwrite($file, "    {$invokeClass->getShortName()}::fromSRID({$reflectionClass->getShortName()}::{$constants[$urn]})" . "\n");
-                        fwrite($file, "    {$invokeClass->getShortName()}::fromSRID('{$urn}')" . "\n");
+                        fwrite($file, "    {$invokeClass->getShortName()}::fromSRID({$reflectionClass->getShortName()}::{$constants[$urn]})\n");
+                        fwrite($file, "    {$invokeClass->getShortName()}::fromSRID('{$urn}')\n");
                     } elseif ($invokeClass->hasMethod('makeUnit')) {
-                        fwrite($file, "    {$invokeClass->getShortName()}::makeUnit(\$measurement, {$reflectionClass->getShortName()}::{$constants[$urn]})" . "\n");
-                        fwrite($file, "    {$invokeClass->getShortName()}::makeUnit(\$measurement, '{$urn}')" . "\n");
+                        fwrite($file, "    {$invokeClass->getShortName()}::makeUnit(\$measurement, {$reflectionClass->getShortName()}::{$constants[$urn]})\n");
+                        fwrite($file, "    {$invokeClass->getShortName()}::makeUnit(\$measurement, '{$urn}')\n");
                     }
                 } while ($invokeClass = $invokeClass->getParentClass());
                 fwrite($file, "\n");
             } elseif (isset($constants[$urn])) {
                 fwrite($file, ".. code-block:: php\n\n");
-                fwrite($file, "    {$reflectionClass->getShortName()}::{$constants[$urn]}" . "\n");
-                fwrite($file, "    '{$urn}'" . "\n");
+                fwrite($file, "    {$reflectionClass->getShortName()}::{$constants[$urn]}\n");
+                fwrite($file, "    '{$urn}'\n");
                 fwrite($file, "\n");
             } elseif ($invokeClass->hasMethod('getOperationData')) {
                 fwrite($file, ".. code-block:: php\n\n");
-                fwrite($file, "    '{$urn}'" . "\n");
+                fwrite($file, "    '{$urn}'\n");
                 fwrite($file, "\n");
             }
 
@@ -301,7 +303,7 @@ class Codegen
                 $help = str_replace("\n", "\n\n", trim($help));
                 $help = str_replace('Convert to degrees using algorithm.', '', $help);
                 $help = str_replace('Convert to deg using algorithm.', '', $help);
-                fwrite($file, "{$help}" . "\n");
+                fwrite($file, "{$help}\n");
             }
             fwrite($file, "\n");
         }
@@ -366,6 +368,7 @@ class Codegen
                         if ($operation['method'] == CoordinateOperationMethods::EPSG_ALIAS) {
                             continue 2;
                         }
+                        $methodData = CoordinateOperationMethods::getMethodData($operation['method']);
                         $methodName = CoordinateOperationMethods::getFunctionName($operation['method']);
                         $params = CoordinateOperations::getParamData($operationSrid);
                         $extentName = str_replace('"', '″', implode(', ', array_map(fn ($extent) => $extentMap[$extent]['name'], $operation['extent'])));
@@ -375,21 +378,21 @@ class Codegen
                             "to: {$targetCRSReflection->getShortName()}::fromSRID({$targetCRSReflection->getShortName()}::{$targetCRSConstants[$targetCRSSrid]})",
                         ];
                         foreach ($params as $name => $value) {
-                            if (isset($value['fileProvider'])) {
-                                $provider = new ReflectionClass($value['fileProvider']);
+                            if (str_ends_with($name, 'File') && $value !== null && class_exists($value) && new $value() instanceof GridProvider) {
+                                $provider = new ReflectionClass($value);
                                 $docParams[] = "{$name}: {$provider->getShortName()}->provideGrid()";
-                            } elseif (isset($value['value']) && $value['value']) {
-                                if ($reverse && $value['reverses'] instanceof UnitOfMeasure) {
-                                    $value['value'] = $value['value']->multiply(-1);
+                            } else {
+                                if ($reverse && isset($methodData['paramData'][$name]) && $methodData['paramData'][$name]['reverses']) {
+                                    $value = $value->multiply(-1);
                                 }
-                                if ($value['value'] instanceof Rate) {
-                                    $unitClass = new ReflectionClass($value['value']->getChange());
-                                    $docParams[] = "{$name}: new Rate(new " . $unitClass->getShortName() . '(' . $value['value']->getValue() . '), new Year(1))';
-                                } elseif ($value['value'] instanceof UnitOfMeasure) {
-                                    $unitClass = new ReflectionClass($value['value']);
-                                    $docParams[] = "{$name}: new " . $unitClass->getShortName() . '(' . $value['value']->getValue() . ')';
+                                if ($value instanceof Rate) {
+                                    $unitClass = new ReflectionClass($value->getChange());
+                                    $docParams[] = "{$name}: new Rate(new " . $unitClass->getShortName() . '(' . $value->getValue() . '), new Year(1))';
+                                } elseif ($value instanceof UnitOfMeasure) {
+                                    $unitClass = new ReflectionClass($value);
+                                    $docParams[] = "{$name}: new " . $unitClass->getShortName() . '(' . $value->getValue() . ')';
                                 } else {
-                                    $docParams[] = "{$name}: '{$value['value']}'";
+                                    $docParams[] = "{$name}: '{$value}'";
                                 }
                             }
                         }

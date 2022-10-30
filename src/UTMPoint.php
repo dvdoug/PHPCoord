@@ -9,10 +9,13 @@ declare(strict_types=1);
 namespace PHPCoord;
 
 use DateTimeInterface;
-use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
+use PHPCoord\CoordinateReferenceSystem\Compound;
+use PHPCoord\CoordinateReferenceSystem\Geocentric;
 use PHPCoord\CoordinateReferenceSystem\Geographic;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
+use PHPCoord\CoordinateReferenceSystem\Geographic3D;
 use PHPCoord\CoordinateReferenceSystem\Projected;
+use PHPCoord\CoordinateReferenceSystem\Vertical;
 use PHPCoord\CoordinateSystem\Cartesian;
 use PHPCoord\Geometry\BoundingArea;
 use PHPCoord\Geometry\RegionMap;
@@ -87,7 +90,7 @@ class UTMPoint extends ProjectedPoint
         return $this->crs->getBaseCRS();
     }
 
-    public function convert(CoordinateReferenceSystem $to, bool $ignoreBoundaryRestrictions = false): Point
+    public function convert(Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $to, bool $ignoreBoundaryRestrictions = false): Point
     {
         return $this->asGeographicPoint()->convert($to, $ignoreBoundaryRestrictions);
     }

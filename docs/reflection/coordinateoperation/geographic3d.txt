@@ -6468,9 +6468,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(7.94),
-            longitudeOffset: new ArcSecond(-13.97),
-            geoidUndulation: new Metre(26.9)
+            latitudeOffset: new ArcSecond(-7.94),
+            longitudeOffset: new ArcSecond(13.97),
+            geoidUndulation: new Metre(-26.9)
         )
 
     "
@@ -6480,9 +6480,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(8.1),
-            longitudeOffset: new ArcSecond(-13.81),
-            geoidUndulation: new Metre(27.2)
+            latitudeOffset: new ArcSecond(-8.1),
+            longitudeOffset: new ArcSecond(13.81),
+            geoidUndulation: new Metre(-27.2)
         )
 
     "
@@ -6492,9 +6492,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(8.15),
-            longitudeOffset: new ArcSecond(-13.95),
-            geoidUndulation: new Metre(28.4)
+            latitudeOffset: new ArcSecond(-8.15),
+            longitudeOffset: new ArcSecond(13.95),
+            geoidUndulation: new Metre(-28.4)
         )
 
     "
@@ -6504,9 +6504,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(8.37),
-            longitudeOffset: new ArcSecond(-13.65),
-            geoidUndulation: new Metre(29)
+            latitudeOffset: new ArcSecond(-8.37),
+            longitudeOffset: new ArcSecond(13.65),
+            geoidUndulation: new Metre(-29)
         )
 
     "
@@ -6516,9 +6516,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(8.44),
-            longitudeOffset: new ArcSecond(-13.87),
-            geoidUndulation: new Metre(30.9)
+            latitudeOffset: new ArcSecond(-8.44),
+            longitudeOffset: new ArcSecond(13.87),
+            geoidUndulation: new Metre(-30.9)
         )
 
     "
@@ -6528,9 +6528,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(8.61),
-            longitudeOffset: new ArcSecond(-14.08),
-            geoidUndulation: new Metre(30.7)
+            latitudeOffset: new ArcSecond(-8.61),
+            longitudeOffset: new ArcSecond(14.08),
+            geoidUndulation: new Metre(-30.7)
         )
 
     "
@@ -6540,9 +6540,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(8.73),
-            longitudeOffset: new ArcSecond(-14.3),
-            geoidUndulation: new Metre(30.9)
+            latitudeOffset: new ArcSecond(-8.73),
+            longitudeOffset: new ArcSecond(14.3),
+            geoidUndulation: new Metre(-30.9)
         )
 
     "
@@ -6552,9 +6552,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(8.63),
-            longitudeOffset: new ArcSecond(-13.49),
-            geoidUndulation: new Metre(30.9)
+            latitudeOffset: new ArcSecond(-8.63),
+            longitudeOffset: new ArcSecond(13.49),
+            geoidUndulation: new Metre(-30.9)
         )
 
     "
@@ -6564,9 +6564,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(8.71),
-            longitudeOffset: new ArcSecond(-13.73),
-            geoidUndulation: new Metre(31.6)
+            latitudeOffset: new ArcSecond(-8.71),
+            longitudeOffset: new ArcSecond(13.73),
+            geoidUndulation: new Metre(-31.6)
         )
 
     "
@@ -6576,9 +6576,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(8.84),
-            longitudeOffset: new ArcSecond(-14.03),
-            geoidUndulation: new Metre(31.2)
+            latitudeOffset: new ArcSecond(-8.84),
+            longitudeOffset: new ArcSecond(14.03),
+            geoidUndulation: new Metre(-31.2)
         )
 
     "
@@ -6588,9 +6588,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(8.98),
-            longitudeOffset: new ArcSecond(-14.33),
-            geoidUndulation: new Metre(32.5)
+            latitudeOffset: new ArcSecond(-8.98),
+            longitudeOffset: new ArcSecond(14.33),
+            geoidUndulation: new Metre(-32.5)
         )
 
     "
@@ -6600,9 +6600,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(9.1),
-            longitudeOffset: new ArcSecond(-14.56),
-            geoidUndulation: new Metre(32.6)
+            latitudeOffset: new ArcSecond(-9.1),
+            longitudeOffset: new ArcSecond(14.56),
+            geoidUndulation: new Metre(-32.6)
         )
 
     "
@@ -6612,9 +6612,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(8.79),
-            longitudeOffset: new ArcSecond(-13),
-            geoidUndulation: new Metre(33.3)
+            latitudeOffset: new ArcSecond(-8.79),
+            longitudeOffset: new ArcSecond(13),
+            geoidUndulation: new Metre(-33.3)
         )
 
     "
@@ -6624,9 +6624,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(8.84),
-            longitudeOffset: new ArcSecond(-13.31),
-            geoidUndulation: new Metre(31.4)
+            latitudeOffset: new ArcSecond(-8.84),
+            longitudeOffset: new ArcSecond(13.31),
+            geoidUndulation: new Metre(-31.4)
         )
 
     "
@@ -6636,9 +6636,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(8.98),
-            longitudeOffset: new ArcSecond(-13.59),
-            geoidUndulation: new Metre(30.9)
+            latitudeOffset: new ArcSecond(-8.98),
+            longitudeOffset: new ArcSecond(13.59),
+            geoidUndulation: new Metre(-30.9)
         )
 
     "
@@ -6648,9 +6648,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(9.1),
-            longitudeOffset: new ArcSecond(-13.91),
-            geoidUndulation: new Metre(29.3)
+            latitudeOffset: new ArcSecond(-9.1),
+            longitudeOffset: new ArcSecond(13.91),
+            geoidUndulation: new Metre(-29.3)
         )
 
     "
@@ -6660,9 +6660,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(9.17),
-            longitudeOffset: new ArcSecond(-14.27),
-            geoidUndulation: new Metre(31.3)
+            latitudeOffset: new ArcSecond(-9.17),
+            longitudeOffset: new ArcSecond(14.27),
+            geoidUndulation: new Metre(-31.3)
         )
 
     "
@@ -6672,9 +6672,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(9.23),
-            longitudeOffset: new ArcSecond(-14.52),
-            geoidUndulation: new Metre(31.4)
+            latitudeOffset: new ArcSecond(-9.23),
+            longitudeOffset: new ArcSecond(14.52),
+            geoidUndulation: new Metre(-31.4)
         )
 
     "
@@ -6684,9 +6684,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(8.9),
-            longitudeOffset: new ArcSecond(-12.68),
-            geoidUndulation: new Metre(34.4)
+            latitudeOffset: new ArcSecond(-8.9),
+            longitudeOffset: new ArcSecond(12.68),
+            geoidUndulation: new Metre(-34.4)
         )
 
     "
@@ -6696,9 +6696,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(8.99),
-            longitudeOffset: new ArcSecond(-12.8),
-            geoidUndulation: new Metre(34.2)
+            latitudeOffset: new ArcSecond(-8.99),
+            longitudeOffset: new ArcSecond(12.8),
+            geoidUndulation: new Metre(-34.2)
         )
 
     "
@@ -6708,9 +6708,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(9),
-            longitudeOffset: new ArcSecond(-13.07),
-            geoidUndulation: new Metre(31.7)
+            latitudeOffset: new ArcSecond(-9),
+            longitudeOffset: new ArcSecond(13.07),
+            geoidUndulation: new Metre(-31.7)
         )
 
     "
@@ -6720,9 +6720,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(9.21),
-            longitudeOffset: new ArcSecond(-13.51),
-            geoidUndulation: new Metre(27.5)
+            latitudeOffset: new ArcSecond(-9.21),
+            longitudeOffset: new ArcSecond(13.51),
+            geoidUndulation: new Metre(-27.5)
         )
 
     "
@@ -6732,9 +6732,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(9.33),
-            longitudeOffset: new ArcSecond(-13.66),
-            geoidUndulation: new Metre(23.8)
+            latitudeOffset: new ArcSecond(-9.33),
+            longitudeOffset: new ArcSecond(13.66),
+            geoidUndulation: new Metre(-23.8)
         )
 
     "
@@ -6744,9 +6744,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(9.25),
-            longitudeOffset: new ArcSecond(-12.72),
-            geoidUndulation: new Metre(34.2)
+            latitudeOffset: new ArcSecond(-9.25),
+            longitudeOffset: new ArcSecond(12.72),
+            geoidUndulation: new Metre(-34.2)
         )
 
     "
@@ -6756,9 +6756,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(9.39),
-            longitudeOffset: new ArcSecond(-12.91),
-            geoidUndulation: new Metre(31.8)
+            latitudeOffset: new ArcSecond(-9.39),
+            longitudeOffset: new ArcSecond(12.91),
+            geoidUndulation: new Metre(-31.8)
         )
 
     "
@@ -6768,9 +6768,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(9.55),
-            longitudeOffset: new ArcSecond(-12.63),
-            geoidUndulation: new Metre(35.6)
+            latitudeOffset: new ArcSecond(-9.55),
+            longitudeOffset: new ArcSecond(12.63),
+            geoidUndulation: new Metre(-35.6)
         )
 
     "
@@ -6780,9 +6780,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(9.62),
-            longitudeOffset: new ArcSecond(-12.82),
-            geoidUndulation: new Metre(34.7)
+            latitudeOffset: new ArcSecond(-9.62),
+            longitudeOffset: new ArcSecond(12.82),
+            geoidUndulation: new Metre(-34.7)
         )
 
     "
@@ -6792,9 +6792,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(9.81),
-            longitudeOffset: new ArcSecond(-12.29),
-            geoidUndulation: new Metre(36.6)
+            latitudeOffset: new ArcSecond(-9.81),
+            longitudeOffset: new ArcSecond(12.29),
+            geoidUndulation: new Metre(-36.6)
         )
 
     "
@@ -6804,9 +6804,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(9.81),
-            longitudeOffset: new ArcSecond(-12.45),
-            geoidUndulation: new Metre(37.5)
+            latitudeOffset: new ArcSecond(-9.81),
+            longitudeOffset: new ArcSecond(12.45),
+            geoidUndulation: new Metre(-37.5)
         )
 
     "
@@ -6816,9 +6816,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(9.92),
-            longitudeOffset: new ArcSecond(-12.79),
-            geoidUndulation: new Metre(38.3)
+            latitudeOffset: new ArcSecond(-9.92),
+            longitudeOffset: new ArcSecond(12.79),
+            geoidUndulation: new Metre(-38.3)
         )
 
     "
@@ -6828,9 +6828,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(9.91),
-            longitudeOffset: new ArcSecond(-12.21),
-            geoidUndulation: new Metre(36.6)
+            latitudeOffset: new ArcSecond(-9.91),
+            longitudeOffset: new ArcSecond(12.21),
+            geoidUndulation: new Metre(-36.6)
         )
 
     "
@@ -6840,9 +6840,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(10.08),
-            longitudeOffset: new ArcSecond(-12.35),
-            geoidUndulation: new Metre(39)
+            latitudeOffset: new ArcSecond(-10.08),
+            longitudeOffset: new ArcSecond(12.35),
+            geoidUndulation: new Metre(-39)
         )
 
     "
@@ -6852,9 +6852,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(10.19),
-            longitudeOffset: new ArcSecond(-12.74),
-            geoidUndulation: new Metre(40.3)
+            latitudeOffset: new ArcSecond(-10.19),
+            longitudeOffset: new ArcSecond(12.74),
+            geoidUndulation: new Metre(-40.3)
         )
 
     "
@@ -6864,9 +6864,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(10.29),
-            longitudeOffset: new ArcSecond(-12.13),
-            geoidUndulation: new Metre(38.5)
+            latitudeOffset: new ArcSecond(-10.29),
+            longitudeOffset: new ArcSecond(12.13),
+            geoidUndulation: new Metre(-38.5)
         )
 
     "
@@ -6876,9 +6876,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(10.33),
-            longitudeOffset: new ArcSecond(-12.27),
-            geoidUndulation: new Metre(40.1)
+            latitudeOffset: new ArcSecond(-10.33),
+            longitudeOffset: new ArcSecond(12.27),
+            geoidUndulation: new Metre(-40.1)
         )
 
     "
@@ -6888,9 +6888,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(10.45),
-            longitudeOffset: new ArcSecond(-12.61),
-            geoidUndulation: new Metre(41.7)
+            latitudeOffset: new ArcSecond(-10.45),
+            longitudeOffset: new ArcSecond(12.61),
+            geoidUndulation: new Metre(-41.7)
         )
 
     "
@@ -6900,9 +6900,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(10.54),
-            longitudeOffset: new ArcSecond(-11.96),
-            geoidUndulation: new Metre(39.1)
+            latitudeOffset: new ArcSecond(-10.54),
+            longitudeOffset: new ArcSecond(11.96),
+            geoidUndulation: new Metre(-39.1)
         )
 
     "
@@ -6912,9 +6912,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(10.65),
-            longitudeOffset: new ArcSecond(-12.27),
-            geoidUndulation: new Metre(41.7)
+            latitudeOffset: new ArcSecond(-10.65),
+            longitudeOffset: new ArcSecond(12.27),
+            geoidUndulation: new Metre(-41.7)
         )
 
     "
@@ -6924,9 +6924,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(10.67),
-            longitudeOffset: new ArcSecond(-12.5),
-            geoidUndulation: new Metre(41.1)
+            latitudeOffset: new ArcSecond(-10.67),
+            longitudeOffset: new ArcSecond(12.5),
+            geoidUndulation: new Metre(-41.1)
         )
 
     "
@@ -6936,9 +6936,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(10.67),
-            longitudeOffset: new ArcSecond(-10.86),
-            geoidUndulation: new Metre(38.5)
+            latitudeOffset: new ArcSecond(-10.67),
+            longitudeOffset: new ArcSecond(10.86),
+            geoidUndulation: new Metre(-38.5)
         )
 
     "
@@ -6948,9 +6948,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(10.68),
-            longitudeOffset: new ArcSecond(-10.97),
-            geoidUndulation: new Metre(36)
+            latitudeOffset: new ArcSecond(-10.68),
+            longitudeOffset: new ArcSecond(10.97),
+            geoidUndulation: new Metre(-36)
         )
 
     "
@@ -6960,9 +6960,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(10.8),
-            longitudeOffset: new ArcSecond(-11.53),
-            geoidUndulation: new Metre(39.7)
+            latitudeOffset: new ArcSecond(-10.8),
+            longitudeOffset: new ArcSecond(11.53),
+            geoidUndulation: new Metre(-39.7)
         )
 
     "
@@ -6972,9 +6972,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(10.8),
-            longitudeOffset: new ArcSecond(-11.73),
-            geoidUndulation: new Metre(40.9)
+            latitudeOffset: new ArcSecond(-10.8),
+            longitudeOffset: new ArcSecond(11.73),
+            geoidUndulation: new Metre(-40.9)
         )
 
     "
@@ -6984,9 +6984,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(10.92),
-            longitudeOffset: new ArcSecond(-12.16),
-            geoidUndulation: new Metre(42.3)
+            latitudeOffset: new ArcSecond(-10.92),
+            longitudeOffset: new ArcSecond(12.16),
+            geoidUndulation: new Metre(-42.3)
         )
 
     "
@@ -6996,9 +6996,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(11),
-            longitudeOffset: new ArcSecond(-12.25),
-            geoidUndulation: new Metre(41.2)
+            latitudeOffset: new ArcSecond(-11),
+            longitudeOffset: new ArcSecond(12.25),
+            geoidUndulation: new Metre(-41.2)
         )
 
     "
@@ -7008,9 +7008,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(10.83),
-            longitudeOffset: new ArcSecond(-10.77),
-            geoidUndulation: new Metre(36.2)
+            latitudeOffset: new ArcSecond(-10.83),
+            longitudeOffset: new ArcSecond(10.77),
+            geoidUndulation: new Metre(-36.2)
         )
 
     "
@@ -7020,9 +7020,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(10.95),
-            longitudeOffset: new ArcSecond(-11),
-            geoidUndulation: new Metre(38.7)
+            latitudeOffset: new ArcSecond(-10.95),
+            longitudeOffset: new ArcSecond(11),
+            geoidUndulation: new Metre(-38.7)
         )
 
     "
@@ -7032,9 +7032,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(10.97),
-            longitudeOffset: new ArcSecond(-11.34),
-            geoidUndulation: new Metre(40.8)
+            latitudeOffset: new ArcSecond(-10.97),
+            longitudeOffset: new ArcSecond(11.34),
+            geoidUndulation: new Metre(-40.8)
         )
 
     "
@@ -7044,9 +7044,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(11.04),
-            longitudeOffset: new ArcSecond(-11.69),
-            geoidUndulation: new Metre(43.3)
+            latitudeOffset: new ArcSecond(-11.04),
+            longitudeOffset: new ArcSecond(11.69),
+            geoidUndulation: new Metre(-43.3)
         )
 
     "
@@ -7056,9 +7056,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(11.17),
-            longitudeOffset: new ArcSecond(-12.05),
-            geoidUndulation: new Metre(42.6)
+            latitudeOffset: new ArcSecond(-11.17),
+            longitudeOffset: new ArcSecond(12.05),
+            geoidUndulation: new Metre(-42.6)
         )
 
     "
@@ -7068,9 +7068,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(11.11),
-            longitudeOffset: new ArcSecond(-10.59),
-            geoidUndulation: new Metre(37.3)
+            latitudeOffset: new ArcSecond(-11.11),
+            longitudeOffset: new ArcSecond(10.59),
+            geoidUndulation: new Metre(-37.3)
         )
 
     "
@@ -7080,9 +7080,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(11.16),
-            longitudeOffset: new ArcSecond(-10.97),
-            geoidUndulation: new Metre(40.3)
+            latitudeOffset: new ArcSecond(-11.16),
+            longitudeOffset: new ArcSecond(10.97),
+            geoidUndulation: new Metre(-40.3)
         )
 
     "
@@ -7092,9 +7092,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(11.29),
-            longitudeOffset: new ArcSecond(-11.23),
-            geoidUndulation: new Metre(42.4)
+            latitudeOffset: new ArcSecond(-11.29),
+            longitudeOffset: new ArcSecond(11.23),
+            geoidUndulation: new Metre(-42.4)
         )
 
     "
@@ -7104,9 +7104,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(11.36),
-            longitudeOffset: new ArcSecond(-11.59),
-            geoidUndulation: new Metre(42.5)
+            latitudeOffset: new ArcSecond(-11.36),
+            longitudeOffset: new ArcSecond(11.59),
+            geoidUndulation: new Metre(-42.5)
         )
 
     "
@@ -7116,9 +7116,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(11.44),
-            longitudeOffset: new ArcSecond(-11.88),
-            geoidUndulation: new Metre(40.3)
+            latitudeOffset: new ArcSecond(-11.44),
+            longitudeOffset: new ArcSecond(11.88),
+            geoidUndulation: new Metre(-40.3)
         )
 
     "
@@ -7128,9 +7128,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(11.27),
-            longitudeOffset: new ArcSecond(-9.31),
-            geoidUndulation: new Metre(30.9)
+            latitudeOffset: new ArcSecond(-11.27),
+            longitudeOffset: new ArcSecond(9.31),
+            geoidUndulation: new Metre(-30.9)
         )
 
     "
@@ -7140,9 +7140,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(11.33),
-            longitudeOffset: new ArcSecond(-9.52),
-            geoidUndulation: new Metre(33.8)
+            latitudeOffset: new ArcSecond(-11.33),
+            longitudeOffset: new ArcSecond(9.52),
+            geoidUndulation: new Metre(-33.8)
         )
 
     "
@@ -7152,9 +7152,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(11.38),
-            longitudeOffset: new ArcSecond(-9.86),
-            geoidUndulation: new Metre(34.9)
+            latitudeOffset: new ArcSecond(-11.38),
+            longitudeOffset: new ArcSecond(9.86),
+            geoidUndulation: new Metre(-34.9)
         )
 
     "
@@ -7164,9 +7164,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(11.41),
-            longitudeOffset: new ArcSecond(-10.14),
-            geoidUndulation: new Metre(35.7)
+            latitudeOffset: new ArcSecond(-11.41),
+            longitudeOffset: new ArcSecond(10.14),
+            geoidUndulation: new Metre(-35.7)
         )
 
     "
@@ -7176,9 +7176,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(11.39),
-            longitudeOffset: new ArcSecond(-10.52),
-            geoidUndulation: new Metre(37.5)
+            latitudeOffset: new ArcSecond(-11.39),
+            longitudeOffset: new ArcSecond(10.52),
+            geoidUndulation: new Metre(-37.5)
         )
 
     "
@@ -7188,9 +7188,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(11.49),
-            longitudeOffset: new ArcSecond(-10.83),
-            geoidUndulation: new Metre(39.3)
+            latitudeOffset: new ArcSecond(-11.49),
+            longitudeOffset: new ArcSecond(10.83),
+            geoidUndulation: new Metre(-39.3)
         )
 
     "
@@ -7200,9 +7200,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(11.58),
-            longitudeOffset: new ArcSecond(-11.21),
-            geoidUndulation: new Metre(41.7)
+            latitudeOffset: new ArcSecond(-11.58),
+            longitudeOffset: new ArcSecond(11.21),
+            geoidUndulation: new Metre(-41.7)
         )
 
     "
@@ -7212,9 +7212,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(11.65),
-            longitudeOffset: new ArcSecond(-11.53),
-            geoidUndulation: new Metre(38.5)
+            latitudeOffset: new ArcSecond(-11.65),
+            longitudeOffset: new ArcSecond(11.53),
+            geoidUndulation: new Metre(-38.5)
         )
 
     "
@@ -7224,9 +7224,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(11.72),
-            longitudeOffset: new ArcSecond(-11.8),
-            geoidUndulation: new Metre(34.5)
+            latitudeOffset: new ArcSecond(-11.72),
+            longitudeOffset: new ArcSecond(11.8),
+            geoidUndulation: new Metre(-34.5)
         )
 
     "
@@ -7236,9 +7236,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(11.44),
-            longitudeOffset: new ArcSecond(-9.21),
-            geoidUndulation: new Metre(32.7)
+            latitudeOffset: new ArcSecond(-11.44),
+            longitudeOffset: new ArcSecond(9.21),
+            geoidUndulation: new Metre(-32.7)
         )
 
     "
@@ -7248,9 +7248,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(11.47),
-            longitudeOffset: new ArcSecond(-9.52),
-            geoidUndulation: new Metre(35.2)
+            latitudeOffset: new ArcSecond(-11.47),
+            longitudeOffset: new ArcSecond(9.52),
+            geoidUndulation: new Metre(-35.2)
         )
 
     "
@@ -7260,9 +7260,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(11.55),
-            longitudeOffset: new ArcSecond(-9.8),
-            geoidUndulation: new Metre(35.4)
+            latitudeOffset: new ArcSecond(-11.55),
+            longitudeOffset: new ArcSecond(9.8),
+            geoidUndulation: new Metre(-35.4)
         )
 
     "
@@ -7272,9 +7272,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(11.61),
-            longitudeOffset: new ArcSecond(-10.12),
-            geoidUndulation: new Metre(35.9)
+            latitudeOffset: new ArcSecond(-11.61),
+            longitudeOffset: new ArcSecond(10.12),
+            geoidUndulation: new Metre(-35.9)
         )
 
     "
@@ -7284,9 +7284,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(11.66),
-            longitudeOffset: new ArcSecond(-10.47),
-            geoidUndulation: new Metre(37)
+            latitudeOffset: new ArcSecond(-11.66),
+            longitudeOffset: new ArcSecond(10.47),
+            geoidUndulation: new Metre(-37)
         )
 
     "
@@ -7296,9 +7296,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(11.78),
-            longitudeOffset: new ArcSecond(-10.79),
-            geoidUndulation: new Metre(39.8)
+            latitudeOffset: new ArcSecond(-11.78),
+            longitudeOffset: new ArcSecond(10.79),
+            geoidUndulation: new Metre(-39.8)
         )
 
     "
@@ -7308,9 +7308,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(11.85),
-            longitudeOffset: new ArcSecond(-11.13),
-            geoidUndulation: new Metre(39.9)
+            latitudeOffset: new ArcSecond(-11.85),
+            longitudeOffset: new ArcSecond(11.13),
+            geoidUndulation: new Metre(-39.9)
         )
 
     "
@@ -7320,9 +7320,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(11.9),
-            longitudeOffset: new ArcSecond(-11.47),
-            geoidUndulation: new Metre(36.9)
+            latitudeOffset: new ArcSecond(-11.9),
+            longitudeOffset: new ArcSecond(11.47),
+            geoidUndulation: new Metre(-36.9)
         )
 
     "
@@ -7332,9 +7332,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(11.91),
-            longitudeOffset: new ArcSecond(-11.69),
-            geoidUndulation: new Metre(33.7)
+            latitudeOffset: new ArcSecond(-11.91),
+            longitudeOffset: new ArcSecond(11.69),
+            geoidUndulation: new Metre(-33.7)
         )
 
     "
@@ -7344,9 +7344,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(11.65),
-            longitudeOffset: new ArcSecond(-8.59),
-            geoidUndulation: new Metre(29.7)
+            latitudeOffset: new ArcSecond(-11.65),
+            longitudeOffset: new ArcSecond(8.59),
+            geoidUndulation: new Metre(-29.7)
         )
 
     "
@@ -7356,9 +7356,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(11.68),
-            longitudeOffset: new ArcSecond(-8.8),
-            geoidUndulation: new Metre(30.5)
+            latitudeOffset: new ArcSecond(-11.68),
+            longitudeOffset: new ArcSecond(8.8),
+            geoidUndulation: new Metre(-30.5)
         )
 
     "
@@ -7368,9 +7368,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(11.73),
-            longitudeOffset: new ArcSecond(-9.04),
-            geoidUndulation: new Metre(30.9)
+            latitudeOffset: new ArcSecond(-11.73),
+            longitudeOffset: new ArcSecond(9.04),
+            geoidUndulation: new Metre(-30.9)
         )
 
     "
@@ -7380,9 +7380,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(11.72),
-            longitudeOffset: new ArcSecond(-9.48),
-            geoidUndulation: new Metre(35.1)
+            latitudeOffset: new ArcSecond(-11.72),
+            longitudeOffset: new ArcSecond(9.48),
+            geoidUndulation: new Metre(-35.1)
         )
 
     "
@@ -7392,9 +7392,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(11.81),
-            longitudeOffset: new ArcSecond(9.74),
-            geoidUndulation: new Metre(35.8)
+            latitudeOffset: new ArcSecond(-11.81),
+            longitudeOffset: new ArcSecond(-9.74),
+            geoidUndulation: new Metre(-35.8)
         )
 
     "
@@ -7404,9 +7404,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(11.88),
-            longitudeOffset: new ArcSecond(-10.1),
-            geoidUndulation: new Metre(37.1)
+            latitudeOffset: new ArcSecond(-11.88),
+            longitudeOffset: new ArcSecond(10.1),
+            geoidUndulation: new Metre(-37.1)
         )
 
     "
@@ -7416,9 +7416,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(11.91),
-            longitudeOffset: new ArcSecond(-10.35),
-            geoidUndulation: new Metre(37.9)
+            latitudeOffset: new ArcSecond(-11.91),
+            longitudeOffset: new ArcSecond(10.35),
+            geoidUndulation: new Metre(-37.9)
         )
 
     "
@@ -7428,9 +7428,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(11.9),
-            longitudeOffset: new ArcSecond(-10.7),
-            geoidUndulation: new Metre(39.3)
+            latitudeOffset: new ArcSecond(-11.9),
+            longitudeOffset: new ArcSecond(10.7),
+            geoidUndulation: new Metre(-39.3)
         )
 
     "
@@ -7440,9 +7440,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(12.02),
-            longitudeOffset: new ArcSecond(-11.09),
-            geoidUndulation: new Metre(38.2)
+            latitudeOffset: new ArcSecond(-12.02),
+            longitudeOffset: new ArcSecond(11.09),
+            geoidUndulation: new Metre(-38.2)
         )
 
     "
@@ -7452,9 +7452,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(11.87),
-            longitudeOffset: new ArcSecond(-8.23),
-            geoidUndulation: new Metre(29.7)
+            latitudeOffset: new ArcSecond(-11.87),
+            longitudeOffset: new ArcSecond(8.23),
+            geoidUndulation: new Metre(-29.7)
         )
 
     "
@@ -7464,9 +7464,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(11.84),
-            longitudeOffset: new ArcSecond(-8.44),
-            geoidUndulation: new Metre(30.6)
+            latitudeOffset: new ArcSecond(-11.84),
+            longitudeOffset: new ArcSecond(8.44),
+            geoidUndulation: new Metre(-30.6)
         )
 
     "
@@ -7476,9 +7476,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(11.94),
-            longitudeOffset: new ArcSecond(-8.71),
-            geoidUndulation: new Metre(30.2)
+            latitudeOffset: new ArcSecond(-11.94),
+            longitudeOffset: new ArcSecond(8.71),
+            geoidUndulation: new Metre(-30.2)
         )
 
     "
@@ -7488,9 +7488,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(11.99),
-            longitudeOffset: new ArcSecond(-9.02),
-            geoidUndulation: new Metre(30.9)
+            latitudeOffset: new ArcSecond(-11.99),
+            longitudeOffset: new ArcSecond(9.02),
+            geoidUndulation: new Metre(-30.9)
         )
 
     "
@@ -7500,9 +7500,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(12.05),
-            longitudeOffset: new ArcSecond(-9.36),
-            geoidUndulation: new Metre(35)
+            latitudeOffset: new ArcSecond(-12.05),
+            longitudeOffset: new ArcSecond(9.36),
+            geoidUndulation: new Metre(-35)
         )
 
     "
@@ -7512,9 +7512,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(12.1),
-            longitudeOffset: new ArcSecond(-9.64),
-            geoidUndulation: new Metre(35.5)
+            latitudeOffset: new ArcSecond(-12.1),
+            longitudeOffset: new ArcSecond(9.64),
+            geoidUndulation: new Metre(-35.5)
         )
 
     "
@@ -7524,9 +7524,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(12.1),
-            longitudeOffset: new ArcSecond(-10.08),
-            geoidUndulation: new Metre(37.3)
+            latitudeOffset: new ArcSecond(-12.1),
+            longitudeOffset: new ArcSecond(10.08),
+            geoidUndulation: new Metre(-37.3)
         )
 
     "
@@ -7536,9 +7536,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(12.07),
-            longitudeOffset: new ArcSecond(-10.25),
-            geoidUndulation: new Metre(37.3)
+            latitudeOffset: new ArcSecond(-12.07),
+            longitudeOffset: new ArcSecond(10.25),
+            geoidUndulation: new Metre(-37.3)
         )
 
     "
@@ -7548,9 +7548,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(12),
-            longitudeOffset: new ArcSecond(-8.15),
-            geoidUndulation: new Metre(32.1)
+            latitudeOffset: new ArcSecond(-12),
+            longitudeOffset: new ArcSecond(8.15),
+            geoidUndulation: new Metre(-32.1)
         )
 
     "
@@ -7560,9 +7560,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(12.06),
-            longitudeOffset: new ArcSecond(-8.38),
-            geoidUndulation: new Metre(31)
+            latitudeOffset: new ArcSecond(-12.06),
+            longitudeOffset: new ArcSecond(8.38),
+            geoidUndulation: new Metre(-31)
         )
 
     "
@@ -7572,9 +7572,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(12.17),
-            longitudeOffset: new ArcSecond(-8.69),
-            geoidUndulation: new Metre(30.3)
+            latitudeOffset: new ArcSecond(-12.17),
+            longitudeOffset: new ArcSecond(8.69),
+            geoidUndulation: new Metre(-30.3)
         )
 
     "
@@ -7584,9 +7584,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(12.23),
-            longitudeOffset: new ArcSecond(-8.99),
-            geoidUndulation: new Metre(31.7)
+            latitudeOffset: new ArcSecond(-12.23),
+            longitudeOffset: new ArcSecond(8.99),
+            geoidUndulation: new Metre(-31.7)
         )
 
     "
@@ -7596,9 +7596,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(12.21),
-            longitudeOffset: new ArcSecond(-9.21),
-            geoidUndulation: new Metre(34.3)
+            latitudeOffset: new ArcSecond(-12.21),
+            longitudeOffset: new ArcSecond(9.21),
+            geoidUndulation: new Metre(-34.3)
         )
 
     "
@@ -7608,9 +7608,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(12.28),
-            longitudeOffset: new ArcSecond(-9.6),
-            geoidUndulation: new Metre(33.3)
+            latitudeOffset: new ArcSecond(-12.28),
+            longitudeOffset: new ArcSecond(9.6),
+            geoidUndulation: new Metre(-33.3)
         )
 
     "
@@ -7620,9 +7620,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(12.28),
-            longitudeOffset: new ArcSecond(-8.25),
-            geoidUndulation: new Metre(31)
+            latitudeOffset: new ArcSecond(-12.28),
+            longitudeOffset: new ArcSecond(8.25),
+            geoidUndulation: new Metre(-31)
         )
 
     "
@@ -7632,9 +7632,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(12.37),
-            longitudeOffset: new ArcSecond(-8.55),
-            geoidUndulation: new Metre(29.1)
+            latitudeOffset: new ArcSecond(-12.37),
+            longitudeOffset: new ArcSecond(8.55),
+            geoidUndulation: new Metre(-29.1)
         )
 
     "
@@ -7644,9 +7644,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(12.53),
-            longitudeOffset: new ArcSecond(-8.21),
-            geoidUndulation: new Metre(31)
+            latitudeOffset: new ArcSecond(-12.53),
+            longitudeOffset: new ArcSecond(8.21),
+            geoidUndulation: new Metre(-31)
         )
 
     "
@@ -7656,9 +7656,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(12.57),
-            longitudeOffset: new ArcSecond(-8.4),
-            geoidUndulation: new Metre(28.4)
+            latitudeOffset: new ArcSecond(-12.57),
+            longitudeOffset: new ArcSecond(8.4),
+            geoidUndulation: new Metre(-28.4)
         )
 
     "
@@ -7668,9 +7668,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(12.71),
-            longitudeOffset: new ArcSecond(-8.17),
-            geoidUndulation: new Metre(29.9)
+            latitudeOffset: new ArcSecond(-12.71),
+            longitudeOffset: new ArcSecond(8.17),
+            geoidUndulation: new Metre(-29.9)
         )
 
     "
@@ -7680,9 +7680,9 @@ to Tokyo + JSLD69 height (Compound)
 
         $point->geographic2DWithHeightOffsets(
             to: Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT),
-            latitudeOffset: new ArcSecond(7.92),
-            longitudeOffset: new ArcSecond(-13.88),
-            geoidUndulation: new Metre(26.1)
+            latitudeOffset: new ArcSecond(-7.92),
+            longitudeOffset: new ArcSecond(13.88),
+            geoidUndulation: new Metre(-26.1)
         )
 
     "

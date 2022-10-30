@@ -6,8 +6,5 @@
  */
 declare(strict_types=1);
 /** @internal */ return [
-  'offsetsFile' => [
-    'reverses' => true,
-    'fileProvider' => 'PHPCoord\\CoordinateOperation\\GUGiKHeightEVRF2007Baltic1986PolandProvider',
-  ],
+  'offsetsFile' => 'PHPCoord\\CoordinateOperation\\GUGiKHeightEVRF2007Baltic1986PolandProvider',
 ];

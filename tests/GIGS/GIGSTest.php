@@ -537,51 +537,39 @@ class GIGSTest extends TestCase
             $this->makeParamName($param1Name) => [
                 'value' => $param1Value !== 'NULL' ? $param1Value : null,
                 'uom' => $uoms[$param1Unit],
-                'reverses' => false,
             ],
             $this->makeParamName($param2Name) => [
                 'value' => $param2Value !== 'NULL' ? $param2Value : null,
                 'uom' => $uoms[$param2Unit],
-                'reverses' => false,
             ],
             $this->makeParamName($param3Name) => [
                 'value' => $param3Value !== 'NULL' ? $param3Value : null,
                 'uom' => $uoms[$param3Unit],
-                'reverses' => false,
             ],
             $this->makeParamName($param4Name) => [
                 'value' => $param4Value !== 'NULL' ? $param4Value : null,
                 'uom' => $uoms[$param4Unit],
-                'reverses' => false,
             ],
             $this->makeParamName($param5Name) => [
                 'value' => $param5Value !== 'NULL' ? $param5Value : null,
                 'uom' => $uoms[$param5Unit],
-                'reverses' => false,
             ],
             $this->makeParamName($param6Name) => [
                 'value' => $param6Value !== 'NULL' ? $param6Value : null,
                 'uom' => $uoms[$param6Unit],
-                'reverses' => false,
             ],
             $this->makeParamName($param7Name) => [
                 'value' => $param7Value !== 'NULL' ? $param7Value : null,
                 'uom' => $uoms[$param7Unit],
-                'reverses' => false,
             ],
         ];
 
         $params = array_filter($params, fn ($param) => $param['value'] !== null);
         $params = array_map(
-            static function ($param) {
-                $param['value'] = UnitOfMeasureFactory::makeUnit(
-                    $param['uom'] === Angle::EPSG_SEXAGESIMAL_DMS ? $param['value'] : (float) $param['value'],
-                    $param['uom']
-                );
-                unset($param['uom']);
-
-                return $param;
-            },
+            fn ($param) => UnitOfMeasureFactory::makeUnit(
+                $param['uom'] === Angle::EPSG_SEXAGESIMAL_DMS ? $param['value'] : (float) $param['value'],
+                $param['uom']
+            ),
             $params
         );
 
@@ -670,73 +658,60 @@ class GIGSTest extends TestCase
             $this->makeParamName($param1Name) => [
                 'value' => $param1Value !== 'NULL' ? $param1Value : null,
                 'uom' => $uoms[$param1Unit],
-                'reverses' => true,
             ],
             $this->makeParamName($param2Name) => [
                 'value' => $param2Value !== 'NULL' ? $param2Value : null,
                 'uom' => $uoms[$param2Unit],
-                'reverses' => true,
             ],
             $this->makeParamName($param3Name) => [
                 'value' => $param3Value !== 'NULL' ? $param3Value : null,
                 'uom' => $uoms[$param3Unit],
-                'reverses' => true,
             ],
             $this->makeParamName($param4Name) => [
                 'value' => $param4Value !== 'NULL' ? $param4Value : null,
                 'uom' => $uoms[$param4Unit],
-                'reverses' => true,
             ],
             $this->makeParamName($param5Name) => [
                 'value' => $param5Value !== 'NULL' ? $param5Value : null,
                 'uom' => $uoms[$param5Unit],
-                'reverses' => true,
             ],
             $this->makeParamName($param6Name) => [
                 'value' => $param6Value !== 'NULL' ? $param6Value : null,
                 'uom' => $uoms[$param6Unit],
-                'reverses' => true,
             ],
             $this->makeParamName($param7Name) => [
                 'value' => $param7Value !== 'NULL' ? $param7Value : null,
                 'uom' => $uoms[$param7Unit],
-                'reverses' => true,
             ],
             $this->makeParamName($param8Name) => [
                 'value' => $param8Value !== 'NULL' ? $param8Value : null,
                 'uom' => $uoms[$param8Unit],
-                'reverses' => true,
             ],
             $this->makeParamName($param9Name) => [
                 'value' => $param9Value !== 'NULL' ? $param9Value : null,
                 'uom' => $uoms[$param9Unit],
-                'reverses' => true,
             ],
             $this->makeParamName($param10Name) => [
                 'value' => $param10Value !== 'NULL' ? $param10Value : null,
                 'uom' => $uoms[$param10Unit],
-                'reverses' => true,
             ],
         ];
 
         $params = array_filter($params, fn ($param) => $param['value'] !== null);
         foreach ($params as $paramName => $param) {
             if (str_contains($paramName, 'File')) {
-                $params[$paramName]['fileProvider'] = match ($param['value']) {
+                $params[$paramName] = match ($param['value']) {
                     'QUE27-98.gsb' => NTv2NAD27NAD83CSRS1997QuebecProvider::class,
                     default => 'Unsupported',
                 };
-                if (!class_exists($params[$paramName]['fileProvider'])) {
+                if (!class_exists($params[$paramName])) {
                     $this->markTestSkipped('Unsupported file');
                 }
-                unset($params[$paramName]['value']);
-                unset($params[$paramName]['uom']);
             } else {
-                $params[$paramName]['value'] = UnitOfMeasureFactory::makeUnit(
+                $params[$paramName] = UnitOfMeasureFactory::makeUnit(
                     $param['uom'] === Angle::EPSG_SEXAGESIMAL_DMS ? $param['value'] : (float) $param['value'],
                     $param['uom']
                 );
-                unset($params[$paramName]['uom']);
             }
         }
 
@@ -837,37 +812,31 @@ class GIGSTest extends TestCase
                 $this->makeParamName($param1Name) => [
                     'value' => $param1Value !== 'NULL' ? $param1Value : null,
                     'uom' => $uoms[$param1Unit],
-                    'reverses' => true,
                 ],
                 $this->makeParamName($param2Name) => [
                     'value' => $param2Value !== 'NULL' ? $param2Value : null,
                     'uom' => $uoms[$param2Unit],
-                    'reverses' => true,
                 ],
                 $this->makeParamName($param3Name) => [
                     'value' => $param3Value !== 'NULL' ? $param3Value : null,
                     'uom' => $uoms[$param3Unit],
-                    'reverses' => true,
                 ],
                 $this->makeParamName($param4Name) => [
                     'value' => $param4Value !== 'NULL' ? $param4Value : null,
                     'uom' => $uoms[$param4Unit],
-                    'reverses' => true,
                 ],
                 $this->makeParamName($param5Name) => [
                     'value' => $param5Value !== 'NULL' ? $param5Value : null,
                     'uom' => $uoms[$param5Unit],
-                    'reverses' => true,
                 ],
             ];
 
             $params = array_filter($params, fn ($param) => $param['value'] !== null);
             foreach ($params as $name => $param) {
-                $params[$name]['value'] = UnitOfMeasureFactory::makeUnit(
+                $params[$name] = UnitOfMeasureFactory::makeUnit(
                     $param['uom'] === Angle::EPSG_SEXAGESIMAL_DMS ? $param['value'] : (float) $param['value'],
                     $param['uom']
                 );
-                unset($params[$name]['uom']);
             }
 
             $method = match ($methodName) {

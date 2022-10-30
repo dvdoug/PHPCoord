@@ -17,6 +17,7 @@ use PHPCoord\CoordinateOperation\GeographicGeoidHeightGrid;
 use PHPCoord\CoordinateOperation\OSTNOSGM15Grid;
 use PHPCoord\CoordinateReferenceSystem\Compound;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
+use PHPCoord\CoordinateReferenceSystem\Geocentric;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Geographic3D;
 use PHPCoord\CoordinateReferenceSystem\Projected;
@@ -116,7 +117,7 @@ class CompoundPoint extends Point implements ConvertiblePoint
         }
     }
 
-    public function convert(CoordinateReferenceSystem $to, bool $ignoreBoundaryRestrictions = false): Point
+    public function convert(Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $to, bool $ignoreBoundaryRestrictions = false): Point
     {
         try {
             return $this->autoConvert($to, $ignoreBoundaryRestrictions);

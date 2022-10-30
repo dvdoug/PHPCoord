@@ -22,7 +22,7 @@ class PrettyPrintDataVisitor extends NodeVisitorAbstract
     public function enterNode(Node $node)
     {
         if ($node instanceof Node\Expr\ArrayItem) {
-            if ($node->key && in_array($node->key->value, $this->singleLineKeys, true)) {
+            if ($node->key && isset($node->key->value) && in_array($node->key->value, $this->singleLineKeys, true)) {
                 $this->multiLine = false;
             }
         }
@@ -34,7 +34,7 @@ class PrettyPrintDataVisitor extends NodeVisitorAbstract
     public function leaveNode(Node $node)
     {
         if ($node instanceof Node\Expr\ArrayItem) {
-            if ($node->key && in_array($node->key->value, $this->singleLineKeys, true)) {
+            if ($node->key && isset($node->key->value) && in_array($node->key->value, $this->singleLineKeys, true)) {
                 $this->multiLine = true;
             }
         }

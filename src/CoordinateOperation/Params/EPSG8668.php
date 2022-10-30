@@ -6,16 +6,7 @@
  */
 declare(strict_types=1);
 /** @internal */ return [
-  'latitudeDifferenceFile' => [
-    'reverses' => true,
-    'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5PR40NAD831986PRVILatitudeProvider',
-  ],
-  'longitudeDifferenceFile' => [
-    'reverses' => true,
-    'fileProvider' => 'PHPCoord\\CoordinateOperation\\NADCON5PR40NAD831986PRVILongitudeProvider',
-  ],
-  'ellipsoidalHeightDifferenceFile' => [
-    'reverses' => false,
-    'value' => null,
-  ],
+  'latitudeDifferenceFile' => 'PHPCoord\\CoordinateOperation\\NADCON5PR40NAD831986PRVILatitudeProvider',
+  'longitudeDifferenceFile' => 'PHPCoord\\CoordinateOperation\\NADCON5PR40NAD831986PRVILongitudeProvider',
+  'ellipsoidalHeightDifferenceFile' => null,
 ];

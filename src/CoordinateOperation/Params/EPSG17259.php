@@ -8,28 +8,10 @@ declare(strict_types=1);
 use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
 
 /** @internal */ return [
-  'latitudeOfFalseOrigin' => [
-    'reverses' => false,
-    'value' => UnitOfMeasureFactory::makeUnit(-90.0, 'urn:ogc:def:uom:EPSG::9102'),
-  ],
-  'longitudeOfFalseOrigin' => [
-    'reverses' => false,
-    'value' => UnitOfMeasureFactory::makeUnit(171.0, 'urn:ogc:def:uom:EPSG::9102'),
-  ],
-  'latitudeOf1stStandardParallel' => [
-    'reverses' => false,
-    'value' => UnitOfMeasureFactory::makeUnit(-72.4, 'urn:ogc:def:uom:EPSG::9110'),
-  ],
-  'latitudeOf2ndStandardParallel' => [
-    'reverses' => false,
-    'value' => UnitOfMeasureFactory::makeUnit(-75.2, 'urn:ogc:def:uom:EPSG::9110'),
-  ],
-  'eastingAtFalseOrigin' => [
-    'reverses' => false,
-    'value' => UnitOfMeasureFactory::makeUnit(0.0, 'urn:ogc:def:uom:EPSG::9001'),
-  ],
-  'northingAtFalseOrigin' => [
-    'reverses' => false,
-    'value' => UnitOfMeasureFactory::makeUnit(0.0, 'urn:ogc:def:uom:EPSG::9001'),
-  ],
+  'latitudeOfFalseOrigin' => UnitOfMeasureFactory::makeUnit(-90.0, 'urn:ogc:def:uom:EPSG::9102'),
+  'longitudeOfFalseOrigin' => UnitOfMeasureFactory::makeUnit(171.0, 'urn:ogc:def:uom:EPSG::9102'),
+  'latitudeOf1stStandardParallel' => UnitOfMeasureFactory::makeUnit(-72.4, 'urn:ogc:def:uom:EPSG::9110'),
+  'latitudeOf2ndStandardParallel' => UnitOfMeasureFactory::makeUnit(-75.2, 'urn:ogc:def:uom:EPSG::9110'),
+  'eastingAtFalseOrigin' => UnitOfMeasureFactory::makeUnit(0.0, 'urn:ogc:def:uom:EPSG::9001'),
+  'northingAtFalseOrigin' => UnitOfMeasureFactory::makeUnit(0.0, 'urn:ogc:def:uom:EPSG::9001'),
 ];

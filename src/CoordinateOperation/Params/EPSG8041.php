@@ -8,20 +8,8 @@ declare(strict_types=1);
 use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
 
 /** @internal */ return [
-  'latitudeOfNaturalOrigin' => [
-    'reverses' => false,
-    'value' => UnitOfMeasureFactory::makeUnit(48.123154, 'urn:ogc:def:uom:EPSG::9110'),
-  ],
-  'longitudeOfNaturalOrigin' => [
-    'reverses' => false,
-    'value' => UnitOfMeasureFactory::makeUnit(34.022732, 'urn:ogc:def:uom:EPSG::9110'),
-  ],
-  'falseEasting' => [
-    'reverses' => false,
-    'value' => UnitOfMeasureFactory::makeUnit(0.0, 'urn:ogc:def:uom:EPSG::9001'),
-  ],
-  'falseNorthing' => [
-    'reverses' => false,
-    'value' => UnitOfMeasureFactory::makeUnit(0.0, 'urn:ogc:def:uom:EPSG::9001'),
-  ],
+  'latitudeOfNaturalOrigin' => UnitOfMeasureFactory::makeUnit(48.123154, 'urn:ogc:def:uom:EPSG::9110'),
+  'longitudeOfNaturalOrigin' => UnitOfMeasureFactory::makeUnit(34.022732, 'urn:ogc:def:uom:EPSG::9110'),
+  'falseEasting' => UnitOfMeasureFactory::makeUnit(0.0, 'urn:ogc:def:uom:EPSG::9001'),
+  'falseNorthing' => UnitOfMeasureFactory::makeUnit(0.0, 'urn:ogc:def:uom:EPSG::9001'),
 ];

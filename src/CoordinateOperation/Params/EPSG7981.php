@@ -8,8 +8,5 @@ declare(strict_types=1);
 use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
 
 /** @internal */ return [
-  'verticalOffset' => [
-    'reverses' => true,
-    'value' => UnitOfMeasureFactory::makeUnit(-4.25, 'urn:ogc:def:uom:EPSG::9001'),
-  ],
+  'verticalOffset' => UnitOfMeasureFactory::makeUnit(-4.25, 'urn:ogc:def:uom:EPSG::9001'),
 ];
