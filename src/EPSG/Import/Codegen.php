@@ -56,6 +56,7 @@ use function implode;
 use function asort;
 use function array_map;
 use function class_exists;
+use function str_ends_with;
 
 use const PHP_EOL;
 
