@@ -21,7 +21,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4176',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19992',
@@ -29,7 +28,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3031',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19993',
@@ -37,7 +35,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3032',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19994',
@@ -45,7 +42,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3033',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17204',
@@ -53,7 +49,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3204',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17205',
@@ -61,7 +56,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3205',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17206',
@@ -69,7 +63,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3206',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17207',
@@ -77,7 +70,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3207',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17208',
@@ -85,7 +77,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3208',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17209',
@@ -93,7 +84,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3209',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17210',
@@ -101,7 +91,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3210',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17211',
@@ -109,7 +98,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3211',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17212',
@@ -117,7 +105,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3212',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17213',
@@ -125,7 +112,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3213',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17214',
@@ -133,7 +119,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3214',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17215',
@@ -141,7 +126,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3215',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17216',
@@ -149,7 +133,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3216',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17217',
@@ -157,7 +140,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3217',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17218',
@@ -165,7 +147,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3218',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17219',
@@ -173,7 +154,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3219',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17220',
@@ -181,7 +161,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3220',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17221',
@@ -189,7 +168,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3221',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17222',
@@ -197,7 +175,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3222',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17223',
@@ -205,7 +182,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3223',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17224',
@@ -213,7 +189,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3224',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17225',
@@ -221,7 +196,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3225',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17226',
@@ -229,7 +203,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3226',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17227',
@@ -237,7 +210,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3227',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17228',
@@ -245,7 +217,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3228',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17229',
@@ -253,7 +224,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3229',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17230',
@@ -261,7 +231,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3230',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17231',
@@ -269,7 +238,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3231',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17232',
@@ -277,7 +245,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3232',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17233',
@@ -285,7 +252,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3233',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17234',
@@ -293,7 +259,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3234',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17235',
@@ -301,7 +266,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3235',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17236',
@@ -309,7 +273,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3236',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17237',
@@ -317,7 +280,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3237',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17238',
@@ -325,7 +287,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3238',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17239',
@@ -333,7 +294,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3239',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17240',
@@ -341,7 +301,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3240',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17241',
@@ -349,7 +308,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3241',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17242',
@@ -357,7 +315,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3242',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17243',
@@ -365,7 +322,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3243',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17244',
@@ -373,7 +329,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3244',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17245',
@@ -381,7 +336,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3245',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17246',
@@ -389,7 +343,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3246',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17247',
@@ -397,7 +350,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3247',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17248',
@@ -405,7 +357,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3248',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17249',
@@ -413,7 +364,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3249',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17250',
@@ -421,7 +371,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3250',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17251',
@@ -429,7 +378,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3251',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17252',
@@ -437,7 +385,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3252',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17253',
@@ -445,7 +392,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3253',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17254',
@@ -453,7 +399,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3254',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17255',
@@ -461,7 +406,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3255',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17256',
@@ -469,7 +413,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3256',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17257',
@@ -477,7 +420,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3257',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17258',
@@ -485,7 +427,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3258',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17259',
@@ -493,7 +434,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3259',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17260',
@@ -501,7 +441,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3260',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17261',
@@ -509,7 +448,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3261',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17262',
@@ -517,7 +455,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3262',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17263',
@@ -525,7 +462,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3263',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17264',
@@ -533,7 +469,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3264',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17265',
@@ -541,7 +476,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3265',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17266',
@@ -549,7 +483,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3266',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17267',
@@ -557,7 +490,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3267',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17268',
@@ -565,7 +497,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3268',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17269',
@@ -573,7 +504,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3269',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17270',
@@ -581,7 +511,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3270',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17271',
@@ -589,7 +518,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3271',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17272',
@@ -597,7 +525,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3272',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17273',
@@ -605,7 +532,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3273',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17274',
@@ -613,7 +539,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3274',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17275',
@@ -621,7 +546,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3275',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17276',
@@ -629,7 +553,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3276',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17277',
@@ -637,7 +560,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3277',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17278',
@@ -645,7 +567,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3278',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17279',
@@ -653,7 +574,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3279',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17280',
@@ -661,7 +581,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3280',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17281',
@@ -669,7 +588,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3281',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17282',
@@ -677,7 +595,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3282',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17283',
@@ -685,7 +602,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3283',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17284',
@@ -693,7 +609,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3284',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17285',
@@ -701,7 +616,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3285',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17286',
@@ -709,7 +623,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3286',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17287',
@@ -717,7 +630,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3287',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17288',
@@ -725,7 +637,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3288',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17289',
@@ -733,7 +644,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3289',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17290',
@@ -741,7 +651,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3290',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17291',
@@ -749,7 +658,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3291',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17292',
@@ -757,7 +665,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3292',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17293',
@@ -765,7 +672,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3293',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17294',
@@ -773,7 +679,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3294',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19854',
@@ -781,7 +686,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3762',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19983',
@@ -789,7 +693,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4636',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2985',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1921',
@@ -797,7 +700,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4636',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 10.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19983',
@@ -805,7 +707,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4637',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2986',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1922',
@@ -813,7 +714,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4637',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 10.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7083',
@@ -821,7 +721,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4637',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7073',
             'accuracy' => 0.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15802',
@@ -829,7 +728,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4715',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 999.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15813',
@@ -837,7 +735,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4722',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 44.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15812',
@@ -845,7 +742,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4736',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 35.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17966',
@@ -853,7 +749,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4764',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3852',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15974',
@@ -861,7 +756,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4764',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5475',
@@ -869,7 +763,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4764',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5479',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5476',
@@ -877,7 +770,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4764',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5480',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5477',
@@ -885,7 +777,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4764',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5481',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5478',
@@ -893,7 +784,6 @@ class CRSTransformationsAntarctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4764',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5482',
             'accuracy' => 0,
-            'reversible' => true,
         ],
     ];
 

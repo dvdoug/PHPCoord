@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace PHPCoord;
 
 use DateTime;
+use PHPCoord\CoordinateOperation\CoordinateOperationMethods;
 use PHPCoord\CoordinateOperation\CoordinateOperations;
 use PHPCoord\CoordinateOperation\CRSTransformationsAfrica;
 use PHPCoord\CoordinateOperation\CRSTransformationsAntarctic;
@@ -38,9 +39,10 @@ class GeographicPoint2DTest extends TestCase
      * @group integration
      * @dataProvider supportedOperations
      */
-    public function testOperations(string $sourceCrsSrid, string $targetCrsSrid, string $operationSrid, bool $reversible): void
+    public function testOperations(string $sourceCrsSrid, string $targetCrsSrid, string $operationSrid): void
     {
         $operation = CoordinateOperations::getOperationData($operationSrid);
+        $method = CoordinateOperationMethods::getMethodData($operation['method']);
         $operationExtent = BoundingArea::createFromExtentCodes($operation['extent']);
         $centre = $operationExtent->getPointInside();
 
@@ -56,7 +58,7 @@ class GeographicPoint2DTest extends TestCase
         self::assertInstanceOf(Point::class, $newPoint);
         self::assertEquals($targetCRS, $newPoint->getCRS());
 
-        if ($reversible) {
+        if ($method['reversible']) {
             $reversedPoint = $newPoint->performOperation($operationSrid, $sourceCRS, true);
 
             self::assertEquals($sourceCRS, $reversedPoint->getCRS());
@@ -89,7 +91,6 @@ class GeographicPoint2DTest extends TestCase
                         $transformation['source_crs'],
                         $transformation['target_crs'],
                         $transformation['operation'],
-                        $transformation['reversible'],
                     ];
                 }
             }

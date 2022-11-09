@@ -1514,6 +1514,7 @@ class EPSGCodegenFromDataImport
                 'urn:ogc:def:method:EPSG::' || m.coord_op_method_code AS urn,
                 m.coord_op_method_code AS method_code,
                 m.coord_op_method_name AS name,
+                m.reverse_op AS reversible,
                 m.remarks AS constant_help,
                 m.remarks AS doc_help,
                 m.deprecated
@@ -1531,6 +1532,7 @@ class EPSGCodegenFromDataImport
         $result = $this->sqlite->query($sql);
         $data = [];
         while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            $row['reversible'] = (bool) $row['reversible'];
             $data[$row['urn']] = $row;
             $data[$row['urn']]['paramData'] = [];
             unset($data[$row['urn']]['urn'], $data[$row['urn']]['method_code']);
@@ -1579,7 +1581,6 @@ class EPSGCodegenFromDataImport
                 'urn:ogc:def:crs:EPSG::' || o.target_crs_code AS target_crs,
                 COALESCE(o.coord_op_accuracy, 0) AS accuracy,
                 GROUP_CONCAT(DISTINCT e.extent_code) AS extent,
-                m.reverse_op AS reversible,
                 '' AS doc_help
             FROM epsg_coordoperation o
             JOIN epsg_coordoperationmethod m ON m.coord_op_method_code = o.coord_op_method_code
@@ -1604,7 +1605,6 @@ class EPSGCodegenFromDataImport
                 'urn:ogc:def:crs:EPSG::' || projcrs.coord_ref_sys_code AS target_crs,
                 COALESCE(o.coord_op_accuracy, 0) AS accuracy,
                 GROUP_CONCAT(DISTINCT e.extent_code) AS extent,
-                m.reverse_op AS reversible,
                 '' AS doc_help
             FROM epsg_coordoperation o
             JOIN epsg_coordinatereferencesystem projcrs ON projcrs.projection_conv_code = o.coord_op_code AND projcrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND projcrs.deprecated = 0
@@ -1628,7 +1628,6 @@ class EPSGCodegenFromDataImport
             $regions = array_unique(array_map(static fn ($extent) => $regionMap[$extent], $extents));
             assert(count($regions) === 1);
             unset($row['extent']);
-            $row['reversible'] = (bool) $row['reversible'];
             $byRegion[$regions[0]][] = $row;
         }
 

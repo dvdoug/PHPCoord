@@ -10,6 +10,7 @@ namespace PHPCoord;
 
 use DateTime;
 use DateTimeImmutable;
+use PHPCoord\CoordinateOperation\CoordinateOperationMethods;
 use PHPCoord\CoordinateOperation\CoordinateOperations;
 use PHPCoord\CoordinateOperation\CRSTransformationsAfrica;
 use PHPCoord\CoordinateOperation\CRSTransformationsAntarctic;
@@ -194,10 +195,13 @@ class VerticalPointTest extends TestCase
      * @group integration
      * @dataProvider supportedOperations
      */
-    public function testOperations(string $sourceCrsSrid, string $targetCrsSrid, string $operationSrid, bool $reversible): void
+    public function testOperations(string $sourceCrsSrid, string $targetCrsSrid, string $operationSrid): void
     {
         $sourceCRS = Vertical::fromSRID($sourceCrsSrid);
         $targetCRS = Vertical::fromSRID($targetCrsSrid);
+
+        $operation = CoordinateOperations::getOperationData($operationSrid);
+        $method = CoordinateOperationMethods::getMethodData($operation['method']);
         $operationExtent = BoundingArea::createFromExtentCodes(CoordinateOperations::getOperationData($operationSrid)['extent']);
 
         $epoch = new DateTime();
@@ -210,7 +214,7 @@ class VerticalPointTest extends TestCase
         self::assertInstanceOf(Point::class, $newPoint);
         self::assertEquals($targetCRS, $newPoint->getCRS());
 
-        if ($reversible) {
+        if ($method['reversible']) {
             $reversedPoint = $newPoint->performOperation($operationSrid, $sourceCRS, true, ['horizontalPoint' => $horizontalPoint]);
 
             self::assertEquals($sourceCRS, $reversedPoint->getCRS());
@@ -237,7 +241,6 @@ class VerticalPointTest extends TestCase
                         $transformation['source_crs'],
                         $transformation['target_crs'],
                         $transformation['operation'],
-                        $transformation['reversible'],
                     ];
                 }
             }

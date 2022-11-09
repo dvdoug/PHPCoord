@@ -21,7 +21,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::3821',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3827',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::3820',
@@ -29,7 +28,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::3821',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3828',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::3818',
@@ -37,7 +35,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::3824',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3825',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::3820',
@@ -45,7 +42,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::3824',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3826',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::3830',
@@ -53,7 +49,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::3824',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::3894',
@@ -61,7 +56,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::3889',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16506',
@@ -69,7 +63,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4131',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3176',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1541',
@@ -77,7 +70,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4131',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'accuracy' => 25.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1542',
@@ -85,7 +77,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4131',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 44.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1543',
@@ -93,7 +84,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4131',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 44.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19906',
@@ -101,7 +91,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4132',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3200',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1513',
@@ -109,7 +98,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4132',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 0.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1854',
@@ -117,7 +105,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4132',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 0.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1855',
@@ -125,7 +112,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4132',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 0.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1616',
@@ -133,7 +119,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4134',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'accuracy' => 1.2,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1439',
@@ -141,7 +126,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4134',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 0.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1617',
@@ -149,7 +133,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4134',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 0.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18204',
@@ -157,7 +140,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4141',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2039',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9676',
@@ -165,7 +147,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4141',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 0.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18238',
@@ -173,7 +154,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4144',
             'target_crs' => 'urn:ogc:def:crs:EPSG::24375',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1155',
@@ -181,7 +161,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4144',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 18.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1533',
@@ -189,7 +168,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4144',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 5.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18236',
@@ -197,7 +175,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4145',
             'target_crs' => 'urn:ogc:def:crs:EPSG::24376',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18237',
@@ -205,7 +182,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4145',
             'target_crs' => 'urn:ogc:def:crs:EPSG::24377',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15494',
@@ -213,7 +189,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4145',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 3.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15701',
@@ -221,7 +196,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4145',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15702',
@@ -229,7 +203,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4145',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 3.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15703',
@@ -237,7 +210,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4145',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 3.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9234',
@@ -245,7 +217,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4145',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 3.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18231',
@@ -253,7 +224,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4146',
             'target_crs' => 'urn:ogc:def:crs:EPSG::24378',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18232',
@@ -261,7 +231,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4146',
             'target_crs' => 'urn:ogc:def:crs:EPSG::24379',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18235',
@@ -269,7 +238,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4146',
             'target_crs' => 'urn:ogc:def:crs:EPSG::24380',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18233',
@@ -277,7 +245,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4146',
             'target_crs' => 'urn:ogc:def:crs:EPSG::24381',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18234',
@@ -285,7 +252,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4146',
             'target_crs' => 'urn:ogc:def:crs:EPSG::24383',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16586',
@@ -293,7 +259,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4147',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2093',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1544',
@@ -301,7 +266,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4147',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 5.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19951',
@@ -309,7 +273,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4153',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2057',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1512',
@@ -317,7 +280,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4153',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 0.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1141',
@@ -325,7 +287,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4154',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 19.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1514',
@@ -333,7 +294,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4154',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15745',
@@ -341,7 +301,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4154',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 0.2,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1856',
@@ -349,7 +308,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4154',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 0.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1857',
@@ -357,7 +315,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4154',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 0.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1858',
@@ -365,7 +322,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4154',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 0.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18251',
@@ -373,7 +329,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4162',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2096',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18252',
@@ -381,7 +336,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4162',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2097',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18253',
@@ -389,7 +343,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4162',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2098',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5189',
@@ -397,7 +350,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4162',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4737',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5049',
@@ -405,7 +357,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4162',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5167',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5131',
@@ -413,7 +364,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4162',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5168',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5161',
@@ -421,7 +371,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4162',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5173',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5162',
@@ -429,7 +378,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4162',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5174',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5163',
@@ -437,7 +385,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4162',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5175',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5164',
@@ -445,7 +392,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4162',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5176',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5165',
@@ -453,7 +399,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4162',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5177',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5100',
@@ -461,7 +406,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4162',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5178',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1540',
@@ -469,7 +413,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4163',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1539',
@@ -477,7 +420,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4164',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4163',
             'accuracy' => 5.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1558',
@@ -485,7 +427,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4166',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 2.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19900',
@@ -493,7 +434,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4204',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20499',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19977',
@@ -501,7 +441,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4204',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2318',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1057',
@@ -509,7 +448,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4204',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1058',
@@ -517,7 +455,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4204',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1110',
@@ -525,7 +462,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4204',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 44.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1111',
@@ -533,7 +469,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4204',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 18.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8824',
@@ -541,7 +476,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4204',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8818',
             'accuracy' => 5.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9362',
@@ -549,7 +483,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4204',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9333',
             'accuracy' => 2.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16709',
@@ -557,7 +490,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4211',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2308',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19905',
@@ -565,7 +497,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4211',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3001',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8452',
@@ -573,7 +504,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4211',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 6.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15918',
@@ -581,7 +511,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15919',
@@ -589,7 +518,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 15.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15920',
@@ -597,7 +525,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 15.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15921',
@@ -605,7 +532,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15935',
@@ -613,7 +539,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 10.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15936',
@@ -621,7 +546,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1126',
@@ -629,7 +553,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4219',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 999.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19940',
@@ -637,7 +560,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4227',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22700',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19948',
@@ -645,7 +567,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4227',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22770',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19949',
@@ -653,7 +574,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4227',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22780',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1584',
@@ -661,7 +581,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4227',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'accuracy' => 5.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15742',
@@ -669,7 +588,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4227',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 5.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15743',
@@ -677,7 +595,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4227',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 0.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1587',
@@ -685,7 +602,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4227',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19995',
@@ -693,7 +609,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4230',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3066',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19907',
@@ -701,7 +616,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4230',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3893',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1087',
@@ -709,7 +623,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4230',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 2.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1135',
@@ -717,7 +630,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4230',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 999.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6908',
@@ -725,7 +637,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4232',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 7.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1152',
@@ -733,7 +644,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4236',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 26.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15911',
@@ -741,7 +651,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4238',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4755',
             'accuracy' => 3.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1153',
@@ -749,7 +658,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4239',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 21.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1304',
@@ -757,7 +665,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4240',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 5.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1812',
@@ -765,7 +672,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4240',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 3.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18110',
@@ -773,7 +679,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4243',
             'target_crs' => 'urn:ogc:def:crs:EPSG::24370',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18111',
@@ -781,7 +686,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4243',
             'target_crs' => 'urn:ogc:def:crs:EPSG::24371',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18112',
@@ -789,7 +693,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4243',
             'target_crs' => 'urn:ogc:def:crs:EPSG::24372',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18114',
@@ -797,7 +700,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4243',
             'target_crs' => 'urn:ogc:def:crs:EPSG::24373',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18116',
@@ -805,7 +707,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4243',
             'target_crs' => 'urn:ogc:def:crs:EPSG::24374',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18113',
@@ -813,7 +714,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4243',
             'target_crs' => 'urn:ogc:def:crs:EPSG::24382',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1157',
@@ -821,7 +721,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4244',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 35.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5231',
@@ -829,7 +728,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4244',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5234',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19920',
@@ -837,7 +735,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4245',
             'target_crs' => 'urn:ogc:def:crs:EPSG::24500',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1158',
@@ -845,7 +742,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4245',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 15.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4114',
@@ -853,7 +749,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4245',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4390',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4115',
@@ -861,7 +756,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4245',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4391',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4116',
@@ -869,7 +763,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4245',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4392',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4117',
@@ -877,7 +770,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4245',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4393',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4177',
@@ -885,7 +777,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4245',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4394',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4305',
@@ -893,7 +784,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4245',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4395',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4320',
@@ -901,7 +791,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4245',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4396',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4321',
@@ -909,7 +798,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4245',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4397',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4323',
@@ -917,7 +805,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4245',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4398',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19906',
@@ -925,7 +812,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4246',
             'target_crs' => 'urn:ogc:def:crs:EPSG::24600',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1059',
@@ -933,7 +819,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4246',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18171',
@@ -941,7 +826,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4253',
             'target_crs' => 'urn:ogc:def:crs:EPSG::25391',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18172',
@@ -949,7 +833,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4253',
             'target_crs' => 'urn:ogc:def:crs:EPSG::25392',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18173',
@@ -957,7 +840,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4253',
             'target_crs' => 'urn:ogc:def:crs:EPSG::25393',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18174',
@@ -965,7 +847,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4253',
             'target_crs' => 'urn:ogc:def:crs:EPSG::25394',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18175',
@@ -973,7 +854,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4253',
             'target_crs' => 'urn:ogc:def:crs:EPSG::25395',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1161',
@@ -981,7 +861,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4253',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 17.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1162',
@@ -989,7 +868,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4253',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 44.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1246',
@@ -997,7 +875,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4255',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 999.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19905',
@@ -1005,7 +882,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4257',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3002',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1837',
@@ -1013,7 +889,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4257',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 999.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1190',
@@ -1021,7 +896,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4270',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 35.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1191',
@@ -1029,7 +903,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4270',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 44.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1531',
@@ -1037,7 +910,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4270',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 0.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15953',
@@ -1045,7 +917,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4270',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 5.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6999',
@@ -1053,7 +924,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4270',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 0.15,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18201',
@@ -1061,7 +931,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4281',
             'target_crs' => 'urn:ogc:def:crs:EPSG::28191',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18202',
@@ -1069,7 +938,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4281',
             'target_crs' => 'urn:ogc:def:crs:EPSG::28192',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18203',
@@ -1077,7 +945,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4281',
             'target_crs' => 'urn:ogc:def:crs:EPSG::28193',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1071',
@@ -1085,7 +952,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4281',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4141',
             'accuracy' => 1.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1074',
@@ -1093,7 +959,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4281',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 2.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7141',
@@ -1101,7 +966,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4281',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7142',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19919',
@@ -1109,7 +973,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4285',
             'target_crs' => 'urn:ogc:def:crs:EPSG::28600',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1563',
@@ -1117,7 +980,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4285',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19953',
@@ -1125,7 +987,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4286',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2099',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19956',
@@ -1133,7 +994,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4298',
             'target_crs' => 'urn:ogc:def:crs:EPSG::29871',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19957',
@@ -1141,7 +1001,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4298',
             'target_crs' => 'urn:ogc:def:crs:EPSG::29872',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19958',
@@ -1149,7 +1008,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4298',
             'target_crs' => 'urn:ogc:def:crs:EPSG::29873',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19838',
@@ -1157,7 +1015,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4298',
             'target_crs' => 'urn:ogc:def:crs:EPSG::29874',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5878',
@@ -1165,7 +1022,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4298',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5246',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17801',
@@ -1173,7 +1029,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4301',
             'target_crs' => 'urn:ogc:def:crs:EPSG::30161',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17802',
@@ -1181,7 +1036,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4301',
             'target_crs' => 'urn:ogc:def:crs:EPSG::30162',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17803',
@@ -1189,7 +1043,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4301',
             'target_crs' => 'urn:ogc:def:crs:EPSG::30163',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17804',
@@ -1197,7 +1050,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4301',
             'target_crs' => 'urn:ogc:def:crs:EPSG::30164',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17805',
@@ -1205,7 +1057,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4301',
             'target_crs' => 'urn:ogc:def:crs:EPSG::30165',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17806',
@@ -1213,7 +1064,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4301',
             'target_crs' => 'urn:ogc:def:crs:EPSG::30166',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17807',
@@ -1221,7 +1071,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4301',
             'target_crs' => 'urn:ogc:def:crs:EPSG::30167',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17808',
@@ -1229,7 +1078,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4301',
             'target_crs' => 'urn:ogc:def:crs:EPSG::30168',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17809',
@@ -1237,7 +1085,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4301',
             'target_crs' => 'urn:ogc:def:crs:EPSG::30169',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17810',
@@ -1245,7 +1092,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4301',
             'target_crs' => 'urn:ogc:def:crs:EPSG::30170',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17811',
@@ -1253,7 +1099,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4301',
             'target_crs' => 'urn:ogc:def:crs:EPSG::30171',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17812',
@@ -1261,7 +1106,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4301',
             'target_crs' => 'urn:ogc:def:crs:EPSG::30172',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17813',
@@ -1269,7 +1113,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4301',
             'target_crs' => 'urn:ogc:def:crs:EPSG::30173',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17814',
@@ -1277,7 +1120,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4301',
             'target_crs' => 'urn:ogc:def:crs:EPSG::30174',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17815',
@@ -1285,7 +1127,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4301',
             'target_crs' => 'urn:ogc:def:crs:EPSG::30175',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17816',
@@ -1293,7 +1134,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4301',
             'target_crs' => 'urn:ogc:def:crs:EPSG::30176',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17817',
@@ -1301,7 +1141,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4301',
             'target_crs' => 'urn:ogc:def:crs:EPSG::30177',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17818',
@@ -1309,7 +1148,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4301',
             'target_crs' => 'urn:ogc:def:crs:EPSG::30178',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17819',
@@ -1317,7 +1155,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4301',
             'target_crs' => 'urn:ogc:def:crs:EPSG::30179',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1231',
@@ -1325,7 +1162,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4301',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 13.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1233',
@@ -1333,7 +1169,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4301',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 29.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1305',
@@ -1341,7 +1176,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4301',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 4.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15483',
@@ -1349,7 +1183,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4301',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4612',
             'accuracy' => 9.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6712',
@@ -1357,7 +1190,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4301',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4612',
             'accuracy' => 0.2,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6740',
@@ -1365,7 +1197,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4301',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6668',
             'accuracy' => 0.2,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1060',
@@ -1373,7 +1204,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19997',
@@ -1381,7 +1211,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4319',
             'target_crs' => 'urn:ogc:def:crs:EPSG::31901',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1062',
@@ -1389,7 +1218,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4319',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16506',
@@ -1397,7 +1225,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2094',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19863',
@@ -1405,7 +1232,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3415',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16716',
@@ -1413,7 +1239,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2309',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16732',
@@ -1421,7 +1246,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2310',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19839',
@@ -1429,7 +1253,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3997',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9189',
@@ -1437,7 +1260,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6990',
             'accuracy' => 0.1,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7722',
@@ -1445,7 +1267,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7755',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7723',
@@ -1453,7 +1274,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7756',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7724',
@@ -1461,7 +1281,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7757',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7725',
@@ -1469,7 +1288,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7758',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7726',
@@ -1477,7 +1295,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7759',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7727',
@@ -1485,7 +1302,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7760',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7728',
@@ -1493,7 +1309,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7761',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7729',
@@ -1501,7 +1316,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7762',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7730',
@@ -1509,7 +1323,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7763',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7731',
@@ -1517,7 +1330,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7764',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7732',
@@ -1525,7 +1337,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7765',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7733',
@@ -1533,7 +1344,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7766',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7734',
@@ -1541,7 +1351,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7767',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7735',
@@ -1549,7 +1358,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7768',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7736',
@@ -1557,7 +1365,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7769',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7737',
@@ -1565,7 +1372,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7770',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7738',
@@ -1573,7 +1379,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7771',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7739',
@@ -1581,7 +1386,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7772',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7740',
@@ -1589,7 +1393,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7773',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7741',
@@ -1597,7 +1400,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7774',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7742',
@@ -1605,7 +1407,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7775',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7743',
@@ -1613,7 +1414,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7776',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7744',
@@ -1621,7 +1421,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7777',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7745',
@@ -1629,7 +1428,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7778',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7746',
@@ -1637,7 +1435,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7779',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7747',
@@ -1645,7 +1442,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7780',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7748',
@@ -1653,7 +1449,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7781',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7749',
@@ -1661,7 +1456,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7782',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7750',
@@ -1669,7 +1463,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7783',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7751',
@@ -1677,7 +1470,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7784',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7752',
@@ -1685,7 +1477,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7785',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7753',
@@ -1693,7 +1484,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7786',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7754',
@@ -1701,7 +1491,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7787',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16490',
@@ -1709,7 +1498,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9680',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19978',
@@ -1717,7 +1505,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4611',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2326',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9913',
@@ -1725,7 +1512,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4611',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8427',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17801',
@@ -1733,7 +1519,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4612',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2443',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17802',
@@ -1741,7 +1526,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4612',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2444',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17803',
@@ -1749,7 +1533,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4612',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2445',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17804',
@@ -1757,7 +1540,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4612',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2446',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17805',
@@ -1765,7 +1547,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4612',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2447',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17806',
@@ -1773,7 +1554,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4612',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2448',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17807',
@@ -1781,7 +1561,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4612',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2449',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17808',
@@ -1789,7 +1568,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4612',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2450',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17809',
@@ -1797,7 +1575,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4612',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2451',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17810',
@@ -1805,7 +1582,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4612',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2452',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17811',
@@ -1813,7 +1589,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4612',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2453',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17812',
@@ -1821,7 +1596,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4612',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2454',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17813',
@@ -1829,7 +1603,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4612',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2455',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17814',
@@ -1837,7 +1610,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4612',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2456',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17815',
@@ -1845,7 +1617,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4612',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2457',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17816',
@@ -1853,7 +1624,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4612',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2458',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17817',
@@ -1861,7 +1631,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4612',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2459',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17818',
@@ -1869,7 +1638,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4612',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2460',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17819',
@@ -1877,7 +1645,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4612',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2461',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1826',
@@ -1885,7 +1652,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4612',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9896',
@@ -1893,7 +1659,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4612',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6698',
@@ -1901,7 +1666,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4612',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6668',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6713',
@@ -1909,7 +1673,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4612',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6668',
             'accuracy' => 0.2,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19905',
@@ -1917,7 +1680,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4613',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3000',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1838',
@@ -1925,7 +1687,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4613',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1897',
@@ -1933,7 +1694,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4613',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 999.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1898',
@@ -1941,7 +1701,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4613',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 5.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1899',
@@ -1949,7 +1708,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4613',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 10.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19919',
@@ -1957,7 +1715,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4614',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2932',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1840',
@@ -1965,7 +1722,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4614',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 0.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1993',
@@ -1973,7 +1729,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4667',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1063',
@@ -1981,7 +1736,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4676',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4678',
             'accuracy' => 2.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1064',
@@ -1989,7 +1743,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4677',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4678',
             'accuracy' => 0.15,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1065',
@@ -1997,7 +1750,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4678',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 5.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16490',
@@ -2005,7 +1757,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4682',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3106',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9679',
@@ -2013,7 +1764,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4682',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9677',
@@ -2021,7 +1771,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4682',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9678',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18171',
@@ -2029,7 +1778,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3121',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18172',
@@ -2037,7 +1785,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3122',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18173',
@@ -2045,7 +1792,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3123',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18174',
@@ -2053,7 +1799,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3124',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18175',
@@ -2061,7 +1806,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3125',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15708',
@@ -2069,7 +1813,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 0.05,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15713',
@@ -2077,7 +1820,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4684',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 44.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15746',
@@ -2085,7 +1827,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4693',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 0.2,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15796',
@@ -2093,7 +1834,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4709',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 44.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15799',
@@ -2101,7 +1841,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4711',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 44.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15808',
@@ -2109,7 +1848,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4724',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 44.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15831',
@@ -2117,7 +1855,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4737',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5100',
@@ -2125,7 +1862,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4737',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5179',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18253',
@@ -2133,7 +1869,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4737',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5180',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18252',
@@ -2141,7 +1876,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4737',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5181',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5131',
@@ -2149,7 +1883,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4737',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5182',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18251',
@@ -2157,7 +1890,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4737',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5183',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5049',
@@ -2165,7 +1897,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4737',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5184',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5101',
@@ -2173,7 +1904,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4737',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5185',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5102',
@@ -2181,7 +1911,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4737',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5186',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5103',
@@ -2189,7 +1918,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4737',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5187',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5104',
@@ -2197,7 +1925,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4737',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5188',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19896',
@@ -2205,7 +1932,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4738',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3407',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15842',
@@ -2213,7 +1939,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4739',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19895',
@@ -2221,7 +1946,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4742',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3375',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19894',
@@ -2229,7 +1953,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4742',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3376',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19893',
@@ -2237,7 +1960,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4742',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3377',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19892',
@@ -2245,7 +1967,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4742',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3378',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19891',
@@ -2253,7 +1974,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4742',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3379',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19890',
@@ -2261,7 +1981,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4742',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3380',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19889',
@@ -2269,7 +1988,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4742',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3381',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19888',
@@ -2277,7 +1995,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4742',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3382',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19887',
@@ -2285,7 +2002,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4742',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3383',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19886',
@@ -2293,7 +2009,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4742',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3384',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19885',
@@ -2301,7 +2016,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4742',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3385',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5077',
@@ -2309,7 +2023,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4743',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3889',
             'accuracy' => 0.3,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19907',
@@ -2317,7 +2030,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4743',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6646',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19906',
@@ -2325,7 +2037,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4744',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3394',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7033',
@@ -2333,7 +2044,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4744',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 30.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19871',
@@ -2341,7 +2051,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4751',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3167',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19872',
@@ -2349,7 +2058,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4751',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3168',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15896',
@@ -2357,7 +2065,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4751',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4245',
             'accuracy' => 0.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17432',
@@ -2365,7 +2072,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4755',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23830',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17433',
@@ -2373,7 +2079,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4755',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23831',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17434',
@@ -2381,7 +2086,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4755',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23832',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17435',
@@ -2389,7 +2093,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4755',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23833',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17436',
@@ -2397,7 +2100,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4755',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23834',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17437',
@@ -2405,7 +2107,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4755',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23835',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17438',
@@ -2413,7 +2114,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4755',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23836',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17439',
@@ -2421,7 +2121,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4755',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23837',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17440',
@@ -2429,7 +2128,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4755',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23838',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17441',
@@ -2437,7 +2135,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4755',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23839',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17442',
@@ -2445,7 +2142,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4755',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23840',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17443',
@@ -2453,7 +2149,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4755',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23841',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17444',
@@ -2461,7 +2156,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4755',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23842',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17445',
@@ -2469,7 +2163,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4755',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23843',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17446',
@@ -2477,7 +2170,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4755',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23844',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17447',
@@ -2485,7 +2177,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4755',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23845',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15912',
@@ -2493,7 +2184,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4755',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9472',
@@ -2501,7 +2191,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4755',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9470',
             'accuracy' => 0.2,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6960',
@@ -2509,7 +2198,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4756',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5892',
@@ -2517,7 +2205,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4756',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5896',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5893',
@@ -2525,7 +2212,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4756',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5897',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5894',
@@ -2533,7 +2219,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4756',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5898',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5895',
@@ -2541,7 +2226,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4756',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5899',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9058',
@@ -2549,7 +2233,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4756',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9205',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9192',
@@ -2557,7 +2240,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4756',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9206',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9193',
@@ -2565,7 +2247,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4756',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9207',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9194',
@@ -2573,7 +2254,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4756',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9208',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9195',
@@ -2581,7 +2261,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4756',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9209',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9196',
@@ -2589,7 +2268,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4756',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9210',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9197',
@@ -2597,7 +2275,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4756',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9211',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9198',
@@ -2605,7 +2282,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4756',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9212',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9199',
@@ -2613,7 +2289,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4756',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9213',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9200',
@@ -2621,7 +2296,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4756',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9214',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9201',
@@ -2629,7 +2303,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4756',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9215',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9202',
@@ -2637,7 +2310,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4756',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9216',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9203',
@@ -2645,7 +2317,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4756',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9217',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9204',
@@ -2653,7 +2324,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4756',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9218',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19864',
@@ -2661,7 +2331,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4757',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3414',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8886',
@@ -2669,7 +2338,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4757',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1260',
@@ -2677,7 +2345,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4804',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4257',
             'accuracy' => 0.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5328',
@@ -2685,7 +2352,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4804',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5331',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1759',
@@ -2693,7 +2359,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4813',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4211',
             'accuracy' => 0.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5328',
@@ -2701,7 +2366,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4813',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5330',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1883',
@@ -2709,7 +2373,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4820',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4613',
             'accuracy' => 0.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5328',
@@ -2717,7 +2380,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4820',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5329',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5134',
@@ -2725,7 +2387,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::5132',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4162',
             'accuracy' => 0.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5133',
@@ -2733,7 +2394,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::5132',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4301',
             'accuracy' => 0.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18253',
@@ -2741,7 +2401,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::5132',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5169',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18252',
@@ -2749,7 +2408,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::5132',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5170',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18251',
@@ -2757,7 +2415,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::5132',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5171',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5049',
@@ -2765,7 +2422,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::5132',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5172',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5236',
@@ -2773,7 +2429,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::5233',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 14.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5232',
@@ -2781,7 +2436,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::5233',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5235',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6701',
@@ -2789,7 +2443,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::5246',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19894',
@@ -2797,7 +2450,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::5246',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5247',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5267',
@@ -2805,7 +2457,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::5264',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5265',
@@ -2813,7 +2464,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::5264',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5266',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5268',
@@ -2821,7 +2471,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::5264',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5292',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5276',
@@ -2829,7 +2478,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::5264',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5293',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5277',
@@ -2837,7 +2485,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::5264',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5294',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5278',
@@ -2845,7 +2492,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::5264',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5295',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5279',
@@ -2853,7 +2499,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::5264',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5296',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5280',
@@ -2861,7 +2506,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::5264',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5297',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5281',
@@ -2869,7 +2513,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::5264',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5298',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5282',
@@ -2877,7 +2520,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::5264',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5299',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5283',
@@ -2885,7 +2527,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::5264',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5300',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5313',
@@ -2893,7 +2534,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::5264',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5301',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5285',
@@ -2901,7 +2541,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::5264',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5302',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5286',
@@ -2909,7 +2548,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::5264',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5303',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5287',
@@ -2917,7 +2555,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::5264',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5304',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5312',
@@ -2925,7 +2562,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::5264',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5305',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5289',
@@ -2933,7 +2569,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::5264',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5306',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5290',
@@ -2941,7 +2576,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::5264',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5307',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5284',
@@ -2949,7 +2583,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::5264',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5308',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5288',
@@ -2957,7 +2590,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::5264',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5309',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5314',
@@ -2965,7 +2597,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::5264',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5310',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5291',
@@ -2973,7 +2604,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::5264',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5311',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7981',
@@ -2981,7 +2611,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::5788',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7979',
             'accuracy' => 0.1,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5450',
@@ -2989,7 +2618,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::5790',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5788',
             'accuracy' => 0.1,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7980',
@@ -2997,7 +2625,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::5790',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7979',
             'accuracy' => 0.1,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6208',
@@ -3005,7 +2632,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::6207',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 0.3,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9936',
@@ -3013,7 +2639,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::6668',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17801',
@@ -3021,7 +2646,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::6668',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6669',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17802',
@@ -3029,7 +2653,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::6668',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6670',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17803',
@@ -3037,7 +2660,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::6668',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6671',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17804',
@@ -3045,7 +2667,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::6668',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6672',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17805',
@@ -3053,7 +2674,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::6668',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6673',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17806',
@@ -3061,7 +2681,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::6668',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6674',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17807',
@@ -3069,7 +2688,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::6668',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6675',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17808',
@@ -3077,7 +2695,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::6668',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6676',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17809',
@@ -3085,7 +2702,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::6668',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6677',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17810',
@@ -3093,7 +2709,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::6668',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6678',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17811',
@@ -3101,7 +2716,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::6668',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6679',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17812',
@@ -3109,7 +2723,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::6668',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6680',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17813',
@@ -3117,7 +2730,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::6668',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6681',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17814',
@@ -3125,7 +2737,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::6668',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6682',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17815',
@@ -3133,7 +2744,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::6668',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6683',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17816',
@@ -3141,7 +2751,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::6668',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6684',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17817',
@@ -3149,7 +2758,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::6668',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6685',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17818',
@@ -3157,7 +2765,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::6668',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6686',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17819',
@@ -3165,7 +2772,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::6668',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6687',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6699',
@@ -3173,7 +2779,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::6694',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6695',
             'accuracy' => 0.01,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6910',
@@ -3181,7 +2786,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::6881',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 999.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6911',
@@ -3189,7 +2793,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::6882',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 999.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6935',
@@ -3197,7 +2800,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::6934',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3887',
             'accuracy' => 0.05,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6936',
@@ -3205,7 +2807,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::6934',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3887',
             'accuracy' => 0.05,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18204',
@@ -3213,7 +2814,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::6983',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6984',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18204',
@@ -3221,7 +2821,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::6990',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6991',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7140',
@@ -3229,7 +2828,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7136',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6983',
             'accuracy' => 0.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6992',
@@ -3237,7 +2835,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7136',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7139',
             'accuracy' => 0.05,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6993',
@@ -3245,7 +2842,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7139',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6990',
             'accuracy' => 0.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7377',
@@ -3253,7 +2849,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7371',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4978',
             'accuracy' => 0.1,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15596',
@@ -3261,7 +2856,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15597',
@@ -3269,7 +2863,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15598',
@@ -3277,7 +2870,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15599',
@@ -3285,7 +2877,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15600',
@@ -3293,7 +2884,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15601',
@@ -3301,7 +2891,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15602',
@@ -3309,7 +2898,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15603',
@@ -3317,7 +2905,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15604',
@@ -3325,7 +2912,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15605',
@@ -3333,7 +2919,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15606',
@@ -3341,7 +2926,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15607',
@@ -3349,7 +2933,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15608',
@@ -3357,7 +2940,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15609',
@@ -3365,7 +2947,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15610',
@@ -3373,7 +2954,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15611',
@@ -3381,7 +2961,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15612',
@@ -3389,7 +2968,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15613',
@@ -3397,7 +2975,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15614',
@@ -3405,7 +2982,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15615',
@@ -3413,7 +2989,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15616',
@@ -3421,7 +2996,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15617',
@@ -3429,7 +3003,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15618',
@@ -3437,7 +3010,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15619',
@@ -3445,7 +3017,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15620',
@@ -3453,7 +3024,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15621',
@@ -3461,7 +3031,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15622',
@@ -3469,7 +3038,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15623',
@@ -3477,7 +3045,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15624',
@@ -3485,7 +3052,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15625',
@@ -3493,7 +3059,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15626',
@@ -3501,7 +3066,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15627',
@@ -3509,7 +3073,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15628',
@@ -3517,7 +3080,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15629',
@@ -3525,7 +3087,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15630',
@@ -3533,7 +3094,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15631',
@@ -3541,7 +3101,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15632',
@@ -3549,7 +3108,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15633',
@@ -3557,7 +3115,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15634',
@@ -3565,7 +3122,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15635',
@@ -3573,7 +3129,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15636',
@@ -3581,7 +3136,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15637',
@@ -3589,7 +3143,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15638',
@@ -3597,7 +3150,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15639',
@@ -3605,7 +3157,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15640',
@@ -3613,7 +3164,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15641',
@@ -3621,7 +3171,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15642',
@@ -3629,7 +3178,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15643',
@@ -3637,7 +3185,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15644',
@@ -3645,7 +3192,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15645',
@@ -3653,7 +3199,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15646',
@@ -3661,7 +3206,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15647',
@@ -3669,7 +3213,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15648',
@@ -3677,7 +3220,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15649',
@@ -3685,7 +3227,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15650',
@@ -3693,7 +3234,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15651',
@@ -3701,7 +3241,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15652',
@@ -3709,7 +3248,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15653',
@@ -3717,7 +3255,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15654',
@@ -3725,7 +3262,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15655',
@@ -3733,7 +3269,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15656',
@@ -3741,7 +3276,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15657',
@@ -3749,7 +3283,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15658',
@@ -3757,7 +3290,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15659',
@@ -3765,7 +3297,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15660',
@@ -3773,7 +3304,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15661',
@@ -3781,7 +3311,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15662',
@@ -3789,7 +3318,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15663',
@@ -3797,7 +3325,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15664',
@@ -3805,7 +3332,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15665',
@@ -3813,7 +3339,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15666',
@@ -3821,7 +3346,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15667',
@@ -3829,7 +3353,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15668',
@@ -3837,7 +3360,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15669',
@@ -3845,7 +3367,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15670',
@@ -3853,7 +3374,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15671',
@@ -3861,7 +3381,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15672',
@@ -3869,7 +3388,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15673',
@@ -3877,7 +3395,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15674',
@@ -3885,7 +3402,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15675',
@@ -3893,7 +3409,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15676',
@@ -3901,7 +3416,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15677',
@@ -3909,7 +3423,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15678',
@@ -3917,7 +3430,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15679',
@@ -3925,7 +3437,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15680',
@@ -3933,7 +3444,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15681',
@@ -3941,7 +3451,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15682',
@@ -3949,7 +3458,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15683',
@@ -3957,7 +3465,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15684',
@@ -3965,7 +3472,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15685',
@@ -3973,7 +3479,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15686',
@@ -3981,7 +3486,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15687',
@@ -3989,7 +3493,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15688',
@@ -3997,7 +3500,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15689',
@@ -4005,7 +3507,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15690',
@@ -4013,7 +3514,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15691',
@@ -4021,7 +3521,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15692',
@@ -4029,7 +3528,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15693',
@@ -4037,7 +3535,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15694',
@@ -4045,7 +3542,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15695',
@@ -4053,7 +3549,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15696',
@@ -4061,7 +3556,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15697',
@@ -4069,7 +3563,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7414',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9334',
@@ -4077,7 +3570,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7789',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9331',
             'accuracy' => 0.001,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7977',
@@ -4085,7 +3577,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7976',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5739',
             'accuracy' => 0.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8439',
@@ -4093,7 +3584,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::8427',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8438',
@@ -4101,7 +3591,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::8428',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8432',
@@ -4109,7 +3598,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::8428',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8433',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8436',
@@ -4117,7 +3605,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::8431',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8435',
@@ -4125,7 +3612,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::8431',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8428',
             'accuracy' => 999.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9361',
@@ -4133,7 +3619,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::8818',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9333',
             'accuracy' => 0.1,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9186',
@@ -4141,7 +3626,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::8999',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6990',
             'accuracy' => 0.05,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9298',
@@ -4149,7 +3633,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::9292',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4978',
             'accuracy' => 0.1,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9383',
@@ -4157,7 +3640,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::9333',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
     ];
 

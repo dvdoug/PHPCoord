@@ -14,9 +14,6 @@ use PHPCoord\Geometry\BoundingArea;
 
 use function str_replace;
 
-/**
- * @internal
- */
 class CoordinateOperations
 {
     protected static array $sridData = [
@@ -18111,6 +18108,9 @@ class CoordinateOperations
 
     protected static array $customTransformationData = [];
 
+    /**
+     * @internal
+     */
     public static function getOperationData(string $operationSrid): array
     {
         if (!isset(self::$sridData[$operationSrid])) {
@@ -18120,6 +18120,9 @@ class CoordinateOperations
         return self::$sridData[$operationSrid];
     }
 
+    /**
+     * @internal
+     */
     public static function getParamData(string $operationSrid): array
     {
         if (isset(self::$customSridParamData[$operationSrid])) {
@@ -18135,11 +18138,14 @@ class CoordinateOperations
         self::$customSridParamData[$srid] = $params;
     }
 
-    public static function registerCustomTransformation(string $operationSrid, string $name, string $sourceCRSSrid, string $targetCRSSrid, float $accuracy, bool $reversible): void
+    public static function registerCustomTransformation(string $operationSrid, string $name, string $sourceCRSSrid, string $targetCRSSrid, float $accuracy): void
     {
-        self::$customTransformationData[] = ['operation' => $operationSrid, 'name' => $name, 'source_crs' => $sourceCRSSrid, 'target_crs' => $targetCRSSrid, 'accuracy' => $accuracy, 'reversible' => $reversible];
+        self::$customTransformationData[] = ['operation' => $operationSrid, 'name' => $name, 'source_crs' => $sourceCRSSrid, 'target_crs' => $targetCRSSrid, 'accuracy' => $accuracy];
     }
 
+    /**
+     * @internal
+     */
     public static function getCustomTransformations(): array
     {
         return static::$customTransformationData;

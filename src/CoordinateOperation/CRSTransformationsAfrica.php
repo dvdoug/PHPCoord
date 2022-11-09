@@ -21,7 +21,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4046',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4048',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17414',
@@ -29,7 +28,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4046',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4049',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17416',
@@ -37,7 +35,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4046',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4050',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17418',
@@ -45,7 +42,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4046',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4051',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17420',
@@ -53,7 +49,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4046',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4056',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17422',
@@ -61,7 +56,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4046',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4057',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17424',
@@ -69,7 +63,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4046',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4058',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17426',
@@ -77,7 +70,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4046',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4059',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17428',
@@ -85,7 +77,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4046',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4060',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17430',
@@ -93,7 +84,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4046',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5844',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1298',
@@ -101,7 +91,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4127',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4130',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1299',
@@ -109,7 +98,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4127',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4130',
             'accuracy' => 4.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1300',
@@ -117,7 +105,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4127',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4130',
             'accuracy' => 3.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1301',
@@ -125,7 +112,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4127',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4130',
             'accuracy' => 10.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6900',
@@ -133,7 +119,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4129',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 17.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1302',
@@ -141,7 +126,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4130',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17005',
@@ -149,7 +133,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4142',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2164',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1469',
@@ -157,7 +140,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4142',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 15.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17005',
@@ -165,7 +147,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4143',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2165',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1470',
@@ -173,7 +154,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4143',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 2.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17515',
@@ -181,7 +161,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4148',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2046',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17517',
@@ -189,7 +168,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4148',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2047',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17519',
@@ -197,7 +175,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4148',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2048',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17521',
@@ -205,7 +182,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4148',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2049',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17523',
@@ -213,7 +189,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4148',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2050',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17525',
@@ -221,7 +196,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4148',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2051',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17527',
@@ -229,7 +203,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4148',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2052',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17529',
@@ -237,7 +210,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4148',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2053',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17531',
@@ -245,7 +217,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4148',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2054',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17533',
@@ -253,7 +224,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4148',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2055',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1505',
@@ -261,7 +231,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4148',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9219',
@@ -269,7 +238,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4148',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9221',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9220',
@@ -277,7 +245,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4148',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9222',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1518',
@@ -285,7 +252,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4155',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 25.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18240',
@@ -293,7 +259,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4159',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2068',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18241',
@@ -301,7 +266,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4159',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2069',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18242',
@@ -309,7 +273,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4159',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2070',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18243',
@@ -317,7 +280,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4159',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2071',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18244',
@@ -325,7 +287,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4159',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2072',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18245',
@@ -333,7 +294,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4159',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2073',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18246',
@@ -341,7 +301,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4159',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2074',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18247',
@@ -349,7 +308,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4159',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2075',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18248',
@@ -357,7 +315,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4159',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2076',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16412',
@@ -365,7 +322,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4159',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2087',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15707',
@@ -373,7 +329,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4159',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 10.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15778',
@@ -381,7 +336,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4159',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 0.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15909',
@@ -389,7 +343,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4159',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 5.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15923',
@@ -397,7 +350,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4159',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 2.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1860',
@@ -405,7 +357,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4159',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 0.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1862',
@@ -413,7 +364,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4159',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 0.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15924',
@@ -421,7 +371,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4159',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4754',
             'accuracy' => 5.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1547',
@@ -429,7 +378,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4165',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 25.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19959',
@@ -437,7 +385,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4168',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2136',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17001',
@@ -445,7 +392,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4168',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2137',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1570',
@@ -453,7 +399,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4168',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'accuracy' => 25.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6896',
@@ -461,7 +406,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4168',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 6.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19963',
@@ -469,7 +413,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4174',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2159',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19964',
@@ -477,7 +420,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4174',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2160',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1614',
@@ -485,7 +427,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4175',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 26.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18415',
@@ -493,7 +434,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4192',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3119',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15873',
@@ -501,7 +441,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4192',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 10.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1902',
@@ -509,7 +448,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4193',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'accuracy' => 5.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1796',
@@ -517,7 +455,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4193',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 0.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1805',
@@ -525,7 +462,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4197',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'accuracy' => 5.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1806',
@@ -533,7 +469,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4198',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'accuracy' => 5.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1100',
@@ -541,7 +476,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4201',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 9.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1101',
@@ -549,7 +483,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4201',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 44.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1102',
@@ -557,7 +490,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4201',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 44.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1103',
@@ -565,7 +497,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4201',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 6.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1104',
@@ -573,7 +504,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4201',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 44.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1105',
@@ -581,7 +511,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4201',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 44.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1106',
@@ -589,7 +518,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4201',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 7.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1107',
@@ -597,7 +525,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4205',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 44.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1114',
@@ -605,7 +532,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4209',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 7.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1116',
@@ -613,7 +539,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4209',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 10.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1117',
@@ -621,7 +546,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4209',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 27.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1118',
@@ -629,7 +553,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4209',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 26.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1120',
@@ -637,7 +560,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4209',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 41.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6904',
@@ -645,7 +567,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4209',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 29.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6906',
@@ -653,7 +574,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4209',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 17.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1122',
@@ -661,7 +581,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4210',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 35.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1284',
@@ -669,7 +588,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4210',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 6.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1285',
@@ -677,7 +595,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4210',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 15.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::3998',
@@ -685,7 +602,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4210',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 35.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16413',
@@ -693,7 +609,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4213',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2931',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1839',
@@ -701,7 +616,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4213',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'accuracy' => 15.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15849',
@@ -709,7 +623,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4213',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 15.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16611',
@@ -717,7 +630,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4220',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22091',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16612',
@@ -725,7 +637,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4220',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22092',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1317',
@@ -733,7 +644,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4220',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'accuracy' => 10.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9904',
@@ -741,7 +651,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4220',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8699',
             'accuracy' => 8.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9905',
@@ -749,7 +658,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4220',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8699',
             'accuracy' => 10.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17515',
@@ -757,7 +665,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4222',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22275',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17517',
@@ -765,7 +672,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4222',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22277',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17519',
@@ -773,7 +679,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4222',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22279',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17521',
@@ -781,7 +686,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4222',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22281',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17523',
@@ -789,7 +693,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4222',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22283',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17525',
@@ -797,7 +700,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4222',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22285',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17527',
@@ -805,7 +707,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4222',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22287',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17529',
@@ -813,7 +714,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4222',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22289',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17531',
@@ -821,7 +721,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4222',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22291',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17533',
@@ -829,7 +728,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4222',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22293',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1504',
@@ -837,7 +735,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4222',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4148',
             'accuracy' => 15.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1129',
@@ -845,7 +742,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4222',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 15.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16411',
@@ -853,7 +749,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4223',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2088',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18181',
@@ -861,7 +756,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4223',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22391',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18182',
@@ -869,7 +763,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4223',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22392',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1130',
@@ -877,7 +770,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4223',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 14.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18071',
@@ -885,7 +777,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4229',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22991',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18072',
@@ -893,7 +784,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4229',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22992',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18073',
@@ -901,7 +791,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4229',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22993',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18074',
@@ -909,7 +798,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4229',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22994',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1545',
@@ -917,7 +805,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4229',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'accuracy' => 5.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7697',
@@ -925,7 +812,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4229',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.2,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1137',
@@ -933,7 +819,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4230',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 13.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1245',
@@ -941,7 +826,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4230',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 44.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1810',
@@ -949,7 +833,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4230',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 15.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19904',
@@ -957,7 +840,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4250',
             'target_crs' => 'urn:ogc:def:crs:EPSG::25000',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1159',
@@ -965,7 +847,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4250',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 5.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1160',
@@ -973,7 +854,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4251',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 26.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1164',
@@ -981,7 +861,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4256',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 44.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1557',
@@ -989,7 +868,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4259',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 5.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9906',
@@ -997,7 +875,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4259',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8699',
             'accuracy' => 5.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18131',
@@ -1005,7 +882,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4261',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26191',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18132',
@@ -1013,7 +889,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4261',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26192',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18134',
@@ -1021,7 +896,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4261',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26194',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18135',
@@ -1029,7 +903,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4261',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26195',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1166',
@@ -1037,7 +910,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4261',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 7.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1165',
@@ -1045,7 +917,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4262',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 44.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18151',
@@ -1053,7 +924,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4263',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26391',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18152',
@@ -1061,7 +931,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4263',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26392',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18153',
@@ -1069,7 +938,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4263',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26393',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1167',
@@ -1077,7 +945,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4263',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 44.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1168',
@@ -1085,7 +952,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4263',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 15.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1754',
@@ -1093,7 +959,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4263',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 5.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1532',
@@ -1101,7 +966,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4266',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 0.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1200',
@@ -1109,7 +973,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4282',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 44.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1802',
@@ -1117,7 +980,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4282',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 0.15,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17611',
@@ -1125,7 +987,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4293',
             'target_crs' => 'urn:ogc:def:crs:EPSG::29371',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17613',
@@ -1133,7 +994,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4293',
             'target_crs' => 'urn:ogc:def:crs:EPSG::29373',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17615',
@@ -1141,7 +1001,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4293',
             'target_crs' => 'urn:ogc:def:crs:EPSG::29375',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17617',
@@ -1149,7 +1008,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4293',
             'target_crs' => 'urn:ogc:def:crs:EPSG::29377',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17619',
@@ -1157,7 +1015,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4293',
             'target_crs' => 'urn:ogc:def:crs:EPSG::29379',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17621',
@@ -1165,7 +1022,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4293',
             'target_crs' => 'urn:ogc:def:crs:EPSG::29381',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17623',
@@ -1173,7 +1029,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4293',
             'target_crs' => 'urn:ogc:def:crs:EPSG::29383',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17625',
@@ -1181,7 +1036,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4293',
             'target_crs' => 'urn:ogc:def:crs:EPSG::29385',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1271',
@@ -1189,7 +1043,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4293',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 999.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6873',
@@ -1197,7 +1050,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4297',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 3.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8440',
@@ -1205,7 +1057,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4297',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8441',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18011',
@@ -1213,7 +1064,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4304',
             'target_crs' => 'urn:ogc:def:crs:EPSG::30491',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18012',
@@ -1221,7 +1071,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4304',
             'target_crs' => 'urn:ogc:def:crs:EPSG::30492',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1294',
@@ -1229,7 +1078,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4304',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 999.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18021',
@@ -1237,7 +1085,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4307',
             'target_crs' => 'urn:ogc:def:crs:EPSG::30791',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18022',
@@ -1245,7 +1092,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4307',
             'target_crs' => 'urn:ogc:def:crs:EPSG::30792',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1560',
@@ -1253,7 +1099,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4307',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'accuracy' => 8.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5660',
@@ -1261,7 +1106,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4307',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1828',
@@ -1269,7 +1113,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4310',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'accuracy' => 25.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6903',
@@ -1277,7 +1120,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4310',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 5.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1517',
@@ -1285,7 +1127,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4315',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 30.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16636',
@@ -1293,7 +1134,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32766',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4825',
@@ -1301,7 +1141,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4826',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5222',
@@ -1309,7 +1148,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5223',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5522',
@@ -1317,7 +1155,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5523',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16612',
@@ -1325,7 +1162,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5842',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4476',
@@ -1333,7 +1169,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4470',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4478',
@@ -1341,7 +1176,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4475',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4470',
             'accuracy' => 0.1,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1880',
@@ -1349,7 +1183,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4620',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 44.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19856',
@@ -1357,7 +1190,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4626',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3727',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1926',
@@ -1365,7 +1197,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4626',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4627',
             'accuracy' => 0.1,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1912',
@@ -1373,7 +1204,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4627',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1964',
@@ -1381,7 +1211,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4627',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4626',
             'accuracy' => 0.1,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5888',
@@ -1389,7 +1218,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4632',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4470',
             'accuracy' => 0.3,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5521',
@@ -1397,7 +1225,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4646',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 999.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18011',
@@ -1405,7 +1232,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4671',
             'target_crs' => 'urn:ogc:def:crs:EPSG::30493',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18012',
@@ -1413,7 +1239,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4671',
             'target_crs' => 'urn:ogc:def:crs:EPSG::30494',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15870',
@@ -1421,7 +1246,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4679',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15709',
@@ -1429,7 +1253,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4680',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 5.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::3981',
@@ -1437,7 +1260,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4695',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3986',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::3982',
@@ -1445,7 +1267,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4695',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3987',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::3983',
@@ -1453,7 +1274,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4695',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3988',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::3984',
@@ -1461,7 +1281,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4695',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3989',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4067',
@@ -1469,7 +1288,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4695',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4046',
             'accuracy' => 0.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4416',
@@ -1477,7 +1295,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4695',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4415',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17422',
@@ -1485,7 +1302,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4696',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3316',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17424',
@@ -1493,7 +1309,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4696',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3317',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17412',
@@ -1501,7 +1316,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4697',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3318',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17414',
@@ -1509,7 +1323,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4697',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3319',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17416',
@@ -1517,7 +1330,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4697',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3320',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17418',
@@ -1525,7 +1337,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4697',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3321',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17420',
@@ -1533,7 +1344,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4697',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3322',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17422',
@@ -1541,7 +1351,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4697',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3323',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17424',
@@ -1549,7 +1358,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4697',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3324',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17426',
@@ -1557,7 +1365,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4697',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3325',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17428',
@@ -1565,7 +1372,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4697',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3326',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17430',
@@ -1573,7 +1379,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4697',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3327',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15850',
@@ -1581,7 +1386,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4698',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 10.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19899',
@@ -1589,7 +1393,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4699',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3337',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15784',
@@ -1597,7 +1400,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4699',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 2.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17412',
@@ -1605,7 +1407,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4701',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3339',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17414',
@@ -1613,7 +1414,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4701',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3340',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17416',
@@ -1621,7 +1421,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4701',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3341',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15787',
@@ -1629,7 +1428,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4701',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 5.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15860',
@@ -1637,7 +1435,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4702',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15790',
@@ -1645,7 +1442,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4705',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'accuracy' => 10.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18072',
@@ -1653,7 +1449,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4706',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3355',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15792',
@@ -1661,7 +1456,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4706',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'accuracy' => 5.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15846',
@@ -1669,7 +1463,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4706',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 5.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7894',
@@ -1677,7 +1470,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4710',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7875',
@@ -1685,7 +1477,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4710',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7877',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7895',
@@ -1693,7 +1484,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4710',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7886',
             'accuracy' => 0.1,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15797',
@@ -1701,7 +1491,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4712',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 44.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6907',
@@ -1709,7 +1498,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4713',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 17.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15816',
@@ -1717,7 +1505,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4734',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 44.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18319',
@@ -1725,7 +1512,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4754',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3177',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18310',
@@ -1733,7 +1519,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4754',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3190',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18311',
@@ -1741,7 +1526,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4754',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3191',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18312',
@@ -1749,7 +1533,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4754',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3192',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18313',
@@ -1757,7 +1540,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4754',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3193',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18314',
@@ -1765,7 +1547,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4754',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3194',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18315',
@@ -1773,7 +1554,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4754',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3195',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18316',
@@ -1781,7 +1561,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4754',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3196',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18317',
@@ -1789,7 +1568,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4754',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3197',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18318',
@@ -1797,7 +1575,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4754',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3198',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15908',
@@ -1805,7 +1582,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4754',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 0.1,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19861',
@@ -1813,7 +1589,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4810',
             'target_crs' => 'urn:ogc:def:crs:EPSG::29701',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19911',
@@ -1821,7 +1596,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4810',
             'target_crs' => 'urn:ogc:def:crs:EPSG::29702',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1265',
@@ -1829,7 +1603,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4810',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4297',
             'accuracy' => 0.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1266',
@@ -1837,7 +1610,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4811',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4304',
             'accuracy' => 0.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1881',
@@ -1845,7 +1617,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4816',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4223',
             'accuracy' => 0.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6912',
@@ -1853,7 +1624,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6883',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 42.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6926',
@@ -1861,7 +1631,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6892',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6913',
@@ -1869,7 +1638,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6894',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 43.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9770',
@@ -1877,7 +1645,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::7073',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7876',
@@ -1885,7 +1652,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::7881',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7882',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7897',
@@ -1893,7 +1659,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::7881',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7886',
             'accuracy' => 0.05,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7892',
@@ -1901,7 +1666,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::7886',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9226',
@@ -1909,7 +1673,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::7886',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4710',
             'accuracy' => 0.1,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9280',
@@ -1917,7 +1680,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::7910',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9279',
             'accuracy' => 0.07000000000000001,
-            'reversible' => false,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9643',
@@ -1925,7 +1687,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::7910',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9543',
             'accuracy' => 0.07000000000000001,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8882',
@@ -1933,7 +1694,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8694',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 3.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8827',
@@ -1941,7 +1701,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8694',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8699',
             'accuracy' => 3.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8819',
@@ -1949,7 +1708,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8699',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16612',
@@ -1957,7 +1715,6 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8699',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9159',
             'accuracy' => 0,
-            'reversible' => true,
         ],
     ];
 

@@ -334,8 +334,11 @@ class Codegen
         foreach ($transformations as $transformation) {
             $source = CoordinateReferenceSystem::fromSRID($transformation['source_crs']);
             $target = CoordinateReferenceSystem::fromSRID($transformation['target_crs']);
+            $operation = CoordinateOperations::getOperationData($transformation['operation']);
+            $method = CoordinateOperationMethods::getMethodData($operation['method']);
+
             $docs[$source::class][$source->getSRID()][$target->getSRID()][] = [$transformation['operation'], false];
-            if ($transformation['reversible']) {
+            if ($method['reversible']) {
                 $docs[$target::class][$target->getSRID()][$source->getSRID()][] = [$transformation['operation'], true];
             }
         }

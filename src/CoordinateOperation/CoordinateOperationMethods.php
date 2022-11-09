@@ -14,6 +14,7 @@ class CoordinateOperationMethods
     protected static array $sridData = [
         'urn:ogc:def:method:EPSG::1024' => [
             'name' => 'Popular Visualisation Pseudo Mercator',
+            'reversible' => true,
             'paramData' => [
                 'latitudeOfNaturalOrigin' => [
                     'reverses' => false,
@@ -31,6 +32,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1025' => [
             'name' => 'Geographic3D to GravityRelatedHeight (EGM2008)',
+            'reversible' => false,
             'paramData' => [
                 'geoidHeightCorrectionModelFile' => [
                     'reverses' => false,
@@ -39,6 +41,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1026' => [
             'name' => 'Mercator (Spherical)',
+            'reversible' => true,
             'paramData' => [
                 'latitudeOfNaturalOrigin' => [
                     'reverses' => false,
@@ -56,6 +59,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1027' => [
             'name' => 'Lambert Azimuthal Equal Area (Spherical)',
+            'reversible' => true,
             'paramData' => [
                 'latitudeOfNaturalOrigin' => [
                     'reverses' => false,
@@ -73,6 +77,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1028' => [
             'name' => 'Equidistant Cylindrical',
+            'reversible' => true,
             'paramData' => [
                 'latitudeOf1stStandardParallel' => [
                     'reverses' => false,
@@ -90,6 +95,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1029' => [
             'name' => 'Equidistant Cylindrical (Spherical)',
+            'reversible' => true,
             'paramData' => [
                 'latitudeOf1stStandardParallel' => [
                     'reverses' => false,
@@ -107,6 +113,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1030' => [
             'name' => 'Geographic3D to GravityRelatedHeight (NZgeoid)',
+            'reversible' => false,
             'paramData' => [
                 'geoidHeightCorrectionModelFile' => [
                     'reverses' => false,
@@ -115,6 +122,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1031' => [
             'name' => 'Geocentric translations (geocentric domain)',
+            'reversible' => true,
             'paramData' => [
                 'xAxisTranslation' => [
                     'reverses' => true,
@@ -129,6 +137,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1032' => [
             'name' => 'Coordinate Frame rotation (geocentric domain)',
+            'reversible' => true,
             'paramData' => [
                 'xAxisTranslation' => [
                     'reverses' => true,
@@ -155,6 +164,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1033' => [
             'name' => 'Position Vector transformation (geocentric domain)',
+            'reversible' => true,
             'paramData' => [
                 'xAxisTranslation' => [
                     'reverses' => true,
@@ -181,6 +191,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1034' => [
             'name' => 'Molodensky-Badekas (CF geocentric domain)',
+            'reversible' => true,
             'paramData' => [
                 'xAxisTranslation' => [
                     'reverses' => true,
@@ -216,6 +227,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1035' => [
             'name' => 'Geocentric translations (geog3D domain)',
+            'reversible' => true,
             'paramData' => [
                 'xAxisTranslation' => [
                     'reverses' => true,
@@ -230,6 +242,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1037' => [
             'name' => 'Position Vector transformation (geog3D domain)',
+            'reversible' => true,
             'paramData' => [
                 'xAxisTranslation' => [
                     'reverses' => true,
@@ -256,6 +269,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1038' => [
             'name' => 'Coordinate Frame rotation (geog3D domain)',
+            'reversible' => true,
             'paramData' => [
                 'xAxisTranslation' => [
                     'reverses' => true,
@@ -282,6 +296,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1039' => [
             'name' => 'Molodensky-Badekas (CF geog3D domain)',
+            'reversible' => true,
             'paramData' => [
                 'xAxisTranslation' => [
                     'reverses' => true,
@@ -317,6 +332,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1041' => [
             'name' => 'Krovak (North Orientated)',
+            'reversible' => true,
             'paramData' => [
                 'latitudeOfProjectionCentre' => [
                     'reverses' => false,
@@ -343,6 +359,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1042' => [
             'name' => 'Krovak Modified',
+            'reversible' => true,
             'paramData' => [
                 'latitudeOfProjectionCentre' => [
                     'reverses' => false,
@@ -405,6 +422,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1043' => [
             'name' => 'Krovak Modified (North Orientated)',
+            'reversible' => true,
             'paramData' => [
                 'latitudeOfProjectionCentre' => [
                     'reverses' => false,
@@ -467,6 +485,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1046' => [
             'name' => 'Vertical Offset and Slope',
+            'reversible' => true,
             'paramData' => [
                 'ordinate1OfEvaluationPoint' => [
                     'reverses' => false,
@@ -490,6 +509,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1047' => [
             'name' => 'Geographic3D to GravityRelatedHeight (Gravsoft)',
+            'reversible' => false,
             'paramData' => [
                 'geoidHeightCorrectionModelFile' => [
                     'reverses' => false,
@@ -498,6 +518,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1048' => [
             'name' => 'Geographic3D to GravityRelatedHeight (AUSGeoid v2)',
+            'reversible' => false,
             'paramData' => [
                 'geoidHeightCorrectionModelFile' => [
                     'reverses' => false,
@@ -506,6 +527,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1051' => [
             'name' => 'Lambert Conic Conformal (2SP Michigan)',
+            'reversible' => true,
             'paramData' => [
                 'latitudeOfFalseOrigin' => [
                     'reverses' => false,
@@ -532,6 +554,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1052' => [
             'name' => 'Colombia Urban',
+            'reversible' => true,
             'paramData' => [
                 'latitudeOfNaturalOrigin' => [
                     'reverses' => false,
@@ -552,6 +575,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1053' => [
             'name' => 'Time-dependent Position Vector tfm (geocentric)',
+            'reversible' => true,
             'paramData' => [
                 'xAxisTranslation' => [
                     'reverses' => true,
@@ -602,6 +626,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1054' => [
             'name' => 'Time-dependent Position Vector tfm (geog2D)',
+            'reversible' => true,
             'paramData' => [
                 'xAxisTranslation' => [
                     'reverses' => true,
@@ -652,6 +677,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1055' => [
             'name' => 'Time-dependent Position Vector tfm (geog3D)',
+            'reversible' => true,
             'paramData' => [
                 'xAxisTranslation' => [
                     'reverses' => true,
@@ -702,6 +728,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1056' => [
             'name' => 'Time-dependent Coordinate Frame rotation (geocen)',
+            'reversible' => true,
             'paramData' => [
                 'xAxisTranslation' => [
                     'reverses' => true,
@@ -752,6 +779,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1057' => [
             'name' => 'Time-dependent Coordinate Frame rotation (geog2D)',
+            'reversible' => true,
             'paramData' => [
                 'xAxisTranslation' => [
                     'reverses' => true,
@@ -802,6 +830,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1058' => [
             'name' => 'Time-dependent Coordinate Frame rotation (geog3D)',
+            'reversible' => true,
             'paramData' => [
                 'xAxisTranslation' => [
                     'reverses' => true,
@@ -852,6 +881,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1059' => [
             'name' => 'Geographic3D to GravityRelatedHeight (PNG)',
+            'reversible' => false,
             'paramData' => [
                 'geoidHeightCorrectionModelFile' => [
                     'reverses' => false,
@@ -860,6 +890,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1060' => [
             'name' => 'Geographic3D to GravityRelatedHeight (NRCan byn)',
+            'reversible' => false,
             'paramData' => [
                 'geoidHeightCorrectionModelFile' => [
                     'reverses' => false,
@@ -868,6 +899,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1061' => [
             'name' => 'Molodensky-Badekas (PV geocentric domain)',
+            'reversible' => true,
             'paramData' => [
                 'xAxisTranslation' => [
                     'reverses' => true,
@@ -903,6 +935,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1062' => [
             'name' => 'Molodensky-Badekas (PV geog3D domain)',
+            'reversible' => true,
             'paramData' => [
                 'xAxisTranslation' => [
                     'reverses' => true,
@@ -938,6 +971,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1063' => [
             'name' => 'Molodensky-Badekas (PV geog2D domain)',
+            'reversible' => true,
             'paramData' => [
                 'xAxisTranslation' => [
                     'reverses' => true,
@@ -973,6 +1007,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1064' => [
             'name' => 'Point motion (geocentric Cartesian)',
+            'reversible' => false,
             'paramData' => [
                 'pointMotionVelocityX' => [
                     'reverses' => false,
@@ -987,6 +1022,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1065' => [
             'name' => 'Time-specific Position Vector transform (geocen)',
+            'reversible' => true,
             'paramData' => [
                 'xAxisTranslation' => [
                     'reverses' => true,
@@ -1016,6 +1052,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1066' => [
             'name' => 'Time-specific Coordinate Frame rotation (geocen)',
+            'reversible' => true,
             'paramData' => [
                 'xAxisTranslation' => [
                     'reverses' => true,
@@ -1045,6 +1082,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1067' => [
             'name' => 'Point motion (ellipsoidal)',
+            'reversible' => false,
             'paramData' => [
                 'pointMotionVelocityNorth' => [
                     'reverses' => false,
@@ -1059,11 +1097,13 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1068' => [
             'name' => 'Height Depth Reversal',
+            'reversible' => true,
             'paramData' => [
             ],
         ],
         'urn:ogc:def:method:EPSG::1071' => [
             'name' => 'Vertical Offset by Grid Interpolation (NZLVD)',
+            'reversible' => true,
             'paramData' => [
                 'offsetsFile' => [
                     'reverses' => true,
@@ -1075,6 +1115,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1072' => [
             'name' => 'Geographic3D to GravityRelatedHeight (OSGM15-Ire)',
+            'reversible' => false,
             'paramData' => [
                 'geoidHeightCorrectionModelFile' => [
                     'reverses' => false,
@@ -1083,6 +1124,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1073' => [
             'name' => 'Geographic3D to GravityRelatedHeight (IGN2009)',
+            'reversible' => false,
             'paramData' => [
                 'geoidHeightCorrectionModelFile' => [
                     'reverses' => false,
@@ -1091,6 +1133,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1074' => [
             'name' => 'NADCON5 (2D)',
+            'reversible' => true,
             'paramData' => [
                 'latitudeDifferenceFile' => [
                     'reverses' => true,
@@ -1102,6 +1145,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1075' => [
             'name' => 'NADCON5 (3D)',
+            'reversible' => true,
             'paramData' => [
                 'latitudeDifferenceFile' => [
                     'reverses' => true,
@@ -1116,6 +1160,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1078' => [
             'name' => 'Equal Earth',
+            'reversible' => true,
             'paramData' => [
                 'longitudeOfNaturalOrigin' => [
                     'reverses' => false,
@@ -1130,6 +1175,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1080' => [
             'name' => 'Vertical Offset by Grid Interpolation (BEV AT)',
+            'reversible' => true,
             'paramData' => [
                 'offsetsFile' => [
                     'reverses' => true,
@@ -1141,6 +1187,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1081' => [
             'name' => 'Geographic3D to GravityRelatedHeight (BEV AT)',
+            'reversible' => false,
             'paramData' => [
                 'geoidHeightCorrectionModelFile' => [
                     'reverses' => false,
@@ -1152,6 +1199,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1082' => [
             'name' => 'Geographic3D to GravityRelatedHeight (txt)',
+            'reversible' => false,
             'paramData' => [
                 'geoidHeightCorrectionModelFile' => [
                     'reverses' => false,
@@ -1160,6 +1208,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1083' => [
             'name' => 'Geog3D to Geog2D+GravityRelatedHeight (AUSGeoidv2)',
+            'reversible' => true,
             'paramData' => [
                 'geoidHeightCorrectionModelFile' => [
                     'reverses' => true,
@@ -1171,6 +1220,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1084' => [
             'name' => 'Vertical Offset by Grid Interpolation (gtx)',
+            'reversible' => true,
             'paramData' => [
                 'offsetsFile' => [
                     'reverses' => true,
@@ -1182,6 +1232,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1085' => [
             'name' => 'Vertical Offset by Grid Interpolation (asc)',
+            'reversible' => true,
             'paramData' => [
                 'offsetsFile' => [
                     'reverses' => true,
@@ -1193,6 +1244,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1086' => [
             'name' => 'Point motion (geocen) by grid (INADEFORM)',
+            'reversible' => true,
             'paramData' => [
                 'pointMotionVelocityGridFile' => [
                     'reverses' => false,
@@ -1204,6 +1256,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1087' => [
             'name' => 'Geocentric translation by Grid Interpolation (IGN)',
+            'reversible' => true,
             'paramData' => [
                 'offsetsFile' => [
                     'reverses' => true,
@@ -1218,6 +1271,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1088' => [
             'name' => 'Geog3D to Geog2D+GravityRelatedHeight (gtx)',
+            'reversible' => true,
             'paramData' => [
                 'geoidHeightCorrectionModelFile' => [
                     'reverses' => true,
@@ -1229,6 +1283,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1089' => [
             'name' => 'Geog3D to Geog2D+GravityRelatedHeight (BEV AT)',
+            'reversible' => true,
             'paramData' => [
                 'geoidHeightCorrectionModelFile' => [
                     'reverses' => true,
@@ -1240,6 +1295,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1090' => [
             'name' => 'Geog3D to Geog2D+GravityRelatedHeight (NRCan byn)',
+            'reversible' => true,
             'paramData' => [
                 'geoidHeightCorrectionModelFile' => [
                     'reverses' => true,
@@ -1251,6 +1307,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1092' => [
             'name' => 'Geog3D to Geog2D+GravityRelatedHeight (EGM2008)',
+            'reversible' => true,
             'paramData' => [
                 'geoidHeightCorrectionModelFile' => [
                     'reverses' => true,
@@ -1262,6 +1319,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1093' => [
             'name' => 'Geog3D to Geog2D+GravityRelatedHeight (Gravsoft)',
+            'reversible' => true,
             'paramData' => [
                 'geoidHeightCorrectionModelFile' => [
                     'reverses' => true,
@@ -1273,6 +1331,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1095' => [
             'name' => 'Geog3D to Geog2D+GravityRelatedHeight (IGN2009)',
+            'reversible' => true,
             'paramData' => [
                 'geoidHeightCorrectionModelFile' => [
                     'reverses' => true,
@@ -1284,6 +1343,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1096' => [
             'name' => 'Geog3D to Geog2D+GravityRelatedHeight (OSGM15-Ire)',
+            'reversible' => true,
             'paramData' => [
                 'geoidHeightCorrectionModelFile' => [
                     'reverses' => true,
@@ -1295,6 +1355,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1097' => [
             'name' => 'Geog3D to Geog2D+GravityRelatedHeight (OSGM-GB)',
+            'reversible' => true,
             'paramData' => [
                 'geoidHeightCorrectionModelFile' => [
                     'reverses' => true,
@@ -1306,6 +1367,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1098' => [
             'name' => 'Geog3D to Geog2D+GravityRelatedHeight (txt)',
+            'reversible' => true,
             'paramData' => [
                 'geoidHeightCorrectionModelFile' => [
                     'reverses' => true,
@@ -1317,6 +1379,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1099' => [
             'name' => 'Geographic3D to GravityRelatedHeight (PL txt)',
+            'reversible' => false,
             'paramData' => [
                 'geoidHeightCorrectionModelFile' => [
                     'reverses' => false,
@@ -1325,6 +1388,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1100' => [
             'name' => 'Geog3D to Geog2D+GravityRelatedHeight (PL txt)',
+            'reversible' => true,
             'paramData' => [
                 'geoidHeightCorrectionModelFile' => [
                     'reverses' => true,
@@ -1336,6 +1400,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1101' => [
             'name' => 'Vertical Offset by Grid Interpolation (PL txt)',
+            'reversible' => true,
             'paramData' => [
                 'offsetsFile' => [
                     'reverses' => true,
@@ -1347,6 +1412,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1102' => [
             'name' => 'Lambert Conic Conformal (1SP variant B)',
+            'reversible' => true,
             'paramData' => [
                 'latitudeOfNaturalOrigin' => [
                     'reverses' => false,
@@ -1370,11 +1436,13 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1104' => [
             'name' => 'Change of Vertical Unit',
+            'reversible' => true,
             'paramData' => [
             ],
         ],
         'urn:ogc:def:method:EPSG::1105' => [
             'name' => 'Geog3D to Geog2D+GravityRelatedHeight (ITAL2005)',
+            'reversible' => true,
             'paramData' => [
                 'geoidHeightCorrectionModelFile' => [
                     'reverses' => true,
@@ -1386,6 +1454,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1106' => [
             'name' => 'Geographic3D to GravityRelatedHeight (ITAL2005)',
+            'reversible' => false,
             'paramData' => [
                 'geoidHeightCorrectionModelFile' => [
                     'reverses' => false,
@@ -1394,11 +1463,13 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1107' => [
             'name' => 'zero-tide height to mean-tide height (EVRF2019)',
+            'reversible' => true,
             'paramData' => [
             ],
         ],
         'urn:ogc:def:method:EPSG::1108' => [
             'name' => 'Mercator (variant C)',
+            'reversible' => true,
             'paramData' => [
                 'latitudeOf1stStandardParallel' => [
                     'reverses' => false,
@@ -1419,6 +1490,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1109' => [
             'name' => 'Geographic3D to Depth (Gravsoft)',
+            'reversible' => false,
             'paramData' => [
                 'geoidHeightCorrectionModelFile' => [
                     'reverses' => false,
@@ -1427,6 +1499,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1110' => [
             'name' => 'Geog3D to Geog2D+Depth (Gravsoft)',
+            'reversible' => true,
             'paramData' => [
                 'geoidHeightCorrectionModelFile' => [
                     'reverses' => true,
@@ -1438,6 +1511,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1111' => [
             'name' => 'Transverse Mercator 3D',
+            'reversible' => true,
             'paramData' => [
                 'latitudeOfNaturalOrigin' => [
                     'reverses' => false,
@@ -1458,6 +1532,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1112' => [
             'name' => 'Vertical Offset by Grid Interpolation (NRCan byn)',
+            'reversible' => true,
             'paramData' => [
                 'offsetsFile' => [
                     'reverses' => true,
@@ -1469,6 +1544,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9601' => [
             'name' => 'Longitude rotation',
+            'reversible' => true,
             'paramData' => [
                 'longitudeOffset' => [
                     'reverses' => true,
@@ -1477,11 +1553,13 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9602' => [
             'name' => 'Geographic/geocentric conversions',
+            'reversible' => true,
             'paramData' => [
             ],
         ],
         'urn:ogc:def:method:EPSG::9603' => [
             'name' => 'Geocentric translations (geog2D domain)',
+            'reversible' => true,
             'paramData' => [
                 'xAxisTranslation' => [
                     'reverses' => true,
@@ -1496,6 +1574,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9604' => [
             'name' => 'Molodensky',
+            'reversible' => true,
             'paramData' => [
                 'xAxisTranslation' => [
                     'reverses' => true,
@@ -1516,6 +1595,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9605' => [
             'name' => 'Abridged Molodensky',
+            'reversible' => true,
             'paramData' => [
                 'xAxisTranslation' => [
                     'reverses' => true,
@@ -1536,6 +1616,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9606' => [
             'name' => 'Position Vector transformation (geog2D domain)',
+            'reversible' => true,
             'paramData' => [
                 'xAxisTranslation' => [
                     'reverses' => true,
@@ -1562,6 +1643,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9607' => [
             'name' => 'Coordinate Frame rotation (geog2D domain)',
+            'reversible' => true,
             'paramData' => [
                 'xAxisTranslation' => [
                     'reverses' => true,
@@ -1588,6 +1670,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9615' => [
             'name' => 'NTv2',
+            'reversible' => true,
             'paramData' => [
                 'offsetsFile' => [
                     'reverses' => true,
@@ -1596,6 +1679,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9616' => [
             'name' => 'Vertical Offset',
+            'reversible' => true,
             'paramData' => [
                 'verticalOffset' => [
                     'reverses' => true,
@@ -1604,6 +1688,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9617' => [
             'name' => 'Madrid to ED50 polynomial',
+            'reversible' => false,
             'paramData' => [
                 'A0' => [
                     'reverses' => false,
@@ -1636,6 +1721,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9618' => [
             'name' => 'Geographic2D with Height Offsets',
+            'reversible' => true,
             'paramData' => [
                 'latitudeOffset' => [
                     'reverses' => true,
@@ -1650,6 +1736,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9619' => [
             'name' => 'Geographic2D offsets',
+            'reversible' => true,
             'paramData' => [
                 'latitudeOffset' => [
                     'reverses' => true,
@@ -1661,6 +1748,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9621' => [
             'name' => 'Similarity transformation',
+            'reversible' => true,
             'paramData' => [
                 'ordinate1OfEvaluationPointInTargetCRS' => [
                     'reverses' => false,
@@ -1678,6 +1766,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9623' => [
             'name' => 'Affine geometric transformation',
+            'reversible' => true,
             'paramData' => [
                 'ordinate1OfEvaluationPointInTargetCRS' => [
                     'reverses' => false,
@@ -1704,6 +1793,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9624' => [
             'name' => 'Affine parametric transformation',
+            'reversible' => true,
             'paramData' => [
                 'A0' => [
                     'reverses' => false,
@@ -1727,6 +1817,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9633' => [
             'name' => 'Ordnance Survey National Transformation',
+            'reversible' => true,
             'paramData' => [
                 'eastingAndNorthingDifferenceFile' => [
                     'reverses' => true,
@@ -1735,6 +1826,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9636' => [
             'name' => 'Molodensky-Badekas (CF geog2D domain)',
+            'reversible' => true,
             'paramData' => [
                 'xAxisTranslation' => [
                     'reverses' => true,
@@ -1770,6 +1862,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9645' => [
             'name' => 'General polynomial of degree 2',
+            'reversible' => false,
             'paramData' => [
                 'ordinate1OfEvaluationPointInSourceCRS' => [
                     'reverses' => false,
@@ -1829,6 +1922,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9646' => [
             'name' => 'General polynomial of degree 3',
+            'reversible' => false,
             'paramData' => [
                 'ordinate1OfEvaluationPointInSourceCRS' => [
                     'reverses' => false,
@@ -1912,6 +2006,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9647' => [
             'name' => 'General polynomial of degree 4',
+            'reversible' => false,
             'paramData' => [
                 'ordinate1OfEvaluationPointInSourceCRS' => [
                     'reverses' => false,
@@ -2025,6 +2120,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9648' => [
             'name' => 'General polynomial of degree 6',
+            'reversible' => false,
             'paramData' => [
                 'ordinate1OfEvaluationPointInSourceCRS' => [
                     'reverses' => false,
@@ -2216,6 +2312,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9649' => [
             'name' => 'Reversible polynomial of degree 2',
+            'reversible' => true,
             'paramData' => [
                 'ordinate1OfEvaluationPoint' => [
                     'reverses' => false,
@@ -2266,6 +2363,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9650' => [
             'name' => 'Reversible polynomial of degree 3',
+            'reversible' => true,
             'paramData' => [
                 'ordinate1OfEvaluationPoint' => [
                     'reverses' => false,
@@ -2340,6 +2438,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9651' => [
             'name' => 'Reversible polynomial of degree 4',
+            'reversible' => true,
             'paramData' => [
                 'ordinate1OfEvaluationPoint' => [
                     'reverses' => false,
@@ -2444,6 +2543,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9652' => [
             'name' => 'Complex polynomial of degree 3',
+            'reversible' => false,
             'paramData' => [
                 'ordinate1OfEvaluationPointInSourceCRS' => [
                     'reverses' => false,
@@ -2485,6 +2585,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9653' => [
             'name' => 'Complex polynomial of degree 4',
+            'reversible' => false,
             'paramData' => [
                 'ordinate1OfEvaluationPointInSourceCRS' => [
                     'reverses' => false,
@@ -2532,6 +2633,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9654' => [
             'name' => 'Reversible polynomial of degree 13',
+            'reversible' => true,
             'paramData' => [
                 'ordinate1OfEvaluationPoint' => [
                     'reverses' => false,
@@ -2681,6 +2783,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9656' => [
             'name' => 'Cartesian Grid Offsets',
+            'reversible' => true,
             'paramData' => [
                 'eastingOffset' => [
                     'reverses' => true,
@@ -2692,6 +2795,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9658' => [
             'name' => 'Vertical Offset by Grid Interpolation (VERTCON)',
+            'reversible' => true,
             'paramData' => [
                 'offsetsFile' => [
                     'reverses' => true,
@@ -2700,11 +2804,13 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9659' => [
             'name' => 'Geographic3D to 2D conversion',
+            'reversible' => true,
             'paramData' => [
             ],
         ],
         'urn:ogc:def:method:EPSG::9660' => [
             'name' => 'Geographic3D offsets',
+            'reversible' => true,
             'paramData' => [
                 'latitudeOffset' => [
                     'reverses' => true,
@@ -2719,6 +2825,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9663' => [
             'name' => 'Geographic3D to GravityRelatedHeight (OSGM-GB)',
+            'reversible' => false,
             'paramData' => [
                 'geoidHeightCorrectionModelFile' => [
                     'reverses' => false,
@@ -2727,6 +2834,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9665' => [
             'name' => 'Geographic3D to GravityRelatedHeight (gtx)',
+            'reversible' => false,
             'paramData' => [
                 'geoidHeightCorrectionModelFile' => [
                     'reverses' => false,
@@ -2735,6 +2843,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9801' => [
             'name' => 'Lambert Conic Conformal (1SP)',
+            'reversible' => true,
             'paramData' => [
                 'latitudeOfNaturalOrigin' => [
                     'reverses' => false,
@@ -2755,6 +2864,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9802' => [
             'name' => 'Lambert Conic Conformal (2SP)',
+            'reversible' => true,
             'paramData' => [
                 'latitudeOfFalseOrigin' => [
                     'reverses' => false,
@@ -2778,6 +2888,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9803' => [
             'name' => 'Lambert Conic Conformal (2SP Belgium)',
+            'reversible' => true,
             'paramData' => [
                 'latitudeOfFalseOrigin' => [
                     'reverses' => false,
@@ -2801,6 +2912,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9804' => [
             'name' => 'Mercator (variant A)',
+            'reversible' => true,
             'paramData' => [
                 'latitudeOfNaturalOrigin' => [
                     'reverses' => false,
@@ -2821,6 +2933,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9805' => [
             'name' => 'Mercator (variant B)',
+            'reversible' => true,
             'paramData' => [
                 'latitudeOf1stStandardParallel' => [
                     'reverses' => false,
@@ -2838,6 +2951,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9806' => [
             'name' => 'Cassini-Soldner',
+            'reversible' => true,
             'paramData' => [
                 'latitudeOfNaturalOrigin' => [
                     'reverses' => false,
@@ -2855,6 +2969,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9807' => [
             'name' => 'Transverse Mercator',
+            'reversible' => true,
             'paramData' => [
                 'latitudeOfNaturalOrigin' => [
                     'reverses' => false,
@@ -2875,6 +2990,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9808' => [
             'name' => 'Transverse Mercator (South Orientated)',
+            'reversible' => true,
             'paramData' => [
                 'latitudeOfNaturalOrigin' => [
                     'reverses' => false,
@@ -2895,6 +3011,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9809' => [
             'name' => 'Oblique Stereographic',
+            'reversible' => true,
             'paramData' => [
                 'latitudeOfNaturalOrigin' => [
                     'reverses' => false,
@@ -2915,6 +3032,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9810' => [
             'name' => 'Polar Stereographic (variant A)',
+            'reversible' => true,
             'paramData' => [
                 'latitudeOfNaturalOrigin' => [
                     'reverses' => false,
@@ -2935,6 +3053,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9811' => [
             'name' => 'New Zealand Map Grid',
+            'reversible' => true,
             'paramData' => [
                 'latitudeOfNaturalOrigin' => [
                     'reverses' => false,
@@ -2952,6 +3071,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9812' => [
             'name' => 'Hotine Oblique Mercator (variant A)',
+            'reversible' => true,
             'paramData' => [
                 'latitudeOfProjectionCentre' => [
                     'reverses' => false,
@@ -2978,6 +3098,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9813' => [
             'name' => 'Laborde Oblique Mercator',
+            'reversible' => true,
             'paramData' => [
                 'latitudeOfProjectionCentre' => [
                     'reverses' => false,
@@ -3001,6 +3122,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9814' => [
             'name' => 'Swiss Oblique Cylindrical',
+            'reversible' => true,
             'paramData' => [
                 'latitudeOfProjectionCentre' => [
                     'reverses' => false,
@@ -3018,6 +3140,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9815' => [
             'name' => 'Hotine Oblique Mercator (variant B)',
+            'reversible' => true,
             'paramData' => [
                 'latitudeOfProjectionCentre' => [
                     'reverses' => false,
@@ -3044,6 +3167,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9817' => [
             'name' => 'Lambert Conic Near-Conformal',
+            'reversible' => true,
             'paramData' => [
                 'latitudeOfNaturalOrigin' => [
                     'reverses' => false,
@@ -3064,6 +3188,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9818' => [
             'name' => 'American Polyconic',
+            'reversible' => true,
             'paramData' => [
                 'latitudeOfNaturalOrigin' => [
                     'reverses' => false,
@@ -3081,6 +3206,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9819' => [
             'name' => 'Krovak',
+            'reversible' => true,
             'paramData' => [
                 'latitudeOfProjectionCentre' => [
                     'reverses' => false,
@@ -3107,6 +3233,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9820' => [
             'name' => 'Lambert Azimuthal Equal Area',
+            'reversible' => true,
             'paramData' => [
                 'latitudeOfNaturalOrigin' => [
                     'reverses' => false,
@@ -3124,6 +3251,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9822' => [
             'name' => 'Albers Equal Area',
+            'reversible' => true,
             'paramData' => [
                 'latitudeOfFalseOrigin' => [
                     'reverses' => false,
@@ -3147,6 +3275,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9824' => [
             'name' => 'Transverse Mercator Zoned Grid System',
+            'reversible' => true,
             'paramData' => [
                 'latitudeOfNaturalOrigin' => [
                     'reverses' => false,
@@ -3170,11 +3299,13 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9825' => [
             'name' => 'Pseudo Plate Carree',
+            'reversible' => true,
             'paramData' => [
             ],
         ],
         'urn:ogc:def:method:EPSG::9826' => [
             'name' => 'Lambert Conic Conformal (West Orientated)',
+            'reversible' => true,
             'paramData' => [
                 'latitudeOfNaturalOrigin' => [
                     'reverses' => false,
@@ -3195,6 +3326,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9827' => [
             'name' => 'Bonne',
+            'reversible' => true,
             'paramData' => [
                 'latitudeOfNaturalOrigin' => [
                     'reverses' => false,
@@ -3212,6 +3344,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9828' => [
             'name' => 'Bonne (South Orientated)',
+            'reversible' => true,
             'paramData' => [
                 'latitudeOfNaturalOrigin' => [
                     'reverses' => false,
@@ -3229,6 +3362,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9829' => [
             'name' => 'Polar Stereographic (variant B)',
+            'reversible' => true,
             'paramData' => [
                 'latitudeOfStandardParallel' => [
                     'reverses' => false,
@@ -3246,6 +3380,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9830' => [
             'name' => 'Polar Stereographic (variant C)',
+            'reversible' => true,
             'paramData' => [
                 'latitudeOfStandardParallel' => [
                     'reverses' => false,
@@ -3263,6 +3398,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9831' => [
             'name' => 'Guam Projection',
+            'reversible' => true,
             'paramData' => [
                 'latitudeOfNaturalOrigin' => [
                     'reverses' => false,
@@ -3280,6 +3416,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9832' => [
             'name' => 'Modified Azimuthal Equidistant',
+            'reversible' => true,
             'paramData' => [
                 'latitudeOfNaturalOrigin' => [
                     'reverses' => false,
@@ -3297,6 +3434,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9833' => [
             'name' => 'Hyperbolic Cassini-Soldner',
+            'reversible' => true,
             'paramData' => [
                 'latitudeOfNaturalOrigin' => [
                     'reverses' => false,
@@ -3314,6 +3452,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9834' => [
             'name' => 'Lambert Cylindrical Equal Area (Spherical)',
+            'reversible' => true,
             'paramData' => [
                 'latitudeOf1stStandardParallel' => [
                     'reverses' => false,
@@ -3331,6 +3470,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9835' => [
             'name' => 'Lambert Cylindrical Equal Area',
+            'reversible' => true,
             'paramData' => [
                 'latitudeOf1stStandardParallel' => [
                     'reverses' => false,
@@ -3348,6 +3488,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9836' => [
             'name' => 'Geocentric/topocentric conversions',
+            'reversible' => true,
             'paramData' => [
                 'geocentricXOfTopocentricOrigin' => [
                     'reverses' => false,
@@ -3362,6 +3503,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9837' => [
             'name' => 'Geographic/topocentric conversions',
+            'reversible' => true,
             'paramData' => [
                 'latitudeOfTopocentricOrigin' => [
                     'reverses' => false,
@@ -3376,6 +3518,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9838' => [
             'name' => 'Vertical Perspective',
+            'reversible' => false,
             'paramData' => [
                 'latitudeOfTopocentricOrigin' => [
                     'reverses' => false,
@@ -3393,6 +3536,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9839' => [
             'name' => 'Vertical Perspective (Orthographic case)',
+            'reversible' => false,
             'paramData' => [
                 'latitudeOfTopocentricOrigin' => [
                     'reverses' => false,
@@ -3404,6 +3548,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9840' => [
             'name' => 'Orthographic',
+            'reversible' => true,
             'paramData' => [
                 'latitudeOfNaturalOrigin' => [
                     'reverses' => false,
@@ -3421,16 +3566,19 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9843' => [
             'name' => 'Axis Order Reversal (2D)',
+            'reversible' => true,
             'paramData' => [
             ],
         ],
         'urn:ogc:def:method:EPSG::9844' => [
             'name' => 'Axis Order Reversal (Geographic3D horizontal)',
+            'reversible' => true,
             'paramData' => [
             ],
         ],
         'urn:ogc:def:method:EPSG::32768' => [
             'name' => 'Alias',
+            'reversible' => true,
             'paramData' => [
             ],
         ],

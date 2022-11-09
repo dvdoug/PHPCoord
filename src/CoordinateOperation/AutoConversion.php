@@ -266,10 +266,13 @@ trait AutoConversion
 
         $transformationsByCRS = [];
         foreach ($relevantRegionData as $transformation) {
+            $operation = CoordinateOperations::getOperationData($transformation['operation']);
+            $method = CoordinateOperationMethods::getMethodData($operation['method']);
+
             if (!isset($transformationsByCRS[$transformation['source_crs']][$transformation['target_crs']])) {
                 $transformationsByCRS[$transformation['source_crs']][$transformation['target_crs']] = $transformation['target_crs'];
             }
-            if ($transformation['reversible'] && !isset($transformationsByCRS[$transformation['target_crs']][$transformation['source_crs']])) {
+            if ($method['reversible'] && !isset($transformationsByCRS[$transformation['target_crs']][$transformation['source_crs']])) {
                 $transformationsByCRS[$transformation['target_crs']][$transformation['source_crs']] = $transformation['source_crs'];
             }
         }
@@ -298,9 +301,12 @@ trait AutoConversion
 
         $transformationsByCRSPair = [];
         foreach ($relevantRegionData as $key => $transformation) {
+            $operation = CoordinateOperations::getOperationData($transformation['operation']);
+            $method = CoordinateOperationMethods::getMethodData($operation['method']);
+
             $transformationsByCRSPair[$transformation['source_crs'] . '|' . $transformation['target_crs']][$key] = $transformation;
             $transformationsByCRSPair[$transformation['source_crs'] . '|' . $transformation['target_crs']][$key]['in_reverse'] = false;
-            if ($transformation['reversible']) {
+            if ($method['reversible']) {
                 $transformationsByCRSPair[$transformation['target_crs'] . '|' . $transformation['source_crs']][$key] = $transformation;
                 $transformationsByCRSPair[$transformation['target_crs'] . '|' . $transformation['source_crs']][$key]['in_reverse'] = true;
             }

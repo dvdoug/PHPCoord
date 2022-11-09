@@ -12,6 +12,7 @@ use DateTime;
 use DateTimeImmutable;
 use PHPCoord\CoordinateOperation\BEVHeightETRS89EVRF2000AustriaProvider;
 use PHPCoord\CoordinateOperation\BYNNAD83CSRSCGG2013aProvider;
+use PHPCoord\CoordinateOperation\CoordinateOperationMethods;
 use PHPCoord\CoordinateOperation\CoordinateOperations;
 use PHPCoord\CoordinateOperation\CRSTransformationsAfrica;
 use PHPCoord\CoordinateOperation\CRSTransformationsAntarctic;
@@ -291,9 +292,10 @@ class CompoundPointTest extends TestCase
      * @group integration
      * @dataProvider supportedOperations
      */
-    public function testOperations(string $sourceCrsSrid, string $targetCrsSrid, string $operationSrid, bool $reversible): void
+    public function testOperations(string $sourceCrsSrid, string $targetCrsSrid, string $operationSrid): void
     {
         $operation = CoordinateOperations::getOperationData($operationSrid);
+        $method = CoordinateOperationMethods::getMethodData($operation['method']);
         $operationExtent = BoundingArea::createFromExtentCodes($operation['extent']);
 
         $sourceCRS = Compound::fromSRID($sourceCrsSrid);
@@ -317,7 +319,7 @@ class CompoundPointTest extends TestCase
         self::assertInstanceOf(Point::class, $newPoint);
         self::assertEquals($targetCRS, $newPoint->getCRS());
 
-        if ($reversible) {
+        if ($method['reversible']) {
             $reversedPoint = $newPoint->performOperation($operationSrid, $sourceCRS, true);
 
             self::assertEquals($sourceCRS, $reversedPoint->getCRS());
@@ -349,7 +351,6 @@ class CompoundPointTest extends TestCase
                         $transformation['source_crs'],
                         $transformation['target_crs'],
                         $transformation['operation'],
-                        $transformation['reversible'],
                     ];
                 }
             }

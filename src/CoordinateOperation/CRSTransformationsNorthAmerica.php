@@ -21,7 +21,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4122',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2200',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19933',
@@ -29,7 +28,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4122',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2290',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17794',
@@ -37,7 +35,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4122',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2294',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17795',
@@ -45,7 +42,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4122',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2295',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9105',
@@ -53,7 +49,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4122',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'accuracy' => 0.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1688',
@@ -61,7 +56,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4122',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1689',
@@ -69,7 +63,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4122',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9236',
@@ -77,7 +70,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4122',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8237',
             'accuracy' => 1.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9237',
@@ -85,7 +77,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4122',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8237',
             'accuracy' => 1.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9106',
@@ -93,7 +84,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4122',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8252',
             'accuracy' => 0.06,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15101',
@@ -101,7 +91,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4135',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3561',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15102',
@@ -109,7 +98,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4135',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3562',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15103',
@@ -117,7 +105,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4135',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3563',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15104',
@@ -125,7 +112,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4135',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3564',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15105',
@@ -133,7 +119,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4135',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3565',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8561',
@@ -141,7 +126,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4135',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'accuracy' => 0.2,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15824',
@@ -149,7 +133,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4135',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 38.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15825',
@@ -157,7 +140,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4135',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 44.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15826',
@@ -165,7 +147,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4135',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 35.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15827',
@@ -173,7 +154,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4135',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 44.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15828',
@@ -181,7 +161,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4135',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 14.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8547',
@@ -189,7 +168,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4136',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'accuracy' => 0.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8548',
@@ -197,7 +175,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4137',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'accuracy' => 0.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8546',
@@ -205,7 +182,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4138',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'accuracy' => 0.15,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15201',
@@ -213,7 +189,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4139',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3991',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15202',
@@ -221,7 +196,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4139',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3992',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8668',
@@ -229,7 +203,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4139',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'accuracy' => 0.15,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1893',
@@ -237,7 +210,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4139',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 6.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11833',
@@ -245,7 +217,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26855',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11834',
@@ -253,7 +224,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26856',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12234',
@@ -261,7 +231,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26857',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12235',
@@ -269,7 +238,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26858',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12236',
@@ -277,7 +245,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26859',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15396',
@@ -285,7 +252,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26860',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14735',
@@ -293,7 +259,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26861',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14736',
@@ -301,7 +266,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26862',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10131',
@@ -309,7 +273,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2759',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10132',
@@ -317,7 +280,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2760',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10231',
@@ -325,7 +287,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2761',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10232',
@@ -333,7 +294,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2762',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10233',
@@ -341,7 +301,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2763',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10331',
@@ -349,7 +308,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2764',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10332',
@@ -357,7 +315,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2765',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10431',
@@ -365,7 +322,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2766',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10432',
@@ -373,7 +329,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2767',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10433',
@@ -381,7 +336,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2768',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10434',
@@ -389,7 +343,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2769',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10435',
@@ -397,7 +350,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2770',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10436',
@@ -405,7 +357,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2771',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10531',
@@ -413,7 +364,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2772',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10532',
@@ -421,7 +371,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2773',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10533',
@@ -429,7 +378,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2774',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10630',
@@ -437,7 +385,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2775',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10730',
@@ -445,7 +392,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2776',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10931',
@@ -453,7 +399,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2777',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10932',
@@ -461,7 +406,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2778',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10933',
@@ -469,7 +413,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2779',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11031',
@@ -477,7 +420,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2780',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11032',
@@ -485,7 +427,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2781',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15131',
@@ -493,7 +434,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2782',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15132',
@@ -501,7 +441,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2783',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15133',
@@ -509,7 +448,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2784',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15134',
@@ -517,7 +455,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2785',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15135',
@@ -525,7 +462,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2786',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11131',
@@ -533,7 +469,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2787',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11132',
@@ -541,7 +476,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2788',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11133',
@@ -549,7 +483,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2789',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11231',
@@ -557,7 +490,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2790',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11232',
@@ -565,7 +497,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2791',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11331',
@@ -573,7 +504,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2792',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11332',
@@ -581,7 +511,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2793',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11431',
@@ -589,7 +518,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2794',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11432',
@@ -597,7 +525,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2795',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11531',
@@ -605,7 +532,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2796',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11532',
@@ -613,7 +539,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2797',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15303',
@@ -621,7 +546,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2798',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11632',
@@ -629,7 +553,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2799',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11731',
@@ -637,7 +560,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2800',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11732',
@@ -645,7 +567,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2801',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11831',
@@ -653,7 +574,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2802',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11832',
@@ -661,7 +581,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2803',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11930',
@@ -669,7 +588,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2804',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12031',
@@ -677,7 +595,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2805',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12032',
@@ -685,7 +602,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2806',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12141',
@@ -693,7 +609,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2807',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12142',
@@ -701,7 +616,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2808',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12143',
@@ -709,7 +623,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2809',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12231',
@@ -717,7 +630,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2810',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12232',
@@ -725,7 +637,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2811',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12233',
@@ -733,7 +644,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2812',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12331',
@@ -741,7 +651,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2813',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12332',
@@ -749,7 +658,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2814',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12431',
@@ -757,7 +665,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2815',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12432',
@@ -765,7 +672,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2816',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12433',
@@ -773,7 +679,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2817',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12530',
@@ -781,7 +686,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2818',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12630',
@@ -789,7 +693,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2819',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12731',
@@ -797,7 +700,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2820',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12732',
@@ -805,7 +707,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2821',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12733',
@@ -813,7 +714,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2822',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12830',
@@ -821,7 +721,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2823',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12930',
@@ -829,7 +728,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2824',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13031',
@@ -837,7 +735,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2825',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13032',
@@ -845,7 +742,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2826',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13033',
@@ -853,7 +749,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2827',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13131',
@@ -861,7 +756,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2828',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13132',
@@ -869,7 +763,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2829',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13133',
@@ -877,7 +770,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2830',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13134',
@@ -885,7 +777,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2831',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13331',
@@ -893,7 +784,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2832',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13332',
@@ -901,7 +791,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2833',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13431',
@@ -909,7 +798,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2834',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13432',
@@ -917,7 +805,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2835',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13531',
@@ -925,7 +812,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2836',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13532',
@@ -933,7 +819,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2837',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13631',
@@ -941,7 +826,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2838',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13632',
@@ -949,7 +833,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2839',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13830',
@@ -957,7 +840,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2840',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14031',
@@ -965,7 +847,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2841',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14032',
@@ -973,7 +854,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2842',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14130',
@@ -981,7 +861,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2843',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14231',
@@ -989,7 +868,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2844',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14232',
@@ -997,7 +875,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2845',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14233',
@@ -1005,7 +882,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2846',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14234',
@@ -1013,7 +889,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2847',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14235',
@@ -1021,7 +896,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2848',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14331',
@@ -1029,7 +903,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2849',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14332',
@@ -1037,7 +910,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2850',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14333',
@@ -1045,7 +917,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2851',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14430',
@@ -1053,7 +924,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2852',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14531',
@@ -1061,7 +931,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2853',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14532',
@@ -1069,7 +938,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2854',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14631',
@@ -1077,7 +945,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2855',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14632',
@@ -1085,7 +952,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2856',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14731',
@@ -1093,7 +959,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2857',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14732',
@@ -1101,7 +966,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2858',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14831',
@@ -1109,7 +973,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2859',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14832',
@@ -1117,7 +980,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2860',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14833',
@@ -1125,7 +987,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2861',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14931',
@@ -1133,7 +994,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2862',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14932',
@@ -1141,7 +1001,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2863',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14933',
@@ -1149,7 +1008,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2864',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14934',
@@ -1157,7 +1015,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2865',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15230',
@@ -1165,7 +1022,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2866',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15304',
@@ -1173,7 +1029,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2867',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15305',
@@ -1181,7 +1036,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2868',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15306',
@@ -1189,7 +1043,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2869',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15307',
@@ -1197,7 +1050,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2870',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15308',
@@ -1205,7 +1057,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2871',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15309',
@@ -1213,7 +1064,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2872',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15310',
@@ -1221,7 +1071,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2873',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15311',
@@ -1229,7 +1078,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2874',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15312',
@@ -1237,7 +1085,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2875',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15313',
@@ -1245,7 +1092,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2876',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15314',
@@ -1253,7 +1099,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2877',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15315',
@@ -1261,7 +1106,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2878',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15316',
@@ -1269,7 +1113,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2879',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15317',
@@ -1277,7 +1120,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2880',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15318',
@@ -1285,7 +1127,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2881',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15319',
@@ -1293,7 +1134,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2882',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15320',
@@ -1301,7 +1141,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2883',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15321',
@@ -1309,7 +1148,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2884',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15322',
@@ -1317,7 +1155,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2885',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15323',
@@ -1325,7 +1162,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2886',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15324',
@@ -1333,7 +1169,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2887',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15325',
@@ -1341,7 +1176,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2888',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15328',
@@ -1349,7 +1183,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2891',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15329',
@@ -1357,7 +1190,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2892',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15330',
@@ -1365,7 +1197,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2893',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15331',
@@ -1373,7 +1204,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2894',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15332',
@@ -1381,7 +1211,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2895',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15333',
@@ -1389,7 +1218,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2896',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15334',
@@ -1397,7 +1225,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2897',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15335',
@@ -1405,7 +1232,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2898',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15336',
@@ -1413,7 +1239,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2899',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15337',
@@ -1421,7 +1246,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2900',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15338',
@@ -1429,7 +1253,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2901',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15339',
@@ -1437,7 +1260,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2902',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15340',
@@ -1445,7 +1267,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2903',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15341',
@@ -1453,7 +1274,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2904',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15342',
@@ -1461,7 +1281,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2905',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15343',
@@ -1469,7 +1288,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2906',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15344',
@@ -1477,7 +1295,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2907',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15345',
@@ -1485,7 +1302,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2908',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15347',
@@ -1493,7 +1309,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2909',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15348',
@@ -1501,7 +1316,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2910',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15349',
@@ -1509,7 +1323,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2911',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15350',
@@ -1517,7 +1330,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2912',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15351',
@@ -1525,7 +1337,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2913',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15352',
@@ -1533,7 +1344,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2914',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15356',
@@ -1541,7 +1351,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2915',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15357',
@@ -1549,7 +1358,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2916',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15358',
@@ -1557,7 +1365,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2917',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15359',
@@ -1565,7 +1372,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2918',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15360',
@@ -1573,7 +1379,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2919',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15361',
@@ -1581,7 +1386,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2920',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15362',
@@ -1589,7 +1393,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2921',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15363',
@@ -1597,7 +1400,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2922',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15364',
@@ -1605,7 +1407,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2923',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15365',
@@ -1613,7 +1414,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2924',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15366',
@@ -1621,7 +1421,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2925',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15367',
@@ -1629,7 +1428,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2926',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15368',
@@ -1637,7 +1435,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2927',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15369',
@@ -1645,7 +1442,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2928',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15370',
@@ -1653,7 +1449,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2929',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15371',
@@ -1661,7 +1456,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2930',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15372',
@@ -1669,7 +1463,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2967',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15373',
@@ -1677,7 +1470,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2968',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13633',
@@ -1685,7 +1477,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2993',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15374',
@@ -1693,7 +1484,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2994',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14841',
@@ -1701,7 +1491,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3071',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11851',
@@ -1709,7 +1498,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3075',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11853',
@@ -1717,7 +1505,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3077',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12150',
@@ -1725,7 +1512,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3079',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14253',
@@ -1733,7 +1519,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3084',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14254',
@@ -1741,7 +1526,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3085',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10934',
@@ -1749,7 +1533,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3087',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11630',
@@ -1757,7 +1540,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3090',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15375',
@@ -1765,7 +1547,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3091',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10420',
@@ -1773,7 +1554,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3311',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13230',
@@ -1781,7 +1561,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3358',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13930',
@@ -1789,7 +1568,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3360',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15355',
@@ -1797,7 +1575,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3361',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13731',
@@ -1805,7 +1582,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3362',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15353',
@@ -1813,7 +1589,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3363',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13732',
@@ -1821,7 +1596,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3364',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15354',
@@ -1829,7 +1603,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3365',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15346',
@@ -1837,7 +1610,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3404',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15377',
@@ -1845,7 +1617,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3425',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15378',
@@ -1853,7 +1624,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3426',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15379',
@@ -1861,7 +1631,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3427',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15380',
@@ -1869,7 +1638,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3428',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15381',
@@ -1877,7 +1645,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3429',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15382',
@@ -1885,7 +1652,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3430',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15383',
@@ -1893,7 +1659,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3431',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15384',
@@ -1901,7 +1666,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3432',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15385',
@@ -1909,7 +1673,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3441',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15386',
@@ -1917,7 +1680,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3442',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15387',
@@ -1925,7 +1687,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3443',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15388',
@@ -1933,7 +1694,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3444',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15389',
@@ -1941,7 +1701,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3445',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15390',
@@ -1949,7 +1708,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3446',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15391',
@@ -1957,7 +1715,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3456',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15392',
@@ -1965,7 +1722,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3457',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15394',
@@ -1973,7 +1729,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3458',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15395',
@@ -1981,7 +1736,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3459',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11854',
@@ -1989,7 +1743,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3464',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15297',
@@ -1997,7 +1750,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3568',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15298',
@@ -2005,7 +1757,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3569',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15299',
@@ -2013,7 +1764,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3570',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13433',
@@ -2021,7 +1771,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3753',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13434',
@@ -2029,7 +1778,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3754',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14935',
@@ -2037,7 +1785,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3755',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14936',
@@ -2045,7 +1792,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3756',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14937',
@@ -2053,7 +1799,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3757',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14938',
@@ -2061,7 +1806,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3758',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15138',
@@ -2069,7 +1813,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3760',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::3813',
@@ -2077,7 +1820,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3815',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::3967',
@@ -2085,7 +1827,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3969',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1580',
@@ -2093,7 +1834,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 2.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1901',
@@ -2101,7 +1841,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4461',
@@ -2109,7 +1848,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'accuracy' => 0.1,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8551',
@@ -2117,7 +1855,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'accuracy' => 0.05,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5068',
@@ -2125,7 +1862,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5071',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5645',
@@ -2133,7 +1869,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5654',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8661',
@@ -2141,7 +1876,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6322',
             'accuracy' => 0.05,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7386',
@@ -2149,7 +1883,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8090',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7387',
@@ -2157,7 +1890,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8091',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7440',
@@ -2165,7 +1897,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8092',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7441',
@@ -2173,7 +1904,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8093',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7482',
@@ -2181,7 +1911,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8095',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7483',
@@ -2189,7 +1918,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8096',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7526',
@@ -2197,7 +1925,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8097',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7527',
@@ -2205,7 +1932,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8098',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7480',
@@ -2213,7 +1939,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8099',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7481',
@@ -2221,7 +1946,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8100',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7524',
@@ -2229,7 +1953,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8101',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7525',
@@ -2237,7 +1960,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8102',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7522',
@@ -2245,7 +1967,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8103',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7523',
@@ -2253,7 +1974,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8104',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7424',
@@ -2261,7 +1981,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8105',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7425',
@@ -2269,7 +1988,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8106',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7520',
@@ -2277,7 +1995,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8107',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7521',
@@ -2285,7 +2002,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8108',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7398',
@@ -2293,7 +2009,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8109',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7399',
@@ -2301,7 +2016,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8110',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7518',
@@ -2309,7 +2023,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8111',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7519',
@@ -2317,7 +2030,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8112',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7478',
@@ -2325,7 +2037,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8113',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7479',
@@ -2333,7 +2044,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8114',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7476',
@@ -2341,7 +2051,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8115',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7477',
@@ -2349,7 +2058,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8116',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7474',
@@ -2357,7 +2065,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8117',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7475',
@@ -2365,7 +2072,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8118',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7472',
@@ -2373,7 +2079,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8119',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7473',
@@ -2381,7 +2086,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8120',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7396',
@@ -2389,7 +2093,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8121',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7397',
@@ -2397,7 +2100,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8122',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7516',
@@ -2405,7 +2107,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8123',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7517',
@@ -2413,7 +2114,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8124',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7470',
@@ -2421,7 +2121,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8125',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7471',
@@ -2429,7 +2128,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8126',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7514',
@@ -2437,7 +2135,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8127',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7515',
@@ -2445,7 +2142,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8128',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7512',
@@ -2453,7 +2149,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8129',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7513',
@@ -2461,7 +2156,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8130',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7394',
@@ -2469,7 +2163,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8131',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7395',
@@ -2477,7 +2170,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8132',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7468',
@@ -2485,7 +2177,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8133',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7469',
@@ -2493,7 +2184,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8134',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7466',
@@ -2501,7 +2191,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8135',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7467',
@@ -2509,7 +2198,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8136',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7464',
@@ -2517,7 +2205,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8137',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7465',
@@ -2525,7 +2212,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8138',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7392',
@@ -2533,7 +2219,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8139',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7393',
@@ -2541,7 +2226,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8140',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7462',
@@ -2549,7 +2233,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8141',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7463',
@@ -2557,7 +2240,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8142',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7510',
@@ -2565,7 +2247,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8143',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7511',
@@ -2573,7 +2254,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8144',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7460',
@@ -2581,7 +2261,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8145',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7461',
@@ -2589,7 +2268,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8146',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7458',
@@ -2597,7 +2275,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8147',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7459',
@@ -2605,7 +2282,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8148',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7456',
@@ -2613,7 +2289,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8149',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7457',
@@ -2621,7 +2296,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8150',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7454',
@@ -2629,7 +2303,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8151',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7455',
@@ -2637,7 +2310,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8152',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7452',
@@ -2645,7 +2317,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8153',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7453',
@@ -2653,7 +2324,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8154',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7508',
@@ -2661,7 +2331,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8155',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7509',
@@ -2669,7 +2338,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8156',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7506',
@@ -2677,7 +2345,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8157',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7507',
@@ -2685,7 +2352,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8158',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7504',
@@ -2693,7 +2359,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8159',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7505',
@@ -2701,7 +2366,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8160',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7450',
@@ -2709,7 +2373,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8161',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7451',
@@ -2717,7 +2380,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8162',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7390',
@@ -2725,7 +2387,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8163',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7391',
@@ -2733,7 +2394,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8164',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7502',
@@ -2741,7 +2401,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8165',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7503',
@@ -2749,7 +2408,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8166',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7500',
@@ -2757,7 +2415,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8167',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7501',
@@ -2765,7 +2422,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8168',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7498',
@@ -2773,7 +2429,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8169',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7499',
@@ -2781,7 +2436,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8170',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7496',
@@ -2789,7 +2443,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8171',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7497',
@@ -2797,7 +2450,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8172',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7388',
@@ -2805,7 +2457,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8173',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7389',
@@ -2813,7 +2464,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8177',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7438',
@@ -2821,7 +2471,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8179',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7439',
@@ -2829,7 +2478,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8180',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7384',
@@ -2837,7 +2485,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8181',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7385',
@@ -2845,7 +2492,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8182',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7436',
@@ -2853,7 +2499,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8184',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7437',
@@ -2861,7 +2506,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8185',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7494',
@@ -2869,7 +2513,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8187',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7495',
@@ -2877,7 +2520,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8189',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7492',
@@ -2885,7 +2527,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8191',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7493',
@@ -2893,7 +2534,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8193',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7490',
@@ -2901,7 +2541,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8196',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7491',
@@ -2909,7 +2548,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8197',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7488',
@@ -2917,7 +2555,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8198',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7489',
@@ -2925,7 +2562,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8200',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7434',
@@ -2933,7 +2569,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8201',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7435',
@@ -2941,7 +2576,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8202',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7432',
@@ -2949,7 +2583,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8203',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7433',
@@ -2957,7 +2590,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8204',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7486',
@@ -2965,7 +2597,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8205',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7487',
@@ -2973,7 +2604,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8206',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7382',
@@ -2981,7 +2611,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8207',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7383',
@@ -2989,7 +2618,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8208',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7430',
@@ -2997,7 +2625,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8209',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7431',
@@ -3005,7 +2632,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8210',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7428',
@@ -3013,7 +2639,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8212',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7429',
@@ -3021,7 +2646,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8213',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7380',
@@ -3029,7 +2653,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8214',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7381',
@@ -3037,7 +2660,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8216',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7426',
@@ -3045,7 +2667,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8218',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7427',
@@ -3053,7 +2674,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8220',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7378',
@@ -3061,7 +2681,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8222',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7379',
@@ -3069,7 +2688,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8224',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7484',
@@ -3077,7 +2695,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8225',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7485',
@@ -3085,7 +2702,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8226',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9181',
@@ -3093,7 +2709,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8545',
             'accuracy' => 0.05,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8861',
@@ -3101,7 +2716,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8860',
             'accuracy' => 0.05,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18432',
@@ -3109,7 +2723,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4194',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2299',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18433',
@@ -3117,7 +2730,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4194',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2301',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18434',
@@ -3125,7 +2737,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4194',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2303',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18435',
@@ -3133,7 +2744,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4194',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2304',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18436',
@@ -3141,7 +2751,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4194',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2305',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18437',
@@ -3149,7 +2758,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4194',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2306',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18428',
@@ -3157,7 +2765,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4194',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2307',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1798',
@@ -3165,7 +2772,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4194',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15957',
@@ -3173,7 +2779,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4194',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4747',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18425',
@@ -3181,7 +2786,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4195',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2218',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18426',
@@ -3189,7 +2793,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4195',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2221',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1799',
@@ -3197,7 +2800,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4195',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15899',
@@ -3205,7 +2807,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4195',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4747',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18427',
@@ -3213,7 +2814,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4196',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2296',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1800',
@@ -3221,7 +2821,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4196',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15900',
@@ -3229,7 +2828,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4196',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4747',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19942',
@@ -3237,7 +2835,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4212',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21291',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19943',
@@ -3245,7 +2842,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4212',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21292',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15793',
@@ -3253,7 +2849,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4212',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 3.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15969',
@@ -3261,7 +2856,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4216',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4762',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19909',
@@ -3269,7 +2863,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4241',
             'target_crs' => 'urn:ogc:def:crs:EPSG::24100',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19910',
@@ -3277,7 +2870,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4242',
             'target_crs' => 'urn:ogc:def:crs:EPSG::24200',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15926',
@@ -3285,7 +2877,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4242',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4758',
             'accuracy' => 0.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15302',
@@ -3293,7 +2884,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2204',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10101',
@@ -3301,7 +2891,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26729',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10102',
@@ -3309,7 +2898,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26730',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15001',
@@ -3317,7 +2905,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26731',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15002',
@@ -3325,7 +2912,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26732',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15003',
@@ -3333,7 +2919,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26733',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15004',
@@ -3341,7 +2926,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26734',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15005',
@@ -3349,7 +2933,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26735',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15006',
@@ -3357,7 +2940,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26736',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15007',
@@ -3365,7 +2947,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26737',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15008',
@@ -3373,7 +2954,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26738',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15009',
@@ -3381,7 +2961,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26739',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15010',
@@ -3389,7 +2968,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26740',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10401',
@@ -3397,7 +2975,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26741',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10402',
@@ -3405,7 +2982,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26742',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10403',
@@ -3413,7 +2989,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26743',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10404',
@@ -3421,7 +2996,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26744',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10405',
@@ -3429,7 +3003,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26745',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10406',
@@ -3437,7 +3010,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26746',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10201',
@@ -3445,7 +3017,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26748',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10202',
@@ -3453,7 +3024,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26749',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10203',
@@ -3461,7 +3031,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26750',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10301',
@@ -3469,7 +3038,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26751',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10302',
@@ -3477,7 +3045,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26752',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10501',
@@ -3485,7 +3052,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26753',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10502',
@@ -3493,7 +3059,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26754',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10503',
@@ -3501,7 +3066,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26755',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10600',
@@ -3509,7 +3073,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26756',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10700',
@@ -3517,7 +3080,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26757',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10901',
@@ -3525,7 +3087,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26758',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10902',
@@ -3533,7 +3094,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26759',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10903',
@@ -3541,7 +3101,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26760',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11001',
@@ -3549,7 +3108,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26766',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11002',
@@ -3557,7 +3115,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26767',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11101',
@@ -3565,7 +3122,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26768',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11102',
@@ -3573,7 +3129,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26769',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11103',
@@ -3581,7 +3136,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26770',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11201',
@@ -3589,7 +3143,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26771',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11202',
@@ -3597,7 +3150,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26772',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11301',
@@ -3605,7 +3157,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26773',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11302',
@@ -3613,7 +3164,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26774',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11401',
@@ -3621,7 +3171,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26775',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11402',
@@ -3629,7 +3178,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26776',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11501',
@@ -3637,7 +3185,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26777',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11502',
@@ -3645,7 +3192,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26778',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11601',
@@ -3653,7 +3199,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26779',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11602',
@@ -3661,7 +3206,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26780',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11701',
@@ -3669,7 +3213,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26781',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11702',
@@ -3677,7 +3220,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26782',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11801',
@@ -3685,7 +3227,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26783',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11802',
@@ -3693,7 +3234,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26784',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11900',
@@ -3701,7 +3241,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26785',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12001',
@@ -3709,7 +3248,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26786',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12002',
@@ -3717,7 +3255,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26787',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12201',
@@ -3725,7 +3262,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26791',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12202',
@@ -3733,7 +3269,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26792',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12203',
@@ -3741,7 +3276,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26793',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12301',
@@ -3749,7 +3283,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26794',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12302',
@@ -3757,7 +3290,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26795',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12401',
@@ -3765,7 +3297,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26796',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12402',
@@ -3773,7 +3304,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26797',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12403',
@@ -3781,7 +3311,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26798',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10408',
@@ -3789,7 +3318,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26799',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15020',
@@ -3797,7 +3325,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2964',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14811',
@@ -3805,7 +3332,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3069',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14252',
@@ -3813,7 +3339,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3080',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12501',
@@ -3821,7 +3346,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32001',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12502',
@@ -3829,7 +3353,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32002',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12503',
@@ -3837,7 +3360,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32003',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12601',
@@ -3845,7 +3367,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32005',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12602',
@@ -3853,7 +3374,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32006',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12701',
@@ -3861,7 +3381,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32007',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12702',
@@ -3869,7 +3388,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32008',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12703',
@@ -3877,7 +3395,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32009',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12800',
@@ -3885,7 +3402,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32010',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12900',
@@ -3893,7 +3409,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32011',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13001',
@@ -3901,7 +3416,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32012',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13002',
@@ -3909,7 +3423,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32013',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13003',
@@ -3917,7 +3430,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32014',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13101',
@@ -3925,7 +3437,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32015',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13102',
@@ -3933,7 +3444,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32016',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13103',
@@ -3941,7 +3451,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32017',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13200',
@@ -3949,7 +3458,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32019',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13301',
@@ -3957,7 +3465,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32020',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13302',
@@ -3965,7 +3472,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32021',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13401',
@@ -3973,7 +3479,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32022',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13402',
@@ -3981,7 +3486,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32023',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13501',
@@ -3989,7 +3493,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32024',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13502',
@@ -3997,7 +3500,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32025',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13601',
@@ -4005,7 +3507,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32026',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13602',
@@ -4013,7 +3514,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32027',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13701',
@@ -4021,7 +3521,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32028',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13800',
@@ -4029,7 +3528,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32030',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13901',
@@ -4037,7 +3535,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32031',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13902',
@@ -4045,7 +3542,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32033',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14001',
@@ -4053,7 +3549,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32034',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14002',
@@ -4061,7 +3556,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32035',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14201',
@@ -4069,7 +3563,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32037',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14202',
@@ -4077,7 +3570,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32038',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14203',
@@ -4085,7 +3577,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32039',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14204',
@@ -4093,7 +3584,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32040',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14205',
@@ -4101,7 +3591,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32041',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14301',
@@ -4109,7 +3598,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32042',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14302',
@@ -4117,7 +3605,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32043',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14303',
@@ -4125,7 +3612,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32044',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14400',
@@ -4133,7 +3619,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32045',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14501',
@@ -4141,7 +3626,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32046',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14502',
@@ -4149,7 +3633,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32047',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14601',
@@ -4157,7 +3640,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32048',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14602',
@@ -4165,7 +3647,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32049',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14701',
@@ -4173,7 +3654,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32050',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14702',
@@ -4181,7 +3661,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32051',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14801',
@@ -4189,7 +3668,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32052',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14802',
@@ -4197,7 +3675,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32053',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14803',
@@ -4205,7 +3682,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32054',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14901',
@@ -4213,7 +3689,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32055',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14902',
@@ -4221,7 +3696,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32056',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14903',
@@ -4229,7 +3703,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32057',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14904',
@@ -4237,7 +3710,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32058',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15914',
@@ -4245,7 +3717,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32064',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15915',
@@ -4253,7 +3724,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32065',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15916',
@@ -4261,7 +3731,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32066',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15917',
@@ -4269,7 +3738,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32067',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17701',
@@ -4277,7 +3745,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32081',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17702',
@@ -4285,7 +3752,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32082',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17703',
@@ -4293,7 +3759,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32083',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17704',
@@ -4301,7 +3766,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32084',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17705',
@@ -4309,7 +3773,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32085',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17706',
@@ -4317,7 +3780,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32086',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19944',
@@ -4325,7 +3787,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32098',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11703',
@@ -4333,7 +3794,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32099',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10420',
@@ -4341,7 +3801,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3309',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17722',
@@ -4349,7 +3808,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3771',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17723',
@@ -4357,7 +3815,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3772',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17724',
@@ -4365,7 +3822,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3773',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18063',
@@ -4373,7 +3829,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3795',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18064',
@@ -4381,7 +3836,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3796',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19844',
@@ -4389,7 +3843,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3797',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17726',
@@ -4397,7 +3850,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3800',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1313',
@@ -4405,7 +3857,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'accuracy' => 1.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1573',
@@ -4413,7 +3864,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'accuracy' => 1.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8549',
@@ -4421,7 +3871,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'accuracy' => 0.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8555',
@@ -4429,7 +3878,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'accuracy' => 0.15,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9111',
@@ -4437,7 +3885,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'accuracy' => 1.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1170',
@@ -4445,7 +3892,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 16.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1171',
@@ -4453,7 +3899,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 10.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1172',
@@ -4461,7 +3906,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 20.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1173',
@@ -4469,7 +3913,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 10.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1174',
@@ -4477,7 +3920,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 11.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1175',
@@ -4485,7 +3927,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 7.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1176',
@@ -4493,7 +3934,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 12.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1177',
@@ -4501,7 +3941,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 8.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1178',
@@ -4509,7 +3948,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 44.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1179',
@@ -4517,7 +3955,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 13.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1180',
@@ -4525,7 +3962,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 12.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1181',
@@ -4533,7 +3969,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 9.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1182',
@@ -4541,7 +3976,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 8.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1183',
@@ -4549,7 +3983,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 10.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1184',
@@ -4557,7 +3990,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 35.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1185',
@@ -4565,7 +3997,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 44.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1186',
@@ -4573,7 +4004,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 44.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1187',
@@ -4581,7 +4011,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 12.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1249',
@@ -4589,7 +4018,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 15.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1250',
@@ -4597,7 +4025,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 18.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1530',
@@ -4605,7 +4032,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 3.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15699',
@@ -4613,7 +4039,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 5.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15855',
@@ -4621,7 +4046,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 5.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15913',
@@ -4629,7 +4053,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 5.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15978',
@@ -4637,7 +4060,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1692',
@@ -4645,7 +4067,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1693',
@@ -4653,7 +4074,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 2.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1703',
@@ -4661,7 +4081,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7698',
@@ -4669,7 +4088,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4186',
@@ -4677,7 +4095,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4399',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4187',
@@ -4685,7 +4102,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4400',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4101',
@@ -4693,7 +4109,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4401',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4102',
@@ -4701,7 +4116,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4402',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4103',
@@ -4709,7 +4123,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4403',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4104',
@@ -4717,7 +4130,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4404',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4105',
@@ -4725,7 +4137,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4405',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4106',
@@ -4733,7 +4144,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4406',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4107',
@@ -4741,7 +4151,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4407',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4108',
@@ -4749,7 +4158,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4408',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4109',
@@ -4757,7 +4165,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4409',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4110',
@@ -4765,7 +4172,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4410',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4111',
@@ -4773,7 +4179,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4411',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4112',
@@ -4781,7 +4186,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4412',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4113',
@@ -4789,7 +4193,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4413',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4118',
@@ -4797,7 +4200,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4418',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4119',
@@ -4805,7 +4207,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4419',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4436',
@@ -4813,7 +4214,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4455',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4454',
@@ -4821,7 +4221,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4456',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5068',
@@ -4829,7 +4228,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5069',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5587',
@@ -4837,7 +4235,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5588',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12101',
@@ -4845,7 +4242,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5623',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12102',
@@ -4853,7 +4249,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5624',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12103',
@@ -4861,7 +4256,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5625',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6198',
@@ -4869,7 +4263,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6201',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6199',
@@ -4877,7 +4270,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6202',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6965',
@@ -4885,7 +4277,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6966',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17710',
@@ -4893,7 +4284,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7991',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9238',
@@ -4901,7 +4291,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8237',
             'accuracy' => 0.8,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9239',
@@ -4909,7 +4298,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8237',
             'accuracy' => 1.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9886',
@@ -4917,7 +4305,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8237',
             'accuracy' => 1.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9107',
@@ -4925,7 +4312,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8240',
             'accuracy' => 1.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9108',
@@ -4933,7 +4319,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8240',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9113',
@@ -4941,7 +4326,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8240',
             'accuracy' => 1.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9115',
@@ -4949,7 +4333,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8246',
             'accuracy' => 1.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::3899',
@@ -4957,7 +4340,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9311',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15303',
@@ -4965,7 +4347,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2205',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15304',
@@ -4973,7 +4354,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2222',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15305',
@@ -4981,7 +4361,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2223',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15306',
@@ -4989,7 +4368,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2224',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15307',
@@ -4997,7 +4375,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2225',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15308',
@@ -5005,7 +4382,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2226',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15309',
@@ -5013,7 +4389,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2227',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15310',
@@ -5021,7 +4396,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2228',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15311',
@@ -5029,7 +4403,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2229',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15312',
@@ -5037,7 +4410,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2230',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15313',
@@ -5045,7 +4417,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2231',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15314',
@@ -5053,7 +4424,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2232',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15315',
@@ -5061,7 +4431,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2233',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15316',
@@ -5069,7 +4438,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2234',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15317',
@@ -5077,7 +4445,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2235',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15318',
@@ -5085,7 +4452,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2236',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15319',
@@ -5093,7 +4459,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2237',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15320',
@@ -5101,7 +4466,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2238',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15321',
@@ -5109,7 +4473,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2239',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15322',
@@ -5117,7 +4480,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2240',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15323',
@@ -5125,7 +4487,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2241',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15324',
@@ -5133,7 +4494,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2242',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15325',
@@ -5141,7 +4501,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2243',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15328',
@@ -5149,7 +4508,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2246',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15329',
@@ -5157,7 +4515,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2247',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15330',
@@ -5165,7 +4522,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2248',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15331',
@@ -5173,7 +4529,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2249',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15332',
@@ -5181,7 +4536,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2250',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15333',
@@ -5189,7 +4543,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2251',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15334',
@@ -5197,7 +4550,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2252',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15335',
@@ -5205,7 +4557,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2253',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15336',
@@ -5213,7 +4564,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2254',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15337',
@@ -5221,7 +4571,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2255',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15338',
@@ -5229,7 +4578,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2256',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15339',
@@ -5237,7 +4585,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2257',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15340',
@@ -5245,7 +4592,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2258',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15341',
@@ -5253,7 +4599,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2259',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15342',
@@ -5261,7 +4606,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2260',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15343',
@@ -5269,7 +4613,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2261',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15344',
@@ -5277,7 +4620,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2262',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15345',
@@ -5285,7 +4627,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2263',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15346',
@@ -5293,7 +4634,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2264',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15347',
@@ -5301,7 +4641,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2265',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15348',
@@ -5309,7 +4648,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2266',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15349',
@@ -5317,7 +4655,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2267',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15350',
@@ -5325,7 +4662,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2268',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15351',
@@ -5333,7 +4669,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2269',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15352',
@@ -5341,7 +4676,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2270',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15353',
@@ -5349,7 +4683,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2271',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15354',
@@ -5357,7 +4690,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2272',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15355',
@@ -5365,7 +4697,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2273',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15356',
@@ -5373,7 +4704,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2274',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15357',
@@ -5381,7 +4711,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2275',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15358',
@@ -5389,7 +4718,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2276',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15359',
@@ -5397,7 +4725,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2277',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15360',
@@ -5405,7 +4732,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2278',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15361',
@@ -5413,7 +4739,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2279',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15362',
@@ -5421,7 +4746,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2280',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15363',
@@ -5429,7 +4753,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2281',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15364',
@@ -5437,7 +4760,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2282',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15365',
@@ -5445,7 +4767,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2283',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15366',
@@ -5453,7 +4774,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2284',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15367',
@@ -5461,7 +4781,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2285',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15368',
@@ -5469,7 +4788,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2286',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15369',
@@ -5477,7 +4795,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2287',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15370',
@@ -5485,7 +4802,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2288',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15371',
@@ -5493,7 +4809,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2289',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11833',
@@ -5501,7 +4816,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26847',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11834',
@@ -5509,7 +4823,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26848',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12234',
@@ -5517,7 +4830,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26849',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12235',
@@ -5525,7 +4837,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26850',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12236',
@@ -5533,7 +4844,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26851',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15396',
@@ -5541,7 +4851,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26852',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14735',
@@ -5549,7 +4858,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26853',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14736',
@@ -5557,7 +4865,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26854',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10131',
@@ -5565,7 +4872,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26929',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10132',
@@ -5573,7 +4879,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26930',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15031',
@@ -5581,7 +4886,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26931',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15032',
@@ -5589,7 +4893,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26932',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15033',
@@ -5597,7 +4900,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26933',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15034',
@@ -5605,7 +4907,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26934',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15035',
@@ -5613,7 +4914,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26935',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15036',
@@ -5621,7 +4921,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26936',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15037',
@@ -5629,7 +4928,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26937',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15038',
@@ -5637,7 +4935,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26938',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15039',
@@ -5645,7 +4942,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26939',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15040',
@@ -5653,7 +4949,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26940',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10431',
@@ -5661,7 +4956,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26941',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10432',
@@ -5669,7 +4963,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26942',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10433',
@@ -5677,7 +4970,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26943',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10434',
@@ -5685,7 +4977,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26944',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10435',
@@ -5693,7 +4984,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26945',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10436',
@@ -5701,7 +4991,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26946',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10231',
@@ -5709,7 +4998,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26948',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10232',
@@ -5717,7 +5005,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26949',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10233',
@@ -5725,7 +5012,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26950',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10331',
@@ -5733,7 +5019,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26951',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10332',
@@ -5741,7 +5026,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26952',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10531',
@@ -5749,7 +5033,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26953',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10532',
@@ -5757,7 +5040,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26954',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10533',
@@ -5765,7 +5047,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26955',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10630',
@@ -5773,7 +5054,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26956',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10730',
@@ -5781,7 +5061,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26957',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10931',
@@ -5789,7 +5068,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26958',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10932',
@@ -5797,7 +5075,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26959',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10933',
@@ -5805,7 +5082,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26960',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15131',
@@ -5813,7 +5089,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26961',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15132',
@@ -5821,7 +5096,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26962',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15133',
@@ -5829,7 +5103,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26963',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15134',
@@ -5837,7 +5110,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26964',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15135',
@@ -5845,7 +5117,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26965',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11031',
@@ -5853,7 +5124,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26966',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11032',
@@ -5861,7 +5131,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26967',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11131',
@@ -5869,7 +5138,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26968',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11132',
@@ -5877,7 +5145,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26969',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11133',
@@ -5885,7 +5152,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26970',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11231',
@@ -5893,7 +5159,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26971',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11232',
@@ -5901,7 +5166,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26972',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11331',
@@ -5909,7 +5173,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26973',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11332',
@@ -5917,7 +5180,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26974',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11431',
@@ -5925,7 +5187,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26975',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11432',
@@ -5933,7 +5194,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26976',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11531',
@@ -5941,7 +5201,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26977',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11532',
@@ -5949,7 +5208,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26978',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11632',
@@ -5957,7 +5215,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26980',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11731',
@@ -5965,7 +5222,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26981',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11732',
@@ -5973,7 +5229,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26982',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11831',
@@ -5981,7 +5236,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26983',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11832',
@@ -5989,7 +5243,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26984',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11930',
@@ -5997,7 +5250,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26985',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12031',
@@ -6005,7 +5257,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26986',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12032',
@@ -6013,7 +5264,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26987',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12141',
@@ -6021,7 +5271,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26988',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12142',
@@ -6029,7 +5278,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26989',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12143',
@@ -6037,7 +5285,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26990',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12231',
@@ -6045,7 +5292,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26991',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12232',
@@ -6053,7 +5299,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26992',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12233',
@@ -6061,7 +5306,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26993',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12331',
@@ -6069,7 +5313,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26994',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12332',
@@ -6077,7 +5320,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26995',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12431',
@@ -6085,7 +5327,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26996',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12432',
@@ -6093,7 +5334,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26997',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12433',
@@ -6101,7 +5341,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26998',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15372',
@@ -6109,7 +5348,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2965',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15373',
@@ -6117,7 +5355,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2966',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13633',
@@ -6125,7 +5362,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2991',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15374',
@@ -6133,7 +5369,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2992',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19984',
@@ -6141,7 +5376,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3005',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14841',
@@ -6149,7 +5383,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3070',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11851',
@@ -6157,7 +5390,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3072',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11853',
@@ -6165,7 +5397,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3074',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12150',
@@ -6173,7 +5404,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3078',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14251',
@@ -6181,7 +5411,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3081',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14253',
@@ -6189,7 +5418,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3082',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14254',
@@ -6197,7 +5425,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3083',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10934',
@@ -6205,7 +5432,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3086',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11630',
@@ -6213,7 +5439,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3088',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15375',
@@ -6221,7 +5446,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3089',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19875',
@@ -6229,7 +5453,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3161',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15397',
@@ -6237,7 +5460,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3174',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15398',
@@ -6245,7 +5467,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3175',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12530',
@@ -6253,7 +5474,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32100',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12630',
@@ -6261,7 +5481,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32104',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12731',
@@ -6269,7 +5488,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32107',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12732',
@@ -6277,7 +5495,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32108',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12733',
@@ -6285,7 +5502,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32109',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12830',
@@ -6293,7 +5509,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32110',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12930',
@@ -6301,7 +5516,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32111',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13031',
@@ -6309,7 +5523,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32112',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13032',
@@ -6317,7 +5530,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32113',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13033',
@@ -6325,7 +5537,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32114',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13131',
@@ -6333,7 +5544,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32115',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13132',
@@ -6341,7 +5551,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32116',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13133',
@@ -6349,7 +5558,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32117',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13134',
@@ -6357,7 +5565,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32118',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13230',
@@ -6365,7 +5572,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32119',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13331',
@@ -6373,7 +5579,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32120',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13332',
@@ -6381,7 +5586,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32121',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13431',
@@ -6389,7 +5593,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32122',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13432',
@@ -6397,7 +5600,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32123',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13531',
@@ -6405,7 +5607,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32124',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13532',
@@ -6413,7 +5614,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32125',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13631',
@@ -6421,7 +5621,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32126',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13632',
@@ -6429,7 +5628,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32127',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13731',
@@ -6437,7 +5635,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32128',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13732',
@@ -6445,7 +5642,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32129',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13830',
@@ -6453,7 +5649,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32130',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13930',
@@ -6461,7 +5656,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32133',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14031',
@@ -6469,7 +5663,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32134',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14032',
@@ -6477,7 +5670,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32135',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14130',
@@ -6485,7 +5677,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32136',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14231',
@@ -6493,7 +5684,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32137',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14232',
@@ -6501,7 +5691,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32138',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14233',
@@ -6509,7 +5698,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32139',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14234',
@@ -6517,7 +5705,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32140',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14235',
@@ -6525,7 +5712,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32141',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14331',
@@ -6533,7 +5719,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32142',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14332',
@@ -6541,7 +5726,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32143',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14333',
@@ -6549,7 +5733,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32144',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14430',
@@ -6557,7 +5740,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32145',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14531',
@@ -6565,7 +5747,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32146',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14532',
@@ -6573,7 +5754,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32147',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14631',
@@ -6581,7 +5761,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32148',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14632',
@@ -6589,7 +5768,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32149',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14731',
@@ -6597,7 +5775,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32150',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14732',
@@ -6605,7 +5782,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32151',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14831',
@@ -6613,7 +5789,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32152',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14832',
@@ -6621,7 +5796,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32153',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14833',
@@ -6629,7 +5803,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32154',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14931',
@@ -6637,7 +5810,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32155',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14932',
@@ -6645,7 +5817,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32156',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14933',
@@ -6653,7 +5824,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32157',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14934',
@@ -6661,7 +5831,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32158',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14930',
@@ -6669,7 +5838,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32159',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15230',
@@ -6677,7 +5845,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32161',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15914',
@@ -6685,7 +5852,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32164',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15915',
@@ -6693,7 +5859,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32165',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15916',
@@ -6701,7 +5866,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32166',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15917',
@@ -6709,7 +5873,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32167',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17701',
@@ -6717,7 +5880,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32181',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17702',
@@ -6725,7 +5887,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32182',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17703',
@@ -6733,7 +5894,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32183',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17704',
@@ -6741,7 +5901,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32184',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17705',
@@ -6749,7 +5908,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32185',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17706',
@@ -6757,7 +5915,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32186',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17707',
@@ -6765,7 +5922,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32187',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17708',
@@ -6773,7 +5929,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32188',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17709',
@@ -6781,7 +5936,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32189',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17710',
@@ -6789,7 +5943,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32190',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17711',
@@ -6797,7 +5950,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32191',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17712',
@@ -6805,7 +5957,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32192',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17713',
@@ -6813,7 +5964,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32193',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17714',
@@ -6821,7 +5971,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32194',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17715',
@@ -6829,7 +5978,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32195',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17716',
@@ -6837,7 +5985,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32196',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17717',
@@ -6845,7 +5992,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32197',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19944',
@@ -6853,7 +5999,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32198',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11733',
@@ -6861,7 +6006,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32199',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10420',
@@ -6869,7 +6013,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3310',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15021',
@@ -6877,7 +6020,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3338',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19897',
@@ -6885,7 +6027,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3347',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19881',
@@ -6893,7 +6034,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3400',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19882',
@@ -6901,7 +6041,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3401',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15377',
@@ -6909,7 +6048,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3417',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15378',
@@ -6917,7 +6055,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3418',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15379',
@@ -6925,7 +6062,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3419',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15380',
@@ -6933,7 +6069,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3420',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15381',
@@ -6941,7 +6076,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3421',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15382',
@@ -6949,7 +6083,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3422',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15383',
@@ -6957,7 +6090,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3423',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15384',
@@ -6965,7 +6097,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3424',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15385',
@@ -6973,7 +6104,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3433',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15386',
@@ -6981,7 +6111,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3434',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15387',
@@ -6989,7 +6118,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3435',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15388',
@@ -6997,7 +6125,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3436',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15389',
@@ -7005,7 +6132,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3437',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15390',
@@ -7013,7 +6139,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3438',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15391',
@@ -7021,7 +6146,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3451',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15392',
@@ -7029,7 +6153,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3452',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15393',
@@ -7037,7 +6160,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3453',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15395',
@@ -7045,7 +6167,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3455',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11854',
@@ -7053,7 +6174,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3463',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15297',
@@ -7061,7 +6181,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3560',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15298',
@@ -7069,7 +6188,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3566',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15299',
@@ -7077,7 +6195,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3567',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19858',
@@ -7085,7 +6202,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3578',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19857',
@@ -7093,7 +6209,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3580',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13433',
@@ -7101,7 +6216,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3734',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13434',
@@ -7109,7 +6223,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3735',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14935',
@@ -7117,7 +6230,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3736',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14936',
@@ -7125,7 +6237,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3737',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14937',
@@ -7133,7 +6244,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3738',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14938',
@@ -7141,7 +6251,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3739',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15138',
@@ -7149,7 +6258,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3759',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17722',
@@ -7157,7 +6265,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3775',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17723',
@@ -7165,7 +6272,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3776',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17724',
@@ -7173,7 +6279,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3777',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19844',
@@ -7181,7 +6286,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3798',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17726',
@@ -7189,7 +6293,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3801',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::3813',
@@ -7197,7 +6300,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3814',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::3967',
@@ -7205,7 +6307,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3968',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::3977',
@@ -7213,7 +6314,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3978',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8550',
@@ -7221,7 +6321,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'accuracy' => 0.15,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8556',
@@ -7229,7 +6328,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'accuracy' => 0.05,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8660',
@@ -7237,7 +6335,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'accuracy' => 0.05,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8669',
@@ -7245,7 +6342,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'accuracy' => 0.15,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4186',
@@ -7253,7 +6349,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4217',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1188',
@@ -7261,7 +6356,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 4.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1251',
@@ -7269,7 +6363,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 8.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1252',
@@ -7277,7 +6370,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 4.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1696',
@@ -7285,7 +6377,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1697',
@@ -7293,7 +6384,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1702',
@@ -7301,7 +6391,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4187',
@@ -7309,7 +6398,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4420',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4101',
@@ -7317,7 +6405,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4421',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4102',
@@ -7325,7 +6412,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4422',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4103',
@@ -7333,7 +6419,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4423',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4104',
@@ -7341,7 +6426,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4424',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4105',
@@ -7349,7 +6433,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4425',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4106',
@@ -7357,7 +6440,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4426',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4107',
@@ -7365,7 +6447,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4427',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4108',
@@ -7373,7 +6454,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4428',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4109',
@@ -7381,7 +6461,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4429',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4110',
@@ -7389,7 +6468,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4430',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4111',
@@ -7397,7 +6475,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4431',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4112',
@@ -7405,7 +6482,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4432',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4113',
@@ -7413,7 +6489,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4433',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4118',
@@ -7421,7 +6496,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4438',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4119',
@@ -7429,7 +6503,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4439',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15394',
@@ -7437,7 +6510,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4457',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1950',
@@ -7445,7 +6517,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'accuracy' => 2.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5068',
@@ -7453,7 +6524,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5070',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5319',
@@ -7461,7 +6531,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5320',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5645',
@@ -7469,7 +6538,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5646',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8971',
@@ -7477,7 +6545,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6645',
@@ -7485,7 +6552,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6623',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6920',
@@ -7493,7 +6559,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6922',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6921',
@@ -7501,7 +6566,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6923',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9241',
@@ -7509,7 +6573,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8237',
             'accuracy' => 1.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9887',
@@ -7517,7 +6580,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8237',
             'accuracy' => 1.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9110',
@@ -7525,7 +6587,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8240',
             'accuracy' => 0.1,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9117',
@@ -7533,7 +6594,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8240',
             'accuracy' => 0.1,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9118',
@@ -7541,7 +6601,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8240',
             'accuracy' => 0.1,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9119',
@@ -7549,7 +6608,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8246',
             'accuracy' => 0.1,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9244',
@@ -7557,7 +6615,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8246',
             'accuracy' => 1.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9550',
@@ -7565,7 +6622,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8252',
             'accuracy' => 0.1,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9795',
@@ -7573,7 +6629,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8255',
             'accuracy' => 0.1,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8373',
@@ -7581,7 +6636,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8379',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8374',
@@ -7589,7 +6643,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8380',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8375',
@@ -7597,7 +6650,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8381',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8376',
@@ -7605,7 +6657,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8382',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8825',
@@ -7613,7 +6664,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8826',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9673',
@@ -7621,7 +6671,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9674',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15914',
@@ -7629,7 +6678,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32664',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15915',
@@ -7637,7 +6685,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32665',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15916',
@@ -7645,7 +6692,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32666',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15917',
@@ -7653,7 +6699,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32667',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9228',
@@ -7661,7 +6706,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4466',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5792',
             'accuracy' => 0.05,
-            'reversible' => false,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9641',
@@ -7669,7 +6713,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4466',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9541',
             'accuracy' => 0.05,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4832',
@@ -7677,7 +6720,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4483',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6361',
@@ -7685,7 +6727,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4483',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6362',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9132',
@@ -7693,7 +6734,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4557',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9130',
             'accuracy' => 0.2,
-            'reversible' => false,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9642',
@@ -7701,7 +6741,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4557',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9542',
             'accuracy' => 0.2,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5494',
@@ -7709,7 +6748,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4558',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5489',
             'accuracy' => 0.1,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5495',
@@ -7717,7 +6755,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4558',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5489',
             'accuracy' => 0.1,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5496',
@@ -7725,7 +6762,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4558',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5489',
             'accuracy' => 0.1,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19942',
@@ -7733,7 +6769,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4600',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2000',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1447',
@@ -7741,7 +6776,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4600',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 10.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19942',
@@ -7749,7 +6783,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4601',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2001',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1441',
@@ -7757,7 +6790,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4601',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 10.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19942',
@@ -7765,7 +6797,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4602',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2002',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1442',
@@ -7773,7 +6804,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4602',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 10.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19942',
@@ -7781,7 +6811,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4603',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2003',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1443',
@@ -7789,7 +6818,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4603',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 10.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19942',
@@ -7797,7 +6825,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4604',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2004',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1444',
@@ -7805,7 +6832,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4604',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 44.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19942',
@@ -7813,7 +6839,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4605',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2005',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1445',
@@ -7821,7 +6846,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4605',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 10.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19942',
@@ -7829,7 +6853,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4606',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2006',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6897',
@@ -7837,7 +6860,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4606',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 2.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19942',
@@ -7845,7 +6867,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4607',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2007',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1959',
@@ -7853,7 +6874,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4607',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17708',
@@ -7861,7 +6881,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4608',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2017',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17709',
@@ -7869,7 +6888,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4608',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2018',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17710',
@@ -7877,7 +6895,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4608',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2019',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17711',
@@ -7885,7 +6902,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4608',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2020',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17712',
@@ -7893,7 +6909,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4608',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2021',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17713',
@@ -7901,7 +6916,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4608',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2022',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17714',
@@ -7909,7 +6923,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4608',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2023',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17715',
@@ -7917,7 +6930,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4608',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2024',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17716',
@@ -7925,7 +6937,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4608',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2025',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17717',
@@ -7933,7 +6944,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4608',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2026',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1463',
@@ -7941,7 +6951,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4608',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1690',
@@ -7949,7 +6958,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4608',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 2.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9109',
@@ -7957,7 +6965,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4608',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8240',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17703',
@@ -7965,7 +6972,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4609',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2009',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17704',
@@ -7973,7 +6979,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4609',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2010',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17705',
@@ -7981,7 +6986,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4609',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2011',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17706',
@@ -7989,7 +6993,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4609',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2012',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17707',
@@ -7997,7 +7000,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4609',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2013',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17708',
@@ -8005,7 +7007,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4609',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2014',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17709',
@@ -8013,7 +7014,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4609',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2015',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17710',
@@ -8021,7 +7021,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4609',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2016',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19944',
@@ -8029,7 +7028,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4609',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2138',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1575',
@@ -8037,7 +7035,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4609',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'accuracy' => 1.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1691',
@@ -8045,7 +7042,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4609',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9240',
@@ -8053,7 +7049,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4609',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8237',
             'accuracy' => 1.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17711',
@@ -8061,7 +7056,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26891',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17712',
@@ -8069,7 +7063,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26892',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17713',
@@ -8077,7 +7070,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26893',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17714',
@@ -8085,7 +7077,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26894',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17715',
@@ -8093,7 +7084,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26895',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17716',
@@ -8101,7 +7091,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26896',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17717',
@@ -8109,7 +7098,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26897',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17701',
@@ -8117,7 +7105,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26898',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17702',
@@ -8125,7 +7112,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26899',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17703',
@@ -8133,7 +7119,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2945',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17704',
@@ -8141,7 +7126,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2946',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17705',
@@ -8149,7 +7133,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2947',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17706',
@@ -8157,7 +7140,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2948',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17707',
@@ -8165,7 +7147,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2949',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17708',
@@ -8173,7 +7154,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2950',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17709',
@@ -8181,7 +7161,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2951',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17710',
@@ -8189,7 +7168,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2952',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19946',
@@ -8197,7 +7175,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2953',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19960',
@@ -8205,7 +7182,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2954',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19984',
@@ -8213,7 +7189,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3153',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19875',
@@ -8221,7 +7196,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3162',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19897',
@@ -8229,7 +7203,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3348',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19881',
@@ -8237,7 +7210,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3402',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19882',
@@ -8245,7 +7217,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3403',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19858',
@@ -8253,7 +7224,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3579',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19857',
@@ -8261,7 +7231,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3581',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17722',
@@ -8269,7 +7238,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3779',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17723',
@@ -8277,7 +7245,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3780',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17724',
@@ -8285,7 +7252,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3781',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19844',
@@ -8293,7 +7259,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3799',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17726',
@@ -8301,7 +7266,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3802',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::3977',
@@ -8309,7 +7273,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3979',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1842',
@@ -8317,7 +7280,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 2.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1946',
@@ -8325,7 +7287,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5319',
@@ -8333,7 +7294,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5321',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19944',
@@ -8341,7 +7301,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6622',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6645',
@@ -8349,7 +7308,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6624',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5493',
@@ -8357,7 +7315,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4621',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5489',
             'accuracy' => 10.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1905',
@@ -8365,7 +7322,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4622',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 0.1,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5492',
@@ -8373,7 +7329,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4622',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5489',
             'accuracy' => 10.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5491',
@@ -8381,7 +7336,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4625',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5489',
             'accuracy' => 0.1,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8270',
@@ -8389,7 +7343,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4638',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15804',
@@ -8397,7 +7350,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4717',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 6.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6127',
@@ -8405,7 +7357,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4723',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6128',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6136',
@@ -8413,7 +7364,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4723',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6135',
             'accuracy' => 0.3,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6127',
@@ -8421,7 +7371,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4726',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6129',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6137',
@@ -8429,7 +7378,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4726',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6135',
             'accuracy' => 0.15,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15879',
@@ -8437,7 +7385,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4747',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19860',
@@ -8445,7 +7392,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4758',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3448',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15925',
@@ -8453,7 +7399,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4758',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 0.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11833',
@@ -8461,7 +7406,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26863',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11834',
@@ -8469,7 +7413,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26864',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12234',
@@ -8477,7 +7420,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26865',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12235',
@@ -8485,7 +7427,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26866',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12236',
@@ -8493,7 +7434,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26867',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15396',
@@ -8501,7 +7441,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26868',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14735',
@@ -8509,7 +7448,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26869',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14736',
@@ -8517,7 +7455,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26870',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10131',
@@ -8525,7 +7462,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3465',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10132',
@@ -8533,7 +7469,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3466',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15021',
@@ -8541,7 +7476,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3467',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15031',
@@ -8549,7 +7483,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3468',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15032',
@@ -8557,7 +7490,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3469',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15033',
@@ -8565,7 +7497,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3470',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15034',
@@ -8573,7 +7504,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3471',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15035',
@@ -8581,7 +7511,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3472',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15036',
@@ -8589,7 +7518,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3473',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15037',
@@ -8597,7 +7525,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3474',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15038',
@@ -8605,7 +7532,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3475',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15039',
@@ -8613,7 +7539,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3476',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15040',
@@ -8621,7 +7546,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3477',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10232',
@@ -8629,7 +7553,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3478',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15305',
@@ -8637,7 +7560,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3479',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10231',
@@ -8645,7 +7567,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3480',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15304',
@@ -8653,7 +7574,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3481',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10233',
@@ -8661,7 +7581,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3482',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15306',
@@ -8669,7 +7588,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3483',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10331',
@@ -8677,7 +7595,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3484',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15385',
@@ -8685,7 +7602,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3485',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10332',
@@ -8693,7 +7609,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3486',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15386',
@@ -8701,7 +7616,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3487',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10420',
@@ -8709,7 +7623,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3488',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10431',
@@ -8717,7 +7630,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3489',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15307',
@@ -8725,7 +7637,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3490',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10432',
@@ -8733,7 +7644,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3491',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15308',
@@ -8741,7 +7651,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3492',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10433',
@@ -8749,7 +7658,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3493',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15309',
@@ -8757,7 +7665,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3494',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10434',
@@ -8765,7 +7672,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3495',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15310',
@@ -8773,7 +7679,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3496',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10435',
@@ -8781,7 +7686,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3497',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15311',
@@ -8789,7 +7693,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3498',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10436',
@@ -8797,7 +7700,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3499',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15312',
@@ -8805,7 +7707,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3500',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10532',
@@ -8813,7 +7714,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3501',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15314',
@@ -8821,7 +7721,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3502',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10531',
@@ -8829,7 +7728,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3503',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15313',
@@ -8837,7 +7735,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3504',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10533',
@@ -8845,7 +7742,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3505',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15315',
@@ -8853,7 +7749,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3506',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10630',
@@ -8861,7 +7756,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3507',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15316',
@@ -8869,7 +7763,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3508',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10730',
@@ -8877,7 +7770,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3509',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15317',
@@ -8885,7 +7777,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3510',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10931',
@@ -8893,7 +7784,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3511',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15318',
@@ -8901,7 +7791,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3512',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10934',
@@ -8909,7 +7798,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3513',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10933',
@@ -8917,7 +7805,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3514',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15320',
@@ -8925,7 +7812,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3515',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10932',
@@ -8933,7 +7819,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3516',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15319',
@@ -8941,7 +7826,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3517',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11031',
@@ -8949,7 +7833,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3518',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15321',
@@ -8957,7 +7840,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3519',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11032',
@@ -8965,7 +7847,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3520',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15322',
@@ -8973,7 +7854,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3521',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11132',
@@ -8981,7 +7861,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3522',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15324',
@@ -8989,7 +7868,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3523',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11131',
@@ -8997,7 +7875,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3524',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15323',
@@ -9005,7 +7882,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3525',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11133',
@@ -9013,7 +7889,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3526',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15325',
@@ -9021,7 +7896,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3527',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11231',
@@ -9029,7 +7903,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3528',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15387',
@@ -9037,7 +7910,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3529',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11232',
@@ -9045,7 +7917,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3530',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15388',
@@ -9053,7 +7924,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3531',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11331',
@@ -9061,7 +7931,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3532',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15372',
@@ -9069,7 +7938,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3533',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11332',
@@ -9077,7 +7945,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3534',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15373',
@@ -9085,7 +7952,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3535',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11431',
@@ -9093,7 +7959,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3536',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15377',
@@ -9101,7 +7966,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3537',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11432',
@@ -9109,7 +7973,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3538',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15378',
@@ -9117,7 +7980,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3539',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11531',
@@ -9125,7 +7987,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3540',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15379',
@@ -9133,7 +7994,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3541',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11532',
@@ -9141,7 +8001,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3542',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15380',
@@ -9149,7 +8008,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3543',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15303',
@@ -9157,7 +8015,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3544',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15328',
@@ -9165,7 +8022,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3545',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11630',
@@ -9173,7 +8029,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3546',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15375',
@@ -9181,7 +8036,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3547',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11632',
@@ -9189,7 +8043,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3548',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15329',
@@ -9197,7 +8050,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3549',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11731',
@@ -9205,7 +8057,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3550',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15391',
@@ -9213,7 +8064,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3551',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11732',
@@ -9221,7 +8071,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3552',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15392',
@@ -9229,7 +8078,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3553',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11854',
@@ -9237,7 +8085,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3554',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11851',
@@ -9245,7 +8092,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3555',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11853',
@@ -9253,7 +8099,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3556',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11831',
@@ -9261,7 +8106,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3557',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11832',
@@ -9269,7 +8113,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3558',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11930',
@@ -9277,7 +8120,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3559',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15330',
@@ -9285,7 +8127,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3582',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12032',
@@ -9293,7 +8134,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3583',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15332',
@@ -9301,7 +8141,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3584',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12031',
@@ -9309,7 +8148,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3585',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15331',
@@ -9317,7 +8155,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3586',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12142',
@@ -9325,7 +8162,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3587',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15334',
@@ -9333,7 +8169,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3588',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12141',
@@ -9341,7 +8176,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3589',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15333',
@@ -9349,7 +8183,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3590',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12150',
@@ -9357,7 +8190,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3591',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12143',
@@ -9365,7 +8197,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3592',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15335',
@@ -9373,7 +8204,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3593',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12232',
@@ -9381,7 +8211,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3594',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12231',
@@ -9389,7 +8218,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3595',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12233',
@@ -9397,7 +8225,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3596',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12331',
@@ -9405,7 +8232,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3597',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15336',
@@ -9413,7 +8239,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3598',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12332',
@@ -9421,7 +8246,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3599',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15337',
@@ -9429,7 +8253,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3600',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12432',
@@ -9437,7 +8260,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3601',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12431',
@@ -9445,7 +8267,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3602',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12433',
@@ -9453,7 +8274,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3603',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12530',
@@ -9461,7 +8281,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3604',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15338',
@@ -9469,7 +8288,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3605',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12630',
@@ -9477,7 +8295,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3606',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12732',
@@ -9485,7 +8302,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3607',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15382',
@@ -9493,7 +8309,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3608',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12731',
@@ -9501,7 +8316,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3609',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15381',
@@ -9509,7 +8323,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3610',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12733',
@@ -9517,7 +8330,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3611',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15383',
@@ -9525,7 +8337,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3612',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12830',
@@ -9533,7 +8344,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3613',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15389',
@@ -9541,7 +8351,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3614',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12930',
@@ -9549,7 +8358,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3615',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15384',
@@ -9557,7 +8365,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3616',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13032',
@@ -9565,7 +8372,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3617',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15340',
@@ -9573,7 +8379,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3618',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13031',
@@ -9581,7 +8386,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3619',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15339',
@@ -9589,7 +8393,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3620',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13033',
@@ -9597,7 +8400,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3621',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15341',
@@ -9605,7 +8407,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3622',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13132',
@@ -9613,7 +8414,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3623',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15343',
@@ -9621,7 +8421,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3624',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13131',
@@ -9629,7 +8428,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3625',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15342',
@@ -9637,7 +8435,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3626',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13134',
@@ -9645,7 +8442,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3627',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15345',
@@ -9653,7 +8449,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3628',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13133',
@@ -9661,7 +8456,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3629',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15344',
@@ -9669,7 +8463,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3630',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13230',
@@ -9677,7 +8470,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3631',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15346',
@@ -9685,7 +8477,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3632',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13331',
@@ -9693,7 +8484,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3633',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15347',
@@ -9701,7 +8491,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3634',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13332',
@@ -9709,7 +8498,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3635',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15348',
@@ -9717,7 +8505,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3636',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13431',
@@ -9725,7 +8512,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3637',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13432',
@@ -9733,7 +8519,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3638',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13531',
@@ -9741,7 +8526,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3639',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15349',
@@ -9749,7 +8533,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3640',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13532',
@@ -9757,7 +8540,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3641',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15350',
@@ -9765,7 +8547,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3642',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13633',
@@ -9773,7 +8554,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3643',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15374',
@@ -9781,7 +8561,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3644',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13631',
@@ -9789,7 +8568,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3645',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15351',
@@ -9797,7 +8575,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3646',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13632',
@@ -9805,7 +8582,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3647',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15352',
@@ -9813,7 +8589,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3648',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13731',
@@ -9821,7 +8596,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3649',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15353',
@@ -9829,7 +8603,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3650',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13732',
@@ -9837,7 +8610,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3651',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15354',
@@ -9845,7 +8617,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3652',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13830',
@@ -9853,7 +8624,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3653',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15390',
@@ -9861,7 +8631,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3654',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13930',
@@ -9869,7 +8638,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3655',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15355',
@@ -9877,7 +8645,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3656',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14031',
@@ -9885,7 +8652,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3657',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15394',
@@ -9893,7 +8659,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3658',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14032',
@@ -9901,7 +8666,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3659',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15395',
@@ -9909,7 +8673,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3660',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14130',
@@ -9917,7 +8680,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3661',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15356',
@@ -9925,7 +8687,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3662',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14233',
@@ -9933,7 +8694,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3663',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15359',
@@ -9941,7 +8701,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3664',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14254',
@@ -9949,7 +8708,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3665',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14253',
@@ -9957,7 +8715,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3666',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14231',
@@ -9965,7 +8722,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3667',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15357',
@@ -9973,7 +8729,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3668',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14232',
@@ -9981,7 +8736,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3669',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15358',
@@ -9989,7 +8743,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3670',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14235',
@@ -9997,7 +8750,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3671',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15361',
@@ -10005,7 +8757,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3672',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14234',
@@ -10013,7 +8764,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3673',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15360',
@@ -10021,7 +8771,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3674',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14332',
@@ -10029,7 +8778,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3675',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15363',
@@ -10037,7 +8785,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3676',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15298',
@@ -10045,7 +8792,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3677',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14331',
@@ -10053,7 +8799,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3678',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15362',
@@ -10061,7 +8806,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3679',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15297',
@@ -10069,7 +8813,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3680',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14333',
@@ -10077,7 +8820,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3681',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15364',
@@ -10085,7 +8827,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3682',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15299',
@@ -10093,7 +8834,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3683',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14430',
@@ -10101,7 +8841,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3684',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14531',
@@ -10109,7 +8848,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3685',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15365',
@@ -10117,7 +8855,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3686',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14532',
@@ -10125,7 +8862,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3687',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15366',
@@ -10133,7 +8869,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3688',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14631',
@@ -10141,7 +8876,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3689',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15367',
@@ -10149,7 +8883,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3690',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14632',
@@ -10157,7 +8890,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3691',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15368',
@@ -10165,7 +8897,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3692',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14731',
@@ -10173,7 +8904,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3693',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14732',
@@ -10181,7 +8911,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3694',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14832',
@@ -10189,7 +8918,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3695',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15370',
@@ -10197,7 +8925,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3696',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14831',
@@ -10205,7 +8932,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3697',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15369',
@@ -10213,7 +8939,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3698',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14833',
@@ -10221,7 +8946,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3699',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15371',
@@ -10229,7 +8953,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3700',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14841',
@@ -10237,7 +8960,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3701',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14931',
@@ -10245,7 +8967,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3702',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14932',
@@ -10253,7 +8974,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3703',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14933',
@@ -10261,7 +8981,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3704',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14934',
@@ -10269,7 +8988,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3705',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13433',
@@ -10277,7 +8995,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3728',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13434',
@@ -10285,7 +9002,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3729',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14935',
@@ -10293,7 +9009,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3730',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14936',
@@ -10301,7 +9016,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3731',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14937',
@@ -10309,7 +9023,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3732',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14938',
@@ -10317,7 +9030,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3733',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::3813',
@@ -10325,7 +9037,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3816',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::3967',
@@ -10333,7 +9044,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3970',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15931',
@@ -10341,7 +9051,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 2.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15230',
@@ -10349,7 +9058,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4437',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5068',
@@ -10357,7 +9065,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5072',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5645',
@@ -10365,7 +9072,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5655',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8552',
@@ -10373,7 +9079,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'accuracy' => 0.05,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8559',
@@ -10381,7 +9086,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'accuracy' => 0.05,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8673',
@@ -10389,7 +9093,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'accuracy' => 0.05,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19849',
@@ -10397,7 +9100,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4762',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3770',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15971',
@@ -10405,7 +9107,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4762',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9227',
@@ -10413,7 +9114,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4896',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8247',
             'accuracy' => 0.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8256',
@@ -10421,7 +9121,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4914',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8230',
             'accuracy' => 0.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8257',
@@ -10429,7 +9128,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4915',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8230',
             'accuracy' => 0.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8258',
@@ -10437,7 +9135,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4916',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8230',
             'accuracy' => 0.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6864',
@@ -10445,7 +9142,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4917',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6781',
             'accuracy' => 0.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8259',
@@ -10453,7 +9149,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4917',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8233',
             'accuracy' => 0.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6865',
@@ -10461,7 +9156,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4918',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6781',
             'accuracy' => 0.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8260',
@@ -10469,7 +9163,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4918',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8238',
             'accuracy' => 0.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6866',
@@ -10477,7 +9170,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4919',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6781',
             'accuracy' => 0.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8261',
@@ -10485,7 +9177,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4919',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8242',
             'accuracy' => 0.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9077',
@@ -10493,7 +9184,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4919',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9070',
             'accuracy' => 0.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9078',
@@ -10501,7 +9191,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4919',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9073',
             'accuracy' => 0.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7807',
@@ -10509,7 +9198,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::5332',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6317',
             'accuracy' => 0.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7808',
@@ -10517,7 +9205,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::5332',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6320',
             'accuracy' => 0.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7809',
@@ -10525,7 +9212,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::5332',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6323',
             'accuracy' => 0.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8264',
@@ -10533,7 +9219,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::5332',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8250',
             'accuracy' => 0.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9752',
@@ -10541,7 +9226,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::5365',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5366',
@@ -10549,7 +9233,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::5365',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5367',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9751',
@@ -10557,7 +9240,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::5365',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8907',
             'accuracy' => 0.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5377',
@@ -10565,7 +9247,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::5371',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5395',
@@ -10573,7 +9254,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::5393',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6888',
@@ -10581,7 +9261,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::5451',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'accuracy' => 9.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6890',
@@ -10589,7 +9268,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::5451',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5365',
             'accuracy' => 8.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5390',
@@ -10597,7 +9275,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::5451',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5456',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5394',
@@ -10605,7 +9282,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::5451',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5457',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18212',
@@ -10613,7 +9289,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::5451',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5459',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5399',
@@ -10621,7 +9296,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::5451',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5460',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5439',
@@ -10629,7 +9303,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::5451',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5461',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5444',
@@ -10637,7 +9310,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::5451',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5462',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18211',
@@ -10645,7 +9317,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::5451',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5559',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5465',
@@ -10653,7 +9324,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::5464',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5589',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5468',
@@ -10661,7 +9331,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::5467',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5469',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5471',
@@ -10669,7 +9338,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::5467',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5472',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9134',
@@ -10677,7 +9345,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::5488',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5616',
             'accuracy' => 0.1,
-            'reversible' => false,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9135',
@@ -10685,7 +9352,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::5488',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5617',
             'accuracy' => 0.1,
-            'reversible' => false,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9187',
@@ -10693,7 +9359,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::5488',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5619',
             'accuracy' => 0.1,
-            'reversible' => false,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9188',
@@ -10701,7 +9366,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::5488',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5620',
             'accuracy' => 0.1,
-            'reversible' => false,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9136',
@@ -10709,7 +9373,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::5488',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5756',
             'accuracy' => 0.05,
-            'reversible' => false,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9133',
@@ -10717,7 +9380,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::5488',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5757',
             'accuracy' => 0.05,
-            'reversible' => false,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9131',
@@ -10725,7 +9387,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::5488',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9130',
             'accuracy' => 0.2,
-            'reversible' => false,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9631',
@@ -10733,7 +9394,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::5488',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9531',
             'accuracy' => 0.05,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9632',
@@ -10741,7 +9401,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::5488',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9532',
             'accuracy' => 0.1,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9633',
@@ -10749,7 +9408,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::5488',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9533',
             'accuracy' => 0.1,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9634',
@@ -10757,7 +9415,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::5488',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9534',
             'accuracy' => 0.1,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9635',
@@ -10765,7 +9422,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::5488',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9535',
             'accuracy' => 0.1,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9636',
@@ -10773,7 +9429,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::5488',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9536',
             'accuracy' => 0.2,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9637',
@@ -10781,7 +9436,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::5488',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9537',
             'accuracy' => 0.05,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5501',
@@ -10789,7 +9443,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::5489',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10114',
@@ -10797,7 +9450,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::5713',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20034',
             'accuracy' => 0.05,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10113',
@@ -10805,7 +9457,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::5713',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20035',
             'accuracy' => 0.05,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10115',
@@ -10813,7 +9464,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::5713',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9245',
             'accuracy' => 0.05,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6177',
@@ -10821,7 +9471,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6135',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6390',
@@ -10829,7 +9478,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6135',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6391',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10148',
@@ -10837,7 +9485,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20050',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9774',
@@ -10845,7 +9492,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 2.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5068',
@@ -10853,7 +9499,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6350',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10131',
@@ -10861,7 +9506,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6355',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10132',
@@ -10869,7 +9513,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6356',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15021',
@@ -10877,7 +9520,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6393',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15031',
@@ -10885,7 +9527,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6394',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15032',
@@ -10893,7 +9534,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6395',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15033',
@@ -10901,7 +9541,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6396',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15034',
@@ -10909,7 +9548,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6397',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15035',
@@ -10917,7 +9555,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6398',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15036',
@@ -10925,7 +9562,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6399',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15037',
@@ -10933,7 +9569,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6400',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15038',
@@ -10941,7 +9576,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6401',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15039',
@@ -10949,7 +9583,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6402',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15040',
@@ -10957,7 +9590,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6403',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10232',
@@ -10965,7 +9597,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6404',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15305',
@@ -10973,7 +9604,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6405',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10231',
@@ -10981,7 +9611,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6406',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15304',
@@ -10989,7 +9618,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6407',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10233',
@@ -10997,7 +9625,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6408',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15306',
@@ -11005,7 +9632,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6409',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10331',
@@ -11013,7 +9639,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6410',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15385',
@@ -11021,7 +9646,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6411',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10332',
@@ -11029,7 +9653,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6412',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15386',
@@ -11037,7 +9660,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6413',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10420',
@@ -11045,7 +9667,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6414',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10431',
@@ -11053,7 +9674,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6415',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15307',
@@ -11061,7 +9681,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6416',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10432',
@@ -11069,7 +9688,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6417',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15308',
@@ -11077,7 +9695,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6418',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10433',
@@ -11085,7 +9702,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6419',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15309',
@@ -11093,7 +9709,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6420',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10434',
@@ -11101,7 +9716,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6421',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15310',
@@ -11109,7 +9723,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6422',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10435',
@@ -11117,7 +9730,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6423',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15311',
@@ -11125,7 +9737,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6424',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10436',
@@ -11133,7 +9744,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6425',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15312',
@@ -11141,7 +9751,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6426',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10532',
@@ -11149,7 +9758,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6427',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15314',
@@ -11157,7 +9765,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6428',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10531',
@@ -11165,7 +9772,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6429',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15313',
@@ -11173,7 +9779,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6430',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10533',
@@ -11181,7 +9786,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6431',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15315',
@@ -11189,7 +9793,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6432',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10630',
@@ -11197,7 +9800,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6433',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15316',
@@ -11205,7 +9807,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6434',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10730',
@@ -11213,7 +9814,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6435',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15317',
@@ -11221,7 +9821,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6436',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10931',
@@ -11229,7 +9828,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6437',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15318',
@@ -11237,7 +9835,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6438',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10934',
@@ -11245,7 +9842,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6439',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10933',
@@ -11253,7 +9849,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6440',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15320',
@@ -11261,7 +9856,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6441',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10932',
@@ -11269,7 +9863,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6442',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15319',
@@ -11277,7 +9870,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6443',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11031',
@@ -11285,7 +9877,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6444',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15321',
@@ -11293,7 +9884,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6445',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11032',
@@ -11301,7 +9891,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6446',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15322',
@@ -11309,7 +9898,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6447',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11132',
@@ -11317,7 +9905,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6448',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15324',
@@ -11325,7 +9912,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6449',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11131',
@@ -11333,7 +9919,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6450',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15323',
@@ -11341,7 +9926,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6451',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11133',
@@ -11349,7 +9933,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6452',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15325',
@@ -11357,7 +9940,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6453',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11231',
@@ -11365,7 +9947,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6454',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15387',
@@ -11373,7 +9954,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6455',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11232',
@@ -11381,7 +9961,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6456',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15388',
@@ -11389,7 +9968,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6457',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11331',
@@ -11397,7 +9975,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6458',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15372',
@@ -11405,7 +9982,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6459',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11332',
@@ -11413,7 +9989,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6460',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15373',
@@ -11421,7 +9996,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6461',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11431',
@@ -11429,7 +10003,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6462',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15377',
@@ -11437,7 +10010,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6463',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11432',
@@ -11445,7 +10017,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6464',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15378',
@@ -11453,7 +10024,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6465',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11531',
@@ -11461,7 +10031,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6466',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15379',
@@ -11469,7 +10038,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6467',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11532',
@@ -11477,7 +10045,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6468',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15380',
@@ -11485,7 +10052,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6469',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15303',
@@ -11493,7 +10059,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6470',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15328',
@@ -11501,7 +10066,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6471',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11630',
@@ -11509,7 +10073,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6472',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15375',
@@ -11517,7 +10080,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6473',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11632',
@@ -11525,7 +10087,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6474',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15329',
@@ -11533,7 +10094,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6475',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11731',
@@ -11541,7 +10101,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6476',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15391',
@@ -11549,7 +10108,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6477',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11732',
@@ -11557,7 +10115,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6478',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15392',
@@ -11565,7 +10122,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6479',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11854',
@@ -11573,7 +10129,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6480',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11851',
@@ -11581,7 +10136,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6481',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11853',
@@ -11589,7 +10143,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6482',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11831',
@@ -11597,7 +10150,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6483',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11833',
@@ -11605,7 +10157,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6484',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11832',
@@ -11613,7 +10164,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6485',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11834',
@@ -11621,7 +10171,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6486',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11930',
@@ -11629,7 +10178,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6487',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15330',
@@ -11637,7 +10185,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6488',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12032',
@@ -11645,7 +10192,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6489',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15332',
@@ -11653,7 +10199,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6490',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12031',
@@ -11661,7 +10206,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6491',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15331',
@@ -11669,7 +10213,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6492',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12142',
@@ -11677,7 +10220,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6493',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15334',
@@ -11685,7 +10227,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6494',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12141',
@@ -11693,7 +10234,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6495',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15333',
@@ -11701,7 +10241,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6496',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12150',
@@ -11709,7 +10248,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6497',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12143',
@@ -11717,7 +10255,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6498',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15335',
@@ -11725,7 +10262,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6499',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12232',
@@ -11733,7 +10269,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6500',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12235',
@@ -11741,7 +10276,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6501',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12231',
@@ -11749,7 +10283,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6502',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12234',
@@ -11757,7 +10290,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6503',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12233',
@@ -11765,7 +10297,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6504',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12236',
@@ -11773,7 +10304,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6505',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12331',
@@ -11781,7 +10311,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6506',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15336',
@@ -11789,7 +10318,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6507',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::3813',
@@ -11797,7 +10325,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6508',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12332',
@@ -11805,7 +10332,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6509',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15337',
@@ -11813,7 +10339,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6510',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12432',
@@ -11821,7 +10346,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6511',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12431',
@@ -11829,7 +10353,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6512',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12433',
@@ -11837,7 +10360,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6513',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12530',
@@ -11845,7 +10367,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6514',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15338',
@@ -11853,7 +10374,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6515',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12630',
@@ -11861,7 +10381,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6516',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12732',
@@ -11869,7 +10388,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6518',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15382',
@@ -11877,7 +10395,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6519',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12731',
@@ -11885,7 +10402,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6520',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15381',
@@ -11893,7 +10409,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6521',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12733',
@@ -11901,7 +10416,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6522',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15383',
@@ -11909,7 +10423,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6523',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12830',
@@ -11917,7 +10430,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6524',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15389',
@@ -11925,7 +10437,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6525',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12930',
@@ -11933,7 +10444,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6526',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15384',
@@ -11941,7 +10451,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6527',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13032',
@@ -11949,7 +10458,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6528',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15340',
@@ -11957,7 +10465,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6529',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13031',
@@ -11965,7 +10472,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6530',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15339',
@@ -11973,7 +10479,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6531',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13033',
@@ -11981,7 +10486,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6532',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15341',
@@ -11989,7 +10493,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6533',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13132',
@@ -11997,7 +10500,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6534',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15343',
@@ -12005,7 +10507,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6535',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13131',
@@ -12013,7 +10514,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6536',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15342',
@@ -12021,7 +10521,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6537',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13134',
@@ -12029,7 +10528,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6538',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15345',
@@ -12037,7 +10535,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6539',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13133',
@@ -12045,7 +10542,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6540',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15344',
@@ -12053,7 +10549,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6541',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13230',
@@ -12061,7 +10556,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6542',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15346',
@@ -12069,7 +10563,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6543',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13331',
@@ -12077,7 +10570,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6544',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15347',
@@ -12085,7 +10577,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6545',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13332',
@@ -12093,7 +10584,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6546',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15348',
@@ -12101,7 +10591,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6547',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13431',
@@ -12109,7 +10598,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6548',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13433',
@@ -12117,7 +10605,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6549',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13432',
@@ -12125,7 +10612,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6550',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13434',
@@ -12133,7 +10619,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6551',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13531',
@@ -12141,7 +10626,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6552',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15349',
@@ -12149,7 +10633,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6553',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13532',
@@ -12157,7 +10640,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6554',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15350',
@@ -12165,7 +10647,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6555',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13633',
@@ -12173,7 +10654,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6556',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15374',
@@ -12181,7 +10661,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6557',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13631',
@@ -12189,7 +10668,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6558',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15351',
@@ -12197,7 +10675,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6559',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13632',
@@ -12205,7 +10682,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6560',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15352',
@@ -12213,7 +10689,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6561',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13731',
@@ -12221,7 +10696,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6562',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15353',
@@ -12229,7 +10703,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6563',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13732',
@@ -12237,7 +10710,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6564',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15354',
@@ -12245,7 +10717,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6565',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15230',
@@ -12253,7 +10724,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6566',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13830',
@@ -12261,7 +10731,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6567',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15390',
@@ -12269,7 +10738,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6568',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13930',
@@ -12277,7 +10745,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6569',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15355',
@@ -12285,7 +10752,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6570',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14031',
@@ -12293,7 +10759,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6571',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15394',
@@ -12301,7 +10766,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6572',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14032',
@@ -12309,7 +10773,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6573',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15395',
@@ -12317,7 +10780,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6574',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14130',
@@ -12325,7 +10787,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6575',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15356',
@@ -12333,7 +10794,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6576',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14233',
@@ -12341,7 +10801,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6577',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15359',
@@ -12349,7 +10808,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6578',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14254',
@@ -12357,7 +10815,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6579',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14253',
@@ -12365,7 +10822,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6580',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14231',
@@ -12373,7 +10829,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6581',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15357',
@@ -12381,7 +10836,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6582',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14232',
@@ -12389,7 +10843,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6583',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15358',
@@ -12397,7 +10850,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6584',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14235',
@@ -12405,7 +10857,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6585',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15361',
@@ -12413,7 +10864,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6586',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14234',
@@ -12421,7 +10871,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6587',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15360',
@@ -12429,7 +10878,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6588',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14430',
@@ -12437,7 +10885,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6589',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5645',
@@ -12445,7 +10892,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6590',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::3967',
@@ -12453,7 +10899,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6591',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14531',
@@ -12461,7 +10906,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6592',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15365',
@@ -12469,7 +10913,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6593',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14532',
@@ -12477,7 +10920,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6594',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15366',
@@ -12485,7 +10927,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6595',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14631',
@@ -12493,7 +10934,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6596',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15367',
@@ -12501,7 +10941,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6597',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14632',
@@ -12509,7 +10948,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6598',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15368',
@@ -12517,7 +10955,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6599',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14731',
@@ -12525,7 +10962,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6600',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14735',
@@ -12533,7 +10969,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6601',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14732',
@@ -12541,7 +10976,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6602',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14736',
@@ -12549,7 +10983,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6603',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15370',
@@ -12557,7 +10990,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6605',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14831',
@@ -12565,7 +10997,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6606',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15369',
@@ -12573,7 +11004,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6607',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14833',
@@ -12581,7 +11011,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6608',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15371',
@@ -12589,7 +11018,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6609',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14841',
@@ -12597,7 +11025,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6610',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14931',
@@ -12605,7 +11032,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6611',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14935',
@@ -12613,7 +11039,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6612',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14932',
@@ -12621,7 +11046,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6613',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14936',
@@ -12629,7 +11053,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6614',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14934',
@@ -12637,7 +11060,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6615',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14938',
@@ -12645,7 +11067,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6616',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14933',
@@ -12653,7 +11074,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6617',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14937',
@@ -12661,7 +11081,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6618',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14332',
@@ -12669,7 +11088,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6619',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14331',
@@ -12677,7 +11095,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6620',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14333',
@@ -12685,7 +11102,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6621',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15298',
@@ -12693,7 +11109,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6625',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15297',
@@ -12701,7 +11116,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6626',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15299',
@@ -12709,7 +11123,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6627',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6741',
@@ -12717,7 +11130,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6786',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6742',
@@ -12725,7 +11137,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6787',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6743',
@@ -12733,7 +11144,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6790',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6744',
@@ -12741,7 +11151,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6791',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6745',
@@ -12749,7 +11158,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6794',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6746',
@@ -12757,7 +11165,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6795',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6747',
@@ -12765,7 +11172,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6798',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6748',
@@ -12773,7 +11179,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6799',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6749',
@@ -12781,7 +11186,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6802',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6750',
@@ -12789,7 +11193,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6803',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6751',
@@ -12797,7 +11200,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6806',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6752',
@@ -12805,7 +11207,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6807',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6753',
@@ -12813,7 +11214,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6810',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6754',
@@ -12821,7 +11221,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6811',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6755',
@@ -12829,7 +11228,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6814',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6756',
@@ -12837,7 +11235,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6815',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6757',
@@ -12845,7 +11242,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6818',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6758',
@@ -12853,7 +11249,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6819',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6759',
@@ -12861,7 +11256,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6822',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6760',
@@ -12869,7 +11263,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6823',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6761',
@@ -12877,7 +11270,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6826',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6762',
@@ -12885,7 +11277,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6827',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6763',
@@ -12893,7 +11284,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6830',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6764',
@@ -12901,7 +11291,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6831',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6765',
@@ -12909,7 +11298,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6834',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6766',
@@ -12917,7 +11305,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6835',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6767',
@@ -12925,7 +11312,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6838',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6768',
@@ -12933,7 +11319,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6839',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6769',
@@ -12941,7 +11326,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6842',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6770',
@@ -12949,7 +11333,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6843',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6771',
@@ -12957,7 +11340,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6846',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6772',
@@ -12965,7 +11347,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6847',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6773',
@@ -12973,7 +11354,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6850',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6774',
@@ -12981,7 +11361,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6851',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6775',
@@ -12989,7 +11368,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6854',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6776',
@@ -12997,7 +11375,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6855',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6777',
@@ -13005,7 +11382,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6858',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6778',
@@ -13013,7 +11389,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6859',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6779',
@@ -13021,7 +11396,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6862',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6780',
@@ -13029,7 +11403,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6863',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14832',
@@ -13037,7 +11410,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6879',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15396',
@@ -13045,7 +11417,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6880',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6920',
@@ -13053,7 +11424,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6924',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6921',
@@ -13061,7 +11431,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6925',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7043',
@@ -13069,7 +11438,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7057',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7044',
@@ -13077,7 +11445,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7058',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7045',
@@ -13085,7 +11452,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7059',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7046',
@@ -13093,7 +11459,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7060',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7047',
@@ -13101,7 +11466,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7061',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7048',
@@ -13109,7 +11473,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7062',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7049',
@@ -13117,7 +11480,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7063',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7050',
@@ -13125,7 +11487,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7064',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7051',
@@ -13133,7 +11494,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7065',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7052',
@@ -13141,7 +11501,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7066',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7053',
@@ -13149,7 +11508,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7067',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7054',
@@ -13157,7 +11515,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7068',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7055',
@@ -13165,7 +11522,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7069',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7056',
@@ -13173,7 +11529,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7070',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7089',
@@ -13181,7 +11536,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7109',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7091',
@@ -13189,7 +11543,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7110',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7093',
@@ -13197,7 +11550,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7111',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7095',
@@ -13205,7 +11557,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7112',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7097',
@@ -13213,7 +11564,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7113',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7099',
@@ -13221,7 +11571,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7114',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7101',
@@ -13229,7 +11578,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7115',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7103',
@@ -13237,7 +11585,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7116',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7105',
@@ -13245,7 +11592,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7117',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7107',
@@ -13253,7 +11599,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7118',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7090',
@@ -13261,7 +11606,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7119',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7092',
@@ -13269,7 +11613,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7120',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7094',
@@ -13277,7 +11620,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7121',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7096',
@@ -13285,7 +11627,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7122',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7098',
@@ -13293,7 +11634,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7123',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7100',
@@ -13301,7 +11641,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7124',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7102',
@@ -13309,7 +11648,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7125',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7104',
@@ -13317,7 +11655,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7126',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7106',
@@ -13325,7 +11662,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7127',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7108',
@@ -13333,7 +11669,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7128',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7129',
@@ -13341,7 +11676,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7131',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7130',
@@ -13349,7 +11683,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7132',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7143',
@@ -13357,7 +11690,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7257',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7144',
@@ -13365,7 +11697,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7258',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7145',
@@ -13373,7 +11704,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7259',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7146',
@@ -13381,7 +11711,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7260',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7147',
@@ -13389,7 +11718,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7261',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7148',
@@ -13397,7 +11725,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7262',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7149',
@@ -13405,7 +11732,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7263',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7150',
@@ -13413,7 +11739,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7264',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7151',
@@ -13421,7 +11746,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7265',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7152',
@@ -13429,7 +11753,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7266',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7153',
@@ -13437,7 +11760,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7267',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7154',
@@ -13445,7 +11767,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7268',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7155',
@@ -13453,7 +11774,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7269',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7156',
@@ -13461,7 +11781,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7270',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7157',
@@ -13469,7 +11788,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7271',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7158',
@@ -13477,7 +11795,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7272',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7159',
@@ -13485,7 +11802,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7273',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7160',
@@ -13493,7 +11809,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7274',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7161',
@@ -13501,7 +11816,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7275',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7162',
@@ -13509,7 +11823,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7276',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7163',
@@ -13517,7 +11830,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7277',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7164',
@@ -13525,7 +11837,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7278',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7165',
@@ -13533,7 +11844,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7279',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7166',
@@ -13541,7 +11851,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7280',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7167',
@@ -13549,7 +11858,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7281',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7168',
@@ -13557,7 +11865,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7282',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7169',
@@ -13565,7 +11872,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7283',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7170',
@@ -13573,7 +11879,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7284',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7171',
@@ -13581,7 +11886,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7285',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7172',
@@ -13589,7 +11893,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7286',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7173',
@@ -13597,7 +11900,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7287',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7174',
@@ -13605,7 +11907,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7288',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7175',
@@ -13613,7 +11914,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7289',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7176',
@@ -13621,7 +11921,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7290',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7177',
@@ -13629,7 +11928,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7291',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7178',
@@ -13637,7 +11935,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7292',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7179',
@@ -13645,7 +11942,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7293',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7180',
@@ -13653,7 +11949,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7294',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7181',
@@ -13661,7 +11956,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7295',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7182',
@@ -13669,7 +11963,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7296',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7183',
@@ -13677,7 +11970,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7297',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7184',
@@ -13685,7 +11977,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7298',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7185',
@@ -13693,7 +11984,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7299',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7186',
@@ -13701,7 +11991,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7300',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7187',
@@ -13709,7 +11998,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7301',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7188',
@@ -13717,7 +12005,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7302',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7189',
@@ -13725,7 +12012,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7303',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7190',
@@ -13733,7 +12019,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7304',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7191',
@@ -13741,7 +12026,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7305',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7192',
@@ -13749,7 +12033,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7306',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7193',
@@ -13757,7 +12040,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7307',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7194',
@@ -13765,7 +12047,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7308',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7195',
@@ -13773,7 +12054,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7309',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7196',
@@ -13781,7 +12061,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7310',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7197',
@@ -13789,7 +12068,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7311',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7198',
@@ -13797,7 +12075,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7312',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7199',
@@ -13805,7 +12082,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7313',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7200',
@@ -13813,7 +12089,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7314',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7201',
@@ -13821,7 +12096,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7315',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7202',
@@ -13829,7 +12103,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7316',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7203',
@@ -13837,7 +12110,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7317',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7204',
@@ -13845,7 +12117,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7318',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7205',
@@ -13853,7 +12124,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7319',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7206',
@@ -13861,7 +12131,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7320',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7207',
@@ -13869,7 +12138,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7321',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7208',
@@ -13877,7 +12145,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7322',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7209',
@@ -13885,7 +12152,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7323',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7210',
@@ -13893,7 +12159,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7324',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7211',
@@ -13901,7 +12166,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7325',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7212',
@@ -13909,7 +12173,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7326',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7213',
@@ -13917,7 +12180,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7327',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7214',
@@ -13925,7 +12187,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7328',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7215',
@@ -13933,7 +12194,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7329',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7216',
@@ -13941,7 +12201,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7330',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7217',
@@ -13949,7 +12208,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7331',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7218',
@@ -13957,7 +12215,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7332',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7219',
@@ -13965,7 +12222,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7333',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7220',
@@ -13973,7 +12229,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7334',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7221',
@@ -13981,7 +12236,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7335',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7222',
@@ -13989,7 +12243,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7336',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7223',
@@ -13997,7 +12250,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7337',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7224',
@@ -14005,7 +12257,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7338',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7225',
@@ -14013,7 +12264,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7339',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7226',
@@ -14021,7 +12271,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7340',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7227',
@@ -14029,7 +12278,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7341',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7228',
@@ -14037,7 +12285,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7342',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7229',
@@ -14045,7 +12292,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7343',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7230',
@@ -14053,7 +12299,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7344',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7231',
@@ -14061,7 +12306,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7345',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7232',
@@ -14069,7 +12313,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7346',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7233',
@@ -14077,7 +12320,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7347',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7234',
@@ -14085,7 +12327,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7348',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7235',
@@ -14093,7 +12334,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7349',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7236',
@@ -14101,7 +12341,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7350',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7237',
@@ -14109,7 +12348,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7351',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7238',
@@ -14117,7 +12355,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7352',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7239',
@@ -14125,7 +12362,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7353',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7240',
@@ -14133,7 +12369,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7354',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7241',
@@ -14141,7 +12376,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7355',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7242',
@@ -14149,7 +12383,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7356',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7243',
@@ -14157,7 +12390,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7357',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7244',
@@ -14165,7 +12397,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7358',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7245',
@@ -14173,7 +12404,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7359',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7246',
@@ -14181,7 +12411,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7360',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7247',
@@ -14189,7 +12418,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7361',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7248',
@@ -14197,7 +12425,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7362',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7249',
@@ -14205,7 +12432,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7363',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7250',
@@ -14213,7 +12439,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7364',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7251',
@@ -14221,7 +12446,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7365',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7252',
@@ -14229,7 +12453,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7366',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7253',
@@ -14237,7 +12460,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7367',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7254',
@@ -14245,7 +12467,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7368',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7255',
@@ -14253,7 +12474,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7369',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7256',
@@ -14261,7 +12481,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7370',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7484',
@@ -14269,7 +12488,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7528',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7378',
@@ -14277,7 +12495,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7529',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7426',
@@ -14285,7 +12502,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7530',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7380',
@@ -14293,7 +12509,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7531',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7428',
@@ -14301,7 +12516,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7532',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7430',
@@ -14309,7 +12523,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7533',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7382',
@@ -14317,7 +12530,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7534',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7486',
@@ -14325,7 +12537,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7535',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7432',
@@ -14333,7 +12544,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7536',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7434',
@@ -14341,7 +12551,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7537',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7488',
@@ -14349,7 +12558,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7538',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7490',
@@ -14357,7 +12565,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7539',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7492',
@@ -14365,7 +12572,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7540',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7494',
@@ -14373,7 +12579,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7541',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7436',
@@ -14381,7 +12586,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7542',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7384',
@@ -14389,7 +12593,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7543',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7438',
@@ -14397,7 +12600,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7544',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7440',
@@ -14405,7 +12607,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7545',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7386',
@@ -14413,7 +12614,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7546',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7388',
@@ -14421,7 +12621,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7547',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7496',
@@ -14429,7 +12628,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7548',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7498',
@@ -14437,7 +12635,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7549',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7500',
@@ -14445,7 +12642,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7550',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7502',
@@ -14453,7 +12649,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7551',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7390',
@@ -14461,7 +12656,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7552',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7450',
@@ -14469,7 +12663,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7553',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7504',
@@ -14477,7 +12670,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7554',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7506',
@@ -14485,7 +12677,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7555',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7508',
@@ -14493,7 +12684,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7556',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7452',
@@ -14501,7 +12691,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7557',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7454',
@@ -14509,7 +12698,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7558',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7456',
@@ -14517,7 +12705,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7559',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7458',
@@ -14525,7 +12712,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7560',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7460',
@@ -14533,7 +12719,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7561',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7510',
@@ -14541,7 +12726,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7562',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7462',
@@ -14549,7 +12733,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7563',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7392',
@@ -14557,7 +12740,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7564',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7464',
@@ -14565,7 +12747,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7565',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7466',
@@ -14573,7 +12754,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7566',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7468',
@@ -14581,7 +12761,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7567',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7394',
@@ -14589,7 +12768,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7568',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7512',
@@ -14597,7 +12775,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7569',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7514',
@@ -14605,7 +12782,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7570',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7470',
@@ -14613,7 +12789,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7571',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7516',
@@ -14621,7 +12796,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7572',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7396',
@@ -14629,7 +12803,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7573',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7472',
@@ -14637,7 +12810,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7574',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7474',
@@ -14645,7 +12817,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7575',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7476',
@@ -14653,7 +12824,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7576',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7478',
@@ -14661,7 +12831,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7577',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7518',
@@ -14669,7 +12838,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7578',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7398',
@@ -14677,7 +12845,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7579',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7520',
@@ -14685,7 +12852,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7580',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7424',
@@ -14693,7 +12859,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7581',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7522',
@@ -14701,7 +12866,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7582',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7524',
@@ -14709,7 +12873,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7583',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7480',
@@ -14717,7 +12880,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7584',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7526',
@@ -14725,7 +12887,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7585',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7482',
@@ -14733,7 +12894,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7586',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7485',
@@ -14741,7 +12901,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7587',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7379',
@@ -14749,7 +12908,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7588',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7427',
@@ -14757,7 +12915,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7589',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7381',
@@ -14765,7 +12922,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7590',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7429',
@@ -14773,7 +12929,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7591',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7431',
@@ -14781,7 +12936,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7592',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7383',
@@ -14789,7 +12943,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7593',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7487',
@@ -14797,7 +12950,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7594',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7433',
@@ -14805,7 +12957,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7595',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7435',
@@ -14813,7 +12964,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7596',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7489',
@@ -14821,7 +12971,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7597',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7491',
@@ -14829,7 +12978,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7598',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7493',
@@ -14837,7 +12985,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7599',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7495',
@@ -14845,7 +12992,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7600',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7437',
@@ -14853,7 +12999,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7601',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7385',
@@ -14861,7 +13006,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7602',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7439',
@@ -14869,7 +13013,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7603',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7441',
@@ -14877,7 +13020,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7604',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7387',
@@ -14885,7 +13027,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7605',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7389',
@@ -14893,7 +13034,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7606',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7497',
@@ -14901,7 +13041,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7607',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7499',
@@ -14909,7 +13048,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7608',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7501',
@@ -14917,7 +13055,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7609',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7503',
@@ -14925,7 +13062,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7610',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7391',
@@ -14933,7 +13069,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7611',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7451',
@@ -14941,7 +13076,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7612',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7505',
@@ -14949,7 +13083,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7613',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7507',
@@ -14957,7 +13090,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7614',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7509',
@@ -14965,7 +13097,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7615',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7453',
@@ -14973,7 +13104,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7616',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7455',
@@ -14981,7 +13111,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7617',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7457',
@@ -14989,7 +13118,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7618',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7459',
@@ -14997,7 +13125,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7619',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7461',
@@ -15005,7 +13132,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7620',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7511',
@@ -15013,7 +13139,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7621',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7463',
@@ -15021,7 +13146,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7622',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7393',
@@ -15029,7 +13153,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7623',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7465',
@@ -15037,7 +13160,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7624',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7467',
@@ -15045,7 +13167,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7625',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7469',
@@ -15053,7 +13174,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7626',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7395',
@@ -15061,7 +13181,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7627',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7513',
@@ -15069,7 +13188,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7628',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7515',
@@ -15077,7 +13195,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7629',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7471',
@@ -15085,7 +13202,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7630',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7517',
@@ -15093,7 +13209,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7631',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7397',
@@ -15101,7 +13216,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7632',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7473',
@@ -15109,7 +13223,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7633',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7475',
@@ -15117,7 +13230,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7634',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7477',
@@ -15125,7 +13237,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7635',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7479',
@@ -15133,7 +13244,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7636',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7519',
@@ -15141,7 +13251,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7637',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7399',
@@ -15149,7 +13258,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7638',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7521',
@@ -15157,7 +13265,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7639',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7425',
@@ -15165,7 +13272,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7640',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7523',
@@ -15173,7 +13279,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7641',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7525',
@@ -15181,7 +13286,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7642',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7481',
@@ -15189,7 +13293,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7643',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7527',
@@ -15197,7 +13300,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7644',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7483',
@@ -15205,7 +13307,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7645',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8061',
@@ -15213,7 +13314,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8065',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8062',
@@ -15221,7 +13321,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8066',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8063',
@@ -15229,7 +13328,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8067',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8064',
@@ -15237,7 +13335,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8068',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8273',
@@ -15245,7 +13342,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8311',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8274',
@@ -15253,7 +13349,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8312',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8275',
@@ -15261,7 +13356,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8313',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8276',
@@ -15269,7 +13363,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8314',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8277',
@@ -15277,7 +13370,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8315',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8278',
@@ -15285,7 +13377,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8316',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8279',
@@ -15293,7 +13384,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8317',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8280',
@@ -15301,7 +13391,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8318',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8281',
@@ -15309,7 +13398,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8319',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8282',
@@ -15317,7 +13405,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8320',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8283',
@@ -15325,7 +13412,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8321',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8284',
@@ -15333,7 +13419,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8322',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8285',
@@ -15341,7 +13426,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8323',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8286',
@@ -15349,7 +13433,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8324',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8287',
@@ -15357,7 +13440,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8325',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8288',
@@ -15365,7 +13447,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8326',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8289',
@@ -15373,7 +13454,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8327',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8290',
@@ -15381,7 +13461,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8328',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8291',
@@ -15389,7 +13468,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8329',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8292',
@@ -15397,7 +13475,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8330',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8293',
@@ -15405,7 +13482,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8331',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8294',
@@ -15413,7 +13489,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8332',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8295',
@@ -15421,7 +13496,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8333',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8296',
@@ -15429,7 +13503,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8334',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8297',
@@ -15437,7 +13510,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8335',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8298',
@@ -15445,7 +13517,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8336',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8299',
@@ -15453,7 +13524,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8337',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8300',
@@ -15461,7 +13531,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8338',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8301',
@@ -15469,7 +13538,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8339',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8302',
@@ -15477,7 +13545,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8340',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8303',
@@ -15485,7 +13552,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8341',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8304',
@@ -15493,7 +13559,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8342',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8305',
@@ -15501,7 +13566,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8343',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8306',
@@ -15509,7 +13573,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8344',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8307',
@@ -15517,7 +13580,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8345',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8308',
@@ -15525,7 +13587,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8346',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8309',
@@ -15533,7 +13594,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8347',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8310',
@@ -15541,7 +13601,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8348',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8373',
@@ -15549,7 +13608,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8383',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8374',
@@ -15557,7 +13615,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8384',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8375',
@@ -15565,7 +13622,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8385',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8376',
@@ -15573,7 +13629,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8387',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8458',
@@ -15581,7 +13636,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8518',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8459',
@@ -15589,7 +13643,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8519',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8490',
@@ -15597,7 +13650,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8520',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8491',
@@ -15605,7 +13657,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8521',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8492',
@@ -15613,7 +13664,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8522',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8493',
@@ -15621,7 +13671,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8523',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8494',
@@ -15629,7 +13678,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8524',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8495',
@@ -15637,7 +13685,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8525',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8498',
@@ -15645,7 +13692,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8526',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8499',
@@ -15653,7 +13699,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8527',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8500',
@@ -15661,7 +13706,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8528',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8501',
@@ -15669,7 +13713,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8529',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8502',
@@ -15677,7 +13720,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8531',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8503',
@@ -15685,7 +13727,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8533',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8504',
@@ -15693,7 +13734,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8534',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8505',
@@ -15701,7 +13741,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8535',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8506',
@@ -15709,7 +13748,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8536',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8507',
@@ -15717,7 +13755,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8538',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8515',
@@ -15725,7 +13762,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8539',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8516',
@@ -15733,7 +13769,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8540',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9746',
@@ -15741,7 +13776,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9748',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9747',
@@ -15749,7 +13783,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9749',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6327',
@@ -15757,7 +13790,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6319',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5703',
             'accuracy' => 0.02,
-            'reversible' => false,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9229',
@@ -15765,7 +13797,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6319',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5703',
             'accuracy' => 0.015,
-            'reversible' => false,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9595',
@@ -15773,7 +13804,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6319',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6349',
             'accuracy' => 0.015,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9596',
@@ -15781,7 +13811,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6319',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6349',
             'accuracy' => 0.02,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9230',
@@ -15789,7 +13818,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6319',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6641',
             'accuracy' => 0.015,
-            'reversible' => false,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9231',
@@ -15797,7 +13825,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6319',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6642',
             'accuracy' => 0.015,
-            'reversible' => false,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9622',
@@ -15805,7 +13832,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6319',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9522',
             'accuracy' => 0.015,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9623',
@@ -15813,7 +13839,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6319',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9523',
             'accuracy' => 0.015,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15131',
@@ -15821,7 +13846,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6628',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15132',
@@ -15829,7 +13853,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6629',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15133',
@@ -15837,7 +13860,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6630',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15134',
@@ -15845,7 +13867,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6631',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15135',
@@ -15853,7 +13874,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6632',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15138',
@@ -15861,7 +13881,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6633',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6373',
@@ -15869,7 +13888,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6365',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6361',
@@ -15877,7 +13895,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6365',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6372',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15230',
@@ -15885,7 +13902,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6783',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6307',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6741',
@@ -15893,7 +13909,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6783',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6784',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6742',
@@ -15901,7 +13916,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6783',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6785',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6743',
@@ -15909,7 +13923,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6783',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6788',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6744',
@@ -15917,7 +13930,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6783',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6789',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6745',
@@ -15925,7 +13937,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6783',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6792',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6746',
@@ -15933,7 +13944,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6783',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6793',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6747',
@@ -15941,7 +13951,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6783',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6796',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6748',
@@ -15949,7 +13958,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6783',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6797',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6749',
@@ -15957,7 +13965,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6783',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6800',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6750',
@@ -15965,7 +13972,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6783',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6801',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6751',
@@ -15973,7 +13979,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6783',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6804',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6752',
@@ -15981,7 +13986,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6783',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6805',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6753',
@@ -15989,7 +13993,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6783',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6808',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6754',
@@ -15997,7 +14000,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6783',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6809',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6755',
@@ -16005,7 +14007,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6783',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6812',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6756',
@@ -16013,7 +14014,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6783',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6813',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6757',
@@ -16021,7 +14021,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6783',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6816',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6758',
@@ -16029,7 +14028,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6783',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6817',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6759',
@@ -16037,7 +14035,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6783',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6820',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6760',
@@ -16045,7 +14042,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6783',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6821',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6761',
@@ -16053,7 +14049,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6783',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6824',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6762',
@@ -16061,7 +14056,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6783',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6825',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6763',
@@ -16069,7 +14063,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6783',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6828',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6764',
@@ -16077,7 +14070,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6783',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6829',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6765',
@@ -16085,7 +14077,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6783',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6832',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6766',
@@ -16093,7 +14084,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6783',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6833',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6767',
@@ -16101,7 +14091,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6783',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6836',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6768',
@@ -16109,7 +14098,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6783',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6837',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6769',
@@ -16117,7 +14105,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6783',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6840',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6770',
@@ -16125,7 +14112,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6783',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6841',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6771',
@@ -16133,7 +14119,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6783',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6844',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6772',
@@ -16141,7 +14126,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6783',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6845',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6773',
@@ -16149,7 +14133,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6783',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6848',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6774',
@@ -16157,7 +14140,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6783',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6849',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6775',
@@ -16165,7 +14147,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6783',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6852',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6776',
@@ -16173,7 +14154,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6783',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6853',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6777',
@@ -16181,7 +14161,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6783',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6856',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6778',
@@ -16189,7 +14168,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6783',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6857',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6779',
@@ -16197,7 +14175,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6783',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6860',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6780',
@@ -16205,7 +14182,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6783',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6861',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13633',
@@ -16213,7 +14189,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6783',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6867',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15374',
@@ -16221,7 +14196,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6783',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6868',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13631',
@@ -16229,7 +14203,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6783',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6884',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15351',
@@ -16237,7 +14210,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6783',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6885',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::13632',
@@ -16245,7 +14217,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6783',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6886',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15352',
@@ -16253,7 +14224,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6783',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6887',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8970',
@@ -16261,7 +14231,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::7789',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6317',
             'accuracy' => 0.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8265',
@@ -16269,7 +14238,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::7789',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8253',
             'accuracy' => 0.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9125',
@@ -16277,7 +14245,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::7911',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9245',
             'accuracy' => 0.03,
-            'reversible' => false,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7969',
@@ -16285,7 +14252,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::7968',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5703',
             'accuracy' => 0.02,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7970',
@@ -16293,7 +14259,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::7968',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5703',
             'accuracy' => 0.02,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7971',
@@ -16301,7 +14266,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::7968',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5703',
             'accuracy' => 0.02,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9126',
@@ -16309,7 +14273,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8233',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6781',
             'accuracy' => 0.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10112',
@@ -16317,7 +14280,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8235',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20035',
             'accuracy' => 0.05,
-            'reversible' => false,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9984',
@@ -16325,7 +14287,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8235',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5713',
             'accuracy' => 0.05,
-            'reversible' => false,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19960',
@@ -16333,7 +14294,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8237',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22239',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19946',
@@ -16341,7 +14301,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8237',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22240',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17703',
@@ -16349,7 +14308,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8237',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22243',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17704',
@@ -16357,7 +14315,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8237',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22244',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17705',
@@ -16365,7 +14322,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8237',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22245',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17706',
@@ -16373,7 +14329,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8237',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22246',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17707',
@@ -16381,7 +14336,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8237',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22247',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17708',
@@ -16389,7 +14343,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8237',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22248',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17709',
@@ -16397,7 +14350,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8237',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22249',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17710',
@@ -16405,7 +14357,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8237',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22250',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17722',
@@ -16413,7 +14364,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8237',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22262',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17723',
@@ -16421,7 +14371,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8237',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22263',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17724',
@@ -16429,7 +14378,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8237',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22264',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17726',
@@ -16437,7 +14385,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8237',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22265',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9127',
@@ -16445,7 +14392,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8238',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6781',
             'accuracy' => 0.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10111',
@@ -16453,7 +14399,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8239',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20035',
             'accuracy' => 0.05,
-            'reversible' => false,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10129',
@@ -16461,7 +14406,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8239',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20038',
             'accuracy' => 0.05,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9983',
@@ -16469,7 +14413,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8239',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5713',
             'accuracy' => 0.05,
-            'reversible' => false,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9982',
@@ -16477,7 +14420,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8240',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22337',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9981',
@@ -16485,7 +14427,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8240',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22338',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17708',
@@ -16493,7 +14434,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8240',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22348',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17709',
@@ -16501,7 +14441,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8240',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22349',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17710',
@@ -16509,7 +14448,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8240',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22350',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17711',
@@ -16517,7 +14455,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8240',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22351',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17712',
@@ -16525,7 +14462,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8240',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22352',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17713',
@@ -16533,7 +14469,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8240',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22353',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17714',
@@ -16541,7 +14476,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8240',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22354',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17715',
@@ -16549,7 +14483,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8240',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22355',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17716',
@@ -16557,7 +14490,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8240',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22356',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17717',
@@ -16565,7 +14497,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8240',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22357',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9128',
@@ -16573,7 +14504,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8242',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6781',
             'accuracy' => 0.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10110',
@@ -16581,7 +14511,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8244',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20034',
             'accuracy' => 0.05,
-            'reversible' => false,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10128',
@@ -16589,7 +14518,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8244',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20037',
             'accuracy' => 0.05,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9985',
@@ -16597,7 +14525,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8244',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5713',
             'accuracy' => 0.05,
-            'reversible' => false,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17722',
@@ -16605,7 +14532,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8246',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22462',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17723',
@@ -16613,7 +14539,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8246',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22463',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17724',
@@ -16621,7 +14546,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8246',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22464',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17726',
@@ -16629,7 +14553,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8246',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22465',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9129',
@@ -16637,7 +14560,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8250',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6317',
             'accuracy' => 0.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9986',
@@ -16645,7 +14567,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8251',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5713',
             'accuracy' => 0.05,
-            'reversible' => false,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9247',
@@ -16653,7 +14574,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8251',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9245',
             'accuracy' => 0.03,
-            'reversible' => false,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9644',
@@ -16661,7 +14581,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8251',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9544',
             'accuracy' => 0.03,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19960',
@@ -16669,7 +14588,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8252',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22639',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17701',
@@ -16677,7 +14595,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8252',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22641',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17702',
@@ -16685,7 +14602,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8252',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22642',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17703',
@@ -16693,7 +14609,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8252',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22643',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17704',
@@ -16701,7 +14616,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8252',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22644',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17705',
@@ -16709,7 +14623,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8252',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22645',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17706',
@@ -16717,7 +14630,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8252',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22646',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17708',
@@ -16725,7 +14637,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8252',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22648',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17709',
@@ -16733,7 +14644,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8252',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22649',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17710',
@@ -16741,7 +14651,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8252',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22650',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17711',
@@ -16749,7 +14658,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8252',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22651',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17712',
@@ -16757,7 +14665,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8252',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22652',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17713',
@@ -16765,7 +14672,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8252',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22653',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17714',
@@ -16773,7 +14679,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8252',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22654',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17715',
@@ -16781,7 +14686,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8252',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22655',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17716',
@@ -16789,7 +14693,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8252',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22656',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17717',
@@ -16797,7 +14700,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8252',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22657',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8080',
@@ -16805,7 +14707,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8252',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8082',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8081',
@@ -16813,7 +14714,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8252',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8083',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9987',
@@ -16821,7 +14721,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8254',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5713',
             'accuracy' => 0.05,
-            'reversible' => false,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10109',
@@ -16829,7 +14728,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8254',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9245',
             'accuracy' => 0.03,
-            'reversible' => false,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19960',
@@ -16837,7 +14735,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8255',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22739',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17722',
@@ -16845,7 +14742,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8255',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22762',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17723',
@@ -16853,7 +14749,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8255',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22763',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17724',
@@ -16861,7 +14756,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8255',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22764',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17726',
@@ -16869,7 +14763,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8255',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22765',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8867',
@@ -16877,7 +14770,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8545',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8860',
             'accuracy' => 0.05,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8862',
@@ -16885,7 +14777,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8860',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'accuracy' => 0.05,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8868',
@@ -16893,7 +14784,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8860',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'accuracy' => 0.05,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5366',
@@ -16901,7 +14791,6 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8907',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8908',
             'accuracy' => 0,
-            'reversible' => true,
         ],
     ];
 

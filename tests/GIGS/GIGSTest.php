@@ -623,8 +623,10 @@ class GIGSTest extends TestCase
         $baseCRS = Geographic2D::fromSRID('urn:ogc:def:crs:GIGS::' . $baseCRSCode);
         $this->assertSame($baseCRSName, $baseCRS->getName());
 
-        Projected::registerCustomCRS('urn:ogc:def:crs:GIGS::' . $gigsCode, $name, 'urn:ogc:def:crs:GIGS::' . $baseCRSCode, 'urn:ogc:def:coordinateOperation:GIGS::' . $derivingConversionCode, 'urn:ogc:def:cs:EPSG::' . $csEPSGCode, BoundingArea::createWorld());
-        CoordinateOperations::registerCustomTransformation('urn:ogc:def:coordinateOperation:GIGS::' . $derivingConversionCode, $derivingConversionName, 'urn:ogc:def:crs:GIGS::' . $baseCRSCode, 'urn:ogc:def:crs:GIGS::' . $gigsCode, 0, true);
+        $derivingOperationSrid = $derivingConversionCode <= 32767 ? 'urn:ogc:def:coordinateOperation:EPSG::' . $derivingConversionCode : 'urn:ogc:def:coordinateOperation:GIGS::' . $derivingConversionCode;
+
+        Projected::registerCustomCRS('urn:ogc:def:crs:GIGS::' . $gigsCode, $name, 'urn:ogc:def:crs:GIGS::' . $baseCRSCode, $derivingOperationSrid, 'urn:ogc:def:cs:EPSG::' . $csEPSGCode, BoundingArea::createWorld());
+        CoordinateOperations::registerCustomTransformation($derivingOperationSrid, $derivingConversionName, 'urn:ogc:def:crs:GIGS::' . $baseCRSCode, 'urn:ogc:def:crs:GIGS::' . $gigsCode, 0);
 
         $this->assertInstanceOf(Projected::class, Projected::fromSRID('urn:ogc:def:crs:GIGS::' . $gigsCode));
     }
@@ -726,7 +728,7 @@ class GIGSTest extends TestCase
         };
 
         CoordinateOperations::registerCustomOperation('urn:ogc:def:coordinateOperation:GIGS::' . $gigsCode, $name, $method, BoundingArea::createWorld(), $params);
-        CoordinateOperations::registerCustomTransformation('urn:ogc:def:coordinateOperation:GIGS::' . $gigsCode, $name, 'urn:ogc:def:crs:GIGS::' . $gigsSourceCRS, 'urn:ogc:def:crs:GIGS::' . $gigsTargetCRS, 0, true);
+        CoordinateOperations::registerCustomTransformation('urn:ogc:def:coordinateOperation:GIGS::' . $gigsCode, $name, 'urn:ogc:def:crs:GIGS::' . $gigsSourceCRS, 'urn:ogc:def:crs:GIGS::' . $gigsTargetCRS, 0);
 
         $gigsOperation = CoordinateOperations::getOperationData('urn:ogc:def:coordinateOperation:GIGS::' . $gigsCode);
         $gigsParams = CoordinateOperations::getParamData('urn:ogc:def:coordinateOperation:GIGS::' . $gigsCode);
@@ -844,7 +846,7 @@ class GIGSTest extends TestCase
             };
 
             CoordinateOperations::registerCustomOperation('urn:ogc:def:coordinateOperation:GIGS::' . $gigsCode, $name, $method, BoundingArea::createWorld(), $params);
-            CoordinateOperations::registerCustomTransformation('urn:ogc:def:coordinateOperation:GIGS::' . $gigsCode, $name, 'urn:ogc:def:crs:GIGS::' . $gigsSourceCRS, 'urn:ogc:def:crs:GIGS::' . $gigsTargetCRS, 0, true);
+            CoordinateOperations::registerCustomTransformation('urn:ogc:def:coordinateOperation:GIGS::' . $gigsCode, $name, 'urn:ogc:def:crs:GIGS::' . $gigsSourceCRS, 'urn:ogc:def:crs:GIGS::' . $gigsTargetCRS, 0);
 
             $gigsOperation = CoordinateOperations::getOperationData('urn:ogc:def:coordinateOperation:GIGS::' . $gigsCode);
             $gigsParams = CoordinateOperations::getParamData('urn:ogc:def:coordinateOperation:GIGS::' . $gigsCode);
@@ -866,9 +868,11 @@ class GIGSTest extends TestCase
     }
 
     /**
+     * @depends testSeries2200Operations
      * @depends testSeries3200GeodeticCRSs
      * @depends testSeries3200Projections
      * @depends testSeries3200Conversions
+     * @depends testSeries3200Transformations
      * @dataProvider series5100TransverseMercatorPart1Data
      * @dataProvider series5100TransverseMercatorPart2Data
      * @dataProvider series5100TransverseMercatorPart3Data

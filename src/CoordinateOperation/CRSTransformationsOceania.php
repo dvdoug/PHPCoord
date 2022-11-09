@@ -21,7 +21,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::3855',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7652',
             'accuracy' => 0.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7874',
@@ -29,7 +28,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::3855',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7841',
             'accuracy' => 0.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4325',
@@ -37,7 +35,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4414',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8863',
@@ -45,7 +42,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8860',
             'accuracy' => 0.05,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8865',
@@ -53,7 +49,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8860',
             'accuracy' => 0.05,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17931',
@@ -61,7 +56,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4167',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2105',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17932',
@@ -69,7 +63,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4167',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2106',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17933',
@@ -77,7 +70,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4167',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2107',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17934',
@@ -85,7 +77,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4167',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2108',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17935',
@@ -93,7 +84,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4167',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2109',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17936',
@@ -101,7 +91,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4167',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2110',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17937',
@@ -109,7 +98,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4167',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2111',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17938',
@@ -117,7 +105,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4167',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2112',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17939',
@@ -125,7 +112,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4167',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2113',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17940',
@@ -133,7 +119,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4167',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2114',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17941',
@@ -141,7 +126,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4167',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2115',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17942',
@@ -149,7 +133,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4167',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2116',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17943',
@@ -157,7 +140,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4167',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2117',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17944',
@@ -165,7 +147,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4167',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2118',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17945',
@@ -173,7 +154,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4167',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2119',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17946',
@@ -181,7 +161,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4167',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2120',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17947',
@@ -189,7 +168,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4167',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2121',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17948',
@@ -197,7 +175,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4167',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2122',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17949',
@@ -205,7 +182,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4167',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2123',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17950',
@@ -213,7 +189,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4167',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2124',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17951',
@@ -221,7 +196,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4167',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2125',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17952',
@@ -229,7 +203,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4167',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2126',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17953',
@@ -237,7 +210,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4167',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2127',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17954',
@@ -245,7 +217,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4167',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2128',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17955',
@@ -253,7 +224,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4167',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2129',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17956',
@@ -261,7 +231,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4167',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2130',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17957',
@@ -269,7 +238,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4167',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2131',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17958',
@@ -277,7 +245,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4167',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2132',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19971',
@@ -285,7 +252,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4167',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2193',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17959',
@@ -293,7 +259,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4167',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3764',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17960',
@@ -301,7 +266,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4167',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3788',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17961',
@@ -309,7 +273,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4167',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3789',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17962',
@@ -317,7 +280,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4167',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3790',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17963',
@@ -325,7 +287,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4167',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3791',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17965',
@@ -333,7 +294,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4167',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3793',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17964',
@@ -341,7 +301,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4167',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3851',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1565',
@@ -349,7 +308,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4167',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15376',
@@ -357,7 +315,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4169',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3102',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8662',
@@ -365,7 +322,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4169',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'accuracy' => 5.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1577',
@@ -373,7 +329,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4169',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 44.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17449',
@@ -381,7 +336,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4202',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20249',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17450',
@@ -389,7 +343,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4202',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20250',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17451',
@@ -397,7 +350,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4202',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20251',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17452',
@@ -405,7 +357,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4202',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20252',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17453',
@@ -413,7 +364,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4202',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20253',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17454',
@@ -421,7 +371,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4202',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20254',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17455',
@@ -429,7 +378,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4202',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20255',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17456',
@@ -437,7 +385,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4202',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20256',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17457',
@@ -445,7 +392,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4202',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20257',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17458',
@@ -453,7 +399,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4202',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20258',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17360',
@@ -461,7 +406,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4202',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3110',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1278',
@@ -469,7 +413,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4202',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4283',
             'accuracy' => 5.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1460',
@@ -477,7 +420,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4202',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4283',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1594',
@@ -485,7 +427,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4202',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4283',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1595',
@@ -493,7 +434,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4202',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4283',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15979',
@@ -501,7 +441,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4202',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4283',
             'accuracy' => 3.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1803',
@@ -509,7 +448,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4202',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4283',
             'accuracy' => 0.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5827',
@@ -517,7 +455,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4202',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4283',
             'accuracy' => 0.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5841',
@@ -525,7 +462,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4202',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 2.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6905',
@@ -533,7 +469,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4202',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 9.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6937',
@@ -541,7 +476,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4202',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5546',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6939',
@@ -549,7 +483,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4202',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5546',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6941',
@@ -557,7 +490,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4202',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5546',
             'accuracy' => 0.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5824',
@@ -565,7 +497,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4202',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5825',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9185',
@@ -573,7 +504,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4202',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7844',
             'accuracy' => 0.05,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17449',
@@ -581,7 +511,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4203',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20349',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17450',
@@ -589,7 +518,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4203',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20350',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17451',
@@ -597,7 +525,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4203',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20351',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17452',
@@ -605,7 +532,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4203',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20352',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17453',
@@ -613,7 +539,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4203',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20353',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17454',
@@ -621,7 +546,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4203',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20354',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17455',
@@ -629,7 +553,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4203',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20355',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17456',
@@ -637,7 +560,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4203',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20356',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1280',
@@ -645,7 +567,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4203',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4283',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1804',
@@ -653,7 +574,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4203',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4283',
             'accuracy' => 0.1,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19917',
@@ -661,7 +581,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4272',
             'target_crs' => 'urn:ogc:def:crs:EPSG::27200',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17901',
@@ -669,7 +588,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4272',
             'target_crs' => 'urn:ogc:def:crs:EPSG::27205',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17902',
@@ -677,7 +595,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4272',
             'target_crs' => 'urn:ogc:def:crs:EPSG::27206',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17903',
@@ -685,7 +602,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4272',
             'target_crs' => 'urn:ogc:def:crs:EPSG::27207',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17904',
@@ -693,7 +609,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4272',
             'target_crs' => 'urn:ogc:def:crs:EPSG::27208',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17905',
@@ -701,7 +616,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4272',
             'target_crs' => 'urn:ogc:def:crs:EPSG::27209',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17906',
@@ -709,7 +623,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4272',
             'target_crs' => 'urn:ogc:def:crs:EPSG::27210',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17907',
@@ -717,7 +630,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4272',
             'target_crs' => 'urn:ogc:def:crs:EPSG::27211',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17908',
@@ -725,7 +637,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4272',
             'target_crs' => 'urn:ogc:def:crs:EPSG::27212',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17909',
@@ -733,7 +644,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4272',
             'target_crs' => 'urn:ogc:def:crs:EPSG::27213',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17910',
@@ -741,7 +651,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4272',
             'target_crs' => 'urn:ogc:def:crs:EPSG::27214',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17911',
@@ -749,7 +658,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4272',
             'target_crs' => 'urn:ogc:def:crs:EPSG::27215',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17912',
@@ -757,7 +665,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4272',
             'target_crs' => 'urn:ogc:def:crs:EPSG::27216',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17913',
@@ -765,7 +672,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4272',
             'target_crs' => 'urn:ogc:def:crs:EPSG::27217',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17914',
@@ -773,7 +679,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4272',
             'target_crs' => 'urn:ogc:def:crs:EPSG::27218',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17915',
@@ -781,7 +686,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4272',
             'target_crs' => 'urn:ogc:def:crs:EPSG::27219',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17916',
@@ -789,7 +693,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4272',
             'target_crs' => 'urn:ogc:def:crs:EPSG::27220',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17917',
@@ -797,7 +700,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4272',
             'target_crs' => 'urn:ogc:def:crs:EPSG::27221',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17918',
@@ -805,7 +707,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4272',
             'target_crs' => 'urn:ogc:def:crs:EPSG::27222',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17919',
@@ -813,7 +714,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4272',
             'target_crs' => 'urn:ogc:def:crs:EPSG::27223',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17920',
@@ -821,7 +721,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4272',
             'target_crs' => 'urn:ogc:def:crs:EPSG::27224',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17921',
@@ -829,7 +728,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4272',
             'target_crs' => 'urn:ogc:def:crs:EPSG::27225',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17922',
@@ -837,7 +735,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4272',
             'target_crs' => 'urn:ogc:def:crs:EPSG::27226',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17923',
@@ -845,7 +742,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4272',
             'target_crs' => 'urn:ogc:def:crs:EPSG::27227',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17924',
@@ -853,7 +749,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4272',
             'target_crs' => 'urn:ogc:def:crs:EPSG::27228',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17925',
@@ -861,7 +756,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4272',
             'target_crs' => 'urn:ogc:def:crs:EPSG::27229',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17926',
@@ -869,7 +763,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4272',
             'target_crs' => 'urn:ogc:def:crs:EPSG::27230',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17927',
@@ -877,7 +770,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4272',
             'target_crs' => 'urn:ogc:def:crs:EPSG::27231',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17928',
@@ -885,7 +777,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4272',
             'target_crs' => 'urn:ogc:def:crs:EPSG::27232',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18141',
@@ -893,7 +784,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4272',
             'target_crs' => 'urn:ogc:def:crs:EPSG::27291',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18142',
@@ -901,7 +791,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4272',
             'target_crs' => 'urn:ogc:def:crs:EPSG::27292',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1566',
@@ -909,7 +798,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4272',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4167',
             'accuracy' => 5.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1568',
@@ -917,7 +805,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4272',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4167',
             'accuracy' => 0.2,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1701',
@@ -925,7 +812,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4272',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4167',
             'accuracy' => 4.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1151',
@@ -933,7 +819,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4272',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 8.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17348',
@@ -941,7 +826,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4283',
             'target_crs' => 'urn:ogc:def:crs:EPSG::28348',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17349',
@@ -949,7 +833,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4283',
             'target_crs' => 'urn:ogc:def:crs:EPSG::28349',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17350',
@@ -957,7 +840,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4283',
             'target_crs' => 'urn:ogc:def:crs:EPSG::28350',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17351',
@@ -965,7 +847,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4283',
             'target_crs' => 'urn:ogc:def:crs:EPSG::28351',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17352',
@@ -973,7 +854,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4283',
             'target_crs' => 'urn:ogc:def:crs:EPSG::28352',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17353',
@@ -981,7 +861,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4283',
             'target_crs' => 'urn:ogc:def:crs:EPSG::28353',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17354',
@@ -989,7 +868,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4283',
             'target_crs' => 'urn:ogc:def:crs:EPSG::28354',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17355',
@@ -997,7 +875,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4283',
             'target_crs' => 'urn:ogc:def:crs:EPSG::28355',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17356',
@@ -1005,7 +882,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4283',
             'target_crs' => 'urn:ogc:def:crs:EPSG::28356',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17357',
@@ -1013,7 +889,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4283',
             'target_crs' => 'urn:ogc:def:crs:EPSG::28357',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17358',
@@ -1021,7 +896,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4283',
             'target_crs' => 'urn:ogc:def:crs:EPSG::28358',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17359',
@@ -1029,7 +903,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4283',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3107',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17361',
@@ -1037,7 +910,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4283',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3111',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17362',
@@ -1045,7 +917,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4283',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3112',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17363',
@@ -1053,7 +924,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4283',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3113',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17364',
@@ -1061,7 +931,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4283',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3308',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17365',
@@ -1069,7 +938,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4283',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3577',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6717',
@@ -1077,7 +945,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4283',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6721',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6719',
@@ -1085,7 +952,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4283',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6723',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6729',
@@ -1093,7 +959,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4283',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6736',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6730',
@@ -1101,7 +966,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4283',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6737',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6731',
@@ -1109,7 +973,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4283',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6738',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8048',
@@ -1117,7 +980,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4283',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7844',
             'accuracy' => 0.01,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8447',
@@ -1125,7 +987,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4283',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7844',
             'accuracy' => 0.05,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8389',
@@ -1133,7 +994,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4283',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8391',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19843',
@@ -1141,7 +1001,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3994',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4460',
@@ -1149,7 +1008,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4462',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6716',
@@ -1157,7 +1015,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6720',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6718',
@@ -1165,7 +1022,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6722',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9690',
@@ -1173,7 +1029,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7844',
             'accuracy' => 3.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9691',
@@ -1181,7 +1036,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7844',
             'accuracy' => 3.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9190',
@@ -1189,7 +1043,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9191',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4453',
@@ -1197,7 +1050,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4440',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4458',
             'accuracy' => 0.04,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4442',
@@ -1205,7 +1057,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4440',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5759',
             'accuracy' => 0.05,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4451',
@@ -1213,7 +1064,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4440',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5760',
             'accuracy' => 0.05,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4450',
@@ -1221,7 +1071,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4440',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5761',
             'accuracy' => 0.07000000000000001,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4445',
@@ -1229,7 +1078,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4440',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5762',
             'accuracy' => 0.02,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4449',
@@ -1237,7 +1085,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4440',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5763',
             'accuracy' => 0.09,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4443',
@@ -1245,7 +1092,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4440',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5764',
             'accuracy' => 0.06,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4446',
@@ -1253,7 +1099,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4440',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5765',
             'accuracy' => 0.05,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4444',
@@ -1261,7 +1106,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4440',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5766',
             'accuracy' => 0.07000000000000001,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4441',
@@ -1269,7 +1113,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4440',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5767',
             'accuracy' => 0.03,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4447',
@@ -1277,7 +1120,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4440',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5769',
             'accuracy' => 0.05,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4448',
@@ -1285,7 +1127,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4440',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5770',
             'accuracy' => 0.04,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4452',
@@ -1293,7 +1134,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4440',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5772',
             'accuracy' => 0.15,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1924',
@@ -1301,7 +1141,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4628',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 10.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8833',
@@ -1309,7 +1148,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4629',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4687',
             'accuracy' => 0.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8848',
@@ -1317,7 +1155,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4630',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8847',
@@ -1325,7 +1162,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4630',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4687',
             'accuracy' => 0.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8849',
@@ -1333,7 +1169,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4630',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4687',
             'accuracy' => 2.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8851',
@@ -1341,7 +1176,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4630',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4687',
             'accuracy' => 0.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15890',
@@ -1349,7 +1183,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4633',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4749',
             'accuracy' => 0.1,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15847',
@@ -1357,7 +1190,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4639',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 10.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15891',
@@ -1365,7 +1197,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4641',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4749',
             'accuracy' => 0.1,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15893',
@@ -1373,7 +1204,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4642',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4749',
             'accuracy' => 0.1,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1931',
@@ -1381,7 +1211,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4643',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19873',
@@ -1389,7 +1218,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4644',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3165',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19874',
@@ -1397,7 +1225,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4644',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3166',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15889',
@@ -1405,7 +1232,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4644',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4749',
             'accuracy' => 0.1,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9328',
@@ -1413,7 +1239,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4644',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4749',
             'accuracy' => 0.05,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15887',
@@ -1421,7 +1246,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4662',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4749',
             'accuracy' => 0.3,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15888',
@@ -1429,7 +1253,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4662',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4749',
             'accuracy' => 0.1,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9329',
@@ -1437,7 +1260,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4662',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4749',
             'accuracy' => 0.1,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9330',
@@ -1445,7 +1267,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4662',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4749',
             'accuracy' => 0.05,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1080',
@@ -1453,7 +1274,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4672',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 26.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5517',
@@ -1461,7 +1281,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4672',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5518',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1082',
@@ -1469,7 +1288,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4673',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4167',
             'accuracy' => 2.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5517',
@@ -1477,7 +1295,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4673',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5519',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15399',
@@ -1485,7 +1302,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4675',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3295',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15400',
@@ -1493,7 +1309,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4675',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3993',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8665',
@@ -1501,7 +1316,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4675',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'accuracy' => 5.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1070',
@@ -1509,7 +1323,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4675',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 6.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15833',
@@ -1517,7 +1330,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4687',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8835',
@@ -1525,7 +1337,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4688',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4687',
             'accuracy' => 2.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8843',
@@ -1533,7 +1344,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4689',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4687',
             'accuracy' => 0.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8845',
@@ -1541,7 +1351,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4689',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4687',
             'accuracy' => 2.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8829',
@@ -1549,7 +1358,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4690',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4687',
             'accuracy' => 0.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8831',
@@ -1557,7 +1365,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4691',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4687',
             'accuracy' => 0.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15759',
@@ -1565,7 +1372,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4692',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4687',
             'accuracy' => 0.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15795',
@@ -1573,7 +1379,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4707',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 44.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15794',
@@ -1581,7 +1386,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4708',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 44.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15801',
@@ -1589,7 +1393,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4714',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 35.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15803',
@@ -1597,7 +1400,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4716',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 26.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15805',
@@ -1605,7 +1407,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4718',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 44.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15807',
@@ -1613,7 +1414,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4718',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 44.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19859',
@@ -1621,7 +1421,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4720',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3460',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15876',
@@ -1629,7 +1428,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4720',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 2.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15875',
@@ -1637,7 +1435,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4721',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 7.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15809',
@@ -1645,7 +1442,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4725',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 44.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15818',
@@ -1653,7 +1449,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4727',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 44.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15819',
@@ -1661,7 +1456,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4729',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 44.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15820',
@@ -1669,7 +1463,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4730',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 44.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15822',
@@ -1677,7 +1470,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4732',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 6.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15823',
@@ -1685,7 +1477,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4733',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 44.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15810',
@@ -1693,7 +1484,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4735',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 44.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19878',
@@ -1701,7 +1491,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4748',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3139',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15878',
@@ -1709,7 +1498,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4748',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 50.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19981',
@@ -1717,7 +1505,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4749',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3163',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15880',
@@ -1725,7 +1512,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4749',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15892',
@@ -1733,7 +1519,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4750',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4749',
             'accuracy' => 0.1,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19879',
@@ -1741,7 +1526,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4752',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3140',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6895',
@@ -1749,7 +1533,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4752',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 5.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19848',
@@ -1757,7 +1540,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4763',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3783',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15972',
@@ -1765,7 +1547,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4763',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6277',
@@ -1773,7 +1554,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4896',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4938',
             'accuracy' => 0.03,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9352',
@@ -1781,7 +1561,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4907',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9351',
             'accuracy' => 0.03,
-            'reversible' => false,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9640',
@@ -1789,7 +1568,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4907',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9540',
             'accuracy' => 0.03,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6280',
@@ -1797,7 +1575,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4917',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4938',
             'accuracy' => 0.11,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6279',
@@ -1805,7 +1582,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4918',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4938',
             'accuracy' => 0.18,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6278',
@@ -1813,7 +1589,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4919',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4938',
             'accuracy' => 0.06,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9467',
@@ -1821,7 +1596,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4939',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9464',
             'accuracy' => 0.15,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9325',
@@ -1829,7 +1603,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4959',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4440',
             'accuracy' => 0.1,
-            'reversible' => false,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9326',
@@ -1837,7 +1610,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4959',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7839',
             'accuracy' => 0.1,
-            'reversible' => false,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9627',
@@ -1845,7 +1617,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4959',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9527',
             'accuracy' => 0.1,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9628',
@@ -1853,7 +1624,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4959',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9528',
             'accuracy' => 0.1,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6276',
@@ -1861,7 +1631,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::5332',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4938',
             'accuracy' => 0.03,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5553',
@@ -1869,7 +1638,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::5546',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 2.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5547',
@@ -1877,7 +1645,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::5546',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5550',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5548',
@@ -1885,7 +1652,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::5546',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5551',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5549',
@@ -1893,7 +1659,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::5546',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5552',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9872',
@@ -1901,7 +1666,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::5546',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9874',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9873',
@@ -1909,7 +1673,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::5546',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9875',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7653',
@@ -1917,7 +1680,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::5773',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7651',
             'accuracy' => 0.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7873',
@@ -1925,7 +1687,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::5773',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7832',
             'accuracy' => 0.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9771',
@@ -1933,7 +1694,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::5886',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5883',
@@ -1941,7 +1701,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::5886',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5887',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7650',
@@ -1949,7 +1708,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::6321',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6643',
             'accuracy' => 0.02,
-            'reversible' => false,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9626',
@@ -1957,7 +1715,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::6321',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9526',
             'accuracy' => 0.02,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7649',
@@ -1965,7 +1722,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::6324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6640',
             'accuracy' => 0.02,
-            'reversible' => false,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7648',
@@ -1973,7 +1729,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::6324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6644',
             'accuracy' => 0.02,
-            'reversible' => false,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9624',
@@ -1981,7 +1736,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::6324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9524',
             'accuracy' => 0.02,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9625',
@@ -1989,7 +1743,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::6324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9525',
             'accuracy' => 0.02,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4325',
@@ -1997,7 +1750,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::6325',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6637',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9682',
@@ -2005,7 +1757,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7789',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4938',
             'accuracy' => 0.035,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8049',
@@ -2013,7 +1764,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7789',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7842',
             'accuracy' => 0.03,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9460',
@@ -2021,7 +1771,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7789',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9307',
             'accuracy' => 0.01,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9315',
@@ -2029,7 +1778,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7839',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4458',
             'accuracy' => 0.02,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9312',
@@ -2037,7 +1785,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7839',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5759',
             'accuracy' => 0.02,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9313',
@@ -2045,7 +1792,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7839',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5760',
             'accuracy' => 0.02,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9314',
@@ -2053,7 +1799,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7839',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5761',
             'accuracy' => 0.02,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9316',
@@ -2061,7 +1806,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7839',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5762',
             'accuracy' => 0.02,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9317',
@@ -2069,7 +1813,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7839',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5763',
             'accuracy' => 0.01,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9318',
@@ -2077,7 +1820,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7839',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5764',
             'accuracy' => 0.02,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9319',
@@ -2085,7 +1827,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7839',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5765',
             'accuracy' => 0.02,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9320',
@@ -2093,7 +1834,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7839',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5766',
             'accuracy' => 0.02,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9321',
@@ -2101,7 +1841,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7839',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5767',
             'accuracy' => 0.01,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9323',
@@ -2109,7 +1848,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7839',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5769',
             'accuracy' => 0.02,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9324',
@@ -2117,7 +1855,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7839',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5770',
             'accuracy' => 0.02,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9322',
@@ -2125,7 +1862,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7839',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5772',
             'accuracy' => 0.18,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8448',
@@ -2133,7 +1869,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7842',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7664',
             'accuracy' => 0.2,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8451',
@@ -2141,7 +1876,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7843',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5711',
             'accuracy' => 0.15,
-            'reversible' => false,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9692',
@@ -2149,7 +1883,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7843',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9458',
             'accuracy' => 0.1,
-            'reversible' => false,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9693',
@@ -2157,7 +1890,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7843',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9462',
             'accuracy' => 0.1,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9466',
@@ -2165,7 +1897,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7843',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9463',
             'accuracy' => 0.15,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10147',
@@ -2173,7 +1904,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7844',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20047',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8450',
@@ -2181,7 +1911,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7844',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 3.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17362',
@@ -2189,7 +1918,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7844',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7845',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6729',
@@ -2197,7 +1925,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7844',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7846',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6730',
@@ -2205,7 +1932,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7844',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7847',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17348',
@@ -2213,7 +1939,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7844',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7848',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17349',
@@ -2221,7 +1946,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7844',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7849',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17350',
@@ -2229,7 +1953,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7844',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7850',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17351',
@@ -2237,7 +1960,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7844',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7851',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17352',
@@ -2245,7 +1967,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7844',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7852',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17353',
@@ -2253,7 +1974,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7844',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7853',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17354',
@@ -2261,7 +1981,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7844',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7854',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17355',
@@ -2269,7 +1988,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7844',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7855',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17356',
@@ -2277,7 +1995,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7844',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7856',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17357',
@@ -2285,7 +2002,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7844',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7857',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17358',
@@ -2293,7 +2009,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7844',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7858',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6731',
@@ -2301,7 +2016,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7844',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7859',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17361',
@@ -2309,7 +2023,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7844',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7899',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7993',
@@ -2317,7 +2030,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7844',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8013',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7994',
@@ -2325,7 +2037,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7844',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8014',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7995',
@@ -2333,7 +2044,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7844',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8015',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7996',
@@ -2341,7 +2051,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7844',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8016',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7997',
@@ -2349,7 +2058,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7844',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8017',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7998',
@@ -2357,7 +2065,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7844',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8018',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7999',
@@ -2365,7 +2072,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7844',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8019',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8000',
@@ -2373,7 +2079,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7844',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8020',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8001',
@@ -2381,7 +2086,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7844',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8021',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8002',
@@ -2389,7 +2093,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7844',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8022',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8003',
@@ -2397,7 +2100,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7844',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8023',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8004',
@@ -2405,7 +2107,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7844',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8024',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8005',
@@ -2413,7 +2114,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7844',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8025',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8006',
@@ -2421,7 +2121,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7844',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8026',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8007',
@@ -2429,7 +2128,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7844',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8027',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8008',
@@ -2437,7 +2135,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7844',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8028',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8009',
@@ -2445,7 +2142,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7844',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8029',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8010',
@@ -2453,7 +2149,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7844',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8030',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8011',
@@ -2461,7 +2156,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7844',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8031',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8012',
@@ -2469,7 +2163,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7844',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8032',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17364',
@@ -2477,7 +2170,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7844',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8058',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17359',
@@ -2485,7 +2177,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7844',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8059',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17365',
@@ -2493,7 +2184,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7844',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9473',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8864',
@@ -2501,7 +2191,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::8860',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6322',
             'accuracy' => 0.05,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8866',
@@ -2509,7 +2198,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::8860',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6325',
             'accuracy' => 0.05,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9769',
@@ -2517,7 +2205,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::8900',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9684',
@@ -2525,7 +2212,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::9307',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4938',
             'accuracy' => 0.035,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9459',
@@ -2533,7 +2219,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::9307',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7842',
             'accuracy' => 0.03,
-            'reversible' => true,
         ],
     ];
 

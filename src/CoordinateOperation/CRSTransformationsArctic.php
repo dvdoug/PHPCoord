@@ -21,7 +21,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4258',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6069',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5993',
@@ -29,7 +28,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4258',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6070',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6012',
@@ -37,7 +35,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4258',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6071',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6013',
@@ -45,7 +42,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4258',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6072',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6020',
@@ -53,7 +49,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4258',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6073',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6021',
@@ -61,7 +56,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4258',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6074',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6038',
@@ -69,7 +63,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4258',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6125',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5906',
@@ -77,7 +70,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5921',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5907',
@@ -85,7 +77,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5922',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5908',
@@ -93,7 +84,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5923',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5909',
@@ -101,7 +91,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5924',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5910',
@@ -109,7 +98,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5925',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5911',
@@ -117,7 +105,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5926',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5912',
@@ -125,7 +112,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5927',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5913',
@@ -133,7 +119,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5928',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5914',
@@ -141,7 +126,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5929',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5915',
@@ -149,7 +133,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5930',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5916',
@@ -157,7 +140,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5931',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5917',
@@ -165,7 +147,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5932',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5918',
@@ -173,7 +154,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5933',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5919',
@@ -181,7 +161,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5934',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5920',
@@ -189,7 +168,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5935',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5990',
@@ -197,7 +175,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6075',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5991',
@@ -205,7 +182,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6076',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5994',
@@ -213,7 +189,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6077',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5995',
@@ -221,7 +196,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6078',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5996',
@@ -229,7 +203,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6079',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5997',
@@ -237,7 +210,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6080',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6014',
@@ -245,7 +217,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6081',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6015',
@@ -253,7 +224,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6082',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6016',
@@ -261,7 +231,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6083',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6017',
@@ -269,7 +238,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6084',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6018',
@@ -277,7 +245,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6085',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6019',
@@ -285,7 +252,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6086',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6022',
@@ -293,7 +259,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6087',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6023',
@@ -301,7 +266,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6088',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6024',
@@ -309,7 +273,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6089',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6025',
@@ -317,7 +280,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6090',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6026',
@@ -325,7 +287,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6091',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6027',
@@ -333,7 +294,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6092',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6028',
@@ -341,7 +301,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6093',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5980',
@@ -349,7 +308,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6115',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5981',
@@ -357,7 +315,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6116',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5982',
@@ -365,7 +322,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6117',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5977',
@@ -373,7 +329,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6118',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5992',
@@ -381,7 +336,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6119',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5983',
@@ -389,7 +343,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6120',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5984',
@@ -397,7 +350,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6121',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5998',
@@ -405,7 +357,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6122',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5999',
@@ -413,7 +364,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6123',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6005',
@@ -421,7 +371,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6124',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5978',
@@ -429,7 +378,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6098',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5985',
@@ -437,7 +385,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6099',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5986',
@@ -445,7 +392,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6100',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6000',
@@ -453,7 +399,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6101',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6001',
@@ -461,7 +406,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6102',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6002',
@@ -469,7 +413,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6103',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6006',
@@ -477,7 +420,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6104',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6007',
@@ -485,7 +427,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6105',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6008',
@@ -493,7 +434,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6106',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6031',
@@ -501,7 +441,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6107',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6032',
@@ -509,7 +448,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6108',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6033',
@@ -517,7 +455,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6109',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6034',
@@ -525,7 +462,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6110',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6041',
@@ -533,7 +469,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6111',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6042',
@@ -541,7 +476,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6112',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6043',
@@ -549,7 +483,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6113',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6044',
@@ -557,7 +490,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6114',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5979',
@@ -565,7 +497,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4747',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6050',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5987',
@@ -573,7 +504,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4747',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6051',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5988',
@@ -581,7 +511,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4747',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6052',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6002',
@@ -589,7 +518,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4747',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6053',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6003',
@@ -597,7 +525,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4747',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6054',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6004',
@@ -605,7 +532,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4747',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6055',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6009',
@@ -613,7 +539,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4747',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6056',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6010',
@@ -621,7 +546,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4747',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6057',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6011',
@@ -629,7 +553,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4747',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6058',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6035',
@@ -637,7 +560,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4747',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6059',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6036',
@@ -645,7 +567,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4747',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6060',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6037',
@@ -653,7 +574,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4747',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6061',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6045',
@@ -661,7 +581,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4747',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6062',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6046',
@@ -669,7 +588,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4747',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6063',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6047',
@@ -677,7 +595,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4747',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6064',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6048',
@@ -685,7 +602,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4747',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6065',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6049',
@@ -693,7 +609,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4747',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6066',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5943',
@@ -701,7 +616,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4747',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6067',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5944',
@@ -709,7 +623,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4747',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6068',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6029',
@@ -717,7 +630,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6094',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6030',
@@ -725,7 +637,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6095',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6039',
@@ -733,7 +644,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6096',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6040',
@@ -741,7 +651,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6097',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6029',
@@ -749,7 +658,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6351',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6030',
@@ -757,7 +665,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6352',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6039',
@@ -765,7 +672,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6353',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6040',
@@ -773,7 +679,6 @@ class CRSTransformationsArctic
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6354',
             'accuracy' => 0,
-            'reversible' => true,
         ],
     ];
 

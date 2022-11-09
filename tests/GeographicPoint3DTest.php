@@ -307,9 +307,10 @@ class GeographicPoint3DTest extends TestCase
      * @group integration
      * @dataProvider supportedOperations
      */
-    public function testOperations(string $sourceCrsSrid, string $targetCrsSrid, string $operationSrid, bool $reversible): void
+    public function testOperations(string $sourceCrsSrid, string $targetCrsSrid, string $operationSrid): void
     {
         $operation = CoordinateOperations::getOperationData($operationSrid);
+        $method = CoordinateOperationMethods::getMethodData($operation['method']);
         $operationExtent = BoundingArea::createFromExtentCodes($operation['extent']);
         $centre = $operationExtent->getPointInside();
 
@@ -325,7 +326,7 @@ class GeographicPoint3DTest extends TestCase
         self::assertInstanceOf(Point::class, $newPoint);
         self::assertEquals($targetCRS, $newPoint->getCRS());
 
-        if ($reversible) {
+        if ($method['reversible']) {
             $delta = isset($operation['method']) && $operation['method'] === CoordinateOperationMethods::EPSG_REVERSIBLE_POLYNOMIAL_OF_DEGREE_13 ? 0.01 : 0.001;
             $reversedPoint = $newPoint->performOperation($operationSrid, $sourceCRS, true);
 
@@ -359,7 +360,6 @@ class GeographicPoint3DTest extends TestCase
                         $transformation['source_crs'],
                         $transformation['target_crs'],
                         $transformation['operation'],
-                        $transformation['reversible'],
                     ];
                 }
             }

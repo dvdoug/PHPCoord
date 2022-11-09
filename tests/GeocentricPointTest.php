@@ -366,9 +366,10 @@ class GeocentricPointTest extends TestCase
      * @group integration
      * @dataProvider supportedOperations
      */
-    public function testOperations(string $sourceCrsSrid, string $targetCrsSrid, string $operationSrid, bool $reversible): void
+    public function testOperations(string $sourceCrsSrid, string $targetCrsSrid, string $operationSrid): void
     {
         $operation = CoordinateOperations::getOperationData($operationSrid);
+        $method = CoordinateOperationMethods::getMethodData($operation['method']);
         $operationExtent = BoundingArea::createFromExtentCodes($operation['extent']);
         $centre = $operationExtent->getPointInside();
 
@@ -387,7 +388,7 @@ class GeocentricPointTest extends TestCase
         self::assertInstanceOf(Point::class, $newPoint);
         self::assertEquals($targetCRS, $newPoint->getCRS());
 
-        if ($reversible) {
+        if ($method['reversible']) {
             $reversedPoint = $newPoint->performOperation($operationSrid, $sourceCRS, true);
             self::assertEquals($sourceCRS, $reversedPoint->getCRS());
             self::assertEqualsWithDelta($originalPoint->getX()->getValue(), $reversedPoint->getX()->getValue(), 0.0001);
@@ -414,7 +415,6 @@ class GeocentricPointTest extends TestCase
                         $transformation['source_crs'],
                         $transformation['target_crs'],
                         $transformation['operation'],
-                        $transformation['reversible'],
                     ];
                 }
             }

@@ -21,7 +21,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::20039',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20040',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -29,7 +28,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::20040',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20041',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16112',
@@ -37,7 +35,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::20041',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20042',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16118',
@@ -45,7 +42,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::20041',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20048',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16119',
@@ -53,7 +49,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::20041',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20049',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -61,7 +56,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::3822',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3823',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -69,7 +63,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::3823',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3824',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -77,7 +70,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::3887',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3888',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -85,7 +77,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::3888',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3889',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16037',
@@ -93,7 +84,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::3889',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3890',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16038',
@@ -101,7 +91,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::3889',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3891',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16039',
@@ -109,7 +98,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::3889',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3892',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -117,7 +105,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4000',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4017',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -125,7 +112,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4017',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4023',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -133,7 +119,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4039',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4040',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -141,7 +126,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4040',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4046',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16133',
@@ -149,7 +133,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4046',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4061',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16134',
@@ -157,7 +140,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4046',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4062',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16135',
@@ -165,7 +147,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4046',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4063',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -173,7 +154,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4073',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4074',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -181,7 +161,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4074',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4075',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -189,7 +168,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4079',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4080',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -197,7 +175,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4080',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4081',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16027',
@@ -205,7 +182,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4081',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4082',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16028',
@@ -213,7 +189,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4081',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4083',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16019',
@@ -221,7 +196,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4122',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2219',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16020',
@@ -229,7 +203,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4122',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2220',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16136',
@@ -237,7 +210,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4127',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2736',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16137',
@@ -245,7 +217,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4127',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2737',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16136',
@@ -253,7 +224,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4130',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3036',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16137',
@@ -261,7 +231,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4130',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3037',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16138',
@@ -269,7 +238,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4130',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5629',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16048',
@@ -277,7 +245,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4131',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3148',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16049',
@@ -285,7 +252,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4131',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3149',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16039',
@@ -293,7 +259,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4134',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3439',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16040',
@@ -301,7 +266,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4134',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3440',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16020',
@@ -309,7 +273,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4139',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3920',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16030',
@@ -317,7 +280,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4142',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2040',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16029',
@@ -325,7 +287,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4142',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2042',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16030',
@@ -333,7 +294,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4143',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2041',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16029',
@@ -341,7 +301,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4143',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2043',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16045',
@@ -349,7 +308,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4144',
             'target_crs' => 'urn:ogc:def:crs:EPSG::24305',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16046',
@@ -357,7 +315,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4144',
             'target_crs' => 'urn:ogc:def:crs:EPSG::24306',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16041',
@@ -365,7 +322,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4145',
             'target_crs' => 'urn:ogc:def:crs:EPSG::24311',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16042',
@@ -373,7 +329,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4145',
             'target_crs' => 'urn:ogc:def:crs:EPSG::24312',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16043',
@@ -381,7 +336,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4145',
             'target_crs' => 'urn:ogc:def:crs:EPSG::24313',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16042',
@@ -389,7 +343,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4146',
             'target_crs' => 'urn:ogc:def:crs:EPSG::24342',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16043',
@@ -397,7 +350,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4146',
             'target_crs' => 'urn:ogc:def:crs:EPSG::24343',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16044',
@@ -405,7 +357,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4146',
             'target_crs' => 'urn:ogc:def:crs:EPSG::24344',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16045',
@@ -413,7 +364,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4146',
             'target_crs' => 'urn:ogc:def:crs:EPSG::24345',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16046',
@@ -421,7 +371,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4146',
             'target_crs' => 'urn:ogc:def:crs:EPSG::24346',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16047',
@@ -429,7 +378,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4146',
             'target_crs' => 'urn:ogc:def:crs:EPSG::24347',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16218',
@@ -437,7 +385,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4147',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2044',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16219',
@@ -445,7 +392,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4147',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2045',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16102',
@@ -453,7 +399,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2195',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16010',
@@ -461,7 +406,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3740',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16011',
@@ -469,7 +413,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3741',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16012',
@@ -477,7 +420,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3742',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16013',
@@ -485,7 +427,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3743',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16014',
@@ -493,7 +434,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3744',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16015',
@@ -501,7 +441,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3745',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16016',
@@ -509,7 +448,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3746',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16017',
@@ -517,7 +455,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3747',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16018',
@@ -525,7 +462,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3748',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16019',
@@ -533,7 +469,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3749',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16004',
@@ -541,7 +476,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3750',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16005',
@@ -549,7 +483,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3751',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16038',
@@ -557,7 +490,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4154',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2058',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16039',
@@ -565,7 +497,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4154',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2059',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16040',
@@ -573,7 +504,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4154',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2060',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16041',
@@ -581,7 +511,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4154',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2061',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16028',
@@ -589,7 +518,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4155',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3461',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16029',
@@ -597,7 +525,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4155',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3462',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16020',
@@ -605,7 +532,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4158',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2067',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16032',
@@ -613,7 +539,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4159',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2077',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16033',
@@ -621,7 +546,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4159',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2078',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16034',
@@ -629,7 +553,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4159',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2079',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16035',
@@ -637,7 +560,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4159',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2080',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16038',
@@ -645,7 +567,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4163',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2089',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16039',
@@ -653,7 +574,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4163',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2090',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16037',
@@ -661,7 +581,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4163',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5836',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16040',
@@ -669,7 +588,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4163',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5837',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16208',
@@ -677,7 +595,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4164',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2395',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16209',
@@ -685,7 +602,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4164',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2396',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16028',
@@ -693,7 +609,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4165',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2095',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16158',
@@ -701,7 +616,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4167',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2133',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16159',
@@ -709,7 +623,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4167',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2134',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16160',
@@ -717,7 +630,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4167',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2135',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16101',
@@ -725,7 +637,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4167',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5700',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16017',
@@ -733,7 +644,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4170',
             'target_crs' => 'urn:ogc:def:crs:EPSG::31986',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16018',
@@ -741,7 +651,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4170',
             'target_crs' => 'urn:ogc:def:crs:EPSG::31987',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16019',
@@ -749,7 +658,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4170',
             'target_crs' => 'urn:ogc:def:crs:EPSG::31988',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16020',
@@ -757,7 +665,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4170',
             'target_crs' => 'urn:ogc:def:crs:EPSG::31989',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16021',
@@ -765,7 +672,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4170',
             'target_crs' => 'urn:ogc:def:crs:EPSG::31990',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16022',
@@ -773,7 +679,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4170',
             'target_crs' => 'urn:ogc:def:crs:EPSG::31991',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16117',
@@ -781,7 +686,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4170',
             'target_crs' => 'urn:ogc:def:crs:EPSG::31992',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16118',
@@ -789,7 +693,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4170',
             'target_crs' => 'urn:ogc:def:crs:EPSG::31993',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16119',
@@ -797,7 +700,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4170',
             'target_crs' => 'urn:ogc:def:crs:EPSG::31994',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16120',
@@ -805,7 +707,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4170',
             'target_crs' => 'urn:ogc:def:crs:EPSG::31995',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16121',
@@ -813,7 +714,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4170',
             'target_crs' => 'urn:ogc:def:crs:EPSG::31996',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16122',
@@ -821,7 +721,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4170',
             'target_crs' => 'urn:ogc:def:crs:EPSG::31997',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16123',
@@ -829,7 +728,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4170',
             'target_crs' => 'urn:ogc:def:crs:EPSG::31998',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16124',
@@ -837,7 +735,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4170',
             'target_crs' => 'urn:ogc:def:crs:EPSG::31999',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16125',
@@ -845,7 +742,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4170',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32000',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15498',
@@ -853,7 +749,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4171',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7084',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16029',
@@ -861,7 +756,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4173',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2158',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16028',
@@ -869,7 +763,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4175',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2161',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16029',
@@ -877,7 +770,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4175',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2162',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16263',
@@ -885,7 +777,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4178',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2397',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16264',
@@ -893,7 +784,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4178',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2398',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16265',
@@ -901,7 +791,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4178',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2399',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16202',
@@ -909,7 +798,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4178',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3834',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16203',
@@ -917,7 +805,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4178',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3835',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16204',
@@ -925,7 +812,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4178',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3836',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16266',
@@ -933,7 +819,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4178',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3841',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16267',
@@ -941,7 +826,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4178',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4417',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16268',
@@ -949,7 +833,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4178',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4434',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16202',
@@ -957,7 +840,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4178',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5664',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16203',
@@ -965,7 +847,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4178',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5665',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16263',
@@ -973,7 +854,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4178',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5673',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16264',
@@ -981,7 +861,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4178',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5674',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16265',
@@ -989,7 +868,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4178',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5675',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16265',
@@ -997,7 +875,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4179',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3329',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16266',
@@ -1005,7 +882,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4179',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3330',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16267',
@@ -1013,7 +889,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4179',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3331',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16268',
@@ -1021,7 +896,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4179',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3332',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16203',
@@ -1029,7 +903,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4179',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3333',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16204',
@@ -1037,7 +910,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4179',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3334',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16205',
@@ -1045,7 +917,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4179',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3335',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16202',
@@ -1053,7 +924,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4179',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3833',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16263',
@@ -1061,7 +931,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4179',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3837',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16264',
@@ -1069,7 +938,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4179',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3838',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16269',
@@ -1077,7 +945,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4179',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3839',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16270',
@@ -1085,7 +952,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4179',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3840',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16202',
@@ -1093,7 +959,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4179',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5631',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16203',
@@ -1101,7 +966,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4179',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5663',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16263',
@@ -1109,7 +973,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4179',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5670',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16264',
@@ -1117,7 +980,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4179',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5671',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16265',
@@ -1125,7 +987,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4179',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5672',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16025',
@@ -1133,7 +994,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4182',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2188',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16026',
@@ -1141,7 +1001,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4183',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2189',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16026',
@@ -1149,7 +1008,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4184',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2190',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16018',
@@ -1157,7 +1015,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4189',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2201',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16019',
@@ -1165,7 +1022,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4189',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2202',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16020',
@@ -1173,7 +1029,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4189',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2203',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16204',
@@ -1181,7 +1036,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4191',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2462',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16032',
@@ -1189,7 +1043,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4193',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2215',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16022',
@@ -1197,7 +1050,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4194',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2216',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16023',
@@ -1205,7 +1057,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4194',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2217',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16033',
@@ -1213,7 +1064,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4197',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2312',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16033',
@@ -1221,7 +1071,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4198',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2313',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16204',
@@ -1229,7 +1078,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20004',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16205',
@@ -1237,7 +1085,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20005',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16206',
@@ -1245,7 +1092,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20006',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16207',
@@ -1253,7 +1099,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20007',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16208',
@@ -1261,7 +1106,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20008',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16209',
@@ -1269,7 +1113,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20009',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16210',
@@ -1277,7 +1120,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20010',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16211',
@@ -1285,7 +1127,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20011',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16212',
@@ -1293,7 +1134,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20012',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16213',
@@ -1301,7 +1141,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20013',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16214',
@@ -1309,7 +1148,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20014',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16215',
@@ -1317,7 +1155,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20015',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16216',
@@ -1325,7 +1162,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20016',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16217',
@@ -1333,7 +1169,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20017',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16218',
@@ -1341,7 +1176,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20018',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16219',
@@ -1349,7 +1183,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20019',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16220',
@@ -1357,7 +1190,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20020',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16221',
@@ -1365,7 +1197,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20021',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16222',
@@ -1373,7 +1204,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20022',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16223',
@@ -1381,7 +1211,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20023',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16224',
@@ -1389,7 +1218,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20024',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16225',
@@ -1397,7 +1225,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20025',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16226',
@@ -1405,7 +1232,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20026',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16227',
@@ -1413,7 +1239,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20027',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16228',
@@ -1421,7 +1246,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20028',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16229',
@@ -1429,7 +1253,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20029',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16230',
@@ -1437,7 +1260,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20030',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16231',
@@ -1445,7 +1267,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20031',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16232',
@@ -1453,7 +1274,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20032',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16304',
@@ -1461,7 +1281,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2463',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16305',
@@ -1469,7 +1288,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2464',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16306',
@@ -1477,7 +1295,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2465',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16307',
@@ -1485,7 +1302,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2466',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16308',
@@ -1493,7 +1309,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2467',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16309',
@@ -1501,7 +1316,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2468',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16310',
@@ -1509,7 +1323,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2469',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16311',
@@ -1517,7 +1330,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2470',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16312',
@@ -1525,7 +1337,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2471',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16313',
@@ -1533,7 +1344,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2472',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16314',
@@ -1541,7 +1351,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2473',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16315',
@@ -1549,7 +1358,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2474',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16316',
@@ -1557,7 +1365,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2475',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16317',
@@ -1565,7 +1372,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2476',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16318',
@@ -1573,7 +1379,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2477',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16319',
@@ -1581,7 +1386,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2478',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16320',
@@ -1589,7 +1393,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2479',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16321',
@@ -1597,7 +1400,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2480',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16322',
@@ -1605,7 +1407,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2481',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16323',
@@ -1613,7 +1414,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2482',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16324',
@@ -1621,7 +1421,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2483',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16325',
@@ -1629,7 +1428,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2484',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16326',
@@ -1637,7 +1435,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2485',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16327',
@@ -1645,7 +1442,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2486',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16328',
@@ -1653,7 +1449,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2487',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16329',
@@ -1661,7 +1456,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2488',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16330',
@@ -1669,7 +1463,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2489',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16331',
@@ -1677,7 +1470,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2490',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16332',
@@ -1685,7 +1477,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2491',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16267',
@@ -1693,7 +1484,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2641',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16268',
@@ -1701,7 +1491,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2642',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16269',
@@ -1709,7 +1498,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2643',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16270',
@@ -1717,7 +1505,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2644',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16271',
@@ -1725,7 +1512,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2645',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16272',
@@ -1733,7 +1519,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2646',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16273',
@@ -1741,7 +1526,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2647',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16274',
@@ -1749,7 +1533,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2648',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16275',
@@ -1757,7 +1540,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2649',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16276',
@@ -1765,7 +1547,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2650',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16277',
@@ -1773,7 +1554,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2651',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16278',
@@ -1781,7 +1561,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2652',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16279',
@@ -1789,7 +1568,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2653',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16280',
@@ -1797,7 +1575,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2654',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16281',
@@ -1805,7 +1582,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2655',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16282',
@@ -1813,7 +1589,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2656',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16283',
@@ -1821,7 +1596,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2657',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16284',
@@ -1829,7 +1603,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2658',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16285',
@@ -1837,7 +1610,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2659',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16286',
@@ -1845,7 +1617,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2660',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16287',
@@ -1853,7 +1624,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2661',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16288',
@@ -1861,7 +1631,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2662',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16289',
@@ -1869,7 +1638,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2663',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16290',
@@ -1877,7 +1645,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2664',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16291',
@@ -1885,7 +1652,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2665',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16292',
@@ -1893,7 +1659,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2666',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16293',
@@ -1901,7 +1666,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2667',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16294',
@@ -1909,7 +1673,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2668',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16295',
@@ -1917,7 +1680,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2669',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16296',
@@ -1925,7 +1687,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2670',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16297',
@@ -1933,7 +1694,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2671',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16298',
@@ -1941,7 +1701,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2672',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16299',
@@ -1949,7 +1708,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2673',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16070',
@@ -1957,7 +1715,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2674',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16071',
@@ -1965,7 +1722,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2675',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16072',
@@ -1973,7 +1729,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2676',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16073',
@@ -1981,7 +1736,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2677',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16074',
@@ -1989,7 +1743,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2678',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16075',
@@ -1997,7 +1750,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2679',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16076',
@@ -2005,7 +1757,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2680',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16077',
@@ -2013,7 +1764,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2681',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16078',
@@ -2021,7 +1771,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2682',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16079',
@@ -2029,7 +1778,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2683',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16080',
@@ -2037,7 +1785,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2684',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16081',
@@ -2045,7 +1792,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2685',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16082',
@@ -2053,7 +1799,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2686',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16083',
@@ -2061,7 +1806,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2687',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16084',
@@ -2069,7 +1813,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2688',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16085',
@@ -2077,7 +1820,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2689',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16086',
@@ -2085,7 +1827,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2690',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16087',
@@ -2093,7 +1834,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2691',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16088',
@@ -2101,7 +1841,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2692',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16089',
@@ -2109,7 +1848,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2693',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16091',
@@ -2117,7 +1855,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2695',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16092',
@@ -2125,7 +1862,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2696',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16093',
@@ -2133,7 +1869,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2697',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16094',
@@ -2141,7 +1876,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2698',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16304',
@@ -2149,7 +1883,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2699',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16368',
@@ -2157,7 +1890,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2700',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16305',
@@ -2165,7 +1897,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2701',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16370',
@@ -2173,7 +1904,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2702',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16306',
@@ -2181,7 +1911,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2703',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16372',
@@ -2189,7 +1918,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2704',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16307',
@@ -2197,7 +1925,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2705',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16374',
@@ -2205,7 +1932,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2706',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16308',
@@ -2213,7 +1939,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2707',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16376',
@@ -2221,7 +1946,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2708',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16309',
@@ -2229,7 +1953,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2709',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16378',
@@ -2237,7 +1960,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2710',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16310',
@@ -2245,7 +1967,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2711',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16380',
@@ -2253,7 +1974,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2712',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16311',
@@ -2261,7 +1981,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2713',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16382',
@@ -2269,7 +1988,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2714',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16312',
@@ -2277,7 +1995,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2715',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16384',
@@ -2285,7 +2002,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2716',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16313',
@@ -2293,7 +2009,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2717',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16386',
@@ -2301,7 +2016,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2718',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16314',
@@ -2309,7 +2023,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2719',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16388',
@@ -2317,7 +2030,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2720',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16315',
@@ -2325,7 +2037,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2721',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16390',
@@ -2333,7 +2044,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2722',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16316',
@@ -2341,7 +2051,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2723',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16392',
@@ -2349,7 +2058,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2724',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16317',
@@ -2357,7 +2065,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2725',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16394',
@@ -2365,7 +2072,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2726',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16318',
@@ -2373,7 +2079,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2727',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16396',
@@ -2381,7 +2086,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2728',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16319',
@@ -2389,7 +2093,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2729',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16398',
@@ -2397,7 +2100,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2730',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16320',
@@ -2405,7 +2107,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2731',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16170',
@@ -2413,7 +2114,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2732',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16321',
@@ -2421,7 +2121,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2733',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16172',
@@ -2429,7 +2128,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2734',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16322',
@@ -2437,7 +2135,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2735',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16174',
@@ -2445,7 +2142,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2738',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16323',
@@ -2453,7 +2149,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2739',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16176',
@@ -2461,7 +2156,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2740',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16324',
@@ -2469,7 +2163,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2741',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16178',
@@ -2477,7 +2170,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2742',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16325',
@@ -2485,7 +2177,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2743',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16180',
@@ -2493,7 +2184,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2744',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16326',
@@ -2501,7 +2191,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2745',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16182',
@@ -2509,7 +2198,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2746',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16327',
@@ -2517,7 +2205,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2747',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16184',
@@ -2525,7 +2212,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2748',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16328',
@@ -2533,7 +2219,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2749',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16186',
@@ -2541,7 +2226,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2750',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16329',
@@ -2549,7 +2233,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2751',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16188',
@@ -2557,7 +2240,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2752',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16330',
@@ -2565,7 +2247,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2753',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16190',
@@ -2573,7 +2254,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2754',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16331',
@@ -2581,7 +2261,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2755',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16192',
@@ -2589,7 +2268,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2756',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16332',
@@ -2597,7 +2275,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2757',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16194',
@@ -2605,7 +2282,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2758',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16099',
@@ -2613,7 +2289,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4200',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3390',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16035',
@@ -2621,7 +2296,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4201',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20135',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16036',
@@ -2629,7 +2303,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4201',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20136',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16037',
@@ -2637,7 +2310,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4201',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20137',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16038',
@@ -2645,7 +2317,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4201',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20138',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16036',
@@ -2653,7 +2324,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4204',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20436',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16037',
@@ -2661,7 +2331,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4204',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20437',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16038',
@@ -2669,7 +2338,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4204',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20438',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16039',
@@ -2677,7 +2345,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4204',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20439',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16040',
@@ -2685,7 +2352,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4204',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20440',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16038',
@@ -2693,7 +2359,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4205',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20538',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16039',
@@ -2701,7 +2366,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4205',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20539',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16122',
@@ -2709,7 +2373,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4208',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20822',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16123',
@@ -2717,7 +2380,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4208',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20823',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16124',
@@ -2725,7 +2387,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4208',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20824',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16125',
@@ -2733,7 +2394,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4208',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5337',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16134',
@@ -2741,7 +2401,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4209',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20934',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16135',
@@ -2749,7 +2408,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4209',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20935',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16136',
@@ -2757,7 +2415,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4209',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20936',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16135',
@@ -2765,7 +2422,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4210',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21035',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16136',
@@ -2773,7 +2429,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4210',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21036',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16137',
@@ -2781,7 +2436,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4210',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21037',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16035',
@@ -2789,7 +2443,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4210',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21095',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16036',
@@ -2797,7 +2450,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4210',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21096',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16037',
@@ -2805,7 +2457,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4210',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21097',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16148',
@@ -2813,7 +2464,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4211',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21148',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16149',
@@ -2821,7 +2471,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4211',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21149',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16150',
@@ -2829,7 +2478,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4211',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21150',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16213',
@@ -2837,7 +2485,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21413',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16214',
@@ -2845,7 +2492,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21414',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16215',
@@ -2853,7 +2499,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21415',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16216',
@@ -2861,7 +2506,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21416',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16217',
@@ -2869,7 +2513,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21417',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16218',
@@ -2877,7 +2520,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21418',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16219',
@@ -2885,7 +2527,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21419',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16220',
@@ -2893,7 +2534,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21420',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16221',
@@ -2901,7 +2541,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21421',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16222',
@@ -2909,7 +2548,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21422',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16223',
@@ -2917,7 +2555,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21423',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16313',
@@ -2925,7 +2562,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21453',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16314',
@@ -2933,7 +2569,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21454',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16315',
@@ -2941,7 +2576,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21455',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16316',
@@ -2949,7 +2583,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21456',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16317',
@@ -2957,7 +2590,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21457',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16318',
@@ -2965,7 +2597,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21458',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16319',
@@ -2973,7 +2604,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21459',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16320',
@@ -2981,7 +2611,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21460',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16321',
@@ -2989,7 +2618,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21461',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16322',
@@ -2997,7 +2625,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21462',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16323',
@@ -3005,7 +2632,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21463',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16285',
@@ -3013,7 +2639,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2401',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16286',
@@ -3021,7 +2646,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2402',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16287',
@@ -3029,7 +2653,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2403',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16288',
@@ -3037,7 +2660,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2404',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16289',
@@ -3045,7 +2667,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2405',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16290',
@@ -3053,7 +2674,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2406',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16291',
@@ -3061,7 +2681,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2407',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16292',
@@ -3069,7 +2688,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2408',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16293',
@@ -3077,7 +2695,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2409',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16294',
@@ -3085,7 +2702,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2410',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16295',
@@ -3093,7 +2709,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2411',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16296',
@@ -3101,7 +2716,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2412',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16297',
@@ -3109,7 +2723,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2413',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16298',
@@ -3117,7 +2730,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2414',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16299',
@@ -3125,7 +2737,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2415',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16070',
@@ -3133,7 +2744,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2416',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16071',
@@ -3141,7 +2751,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2417',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16072',
@@ -3149,7 +2758,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2418',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16073',
@@ -3157,7 +2765,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2419',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16074',
@@ -3165,7 +2772,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2420',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16075',
@@ -3173,7 +2779,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2421',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16313',
@@ -3181,7 +2786,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2422',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16386',
@@ -3189,7 +2793,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2423',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16314',
@@ -3197,7 +2800,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2424',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16388',
@@ -3205,7 +2807,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2425',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16315',
@@ -3213,7 +2814,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2426',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16390',
@@ -3221,7 +2821,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2427',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16316',
@@ -3229,7 +2828,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2428',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16392',
@@ -3237,7 +2835,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2429',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16317',
@@ -3245,7 +2842,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2430',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16394',
@@ -3253,7 +2849,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2431',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16318',
@@ -3261,7 +2856,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2432',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16396',
@@ -3269,7 +2863,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2433',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16319',
@@ -3277,7 +2870,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2434',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16398',
@@ -3285,7 +2877,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2435',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16320',
@@ -3293,7 +2884,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2436',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16170',
@@ -3301,7 +2891,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2437',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16321',
@@ -3309,7 +2898,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2438',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16172',
@@ -3317,7 +2905,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2439',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16322',
@@ -3325,7 +2912,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2440',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16174',
@@ -3333,7 +2919,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2441',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16323',
@@ -3341,7 +2926,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4214',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2442',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16020',
@@ -3349,7 +2933,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4216',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3769',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16018',
@@ -3357,7 +2940,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4218',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21818',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16132',
@@ -3365,7 +2947,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4220',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22032',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16133',
@@ -3373,7 +2954,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4220',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22033',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16119',
@@ -3381,7 +2961,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4221',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2315',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16120',
@@ -3389,7 +2968,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4221',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2316',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16134',
@@ -3397,7 +2975,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4222',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22234',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16135',
@@ -3405,7 +2982,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4222',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22235',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16032',
@@ -3413,7 +2989,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4223',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22332',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16123',
@@ -3421,7 +2996,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4224',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4071',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16121',
@@ -3429,7 +3003,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4225',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22521',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16122',
@@ -3437,7 +3010,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4225',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22522',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16123',
@@ -3445,7 +3017,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4225',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22523',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16124',
@@ -3453,7 +3024,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4225',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22524',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16125',
@@ -3461,7 +3031,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4225',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22525',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16269',
@@ -3469,7 +3038,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4230',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2206',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16270',
@@ -3477,7 +3045,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4230',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2207',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16271',
@@ -3485,7 +3052,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4230',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2208',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16272',
@@ -3493,7 +3059,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4230',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2209',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16273',
@@ -3501,7 +3066,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4230',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2210',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16274',
@@ -3509,7 +3073,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4230',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2211',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16275',
@@ -3517,7 +3080,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4230',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2212',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16028',
@@ -3525,7 +3087,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4230',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23028',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16029',
@@ -3533,7 +3094,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4230',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23029',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16030',
@@ -3541,7 +3101,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4230',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23030',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16031',
@@ -3549,7 +3108,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4230',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23031',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16032',
@@ -3557,7 +3115,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4230',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23032',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16033',
@@ -3565,7 +3122,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4230',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23033',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16034',
@@ -3573,7 +3129,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4230',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23034',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16035',
@@ -3581,7 +3136,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4230',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23035',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16036',
@@ -3589,7 +3143,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4230',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23036',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16037',
@@ -3597,7 +3150,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4230',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23037',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16038',
@@ -3605,7 +3157,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4230',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23038',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16305',
@@ -3613,7 +3164,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4230',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2319',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16370',
@@ -3621,7 +3171,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4230',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2320',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16306',
@@ -3629,7 +3178,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4230',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2321',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16372',
@@ -3637,7 +3185,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4230',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2322',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16307',
@@ -3645,7 +3192,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4230',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2323',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16374',
@@ -3653,7 +3199,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4230',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2324',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16308',
@@ -3661,7 +3206,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4230',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2325',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16406',
@@ -3669,7 +3213,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4230',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5627',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16039',
@@ -3677,7 +3220,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4232',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23239',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16040',
@@ -3685,7 +3227,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4232',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23240',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16051',
@@ -3693,7 +3234,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4236',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3829',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16046',
@@ -3701,7 +3241,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4238',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23846',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16047',
@@ -3709,7 +3248,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4238',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23847',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16048',
@@ -3717,7 +3255,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4238',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23848',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16049',
@@ -3725,7 +3262,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4238',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23849',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16050',
@@ -3733,7 +3269,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4238',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23850',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16051',
@@ -3741,7 +3276,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4238',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23851',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16052',
@@ -3749,7 +3283,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4238',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23852',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16147',
@@ -3757,7 +3290,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4238',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23887',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16148',
@@ -3765,7 +3297,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4238',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23888',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16149',
@@ -3773,7 +3304,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4238',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23889',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16150',
@@ -3781,7 +3311,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4238',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23890',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16151',
@@ -3789,7 +3318,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4238',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23891',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16152',
@@ -3797,7 +3325,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4238',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23892',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16153',
@@ -3805,7 +3332,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4238',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23893',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16154',
@@ -3813,7 +3339,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4238',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23894',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16046',
@@ -3821,7 +3346,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4239',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23946',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16047',
@@ -3829,7 +3353,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4239',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23947',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16048',
@@ -3837,7 +3360,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4239',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23948',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16047',
@@ -3845,7 +3367,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4240',
             'target_crs' => 'urn:ogc:def:crs:EPSG::24047',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16048',
@@ -3853,7 +3374,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4240',
             'target_crs' => 'urn:ogc:def:crs:EPSG::24048',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16047',
@@ -3861,7 +3381,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4245',
             'target_crs' => 'urn:ogc:def:crs:EPSG::24547',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16048',
@@ -3869,7 +3388,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4245',
             'target_crs' => 'urn:ogc:def:crs:EPSG::24548',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16018',
@@ -3877,7 +3395,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4247',
             'target_crs' => 'urn:ogc:def:crs:EPSG::24718',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16019',
@@ -3885,7 +3402,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4247',
             'target_crs' => 'urn:ogc:def:crs:EPSG::24719',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16020',
@@ -3893,7 +3409,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4247',
             'target_crs' => 'urn:ogc:def:crs:EPSG::24720',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16017',
@@ -3901,7 +3416,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4248',
             'target_crs' => 'urn:ogc:def:crs:EPSG::24817',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16018',
@@ -3909,7 +3423,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4248',
             'target_crs' => 'urn:ogc:def:crs:EPSG::24818',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16019',
@@ -3917,7 +3430,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4248',
             'target_crs' => 'urn:ogc:def:crs:EPSG::24819',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16020',
@@ -3925,7 +3437,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4248',
             'target_crs' => 'urn:ogc:def:crs:EPSG::24820',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16021',
@@ -3933,7 +3444,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4248',
             'target_crs' => 'urn:ogc:def:crs:EPSG::24821',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16117',
@@ -3941,7 +3451,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4248',
             'target_crs' => 'urn:ogc:def:crs:EPSG::24877',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16118',
@@ -3949,7 +3458,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4248',
             'target_crs' => 'urn:ogc:def:crs:EPSG::24878',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16119',
@@ -3957,7 +3465,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4248',
             'target_crs' => 'urn:ogc:def:crs:EPSG::24879',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16120',
@@ -3965,7 +3472,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4248',
             'target_crs' => 'urn:ogc:def:crs:EPSG::24880',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16121',
@@ -3973,7 +3479,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4248',
             'target_crs' => 'urn:ogc:def:crs:EPSG::24881',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16122',
@@ -3981,7 +3486,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4248',
             'target_crs' => 'urn:ogc:def:crs:EPSG::24882',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16031',
@@ -3989,7 +3493,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4252',
             'target_crs' => 'urn:ogc:def:crs:EPSG::25231',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16119',
@@ -3997,7 +3500,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4254',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2084',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16028',
@@ -4005,7 +3507,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4258',
             'target_crs' => 'urn:ogc:def:crs:EPSG::25828',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16029',
@@ -4013,7 +3514,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4258',
             'target_crs' => 'urn:ogc:def:crs:EPSG::25829',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16030',
@@ -4021,7 +3521,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4258',
             'target_crs' => 'urn:ogc:def:crs:EPSG::25830',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16031',
@@ -4029,7 +3528,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4258',
             'target_crs' => 'urn:ogc:def:crs:EPSG::25831',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16032',
@@ -4037,7 +3535,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4258',
             'target_crs' => 'urn:ogc:def:crs:EPSG::25832',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16033',
@@ -4045,7 +3542,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4258',
             'target_crs' => 'urn:ogc:def:crs:EPSG::25833',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16034',
@@ -4053,7 +3549,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4258',
             'target_crs' => 'urn:ogc:def:crs:EPSG::25834',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16035',
@@ -4061,7 +3556,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4258',
             'target_crs' => 'urn:ogc:def:crs:EPSG::25835',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16036',
@@ -4069,7 +3563,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4258',
             'target_crs' => 'urn:ogc:def:crs:EPSG::25836',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16037',
@@ -4077,7 +3570,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4258',
             'target_crs' => 'urn:ogc:def:crs:EPSG::25837',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16028',
@@ -4085,7 +3577,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4258',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3040',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16029',
@@ -4093,7 +3584,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4258',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3041',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16030',
@@ -4101,7 +3591,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4258',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3042',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16031',
@@ -4109,7 +3598,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4258',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3043',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16032',
@@ -4117,7 +3605,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4258',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3044',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16033',
@@ -4125,7 +3612,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4258',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3045',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16034',
@@ -4133,7 +3619,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4258',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3046',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16035',
@@ -4141,7 +3626,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4258',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3047',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16036',
@@ -4149,7 +3633,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4258',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3048',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16037',
@@ -4157,7 +3640,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4258',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3049',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16302',
@@ -4165,7 +3647,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4258',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8395',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16132',
@@ -4173,7 +3654,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4259',
             'target_crs' => 'urn:ogc:def:crs:EPSG::25932',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16133',
@@ -4181,7 +3661,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4259',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7992',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16037',
@@ -4189,7 +3668,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4262',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26237',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16031',
@@ -4197,7 +3675,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4263',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26331',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16032',
@@ -4205,7 +3682,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4263',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26332',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16032',
@@ -4213,7 +3689,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4266',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26632',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16132',
@@ -4221,7 +3696,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4266',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26692',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16001',
@@ -4229,7 +3703,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26701',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16002',
@@ -4237,7 +3710,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26702',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16003',
@@ -4245,7 +3717,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26703',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16004',
@@ -4253,7 +3724,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26704',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16005',
@@ -4261,7 +3731,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26705',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16006',
@@ -4269,7 +3738,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26706',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16007',
@@ -4277,7 +3745,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26707',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16008',
@@ -4285,7 +3752,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26708',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16009',
@@ -4293,7 +3759,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26709',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16010',
@@ -4301,7 +3766,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26710',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16011',
@@ -4309,7 +3773,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26711',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16012',
@@ -4317,7 +3780,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26712',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16013',
@@ -4325,7 +3787,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26713',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16014',
@@ -4333,7 +3794,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26714',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16015',
@@ -4341,7 +3801,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26715',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16016',
@@ -4349,7 +3808,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26716',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16017',
@@ -4357,7 +3815,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26717',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16018',
@@ -4365,7 +3822,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26718',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16019',
@@ -4373,7 +3829,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26719',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16020',
@@ -4381,7 +3836,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26720',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16021',
@@ -4389,7 +3843,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26721',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16022',
@@ -4397,7 +3850,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26722',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16059',
@@ -4405,7 +3857,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3370',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16060',
@@ -4413,7 +3864,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3371',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16001',
@@ -4421,7 +3871,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26901',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16002',
@@ -4429,7 +3878,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26902',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16003',
@@ -4437,7 +3885,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26903',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16004',
@@ -4445,7 +3892,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26904',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16005',
@@ -4453,7 +3899,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26905',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16006',
@@ -4461,7 +3906,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26906',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16007',
@@ -4469,7 +3913,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26907',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16008',
@@ -4477,7 +3920,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26908',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16009',
@@ -4485,7 +3927,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26909',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16010',
@@ -4493,7 +3934,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26910',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16011',
@@ -4501,7 +3941,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26911',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16012',
@@ -4509,7 +3948,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26912',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16013',
@@ -4517,7 +3955,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26913',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16014',
@@ -4525,7 +3962,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26914',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16015',
@@ -4533,7 +3969,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26915',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16016',
@@ -4541,7 +3976,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26916',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16017',
@@ -4549,7 +3983,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26917',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16018',
@@ -4557,7 +3990,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26918',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16019',
@@ -4565,7 +3997,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26919',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16020',
@@ -4573,7 +4004,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26920',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16021',
@@ -4581,7 +4011,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26921',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16022',
@@ -4589,7 +4018,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26922',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16023',
@@ -4597,7 +4025,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::26923',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16059',
@@ -4605,7 +4032,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3372',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16060',
@@ -4613,7 +4039,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3373',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16024',
@@ -4621,7 +4046,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9712',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16039',
@@ -4629,7 +4053,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4270',
             'target_crs' => 'urn:ogc:def:crs:EPSG::27039',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16040',
@@ -4637,7 +4060,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4270',
             'target_crs' => 'urn:ogc:def:crs:EPSG::27040',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16020',
@@ -4645,7 +4067,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4271',
             'target_crs' => 'urn:ogc:def:crs:EPSG::27120',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16158',
@@ -4653,7 +4074,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4272',
             'target_crs' => 'urn:ogc:def:crs:EPSG::27258',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16159',
@@ -4661,7 +4081,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4272',
             'target_crs' => 'urn:ogc:def:crs:EPSG::27259',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16160',
@@ -4669,7 +4088,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4272',
             'target_crs' => 'urn:ogc:def:crs:EPSG::27260',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16029',
@@ -4677,7 +4095,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4274',
             'target_crs' => 'urn:ogc:def:crs:EPSG::27429',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16132',
@@ -4685,7 +4102,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4282',
             'target_crs' => 'urn:ogc:def:crs:EPSG::28232',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16304',
@@ -4693,7 +4109,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2494',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16305',
@@ -4701,7 +4116,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2495',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16306',
@@ -4709,7 +4123,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2496',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16307',
@@ -4717,7 +4130,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2497',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16308',
@@ -4725,7 +4137,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2498',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16309',
@@ -4733,7 +4144,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2499',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16310',
@@ -4741,7 +4151,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2500',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16311',
@@ -4749,7 +4158,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2501',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16312',
@@ -4757,7 +4165,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2502',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16313',
@@ -4765,7 +4172,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2503',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16314',
@@ -4773,7 +4179,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2504',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16315',
@@ -4781,7 +4186,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2505',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16316',
@@ -4789,7 +4193,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2506',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16317',
@@ -4797,7 +4200,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2507',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16318',
@@ -4805,7 +4207,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2508',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16319',
@@ -4813,7 +4214,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2509',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16320',
@@ -4821,7 +4221,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2510',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16321',
@@ -4829,7 +4228,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2511',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16322',
@@ -4837,7 +4235,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2512',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16323',
@@ -4845,7 +4242,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2513',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16324',
@@ -4853,7 +4249,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2514',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16325',
@@ -4861,7 +4256,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2515',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16326',
@@ -4869,7 +4263,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2516',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16327',
@@ -4877,7 +4270,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2517',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16328',
@@ -4885,7 +4277,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2518',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16329',
@@ -4893,7 +4284,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2519',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16330',
@@ -4901,7 +4291,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2520',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16331',
@@ -4909,7 +4298,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2521',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16332',
@@ -4917,7 +4305,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2522',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16267',
@@ -4925,7 +4312,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2523',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16268',
@@ -4933,7 +4319,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2524',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16269',
@@ -4941,7 +4326,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2525',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16270',
@@ -4949,7 +4333,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2526',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16271',
@@ -4957,7 +4340,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2527',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16272',
@@ -4965,7 +4347,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2528',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16273',
@@ -4973,7 +4354,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2529',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16274',
@@ -4981,7 +4361,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2530',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16275',
@@ -4989,7 +4368,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2531',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16276',
@@ -4997,7 +4375,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2532',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16277',
@@ -5005,7 +4382,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2533',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16278',
@@ -5013,7 +4389,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2534',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16279',
@@ -5021,7 +4396,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2535',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16280',
@@ -5029,7 +4403,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2536',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16281',
@@ -5037,7 +4410,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2537',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16282',
@@ -5045,7 +4417,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2538',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16283',
@@ -5053,7 +4424,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2539',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16284',
@@ -5061,7 +4431,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2540',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16285',
@@ -5069,7 +4438,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2541',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16286',
@@ -5077,7 +4445,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2542',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16287',
@@ -5085,7 +4452,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2543',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16288',
@@ -5093,7 +4459,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2544',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16289',
@@ -5101,7 +4466,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2545',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16290',
@@ -5109,7 +4473,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2546',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16291',
@@ -5117,7 +4480,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2547',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16292',
@@ -5125,7 +4487,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2548',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16293',
@@ -5133,7 +4494,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2549',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16294',
@@ -5141,7 +4501,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2551',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16295',
@@ -5149,7 +4508,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2552',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16296',
@@ -5157,7 +4515,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2553',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16297',
@@ -5165,7 +4522,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2554',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16298',
@@ -5173,7 +4529,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2555',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16299',
@@ -5181,7 +4536,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2556',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16070',
@@ -5189,7 +4543,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2557',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16071',
@@ -5197,7 +4550,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2558',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16072',
@@ -5205,7 +4557,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2559',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16073',
@@ -5213,7 +4564,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2560',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16074',
@@ -5221,7 +4571,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2561',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16075',
@@ -5229,7 +4578,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2562',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16076',
@@ -5237,7 +4585,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2563',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16077',
@@ -5245,7 +4592,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2564',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16078',
@@ -5253,7 +4599,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2565',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16079',
@@ -5261,7 +4606,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2566',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16080',
@@ -5269,7 +4613,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2567',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16081',
@@ -5277,7 +4620,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2568',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16082',
@@ -5285,7 +4627,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2569',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16083',
@@ -5293,7 +4634,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2570',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16084',
@@ -5301,7 +4641,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2571',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16085',
@@ -5309,7 +4648,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2572',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16086',
@@ -5317,7 +4655,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2573',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16087',
@@ -5325,7 +4662,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2574',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16088',
@@ -5333,7 +4669,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2575',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16089',
@@ -5341,7 +4676,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2576',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16091',
@@ -5349,7 +4683,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2578',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16092',
@@ -5357,7 +4690,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2579',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16093',
@@ -5365,7 +4697,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2580',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16094',
@@ -5373,7 +4704,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2581',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16304',
@@ -5381,7 +4711,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2582',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16368',
@@ -5389,7 +4718,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2583',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16305',
@@ -5397,7 +4725,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2584',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16370',
@@ -5405,7 +4732,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2585',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16306',
@@ -5413,7 +4739,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2586',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16372',
@@ -5421,7 +4746,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2587',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16307',
@@ -5429,7 +4753,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2588',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16374',
@@ -5437,7 +4760,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2589',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16308',
@@ -5445,7 +4767,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2590',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16376',
@@ -5453,7 +4774,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2591',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16309',
@@ -5461,7 +4781,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2592',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16378',
@@ -5469,7 +4788,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2593',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16310',
@@ -5477,7 +4795,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2594',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16380',
@@ -5485,7 +4802,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2595',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16311',
@@ -5493,7 +4809,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2596',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16382',
@@ -5501,7 +4816,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2597',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16312',
@@ -5509,7 +4823,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2598',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16384',
@@ -5517,7 +4830,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2599',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16313',
@@ -5525,7 +4837,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2601',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16386',
@@ -5533,7 +4844,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2602',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16314',
@@ -5541,7 +4851,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2603',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16388',
@@ -5549,7 +4858,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2604',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16315',
@@ -5557,7 +4865,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2605',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16390',
@@ -5565,7 +4872,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2606',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16316',
@@ -5573,7 +4879,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2607',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16392',
@@ -5581,7 +4886,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2608',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16317',
@@ -5589,7 +4893,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2609',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16394',
@@ -5597,7 +4900,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2610',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16318',
@@ -5605,7 +4907,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2611',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16396',
@@ -5613,7 +4914,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2612',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16319',
@@ -5621,7 +4921,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2613',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16398',
@@ -5629,7 +4928,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2614',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16320',
@@ -5637,7 +4935,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2615',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16170',
@@ -5645,7 +4942,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2616',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16321',
@@ -5653,7 +4949,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2617',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16172',
@@ -5661,7 +4956,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2618',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16322',
@@ -5669,7 +4963,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2619',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16174',
@@ -5677,7 +4970,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2620',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16323',
@@ -5685,7 +4977,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2621',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16176',
@@ -5693,7 +4984,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2622',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16324',
@@ -5701,7 +4991,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2623',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16178',
@@ -5709,7 +4998,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2624',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16325',
@@ -5717,7 +5005,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2625',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16180',
@@ -5725,7 +5012,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2626',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16326',
@@ -5733,7 +5019,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2627',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16182',
@@ -5741,7 +5026,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2628',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16327',
@@ -5749,7 +5033,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2629',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16184',
@@ -5757,7 +5040,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2630',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16328',
@@ -5765,7 +5047,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2631',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16186',
@@ -5773,7 +5054,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2632',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16329',
@@ -5781,7 +5061,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2633',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16188',
@@ -5789,7 +5068,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2634',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16330',
@@ -5797,7 +5075,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2635',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16190',
@@ -5805,7 +5082,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2636',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16331',
@@ -5813,7 +5089,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2637',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16192',
@@ -5821,7 +5096,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2638',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16332',
@@ -5829,7 +5103,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2639',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16194',
@@ -5837,7 +5110,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2640',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16204',
@@ -5845,7 +5117,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::28404',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16205',
@@ -5853,7 +5124,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::28405',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16206',
@@ -5861,7 +5131,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::28406',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16207',
@@ -5869,7 +5138,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::28407',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16208',
@@ -5877,7 +5145,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::28408',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16209',
@@ -5885,7 +5152,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::28409',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16210',
@@ -5893,7 +5159,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::28410',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16211',
@@ -5901,7 +5166,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::28411',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16212',
@@ -5909,7 +5173,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::28412',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16213',
@@ -5917,7 +5180,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::28413',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16214',
@@ -5925,7 +5187,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::28414',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16215',
@@ -5933,7 +5194,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::28415',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16216',
@@ -5941,7 +5201,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::28416',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16217',
@@ -5949,7 +5208,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::28417',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16218',
@@ -5957,7 +5215,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::28418',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16219',
@@ -5965,7 +5222,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::28419',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16220',
@@ -5973,7 +5229,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::28420',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16221',
@@ -5981,7 +5236,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::28421',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16222',
@@ -5989,7 +5243,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::28422',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16223',
@@ -5997,7 +5250,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::28423',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16224',
@@ -6005,7 +5257,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::28424',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16225',
@@ -6013,7 +5264,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::28425',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16226',
@@ -6021,7 +5271,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::28426',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16227',
@@ -6029,7 +5278,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::28427',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16228',
@@ -6037,7 +5285,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::28428',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16229',
@@ -6045,7 +5292,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::28429',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16230',
@@ -6053,7 +5299,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::28430',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16231',
@@ -6061,7 +5306,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::28431',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16232',
@@ -6069,7 +5313,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::28432',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16099',
@@ -6077,7 +5320,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3389',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16120',
@@ -6085,7 +5327,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4292',
             'target_crs' => 'urn:ogc:def:crs:EPSG::29220',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16121',
@@ -6093,7 +5334,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4292',
             'target_crs' => 'urn:ogc:def:crs:EPSG::29221',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16133',
@@ -6101,7 +5341,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4293',
             'target_crs' => 'urn:ogc:def:crs:EPSG::29333',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16138',
@@ -6109,7 +5348,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4297',
             'target_crs' => 'urn:ogc:def:crs:EPSG::29738',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16139',
@@ -6117,7 +5355,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4297',
             'target_crs' => 'urn:ogc:def:crs:EPSG::29739',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16049',
@@ -6125,7 +5362,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4298',
             'target_crs' => 'urn:ogc:def:crs:EPSG::29849',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16050',
@@ -6133,7 +5369,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4298',
             'target_crs' => 'urn:ogc:def:crs:EPSG::29850',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16051',
@@ -6141,7 +5376,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4301',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3092',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16052',
@@ -6149,7 +5383,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4301',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3093',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16053',
@@ -6157,7 +5390,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4301',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3094',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16054',
@@ -6165,7 +5397,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4301',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3095',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16055',
@@ -6173,7 +5404,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4301',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3096',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16039',
@@ -6181,7 +5411,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4303',
             'target_crs' => 'urn:ogc:def:crs:EPSG::30339',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16040',
@@ -6189,7 +5418,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4303',
             'target_crs' => 'urn:ogc:def:crs:EPSG::30340',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16029',
@@ -6197,7 +5425,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4307',
             'target_crs' => 'urn:ogc:def:crs:EPSG::30729',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16030',
@@ -6205,7 +5432,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4307',
             'target_crs' => 'urn:ogc:def:crs:EPSG::30730',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16031',
@@ -6213,7 +5439,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4307',
             'target_crs' => 'urn:ogc:def:crs:EPSG::30731',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16032',
@@ -6221,7 +5446,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4307',
             'target_crs' => 'urn:ogc:def:crs:EPSG::30732',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16028',
@@ -6229,7 +5453,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4310',
             'target_crs' => 'urn:ogc:def:crs:EPSG::31028',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16021',
@@ -6237,7 +5460,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4311',
             'target_crs' => 'urn:ogc:def:crs:EPSG::31121',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16262',
@@ -6245,7 +5467,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4314',
             'target_crs' => 'urn:ogc:def:crs:EPSG::31466',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16263',
@@ -6253,7 +5474,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4314',
             'target_crs' => 'urn:ogc:def:crs:EPSG::31467',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16264',
@@ -6261,7 +5481,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4314',
             'target_crs' => 'urn:ogc:def:crs:EPSG::31468',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16265',
@@ -6269,7 +5488,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4314',
             'target_crs' => 'urn:ogc:def:crs:EPSG::31469',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16261',
@@ -6277,7 +5495,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4314',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5520',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16262',
@@ -6285,7 +5502,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4314',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5676',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16263',
@@ -6293,7 +5509,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4314',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5677',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16264',
@@ -6301,7 +5516,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4314',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5678',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16265',
@@ -6309,7 +5523,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4314',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5679',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16261',
@@ -6317,7 +5530,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4314',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5680',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16028',
@@ -6325,7 +5537,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4315',
             'target_crs' => 'urn:ogc:def:crs:EPSG::31528',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16029',
@@ -6333,7 +5544,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4315',
             'target_crs' => 'urn:ogc:def:crs:EPSG::31529',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16038',
@@ -6341,7 +5551,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::31838',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16039',
@@ -6349,7 +5558,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::31839',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16001',
@@ -6357,7 +5565,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32201',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16002',
@@ -6365,7 +5572,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32202',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16003',
@@ -6373,7 +5579,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32203',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16004',
@@ -6381,7 +5586,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32204',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16005',
@@ -6389,7 +5593,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32205',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16006',
@@ -6397,7 +5600,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32206',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16007',
@@ -6405,7 +5607,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32207',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16008',
@@ -6413,7 +5614,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32208',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16009',
@@ -6421,7 +5621,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32209',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16010',
@@ -6429,7 +5628,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32210',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16011',
@@ -6437,7 +5635,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32211',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16012',
@@ -6445,7 +5642,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32212',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16013',
@@ -6453,7 +5649,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32213',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16014',
@@ -6461,7 +5656,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32214',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16015',
@@ -6469,7 +5663,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32215',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16016',
@@ -6477,7 +5670,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32216',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16017',
@@ -6485,7 +5677,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32217',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16018',
@@ -6493,7 +5684,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32218',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16019',
@@ -6501,7 +5691,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32219',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16020',
@@ -6509,7 +5698,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32220',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16021',
@@ -6517,7 +5705,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32221',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16022',
@@ -6525,7 +5712,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32222',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16023',
@@ -6533,7 +5719,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32223',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16024',
@@ -6541,7 +5726,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32224',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16025',
@@ -6549,7 +5733,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32225',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16026',
@@ -6557,7 +5740,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32226',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16027',
@@ -6565,7 +5747,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32227',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16028',
@@ -6573,7 +5754,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32228',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16029',
@@ -6581,7 +5761,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32229',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16030',
@@ -6589,7 +5768,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32230',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16031',
@@ -6597,7 +5775,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32231',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16032',
@@ -6605,7 +5782,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32232',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16033',
@@ -6613,7 +5789,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32233',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16034',
@@ -6621,7 +5796,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32234',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16035',
@@ -6629,7 +5803,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32235',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16036',
@@ -6637,7 +5810,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32236',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16037',
@@ -6645,7 +5817,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32237',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16038',
@@ -6653,7 +5824,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32238',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16039',
@@ -6661,7 +5831,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32239',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16040',
@@ -6669,7 +5838,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32240',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16041',
@@ -6677,7 +5845,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32241',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16042',
@@ -6685,7 +5852,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32242',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16043',
@@ -6693,7 +5859,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32243',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16044',
@@ -6701,7 +5866,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32244',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16045',
@@ -6709,7 +5873,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32245',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16046',
@@ -6717,7 +5880,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32246',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16047',
@@ -6725,7 +5887,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32247',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16048',
@@ -6733,7 +5894,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32248',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16049',
@@ -6741,7 +5901,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32249',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16050',
@@ -6749,7 +5908,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32250',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16051',
@@ -6757,7 +5915,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32251',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16052',
@@ -6765,7 +5922,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32252',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16053',
@@ -6773,7 +5929,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32253',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16054',
@@ -6781,7 +5936,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32254',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16055',
@@ -6789,7 +5943,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32255',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16056',
@@ -6797,7 +5950,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32256',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16057',
@@ -6805,7 +5957,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32257',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16058',
@@ -6813,7 +5964,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32258',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16059',
@@ -6821,7 +5971,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32259',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16060',
@@ -6829,7 +5978,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32260',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16101',
@@ -6837,7 +5985,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32301',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16102',
@@ -6845,7 +5992,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32302',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16103',
@@ -6853,7 +5999,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32303',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16104',
@@ -6861,7 +6006,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32304',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16105',
@@ -6869,7 +6013,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32305',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16106',
@@ -6877,7 +6020,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32306',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16107',
@@ -6885,7 +6027,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32307',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16108',
@@ -6893,7 +6034,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32308',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16109',
@@ -6901,7 +6041,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32309',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16110',
@@ -6909,7 +6048,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32310',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16111',
@@ -6917,7 +6055,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32311',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16112',
@@ -6925,7 +6062,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32312',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16113',
@@ -6933,7 +6069,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32313',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16114',
@@ -6941,7 +6076,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32314',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16115',
@@ -6949,7 +6083,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32315',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16116',
@@ -6957,7 +6090,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32316',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16117',
@@ -6965,7 +6097,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32317',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16118',
@@ -6973,7 +6104,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32318',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16119',
@@ -6981,7 +6111,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32319',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16120',
@@ -6989,7 +6118,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32320',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16121',
@@ -6997,7 +6125,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32321',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16122',
@@ -7005,7 +6132,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32322',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16123',
@@ -7013,7 +6139,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32323',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16124',
@@ -7021,7 +6146,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32324',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16125',
@@ -7029,7 +6153,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32325',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16126',
@@ -7037,7 +6160,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32326',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16127',
@@ -7045,7 +6167,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32327',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16128',
@@ -7053,7 +6174,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32328',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16129',
@@ -7061,7 +6181,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32329',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16130',
@@ -7069,7 +6188,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32330',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16131',
@@ -7077,7 +6195,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32331',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16132',
@@ -7085,7 +6202,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32332',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16133',
@@ -7093,7 +6209,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32333',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16134',
@@ -7101,7 +6216,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32334',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16135',
@@ -7109,7 +6223,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32335',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16136',
@@ -7117,7 +6230,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32336',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16137',
@@ -7125,7 +6237,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32337',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16138',
@@ -7133,7 +6244,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32338',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16139',
@@ -7141,7 +6251,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32339',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16140',
@@ -7149,7 +6258,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32340',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16141',
@@ -7157,7 +6265,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32341',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16142',
@@ -7165,7 +6272,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32342',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16143',
@@ -7173,7 +6279,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32343',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16144',
@@ -7181,7 +6286,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32344',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16145',
@@ -7189,7 +6293,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32345',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16146',
@@ -7197,7 +6300,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32346',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16147',
@@ -7205,7 +6307,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32347',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16148',
@@ -7213,7 +6314,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32348',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16149',
@@ -7221,7 +6321,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32349',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16150',
@@ -7229,7 +6328,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32350',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16151',
@@ -7237,7 +6335,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32351',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16152',
@@ -7245,7 +6342,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32352',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16153',
@@ -7253,7 +6349,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32353',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16154',
@@ -7261,7 +6356,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32354',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16155',
@@ -7269,7 +6363,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32355',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16156',
@@ -7277,7 +6370,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32356',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16157',
@@ -7285,7 +6377,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32357',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16158',
@@ -7293,7 +6384,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32358',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16159',
@@ -7301,7 +6391,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32359',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16160',
@@ -7309,7 +6398,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32360',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1237',
@@ -7317,7 +6405,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 2.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1238',
@@ -7325,7 +6412,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 2.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16001',
@@ -7333,7 +6419,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32401',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16002',
@@ -7341,7 +6426,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32402',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16003',
@@ -7349,7 +6433,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32403',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16004',
@@ -7357,7 +6440,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32404',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16005',
@@ -7365,7 +6447,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32405',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16006',
@@ -7373,7 +6454,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32406',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16007',
@@ -7381,7 +6461,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32407',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16008',
@@ -7389,7 +6468,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32408',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16009',
@@ -7397,7 +6475,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32409',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16010',
@@ -7405,7 +6482,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32410',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16011',
@@ -7413,7 +6489,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32411',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16012',
@@ -7421,7 +6496,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32412',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16013',
@@ -7429,7 +6503,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32413',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16014',
@@ -7437,7 +6510,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32414',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16015',
@@ -7445,7 +6517,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32415',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16016',
@@ -7453,7 +6524,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32416',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16017',
@@ -7461,7 +6531,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32417',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16018',
@@ -7469,7 +6538,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32418',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16019',
@@ -7477,7 +6545,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32419',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16020',
@@ -7485,7 +6552,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32420',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16021',
@@ -7493,7 +6559,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32421',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16022',
@@ -7501,7 +6566,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32422',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16023',
@@ -7509,7 +6573,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32423',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16024',
@@ -7517,7 +6580,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32424',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16025',
@@ -7525,7 +6587,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32425',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16026',
@@ -7533,7 +6594,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32426',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16027',
@@ -7541,7 +6601,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32427',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16028',
@@ -7549,7 +6608,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32428',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16029',
@@ -7557,7 +6615,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32429',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16030',
@@ -7565,7 +6622,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32430',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16031',
@@ -7573,7 +6629,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32431',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16032',
@@ -7581,7 +6636,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32432',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16033',
@@ -7589,7 +6643,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32433',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16034',
@@ -7597,7 +6650,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32434',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16035',
@@ -7605,7 +6657,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32435',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16036',
@@ -7613,7 +6664,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32436',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16037',
@@ -7621,7 +6671,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32437',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16038',
@@ -7629,7 +6678,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32438',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16039',
@@ -7637,7 +6685,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32439',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16040',
@@ -7645,7 +6692,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32440',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16041',
@@ -7653,7 +6699,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32441',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16042',
@@ -7661,7 +6706,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32442',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16043',
@@ -7669,7 +6713,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32443',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16044',
@@ -7677,7 +6720,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32444',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16045',
@@ -7685,7 +6727,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32445',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16046',
@@ -7693,7 +6734,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32446',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16047',
@@ -7701,7 +6741,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32447',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16048',
@@ -7709,7 +6748,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32448',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16049',
@@ -7717,7 +6755,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32449',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16050',
@@ -7725,7 +6762,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32450',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16051',
@@ -7733,7 +6769,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32451',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16052',
@@ -7741,7 +6776,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32452',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16053',
@@ -7749,7 +6783,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32453',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16054',
@@ -7757,7 +6790,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32454',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16055',
@@ -7765,7 +6797,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32455',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16056',
@@ -7773,7 +6804,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32456',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16057',
@@ -7781,7 +6811,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32457',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16058',
@@ -7789,7 +6818,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32458',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16059',
@@ -7797,7 +6825,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32459',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16060',
@@ -7805,7 +6832,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32460',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16101',
@@ -7813,7 +6839,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32501',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16102',
@@ -7821,7 +6846,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32502',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16103',
@@ -7829,7 +6853,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32503',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16104',
@@ -7837,7 +6860,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32504',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16105',
@@ -7845,7 +6867,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32505',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16106',
@@ -7853,7 +6874,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32506',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16107',
@@ -7861,7 +6881,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32507',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16108',
@@ -7869,7 +6888,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32508',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16109',
@@ -7877,7 +6895,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32509',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16110',
@@ -7885,7 +6902,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32510',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16111',
@@ -7893,7 +6909,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32511',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16112',
@@ -7901,7 +6916,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32512',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16113',
@@ -7909,7 +6923,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32513',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16114',
@@ -7917,7 +6930,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32514',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16115',
@@ -7925,7 +6937,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32515',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16116',
@@ -7933,7 +6944,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32516',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16117',
@@ -7941,7 +6951,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32517',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16118',
@@ -7949,7 +6958,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32518',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16119',
@@ -7957,7 +6965,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32519',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16120',
@@ -7965,7 +6972,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32520',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16121',
@@ -7973,7 +6979,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32521',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16122',
@@ -7981,7 +6986,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32522',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16123',
@@ -7989,7 +6993,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32523',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16124',
@@ -7997,7 +7000,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32524',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16125',
@@ -8005,7 +7007,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32525',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16126',
@@ -8013,7 +7014,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32526',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16127',
@@ -8021,7 +7021,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32527',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16128',
@@ -8029,7 +7028,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32528',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16129',
@@ -8037,7 +7035,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32529',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16130',
@@ -8045,7 +7042,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32530',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16131',
@@ -8053,7 +7049,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32531',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16132',
@@ -8061,7 +7056,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32532',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16133',
@@ -8069,7 +7063,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32533',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16134',
@@ -8077,7 +7070,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32534',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16135',
@@ -8085,7 +7077,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32535',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16136',
@@ -8093,7 +7084,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32536',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16137',
@@ -8101,7 +7091,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32537',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16138',
@@ -8109,7 +7098,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32538',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16139',
@@ -8117,7 +7105,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32539',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16140',
@@ -8125,7 +7112,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32540',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16141',
@@ -8133,7 +7119,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32541',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16142',
@@ -8141,7 +7126,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32542',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16143',
@@ -8149,7 +7133,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32543',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16144',
@@ -8157,7 +7140,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32544',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16145',
@@ -8165,7 +7147,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32545',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16146',
@@ -8173,7 +7154,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32546',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16147',
@@ -8181,7 +7161,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32547',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16148',
@@ -8189,7 +7168,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32548',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16149',
@@ -8197,7 +7175,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32549',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16150',
@@ -8205,7 +7182,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32550',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16151',
@@ -8213,7 +7189,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32551',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16152',
@@ -8221,7 +7196,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32552',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16153',
@@ -8229,7 +7203,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32553',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16154',
@@ -8237,7 +7210,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32554',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16155',
@@ -8245,7 +7217,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32555',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16156',
@@ -8253,7 +7224,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32556',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16157',
@@ -8261,7 +7231,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32557',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16158',
@@ -8269,7 +7238,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32558',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16159',
@@ -8277,7 +7245,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32559',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16160',
@@ -8285,7 +7252,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32560',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1239',
@@ -8293,7 +7259,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'accuracy' => 2.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1240',
@@ -8301,7 +7266,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 2.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16406',
@@ -8309,7 +7273,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2311',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16000',
@@ -8317,7 +7280,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32600',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16001',
@@ -8325,7 +7287,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32601',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16002',
@@ -8333,7 +7294,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32602',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16003',
@@ -8341,7 +7301,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32603',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16004',
@@ -8349,7 +7308,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32604',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16005',
@@ -8357,7 +7315,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32605',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16006',
@@ -8365,7 +7322,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32606',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16007',
@@ -8373,7 +7329,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32607',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16008',
@@ -8381,7 +7336,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32608',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16009',
@@ -8389,7 +7343,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32609',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16010',
@@ -8397,7 +7350,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32610',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16011',
@@ -8405,7 +7357,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32611',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16012',
@@ -8413,7 +7364,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32612',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16013',
@@ -8421,7 +7371,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32613',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16014',
@@ -8429,7 +7378,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32614',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16015',
@@ -8437,7 +7385,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32615',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16016',
@@ -8445,7 +7392,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32616',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16017',
@@ -8453,7 +7399,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32617',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16018',
@@ -8461,7 +7406,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32618',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16019',
@@ -8469,7 +7413,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32619',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16020',
@@ -8477,7 +7420,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32620',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16021',
@@ -8485,7 +7427,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32621',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16022',
@@ -8493,7 +7434,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32622',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16023',
@@ -8501,7 +7441,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32623',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16024',
@@ -8509,7 +7448,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32624',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16025',
@@ -8517,7 +7455,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32625',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16026',
@@ -8525,7 +7462,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32626',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16027',
@@ -8533,7 +7469,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32627',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16028',
@@ -8541,7 +7476,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32628',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16029',
@@ -8549,7 +7483,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32629',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16030',
@@ -8557,7 +7490,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32630',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16031',
@@ -8565,7 +7497,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32631',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16032',
@@ -8573,7 +7504,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32632',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16033',
@@ -8581,7 +7511,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32633',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16034',
@@ -8589,7 +7518,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32634',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16035',
@@ -8597,7 +7525,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32635',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16036',
@@ -8605,7 +7532,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32636',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16037',
@@ -8613,7 +7539,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32637',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16038',
@@ -8621,7 +7546,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32638',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16039',
@@ -8629,7 +7553,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32639',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16040',
@@ -8637,7 +7560,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32640',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16041',
@@ -8645,7 +7567,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32641',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16042',
@@ -8653,7 +7574,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32642',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16043',
@@ -8661,7 +7581,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32643',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16044',
@@ -8669,7 +7588,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32644',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16045',
@@ -8677,7 +7595,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32645',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16046',
@@ -8685,7 +7602,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32646',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16047',
@@ -8693,7 +7609,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32647',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16048',
@@ -8701,7 +7616,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32648',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16049',
@@ -8709,7 +7623,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32649',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16050',
@@ -8717,7 +7630,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32650',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16051',
@@ -8725,7 +7637,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32651',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16052',
@@ -8733,7 +7644,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32652',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16053',
@@ -8741,7 +7651,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32653',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16054',
@@ -8749,7 +7658,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32654',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16055',
@@ -8757,7 +7665,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32655',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16056',
@@ -8765,7 +7672,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32656',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16057',
@@ -8773,7 +7679,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32657',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16058',
@@ -8781,7 +7686,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32658',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16059',
@@ -8789,7 +7693,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32659',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16060',
@@ -8797,7 +7700,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32660',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16061',
@@ -8805,7 +7707,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32661',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16100',
@@ -8813,7 +7714,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32700',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16101',
@@ -8821,7 +7721,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32701',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16102',
@@ -8829,7 +7728,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32702',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16103',
@@ -8837,7 +7735,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32703',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16104',
@@ -8845,7 +7742,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32704',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16105',
@@ -8853,7 +7749,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32705',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16106',
@@ -8861,7 +7756,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32706',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16107',
@@ -8869,7 +7763,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32707',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16108',
@@ -8877,7 +7770,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32708',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16109',
@@ -8885,7 +7777,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32709',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16110',
@@ -8893,7 +7784,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32710',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16111',
@@ -8901,7 +7791,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32711',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16112',
@@ -8909,7 +7798,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32712',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16113',
@@ -8917,7 +7805,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32713',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16114',
@@ -8925,7 +7812,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32714',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16115',
@@ -8933,7 +7819,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32715',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16116',
@@ -8941,7 +7826,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32716',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16117',
@@ -8949,7 +7833,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32717',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16118',
@@ -8957,7 +7840,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32718',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16119',
@@ -8965,7 +7847,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32719',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16120',
@@ -8973,7 +7854,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32720',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16121',
@@ -8981,7 +7861,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32721',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16122',
@@ -8989,7 +7868,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32722',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16123',
@@ -8997,7 +7875,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32723',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16124',
@@ -9005,7 +7882,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32724',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16125',
@@ -9013,7 +7889,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32725',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16126',
@@ -9021,7 +7896,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32726',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16127',
@@ -9029,7 +7903,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32727',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16128',
@@ -9037,7 +7910,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32728',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16129',
@@ -9045,7 +7917,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32729',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16130',
@@ -9053,7 +7924,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32730',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16131',
@@ -9061,7 +7931,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32731',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16132',
@@ -9069,7 +7938,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32732',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16133',
@@ -9077,7 +7945,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32733',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16134',
@@ -9085,7 +7952,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32734',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16135',
@@ -9093,7 +7959,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32735',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16136',
@@ -9101,7 +7966,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32736',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16137',
@@ -9109,7 +7973,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32737',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16138',
@@ -9117,7 +7980,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32738',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16139',
@@ -9125,7 +7987,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32739',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16140',
@@ -9133,7 +7994,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32740',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16141',
@@ -9141,7 +8001,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32741',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16142',
@@ -9149,7 +8008,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32742',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16143',
@@ -9157,7 +8015,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32743',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16144',
@@ -9165,7 +8022,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32744',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16145',
@@ -9173,7 +8029,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32745',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16146',
@@ -9181,7 +8036,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32746',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16147',
@@ -9189,7 +8043,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32747',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16148',
@@ -9197,7 +8050,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32748',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16149',
@@ -9205,7 +8057,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32749',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16150',
@@ -9213,7 +8064,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32750',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16151',
@@ -9221,7 +8071,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32751',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16152',
@@ -9229,7 +8078,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32752',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16153',
@@ -9237,7 +8085,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32753',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16154',
@@ -9245,7 +8092,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32754',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16155',
@@ -9253,7 +8099,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32755',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16156',
@@ -9261,7 +8106,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32756',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16157',
@@ -9269,7 +8113,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32757',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16158',
@@ -9277,7 +8120,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32758',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16159',
@@ -9285,7 +8127,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32759',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16160',
@@ -9293,7 +8134,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32760',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16161',
@@ -9301,7 +8141,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::32761',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19883',
@@ -9309,7 +8148,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3395',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19865',
@@ -9317,7 +8155,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3413',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17295',
@@ -9325,7 +8162,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3571',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17296',
@@ -9333,7 +8169,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3572',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17297',
@@ -9341,7 +8176,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3573',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17298',
@@ -9349,7 +8183,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3574',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17299',
@@ -9357,7 +8190,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3575',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17300',
@@ -9365,7 +8197,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3576',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::3831',
@@ -9373,7 +8204,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3832',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::3856',
@@ -9381,7 +8211,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3857',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19866',
@@ -9389,7 +8218,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3976',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19842',
@@ -9397,7 +8225,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3995',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19840',
@@ -9405,7 +8232,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3996',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16035',
@@ -9413,7 +8239,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4037',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16036',
@@ -9421,7 +8246,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4038',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4085',
@@ -9429,7 +8253,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4087',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16061',
@@ -9437,7 +8260,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5041',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16161',
@@ -9445,7 +8267,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5042',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5901',
@@ -9453,7 +8274,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5936',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5902',
@@ -9461,7 +8281,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5937',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5903',
@@ -9469,7 +8288,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5938',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5904',
@@ -9477,7 +8295,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5939',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5905',
@@ -9485,7 +8302,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5940',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6929',
@@ -9493,7 +8309,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6931',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6930',
@@ -9501,7 +8316,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6932',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6928',
@@ -9509,7 +8323,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6933',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8854',
@@ -9517,7 +8330,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8857',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8855',
@@ -9525,7 +8337,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8858',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8856',
@@ -9533,7 +8344,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8859',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9353',
@@ -9541,7 +8351,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9354',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::32772',
@@ -9549,7 +8358,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9753',
             'accuracy' => 0.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16021',
@@ -9557,7 +8365,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4463',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4467',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15498',
@@ -9565,7 +8372,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4463',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7035',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -9573,7 +8379,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4465',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4466',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -9581,7 +8386,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4466',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4463',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15499',
@@ -9589,7 +8393,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4466',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7034',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -9597,7 +8400,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4468',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4469',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -9605,7 +8407,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4469',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4470',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15499',
@@ -9613,7 +8414,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4469',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7038',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16138',
@@ -9621,7 +8421,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4470',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4471',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15498',
@@ -9629,7 +8428,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4470',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7039',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -9637,7 +8435,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4472',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4475',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -9645,7 +8442,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4473',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4472',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16138',
@@ -9653,7 +8449,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4475',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5879',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -9661,7 +8456,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4479',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4480',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -9669,7 +8463,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4480',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -9677,7 +8470,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4481',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4482',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -9685,7 +8477,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4482',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4483',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16011',
@@ -9693,7 +8484,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4483',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4484',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16012',
@@ -9701,7 +8491,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4483',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4485',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16013',
@@ -9709,7 +8498,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4483',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4486',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16014',
@@ -9717,7 +8505,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4483',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4487',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16015',
@@ -9725,7 +8512,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4483',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4488',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16016',
@@ -9733,7 +8519,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4483',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4489',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16213',
@@ -9741,7 +8526,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4491',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16214',
@@ -9749,7 +8533,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4492',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16215',
@@ -9757,7 +8540,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4493',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16216',
@@ -9765,7 +8547,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4494',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16217',
@@ -9773,7 +8554,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4495',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16218',
@@ -9781,7 +8561,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4496',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16219',
@@ -9789,7 +8568,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4497',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16220',
@@ -9797,7 +8575,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4498',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16221',
@@ -9805,7 +8582,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4499',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16222',
@@ -9813,7 +8589,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4500',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16223',
@@ -9821,7 +8596,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4501',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16313',
@@ -9829,7 +8603,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4502',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16314',
@@ -9837,7 +8610,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4503',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16315',
@@ -9845,7 +8617,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4504',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16316',
@@ -9853,7 +8624,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4505',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16317',
@@ -9861,7 +8631,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4506',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16318',
@@ -9869,7 +8638,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4507',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16319',
@@ -9877,7 +8645,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4508',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16320',
@@ -9885,7 +8652,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4509',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16321',
@@ -9893,7 +8659,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4510',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16322',
@@ -9901,7 +8666,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4511',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16323',
@@ -9909,7 +8673,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4512',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16285',
@@ -9917,7 +8680,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4513',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16286',
@@ -9925,7 +8687,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4514',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16287',
@@ -9933,7 +8694,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4515',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16288',
@@ -9941,7 +8701,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4516',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16289',
@@ -9949,7 +8708,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4517',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16290',
@@ -9957,7 +8715,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4518',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16291',
@@ -9965,7 +8722,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4519',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16292',
@@ -9973,7 +8729,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4520',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16293',
@@ -9981,7 +8736,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4521',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16294',
@@ -9989,7 +8743,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4522',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16295',
@@ -9997,7 +8750,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4523',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16296',
@@ -10005,7 +8757,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4524',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16297',
@@ -10013,7 +8764,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4525',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16298',
@@ -10021,7 +8771,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4526',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16299',
@@ -10029,7 +8778,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4527',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16070',
@@ -10037,7 +8785,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4528',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16071',
@@ -10045,7 +8792,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4529',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16072',
@@ -10053,7 +8799,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4530',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16073',
@@ -10061,7 +8806,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4531',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16074',
@@ -10069,7 +8813,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4532',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16075',
@@ -10077,7 +8820,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4533',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16313',
@@ -10085,7 +8827,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4534',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16386',
@@ -10093,7 +8834,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4535',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16314',
@@ -10101,7 +8841,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4536',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16388',
@@ -10109,7 +8848,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4537',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16315',
@@ -10117,7 +8855,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4538',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16390',
@@ -10125,7 +8862,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4539',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16316',
@@ -10133,7 +8869,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4540',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16392',
@@ -10141,7 +8876,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4541',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16317',
@@ -10149,7 +8883,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4542',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16394',
@@ -10157,7 +8890,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4543',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16318',
@@ -10165,7 +8897,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4544',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16396',
@@ -10173,7 +8904,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4545',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16319',
@@ -10181,7 +8911,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4546',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16398',
@@ -10189,7 +8918,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4547',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16320',
@@ -10197,7 +8925,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4548',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16170',
@@ -10205,7 +8932,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4549',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16321',
@@ -10213,7 +8939,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4550',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16172',
@@ -10221,7 +8946,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4551',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16322',
@@ -10229,7 +8953,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4552',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16174',
@@ -10237,7 +8960,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4553',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16323',
@@ -10245,7 +8967,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4490',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4554',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16213',
@@ -10253,7 +8974,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4568',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16214',
@@ -10261,7 +8981,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4569',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16215',
@@ -10269,7 +8988,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4570',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16216',
@@ -10277,7 +8995,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4571',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16217',
@@ -10285,7 +9002,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4572',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16218',
@@ -10293,7 +9009,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4573',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16219',
@@ -10301,7 +9016,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4574',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16220',
@@ -10309,7 +9023,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4575',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16221',
@@ -10317,7 +9030,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4576',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16222',
@@ -10325,7 +9037,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4577',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16223',
@@ -10333,7 +9044,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4578',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16313',
@@ -10341,7 +9051,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4579',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16314',
@@ -10349,7 +9058,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4580',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16315',
@@ -10357,7 +9065,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4581',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16316',
@@ -10365,7 +9072,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4582',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16317',
@@ -10373,7 +9079,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4583',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16318',
@@ -10381,7 +9086,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4584',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16319',
@@ -10389,7 +9093,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4585',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16320',
@@ -10397,7 +9100,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4586',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16321',
@@ -10405,7 +9107,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4587',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16322',
@@ -10413,7 +9114,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4588',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16323',
@@ -10421,7 +9121,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4589',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16285',
@@ -10429,7 +9128,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4652',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16286',
@@ -10437,7 +9135,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4653',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16287',
@@ -10445,7 +9142,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4654',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16288',
@@ -10453,7 +9149,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4655',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16289',
@@ -10461,7 +9156,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4656',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16290',
@@ -10469,7 +9163,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4766',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16291',
@@ -10477,7 +9170,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4767',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16292',
@@ -10485,7 +9177,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4768',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16293',
@@ -10493,7 +9184,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4769',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16294',
@@ -10501,7 +9191,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4770',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16295',
@@ -10509,7 +9198,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4771',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16296',
@@ -10517,7 +9205,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4772',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16297',
@@ -10525,7 +9212,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4773',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16298',
@@ -10533,7 +9219,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4774',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16299',
@@ -10541,7 +9226,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4775',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16070',
@@ -10549,7 +9233,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4776',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16071',
@@ -10557,7 +9240,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4777',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16072',
@@ -10565,7 +9247,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4778',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16073',
@@ -10573,7 +9254,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4779',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16074',
@@ -10581,7 +9261,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4780',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16075',
@@ -10589,7 +9268,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4781',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16313',
@@ -10597,7 +9275,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4782',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16386',
@@ -10605,7 +9282,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4783',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16314',
@@ -10613,7 +9289,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4784',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16388',
@@ -10621,7 +9296,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4785',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16315',
@@ -10629,7 +9303,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4786',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16390',
@@ -10637,7 +9310,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4787',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16316',
@@ -10645,7 +9317,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4788',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16392',
@@ -10653,7 +9324,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4789',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16317',
@@ -10661,7 +9331,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4790',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16394',
@@ -10669,7 +9338,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4791',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16318',
@@ -10677,7 +9345,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4792',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16396',
@@ -10685,7 +9352,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4793',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16319',
@@ -10693,7 +9359,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4794',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16398',
@@ -10701,7 +9366,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4795',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16320',
@@ -10709,7 +9373,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4796',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16170',
@@ -10717,7 +9380,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4797',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16321',
@@ -10725,7 +9387,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4798',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16172',
@@ -10733,7 +9394,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4799',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16322',
@@ -10741,7 +9401,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4800',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16174',
@@ -10749,7 +9408,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4812',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16323',
@@ -10757,7 +9415,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4555',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4822',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -10765,7 +9422,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4556',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4557',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -10773,7 +9429,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4557',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4558',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16020',
@@ -10781,7 +9436,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4558',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4559',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16015',
@@ -10789,7 +9443,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4608',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2027',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16016',
@@ -10797,7 +9450,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4608',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2028',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16017',
@@ -10805,7 +9457,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4608',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2029',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16018',
@@ -10813,7 +9464,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4608',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2030',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16017',
@@ -10821,7 +9471,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4609',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2031',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16018',
@@ -10829,7 +9478,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4609',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2032',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16019',
@@ -10837,7 +9485,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4609',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2033',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16020',
@@ -10845,7 +9492,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4609',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2034',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16021',
@@ -10853,7 +9499,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4609',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2035',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16213',
@@ -10861,7 +9506,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2327',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16214',
@@ -10869,7 +9513,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2328',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16215',
@@ -10877,7 +9520,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2329',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16216',
@@ -10885,7 +9527,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2330',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16217',
@@ -10893,7 +9534,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2331',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16218',
@@ -10901,7 +9541,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2332',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16219',
@@ -10909,7 +9548,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2333',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16220',
@@ -10917,7 +9555,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2334',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16221',
@@ -10925,7 +9562,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2335',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16222',
@@ -10933,7 +9569,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2336',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16223',
@@ -10941,7 +9576,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2337',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16313',
@@ -10949,7 +9583,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2338',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16314',
@@ -10957,7 +9590,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2339',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16315',
@@ -10965,7 +9597,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2340',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16316',
@@ -10973,7 +9604,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2341',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16317',
@@ -10981,7 +9611,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2342',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16318',
@@ -10989,7 +9618,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2343',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16319',
@@ -10997,7 +9625,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2344',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16320',
@@ -11005,7 +9632,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2345',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16321',
@@ -11013,7 +9639,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2346',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16322',
@@ -11021,7 +9646,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2347',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16323',
@@ -11029,7 +9653,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2348',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16285',
@@ -11037,7 +9660,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2349',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16286',
@@ -11045,7 +9667,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2350',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16287',
@@ -11053,7 +9674,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2351',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16288',
@@ -11061,7 +9681,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2352',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16289',
@@ -11069,7 +9688,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2353',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16290',
@@ -11077,7 +9695,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2354',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16291',
@@ -11085,7 +9702,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2355',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16292',
@@ -11093,7 +9709,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2356',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16293',
@@ -11101,7 +9716,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2357',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16294',
@@ -11109,7 +9723,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2358',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16295',
@@ -11117,7 +9730,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2359',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16296',
@@ -11125,7 +9737,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2360',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16297',
@@ -11133,7 +9744,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2361',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16298',
@@ -11141,7 +9751,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2362',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16299',
@@ -11149,7 +9758,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2363',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16070',
@@ -11157,7 +9765,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2364',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16071',
@@ -11165,7 +9772,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2365',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16072',
@@ -11173,7 +9779,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2366',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16073',
@@ -11181,7 +9786,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2367',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16074',
@@ -11189,7 +9793,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2368',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16075',
@@ -11197,7 +9800,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2369',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16313',
@@ -11205,7 +9807,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2370',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16386',
@@ -11213,7 +9814,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2371',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16314',
@@ -11221,7 +9821,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2372',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16388',
@@ -11229,7 +9828,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2373',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16315',
@@ -11237,7 +9835,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2374',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16390',
@@ -11245,7 +9842,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2375',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16316',
@@ -11253,7 +9849,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2376',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16392',
@@ -11261,7 +9856,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2377',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16317',
@@ -11269,7 +9863,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2378',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16394',
@@ -11277,7 +9870,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2379',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16318',
@@ -11285,7 +9877,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2380',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16396',
@@ -11293,7 +9884,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2381',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16319',
@@ -11301,7 +9891,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2382',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16398',
@@ -11309,7 +9898,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2383',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16320',
@@ -11317,7 +9905,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2384',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16170',
@@ -11325,7 +9912,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2385',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16321',
@@ -11333,7 +9919,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2386',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16172',
@@ -11341,7 +9926,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2387',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16322',
@@ -11349,7 +9933,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2388',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16174',
@@ -11357,7 +9940,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2389',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16323',
@@ -11365,7 +9947,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4610',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2390',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16051',
@@ -11373,7 +9954,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4612',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3097',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16052',
@@ -11381,7 +9961,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4612',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3098',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16053',
@@ -11389,7 +9968,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4612',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3099',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16054',
@@ -11397,7 +9975,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4612',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3100',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16055',
@@ -11405,7 +9982,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4612',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3101',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16150',
@@ -11413,7 +9989,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4613',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2933',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16028',
@@ -11421,7 +9996,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4615',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2942',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16028',
@@ -11429,7 +10003,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4616',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2943',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16011',
@@ -11437,7 +10010,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2955',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16012',
@@ -11445,7 +10017,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2956',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16013',
@@ -11453,7 +10024,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2957',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16017',
@@ -11461,7 +10031,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2958',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16018',
@@ -11469,7 +10038,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2959',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16019',
@@ -11477,7 +10045,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2960',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16020',
@@ -11485,7 +10052,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2961',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16021',
@@ -11493,7 +10059,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2962',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16007',
@@ -11501,7 +10066,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3154',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16008',
@@ -11509,7 +10073,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3155',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16009',
@@ -11517,7 +10080,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3156',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16010',
@@ -11525,7 +10087,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3157',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16014',
@@ -11533,7 +10094,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3158',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16015',
@@ -11541,7 +10101,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3159',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16016',
@@ -11549,7 +10108,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3160',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16022',
@@ -11557,7 +10115,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3761',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16023',
@@ -11565,7 +10122,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9709',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16024',
@@ -11573,7 +10129,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9713',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16018',
@@ -11581,7 +10136,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4618',
             'target_crs' => 'urn:ogc:def:crs:EPSG::29168',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16019',
@@ -11589,7 +10143,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4618',
             'target_crs' => 'urn:ogc:def:crs:EPSG::29169',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16020',
@@ -11597,7 +10150,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4618',
             'target_crs' => 'urn:ogc:def:crs:EPSG::29170',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16021',
@@ -11605,7 +10157,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4618',
             'target_crs' => 'urn:ogc:def:crs:EPSG::29171',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16022',
@@ -11613,7 +10164,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4618',
             'target_crs' => 'urn:ogc:def:crs:EPSG::29172',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16117',
@@ -11621,7 +10171,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4618',
             'target_crs' => 'urn:ogc:def:crs:EPSG::29187',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16118',
@@ -11629,7 +10178,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4618',
             'target_crs' => 'urn:ogc:def:crs:EPSG::29188',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16119',
@@ -11637,7 +10185,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4618',
             'target_crs' => 'urn:ogc:def:crs:EPSG::29189',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16120',
@@ -11645,7 +10192,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4618',
             'target_crs' => 'urn:ogc:def:crs:EPSG::29190',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16121',
@@ -11653,7 +10199,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4618',
             'target_crs' => 'urn:ogc:def:crs:EPSG::29191',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16122',
@@ -11661,7 +10206,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4618',
             'target_crs' => 'urn:ogc:def:crs:EPSG::29192',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16123',
@@ -11669,7 +10213,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4618',
             'target_crs' => 'urn:ogc:def:crs:EPSG::29193',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16124',
@@ -11677,7 +10220,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4618',
             'target_crs' => 'urn:ogc:def:crs:EPSG::29194',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16125',
@@ -11685,7 +10227,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4618',
             'target_crs' => 'urn:ogc:def:crs:EPSG::29195',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16017',
@@ -11693,7 +10234,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4618',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5463',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16020',
@@ -11701,7 +10241,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4621',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2969',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16020',
@@ -11709,7 +10248,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4622',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2970',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16022',
@@ -11717,7 +10255,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4623',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2971',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16021',
@@ -11725,7 +10262,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4623',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3312',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16022',
@@ -11733,7 +10269,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4624',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2972',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16021',
@@ -11741,7 +10276,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4624',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3313',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15498',
@@ -11749,7 +10283,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4624',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7041',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16020',
@@ -11757,7 +10290,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4625',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2973',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16140',
@@ -11765,7 +10297,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4627',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2975',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16139',
@@ -11773,7 +10304,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4627',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5644',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15498',
@@ -11781,7 +10311,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4627',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7037',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16106',
@@ -11789,7 +10318,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4628',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2976',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16105',
@@ -11797,7 +10325,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4629',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2977',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16107',
@@ -11805,7 +10332,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4630',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2978',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16138',
@@ -11813,7 +10339,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4632',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2980',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16158',
@@ -11821,7 +10346,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4633',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2981',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16021',
@@ -11829,7 +10353,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4638',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2987',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16101',
@@ -11837,7 +10360,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4639',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2988',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16158',
@@ -11845,7 +10367,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4641',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2995',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16159',
@@ -11853,7 +10374,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4641',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3172',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16158',
@@ -11861,7 +10381,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4642',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2996',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16158',
@@ -11869,7 +10388,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4643',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2997',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16158',
@@ -11877,7 +10395,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4644',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2998',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16138',
@@ -11885,7 +10402,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4646',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2999',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16026',
@@ -11893,7 +10409,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4658',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3054',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16027',
@@ -11901,7 +10416,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4658',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3055',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16028',
@@ -11909,7 +10423,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4658',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3056',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16158',
@@ -11917,7 +10430,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4662',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3060',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16028',
@@ -11925,7 +10437,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4663',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3061',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16026',
@@ -11933,7 +10444,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4664',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3062',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16026',
@@ -11941,7 +10451,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4665',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3063',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16032',
@@ -11949,7 +10458,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4670',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3064',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16033',
@@ -11957,7 +10465,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4670',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3065',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16034',
@@ -11965,7 +10472,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4670',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9716',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16011',
@@ -11973,7 +10479,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4674',
             'target_crs' => 'urn:ogc:def:crs:EPSG::31965',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16012',
@@ -11981,7 +10486,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4674',
             'target_crs' => 'urn:ogc:def:crs:EPSG::31966',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16013',
@@ -11989,7 +10493,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4674',
             'target_crs' => 'urn:ogc:def:crs:EPSG::31967',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16014',
@@ -11997,7 +10500,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4674',
             'target_crs' => 'urn:ogc:def:crs:EPSG::31968',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16015',
@@ -12005,7 +10507,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4674',
             'target_crs' => 'urn:ogc:def:crs:EPSG::31969',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16016',
@@ -12013,7 +10514,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4674',
             'target_crs' => 'urn:ogc:def:crs:EPSG::31970',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16017',
@@ -12021,7 +10521,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4674',
             'target_crs' => 'urn:ogc:def:crs:EPSG::31971',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16018',
@@ -12029,7 +10528,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4674',
             'target_crs' => 'urn:ogc:def:crs:EPSG::31972',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16019',
@@ -12037,7 +10535,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4674',
             'target_crs' => 'urn:ogc:def:crs:EPSG::31973',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16020',
@@ -12045,7 +10542,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4674',
             'target_crs' => 'urn:ogc:def:crs:EPSG::31974',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16021',
@@ -12053,7 +10549,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4674',
             'target_crs' => 'urn:ogc:def:crs:EPSG::31975',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16022',
@@ -12061,7 +10556,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4674',
             'target_crs' => 'urn:ogc:def:crs:EPSG::31976',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16117',
@@ -12069,7 +10563,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4674',
             'target_crs' => 'urn:ogc:def:crs:EPSG::31977',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16118',
@@ -12077,7 +10570,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4674',
             'target_crs' => 'urn:ogc:def:crs:EPSG::31978',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16119',
@@ -12085,7 +10577,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4674',
             'target_crs' => 'urn:ogc:def:crs:EPSG::31979',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16120',
@@ -12093,7 +10584,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4674',
             'target_crs' => 'urn:ogc:def:crs:EPSG::31980',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16121',
@@ -12101,7 +10591,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4674',
             'target_crs' => 'urn:ogc:def:crs:EPSG::31981',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16122',
@@ -12109,7 +10598,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4674',
             'target_crs' => 'urn:ogc:def:crs:EPSG::31982',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16123',
@@ -12117,7 +10605,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4674',
             'target_crs' => 'urn:ogc:def:crs:EPSG::31983',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16124',
@@ -12125,7 +10612,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4674',
             'target_crs' => 'urn:ogc:def:crs:EPSG::31984',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16125',
@@ -12133,7 +10619,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4674',
             'target_crs' => 'urn:ogc:def:crs:EPSG::31985',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16126',
@@ -12141,7 +10626,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4674',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5396',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16023',
@@ -12149,7 +10633,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4674',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6210',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16024',
@@ -12157,7 +10640,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4674',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6211',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16105',
@@ -12165,7 +10647,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4687',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3296',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16106',
@@ -12173,7 +10654,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4687',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3297',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16107',
@@ -12181,7 +10661,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4687',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3298',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16108',
@@ -12189,7 +10668,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4687',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3299',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16107',
@@ -12197,7 +10675,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4688',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3303',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16107',
@@ -12205,7 +10682,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4689',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3302',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16106',
@@ -12213,7 +10689,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4690',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3304',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16106',
@@ -12221,7 +10696,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4691',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3305',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16105',
@@ -12229,7 +10703,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4692',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3306',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16039',
@@ -12237,7 +10710,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4693',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3307',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16142',
@@ -12245,7 +10717,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4698',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3336',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16028',
@@ -12253,7 +10724,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4700',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3367',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16029',
@@ -12261,7 +10731,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4700',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3368',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16030',
@@ -12269,7 +10738,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4700',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3369',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16133',
@@ -12277,7 +10745,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4701',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3342',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16028',
@@ -12285,7 +10752,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4702',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3343',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16029',
@@ -12293,7 +10759,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4702',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3344',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16030',
@@ -12301,7 +10766,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4702',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3345',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16132',
@@ -12309,7 +10773,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4704',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3353',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16132',
@@ -12317,7 +10780,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4705',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3354',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16130',
@@ -12325,7 +10787,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4710',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7878',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16160',
@@ -12333,7 +10794,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4721',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3141',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16101',
@@ -12341,7 +10801,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4721',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3142',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16027',
@@ -12349,7 +10808,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4728',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9406',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16028',
@@ -12357,7 +10815,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4728',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9407',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16109',
@@ -12365,7 +10822,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4729',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3784',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15843',
@@ -12373,7 +10829,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4740',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.5,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16029',
@@ -12381,7 +10836,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4741',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3374',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16037',
@@ -12389,7 +10843,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4743',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3391',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16038',
@@ -12397,7 +10850,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4743',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3392',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16039',
@@ -12405,7 +10857,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4743',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3393',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16037',
@@ -12413,7 +10864,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4744',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7005',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16038',
@@ -12421,7 +10871,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4744',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7006',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16039',
@@ -12429,7 +10878,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4744',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7007',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16264',
@@ -12437,7 +10885,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4745',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3398',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16265',
@@ -12445,7 +10892,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4745',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3399',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16264',
@@ -12453,7 +10899,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4745',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5668',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16265',
@@ -12461,7 +10906,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4745',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5669',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16263',
@@ -12469,7 +10913,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4746',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3396',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16264',
@@ -12477,7 +10920,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4746',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3397',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16263',
@@ -12485,7 +10927,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4746',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5666',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16264',
@@ -12493,7 +10934,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4746',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5667',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16018',
@@ -12501,7 +10941,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4747',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3178',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16019',
@@ -12509,7 +10948,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4747',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3179',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16020',
@@ -12517,7 +10955,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4747',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3180',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16021',
@@ -12525,7 +10962,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4747',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3181',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16022',
@@ -12533,7 +10969,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4747',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3182',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16023',
@@ -12541,7 +10976,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4747',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3183',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16024',
@@ -12549,7 +10983,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4747',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3184',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16025',
@@ -12557,7 +10990,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4747',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3185',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16026',
@@ -12565,7 +10997,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4747',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3186',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16027',
@@ -12573,7 +11004,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4747',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3187',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16028',
@@ -12581,7 +11011,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4747',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3188',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16029',
@@ -12589,7 +11018,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4747',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3189',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16157',
@@ -12597,7 +11025,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4749',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3169',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16158',
@@ -12605,7 +11032,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4749',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3170',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16159',
@@ -12613,7 +11039,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4749',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3171',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16158',
@@ -12621,7 +11046,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4750',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3164',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16032',
@@ -12629,7 +11053,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4754',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3199',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16033',
@@ -12637,7 +11060,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4754',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3201',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16034',
@@ -12645,7 +11067,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4754',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3202',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16035',
@@ -12653,7 +11074,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4754',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3203',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16046',
@@ -12661,7 +11081,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4755',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23866',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16047',
@@ -12669,7 +11088,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4755',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23867',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16048',
@@ -12677,7 +11095,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4755',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23868',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16049',
@@ -12685,7 +11102,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4755',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23869',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16050',
@@ -12693,7 +11109,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4755',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23870',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16051',
@@ -12701,7 +11116,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4755',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23871',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16052',
@@ -12709,7 +11123,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4755',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23872',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16147',
@@ -12717,7 +11130,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4755',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23877',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16148',
@@ -12725,7 +11137,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4755',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23878',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16149',
@@ -12733,7 +11144,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4755',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23879',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16150',
@@ -12741,7 +11151,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4755',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23880',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16151',
@@ -12749,7 +11158,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4755',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23881',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16152',
@@ -12757,7 +11165,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4755',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23882',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16153',
@@ -12765,7 +11172,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4755',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23883',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16154',
@@ -12773,7 +11179,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4755',
             'target_crs' => 'urn:ogc:def:crs:EPSG::23884',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16048',
@@ -12781,7 +11186,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4756',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3405',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16049',
@@ -12789,7 +11193,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4756',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3406',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16017',
@@ -12797,7 +11200,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4758',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3449',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16018',
@@ -12805,7 +11207,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4758',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3450',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16059',
@@ -12813,7 +11214,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3706',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16060',
@@ -12821,7 +11221,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3707',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16001',
@@ -12829,7 +11228,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3708',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16002',
@@ -12837,7 +11235,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3709',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16003',
@@ -12845,7 +11242,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3710',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16004',
@@ -12853,7 +11249,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3711',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16005',
@@ -12861,7 +11256,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3712',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16006',
@@ -12869,7 +11263,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3713',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16007',
@@ -12877,7 +11270,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3714',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16008',
@@ -12885,7 +11277,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3715',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16009',
@@ -12893,7 +11284,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3716',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16010',
@@ -12901,7 +11291,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3717',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16011',
@@ -12909,7 +11298,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3718',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16012',
@@ -12917,7 +11305,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3719',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16013',
@@ -12925,7 +11312,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3720',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16014',
@@ -12933,7 +11319,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3721',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16015',
@@ -12941,7 +11326,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3722',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16016',
@@ -12949,7 +11333,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3723',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16017',
@@ -12957,7 +11340,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3724',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16018',
@@ -12965,7 +11347,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3725',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16019',
@@ -12973,7 +11354,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3726',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16033',
@@ -12981,7 +11361,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4761',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3767',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16034',
@@ -12989,7 +11368,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4761',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3768',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16033',
@@ -12997,7 +11375,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4765',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8687',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -13005,7 +11382,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4882',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4883',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -13013,7 +11389,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4883',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4765',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -13021,7 +11396,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4884',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4885',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -13029,7 +11403,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4885',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4764',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -13037,7 +11410,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4886',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4887',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -13045,7 +11417,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4887',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4762',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -13053,7 +11424,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4888',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4889',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -13061,7 +11431,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4889',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4761',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -13069,7 +11438,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4890',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4891',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -13077,7 +11445,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4891',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4760',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -13085,7 +11452,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4892',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4893',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -13093,7 +11459,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4893',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4759',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -13101,7 +11466,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4894',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4895',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -13109,7 +11473,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4895',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4758',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8079',
@@ -13117,7 +11480,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4896',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7789',
             'accuracy' => 0.01,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -13125,7 +11487,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4896',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7910',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9030',
@@ -13133,7 +11494,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4896',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9010',
             'accuracy' => 0.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9993',
@@ -13141,7 +11501,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4896',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9988',
             'accuracy' => 0.01,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -13149,7 +11508,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4897',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4898',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -13157,7 +11515,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4898',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4755',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -13165,7 +11522,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4899',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4900',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -13173,7 +11529,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4900',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4754',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -13181,7 +11536,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4906',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4907',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -13189,7 +11543,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4907',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4749',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -13197,7 +11550,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4908',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4909',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -13205,7 +11557,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4909',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4747',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10139',
@@ -13213,7 +11564,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4910',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4911',
             'accuracy' => 0.01,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8069',
@@ -13221,7 +11571,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4910',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7789',
             'accuracy' => 0.01,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -13229,7 +11578,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4910',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7900',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10105',
@@ -13237,7 +11585,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4910',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9988',
             'accuracy' => 0.01,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10140',
@@ -13245,7 +11592,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4911',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4912',
             'accuracy' => 0.01,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8070',
@@ -13253,7 +11599,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4911',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7789',
             'accuracy' => 0.01,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -13261,7 +11606,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4911',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7901',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10104',
@@ -13269,7 +11613,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4911',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9988',
             'accuracy' => 0.01,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10141',
@@ -13277,7 +11620,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4912',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4913',
             'accuracy' => 0.007,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8071',
@@ -13285,7 +11627,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4912',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7789',
             'accuracy' => 0.01,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -13293,7 +11634,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4912',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7902',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10103',
@@ -13301,7 +11641,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4912',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9988',
             'accuracy' => 0.01,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10142',
@@ -13309,7 +11648,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4913',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4914',
             'accuracy' => 0.005,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8072',
@@ -13317,7 +11655,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4913',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7789',
             'accuracy' => 0.01,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -13325,7 +11662,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4913',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7903',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10100',
@@ -13333,7 +11669,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4913',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9988',
             'accuracy' => 0.01,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8073',
@@ -13341,7 +11676,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4914',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7789',
             'accuracy' => 0.01,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -13349,7 +11683,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4914',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7904',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9999',
@@ -13357,7 +11690,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4914',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9988',
             'accuracy' => 0.01,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10143',
@@ -13365,7 +11697,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4915',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4916',
             'accuracy' => 0.01,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8074',
@@ -13373,7 +11704,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4915',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7789',
             'accuracy' => 0.01,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -13381,7 +11711,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4915',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7905',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9998',
@@ -13389,7 +11718,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4915',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9988',
             'accuracy' => 0.01,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8075',
@@ -13397,7 +11725,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4916',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7789',
             'accuracy' => 0.01,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -13405,7 +11732,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4916',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7906',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9997',
@@ -13413,7 +11739,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4916',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9988',
             'accuracy' => 0.01,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8076',
@@ -13421,7 +11746,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4917',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7789',
             'accuracy' => 0.01,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -13429,7 +11753,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4917',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7907',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9996',
@@ -13437,7 +11760,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4917',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9988',
             'accuracy' => 0.01,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8077',
@@ -13445,7 +11767,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4918',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7789',
             'accuracy' => 0.01,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -13453,7 +11774,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4918',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7908',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9028',
@@ -13461,7 +11781,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4918',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9001',
             'accuracy' => 0.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9995',
@@ -13469,7 +11788,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4918',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9988',
             'accuracy' => 0.01,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8078',
@@ -13477,7 +11795,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4919',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7789',
             'accuracy' => 0.01,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -13485,7 +11802,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4919',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7909',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9029',
@@ -13493,7 +11809,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4919',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9004',
             'accuracy' => 0.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9994',
@@ -13501,7 +11816,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4919',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9988',
             'accuracy' => 0.01,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -13509,7 +11823,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4920',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4921',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -13517,7 +11830,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4921',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4742',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -13525,7 +11837,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4922',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4923',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7702',
@@ -13533,7 +11844,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4922',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7677',
             'accuracy' => 0.17,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -13541,7 +11851,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4923',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4740',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -13549,7 +11858,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4924',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4925',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -13557,7 +11865,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4925',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4702',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -13565,7 +11872,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4926',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4927',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -13573,7 +11879,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4927',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4737',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -13581,7 +11886,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4928',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4929',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -13589,7 +11893,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4929',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4694',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -13597,7 +11900,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4930',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4931',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -13605,7 +11907,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4931',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4176',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -13613,7 +11914,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4932',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4933',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -13621,7 +11921,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4933',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4151',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -13629,7 +11928,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4934',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4935',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -13637,7 +11935,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4935',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4180',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -13645,7 +11942,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4936',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4937',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -13653,7 +11949,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4937',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4258',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -13661,7 +11956,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4938',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4939',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -13669,7 +11963,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4939',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4283',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -13677,7 +11970,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4940',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4941',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -13685,7 +11977,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4941',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4148',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -13693,7 +11984,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4942',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4943',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -13701,7 +11991,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4943',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4173',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -13709,7 +11998,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4944',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4945',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -13717,7 +12005,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4945',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4659',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -13725,7 +12012,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4946',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4947',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -13733,7 +12019,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4947',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4612',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -13741,7 +12026,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4948',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4949',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -13749,7 +12033,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4949',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4661',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -13757,7 +12040,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4950',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4951',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -13765,7 +12047,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4951',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4669',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -13773,7 +12054,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4952',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4953',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -13781,7 +12061,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4953',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4130',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -13789,7 +12068,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4954',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4955',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -13797,7 +12075,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4955',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4617',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -13805,7 +12082,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4956',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4957',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -13813,7 +12089,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4957',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4152',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -13821,7 +12096,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4958',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4959',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -13829,7 +12103,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4959',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4167',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -13837,7 +12110,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4960',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4961',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -13845,7 +12117,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4961',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4190',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -13853,7 +12124,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4962',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4963',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -13861,7 +12131,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4963',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4189',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -13869,7 +12138,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4964',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4965',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -13877,7 +12145,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4965',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4171',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15499',
@@ -13885,7 +12152,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4965',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7042',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -13893,7 +12159,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4966',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4967',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -13901,7 +12166,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4967',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4624',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15499',
@@ -13909,7 +12173,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4967',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7040',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -13917,7 +12180,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4970',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4971',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -13925,7 +12187,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4971',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4627',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15499',
@@ -13933,7 +12194,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4971',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7036',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -13941,7 +12201,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4974',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4975',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -13949,7 +12208,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4975',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4170',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -13957,7 +12215,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4976',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4977',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -13965,7 +12222,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4977',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4619',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -13973,7 +12229,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4978',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::32771',
@@ -13981,7 +12236,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4978',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9753',
             'accuracy' => 0.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -13989,7 +12243,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::32773',
@@ -13997,7 +12250,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9753',
             'accuracy' => 0.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -14005,7 +12257,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4980',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4981',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -14013,7 +12264,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4981',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4163',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -14021,7 +12271,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4982',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4983',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -14029,7 +12278,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4983',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4670',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -14037,7 +12285,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4984',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4985',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -14045,7 +12292,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4985',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4322',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -14053,7 +12299,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4986',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4987',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -14061,7 +12306,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4987',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -14069,7 +12313,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4988',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4989',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -14077,7 +12320,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4989',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4674',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -14085,7 +12327,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4990',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4991',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -14093,7 +12334,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4991',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4677',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -14101,7 +12341,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4992',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4993',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -14109,7 +12348,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4993',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4678',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -14117,7 +12355,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4994',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4995',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -14125,7 +12362,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4995',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4683',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -14133,7 +12369,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4996',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4997',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -14141,7 +12376,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4997',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4686',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -14149,7 +12383,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4998',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4999',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -14157,7 +12390,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4999',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4687',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -14165,7 +12397,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5011',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5012',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -14173,7 +12404,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5012',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5013',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16025',
@@ -14181,7 +12411,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5013',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5014',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16026',
@@ -14189,7 +12418,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5013',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5015',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16028',
@@ -14197,7 +12425,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5013',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5016',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -14205,7 +12432,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5244',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5245',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -14213,7 +12439,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5245',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5246',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -14221,7 +12446,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5250',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5251',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -14229,7 +12453,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5251',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5252',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16305',
@@ -14237,7 +12460,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5252',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5253',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16370',
@@ -14245,7 +12467,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5252',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5254',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16306',
@@ -14253,7 +12474,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5252',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5255',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16372',
@@ -14261,7 +12481,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5252',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5256',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16307',
@@ -14269,7 +12488,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5252',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5257',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16374',
@@ -14277,7 +12495,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5252',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5258',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16308',
@@ -14285,7 +12502,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5252',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5259',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16269',
@@ -14293,7 +12509,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5252',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5269',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16270',
@@ -14301,7 +12516,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5252',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5270',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16271',
@@ -14309,7 +12523,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5252',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5271',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16272',
@@ -14317,7 +12530,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5252',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5272',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16273',
@@ -14325,7 +12537,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5252',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5273',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16274',
@@ -14333,7 +12544,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5252',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5274',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16275',
@@ -14341,7 +12551,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5252',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5275',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -14349,7 +12558,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5262',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5263',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -14357,7 +12565,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5263',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5264',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -14365,7 +12572,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5323',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -14373,7 +12579,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5323',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5324',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9031',
@@ -14381,7 +12586,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5332',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6934',
             'accuracy' => 0.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7790',
@@ -14389,7 +12593,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5332',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7789',
             'accuracy' => 0.01,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -14397,7 +12600,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5332',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7911',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9992',
@@ -14405,7 +12607,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5332',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9988',
             'accuracy' => 0.01,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16119',
@@ -14413,7 +12614,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5340',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9265',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -14421,7 +12621,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5341',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5342',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -14429,7 +12628,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5342',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5340',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -14437,7 +12635,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5352',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5353',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -14445,7 +12642,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5353',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5354',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16120',
@@ -14453,7 +12649,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5354',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5355',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16119',
@@ -14461,7 +12656,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5354',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5356',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16121',
@@ -14469,7 +12663,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5354',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5357',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -14477,7 +12670,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5358',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5359',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -14485,7 +12677,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5359',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5360',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16119',
@@ -14493,7 +12684,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5360',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5361',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16118',
@@ -14501,7 +12691,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5360',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5362',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -14509,7 +12698,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5363',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5364',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -14517,7 +12705,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5364',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5365',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -14525,7 +12712,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5368',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5370',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -14533,7 +12719,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5369',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5372',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -14541,7 +12726,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5370',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5371',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -14549,7 +12733,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5372',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5373',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16118',
@@ -14557,7 +12740,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5373',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5387',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16119',
@@ -14565,7 +12747,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5373',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5389',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16117',
@@ -14573,7 +12754,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5373',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5839',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -14581,7 +12761,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5379',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5380',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -14589,7 +12768,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5380',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5381',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16121',
@@ -14597,7 +12775,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5381',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5382',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16122',
@@ -14605,7 +12782,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5381',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5383',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -14613,7 +12789,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5391',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5392',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -14621,7 +12796,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5392',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5393',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -14629,7 +12803,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5487',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5488',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -14637,7 +12810,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5488',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5489',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15499',
@@ -14645,7 +12817,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5488',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7085',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16020',
@@ -14653,7 +12824,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5489',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5490',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15498',
@@ -14661,7 +12831,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5489',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7086',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16121',
@@ -14669,7 +12838,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5524',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5536',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16122',
@@ -14677,7 +12845,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5524',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5537',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16123',
@@ -14685,7 +12852,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5524',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5538',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16124',
@@ -14693,7 +12859,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5524',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5539',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16121',
@@ -14701,7 +12866,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5527',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5531',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16123',
@@ -14709,7 +12873,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5527',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5533',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16124',
@@ -14717,7 +12880,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5527',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5534',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16125',
@@ -14725,7 +12887,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5527',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5535',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16122',
@@ -14733,7 +12894,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5527',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5858',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16118',
@@ -14741,7 +12901,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5527',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5875',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16119',
@@ -14749,7 +12908,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5527',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5876',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16120',
@@ -14757,7 +12915,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5527',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5877',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -14765,7 +12922,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5544',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5545',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -14773,7 +12929,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5545',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5546',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -14781,7 +12936,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5558',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5560',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -14789,7 +12943,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5560',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5561',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16204',
@@ -14797,7 +12950,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5561',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5562',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16205',
@@ -14805,7 +12957,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5561',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5563',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16206',
@@ -14813,7 +12964,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5561',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5564',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16207',
@@ -14821,7 +12971,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5561',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5565',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16304',
@@ -14829,7 +12978,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5561',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5566',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16305',
@@ -14837,7 +12985,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5561',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5567',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16306',
@@ -14845,7 +12992,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5561',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5568',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16307',
@@ -14853,7 +12999,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5561',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5569',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -14861,7 +13006,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5591',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5592',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -14869,7 +13013,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5592',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5593',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7812',
@@ -14877,7 +13020,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5611',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5706',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16262',
@@ -14885,7 +13027,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5681',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5682',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16263',
@@ -14893,7 +13034,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5681',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5683',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16264',
@@ -14901,7 +13041,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5681',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5684',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16265',
@@ -14909,7 +13048,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5681',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5685',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7812',
@@ -14917,7 +13055,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5702',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6359',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7813',
@@ -14925,7 +13062,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5702',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7968',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7812',
@@ -14933,7 +13069,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5703',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6357',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7813',
@@ -14941,7 +13076,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5703',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7813',
@@ -14949,7 +13083,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5703',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8228',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7812',
@@ -14957,7 +13090,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5705',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5612',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7812',
@@ -14965,7 +13097,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5714',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5715',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7813',
@@ -14973,7 +13104,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5714',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8050',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7813',
@@ -14981,7 +13111,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5714',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8052',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7813',
@@ -14989,7 +13118,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5715',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8051',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7813',
@@ -14997,7 +13125,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5715',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8053',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7812',
@@ -15005,7 +13132,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5735',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5336',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7812',
@@ -15013,7 +13139,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5738',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7976',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7813',
@@ -15021,7 +13146,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5754',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7962',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7813',
@@ -15029,7 +13153,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5789',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5614',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7812',
@@ -15037,7 +13160,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5797',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5734',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -15045,7 +13167,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5828',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5830',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7812',
@@ -15053,7 +13174,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5829',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5831',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -15061,7 +13181,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5830',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5681',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -15069,7 +13188,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5884',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5885',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -15077,7 +13195,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::5885',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5886',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -15085,7 +13202,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6133',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6134',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -15093,7 +13209,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6134',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6135',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -15101,7 +13216,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6309',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6310',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -15109,7 +13223,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6310',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6311',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -15117,7 +13230,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6317',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6319',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16059',
@@ -15125,7 +13237,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6328',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16060',
@@ -15133,7 +13244,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6329',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16001',
@@ -15141,7 +13251,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6330',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16002',
@@ -15149,7 +13258,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6331',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16003',
@@ -15157,7 +13265,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6332',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16004',
@@ -15165,7 +13272,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6333',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16005',
@@ -15173,7 +13279,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6334',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16006',
@@ -15181,7 +13286,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6335',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16007',
@@ -15189,7 +13293,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6336',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16008',
@@ -15197,7 +13300,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6337',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16009',
@@ -15205,7 +13307,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6338',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16010',
@@ -15213,7 +13314,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6339',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16011',
@@ -15221,7 +13321,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6340',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16012',
@@ -15229,7 +13328,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6341',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16013',
@@ -15237,7 +13335,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6342',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16014',
@@ -15245,7 +13342,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6343',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16015',
@@ -15253,7 +13349,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6344',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16016',
@@ -15261,7 +13356,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6345',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16017',
@@ -15269,7 +13363,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6346',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16018',
@@ -15277,7 +13370,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6347',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16019',
@@ -15285,7 +13377,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6348',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -15293,7 +13384,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6319',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -15301,7 +13391,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6320',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6321',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -15309,7 +13398,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6321',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6322',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16004',
@@ -15317,7 +13405,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6634',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16005',
@@ -15325,7 +13412,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6635',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16102',
@@ -15333,7 +13419,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6322',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6636',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -15341,7 +13426,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6323',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6324',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -15349,7 +13433,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6325',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16054',
@@ -15357,7 +13440,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6325',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8692',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16055',
@@ -15365,7 +13447,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6325',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8693',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7812',
@@ -15373,7 +13454,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6358',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -15381,7 +13461,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6363',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6364',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -15389,7 +13468,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6364',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6365',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16011',
@@ -15397,7 +13475,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6365',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6366',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16012',
@@ -15405,7 +13482,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6365',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6367',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16013',
@@ -15413,7 +13489,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6365',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6368',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16014',
@@ -15421,7 +13496,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6365',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6369',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16015',
@@ -15429,7 +13503,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6365',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6370',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16016',
@@ -15437,7 +13510,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6365',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6371',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -15445,7 +13517,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6666',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6667',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -15453,7 +13524,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6667',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6668',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16051',
@@ -15461,7 +13531,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6668',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6688',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16052',
@@ -15469,7 +13538,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6668',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6689',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16053',
@@ -15477,7 +13545,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6668',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6690',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16054',
@@ -15485,7 +13552,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6668',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6691',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16055',
@@ -15493,7 +13559,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6668',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6692',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -15501,7 +13566,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6704',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6705',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -15509,7 +13573,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6705',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6706',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16032',
@@ -15517,7 +13580,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6706',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6707',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16033',
@@ -15525,7 +13587,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6706',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6708',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16034',
@@ -15533,7 +13594,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6706',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6709',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16032',
@@ -15541,7 +13601,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6706',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7791',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16033',
@@ -15549,7 +13608,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6706',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7792',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16034',
@@ -15557,7 +13615,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6706',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7793',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -15565,7 +13622,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6781',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6782',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -15573,7 +13629,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6782',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6783',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16040',
@@ -15581,7 +13636,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6892',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6915',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -15589,7 +13643,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6934',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9013',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9037',
@@ -15597,7 +13650,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6934',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9015',
             'accuracy' => 0.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -15605,7 +13657,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6981',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6982',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -15613,7 +13664,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6982',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6983',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -15621,7 +13671,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6988',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6989',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -15629,7 +13678,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::6989',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6990',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -15637,7 +13685,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7071',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7072',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -15645,7 +13692,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7072',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7073',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15499',
@@ -15653,7 +13699,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7072',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7087',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16137',
@@ -15661,7 +13706,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7073',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7074',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16138',
@@ -15669,7 +13713,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7073',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7075',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16139',
@@ -15677,7 +13720,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7073',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7076',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16140',
@@ -15685,7 +13727,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7073',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7077',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16141',
@@ -15693,7 +13734,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7073',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7078',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16142',
@@ -15701,7 +13741,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7073',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7079',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16143',
@@ -15709,7 +13748,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7073',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7080',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16144',
@@ -15717,7 +13755,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7073',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7081',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15498',
@@ -15725,7 +13762,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7073',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7133',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16153',
@@ -15733,7 +13769,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7073',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8455',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16154',
@@ -15741,7 +13776,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7073',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8456',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -15749,7 +13783,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7134',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7135',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -15757,7 +13790,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7135',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7136',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -15765,7 +13797,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7137',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7138',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -15773,7 +13804,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7138',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7139',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -15781,7 +13811,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7371',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7372',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -15789,7 +13818,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7372',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7373',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16039',
@@ -15797,7 +13825,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7373',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7374',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16040',
@@ -15805,7 +13832,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7373',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7375',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16041',
@@ -15813,7 +13839,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7373',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7376',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7672',
@@ -15821,7 +13846,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7656',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4914',
             'accuracy' => 0.2,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -15829,7 +13853,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7656',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7657',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9961',
@@ -15837,7 +13860,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7656',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7658',
             'accuracy' => 0.04,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -15845,7 +13867,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7657',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9053',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9076',
@@ -15853,7 +13874,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7658',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4916',
             'accuracy' => 0.1,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -15861,7 +13881,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7658',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7659',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9962',
@@ -15869,7 +13888,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7658',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7660',
             'accuracy' => 0.03,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -15877,7 +13895,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7659',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9054',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7670',
@@ -15885,7 +13902,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7660',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4919',
             'accuracy' => 0.02,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -15893,7 +13909,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7660',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7661',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9963',
@@ -15901,7 +13916,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7660',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7662',
             'accuracy' => 0.02,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7668',
@@ -15909,7 +13923,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7660',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7664',
             'accuracy' => 0.02,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7961',
@@ -15917,7 +13930,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7660',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7677',
             'accuracy' => 0.17,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -15925,7 +13937,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7661',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9055',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7669',
@@ -15933,7 +13944,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7662',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5332',
             'accuracy' => 0.01,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -15941,7 +13951,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7662',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7663',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7667',
@@ -15949,7 +13958,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7662',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7664',
             'accuracy' => 0.01,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -15957,7 +13965,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7663',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9056',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7666',
@@ -15965,7 +13972,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7664',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5332',
             'accuracy' => 0.01,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -15973,7 +13979,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7664',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7665',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9756',
@@ -15981,7 +13986,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7664',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9753',
             'accuracy' => 0.01,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -15989,7 +13993,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7665',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9057',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -15997,7 +14000,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7677',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7678',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7703',
@@ -16005,7 +14007,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7677',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7679',
             'accuracy' => 0.07000000000000001,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -16013,7 +14014,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7678',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9474',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7960',
@@ -16021,7 +14021,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7679',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5332',
             'accuracy' => 0.004,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -16029,7 +14028,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7679',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7680',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -16037,7 +14035,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7680',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9475',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -16045,7 +14042,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7681',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7682',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -16053,7 +14049,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7682',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16204',
@@ -16061,7 +14056,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20904',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16205',
@@ -16069,7 +14063,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20905',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16206',
@@ -16077,7 +14070,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20906',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16207',
@@ -16085,7 +14077,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20907',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16208',
@@ -16093,7 +14084,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20908',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16209',
@@ -16101,7 +14091,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20909',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16210',
@@ -16109,7 +14098,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20910',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16211',
@@ -16117,7 +14105,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20911',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16212',
@@ -16125,7 +14112,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20912',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16213',
@@ -16133,7 +14119,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20913',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16214',
@@ -16141,7 +14126,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20914',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16215',
@@ -16149,7 +14133,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20915',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16216',
@@ -16157,7 +14140,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20916',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16217',
@@ -16165,7 +14147,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20917',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16218',
@@ -16173,7 +14154,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20918',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16219',
@@ -16181,7 +14161,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20919',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16220',
@@ -16189,7 +14168,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20920',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16221',
@@ -16197,7 +14175,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20921',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16222',
@@ -16205,7 +14182,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20922',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16223',
@@ -16213,7 +14189,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20923',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16224',
@@ -16221,7 +14196,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20924',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16225',
@@ -16229,7 +14203,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20925',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16226',
@@ -16237,7 +14210,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20926',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16227',
@@ -16245,7 +14217,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20927',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16228',
@@ -16253,7 +14224,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20928',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16229',
@@ -16261,7 +14231,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20929',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16230',
@@ -16269,7 +14238,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20930',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16231',
@@ -16277,7 +14245,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20931',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16232',
@@ -16285,7 +14252,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20932',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16304',
@@ -16293,7 +14259,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21004',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16305',
@@ -16301,7 +14266,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21005',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16306',
@@ -16309,7 +14273,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21006',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16307',
@@ -16317,7 +14280,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21007',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16308',
@@ -16325,7 +14287,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21008',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16309',
@@ -16333,7 +14294,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21009',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16310',
@@ -16341,7 +14301,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21010',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16311',
@@ -16349,7 +14308,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21011',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16312',
@@ -16357,7 +14315,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21012',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16313',
@@ -16365,7 +14322,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21013',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16314',
@@ -16373,7 +14329,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21014',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16315',
@@ -16381,7 +14336,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21015',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16316',
@@ -16389,7 +14343,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21016',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16317',
@@ -16397,7 +14350,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21017',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16318',
@@ -16405,7 +14357,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21018',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16319',
@@ -16413,7 +14364,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21019',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16320',
@@ -16421,7 +14371,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21020',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16321',
@@ -16429,7 +14378,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21021',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16322',
@@ -16437,7 +14385,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21022',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16323',
@@ -16445,7 +14392,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21023',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16324',
@@ -16453,7 +14399,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21024',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16325',
@@ -16461,7 +14406,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21025',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16326',
@@ -16469,7 +14413,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21026',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16327',
@@ -16477,7 +14420,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21027',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16328',
@@ -16485,7 +14427,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21028',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16329',
@@ -16493,7 +14434,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21029',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16330',
@@ -16501,7 +14441,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21030',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16331',
@@ -16509,7 +14448,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21031',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16332',
@@ -16517,7 +14455,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21032',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16907',
@@ -16525,7 +14462,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21207',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16910',
@@ -16533,7 +14469,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21210',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16921',
@@ -16541,7 +14476,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21221',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17107',
@@ -16549,7 +14483,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::21307',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -16557,7 +14490,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7684',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7685',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -16565,7 +14497,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7685',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7686',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -16573,7 +14504,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7789',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7912',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9032',
@@ -16581,7 +14511,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7789',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8227',
             'accuracy' => 0.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9381',
@@ -16589,7 +14518,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7789',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9378',
             'accuracy' => 0.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9991',
@@ -16597,7 +14525,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7789',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9988',
             'accuracy' => 0.001,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -16605,7 +14532,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7796',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7797',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -16613,7 +14539,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7797',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7798',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16034',
@@ -16621,7 +14546,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7798',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7799',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16035',
@@ -16629,7 +14553,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7798',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7800',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16034',
@@ -16637,7 +14560,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7798',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7803',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16036',
@@ -16645,7 +14567,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7798',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7805',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16035',
@@ -16653,7 +14574,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7798',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9391',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9145',
@@ -16661,7 +14581,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7815',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4912',
             'accuracy' => 1.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9960',
@@ -16669,7 +14588,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7815',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7656',
             'accuracy' => 0.7,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -16677,7 +14595,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7815',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7816',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -16685,7 +14602,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7816',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8888',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -16693,7 +14609,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7842',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7843',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -16701,7 +14616,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7843',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7844',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -16709,7 +14623,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7879',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7880',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -16717,7 +14630,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7880',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7881',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16130',
@@ -16725,7 +14637,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7881',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7883',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -16733,7 +14644,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7884',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7885',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -16741,7 +14651,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7885',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7886',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16130',
@@ -16749,7 +14658,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7886',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7887',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -16757,7 +14665,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7900',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8988',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -16765,7 +14672,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7901',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8989',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -16773,7 +14679,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7902',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8990',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -16781,7 +14686,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7903',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8991',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -16789,7 +14693,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7904',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8992',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -16797,7 +14700,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7905',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8993',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -16805,7 +14707,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7906',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8994',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -16813,7 +14714,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7907',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8995',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -16821,7 +14721,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7908',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8996',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -16829,7 +14728,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7909',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8997',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -16837,7 +14735,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7910',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8998',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -16845,7 +14742,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7911',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8999',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -16853,7 +14749,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7912',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9000',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -16861,7 +14756,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7914',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7915',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -16869,7 +14763,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7915',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9059',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -16877,7 +14770,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7916',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7917',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -16885,7 +14777,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7917',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9060',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -16893,7 +14784,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7918',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7919',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -16901,7 +14791,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7919',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9061',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -16909,7 +14798,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7920',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7921',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -16917,7 +14805,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7921',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9062',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -16925,7 +14812,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7922',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7923',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -16933,7 +14819,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7923',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9063',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -16941,7 +14826,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7924',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7925',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -16949,7 +14833,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7925',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9064',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -16957,7 +14840,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7926',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7927',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -16965,7 +14847,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7927',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9065',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -16973,7 +14854,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7928',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7929',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -16981,7 +14861,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7929',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9066',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -16989,7 +14868,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7930',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7931',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -16997,7 +14875,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7931',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9067',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7812',
@@ -17005,7 +14882,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::7979',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5789',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -17013,7 +14889,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8084',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8085',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -17021,7 +14896,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8085',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8086',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -17029,7 +14903,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8227',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9018',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9382',
@@ -17037,7 +14910,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8227',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9378',
             'accuracy' => 0.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -17045,7 +14917,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8230',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8231',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -17053,7 +14924,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8231',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8232',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -17061,7 +14931,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8233',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8235',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -17069,7 +14938,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8235',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8237',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16007',
@@ -17077,7 +14945,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8237',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22207',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16008',
@@ -17085,7 +14952,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8237',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22208',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16009',
@@ -17093,7 +14959,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8237',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22209',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16010',
@@ -17101,7 +14966,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8237',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22210',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16011',
@@ -17109,7 +14973,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8237',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22211',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16012',
@@ -17117,7 +14980,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8237',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22212',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16013',
@@ -17125,7 +14987,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8237',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22213',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16014',
@@ -17133,7 +14994,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8237',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22214',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16015',
@@ -17141,7 +15001,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8237',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22215',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16016',
@@ -17149,7 +15008,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8237',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22216',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16017',
@@ -17157,7 +15015,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8237',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22217',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16018',
@@ -17165,7 +15022,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8237',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22218',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16019',
@@ -17173,7 +15029,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8237',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22219',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16020',
@@ -17181,7 +15036,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8237',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22220',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16021',
@@ -17189,7 +15043,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8237',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22221',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16022',
@@ -17197,7 +15050,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8237',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22222',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -17205,7 +15057,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8238',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8239',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -17213,7 +15064,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8239',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8240',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16007',
@@ -17221,7 +15071,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8240',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22307',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16008',
@@ -17229,7 +15078,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8240',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22308',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16009',
@@ -17237,7 +15085,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8240',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22309',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16010',
@@ -17245,7 +15092,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8240',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22310',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16011',
@@ -17253,7 +15099,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8240',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22311',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16012',
@@ -17261,7 +15106,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8240',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22312',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16013',
@@ -17269,7 +15113,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8240',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22313',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16014',
@@ -17277,7 +15120,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8240',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22314',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16015',
@@ -17285,7 +15127,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8240',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22315',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16016',
@@ -17293,7 +15134,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8240',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22316',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16017',
@@ -17301,7 +15141,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8240',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22317',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16018',
@@ -17309,7 +15148,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8240',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22318',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16019',
@@ -17317,7 +15155,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8240',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22319',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16020',
@@ -17325,7 +15162,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8240',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22320',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16021',
@@ -17333,7 +15169,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8240',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22321',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16022',
@@ -17341,7 +15176,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8240',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22322',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -17349,7 +15183,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8242',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8244',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -17357,7 +15190,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8244',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8246',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16007',
@@ -17365,7 +15197,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8246',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22407',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16008',
@@ -17373,7 +15204,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8246',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22408',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16009',
@@ -17381,7 +15211,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8246',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22409',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16010',
@@ -17389,7 +15218,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8246',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22410',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16011',
@@ -17397,7 +15225,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8246',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22411',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16012',
@@ -17405,7 +15232,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8246',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22412',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16013',
@@ -17413,7 +15239,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8246',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22413',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16014',
@@ -17421,7 +15246,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8246',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22414',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16015',
@@ -17429,7 +15253,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8246',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22415',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16016',
@@ -17437,7 +15260,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8246',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22416',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16017',
@@ -17445,7 +15267,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8246',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22417',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16018',
@@ -17453,7 +15274,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8246',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22418',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16019',
@@ -17461,7 +15281,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8246',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22419',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16020',
@@ -17469,7 +15288,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8246',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22420',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16021',
@@ -17477,7 +15295,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8246',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22421',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16022',
@@ -17485,7 +15302,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8246',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22422',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -17493,7 +15309,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8247',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8248',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -17501,7 +15316,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8248',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8249',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -17509,7 +15323,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8250',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8251',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -17517,7 +15330,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8251',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8252',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16007',
@@ -17525,7 +15337,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8252',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22607',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16008',
@@ -17533,7 +15344,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8252',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22608',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16009',
@@ -17541,7 +15351,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8252',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22609',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16010',
@@ -17549,7 +15358,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8252',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22610',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16011',
@@ -17557,7 +15365,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8252',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22611',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16012',
@@ -17565,7 +15372,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8252',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22612',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16013',
@@ -17573,7 +15379,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8252',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22613',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16014',
@@ -17581,7 +15386,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8252',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22614',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16015',
@@ -17589,7 +15393,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8252',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22615',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16016',
@@ -17597,7 +15400,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8252',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22616',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16017',
@@ -17605,7 +15407,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8252',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22617',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16018',
@@ -17613,7 +15414,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8252',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22618',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16019',
@@ -17621,7 +15421,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8252',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22619',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16020',
@@ -17629,7 +15428,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8252',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22620',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16021',
@@ -17637,7 +15435,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8252',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22621',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16022',
@@ -17645,7 +15442,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8252',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22622',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -17653,7 +15449,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8253',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8254',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -17661,7 +15456,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8254',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8255',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16007',
@@ -17669,7 +15463,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8255',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22707',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16008',
@@ -17677,7 +15470,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8255',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22708',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16009',
@@ -17685,7 +15477,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8255',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22709',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16010',
@@ -17693,7 +15484,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8255',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22710',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16011',
@@ -17701,7 +15491,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8255',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22711',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16012',
@@ -17709,7 +15498,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8255',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22712',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16013',
@@ -17717,7 +15505,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8255',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22713',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16014',
@@ -17725,7 +15512,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8255',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22714',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16015',
@@ -17733,7 +15519,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8255',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22715',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16016',
@@ -17741,7 +15526,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8255',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22716',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16017',
@@ -17749,7 +15533,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8255',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22717',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16018',
@@ -17757,7 +15540,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8255',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22718',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16019',
@@ -17765,7 +15547,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8255',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22719',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16020',
@@ -17773,7 +15554,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8255',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22720',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16021',
@@ -17781,7 +15561,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8255',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22721',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16022',
@@ -17789,7 +15568,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8255',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22722',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7812',
@@ -17797,7 +15575,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8357',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8358',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -17805,7 +15582,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8397',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8399',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -17813,7 +15589,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8399',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9068',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -17821,7 +15596,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8401',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8403',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -17829,7 +15603,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8403',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9069',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -17837,7 +15610,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8425',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8426',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -17845,7 +15617,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8426',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8427',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -17853,7 +15624,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8429',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8430',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -17861,7 +15631,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8430',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8431',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -17869,7 +15638,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8541',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8542',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -17877,7 +15645,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8542',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8860',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -17885,7 +15652,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8543',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8544',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -17893,7 +15659,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8544',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8545',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -17901,7 +15666,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8683',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8684',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -17909,7 +15673,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8684',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8685',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16034',
@@ -17917,7 +15680,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8685',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8682',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -17925,7 +15687,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8697',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8698',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -17933,7 +15694,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8698',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8699',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16132',
@@ -17941,7 +15701,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8699',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9156',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16133',
@@ -17949,7 +15708,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8699',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9157',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16134',
@@ -17957,7 +15715,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8699',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9158',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -17965,7 +15722,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8816',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8817',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -17973,7 +15729,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8817',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8818',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16036',
@@ -17981,7 +15736,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8818',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8836',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16037',
@@ -17989,7 +15743,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8818',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8837',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16038',
@@ -17997,7 +15750,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8818',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8838',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16039',
@@ -18005,7 +15757,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8818',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8839',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16040',
@@ -18013,7 +15764,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8818',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8840',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -18021,7 +15771,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8898',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8899',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -18029,7 +15778,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8899',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8900',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15499',
@@ -18037,7 +15785,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8899',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8901',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15498',
@@ -18045,7 +15792,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8900',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8902',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16101',
@@ -18053,7 +15799,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8900',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8903',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -18061,7 +15806,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8905',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8906',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -18069,7 +15813,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8906',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8907',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16016',
@@ -18077,7 +15820,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8907',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8909',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16017',
@@ -18085,7 +15827,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8907',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8910',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -18093,7 +15834,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8915',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8916',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -18101,7 +15841,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8916',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8972',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -18109,7 +15848,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8917',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8918',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -18117,7 +15855,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8918',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8973',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -18125,7 +15862,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8918',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8974',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -18133,7 +15869,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8919',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8920',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -18141,7 +15876,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8921',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8922',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -18149,7 +15883,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8922',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8975',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -18157,7 +15890,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8923',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8924',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -18165,7 +15897,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8924',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8976',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -18173,7 +15904,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8925',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8926',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -18181,7 +15911,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8926',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8977',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -18189,7 +15918,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8927',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8928',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -18197,7 +15925,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8928',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8978',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -18205,7 +15932,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8929',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8930',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -18213,7 +15939,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8930',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8979',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -18221,7 +15946,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8931',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8932',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -18229,7 +15953,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8932',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8980',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -18237,7 +15960,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8933',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8934',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -18245,7 +15967,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8934',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8981',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -18253,7 +15974,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8935',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8936',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -18261,7 +15981,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8936',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8982',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -18269,7 +15988,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8937',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8938',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -18277,7 +15995,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8938',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8983',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -18285,7 +16002,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8939',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8940',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -18293,7 +16009,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8940',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8984',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -18301,7 +16016,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8941',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8942',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -18309,7 +16023,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8942',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8985',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -18317,7 +16030,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8943',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8944',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -18325,7 +16037,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8944',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8986',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -18333,7 +16044,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8945',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8946',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -18341,7 +16051,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8946',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8987',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -18349,7 +16058,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8947',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8948',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -18357,7 +16065,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8948',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8949',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16118',
@@ -18365,7 +16072,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8949',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8950',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16119',
@@ -18373,7 +16079,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::8949',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8951',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -18381,7 +16086,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9001',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9002',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9033',
@@ -18389,7 +16093,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9001',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9004',
             'accuracy' => 0.007,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -18397,7 +16100,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9002',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9003',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -18405,7 +16107,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9004',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9005',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9034',
@@ -18413,7 +16114,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9004',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9007',
             'accuracy' => 0.0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -18421,7 +16121,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9005',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9006',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -18429,7 +16128,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9007',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9008',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9035',
@@ -18437,7 +16135,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9007',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9010',
             'accuracy' => 0.001,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -18445,7 +16142,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9008',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9009',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9036',
@@ -18453,7 +16149,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9010',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6934',
             'accuracy' => 0.001,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -18461,7 +16156,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9010',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9011',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -18469,7 +16163,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9011',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9012',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -18477,7 +16170,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9013',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9014',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9038',
@@ -18485,7 +16177,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9015',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8227',
             'accuracy' => 0.01,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -18493,7 +16184,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9015',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9016',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -18501,7 +16191,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9016',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9017',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -18509,7 +16198,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9018',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9019',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -18517,7 +16205,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9070',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9071',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -18525,7 +16212,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9071',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9072',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -18533,7 +16219,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9073',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9074',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -18541,7 +16226,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9074',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9075',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -18549,7 +16233,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9138',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9139',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -18557,7 +16240,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9139',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9140',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -18565,7 +16247,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9146',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9147',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -18573,7 +16254,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9147',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9148',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16118',
@@ -18581,7 +16261,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9148',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9149',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16119',
@@ -18589,7 +16268,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9148',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9150',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -18597,7 +16275,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9151',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9152',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -18605,7 +16282,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9152',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9153',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16118',
@@ -18613,7 +16289,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9153',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9154',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16119',
@@ -18621,7 +16296,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9153',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9155',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -18629,7 +16303,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9266',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9267',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -18637,7 +16310,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9267',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4312',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -18645,7 +16317,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9292',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9293',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -18653,7 +16324,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9293',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9294',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16039',
@@ -18661,7 +16331,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9294',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9295',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16040',
@@ -18669,7 +16338,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9294',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9296',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16041',
@@ -18677,7 +16345,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9294',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9297',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -18685,7 +16352,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9307',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9308',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -18693,7 +16359,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9308',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9309',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -18701,7 +16366,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9331',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9332',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -18709,7 +16373,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9332',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9333',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16036',
@@ -18717,7 +16380,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9333',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9356',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16037',
@@ -18725,7 +16387,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9333',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9357',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16038',
@@ -18733,7 +16394,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9333',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9358',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16039',
@@ -18741,7 +16401,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9333',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9359',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16040',
@@ -18749,7 +16408,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9333',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9360',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -18757,7 +16415,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9378',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9379',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -18765,7 +16422,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9379',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9380',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16027',
@@ -18773,7 +16429,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9403',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9404',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16028',
@@ -18781,7 +16436,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9403',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9405',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -18789,7 +16443,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9468',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9469',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -18797,7 +16450,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9469',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9470',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16046',
@@ -18805,7 +16457,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9470',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9476',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16047',
@@ -18813,7 +16464,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9470',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9477',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16048',
@@ -18821,7 +16471,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9470',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9478',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16049',
@@ -18829,7 +16478,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9470',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9479',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16050',
@@ -18837,7 +16485,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9470',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9480',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16051',
@@ -18845,7 +16492,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9470',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9481',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16052',
@@ -18853,7 +16499,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9470',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9482',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16147',
@@ -18861,7 +16506,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9470',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9487',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16148',
@@ -18869,7 +16513,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9470',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9488',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16149',
@@ -18877,7 +16520,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9470',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9489',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16150',
@@ -18885,7 +16527,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9470',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9490',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16151',
@@ -18893,7 +16534,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9470',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9491',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16152',
@@ -18901,7 +16541,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9470',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9492',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16153',
@@ -18909,7 +16548,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9470',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9493',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16154',
@@ -18917,7 +16555,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9470',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9494',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -18925,7 +16562,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9545',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9546',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -18933,7 +16569,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9546',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9547',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -18941,7 +16576,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9694',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9695',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -18949,7 +16583,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9695',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9696',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16112',
@@ -18957,7 +16590,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9696',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9697',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16118',
@@ -18965,7 +16597,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9696',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9698',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16119',
@@ -18973,7 +16604,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9696',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9699',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -18981,7 +16611,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9700',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9701',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -18989,7 +16618,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9701',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9702',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9757',
@@ -18997,7 +16625,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9753',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7789',
             'accuracy' => 0.01,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -19005,7 +16632,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9753',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9754',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -19013,7 +16639,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9754',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9755',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -19021,7 +16646,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9775',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9776',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -19029,7 +16653,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9776',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9777',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15499',
@@ -19037,7 +16660,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9776',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9778',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15498',
@@ -19045,7 +16667,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9777',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9779',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -19053,7 +16674,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9780',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9781',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -19061,7 +16681,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9781',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9782',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15499',
@@ -19069,7 +16688,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9781',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9783',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15498',
@@ -19077,7 +16695,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9782',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9784',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -19085,7 +16702,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9892',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9893',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -19093,7 +16709,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9893',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4181',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -19101,7 +16716,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9988',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9989',
             'accuracy' => 0,
-            'reversible' => true,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
@@ -19109,7 +16723,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9989',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9990',
             'accuracy' => 0,
-            'reversible' => true,
         ],
     ];
 
