@@ -52,6 +52,8 @@ used exactly like any other built into PHPCoord. To register, call the appropria
         BoundingArea $extent
     );
 
+For example
+
 .. code-block:: php
 
     <?php
@@ -75,9 +77,13 @@ used exactly like any other built into PHPCoord. To register, call the appropria
 
     Geographic2D::registerCustomCRS(
         'urn:yourcompany:geo:crs:GDA2020-lon-lat',
-        'GDA2020 (lon-lat)',
-        Ellipsoidal::fromSRID(Ellipsoidal::EPSG_2D_AXES_LONGITUDE_LATITUDE_ORIENTATIONS_EAST_NORTH_UOM_DEGREE),
-        Datum::fromSRID(Datum::EPSG_GEOCENTRIC_DATUM_OF_AUSTRALIA_2020),
+        'GDA2020 (in lon-lat order)',
+        Ellipsoidal::fromSRID(
+            Ellipsoidal::EPSG_2D_AXES_LONGITUDE_LATITUDE_ORIENTATIONS_EAST_NORTH_UOM_DEGREE
+        ),
+        Datum::fromSRID(
+            Datum::EPSG_GEOCENTRIC_DATUM_OF_AUSTRALIA_2020
+        ),
         $boundingArea
     );
 

@@ -5,6 +5,7 @@
 ## [5.1.0] - 2022-xx-xx
 ### Added
 - Support for 3D projected coordinates
+- Support for custom coordinate reference systems and custom conversions
 ### Changed
 - Updates to data for ITRF, WGS84, Australia, Belgium, Canada, France, Germany, Iceland, Indonesia, Ireland, Japan, Luxembourg, Norway, North Macedonia, UK and USA
 

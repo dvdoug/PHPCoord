@@ -51,6 +51,7 @@ See `license.txt`_ for full details.
     :caption: Custom
 
     custom_coordinate_reference_systems
+    custom_conversions
     custom_datums
     custom_ellipsoids
     custom_prime_meridians

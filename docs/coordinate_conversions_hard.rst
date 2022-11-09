@@ -1,3 +1,5 @@
+.. _coordinate_conversions_hard:
+
 The hard way
 ============
 Each type of ``Point`` has methods you can invoke to run well-known algorithmic conversions on its coordinates.
