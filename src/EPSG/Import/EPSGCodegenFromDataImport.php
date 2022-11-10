@@ -1515,8 +1515,8 @@ class EPSGCodegenFromDataImport
                 m.coord_op_method_code AS method_code,
                 m.coord_op_method_name AS name,
                 m.reverse_op AS reversible,
-                m.remarks AS constant_help,
-                m.remarks AS doc_help,
+                '' AS constant_help,
+                '' AS doc_help,
                 m.deprecated
             FROM epsg_coordoperationmethod m
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperationmethod' AND dep.object_code = m.coord_op_method_code AND dep.deprecation_date <= '2021-09-10'
