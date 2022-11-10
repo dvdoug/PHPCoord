@@ -2,12 +2,16 @@
 
 ## [Unreleased]
 
-## [5.1.0] - 2022-xx-xx
+## [5.1.0] - 2022-11-10
 ### Added
 - Support for 3D projected coordinates
 - Support for custom coordinate reference systems and custom conversions
 ### Changed
 - Updates to data for ITRF, WGS84, Australia, Belgium, Canada, France, Germany, Iceland, Indonesia, Ireland, Japan, Luxembourg, Norway, North Macedonia, UK and USA
+- Some internal simplifications and optimisations
+### Fixed
+- Improved handling of longitudes greater than 180 degrees
+- Corrected conversion of geocentric coordinates to geographic coordinates when using a non-Greenwich prime meridian
 
 ## [5.0.1] - 2022-01-29
 ### Fixed
@@ -238,8 +242,9 @@ Initial release of this fork (based off of v2.3 of original)
  - Eastings and northings are rounded to 1m, and lat/long to 5dp (approx 1m) to avoid any misconceptions that precision is the same thing as accuracy.
  - When calculating surface distances, a more accurate mean radius is now used rather than that derived from historical definitions of a nautical mile
 
-[Unreleased]: https://github.com/dvdoug/PHPCoord/compare/v5.0.1...HEAD
+[Unreleased]: https://github.com/dvdoug/PHPCoord/compare/v5.1.0...HEAD
 
+[5.1.0]: https://github.com/dvdoug/PHPCoord/compare/v5.0.1...v5.1.0
 [5.0.1]: https://github.com/dvdoug/PHPCoord/compare/v5.0.0...v5.0.1
 [5.0.0]: https://github.com/dvdoug/PHPCoord/compare/v4.6.0...v5.0.0
 [4.6.0]: https://github.com/dvdoug/PHPCoord/compare/v4.5.0...v4.6.0
