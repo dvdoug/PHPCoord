@@ -8703,7 +8703,7 @@ class CoordinateOperations
             'extent' => ['4610'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::9548' => [
-            'name' => 'Lyon Turin Ferroviaire 2004 (C) ',
+            'name' => 'Lyon Turin Ferroviaire 2004 (C)',
             'method' => 'urn:ogc:def:method:EPSG::1102',
             'extent' => ['4613'],
         ],

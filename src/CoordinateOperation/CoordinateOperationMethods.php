@@ -1542,6 +1542,27 @@ class CoordinateOperationMethods
                 ],
             ],
         ],
+        'urn:ogc:def:method:EPSG::1115' => [
+            'name' => 'Geog3D to Geog2D+Depth (txt)',
+            'reversible' => true,
+            'paramData' => [
+                'geoidHeightCorrectionModelFile' => [
+                    'reverses' => true,
+                ],
+                'EPSGCodeForInterpolationCRS' => [
+                    'reverses' => false,
+                ],
+            ],
+        ],
+        'urn:ogc:def:method:EPSG::1116' => [
+            'name' => 'Geographic3D to Depth (txt)',
+            'reversible' => false,
+            'paramData' => [
+                'geoidHeightCorrectionModelFile' => [
+                    'reverses' => false,
+                ],
+            ],
+        ],
         'urn:ogc:def:method:EPSG::9601' => [
             'name' => 'Longitude rotation',
             'reversible' => true,
@@ -3745,6 +3766,11 @@ class CoordinateOperationMethods
     public const EPSG_GEOG3D_TO_GEOG2D_PLUS_DEPTH_GRAVSOFT = 'urn:ogc:def:method:EPSG::1110';
 
     /**
+     * Geog3D to Geog2D+Depth (txt).
+     */
+    public const EPSG_GEOG3D_TO_GEOG2D_PLUS_DEPTH_TXT = 'urn:ogc:def:method:EPSG::1115';
+
+    /**
      * Geog3D to Geog2D+GravityRelatedHeight (AUSGeoidv2).
      */
     public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_AUSGEOIDV2 = 'urn:ogc:def:method:EPSG::1083';
@@ -3838,6 +3864,11 @@ class CoordinateOperationMethods
      * Geographic3D to Depth (Gravsoft).
      */
     public const EPSG_GEOGRAPHIC3D_TO_DEPTH_GRAVSOFT = 'urn:ogc:def:method:EPSG::1109';
+
+    /**
+     * Geographic3D to Depth (txt).
+     */
+    public const EPSG_GEOGRAPHIC3D_TO_DEPTH_TXT = 'urn:ogc:def:method:EPSG::1116';
 
     /**
      * Geographic3D to GravityRelatedHeight (AUSGeoid v2).

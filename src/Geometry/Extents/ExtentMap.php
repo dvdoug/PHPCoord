@@ -9240,8 +9240,32 @@ class ExtentMap
         4667 => [
             'name' => 'Chile - west of 108°W',
         ],
+        4668 => [
+            'name' => 'Europe - Ireland and UK offshore',
+        ],
         4669 => [
             'name' => 'USA - Amtrak NE corridor',
+        ],
+        4670 => [
+            'name' => 'Japan - zone I - onshore mainland',
+        ],
+        4671 => [
+            'name' => 'Japan - zone II - onshore mainland',
+        ],
+        4672 => [
+            'name' => 'Japan - zone III - onshore mainland',
+        ],
+        4673 => [
+            'name' => 'Japan - zone VIII - onshore mainland',
+        ],
+        4674 => [
+            'name' => 'Japan - zone IX - onshore mainland',
+        ],
+        4675 => [
+            'name' => 'Japan - zone XI - onshore mainland',
+        ],
+        4676 => [
+            'name' => 'Japan - zone XII - onshore mainland',
         ],
     ];
 

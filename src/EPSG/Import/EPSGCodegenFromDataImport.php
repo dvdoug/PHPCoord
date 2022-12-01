@@ -645,6 +645,10 @@ class EPSGCodegenFromDataImport
         9730, // GRD geo_igm_mar06.grd
         9925, // TXT GCG2016.txt
         9926, // TXT GCG2016.txt
+        10152, // TXT VORF-UK08_ETRF_to_MSL.vrf
+        10153, // TXT VORF-UK08_ETRF_to_CD.vrf
+        10154, // TXT VORF-UK08_ETRF_to_MSL.vrf
+        10155, // TXT VORF-UK08_ETRF_to_CD.vrf
     ];
 
     public function __construct()

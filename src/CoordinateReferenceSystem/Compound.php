@@ -219,6 +219,13 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_ETRS89_PLUS_CD_NORWAY_DEPTH = 'urn:ogc:def:crs:EPSG::9883';
 
     /**
+     * ETRS89 + CD UK & Ireland VORF08 depth
+     * Extent: Ireland and United Kingdom (UK) (including Isle of Man and Channel Islands) - inshore, nearshore and
+     * offshore.
+     */
+    public const EPSG_ETRS89_PLUS_CD_UK_AND_IRELAND_VORF08_DEPTH = 'urn:ogc:def:crs:EPSG::10157';
+
+    /**
      * ETRS89 + Cagliari 1956 height
      * Extent: Italy - Sardinia onshore.
      */
@@ -331,6 +338,13 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_ETRS89_PLUS_MSL_NL_DEPTH = 'urn:ogc:def:crs:EPSG::9290';
 
     /**
+     * ETRS89 + MSL UK & Ireland VORF08 depth
+     * Extent: Ireland and United Kingdom (UK) (including Isle of Man and Channel Islands) - inshore, nearshore and
+     * offshore.
+     */
+    public const EPSG_ETRS89_PLUS_MSL_UK_AND_IRELAND_VORF08_DEPTH = 'urn:ogc:def:crs:EPSG::10156';
+
+    /**
      * ETRS89 + Malin Head height
      * Extent: Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore.
      */
@@ -369,8 +383,8 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * ETRS89 + ODN (Offshore) height
-     * Extent: United Kingdom (UK) - offshore between 2km from shore and boundary of UKCS within 49°46'N to 61°01'N
-     * and 7°33'W to 3°33'E.
+     * Extent: United Kingdom (UK) - offshore between 2km from shore and boundary of UKCS within 49°45'N to 61°N and
+     * 9°W to 2°E.
      */
     public const EPSG_ETRS89_PLUS_ODN_OFFSHORE_HEIGHT = 'urn:ogc:def:crs:EPSG::9425';
 
@@ -1078,6 +1092,98 @@ class Compound extends CoordinateReferenceSystem
      * Replaces JGD2000 + JGD2000 (vertical) height (CRS code 6696) with effect from 21st October 2011.
      */
     public const EPSG_JGD2011_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::6697';
+
+    /**
+     * JGD2011 / Japan Plane Rectangular CS I + JGD2011 (vertical) height
+     * Extent: Japan - onshore - Kyushu west of approximately 130°E - Nagasaki-ken.
+     */
+    public const EPSG_JGD2011_JAPAN_PLANE_RECTANGULAR_CS_I_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::10162';
+
+    /**
+     * JGD2011 / Japan Plane Rectangular CS II + JGD2011 (vertical) height
+     * Extent: Japan - onshore - Kyushu east of approximately 130°E - Fukuoka-ken; Saga-ken; Kumamoto-ken; Oita-ken;
+     * Miyazaki-ken; Kagoshima-ken on Kyushu (except for area within Japan Plane Rectangular Coordinate System zone I).
+     */
+    public const EPSG_JGD2011_JAPAN_PLANE_RECTANGULAR_CS_II_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::10163';
+
+    /**
+     * JGD2011 / Japan Plane Rectangular CS III + JGD2011 (vertical) height
+     * Extent: Japan - onshore - Honshu west of approximately 133°15'E - Yamaguchi-ken; Shimane-ken; Hiroshima-ken.
+     */
+    public const EPSG_JGD2011_JAPAN_PLANE_RECTANGULAR_CS_III_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::10164';
+
+    /**
+     * JGD2011 / Japan Plane Rectangular CS IV + JGD2011 (vertical) height
+     * Extent: Japan - onshore - Shikoku - Kagawa-ken; Ehime-ken; Tokushima-ken; Kochi-ken.
+     */
+    public const EPSG_JGD2011_JAPAN_PLANE_RECTANGULAR_CS_IV_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::10165';
+
+    /**
+     * JGD2011 / Japan Plane Rectangular CS IX + JGD2011 (vertical) height
+     * Extent: Japan - onshore - Honshu - Tokyo-to. (Excludes offshore island areas of Tokyo-to).
+     */
+    public const EPSG_JGD2011_JAPAN_PLANE_RECTANGULAR_CS_IX_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::10170';
+
+    /**
+     * JGD2011 / Japan Plane Rectangular CS V + JGD2011 (vertical) height
+     * Extent: Japan - onshore - Honshu between approximately 133°15'E and 135°10'E - Hyogo-ken; Tottori-ken;
+     * Okayama-ken.
+     */
+    public const EPSG_JGD2011_JAPAN_PLANE_RECTANGULAR_CS_V_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::10166';
+
+    /**
+     * JGD2011 / Japan Plane Rectangular CS VI + JGD2011 (vertical) height
+     * Extent: Japan - onshore - Honshu between approximately 135°10'E and 136°45'E - Kyoto-fu; Osaka-fu; Fukui-ken;
+     * Shiga-ken; Mie-ken; Nara-ken; Wakayama-ken.
+     */
+    public const EPSG_JGD2011_JAPAN_PLANE_RECTANGULAR_CS_VI_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::10167';
+
+    /**
+     * JGD2011 / Japan Plane Rectangular CS VII + JGD2011 (vertical) height
+     * Extent: Japan - onshore - Honshu between approximately 136°15'E and 137°45'E - Ishikawa-ken; Toyama-ken;
+     * Gifu-ken; Aichi-ken.
+     */
+    public const EPSG_JGD2011_JAPAN_PLANE_RECTANGULAR_CS_VII_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::10168';
+
+    /**
+     * JGD2011 / Japan Plane Rectangular CS VIII + JGD2011 (vertical) height
+     * Extent: Japan - onshore - Honshu between approximately 137°45'E and 139°E - Niigata-ken on Honshu; Nagano-ken;
+     * Yamanashi-ken; Shizuoka-ken.
+     */
+    public const EPSG_JGD2011_JAPAN_PLANE_RECTANGULAR_CS_VIII_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::10169';
+
+    /**
+     * JGD2011 / Japan Plane Rectangular CS X + JGD2011 (vertical) height
+     * Extent: Japan - onshore - Honshu north of 38°N approximately - Aomori-ken; Akita-ken; Yamagata-ken; Iwate-ken;
+     * Miyagi-ken.
+     */
+    public const EPSG_JGD2011_JAPAN_PLANE_RECTANGULAR_CS_X_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::10171';
+
+    /**
+     * JGD2011 / Japan Plane Rectangular CS XI + JGD2011 (vertical) height
+     * Extent: Japan - onshore - Hokkaido west of approximately 141°E - Otaru city; Usu-gun and Abuta-gun of
+     * Iburi-shicho; Hiyama-shicho; Shiribeshi-shicho; Oshima-shicho.
+     */
+    public const EPSG_JGD2011_JAPAN_PLANE_RECTANGULAR_CS_XI_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::10172';
+
+    /**
+     * JGD2011 / Japan Plane Rectangular CS XII + JGD2011 (vertical) height
+     * Extent: Japan - onshore - Hokkaido between approximately 141°E and 143°E - Sapporo city; Asahikawa city;
+     * Wakkanai city; Rumoi city; Bibai city; Yubari city; Iwamizawa city; Tomakomai city; Muroran city; Shibetsu city;
+     * Nayoro city; Ashibetsu city; Akabira city; Mikasa city; Takikawa city; Sunagawa city; Ebetsu city; Chitose city;
+     * Utashinai city; Fukagawa city; Monbetsu city; Furano city; Noboribetsu city; Eniwa city; Ishikari-shicho;
+     * Monbetsu-gun of Abashiri-shicho; Kamikawa-shicho; Soya-shicho; Hidaka-shicho; Iburi-shicho (except Usu-gun and
+     * Abuta-gun); Sorachi-shicho; Rumoi-shicho.
+     */
+    public const EPSG_JGD2011_JAPAN_PLANE_RECTANGULAR_CS_XII_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::10173';
+
+    /**
+     * JGD2011 / Japan Plane Rectangular CS XIII + JGD2011 (vertical) height
+     * Extent: Japan - onshore - Hokkaido east of approximately 143°E - Kitami city; Obihiro city; Kushiro city;
+     * Abashiri city; Nemuro city; Nemuro-shicho; Kushiro-shicho; Abashiri-shicho (except Monbetsu-gun);
+     * Tokachi-shicho.
+     */
+    public const EPSG_JGD2011_JAPAN_PLANE_RECTANGULAR_CS_XIII_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::10174';
 
     /**
      * KKJ / Finland Uniform Coordinate System + N60 height

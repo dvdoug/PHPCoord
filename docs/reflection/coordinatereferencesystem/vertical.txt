@@ -311,6 +311,18 @@ CD Norway depth
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9672')
 
 
+CD UK & Ireland VORF08 depth
+----------------------------
+| Extent: Ireland and United Kingdom (UK) (including Isle of Man and Channel Islands) - inshore, nearshore and offshore.
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_CD_UK_AND_IRELAND_VORF08_DEPTH)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::10151')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_CD_UK_AND_IRELAND_VORF08_DEPTH)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10151')
+
+
 CGVD2013(CGG2013) height
 ------------------------
 | Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.
@@ -1153,7 +1165,7 @@ HAT height
     CoordinateReferenceSystem::fromSRID(Vertical::EPSG_HAT_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5872')
 
-Not specific to any location or epoch.
+Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but instead use one with a specific datum origin (e.g. "HAT at xxx during yyyy-yyyy") or defined through a specified geoid/hydroid model.
 
 HHWLT height
 ------------
@@ -1166,7 +1178,7 @@ HHWLT height
     CoordinateReferenceSystem::fromSRID(Vertical::EPSG_HHWLT_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5871')
 
-Not specific to any location or epoch.
+Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but instead use one with a specific datum origin (e.g. "HHWLT at xxx during yyyy-yyyy") or defined through a specified geoid/hydroid model.
 
 HKCD depth
 ----------
@@ -1255,7 +1267,7 @@ High Water height
     CoordinateReferenceSystem::fromSRID(Vertical::EPSG_HIGH_WATER_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5874')
 
-Not specific to any location or epoch.
+Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but instead use one with a specific datum origin (e.g. "High Water at xxx during yyyy-yyyy") or defined through a specified geoid/hydroid model.
 
 Hon Dau 1992 height
 -------------------
@@ -1458,7 +1470,7 @@ ISLW depth
     CoordinateReferenceSystem::fromSRID(Vertical::EPSG_ISLW_DEPTH)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5863')
 
-Not specific to any location or epoch.
+Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but instead use one with a specific datum origin (e.g. "ISLW at xxx during yyyy-yyyy") or defined through a specified geoid/hydroid model.
 
 Ibiza height
 ------------
@@ -1713,7 +1725,7 @@ LAT depth
     CoordinateReferenceSystem::fromSRID(Vertical::EPSG_LAT_DEPTH)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5861')
 
-Not specific to any location or epoch.
+Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but instead use one with a specific datum origin (e.g. "LAT at xxx during yyyy-yyyy") or defined through a specified geoid/hydroid model.
 
 LCVD61 height (ft)
 ------------------
@@ -1751,7 +1763,7 @@ LLWLT depth
     CoordinateReferenceSystem::fromSRID(Vertical::EPSG_LLWLT_DEPTH)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5862')
 
-Not specific to any location or epoch.
+Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but instead use one with a specific datum origin (e.g. "LLWLT at xxx during yyyy-yyyy") or defined through a specified geoid/hydroid model.
 
 LN02 height
 -----------
@@ -1850,7 +1862,7 @@ Low Water depth
     CoordinateReferenceSystem::fromSRID(Vertical::EPSG_LOW_WATER_DEPTH)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5873')
 
-Not specific to any location or epoch.
+Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but instead use one with a specific datum origin (e.g. "Low Water at xxx during yyyy-yyyy") or defined through a specified geoid/hydroid model.
 
 Lyttelton 1937 height
 ---------------------
@@ -1875,7 +1887,7 @@ MHHW height
     CoordinateReferenceSystem::fromSRID(Vertical::EPSG_MHHW_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5869')
 
-Not specific to any location or epoch.
+Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but instead use one with a specific datum origin (e.g. "MHHW at xxx during yyyy-yyyy") or defined through a specified geoid/hydroid model.
 
 MHW height
 ----------
@@ -1888,7 +1900,7 @@ MHW height
     CoordinateReferenceSystem::fromSRID(Vertical::EPSG_MHW_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5868')
 
-Not specific to any location or epoch.
+Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but instead use one with a specific datum origin (e.g. "Mean High Water at xxx during yyyy-yyyy") or defined through a specified geoid/hydroid model.
 
 MHWS height
 -----------
@@ -1901,7 +1913,7 @@ MHWS height
     CoordinateReferenceSystem::fromSRID(Vertical::EPSG_MHWS_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5870')
 
-Not specific to any location or epoch.
+Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but instead use one with a specific datum origin (e.g. "MHWS at xxx during yyyy-yyyy") or defined through a specified geoid/hydroid model.
 
 MLLW depth
 ----------
@@ -1914,7 +1926,7 @@ MLLW depth
     CoordinateReferenceSystem::fromSRID(Vertical::EPSG_MLLW_DEPTH)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5866')
 
-Not specific to any location or epoch.
+Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but instead use one with a specific datum origin (e.g. "MLLW at xxx during yyyy-yyyy") or defined through a specified geoid/hydroid model.
 
 MLLWS depth
 -----------
@@ -1927,7 +1939,7 @@ MLLWS depth
     CoordinateReferenceSystem::fromSRID(Vertical::EPSG_MLLWS_DEPTH)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5864')
 
-Not specific to any location or epoch.
+Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but instead use one with a specific datum origin (e.g. "MLLWS at xxx during yyyy-yyyy") or defined through a specified geoid/hydroid model..
 
 MLW depth
 ---------
@@ -1940,7 +1952,7 @@ MLW depth
     CoordinateReferenceSystem::fromSRID(Vertical::EPSG_MLW_DEPTH)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5867')
 
-Not specific to any location or epoch.
+Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but instead use one with a specific datum origin (e.g. "Mean Low Water at xxx during yyyy-yyyy") or defined through a specified geoid/hydroid model.
 
 MLWS depth
 ----------
@@ -1953,7 +1965,7 @@ MLWS depth
     CoordinateReferenceSystem::fromSRID(Vertical::EPSG_MLWS_DEPTH)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5865')
 
-Not specific to any location or epoch.
+Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but instead use one with a specific datum origin (e.g. "MLWS at xxx during yyyy-yyyy") or defined through a specified geoid/hydroid model.
 
 MSL NL depth
 ------------
@@ -1967,6 +1979,19 @@ MSL NL depth
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9288')
 
 
+MSL UK & Ireland VORF08 depth
+-----------------------------
+| Extent: Ireland and United Kingdom (UK) (including Isle of Man and Channel Islands) - inshore, nearshore and offshore.
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_MSL_UK_AND_IRELAND_VORF08_DEPTH)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::10150')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_MSL_UK_AND_IRELAND_VORF08_DEPTH)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10150')
+
+For offshore engineering on UKCS, use Ordnance Datum Newlyn (Offshore).
+
 MSL depth
 ---------
 | Extent: World.
@@ -1978,7 +2003,7 @@ MSL depth
     CoordinateReferenceSystem::fromSRID(Vertical::EPSG_MSL_DEPTH)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5715')
 
-Not specific to any location or epoch.
+Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but instead use one with a specific datum origin (e.g. "Mean Sea Level at xxx during yyyy-yyyy") or defined through a specified geoid/hydroid model.
 
 MSL depth (ft)
 --------------
@@ -1991,7 +2016,7 @@ MSL depth (ft)
     CoordinateReferenceSystem::fromSRID(Vertical::EPSG_MSL_DEPTH_FT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::8051')
 
-Not specific to any location or epoch.
+Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but instead use one with a specific datum origin (e.g. "Mean Sea Level at xxx during yyyy-yyyy") or defined through a specified geoid/hydroid model.
 
 MSL depth (ftUS)
 ----------------
@@ -2004,7 +2029,7 @@ MSL depth (ftUS)
     CoordinateReferenceSystem::fromSRID(Vertical::EPSG_MSL_DEPTH_FTUS)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::8053')
 
-Not specific to any location or epoch.
+Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but instead use one with a specific datum origin (e.g. "Mean Sea Level at xxx during yyyy-yyyy") or defined through a specified geoid/hydroid model.
 
 MSL height
 ----------
@@ -2017,7 +2042,7 @@ MSL height
     CoordinateReferenceSystem::fromSRID(Vertical::EPSG_MSL_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5714')
 
-Not specific to any location or epoch.
+Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but instead use one with a specific datum origin (e.g. "Mean Sea Level at xxx during yyyy-yyyy") or defined through a specified geoid/hydroid model.
 
 MSL height (ft)
 ---------------
@@ -2030,7 +2055,7 @@ MSL height (ft)
     CoordinateReferenceSystem::fromSRID(Vertical::EPSG_MSL_HEIGHT_FT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::8050')
 
-Not specific to any location or epoch.
+Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but instead use one with a specific datum origin (e.g. "Mean Sea Level at xxx during yyyy-yyyy") or defined through a specified geoid/hydroid model.
 
 MSL height (ftUS)
 -----------------
@@ -2043,7 +2068,7 @@ MSL height (ftUS)
     CoordinateReferenceSystem::fromSRID(Vertical::EPSG_MSL_HEIGHT_FTUS)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::8052')
 
-Not specific to any location or epoch.
+Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but instead use one with a specific datum origin (e.g. "Mean Sea Level at xxx during yyyy-yyyy") or defined through a specified geoid/hydroid model.
 
 MVGC height
 -----------
@@ -2581,7 +2606,7 @@ Replaced by ODN (Offshore) height (CRS code 7707) in 2016.
 
 ODN (Offshore) height
 ---------------------
-| Extent: United Kingdom (UK) - offshore between 2km from shore and boundary of UKCS within 49°46'N to 61°01'N and 7°33'W to 3°33'E.
+| Extent: United Kingdom (UK) - offshore between 2km from shore and boundary of UKCS within 49°45'N to 61°N and 9°W to 2°E.
 
 .. code-block:: php
 

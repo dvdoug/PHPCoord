@@ -5589,7 +5589,7 @@ class CRSTransformationsEurope
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9548',
-            'name' => 'Lyon Turin Ferroviaire 2004 (C) ',
+            'name' => 'Lyon Turin Ferroviaire 2004 (C)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::9547',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9549',
             'accuracy' => 0,

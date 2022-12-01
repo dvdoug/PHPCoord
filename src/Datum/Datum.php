@@ -925,6 +925,18 @@ class Datum
     public const EPSG_CEUTA_2 = 'urn:ogc:def:datum:EPSG::1285';
 
     /**
+     * Chart Datum UK & Ireland VORF08
+     * Type: Vertical
+     * Extent: Ireland and United Kingdom (UK) (including Isle of Man and Channel Islands) - inshore, nearshore and
+     * offshore.
+     * CD UK & Ireland VORF08 is defined by the Vertical Offshore Reference Frame v2.11 2008.
+     * By international agreement, Chart Datum is defined as a level so low that the tide will not frequently fall
+     * below it. In the United Kingdom and Ireland, this level is normally the level of approximate Lowest Astronomical
+     * Tide.
+     */
+    public const EPSG_CHART_DATUM_UK_AND_IRELAND_VORF08 = 'urn:ogc:def:datum:EPSG::1331';
+
+    /**
      * Chatham Islands Datum 1971
      * Type: Geodetic
      * Extent: New Zealand - Chatham Islands group - onshore.
@@ -2389,10 +2401,9 @@ class Datum
      * High Water
      * Type: Vertical
      * Extent: World.
-     * The highest level reached at a place by the water surface in one tidal cycle. When used on inland (non-tidal)
-     * waters it is generally defined as a level which the daily mean water level exceeds less than 5% of the time.
-     * Users are advised to not use this generic vertical datum but to define explicit realizations of high water by
-     * specifying location and epoch, for instance "High water at xxx during yyyy-yyyy".
+     * Not specific to any location or epoch.
+     * The highest water level reached at a place in one tidal cycle. When used on inland (non-tidal) waters it is
+     * generally defined as a level which the daily mean water level exceeds less than 5% of the time.
      */
     public const EPSG_HIGH_WATER = 'urn:ogc:def:datum:EPSG::1094';
 
@@ -2400,9 +2411,8 @@ class Datum
      * Higher High Water Large Tide
      * Type: Vertical
      * Extent: World.
+     * Not specific to any location or epoch.
      * The average of the highest high waters, one from each of 19 years of observations.
-     * Users are advised to not use this generic vertical datum but to define explicit realizations of HHWLT by
-     * specifying location and epoch, for instance "HHWLT at xxx during yyyy-yyyy".
      */
     public const EPSG_HIGHER_HIGH_WATER_LARGE_TIDE = 'urn:ogc:def:datum:EPSG::1084';
 
@@ -2410,10 +2420,9 @@ class Datum
      * Highest Astronomical Tide
      * Type: Vertical
      * Extent: World.
+     * Not specific to any location or epoch.
      * The highest tide level which can be predicted to occur under average meteorological conditions and under any
      * combination of astronomical conditions.
-     * Users are advised to not use this generic vertical datum but to define explicit realizations of HAT by
-     * specifying location and epoch, for instance "HAT at xxx during yyyy-yyyy".
      */
     public const EPSG_HIGHEST_ASTRONOMICAL_TIDE = 'urn:ogc:def:datum:EPSG::1082';
 
@@ -2851,10 +2860,9 @@ class Datum
      * Indian Spring Low Water
      * Type: Vertical
      * Extent: World.
+     * Not specific to any location or epoch.
      * The level below MSL equal to the sum of the amplitudes of the harmonic constituents M2, S2, K1 and O1. It
      * approximates mean lower low water spring tides (MLLWS).
-     * Users are advised to not use this generic vertical datum but to define explicit realizations of ISLW by
-     * specifying location and epoch, for instance "ISLW at xxx during yyyy-yyyy".
      */
     public const EPSG_INDIAN_SPRING_LOW_WATER = 'urn:ogc:def:datum:EPSG::1085';
 
@@ -3771,11 +3779,10 @@ class Datum
      * Low Water
      * Type: Vertical
      * Extent: World.
+     * Not specific to any location or epoch.
      * The lowest level reached by the water surface in one tidal cycle. When used in inland (non-tidal) waters it is
-     * generally defined as a level which the daily mean water level would fall below less than 5% of the time.
-     * On a river it is a sloping surface. Users are advised to not use this generic vertical datum but to define
-     * explicit realizations of low water by specifying location and epoch, for instance "Low water at xxx during
-     * yyyy-yyyy".
+     * generally defined as a level which the daily mean water level would fall below less than 5% of the time. On a
+     * river it is a sloping surface.
      */
     public const EPSG_LOW_WATER = 'urn:ogc:def:datum:EPSG::1093';
 
@@ -3783,9 +3790,8 @@ class Datum
      * Lower Low Water Large Tide
      * Type: Vertical
      * Extent: World.
+     * Not specific to any location or epoch.
      * The average of the lowest low waters, one from each of 19 years of observations.
-     * Users are advised to not use this generic vertical datum but to define explicit realizations of LLWLT by
-     * specifying location and epoch, for instance "LLWLT at xxx during yyyy-yyyy".
      */
     public const EPSG_LOWER_LOW_WATER_LARGE_TIDE = 'urn:ogc:def:datum:EPSG::1083';
 
@@ -3793,10 +3799,9 @@ class Datum
      * Lowest Astronomical Tide
      * Type: Vertical
      * Extent: World.
+     * Not specific to any location or epoch.
      * The lowest tide level which can be predicted to occur under average meteorological conditions and under any
      * combination of astronomical conditions.
-     * Users are advised to not use this generic vertical datum but to define explicit realizations of LAT by
-     * specifying location and epoch, for instance "LAT at xxx during yyyy-yyyy".
      */
     public const EPSG_LOWEST_ASTRONOMICAL_TIDE = 'urn:ogc:def:datum:EPSG::1080';
 
@@ -4172,9 +4177,8 @@ class Datum
      * Mean High Water
      * Type: Vertical
      * Extent: World.
-     * The average height of the high waters at a place over a 19-year period.
-     * Users are advised to not use this generic vertical datum but to define explicit realizations of MHW by
-     * specifying location and epoch, for instance "MHW at xxx during yyyy-yyyy".
+     * Not specific to any location or epoch.
+     * The average height of the high waters over a 19-year period.
      */
     public const EPSG_MEAN_HIGH_WATER = 'urn:ogc:def:datum:EPSG::1092';
 
@@ -4182,9 +4186,8 @@ class Datum
      * Mean High Water Spring Tides
      * Type: Vertical
      * Extent: World.
+     * Not specific to any location or epoch.
      * The average height of the high waters of spring tides.
-     * Users are advised to not use this generic vertical datum but to define explicit realizations of MHWS by
-     * specifying location and epoch, for instance "MHWS at xxx during yyyy-yyyy".
      */
     public const EPSG_MEAN_HIGH_WATER_SPRING_TIDES = 'urn:ogc:def:datum:EPSG::1088';
 
@@ -4192,9 +4195,8 @@ class Datum
      * Mean Higher High Water
      * Type: Vertical
      * Extent: World.
-     * The average height of the higher high waters at a place over a 19-year period.
-     * Users are advised to not use this generic vertical datum but to define explicit realizations of MHHW by
-     * specifying location and epoch, for instance "MHHW at xxx during yyyy-yyyy".
+     * Not specific to any location or epoch.
+     * The average height of the higher high waters over a 19-year period.
      */
     public const EPSG_MEAN_HIGHER_HIGH_WATER = 'urn:ogc:def:datum:EPSG::1090';
 
@@ -4202,9 +4204,8 @@ class Datum
      * Mean Low Water
      * Type: Vertical
      * Extent: World.
-     * The average height of all low waters at a place over a 19-year period.
-     * Users are advised to not use this generic vertical datum but to define explicit realizations of MLW by
-     * specifying location and epoch, for instance "MLW at xxx during yyyy-yyyy".
+     * Not specific to any location or epoch.
+     * The average height of all low waters over a 19-year period.
      */
     public const EPSG_MEAN_LOW_WATER = 'urn:ogc:def:datum:EPSG::1091';
 
@@ -4212,9 +4213,8 @@ class Datum
      * Mean Low Water Spring Tides
      * Type: Vertical
      * Extent: World.
+     * Not specific to any location or epoch.
      * The average height of the low waters of spring tides.
-     * Users are advised to not use this generic vertical datum but to define explicit realizations of MLWS by
-     * specifying location and epoch, for instance "MLWS at xxx during yyyy-yyyy".
      */
     public const EPSG_MEAN_LOW_WATER_SPRING_TIDES = 'urn:ogc:def:datum:EPSG::1087';
 
@@ -4222,9 +4222,8 @@ class Datum
      * Mean Lower Low Water
      * Type: Vertical
      * Extent: World.
-     * The average height of the lower low waters at a place over a 19-year period.
-     * Users are advised to not use this generic vertical datum but to define explicit realizations of MLLW by
-     * specifying location and epoch, for instance "MLLW at xxx during yyyy-yyyy".
+     * Not specific to any location or epoch.
+     * The average height of the lower low waters over a 19-year period.
      */
     public const EPSG_MEAN_LOWER_LOW_WATER = 'urn:ogc:def:datum:EPSG::1089';
 
@@ -4232,9 +4231,8 @@ class Datum
      * Mean Lower Low Water Spring Tides
      * Type: Vertical
      * Extent: World.
-     * The average height of the lower low water spring tides at a place.
-     * Users are advised to not use this generic vertical datum but to define explicit realizations of MLLWS by
-     * specifying location and epoch, for instance "MLLWS at xxx during yyyy-yyyy".
+     * Not specific to any location or epoch.
+     * The average height of the lower low water spring tides.
      */
     public const EPSG_MEAN_LOWER_LOW_WATER_SPRING_TIDES = 'urn:ogc:def:datum:EPSG::1086';
 
@@ -4242,10 +4240,10 @@ class Datum
      * Mean Sea Level
      * Type: Vertical
      * Extent: World.
+     * Not specific to any location or epoch.
      * The average height of the surface of the sea at a tide station for all stages of the tide over a 19-year period,
-     * usually determined from hourly height readings measured from a fixed predetermined reference level.
-     * Approximates geoid. Users are advised to not use this generic vertical datum but to define explicit realizations
-     * of MSL by specifying location and epoch, for instance "MSL at xxx during yyyy-yyyy".
+     * usually determined from hourly height readings measured from a fixed predetermined reference level. Approximates
+     * geoid.
      */
     public const EPSG_MEAN_SEA_LEVEL = 'urn:ogc:def:datum:EPSG::5100';
 
@@ -4257,6 +4255,17 @@ class Datum
      * Coincides with NAP datum plane. Approximates physical mean sea surface to a few decimetres.
      */
     public const EPSG_MEAN_SEA_LEVEL_NETHERLANDS = 'urn:ogc:def:datum:EPSG::1270';
+
+    /**
+     * Mean Sea Level UK & Ireland VORF08
+     * Type: Vertical
+     * Extent: Ireland and United Kingdom (UK) (including Isle of Man and Channel Islands) - inshore, nearshore and
+     * offshore.
+     * MSL UK & Ireland VORF08 is defined by the Vertical Offshore Reference Frame v2.11 2008. MSL UK & Ireland VORF08
+     * is reduced to epoch 2000.0.
+     * OSGM05 model used.
+     */
+    public const EPSG_MEAN_SEA_LEVEL_UK_AND_IRELAND_VORF08 = 'urn:ogc:def:datum:EPSG::1330';
 
     /**
      * Menorca
@@ -5563,8 +5572,8 @@ class Datum
     /**
      * Ordnance Datum Newlyn (Offshore)
      * Type: Vertical
-     * Extent: United Kingdom (UK) - offshore between 2km from shore and boundary of UKCS within 49°46'N to 61°01'N
-     * and 7°33'W to 3°33'E.
+     * Extent: United Kingdom (UK) - offshore between 2km from shore and boundary of UKCS within 49°45'N to 61°N and
+     * 9°W to 2°E.
      * Defined by OSGM geoid model.
      * Extension of Ordnance Datum Newlyn offshore through geoid model. Orthometric heights.
      */
@@ -10176,6 +10185,22 @@ class Datum
         ],
         'urn:ogc:def:datum:EPSG::1328' => [
             'name' => 'Indonesian Geoid 2020 version 2',
+            'type' => 'vertical',
+            'ellipsoid' => null,
+            'prime_meridian' => null,
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
+        'urn:ogc:def:datum:EPSG::1330' => [
+            'name' => 'Mean Sea Level UK & Ireland VORF08',
+            'type' => 'vertical',
+            'ellipsoid' => null,
+            'prime_meridian' => null,
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
+        'urn:ogc:def:datum:EPSG::1331' => [
+            'name' => 'Chart Datum UK & Ireland VORF08',
             'type' => 'vertical',
             'ellipsoid' => null,
             'prime_meridian' => null,

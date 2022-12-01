@@ -202,6 +202,13 @@ class Vertical extends CoordinateReferenceSystem
     public const EPSG_CD_NORWAY_DEPTH = 'urn:ogc:def:crs:EPSG::9672';
 
     /**
+     * CD UK & Ireland VORF08 depth
+     * Extent: Ireland and United Kingdom (UK) (including Isle of Man and Channel Islands) - inshore, nearshore and
+     * offshore.
+     */
+    public const EPSG_CD_UK_AND_IRELAND_VORF08_DEPTH = 'urn:ogc:def:crs:EPSG::10151';
+
+    /**
      * CGVD2013(CGG2013) height
      * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
      * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
@@ -703,14 +710,18 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * HAT height
      * Extent: World.
-     * Not specific to any location or epoch.
+     * Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but
+     * instead use one with a specific datum origin (e.g. "HAT at xxx during yyyy-yyyy") or defined through a specified
+     * geoid/hydroid model.
      */
     public const EPSG_HAT_HEIGHT = 'urn:ogc:def:crs:EPSG::5872';
 
     /**
      * HHWLT height
      * Extent: World.
-     * Not specific to any location or epoch.
+     * Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but
+     * instead use one with a specific datum origin (e.g. "HHWLT at xxx during yyyy-yyyy") or defined through a
+     * specified geoid/hydroid model.
      */
     public const EPSG_HHWLT_HEIGHT = 'urn:ogc:def:crs:EPSG::5871';
 
@@ -760,7 +771,9 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * High Water height
      * Extent: World.
-     * Not specific to any location or epoch.
+     * Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but
+     * instead use one with a specific datum origin (e.g. "High Water at xxx during yyyy-yyyy") or defined through a
+     * specified geoid/hydroid model.
      */
     public const EPSG_HIGH_WATER_HEIGHT = 'urn:ogc:def:crs:EPSG::5874';
 
@@ -869,7 +882,9 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * ISLW depth
      * Extent: World.
-     * Not specific to any location or epoch.
+     * Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but
+     * instead use one with a specific datum origin (e.g. "ISLW at xxx during yyyy-yyyy") or defined through a
+     * specified geoid/hydroid model.
      */
     public const EPSG_ISLW_DEPTH = 'urn:ogc:def:crs:EPSG::5863';
 
@@ -1007,7 +1022,9 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * LAT depth
      * Extent: World.
-     * Not specific to any location or epoch.
+     * Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but
+     * instead use one with a specific datum origin (e.g. "LAT at xxx during yyyy-yyyy") or defined through a specified
+     * geoid/hydroid model.
      */
     public const EPSG_LAT_DEPTH = 'urn:ogc:def:crs:EPSG::5861';
 
@@ -1027,7 +1044,9 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * LLWLT depth
      * Extent: World.
-     * Not specific to any location or epoch.
+     * Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but
+     * instead use one with a specific datum origin (e.g. "LLWLT at xxx during yyyy-yyyy") or defined through a
+     * specified geoid/hydroid model.
      */
     public const EPSG_LLWLT_DEPTH = 'urn:ogc:def:crs:EPSG::5862';
 
@@ -1078,7 +1097,9 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * Low Water depth
      * Extent: World.
-     * Not specific to any location or epoch.
+     * Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but
+     * instead use one with a specific datum origin (e.g. "Low Water at xxx during yyyy-yyyy") or defined through a
+     * specified geoid/hydroid model.
      */
     public const EPSG_LOW_WATER_DEPTH = 'urn:ogc:def:crs:EPSG::5873';
 
@@ -1091,49 +1112,63 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * MHHW height
      * Extent: World.
-     * Not specific to any location or epoch.
+     * Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but
+     * instead use one with a specific datum origin (e.g. "MHHW at xxx during yyyy-yyyy") or defined through a
+     * specified geoid/hydroid model.
      */
     public const EPSG_MHHW_HEIGHT = 'urn:ogc:def:crs:EPSG::5869';
 
     /**
      * MHW height
      * Extent: World.
-     * Not specific to any location or epoch.
+     * Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but
+     * instead use one with a specific datum origin (e.g. "Mean High Water at xxx during yyyy-yyyy") or defined through
+     * a specified geoid/hydroid model.
      */
     public const EPSG_MHW_HEIGHT = 'urn:ogc:def:crs:EPSG::5868';
 
     /**
      * MHWS height
      * Extent: World.
-     * Not specific to any location or epoch.
+     * Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but
+     * instead use one with a specific datum origin (e.g. "MHWS at xxx during yyyy-yyyy") or defined through a
+     * specified geoid/hydroid model.
      */
     public const EPSG_MHWS_HEIGHT = 'urn:ogc:def:crs:EPSG::5870';
 
     /**
      * MLLW depth
      * Extent: World.
-     * Not specific to any location or epoch.
+     * Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but
+     * instead use one with a specific datum origin (e.g. "MLLW at xxx during yyyy-yyyy") or defined through a
+     * specified geoid/hydroid model.
      */
     public const EPSG_MLLW_DEPTH = 'urn:ogc:def:crs:EPSG::5866';
 
     /**
      * MLLWS depth
      * Extent: World.
-     * Not specific to any location or epoch.
+     * Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but
+     * instead use one with a specific datum origin (e.g. "MLLWS at xxx during yyyy-yyyy") or defined through a
+     * specified geoid/hydroid model..
      */
     public const EPSG_MLLWS_DEPTH = 'urn:ogc:def:crs:EPSG::5864';
 
     /**
      * MLW depth
      * Extent: World.
-     * Not specific to any location or epoch.
+     * Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but
+     * instead use one with a specific datum origin (e.g. "Mean Low Water at xxx during yyyy-yyyy") or defined through
+     * a specified geoid/hydroid model.
      */
     public const EPSG_MLW_DEPTH = 'urn:ogc:def:crs:EPSG::5867';
 
     /**
      * MLWS depth
      * Extent: World.
-     * Not specific to any location or epoch.
+     * Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but
+     * instead use one with a specific datum origin (e.g. "MLWS at xxx during yyyy-yyyy") or defined through a
+     * specified geoid/hydroid model.
      */
     public const EPSG_MLWS_DEPTH = 'urn:ogc:def:crs:EPSG::5865';
 
@@ -1144,44 +1179,64 @@ class Vertical extends CoordinateReferenceSystem
     public const EPSG_MSL_NL_DEPTH = 'urn:ogc:def:crs:EPSG::9288';
 
     /**
+     * MSL UK & Ireland VORF08 depth
+     * Extent: Ireland and United Kingdom (UK) (including Isle of Man and Channel Islands) - inshore, nearshore and
+     * offshore.
+     * For offshore engineering on UKCS, use Ordnance Datum Newlyn (Offshore).
+     */
+    public const EPSG_MSL_UK_AND_IRELAND_VORF08_DEPTH = 'urn:ogc:def:crs:EPSG::10150';
+
+    /**
      * MSL depth
      * Extent: World.
-     * Not specific to any location or epoch.
+     * Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but
+     * instead use one with a specific datum origin (e.g. "Mean Sea Level at xxx during yyyy-yyyy") or defined through
+     * a specified geoid/hydroid model.
      */
     public const EPSG_MSL_DEPTH = 'urn:ogc:def:crs:EPSG::5715';
 
     /**
      * MSL depth (ft)
      * Extent: World.
-     * Not specific to any location or epoch.
+     * Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but
+     * instead use one with a specific datum origin (e.g. "Mean Sea Level at xxx during yyyy-yyyy") or defined through
+     * a specified geoid/hydroid model.
      */
     public const EPSG_MSL_DEPTH_FT = 'urn:ogc:def:crs:EPSG::8051';
 
     /**
      * MSL depth (ftUS)
      * Extent: United States (USA) - onshore and offshore.
-     * Not specific to any location or epoch.
+     * Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but
+     * instead use one with a specific datum origin (e.g. "Mean Sea Level at xxx during yyyy-yyyy") or defined through
+     * a specified geoid/hydroid model.
      */
     public const EPSG_MSL_DEPTH_FTUS = 'urn:ogc:def:crs:EPSG::8053';
 
     /**
      * MSL height
      * Extent: World.
-     * Not specific to any location or epoch.
+     * Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but
+     * instead use one with a specific datum origin (e.g. "Mean Sea Level at xxx during yyyy-yyyy") or defined through
+     * a specified geoid/hydroid model.
      */
     public const EPSG_MSL_HEIGHT = 'urn:ogc:def:crs:EPSG::5714';
 
     /**
      * MSL height (ft)
      * Extent: World.
-     * Not specific to any location or epoch.
+     * Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but
+     * instead use one with a specific datum origin (e.g. "Mean Sea Level at xxx during yyyy-yyyy") or defined through
+     * a specified geoid/hydroid model.
      */
     public const EPSG_MSL_HEIGHT_FT = 'urn:ogc:def:crs:EPSG::8050';
 
     /**
      * MSL height (ftUS)
      * Extent: United States (USA) - onshore and offshore.
-     * Not specific to any location or epoch.
+     * Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but
+     * instead use one with a specific datum origin (e.g. "Mean Sea Level at xxx during yyyy-yyyy") or defined through
+     * a specified geoid/hydroid model.
      */
     public const EPSG_MSL_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8052';
 
@@ -1511,8 +1566,8 @@ class Vertical extends CoordinateReferenceSystem
 
     /**
      * ODN (Offshore) height
-     * Extent: United Kingdom (UK) - offshore between 2km from shore and boundary of UKCS within 49°46'N to 61°01'N
-     * and 7°33'W to 3°33'E.
+     * Extent: United Kingdom (UK) - offshore between 2km from shore and boundary of UKCS within 49°45'N to 61°N and
+     * 9°W to 2°E.
      * Defined through OSGM geoid model (transformation code 7713). Replaces Fair Isle height, Flannan Isles height,
      * Foula height, North Rona height, St Kilda height and Sule Skerry height (CRS codes 5741, 5748, 5743, 5745, 5747
      * and 5744) from 2016.

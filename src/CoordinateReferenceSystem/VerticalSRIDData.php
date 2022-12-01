@@ -1523,6 +1523,18 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1318',
             'extent' => ['3339'],
         ],
+        'urn:ogc:def:crs:EPSG::10150' => [
+            'name' => 'MSL UK & Ireland VORF08 depth',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6498',
+            'datum' => 'urn:ogc:def:datum:EPSG::1330',
+            'extent' => ['4668'],
+        ],
+        'urn:ogc:def:crs:EPSG::10151' => [
+            'name' => 'CD UK & Ireland VORF08 depth',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6498',
+            'datum' => 'urn:ogc:def:datum:EPSG::1331',
+            'extent' => ['4668'],
+        ],
         'urn:ogc:def:crs:EPSG::20000' => [
             'name' => 'SVD2006 height',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',

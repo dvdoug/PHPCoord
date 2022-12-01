@@ -1302,6 +1302,20 @@ Mean Sea Level at Ceuta harbour between March 1944 and December 2006.
 
 Orthometric heights. Replaces an earlier vertical datum in Ceuta harbour measured between 1908 and 1927.
 
+Chart Datum UK & Ireland VORF08
+-------------------------------
+| Type: Vertical
+| Extent: Ireland and United Kingdom (UK) (including Isle of Man and Channel Islands) - inshore, nearshore and offshore.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_CHART_DATUM_UK_AND_IRELAND_VORF08)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1331')
+
+CD UK & Ireland VORF08 is defined by the Vertical Offshore Reference Frame v2.11 2008.
+
+By international agreement, Chart Datum is defined as a level so low that the tide will not frequently fall below it. In the United Kingdom and Ireland, this level is normally the level of approximate Lowest Astronomical Tide.
+
 Chatham Islands Datum 1971
 --------------------------
 | Type: Geodetic
@@ -3229,9 +3243,9 @@ High Water
     Datum::fromSRID(Datum::EPSG_HIGH_WATER)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1094')
 
-The highest level reached at a place by the water surface in one tidal cycle. When used on inland (non-tidal) waters it is generally defined as a level which the daily mean water level exceeds less than 5% of the time.
+Not specific to any location or epoch.
 
-Users are advised to not use this generic vertical datum but to define explicit realizations of high water by specifying location and epoch, for instance "High water at xxx during yyyy-yyyy".
+The highest water level reached at a place in one tidal cycle. When used on inland (non-tidal) waters it is generally defined as a level which the daily mean water level exceeds less than 5% of the time.
 
 Higher High Water Large Tide
 ----------------------------
@@ -3243,9 +3257,9 @@ Higher High Water Large Tide
     Datum::fromSRID(Datum::EPSG_HIGHER_HIGH_WATER_LARGE_TIDE)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1084')
 
-The average of the highest high waters, one from each of 19 years of observations.
+Not specific to any location or epoch.
 
-Users are advised to not use this generic vertical datum but to define explicit realizations of HHWLT by specifying location and epoch, for instance "HHWLT at xxx during yyyy-yyyy".
+The average of the highest high waters, one from each of 19 years of observations.
 
 Highest Astronomical Tide
 -------------------------
@@ -3257,9 +3271,9 @@ Highest Astronomical Tide
     Datum::fromSRID(Datum::EPSG_HIGHEST_ASTRONOMICAL_TIDE)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1082')
 
-The highest tide level which can be predicted to occur under average meteorological conditions and under any combination of astronomical conditions.
+Not specific to any location or epoch.
 
-Users are advised to not use this generic vertical datum but to define explicit realizations of HAT by specifying location and epoch, for instance "HAT at xxx during yyyy-yyyy".
+The highest tide level which can be predicted to occur under average meteorological conditions and under any combination of astronomical conditions.
 
 Hito XVIII 1963
 ---------------
@@ -3873,9 +3887,9 @@ Indian Spring Low Water
     Datum::fromSRID(Datum::EPSG_INDIAN_SPRING_LOW_WATER)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1085')
 
-The level below MSL equal to the sum of the amplitudes of the harmonic constituents M2, S2, K1 and O1. It approximates mean lower low water spring tides (MLLWS).
+Not specific to any location or epoch.
 
-Users are advised to not use this generic vertical datum but to define explicit realizations of ISLW by specifying location and epoch, for instance "ISLW at xxx during yyyy-yyyy".
+The level below MSL equal to the sum of the amplitudes of the harmonic constituents M2, S2, K1 and O1. It approximates mean lower low water spring tides (MLLWS).
 
 Indonesian Datum 1974
 ---------------------
@@ -5195,9 +5209,9 @@ Low Water
     Datum::fromSRID(Datum::EPSG_LOW_WATER)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1093')
 
-The lowest level reached by the water surface in one tidal cycle. When used in inland (non-tidal) waters it is generally defined as a level which the daily mean water level would fall below less than 5% of the time.
+Not specific to any location or epoch.
 
-On a river it is a sloping surface. Users are advised to not use this generic vertical datum but to define explicit realizations of low water by specifying location and epoch, for instance "Low water at xxx during yyyy-yyyy".
+The lowest level reached by the water surface in one tidal cycle. When used in inland (non-tidal) waters it is generally defined as a level which the daily mean water level would fall below less than 5% of the time. On a river it is a sloping surface.
 
 Lower Low Water Large Tide
 --------------------------
@@ -5209,9 +5223,9 @@ Lower Low Water Large Tide
     Datum::fromSRID(Datum::EPSG_LOWER_LOW_WATER_LARGE_TIDE)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1083')
 
-The average of the lowest low waters, one from each of 19 years of observations.
+Not specific to any location or epoch.
 
-Users are advised to not use this generic vertical datum but to define explicit realizations of LLWLT by specifying location and epoch, for instance "LLWLT at xxx during yyyy-yyyy".
+The average of the lowest low waters, one from each of 19 years of observations.
 
 Lowest Astronomical Tide
 ------------------------
@@ -5223,9 +5237,9 @@ Lowest Astronomical Tide
     Datum::fromSRID(Datum::EPSG_LOWEST_ASTRONOMICAL_TIDE)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1080')
 
-The lowest tide level which can be predicted to occur under average meteorological conditions and under any combination of astronomical conditions.
+Not specific to any location or epoch.
 
-Users are advised to not use this generic vertical datum but to define explicit realizations of LAT by specifying location and epoch, for instance "LAT at xxx during yyyy-yyyy".
+The lowest tide level which can be predicted to occur under average meteorological conditions and under any combination of astronomical conditions.
 
 Lowest Astronomical Tide Netherlands
 ------------------------------------
@@ -5767,9 +5781,9 @@ Mean High Water
     Datum::fromSRID(Datum::EPSG_MEAN_HIGH_WATER)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1092')
 
-The average height of the high waters at a place over a 19-year period.
+Not specific to any location or epoch.
 
-Users are advised to not use this generic vertical datum but to define explicit realizations of MHW by specifying location and epoch, for instance "MHW at xxx during yyyy-yyyy".
+The average height of the high waters over a 19-year period.
 
 Mean High Water Spring Tides
 ----------------------------
@@ -5781,9 +5795,9 @@ Mean High Water Spring Tides
     Datum::fromSRID(Datum::EPSG_MEAN_HIGH_WATER_SPRING_TIDES)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1088')
 
-The average height of the high waters of spring tides.
+Not specific to any location or epoch.
 
-Users are advised to not use this generic vertical datum but to define explicit realizations of MHWS by specifying location and epoch, for instance "MHWS at xxx during yyyy-yyyy".
+The average height of the high waters of spring tides.
 
 Mean Higher High Water
 ----------------------
@@ -5795,9 +5809,9 @@ Mean Higher High Water
     Datum::fromSRID(Datum::EPSG_MEAN_HIGHER_HIGH_WATER)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1090')
 
-The average height of the higher high waters at a place over a 19-year period.
+Not specific to any location or epoch.
 
-Users are advised to not use this generic vertical datum but to define explicit realizations of MHHW by specifying location and epoch, for instance "MHHW at xxx during yyyy-yyyy".
+The average height of the higher high waters over a 19-year period.
 
 Mean Low Water
 --------------
@@ -5809,9 +5823,9 @@ Mean Low Water
     Datum::fromSRID(Datum::EPSG_MEAN_LOW_WATER)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1091')
 
-The average height of all low waters at a place over a 19-year period.
+Not specific to any location or epoch.
 
-Users are advised to not use this generic vertical datum but to define explicit realizations of MLW by specifying location and epoch, for instance "MLW at xxx during yyyy-yyyy".
+The average height of all low waters over a 19-year period.
 
 Mean Low Water Spring Tides
 ---------------------------
@@ -5823,9 +5837,9 @@ Mean Low Water Spring Tides
     Datum::fromSRID(Datum::EPSG_MEAN_LOW_WATER_SPRING_TIDES)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1087')
 
-The average height of the low waters of spring tides.
+Not specific to any location or epoch.
 
-Users are advised to not use this generic vertical datum but to define explicit realizations of MLWS by specifying location and epoch, for instance "MLWS at xxx during yyyy-yyyy".
+The average height of the low waters of spring tides.
 
 Mean Lower Low Water
 --------------------
@@ -5837,9 +5851,9 @@ Mean Lower Low Water
     Datum::fromSRID(Datum::EPSG_MEAN_LOWER_LOW_WATER)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1089')
 
-The average height of the lower low waters at a place over a 19-year period.
+Not specific to any location or epoch.
 
-Users are advised to not use this generic vertical datum but to define explicit realizations of MLLW by specifying location and epoch, for instance "MLLW at xxx during yyyy-yyyy".
+The average height of the lower low waters over a 19-year period.
 
 Mean Lower Low Water Spring Tides
 ---------------------------------
@@ -5851,9 +5865,9 @@ Mean Lower Low Water Spring Tides
     Datum::fromSRID(Datum::EPSG_MEAN_LOWER_LOW_WATER_SPRING_TIDES)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1086')
 
-The average height of the lower low water spring tides at a place.
+Not specific to any location or epoch.
 
-Users are advised to not use this generic vertical datum but to define explicit realizations of MLLWS by specifying location and epoch, for instance "MLLWS at xxx during yyyy-yyyy".
+The average height of the lower low water spring tides.
 
 Mean Sea Level
 --------------
@@ -5865,9 +5879,9 @@ Mean Sea Level
     Datum::fromSRID(Datum::EPSG_MEAN_SEA_LEVEL)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::5100')
 
-The average height of the surface of the sea at a tide station for all stages of the tide over a 19-year period, usually determined from hourly height readings measured from a fixed predetermined reference level.
+Not specific to any location or epoch.
 
-Approximates geoid. Users are advised to not use this generic vertical datum but to define explicit realizations of MSL by specifying location and epoch, for instance "MSL at xxx during yyyy-yyyy".
+The average height of the surface of the sea at a tide station for all stages of the tide over a 19-year period, usually determined from hourly height readings measured from a fixed predetermined reference level. Approximates geoid.
 
 Mean Sea Level Netherlands
 --------------------------
@@ -5882,6 +5896,20 @@ Mean Sea Level Netherlands
 Surface defined through the nlgeo geoid model applied to ETRS89.
 
 Coincides with NAP datum plane. Approximates physical mean sea surface to a few decimetres.
+
+Mean Sea Level UK & Ireland VORF08
+----------------------------------
+| Type: Vertical
+| Extent: Ireland and United Kingdom (UK) (including Isle of Man and Channel Islands) - inshore, nearshore and offshore.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_MEAN_SEA_LEVEL_UK_AND_IRELAND_VORF08)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1330')
+
+MSL UK & Ireland VORF08 is defined by the Vertical Offshore Reference Frame v2.11 2008. MSL UK & Ireland VORF08 is reduced to epoch 2000.0.
+
+OSGM05 model used.
 
 Menorca
 -------
@@ -7617,7 +7645,7 @@ Orthometric heights.
 Ordnance Datum Newlyn (Offshore)
 --------------------------------
 | Type: Vertical
-| Extent: United Kingdom (UK) - offshore between 2km from shore and boundary of UKCS within 49°46'N to 61°01'N and 7°33'W to 3°33'E.
+| Extent: United Kingdom (UK) - offshore between 2km from shore and boundary of UKCS within 49°45'N to 61°N and 9°W to 2°E.
 
 .. code-block:: php
 
