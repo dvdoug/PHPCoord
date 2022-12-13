@@ -2601,7 +2601,7 @@ trait CompoundSRIDData
             'extent' => ['4661'],
         ],
         'urn:ogc:def:crs:EPSG::9948' => [
-            'name' => 'ISN93 + ISH2004 height ',
+            'name' => 'ISN93 + ISH2004 height',
             'horizontal_crs' => 'urn:ogc:def:crs:EPSG::4659',
             'horizontal_crs_type' => 'geographic 2D',
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::8089',

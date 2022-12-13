@@ -154,7 +154,7 @@ DB_REF2003 zone 2
     CoordinateReferenceSystem::fromSRID(Compound::EPSG_DB_REF2003_ZONE_2)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9928')
 
-On the introduction of DB_REF2016 height,  this compound CRS replaced by DB_REF2016 zone 2 (CRS code 9932).
+On the introduction of DB_REF2016 height, this compound CRS replaced by DB_REF2016 zone 2 (CRS code 9932).
 
 DB_REF2003 zone 3
 -----------------
@@ -167,7 +167,7 @@ DB_REF2003 zone 3
     CoordinateReferenceSystem::fromSRID(Compound::EPSG_DB_REF2003_ZONE_3)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9929')
 
-On the introduction of DB_REF2016 height,  this compound CRS replaced by DB_REF2016 zone 3 (CRS code 9933).
+On the introduction of DB_REF2016 height, this compound CRS replaced by DB_REF2016 zone 3 (CRS code 9933).
 
 DB_REF2003 zone 4
 -----------------
@@ -180,7 +180,7 @@ DB_REF2003 zone 4
     CoordinateReferenceSystem::fromSRID(Compound::EPSG_DB_REF2003_ZONE_4)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9930')
 
-On the introduction of DB_REF2016 height,  this compound CRS replaced by DB_REF2016 zone 4 (CRS code 9934).
+On the introduction of DB_REF2016 height, this compound CRS replaced by DB_REF2016 zone 4 (CRS code 9934).
 
 DB_REF2003 zone 5
 -----------------
@@ -193,7 +193,7 @@ DB_REF2003 zone 5
     CoordinateReferenceSystem::fromSRID(Compound::EPSG_DB_REF2003_ZONE_5)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9931')
 
-On the introduction of DB_REF2016 height,  this compound CRS replaced by DB_REF2016 zone 5 (CRS code 9935).
+On the introduction of DB_REF2016 height, this compound CRS replaced by DB_REF2016 zone 5 (CRS code 9935).
 
 DB_REF2016 zone 2
 -----------------

@@ -100,28 +100,28 @@ class Compound extends CoordinateReferenceSystem
      * DB_REF2003 zone 2
      * Extent: Germany - former West Germany onshore west of 7°30'E - states of Niedersachsen, Nordrhein-Westfalen,
      * Rheinland-Pfalz, Saarland.
-     * On the introduction of DB_REF2016 height,  this compound CRS replaced by DB_REF2016 zone 2 (CRS code 9932).
+     * On the introduction of DB_REF2016 height, this compound CRS replaced by DB_REF2016 zone 2 (CRS code 9932).
      */
     public const EPSG_DB_REF2003_ZONE_2 = 'urn:ogc:def:crs:EPSG::9928';
 
     /**
      * DB_REF2003 zone 3
      * Extent: Germany - onshore between 7°30'E and 10°30'E.
-     * On the introduction of DB_REF2016 height,  this compound CRS replaced by DB_REF2016 zone 3 (CRS code 9933).
+     * On the introduction of DB_REF2016 height, this compound CRS replaced by DB_REF2016 zone 3 (CRS code 9933).
      */
     public const EPSG_DB_REF2003_ZONE_3 = 'urn:ogc:def:crs:EPSG::9929';
 
     /**
      * DB_REF2003 zone 4
      * Extent: Germany - onshore between 10°30'E and 13°30'E.
-     * On the introduction of DB_REF2016 height,  this compound CRS replaced by DB_REF2016 zone 4 (CRS code 9934).
+     * On the introduction of DB_REF2016 height, this compound CRS replaced by DB_REF2016 zone 4 (CRS code 9934).
      */
     public const EPSG_DB_REF2003_ZONE_4 = 'urn:ogc:def:crs:EPSG::9930';
 
     /**
      * DB_REF2003 zone 5
      * Extent: Germany - onshore east of 13°30'E.
-     * On the introduction of DB_REF2016 height,  this compound CRS replaced by DB_REF2016 zone 5 (CRS code 9935).
+     * On the introduction of DB_REF2016 height, this compound CRS replaced by DB_REF2016 zone 5 (CRS code 9935).
      */
     public const EPSG_DB_REF2003_ZONE_5 = 'urn:ogc:def:crs:EPSG::9931';
 

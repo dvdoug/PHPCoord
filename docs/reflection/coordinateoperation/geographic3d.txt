@@ -1933,6 +1933,26 @@ to IGS14 (Geographic2D)
 
     "
 
+IGS20
+-----
+``Geographic3D::fromSRID(Geographic3D::EPSG_IGS20)``
+
+to IGS20 (Geographic2D)
+^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: geographic3D to geographic2D
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::15593``
+    | Extent: World",".. code-block:: php
+
+        $point->threeDToTwoD(
+            to: Geographic2D::fromSRID(Geographic2D::EPSG_IGS20)
+        )
+
+    "
+
 IGS97
 -----
 ``Geographic3D::fromSRID(Geographic3D::EPSG_IGS97)``

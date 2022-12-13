@@ -148,8 +148,8 @@ class Datum
      * Ancienne Triangulation Francaise (Paris)
      * Type: Geodetic
      * Extent: France - mainland onshore.
-     * Uses the RGS value for the Paris meridian.  In Alsace, data suspected to be transformation of German network
-     * into ATF. Replaced by Nouvelle Triangulation Francaise (Paris) (code 6807) which uses the 1936 IGN value for the
+     * Uses the RGS value for the Paris meridian. In Alsace, data suspected to be transformation of German network into
+     * ATF. Replaced by Nouvelle Triangulation Francaise (Paris) (code 6807) which uses the 1936 IGN value for the
      * Paris meridian.
      */
     public const EPSG_ANCIENNE_TRIANGULATION_FRANCAISE_PARIS = 'urn:ogc:def:datum:EPSG::6901';
@@ -308,7 +308,7 @@ class Datum
      * Average Terrestrial System 1977
      * Type: Geodetic
      * Extent: Canada - New Brunswick; Nova Scotia; Prince Edward Island.
-     * In use from 1979.  To be phased out in late 1990's.
+     * In use from 1979. To be phased out in late 1990's.
      */
     public const EPSG_AVERAGE_TERRESTRIAL_SYSTEM_1977 = 'urn:ogc:def:datum:EPSG::6122';
 
@@ -970,7 +970,7 @@ class Datum
      * Extent: Argentina - Mendoza province, Neuquen province, western La Pampa province and western Rio Negro
      * province.
      * Chos Malal police station.
-     * Also known as Quini-Huao.  Replaced by Campo Inchauspe (code 6221) for topographic mapping, use for oil
+     * Also known as Quini-Huao. Replaced by Campo Inchauspe (code 6221) for topographic mapping, use for oil
      * exploration and production continues.
      */
     public const EPSG_CHOS_MALAL_1914 = 'urn:ogc:def:datum:EPSG::6160';
@@ -1260,7 +1260,7 @@ class Datum
      * Type: Geodetic
      * Extent: Cameroon - coastal area.
      * South pillar of Douala base; 4°00'40.64"N, 9°42'30.41"E (of Greenwich).
-     * Replaced  by Manoca 1962 datum (code 6193).
+     * Replaced by Manoca 1962 datum (code 6193).
      */
     public const EPSG_DOUALA_1948 = 'urn:ogc:def:datum:EPSG::6192';
 
@@ -1851,7 +1851,7 @@ class Datum
      * Type: Vertical
      * Extent: Iraq - onshore.
      * Average sea level at Fao during two-year period in mid/late 1970s.
-     * Levelling network established by Polservice consortium.  Replaces Fao (datum code 5149) in Iraq.
+     * Levelling network established by Polservice consortium. Replaces Fao (datum code 5149) in Iraq.
      */
     public const EPSG_FAO_1979 = 'urn:ogc:def:datum:EPSG::1028';
 
@@ -2153,8 +2153,8 @@ class Datum
      * Type: Geodetic
      * Extent: Greece - onshore.
      * Fundamental point: Athens Observatory. Latitude 37°58'20.132"N, longitude 23°42'58.815"E (of Greenwich)
-     * See geodetic datum alias 6404.  Used as basis of topographic mapping based on Hatt projection. Replaced by
-     * GGRS87 (code 6121).
+     * See geodetic datum alias 6404. Used as basis of topographic mapping based on Hatt projection. Replaced by GGRS87
+     * (code 6121).
      */
     public const EPSG_GREEK = 'urn:ogc:def:datum:EPSG::6120';
 
@@ -2163,7 +2163,7 @@ class Datum
      * Type: Geodetic
      * Extent: Greece - onshore.
      * Fundamental point: Athens Observatory. Latitude 37°58'20.132"N, longitude 0°E (of Athens).
-     * See geodetic datum alias 6404.  Used as basis of topographic mapping based on Hatt projection.
+     * See geodetic datum alias 6404. Used as basis of topographic mapping based on Hatt projection.
      */
     public const EPSG_GREEK_ATHENS = 'urn:ogc:def:datum:EPSG::6815';
 
@@ -2172,7 +2172,7 @@ class Datum
      * Type: Geodetic
      * Extent: Greece - onshore.
      * Fundamental point: Dionysos. Latitude 38°04'33.8"N, longitude 23°55'51.0"E of Greenwich; geoid height 7.0 m.
-     * Replaced (old) Greek datum.  Oil industry work based on ED50.
+     * Replaced (old) Greek datum. Oil industry work based on ED50.
      */
     public const EPSG_GREEK_GEODETIC_REFERENCE_SYSTEM_1987 = 'urn:ogc:def:datum:EPSG::6121';
 
@@ -2375,7 +2375,7 @@ class Datum
      * Type: Vertical
      * Extent: Finland - onshore mainland south of approximately 66°N.
      * MSL at Helsinki during 1943.
-     * Uses orthometric heights. Effect of the land uplift during the 2nd national  levelling was not taken into
+     * Uses orthometric heights. Effect of the land uplift during the 2nd national levelling was not taken into
      * account. Replaced by N60 (datum code 5116).
      */
     public const EPSG_HELSINKI_1943 = 'urn:ogc:def:datum:EPSG::1213';
@@ -2458,7 +2458,7 @@ class Datum
      * Extent: China - Hong Kong - onshore and offshore.
      * Fundamental point: Trig "Zero", 38.4 feet south along the transit circle of the Kowloon Observatory. Latitude
      * 22°18'12.82"N, longitude 114°10'18.75"E (of Greenwich).
-     * Replaced by Hong Kong 1963(67) for military purposes only in 1967.  Replaced by Hong Kong 1980.
+     * Replaced by Hong Kong 1963(67) for military purposes only in 1967. Replaced by Hong Kong 1980.
      */
     public const EPSG_HONG_KONG_1963 = 'urn:ogc:def:datum:EPSG::6738';
 
@@ -2468,7 +2468,7 @@ class Datum
      * Extent: China - Hong Kong - onshore and offshore.
      * Fundamental point: Trig "Zero", 38.4 feet south along the transit circle of the Kowloon Observatory. Latitude
      * 22°18'12.82"N, longitude 114°10'18.75"E (of Greenwich).
-     * Replaces Hong Kong 1963 for military purposes only in 1967.  Replaced by Hong Kong 1980.
+     * Replaces Hong Kong 1963 for military purposes only in 1967. Replaced by Hong Kong 1980.
      */
     public const EPSG_HONG_KONG_1963_67 = 'urn:ogc:def:datum:EPSG::6739';
 
@@ -2757,6 +2757,17 @@ class Datum
      * replaced by IGb14. For all practical purposes coincident with ITRF2014.
      */
     public const EPSG_IGS14 = 'urn:ogc:def:datum:EPSG::1191';
+
+    /**
+     * IGS20
+     * Type: Dynamic geodetic
+     * Extent: World.
+     * A subset of 332 stable, well-performing IGS stations from ITRF2020.
+     * Used for IGS products from GPS week 2238 (2022-11-27). Replaces IGb14. Compared to IGb14, IGS20 contains 98 new
+     * stations, mostly in previously sparsely covered areas, but with 25 IGb14 sites removed. For all practical
+     * purposes coincident with ITRF2020.
+     */
+    public const EPSG_IGS20 = 'urn:ogc:def:datum:EPSG::1333';
 
     /**
      * IGS97
@@ -3306,7 +3317,7 @@ class Datum
      * Type: Geodetic
      * Extent: Bangladesh - onshore; India - mainland onshore; Myanmar (Burma) - onshore; Pakistan - onshore.
      * Fundamental point: Kalianpur. Latitude: 24°07'11.260"N, longitude: 77°39'17.570"E (of Greenwich).
-     * Includes 1916 extension into Burma (Myanmar).  Replaced by 1937 adjustment.
+     * Includes 1916 extension into Burma (Myanmar). Replaced by 1937 adjustment.
      */
     public const EPSG_KALIANPUR_1880 = 'urn:ogc:def:datum:EPSG::6243';
 
@@ -3316,8 +3327,8 @@ class Datum
      * Extent: Bangladesh - onshore; India - mainland onshore; Myanmar - onshore and Moattama area offshore; Pakistan -
      * onshore.
      * Fundamental point: Kalianpur. Latitude: 24° 07'11.260"N, longitude: 77°39'17.570"E (of Greenwich).
-     * Replaces 1880 adjustment except for topographic mapping.  Replaced in Bangladesh and Pakistan by 1962
-     * metrication conversion and in India by 1975 metrication conversion.
+     * Replaces 1880 adjustment except for topographic mapping. Replaced in Bangladesh and Pakistan by 1962 metrication
+     * conversion and in India by 1975 metrication conversion.
      */
     public const EPSG_KALIANPUR_1937 = 'urn:ogc:def:datum:EPSG::6144';
 
@@ -3647,7 +3658,7 @@ class Datum
      * Type: Geodetic
      * Extent: Ghana - onshore and offshore.
      * Fundamental point: GCS Station 121, Leigon. Latitude: 5°38'52.27"N, longitude: 0°11'46.08"W (of Greenwich).
-     * Replaced Accra datum (code 6168) from 1978.  Coordinates at Leigon fundamental point defined as Accra datum
+     * Replaced Accra datum (code 6168) from 1978. Coordinates at Leigon fundamental point defined as Accra datum
      * values for that point.
      */
     public const EPSG_LEIGON = 'urn:ogc:def:datum:EPSG::6250';
@@ -4052,7 +4063,7 @@ class Datum
      * Extent: Cameroon - coastal area.
      * Reservoir centre at the  Manoca tower ("tube Suel"), 3°51'49.896"N, 9°36'49.347"E (of Greenwich).
      * The intent of the Bukavu 1953 conference was to adopt the Clarke 1880 (RGS) ellipsoid (code 7012) but in
-     * practice this datum has used the IGN version.  Replaces Douala 1948 (code 6192).
+     * practice this datum has used the IGN version. Replaces Douala 1948 (code 6192).
      */
     public const EPSG_MANOCA_1962 = 'urn:ogc:def:datum:EPSG::6193';
 
@@ -4554,7 +4565,7 @@ class Datum
      * Washington; West Virginia; Wisconsin; Wyoming. US Virgin Islands - onshore and offshore.
      * Coordinates of a nationwide adjustment of 79,546 NGS "passive" control stations in CONUS and Alaska, constrained
      * to 1,171 current CORS station coordinates at epoch 2010.0.
-     * Replaces NAD83(NSRS2007). Transformaton code 7807 from ITRF2008 is understood to underlay the  CORS station
+     * Replaces NAD83(NSRS2007). Transformaton code 7807 from ITRF2008 is understood to underlay the CORS station
      * coordinates.
      */
     public const EPSG_NAD83_NATIONAL_SPATIAL_REFERENCE_SYSTEM_2011 = 'urn:ogc:def:datum:EPSG::1116';
@@ -5526,7 +5537,7 @@ class Datum
      * Type: Geodetic
      * Extent: United States (USA) - Hawaii - main islands onshore.
      * Fundamental point: Oahu West Base Astro.  Latitude: 21°18'13.89"N, longitude 157°50'55.79"W (of Greenwich)
-     * Hawaiian Islands were never on NAD27 but rather on Old Hawaiian Datum.  NADCON conversion program provides
+     * Hawaiian Islands were never on NAD27 but rather on Old Hawaiian Datum. NADCON conversion program provides
      * transformation from Old Hawaiian Datum to NAD83 (original 1986 realization) but making the transformation appear
      * to user as if from NAD27.
      */
@@ -5618,7 +5629,7 @@ class Datum
      * Type: Vertical
      * Extent: Oman - onshore. Includes Musandam and the Kuria Muria (Al Hallaniyah) islands.
      * Misclosure between Muscat and Salalah less than .5 meters with differences from of up to 5 meters from old Fahud
-     * Datum.  The PHD93 adjustment was initially known as the Spine.  Replaces Fahud Vertical Datum (code 5124) from
+     * Datum. The PHD93 adjustment was initially known as the Spine. Replaces Fahud Vertical Datum (code 5124) from
      * 1993.
      */
     public const EPSG_PDO_HEIGHT_DATUM_1993 = 'urn:ogc:def:datum:EPSG::5123';
@@ -5882,12 +5893,11 @@ class Datum
      * Posiciones Geodesicas Argentinas 1994
      * Type: Geodetic
      * Extent: Argentina - onshore and offshore.
-     * A geodetic network of 127 high accuracy surveyed points based on WGS 84 coordinates at time of survey that
-     * define the National Geodetic System (Sistema Geodésico Nacional). Surveyed between February and April 1993 and
-     * between March and May 1994.
-     * Defined the National Geodetic Reference Network from 9th May 1997. Technically, but not legally, replaced by
-     * POSGAR 98 (datum code 6190) until May 2009, when POSGAR 2007 (datum code 1062) was officially replaced POSGAR
-     * 94.
+     * WGS 84 coordinates at time of survey of a geodetic network of 127 points defining the National Geodetic System
+     * (Sistema Geodésico Nacional). Surveyed between February and April 1993 and between March and May 1994.
+     * Adopted as defining the National Geodetic Reference Network from 9th May 1997. Technically, but not legally,
+     * replaced by POSGAR 98 (datum code 6190) until 15th May 2009 when legally replaced by POSGAR 2007 (datum code
+     * 1062).
      */
     public const EPSG_POSICIONES_GEODESICAS_ARGENTINAS_1994 = 'urn:ogc:def:datum:EPSG::6694';
 
@@ -5896,8 +5906,8 @@ class Datum
      * Type: Geodetic
      * Extent: Argentina - onshore and offshore.
      * A geodetic network of 136 high accuracy surveyed points. Densification of SIRGAS 1995; ITRF94 at epoch 1995.4.
-     * Technically, but not legally, this datum replaced the 1994 POSGAR adjustment (code 6694) until adoption of the
-     * 2007 POSGAR adjustment (code 1062) in May 2009.
+     * Replaced POSGAR 1994 (datum code 6694) for technical, but not legal, purposes. Replaced by POSGAR 2007 (datum
+     * code 1062) from May 2009.
      */
     public const EPSG_POSICIONES_GEODESICAS_ARGENTINAS_1998 = 'urn:ogc:def:datum:EPSG::6190';
 
@@ -5905,11 +5915,11 @@ class Datum
      * Posiciones Geodesicas Argentinas 2007
      * Type: Geodetic
      * Extent: Argentina - onshore and offshore.
-     * A geodetic network of 211 high accuracy surveyed points (178 passive and 33 continuous operating) based on
-     * ITRF2005, Epoch 2006.632, that define the National Geodetic System (Sistema Geodésico Nacional) effective 15
-     * May 2009.
-     * POSGAR 07 has been adopted by order of the Director of the National Geographic Institute on 15th May 2009 as the
-     * new National Geodetic Reference Frame and replaces the pre-existing POSGAR 94.
+     * Coordinates of the geodetic network of 211 high accuracy surveyed points (178 passive and 33 continuously
+     * operating) defining the National Geodetic System (Sistema Geodésico Nacional) based on ITRF2005 at epoch
+     * 2006.632.
+     * Adopted by order of the Director of the National Geographic Institute on 15th May 2009 as the new National
+     * Geodetic Reference Frame. Replaces POSGAR 94.
      */
     public const EPSG_POSICIONES_GEODESICAS_ARGENTINAS_2007 = 'urn:ogc:def:datum:EPSG::1062';
 
@@ -6463,7 +6473,7 @@ class Datum
      * Aligned to IGS05 at epoch 2004.50. Realized by a frame of 126 continuously operating stations using GPS
      * observations from December 2002 to March 2008. Velocity model VEMOS2003 used to propagate coordinates to the
      * frame reference epoch.
-     * Replaces DGF07P01 (datum code 1234). Replaced by SIR09P01  (datum code 1236).
+     * Replaces DGF07P01 (datum code 1234). Replaced by SIR09P01 (datum code 1236).
      */
     public const EPSG_SIRGAS_CONTINUOUSLY_OPERATING_NETWORK_DGF08P01 = 'urn:ogc:def:datum:EPSG::1235';
 
@@ -6791,7 +6801,7 @@ class Datum
      * Type: Geodetic
      * Extent: Sierra Leone - onshore.
      * Fundamental point: SLX2 Astro. Latitude: 8°27'17.567"N, longitude: 12°49'40.186"W (of Greenwich).
-     * Extension and readjustment with additional observations of 1960 network.  Coordinates of 1960 stations change by
+     * Extension and readjustment with additional observations of 1960 network. Coordinates of 1960 stations change by
      * less than 3 metres.
      */
     public const EPSG_SIERRA_LEONE_1968 = 'urn:ogc:def:datum:EPSG::6175';
@@ -6837,7 +6847,7 @@ class Datum
      * Extent: South America - onshore and offshore. Ecuador (mainland and Galapagos) - onshore and offshore.
      * ITRF94 at epoch 1995.4.
      * Realized by a frame of 58 stations observed in 1995 and adjusted in ITRF94. Provisional NIMA adjustment
-     * reference epoch was 1995.42 but final report accepted value is 1995.40.  Replaced by SIRGAS 2000.
+     * reference epoch was 1995.42 but final report accepted value is 1995.40. Replaced by SIRGAS 2000.
      */
     public const EPSG_SISTEMA_DE_REFERENCIA_GEOCENTRICO_PARA_AMERICA_DEL_SUR_1995 = 'urn:ogc:def:datum:EPSG::6170';
 
@@ -6847,7 +6857,7 @@ class Datum
      * Extent: Latin America - Central America and South America - onshore and offshore. Brazil - onshore and offshore.
      * ITRF2000 at epoch 2000.40.
      * Realized by a frame of 184 stations observed in 2000 and adjusted in the ITRF2000. Includes ties to tide gauges.
-     * Replaces SIRGAS 1995 system for South America; expands SIRGAS to Central America.  Name changed in 2001 for use
+     * Replaces SIRGAS 1995 system for South America; expands SIRGAS to Central America. Name changed in 2001 for use
      * in all of Latin America.
      */
     public const EPSG_SISTEMA_DE_REFERENCIA_GEOCENTRICO_PARA_LAS_AMERICAS_2000 = 'urn:ogc:def:datum:EPSG::6674';
@@ -6989,7 +6999,7 @@ class Datum
      * Type: Geodetic
      * Extent: United States (USA) - Alaska - Pribilof Islands - St George Island.
      * Fundamental point latitude: 56°36'11.31"N, longitude: 169°32'36.00"W (of Greenwich).
-     * Many Alaskan islands were never on NAD27 but rather on independent datums.  NADCON conversion program provides
+     * Many Alaskan islands were never on NAD27 but rather on independent datums. NADCON conversion program provides
      * transformation from St. George Island Datum to NAD83 (original 1986 realization) - making the transformation
      * appear to user as if from NAD27.
      */
@@ -7052,7 +7062,7 @@ class Datum
      * St. Lawrence Island
      * Type: Geodetic
      * Extent: United States (USA) - Alaska - St Lawrence Island.
-     * Many Alaskan islands were never on NAD27 but rather on independent datums.  NADCON conversion program provides
+     * Many Alaskan islands were never on NAD27 but rather on independent datums. NADCON conversion program provides
      * transformation from St. Lawrence Island Datum to NAD83 (original 1986 realization) - making the transformation
      * appear to user as if from NAD27.
      */
@@ -7081,7 +7091,7 @@ class Datum
      * Type: Geodetic
      * Extent: United States (USA) - Alaska - Pribilof Islands - St Paul Island.
      * Fundamental point latitude: 57°07'16.86"N, longitude: 170°16'24.00"W (of Greenwich).
-     * Many Alaskan islands were never on NAD27 but rather on independent datums.  NADCON conversion program provides
+     * Many Alaskan islands were never on NAD27 but rather on independent datums. NADCON conversion program provides
      * transformation from St. Paul Island Datum to NAD83 (original 1986 realization) - making the transformation
      * appear to user as if from NAD27.
      */
@@ -10206,6 +10216,14 @@ class Datum
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
+        ],
+        'urn:ogc:def:datum:EPSG::1333' => [
+            'name' => 'IGS20',
+            'type' => 'dynamic geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => 2015.0,
         ],
         'urn:ogc:def:datum:EPSG::5100' => [
             'name' => 'Mean Sea Level',

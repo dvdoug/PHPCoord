@@ -1662,7 +1662,7 @@ Kiunga height
     CoordinateReferenceSystem::fromSRID(Vertical::EPSG_KIUNGA_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::7652')
 
-Kiunga height = WGS 84 ellipsoid height - value of geoid undulation derived by bilinear interpolation of EGM2008 geoid model - 3.0m = EGM2008 height - 3.0m.  See CRS code 3855 and transformation code 3858.
+Kiunga height = WGS 84 ellipsoid height - value of geoid undulation derived by bilinear interpolation of EGM2008 geoid model - 3.0m = EGM2008 height - 3.0m. See CRS code 3855 and transformation code 3858.
 
 Kumul 34 height
 ---------------

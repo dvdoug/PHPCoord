@@ -2334,6 +2334,83 @@ to SIRGAS-CON SIR17P01 (Geocentric)
 
     "
 
+IGS20
+-----
+``Geocentric::fromSRID(Geocentric::EPSG_IGS20)``
+
+to IGS20 (Geographic3D)
+^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: geocentric to geographic3D
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::15592``
+    | Extent: World",".. code-block:: php
+
+        $point->geographicGeocentric(
+            to: Geographic3D::fromSRID(Geographic3D::EPSG_IGS20)
+        )
+
+    "
+
+
+to IGb14 (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: IGb14 to IGS20 (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10180``
+    | Extent: World",".. code-block:: php
+
+        $point->timeDependentPositionVectorTransformation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_IGB14),
+            xAxisTranslation: new Millimetre(-1.4),
+            yAxisTranslation: new Millimetre(-0.9),
+            zAxisTranslation: new Millimetre(1.4),
+            xAxisRotation: new ArcSecond(-0),
+            yAxisRotation: new ArcSecond(-0),
+            zAxisRotation: new ArcSecond(-0),
+            scaleDifference: new PartsPerBillion(-0.42),
+            rateOfChangeOfXAxisTranslation: new Rate(new Millimetre(-0), new Year(1)),
+            rateOfChangeOfYAxisTranslation: new Rate(new Millimetre(-0.1), new Year(1)),
+            rateOfChangeOfZAxisTranslation: new Rate(new Millimetre(0.2), new Year(1)),
+            rateOfChangeOfXAxisRotation: new Rate(new ArcSecond(-0), new Year(1)),
+            rateOfChangeOfYAxisRotation: new Rate(new ArcSecond(-0), new Year(1)),
+            rateOfChangeOfZAxisRotation: new Rate(new ArcSecond(-0), new Year(1)),
+            rateOfChangeOfScaleDifference: new Rate(new PartsPerBillion(-0), new Year(1)),
+            parameterReferenceEpoch: new Year(2015)
+        )
+
+    "
+
+
+to ITRF2020 (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: ITRF2020 to IGS20 (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10179``
+    | Extent: World",".. code-block:: php
+
+        $point->timeSpecificPositionVectorTransformation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_ITRF2020),
+            xAxisTranslation: new Centimetre(-0),
+            yAxisTranslation: new Centimetre(-0),
+            zAxisTranslation: new Centimetre(-0),
+            xAxisRotation: new ArcSecond(-0),
+            yAxisRotation: new ArcSecond(-0),
+            zAxisRotation: new ArcSecond(-0),
+            scaleDifference: new PartsPerBillion(-0),
+            transformationReferenceEpoch: new Year(2015)
+        )
+
+    "
+
 IGS97
 -----
 ``Geocentric::fromSRID(Geocentric::EPSG_IGS97)``
@@ -2714,6 +2791,38 @@ to IGS14 (Geocentric)
             zAxisRotation: new ArcSecond(-0),
             scaleDifference: new PartsPerBillion(-0),
             transformationReferenceEpoch: new Year(2010)
+        )
+
+    "
+
+
+to IGS20 (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: IGb14 to IGS20 (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10180``
+    | Extent: World",".. code-block:: php
+
+        $point->timeDependentPositionVectorTransformation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_IGS20),
+            xAxisTranslation: new Millimetre(1.4),
+            yAxisTranslation: new Millimetre(0.9),
+            zAxisTranslation: new Millimetre(-1.4),
+            xAxisRotation: new ArcSecond(0),
+            yAxisRotation: new ArcSecond(0),
+            zAxisRotation: new ArcSecond(0),
+            scaleDifference: new PartsPerBillion(0.42),
+            rateOfChangeOfXAxisTranslation: new Rate(new Millimetre(0), new Year(1)),
+            rateOfChangeOfYAxisTranslation: new Rate(new Millimetre(0.1), new Year(1)),
+            rateOfChangeOfZAxisTranslation: new Rate(new Millimetre(-0.2), new Year(1)),
+            rateOfChangeOfXAxisRotation: new Rate(new ArcSecond(0), new Year(1)),
+            rateOfChangeOfYAxisRotation: new Rate(new ArcSecond(0), new Year(1)),
+            rateOfChangeOfZAxisRotation: new Rate(new ArcSecond(0), new Year(1)),
+            rateOfChangeOfScaleDifference: new Rate(new PartsPerBillion(0), new Year(1)),
+            parameterReferenceEpoch: new Year(2015)
         )
 
     "
@@ -4736,6 +4845,31 @@ to WGS 84 (G2139) (Geocentric)
 ITRF2020
 --------
 ``Geocentric::fromSRID(Geocentric::EPSG_ITRF2020)``
+
+to IGS20 (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: ITRF2020 to IGS20 (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10179``
+    | Extent: World",".. code-block:: php
+
+        $point->timeSpecificPositionVectorTransformation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_IGS20),
+            xAxisTranslation: new Centimetre(0),
+            yAxisTranslation: new Centimetre(0),
+            zAxisTranslation: new Centimetre(0),
+            xAxisRotation: new ArcSecond(0),
+            yAxisRotation: new ArcSecond(0),
+            zAxisRotation: new ArcSecond(0),
+            scaleDifference: new PartsPerBillion(0),
+            transformationReferenceEpoch: new Year(2015)
+        )
+
+    "
+
 
 to ITRF2000 (Geocentric)
 ^^^^^^^^^^^^^^^^^^^^^^^^

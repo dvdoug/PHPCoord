@@ -13451,7 +13451,7 @@ Korea 2000 / Central Belt
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_KOREA_2000_CENTRAL_BELT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5181')
 
-Introduced 2003, withdrawn 2009-12-31. Replaces Korean 1985 / Central Belt (CRS code 2097) and Korean 1985 / Modified Central Belt (CRS code 5174).  Replaced by Korea 2000 / Central Belt 2010 (CRS code 5186).
+Introduced 2003, withdrawn 2009-12-31. Replaces Korean 1985 / Central Belt (CRS code 2097) and Korean 1985 / Modified Central Belt (CRS code 5174). Replaced by Korea 2000 / Central Belt 2010 (CRS code 5186).
 
 Korea 2000 / Central Belt 2010
 ------------------------------
@@ -13477,7 +13477,7 @@ Korea 2000 / Central Belt Jeju
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_KOREA_2000_CENTRAL_BELT_JEJU)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5182')
 
-Introduced 2003, withdrawn 2009-12-31. Replaces Korean 1985 / Central Belt Jeju (CRS code 5168) and Korean 1985 / Modified Central Belt Jeju (CRS code 5175).  Replaced by Korea 2000 / Central Belt 2010 (CRS code 5186).
+Introduced 2003, withdrawn 2009-12-31. Replaces Korean 1985 / Central Belt Jeju (CRS code 5168) and Korean 1985 / Modified Central Belt Jeju (CRS code 5175). Replaced by Korea 2000 / Central Belt 2010 (CRS code 5186).
 
 Korea 2000 / East Belt
 ----------------------
@@ -13490,7 +13490,7 @@ Korea 2000 / East Belt
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_KOREA_2000_EAST_BELT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5183')
 
-Introduced 2003, withdrawn 2009-12-31. Replaces Korean 1985 / East Belt (CRS code 2096) and Korean 1985 / Modified East Belt (CRS code 5176).  Replaced by Korea 2000 / East Belt 2010 (CRS code 5187).
+Introduced 2003, withdrawn 2009-12-31. Replaces Korean 1985 / East Belt (CRS code 2096) and Korean 1985 / Modified East Belt (CRS code 5176). Replaced by Korea 2000 / East Belt 2010 (CRS code 5187).
 
 Korea 2000 / East Belt 2010
 ---------------------------
@@ -13516,7 +13516,7 @@ Korea 2000 / East Sea Belt
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_KOREA_2000_EAST_SEA_BELT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5184')
 
-Introduced 2003, withdrawn 2009-12-31. Replaces Korean 1985 / East Sea Belt (CRS code 5167) and Korean 1985 / Modified East Sea Belt (CRS code 5177).  Replaced by Korea 2000 / East Sea Belt 2010 (CRS code 5188).
+Introduced 2003, withdrawn 2009-12-31. Replaces Korean 1985 / East Sea Belt (CRS code 5167) and Korean 1985 / Modified East Sea Belt (CRS code 5177). Replaced by Korea 2000 / East Sea Belt 2010 (CRS code 5188).
 
 Korea 2000 / East Sea Belt 2010
 -------------------------------
@@ -13555,7 +13555,7 @@ Korea 2000 / West Belt
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_KOREA_2000_WEST_BELT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5180')
 
-Introduced 2003, withdrawn 2009-12-31. Replaces Korean 1985 / West Belt (CRS code 2098) and Korean 1985 / Modified West Belt (CRS code 5173).  Replaced by Korea 2000 / West Belt 2010 (CRS code 5185) .
+Introduced 2003, withdrawn 2009-12-31. Replaces Korean 1985 / West Belt (CRS code 2098) and Korean 1985 / Modified West Belt (CRS code 5173). Replaced by Korea 2000 / West Belt 2010 (CRS code 5185).
 
 Korea 2000 / West Belt 2010
 ---------------------------
@@ -15751,7 +15751,7 @@ Mexico ITRF92 / UTM zone 13N
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_MEXICO_ITRF92_UTM_ZONE_13N)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4486')
 
-Replaces NAD27 / UTM zone 13N  (CRS code 26713). Replaced by Mexico ITRF2008 / UTM zone 13N (CRS code 6368) from December 2010.
+Replaces NAD27 / UTM zone 13N (CRS code 26713). Replaced by Mexico ITRF2008 / UTM zone 13N (CRS code 6368) from December 2010.
 
 Mexico ITRF92 / UTM zone 14N
 ----------------------------
@@ -15764,7 +15764,7 @@ Mexico ITRF92 / UTM zone 14N
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_MEXICO_ITRF92_UTM_ZONE_14N)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4487')
 
-Replaces NAD27 / UTM zone 14N  (CRS code 26714).  Replaced by Mexico ITRF2008 / UTM zone 14N (CRS code 6369) from December 2010.
+Replaces NAD27 / UTM zone 14N (CRS code 26714). Replaced by Mexico ITRF2008 / UTM zone 14N (CRS code 6369) from December 2010.
 
 Mexico ITRF92 / UTM zone 15N
 ----------------------------
@@ -15777,7 +15777,7 @@ Mexico ITRF92 / UTM zone 15N
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_MEXICO_ITRF92_UTM_ZONE_15N)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4488')
 
-Replaces NAD27 / UTM zone 15N (CRS code 26715).  Replaced by Mexico ITRF2008 / UTM zone 15N (CRS code 6370) from December 2010.
+Replaces NAD27 / UTM zone 15N (CRS code 26715). Replaced by Mexico ITRF2008 / UTM zone 15N (CRS code 6370) from December 2010.
 
 Mexico ITRF92 / UTM zone 16N
 ----------------------------
@@ -15790,7 +15790,7 @@ Mexico ITRF92 / UTM zone 16N
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_MEXICO_ITRF92_UTM_ZONE_16N)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4489')
 
-Replaces NAD27 / UTM zone 16N (CRS code 26716).  Replaced by Mexico ITRF2008 / UTM zone 16N (CRS code 6371) from December 2010.
+Replaces NAD27 / UTM zone 16N (CRS code 26716). Replaced by Mexico ITRF2008 / UTM zone 16N (CRS code 6371) from December 2010.
 
 Mhast (offshore) / UTM zone 32S
 -------------------------------
@@ -17847,7 +17847,7 @@ NAD27 / UTM zone 12N
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_NAD27_UTM_ZONE_12N)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::26712')
 
-In Mexico, replaced by Mexican Datum of 1993 / UTM zone 12N (code 4485).  In Canada and USA, replaced by NAD83 / UTM zone 12N (code 26912).
+In Mexico, replaced by Mexican Datum of 1993 / UTM zone 12N (code 4485). In Canada and USA, replaced by NAD83 / UTM zone 12N (code 26912).
 
 NAD27 / UTM zone 13N
 --------------------
@@ -17873,7 +17873,7 @@ NAD27 / UTM zone 14N
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_NAD27_UTM_ZONE_14N)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::26714')
 
-See NAD27 / BLM 14N (ftUS) (code 32064) for non-metric equivalent used in US Gulf of Mexico.  In Mexico, replaced by Mexicand Datum of 1993 / UTM zone 14N (code 4487). In Canada and USA, replaced by NAD83 / UTM zone 14N (code 26914).
+See NAD27 / BLM 14N (ftUS) (code 32064) for non-metric equivalent used in US Gulf of Mexico. In Mexico, replaced by Mexicand Datum of 1993 / UTM zone 14N (code 4487). In Canada and USA, replaced by NAD83 / UTM zone 14N (code 26914).
 
 NAD27 / UTM zone 15N
 --------------------
@@ -45468,7 +45468,7 @@ POSGAR 2007 / Argentina 1
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_POSGAR_2007_ARGENTINA_1)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5343')
 
-Adopted as official replacement of POSGAR 94 / Argentina 1 in May 2009.   Also replaces de facto use of POSGAR 98 / Argentina 1 as of same date.
+Adopted as official replacement of POSGAR 94 / Argentina 1 in May 2009. Also replaces de facto use of POSGAR 98 / Argentina 1 as of same date.
 
 POSGAR 2007 / Argentina 2
 -------------------------
@@ -45481,7 +45481,7 @@ POSGAR 2007 / Argentina 2
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_POSGAR_2007_ARGENTINA_2)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5344')
 
-Adopted as official replacement of POSGAR 94 / Argentina 2 in May 2009.   Also replaces de facto use of POSGAR 98 / Argentina 2 as of same date.
+Adopted as official replacement of POSGAR 94 / Argentina 2 in May 2009. Also replaces de facto use of POSGAR 98 / Argentina 2 as of same date.
 
 POSGAR 2007 / Argentina 3
 -------------------------
@@ -45494,7 +45494,7 @@ POSGAR 2007 / Argentina 3
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_POSGAR_2007_ARGENTINA_3)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5345')
 
-Adopted as official replacement of POSGAR 94 / Argentina 3 in May 2009.   Also replaces de facto use of POSGAR 98 / Argentina 3 as of same date.
+Adopted as official replacement of POSGAR 94 / Argentina 3 in May 2009. Also replaces de facto use of POSGAR 98 / Argentina 3 as of same date.
 
 POSGAR 2007 / Argentina 4
 -------------------------
@@ -45507,7 +45507,7 @@ POSGAR 2007 / Argentina 4
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_POSGAR_2007_ARGENTINA_4)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5346')
 
-Adopted as official replacement of POSGAR 94 / Argentina 4 in May 2009.   Also replaces de facto use of POSGAR 98 / Argentina 4 as of same date.
+Adopted as official replacement of POSGAR 94 / Argentina 4 in May 2009. Also replaces de facto use of POSGAR 98 / Argentina 4 as of same date.
 
 POSGAR 2007 / Argentina 5
 -------------------------
@@ -45520,7 +45520,7 @@ POSGAR 2007 / Argentina 5
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_POSGAR_2007_ARGENTINA_5)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5347')
 
-Adopted as official replacement of POSGAR 94 / Argentina 5 in May 2009.   Also replaces de facto use of POSGAR 98 / Argentina 5 as of same date.
+Adopted as official replacement of POSGAR 94 / Argentina 5 in May 2009. Also replaces de facto use of POSGAR 98 / Argentina 5 as of same date.
 
 POSGAR 2007 / Argentina 6
 -------------------------
@@ -45533,7 +45533,7 @@ POSGAR 2007 / Argentina 6
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_POSGAR_2007_ARGENTINA_6)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5348')
 
-Adopted as official replacement of POSGAR 94 / Argentina 6 in May 2009.   Also replaces de facto use of POSGAR 98 / Argentina 6 as of same date.
+Adopted as official replacement of POSGAR 94 / Argentina 6 in May 2009. Also replaces de facto use of POSGAR 98 / Argentina 6 as of same date.
 
 POSGAR 2007 / Argentina 7
 -------------------------
@@ -45546,7 +45546,7 @@ POSGAR 2007 / Argentina 7
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_POSGAR_2007_ARGENTINA_7)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5349')
 
-Adopted as official replacement of POSGAR 94 / Argentina 7 in May 2009.   Also replaces de facto use of POSGAR 98 / Argentina 7 as of same date.
+Adopted as official replacement of POSGAR 94 / Argentina 7 in May 2009. Also replaces de facto use of POSGAR 98 / Argentina 7 as of same date.
 
 POSGAR 2007 / CABA 2019
 -----------------------
@@ -45584,7 +45584,7 @@ POSGAR 94 / Argentina 1
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_POSGAR_94_ARGENTINA_1)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22181')
 
-Legally adopted in May 1997. Replaced by POSGAR 98 / Argentina 1 for scientific and many practical purposes until May 2009.  Officially replaced by POSGAR 2007 / Argentina 1 in May 2009.
+Legally adopted in May 1997. Replaced by POSGAR 98 / Argentina 1 for scientific and many practical purposes until May 2009. Officially replaced by POSGAR 2007 / Argentina 1 in May 2009.
 
 POSGAR 94 / Argentina 2
 -----------------------
@@ -45597,7 +45597,7 @@ POSGAR 94 / Argentina 2
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_POSGAR_94_ARGENTINA_2)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22182')
 
-Legally adopted in May 1997. Replaced by POSGAR 98 / Argentina 2 for scientific and many practical purposes until May 2009.  Officially replaced by POSGAR 2007 / Argentina 2 in May 2009.
+Legally adopted in May 1997. Replaced by POSGAR 98 / Argentina 2 for scientific and many practical purposes until May 2009. Officially replaced by POSGAR 2007 / Argentina 2 in May 2009.
 
 POSGAR 94 / Argentina 3
 -----------------------
@@ -45610,7 +45610,7 @@ POSGAR 94 / Argentina 3
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_POSGAR_94_ARGENTINA_3)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22183')
 
-Legally adopted in May 1997. Replaced by POSGAR 98 / Argentina 3 for scientific and many practical purposes until May 2009.  Officially replaced by POSGAR 2007 / Argentina 3 in May 2009.
+Legally adopted in May 1997. Replaced by POSGAR 98 / Argentina 3 for scientific and many practical purposes until May 2009. Officially replaced by POSGAR 2007 / Argentina 3 in May 2009.
 
 POSGAR 94 / Argentina 4
 -----------------------
@@ -45623,7 +45623,7 @@ POSGAR 94 / Argentina 4
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_POSGAR_94_ARGENTINA_4)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22184')
 
-Legally adopted in May 1997. Replaced by POSGAR 98 / Argentina 4 for scientific and many practical purposes until May 2009.  Officially replaced by POSGAR 2007 / Argentina 4 in May 2009.
+Legally adopted in May 1997. Replaced by POSGAR 98 / Argentina 4 for scientific and many practical purposes until May 2009. Officially replaced by POSGAR 2007 / Argentina 4 in May 2009.
 
 POSGAR 94 / Argentina 5
 -----------------------
@@ -45636,7 +45636,7 @@ POSGAR 94 / Argentina 5
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_POSGAR_94_ARGENTINA_5)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22185')
 
-Legally adopted in May 1997. Replaced by POSGAR 98 / Argentina 5 for scientific and many practical purposes until May 2009.  Officially replaced by POSGAR 2007 / Argentina 5 in May 2009.
+Legally adopted in May 1997. Replaced by POSGAR 98 / Argentina 5 for scientific and many practical purposes until May 2009. Officially replaced by POSGAR 2007 / Argentina 5 in May 2009.
 
 POSGAR 94 / Argentina 6
 -----------------------
@@ -45649,7 +45649,7 @@ POSGAR 94 / Argentina 6
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_POSGAR_94_ARGENTINA_6)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22186')
 
-Legally adopted in May 1997. Replaced by POSGAR 98 / Argentina 6 for scientific and many practical purposes until May 2009.  Officially replaced by POSGAR 2007 / Argentina 6 in May 2009.
+Legally adopted in May 1997. Replaced by POSGAR 98 / Argentina 6 for scientific and many practical purposes until May 2009. Officially replaced by POSGAR 2007 / Argentina 6 in May 2009.
 
 POSGAR 94 / Argentina 7
 -----------------------
@@ -45662,7 +45662,7 @@ POSGAR 94 / Argentina 7
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_POSGAR_94_ARGENTINA_7)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22187')
 
-Legally adopted in May 1997. Replaced by POSGAR 98 / Argentina 7 for scientific and many practical purposes until May 2009.  Officially replaced by POSGAR 2007 / Argentina 7 in May 2009.
+Legally adopted in May 1997. Replaced by POSGAR 98 / Argentina 7 for scientific and many practical purposes until May 2009. Officially replaced by POSGAR 2007 / Argentina 7 in May 2009.
 
 POSGAR 98 / Argentina 1
 -----------------------
@@ -45675,7 +45675,7 @@ POSGAR 98 / Argentina 1
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_POSGAR_98_ARGENTINA_1)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22171')
 
-Replaced POSGAR 94 / Argentina 1 for many practical purposes (but not as the legal system) until May 2009.  POSGAR 94 / Argentina 1 was officially replaced by POSGAR 2007 / Argentina 1 in May 2009.
+Replaced POSGAR 94 / Argentina 1 for many practical purposes (but not as the legal system) until May 2009. POSGAR 94 / Argentina 1 was officially replaced by POSGAR 2007 / Argentina 1 in May 2009.
 
 POSGAR 98 / Argentina 2
 -----------------------
@@ -45688,7 +45688,7 @@ POSGAR 98 / Argentina 2
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_POSGAR_98_ARGENTINA_2)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22172')
 
-Replaced POSGAR 94 / Argentina 2 for many practical purposes (but not as the legal system) until May 2009.  POSGAR 94 / Argentina 2 was officially replaced by POSGAR 2007 / Argentina 2 in May 2009.
+Replaced POSGAR 94 / Argentina 2 for many practical purposes (but not as the legal system) until May 2009. POSGAR 94 / Argentina 2 was officially replaced by POSGAR 2007 / Argentina 2 in May 2009.
 
 POSGAR 98 / Argentina 3
 -----------------------
@@ -45701,7 +45701,7 @@ POSGAR 98 / Argentina 3
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_POSGAR_98_ARGENTINA_3)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22173')
 
-Replaced POSGAR 94 / Argentina 3 for many practical purposes (but not as the legal system) until May 2009.  POSGAR 94 / Argentina 3 was officially replaced by POSGAR 2007 / Argentina 3 in May 2009.
+Replaced POSGAR 94 / Argentina 3 for many practical purposes (but not as the legal system) until May 2009. POSGAR 94 / Argentina 3 was officially replaced by POSGAR 2007 / Argentina 3 in May 2009.
 
 POSGAR 98 / Argentina 4
 -----------------------
@@ -45714,7 +45714,7 @@ POSGAR 98 / Argentina 4
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_POSGAR_98_ARGENTINA_4)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22174')
 
-Replaced POSGAR 94 / Argentina 4 for many practical purposes (but not as the legal system) until May 2009.  POSGAR 94 / Argentina 4 was officially replaced by POSGAR 2007 / Argentina 4 in May 2009.
+Replaced POSGAR 94 / Argentina 4 for many practical purposes (but not as the legal system) until May 2009. POSGAR 94 / Argentina 4 was officially replaced by POSGAR 2007 / Argentina 4 in May 2009.
 
 POSGAR 98 / Argentina 5
 -----------------------
@@ -45727,7 +45727,7 @@ POSGAR 98 / Argentina 5
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_POSGAR_98_ARGENTINA_5)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22175')
 
-Replaced POSGAR 94 / Argentina 5 for many practical purposes (but not as the legal system) until May 2009.  POSGAR 94 / Argentina 5 was officially replaced by POSGAR 2007 / Argentina 5 in May 2009.
+Replaced POSGAR 94 / Argentina 5 for many practical purposes (but not as the legal system) until May 2009. POSGAR 94 / Argentina 5 was officially replaced by POSGAR 2007 / Argentina 5 in May 2009.
 
 POSGAR 98 / Argentina 6
 -----------------------
@@ -45740,7 +45740,7 @@ POSGAR 98 / Argentina 6
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_POSGAR_98_ARGENTINA_6)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22176')
 
-Replaced POSGAR 94 / Argentina 6 for many practical purposes (but not as the legal system) until May 2009.  POSGAR 94 / Argentina 6 was officially replaced by POSGAR 2007 / Argentina 6 in May 2009.
+Replaced POSGAR 94 / Argentina 6 for many practical purposes (but not as the legal system) until May 2009. POSGAR 94 / Argentina 6 was officially replaced by POSGAR 2007 / Argentina 6 in May 2009.
 
 POSGAR 98 / Argentina 7
 -----------------------
@@ -45753,7 +45753,7 @@ POSGAR 98 / Argentina 7
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_POSGAR_98_ARGENTINA_7)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22177')
 
-Replaced POSGAR 94 / Argentina 7 for many practical purposes (but not as the legal system) until May 2009.  POSGAR 94 / Argentina 7 was officially replaced by POSGAR 2007 / Argentina 7 in May 2009.
+Replaced POSGAR 94 / Argentina 7 for many practical purposes (but not as the legal system) until May 2009. POSGAR 94 / Argentina 7 was officially replaced by POSGAR 2007 / Argentina 7 in May 2009.
 
 PRS92 / Philippines zone 1
 --------------------------

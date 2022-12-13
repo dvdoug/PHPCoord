@@ -128,7 +128,7 @@ class Geocentric extends CoordinateReferenceSystem
      * Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino;
      * Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle
      * of Man; Vatican City State.
-     * Replaces ETRF97 (code 7928). On the publication of ETRF2005 (code 8397),  the EUREF Technical Working Group
+     * Replaces ETRF97 (code 7928). On the publication of ETRF2005 (code 8397), the EUREF Technical Working Group
      * recommended that ETRF2000 be the realization of ETRS89. ETRF2014 (code 8401) is technically superior to all
      * earlier realizations of ETRS89.
      */
@@ -417,6 +417,14 @@ class Geocentric extends CoordinateReferenceSystem
     public const EPSG_IGS14 = 'urn:ogc:def:crs:EPSG::8227';
 
     /**
+     * IGS20
+     * Extent: World.
+     * Used for products from the International GNSS Service (IGS) from 2022-11-27. Replaces IGb14 (code 9378). For
+     * most practical purposes IGS20 is equivalent to ITRF2020.
+     */
+    public const EPSG_IGS20 = 'urn:ogc:def:crs:EPSG::10176';
+
+    /**
      * IGS97
      * Extent: World.
      * Adopted by the International GNSS Service (IGS) from 2000-06-04 through 2001-12-01. Replaced by IGS00 (CRS code
@@ -443,8 +451,8 @@ class Geocentric extends CoordinateReferenceSystem
     /**
      * IGb14
      * Extent: World.
-     * Used for products from the International GNSS Service (IGS) from 2020-05-17. Replaces IGS14 (code 8227). For
-     * most practical purposes IGb14 is equivalent to ITRF2014.
+     * Used for products from the International GNSS Service (IGS) from 2020-05-17. Replaces IGS14 (code 8227),
+     * replaced by IGS20 (code 10176). For most practical purposes IGb14 is equivalent to ITRF2014.
      */
     public const EPSG_IGB14 = 'urn:ogc:def:crs:EPSG::9378';
 
@@ -951,7 +959,7 @@ class Geocentric extends CoordinateReferenceSystem
     /**
      * POSGAR 2007
      * Extent: Argentina - onshore and offshore.
-     * Adopted as official replacement of POSGAR 94 in May 2009.   Also replaces de facto use of POSGAR 98 as of same
+     * Adopted as official replacement of POSGAR 94 in May 2009. Also replaces de facto use of POSGAR 98 as of same
      * date.
      */
     public const EPSG_POSGAR_2007 = 'urn:ogc:def:crs:EPSG::5341';
@@ -968,7 +976,7 @@ class Geocentric extends CoordinateReferenceSystem
      * POSGAR 98
      * Extent: Argentina - onshore and offshore.
      * Densification in Argentina of SIRGAS 1995. Until May 2009 replaced POSGAR 94 for many practical purposes (but
-     * not as the legal system).  POSGAR 94 was officially replaced by POSGAR 2007 in May 2009.
+     * not as the legal system). POSGAR 94 was officially replaced by POSGAR 2007 in May 2009.
      */
     public const EPSG_POSGAR_98 = 'urn:ogc:def:crs:EPSG::4960';
 
@@ -1436,7 +1444,7 @@ class Geocentric extends CoordinateReferenceSystem
     /**
      * WGS 84 (G1150)
      * Extent: World.
-     * Replaces  WGS 84 (G873) (CRS code 7658) from 2002-01-20. Replaced by WGS 84 (G1674) (CRS code 7662) from
+     * Replaces WGS 84 (G873) (CRS code 7658) from 2002-01-20. Replaced by WGS 84 (G1674) (CRS code 7662) from
      * 2012-02-08.
      */
     public const EPSG_WGS_84_G1150 = 'urn:ogc:def:crs:EPSG::7660';

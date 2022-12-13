@@ -988,7 +988,7 @@ class Vertical extends CoordinateReferenceSystem
      * Kiunga height
      * Extent: Papua New Guinea - onshore south of 5°S and west of 144°E.
      * Kiunga height = WGS 84 ellipsoid height - value of geoid undulation derived by bilinear interpolation of EGM2008
-     * geoid model - 3.0m = EGM2008 height - 3.0m.  See CRS code 3855 and transformation code 3858.
+     * geoid model - 3.0m = EGM2008 height - 3.0m. See CRS code 3855 and transformation code 3858.
      */
     public const EPSG_KIUNGA_HEIGHT = 'urn:ogc:def:crs:EPSG::7652';
 

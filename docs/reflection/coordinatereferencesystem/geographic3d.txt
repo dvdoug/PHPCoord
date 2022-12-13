@@ -226,7 +226,7 @@ ETRF2000
     CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_ETRF2000)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::7931')
 
-Replaces ETRF97 (code 7929). On the publication of ETRF2005 (code 8399),  the EUREF Technical Working Group recommended that ETRF2000 be the realization of ETRS89. ETRF2014 (code 8403) is technically superior to all earlier realizations of ETRS89.
+Replaces ETRF97 (code 7929). On the publication of ETRF2005 (code 8399), the EUREF Technical Working Group recommended that ETRF2000 be the realization of ETRS89. ETRF2014 (code 8403) is technically superior to all earlier realizations of ETRS89.
 
 ETRF2000-PL
 -----------
@@ -698,6 +698,21 @@ IGS14
 
 Used for products from the International GNSS Service (IGS) from 2017-01-29 to 2020-05-16. Replaces IGb08 (code 9016), replaced by IGb14 (code 9379). For most practical purposes IGS14 is equivalent to ITRF2014.
 
+IGS20
+-----
+| Extent: World.
+
+.. code-block:: php
+
+    Geographic3D::fromSRID(Geographic3D::EPSG_IGS20)
+    Geographic3D::fromSRID('urn:ogc:def:crs:EPSG::10177')
+    Geographic::fromSRID(Geographic3D::EPSG_IGS20)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10177')
+    CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_IGS20)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10177')
+
+Used for products from the International GNSS Service (IGS) from 2022-11-27. Replaces IGb14 (code 9379). For most practical purposes IGS20 is equivalent to ITRF2020.
+
 IGS97
 -----
 | Extent: World.
@@ -756,7 +771,7 @@ IGb14
     CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_IGB14)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9379')
 
-Used for products from the International GNSS Service (IGS) from 2020-05-17. Replaces IGS14 (code 9018). For most practical purposes IGb14 is equivalent to ITRF2014.
+Used for products from the International GNSS Service (IGS) from 2020-05-17. Replaces IGS14 (code 9018), replaced by IGS20 (code 10177). For most practical purposes IGb14 is equivalent to ITRF2014.
 
 IRENET95
 --------
@@ -1728,7 +1743,7 @@ POSGAR 2007
     CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_POSGAR_2007)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5342')
 
-Adopted as official replacement of POSGAR 94 in May 2009.   Also replaces de facto use of POSGAR 98 as of same date.
+Adopted as official replacement of POSGAR 94 in May 2009. Also replaces de facto use of POSGAR 98 as of same date.
 
 POSGAR 94
 ---------
@@ -1743,7 +1758,7 @@ POSGAR 94
     CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_POSGAR_94)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4929')
 
-Legally adopted in May 1997. Replaced by POSGAR 98 for scientific and many practical purposes until May 2009.  Officially replaced by POSGAR 2007 in May 2009.
+Legally adopted in May 1997. Replaced by POSGAR 98 for scientific and many practical purposes until May 2009. Officially replaced by POSGAR 2007 in May 2009.
 
 POSGAR 98
 ---------
@@ -1758,7 +1773,7 @@ POSGAR 98
     CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_POSGAR_98)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4961')
 
-Densification in Argentina of SIRGAS 1995. Until May 2009 replaced POSGAR 94 for many practical purposes (but not as the legal system).  POSGAR 94 was officially replaced by POSGAR 2007 in May 2009.
+Densification in Argentina of SIRGAS 1995. Until May 2009 replaced POSGAR 94 for many practical purposes (but not as the legal system). POSGAR 94 was officially replaced by POSGAR 2007 in May 2009.
 
 PRS92
 -----
@@ -2898,7 +2913,7 @@ WGS 84 (G1150)
     CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_WGS_84_G1150)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::7661')
 
-Replaces  WGS 84 (G873) (CRS code 7659) from 2002-01-20. Replaced by WGS 84 (G1674) (CRS code 7663) from 2012-02-08.
+Replaces WGS 84 (G873) (CRS code 7659) from 2002-01-20. Replaced by WGS 84 (G1674) (CRS code 7663) from 2012-02-08.
 
 WGS 84 (G1674)
 --------------

@@ -1525,7 +1525,7 @@ class CRSTransformationsSouthAmerica
             'name' => 'POSGAR 2007 to SIRGAS 2000 (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::5340',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4674',
-            'accuracy' => 1.0,
+            'accuracy' => 0.1,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18031',

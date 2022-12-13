@@ -18,6 +18,20 @@ class CRSTransformationsGlobal
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
             'name' => 'geocentric to geographic3D',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::10176',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10177',
+            'accuracy' => 0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
+            'name' => 'geographic3D to geographic2D',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::10177',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10178',
+            'accuracy' => 0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
+            'name' => 'geocentric to geographic3D',
             'source_crs' => 'urn:ogc:def:crs:EPSG::20039',
             'target_crs' => 'urn:ogc:def:crs:EPSG::20040',
             'accuracy' => 0,
@@ -16410,6 +16424,13 @@ class CRSTransformationsGlobal
             'accuracy' => 0,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10180',
+            'name' => 'IGb14 to IGS20 (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::9378',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10176',
+            'accuracy' => 0.001,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
             'name' => 'geocentric to geographic3D',
             'source_crs' => 'urn:ogc:def:crs:EPSG::9378',
@@ -16709,6 +16730,13 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::9893',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4181',
             'accuracy' => 0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10179',
+            'name' => 'ITRF2020 to IGS20 (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::9988',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10176',
+            'accuracy' => 0.0,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',

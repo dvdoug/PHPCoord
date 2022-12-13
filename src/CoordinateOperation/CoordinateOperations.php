@@ -9732,6 +9732,16 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9815',
             'extent' => ['4669'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::10179' => [
+            'name' => 'ITRF2020 to IGS20 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1065',
+            'extent' => ['1262'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10180' => [
+            'name' => 'IGb14 to IGS20 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1053',
+            'extent' => ['1262'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::10201' => [
             'name' => 'Arizona Coordinate System East zone',
             'method' => 'urn:ogc:def:method:EPSG::9807',

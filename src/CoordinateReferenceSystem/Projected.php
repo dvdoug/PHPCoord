@@ -7626,7 +7626,7 @@ class Projected extends CoordinateReferenceSystem
      * Korea 2000 / Central Belt
      * Extent: Republic of Korea (South Korea) - between 126°E and 128°E - mainland and nearshore.
      * Introduced 2003, withdrawn 2009-12-31. Replaces Korean 1985 / Central Belt (CRS code 2097) and Korean 1985 /
-     * Modified Central Belt (CRS code 5174).  Replaced by Korea 2000 / Central Belt 2010 (CRS code 5186).
+     * Modified Central Belt (CRS code 5174). Replaced by Korea 2000 / Central Belt 2010 (CRS code 5186).
      */
     public const EPSG_KOREA_2000_CENTRAL_BELT = 'urn:ogc:def:crs:EPSG::5181';
 
@@ -7643,7 +7643,7 @@ class Projected extends CoordinateReferenceSystem
      * Korea 2000 / Central Belt Jeju
      * Extent: Republic of Korea (South Korea) - between 126°E and 128°E - Jeju island onshore.
      * Introduced 2003, withdrawn 2009-12-31. Replaces Korean 1985 / Central Belt Jeju (CRS code 5168) and Korean 1985
-     * / Modified Central Belt Jeju (CRS code 5175).  Replaced by Korea 2000 / Central Belt 2010 (CRS code 5186).
+     * / Modified Central Belt Jeju (CRS code 5175). Replaced by Korea 2000 / Central Belt 2010 (CRS code 5186).
      */
     public const EPSG_KOREA_2000_CENTRAL_BELT_JEJU = 'urn:ogc:def:crs:EPSG::5182';
 
@@ -7651,7 +7651,7 @@ class Projected extends CoordinateReferenceSystem
      * Korea 2000 / East Belt
      * Extent: Republic of Korea (South Korea) - onshore east of 128°E.
      * Introduced 2003, withdrawn 2009-12-31. Replaces Korean 1985 / East Belt (CRS code 2096) and Korean 1985 /
-     * Modified East Belt (CRS code 5176).  Replaced by Korea 2000 / East Belt 2010 (CRS code 5187).
+     * Modified East Belt (CRS code 5176). Replaced by Korea 2000 / East Belt 2010 (CRS code 5187).
      */
     public const EPSG_KOREA_2000_EAST_BELT = 'urn:ogc:def:crs:EPSG::5183';
 
@@ -7667,7 +7667,7 @@ class Projected extends CoordinateReferenceSystem
      * Korea 2000 / East Sea Belt
      * Extent: Republic of Korea (South Korea) - onshore between 130°E and 132°E.
      * Introduced 2003, withdrawn 2009-12-31. Replaces Korean 1985 / East Sea Belt (CRS code 5167) and Korean 1985 /
-     * Modified East Sea Belt (CRS code 5177).  Replaced by Korea 2000 / East Sea Belt 2010 (CRS code 5188).
+     * Modified East Sea Belt (CRS code 5177). Replaced by Korea 2000 / East Sea Belt 2010 (CRS code 5188).
      */
     public const EPSG_KOREA_2000_EAST_SEA_BELT = 'urn:ogc:def:crs:EPSG::5184';
 
@@ -7690,7 +7690,7 @@ class Projected extends CoordinateReferenceSystem
      * Korea 2000 / West Belt
      * Extent: Republic of Korea (South Korea) - onshore between 124°E and 126°E.
      * Introduced 2003, withdrawn 2009-12-31. Replaces Korean 1985 / West Belt (CRS code 2098) and Korean 1985 /
-     * Modified West Belt (CRS code 5173).  Replaced by Korea 2000 / West Belt 2010 (CRS code 5185) .
+     * Modified West Belt (CRS code 5173). Replaced by Korea 2000 / West Belt 2010 (CRS code 5185).
      */
     public const EPSG_KOREA_2000_WEST_BELT = 'urn:ogc:def:crs:EPSG::5180';
 
@@ -8907,7 +8907,7 @@ class Projected extends CoordinateReferenceSystem
     /**
      * Mexico ITRF92 / UTM zone 13N
      * Extent: Mexico between 108°W and 102°W, onshore and offshore.
-     * Replaces NAD27 / UTM zone 13N  (CRS code 26713). Replaced by Mexico ITRF2008 / UTM zone 13N (CRS code 6368) from
+     * Replaces NAD27 / UTM zone 13N (CRS code 26713). Replaced by Mexico ITRF2008 / UTM zone 13N (CRS code 6368) from
      * December 2010.
      */
     public const EPSG_MEXICO_ITRF92_UTM_ZONE_13N = 'urn:ogc:def:crs:EPSG::4486';
@@ -8915,15 +8915,15 @@ class Projected extends CoordinateReferenceSystem
     /**
      * Mexico ITRF92 / UTM zone 14N
      * Extent: Mexico between 102°W and 96°W, onshore and offshore.
-     * Replaces NAD27 / UTM zone 14N  (CRS code 26714).  Replaced by Mexico ITRF2008 / UTM zone 14N (CRS code 6369)
-     * from December 2010.
+     * Replaces NAD27 / UTM zone 14N (CRS code 26714). Replaced by Mexico ITRF2008 / UTM zone 14N (CRS code 6369) from
+     * December 2010.
      */
     public const EPSG_MEXICO_ITRF92_UTM_ZONE_14N = 'urn:ogc:def:crs:EPSG::4487';
 
     /**
      * Mexico ITRF92 / UTM zone 15N
      * Extent: Mexico between 96°W and 90°W, onshore and offshore.
-     * Replaces NAD27 / UTM zone 15N (CRS code 26715).  Replaced by Mexico ITRF2008 / UTM zone 15N (CRS code 6370) from
+     * Replaces NAD27 / UTM zone 15N (CRS code 26715). Replaced by Mexico ITRF2008 / UTM zone 15N (CRS code 6370) from
      * December 2010.
      */
     public const EPSG_MEXICO_ITRF92_UTM_ZONE_15N = 'urn:ogc:def:crs:EPSG::4488';
@@ -8931,7 +8931,7 @@ class Projected extends CoordinateReferenceSystem
     /**
      * Mexico ITRF92 / UTM zone 16N
      * Extent: Mexico east of 90°W, onshore and offshore.
-     * Replaces NAD27 / UTM zone 16N (CRS code 26716).  Replaced by Mexico ITRF2008 / UTM zone 16N (CRS code 6371) from
+     * Replaces NAD27 / UTM zone 16N (CRS code 26716). Replaced by Mexico ITRF2008 / UTM zone 16N (CRS code 6371) from
      * December 2010.
      */
     public const EPSG_MEXICO_ITRF92_UTM_ZONE_16N = 'urn:ogc:def:crs:EPSG::4489';
@@ -10248,7 +10248,7 @@ class Projected extends CoordinateReferenceSystem
      * Extent: North America - between 114°W and 108°W. Canada - Alberta; Northwest Territories; Nunavut;
      * Saskatchewan. Mexico. United States (USA) - Arizona; Colorado; Idaho; Montana; New Mexico; Utah; Wyoming.
      * Onshore for Mexican Pacific and Canadian Arctic coasts.
-     * In Mexico, replaced by Mexican Datum of 1993 / UTM zone 12N (code 4485).  In Canada and USA, replaced by NAD83 /
+     * In Mexico, replaced by Mexican Datum of 1993 / UTM zone 12N (code 4485). In Canada and USA, replaced by NAD83 /
      * UTM zone 12N (code 26912).
      */
     public const EPSG_NAD27_UTM_ZONE_12N = 'urn:ogc:def:crs:EPSG::26712';
@@ -10269,9 +10269,9 @@ class Projected extends CoordinateReferenceSystem
      * States (USA) - Iowa; Kansas; Minnesota; Nebraska; North Dakota; Oklahoma; South Dakota; Texas. Onshore for
      * Mexican Pacific coast and Canadian Arctic but onshore and offshore for US & Mexico Gulf of Mexico and Caribbean
      * coasts.
-     * See NAD27 / BLM 14N (ftUS) (code 32064) for non-metric equivalent used in US Gulf of Mexico.  In Mexico,
-     * replaced by Mexicand Datum of 1993 / UTM zone 14N (code 4487). In Canada and USA, replaced by NAD83 / UTM zone
-     * 14N (code 26914).
+     * See NAD27 / BLM 14N (ftUS) (code 32064) for non-metric equivalent used in US Gulf of Mexico. In Mexico, replaced
+     * by Mexicand Datum of 1993 / UTM zone 14N (code 4487). In Canada and USA, replaced by NAD83 / UTM zone 14N (code
+     * 26914).
      */
     public const EPSG_NAD27_UTM_ZONE_14N = 'urn:ogc:def:crs:EPSG::26714';
 
@@ -28757,56 +28757,56 @@ class Projected extends CoordinateReferenceSystem
     /**
      * POSGAR 2007 / Argentina 1
      * Extent: Argentina - west of 70°30'W.
-     * Adopted as official replacement of POSGAR 94 / Argentina 1 in May 2009.   Also replaces de facto use of POSGAR
-     * 98 / Argentina 1 as of same date.
+     * Adopted as official replacement of POSGAR 94 / Argentina 1 in May 2009. Also replaces de facto use of POSGAR 98
+     * / Argentina 1 as of same date.
      */
     public const EPSG_POSGAR_2007_ARGENTINA_1 = 'urn:ogc:def:crs:EPSG::5343';
 
     /**
      * POSGAR 2007 / Argentina 2
      * Extent: Argentina - between 70°30'W and 67°30'W, onshore.
-     * Adopted as official replacement of POSGAR 94 / Argentina 2 in May 2009.   Also replaces de facto use of POSGAR
-     * 98 / Argentina 2 as of same date.
+     * Adopted as official replacement of POSGAR 94 / Argentina 2 in May 2009. Also replaces de facto use of POSGAR 98
+     * / Argentina 2 as of same date.
      */
     public const EPSG_POSGAR_2007_ARGENTINA_2 = 'urn:ogc:def:crs:EPSG::5344';
 
     /**
      * POSGAR 2007 / Argentina 3
      * Extent: Argentina - between 67°30'W and 64°30'W, onshore.
-     * Adopted as official replacement of POSGAR 94 / Argentina 3 in May 2009.   Also replaces de facto use of POSGAR
-     * 98 / Argentina 3 as of same date.
+     * Adopted as official replacement of POSGAR 94 / Argentina 3 in May 2009. Also replaces de facto use of POSGAR 98
+     * / Argentina 3 as of same date.
      */
     public const EPSG_POSGAR_2007_ARGENTINA_3 = 'urn:ogc:def:crs:EPSG::5345';
 
     /**
      * POSGAR 2007 / Argentina 4
      * Extent: Argentina - between 64°30'W and 61°30'W, onshore.
-     * Adopted as official replacement of POSGAR 94 / Argentina 4 in May 2009.   Also replaces de facto use of POSGAR
-     * 98 / Argentina 4 as of same date.
+     * Adopted as official replacement of POSGAR 94 / Argentina 4 in May 2009. Also replaces de facto use of POSGAR 98
+     * / Argentina 4 as of same date.
      */
     public const EPSG_POSGAR_2007_ARGENTINA_4 = 'urn:ogc:def:crs:EPSG::5346';
 
     /**
      * POSGAR 2007 / Argentina 5
      * Extent: Argentina - between 61°30'W and 58°30'W onshore.
-     * Adopted as official replacement of POSGAR 94 / Argentina 5 in May 2009.   Also replaces de facto use of POSGAR
-     * 98 / Argentina 5 as of same date.
+     * Adopted as official replacement of POSGAR 94 / Argentina 5 in May 2009. Also replaces de facto use of POSGAR 98
+     * / Argentina 5 as of same date.
      */
     public const EPSG_POSGAR_2007_ARGENTINA_5 = 'urn:ogc:def:crs:EPSG::5347';
 
     /**
      * POSGAR 2007 / Argentina 6
      * Extent: Argentina - between 58°30'W and 55°30'W, onshore.
-     * Adopted as official replacement of POSGAR 94 / Argentina 6 in May 2009.   Also replaces de facto use of POSGAR
-     * 98 / Argentina 6 as of same date.
+     * Adopted as official replacement of POSGAR 94 / Argentina 6 in May 2009. Also replaces de facto use of POSGAR 98
+     * / Argentina 6 as of same date.
      */
     public const EPSG_POSGAR_2007_ARGENTINA_6 = 'urn:ogc:def:crs:EPSG::5348';
 
     /**
      * POSGAR 2007 / Argentina 7
      * Extent: Argentina - east of 55°30'W, onshore.
-     * Adopted as official replacement of POSGAR 94 / Argentina 7 in May 2009.   Also replaces de facto use of POSGAR
-     * 98 / Argentina 7 as of same date.
+     * Adopted as official replacement of POSGAR 94 / Argentina 7 in May 2009. Also replaces de facto use of POSGAR 98
+     * / Argentina 7 as of same date.
      */
     public const EPSG_POSGAR_2007_ARGENTINA_7 = 'urn:ogc:def:crs:EPSG::5349';
 
@@ -28827,7 +28827,7 @@ class Projected extends CoordinateReferenceSystem
      * POSGAR 94 / Argentina 1
      * Extent: Argentina - west of 70°30'W.
      * Legally adopted in May 1997. Replaced by POSGAR 98 / Argentina 1 for scientific and many practical purposes
-     * until May 2009.  Officially replaced by POSGAR 2007 / Argentina 1 in May 2009.
+     * until May 2009. Officially replaced by POSGAR 2007 / Argentina 1 in May 2009.
      */
     public const EPSG_POSGAR_94_ARGENTINA_1 = 'urn:ogc:def:crs:EPSG::22181';
 
@@ -28835,7 +28835,7 @@ class Projected extends CoordinateReferenceSystem
      * POSGAR 94 / Argentina 2
      * Extent: Argentina - between 70°30'W and 67°30'W, onshore.
      * Legally adopted in May 1997. Replaced by POSGAR 98 / Argentina 2 for scientific and many practical purposes
-     * until May 2009.  Officially replaced by POSGAR 2007 / Argentina 2 in May 2009.
+     * until May 2009. Officially replaced by POSGAR 2007 / Argentina 2 in May 2009.
      */
     public const EPSG_POSGAR_94_ARGENTINA_2 = 'urn:ogc:def:crs:EPSG::22182';
 
@@ -28843,7 +28843,7 @@ class Projected extends CoordinateReferenceSystem
      * POSGAR 94 / Argentina 3
      * Extent: Argentina - between 67°30'W and 64°30'W, onshore.
      * Legally adopted in May 1997. Replaced by POSGAR 98 / Argentina 3 for scientific and many practical purposes
-     * until May 2009.  Officially replaced by POSGAR 2007 / Argentina 3 in May 2009.
+     * until May 2009. Officially replaced by POSGAR 2007 / Argentina 3 in May 2009.
      */
     public const EPSG_POSGAR_94_ARGENTINA_3 = 'urn:ogc:def:crs:EPSG::22183';
 
@@ -28851,7 +28851,7 @@ class Projected extends CoordinateReferenceSystem
      * POSGAR 94 / Argentina 4
      * Extent: Argentina - between 64°30'W and 61°30'W, onshore.
      * Legally adopted in May 1997. Replaced by POSGAR 98 / Argentina 4 for scientific and many practical purposes
-     * until May 2009.  Officially replaced by POSGAR 2007 / Argentina 4 in May 2009.
+     * until May 2009. Officially replaced by POSGAR 2007 / Argentina 4 in May 2009.
      */
     public const EPSG_POSGAR_94_ARGENTINA_4 = 'urn:ogc:def:crs:EPSG::22184';
 
@@ -28859,7 +28859,7 @@ class Projected extends CoordinateReferenceSystem
      * POSGAR 94 / Argentina 5
      * Extent: Argentina - between 61°30'W and 58°30'W onshore.
      * Legally adopted in May 1997. Replaced by POSGAR 98 / Argentina 5 for scientific and many practical purposes
-     * until May 2009.  Officially replaced by POSGAR 2007 / Argentina 5 in May 2009.
+     * until May 2009. Officially replaced by POSGAR 2007 / Argentina 5 in May 2009.
      */
     public const EPSG_POSGAR_94_ARGENTINA_5 = 'urn:ogc:def:crs:EPSG::22185';
 
@@ -28867,7 +28867,7 @@ class Projected extends CoordinateReferenceSystem
      * POSGAR 94 / Argentina 6
      * Extent: Argentina - between 58°30'W and 55°30'W, onshore.
      * Legally adopted in May 1997. Replaced by POSGAR 98 / Argentina 6 for scientific and many practical purposes
-     * until May 2009.  Officially replaced by POSGAR 2007 / Argentina 6 in May 2009.
+     * until May 2009. Officially replaced by POSGAR 2007 / Argentina 6 in May 2009.
      */
     public const EPSG_POSGAR_94_ARGENTINA_6 = 'urn:ogc:def:crs:EPSG::22186';
 
@@ -28875,7 +28875,7 @@ class Projected extends CoordinateReferenceSystem
      * POSGAR 94 / Argentina 7
      * Extent: Argentina - east of 55°30'W, onshore.
      * Legally adopted in May 1997. Replaced by POSGAR 98 / Argentina 7 for scientific and many practical purposes
-     * until May 2009.  Officially replaced by POSGAR 2007 / Argentina 7 in May 2009.
+     * until May 2009. Officially replaced by POSGAR 2007 / Argentina 7 in May 2009.
      */
     public const EPSG_POSGAR_94_ARGENTINA_7 = 'urn:ogc:def:crs:EPSG::22187';
 
