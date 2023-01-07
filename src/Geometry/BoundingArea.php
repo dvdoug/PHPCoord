@@ -43,6 +43,8 @@ class BoundingArea
 
     protected function __construct(array $vertices, string $region)
     {
+        // put largest polygon (outer ring size) first
+        usort($vertices, fn(array $polygonA, array $polygonB) => count($polygonB[0]) <=> count($polygonA[0]));
         $this->vertices = $vertices;
         $this->region = $region;
     }
