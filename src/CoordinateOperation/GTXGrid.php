@@ -48,6 +48,10 @@ class GTXGrid extends GeographicGeoidHeightGrid
      */
     public function getValues($x, $y): array
     {
+        if ($x < $this->startX) { // normalise if necessary
+            $x += 360;
+        }
+
         $shift = $this->interpolate($x, $y)[0];
 
         // These are in millimeters for some reason... :/
