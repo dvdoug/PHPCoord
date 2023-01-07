@@ -14,7 +14,6 @@ urn:ogc:def:coordinateOperation:EPSG::8047,"ED50 to WGS 84 (15)",urn:ogc:def:crs
 urn:ogc:def:coordinateOperation:EPSG::8569,"ED50 to WGS 84 (21)",urn:ogc:def:crs:EPSG::4230,urn:ogc:def:crs:EPSG::4326,2332|2332,1
 urn:ogc:def:coordinateOperation:EPSG::8653,"ED50 to WGS 84 (14)",urn:ogc:def:crs:EPSG::4230,urn:ogc:def:crs:EPSG::4326,2330|2330,1
 urn:ogc:def:coordinateOperation:EPSG::8585,"NAD27 to WGS 84 (36)",urn:ogc:def:crs:EPSG::4267,urn:ogc:def:crs:EPSG::4326,2376|2376,1
-urn:ogc:def:coordinateOperation:EPSG::8647,"NAD27 to WGS 84 (78)",urn:ogc:def:crs:EPSG::4267,urn:ogc:def:crs:EPSG::4326,2831|2831|2831,1
 urn:ogc:def:coordinateOperation:EPSG::9104,"NAD27 to ITRF2014 (2)",urn:ogc:def:crs:EPSG::4267,urn:ogc:def:crs:EPSG::7789,3357|3357|3357|3357|3357|3357|3357,1
 urn:ogc:def:coordinateOperation:EPSG::8650,"Palestine 1923 to WGS 84 (2)",urn:ogc:def:crs:EPSG::4281,urn:ogc:def:crs:EPSG::4326,2603|2603,1
 urn:ogc:def:coordinateOperation:EPSG::9687,"GDA94 to WGS 84 (G1762) (2)",urn:ogc:def:crs:EPSG::4283,urn:ogc:def:crs:EPSG::9057,2575|2575,1
