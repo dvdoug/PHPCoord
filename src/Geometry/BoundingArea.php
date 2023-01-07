@@ -9,16 +9,19 @@ declare(strict_types=1);
 namespace PHPCoord\Geometry;
 
 use PHPCoord\CoordinateOperation\GeographicValue;
+use PHPCoord\Datum\Datum;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPCoord\UnitOfMeasure\Angle\Degree;
 
 use function array_map;
-use function array_merge;
 use function array_unique;
 use function assert;
 use function class_exists;
 use function count;
 use function implode;
+use function usort;
+use function in_array;
+use function array_keys;
 
 class BoundingArea
 {
@@ -44,7 +47,7 @@ class BoundingArea
     protected function __construct(array $vertices, string $region)
     {
         // put largest polygon (outer ring size) first
-        usort($vertices, fn(array $polygonA, array $polygonB) => count($polygonB[0]) <=> count($polygonA[0]));
+        usort($vertices, fn (array $polygonA, array $polygonB) => count($polygonB[0]) <=> count($polygonA[0]));
         $this->vertices = $vertices;
         $this->region = $region;
     }
@@ -89,6 +92,10 @@ class BoundingArea
             assert(count($regions) === 1);
 
             $extentData = self::createFromArray($extents, $regions[0]);
+
+            if (in_array(1352, $extentCodes)) {
+                $extentData->pointInside = [new Degree(60.202778), new Degree(11.083889)];
+            }
 
             self::$cachedObjects[$cacheKey] = $extentData;
         }
@@ -166,7 +173,14 @@ class BoundingArea
     public function getPointInside(): array
     {
         if (!$this->pointInside) {
-            $this->pointInside = $this->getCentre(0); // any polygon will do, use the first
+            foreach (array_keys($this->vertices) as $polygonId) {
+                $point = $this->getCentre($polygonId);
+                $this->pointInside = $point;
+                if ($this->containsPoint(new GeographicValue($point[0], $point[1], null, Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_ENSEMBLE)))) {
+                    $this->pointInside = $point;
+                    break;
+                }
+            }
         }
 
         return $this->pointInside;
