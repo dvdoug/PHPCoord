@@ -131,7 +131,7 @@ class BoundingArea
         foreach ($pointsToCheck as $pointToCheck) {
             [$x, $y] = $pointToCheck;
             foreach ($this->vertices as $polygon) {
-                $vertices = array_merge(...$polygon);
+                $vertices = $polygon[0]; // this algo works on simple polygons (no holes)
 
                 $n = count($vertices);
                 $inside = false;
