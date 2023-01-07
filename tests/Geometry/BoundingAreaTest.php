@@ -12,9 +12,12 @@ use PHPCoord\CoordinateOperation\GeographicValue;
 use PHPCoord\Datum\Datum;
 use PHPCoord\Geometry\Extents\BoundingBoxOnly\Extent2157;
 use PHPCoord\Geometry\Extents\BoundingBoxOnly\Extent2706;
+use PHPCoord\Geometry\Extents\Extent1275;
 use PHPCoord\Geometry\Extents\Extent3914;
 use PHPCoord\UnitOfMeasure\Angle\Degree;
 use PHPUnit\Framework\TestCase;
+
+use function class_exists;
 
 class BoundingAreaTest extends TestCase
 {
@@ -81,7 +84,7 @@ class BoundingAreaTest extends TestCase
         $polygon = BoundingArea::createFromArray((new Extent3914())(), RegionMap::REGION_GLOBAL);
         self::assertFalse($polygon->containsPoint(new GeographicValue(new Degree(41), new Degree(8.4), null, Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_ENSEMBLE))));
         self::assertTrue($polygon->containsPoint(new GeographicValue(new Degree(42), new Degree(8.4), null, Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_ENSEMBLE))));
-        self::assertFalse($polygon->containsPoint(new GeographicValue(new Degree(42), new Degree(8.6), null, Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_ENSEMBLE))));
+        self::assertFalse($polygon->containsPoint(new GeographicValue(new Degree(42), new Degree(8.8), null, Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_ENSEMBLE))));
         self::assertTrue($polygon->containsPoint(new GeographicValue(new Degree(42), new Degree(10.0), null, Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_ENSEMBLE))));
     }
 
@@ -97,5 +100,13 @@ class BoundingAreaTest extends TestCase
         $polygon = BoundingArea::createFromArray((new Extent2706())(), RegionMap::REGION_EUROPE);
         self::assertTrue($polygon->containsPoint(new GeographicValue(new Degree(65), new Degree(181), null, Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_ENSEMBLE))));
         self::assertTrue($polygon->containsPoint(new GeographicValue(new Degree(65), new Degree(-179), null, Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_ENSEMBLE))));
+    }
+
+    public function testNetherlandsBufferedCorrectly(): void
+    {
+        if (class_exists(Extent1275::class)) {
+            $polygon = BoundingArea::createFromArray((new Extent1275())(), RegionMap::REGION_EUROPE);
+            self::assertTrue($polygon->containsPoint(new GeographicValue(new Degree(50.965613067768), new Degree(5.8249181759236), null, Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_ENSEMBLE))));
+        }
     }
 }

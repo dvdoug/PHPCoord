@@ -19,5 +19,6 @@ require __DIR__ . '/../../../vendor/autoload.php';
  */
 $importer = new EPSGImporter();
 echo '--CREATING SQLITE DB--' . PHP_EOL;
-$importer->createSQLiteDB();
+$importer->dataFromSQLFiles();
+$importer->dataFromGeoRepository();
 echo '--IMPORT COMPLETE--' . PHP_EOL;

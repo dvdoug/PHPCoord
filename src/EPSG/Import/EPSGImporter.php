@@ -15,9 +15,12 @@ use function file_get_contents;
 use function str_starts_with;
 use function substr;
 use function unlink;
+use function sleep;
 
 use const SQLITE3_OPEN_CREATE;
 use const SQLITE3_OPEN_READWRITE;
+use const SQLITE3_OPEN_READONLY;
+use const SQLITE3_ASSOC;
 
 class EPSGImporter
 {
@@ -25,12 +28,15 @@ class EPSGImporter
 
     private const BOM = "\xEF\xBB\xBF";
 
+    private const BUFFER_THRESHOLD = 200; // rough guess at where map maker got bored adding vertices for complex shapes
+    private const BUFFER_SIZE = 0.1; // approx 10km
+
     public function __construct()
     {
         $this->resourceDir = __DIR__ . '/../../../resources';
     }
 
-    public function createSQLiteDB(): void
+    public function dataFromSQLFiles(): void
     {
         // remove old file if any
         if (file_exists($this->resourceDir . '/epsg/epsg.sqlite')) {
@@ -43,7 +49,6 @@ class EPSGImporter
         );
 
         $sqlite->enableExceptions(true);
-        $sqlite->exec('PRAGMA journal_mode=WAL'); // WAL is faster
 
         $tableSchema = file_get_contents($this->resourceDir . '/epsg/PostgreSQL_Table_Script.sql');
         if (str_starts_with($tableSchema, self::BOM)) {
@@ -116,5 +121,60 @@ class EPSGImporter
 
         $sqlite->exec('VACUUM');
         $sqlite->close();
+    }
+
+    public function dataFromGeoRepository(): void
+    {
+        if (!file_exists($this->resourceDir . '/epsg/extents.sqlite')) {
+            $extentDB = new SQLite3(
+                $this->resourceDir . '/epsg/extents.sqlite',
+                SQLITE3_OPEN_READWRITE | SQLITE3_OPEN_CREATE
+            );
+
+            $extentDB->exec('CREATE TABLE extent(extent_code INTEGER PRIMARY KEY, original TEXT, buffered TEXT, revision_date DATE)');
+        } else {
+            $extentDB = new SQLite3(
+                $this->resourceDir . '/epsg/extents.sqlite',
+                SQLITE3_OPEN_READWRITE
+            );
+        }
+        $extentDB->enableExceptions(true);
+        $extentDB->loadExtension('mod_spatialite.so');
+
+        $dataDB = new SQLite3(
+            $this->resourceDir . '/epsg/epsg.sqlite',
+            SQLITE3_OPEN_READONLY
+        );
+        $dataDB->enableExceptions(true);
+
+        $extents = $dataDB->query('SELECT extent_code, extent_name, revision_date FROM epsg_extent e WHERE deprecated = 0');
+
+        while ($extentMetaData = $extents->fetchArray(SQLITE3_ASSOC)) {
+            $existingExtentSQL = "
+            SELECT extent_code
+            FROM extent
+            WHERE extent_code = {$extentMetaData['extent_code']}
+              AND revision_date = '{$extentMetaData['revision_date']}'
+            ";
+            $existingExtent = $extentDB->querySingle($existingExtentSQL);
+
+            if (!$existingExtent) {
+                echo $extentMetaData['extent_code'] . "\n";
+                $geoJson = file_get_contents("https://apps.epsg.org/api/v1/Extent/{$extentMetaData['extent_code']}/polygon/");
+                $upsertSQL = "
+                    INSERT INTO extent (extent_code, original, buffered, revision_date)
+                    VALUES ({$extentMetaData['extent_code']}, '{$geoJson}', NULL, '{$extentMetaData['revision_date']}')
+                    ON CONFLICT(extent_code) DO UPDATE SET original = excluded.original, revision_date=excluded.revision_date, buffered = excluded.buffered
+                ";
+                $extentDB->exec($upsertSQL);
+                sleep(2);
+            }
+        }
+
+        $extentDB->exec('UPDATE extent SET buffered = CASE WHEN ST_NPoints(GeomFromGeoJSON(original)) > ' . self::BUFFER_THRESHOLD . ' THEN AsGeoJSON(ST_Buffer(GeomFromGeoJSON(original), ' . self::BUFFER_SIZE . ')) ELSE original END WHERE buffered IS NULL');
+
+        $extentDB->exec('VACUUM');
+        $extentDB->close();
+        $dataDB->close();
     }
 }

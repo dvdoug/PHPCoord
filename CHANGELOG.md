@@ -3,6 +3,8 @@
 ## [Unreleased]
 ### Changed
 - Updates to data for IGS, Japan and UK
+### Fixed
+- Improved handling of extent polygon buffering involving complex shapes (e.g. Netherlands)
 
 ## [5.1.0] - 2022-11-10
 ### Added

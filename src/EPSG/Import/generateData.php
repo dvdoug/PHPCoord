@@ -9,25 +9,26 @@ declare(strict_types=1);
 namespace PHPCoord;
 
 use PHPCoord\EPSG\Import\EPSGCodegenFromDataImport;
-use PHPCoord\EPSG\Import\EPSGCodegenFromGeoRepository;
+
+use function ini_set;
 
 use const PHP_EOL;
 
+ini_set('memory_limit', '-1');
+
 require __DIR__ . '/../../../vendor/autoload.php';
 
-$fileImporter = new EPSGCodegenFromDataImport();
-$webImporter = new EPSGCodegenFromGeoRepository($fileImporter->getBlacklistedOperations());
+$importer = new EPSGCodegenFromDataImport();
 echo '--PERFORMING CODEGEN--' . PHP_EOL;
 
-$webImporter->generateExtents();
-
-$fileImporter->generateDataUnitsOfMeasure();
-$fileImporter->generateDataPrimeMeridians();
-$fileImporter->generateDataEllipsoids();
-$fileImporter->generateDataDatums();
-$fileImporter->generateDataCoordinateSystems();
-$fileImporter->generateDataCoordinateReferenceSystems();
-$fileImporter->generateDataCoordinateOperationMethods();
-$fileImporter->generateDataCoordinateOperations();
+$importer->generateDataUnitsOfMeasure();
+$importer->generateDataPrimeMeridians();
+$importer->generateDataEllipsoids();
+$importer->generateDataDatums();
+$importer->generateDataCoordinateSystems();
+$importer->generateDataCoordinateReferenceSystems();
+$importer->generateDataCoordinateOperationMethods();
+$importer->generateDataCoordinateOperations();
+$importer->generateExtents();
 
 echo '--CODEGEN COMPLETE--' . PHP_EOL;
