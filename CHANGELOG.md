@@ -1,10 +1,13 @@
 # Changelog
 
 ## [Unreleased]
+
+## [5.2.0] - 2023-01-08
 ### Changed
 - Updates to data for IGS, Japan and UK
 ### Fixed
 - Improved handling of extent polygon buffering involving complex shapes (e.g. Netherlands)
+- Fixed longitude wraparound issue with GTX grids
 
 ## [5.1.0] - 2022-11-10
 ### Added
@@ -246,8 +249,9 @@ Initial release of this fork (based off of v2.3 of original)
  - Eastings and northings are rounded to 1m, and lat/long to 5dp (approx 1m) to avoid any misconceptions that precision is the same thing as accuracy.
  - When calculating surface distances, a more accurate mean radius is now used rather than that derived from historical definitions of a nautical mile
 
-[Unreleased]: https://github.com/dvdoug/PHPCoord/compare/v5.1.0...HEAD
+[Unreleased]: https://github.com/dvdoug/PHPCoord/compare/v5.2.0...HEAD
 
+[5.2.0]: https://github.com/dvdoug/PHPCoord/compare/v5.1.0...v5.2.0
 [5.1.0]: https://github.com/dvdoug/PHPCoord/compare/v5.0.1...v5.1.0
 [5.0.1]: https://github.com/dvdoug/PHPCoord/compare/v5.0.0...v5.0.1
 [5.0.0]: https://github.com/dvdoug/PHPCoord/compare/v4.6.0...v5.0.0
