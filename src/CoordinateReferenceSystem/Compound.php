@@ -57,11 +57,23 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_CIGD11_PLUS_LCVD61_HEIGHT_FT = 'urn:ogc:def:crs:EPSG::9504';
 
     /**
+     * CNH22 Grid + ODN height
+     * Extent: United Kingdom (UK) - on or related to the rail route from Crewe via Chester to Holyhead.
+     */
+    public const EPSG_CNH22_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::10195';
+
+    /**
      * CR-SIRGAS / CRTM05 + DACR52 height
      * Extent: Costa Rica - onshore.
      * With geoid model and gravity, part of official national dynamic geodetic framework from April 2018.
      */
     public const EPSG_CR_SIRGAS_CRTM05_PLUS_DACR52_HEIGHT = 'urn:ogc:def:crs:EPSG::8912';
+
+    /**
+     * CWS13 Grid + ODN height
+     * Extent: United Kingdom (UK) - on or related to the rail route from from Chester via Wrexham to Shrewsbury.
+     */
+    public const EPSG_CWS13_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::10200';
 
     /**
      * DB_REF / 3-degree Gauss-Kruger zone 2 (E-N) + DHHN92 height
@@ -153,6 +165,18 @@ class Compound extends CoordinateReferenceSystem
      * Replaces DB_REF2003 zone 5 (compound CRS code 9931).
      */
     public const EPSG_DB_REF2016_ZONE_5 = 'urn:ogc:def:crs:EPSG::9935';
+
+    /**
+     * DIBA15 Grid + ODN height
+     * Extent: United Kingdom (UK) - on or related to the rail route from Didcot to Banbury.
+     */
+    public const EPSG_DIBA15_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::10208';
+
+    /**
+     * DoPw22 Grid + ODN height
+     * Extent: United Kingdom (UK) - on or related to the rail route from Dovey Junction to Pwllheli.
+     */
+    public const EPSG_DOPW22_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::10184';
 
     /**
      * EBBWV14 Grid + ODN height
@@ -1016,6 +1040,25 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_GR96_PLUS_GVR2016_HEIGHT = 'urn:ogc:def:crs:EPSG::8350';
 
     /**
+     * GWPBS22 Grid + ODN height
+     * Extent: United Kingdom (UK) - on or related to the rail route from London (Paddington) to Swansea.
+     */
+    public const EPSG_GWPBS22_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::10213';
+
+    /**
+     * GWWAB22 Grid + ODN height
+     * Extent: United Kingdom (UK) - on or related to the rail routes around Cardiff and the valleys.
+     */
+    public const EPSG_GWWAB22_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::10218';
+
+    /**
+     * GWWWA22 Grid + ODN height
+     * Extent: United Kingdom (UK) - on or related to the rail routes from Swansea to Pembroke Dock, Milford Haven and
+     * Fishguard.
+     */
+    public const EPSG_GWWWA22_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::10223';
+
+    /**
      * HS2 Survey Grid + HS2-VRF height
      * Extent: United Kingdom (UK) - HS2 phases 1 and 2a railway corridor from London to Birmingham, Lichfield and
      * Crewe.
@@ -1205,6 +1248,12 @@ class Compound extends CoordinateReferenceSystem
      * CRS code 9895.
      */
     public const EPSG_LUREF_LUXEMBOURG_TM_PLUS_NG95_HEIGHT = 'urn:ogc:def:crs:EPSG::9897';
+
+    /**
+     * MALS09 Grid + ODN height
+     * Extent: United Kingdom (UK) - on or related to the rail route from London (Marylebone) to Leamington Spa.
+     */
+    public const EPSG_MALS09_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::10228';
 
     /**
      * MGI + EVRF2000 Austria height
@@ -2493,6 +2542,12 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_OSGB36_BRITISH_NATIONAL_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::7405';
 
     /**
+     * OxWo08 Grid + ODN height
+     * Extent: United Kingdom (UK) - on or related to the rail route from Oxford to Worcester.
+     */
+    public const EPSG_OXWO08_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::10236';
+
+    /**
      * POSGAR 2007 + SRVN16 height
      * Extent: Argentina - onshore.
      */
@@ -2503,6 +2558,12 @@ class Compound extends CoordinateReferenceSystem
      * Extent: Oman - onshore. Includes Musandam and the Kuria Muria (Al Hallaniyah) islands.
      */
     public const EPSG_PSHD93 = 'urn:ogc:def:crs:EPSG::7410';
+
+    /**
+     * RBEPP12 Grid + ODN height
+     * Extent: United Kingdom (UK) - on or related to the rail route from Reading via Newbury to Penzance.
+     */
+    public const EPSG_RBEPP12_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::10281';
 
     /**
      * REGCAN95 + El Hierro height
@@ -2669,6 +2730,12 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_SHMG2015_PLUS_SHVD2015_HEIGHT = 'urn:ogc:def:crs:EPSG::7956';
 
     /**
+     * SMITB20 Grid + ODN height
+     * Extent: United Kingdom (UK) - on or related to the rail route from Okehampton to Penstone.
+     */
+    public const EPSG_SMITB20_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::10276';
+
+    /**
      * SRGI2013 + INAGeoid2020 v1 height
      * Extent: Indonesia - onshore and offshore.
      */
@@ -2786,6 +2853,30 @@ class Compound extends CoordinateReferenceSystem
      * Extent: Sweden - onshore.
      */
     public const EPSG_SWEREF99_TM_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5845';
+
+    /**
+     * SYC20 Grid + ODN height
+     * Extent: United Kingdom (UK) - on or related to the rail route from Shrewsbury to Crewe.
+     */
+    public const EPSG_SYC20_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::10241';
+
+    /**
+     * ShAb07 Grid + ODN height
+     * Extent: United Kingdom (UK) - on or related to the rail route from Shrewsbury to Aberystwyth.
+     */
+    public const EPSG_SHAB07_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::10189';
+
+    /**
+     * Slovenia 1996 + SVS2010 height
+     * Extent: Slovenia - onshore.
+     */
+    public const EPSG_SLOVENIA_1996_PLUS_SVS2010_HEIGHT = 'urn:ogc:def:crs:EPSG::10245';
+
+    /**
+     * Slovenia 1996 / Slovene National Grid + SVS2010 height
+     * Extent: Slovenia - onshore.
+     */
+    public const EPSG_SLOVENIA_1996_SLOVENE_NATIONAL_GRID_PLUS_SVS2010_HEIGHT = 'urn:ogc:def:crs:EPSG::10246';
 
     /**
      * St. Helena Tritan / UTM zone 30S + Tritan 2011 height

@@ -3577,6 +3577,20 @@ class RegionMap
             4674 => self::REGION_ASIA,
             4675 => self::REGION_ASIA,
             4676 => self::REGION_ASIA,
+            4677 => self::REGION_EUROPE,
+            4678 => self::REGION_EUROPE,
+            4679 => self::REGION_EUROPE,
+            4680 => self::REGION_EUROPE,
+            4681 => self::REGION_EUROPE,
+            4682 => self::REGION_EUROPE,
+            4683 => self::REGION_EUROPE,
+            4684 => self::REGION_EUROPE,
+            4685 => self::REGION_EUROPE,
+            4686 => self::REGION_EUROPE,
+            4687 => self::REGION_EUROPE,
+            4688 => self::REGION_EUROPE,
+            4689 => self::REGION_EUROPE,
+            4690 => self::REGION_EUROPE,
         ];
     }
 }

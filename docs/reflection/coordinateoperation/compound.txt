@@ -1288,6 +1288,27 @@ to RRAF 1991 (Geographic3D)
 
     "
 
+Slovenia 1996 + SVS2010 height
+------------------------------
+``Compound::fromSRID(Compound::EPSG_SLOVENIA_1996_PLUS_SVS2010_HEIGHT)``
+
+to Slovenia 1996 (Geographic3D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Slovenia 1996 to Slovenia 1996 + SVS2010 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10248``
+    | Extent: Slovenia - onshore",".. code-block:: php
+
+        $point->geographic3DTo2DPlusGravityHeightFromGrid(
+            to: Geographic3D::fromSRID(Geographic3D::EPSG_SLOVENIA_1996),
+            geoidHeightCorrectionModelFile: KMSSlovenia1996SVS2010Provider->provideGrid()
+        )
+
+    "
+
 Tokyo + JSLD69 height
 ---------------------
 ``Compound::fromSRID(Compound::EPSG_TOKYO_PLUS_JSLD69_HEIGHT)``

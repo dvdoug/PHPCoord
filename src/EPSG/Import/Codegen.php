@@ -386,7 +386,7 @@ class Codegen
                                 $provider = new ReflectionClass($value);
                                 $docParams[] = "{$name}: {$provider->getShortName()}->provideGrid()";
                             } else {
-                                if ($reverse && isset($methodData['paramData'][$name]) && $methodData['paramData'][$name]['reverses']) {
+                                if ($reverse && isset($methodData['paramData'][$name]) && $methodData['paramData'][$name]['reverses'] && $value instanceof UnitOfMeasure) {
                                     $value = $value->multiply(-1);
                                 }
                                 if ($value instanceof Rate) {

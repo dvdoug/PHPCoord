@@ -3427,11 +3427,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9807',
             'extent' => ['2283'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::5826' => [
-            'name' => 'DB_REF to ETRS89 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent' => ['3339'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::5827' => [
             'name' => 'AGD66 to GDA94 (19)',
             'method' => 'urn:ogc:def:method:EPSG::9607',
@@ -9742,6 +9737,26 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::1053',
             'extent' => ['1262'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::10182' => [
+            'name' => 'DoPw22-TM',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent' => ['4686'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10187' => [
+            'name' => 'ShAb07-TM',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent' => ['4687'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10193' => [
+            'name' => 'CNH22-LCC',
+            'method' => 'urn:ogc:def:method:EPSG::9802',
+            'extent' => ['4677'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10198' => [
+            'name' => 'CWS13-TM',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent' => ['4678'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::10201' => [
             'name' => 'Arizona Coordinate System East zone',
             'method' => 'urn:ogc:def:method:EPSG::9807',
@@ -9757,6 +9772,21 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9807',
             'extent' => ['2168'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::10206' => [
+            'name' => 'DIBA15-TM',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent' => ['4681'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10211' => [
+            'name' => 'GW22-LCC',
+            'method' => 'urn:ogc:def:method:EPSG::9802',
+            'extent' => ['4690'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10226' => [
+            'name' => 'MALS09-TM',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent' => ['4682'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::10231' => [
             'name' => 'SPCS83 Arizona East zone (meters)',
             'method' => 'urn:ogc:def:method:EPSG::9807',
@@ -9771,6 +9801,36 @@ class CoordinateOperations
             'name' => 'SPCS83 Arizona West zone (meters)',
             'method' => 'urn:ogc:def:method:EPSG::9807',
             'extent' => ['2168'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10234' => [
+            'name' => 'OxWo08-TM',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent' => ['4680'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10239' => [
+            'name' => 'SYC20-TM',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent' => ['4679'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10247' => [
+            'name' => 'Slovenia 1996 to SVS2010 height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1117',
+            'extent' => ['3307'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10248' => [
+            'name' => 'Slovenia 1996 to Slovenia 1996 + SVS2010 height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1118',
+            'extent' => ['3307'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10274' => [
+            'name' => 'SMITB20-TM',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent' => ['4688'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10279' => [
+            'name' => 'RBEPP12-LCC',
+            'method' => 'urn:ogc:def:method:EPSG::9802',
+            'extent' => ['4689'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::10301' => [
             'name' => 'Arkansas CS27 North',
@@ -12587,30 +12647,10 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent' => ['1174'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::15887' => [
-            'name' => 'IGN72 Grande Terre to RGNC91-93 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent' => ['2822'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::15888' => [
-            'name' => 'IGN72 Grande Terre to RGNC91-93 (3)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent' => ['2823'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::15889' => [
             'name' => 'NEA74 Noumea to RGNC91-93 (2)',
             'method' => 'urn:ogc:def:method:EPSG::9607',
             'extent' => ['2823'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::15890' => [
-            'name' => 'IGN56 Lifou to RGNC91-93 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent' => ['2814'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::15891' => [
-            'name' => 'IGN53 Mare to RGNC91-93 (2)',
-            'method' => 'urn:ogc:def:method:EPSG::9607',
-            'extent' => ['2819'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::15892' => [
             'name' => 'ST87 Ouvea to RGNC91-93 (2)',

@@ -23,7 +23,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 Dataset
 -------
 
-EPSG Geodetic Parameter Dataset Copyright (C) 1994-2022 IOGP
+EPSG Geodetic Parameter Dataset Copyright (C) 1994-2023 IOGP
 
 Whilst every effort has been made to ensure the accuracy of the information contained in the EPSG Facilities, neither
 the IOGP nor any of its members past present or future warrants their accuracy or will, regardless of its or their

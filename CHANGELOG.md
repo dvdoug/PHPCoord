@@ -1,6 +1,9 @@
 # Changelog
 
 ## [Unreleased]
+### Changed
+- Updates to data for Slovenia and UK
+
 
 ## [5.2.0] - 2023-01-08
 ### Changed

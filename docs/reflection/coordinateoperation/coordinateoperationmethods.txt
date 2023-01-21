@@ -302,6 +302,14 @@ Geog3D to Geog2D+GravityRelatedHeight (IGN2009)
     'urn:ogc:def:method:EPSG::1095'
 
 
+Geog3D to Geog2D+GravityRelatedHeight (ISG)
+-------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_ISG
+    'urn:ogc:def:method:EPSG::1118'
+
+
 Geog3D to Geog2D+GravityRelatedHeight (ITAL2005)
 ------------------------------------------------
 .. code-block:: php
@@ -460,6 +468,14 @@ Geographic3D to GravityRelatedHeight (IGN2009)
 
     CoordinateOperationMethods::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_IGN2009
     'urn:ogc:def:method:EPSG::1073'
+
+
+Geographic3D to GravityRelatedHeight (ISG)
+------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_ISG
+    'urn:ogc:def:method:EPSG::1117'
 
 
 Geographic3D to GravityRelatedHeight (ITAL2005)

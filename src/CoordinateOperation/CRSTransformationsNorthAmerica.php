@@ -7296,20 +7296,6 @@ class CRSTransformationsNorthAmerica
             'accuracy' => 0,
         ],
         [
-            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19944',
-            'name' => 'Quebec Lambert Projection',
-            'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
-            'target_crs' => 'urn:ogc:def:crs:EPSG::6622',
-            'accuracy' => 0,
-        ],
-        [
-            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6645',
-            'name' => 'Quebec Albers Projection',
-            'source_crs' => 'urn:ogc:def:crs:EPSG::4617',
-            'target_crs' => 'urn:ogc:def:crs:EPSG::6624',
-            'accuracy' => 0,
-        ],
-        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5493',
             'name' => 'Fort Marigot to RGAF09 (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4621',
@@ -14384,6 +14370,20 @@ class CRSTransformationsNorthAmerica
             'name' => 'Alberta 3-degree TM reference meridian 120 W',
             'source_crs' => 'urn:ogc:def:crs:EPSG::8237',
             'target_crs' => 'urn:ogc:def:crs:EPSG::22265',
+            'accuracy' => 0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19944',
+            'name' => 'Quebec Lambert Projection',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::8237',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::6622',
+            'accuracy' => 0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6645',
+            'name' => 'Quebec Albers Projection',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::8237',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::6624',
             'accuracy' => 0,
         ],
         [

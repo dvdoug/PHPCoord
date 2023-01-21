@@ -647,6 +647,15 @@ class Datum
     public const EPSG_CH1903_PLUS = 'urn:ogc:def:datum:EPSG::6150';
 
     /**
+     * CNH22 Intermediate Reference Frame
+     * Type: Geodetic
+     * Extent: United Kingdom (UK) - on or related to the rail route from Crewe via Chester to Holyhead.
+     * Defined through the application of the CNH22 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
+     * Created in 2022 to support intermediate CRS CNH22-IRF in the emulation of the CNH22 Snake map projection.
+     */
+    public const EPSG_CNH22_INTERMEDIATE_REFERENCE_FRAME = 'urn:ogc:def:datum:EPSG::1336';
+
+    /**
      * CR-SIRGAS
      * Type: Geodetic
      * Extent: Costa Rica - onshore and offshore.
@@ -654,6 +663,16 @@ class Datum
      * Replaces CR05 from April 2018.
      */
     public const EPSG_CR_SIRGAS = 'urn:ogc:def:datum:EPSG::1225';
+
+    /**
+     * CWS13 Intermediate Reference Frame
+     * Type: Geodetic
+     * Extent: United Kingdom (UK) - on or related to the rail route from from Chester via Wrexham to Shrewsbury.
+     * Defined through the application of the CWS13 NTv2 transformation (code 10197) to ETRS89 as realized through
+     * OSNet v2009 CORS.
+     * Created in 2022 to support intermediate CRS CWS13-IRF in the emulation of the CWS13 Snake map projection.
+     */
+    public const EPSG_CWS13_INTERMEDIATE_REFERENCE_FRAME = 'urn:ogc:def:datum:EPSG::1338';
 
     /**
      * Cadastre 1997
@@ -1087,6 +1106,16 @@ class Datum
     public const EPSG_CYPRUS_GEODETIC_REFERENCE_SYSTEM_1993 = 'urn:ogc:def:datum:EPSG::1112';
 
     /**
+     * DIBA15 Intermediate Reference Frame
+     * Type: Geodetic
+     * Extent: United Kingdom (UK) - on or related to the rail route from Didcot to Banbury.
+     * Defined through the application of the DIBA15 NTv2 transformation (code 10205) to ETRS89 as realized through
+     * OSNet v2009 CORS.
+     * Created in 2022 to support intermediate CRS DIBA15-IRF in the emulation of the DIBA15 Snake map projection.
+     */
+    public const EPSG_DIBA15_INTERMEDIATE_REFERENCE_FRAME = 'urn:ogc:def:datum:EPSG::1339';
+
+    /**
      * Dabola 1981
      * Type: Geodetic
      * Extent: Guinea - onshore.
@@ -1246,6 +1275,16 @@ class Datum
      * Fundamental point: ISTS 073.
      */
     public const EPSG_DIEGO_GARCIA_1969 = 'urn:ogc:def:datum:EPSG::6724';
+
+    /**
+     * DoPw22 Intermediate Reference Frame
+     * Type: Geodetic
+     * Extent: United Kingdom (UK) - on or related to the rail route from Dovey Junction to Pwllheli.
+     * Defined through the application of the DoPw22 NTv2 transformation to ETRS89 as realized through OSNet v2009
+     * CORS.
+     * Created in 2022 to support intermediate CRS DoPw22-IRF in the emulation of the DoPw22 Snake map projection.
+     */
+    public const EPSG_DOPW22_INTERMEDIATE_REFERENCE_FRAME = 'urn:ogc:def:datum:EPSG::1334';
 
     /**
      * Dominica 1945
@@ -2001,6 +2040,37 @@ class Datum
      * system.
      */
     public const EPSG_GNTRANS2016 = 'urn:ogc:def:datum:EPSG::1318';
+
+    /**
+     * GWPBS22 Intermediate Reference Frame
+     * Type: Geodetic
+     * Extent: United Kingdom (UK) - on or related to the rail route from London (Paddington) to Swansea.
+     * Defined through the application of the GWPBS22 NTv2 transformation to ETRS89 as realized through OSNet v2009
+     * CORS.
+     * Created in 2022 to support intermediate CRS GWPBS22-IRF in the emulation of the GWPBS22 Snake map projection.
+     */
+    public const EPSG_GWPBS22_INTERMEDIATE_REFERENCE_FRAME = 'urn:ogc:def:datum:EPSG::1340';
+
+    /**
+     * GWWAB22 Intermediate Reference Frame
+     * Type: Geodetic
+     * Extent: United Kingdom (UK) - on or related to the rail routes around Cardiff and the valleys.
+     * Defined through the application of the GWWAB22 NTv2 transformation to ETRS89 as realized through OSNet v2009
+     * CORS.
+     * Created in 2022 to support intermediate CRS GWWAB22-IRF in the emulation of the GWWAB22 Snake map projection.
+     */
+    public const EPSG_GWWAB22_INTERMEDIATE_REFERENCE_FRAME = 'urn:ogc:def:datum:EPSG::1341';
+
+    /**
+     * GWWWA22 Intermediate Reference Frame
+     * Type: Geodetic
+     * Extent: United Kingdom (UK) - on or related to the rail routes from Swansea to Pembroke Dock, Milford Haven and
+     * Fishguard.
+     * Defined through the application of the GWWWA22 NTv2 transformation to ETRS89 as realized through OSNet v2009
+     * CORS.
+     * Created in 2022 to support intermediate CRS GWWWA22-IRF in the emulation of the GWWWA22 Snake map projection.
+     */
+    public const EPSG_GWWWA22_INTERMEDIATE_REFERENCE_FRAME = 'urn:ogc:def:datum:EPSG::1342';
 
     /**
      * Gambia
@@ -3871,6 +3941,16 @@ class Datum
     public const EPSG_MPORALOKO = 'urn:ogc:def:datum:EPSG::6266';
 
     /**
+     * MALS09 Intermediate Reference Frame
+     * Type: Geodetic
+     * Extent: United Kingdom (UK) - on or related to the rail route from London (Marylebone) to Leamington Spa.
+     * Defined through the application of the MALS09 NTv2 transformation to ETRS89 as realized through OSNet v2009
+     * CORS.
+     * Created in 2022 to support intermediate CRS MALS09-IRF in the emulation of the MALS09 Snake map projection.
+     */
+    public const EPSG_MALS09_INTERMEDIATE_REFERENCE_FRAME = 'urn:ogc:def:datum:EPSG::1343';
+
+    /**
      * MGI 1901
      * Type: Geodetic
      * Extent: Bosnia and Herzegovina; Croatia - onshore; Kosovo; Montenegro - onshore; North Macedonia; Serbia;
@@ -3951,7 +4031,7 @@ class Datum
      * Extent: United Kingdom (UK) - on or related to the rail route from Manchester via Wigan and Liverpool to
      * Chester.
      * Defined through the application of the MWC18 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
-     * Created in 2022 to support intermediate CRS "MWC18" in the emulation of the MWC18 Snake map projection.
+     * Created in 2022 to support intermediate CRS MWC18-IRF in the emulation of the MWC18 Snake map projection.
      */
     public const EPSG_MWC18_INTERMEDIATE_REFERENCE_FRAME = 'urn:ogc:def:datum:EPSG::1324';
 
@@ -5625,6 +5705,16 @@ class Datum
     public const EPSG_OSTEND = 'urn:ogc:def:datum:EPSG::5110';
 
     /**
+     * OxWo08 Intermediate Reference Frame
+     * Type: Geodetic
+     * Extent: United Kingdom (UK) - on or related to the rail route from Oxford to Worcester.
+     * Defined through the application of the OxWo08 NTv2 transformation to ETRS89 as realized through OSNet v2009
+     * CORS.
+     * Created in 2022 to support intermediate CRS OxWo08-IRF in the emulation of the OxWo08 Snake map projection.
+     */
+    public const EPSG_OXWO08_INTERMEDIATE_REFERENCE_FRAME = 'urn:ogc:def:datum:EPSG::1344';
+
+    /**
      * PDO Height Datum 1993
      * Type: Vertical
      * Extent: Oman - onshore. Includes Musandam and the Kuria Muria (Al Hallaniyah) islands.
@@ -6041,6 +6131,16 @@ class Datum
      * Fundamental point: Station 7008. Latitude: 64°31'06.27"N, longitude: 51°12'24.86"W (of Greenwich).
      */
     public const EPSG_QORNOQ_1927 = 'urn:ogc:def:datum:EPSG::6194';
+
+    /**
+     * RBEPP12 Intermediate Reference Frame
+     * Type: Geodetic
+     * Extent: United Kingdom (UK) - on or related to the rail route from Reading via Newbury to Penzance.
+     * Defined through the application of the RBEPP12 NTv2 transformation to ETRS89 as realized through OSNet v2009
+     * CORS.
+     * Created in 2022 to support intermediate CRS RBEPP12-IRF in the emulation of the RBEPP12 Snake map projection.
+     */
+    public const EPSG_RBEPP12_INTERMEDIATE_REFERENCE_FRAME = 'urn:ogc:def:datum:EPSG::1352';
 
     /**
      * Raiatea SAU 2001
@@ -6636,6 +6736,16 @@ class Datum
     public const EPSG_SIRGAS_ES2007_8 = 'urn:ogc:def:datum:EPSG::1069';
 
     /**
+     * SMITB20 Intermediate Reference Frame
+     * Type: Geodetic
+     * Extent: United Kingdom (UK) - on or related to the rail route from Okehampton to Penstone.
+     * Defined through the application of the SMITB20 NTv2 transformation to ETRS89 as realized through OSNet v2009
+     * CORS.
+     * Created in 2022 to support intermediate CRS SMITB20-IRF in the emulation of the SMITB20 Snake map projection.
+     */
+    public const EPSG_SMITB20_INTERMEDIATE_REFERENCE_FRAME = 'urn:ogc:def:datum:EPSG::1351';
+
+    /**
      * ST71 Belep
      * Type: Geodetic
      * Extent: New Caledonia - Belep.
@@ -6677,6 +6787,15 @@ class Datum
      * with guidelines given by EUREF.
      */
     public const EPSG_SWEREF99 = 'urn:ogc:def:datum:EPSG::6619';
+
+    /**
+     * SYC20 Intermediate Reference Frame
+     * Type: Geodetic
+     * Extent: United Kingdom (UK) - on or related to the rail route from Shrewsbury to Crewe.
+     * Defined through the application of the SYC20 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
+     * Created in 2022 to support intermediate CRS SYC20-IRF in the emulation of the SYC20 Snake map projection.
+     */
+    public const EPSG_SYC20_INTERMEDIATE_REFERENCE_FRAME = 'urn:ogc:def:datum:EPSG::1345';
 
     /**
      * Saint Pierre et Miquelon 1950
@@ -6787,6 +6906,16 @@ class Datum
      * Fundamental point: Ep A. Latitude: 1°06'10.60"N, longitude: 105°00'59.82"E (of Greenwich).
      */
     public const EPSG_SERINDUNG = 'urn:ogc:def:datum:EPSG::6295';
+
+    /**
+     * ShAb07 Intermediate Reference Frame
+     * Type: Geodetic
+     * Extent: United Kingdom (UK) - on or related to the rail route from Shrewsbury to Aberystwyth.
+     * Defined through the application of the ShAb07 NTv2 transformation (code 10186) to ETRS89 as realized through
+     * OSNet v2009 CORS.
+     * Created in 2022 to support intermediate CRS ShAb07-IRF in the emulation of the ShAb07 Snake map projection.
+     */
+    public const EPSG_SHAB07_INTERMEDIATE_REFERENCE_FRAME = 'urn:ogc:def:datum:EPSG::1335';
 
     /**
      * Sibun Gorge 1922
@@ -10224,6 +10353,110 @@ class Datum
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => 2015.0,
+        ],
+        'urn:ogc:def:datum:EPSG::1334' => [
+            'name' => 'DoPw22 Intermediate Reference Frame',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
+        'urn:ogc:def:datum:EPSG::1335' => [
+            'name' => 'ShAb07 Intermediate Reference Frame',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
+        'urn:ogc:def:datum:EPSG::1336' => [
+            'name' => 'CNH22 Intermediate Reference Frame',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
+        'urn:ogc:def:datum:EPSG::1338' => [
+            'name' => 'CWS13 Intermediate Reference Frame',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
+        'urn:ogc:def:datum:EPSG::1339' => [
+            'name' => 'DIBA15 Intermediate Reference Frame',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
+        'urn:ogc:def:datum:EPSG::1340' => [
+            'name' => 'GWPBS22 Intermediate Reference Frame',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
+        'urn:ogc:def:datum:EPSG::1341' => [
+            'name' => 'GWWAB22 Intermediate Reference Frame',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
+        'urn:ogc:def:datum:EPSG::1342' => [
+            'name' => 'GWWWA22 Intermediate Reference Frame',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
+        'urn:ogc:def:datum:EPSG::1343' => [
+            'name' => 'MALS09 Intermediate Reference Frame',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
+        'urn:ogc:def:datum:EPSG::1344' => [
+            'name' => 'OxWo08 Intermediate Reference Frame',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
+        'urn:ogc:def:datum:EPSG::1345' => [
+            'name' => 'SYC20 Intermediate Reference Frame',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
+        'urn:ogc:def:datum:EPSG::1351' => [
+            'name' => 'SMITB20 Intermediate Reference Frame',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
+        'urn:ogc:def:datum:EPSG::1352' => [
+            'name' => 'RBEPP12 Intermediate Reference Frame',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
         ],
         'urn:ogc:def:datum:EPSG::5100' => [
             'name' => 'Mean Sea Level',

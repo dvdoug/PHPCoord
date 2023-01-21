@@ -809,6 +809,21 @@ CIGD11
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::6135')
 
 
+CNH22-IRF
+---------
+| Extent: United Kingdom (UK) - on or related to the rail route from Crewe via Chester to Holyhead.
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_CNH22_IRF)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::10191')
+    Geographic::fromSRID(Geographic2D::EPSG_CNH22_IRF)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10191')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_CNH22_IRF)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10191')
+
+Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / CNH22 SnakeGrid projected CRS through transformation ETRS89 to CNH22-IRF (1) (code 10192) used in conjunction with the CNH22-LCC map projection (code 10193).
+
 CR-SIRGAS
 ---------
 | Extent: Costa Rica - onshore and offshore.
@@ -852,6 +867,21 @@ CSG67
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_CSG67)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4623')
 
+
+CWS13-IRF
+---------
+| Extent: United Kingdom (UK) - on or related to the rail route from from Chester via Wrexham to Shrewsbury.
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_CWS13_IRF)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::10196')
+    Geographic::fromSRID(Geographic2D::EPSG_CWS13_IRF)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10196')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_CWS13_IRF)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10196')
+
+Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / CWS13 SnakeGrid projected CRS through transformation ETRS89 to CWS13-IRF (1) (code 10197) used in conjunction with the CWS13-TM map projection (code 10198).
 
 Cadastre 1997
 -------------
@@ -1179,6 +1209,21 @@ DHDN
 
 See also RD/83 for Saxony and PD/83 for Thuringen. For national digital cartographic purposes used across all German states.
 
+DIBA15-IRF
+----------
+| Extent: United Kingdom (UK) - on or related to the rail route from Didcot to Banbury.
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_DIBA15_IRF)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::10204')
+    Geographic::fromSRID(Geographic2D::EPSG_DIBA15_IRF)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10204')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_DIBA15_IRF)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10204')
+
+Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / DIBA15 SnakeGrid projected CRS through transformation ETRS89 to DIBA15-IRF (1) (code 10205) used in conjunction with the DIBA15-TM map projection (code 10206).
+
 DRUKREF 03
 ----------
 | Extent: Bhutan.
@@ -1278,6 +1323,21 @@ Diego Garcia 1969
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_DIEGO_GARCIA_1969)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4724')
 
+
+DoPw22-IRF
+----------
+| Extent: United Kingdom (UK) - on or related to the rail route from Dovey Junction to Pwllheli.
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_DOPW22_IRF)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::10175')
+    Geographic::fromSRID(Geographic2D::EPSG_DOPW22_IRF)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10175')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_DOPW22_IRF)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10175')
+
+Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / DoPw22 SnakeGrid projected CRS through transformation ETRS89 to DoPw22-IRF (1) (code 10181) used in conjunction with the DoPw22-TM map projection (code 10182).
 
 Dominica 1945
 -------------
@@ -1985,6 +2045,51 @@ GSK-2011
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::7683')
 
 Replaces Pulkovo 1995 (CRS code 4200) with effect from 21st October 2011.
+
+GWPBS22-IRF
+-----------
+| Extent: United Kingdom (UK) - on or related to the rail route from London (Paddington) to Swansea.
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_GWPBS22_IRF)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::10209')
+    Geographic::fromSRID(Geographic2D::EPSG_GWPBS22_IRF)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10209')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_GWPBS22_IRF)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10209')
+
+Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / GWPBS22 SnakeGrid projected CRS through transformation ETRS89 to GWPBS22-IRF (1) (code 10210) used in conjunction with the GW22-LCC map projection (code 10211).
+
+GWWAB22-IRF
+-----------
+| Extent: United Kingdom (UK) - on or related to the rail routes around Cardiff and the valleys.
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_GWWAB22_IRF)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::10214')
+    Geographic::fromSRID(Geographic2D::EPSG_GWWAB22_IRF)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10214')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_GWWAB22_IRF)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10214')
+
+Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / GWWAB22 SnakeGrid projected CRS through transformation ETRS89 to GWWAB22-IRF (1) (code 10215) used in conjunction with the GW22-LCC map projection (code 10211).
+
+GWWWA22-IRF
+-----------
+| Extent: United Kingdom (UK) - on or related to the rail routes from Swansea to Pembroke Dock, Milford Haven and Fishguard.
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_GWWWA22_IRF)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::10219')
+    Geographic::fromSRID(Geographic2D::EPSG_GWWWA22_IRF)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10219')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_GWWWA22_IRF)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10219')
+
+Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / GWWWA22 SnakeGrid projected CRS through transformation ETRS89 to GWWWA22-IRF (1) (code 10220) used in conjunction with the GW22-LCC map projection (code 10211).
 
 Gambia
 ------
@@ -3847,6 +3952,21 @@ MAGNA-SIRGAS
 
 Replaces Bogota 1975 (CRS code .4218).
 
+MALS09-IRF
+----------
+| Extent: United Kingdom (UK) - on or related to the rail route from London (Marylebone) to Leamington Spa.
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_MALS09_IRF)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::10224')
+    Geographic::fromSRID(Geographic2D::EPSG_MALS09_IRF)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10224')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_MALS09_IRF)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10224')
+
+Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / MALS09 SnakeGrid projected CRS through transformation ETRS89 to MALS09-IRF (1) (code 10225) used in conjunction with the MALS09-TM map projection (code 10226).
+
 MARGEN
 ------
 | Extent: Bolivia.
@@ -5184,6 +5304,21 @@ Old Hawaiian
 
 Note: this CRS includes longitudes which are POSITIVE EAST.
 
+OxWo08-IRF
+----------
+| Extent: United Kingdom (UK) - on or related to the rail route from Oxford to Worcester.
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_OXWO08_IRF)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::10229')
+    Geographic::fromSRID(Geographic2D::EPSG_OXWO08_IRF)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10229')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_OXWO08_IRF)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10229')
+
+Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / OxWo08 SnakeGrid projected CRS through transformation ETRS89 to OxWo08-IRF (1) (code 10230) used in conjunction with the OxWo08-TM map projection (code 10234).
+
 PD/83
 -----
 | Extent: Germany - Thuringen.
@@ -5729,6 +5864,21 @@ Qornoq 1927
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_QORNOQ_1927)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4194')
 
+
+RBEPP12-IRF
+-----------
+| Extent: United Kingdom (UK) - on or related to the rail route from Reading via Newbury to Penzance.
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_RBEPP12_IRF)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::10277')
+    Geographic::fromSRID(Geographic2D::EPSG_RBEPP12_IRF)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10277')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_RBEPP12_IRF)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10277')
+
+Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / RBEPP12 SnakeGrid projected CRS through transformation ETRS89 to RBEPP12-IRF (1) (code 10278) used in conjunction with the RBEPP12-LCC map projection (code 10279).
 
 RD/83
 -----
@@ -6815,6 +6965,21 @@ SLD99
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5233')
 
 
+SMITB20-IRF
+-----------
+| Extent: United Kingdom (UK) - on or related to the rail route from Okehampton to Penstone.
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_SMITB20_IRF)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::10272')
+    Geographic::fromSRID(Geographic2D::EPSG_SMITB20_IRF)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10272')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_SMITB20_IRF)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10272')
+
+Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / SMITB20 SnakeGrid projected CRS through transformation ETRS89 to SMITB20-IRF (1) (code 10273) used in conjunction with the SMITB20-TM map projection (code 10274).
+
 SRB_ETRS89
 ----------
 | Extent: Serbia including Vojvodina.
@@ -6932,6 +7097,21 @@ SWEREF99
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_SWEREF99)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4619')
 
+
+SYC20-IRF
+---------
+| Extent: United Kingdom (UK) - on or related to the rail route from Shrewsbury to Crewe.
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_SYC20_IRF)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::10237')
+    Geographic::fromSRID(Geographic2D::EPSG_SYC20_IRF)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10237')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_SYC20_IRF)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10237')
+
+Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / SYC20 SnakeGrid projected CRS through transformation ETRS89 to SYC20-IRF (1) (code 10238) used in conjunction with the SYC20-TM map projection (code 10239).
 
 Saint Pierre et Miquelon 1950
 -----------------------------
@@ -7073,6 +7253,21 @@ Serindung
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_SERINDUNG)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4295')
 
+
+ShAb07-IRF
+----------
+| Extent: United Kingdom (UK) - on or related to the rail route from Shrewsbury to Aberystwyth.
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_SHAB07_IRF)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::10185')
+    Geographic::fromSRID(Geographic2D::EPSG_SHAB07_IRF)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10185')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_SHAB07_IRF)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10185')
+
+Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / ShAb07 SnakeGrid projected CRS through transformation ETRS89 to ShAb07-IRF (1) (code 10186) used in conjunction with the ShAb07-TM map projection (code 10187).
 
 Sibun Gorge 1922
 ----------------

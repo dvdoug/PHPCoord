@@ -211,4 +211,5 @@ return [
     'Slovakia_JTSK03_to_JTSK.gsb' => CoordinateOperation\NTv2JTSK03JTSKSlovakiaProvider::class,
     'hBG18.dat' => CoordinateOperation\DATETRS89OstendBelgiumProvider::class,
     'Icegeoid_ISN2016.gri' => CoordinateOperation\GTXISN2016ISH2004IcelandProvider::class,
+    'https://isgeoid.polimi.it/Geoid/Europe/Slovenia/public/Slovenia_2016_SLO_VRP2016_Koper_hybrQ_20221122.isg' => CoordinateOperation\KMSSlovenia1996SVS2010Provider::class,
 ];

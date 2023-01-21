@@ -910,6 +910,20 @@ CH1903+
 
 Fundamental point: Zimmerwald observatory.
 
+CNH22 Intermediate Reference Frame
+----------------------------------
+| Type: Geodetic
+| Extent: United Kingdom (UK) - on or related to the rail route from Crewe via Chester to Holyhead.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_CNH22_INTERMEDIATE_REFERENCE_FRAME)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1336')
+
+Defined through the application of the CNH22 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
+
+Created in 2022 to support intermediate CRS CNH22-IRF in the emulation of the CNH22 Snake map projection.
+
 CR-SIRGAS
 ---------
 | Type: Geodetic
@@ -923,6 +937,20 @@ CR-SIRGAS
 ITRF2008 (IGb08) at epoch 2014.59. Network of 42 GNSS stations of the passive and active reference system.
 
 Replaces CR05 from April 2018.
+
+CWS13 Intermediate Reference Frame
+----------------------------------
+| Type: Geodetic
+| Extent: United Kingdom (UK) - on or related to the rail route from from Chester via Wrexham to Shrewsbury.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_CWS13_INTERMEDIATE_REFERENCE_FRAME)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1338')
+
+Defined through the application of the CWS13 NTv2 transformation (code 10197) to ETRS89 as realized through OSNet v2009 CORS.
+
+Created in 2022 to support intermediate CRS CWS13-IRF in the emulation of the CWS13 Snake map projection.
 
 Cadastre 1997
 -------------
@@ -1532,6 +1560,20 @@ Station Chionistra (Mount Troodos). Network scale and orientation determined by 
 
 Survey plans and maps produced by DLS after 1993.
 
+DIBA15 Intermediate Reference Frame
+-----------------------------------
+| Type: Geodetic
+| Extent: United Kingdom (UK) - on or related to the rail route from Didcot to Banbury.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_DIBA15_INTERMEDIATE_REFERENCE_FRAME)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1339')
+
+Defined through the application of the DIBA15 NTv2 transformation (code 10205) to ETRS89 as realized through OSNet v2009 CORS.
+
+Created in 2022 to support intermediate CRS DIBA15-IRF in the emulation of the DIBA15 Snake map projection.
+
 Dabola 1981
 -----------
 | Type: Geodetic
@@ -1751,6 +1793,20 @@ Diego Garcia 1969
     Datum::fromSRID('urn:ogc:def:datum:EPSG::6724')
 
 Fundamental point: ISTS 073.
+
+DoPw22 Intermediate Reference Frame
+-----------------------------------
+| Type: Geodetic
+| Extent: United Kingdom (UK) - on or related to the rail route from Dovey Junction to Pwllheli.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_DOPW22_INTERMEDIATE_REFERENCE_FRAME)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1334')
+
+Defined through the application of the DoPw22 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
+
+Created in 2022 to support intermediate CRS DoPw22-IRF in the emulation of the DoPw22 Snake map projection.
 
 Dominica 1945
 -------------
@@ -2658,6 +2714,48 @@ GNTRANS2016
 Surface defined by the GCG2016 quasi-geoid model applied to ETRS89.
 
 Approximates the national DHHN2016 levelling surface to around 1cm in lowlands and 2cm in high mountains, but unlike DHHN2016 it is defined by the GCG2016 geoid model. Like DHHN2016, uses Normal heights in the mean tide system.
+
+GWPBS22 Intermediate Reference Frame
+------------------------------------
+| Type: Geodetic
+| Extent: United Kingdom (UK) - on or related to the rail route from London (Paddington) to Swansea.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_GWPBS22_INTERMEDIATE_REFERENCE_FRAME)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1340')
+
+Defined through the application of the GWPBS22 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
+
+Created in 2022 to support intermediate CRS GWPBS22-IRF in the emulation of the GWPBS22 Snake map projection.
+
+GWWAB22 Intermediate Reference Frame
+------------------------------------
+| Type: Geodetic
+| Extent: United Kingdom (UK) - on or related to the rail routes around Cardiff and the valleys.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_GWWAB22_INTERMEDIATE_REFERENCE_FRAME)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1341')
+
+Defined through the application of the GWWAB22 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
+
+Created in 2022 to support intermediate CRS GWWAB22-IRF in the emulation of the GWWAB22 Snake map projection.
+
+GWWWA22 Intermediate Reference Frame
+------------------------------------
+| Type: Geodetic
+| Extent: United Kingdom (UK) - on or related to the rail routes from Swansea to Pembroke Dock, Milford Haven and Fishguard.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_GWWWA22_INTERMEDIATE_REFERENCE_FRAME)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1342')
+
+Defined through the application of the GWWWA22 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
+
+Created in 2022 to support intermediate CRS GWWWA22-IRF in the emulation of the GWWWA22 Snake map projection.
 
 Gambia
 ------
@@ -5332,6 +5430,20 @@ M'poraloko
     Datum::fromSRID('urn:ogc:def:datum:EPSG::6266')
 
 
+MALS09 Intermediate Reference Frame
+-----------------------------------
+| Type: Geodetic
+| Extent: United Kingdom (UK) - on or related to the rail route from London (Marylebone) to Leamington Spa.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_MALS09_INTERMEDIATE_REFERENCE_FRAME)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1343')
+
+Defined through the application of the MALS09 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
+
+Created in 2022 to support intermediate CRS MALS09-IRF in the emulation of the MALS09 Snake map projection.
+
 MGI 1901
 --------
 | Type: Geodetic
@@ -5449,7 +5561,7 @@ MWC18 Intermediate Reference Frame
 
 Defined through the application of the MWC18 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
 
-Created in 2022 to support intermediate CRS "MWC18" in the emulation of the MWC18 Snake map projection.
+Created in 2022 to support intermediate CRS MWC18-IRF in the emulation of the MWC18 Snake map projection.
 
 Macao 1920
 ----------
@@ -7712,6 +7824,20 @@ Mean low water at Ostend 1855-78 transferred to benchmark GIKMN at Uccle.
 
 Realized through the second general levelling (DNG or TAW) 1981-1999.
 
+OxWo08 Intermediate Reference Frame
+-----------------------------------
+| Type: Geodetic
+| Extent: United Kingdom (UK) - on or related to the rail route from Oxford to Worcester.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_OXWO08_INTERMEDIATE_REFERENCE_FRAME)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1344')
+
+Defined through the application of the OxWo08 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
+
+Created in 2022 to support intermediate CRS OxWo08-IRF in the emulation of the OxWo08 Snake map projection.
+
 PDO Height Datum 1993
 ---------------------
 | Type: Vertical
@@ -8284,6 +8410,20 @@ Qornoq 1927
     Datum::fromSRID('urn:ogc:def:datum:EPSG::6194')
 
 Fundamental point: Station 7008. Latitude: 64°31'06.27"N, longitude: 51°12'24.86"W (of Greenwich).
+
+RBEPP12 Intermediate Reference Frame
+------------------------------------
+| Type: Geodetic
+| Extent: United Kingdom (UK) - on or related to the rail route from Reading via Newbury to Penzance.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_RBEPP12_INTERMEDIATE_REFERENCE_FRAME)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1352')
+
+Defined through the application of the RBEPP12 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
+
+Created in 2022 to support intermediate CRS RBEPP12-IRF in the emulation of the RBEPP12 Snake map projection.
 
 Raiatea SAU 2001
 ----------------
@@ -9073,6 +9213,20 @@ ITRF2005 at epoch 2007.85.  Densification of SIRGAS-CON network in El Salvador, 
 
 SIRGAS-ES2007.8 is the national SIRGAS densification.
 
+SMITB20 Intermediate Reference Frame
+------------------------------------
+| Type: Geodetic
+| Extent: United Kingdom (UK) - on or related to the rail route from Okehampton to Penstone.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_SMITB20_INTERMEDIATE_REFERENCE_FRAME)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1351')
+
+Defined through the application of the SMITB20 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
+
+Created in 2022 to support intermediate CRS SMITB20-IRF in the emulation of the SMITB20 Snake map projection.
+
 ST71 Belep
 ----------
 | Type: Geodetic
@@ -9135,6 +9289,20 @@ SWEREF99
 Densification of ETRS89.
 
 The solution was calculated in ITRF97 epoch 1999.5, and has subsequently been corrected to ETRS89 in accordance with guidelines given by EUREF.
+
+SYC20 Intermediate Reference Frame
+----------------------------------
+| Type: Geodetic
+| Extent: United Kingdom (UK) - on or related to the rail route from Shrewsbury to Crewe.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_SYC20_INTERMEDIATE_REFERENCE_FRAME)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1345')
+
+Defined through the application of the SYC20 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
+
+Created in 2022 to support intermediate CRS SYC20-IRF in the emulation of the SYC20 Snake map projection.
 
 Saint Pierre et Miquelon 1950
 -----------------------------
@@ -9298,6 +9466,20 @@ Serindung
     Datum::fromSRID('urn:ogc:def:datum:EPSG::6295')
 
 Fundamental point: Ep A. Latitude: 1°06'10.60"N, longitude: 105°00'59.82"E (of Greenwich).
+
+ShAb07 Intermediate Reference Frame
+-----------------------------------
+| Type: Geodetic
+| Extent: United Kingdom (UK) - on or related to the rail route from Shrewsbury to Aberystwyth.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_SHAB07_INTERMEDIATE_REFERENCE_FRAME)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1335')
+
+Defined through the application of the ShAb07 NTv2 transformation (code 10186) to ETRS89 as realized through OSNet v2009 CORS.
+
+Created in 2022 to support intermediate CRS ShAb07-IRF in the emulation of the ShAb07 Snake map projection.
 
 Sibun Gorge 1922
 ----------------

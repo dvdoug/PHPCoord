@@ -1178,25 +1178,11 @@ class CRSTransformationsOceania
             'accuracy' => 0.5,
         ],
         [
-            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15890',
-            'name' => 'IGN56 Lifou to RGNC91-93 (2)',
-            'source_crs' => 'urn:ogc:def:crs:EPSG::4633',
-            'target_crs' => 'urn:ogc:def:crs:EPSG::4749',
-            'accuracy' => 0.1,
-        ],
-        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15847',
             'name' => 'MOP78 to WGS 84 (2)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4639',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 10.0,
-        ],
-        [
-            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15891',
-            'name' => 'IGN53 Mare to RGNC91-93 (2)',
-            'source_crs' => 'urn:ogc:def:crs:EPSG::4641',
-            'target_crs' => 'urn:ogc:def:crs:EPSG::4749',
-            'accuracy' => 0.1,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15893',
@@ -1239,20 +1225,6 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::4644',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4749',
             'accuracy' => 0.05,
-        ],
-        [
-            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15887',
-            'name' => 'IGN72 Grande Terre to RGNC91-93 (2)',
-            'source_crs' => 'urn:ogc:def:crs:EPSG::4662',
-            'target_crs' => 'urn:ogc:def:crs:EPSG::4749',
-            'accuracy' => 0.3,
-        ],
-        [
-            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15888',
-            'name' => 'IGN72 Grande Terre to RGNC91-93 (3)',
-            'source_crs' => 'urn:ogc:def:crs:EPSG::4662',
-            'target_crs' => 'urn:ogc:def:crs:EPSG::4749',
-            'accuracy' => 0.1,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9329',

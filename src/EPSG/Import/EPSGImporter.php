@@ -16,6 +16,7 @@ use function str_starts_with;
 use function substr;
 use function unlink;
 use function sleep;
+use function in_array;
 
 use const SQLITE3_OPEN_CREATE;
 use const SQLITE3_OPEN_READWRITE;
@@ -119,7 +120,6 @@ class EPSGImporter
          */
         $sqlite->exec('UPDATE epsg_usage SET extent_code = 1262 WHERE extent_code IN (1263, 2346, 2830, 4393, 4520, 4523)');
 
-        $sqlite->exec('VACUUM');
         $sqlite->close();
     }
 
@@ -155,12 +155,14 @@ class EPSGImporter
             FROM extent
             WHERE extent_code = {$extentMetaData['extent_code']}
               AND revision_date = '{$extentMetaData['revision_date']}'
+              AND original != ''
             ";
             $existingExtent = $extentDB->querySingle($existingExtentSQL);
 
             if (!$existingExtent) {
                 echo $extentMetaData['extent_code'] . "\n";
-                $geoJson = file_get_contents("https://apps.epsg.org/api/v1/Extent/{$extentMetaData['extent_code']}/polygon/");
+                $codeToUse = in_array($extentMetaData['extent_code'], [1263, 4205, 4393], true) ? 1262 : $extentMetaData['extent_code'];
+                $geoJson = file_get_contents("https://apps.epsg.org/api/v1/Extent/$codeToUse/polygon/");
                 $upsertSQL = "
                     INSERT INTO extent (extent_code, original, buffered, revision_date)
                     VALUES ({$extentMetaData['extent_code']}, '{$geoJson}', NULL, '{$extentMetaData['revision_date']}')
@@ -173,7 +175,6 @@ class EPSGImporter
 
         $extentDB->exec('UPDATE extent SET buffered = CASE WHEN ST_NPoints(GeomFromGeoJSON(original)) > ' . self::BUFFER_THRESHOLD . ' THEN AsGeoJSON(ST_Buffer(GeomFromGeoJSON(original), ' . self::BUFFER_SIZE . ')) ELSE original END WHERE buffered IS NULL');
 
-        $extentDB->exec('VACUUM');
         $extentDB->close();
         $dataDB->close();
     }

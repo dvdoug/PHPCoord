@@ -77,7 +77,7 @@ class EPSGCodegenFromDataImport
 
     private Codegen $codeGen;
 
-    public const BLACKLISTED_METHODS = [
+    private const BLACKLISTED_METHODS = [
         // not implemented yet
         1070, // Point motion by grid (Canada NTv2_Vel)
         1113, // Vertical Offset by velocity grid (NRCan byn)
@@ -121,7 +121,7 @@ class EPSGCodegenFromDataImport
         1079, // New Zealand Deformation Model
     ];
 
-    public const BLACKLISTED_OPERATIONS = [
+    private const BLACKLISTED_OPERATIONS = [
         // replaced by OSTN15
         7913, // OSTN97
         7952, // OSTN02
@@ -570,21 +570,6 @@ class EPSGCodegenFromDataImport
         10107, // BIN arcgp-2006-sk.bin
 
         // Construction/engineering/scientific projects not of general use
-        9302, // NTv2 HS2TN15_NTv2.gsb
-        9365, // NTv2 TN15-ETRS89-to-TPEN11-IRF.gsb
-        9369, // NTv2 TN15-ETRS89-to-MML07-IRF.gsb
-        9386, // NTv2 TN15-ETRS89-to-AbInvA96_2020-IRF.gsb
-        9454, // NTv2 TN15-ETRS89-to-GBK19-IRF.gsb
-        9740, // NTv2 TN15-ETRS89-to-EOS21-IRF.gsb
-        9759, // NTv2 TN15-ETRS89-to-ECML14_NB-IRF.gsb
-        9764, // NTv2 TN15-ETRS89-to-EWR2-IRF.gsb
-        9867, // NTv2 TN15-ETRS89-to-MRH21-IRF.gsb
-        9878, // NTv2 TN15-ETRS89-to-MOLDOR11-IRF.gsb
-        9941, // NTv2 TN15-ETRS89-to-EBBWV14-IRF.gsb
-        9965, // NTv2 TN15-ETRS89-to-HULLEE13-IRF.gsb
-        9970, // NTv2 TN15-ETRS89-to-SCM22-IRF.gsb
-        9975, // NTv2 TN15-ETRS89-to-FNL22-IRF.gsb
-        10108, // NTv2 TN15-ETRS89-to-MWC18-IRF.gsb
         9363, // IGNF ARAMCO_AAA-KSAGRF_6.tac
 
         // free, but license does not permit redistribution
@@ -665,6 +650,21 @@ class EPSGCodegenFromDataImport
         10153, // TXT VORF-UK08_ETRF_to_CD.vrf
         10154, // TXT VORF-UK08_ETRF_to_MSL.vrf
         10155, // TXT VORF-UK08_ETRF_to_CD.vrf
+    ];
+
+    private const BLACKLISTED_OPERATION_SCOPES = [
+        1138, // Engineering survey, harbour hydrography.
+        1139, // Engineering survey and construction for Fehmarnbelt tunnel.
+        1140, // Engineering survey for onshore facilities for South Pars phase 11 and Pars LNG.
+        1141, // Engineering survey and topographic mapping for railway applications.
+        1145, // Engineering survey 2011 to 2015.
+        1149, // Exploration and production operations in Brunei. Formerly also topographic mapping (large and medium scale) and engineering survey.
+        1196, // Highway engineering.
+        1206, // KOC survey control and facilities engineering.
+        1229, // Engineering design concept visualisation.
+        1260, // Engineering survey for HS2 project phases 1 and 2a.
+        1265, // Hydrography, drilling, offshore engineering.
+        1271, // Engineering survey and mapping for the Trans-Europe Lyon-Turin (TELT) railway project.
     ];
 
     public function __construct()
@@ -1434,6 +1434,8 @@ class EPSGCodegenFromDataImport
                 Projected::EPSG_LUREF_LUXEMBOURG_TM => ['Luxembourg 1930 / Gauss'],
                 Projected::EPSG_NAD83_CSRS_V6_MTM_NS_2010_ZONE_4 => ['NAD83(CSRS)v6 / MTM Nova Scotia zone 4'],
                 Projected::EPSG_NAD83_CSRS_V6_MTM_NS_2010_ZONE_5 => ['NAD83(CSRS)v6 / MTM Nova Scotia zone 5'],
+                Projected::EPSG_NAD83_CSRS_V2_QUEBEC_ALBERS => ['NAD83(CSRS) / Quebec Albers'],
+                Projected::EPSG_NAD83_CSRS_V2_QUEBEC_LAMBERT => ['NAD83(CSRS) / Quebec Lambert'],
             ]
         );
         $this->codeGen->updateDocs(Projected::class, $data);
@@ -2043,9 +2045,11 @@ class EPSGCodegenFromDataImport
         $wgs84CopiesFromSIRGAS = $this->determineOperationsToWGS84CopiedFromSIRGAS();
         $wgs84CopiesFromNZGD = $this->determineOperationsToWGS84CopiedFromNZGD2000();
         $projectedToProjected = $this->determineOperationsProjectedToProjected();
+        $blacklistedByScope = $this->determineOperationsInBlacklistedScopes();
 
         return [
             ...self::BLACKLISTED_OPERATIONS,
+            ...$blacklistedByScope,
             ...$wgs84CopiesFromETRS89,
             ...$etrs89CopiesFromWGS84,
             ...$wgs84CopiesFromGDA94,
@@ -2158,6 +2162,26 @@ class EPSGCodegenFromDataImport
             JOIN epsg_coordinatereferencesystem s ON o.source_crs_code = s.coord_ref_sys_code AND s.coord_ref_sys_kind = 'projected'
             JOIN epsg_coordinatereferencesystem t ON o.target_crs_code = t.coord_ref_sys_code AND t.coord_ref_sys_kind = 'projected'
             ";
+
+        $result = $this->dataDB->query($sql);
+        $data = [];
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            $data[] = $row['coord_op_code'];
+        }
+
+        return $data;
+    }
+
+    private function determineOperationsInBlacklistedScopes(): array
+    {
+        $sql = "
+            SELECT o.coord_op_code
+            FROM epsg_coordoperation o
+            JOIN epsg_usage u ON u.object_code = o.coord_op_code AND u.object_table_name = 'epsg_coordoperation'
+            LEFT JOIN epsg_coordinatereferencesystem crs ON crs.projection_conv_code = o.coord_op_code
+            WHERE u.scope_code IN (" . implode(', ', self::BLACKLISTED_OPERATION_SCOPES) . ')
+              AND crs.projection_conv_code IS NULL
+            ';
 
         $result = $this->dataDB->query($sql);
         $data = [];

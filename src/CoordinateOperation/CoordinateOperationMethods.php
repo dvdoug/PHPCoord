@@ -1563,6 +1563,27 @@ class CoordinateOperationMethods
                 ],
             ],
         ],
+        'urn:ogc:def:method:EPSG::1117' => [
+            'name' => 'Geographic3D to GravityRelatedHeight (ISG)',
+            'reversible' => false,
+            'paramData' => [
+                'geoidHeightCorrectionModelFile' => [
+                    'reverses' => false,
+                ],
+            ],
+        ],
+        'urn:ogc:def:method:EPSG::1118' => [
+            'name' => 'Geog3D to Geog2D+GravityRelatedHeight (ISG)',
+            'reversible' => true,
+            'paramData' => [
+                'geoidHeightCorrectionModelFile' => [
+                    'reverses' => true,
+                ],
+                'EPSGCodeForInterpolationCRS' => [
+                    'reverses' => false,
+                ],
+            ],
+        ],
         'urn:ogc:def:method:EPSG::9601' => [
             'name' => 'Longitude rotation',
             'reversible' => true,
@@ -3796,6 +3817,11 @@ class CoordinateOperationMethods
     public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_IGN2009 = 'urn:ogc:def:method:EPSG::1095';
 
     /**
+     * Geog3D to Geog2D+GravityRelatedHeight (ISG).
+     */
+    public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_ISG = 'urn:ogc:def:method:EPSG::1118';
+
+    /**
      * Geog3D to Geog2D+GravityRelatedHeight (ITAL2005).
      */
     public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_ITAL2005 = 'urn:ogc:def:method:EPSG::1105';
@@ -3894,6 +3920,11 @@ class CoordinateOperationMethods
      * Geographic3D to GravityRelatedHeight (IGN2009).
      */
     public const EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_IGN2009 = 'urn:ogc:def:method:EPSG::1073';
+
+    /**
+     * Geographic3D to GravityRelatedHeight (ISG).
+     */
+    public const EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_ISG = 'urn:ogc:def:method:EPSG::1117';
 
     /**
      * Geographic3D to GravityRelatedHeight (ITAL2005).
@@ -4459,6 +4490,8 @@ class CoordinateOperationMethods
         self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_TXT => 'geographic3DToGravityHeightFromGrid',
         self::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_OSGM15_IRE => 'geographic3DTo2DPlusGravityHeightFromGrid',
         self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_OSGM15_IRE => 'geographic3DToGravityHeightFromGrid',
+        self::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_ISG => 'geographic3DTo2DPlusGravityHeightFromGrid',
+        self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_ISG => 'geographic3DToGravityHeightFromGrid',
     ];
 
     public static function getFunctionName(string $srid): string

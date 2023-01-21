@@ -9267,6 +9267,48 @@ class ExtentMap
         4676 => [
             'name' => 'Japan - zone XII - onshore mainland',
         ],
+        4677 => [
+            'name' => 'UK - Crewe to Holyhead',
+        ],
+        4678 => [
+            'name' => 'UK - Chester to Shrewsbury',
+        ],
+        4679 => [
+            'name' => 'UK - Shrewsbury to Crewe',
+        ],
+        4680 => [
+            'name' => 'UK - Oxford to Worcester',
+        ],
+        4681 => [
+            'name' => 'UK - Didcot to Banbury',
+        ],
+        4682 => [
+            'name' => 'UK - London to Leamington Spa',
+        ],
+        4683 => [
+            'name' => 'UK - Swansea to Fishguard',
+        ],
+        4684 => [
+            'name' => 'UK - Cardiff and the valleys',
+        ],
+        4685 => [
+            'name' => 'UK - London to Swansea',
+        ],
+        4686 => [
+            'name' => 'UK - Dovey Junction to Pwllheli',
+        ],
+        4687 => [
+            'name' => 'UK - Shrewsbury to Aberystwyth',
+        ],
+        4688 => [
+            'name' => 'UK – Okehampton to Penstone',
+        ],
+        4689 => [
+            'name' => 'UK – Reading to Penzance',
+        ],
+        4690 => [
+            'name' => 'UK - London to Fishguard',
+        ],
     ];
 
     public function __invoke(): array

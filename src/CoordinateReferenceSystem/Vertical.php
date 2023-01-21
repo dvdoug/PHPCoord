@@ -748,7 +748,7 @@ class Vertical extends CoordinateReferenceSystem
      * HS2-VRF height
      * Extent: United Kingdom (UK) - HS2 phases 1 and 2a railway corridor from London to Birmingham, Lichfield and
      * Crewe.
-     * HS2-VRF height is equivalent to ODN height as historically realised through OSNet v2001 and OSGM02. After the
+     * HS2-VRF height is equivalent to ODN height as historically realized through OSNet v2001 and OSGM02. After the
      * ODN realization was updated to be through OSNet v2009 and OSGM15, HS2-VRF height was introduced for backward
      * consistency.
      */

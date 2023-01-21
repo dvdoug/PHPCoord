@@ -340,7 +340,7 @@ AbInvA96_2020 Grid
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_ABINVA96_2020_GRID)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9387')
 
-The CRS's definition through transformation ETRS89 to AbInvA96_2020-IRF (1) (code 9386) and map projection AbInvA96_2020-TM (code 9385) emulates the AbInvA96_2020 Snake projection applied to ETRS89 as realised through OSNet 2009 CORS.
+The CRS's definition through transformation ETRS89 to AbInvA96_2020-IRF (1) (code 9386) and map projection AbInvA96_2020-TM (code 9385) emulates the AbInvA96_2020 Snake projection applied to ETRS89 as realized through OSNet 2009 CORS.
 
 Abidjan 1987 / TM 5 NW
 ----------------------
@@ -2987,6 +2987,19 @@ CI1979 / Chatham Islands Map Grid
 
 Replaces CI1971 / CIMG (CRS code 5518). Replaced by NZGD2000 / Chatham Islands TM 2000 (CRS code 3793).
 
+CNH22 Grid
+----------
+| Extent: United Kingdom (UK) - on or related to the rail route from Crewe via Chester to Holyhead.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_CNH22_GRID)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10194')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_CNH22_GRID)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10194')
+
+The CRS's definition through transformation ETRS89 to CNH22-IRF (1) (code 10192) and map projection CNH22-LCC (code 10193) emulates the CNH22 Snake projection applied to ETRS89 as realized through OSNet 2009. Also replaces CNH1_2019 and CNH3_2015.
+
 CR-SIRGAS / CRTM05
 ------------------
 | Extent: Costa Rica - onshore.
@@ -3064,6 +3077,19 @@ CSG67 / UTM zone 22N
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::2971')
 
 Replaced by RGFG95 / UTM zone 22N (CRS code 2972).
+
+CWS13 Grid
+----------
+| Extent: United Kingdom (UK) - on or related to the rail route from from Chester via Wrexham to Shrewsbury.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_CWS13_GRID)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10199')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_CWS13_GRID)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10199')
+
+The CRS's definition through transformation ETRS89 to CWS13-IRF (1) (code 10197) and map projection CWS13-TM (code 10198) emulates the CWS13 Snake projection applied to ETRS89 as realized through OSNet 2009.
 
 Cadastre 1997 / UTM zone 38S
 ----------------------------
@@ -4227,6 +4253,19 @@ DHDN / Soldner Berlin
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3068')
 
 
+DIBA15 Grid
+-----------
+| Extent: United Kingdom (UK) - on or related to the rail route from Didcot to Banbury.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_DIBA15_GRID)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10207')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_DIBA15_GRID)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10207')
+
+Defined through transformation ETRS89 to DIBA15-IRF (1) (code 10205) and map projection DIBA15-TM (code 10206). Emulates the DIBA15 Snake projection applied to ETRS89 as realized through OSNet 2009. Originally referred to as the DIDBAN15 Grid.
+
 DRUKREF 03 / Bhutan National Grid
 ---------------------------------
 | Extent: Bhutan.
@@ -4582,6 +4621,19 @@ Deir ez Zor / Syria Lambert
 
 Replaces Deir ez Zor / Levant zone (EPSG code 22700) from 1973.
 
+DoPw22 Grid
+-----------
+| Extent: United Kingdom (UK) - on or related to the rail route from Dovey Junction to Pwllheli.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_DOPW22_GRID)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10183')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_DOPW22_GRID)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10183')
+
+Defined through transformation ETRS89 to DoPw22-IRF (1) (code 10181) and map projection DoPw22-TM (code 10182). Emulates the DoPw22 Snake projection applied to ETRS89 as realized through OSNet 2009.
+
 Dominica 1945 / British West Indies Grid
 ----------------------------------------
 | Extent: Dominica - onshore.
@@ -4631,7 +4683,7 @@ ECML14_NB Grid
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_ECML14_NB_GRID)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9761')
 
-The CRS's definition through transformation ETRS89 to ECML14_NB-IRF (1) (code 9759) and map projection ECML14_NB-TM (code 9760) emulates the ECML14_NB Snake projection applied to ETRS89 as realised through OSNet 2009 CORS.
+The CRS's definition through transformation ETRS89 to ECML14_NB-IRF (1) (code 9759) and map projection ECML14_NB-TM (code 9760) emulates the ECML14_NB Snake projection applied to ETRS89 as realized through OSNet 2009 CORS.
 
 ED50 / 3-degree Gauss-Kruger zone 10
 ------------------------------------
@@ -5248,7 +5300,7 @@ EOS21 Grid
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_EOS21_GRID)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9741')
 
-The CRS's definition through transformation ETRS89 to EOS21-IRF (1) (code 9740) and map projection EOS21-TM (code 9738) emulates the EOS21 Snake projection applied to ETRS89 as realised through OSNet 2009 CORS.
+The CRS's definition through transformation ETRS89 to EOS21-IRF (1) (code 9740) and map projection EOS21-TM (code 9738) emulates the EOS21 Snake projection applied to ETRS89 as realized through OSNet 2009 CORS.
 
 ETRF2000-PL / CS2000/15
 -----------------------
@@ -6759,7 +6811,7 @@ EWR2 Grid
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_EWR2_GRID)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9766')
 
-The CRS's definition through transformation ETRS89 to EWR2-IRF (1) (code 9764) and map projection EWR2-TM (code 9765) emulates the EWR2 Snake projection applied to ETRS89 as realised through OSNet 2009 CORS.
+The CRS's definition through transformation ETRS89 to EWR2-IRF (1) (code 9764) and map projection EWR2-TM (code 9765) emulates the EWR2 Snake projection applied to ETRS89 as realized through OSNet 2009 CORS.
 
 Egypt 1907 / Blue Belt
 ----------------------
@@ -7015,7 +7067,7 @@ GBK19 Grid
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_GBK19_GRID)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9456')
 
-The CRS's definition through transformation ETRS89 to GBK19-IRF (1) (code 9454) and map projection GBK19-TM (code 9455) emulates the GBK19 Snake projection applied to ETRS89 as realised through OSNet 2009 CORS.
+The CRS's definition through transformation ETRS89 to GBK19-IRF (1) (code 9454) and map projection GBK19-TM (code 9455) emulates the GBK19 Snake projection applied to ETRS89 as realized through OSNet 2009 CORS.
 
 GDA2020 / ALB2020
 -----------------
@@ -10584,6 +10636,45 @@ GSK-2011 / Gauss-Kruger zone 9
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::20909')
 
 Effective from 2021-01-01. Also found with truncated false easting - see GSK-2011 / Gauss-Kruger CM 51E (code 21009).
+
+GWPBS22 Grid
+------------
+| Extent: United Kingdom (UK) - on or related to the rail route from London (Paddington) to Swansea.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GWPBS22_GRID)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10212')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GWPBS22_GRID)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10212')
+
+Defined through transformation ETRS89 to GWPBS22-IRF (1) (code 10210) and map projection GW22-LCC (code 10211). Emulates the GWPBS22 Snake projection applied to ETRS89 as realized through OSNet 2009. Replaces GWPBS09. Adjoined by GWWAB22 and GWWWA22.
+
+GWWAB22 Grid
+------------
+| Extent: United Kingdom (UK) - on or related to the rail routes around Cardiff and the valleys.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GWWAB22_GRID)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10217')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GWWAB22_GRID)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10217')
+
+Defined through transformation ETRS89 to GWWAB22-IRF (1) (code 10215) and map projection GW22-LCC (code 10211). Emulates the GWWAB22 Snake projection applied to ETRS89 as realized through OSNet 2009. Replaces WABCVL18. Adjoins the GWPBS22 Grid.
+
+GWWWA22 Grid
+------------
+| Extent: United Kingdom (UK) - on or related to the rail routes from Swansea to Pembroke Dock, Milford Haven and Fishguard.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GWWWA22_GRID)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10222')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GWWWA22_GRID)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10222')
+
+Defined through transformation ETRS89 to GWWWA22-IRF (1) (code 10220) and map projection GW-LCC22 (code 10211). Emulates the GWWWA22 Snake projection applied to ETRS89 as realized through OSNet 2009. Replaces GWPBS09_WestWales. Adjoins GWPBS22 Grid.
 
 Garoua / UTM zone 33N
 ---------------------
@@ -14804,6 +14895,19 @@ MAGNA-SIRGAS / Yopal urban grid
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::6275')
 
 
+MALS09 Grid
+-----------
+| Extent: United Kingdom (UK) - on or related to the rail route from London (Marylebone) to Leamington Spa.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_MALS09_GRID)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10227')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_MALS09_GRID)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10227')
+
+Defined through transformation ETRS89 to MALS09-IRF (1) (code 10225) and map projection MALS09-TM (code 10226). Emulates the MALS09 Snake projection applied to ETRS89 as realized through OSNet 2009.
+
 MARGEN / UTM zone 19S
 ---------------------
 | Extent: Bolivia - west of 66°W.
@@ -15218,7 +15322,7 @@ MML07 Grid
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_MML07_GRID)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9373')
 
-The CRS's definition through transformation ETRS89 to MML07-IRF (1) (code 9369) as applied to ETRS89 realised through OSNet 2009 and map projection MML07-TM (code 9370) emulates the MML07 Snake projection applied to ETRS89 as realised through OSNet 2001.
+The CRS's definition through transformation ETRS89 to MML07-IRF (1) (code 9369) as applied to ETRS89 realized through OSNet 2009 and map projection MML07-TM (code 9370) emulates the MML07 Snake projection applied to ETRS89 as realized through OSNet 2001.
 
 MMN / Argentina 2
 -----------------
@@ -32486,30 +32590,6 @@ NAD83(CSRS) / Prince Edward Isl. Stereographic (NAD83)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::2954')
 
 
-NAD83(CSRS) / Quebec Albers
----------------------------
-| Extent: Canada - Quebec.
-
-.. code-block:: php
-
-    Projected::fromSRID(Projected::EPSG_NAD83_CSRS_QUEBEC_ALBERS)
-    Projected::fromSRID('urn:ogc:def:crs:EPSG::6624')
-    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NAD83_CSRS_QUEBEC_ALBERS)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::6624')
-
-
-NAD83(CSRS) / Quebec Lambert
-----------------------------
-| Extent: Canada - Quebec.
-
-.. code-block:: php
-
-    Projected::fromSRID(Projected::EPSG_NAD83_CSRS_QUEBEC_LAMBERT)
-    Projected::fromSRID('urn:ogc:def:crs:EPSG::6622')
-    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NAD83_CSRS_QUEBEC_LAMBERT)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::6622')
-
-
 NAD83(CSRS) / Statistics Canada Lambert
 ---------------------------------------
 | Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.
@@ -32848,6 +32928,30 @@ NAD83(CSRS)v2 / PEI Stereographic
     Projected::fromSRID('urn:ogc:def:crs:EPSG::22239')
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_NAD83_CSRS_V2_PEI_STEREOGRAPHIC)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22239')
+
+
+NAD83(CSRS)v2 / Quebec Albers
+-----------------------------
+| Extent: Canada - Quebec.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NAD83_CSRS_V2_QUEBEC_ALBERS)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::6624')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NAD83_CSRS_V2_QUEBEC_ALBERS)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::6624')
+
+
+NAD83(CSRS)v2 / Quebec Lambert
+------------------------------
+| Extent: Canada - Quebec.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NAD83_CSRS_V2_QUEBEC_LAMBERT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::6622')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NAD83_CSRS_V2_QUEBEC_LAMBERT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::6622')
 
 
 NAD83(CSRS)v2 / SCoPQ zone 10
@@ -45293,6 +45397,19 @@ Old Hawaiian / Hawaii zone 5
 
 Sometimes erroneously referred to as NAD27 / Hawaii zone 5.
 
+OxWo08 Grid
+-----------
+| Extent: United Kingdom (UK) - on or related to the rail route from Oxford to Worcester.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_OXWO08_GRID)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10235')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_OXWO08_GRID)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10235')
+
+Defined through transformation ETRS89 to OxWo08-IRF (1) (code 10230) and map projection OxWo08-TM (code 10234). Emulates the OxWo08 Snake projection applied to ETRS89 as realized through OSNet 2009.
+
 PD/83 / 3-degree Gauss-Kruger zone 3
 ------------------------------------
 | Extent: Germany - Thuringen - west of 10°30'E.
@@ -51756,6 +51873,19 @@ Qornoq 1927 / UTM zone 23N
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::2217')
 
 
+RBEPP12 Grid
+------------
+| Extent: United Kingdom (UK) - on or related to the rail route from Reading via Newbury to Penzance.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_RBEPP12_GRID)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10280')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_RBEPP12_GRID)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10280')
+
+Defined through transformation ETRS89 to RBEPP12-IRF (1) (code 10278) and map projection RBEPP12-LCC (code 10279). Emulates the RBEPP12 Snake projection applied to ETRS89 as realized through OSNet 2009.
+
 RD/83 / 3-degree Gauss-Kruger zone 4
 ------------------------------------
 | Extent: Germany - Sachsen - west of 13°30'E.
@@ -54412,6 +54542,19 @@ SLD99 / Sri Lanka Grid 1999
 
 Used in parallel with Kandawala / Sri Lanka Grid (CRS code 5234).
 
+SMITB20 Grid
+------------
+| Extent: United Kingdom (UK) - on or related to the rail route from Okehampton to Penstone.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_SMITB20_GRID)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10275')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_SMITB20_GRID)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10275')
+
+Defined through transformation ETRS89 to SMITB20-IRF (1) (code 10273) and map projection SMITB20-TM (code 10274). Emulates the SMITB20 Snake projection applied to ETRS89 as realized through OSNet 2009.
+
 SRB_ETRS89 / UTM zone 34N
 -------------------------
 | Extent: Serbia including Vojvodina.
@@ -54932,6 +55075,19 @@ SWEREF99 TM
 
 From 2003 replaces RT90 2.5 gon V (CRS code 3021). For large scale applications see CRS codes 3007-18.
 
+SYC20 Grid
+----------
+| Extent: United Kingdom (UK) - on or related to the rail route from Shrewsbury to Crewe.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_SYC20_GRID)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10240')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_SYC20_GRID)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10240')
+
+The CRS's definition through transformation ETRS89 to SYC20-IRF (1) (code 10238) and map projection SYC20-TM (code 10239) emulates the SYC20 Snake projection applied to ETRS89 as realized through OSNet 2009.
+
 Saint Pierre et Miquelon 1950 / UTM zone 21N
 --------------------------------------------
 | Extent: St Pierre and Miquelon - onshore.
@@ -55152,6 +55308,19 @@ Selvagem Grande / UTM zone 28N
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_SELVAGEM_GRANDE_UTM_ZONE_28N)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::2943')
 
+
+ShAb07 Grid
+-----------
+| Extent: United Kingdom (UK) - on or related to the rail route from Shrewsbury to Aberystwyth.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_SHAB07_GRID)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10188')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_SHAB07_GRID)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10188')
+
+Defined through transformation ETRS89 to ShAb07-IRF (1) (code 10186) and map projection ShAb07-TM (code 10187). Emulates the ShAb07 Snake projection applied to ETRS89 as realized through OSNet 2009.
 
 Sibun Gorge 1922 / Colony Grid
 ------------------------------
@@ -55438,7 +55607,7 @@ TPEN11 Grid
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_TPEN11_GRID)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9367')
 
-The CRS's definition through transformation ETRS89 to TPEN11-IRF (1) (code 9365) and map projection TPEN11-TM (code 9366) emulates the combined TPEN11 Snake and TPEN11ext Snake projections applied to ETRS89 as realised through OSNet 2009 CORS.
+The CRS's definition through transformation ETRS89 to TPEN11-IRF (1) (code 9365) and map projection TPEN11-TM (code 9366) emulates the combined TPEN11 Snake and TPEN11ext Snake projections applied to ETRS89 as realized through OSNet 2009 CORS.
 
 TUREF / 3-degree Gauss-Kruger zone 10
 -------------------------------------
