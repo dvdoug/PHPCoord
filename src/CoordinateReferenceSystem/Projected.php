@@ -39725,7 +39725,7 @@ class Projected extends CoordinateReferenceSystem
      */
     public const EPSG_NAD83_CSRS_QUEBEC_LAMBERT = 'urn:ogc:def:crs:EPSG::6622';
 
-    protected ?Geographic $baseCRS;
+    protected Geographic2D|Geographic3D|null $baseCRS;
 
     protected ?string $derivingConversion;
 
@@ -39739,7 +39739,7 @@ class Projected extends CoordinateReferenceSystem
         Datum $datum,
         BoundingArea $boundingArea,
         string $name = '',
-        Geographic $baseCRS = null,
+        Geographic2D|Geographic3D $baseCRS = null,
         ?string $derivingConversion = null
     ) {
         $this->srid = $srid;
@@ -39753,7 +39753,7 @@ class Projected extends CoordinateReferenceSystem
         assert(count($coordinateSystem->getAxes()) === 2 || count($coordinateSystem->getAxes()) === 3);
     }
 
-    public function getBaseCRS(): Geographic2D|Geographic3D
+    public function getBaseCRS(): Geographic2D|Geographic3D|null
     {
         return $this->baseCRS;
     }

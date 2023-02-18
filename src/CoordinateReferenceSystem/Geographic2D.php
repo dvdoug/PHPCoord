@@ -4175,6 +4175,8 @@ class Geographic2D extends Geographic
      */
     public const EPSG_LUXEMBOURG_1930 = 'urn:ogc:def:crs:EPSG::4181';
 
+    protected Geocentric|Geographic2D|Geographic3D|null $baseCRS;
+
     private static array $cachedObjects = [];
 
     private static array $supportedCache = [];
@@ -4184,15 +4186,22 @@ class Geographic2D extends Geographic
         CoordinateSystem $coordinateSystem,
         Datum $datum,
         BoundingArea $boundingArea,
-        string $name = ''
+        string $name = '',
+        self|Geographic3D $baseCRS = null,
     ) {
         $this->srid = $srid;
         $this->coordinateSystem = $coordinateSystem;
         $this->datum = $datum;
         $this->boundingArea = $boundingArea;
         $this->name = $name;
+        $this->baseCRS = $baseCRS;
 
         assert(count($coordinateSystem->getAxes()) === 2);
+    }
+
+    public function getBaseCRS(): self|Geographic3D|null
+    {
+        return $this->baseCRS;
     }
 
     public static function fromSRID(string $srid): self
@@ -4204,6 +4213,7 @@ class Geographic2D extends Geographic
         if (!isset(self::$cachedObjects[$srid])) {
             $data = static::$sridData[$srid];
 
+            $baseCRS = $data['base_crs'] === null || $data['base_crs'] instanceof CoordinateReferenceSystem ? $data['base_crs'] : CoordinateReferenceSystem::fromSRID($data['base_crs']);
             $extent = $data['extent'] instanceof BoundingArea ? $data['extent'] : BoundingArea::createFromExtentCodes($data['extent']);
 
             self::$cachedObjects[$srid] = new self(
@@ -4211,7 +4221,8 @@ class Geographic2D extends Geographic
                 Ellipsoidal::fromSRID($data['coordinate_system']),
                 Datum::fromSRID($data['datum']),
                 $extent,
-                $data['name']
+                $data['name'],
+                $baseCRS,
             );
         }
 
@@ -4229,9 +4240,9 @@ class Geographic2D extends Geographic
         return self::$supportedCache;
     }
 
-    public static function registerCustomCRS(string $srid, string $name, string $coordinateSystemSrid, string $datumSrid, BoundingArea $extent): void
+    public static function registerCustomCRS(string $srid, string $name, string $coordinateSystemSrid, string $datumSrid, BoundingArea $extent, ?string $baseCRSSrid = null): void
     {
-        self::$sridData[$srid] = ['name' => $name, 'coordinate_system' => $coordinateSystemSrid, 'datum' => $datumSrid, 'extent' => $extent];
+        self::$sridData[$srid] = ['name' => $name, 'coordinate_system' => $coordinateSystemSrid, 'datum' => $datumSrid, 'extent' => $extent, 'base_crs' => $baseCRSSrid];
         self::getSupportedSRIDs(); // init cache if not already
         self::$supportedCache[$srid] = $name; // update cache
     }

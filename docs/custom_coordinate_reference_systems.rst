@@ -24,7 +24,8 @@ used exactly like any other built into PHPCoord. To register, call the appropria
         string $name,
         string $coordinateSystemSrid,
         string $datumSrid,
-        BoundingArea $extent
+        BoundingArea $extent,
+        ?string $baseCRS
     );
 
     PHPCoord\CoordinateReferenceSystem\Geographic3D::registerCustomCRS(
@@ -32,7 +33,8 @@ used exactly like any other built into PHPCoord. To register, call the appropria
         string $name,
         string $coordinateSystemSrid,
         string $datumSrid,
-        BoundingArea $extent
+        BoundingArea $extent,
+        ?string $baseCRS
     );
 
     PHPCoord\CoordinateReferenceSystem\Projected::registerCustomCRS(
