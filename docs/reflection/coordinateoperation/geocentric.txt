@@ -7358,6 +7358,26 @@ to MAGNA-SIRGAS (Geographic3D)
 
     "
 
+MAGNA-SIRGAS 2018
+-----------------
+``Geocentric::fromSRID(Geocentric::EPSG_MAGNA_SIRGAS_2018)``
+
+to MAGNA-SIRGAS 2018 (Geographic3D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: geocentric to geographic3D
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::15592``
+    | Extent: World",".. code-block:: php
+
+        $point->geographicGeocentric(
+            to: Geographic3D::fromSRID(Geographic3D::EPSG_MAGNA_SIRGAS_2018)
+        )
+
+    "
+
 MARGEN
 ------
 ``Geocentric::fromSRID(Geocentric::EPSG_MARGEN)``

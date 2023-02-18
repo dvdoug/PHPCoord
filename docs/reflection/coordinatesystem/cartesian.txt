@@ -187,6 +187,15 @@ Used in projected and engineering coordinate reference systems.
 
 Used in projected and engineering coordinate reference systems.
 
+2D Axes: northing, easting (N,E). Orientations: north, east. Units: foot (US).
+------------------------------------------------------------------------------
+.. code-block:: php
+
+    Cartesian::fromSRID(Cartesian::EPSG_2D_AXES_NORTHING_EASTING_N_E_ORIENTATIONS_NORTH_EAST_UOM_FTUS)
+    Cartesian::fromSRID('urn:ogc:def:cs:EPSG::1053')
+
+Used in projected and engineering coordinate reference systems.
+
 2D Axes: northing, easting (N,E). Orientations: north, east. Units: metre
 -------------------------------------------------------------------------
 .. code-block:: php

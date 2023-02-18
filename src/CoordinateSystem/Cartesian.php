@@ -139,6 +139,12 @@ class Cartesian extends CoordinateSystem
     public const EPSG_2D_AXES_NORTHING_EASTING_N_E_ORIENTATIONS_NORTH_EAST_UOM_FTCLA = 'urn:ogc:def:cs:EPSG::4502';
 
     /**
+     * 2D Axes: northing, easting (N,E). Orientations: north, east. Units: foot (US).
+     * Used in projected and engineering coordinate reference systems.
+     */
+    public const EPSG_2D_AXES_NORTHING_EASTING_N_E_ORIENTATIONS_NORTH_EAST_UOM_FTUS = 'urn:ogc:def:cs:EPSG::1053';
+
+    /**
      * 2D Axes: northing, easting (N,E). Orientations: north, east. Units: metre
      * Used in projected and engineering coordinate reference systems.
      */
@@ -700,6 +706,23 @@ class Cartesian extends CoordinateSystem
                     'abbreviation' => 'h',
                     'name' => 'Ellipsoidal height',
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+            ],
+        ],
+        'urn:ogc:def:cs:EPSG::1053' => [
+            'name' => '2D Axes: northing, easting (N,E). Orientations: north, east. UoM: ftUS.',
+            'axes' => [
+                [
+                    'orientation' => 'north',
+                    'abbreviation' => 'N',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9003',
+                ],
+                [
+                    'orientation' => 'east',
+                    'abbreviation' => 'E',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9003',
                 ],
             ],
         ],

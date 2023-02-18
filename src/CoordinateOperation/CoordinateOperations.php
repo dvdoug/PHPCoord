@@ -9727,6 +9727,11 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9815',
             'extent' => ['4669'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::10149' => [
+            'name' => 'MAGNA-SIRGAS 2018 to WGS 84 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::9603',
+            'extent' => ['1070'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::10179' => [
             'name' => 'ITRF2020 to IGS20 (1)',
             'method' => 'urn:ogc:def:method:EPSG::1065',
@@ -10076,6 +10081,171 @@ class CoordinateOperations
             'name' => 'SPCS83 Illinois West zone (meters)',
             'method' => 'urn:ogc:def:method:EPSG::9807',
             'extent' => ['2195'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::11233' => [
+            'name' => 'Illinois Coordinate System of 1983 Aurora zone (US survey foot)',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent' => ['4703'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::11234' => [
+            'name' => 'Illinois Coordinate System of 1983 Chicago zone (US survey foot)',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent' => ['4704'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::11235' => [
+            'name' => 'Illinois Coordinate System of 1983 Moline zone (US survey foot)',
+            'method' => 'urn:ogc:def:method:EPSG::9801',
+            'extent' => ['4705'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::11236' => [
+            'name' => 'Illinois Coordinate System of 1983 Sterling zone (US survey foot)',
+            'method' => 'urn:ogc:def:method:EPSG::9801',
+            'extent' => ['4706'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::11237' => [
+            'name' => 'Illinois Coordinate System of 1983 Ottawa zone (US survey foot)',
+            'method' => 'urn:ogc:def:method:EPSG::9801',
+            'extent' => ['4707'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::11238' => [
+            'name' => 'Illinois Coordinate System of 1983 Joliet zone (US survey foot)',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent' => ['4708'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::11239' => [
+            'name' => 'Illinois Coordinate System of 1983 Monmouth zone (US survey foot)',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent' => ['4709'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::11240' => [
+            'name' => 'Illinois Coordinate System of 1983 Galesburg zone (US survey foot)',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent' => ['4710'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::11241' => [
+            'name' => 'Illinois Coordinate System of 1983 Peoria zone (US survey foot)',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent' => ['4711'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::11242' => [
+            'name' => 'Illinois Coordinate System of 1983 Eureka zone (US survey foot)',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent' => ['4712'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::11243' => [
+            'name' => 'Illinois Coordinate System of 1983 Bloomington zone (US survey foot)',
+            'method' => 'urn:ogc:def:method:EPSG::9801',
+            'extent' => ['4713'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::11244' => [
+            'name' => 'Illinois Coordinate System of 1983 Pontiac zone (US survey foot)',
+            'method' => 'urn:ogc:def:method:EPSG::9801',
+            'extent' => ['4714'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::11245' => [
+            'name' => 'Illinois Coordinate System of 1983 Watseka zone (US survey foot)',
+            'method' => 'urn:ogc:def:method:EPSG::9801',
+            'extent' => ['4715'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::11246' => [
+            'name' => 'Illinois Coordinate System of 1983 Quincy zone (US survey foot)',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent' => ['4716'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::11247' => [
+            'name' => 'Illinois Coordinate System of 1983 Macomb zone (US survey foot)',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent' => ['4717'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::11248' => [
+            'name' => 'Illinois Coordinate System of 1983 Lincoln zone (US survey foot)',
+            'method' => 'urn:ogc:def:method:EPSG::9801',
+            'extent' => ['4718'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::11249' => [
+            'name' => 'Illinois Coordinate System of 1983 Decatur zone (US survey foot)',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent' => ['4719'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::11250' => [
+            'name' => 'Illinois Coordinate System of 1983 Champaign zone (US survey foot)',
+            'method' => 'urn:ogc:def:method:EPSG::9801',
+            'extent' => ['4720'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::11251' => [
+            'name' => 'Illinois Coordinate System of 1983 Jacksonville zone (US survey foot)',
+            'method' => 'urn:ogc:def:method:EPSG::9801',
+            'extent' => ['4721'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::11252' => [
+            'name' => 'Illinois Coordinate System of 1983 Springfield zone (US survey foot)',
+            'method' => 'urn:ogc:def:method:EPSG::9801',
+            'extent' => ['4722'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::11253' => [
+            'name' => 'Illinois Coordinate System of 1983 Charleston zone (US survey foot)',
+            'method' => 'urn:ogc:def:method:EPSG::9801',
+            'extent' => ['4723'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::11254' => [
+            'name' => 'Illinois Coordinate System of 1983 Jerseyville zone (US survey foot)',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent' => ['4724'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::11255' => [
+            'name' => 'Illinois Coordinate System of 1983 Carlinville zone (US survey foot)',
+            'method' => 'urn:ogc:def:method:EPSG::9801',
+            'extent' => ['4725'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::11256' => [
+            'name' => 'Illinois Coordinate System of 1983 Taylorville zone (US survey foot)',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent' => ['4726'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::11257' => [
+            'name' => 'Illinois Coordinate System of 1983 Effingham zone (US survey foot)',
+            'method' => 'urn:ogc:def:method:EPSG::9801',
+            'extent' => ['4727'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::11258' => [
+            'name' => 'Illinois Coordinate System of 1983 Robinson zone (US survey foot)',
+            'method' => 'urn:ogc:def:method:EPSG::9801',
+            'extent' => ['4728'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::11259' => [
+            'name' => 'Illinois Coordinate System of 1983 Belleville zone (US survey foot)',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent' => ['4729'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::11260' => [
+            'name' => 'Illinois Coordinate System of 1983 Mount Vernon zone (US survey foot)',
+            'method' => 'urn:ogc:def:method:EPSG::9801',
+            'extent' => ['4730'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::11261' => [
+            'name' => 'Illinois Coordinate System of 1983 Olney zone (US survey foot)',
+            'method' => 'urn:ogc:def:method:EPSG::9801',
+            'extent' => ['4731'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::11262' => [
+            'name' => 'Illinois Coordinate System of 1983 Carbondale zone (US survey foot)',
+            'method' => 'urn:ogc:def:method:EPSG::9801',
+            'extent' => ['4732'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::11263' => [
+            'name' => 'Illinois Coordinate System of 1983 Metropolis zone (US survey foot)',
+            'method' => 'urn:ogc:def:method:EPSG::9801',
+            'extent' => ['4733'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::11264' => [
+            'name' => 'Illinois Coordinate System of 1983 Freeport zone (US survey foot)',
+            'method' => 'urn:ogc:def:method:EPSG::9801',
+            'extent' => ['4701'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::11265' => [
+            'name' => 'Illinois Coordinate System of 1983 Rockford zone (US survey foot)',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent' => ['4702'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::11301' => [
             'name' => 'Indiana CS27 East zone',
@@ -16641,6 +16811,31 @@ class CoordinateOperations
             'name' => 'Cuba Sur',
             'method' => 'urn:ogc:def:method:EPSG::9802',
             'extent' => ['1488'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::18065' => [
+            'name' => 'Colombia MAGNA 2018 Far West zone',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent' => ['3091'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::18066' => [
+            'name' => 'Colombia MAGNA 2018 West zone',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent' => ['3090'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::18067' => [
+            'name' => 'Colombia MAGNA 2018 Bogota zone',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent' => ['1599'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::18068' => [
+            'name' => 'Colombia MAGNA 2018 East Central zone',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent' => ['1600'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::18069' => [
+            'name' => 'Colombia MAGNA 2018 East zone',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent' => ['1601'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::18071' => [
             'name' => 'Egypt Blue Belt',

@@ -1097,6 +1097,19 @@ MAGNA-SIRGAS
     CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_MAGNA_SIRGAS)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4996')
 
+For high accuracy purposes replaced by MAGNA-SIRGAS 2018 (code 20044).
+
+MAGNA-SIRGAS 2018
+-----------------
+| Extent: Colombia - onshore and offshore. Includes San Andres y Providencia, Malpelo Islands, Roncador Bank, Serrana Bank and Serranilla Bank.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_MAGNA_SIRGAS_2018)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::20044')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_MAGNA_SIRGAS_2018)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::20044')
+
 
 MARGEN
 ------

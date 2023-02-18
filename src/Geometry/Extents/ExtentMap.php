@@ -9309,6 +9309,105 @@ class ExtentMap
         4690 => [
             'name' => 'UK - London to Fishguard',
         ],
+        4701 => [
+            'name' => 'USA - Illinois - Carroll, Jo Daviess, Stephenson',
+        ],
+        4702 => [
+            'name' => 'USA - Illinois - Lee, Ogle, Winnebago',
+        ],
+        4703 => [
+            'name' => 'USA - Illinois - Boone, Dekalb, Kane, Kendall, McHenry',
+        ],
+        4704 => [
+            'name' => 'USA - Illinois - Cook, DuPage, Lake',
+        ],
+        4705 => [
+            'name' => 'USA - Illinois - Rock Island',
+        ],
+        4706 => [
+            'name' => 'USA - Illinois - Henry, Whiteside',
+        ],
+        4707 => [
+            'name' => 'USA - Illinois - Bureau, Grundy, LaSalle, Putnam',
+        ],
+        4708 => [
+            'name' => 'USA - Illinois - Kankakee, Will',
+        ],
+        4709 => [
+            'name' => 'USA - Illinois - Henderson, Mercer, Warren',
+        ],
+        4710 => [
+            'name' => 'USA - Illinois - Fulton, Knox, Stark',
+        ],
+        4711 => [
+            'name' => 'USA - Illinois - Peoria, Tazewell',
+        ],
+        4712 => [
+            'name' => 'USA - Illinois - Marshall, Woodford',
+        ],
+        4713 => [
+            'name' => 'USA - Illinois - McLean',
+        ],
+        4714 => [
+            'name' => 'USA - Illinois - Livingston',
+        ],
+        4715 => [
+            'name' => 'USA - Illinois - Ford, Iroquois',
+        ],
+        4716 => [
+            'name' => 'USA - Illinois - Adams, Hancock',
+        ],
+        4717 => [
+            'name' => 'USA - Illinois - Brown, McDonough, Schuyler',
+        ],
+        4718 => [
+            'name' => 'USA - Illinois - Cass, Logan, Mason, Menard',
+        ],
+        4719 => [
+            'name' => 'USA - Illinois - Dewitt, Macon, Moultrie, Piatt, Shelby',
+        ],
+        4720 => [
+            'name' => 'USA - Illinois - Champaign, Vermilion',
+        ],
+        4721 => [
+            'name' => 'USA - Illinois - Morgan, Pike, Scott',
+        ],
+        4722 => [
+            'name' => 'USA - Illinois - Sangamon',
+        ],
+        4723 => [
+            'name' => 'USA - Illinois - Coles, Douglas, Edgar',
+        ],
+        4724 => [
+            'name' => 'USA - Illinois - Calhoun, Jersey',
+        ],
+        4725 => [
+            'name' => 'USA - Illinois - Greene, Macoupin',
+        ],
+        4726 => [
+            'name' => 'USA - Illinois - Christian, Montgomery',
+        ],
+        4727 => [
+            'name' => 'USA - Illinois - Bond, Effingham, Fayette',
+        ],
+        4728 => [
+            'name' => 'USA - Illinois - Clark, Crawford, Cumberland, Jasper',
+        ],
+        4729 => [
+            'name' => 'USA - Illinois - Madison, Monroe, St Clair',
+        ],
+        4730 => [
+            'name' => 'USA - Illinois - Clinton, Jefferson, Marion, Washington',
+        ],
+        4731 => [
+            'name' => 'USA - Illinois - Olney zone',
+        ],
+        4732 => [
+            'name' => 'USA - Illinois - Carbondale zone',
+        ],
+        4733 => [
+            'name' => 'USA - Illinois - Metropolis zone',
+        ],
     ];
 
     public function __invoke(): array

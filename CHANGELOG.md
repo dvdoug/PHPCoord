@@ -2,7 +2,7 @@
 
 ## [Unreleased]
 ### Changed
-- Updates to data for Slovenia and UK
+- Updates to data for Colombia, Slovenia, USA and UK
 
 
 ## [5.2.0] - 2023-01-08

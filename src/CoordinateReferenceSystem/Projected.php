@@ -1175,28 +1175,30 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * Bogota 1975 / Colombia Bogota zone
-     * Extent: Colombia - onshore between 1°30'W and 1°30'E of Bogota (75°35'W and 72°35'W of Greenwich).
+     * Extent: Colombia - onshore between 1°30'W and 1°30'E of Bogota (approximately 75°35'W and 72°35'W of
+     * Greenwich).
      * Replaced by MAGNA-SIRGAS / Colombia Bogota zone (CRS code 3116).
      */
     public const EPSG_BOGOTA_1975_COLOMBIA_BOGOTA_ZONE = 'urn:ogc:def:crs:EPSG::21897';
 
     /**
      * Bogota 1975 / Colombia East Central zone
-     * Extent: Colombia - onshore between 1°30'E and 4°30'E of Bogota (72°35'W and 69°34'W of Greenwich).
+     * Extent: Colombia - onshore between 1°30'E and 4°30'E of Bogota (approximately 72°35'W and 69°35'W of
+     * Greenwich).
      * Replaced by MAGNA-SIRGAS / Colombia East Central zone (CRS code 3117).
      */
     public const EPSG_BOGOTA_1975_COLOMBIA_EAST_CENTRAL_ZONE = 'urn:ogc:def:crs:EPSG::21898';
 
     /**
      * Bogota 1975 / Colombia East zone
-     * Extent: Colombia - east of 4°30'E of Bogota (69°34'51.3"W of Greenwich).
+     * Extent: Colombia - east of 4°30'E of Bogota (approximately 69°35'W of Greenwich).
      * Replaced by MAGNA-SIRGAS / Colombia East zone (CRS code 3118).
      */
     public const EPSG_BOGOTA_1975_COLOMBIA_EAST_ZONE = 'urn:ogc:def:crs:EPSG::21899';
 
     /**
      * Bogota 1975 / Colombia West zone
-     * Extent: Colombia - mainland onshore west of 1°30'W of Bogota (75°34'51.30"W of Greenwich).
+     * Extent: Colombia - mainland onshore west of 1°30'W of Bogota (approximately 75°35'W of Greenwich).
      * Replaced by MAGNA-SIRGAS / Colombia Far West zone and MAGNA-SIRGAS / Colombia West zone (CRS codes 3114 and
      * 3115).
      */
@@ -8238,37 +8240,44 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * MAGNA-SIRGAS / Colombia Bogota zone
-     * Extent: Colombia - onshore between 1°30'W and 1°30'E of Bogota (75°35'W and 72°35'W of Greenwich), Colombia
-     * - mainland onshore.
-     * Replaces Bogota 1975 / Colombia Bogota zone (CRS code 21897).
+     * Extent: Colombia - onshore between 1°30'W and 1°30'E of Bogota (approximately 75°35'W and 72°35'W of
+     * Greenwich).
+     * Replaces Bogota 1975 / Colombia Bogota zone (CRS code 21897). Replaced by MAGNA-SIRGAS 2018 / Colombia Bogota
+     * zone (CRS code 11116). MAGNA-SIRGAS 2018 / Origen-Nacional should be used for national topographic mapping.
      */
     public const EPSG_MAGNA_SIRGAS_COLOMBIA_BOGOTA_ZONE = 'urn:ogc:def:crs:EPSG::3116';
 
     /**
      * MAGNA-SIRGAS / Colombia East Central zone
-     * Extent: Colombia - onshore between 1°30'E and 4°30'E of Bogota (72°35'W and 69°34'W of Greenwich).
-     * Replaces Bogota 1975 / Colombia East Central zone (CRS code 21898).
+     * Extent: Colombia - onshore between 1°30'E and 4°30'E of Bogota (approximately 72°35'W and 69°35'W of
+     * Greenwich).
+     * Replaces Bogota 1975 / Colombia East Central zone (CRS code 21898). Replaced by MAGNA-SIRGAS 2018 / Colombia
+     * East Central zone (CRS code 11117).
      */
     public const EPSG_MAGNA_SIRGAS_COLOMBIA_EAST_CENTRAL_ZONE = 'urn:ogc:def:crs:EPSG::3117';
 
     /**
      * MAGNA-SIRGAS / Colombia East zone
-     * Extent: Colombia - east of 4°30'E of Bogota (69°34'51.3"W of Greenwich).
-     * Replaces Bogota 1975 / Colombia East zone (CRS code 21899).
+     * Extent: Colombia - east of 4°30'E of Bogota (approximately 69°35'W of Greenwich).
+     * Replaces Bogota 1975 / Colombia East zone (CRS code 21899). Replaced by MAGNA-SIRGAS 2018 / Colombia East zone
+     * (CRS code 11118).
      */
     public const EPSG_MAGNA_SIRGAS_COLOMBIA_EAST_ZONE = 'urn:ogc:def:crs:EPSG::3118';
 
     /**
      * MAGNA-SIRGAS / Colombia Far West zone
-     * Extent: Colombia - mainland onshore west of 78°35'W of Greenwich (4°30' W of Bogota).
-     * Partially replaces Bogota 1975 / Colombia West zone (CRS code 21896).
+     * Extent: Colombia - mainland onshore west of 4°30'W of Bogota (approximately 78°35'W of Greenwich).
+     * Partially replaces Bogota 1975 / Colombia West zone (CRS code 21896). Replaced by MAGNA-SIRGAS 2018 / Colombia
+     * Far West zone (CRS code 11114).
      */
     public const EPSG_MAGNA_SIRGAS_COLOMBIA_FAR_WEST_ZONE = 'urn:ogc:def:crs:EPSG::3114';
 
     /**
      * MAGNA-SIRGAS / Colombia West zone
-     * Extent: Colombia - onshore between 78°35'W and 75°35'W of Greenwich (4°30' W and 1°30' W of Bogota).
-     * Partially replaces Bogota 1975 / Colombia West zone (CRS code 21896).
+     * Extent: Colombia - onshore between 4°30'W and 1°30'W of Bogota (approximately 78°35'W and 75°35'W of
+     * Greenwich).
+     * Partially replaces Bogota 1975 / Colombia West zone (CRS code 21896). Replaced by MAGNA-SIRGAS 2018 / Colombia
+     * West zone (CRS code 11115).
      */
     public const EPSG_MAGNA_SIRGAS_COLOMBIA_WEST_ZONE = 'urn:ogc:def:crs:EPSG::3115';
 
@@ -8337,14 +8346,6 @@ class Projected extends CoordinateReferenceSystem
      * Extent: Colombia - Neiva city.
      */
     public const EPSG_MAGNA_SIRGAS_NEIVA_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6261';
-
-    /**
-     * MAGNA-SIRGAS / Origen-Nacional
-     * Extent: Colombia - onshore and offshore. Includes San Andres y Providencia, Malpelo Islands, Roncador Bank,
-     * Serrana Bank and Serranilla Bank.
-     * Used for the Multipurpose Cadastre and to support GIS-based land administration.
-     */
-    public const EPSG_MAGNA_SIRGAS_ORIGEN_NACIONAL = 'urn:ogc:def:crs:EPSG::9377';
 
     /**
      * MAGNA-SIRGAS / Pasto urban grid
@@ -8429,6 +8430,55 @@ class Projected extends CoordinateReferenceSystem
      * Extent: Colombia - Yopal city.
      */
     public const EPSG_MAGNA_SIRGAS_YOPAL_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6275';
+
+    /**
+     * MAGNA-SIRGAS 2018 / Colombia Bogota zone
+     * Extent: Colombia - onshore between 1°30'W and 1°30'E of Bogota (approximately 75°35'W and 72°35'W of
+     * Greenwich).
+     * Replaces MAGNA-SIRGAS / Colombia Bogota zone (CRS code 3116). MAGNA-SIRGAS 2018 / Origen-Nacional should be used
+     * for national topographic mapping.
+     */
+    public const EPSG_MAGNA_SIRGAS_2018_COLOMBIA_BOGOTA_ZONE = 'urn:ogc:def:crs:EPSG::11116';
+
+    /**
+     * MAGNA-SIRGAS 2018 / Colombia East Central zone
+     * Extent: Colombia - onshore between 1°30'E and 4°30'E of Bogota (approximately 72°35'W and 69°35'W of
+     * Greenwich).
+     * Replaces MAGNA-SIRGAS / Colombia East Central zone (CRS code 3117).
+     */
+    public const EPSG_MAGNA_SIRGAS_2018_COLOMBIA_EAST_CENTRAL_ZONE = 'urn:ogc:def:crs:EPSG::11117';
+
+    /**
+     * MAGNA-SIRGAS 2018 / Colombia East zone
+     * Extent: Colombia - east of 4°30'E of Bogota (approximately 69°35'W of Greenwich).
+     * Replaces MAGNA-SIRGAS / Colombia East zone (CRS code 3118).
+     */
+    public const EPSG_MAGNA_SIRGAS_2018_COLOMBIA_EAST_ZONE = 'urn:ogc:def:crs:EPSG::11118';
+
+    /**
+     * MAGNA-SIRGAS 2018 / Colombia Far West zone
+     * Extent: Colombia - mainland onshore west of 4°30'W of Bogota (approximately 78°35'W of Greenwich).
+     * Replaces MAGNA-SIRGAS / Colombia Far West zone (CRS code 3114).
+     */
+    public const EPSG_MAGNA_SIRGAS_2018_COLOMBIA_FAR_WEST_ZONE = 'urn:ogc:def:crs:EPSG::11114';
+
+    /**
+     * MAGNA-SIRGAS 2018 / Colombia West zone
+     * Extent: Colombia - onshore between 4°30'W and 1°30'W of Bogota (approximately 78°35'W and 75°35'W of
+     * Greenwich).
+     * Replaces MAGNA-SIRGAS / Colombia West zone (CRS code 3115).
+     */
+    public const EPSG_MAGNA_SIRGAS_2018_COLOMBIA_WEST_ZONE = 'urn:ogc:def:crs:EPSG::11115';
+
+    /**
+     * MAGNA-SIRGAS 2018 / Origen-Nacional
+     * Extent: Colombia - onshore and offshore. Includes San Andres y Providencia, Malpelo Islands, Roncador Bank,
+     * Serrana Bank and Serranilla Bank.
+     * Used for the Multipurpose Cadastre and to support GIS-based land administration. Originally described using
+     * "MAGNA-SIRGAS" as base CRS, but redefined by IGAC using "MAGNA-SIRGAS 2018". 0.3m difference not significant for
+     * quoted usage.
+     */
+    public const EPSG_MAGNA_SIRGAS_2018_ORIGEN_NACIONAL = 'urn:ogc:def:crs:EPSG::9377';
 
     /**
      * MALS09 Grid
@@ -14553,6 +14603,305 @@ class Projected extends CoordinateReferenceSystem
      * / Georgia West (ftUS) (CRS code 3521).
      */
     public const EPSG_NAD83_2011_GEORGIA_WEST_FTUS = 'urn:ogc:def:crs:EPSG::6447';
+
+    /**
+     * NAD83(2011) / ICS83-Aurora (ftUS)
+     * Extent: United States (USA) - Illinois - counties of Boone, Dekalb, Kane, Kendall and McHenry.
+     * Part of the Illinois Coordinate System of 1983 33-zone system. State law for SPCS83 defines use of US survey
+     * feet. This CRS was designed in NAD 83 ftUS but is otherwise based on the NGS guidelines for the NATRF2022
+     * project.
+     */
+    public const EPSG_NAD83_2011_ICS83_AURORA_FTUS = 'urn:ogc:def:crs:EPSG::23303';
+
+    /**
+     * NAD83(2011) / ICS83-Belleville (ftUS)
+     * Extent: United States (USA) - Illinois - counties of Madison, Monroe and St Clair.
+     * Part of the Illinois Coordinate System of 1983 33-zone system. State law for SPCS83 defines use of US survey
+     * feet. This CRS was designed in NAD 83 ftUS but is otherwise based on the NGS guidelines for the NATRF2022
+     * project.
+     */
+    public const EPSG_NAD83_2011_ICS83_BELLEVILLE_FTUS = 'urn:ogc:def:crs:EPSG::23329';
+
+    /**
+     * NAD83(2011) / ICS83-Bloomington (ftUS)
+     * Extent: United States (USA) - Illinois - McLean county.
+     * Part of the Illinois Coordinate System of 1983 33-zone system. State law for SPCS83 defines use of US survey
+     * feet. This CRS was designed in NAD 83 ftUS but is otherwise based on the NGS guidelines for the NATRF2022
+     * project.
+     */
+    public const EPSG_NAD83_2011_ICS83_BLOOMINGTON_FTUS = 'urn:ogc:def:crs:EPSG::23313';
+
+    /**
+     * NAD83(2011) / ICS83-Carbondale (ftUS)
+     * Extent: United States (USA) - Illinois - counties of Franklin, Gallatin, Hamilton, Jackson, Perry,  Randolph,
+     * Saline, White and Williamson.
+     * Part of the Illinois Coordinate System of 1983 33-zone system. State law for SPCS83 defines use of US survey
+     * feet. This CRS was designed in NAD 83 ftUS but is otherwise based on the NGS guidelines for the NATRF2022
+     * project.
+     */
+    public const EPSG_NAD83_2011_ICS83_CARBONDALE_FTUS = 'urn:ogc:def:crs:EPSG::23332';
+
+    /**
+     * NAD83(2011) / ICS83-Carlinville (ftUS)
+     * Extent: United States (USA) - Illinois - counties of Greene and Macoupin.
+     * Part of the Illinois Coordinate System of 1983 33-zone system. State law for SPCS83 defines use of US survey
+     * feet. This CRS was designed in NAD 83 ftUS but is otherwise based on the NGS guidelines for the NATRF2022
+     * project.
+     */
+    public const EPSG_NAD83_2011_ICS83_CARLINVILLE_FTUS = 'urn:ogc:def:crs:EPSG::23325';
+
+    /**
+     * NAD83(2011) / ICS83-Champaign (ftUS)
+     * Extent: United States (USA) - Illinois - counties of Champaign and Vermilion.
+     * Part of the Illinois Coordinate System of 1983 33-zone system. State law for SPCS83 defines use of US survey
+     * feet. This CRS was designed in NAD 83 ftUS but is otherwise based on the NGS guidelines for the NATRF2022
+     * project.
+     */
+    public const EPSG_NAD83_2011_ICS83_CHAMPAIGN_FTUS = 'urn:ogc:def:crs:EPSG::23320';
+
+    /**
+     * NAD83(2011) / ICS83-Charleston (ftUS)
+     * Extent: United States (USA) - Illinois - counties of Coles, Douglas and Edgar.
+     * Part of the Illinois Coordinate System of 1983 33-zone system. State law for SPCS83 defines use of US survey
+     * feet. This CRS was designed in NAD 83 ftUS but is otherwise based on the NGS guidelines for the NATRF2022
+     * project.
+     */
+    public const EPSG_NAD83_2011_ICS83_CHARLESTON_FTUS = 'urn:ogc:def:crs:EPSG::23323';
+
+    /**
+     * NAD83(2011) / ICS83-Chicago (ftUS)
+     * Extent: United States (USA) - Illinois - counties of Cook, DuPage and Lake.
+     * Part of the Illinois Coordinate System of 1983 33-zone system. State law for SPCS83 defines use of US survey
+     * feet. This CRS was designed in NAD 83 ftUS but is otherwise based on the NGS guidelines for the NATRF2022
+     * project.
+     */
+    public const EPSG_NAD83_2011_ICS83_CHICAGO_FTUS = 'urn:ogc:def:crs:EPSG::23304';
+
+    /**
+     * NAD83(2011) / ICS83-Decatur (ftUS)
+     * Extent: United States (USA) - Illinois - counties of Dewitt, Macon, Moultrie, Piatt and Shelby.
+     * Part of the Illinois Coordinate System of 1983 33-zone system. State law for SPCS83 defines use of US survey
+     * feet. This CRS was designed in NAD 83 ftUS but is otherwise based on the NGS guidelines for the NATRF2022
+     * project.
+     */
+    public const EPSG_NAD83_2011_ICS83_DECATUR_FTUS = 'urn:ogc:def:crs:EPSG::23319';
+
+    /**
+     * NAD83(2011) / ICS83-Effingham (ftUS)
+     * Extent: United States (USA) - Illinois - counties of Bond, Effingham and Fayette.
+     * Part of the Illinois Coordinate System of 1983 33-zone system. State law for SPCS83 defines use of US survey
+     * feet. This CRS was designed in NAD 83 ftUS but is otherwise based on the NGS guidelines for the NATRF2022
+     * project.
+     */
+    public const EPSG_NAD83_2011_ICS83_EFFINGHAM_FTUS = 'urn:ogc:def:crs:EPSG::23327';
+
+    /**
+     * NAD83(2011) / ICS83-Eureka (ftUS)
+     * Extent: United States (USA) - Illinois - counties of Marshall and Woodford.
+     * Part of the Illinois Coordinate System of 1983 33-zone system. State law for SPCS83 defines use of US survey
+     * feet. This CRS was designed in NAD 83 ftUS but is otherwise based on the NGS guidelines for the NATRF2022
+     * project.
+     */
+    public const EPSG_NAD83_2011_ICS83_EUREKA_FTUS = 'urn:ogc:def:crs:EPSG::23312';
+
+    /**
+     * NAD83(2011) / ICS83-Freeport (ftUS)
+     * Extent: United States (USA) - Illinois - counties of Carroll, Jo Daviess and Stephenson.
+     * Part of the Illinois Coordinate System of 1983 33-zone system. State law for SPCS83 defines use of US survey
+     * feet. This CRS was designed in NAD 83 ftUS but is otherwise based on the NGS guidelines for the NATRF2022
+     * project.
+     */
+    public const EPSG_NAD83_2011_ICS83_FREEPORT_FTUS = 'urn:ogc:def:crs:EPSG::23301';
+
+    /**
+     * NAD83(2011) / ICS83-Galesburg (ftUS)
+     * Extent: United States (USA) - Illinois - counties of Fulton, Knox and Stark.
+     * Part of the Illinois Coordinate System of 1983 33-zone system. State law for SPCS83 defines use of US survey
+     * feet. This CRS was designed in NAD 83 ftUS but is otherwise based on the NGS guidelines for the NATRF2022
+     * project.
+     */
+    public const EPSG_NAD83_2011_ICS83_GALESBURG_FTUS = 'urn:ogc:def:crs:EPSG::23310';
+
+    /**
+     * NAD83(2011) / ICS83-Jacksonville (ftUS)
+     * Extent: United States (USA) - Illinois - counties of Morgan, Pike and Scott.
+     * Part of the Illinois Coordinate System of 1983 33-zone system. State law for SPCS83 defines use of US survey
+     * feet. This CRS was designed in NAD 83 ftUS but is otherwise based on the NGS guidelines for the NATRF2022
+     * project.
+     */
+    public const EPSG_NAD83_2011_ICS83_JACKSONVILLE_FTUS = 'urn:ogc:def:crs:EPSG::23321';
+
+    /**
+     * NAD83(2011) / ICS83-Jerseyville (ftUS)
+     * Extent: United States (USA) - Illinois - counties of Calhoun and Jersey.
+     * Part of the Illinois Coordinate System of 1983 33-zone system. State law for SPCS83 defines use of US survey
+     * feet. This CRS was designed in NAD 83 ftUS but is otherwise based on the NGS guidelines for the NATRF2022
+     * project.
+     */
+    public const EPSG_NAD83_2011_ICS83_JERSEYVILLE_FTUS = 'urn:ogc:def:crs:EPSG::23324';
+
+    /**
+     * NAD83(2011) / ICS83-Joliet (ftUS)
+     * Extent: United States (USA) - Illinois - counties of Kankakee and Will.
+     * Part of the Illinois Coordinate System of 1983 33-zone system. State law for SPCS83 defines use of US survey
+     * feet. This CRS was designed in NAD 83 ftUS but is otherwise based on the NGS guidelines for the NATRF2022
+     * project.
+     */
+    public const EPSG_NAD83_2011_ICS83_JOLIET_FTUS = 'urn:ogc:def:crs:EPSG::23308';
+
+    /**
+     * NAD83(2011) / ICS83-Lincoln (ftUS)
+     * Extent: United States (USA) - Illinois - counties of Cass, Logan, Mason and Menard.
+     * Part of the Illinois Coordinate System of 1983 33-zone system. State law for SPCS83 defines use of US survey
+     * feet. This CRS was designed in NAD 83 ftUS but is otherwise based on the NGS guidelines for the NATRF2022
+     * project.
+     */
+    public const EPSG_NAD83_2011_ICS83_LINCOLN_FTUS = 'urn:ogc:def:crs:EPSG::23318';
+
+    /**
+     * NAD83(2011) / ICS83-Macomb (ftUS)
+     * Extent: United States (USA) - Illinois - counties of Brown, McDonough and Schuyler.
+     * Part of the Illinois Coordinate System of 1983 33-zone system. State law for SPCS83 defines use of US survey
+     * feet. This CRS was designed in NAD 83 ftUS but is otherwise based on the NGS guidelines for the NATRF2022
+     * project.
+     */
+    public const EPSG_NAD83_2011_ICS83_MACOMB_FTUS = 'urn:ogc:def:crs:EPSG::23317';
+
+    /**
+     * NAD83(2011) / ICS83-Metropolis (ftUS)
+     * Extent: United States (USA) - Illinois - counties of Alexander, Hardin, Johnson, Massac, Pope, Pulaski and
+     * Union.
+     * Part of the Illinois Coordinate System of 1983 33-zone system. State law for SPCS83 defines use of US survey
+     * feet. This CRS was designed in NAD 83 ftUS but is otherwise based on the NGS guidelines for the NATRF2022
+     * project.
+     */
+    public const EPSG_NAD83_2011_ICS83_METROPOLIS_FTUS = 'urn:ogc:def:crs:EPSG::23333';
+
+    /**
+     * NAD83(2011) / ICS83-Moline (ftUS)
+     * Extent: United States (USA) - Illinois - Rock Island county.
+     * Part of the Illinois Coordinate System of 1983 33-zone system. State law for SPCS83 defines use of US survey
+     * feet. This CRS was designed in NAD 83 ftUS but is otherwise based on the NGS guidelines for the NATRF2022
+     * project.
+     */
+    public const EPSG_NAD83_2011_ICS83_MOLINE_FTUS = 'urn:ogc:def:crs:EPSG::23305';
+
+    /**
+     * NAD83(2011) / ICS83-Monmouth (ftUS)
+     * Extent: United States (USA) - Illinois - counties of Henderson, Mercer and Warren.
+     * Part of the Illinois Coordinate System of 1983 33-zone system. State law for SPCS83 defines use of US survey
+     * feet. This CRS was designed in NAD 83 ftUS but is otherwise based on the NGS guidelines for the NATRF2022
+     * project.
+     */
+    public const EPSG_NAD83_2011_ICS83_MONMOUTH_FTUS = 'urn:ogc:def:crs:EPSG::23309';
+
+    /**
+     * NAD83(2011) / ICS83-Mount Vernon (ftUS)
+     * Extent: United States (USA) - Illinois - counties of Clinton, Jefferson, Marion and Washington.
+     * Part of the Illinois Coordinate System of 1983 33-zone system. State law for SPCS83 defines use of US survey
+     * feet. This CRS was designed in NAD 83 ftUS but is otherwise based on the NGS guidelines for the NATRF2022
+     * project.
+     */
+    public const EPSG_NAD83_2011_ICS83_MOUNT_VERNON_FTUS = 'urn:ogc:def:crs:EPSG::23330';
+
+    /**
+     * NAD83(2011) / ICS83-Olney (ftUS)
+     * Extent: United States (USA) - Illinois - counties of Clay, Edwards, Lawrence, Richland, Wabash and Wayne.
+     * Part of the Illinois Coordinate System of 1983 33-zone system. State law for SPCS83 defines use of US survey
+     * feet. This CRS was designed in NAD 83 ftUS but is otherwise based on the NGS guidelines for the NATRF2022
+     * project.
+     */
+    public const EPSG_NAD83_2011_ICS83_OLNEY_FTUS = 'urn:ogc:def:crs:EPSG::23331';
+
+    /**
+     * NAD83(2011) / ICS83-Ottawa (ftUS)
+     * Extent: United States (USA) - Illinois - counties of Bureau, Grundy, LaSalle and Putnam.
+     * Part of the Illinois Coordinate System of 1983 33-zone system. State law for SPCS83 defines use of US survey
+     * feet. This CRS was designed in NAD 83 ftUS but is otherwise based on the NGS guidelines for the NATRF2022
+     * project.
+     */
+    public const EPSG_NAD83_2011_ICS83_OTTAWA_FTUS = 'urn:ogc:def:crs:EPSG::23307';
+
+    /**
+     * NAD83(2011) / ICS83-Peoria (ftUS)
+     * Extent: United States (USA) - Illinois - counties of Peoria and Tazewell.
+     * Part of the Illinois Coordinate System of 1983 33-zone system. State law for SPCS83 defines use of US survey
+     * feet. This CRS was designed in NAD 83 ftUS but is otherwise based on the NGS guidelines for the NATRF2022
+     * project.
+     */
+    public const EPSG_NAD83_2011_ICS83_PEORIA_FTUS = 'urn:ogc:def:crs:EPSG::23311';
+
+    /**
+     * NAD83(2011) / ICS83-Pontiac (ftUS)
+     * Extent: United States (USA) - Illinois - Livingston county.
+     * Part of the Illinois Coordinate System of 1983 33-zone system. State law for SPCS83 defines use of US survey
+     * feet. This CRS was designed in NAD 83 ftUS but is otherwise based on the NGS guidelines for the NATRF2022
+     * project.
+     */
+    public const EPSG_NAD83_2011_ICS83_PONTIAC_FTUS = 'urn:ogc:def:crs:EPSG::23314';
+
+    /**
+     * NAD83(2011) / ICS83-Quincy (ftUS)
+     * Extent: United States (USA) - Illinois - counties of Adams and Hancock.
+     * Part of the Illinois Coordinate System of 1983 33-zone system. State law for SPCS83 defines use of US survey
+     * feet. This CRS was designed in NAD 83 ftUS but is otherwise based on the NGS guidelines for the NATRF2022
+     * project.
+     */
+    public const EPSG_NAD83_2011_ICS83_QUINCY_FTUS = 'urn:ogc:def:crs:EPSG::23316';
+
+    /**
+     * NAD83(2011) / ICS83-Robinson (ftUS)
+     * Extent: United States (USA) - Illinois - counties of Clark, Crawford, Cumberland and Jasper.
+     * Part of the Illinois Coordinate System of 1983 33-zone system. State law for SPCS83 defines use of US survey
+     * feet. This CRS was designed in NAD 83 ftUS but is otherwise based on the NGS guidelines for the NATRF2022
+     * project.
+     */
+    public const EPSG_NAD83_2011_ICS83_ROBINSON_FTUS = 'urn:ogc:def:crs:EPSG::23328';
+
+    /**
+     * NAD83(2011) / ICS83-Rockford (ftUS)
+     * Extent: United States (USA) - Illinois - counties of Lee, Ogle and Winnebago.
+     * Part of the Illinois Coordinate System of 1983 33-zone system. State law for SPCS83 defines use of US survey
+     * feet. This CRS was designed in NAD 83 ftUS but is otherwise based on the NGS guidelines for the NATRF2022
+     * project.
+     */
+    public const EPSG_NAD83_2011_ICS83_ROCKFORD_FTUS = 'urn:ogc:def:crs:EPSG::23302';
+
+    /**
+     * NAD83(2011) / ICS83-Springfield (ftUS)
+     * Extent: United States (USA) - Illinois - Sangamon county.
+     * Part of the Illinois Coordinate System of 1983 33-zone system. State law for SPCS83 defines use of US survey
+     * feet. This CRS was designed in NAD 83 ftUS but is otherwise based on the NGS guidelines for the NATRF2022
+     * project.
+     */
+    public const EPSG_NAD83_2011_ICS83_SPRINGFIELD_FTUS = 'urn:ogc:def:crs:EPSG::23322';
+
+    /**
+     * NAD83(2011) / ICS83-Sterling (ftUS)
+     * Extent: United States (USA) - Illinois - counties of Henry and Whiteside.
+     * Part of the Illinois Coordinate System of 1983 33-zone system. State law for SPCS83 defines use of US survey
+     * feet. This CRS was designed in NAD 83 ftUS but is otherwise based on the NGS guidelines for the NATRF2022
+     * project.
+     */
+    public const EPSG_NAD83_2011_ICS83_STERLING_FTUS = 'urn:ogc:def:crs:EPSG::23306';
+
+    /**
+     * NAD83(2011) / ICS83-Taylorville (ftUS)
+     * Extent: United States (USA) - Illinois - counties of Christian and Montgomery.
+     * Part of the Illinois Coordinate System of 1983 33-zone system. State law for SPCS83 defines use of US survey
+     * feet. This CRS was designed in NAD 83 ftUS but is otherwise based on the NGS guidelines for the NATRF2022
+     * project.
+     */
+    public const EPSG_NAD83_2011_ICS83_TAYLORVILLE_FTUS = 'urn:ogc:def:crs:EPSG::23326';
+
+    /**
+     * NAD83(2011) / ICS83-Watseka (ftUS)
+     * Extent: United States (USA) - Illinois - counties of Ford and Iroquois.
+     * Part of the Illinois Coordinate System of 1983 33-zone system. State law for SPCS83 defines use of US survey
+     * feet. This CRS was designed in NAD 83 ftUS but is otherwise based on the NGS guidelines for the NATRF2022
+     * project.
+     */
+    public const EPSG_NAD83_2011_ICS83_WATSEKA_FTUS = 'urn:ogc:def:crs:EPSG::23315';
 
     /**
      * NAD83(2011) / IaRCS zone 1

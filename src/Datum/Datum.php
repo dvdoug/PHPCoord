@@ -4167,6 +4167,19 @@ class Datum
     public const EPSG_MARCO_GEOCENTRICO_NACIONAL_DE_REFERENCIA = 'urn:ogc:def:datum:EPSG::6686';
 
     /**
+     * Marco Geocentrico Nacional de Referencia 2018
+     * Type: Geodetic
+     * Extent: Colombia - onshore and offshore. Includes San Andres y Providencia, Malpelo Islands, Roncador Bank,
+     * Serrana Bank and Serranilla Bank.
+     * Densification of ITRF2014 at epoch 2018.0 in Colombia. Bogota observatory coordinates: Latitude:
+     * 4°35'46.33160"N, longitude: 74°04'39.02797"W (of Greenwich).
+     * Active network referenced to ITRF2008@2011.76 and passive network referenced to ITRF94@1995.4 updated to
+     * ITRF2014 using IERS transformations EPSG:7790 and EPSG:8075 respectively then VEMOS2009 velocity model applied
+     * to bring coordinates to epoch 2018.0.
+     */
+    public const EPSG_MARCO_GEOCENTRICO_NACIONAL_DE_REFERENCIA_2018 = 'urn:ogc:def:datum:EPSG::1329';
+
+    /**
      * Marco Geodesico Nacional de Bolivia
      * Type: Geodetic
      * Extent: Bolivia.
@@ -10327,6 +10340,14 @@ class Datum
             'type' => 'vertical',
             'ellipsoid' => null,
             'prime_meridian' => null,
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
+        'urn:ogc:def:datum:EPSG::1329' => [
+            'name' => 'Marco Geocentrico Nacional de Referencia 2018',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
         ],

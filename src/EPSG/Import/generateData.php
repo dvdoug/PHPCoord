@@ -27,8 +27,8 @@ $importer->generateDataEllipsoids();
 $importer->generateDataDatums();
 $importer->generateDataCoordinateSystems();
 $importer->generateDataCoordinateReferenceSystems();
+$importer->generateExtents();
 $importer->generateDataCoordinateOperationMethods();
 $importer->generateDataCoordinateOperations();
-$importer->generateExtents();
 
 echo '--CODEGEN COMPLETE--' . PHP_EOL;

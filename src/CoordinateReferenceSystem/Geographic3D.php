@@ -679,8 +679,16 @@ class Geographic3D extends Geographic
      * MAGNA-SIRGAS
      * Extent: Colombia - onshore and offshore. Includes San Andres y Providencia, Malpelo Islands, Roncador Bank,
      * Serrana Bank and Serranilla Bank.
+     * For high accuracy purposes replaced by MAGNA-SIRGAS 2018 (code 20045).
      */
     public const EPSG_MAGNA_SIRGAS = 'urn:ogc:def:crs:EPSG::4997';
+
+    /**
+     * MAGNA-SIRGAS 2018
+     * Extent: Colombia - onshore and offshore. Includes San Andres y Providencia, Malpelo Islands, Roncador Bank,
+     * Serrana Bank and Serranilla Bank.
+     */
+    public const EPSG_MAGNA_SIRGAS_2018 = 'urn:ogc:def:crs:EPSG::20045';
 
     /**
      * MARGEN

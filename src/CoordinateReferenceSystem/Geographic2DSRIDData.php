@@ -3930,5 +3930,12 @@ trait Geographic2DSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1327',
             'extent' => ['1066'],
         ],
+        'urn:ogc:def:crs:EPSG::20046' => [
+            'name' => 'MAGNA-SIRGAS 2018',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
+            'base_crs' => 'urn:ogc:def:crs:EPSG::20045',
+            'datum' => 'urn:ogc:def:datum:EPSG::1329',
+            'extent' => ['1070'],
+        ],
     ];
 }

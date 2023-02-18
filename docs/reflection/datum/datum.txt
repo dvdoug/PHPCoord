@@ -5751,6 +5751,20 @@ Densification of SIRGAS95 (ITRF94 at epoch 1995.4) in Colombia. Bogota observato
 
 Densification of SIRGAS 1995 within Colombia. Replaces Bogota 1975 (datum code 6218).
 
+Marco Geocentrico Nacional de Referencia 2018
+---------------------------------------------
+| Type: Geodetic
+| Extent: Colombia - onshore and offshore. Includes San Andres y Providencia, Malpelo Islands, Roncador Bank, Serrana Bank and Serranilla Bank.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_MARCO_GEOCENTRICO_NACIONAL_DE_REFERENCIA_2018)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1329')
+
+Densification of ITRF2014 at epoch 2018.0 in Colombia. Bogota observatory coordinates: Latitude: 4°35'46.33160"N, longitude: 74°04'39.02797"W (of Greenwich).
+
+Active network referenced to ITRF2008@2011.76 and passive network referenced to ITRF94@1995.4 updated to ITRF2014 using IERS transformations EPSG:7790 and EPSG:8075 respectively then VEMOS2009 velocity model applied to bring coordinates to epoch 2018.0.
+
 Marco Geodesico Nacional de Bolivia
 -----------------------------------
 | Type: Geodetic

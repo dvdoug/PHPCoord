@@ -67,6 +67,20 @@ class CRSTransformationsGlobal
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
             'name' => 'geocentric to geographic3D',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::20044',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::20045',
+            'accuracy' => 0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
+            'name' => 'geographic3D to geographic2D',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::20045',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::20046',
+            'accuracy' => 0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
+            'name' => 'geocentric to geographic3D',
             'source_crs' => 'urn:ogc:def:crs:EPSG::3822',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3823',
             'accuracy' => 0,

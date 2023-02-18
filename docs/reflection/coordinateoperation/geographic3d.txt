@@ -2825,6 +2825,26 @@ to MAGNA-SIRGAS (Geographic2D)
 
     "
 
+MAGNA-SIRGAS 2018
+-----------------
+``Geographic3D::fromSRID(Geographic3D::EPSG_MAGNA_SIRGAS_2018)``
+
+to MAGNA-SIRGAS 2018 (Geographic2D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: geographic3D to geographic2D
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::15593``
+    | Extent: World",".. code-block:: php
+
+        $point->threeDToTwoD(
+            to: Geographic2D::fromSRID(Geographic2D::EPSG_MAGNA_SIRGAS_2018)
+        )
+
+    "
+
 MARGEN
 ------
 ``Geographic3D::fromSRID(Geographic3D::EPSG_MARGEN)``

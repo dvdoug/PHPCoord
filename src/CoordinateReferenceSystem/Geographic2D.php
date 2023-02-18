@@ -1976,9 +1976,18 @@ class Geographic2D extends Geographic
      * MAGNA-SIRGAS
      * Extent: Colombia - onshore and offshore. Includes San Andres y Providencia, Malpelo Islands, Roncador Bank,
      * Serrana Bank and Serranilla Bank.
-     * Replaces Bogota 1975 (CRS code .4218).
+     * Replaces Bogota 1975 (CRS code 4218). For high accuracy purposes replaced by MAGNA-SIRGAS 2018 (code 20046).
      */
     public const EPSG_MAGNA_SIRGAS = 'urn:ogc:def:crs:EPSG::4686';
+
+    /**
+     * MAGNA-SIRGAS 2018
+     * Extent: Colombia - onshore and offshore. Includes San Andres y Providencia, Malpelo Islands, Roncador Bank,
+     * Serrana Bank and Serranilla Bank.
+     * Replaces MAGNA-SIRGAS (CRS code 4686) for high accuracy purposes. Change is approximately 0.31m in latitude,
+     * 0.02m in longitude. For mapping and cadastral purposes considered equivalent.
+     */
+    public const EPSG_MAGNA_SIRGAS_2018 = 'urn:ogc:def:crs:EPSG::20046';
 
     /**
      * MALS09-IRF
