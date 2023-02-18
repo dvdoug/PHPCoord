@@ -4246,4 +4246,18 @@ class Geographic2D extends Geographic
         self::getSupportedSRIDs(); // init cache if not already
         self::$supportedCache[$srid] = $name; // update cache
     }
+
+    /**
+     * @internal
+     */
+    public static function findFromBaseCRS(Geographic3D $baseCRS): ?self
+    {
+        foreach (self::$sridData as $srid => $data) {
+            if ($data['base_crs'] === $baseCRS->getSRID()) {
+                return self::fromSRID($srid);
+            }
+        }
+
+        return null;
+    }
 }

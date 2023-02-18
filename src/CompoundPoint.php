@@ -145,6 +145,17 @@ class CompoundPoint extends Point implements ConvertiblePoint
                     }
                 }
             }
+            if ($to instanceof Geographic3D && ($twoDimensionalVariantOfTarget = Geographic2D::findFromBaseCRS($to))) {
+                $newHorizontalPoint = $this->getHorizontalPoint()->convert($twoDimensionalVariantOfTarget);
+                $workingPointCRS = Compound::findFromHorizontalAndVertical($twoDimensionalVariantOfTarget, $this->getVerticalPoint()->getCRS());
+                $workingPoint = self::create(
+                    $workingPointCRS,
+                    $newHorizontalPoint,
+                    $this->getVerticalPoint()
+                );
+
+                return $workingPoint->convert($to);
+            }
             throw $e;
         }
     }

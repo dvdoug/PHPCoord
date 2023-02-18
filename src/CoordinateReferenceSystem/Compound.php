@@ -3034,4 +3034,18 @@ class Compound extends CoordinateReferenceSystem
         self::getSupportedSRIDs(); // init cache if not already
         self::$supportedCache[$srid] = $name; // update cache
     }
+
+    /**
+     * @internal
+     */
+    public static function findFromHorizontalAndVertical(Geocentric|Geographic2D|Projected $horizontal, Vertical $vertical): ?self
+    {
+        foreach (self::$sridData as $srid => $data) {
+            if ($data['horizontal_crs'] === $horizontal->getSRID() && $data['vertical_crs'] === $vertical->getSRID()) {
+                return self::fromSRID($srid);
+            }
+        }
+
+        return null;
+    }
 }
