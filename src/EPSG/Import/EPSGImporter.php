@@ -119,9 +119,9 @@ class EPSGImporter
          * EPSG has a transform listed from generic ETRS89 (2D) to generic WGS84 (2D) but not the 3D for some reason
          */
         $sqlite->exec("INSERT INTO epsg_coordoperation (coord_op_code, coord_op_name, coord_op_type, source_crs_code, target_crs_code, coord_op_method_code, coord_op_accuracy, data_source, revision_date, deprecated, show_operation, remarks) VALUES (32774, 'ETRS89 to WGS 84 (geocen)', 'transformation', 4936, 4978, 32768, 1, 'PHPCoord', '2023-02-19', 0, 1, '')");
-        $sqlite->exec("INSERT INTO epsg_usage (object_table_name, object_code, extent_code, scope_code) VALUES ('epsg_coordoperation', 32774, 1262, 1252)");
+        $sqlite->exec("INSERT INTO epsg_usage (object_table_name, object_code, extent_code, scope_code) VALUES ('epsg_coordoperation', 32774, 1262, 1298)");
         $sqlite->exec("INSERT INTO epsg_coordoperation (coord_op_code, coord_op_name, coord_op_type, source_crs_code, target_crs_code, coord_op_method_code, coord_op_accuracy, data_source, revision_date, deprecated, show_operation, remarks) VALUES (32775, 'ETRS89 to WGS 84 (geog3D)', 'transformation', 4937, 4979, 32768, 1, 'PHPCoord', '2023-02-19', 0, 1, '')");
-        $sqlite->exec("INSERT INTO epsg_usage (object_table_name, object_code, extent_code, scope_code) VALUES ('epsg_coordoperation', 32775, 1262, 1252)");
+        $sqlite->exec("INSERT INTO epsg_usage (object_table_name, object_code, extent_code, scope_code) VALUES ('epsg_coordoperation', 32775, 1262, 1298)");
 
         /*
          * Too many "world" extents with confusing descriptions, unify
