@@ -370,7 +370,7 @@ class Codegen
                         [$operationSrid, $reverse] = $operation;
                         $operation = CoordinateOperations::getOperationData($operationSrid);
                         if ($operation['method'] == CoordinateOperationMethods::EPSG_ALIAS) {
-                            continue 2;
+                            continue;
                         }
                         $methodData = CoordinateOperationMethods::getMethodData($operation['method']);
                         $methodName = CoordinateOperationMethods::getFunctionName($operation['method']);
