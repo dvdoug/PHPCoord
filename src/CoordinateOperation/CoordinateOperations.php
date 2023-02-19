@@ -18347,6 +18347,16 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9602',
             'extent' => ['1262'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::32774' => [
+            'name' => 'ETRS89 to WGS 84 (geocen)',
+            'method' => 'urn:ogc:def:method:EPSG::32768',
+            'extent' => ['1262'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::32775' => [
+            'name' => 'ETRS89 to WGS 84 (geog3D)',
+            'method' => 'urn:ogc:def:method:EPSG::32768',
+            'extent' => ['1262'],
+        ],
     ];
 
     protected static array $customSridParamData = [];

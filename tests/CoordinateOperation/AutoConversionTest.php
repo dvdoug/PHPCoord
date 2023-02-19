@@ -396,6 +396,32 @@ class AutoConversionTest extends TestCase
         self::assertEqualsWithDelta(301.798133706, $to->getHeight()->asMetres()->getValue(), 0.00001);
     }
 
+    public function testRDNAPToWGS84(): void
+    {
+        if (!class_exists(GTXETRS89NAPProvider::class)) {
+            self::markTestSkipped('Requires phpcoord/datapack-europe');
+        }
+
+        $from = CompoundPoint::create(
+            Compound::fromSRID(Compound::EPSG_AMERSFOORT_RD_NEW_PLUS_NAP_HEIGHT),
+            ProjectedPoint::createFromEastingNorthing(
+                Projected::fromSRID(Projected::EPSG_AMERSFOORT_RD_NEW),
+                new Metre(108360.8790),
+                new Metre(415757.2745),
+            ),
+            VerticalPoint::create(
+                Vertical::fromSRID(Vertical::EPSG_NAP_HEIGHT),
+                new Metre(258.0057)
+            )
+        );
+        $toCRS = Geographic3D::fromSRID(Geographic3D::EPSG_WGS_84);
+        $to = $from->convert($toCRS);
+
+        self::assertEqualsWithDelta(51.728601274, $to->getLatitude()->asDegrees()->getValue(), 0.0000001);
+        self::assertEqualsWithDelta(4.712120126, $to->getLongitude()->asDegrees()->getValue(), 0.0000001);
+        self::assertEqualsWithDelta(301.798133706, $to->getHeight()->asMetres()->getValue(), 0.00001);
+    }
+
     public function testNAD83NAD27SouthCarolina(): void
     {
         if (!class_exists(NADCON5NAD832007NAD832011CONUSLatitudeProvider::class)) {

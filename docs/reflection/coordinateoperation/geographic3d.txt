@@ -1443,6 +1443,14 @@ to Stornoway height (Vertical)
 
     "
 
+
+to WGS 84 (Geographic3D)
+^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+
 FEH2010
 -------
 ``Geographic3D::fromSRID(Geographic3D::EPSG_FEH2010)``
@@ -6531,6 +6539,14 @@ to WGS 72BE (Geographic2D)
 WGS 84
 ------
 ``Geographic3D::fromSRID(Geographic3D::EPSG_WGS_84)``
+
+to ETRS89 (Geographic3D)
+^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+
 
 to Tokyo + JSLD69 height (Compound)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

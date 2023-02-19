@@ -11972,11 +11972,25 @@ class CRSTransformationsGlobal
             'accuracy' => 0,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::32774',
+            'name' => 'ETRS89 to WGS 84 (geocen)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4936',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::4978',
+            'accuracy' => 1.0,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15593',
             'name' => 'geographic3D to geographic2D',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4937',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4258',
             'accuracy' => 0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::32775',
+            'name' => 'ETRS89 to WGS 84 (geog3D)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4937',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::4979',
+            'accuracy' => 1.0,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',

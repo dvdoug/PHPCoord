@@ -1001,6 +1001,11 @@ ETRS89
 
 to ETRF2014 (Geocentric)
 ^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+
 
 to ETRS89 (Geographic3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -11031,6 +11036,11 @@ to ONGD17 (Geocentric)
 
 to WGS 84 (G2139) (Geocentric)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+
 
 to WGS 84 (Geographic3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^
