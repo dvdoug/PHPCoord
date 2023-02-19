@@ -31,6 +31,7 @@ use PHPCoord\UnitOfMeasure\Angle\Degree;
 use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPCoord\UnitOfMeasure\Scale\Unity;
+use Throwable;
 
 /**
  * Coordinate representing a point expressed in 2 different CRSs (2D horizontal + 1D Vertical).
@@ -145,16 +146,30 @@ class CompoundPoint extends Point implements ConvertiblePoint
                     }
                 }
             }
-            if ($to instanceof Geographic3D && ($twoDimensionalVariantOfTarget = Geographic2D::findFromBaseCRS($to))) {
-                $newHorizontalPoint = $this->getHorizontalPoint()->convert($twoDimensionalVariantOfTarget);
-                $workingPointCRS = Compound::findFromHorizontalAndVertical($twoDimensionalVariantOfTarget, $this->getVerticalPoint()->getCRS());
-                $workingPoint = self::create(
-                    $workingPointCRS,
-                    $newHorizontalPoint,
-                    $this->getVerticalPoint()
-                );
+            if ($to instanceof Geographic3D) {
+                // try converting to any/all of the other Compound CRSs that include the same vertical CRS, where the
+                // horizontal CRS has a 3D equivalent. From there, try converting using the usual mechanisms
 
-                return $workingPoint->convert($to);
+                $candidateIntermediates = Compound::findFromVertical($this->getVerticalPoint()->getCRS());
+                unset($candidateIntermediates[$this->getCRS()->getSRID()]);
+
+                foreach ($candidateIntermediates as $candidateIntermediate) {
+                    try {
+                        if ($candidateIntermediate->getHorizontal() instanceof Geographic2D && $candidateIntermediate->getHorizontal()->getBaseCRS() instanceof Geographic3D) {
+                            $newHorizontalPoint = $this->getHorizontalPoint()->convert($candidateIntermediate->getHorizontal());
+                            $workingPoint = self::create(
+                                $candidateIntermediate,
+                                $newHorizontalPoint,
+                                $this->getVerticalPoint()
+                            );
+
+                            $candidateIntermediatePoint = $workingPoint->convert($candidateIntermediate->getHorizontal()->getBaseCRS());
+
+                            return $candidateIntermediatePoint->convert($to);
+                        }
+                    } catch (Throwable) {
+                    }
+                }
             }
             throw $e;
         }

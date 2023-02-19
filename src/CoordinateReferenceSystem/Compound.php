@@ -3037,15 +3037,17 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * @internal
+     * @return self[]
      */
-    public static function findFromHorizontalAndVertical(Geocentric|Geographic2D|Projected $horizontal, Vertical $vertical): ?self
+    public static function findFromVertical(Vertical $vertical): array
     {
+        $candidates = [];
         foreach (self::$sridData as $srid => $data) {
-            if ($data['horizontal_crs'] === $horizontal->getSRID() && $data['vertical_crs'] === $vertical->getSRID()) {
-                return self::fromSRID($srid);
+            if ($data['vertical_crs'] === $vertical->getSRID()) {
+                $candidates[$srid] = self::fromSRID($srid);
             }
         }
 
-        return null;
+        return $candidates;
     }
 }
