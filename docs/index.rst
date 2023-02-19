@@ -56,3 +56,9 @@ See `license.txt`_ for full details.
     custom_ellipsoids
     custom_prime_meridians
     custom_units
+
+.. toctree::
+    :maxdepth: 1
+    :caption: About
+
+    Project history <https://doug.codes/phpcoord-is-10>
