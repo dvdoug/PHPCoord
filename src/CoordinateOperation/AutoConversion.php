@@ -73,7 +73,7 @@ trait AutoConversion
         usort($candidatePaths, static fn (array $a, array $b) => $a['accuracy'] <=> $b['accuracy'] ?: count($a['path']) <=> count($b['path']));
 
         foreach ($candidatePaths as $candidatePath) {
-            if ($this->validatePath($candidatePath['path'], $boundaryCheckPoint)) {
+            if ($this->validatePath($candidatePath['path'], $target, $boundaryCheckPoint)) {
                 return $candidatePath['path'];
             }
         }
@@ -81,7 +81,7 @@ trait AutoConversion
         throw new UnknownConversionException('Unable to perform conversion, please file a bug if you think this is incorrect');
     }
 
-    protected function validatePath(array $candidatePath, ?GeographicValue $boundaryCheckPoint): bool
+    protected function validatePath(array $candidatePath, Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $target, ?GeographicValue $boundaryCheckPoint): bool
     {
         foreach ($candidatePath as $pathStep) {
             $operation = CoordinateOperations::getOperationData($pathStep['operation']);
@@ -95,6 +95,17 @@ trait AutoConversion
 
             $operation = CoordinateOperations::getOperationData($pathStep['operation']);
             $methodParams = CoordinateOperationMethods::getMethodData($operation['method'])['paramData'];
+
+            // filter out operations that use a 2D CRS as intermediate where this is a 3D point
+            $currentCRS = $this->getCRS();
+            if ($currentCRS instanceof Compound || $currentCRS instanceof Geocentric || $currentCRS instanceof Geographic3D || $currentCRS instanceof Vertical) {
+                if ($target instanceof Compound || $target instanceof Geocentric || $target instanceof Geographic3D || $target instanceof Vertical) {
+                    $intermediateTarget = CoordinateReferenceSystem::fromSRID($pathStep['in_reverse'] ? $pathStep['source_crs'] : $pathStep['target_crs']);
+                    if ($intermediateTarget instanceof Geographic2D || $intermediateTarget instanceof Projected) {
+                        return false;
+                    }
+                }
+            }
 
             // filter out operations that require an epoch if we don't have one
             if ((isset($methodParams['transformationReferenceEpoch']) || isset($methodParams['parameterReferenceEpoch'])) && !$this->getCoordinateEpoch()) {

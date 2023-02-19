@@ -3,7 +3,8 @@
 ## [Unreleased]
 ### Changed
 - Updates to data for Colombia, Slovenia, USA and UK
-
+### Fixed
+- Don't use 2D CRS as intermediate in a chain when converting from/to a 3D CRS
 
 ## [5.2.0] - 2023-01-08
 ### Changed
