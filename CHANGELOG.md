@@ -1,6 +1,8 @@
 # Changelog
 
 ## [Unreleased]
+
+## [5.3.0] - 2023-02-19
 ### Added
 - Support for converting coordinates from a `CompoundPoint` where the horizontal component is `Projected` to a 3D CRS
 ### Changed
@@ -255,8 +257,9 @@ Initial release of this fork (based off of v2.3 of original)
  - Eastings and northings are rounded to 1m, and lat/long to 5dp (approx 1m) to avoid any misconceptions that precision is the same thing as accuracy.
  - When calculating surface distances, a more accurate mean radius is now used rather than that derived from historical definitions of a nautical mile
 
-[Unreleased]: https://github.com/dvdoug/PHPCoord/compare/v5.2.0...HEAD
+[Unreleased]: https://github.com/dvdoug/PHPCoord/compare/v5.3.0...HEAD
 
+[5.3.0]: https://github.com/dvdoug/PHPCoord/compare/v5.2.0...v5.3.0
 [5.2.0]: https://github.com/dvdoug/PHPCoord/compare/v5.1.0...v5.2.0
 [5.1.0]: https://github.com/dvdoug/PHPCoord/compare/v5.0.1...v5.1.0
 [5.0.1]: https://github.com/dvdoug/PHPCoord/compare/v5.0.0...v5.0.1
