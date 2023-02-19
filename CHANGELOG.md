@@ -1,8 +1,10 @@
 # Changelog
 
 ## [Unreleased]
+### Added
+- Support for converting coordinates from a `CompoundPoint` where the horizontal component is `Projected` to a 3D CRS
 ### Changed
-- Updates to data for Colombia, Slovenia, USA and UK
+- Updates to data for ETRS89, Colombia, Slovenia, USA and UK
 ### Fixed
 - Don't use 2D CRS as intermediate in a chain when converting from/to a 3D CRS
 
