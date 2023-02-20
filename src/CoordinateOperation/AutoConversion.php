@@ -98,10 +98,10 @@ trait AutoConversion
 
             // filter out operations that use a 2D CRS as intermediate where this is a 3D point
             $currentCRS = $this->getCRS();
-            if ($currentCRS instanceof Compound || $currentCRS instanceof Geocentric || $currentCRS instanceof Geographic3D || $currentCRS instanceof Vertical) {
-                if ($target instanceof Compound || $target instanceof Geocentric || $target instanceof Geographic3D || $target instanceof Vertical) {
+            if ($currentCRS instanceof Compound || count($currentCRS->getCoordinateSystem()->getAxes()) === 3) {
+                if ($target instanceof Compound || count($target->getCoordinateSystem()->getAxes()) !== 2) {
                     $intermediateTarget = CoordinateReferenceSystem::fromSRID($pathStep['in_reverse'] ? $pathStep['source_crs'] : $pathStep['target_crs']);
-                    if ($intermediateTarget instanceof Geographic2D || $intermediateTarget instanceof Projected) {
+                    if (!$intermediateTarget instanceof Compound && count($intermediateTarget->getCoordinateSystem()->getAxes()) === 2) {
                         return false;
                     }
                 }

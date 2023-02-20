@@ -146,26 +146,24 @@ class CompoundPoint extends Point implements ConvertiblePoint
                     }
                 }
             }
-            if ($to instanceof Geographic3D) {
-                // try converting to any/all of the other Compound CRSs that include the same vertical CRS, where the
-                // horizontal CRS has a 3D equivalent. From there, try converting using the usual mechanisms
-                $candidateIntermediates = Compound::findFromVertical($this->getVerticalPoint()->getCRS());
-                unset($candidateIntermediates[$this->getCRS()->getSRID()]);
+            // try converting to any/all of the other Compound CRSs that include the same vertical CRS, where the
+            // horizontal CRS has a 3D equivalent. From there, try converting using the usual mechanisms
+            $candidateIntermediates = Compound::findFromVertical($this->getVerticalPoint()->getCRS());
+            unset($candidateIntermediates[$this->getCRS()->getSRID()]);
 
-                foreach ($candidateIntermediates as $candidateIntermediate) {
-                    try {
-                        if ($candidateIntermediate->getHorizontal() instanceof Geographic2D && $candidateIntermediate->getHorizontal()->getBaseCRS() instanceof Geographic3D) {
-                            $candidateHorizontalPoint = $this->getHorizontalPoint()->convert($candidateIntermediate->getHorizontal());
-                            $candidateIntermediatePoint = self::create(
-                                $candidateIntermediate,
-                                $candidateHorizontalPoint,
-                                $this->getVerticalPoint()
-                            );
+            foreach ($candidateIntermediates as $candidateIntermediate) {
+                try {
+                    if ($candidateIntermediate->getHorizontal() instanceof Geographic2D && $candidateIntermediate->getHorizontal()->getBaseCRS() instanceof Geographic3D) {
+                        $candidateHorizontalPoint = $this->getHorizontalPoint()->convert($candidateIntermediate->getHorizontal());
+                        $candidateIntermediatePoint = self::create(
+                            $candidateIntermediate,
+                            $candidateHorizontalPoint,
+                            $this->getVerticalPoint()
+                        );
 
-                            return $candidateIntermediatePoint->convert($candidateIntermediate->getHorizontal()->getBaseCRS())->convert($to);
-                        }
-                    } catch (Throwable) {
+                        return $candidateIntermediatePoint->convert($candidateIntermediate->getHorizontal()->getBaseCRS())->convert($to);
                     }
+                } catch (Throwable) {
                 }
             }
             throw $e;
