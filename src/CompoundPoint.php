@@ -158,7 +158,8 @@ class CompoundPoint extends Point implements ConvertiblePoint
                         $candidateIntermediatePoint = self::create(
                             $candidateIntermediate,
                             $candidateHorizontalPoint,
-                            $this->getVerticalPoint()
+                            $this->getVerticalPoint(),
+                            $this->epoch,
                         );
 
                         return $candidateIntermediatePoint->convert($candidateIntermediate->getHorizontal()->getBaseCRS())->convert($to);
