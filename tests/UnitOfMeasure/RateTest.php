@@ -67,7 +67,7 @@ class RateTest extends TestCase
         $newUnit = Rate::makeUnit(1, 'foo');
     }
 
-    public function unitsOfMeasure(): array
+    public static function unitsOfMeasure(): array
     {
         $data = [];
         foreach (Rate::getSupportedSRIDs() as $srid => $name) {

@@ -50,7 +50,7 @@ class PrimeMeridianTest extends TestCase
         self::assertInstanceOf(Degree::class, $object->getGreenwichLongitude());
     }
 
-    public function primeMeridians(): array
+    public static function primeMeridians(): array
     {
         $data = [];
         foreach (PrimeMeridian::getSupportedSRIDs() as $srid => $name) {

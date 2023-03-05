@@ -49,7 +49,7 @@ class AngleTest extends TestCase
         $newUnit = Angle::makeUnit(1, 'foo');
     }
 
-    public function unitsOfMeasure(): array
+    public static function unitsOfMeasure(): array
     {
         $data = [];
         foreach (Angle::getSupportedSRIDs() as $srid => $name) {

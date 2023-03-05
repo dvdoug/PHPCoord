@@ -45,7 +45,7 @@ class ProjectedTest extends TestCase
         $object = Projected::fromSRID('foo');
     }
 
-    public function coordinateReferenceSystems(): array
+    public static function coordinateReferenceSystems(): array
     {
         $return = [];
         foreach (static::$sridData as $srid => $data) {

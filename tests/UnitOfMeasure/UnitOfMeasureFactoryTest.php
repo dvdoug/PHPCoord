@@ -50,7 +50,7 @@ class UnitOfMeasureFactoryTest extends TestCase
         $newUnit = UnitOfMeasureFactory::makeUnit(1, 'foo');
     }
 
-    public function unitsOfMeasure(): array
+    public static function unitsOfMeasure(): array
     {
         $data = [];
         foreach (UnitOfMeasureFactory::getSupportedSRIDs() as $srid => $name) {

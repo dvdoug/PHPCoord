@@ -43,7 +43,7 @@ class Geographic3DTest extends TestCase
         $object = Geographic3D::fromSRID('foo');
     }
 
-    public function coordinateReferenceSystems(): array
+    public static function coordinateReferenceSystems(): array
     {
         $return = [];
         foreach (static::$sridData as $srid => $data) {

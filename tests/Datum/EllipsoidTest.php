@@ -48,7 +48,7 @@ class EllipsoidTest extends TestCase
         self::assertEquals('6356256.909237285', $object->getSemiMinorAxis()->getValue());
     }
 
-    public function ellipsoids(): array
+    public static function ellipsoids(): array
     {
         $data = [];
         foreach (Ellipsoid::getSupportedSRIDs() as $srid => $name) {

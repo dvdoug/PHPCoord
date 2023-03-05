@@ -546,7 +546,7 @@ class AutoConversionTest extends TestCase
         }
     }
 
-    public function EPSGConcatenatedOperations(): array
+    public static function EPSGConcatenatedOperations(): array
     {
         $toTest = [];
 

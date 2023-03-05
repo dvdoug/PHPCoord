@@ -41,7 +41,7 @@ class CartesianTest extends TestCase
         $object = Cartesian::fromSRID('foo');
     }
 
-    public function cartesian(): array
+    public static function cartesian(): array
     {
         $data = [];
         foreach (Cartesian::getSupportedSRIDs() as $srid => $name) {

@@ -41,7 +41,7 @@ class VerticalTest extends TestCase
         $object = Vertical::fromSRID('foo');
     }
 
-    public function vertical(): array
+    public static function vertical(): array
     {
         $data = [];
         foreach (Vertical::getSupportedSRIDs() as $srid => $name) {

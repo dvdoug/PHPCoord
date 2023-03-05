@@ -69,7 +69,7 @@ class DatumTest extends TestCase
         self::assertEquals(Datum::DATUM_TYPE_VERTICAL, $object->getDatumType());
     }
 
-    public function datums(): array
+    public static function datums(): array
     {
         $data = [];
         foreach (Datum::getSupportedSRIDs() as $srid => $name) {

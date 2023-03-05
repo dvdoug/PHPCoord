@@ -40,7 +40,7 @@ class ScaleTest extends TestCase
         $newUnit = Scale::makeUnit(1, 'foo');
     }
 
-    public function unitsOfMeasure(): array
+    public static function unitsOfMeasure(): array
     {
         $data = [];
         foreach (Scale::getSupportedSRIDs() as $srid => $name) {

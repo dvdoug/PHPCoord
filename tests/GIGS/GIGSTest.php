@@ -79,9 +79,9 @@ class GIGSTest extends TestCase
         }
     }
 
-    public function series2200UnitData(): Generator
+    public static function series2200UnitData(): Generator
     {
-        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 2200 Predefined Geodetic Data Objects test data/ASCII/GIGS_lib_2201_Unit.txt');
+        [$header, $body] = self::parseDataFile(__DIR__ . '/GIGS 2200 Predefined Geodetic Data Objects test data/ASCII/GIGS_lib_2201_Unit.txt');
 
         foreach ($body as $row) {
             yield '#' . $row[0] => [$row[0], $row[1], $row[2], $row[4]];
@@ -110,9 +110,9 @@ class GIGSTest extends TestCase
         }
     }
 
-    public function series2200EllipsoidData(): Generator
+    public static function series2200EllipsoidData(): Generator
     {
-        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 2200 Predefined Geodetic Data Objects test data/ASCII/GIGS_lib_2202_Ellipsoid.txt');
+        [$header, $body] = self::parseDataFile(__DIR__ . '/GIGS 2200 Predefined Geodetic Data Objects test data/ASCII/GIGS_lib_2202_Ellipsoid.txt');
 
         foreach ($body as $row) {
             yield '#' . $row[0] => [$row[0], $row[1], $row[3], $row[4], $row[6], $row[7], $row[8]];
@@ -134,9 +134,9 @@ class GIGSTest extends TestCase
         }
     }
 
-    public function series2200PrimeMeridianData(): Generator
+    public static function series2200PrimeMeridianData(): Generator
     {
-        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 2200 Predefined Geodetic Data Objects test data/ASCII/GIGS_lib_2203_PrimeMeridian.txt');
+        [$header, $body] = self::parseDataFile(__DIR__ . '/GIGS 2200 Predefined Geodetic Data Objects test data/ASCII/GIGS_lib_2203_PrimeMeridian.txt');
 
         foreach ($body as $row) {
             yield '#' . $row[0] => [$row[0], $row[1], $row[3], $row[5]];
@@ -154,9 +154,9 @@ class GIGSTest extends TestCase
         $this->assertEquals($primeMeridianName, $datum->getPrimeMeridian()->getName());
     }
 
-    public function series2200GeodeticDatumData(): Generator
+    public static function series2200GeodeticDatumData(): Generator
     {
-        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 2200 Predefined Geodetic Data Objects test data/ASCII/GIGS_lib_2204_GeodeticDatum.txt');
+        [$header, $body] = self::parseDataFile(__DIR__ . '/GIGS 2200 Predefined Geodetic Data Objects test data/ASCII/GIGS_lib_2204_GeodeticDatum.txt');
 
         foreach ($body as $row) {
             yield '#' . $row[0] => [$row[0], $row[1], $row[3], $row[4]];
@@ -186,9 +186,9 @@ class GIGSTest extends TestCase
         }
     }
 
-    public function series2200GeodeticCRSData(): Generator
+    public static function series2200GeodeticCRSData(): Generator
     {
-        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 2200 Predefined Geodetic Data Objects test data/ASCII/GIGS_lib_2205_GeodeticCRS.txt');
+        [$header, $body] = self::parseDataFile(__DIR__ . '/GIGS 2200 Predefined Geodetic Data Objects test data/ASCII/GIGS_lib_2205_GeodeticCRS.txt');
 
         foreach ($body as $row) {
             yield '#' . $row[0] => [$row[0], $row[1], $row[2], $row[4]];
@@ -205,9 +205,9 @@ class GIGSTest extends TestCase
         $this->assertEquals('urn:ogc:def:datum:EPSG::' . $datumCode, $crs->getDatum()->getSRID());
     }
 
-    public function series2200ProjectedCRSData(): Generator
+    public static function series2200ProjectedCRSData(): Generator
     {
-        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 2200 Predefined Geodetic Data Objects test data/ASCII/GIGS_lib_2207_ProjectedCRS.txt');
+        [$header, $body] = self::parseDataFile(__DIR__ . '/GIGS 2200 Predefined Geodetic Data Objects test data/ASCII/GIGS_lib_2207_ProjectedCRS.txt');
 
         foreach ($body as $row) {
             yield '#' . $row[0] => [$row[0], $row[1], $row[3]];
@@ -223,9 +223,9 @@ class GIGSTest extends TestCase
         $this->assertEquals($name, Datum::getSupportedSRIDs()['urn:ogc:def:datum:EPSG::' . $epsgCode]);
     }
 
-    public function series2200VerticalDatumData(): Generator
+    public static function series2200VerticalDatumData(): Generator
     {
-        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 2200 Predefined Geodetic Data Objects test data/ASCII/GIGS_lib_2209_VerticalDatum.txt');
+        [$header, $body] = self::parseDataFile(__DIR__ . '/GIGS 2200 Predefined Geodetic Data Objects test data/ASCII/GIGS_lib_2209_VerticalDatum.txt');
 
         foreach ($body as $row) {
             yield '#' . $row[0] => [$row[0], $row[1]];
@@ -242,9 +242,9 @@ class GIGSTest extends TestCase
         $this->assertEquals('urn:ogc:def:datum:EPSG::' . $datumCode, $crs->getDatum()->getSRID());
     }
 
-    public function series2200VerticalCRSData(): Generator
+    public static function series2200VerticalCRSData(): Generator
     {
-        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 2200 Predefined Geodetic Data Objects test data/ASCII/GIGS_lib_2210_VerticalCRS.txt');
+        [$header, $body] = self::parseDataFile(__DIR__ . '/GIGS 2200 Predefined Geodetic Data Objects test data/ASCII/GIGS_lib_2210_VerticalCRS.txt');
 
         foreach ($body as $row) {
             yield '#' . $row[0] => [$row[0], $row[1], $row[3]];
@@ -261,15 +261,15 @@ class GIGSTest extends TestCase
         // $this->assertEquals('urn:ogc:def:datum:EPSG::' . $datumCode, $crs->getDatum()->getSRID());
     }
 
-    public function series2200OperationData(): Generator
+    public static function series2200OperationData(): Generator
     {
-        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 2200 Predefined Geodetic Data Objects test data/ASCII/GIGS_lib_2206_Conversion.txt');
+        [$header, $body] = self::parseDataFile(__DIR__ . '/GIGS 2200 Predefined Geodetic Data Objects test data/ASCII/GIGS_lib_2206_Conversion.txt');
 
         foreach ($body as $row) {
             yield '#' . $row[0] => [$row[0], $row[1], $row[3]];
         }
 
-        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 2200 Predefined Geodetic Data Objects test data/ASCII/GIGS_lib_2208_CoordTfm.txt');
+        [$header, $body] = self::parseDataFile(__DIR__ . '/GIGS 2200 Predefined Geodetic Data Objects test data/ASCII/GIGS_lib_2208_CoordTfm.txt');
 
         foreach ($body as $row) {
             if ($row[4] !== 'NADCON') {
@@ -277,7 +277,7 @@ class GIGSTest extends TestCase
             }
         }
 
-        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 2200 Predefined Geodetic Data Objects test data/ASCII/GIGS_lib_2211_VertTfm.txt');
+        [$header, $body] = self::parseDataFile(__DIR__ . '/GIGS 2200 Predefined Geodetic Data Objects test data/ASCII/GIGS_lib_2211_VertTfm.txt');
 
         foreach ($body as $row) {
             yield '#' . $row[0] => [$row[0], $row[1], $row[3]];
@@ -396,9 +396,9 @@ class GIGSTest extends TestCase
         $this->assertSame($unitName, $gigsUnit->getUnitName());
     }
 
-    public function series3200UnitData(): Generator
+    public static function series3200UnitData(): Generator
     {
-        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 3200 User-defined Geodetic Data Objects test data/ASCII/GIGS_user_3201_Unit.txt');
+        [$header, $body] = self::parseDataFile(__DIR__ . '/GIGS 3200 User-defined Geodetic Data Objects test data/ASCII/GIGS_user_3201_Unit.txt');
 
         foreach ($body as $row) {
             yield '#' . $row[0] => [$row[0], $row[1], $row[2], $row[3], $row[5]];
@@ -427,9 +427,9 @@ class GIGSTest extends TestCase
         $this->assertInstanceOf(Ellipsoid::class, Ellipsoid::fromSRID('urn:ogc:def:ellipsoid:GIGS::' . $gigsCode));
     }
 
-    public function series3200EllipsoidData(): Generator
+    public static function series3200EllipsoidData(): Generator
     {
-        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 3200 User-defined Geodetic Data Objects test data/ASCII/GIGS_user_3202_Ellipsoid.txt');
+        [$header, $body] = self::parseDataFile(__DIR__ . '/GIGS 3200 User-defined Geodetic Data Objects test data/ASCII/GIGS_user_3202_Ellipsoid.txt');
 
         foreach ($body as $row) {
             yield '#' . $row[0] => [$row[0], $row[1], $row[2], $row[3], $row[4], $row[5]];
@@ -456,9 +456,9 @@ class GIGSTest extends TestCase
         $this->assertInstanceOf(PrimeMeridian::class, PrimeMeridian::fromSRID('urn:ogc:def:meridian:GIGS::' . $gigsCode));
     }
 
-    public function series3200PrimeMeridianData(): Generator
+    public static function series3200PrimeMeridianData(): Generator
     {
-        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 3200 User-defined Geodetic Data Objects test data/ASCII/GIGS_user_3203_PrimeMeridian.txt');
+        [$header, $body] = self::parseDataFile(__DIR__ . '/GIGS 3200 User-defined Geodetic Data Objects test data/ASCII/GIGS_user_3203_PrimeMeridian.txt');
 
         foreach ($body as $row) {
             yield '#' . $row[0] => [$row[0], $row[1], $row[2], $row[3]];
@@ -479,9 +479,9 @@ class GIGSTest extends TestCase
         $this->assertInstanceOf(Datum::class, Datum::fromSRID('urn:ogc:def:datum:GIGS::' . $gigsCode));
     }
 
-    public function series3200GeodeticDatumData(): Generator
+    public static function series3200GeodeticDatumData(): Generator
     {
-        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 3200 User-defined Geodetic Data Objects test data/ASCII/GIGS_user_3204_GeodeticDatum.txt');
+        [$header, $body] = self::parseDataFile(__DIR__ . '/GIGS 3200 User-defined Geodetic Data Objects test data/ASCII/GIGS_user_3204_GeodeticDatum.txt');
 
         foreach ($body as $row) {
             yield '#' . $row[0] => [$row[0], $row[2], $row[3], $row[4]];
@@ -508,9 +508,9 @@ class GIGSTest extends TestCase
         $this->assertEquals($name, $crs->getName());
     }
 
-    public function series3200GeodeticCRSData(): Generator
+    public static function series3200GeodeticCRSData(): Generator
     {
-        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 3200 User-defined Geodetic Data Objects test data/ASCII/GIGS_user_3205_GeodeticCRS.txt');
+        [$header, $body] = self::parseDataFile(__DIR__ . '/GIGS 3200 User-defined Geodetic Data Objects test data/ASCII/GIGS_user_3205_GeodeticCRS.txt');
 
         foreach ($body as $row) {
             yield '#' . $row[0] => [$row[0], $row[2], $row[3], $row[4], $row[5]];
@@ -605,9 +605,9 @@ class GIGSTest extends TestCase
         }
     }
 
-    public function series3200ConversionData(): Generator
+    public static function series3200ConversionData(): Generator
     {
-        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 3200 User-defined Geodetic Data Objects test data/ASCII/GIGS_user_3206_Conversion.txt');
+        [$header, $body] = self::parseDataFile(__DIR__ . '/GIGS 3200 User-defined Geodetic Data Objects test data/ASCII/GIGS_user_3206_Conversion.txt');
 
         foreach ($body as $row) {
             yield '#' . $row[0] => [$row[0], $row[1], $row[2], $row[3], $row[4], $row[5], $row[7], $row[8], $row[9], $row[11], $row[12], $row[13], $row[15], $row[16], $row[17], $row[19], $row[20], $row[21], $row[22], $row[23], $row[24], $row[25], $row[26], $row[27], $row[28]];
@@ -631,9 +631,9 @@ class GIGSTest extends TestCase
         $this->assertInstanceOf(Projected::class, Projected::fromSRID('urn:ogc:def:crs:GIGS::' . $gigsCode));
     }
 
-    public function series3200ProjectionData(): Generator
+    public static function series3200ProjectionData(): Generator
     {
-        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 3200 User-defined Geodetic Data Objects test data/ASCII/GIGS_user_3207_ProjectedCRS.txt');
+        [$header, $body] = self::parseDataFile(__DIR__ . '/GIGS 3200 User-defined Geodetic Data Objects test data/ASCII/GIGS_user_3207_ProjectedCRS.txt');
 
         foreach ($body as $row) {
             yield '#' . $row[0] => [$row[0], $row[2], $row[3], $row[4], $row[5], $row[6], $row[7], $row[16]];
@@ -747,9 +747,9 @@ class GIGSTest extends TestCase
         }
     }
 
-    public function series3200TransformationData(): Generator
+    public static function series3200TransformationData(): Generator
     {
-        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 3200 User-defined Geodetic Data Objects test data/ASCII/GIGS_user_3208_CoordTfm.txt');
+        [$header, $body] = self::parseDataFile(__DIR__ . '/GIGS 3200 User-defined Geodetic Data Objects test data/ASCII/GIGS_user_3208_CoordTfm.txt');
 
         foreach ($body as $row) {
             yield '#' . $row[0] => [$row[0], $row[1], $row[2], $row[4], $row[7], $row[8], $row[9], $row[10], $row[12], $row[13], $row[14], $row[15], $row[16], $row[17], $row[18], $row[19], $row[20], $row[21], $row[22], $row[23], $row[24], $row[25], $row[26], $row[27], $row[28], $row[29], $row[30], $row[31], $row[32], $row[33], $row[34], $row[35], $row[36], $row[37], $row[38], $row[39]];
@@ -766,9 +766,9 @@ class GIGSTest extends TestCase
         $this->assertInstanceOf(Datum::class, Datum::fromSRID('urn:ogc:def:datum:GIGS::' . $gigsCode));
     }
 
-    public function series3200VerticalDatumData(): Generator
+    public static function series3200VerticalDatumData(): Generator
     {
-        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 3200 User-defined Geodetic Data Objects test data/ASCII/GIGS_user_3209_VerticalDatum.txt');
+        [$header, $body] = self::parseDataFile(__DIR__ . '/GIGS 3200 User-defined Geodetic Data Objects test data/ASCII/GIGS_user_3209_VerticalDatum.txt');
 
         foreach ($body as $row) {
             yield '#' . $row[0] => [$row[0], $row[1]];
@@ -787,9 +787,9 @@ class GIGSTest extends TestCase
         $this->assertEquals($name, $crs->getName());
     }
 
-    public function series3200VerticalCRSData(): Generator
+    public static function series3200VerticalCRSData(): Generator
     {
-        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 3200 User-defined Geodetic Data Objects test data/ASCII/GIGS_user_3210_VerticalCRS.txt');
+        [$header, $body] = self::parseDataFile(__DIR__ . '/GIGS 3200 User-defined Geodetic Data Objects test data/ASCII/GIGS_user_3210_VerticalCRS.txt');
 
         foreach ($body as $row) {
             yield '#' . $row[0] => [$row[0], $row[1], $row[2], $row[3]];
@@ -858,9 +858,9 @@ class GIGSTest extends TestCase
         }
     }
 
-    public function series3200VerticalTransformationData(): Generator
+    public static function series3200VerticalTransformationData(): Generator
     {
-        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 3200 User-defined Geodetic Data Objects test data/ASCII/GIGS_user_3211_VertTfm.txt');
+        [$header, $body] = self::parseDataFile(__DIR__ . '/GIGS 3200 User-defined Geodetic Data Objects test data/ASCII/GIGS_user_3211_VertTfm.txt');
 
         foreach ($body as $row) {
             yield '#' . $row[0] => [$row[0], $row[5], $row[1], $row[3], $row[6], $row[7], $row[8], $row[9], $row[10], $row[11], $row[12], $row[13], $row[14], $row[15], $row[16], $row[17], $row[18], $row[19], $row[20], $row[21], $row[22], $row[23]];
@@ -936,9 +936,9 @@ class GIGSTest extends TestCase
         }
     }
 
-    public function series5100TransverseMercatorPart1Data(): Generator
+    public static function series5100TransverseMercatorPart1Data(): Generator
     {
-        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 5100 Conversion test data/ASCII/GIGS_conv_5101_TM_output_part1_JHS.txt');
+        [$header, $body] = self::parseDataFile(__DIR__ . '/GIGS 5100 Conversion test data/ASCII/GIGS_conv_5101_TM_output_part1_JHS.txt');
 
         $geographicCRSSrid = 'urn:ogc:def:crs:GIGS::64003';
         $projectedCRSSrid = 'urn:ogc:def:crs:GIGS::62007';
@@ -953,9 +953,9 @@ class GIGSTest extends TestCase
         }
     }
 
-    public function series5100TransverseMercatorPart2Data(): Generator
+    public static function series5100TransverseMercatorPart2Data(): Generator
     {
-        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 5100 Conversion test data/ASCII/GIGS_conv_5101_TM_output_part2_JHS.txt');
+        [$header, $body] = self::parseDataFile(__DIR__ . '/GIGS 5100 Conversion test data/ASCII/GIGS_conv_5101_TM_output_part2_JHS.txt');
 
         $geographicCRSSrid = 'urn:ogc:def:crs:GIGS::64003';
         $projectedCRSSrid = 'urn:ogc:def:crs:GIGS::62001';
@@ -970,9 +970,9 @@ class GIGSTest extends TestCase
         }
     }
 
-    public function series5100TransverseMercatorPart3Data(): Generator
+    public static function series5100TransverseMercatorPart3Data(): Generator
     {
-        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 5100 Conversion test data/ASCII/GIGS_conv_5101_TM_output_part3_JHS.txt');
+        [$header, $body] = self::parseDataFile(__DIR__ . '/GIGS 5100 Conversion test data/ASCII/GIGS_conv_5101_TM_output_part3_JHS.txt');
 
         $geographicCRSSrid = 'urn:ogc:def:crs:GIGS::64009';
         $projectedCRSSrid = 'urn:ogc:def:crs:GIGS::62014';
@@ -987,9 +987,9 @@ class GIGSTest extends TestCase
         }
     }
 
-    public function series5100TransverseMercatorPart4Data(): Generator
+    public static function series5100TransverseMercatorPart4Data(): Generator
     {
-        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 5100 Conversion test data/ASCII/GIGS_conv_5101_TM_output_part4_JHS.txt');
+        [$header, $body] = self::parseDataFile(__DIR__ . '/GIGS 5100 Conversion test data/ASCII/GIGS_conv_5101_TM_output_part4_JHS.txt');
 
         $geographicCRSSrid = 'urn:ogc:def:crs:GIGS::64010';
         $projectedCRSSrid = 'urn:ogc:def:crs:GIGS::62018';
@@ -1004,9 +1004,9 @@ class GIGSTest extends TestCase
         }
     }
 
-    public function series5100LCC1Part1Data(): Generator
+    public static function series5100LCC1Part1Data(): Generator
     {
-        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 5100 Conversion test data/ASCII/GIGS_conv_5102_LCC1_output_part1.txt');
+        [$header, $body] = self::parseDataFile(__DIR__ . '/GIGS 5100 Conversion test data/ASCII/GIGS_conv_5102_LCC1_output_part1.txt');
 
         $geographicCRSSrid = 'urn:ogc:def:crs:GIGS::64020';
         $projectedCRSSrid = 'urn:ogc:def:crs:GIGS::62035';
@@ -1021,9 +1021,9 @@ class GIGSTest extends TestCase
         }
     }
 
-    public function series5100LCC1Part2Data(): Generator
+    public static function series5100LCC1Part2Data(): Generator
     {
-        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 5100 Conversion test data/ASCII/GIGS_conv_5102_LCC1_output_part2.txt');
+        [$header, $body] = self::parseDataFile(__DIR__ . '/GIGS 5100 Conversion test data/ASCII/GIGS_conv_5102_LCC1_output_part2.txt');
 
         $geographicCRSSrid = 'urn:ogc:def:crs:GIGS::64011';
         $projectedCRSSrid = 'urn:ogc:def:crs:GIGS::62026';
@@ -1038,9 +1038,9 @@ class GIGSTest extends TestCase
         }
     }
 
-    public function series5100LCC2Part1Data(): Generator
+    public static function series5100LCC2Part1Data(): Generator
     {
-        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 5100 Conversion test data/ASCII/GIGS_conv_5103_LCC2_output_part1.txt');
+        [$header, $body] = self::parseDataFile(__DIR__ . '/GIGS 5100 Conversion test data/ASCII/GIGS_conv_5103_LCC2_output_part1.txt');
 
         $geographicCRSSrid = 'urn:ogc:def:crs:GIGS::64008';
         $projectedCRSSrid = 'urn:ogc:def:crs:GIGS::62013';
@@ -1055,9 +1055,9 @@ class GIGSTest extends TestCase
         }
     }
 
-    public function series5100LCC2Part2Data(): Generator
+    public static function series5100LCC2Part2Data(): Generator
     {
-        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 5100 Conversion test data/ASCII/GIGS_conv_5103_LCC2_output_part2.txt');
+        [$header, $body] = self::parseDataFile(__DIR__ . '/GIGS 5100 Conversion test data/ASCII/GIGS_conv_5103_LCC2_output_part2.txt');
 
         $geographicCRSSrid = 'urn:ogc:def:crs:GIGS::64010';
         $projectedCRSSrid = 'urn:ogc:def:crs:GIGS::62024';
@@ -1072,9 +1072,9 @@ class GIGSTest extends TestCase
         }
     }
 
-    public function series5100LCC2Part3Data(): Generator
+    public static function series5100LCC2Part3Data(): Generator
     {
-        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 5100 Conversion test data/ASCII/GIGS_conv_5103_LCC2_output_part3.txt');
+        [$header, $body] = self::parseDataFile(__DIR__ . '/GIGS 5100 Conversion test data/ASCII/GIGS_conv_5103_LCC2_output_part3.txt');
 
         $geographicCRSSrid = 'urn:ogc:def:crs:GIGS::64010';
         $projectedCRSSrid = 'urn:ogc:def:crs:GIGS::62024';
@@ -1089,9 +1089,9 @@ class GIGSTest extends TestCase
         }
     }
 
-    public function series5100OblStereoData(): Generator
+    public static function series5100OblStereoData(): Generator
     {
-        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 5100 Conversion test data/ASCII/GIGS_conv_5104_OblStereo_output.txt');
+        [$header, $body] = self::parseDataFile(__DIR__ . '/GIGS 5100 Conversion test data/ASCII/GIGS_conv_5104_OblStereo_output.txt');
 
         $geographicCRSSrid = 'urn:ogc:def:crs:GIGS::64006';
         $projectedCRSSrid = 'urn:ogc:def:crs:GIGS::62011';
@@ -1106,9 +1106,9 @@ class GIGSTest extends TestCase
         }
     }
 
-    public function series5100HOMBPart1Data(): Generator
+    public static function series5100HOMBPart1Data(): Generator
     {
-        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 5100 Conversion test data/ASCII/GIGS_conv_5105_HOM-B_output_part1.txt');
+        [$header, $body] = self::parseDataFile(__DIR__ . '/GIGS 5100 Conversion test data/ASCII/GIGS_conv_5105_HOM-B_output_part1.txt');
 
         $geographicCRSSrid = 'urn:ogc:def:crs:GIGS::64010';
         $projectedCRSSrid = 'urn:ogc:def:crs:GIGS::62020';
@@ -1123,9 +1123,9 @@ class GIGSTest extends TestCase
         }
     }
 
-    public function series5100HOMBPart2Data(): Generator
+    public static function series5100HOMBPart2Data(): Generator
     {
-        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 5100 Conversion test data/ASCII/GIGS_conv_5105_HOM-B_output_part2.txt');
+        [$header, $body] = self::parseDataFile(__DIR__ . '/GIGS 5100 Conversion test data/ASCII/GIGS_conv_5105_HOM-B_output_part2.txt');
 
         $geographicCRSSrid = 'urn:ogc:def:crs:GIGS::64015';
         $projectedCRSSrid = 'urn:ogc:def:crs:GIGS::62036';
@@ -1140,9 +1140,9 @@ class GIGSTest extends TestCase
         }
     }
 
-    public function series5100HOMAData(): Generator
+    public static function series5100HOMAData(): Generator
     {
-        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 5100 Conversion test data/ASCII/GIGS_conv_5106_HOM-A_output.txt');
+        [$header, $body] = self::parseDataFile(__DIR__ . '/GIGS 5100 Conversion test data/ASCII/GIGS_conv_5106_HOM-A_output.txt');
 
         $geographicCRSSrid = 'urn:ogc:def:crs:GIGS::64010';
         $projectedCRSSrid = 'urn:ogc:def:crs:GIGS::62021';
@@ -1157,9 +1157,9 @@ class GIGSTest extends TestCase
         }
     }
 
-    public function series5100AmericanPolyconicData(): Generator
+    public static function series5100AmericanPolyconicData(): Generator
     {
-        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 5100 Conversion test data/ASCII/GIGS_conv_5107_AmPolyC_output.txt');
+        [$header, $body] = self::parseDataFile(__DIR__ . '/GIGS 5100 Conversion test data/ASCII/GIGS_conv_5107_AmPolyC_output.txt');
 
         $geographicCRSSrid = 'urn:ogc:def:crs:GIGS::64010';
         $projectedCRSSrid = 'urn:ogc:def:crs:GIGS::62019';
@@ -1174,9 +1174,9 @@ class GIGSTest extends TestCase
         }
     }
 
-    public function series5100CassiniSoldnerData(): Generator
+    public static function series5100CassiniSoldnerData(): Generator
     {
-        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 5100 Conversion test data/ASCII/GIGS_conv_5108_Cass_output.txt');
+        [$header, $body] = self::parseDataFile(__DIR__ . '/GIGS 5100 Conversion test data/ASCII/GIGS_conv_5108_Cass_output.txt');
 
         $geographicCRSSrid = 'urn:ogc:def:crs:GIGS::64010';
         $projectedCRSSrid = 'urn:ogc:def:crs:GIGS::62022';
@@ -1191,9 +1191,9 @@ class GIGSTest extends TestCase
         }
     }
 
-    public function series5100AlbersData(): Generator
+    public static function series5100AlbersData(): Generator
     {
-        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 5100 Conversion test data/ASCII/GIGS_conv_5109_Albers_output.txt');
+        [$header, $body] = self::parseDataFile(__DIR__ . '/GIGS 5100 Conversion test data/ASCII/GIGS_conv_5109_Albers_output.txt');
 
         $geographicCRSSrid = 'urn:ogc:def:crs:GIGS::64009';
         $projectedCRSSrid = 'urn:ogc:def:crs:GIGS::62016';
@@ -1208,9 +1208,9 @@ class GIGSTest extends TestCase
         }
     }
 
-    public function series5100LAEAData(): Generator
+    public static function series5100LAEAData(): Generator
     {
-        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 5100 Conversion test data/ASCII/GIGS_conv_5110_LAEA_output.txt');
+        [$header, $body] = self::parseDataFile(__DIR__ . '/GIGS 5100 Conversion test data/ASCII/GIGS_conv_5110_LAEA_output.txt');
 
         $geographicCRSSrid = 'urn:ogc:def:crs:GIGS::64010';
         $projectedCRSSrid = 'urn:ogc:def:crs:GIGS::62023';
@@ -1225,9 +1225,9 @@ class GIGSTest extends TestCase
         }
     }
 
-    public function series5100MercatorAPart1Data(): Generator
+    public static function series5100MercatorAPart1Data(): Generator
     {
-        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 5100 Conversion test data/ASCII/GIGS_conv_5111_MercA_output_part1.txt');
+        [$header, $body] = self::parseDataFile(__DIR__ . '/GIGS 5100 Conversion test data/ASCII/GIGS_conv_5111_MercA_output_part1.txt');
 
         $geographicCRSSrid = 'urn:ogc:def:crs:GIGS::64014';
         $projectedCRSSrid = 'urn:ogc:def:crs:GIGS::62037';
@@ -1242,9 +1242,9 @@ class GIGSTest extends TestCase
         }
     }
 
-    public function series5100MercatorAPart2Data(): Generator
+    public static function series5100MercatorAPart2Data(): Generator
     {
-        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 5100 Conversion test data/ASCII/GIGS_conv_5111_MercA_output_part2.txt');
+        [$header, $body] = self::parseDataFile(__DIR__ . '/GIGS 5100 Conversion test data/ASCII/GIGS_conv_5111_MercA_output_part2.txt');
 
         $geographicCRSSrid = 'urn:ogc:def:crs:GIGS::64007';
         $projectedCRSSrid = 'urn:ogc:def:crs:GIGS::62012';
@@ -1259,9 +1259,9 @@ class GIGSTest extends TestCase
         }
     }
 
-    public function series5100MercatorBData(): Generator
+    public static function series5100MercatorBData(): Generator
     {
-        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 5100 Conversion test data/ASCII/GIGS_conv_5112_MercB_output.txt');
+        [$header, $body] = self::parseDataFile(__DIR__ . '/GIGS 5100 Conversion test data/ASCII/GIGS_conv_5112_MercB_output.txt');
 
         $geographicCRSSrid = 'urn:ogc:def:crs:GIGS::64017';
         $projectedCRSSrid = 'urn:ogc:def:crs:GIGS::62034';
@@ -1276,9 +1276,9 @@ class GIGSTest extends TestCase
         }
     }
 
-    public function series5100TransverseMercatorSouthOrientatedData(): Generator
+    public static function series5100TransverseMercatorSouthOrientatedData(): Generator
     {
-        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 5100 Conversion test data/ASCII/GIGS_conv_5113_TMSO_output.txt');
+        [$header, $body] = self::parseDataFile(__DIR__ . '/GIGS 5100 Conversion test data/ASCII/GIGS_conv_5113_TMSO_output.txt');
 
         $geographicCRSSrid = 'urn:ogc:def:crs:GIGS::64010';
         $projectedCRSSrid = 'urn:ogc:def:crs:GIGS::62017';
@@ -1342,9 +1342,9 @@ class GIGSTest extends TestCase
         }
     }
 
-    public function series5200GeogGeocenData(): Generator
+    public static function series5200GeogGeocenData(): Generator
     {
-        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 5200 Coordinate transformation test data/ASCII/GIGS_tfm_5201_GeogGeocen_output.txt');
+        [$header, $body] = self::parseDataFile(__DIR__ . '/GIGS 5200 Coordinate transformation test data/ASCII/GIGS_tfm_5201_GeogGeocen_output.txt');
 
         $geocentricCRSSrid = 'urn:ogc:def:crs:GIGS::64001';
         $geographicCRSSrid = 'urn:ogc:def:crs:GIGS::64002';
@@ -1428,9 +1428,9 @@ class GIGSTest extends TestCase
         }
     }
 
-    public function series5200PosVecPart1Data(): Generator
+    public static function series5200PosVecPart1Data(): Generator
     {
-        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 5200 Coordinate transformation test data/ASCII/GIGS_tfm_5203_PosVec_output_part1.txt');
+        [$header, $body] = self::parseDataFile(__DIR__ . '/GIGS 5200 Coordinate transformation test data/ASCII/GIGS_tfm_5203_PosVec_output_part1.txt');
 
         $geographicCRSSrid1 = 'urn:ogc:def:crs:GIGS::64005';
         $geographicCRSSrid2 = 'urn:ogc:def:crs:GIGS::64003';
@@ -1445,9 +1445,9 @@ class GIGSTest extends TestCase
         }
     }
 
-    public function series5200PosVecPart2Data(): Generator
+    public static function series5200PosVecPart2Data(): Generator
     {
-        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 5200 Coordinate transformation test data/ASCII/GIGS_tfm_5203_PosVec_output_part2.txt');
+        [$header, $body] = self::parseDataFile(__DIR__ . '/GIGS 5200 Coordinate transformation test data/ASCII/GIGS_tfm_5203_PosVec_output_part2.txt');
 
         $geographicCRSSrid1 = 'urn:ogc:def:crs:GIGS::64019';
         $geographicCRSSrid2 = 'urn:ogc:def:crs:GIGS::64002';
@@ -1462,9 +1462,9 @@ class GIGSTest extends TestCase
         }
     }
 
-    public function series5200CoordFramePart1Data(): Generator
+    public static function series5200CoordFramePart1Data(): Generator
     {
-        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 5200 Coordinate transformation test data/ASCII/GIGS_tfm_5204_CoordFrame_output_part1.txt');
+        [$header, $body] = self::parseDataFile(__DIR__ . '/GIGS 5200 Coordinate transformation test data/ASCII/GIGS_tfm_5204_CoordFrame_output_part1.txt');
 
         $geographicCRSSrid1 = 'urn:ogc:def:crs:GIGS::64008';
         $geographicCRSSrid2 = 'urn:ogc:def:crs:GIGS::64003';
@@ -1479,9 +1479,9 @@ class GIGSTest extends TestCase
         }
     }
 
-    public function series5200CoordFramePart2Data(): Generator
+    public static function series5200CoordFramePart2Data(): Generator
     {
-        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 5200 Coordinate transformation test data/ASCII/GIGS_tfm_5204_CoordFrame_output_part2.txt');
+        [$header, $body] = self::parseDataFile(__DIR__ . '/GIGS 5200 Coordinate transformation test data/ASCII/GIGS_tfm_5204_CoordFrame_output_part2.txt');
 
         $geographicCRSSrid1 = 'urn:ogc:def:crs:GIGS::64022';
         $geographicCRSSrid2 = 'urn:ogc:def:crs:GIGS::64002';
@@ -1496,9 +1496,9 @@ class GIGSTest extends TestCase
         }
     }
 
-    public function series5200MolBadPart1Data(): Generator
+    public static function series5200MolBadPart1Data(): Generator
     {
-        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 5200 Coordinate transformation test data/ASCII/GIGS_tfm_5205_MolBad_output_part1.txt');
+        [$header, $body] = self::parseDataFile(__DIR__ . '/GIGS 5200 Coordinate transformation test data/ASCII/GIGS_tfm_5205_MolBad_output_part1.txt');
 
         $geographicCRSSrid1 = 'urn:ogc:def:crs:GIGS::64006';
         $geographicCRSSrid2 = 'urn:ogc:def:crs:GIGS::64003';
@@ -1513,9 +1513,9 @@ class GIGSTest extends TestCase
         }
     }
 
-    public function series5200MolBadPart2Data(): Generator
+    public static function series5200MolBadPart2Data(): Generator
     {
-        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 5200 Coordinate transformation test data/ASCII/GIGS_tfm_5205_MolBad_output_part2.txt');
+        [$header, $body] = self::parseDataFile(__DIR__ . '/GIGS 5200 Coordinate transformation test data/ASCII/GIGS_tfm_5205_MolBad_output_part2.txt');
 
         $geographicCRSSrid1 = 'urn:ogc:def:crs:GIGS::64021';
         $geographicCRSSrid2 = 'urn:ogc:def:crs:GIGS::64002';
@@ -1530,9 +1530,9 @@ class GIGSTest extends TestCase
         }
     }
 
-    public function series5200Geog3DGeoCenData(): Generator
+    public static function series5200Geog3DGeoCenData(): Generator
     {
-        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 5200 Coordinate transformation test data/ASCII/GIGS_tfm_5212_3trnslt_Geog3D_output_EPSGconcat.txt');
+        [$header, $body] = self::parseDataFile(__DIR__ . '/GIGS 5200 Coordinate transformation test data/ASCII/GIGS_tfm_5212_3trnslt_Geog3D_output_EPSGconcat.txt');
 
         $geographicCRSSrid1 = 'urn:ogc:def:crs:GIGS::64019';
         $geographicCRSSrid2 = 'urn:ogc:def:crs:GIGS::64002';
@@ -1547,9 +1547,9 @@ class GIGSTest extends TestCase
         }
     }
 
-    public function series5200Geog2DGeoCenData(): Generator
+    public static function series5200Geog2DGeoCenData(): Generator
     {
-        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 5200 Coordinate transformation test data/ASCII/GIGS_tfm_5213_3trnslt_Geog2D_output_EPSGconcat.txt');
+        [$header, $body] = self::parseDataFile(__DIR__ . '/GIGS 5200 Coordinate transformation test data/ASCII/GIGS_tfm_5213_3trnslt_Geog2D_output_EPSGconcat.txt');
 
         $geographicCRSSrid1 = 'urn:ogc:def:crs:GIGS::64005';
         $geographicCRSSrid2 = 'urn:ogc:def:crs:GIGS::64003';
@@ -1577,16 +1577,16 @@ class GIGSTest extends TestCase
         };
     }
 
-    public function series7000DeprecationData(): Generator
+    public static function series7000DeprecationData(): Generator
     {
-        [$header, $body] = $this->parseDataFile(__DIR__ . '/GIGS 7000 Deprecation test data/ASCII/GIGS_dep_7001.txt');
+        [$header, $body] = self::parseDataFile(__DIR__ . '/GIGS 7000 Deprecation test data/ASCII/GIGS_dep_7001.txt');
 
         foreach ($body as $row) {
             yield [$row[0], $row[1]];
         }
     }
 
-    private function parseDataFile(string $filename): array
+    private static function parseDataFile(string $filename): array
     {
         $file = new SplFileObject($filename);
 

@@ -41,7 +41,7 @@ class EllipsoidalTest extends TestCase
         $object = Ellipsoidal::fromSRID('foo');
     }
 
-    public function ellipsoidal(): array
+    public static function ellipsoidal(): array
     {
         $data = [];
         foreach (Ellipsoidal::getSupportedSRIDs() as $srid => $name) {

@@ -43,7 +43,7 @@ class GeocentricTest extends TestCase
         $object = Geocentric::fromSRID('foo');
     }
 
-    public function coordinateReferenceSystems(): array
+    public static function coordinateReferenceSystems(): array
     {
         $return = [];
         foreach (static::$sridData as $srid => $data) {

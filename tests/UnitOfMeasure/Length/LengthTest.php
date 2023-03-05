@@ -40,7 +40,7 @@ class LengthTest extends TestCase
         $newUnit = Length::makeUnit(1, 'foo');
     }
 
-    public function unitsOfMeasure(): array
+    public static function unitsOfMeasure(): array
     {
         $data = [];
         foreach (Length::getSupportedSRIDs() as $srid => $name) {

@@ -40,7 +40,7 @@ class TimeTest extends TestCase
         $newUnit = Time::makeUnit(1, 'foo');
     }
 
-    public function unitsOfMeasure(): array
+    public static function unitsOfMeasure(): array
     {
         $data = [];
         foreach (Time::getSupportedSRIDs() as $srid => $name) {
