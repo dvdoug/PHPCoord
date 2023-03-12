@@ -277,7 +277,7 @@ trait Geographic3DSRIDData
             'extent' => ['1129'],
         ],
         'urn:ogc:def:crs:EPSG::4949' => [
-            'name' => 'LKS92',
+            'name' => 'LKS-92',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6423',
             'base_crs' => 'urn:ogc:def:crs:EPSG::4948',
             'datum' => 'urn:ogc:def:datum:EPSG::6661',
@@ -1444,6 +1444,27 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::10176',
             'datum' => 'urn:ogc:def:datum:EPSG::1333',
             'extent' => ['1262'],
+        ],
+        'urn:ogc:def:crs:EPSG::10283' => [
+            'name' => 'ETRS89/DREF91/2016',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6423',
+            'base_crs' => 'urn:ogc:def:crs:EPSG::10282',
+            'datum' => 'urn:ogc:def:datum:EPSG::1353',
+            'extent' => ['1103'],
+        ],
+        'urn:ogc:def:crs:EPSG::10298' => [
+            'name' => 'RGSH2020',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6423',
+            'base_crs' => 'urn:ogc:def:crs:EPSG::10297',
+            'datum' => 'urn:ogc:def:datum:EPSG::1355',
+            'extent' => ['1026'],
+        ],
+        'urn:ogc:def:crs:EPSG::10304' => [
+            'name' => 'LKS-2020',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6423',
+            'base_crs' => 'urn:ogc:def:crs:EPSG::10303',
+            'datum' => 'urn:ogc:def:datum:EPSG::1356',
+            'extent' => ['1139'],
         ],
         'urn:ogc:def:crs:EPSG::20040' => [
             'name' => 'SIRGAS-Chile 2021',

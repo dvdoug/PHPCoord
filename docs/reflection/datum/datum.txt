@@ -1771,14 +1771,14 @@ Replaces DHHN85 in West Germany and SNN76 in East Germany. Uses Normal heights.
 Deutsches Haupthoehennetz 2016
 ------------------------------
 | Type: Vertical
-| Extent: Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt, Schleswig-Holstein, Thuringen.
+| Extent: Germany - onshore and offshore.
 
 .. code-block:: php
 
     Datum::fromSRID(Datum::EPSG_DEUTSCHES_HAUPTHOEHENNETZ_2016)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1170')
 
-2006-2012 levelling network adjusted to 72 points of the DHHN92. Datum at Normaal Amsterdams Peil (NAP) is mean high tide in 1684.
+2006-2012 levelling network adjusted to 72 points of the DHHN92. Datum at Normaal Amsterdams Peil (NAP) is mean high tide in 1684. Extension offshore defined by the GCG2016 quasi-geoid model (CT code 9925).
 
 Uses Normal heights in the mean tidal system.
 
@@ -1983,6 +1983,20 @@ ETRF2000 Poland
 Polish densification of ETRS89 realized through adjustment of ASG-EUPOS network constrained to 35 EPN stations in ETRF2000@2011.0.
 
 Adopted as official Polish reference frame from 2012-12-01 through Ordinance of the Council of Ministers of 15th November 2012 on the state system of spatial reference system.
+
+ETRS89/DREF91 Realization 2016
+------------------------------
+| Type: Geodetic
+| Extent: Germany - onshore and offshore.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_ETRS89_DREF91_REALIZATION_2016)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1353')
+
+Realized by GNSS campaign 2008. Results were transformed from IGS05 epoch 2008.46 to ITRF2005 to ETRF2000, subsequently to ETRS89/DREF91 Realization 2002 (former German ETRS89 realization) by 3 rotation parameters.
+
+German national realization of ETRS89. Replaces ETRS89/DREF91 Realization 2002 from 2016-12-01.
 
 EWR2 Intermediate Reference Frame
 ---------------------------------
@@ -5071,20 +5085,6 @@ Fundamental point: Vientiane (Nongteng) Astro Pillar. Latitude: 18°01'31.3480"N
 
 Replaces Lao 1993.
 
-Latvia 1992
------------
-| Type: Geodetic
-| Extent: Latvia - onshore and offshore.
-
-.. code-block:: php
-
-    Datum::fromSRID(Datum::EPSG_LATVIA_1992)
-    Datum::fromSRID('urn:ogc:def:datum:EPSG::6661')
-
-Constrained to 4 ETRS89 points in Latvia from the EUREF Baltic 1992 campaign.
-
-Densification of ETRS89 during the 1992 Baltic campaign.
-
 Latvian Height System 2000
 --------------------------
 | Type: Vertical
@@ -5098,6 +5098,34 @@ Latvian Height System 2000
 Latvian realisation of EVRF2007. Observed from 2000-2010 and reduced to epoch 2000.5 using empirical land uplift model of Latvia. EVRF2007 heights of 16 points around Latvia held fixed.
 
 Uses Normal heights.
+
+Latvian coordinate system 2020
+------------------------------
+| Type: Geodetic
+| Extent: Latvia - onshore and offshore.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_LATVIAN_COORDINATE_SYSTEM_2020)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1356')
+
+Aligned with ETRF2014 at epoch 2020.28. Derived at 5 well-distributed base stations of the Latvian GNSS permanent network (LATREF) in IGb14, transformed to ETRF2014 using EUREF parameters (CT code 8366).
+
+LKS-2020 is the second national realization of ETRS89. Replaces LKS-92 (datum code 6661).
+
+Latvian geodetic coordinate system 1992
+---------------------------------------
+| Type: Geodetic
+| Extent: Latvia - onshore and offshore.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_LATVIAN_GEODETIC_COORDINATE_SYSTEM_1992)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::6661')
+
+Constrained to 4 ETRS89 points in Latvia from the EUREF Baltic 1992 campaign.
+
+Densification of ETRS89 during the 1992 Baltic campaign. Replaced by Latvian coordinate system 2020 (datum code 1356).
 
 Le Pouce 1934
 -------------
@@ -6767,6 +6795,20 @@ Nivellement General de Polynesie Francaise
     Datum::fromSRID('urn:ogc:def:datum:EPSG::5195')
 
 The collection of heterogeneous levelling networks throughout the Society Islands of French Polynesia.
+
+Nivellement General de l'Algerie 2022
+-------------------------------------
+| Type: Vertical
+| Extent: Algeria - onshore.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_NIVELLEMENT_GENERAL_DE_LALGERIE_2022)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1354')
+
+Fundamental benchmark attached to the tide gauge at basin of Algiers old port with defined height of 1.1168m.
+
+Orthometric heights.
 
 Nivellement General de la Corse 1948
 ------------------------------------
@@ -9680,6 +9722,20 @@ Solomon 1968
     Datum::fromSRID('urn:ogc:def:datum:EPSG::6718')
 
 Fundamental point: GUX 1.
+
+Sonatrach Reference Frame 2020
+------------------------------
+| Type: Geodetic
+| Extent: Algeria - onshore and offshore.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_SONATRACH_REFERENCE_FRAME_2020)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1355')
+
+Aligned with IGS14 at epoch 2020.15.  RGSH2020 primary network of 22 stations throughout Algeria connected to 15 IGS stations. 
+
+Internal accuracy of network is 6-8mm.
 
 South Africa Land Levelling Datum
 ---------------------------------

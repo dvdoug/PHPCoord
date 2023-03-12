@@ -244,7 +244,7 @@
 6658	Hjorsey 1955		International 1924	Greenwich	Iceland - onshore
 6659	Islands Net 1993	ISN93	GRS 1980	Greenwich	Iceland
 6660	Helle 1954		International 1924	Greenwich	Jan Mayen - onshore
-6661	Latvia 1992	LKS92	GRS 1980	Greenwich	Latvia
+6661	Latvian geodetic coordinate system 1992	LKS-92	GRS 1980	Greenwich	Latvia
 6663	Porto Santo 1995	Base SE; Madeira SE Base 1995	International 1924	Greenwich	Portugal - Madeira archipelago onshore
 6664	Azores Oriental Islands 1995	Sao Bras; Azores Oriental 1995	International 1924	Greenwich	Portugal - Azores E - onshore
 6665	Azores Central Islands 1995	Graciosa; Azores Central 1995; Base SW	International 1924	Greenwich	Portugal - Azores C - onshore

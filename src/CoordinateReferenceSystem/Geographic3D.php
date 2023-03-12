@@ -277,6 +277,13 @@ class Geographic3D extends Geographic
     public const EPSG_ETRS89 = 'urn:ogc:def:crs:EPSG::4937';
 
     /**
+     * ETRS89/DREF91/2016
+     * Extent: Germany - onshore and offshore.
+     * German national realization of ETRS89. Replaces ETRS89/DREF91 Realization 2002 from 2016-12-01.
+     */
+    public const EPSG_ETRS89_DREF91_2016 = 'urn:ogc:def:crs:EPSG::10283';
+
+    /**
      * FEH2010
      * Extent: Fehmarnbelt area of Denmark and Germany.
      */
@@ -629,10 +636,18 @@ class Geographic3D extends Geographic
     public const EPSG_LGD2006 = 'urn:ogc:def:crs:EPSG::4900';
 
     /**
-     * LKS92
+     * LKS-2020
      * Extent: Latvia - onshore and offshore.
+     * Replaces LKS-92 (CRS code 4949).
      */
-    public const EPSG_LKS92 = 'urn:ogc:def:crs:EPSG::4949';
+    public const EPSG_LKS_2020 = 'urn:ogc:def:crs:EPSG::10304';
+
+    /**
+     * LKS-92
+     * Extent: Latvia - onshore and offshore.
+     * Replaced by LKS-2020 (CRS code 10304).
+     */
+    public const EPSG_LKS_92 = 'urn:ogc:def:crs:EPSG::4949';
 
     /**
      * LKS94
@@ -1197,6 +1212,12 @@ class Geographic3D extends Geographic
     public const EPSG_RGRDC_2005 = 'urn:ogc:def:crs:EPSG::4040';
 
     /**
+     * RGSH2020
+     * Extent: Algeria - onshore and offshore.
+     */
+    public const EPSG_RGSH2020 = 'urn:ogc:def:crs:EPSG::10298';
+
+    /**
      * RGSPM06
      * Extent: St Pierre and Miquelon - onshore and offshore.
      * See CRS code 7034 for alternate system with horizontal axes reversed used by IGN for GIS purposes.
@@ -1610,6 +1631,11 @@ class Geographic3D extends Geographic
      * Extent: Yemen - onshore and offshore.
      */
     public const EPSG_YEMEN_NGN96 = 'urn:ogc:def:crs:EPSG::4981';
+
+    /**
+     * @deprecated use EPSG_LKS_92 instead
+     */
+    public const EPSG_LKS92 = 'urn:ogc:def:crs:EPSG::4949';
 
     protected Geocentric|Geographic3D|null $baseCRS;
 

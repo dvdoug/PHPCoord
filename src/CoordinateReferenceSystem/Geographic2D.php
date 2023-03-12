@@ -906,6 +906,13 @@ class Geographic2D extends Geographic
     public const EPSG_ETRS89 = 'urn:ogc:def:crs:EPSG::4258';
 
     /**
+     * ETRS89/DREF91/2016
+     * Extent: Germany - onshore and offshore.
+     * German national realization of ETRS89. Replaces ETRS89/DREF91 Realization 2002 from 2016-12-01.
+     */
+    public const EPSG_ETRS89_DREF91_2016 = 'urn:ogc:def:crs:EPSG::10284';
+
+    /**
      * EWR2-IRF
      * Extent: United Kingdom (UK) - on or related to East West Rail (Phase 2) routes from Oxford to Bicester,
      * Bletchley and Bedford, and from Claydon Junction to Aylesbury and Princes Risborough.
@@ -1831,11 +1838,18 @@ class Geographic2D extends Geographic
     public const EPSG_LGD2006 = 'urn:ogc:def:crs:EPSG::4754';
 
     /**
-     * LKS92
+     * LKS-2020
      * Extent: Latvia - onshore and offshore.
-     * This name is also used for a projected CRS (see projCRS code 3059).
+     * Replaces LKS-92 (CRS code 4661).
      */
-    public const EPSG_LKS92 = 'urn:ogc:def:crs:EPSG::4661';
+    public const EPSG_LKS_2020 = 'urn:ogc:def:crs:EPSG::10305';
+
+    /**
+     * LKS-92
+     * Extent: Latvia - onshore and offshore.
+     * Replaced by LKS-2020 (CRS code 10305).
+     */
+    public const EPSG_LKS_92 = 'urn:ogc:def:crs:EPSG::4661';
 
     /**
      * LKS94
@@ -3195,6 +3209,12 @@ class Geographic2D extends Geographic
     public const EPSG_RGRDC_2005 = 'urn:ogc:def:crs:EPSG::4046';
 
     /**
+     * RGSH2020
+     * Extent: Algeria - onshore and offshore.
+     */
+    public const EPSG_RGSH2020 = 'urn:ogc:def:crs:EPSG::10299';
+
+    /**
      * RGSPM06
      * Extent: St Pierre and Miquelon - onshore and offshore.
      * Replaces Saint Pierre et Miquelon 1950 (CRS code 4638). See CRS code 7035 for alternate system with axes
@@ -4183,6 +4203,11 @@ class Geographic2D extends Geographic
      * @deprecated use EPSG_LUREF instead
      */
     public const EPSG_LUXEMBOURG_1930 = 'urn:ogc:def:crs:EPSG::4181';
+
+    /**
+     * @deprecated use EPSG_LKS_92 instead
+     */
+    public const EPSG_LKS92 = 'urn:ogc:def:crs:EPSG::4661';
 
     protected Geocentric|Geographic2D|Geographic3D|null $baseCRS;
 

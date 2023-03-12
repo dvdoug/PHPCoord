@@ -1,6 +1,8 @@
 # Changelog
 
 ## [Unreleased]
+### Changed
+- Updates to data for Algeria, Germany and Latvia
 
 ## [5.3.1] - 2023-02-20
 ### Changed

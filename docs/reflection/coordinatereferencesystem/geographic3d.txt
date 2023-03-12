@@ -408,6 +408,21 @@ ETRS89
 
 Has been realized through ETRF89, ETRF90, ETRF91, ETRF92, ETRF93, ETRF94, ETRF96, ETRF97, ETRF2000, ETRF2005 and ETRF2014. This 'ensemble' covers any or all of these realizations without distinction.
 
+ETRS89/DREF91/2016
+------------------
+| Extent: Germany - onshore and offshore.
+
+.. code-block:: php
+
+    Geographic3D::fromSRID(Geographic3D::EPSG_ETRS89_DREF91_2016)
+    Geographic3D::fromSRID('urn:ogc:def:crs:EPSG::10283')
+    Geographic::fromSRID(Geographic3D::EPSG_ETRS89_DREF91_2016)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10283')
+    CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_ETRS89_DREF91_2016)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10283')
+
+German national realization of ETRS89. Replaces ETRS89/DREF91 Realization 2002 from 2016-12-01.
+
 FEH2010
 -------
 | Extent: Fehmarnbelt area of Denmark and Germany.
@@ -1156,19 +1171,35 @@ LGD2006
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4900')
 
 
-LKS92
------
+LKS-2020
+--------
 | Extent: Latvia - onshore and offshore.
 
 .. code-block:: php
 
-    Geographic3D::fromSRID(Geographic3D::EPSG_LKS92)
+    Geographic3D::fromSRID(Geographic3D::EPSG_LKS_2020)
+    Geographic3D::fromSRID('urn:ogc:def:crs:EPSG::10304')
+    Geographic::fromSRID(Geographic3D::EPSG_LKS_2020)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10304')
+    CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_LKS_2020)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10304')
+
+Replaces LKS-92 (CRS code 4949).
+
+LKS-92
+------
+| Extent: Latvia - onshore and offshore.
+
+.. code-block:: php
+
+    Geographic3D::fromSRID(Geographic3D::EPSG_LKS_92)
     Geographic3D::fromSRID('urn:ogc:def:crs:EPSG::4949')
-    Geographic::fromSRID(Geographic3D::EPSG_LKS92)
+    Geographic::fromSRID(Geographic3D::EPSG_LKS_92)
     Geographic::fromSRID('urn:ogc:def:crs:EPSG::4949')
-    CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_LKS92)
+    CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_LKS_92)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4949')
 
+Replaced by LKS-2020 (CRS code 10304).
 
 LKS94
 -----
@@ -2186,6 +2217,20 @@ RGRDC 2005
     Geographic::fromSRID('urn:ogc:def:crs:EPSG::4040')
     CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_RGRDC_2005)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4040')
+
+
+RGSH2020
+--------
+| Extent: Algeria - onshore and offshore.
+
+.. code-block:: php
+
+    Geographic3D::fromSRID(Geographic3D::EPSG_RGSH2020)
+    Geographic3D::fromSRID('urn:ogc:def:crs:EPSG::10298')
+    Geographic::fromSRID(Geographic3D::EPSG_RGSH2020)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10298')
+    CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_RGSH2020)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10298')
 
 
 RGSPM06

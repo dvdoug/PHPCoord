@@ -50,6 +50,7 @@ class EPSGImporter
         );
 
         $sqlite->enableExceptions(true);
+        $sqlite->exec('PRAGMA journal_mode=WAL'); // WAL is faster
 
         $tableSchema = file_get_contents($this->resourceDir . '/epsg/PostgreSQL_Table_Script.sql');
         if (str_starts_with($tableSchema, self::BOM)) {
@@ -62,6 +63,9 @@ class EPSGImporter
             $tableData = substr($tableData, 3);
         }
         $sqlite->exec($tableData);
+
+        // Custom alias/no-op method
+        $sqlite->exec("INSERT INTO epsg_coordoperationmethod (coord_op_method_code, coord_op_method_name, reverse_op, data_source, revision_date, deprecated, remarks) VALUES (32768, 'Alias', 1, 'PHPCoord', '2021-10-28', 0, '')");
 
         // Corrections
         $sqlite->exec("UPDATE epsg_coordoperationparamvalue SET param_value_file_ref = NULL WHERE param_value_file_ref = ''");
@@ -98,30 +102,45 @@ class EPSGImporter
         $sqlite->exec("INSERT INTO epsg_coordoperationparamvalue (coord_op_code, coord_op_method_code, parameter_code, param_value_file_ref) VALUES (8364, 9615, 8656, 'Slovakia_JTSK03_to_JTSK.gsb')");
 
         /*
-         * Time-dependent transformations from/to ETRS89/WGS84 are only present in transforms involving specific realisations
+         * Time-dependent transformations from/to WGS84 are only present in transforms involving specific realisations
          * so add transforms to/from the generic ensemble codes to the most recent version.
+         * XXX technically, the ensemble accuracy is 2m not 0, but we're actively assuming the latest realisation
          */
-        $sqlite->exec("INSERT INTO epsg_coordoperationmethod (coord_op_method_code, coord_op_method_name, reverse_op, data_source, revision_date, deprecated, remarks) VALUES (32768, 'Alias', 1, 'PHPCoord', '2021-10-28', 0, '')");
-        $sqlite->exec("INSERT INTO epsg_coordoperation (coord_op_code, coord_op_name, coord_op_type, source_crs_code, target_crs_code, coord_op_method_code, coord_op_accuracy, data_source, revision_date, deprecated, show_operation, remarks) VALUES (32768, 'ETRS89 to ETRF2014 (geocen)', 'transformation', 4936, 8401, 32768, 0, 'PHPCoord', '2021-10-28', 0, 1, '')");
-        $sqlite->exec("INSERT INTO epsg_usage (object_table_name, object_code, extent_code, scope_code) VALUES ('epsg_coordoperation', 32768, 1298, 1203)");
-        $sqlite->exec("INSERT INTO epsg_coordoperation (coord_op_code, coord_op_name, coord_op_type, source_crs_code, target_crs_code, coord_op_method_code, coord_op_accuracy, data_source, revision_date, deprecated, show_operation, remarks) VALUES (32769, 'ETRS89 to ETRF2014 (geog2D to geocen)', 'transformation', 4258, 8401, 9602, 0, 'PHPCoord', '2021-10-28', 0, 1, '')");
-        $sqlite->exec("INSERT INTO epsg_usage (object_table_name, object_code, extent_code, scope_code) VALUES ('epsg_coordoperation', 32769, 1298, 1203)");
-        $sqlite->exec("INSERT INTO epsg_coordoperation (coord_op_code, coord_op_name, coord_op_type, source_crs_code, target_crs_code, coord_op_method_code, coord_op_accuracy, data_source, revision_date, deprecated, show_operation, remarks) VALUES (32770, 'ETRS89 to ETRF2014 (geog3D to geocen)', 'transformation', 4937, 8401, 9602, 0, 'PHPCoord', '2021-10-28', 0, 1, '')");
-        $sqlite->exec("INSERT INTO epsg_usage (object_table_name, object_code, extent_code, scope_code) VALUES ('epsg_coordoperation', 32770, 1298, 1203)");
-        $sqlite->exec("INSERT INTO epsg_coordoperation (coord_op_code, coord_op_name, coord_op_type, source_crs_code, target_crs_code, coord_op_method_code, coord_op_accuracy, data_source, revision_date, deprecated, show_operation, remarks) VALUES (32771, 'WGS 84 to WGS 84 (G2139) (geocen)', 'transformation', 4978, 9753, 32768, 0, 'PHPCoord', '2021-10-28', 0, 1, '')");
+        $sqlite->exec("INSERT INTO epsg_coordoperation (coord_op_code, coord_op_name, coord_op_type, source_crs_code, target_crs_code, coord_op_method_code, coord_op_accuracy, data_source, revision_date, deprecated, show_operation, remarks) VALUES (32768, 'WGS 84 to WGS 84 (G2139) (geocen)', 'transformation', 4978, 9753, 32768, 0, 'PHPCoord', '2023-02-23', 0, 1, '')");
+        $sqlite->exec("INSERT INTO epsg_usage (object_table_name, object_code, extent_code, scope_code) VALUES ('epsg_coordoperation', 32768, 1262, 1203)");
+        $sqlite->exec("INSERT INTO epsg_coordoperation (coord_op_code, coord_op_name, coord_op_type, source_crs_code, target_crs_code, coord_op_method_code, coord_op_accuracy, data_source, revision_date, deprecated, show_operation, remarks) VALUES (32769, 'WGS 84 to WGS 84 (G2139) (geog2D)', 'transformation', 4326, 9755, 32768, 0, 'PHPCoord', '2023-02-23', 0, 1, '')");
+        $sqlite->exec("INSERT INTO epsg_usage (object_table_name, object_code, extent_code, scope_code) VALUES ('epsg_coordoperation', 32769, 1262, 1203)");
+        $sqlite->exec("INSERT INTO epsg_coordoperation (coord_op_code, coord_op_name, coord_op_type, source_crs_code, target_crs_code, coord_op_method_code, coord_op_accuracy, data_source, revision_date, deprecated, show_operation, remarks) VALUES (32770, 'WGS 84 to WGS 84 (G2139) (geog3D)', 'transformation', 4979, 9754, 32768, 0, 'PHPCoord', '2023-02-23', 0, 1, '')");
+        $sqlite->exec("INSERT INTO epsg_usage (object_table_name, object_code, extent_code, scope_code) VALUES ('epsg_coordoperation', 32770, 1262, 1203)");
+        $sqlite->exec("INSERT INTO epsg_coordoperation (coord_op_code, coord_op_name, coord_op_type, source_crs_code, target_crs_code, coord_op_method_code, coord_op_accuracy, data_source, revision_date, deprecated, show_operation, remarks) VALUES (32771, 'WGS 84 to WGS 84 (G2139) (geog2D to geocen)', 'transformation', 4326, 9753, 9602, 0, 'PHPCoord', '2023-02-23', 0, 1, '')");
         $sqlite->exec("INSERT INTO epsg_usage (object_table_name, object_code, extent_code, scope_code) VALUES ('epsg_coordoperation', 32771, 1262, 1203)");
-        $sqlite->exec("INSERT INTO epsg_coordoperation (coord_op_code, coord_op_name, coord_op_type, source_crs_code, target_crs_code, coord_op_method_code, coord_op_accuracy, data_source, revision_date, deprecated, show_operation, remarks) VALUES (32772, 'WGS 84 to WGS 84 (G2139) (geog2D to geocen)', 'transformation', 4326, 9753, 9602, 0, 'PHPCoord', '2021-10-28', 0, 1, '')");
+        $sqlite->exec("INSERT INTO epsg_coordoperation (coord_op_code, coord_op_name, coord_op_type, source_crs_code, target_crs_code, coord_op_method_code, coord_op_accuracy, data_source, revision_date, deprecated, show_operation, remarks) VALUES (32772, 'WGS 84 to WGS 84 (G2139) (geog3D to geocen)', 'transformation', 4979, 9753, 9602, 0, 'PHPCoord', '2023-02-23', 0, 1, '')");
         $sqlite->exec("INSERT INTO epsg_usage (object_table_name, object_code, extent_code, scope_code) VALUES ('epsg_coordoperation', 32772, 1262, 1203)");
-        $sqlite->exec("INSERT INTO epsg_coordoperation (coord_op_code, coord_op_name, coord_op_type, source_crs_code, target_crs_code, coord_op_method_code, coord_op_accuracy, data_source, revision_date, deprecated, show_operation, remarks) VALUES (32773, 'WGS 84 to WGS 84 (G2139) (geog3D to geocen)', 'transformation', 4979, 9753, 9602, 0, 'PHPCoord', '2021-10-28', 0, 1, '')");
-        $sqlite->exec("INSERT INTO epsg_usage (object_table_name, object_code, extent_code, scope_code) VALUES ('epsg_coordoperation', 32773, 1262, 1203)");
+
+        /*
+         * Time-dependent transformations from/to ETRS89 are only present in transforms involving specific realisations
+         * so add transforms to/from the generic ensemble codes to ETRF2000 (ETRF2014 is technically better, ETRF2000
+         * is still recommended by EUREF for georeferencing)
+         * XXX technically, the ensemble accuracy is 0.1m not 0, but we're actively assuming the relevant realisation
+         */
+        $sqlite->exec("INSERT INTO epsg_coordoperation (coord_op_code, coord_op_name, coord_op_type, source_crs_code, target_crs_code, coord_op_method_code, coord_op_accuracy, data_source, revision_date, deprecated, show_operation, remarks) VALUES (32773, 'ETRS89 to ETRF2000 (geocen)', 'transformation', 4936, 7930, 32768, 0, 'PHPCoord', '2023-02-23', 0, 1, '')");
+        $sqlite->exec("INSERT INTO epsg_usage (object_table_name, object_code, extent_code, scope_code) VALUES ('epsg_coordoperation', 32773, 1298, 1203)");
+        $sqlite->exec("INSERT INTO epsg_coordoperation (coord_op_code, coord_op_name, coord_op_type, source_crs_code, target_crs_code, coord_op_method_code, coord_op_accuracy, data_source, revision_date, deprecated, show_operation, remarks) VALUES (32774, 'ETRS89 to ETRF2000 (geog2D)', 'transformation', 4258, 9067, 32768, 0, 'PHPCoord', '2023-02-23', 0, 1, '')");
+        $sqlite->exec("INSERT INTO epsg_usage (object_table_name, object_code, extent_code, scope_code) VALUES ('epsg_coordoperation', 32774, 1298, 1203)");
+        $sqlite->exec("INSERT INTO epsg_coordoperation (coord_op_code, coord_op_name, coord_op_type, source_crs_code, target_crs_code, coord_op_method_code, coord_op_accuracy, data_source, revision_date, deprecated, show_operation, remarks) VALUES (32775, 'ETRS89 to ETRF2000 (geog3D)', 'transformation', 4937, 7931, 32768, 0, 'PHPCoord', '2023-02-23', 0, 1, '')");
+        $sqlite->exec("INSERT INTO epsg_usage (object_table_name, object_code, extent_code, scope_code) VALUES ('epsg_coordoperation', 32775, 1298, 1203)");
+        $sqlite->exec("INSERT INTO epsg_coordoperation (coord_op_code, coord_op_name, coord_op_type, source_crs_code, target_crs_code, coord_op_method_code, coord_op_accuracy, data_source, revision_date, deprecated, show_operation, remarks) VALUES (32776, 'ETRS89 to ETRF2000 (geog2D to geocen)', 'transformation', 4258, 7930, 9602, 0, 'PHPCoord', '2023-02-23', 0, 1, '')");
+        $sqlite->exec("INSERT INTO epsg_usage (object_table_name, object_code, extent_code, scope_code) VALUES ('epsg_coordoperation', 32776, 1298, 1203)");
+        $sqlite->exec("INSERT INTO epsg_coordoperation (coord_op_code, coord_op_name, coord_op_type, source_crs_code, target_crs_code, coord_op_method_code, coord_op_accuracy, data_source, revision_date, deprecated, show_operation, remarks) VALUES (32777, 'ETRS89 to ETRF2000 (geog3D to geocen)', 'transformation', 4937, 7930, 9602, 0, 'PHPCoord', '2023-02-23', 0, 1, '')");
+        $sqlite->exec("INSERT INTO epsg_usage (object_table_name, object_code, extent_code, scope_code) VALUES ('epsg_coordoperation', 32777, 1298, 1203)");
 
         /*
          * EPSG has a transform listed from generic ETRS89 (2D) to generic WGS84 (2D) but not the 3D for some reason
          */
-        $sqlite->exec("INSERT INTO epsg_coordoperation (coord_op_code, coord_op_name, coord_op_type, source_crs_code, target_crs_code, coord_op_method_code, coord_op_accuracy, data_source, revision_date, deprecated, show_operation, remarks) VALUES (32774, 'ETRS89 to WGS 84 (geocen)', 'transformation', 4936, 4978, 32768, 1, 'PHPCoord', '2023-02-19', 0, 1, '')");
-        $sqlite->exec("INSERT INTO epsg_usage (object_table_name, object_code, extent_code, scope_code) VALUES ('epsg_coordoperation', 32774, 1262, 1298)");
-        $sqlite->exec("INSERT INTO epsg_coordoperation (coord_op_code, coord_op_name, coord_op_type, source_crs_code, target_crs_code, coord_op_method_code, coord_op_accuracy, data_source, revision_date, deprecated, show_operation, remarks) VALUES (32775, 'ETRS89 to WGS 84 (geog3D)', 'transformation', 4937, 4979, 32768, 1, 'PHPCoord', '2023-02-19', 0, 1, '')");
-        $sqlite->exec("INSERT INTO epsg_usage (object_table_name, object_code, extent_code, scope_code) VALUES ('epsg_coordoperation', 32775, 1262, 1298)");
+        $sqlite->exec("INSERT INTO epsg_coordoperation (coord_op_code, coord_op_name, coord_op_type, source_crs_code, target_crs_code, coord_op_method_code, coord_op_accuracy, data_source, revision_date, deprecated, show_operation, remarks) VALUES (32778, 'ETRS89 to WGS 84 (geocen)', 'transformation', 4936, 4978, 32768, 1, 'PHPCoord', '2023-02-19', 0, 1, '')");
+        $sqlite->exec("INSERT INTO epsg_usage (object_table_name, object_code, extent_code, scope_code) VALUES ('epsg_coordoperation', 32778, 1262, 1298)");
+        $sqlite->exec("INSERT INTO epsg_coordoperation (coord_op_code, coord_op_name, coord_op_type, source_crs_code, target_crs_code, coord_op_method_code, coord_op_accuracy, data_source, revision_date, deprecated, show_operation, remarks) VALUES (32779, 'ETRS89 to WGS 84 (geog3D)', 'transformation', 4937, 4979, 32768, 1, 'PHPCoord', '2023-02-19', 0, 1, '')");
+        $sqlite->exec("INSERT INTO epsg_usage (object_table_name, object_code, extent_code, scope_code) VALUES ('epsg_coordoperation', 32779, 1262, 1298)");
 
         /*
          * Too many "world" extents with confusing descriptions, unify
@@ -147,6 +166,7 @@ class EPSGImporter
             );
         }
         $extentDB->enableExceptions(true);
+        $extentDB->exec('PRAGMA journal_mode=WAL'); // WAL is faster
         $extentDB->loadExtension('mod_spatialite.so');
 
         $dataDB = new SQLite3(

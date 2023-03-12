@@ -365,10 +365,8 @@ class Vertical extends CoordinateReferenceSystem
 
     /**
      * DHHN2016 height
-     * Extent: Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen,
-     * Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt,
-     * Schleswig-Holstein, Thuringen.
-     * Replaces DHHN92 height (CRS code 5783).
+     * Extent: Germany - onshore and offshore.
+     * Replaces DHHN92 height (CRS code 5783) from 2016-12-01.
      */
     public const EPSG_DHHN2016_HEIGHT = 'urn:ogc:def:crs:EPSG::7837';
 
@@ -1407,6 +1405,14 @@ class Vertical extends CoordinateReferenceSystem
      * Extent: Luxembourg.
      */
     public const EPSG_NG95_HEIGHT = 'urn:ogc:def:crs:EPSG::5774';
+
+    /**
+     * NGA 2022 height
+     * Extent: Algeria - onshore.
+     * In practice realised by application of geoid model recommended by the Institut National de Cartographie et de
+     * Télédétection (INCT) to WGS 84 ellipsoidal heights.
+     */
+    public const EPSG_NGA_2022_HEIGHT = 'urn:ogc:def:crs:EPSG::10190';
 
     /**
      * NGC 1948 height

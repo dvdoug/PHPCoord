@@ -278,6 +278,13 @@ class Geocentric extends CoordinateReferenceSystem
     public const EPSG_ETRS89 = 'urn:ogc:def:crs:EPSG::4936';
 
     /**
+     * ETRS89/DREF91/2016
+     * Extent: Germany - onshore and offshore.
+     * German national realization of ETRS89. Replaces ETRS89/DREF91 Realization 2002 from 2016-12-01.
+     */
+    public const EPSG_ETRS89_DREF91_2016 = 'urn:ogc:def:crs:EPSG::10282';
+
+    /**
      * FEH2010
      * Extent: Fehmarnbelt area of Denmark and Germany.
      * Trans-national system created due to small (but unacceptable for engineering tolerance) differences between the
@@ -632,10 +639,18 @@ class Geocentric extends CoordinateReferenceSystem
     public const EPSG_LGD2006 = 'urn:ogc:def:crs:EPSG::4899';
 
     /**
-     * LKS92
+     * LKS-2020
      * Extent: Latvia - onshore and offshore.
+     * Replaces LKS-92 (CRS code 4948).
      */
-    public const EPSG_LKS92 = 'urn:ogc:def:crs:EPSG::4948';
+    public const EPSG_LKS_2020 = 'urn:ogc:def:crs:EPSG::10303';
+
+    /**
+     * LKS-92
+     * Extent: Latvia - onshore and offshore.
+     * Replaced by LKS-2020 (CRS code 10303).
+     */
+    public const EPSG_LKS_92 = 'urn:ogc:def:crs:EPSG::4948';
 
     /**
      * LKS94
@@ -1127,6 +1142,12 @@ class Geocentric extends CoordinateReferenceSystem
     public const EPSG_RGRDC_2005 = 'urn:ogc:def:crs:EPSG::4039';
 
     /**
+     * RGSH2020
+     * Extent: Algeria - onshore and offshore.
+     */
+    public const EPSG_RGSH2020 = 'urn:ogc:def:crs:EPSG::10297';
+
+    /**
      * RGSPM06
      * Extent: St Pierre and Miquelon - onshore and offshore.
      */
@@ -1508,6 +1529,11 @@ class Geocentric extends CoordinateReferenceSystem
      * Extent: Yemen - onshore and offshore.
      */
     public const EPSG_YEMEN_NGN96 = 'urn:ogc:def:crs:EPSG::4980';
+
+    /**
+     * @deprecated use EPSG_LKS_92 instead
+     */
+    public const EPSG_LKS92 = 'urn:ogc:def:crs:EPSG::4948';
 
     private static array $cachedObjects = [];
 

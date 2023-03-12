@@ -295,9 +295,9 @@
 4945	Geographic 3D	ISN93		6659	Iceland
 4944	Geocentric	ISN93		6659	Iceland
 4660	Geographic 2D	Helle 1954		6660	Jan Mayen - onshore
-4661	Geographic 2D	LKS92		6661	Latvia
-4949	Geographic 3D	LKS92		6661	Latvia
-4948	Geocentric	LKS92		6661	Latvia
+4661	Geographic 2D	LKS-92		6661	Latvia
+4949	Geographic 3D	LKS-92		6661	Latvia
+4948	Geocentric	LKS-92		6661	Latvia
 4663	Geographic 2D	Porto Santo 1995	Base SE	6663	Portugal - Madeira archipelago onshore
 4664	Geographic 2D	Azores Oriental 1995	Sao Braz	6664	Portugal - Azores E - onshore
 4665	Geographic 2D	Azores Central 1995	Base SW	6665	Portugal - Azores C - onshore

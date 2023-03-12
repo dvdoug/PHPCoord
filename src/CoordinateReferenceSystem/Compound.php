@@ -272,6 +272,8 @@ class Compound extends CoordinateReferenceSystem
      * Extent: Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen,
      * Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt,
      * Schleswig-Holstein, Thuringen.
+     *
+     * @deprecated
      */
     public const EPSG_ETRS89_PLUS_DHHN2016_HEIGHT = 'urn:ogc:def:crs:EPSG::9924';
 
@@ -969,6 +971,12 @@ class Compound extends CoordinateReferenceSystem
      * Replaced by ETRS89 / UTM zone 36N + NN2000 height (compound CRS code 5976).
      */
     public const EPSG_ETRS89_UTM_ZONE_36N_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6176';
+
+    /**
+     * ETRS89/DREF91/2016 + DHHN2016 height
+     * Extent: Germany - onshore and offshore.
+     */
+    public const EPSG_ETRS89_DREF91_2016_PLUS_DHHN2016_HEIGHT = 'urn:ogc:def:crs:EPSG::10293';
 
     /**
      * EWR2 Grid + ODN height

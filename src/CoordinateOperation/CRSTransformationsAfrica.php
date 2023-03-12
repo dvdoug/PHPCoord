@@ -16,6 +16,13 @@ class CRSTransformationsAfrica
 {
     protected static array $sridData = [
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10264',
+            'name' => 'RGSH2020 to WGS 84 (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::10299',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'accuracy' => 1.0,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17412',
             'name' => 'Congo Transverse Mercator zone 12',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4046',
@@ -1101,8 +1108,8 @@ class CRSTransformationsAfrica
             'accuracy' => 8.0,
         ],
         [
-            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5660',
-            'name' => 'Nord Sahara 1959 to WGS 84 (9)',
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10296',
+            'name' => 'Nord Sahara 1959 to WGS 84 (11)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4307',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,

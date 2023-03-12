@@ -2873,6 +2873,13 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5701',
             'extent' => ['4689'],
         ],
+        'urn:ogc:def:crs:EPSG::10293' => [
+            'name' => 'ETRS89/DREF91/2016 + DHHN2016 height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::10284',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::7837',
+            'extent' => ['1103'],
+        ],
         'urn:ogc:def:crs:EPSG::20001' => [
             'name' => 'ETRS89 + SVD2006 height',
             'horizontal_crs' => 'urn:ogc:def:crs:EPSG::4258',

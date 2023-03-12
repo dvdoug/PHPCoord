@@ -3332,6 +3332,8 @@ class Projected extends CoordinateReferenceSystem
     /**
      * ETRS89 / Gauss-Kruger CM 9E
      * Extent: Germany - Hamburg, including Neuwerk, Nigehörn, Scharhörn and surrounding maritime area.
+     *
+     * @deprecated
      */
     public const EPSG_ETRS89_GAUSS_KRUGER_CM_9E = 'urn:ogc:def:crs:EPSG::8395';
 
@@ -3903,6 +3905,65 @@ class Projected extends CoordinateReferenceSystem
      * statistical applications at any scale.
      */
     public const EPSG_ETRS89_EXTENDED_LCC_EUROPE = 'urn:ogc:def:crs:EPSG::3034';
+
+    /**
+     * ETRS89/DREF91/2016 / 3-degree Gauss-Kruger zone 3
+     * Extent: Germany - Hamburg, including Neuwerk, Nigehörn, Scharhörn and surrounding maritime area.
+     * Replaces CRS code 8395 from 2016-12-01.
+     */
+    public const EPSG_ETRS89_DREF91_2016_3_DEGREE_GAUSS_KRUGER_ZONE_3 = 'urn:ogc:def:crs:EPSG::10285';
+
+    /**
+     * ETRS89/DREF91/2016 / UTM zone 31N (N-zE)
+     * Extent: Germany - onshore and offshore west of 6°E.
+     * Replaces CRS code 5651 from 2016-12-01. See ETRS89/DREF91/2016 / UTM zone 31N (zE-N) (code 10287) for similar
+     * CRS but with coordinate order reversed to easting before northing.
+     */
+    public const EPSG_ETRS89_DREF91_2016_UTM_ZONE_31N_N_ZE = 'urn:ogc:def:crs:EPSG::10286';
+
+    /**
+     * ETRS89/DREF91/2016 / UTM zone 31N (zE-N)
+     * Extent: Germany - onshore and offshore west of 6°E.
+     * Replaces CRS code 5649 from 2016-12-01. See ETRS89/DREF91/2016 / UTM zone 31N (N-zE) (code 10286) for similar
+     * CRS but with coordinate order reversed to northing before easting.
+     */
+    public const EPSG_ETRS89_DREF91_2016_UTM_ZONE_31N_ZE_N = 'urn:ogc:def:crs:EPSG::10287';
+
+    /**
+     * ETRS89/DREF91/2016 / UTM zone 32N (N-zE)
+     * Extent: Germany - onshore and offshore between 6°E and 12°E, including Mecklenburg-Vorpommern west of 12°E
+     * and Schleswig-Holstein.
+     * Replaces CRS code 5652 from 2016-12-01. See ETRS89/DREF91/2016 / UTM zone 32N (zE-N) (code 10289) for similar
+     * CRS but with coordinate order reversed to easting before northing.
+     */
+    public const EPSG_ETRS89_DREF91_2016_UTM_ZONE_32N_N_ZE = 'urn:ogc:def:crs:EPSG::10288';
+
+    /**
+     * ETRS89/DREF91/2016 / UTM zone 32N (zE-N)
+     * Extent: Germany - onshore and offshore between 6°E and 12°E, including Mecklenburg-Vorpommern west of 12°E
+     * and Schleswig-Holstein.
+     * Replaces CRS code 4647 from 2016-12-01. See ETRS89/DREF91/2016 / UTM zone 32N (N-zE) (code 10288) for similar
+     * CRS but with coordinate order reversed to northing before easting.
+     */
+    public const EPSG_ETRS89_DREF91_2016_UTM_ZONE_32N_ZE_N = 'urn:ogc:def:crs:EPSG::10289';
+
+    /**
+     * ETRS89/DREF91/2016 / UTM zone 33N (N-zE)
+     * Extent: Germany - onshore and offshore east of 12°E, including Brandenburg (all state, including that part west
+     * of 12°E) and Mecklenburg-Vorpommern east of 12°E.
+     * Replaces CRS code 5653 from 2016-12-01. See ETRS89/DREF91/2016 / UTM zone 33N (zE-N) (code 10291) for similar
+     * CRS but with coordinate order reversed to easting before northing.
+     */
+    public const EPSG_ETRS89_DREF91_2016_UTM_ZONE_33N_N_ZE = 'urn:ogc:def:crs:EPSG::10290';
+
+    /**
+     * ETRS89/DREF91/2016 / UTM zone 33N (zE-N)
+     * Extent: Germany - onshore and offshore east of 12°E, including Brandenburg (all state, including that part west
+     * of 12°E) and Mecklenburg-Vorpommern east of 12°E.
+     * Replaces CRS code 5650 from 2016-12-01. See ETRS89/DREF91/2016 / UTM zone 33N (N-zE) (code 10290) for similar
+     * CRS but with coordinate order reversed to northing before easting.
+     */
+    public const EPSG_ETRS89_DREF91_2016_UTM_ZONE_33N_ZE_N = 'urn:ogc:def:crs:EPSG::10291';
 
     /**
      * EWR2 Grid
@@ -7987,11 +8048,19 @@ class Projected extends CoordinateReferenceSystem
     public const EPSG_LGD2006_UTM_ZONE_35N = 'urn:ogc:def:crs:EPSG::3203';
 
     /**
-     * LKS92 / Latvia TM
+     * LKS-2020 / Latvia TM
      * Extent: Latvia - onshore and offshore.
-     * LKS92 / TM Baltic (CRS code 25884) used for medium and small scale applications.
+     * Replaces LKS-92 / Latvia TM (CRS code 3059).
      */
-    public const EPSG_LKS92_LATVIA_TM = 'urn:ogc:def:crs:EPSG::3059';
+    public const EPSG_LKS_2020_LATVIA_TM = 'urn:ogc:def:crs:EPSG::10306';
+
+    /**
+     * LKS-92 / Latvia TM
+     * Extent: Latvia - onshore and offshore.
+     * Replaced by LKS-2020 / Latvia TM (CRS code 10306). ETRS89 / TM Baltic (CRS code 25884) used for medium and small
+     * scale applications across the Baltic states.
+     */
+    public const EPSG_LKS_92_LATVIA_TM = 'urn:ogc:def:crs:EPSG::3059';
 
     /**
      * LKS94 / Lithuania TM
@@ -33234,6 +33303,30 @@ class Projected extends CoordinateReferenceSystem
     public const EPSG_RGRDC_2005_UTM_ZONE_35S = 'urn:ogc:def:crs:EPSG::4063';
 
     /**
+     * RGSH2020 / UTM zone 29N
+     * Extent: Algeria - west of 6°W (of Greenwich).
+     */
+    public const EPSG_RGSH2020_UTM_ZONE_29N = 'urn:ogc:def:crs:EPSG::22229';
+
+    /**
+     * RGSH2020 / UTM zone 30N
+     * Extent: Algeria - between 6°W and 0°W (of Greenwich), onshore and offshore.
+     */
+    public const EPSG_RGSH2020_UTM_ZONE_30N = 'urn:ogc:def:crs:EPSG::22230';
+
+    /**
+     * RGSH2020 / UTM zone 31N
+     * Extent: Algeria - between 0°E and 6°E (of Greenwich), onshore and offshore.
+     */
+    public const EPSG_RGSH2020_UTM_ZONE_31N = 'urn:ogc:def:crs:EPSG::22231';
+
+    /**
+     * RGSH2020 / UTM zone 32N
+     * Extent: Algeria - east of 6°E (of Greenwich), onshore and offshore.
+     */
+    public const EPSG_RGSH2020_UTM_ZONE_32N = 'urn:ogc:def:crs:EPSG::22232';
+
+    /**
      * RGSPM06 / UTM zone 21N
      * Extent: St Pierre and Miquelon - onshore and offshore.
      * Replaces Saint Pierre et Miquelon 1950 / UTM zone 21N (CRS code 2987).
@@ -40073,6 +40166,11 @@ class Projected extends CoordinateReferenceSystem
      * @deprecated use EPSG_NAD83_CSRS_V2_QUEBEC_LAMBERT instead
      */
     public const EPSG_NAD83_CSRS_QUEBEC_LAMBERT = 'urn:ogc:def:crs:EPSG::6622';
+
+    /**
+     * @deprecated use EPSG_LKS_92_LATVIA_TM instead
+     */
+    public const EPSG_LKS92_LATVIA_TM = 'urn:ogc:def:crs:EPSG::3059';
 
     protected Geographic2D|Geographic3D|null $baseCRS;
 

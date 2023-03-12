@@ -1787,6 +1787,18 @@ ETRS89 / UTM zone 36N + NN54 height
 
 Replaced by ETRS89 / UTM zone 36N + NN2000 height (compound CRS code 5976).
 
+ETRS89/DREF91/2016 + DHHN2016 height
+------------------------------------
+| Extent: Germany - onshore and offshore.
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_ETRS89_DREF91_2016_PLUS_DHHN2016_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::10293')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_ETRS89_DREF91_2016_PLUS_DHHN2016_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10293')
+
+
 EWR2 Grid + ODN height
 ----------------------
 | Extent: United Kingdom (UK) - on or related to East West Rail (Phase 2) routes from Oxford to Bicester, Bletchley and Bedford, and from Claydon Junction to Aylesbury and Princes Risborough.

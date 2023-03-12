@@ -352,6 +352,19 @@ ETRS89
 
 Has been realized through ETRF89, ETRF90, ETRF91, ETRF92, ETRF93, ETRF94, ETRF96, ETRF97, ETRF2000, ETRF2005 and ETRF2014. This 'ensemble' covers any or all of these realizations without distinction.
 
+ETRS89/DREF91/2016
+------------------
+| Extent: Germany - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_ETRS89_DREF91_2016)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::10282')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_ETRS89_DREF91_2016)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10282')
+
+German national realization of ETRS89. Replaces ETRS89/DREF91 Realization 2002 from 2016-12-01.
+
 FEH2010
 -------
 | Extent: Fehmarnbelt area of Denmark and Germany.
@@ -999,17 +1012,31 @@ LGD2006
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4899')
 
 
-LKS92
------
+LKS-2020
+--------
 | Extent: Latvia - onshore and offshore.
 
 .. code-block:: php
 
-    Geocentric::fromSRID(Geocentric::EPSG_LKS92)
+    Geocentric::fromSRID(Geocentric::EPSG_LKS_2020)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::10303')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_LKS_2020)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10303')
+
+Replaces LKS-92 (CRS code 4948).
+
+LKS-92
+------
+| Extent: Latvia - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_LKS_92)
     Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4948')
-    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_LKS92)
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_LKS_92)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4948')
 
+Replaced by LKS-2020 (CRS code 10303).
 
 LKS94
 -----
@@ -1794,6 +1821,18 @@ RGRDC 2005
     Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4039')
     CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_RGRDC_2005)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4039')
+
+
+RGSH2020
+--------
+| Extent: Algeria - onshore and offshore.
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_RGSH2020)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::10297')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_RGSH2020)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10297')
 
 
 RGSPM06

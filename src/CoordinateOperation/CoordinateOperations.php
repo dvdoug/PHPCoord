@@ -3412,11 +3412,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9807',
             'extent' => ['4035'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::5660' => [
-            'name' => 'Nord Sahara 1959 to WGS 84 (9)',
-            'method' => 'urn:ogc:def:method:EPSG::9606',
-            'extent' => ['1026'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::5661' => [
             'name' => 'ED50 to ETRS89 (14)',
             'method' => 'urn:ogc:def:method:EPSG::9615',
@@ -6707,8 +6702,58 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::1053',
             'extent' => ['1298'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::7940' => [
-            'name' => 'ITRF2000 to ETRF2000 (1)',
+        'urn:ogc:def:coordinateOperation:EPSG::7941' => [
+            'name' => 'ITRF2000 to ETRF2000 (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1053',
+            'extent' => ['1298'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::7942' => [
+            'name' => 'ITRF89 to ETRF2000 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1053',
+            'extent' => ['1298'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::7943' => [
+            'name' => 'ITRF90 to ETRF2000 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1053',
+            'extent' => ['1298'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::7944' => [
+            'name' => 'ITRF91 to ETRF2000 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1053',
+            'extent' => ['1298'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::7945' => [
+            'name' => 'ITRF92 to ETRF2000 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1053',
+            'extent' => ['1298'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::7946' => [
+            'name' => 'ITRF93 to ETRF2000 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1053',
+            'extent' => ['1298'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::7947' => [
+            'name' => 'ITRF94 to ETRF2000 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1053',
+            'extent' => ['1298'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::7948' => [
+            'name' => 'ITRF96 to ETRF2000 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1053',
+            'extent' => ['1298'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::7949' => [
+            'name' => 'ITRF97 to ETRF2000 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1053',
+            'extent' => ['1298'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::7950' => [
+            'name' => 'ITRF2005 to ETRF2000 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1053',
+            'extent' => ['1298'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::7951' => [
+            'name' => 'ITRF2008 to ETRF2000 (1)',
             'method' => 'urn:ogc:def:method:EPSG::1053',
             'extent' => ['1298'],
         ],
@@ -7252,11 +7297,6 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9607',
             'extent' => ['1211'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::8366' => [
-            'name' => 'ITRF2014 to ETRF2014 (1)',
-            'method' => 'urn:ogc:def:method:EPSG::1053',
-            'extent' => ['1298'],
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::8367' => [
             'name' => 'S-JTSK [JTSK03] to ETRS89 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9607',
@@ -7296,6 +7336,11 @@ class CoordinateOperations
             'name' => 'WEIPA94',
             'method' => 'urn:ogc:def:method:EPSG::9807',
             'extent' => ['4491'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8405' => [
+            'name' => 'ITRF2014 to ETRF2000 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1053',
+            'extent' => ['1298'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::8432' => [
             'name' => 'Macau Grid',
@@ -7682,6 +7727,66 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::1075',
             'extent' => ['3634'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::8869' => [
+            'name' => 'ITRF2008 to ETRF2014 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1053',
+            'extent' => ['1298'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8870' => [
+            'name' => 'ITRF2005 to ETRF2014 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1053',
+            'extent' => ['1298'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8871' => [
+            'name' => 'ITRF2000 to ETRF2014 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1053',
+            'extent' => ['1298'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8872' => [
+            'name' => 'ITRF97 to ETRF2014 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1053',
+            'extent' => ['1298'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8873' => [
+            'name' => 'ITRF96 to ETRF2014 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1053',
+            'extent' => ['1298'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8874' => [
+            'name' => 'ITRF94 to ETRF2014 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1053',
+            'extent' => ['1298'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8875' => [
+            'name' => 'ITRF93 to ETRF2014 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1053',
+            'extent' => ['1298'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8876' => [
+            'name' => 'ITRF92 to ETRF2014 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1053',
+            'extent' => ['1298'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8877' => [
+            'name' => 'ITRF91 to ETRF2014 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1053',
+            'extent' => ['1298'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8878' => [
+            'name' => 'ITRF90 to ETRF2014 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1053',
+            'extent' => ['1298'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8879' => [
+            'name' => 'ITRF89 to ETRF2014 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1053',
+            'extent' => ['1298'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::8880' => [
+            'name' => 'ITRF2014 to ETRF2014 (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1053',
+            'extent' => ['1298'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::8882' => [
             'name' => 'Camacupa 2015 to WGS 84 (11)',
             'method' => 'urn:ogc:def:method:EPSG::9607',
@@ -7698,7 +7803,7 @@ class CoordinateOperations
             'extent' => ['1056'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::8891' => [
-            'name' => 'LKS92 to ETRS89 (1)',
+            'name' => 'LKS-92 to ETRS89 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent' => ['1139'],
         ],
@@ -9827,6 +9932,11 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::1118',
             'extent' => ['3307'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::10264' => [
+            'name' => 'RGSH2020 to WGS 84 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::9603',
+            'extent' => ['1026'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::10274' => [
             'name' => 'SMITB20-TM',
             'method' => 'urn:ogc:def:method:EPSG::9807',
@@ -9836,6 +9946,16 @@ class CoordinateOperations
             'name' => 'RBEPP12-LCC',
             'method' => 'urn:ogc:def:method:EPSG::9802',
             'extent' => ['4689'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10292' => [
+            'name' => 'ETRS89/DREF91/2016 to ETRF2000 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1033',
+            'extent' => ['1103'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10296' => [
+            'name' => 'Nord Sahara 1959 to WGS 84 (11)',
+            'method' => 'urn:ogc:def:method:EPSG::9606',
+            'extent' => ['1026'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::10301' => [
             'name' => 'Arkansas CS27 North',
@@ -18318,41 +18438,61 @@ class CoordinateOperations
             'extent' => ['2988'],
         ],
         'urn:ogc:def:coordinateOperation:EPSG::32768' => [
-            'name' => 'ETRS89 to ETRF2014 (geocen)',
-            'method' => 'urn:ogc:def:method:EPSG::32768',
-            'extent' => ['1298'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::32769' => [
-            'name' => 'ETRS89 to ETRF2014 (geog2D to geocen)',
-            'method' => 'urn:ogc:def:method:EPSG::9602',
-            'extent' => ['1298'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::32770' => [
-            'name' => 'ETRS89 to ETRF2014 (geog3D to geocen)',
-            'method' => 'urn:ogc:def:method:EPSG::9602',
-            'extent' => ['1298'],
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::32771' => [
             'name' => 'WGS 84 to WGS 84 (G2139) (geocen)',
             'method' => 'urn:ogc:def:method:EPSG::32768',
             'extent' => ['1262'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::32772' => [
+        'urn:ogc:def:coordinateOperation:EPSG::32769' => [
+            'name' => 'WGS 84 to WGS 84 (G2139) (geog2D)',
+            'method' => 'urn:ogc:def:method:EPSG::32768',
+            'extent' => ['1262'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::32770' => [
+            'name' => 'WGS 84 to WGS 84 (G2139) (geog3D)',
+            'method' => 'urn:ogc:def:method:EPSG::32768',
+            'extent' => ['1262'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::32771' => [
             'name' => 'WGS 84 to WGS 84 (G2139) (geog2D to geocen)',
             'method' => 'urn:ogc:def:method:EPSG::9602',
             'extent' => ['1262'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::32773' => [
+        'urn:ogc:def:coordinateOperation:EPSG::32772' => [
             'name' => 'WGS 84 to WGS 84 (G2139) (geog3D to geocen)',
             'method' => 'urn:ogc:def:method:EPSG::9602',
             'extent' => ['1262'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::32773' => [
+            'name' => 'ETRS89 to ETRF2000 (geocen)',
+            'method' => 'urn:ogc:def:method:EPSG::32768',
+            'extent' => ['1298'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::32774' => [
+            'name' => 'ETRS89 to ETRF2000 (geog2D)',
+            'method' => 'urn:ogc:def:method:EPSG::32768',
+            'extent' => ['1298'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::32775' => [
+            'name' => 'ETRS89 to ETRF2000 (geog3D)',
+            'method' => 'urn:ogc:def:method:EPSG::32768',
+            'extent' => ['1298'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::32776' => [
+            'name' => 'ETRS89 to ETRF2000 (geog2D to geocen)',
+            'method' => 'urn:ogc:def:method:EPSG::9602',
+            'extent' => ['1298'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::32777' => [
+            'name' => 'ETRS89 to ETRF2000 (geog3D to geocen)',
+            'method' => 'urn:ogc:def:method:EPSG::9602',
+            'extent' => ['1298'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::32778' => [
             'name' => 'ETRS89 to WGS 84 (geocen)',
             'method' => 'urn:ogc:def:method:EPSG::32768',
             'extent' => ['1262'],
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::32775' => [
+        'urn:ogc:def:coordinateOperation:EPSG::32779' => [
             'name' => 'ETRS89 to WGS 84 (geog3D)',
             'method' => 'urn:ogc:def:method:EPSG::32768',
             'extent' => ['1262'],

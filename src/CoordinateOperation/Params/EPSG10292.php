@@ -1,0 +1,18 @@
+<?php
+/**
+ * PHPCoord.
+ *
+ * @author Doug Wright
+ */
+declare(strict_types=1);
+use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
+
+/** @internal */ return [
+  'xAxisTranslation' => UnitOfMeasureFactory::makeUnit(0.0, 'urn:ogc:def:uom:EPSG::9001'),
+  'yAxisTranslation' => UnitOfMeasureFactory::makeUnit(0.0, 'urn:ogc:def:uom:EPSG::9001'),
+  'zAxisTranslation' => UnitOfMeasureFactory::makeUnit(0.0, 'urn:ogc:def:uom:EPSG::9001'),
+  'xAxisRotation' => UnitOfMeasureFactory::makeUnit(0.658, 'urn:ogc:def:uom:EPSG::1031'),
+  'yAxisRotation' => UnitOfMeasureFactory::makeUnit(-0.208, 'urn:ogc:def:uom:EPSG::1031'),
+  'zAxisRotation' => UnitOfMeasureFactory::makeUnit(0.755, 'urn:ogc:def:uom:EPSG::1031'),
+  'scaleDifference' => UnitOfMeasureFactory::makeUnit(0.0, 'urn:ogc:def:uom:EPSG::1028'),
+];

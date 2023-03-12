@@ -1131,7 +1131,7 @@ trait VerticalSRIDData
             'name' => 'DHHN2016 height',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
             'datum' => 'urn:ogc:def:datum:EPSG::1170',
-            'extent' => ['3339'],
+            'extent' => ['1103'],
         ],
         'urn:ogc:def:crs:EPSG::7839' => [
             'name' => 'NZVD2016 height',
@@ -1534,6 +1534,12 @@ trait VerticalSRIDData
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6498',
             'datum' => 'urn:ogc:def:datum:EPSG::1331',
             'extent' => ['4668'],
+        ],
+        'urn:ogc:def:crs:EPSG::10190' => [
+            'name' => 'NGA 2022 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1354',
+            'extent' => ['3213'],
         ],
         'urn:ogc:def:crs:EPSG::20000' => [
             'name' => 'SVD2006 height',

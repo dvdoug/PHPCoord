@@ -307,7 +307,6 @@
 16297	3-degree Gauss-Kruger zone 37		Transverse Mercator	World - N hemisphere - 3-degree CM 111°E	With zone prefix in easting
 16298	3-degree Gauss-Kruger zone 38		Transverse Mercator	World - N hemisphere - 3-degree CM 114°E	With zone prefix in easting
 16299	3-degree Gauss-Kruger zone 39		Transverse Mercator	World - N hemisphere - 3-degree CM 117°E	With zone prefix in easting
-16302	Gauss-Kruger CM 9E	6-degree Gauss-Kruger CM 9E	Transverse Mercator	World - N hemisphere - 6°E to 12°E	Without zone prefix in easting
 16304	Gauss-Kruger CM 21E	6-degree Gauss-Kruger CM 21E	Transverse Mercator	World - N hemisphere - 18°E to 24°E	Without zone prefix in easting
 16305	Gauss-Kruger CM 27E	6-degree Gauss-Kruger CM 27E	Transverse Mercator	World - N hemisphere - 24°E to 30°E	Without zone prefix in easting
 16306	Gauss-Kruger CM 33E	6-degree Gauss-Kruger CM 33E	Transverse Mercator	World - N hemisphere - 30°E to 36°E	Without zone prefix in easting

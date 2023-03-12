@@ -482,6 +482,33 @@ class AutoConversionTest extends TestCase
         self::assertEqualsWithDelta(9.274852923, $to->getLongitude()->asDegrees()->getValue(), 0.0000001);
     }
 
+    public function testRDNAPToITRF2014(): void
+    {
+        if (!class_exists(GTXETRS89NAPProvider::class)) {
+            self::markTestSkipped('Requires phpcoord/datapack-europe');
+        }
+
+        $from = CompoundPoint::create(
+            Compound::fromSRID(Compound::EPSG_AMERSFOORT_RD_NEW_PLUS_NAP_HEIGHT),
+            ProjectedPoint::createFromEastingNorthing(
+                Projected::fromSRID(Projected::EPSG_AMERSFOORT_RD_NEW),
+                new Metre(128410.0957),
+                new Metre(445806.4960),
+            ),
+            VerticalPoint::create(
+                Vertical::fromSRID(Vertical::EPSG_NAP_HEIGHT),
+                new Metre(-0.4754)
+            ),
+            new DateTime('2023-01-01'),
+        );
+        $toCRS = Geographic3D::fromSRID(Geographic3D::EPSG_ITRF2014);
+        $to = $from->convert($toCRS);
+
+        self::assertEqualsWithDelta(52.000005512, $to->getLatitude()->asDegrees()->getValue(), 0.000000001);
+        self::assertEqualsWithDelta(5.000008256, $to->getLongitude()->asDegrees()->getValue(), 0.000000001);
+        self::assertEqualsWithDelta(43.0197, $to->getHeight()->asMetres()->getValue(), 0.0001);
+    }
+
     /**
      * @group integration
      * @dataProvider EPSGConcatenatedOperations

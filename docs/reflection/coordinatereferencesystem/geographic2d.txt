@@ -1707,6 +1707,21 @@ ETRS89
 
 Has been realized through ETRF89, ETRF90, ETRF91, ETRF92, ETRF93, ETRF94, ETRF96, ETRF97, ETRF2000, ETRF2005 and ETRF2014. This 'ensemble' covers any or all of these realizations without distinction.
 
+ETRS89/DREF91/2016
+------------------
+| Extent: Germany - onshore and offshore.
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_DREF91_2016)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::10284')
+    Geographic::fromSRID(Geographic2D::EPSG_ETRS89_DREF91_2016)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10284')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ETRS89_DREF91_2016)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10284')
+
+German national realization of ETRS89. Replaces ETRS89/DREF91 Realization 2002 from 2016-12-01.
+
 EWR2-IRF
 --------
 | Extent: United Kingdom (UK) - on or related to East West Rail (Phase 2) routes from Oxford to Bicester, Bletchley and Bedford, and from Claydon Junction to Aylesbury and Princes Risborough.
@@ -3630,20 +3645,35 @@ LGD2006
 
 Replaces ELD79.
 
-LKS92
------
+LKS-2020
+--------
 | Extent: Latvia - onshore and offshore.
 
 .. code-block:: php
 
-    Geographic2D::fromSRID(Geographic2D::EPSG_LKS92)
+    Geographic2D::fromSRID(Geographic2D::EPSG_LKS_2020)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::10305')
+    Geographic::fromSRID(Geographic2D::EPSG_LKS_2020)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10305')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_LKS_2020)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10305')
+
+Replaces LKS-92 (CRS code 4661).
+
+LKS-92
+------
+| Extent: Latvia - onshore and offshore.
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_LKS_92)
     Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::4661')
-    Geographic::fromSRID(Geographic2D::EPSG_LKS92)
+    Geographic::fromSRID(Geographic2D::EPSG_LKS_92)
     Geographic::fromSRID('urn:ogc:def:crs:EPSG::4661')
-    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_LKS92)
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_LKS_92)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4661')
 
-This name is also used for a projected CRS (see projCRS code 3059).
+Replaced by LKS-2020 (CRS code 10305).
 
 LKS94
 -----
@@ -6221,6 +6251,20 @@ RGRDC 2005
     Geographic::fromSRID('urn:ogc:def:crs:EPSG::4046')
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_RGRDC_2005)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4046')
+
+
+RGSH2020
+--------
+| Extent: Algeria - onshore and offshore.
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_RGSH2020)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::10299')
+    Geographic::fromSRID(Geographic2D::EPSG_RGSH2020)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10299')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_RGSH2020)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10299')
 
 
 RGSPM06

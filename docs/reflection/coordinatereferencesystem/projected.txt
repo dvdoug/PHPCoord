@@ -6800,6 +6800,97 @@ ETRS89-extended / LCC Europe
 
 Use formally limited to ETRS89 area of continental Europe but extended for pan-European analysis at small scales. ETRS89 / UTM used for conformal mapping at scales larger than 1:500,000. ETRS89 / LAEA used for statistical applications at any scale.
 
+ETRS89/DREF91/2016 / 3-degree Gauss-Kruger zone 3
+-------------------------------------------------
+| Extent: Germany - Hamburg, including Neuwerk, Nigehörn, Scharhörn and surrounding maritime area.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_ETRS89_DREF91_2016_3_DEGREE_GAUSS_KRUGER_ZONE_3)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10285')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_DREF91_2016_3_DEGREE_GAUSS_KRUGER_ZONE_3)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10285')
+
+Replaces CRS code 8395 from 2016-12-01.
+
+ETRS89/DREF91/2016 / UTM zone 31N (N-zE)
+----------------------------------------
+| Extent: Germany - onshore and offshore west of 6°E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_ETRS89_DREF91_2016_UTM_ZONE_31N_N_ZE)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10286')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_DREF91_2016_UTM_ZONE_31N_N_ZE)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10286')
+
+Replaces CRS code 5651 from 2016-12-01. See ETRS89/DREF91/2016 / UTM zone 31N (zE-N) (code 10287) for similar CRS but with coordinate order reversed to easting before northing.
+
+ETRS89/DREF91/2016 / UTM zone 31N (zE-N)
+----------------------------------------
+| Extent: Germany - onshore and offshore west of 6°E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_ETRS89_DREF91_2016_UTM_ZONE_31N_ZE_N)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10287')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_DREF91_2016_UTM_ZONE_31N_ZE_N)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10287')
+
+Replaces CRS code 5649 from 2016-12-01. See ETRS89/DREF91/2016 / UTM zone 31N (N-zE) (code 10286) for similar CRS but with coordinate order reversed to northing before easting.
+
+ETRS89/DREF91/2016 / UTM zone 32N (N-zE)
+----------------------------------------
+| Extent: Germany - onshore and offshore between 6°E and 12°E, including Mecklenburg-Vorpommern west of 12°E and Schleswig-Holstein.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_ETRS89_DREF91_2016_UTM_ZONE_32N_N_ZE)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10288')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_DREF91_2016_UTM_ZONE_32N_N_ZE)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10288')
+
+Replaces CRS code 5652 from 2016-12-01. See ETRS89/DREF91/2016 / UTM zone 32N (zE-N) (code 10289) for similar CRS but with coordinate order reversed to easting before northing.
+
+ETRS89/DREF91/2016 / UTM zone 32N (zE-N)
+----------------------------------------
+| Extent: Germany - onshore and offshore between 6°E and 12°E, including Mecklenburg-Vorpommern west of 12°E and Schleswig-Holstein.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_ETRS89_DREF91_2016_UTM_ZONE_32N_ZE_N)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10289')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_DREF91_2016_UTM_ZONE_32N_ZE_N)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10289')
+
+Replaces CRS code 4647 from 2016-12-01. See ETRS89/DREF91/2016 / UTM zone 32N (N-zE) (code 10288) for similar CRS but with coordinate order reversed to northing before easting.
+
+ETRS89/DREF91/2016 / UTM zone 33N (N-zE)
+----------------------------------------
+| Extent: Germany - onshore and offshore east of 12°E, including Brandenburg (all state, including that part west of 12°E) and Mecklenburg-Vorpommern east of 12°E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_ETRS89_DREF91_2016_UTM_ZONE_33N_N_ZE)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10290')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_DREF91_2016_UTM_ZONE_33N_N_ZE)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10290')
+
+Replaces CRS code 5653 from 2016-12-01. See ETRS89/DREF91/2016 / UTM zone 33N (zE-N) (code 10291) for similar CRS but with coordinate order reversed to easting before northing.
+
+ETRS89/DREF91/2016 / UTM zone 33N (zE-N)
+----------------------------------------
+| Extent: Germany - onshore and offshore east of 12°E, including Brandenburg (all state, including that part west of 12°E) and Mecklenburg-Vorpommern east of 12°E.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_ETRS89_DREF91_2016_UTM_ZONE_33N_ZE_N)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10291')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_DREF91_2016_UTM_ZONE_33N_ZE_N)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10291')
+
+Replaces CRS code 5650 from 2016-12-01. See ETRS89/DREF91/2016 / UTM zone 33N (N-zE) (code 10290) for similar CRS but with coordinate order reversed to northing before easting.
+
 EWR2 Grid
 ---------
 | Extent: United Kingdom (UK) - on or related to East West Rail (Phase 2) routes from Oxford to Bicester, Bletchley and Bedford, and from Claydon Junction to Aylesbury and Princes Risborough.
@@ -14049,18 +14140,31 @@ LGD2006 / UTM zone 35N
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3203')
 
 
-LKS92 / Latvia TM
------------------
+LKS-2020 / Latvia TM
+--------------------
 | Extent: Latvia - onshore and offshore.
 
 .. code-block:: php
 
-    Projected::fromSRID(Projected::EPSG_LKS92_LATVIA_TM)
+    Projected::fromSRID(Projected::EPSG_LKS_2020_LATVIA_TM)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10306')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_LKS_2020_LATVIA_TM)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10306')
+
+Replaces LKS-92 / Latvia TM (CRS code 3059).
+
+LKS-92 / Latvia TM
+------------------
+| Extent: Latvia - onshore and offshore.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_LKS_92_LATVIA_TM)
     Projected::fromSRID('urn:ogc:def:crs:EPSG::3059')
-    CoordinateReferenceSystem::fromSRID(Projected::EPSG_LKS92_LATVIA_TM)
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_LKS_92_LATVIA_TM)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3059')
 
-LKS92 / TM Baltic (CRS code 25884) used for medium and small scale applications.
+Replaced by LKS-2020 / Latvia TM (CRS code 10306). ETRS89 / TM Baltic (CRS code 25884) used for medium and small scale applications across the Baltic states.
 
 LKS94 / Lithuania TM
 --------------------
@@ -53380,6 +53484,54 @@ RGRDC 2005 / UTM zone 35S
     Projected::fromSRID('urn:ogc:def:crs:EPSG::4063')
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_RGRDC_2005_UTM_ZONE_35S)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4063')
+
+
+RGSH2020 / UTM zone 29N
+-----------------------
+| Extent: Algeria - west of 6°W (of Greenwich).
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_RGSH2020_UTM_ZONE_29N)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22229')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_RGSH2020_UTM_ZONE_29N)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22229')
+
+
+RGSH2020 / UTM zone 30N
+-----------------------
+| Extent: Algeria - between 6°W and 0°W (of Greenwich), onshore and offshore.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_RGSH2020_UTM_ZONE_30N)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22230')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_RGSH2020_UTM_ZONE_30N)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22230')
+
+
+RGSH2020 / UTM zone 31N
+-----------------------
+| Extent: Algeria - between 0°E and 6°E (of Greenwich), onshore and offshore.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_RGSH2020_UTM_ZONE_31N)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22231')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_RGSH2020_UTM_ZONE_31N)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22231')
+
+
+RGSH2020 / UTM zone 32N
+-----------------------
+| Extent: Algeria - east of 6°E (of Greenwich), onshore and offshore.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_RGSH2020_UTM_ZONE_32N)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22232')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_RGSH2020_UTM_ZONE_32N)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22232')
 
 
 RGSPM06 / UTM zone 21N

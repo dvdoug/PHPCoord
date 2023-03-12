@@ -347,18 +347,8 @@ class EPSGCodegenFromDataImport
         7814,
         7893,
         7898,
-        7941,
-        7942,
-        7943,
-        7944,
-        7945,
-        7946,
-        7947,
-        7948,
-        7949,
-        7950,
-        7951,
-        8405,
+        7940,
+        8366,
         8695,
         8696,
         8822,
@@ -372,18 +362,6 @@ class EPSGCodegenFromDataImport
         8850,
         8852,
         8853,
-        8869,
-        8870,
-        8871,
-        8872,
-        8873,
-        8874,
-        8875,
-        8876,
-        8877,
-        8878,
-        8879,
-        8880,
         8883,
         8884,
         8887,
@@ -646,6 +624,8 @@ class EPSGCodegenFromDataImport
         9730, // GRD geo_igm_mar06.grd
         9925, // TXT GCG2016.txt
         9926, // TXT GCG2016.txt
+        10294, // TXT GCG2016.txt
+        10295, // TXT GCG2016.txt
         10152, // TXT VORF-UK08_ETRF_to_MSL.vrf
         10153, // TXT VORF-UK08_ETRF_to_CD.vrf
         10154, // TXT VORF-UK08_ETRF_to_MSL.vrf
@@ -998,6 +978,7 @@ class EPSGCodegenFromDataImport
                 Datum::EPSG_NIVELLEMENT_GENERAL_DU_LUXEMBOURG_1995 => ['Nivellement General du Luxembourg'],
                 Datum::EPSG_CANADIAN_GEODETIC_VERTICAL_DATUM_OF_2013_CGG2013A_EPOCH_2010 => ['Canadian Geodetic Vertical Datum of 2013 (CGG2013a)'],
                 Datum::EPSG_INDONESIAN_GEOID_2020_VERSION_1 => ['Indonesian Geoid 2020'],
+                Datum::EPSG_LATVIAN_GEODETIC_COORDINATE_SYSTEM_1992 => ['Latvia 1992'],
             ]
         );
         $this->codeGen->updateDocs(Datum::class, $data);
@@ -1294,6 +1275,7 @@ class EPSGCodegenFromDataImport
             $data,
             'public',
             [
+                Geocentric::EPSG_LKS_92 => ['LKS92'],
             ]
         );
         $this->codeGen->updateDocs(Geocentric::class, $data);
@@ -1341,6 +1323,7 @@ class EPSGCodegenFromDataImport
             'public',
             [
                 Geographic2D::EPSG_LUREF => ['Luxembourg 1930'],
+                Geographic2D::EPSG_LKS_92 => ['LKS92'],
             ]
         );
         $this->codeGen->updateDocs(Geographic2D::class, $data);
@@ -1387,6 +1370,7 @@ class EPSGCodegenFromDataImport
             $data,
             'public',
             [
+                Geographic3D::EPSG_LKS_92 => ['LKS92'],
             ]
         );
         $this->codeGen->updateDocs(Geographic3D::class, $data);
@@ -1438,6 +1422,7 @@ class EPSGCodegenFromDataImport
                 Projected::EPSG_NAD83_CSRS_V6_MTM_NS_2010_ZONE_5 => ['NAD83(CSRS)v6 / MTM Nova Scotia zone 5'],
                 Projected::EPSG_NAD83_CSRS_V2_QUEBEC_ALBERS => ['NAD83(CSRS) / Quebec Albers'],
                 Projected::EPSG_NAD83_CSRS_V2_QUEBEC_LAMBERT => ['NAD83(CSRS) / Quebec Lambert'],
+                Projected::EPSG_LKS_92_LATVIA_TM => ['LKS92 / Latvia TM'],
             ]
         );
         $this->codeGen->updateDocs(Projected::class, $data);
@@ -1637,7 +1622,7 @@ class EPSGCodegenFromDataImport
                 GROUP_CONCAT(DISTINCT e.extent_code) AS extent,
                 '' AS doc_help
             FROM epsg_coordoperation o
-            JOIN epsg_coordinatereferencesystem projcrs ON projcrs.projection_conv_code = o.coord_op_code AND projcrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND projcrs.deprecated = 0
+            JOIN epsg_coordinatereferencesystem projcrs ON projcrs.projection_conv_code = o.coord_op_code AND projcrs.coord_ref_sys_kind NOT IN ('engineering', 'derived')
             JOIN epsg_coordoperationmethod m ON m.coord_op_method_code = o.coord_op_method_code
             JOIN epsg_usage u ON u.object_table_name = 'epsg_coordoperation' AND u.object_code = o.coord_op_code
             JOIN epsg_extent e ON u.extent_code = e.extent_code
@@ -1707,7 +1692,7 @@ class EPSGCodegenFromDataImport
                 REPLACE(GROUP_CONCAT(DISTINCT e.extent_description), '.,', ', ') AS extent_description,
                 o.remarks AS doc_help
             FROM epsg_coordoperation o
-            JOIN epsg_coordinatereferencesystem projcrs ON projcrs.projection_conv_code = o.coord_op_code AND projcrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND projcrs.deprecated = 0
+            JOIN epsg_coordinatereferencesystem projcrs ON projcrs.projection_conv_code = o.coord_op_code AND projcrs.coord_ref_sys_kind NOT IN ('engineering', 'derived')
             JOIN epsg_coordoperationmethod m ON m.coord_op_method_code = o.coord_op_method_code
             JOIN epsg_usage u ON u.object_table_name = 'epsg_coordoperation' AND u.object_code = o.coord_op_code
             JOIN epsg_extent e ON u.extent_code = e.extent_code

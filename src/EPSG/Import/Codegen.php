@@ -335,6 +335,10 @@ class Codegen
             $source = CoordinateReferenceSystem::fromSRID($transformation['source_crs']);
             $target = CoordinateReferenceSystem::fromSRID($transformation['target_crs']);
             $operation = CoordinateOperations::getOperationData($transformation['operation']);
+
+            if ($operation['method'] === CoordinateOperationMethods::EPSG_ALIAS) {
+                continue;
+            }
             $method = CoordinateOperationMethods::getMethodData($operation['method']);
 
             $docs[$source::class][$source->getSRID()][$target->getSRID()][] = [$transformation['operation'], false];
@@ -366,12 +370,10 @@ class Codegen
                     $opTable = '.. csv-table::' . "\n";
                     $opTable .= '    :header: "EPSG", "PHPCoord"' . "\n";
                     $opTable .= '    :widths: 40, 60' . "\n\n";
+
                     foreach ($operations as $operation) {
                         [$operationSrid, $reverse] = $operation;
                         $operation = CoordinateOperations::getOperationData($operationSrid);
-                        if ($operation['method'] == CoordinateOperationMethods::EPSG_ALIAS) {
-                            continue;
-                        }
                         $methodData = CoordinateOperationMethods::getMethodData($operation['method']);
                         $methodName = CoordinateOperationMethods::getFunctionName($operation['method']);
                         $params = CoordinateOperations::getParamData($operationSrid);

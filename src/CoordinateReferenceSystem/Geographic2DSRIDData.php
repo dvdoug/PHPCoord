@@ -1698,7 +1698,7 @@ trait Geographic2DSRIDData
             'extent' => ['2869'],
         ],
         'urn:ogc:def:crs:EPSG::4661' => [
-            'name' => 'LKS92',
+            'name' => 'LKS-92',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
             'base_crs' => 'urn:ogc:def:crs:EPSG::4949',
             'datum' => 'urn:ogc:def:datum:EPSG::6661',
@@ -3915,6 +3915,27 @@ trait Geographic2DSRIDData
             'base_crs' => null,
             'datum' => 'urn:ogc:def:datum:EPSG::1352',
             'extent' => ['4689'],
+        ],
+        'urn:ogc:def:crs:EPSG::10284' => [
+            'name' => 'ETRS89/DREF91/2016',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
+            'base_crs' => 'urn:ogc:def:crs:EPSG::10283',
+            'datum' => 'urn:ogc:def:datum:EPSG::1353',
+            'extent' => ['1103'],
+        ],
+        'urn:ogc:def:crs:EPSG::10299' => [
+            'name' => 'RGSH2020',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
+            'base_crs' => 'urn:ogc:def:crs:EPSG::10298',
+            'datum' => 'urn:ogc:def:datum:EPSG::1355',
+            'extent' => ['1026'],
+        ],
+        'urn:ogc:def:crs:EPSG::10305' => [
+            'name' => 'LKS-2020',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
+            'base_crs' => 'urn:ogc:def:crs:EPSG::10304',
+            'datum' => 'urn:ogc:def:datum:EPSG::1356',
+            'extent' => ['1139'],
         ],
         'urn:ogc:def:crs:EPSG::20033' => [
             'name' => 'MWC18-IRF',

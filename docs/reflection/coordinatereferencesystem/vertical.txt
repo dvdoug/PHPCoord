@@ -585,7 +585,7 @@ Replaced by SNN56 and then SNN76 in East Germany and by DHHN85 in West Germany.
 
 DHHN2016 height
 ---------------
-| Extent: Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt, Schleswig-Holstein, Thuringen.
+| Extent: Germany - onshore and offshore.
 
 .. code-block:: php
 
@@ -594,7 +594,7 @@ DHHN2016 height
     CoordinateReferenceSystem::fromSRID(Vertical::EPSG_DHHN2016_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::7837')
 
-Replaces DHHN92 height (CRS code 5783).
+Replaces DHHN92 height (CRS code 5783) from 2016-12-01.
 
 DHHN85 height
 -------------
@@ -2346,6 +2346,19 @@ NG95 height
     CoordinateReferenceSystem::fromSRID(Vertical::EPSG_NG95_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5774')
 
+
+NGA 2022 height
+---------------
+| Extent: Algeria - onshore.
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_NGA_2022_HEIGHT)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::10190')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_NGA_2022_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10190')
+
+In practice realised by application of geoid model recommended by the Institut National de Cartographie et de Télédétection (INCT) to WGS 84 ellipsoidal heights.
 
 NGC 1948 height
 ---------------

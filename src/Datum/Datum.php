@@ -1259,11 +1259,9 @@ class Datum
     /**
      * Deutsches Haupthoehennetz 2016
      * Type: Vertical
-     * Extent: Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen,
-     * Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt,
-     * Schleswig-Holstein, Thuringen.
+     * Extent: Germany - onshore and offshore.
      * 2006-2012 levelling network adjusted to 72 points of the DHHN92. Datum at Normaal Amsterdams Peil (NAP) is mean
-     * high tide in 1684.
+     * high tide in 1684. Extension offshore defined by the GCG2016 quasi-geoid model (CT code 9925).
      * Uses Normal heights in the mean tidal system.
      */
     public const EPSG_DEUTSCHES_HAUPTHOEHENNETZ_2016 = 'urn:ogc:def:datum:EPSG::1170';
@@ -1413,6 +1411,16 @@ class Datum
      * November 2012 on the state system of spatial reference system.
      */
     public const EPSG_ETRF2000_POLAND = 'urn:ogc:def:datum:EPSG::1305';
+
+    /**
+     * ETRS89/DREF91 Realization 2016
+     * Type: Geodetic
+     * Extent: Germany - onshore and offshore.
+     * Realized by GNSS campaign 2008. Results were transformed from IGS05 epoch 2008.46 to ITRF2005 to ETRF2000,
+     * subsequently to ETRS89/DREF91 Realization 2002 (former German ETRS89 realization) by 3 rotation parameters.
+     * German national realization of ETRS89. Replaces ETRS89/DREF91 Realization 2002 from 2016-12-01.
+     */
+    public const EPSG_ETRS89_DREF91_REALIZATION_2016 = 'urn:ogc:def:datum:EPSG::1353';
 
     /**
      * EWR2 Intermediate Reference Frame
@@ -3697,15 +3705,6 @@ class Datum
     public const EPSG_LAO_NATIONAL_DATUM_1997 = 'urn:ogc:def:datum:EPSG::6678';
 
     /**
-     * Latvia 1992
-     * Type: Geodetic
-     * Extent: Latvia - onshore and offshore.
-     * Constrained to 4 ETRS89 points in Latvia from the EUREF Baltic 1992 campaign.
-     * Densification of ETRS89 during the 1992 Baltic campaign.
-     */
-    public const EPSG_LATVIA_1992 = 'urn:ogc:def:datum:EPSG::6661';
-
-    /**
      * Latvian Height System 2000
      * Type: Vertical
      * Extent: Latvia - onshore.
@@ -3714,6 +3713,26 @@ class Datum
      * Uses Normal heights.
      */
     public const EPSG_LATVIAN_HEIGHT_SYSTEM_2000 = 'urn:ogc:def:datum:EPSG::1162';
+
+    /**
+     * Latvian coordinate system 2020
+     * Type: Geodetic
+     * Extent: Latvia - onshore and offshore.
+     * Aligned with ETRF2014 at epoch 2020.28. Derived at 5 well-distributed base stations of the Latvian GNSS
+     * permanent network (LATREF) in IGb14, transformed to ETRF2014 using EUREF parameters (CT code 8366).
+     * LKS-2020 is the second national realization of ETRS89. Replaces LKS-92 (datum code 6661).
+     */
+    public const EPSG_LATVIAN_COORDINATE_SYSTEM_2020 = 'urn:ogc:def:datum:EPSG::1356';
+
+    /**
+     * Latvian geodetic coordinate system 1992
+     * Type: Geodetic
+     * Extent: Latvia - onshore and offshore.
+     * Constrained to 4 ETRS89 points in Latvia from the EUREF Baltic 1992 campaign.
+     * Densification of ETRS89 during the 1992 Baltic campaign. Replaced by Latvian coordinate system 2020 (datum code
+     * 1356).
+     */
+    public const EPSG_LATVIAN_GEODETIC_COORDINATE_SYSTEM_1992 = 'urn:ogc:def:datum:EPSG::6661';
 
     /**
      * Le Pouce 1934
@@ -4914,6 +4933,15 @@ class Datum
      * The collection of heterogeneous levelling networks throughout the Society Islands of French Polynesia.
      */
     public const EPSG_NIVELLEMENT_GENERAL_DE_POLYNESIE_FRANCAISE = 'urn:ogc:def:datum:EPSG::5195';
+
+    /**
+     * Nivellement General de l'Algerie 2022
+     * Type: Vertical
+     * Extent: Algeria - onshore.
+     * Fundamental benchmark attached to the tide gauge at basin of Algiers old port with defined height of 1.1168m.
+     * Orthometric heights.
+     */
+    public const EPSG_NIVELLEMENT_GENERAL_DE_LALGERIE_2022 = 'urn:ogc:def:datum:EPSG::1354';
 
     /**
      * Nivellement General de la Corse 1948
@@ -7060,6 +7088,16 @@ class Datum
     public const EPSG_SOLOMON_1968 = 'urn:ogc:def:datum:EPSG::6718';
 
     /**
+     * Sonatrach Reference Frame 2020
+     * Type: Geodetic
+     * Extent: Algeria - onshore and offshore.
+     * Aligned with IGS14 at epoch 2020.15.  RGSH2020 primary network of 22 stations throughout Algeria connected to 15
+     * IGS stations.
+     * Internal accuracy of network is 6-8mm.
+     */
+    public const EPSG_SONATRACH_REFERENCE_FRAME_2020 = 'urn:ogc:def:datum:EPSG::1355';
+
+    /**
      * South Africa Land Levelling Datum
      * Type: Vertical
      * Extent: South Africa - mainland onshore.
@@ -7954,6 +7992,11 @@ class Datum
      * @deprecated use EPSG_INDONESIAN_GEOID_2020_VERSION_1 instead
      */
     public const EPSG_INDONESIAN_GEOID_2020 = 'urn:ogc:def:datum:EPSG::1294';
+
+    /**
+     * @deprecated use EPSG_LATVIAN_GEODETIC_COORDINATE_SYSTEM_1992 instead
+     */
+    public const EPSG_LATVIA_1992 = 'urn:ogc:def:datum:EPSG::6661';
 
     protected static array $sridData = [
         'urn:ogc:def:datum:EPSG::1024' => [
@@ -10473,6 +10516,38 @@ class Datum
         ],
         'urn:ogc:def:datum:EPSG::1352' => [
             'name' => 'RBEPP12 Intermediate Reference Frame',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
+        'urn:ogc:def:datum:EPSG::1353' => [
+            'name' => 'ETRS89/DREF91 Realization 2016',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
+        'urn:ogc:def:datum:EPSG::1354' => [
+            'name' => 'Nivellement General de l\'Algerie 2022',
+            'type' => 'vertical',
+            'ellipsoid' => null,
+            'prime_meridian' => null,
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
+        'urn:ogc:def:datum:EPSG::1355' => [
+            'name' => 'Sonatrach Reference Frame 2020',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
+        'urn:ogc:def:datum:EPSG::1356' => [
+            'name' => 'Latvian coordinate system 2020',
             'type' => 'geodetic',
             'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
@@ -13622,7 +13697,7 @@ class Datum
             'frame_reference_epoch' => null,
         ],
         'urn:ogc:def:datum:EPSG::6661' => [
-            'name' => 'Latvia 1992',
+            'name' => 'Latvian geodetic coordinate system 1992',
             'type' => 'geodetic',
             'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',

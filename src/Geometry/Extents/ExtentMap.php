@@ -159,6 +159,9 @@ class ExtentMap
         1102 => [
             'name' => 'Georgia',
         ],
+        1103 => [
+            'name' => 'Germany',
+        ],
         1104 => [
             'name' => 'Ghana',
         ],
@@ -5435,6 +5438,9 @@ class ExtentMap
         ],
         3212 => [
             'name' => 'Albania - onshore',
+        ],
+        3213 => [
+            'name' => 'Algeria - onshore',
         ],
         3214 => [
             'name' => 'Anguilla - onshore',

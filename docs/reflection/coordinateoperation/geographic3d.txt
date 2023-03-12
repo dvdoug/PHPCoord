@@ -724,18 +724,18 @@ to Douglas height (Vertical)
     "
 
 
-to ETRF2014 (Geocentric)
+to ETRF2000 (Geocentric)
 ^^^^^^^^^^^^^^^^^^^^^^^^
 .. csv-table::
     :header: "EPSG", "PHPCoord"
     :widths: 40, 60
 
-    "| Name: ETRS89 to ETRF2014 (geog3D to geocen)
-    | Code: ``urn:ogc:def:coordinateOperation:EPSG::32770``
+    "| Name: ETRS89 to ETRF2000 (geog3D to geocen)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::32777``
     | Extent: Europe - ETRF by country",".. code-block:: php
 
         $point->geographicGeocentric(
-            to: Geocentric::fromSRID(Geocentric::EPSG_ETRF2014)
+            to: Geocentric::fromSRID(Geocentric::EPSG_ETRF2000)
         )
 
     "
@@ -1443,13 +1443,25 @@ to Stornoway height (Vertical)
 
     "
 
+ETRS89/DREF91/2016
+------------------
+``Geographic3D::fromSRID(Geographic3D::EPSG_ETRS89_DREF91_2016)``
 
-to WGS 84 (Geographic3D)
-^^^^^^^^^^^^^^^^^^^^^^^^
+to ETRS89/DREF91/2016 (Geographic2D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. csv-table::
     :header: "EPSG", "PHPCoord"
     :widths: 40, 60
 
+    "| Name: geographic3D to geographic2D
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::15593``
+    | Extent: World",".. code-block:: php
+
+        $point->threeDToTwoD(
+            to: Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_DREF91_2016)
+        )
+
+    "
 
 FEH2010
 -------
@@ -2651,12 +2663,12 @@ to LGD2006 (Geographic2D)
 
     "
 
-LKS92
------
-``Geographic3D::fromSRID(Geographic3D::EPSG_LKS92)``
+LKS-2020
+--------
+``Geographic3D::fromSRID(Geographic3D::EPSG_LKS_2020)``
 
-to LKS92 (Geographic2D)
-^^^^^^^^^^^^^^^^^^^^^^^
+to LKS-2020 (Geographic2D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. csv-table::
     :header: "EPSG", "PHPCoord"
     :widths: 40, 60
@@ -2666,7 +2678,27 @@ to LKS92 (Geographic2D)
     | Extent: World",".. code-block:: php
 
         $point->threeDToTwoD(
-            to: Geographic2D::fromSRID(Geographic2D::EPSG_LKS92)
+            to: Geographic2D::fromSRID(Geographic2D::EPSG_LKS_2020)
+        )
+
+    "
+
+LKS-92
+------
+``Geographic3D::fromSRID(Geographic3D::EPSG_LKS_92)``
+
+to LKS-92 (Geographic2D)
+^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: geographic3D to geographic2D
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::15593``
+    | Extent: World",".. code-block:: php
+
+        $point->threeDToTwoD(
+            to: Geographic2D::fromSRID(Geographic2D::EPSG_LKS_92)
         )
 
     "
@@ -5400,6 +5432,26 @@ to RGRDC 2005 (Geographic2D)
 
     "
 
+RGSH2020
+--------
+``Geographic3D::fromSRID(Geographic3D::EPSG_RGSH2020)``
+
+to RGSH2020 (Geographic2D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: geographic3D to geographic2D
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::15593``
+    | Extent: World",".. code-block:: php
+
+        $point->threeDToTwoD(
+            to: Geographic2D::fromSRID(Geographic2D::EPSG_RGSH2020)
+        )
+
+    "
+
 RGSPM06
 -------
 ``Geographic3D::fromSRID(Geographic3D::EPSG_RGSPM06)``
@@ -6539,14 +6591,6 @@ to WGS 72BE (Geographic2D)
 WGS 84
 ------
 ``Geographic3D::fromSRID(Geographic3D::EPSG_WGS_84)``
-
-to ETRS89 (Geographic3D)
-^^^^^^^^^^^^^^^^^^^^^^^^
-.. csv-table::
-    :header: "EPSG", "PHPCoord"
-    :widths: 40, 60
-
-
 
 to Tokyo + JSLD69 height (Compound)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -7787,7 +7831,7 @@ to WGS 84 (G2139) (Geocentric)
     :widths: 40, 60
 
     "| Name: WGS 84 to WGS 84 (G2139) (geog3D to geocen)
-    | Code: ``urn:ogc:def:coordinateOperation:EPSG::32773``
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::32772``
     | Extent: World",".. code-block:: php
 
         $point->geographicGeocentric(
