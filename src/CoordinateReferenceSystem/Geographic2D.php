@@ -3168,13 +3168,41 @@ class Geographic2D extends Geographic
     public const EPSG_RGM04_LON_LAT = 'urn:ogc:def:crs:EPSG::7039';
 
     /**
+     * RGNC15
+     * Extent: New Caledonia - onshore and offshore. Isle de Pins, Loyalty Islands, Huon Islands, Belep archipelago,
+     * Chesterfield Islands, and Walpole.
+     * Replaces RGNC91-93 (CRS code 4749). See CRS code 10312 for alternate system with axes reversed used by DITTT for
+     * GIS purposes.
+     */
+    public const EPSG_RGNC15 = 'urn:ogc:def:crs:EPSG::10310';
+
+    /**
+     * RGNC15 (lon-lat)
+     * Extent: New Caledonia - onshore and offshore. Isle de Pins, Loyalty Islands, Huon Islands, Belep archipelago,
+     * Chesterfield Islands, and Walpole.
+     * Replaces RGNC91-93 (lon-lat) (CRS code 10307). See CRS code 10310 for system with axes in sequence lat-lon to be
+     * used for air, land and sea navigation and safety of life purposes.
+     */
+    public const EPSG_RGNC15_LON_LAT = 'urn:ogc:def:crs:EPSG::10312';
+
+    /**
      * RGNC91-93
      * Extent: New Caledonia - onshore and offshore. Isle de Pins, Loyalty Islands, Huon Islands, Belep archipelago,
      * Chesterfield Islands, and Walpole.
-     * Replaces older local systems IGN56 Lifou, IGN72 Grande Terre, ST87 Ouvea, IGN53 Mare, ST84 Ile des Pins, ST71
-     * Belep and NEA74 Noumea (CRS codes 4633, 4641-44, 4662 and 4750).
+     * Replaces older systems IGN56 Lifou, IGN72 Grande Terre, ST87 Ouvea, IGN53 Mare, ST84 Ile des Pins, ST71 Belep
+     * and NEA74 Noumea. Replaced by RGNC15 (CRS 10310). See CRS code 10307 for alternate system with axes reversed
+     * used by DITTT for GIS purposes.
      */
     public const EPSG_RGNC91_93 = 'urn:ogc:def:crs:EPSG::4749';
+
+    /**
+     * RGNC91-93 (lon-lat)
+     * Extent: New Caledonia - onshore and offshore. Isle de Pins, Loyalty Islands, Huon Islands, Belep archipelago,
+     * Chesterfield Islands, and Walpole.
+     * See CRS code 4749 for system with axes in sequence lat-lon to be used for air, land and sea navigation and
+     * safety of life purposes. Replaced by RGNC15 (lon-lat) (CRS code 10312).
+     */
+    public const EPSG_RGNC91_93_LON_LAT = 'urn:ogc:def:crs:EPSG::10307';
 
     /**
      * RGPF

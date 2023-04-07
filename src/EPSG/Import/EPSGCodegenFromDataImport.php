@@ -82,6 +82,7 @@ class EPSGCodegenFromDataImport
         1070, // Point motion by grid (Canada NTv2_Vel)
         1113, // Vertical Offset by velocity grid (NRCan byn)
         1114, // Geographic3D Offset by velocity grid (NRCan byn)
+        1120, // Point motion (geocen) by grid (BGN)
 
         // only distributed as .dll, can't use
         1036, // Cartesian Grid Offsets from Form Function
@@ -546,6 +547,9 @@ class EPSGCodegenFromDataImport
         9980, // NTv2 SIRGAS2000-to-SIRGAS-CONSIR17P01.gsb
         10106, // BIN arcgp-2006-sk.bin
         10107, // BIN arcgp-2006-sk.bin
+        10319, // RANC15.tac inside Circe-NC allegedly, but I can't get it out
+        10320, // RANC15.tac inside Circe-NC allegedly, but I can't get it out
+        10322, // gr3dncl08.tac inside Circe-NC allegedly, but I can't get it out
 
         // Construction/engineering/scientific projects not of general use
         9363, // IGNF ARAMCO_AAA-KSAGRF_6.tac

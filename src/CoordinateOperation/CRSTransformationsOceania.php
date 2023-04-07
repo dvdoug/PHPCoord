@@ -16,6 +16,27 @@ class CRSTransformationsOceania
 {
     protected static array $sridData = [
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10321',
+            'name' => 'RGNC91-93 to RGNC15 (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::10307',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10312',
+            'accuracy' => 1.0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10313',
+            'name' => 'Lambert New Caledonia 2015',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::10310',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10314',
+            'accuracy' => 0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10324',
+            'name' => 'RGNC15 to WGS 84 (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::10310',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'accuracy' => 1.0,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7654',
             'name' => 'EGM2008 height to Kiunga height (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::3855',

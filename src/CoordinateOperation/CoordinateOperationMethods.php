@@ -1264,7 +1264,7 @@ class CoordinateOperationMethods
                 'EPSGCodeForInterpolationCRS' => [
                     'reverses' => false,
                 ],
-                'EPSGCodeForStandardCT' => [
+                'EPSGCodeForStandardTransformationT0' => [
                     'reverses' => false,
                 ],
             ],

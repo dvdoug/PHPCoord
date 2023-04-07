@@ -8657,6 +8657,20 @@ ITRF2000 at epoch 2004.0
 
 Replaces Combani 1950 (datum code 6632) except for cadastral purposes. (Cadastre 1997 (datum code 1037) used for cadastral purposes).
 
+Reseau Geodesique de Nouvelle Caledonie 2015
+--------------------------------------------
+| Type: Geodetic
+| Extent: New Caledonia - onshore and offshore. Isle de Pins, Loyalty Islands, Huon Islands, Belep archipelago, Chesterfield Islands, and Walpole.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_RESEAU_GEODESIQUE_DE_NOUVELLE_CALEDONIE_2015)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1357')
+
+Aligned with ITRF2008 at epoch 2015.0.
+
+Replaces RGNC91-93.
+
 Reseau Geodesique de Nouvelle Caledonie 91-93
 ---------------------------------------------
 | Type: Geodetic
@@ -8668,6 +8682,8 @@ Reseau Geodesique de Nouvelle Caledonie 91-93
     Datum::fromSRID('urn:ogc:def:datum:EPSG::6749')
 
 ITRF90 at epoch 1989.0.
+
+Replaced by RGNC15 (datum code 1357).
 
 Reseau Geodesique de Saint Pierre et Miquelon 2006
 --------------------------------------------------

@@ -3937,6 +3937,27 @@ trait Geographic2DSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1356',
             'extent' => ['1139'],
         ],
+        'urn:ogc:def:crs:EPSG::10307' => [
+            'name' => 'RGNC91-93 (lon-lat)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6424',
+            'base_crs' => 'urn:ogc:def:crs:EPSG::4749',
+            'datum' => 'urn:ogc:def:datum:EPSG::6749',
+            'extent' => ['1174'],
+        ],
+        'urn:ogc:def:crs:EPSG::10310' => [
+            'name' => 'RGNC15',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
+            'base_crs' => 'urn:ogc:def:crs:EPSG::10309',
+            'datum' => 'urn:ogc:def:datum:EPSG::1357',
+            'extent' => ['1174'],
+        ],
+        'urn:ogc:def:crs:EPSG::10312' => [
+            'name' => 'RGNC15 (lon-lat)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6424',
+            'base_crs' => 'urn:ogc:def:crs:EPSG::10310',
+            'datum' => 'urn:ogc:def:datum:EPSG::1357',
+            'extent' => ['1174'],
+        ],
         'urn:ogc:def:crs:EPSG::20033' => [
             'name' => 'MWC18-IRF',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',

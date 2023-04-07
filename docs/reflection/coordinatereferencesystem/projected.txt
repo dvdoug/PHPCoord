@@ -53202,6 +53202,58 @@ RGM04 / UTM zone 38S
 
 Replaces Combani 1950 / UTM zone 38S (CRS code 2980) except for cadastre which uses Cadastre 1997 / UTM zone 38S (CRS code 5879).
 
+RGNC15 / Lambert New Caledonia 2015
+-----------------------------------
+| Extent: New Caledonia - Belep, Grande Terre, Ile des Pins, Loyalty Islands (Lifou, Mare, Ouvea).
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_RGNC15_LAMBERT_NEW_CALEDONIA_2015)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10314')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_RGNC15_LAMBERT_NEW_CALEDONIA_2015)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10314')
+
+Replaces RGNC91-93 / Lambert New Caledonia (CRS code 3163).
+
+RGNC15 / UTM zone 57S
+---------------------
+| Extent: New Caledonia - west of 162°E onshore and offshore.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_RGNC15_UTM_ZONE_57S)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10315')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_RGNC15_UTM_ZONE_57S)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10315')
+
+Used for EEZ and uninhabited islands. For Grande-Terre, Isle de Pins, Belep and Loyalty Islands (Lifou, Mare, Ouvea) use RGNC15 / Lambert New Caledonia 2015 (CRS code 10314) rather than this CRS. Replaces RGNC91-93 / UTM zone 57S (CRS code 3169).
+
+RGNC15 / UTM zone 58S
+---------------------
+| Extent: New Caledonia - between 162°E and 168°E onshore and offshore.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_RGNC15_UTM_ZONE_58S)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10316')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_RGNC15_UTM_ZONE_58S)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10316')
+
+Used for EEZ and uninhabited islands. For Grande-Terre, Isle de Pins, Belep and Loyalty Islands (Lifou, Mare, Ouvea) use RGNC15 / Lambert New Caledonia 2015 (CRS code 10314) rather than this CRS. Replaces RGNC91-93 / UTM zone 58S (CRS code 3170).
+
+RGNC15 / UTM zone 59S
+---------------------
+| Extent: New Caledonia - east of 168°E onshore and offshore.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_RGNC15_UTM_ZONE_59S)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10317')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_RGNC15_UTM_ZONE_59S)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10317')
+
+Used for EEZ and uninhabited islands. For Grande-Terre, Isle de Pins, Belep and Loyalty Islands (Lifou, Mare, Ouvea) use RGNC15 / Lambert New Caledonia 2015 (CRS code 10314) rather than this CRS. Replaces RGNC91-93 / UTM zone 59S (CRS code 3171).
+
 RGNC91-93 / Lambert New Caledonia
 ---------------------------------
 | Extent: New Caledonia - Belep, Grande Terre, Ile des Pins, Loyalty Islands (Lifou, Mare, Ouvea).
@@ -53213,7 +53265,7 @@ RGNC91-93 / Lambert New Caledonia
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_RGNC91_93_LAMBERT_NEW_CALEDONIA)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3163')
 
-Replaces IGN72 Grande Terre / UTM zone 58S, IGN56 Lifou / UTM zone 58S, ST87 Ouvea / UTM zone 58S, IGN53 Mare / UTM zone 58S, ST84 Ile des Pins / UTM zone 58S, ST71 Belep / UTM zone 58S and NEA74 Noumea / UTM zone 58S (CRS codes 2981,2995-98,3060,3164)
+Replaces use of UTM with older 2D systems IGN72 Grande Terre, IGN56 Lifou, ST87 Ouvea, IGN53 Mare, ST84 Ile des Pins, ST71 Belep and NEA74 Noumea (CRS codes 2981, 2995-98, 3060, 3164). Replaced by RGNC15 / Lambert New Caledonia 2015 (CRS code 10314).
 
 RGNC91-93 / UTM zone 57S
 ------------------------
@@ -53226,7 +53278,7 @@ RGNC91-93 / UTM zone 57S
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_RGNC91_93_UTM_ZONE_57S)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3169')
 
-Used for EEZ mapping. For area of Grande-Terre, Isle de Pins, Belep and Loyalty Islands (Lifou, Mare, Ouvea), use RGNC91-93 / Lambert New Caledonia (CRS code 3163) rather than this system.
+Used for EEZ and uninhabited islands. For Grande-Terre, Isle de Pins, Belep and Loyalty Islands (Lifou, Mare, Ouvea) use RGNC91-93 / Lambert New Caledonia (CRS code 3163) rather than this CRS. Replaced by RGNC15 / UTM zone 57S (CRS code 10315).
 
 RGNC91-93 / UTM zone 58S
 ------------------------
@@ -53239,7 +53291,7 @@ RGNC91-93 / UTM zone 58S
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_RGNC91_93_UTM_ZONE_58S)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3170')
 
-Used for EEZ mapping. For area of Grande-Terre, Isle de Pins, Belep and Loyalty Islands (Lifou, Mare, Ouvea), use RGNC91-93 / Lambert New Caledonia (CRS code 3163) rather than this system.
+Used for EEZ and uninhabited islands. For Grande-Terre, Isle de Pins, Belep and Loyalty Islands (Lifou, Mare, Ouvea) use RGNC91-93 / Lambert New Caledonia (CRS code 3163) rather than this CRS. Replaced by RGNC15 / UTM zone 58S (CRS code 10316).
 
 RGNC91-93 / UTM zone 59S
 ------------------------
@@ -53252,7 +53304,7 @@ RGNC91-93 / UTM zone 59S
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_RGNC91_93_UTM_ZONE_59S)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3171')
 
-Used for EEZ mapping. For area of Grande-Terre, Isle de Pins, Belep and Loyalty Islands (Lifou, Mare, Ouvea), use RGNC91-93 / Lambert New Caledonia (CRS code 3163) rather than this system.
+Used for EEZ and uninhabited islands. For Grande-Terre, Isle de Pins, Belep and Loyalty Islands (Lifou, Mare, Ouvea) use RGNC91-93 / Lambert New Caledonia (CRS code 3163) rather than this CRS. Replaced by RGNC15 / UTM zone 59S (CRS code 10317).
 
 RGPF / UTM zone 5S
 ------------------

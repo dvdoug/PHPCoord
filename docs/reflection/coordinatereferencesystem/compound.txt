@@ -4575,6 +4575,18 @@ RGFG95 + NGG1977 height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9530')
 
 
+RGNC15 (lon-lat) + NGNC08 height
+--------------------------------
+| Extent: New Caledonia - Belep, Grande Terre, Ile des Pins, Loyalty Islands (Lifou, Mare, Ouvea).
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_RGNC15_LON_LAT_PLUS_NGNC08_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::10318')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_RGNC15_LON_LAT_PLUS_NGNC08_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10318')
+
+
 RGNC91-93 + NGNC08 height
 -------------------------
 | Extent: New Caledonia - Belep, Grande Terre, Ile des Pins, Loyalty Islands (Lifou, Mare, Ouvea).

@@ -2146,6 +2146,36 @@ RGM04 (lon-lat)
 
 See CRS code 4469 for system with horizontal axes in sequence lat-lon to be used for air, land and sea navigation and safety of life purposes.
 
+RGNC15
+------
+| Extent: New Caledonia - onshore and offshore. Isle de Pins, Loyalty Islands, Huon Islands, Belep archipelago, Chesterfield Islands, and Walpole.
+
+.. code-block:: php
+
+    Geographic3D::fromSRID(Geographic3D::EPSG_RGNC15)
+    Geographic3D::fromSRID('urn:ogc:def:crs:EPSG::10309')
+    Geographic::fromSRID(Geographic3D::EPSG_RGNC15)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10309')
+    CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_RGNC15)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10309')
+
+Replaces RGNC91-93 (CRS code 4907). See CRS code 10311 for alternate system with horizontal axes reversed used by DITTT for GIS purposes.
+
+RGNC15 (lon-lat)
+----------------
+| Extent: New Caledonia - onshore and offshore. Isle de Pins, Loyalty Islands, Huon Islands, Belep archipelago, Chesterfield Islands, and Walpole.
+
+.. code-block:: php
+
+    Geographic3D::fromSRID(Geographic3D::EPSG_RGNC15_LON_LAT)
+    Geographic3D::fromSRID('urn:ogc:def:crs:EPSG::10311')
+    Geographic::fromSRID(Geographic3D::EPSG_RGNC15_LON_LAT)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10311')
+    CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_RGNC15_LON_LAT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10311')
+
+Replaces RGNC91-93 (lon-lat) (CRS code 10300). See CRS code 10309 for system with horizontal axes in sequence lat-lon to be used for air, land and sea navigation and safety of life purposes.
+
 RGNC91-93
 ---------
 | Extent: New Caledonia - onshore and offshore. Isle de Pins, Loyalty Islands, Huon Islands, Belep archipelago, Chesterfield Islands, and Walpole.
@@ -2159,7 +2189,22 @@ RGNC91-93
     CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_RGNC91_93)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4907')
 
-Replaces older local 2D systems IGN56 Lifou, IGN72 Grande Terre, ST87 Ouvea, IGN53 Mare, ST84 Ile des Pins, ST71 Belep and NEA74 Noumea (CRS codes 4633, 4641-44, 4662 and 4750).
+Replaces older systems IGN56 Lifou, IGN72 Grande Terre, ST87 Ouvea, IGN53 Mare, ST84 Ile des Pins, ST71 Belep and NEA74 Noumea. Replaced by RGNC15 (CRS 10309). See CRS code 10300 for alternate system with axes reversed used by DITTT for GIS purposes.
+
+RGNC91-93 (lon-lat)
+-------------------
+| Extent: New Caledonia - onshore and offshore. Isle de Pins, Loyalty Islands, Huon Islands, Belep archipelago, Chesterfield Islands, and Walpole.
+
+.. code-block:: php
+
+    Geographic3D::fromSRID(Geographic3D::EPSG_RGNC91_93_LON_LAT)
+    Geographic3D::fromSRID('urn:ogc:def:crs:EPSG::10300')
+    Geographic::fromSRID(Geographic3D::EPSG_RGNC91_93_LON_LAT)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10300')
+    CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_RGNC91_93_LON_LAT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10300')
+
+See CRS code 4907 for system with horizontal axes in sequence lat-lon to be used for air, land and sea navigation and safety of life purposes. Replaced by RGNC15 (lon-lat) (CRS code 10311).
 
 RGPF
 ----

@@ -1113,11 +1113,19 @@ class Geocentric extends CoordinateReferenceSystem
     public const EPSG_RGM04 = 'urn:ogc:def:crs:EPSG::4468';
 
     /**
+     * RGNC15
+     * Extent: New Caledonia - onshore and offshore. Isle de Pins, Loyalty Islands, Huon Islands, Belep archipelago,
+     * Chesterfield Islands, and Walpole.
+     * Replaces RGNC91-93 (CRS code 4906).
+     */
+    public const EPSG_RGNC15 = 'urn:ogc:def:crs:EPSG::10308';
+
+    /**
      * RGNC91-93
      * Extent: New Caledonia - onshore and offshore. Isle de Pins, Loyalty Islands, Huon Islands, Belep archipelago,
      * Chesterfield Islands, and Walpole.
      * Replaces older local geographic 2D systems IGN56 Lifou, IGN72 Grande Terre, ST87 Ouvea, IGN53 Mare, ST84 Ile des
-     * Pins, ST71 Belep and NEA74 Noumea (CRS codes 4633, 4641-44, 4662 and 4750).
+     * Pins, ST71 Belep and NEA74 Noumea (CRS codes 4633, 4641-44, 4662 and 4750). Replaced by RGNC15 (CRS code 10308).
      */
     public const EPSG_RGNC91_93 = 'urn:ogc:def:crs:EPSG::4906';
 

@@ -10870,6 +10870,26 @@ to RGM04 (Geographic3D)
 
     "
 
+RGNC15
+------
+``Geocentric::fromSRID(Geocentric::EPSG_RGNC15)``
+
+to RGNC15 (Geographic3D)
+^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: geocentric to geographic3D
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::15592``
+    | Extent: World",".. code-block:: php
+
+        $point->geographicGeocentric(
+            to: Geographic3D::fromSRID(Geographic3D::EPSG_RGNC15)
+        )
+
+    "
+
 RGNC91-93
 ---------
 ``Geocentric::fromSRID(Geocentric::EPSG_RGNC91_93)``

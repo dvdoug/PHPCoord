@@ -5279,6 +5279,63 @@ to RGM04 (Geographic3D)
 
     "
 
+RGNC15
+------
+``Geographic3D::fromSRID(Geographic3D::EPSG_RGNC15)``
+
+to RGNC15 (Geographic2D)
+^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: geographic3D to geographic2D
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::15593``
+    | Extent: World",".. code-block:: php
+
+        $point->threeDToTwoD(
+            to: Geographic2D::fromSRID(Geographic2D::EPSG_RGNC15)
+        )
+
+    "
+
+
+to RGNC15 (lon-lat) (Geographic3D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: axis order change (geographic3D horizontal)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::15499``
+    | Extent: World",".. code-block:: php
+
+        $point->axisReversal(
+            to: Geographic3D::fromSRID(Geographic3D::EPSG_RGNC15_LON_LAT)
+        )
+
+    "
+
+RGNC15 (lon-lat)
+----------------
+``Geographic3D::fromSRID(Geographic3D::EPSG_RGNC15_LON_LAT)``
+
+to RGNC15 (Geographic3D)
+^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: axis order change (geographic3D horizontal)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::15499``
+    | Extent: World",".. code-block:: php
+
+        $point->axisReversal(
+            to: Geographic3D::fromSRID(Geographic3D::EPSG_RGNC15)
+        )
+
+    "
+
 RGNC91-93
 ---------
 ``Geographic3D::fromSRID(Geographic3D::EPSG_RGNC91_93)``
@@ -5318,6 +5375,23 @@ to RGNC91-93 (Geographic2D)
     "
 
 
+to RGNC91-93 (lon-lat) (Geographic3D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: axis order change (geographic3D horizontal)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::15499``
+    | Extent: World",".. code-block:: php
+
+        $point->axisReversal(
+            to: Geographic3D::fromSRID(Geographic3D::EPSG_RGNC91_93_LON_LAT)
+        )
+
+    "
+
+
 to RGNC91-93 + NGNC08 height (Compound)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. csv-table::
@@ -5331,6 +5405,26 @@ to RGNC91-93 + NGNC08 height (Compound)
         $point->geographic3DTo2DPlusGravityHeightFromGrid(
             to: Compound::fromSRID(Compound::EPSG_RGNC91_93_PLUS_NGNC08_HEIGHT),
             geoidHeightCorrectionModelFile: IGNFHeightRGNC9193NGNC08NewCaledoniaProvider->provideGrid()
+        )
+
+    "
+
+RGNC91-93 (lon-lat)
+-------------------
+``Geographic3D::fromSRID(Geographic3D::EPSG_RGNC91_93_LON_LAT)``
+
+to RGNC91-93 (Geographic3D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: axis order change (geographic3D horizontal)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::15499``
+    | Extent: World",".. code-block:: php
+
+        $point->axisReversal(
+            to: Geographic3D::fromSRID(Geographic3D::EPSG_RGNC91_93)
         )
 
     "

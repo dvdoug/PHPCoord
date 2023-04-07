@@ -6310,11 +6310,22 @@ class Datum
     public const EPSG_RESEAU_GEODESIQUE_DE_MAYOTTE_2004 = 'urn:ogc:def:datum:EPSG::1036';
 
     /**
+     * Reseau Geodesique de Nouvelle Caledonie 2015
+     * Type: Geodetic
+     * Extent: New Caledonia - onshore and offshore. Isle de Pins, Loyalty Islands, Huon Islands, Belep archipelago,
+     * Chesterfield Islands, and Walpole.
+     * Aligned with ITRF2008 at epoch 2015.0.
+     * Replaces RGNC91-93.
+     */
+    public const EPSG_RESEAU_GEODESIQUE_DE_NOUVELLE_CALEDONIE_2015 = 'urn:ogc:def:datum:EPSG::1357';
+
+    /**
      * Reseau Geodesique de Nouvelle Caledonie 91-93
      * Type: Geodetic
      * Extent: New Caledonia - onshore and offshore. Isle de Pins, Loyalty Islands, Huon Islands, Belep archipelago,
      * Chesterfield Islands, and Walpole.
      * ITRF90 at epoch 1989.0.
+     * Replaced by RGNC15 (datum code 1357).
      */
     public const EPSG_RESEAU_GEODESIQUE_DE_NOUVELLE_CALEDONIE_91_93 = 'urn:ogc:def:datum:EPSG::6749';
 
@@ -10548,6 +10559,14 @@ class Datum
         ],
         'urn:ogc:def:datum:EPSG::1356' => [
             'name' => 'Latvian coordinate system 2020',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
+        'urn:ogc:def:datum:EPSG::1357' => [
+            'name' => 'Reseau Geodesique de Nouvelle Caledonie 2015',
             'type' => 'geodetic',
             'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',

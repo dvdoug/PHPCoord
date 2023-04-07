@@ -2694,6 +2694,12 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_RGFG95_PLUS_NGG1977_HEIGHT = 'urn:ogc:def:crs:EPSG::9530';
 
     /**
+     * RGNC15 (lon-lat) + NGNC08 height
+     * Extent: New Caledonia - Belep, Grande Terre, Ile des Pins, Loyalty Islands (Lifou, Mare, Ouvea).
+     */
+    public const EPSG_RGNC15_LON_LAT_PLUS_NGNC08_HEIGHT = 'urn:ogc:def:crs:EPSG::10318';
+
+    /**
      * RGNC91-93 + NGNC08 height
      * Extent: New Caledonia - Belep, Grande Terre, Ile des Pins, Loyalty Islands (Lifou, Mare, Ouvea).
      */

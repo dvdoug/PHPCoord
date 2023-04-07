@@ -9967,6 +9967,21 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9802',
             'extent' => ['2170'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::10313' => [
+            'name' => 'Lambert New Caledonia 2015',
+            'method' => 'urn:ogc:def:method:EPSG::9802',
+            'extent' => ['3430'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10321' => [
+            'name' => 'RGNC91-93 to RGNC15 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::9603',
+            'extent' => ['3430'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10324' => [
+            'name' => 'RGNC15 to WGS 84 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::9603',
+            'extent' => ['1174'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::10331' => [
             'name' => 'SPCS83 Arkansas North zone (meters)',
             'method' => 'urn:ogc:def:method:EPSG::9802',

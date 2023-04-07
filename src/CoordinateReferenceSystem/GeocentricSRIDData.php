@@ -1199,6 +1199,12 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1356',
             'extent' => ['1139'],
         ],
+        'urn:ogc:def:crs:EPSG::10308' => [
+            'name' => 'RGNC15',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1357',
+            'extent' => ['1174'],
+        ],
         'urn:ogc:def:crs:EPSG::20039' => [
             'name' => 'SIRGAS-Chile 2021',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
