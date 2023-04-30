@@ -14450,6 +14450,20 @@ class CRSTransformationsNorthAmerica
             'accuracy' => 0.0,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10335',
+            'name' => 'ITRF2014 to NAD83(PA11) (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::7789',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::6320',
+            'accuracy' => 0.0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10337',
+            'name' => 'ITRF2014 to NAD83(MA11) (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::7789',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::6323',
+            'accuracy' => 0.0,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8265',
             'name' => 'ITRF2014 to NAD83(CSRS)v7 (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::7789',
@@ -15022,6 +15036,27 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8907',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8908',
             'accuracy' => 0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10334',
+            'name' => 'ITRF2020 to NAD83(2011) (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::9988',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::6317',
+            'accuracy' => 0.0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10336',
+            'name' => 'ITRF2020 to NAD83(PA11) (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::9988',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::6320',
+            'accuracy' => 0.0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10338',
+            'name' => 'ITRF2020 to NAD83(MA11) (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::9988',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::6323',
+            'accuracy' => 0.0,
         ],
     ];
 

@@ -9992,6 +9992,31 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9802',
             'extent' => ['2170'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::10334' => [
+            'name' => 'ITRF2020 to NAD83(2011) (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1056',
+            'extent' => ['1511'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10335' => [
+            'name' => 'ITRF2014 to NAD83(PA11) (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1056',
+            'extent' => ['4162'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10336' => [
+            'name' => 'ITRF2020 to NAD83(PA11) (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1056',
+            'extent' => ['4162'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10337' => [
+            'name' => 'ITRF2014 to NAD83(MA11) (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1056',
+            'extent' => ['4167'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10338' => [
+            'name' => 'ITRF2020 to NAD83(MA11) (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1056',
+            'extent' => ['4167'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::10401' => [
             'name' => 'California CS27 zone I',
             'method' => 'urn:ogc:def:method:EPSG::9802',

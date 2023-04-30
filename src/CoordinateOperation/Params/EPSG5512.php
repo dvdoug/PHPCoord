@@ -25,6 +25,6 @@ use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
   'C6' => UnitOfMeasureFactory::makeUnit(1.523735715E-12, 'urn:ogc:def:uom:EPSG::9203'),
   'C7' => UnitOfMeasureFactory::makeUnit(1.696780024E-18, 'urn:ogc:def:uom:EPSG::9203'),
   'C8' => UnitOfMeasureFactory::makeUnit(4.408314235E-18, 'urn:ogc:def:uom:EPSG::9203'),
-  'C9' => UnitOfMeasureFactory::makeUnit(-8.331083517999999E-24, 'urn:ogc:def:uom:EPSG::9203'),
+  'C9' => UnitOfMeasureFactory::makeUnit(-8.331083518E-24, 'urn:ogc:def:uom:EPSG::9203'),
   'C10' => UnitOfMeasureFactory::makeUnit(-3.689471323E-24, 'urn:ogc:def:uom:EPSG::9203'),
 ];
