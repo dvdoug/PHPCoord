@@ -1205,6 +1205,12 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1357',
             'extent' => ['1174'],
         ],
+        'urn:ogc:def:crs:EPSG::10326' => [
+            'name' => 'BH_ETRS89',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1358',
+            'extent' => ['1050'],
+        ],
         'urn:ogc:def:crs:EPSG::20039' => [
             'name' => 'SIRGAS-Chile 2021',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',

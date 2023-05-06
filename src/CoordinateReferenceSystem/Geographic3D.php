@@ -47,6 +47,12 @@ class Geographic3D extends Geographic
     public const EPSG_BGS2005 = 'urn:ogc:def:crs:EPSG::7797';
 
     /**
+     * BH_ETRS89
+     * Extent: Bosnia and Herzegovina.
+     */
+    public const EPSG_BH_ETRS89 = 'urn:ogc:def:crs:EPSG::10327';
+
+    /**
      * CGRS93
      * Extent: Cyprus - onshore.
      */

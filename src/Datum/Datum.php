@@ -366,6 +366,16 @@ class Datum
     public const EPSG_AZORES_ORIENTAL_ISLANDS_1995 = 'urn:ogc:def:datum:EPSG::6664';
 
     /**
+     * BH_ETRS89
+     * Type: Geodetic
+     * Extent: Bosnia and Herzegovina.
+     * Densification of ETRF2000 in Bosnia and Herzegovina at epoch 2011.307.
+     * ETRS89 in Bosnia and Herzegovina, realized through the coordinates of 17 stations of the GNSS active FBiHPOS
+     * network in conjunction with 17 stations of the Serbia SRPOS network.
+     */
+    public const EPSG_BH_ETRS89 = 'urn:ogc:def:datum:EPSG::1358';
+
+    /**
      * Baltic 1957
      * Type: Vertical
      * Extent: Czechia; Slovakia.
@@ -10567,6 +10577,14 @@ class Datum
         ],
         'urn:ogc:def:datum:EPSG::1357' => [
             'name' => 'Reseau Geodesique de Nouvelle Caledonie 2015',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+        ],
+        'urn:ogc:def:datum:EPSG::1358' => [
+            'name' => 'BH_ETRS89',
             'type' => 'geodetic',
             'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',

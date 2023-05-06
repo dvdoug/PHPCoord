@@ -163,6 +163,20 @@ class CRSTransformationsEurope
             'accuracy' => 0,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10325',
+            'name' => 'Bosnia and Herzegovina Transverse Mercator',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::10328',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10329',
+            'accuracy' => 0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10330',
+            'name' => 'BH_ETRS89 to ETRS89 (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::10328',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::4258',
+            'accuracy' => 0.0,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10127',
             'name' => 'MWC18-TM',
             'source_crs' => 'urn:ogc:def:crs:EPSG::20033',

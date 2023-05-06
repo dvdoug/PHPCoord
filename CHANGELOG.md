@@ -2,7 +2,7 @@
 
 ## [Unreleased]
 ### Changed
-- Updates to data for Algeria, Germany, Latvia and USA
+- Updates to data for Algeria, Bosnia and Herzegovina, Germany, Latvia and USA
 
 ## [5.3.1] - 2023-02-20
 ### Changed

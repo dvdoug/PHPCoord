@@ -55,6 +55,20 @@ BGS2005
 
 Adopted 2010-07-29.
 
+BH_ETRS89
+---------
+| Extent: Bosnia and Herzegovina.
+
+.. code-block:: php
+
+    Geographic3D::fromSRID(Geographic3D::EPSG_BH_ETRS89)
+    Geographic3D::fromSRID('urn:ogc:def:crs:EPSG::10327')
+    Geographic::fromSRID(Geographic3D::EPSG_BH_ETRS89)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10327')
+    CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_BH_ETRS89)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10327')
+
+
 CGRS93
 ------
 | Extent: Cyprus - onshore.

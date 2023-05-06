@@ -580,6 +580,13 @@ class Projected extends CoordinateReferenceSystem
     public const EPSG_BGS2005_UTM_ZONE_36N = 'urn:ogc:def:crs:EPSG::7805';
 
     /**
+     * BH_ETRS89 / TM
+     * Extent: Bosnia and Herzegovina.
+     * Replaces MGI / Balkans zones 5-7 (CRS codes 8677, 8678 and 6316) in Bosnia and Herzegovina.
+     */
+    public const EPSG_BH_ETRS89_TM = 'urn:ogc:def:crs:EPSG::10329';
+
+    /**
      * Barbados 1938 / Barbados National Grid
      * Extent: Barbados - onshore.
      * Replaces Barbados 1938 / BWI Grid (code 21291) from 1983.
@@ -8750,7 +8757,7 @@ class Projected extends CoordinateReferenceSystem
      * MGI 1901 / Balkans zone 5
      * Extent: Bosnia and Herzegovina - west of 16°30'E; Croatia - onshore west of 16°30'E; Slovenia - onshore.
      * Introduced in 1924. In Slovenia replaced by D48 / GK (CRS code 3912). In Croatia replaced by HTRS96 / Croatia TM
-     * (CRS code 3765).
+     * (CRS code 3765). In Bosnia and Herzegovina replaced by BH_ETRS89 / TM (CRS code 10329).
      */
     public const EPSG_MGI_1901_BALKANS_ZONE_5 = 'urn:ogc:def:crs:EPSG::8677';
 
@@ -8758,7 +8765,8 @@ class Projected extends CoordinateReferenceSystem
      * MGI 1901 / Balkans zone 6
      * Extent: Bosnia and Herzegovina - between 16°30'E and 19°30'E; Croatia - onshore east of 16°30'E; Montenegro -
      * onshore west of 19°30'E; Serbia - west of 19°30'E.
-     * Introduced in 1924. In Croatia replaced by HTRS96 / Croatia TM (CRS code 3765).
+     * Introduced in 1924. In Croatia replaced by HTRS96 / Croatia TM (CRS code 3765). In Bosnia and Herzegovina
+     * replaced by BH_ETRS89 / TM (CRS code 10329).
      */
     public const EPSG_MGI_1901_BALKANS_ZONE_6 = 'urn:ogc:def:crs:EPSG::8678';
 
@@ -8767,7 +8775,8 @@ class Projected extends CoordinateReferenceSystem
      * Extent: North Macedonia, Bosnia and Herzegovina - east of 19°30'E; Kosovo; Montenegro - east of 19°30'E;
      * Serbia - between 19°30'E and 22°30'E.
      * Introduced in 1924. In Macedonia replaced by MSCS (CRS code 6204) from 2008 but from 2013 this CRS used for AREC
-     * electronic cadastral database (E-kat) across whole country.
+     * electronic cadastral database (E-kat) across whole country. In Bosnia and Herzegovina replaced by BH_ETRS89 / TM
+     * (CRS code 10329).
      */
     public const EPSG_MGI_1901_BALKANS_ZONE_7 = 'urn:ogc:def:crs:EPSG::6316';
 

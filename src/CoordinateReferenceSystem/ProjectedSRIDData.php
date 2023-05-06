@@ -25042,6 +25042,13 @@ trait ProjectedSRIDData
             'deriving_conversion' => 'urn:ogc:def:coordinateOperation:EPSG::16159',
             'extent' => ['3433'],
         ],
+        'urn:ogc:def:crs:EPSG::10329' => [
+            'name' => 'BH_ETRS89 / TM',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::4500',
+            'base_crs' => 'urn:ogc:def:crs:EPSG::10328',
+            'deriving_conversion' => 'urn:ogc:def:coordinateOperation:EPSG::10325',
+            'extent' => ['1050'],
+        ],
         'urn:ogc:def:crs:EPSG::11114' => [
             'name' => 'MAGNA-SIRGAS 2018 / Colombia Far West zone',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::4500',

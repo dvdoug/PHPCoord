@@ -78,6 +78,26 @@ to BGS2005 (Geographic2D)
 
     "
 
+BH_ETRS89
+---------
+``Geographic3D::fromSRID(Geographic3D::EPSG_BH_ETRS89)``
+
+to BH_ETRS89 (Geographic2D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: geographic3D to geographic2D
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::15593``
+    | Extent: World",".. code-block:: php
+
+        $point->threeDToTwoD(
+            to: Geographic2D::fromSRID(Geographic2D::EPSG_BH_ETRS89)
+        )
+
+    "
+
 CGRS93
 ------
 ``Geographic3D::fromSRID(Geographic3D::EPSG_CGRS93)``

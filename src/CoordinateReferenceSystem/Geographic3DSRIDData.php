@@ -1487,6 +1487,13 @@ trait Geographic3DSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1357',
             'extent' => ['1174'],
         ],
+        'urn:ogc:def:crs:EPSG::10327' => [
+            'name' => 'BH_ETRS89',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6423',
+            'base_crs' => 'urn:ogc:def:crs:EPSG::10326',
+            'datum' => 'urn:ogc:def:datum:EPSG::1358',
+            'extent' => ['1050'],
+        ],
         'urn:ogc:def:crs:EPSG::20040' => [
             'name' => 'SIRGAS-Chile 2021',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6423',

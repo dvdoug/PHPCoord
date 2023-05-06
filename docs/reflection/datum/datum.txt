@@ -502,6 +502,20 @@ Fundamental point: Forte de São Bras. Origin and orientation constrained to tho
 
 Classical and GPS observations. Replaces 1940 adjustment (datum code 6184).
 
+BH_ETRS89
+---------
+| Type: Geodetic
+| Extent: Bosnia and Herzegovina.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_BH_ETRS89)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1358')
+
+Densification of ETRF2000 in Bosnia and Herzegovina at epoch 2011.307.
+
+ETRS89 in Bosnia and Herzegovina, realized through the coordinates of 17 stations of the GNSS active FBiHPOS network in conjunction with 17 stations of the Serbia SRPOS network.
+
 Baltic 1957
 -----------
 | Type: Vertical

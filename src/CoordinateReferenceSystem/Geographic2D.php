@@ -262,6 +262,13 @@ class Geographic2D extends Geographic
     public const EPSG_BGS2005 = 'urn:ogc:def:crs:EPSG::7798';
 
     /**
+     * BH_ETRS89
+     * Extent: Bosnia and Herzegovina.
+     * In Bosnia and Herzegovina replaces MGI 1901 (CRS code 3906).
+     */
+    public const EPSG_BH_ETRS89 = 'urn:ogc:def:crs:EPSG::10328';
+
+    /**
      * Barbados 1938
      * Extent: Barbados - onshore.
      */

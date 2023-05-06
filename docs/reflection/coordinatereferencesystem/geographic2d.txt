@@ -521,6 +521,21 @@ BGS2005
 
 Adopted 2010-07-29. Replaces earlier systems.
 
+BH_ETRS89
+---------
+| Extent: Bosnia and Herzegovina.
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_BH_ETRS89)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::10328')
+    Geographic::fromSRID(Geographic2D::EPSG_BH_ETRS89)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10328')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_BH_ETRS89)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10328')
+
+In Bosnia and Herzegovina replaces MGI 1901 (CRS code 3906).
+
 Barbados 1938
 -------------
 | Extent: Barbados - onshore.

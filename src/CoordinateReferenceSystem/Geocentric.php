@@ -47,6 +47,12 @@ class Geocentric extends CoordinateReferenceSystem
     public const EPSG_BGS2005 = 'urn:ogc:def:crs:EPSG::7796';
 
     /**
+     * BH_ETRS89
+     * Extent: Bosnia and Herzegovina.
+     */
+    public const EPSG_BH_ETRS89 = 'urn:ogc:def:crs:EPSG::10326';
+
+    /**
      * CGRS93
      * Extent: Cyprus - onshore.
      */

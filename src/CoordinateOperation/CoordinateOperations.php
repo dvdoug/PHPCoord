@@ -9982,6 +9982,16 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9603',
             'extent' => ['1174'],
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::10325' => [
+            'name' => 'Bosnia and Herzegovina Transverse Mercator',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent' => ['1050'],
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10330' => [
+            'name' => 'BH_ETRS89 to ETRS89 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::9603',
+            'extent' => ['1050'],
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::10331' => [
             'name' => 'SPCS83 Arkansas North zone (meters)',
             'method' => 'urn:ogc:def:method:EPSG::9802',

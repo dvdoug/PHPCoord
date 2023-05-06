@@ -3958,6 +3958,13 @@ trait Geographic2DSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1357',
             'extent' => ['1174'],
         ],
+        'urn:ogc:def:crs:EPSG::10328' => [
+            'name' => 'BH_ETRS89',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
+            'base_crs' => 'urn:ogc:def:crs:EPSG::10327',
+            'datum' => 'urn:ogc:def:datum:EPSG::1358',
+            'extent' => ['1050'],
+        ],
         'urn:ogc:def:crs:EPSG::20033' => [
             'name' => 'MWC18-IRF',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
