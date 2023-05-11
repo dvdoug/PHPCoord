@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Import data from EPSG SQL (WSL)" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/src/EPSG/Import/importSQL.php">
+    <CommandLine parameters="-dsqlite3.extension_dir=&quot;/usr/lib/x86_64-linux-gnu/&quot; -dopcache.enable=1 -dopcache.enable_cli=1 -dopcache.jit_buffer_size=64M">
+      <PhpTestInterpreterSettings>
+        <option name="interpreterName" value="Ubuntu-Preview" />
+      </PhpTestInterpreterSettings>
+    </CommandLine>
+    <method v="2" />
+  </configuration>
+</component>

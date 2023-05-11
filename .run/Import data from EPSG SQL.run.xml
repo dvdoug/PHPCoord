@@ -1,0 +1,5 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Import data from EPSG SQL" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/src/EPSG/Import/importSQL.php">
+    <method v="2" />
+  </configuration>
+</component>

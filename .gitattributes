@@ -7,5 +7,6 @@
 
 *.php diff=php
 
+/.run export-ignore
 /src/EPSG export-ignore
 /resources export-ignore
