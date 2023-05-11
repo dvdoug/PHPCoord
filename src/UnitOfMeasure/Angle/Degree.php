@@ -148,11 +148,11 @@ class Degree extends Angle
             throw new InvalidArgumentException("Could not find angle in '{$angle}'");
         }
 
-        $degrees = ($angleParts['degrees'] * 1);
-        $degrees += (($angleParts['arcminutes'] ?? 0) / 60);
-        $degrees += isset($angleParts['fractionarcminutes']) ? ($angleParts['fractionarcminutes'] / 60 / 10 ** strlen($angleParts['fractionarcminutes'])) : 0;
-        $degrees += (($angleParts['arcseconds'] ?? 0) / 3600);
-        $degrees += isset($angleParts['fractionarcseconds']) ? ($angleParts['fractionarcseconds'] / 3600 / 10 ** strlen($angleParts['fractionarcseconds'])) : 0;
+        $degrees = (float) $angleParts['degrees'];
+        $degrees += ((float) ($angleParts['arcminutes'] ?? 0) / 60);
+        $degrees += isset($angleParts['fractionarcminutes']) ? ((float) $angleParts['fractionarcminutes'] / 60 / 10 ** strlen($angleParts['fractionarcminutes'])) : 0;
+        $degrees += ((float) ($angleParts['arcseconds'] ?? 0) / 3600);
+        $degrees += isset($angleParts['fractionarcseconds']) ? ((float) $angleParts['fractionarcseconds'] / 3600 / 10 ** strlen($angleParts['fractionarcseconds'])) : 0;
 
         if ($angleParts['negative'] ?? '' || in_array($angleParts['hemisphere'] ?? [], ['S', 'W'], true)) {
             $degrees *= -1;

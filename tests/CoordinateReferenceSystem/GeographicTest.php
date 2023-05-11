@@ -25,6 +25,16 @@ class GeographicTest extends TestCase
         }
     }
 
+    public function testCanGetSupportedwithHelp(): void
+    {
+        $supported = Geographic::getSupportedSRIDsWithHelp();
+        self::assertGreaterThan(0, count($supported));
+        foreach ($supported as $key => $value) {
+            self::assertStringStartsWith('urn:ogc:def:', $key);
+            self::assertIsArray($value);
+        }
+    }
+
     public function testCanCreate2D(): void
     {
         $object = Geographic::fromSRID(Geographic2D::EPSG_WGS_84);

@@ -16,6 +16,7 @@ use PHPCoord\Geometry\BoundingArea;
 
 use function assert;
 use function count;
+use function array_map;
 
 class Vertical extends CoordinateReferenceSystem
 {
@@ -1937,9 +1938,10 @@ class Vertical extends CoordinateReferenceSystem
      */
     public const EPSG_INAGEOID2020_HEIGHT = 'urn:ogc:def:crs:EPSG::9471';
 
+    /**
+     * @var array<string, self>
+     */
     private static array $cachedObjects = [];
-
-    private static array $supportedCache = [];
 
     public function __construct(
         string $srid,
@@ -1979,21 +1981,24 @@ class Vertical extends CoordinateReferenceSystem
         return self::$cachedObjects[$srid];
     }
 
+    /**
+     * @return array<string, string>
+     */
     public static function getSupportedSRIDs(): array
     {
-        if (!self::$supportedCache) {
-            foreach (static::$sridData as $srid => $data) {
-                self::$supportedCache[$srid] = $data['name'];
-            }
-        }
-
-        return self::$supportedCache;
+        return array_map(fn (array $data) => $data['name'], static::$sridData);
     }
 
-    public static function registerCustomCRS(string $srid, string $name, string $coordinateSystemSrid, string $datumSrid, BoundingArea $extent): void
+    /**
+     * @return array<string, array{name: string, extent_description: string, help: string}>
+     */
+    public static function getSupportedSRIDsWithHelp(): array
     {
-        self::$sridData[$srid] = ['name' => $name, 'coordinate_system' => $coordinateSystemSrid, 'datum' => $datumSrid, 'extent' => $extent];
-        self::getSupportedSRIDs(); // init cache if not already
-        self::$supportedCache[$srid] = $name; // update cache
+        return array_map(fn (array $data) => ['name' => $data['name'], 'extent_description' => $data['extent_description'], 'help' => $data['help']], static::$sridData);
+    }
+
+    public static function registerCustomCRS(string $srid, string $name, string $coordinateSystemSrid, string $datumSrid, BoundingArea $extent, string $help = ''): void
+    {
+        self::$sridData[$srid] = ['name' => $name, 'coordinate_system' => $coordinateSystemSrid, 'datum' => $datumSrid, 'extent' => $extent, 'extent_description' => '', 'help' => $help];
     }
 }

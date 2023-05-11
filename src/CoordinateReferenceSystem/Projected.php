@@ -16,6 +16,7 @@ use PHPCoord\Geometry\BoundingArea;
 
 use function assert;
 use function count;
+use function array_map;
 
 class Projected extends CoordinateReferenceSystem
 {
@@ -40222,9 +40223,10 @@ class Projected extends CoordinateReferenceSystem
 
     protected ?string $derivingConversion;
 
+    /**
+     * @var array<string, self>
+     */
     private static array $cachedObjects = [];
-
-    private static array $supportedCache = [];
 
     public function __construct(
         string $srid,
@@ -40282,21 +40284,24 @@ class Projected extends CoordinateReferenceSystem
         return self::$cachedObjects[$srid];
     }
 
+    /**
+     * @return array<string, string>
+     */
     public static function getSupportedSRIDs(): array
     {
-        if (!self::$supportedCache) {
-            foreach (static::$sridData as $srid => $data) {
-                self::$supportedCache[$srid] = $data['name'];
-            }
-        }
-
-        return self::$supportedCache;
+        return array_map(fn (array $data) => $data['name'], static::$sridData);
     }
 
-    public static function registerCustomCRS(string $srid, string $name, string $baseCRSSrid, string $derivingConversionSrid, string $coordinateSystemSrid, BoundingArea $extent): void
+    /**
+     * @return array<string, array{name: string, extent_description: string, help: string}>
+     */
+    public static function getSupportedSRIDsWithHelp(): array
     {
-        self::$sridData[$srid] = ['name' => $name, 'coordinate_system' => $coordinateSystemSrid, 'base_crs' => $baseCRSSrid, 'deriving_conversion' => $derivingConversionSrid, 'extent' => $extent];
-        self::getSupportedSRIDs(); // init cache if not already
-        self::$supportedCache[$srid] = $name; // update cache
+        return array_map(fn (array $data) => ['name' => $data['name'], 'extent_description' => $data['extent_description'], 'help' => $data['help']], static::$sridData);
+    }
+
+    public static function registerCustomCRS(string $srid, string $name, string $baseCRSSrid, string $derivingConversionSrid, string $coordinateSystemSrid, BoundingArea $extent, string $help = ''): void
+    {
+        self::$sridData[$srid] = ['name' => $name, 'coordinate_system' => $coordinateSystemSrid, 'base_crs' => $baseCRSSrid, 'deriving_conversion' => $derivingConversionSrid, 'extent' => $extent, 'extent_description' => '', 'help' => $help];
     }
 }

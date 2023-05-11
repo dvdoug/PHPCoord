@@ -27,8 +27,19 @@ abstract class Geographic extends CoordinateReferenceSystem
         throw new UnknownCoordinateReferenceSystemException($srid);
     }
 
+    /**
+     * @return array<string, string>
+     */
     public static function getSupportedSRIDs(): array
     {
         return array_merge(Geographic2D::getSupportedSRIDs(), Geographic3D::getSupportedSRIDs());
+    }
+
+    /**
+     * @return array<string, array{name: string, extent_description: string, help: string}>
+     */
+    public static function getSupportedSRIDsWithHelp(): array
+    {
+        return array_merge(Geographic2D::getSupportedSRIDsWithHelp(), Geographic3D::getSupportedSRIDsWithHelp());
     }
 }

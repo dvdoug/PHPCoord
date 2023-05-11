@@ -20,6 +20,8 @@ use PHPCoord\UnitOfMeasure\Scale\PartsPerMillion;
 use PHPCoord\UnitOfMeasure\Time\Time;
 use PHPCoord\UnitOfMeasure\Time\Year;
 
+use function array_map;
+
 class Rate implements UnitOfMeasure
 {
     /**
@@ -67,35 +69,43 @@ class Rate implements UnitOfMeasure
      */
     public const EPSG_PARTS_PER_MILLION_PER_YEAR = 'urn:ogc:def:uom:EPSG::1041';
 
+    /**
+     * @var array<string, array{name: string, help: string}>
+     */
     protected static array $sridData = [
         'urn:ogc:def:uom:EPSG::1027' => [
             'name' => 'millimetres per year',
+            'help' => 'Year taken to be IUGS definition of 31556925.445 seconds; see UoM code 1029.',
         ],
         'urn:ogc:def:uom:EPSG::1030' => [
             'name' => 'parts per billion per year',
+            'help' => 'Year taken to be IUGS definition of 31556925.445 seconds; see UoM code 1029. Billion is internationally ambiguous, in different languages being 1E+9 and 1E+12. One billion taken here to be 1E+9.',
         ],
         'urn:ogc:def:uom:EPSG::1032' => [
             'name' => 'milliarc-seconds per year',
+            'help' => '= ((pi/180) / 3600 / 1000) radians per year. Year taken to be IUGS definition of 31556925.445 seconds; see UoM code 1029.',
         ],
         'urn:ogc:def:uom:EPSG::1034' => [
             'name' => 'centimetres per year',
+            'help' => 'Year taken to be IUGS definition of 31556925.445 seconds; see UoM code 1029.',
         ],
         'urn:ogc:def:uom:EPSG::1041' => [
             'name' => 'parts per million per year',
+            'help' => 'Year taken to be IUGS definition of 31556925.445 seconds; see UoM code 1029.',
         ],
         'urn:ogc:def:uom:EPSG::1042' => [
             'name' => 'metres per year',
+            'help' => 'Year taken to be IUGS definition of 31556925.445 seconds; see UoM code 1029.',
         ],
         'urn:ogc:def:uom:EPSG::1043' => [
             'name' => 'arc-seconds per year',
+            'help' => '=((pi/180) / 3600) radians per year. Year taken to be IUGS definition of 31556925.445 seconds; see UoM code 1029.',
         ],
     ];
 
     private UnitOfMeasure $change;
 
     private Time $time;
-
-    private static array $supportedCache = [];
 
     public function __construct(UnitOfMeasure $change, Time $time)
     {
@@ -160,14 +170,19 @@ class Rate implements UnitOfMeasure
         };
     }
 
+    /**
+     * @return array<string, string>
+     */
     public static function getSupportedSRIDs(): array
     {
-        if (!self::$supportedCache) {
-            foreach (static::$sridData as $srid => $data) {
-                self::$supportedCache[$srid] = $data['name'];
-            }
-        }
+        return array_map(fn (array $data) => $data['name'], static::$sridData);
+    }
 
-        return self::$supportedCache;
+    /**
+     * @return array<string, array{name: string, help: string}>
+     */
+    public static function getSupportedSRIDsWithHelp(): array
+    {
+        return array_map(fn (array $data) => ['name' => $data['name'], 'help' => $data['help']], static::$sridData);
     }
 }

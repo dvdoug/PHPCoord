@@ -10,6 +10,8 @@ namespace PHPCoord\CoordinateSystem;
 
 use PHPCoord\Exception\UnknownCoordinateSystemException;
 
+use function array_map;
+
 class Cartesian extends CoordinateSystem
 {
     /**
@@ -464,6 +466,9 @@ class Cartesian extends CoordinateSystem
      */
     public const EPSG_AFFINE_3D_AXES_NORTHING_EASTING_ELLIPSOIDAL_HEIGHT_X_Y_H_ORIENTATIONS_NORTH_EAST_UP_UOM_M = 'urn:ogc:def:cs:EPSG::1046';
 
+    /**
+     * @var array<string, array{name: string, axes: array<array{orientation: string, abbreviation: string, name: string, uom: string}>, help: string}>
+     */
     protected static array $sridData = [
         'urn:ogc:def:cs:EPSG::1024' => [
             'name' => '2D Axes: easting, northing (M,P). Orientations east, north. UoM: m.',
@@ -481,6 +486,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],
+            'help' => 'Used in projected and engineering coordinate reference systems in Portuguese territories.',
         ],
         'urn:ogc:def:cs:EPSG::1025' => [
             'name' => '2D CS for south polar azimuthal lonO 140°E. Axes: X,Y. Orientations: X along 130°W, Y along 140°E meridians. UoM: m.',
@@ -498,6 +504,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],
+            'help' => 'Used for South Pole tangential and secant projections.',
         ],
         'urn:ogc:def:cs:EPSG::1026' => [
             'name' => '2D CS for UPS north. Axes: E,N. Orientations: E along 90°E meridian, N along 180°E meridian. UoM: m.',
@@ -515,6 +522,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],
+            'help' => 'Used for North Pole tangential and secant projections.',
         ],
         'urn:ogc:def:cs:EPSG::1027' => [
             'name' => '2D CS for UPS south. Axes: E,N. Orientations: E along 90°E, N along 0°E meridians. UoM: m.',
@@ -532,6 +540,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],
+            'help' => 'Used for South Pole tangential and secant projections.',
         ],
         'urn:ogc:def:cs:EPSG::1028' => [
             'name' => '2D Axes: easting, northing (E,N). Orientations: east, north. UoM: ydCl.',
@@ -549,6 +558,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9037',
                 ],
             ],
+            'help' => 'Used in projected and engineering coordinate reference systems.',
         ],
         'urn:ogc:def:cs:EPSG::1029' => [
             'name' => '2D Axes: northing, easting (N,E). Orientations: north, east. UoM: ft.',
@@ -566,6 +576,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9002',
                 ],
             ],
+            'help' => 'Used in projected and engineering coordinate reference systems.',
         ],
         'urn:ogc:def:cs:EPSG::1031' => [
             'name' => '2D Axes: northing, westing (Y,X). Orientations: north, west. UoM: m.',
@@ -583,6 +594,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],
+            'help' => 'Used in Danish projected coordinate reference systems.',
         ],
         'urn:ogc:def:cs:EPSG::1035' => [
             'name' => '2D CS for north polar azimuthal lonO 90°E. Axes: X,Y. Orientations: X along 180°E, Y along 90°W meridians. UoM: m.',
@@ -600,6 +612,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],
+            'help' => 'Used for North Pole tangential and secant projections.',
         ],
         'urn:ogc:def:cs:EPSG::1036' => [
             'name' => '2D CS for north polar azimuthal lonO 33°W. Axes: X,Y. Orientations: X along 57°E, Y along 147°E meridians. UoM: m.',
@@ -617,6 +630,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],
+            'help' => 'Used for North Pole tangential and secant projections.',
         ],
         'urn:ogc:def:cs:EPSG::1037' => [
             'name' => '2D CS for north polar azimuthal lonO 18°E. Axes: X,Y. Orientations: X along 108°E, Y along 162°W meridians. UoM: m.',
@@ -634,6 +648,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],
+            'help' => 'Used for North Pole tangential and secant projections.',
         ],
         'urn:ogc:def:cs:EPSG::1038' => [
             'name' => '2D CS for north polar azimuthal lonO 105°E. Axes: X,Y. Orientations: X along 165°W, Y along 75°W meridians. UoM: m.',
@@ -651,6 +666,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],
+            'help' => 'Used for North Pole tangential and secant projections.',
         ],
         'urn:ogc:def:cs:EPSG::1039' => [
             'name' => '2D Axes: easting, northing (E,N). Orientations: east, north. UoM: ft.',
@@ -668,6 +684,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9002',
                 ],
             ],
+            'help' => 'Used in projected and engineering coordinate reference systems.',
         ],
         'urn:ogc:def:cs:EPSG::1044' => [
             'name' => '2D CS for south polar azimuthal lonO 180°E. Axes: N,E. Orientations: N along 180°E, E along 90°W meridians. UoM: m.',
@@ -685,6 +702,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],
+            'help' => 'Used for South Pole tangential and secant projections.',
         ],
         'urn:ogc:def:cs:EPSG::1046' => [
             'name' => 'Affine 3D Axes: northing, easting, ellipsoidal height (X,Y,h). Orientations: north, east, up. UoM: m.',
@@ -708,6 +726,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],
+            'help' => 'Used in projected 3D CRSs. Away from the projection origin the ellipsoidal height is not exactly orthogonal to the projection plane and strictly the coordinate system is not Cartesian.',
         ],
         'urn:ogc:def:cs:EPSG::1053' => [
             'name' => '2D Axes: northing, easting (N,E). Orientations: north, east. UoM: ftUS.',
@@ -725,6 +744,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9003',
                 ],
             ],
+            'help' => 'Used in projected and engineering coordinate reference systems.',
         ],
         'urn:ogc:def:cs:EPSG::4400' => [
             'name' => '2D Axes: easting, northing (E,N). Orientations: east, north. UoM: m.',
@@ -742,6 +762,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],
+            'help' => 'Used in projected and engineering coordinate reference systems.',
         ],
         'urn:ogc:def:cs:EPSG::4401' => [
             'name' => '2D Axes: easting, northing (E,N). Orientations: east, north. UoM: chBnB.',
@@ -759,6 +780,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9062',
                 ],
             ],
+            'help' => 'Used in projected and engineering coordinate reference systems.',
         ],
         'urn:ogc:def:cs:EPSG::4402' => [
             'name' => '2D Axes: easting, northing (E,N). Orientations: east, north. UoM: chSe.',
@@ -776,6 +798,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9042',
                 ],
             ],
+            'help' => 'Used in projected and engineering coordinate reference systems.',
         ],
         'urn:ogc:def:cs:EPSG::4403' => [
             'name' => '2D Axes: easting, northing (E,N). Orientations: east, north. UoM: ftCla.',
@@ -793,6 +816,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9005',
                 ],
             ],
+            'help' => 'Used in projected and engineering coordinate reference systems.',
         ],
         'urn:ogc:def:cs:EPSG::4404' => [
             'name' => '2D Axes: easting, northing (E,N). Orientations: east, north. UoM: ftGC.',
@@ -810,6 +834,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9094',
                 ],
             ],
+            'help' => 'Used in projected and engineering coordinate reference systems.',
         ],
         'urn:ogc:def:cs:EPSG::4405' => [
             'name' => '2D Axes: easting, northing (E,N). Orientations: east, north. UoM: ftSe.',
@@ -827,6 +852,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9041',
                 ],
             ],
+            'help' => 'Used in projected and engineering coordinate reference systems.',
         ],
         'urn:ogc:def:cs:EPSG::4406' => [
             'name' => '2D Axes: easting, northing (E,N). Orientations: east, north. UoM: km.',
@@ -844,6 +870,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9036',
                 ],
             ],
+            'help' => 'Used in projected and engineering coordinate reference systems.',
         ],
         'urn:ogc:def:cs:EPSG::4407' => [
             'name' => '2D Axes: easting, northing (E,N). Orientations: east, north. UoM: lkCla.',
@@ -861,6 +888,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9039',
                 ],
             ],
+            'help' => 'Used in projected and engineering coordinate reference systems.',
         ],
         'urn:ogc:def:cs:EPSG::4408' => [
             'name' => '2D Axes: easting, northing (E,N). Orientations: east, north. UoM: ydInd.',
@@ -878,6 +906,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9084',
                 ],
             ],
+            'help' => 'Used in projected and engineering coordinate reference systems.',
         ],
         'urn:ogc:def:cs:EPSG::4409' => [
             'name' => '2D Axes: easting, northing (E,N). Orientations: east, north. UoM: ydSe.',
@@ -895,6 +924,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9040',
                 ],
             ],
+            'help' => 'Used in projected and engineering coordinate reference systems.',
         ],
         'urn:ogc:def:cs:EPSG::4410' => [
             'name' => '2D Axes: easting, northing (E,N). Orientations: east, north. UoM: chSe(T).',
@@ -912,6 +942,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9301',
                 ],
             ],
+            'help' => 'Used in projected and engineering coordinate reference systems.',
         ],
         'urn:ogc:def:cs:EPSG::4463' => [
             'name' => '2D CS for north polar azimuthal lonO 10°E. Axes: X,Y. Orientations: X along 100°E, Y along 170°W meridians. UoM: m.',
@@ -929,6 +960,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],
+            'help' => 'Used for North Pole tangential and secant projections.',
         ],
         'urn:ogc:def:cs:EPSG::4464' => [
             'name' => '2D CS for north polar azimuthal lonO 180°E. Axes: X,Y. Orientations: X along 90°W, Y along 0°E meridians. UoM: m.',
@@ -946,6 +978,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],
+            'help' => 'Used for North Pole tangential and secant projections.',
         ],
         'urn:ogc:def:cs:EPSG::4465' => [
             'name' => '2D CS for north polar azimuthal lonO 40°W. Axes: X,Y. Orientations: X along 50°E, Y along 140°E meridians. UoM: m.',
@@ -963,6 +996,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],
+            'help' => 'Used for North Pole tangential and secant projections.',
         ],
         'urn:ogc:def:cs:EPSG::4466' => [
             'name' => '2D CS for north polar azimuthal lonO 100°W. Axes: X,Y. Orientations: X along 10°W, Y along 80°E meridians. UoM: m.',
@@ -980,6 +1014,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],
+            'help' => 'Used for North Pole tangential and secant projections.',
         ],
         'urn:ogc:def:cs:EPSG::4467' => [
             'name' => '2D CS for north polar azimuthal lonO 150°W. Axes: X,Y. Orientations: X along 60°W, Y along 30°E meridians. UoM: m.',
@@ -997,6 +1032,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],
+            'help' => 'Used for North Pole tangential and secant projections.',
         ],
         'urn:ogc:def:cs:EPSG::4468' => [
             'name' => '2D CS for north polar azimuthal lonO 45°W. Axes: X,Y. Orientations: X along 45°E, Y along 135°E meridians. UoM: m.',
@@ -1014,6 +1050,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],
+            'help' => 'Used for North Pole tangential and secant projections.',
         ],
         'urn:ogc:def:cs:EPSG::4469' => [
             'name' => '2D CS for north polar azimuthal lonO 0°E. Axes: X,Y. Orientations: X along 90°E, Y along 180°E meridians. UoM: m.',
@@ -1031,6 +1068,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],
+            'help' => 'Used for North Pole tangential and secant projections.',
         ],
         'urn:ogc:def:cs:EPSG::4470' => [
             'name' => '2D CS for south polar azimuthal lonO 0°E. Axes: X,Y. Orientations: X along 90°E, Y along 0°E meridians. UoM: m.',
@@ -1048,6 +1086,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],
+            'help' => 'Used for South Pole tangential and secant projections.',
         ],
         'urn:ogc:def:cs:EPSG::4471' => [
             'name' => '2D CS for south polar azimuthal lonO 165°W. Axes: E,N. Orientations: E along 75°W, N along 165°W meridians. UoM: m.',
@@ -1065,6 +1104,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],
+            'help' => 'Used for South Pole tangential and secant projections.',
         ],
         'urn:ogc:def:cs:EPSG::4472' => [
             'name' => '2D CS for south polar azimuthal lonO 150°W. Axes: E,N. Orientations: E along 60°W, N along 150°W meridians. UoM: m.',
@@ -1082,6 +1122,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],
+            'help' => 'Used for South Pole tangential and secant projections.',
         ],
         'urn:ogc:def:cs:EPSG::4473' => [
             'name' => '2D CS for south polar azimuthal lonO 135°W. Axes: E,N. Orientations: E along 45°W, N along 135°W meridians. UoM: m.',
@@ -1099,6 +1140,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],
+            'help' => 'Used for South Pole tangential and secant projections.',
         ],
         'urn:ogc:def:cs:EPSG::4474' => [
             'name' => '2D CS for south polar azimuthal lonO 105°W. Axes: E,N. Orientations: E along 15°W, N along 105°W meridians. UoM: m.',
@@ -1116,6 +1158,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],
+            'help' => 'Used for South Pole tangential and secant projections.',
         ],
         'urn:ogc:def:cs:EPSG::4475' => [
             'name' => '2D CS for south polar azimuthal lonO 90°W. Axes: E,N. Orientations: E along 0°E, N along 90°W meridians. UoM: m.',
@@ -1133,6 +1176,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],
+            'help' => 'Used for South Pole tangential and secant projections.',
         ],
         'urn:ogc:def:cs:EPSG::4476' => [
             'name' => '2D CS for south polar azimuthal lonO 75°W. Axes: E,N. Orientations: E along 15°E, N along 75°W meridians. UoM: m.',
@@ -1150,6 +1194,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],
+            'help' => 'Used for South Pole tangential and secant projections.',
         ],
         'urn:ogc:def:cs:EPSG::4477' => [
             'name' => '2D CS for south polar azimuthal lonO 45°W. Axes: E,N. Orientations: E along 45°E, N along 45°W meridians. UoM: m.',
@@ -1167,6 +1212,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],
+            'help' => 'Used for South Pole tangential and secant projections.',
         ],
         'urn:ogc:def:cs:EPSG::4478' => [
             'name' => '2D CS for south polar azimuthal lonO 30°W. Axes: E,N. Orientations: E along 60°E, N along 30°W meridians. UoM: m.',
@@ -1184,6 +1230,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],
+            'help' => 'Used for South Pole tangential and secant projections.',
         ],
         'urn:ogc:def:cs:EPSG::4479' => [
             'name' => '2D CS for south polar azimuthal lonO 15°W. Axes: E,N. Orientations: E along 75°E, N along 15°W meridians. UoM: m.',
@@ -1201,6 +1248,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],
+            'help' => 'Used for South Pole tangential and secant projections.',
         ],
         'urn:ogc:def:cs:EPSG::4480' => [
             'name' => '2D CS for south polar azimuthal lonO 15°E. Axes: E,N. Orientations: E along 105°E, N along 15°E meridians. UoM: m.',
@@ -1218,6 +1266,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],
+            'help' => 'Used for South Pole tangential and secant projections.',
         ],
         'urn:ogc:def:cs:EPSG::4481' => [
             'name' => '2D CS for south polar azimuthal lonO 30°E. Axes: E,N. Orientations: E along 120°E, N along 30°Emeridians. UoM: m.',
@@ -1235,6 +1284,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],
+            'help' => 'Used for South Pole tangential and secant projections.',
         ],
         'urn:ogc:def:cs:EPSG::4482' => [
             'name' => '2D CS for south polar azimuthal lonO 45°E. Axes: E,N. Orientations: E along 135°E, N along 45°E meridians. UoM: m.',
@@ -1252,6 +1302,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],
+            'help' => 'Used for South Pole tangential and secant projections.',
         ],
         'urn:ogc:def:cs:EPSG::4483' => [
             'name' => '2D CS for south polar azimuthal lonO 75°E. Axes: E,N. Orientations: E along 165°E, N along 75°E meridians. UoM: m.',
@@ -1269,6 +1320,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],
+            'help' => 'Used for South Pole tangential and secant projections.',
         ],
         'urn:ogc:def:cs:EPSG::4484' => [
             'name' => '2D CS for south polar azimuthal lonO 90°E. Axes: E,N. Orientations: E along 180°E, N along 90°E meridians. UoM: m.',
@@ -1286,6 +1338,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],
+            'help' => 'Used for South Pole tangential and secant projections.',
         ],
         'urn:ogc:def:cs:EPSG::4485' => [
             'name' => '2D CS for south polar azimuthal lonO 105°E. Axes: E,N. Orientations: E along 165°W, N along 105°E meridians. UoM: m.',
@@ -1303,6 +1356,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],
+            'help' => 'Used for South Pole tangential and secant projections.',
         ],
         'urn:ogc:def:cs:EPSG::4486' => [
             'name' => '2D CS for south polar azimuthal lonO 135°E. Axes: E,N. Orientations: E along 135°W, N along 135°E meridians. UoM: m.',
@@ -1320,6 +1374,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],
+            'help' => 'Used for South Pole tangential and secant projections.',
         ],
         'urn:ogc:def:cs:EPSG::4487' => [
             'name' => '2D CS for south polar azimuthal lonO 150°E. Axes: E,N. Orientations: E along 120°W, N along 150°E meridians. UoM: m.',
@@ -1337,6 +1392,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],
+            'help' => 'Used for South Pole tangential and secant projections.',
         ],
         'urn:ogc:def:cs:EPSG::4488' => [
             'name' => '2D CS for south polar azimuthal lonO 165°E. Axes: E,N. Orientations: E along 105°W, N along 165°E meridians. UoM: m.',
@@ -1354,6 +1410,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],
+            'help' => 'Used for South Pole tangential and secant projections.',
         ],
         'urn:ogc:def:cs:EPSG::4489' => [
             'name' => '2D CS for south polar azimuthal lonO 70°E. Axes: E,N. Orientations: E along 160°E, N along 70°E meridians. UoM: m.',
@@ -1371,6 +1428,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],
+            'help' => 'Used for South Pole tangential and secant projections.',
         ],
         'urn:ogc:def:cs:EPSG::4490' => [
             'name' => '2D CS for south polar azimuthal lonO 0°E. Axes: E,N. Orientations: E along 90°E, N along 0°E meridians. UoM: m.',
@@ -1388,6 +1446,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],
+            'help' => 'Used for South Pole tangential and secant projections.',
         ],
         'urn:ogc:def:cs:EPSG::4491' => [
             'name' => '2D Axes: westing, northing (W,N). Orientations: west, north. UoM: m.',
@@ -1405,6 +1464,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],
+            'help' => 'Used in old Danish coordinate reference systems.',
         ],
         'urn:ogc:def:cs:EPSG::4493' => [
             'name' => '2D CS for UPS north. Axes: N,E. Orientations: N along 180°E meridian, E along 90°E meridian. UoM: m.',
@@ -1422,6 +1482,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],
+            'help' => 'Used for North Pole tangential and secant projections.',
         ],
         'urn:ogc:def:cs:EPSG::4494' => [
             'name' => '2D CS for UPS south. Axes: N,E. Orientations: N along 0°E, E along 90°E meridians. UoM: m.',
@@ -1439,6 +1500,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],
+            'help' => 'Used for South Pole tangential and secant projections.',
         ],
         'urn:ogc:def:cs:EPSG::4495' => [
             'name' => '2D Axes: easting, northing (X,Y). Orientations: east, north. UoM: ft.',
@@ -1456,6 +1518,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9002',
                 ],
             ],
+            'help' => 'Used in projected and engineering coordinate reference systems.',
         ],
         'urn:ogc:def:cs:EPSG::4496' => [
             'name' => '2D Axes: easting, northing [E(X),N(Y)]. Orientations: east, north. UoM: m.',
@@ -1473,6 +1536,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],
+            'help' => 'Used in projected and engineering coordinate reference systems.',
         ],
         'urn:ogc:def:cs:EPSG::4497' => [
             'name' => '2D Axes: easting, northing (X,Y). Orientations: east, north. UoM: ftUS.',
@@ -1490,6 +1554,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9003',
                 ],
             ],
+            'help' => 'Used in projected and engineering coordinate reference systems.',
         ],
         'urn:ogc:def:cs:EPSG::4498' => [
             'name' => '2D Axes: easting, northing (Y,X). Orientations: east, north. UoM: m.',
@@ -1507,6 +1572,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],
+            'help' => 'Used in projected and engineering coordinate reference systems.',
         ],
         'urn:ogc:def:cs:EPSG::4499' => [
             'name' => '2D Axes: easting, northing (X,Y). Orientations: east, north. UoM: m.',
@@ -1524,6 +1590,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],
+            'help' => 'Used in projected and engineering coordinate reference systems.',
         ],
         'urn:ogc:def:cs:EPSG::4500' => [
             'name' => '2D Axes: northing, easting (N,E). Orientations: north, east. UoM: m.',
@@ -1541,6 +1608,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],
+            'help' => 'Used in projected and engineering coordinate reference systems.',
         ],
         'urn:ogc:def:cs:EPSG::4501' => [
             'name' => '2D Axes: northing, westing (N,E). Orientations: north, west. UoM: m.',
@@ -1558,6 +1626,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],
+            'help' => 'Used in Danish projected coordinate reference systems. Note that second axis has abbreviation E but is positive west.',
         ],
         'urn:ogc:def:cs:EPSG::4502' => [
             'name' => '2D Axes: northing, easting (N,E). Orientations: north, east. UoM: ftCla.',
@@ -1575,6 +1644,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9005',
                 ],
             ],
+            'help' => 'Used in projected and engineering coordinate reference systems.',
         ],
         'urn:ogc:def:cs:EPSG::4530' => [
             'name' => '2D Axes: northing, easting (X,Y). Orientations: north, east. UoM: m.',
@@ -1592,6 +1662,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],
+            'help' => 'Used in projected and engineering coordinate reference systems.',
         ],
         'urn:ogc:def:cs:EPSG::4531' => [
             'name' => '2D Axes: northing, easting (x,y). Orientations: north, east. UoM: m.',
@@ -1609,6 +1680,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],
+            'help' => 'Used in projected and engineering coordinate reference systems.',
         ],
         'urn:ogc:def:cs:EPSG::4532' => [
             'name' => '2D Axes: northing, easting (Y,X). Orientations: north, east. UoM: m.',
@@ -1626,6 +1698,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],
+            'help' => 'Used in projected and engineering coordinate reference systems.',
         ],
         'urn:ogc:def:cs:EPSG::4533' => [
             'name' => '2D Axes: northing, easting (X,Y). Orientations: north, east. UoM: lk.',
@@ -1643,6 +1716,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9098',
                 ],
             ],
+            'help' => 'Used in projected and engineering coordinate reference systems.',
         ],
         'urn:ogc:def:cs:EPSG::4534' => [
             'name' => '2D Axes: northing, easting (no abbrev). Orientations: north, east. UoM: m.',
@@ -1660,6 +1734,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],
+            'help' => 'Used in projected coordinate reference systems for nautical charting.',
         ],
         'urn:ogc:def:cs:EPSG::6500' => [
             'name' => '3D CS (geocentric). Axes: geocentric X Y Z. Orientations: X and Y in equatorial plane, X positive through intersection with prime meridian, Y through 0°N 90°E. Z axis parallel to mean earth rotation axis and positive towards North Pole. UoM: m.',
@@ -1683,6 +1758,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],
+            'help' => 'Earth-centred, Earth-fixed (ECEF) right-handed Cartesian 3D CS, used in geocentric coordinate reference systems.',
         ],
         'urn:ogc:def:cs:EPSG::6501' => [
             'name' => '2D Axes: southing, westing (X,Y). Orientations: south, west. UoM: m.',
@@ -1700,6 +1776,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],
+            'help' => 'Used in projected and engineering coordinate reference systems.',
         ],
         'urn:ogc:def:cs:EPSG::6502' => [
             'name' => '2D Axes: westing, southing (Y,X). Orientations: west, south. UoM: GLM.',
@@ -1717,6 +1794,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9031',
                 ],
             ],
+            'help' => 'Used in projected and engineering coordinate reference systems.',
         ],
         'urn:ogc:def:cs:EPSG::6503' => [
             'name' => '2D Axes: westing, southing (Y,X). Orientations: west, south. UoM: m.',
@@ -1734,6 +1812,7 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],
+            'help' => 'Used in projected and engineering coordinate reference systems.',
         ],
         'urn:ogc:def:cs:EPSG::6509' => [
             'name' => '2D Axes: southing, westing (P,M). Orientations: south, west. UoM: m.',
@@ -1751,9 +1830,13 @@ class Cartesian extends CoordinateSystem
                     'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],
+            'help' => 'Used in old projected coordinate reference systems in Portugal.',
         ],
     ];
 
+    /**
+     * @var array<string, self>
+     */
     private static array $cachedObjects = [];
 
     public static function fromSRID(string $srid): self
@@ -1781,13 +1864,19 @@ class Cartesian extends CoordinateSystem
         return self::$cachedObjects[$srid];
     }
 
+    /**
+     * @return array<string, string>
+     */
     public static function getSupportedSRIDs(): array
     {
-        $supported = [];
-        foreach (static::$sridData as $srid => $data) {
-            $supported[$srid] = $data['name'];
-        }
+        return array_map(fn (array $data) => $data['name'], static::$sridData);
+    }
 
-        return $supported;
+    /**
+     * @return array<string, array{name: string, help: string}>
+     */
+    public static function getSupportedSRIDsWithHelp(): array
+    {
+        return array_map(fn (array $data) => ['name' => $data['name'], 'help' => $data['help']], static::$sridData);
     }
 }

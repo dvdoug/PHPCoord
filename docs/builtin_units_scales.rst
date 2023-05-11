@@ -5,6 +5,10 @@ Units of scale
     All scale units have helper methods ``->asUnity()``, ``->add()``, ``->subtract()``,
     ``->multiply()`` and ``->divide()``
 
+.. tip::
+    You can access the list of supported scale units at runtime using ``Scale::getSupportedSRIDs()`` or
+    ``Scale::getSupportedSRIDsWithHelp()``
+
 Unity
 -----
 

@@ -25,6 +25,16 @@ class TimeTest extends TestCase
         }
     }
 
+    public function testCanGetSupportedWithHelp(): void
+    {
+        $supported = Time::getSupportedSRIDsWithHelp();
+        self::assertGreaterThan(0, count($supported));
+        foreach ($supported as $key => $value) {
+            self::assertStringStartsWith('urn:ogc:def:', $key);
+            self::assertIsArray($value);
+        }
+    }
+
     /**
      * @dataProvider unitsOfMeasure
      */

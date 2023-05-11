@@ -11,6 +11,8 @@ namespace PHPCoord\UnitOfMeasure\Length;
 use PHPCoord\Exception\UnknownUnitOfMeasureException;
 use PHPCoord\UnitOfMeasure\UnitOfMeasure;
 
+use function array_map;
+
 abstract class Length implements UnitOfMeasure
 {
     /**
@@ -143,75 +145,91 @@ abstract class Length implements UnitOfMeasure
      */
     public const EPSG_MILLIMETRE = 'urn:ogc:def:uom:EPSG::1025';
 
+    /**
+     * @var array<string, array{name: string, fqcn?: class-string<self>, help: string}>
+     */
     protected static array $sridData = [
         'urn:ogc:def:uom:EPSG::1025' => [
             'name' => 'millimetre',
+            'help' => '',
         ],
         'urn:ogc:def:uom:EPSG::1033' => [
             'name' => 'centimetre',
+            'help' => '',
         ],
         'urn:ogc:def:uom:EPSG::9001' => [
             'name' => 'metre',
+            'help' => 'SI base unit for length.',
         ],
         'urn:ogc:def:uom:EPSG::9002' => [
             'name' => 'foot',
+            'help' => '',
         ],
         'urn:ogc:def:uom:EPSG::9003' => [
             'name' => 'US survey foot',
+            'help' => 'Used in USA.',
         ],
         'urn:ogc:def:uom:EPSG::9005' => [
             'name' => 'Clarke\'s foot',
+            'help' => 'Assumes Clarke\'s 1865 ratio of 1 British foot = 0.3047972654 French legal metres applies to the international metre.   Used in older Australian, southern African & British West Indian mapping.',
         ],
         'urn:ogc:def:uom:EPSG::9031' => [
             'name' => 'German legal metre',
+            'help' => 'Used in Namibia.',
         ],
         'urn:ogc:def:uom:EPSG::9036' => [
             'name' => 'kilometre',
+            'help' => '',
         ],
         'urn:ogc:def:uom:EPSG::9037' => [
             'name' => 'Clarke\'s yard',
+            'help' => '=3 Clarke\'s feet.  Assumes Clarke\'s 1865 ratio of 1 British foot = 0.3047972654 French legal metres applies to the international metre.   Used in older Australian, southern African & British West Indian mapping.',
         ],
         'urn:ogc:def:uom:EPSG::9039' => [
             'name' => 'Clarke\'s link',
+            'help' => '=1/100 Clarke\'s chain. Assumes Clarke\'s 1865 ratio of 1 British foot = 0.3047972654 French legal metres applies to the international metre.   Used in older Australian, southern African & British West Indian mapping.',
         ],
         'urn:ogc:def:uom:EPSG::9040' => [
             'name' => 'British yard (Sears 1922)',
+            'help' => 'Uses Sear\'s 1922 British yard-metre ratio as given by Bomford as 39.370147 inches per metre.  Used in East Malaysian and older New Zealand mapping.',
         ],
         'urn:ogc:def:uom:EPSG::9041' => [
             'name' => 'British foot (Sears 1922)',
+            'help' => 'Uses Sear\'s 1922 British yard-metre ratio as given by Bomford as 39.370147 inches per metre.  Used in East Malaysian and older New Zealand mapping.',
         ],
         'urn:ogc:def:uom:EPSG::9042' => [
             'name' => 'British chain (Sears 1922)',
+            'help' => 'Uses Sear\'s 1922 British yard-metre ratio as given by Bomford as 39.370147 inches per metre.  Used in East Malaysian and older New Zealand mapping.',
         ],
         'urn:ogc:def:uom:EPSG::9062' => [
             'name' => 'British chain (Benoit 1895 B)',
+            'help' => 'Uses Benoit\'s 1895 British yard-metre ratio as given by Bomford as 39.370113 inches per metre.  Used in West Malaysian mapping.',
         ],
         'urn:ogc:def:uom:EPSG::9080' => [
             'name' => 'Indian foot',
+            'help' => 'Indian Foot = 0.99999566 British feet (A.R.Clarke 1865).  British yard (= 3 British feet) taken to be J.S.Clark\'s 1865 value of 0.9144025 metres.',
         ],
         'urn:ogc:def:uom:EPSG::9084' => [
             'name' => 'Indian yard',
+            'help' => 'Indian Foot = 0.99999566 British feet (A.R.Clarke 1865).  British yard (= 3 British feet) taken to be J.S.Clark\'s 1865 value of 0.9144025 metres.',
         ],
         'urn:ogc:def:uom:EPSG::9094' => [
             'name' => 'Gold Coast foot',
+            'help' => 'Used in Ghana and some adjacent parts of British west Africa prior to metrication, except for the metrication of projection defining parameters when British foot (Sears 1922) used.',
         ],
         'urn:ogc:def:uom:EPSG::9095' => [
             'name' => 'British foot (1936)',
+            'help' => 'For the 1936 retriangulation OSGB defines the relationship of 10 feet of 1796 to the International metre through the logarithmic relationship (10^0.48401603 exactly). 1 ft = 0.3048007491…m. Also used for metric conversions in Ireland.',
         ],
         'urn:ogc:def:uom:EPSG::9098' => [
             'name' => 'link',
+            'help' => '=1/100 international chain.',
         ],
         'urn:ogc:def:uom:EPSG::9301' => [
             'name' => 'British chain (Sears 1922 truncated)',
+            'help' => 'Uses Sear\'s 1922 British yard-metre ratio (UoM code 9040) truncated to 6 significant figures; this truncated ratio (0.914398, UoM code 9099) then converted to other imperial units. 1 chSe(T) = 22 ydSe(T). Used in metrication of Malaya RSO grid.',
         ],
     ];
-
-    /**
-     * @var array<string, array{name: string, fqcn: self}>
-     */
-    protected static array $customSridData = [];
-
-    private static array $supportedCache = [];
 
     abstract public function __construct(float $length);
 
@@ -251,8 +269,8 @@ abstract class Length implements UnitOfMeasure
 
     public static function makeUnit(float $measurement, string $srid): self
     {
-        if (isset(self::$customSridData[$srid])) {
-            return new self::$customSridData[$srid]['fqcn']($measurement);
+        if (isset(self::$sridData[$srid]['fqcn'])) {
+            return new self::$sridData[$srid]['fqcn']($measurement);
         }
 
         return match ($srid) {
@@ -280,29 +298,35 @@ abstract class Length implements UnitOfMeasure
         };
     }
 
-    public static function getSupportedSRIDs(): array
-    {
-        if (!self::$supportedCache) {
-            foreach (static::$sridData as $srid => $data) {
-                self::$supportedCache[$srid] = $data['name'];
-            }
-        }
-
-        return self::$supportedCache;
-    }
-
-    public static function registerCustomUnit(string $srid, string $name, string $implementingClassFQCN): void
-    {
-        self::$customSridData[$srid] = ['name' => $name, 'fqcn' => $implementingClassFQCN];
-        self::getSupportedSRIDs(); // init cache if not already
-        self::$supportedCache[$srid] = $name; // update cache
-    }
-
     public static function convert(self $length, string $targetSRID): self
     {
         $conversionRatio = static::makeUnit(1, $targetSRID)->asMetres()->getValue();
 
         return self::makeUnit($length->asMetres()->getValue() / $conversionRatio, $targetSRID);
+    }
+
+    /**
+     * @return array<string, string>
+     */
+    public static function getSupportedSRIDs(): array
+    {
+        return array_map(fn ($supportedSrid) => $supportedSrid['name'], self::$sridData);
+    }
+
+    /**
+     * @return array<string, array{name: string, help: string}>
+     */
+    public static function getSupportedSRIDsWithHelp(): array
+    {
+        return array_map(fn (array $data) => ['name' => $data['name'], 'help' => $data['help']], static::$sridData);
+    }
+
+    /**
+     * @param class-string<self> $implementingClassFQCN
+     */
+    public static function registerCustomUnit(string $srid, string $name, string $implementingClassFQCN, string $help = ''): void
+    {
+        self::$sridData[$srid] = ['name' => $name, 'fqcn' => $implementingClassFQCN, 'help' => $help];
     }
 
     public function __toString(): string

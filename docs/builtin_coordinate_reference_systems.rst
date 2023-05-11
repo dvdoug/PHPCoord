@@ -13,6 +13,10 @@ Built in coordinate systems
     A constant has been defined for each and every built in CRS, with supporting docblocks that match the contents of
     the following pages. These should be searchable/available for autocomplete from inside your favourite IDE.
 
+.. tip::
+    You can also access the list of supported CRSs at runtime using ``CoordinateReferenceSystem::getSupportedSRIDs()``
+    or ``CoordinateReferenceSystem::getSupportedSRIDsWithHelp()``
+
 .. toctree::
     :maxdepth: 1
 

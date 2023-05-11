@@ -11,6 +11,9 @@ namespace PHPCoord\CoordinateReferenceSystem;
 use PHPCoord\Exception\UnknownCoordinateReferenceSystemException;
 use PHPCoord\Geometry\BoundingArea;
 
+use function array_map;
+use function assert;
+
 class Compound extends CoordinateReferenceSystem
 {
     use CompoundSRIDData;
@@ -2966,19 +2969,18 @@ class Compound extends CoordinateReferenceSystem
      */
     public const EPSG_SRGI2013_PLUS_INAGEOID2020_HEIGHT = 'urn:ogc:def:crs:EPSG::9529';
 
+    /**
+     * @var array<string, self>
+     */
     private static array $cachedObjects = [];
 
-    private static array $supportedCache = [];
-
-    private static array $projectedSridCache = [];
-
-    private Geocentric|Geographic2D|Projected $horizontal;
+    private Geographic2D|Projected $horizontal;
 
     private Vertical $vertical;
 
     public function __construct(
         string $srid,
-        Geocentric|Geographic2D|Projected $horizontal,
+        Geographic2D|Projected $horizontal,
         Vertical $vertical,
         BoundingArea $boundingArea,
         string $name = ''
@@ -2990,7 +2992,7 @@ class Compound extends CoordinateReferenceSystem
         $this->name = $name;
     }
 
-    public function getHorizontal(): Geocentric|Geographic2D|Projected
+    public function getHorizontal(): Geographic2D|Projected
     {
         return $this->horizontal;
     }
@@ -3006,18 +3008,11 @@ class Compound extends CoordinateReferenceSystem
             throw new UnknownCoordinateReferenceSystemException($srid);
         }
 
-        if (!self::$projectedSridCache) {
-            self::$projectedSridCache = Projected::getSupportedSRIDs();
-        }
-
         if (!isset(self::$cachedObjects[$srid])) {
             $data = static::$sridData[$srid];
 
-            if (isset(self::$projectedSridCache[$data['horizontal_crs']])) {
-                $horizontalCRS = Projected::fromSRID($data['horizontal_crs']);
-            } else {
-                $horizontalCRS = Geographic2D::fromSRID($data['horizontal_crs']);
-            }
+            $horizontalCRS = CoordinateReferenceSystem::fromSRID($data['horizontal_crs']);
+            assert($horizontalCRS instanceof Geographic2D || $horizontalCRS instanceof Projected);
 
             self::$cachedObjects[$srid] = new self(
                 $srid,
@@ -3031,22 +3026,20 @@ class Compound extends CoordinateReferenceSystem
         return self::$cachedObjects[$srid];
     }
 
+    /**
+     * @return array<string, string>
+     */
     public static function getSupportedSRIDs(): array
     {
-        if (!self::$supportedCache) {
-            foreach (static::$sridData as $srid => $data) {
-                self::$supportedCache[$srid] = $data['name'];
-            }
-        }
-
-        return self::$supportedCache;
+        return array_map(fn (array $data) => $data['name'], static::$sridData);
     }
 
-    public static function registerCustomCRS(string $srid, string $name, string $coordinateSystem, string $datum, array $extent): void
+    /**
+     * @return array<string, array{name: string, extent_description: string, help: string}>
+     */
+    public static function getSupportedSRIDsWithHelp(): array
     {
-        self::$sridData[$srid] = ['name' => $name, 'coordinate_system' => $coordinateSystem, 'datum' => $datum, 'extent' => $extent];
-        self::getSupportedSRIDs(); // init cache if not already
-        self::$supportedCache[$srid] = $name; // update cache
+        return array_map(fn (array $data) => ['name' => $data['name'], 'extent_description' => $data['extent_description'], 'help' => $data['help']], static::$sridData);
     }
 
     /**

@@ -11,6 +11,8 @@ namespace PHPCoord\UnitOfMeasure\Time;
 use PHPCoord\Exception\UnknownUnitOfMeasureException;
 use PHPCoord\UnitOfMeasure\UnitOfMeasure;
 
+use function array_map;
+
 abstract class Time implements UnitOfMeasure
 {
     /**
@@ -18,18 +20,15 @@ abstract class Time implements UnitOfMeasure
      */
     public const EPSG_YEAR = 'urn:ogc:def:uom:EPSG::1029';
 
+    /**
+     * @var array<string, array{name: string, fqcn?: class-string<self>, help: string}>
+     */
     protected static array $sridData = [
         'urn:ogc:def:uom:EPSG::1029' => [
             'name' => 'year',
+            'help' => '',
         ],
     ];
-
-    /**
-     * @var array<string, array{name: string, fqcn: self}>
-     */
-    protected static array $customSridData = [];
-
-    private static array $supportedCache = [];
 
     abstract public function __construct(float $time);
 
@@ -69,8 +68,8 @@ abstract class Time implements UnitOfMeasure
 
     public static function makeUnit(float $measurement, string $srid): self
     {
-        if (isset(self::$customSridData[$srid])) {
-            return new self::$customSridData[$srid]['fqcn']($measurement);
+        if (isset(self::$sridData[$srid]['fqcn'])) {
+            return new self::$sridData[$srid]['fqcn']($measurement);
         }
 
         return match ($srid) {
@@ -79,22 +78,28 @@ abstract class Time implements UnitOfMeasure
         };
     }
 
+    /**
+     * @return array<string, string>
+     */
     public static function getSupportedSRIDs(): array
     {
-        if (!self::$supportedCache) {
-            foreach (static::$sridData as $srid => $data) {
-                self::$supportedCache[$srid] = $data['name'];
-            }
-        }
-
-        return self::$supportedCache;
+        return array_map(fn ($supportedSrid) => $supportedSrid['name'], self::$sridData);
     }
 
-    public static function registerCustomUnit(string $srid, string $name, string $implementingClassFQCN): void
+    /**
+     * @return array<string, array{name: string, help: string}>
+     */
+    public static function getSupportedSRIDsWithHelp(): array
     {
-        self::$customSridData[$srid] = ['name' => $name, 'fqcn' => $implementingClassFQCN];
-        self::getSupportedSRIDs(); // init cache if not already
-        self::$supportedCache[$srid] = $name; // update cache
+        return array_map(fn (array $data) => ['name' => $data['name'], 'help' => $data['help']], static::$sridData);
+    }
+
+    /**
+     * @param class-string<self> $implementingClassFQCN
+     */
+    public static function registerCustomUnit(string $srid, string $name, string $implementingClassFQCN, string $help = ''): void
+    {
+        self::$sridData[$srid] = ['name' => $name, 'fqcn' => $implementingClassFQCN, 'help' => $help];
     }
 
     public function __toString(): string

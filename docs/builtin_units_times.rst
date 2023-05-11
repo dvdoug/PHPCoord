@@ -5,6 +5,10 @@ Units of time
     All time units have helper methods ``->asYears()``, ``->add()``, ``->subtract()``,
     ``->multiply()`` and ``->divide()``
 
+.. tip::
+    You can access the list of supported time units at runtime using ``Time::getSupportedSRIDs()`` or
+    ``Time::getSupportedSRIDsWithHelp()``
+
 Year
 ----
 

@@ -53,6 +53,9 @@ abstract class CoordinateReferenceSystem
 
     protected BoundingArea $boundingArea;
 
+    /**
+     * @var array<string, Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical>
+     */
     private static array $cachedObjects = [];
 
     public function getSRID(): string
@@ -103,8 +106,19 @@ abstract class CoordinateReferenceSystem
         return self::$cachedObjects[$srid];
     }
 
+    /**
+     * @return array<string, string>
+     */
     public static function getSupportedSRIDs(): array
     {
         return array_merge(Compound::getSupportedSRIDs(), Geocentric::getSupportedSRIDs(), Geographic2D::getSupportedSRIDs(), Geographic3D::getSupportedSRIDs(), Projected::getSupportedSRIDs(), Vertical::getSupportedSRIDs());
+    }
+
+    /**
+     * @return array<string, array{name: string, extent_description: string, help: string}>
+     */
+    public static function getSupportedSRIDsWithHelp(): array
+    {
+        return array_merge(Compound::getSupportedSRIDsWithHelp(), Geocentric::getSupportedSRIDsWithHelp(), Geographic2D::getSupportedSRIDsWithHelp(), Geographic3D::getSupportedSRIDsWithHelp(), Projected::getSupportedSRIDsWithHelp(), Vertical::getSupportedSRIDsWithHelp());
     }
 }

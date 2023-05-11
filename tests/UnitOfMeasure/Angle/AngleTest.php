@@ -26,6 +26,16 @@ class AngleTest extends TestCase
         }
     }
 
+    public function testCanGetSupportedWithHelp(): void
+    {
+        $supported = Angle::getSupportedSRIDsWithHelp();
+        self::assertGreaterThan(0, count($supported));
+        foreach ($supported as $key => $value) {
+            self::assertStringStartsWith('urn:ogc:def:', $key);
+            self::assertIsArray($value);
+        }
+    }
+
     /**
      * @dataProvider unitsOfMeasure
      */

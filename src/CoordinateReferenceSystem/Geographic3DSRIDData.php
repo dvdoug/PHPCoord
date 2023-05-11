@@ -8,6 +8,8 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateReferenceSystem;
 
+use PHPCoord\Geometry\BoundingArea;
+
 /**
  * @internal
  * This file contains the Geocentric 3D CRS SRID data, it only exists here because otherwise the main file becomes too large
@@ -16,6 +18,9 @@ namespace PHPCoord\CoordinateReferenceSystem;
  */
 trait Geographic3DSRIDData
 {
+    /**
+     * @var array<string, array{name: string, coordinate_system: string, base_crs: ?string, datum: string, extent: BoundingArea|array<string>, extent_description: string, help: string}>
+     */
     protected static array $sridData = [
         'urn:ogc:def:crs:EPSG::3823' => [
             'name' => 'TWD97',
@@ -23,6 +28,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::3822',
             'datum' => 'urn:ogc:def:datum:EPSG::1026',
             'extent' => ['1228'],
+            'extent_description' => 'Taiwan, Republic of China - onshore and offshore - Taiwan Island, Penghu (Pescadores) Islands.',
+            'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::3888' => [
             'name' => 'IGRS',
@@ -30,6 +37,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::3887',
             'datum' => 'urn:ogc:def:datum:EPSG::1029',
             'extent' => ['1124'],
+            'extent_description' => 'Iraq - onshore and offshore.',
+            'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4017' => [
             'name' => 'MOLDREF99',
@@ -37,6 +46,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4000',
             'datum' => 'urn:ogc:def:datum:EPSG::1032',
             'extent' => ['1162'],
+            'extent_description' => 'Moldova.',
+            'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4040' => [
             'name' => 'RGRDC 2005',
@@ -44,6 +55,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4039',
             'datum' => 'urn:ogc:def:datum:EPSG::1033',
             'extent' => ['3613'],
+            'extent_description' => 'The Democratic Republic of the Congo (Zaire) - south of a line through Bandundu, Seke and Pweto - onshore and offshore.',
+            'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4074' => [
             'name' => 'SREF98',
@@ -51,6 +64,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4073',
             'datum' => 'urn:ogc:def:datum:EPSG::1034',
             'extent' => ['4543'],
+            'extent_description' => 'Serbia including Vojvodina.',
+            'help' => 'Replaced by SRB_ETRS89 (STRS00) (CRS code 8684).',
         ],
         'urn:ogc:def:crs:EPSG::4080' => [
             'name' => 'REGCAN95',
@@ -58,6 +73,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4079',
             'datum' => 'urn:ogc:def:datum:EPSG::1035',
             'extent' => ['3199'],
+            'extent_description' => 'Spain - Canary Islands onshore and offshore.',
+            'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4466' => [
             'name' => 'RGSPM06',
@@ -65,6 +82,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4465',
             'datum' => 'urn:ogc:def:datum:EPSG::1038',
             'extent' => ['1220'],
+            'extent_description' => 'St Pierre and Miquelon - onshore and offshore.',
+            'help' => 'See CRS code 7034 for alternate system with horizontal axes reversed used by IGN for GIS purposes.',
         ],
         'urn:ogc:def:crs:EPSG::4469' => [
             'name' => 'RGM04',
@@ -72,6 +91,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4468',
             'datum' => 'urn:ogc:def:datum:EPSG::1036',
             'extent' => ['1159'],
+            'extent_description' => 'Mayotte - onshore and offshore.',
+            'help' => 'See CRS code 7038 for alternate system with horizontal axes reversed used by IGN for GIS purposes.',
         ],
         'urn:ogc:def:crs:EPSG::4472' => [
             'name' => 'Cadastre 1997',
@@ -79,6 +100,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4473',
             'datum' => 'urn:ogc:def:datum:EPSG::1037',
             'extent' => ['3340'],
+            'extent_description' => 'Mayotte - onshore.',
+            'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4480' => [
             'name' => 'China Geodetic Coordinate System 2000',
@@ -86,6 +109,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4479',
             'datum' => 'urn:ogc:def:datum:EPSG::1043',
             'extent' => ['1067'],
+            'extent_description' => 'China - onshore and offshore.',
+            'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4482' => [
             'name' => 'Mexico ITRF92',
@@ -93,6 +118,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4481',
             'datum' => 'urn:ogc:def:datum:EPSG::1042',
             'extent' => ['1160'],
+            'extent_description' => 'Mexico - onshore and offshore.',
+            'help' => 'Replaced by Mexico ITRF2008 (CRS code 6364) from December 2010.',
         ],
         'urn:ogc:def:crs:EPSG::4557' => [
             'name' => 'RRAF 1991',
@@ -100,6 +127,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4556',
             'datum' => 'urn:ogc:def:datum:EPSG::1047',
             'extent' => ['2824'],
+            'extent_description' => 'French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante, Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; St Martin.',
+            'help' => 'Replaces older local 2D systems Fort Marigot and Sainte Anne CRS (codes 4621-22) in Guadeloupe and Fort Desaix (CRS code 4625) in Martinique. Replaced by RGAF09 (CRS code 5488).',
         ],
         'urn:ogc:def:crs:EPSG::4883' => [
             'name' => 'Slovenia 1996',
@@ -107,6 +136,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4882',
             'datum' => 'urn:ogc:def:datum:EPSG::6765',
             'extent' => ['1212'],
+            'extent_description' => 'Slovenia - onshore and offshore.',
+            'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4885' => [
             'name' => 'RSRGD2000',
@@ -114,6 +145,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4884',
             'datum' => 'urn:ogc:def:datum:EPSG::6764',
             'extent' => ['3558'],
+            'extent_description' => 'Antarctica - Ross Sea Region - nominally between 160°E and 150°W but includes buffer on eastern hemisphere margin to include Transantarctic Mountains',
+            'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4887' => [
             'name' => 'BDA2000',
@@ -121,6 +154,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4886',
             'datum' => 'urn:ogc:def:datum:EPSG::6762',
             'extent' => ['1047'],
+            'extent_description' => 'Bermuda - onshore and offshore.',
+            'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4889' => [
             'name' => 'HTRS96',
@@ -128,6 +163,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4888',
             'datum' => 'urn:ogc:def:datum:EPSG::6761',
             'extent' => ['1076'],
+            'extent_description' => 'Croatia - onshore and offshore.',
+            'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4891' => [
             'name' => 'WGS 66',
@@ -135,6 +172,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4890',
             'datum' => 'urn:ogc:def:datum:EPSG::6760',
             'extent' => ['1262'],
+            'extent_description' => 'World.',
+            'help' => 'Replaced by WGS 72.',
         ],
         'urn:ogc:def:crs:EPSG::4893' => [
             'name' => 'NAD83(NSRS2007)',
@@ -142,6 +181,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4892',
             'datum' => 'urn:ogc:def:datum:EPSG::6759',
             'extent' => ['1511'],
+            'extent_description' => 'Puerto Rico - onshore and offshore. United States (USA) onshore and offshore - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming. US Virgin Islands - onshore and offshore.',
+            'help' => 'Note: this CRS includes longitudes which are POSITIVE EAST. Replaces NAD83(HARN) and NAD83(FBN). Replaced by NAD83(2011).',
         ],
         'urn:ogc:def:crs:EPSG::4895' => [
             'name' => 'JAD2001',
@@ -149,6 +190,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4894',
             'datum' => 'urn:ogc:def:datum:EPSG::6758',
             'extent' => ['1128'],
+            'extent_description' => 'Jamaica - onshore and offshore. Includes Morant Cays and Pedro Cays.',
+            'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4898' => [
             'name' => 'DGN95',
@@ -156,6 +199,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4897',
             'datum' => 'urn:ogc:def:datum:EPSG::6755',
             'extent' => ['1122'],
+            'extent_description' => 'Indonesia - onshore and offshore.',
+            'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4900' => [
             'name' => 'LGD2006',
@@ -163,6 +208,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4899',
             'datum' => 'urn:ogc:def:datum:EPSG::6754',
             'extent' => ['1143'],
+            'extent_description' => 'Libya - onshore and offshore.',
+            'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4907' => [
             'name' => 'RGNC91-93',
@@ -170,6 +217,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4906',
             'datum' => 'urn:ogc:def:datum:EPSG::6749',
             'extent' => ['1174'],
+            'extent_description' => 'New Caledonia - onshore and offshore. Isle de Pins, Loyalty Islands, Huon Islands, Belep archipelago, Chesterfield Islands, and Walpole.',
+            'help' => 'Replaces older systems IGN56 Lifou, IGN72 Grande Terre, ST87 Ouvea, IGN53 Mare, ST84 Ile des Pins, ST71 Belep and NEA74 Noumea. Replaced by RGNC15 (CRS 10309). See CRS code 10300 for alternate system with axes reversed used by DITTT for GIS purposes.',
         ],
         'urn:ogc:def:crs:EPSG::4909' => [
             'name' => 'GR96',
@@ -177,6 +226,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4908',
             'datum' => 'urn:ogc:def:datum:EPSG::6747',
             'extent' => ['1107'],
+            'extent_description' => 'Greenland - onshore and offshore.',
+            'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4921' => [
             'name' => 'GDM2000',
@@ -184,6 +235,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4920',
             'datum' => 'urn:ogc:def:datum:EPSG::6742',
             'extent' => ['1151'],
+            'extent_description' => 'Malaysia - onshore and offshore. Includes peninsular Malayasia, Sabah and Sarawak.',
+            'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4923' => [
             'name' => 'PZ-90',
@@ -191,6 +244,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4922',
             'datum' => 'urn:ogc:def:datum:EPSG::6740',
             'extent' => ['1262'],
+            'extent_description' => 'World.',
+            'help' => 'Replaced by PZ-90.02 from 2007-09-20.',
         ],
         'urn:ogc:def:crs:EPSG::4925' => [
             'name' => 'Mauritania 1999',
@@ -198,6 +253,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4924',
             'datum' => 'urn:ogc:def:datum:EPSG::6702',
             'extent' => ['1157'],
+            'extent_description' => 'Mauritania - onshore and offshore.',
+            'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4927' => [
             'name' => 'Korea 2000',
@@ -205,6 +262,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4926',
             'datum' => 'urn:ogc:def:datum:EPSG::6737',
             'extent' => ['1135'],
+            'extent_description' => 'Republic of Korea (South Korea) - onshore and offshore.',
+            'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4929' => [
             'name' => 'POSGAR 94',
@@ -212,6 +271,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4928',
             'datum' => 'urn:ogc:def:datum:EPSG::6694',
             'extent' => ['1033'],
+            'extent_description' => 'Argentina - onshore and offshore.',
+            'help' => 'Legally adopted in May 1997. Replaced by POSGAR 98 for scientific and many practical purposes until May 2009. Officially replaced by POSGAR 2007 in May 2009.',
         ],
         'urn:ogc:def:crs:EPSG::4931' => [
             'name' => 'Australian Antarctic',
@@ -219,6 +280,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4930',
             'datum' => 'urn:ogc:def:datum:EPSG::6176',
             'extent' => ['1278'],
+            'extent_description' => 'Antarctica between 45°E and 136°E and between 142°E and 160°E - Australian sector.',
+            'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4933' => [
             'name' => 'CHTRS95',
@@ -226,6 +289,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4932',
             'datum' => 'urn:ogc:def:datum:EPSG::6151',
             'extent' => ['1286'],
+            'extent_description' => 'Liechtenstein; Switzerland.',
+            'help' => 'Referenced to ETRS89 at epoch 1993.0. For CRS used for topographic and cadastral purposes see CH1903+ (CRS code 4150).',
         ],
         'urn:ogc:def:crs:EPSG::4935' => [
             'name' => 'EST97',
@@ -233,6 +298,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4934',
             'datum' => 'urn:ogc:def:datum:EPSG::6180',
             'extent' => ['1090'],
+            'extent_description' => 'Estonia - onshore and offshore.',
+            'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4937' => [
             'name' => 'ETRS89',
@@ -240,6 +307,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4936',
             'datum' => 'urn:ogc:def:datum:EPSG::6258',
             'extent' => ['1298'],
+            'extent_description' => 'Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State.',
+            'help' => 'Has been realized through ETRF89, ETRF90, ETRF91, ETRF92, ETRF93, ETRF94, ETRF96, ETRF97, ETRF2000, ETRF2005 and ETRF2014. This \'ensemble\' covers any or all of these realizations without distinction.',
         ],
         'urn:ogc:def:crs:EPSG::4939' => [
             'name' => 'GDA94',
@@ -247,6 +316,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4938',
             'datum' => 'urn:ogc:def:datum:EPSG::6283',
             'extent' => ['4177'],
+            'extent_description' => 'Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.',
+            'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4941' => [
             'name' => 'Hartebeesthoek94',
@@ -254,6 +325,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4940',
             'datum' => 'urn:ogc:def:datum:EPSG::6148',
             'extent' => ['4540'],
+            'extent_description' => 'Eswatini (Swaziland); Lesotho; South Africa - onshore and offshore.',
+            'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4943' => [
             'name' => 'IRENET95',
@@ -261,6 +334,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4942',
             'datum' => 'urn:ogc:def:datum:EPSG::6173',
             'extent' => ['1305'],
+            'extent_description' => 'Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore.',
+            'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4945' => [
             'name' => 'ISN93',
@@ -268,6 +343,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4944',
             'datum' => 'urn:ogc:def:datum:EPSG::6659',
             'extent' => ['1120'],
+            'extent_description' => 'Iceland - onshore and offshore.',
+            'help' => 'Replaced by ISN2004 (CRS code 5323).',
         ],
         'urn:ogc:def:crs:EPSG::4947' => [
             'name' => 'JGD2000',
@@ -275,6 +352,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4946',
             'datum' => 'urn:ogc:def:datum:EPSG::6612',
             'extent' => ['1129'],
+            'extent_description' => 'Japan - onshore and offshore.',
+            'help' => 'From 21st October 2011 replaced by JGD2011 (CRS code 6667).',
         ],
         'urn:ogc:def:crs:EPSG::4949' => [
             'name' => 'LKS-92',
@@ -282,6 +361,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4948',
             'datum' => 'urn:ogc:def:datum:EPSG::6661',
             'extent' => ['1139'],
+            'extent_description' => 'Latvia - onshore and offshore.',
+            'help' => 'Replaced by LKS-2020 (CRS code 10304).',
         ],
         'urn:ogc:def:crs:EPSG::4951' => [
             'name' => 'LKS94',
@@ -289,6 +370,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4950',
             'datum' => 'urn:ogc:def:datum:EPSG::6126',
             'extent' => ['1145'],
+            'extent_description' => 'Lithuania - onshore and offshore.',
+            'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4953' => [
             'name' => 'Moznet',
@@ -296,6 +379,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4952',
             'datum' => 'urn:ogc:def:datum:EPSG::6130',
             'extent' => ['1167'],
+            'extent_description' => 'Mozambique - onshore and offshore.',
+            'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4955' => [
             'name' => 'NAD83(CSRS)',
@@ -303,6 +388,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4954',
             'datum' => 'urn:ogc:def:datum:EPSG::6140',
             'extent' => ['1061'],
+            'extent_description' => 'Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.',
+            'help' => 'Includes all versions of NAD83(CSRS) from v2 [CSRS98] onwards without specific identification. As such it has an accuracy of approximately 1m. Note: this CRS includes longitudes which are POSITIVE EAST.',
         ],
         'urn:ogc:def:crs:EPSG::4957' => [
             'name' => 'NAD83(HARN)',
@@ -310,6 +397,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4956',
             'datum' => 'urn:ogc:def:datum:EPSG::6152',
             'extent' => ['1337'],
+            'extent_description' => 'American Samoa - onshore - Tutuila, Aunu\'u, Ofu, Olesega, Ta\'u and Rose islands. Guam - onshore. Northern Mariana Islands - onshore. Puerto Rico - onshore. United States (USA) - onshore Alabama, Alaska, Arizona, Arkansas, California, Colorado, Connecticut, Delaware, Florida, Georgia, Hawaii, Idaho, Illinois, Indiana, Iowa, Kansas, Kentucky, Louisiana, Maine, Maryland, Massachusetts, Michigan, Minnesota, Mississippi, Missouri, Montana, Nebraska, Nevada, New Hampshire, New Jersey, New Mexico, New York, North Carolina, North Dakota, Ohio, Oklahoma, Oregon, Pennsylvania, Rhode Island, South Carolina, South Dakota, Tennessee, Texas, Utah, Vermont, Virginia, Washington, West Virginia, Wisconsin and Wyoming; offshore Gulf of Mexico continental shelf (GoM OCS). US Virgin Islands - onshore.',
+            'help' => 'In CONUS and Hawaii replaces NAD83 for applications with an accuracy of better than 1m. Replaced by NAD83(FBN) in CONUS, American Samoa and Guam / NMI, by NAD83(NSRS2007) in Alaska, by NAD83(PA11) in Hawaii and by NAD83(HARN Corrected) in PRVI.',
         ],
         'urn:ogc:def:crs:EPSG::4959' => [
             'name' => 'NZGD2000',
@@ -317,6 +406,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4958',
             'datum' => 'urn:ogc:def:datum:EPSG::6167',
             'extent' => ['1175'],
+            'extent_description' => 'New Zealand - onshore and offshore. Includes Antipodes Islands, Auckland Islands, Bounty Islands, Chatham Islands, Cambell Island, Kermadec Islands, Raoul Island and Snares Islands.',
+            'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4961' => [
             'name' => 'POSGAR 98',
@@ -324,6 +415,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4960',
             'datum' => 'urn:ogc:def:datum:EPSG::6190',
             'extent' => ['1033'],
+            'extent_description' => 'Argentina - onshore and offshore.',
+            'help' => 'Densification in Argentina of SIRGAS 1995. Until May 2009 replaced POSGAR 94 for many practical purposes (but not as the legal system). POSGAR 94 was officially replaced by POSGAR 2007 in May 2009.',
         ],
         'urn:ogc:def:crs:EPSG::4963' => [
             'name' => 'REGVEN',
@@ -331,6 +424,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4962',
             'datum' => 'urn:ogc:def:datum:EPSG::6189',
             'extent' => ['1251'],
+            'extent_description' => 'Venezuela - onshore and offshore.',
+            'help' => 'Densification in Venezuela of SIRGAS.',
         ],
         'urn:ogc:def:crs:EPSG::4965' => [
             'name' => 'RGF93 v1',
@@ -338,6 +433,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4964',
             'datum' => 'urn:ogc:def:datum:EPSG::6171',
             'extent' => ['1096'],
+            'extent_description' => 'France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).',
+            'help' => 'See CRS code 7042 for alternate system with horizontal axes reversed used by IGN for GIS purposes. Replaced by RGF93 v2 (CRS code 9776) from 2010-06-18.',
         ],
         'urn:ogc:def:crs:EPSG::4967' => [
             'name' => 'RGFG95',
@@ -345,6 +442,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4966',
             'datum' => 'urn:ogc:def:datum:EPSG::6624',
             'extent' => ['1097'],
+            'extent_description' => 'French Guiana - onshore and offshore.',
+            'help' => 'See CRS code 7040 for alternate system with horizontal axes reversed used by IGN for GIS purposes.',
         ],
         'urn:ogc:def:crs:EPSG::4971' => [
             'name' => 'RGR92',
@@ -352,6 +451,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4970',
             'datum' => 'urn:ogc:def:datum:EPSG::6627',
             'extent' => ['3902'],
+            'extent_description' => 'Reunion - onshore and offshore.',
+            'help' => 'See CRS code 7036 for alternate system with horizontal axes reversed used by IGN for GIS purposes.',
         ],
         'urn:ogc:def:crs:EPSG::4975' => [
             'name' => 'SIRGAS 1995',
@@ -359,6 +460,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4974',
             'datum' => 'urn:ogc:def:datum:EPSG::6170',
             'extent' => ['3448'],
+            'extent_description' => 'South America - onshore and offshore. Ecuador (mainland and Galapagos) - onshore and offshore.',
+            'help' => 'Replaced by SIRGAS 2000 (CRS code 4989).',
         ],
         'urn:ogc:def:crs:EPSG::4977' => [
             'name' => 'SWEREF99',
@@ -366,6 +469,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4976',
             'datum' => 'urn:ogc:def:datum:EPSG::6619',
             'extent' => ['1225'],
+            'extent_description' => 'Sweden - onshore and offshore.',
+            'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4979' => [
             'name' => 'WGS 84',
@@ -373,6 +478,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4978',
             'datum' => 'urn:ogc:def:datum:EPSG::6326',
             'extent' => ['1262'],
+            'extent_description' => 'World.',
+            'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4981' => [
             'name' => 'Yemen NGN96',
@@ -380,6 +487,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4980',
             'datum' => 'urn:ogc:def:datum:EPSG::6163',
             'extent' => ['1257'],
+            'extent_description' => 'Yemen - onshore and offshore.',
+            'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4983' => [
             'name' => 'IGM95',
@@ -387,6 +496,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4982',
             'datum' => 'urn:ogc:def:datum:EPSG::6670',
             'extent' => ['3343'],
+            'extent_description' => 'Italy - onshore and offshore; San Marino, Vatican City State.',
+            'help' => 'Replaced by RDN2008 (CRS code 6705) from 2011-11-10.',
         ],
         'urn:ogc:def:crs:EPSG::4985' => [
             'name' => 'WGS 72',
@@ -394,6 +505,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4984',
             'datum' => 'urn:ogc:def:datum:EPSG::6322',
             'extent' => ['1262'],
+            'extent_description' => 'World.',
+            'help' => 'Replaced by WGS 84.',
         ],
         'urn:ogc:def:crs:EPSG::4987' => [
             'name' => 'WGS 72BE',
@@ -401,6 +514,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4986',
             'datum' => 'urn:ogc:def:datum:EPSG::6324',
             'extent' => ['1262'],
+            'extent_description' => 'World.',
+            'help' => 'Broadcast ephemeris. Replaced by WGS 84.',
         ],
         'urn:ogc:def:crs:EPSG::4989' => [
             'name' => 'SIRGAS 2000',
@@ -408,6 +523,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4988',
             'datum' => 'urn:ogc:def:datum:EPSG::6674',
             'extent' => ['3418'],
+            'extent_description' => 'Latin America - Central America and South America - onshore and offshore. Brazil - onshore and offshore.',
+            'help' => 'Replaces SIRGAS 1995 system (CRS code 4975) for South America; expands SIRGAS to Central America.',
         ],
         'urn:ogc:def:crs:EPSG::4991' => [
             'name' => 'Lao 1993',
@@ -415,6 +532,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4990',
             'datum' => 'urn:ogc:def:datum:EPSG::6677',
             'extent' => ['1138'],
+            'extent_description' => 'Laos.',
+            'help' => 'Replaced by Lao 1997. Lao 1993 coordinate values are within 1m of Lao 1997 values.',
         ],
         'urn:ogc:def:crs:EPSG::4993' => [
             'name' => 'Lao 1997',
@@ -422,6 +541,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4992',
             'datum' => 'urn:ogc:def:datum:EPSG::6678',
             'extent' => ['1138'],
+            'extent_description' => 'Laos.',
+            'help' => 'Replaces Lao 1993. Lao 1993 coordinate values are within 1m of Lao 1997 values.',
         ],
         'urn:ogc:def:crs:EPSG::4995' => [
             'name' => 'PRS92',
@@ -429,6 +550,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4994',
             'datum' => 'urn:ogc:def:datum:EPSG::6683',
             'extent' => ['1190'],
+            'extent_description' => 'Philippines - onshore and offshore.',
+            'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4997' => [
             'name' => 'MAGNA-SIRGAS',
@@ -436,6 +559,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4996',
             'datum' => 'urn:ogc:def:datum:EPSG::6686',
             'extent' => ['1070'],
+            'extent_description' => 'Colombia - onshore and offshore. Includes San Andres y Providencia, Malpelo Islands, Roncador Bank, Serrana Bank and Serranilla Bank.',
+            'help' => 'For high accuracy purposes replaced by MAGNA-SIRGAS 2018 (code 20045).',
         ],
         'urn:ogc:def:crs:EPSG::4999' => [
             'name' => 'RGPF',
@@ -443,6 +568,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4998',
             'datum' => 'urn:ogc:def:datum:EPSG::6687',
             'extent' => ['1098'],
+            'extent_description' => 'French Polynesia - onshore and offshore. Includes Society archipelago, Tuamotu archipelago, Marquesas Islands, Gambier Islands and Austral Islands.',
+            'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5012' => [
             'name' => 'PTRA08',
@@ -450,6 +577,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::5011',
             'datum' => 'urn:ogc:def:datum:EPSG::1041',
             'extent' => ['3670'],
+            'extent_description' => 'Portugal - Azores and Madeira island groups and surrounding EEZ - Flores, Corvo; Graciosa, Terceira, Sao Jorge, Pico, Faial; Sao Miguel, Santa Maria; Madeira, Porto Santo, Desertas; Selvagens.',
+            'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5245' => [
             'name' => 'GDBD2009',
@@ -457,6 +586,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::5244',
             'datum' => 'urn:ogc:def:datum:EPSG::1056',
             'extent' => ['1055'],
+            'extent_description' => 'Brunei Darussalam - onshore and offshore.',
+            'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5251' => [
             'name' => 'TUREF',
@@ -464,6 +595,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::5250',
             'datum' => 'urn:ogc:def:datum:EPSG::1057',
             'extent' => ['1237'],
+            'extent_description' => 'Türkiye (Turkey) - onshore and offshore.',
+            'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5263' => [
             'name' => 'DRUKREF 03',
@@ -471,6 +604,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::5262',
             'datum' => 'urn:ogc:def:datum:EPSG::1058',
             'extent' => ['1048'],
+            'extent_description' => 'Bhutan.',
+            'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5323' => [
             'name' => 'ISN2004',
@@ -478,6 +613,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::5322',
             'datum' => 'urn:ogc:def:datum:EPSG::1060',
             'extent' => ['1120'],
+            'extent_description' => 'Iceland - onshore and offshore.',
+            'help' => 'Replaces ISN93 (CRS code 4945). Replaced by ISN2016 (CRS code 8085).',
         ],
         'urn:ogc:def:crs:EPSG::5342' => [
             'name' => 'POSGAR 2007',
@@ -485,6 +622,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::5341',
             'datum' => 'urn:ogc:def:datum:EPSG::1062',
             'extent' => ['1033'],
+            'extent_description' => 'Argentina - onshore and offshore.',
+            'help' => 'Adopted as official replacement of POSGAR 94 in May 2009. Also replaces de facto use of POSGAR 98 as of same date.',
         ],
         'urn:ogc:def:crs:EPSG::5353' => [
             'name' => 'MARGEN',
@@ -492,6 +631,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::5352',
             'datum' => 'urn:ogc:def:datum:EPSG::1063',
             'extent' => ['1049'],
+            'extent_description' => 'Bolivia.',
+            'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5359' => [
             'name' => 'SIRGAS-Chile 2002',
@@ -499,6 +640,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::5358',
             'datum' => 'urn:ogc:def:datum:EPSG::1064',
             'extent' => ['1066'],
+            'extent_description' => 'Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez.',
+            'help' => 'Densification of SIRGAS 2000 within Chile. Replaced by SIRGAS-Chile 2010 (CRS code 8948).',
         ],
         'urn:ogc:def:crs:EPSG::5364' => [
             'name' => 'CR05',
@@ -506,6 +649,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::5363',
             'datum' => 'urn:ogc:def:datum:EPSG::1065',
             'extent' => ['1074'],
+            'extent_description' => 'Costa Rica - onshore and offshore.',
+            'help' => 'Replaced by CR-SIRGAS (CRS code 8906) from April 2018.',
         ],
         'urn:ogc:def:crs:EPSG::5370' => [
             'name' => 'MACARIO SOLIS',
@@ -513,6 +658,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::5368',
             'datum' => 'urn:ogc:def:datum:EPSG::1066',
             'extent' => ['1186'],
+            'extent_description' => 'Panama - onshore and offshore.',
+            'help' => 'Densification of SIRGAS 2000 within Panama.',
         ],
         'urn:ogc:def:crs:EPSG::5372' => [
             'name' => 'Peru96',
@@ -520,6 +667,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::5369',
             'datum' => 'urn:ogc:def:datum:EPSG::1067',
             'extent' => ['1189'],
+            'extent_description' => 'Peru - onshore and offshore.',
+            'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5380' => [
             'name' => 'SIRGAS-ROU98',
@@ -527,6 +676,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::5379',
             'datum' => 'urn:ogc:def:datum:EPSG::1068',
             'extent' => ['1247'],
+            'extent_description' => 'Uruguay - onshore and offshore.',
+            'help' => 'Densification of SIRGAS 1995 in Uruguay.',
         ],
         'urn:ogc:def:crs:EPSG::5392' => [
             'name' => 'SIRGAS_ES2007.8',
@@ -534,6 +685,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::5391',
             'datum' => 'urn:ogc:def:datum:EPSG::1069',
             'extent' => ['1087'],
+            'extent_description' => 'El Salvador - onshore and offshore.',
+            'help' => 'Densification of SIRGAS 2000 within El Salvador.',
         ],
         'urn:ogc:def:crs:EPSG::5488' => [
             'name' => 'RGAF09',
@@ -541,6 +694,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::5487',
             'datum' => 'urn:ogc:def:datum:EPSG::1073',
             'extent' => ['2824'],
+            'extent_description' => 'French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante, Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; St Martin.',
+            'help' => 'Replaces RRAF 1991 (CRS code 4557). See CRS code 7085 for alternate system with horizontal axes reversed used by IGN for GIS purposes.',
         ],
         'urn:ogc:def:crs:EPSG::5545' => [
             'name' => 'PNG94',
@@ -548,6 +703,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::5544',
             'datum' => 'urn:ogc:def:datum:EPSG::1076',
             'extent' => ['1187'],
+            'extent_description' => 'Papua New Guinea - onshore and offshore. Includes Bismark archipelago, Louisade archipelago, Admiralty Islands, d\'Entrecasteaux Islands, northern Solomon Islands, Trobriand Islands, New Britain, New Ireland, Woodlark, and associated islands.',
+            'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5560' => [
             'name' => 'UCS-2000',
@@ -555,6 +712,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::5558',
             'datum' => 'urn:ogc:def:datum:EPSG::1077',
             'extent' => ['1242'],
+            'extent_description' => 'Ukraine - onshore and offshore.',
+            'help' => 'Adopted 1st January 2007.',
         ],
         'urn:ogc:def:crs:EPSG::5592' => [
             'name' => 'FEH2010',
@@ -562,6 +721,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::5591',
             'datum' => 'urn:ogc:def:datum:EPSG::1078',
             'extent' => ['3889'],
+            'extent_description' => 'Fehmarnbelt area of Denmark and Germany.',
+            'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5830' => [
             'name' => 'DB_REF',
@@ -569,6 +730,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::5828',
             'datum' => 'urn:ogc:def:datum:EPSG::1081',
             'extent' => ['3339'],
+            'extent_description' => 'Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt, Schleswig-Holstein, Thuringen.',
+            'help' => 'Geometric component of both DB_REF2003 and DB_REF2016 systems.',
         ],
         'urn:ogc:def:crs:EPSG::5885' => [
             'name' => 'TGD2005',
@@ -576,6 +739,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::5884',
             'datum' => 'urn:ogc:def:datum:EPSG::1095',
             'extent' => ['1234'],
+            'extent_description' => 'Tonga - onshore and offshore.',
+            'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::6134' => [
             'name' => 'CIGD11',
@@ -583,6 +748,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::6133',
             'datum' => 'urn:ogc:def:datum:EPSG::1100',
             'extent' => ['1063'],
+            'extent_description' => 'Cayman Islands - onshore and offshore. Includes Grand Cayman, Little Cayman and Cayman Brac.',
+            'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::6310' => [
             'name' => 'CGRS93',
@@ -590,6 +757,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::6309',
             'datum' => 'urn:ogc:def:datum:EPSG::1112',
             'extent' => ['3236'],
+            'extent_description' => 'Cyprus - onshore.',
+            'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::6319' => [
             'name' => 'NAD83(2011)',
@@ -597,6 +766,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::6317',
             'datum' => 'urn:ogc:def:datum:EPSG::1116',
             'extent' => ['1511'],
+            'extent_description' => 'Puerto Rico - onshore and offshore. United States (USA) onshore and offshore - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming. US Virgin Islands - onshore and offshore.',
+            'help' => 'Note: this CRS includes longitudes which are POSITIVE EAST. Replaces NAD83(CORS96) and NAD83(NSRS2007) (CRS codes 6782 and 4893).',
         ],
         'urn:ogc:def:crs:EPSG::6321' => [
             'name' => 'NAD83(PA11)',
@@ -604,6 +775,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::6320',
             'datum' => 'urn:ogc:def:datum:EPSG::1117',
             'extent' => ['4162'],
+            'extent_description' => 'American Samoa, Marshall Islands, United States (USA) - Hawaii, United States minor outlying islands; onshore and offshore.',
+            'help' => 'Note: this CRS includes longitudes which are POSITIVE EAST. Replaces NAD83(HARN) and NAD83(FBN) in Hawaii and American Samoa.',
         ],
         'urn:ogc:def:crs:EPSG::6324' => [
             'name' => 'NAD83(MA11)',
@@ -611,6 +784,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::6323',
             'datum' => 'urn:ogc:def:datum:EPSG::1118',
             'extent' => ['4167'],
+            'extent_description' => 'Guam, Northern Mariana Islands and Palau; onshore and offshore.',
+            'help' => 'Note: this CRS includes longitudes which are POSITIVE EAST. Replaces NAD83(HARN) (GGN93) and NAD83(FBN) in Guam.',
         ],
         'urn:ogc:def:crs:EPSG::6364' => [
             'name' => 'Mexico ITRF2008',
@@ -618,6 +793,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::6363',
             'datum' => 'urn:ogc:def:datum:EPSG::1120',
             'extent' => ['1160'],
+            'extent_description' => 'Mexico - onshore and offshore.',
+            'help' => 'Replaces Mexico ITRF92 (CRS code 4482) from December 2010.',
         ],
         'urn:ogc:def:crs:EPSG::6667' => [
             'name' => 'JGD2011',
@@ -625,6 +802,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::6666',
             'datum' => 'urn:ogc:def:datum:EPSG::1128',
             'extent' => ['1129'],
+            'extent_description' => 'Japan - onshore and offshore.',
+            'help' => 'Replaces JGD2000 (CRS code 4947) with effect from 21st October 2011.',
         ],
         'urn:ogc:def:crs:EPSG::6705' => [
             'name' => 'RDN2008',
@@ -632,6 +811,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::6704',
             'datum' => 'urn:ogc:def:datum:EPSG::1132',
             'extent' => ['3343'],
+            'extent_description' => 'Italy - onshore and offshore; San Marino, Vatican City State.',
+            'help' => 'Replaces IGM95 (CRS code 4983) from 2011-11-10.',
         ],
         'urn:ogc:def:crs:EPSG::6782' => [
             'name' => 'NAD83(CORS96)',
@@ -639,6 +820,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::6781',
             'datum' => 'urn:ogc:def:datum:EPSG::1133',
             'extent' => ['1511'],
+            'extent_description' => 'Puerto Rico - onshore and offshore. United States (USA) onshore and offshore - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming. US Virgin Islands - onshore and offshore.',
+            'help' => 'Note: this CRS includes POSITIVE EAST longitudes. Replaced by NAD83(2011) (CRS code 6319) from 2011-09-06.',
         ],
         'urn:ogc:def:crs:EPSG::6982' => [
             'name' => 'IG05 Intermediate CRS',
@@ -646,6 +829,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::6981',
             'datum' => 'urn:ogc:def:datum:EPSG::1142',
             'extent' => ['2603'],
+            'extent_description' => 'Israel - onshore; Palestine Territory - onshore.',
+            'help' => 'Intermediate system not used for spatial referencing - use IGD05 (CRS code 6979).',
         ],
         'urn:ogc:def:crs:EPSG::6989' => [
             'name' => 'IG05/12 Intermediate CRS',
@@ -653,6 +838,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::6988',
             'datum' => 'urn:ogc:def:datum:EPSG::1144',
             'extent' => ['2603'],
+            'extent_description' => 'Israel - onshore; Palestine Territory - onshore.',
+            'help' => 'Intermediate system not used for spatial referencing - use IGD05/12 (CRS code 6986).',
         ],
         'urn:ogc:def:crs:EPSG::7034' => [
             'name' => 'RGSPM06 (lon-lat)',
@@ -660,6 +847,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4466',
             'datum' => 'urn:ogc:def:datum:EPSG::1038',
             'extent' => ['1220'],
+            'extent_description' => 'St Pierre and Miquelon - onshore and offshore.',
+            'help' => 'See CRS code 4466 for system with horizontal axes in sequence lat-lon to be used for air, land and sea navigation and safety of life purposes.',
         ],
         'urn:ogc:def:crs:EPSG::7036' => [
             'name' => 'RGR92 (lon-lat)',
@@ -667,6 +856,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4971',
             'datum' => 'urn:ogc:def:datum:EPSG::6627',
             'extent' => ['3902'],
+            'extent_description' => 'Reunion - onshore and offshore.',
+            'help' => 'See CRS code 4971 for system with horizontal axes in sequence lat-lon to be used for air, land and sea navigation and safety of life purposes.',
         ],
         'urn:ogc:def:crs:EPSG::7038' => [
             'name' => 'RGM04 (lon-lat)',
@@ -674,6 +865,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4469',
             'datum' => 'urn:ogc:def:datum:EPSG::1036',
             'extent' => ['1159'],
+            'extent_description' => 'Mayotte - onshore and offshore.',
+            'help' => 'See CRS code 4469 for system with horizontal axes in sequence lat-lon to be used for air, land and sea navigation and safety of life purposes.',
         ],
         'urn:ogc:def:crs:EPSG::7040' => [
             'name' => 'RGFG95 (lon-lat)',
@@ -681,6 +874,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4967',
             'datum' => 'urn:ogc:def:datum:EPSG::6624',
             'extent' => ['1097'],
+            'extent_description' => 'French Guiana - onshore and offshore.',
+            'help' => 'See CRS code 4967 for system with horizontal axes in sequence lat-lon to be used for air, land and sea navigation and safety of life purposes.',
         ],
         'urn:ogc:def:crs:EPSG::7042' => [
             'name' => 'RGF93 v1 (lon-lat)',
@@ -688,6 +883,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4965',
             'datum' => 'urn:ogc:def:datum:EPSG::6171',
             'extent' => ['1096'],
+            'extent_description' => 'France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).',
+            'help' => 'See CRS code 4965 for system with horizontal axes in sequence lat-lon to be used for air, land and sea navigation and safety of life purposes. Replaced by RGF93 v2 (lon-lat) (CRS code 9778) from 2010-06-18.',
         ],
         'urn:ogc:def:crs:EPSG::7072' => [
             'name' => 'RGTAAF07',
@@ -695,6 +892,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::7071',
             'datum' => 'urn:ogc:def:datum:EPSG::1113',
             'extent' => ['4246'],
+            'extent_description' => 'French Southern Territories - onshore and offshore: Amsterdam and St Paul, Crozet, Europa and Kerguelen. Antarctica - Adelie Land coastal area.',
+            'help' => 'See CRS code 7087 for alternate system with horizontal axes reversed used by IGN for GIS purposes.',
         ],
         'urn:ogc:def:crs:EPSG::7085' => [
             'name' => 'RGAF09 (lon-lat)',
@@ -702,6 +901,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::5488',
             'datum' => 'urn:ogc:def:datum:EPSG::1073',
             'extent' => ['2824'],
+            'extent_description' => 'French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante, Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; St Martin.',
+            'help' => 'Replaces RRAF 1991 (CRS code 4557). See CRS code 5488 for system with horizontal axes in sequence lat-lon to be used for air, land and sea navigation and safety of life purposes.',
         ],
         'urn:ogc:def:crs:EPSG::7087' => [
             'name' => 'RGTAAF07 (lon-lat)',
@@ -709,6 +910,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::7072',
             'datum' => 'urn:ogc:def:datum:EPSG::1113',
             'extent' => ['4246'],
+            'extent_description' => 'French Southern Territories - onshore and offshore: Amsterdam and St Paul, Crozet, Europa and Kerguelen. Antarctica - Adelie Land coastal area.',
+            'help' => 'See CRS code 7072 for alternate system with horizontal axes in sequence lat-lon to be used for air, land and sea navigation purposes.',
         ],
         'urn:ogc:def:crs:EPSG::7135' => [
             'name' => 'IGD05',
@@ -716,6 +919,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::7134',
             'datum' => 'urn:ogc:def:datum:EPSG::1114',
             'extent' => ['1126'],
+            'extent_description' => 'Israel - onshore and offshore.',
+            'help' => 'Replaced by IGD05/12 (CRS code 7138).',
         ],
         'urn:ogc:def:crs:EPSG::7138' => [
             'name' => 'IGD05/12',
@@ -723,6 +928,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::7137',
             'datum' => 'urn:ogc:def:datum:EPSG::1115',
             'extent' => ['1126'],
+            'extent_description' => 'Israel - onshore and offshore.',
+            'help' => 'Replaces IGD05 (CRS code 7135).',
         ],
         'urn:ogc:def:crs:EPSG::7372' => [
             'name' => 'ONGD14',
@@ -730,6 +937,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::7371',
             'datum' => 'urn:ogc:def:datum:EPSG::1147',
             'extent' => ['1183'],
+            'extent_description' => 'Oman - onshore and offshore.',
+            'help' => 'In Oman replaces usage of WGS 84 (G873) from 2014. Replaced by ONGD17 (CRS code 9293) from March 2019.',
         ],
         'urn:ogc:def:crs:EPSG::7657' => [
             'name' => 'WGS 84 (G730)',
@@ -737,6 +946,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::7656',
             'datum' => 'urn:ogc:def:datum:EPSG::1152',
             'extent' => ['1262'],
+            'extent_description' => 'World.',
+            'help' => 'Replaces WGS 84 (Transit) (CRS code 7816) from 1994-06-29. Replaced by WGS84 (G873) (CRS code 7659) from 1997-01-29.',
         ],
         'urn:ogc:def:crs:EPSG::7659' => [
             'name' => 'WGS 84 (G873)',
@@ -744,6 +955,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::7658',
             'datum' => 'urn:ogc:def:datum:EPSG::1153',
             'extent' => ['1262'],
+            'extent_description' => 'World.',
+            'help' => 'Replaces WGS 84 (G730) (CRS code 7657) from 1997-01-29. Replaced by WGS 84 (G1150) (CRS code 7661) from 2002-01-20.',
         ],
         'urn:ogc:def:crs:EPSG::7661' => [
             'name' => 'WGS 84 (G1150)',
@@ -751,6 +964,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::7660',
             'datum' => 'urn:ogc:def:datum:EPSG::1154',
             'extent' => ['1262'],
+            'extent_description' => 'World.',
+            'help' => 'Replaces WGS 84 (G873) (CRS code 7659) from 2002-01-20. Replaced by WGS 84 (G1674) (CRS code 7663) from 2012-02-08.',
         ],
         'urn:ogc:def:crs:EPSG::7663' => [
             'name' => 'WGS 84 (G1674)',
@@ -758,6 +973,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::7662',
             'datum' => 'urn:ogc:def:datum:EPSG::1155',
             'extent' => ['1262'],
+            'extent_description' => 'World.',
+            'help' => 'Replaces WGS 84 (G1150) (CRS code 7661) from 2012-02-08. Replaced by WGS 84 (G1762) (CRS code 7665) from 2013-10-16.',
         ],
         'urn:ogc:def:crs:EPSG::7665' => [
             'name' => 'WGS 84 (G1762)',
@@ -765,6 +982,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::7664',
             'datum' => 'urn:ogc:def:datum:EPSG::1156',
             'extent' => ['1262'],
+            'extent_description' => 'World.',
+            'help' => 'Replaces WGS 84 (G1674) (CRS code 7663) from 2013-10-16. Redesignated WGS 84 (G1762\') in 2015 after changes to 7 NGA tracking station locations and antennas. Replaced by WGS 84 (G2139) (CRS code 9754) from 2021-01-03.',
         ],
         'urn:ogc:def:crs:EPSG::7678' => [
             'name' => 'PZ-90.02',
@@ -772,6 +991,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::7677',
             'datum' => 'urn:ogc:def:datum:EPSG::1157',
             'extent' => ['1262'],
+            'extent_description' => 'World.',
+            'help' => 'Replaces PZ-90 (CRS code 4923) from 2007-09-20. Replaced by PZ-90.11 (CRS code 7680) from 2014-01-15.',
         ],
         'urn:ogc:def:crs:EPSG::7680' => [
             'name' => 'PZ-90.11',
@@ -779,6 +1000,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::7679',
             'datum' => 'urn:ogc:def:datum:EPSG::1158',
             'extent' => ['1262'],
+            'extent_description' => 'World.',
+            'help' => 'Replaces PZ-90.02 (CRS code 7678) from 2014-01-15.',
         ],
         'urn:ogc:def:crs:EPSG::7682' => [
             'name' => 'GSK-2011',
@@ -786,6 +1009,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::7681',
             'datum' => 'urn:ogc:def:datum:EPSG::1159',
             'extent' => ['1198'],
+            'extent_description' => 'Russian Federation - onshore and offshore.',
+            'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::7685' => [
             'name' => 'Kyrg-06',
@@ -793,6 +1018,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::7684',
             'datum' => 'urn:ogc:def:datum:EPSG::1160',
             'extent' => ['1137'],
+            'extent_description' => 'Kyrgyzstan.',
+            'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::7797' => [
             'name' => 'BGS2005',
@@ -800,6 +1027,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::7796',
             'datum' => 'urn:ogc:def:datum:EPSG::1167',
             'extent' => ['1056'],
+            'extent_description' => 'Bulgaria - onshore and offshore.',
+            'help' => 'Adopted 2010-07-29.',
         ],
         'urn:ogc:def:crs:EPSG::7816' => [
             'name' => 'WGS 84 (Transit)',
@@ -807,6 +1036,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::7815',
             'datum' => 'urn:ogc:def:datum:EPSG::1166',
             'extent' => ['1262'],
+            'extent_description' => 'World.',
+            'help' => 'Replaced by WGS84 (G730) (CRS code 7657) from 1994-06-29.',
         ],
         'urn:ogc:def:crs:EPSG::7843' => [
             'name' => 'GDA2020',
@@ -814,6 +1045,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::7842',
             'datum' => 'urn:ogc:def:datum:EPSG::1168',
             'extent' => ['4177'],
+            'extent_description' => 'Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.',
+            'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::7880' => [
             'name' => 'St. Helena Tritan',
@@ -821,6 +1054,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::7879',
             'datum' => 'urn:ogc:def:datum:EPSG::1173',
             'extent' => ['3183'],
+            'extent_description' => 'St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore.',
+            'help' => 'Closely aligned to SHGD2015 (CRS code 7885) with difference attributable to different reference epoch and 10 cm difference in ellipsoid height. Replaced by SHGD2015 from 2015.',
         ],
         'urn:ogc:def:crs:EPSG::7885' => [
             'name' => 'SHGD2015',
@@ -828,6 +1063,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::7884',
             'datum' => 'urn:ogc:def:datum:EPSG::1174',
             'extent' => ['3183'],
+            'extent_description' => 'St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore.',
+            'help' => 'Closely aligned to SHGD2015 (CRS code xxxx) with difference attributable to different reference epoch and 10 cm difference in ellipsoid height.',
         ],
         'urn:ogc:def:crs:EPSG::7900' => [
             'name' => 'ITRF88',
@@ -835,6 +1072,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4910',
             'datum' => 'urn:ogc:def:datum:EPSG::6647',
             'extent' => ['1262'],
+            'extent_description' => 'World.',
+            'help' => 'Replaced by ITRF89 (code 7901).',
         ],
         'urn:ogc:def:crs:EPSG::7901' => [
             'name' => 'ITRF89',
@@ -842,6 +1081,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4911',
             'datum' => 'urn:ogc:def:datum:EPSG::6648',
             'extent' => ['1262'],
+            'extent_description' => 'World.',
+            'help' => 'Replaces ITRF88 (code 7900). Replaced by ITRF90 (code 7902).',
         ],
         'urn:ogc:def:crs:EPSG::7902' => [
             'name' => 'ITRF90',
@@ -849,6 +1090,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4912',
             'datum' => 'urn:ogc:def:datum:EPSG::6649',
             'extent' => ['1262'],
+            'extent_description' => 'World.',
+            'help' => 'Replaces ITRF89 (code 7901). Replaced by ITRF91 (code 7903).',
         ],
         'urn:ogc:def:crs:EPSG::7903' => [
             'name' => 'ITRF91',
@@ -856,6 +1099,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4913',
             'datum' => 'urn:ogc:def:datum:EPSG::6650',
             'extent' => ['1262'],
+            'extent_description' => 'World.',
+            'help' => 'Replaces ITRF90 (code 7902). Replaced by ITRF92 (code 7904).',
         ],
         'urn:ogc:def:crs:EPSG::7904' => [
             'name' => 'ITRF92',
@@ -863,6 +1108,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4914',
             'datum' => 'urn:ogc:def:datum:EPSG::6651',
             'extent' => ['1262'],
+            'extent_description' => 'World.',
+            'help' => 'Replaces ITRF91 (code 7903). Replaced by ITRF93 (code 7905).',
         ],
         'urn:ogc:def:crs:EPSG::7905' => [
             'name' => 'ITRF93',
@@ -870,6 +1117,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4915',
             'datum' => 'urn:ogc:def:datum:EPSG::6652',
             'extent' => ['1262'],
+            'extent_description' => 'World.',
+            'help' => 'Replaces ITRF92 (code 7904). Replaced by ITRF94 (code 7906).',
         ],
         'urn:ogc:def:crs:EPSG::7906' => [
             'name' => 'ITRF94',
@@ -877,6 +1126,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4916',
             'datum' => 'urn:ogc:def:datum:EPSG::6653',
             'extent' => ['1262'],
+            'extent_description' => 'World.',
+            'help' => 'Replaces ITRF93 (code 7905). Replaced by ITRF96 (code 7907).',
         ],
         'urn:ogc:def:crs:EPSG::7907' => [
             'name' => 'ITRF96',
@@ -884,6 +1135,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4917',
             'datum' => 'urn:ogc:def:datum:EPSG::6654',
             'extent' => ['1262'],
+            'extent_description' => 'World.',
+            'help' => 'Replaces ITRF94 (code 7906). Replaced by ITRF97 (code 7908).',
         ],
         'urn:ogc:def:crs:EPSG::7908' => [
             'name' => 'ITRF97',
@@ -891,6 +1144,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4918',
             'datum' => 'urn:ogc:def:datum:EPSG::6655',
             'extent' => ['1262'],
+            'extent_description' => 'World.',
+            'help' => 'Replaces ITRF96 (code 7907). Replaced by ITRF2000 (code 7909).',
         ],
         'urn:ogc:def:crs:EPSG::7909' => [
             'name' => 'ITRF2000',
@@ -898,6 +1153,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4919',
             'datum' => 'urn:ogc:def:datum:EPSG::6656',
             'extent' => ['1262'],
+            'extent_description' => 'World.',
+            'help' => 'Replaces ITRF97 (code 7908). Replaced by ITRF2005 (code 7910).',
         ],
         'urn:ogc:def:crs:EPSG::7910' => [
             'name' => 'ITRF2005',
@@ -905,6 +1162,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4896',
             'datum' => 'urn:ogc:def:datum:EPSG::6896',
             'extent' => ['1262'],
+            'extent_description' => 'World.',
+            'help' => 'Replaces ITRF2000 (code 7909). Replaced by ITRF2008 (code 7911).',
         ],
         'urn:ogc:def:crs:EPSG::7911' => [
             'name' => 'ITRF2008',
@@ -912,6 +1171,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::5332',
             'datum' => 'urn:ogc:def:datum:EPSG::1061',
             'extent' => ['1262'],
+            'extent_description' => 'World.',
+            'help' => 'Replaces ITRF2005 (code 7910). Replaced by ITRF2014 (code 7912).',
         ],
         'urn:ogc:def:crs:EPSG::7912' => [
             'name' => 'ITRF2014',
@@ -919,6 +1180,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::7789',
             'datum' => 'urn:ogc:def:datum:EPSG::1165',
             'extent' => ['1262'],
+            'extent_description' => 'World.',
+            'help' => 'Replaces ITRF2008 (code 7911). Replaced by ITRF2020 (CRS code 9989).',
         ],
         'urn:ogc:def:crs:EPSG::7915' => [
             'name' => 'ETRF89',
@@ -926,6 +1189,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::7914',
             'datum' => 'urn:ogc:def:datum:EPSG::1178',
             'extent' => ['1298'],
+            'extent_description' => 'Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State.',
+            'help' => 'Replaced by ETRF90 (code 7917).',
         ],
         'urn:ogc:def:crs:EPSG::7917' => [
             'name' => 'ETRF90',
@@ -933,6 +1198,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::7916',
             'datum' => 'urn:ogc:def:datum:EPSG::1179',
             'extent' => ['1298'],
+            'extent_description' => 'Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State.',
+            'help' => 'Replaces ETRF89 (code 7915). Replaced by ETRF91 (code 7919).',
         ],
         'urn:ogc:def:crs:EPSG::7919' => [
             'name' => 'ETRF91',
@@ -940,6 +1207,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::7918',
             'datum' => 'urn:ogc:def:datum:EPSG::1180',
             'extent' => ['1298'],
+            'extent_description' => 'Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State.',
+            'help' => 'Replaces ETRF90 (code 7917). Replaced by ETRF92 (code 7921).',
         ],
         'urn:ogc:def:crs:EPSG::7921' => [
             'name' => 'ETRF92',
@@ -947,6 +1216,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::7920',
             'datum' => 'urn:ogc:def:datum:EPSG::1181',
             'extent' => ['1298'],
+            'extent_description' => 'Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State.',
+            'help' => 'Replaces ETRF91 (code 7919). Replaced by ETRF93 (code 7923).',
         ],
         'urn:ogc:def:crs:EPSG::7923' => [
             'name' => 'ETRF93',
@@ -954,6 +1225,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::7922',
             'datum' => 'urn:ogc:def:datum:EPSG::1182',
             'extent' => ['1298'],
+            'extent_description' => 'Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State.',
+            'help' => 'Replaces ETRF92 (code 7921). Replaced by ETRF94 (code 7925).',
         ],
         'urn:ogc:def:crs:EPSG::7925' => [
             'name' => 'ETRF94',
@@ -961,6 +1234,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::7924',
             'datum' => 'urn:ogc:def:datum:EPSG::1183',
             'extent' => ['1298'],
+            'extent_description' => 'Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State.',
+            'help' => 'Replaces ETRF93 (code 7923). Replaced by ETRF96 (code 7927).',
         ],
         'urn:ogc:def:crs:EPSG::7927' => [
             'name' => 'ETRF96',
@@ -968,6 +1243,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::7926',
             'datum' => 'urn:ogc:def:datum:EPSG::1184',
             'extent' => ['1298'],
+            'extent_description' => 'Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State.',
+            'help' => 'Replaces ETRF94 (code 7925). Replaced by ETRF97 (code 7929).',
         ],
         'urn:ogc:def:crs:EPSG::7929' => [
             'name' => 'ETRF97',
@@ -975,6 +1252,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::7928',
             'datum' => 'urn:ogc:def:datum:EPSG::1185',
             'extent' => ['1298'],
+            'extent_description' => 'Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State.',
+            'help' => 'Replaces ETRF96 (code 7927). Replaced by ETRF2000 (code 7931).',
         ],
         'urn:ogc:def:crs:EPSG::7931' => [
             'name' => 'ETRF2000',
@@ -982,6 +1261,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::7930',
             'datum' => 'urn:ogc:def:datum:EPSG::1186',
             'extent' => ['1298'],
+            'extent_description' => 'Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State.',
+            'help' => 'Replaces ETRF97 (code 7929). On the publication of ETRF2005 (code 8399), the EUREF Technical Working Group recommended that ETRF2000 be the realization of ETRS89. ETRF2014 (code 8403) is technically superior to all earlier realizations of ETRS89.',
         ],
         'urn:ogc:def:crs:EPSG::8085' => [
             'name' => 'ISN2016',
@@ -989,6 +1270,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::8084',
             'datum' => 'urn:ogc:def:datum:EPSG::1187',
             'extent' => ['1120'],
+            'extent_description' => 'Iceland - onshore and offshore.',
+            'help' => 'Replaces ISN2004 (CRS code 5323) from September 2017.',
         ],
         'urn:ogc:def:crs:EPSG::8231' => [
             'name' => 'NAD83(CSRS96)',
@@ -996,6 +1279,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::8230',
             'datum' => 'urn:ogc:def:datum:EPSG::1192',
             'extent' => ['1061'],
+            'extent_description' => 'Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.',
+            'help' => 'Adopted by the Canadian federal government from 1996-01-01. Replaced by NAD83(CSRS)v2 (CRS code 8235). Note: this CRS includes longitudes which are POSITIVE EAST.',
         ],
         'urn:ogc:def:crs:EPSG::8235' => [
             'name' => 'NAD83(CSRS)v2',
@@ -1003,6 +1288,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::8233',
             'datum' => 'urn:ogc:def:datum:EPSG::1193',
             'extent' => ['1061'],
+            'extent_description' => 'Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.',
+            'help' => 'Adopted by the Canadian federal government from 1998-01-01 and by the provincial governments of British Columbia, New Brunswick, Prince Edward Island and Quebec. Replaces NAD83(CSRS96). Replaced by NAD83(CSRS)v3 (code 8239). Longitudes are POSITIVE EAST.',
         ],
         'urn:ogc:def:crs:EPSG::8239' => [
             'name' => 'NAD83(CSRS)v3',
@@ -1010,6 +1297,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::8238',
             'datum' => 'urn:ogc:def:datum:EPSG::1194',
             'extent' => ['1061'],
+            'extent_description' => 'Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.',
+            'help' => 'Adopted by the Canadian federal government from 1999-01-01 and by the provincial governments of Alberta, British Columbia, Manitoba, Newfoundland and Labrador, Nova Scotia, Ontario and Saskatchewan. Replaces NAD83(CSRS)v2. Replaced by NAD83(CSRS)v4.',
         ],
         'urn:ogc:def:crs:EPSG::8244' => [
             'name' => 'NAD83(CSRS)v4',
@@ -1017,6 +1306,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::8242',
             'datum' => 'urn:ogc:def:datum:EPSG::1195',
             'extent' => ['1061'],
+            'extent_description' => 'Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.',
+            'help' => 'Adopted by the Canadian federal government from 2002-01-01 and by the provincial governments of Alberta and British Columbia. Replaces NAD83(CSRS)v3. Replaced by NAD83(CSRS)v5 (CRS code 8248). Longitudes are POSITIVE EAST.',
         ],
         'urn:ogc:def:crs:EPSG::8248' => [
             'name' => 'NAD83(CSRS)v5',
@@ -1024,6 +1315,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::8247',
             'datum' => 'urn:ogc:def:datum:EPSG::1196',
             'extent' => ['1061'],
+            'extent_description' => 'Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.',
+            'help' => 'Adopted by the Canadian federal government from 2006-01-01. Replaces NAD83(CSRS)v4. Replaced by NAD83(CSRS)v6. Longitudes are POSITIVE EAST.',
         ],
         'urn:ogc:def:crs:EPSG::8251' => [
             'name' => 'NAD83(CSRS)v6',
@@ -1031,6 +1324,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::8250',
             'datum' => 'urn:ogc:def:datum:EPSG::1197',
             'extent' => ['1061'],
+            'extent_description' => 'Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.',
+            'help' => 'Adopted by the Canadian federal government from 2010-01-01 and the provincial governments of Alberta, British Columbia, Manitoba, Newfoundland and Labrador, Nova Scotia, Ontario and Prince Edward Island. Replaces NAD83(CSRS)v5. Replaced by NAD83(CSRS)v7.',
         ],
         'urn:ogc:def:crs:EPSG::8254' => [
             'name' => 'NAD83(CSRS)v7',
@@ -1038,6 +1333,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::8253',
             'datum' => 'urn:ogc:def:datum:EPSG::1198',
             'extent' => ['1061'],
+            'extent_description' => 'Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.',
+            'help' => 'Adopted by the Canadian federal government from 2017-05-01 and the provincial government of Alberta. Replaces NAD83(CSRS)v6. Longitudes are POSITIVE EAST.',
         ],
         'urn:ogc:def:crs:EPSG::8399' => [
             'name' => 'ETRF2005',
@@ -1045,6 +1342,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::8397',
             'datum' => 'urn:ogc:def:datum:EPSG::1204',
             'extent' => ['1298'],
+            'extent_description' => 'Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State.',
+            'help' => 'On publication in 2007 of this CRS, the EUREF Technical Working Group recommended that ETRF2000 (EPSG code 7931) remained as the preferred realization of ETRS89. Replaced by ETRF2014 (code 8403).',
         ],
         'urn:ogc:def:crs:EPSG::8403' => [
             'name' => 'ETRF2014',
@@ -1052,6 +1351,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::8401',
             'datum' => 'urn:ogc:def:datum:EPSG::1206',
             'extent' => ['1298'],
+            'extent_description' => 'Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State.',
+            'help' => 'Replaces ETRF2005 (code 8399). ETRF2014 is technically superior to ETRF2000 but ETRF2000 and other previous realizations may be preferred for backward compatibility reasons. Differences between ETRF2014 and ETRF2000 can reach 7cm.',
         ],
         'urn:ogc:def:crs:EPSG::8426' => [
             'name' => 'Hong Kong Geodetic CS',
@@ -1059,6 +1360,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::8425',
             'datum' => 'urn:ogc:def:datum:EPSG::1209',
             'extent' => ['1118'],
+            'extent_description' => 'China - Hong Kong - onshore and offshore.',
+            'help' => 'Locally sometimes referred to as ITRF96 or WGS 84, these are not strictly correct.',
         ],
         'urn:ogc:def:crs:EPSG::8430' => [
             'name' => 'Macao 2008',
@@ -1066,6 +1369,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::8429',
             'datum' => 'urn:ogc:def:datum:EPSG::1208',
             'extent' => ['1147'],
+            'extent_description' => 'China - Macao - onshore and offshore.',
+            'help' => 'Locally sometimes referred to as ITRF2005, this is not strictly correct.',
         ],
         'urn:ogc:def:crs:EPSG::8542' => [
             'name' => 'NAD83(FBN)',
@@ -1073,6 +1378,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::8541',
             'datum' => 'urn:ogc:def:datum:EPSG::1211',
             'extent' => ['4515'],
+            'extent_description' => 'American Samoa - Tutuila, Aunu\'u, Ofu, Olesega, Ta\'u and Rose islands - onshore. Guam - onshore. Northern Mariana Islands - onshore. Puerto Rico - onshore. United States (USA) - CONUS - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming - onshore plus Gulf of Mexico offshore continental shelf (GoM OCS). US Virgin Islands - onshore.',
+            'help' => 'Continental US, American Samoa, Guam/NMI and PRVI, replaces NAD83(HARN). In Continental US, Puerto Rico and US Virgin Islands replaced by NAD83(NSRS2007). In American Samoa and Hawaii replaced by NAD83(PA11). In Guam/NMI replaced by NAD83(MA11).',
         ],
         'urn:ogc:def:crs:EPSG::8544' => [
             'name' => 'NAD83(HARN Corrected)',
@@ -1080,6 +1387,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::8543',
             'datum' => 'urn:ogc:def:datum:EPSG::1212',
             'extent' => ['3634'],
+            'extent_description' => 'Puerto Rico and US Virgin Islands - onshore.',
+            'help' => 'Note: this CRS includes POSITIVE EAST longitudes. In PRVI replaces NAD83(HARN) = NAD83(1993 PRVI) to correct errors. Replaced by NAD83(FBN) = NAD83(2002 PRVI).',
         ],
         'urn:ogc:def:crs:EPSG::8684' => [
             'name' => 'SRB_ETRS89',
@@ -1087,6 +1396,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::8683',
             'datum' => 'urn:ogc:def:datum:EPSG::1214',
             'extent' => ['4543'],
+            'extent_description' => 'Serbia including Vojvodina.',
+            'help' => 'Replaces SREF98 (CRS code 4074).',
         ],
         'urn:ogc:def:crs:EPSG::8698' => [
             'name' => 'RSAO13',
@@ -1094,6 +1405,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::8697',
             'datum' => 'urn:ogc:def:datum:EPSG::1220',
             'extent' => ['1029'],
+            'extent_description' => 'Angola - onshore and offshore.',
+            'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8817' => [
             'name' => 'MTRF-2000',
@@ -1101,6 +1414,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::8816',
             'datum' => 'urn:ogc:def:datum:EPSG::1218',
             'extent' => ['1206'],
+            'extent_description' => 'Saudi Arabia - onshore and offshore.',
+            'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8899' => [
             'name' => 'RGWF96',
@@ -1108,6 +1423,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::8898',
             'datum' => 'urn:ogc:def:datum:EPSG::1223',
             'extent' => ['1255'],
+            'extent_description' => 'Wallis and Futuna - onshore and offshore - Uvea, Futuna, and Alofi.',
+            'help' => 'See CRS code 8901 for alternate system with horizontal axes reversed used by IGN for GIS purposes.',
         ],
         'urn:ogc:def:crs:EPSG::8901' => [
             'name' => 'RGWF96 (lon-lat)',
@@ -1115,6 +1432,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::8899',
             'datum' => 'urn:ogc:def:datum:EPSG::1223',
             'extent' => ['1255'],
+            'extent_description' => 'Wallis and Futuna - onshore and offshore - Uvea, Futuna, and Alofi.',
+            'help' => 'See CRS code 8899 for system with horizontal axes in sequence lat-lon to be used for air, land and sea navigation and safety of life purposes.',
         ],
         'urn:ogc:def:crs:EPSG::8906' => [
             'name' => 'CR-SIRGAS',
@@ -1122,6 +1441,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::8905',
             'datum' => 'urn:ogc:def:datum:EPSG::1225',
             'extent' => ['1074'],
+            'extent_description' => 'Costa Rica - onshore and offshore.',
+            'help' => 'Replaces CR05 (CRS code 5364) from April 2018.',
         ],
         'urn:ogc:def:crs:EPSG::8916' => [
             'name' => 'SIRGAS-CON DGF00P01',
@@ -1129,6 +1450,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::8915',
             'datum' => 'urn:ogc:def:datum:EPSG::1227',
             'extent' => ['4530'],
+            'extent_description' => 'Latin America - Central America and South America, onshore and offshore.',
+            'help' => 'Replaced by SIRGAS-CON DGF01P01 (CRS code 8918).',
         ],
         'urn:ogc:def:crs:EPSG::8918' => [
             'name' => 'SIRGAS-CON DGF01P01',
@@ -1136,6 +1459,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::8917',
             'datum' => 'urn:ogc:def:datum:EPSG::1228',
             'extent' => ['4530'],
+            'extent_description' => 'Latin America - Central America and South America, onshore and offshore.',
+            'help' => 'Replaces SIRGAS-CON DGF00P01 (CRS code 8916). Replaced by SIRGAS-CON DGF01P02 (CRS code 8920).',
         ],
         'urn:ogc:def:crs:EPSG::8920' => [
             'name' => 'SIRGAS-CON DGF01P02',
@@ -1143,6 +1468,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::8919',
             'datum' => 'urn:ogc:def:datum:EPSG::1229',
             'extent' => ['4530'],
+            'extent_description' => 'Latin America - Central America and South America, onshore and offshore.',
+            'help' => 'Replaces SIRGAS-CON DGF01P01 (CRS code 8918). Replaced by SIRGAS-CON DGF02P01 (CRS code 8922).',
         ],
         'urn:ogc:def:crs:EPSG::8922' => [
             'name' => 'SIRGAS-CON DGF02P01',
@@ -1150,6 +1477,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::8921',
             'datum' => 'urn:ogc:def:datum:EPSG::1230',
             'extent' => ['4530'],
+            'extent_description' => 'Latin America - Central America and South America, onshore and offshore.',
+            'help' => 'Replaces SIRGAS-CON DGF01P02 (CRS code 8920). Replaced by SIRGAS-CON DGF04P01 (CRS code 8924).',
         ],
         'urn:ogc:def:crs:EPSG::8924' => [
             'name' => 'SIRGAS-CON DGF04P01',
@@ -1157,6 +1486,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::8923',
             'datum' => 'urn:ogc:def:datum:EPSG::1231',
             'extent' => ['4530'],
+            'extent_description' => 'Latin America - Central America and South America, onshore and offshore.',
+            'help' => 'Replaces SIRGAS-CON DGF02P01 (CRS code 8922). Replaced by SIRGAS-CON DGF05P01 (CRS code 8926).',
         ],
         'urn:ogc:def:crs:EPSG::8926' => [
             'name' => 'SIRGAS-CON DGF05P01',
@@ -1164,6 +1495,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::8925',
             'datum' => 'urn:ogc:def:datum:EPSG::1232',
             'extent' => ['4530'],
+            'extent_description' => 'Latin America - Central America and South America, onshore and offshore.',
+            'help' => 'Replaces SIRGAS-CON DGF04P01 (CRS code 8924). Replaced by SIRGAS-CON DGF06P01 (CRS code 8928).',
         ],
         'urn:ogc:def:crs:EPSG::8928' => [
             'name' => 'SIRGAS-CON DGF06P01',
@@ -1171,6 +1504,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::8927',
             'datum' => 'urn:ogc:def:datum:EPSG::1233',
             'extent' => ['4530'],
+            'extent_description' => 'Latin America - Central America and South America, onshore and offshore.',
+            'help' => 'Replaces SIRGAS-CON DGF05P01 (CRS code 8926). Replaced by SIRGAS-CON DGF07P01 (CRS code 8930).',
         ],
         'urn:ogc:def:crs:EPSG::8930' => [
             'name' => 'SIRGAS-CON DGF07P01',
@@ -1178,6 +1513,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::8929',
             'datum' => 'urn:ogc:def:datum:EPSG::1234',
             'extent' => ['4530'],
+            'extent_description' => 'Latin America - Central America and South America, onshore and offshore.',
+            'help' => 'Replaces SIRGAS-CON DGF06P01 (CRS code 8928). Replaced by SIRGAS-CON DGF08P01 (CRS code 8932).',
         ],
         'urn:ogc:def:crs:EPSG::8932' => [
             'name' => 'SIRGAS-CON DGF08P01',
@@ -1185,6 +1522,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::8931',
             'datum' => 'urn:ogc:def:datum:EPSG::1235',
             'extent' => ['4530'],
+            'extent_description' => 'Latin America - Central America and South America, onshore and offshore.',
+            'help' => 'Replaces SIRGAS-CON DGF07P01 (CRS code 8930). Replaced by SIRGAS-CON SIR09P01 (CRS code 8934).',
         ],
         'urn:ogc:def:crs:EPSG::8934' => [
             'name' => 'SIRGAS-CON SIR09P01',
@@ -1192,6 +1531,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::8933',
             'datum' => 'urn:ogc:def:datum:EPSG::1236',
             'extent' => ['4530'],
+            'extent_description' => 'Latin America - Central America and South America, onshore and offshore.',
+            'help' => 'Replaces SIRGAS-CON DGF08P01 (CRS code 8932). Replaced by SIRGAS-CON SIR10P01 (CRS code 8936).',
         ],
         'urn:ogc:def:crs:EPSG::8936' => [
             'name' => 'SIRGAS-CON SIR10P01',
@@ -1199,6 +1540,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::8935',
             'datum' => 'urn:ogc:def:datum:EPSG::1237',
             'extent' => ['4530'],
+            'extent_description' => 'Latin America - Central America and South America, onshore and offshore.',
+            'help' => 'Replaces SIRGAS-CON SIR09P01 (CRS code 8934). Replaced by SIRGAS-CON SIR11P01 (CRS code 8938).',
         ],
         'urn:ogc:def:crs:EPSG::8938' => [
             'name' => 'SIRGAS-CON SIR11P01',
@@ -1206,6 +1549,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::8937',
             'datum' => 'urn:ogc:def:datum:EPSG::1238',
             'extent' => ['4530'],
+            'extent_description' => 'Latin America - Central America and South America, onshore and offshore.',
+            'help' => 'Replaces SIRGAS-CON SIR10P01 (CRS code 8936). Replaced by SIRGAS-CON SIR13P01 (CRS code 8940).',
         ],
         'urn:ogc:def:crs:EPSG::8940' => [
             'name' => 'SIRGAS-CON SIR13P01',
@@ -1213,6 +1558,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::8939',
             'datum' => 'urn:ogc:def:datum:EPSG::1239',
             'extent' => ['4530'],
+            'extent_description' => 'Latin America - Central America and South America, onshore and offshore.',
+            'help' => 'Replaces SIRGAS-CON SIR11P01 (CRS code 8938). Replaced by SIRGAS-CON SIR14P01 (CRS code 8942).',
         ],
         'urn:ogc:def:crs:EPSG::8942' => [
             'name' => 'SIRGAS-CON SIR14P01',
@@ -1220,6 +1567,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::8941',
             'datum' => 'urn:ogc:def:datum:EPSG::1240',
             'extent' => ['4530'],
+            'extent_description' => 'Latin America - Central America and South America, onshore and offshore.',
+            'help' => 'Replaces SIRGAS-CON SIR13P01 (CRS code 8940). Replaced by SIRGAS-CON SIR15P01 (CRS code 8944).',
         ],
         'urn:ogc:def:crs:EPSG::8944' => [
             'name' => 'SIRGAS-CON SIR15P01',
@@ -1227,6 +1576,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::8943',
             'datum' => 'urn:ogc:def:datum:EPSG::1241',
             'extent' => ['4530'],
+            'extent_description' => 'Latin America - Central America and South America, onshore and offshore.',
+            'help' => 'Replaces SIRGAS-CON SIR14P01 (CRS code 8942). Replaced by SIRGAS-CON SIR17P01 (CRS code 8946).',
         ],
         'urn:ogc:def:crs:EPSG::8946' => [
             'name' => 'SIRGAS-CON SIR17P01',
@@ -1234,6 +1585,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::8945',
             'datum' => 'urn:ogc:def:datum:EPSG::1242',
             'extent' => ['4530'],
+            'extent_description' => 'Latin America - Central America and South America, onshore and offshore.',
+            'help' => 'Replaces SIRGAS-CON SIR15P01 (CRS code 8944).',
         ],
         'urn:ogc:def:crs:EPSG::8948' => [
             'name' => 'SIRGAS-Chile 2010',
@@ -1241,6 +1594,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::8947',
             'datum' => 'urn:ogc:def:datum:EPSG::1243',
             'extent' => ['1066'],
+            'extent_description' => 'Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez.',
+            'help' => 'Densification of SIRGAS-CON within Chile at epoch 2010.00. Replaces SIRGAS-Chile 2002 (CRS code 5359), replaced by SIRGAS-Chile 2013 (CRS code 9147) due to significant tectonic deformation.',
         ],
         'urn:ogc:def:crs:EPSG::9002' => [
             'name' => 'IGS97',
@@ -1248,6 +1603,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::9001',
             'datum' => 'urn:ogc:def:datum:EPSG::1244',
             'extent' => ['1262'],
+            'extent_description' => 'World.',
+            'help' => 'Adopted by the International GNSS Service (IGS) from 2000-06-04 through 2001-12-01. Replaced by IGS00 (CRS code 9005). For all practical purposes IGS97 is equivalent to ITRF97.',
         ],
         'urn:ogc:def:crs:EPSG::9005' => [
             'name' => 'IGS00',
@@ -1255,6 +1612,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::9004',
             'datum' => 'urn:ogc:def:datum:EPSG::1245',
             'extent' => ['1262'],
+            'extent_description' => 'World.',
+            'help' => 'Adopted by the International GNSS Service (IGS) from 2001-12-02 through 2004-01-10. Replaces IGS97, replaced by IGb00 (CRS codes 9002 and 9008). For all practical purposes IGS00 is equivalent to ITRF2000.',
         ],
         'urn:ogc:def:crs:EPSG::9008' => [
             'name' => 'IGb00',
@@ -1262,6 +1621,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::9007',
             'datum' => 'urn:ogc:def:datum:EPSG::1246',
             'extent' => ['1262'],
+            'extent_description' => 'World.',
+            'help' => 'Adopted by the International GNSS Service (IGS) from 2004-01-11 through 2006-11-04. Replaces IGS00, replaced by IGS05 (CRS codes 9005 and 9011). For all practical purposes IGb00 is equivalent to ITRF2000.',
         ],
         'urn:ogc:def:crs:EPSG::9011' => [
             'name' => 'IGS05',
@@ -1269,6 +1630,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::9010',
             'datum' => 'urn:ogc:def:datum:EPSG::1247',
             'extent' => ['1262'],
+            'extent_description' => 'World.',
+            'help' => 'Adopted by the International GNSS Service (IGS) from 2006-11-05 through 2011-04-16. Replaces IGb00, replaced by IGS08 (CRS codes 9008 and 9013). For all practical purposes IGS05 is equivalent to ITRF2005.',
         ],
         'urn:ogc:def:crs:EPSG::9013' => [
             'name' => 'IGS08',
@@ -1276,6 +1639,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::6934',
             'datum' => 'urn:ogc:def:datum:EPSG::1141',
             'extent' => ['1262'],
+            'extent_description' => 'World.',
+            'help' => 'Used for products from International GNSS Service (IGS) analysis centres from 2011-04-17 through 2012-10-06. Replaces IGS05 (code 9011). Replaced by IGb08 (code 9016). For most practical purposes IGS08 is equivalent to ITRF2008.',
         ],
         'urn:ogc:def:crs:EPSG::9016' => [
             'name' => 'IGb08',
@@ -1283,6 +1648,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::9015',
             'datum' => 'urn:ogc:def:datum:EPSG::1248',
             'extent' => ['1262'],
+            'extent_description' => 'World.',
+            'help' => 'Adopted by the International GNSS Service (IGS) from 2012-10-07 through 2017-01-28. Replaces IGS08, replaced by IGS14 (CRS codes 9013 and 9018). For all practical purposes IGb08 is equivalent to ITRF2008.',
         ],
         'urn:ogc:def:crs:EPSG::9018' => [
             'name' => 'IGS14',
@@ -1290,6 +1657,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::8227',
             'datum' => 'urn:ogc:def:datum:EPSG::1191',
             'extent' => ['1262'],
+            'extent_description' => 'World.',
+            'help' => 'Used for products from the International GNSS Service (IGS) from 2017-01-29 to 2020-05-16. Replaces IGb08 (code 9016), replaced by IGb14 (code 9379). For most practical purposes IGS14 is equivalent to ITRF2014.',
         ],
         'urn:ogc:def:crs:EPSG::9071' => [
             'name' => 'NAD83(MARP00)',
@@ -1297,6 +1666,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::9070',
             'datum' => 'urn:ogc:def:datum:EPSG::1221',
             'extent' => ['4167'],
+            'extent_description' => 'Guam, Northern Mariana Islands and Palau; onshore and offshore.',
+            'help' => 'Replaces NAD83(HARN) (GGN93) and NAD83(FBN) in Guam. Replaced by NAD83(MA11).',
         ],
         'urn:ogc:def:crs:EPSG::9074' => [
             'name' => 'NAD83(PACP00)',
@@ -1304,6 +1675,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::9073',
             'datum' => 'urn:ogc:def:datum:EPSG::1249',
             'extent' => ['4162'],
+            'extent_description' => 'American Samoa, Marshall Islands, United States (USA) - Hawaii, United States minor outlying islands; onshore and offshore.',
+            'help' => 'Replaces NAD83(HARN) and NAD83(FBN) in Hawaii and American Samoa. Replaced by NAD83(PA11).',
         ],
         'urn:ogc:def:crs:EPSG::9139' => [
             'name' => 'KOSOVAREF01',
@@ -1311,6 +1684,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::9138',
             'datum' => 'urn:ogc:def:datum:EPSG::1251',
             'extent' => ['4542'],
+            'extent_description' => 'Kosovo.',
+            'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9147' => [
             'name' => 'SIRGAS-Chile 2013',
@@ -1318,6 +1693,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::9146',
             'datum' => 'urn:ogc:def:datum:EPSG::1252',
             'extent' => ['1066'],
+            'extent_description' => 'Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez.',
+            'help' => 'Densification of SIRGAS-CON within Chile at epoch 2013.00. Replaces SIRGAS-Chile 2010 (CRS code 8948), replaced by SIRGAS-Chile 2016 (CRS code 9152) due to significant tectonic deformation.',
         ],
         'urn:ogc:def:crs:EPSG::9152' => [
             'name' => 'SIRGAS-Chile 2016',
@@ -1325,6 +1702,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::9151',
             'datum' => 'urn:ogc:def:datum:EPSG::1253',
             'extent' => ['1066'],
+            'extent_description' => 'Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez.',
+            'help' => 'Densification of SIRGAS-CON within Chile at epoch 2016.00. Replaces SIRGAS-Chile 2013 (CRS code 9147), replaced by SIRGAS-Chile 2021 (CRS code 20040) due to significant tectonic deformation.',
         ],
         'urn:ogc:def:crs:EPSG::9267' => [
             'name' => 'MGI',
@@ -1332,6 +1711,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::9266',
             'datum' => 'urn:ogc:def:datum:EPSG::6312',
             'extent' => ['1037'],
+            'extent_description' => 'Austria.',
+            'help' => 'Created retrospectively to support geoid model based on Bessel ellipsoid.',
         ],
         'urn:ogc:def:crs:EPSG::9293' => [
             'name' => 'ONGD17',
@@ -1339,6 +1720,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::9292',
             'datum' => 'urn:ogc:def:datum:EPSG::1263',
             'extent' => ['1183'],
+            'extent_description' => 'Oman - onshore and offshore.',
+            'help' => 'Replaces ONGD14 (CRS code 7372) from March 2019.',
         ],
         'urn:ogc:def:crs:EPSG::9308' => [
             'name' => 'ATRF2014',
@@ -1346,6 +1729,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::9307',
             'datum' => 'urn:ogc:def:datum:EPSG::1291',
             'extent' => ['4177'],
+            'extent_description' => 'Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.',
+            'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9332' => [
             'name' => 'KSA-GRF17',
@@ -1353,6 +1738,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::9331',
             'datum' => 'urn:ogc:def:datum:EPSG::1268',
             'extent' => ['1206'],
+            'extent_description' => 'Saudi Arabia - onshore and offshore.',
+            'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9379' => [
             'name' => 'IGb14',
@@ -1360,6 +1747,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::9378',
             'datum' => 'urn:ogc:def:datum:EPSG::1272',
             'extent' => ['1262'],
+            'extent_description' => 'World.',
+            'help' => 'Used for products from the International GNSS Service (IGS) from 2020-05-17. Replaces IGS14 (code 9018), replaced by IGS20 (code 10177). For most practical purposes IGb14 is equivalent to ITRF2014.',
         ],
         'urn:ogc:def:crs:EPSG::9469' => [
             'name' => 'SRGI2013',
@@ -1367,6 +1756,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::9468',
             'datum' => 'urn:ogc:def:datum:EPSG::1293',
             'extent' => ['1122'],
+            'extent_description' => 'Indonesia - onshore and offshore.',
+            'help' => 'Supports horizontal component of national horizontal control network (JKHN). Adopted 2013-10-11. Replaces DGN95 and all older systems.',
         ],
         'urn:ogc:def:crs:EPSG::9546' => [
             'name' => 'LTF2004(G)',
@@ -1374,6 +1765,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::9545',
             'datum' => 'urn:ogc:def:datum:EPSG::1295',
             'extent' => ['4613'],
+            'extent_description' => 'France and Italy - on or related to the rail route from Lyon to Turin.',
+            'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9695' => [
             'name' => 'REDGEOMIN',
@@ -1381,6 +1774,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::9694',
             'datum' => 'urn:ogc:def:datum:EPSG::1304',
             'extent' => ['1066'],
+            'extent_description' => 'Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez.',
+            'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9701' => [
             'name' => 'ETRF2000-PL',
@@ -1388,6 +1783,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::9700',
             'datum' => 'urn:ogc:def:datum:EPSG::1305',
             'extent' => ['1192'],
+            'extent_description' => 'Poland - onshore and offshore.',
+            'help' => 'Adopted from 2012-12-01.',
         ],
         'urn:ogc:def:crs:EPSG::9754' => [
             'name' => 'WGS 84 (G2139)',
@@ -1395,6 +1792,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::9753',
             'datum' => 'urn:ogc:def:datum:EPSG::1309',
             'extent' => ['1262'],
+            'extent_description' => 'World.',
+            'help' => 'Replaces WGS 84 (G1762) (CRS code 7665) from 2021-01-03.',
         ],
         'urn:ogc:def:crs:EPSG::9776' => [
             'name' => 'RGF93 v2',
@@ -1402,6 +1801,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::9775',
             'datum' => 'urn:ogc:def:datum:EPSG::1312',
             'extent' => ['1096'],
+            'extent_description' => 'France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).',
+            'help' => 'Replaces RGF93 v1 CRS code 4965) from 2010-06-18 . Replaced by RGF93 v2b (CRS code 9781) from 2021-01-05. See CRS code 9778 for alternate system with horizontal axes reversed used by IGN for GIS purposes.',
         ],
         'urn:ogc:def:crs:EPSG::9778' => [
             'name' => 'RGF93 v2 (lon-lat)',
@@ -1409,6 +1810,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::9776',
             'datum' => 'urn:ogc:def:datum:EPSG::1312',
             'extent' => ['1096'],
+            'extent_description' => 'France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).',
+            'help' => 'Replaces RGF93 v1 (lon-lat) from 2010-06-18. Replaced by RGF93 v2b (lon-lat) (CRS code 9783) from 2021-01-05. See CRS code 9776 for system with horizontal axes in sequence lat-lon to be used for air, land and sea navigation and safety of life purposes.',
         ],
         'urn:ogc:def:crs:EPSG::9781' => [
             'name' => 'RGF93 v2b',
@@ -1416,6 +1819,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::9780',
             'datum' => 'urn:ogc:def:datum:EPSG::1313',
             'extent' => ['1096'],
+            'extent_description' => 'France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).',
+            'help' => 'Replaces RGF93 v2 (CRS code 9776) from 2021-01-05. See CRS code 9783 for alternate system with horizontal axes reversed used by IGN for GIS purposes.',
         ],
         'urn:ogc:def:crs:EPSG::9783' => [
             'name' => 'RGF93 v2b (lon-lat)',
@@ -1423,6 +1828,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::9781',
             'datum' => 'urn:ogc:def:datum:EPSG::1313',
             'extent' => ['1096'],
+            'extent_description' => 'France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).',
+            'help' => 'Replaces RGF93 v2 (lon-lat) (CRS code 9778) from 2021-01-05. See CRS code 9781 for system with horizontal axes in sequence lat-lon to be used for air, land and sea navigation and safety of life purposes.',
         ],
         'urn:ogc:def:crs:EPSG::9893' => [
             'name' => 'LUREF',
@@ -1430,6 +1837,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::9892',
             'datum' => 'urn:ogc:def:datum:EPSG::6181',
             'extent' => ['1146'],
+            'extent_description' => 'Luxembourg.',
+            'help' => 'Ellipsoidal height approximates to NG95 gravity-related heights to within 5-15cm. For accurate heighting use compound CRS LUREF / Luxembourg TM + NG95 height (code 9897).',
         ],
         'urn:ogc:def:crs:EPSG::9989' => [
             'name' => 'ITRF2020',
@@ -1437,6 +1846,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::9988',
             'datum' => 'urn:ogc:def:datum:EPSG::1322',
             'extent' => ['1262'],
+            'extent_description' => 'World.',
+            'help' => 'Replaces ITRF2014 (code 7912).',
         ],
         'urn:ogc:def:crs:EPSG::10177' => [
             'name' => 'IGS20',
@@ -1444,6 +1855,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::10176',
             'datum' => 'urn:ogc:def:datum:EPSG::1333',
             'extent' => ['1262'],
+            'extent_description' => 'World.',
+            'help' => 'Used for products from the International GNSS Service (IGS) from 2022-11-27. Replaces IGb14 (code 9379). For most practical purposes IGS20 is equivalent to ITRF2020.',
         ],
         'urn:ogc:def:crs:EPSG::10283' => [
             'name' => 'ETRS89/DREF91/2016',
@@ -1451,6 +1864,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::10282',
             'datum' => 'urn:ogc:def:datum:EPSG::1353',
             'extent' => ['1103'],
+            'extent_description' => 'Germany - onshore and offshore.',
+            'help' => 'German national realization of ETRS89. Replaces ETRS89/DREF91 Realization 2002 from 2016-12-01.',
         ],
         'urn:ogc:def:crs:EPSG::10298' => [
             'name' => 'RGSH2020',
@@ -1458,6 +1873,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::10297',
             'datum' => 'urn:ogc:def:datum:EPSG::1355',
             'extent' => ['1026'],
+            'extent_description' => 'Algeria - onshore and offshore.',
+            'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10300' => [
             'name' => 'RGNC91-93 (lon-lat)',
@@ -1465,6 +1882,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::4907',
             'datum' => 'urn:ogc:def:datum:EPSG::6749',
             'extent' => ['1174'],
+            'extent_description' => 'New Caledonia - onshore and offshore. Isle de Pins, Loyalty Islands, Huon Islands, Belep archipelago, Chesterfield Islands, and Walpole.',
+            'help' => 'See CRS code 4907 for system with horizontal axes in sequence lat-lon to be used for air, land and sea navigation and safety of life purposes. Replaced by RGNC15 (lon-lat) (CRS code 10311).',
         ],
         'urn:ogc:def:crs:EPSG::10304' => [
             'name' => 'LKS-2020',
@@ -1472,6 +1891,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::10303',
             'datum' => 'urn:ogc:def:datum:EPSG::1356',
             'extent' => ['1139'],
+            'extent_description' => 'Latvia - onshore and offshore.',
+            'help' => 'Replaces LKS-92 (CRS code 4949).',
         ],
         'urn:ogc:def:crs:EPSG::10309' => [
             'name' => 'RGNC15',
@@ -1479,6 +1900,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::10308',
             'datum' => 'urn:ogc:def:datum:EPSG::1357',
             'extent' => ['1174'],
+            'extent_description' => 'New Caledonia - onshore and offshore. Isle de Pins, Loyalty Islands, Huon Islands, Belep archipelago, Chesterfield Islands, and Walpole.',
+            'help' => 'Replaces RGNC91-93 (CRS code 4907). See CRS code 10311 for alternate system with horizontal axes reversed used by DITTT for GIS purposes.',
         ],
         'urn:ogc:def:crs:EPSG::10311' => [
             'name' => 'RGNC15 (lon-lat)',
@@ -1486,6 +1909,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::10309',
             'datum' => 'urn:ogc:def:datum:EPSG::1357',
             'extent' => ['1174'],
+            'extent_description' => 'New Caledonia - onshore and offshore. Isle de Pins, Loyalty Islands, Huon Islands, Belep archipelago, Chesterfield Islands, and Walpole.',
+            'help' => 'Replaces RGNC91-93 (lon-lat) (CRS code 10300). See CRS code 10309 for system with horizontal axes in sequence lat-lon to be used for air, land and sea navigation and safety of life purposes.',
         ],
         'urn:ogc:def:crs:EPSG::10327' => [
             'name' => 'BH_ETRS89',
@@ -1493,6 +1918,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::10326',
             'datum' => 'urn:ogc:def:datum:EPSG::1358',
             'extent' => ['1050'],
+            'extent_description' => 'Bosnia and Herzegovina.',
+            'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::20040' => [
             'name' => 'SIRGAS-Chile 2021',
@@ -1500,6 +1927,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::20039',
             'datum' => 'urn:ogc:def:datum:EPSG::1327',
             'extent' => ['1066'],
+            'extent_description' => 'Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez.',
+            'help' => 'Densification of SIRGAS-CON within Chile at epoch 2021.00. Replaces SIRGAS-Chile 2016 (CRS code 9152) due to significant tectonic deformation.',
         ],
         'urn:ogc:def:crs:EPSG::20045' => [
             'name' => 'MAGNA-SIRGAS 2018',
@@ -1507,6 +1936,8 @@ trait Geographic3DSRIDData
             'base_crs' => 'urn:ogc:def:crs:EPSG::20044',
             'datum' => 'urn:ogc:def:datum:EPSG::1329',
             'extent' => ['1070'],
+            'extent_description' => 'Colombia - onshore and offshore. Includes San Andres y Providencia, Malpelo Islands, Roncador Bank, Serrana Bank and Serranilla Bank.',
+            'help' => '',
         ],
     ];
 }

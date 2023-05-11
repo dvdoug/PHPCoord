@@ -16,6 +16,7 @@ use PHPCoord\Geometry\BoundingArea;
 
 use function assert;
 use function count;
+use function array_map;
 
 class Geographic3D extends Geographic
 {
@@ -1673,9 +1674,10 @@ class Geographic3D extends Geographic
 
     protected Geocentric|Geographic3D|null $baseCRS;
 
+    /**
+     * @var array<string, self>
+     */
     private static array $cachedObjects = [];
-
-    private static array $supportedCache = [];
 
     public function __construct(
         string $srid,
@@ -1709,7 +1711,7 @@ class Geographic3D extends Geographic
         if (!isset(self::$cachedObjects[$srid])) {
             $data = static::$sridData[$srid];
 
-            $baseCRS = $data['base_crs'] === null || $data['base_crs'] instanceof CoordinateReferenceSystem ? $data['base_crs'] : CoordinateReferenceSystem::fromSRID($data['base_crs']);
+            $baseCRS = $data['base_crs'] ? CoordinateReferenceSystem::fromSRID($data['base_crs']) : null;
             assert($baseCRS === null || $baseCRS instanceof Geocentric || $baseCRS instanceof self);
             $extent = $data['extent'] instanceof BoundingArea ? $data['extent'] : BoundingArea::createFromExtentCodes($data['extent']);
 
@@ -1726,21 +1728,24 @@ class Geographic3D extends Geographic
         return self::$cachedObjects[$srid];
     }
 
+    /**
+     * @return array<string, string>
+     */
     public static function getSupportedSRIDs(): array
     {
-        if (!self::$supportedCache) {
-            foreach (static::$sridData as $srid => $data) {
-                self::$supportedCache[$srid] = $data['name'];
-            }
-        }
-
-        return self::$supportedCache;
+        return array_map(fn (array $data) => $data['name'], static::$sridData);
     }
 
-    public static function registerCustomCRS(string $srid, string $name, string $coordinateSystemSrid, string $datumSrid, BoundingArea $extent, ?string $baseCRSSrid = null): void
+    /**
+     * @return array<string, array{name: string, extent_description: string, help: string}>
+     */
+    public static function getSupportedSRIDsWithHelp(): array
     {
-        self::$sridData[$srid] = ['name' => $name, 'coordinate_system' => $coordinateSystemSrid, 'datum' => $datumSrid, 'extent' => $extent, 'base_crs' => $baseCRSSrid];
-        self::getSupportedSRIDs(); // init cache if not already
-        self::$supportedCache[$srid] = $name; // update cache
+        return array_map(fn (array $data) => ['name' => $data['name'], 'extent_description' => $data['extent_description'], 'help' => $data['help']], static::$sridData);
+    }
+
+    public static function registerCustomCRS(string $srid, string $name, string $coordinateSystemSrid, string $datumSrid, BoundingArea $extent, ?string $baseCRSSrid = null, string $help = ''): void
+    {
+        self::$sridData[$srid] = ['name' => $name, 'coordinate_system' => $coordinateSystemSrid, 'datum' => $datumSrid, 'extent' => $extent, 'extent_description' => '', 'base_crs' => $baseCRSSrid, 'help' => $help];
     }
 }

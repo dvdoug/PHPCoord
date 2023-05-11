@@ -87,7 +87,7 @@ class BoundingArea
 
     /**
      * @internal
-     * @param int[] $extentCodes
+     * @param string[] $extentCodes
      */
     public static function createFromExtentCodes(array $extentCodes): self
     {
@@ -103,7 +103,7 @@ class BoundingArea
             }
 
             $regionMap = (new RegionMap())();
-            $regions = array_unique(array_map(static fn ($extent) => $regionMap[$extent], $extentCodes));
+            $regions = array_unique(array_map(static fn ($extent) => $regionMap[(int) $extent], $extentCodes));
             assert(count($regions) === 1);
 
             $extentData = self::createFromArray($extents, $regions[0]);

@@ -11,6 +11,8 @@ namespace PHPCoord\UnitOfMeasure\Angle;
 use PHPCoord\Exception\UnknownUnitOfMeasureException;
 use PHPCoord\UnitOfMeasure\UnitOfMeasure;
 
+use function array_map;
+
 use const M_PI;
 
 abstract class Angle implements UnitOfMeasure
@@ -126,63 +128,75 @@ abstract class Angle implements UnitOfMeasure
      */
     public const EPSG_SEXAGESIMAL_DMS = 'urn:ogc:def:uom:EPSG::9110';
 
+    /**
+     * @var array<string, array{name: string, fqcn?: class-string<self>, help: string}>
+     */
     protected static array $sridData = [
         'urn:ogc:def:uom:EPSG::1031' => [
             'name' => 'milliarc-second',
+            'help' => '= ((pi/180) / 3600 / 1000) radians',
         ],
         'urn:ogc:def:uom:EPSG::9101' => [
             'name' => 'radian',
+            'help' => 'SI coherent derived unit (standard unit) for plane angle.',
         ],
         'urn:ogc:def:uom:EPSG::9102' => [
             'name' => 'degree',
+            'help' => '= pi/180 radians',
         ],
         'urn:ogc:def:uom:EPSG::9104' => [
             'name' => 'arc-second',
+            'help' => '1/60th arc-minute = ((pi/180) / 3600) radians',
         ],
         'urn:ogc:def:uom:EPSG::9105' => [
             'name' => 'grad',
+            'help' => '=pi/200 radians.',
         ],
         'urn:ogc:def:uom:EPSG::9107' => [
             'name' => 'degree minute second',
+            'help' => 'Degree representation. Format: signed degrees (integer) - arc-minutes (integer) - arc-seconds (real, any precision). Different symbol sets are in use as field separators, for example º \' ". Convert to degrees using algorithm.',
         ],
         'urn:ogc:def:uom:EPSG::9108' => [
             'name' => 'degree minute second hemisphere',
+            'help' => 'Degree representation. Format: degrees (integer) - arc-minutes (integer) - arc-seconds (real) - hemisphere abbreviation (single character N S E or W). Different symbol sets are in use as field separators for example º \' ". Convert to deg using algorithm.',
         ],
         'urn:ogc:def:uom:EPSG::9109' => [
             'name' => 'microradian',
+            'help' => 'rad * 10E-6',
         ],
         'urn:ogc:def:uom:EPSG::9110' => [
             'name' => 'sexagesimal DMS',
+            'help' => 'Pseudo unit. Format: signed degrees - period - minutes (2 digits) - integer seconds (2 digits) - fraction of seconds (any precision). Must include leading zero in minutes and seconds and exclude decimal point for seconds. Convert to deg using algorithm.',
         ],
         'urn:ogc:def:uom:EPSG::9113' => [
             'name' => 'centesimal second',
+            'help' => '1/100 of a centesimal minute or 1/10,000th of a grad and gon = ((pi/200) / 10000) radians',
         ],
         'urn:ogc:def:uom:EPSG::9115' => [
             'name' => 'degree minute',
+            'help' => 'Degree representation. Format: signed degrees (integer)  - arc-minutes (real, any precision). Different symbol sets are in use as field separators, for example º \'. Convert to degrees using algorithm.',
         ],
         'urn:ogc:def:uom:EPSG::9116' => [
             'name' => 'degree hemisphere',
+            'help' => 'Degree representation. Format: degrees (real, any precision) - hemisphere abbreviation (single character N S E or W). Convert to degrees using algorithm.',
         ],
         'urn:ogc:def:uom:EPSG::9117' => [
             'name' => 'hemisphere degree',
+            'help' => 'Degree representation. Format: hemisphere abbreviation (single character N S E or W) - degrees (real, any precision). Convert to degrees using algorithm.',
         ],
         'urn:ogc:def:uom:EPSG::9118' => [
             'name' => 'degree minute hemisphere',
+            'help' => 'Degree representation. Format: degrees (integer) - arc-minutes (real, any precision) - hemisphere abbreviation (single character N S E or W). Different symbol sets are in use as field separators, for example º \'. Convert to degrees using algorithm.',
         ],
         'urn:ogc:def:uom:EPSG::9119' => [
             'name' => 'hemisphere degree minute',
+            'help' => 'Degree representation. Format:  hemisphere abbreviation (single character N S E or W) - degrees (integer) - arc-minutes (real, any precision). Different symbol sets are in use as field separators, for example º \'. Convert to degrees using algorithm.',
         ],
         'urn:ogc:def:uom:EPSG::9120' => [
             'name' => 'hemisphere degree minute second',
+            'help' => 'Degree representation. Format: hemisphere abbreviation (single character N S E or W) - degrees (integer) - arc-minutes (integer) - arc-seconds (real). Different symbol sets are in use as field separators for example º \' ". Convert to deg using algorithm.',
         ],
     ];
-
-    /**
-     * @var array<string, array{name: string, fqcn: self}>
-     */
-    protected static array $customSridData = [];
-
-    private static array $supportedCache = [];
 
     abstract public function __construct(float $angle);
 
@@ -227,8 +241,8 @@ abstract class Angle implements UnitOfMeasure
 
     public static function makeUnit(float|string $measurement, string $srid): self
     {
-        if (isset(self::$customSridData[$srid])) {
-            return new self::$customSridData[$srid]['fqcn']($measurement);
+        if (isset(self::$sridData[$srid]['fqcn'])) {
+            return new self::$sridData[$srid]['fqcn']($measurement);
         }
 
         return match ($srid) {
@@ -252,29 +266,35 @@ abstract class Angle implements UnitOfMeasure
         };
     }
 
-    public static function getSupportedSRIDs(): array
-    {
-        if (!self::$supportedCache) {
-            foreach (static::$sridData as $srid => $data) {
-                self::$supportedCache[$srid] = $data['name'];
-            }
-        }
-
-        return self::$supportedCache;
-    }
-
-    public static function registerCustomUnit(string $srid, string $name, string $implementingClassFQCN): void
-    {
-        self::$customSridData[$srid] = ['name' => $name, 'fqcn' => $implementingClassFQCN];
-        self::getSupportedSRIDs(); // init cache if not already
-        self::$supportedCache[$srid] = $name; // update cache
-    }
-
     public static function convert(self $angle, string $targetSRID): self
     {
         $conversionRatio = static::makeUnit(1, $targetSRID)->asRadians()->getValue();
 
         return self::makeUnit($angle->asRadians()->getValue() / $conversionRatio, $targetSRID);
+    }
+
+    /**
+     * @return array<string, string>
+     */
+    public static function getSupportedSRIDs(): array
+    {
+        return array_map(fn ($supportedSrid) => $supportedSrid['name'], self::$sridData);
+    }
+
+    /**
+     * @return array<string, array{name: string, help: string}>
+     */
+    public static function getSupportedSRIDsWithHelp(): array
+    {
+        return array_map(fn (array $data) => ['name' => $data['name'], 'help' => $data['help']], static::$sridData);
+    }
+
+    /**
+     * @param class-string<self> $implementingClassFQCN
+     */
+    public static function registerCustomUnit(string $srid, string $name, string $implementingClassFQCN, string $help = ''): void
+    {
+        self::$sridData[$srid] = ['name' => $name, 'fqcn' => $implementingClassFQCN, 'help' => $help];
     }
 
     public function __toString(): string

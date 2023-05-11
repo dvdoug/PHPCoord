@@ -138,8 +138,9 @@ class Codegen
         /*
          * First remove all existing EPSG consts
          */
+        $removeExistingDataVisitor = new RemoveExistingDataVisitor();
         $traverser = new NodeTraverser();
-        $traverser->addVisitor(new RemoveExistingDataVisitor());
+        $traverser->addVisitor($removeExistingDataVisitor);
         $newStmts = $traverser->traverse($newStmts);
 
         /*
@@ -147,7 +148,7 @@ class Codegen
          */
         if ($data) {
             $traverser = new NodeTraverser();
-            $traverser->addVisitor(new AddNewDataVisitor($data));
+            $traverser->addVisitor(new AddNewDataVisitor($removeExistingDataVisitor->hasSeenExistingData(), $data));
             $traverser->addVisitor(new PrettyPrintDataVisitor());
             $newStmts = $traverser->traverse($newStmts);
         }

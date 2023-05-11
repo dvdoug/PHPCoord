@@ -27,6 +27,16 @@ class GeocentricTest extends TestCase
         }
     }
 
+    public function testCanGetSupportedWithHelp(): void
+    {
+        $supported = Geocentric::getSupportedSRIDsWithHelp();
+        self::assertGreaterThan(0, count($supported));
+        foreach ($supported as $key => $value) {
+            self::assertStringStartsWith('urn:ogc:def:', $key);
+            self::assertIsArray($value);
+        }
+    }
+
     /**
      * @group integration
      * @dataProvider coordinateReferenceSystems

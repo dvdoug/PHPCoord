@@ -1,6 +1,10 @@
 Units of rate
 =============
 
+.. tip::
+    You can access the list of supported rates at runtime using ``Rate::getSupportedSRIDs()`` or
+    ``Rate::getSupportedSRIDsWithHelp()``
+
 Arc-seconds per year
 --------------------
 

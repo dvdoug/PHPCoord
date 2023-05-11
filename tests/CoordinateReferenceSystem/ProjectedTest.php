@@ -28,6 +28,16 @@ class ProjectedTest extends TestCase
         }
     }
 
+    public function testCanGetSupportedWithHelp(): void
+    {
+        $supported = Projected::getSupportedSRIDsWithHelp();
+        self::assertGreaterThan(0, count($supported));
+        foreach ($supported as $key => $value) {
+            self::assertStringStartsWith('urn:ogc:def:', $key);
+            self::assertIsArray($value);
+        }
+    }
+
     /**
      * @group integration
      * @dataProvider coordinateReferenceSystems

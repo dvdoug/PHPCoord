@@ -5,6 +5,10 @@ Units of length
     All length units have helper methods ``->asMetres()``, ``->add()``, ``->subtract()``,
     ``->multiply()`` and ``->divide()``
 
+.. tip::
+    You can access the list of supported length units at runtime using ``Length::getSupportedSRIDs()`` or
+    ``Length::getSupportedSRIDsWithHelp()``
+
 Metre
 -----
 

@@ -5,6 +5,10 @@ Units of angle
     All angle units have helper methods ``->asDegrees()``, ``->asRadians()``, ``->add()``, ``->subtract()``,
     ``->multiply()`` and ``->divide()``
 
+.. tip::
+    You can access the list of supported angle units at runtime using ``Angle::getSupportedSRIDs()`` or
+    ``Angle::getSupportedSRIDsWithHelp()``
+
 Degree
 ------
 

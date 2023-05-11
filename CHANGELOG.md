@@ -1,6 +1,9 @@
 # Changelog
 
 ## [Unreleased]
+### Added
+- Added `getSupportedSRIDsWithHelp()` as a version of `getSupportedSRIDs()` that returns at runtime the inline help
+  available within the source code
 ### Changed
 - Updates to data for Algeria, Bosnia and Herzegovina, Germany, Latvia and USA
 

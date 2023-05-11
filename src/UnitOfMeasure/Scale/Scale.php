@@ -11,6 +11,8 @@ namespace PHPCoord\UnitOfMeasure\Scale;
 use PHPCoord\Exception\UnknownUnitOfMeasureException;
 use PHPCoord\UnitOfMeasure\UnitOfMeasure;
 
+use function array_map;
+
 abstract class Scale implements UnitOfMeasure
 {
     /**
@@ -39,27 +41,27 @@ abstract class Scale implements UnitOfMeasure
      */
     public const EPSG_UNITY = 'urn:ogc:def:uom:EPSG::9201';
 
+    /**
+     * @var array<string, array{name: string, fqcn?: class-string<self>, help: string}>
+     */
     protected static array $sridData = [
         'urn:ogc:def:uom:EPSG::1028' => [
             'name' => 'parts per billion',
+            'help' => 'Billion is internationally ambiguous, in different languages being 1E+9 and 1E+12. One billion taken here to be 1E+9.',
         ],
         'urn:ogc:def:uom:EPSG::9201' => [
             'name' => 'unity',
+            'help' => 'EPSG standard unit for scale. SI coherent derived unit (standard unit) for dimensionless quantity, expressed by the number one but this is not explicitly shown.',
         ],
         'urn:ogc:def:uom:EPSG::9202' => [
             'name' => 'parts per million',
+            'help' => '',
         ],
         'urn:ogc:def:uom:EPSG::9203' => [
             'name' => 'coefficient',
+            'help' => 'Used when parameters are coefficients.  They inherently take the units which depend upon the term to which the coefficient applies.',
         ],
     ];
-
-    /**
-     * @var array<string, array{name: string, fqcn: self}>
-     */
-    protected static array $customSridData = [];
-
-    private static array $supportedCache = [];
 
     abstract public function __construct(float $scale);
 
@@ -99,8 +101,8 @@ abstract class Scale implements UnitOfMeasure
 
     public static function makeUnit(float $measurement, string $srid): self
     {
-        if (isset(self::$customSridData[$srid])) {
-            return new self::$customSridData[$srid]['fqcn']($measurement);
+        if (isset(self::$sridData[$srid]['fqcn'])) {
+            return new self::$sridData[$srid]['fqcn']($measurement);
         }
 
         return match ($srid) {
@@ -112,22 +114,28 @@ abstract class Scale implements UnitOfMeasure
         };
     }
 
+    /**
+     * @return array<string, string>
+     */
     public static function getSupportedSRIDs(): array
     {
-        if (!self::$supportedCache) {
-            foreach (static::$sridData as $srid => $data) {
-                self::$supportedCache[$srid] = $data['name'];
-            }
-        }
-
-        return self::$supportedCache;
+        return array_map(fn ($supportedSrid) => $supportedSrid['name'], self::$sridData);
     }
 
-    public static function registerCustomUnit(string $srid, string $name, string $implementingClassFQCN): void
+    /**
+     * @return array<string, array{name: string, help: string}>
+     */
+    public static function getSupportedSRIDsWithHelp(): array
     {
-        self::$customSridData[$srid] = ['name' => $name, 'fqcn' => $implementingClassFQCN];
-        self::getSupportedSRIDs(); // init cache if not already
-        self::$supportedCache[$srid] = $name; // update cache
+        return array_map(fn (array $data) => ['name' => $data['name'], 'help' => $data['help']], static::$sridData);
+    }
+
+    /**
+     * @param class-string<self> $implementingClassFQCN
+     */
+    public static function registerCustomUnit(string $srid, string $name, string $implementingClassFQCN, string $help = ''): void
+    {
+        self::$sridData[$srid] = ['name' => $name, 'fqcn' => $implementingClassFQCN, 'help' => $help];
     }
 
     public function __toString(): string
