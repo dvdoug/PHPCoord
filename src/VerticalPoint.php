@@ -64,7 +64,7 @@ class VerticalPoint extends Point
      */
     public static function create(Vertical $crs, Length $height, ?DateTimeInterface $epoch = null): self
     {
-        return new static($crs, $height, $epoch);
+        return new self($crs, $height, $epoch);
     }
 
     public function getHeight(): Length
@@ -88,7 +88,7 @@ class VerticalPoint extends Point
             throw new InvalidCoordinateReferenceSystemException('Can only calculate distances between two points in the same CRS');
         }
 
-        /* @var self $to */
+        /** @var self $to */
         return new Metre(abs($this->height->asMetres()->getValue() - $to->height->asMetres()->getValue()));
     }
 

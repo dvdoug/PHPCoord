@@ -18,6 +18,9 @@ use function array_merge;
 
 class UnitOfMeasureFactory
 {
+    /**
+     * @var array<string, array<string, string>>
+     */
     private static array $sridCache = [];
 
     public static function makeUnit(float|string $measurement, string $srid): UnitOfMeasure
@@ -35,24 +38,27 @@ class UnitOfMeasureFactory
         }
 
         if (isset(self::$sridCache['length'][$srid])) {
-            return Length::makeUnit($measurement, $srid);
+            return Length::makeUnit((float) $measurement, $srid);
         }
 
         if (isset(self::$sridCache['scale'][$srid])) {
-            return Scale::makeUnit($measurement, $srid);
+            return Scale::makeUnit((float) $measurement, $srid);
         }
 
         if (isset(self::$sridCache['time'][$srid])) {
-            return Time::makeUnit($measurement, $srid);
+            return Time::makeUnit((float) $measurement, $srid);
         }
 
         if (isset(self::$sridCache['rate'][$srid])) {
-            return Rate::makeUnit($measurement, $srid);
+            return Rate::makeUnit((float) $measurement, $srid);
         }
 
         throw new UnknownUnitOfMeasureException($srid);
     }
 
+    /**
+     * @return array<string, array<string, string>>
+     */
     public static function getSupportedSRIDs(): array
     {
         return array_merge(Angle::getSupportedSRIDs(), Length::getSupportedSRIDs(), Scale::getSupportedSRIDs(), Time::getSupportedSRIDs(), Rate::getSupportedSRIDs());

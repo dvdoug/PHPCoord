@@ -1,0 +1,13 @@
+includes:
+  - phpstan-baseline.neon
+
+parameters:
+  level: 9
+  inferPrivatePropertyTypeFromConstructor: true
+  paths:
+    - src
+  excludePaths:
+    analyse:
+      - src/CoordinateOperation/Params
+      - src/EPSG/Import
+      - src/Geometry/Extents

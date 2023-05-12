@@ -55,6 +55,7 @@ use function sqrt;
 use function substr;
 use function tan;
 use function tanh;
+use function assert;
 
 use const M_E;
 use const M_PI;
@@ -155,7 +156,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
             Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID => new BritishNationalGridPoint($easting, $northing, $epoch),
             Projected::EPSG_TM75_IRISH_GRID => new IrishGridPoint($easting, $northing, $epoch),
             Projected::EPSG_IRENET95_IRISH_TRANSVERSE_MERCATOR => new IrishTransverseMercatorPoint($easting, $northing, $epoch),
-            default => new static($crs, $easting, $northing, $westing, $southing, $epoch, $height),
+            default => new self($crs, $easting, $northing, $westing, $southing, $epoch, $height),
         };
     }
 
@@ -224,7 +225,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
                 throw new InvalidCoordinateReferenceSystemException('Can only calculate distances between two points in the same CRS');
             }
 
-            /* @var ProjectedPoint $to */
+            /** @var ProjectedPoint $to */
             return new Metre(
                 sqrt(
                     ($to->getEasting()->getValue() - $this->getEasting()->getValue()) ** 2 +
@@ -236,7 +237,10 @@ class ProjectedPoint extends Point implements ConvertiblePoint
 
     public function asGeographicPoint(): GeographicPoint
     {
-        return $this->performOperation($this->crs->getDerivingConversion(), $this->crs->getBaseCRS(), true);
+        $geographicPoint = $this->performOperation($this->crs->getDerivingConversion(), $this->crs->getBaseCRS(), true);
+        assert($geographicPoint instanceof GeographicPoint);
+
+        return $geographicPoint;
     }
 
     public function convert(Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $to, bool $ignoreBoundaryRestrictions = false): Point
@@ -919,9 +923,9 @@ class ProjectedPoint extends Point implements ConvertiblePoint
 
         $latitude = self::asin(cos($c) * sin($latitudeOrigin) + ($northing * sin($c) * cos($latitudeOrigin) / $rho));
 
-        if ($latitudeOrigin === 90) {
+        if ($latitudeOrigin === 90.0) {
             $longitude = $longitudeOrigin + atan($easting / -$northing);
-        } elseif ($latitudeOrigin === -90) {
+        } elseif ($latitudeOrigin === -90.0) {
             $longitude = $longitudeOrigin + atan($easting / $northing);
         } else {
             $longitudeDenominator = ($rho * cos($latitudeOrigin) * cos($c) - $northing * sin($latitudeOrigin) * sin($c));
@@ -1854,7 +1858,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         $W = cos($PPrime) * cos($LPrime) * sin($latS) - cos($PPrime) * sin($LPrime) * cos($latS);
 
         $d = hypot($U, $V);
-        if ($d === 0) {
+        if ($d === 0.0) {
             $L = 0;
             $P = static::sign($W) * M_PI / 2;
         } else {
@@ -1991,7 +1995,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         Length $falseEasting,
         Length $falseNorthing
     ): GeographicPoint {
-        $Z = substr((string) $this->easting->asMetres()->getValue(), 0, 2);
+        $Z = (int) substr((string) $this->easting->asMetres()->getValue(), 0, 2);
         $falseEasting = $falseEasting->add(new Metre($Z * 1000000));
 
         $W = $zoneWidth->asDegrees()->getValue();

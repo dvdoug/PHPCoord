@@ -24,6 +24,9 @@ abstract class Time implements UnitOfMeasure
         ],
     ];
 
+    /**
+     * @var array<string, array{name: string, fqcn: self}>
+     */
     protected static array $customSridData = [];
 
     private static array $supportedCache = [];

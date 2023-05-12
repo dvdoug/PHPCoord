@@ -33,6 +33,8 @@ use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPCoord\UnitOfMeasure\Scale\Unity;
 use Throwable;
 
+use function assert;
+
 /**
  * Coordinate representing a point expressed in 2 different CRSs (2D horizontal + 1D Vertical).
  */
@@ -76,7 +78,7 @@ class CompoundPoint extends Point implements ConvertiblePoint
 
     public static function create(Compound $crs, GeographicPoint|ProjectedPoint $horizontalPoint, VerticalPoint $verticalPoint, ?DateTimeInterface $epoch = null): self
     {
-        return new static($crs, $horizontalPoint, $verticalPoint, $epoch);
+        return new self($crs, $horizontalPoint, $verticalPoint, $epoch);
     }
 
     public function getHorizontalPoint(): GeographicPoint|ProjectedPoint
@@ -125,20 +127,22 @@ class CompoundPoint extends Point implements ConvertiblePoint
         } catch (UnknownConversionException $e) {
             // if 2D target, try again with just the horizontal component
             if ($to instanceof Geographic2D || $to instanceof Projected) {
-                return $this->getHorizontalPoint()->convert($to, $ignoreBoundaryRestrictions);
+                return $this->horizontalPoint->convert($to, $ignoreBoundaryRestrictions);
             }
 
             // try separate horizontal + vertical conversions and stitch results together
             if ($to instanceof Compound) {
-                $newHorizontalPoint = $this->getHorizontalPoint()->convert($to->getHorizontal());
+                /** @var GeographicPoint|ProjectedPoint $newHorizontalPoint */
+                $newHorizontalPoint = $this->horizontalPoint->convert($to->getHorizontal());
 
                 if ($this->getCRS()->getVertical()->getSRID() !== $to->getVertical()->getSRID()) {
                     $path = $this->findOperationPath($this->getCRS()->getVertical(), $to->getVertical(), $ignoreBoundaryRestrictions);
 
                     if ($path) {
-                        $newVerticalPoint = $this->getVerticalPoint();
+                        $newVerticalPoint = $this->verticalPoint;
                         foreach ($path as $step) {
                             $target = CoordinateReferenceSystem::fromSRID($step['in_reverse'] ? $step['source_crs'] : $step['target_crs']);
+                            /** @var VerticalPoint $newVerticalPoint */
                             $newVerticalPoint = $newVerticalPoint->performOperation($step['operation'], $target, $step['in_reverse'], ['horizontalPoint' => $newHorizontalPoint]);
                         }
 
@@ -148,21 +152,25 @@ class CompoundPoint extends Point implements ConvertiblePoint
             }
             // try converting to any/all of the other Compound CRSs that include the same vertical CRS, where the
             // horizontal CRS has a 3D equivalent. From there, try converting using the usual mechanisms
-            $candidateIntermediates = Compound::findFromVertical($this->getVerticalPoint()->getCRS());
+            $candidateIntermediates = Compound::findFromVertical($this->verticalPoint->getCRS());
             unset($candidateIntermediates[$this->getCRS()->getSRID()]);
 
             foreach ($candidateIntermediates as $candidateIntermediate) {
                 try {
                     if ($candidateIntermediate->getHorizontal() instanceof Geographic2D && $candidateIntermediate->getHorizontal()->getBaseCRS() instanceof Geographic3D) {
-                        $candidateHorizontalPoint = $this->getHorizontalPoint()->convert($candidateIntermediate->getHorizontal());
+                        /** @var GeographicPoint|ProjectedPoint $candidateHorizontalPoint */
+                        $candidateHorizontalPoint = $this->horizontalPoint->convert($candidateIntermediate->getHorizontal());
                         $candidateIntermediatePoint = self::create(
                             $candidateIntermediate,
                             $candidateHorizontalPoint,
-                            $this->getVerticalPoint(),
+                            $this->verticalPoint,
                             $this->epoch,
                         );
 
-                        return $candidateIntermediatePoint->convert($candidateIntermediate->getHorizontal()->getBaseCRS())->convert($to);
+                        /** @var GeographicPoint $candidateBaseCRSPoint */
+                        $candidateBaseCRSPoint = $candidateIntermediatePoint->convert($candidateIntermediate->getHorizontal()->getBaseCRS());
+
+                        return $candidateBaseCRSPoint->convert($to);
                     }
                 } catch (Throwable) {
                 }
@@ -187,9 +195,11 @@ class CompoundPoint extends Point implements ConvertiblePoint
         Angle $longitudeOffset,
         Length $geoidUndulation
     ): GeographicPoint {
-        $toLatitude = $this->getHorizontalPoint()->getLatitude()->add($latitudeOffset);
-        $toLongitude = $this->getHorizontalPoint()->getLongitude()->add($longitudeOffset);
-        $toHeight = $this->getVerticalPoint()->getHeight()->add($geoidUndulation);
+        assert($this->horizontalPoint instanceof GeographicPoint);
+        $horizontalPoint = $this->horizontalPoint;
+        $toLatitude = $horizontalPoint->getLatitude()->add($latitudeOffset);
+        $toLongitude = $horizontalPoint->getLongitude()->add($longitudeOffset);
+        $toHeight = $this->verticalPoint->getHeight()->add($geoidUndulation);
 
         return GeographicPoint::create($to, $toLatitude, $toLongitude, $toHeight, $this->epoch);
     }
@@ -203,6 +213,7 @@ class CompoundPoint extends Point implements ConvertiblePoint
         Geographic3D $to,
         OSTNOSGM15Grid $geoidHeightCorrectionModelFile
     ): GeographicPoint {
+        assert($this->horizontalPoint instanceof GeographicPoint);
         $osgb36NationalGrid = Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID);
         $etrs89NationalGrid = new Projected(
             'ETRS89 / National Grid',
@@ -229,6 +240,8 @@ class CompoundPoint extends Point implements ConvertiblePoint
         Geographic3D $to,
         GeographicGeoidHeightGrid $geoidHeightCorrectionModelFile
     ): GeographicPoint {
+        assert($this->horizontalPoint instanceof GeographicPoint);
+
         return GeographicPoint::create(
             $to,
             $this->horizontalPoint->getLatitude(),

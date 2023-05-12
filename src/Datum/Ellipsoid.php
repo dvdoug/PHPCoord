@@ -726,7 +726,7 @@ class Ellipsoid
             $semiMajorAxis = $data['semi_major_axis'] instanceof Length ? $data['semi_major_axis'] : Length::makeUnit($data['semi_major_axis'], $data['uom']);
             $semiMinorAxis = $data['semi_minor_axis'] instanceof Length ? $data['semi_minor_axis'] : Length::makeUnit($data['semi_minor_axis'], $data['uom']);
 
-            self::$cachedObjects[$srid] = new static(
+            self::$cachedObjects[$srid] = new self(
                 $semiMajorAxis,
                 $semiMinorAxis,
                 $data['name'],

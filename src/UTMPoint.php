@@ -11,7 +11,6 @@ namespace PHPCoord;
 use DateTimeInterface;
 use PHPCoord\CoordinateReferenceSystem\Compound;
 use PHPCoord\CoordinateReferenceSystem\Geocentric;
-use PHPCoord\CoordinateReferenceSystem\Geographic;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Geographic3D;
 use PHPCoord\CoordinateReferenceSystem\Projected;
@@ -43,9 +42,9 @@ class UTMPoint extends ProjectedPoint
      * Base CRS.
      * @deprecated use $this->crs->getBaseCRS()
      */
-    protected Geographic2D $baseCRS;
+    protected Geographic2D|Geographic3D $baseCRS;
 
-    public function __construct(Geographic2D $crs, Length $easting, Length $northing, int $zone, string $hemisphere, ?DateTimeInterface $epoch = null)
+    public function __construct(Geographic2D|Geographic3D $crs, Length $easting, Length $northing, int $zone, string $hemisphere, ?DateTimeInterface $epoch = null)
     {
         $this->zone = $zone;
         $this->hemisphere = $hemisphere;
@@ -85,7 +84,7 @@ class UTMPoint extends ProjectedPoint
         return $this->hemisphere;
     }
 
-    public function getBaseCRS(): Geographic
+    public function getBaseCRS(): Geographic2D|Geographic3D
     {
         return $this->crs->getBaseCRS();
     }

@@ -18549,8 +18549,14 @@ class CoordinateOperations
         ],
     ];
 
+    /**
+     * @var array<string, array<mixed>>
+     */
     protected static array $customSridParamData = [];
 
+    /**
+     * @var array<int, array{operation: string, name: string, source_crs: string, target_crs: string, accuracy: float}>
+     */
     protected static array $customTransformationData = [];
 
     /**

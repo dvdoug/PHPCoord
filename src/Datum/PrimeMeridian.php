@@ -209,9 +209,9 @@ class PrimeMeridian
             $data = static::$sridData[$srid];
 
             if ($data['greenwich_longitude'] instanceof Angle) {
-                self::$cachedObjects[$srid] = new static($data['name'], $data['greenwich_longitude'], $srid);
+                self::$cachedObjects[$srid] = new self($data['name'], $data['greenwich_longitude'], $srid);
             } else {
-                self::$cachedObjects[$srid] = new static($data['name'], Angle::makeUnit($data['greenwich_longitude'], $data['uom']), $srid);
+                self::$cachedObjects[$srid] = new self($data['name'], Angle::makeUnit($data['greenwich_longitude'], $data['uom']), $srid);
             }
         }
 

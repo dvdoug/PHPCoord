@@ -32,6 +32,9 @@ abstract class CoordinateSystem
      */
     protected array $axesByName;
 
+    /**
+     * @param Axis[] $axes
+     */
     public function __construct(
         string $srid,
         array $axes

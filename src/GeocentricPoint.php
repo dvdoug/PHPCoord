@@ -87,7 +87,7 @@ class GeocentricPoint extends Point implements ConvertiblePoint
      */
     public static function create(Geocentric $crs, Length $x, Length $y, Length $z, ?DateTimeInterface $epoch = null): self
     {
-        return new static($crs, $x, $y, $z, $epoch);
+        return new self($crs, $x, $y, $z, $epoch);
     }
 
     public function getX(): Length
@@ -129,7 +129,7 @@ class GeocentricPoint extends Point implements ConvertiblePoint
                 throw new InvalidCoordinateReferenceSystemException('Can only calculate distances between two points in the same CRS');
             }
 
-            /* @var GeocentricPoint $to */
+            /** @var GeocentricPoint $to */
             return static::vincenty($this->asGeographicValue(), $to->asGeographicValue(), $this->getCRS()->getDatum()->getEllipsoid());
         }
     }

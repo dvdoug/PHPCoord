@@ -42,6 +42,8 @@ use function str_starts_with;
 use function tan;
 use function str_ends_with;
 use function class_exists;
+use function assert;
+use function property_exists;
 
 use const M_PI;
 
@@ -75,6 +77,7 @@ abstract class Point implements Stringable
 
     /**
      * @internal
+     * @param array{horizontalPoint?: Point} $additionalParams
      */
     public function performOperation(string $srid, Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $to, bool $inReverse, array $additionalParams = []): self
     {
@@ -82,6 +85,7 @@ abstract class Point implements Stringable
 
         if ($operation['method'] === CoordinateOperationMethods::EPSG_ALIAS) {
             $point = clone $this;
+            assert(property_exists($point, 'crs'));
             $point->crs = $to;
 
             return $point;
@@ -89,7 +93,7 @@ abstract class Point implements Stringable
             $method = CoordinateOperationMethods::getFunctionName($operation['method']);
             $params = self::resolveParamsByOperation($srid, $operation['method'], $inReverse);
 
-            if (isset(self::METHODS_REQUIRING_HORIZONTAL_POINT[$operation['method']])) {
+            if (isset(self::METHODS_REQUIRING_HORIZONTAL_POINT[$operation['method']]) && isset($additionalParams['horizontalPoint'])) {
                 $params['horizontalPoint'] = $additionalParams['horizontalPoint'];
             }
 
@@ -97,6 +101,9 @@ abstract class Point implements Stringable
         }
     }
 
+    /**
+     * @return array<string, mixed>
+     */
     protected static function resolveParamsByOperation(string $operationSrid, string $methodSrid, bool $inReverse): array
     {
         $methodData = CoordinateOperationMethods::getMethodData($methodSrid);
@@ -205,7 +212,8 @@ abstract class Point implements Stringable
 
     /**
      * General polynomial.
-     * @param Coefficient[] $powerCoefficients
+     * @param  array<string, Coefficient>  $powerCoefficients
+     * @return array{xt: float, yt: float}
      */
     protected function generalPolynomialUnitless(
         float $xs,
@@ -252,6 +260,8 @@ abstract class Point implements Stringable
 
     /**
      * Reversible polynomial.
+     * @param  array<string, Coefficient>  $powerCoefficients
+     * @return array{xt: float, yt: float}
      */
     protected function reversiblePolynomialUnitless(
         float $xs,

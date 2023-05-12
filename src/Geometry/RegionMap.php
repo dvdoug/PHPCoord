@@ -22,6 +22,7 @@ class RegionMap
 
     /**
      * @internal
+     * @return array<int, self::REGION_*>
      */
     public function __invoke(): array
     {

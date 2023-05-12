@@ -22,11 +22,12 @@ use function implode;
 use function usort;
 use function in_array;
 use function array_keys;
+use function is_callable;
 
 class BoundingArea
 {
     /**
-     * @var array<array<array<array<float, float>>>
+     * @var array<array<array<array{0: float, 1: float}>>>
      */
     protected array $vertices;
 
@@ -38,12 +39,24 @@ class BoundingArea
 
     protected bool $longitudeExtendsFurtherThanPlus180 = false;
 
+    /**
+     * @var array<string, self>
+     */
     private static array $cachedObjects = [];
 
-    private array $pointInside = [];
+    /**
+     * @var array{0: Angle, 1: Angle}
+     */
+    private array $pointInside;
 
+    /**
+     * @var array<int, array{0: Angle, 1: Angle}>
+     */
     private array $centre = [];
 
+    /**
+     * @param array<array<array<array{0: float, 1: float}>>> $vertices
+     */
     protected function __construct(array $vertices, string $region)
     {
         // put largest polygon (outer ring size) first
@@ -59,21 +72,22 @@ class BoundingArea
 
     /**
      * Vertices in GeoJSON-type format (an array of polygons, which is an array of rings which is an array of long,lat points).
-     * @param array<array<array<array<float, float>>> $vertices [[[long,lat], [long,lat]...]]
-     * @param RegionMap::REGION_*
+     * @param array<array<array<array{0: float, 1: float}>>> $vertices [[[long,lat], [long,lat]...]]
+     * @param RegionMap::REGION_*                            $region
      */
     public static function createFromArray(array $vertices, string $region): self
     {
-        return new static($vertices, $region);
+        return new self($vertices, $region);
     }
 
     public static function createWorld(): self
     {
-        return new static([[[[-180, -90], [-180, 90], [180, 90], [180, -90], [-180, -90]]]], RegionMap::REGION_GLOBAL);
+        return new self([[[[-180, -90], [-180, 90], [180, 90], [180, -90], [-180, -90]]]], RegionMap::REGION_GLOBAL);
     }
 
     /**
      * @internal
+     * @param int[] $extentCodes
      */
     public static function createFromExtentCodes(array $extentCodes): self
     {
@@ -84,6 +98,7 @@ class BoundingArea
                 $fullExtent = "PHPCoord\\Geometry\\Extents\\Extent{$extentCode}";
                 $basicExtent = "PHPCoord\\Geometry\\Extents\\BoundingBoxOnly\\Extent{$extentCode}";
                 $extentClass = class_exists($fullExtent) ? new $fullExtent() : new $basicExtent();
+                assert(is_callable($extentClass));
                 $extents = [...$extents, ...$extentClass()];
             }
 
@@ -168,11 +183,11 @@ class BoundingArea
 
     /**
      * @internal used for testing
-     * @return array<Angle,Angle>
+     * @return array{0: Angle, 1: Angle}
      */
     public function getPointInside(): array
     {
-        if (!$this->pointInside) {
+        if (!isset($this->pointInside)) {
             foreach (array_keys($this->vertices) as $polygonId) {
                 $point = $this->getCentre($polygonId);
                 $this->pointInside = $point;
@@ -188,7 +203,7 @@ class BoundingArea
 
     /**
      * @internal used for testing
-     * @return array<Angle,Angle>
+     * @return array{0: Angle, 1: Angle}
      */
     protected function getCentre(int $polygonId): array
     {

@@ -62,6 +62,7 @@ use function sinh;
 use function sqrt;
 use function str_replace;
 use function tan;
+use function assert;
 
 use const M_E;
 use const M_PI;
@@ -135,7 +136,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
      */
     public static function create(Geographic2D|Geographic3D $crs, Angle $latitude, Angle $longitude, ?Length $height = null, ?DateTimeInterface $epoch = null): self
     {
-        return new static($crs, $latitude, $longitude, $height, $epoch);
+        return new self($crs, $latitude, $longitude, $height, $epoch);
     }
 
     public function getLatitude(): Angle
@@ -153,7 +154,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         return $this->height;
     }
 
-    public function getCRS(): Geographic
+    public function getCRS(): Geographic2D|Geographic3D
     {
         return $this->crs;
     }
@@ -201,7 +202,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
                 throw new InvalidCoordinateReferenceSystemException('Can only calculate distances between two points in the same CRS');
             }
 
-            /* @var GeographicPoint $to */
+            /** @var GeographicPoint $to */
             return static::vincenty($this->asGeographicValue(), $to->asGeographicValue(), $this->getCRS()->getDatum()->getEllipsoid());
         }
     }
@@ -1986,10 +1987,12 @@ class GeographicPoint extends Point implements ConvertiblePoint
         Angle $longitudeOffset,
         Length $geoidUndulation
     ): CompoundPoint {
+        assert($this->height instanceof Length);
         $toLatitude = $this->latitude->add($latitudeOffset);
         $toLongitude = $this->longitude->add($longitudeOffset);
         $toHeight = $this->height->add($geoidUndulation);
 
+        assert($to->getHorizontal() instanceof Geographic2D);
         $horizontal = static::create($to->getHorizontal(), $toLatitude, $toLongitude, null, $this->epoch);
         $vertical = VerticalPoint::create($to->getVertical(), $toHeight, $this->epoch);
 
@@ -2121,6 +2124,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         Compound $to,
         OSTNOSGM15Grid $geoidHeightCorrectionModelFile
     ): CompoundPoint {
+        assert($this->height instanceof Length);
         $osgb36NationalGrid = Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID);
         $etrs89NationalGrid = new Projected(
             'ETRS89 / National Grid',
@@ -2129,8 +2133,10 @@ class GeographicPoint extends Point implements ConvertiblePoint
             $osgb36NationalGrid->getBoundingArea()
         );
 
+        /** @var ProjectedPoint $projected */
         $projected = $this->transverseMercator($etrs89NationalGrid, new Degree(49), new Degree(-2), new Unity(0.9996012717), new Metre(400000), new Metre(-100000));
 
+        assert($to->getHorizontal() instanceof Geographic2D);
         $horizontalPoint = self::create(
             $to->getHorizontal(),
             $this->latitude,
@@ -2162,6 +2168,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         Vertical $to,
         OSTNOSGM15Grid $geoidHeightCorrectionModelFile
     ): VerticalPoint {
+        assert($this->height instanceof Length);
         $osgb36NationalGrid = Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID);
         $etrs89NationalGrid = new Projected(
             'ETRS89 / National Grid',
@@ -2186,6 +2193,8 @@ class GeographicPoint extends Point implements ConvertiblePoint
         Compound $to,
         GeographicGeoidHeightGrid $geoidHeightCorrectionModelFile
     ): CompoundPoint {
+        assert($this->height instanceof Length);
+        assert($to->getHorizontal() instanceof Geographic);
         $horizontalPoint = self::create(
             $to->getHorizontal(),
             $this->latitude,
@@ -2215,6 +2224,8 @@ class GeographicPoint extends Point implements ConvertiblePoint
         Vertical $to,
         GeographicGeoidHeightGrid $geoidHeightCorrectionModelFile
     ): VerticalPoint {
+        assert($this->height instanceof Length);
+
         return VerticalPoint::create(
             $to,
             $this->height->subtract($geoidHeightCorrectionModelFile->getHeightAdjustment($this)),
@@ -2280,6 +2291,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
             BoundingArea::createWorld() // this is a dummy CRS for the transform only, details don't matter (UTMPoint creates own)
         );
 
+        /** @var ProjectedPoint $asProjected */
         $asProjected = $this->performOperation($derivingConversion, $projectedCRS, false);
 
         return new UTMPoint($this->crs, $asProjected->getEasting(), $asProjected->getNorthing(), $zone, $hemisphere, $this->epoch);

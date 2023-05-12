@@ -40218,7 +40218,7 @@ class Projected extends CoordinateReferenceSystem
      */
     public const EPSG_LKS92_LATVIA_TM = 'urn:ogc:def:crs:EPSG::3059';
 
-    protected Geographic2D|Geographic3D|null $baseCRS;
+    protected Geographic2D|Geographic3D $baseCRS;
 
     protected ?string $derivingConversion;
 
@@ -40240,13 +40240,13 @@ class Projected extends CoordinateReferenceSystem
         $this->datum = $datum;
         $this->boundingArea = $boundingArea;
         $this->name = $name;
-        $this->baseCRS = $baseCRS;
+        $this->baseCRS = $baseCRS ?? Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84);
         $this->derivingConversion = $derivingConversion;
 
         assert(count($coordinateSystem->getAxes()) === 2 || count($coordinateSystem->getAxes()) === 3);
     }
 
-    public function getBaseCRS(): Geographic2D|Geographic3D|null
+    public function getBaseCRS(): Geographic2D|Geographic3D
     {
         return $this->baseCRS;
     }

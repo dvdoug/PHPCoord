@@ -139,12 +139,12 @@ class Rate implements UnitOfMeasure
 
     public function multiply(float $multiplicand): self
     {
-        return new static($this->change->multiply($multiplicand), $this->time);
+        return new self($this->change->multiply($multiplicand), $this->time);
     }
 
     public static function makeUnit(float $measurement, string $srid): self
     {
-        if (!isset(static::$sridData[$srid])) {
+        if (!isset(self::$sridData[$srid])) {
             throw new UnknownUnitOfMeasureException($srid);
         }
 

@@ -45,22 +45,22 @@ class BritishNationalGridPoint extends ProjectedPoint
         }
 
         // first (major) letter is the 500km grid sq, origin at -1000000, -500000
-        $majorEasting = strpos(static::GRID_LETTERS, $reference[0]) % 5 * 500000 - 1000000;
-        $majorNorthing = floor(strpos(static::GRID_LETTERS, $reference[0]) / 5) * 500000 - 500000;
+        $majorEasting = strpos(self::GRID_LETTERS, $reference[0]) % 5 * 500000 - 1000000;
+        $majorNorthing = floor(strpos(self::GRID_LETTERS, $reference[0]) / 5) * 500000 - 500000;
 
         // second (minor) letter is 100km grid sq, origin at 0,0 of this square
-        $minorEasting = strpos(static::GRID_LETTERS, $reference[1]) % 5 * 100000;
-        $minorNorthing = floor(strpos(static::GRID_LETTERS, $reference[1]) / 5) * 100000;
+        $minorEasting = strpos(self::GRID_LETTERS, $reference[1]) % 5 * 100000;
+        $minorNorthing = floor(strpos(self::GRID_LETTERS, $reference[1]) / 5) * 100000;
 
         // numbers are a division of that square into smaller and smaller pieces
         $numericPortion = substr($reference, 2);
         $numericPortionSize = strlen($numericPortion) / 2;
         $gridSizeInMetres = 1 * (10 ** (5 - $numericPortionSize));
 
-        $easting = $majorEasting + $minorEasting + (substr($numericPortion, 0, $numericPortionSize) * $gridSizeInMetres);
-        $northing = $majorNorthing + $minorNorthing + (substr($numericPortion, -$numericPortionSize, $numericPortionSize) * $gridSizeInMetres);
+        $easting = $majorEasting + $minorEasting + ((int) substr($numericPortion, 0, (int) $numericPortionSize) * $gridSizeInMetres);
+        $northing = $majorNorthing + $minorNorthing + ((int) substr($numericPortion, -(int) $numericPortionSize, (int) $numericPortionSize) * $gridSizeInMetres);
 
-        return new static(new Metre($easting), new Metre($northing), $epoch);
+        return new self(new Metre($easting), new Metre($northing), $epoch);
     }
 
     /**
@@ -84,7 +84,7 @@ class BritishNationalGridPoint extends ProjectedPoint
      * given length (2, 4, 6, 8 or 10) including the two-character
      * designation for the 100km square. e.g. TG514131.
      *
-     * @return string
+     * @return array{0: string, 1: string, 2: string}
      */
     protected function gridReference(int $length): array
     {

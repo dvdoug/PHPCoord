@@ -177,6 +177,9 @@ abstract class Angle implements UnitOfMeasure
         ],
     ];
 
+    /**
+     * @var array<string, array{name: string, fqcn: self}>
+     */
     protected static array $customSridData = [];
 
     private static array $supportedCache = [];
@@ -229,13 +232,13 @@ abstract class Angle implements UnitOfMeasure
         }
 
         return match ($srid) {
-            self::EPSG_RADIAN => new Radian($measurement),
-            self::EPSG_MICRORADIAN => new MicroRadian($measurement),
-            self::EPSG_DEGREE => new Degree($measurement),
-            self::EPSG_ARC_SECOND => new ArcSecond($measurement),
-            self::EPSG_MILLIARC_SECOND => new ArcSecond($measurement / 1000),
-            self::EPSG_GRAD => new Grad($measurement),
-            self::EPSG_CENTESIMAL_SECOND => new CentesimalSecond($measurement),
+            self::EPSG_RADIAN => new Radian((float) $measurement),
+            self::EPSG_MICRORADIAN => new MicroRadian((float) $measurement),
+            self::EPSG_DEGREE => new Degree((float) $measurement),
+            self::EPSG_ARC_SECOND => new ArcSecond((float) $measurement),
+            self::EPSG_MILLIARC_SECOND => new ArcSecond((float) $measurement / 1000),
+            self::EPSG_GRAD => new Grad((float) $measurement),
+            self::EPSG_CENTESIMAL_SECOND => new CentesimalSecond((float) $measurement),
             self::EPSG_DEGREE_MINUTE_SECOND => Degree::fromDegreeMinuteSecond((string) $measurement),
             self::EPSG_DEGREE_MINUTE_SECOND_HEMISPHERE => Degree::fromDegreeMinuteSecondHemisphere((string) $measurement),
             self::EPSG_HEMISPHERE_DEGREE_MINUTE_SECOND => Degree::fromHemisphereDegreeMinuteSecond((string) $measurement),

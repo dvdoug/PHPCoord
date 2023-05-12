@@ -27,6 +27,7 @@
         "php-coord/datapack-northamerica": "dev-master",
         "php-coord/datapack-oceania": "dev-master",
         "php-coord/datapack-southamerica": "dev-master",
+        "phpstan/phpstan": "^1.10",
         "phpunit/phpunit": "^9.6||^10.0"
     },
     "suggest": {

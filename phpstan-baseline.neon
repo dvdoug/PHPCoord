@@ -1,0 +1,81 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Method PHPCoord\\\\CoordinateReferenceSystem\\\\Projected\\:\\:getDerivingConversion\\(\\) should return string but returns string\\|null\\.$#"
+			count: 1
+			path: src/CoordinateReferenceSystem/Projected.php
+
+		-
+			message: "#^Method PHPCoord\\\\Datum\\\\Datum\\:\\:getEllipsoid\\(\\) should return PHPCoord\\\\Datum\\\\Ellipsoid but returns PHPCoord\\\\Datum\\\\Ellipsoid\\|null\\.$#"
+			count: 1
+			path: src/Datum/Datum.php
+
+		-
+			message: "#^Method PHPCoord\\\\Datum\\\\Datum\\:\\:getPrimeMeridian\\(\\) should return PHPCoord\\\\Datum\\\\PrimeMeridian but returns PHPCoord\\\\Datum\\\\PrimeMeridian\\|null\\.$#"
+			count: 1
+			path: src/Datum/Datum.php
+
+		-
+			message: "#^Call to an undefined method PHPCoord\\\\UnitOfMeasure\\\\UnitOfMeasure\\:\\:multiply\\(\\)\\.$#"
+			count: 14
+			path: src/GeocentricPoint.php
+
+		-
+			message: "#^Cannot call method getUnitOfMeasureId\\(\\) on PHPCoord\\\\CoordinateSystem\\\\Axis\\|null\\.$#"
+			count: 3
+			path: src/GeocentricPoint.php
+
+		-
+			message: "#^Cannot call method getUnitOfMeasureId\\(\\) on PHPCoord\\\\CoordinateSystem\\\\Axis\\|null\\.$#"
+			count: 3
+			path: src/GeographicPoint.php
+
+		-
+			message: "#^Parameter \\#1 \\$easting of class PHPCoord\\\\BritishNationalGridPoint constructor expects PHPCoord\\\\UnitOfMeasure\\\\Length\\\\Length, PHPCoord\\\\UnitOfMeasure\\\\Length\\\\Length\\|null given\\.$#"
+			count: 1
+			path: src/ProjectedPoint.php
+
+		-
+			message: "#^Parameter \\#1 \\$easting of class PHPCoord\\\\IrishGridPoint constructor expects PHPCoord\\\\UnitOfMeasure\\\\Length\\\\Length, PHPCoord\\\\UnitOfMeasure\\\\Length\\\\Length\\|null given\\.$#"
+			count: 1
+			path: src/ProjectedPoint.php
+
+		-
+			message: "#^Parameter \\#1 \\$easting of class PHPCoord\\\\IrishTransverseMercatorPoint constructor expects PHPCoord\\\\UnitOfMeasure\\\\Length\\\\Length, PHPCoord\\\\UnitOfMeasure\\\\Length\\\\Length\\|null given\\.$#"
+			count: 1
+			path: src/ProjectedPoint.php
+
+		-
+			message: "#^Parameter \\#2 \\$northing of class PHPCoord\\\\BritishNationalGridPoint constructor expects PHPCoord\\\\UnitOfMeasure\\\\Length\\\\Length, PHPCoord\\\\UnitOfMeasure\\\\Length\\\\Length\\|null given\\.$#"
+			count: 1
+			path: src/ProjectedPoint.php
+
+		-
+			message: "#^Parameter \\#2 \\$northing of class PHPCoord\\\\IrishGridPoint constructor expects PHPCoord\\\\UnitOfMeasure\\\\Length\\\\Length, PHPCoord\\\\UnitOfMeasure\\\\Length\\\\Length\\|null given\\.$#"
+			count: 1
+			path: src/ProjectedPoint.php
+
+		-
+			message: "#^Parameter \\#2 \\$northing of class PHPCoord\\\\IrishTransverseMercatorPoint constructor expects PHPCoord\\\\UnitOfMeasure\\\\Length\\\\Length, PHPCoord\\\\UnitOfMeasure\\\\Length\\\\Length\\|null given\\.$#"
+			count: 1
+			path: src/ProjectedPoint.php
+
+		-
+			message: "#^Left side of \\|\\| is always false\\.$#"
+			count: 1
+			path: src/UnitOfMeasure/Angle/Degree.php
+
+		-
+			message: "#^Call to an undefined method PHPCoord\\\\UnitOfMeasure\\\\UnitOfMeasure\\:\\:divide\\(\\)\\.$#"
+			count: 1
+			path: src/UnitOfMeasure/Rate.php
+
+		-
+			message: "#^Call to an undefined method PHPCoord\\\\UnitOfMeasure\\\\UnitOfMeasure\\:\\:multiply\\(\\)\\.$#"
+			count: 1
+			path: src/UnitOfMeasure/Rate.php
+
+		-
+			message: "#^Method PHPCoord\\\\UnitOfMeasure\\\\Time\\\\Year\\:\\:asDateTime\\(\\) should return DateTimeImmutable but returns DateTimeImmutable\\|false\\.$#"
+			count: 1
+			path: src/UnitOfMeasure/Time/Year.php

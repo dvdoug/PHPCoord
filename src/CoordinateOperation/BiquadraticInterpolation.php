@@ -24,6 +24,9 @@ trait BiquadraticInterpolation
     protected float $columnGridInterval;
     protected float $rowGridInterval;
 
+    /**
+     * @return float[]
+     */
     public function interpolate(
         float $x,
         float $y

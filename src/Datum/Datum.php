@@ -14799,8 +14799,8 @@ class Datum
             }
 
             if ($data['type'] === self::DATUM_TYPE_ENSEMBLE) { // if ensemble, use latest realisation for data
-                $latest = static::$sridData[end(static::$sridData[$srid]['ensemble'])];
-                self::$cachedObjects[$srid] = new static(
+                $latest = self::$sridData[end(self::$sridData[$srid]['ensemble'])];
+                self::$cachedObjects[$srid] = new self(
                     $data['type'],
                     $latest['ellipsoid'] ? Ellipsoid::fromSRID($latest['ellipsoid']) : null,
                     $latest['prime_meridian'] ? PrimeMeridian::fromSRID($latest['prime_meridian']) : null,
@@ -14809,7 +14809,7 @@ class Datum
                     $srid,
                 );
             } elseif ($data['ellipsoid']) {
-                self::$cachedObjects[$srid] = new static(
+                self::$cachedObjects[$srid] = new self(
                     $data['type'],
                     Ellipsoid::fromSRID($data['ellipsoid']),
                     PrimeMeridian::fromSRID($data['prime_meridian']),
@@ -14818,7 +14818,7 @@ class Datum
                     $srid,
                 );
             } else {
-                self::$cachedObjects[$srid] = new static(
+                self::$cachedObjects[$srid] = new self(
                     $data['type'],
                     null,
                     null,

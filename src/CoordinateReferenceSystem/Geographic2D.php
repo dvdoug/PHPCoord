@@ -4244,7 +4244,7 @@ class Geographic2D extends Geographic
      */
     public const EPSG_LKS92 = 'urn:ogc:def:crs:EPSG::4661';
 
-    protected Geocentric|Geographic2D|Geographic3D|null $baseCRS;
+    protected Geographic2D|Geographic3D|null $baseCRS;
 
     private static array $cachedObjects = [];
 
@@ -4283,6 +4283,7 @@ class Geographic2D extends Geographic
             $data = static::$sridData[$srid];
 
             $baseCRS = $data['base_crs'] === null || $data['base_crs'] instanceof CoordinateReferenceSystem ? $data['base_crs'] : CoordinateReferenceSystem::fromSRID($data['base_crs']);
+            assert($baseCRS === null || $baseCRS instanceof self || $baseCRS instanceof Geographic3D);
             $extent = $data['extent'] instanceof BoundingArea ? $data['extent'] : BoundingArea::createFromExtentCodes($data['extent']);
 
             self::$cachedObjects[$srid] = new self(
