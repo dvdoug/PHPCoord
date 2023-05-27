@@ -40299,7 +40299,7 @@ class Projected extends CoordinateReferenceSystem
         BoundingArea $boundingArea,
         string $name = '',
         Geographic2D|Geographic3D $baseCRS = null,
-        ?string $derivingConversion = null
+        string $derivingConversion = null
     ) {
         $this->srid = $srid;
         $this->coordinateSystem = $coordinateSystem;

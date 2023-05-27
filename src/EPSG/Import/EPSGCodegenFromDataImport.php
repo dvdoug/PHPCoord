@@ -1751,8 +1751,8 @@ class EPSGCodegenFromDataImport
                     $paramsRow['value'] = 'urn:ogc:def:coordinateOperation:EPSG::' . $paramsRow['value'];
                 }
                 if (
-                    isset($filenameToProviderMap[(string) $paramsRow['value']]) &&
-                    in_array(
+                    isset($filenameToProviderMap[(string) $paramsRow['value']])
+                    && in_array(
                         $paramsRow['name'],
                         [
                             'eastingAndNorthingDifferenceFile',

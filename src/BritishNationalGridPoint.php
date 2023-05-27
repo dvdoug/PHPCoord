@@ -28,7 +28,7 @@ class BritishNationalGridPoint extends ProjectedPoint
 {
     private const GRID_LETTERS = 'VWXYZQRSTULMNOPFGHJKABCDE';
 
-    public function __construct(Length $easting, Length $northing, ?DateTimeInterface $epoch = null)
+    public function __construct(Length $easting, Length $northing, DateTimeInterface $epoch = null)
     {
         parent::__construct(Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID), $easting, $northing, null, null, $epoch, null);
     }
@@ -36,7 +36,7 @@ class BritishNationalGridPoint extends ProjectedPoint
     /**
      * @param string $reference OS grid reference (e.g. "TG514131")
      */
-    public static function fromGridReference(string $reference, ?DateTimeInterface $epoch = null): self
+    public static function fromGridReference(string $reference, DateTimeInterface $epoch = null): self
     {
         $reference = str_replace(' ', '', $reference);
 

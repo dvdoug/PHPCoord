@@ -1744,7 +1744,7 @@ class Geographic3D extends Geographic
         return array_map(fn (array $data) => ['name' => $data['name'], 'extent_description' => $data['extent_description'], 'help' => $data['help']], static::$sridData);
     }
 
-    public static function registerCustomCRS(string $srid, string $name, string $coordinateSystemSrid, string $datumSrid, BoundingArea $extent, ?string $baseCRSSrid = null, string $help = ''): void
+    public static function registerCustomCRS(string $srid, string $name, string $coordinateSystemSrid, string $datumSrid, BoundingArea $extent, string $baseCRSSrid = null, string $help = ''): void
     {
         self::$sridData[$srid] = ['name' => $name, 'coordinate_system' => $coordinateSystemSrid, 'datum' => $datumSrid, 'extent' => $extent, 'extent_description' => '', 'base_crs' => $baseCRSSrid, 'help' => $help];
     }

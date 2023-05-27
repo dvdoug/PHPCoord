@@ -134,7 +134,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
      * @param Angle   $latitude  refer to CRS for preferred unit of measure, but any angle unit accepted
      * @param Angle   $longitude refer to CRS for preferred unit of measure, but any angle unit accepted
      */
-    public static function create(Geographic2D|Geographic3D $crs, Angle $latitude, Angle $longitude, ?Length $height = null, ?DateTimeInterface $epoch = null): self
+    public static function create(Geographic2D|Geographic3D $crs, Angle $latitude, Angle $longitude, Length $height = null, DateTimeInterface $epoch = null): self
     {
         return new self($crs, $latitude, $longitude, $height, $epoch);
     }

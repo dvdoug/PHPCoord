@@ -179,8 +179,8 @@ class Codegen
 
         foreach ($fixers as $fixer) {
             if (
-                !$fixer instanceof AbstractFixer &&
-                (!$fixer->supports($file) || !$fixer->isCandidate($tokens))
+                !$fixer instanceof AbstractFixer
+                && (!$fixer->supports($file) || !$fixer->isCandidate($tokens))
             ) {
                 continue;
             }

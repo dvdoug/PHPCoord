@@ -47,7 +47,7 @@ class VerticalPoint extends Point
      * Constructor.
      * @param Length $height refer to CRS for preferred unit of measure, but any length unit accepted
      */
-    protected function __construct(Vertical $crs, Length $height, ?DateTimeInterface $epoch = null)
+    protected function __construct(Vertical $crs, Length $height, DateTimeInterface $epoch = null)
     {
         $this->height = $height::convert($height, $crs->getCoordinateSystem()->getAxes()[0]->getUnitOfMeasureId());
         $this->crs = $crs;
@@ -62,7 +62,7 @@ class VerticalPoint extends Point
      * Constructor.
      * @param Length $height refer to CRS for preferred unit of measure, but any length unit accepted
      */
-    public static function create(Vertical $crs, Length $height, ?DateTimeInterface $epoch = null): self
+    public static function create(Vertical $crs, Length $height, DateTimeInterface $epoch = null): self
     {
         return new self($crs, $height, $epoch);
     }
