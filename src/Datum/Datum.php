@@ -1059,6 +1059,17 @@ class Datum
     public const EPSG_CONSTANTA = 'urn:ogc:def:datum:EPSG::5179';
 
     /**
+     * Copenhagen Commune Intermediate Datum
+     * Type: Geodetic
+     * Extent: Denmark - onshore - Copenhagen and surrounding area.
+     * Arbitrary origin, apparently based on monument coordinates given in the Generalstabens System.
+     * Created in 2022 to support intermediate CRS KK-IRF in the transformation of coordinates between the historic
+     * Copenhagen Commune CRS and ETRS89. The data are reconstructions based on information synthesized in historical
+     * empirical transformations to ED50.
+     */
+    public const EPSG_COPENHAGEN_COMMUNE_INTERMEDIATE_DATUM = 'urn:ogc:def:datum:EPSG::1349';
+
+    /**
      * Corrego Alegre 1961
      * Type: Geodetic
      * Extent: Brazil - onshore - between 18°S and 27°30'S, also east of 54°W between 15°S and 18°S.
@@ -2124,6 +2135,30 @@ class Datum
      * Normal-orthometric heights.
      */
     public const EPSG_GEBRAUCHSHOHEN_ADRIA = 'urn:ogc:def:datum:EPSG::5176';
+
+    /**
+     * Generalstabens System Bornholm Intermediate Datum
+     * Type: Geodetic
+     * Extent: Denmark - Bornholm onshore.
+     * The old Copenhagen Observatory at Rundetårn. Originally, longitudes were reckoned from the meridian through the
+     * observatory but in this reconstruction longitudes are referenced to the Greenwich meridian.
+     * Created in 2022 to support intermediate CRS GSB-IRF in the transformation of coordinates between the historic
+     * Generalstaben System and ETRS89. The data are reconstructions based on information synthesized in historical
+     * empirical transformations to ED50.
+     */
+    public const EPSG_GENERALSTABENS_SYSTEM_BORNHOLM_INTERMEDIATE_DATUM = 'urn:ogc:def:datum:EPSG::1348';
+
+    /**
+     * Generalstabens System Intermediate Datum
+     * Type: Geodetic
+     * Extent: Denmark - onshore Jutland, Funen, Zealand and Lolland.
+     * The old Copenhagen Observatory at Rundetårn. Originally, longitudes were reckoned from the meridian through the
+     * observatory but in this reconstruction longitudes are referenced to the Greenwich meridian.
+     * Created in 2022 to support intermediate CRS GS-IRF in the transformation of coordinates between the historic
+     * Generalstaben System and ETRS89. The data are reconstructions based on information synthesized in historical
+     * empirical transformations to ED50.
+     */
+    public const EPSG_GENERALSTABENS_SYSTEM_INTERMEDIATE_DATUM = 'urn:ogc:def:datum:EPSG::1347';
 
     /**
      * Genoa 1942
@@ -5276,6 +5311,7 @@ class Datum
      * Type: Geodetic
      * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
+     * @deprecated
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_AIRY_1830_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6001';
 
@@ -5284,6 +5320,7 @@ class Datum
      * Type: Geodetic
      * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
+     * @deprecated
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_AIRY_MODIFIED_1849_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6002';
 
@@ -5292,6 +5329,7 @@ class Datum
      * Type: Geodetic
      * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
+     * @deprecated
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_AUSTRALIAN_NATIONAL_SPHEROID = 'urn:ogc:def:datum:EPSG::6003';
 
@@ -5300,6 +5338,7 @@ class Datum
      * Type: Geodetic
      * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
+     * @deprecated
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_AVERAGE_TERRESTRIAL_SYSTEM_1977_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6041';
 
@@ -5308,6 +5347,7 @@ class Datum
      * Type: Geodetic
      * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
+     * @deprecated
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_BESSEL_1841_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6004';
 
@@ -5316,6 +5356,7 @@ class Datum
      * Type: Geodetic
      * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
+     * @deprecated
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_BESSEL_MODIFIED_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6005';
 
@@ -5324,6 +5365,7 @@ class Datum
      * Type: Geodetic
      * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
+     * @deprecated
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_BESSEL_NAMIBIA_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6006';
 
@@ -5332,6 +5374,7 @@ class Datum
      * Type: Geodetic
      * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
+     * @deprecated
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_CLARKE_1858_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6007';
 
@@ -5340,6 +5383,7 @@ class Datum
      * Type: Geodetic
      * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
+     * @deprecated
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_CLARKE_1866_AUTHALIC_SPHERE = 'urn:ogc:def:datum:EPSG::6052';
 
@@ -5348,6 +5392,7 @@ class Datum
      * Type: Geodetic
      * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
+     * @deprecated
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_CLARKE_1866_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6008';
 
@@ -5356,6 +5401,7 @@ class Datum
      * Type: Geodetic
      * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
+     * @deprecated
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_CLARKE_1880_ARC_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6013';
 
@@ -5364,6 +5410,7 @@ class Datum
      * Type: Geodetic
      * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
+     * @deprecated
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_CLARKE_1880_BENOIT_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6010';
 
@@ -5372,6 +5419,7 @@ class Datum
      * Type: Geodetic
      * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
+     * @deprecated
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_CLARKE_1880_IGN_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6011';
 
@@ -5380,6 +5428,7 @@ class Datum
      * Type: Geodetic
      * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
+     * @deprecated
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_CLARKE_1880_RGS_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6012';
 
@@ -5388,6 +5437,7 @@ class Datum
      * Type: Geodetic
      * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
+     * @deprecated
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_CLARKE_1880_SGA_1922_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6014';
 
@@ -5396,6 +5446,7 @@ class Datum
      * Type: Geodetic
      * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
+     * @deprecated
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_CLARKE_1880_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6034';
 
@@ -5404,6 +5455,7 @@ class Datum
      * Type: Geodetic
      * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
+     * @deprecated
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_EVEREST_1830_DEFINITION_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6042';
 
@@ -5412,6 +5464,7 @@ class Datum
      * Type: Geodetic
      * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
+     * @deprecated
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_EVEREST_1830_1937_ADJUSTMENT_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6015';
 
@@ -5420,6 +5473,7 @@ class Datum
      * Type: Geodetic
      * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
+     * @deprecated
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_EVEREST_1830_1962_DEFINITION_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6044';
 
@@ -5428,6 +5482,7 @@ class Datum
      * Type: Geodetic
      * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
+     * @deprecated
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_EVEREST_1830_1967_DEFINITION_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6016';
 
@@ -5436,6 +5491,7 @@ class Datum
      * Type: Geodetic
      * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
+     * @deprecated
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_EVEREST_1830_1975_DEFINITION_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6045';
 
@@ -5444,6 +5500,7 @@ class Datum
      * Type: Geodetic
      * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
+     * @deprecated
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_EVEREST_1830_MODIFIED_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6018';
 
@@ -5452,6 +5509,7 @@ class Datum
      * Type: Geodetic
      * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
+     * @deprecated
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_GEM_10C_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6031';
 
@@ -5460,6 +5518,7 @@ class Datum
      * Type: Geodetic
      * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
+     * @deprecated
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_GRS_1967_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6036';
 
@@ -5468,6 +5527,7 @@ class Datum
      * Type: Geodetic
      * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
+     * @deprecated
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_GRS_1980_AUTHALIC_SPHERE = 'urn:ogc:def:datum:EPSG::6047';
 
@@ -5476,6 +5536,7 @@ class Datum
      * Type: Geodetic
      * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
+     * @deprecated
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_GRS_1980_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6019';
 
@@ -5484,6 +5545,7 @@ class Datum
      * Type: Geodetic
      * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
+     * @deprecated
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_HELMERT_1906_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6020';
 
@@ -5492,6 +5554,7 @@ class Datum
      * Type: Geodetic
      * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
+     * @deprecated
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_HUGHES_1980_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6054';
 
@@ -5500,6 +5563,7 @@ class Datum
      * Type: Geodetic
      * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
+     * @deprecated
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_INDONESIAN_NATIONAL_SPHEROID = 'urn:ogc:def:datum:EPSG::6021';
 
@@ -5508,6 +5572,7 @@ class Datum
      * Type: Geodetic
      * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
+     * @deprecated
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_INTERNATIONAL_1924_AUTHALIC_SPHERE = 'urn:ogc:def:datum:EPSG::6053';
 
@@ -5516,6 +5581,7 @@ class Datum
      * Type: Geodetic
      * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
+     * @deprecated
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_INTERNATIONAL_1924_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6022';
 
@@ -5524,6 +5590,7 @@ class Datum
      * Type: Geodetic
      * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
+     * @deprecated
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_KRASSOWSKY_1940_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6024';
 
@@ -5532,6 +5599,7 @@ class Datum
      * Type: Geodetic
      * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
+     * @deprecated
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_NWL_9D_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6025';
 
@@ -5540,6 +5608,7 @@ class Datum
      * Type: Geodetic
      * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
+     * @deprecated
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_OSU86F_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6032';
 
@@ -5548,6 +5617,7 @@ class Datum
      * Type: Geodetic
      * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
+     * @deprecated
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_OSU91A_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6033';
 
@@ -5556,6 +5626,7 @@ class Datum
      * Type: Geodetic
      * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
+     * @deprecated
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_PLESSIS_1817_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6027';
 
@@ -5564,6 +5635,7 @@ class Datum
      * Type: Geodetic
      * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
+     * @deprecated
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_STRUVE_1860_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6028';
 
@@ -5572,6 +5644,7 @@ class Datum
      * Type: Geodetic
      * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
+     * @deprecated
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_WGS_72_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6043';
 
@@ -5580,6 +5653,7 @@ class Datum
      * Type: Geodetic
      * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
+     * @deprecated
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_WGS_84_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6030';
 
@@ -5588,6 +5662,7 @@ class Datum
      * Type: Geodetic
      * Extent: World.
      * Included for coordinate reference systems where datum is unknown.
+     * @deprecated
      */
     public const EPSG_NOT_SPECIFIED_BASED_ON_WAR_OFFICE_ELLIPSOID = 'urn:ogc:def:datum:EPSG::6029';
 
@@ -5756,6 +5831,19 @@ class Datum
      * Realized through the second general levelling (DNG or TAW) 1981-1999.
      */
     public const EPSG_OSTEND = 'urn:ogc:def:datum:EPSG::5110';
+
+    /**
+     * Ostenfeld  Intermediate Datum
+     * Type: Geodetic
+     * Extent: Denmark - onshore northern Schleswig and surrounding islands (i.e. Jutland south of the pre-1920 border
+     * near the Kongea river).
+     * Origin of historic system is near the German village Ostenfeld.  This Danish reconstruction defined/derived
+     * through inversion of an older transformation.
+     * Created in 2022 to support intermediate CRS OS-IRF in the transformation of coordinates between the historic
+     * Ostenfeld system of Prussia and ETRS89. The data are reconstructions based on information synthesized in
+     * historical empirical transformations.
+     */
+    public const EPSG_OSTENFELD_INTERMEDIATE_DATUM = 'urn:ogc:def:datum:EPSG::1350';
 
     /**
      * OxWo08 Intermediate Reference Frame
@@ -7391,6 +7479,44 @@ class Datum
      * years.
      */
     public const EPSG_SWISS_TERRESTRIAL_REFERENCE_SYSTEM_1995 = 'urn:ogc:def:datum:EPSG::6151';
+
+    /**
+     * System 34 Jylland Intermediate Datum
+     * Type: Geodetic
+     * Extent: Denmark - Jutland and Funen - onshore.
+     * S34 fundamental point: Agri Bavnehøj, latitude 56°13'48.217"N, longitude 2°02'22.629"W of Copenhagen meridian
+     * where FE=FN=200000m. This reconstruction's origin in central Zealand was obtained from inversion of an older
+     * polynomial transformation to ED50.
+     * Created in 2022 to support artificial CRS S34J-IRF in the transformation of coordinates between the historic CRS
+     * S34J and ETRS89. The data is a reconstruction based on information synthesized in historical empirical
+     * transformations to ED50.
+     */
+    public const EPSG_SYSTEM_34_JYLLAND_INTERMEDIATE_DATUM = 'urn:ogc:def:datum:EPSG::1332';
+
+    /**
+     * System 34 Sjaelland Intermediate Datum
+     * Type: Geodetic
+     * Extent: Denmark - Zealand and Lolland (onshore).
+     * S34 fundamental point: Agri Bavnehøj, latitude 56°13'48.217"N, longitude 2°02'22.629"W of Copenhagen meridian
+     * where FE=FN=200000m. This reconstruction's origin in central Zealand was obtained from inversion of an older
+     * polynomial transformation to ED50.
+     * Created in 2022 to support intermediate CRS S34S-IRF in the transformation of coordinates between the historic
+     * CRS S34S and ETRS89. The data is a reconstruction based on information synthesized in historical empirical
+     * transformations to ED50.
+     */
+    public const EPSG_SYSTEM_34_SJAELLAND_INTERMEDIATE_DATUM = 'urn:ogc:def:datum:EPSG::1337';
+
+    /**
+     * System 45 Bornholm Intermediate Datum
+     * Type: Geodetic
+     * Extent: Denmark - Bornholm onshore.
+     * Pseudo origin south of Bornholm, obtained from inversion of an older transformation. The historical Danish
+     * System 45 was ad-hoc and not based on any formal datum and projection definitions.
+     * Created in 2022 to support intermediate CRS S45B-IRF in the transformation of coordinates between the historic
+     * CRS S45 and ETRS89. The data are reconstructions based on information synthesized in historical empirical
+     * transformations to ED50.
+     */
+    public const EPSG_SYSTEM_45_BORNHOLM_INTERMEDIATE_DATUM = 'urn:ogc:def:datum:EPSG::1346';
 
     /**
      * System of the Unified Trigonometrical Cadastral Network
@@ -11340,6 +11466,17 @@ OSGM05 model used.',
             'help' => 'CD UK & Ireland VORF08 is defined by the Vertical Offshore Reference Frame v2.11 2008.
 By international agreement, Chart Datum is defined as a level so low that the tide will not frequently fall below it. In the United Kingdom and Ireland, this level is normally the level of approximate Lowest Astronomical Tide.',
         ],
+        'urn:ogc:def:datum:EPSG::1332' => [
+            'name' => 'System 34 Jylland Intermediate Datum',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7022',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+            'extent_description' => 'Denmark - Jutland and Funen - onshore.',
+            'help' => 'S34 fundamental point: Agri Bavnehøj, latitude 56°13\'48.217"N, longitude 2°02\'22.629"W of Copenhagen meridian where FE=FN=200000m. This reconstruction\'s origin in central Zealand was obtained from inversion of an older polynomial transformation to ED50.
+Created in 2022 to support artificial CRS S34J-IRF in the transformation of coordinates between the historic CRS S34J and ETRS89. The data is a reconstruction based on information synthesized in historical empirical transformations to ED50.',
+        ],
         'urn:ogc:def:datum:EPSG::1333' => [
             'name' => 'IGS20',
             'type' => 'dynamic geodetic',
@@ -11383,6 +11520,17 @@ Created in 2022 to support intermediate CRS ShAb07-IRF in the emulation of the S
             'extent_description' => 'United Kingdom (UK) - on or related to the rail route from Crewe via Chester to Holyhead.',
             'help' => 'Defined through the application of the CNH22 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
 Created in 2022 to support intermediate CRS CNH22-IRF in the emulation of the CNH22 Snake map projection.',
+        ],
+        'urn:ogc:def:datum:EPSG::1337' => [
+            'name' => 'System 34 Sjaelland Intermediate Datum',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7022',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+            'extent_description' => 'Denmark - Zealand and Lolland (onshore).',
+            'help' => 'S34 fundamental point: Agri Bavnehøj, latitude 56°13\'48.217"N, longitude 2°02\'22.629"W of Copenhagen meridian where FE=FN=200000m. This reconstruction\'s origin in central Zealand was obtained from inversion of an older polynomial transformation to ED50.
+Created in 2022 to support intermediate CRS S34S-IRF in the transformation of coordinates between the historic CRS S34S and ETRS89. The data is a reconstruction based on information synthesized in historical empirical transformations to ED50.',
         ],
         'urn:ogc:def:datum:EPSG::1338' => [
             'name' => 'CWS13 Intermediate Reference Frame',
@@ -11471,6 +11619,61 @@ Created in 2022 to support intermediate CRS OxWo08-IRF in the emulation of the O
             'extent_description' => 'United Kingdom (UK) - on or related to the rail route from Shrewsbury to Crewe.',
             'help' => 'Defined through the application of the SYC20 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
 Created in 2022 to support intermediate CRS SYC20-IRF in the emulation of the SYC20 Snake map projection.',
+        ],
+        'urn:ogc:def:datum:EPSG::1346' => [
+            'name' => 'System 45 Bornholm Intermediate Datum',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7022',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+            'extent_description' => 'Denmark - Bornholm onshore.',
+            'help' => 'Pseudo origin south of Bornholm, obtained from inversion of an older transformation. The historical Danish System 45 was ad-hoc and not based on any formal datum and projection definitions.
+Created in 2022 to support intermediate CRS S45B-IRF in the transformation of coordinates between the historic CRS S45 and ETRS89. The data are reconstructions based on information synthesized in historical empirical transformations to ED50.',
+        ],
+        'urn:ogc:def:datum:EPSG::1347' => [
+            'name' => 'Generalstabens System Intermediate Datum',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7051',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+            'extent_description' => 'Denmark - onshore Jutland, Funen, Zealand and Lolland.',
+            'help' => 'The old Copenhagen Observatory at Rundetårn. Originally, longitudes were reckoned from the meridian through the observatory but in this reconstruction longitudes are referenced to the Greenwich meridian.
+Created in 2022 to support intermediate CRS GS-IRF in the transformation of coordinates between the historic Generalstaben System and ETRS89. The data are reconstructions based on information synthesized in historical empirical transformations to ED50.',
+        ],
+        'urn:ogc:def:datum:EPSG::1348' => [
+            'name' => 'Generalstabens System Bornholm Intermediate Datum',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7051',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+            'extent_description' => 'Denmark - Bornholm onshore.',
+            'help' => 'The old Copenhagen Observatory at Rundetårn. Originally, longitudes were reckoned from the meridian through the observatory but in this reconstruction longitudes are referenced to the Greenwich meridian.
+Created in 2022 to support intermediate CRS GSB-IRF in the transformation of coordinates between the historic Generalstaben System and ETRS89. The data are reconstructions based on information synthesized in historical empirical transformations to ED50.',
+        ],
+        'urn:ogc:def:datum:EPSG::1349' => [
+            'name' => 'Copenhagen Commune Intermediate Datum',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7051',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+            'extent_description' => 'Denmark - onshore - Copenhagen and surrounding area.',
+            'help' => 'Arbitrary origin, apparently based on monument coordinates given in the Generalstabens System.
+Created in 2022 to support intermediate CRS KK-IRF in the transformation of coordinates between the historic Copenhagen Commune CRS and ETRS89. The data are reconstructions based on information synthesized in historical empirical transformations to ED50.',
+        ],
+        'urn:ogc:def:datum:EPSG::1350' => [
+            'name' => 'Ostenfeld  Intermediate Datum',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7004',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+            'extent_description' => 'Denmark - onshore northern Schleswig and surrounding islands (i.e. Jutland south of the pre-1920 border near the Kongea river).',
+            'help' => 'Origin of historic system is near the German village Ostenfeld.  This Danish reconstruction defined/derived through inversion of an older transformation.
+Created in 2022 to support intermediate CRS OS-IRF in the transformation of coordinates between the historic Ostenfeld system of Prussia and ETRS89. The data are reconstructions based on information synthesized in historical empirical transformations.',
         ],
         'urn:ogc:def:datum:EPSG::1351' => [
             'name' => 'SMITB20 Intermediate Reference Frame',

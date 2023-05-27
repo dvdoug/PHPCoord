@@ -8997,6 +8997,9 @@ class ExtentMap
         4574 => [
             'name' => 'Brazil - west of 54°W and between 18°S and 27°30\'S',
         ],
+        4575 => [
+            'name' => 'Denmark - onshore Jutland, Funen, Zealand and Lolland',
+        ],
         4576 => [
             'name' => 'Brazil - 54°W to 48°W and 15°S to 27°30\'S',
         ],
@@ -9314,6 +9317,12 @@ class ExtentMap
         ],
         4690 => [
             'name' => 'UK - London to Fishguard',
+        ],
+        4693 => [
+            'name' => 'Denmark - Copenhagen',
+        ],
+        4694 => [
+            'name' => 'Denmark - northern Schleswig',
         ],
         4701 => [
             'name' => 'USA - Illinois - Carroll, Jo Daviess, Stephenson',

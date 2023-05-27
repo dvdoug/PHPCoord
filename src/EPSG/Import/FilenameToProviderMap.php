@@ -212,4 +212,11 @@ return [
     'hBG18.dat' => CoordinateOperation\DATETRS89OstendBelgiumProvider::class,
     'Icegeoid_ISN2016.gri' => CoordinateOperation\GTXISN2016ISH2004IcelandProvider::class,
     'https://isgeoid.polimi.it/Geoid/Europe/Slovenia/public/Slovenia_2016_SLO_VRP2016_Koper_hybrQ_20221122.isg' => CoordinateOperation\KMSSlovenia1996SVS2010Provider::class,
+    's34j_2022.gsb' => CoordinateOperation\ETRS89S34JIRFProvider::class,
+    's34s_2022.gsb' => CoordinateOperation\ETRS89S34SIRFProvider::class,
+    's45b_2022.gsb' => CoordinateOperation\ETRS89S45BIRFProvider::class,
+    'gs_2022.gsb' => CoordinateOperation\ETRS89GSIRFProvider::class,
+    'gsb_2022.gsb' => CoordinateOperation\ETRS89GSBIRFProvider::class,
+    'kk_2022.gsb' => CoordinateOperation\ETRS89KKIRFProvider::class,
+    'os_2022.gsb' => CoordinateOperation\ETRS89OstenfeldIRFProvider::class,
 ];

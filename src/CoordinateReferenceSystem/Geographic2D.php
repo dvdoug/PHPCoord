@@ -1087,6 +1087,24 @@ class Geographic2D extends Geographic
     public const EPSG_GR96 = 'urn:ogc:def:crs:EPSG::4747';
 
     /**
+     * GS-IRF
+     * Extent: Denmark - onshore Jutland, Funen, Zealand and Lolland.
+     * Artificial CRS created in 2022 to assist the transformation of coordinates between the historic Generalstabens
+     * System and ETRS89 through CT ETRS89 to GS-IRF (1) (code 10259) used in conjunction with the GS LCC map
+     * projection (code 10257).
+     */
+    public const EPSG_GS_IRF = 'urn:ogc:def:crs:EPSG::10256';
+
+    /**
+     * GSB-IRF
+     * Extent: Denmark - Bornholm onshore.
+     * Artificial CRS created in 2022 to assist the transformation of coordinates between the historic Generalstabens
+     * System and ETRS89 through CT ETRS89 to GSB-IRF (1) (code 10263) used in conjunction with the GSB-reconstruction
+     * map projection (code 10261).
+     */
+    public const EPSG_GSB_IRF = 'urn:ogc:def:crs:EPSG::10260';
+
+    /**
      * GSK-2011
      * Extent: Russian Federation - onshore and offshore.
      * Replaces Pulkovo 1995 (CRS code 4200) with effect from 21st October 2011.
@@ -1699,6 +1717,15 @@ class Geographic2D extends Geographic
      * Replaced by Mauritania 1999 (CRS code 4702).
      */
     public const EPSG_JOUIK_1961 = 'urn:ogc:def:crs:EPSG::4679';
+
+    /**
+     * KK-IRF
+     * Extent: Denmark - onshore - Copenhagen and surrounding area.
+     * Artificial CRS created in 2022 to assist the transformation of coordinates between the historic Københavns
+     * Kommunes CRS and ETRS89 through CT ETRS89 to KK-IRF (1) (code 10267) used in conjunction with the GS LCC map
+     * projection (code 10257).
+     */
+    public const EPSG_KK_IRF = 'urn:ogc:def:crs:EPSG::10265';
 
     /**
      * KKJ
@@ -2750,6 +2777,16 @@ class Geographic2D extends Geographic
     public const EPSG_OLD_HAWAIIAN = 'urn:ogc:def:crs:EPSG::4135';
 
     /**
+     * Ostenfeld-IRF
+     * Extent: Denmark - onshore northern Schleswig and surrounding islands (i.e. Jutland south of the pre-1920 border
+     * near the Kongea river).
+     * Artificial CRS created in 2022 to assist the transformation of coordinates between the historic Ostenfeld CRS
+     * and ETRS89 through transformation ETRS89 to Ostenfeld-IRF (1) (code 10271) used with the
+     * Ostenfeld-reconstruction map projection (code 10269).
+     */
+    public const EPSG_OSTENFELD_IRF = 'urn:ogc:def:crs:EPSG::10268';
+
+    /**
      * OxWo08-IRF
      * Extent: United Kingdom (UK) - on or related to the rail route from Oxford to Worcester.
      * Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / OxWo08 SnakeGrid projected CRS through
@@ -3402,6 +3439,33 @@ class Geographic2D extends Geographic
      * code 5228 for Greenwich-referenced alternative.
      */
     public const EPSG_S_JTSK_05_FERRO = 'urn:ogc:def:crs:EPSG::5229';
+
+    /**
+     * S34J-IRF
+     * Extent: Denmark - Jutland and Funen - onshore.
+     * Artificial CRS created in 2022 to assist the transformation of coordinates between the historic S34J CRS and
+     * ETRS89 through transformation ETRS89 to S34J-IRF (1) (code 10161) used in conjunction with the
+     * S34-reconstruction map projection (code 10159).
+     */
+    public const EPSG_S34J_IRF = 'urn:ogc:def:crs:EPSG::10158';
+
+    /**
+     * S34S-IRF
+     * Extent: Denmark - Zealand and Lolland (onshore).
+     * Artificial CRS created in 2022 to assist the transformation of coordinates between the historic S34S CRS and
+     * ETRS89 through CT ETRS89 to S34S-IRF (1) (code 10251) used in conjunction with the S34-reconstruction map
+     * projection (code 10159).
+     */
+    public const EPSG_S34S_IRF = 'urn:ogc:def:crs:EPSG::10249';
+
+    /**
+     * S45B-IRF
+     * Extent: Denmark - Bornholm onshore.
+     * Artificial CRS created in 2022 to assist the transformation of coordinates between the historic S45 CRS and
+     * ETRS89 through transformation ETRS89 to S45B-IRF (1) (code 10255) used in conjunction with the
+     * S45B-reconstruction map projection (code 10253).
+     */
+    public const EPSG_S45B_IRF = 'urn:ogc:def:crs:EPSG::10252';
 
     /**
      * SAD69

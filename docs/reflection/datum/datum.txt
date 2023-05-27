@@ -1490,6 +1490,20 @@ Mean Sea Level at Constanta.
 
 Normal-orthometric heights.
 
+Copenhagen Commune Intermediate Datum
+-------------------------------------
+| Type: Geodetic
+| Extent: Denmark - onshore - Copenhagen and surrounding area.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_COPENHAGEN_COMMUNE_INTERMEDIATE_DATUM)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1349')
+
+Arbitrary origin, apparently based on monument coordinates given in the Generalstabens System.
+
+Created in 2022 to support intermediate CRS KK-IRF in the transformation of coordinates between the historic Copenhagen Commune CRS and ETRS89. The data are reconstructions based on information synthesized in historical empirical transformations to ED50.
+
 Corrego Alegre 1961
 -------------------
 | Type: Geodetic
@@ -2833,6 +2847,34 @@ Gebrauchshohen ADRIA
 Reference point Hutbiegl defined relative to mean sea level at Trieste in 1875.
 
 Normal-orthometric heights.
+
+Generalstabens System Bornholm Intermediate Datum
+-------------------------------------------------
+| Type: Geodetic
+| Extent: Denmark - Bornholm onshore.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_GENERALSTABENS_SYSTEM_BORNHOLM_INTERMEDIATE_DATUM)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1348')
+
+The old Copenhagen Observatory at Rundetårn. Originally, longitudes were reckoned from the meridian through the observatory but in this reconstruction longitudes are referenced to the Greenwich meridian.
+
+Created in 2022 to support intermediate CRS GSB-IRF in the transformation of coordinates between the historic Generalstaben System and ETRS89. The data are reconstructions based on information synthesized in historical empirical transformations to ED50.
+
+Generalstabens System Intermediate Datum
+----------------------------------------
+| Type: Geodetic
+| Extent: Denmark - onshore Jutland, Funen, Zealand and Lolland.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_GENERALSTABENS_SYSTEM_INTERMEDIATE_DATUM)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1347')
+
+The old Copenhagen Observatory at Rundetårn. Originally, longitudes were reckoned from the meridian through the observatory but in this reconstruction longitudes are referenced to the Greenwich meridian.
+
+Created in 2022 to support intermediate CRS GS-IRF in the transformation of coordinates between the historic Generalstaben System and ETRS89. The data are reconstructions based on information synthesized in historical empirical transformations to ED50.
 
 Genoa 1942
 ----------
@@ -7894,6 +7936,20 @@ Mean low water at Ostend 1855-78 transferred to benchmark GIKMN at Uccle.
 
 Realized through the second general levelling (DNG or TAW) 1981-1999.
 
+Ostenfeld  Intermediate Datum
+-----------------------------
+| Type: Geodetic
+| Extent: Denmark - onshore northern Schleswig and surrounding islands (i.e. Jutland south of the pre-1920 border near the Kongea river).
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_OSTENFELD_INTERMEDIATE_DATUM)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1350')
+
+Origin of historic system is near the German village Ostenfeld.  This Danish reconstruction defined/derived through inversion of an older transformation.
+
+Created in 2022 to support intermediate CRS OS-IRF in the transformation of coordinates between the historic Ostenfeld system of Prussia and ETRS89. The data are reconstructions based on information synthesized in historical empirical transformations.
+
 OxWo08 Intermediate Reference Frame
 -----------------------------------
 | Type: Geodetic
@@ -10147,6 +10203,48 @@ Swiss Terrestrial Reference System 1995
 ETRF89 at epoch 1993.0.
 
 First realized through CHTRF95 and subsequently CHTRF98, 2004, 2010 and 2016 with an aim to re-measure every 6 years.
+
+System 34 Jylland Intermediate Datum
+------------------------------------
+| Type: Geodetic
+| Extent: Denmark - Jutland and Funen - onshore.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_SYSTEM_34_JYLLAND_INTERMEDIATE_DATUM)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1332')
+
+S34 fundamental point: Agri Bavnehøj, latitude 56°13'48.217"N, longitude 2°02'22.629"W of Copenhagen meridian where FE=FN=200000m. This reconstruction's origin in central Zealand was obtained from inversion of an older polynomial transformation to ED50.
+
+Created in 2022 to support artificial CRS S34J-IRF in the transformation of coordinates between the historic CRS S34J and ETRS89. The data is a reconstruction based on information synthesized in historical empirical transformations to ED50.
+
+System 34 Sjaelland Intermediate Datum
+--------------------------------------
+| Type: Geodetic
+| Extent: Denmark - Zealand and Lolland (onshore).
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_SYSTEM_34_SJAELLAND_INTERMEDIATE_DATUM)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1337')
+
+S34 fundamental point: Agri Bavnehøj, latitude 56°13'48.217"N, longitude 2°02'22.629"W of Copenhagen meridian where FE=FN=200000m. This reconstruction's origin in central Zealand was obtained from inversion of an older polynomial transformation to ED50.
+
+Created in 2022 to support intermediate CRS S34S-IRF in the transformation of coordinates between the historic CRS S34S and ETRS89. The data is a reconstruction based on information synthesized in historical empirical transformations to ED50.
+
+System 45 Bornholm Intermediate Datum
+-------------------------------------
+| Type: Geodetic
+| Extent: Denmark - Bornholm onshore.
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_SYSTEM_45_BORNHOLM_INTERMEDIATE_DATUM)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1346')
+
+Pseudo origin south of Bornholm, obtained from inversion of an older transformation. The historical Danish System 45 was ad-hoc and not based on any formal datum and projection definitions.
+
+Created in 2022 to support intermediate CRS S45B-IRF in the transformation of coordinates between the historic CRS S45 and ETRS89. The data are reconstructions based on information synthesized in historical empirical transformations to ED50.
 
 System of the Unified Trigonometrical Cadastral Network
 -------------------------------------------------------

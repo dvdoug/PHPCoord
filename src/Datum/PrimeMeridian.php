@@ -38,6 +38,12 @@ class PrimeMeridian
     public const EPSG_BRUSSELS = 'urn:ogc:def:meridian:EPSG::8910';
 
     /**
+     * Copenhagen
+     * Astronomic observatory at Copenhagen Round Tower (Rundetaarn).
+     */
+    public const EPSG_COPENHAGEN = 'urn:ogc:def:meridian:EPSG::1026';
+
+    /**
      * Ferro
      * El Hierro island, Canary islands, considered the most westerly point in Europe. Its longitude has had various
      * determinations. 17°40'W of Greenwich was adopted by Austria and former Czechoslovakia, 17°39'46.02"W by former
@@ -102,6 +108,12 @@ class PrimeMeridian
      * @var array<string, array{name: string, greenwich_longitude: float|Angle, uom: string, help: string}>
      */
     protected static array $sridData = [
+        'urn:ogc:def:meridian:EPSG::1026' => [
+            'name' => 'Copenhagen',
+            'greenwich_longitude' => 12.34399,
+            'uom' => 'urn:ogc:def:uom:EPSG::9110',
+            'help' => 'Astronomic observatory at Copenhagen Round Tower (Rundetaarn).',
+        ],
         'urn:ogc:def:meridian:EPSG::8901' => [
             'name' => 'Greenwich',
             'greenwich_longitude' => 0.0,

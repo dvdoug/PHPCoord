@@ -32,6 +32,15 @@ Brussels
     PrimeMeridian::fromSRID('urn:ogc:def:meridian:EPSG::8910')
 
 
+Copenhagen
+----------
+.. code-block:: php
+
+    PrimeMeridian::fromSRID(PrimeMeridian::EPSG_COPENHAGEN)
+    PrimeMeridian::fromSRID('urn:ogc:def:meridian:EPSG::1026')
+
+Astronomic observatory at Copenhagen Round Tower (Rundetaarn).
+
 Ferro
 -----
 .. code-block:: php

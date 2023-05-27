@@ -3592,6 +3592,8 @@ class RegionMap
             4688 => self::REGION_EUROPE,
             4689 => self::REGION_EUROPE,
             4690 => self::REGION_EUROPE,
+            4693 => self::REGION_EUROPE,
+            4694 => self::REGION_EUROPE,
             4701 => self::REGION_NORTHAMERICA,
             4702 => self::REGION_NORTHAMERICA,
             4703 => self::REGION_NORTHAMERICA,

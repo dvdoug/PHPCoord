@@ -2061,6 +2061,36 @@ GR96
 
 Replaces all earlier Greenland geographic CRSs.
 
+GS-IRF
+------
+| Extent: Denmark - onshore Jutland, Funen, Zealand and Lolland.
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_GS_IRF)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::10256')
+    Geographic::fromSRID(Geographic2D::EPSG_GS_IRF)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10256')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_GS_IRF)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10256')
+
+Artificial CRS created in 2022 to assist the transformation of coordinates between the historic Generalstabens System and ETRS89 through CT ETRS89 to GS-IRF (1) (code 10259) used in conjunction with the GS LCC map projection (code 10257).
+
+GSB-IRF
+-------
+| Extent: Denmark - Bornholm onshore.
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_GSB_IRF)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::10260')
+    Geographic::fromSRID(Geographic2D::EPSG_GSB_IRF)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10260')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_GSB_IRF)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10260')
+
+Artificial CRS created in 2022 to assist the transformation of coordinates between the historic Generalstabens System and ETRS89 through CT ETRS89 to GSB-IRF (1) (code 10263) used in conjunction with the GSB-reconstruction map projection (code 10261).
+
 GSK-2011
 --------
 | Extent: Russian Federation - onshore and offshore.
@@ -3341,6 +3371,21 @@ Jouik 1961
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4679')
 
 Replaced by Mauritania 1999 (CRS code 4702).
+
+KK-IRF
+------
+| Extent: Denmark - onshore - Copenhagen and surrounding area.
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_KK_IRF)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::10265')
+    Geographic::fromSRID(Geographic2D::EPSG_KK_IRF)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10265')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_KK_IRF)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10265')
+
+Artificial CRS created in 2022 to assist the transformation of coordinates between the historic Københavns Kommunes CRS and ETRS89 through CT ETRS89 to KK-IRF (1) (code 10267) used in conjunction with the GS LCC map projection (code 10257).
 
 KKJ
 ---
@@ -5364,6 +5409,21 @@ Old Hawaiian
 
 Note: this CRS includes longitudes which are POSITIVE EAST.
 
+Ostenfeld-IRF
+-------------
+| Extent: Denmark - onshore northern Schleswig and surrounding islands (i.e. Jutland south of the pre-1920 border near the Kongea river).
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_OSTENFELD_IRF)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::10268')
+    Geographic::fromSRID(Geographic2D::EPSG_OSTENFELD_IRF)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10268')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_OSTENFELD_IRF)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10268')
+
+Artificial CRS created in 2022 to assist the transformation of coordinates between the historic Ostenfeld CRS and ETRS89 through transformation ETRS89 to Ostenfeld-IRF (1) (code 10271) used with the Ostenfeld-reconstruction map projection (code 10269).
+
 OxWo08-IRF
 ----------
 | Extent: United Kingdom (UK) - on or related to the rail route from Oxford to Worcester.
@@ -6621,6 +6681,51 @@ S-JTSK/05 (Ferro)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5229')
 
 Derived through projCRS 5224 to improve the scale and homogeneity of CRS 4818 within the Czech Republic. See CRS code 5228 for Greenwich-referenced alternative.
+
+S34J-IRF
+--------
+| Extent: Denmark - Jutland and Funen - onshore.
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_S34J_IRF)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::10158')
+    Geographic::fromSRID(Geographic2D::EPSG_S34J_IRF)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10158')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_S34J_IRF)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10158')
+
+Artificial CRS created in 2022 to assist the transformation of coordinates between the historic S34J CRS and ETRS89 through transformation ETRS89 to S34J-IRF (1) (code 10161) used in conjunction with the S34-reconstruction map projection (code 10159).
+
+S34S-IRF
+--------
+| Extent: Denmark - Zealand and Lolland (onshore).
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_S34S_IRF)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::10249')
+    Geographic::fromSRID(Geographic2D::EPSG_S34S_IRF)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10249')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_S34S_IRF)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10249')
+
+Artificial CRS created in 2022 to assist the transformation of coordinates between the historic S34S CRS and ETRS89 through CT ETRS89 to S34S-IRF (1) (code 10251) used in conjunction with the S34-reconstruction map projection (code 10159).
+
+S45B-IRF
+--------
+| Extent: Denmark - Bornholm onshore.
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_S45B_IRF)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::10252')
+    Geographic::fromSRID(Geographic2D::EPSG_S45B_IRF)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10252')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_S45B_IRF)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10252')
+
+Artificial CRS created in 2022 to assist the transformation of coordinates between the historic S45 CRS and ETRS89 through transformation ETRS89 to S45B-IRF (1) (code 10255) used in conjunction with the S45B-reconstruction map projection (code 10253).
 
 SAD69
 -----

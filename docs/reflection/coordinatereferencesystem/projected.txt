@@ -8479,6 +8479,32 @@ GR96 / UTM zone 29N
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3189')
 
 
+GS reconstruction east-orientated
+---------------------------------
+| Extent: Denmark - onshore Jutland, Funen, Zealand and Lolland.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GS_RECONSTRUCTION_EAST_ORIENTATED)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10258')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GS_RECONSTRUCTION_EAST_ORIENTATED)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10258')
+
+Reconstruction emulating the historic Generalstabens System CRS but with axis direction flip: W (GS) = E (GS e-o) * -1, N (GS) = N (GS e-o). Reconstructed through CT ETRS89 to GS-IRF (1) with map projection GS LCC (codes 10259 and 10257).
+
+GSB reconstruction east-orientated
+----------------------------------
+| Extent: Denmark - Bornholm onshore.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_GSB_RECONSTRUCTION_EAST_ORIENTATED)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10262')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_GSB_RECONSTRUCTION_EAST_ORIENTATED)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10262')
+
+Reconstruction through CT ETRS89 to GSB-IRF (1) and projection GSB-reconstruction (codes 10263 and 10261) to emulate the historic Generalstabens System LCC projCRS but with axis direction flip: W (GSB) = E (GSB e-o) * -1, N (GSB) = N (GSB e-o).
+
 GSK-2011 / GSK 3GK CM 102E
 --------------------------
 | Extent: Russian Federation - onshore between 100°30'E and 103°30'E.
@@ -12823,6 +12849,19 @@ Jamaica 1875 / Jamaica (Old Grid)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24100')
 
 Replaced by JAD69 / Jamaica National Grid (CRS code 24200).
+
+KK reconstruction east-orientated
+---------------------------------
+| Extent: Denmark - onshore - Copenhagen and surrounding area.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_KK_RECONSTRUCTION_EAST_ORIENTATED)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10266')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_KK_RECONSTRUCTION_EAST_ORIENTATED)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10266')
+
+Reconstruction defined through transformation ETRS89 to KK-IRF (1) and map projection GS LCC (codes 10267 and 10257) to emulate the historic Københavns Kommunes CRS but with axis direction flip: W (KK) = E (KK e-o) * -1, N (KK) = N (KK e-o).
 
 KKJ / Finland Uniform Coordinate System
 ---------------------------------------
@@ -46008,6 +46047,19 @@ Old Hawaiian / Hawaii zone 5
 
 Sometimes erroneously referred to as NAD27 / Hawaii zone 5.
 
+Ostenfeld reconstruction
+------------------------
+| Extent: Denmark - onshore northern Schleswig and surrounding islands (i.e. Jutland south of the pre-1920 border near the Kongea river).
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_OSTENFELD_RECONSTRUCTION)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10270')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_OSTENFELD_RECONSTRUCTION)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10270')
+
+A reconstruction in modern terms of the Prussian system Ostenfeld, as it was realized in the post-1920 Danish areas. Defined through transformation ETRS89 to Ostenfeld-IRF (1) (code 10271) together with projection Ostenfeld-reconstruction (code 10269).
+
 OxWo08 Grid
 -----------
 | Extent: United Kingdom (UK) - on or related to the rail route from Oxford to Worcester.
@@ -54197,6 +54249,45 @@ S-JTSK/05 / Modified Krovak East North
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5516')
 
 North-orientated alternative to S-JTSK/05 / Modified Krovak (CRS code 5515) for GIS purposes. Coordinates are negative. See CRS code 5225 for Ferro-referenced equivalent.
+
+S34J reconstruction east-orientated
+-----------------------------------
+| Extent: Denmark - Jutland and Funen - onshore.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_S34J_RECONSTRUCTION_EAST_ORIENTATED)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10160')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_S34J_RECONSTRUCTION_EAST_ORIENTATED)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10160')
+
+Reconstruction emulating the historic S34J CRS but with axis direction flip: W (S34J) = E (S34J e-o) * -1, N (S34J) = N (S34J e-o). Defined through CT ETRS89 to S34J-IRF (1) (code 10161) in conjunction with map projection S34-reconstruction (code 10159).
+
+S34S reconstruction east-orientated
+-----------------------------------
+| Extent: Denmark - Zealand and Lolland (onshore).
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_S34S_RECONSTRUCTION_EAST_ORIENTATED)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10250')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_S34S_RECONSTRUCTION_EAST_ORIENTATED)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10250')
+
+Reconstruction emulating the historic S34S CRS but with axis direction flip: W (S34S) = E (S34S e-o) * -1, N (S34S) = N (S34S e-o). Defined through CT ETRS89 to S34S-IRF (1) (code 10251) in conjunction with map projection S34-reconstruction (code 10159).
+
+S45B reconstruction east-orientated
+-----------------------------------
+| Extent: Denmark - Bornholm onshore.
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_S45B_RECONSTRUCTION_EAST_ORIENTATED)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10254')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_S45B_RECONSTRUCTION_EAST_ORIENTATED)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10254')
+
+Reconstruction emulating the historic S45 CRS but with axis direction flip: W (S45B) = E (S45B e-o) * -1, N (S45B) = N (S45B e-o). Defined through CT ETRS89 to S45B-IRF (1) (code 10255) in conjunction with map projection S45B-reconstruction (code 10253).
 
 SAD69 / Brazil Polyconic
 ------------------------
