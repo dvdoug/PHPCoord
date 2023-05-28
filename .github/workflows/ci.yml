@@ -89,7 +89,7 @@ jobs:
       run: composer require --dev --no-update "${{ matrix.datapack }}:dev-master";
 
     - name: Remove PHP-CS-Fixer if not called
-      if: matrix.php-version != '8.0' || matrix.dependencies != 'highest'
+      if: matrix.php-version != '8.2' || matrix.dependencies != 'highest'
       run: composer remove --dev --no-update "friendsofphp/php-cs-fixer";
 
     - name: Install dependencies (low)
@@ -120,7 +120,7 @@ jobs:
 
     - name: PHPUnit (Unit)
       run: |
-        if [ "${{ matrix.php-version }}" = "8.0" ] && [ "${{ matrix.dependencies }}" = "highest" ]; then
+        if [ "${{ matrix.php-version }}" = "8.2" ] && [ "${{ matrix.dependencies }}" = "highest" ]; then
           php -dmemory_limit=-1 vendor/phpunit/phpunit/phpunit --coverage-clover=build/coverage-phpunit/clover.xml --exclude-group=integration;
           composer global require scrutinizer/ocular;
           ~/.composer/vendor/bin/ocular code-coverage:upload --format=php-clover build/coverage-phpunit/clover.xml;
@@ -132,5 +132,5 @@ jobs:
       run: php -dmemory_limit=-1 vendor/phpunit/phpunit/phpunit --group=integration --no-coverage;
 
     - name: Check code style
-      if: matrix.php-version == '8.0' && matrix.dependencies == 'highest' && matrix.datapack == ''
+      if: matrix.php-version == '8.2' && matrix.dependencies == 'highest' && matrix.datapack == ''
       run: vendor/bin/php-cs-fixer fix --verbose --dry-run --diff --allow-risky=yes
