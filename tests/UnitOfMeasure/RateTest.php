@@ -63,6 +63,7 @@ class RateTest extends TestCase
     }
 
     /**
+     * @group integration
      * @dataProvider unitsOfMeasure
      */
     public function testCanCreateAllUnits(string $srid): void

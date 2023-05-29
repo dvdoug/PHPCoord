@@ -28,6 +28,7 @@ class UnitOfMeasureFactoryTest extends TestCase
     }
 
     /**
+     * @group integration
      * @dataProvider unitsOfMeasure
      */
     public function testCanCreateAllUnits(string $srid): void

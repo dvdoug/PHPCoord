@@ -57,6 +57,9 @@ use function substr;
 use function trim;
 use function ucwords;
 
+/**
+ * @group gigs
+ */
 class GIGSTest extends TestCase
 {
     /**

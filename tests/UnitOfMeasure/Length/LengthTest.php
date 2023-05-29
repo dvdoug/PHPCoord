@@ -36,6 +36,7 @@ class LengthTest extends TestCase
     }
 
     /**
+     * @group integration
      * @dataProvider unitsOfMeasure
      */
     public function testCanCreateAllUnits(string $srid): void

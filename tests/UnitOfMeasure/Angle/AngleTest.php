@@ -37,6 +37,7 @@ class AngleTest extends TestCase
     }
 
     /**
+     * @group integration
      * @dataProvider unitsOfMeasure
      */
     public function testCanCreateAllUnits(string $srid): void
