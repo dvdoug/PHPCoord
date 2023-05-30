@@ -1,6 +1,26 @@
 parameters:
 	ignoreErrors:
 		-
+			message: "#^Call to an undefined method PHPCoord\\\\Point\\:\\:asGeographicValue\\(\\)\\.$#"
+			count: 1
+			path: src/CompoundPoint.php
+
+		-
+			message: "#^Result of \\|\\| is always true\\.$#"
+			count: 1
+			path: src/CompoundPoint.php
+
+		-
+			message: "#^Unreachable statement \\- code above always terminates\\.$#"
+			count: 1
+			path: src/CompoundPoint.php
+
+		-
+			message: "#^Return type \\(array\\<float\\>\\) of method PHPCoord\\\\CoordinateOperation\\\\NADCON5Grid\\:\\:getValues\\(\\) should be compatible with return type \\(array\\<PHPCoord\\\\UnitOfMeasure\\\\Angle\\\\Angle\\|PHPCoord\\\\UnitOfMeasure\\\\Length\\\\Length\\>\\) of method PHPCoord\\\\CoordinateOperation\\\\Grid\\:\\:getValues\\(\\)$#"
+			count: 1
+			path: src/CoordinateOperation/NADCON5Grid.php
+
+		-
 			message: "#^Method PHPCoord\\\\CoordinateReferenceSystem\\\\Projected\\:\\:getDerivingConversion\\(\\) should return string but returns string\\|null\\.$#"
 			count: 1
 			path: src/CoordinateReferenceSystem/Projected.php
@@ -26,9 +46,29 @@ parameters:
 			path: src/GeocentricPoint.php
 
 		-
+			message: "#^Instanceof between PHPCoord\\\\CoordinateReferenceSystem\\\\Geocentric and PHPCoord\\\\CoordinateReferenceSystem\\\\Compound will always evaluate to false\\.$#"
+			count: 1
+			path: src/GeocentricPoint.php
+
+		-
 			message: "#^Cannot call method getUnitOfMeasureId\\(\\) on PHPCoord\\\\CoordinateSystem\\\\Axis\\|null\\.$#"
 			count: 3
 			path: src/GeographicPoint.php
+
+		-
+			message: "#^Instanceof between PHPCoord\\\\CoordinateReferenceSystem\\\\Geographic2D\\|PHPCoord\\\\CoordinateReferenceSystem\\\\Geographic3D and PHPCoord\\\\CoordinateReferenceSystem\\\\Compound will always evaluate to false\\.$#"
+			count: 1
+			path: src/GeographicPoint.php
+
+		-
+			message: "#^Cannot call method multiply\\(\\) on mixed\\.$#"
+			count: 1
+			path: src/Point.php
+
+		-
+			message: "#^Instanceof between PHPCoord\\\\CoordinateReferenceSystem\\\\Projected and PHPCoord\\\\CoordinateReferenceSystem\\\\Compound will always evaluate to false\\.$#"
+			count: 1
+			path: src/ProjectedPoint.php
 
 		-
 			message: "#^Parameter \\#1 \\$easting of class PHPCoord\\\\BritishNationalGridPoint constructor expects PHPCoord\\\\UnitOfMeasure\\\\Length\\\\Length, PHPCoord\\\\UnitOfMeasure\\\\Length\\\\Length\\|null given\\.$#"

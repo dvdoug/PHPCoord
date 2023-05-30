@@ -10,11 +10,10 @@ namespace PHPCoord\CoordinateOperation;
 
 use PHPCoord\UnitOfMeasure\Angle\ArcSecond;
 use PHPCoord\UnitOfMeasure\Length\Metre;
-use SplFileObject;
 
 use function assert;
 use function in_array;
-use function unpack;
+use function is_int;
 
 class BYNHeightGrid extends GeographicGeoidHeightGrid
 {
@@ -27,21 +26,21 @@ class BYNHeightGrid extends GeographicGeoidHeightGrid
     private int $dataSize;
     private float $conversionFactor;
 
-    public function __construct($filename)
+    public function __construct(string $filename)
     {
         $this->storageOrder = self::STORAGE_ORDER_INCREASING_LONGITUDE_DECREASING_LATIITUDE;
-        $this->gridFile = new SplFileObject($filename);
+        $this->gridFile = new GridFile($filename);
 
         $this->gridFile->fseek(0);
         $rawData = $this->gridFile->fread(80);
-        if (unpack('vByteOrder', $rawData, 50)['ByteOrder'] === 1) {
+        if ($this->unpack('vByteOrder', $rawData, 50)['ByteOrder'] === 1) {
             $this->shortFormatChar = 'n';
             $this->longFormatChar = 'N';
             $this->doubleFormatChar = 'E';
             $this->floatFormatChar = 'G';
         }
 
-        $data = unpack("{$this->longFormatChar}SOUTH/{$this->longFormatChar}NORTH/{$this->longFormatChar}WEST/{$this->longFormatChar}EAST/{$this->shortFormatChar}DLAT/{$this->shortFormatChar}DLON/{$this->shortFormatChar}GLOBAL/{$this->shortFormatChar}TYPE/{$this->doubleFormatChar}FACTOR/{$this->shortFormatChar}SIZEOF/x4/{$this->shortFormatChar}DATA/{$this->shortFormatChar}SUBTYPE/{$this->shortFormatChar}DATUM/{$this->shortFormatChar}ELLIPSOID/{$this->shortFormatChar}BYTEORDER/{$this->shortFormatChar}SCALE/{$this->doubleFormatChar}WO/{$this->doubleFormatChar}GM/{$this->shortFormatChar}TIDESYSTEM/{$this->shortFormatChar}REFREALISATION/{$this->floatFormatChar}EPOCH/{$this->shortFormatChar}PTTYPE/x2", $rawData);
+        $data = $this->unpack("{$this->longFormatChar}SOUTH/{$this->longFormatChar}NORTH/{$this->longFormatChar}WEST/{$this->longFormatChar}EAST/{$this->shortFormatChar}DLAT/{$this->shortFormatChar}DLON/{$this->shortFormatChar}GLOBAL/{$this->shortFormatChar}TYPE/{$this->doubleFormatChar}FACTOR/{$this->shortFormatChar}SIZEOF/x4/{$this->shortFormatChar}DATA/{$this->shortFormatChar}SUBTYPE/{$this->shortFormatChar}DATUM/{$this->shortFormatChar}ELLIPSOID/{$this->shortFormatChar}BYTEORDER/{$this->shortFormatChar}SCALE/{$this->doubleFormatChar}WO/{$this->doubleFormatChar}GM/{$this->shortFormatChar}TIDESYSTEM/{$this->shortFormatChar}REFREALISATION/{$this->floatFormatChar}EPOCH/{$this->shortFormatChar}PTTYPE/x2", $rawData);
 
         foreach ($data as $key => $value) {
             if (in_array($key, ['SOUTH', 'EAST', 'NORTH', 'WEST']) && $value > 2147483647) {
@@ -68,7 +67,7 @@ class BYNHeightGrid extends GeographicGeoidHeightGrid
     /**
      * @return Metre[]
      */
-    public function getValues($x, $y): array
+    public function getValues(float $x, float $y): array
     {
         $shift = $this->interpolate($x, $y)[0];
 
@@ -83,7 +82,8 @@ class BYNHeightGrid extends GeographicGeoidHeightGrid
         $this->gridFile->fseek($offset);
         $rawRow = $this->gridFile->fread($this->dataSize);
         $dataType = $this->dataSize === 2 ? $this->shortFormatChar : $this->longFormatChar;
-        $shift = unpack("{$dataType}shift", $rawRow)['shift'];
+        $shift = $this->unpack("{$dataType}shift", $rawRow)['shift'];
+        assert(is_int($shift));
         if ($this->dataSize === 4 && $shift > 2147483647) {
             $shift -= 4294967295;
         } elseif ($this->dataSize === 2 && $shift > 32767) {

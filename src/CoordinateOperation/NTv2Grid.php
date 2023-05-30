@@ -9,11 +9,9 @@ declare(strict_types=1);
 namespace PHPCoord\CoordinateOperation;
 
 use PHPCoord\UnitOfMeasure\Angle\ArcSecond;
-use SplFileObject;
 
 use function assert;
 use function round;
-use function unpack;
 use function usort;
 
 class NTv2Grid extends GeographicGrid
@@ -28,11 +26,14 @@ class NTv2Grid extends GeographicGrid
     private string $doubleFormatChar = 'e';
     private string $floatFormatChar = 'g';
 
+    /**
+     * @var array<string, array{offsetStart: int, S_LAT: float, N_LAT: float, E_LONG: float, W_LONG: float, LONG_INC: float, LAT_INC: float}>
+     */
     private array $subFileMetaData = [];
 
-    public function __construct($filename)
+    public function __construct(string $filename)
     {
-        $this->gridFile = new SplFileObject($filename);
+        $this->gridFile = new GridFile($filename);
         $this->storageOrder = self::STORAGE_ORDER_INCREASING_LATITUDE_INCREASING_LONGITUDE;
 
         $this->readHeader();
@@ -59,13 +60,14 @@ class NTv2Grid extends GeographicGrid
     {
         $this->gridFile->fseek(0);
         $rawData = $this->gridFile->fread(11 * self::RECORD_SIZE);
-        if (unpack('VNUM_OREC', $rawData, 8)['NUM_OREC'] !== 11) {
+        if ($this->unpack('VNUM_OREC', $rawData, 8)['NUM_OREC'] !== 11) {
             $this->integerFormatChar = 'N';
             $this->doubleFormatChar = 'E';
             $this->floatFormatChar = 'G';
         }
 
-        $data = unpack("A8/{$this->integerFormatChar}NUM_OREC/x4/A8/{$this->integerFormatChar}NUM_SREC/x4/A8/{$this->integerFormatChar}NUM_FILE/x4/A8/A8GS_TYPE/A8/A8VERSION/A8/A8SYSTEM_F/A8/A8SYSTEM_T/A8/{$this->doubleFormatChar}MAJOR_F/A8/{$this->doubleFormatChar}MINOR_F/A8/{$this->doubleFormatChar}MAJOR_T/A8/{$this->doubleFormatChar}MINOR_T", $rawData);
+        /** @var array{NUM_OREC: int, NUM_SREC: int, NUM_FILE: int, GS_TYPE: string} $data */
+        $data = $this->unpack("A8/{$this->integerFormatChar}NUM_OREC/x4/A8/{$this->integerFormatChar}NUM_SREC/x4/A8/{$this->integerFormatChar}NUM_FILE/x4/A8/A8GS_TYPE/A8/A8VERSION/A8/A8SYSTEM_F/A8/A8SYSTEM_T/A8/{$this->doubleFormatChar}MAJOR_F/A8/{$this->doubleFormatChar}MINOR_F/A8/{$this->doubleFormatChar}MAJOR_T/A8/{$this->doubleFormatChar}MINOR_T", $rawData);
 
         assert($data['GS_TYPE'] === 'SECONDS');
 
@@ -73,7 +75,8 @@ class NTv2Grid extends GeographicGrid
         for ($i = 0; $i < $data['NUM_FILE']; ++$i) {
             $this->gridFile->fseek($subFileStart);
             $subFileRawData = $this->gridFile->fread(11 * self::RECORD_SIZE);
-            $subFileData = unpack("A8/A8SUB_NAME/A8/A8PARENT/A8/A8CREATED/A8/A8UPDATED/A8/{$this->doubleFormatChar}S_LAT/A8/{$this->doubleFormatChar}N_LAT/A8/{$this->doubleFormatChar}E_LONG/A8/{$this->doubleFormatChar}W_LONG/A8/{$this->doubleFormatChar}LAT_INC/A8/{$this->doubleFormatChar}LONG_INC/A8/{$this->integerFormatChar}GS_COUNT/x4", $subFileRawData);
+            /** @var array{SUB_NAME: string, S_LAT: float, N_LAT: float, E_LONG: float, W_LONG: float, LONG_INC: float, LAT_INC: float, GS_COUNT: int} $subFileData */
+            $subFileData = $this->unpack("A8/A8SUB_NAME/A8/A8PARENT/A8/A8CREATED/A8/A8UPDATED/A8/{$this->doubleFormatChar}S_LAT/A8/{$this->doubleFormatChar}N_LAT/A8/{$this->doubleFormatChar}E_LONG/A8/{$this->doubleFormatChar}W_LONG/A8/{$this->doubleFormatChar}LAT_INC/A8/{$this->doubleFormatChar}LONG_INC/A8/{$this->integerFormatChar}GS_COUNT/x4", $subFileRawData);
             $subFileData['offsetStart'] = $subFileStart;
 
             // apply rounding to eliminate fp issues when being deserialized
@@ -102,7 +105,7 @@ class NTv2Grid extends GeographicGrid
             }
         }
 
-        usort($possibleGrids, static fn ($a, $b) => $a[0] <=> $b[0] ?: $a[1]['LAT_INC'] <=> $b[1]['LAT_INC'] ?: $a[2]['LONG_INC'] <=> $b[2]['LONG_INC']);
+        usort($possibleGrids, static fn ($a, $b) => $a[0] <=> $b[0] ?: $a[1]['LAT_INC'] <=> $b[1]['LAT_INC'] ?: $a[1]['LONG_INC'] <=> $b[1]['LONG_INC']);
 
         $gridToUse = $possibleGrids[0][1];
 

@@ -24,6 +24,9 @@ class NADCON5Grids extends GeographicGrid
         $this->ellipsoidHeightGrid = $ellipsoidHeightGrid;
     }
 
+    /**
+     * @return array{0: ArcSecond, 1: ArcSecond, 2: ?Metre}
+     */
     public function getValues(float $x, float $y): array
     {
         $latitudeShift = new ArcSecond($this->latitudeGrid->getValues($x, $y)[0]);

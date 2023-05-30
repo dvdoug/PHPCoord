@@ -9,9 +9,6 @@ declare(strict_types=1);
 namespace PHPCoord\CoordinateOperation;
 
 use PHPCoord\UnitOfMeasure\Angle\ArcSecond;
-use SplFileObject;
-
-use function unpack;
 
 class NTv2SubGrid extends Grid
 {
@@ -33,7 +30,7 @@ class NTv2SubGrid extends Grid
         float $longitudeInterval,
         string $floatFormatChar
     ) {
-        $this->gridFile = new SplFileObject($filename);
+        $this->gridFile = new GridFile($filename);
         $this->offsetStart = $offsetStart;
         $this->startX = $minLongitude;
         $this->endX = $maxLongitude;
@@ -62,7 +59,9 @@ class NTv2SubGrid extends Grid
         $recordOffset = $this->offsetStart + ((11 + $recordIndex) * self::RECORD_SIZE);
         $this->gridFile->fseek($recordOffset);
         $rawRecord = $this->gridFile->fread(self::RECORD_SIZE);
-        $shifts = unpack("{$this->floatFormatChar}LATITUDE_SHIFT/{$this->floatFormatChar}LONGITUDE_SHIFT/{$this->floatFormatChar}LATITUDE_ACCURACY/{$this->floatFormatChar}LONGITUDE_ACCURACY", $rawRecord);
+
+        /** @var float[] $shifts */
+        $shifts = $this->unpack("{$this->floatFormatChar}LATITUDE_SHIFT/{$this->floatFormatChar}LONGITUDE_SHIFT/{$this->floatFormatChar}LATITUDE_ACCURACY/{$this->floatFormatChar}LONGITUDE_ACCURACY", $rawRecord);
 
         return new GridValues(
             $longitudeIndex * $this->columnGridInterval + $this->startX,

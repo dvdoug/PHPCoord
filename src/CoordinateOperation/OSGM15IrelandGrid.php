@@ -8,27 +8,29 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateOperation;
 
+use Composer\Pcre\Preg;
 use PHPCoord\UnitOfMeasure\Length\Metre;
-use SplFileObject;
 use SplFixedArray;
 
 use function explode;
-use function preg_replace;
-use function preg_split;
 use function trim;
+use function assert;
 
 class OSGM15IrelandGrid extends GeographicGeoidHeightGrid
 {
     use BilinearInterpolation;
 
+    /**
+     * @var SplFixedArray<float>
+     */
     private SplFixedArray $textData;
 
-    public function __construct($filename)
+    public function __construct(string $filename)
     {
-        $this->gridFile = new SplFileObject($filename);
+        $this->gridFile = new GridFile($filename);
         $this->storageOrder = self::STORAGE_ORDER_INCREASING_LONGITUDE_DECREASING_LATIITUDE;
 
-        $header = preg_split('/\s+/', trim($this->gridFile->fgets()));
+        $header = Preg::split('/\s+/', trim($this->gridFile->fgets()));
 
         $this->startX = (float) $header[2];
         $this->startY = (float) $header[0];
@@ -44,7 +46,7 @@ class OSGM15IrelandGrid extends GeographicGeoidHeightGrid
         while (!$this->gridFile->eof()) {
             $rawData = trim($this->gridFile->fgets());
             if ($rawData) {
-                $values = explode(' ', trim(preg_replace('/\s+/', ' ', $rawData)));
+                $values = explode(' ', trim(Preg::replace('/\s+/', ' ', $rawData)));
                 foreach ($values as $value) {
                     $this->textData[$index] = (float) $value;
                     ++$index;
@@ -56,7 +58,7 @@ class OSGM15IrelandGrid extends GeographicGeoidHeightGrid
     /**
      * @return Metre[]
      */
-    public function getValues($x, $y): array
+    public function getValues(float $x, float $y): array
     {
         $shift = $this->interpolate($x, $y)[0];
 
@@ -68,6 +70,8 @@ class OSGM15IrelandGrid extends GeographicGeoidHeightGrid
         $recordId = ($this->numberOfRows - $latitudeIndex - 1) * $this->numberOfColumns + $longitudeIndex;
         $longitude = $longitudeIndex * $this->columnGridInterval + $this->startX;
         $latitude = $latitudeIndex * $this->rowGridInterval + $this->startY;
+
+        assert($this->textData[$recordId] !== null);
 
         return new GridValues(
             $longitude,

@@ -13,7 +13,6 @@ use PHPCoord\CoordinateSystem\Cartesian;
 use PHPCoord\Datum\Datum;
 use PHPCoord\ProjectedPoint;
 use PHPCoord\UnitOfMeasure\Length\Metre;
-use SplFileObject;
 
 use function abs;
 
@@ -23,9 +22,9 @@ class OSTNOSGM15Grid extends Grid
 
     private const ITERATION_CONVERGENCE = 0.0001;
 
-    public function __construct($filename)
+    public function __construct(string $filename)
     {
-        $this->gridFile = new SplFileObject($filename);
+        $this->gridFile = new GridFile($filename);
 
         $this->startX = 0;
         $this->startY = 0;
@@ -91,6 +90,7 @@ class OSTNOSGM15Grid extends Grid
         $record = $northIndex * 701 + $eastIndex + 1;
 
         $this->gridFile->seek($record);
+        /** @var array<int, string> $rawData */
         $rawData = $this->gridFile->fgetcsv();
 
         return new GridValues((float) $rawData[1], (float) $rawData[2], [(float) $rawData[3], (float) $rawData[4], (float) $rawData[5]]);

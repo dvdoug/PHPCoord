@@ -14,6 +14,9 @@ namespace PHPCoord\CoordinateOperation;
  */
 class CRSTransformationsGlobal
 {
+    /**
+     * @var array<array{operation: string, name: string, source_crs: string, target_crs: string, accuracy: float}>
+     */
     protected static array $sridData = [
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
@@ -16950,6 +16953,9 @@ class CRSTransformationsGlobal
         ],
     ];
 
+    /**
+     * @return array<array{operation: string, name: string, source_crs: string, target_crs: string, accuracy: float}>
+     */
     public static function getSupportedTransformations(): array
     {
         return static::$sridData;

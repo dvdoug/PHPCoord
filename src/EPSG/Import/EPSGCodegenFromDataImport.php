@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace PHPCoord\EPSG\Import;
 
+use Composer\Pcre\Preg;
 use Exception;
 use PHPCoord\CoordinateOperation\CoordinateOperationMethods;
 use PHPCoord\CoordinateReferenceSystem\Compound;
@@ -45,8 +46,6 @@ use function glob;
 use function implode;
 use function in_array;
 use function lcfirst;
-use function preg_match;
-use function preg_replace;
 use function str_replace;
 use function ucwords;
 use function unlink;
@@ -1523,7 +1522,7 @@ class EPSGCodegenFromDataImport
 
         $crsCount = count(CoordinateReferenceSystem::getSupportedSRIDs());
         file_put_contents($this->sourceDir . '/../docs/reflection/numOfCRS.txt', implode("\n", ['.. |numOfCRS| replace:: ' . $crsCount]));
-        file_put_contents($this->sourceDir . '/../README.md', preg_replace('/<!-- numOfCRS -->\d+/', '<!-- numOfCRS -->' . $crsCount, file_get_contents($this->sourceDir . '/../README.md')));
+        file_put_contents($this->sourceDir . '/../README.md', Preg::replace('/<!-- numOfCRS -->\d+/', '<!-- numOfCRS -->' . $crsCount, file_get_contents($this->sourceDir . '/../README.md')));
     }
 
     public function generateDataCoordinateOperationMethods(): void
@@ -2017,7 +2016,7 @@ class EPSGCodegenFromDataImport
     protected static function makeParamName(string $string): string
     {
         $string = str_replace([' ', '-', '(', ')', '"'], '', ucwords($string, ' -()"'));
-        if (!preg_match('/^(EPSG|[ABC][uv\d])/', $string)) {
+        if (!Preg::match('/^(EPSG|[ABC][uv\d])/', $string)) {
             $string = lcfirst($string);
         }
 

@@ -45,6 +45,7 @@ use function str_ends_with;
 use function class_exists;
 use function assert;
 use function property_exists;
+use function is_string;
 
 use const M_PI;
 
@@ -115,7 +116,7 @@ abstract class Point implements Stringable
         $params = [];
         $powerCoefficients = [];
         foreach (CoordinateOperations::getParamData($operationSrid) as $paramName => $paramValue) {
-            if (str_ends_with($paramName, 'File') && $paramValue !== null && class_exists($paramValue) && new $paramValue() instanceof GridProvider) {
+            if (str_ends_with($paramName, 'File') && is_string($paramValue) && class_exists($paramValue) && new $paramValue() instanceof GridProvider) {
                 $params[$paramName] = static::$gridCache[$paramValue] ??= (new $paramValue())->provideGrid();
             } else {
                 if ($inReverse && isset($methodData['paramData'][$paramName]) && $methodData['paramData'][$paramName]['reverses']) {

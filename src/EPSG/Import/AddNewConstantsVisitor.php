@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace PHPCoord\EPSG\Import;
 
+use Composer\Pcre\Preg;
 use PhpParser\Comment\Doc;
 use PhpParser\Node;
 use PhpParser\Node\Stmt\Class_;
@@ -18,7 +19,6 @@ use PhpParser\NodeVisitorAbstract;
 
 use function array_unshift;
 use function explode;
-use function preg_replace;
 use function str_replace;
 use function strtoupper;
 use function trim;
@@ -51,7 +51,7 @@ class AddNewConstantsVisitor extends NodeVisitorAbstract
                     ['_', '_', '', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_DEG_', '_PLUS_', '_AND_', '_TO_'],
                     $data['name']
                 );
-                $constantName = preg_replace('/_+/', '_', $constantName);
+                $constantName = Preg::replace('/_+/', '_', $constantName);
                 $constantName = trim($constantName, '_');
                 $name = str_replace(
                     [
@@ -158,14 +158,14 @@ class AddNewConstantsVisitor extends NodeVisitorAbstract
                         ['_', '_', '', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_DEG_', '_PLUS_', '_AND_', '_TO_'],
                         $this->constants[$urn]['name']
                     );
-                    $canonicalName = preg_replace('/_+/', '_', $canonicalName);
+                    $canonicalName = Preg::replace('/_+/', '_', $canonicalName);
                     $canonicalName = trim($canonicalName, '_');
                     $name = str_replace(
                         [' ', '-', '\'', '(', ')', '[', ']', '.', '/', '=', ',', ':', '°', '+', '&', '<>'],
                         ['_', '_', '', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_DEG_', '_PLUS_', '_AND_', '_TO_'],
                         $alias
                     );
-                    $name = preg_replace('/_+/', '_', $name);
+                    $name = Preg::replace('/_+/', '_', $name);
                     $name = trim($name, '_');
 
                     $comment = "/**\n";

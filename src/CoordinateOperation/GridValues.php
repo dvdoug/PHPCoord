@@ -15,8 +15,15 @@ class GridValues
 {
     private float $x;
     private float $y;
+
+    /**
+     * @var float[]
+     */
     private array $values;
 
+    /**
+     * @param array<float> $values
+     */
     public function __construct(float $x, float $y, array $values)
     {
         $this->x = $x;
@@ -34,6 +41,9 @@ class GridValues
         return $this->y;
     }
 
+    /**
+     * @return float[]
+     */
     public function getValues(): array
     {
         return $this->values;

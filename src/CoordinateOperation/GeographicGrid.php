@@ -11,7 +11,9 @@ namespace PHPCoord\CoordinateOperation;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Geographic3D;
 use PHPCoord\GeographicPoint;
+use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPCoord\UnitOfMeasure\Angle\ArcSecond;
+use PHPCoord\UnitOfMeasure\Length\Length;
 
 use function abs;
 
@@ -21,11 +23,12 @@ abstract class GeographicGrid extends Grid
 
     public function applyForwardAdjustment(GeographicPoint $point, Geographic2D|Geographic3D $to): GeographicPoint
     {
+        /** @var array{0: Angle, 1: Angle, 2?: Length} $shifts */
         $shifts = $this->getValues($point->getLongitude()->getValue(), $point->getLatitude()->getValue());
 
         $latitude = $point->getLatitude()->add($shifts[0]);
         $longitude = $point->getLongitude()->add($shifts[1]);
-        $height = $point->getHeight() && $shifts[2] ? $point->getHeight()->add($shifts[2]) : null;
+        $height = $point->getHeight() && isset($shifts[2]) ? $point->getHeight()->add($shifts[2]) : null;
 
         return GeographicPoint::create($to, $latitude, $longitude, $height, $point->getCoordinateEpoch());
     }
@@ -38,12 +41,13 @@ abstract class GeographicGrid extends Grid
 
         do {
             $prevShifts = $shifts;
+            /** @var array{0: Angle, 1: Angle, 2?: Length} $shifts */
             $shifts = $this->getValues($longitude->getValue(), $latitude->getValue());
             $latitude = $point->getLatitude()->subtract($shifts[0]);
             $longitude = $point->getLongitude()->subtract($shifts[1]);
         } while (abs($shifts[0]->subtract($prevShifts[0])->getValue()) > self::ITERATION_CONVERGENCE && abs($shifts[1]->subtract($prevShifts[1])->getValue()) > self::ITERATION_CONVERGENCE);
 
-        $height = $point->getHeight() && $shifts[2] ? $point->getHeight()->subtract($shifts[2]) : null;
+        $height = $point->getHeight() && isset($shifts[2]) ? $point->getHeight()->subtract($shifts[2]) : null;
 
         return GeographicPoint::create($to, $latitude, $longitude, $height, $point->getCoordinateEpoch());
     }

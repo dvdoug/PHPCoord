@@ -8,33 +8,27 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateOperation;
 
+use Composer\Pcre\Preg;
 use PHPCoord\UnitOfMeasure\Length\Metre;
-use SplFileObject;
 use SplFixedArray;
 
 use function explode;
-use function preg_match;
-use function preg_replace;
 use function strlen;
 use function trim;
+use function assert;
 
 class IGNESHeightGrid extends GeographicGeoidHeightGrid
 {
     use BilinearInterpolation;
 
-    private const ITERATION_CONVERGENCE = 0.0001;
-
-    private bool $coordinatesIncludedInData;
-
-    private int $valuesPerCoordinate;
-
-    private bool $precisionIncluded;
-
+    /**
+     * @var SplFixedArray<array<float>>
+     */
     private SplFixedArray $data;
 
-    public function __construct($filename)
+    public function __construct(string $filename)
     {
-        $this->gridFile = new SplFileObject($filename);
+        $this->gridFile = new GridFile($filename);
         $this->init();
     }
 
@@ -52,6 +46,7 @@ class IGNESHeightGrid extends GeographicGeoidHeightGrid
     {
         $recordId = ($this->numberOfRows - $latitudeIndex - 1) * $this->numberOfColumns + $longitudeIndex;
 
+        assert($this->data[$recordId] !== null);
         $record = $this->data[$recordId];
 
         $longitude = $longitudeIndex * $this->columnGridInterval + $this->startX;
@@ -65,10 +60,10 @@ class IGNESHeightGrid extends GeographicGeoidHeightGrid
         $headerRegexp = '^\s+(-?[\d.]+)\s+(-?[\d.]+)\s+(-?[\d.]+)\s+(-?[\d.]+)\s+([\d.]+)\s+([\d.]+)';
         $header = $this->gridFile->fgets();
 
-        preg_match('/' . $headerRegexp . '/', $header, $headerParts);
+        Preg::match('/' . $headerRegexp . '/', $header, $headerParts);
 
-        $this->columnGridInterval = $headerParts[4] / 60;
-        $this->rowGridInterval = $headerParts[3] / 60;
+        $this->columnGridInterval = (float) $headerParts[4] / 60;
+        $this->rowGridInterval = (float) $headerParts[3] / 60;
         $this->numberOfColumns = (int) $headerParts[6];
         $this->numberOfRows = (int) $headerParts[5];
         $this->startX = (float) $headerParts[2];
@@ -84,7 +79,7 @@ class IGNESHeightGrid extends GeographicGeoidHeightGrid
         $this->data = new SplFixedArray($this->numberOfColumns * $this->numberOfRows);
 
         $rawData = $this->gridFile->fread($this->gridFile->getSize() - strlen($header));
-        $values = explode(' ', trim(preg_replace('/\s+/', ' ', $rawData)));
+        $values = explode(' ', trim(Preg::replace('/\s+/', ' ', $rawData)));
 
         $cursor = 0;
         for ($i = 0, $numValues = $this->numberOfColumns * $this->numberOfRows; $i < $numValues; ++$i) {

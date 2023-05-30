@@ -8,17 +8,14 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateOperation;
 
+use Composer\Pcre\Preg;
 use PHPCoord\UnitOfMeasure\Length\Metre;
-use SplFileObject;
 use SplFixedArray;
 
 use function assert;
 use function explode;
 use function intdiv;
-use function preg_replace;
-use function preg_split;
 use function trim;
-use function unpack;
 
 /**
  * @see https://github.com/Kortforsyningen/kmsgrid/blob/master/kmsgrid.py for documentation
@@ -32,11 +29,15 @@ class KMSGrid extends GeographicGeoidHeightGrid
     private string $integerFormatChar = 'V';
     private string $doubleFormatChar = 'e';
     private string $floatFormatChar = 'g';
+
+    /**
+     * @var SplFixedArray<float>
+     */
     private SplFixedArray $textData;
 
-    public function __construct($filename)
+    public function __construct(string $filename)
     {
-        $this->gridFile = new SplFileObject($filename);
+        $this->gridFile = new GridFile($filename);
         $this->storageOrder = self::STORAGE_ORDER_INCREASING_LONGITUDE_DECREASING_LATIITUDE;
 
         $firstChar = $this->gridFile->fread(1);
@@ -44,7 +45,7 @@ class KMSGrid extends GeographicGeoidHeightGrid
         if ($firstChar === ' ') {
             $this->isBinary = false;
 
-            $header = preg_split('/\s+/', trim($this->gridFile->fgets()));
+            $header = Preg::split('/\s+/', trim($this->gridFile->fgets()));
 
             $this->startX = (float) $header[2];
             $this->startY = (float) $header[0];
@@ -60,7 +61,7 @@ class KMSGrid extends GeographicGeoidHeightGrid
             while (!$this->gridFile->eof()) {
                 $rawData = trim($this->gridFile->fgets());
                 if ($rawData) {
-                    $values = explode(' ', trim(preg_replace('/\s+/', ' ', $rawData)));
+                    $values = explode(' ', trim(Preg::replace('/\s+/', ' ', $rawData)));
                     foreach ($values as $value) {
                         $this->textData[$index] = (float) $value;
                         ++$index;
@@ -72,18 +73,19 @@ class KMSGrid extends GeographicGeoidHeightGrid
 
             $this->gridFile->fseek(0);
             $rawHeader = $this->gridFile->fread($this->binaryHeaderLength);
-            $icode = unpack("{$this->integerFormatChar}ICODE", $rawHeader)['ICODE'];
+            $icode = $this->unpack("{$this->integerFormatChar}ICODE", $rawHeader)['ICODE'];
 
             if ($icode !== 777) {
                 $this->integerFormatChar = 'N';
                 $this->doubleFormatChar = 'E';
                 $this->floatFormatChar = 'G';
-                $icode = unpack("{$this->integerFormatChar}ICODE", $rawHeader)['ICODE'];
+                $icode = $this->unpack("{$this->integerFormatChar}ICODE", $rawHeader)['ICODE'];
             }
 
             assert($icode === 777);
 
-            $header = unpack("{$this->integerFormatChar}ICODE/{$this->doubleFormatChar}BMIN/{$this->doubleFormatChar}BMAX/{$this->doubleFormatChar}LMIN/{$this->doubleFormatChar}LMAX/{$this->doubleFormatChar}DB/{$this->doubleFormatChar}DL/{$this->integerFormatChar}DATUM/{$this->integerFormatChar}CSTM/{$this->integerFormatChar}MODE", $rawHeader);
+            /** @var array{ICODE: int, BMIN: float, BMAX: float, LMIN: float, LMAX: float, DB: float, DL: float, DATUM: int, CSTM: int, MODE: int} $header */
+            $header = $this->unpack("{$this->integerFormatChar}ICODE/{$this->doubleFormatChar}BMIN/{$this->doubleFormatChar}BMAX/{$this->doubleFormatChar}LMIN/{$this->doubleFormatChar}LMAX/{$this->doubleFormatChar}DB/{$this->doubleFormatChar}DL/{$this->integerFormatChar}DATUM/{$this->integerFormatChar}CSTM/{$this->integerFormatChar}MODE", $rawHeader);
             $this->startX = $header['LMIN'];
             $this->startY = $header['BMIN'];
             $this->endX = $header['LMAX'];
@@ -105,7 +107,7 @@ class KMSGrid extends GeographicGeoidHeightGrid
     /**
      * @return Metre[]
      */
-    public function getValues($x, $y): array
+    public function getValues(float $x, float $y): array
     {
         $shift = $this->interpolate($x, $y)[0];
 
@@ -122,7 +124,8 @@ class KMSGrid extends GeographicGeoidHeightGrid
             $offset = $this->binaryHeaderLength + $recordId * 4;
             $this->gridFile->fseek($offset);
             $rawRow = $this->gridFile->fread(4);
-            $data = unpack("{$this->floatFormatChar}shift", $rawRow);
+            /** @var array{shift: float} $data */
+            $data = $this->unpack("{$this->floatFormatChar}shift", $rawRow);
 
             return new GridValues(
                 $longitude,
@@ -130,6 +133,8 @@ class KMSGrid extends GeographicGeoidHeightGrid
                 [$data['shift']]
             );
         } else {
+            assert($this->textData[$recordId] !== null);
+
             return new GridValues(
                 $longitude,
                 $latitude,

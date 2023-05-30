@@ -8,7 +8,8 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateOperation;
 
-use SplFileObject;
+use Composer\Pcre\Preg;
+use PHPCoord\Exception\UnknownConversionException;
 use SplFixedArray;
 
 use function array_map;
@@ -18,8 +19,6 @@ use function count;
 use function explode;
 use function max;
 use function min;
-use function preg_match;
-use function preg_replace;
 use function str_repeat;
 use function str_replace;
 use function strlen;
@@ -31,15 +30,19 @@ trait IGNFGrid
 
     private int $valuesPerCoordinate;
 
+    /**
+     * @var SplFixedArray<array<float>>
+     */
     private SplFixedArray $data;
 
-    public function __construct($filename)
+    public function __construct(string $filename)
     {
-        $this->gridFile = new SplFileObject($filename);
+        $this->gridFile = new GridFile($filename);
 
         match ($this->gridFile->getExtension()) {
             'txt' => $this->initTxt(),
             'mnt', 'tac' => $this->initMntOrTac(),
+            default => throw new UnknownConversionException('Unable to determine file type of file: ' . $this->gridFile->getFilename())
         };
     }
 
@@ -48,8 +51,10 @@ trait IGNFGrid
         $recordId = match ($this->storageOrder) {
             self::STORAGE_ORDER_INCREASING_LATITUDE_INCREASING_LONGITUDE => ($longitudeIndex * $this->numberOfRows + $latitudeIndex),
             self::STORAGE_ORDER_INCREASING_LONGITUDE_DECREASING_LATIITUDE => ($this->numberOfRows - $latitudeIndex - 1) * $this->numberOfColumns + $longitudeIndex,
+            default => throw new UnknownConversionException('Unknown storage order for file: ' . $this->gridFile->getFilename())
         };
 
+        assert($this->data[$recordId] !== null);
         $record = $this->data[$recordId];
 
         $longitude = $longitudeIndex * $this->columnGridInterval + $this->startX;
@@ -70,7 +75,7 @@ trait IGNFGrid
         $interpolationMethod = trim(str_replace('GR3D2', '', $header2));
         assert($interpolationMethod === 'INTERPOLATION BILINEAIRE');
 
-        $gridDimensions = explode(' ', trim(preg_replace('/ +/', ' ', str_replace('GR3D1', '', $header1))));
+        $gridDimensions = explode(' ', trim(Preg::replace('/ +/', ' ', str_replace('GR3D1', '', $header1))));
         $this->startX = (float) $gridDimensions[0];
         $this->endX = (float) $gridDimensions[1];
         $this->startY = (float) $gridDimensions[2];
@@ -83,7 +88,7 @@ trait IGNFGrid
 
         $this->data = new SplFixedArray($this->numberOfColumns * $this->numberOfRows);
         for ($i = 0, $numValues = $this->numberOfColumns * $this->numberOfRows; $i < $numValues; ++$i) {
-            $rowData = explode(' ', trim(preg_replace('/ +/', ' ', $this->gridFile->fgets())));
+            $rowData = explode(' ', trim(Preg::replace('/ +/', ' ', $this->gridFile->fgets())));
             $wantedData = array_slice($rowData, 3, 3); // ignore weird first fixed value, coordinates, precision and map sheet
             $wantedData = array_map(static fn (string $value) => (float) $value, $wantedData);
             $this->data[$i] = $wantedData;
@@ -98,7 +103,7 @@ trait IGNFGrid
         $fixedHeaderRegexp = '^(-?[\d.]+) (-?[\d.]+) (-?[\d.]+) (-?[\d.]+) ([\d.]+) ([\d.]+) ([1-4]) ([01]) (\d) ([01]) ';
         $header = $this->gridFile->fgets();
 
-        preg_match('/' . $fixedHeaderRegexp . '/', $header, $fixedHeaderParts);
+        Preg::match('/' . $fixedHeaderRegexp . '/', $header, $fixedHeaderParts);
 
         $this->startX = min((float) $fixedHeaderParts[1], (float) $fixedHeaderParts[2]);
         $this->endX = max((float) $fixedHeaderParts[1], (float) $fixedHeaderParts[2]);
@@ -113,7 +118,7 @@ trait IGNFGrid
         $this->valuesPerCoordinate = (int) $fixedHeaderParts[9];
         $precisionIncluded = (bool) $fixedHeaderParts[10];
 
-        preg_match('/' . $fixedHeaderRegexp . str_repeat('(-?[\d.]+) ', $this->valuesPerCoordinate) . '(.*)$/', $header, $fullHeaderParts);
+        Preg::match('/' . $fixedHeaderRegexp . str_repeat('(-?[\d.]+) ', $this->valuesPerCoordinate) . '(.*)$/', $header, $fullHeaderParts);
 
         $baseAdjustments = array_slice($fullHeaderParts, count($fullHeaderParts) - $this->valuesPerCoordinate - 1, $this->valuesPerCoordinate);
         foreach ($baseAdjustments as $baseAdjustment) {
@@ -126,7 +131,7 @@ trait IGNFGrid
         $this->data = new SplFixedArray($this->numberOfColumns * $this->numberOfRows);
 
         $rawData = $this->gridFile->fread($this->gridFile->getSize() - strlen($header));
-        $values = explode(' ', trim(preg_replace('/\s+/', ' ', $rawData)));
+        $values = explode(' ', trim(Preg::replace('/\s+/', ' ', $rawData)));
 
         $cursor = 0;
         for ($i = 0, $numValues = $this->numberOfColumns * $this->numberOfRows; $i < $numValues; ++$i) {

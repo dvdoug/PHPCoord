@@ -8,17 +8,16 @@ declare(strict_types=1);
 
 namespace PHPCoord\UnitOfMeasure\Angle;
 
+use Composer\Pcre\Preg;
 use InvalidArgumentException;
 
 use function in_array;
-use function preg_match;
 use function str_pad;
 use function str_replace;
 use function strlen;
 use function strpos;
 
 use const M_PI;
-use const PREG_UNMATCHED_AS_NULL;
 use const STR_PAD_RIGHT;
 
 class Degree extends Angle
@@ -139,10 +138,14 @@ class Degree extends Angle
         return self::fromRegex($angle, $regex);
     }
 
+    /**
+     * @param non-empty-string $regex
+     */
     private static function fromRegex(string $angle, string $regex): self
     {
+        /** @var non-empty-string $angle */
         $angle = str_replace(' ', '', $angle);
-        $foundAngle = preg_match($regex, $angle, $angleParts, PREG_UNMATCHED_AS_NULL);
+        $foundAngle = Preg::match($regex, $angle, $angleParts);
 
         if (!$foundAngle) {
             throw new InvalidArgumentException("Could not find angle in '{$angle}'");

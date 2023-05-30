@@ -13,6 +13,7 @@ use PHPCoord\CompoundPoint;
 use PHPCoord\CoordinateReferenceSystem\Compound;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\CoordinateReferenceSystem\Geocentric;
+use PHPCoord\CoordinateReferenceSystem\Geographic;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Geographic3D;
 use PHPCoord\CoordinateReferenceSystem\Projected;
@@ -24,7 +25,9 @@ use PHPCoord\Geometry\BoundingArea;
 use PHPCoord\Geometry\RegionMap;
 use PHPCoord\Point;
 use PHPCoord\ProjectedPoint;
+use PHPCoord\UnitOfMeasure\Time\Time;
 use PHPCoord\UnitOfMeasure\Time\Year;
+use PHPCoord\VerticalPoint;
 
 use function abs;
 use function array_column;
@@ -37,6 +40,7 @@ use function count;
 use function in_array;
 use function usort;
 use function str_ends_with;
+use function is_string;
 
 /**
  * @internal
@@ -45,8 +49,14 @@ trait AutoConversion
 {
     private int $maxChainDepth = 6; // if traits could have constants...
 
+    /**
+     * @var array<string, array<int, array{path: array<int, array{operation: string, name: string, source_crs: string, target_crs: string, accuracy: float, in_reverse: bool}>, accuracy: float}>>
+     */
     private static array $completePathCache = [];
 
+    /**
+     * @return ($to is Compound ? CompoundPoint : ($to is Geocentric ? GeocentricPoint : ($to is Geographic ? GeographicPoint : ($to is Projected ? ProjectedPoint : ($to is Vertical ? VerticalPoint: Point)))))
+     */
     public function convert(Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $to, bool $ignoreBoundaryRestrictions = false): Point
     {
         if ($this->getCRS() == $to) {
@@ -64,6 +74,9 @@ trait AutoConversion
         return $point;
     }
 
+    /**
+     * @return array<int, array{operation: string, name: string, source_crs: string, target_crs: string, accuracy: float, in_reverse: bool}>
+     */
     protected function findOperationPath(Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $source, Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $target, bool $ignoreBoundaryRestrictions): array
     {
         $boundaryCheckPoint = $ignoreBoundaryRestrictions ? null : $this->getPointForBoundaryCheck();
@@ -81,6 +94,9 @@ trait AutoConversion
         throw new UnknownConversionException('Unable to perform conversion, please file a bug if you think this is incorrect');
     }
 
+    /**
+     * @param array<int, array{operation: string, name: string, source_crs: string, target_crs: string, accuracy: float, in_reverse: bool}> $candidatePath
+     */
     protected function validatePath(array $candidatePath, Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $target, ?GeographicValue $boundaryCheckPoint): bool
     {
         foreach ($candidatePath as $pathStep) {
@@ -115,7 +131,8 @@ trait AutoConversion
             $operationParams = CoordinateOperations::getParamData($pathStep['operation']);
 
             // filter out operations that require a specific epoch
-            if (isset($methodParams['transformationReferenceEpoch'])) {
+            if (isset($methodParams['transformationReferenceEpoch']) && $this->getCoordinateEpoch()) {
+                assert($operationParams['transformationReferenceEpoch'] instanceof Time);
                 $pointEpoch = Year::fromDateTime($this->getCoordinateEpoch());
                 if (!(abs($pointEpoch->subtract($operationParams['transformationReferenceEpoch'])->getValue()) <= 0.001)) {
                     return false;
@@ -125,7 +142,7 @@ trait AutoConversion
             // filter out operations that require a grid file that we don't have, or where boundaries are not being
             // checked (a formula-based conversion will always return *a* result, outside a grid boundary does not...)
             foreach ($operationParams as $paramName => $paramValue) {
-                if (str_ends_with($paramName, 'File') && $paramValue !== null && (!$boundaryCheckPoint || !class_exists($paramValue))) {
+                if (str_ends_with($paramName, 'File') && is_string($paramValue) && (!$boundaryCheckPoint || !class_exists($paramValue))) {
                     return false;
                 }
             }
@@ -136,6 +153,7 @@ trait AutoConversion
 
     /**
      * Build the set of possible paths that lead from the current CRS to the target CRS.
+     * @return array<int, array{path: array<int, array{operation: string, name: string, source_crs: string, target_crs: string, accuracy: float, in_reverse: bool}>, accuracy: float}>
      */
     protected function buildTransformationPathsToCRS(Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $source, Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $target): array
     {
@@ -184,6 +202,11 @@ trait AutoConversion
         return self::$completePathCache[$cacheKey];
     }
 
+    /**
+     * @param  array<string, array<int, array{operation: string, name: string, source_crs: string, target_crs: string, accuracy: float, in_reverse: bool}>> $transformationsByCRSPair
+     * @param  array<int, array<int, string>>                                                                                                               $simplePaths
+     * @return array<int, array<int, array{operation: string, name: string, source_crs: string, target_crs: string, accuracy: float, in_reverse: bool}>>
+     */
     protected function expandSimplePaths(array $transformationsByCRSPair, array $simplePaths, string $fromSRID, string $toSRID): array
     {
         $fullPaths = [];
@@ -253,9 +276,14 @@ trait AutoConversion
 
                 return new GeographicValue($asGeographic->getLatitude(), $asGeographic->getLongitude()->subtract($asGeographic->getDatum()->getPrimeMeridian()->getGreenwichLongitude()), null, $asGeographic->getDatum());
             }
+
+            throw new UnknownConversionException();
         }
     }
 
+    /**
+     * @return array<string, array<string, string>>
+     */
     protected static function buildSupportedTransformationsByCRS(Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $source, Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $target): array
     {
         $regions = array_unique([$source->getBoundingArea()->getRegion(), $target->getBoundingArea()->getRegion(), RegionMap::REGION_GLOBAL]);
@@ -271,6 +299,7 @@ trait AutoConversion
                 RegionMap::REGION_NORTHAMERICA => CRSTransformationsNorthAmerica::getSupportedTransformations(),
                 RegionMap::REGION_OCEANIA => CRSTransformationsOceania::getSupportedTransformations(),
                 RegionMap::REGION_SOUTHAMERICA => CRSTransformationsSouthAmerica::getSupportedTransformations(),
+                default => throw new UnknownConversionException('Unknown region: ' . $region),
             };
             $relevantRegionData = [...$relevantRegionData, ...$regionData];
         }
@@ -291,6 +320,9 @@ trait AutoConversion
         return $transformationsByCRS;
     }
 
+    /**
+     * @return array<string, array<array{operation: string, name: string, source_crs: string, target_crs: string, accuracy: float, in_reverse: bool}>>
+     */
     protected static function buildSupportedTransformationsByCRSPair(Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $source, Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $target): array
     {
         $regions = array_unique([$source->getBoundingArea()->getRegion(), $target->getBoundingArea()->getRegion(), RegionMap::REGION_GLOBAL]);
@@ -306,6 +338,7 @@ trait AutoConversion
                 RegionMap::REGION_NORTHAMERICA => CRSTransformationsNorthAmerica::getSupportedTransformations(),
                 RegionMap::REGION_OCEANIA => CRSTransformationsOceania::getSupportedTransformations(),
                 RegionMap::REGION_SOUTHAMERICA => CRSTransformationsSouthAmerica::getSupportedTransformations(),
+                default => throw new UnknownConversionException('Unknown region: ' . $region),
             };
             $relevantRegionData = [...$relevantRegionData, ...$regionData];
         }

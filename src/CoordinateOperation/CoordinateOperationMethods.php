@@ -771,6 +771,9 @@ class CoordinateOperationMethods
      */
     public const EPSG_ZERO_TIDE_HEIGHT_TO_MEAN_TIDE_HEIGHT_EVRF2019 = 'urn:ogc:def:method:EPSG::1107';
 
+    /**
+     * @var array<string, array{name: string, reversible: bool, paramData: array<string, array{reverses: bool}>}>
+     */
     protected static array $sridData = [
         'urn:ogc:def:method:EPSG::1024' => [
             'name' => 'Popular Visualisation Pseudo Mercator',
@@ -4653,6 +4656,7 @@ class CoordinateOperationMethods
 
     /**
      * @internal
+     * @return array{name: string, reversible: bool, paramData: array<string, array{reverses: bool}>}
      */
     public static function getMethodData(string $methodSrid): array
     {

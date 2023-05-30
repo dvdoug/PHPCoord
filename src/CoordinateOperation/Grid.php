@@ -8,7 +8,11 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateOperation;
 
-use SplFileObject;
+use PHPCoord\UnitOfMeasure\Angle\Angle;
+use PHPCoord\UnitOfMeasure\Length\Length;
+
+use function unpack;
+use function assert;
 
 /**
  * @internal
@@ -27,7 +31,21 @@ abstract class Grid
 
     protected int $storageOrder;
 
-    protected SplFileObject $gridFile;
+    protected GridFile $gridFile;
 
+    /**
+     * @return array<Angle|Length>
+     */
     abstract public function getValues(float $x, float $y): array;
+
+    /**
+     * @return array<int|string, int|float|string>
+     */
+    protected function unpack(string $format, string $string, int $offset = 0): array
+    {
+        $result = unpack($format, $string, $offset);
+        assert($result !== false, 'unpack() failed');
+
+        return $result;
+    }
 }

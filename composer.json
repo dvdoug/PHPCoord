@@ -12,7 +12,8 @@
     ],
     "license": "(MIT and proprietary)",
     "require": {
-        "php": "^8.0"
+        "php": "^8.0",
+        "composer/pcre": "^3.1"
     },
     "require-dev": {
         "ext-json": "*",

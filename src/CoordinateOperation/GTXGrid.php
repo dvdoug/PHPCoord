@@ -8,12 +8,11 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateOperation;
 
+use PHPCoord\Exception\UnknownConversionException;
 use PHPCoord\UnitOfMeasure\Length\Metre;
-use SplFileObject;
 
 use function in_array;
 use function substr;
-use function unpack;
 
 /**
  * @see https://vdatum.noaa.gov/docs/gtx_info.html for documentation
@@ -25,9 +24,9 @@ class GTXGrid extends GeographicGeoidHeightGrid
     private int $headerLength;
     private string $shiftDataType;
 
-    public function __construct($filename)
+    public function __construct(string $filename)
     {
-        $this->gridFile = new SplFileObject($filename);
+        $this->gridFile = new GridFile($filename);
         $this->storageOrder = self::STORAGE_ORDER_INCREASING_LONGITUDE_INCREASING_LATIITUDE;
 
         $header = $this->getHeader();
@@ -46,7 +45,7 @@ class GTXGrid extends GeographicGeoidHeightGrid
     /**
      * @return Metre[]
      */
-    public function getValues($x, $y): array
+    public function getValues(float $x, float $y): array
     {
         if ($x < $this->startX) { // normalise if necessary
             $x += 360;
@@ -68,12 +67,14 @@ class GTXGrid extends GeographicGeoidHeightGrid
             self::STORAGE_ORDER_INCREASING_LATITUDE_INCREASING_LONGITUDE => $longitudeIndex * $this->numberOfRows + $latitudeIndex,
             self::STORAGE_ORDER_INCREASING_LONGITUDE_DECREASING_LATIITUDE => ($this->numberOfRows - $latitudeIndex - 1) * $this->numberOfColumns + $longitudeIndex,
             self::STORAGE_ORDER_INCREASING_LONGITUDE_INCREASING_LATIITUDE => $latitudeIndex * $this->numberOfColumns + $longitudeIndex,
+            default => throw new UnknownConversionException('Unknown storage order for file: ' . $this->gridFile->getFilename())
         };
 
         $offset = $this->headerLength + $recordId * 4;
         $this->gridFile->fseek($offset);
         $rawRow = $this->gridFile->fread(4);
-        $data = unpack("{$this->shiftDataType}shift", $rawRow);
+        /** @var array{shift: float} $data */
+        $data = $this->unpack("{$this->shiftDataType}shift", $rawRow);
 
         return new GridValues(
             $longitudeIndex * $this->columnGridInterval + $this->startX,
@@ -82,25 +83,29 @@ class GTXGrid extends GeographicGeoidHeightGrid
         );
     }
 
+    /**
+     * @return array{xlatsw: float, xlonsw: float, dlat: float, dlon: float, nlat: int, nlon: int}
+     */
     private function getHeader(): array
     {
         $this->gridFile->fseek(0);
         $rawHeader = $this->gridFile->fread(44);
         $ikind = substr($rawHeader, 40, 4);
-        if (unpack('Nikind', $ikind)['ikind'] === 1) { // big endian
+        if ($this->unpack('Nikind', $ikind)['ikind'] === 1) { // big endian
             $this->headerLength = 44;
             $this->shiftDataType = 'G';
-            $data = unpack('Exlatsw/Exlonsw/Edlat/Edlon/Nnlat/Nnlon', $rawHeader);
-        } elseif (unpack('Vikind', $ikind)['ikind'] === 1) { // little endian
+            $data = $this->unpack('Exlatsw/Exlonsw/Edlat/Edlon/Nnlat/Nnlon', $rawHeader);
+        } elseif ($this->unpack('Vikind', $ikind)['ikind'] === 1) { // little endian
             $this->headerLength = 44;
             $this->shiftDataType = 'g';
-            $data = unpack('exlatsw/exlonsw/edlat/edlon/Vnlat/Vnlon', $rawHeader);
+            $data = $this->unpack('exlatsw/exlonsw/edlat/edlon/Vnlat/Vnlon', $rawHeader);
         } else { // not all files (e.g. NZ) have this endian check column, assume big endian
             $this->headerLength = 40;
             $this->shiftDataType = 'G';
-            $data = unpack('Exlatsw/Exlonsw/Edlat/Edlon/Nnlat/Nnlon', $rawHeader);
+            $data = $this->unpack('Exlatsw/Exlonsw/Edlat/Edlon/Nnlat/Nnlon', $rawHeader);
         }
 
+        /** @var array{xlatsw: float, xlonsw: float, dlat: float, dlon: float, nlat: int, nlon: int} */
         return $data;
     }
 }

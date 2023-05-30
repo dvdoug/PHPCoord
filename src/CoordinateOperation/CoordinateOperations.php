@@ -16,6 +16,9 @@ use function str_replace;
 
 class CoordinateOperations
 {
+    /**
+     * @var array<string, array{name: string, method: string, extent: string[]|BoundingArea, extent_description: string}>
+     */
     protected static array $sridData = [
         'urn:ogc:def:coordinateOperation:EPSG::1027' => [
             'name' => 'Madrid 1870 (Madrid) to ED50 (2)',
@@ -22339,6 +22342,7 @@ class CoordinateOperations
 
     /**
      * @internal
+     * @return array{name: string, method: string, extent: string[]|BoundingArea, extent_description: string}
      */
     public static function getOperationData(string $operationSrid): array
     {
@@ -22351,6 +22355,7 @@ class CoordinateOperations
 
     /**
      * @internal
+     * @return array<string, mixed>
      */
     public static function getParamData(string $operationSrid): array
     {
@@ -22361,9 +22366,12 @@ class CoordinateOperations
         return require 'Params/' . str_replace(':', '', str_replace('urn:ogc:def:coordinateOperation:', '', $operationSrid)) . '.php';
     }
 
+    /**
+     * @param array<string, mixed> $params
+     */
     public static function registerCustomOperation(string $srid, string $name, string $methodSrid, BoundingArea $extent, array $params): void
     {
-        self::$sridData[$srid] = ['name' => $name, 'method' => $methodSrid, 'extent' => $extent, 'params' => $params];
+        self::$sridData[$srid] = ['name' => $name, 'method' => $methodSrid, 'extent' => $extent, 'params' => $params, 'extent_description' => ''];
         self::$customSridParamData[$srid] = $params;
     }
 
@@ -22374,6 +22382,7 @@ class CoordinateOperations
 
     /**
      * @internal
+     * @return array<int, array{operation: string, name: string, source_crs: string, target_crs: string, accuracy: float}>
      */
     public static function getCustomTransformations(): array
     {

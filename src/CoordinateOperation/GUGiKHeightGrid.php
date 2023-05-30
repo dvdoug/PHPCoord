@@ -9,7 +9,6 @@ declare(strict_types=1);
 namespace PHPCoord\CoordinateOperation;
 
 use PHPCoord\UnitOfMeasure\Length\Metre;
-use SplFileObject;
 use SplFixedArray;
 
 use function explode;
@@ -18,6 +17,7 @@ use function min;
 use function round;
 use function str_replace;
 use function trim;
+use function assert;
 
 use const PHP_FLOAT_MAX;
 use const PHP_FLOAT_MIN;
@@ -26,12 +26,15 @@ class GUGiKHeightGrid extends GeographicGeoidHeightGrid
 {
     use BilinearInterpolation;
 
+    /**
+     * @var SplFixedArray<float>
+     */
     private SplFixedArray $data;
 
-    public function __construct($filename)
+    public function __construct(string $filename)
     {
         $this->storageOrder = self::STORAGE_ORDER_INCREASING_LONGITUDE_INCREASING_LATIITUDE;
-        $this->gridFile = new SplFileObject($filename);
+        $this->gridFile = new GridFile($filename);
         $this->columnGridInterval = 0.01; // always
         $this->rowGridInterval = 0.01; // always
 
@@ -62,7 +65,7 @@ class GUGiKHeightGrid extends GeographicGeoidHeightGrid
         // init with 0
         $this->data = new SplFixedArray($this->numberOfColumns * $this->numberOfRows);
         for ($i = 0, $numValues = $this->numberOfColumns * $this->numberOfRows; $i < $numValues; ++$i) {
-            $this->data[$i] = 0;
+            $this->data[$i] = 0.0;
         }
 
         // fill in with actual values
@@ -70,7 +73,7 @@ class GUGiKHeightGrid extends GeographicGeoidHeightGrid
         while ($row = $this->gridFile->fgets()) {
             $rowData = explode("\t", trim($row));
 
-            $index = round((($rowData[0] - $this->startY) / $this->rowGridInterval) * $this->numberOfColumns + ($rowData[1] - $this->startX) / $this->columnGridInterval);
+            $index = (int) round((((float) $rowData[0] - $this->startY) / $this->rowGridInterval) * $this->numberOfColumns + ((float) $rowData[1] - $this->startX) / $this->columnGridInterval);
             $this->data[$index] = (float) $rowData[2];
         }
     }
@@ -78,7 +81,7 @@ class GUGiKHeightGrid extends GeographicGeoidHeightGrid
     /**
      * @return Metre[]
      */
-    public function getValues($x, $y): array
+    public function getValues(float $x, float $y): array
     {
         $shift = $this->interpolate($x, $y)[0];
 
@@ -89,6 +92,7 @@ class GUGiKHeightGrid extends GeographicGeoidHeightGrid
     {
         $recordId = $latitudeIndex * $this->numberOfColumns + $longitudeIndex;
 
+        assert($this->data[$recordId] !== null);
         $record = $this->data[$recordId];
 
         $longitude = $longitudeIndex * $this->columnGridInterval + $this->startX;

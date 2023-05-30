@@ -8,10 +8,7 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateOperation;
 
-use SplFileObject;
 use UnexpectedValueException;
-
-use function unpack;
 
 class NADCON5Grid extends Grid
 {
@@ -19,9 +16,9 @@ class NADCON5Grid extends Grid
 
     private string $gridDataType;
 
-    public function __construct($filename)
+    public function __construct(string $filename)
     {
-        $this->gridFile = new SplFileObject($filename);
+        $this->gridFile = new GridFile($filename);
 
         $header = $this->getHeader();
         $this->startX = $header['xlonsw'];
@@ -45,7 +42,9 @@ class NADCON5Grid extends Grid
 
         $this->gridFile->fseek($startBytes + $recordLength * $latitudeIndex);
         $rawRow = $this->gridFile->fread($recordLength);
-        $row = unpack("Gstartbuffer/{$this->gridDataType}{$this->numberOfColumns}lon/Gendbuffer", $rawRow);
+
+        /** @var float[] $row */
+        $row = $this->unpack("Gstartbuffer/{$this->gridDataType}{$this->numberOfColumns}lon/Gendbuffer", $rawRow);
 
         return new GridValues(
             $longitudeIndex * $this->columnGridInterval + $this->startX,
@@ -54,15 +53,22 @@ class NADCON5Grid extends Grid
         );
     }
 
+    /**
+     * @return array{xlatsw: float, xlonsw: float, dlat: float, dlon: float, nlat: int, nlon: int, ikind: int}
+     */
     private function getHeader(): array
     {
         $this->gridFile->fseek(0);
         $rawData = $this->gridFile->fread(52);
-        $data = unpack('Gstartbuffer/Exlatsw/Exlonsw/Edlat/Edlon/Nnlat/Nnlon/Nikind/Gendbuffer/', $rawData);
+        /** @var array{xlatsw: float, xlonsw: float, dlat: float, dlon: float, nlat: int, nlon: int, ikind: int} $data */
+        $data = $this->unpack('Gstartbuffer/Exlatsw/Exlonsw/Edlat/Edlon/Nnlat/Nnlon/Nikind/Gendbuffer/', $rawData);
 
         return $data;
     }
 
+    /**
+     * @return float[]
+     */
     public function getValues(float $x, float $y): array
     {
         if ($x < 0) {
