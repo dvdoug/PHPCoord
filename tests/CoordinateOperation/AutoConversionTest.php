@@ -204,13 +204,13 @@ class AutoConversionTest extends TestCase
 
     public function testBritishNationalGridToUTM(): void
     {
-        $from = ProjectedPoint::createFromEastingNorthing(Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID), new Metre(573502.85), new Metre(180912.71));
+        $from = ProjectedPoint::createFromEastingNorthing(Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID), new Metre(573502.85), new Metre(180912.71), new DateTime('1991-09-01'));
         $toCRS = Projected::fromSRID(Projected::EPSG_WGS_84_UTM_GRID_SYSTEM_NORTHERN_HEMISPHERE);
         $to = $from->convert($toCRS);
 
         if (class_exists(OSTN15OSGM15Provider::class)) {
             self::assertEqualsWithDelta(31326368.093447, $to->getEasting()->getValue(), 0.0001);
-            self::assertEqualsWithDelta(5708454.7196684, $to->getNorthing()->getValue(), 0.0001);
+            self::assertEqualsWithDelta(5708454.8262056, $to->getNorthing()->getValue(), 0.0001);
         } else {
             self::assertEqualsWithDelta(31326366.078970, $to->getEasting()->getValue(), 0.0001);
             self::assertEqualsWithDelta(5708454.600444621, $to->getNorthing()->getValue(), 0.0001);
@@ -237,7 +237,7 @@ class AutoConversionTest extends TestCase
 
     public function testETRS89ToBritishNationalGrid(): void
     {
-        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89), new Degree(52.658007833), new Degree(1.716073972), null);
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89), new Degree(52.658007833), new Degree(1.716073972), null, new DateTime('1992-03-01'));
         $toCRS = Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID);
         $to = $from->convert($toCRS);
 
@@ -246,7 +246,7 @@ class AutoConversionTest extends TestCase
             self::assertEqualsWithDelta(313177.450, $to->getNorthing()->asMetres()->getValue(), 0.001);
         } else {
             self::assertEqualsWithDelta(651411.218, $to->getEasting()->asMetres()->getValue(), 0.001);
-            self::assertEqualsWithDelta(313180.597, $to->getNorthing()->asMetres()->getValue(), 0.001);
+            self::assertEqualsWithDelta(313180.712, $to->getNorthing()->asMetres()->getValue(), 0.001);
         }
     }
 
@@ -286,8 +286,8 @@ class AutoConversionTest extends TestCase
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84); // equivalent to ETRS89
         $to = $from->convert($toCRS);
 
-        self::assertEqualsWithDelta(53.456987025, $to->getLatitude()->asDegrees()->getValue(), 0.000001);
-        self::assertEqualsWithDelta(6.829580112, $to->getLongitude()->asDegrees()->getValue(), 0.000001);
+        self::assertEqualsWithDelta(53.456987025, $to->getLatitude()->asDegrees()->getValue(), 0.00001);
+        self::assertEqualsWithDelta(6.829580112, $to->getLongitude()->asDegrees()->getValue(), 0.00001);
     }
 
     public function testAmersfoortRDNewToWGS84WithEpoch(): void
@@ -412,14 +412,15 @@ class AutoConversionTest extends TestCase
             VerticalPoint::create(
                 Vertical::fromSRID(Vertical::EPSG_NAP_HEIGHT),
                 new Metre(258.0057)
-            )
+            ),
+            new DateTime('1989-01-01'),
         );
         $toCRS = Geographic3D::fromSRID(Geographic3D::EPSG_WGS_84);
         $to = $from->convert($toCRS);
 
-        self::assertEqualsWithDelta(51.728601274, $to->getLatitude()->asDegrees()->getValue(), 0.0000001);
-        self::assertEqualsWithDelta(4.712120126, $to->getLongitude()->asDegrees()->getValue(), 0.0000001);
-        self::assertEqualsWithDelta(301.798133706, $to->getHeight()->asMetres()->getValue(), 0.00001);
+        self::assertEqualsWithDelta(51.728601862, $to->getLatitude()->asDegrees()->getValue(), 0.0000001);
+        self::assertEqualsWithDelta(4.712119466, $to->getLongitude()->asDegrees()->getValue(), 0.0000001);
+        self::assertEqualsWithDelta(301.791109663, $to->getHeight()->asMetres()->getValue(), 0.00001);
     }
 
     public function testRDNAPToWGS84Geocentric(): void
@@ -438,14 +439,15 @@ class AutoConversionTest extends TestCase
             VerticalPoint::create(
                 Vertical::fromSRID(Vertical::EPSG_NAP_HEIGHT),
                 new Metre(258.0057)
-            )
+            ),
+            new DateTime('1989-01-01'),
         );
         $toCRS = Geocentric::fromSRID(Geocentric::EPSG_WGS_84);
         $to = $from->convert($toCRS);
 
-        self::assertEqualsWithDelta(3945517.9766847, $to->getX()->asMetres()->getValue(), 0.00001);
-        self::assertEqualsWithDelta(325220.90092962, $to->getY()->asMetres()->getValue(), 0.00001);
-        self::assertEqualsWithDelta(4984392.7931562, $to->getZ()->asMetres()->getValue(), 0.00001);
+        self::assertEqualsWithDelta(3945517.9248343, $to->getX()->asMetres()->getValue(), 0.00001);
+        self::assertEqualsWithDelta(325220.85089141, $to->getY()->asMetres()->getValue(), 0.00001);
+        self::assertEqualsWithDelta(4984392.8283033, $to->getZ()->asMetres()->getValue(), 0.00001);
     }
 
     public function testNAD83NAD27SouthCarolina(): void
@@ -460,6 +462,32 @@ class AutoConversionTest extends TestCase
 
         self::assertEqualsWithDelta(2320568.869, $to->getEasting()->getValue(), 0.1);
         self::assertEqualsWithDelta(353687.842, $to->getNorthing()->getValue(), 0.1);
+    }
+
+    public function testWGS84NAD832011NAVD88(): void
+    {
+        if (!class_exists(GTXGEOID18CONUSProvider::class)) {
+            self::markTestSkipped('Requires phpcoord/datapack-northamerica');
+        }
+
+        $from = GeographicPoint::create(Geographic3D::fromSRID(Geographic3D::EPSG_WGS_84), new Degree(40), new Degree(-100), new Metre(0), new DateTime('2023-05-17'));
+        $toCRS = Compound::fromSRID(Compound::EPSG_NAD83_2011_PLUS_NAVD88_HEIGHT);
+        $to = $from->convert($toCRS);
+
+        self::assertEqualsWithDelta(39.99999431, $to->getHorizontalPoint()->getLatitude()->getValue(), 0.0000001);
+        self::assertEqualsWithDelta(-99.99998594, $to->getHorizontalPoint()->getLongitude()->getValue(), 0.0000001);
+        self::assertEqualsWithDelta(25.50538621, $to->getVerticalPoint()->getHeight()->getValue(), 0.00000001);
+    }
+
+    public function testWGS84NAD832011(): void
+    {
+        $from = GeographicPoint::create(Geographic3D::fromSRID(Geographic3D::EPSG_WGS_84), new Degree(40), new Degree(-100), new Metre(0), new DateTime('2023-05-17'));
+        $toCRS = Geographic3D::fromSRID(Geographic3D::EPSG_NAD83_2011);
+        $to = $from->convert($toCRS);
+
+        self::assertEqualsWithDelta(39.99999431, $to->getLatitude()->getValue(), 0.0000001);
+        self::assertEqualsWithDelta(-99.99998594, $to->getLongitude()->getValue(), 0.0000001);
+        self::assertEqualsWithDelta(0.9499795716, $to->getHeight()->getValue(), 0.00000001);
     }
 
     public function testRGF2BLambert93Corsica(): void

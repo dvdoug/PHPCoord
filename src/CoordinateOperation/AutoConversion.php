@@ -124,7 +124,7 @@ trait AutoConversion
             }
 
             // filter out operations that require an epoch if we don't have one
-            if ((isset($methodParams['transformationReferenceEpoch']) || isset($methodParams['parameterReferenceEpoch'])) && !$this->getCoordinateEpoch()) {
+            if (isset($methodParams['transformationReferenceEpoch']) && !$this->getCoordinateEpoch()) {
                 return false;
             }
 

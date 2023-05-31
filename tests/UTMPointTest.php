@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace PHPCoord;
 
+use DateTime;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPUnit\Framework\TestCase;
@@ -49,8 +50,8 @@ class UTMPointTest extends TestCase
      */
     public function testDistanceSameZoneDifferentCRS(): void
     {
-        $from = new UTMPoint(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Metre(630084), new Metre(4833439), 32, UTMPoint::HEMISPHERE_NORTH);
-        $to = new UTMPoint(Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89), new Metre(630584), new Metre(4833439), 32, UTMPoint::HEMISPHERE_NORTH);
+        $from = new UTMPoint(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Metre(630084), new Metre(4833439), 32, UTMPoint::HEMISPHERE_NORTH, new DateTime('1989-01-01'));
+        $to = new UTMPoint(Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89), new Metre(630584), new Metre(4833439), 32, UTMPoint::HEMISPHERE_NORTH, new DateTime('1989-01-01'));
         $distance = $from->calculateDistance($to);
 
         self::assertEqualsWithDelta($distance->getValue(), 500, 0.1);

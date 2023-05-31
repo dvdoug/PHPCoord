@@ -1,6 +1,8 @@
 # Changelog
 
 ## [Unreleased]
+### Changed
+- Infer a current epoch when doing time-dependant transforms and no explicit epoch is supplied
 
 ## [5.4.0] - 2023-05-27
 ### Added

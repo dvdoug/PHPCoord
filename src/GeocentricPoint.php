@@ -341,12 +341,8 @@ class GeocentricPoint extends Point implements ConvertiblePoint
         Rate $rateOfChangeOfScaleDifference,
         Time $parameterReferenceEpoch
     ): self {
-        if ($this->epoch === null) {
-            throw new InvalidCoordinateException('This transformation requires an epoch, none given');
-        }
-
         // Points use PHP DateTimes for ease of use, but transformations use decimal years...
-        $pointEpoch = Year::fromDateTime($this->epoch);
+        $pointEpoch = Year::fromDateTime($this->epoch ?? new DateTime());
         $yearsToAdjust = $pointEpoch->subtract($parameterReferenceEpoch)->getValue();
         $xAxisTranslation = $xAxisTranslation->add($rateOfChangeOfXAxisTranslation->getChangePerYear()->multiply($yearsToAdjust));
         $yAxisTranslation = $yAxisTranslation->add($rateOfChangeOfYAxisTranslation->getChangePerYear()->multiply($yearsToAdjust));
@@ -383,12 +379,8 @@ class GeocentricPoint extends Point implements ConvertiblePoint
         Rate $rateOfChangeOfScaleDifference,
         Time $parameterReferenceEpoch
     ): self {
-        if ($this->epoch === null) {
-            throw new InvalidCoordinateException('This transformation requires an epoch, none given');
-        }
-
         // Points use PHP DateTimes for ease of use, but transformations use decimal years...
-        $pointEpoch = Year::fromDateTime($this->epoch);
+        $pointEpoch = Year::fromDateTime($this->epoch ?? new DateTime());
         $yearsToAdjust = $pointEpoch->subtract($parameterReferenceEpoch)->getValue();
         $xAxisTranslation = $xAxisTranslation->add($rateOfChangeOfXAxisTranslation->getChangePerYear()->multiply($yearsToAdjust));
         $yAxisTranslation = $yAxisTranslation->add($rateOfChangeOfYAxisTranslation->getChangePerYear()->multiply($yearsToAdjust));
@@ -421,7 +413,7 @@ class GeocentricPoint extends Point implements ConvertiblePoint
         }
 
         // Points use PHP DateTimes for ease of use, but transformations use decimal years...
-        $pointEpoch = Year::fromDateTime($this->epoch);
+        $pointEpoch = Year::fromDateTime($this->epoch ?? new DateTime());
 
         if (abs($pointEpoch->getValue() - $transformationReferenceEpoch->getValue()) > 0.001) {
             throw new InvalidCoordinateException(sprintf('This transformation is only valid for epoch %s, got %s', $transformationReferenceEpoch, $pointEpoch));
