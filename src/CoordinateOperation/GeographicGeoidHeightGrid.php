@@ -8,7 +8,7 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateOperation;
 
-use PHPCoord\GeographicPoint;
+use PHPCoord\Point\GeographicPoint;
 use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 

@@ -10,7 +10,7 @@ namespace PHPCoord\CoordinateOperation;
 
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Geographic3D;
-use PHPCoord\GeographicPoint;
+use PHPCoord\Point\GeographicPoint;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 
 use function abs;

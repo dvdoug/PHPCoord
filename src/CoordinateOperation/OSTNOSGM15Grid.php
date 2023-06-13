@@ -11,7 +11,7 @@ namespace PHPCoord\CoordinateOperation;
 use PHPCoord\CoordinateReferenceSystem\Projected;
 use PHPCoord\CoordinateSystem\Cartesian;
 use PHPCoord\Datum\Datum;
-use PHPCoord\ProjectedPoint;
+use PHPCoord\Point\ProjectedPoint;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 
 use function abs;

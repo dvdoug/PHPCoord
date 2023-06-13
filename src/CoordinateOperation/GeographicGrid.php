@@ -10,7 +10,7 @@ namespace PHPCoord\CoordinateOperation;
 
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Geographic3D;
-use PHPCoord\GeographicPoint;
+use PHPCoord\Point\GeographicPoint;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPCoord\UnitOfMeasure\Angle\ArcSecond;
 use PHPCoord\UnitOfMeasure\Length\Length;

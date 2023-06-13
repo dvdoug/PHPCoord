@@ -14,7 +14,7 @@ use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Geographic3D;
 use PHPCoord\CoordinateReferenceSystem\Projected;
 use PHPCoord\CoordinateReferenceSystem\Vertical;
-use PHPCoord\Point;
+use PHPCoord\Point\Point;
 
 interface ConvertiblePoint
 {

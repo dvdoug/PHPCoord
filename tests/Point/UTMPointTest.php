@@ -6,7 +6,7 @@
  */
 declare(strict_types=1);
 
-namespace PHPCoord;
+namespace PHPCoord\Point;
 
 use DateTime;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;

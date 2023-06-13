@@ -6,7 +6,7 @@
  */
 declare(strict_types=1);
 
-namespace PHPCoord;
+namespace PHPCoord\Point;
 
 use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPUnit\Framework\TestCase;

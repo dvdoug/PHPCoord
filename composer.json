@@ -58,7 +58,8 @@
     "autoload": {
         "psr-4": {
             "PHPCoord\\": "src/"
-        }
+        },
+        "files": ["src/bc_namespace.php"]
     },
     "autoload-dev": {
         "psr-4": {
