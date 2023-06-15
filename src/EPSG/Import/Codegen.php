@@ -25,7 +25,6 @@ use PHPCoord\Geometry\Extents\ExtentMap;
 use PHPCoord\UnitOfMeasure\Rate;
 use PHPCoord\UnitOfMeasure\UnitOfMeasure;
 use PhpCsFixer\AbstractFixer;
-use PhpCsFixer\Config;
 use PhpCsFixer\Console\ConfigurationResolver;
 use PhpCsFixer\Tokenizer\Tokens;
 use PhpCsFixer\ToolInfo;
@@ -64,9 +63,17 @@ class Codegen
 {
     private string $sourceDir;
 
+    private ConfigurationResolver $resolver;
+
     public function __construct()
     {
         $this->sourceDir = dirname(__DIR__, 2);
+        $this->resolver = new ConfigurationResolver(
+            require __DIR__ . '/../../../.php-cs-fixer.dist.php',
+            [],
+            dirname($this->sourceDir),
+            new ToolInfo()
+        );
     }
 
     public function updateFileConstants(string $fileName, array $data, string $visibility, array $aliases): void
@@ -161,23 +168,11 @@ class Codegen
 
     public function csFixFile(string $fileName): void
     {
-        /** @var Config $config */
-        $config = require __DIR__ . '/../../../.php-cs-fixer.dist.php';
-
-        $resolver = new ConfigurationResolver(
-            $config,
-            [],
-            dirname($this->sourceDir),
-            new ToolInfo()
-        );
-
         $file = new SplFileInfo($fileName);
         $old = file_get_contents($fileName);
-        $fixers = $resolver->getFixers();
-
         $tokens = Tokens::fromCode($old);
 
-        foreach ($fixers as $fixer) {
+        foreach ($this->resolver->getFixers() as $fixer) {
             if (
                 !$fixer instanceof AbstractFixer
                 && (!$fixer->supports($file) || !$fixer->isCandidate($tokens))
